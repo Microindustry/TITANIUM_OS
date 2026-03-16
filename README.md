@@ -120,7 +120,7 @@ cd DASHBOARD && npm run dev
 
 ## Chi è Matteo
 
-Artigiano industriale che costruisce macchine con le mani e sistemi con il codice. Non ha una laurea in informatica. Ha 15 anni di officina, un cervello che funziona a raffica, e la necessità di costruire strumenti che funzionino davvero — per sé prima, per gli altri poi.
+Matteo Benenati. Artigiano industriale che costruisce macchine con le mani e sistemi con il codice. Non ha una laurea in informatica. Ha 15 anni di officina, un cervello che funziona a raffica, e la necessità di costruire strumenti che funzionino davvero — per sé prima, per gli altri poi.
 
 TITANIUM_OS è il suo scaffolding cognitivo. È anche la prova che chiunque, con abbastanza ostinazione, può costruire il proprio sistema operativo personale.
 
