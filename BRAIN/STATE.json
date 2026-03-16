@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "created": "2026-03-09T11:49:54.730580",
+    "updated": "2026-03-10T00:00:00.000000",
+    "version": "2.1.0",
+    "description": "Stato live ECOSYSTEM_OS — basato su ASSOLUTO V6.0",
+    "system": "GENESIS OS — ecosystem v1.0"
+  },
+  "last_update": "2026-03-10T21:21:16.118809",
+  "active_milestone": "Config G — Rinforzi colonne Z+U",
+  "ciclo_position": "COSTRUISCI",
+  "last_action": "Modifica a api_server.py",
+  "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
+  "session_count": 3,
+  "pillars": {
+    "V32": {
+      "status": "in_progress",
+      "phase": "Config G rinforzi",
+      "pct_complete": 65,
+      "next": "Gusset + diagonali + tiranti M10 + Epoxy fill",
+      "atto": "II, VII, VIII"
+    },
+    "MIMS": {
+      "status": "waiting_press",
+      "phase": "Design completo, attende pressa",
+      "pct_complete": 30,
+      "next": "Acquistare martinetto + resistenze pressa",
+      "atto": "III, X"
+    },
+    "GENESIS": {
+      "status": "building",
+      "phase": "3/3 nodi attivi: MENTE_SCANNER + watcher + n8n locale",
+      "pct_complete": 40,
+      "next": "Creare primo workflow n8n (webhook ESP32)",
+      "atto": "V",
+      "last_activity": "2026-03-10T20:48:47.335437"
+    },
+    "VITA_NATURA": {
+      "status": "active",
+      "phase": "Sito + prenotazioni + EVA pilot",
+      "pct_complete": 40,
+      "next": "EVA WhatsApp bot pilot — Maria Rule",
+      "atto": "IV"
+    },
+    "IDENTITY": {
+      "status": "pending",
+      "phase": "Riposizionamento professionale",
+      "pct_complete": 20,
+      "next": "Aggiornare CV + LinkedIn per ruoli tecnici"
+    }
+  },
+  "milestones": {
+    "verified": [
+      "Componenti V32 presenti (foto 13 Feb 2026)",
+      "8 pezzi interfaccia lavorati (bronzine + scalini)",
+      "HMI TP900 Comfort acquisito",
+      "Basamento traliccio saldato TIG",
+      "Asse X assemblato (guide+vite+servo)",
+      "ECOSYSTEM_OS dashboard v1.0 — celle draggabili live (09 Mar 2026)",
+      "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 file) (10 Mar 2026)",
+      "BOM aggiornato: molle 4×Gialle 90N + 2 piastre XY Config G (10 Mar 2026)"
+    ],
+    "next": "Rinforzi Config G (gusset + diag + tiranti M10)",
+    "target_capannone": "15 Luglio 2030"
+  },
+  "focus_today": "Config G: gusset sinistra — stima 3 ore officina",
+  "blockers": [
+    "Manca mandrino 2.2kW ER20 — da ordinare"
+  ],
+  "ideas_inbox": 0,
+  "nodes": {
+    "MENTE_SCANNER": "ATTIVO — python NODES/MENTE_SCANNER/scanner.py (818 estrazioni)",
+    "WATCHER": "ATTIVO — python AUTOMATIONS/core/watcher.py (backup+changelog+state)",
+    "N8N": "ATTIVO — npx n8n (localhost:5678, SQLite, EUR 0/mese)",
+    "API_SERVER": "ATTIVO — python api_server.py (localhost:5001)",
+    "EVA": "pending — WhatsApp API setup",
+    "V32_WATCHER": "future — post assemblaggio completo"
+  }
+}

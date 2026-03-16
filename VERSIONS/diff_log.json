@@ -1,0 +1,100 @@
+{
+  "events": [
+    {
+      "timestamp": "2026-03-10T20:25:06.552746",
+      "file": "DATA\\test_watcher_ping.txt",
+      "snapshot": "BACKUPS\\20260310_202506\\DATA\\test_watcher_ping.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:25:07.820257",
+      "file": "CLAUDE.md",
+      "snapshot": "BACKUPS\\20260310_202507\\CLAUDE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:25:07.850708",
+      "file": "requirements.txt",
+      "snapshot": "BACKUPS\\20260310_202507\\requirements.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:28:54.946236",
+      "file": "DATA\\projects.json",
+      "snapshot": "BACKUPS\\20260310_202854\\DATA\\projects.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:33:08.122268",
+      "file": "DASHBOARD\\index.html",
+      "snapshot": "BACKUPS\\20260310_203308\\DASHBOARD\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:55.383546",
+      "file": "DASHBOARD\\package.json",
+      "snapshot": "BACKUPS\\20260310_204055\\DASHBOARD\\package.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:55.533760",
+      "file": "DASHBOARD\\tsconfig.json",
+      "snapshot": "BACKUPS\\20260310_204055\\DASHBOARD\\tsconfig.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:56.662422",
+      "file": "DASHBOARD\\tsconfig.app.json",
+      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\tsconfig.app.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:56.716545",
+      "file": "DASHBOARD\\tsconfig.node.json",
+      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:56.909665",
+      "file": "DASHBOARD\\.claude\\launch.json",
+      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\.claude\\launch.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:56.971126",
+      "file": "DASHBOARD\\.claude\\settings.local.json",
+      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\.claude\\settings.local.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:57.032397",
+      "file": "DASHBOARD\\TITANIUM_MANIFESTO.md",
+      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\TITANIUM_MANIFESTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:57.067021",
+      "file": "DASHBOARD\\.vscode\\settings.json",
+      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\.vscode\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:57.135063",
+      "file": "DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
+      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T20:40:57.304761",
+      "file": "DASHBOARD\\README.md",
+      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-03-10T21:21:16.118809",
+      "file": "api_server.py",
+      "snapshot": "BACKUPS\\20260310_212116\\api_server.py",
+      "type": "snapshot"
+    }
+  ]
+}

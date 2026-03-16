@@ -1,0 +1,102 @@
+# docker-compose.yml | AUTOMATIONS/deploy/n8n | v1.1 | 2026-03-10
+# Stack n8n per TITANIUM_OS — Oracle Cloud Free Tier (4 OCPU ARM, 24GB RAM)
+# Componenti: n8n + PostgreSQL + Traefik (SSL automatico)
+# Costo: EUR 0/mese (Always Free)
+
+version: "3.8"
+
+volumes:
+  n8n_data:
+  postgres_data:
+  traefik_data:
+
+networks:
+  titanium:
+    driver: bridge
+
+services:
+  # ── TRAEFIK — Reverse proxy + SSL Let's Encrypt ──────────
+  traefik:
+    image: traefik:v3.0
+    restart: unless-stopped
+    networks:
+      - titanium
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik_data:/letsencrypt
+    command:
+      - "--api.dashboard=false"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      # Redirect HTTP -> HTTPS
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      # Let's Encrypt
+      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.email=${SSL_EMAIL}"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+
+  # ── POSTGRESQL — Database workflow n8n ───────────────────
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    networks:
+      - titanium
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── N8N — Motore automazione ─────────────────────────────
+  n8n:
+    image: n8nio/n8n:latest
+    restart: unless-stopped
+    networks:
+      - titanium
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # Database
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: postgres
+      DB_POSTGRESDB_PORT: 5432
+      DB_POSTGRESDB_DATABASE: ${POSTGRES_DB}
+      DB_POSTGRESDB_USER: ${POSTGRES_USER}
+      DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+      # n8n config
+      N8N_HOST: ${N8N_DOMAIN}
+      N8N_PORT: 5678
+      N8N_PROTOCOL: https
+      WEBHOOK_URL: https://${N8N_DOMAIN}/
+      N8N_EDITOR_BASE_URL: https://${N8N_DOMAIN}/
+      # Sicurezza
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: ${N8N_USER}
+      N8N_BASIC_AUTH_PASSWORD: ${N8N_PASSWORD}
+      # Timezone
+      GENERIC_TIMEZONE: Europe/Rome
+      TZ: Europe/Rome
+      # Esecuzioni
+      EXECUTIONS_DATA_PRUNE: "true"
+      EXECUTIONS_DATA_MAX_AGE: 168
+    volumes:
+      - n8n_data:/home/node/.n8n
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.n8n.rule=Host(`${N8N_DOMAIN}`)"
+      - "traefik.http.routers.n8n.entrypoints=websecure"
+      - "traefik.http.routers.n8n.tls.certresolver=letsencrypt"
+      - "traefik.http.services.n8n.loadbalancer.server.port=5678"

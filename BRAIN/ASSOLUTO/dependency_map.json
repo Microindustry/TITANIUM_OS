@@ -1,0 +1,237 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "description": "Mappa dipendenze cross-atto ASSOLUTO V6.0. Ogni 'key' è un valore master — se cambia qui, cambia in tutti gli 'atti' elencati.",
+    "come_aggiornare": "Modifica il valore in 'master_value', poi esegui: python cross_ref_engine.py propagate"
+  },
+
+  "v32_investimento": {
+    "label": "Investimento V32 cash",
+    "master_value": "EUR 2.250",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 2.250", "EUR 2,250", "2.250 euro", "investimento.*2.250"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO", "ATTO_I_II"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 36", "Cap 40"],
+    "note": "Investimento cash necessario per completare V32. Se cambia aggiornare anche BEP e ROI."
+  },
+
+  "v32_massa_totale": {
+    "label": "Massa totale V32",
+    "master_value": "178 kg",
+    "tipo": "misura",
+    "pattern_cerca": ["178 kg", "178kg"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_I_II"],
+    "capitoli": ["Cap 1", "Cap 10", "Cap 11", "Cap 36"],
+    "note": "Massa totale: 69 non sospesa + 109 sospesa."
+  },
+
+  "v32_massa_sospesa": {
+    "label": "Massa sospesa V32",
+    "master_value": "109 kg",
+    "tipo": "misura",
+    "pattern_cerca": ["109 kg", "109kg"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 3", "Cap 10", "Cap 11"],
+    "note": "Massa sopra le molle."
+  },
+
+  "v32_massa_non_sospesa": {
+    "label": "Massa non sospesa V32",
+    "master_value": "69 kg",
+    "tipo": "misura",
+    "pattern_cerca": ["69 kg", "68.9 kg", "68,9 kg"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 3", "Cap 11"],
+    "note": "Massa sotto le molle (basamento)."
+  },
+
+  "v32_frequenza_naturale": {
+    "label": "Frequenza naturale f0",
+    "master_value": "3.83 Hz",
+    "tipo": "misura",
+    "pattern_cerca": ["3.83 Hz", "3,83 Hz", "f0 = 3.83", "f0=3.83"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 3", "Cap 10", "Cap 36"],
+    "note": "Config C: 4 molle gialle ISO 90mm, K=15.8 N/mm"
+  },
+
+  "v32_precisione_rss": {
+    "label": "Precisione RSS totale",
+    "master_value": "+/-0.019 mm",
+    "tipo": "misura",
+    "pattern_cerca": ["+/-0.019", "± 0.019", "0.019 mm", "±0.019"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO"],
+    "capitoli": ["Cap 10", "Cap 11", "Cap 36", "Cap 40"],
+    "note": "Classe ISO IT6-IT7. Se cambia: aggiornare anche confronto competitor."
+  },
+
+  "v32_rigidita_config_g": {
+    "label": "Rigidità Config G",
+    "master_value": "772x",
+    "tipo": "fattore",
+    "pattern_cerca": ["772x", "772 x", "772 volte"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 6", "Cap 10", "Cap 36"],
+    "note": "Fattore moltiplicativo rigidità rispetto tubolare nudo."
+  },
+
+  "v32_asset_recuperati": {
+    "label": "Valore asset recuperati",
+    "master_value": "EUR 9.749",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 9.749", "EUR 9,749", "9.749 euro"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 36"],
+    "note": "81% del valore totale macchina."
+  },
+
+  "v32_asset_totale": {
+    "label": "Valore totale asset V32",
+    "master_value": "EUR 11.749",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 11.749", "EUR 11,749", "11.749"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 36"],
+    "note": "Asset totali posseduti a valore di mercato."
+  },
+
+  "v32_bep_ore": {
+    "label": "Break-even V32 in ore",
+    "master_value": "61 ore",
+    "tipo": "misura",
+    "pattern_cerca": ["61 ore", "BEP.*61", "61h"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 36"],
+    "note": "A EUR 45/h Precision Lab, margine 82%."
+  },
+
+  "v32_bep_mesi": {
+    "label": "Break-even V32 in mesi",
+    "master_value": "1.4 mesi",
+    "tipo": "misura",
+    "pattern_cerca": ["1.4 mesi", "1,4 mesi", "42 giorni"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 36"],
+    "note": "6 settimane a 10h/settimana."
+  },
+
+  "v32_roi_anno1": {
+    "label": "ROI Anno 1 V32",
+    "master_value": "322%",
+    "tipo": "percentuale",
+    "pattern_cerca": ["322%", "ROI.*322", "322 percento"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 36"],
+    "note": "EUR 4.22 per ogni EUR 1 investito."
+  },
+
+  "precision_lab_tariffa": {
+    "label": "Tariffa Precision Lab",
+    "master_value": "EUR 45/h",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 45/h", "45 euro/ora", "45/ora", "EUR 45/ora"],
+    "atti": ["ATTO_III_V32", "ATTO_VII_VERDETTO", "ATTO_VIII_MERCATO"],
+    "capitoli": ["Cap 11", "Cap 33", "Cap 39", "Cap 41"],
+    "note": "Margine 82%. Se cambia: ricalcolare BEP e ROI automaticamente."
+  },
+
+  "revenue_anno1": {
+    "label": "Revenue Anno 1 totale",
+    "master_value": "EUR 12.940",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 12.940", "EUR 12,940", "12.940"],
+    "atti": ["ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 33"],
+    "note": "Conservativo: Lab + MIMS + EVA + YouTube."
+  },
+
+  "mims_tile_dimensione": {
+    "label": "Dimensione tile MIMS",
+    "master_value": "190x190 mm",
+    "tipo": "misura",
+    "pattern_cerca": ["190x190", "190 x 190", "190mm x 190mm"],
+    "atti": ["ATTO_IV_MIMS", "ATTO_III_V32", "ATTO_V_LAB_MATERIALI"],
+    "capitoli": ["Cap 13", "Cap 1", "Cap 19"],
+    "note": "Dimensione master tile. Se cambia: aggiornare stampo, pressa, area lavoro V32."
+  },
+
+  "mims_piastrina_dimensione": {
+    "label": "Dimensione piastrina MIMS",
+    "master_value": "40x40 mm",
+    "tipo": "misura",
+    "pattern_cerca": ["40x40", "40 x 40"],
+    "atti": ["ATTO_IV_MIMS", "ATTO_IX_IP"],
+    "capitoli": ["Cap 14", "Cap 46"],
+    "note": "Atomo del sistema. Brevetto B2 basato su questa geometria."
+  },
+
+  "pressa_forza": {
+    "label": "Forza pressa 4 colonne",
+    "master_value": "15-20 tonnellate",
+    "tipo": "misura",
+    "pattern_cerca": ["15-20 ton", "15-20 tonnellate", "150-200 kN"],
+    "atti": ["ATTO_V_LAB_MATERIALI", "ATTO_IV_MIMS"],
+    "capitoli": ["Cap 19", "Cap 13"],
+    "note": "Sufficiente per tile PA-GF30 a 12 MPa."
+  },
+
+  "eva_target_revenue": {
+    "label": "Target revenue EVA mensile",
+    "master_value": "EUR 1.500/mese",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 1.500/mese", "1.500 euro al mese", "EUR 1,500"],
+    "atti": ["ATTO_VI_GENESIS", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 26", "Cap 33"],
+    "note": "Target 6 mesi dal lancio: 10 clienti x EUR 150/mese."
+  },
+
+  "target_capannone_data": {
+    "label": "Data target capannone",
+    "master_value": "15 Luglio 2030",
+    "tipo": "data",
+    "pattern_cerca": ["15 Luglio 2030", "15 luglio 2030", "July 15 2030", "2030-07-15"],
+    "atti": ["ATTO_I_II", "ATTO_VII_VERDETTO", "ATTO_XI_XII_EPILOGO"],
+    "capitoli": ["Cap 2", "Cap 35", "Cap 38", "Cap 53", "Cap 54"],
+    "note": "Il North Star di tutto l'ecosistema."
+  },
+
+  "youtube_target_3anni": {
+    "label": "Target iscritti YouTube Anno 3",
+    "master_value": "50.000",
+    "tipo": "numero",
+    "pattern_cerca": ["50.000 iscritti", "50,000 sub", "50K sub"],
+    "atti": ["ATTO_VI_GENESIS", "ATTO_X_MEDIA", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 27", "Cap 31", "Cap 33"],
+    "note": ""
+  },
+
+  "stack_costo_lancio": {
+    "label": "Costo stack digitale lancio",
+    "master_value": "EUR 50/mese",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 50/mese", "50 euro al mese"],
+    "atti": ["ATTO_VI_GENESIS", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 32", "Cap 33"],
+    "note": "Claude + Cursor + ElevenLabs + hosting base."
+  },
+
+  "tam_mims": {
+    "label": "TAM MIMS globale",
+    "master_value": "EUR 4.2 miliardi",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 4.2 miliardi", "EUR 4.2B", "4.2 billion"],
+    "atti": ["ATTO_VIII_MERCATO", "ATTO_I_II"],
+    "capitoli": ["Cap 39"],
+    "note": ""
+  },
+
+  "som_anno3": {
+    "label": "SOM Anno 3 consolidato",
+    "master_value": "EUR 350.000-550.000",
+    "tipo": "valuta",
+    "pattern_cerca": ["EUR 350.000-550.000", "EUR 350K-550K", "350,000-550,000"],
+    "atti": ["ATTO_VIII_MERCATO", "ATTO_VII_VERDETTO"],
+    "capitoli": ["Cap 39", "Cap 33"],
+    "note": ""
+  }
+}

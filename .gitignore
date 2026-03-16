@@ -1,0 +1,7 @@
+# TITANIUM_OS — .gitignore
+BACKUPS/
+*.pyc
+__pycache__/
+.env
+*.log
+VERSIONS/snapshots/

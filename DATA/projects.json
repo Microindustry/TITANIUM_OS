@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "last_update": "2026-03-09T11:49:54.731419"
+  },
+  "projects": [
+    {
+      "id": "V32",
+      "name": "Titanium V32 CNC",
+      "status": "in_progress",
+      "priority": 1,
+      "investment_needed": 2250,
+      "investment_done": 0,
+      "bep_hours": 61,
+      "revenue_y1": 9500,
+      "notes": "Manca: mandrino 2.2kW, VFD, vite 1605 Y, BK12/BF12, quadro IP54"
+    },
+    {
+      "id": "MIMS",
+      "name": "MIMS Platform",
+      "status": "waiting_press",
+      "priority": 2,
+      "investment_needed": 500,
+      "investment_done": 0,
+      "notes": "Attende pressa 4 colonne operativa"
+    },
+    {
+      "id": "GENESIS",
+      "name": "GENESIS Digital / EVA",
+      "status": "building",
+      "priority": 3,
+      "investment_needed": 50,
+      "investment_done": 0,
+      "notes": "TITANIUM_OS in build — Fase 1 core automations"
+    },
+    {
+      "id": "VITA_NATURA",
+      "name": "Vita Natura — EVA Pilot",
+      "status": "active",
+      "priority": 4,
+      "notes": "WordPress + Amelia/SimplyBook + WhatsApp bot"
+    }
+  ]
+}

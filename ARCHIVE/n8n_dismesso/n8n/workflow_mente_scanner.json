@@ -1,0 +1,180 @@
+{
+  "id": "1",
+  "name": "MENTE_SCANNER — Scan Giornaliero",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Ogni giorno alle 6:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:5001/api/scan",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "http-scan",
+      "name": "Lancia Scanner",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [220, 0]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://localhost:5001/api/digest",
+        "options": {}
+      },
+      "id": "http-digest",
+      "name": "Leggi Digest",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [440, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "check-extractions",
+              "leftValue": "={{ $json.global_summary.total_extractions }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-success",
+      "name": "Scan OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [660, 0]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "set-result",
+              "name": "result",
+              "value": "=MENTE_SCANNER completato: {{ $json.global_summary.total_extractions }} estrazioni da {{ $json.files_read }} file ({{ $json.global_summary.total_decisions }} decisioni, {{ $json.global_summary.total_specs }} spec, {{ $json.global_summary.total_milestones }} milestones)",
+              "type": "string"
+            },
+            {
+              "id": "set-timestamp",
+              "name": "scanned_at",
+              "value": "={{ $json.scanned_at }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-success",
+      "name": "Risultato OK",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [880, -60]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "set-error",
+              "name": "result",
+              "value": "MENTE_SCANNER ERRORE: scan ha prodotto 0 estrazioni",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-error",
+      "name": "Risultato ERRORE",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [880, 120]
+    }
+  ],
+  "connections": {
+    "Ogni giorno alle 6:00": {
+      "main": [
+        [
+          {
+            "node": "Lancia Scanner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lancia Scanner": {
+      "main": [
+        [
+          {
+            "node": "Leggi Digest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leggi Digest": {
+      "main": [
+        [
+          {
+            "node": "Scan OK?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scan OK?": {
+      "main": [
+        [
+          {
+            "node": "Risultato OK",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Risultato ERRORE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": true
+}

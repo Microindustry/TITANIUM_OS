@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* ─── TITANIUM INDUSTRIAL PALETTE ──────────────────────── */
+@theme {
+  --color-base-950: #0a0a0f;
+  --color-base-900: #111118;
+  --color-base-850: #16161f;
+  --color-base-800: #1c1c28;
+  --color-base-700: #2a2a3a;
+  --color-base-600: #3d3d52;
+  --color-base-500: #5a5a72;
+  --color-base-400: #8888a0;
+  --color-base-300: #b0b0c4;
+  --color-base-200: #d4d4e0;
+  --color-base-100: #ededf4;
+
+  --color-slate-950: #0a0a0f;
+  --color-slate-900: #111118;
+  --color-slate-800: #1c1c28;
+  --color-slate-700: #2a2a3a;
+  --color-slate-600: #3d3d52;
+  --color-slate-500: #5a5a72;
+  --color-slate-400: #8888a0;
+  --color-slate-300: #b0b0c4;
+  --color-slate-100: #ededf4;
+
+  --color-titanium: #c0c8d8;
+  --color-titanium-dim: #6b7280;
+
+  --color-emerald-500: #00d47e;
+  --color-emerald-400: #2aeea0;
+  --color-emerald-900: #003d24;
+  --color-cyan-500: #00b4d8;
+  --color-cyan-400: #48d1e8;
+  --color-cyan-800: #0a3d4a;
+  --color-cyan-900: #0a2830;
+  --color-indigo-400: #7b8cf8;
+  --color-indigo-500: #5b5ff0;
+  --color-indigo-800: #1e1e4a;
+  --color-indigo-900: #141430;
+  --color-amber-400: #f0b429;
+  --color-amber-500: #d4960a;
+  --color-amber-800: #3d2e0a;
+  --color-amber-900: #261c06;
+  --color-rose-400: #f06292;
+  --color-rose-500: #e03060;
+  --color-rose-900: #2d0a18;
+  --color-green-500: #22c55e;
+  --color-green-400: #4ade80;
+  --color-red-500: #ef4444;
+  --color-red-400: #f87171;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+}
+
+/* ─── TYPOGRAPHY ───────────────────────────────────────── */
+@font-face {
+  font-family: 'JetBrains';
+  src: local('JetBrains Mono'), local('Fira Code'), local('Consolas');
+}
+
+/* ─── REACT-GRID-LAYOUT OVERRIDES ──────────────────────── */
+.react-grid-item.react-grid-placeholder {
+  background: #00d47e !important;
+  opacity: 0.05 !important;
+  border-radius: 8px !important;
+  border: 1px dashed #00d47e !important;
+}
+.react-resizable-handle { opacity: 0; transition: opacity 0.2s; width: 14px !important; height: 14px !important; }
+.react-grid-item:hover .react-resizable-handle { opacity: 0.4; }
+.react-resizable-handle-se::after { border-color: #00d47e !important; width: 6px !important; height: 6px !important; }
+.react-grid-item { transition: none !important; }
+.react-grid-item.react-draggable-dragging { transition: none !important; opacity: 0.9; z-index: 100; }
+
+/* ─── DRAG HANDLE ──────────────────────────────────────── */
+.cell-drag-handle { cursor: grab; user-select: none; }
+.cell-drag-handle:active { cursor: grabbing; }
+
+/* ─── SCROLLBAR ────────────────────────────────────────── */
+.scrollbar-thin::-webkit-scrollbar { width: 3px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 2px; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #3d3d52; }
+
+/* ─── GLOW EFFECTS ─────────────────────────────────────── */
+.glow-emerald { box-shadow: 0 0 12px rgba(0, 212, 126, 0.15); }
+.glow-cyan { box-shadow: 0 0 12px rgba(0, 180, 216, 0.15); }
+.glow-amber { box-shadow: 0 0 12px rgba(240, 180, 41, 0.12); }
+
+/* ─── INDUSTRIAL BORDER ────────────────────────────────── */
+.border-industrial { border: 1px solid rgba(255,255,255,0.04); }
+.border-industrial-accent { border: 1px solid rgba(0, 212, 126, 0.12); }
+
+/* ─── PULSE KEYFRAMES ──────────────────────────────────── */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}

@@ -1,0 +1,154 @@
+{
+  "name": "TITANIUM_OS — Content Engine Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "content-trigger",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-ce1",
+      "name": "CE-1 Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300],
+      "notes": "Riceve il trigger da api_server.py o da milestone_tracker.\nPayload: {tema, formato}"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://localhost:5001/api/state",
+        "options": {}
+      },
+      "id": "http-ce2-state",
+      "name": "CE-2a Leggi STATE.json",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [460, 200],
+      "notes": "Legge il contesto corrente da TITANIUM_OS api_server"
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "=http://localhost:5001/api/content/archive?tema={{ $json.body.tema }}&limit=8",
+        "options": {}
+      },
+      "id": "http-ce2-archive",
+      "name": "CE-2b Leggi Archivio",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [460, 400],
+      "notes": "Scarica gli excerpt dall'archivio rilevanti per il tema"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:5001/api/content/generate",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "tema",    "value": "={{ $('CE-1 Webhook Trigger').item.json.body.tema }}" },
+            { "name": "formato", "value": "={{ $('CE-1 Webhook Trigger').item.json.body.formato || 'full' }}" }
+          ]
+        },
+        "options": { "timeout": 120000 }
+      },
+      "id": "http-ce3",
+      "name": "CE-3 Genera Storytelling",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [700, 300],
+      "notes": "Chiama archivista.py via api_server — genera .md multicanale"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:5001/api/content/tts",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "file", "value": "={{ $json.name }}" }
+          ]
+        },
+        "options": { "timeout": 180000 }
+      },
+      "id": "http-ce5",
+      "name": "CE-5 ElevenLabs TTS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [940, 200],
+      "notes": "Converte il podcast .md in .mp3 tramite ElevenLabs"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:5001/api/content/video",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "file", "value": "={{ $('CE-3 Genera Storytelling').item.json.name }}" }
+          ]
+        },
+        "options": { "timeout": 600000 }
+      },
+      "id": "http-ce6",
+      "name": "CE-6 Video Generator",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [940, 400],
+      "notes": "Genera video avatar via HeyGen/D-ID — può richiedere minuti"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:5001/api/content/distribute",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "file",     "value": "={{ $('CE-3 Genera Storytelling').item.json.name }}" },
+            { "name": "channels", "value": "linkedin,telegram" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-ce7",
+      "name": "CE-7 Distribuisci Social",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1180, 300],
+      "notes": "Pubblica su LinkedIn e invia su Telegram"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ok: true, tema: $('CE-1 Webhook Trigger').item.json.body.tema, timestamp: new Date().toISOString()}) }}"
+      },
+      "id": "webhook-response",
+      "name": "Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1400, 300]
+    }
+  ],
+  "connections": {
+    "CE-1 Webhook Trigger":    { "main": [[{ "node": "CE-2a Leggi STATE.json", "type": "main", "index": 0 }, { "node": "CE-2b Leggi Archivio", "type": "main", "index": 0 }]] },
+    "CE-2a Leggi STATE.json":  { "main": [[{ "node": "CE-3 Genera Storytelling", "type": "main", "index": 0 }]] },
+    "CE-2b Leggi Archivio":    { "main": [[{ "node": "CE-3 Genera Storytelling", "type": "main", "index": 0 }]] },
+    "CE-3 Genera Storytelling":{ "main": [[{ "node": "CE-5 ElevenLabs TTS", "type": "main", "index": 0 }, { "node": "CE-6 Video Generator", "type": "main", "index": 0 }]] },
+    "CE-5 ElevenLabs TTS":     { "main": [[{ "node": "CE-7 Distribuisci Social", "type": "main", "index": 0 }]] },
+    "CE-6 Video Generator":    { "main": [[{ "node": "CE-7 Distribuisci Social", "type": "main", "index": 0 }]] },
+    "CE-7 Distribuisci Social":{ "main": [[{ "node": "Response", "type": "main", "index": 0 }]] }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": ""
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "titanium-os"
+  },
+  "tags": ["content-engine", "titanium-os"]
+}

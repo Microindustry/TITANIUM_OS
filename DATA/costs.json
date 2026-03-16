@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "description": "Registro costi infrastruttura ricorrenti — TITANIUM_OS",
+    "last_update": "2026-03-10"
+  },
+  "recurring_costs": [
+    {
+      "id": "n8n-vps",
+      "name": "n8n — Oracle Cloud Free Tier (4 OCPU ARM, 24GB RAM)",
+      "category": "GENESIS",
+      "eur_month": 0,
+      "status": "pianificato",
+      "note": "Always Free — non scade. Deploy pronto in AUTOMATIONS/deploy/n8n/",
+      "deploy_ready": true,
+      "files": "AUTOMATIONS/deploy/n8n/"
+    },
+    {
+      "id": "n8n-dominio",
+      "name": "DNS (DuckDNS gratuito o dominio .it)",
+      "category": "GENESIS",
+      "eur_month": 0,
+      "status": "pianificato",
+      "note": "DuckDNS = EUR 0. Dominio .it opzionale = ~EUR 1/mese"
+    }
+  ],
+  "summary": {
+    "total_active_eur_month": 0,
+    "total_planned_eur_month": 0
+  }
+}

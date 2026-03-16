@@ -1,0 +1,13 @@
+{
+  "_comment": "Configurazione bridge TITANIUM_OS <-> n8n. Modifica qui gli URL senza toccare i .py",
+  "n8n_base_url": "http://localhost:5678",
+  "webhooks": {
+    "milestone_trigger": "http://localhost:5678/webhook/titanium-milestone",
+    "state_update":      "http://localhost:5678/webhook/titanium-state",
+    "content_request":   "http://localhost:5678/webhook/titanium-content"
+  },
+  "content_engine_path": "C:/Users/Matteo/Desktop/CONTENT_ENGINE",
+  "titanium_os_path":    "C:/Users/Matteo/Desktop/TITANIUM_OS",
+  "enabled": true,
+  "timeout_seconds": 10
+}

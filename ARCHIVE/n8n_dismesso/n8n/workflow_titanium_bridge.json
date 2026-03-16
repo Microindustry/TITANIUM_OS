@@ -1,0 +1,115 @@
+{
+  "id": "titanium-bridge-001",
+  "name": "TITANIUM_OS — Milestone → Content Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "titanium-milestone",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Webhook — Milestone Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": false },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEmpty" }
+            }
+          ]
+        }
+      },
+      "id": "check-event",
+      "name": "Verifica Evento Valido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Costruisce il prompt per Claude CLI\nconst body = $input.first().json.body;\nconst event = body.event;\nconst milestoneName = body.milestone_name || 'Milestone senza nome';\nconst focusToday = body.focus_today || '';\nconst nextStep = body.next_step || '';\nconst timestamp = body.timestamp || new Date().toISOString();\n\n// Pillar summary\nconst pillars = body.pillars || {};\nconst pillarLines = Object.entries(pillars).map(([k, v]) => \n  `- ${k}: ${v.pct_complete || 0}% (${v.status || 'N/A'})`\n).join('\\n');\n\n// Prompt per Claude\nconst prompt = `Sei l'Archivista Creativo di TITANIUM_OS.\n\nEvento: ${event === 'milestone_completed' ? '✅ MILESTONE COMPLETATA' : '🎯 NUOVA MILESTONE'}\nMilestone: ${milestoneName}\nData: ${timestamp.slice(0,10)}\nFocus oggi: ${focusToday}\nProssimo step: ${nextStep}\n\nStato pillar:\n${pillarLines}\n\nScrivi uno storytelling in italiano per questa milestone. Formato:\n\n# ${milestoneName}\n**Data**: ${timestamp.slice(0,10)}\n**Tipo**: ${event}\n\n## Il Momento\n[2-3 frasi che raccontano questo momento del progetto in modo visivo e concreto]\n\n## Il Significato\n[1-2 frasi sul perché questo step conta nel quadro generale]\n\n## LinkedIn (max 3 righe)\n[Post professionale e diretto]\n\n## Podcast (traccia)\n[3 bullet point narrativi per audio]\n\nSolo il testo, nessun commento aggiuntivo.`;\n\nreturn [{ json: { prompt, milestoneName, event, timestamp } }];"
+      },
+      "id": "build-prompt",
+      "name": "Costruisce Prompt Claude",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 220]
+    },
+    {
+      "parameters": {
+        "command": "=claude -p \"{{ $json.prompt.replace(/\"/g, '\\\"') }}\" --output-format text 2>&1"
+      },
+      "id": "claude-cli",
+      "name": "Claude CLI — Genera Storytelling",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [900, 220]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Salva il .md in CONTENT_ENGINE/produzione_contenuti/\nconst fs = require('fs');\nconst path = require('path');\n\nconst storytelling = $input.first().json.stdout || 'Errore: nessun output da Claude';\nconst milestone = $('build-prompt').first().json.milestoneName;\nconst timestamp = $('build-prompt').first().json.timestamp;\n\n// Nome file sicuro\nconst safeName = milestone.replace(/[^a-zA-Z0-9_\\-àèìòù]/g, '_').slice(0, 60);\nconst dateStr = timestamp.slice(0, 10);\nconst filename = `${dateStr}_${safeName}.md`;\nconst outputDir = 'C:/Users/Matteo/Desktop/CONTENT_ENGINE/produzione_contenuti';\nconst filepath = path.join(outputDir, filename);\n\n// Salva file\nfs.mkdirSync(outputDir, { recursive: true });\nfs.writeFileSync(filepath, storytelling, 'utf8');\n\nreturn [{ json: { filepath, filename, storytelling, milestone } }];"
+      },
+      "id": "save-md",
+      "name": "Salva File .md",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1120, 220]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"status\": \"ok\", \"file\": \"{{ $('save-md').first().json.filename }}\" }"
+      },
+      "id": "respond-ok",
+      "name": "Risposta OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1340, 220]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={ \"status\": \"skipped\", \"reason\": \"evento vuoto\" }"
+      },
+      "id": "respond-skip",
+      "name": "Risposta Skip",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [680, 420]
+    }
+  ],
+  "connections": {
+    "Webhook — Milestone Trigger": {
+      "main": [[{ "node": "Verifica Evento Valido", "type": "main", "index": 0 }]]
+    },
+    "Verifica Evento Valido": {
+      "main": [
+        [{ "node": "Costruisce Prompt Claude", "type": "main", "index": 0 }],
+        [{ "node": "Risposta Skip", "type": "main", "index": 0 }]
+      ]
+    },
+    "Costruisce Prompt Claude": {
+      "main": [[{ "node": "Claude CLI — Genera Storytelling", "type": "main", "index": 0 }]]
+    },
+    "Claude CLI — Genera Storytelling": {
+      "main": [[{ "node": "Salva File .md", "type": "main", "index": 0 }]]
+    },
+    "Salva File .md": {
+      "main": [[{ "node": "Risposta OK", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Rome"
+  },
+  "tags": []
+}
