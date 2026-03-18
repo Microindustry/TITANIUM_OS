@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!-- MATTEO/index.html | TITANIUM_OS | v1.1 | 2026-03-18 -->
+<!-- Mappa navigabile locale — ecosistema Matteo Benenati -->
+<!-- Apri con doppio click o qualsiasi browser -->
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATTEO — Matteo Benenati</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #020617;
+    color: #e2e8f0;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    /* Dot grid */
+    background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+    background-size: 22px 22px;
+    background-color: #020617;
+  }
+
+  /* ── Keyframes ── */
+  @keyframes np {
+    0%, 100% { opacity: 0.04; r: var(--pr); }
+    50%       { opacity: 0.22; r: calc(var(--pr) * 1.18); }
+  }
+  @keyframes nodeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes drillZoom {
+    from { opacity: 0.5; transform: scale(1); }
+    to   { opacity: 0;   transform: scale(4.5); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes accentLine {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  /* ── Header ── */
+  #header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: 44px;
+    background: rgba(2,6,23,0.92);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 20px;
+    backdrop-filter: blur(8px);
+  }
+  #header::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(16,185,129,0.4), transparent);
+  }
+  .logo {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: inherit;
+  }
+  .logo-icon {
+    width: 22px; height: 22px;
+    border: 1px solid rgba(16,185,129,0.4);
+    border-radius: 5px;
+    background: rgba(16,185,129,0.05);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #10b981;
+  }
+  .logo-text { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; color: #f1f5f9; }
+  .logo-sub  { font-size: 6px; letter-spacing: 0.3em; color: #475569; }
+  .sep { width: 1px; height: 16px; background: rgba(255,255,255,0.08); }
+  .back-to-os {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 8px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: #475569; text-decoration: none; padding: 3px 10px;
+    border: 1px solid rgba(255,255,255,0.06); border-radius: 6px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .back-to-os:hover { color: #10b981; border-color: rgba(16,185,129,0.25); }
+
+  /* Breadcrumb */
+  #breadcrumb {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 9px; letter-spacing: 0.1em;
+  }
+  .bc-item {
+    color: #475569; cursor: pointer; padding: 2px 6px;
+    border-radius: 4px; transition: color 0.15s;
+    text-transform: uppercase;
+  }
+  .bc-item:hover { color: #94a3b8; }
+  .bc-item.active { color: #94a3b8; font-weight: 700; }
+  .bc-sep { color: #1e293b; }
+
+  .ml-auto { margin-left: auto; }
+  .header-tag {
+    font-size: 7px; letter-spacing: 0.2em; color: #334155;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 4px; padding: 3px 8px;
+    text-transform: uppercase;
+  }
+  .header-tag span { color: #10b981; }
+
+  /* ── Main SVG area ── */
+  #map-container {
+    position: fixed; inset: 44px 0 0 0;
+    overflow: hidden;
+  }
+
+  #map-svg {
+    width: 100%; height: 100%;
+    animation: fadeUp 0.35s ease both;
+  }
+
+  /* ── Nodi SVG ── */
+  .node-group {
+    cursor: pointer;
+    animation: nodeIn 0.4s ease var(--delay, 0ms) both;
+  }
+  .node-group:hover .node-circle {
+    filter: drop-shadow(0 0 10px var(--node-color));
+  }
+  .node-circle {
+    fill: #0f172a;
+    stroke-width: 1.5;
+    transition: stroke-opacity 0.2s;
+  }
+  .node-circle-track {
+    fill: none; stroke: #1e293b; stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+  .node-progress {
+    fill: none; stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 1000;
+  }
+  .node-label {
+    font-family: inherit; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    pointer-events: none; text-anchor: middle; dominant-baseline: central;
+  }
+  .node-sub {
+    font-family: inherit;
+    fill: #475569; text-anchor: middle; dominant-baseline: central;
+    letter-spacing: 0.08em;
+  }
+  .node-drill-indicator {
+    fill: none; font-family: inherit; font-size: 8px;
+    text-anchor: middle; dominant-baseline: central;
+    opacity: 0.5;
+  }
+
+  /* Pulse ring */
+  .pulse-ring {
+    fill: none; stroke-width: 1;
+    animation: np 2.6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* drillZoom burst */
+  .drill-burst {
+    pointer-events: none;
+    animation: drillZoom 0.42s ease-out forwards;
+    transform-origin: center;
+  }
+
+  /* Connessioni */
+  .conn-path { pointer-events: none; transition: opacity 0.2s; }
+
+  /* Level watermark */
+  #level-wm {
+    position: fixed;
+    font-size: 140px; font-weight: 900;
+    opacity: 0.06; pointer-events: none; select: none;
+    font-family: inherit; letter-spacing: 0.1em;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  /* ── Detail panel ── */
+  #detail {
+    position: fixed; bottom: 0; left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: min(520px, 90vw);
+    background: rgba(2,6,23,0.97);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+    padding: 20px 24px 24px;
+    z-index: 200;
+    transition: transform 0.3s cubic-bezier(0.34,1.22,0.64,1);
+    backdrop-filter: blur(12px);
+  }
+  #detail.open {
+    transform: translateX(-50%) translateY(0);
+  }
+  .detail-accent {
+    position: absolute; top: 0; left: 20%; right: 20%; height: 2px;
+    border-radius: 2px;
+    animation: accentLine 0.4s ease both;
+    transform-origin: left;
+  }
+  .detail-label {
+    font-size: 14px; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .detail-sub {
+    font-size: 9px; letter-spacing: 0.15em; color: #475569;
+    text-transform: uppercase; margin-bottom: 12px;
+  }
+  .detail-body {
+    font-size: 10px; line-height: 1.7; color: #64748b;
+  }
+  .detail-close {
+    position: absolute; top: 16px; right: 16px;
+    background: none; border: none; color: #334155;
+    cursor: pointer; font-size: 14px; line-height: 1;
+    padding: 4px 8px; border-radius: 6px;
+    transition: color 0.15s;
+  }
+  .detail-close:hover { color: #94a3b8; }
+  .detail-drill {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 14px; padding: 6px 14px;
+    border-radius: 8px; border: 1px solid;
+    font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+    cursor: pointer; transition: opacity 0.15s; opacity: 0.7;
+    background: none;
+  }
+  .detail-drill:hover { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header id="header">
+  <div class="logo">
+    <div class="logo-icon">⚡</div>
+    <div>
+      <div class="logo-text">MATTEO</div>
+      <div class="logo-sub">TITANIUM_OS</div>
+    </div>
+  </div>
+  <div class="sep"></div>
+  <nav id="breadcrumb">
+    <span class="bc-item active" data-idx="0">ROOT</span>
+  </nav>
+  <div class="ml-auto" style="display:flex;align-items:center;gap:12px;">
+    <div class="header-tag">MATTEO BENENATI · <span>v1.0</span> · 2026</div>
+    <a href="/" class="back-to-os">⚡ TITANIUM OS</a>
+  </div>
+</header>
+
+<!-- ── LEVEL WATERMARK ── -->
+<div id="level-wm" style="display:none"></div>
+
+<!-- ── MAP ── -->
+<div id="map-container">
+  <svg id="map-svg" id="map"></svg>
+</div>
+
+<!-- ── DETAIL PANEL ── -->
+<div id="detail">
+  <div id="detail-accent" class="detail-accent"></div>
+  <button class="detail-close" onclick="closeDetail()">✕</button>
+  <div id="detail-label" class="detail-label"></div>
+  <div id="detail-sub"   class="detail-sub"></div>
+  <div id="detail-body"  class="detail-body"></div>
+  <button id="detail-drill" class="detail-drill" style="display:none" onclick="drillFromDetail()">
+    ▶ ESPLORA
+  </button>
+</div>
+
+<script>
+// ─── DATI ECOSISTEMA ────────────────────────────────────────────────────────
+const NODES = {
+  root: {
+    id: 'root', label: 'MATTEO\nBENENATI', sub: 'artigiano digitale', color: '#10b981', pct: null,
+    detail: 'System builder. 15+ anni industria manifatturiera: TIG/MIG titanio, robot, presse, QC. ADHD probabile → il sistema è il mio scaffolding cognitivo. Costruisco macchine e sistemi che si costruiscono da soli.',
+    children: ['chisono', 'cv', 'vulcan', 'mims', 'eva'],
+    pulse: true,
+  },
+  chisono: {
+    id: 'chisono', label: 'CHI SONO', sub: 'il sistema', color: '#06b6d4', pct: null,
+    detail: '15+ anni nell\'industria. ADHD probabile: non un limite, uno stile cognitivo. Il sistema è il mio scaffolding. Costruisco strutture perché senza struttura penso con troppa intensità.',
+    children: ['thinker', 'builder', 'titaniumos'],
+  },
+  cv: {
+    id: 'cv', label: 'CV LAYERS', sub: 'la traiettoria', color: '#818cf8', pct: 80,
+    detail: 'Non certificazioni. Prove concrete. 4 esperienze industriali che costruiscono una skill-stack unica: materiali aerospace + robotica + meccanica di precisione + qualità ISO.',
+    children: ['scproject', 'essegi', 'datwler', 'luve'],
+  },
+  vulcan: {
+    id: 'vulcan', label: 'VULCAN', sub: 'la pressa', color: '#f43f5e', pct: 15,
+    detail: 'Pressa a 3 stati per produrre le tile MIMS. Martinetto Vevor 20t + colonne guida strutturali DATWLER. Il gate d\'ingresso per tutto il prodotto fisico. Il luogo dove la formula diventa materia.',
+    children: ['struttura', 'ricette', 'brevetto'],
+  },
+  mims: {
+    id: 'mims', label: 'MIMS', sub: 'i connettori', color: '#f59e0b', pct: 30,
+    detail: 'Sistema connettori modulari polimerici. Tile con sistema incastro proprietario. Caso d\'uso primario: Fit Park 4.0, area fitness outdoor con tornello MIMS. Il prodotto che scala.',
+    children: ['tile', 'fitpark', 'digitale'],
+  },
+  eva: {
+    id: 'eva', label: 'EVA', sub: 'AI per Maria', color: '#8b5cf6', pct: 40,
+    detail: 'Assistente AI per Vita Natura, centro estetico di Maria a Boffalora sopra Ticino (MI). n8n workflow + WhatsApp Business API. Prenotazioni automatiche, CRM, follow-up clienti.',
+    children: ['whatsapp', 'crm', 'vitanatura'],
+    pulse: true,
+  },
+
+  // ── CHI SONO ──
+  thinker: {
+    id: 'thinker', label: 'THINKER', sub: 'sistema builder', color: '#06b6d4', pct: null,
+    detail: 'ADHD probabile: pensiero iper-associativo, attenzione selettiva. Non è un deficit — è un\'architettura diversa. Il sistema TITANIUM_OS è la risposta: esternalizza la memoria, riduce il carico cognitivo.',
+  },
+  builder: {
+    id: 'builder', label: 'BUILDER', sub: 'artigiano', color: '#10b981', pct: null,
+    detail: 'Saldo titanio, freso alluminio 7075, programmo robot, automatizzo workflow. La mano e il codice parlano la stessa lingua: trasformano l\'intenzione in oggetto reale. Form follows function.',
+  },
+  titaniumos: {
+    id: 'titaniumos', label: 'TITANIUM OS', sub: 'il cervello', color: '#818cf8', pct: null,
+    detail: 'Il sistema operativo della mia mente. BRAIN (STATE.json + 21 knowledge files) + AUTOMATIONS (34 nodi) + DASHBOARD (React 19) + MEMORY (.claude). Si aggiorna da solo, si ricorda da solo.',
+  },
+
+  // ── CV LAYERS ──
+  scproject: {
+    id: 'scproject', label: 'SCPROJECT', sub: 'TIG/MIG · MotoGP', color: '#06b6d4', pct: 100,
+    detail: 'Saldatura titanio aerospace. Scarichi MotoGP montati in gara nel WorldChampionship. Il luogo dove ho imparato che la precisione è una forma d\'arte — ogni cordone ha un nome e una responsabilità.',
+  },
+  essegi: {
+    id: 'essegi', label: 'ESSEGI', sub: 'robot industriali', color: '#818cf8', pct: 100,
+    detail: 'Programmazione e operatività robot industriali. Celle automatizzate in produzione. Il luogo dove ho capito che i sistemi automatizzati hanno sempre bisogno di un architetto umano che li conosca dall\'interno.',
+  },
+  datwler: {
+    id: 'datwler', label: 'DATWLER', sub: 'presse · strutture', color: '#f59e0b', pct: 100,
+    detail: 'Setup presse industriali. Le colonne guida DATWLER — riutilizzate come struttura portante in VULCAN. Il passato industriale diventa infrastruttura del progetto futuro. La memoria dei materiali.',
+  },
+  luve: {
+    id: 'luve', label: 'LU.VE', sub: 'QC · ISO', color: '#10b981', pct: 100,
+    detail: 'Quality Control scambiatori di calore. Metrologia, CMM, non conformità, normative EU. Il luogo dove ho imparato che la qualità si misura — non si presume, non si dichiara. Si dimostra con i numeri.',
+  },
+
+  // ── VULCAN ──
+  struttura: {
+    id: 'struttura', label: 'STRUTTURA', sub: 'Vevor 20t + guide', color: '#f43f5e', pct: 20,
+    detail: 'Martinetto Vevor 20t a 3 stati (idle / semi / full). 4 colonne guida DATWLER come struttura portante. La geometria della pressione: calibrata, ripetibile, controllata.',
+  },
+  ricette: {
+    id: 'ricette', label: 'RICETTE', sub: 'formula polimerica', color: '#f59e0b', pct: 0,
+    detail: 'Formulazioni target per le tile MIMS: temperatura, pressione, tempo di cura, durezza Shore. Il segreto che trasforma un polimero in un connettore. Non ancora nel brevetto — non ancora replicabile.',
+  },
+  brevetto: {
+    id: 'brevetto', label: 'BREVETTO', sub: 'IP proprietario', color: '#10b981', pct: 0,
+    detail: 'Documentazione brevettuale della formula polimerica MIMS. Il moat competitivo a lungo termine. Costruisce il valore che non si copia — quello che trasforma un prodotto in una barriera all\'ingresso.',
+  },
+
+  // ── MIMS ──
+  tile: {
+    id: 'tile', label: 'TILE', sub: 'connettori modulari', color: '#f59e0b', pct: 40,
+    detail: 'Tile polimeriche con sistema incastro proprietario. Ogni tile è un nodo di un sistema più grande. Geometria progettata per resistenza e scorrevolezza: il click di un MIMS deve essere inconfondibile.',
+  },
+  fitpark: {
+    id: 'fitpark', label: 'FIT PARK', sub: 'area fitness', color: '#10b981', pct: 5,
+    detail: 'Area fitness outdoor con tornello MIMS proprietario. Primo caso d\'uso B2C. La tile diventa infrastruttura urbana. Il prodotto trova il suo contesto — e dimostra che la modularità è una promessa mantenuta.',
+  },
+  digitale: {
+    id: 'digitale', label: 'DIGITALE', sub: 'app + API', color: '#06b6d4', pct: 0,
+    detail: 'App mobile, backend gestione, API connettori MIMS. Il layer software che trasforma il prodotto fisico in ecosistema connesso. Post pressa. Il futuro è nel dato, non solo nella tile.',
+  },
+
+  // ── EVA ──
+  whatsapp: {
+    id: 'whatsapp', label: 'WHATSAPP', sub: 'bot automatico', color: '#10b981', pct: 40,
+    detail: 'n8n workflow + WhatsApp Business API. Risponde ai clienti, prende appuntamenti, invia reminder. Attivo H24. Maria non tocca il telefono per le prenotazioni — si concentra sul lavoro reale.',
+    pulse: true,
+  },
+  crm: {
+    id: 'crm', label: 'CRM', sub: 'memoria clienti', color: '#818cf8', pct: 0,
+    detail: 'Pipeline: EVA → Google Calendar. Ogni conversazione è un dato. Ogni appuntamento è un record. La memoria del centro — costruisce il profilo cliente nel tempo, non solo nel momento.',
+  },
+  vitanatura: {
+    id: 'vitanatura', label: 'VITA NATURA', sub: 'Boffalora s/T', color: '#8b5cf6', pct: 40,
+    detail: 'Centro estetico di Maria a Boffalora sopra Ticino (MI). EVA è il cervello digitale che libera Maria per fare ciò che sa fare meglio: prendersi cura delle persone, non del telefono.',
+  },
+};
+
+// ─── CONNESSIONI NEURALI PER LIVELLO ────────────────────────────────────────
+const CONNECTIONS = {
+  root:    [['root','chisono'],['root','cv'],['root','vulcan'],['root','mims'],['root','eva'],
+            ['cv','vulcan','produce'],['vulcan','mims','tile'],['mims','eva',''],['chisono','cv','']],
+  chisono: [['chisono','thinker'],['chisono','builder'],['chisono','titaniumos'],
+            ['thinker','builder',''],['builder','titaniumos','costruisce']],
+  cv:      [['cv','scproject'],['cv','essegi'],['cv','datwler'],['cv','luve'],
+            ['scproject','essegi','evolve'],['essegi','datwler','meccanica'],['datwler','luve','qualità'],['datwler','struttura','guide→VULCAN']],
+  vulcan:  [['vulcan','struttura'],['vulcan','ricette'],['vulcan','brevetto'],
+            ['struttura','ricette','pressa'],['ricette','brevetto','formula IP']],
+  mims:    [['mims','tile'],['mims','fitpark'],['mims','digitale'],
+            ['tile','fitpark','installa'],['tile','digitale','connette'],['fitpark','digitale','dati uso']],
+  eva:     [['eva','whatsapp'],['eva','crm'],['eva','vitanatura'],
+            ['whatsapp','crm','popola'],['crm','vitanatura','fidelizza'],['vitanatura','whatsapp','porta clienti']],
+};
+
+// ─── STATE ──────────────────────────────────────────────────────────────────
+const CX = () => window.innerWidth  / 2;
+const CY = () => (window.innerHeight - 44) / 2;
+const RADII = [0, 190, 320];
+const NODE_R = { root: 58, xl: 46, md: 36, sm: 26 };
+
+function getR(id, level) {
+  if (level === 0) return NODE_R.root;
+  const n = NODES[id];
+  if (!n) return NODE_R.md;
+  if (id === state.stack[state.stack.length-1]?.centerId) return NODE_R.xl;
+  return NODE_R.md;
+}
+
+const state = {
+  stack: [{ centerId: 'root', centerColor: '#10b981', label: 'ROOT' }],
+  activeNode: null,
+  zoomNode:   null,
+  animKey:    0,
+};
+
+// ─── RADIAL LAYOUT ───────────────────────────────────────────────────────────
+function radialPos(idx, total, ring) {
+  const angle = (-90 + idx * (360 / total)) * (Math.PI / 180);
+  const r = RADII[ring] || RADII[1];
+  return {
+    x: CX() + r * Math.cos(angle),
+    y: CY() + r * Math.sin(angle),
+  };
+}
+
+function buildLevel(centerId) {
+  const node = NODES[centerId];
+  const children = node?.children || [];
+  const ring1 = children.slice(0, Math.min(children.length, 6));
+  const ring2 = children.slice(6);
+
+  const positions = {};
+  positions[centerId] = { x: CX(), y: CY() };
+
+  ring1.forEach((id, i) => {
+    positions[id] = radialPos(i, ring1.length, 1);
+  });
+  ring2.forEach((id, i) => {
+    positions[id] = radialPos(i, ring2.length, 2);
+  });
+
+  return {
+    nodeIds: [centerId, ...ring1, ...ring2],
+    positions,
+    connections: CONNECTIONS[centerId] || [],
+  };
+}
+
+// ─── SVG HELPERS ────────────────────────────────────────────────────────────
+const SVG_NS = 'http://www.w3.org/2000/svg';
+function el(tag, attrs={}) {
+  const e = document.createElementNS(SVG_NS, tag);
+  for (const [k,v] of Object.entries(attrs)) e.setAttribute(k, v);
+  return e;
+}
+function hexToRgba(hex, a) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function arcPath(cx, cy, r, pct) {
+  if (pct <= 0) return '';
+  const start = -Math.PI/2;
+  const end   = start + (pct/100) * 2 * Math.PI;
+  const x1 = cx + r * Math.cos(start), y1 = cy + r * Math.sin(start);
+  const x2 = cx + r * Math.cos(end),   y2 = cy + r * Math.sin(end);
+  const large = pct > 50 ? 1 : 0;
+  return `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}`;
+}
+function curvePath(x1,y1,x2,y2) {
+  const mx = (x1+x2)/2, my = (y1+y2)/2;
+  const dx = x2-x1, dy = y2-y1;
+  const len = Math.sqrt(dx*dx+dy*dy)||1;
+  const off = len*0.08;
+  return `M ${x1} ${y1} Q ${mx+(-dy/len)*off} ${my+(dx/len)*off} ${x2} ${y2}`;
+}
+
+// ─── RENDER ─────────────────────────────────────────────────────────────────
+function render() {
+  const svg = document.getElementById('map-svg');
+  svg.innerHTML = '';
+  svg.setAttribute('width', window.innerWidth);
+  svg.setAttribute('height', window.innerHeight - 44);
+
+  const level = state.stack.length - 1;
+  const centerId = state.stack[level].centerId;
+  const { nodeIds, positions, connections } = buildLevel(centerId);
+  const centerColor = NODES[centerId]?.color || '#10b981';
+
+  // ── Radial glow ──
+  const defs = el('defs');
+  const rg = el('radialGradient', { id:'centerGlow', cx:'50%', cy:'50%', r:'45%' });
+  const s1 = el('stop', { offset:'0%',   'stop-color': centerColor, 'stop-opacity':'0.08' });
+  const s2 = el('stop', { offset:'100%', 'stop-color': centerColor, 'stop-opacity':'0' });
+  rg.appendChild(s1); rg.appendChild(s2); defs.appendChild(rg);
+
+  // Arrowhead markers
+  const mk1 = el('marker', { id:'arr-s', markerWidth:'6', markerHeight:'6', refX:'5', refY:'3', orient:'auto' });
+  const mp1 = el('path', { d:'M0,0 L0,6 L6,3 z', fill:'rgba(255,255,255,0.15)' });
+  mk1.appendChild(mp1); defs.appendChild(mk1);
+  const mk2 = el('marker', { id:'arr-d', markerWidth:'5', markerHeight:'5', refX:'4', refY:'2.5', orient:'auto' });
+  const mp2 = el('path', { d:'M0,0 L0,5 L5,2.5 z', fill:'rgba(255,255,255,0.08)' });
+  mk2.appendChild(mp2); defs.appendChild(mk2);
+  svg.appendChild(defs);
+
+  // ── Background glow rect ──
+  const glowRect = el('rect', { width:'100%', height:'100%', fill:'url(#centerGlow)' });
+  svg.appendChild(glowRect);
+
+  // ── Pulse rings ──
+  nodeIds.forEach((id, idx) => {
+    const n = NODES[id];
+    if (!n?.pulse) return;
+    const pos = positions[id];
+    const r = getR(id, idx===0 ? 0 : 1) + 18;
+    const ring = el('circle', {
+      cx: pos.x, cy: pos.y, r,
+      fill: 'none',
+      stroke: n.color,
+      'stroke-width': 1.2,
+      class: 'pulse-ring',
+    });
+    ring.style.setProperty('--pr', r+'px');
+    svg.appendChild(ring);
+  });
+
+  // ── drillZoom burst ──
+  if (state.zoomNode && positions[state.zoomNode]) {
+    const zp = positions[state.zoomNode];
+    const zn = NODES[state.zoomNode];
+    const burst = el('circle', {
+      cx: zp.x, cy: zp.y, r: 50,
+      fill: hexToRgba(zn?.color || '#10b981', 0.06),
+      stroke: zn?.color || '#10b981',
+      'stroke-width': 1,
+      class: 'drill-burst',
+    });
+    svg.appendChild(burst);
+  }
+
+  // ── Connessioni ──
+  const connGroup = el('g');
+  connections.forEach(([from, to, label]) => {
+    const fp = positions[from], tp = positions[to];
+    if (!fp || !tp) return;
+    const fromN = NODES[from];
+    const color = fromN?.color || '#334155';
+    const isRoot = from === centerId || to === centerId;
+    const isActive = state.activeNode === from || state.activeNode === to;
+    const opacity = isActive ? (isRoot ? 0.55 : 0.4) : (isRoot ? 0.2 : 0.1);
+
+    const path = el('path', {
+      d: curvePath(fp.x, fp.y, tp.x, tp.y),
+      stroke: color, 'stroke-width': isRoot ? 1.5 : 1,
+      fill: 'none', opacity,
+      'stroke-dasharray': isRoot ? undefined : '5,4',
+      'marker-end': isRoot ? 'url(#arr-s)' : 'url(#arr-d)',
+      class: 'conn-path',
+    });
+    connGroup.appendChild(path);
+
+    if (label && isActive) {
+      const mx = (fp.x + tp.x)/2, my = (fp.y + tp.y)/2;
+      const txt = el('text', {
+        x: mx, y: my - 5, 'text-anchor':'middle',
+        fill: color, 'font-size': 7, 'font-family': 'inherit',
+        opacity: 0.6,
+      });
+      txt.textContent = label;
+      connGroup.appendChild(txt);
+    }
+  });
+  svg.appendChild(connGroup);
+
+  // ── Nodi ──
+  nodeIds.forEach((id, idx) => {
+    const n = NODES[id];
+    if (!n) return;
+    const pos = positions[id];
+    const isCenterNode = id === centerId && level > 0;
+    const nodeLevel = idx === 0 ? 0 : 1;
+    const r = getR(id, nodeLevel);
+    const hasChildren = !!(n.children?.length);
+    const isActive = state.activeNode === id;
+    const delay = idx * 42;
+
+    const g = el('g', { class: 'node-group' });
+    g.style.setProperty('--delay', delay + 'ms');
+    g.style.setProperty('--node-color', n.color);
+
+    // Progress track + arc
+    if (n.pct !== null && n.pct !== undefined) {
+      const pr = r + 6;
+      const track = el('circle', { cx: pos.x, cy: pos.y, r: pr, class:'node-circle-track' });
+      g.appendChild(track);
+      if (n.pct > 0) {
+        const arc = el('path', {
+          d: arcPath(pos.x, pos.y, pr, n.pct),
+          stroke: n.color, 'stroke-width': 2.5, fill: 'none',
+          'stroke-linecap': 'round',
+          opacity: 0.7,
+        });
+        g.appendChild(arc);
+      }
+    }
+
+    // Circle
+    const circle = el('circle', {
+      cx: pos.x, cy: pos.y, r,
+      fill: '#0f172a',
+      stroke: n.color,
+      'stroke-width': 1.5,
+      'stroke-opacity': isActive ? 1 : 0.65,
+      class: 'node-circle',
+    });
+    if (isActive) {
+      circle.setAttribute('filter', `drop-shadow(0 0 8px ${n.color})`);
+    }
+    g.appendChild(circle);
+
+    // Status dot
+    const dotColor = n.pct === 100 ? '#10b981' : n.pulse ? n.color : '#334155';
+    const dot = el('circle', { cx: pos.x + r*0.6, cy: pos.y - r*0.6, r: 2.8, fill: dotColor });
+    g.appendChild(dot);
+
+    // Label
+    const lines = n.label.split('\n');
+    const lineH = idx === 0 && level === 0 ? 16 : r > 33 ? 13 : 11;
+    const fontSize = idx === 0 && level === 0 ? 12 : r > 33 ? 10 : 8.5;
+    lines.forEach((line, li) => {
+      const t = el('text', {
+        x: pos.x,
+        y: pos.y + (li - (lines.length-1)/2) * lineH + (n.sub ? -5 : 0),
+        fill: n.color, 'font-size': fontSize,
+        class: 'node-label',
+      });
+      t.textContent = line;
+      g.appendChild(t);
+    });
+
+    // Sub
+    if (n.sub) {
+      const sub = el('text', {
+        x: pos.x, y: pos.y + lines.length * lineH * 0.5 + (n.sub ? 3 : 0),
+        fill: '#475569', 'font-size': Math.max(7, fontSize - 2),
+        class: 'node-sub',
+      });
+      sub.textContent = n.sub;
+      g.appendChild(sub);
+    }
+
+    // Drill indicator
+    if (isCenterNode) {
+      const di = el('text', { x: pos.x, y: pos.y + r - 8, 'font-size': 7, fill: n.color, 'text-anchor':'middle', opacity: 0.5 });
+      di.textContent = '← su';
+      g.appendChild(di);
+    } else if (hasChildren) {
+      const di = el('text', { x: pos.x, y: pos.y + r - 6, 'font-size': 7, fill: n.color, 'text-anchor':'middle', opacity: 0.45 });
+      di.textContent = '▶';
+      g.appendChild(di);
+    }
+
+    // Events
+    g.addEventListener('click', () => handleClick(id));
+    g.style.cursor = isCenterNode ? 'zoom-out' : hasChildren ? 'zoom-in' : 'pointer';
+
+    svg.appendChild(g);
+  });
+}
+
+// ─── NAVIGATION ─────────────────────────────────────────────────────────────
+function handleClick(id) {
+  const level = state.stack.length - 1;
+  const centerId = state.stack[level].centerId;
+  const n = NODES[id];
+  if (!n) return;
+
+  // Centro in drill → vai su
+  if (level > 0 && id === centerId) {
+    drillBack();
+    return;
+  }
+
+  // Ha figli → drill in
+  if (n.children?.length) {
+    drillInto(id);
+    return;
+  }
+
+  // Mostra detail
+  openDetail(id);
+}
+
+function drillInto(id) {
+  const n = NODES[id];
+  if (!n?.children?.length) return;
+
+  // Burst
+  state.zoomNode = id;
+  render();
+  setTimeout(() => { state.zoomNode = null; }, 440);
+
+  // Transizione
+  const svg = document.getElementById('map-svg');
+  svg.style.opacity = 0;
+  svg.style.transform = 'scale(0.97)';
+  svg.style.transition = 'opacity 0.22s, transform 0.22s';
+
+  setTimeout(() => {
+    state.stack.push({ centerId: id, centerColor: n.color, label: n.label.replace('\n',' ') });
+    state.activeNode = null;
+    closeDetail();
+    updateBreadcrumb();
+    updateWatermark();
+    render();
+    svg.style.transition = 'none';
+    svg.style.opacity = 0;
+    svg.style.transform = 'translateY(8px) scale(0.97)';
+    requestAnimationFrame(() => {
+      svg.style.transition = 'opacity 0.3s, transform 0.3s';
+      svg.style.opacity = 1;
+      svg.style.transform = 'none';
+    });
+  }, 240);
+}
+
+function drillBack(targetIdx) {
+  if (state.stack.length <= 1) return;
+
+  const svg = document.getElementById('map-svg');
+  svg.style.opacity = 0;
+  svg.style.transform = 'scale(0.97)';
+  svg.style.transition = 'opacity 0.2s, transform 0.2s';
+
+  setTimeout(() => {
+    if (targetIdx !== undefined) {
+      state.stack = state.stack.slice(0, targetIdx + 1);
+    } else {
+      state.stack.pop();
+    }
+    state.activeNode = null;
+    closeDetail();
+    updateBreadcrumb();
+    updateWatermark();
+    render();
+    svg.style.transition = 'none';
+    svg.style.opacity = 0;
+    requestAnimationFrame(() => {
+      svg.style.transition = 'opacity 0.28s, transform 0.28s';
+      svg.style.opacity = 1;
+      svg.style.transform = 'none';
+    });
+  }, 220);
+}
+
+// ─── UI HELPERS ─────────────────────────────────────────────────────────────
+function updateBreadcrumb() {
+  const bc = document.getElementById('breadcrumb');
+  bc.innerHTML = '';
+
+  // Bottone ← visibile quando in drill
+  if (state.stack.length > 1) {
+    const back = document.createElement('button');
+    back.textContent = '← INDIETRO';
+    back.style.cssText = `
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: #94a3b8; font-family: inherit; font-size: 8px; letter-spacing: 0.15em;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 6px;
+      cursor: pointer; margin-right: 8px; transition: background 0.15s;
+    `;
+    back.onmouseenter = () => back.style.background = 'rgba(255,255,255,0.08)';
+    back.onmouseleave = () => back.style.background = 'rgba(255,255,255,0.04)';
+    back.addEventListener('click', () => drillBack());
+    bc.appendChild(back);
+  }
+
+  state.stack.forEach((entry, idx) => {
+    if (idx > 0) {
+      const sep = document.createElement('span');
+      sep.className = 'bc-sep'; sep.textContent = '/';
+      bc.appendChild(sep);
+    }
+    const item = document.createElement('span');
+    item.className = 'bc-item' + (idx === state.stack.length-1 ? ' active' : '');
+    item.textContent = entry.label;
+    item.dataset.idx = idx;
+    if (idx < state.stack.length - 1) {
+      item.style.color = state.stack[idx+1]?.centerColor || '#475569';
+      item.addEventListener('click', () => drillBack(idx));
+    }
+    bc.appendChild(item);
+  });
+}
+
+function updateWatermark() {
+  const wm = document.getElementById('level-wm');
+  const level = state.stack.length - 1;
+  if (level > 0) {
+    wm.style.display = 'block';
+    wm.textContent = 'L' + level;
+    wm.style.color = state.stack[level].centerColor + '0a';
+  } else {
+    wm.style.display = 'none';
+  }
+}
+
+let detailCurrentId = null;
+function openDetail(id) {
+  const n = NODES[id];
+  if (!n) return;
+  detailCurrentId = id;
+  state.activeNode = id;
+
+  document.getElementById('detail-label').textContent = n.label.replace('\n', ' ');
+  document.getElementById('detail-label').style.color = n.color;
+  document.getElementById('detail-sub').textContent = n.sub || '';
+  document.getElementById('detail-body').textContent = n.detail || '';
+  document.getElementById('detail-accent').style.background = n.color;
+
+  const drillBtn = document.getElementById('detail-drill');
+  if (n.children?.length) {
+    drillBtn.style.display = 'inline-flex';
+    drillBtn.style.color = n.color;
+    drillBtn.style.borderColor = n.color + '40';
+  } else {
+    drillBtn.style.display = 'none';
+  }
+
+  document.getElementById('detail').classList.add('open');
+  render(); // aggiorna highlight connessioni
+}
+
+function closeDetail() {
+  document.getElementById('detail').classList.remove('open');
+  state.activeNode = null;
+  detailCurrentId = null;
+  render();
+}
+
+function drillFromDetail() {
+  if (detailCurrentId) drillInto(detailCurrentId);
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+window.addEventListener('resize', () => render());
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('detail').classList.contains('open')) closeDetail();
+    else if (state.stack.length > 1) drillBack();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateBreadcrumb();
+  updateWatermark();
+  render();
+});
+</script>
+</body>
+</html>

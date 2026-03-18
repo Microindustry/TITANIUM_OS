@@ -63,7 +63,7 @@ const CICLO_ICONS: Record<string, React.ElementType> = {
   reinvest: RefreshCw,
 };
 
-const CICLO_STEPS = [
+export const CICLO_STEPS = [
   { id: "build",    label: "COSTRUISCI", color: "text-emerald-400", border: "border-emerald-500/50", bg: "bg-emerald-900/20" },
   { id: "doc",      label: "DOCUMENTA",  color: "text-cyan-400",    border: "border-cyan-500/50",    bg: "bg-cyan-900/20"    },
   { id: "teach",    label: "INSEGNA",    color: "text-cyan-400",    border: "border-cyan-500/30",    bg: "bg-cyan-900/10"    },
@@ -75,7 +75,7 @@ const CICLO_STEPS = [
 ];
 
 // ─── PILLARS ──────────────────────────────────────────────────────────────────
-const PILLARS_DATA = [
+export const PILLARS_DATA = [
   { label: "V32",         pct: 65, bar: "bg-emerald-500", note: "Config G rinforzi", atto: "II" },
   { label: "MIMS",        pct: 30, bar: "bg-amber-500",   note: "Attende pressa",    atto: "III" },
   { label: "GENESIS",     pct: 10, bar: "bg-cyan-500",    note: "OS setup",          atto: "V" },
@@ -84,7 +84,7 @@ const PILLARS_DATA = [
 ];
 
 // ─── CELL: FOCUS + AUTOMAZIONE ATTIVA ────────────────────────────────────────
-function CellFocus() {
+export function CellFocus() {
   const [state, setState] = useState<Record<string, any> | null>(null);
   const [apiOk, setApiOk] = useState<boolean | null>(null);
 
@@ -173,7 +173,7 @@ function CellFocus() {
 }
 
 // ─── CELL: CICLO OPERATIVO ────────────────────────────────────────────────────
-function CellCiclo() {
+export function CellCiclo() {
   const [active, setActive] = useState("build");
   const [state, setState] = useState<Record<string, any> | null>(null);
 
@@ -460,7 +460,7 @@ function CellCiclo() {
 }
 
 // ─── CELL: PILASTRI ───────────────────────────────────────────────────────────
-function CellPillars() {
+export function CellPillars() {
   return (
     <div className="space-y-2">
       {PILLARS_DATA.map((p) => (
@@ -482,7 +482,7 @@ function CellPillars() {
 }
 
 // ─── CELL: V32 ────────────────────────────────────────────────────────────────
-function CellV32() {
+export function CellV32() {
   const [modal, setModal] = useState(false);
   return (
     <>
@@ -570,7 +570,7 @@ function CellV32() {
 }
 
 // ─── CELL: ECOTREE MODIFICABILE ───────────────────────────────────────────────
-function CellEcoTree() {
+export function CellEcoTree() {
   return (
     <div className="h-full flex flex-col gap-2">
       <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest">
@@ -584,7 +584,7 @@ function CellEcoTree() {
 }
 
 // ─── CELL: AUTOMAZIONI ────────────────────────────────────────────────────────
-function CellAutomazioni() {
+export function CellAutomazioni() {
   return (
     <div className="h-full flex flex-col gap-2">
       {/* Status bar */}
@@ -606,7 +606,7 @@ function CellAutomazioni() {
 }
 
 // ─── CELL: MENTE · DIGEST ─────────────────────────────────────────────────────
-function CellMente() {
+export function CellMente() {
   const [digest, setDigest] = useState<Record<string, any> | null>(null);
   const [scanning, setScanning] = useState(false);
   const [query, setQuery] = useState("");
@@ -755,7 +755,7 @@ function CellMente() {
 }
 
 // ─── CELL: CONTENT ENGINE ─────────────────────────────────────────────────────
-function CellContentEngine() {
+export function CellContentEngine() {
   const [files, setFiles] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [apiOk, setApiOk] = useState<boolean | null>(null);

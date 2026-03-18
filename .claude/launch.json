@@ -7,6 +7,12 @@
       "runtimeArgs": ["run", "dev"],
       "port": 5173,
       "cwd": "DASHBOARD"
+    },
+    {
+      "name": "sinapsi",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "5174", "SINAPSI"],
+      "port": 5174
     }
   ]
 }
