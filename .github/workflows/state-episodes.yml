@@ -6,6 +6,7 @@
 name: Auto-generate Episodes from STATE
 
 on:
+  workflow_dispatch:  # trigger manuale da GitHub UI
   push:
     branches: [main]
     paths:

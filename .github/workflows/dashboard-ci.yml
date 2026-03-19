@@ -5,6 +5,7 @@
 name: Dashboard CI
 
 on:
+  workflow_dispatch:  # trigger manuale da GitHub UI
   push:
     branches: [main]
     paths:
