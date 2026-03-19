@@ -5,7 +5,7 @@ export interface EcoNode {
   id: string;
   name: string;
   type: "folder" | "file" | "node" | "automation" | "data" | "dashboard" | "project" | "external";
-  status: "active" | "pending" | "archived" | "future";
+  status: "active" | "pending" | "archived" | "future" | "building";
   comment: string;
   path?: string;
   children?: EcoNode[];

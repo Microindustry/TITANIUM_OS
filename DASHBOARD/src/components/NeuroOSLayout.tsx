@@ -54,7 +54,7 @@ interface StackLevel {
 
 // ─── LAYOUT RADIALE ────────────────────────────────────────────────────────
 // Posiziona N figli in orbita attorno al centro (50%, 50%)
-function radialLayout(children: DrillChild[], parentId: string): MapNode[] {
+function radialLayout(children: DrillChild[], _parentId: string): MapNode[] {
   const cx = 50, cy = 50;
   const r1 = 30; // raggio ring 1 in %
   const r2 = 44; // raggio ring 2
@@ -458,14 +458,14 @@ function StatusStrip({ state }: { state: Record<string, any> | null }) {
       <div className="w-px h-3 bg-slate-800 flex-shrink-0" />
       <span className="text-[8px] font-mono text-slate-500 truncate flex-1">▸ {state?.next_step || "—"}</span>
       {state?.blockers?.length > 0 && (
-        <span className="text-[8px] font-mono text-rose-400 flex-shrink-0">⚠ {state.blockers[0]}</span>
+        <span className="text-[8px] font-mono text-rose-400 flex-shrink-0">⚠ {state!.blockers[0]}</span>
       )}
     </div>
   );
 }
 
 // ─── NEURO NODE ────────────────────────────────────────────────────────────
-function NeuroNode({ node, isActive, isHovered, onClick, onEnter, onLeave, level, delay = 0 }: {
+function NeuroNode({ node, isActive, isHovered, onClick, onEnter, onLeave, level: _level, delay = 0 }: {
   node: MapNode; isActive: boolean; isHovered: boolean;
   onClick: () => void; onEnter: () => void; onLeave: () => void;
   level: number; delay?: number;

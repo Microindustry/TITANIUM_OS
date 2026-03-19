@@ -51,6 +51,7 @@ const statusColor: Record<EcoNode["status"], string> = {
   pending: "bg-amber-500",
   archived: "bg-slate-600",
   future: "bg-indigo-400",
+  building: "bg-cyan-500",
 };
 
 // ── ICON per tipo nodo ──────────────────────────────────────

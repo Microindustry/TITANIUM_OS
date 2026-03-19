@@ -12,7 +12,7 @@ import {
   Zap, Play, CheckCircle2, Trash2,
   AlertCircle, Activity, X, Hammer, BookOpen,
   Unlock, TrendingUp, Package, RotateCcw,
-  Terminal, Plus, ChevronRight,
+  Plus, ChevronRight,
   Brain, Search, ScanLine, Radio, FileText, Clock, ExternalLink,
 } from "lucide-react";
 
@@ -29,7 +29,7 @@ const ROW_H = 44;
 const COLS = 12;
 const MARGIN: [number, number] = [6, 6];
 
-const DEFAULT_LAYOUT: Layout[] = [
+const DEFAULT_LAYOUT: Layout = [
   { i: "focus",       x: 0, y: 0,  w: 4,  h: 6,  minW: 3, minH: 4 },
   { i: "ciclo",       x: 4, y: 0,  w: 5,  h: 6,  minW: 4, minH: 5 },
   { i: "pillars",     x: 9, y: 0,  w: 3,  h: 6,  minW: 2, minH: 4 },
@@ -42,7 +42,7 @@ const DEFAULT_LAYOUT: Layout[] = [
   { i: "content",     x: 8, y: 20, w: 4,  h: 8,  minW: 3, minH: 5 },
 ];
 
-function loadLayout(): Layout[] {
+function loadLayout(): Layout {
   try {
     const s = localStorage.getItem(LAYOUT_KEY);
     return s ? JSON.parse(s) : DEFAULT_LAYOUT;
@@ -874,7 +874,7 @@ export function CellContentEngine() {
 const STATIC_DATE = "2026-03-16";
 
 export function CanvasLayout() {
-  const [layout, setLayout] = useState<Layout[]>(loadLayout);
+  const [layout, setLayout] = useState<Layout>(loadLayout);
   const [containerWidth, setContainerWidth] = useState(1200);
   const [stateDate, setStateDate] = useState(STATIC_DATE);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -900,7 +900,7 @@ export function CanvasLayout() {
     return () => obs.disconnect();
   }, []);
 
-  const onLayoutChange = useCallback((l: Layout[]) => {
+  const onLayoutChange = useCallback((l: Layout) => {
     setLayout(l);
     localStorage.setItem(LAYOUT_KEY, JSON.stringify(l));
   }, []);
@@ -924,15 +924,11 @@ export function CanvasLayout() {
 
       <GridLayout
         layout={layout}
-        cols={COLS}
-        rowHeight={ROW_H}
         width={containerWidth - 16} /* sottrai padding */
-        margin={MARGIN}
-        draggableHandle=".cell-drag-handle"
+        gridConfig={{ cols: COLS, rowHeight: ROW_H, margin: MARGIN }}
+        dragConfig={{ handle: ".cell-drag-handle" }}
+        resizeConfig={{ handles: ["se"] }}
         onLayoutChange={onLayoutChange}
-        resizeHandles={["se"]}
-        compactType="vertical"
-        preventCollision={false}
       >
         {/* ── FOCUS + AUTOMAZIONE ATTIVA ─────────────────── */}
         <div key="focus">

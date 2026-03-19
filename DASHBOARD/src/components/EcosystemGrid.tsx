@@ -35,7 +35,6 @@ import {
   TimelineItem,
   CheckItem,
   ScrollArea,
-  Badge,
 } from "./UIComponents";
 
 // ── LAYOUT STORAGE ──────────────────────────────────────────
@@ -44,7 +43,7 @@ const ROW_H = 50;
 const COLS = 12;
 const MARGIN: [number, number] = [8, 8];
 
-const DEFAULT_LAYOUT: Layout[] = [
+const DEFAULT_LAYOUT: Layout = [
   { i: "focus",      x: 0, y: 0,  w: 4,  h: 4,  minW: 3, minH: 3 },
   { i: "ciclo",      x: 4, y: 0,  w: 5,  h: 4,  minW: 4, minH: 3 },
   { i: "pillars",    x: 9, y: 0,  w: 3,  h: 4,  minW: 2, minH: 3 },
@@ -55,7 +54,7 @@ const DEFAULT_LAYOUT: Layout[] = [
   { i: "timeline",   x: 8, y: 10, w: 4,  h: 8,  minW: 3, minH: 5 },
 ];
 
-function loadLayout(): Layout[] {
+function loadLayout(): Layout {
   try {
     const s = localStorage.getItem(LAYOUT_KEY);
     return s ? JSON.parse(s) : DEFAULT_LAYOUT;
@@ -64,7 +63,7 @@ function loadLayout(): Layout[] {
   }
 }
 
-function saveLayout(l: Layout[]) {
+function saveLayout(l: Layout) {
   localStorage.setItem(LAYOUT_KEY, JSON.stringify(l));
 }
 
@@ -318,7 +317,7 @@ const DEFAULT_DATES: Record<string, string> = {
 };
 
 export const EcosystemGrid = ({ containerWidth }: EcosystemGridProps) => {
-  const [layout, setLayout] = useState<Layout[]>(loadLayout);
+  const [layout, setLayout] = useState<Layout>(loadLayout);
   const [cellDates, setCellDates] = useState<Record<string, string>>(DEFAULT_DATES);
 
   // Carica date reali da STATE.json via API
@@ -348,7 +347,7 @@ export const EcosystemGrid = ({ containerWidth }: EcosystemGridProps) => {
       .catch(() => {/* fallback silenzioso alle date statiche */});
   }, []);
 
-  const onLayoutChange = useCallback((l: Layout[]) => {
+  const onLayoutChange = useCallback((l: Layout) => {
     setLayout(l);
     saveLayout(l);
   }, []);
@@ -372,15 +371,11 @@ export const EcosystemGrid = ({ containerWidth }: EcosystemGridProps) => {
 
       <GridLayout
         layout={layout}
-        cols={COLS}
-        rowHeight={ROW_H}
         width={containerWidth}
-        margin={MARGIN}
-        draggableHandle=".cell-drag-handle"
+        gridConfig={{ cols: COLS, rowHeight: ROW_H, margin: MARGIN }}
+        dragConfig={{ handle: ".cell-drag-handle" }}
+        resizeConfig={{ handles: ["se"] }}
         onLayoutChange={onLayoutChange}
-        resizeHandles={["se"]}
-        compactType="vertical"
-        preventCollision={false}
       >
         {/* ── FOCUS: THEMIS ──────────────────────────────── */}
         <div key="focus">

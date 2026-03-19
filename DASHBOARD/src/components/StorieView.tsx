@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
-import { Mic, Clock, Tag, ChevronDown, ChevronUp, Circle } from "lucide-react";
+import { Mic, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
 const STATUS_CONFIG: Record<EpisodeStatus, { label: string; color: string; dot: string }> = {
   ready:   { label: "PRONTO",  color: "text-emerald-400", dot: "bg-emerald-400" },

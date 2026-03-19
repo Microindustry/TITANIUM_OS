@@ -2,7 +2,7 @@
 // Mappa visuale di tutte le automazioni — note IT + ramificazioni + potenziamento
 
 import { useState } from "react";
-import { Zap, CheckCircle, Clock, ArrowRight, ChevronDown, ChevronUp, Wrench, Rocket, GitBranch } from "lucide-react";
+import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
 // DATI AUTOMAZIONI

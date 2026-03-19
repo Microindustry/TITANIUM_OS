@@ -473,10 +473,10 @@ export default function LayersView() {
 
             {/* Card aggiungi */}
             <div
-              style={{ animation: `cardIn 0.3s ease-out ${children.length * 55}ms both` }}
               onClick={() => setShowAddModal(true)}
               className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl cursor-pointer transition-all duration-300 min-h-[100px]"
               style={{
+                animation: `cardIn 0.3s ease-out ${children.length * 55}ms both`,
                 border: `1px dashed ${currentHex}25`,
                 background: 'transparent',
               }}

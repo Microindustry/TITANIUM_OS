@@ -8,7 +8,7 @@ import {
   Cpu, Target, Calculator, Layers, Users, Calendar,
   Package, Trophy, Grid3X3, Hammer, X, ChevronDown,
   ChevronUp, Terminal, Zap, Play, RotateCcw,
-  BookOpen, Unlock, TrendingUp, RefreshCw,
+  BookOpen, RefreshCw,
   AlertCircle, Activity,
 } from "lucide-react";
 
