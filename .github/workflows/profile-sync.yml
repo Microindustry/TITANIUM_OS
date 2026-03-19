@@ -1,0 +1,38 @@
+# profile-sync.yml — TITANIUM_OS
+# Trigger: ogni push che modifica BRAIN/github_profile_readme.md
+# Azione: copia il README nel repo profilo Microindustry/Microindustry
+
+name: Sync Profile README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'BRAIN/github_profile_readme.md'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout TITANIUM_OS
+        uses: actions/checkout@v4
+
+      - name: Push README to profile repo
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: |
+          # Configura git con identità bot
+          git config --global user.name "TITANIUM_OS Bot"
+          git config --global user.email "bot@microindustry.local"
+
+          # Clona il repo profilo
+          git clone https://x-access-token:${PROFILE_TOKEN}@github.com/Microindustry/Microindustry.git /tmp/profile_repo
+
+          # Copia il README aggiornato
+          cp BRAIN/github_profile_readme.md /tmp/profile_repo/README.md
+
+          # Commit e push solo se ci sono cambiamenti
+          cd /tmp/profile_repo
+          git add README.md
+          git diff --staged --quiet || git commit -m "sync: profile README da TITANIUM_OS $(date +'%Y-%m-%d %H:%M')"
+          git push

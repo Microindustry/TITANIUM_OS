@@ -1,0 +1,47 @@
+# dashboard-ci.yml — TITANIUM_OS
+# Trigger: ogni push che modifica file in DASHBOARD/src/
+# Azione: TypeScript check + Vite build — blocca push rotti
+
+name: Dashboard CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'DASHBOARD/src/**'
+      - 'DASHBOARD/package.json'
+      - 'DASHBOARD/tsconfig*.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: DASHBOARD
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: DASHBOARD/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Vite build
+        run: npm run build
+
+      - name: Build size report
+        run: |
+          echo "## Build completata" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          du -sh dist/ >> $GITHUB_STEP_SUMMARY
+          ls -lh dist/assets/*.js 2>/dev/null | awk '{print $5, $9}' >> $GITHUB_STEP_SUMMARY || true

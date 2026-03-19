@@ -1,0 +1,42 @@
+# state-episodes.yml — TITANIUM_OS
+# Trigger: ogni push che modifica BRAIN/STATE.json
+# Azione: legge i nuovi milestones.verified → genera episodi .md via Claude API
+#         aggiorna CONTENT_ENGINE/DATABASE/ e storieData.ts
+
+name: Auto-generate Episodes from STATE
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'BRAIN/STATE.json'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PROFILE_TOKEN }}  # serve per fare commit nel repo
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Genera episodi da milestones
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python CONTENT_ENGINE/scripts/milestone_to_episode.py
+
+      - name: Commit episodi generati
+        run: |
+          git config user.name "TITANIUM_OS Bot"
+          git config user.email "bot@microindustry.local"
+          git add CONTENT_ENGINE/DATABASE/ DASHBOARD/src/data/storieData.ts
+          git diff --staged --quiet || git commit -m "auto: episodi generati da STATE.json $(date +'%Y-%m-%d')"
+          git push
