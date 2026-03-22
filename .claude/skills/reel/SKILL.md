@@ -1,0 +1,34 @@
+---
+name: reel
+description: Genera o mostra il reel_hook di un episodio TITANIUM_OS per Instagram/YouTube Shorts. Stile Simone Rizzo — dato concreto + problema + azione tecnica + open loop. Usa quando vuoi il testo pronto da girare in camera.
+argument-hint: [EP_AUTO_XXX oppure vuoto per l'ultimo episodio]
+allowed-tools: Read, Grep, Bash
+---
+
+# Reel Hook — TITANIUM_OS Content Engine
+
+Genera script reel 60-80 parole da episodio esistente.
+
+## Steps
+
+1. Se `$ARGUMENTS` è vuoto: prendi l'episodio più recente da `CONTENT_ENGINE/DATABASE/episodes/`
+2. Se `$ARGUMENTS` è un ID (es. `EP_AUTO_012`): leggi quel file
+
+```bash
+ls -t C:/Users/Matteo/Desktop/TITANIUM_OS/CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_*.md | head -1
+```
+
+3. Estrai e mostra il campo `reel_hook` dal frontmatter
+4. Se il reel_hook non esiste o è debole, generane uno nuovo con questo pattern:
+
+**Pattern Simone Rizzo:**
+- Apertura: dato concreto e visivo (numero, pezzo fisico, comando)
+- Problema: cosa non funzionava prima
+- Azione tecnica: cosa hai fatto esattamente (tools, codice, materiale)
+- Open loop: domanda che crea attesa per il prossimo
+
+5. Mostra il testo formattato pronto per il teleprompter
+6. Chiedi se vuoi anche la versione con emojis per caption Instagram
+
+## Tono
+Voce di Matteo: diretto, tecnico, prima persona. Zero retorica. Come parli in officina.
