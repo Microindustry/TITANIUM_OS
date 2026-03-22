@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { Activity, Zap, Grid3X3, GitBranch, Layers, Info, Network, Mic } from "lucide-react";
+import { useSystemState } from "./hooks/useSystemState";
 import { NeuroOSLayout } from "./components/NeuroOSLayout";
 import { CanvasLayout } from "./components/CanvasLayout";
 import LayersView from "./components/LayersView";
@@ -114,12 +115,11 @@ function Clock() {
 }
 
 export default function App() {
+  const sys = useSystemState();
   const [view, setView] = useState<ViewMode>(() => {
     const saved = localStorage.getItem(VIEW_KEY);
-    // fallback: "layers" era il vecchio nome → mappa a "sinapsi"
     if (saved === "layers") return "sinapsi";
     return (saved as ViewMode) ?? "neuro";
-
   });
 
   return (
@@ -146,9 +146,9 @@ export default function App() {
         <div className="flex items-center gap-2">
           <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
           <span className="text-[9px] text-slate-400 uppercase tracking-[0.12em]">
-            Config G — Rinforzi Z+U
+            {sys.activeMilestone || "loading..."}
           </span>
-          <span className="text-[8px] text-slate-600 border border-slate-800 rounded px-1.5 py-0.5">65%</span>
+          <span className="text-[8px] text-slate-600 border border-slate-800 rounded px-1.5 py-0.5">{sys.pct("V32")}%</span>
         </div>
 
         {/* Right side */}
@@ -226,7 +226,7 @@ export default function App() {
 
       {/* ── LAYOUT ────────────────────────────────────────── */}
       <div className="flex-1 overflow-hidden">
-        {view === "neuro"   && <NeuroOSLayout />}
+        {view === "neuro"   && <NeuroOSLayout systemState={sys.state} />}
         {view === "canvas"  && <CanvasLayout />}
         {view === "sinapsi" && <LayersView />}
         {view === "storie"  && <StorieView />}

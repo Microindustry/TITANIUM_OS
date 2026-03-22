@@ -525,7 +525,7 @@ function NeuroNode({ node, isActive, isHovered, onClick, onEnter, onLeave, level
 }
 
 // ─── NEURO OS LAYOUT ────────────────────────────────────────────────────────
-export function NeuroOSLayout() {
+export function NeuroOSLayout({ systemState }: { systemState?: any }) {
   const [stack,       setStack]       = useState<StackLevel[]>([L0]);
   const [activeNode,  setActiveNode]  = useState<string | null>(null);
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
@@ -540,13 +540,33 @@ export function NeuroOSLayout() {
   const current = stack[stack.length - 1];
   const level   = stack.length - 1;
 
-  // ── Live state ──
+  // ── Live state: usa prop da App.tsx oppure fallback fetch diretto ──
   useEffect(() => {
-    const load = () => fetch("/api/state").then(r => r.json()).then(setLiveState).catch(() => {});
+    if (systemState) { setLiveState(systemState); return; }
+    const load = () => fetch("http://localhost:5001/api/state").then(r => r.json()).then(setLiveState).catch(() => {});
     load();
     const id = setInterval(load, 30_000);
     return () => clearInterval(id);
-  }, []);
+  }, [systemState]);
+
+  // ── Aggiorna nodi base con dati live da STATE.json ──
+  useEffect(() => {
+    if (!liveState?.pillars) return;
+    const pillarMap: Record<string, string> = { v32: "V32", mims: "MIMS", genesis: "GENESIS", vitanatura: "VITA_NATURA", identity: "IDENTITY" };
+    NODES_BASE.forEach(n => {
+      const pk = pillarMap[n.id];
+      if (pk && liveState.pillars[pk]) {
+        const p = liveState.pillars[pk];
+        n.pct = p.pct_complete;
+        n.sub = `${p.pct_complete}% · ${p.status}`;
+      }
+    });
+    // aggiorna focus
+    const focusNode = NODES_BASE.find(n => n.id === "focus");
+    if (focusNode && liveState.active_milestone) {
+      focusNode.sub = `${liveState.active_milestone.slice(0, 20)} · ${liveState.pillars?.V32?.pct_complete ?? 0}%`;
+    }
+  }, [liveState]);
 
   // ── Misura container ──
   useEffect(() => {
