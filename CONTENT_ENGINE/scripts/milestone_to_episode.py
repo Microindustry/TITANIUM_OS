@@ -56,10 +56,14 @@ def generate_episode(milestone: str, ep_num: int, context: dict) -> dict:
 
     # ── PASS 1: haiku → metadati strutturati (veloce, economico) ──────────
     meta_prompt = f"""Milestone: "{milestone}"
-Progetto: fresatrice CNC V32 {ctx_v32}%, MIMS {ctx_mims}%, TITANIUM_OS, VULCAN pressa 20t, EVA bot WhatsApp.
+Progetto: V32 fresatrice CNC {ctx_v32}%, MIMS {ctx_mims}%, TITANIUM_OS, VULCAN pressa 20t, EVA WhatsApp bot.
+
+Genera due cose per questo milestone di Matteo Benenati (artigiano industriale + system builder):
+1. Metadati episodio podcast
+2. Hook reel Instagram/YouTube (stile Simone Rizzo: wow immediato + dato concreto + open loop finale)
 
 Rispondi SOLO con JSON su una riga:
-{{"title":"titolo narrativo 3-5 parole","sottotitolo":"frase evocativa max 10 parole","tags":["tag1","tag2","tag3"],"durata_min":8,"preview":"prima frase dell episodio, diretta, max 120 caratteri"}}"""
+{{"title":"titolo narrativo 3-5 parole","sottotitolo":"frase evocativa max 10 parole","tags":["tag1","tag2","tag3"],"durata_min":8,"preview":"prima frase episodio diretta max 120 caratteri","reel_hook":"script reel 60-80 parole in italiano fluido, prima persona. Struttura: apertura con dato concreto e visivo → problema che c era prima → azione tecnica precisa → domanda aperta che crea attesa. Zero parentesi, zero template. Solo testo da leggere in camera."}}"""
 
     meta_msg = client.messages.create(
         model="claude-haiku-4-5-20251001",
@@ -130,6 +134,7 @@ Scrivi episodio podcast (500-650 parole, markdown) con questa struttura:
 
 # ── Salva episodio .md ──────────────────────────────────────────────────────
 def save_episode_md(ep_id: str, milestone: str, data: dict, date_str: str) -> Path:
+    reel = data.get('reel_hook', '').replace('"', "'")
     content = f"""---
 id: "{ep_id}"
 milestone: "{milestone}"
@@ -140,6 +145,7 @@ data_evento: "{date_str}"
 tags: {json.dumps(data['tags'], ensure_ascii=False)}
 status: "ready"
 durata_min: {data['durata_min']}
+reel_hook: "{reel}"
 generated: "{datetime.now().isoformat()}"
 ---
 
