@@ -1,0 +1,32 @@
+---
+id: "EP_AUTO_002"
+milestone: "8 pezzi interfaccia lavorati (bronzine + scalini)"
+title: "8 pezzi, geometria perfetta"
+sottotitolo: "Quando le bronzine diventano linguaggio della macchina"
+stagione: "AUTO"
+data_evento: "2026-03-22"
+tags: ["V32", "manufacturing", "precisione", "MIMS", "artigianato-industriale"]
+status: "ready"
+durata_min: 7
+generated: "2026-03-22T17:46:23.474806"
+---
+
+# 8 pezzi, geometria perfetta
+
+> Quando guardi un pezzo fresato bene, vedi il codice che l'ha generato. Non è poesia, è geometria pura.
+
+Stamattina in officina, ore 9.30. Davanti a me: 8 pezzi interfaccia appena estratti dalla morsa. Bronzine (±0.015 mm) + scalini di posizionamento. Li prendo uno per uno, li passo sotto la luce. Zero sbavature sugli spigoli vivi. Le tolleranze sono dentro. Questo è il momento in cui smetti di costruire pezzi random e cominci a costruire un linguaggio.
+
+Capisco che sembra esagerato per una serie di bronzine, ma ecco: questi 8 oggetti sono il vocabolario fisico con cui V32 parlerà con MIMS. Ogni scalino, ogni foro è una istruzione che il prossimo componente leggerà con le sue tolleranze. Non è magia. È semplicemente **constraint satisfaction in acciaio**.
+
+La V32 è al 65%. Mancano ancora i principali assiemi. Ma questi 8 pezzi rappresentano il momento in cui il sistema smette di essere un foglio di CAD e diventa un ecosistema che funziona. Quando monto un bronzina su un altro componente, quella deve adattarsi con precisione deterministica. Niente "circa". Niente "se vai di forza". Zero tolleranze soggettive.
+
+Ho lavorato 3 ore nette per farli. Primo pezzo mi è costato 45 minuti di setup della macchina — zerare il mandrino, tarare i comparatori, testare una prima geometria. Gli altri 7? 20-25 minuti ciascuno, flusso costante. Questo è il ritmo che voglio raggiungere: la redditività dell'artigianato industriale non è in un pezzo solo, è nella serialità consapevole.
+
+Il blocker è ancora il mandrino 2.2kW ER20. L'ho ordinato lunedì. Arriva tra due giorni. Senza quello, non posso scalare la V32 a regime di taglio pieno. Ma intanto questi 8 pezzi mi dicono che **il sistema è coerente**. La fresatrice fa quello che le dico di fare. TITANIUM_OS (il mio os personale che integra CAM + scheduling + log) ha tracciato ogni ciclo, ogni tempo di setup. Quando finirò la V32, avrò un database completo di come una macchina di questa classe si comporta nel reale.
+
+MIMS (i connettori modulari fisici) ha ancora il 30% da fare, ma adesso so quale "dialetto" fisico deve parlare. Questi 8 pezzi sono la Rosetta Stone tra il mio intento progettuale e la realtà della materia.
+
+Perché racconto questo? Perché in una cultura dove tutto è software, dove il fisico sembra secondario, questi 8 pezzi di metallo sono il fondamento. Sono il proof-of-concept che un artigiano può costruire non solo con le mani, ma con **sistemi**. VULCAN (la pressa, il brevetto sui polimeri), EVA (l'AI per Maria), TITANIUM_OS: sono tutte estensioni dello stesso principio. Costruire processi che si replicano, che si scalano, che rimangono precise.
+
+Un pezzo fresato bene non è arte. È promessa mantenuta.

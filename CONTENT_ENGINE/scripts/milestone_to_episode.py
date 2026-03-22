@@ -47,60 +47,86 @@ def already_generated() -> set[str]:
 
 # ── Genera episodio via Claude ──────────────────────────────────────────────
 def generate_episode(milestone: str, ep_num: int, context: dict) -> dict:
-    """Chiama Claude e restituisce dict con tutti i campi dell'episodio."""
+    """Chiama Claude con 2 passaggi: haiku per struttura, sonnet per narrativa."""
 
-    prompt = f"""Sei il ghostwriter del podcast di Matteo Benenati — artigiano industriale + system builder.
+    ctx_v32   = context.get('v32_pct', 65)
+    ctx_mims  = context.get('mims_pct', 30)
+    ctx_focus = context.get('focus_today', 'costruzione V32')
+    ctx_block = context.get('blockers', ['nessuno'])[0] if context.get('blockers') else 'nessuno'
 
-Contesto del progetto:
-- TITANIUM_OS: sistema operativo cognitivo personale (React + Python + automazioni)
-- V32: fresatrice CNC da zero, 178 kg, ±0.019 mm — stato attuale: {context.get('v32_pct', 65)}%
-- MIMS: connettori modulari fisici — stato: {context.get('mims_pct', 30)}%
-- VULCAN: pressa 20t + ricette polimeri + brevetto
-- EVA: AI assistant WhatsApp per centro estetico di Maria
-- Focus oggi: {context.get('focus_today', '')}
-- Blocker attivo: {context.get('blockers', ['nessuno'])[0] if context.get('blockers') else 'nessuno'}
+    # ── PASS 1: haiku → metadati strutturati (veloce, economico) ──────────
+    meta_prompt = f"""Milestone: "{milestone}"
+Progetto: fresatrice CNC V32 {ctx_v32}%, MIMS {ctx_mims}%, TITANIUM_OS, VULCAN pressa 20t, EVA bot WhatsApp.
 
-MILESTONE DA RACCONTARE:
-"{milestone}"
+Rispondi SOLO con JSON su una riga:
+{{"title":"titolo narrativo 3-5 parole","sottotitolo":"frase evocativa max 10 parole","tags":["tag1","tag2","tag3"],"durata_min":8,"preview":"prima frase dell episodio, diretta, max 120 caratteri"}}"""
 
-Scrivi un episodio podcast in italiano (stile Matteo: diretto, tecnico, zero fluff, prima persona).
-
-PARTE 1 — rispondi SOLO con questo JSON su una riga (nessun testo extra prima o dopo):
-{{"title":"titolo breve max 4 parole","sottotitolo":"frase evocativa max 12 parole","tags":["tag1","tag2","tag3"],"durata_min":7,"preview":"prime 2 righe narrative max 150 caratteri"}}
-
-PARTE 2 — dopo il JSON scrivi esattamente la riga:
----CONTENT---
-Poi scrivi il testo completo (400-600 parole, markdown):
-- Inizia con una citazione in prima persona tra >
-- Racconta il milestone come un momento specifico
-- Collega al sistema piu grande (V32, TITANIUM_OS, MIMS)
-- Chiudi con riflessione sul perche questo momento conta
-- Linguaggio: officina + codice, mai pomposo"""
-
-    message = client.messages.create(
+    meta_msg = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1500,
-        messages=[{"role": "user", "content": prompt}]
+        max_tokens=300,
+        messages=[{"role": "user", "content": meta_prompt}]
+    )
+    meta_raw = meta_msg.content[0].text.strip()
+    meta_raw = re.sub(r'^```json\s*', '', meta_raw)
+    meta_raw = re.sub(r'\s*```$', '', meta_raw.strip())
+    meta = json.loads(meta_raw)
+
+    # ── PASS 2: sonnet → narrativa di qualita con XML + system + few-shot ──
+    # Tecnica: system prompt separato + XML tags + 2 few-shot in-context
+    # Fonte: Anthropic docs 2025 + arXiv style-transfer research
+    SYSTEM = """Sei Matteo Benenati — artigiano industriale + system builder. Scrivi sempre in prima persona.
+
+<identita>
+15 anni officina: TIG titanio MotoGP (SCProject), robot ESSEGI packaging, presse DATWLER, QC LU.VE refrigerazione.
+Ora: fresatrice CNC V32 da zero (178kg, 3 assi, ±0.019mm) + TITANIUM_OS sopra (React+Python+automazioni AI).
+Paralleli: MIMS connettori fisici modulari, VULCAN pressa 20t + ricette polimeri, EVA AI WhatsApp per Maria.
+ADHD — il sistema e lo scaffolding cognitivo. Senza STATE.json ti perdi.
+</identita>
+
+<stile>
+Frasi corte. Spezzate. Come pensi tu, non come uno scrittore.
+Dati tecnici reali: numeri, tolleranze, nomi materiali, comandi shell, nomi file.
+Lavoro fisico: si sente l officina, il metallo, il fumo della saldatura.
+Codice: si sente il terminale aperto alle 23:00, il cursore che lampeggia.
+VIETATO: "questo momento", "straordinario", "incredibile", "viaggio", "sfida", "percorso".
+PREFERITO: "Ho scoperto che...", "Il problema era...", "Ora so che...", numeri, azioni precise.
+</stile>
+
+<esempi_voce>
+<esempio_1>
+Officina, martedi, 21:40. Il tubo 40x40x3 e in morsa. TIG in mano — stesso setup degli scarichi MotoGP, stessa macchina, elettrodo tungsteno 2.4mm affilato a 30°. Sbaglio l angolo sul giunto, rifaccio il tacco. Non e un dramma. E un dato: "giunto a T su S235, approccio ottimale 15° non 20°". Lo scrivo in STATE.json.
+</esempio_1>
+<esempio_2>
+Il terminale dice: ModuleNotFoundError. E la terza volta in due ore. Non e un errore — e il sistema che mi dice che ho saltato un passaggio. Apro BRAIN/STATE.json: prossimo step era "install dipendenze". Non l avevo fatto. ADHD. Il sistema funziona solo se lo aggiorno in tempo reale, non a fine sessione.
+</esempio_2>
+</esempi_voce>"""
+
+    narrative_user = f"""<milestone>"{milestone}"</milestone>
+<contesto_ora>
+  focus: {ctx_focus}
+  blocker_attivo: {ctx_block}
+  v32_completamento: {ctx_v32}%
+  mims_completamento: {ctx_mims}%
+</contesto_ora>
+
+<istruzioni>
+Scrivi episodio podcast (500-650 parole, markdown) con questa struttura:
+1. Citazione in prima persona tra > — una cosa che hai pensato o detto quel giorno, secca
+2. Scena esatta: dove eri, che ora era, gesto fisico o comando preciso
+3. Il bivio: cosa non funzionava prima, cosa cambia dopo questo milestone
+4. Connessione al sistema: come si innesta in V32 / TITANIUM_OS / MIMS / VULCAN
+5. Ultima riga: una frase sola. Corta. Vera. Niente aggettivi.
+</istruzioni>"""
+
+    narrative_msg = client.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=2000,
+        system=SYSTEM,
+        messages=[{"role": "user", "content": narrative_user}]
     )
 
-    raw = message.content[0].text.strip()
-
-    # separa JSON da content usando il separatore ---CONTENT---
-    if "---CONTENT---" in raw:
-        json_part, content_part = raw.split("---CONTENT---", 1)
-    else:
-        # fallback: prima riga = JSON, resto = content
-        lines = raw.split("\n", 1)
-        json_part = lines[0]
-        content_part = lines[1] if len(lines) > 1 else ""
-
-    json_part = json_part.strip()
-    json_part = re.sub(r'^```json\s*', '', json_part)
-    json_part = re.sub(r'\s*```$', '', json_part.strip())
-
-    data = json.loads(json_part)
-    data["content"] = content_part.strip()
-    return data
+    meta["content"] = narrative_msg.content[0].text.strip()
+    return meta
 
 # ── Salva episodio .md ──────────────────────────────────────────────────────
 def save_episode_md(ep_id: str, milestone: str, data: dict, date_str: str) -> Path:
@@ -198,6 +224,14 @@ def main():
             "content":    body,
         })
 
+    # calcola prossimo numero disponibile UNA volta sola, poi incrementa
+    existing_nums = []
+    for f in EPISODES_DIR.glob("EP_AUTO_*.md"):
+        m = re.search(r'EP_AUTO_(\d+)', f.stem)
+        if m:
+            existing_nums.append(int(m.group(1)))
+    next_num = max(existing_nums, default=0) + 1
+
     # Genera nuovi episodi per milestone non ancora coperti
     new_count = 0
     for i, milestone in enumerate(milestones):
@@ -205,8 +239,9 @@ def main():
             print(f"  ✓ già coperto: {milestone[:50]}")
             continue
 
-        ep_num = len(list(EPISODES_DIR.glob("EP_AUTO_*.md"))) + 1
-        ep_id  = f"EP_AUTO_{ep_num:03d}"
+        ep_id  = f"EP_AUTO_{next_num:03d}"
+        ep_num = next_num
+        next_num += 1
         # estrai data dal milestone se presente, altrimenti usa oggi
         date_m = re.search(r'\((\d{1,2})\s+(\w+)\s+(\d{4})\)', milestone)
         mesi = {"Gen":1,"Feb":2,"Mar":3,"Apr":4,"Mag":5,"Giu":6,"Lug":7,"Ago":8,"Set":9,"Ott":10,"Nov":11,"Dic":12}

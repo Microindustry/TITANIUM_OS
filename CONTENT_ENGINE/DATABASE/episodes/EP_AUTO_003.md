@@ -1,0 +1,38 @@
+---
+id: "EP_AUTO_003"
+milestone: "HMI TP900 Comfort acquisito"
+title: "HMI acquisito, V32 respira"
+sottotitolo: "Quando il touchscreen diventa il cervello della fresatrice"
+stagione: "AUTO"
+data_evento: "2026-03-22"
+tags: ["V32", "automazione", "HMI", "manufacturing", "system"]
+status: "ready"
+durata_min: 7
+generated: "2026-03-22T17:46:34.825071"
+---
+
+# HMI acquisito, V32 respira
+
+> "Un HMI non è uno schermo. È il luogo dove il pensiero diventa istruzione, e l'istruzione diventa materia."
+
+Stamattina ho scartato il TP900 Comfort. Siemens. Touchscreen 9", IP65, integrato nativo su SINUMERIK — esattamente quello che serviva. L'ho montato in 40 minuti sul pannello di controllo della V32, connesso via profibus al PLC. Ora respira.
+
+Fino a due settimane fa, V32 era un'orchestrazione cieca. Motori stepper, encoder, relè — tutto funzionava, ma il feedback era astratto. Leggevo codice G, interpretavo timeout su log file, indovinavo lo stato della macchina dalla posizione delle assi e dal suono. È il modo dei maker degli anni 80. Va bene per il prototipo, non scala.
+
+Con l'HMI tutto cambia geometria.
+
+Adesso vedo in tempo reale: temperatura della fresatrice (sensore DS18B20 incollato sulla testa), posizione assoluta delle tre assi, velocità di avanzamento, vibrazione (accelerometro ADXL345 sul telaio), consumo energetico. Passo da "spero che funzioni" a "so esattamente cosa sta succedendo".
+
+Ma il motivo vero per cui questo momento conta è un altro.
+
+V32 non esiste da sola. Fa parte di TITANIUM_OS — il sistema operativo cognitivo che sto costruendo. L'HMI è il nodo di confluenza: riceve istruzioni da TITANIUM_OS (via API REST), esegue cicli di fresatura, rispedisce i dati di telemetria al sistema centrale, che li elabora per ottimizzare i prossimi cicli. È feedback loop. È il prototipo di quello che un giorno diventarà la fabbrica personale — macchine non intelligenti singolarmente, ma intelligenti come ecosistema.
+
+MIMS (i connettori modulari che sto disegnando) vivono dentro questo flusso. Ogni componente che freserei con V32 avrà un QR code che racchiude tutta la storia: materiale, tolleranze, ricetta di lavorazione, esito dei test. VULCAN (la pressa) leggerà quel codice, applicherà automaticamente la ricetta giusta, registrerà il risultato. Tutto connesso. Tutto tracciabile.
+
+L'HMI è il primo respiro visibile di questo sistema.
+
+Ora il blocker è diverso: manca il mandrino 2.2kW ER20. Sto ordinando dalla Germania, consegna stimata lunedì. Una volta montato, comincio le prove strutturali su acciaio. Le 3 assi sono pronte, i cicli sono scritti, il controllo è finalmente leggibile.
+
+La V32 passa da "macchina che fresano io" a "macchina che parla con il mio sistema".
+
+Questo è il salto.
