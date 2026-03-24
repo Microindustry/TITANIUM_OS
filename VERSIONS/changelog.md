@@ -1,5 +1,48 @@
 # TITANIUM_OS — CHANGELOG
 
+## 2026-03-25 — v5.0.0 — DASHBOARD REBRANDING + ENGINE OVERHAUL
+
+### State Management — Context → Zustand + TanStack Query
+- **Zustand store** (`stores/systemStore.ts`): UI state centralizzato (view, focusTarget, expandedCell, navigateTo)
+- **TanStack Query** (`hooks/useSystemQuery.ts`): server state con cache condivisa, polling 10s, stale-while-revalidate
+- **Bridge backward-compatible** (`hooks/SystemStateContext.tsx`): `useGlobalState()` ora delega a `useSystemQuery()`
+- Eliminati 3 polling indipendenti (App 10s, NeuroOS 30s, Ecosystem 15s) → singola cache condivisa
+- Selector hooks: `usePillar()`, `useMdFiles()`, `useContentFiles()`, `useFile()`, `useDigest()`
+
+### Network — localhost:5001 → Vite Middleware
+- Tutte le API calls ora relative (`/api/state`, `/api/md-files`, `/api/content-files`, `/api/file`)
+- Dashboard funziona senza Flask (Vite middleware serve read ops)
+- Flask resta solo per operazioni pesanti (scan, TTS, video, semantic search)
+- Fix: `NeuroOSLayout`, `EcosystemView`, `EcosystemGrid`, `NeuroMapView`, `useSystemState` — rimosso hardcoded localhost
+
+### Navigazione Guidata — VIEW_NAV System
+- Ogni vista ha ruolo, descrizione, cross-links verso viste correlate
+- **GuideBar** in App.tsx: mostra ruolo corrente + suggerimenti navigazione
+- CANVAS primo nell'ordine (punto di partenza operativo)
+- `navigateTo(view, target)` da qualsiasi componente via Zustand
+
+### CanvasLayout — Celle Rinominate + Interattive
+- COMANDO → "AZIONE · COSA FARE ORA"
+- NODI · GENESIS → "NODI · INFRASTRUTTURA" — click nodo → naviga a MAPPA
+- PILASTRI → "PROGETTI · CLICK PER DETTAGLI" — click pilastro → naviga a SINAPSI
+- ECOTREE → "ARCHITETTURA · FILE SYSTEM"
+- NEURO MAP → "INTELLIGENCE · MENTE SCANNER"
+- MENTE → "RICERCA · DECISIONI" — cross-link "vedi rete →"
+- CONTENT → "CONTENUTI · EPISODI" — cross-link "vista completa →" a STORIE
+
+### Componenti Aggiornati
+- `NeuroOSLayout.tsx`: rimosso polling locale, usa cache TanStack condivisa
+- `EcosystemView.tsx`: nuovo file, rimosso fetch diretto, usa `useGlobalState()`
+- `EcosystemGrid.tsx`: date celle da cache condivisa
+- `MdManager.tsx`: migrato a `useMdFiles()` hook
+- `StorieView.tsx`: conteggio episodi live da `/api/content-files`, cross-links
+- `App.tsx` v5.0: `QueryClientProvider`, prefetch su cambio vista, GuideBar
+
+### Infrastruttura
+- `package.json`: +zustand, +@tanstack/react-query
+- `vite.config.ts`: middleware API ampliato
+- `.gitignore`: +node_modules, +dist, +.vite
+
 ## 2026-03-10 — v2.1.0
 - [KNOWLEDGE] Creati 15 file .md in BRAIN/KNOWLEDGE/ (economics, technical, mims, system)
 - [KNOWLEDGE] Aggiunti 4 file post-audit: genesis-architecture, the-board-prompts, revenue-target-y1, tech-stack-unified, fit-park-specs

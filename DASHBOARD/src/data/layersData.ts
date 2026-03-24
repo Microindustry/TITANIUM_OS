@@ -181,9 +181,9 @@ export const LAYERS_DATA: Layer = {
       status: 'building',
       color: 'emerald',
       pct: 65,
-      subtitle: 'Fresatrice CNC · Atto II',
-      skills: ['CNC', 'Alu 7075', 'G-code', 'Elettronica', 'TITANIUM_OS'],
-      proof: 'Fresatrice CNC funzionante',
+      subtitle: 'CNC 3 assi IN COSTRUZIONE — fresa stampi per MIMS via VULCAN · La Taverna',
+      skills: ['CNC build', 'Struttura TIG', 'Assi X/Y/Z', 'Elettronica', 'TITANIUM_OS'],
+      proof: 'V32 operativa → fresa stampi → VULCAN riempie → MIMS nasce',
       children: [
         {
           id: 'v32-hw',
@@ -224,9 +224,9 @@ export const LAYERS_DATA: Layer = {
       status: 'building',
       color: 'indigo',
       pct: 30,
-      subtitle: 'Connettori modulari · Ecosistema fisico+digitale',
-      skills: ['Design modulare', 'Produzione fisica', 'Sistema digitale'],
-      proof: 'Kit MIMS funzionante',
+      subtitle: 'Connettori modulari fisici — output catena V32→VULCAN→MIMS',
+      skills: ['Design modulare', 'Stampi V32', 'Polimeri VULCAN', 'Sistema digitale'],
+      proof: 'Primo connettore MIMS stampato con VULCAN da stampo V32',
       children: [
         {
           id: 'mims-kit',
@@ -266,9 +266,9 @@ export const LAYERS_DATA: Layer = {
       status: 'pending',
       color: 'amber',
       pct: 15,
-      subtitle: 'Pressa 20t · Ricette polimeri · Brevetto materiale',
-      skills: ['Pressa idraulica', 'Polimeri', 'Ricette materiali', 'Ingegneria stampo'],
-      proof: 'Stampi polimeri proprietari per MIMS',
+      subtitle: 'Pressa 20t — riempie stampi fresati da V32 → produce MIMS',
+      skills: ['Pressa idraulica 20t', 'Polimeri proprietari', 'Ricette materiali', 'Stampi da V32'],
+      proof: 'Primo componente MIMS uscito da stampo V32 pressato con VULCAN',
       children: [
         {
           id: 'vulcan-struttura',

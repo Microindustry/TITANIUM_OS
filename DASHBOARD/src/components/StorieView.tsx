@@ -4,7 +4,9 @@
 
 import { useState } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
-import { Mic, Clock, ChevronDown, ChevronUp } from "lucide-react";
+import { Mic, Clock, ChevronDown, ChevronUp, ArrowLeft, Layers } from "lucide-react";
+import { useContentFiles } from "../hooks/useSystemQuery";
+import { useUIStore } from "../stores/systemStore";
 
 const STATUS_CONFIG: Record<EpisodeStatus, { label: string; color: string; dot: string }> = {
   ready:   { label: "PRONTO",  color: "text-emerald-400", dot: "bg-emerald-400" },
@@ -90,6 +92,11 @@ function EpisodeCard({ ep }: { ep: Episode }) {
 }
 
 export function StorieView() {
+  const navigateTo = useUIStore(s => s.navigateTo);
+  // Dati live da API (episodi reali su disco) — complementano i dati statici
+  const { data: liveContent } = useContentFiles();
+  const liveCount = liveContent?.total ?? 0;
+
   const [filterStagione, setFilterStagione] = useState<string | null>(null);
   const [filterStatus, setFilterStatus] = useState<EpisodeStatus | null>(null);
 
@@ -121,11 +128,20 @@ export function StorieView() {
           <h2 className="text-base font-bold text-slate-100 tracking-widest uppercase">Storie</h2>
           <span className="text-xs font-mono text-slate-500 ml-auto">
             {EPISODES.length} episodi · {Math.round(totalMin / 60)}h {totalMin % 60}m totali
+            {liveCount > 0 && <span className="text-emerald-500 ml-2">· {liveCount} su disco</span>}
           </span>
         </div>
-        <p className="text-xs text-slate-500 ml-7">
-          Podcast + dataset LLM · dal passato a oggi · {EPISODES.filter(e => e.status === "ready").length} pronti
-        </p>
+        <div className="flex items-center gap-3 ml-7">
+          <p className="text-xs text-slate-500">
+            Podcast + dataset LLM · dal passato a oggi · {EPISODES.filter(e => e.status === "ready").length} pronti
+          </p>
+          <button onClick={() => navigateTo("sinapsi", "content")} className="ml-auto text-[9px] font-mono text-indigo-400/60 hover:text-indigo-400 uppercase tracking-wider flex items-center gap-1">
+            <Layers size={9} /> dettagli content engine
+          </button>
+          <button onClick={() => navigateTo("canvas")} className="text-[9px] font-mono text-slate-500/60 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
+            <ArrowLeft size={9} /> canvas
+          </button>
+        </div>
 
         {/* Filters */}
         <div className="flex flex-wrap gap-2 mt-4">

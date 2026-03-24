@@ -92,30 +92,30 @@ const STATUS_CLASS: Record<Status, string> = {
   future:   "text-slate-500   border-slate-700   bg-slate-800/20",
 };
 const STATUS_CYCLE: Status[] = ["active", "building", "pending", "future"];
-const API = "http://localhost:5001";
+const API = "";
 
 // ─── DATI FIGLI PER DRILL-DOWN ─────────────────────────────────────────────
 const DRILL_CHILDREN: Record<string, DrillNode[]> = {
   // TITANIUM OS → pilastri (si torna al livello 0, non serve)
   v32: [
-    { id: "v32-hw",   label: "HARDWARE",    emoji: "🏗", hex: "#10b981", status: "building", pct: 60, detail: "Struttura Alu 7075 · 178 kg · ±0.019 mm IT6 · Config G in corso." },
-    { id: "v32-sw",   label: "SOFTWARE",    emoji: "💻", hex: "#06b6d4", status: "active",   pct: 85, detail: "TITANIUM_OS · VLC · G-code · Dashboard React :5173." },
-    { id: "v32-elec", label: "ELETTRONICA", emoji: "⚡", hex: "#6366f1", status: "building", pct: 50, detail: "Controller CNC · Driver stepper · Sensing posizione · Wiring." },
-    { id: "v32-cnc",  label: "G-CODE",      emoji: "🔢", hex: "#f59e0b", status: "pending",  pct: 20, detail: "Percorsi utensile · Post-processor · Cicli di lavorazione." },
+    { id: "v32-struttura", label: "STRUTTURA",   emoji: "🏗", hex: "#10b981", status: "building", pct: 65, detail: "Basamento traliccio TIG · colonne Z+U · Config G gusset+diag+tiranti M10." },
+    { id: "v32-assi",      label: "ASSI X/Y/Z",  emoji: "⚙",  hex: "#06b6d4", status: "building", pct: 55, detail: "X assemblato (guide+vite+servo) · Y/Z in montaggio · target ±0.019mm IT6." },
+    { id: "v32-mandrino",  label: "MANDRINO",    emoji: "🔄", hex: "#ef4444", status: "pending",  pct: 0,  detail: "2.2kW ER20 — da ordinare. Blocker: ultimo pezzo prima di fresare stampi." },
+    { id: "v32-elettr",    label: "ELETTRONICA", emoji: "⚡", hex: "#6366f1", status: "building", pct: 50, detail: "HMI TP900 Comfort · controller CNC · driver stepper · sensori posizione." },
   ],
   mims: [
-    { id: "mims-vulcan",   label: "VULCAN",    emoji: "🔥", hex: "#ef4444", status: "pending",  pct: 15, detail: "Pressa 20t Vevor · ricette polimeri · brevetto materiale.",
+    { id: "mims-vulcan",   label: "VULCAN",      emoji: "🔥", hex: "#ef4444", status: "pending",  pct: 15, detail: "Pressa 20t — riempie gli stampi fresati da V32. Ricette polimeri proprietarie.",
       children: {
         "mims-vulcan": [
-          { id: "vul-struttura", label: "STRUTTURA", emoji: "🏗", hex: "#ef4444", status: "pending",  pct: 20, detail: "Martinetto Vevor 20t 3 stati · colonne guida DATWLER." },
-          { id: "vul-ricette",   label: "RICETTE",   emoji: "🧪", hex: "#f59e0b", status: "future",   pct: 0,  detail: "Formula proprietaria · temp/pressione/tempo/durezza." },
+          { id: "vul-struttura", label: "STRUTTURA", emoji: "🏗", hex: "#ef4444", status: "pending",  pct: 20, detail: "Martinetto 20t Vevor 3 stati · colonne guida (know-how DATWLER)." },
+          { id: "vul-ricette",   label: "RICETTE",   emoji: "🧪", hex: "#f59e0b", status: "future",   pct: 0,  detail: "Formula proprietaria polimeri · temp/pressione/tempo/durezza." },
           { id: "vul-brevetto",  label: "BREVETTO",  emoji: "📜", hex: "#06b6d4", status: "future",   pct: 0,  detail: "Documentazione brevettuale · moat competitivo MIMS." },
         ],
       }
     },
-    { id: "mims-kit",     label: "KIT FISICO", emoji: "🔩", hex: "#f59e0b", status: "building", pct: 40, detail: "Tile modulari · sistema incastro · stampo polimero VULCAN." },
-    { id: "mims-fitpark", label: "FIT PARK",   emoji: "🏋", hex: "#10b981", status: "pending",  pct: 5,  detail: "Area fitness outdoor · tornello MIMS proprietario." },
-    { id: "mims-digital", label: "DIGITALE",   emoji: "📱", hex: "#818cf8", status: "future",   pct: 0,  detail: "App mobile · backend · API connettori MIMS." },
+    { id: "mims-kit",     label: "CONNETTORI",  emoji: "🔩", hex: "#f59e0b", status: "pending",  pct: 10, detail: "Tile modulari incastro · stampati con VULCAN · il prodotto finale MIMS." },
+    { id: "mims-fitpark", label: "FIT PARK",    emoji: "🏋", hex: "#10b981", status: "future",   pct: 5,  detail: "Area fitness outdoor · tornello con connettori MIMS · prima applicazione." },
+    { id: "mims-digital", label: "DIGITALE",    emoji: "📱", hex: "#818cf8", status: "future",   pct: 0,  detail: "App mobile · catalogo connettori · API MIMS online." },
   ],
   vita: [
     { id: "eva-bot",    label: "EVA BOT",  emoji: "🤖", hex: "#818cf8", status: "building", pct: 40, detail: "n8n workflow · WhatsApp Business API · risposte automatiche." },
@@ -144,8 +144,8 @@ const DRILL_CHILDREN: Record<string, DrillNode[]> = {
   ],
   // Ring 2 ciclo drill-down
   build:    [
-    { id: "build-cnc",    label: "V32 CONFIG G",  emoji: "🔧", hex: "#10b981", status: "active",   pct: 65, detail: "Rinforzi colonne Z+U · gusset 200mm · epoxy granite." },
-    { id: "build-vulcan", label: "VULCAN PRESSA", emoji: "🔥", hex: "#ef4444", status: "pending",  pct: 15, detail: "Martinetto 20t · struttura 4 colonne." },
+    { id: "build-v32",    label: "V32 CONFIG G",  emoji: "🔧", hex: "#10b981", status: "building",  pct: 65, detail: "CNC in costruzione · rinforzi colonne Z+U · gusset+diag+tiranti · epoxy fill." },
+    { id: "build-vulcan", label: "VULCAN PRESSA", emoji: "🔥", hex: "#ef4444", status: "pending",   pct: 15, detail: "Pressa 20t · attende V32 completamento · poi riempirà stampi per MIMS." },
   ],
   design:   [
     { id: "des-mims",  label: "MIMS CAD",    emoji: "📐", hex: "#818cf8", status: "building", pct: 40, detail: "Shapr3D · piastra A5 · corpo connettore · assiemi." },
@@ -223,8 +223,8 @@ function buildDrillLevel(parentId: string, children: DrillNode[]): DrillLevel {
 // ─── DATI NODI BASE (livello 0) ────────────────────────────────────────────
 const NODES_BASE: MapNode[] = [
   { id: "os",       label: "TITANIUM OS", emoji: "⚡", ring: 0, idx: 0, total: 1, hex: "#10b981", status: "active", detail: "Sistema operativo dell'ecosistema. Cervello collettivo, memoria, Claude Code, orchestrazione." },
-  { id: "v32",      label: "V32",         emoji: "🔧", ring: 1, idx: 0, total: 5, hex: "#10b981", status: "active",   pct: 65,  pillarKey: "V32",          detail: "Fresatrice CNC 3 assi. 178 kg, ±0.019 mm IT6. ROI 322%.", hasChildren: true },
-  { id: "mims",     label: "MIMS",        emoji: "🔩", ring: 1, idx: 1, total: 5, hex: "#f59e0b", status: "pending",  pct: 30,  pillarKey: "MIMS",         detail: "Connettori modulari. Piattaforma fisica + digitale. VULCAN + FitPark.", hasChildren: true },
+  { id: "v32",      label: "V32",         emoji: "🔧", ring: 1, idx: 0, total: 5, hex: "#10b981", status: "building",  pct: 65,  pillarKey: "V32",          detail: "CNC 3 assi IN COSTRUZIONE — fresa stampi per MIMS via VULCAN. 178 kg, ±0.019 mm. La Taverna.", hasChildren: true },
+  { id: "mims",     label: "MIMS",        emoji: "🔩", ring: 1, idx: 1, total: 5, hex: "#f59e0b", status: "pending",  pct: 30,  pillarKey: "MIMS",         detail: "Connettori modulari fisici — output catena V32→VULCAN→MIMS. Attende V32.", hasChildren: true },
   { id: "vita",     label: "VITA NATURA", emoji: "🌿", ring: 1, idx: 2, total: 5, hex: "#818cf8", status: "active",   pct: 40,  pillarKey: "VITA_NATURA",  detail: "Centro estetico Maria. EVA WhatsApp bot. Boffalora s/T.", hasChildren: true },
   { id: "identity", label: "IDENTITY",    emoji: "👤", ring: 1, idx: 3, total: 5, hex: "#64748b", status: "pending",  pct: 20,  pillarKey: "IDENTITY",     detail: "CV layers + SINAPSI + brand Matteo Benenati.", hasChildren: true },
   { id: "genesis",  label: "GENESIS",     emoji: "🧠", ring: 1, idx: 4, total: 5, hex: "#06b6d4", status: "building", pct: 40,  pillarKey: "GENESIS",      detail: "TITANIUM_OS: dashboard, memory, Claude Code, n8n.", hasChildren: true },
@@ -233,14 +233,14 @@ const NODES_BASE: MapNode[] = [
   { id: "teach",    label: "INSEGNA",     emoji: "🎓", ring: 2, idx: 2, total: 8, hex: "#06b6d4", status: "future",   detail: "Community, skill tree, tutorial." },
   { id: "unlock",   label: "SBLOCCA",     emoji: "🔓", ring: 2, idx: 3, total: 8, hex: "#818cf8", status: "active",   detail: "Rimuovi blockers. Sblocca dipendenze." },
   { id: "design",   label: "PROGETTA",    emoji: "📐", ring: 2, idx: 4, total: 8, hex: "#818cf8", status: "building", detail: "MIMS CAD, connettori, GENESIS v7.", hasChildren: true },
-  { id: "produce",  label: "PRODUCI",     emoji: "⚙",  ring: 2, idx: 5, total: 8, hex: "#f59e0b", status: "pending",  detail: "V32 + pressa MIMS. €45/h · stampi €500." },
+  { id: "produce",  label: "PRODUCI",     emoji: "⚙",  ring: 2, idx: 5, total: 8, hex: "#f59e0b", status: "pending",  detail: "La catena: V32 fresa stampi → VULCAN pressa → MIMS esce. La Taverna." },
   { id: "sell",     label: "VENDI",       emoji: "📈", ring: 2, idx: 6, total: 8, hex: "#f59e0b", status: "future",   detail: "B2B fresatura, MIMS kit, EVA SaaS. Target €1.5k/mese 2027." },
   { id: "reinvest", label: "REINVESTI",   emoji: "♻",  ring: 2, idx: 7, total: 8, hex: "#10b981", status: "future",   detail: "Upgrade V32→V33, espandi MIMS, reinvesti profitto." },
 ];
 
 const EDGES_BASE: [string, string][] = [
   ["os","v32"],["os","mims"],["os","vita"],["os","identity"],["os","genesis"],
-  ["v32","build"],["v32","produce"],
+  ["v32","build"],["v32","produce"],["v32","mims"],  // catena: V32→stampi→VULCAN→MIMS
   ["mims","design"],["mims","produce"],["mims","sell"],
   ["vita","sell"],["vita","design"],
   ["identity","teach"],["identity","sell"],

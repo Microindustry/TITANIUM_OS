@@ -27,6 +27,7 @@ import {
 import { CellShell } from "./CellShell";
 import { EcoTreeView } from "./EcoTreeView";
 import { WarehouseView } from "./WarehouseView";
+import { useGlobalState } from "../hooks/SystemStateContext";
 import { VincenteView } from "./VincenteView";
 import { CatalogView } from "./CatalogView";
 import {
@@ -320,32 +321,19 @@ export const EcosystemGrid = ({ containerWidth }: EcosystemGridProps) => {
   const [layout, setLayout] = useState<Layout>(loadLayout);
   const [cellDates, setCellDates] = useState<Record<string, string>>(DEFAULT_DATES);
 
-  // Carica date reali da STATE.json via API
+  // Date reali da STATE.json via TanStack Query (zero fetch duplicati)
+  const { state: liveState } = useGlobalState();
   useEffect(() => {
-    fetch("http://localhost:5001/api/state")
-      .then((r) => r.json())
-      .then((data) => {
-        // Prende last_updated globale da STATE.json
-        const ts: string = data?.last_updated ?? data?.timestamp ?? STATIC_DATE;
-        // Prende date specifiche per pilastro se presenti, altrimenti usa globale
-        const v32Date: string  = data?.pillars?.V32?.last_updated  ?? ts;
-        const mimsDate: string = data?.pillars?.MIMS?.last_updated ?? ts;
-        setCellDates({
-          focus:      ts,
-          ciclo:      ts,
-          pillars:    ts,
-          v32:        v32Date,
-          eva:        mimsDate,
-          ecotree:    ts,
-          personaggi: ts,
-          timeline:   ts,
-          warehouse:  v32Date,
-          vincente:   v32Date,
-          catalogo:   mimsDate,
-        });
-      })
-      .catch(() => {/* fallback silenzioso alle date statiche */});
-  }, []);
+    if (!liveState) return;
+    const ts: string = liveState.last_update ?? STATIC_DATE;
+    const v32Date: string  = (liveState.pillars?.V32 as any)?.last_updated  ?? ts;
+    const mimsDate: string = (liveState.pillars?.MIMS as any)?.last_updated ?? ts;
+    setCellDates({
+      focus: ts, ciclo: ts, pillars: ts, v32: v32Date, eva: mimsDate,
+      ecotree: ts, personaggi: ts, timeline: ts,
+      warehouse: v32Date, vincente: v32Date, catalogo: mimsDate,
+    });
+  }, [liveState]);
 
   const onLayoutChange = useCallback((l: Layout) => {
     setLayout(l);

@@ -361,5 +361,376 @@ SINAPSI è il posto dove questa storia viene raccolta, strutturata e conservata.
   },
 
   // AUTO_GENERATED_START
+  {
+    id: "EP_AUTO_002",
+    title: "8 pezzi, geometria perfetta",
+    sottotitolo: "Quando le bronzine diventano linguaggio della macchina",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-22",
+    tags: ["V32", "manufacturing", "precisione", "MIMS", "artigianato-industriale"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 7,
+    preview: "8 pezzi, geometria perfetta — Quando guardi un pezzo fresato bene, vedi il codice che l'ha genera.",
+    content: `# 8 pezzi, geometria perfetta
+
+> Quando guardi un pezzo fresato bene, vedi il codice che l'ha generato. Non è poesia, è geometria pura.
+
+Stamattina in officina, ore 9.30. Davanti a me: 8 pezzi interfaccia appena estratti dalla morsa. Bronzine (±0.015 mm) + scalini di posizionamento. Li prendo uno per uno, li passo sotto la luce. Zero sbavature sugli spigoli vivi. Le tolleranze sono dentro. Questo è il momento in cui smetti di costruire pezzi random e cominci a costruire un linguaggio.
+
+Capisco che sembra esagerato per una serie di bronzine, ma ecco: questi 8 oggetti sono il vocabolario fisico con cui V32 parlerà con MIMS. Ogni scalino, ogni foro è una istruzione che il prossimo componente leggerà con le sue tolleranze. Non è magia. È semplicemente **constraint satisfaction in acciaio**.
+
+La V32 è al 65%. Mancano ancora i principali assiemi. Ma questi 8 pezzi rappresentano il momento in cui il sistema smette di essere un foglio di CAD e diventa un ecosistema che funziona. Quando monto un bronzina su un altro componente, quella deve adattarsi con precisione deterministica. Niente "circa". Niente "se vai di forza". Zero tolleranze soggettive.
+
+Ho lavorato 3 ore nette per farli. Primo pezzo mi è costato 45 minuti di setup della macchina — zerare il mandrino, tarare i comparatori, testare una prima geometria. Gli altri 7? 20-25 minuti ciascuno, flusso costante. Questo è il ritmo che voglio raggiungere: la redditività dell'artigianato industriale non è in un pezzo solo, è nella serialità consapevole.
+
+Il blocker è ancora il mandrino 2.2kW ER20. L'ho ordinato lunedì. Arriva tra due giorni. Senza quello, non posso scalare la V32 a regime di taglio pieno. Ma intanto questi 8 pezzi mi dicono che **il sistema è coerente**. La fresatrice fa quello che le dico di fare. TITANIUM_OS (il mio os personale che integra CAM + scheduling + log) ha tracciato ogni ciclo, ogni tempo di setup. Quando finirò la V32, avrò un database completo di come una macchina di questa classe si comporta nel reale.
+
+MIMS (i connettori modulari fisici) ha ancora il 30% da fare, ma adesso so quale "dialetto" fisico deve parlare. Questi 8 pezzi sono la Rosetta Stone tra il mio intento progettuale e la realtà della materia.
+
+Perché racconto questo? Perché in una cultura dove tutto è software, dove il fisico sembra secondario, questi 8 pezzi di metallo sono il fondamento. Sono il proof-of-concept che un artigiano può costruire non solo con le mani, ma con **sistemi**. VULCAN (la pressa, il brevetto sui polimeri), EVA (l'AI per Maria), TITANIUM_OS: sono tutte estensioni dello stesso principio. Costruire processi che si replicano, che si scalano, che rimangono precise.
+
+Un pezzo fresato bene non è arte. È promessa mantenuta.`,
+  },
+  {
+    id: "EP_AUTO_003",
+    title: "HMI acquisito, V32 respira",
+    sottotitolo: "Quando il touchscreen diventa il cervello della fresatrice",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-22",
+    tags: ["V32", "automazione", "HMI", "manufacturing", "system"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 7,
+    preview: "HMI acquisito, V32 respira — Un HMI non è uno schermo. È il luogo dove il pensiero diventa istruzione.",
+    content: `# HMI acquisito, V32 respira
+
+> "Un HMI non è uno schermo. È il luogo dove il pensiero diventa istruzione, e l'istruzione diventa materia."
+
+Stamattina ho scartato il TP900 Comfort. Siemens. Touchscreen 9", IP65, integrato nativo su SINUMERIK — esattamente quello che serviva. L'ho montato in 40 minuti sul pannello di controllo della V32, connesso via profibus al PLC. Ora respira.
+
+Fino a due settimane fa, V32 era un'orchestrazione cieca. Motori stepper, encoder, relè — tutto funzionava, ma il feedback era astratto. Leggevo codice G, interpretavo timeout su log file, indovinavo lo stato della macchina dalla posizione delle assi e dal suono. È il modo dei maker degli anni 80. Va bene per il prototipo, non scala.
+
+Con l'HMI tutto cambia geometria.
+
+Adesso vedo in tempo reale: temperatura della fresatrice (sensore DS18B20 incollato sulla testa), posizione assoluta delle tre assi, velocità di avanzamento, vibrazione (accelerometro ADXL345 sul telaio), consumo energetico. Passo da "spero che funzioni" a "so esattamente cosa sta succedendo".
+
+Ma il motivo vero per cui questo momento conta è un altro.
+
+V32 non esiste da sola. Fa parte di TITANIUM_OS — il sistema operativo cognitivo che sto costruendo. L'HMI è il nodo di confluenza: riceve istruzioni da TITANIUM_OS (via API REST), esegue cicli di fresatura, rispedisce i dati di telemetria al sistema centrale, che li elabora per ottimizzare i prossimi cicli. È feedback loop. È il prototipo di quello che un giorno diventarà la fabbrica personale — macchine non intelligenti singolarmente, ma intelligenti come ecosistema.
+
+MIMS (i connettori modulari che sto disegnando) vivono dentro questo flusso. Ogni componente che freserei con V32 avrà un QR code che racchiude tutta la storia: materiale, tolleranze, ricetta di lavorazione, esito dei test. VULCAN (la pressa) leggerà quel codice, applicherà automaticamente la ricetta giusta, registrerà il risultato. Tutto connesso. Tutto tracciabile.
+
+L'HMI è il primo respiro visibile di questo sistema.
+
+Ora il blocker è diverso: manca il mandrino 2.2kW ER20. Sto ordinando dalla Germania, consegna stimata lunedì. Una volta montato, comincio le prove strutturali su acciaio. Le 3 assi sono pronte, i cicli sono scritti, il controllo è finalmente leggibile.
+
+La V32 passa da "macchina che fresano io" a "macchina che parla con il mio sistema".
+
+Questo è il salto.`,
+  },
+  {
+    id: "EP_AUTO_005",
+    title: "Asse X: le guide parlano",
+    sottotitolo: "178 kg di precisione. Quando l'hardware diventa software.",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-22",
+    tags: ["V32", "CNC", "assembly", "precision", "milestone"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 7,
+    preview: "Asse X: le guide parlano — Quando chiudi l'ultimo bullone e la guida scorre senza attrito, capisci che il pezzo è vivo.",
+    content: `# Asse X: le guide parlano
+
+> *"Quando chiudi il ultimo bullone e la guida scorre senza attrito, capisci che il pezzo è vivo."*
+
+Stamattina ho finito l'asse X della V32. Guide THK 25 mm, vite Hiwin a ricircolo da 16 mm, servo Nema 34 con drive Leadshine. Tre ore di assembly, due ore di test geometrico.
+
+La sequenza è stata precisa: prima il basamento della guida sinistra, poi gli spacer di allineamento (±0.05 mm), montaggio della vite con precarico a 2 Nm, accoppiamento motore tramite giunto elastico, calibrazione del fine corsa con encoder. Standard, ma non banale.
+
+Cosa è successo veramente? Ho trasformato 8 chilogrammi di acciaio e componenti in uno **stadio di movimento controllato**. Non è solo meccanica. È il primo sensore della macchina—il punto dove i comandi software incontrano la realtà fisica. Ogni movimento dell'asse X verrà registrato, misurato, corretto.
+
+Questo mi serve per V32, certo. Ma il valore sta altrove.
+
+La V32 è il prototipo. Quando sarà completata al 100%, diventerà un **nodo dentro TITANIUM_OS**. L'asse X non farà solo fresare: farà misura, feedback, adattamento. Ogni passata di utensile genererà dati. Quei dati alimenteranno il modello cognitivo del sistema—la macchina imparerà dagli scarti, dalla finitura, dalla geometria reale versus quella teorica.
+
+Vedi il collegamento? MIMS (i connettori modulari) a 30% di sviluppo, sono qui per questo. Quando avrò altri assi pronti—Y, Z, mandrino—dovrò pluggarli senza rifare il wiring, senza ridefinire i protocolli. L'asse X è il primo test di quella modularità.
+
+E il blocco attuale? Il mandrino 2.2 kW ER20 non è arrivato. Non posso procedere oltre fino a quando non lo ordino. Significa che **il valore di questa assembly non è bloccato**—procedo parallelo. Domani Config G, il gusset sinistro. Tre ore di fresatura, ma con gli strumenti manuali, nelle tre ore di officina che ho planificato.
+
+Il motivo per cui questo momento conta non è la precisione—quella è scontata, è specifica tecnica. Il motivo è che ho chiuso il primo **ciclo di feedback reale**. Ho disegnato, ho costruito, ho testato, ho imparato dove la realtà devia dal CAD di 0.3 mm (la vite aveva precarico asimmetrico, le guide avevano un'usura micrometrica su un lato).
+
+Questa informazione non la ricevo via email. La sento con le mani. E ora è codificata nel sistema.
+
+Quando inizierò il training di TITANIUM_OS con i dati della V32, avrò già settimane di esperienza operativa. Non partirò da zero. Partirò dalla realtà assemblata.
+
+Asse X: vivo. Sistema: respirando.`,
+  },
+  {
+    id: "EP_AUTO_006",
+    title: "Dashboard Live: Il Sistema Vede",
+    sottotitolo: "Come 9 marzo ha cambiato il workflow della fabbrica",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-09",
+    tags: ["TITANIUM_OS", "automation", "dashboard", "milestone"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 7,
+    preview: "Dashboard Live: Il Sistema Vede — Quando il sistema inizia a vedersi da solo, smetti di gestire macchine.",
+    content: `# Dashboard Live: Il Sistema Vede
+
+> "Quando il sistema inizia a vedersi da solo, smetti di gestire macchine e cominci a gestire informazione. Tutto cambia."
+
+Era il 9 marzo, 9:47. Ho premuto il tasto su React e il dashboard ECOSYSTEM_OS v1.0 è andato live. Non è stato un momento di festa—è stato il momento in cui ho smesso di essere un artigiano che sa programmare e ho iniziato a essere un system builder che sa usare le mani.
+
+Fino a ieri il workflow era questo: fresatrice che lavora, io che guardo i log in SSH, carta e matita per annotare i tempi, Whatsapp a Maria per EVA con gli orari della prossima cliente, Python script lanciati a mano quando serviva controllare un setpoint della VULCAN. Tutto decentrato. Tutto cognitive load.
+
+Oggi le celle sono draggabili. Live. Vedo V32 che macina il gusset sinistro (Config G, 3 ore stimate) nel box centrale. Vedo i parametri MIMS a sinistra—i moduli che sto disegnando attualmente. A destra, la VULCAN con la ricetta attiva del polimero verde. In basso, EVA che sincronizza gli orari con la calendar di Maria.
+
+Non è bello per essere bello. È costruito così perché quando arriverà il blocco—e arriverà—voglio saperlo in 0.3 secondi, non domani mattina leggendo i log. Stamattina manca il mandrino 2.2kW ER20. Domani potrebbe mancare altro. Il sistema non può permettersi di urlare solo quando scopri il problema in officina.
+
+Quello che è successo oggi è che ho connesso le tre dimensioni: **fisico** (V32 che lavora realmente), **cognitivo** (TITANIUM_OS che capisce lo stato), **decisionale** (io che vedo e agisco in tempo reale). Prima avevo due delle tre. Ora ho il triangolo.
+
+La V32 è al 65%. La fresatrice non sa nulla di sé se non quello che misura sui sensori. Ma adesso TITANIUM_OS parla con i sensori, estrae i pattern, popola il dashboard. Il gusset sinistro è una cella. Tra 3 ore finirà, e il sistema lo saprà senza chiedermi nulla. Passerà automaticamente a MIMS se c'è materiale pronto, o dirà "stop, aspetto il mandrino".
+
+VULCAN rimane in ricetta. Maria sa quante clienti ha EVA il mese prossimo. E io, per la prima volta da quando ho iniziato questo progetto, ho uno spazio cognitivo libero per pensare al prossimo problema—non a gestire i 15 che stanno succedendo contemporaneamente.
+
+Ecco perché questo momento conta: non è il dashboard a essere importante. È il fatto che finalmente il sistema operativo della fabbrica funziona come un sistema operativo vero. Ha memory, ha visibility, ha autonomy within constraints.
+
+Domani riprendo la Config G. Mandrino arriverà probabilmente giovedì. Nel frattempo, il sistema mi dirà esattamente quando sarà il momento di riprogrammare la sequenza.
+
+Senza che io faccia nulla. Basta guardare.`,
+  },
+  {
+    id: "EP_AUTO_008",
+    title: "Config G: le molle gialle",
+    sottotitolo: "Come 4 componenti cambiano la geometria di V32",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-10",
+    tags: ["V32", "CNC", "manufacturing", "milestone", "BOM"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 7,
+    preview: "Config G: le molle gialle — Quando vedi il BOM aggiornato e le molle gialle arrivano in scatola, capisci che è materia vera.",
+    content: `# Config G: le molle gialle
+
+> *"Quando vedi il BOM aggiornato in foglio di calcolo e le molle gialle arrivano in scatola, capisci che il progetto non è più rendering — è materia vera"*
+
+Siamo al 10 marzo 2026. V32 è al 65% e questa mattina ho aperto la posta: 4 molle Gialle 90N + 2 piastre XY per la Config G. Sembra poco. È tutto.
+
+Facciamo un passo indietro. V32 non è una fresatrice — è un sistema. La geometria della testata, il bloccaggio dell'utensile, la compensazione dei giochi, la rigidità strutturale: ogni mil·limetro conta quando lavori a ±0.019mm di tolleranza. Il gusset sinistro è uno dei tre punti critici della carcassa. Non è decorativo. È il braccio di leva che trasferisce la forza dalla colonna al mandrino senza flettere.
+
+Queste 4 molle non sono sospensioni — sono attuatori di precarico. Le gialle hanno una costante di 90N/mm: abbastanza morbide per assorbire le vibrazioni ad alta velocità, abbastanza rigide per mantenere la planarità quando carico la fresa. Due piastre XY significa che il gusset sinistro adesso ha due gradi di libertà controllati. Puoi aggiustare l'assetto della testata dal tavolo di lavoro, senza svitare niente.
+
+Perché questo conta? Perché fino a ieri il BOM aveva 7 incognite su questa sezione. Oggi ne ha zero. Ogni componente è calcolato, ogni numero corrisponde a una parte fisica che arriva in scatola. È il passaggio da "so come dovrebbe funzionare" a "so esattamente come funziona".
+
+Stamattina ho iniziato la Config G in officina. 3 ore stimate per incastrare il gusset, pre-assemblare il piastra XY, montare le molle nel loro alloggiamento, verificare il gioco assiale con il comparatore. Non è fretta. È precisione.
+
+Mentre lavoro, vedo il pattern che lego a TITANIUM_OS e MIMS: ogni sottosistema di V32 è modulare come i connettori MIMS. Il gusset può essere tolto, ricalibrato, sostituito senza touch il resto della testata. È la stessa logica che guida TITANIUM_OS — ogni funzione è un blocco, niente è hardcoded. Puoi swappare i layer cognitivi di EVA (WhatsApp → database → IA → response) come monti una molla su una piastra.
+
+Il blocker rimane: aspetto il mandrino 2.2kW ER20. Arriva da tre fornitori, nessuno ha stock — mi hanno promesso 18 giorni. Nel frattempo, V32 avanza sul resto. Non blocco il progetto su una parte. Lo aggiro. È una lezione che vale in fabbrica e in software: aspetta il critical path, non aspetta il bordocampo.
+
+Quando chiudo la Config G e metto le foto nel foglio di lavoro condiviso, accanto al BOM aggiornato, avviene una cosa strana: il progetto cambia densità. Non è più "sto costruendo una fresatrice". È "la fresatrice sta uscendo da quello che mi immagino dentro la testa". Le molle gialle sono la prova tangibile.
+
+Questo è il momento in cui i sistemi complessi si trasformano da piani a realtà. Non quando finisci — quando inizi a vedere ogni componente nel suo posto.`,
+  },
+  {
+    id: "EP_AUTO_010",
+    title: "Fondamenta d'acciaio TIG",
+    sottotitolo: "La struttura che sostiene la precisione",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-22",
+    tags: ["saldatura", "struttura", "CNC"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 8,
+    preview: "Fondamenta d'acciaio TIG — Se questo non tiene a 178 chili di macchina sopra, non è un errore di calcolo.",
+    content: `# Fondamenta d'acciaio TIG
+
+# V32 Build Log — Ep. 07: Basamento Traliccio
+
+---
+
+> "Se questo non tiene a 178 chili di macchina sopra, non è un errore di calcolo — è un errore mio."
+
+---
+
+Era martedì. Le 21:40.
+
+Officina mia, non quella di SCProject. Luce al neon destra che sfarfalla da tre settimane, non l'ho ancora cambiata. Sul banco: profili in acciaio S355, 60x60x4mm, tagliati a misura la settimana prima con il flex. Squadra da carpentiere. Morsetti Bessey da 300mm — quattro. Maschera TIG sul banco, Fronius TT 230i già acceso, gas argon aperto, portata a 12 l/min.
+
+Ho preso la gusset sinistra — piastra triangolare, 150x150x6mm, S355 — e l'ho posizionata al nodo del traliccio. Incrocio tra longherina orizzontale e diagonale a 45°. Ho puntato. Tre punti, 60A, distanza 80mm tra loro. Ho controllato con la squadra. 0.3mm di errore in angolo. Ho battuto piano con il martelletto. Ri-controllato. Zero virgola uno. Accettabile.
+
+Poi ho saldato. TIG, corrente a 95A, tungsteno da 2.4mm, bacchetta ER70S-6 da 1.6mm. Passata di radice prima. Poi il riempimento. Il suono del TIG su acciaio spesso è diverso dal titanio — più pesante, meno cristallino. Il titanio canta. L'acciaio lavora.
+
+---
+
+Prima di quella sera, il basamento era un'idea su FreeCAD e tre fogli A3 sul muro.
+
+Il problema era strutturale — non estetico. Il traliccio deve reggere il portale Y da 47kg in movimento, accelerazioni fino a 800mm/s², più le vibrazioni della fresatura a piena portata. Senza i gusset nei nodi, il traliccio lavora a flessione nei punti peggiori. Con i gusset, i carichi si distribuiscono. Cambia tutto.
+
+Ho simulato in FreeCAD FEM prima. Mesh automatica, carico puntuale da 500N sul nodo critico, vincoli fissi ai quattro piedini. Senza gusset: deformazione massima 0.31mm nel nodo centrale. Con gusset: 0.07mm. Tolleranza di lavoro della V32 è ±0.019mm — il basamento deve starci abbondantemente sotto quella soglia, altrimenti le guide lineari lavorano fuori specifica da subito.
+
+La gusset sinistra era il nodo più carico. L'ho saldata per prima.
+
+---
+
+Questo pezzo — questo specifico triangolo di acciaio a 150x150x6mm — è il primo componente fisico che entra in TITANIUM_OS come oggetto tracciato.
+
+Ho un file: \`v32_bom_live.json\`. Ogni componente ha un ID. La gusset sinistra è \`STR-GUS-L-001\`. Quando l'ho saldata, ho aperto il terminale:
+
+\`\`\`bash
+python3 titanium_cli.py update --id STR-GUS-L-001 --status welded --operator MB --timestamp auto
+\`\`\`
+
+TITANIUM_OS ha aggiornato la Kanban board. Config G è passata da \`in_progress\` a \`partial_complete\`. Perché Config G ha anche la gusset destra, ancora da fare, e lì c'è il blocker attivo: **manca il mandrino 2.2kW ER20**. Stima ordine: questa settimana. Stima consegna: 8-10 giorni. Stima officina per completare Config G una volta sbloccato: 3 ore.
+
+MIMS entra dopo — quando il basamento sarà finito, i connettori modulari fisici si integrano sui pannelli laterali. Ma serve prima che la struttura portante sia certificata geometricamente. Sto aspettando quel punto.
+
+EVA ha già mandato un reminder a Maria: "Matteo stasera non cena, è in officina." Lei non ha risposto. Sa già.
+
+---
+
+Il traliccio non è bello. È rigido.`,
+  },
+  {
+    id: "EP_AUTO_011",
+    title: "Knowledge Base Popolata e Architettura Assoluto",
+    sottotitolo: "15 file integrati nel sistema cognitivo centrale",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-10",
+    tags: ["milestone", "knowledge-base", "brain-system"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 8,
+    preview: "Knowledge Base Popolata e Architettura Assoluto — Il Letto È Assoluto, milestone 10 Marzo 2026.",
+    content: `# Knowledge Base Popolata e Architettura Assoluto
+
+# V32 // Milestone 10 Marzo 2026 — Il Letto È Assoluto
+
+---
+
+> "Il letto è fatto. Il cervello sa dove si trova. Adesso si costruisce."
+
+---
+
+Era un lunedì. Le 22:47. Officina ancora calda — avevo lavorato fino alle 20:00 sulla gusset destra, poi ero salito in casa.
+
+Laptop aperto sul tavolo della cucina. Maria dormiva già.
+
+Ho aperto il terminale e ho lanciato:
+
+\`\`\`bash
+python brain_loader.py --target KNOWLEDGE --batch ./docs/v32/
+\`\`\`
+
+Quindici file caricati. Uno per uno. I nomi li ricordo ancora:
+\`v32_frame_geometry.md\`, \`v32_tolerances_stack.md\`, \`titanium_os_arch_v3.json\`, \`mims_connector_spec_r1.md\`, \`spindle_map_er20.md\` — e gli altri dieci.
+
+Il sistema ha risposto:
+
+\`\`\`
+[OK] KNOWLEDGE populated — 15 nodes active
+[OK] BRAIN index rebuilt — 0 conflicts
+\`\`\`
+
+Zero conflitti. Prima volta in tre settimane.
+
+Prima di quel momento il knowledge base era un casino. File sparsi. Nomi duplicati. TITANIUM_OS non trovava i riferimenti incrociati — cercavi la tolleranza di un foro e ti tornava un documento vuoto. Con l'ADHD, un sistema che non risponde è peggio di nessun sistema. Apri, non trovi, chiudi. Perdi il filo. Perdi venti minuti. Poi un'ora.
+
+Il letto della V32 — quello fisico — era già fissato da metà febbraio. 178 kg. Piano in ghisa. Parallelismo verificato a 0.012mm su 600mm di corsa con il comparatore Mitutoyo 513. Quello era il dato fisico.
+
+Ma il "letto assoluto" della milestone non è solo il piano in ghisa.
+
+È che quella sera TITANIUM_OS ha ricevuto la geometria completa del frame. Le quote reali. I punti di riferimento. Da lì in poi il sistema sa dove si trova ogni asse. Sa che l'asse X ha un'escursione di 420mm. Sa che la tolleranza in stack sui tre assi è ±0.019mm. Sa che il mandrino andrà montato a centro-linea Z con offset +37.5mm dal piano di riferimento.
+
+Queste non sono informazioni generiche. Sono vincoli. Il sistema li usa per ragionare.
+
+Questo è il bivio: prima, TITANIUM_OS era un'interfaccia React con Python dietro. Bella da vedere, vuota dentro. Dopo quella sera, ha memoria. Può rispondere a "qual è il gioco massimo ammissibile sul giunto MIMS in condizione di carico assiale?" — e trovare la risposta nel grafo, non inventarla.
+
+Il collegamento con MIMS è diretto. I connettori modulari fisici si agganciano al frame della V32. Se il frame non è documentato con precisione nel knowledge base, MIMS non può essere dimensionato correttamente. Il file \`mims_connector_spec_r1.md\` dentro BRAIN contiene già le forze di interfaccia — 340N assiale, 180N laterale. Dati reali. Misurati.
+
+VULCAN aspetta. EVA aspetta. Tutto aspetta che la macchina esista davvero — fisicamente e digitalmente.
+
+Oggi il blocco attivo è la gusset sinistra. Tre ore di officina stimate. Smussi, fori M8, saldatura TIG — probabilmente alluminio 6082, stessa scelta della destra. Ma c'è un problema che non si risolve in officina: manca il mandrino. 2.2kW, attacco ER20. È da ordinare. Senza quello, posso costruire tutto il frame perfetto che voglio — la macchina non taglia.
+
+Ho già la scheda tecnica. Ho già il fornitore. Manca solo che prema "ordina".
+
+Lo faccio domani mattina. Prima delle 8:00. Prima che l'ADHD decida che c'è qualcos'altro di più urgente.
+
+---
+
+**Un letto senza mandrino è solo un tavolo.**`,
+  },
+  {
+    id: "EP_AUTO_012",
+    title: "Componenti V32: dalla teoria alla fabbrica",
+    sottotitolo: "65% fresatrice CNC, primo unboxing documentato",
+    stagione: "AUTO",
+    stagione_label: "Generati",
+    data_evento: "2026-03-22",
+    tags: ["CNC", "artigianato industriale", "system builder", "V32", "manufacturing"],
+    status: "ready" as EpisodeStatus,
+    durata_min: 8,
+    preview: "Matteo Benenati mostra i componenti V32 arrivati a febbraio. Fresatrice CNC al 65%, MIMS al 30%: ecco cosa significa davvero.",
+    content: `# Episodio 14 — I Componenti Ci Sono
+
+---
+
+> "Adesso è reale. Prima era un file CAD. Ora pesa."
+
+---
+
+Venerdì 13 febbraio 2026. Officina, 16:20.
+
+Apro il cartone grande. Quello da 80x60x40. Dentro ci sono i profili estrusi per il telaio, le guide lineari THK SSR20, i cuscinetti SKF — tutto quello che nelle ultime settimane esisteva solo in un assembly Fusion 360 e in BRAIN/STATE.json.
+
+Tiro fuori la guida Z. 600mm, acciaio temprato, rettificato. La appoggio sul banco. Pesa diversamente da come te la immagini sullo schermo.
+
+Faccio la foto. 16:24. La carico nel log.
+
+\`\`\`
+stato: "componenti_ricevuti"
+data: "2026-02-13"
+completamento_v32: 65%
+prossimo_step: "Config G — gusset sinistra"
+\`\`\`
+
+---
+
+## Il Bivio
+
+Prima di questa consegna, la V32 era un progetto.
+
+Intendo: esisteva nei file, nei calcoli di rigidità, nelle simulazioni di deflessione del portale. Sapevo che con 178kg di struttura e ±0.019mm di tolleranza dovevo fare certi conti. Li avevo fatti. Ma erano numeri in un foglio.
+
+Adesso il metallo è qui.
+
+Il problema cambia natura. Non è più "questo design regge il carico?" — è "questo giunto specifico, con questa guida specifica, in questa sequenza di assemblaggio, funziona?". Diverso. Molto più concreto. Molto più difficile da delegare a un software.
+
+La gusset sinistra — Config G — è il punto critico adesso. È il nodo strutturale dove il portale X si aggancia alla colonna verticale sinistra. Ho stimato 3 ore. Potrebbero essere 4. La variabile è la squadratura: se il tubo 60x60x4 in S235 non è perfettamente a 90° dopo la saldatura, tutto quello che viene dopo — le guide, il carro Y, la tavola — accumula errore.
+
+Il mandrino 2.2kW ER20 manca ancora. Da ordinare. È il blocker principale per la fase di test. Ma non mi blocca adesso — adesso mi blocca zero cose. Posso assemblare il telaio completo senza mandrino.
+
+---
+
+## Connessione al Sistema
+
+TITANIUM_OS legge lo STATE.json ogni volta che apro il terminale. Questo aggiornamento — \`completamento_v32: 65%\` — non è una nota. È un parametro operativo.
+
+Quando Maria (EVA AI su WhatsApp) mi chiede "a che punto sei con la fresatrice", non risponde con una stima. Risponde con i dati del file. 65%. Prossimo step: gusset sinistra. Blocker: mandrino.
+
+MIMS al 30% aspetta. I connettori modulari fisici hanno senso solo quando ho la V32 che taglia le piastre di accoppiamento a tolleranza. Non prima.
+
+VULCAN — la pressa 20t — aspetta i polimeri. Aspetta i test di ricetta. Aspetta che io abbia tempo. Il tempo viene dalla V32 funzionante, che automatizza la lavorazione, che libera ore.
+
+Tutto è in serie. Non in parallelo.
+
+Questa foto del 13 febbraio è il punto di non ritorno.
+
+---
+
+I componenti ci sono. Ora si saldano.`,
+  },
   // AUTO_GENERATED_END
 ];

@@ -1,7 +1,8 @@
 // MdManager.tsx | TITANIUM_OS | v1.0 | 2026-03-11
 // Gestione file .md — lista live, preview, editor inline, ultimi modificati, percorso completo
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useMdFiles } from "../hooks/useSystemQuery";
 import {
   FileText, Clock, Edit3, Eye, ExternalLink, Save,
   X, RefreshCw, Search, FolderOpen, Check, AlertCircle,
@@ -27,6 +28,18 @@ function relativeTime(iso: string): string {
 function folderOf(rel: string): string {
   const parts = rel.split(/[\\/]/);
   return parts.length > 1 ? parts.slice(0, -1).join("/") : "root";
+}
+
+// Categoria per tab: sottocartella di KNOWLEDGE o "key" per file speciali
+function categoryOf(file: MdFile): string {
+  const normalized = file.rel.replace(/\\/g, '/');
+  const kIdx = normalized.toLowerCase().indexOf('knowledge/');
+  if (kIdx >= 0) {
+    const after = normalized.substring(kIdx + 'knowledge/'.length);
+    const parts = after.split('/');
+    return parts.length > 1 ? parts[0].toLowerCase() : 'knowledge';
+  }
+  return 'key';
 }
 
 // ── EDITOR PANEL ───────────────────────────────────────────────
@@ -249,33 +262,32 @@ function FileRow({ file, onPreview, onEdit, isSelected }: {
 
 // ── MAIN COMPONENT ─────────────────────────────────────────────
 export function MdManager() {
-  const [files, setFiles] = useState<MdFile[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [apiOk, setApiOk] = useState<boolean | null>(null);
+  // TanStack Query: cache 60s, no polling, shared con prefetch
+  const { data: mdData, isLoading: loading, isSuccess, refetch: load } = useMdFiles();
+  const files = mdData?.files ?? [];
+  const apiOk = isSuccess ? mdData?.ok ?? false : null;
+
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<MdFile | null>(null);
   const [mode, setMode] = useState<"preview" | "edit" | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("tutti");
 
-  const load = useCallback(() => {
-    setLoading(true);
-    fetch("/api/md-files")
-      .then(r => r.json())
-      .then(d => {
-        if (d.ok) { setFiles(d.files); setApiOk(true); }
-        else setApiOk(false);
-      })
-      .catch(() => setApiOk(false))
-      .finally(() => setLoading(false));
-  }, []);
+  // Categorie da sottocartelle KNOWLEDGE + "key"
+  const categories = ["tutti", ...Array.from(new Set(
+    files.map(f => categoryOf(f))
+  )).sort((a, b) => a === "key" ? 1 : b === "key" ? -1 : a.localeCompare(b))];
 
-  useEffect(() => { load(); }, [load]);
+  const categoryCounts: Record<string, number> = { tutti: files.length };
+  for (const f of files) {
+    const c = categoryOf(f);
+    categoryCounts[c] = (categoryCounts[c] || 0) + 1;
+  }
 
-  const filtered = files.filter(f =>
-    !query || f.rel.toLowerCase().includes(query.toLowerCase())
-  );
-
-  // Top 5 recenti (già ordinati per mtime desc)
-  const recenti = files.slice(0, 5);
+  const filtered = files.filter(f => {
+    const matchCat = activeCategory === "tutti" || categoryOf(f) === activeCategory;
+    const matchQ = !query || f.rel.toLowerCase().includes(query.toLowerCase()) || f.name.toLowerCase().includes(query.toLowerCase());
+    return matchCat && matchQ;
+  });
 
   const openPreview = (f: MdFile) => { setSelected(f); setMode("preview"); };
   const openEdit    = (f: MdFile) => { setSelected(f); setMode("edit"); };
@@ -286,8 +298,8 @@ export function MdManager() {
     return (
       <div className="flex gap-3 h-full min-h-0">
         {/* Lista a sinistra (compatta) */}
-        <div className="w-48 flex-shrink-0 flex flex-col gap-1 overflow-y-auto scrollbar-thin">
-          {files.slice(0, 20).map(f => (
+        <div className="w-44 flex-shrink-0 flex flex-col gap-1 overflow-y-auto scrollbar-thin">
+          {filtered.slice(0, 30).map(f => (
             <button
               key={f.path}
               onClick={() => { setSelected(f); }}
@@ -319,13 +331,13 @@ export function MdManager() {
   return (
     <div className="flex flex-col h-full gap-2">
       {/* Toolbar */}
-      <div className="flex items-center gap-2 flex-shrink-0">
+      <div className="flex items-center gap-1.5 flex-shrink-0">
         <div className="flex-1 flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-lg px-2 py-1.5 focus-within:border-cyan-500/50 transition-colors">
           <Search size={10} className="text-slate-600 flex-shrink-0" />
           <input
             value={query}
             onChange={e => setQuery(e.target.value)}
-            placeholder="filtra per nome o percorso…"
+            placeholder="cerca…"
             className="flex-1 bg-transparent text-[10px] font-mono text-slate-300 placeholder:text-slate-700 outline-none"
           />
           {query && (
@@ -338,53 +350,37 @@ export function MdManager() {
           onClick={load}
           disabled={loading}
           className="p-1.5 text-slate-600 hover:text-emerald-400 border border-slate-700 rounded-lg transition-colors disabled:opacity-40"
-          title="Aggiorna lista"
         >
           <RefreshCw size={10} className={loading ? "animate-spin" : ""} />
         </button>
-        <div className="text-[8px] font-mono text-slate-600 border border-slate-800 rounded px-1.5 py-1">
-          {files.length} file
-        </div>
+      </div>
+
+      {/* Tab categorie */}
+      <div className="flex gap-1 flex-wrap flex-shrink-0">
+        {categories.map(cat => (
+          <button key={cat} onClick={() => setActiveCategory(cat)}
+            className={`px-1.5 py-0.5 rounded text-[8px] font-mono uppercase tracking-wide transition-all ${
+              activeCategory === cat
+                ? "bg-cyan-900/40 text-cyan-400 border border-cyan-500/30"
+                : "text-slate-600 hover:text-slate-400 border border-slate-800"
+            }`}>
+            {cat} <span className="opacity-50">{categoryCounts[cat] || 0}</span>
+          </button>
+        ))}
       </div>
 
       {/* Offline notice */}
       {apiOk === false && (
         <div className="text-[9px] font-mono text-rose-400 bg-rose-900/10 border border-rose-500/20 rounded px-2 py-1.5 flex-shrink-0">
-          API offline — avvia api_server.py per caricare i file .md
+          API offline
         </div>
       )}
-
-      {/* Recenti */}
-      {!query && recenti.length > 0 && (
-        <div className="flex-shrink-0">
-          <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-            <Clock size={8} /> Ultimi modificati
-          </div>
-          <div className="flex gap-1.5 flex-wrap">
-            {recenti.map(f => (
-              <button
-                key={f.path}
-                onClick={() => openPreview(f)}
-                className="flex items-center gap-1 px-2 py-1 bg-slate-800/60 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/40 rounded text-[8px] font-mono text-slate-400 hover:text-cyan-400 transition-all max-w-[150px] truncate"
-                title={`${f.rel} — ${relativeTime(f.modified)}`}
-              >
-                <FileText size={8} />
-                <span className="truncate">{f.name}</span>
-                <span className="text-slate-600 text-[7px] flex-shrink-0">{relativeTime(f.modified)}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Divider */}
-      {!query && <div className="h-px bg-slate-800 flex-shrink-0" />}
 
       {/* Lista file */}
       <div className="flex-1 overflow-y-auto scrollbar-thin space-y-0.5 min-h-0">
         {loading && <div className="text-[9px] font-mono text-slate-600 p-2">caricamento…</div>}
-        {!loading && filtered.length === 0 && query && (
-          <div className="text-[9px] font-mono text-slate-600 p-2">Nessun file per "{query}"</div>
+        {!loading && filtered.length === 0 && (
+          <div className="text-[9px] font-mono text-slate-600 p-2">Nessun file</div>
         )}
         {filtered.map(f => (
           <FileRow

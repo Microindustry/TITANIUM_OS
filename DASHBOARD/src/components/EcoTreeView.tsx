@@ -2,7 +2,7 @@
 // Albero cartelle ECOSYSTEM_OS — interattivo, commentabile, editabile
 // Stato persiste in localStorage
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback, memo } from "react";
 import {
   ChevronRight,
   ChevronDown,
@@ -76,7 +76,8 @@ function NodeIcon({
 }
 
 // ── SINGLE NODE ─────────────────────────────────────────────
-function TreeNode({
+// memo: non ri-renderizza se node/depth/overrides/onOverrideChange non cambiano
+const TreeNode = memo(function TreeNode({
   node,
   depth,
   overrides,
@@ -360,19 +361,23 @@ function TreeNode({
       )}
     </div>
   );
-}
+});
 
 // ── MAIN COMPONENT ──────────────────────────────────────────
 export const EcoTreeView = () => {
   const [overrides, setOverrides] = useState<TreeOverrides>(loadOverrides);
+  const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleChange = (id: string, patch: NodeOverride) => {
+  // useCallback — stabile tra render, memo su TreeNode funziona
+  // Debounce localStorage — non scrivere ad ogni expand/rename
+  const handleChange = useCallback((id: string, patch: NodeOverride) => {
     setOverrides((prev) => {
       const next = { ...prev, [id]: { ...prev[id], ...patch } };
-      saveOverrides(next);
+      if (saveTimer.current) clearTimeout(saveTimer.current);
+      saveTimer.current = setTimeout(() => saveOverrides(next), 300);
       return next;
     });
-  };
+  }, []);
 
   const resetAll = () => {
     localStorage.removeItem(STORAGE_KEY);

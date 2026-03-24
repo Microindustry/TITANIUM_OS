@@ -3,9 +3,13 @@
 // v2.0: click nodo → figli in orbita radiale | stack breadcrumb | animazione fade+slide | ∞ livelli
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useGlobalState } from "../hooks/SystemStateContext";
 import { X, RotateCcw, ChevronLeft } from "lucide-react";
 import {
-  CellFocus, CellCiclo, CellPillars, CellV32,
+  CellFocusStandalone as CellFocus,
+  CellCicloStandalone as CellCiclo,
+  CellPillarsStandalone as CellPillars,
+  CellV32Standalone as CellV32,
   CellEcoTree, CellAutomazioni, CellMente, CellContentEngine,
   PILLARS_DATA,
 } from "./CanvasLayout";
@@ -88,17 +92,17 @@ const DRILL_CHILDREN: Record<string, DrillChild[]> = {
   titanium: [], // livello 0 — nessun drill-in (si torna indietro)
 
   v32: [
-    { id: "v32-hw",   label: "HARDWARE",    sub: "60% · Alu 7075",       note: "Struttura 178 kg, ±0.019 mm IT6. Config G: rinforzi Z+U, gusset 200mm, epoxy granite.",    color: "emerald", size: "md", pct: 60 },
-    { id: "v32-sw",   label: "SOFTWARE",    sub: "85% · TITANIUM_OS",    note: "Dashboard React :5173, VLC, G-code, Python automazioni. Il cervello digitale della macchina.", color: "cyan",    size: "md", pct: 85, pulse: true },
-    { id: "v32-elec", label: "ELETTRONICA", sub: "50% · controller",     note: "Controller CNC, driver stepper, sensing posizione, wiring industriale.",                    color: "indigo",  size: "sm", pct: 50 },
-    { id: "v32-cnc",  label: "G-CODE",      sub: "20% · percorsi",       note: "Percorsi utensile, post-processor, cicli di lavorazione Alu 7075.",                         color: "amber",   size: "sm", pct: 20 },
+    { id: "v32-struttura", label: "STRUTTURA",   sub: "65% · Config G",      note: "Basamento traliccio TIG · colonne Z+U · gusset+diag+tiranti M10. 178 kg.",               color: "emerald", size: "md", pct: 65 },
+    { id: "v32-assi",      label: "ASSI X/Y/Z",  sub: "55% · montaggio",     note: "X assemblato (guide+vite+servo) · Y/Z in montaggio · target ±0.019mm IT6.",              color: "cyan",    size: "md", pct: 55 },
+    { id: "v32-mandrino",  label: "MANDRINO",    sub: "0% · blocker",        note: "2.2kW ER20 — da ordinare. Ultimo pezzo prima di fresare stampi per MIMS.",                color: "rose",    size: "sm", pct: 0 },
+    { id: "v32-elettr",    label: "ELETTRONICA", sub: "50% · controller",    note: "HMI TP900 Comfort · controller CNC · driver stepper · sensori posizione.",                color: "indigo",  size: "sm", pct: 50 },
   ],
 
   mims: [
-    { id: "mims-vulcan",  label: "VULCAN",    sub: "15% · pressa 20t",  note: "Martinetto Vevor 20t (3 stati) + colonne guida DATWLER. Brevetterà la formula polimerica.", color: "rose",    size: "md", pct: 15, hasChildren: true },
-    { id: "mims-kit",     label: "KIT FISICO", sub: "40% · tile",       note: "Tile modulari, sistema incastro, stampo polimero VULCAN. Prototipo in corso.",               color: "amber",   size: "md", pct: 40 },
-    { id: "mims-fitpark", label: "FIT PARK",   sub: "5% · fitness",     note: "Area fitness outdoor con tornello MIMS proprietario. Primo caso d'uso B2C.",                 color: "emerald", size: "sm", pct: 5  },
-    { id: "mims-digital", label: "DIGITALE",   sub: "0% · app/API",     note: "App mobile, backend gestione, API connettori MIMS. Post pressa.",                            color: "cyan",    size: "sm", pct: 0  },
+    { id: "mims-vulcan",  label: "VULCAN",      sub: "15% · pressa 20t",  note: "Pressa 20t — riempie gli stampi fresati da V32. Ricette polimeri proprietarie.",             color: "rose",    size: "md", pct: 15, hasChildren: true },
+    { id: "mims-kit",     label: "CONNETTORI",  sub: "10% · tile",        note: "Tile modulari incastro · stampati con VULCAN · il prodotto finale MIMS.",                    color: "amber",   size: "md", pct: 10 },
+    { id: "mims-fitpark", label: "FIT PARK",    sub: "5% · fitness",      note: "Area fitness outdoor · tornello con connettori MIMS · prima applicazione.",                  color: "emerald", size: "sm", pct: 5  },
+    { id: "mims-digital", label: "DIGITALE",    sub: "0% · app/API",      note: "App mobile · catalogo connettori · API MIMS online.",                                        color: "cyan",    size: "sm", pct: 0  },
   ],
 
   "mims-vulcan": [
@@ -115,8 +119,8 @@ const DRILL_CHILDREN: Record<string, DrillChild[]> = {
 
   identity: [
     { id: "id-cv",      label: "CV LAYERS",  sub: "80% · proof",     note: "Curriculum navigabile a layer: SCProject → ESSEGI → DATWLER → LU.VE. Proof reali, non certificazioni.", color: "cyan",   size: "md", pct: 80, hasChildren: true },
-    { id: "id-sinapsi", label: "SINAPSI",    sub: "60% · memoria",   note: "Ecosistema navigabile a layer. Porta di accesso ai progetti personali. Mappa CV + VULCAN + MIMS.", color: "violet", size: "md", pct: 60 },
-    { id: "id-content", label: "CONTENT",    sub: "10% · video",     note: "Video, podcast, thread X, storytelling industriale. Content Engine da ricostruire.",           color: "amber",  size: "sm", pct: 10 },
+    { id: "id-sinapsi", label: "SINAPSI",    sub: "60% · memoria",   note: "Ecosistema navigabile a layer. Contiene CV, VULCAN, MIMS, Content Engine. Porta pubblica.", color: "violet", size: "md", pct: 60, hasChildren: true },
+    { id: "id-content", label: "CONTENT",    sub: "10% · storytelling", note: "Podcast, video, thread X. Storytelling del processo costruttivo — artigiano industriale.", color: "amber",  size: "sm", pct: 10, hasChildren: true },
   ],
 
   "id-cv": [
@@ -124,6 +128,44 @@ const DRILL_CHILDREN: Record<string, DrillChild[]> = {
     { id: "cv-essegi",  label: "ESSEGI",    sub: "robot industriali", note: "Programmazione e operatività robot industriali. Celle automatizzate in produzione.",           color: "indigo",  size: "md", pct: 100 },
     { id: "cv-datwler", label: "DATWLER",   sub: "presse + guide",   note: "Setup presse industriali. Colonne guida riutilizzate come struttura in VULCAN.",               color: "amber",   size: "md", pct: 100 },
     { id: "cv-luve",    label: "LU.VE",     sub: "QC · ISO",         note: "Quality Control scambiatori di calore. Metrologia, CMM, non conformità, normative EU.",        color: "emerald", size: "md", pct: 100 },
+    { id: "cv-mani",    label: "MANI",      sub: "competenze fisiche", note: "Skill manifatturiere: saldatura, presse, robot, QC, attrezzatura banco, fresatura CNC.", color: "rose",    size: "md", hasChildren: true },
+    { id: "cv-sistema", label: "SISTEMA",   sub: "competenze digitali", note: "Skill digitali: Python, React, n8n, LLM, automazioni, G-code. Il lato software.",        color: "violet",  size: "md", hasChildren: true },
+  ],
+
+  // ── MANI — competenze fisiche / manifatturiere ───────────────────────────
+  "cv-mani": [
+    { id: "mani-saldatura",  label: "SALDATURA",   sub: "TIG/MIG · titanio",  note: "TIG titanio aerospace (MotoGP), MIG alluminio/inox. Purge interno, gas shielding, Grade 5.", color: "rose",    size: "md", pct: 95 },
+    { id: "mani-presse",     label: "PRESSE",      sub: "idrauliche · setup",  note: "Setup e conduzione presse industriali (DATWLER). Stampi, parametri ciclo, manutenzione.",   color: "amber",   size: "md", pct: 90 },
+    { id: "mani-robot",      label: "ROBOT",       sub: "industriali · celle", note: "Programmazione robot industriali (ESSEGI). Celle automatizzate, pick & place, sicurezza.",   color: "indigo",  size: "md", pct: 85 },
+    { id: "mani-qc",         label: "QC",          sub: "metrologia · ISO",    note: "Quality Control (LU.VE). CMM, calibri, tolleranze IT6, non conformità, audit ISO.",          color: "emerald", size: "md", pct: 90 },
+    { id: "mani-banco",      label: "BANCO",       sub: "attrezzatura · setup", note: "Banco officina: mole, trapano, frese, tornio manuale, utensili taglio. La Taverna.",       color: "cyan",    size: "sm", pct: 80 },
+    { id: "mani-cnc",        label: "CNC",         sub: "in costruzione · V32", note: "Fresatura CNC: sto costruendo V32. G-code, percorsi utensile, Alu 7075, ±0.019mm.",       color: "emerald", size: "sm", pct: 40, pulse: true },
+  ],
+
+  // ── SISTEMA — competenze digitali / sistemistiche ────────────────────────
+  "cv-sistema": [
+    { id: "sist-python",     label: "PYTHON",      sub: "automazioni · script", note: "Python per automazioni, scanner, watcher, API server, bridge n8n. Zero cloud.",           color: "cyan",    size: "md", pct: 75 },
+    { id: "sist-react",      label: "REACT",       sub: "dashboard · UI",       note: "React 19 + TypeScript + Tailwind. TITANIUM_OS dashboard live. Vite, hooks, lazy load.",   color: "indigo",  size: "md", pct: 70 },
+    { id: "sist-n8n",        label: "N8N",         sub: "workflow · locale",     note: "n8n locale SQLite. Orchestrazione workflow, webhook ESP32, automazioni EVA.",             color: "emerald", size: "md", pct: 65 },
+    { id: "sist-llm",        label: "LLM",         sub: "Claude · agent loop",   note: "Integrazione LLM: prompt engineering, KNOWLEDGE base, memory system, Claude Code.",      color: "violet",  size: "md", pct: 70, pulse: true },
+    { id: "sist-gcode",      label: "G-CODE",      sub: "CNC · post-processor",  note: "Programmazione CNC: percorsi utensile, post-processor, cicli lavorazione Alu 7075.",     color: "amber",   size: "sm", pct: 35 },
+    { id: "sist-git",        label: "GIT",         sub: "versioning · GitHub",   note: "Git workflow, GitHub Microindustry, automazioni changelog, diff_log.json.",               color: "slate",   size: "sm", pct: 60 },
+  ],
+
+  // ── SINAPSI drill — contenuti navigabili ─────────────────────────────────
+  "id-sinapsi": [
+    { id: "sin-cv",      label: "CV MAPPA",    sub: "navigabile · layer",  note: "Mappa CV a layer espandibili. Per HR, clienti, collaboratori. Proof reali.", color: "cyan",    size: "md", pct: 80 },
+    { id: "sin-vulcan",  label: "VULCAN",      sub: "pressa · brevetto",   note: "Documentazione tecnica VULCAN: hardware, ricette, IP. Accesso collaboratori.", color: "rose",    size: "md", pct: 15 },
+    { id: "sin-mims",    label: "MIMS",        sub: "prodotto · spec",     note: "Specifiche connettori MIMS: CAD, protocollo, applicazioni, FitPark.",        color: "amber",   size: "md", pct: 30 },
+    { id: "sin-content", label: "CONTENT",     sub: "episodi · podcast",   note: "Accesso episodi Content Engine. Storytelling pubblico del processo.",         color: "indigo",  size: "sm", pct: 10 },
+  ],
+
+  // ── CONTENT drill — canali output ────────────────────────────────────────
+  "id-content": [
+    { id: "cont-podcast",  label: "PODCAST",    sub: "episodi · audio",    note: "Episodi .md → TTS Kokoro offline. Narrazione milestone, decisioni, costruzione.",  color: "amber",  size: "md", pct: 15 },
+    { id: "cont-video",    label: "VIDEO",      sub: "YouTube · reel",     note: "Milestone video: format AVA. YouTube long-form + IG reel 60-80 parole.",           color: "rose",   size: "md", pct: 10 },
+    { id: "cont-linkedin", label: "LINKEDIN",   sub: "post · thread",      note: "Thread LinkedIn su V32, MIMS, sistema. Storytelling artigiano digitale.",          color: "cyan",   size: "sm", pct: 5  },
+    { id: "cont-dataset",  label: "DATASET",    sub: "LLM · training",     note: "Episodi → JSONL training dataset. LLM fine-tuning su narrativa Matteo.",           color: "violet", size: "sm", pct: 5  },
   ],
 
   genesis: [
@@ -176,10 +218,10 @@ const DRILL_CROSS_CONNS: Record<string, Conn[]> = {
   ],
   // ── V32 ──────────────────────────────────────────────────────────────
   v32: [
-    { from: "v32-hw",   to: "v32-elec",   label: "ospita",    dashed: true },
-    { from: "v32-elec", to: "v32-sw",     label: "segnali",   dashed: true },
-    { from: "v32-sw",   to: "v32-cnc",    label: "invia",     dashed: true },
-    { from: "v32-hw",   to: "v32-cnc",    label: "vincoli",   dashed: true },
+    { from: "v32-struttura", to: "v32-assi",     label: "supporta",  dashed: true },
+    { from: "v32-assi",      to: "v32-elettr",   label: "segnali",   dashed: true },
+    { from: "v32-elettr",    to: "v32-mandrino", label: "alimenta",  dashed: true },
+    { from: "v32-struttura", to: "v32-mandrino", label: "monta su",  dashed: true },
   ],
   // ── VITA NATURA ──────────────────────────────────────────────────────
   vitanatura: [
@@ -195,10 +237,46 @@ const DRILL_CROSS_CONNS: Record<string, Conn[]> = {
   ],
   // ── CV LAYERS ────────────────────────────────────────────────────────
   "id-cv": [
-    { from: "cv-sc",      to: "cv-essegi",   label: "evolve",    dashed: true },
-    { from: "cv-essegi",  to: "cv-datwler",  label: "meccanica", dashed: true },
-    { from: "cv-datwler", to: "cv-luve",     label: "qualità",   dashed: true },
+    { from: "cv-sc",      to: "cv-essegi",   label: "evolve",       dashed: true },
+    { from: "cv-essegi",  to: "cv-datwler",  label: "meccanica",    dashed: true },
+    { from: "cv-datwler", to: "cv-luve",     label: "qualità",      dashed: true },
     { from: "cv-datwler", to: "cv-sc",       label: "guide→VULCAN", dashed: true },
+    { from: "cv-sc",      to: "cv-mani",     label: "origine",      dashed: true },
+    { from: "cv-luve",    to: "cv-mani",     label: "precis.",      dashed: true },
+    { from: "cv-datwler", to: "cv-sistema",  label: "setup→code",   dashed: true },
+    { from: "cv-mani",    to: "cv-sistema",  label: "fisico+digit", dashed: true },
+  ],
+  // ── MANI — competenze fisiche ─────────────────────────────────────────
+  "cv-mani": [
+    { from: "mani-saldatura", to: "mani-presse",    label: "metalli",    dashed: true },
+    { from: "mani-presse",    to: "mani-cnc",       label: "stampi",     dashed: true },
+    { from: "mani-robot",     to: "mani-banco",     label: "manuale",    dashed: true },
+    { from: "mani-qc",        to: "mani-cnc",       label: "tolleranze", dashed: true },
+    { from: "mani-banco",     to: "mani-saldatura", label: "officina",   dashed: true },
+    { from: "mani-cnc",       to: "mani-qc",        label: "verifica",   dashed: true },
+  ],
+  // ── SISTEMA — competenze digitali ────────────────────────────────────
+  "cv-sistema": [
+    { from: "sist-python",  to: "sist-n8n",      label: "bridge",     dashed: true },
+    { from: "sist-n8n",     to: "sist-react",    label: "dati live",  dashed: true },
+    { from: "sist-llm",     to: "sist-python",   label: "istruisce",  dashed: true },
+    { from: "sist-react",   to: "sist-git",      label: "versiona",   dashed: true },
+    { from: "sist-gcode",   to: "sist-python",   label: "post-proc",  dashed: true },
+    { from: "sist-llm",     to: "sist-react",    label: "TITANIUM_OS",dashed: true },
+  ],
+  // ── SINAPSI ──────────────────────────────────────────────────────────
+  "id-sinapsi": [
+    { from: "sin-cv",     to: "sin-vulcan",   label: "know-how",   dashed: true },
+    { from: "sin-vulcan", to: "sin-mims",     label: "produce",    dashed: true },
+    { from: "sin-mims",   to: "sin-content",  label: "racconta",   dashed: true },
+    { from: "sin-cv",     to: "sin-content",  label: "narrazione", dashed: true },
+  ],
+  // ── CONTENT ENGINE ───────────────────────────────────────────────────
+  "id-content": [
+    { from: "cont-podcast",  to: "cont-video",    label: "espande",  dashed: true },
+    { from: "cont-video",    to: "cont-linkedin", label: "clip",     dashed: true },
+    { from: "cont-podcast",  to: "cont-dataset",  label: "→ LLM",   dashed: true },
+    { from: "cont-linkedin", to: "cont-dataset",  label: "testi",   dashed: true },
   ],
   // ── FOCUS ────────────────────────────────────────────────────────────
   focus: [
@@ -232,11 +310,12 @@ const NODES_BASE: MapNode[] = [
   { id: "automazioni", label: "AUTOMAZ.", sub: "13+14 nodi",            note: "GENESIS: 13 automazioni attive + 14 da fare. Python-only, zero cloud.",                color: "amber",   x: 27, y: 63, size: "sm" },
   { id: "docs",      label: "DOCS",        sub: "editor MD",            note: "Editor markdown integrato: leggi, crea, modifica tutti i .md senza uscire.",          color: "amber",   x: 73, y: 63, size: "sm" },
   { id: "content",   label: "CONTENT",     sub: "podcast/video",        note: "Content engine: podcast, video, storytelling del processo costruttivo.",               color: "amber",   x: 87, y: 47, size: "sm" },
-  { id: "v32",       label: "V32",         sub: "65% · ATTO II",        note: "Fresatrice CNC titanio. Config G: rinforzi Z+U, Epoxy Granite, mandrino 2.2kW.",       color: "emerald", x:  9, y: 76, size: "md", pct: 65, hasChildren: true },
-  { id: "mims",      label: "MIMS",        sub: "30% · pressa",         note: "Connettori modulari: prodotto fisico + ecosistema digitale. VULCAN + FitPark.",        color: "amber",   x: 26, y: 84, size: "md", pct: 30, hasChildren: true },
-  { id: "genesis",   label: "GENESIS",     sub: "10% · OS setup",       note: "TITANIUM_OS: automazioni, infrastruttura locale. Il cervello digitale.",               color: "cyan",    x: 50, y: 87, size: "md", pct: 10, hasChildren: true },
-  { id: "vitanatura",label: "VITA NATURA", sub: "40% · EVA pilot",      note: "Centro estetico Maria, Boffalora s/T (MI). EVA: AI assistant + WhatsApp bot.",         color: "indigo",  x: 74, y: 84, size: "md", pct: 40, hasChildren: true },
-  { id: "identity",  label: "IDENTITY",    sub: "20% · CV+LI",          note: "Brand personale: artigiano digitale + system builder. CV layers navigabili.",          color: "slate",   x: 91, y: 76, size: "md", pct: 20, hasChildren: true },
+  { id: "taverna",   label: "LA TAVERNA",  sub: "lab fisico · sotto casa", note: "Il laboratorio fisico sotto casa. V32 e VULCAN vivono qui. Dove le macchine prendono forma.", color: "rose",    x:  5, y: 60, size: "sm", pulse: true },
+  { id: "v32",       label: "V32",         sub: "65% · IN COSTRUZIONE",  note: "CNC 3 assi IN COSTRUZIONE — fresa stampi per MIMS via VULCAN. 178 kg. La Taverna.",    color: "emerald", x:  9, y: 76, size: "md", pct: 65, hasChildren: true },
+  { id: "mims",      label: "MIMS",        sub: "30% · attende V32",     note: "Connettori modulari fisici — output catena V32→VULCAN→MIMS. Attende V32.",             color: "amber",   x: 26, y: 84, size: "md", pct: 30, hasChildren: true },
+  { id: "genesis",   label: "GENESIS",     sub: "40% · OS live",         note: "TITANIUM_OS: automazioni, infrastruttura locale. Il cervello digitale.",               color: "cyan",    x: 50, y: 87, size: "md", pct: 40, hasChildren: true },
+  { id: "vitanatura",label: "VITA NATURA", sub: "40% · EVA pilot",       note: "Centro estetico Maria, Boffalora s/T (MI). EVA: AI assistant + WhatsApp bot.",         color: "indigo",  x: 74, y: 84, size: "md", pct: 40, hasChildren: true },
+  { id: "identity",  label: "IDENTITY",    sub: "20% · CV+LI",           note: "Brand personale: artigiano digitale + system builder. CV layers navigabili.",          color: "slate",   x: 91, y: 76, size: "md", pct: 20, hasChildren: true },
 ];
 
 const CONNECTIONS_BASE: Conn[] = [
@@ -256,7 +335,11 @@ const CONNECTIONS_BASE: Conn[] = [
   // ── PROGETTI → strumenti ─────────────────────────────────────────────
   { from: "v32",      to: "focus",       label: "milestone",    dashed: true },
   { from: "v32",      to: "mente",       label: "scansiona",    dashed: true },
-  { from: "mims",     to: "v32",         label: "produce",      dashed: true },
+  { from: "v32",      to: "mims",         label: "fresa stampi", dashed: true },
+  // ── LA TAVERNA ───────────────────────────────────────────────────────
+  { from: "titanium", to: "taverna",     label: "lab fisico" },
+  { from: "taverna",  to: "v32",         label: "ospita",       dashed: true },
+  { from: "taverna",  to: "mims",        label: "produce",      dashed: true },
   // ── CONTENT ──────────────────────────────────────────────────────────
   { from: "titanium", to: "content",     label: "storytelling", dashed: true },
   { from: "identity", to: "content",     label: "brand →",      dashed: true },
@@ -526,10 +609,13 @@ function NeuroNode({ node, isActive, isHovered, onClick, onEnter, onLeave, level
 
 // ─── NEURO OS LAYOUT ────────────────────────────────────────────────────────
 export function NeuroOSLayout({ systemState }: { systemState?: any }) {
+  // TanStack Query: stato condiviso, zero fetch duplicati
+  const { state: queryState } = useGlobalState();
+  const liveState = systemState || queryState;
+
   const [stack,       setStack]       = useState<StackLevel[]>([L0]);
   const [activeNode,  setActiveNode]  = useState<string | null>(null);
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
-  const [liveState,   setLiveState]   = useState<Record<string, any> | null>(null);
   const [mapSize,     setMapSize]     = useState({ w: 1000, h: 580 });
   const [showNote,    setShowNote]    = useState(false);
   const [animKey,     setAnimKey]     = useState(0);
@@ -539,15 +625,6 @@ export function NeuroOSLayout({ systemState }: { systemState?: any }) {
 
   const current = stack[stack.length - 1];
   const level   = stack.length - 1;
-
-  // ── Live state: usa prop da App.tsx oppure fallback fetch diretto ──
-  useEffect(() => {
-    if (systemState) { setLiveState(systemState); return; }
-    const load = () => fetch("http://localhost:5001/api/state").then(r => r.json()).then(setLiveState).catch(() => {});
-    load();
-    const id = setInterval(load, 30_000);
-    return () => clearInterval(id);
-  }, [systemState]);
 
   // ── Aggiorna nodi base con dati live da STATE.json ──
   useEffect(() => {
@@ -702,14 +779,12 @@ export function NeuroOSLayout({ systemState }: { systemState?: any }) {
         {/* ── MAPPA ── */}
         <div
           ref={mapRef}
-          key={animKey}
           className="absolute inset-0"
           style={{
             right: activeNode ? 432 : 0,
             opacity: isTransitioning ? 0 : 1,
             transform: isTransitioning ? "scale(0.97) translateY(4px)" : "scale(1) translateY(0)",
             transition: "right 0.3s ease, opacity 0.22s ease, transform 0.22s ease",
-            animation: `nl-fadeUp 0.3s ease both`,
             // Dot grid background
             backgroundImage: "radial-gradient(circle, #1e293b 1px, transparent 1px)",
             backgroundSize: "22px 22px",

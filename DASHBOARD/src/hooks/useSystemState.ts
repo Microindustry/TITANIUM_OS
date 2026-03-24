@@ -5,7 +5,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const API_BASE = "http://localhost:5001";
+// Path relativo: in dev usa Vite middleware, in prod il server statico
+const API_BASE = "";
 
 export interface PillarState {
   pct_complete: number;
