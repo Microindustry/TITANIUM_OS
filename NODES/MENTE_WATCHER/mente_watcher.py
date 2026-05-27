@@ -1,11 +1,13 @@
-# mente_watcher.py | TITANIUM_OS / NODES / MENTE_WATCHER | v1.2 | 2026-05-27
+# mente_watcher.py | TITANIUM_OS / NODES / MENTE_WATCHER | v1.3 | 2026-05-27
 # Guarda MICROINDUSTRY\MENTE\ in background (path dinamico via Path.home())
-# Quando un file cambia -> chiama POST /api/scan (api_server:5001)
-# Output: aggiorna DATA/mente_digest.json automaticamente
-# Avvio: incluso in START_ECOSYSTEM.bat
+# Quando un file cambia -> POST /api/scan + rag-rebuild automatico
+# Output: DATA/mente_digest.json aggiornato + ChromaDB aggiornato
+# Avvio: incluso in START_GETAC.bat / Task Scheduler
 
+import os
 import sys
 import time
+import subprocess
 import logging
 import threading
 import urllib.request
@@ -15,11 +17,15 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # ── CONFIG ────────────────────────────────────────────────────
-import os
+REPO_ROOT   = Path(__file__).resolve().parents[2]
 MENTE_DIR   = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 API_SCAN    = "http://localhost:5001/api/scan"
-DEBOUNCE_S  = 8.0   # secondi di quiete prima di scansionare
-LOG_PATH    = Path(__file__).resolve().parents[2] / "VERSIONS" / "mente_watcher.log"
+RAG_SCRIPT  = REPO_ROOT / "NODES" / "MENTE_RAG" / "rag_engine.py"
+PYTHON      = sys.executable
+DEBOUNCE_S  = 10.0  # secondi di quiete prima di scansionare + rebuild
+LOG_DIR     = REPO_ROOT / "DATA" / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+LOG_PATH    = LOG_DIR / "mente_watcher.log"
 
 WATCH_EXTS  = {".pdf", ".docx", ".txt", ".md"}  # estensioni che triggherano scan
 
@@ -56,22 +62,37 @@ class DebouncedScanner:
         log.info(f"Scan programmata in {self._delay}s — motivo: {reason}")
 
     def _run(self, reason: str):
-        log.info(f"Avvio scan — {reason}")
+        log.info(f"Ciclo avviato — {reason}")
+
+        # 1. Scanner digest (se API è up)
         try:
             req = urllib.request.Request(
-                API_SCAN,
-                data=b"{}",
-                headers={"Content-Type": "application/json"},
-                method="POST",
+                API_SCAN, data=b"{}",
+                headers={"Content-Type": "application/json"}, method="POST",
             )
             with urllib.request.urlopen(req, timeout=150) as resp:
-                body = resp.read().decode("utf-8", errors="replace")
-                # Mostra solo prime 200 char del risultato
-                log.info(f"Scan completata — risposta: {body[:200]}")
-        except urllib.error.URLError as e:
-            log.warning(f"API non raggiungibile (api_server spento?): {e}")
+                log.info(f"Scanner OK — {resp.read().decode()[:100]}")
+        except urllib.error.URLError:
+            log.warning("API spenta — scanner skippato, RAG rebuild continua")
         except Exception as e:
-            log.error(f"Errore scan: {e}")
+            log.error(f"Errore scanner: {e}")
+
+        # 2. RAG rebuild (sempre — indipendente dall'API)
+        if RAG_SCRIPT.exists():
+            try:
+                env = {**os.environ, "MENTE_DIR": str(MENTE_DIR), "PYTHONPATH": str(REPO_ROOT)}
+                result = subprocess.run(
+                    [PYTHON, str(RAG_SCRIPT), "--rebuild"],
+                    capture_output=True, text=True, timeout=300, env=env,
+                )
+                if result.returncode == 0:
+                    log.info("RAG rebuild OK")
+                else:
+                    log.error(f"RAG rebuild errore: {result.stderr[-200:]}")
+            except Exception as e:
+                log.error(f"RAG rebuild eccezione: {e}")
+        else:
+            log.warning(f"rag_engine.py non trovato: {RAG_SCRIPT}")
 
 
 # ── FILE SYSTEM HANDLER ────────────────────────────────────────

@@ -3,7 +3,7 @@
 :: TITANIUM_OS — Lancia Claude Code dalla cartella corretta
 :: Claude Code leggera' automaticamente CLAUDE.md + STATE.json
 :: ============================================================
-cd /d "C:\Users\Matteo\Desktop\TITANIUM_OS"
+cd /d "%USERPROFILE%\TITANIUM_OS\TITANIUM_OS"
 echo.
 echo   TITANIUM_OS — Avvio Claude Code
 echo   Cartella: %CD%

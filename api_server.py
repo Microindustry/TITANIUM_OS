@@ -1,4 +1,4 @@
-# api_server.py | ECOSYSTEM_OS | v1.1 | 2026-03-16
+# api_server.py | ECOSYSTEM_OS | v1.2 | 2026-05-27
 # Flask API server — serve dati reali al dashboard React
 # Endpoints: STATE.json, mente_digest.json, trigger scanner, update state
 # Run: python api_server.py  (porta 5001)
@@ -28,13 +28,15 @@ SCANNER_LEGACY = ROOT / "NODES" / "MENTE_SCANNER" / "scanner.py"  # fallback se 
 if not SCANNER.exists() and SCANNER_LEGACY.exists():
     SCANNER = SCANNER_LEGACY
 
-CONTENT_ENGINE = Path(r"C:\Users\Matteo\Desktop\CONTENT_ENGINE")
+_home          = Path.home()
+MENTE_DIR      = Path(os.environ.get("MENTE_DIR",          str(_home / "MICROINDUSTRY" / "MENTE")))
+CONTENT_ENGINE = Path(os.environ.get("CONTENT_ENGINE_DIR", str(_home / "MICROINDUSTRY" / "CONTENT_ENGINE")))
 CONTENT_DIR    = CONTENT_ENGINE / "produzione_contenuti"
 
 # Radici consentite per /api/open (sicurezza)
 ALLOWED_ROOTS = [
     ROOT.resolve(),
-    Path(r"C:\Users\Matteo\Desktop\LA MIA MENTE").resolve(),
+    MENTE_DIR.resolve(),
     CONTENT_ENGINE.resolve(),
 ]
 
@@ -248,14 +250,46 @@ def list_content_files():
             pass
     return jsonify({"ok": True, "total": len(files), "files": files})
 
+@app.get("/api/rag/search")
+def rag_search():
+    """Ricerca semantica RAG su MENTE/ via ChromaDB."""
+    q     = request.args.get("q", "").strip()
+    top_k = int(request.args.get("top_k", 5))
+    if not q:
+        return jsonify({"ok": False, "error": "param q mancante"}), 400
+    try:
+        sys.path.insert(0, str(ROOT))
+        from NODES.MENTE_RAG.rag_engine import search as rag_search_fn
+        results = rag_search_fn(q, top_k=top_k)
+        return jsonify({"ok": True, "query": q, "total": len(results), "results": results})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+@app.post("/api/rag/rebuild")
+def rag_rebuild():
+    """Forza rebuild indice ChromaDB da MENTE/."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "NODES" / "MENTE_RAG" / "rag_engine.py"), "--rebuild"],
+            capture_output=True, text=True, timeout=300,
+            encoding="utf-8", errors="replace",
+            env={**os.environ, "MENTE_DIR": str(MENTE_DIR), "PYTHONPATH": str(ROOT)},
+        )
+        return jsonify({"ok": result.returncode == 0, "output": result.stdout[-500:]})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
 @app.get("/api/health")
 def health():
+    rag_dir = ROOT / "NODES" / "MENTE_RAG" / "chroma_db"
     return jsonify({
-        "status": "ok",
-        "time": datetime.now().isoformat(),
-        "state_exists": STATE_FILE.exists(),
-        "digest_exists": DIGEST_FILE.exists(),
+        "status":         "ok",
+        "time":           datetime.now().isoformat(),
+        "state_exists":   STATE_FILE.exists(),
+        "digest_exists":  DIGEST_FILE.exists(),
         "scanner_exists": SCANNER.exists(),
+        "rag_exists":     rag_dir.exists(),
+        "mente_dir":      str(MENTE_DIR),
     })
 
 # ── CONTENT ENGINE — CE-1/CE-2/CE-3/CE-4 ─────────────────────

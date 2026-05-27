@@ -11,7 +11,7 @@ import type { IncomingMessage, ServerResponse } from 'node:http'
 
 const ROOT = path.resolve(__dirname, '..')
 const STATE_FILE = path.join(ROOT, 'BRAIN', 'STATE.json')
-const CONTENT_DIR = 'C:\\Users\\Matteo\\Desktop\\CONTENT_ENGINE'
+const CONTENT_DIR = process.env.CONTENT_ENGINE_DIR || `C:\\Users\\${process.env.USERNAME || 'benen'}\\MICROINDUSTRY\\CONTENT_ENGINE`
 const SKIP_DIRS = new Set(['BACKUPS', 'VERSIONS', 'node_modules', '__pycache__', '.git', 'venv', '.venv'])
 
 // ── helpers ──────────────────────────────────────────────────
@@ -148,8 +148,9 @@ function handleApi(req: IncomingMessage, res: ServerResponse): boolean {
     const target = url.searchParams.get('path') || ''
     if (!target) { json(res, { ok: false, error: 'path mancante' }, 400); return true }
     const resolved = path.resolve(target)
-    // Sicurezza: solo dentro ROOT o CONTENT_ENGINE
-    const allowed = resolved.startsWith(ROOT) || resolved.startsWith('C:\\Users\\Matteo\\Desktop\\CONTENT_ENGINE') || resolved.startsWith('C:\\Users\\Matteo\\Desktop\\LA MIA MENTE')
+    const MENTE_DIR = process.env.MENTE_DIR || path.join(process.env.USERPROFILE || `C:\\Users\\${process.env.USERNAME || 'benen'}`, 'MICROINDUSTRY', 'MENTE')
+    // Sicurezza: solo dentro ROOT, CONTENT_ENGINE o MENTE
+    const allowed = resolved.startsWith(ROOT) || resolved.startsWith(CONTENT_DIR) || resolved.startsWith(MENTE_DIR)
     if (!allowed) { json(res, { ok: false, error: 'percorso non consentito' }, 403); return true }
     try {
       const stat = fs.statSync(resolved)
@@ -176,7 +177,8 @@ function handleApi(req: IncomingMessage, res: ServerResponse): boolean {
 
   // GET /api/root
   if (p === '/api/root' && req.method === 'GET') {
-    json(res, { ok: true, root: ROOT, allowed: [ROOT, 'C:\\Users\\Matteo\\Desktop\\LA MIA MENTE', 'C:\\Users\\Matteo\\Desktop\\CONTENT_ENGINE'] })
+    const MENTE_DIR_ROOT = process.env.MENTE_DIR || path.join(process.env.USERPROFILE || `C:\\Users\\${process.env.USERNAME || 'benen'}`, 'MICROINDUSTRY', 'MENTE')
+    json(res, { ok: true, root: ROOT, allowed: [ROOT, MENTE_DIR_ROOT, CONTENT_DIR] })
     return true
   }
 

@@ -22,7 +22,7 @@ $ARGUMENTS
 5. Salva il file
 
 ```bash
-cd C:/Users/Matteo/Desktop/TITANIUM_OS
+cd "$HOME/TITANIUM_OS/TITANIUM_OS"
 git add BRAIN/STATE.json
 git commit -m "state: nuovo milestone — $ARGUMENTS"
 git push origin main

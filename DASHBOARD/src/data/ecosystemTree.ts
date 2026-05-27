@@ -11,10 +11,11 @@ export interface EcoNode {
   children?: EcoNode[];
 }
 
-const R  = "C:/Users/Matteo/Desktop/TITANIUM_OS";
-const M  = "C:/Users/Matteo/Desktop/LA MIA MENTE";
-const S  = "C:/Users/Matteo/Desktop/SINAPSI";
-const CE = "C:/Users/Matteo/Desktop/CONTENT_ENGINE";
+const _u = (typeof process !== 'undefined' && process.env.USERNAME) || 'benen';
+const R  = `C:/Users/${_u}/TITANIUM_OS/TITANIUM_OS`;
+const M  = `C:/Users/${_u}/MICROINDUSTRY/MENTE`;
+const S  = `C:/Users/${_u}/MICROINDUSTRY/WORKSPACE`;
+const CE = `C:/Users/${_u}/MICROINDUSTRY/CONTENT_ENGINE`;
 
 export const ECOSYSTEM_TREE: EcoNode = {
   id: "root",

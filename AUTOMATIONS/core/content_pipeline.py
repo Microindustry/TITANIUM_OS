@@ -20,6 +20,7 @@ Avvio     : python content_pipeline.py --source respiro_dei_dati.md
 ========================================================
 """
 
+import os
 import sys
 import json
 import logging
@@ -28,7 +29,7 @@ from pathlib import Path
 from datetime import datetime
 
 ROOT           = Path(__file__).resolve().parent.parent.parent
-CONTENT_ENGINE = Path("C:/Users/Matteo/Desktop/CONTENT_ENGINE")
+CONTENT_ENGINE = Path(os.environ.get("CONTENT_ENGINE_DIR", str(Path.home() / "MICROINDUSTRY" / "CONTENT_ENGINE")))
 OUTPUT_DIR     = CONTENT_ENGINE / "produzione_contenuti"
 TEMPLATES_DIR  = CONTENT_ENGINE / "templates"
 DISTRIBUITI_DIR = CONTENT_ENGINE / "distribuiti"

@@ -85,7 +85,7 @@
 
 ## CONTENT ENGINE — PIPELINE CREATIVA (nuova architettura)
 
-> Vive in `C:\Users\Matteo\Desktop\CONTENT_ENGINE\` — separata da TITANIUM_OS
+> Vive in `%USERPROFILE%\MICROINDUSTRY\CONTENT_ENGINE\` — separata da TITANIUM_OS (env: CONTENT_ENGINE_DIR)
 
 ### Flusso
 ```

@@ -16,7 +16,7 @@ Genera episodio podcast da milestone TITANIUM_OS.
 3. Se `$ARGUMENTS` contiene testo: aggiungi temporaneamente il milestone e genera solo quello
 
 ```bash
-cd C:/Users/Matteo/Desktop/TITANIUM_OS
+cd "$HOME/TITANIUM_OS/TITANIUM_OS"
 ANTHROPIC_API_KEY=!`cat .env 2>/dev/null | grep ANTHROPIC_API_KEY | cut -d= -f2` PYTHONIOENCODING=utf-8 python CONTENT_ENGINE/scripts/milestone_to_episode.py
 ```
 

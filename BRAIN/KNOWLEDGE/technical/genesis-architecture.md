@@ -49,7 +49,7 @@ LAYER 3: OUTPUT + VISUALIZZAZIONE
 ## Nodi Pianificati
 
 ### MENTE_SCANNER (priorità ALTA)
-- **Cosa fa**: legge `C:\Users\Matteo\Desktop\LA MIA MENTE\` → estrae decisioni, spec, milestone
+- **Cosa fa**: legge `%USERPROFILE%\MICROINDUSTRY\MENTE\` → estrae decisioni, spec, milestone (env: MENTE_DIR)
 - **Output**: `DATA/mente_digest.json`
 - **Comando**: `cd NODES/MENTE_SCANNER && python scanner.py`
 - **Stato**: script scritto, da testare su dati reali

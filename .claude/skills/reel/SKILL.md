@@ -15,7 +15,7 @@ Genera script reel 60-80 parole da episodio esistente.
 2. Se `$ARGUMENTS` è un ID (es. `EP_AUTO_012`): leggi quel file
 
 ```bash
-ls -t C:/Users/Matteo/Desktop/TITANIUM_OS/CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_*.md | head -1
+Get-ChildItem "$HOME/MICROINDUSTRY/CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_*.md" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 -ExpandProperty FullName
 ```
 
 3. Estrai e mostra il campo `reel_hook` dal frontmatter

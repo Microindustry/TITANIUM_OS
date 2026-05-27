@@ -32,7 +32,7 @@ from datetime import datetime
 # ============================================================
 
 ROOT           = Path(__file__).resolve().parent.parent.parent
-CONTENT_ENGINE = Path("C:/Users/Matteo/Desktop/CONTENT_ENGINE")
+CONTENT_ENGINE = Path(os.environ.get("CONTENT_ENGINE_DIR", str(Path.home() / "MICROINDUSTRY" / "CONTENT_ENGINE")))
 ARCHIVE_DIRS   = [
     CONTENT_ENGINE / "archive",
     ROOT / "ARCHIVE",

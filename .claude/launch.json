@@ -2,6 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
+      "name": "api-server",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["api_server.py"],
+      "port": 5001
+    },
+    {
       "name": "dashboard",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
@@ -9,10 +15,10 @@
       "cwd": "DASHBOARD"
     },
     {
-      "name": "sinapsi",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-p", "5174", "SINAPSI"],
-      "port": 5174
+      "name": "mente-watcher",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["NODES/MENTE_WATCHER/mente_watcher.py"],
+      "port": 5001
     }
   ]
 }

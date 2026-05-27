@@ -30,9 +30,9 @@ LOG_PATH      = ROOT / "DATA" / "logs" / "deep_link.log"
 
 # Editor configurabili — percorso eseguibile
 EDITORS = {
-    "cursor":   r"C:\Users\Matteo\AppData\Local\Programs\cursor\Cursor.exe",
-    "vscode":   r"C:\Users\Matteo\AppData\Local\Programs\Microsoft VS Code\Code.exe",
-    "obsidian": r"C:\Users\Matteo\AppData\Local\Obsidian\Obsidian.exe",
+    "cursor":   str(Path.home() / "AppData" / "Local" / "Programs" / "cursor" / "Cursor.exe"),
+    "vscode":   str(Path.home() / "AppData" / "Local" / "Programs" / "Microsoft VS Code" / "Code.exe"),
+    "obsidian": str(Path.home() / "AppData" / "Local" / "Obsidian" / "Obsidian.exe"),
     "notepad":  r"C:\Windows\System32\notepad.exe",
 }
 

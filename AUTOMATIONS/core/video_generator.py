@@ -30,7 +30,7 @@ from pathlib import Path
 from datetime import datetime
 
 ROOT           = Path(__file__).resolve().parent.parent.parent
-CONTENT_ENGINE = Path("C:/Users/Matteo/Desktop/CONTENT_ENGINE")
+CONTENT_ENGINE = Path(os.environ.get("CONTENT_ENGINE_DIR", str(Path.home() / "MICROINDUSTRY" / "CONTENT_ENGINE")))
 VIDEO_DIR      = CONTENT_ENGINE / "video"
 LOG_PATH       = ROOT / "DATA" / "logs" / "video_generator.log"
 
