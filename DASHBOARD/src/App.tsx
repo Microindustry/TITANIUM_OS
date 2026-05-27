@@ -1,11 +1,12 @@
-// App.tsx | TITANIUM_OS | v5.1 | 2026-05-27
-// Shell principale — navigazione guidata con ruoli + CommandBar Ctrl+K
+// App.tsx | TITANIUM_OS | v5.2 | 2026-05-27
+// Shell principale — navigazione guidata + CommandBar Ctrl+K + ProgressBar + QuickLinks
 
-import { useEffect, useState, lazy, Suspense, useCallback } from "react";
+import { useEffect, useState, useRef, lazy, Suspense, useCallback } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Activity, Zap, Grid3X3, GitBranch, Layers, Network, Mic, Globe,
-  ArrowRight, Compass, Terminal,
+  ArrowRight, Compass, Terminal, ExternalLink, Link2, FileJson,
+  Workflow, HeartPulse, BookOpen,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore } from "./stores/systemStore";
@@ -138,6 +139,90 @@ function prefetchForView(view: ViewMode) {
   }
 }
 
+// ─── PILLAR PROGRESS STRIP ───────────────────────────────────────────────────
+const PILLAR_COLORS: Record<string, string> = {
+  V32:        "bg-emerald-500",
+  GENESIS:    "bg-cyan-500",
+  IDENTITY:   "bg-indigo-500",
+  MIMS:       "bg-amber-500",
+  VITA_NATURA:"bg-violet-500",
+};
+const PILLAR_TEXT: Record<string, string> = {
+  V32:        "text-emerald-400",
+  GENESIS:    "text-cyan-400",
+  IDENTITY:   "text-indigo-400",
+  MIMS:       "text-amber-400",
+  VITA_NATURA:"text-violet-400",
+};
+
+function PillarProgressStrip({ pillars }: { pillars: Record<string, any> }) {
+  const order = ["V32", "GENESIS", "IDENTITY", "MIMS"];
+  return (
+    <div className="flex-shrink-0 h-6 border-b border-slate-800/40 px-4 flex items-center gap-4 bg-slate-950/60">
+      {order.map(id => {
+        const p = pillars?.[id];
+        if (!p) return null;
+        const pct = p.pct_complete ?? 0;
+        const bar = PILLAR_COLORS[id] ?? "bg-slate-500";
+        const txt = PILLAR_TEXT[id] ?? "text-slate-400";
+        return (
+          <div key={id} className="flex items-center gap-1.5 min-w-[80px]">
+            <span className={`text-[8px] font-mono font-bold tracking-widest ${txt} w-[46px] truncate`}>{id}</span>
+            <div className="flex-1 h-1 rounded-full bg-slate-800 overflow-hidden w-16">
+              <div className={`h-full rounded-full transition-all duration-700 ${bar}`} style={{ width: `${pct}%` }} />
+            </div>
+            <span className="text-[8px] font-mono text-slate-600 tabular-nums w-[22px] text-right">{pct}%</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// ─── QUICK LINKS PANEL ───────────────────────────────────────────────────────
+const QLINKS = [
+  { label: "STATE.json", icon: FileJson,  href: "/api/state", desc: "Stato sistema live", ext: false },
+  { label: "API Health", icon: HeartPulse,href: "http://localhost:5001/api/health", desc: "Status Flask server", ext: true },
+  { label: "n8n",        icon: Workflow,  href: "http://localhost:5678", desc: "Workflow automation", ext: true },
+  { label: "GitHub",     icon: GitBranch, href: "https://github.com/Microindustry/TITANIUM_OS", desc: "Repository TITANIUM_OS", ext: true },
+  { label: "Daily Brief",icon: BookOpen,  href: "/api/file?path=C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\DATA\\daily_brief_last.md", desc: "Ultimo brief giornaliero", ext: false },
+];
+
+function QuickLinksPanel({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => { if (ref.current && !ref.current.contains(e.target as Node)) onClose(); };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open, onClose]);
+
+  if (!open) return null;
+  return (
+    <div ref={ref} className="absolute right-0 top-full mt-1 z-40 w-56 rounded-lg overflow-hidden"
+      style={{ border: "1px solid rgba(255,255,255,0.08)", background: "#0d0d14", boxShadow: "0 12px 32px rgba(0,0,0,0.5)" }}>
+      <div className="px-3 py-1.5 border-b border-slate-800/60">
+        <span className="text-[8px] font-mono font-bold tracking-[0.2em] uppercase text-slate-600">LINK RAPIDI</span>
+      </div>
+      {QLINKS.map(lk => {
+        const Icon = lk.icon;
+        return (
+          <a key={lk.label} href={lk.href} target="_blank" rel="noopener"
+            onClick={onClose}
+            className="flex items-center gap-2.5 px-3 py-2 text-left transition-colors hover:bg-slate-800/50 group">
+            <Icon size={11} className="text-slate-500 group-hover:text-slate-300 flex-shrink-0" />
+            <div className="flex-1 min-w-0">
+              <div className="text-[10px] font-mono text-slate-300 group-hover:text-white">{lk.label}</div>
+              <div className="text-[8px] font-mono text-slate-600 truncate">{lk.desc}</div>
+            </div>
+            {lk.ext && <ExternalLink size={8} className="text-slate-700 group-hover:text-slate-500 flex-shrink-0" />}
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 // ─── BARRA GUIDA ─────────────────────────────────────────────────────────────
 // Mostra: ruolo della vista attiva + cross-link per navigare altrove
 function GuideBar({ view, onNavigate }: { view: ViewMode; onNavigate: (v: ViewMode) => void }) {
@@ -179,6 +264,7 @@ function AppInner() {
   const view = useUIStore((s) => s.view) as ViewMode;
   const rawSetView = useUIStore((s) => s.setView);
   const [cmdOpen, setCmdOpen] = useState(false);
+  const [linksOpen, setLinksOpen] = useState(false);
 
   const setView = useCallback((v: ViewMode) => {
     prefetchForView(v);
@@ -260,6 +346,19 @@ function AppInner() {
             })}
           </div>
 
+          {/* Quick Links */}
+          <div className="relative">
+            <button
+              onClick={() => setLinksOpen(o => !o)}
+              title="Link Rapidi"
+              className={`flex items-center gap-1.5 px-2 py-1 rounded-md text-[8px] font-mono uppercase tracking-widest transition-all border ${linksOpen ? "text-sky-400 border-sky-500/30 bg-sky-900/10" : "text-slate-500 hover:text-sky-400 border-slate-800 hover:border-sky-500/30 hover:bg-sky-900/10"}`}
+            >
+              <Link2 size={9} />
+              <span className="hidden sm:inline">LINK</span>
+            </button>
+            <QuickLinksPanel open={linksOpen} onClose={() => setLinksOpen(false)} />
+          </div>
+
           {/* Ctrl+K */}
           <button
             onClick={() => setCmdOpen(true)}
@@ -281,6 +380,9 @@ function AppInner() {
           </a>
         </div>
       </header>
+
+      {/* ── PROGRESS STRIP ─────────────────────────────────── */}
+      <PillarProgressStrip pillars={sys.state?.pillars ?? {}} />
 
       {/* ── BARRA GUIDA ────────────────────────────────────── */}
       <GuideBar view={view} onNavigate={setView} />
