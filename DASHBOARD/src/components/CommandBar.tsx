@@ -24,11 +24,9 @@ interface Cmd {
   action: () => void | Promise<void>;
 }
 
-const API = "http://localhost:5001";
-
 async function callAPI(path: string, method = "POST", body?: object): Promise<{ ok: boolean; msg: string }> {
   try {
-    const r = await fetch(`${API}${path}`, {
+    const r = await fetch(path, {
       method,
       headers: { "Content-Type": "application/json" },
       body: body ? JSON.stringify(body) : undefined,

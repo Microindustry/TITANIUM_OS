@@ -552,7 +552,7 @@ function QuickActionsBar() {
   const run = async (qa: QA) => {
     setStatuses(s => ({ ...s, [qa.id]: "loading" }));
     try {
-      const r = await fetch(`http://localhost:5001${qa.endpoint}`, {
+      const r = await fetch(qa.endpoint, {
         method: qa.method || "POST",
         headers: { "Content-Type": "application/json" },
         body: qa.method === "GET" ? undefined : "{}",

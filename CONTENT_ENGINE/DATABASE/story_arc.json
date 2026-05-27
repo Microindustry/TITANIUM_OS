@@ -1,0 +1,59 @@
+{
+  "_NOTE": [
+    "Questo file e' la MEMORIA NARRATIVA del Content Engine.",
+    "Viene letto e scritto da content_trigger.py.",
+    "NON modificare a mano i capitoli — vengono generati automaticamente.",
+    "Puoi modificare a mano:",
+    "  - arco_narrativo.tensioni_aperte → aggiungi/rimuovi tensioni narrative",
+    "  - arco_narrativo.tema_centrale → se la direzione della storia cambia",
+    "  - cooldown.ore_minime → abbassa per generare piu' spesso (min consigliato: 12)",
+    "",
+    "ESEMPIO CAPITOLO GENERATO:",
+    "  {",
+    "    'numero': 1,",
+    "    'data': '2026-03-25',",
+    "    'triggers': [{'tipo': 'nuova_milestone', 'dettaglio': ['Gusset saldati']}],",
+    "    'stato_al_momento': {'active_milestone': 'Config G', pillars: {V32: 65%}},",
+    "    'riassunto': 'Config G prende forma — gusset saldati, asse Z stabile'",
+    "  }",
+    "",
+    "Il campo 'riassunto' viene usato come contesto per i capitoli successivi.",
+    "Ultimi 5 capitoli → passati al modello per continuita' narrativa."
+  ],
+  "meta": {
+    "versione": "1.1.0",
+    "creato": "2026-03-25",
+    "descrizione": "Arco narrativo evolutivo TITANIUM — memoria del Content Engine"
+  },
+  "arco_narrativo": {
+    "titolo": "Dal Titanio al Sistema",
+    "tema_centrale": "Un artigiano industriale costruisce il suo ecosistema — pezzo per pezzo, sistema per sistema",
+    "tensioni_aperte": [
+      "V32 ancora incompleta — i rinforzi Config G sono il ponte tra idea e macchina reale",
+      "MIMS esiste solo nel design — la catena V32→VULCAN→MIMS non ha ancora prodotto nulla",
+      "Il mandrino manca — senza di lui la V32 non fresa",
+      "Il Content Engine era morto — ora ha un cervello narrativo, ma non ha ancora generato nulla"
+    ],
+    "temi_toccati": [],
+    "fase_corrente": "COSTRUISCI"
+  },
+  "capitoli": [],
+  "ultimo_episodio": null,
+  "statistiche": {
+    "episodi_totali": 0,
+    "formati_generati": {
+      "linkedin": 0,
+      "podcast": 0,
+      "video": 0
+    },
+    "ultimo_trigger": null
+  },
+  "cooldown": {
+    "ultimo_trigger_ts": null,
+    "ore_minime": 24
+  },
+  "git": {
+    "last_commit_hash": null,
+    "ultimo_check": null
+  }
+}
