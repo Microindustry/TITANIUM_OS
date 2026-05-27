@@ -279,6 +279,27 @@ def rag_rebuild():
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
 
+@app.post("/api/daily-brief")
+def daily_brief():
+    """Genera il brief giornaliero da AUTOMATIONS/core/daily_brief.py."""
+    script = ROOT / "AUTOMATIONS" / "core" / "daily_brief.py"
+    if not script.exists():
+        return jsonify({"ok": False, "error": "daily_brief.py non trovato"}), 404
+    try:
+        result = subprocess.run(
+            [sys.executable, str(script)],
+            capture_output=True, text=True, timeout=120,
+            encoding="utf-8", errors="replace",
+            env={**os.environ, "PYTHONPATH": str(ROOT)},
+        )
+        if result.returncode != 0:
+            return jsonify({"ok": False, "error": result.stderr[-500:]}), 500
+        return jsonify({"ok": True, "message": "Brief generato", "output": result.stdout[-500:]})
+    except subprocess.TimeoutExpired:
+        return jsonify({"ok": False, "error": "timeout dopo 120s"}), 504
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
 @app.get("/api/health")
 def health():
     rag_dir = ROOT / "NODES" / "MENTE_RAG" / "chroma_db"

@@ -1,15 +1,16 @@
-// App.tsx | TITANIUM_OS | v5.0 | 2026-03-24
-// Shell principale — navigazione guidata con ruoli + cross-link tra viste
+// App.tsx | TITANIUM_OS | v5.1 | 2026-05-27
+// Shell principale — navigazione guidata con ruoli + CommandBar Ctrl+K
 
 import { useEffect, useState, lazy, Suspense, useCallback } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Activity, Zap, Grid3X3, GitBranch, Layers, Network, Mic, Globe,
-  ArrowRight, Compass,
+  ArrowRight, Compass, Terminal,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore } from "./stores/systemStore";
 import { CanvasLayout } from "./components/CanvasLayout";
+import { CommandBar } from "./components/CommandBar";
 
 // QueryClient singleton
 const queryClient = new QueryClient({
@@ -110,7 +111,7 @@ function Clock() {
     return () => clearInterval(id);
   }, []);
   return (
-    <span className="text-[10px] font-mono text-slate-500 tabular-nums tracking-wider">
+    <span className="text-xs font-mono text-slate-500 tabular-nums tracking-wider">
       {now.toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase()}
       <span className="text-slate-700 mx-1">|</span>
       {now.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}
@@ -142,13 +143,13 @@ function prefetchForView(view: ViewMode) {
 function GuideBar({ view, onNavigate }: { view: ViewMode; onNavigate: (v: ViewMode) => void }) {
   const nav = VIEW_NAV[view];
   return (
-    <div className="flex-shrink-0 h-7 border-b border-slate-800/40 px-4 flex items-center gap-3 bg-slate-950/80">
+    <div className="flex-shrink-0 h-8 border-b border-slate-800/40 px-4 flex items-center gap-3 bg-slate-950/80">
       {/* Ruolo vista attiva */}
-      <Compass size={9} className={nav.color} />
-      <span className={`text-[8px] font-mono font-bold uppercase tracking-widest ${nav.color}`}>
+      <Compass size={10} className={nav.color} />
+      <span className={`text-[10px] font-mono font-bold uppercase tracking-widest ${nav.color}`}>
         {nav.title}
       </span>
-      <span className="text-[8px] font-mono text-slate-500">
+      <span className="text-[10px] font-mono text-slate-400">
         {nav.role}
       </span>
 
@@ -160,9 +161,9 @@ function GuideBar({ view, onNavigate }: { view: ViewMode; onNavigate: (v: ViewMo
             <button
               key={link.to}
               onClick={() => onNavigate(link.to)}
-              className={`flex items-center gap-1 px-2 py-0.5 rounded border border-slate-800 text-[7px] font-mono uppercase tracking-wider transition-all hover:border-slate-600 ${target.color} opacity-60 hover:opacity-100`}
+              className={`flex items-center gap-1 px-2 py-0.5 rounded border border-slate-800 text-[10px] font-mono uppercase tracking-wider transition-all hover:border-slate-600 ${target.color} opacity-60 hover:opacity-100`}
             >
-              <ArrowRight size={7} />
+              <ArrowRight size={9} />
               {link.label}
             </button>
           );
@@ -177,13 +178,28 @@ function AppInner() {
   const sys = useGlobalState();
   const view = useUIStore((s) => s.view) as ViewMode;
   const rawSetView = useUIStore((s) => s.setView);
+  const [cmdOpen, setCmdOpen] = useState(false);
+
   const setView = useCallback((v: ViewMode) => {
     prefetchForView(v);
     rawSetView(v);
   }, [rawSetView]);
 
+  // Ctrl+K global keybinding
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        setCmdOpen(o => !o);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen bg-slate-950 text-slate-100 font-mono overflow-hidden">
+      <CommandBar open={cmdOpen} onClose={() => setCmdOpen(false)} onNavigate={setView} />
       {/* ── HEADER ────────────────────────────────────────── */}
       <header className="flex-shrink-0 h-11 border-b border-slate-800/60 px-4 flex items-center gap-4 bg-slate-950 relative">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
@@ -243,6 +259,17 @@ function AppInner() {
               );
             })}
           </div>
+
+          {/* Ctrl+K */}
+          <button
+            onClick={() => setCmdOpen(true)}
+            title="Command Bar (Ctrl+K)"
+            className="flex items-center gap-1.5 px-2 py-1 rounded-md text-[8px] font-mono uppercase tracking-widest transition-all text-slate-500 hover:text-emerald-400 border border-slate-800 hover:border-emerald-500/30 hover:bg-emerald-900/10"
+          >
+            <Terminal size={9} />
+            <span className="hidden sm:inline">CMD</span>
+            <kbd className="text-[7px] border border-slate-700 rounded px-0.5 text-slate-600">⌃K</kbd>
+          </button>
 
           {/* MATTEO link */}
           <a

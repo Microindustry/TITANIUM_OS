@@ -2,7 +2,7 @@
 // Canvas workspace — 8 celle operative, dati live da STATE.json
 // v3.0: rimosso FOCUS/CICLO/V32 ridondanti → COMANDO + PILASTRI azionabili + NODI LIVE
 
-import { useState, useEffect, useCallback, useRef, useMemo, useDeferredValue } from "react";
+import React, { useState, useEffect, useCallback, useRef, useMemo, useDeferredValue } from "react";
 import GridLayout, { type Layout } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
@@ -534,6 +534,62 @@ export const PILLARS_DATA = [
   { label: "IDENTITY",    pct: 20, bar: "bg-slate-500",   note: "CV + LinkedIn",                     atto: "—" },
 ];
 
+// ─── QUICK ACTIONS ────────────────────────────────────────────────────────────
+type QAStatus = "idle" | "loading" | "ok" | "err";
+interface QA { id: string; label: string; desc: string; icon: React.ElementType; color: string; endpoint: string; method?: string }
+
+const QA_ACTIONS: QA[] = [
+  { id: "scan",    label: "Scan MENTE",    desc: "Scansiona file e aggiorna digest",  icon: ScanLine,    color: "text-emerald-400 border-emerald-500/30", endpoint: "/api/scan" },
+  { id: "rag",     label: "RAG Rebuild",   desc: "Ricostruisce indice ChromaDB",       icon: RefreshCw,   color: "text-cyan-400 border-cyan-500/30",     endpoint: "/api/rag/rebuild" },
+  { id: "brief",   label: "Daily Brief",   desc: "Genera brief giornaliero",           icon: FileText,    color: "text-indigo-400 border-indigo-500/30",  endpoint: "/api/daily-brief" },
+  { id: "health",  label: "API Health",    desc: "Verifica stato server",              icon: Activity,    color: "text-slate-400 border-slate-700",       endpoint: "/api/health", method: "GET" },
+];
+
+function QuickActionsBar() {
+  const [statuses, setStatuses] = useState<Record<string, QAStatus>>({});
+  const [msgs, setMsgs] = useState<Record<string, string>>({});
+
+  const run = async (qa: QA) => {
+    setStatuses(s => ({ ...s, [qa.id]: "loading" }));
+    try {
+      const r = await fetch(`http://localhost:5001${qa.endpoint}`, {
+        method: qa.method || "POST",
+        headers: { "Content-Type": "application/json" },
+        body: qa.method === "GET" ? undefined : "{}",
+      });
+      const data = await r.json().catch(() => ({}));
+      setStatuses(s => ({ ...s, [qa.id]: r.ok ? "ok" : "err" }));
+      setMsgs(s => ({ ...s, [qa.id]: data.message || data.error || (r.ok ? "OK" : `${r.status}`) }));
+    } catch {
+      setStatuses(s => ({ ...s, [qa.id]: "err" }));
+      setMsgs(s => ({ ...s, [qa.id]: "offline" }));
+    }
+    setTimeout(() => setStatuses(s => ({ ...s, [qa.id]: "idle" })), 2500);
+  };
+
+  return (
+    <div className="flex items-center gap-1.5">
+      {QA_ACTIONS.map(qa => {
+        const Icon = qa.icon;
+        const st = statuses[qa.id] || "idle";
+        const isLoading = st === "loading";
+        const isDone = st === "ok";
+        const isErr = st === "err";
+        return (
+          <button key={qa.id} onClick={() => run(qa)} title={qa.desc} disabled={isLoading}
+            className={`qa-btn ${qa.color} bg-slate-900/60 hover:bg-slate-800 disabled:opacity-50`}
+          >
+            <Icon size={9} className={isLoading ? "animate-spin" : isDone ? "text-emerald-400" : isErr ? "text-rose-400" : ""} />
+            <span className={isDone ? "text-emerald-400" : isErr ? "text-rose-400" : ""}>
+              {isLoading ? "..." : isDone ? (msgs[qa.id] || "OK") : isErr ? (msgs[qa.id] || "ERR") : qa.label}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 // ─── CANVAS LAYOUT ───────────────────────────────────────────────────────────
 export function CanvasLayout() {
   const { state, isOnline: online } = useGlobalState();
@@ -579,7 +635,8 @@ export function CanvasLayout() {
 
   return (
     <div ref={containerRef} className="w-full h-full overflow-y-auto overflow-x-hidden px-2 pb-6">
-      <div className="flex justify-end pt-1 pb-0.5">
+      <div className="flex items-center justify-between pt-1.5 pb-1 px-1">
+        <QuickActionsBar />
         <button onClick={resetLayout} className="text-[8px] font-mono text-slate-700 hover:text-emerald-400 uppercase tracking-widest transition-colors flex items-center gap-1">
           <RotateCcw size={8} /> reset layout
         </button>

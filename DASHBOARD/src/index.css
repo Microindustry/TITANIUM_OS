@@ -59,6 +59,61 @@
   src: local('JetBrains Mono'), local('Fira Code'), local('Consolas');
 }
 
+/* ─── LEGGIBILITÀ GLOBALE — override font troppo piccoli ── */
+/* Tailwind usa classi inline con px arbitrari — normalizziamo */
+[class*="text-[7px]"]  { font-size: 10px !important; }
+[class*="text-[8px]"]  { font-size: 11px !important; }
+[class*="text-[9px]"]  { font-size: 12px !important; }
+[class*="text-[10px]"] { font-size: 13px !important; }
+/* SVG text nodes (mappa) */
+svg text { font-size: max(10px, attr(font-size)); }
+
+/* ─── BASE BODY ─────────────────────────────────────────── */
+html, body { font-size: 13px; }
+* { min-font-size: 0; } /* reset browser enforcements */
+
+/* ─── FOCUS VISIBILE ────────────────────────────────────── */
+button:focus-visible, input:focus-visible {
+  outline: 1px solid #00d47e;
+  outline-offset: 1px;
+}
+
+/* ─── COMMAND BAR ───────────────────────────────────────── */
+.cmd-overlay {
+  animation: cmdIn 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.cmd-panel {
+  animation: cmdPanelIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes cmdIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes cmdPanelIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ─── QUICK ACTION BUTTON ───────────────────────────────── */
+.qa-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: monospace;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.qa-btn:hover { filter: brightness(1.2); transform: translateY(-1px); }
+.qa-btn:active { transform: translateY(0); }
+
 /* ─── REACT-GRID-LAYOUT OVERRIDES ──────────────────────── */
 .react-grid-item.react-grid-placeholder {
   background: #00d47e !important;
