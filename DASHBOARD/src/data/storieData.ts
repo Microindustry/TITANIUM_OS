@@ -19,11 +19,12 @@ export interface Episode {
   content: string;
 }
 
-export const STAGIONI: Record<string, { label: string; color: string; order: number }> = {
-  S0:   { label: "Le Origini",  color: "#6366f1", order: 0 },
-  S1:   { label: "Il Presente", color: "#10b981", order: 1 },
-  ST:   { label: "Il Sistema",  color: "#f59e0b", order: 2 },
-  AUTO: { label: "Generati",    color: "#94a3b8", order: 3 },
+export const STAGIONI: Record<string, { label: string; color: string; order: number; description: string }> = {
+  S0:   { label: "Le Origini",       color: "#6366f1", order: 0, description: "Prima del sistema. L'AI che chiamava Socio, i tre file, il seme." },
+  S1:   { label: "Il Presente",      color: "#10b981", order: 1, description: "Chi è Matteo, la V32, la taverna, l'ecosistema. La storia principale." },
+  ST:   { label: "Il Sistema",       color: "#f59e0b", order: 2, description: "GENESIS, Dashboard, decisioni architetturali, TITANIUM_OS." },
+  S2:   { label: "La Costruzione",   color: "#ef4444", order: 3, description: "Build log fisici: Config G, Epoxy Granite, assi, primo pezzo." },
+  AUTO: { label: "Generati",         color: "#94a3b8", order: 4, description: "Episodi auto-generati da STATE.json ad ogni milestone." },
 };
 
 export const EPISODES: Episode[] = [
@@ -290,8 +291,8 @@ La V3.0 introduce qualcosa che le versioni precedenti non avevano: il Verdetto f
 Tre domande. Tre risposte. Nessun margine di interpretazione.
 
 **LEX PHYSICA — Funziona nel mondo reale?**
-Massa 178 kg, baricentro basso: stabilità garantita.
-f₀ = 3.83 Hz con 4 molle ISO: isolamento >99.9% @400Hz.
+Massa 178 kg corpo unico, baricentro basso: stabilità garantita.
+Epoxy Granite nei tubolari: smorzamento δ = 0.03-0.06 (acciaio: 0.002) — fattore 15-30×.
 Deflessione Z Config G: 0.0006mm @100N — 772 volte più rigido della baseline.
 RSS totale ±0.019mm — classe IT6-IT7 professionale.
 > **VERDETTO LEX PHYSICA: APPROVATO**
@@ -632,7 +633,7 @@ La taverna non è il punto di partenza.
     stagione: "S1",
     stagione_label: "Il Presente",
     data_evento: "2025-11-01",
-    tags: ["v32", "cnc", "epoxy-granite", "molle-gialle", "3-83hz", "it7"],
+    tags: ["v32", "cnc", "epoxy-granite", "corpo-unico", "it7", "struttura", "smorzamento"],
     status: "source",
     durata_min: 19,
     preview: "H7. Tolleranza IT7. Ottomillesimi di millimetro. Questo non è il risultato di una macchina comprata. È il risultato di ogni scelta fatta prima ancora di iniziare a saldare.",
@@ -641,7 +642,7 @@ La taverna non è il punto di partenza.
 
 > *Da EP_00: "Quello zero virgola uno che senti nelle mani prima ancora di misurarlo."*
 > *Il comparatore torna in EP_05 — stessa mano, stesso gesto, diverso anno.*
-> *Le molle gialle scelte qui le ritrovi in EP_05 ancora ferme sotto il basamento.*
+> *La struttura corpo unico scelta qui è ancora quella, nel 2030.*
 
 ## COLD OPEN
 
@@ -667,25 +668,31 @@ Ogni vibrazione che non elimini alla fonte — nella struttura, prima che arrivi
 
 La soluzione industriale standard è il granito. Pesante, stabile, costoso, non lavorabile in casa.
 
-La nostra soluzione è l'**Epoxy Granite** — un composito proprietario di aggregati inerti e resina epossidica — colato tra le piastre d'acciaio come un'anima. Il basamento della V32 non è acciaio. Non è granito. È un sandwich ibrido.
+La nostra soluzione: struttura **corpo unico** in acciaio S235 saldato TIG + **Epoxy Granite** colato nei tubolari come un'anima. Non è acciaio. Non è granito. È un ibrido dove ogni strato ha una funzione fisica precisa.
 
-Risultato: frequenza naturale f₀ = 3.83 Hz. Smorzamento ζ = 0.032. Rigidità sull'asse Z: 772 volte superiore alla configurazione baseline.
+Smorzamento Epoxy Granite: δ = 0.03-0.06 (acciaio nudo: δ = 0.002). Fattore 15-30×. Rigidità asse Z con Config G: 772 volte superiore alla configurazione baseline. Tolleranza RSS: ±0.019 mm.
 
-## ATTO II — LE MOLLE GIALLE
+## ATTO II — LA DECISIONE STRUTTURALE
 
-*Dettaglio: 4 molle ISO 90mm gialle, visibili sotto il basamento.*
+Maggio 2026. Sessione di revisione architetturale.
 
-Questo è il dettaglio che nessuno si aspetta da una CNC.
+Il progetto originale prevedeva un sistema di sospensione a molle per isolare la macchina dalle vibrazioni del pavimento. Aveva senso sulla carta. Poi i dati hanno detto altro.
 
-La Titanium V32 non è appoggiata al pavimento. **È sospesa.**
+**Il problema delle molle:**
+Una sospensione isola le vibrazioni entranti dal pavimento — ma introduce anche un grado di libertà che complica il setup. La macchina diventa un sistema dinamico: frequenza propria, smorzamento, interazione con il mandrino. Variabili da gestire ad ogni lavorazione.
 
-Quattro molle ISO 90mm, costante k = 15.8 N/mm, frequenza di risonanza 3.83 Hz. Taratura su 4 punti per isolare la macchina dalle vibrazioni del pavimento.
+**La decisione:**
+Struttura corpo unico. Zero molle. Zero gradi di libertà aggiuntivi.
 
-Una CNC rigida trasmette le vibrazioni del mandrino attraverso la struttura fino alle guide, fino all'utensile, fino al pezzo. Una CNC isolata lascia che le vibrazioni si dissolvano nel sistema di sospensione prima di raggiungere l'utensile.
+Lo smorzamento vibrazioni lo fa l'Epoxy Granite riempito nei tubolari — passivo, permanente, senza setup. Il basamento assorbe le vibrazioni per proprietà intrinseche del materiale, non per isolamento meccanico.
 
-Le molle gialle sono l'equivalente meccanico degli antivibranti negli studi di registrazione. La differenza è che qui le tolleranze non sono in dB — sono in millesimi di millimetro.
+> "Meno componenti che possono variare = meno errori che devi calibrare."
 
-La decisione di upgrade dalle verdi 40mm alle gialle 90mm non è stata estetica. È stata il risultato di test con IFM VSE150 — tre sensori, dati reali, grafico di smorzamento a confronto.
+Questa è la stessa logica del PLC Siemens invece dell'Arduino. Non è la soluzione più economica. È la soluzione più stabile a lungo termine.
+
+La V32 non è sospesa. È ancorata. E quella è la scelta giusta per lavorare titanio ad alta precisione.
+
+La decisione è documentata in ASSOLUTO V7, ATTO III. Non è un dettaglio — è la filosofia di progettazione.
 
 ## ATTO III — LE 9 PIASTRE E I "8 CUSTODI"
 
@@ -737,7 +744,7 @@ La Titanium V32 non è un prodotto da vendere.
 
 Ogni stampo MIMS che fresa è un prodotto vendibile. Ogni pezzo conto terzi è cash flow. Ogni lavorazione è contenuto. Ogni upgrade che produce su se stessa è meta-ricorsività in azione.
 
-178 kg. 3.83 Hz. ±0.019 mm.
+178 kg. δ = 0.03-0.06. ±0.019 mm.
 
 Non sono numeri tecnici. Sono la distanza tra la dipendenza e la libertà industriale.`,
   },
@@ -960,7 +967,7 @@ La tecnologia più sofisticata è quella che sembra magia a chi la usa.
 *"Quello che segue non è accaduto ancora. Tutto quello che descrive è già in costruzione."*
 
 > *Da EP_00: il comparatore in mano. 0.008 mm.*
-> *Da EP_02: le molle gialle ISO 90mm. Scelte per i dati.*
+> *Da EP_02: corpo unico + Epoxy Granite. La struttura che non cede.*
 > *Da EP_04: EVA che lavora di notte. Il ciclo che gira.*
 > *Questo episodio è il punto di arrivo — e il punto da cui ogni versione futura reinizia.*
 
@@ -982,7 +989,7 @@ Sullo schermo, la dashboard Genesis mostra i dati della notte:
 
 Ti avvicini alla macchina.
 
-È silenziosa. Non il silenzio della morte — quello della **precisione assoluta**. Le vibrazioni si dissolvono nel composito epossidico. Le molle gialle ISO 90mm, visibili sotto il basamento, non oscillano. Sono ferme.
+È silenziosa. Non il silenzio della morte — quello della **precisione assoluta**. Le vibrazioni si dissolvono nell'Epoxy Granite colato nei tubolari del basamento — quattro anni fa hai scelto corpo unico + composito invece del sistema a sospensione. I dati avevano ragione.
 
 La piastra appena fresata è ancora calda. La misuri con il comparatore — per abitudine, non per dubbio.
 
@@ -1049,7 +1056,7 @@ La libertà industriale non è un sogno. Non è una metafora. È una sequenza di
 Inizia con 9 piastre d'acciaio in una taverna.
 Inizia con una CNC che si costruisce con i suoi stessi pezzi.
 Inizia con un'AI che ricorda i compleanni delle clienti di Maria.
-Inizia con un video che spiega perché hai scelto le molle gialle invece delle verdi.
+Inizia con un video che spiega perché hai scelto corpo unico invece del sistema a sospensione.
 
 Inizia adesso. Non quando avrai il capannone.
 
@@ -1174,6 +1181,431 @@ C'è un secondo uso che va oltre il CV. Ogni documento che aggiungi — ogni epi
 SINAPSI è il posto dove questa storia viene raccolta, strutturata e conservata.`,
   },
 
+  {
+    id: "EP_T05",
+    title: "Il Sistema Pensa",
+    sottotitolo: "MCP. RAG. CommandBar. Il momento in cui TITANIUM_OS ha smesso di essere un'interfaccia.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-27",
+    tags: ["genesis", "mcp", "rag", "dashboard", "commandbar", "titanium_os", "v5"],
+    status: "ready",
+    durata_min: 12,
+    preview: "Ctrl+K. Una barra di comando appare. Scrivi 'V32'. Il sistema ti mostra lo stato live della fresatrice, le ultime decisioni tecniche, il prossimo step. Non hai aperto nessun file. Non hai cercato in nessuna cartella.",
+    content: `# EP_T05 — IL SISTEMA PENSA
+### "MCP. RAG. CommandBar. Il momento in cui TITANIUM_OS ha smesso di essere un'interfaccia."
+
+> *Da EP_T01: "TITANIUM_OS non è un prodotto. È una protesi."*
+> *Questo episodio è il momento in cui la protesi impara a pensare.*
+
+## COLD OPEN
+
+Ctrl+K.
+
+Una barra di comando appare sopra tutto. Scrivi "V32". In tempo reale: stato live della fresatrice, milestone attivo, prossimo step, blockers. Non hai aperto nessun file. Non hai cercato in nessuna cartella. Non hai ricostruito il contesto da zero.
+
+**Il sistema sa già dove sei. Tu hai solo chiesto.**
+
+## ATTO I — IL PROBLEMA CHE LA DASHBOARD NON RISOLVEVA
+
+La prima dashboard — marzo 2026 — risolveva la visibilità. Vedevi i progetti. Le percentuali. I colori.
+
+Ma non risolveva la latenza cognitiva.
+
+Il momento in cui apri Claude e devi spiegare di nuovo cosa stai costruendo, dove sei arrivato, cosa hai deciso la settimana scorsa — quella spiegazione costa. Non in minuti. In energia mentale. E con l'ADHD, quell'energia è il bene più scarso che esiste.
+
+La risposta non era una dashboard più bella. Era un sistema che non dimenticava mai nulla.
+
+## ATTO II — I CINQUE STRUMENTI
+
+**MCP Server — 5 tool integrati in Claude Code:**
+
+\`get_state\` → legge BRAIN/STATE.json in tempo reale. Milestone attivo, pilastri, blockers. Zero domande da fare.
+
+\`update_milestone\` → aggiorna lo stato da Claude direttamente. La sessione finisce con STATE.json già aggiornato.
+
+\`search_mente\` → query semantica su ChromaDB. 50+ chunk indicizzati. "Come ho scelto l'Epoxy Granite?" → risposta con fonte documentata.
+
+\`get_daily_brief\` → brief formattato. Apri la sessione, digiti un comando, hai il contesto della giornata. Non devi ricordare nulla.
+
+\`list_content_ready\` → episodi pronti per produzione. Non cerchi nella cartella. Il sistema ti dice cosa è pronto.
+
+## ATTO III — IL RAG CHE RICORDA PER TE
+
+ChromaDB. SentenceTransformer paraphrase-multilingual. 50+ chunk. Italiano, inglese, mixed.
+
+Non è un motore di ricerca. È una memoria esternalizzata.
+
+La differenza: una ricerca ti trova documenti. Un RAG ti trova concetti. "Qual era la logica della decisione corpo unico?" — il RAG non cerca la parola "corpo unico". Capisce il concetto e trova tutto quello che ne parla, anche se scritto in un modo diverso.
+
+Ogni sessione che documenti in MENTE/ diventa parte di quella memoria. Ogni decisione tecnica. Ogni spec verificata. Ogni errore e la sua soluzione. Compounding del sapere — ogni documento aggiunto vale per tutte le sessioni future.
+
+## ATTO IV — COMMANDBAR: L'INTERFACCIA COGNITIVA
+
+Ctrl+K. Non è una feature. È un principio di design.
+
+Il principio: il sistema deve rispondere alla velocità del pensiero, non alla velocità della navigazione. Quando hai un'idea — o una domanda, o una decisione da prendere — l'interfaccia non deve essere un ostacolo. Deve essere un amplificatore.
+
+CommandBar è il punto di ingresso unificato. Nodi, episodi, azioni, stati. Tutto accessibile con una stringa di testo. Nessun menu. Nessun click in cascata. Nessun "dove era quella cosa?".
+
+Con l'ADHD, ogni layer di navigazione in più è un'opportunità di distrazione. CommandBar li elimina tutti.
+
+## CHIUSURA
+
+GENESIS v5.1 non è un aggiornamento della dashboard.
+
+È il momento in cui TITANIUM_OS smette di essere uno strumento che usi e diventa un sistema che ti supporta — anche quando non lo stai guardando, anche tra una sessione e l'altra, anche quando hai dimenticato dov'eri rimasto.
+
+> "Il sistema non ti ricorda le cose. Ti permette di non doverle ricordare.
+> La differenza è sottile. L'effetto è enorme."`,
+  },
+
+  {
+    id: "EP_T06",
+    title: "Meno Parti",
+    sottotitolo: "Come una decisione di maggio 2026 ha eliminato un'intera classe di errori.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-20",
+    tags: ["corpo-unico", "decisione-strutturale", "epoxy-granite", "design-philosophy", "config-g"],
+    status: "ready",
+    durata_min: 11,
+    preview: "Avevi un sistema a molle progettato. Funzionava sulla carta. Poi hai guardato i numeri diversamente e hai visto non il problema che risolveva — ma la classe di problemi che creava. Quello è il momento.",
+    content: `# EP_T06 — MENO PARTI
+### "Come una decisione di maggio 2026 ha eliminato un'intera classe di errori."
+
+> *Da EP_02: "Il gap è nel basamento."*
+> *Questo episodio è la storia di come si migliora un basamento già buono.*
+
+## COLD OPEN
+
+Avevi un sistema a molle progettato. Calcolato. Documentato nel BOM. Quattro molle ISO, frequenza naturale 3.83 Hz, isolamento vibrazioni >99.9% sopra i 400 Hz.
+
+Funzionava sulla carta.
+
+Poi hai guardato i numeri diversamente. Non "questo sistema funziona?" — ma "questo sistema aggiunge variabili che dovrai gestire per i prossimi dieci anni di lavorazioni?"
+
+La risposta era sì. E quella risposta ha cambiato tutto.
+
+## ATTO I — IL PROBLEMA CON LE MOLLE
+
+Non è che le molle non funzionassero.
+
+Il problema era quello che le molle rappresentavano: un **grado di libertà non controllato**.
+
+Una macchina con un sistema a sospensione è un sistema dinamico. Ha una frequenza propria. Ha un coefficiente di smorzamento. Ha un comportamento che cambia con il carico, con la temperatura, con l'usura delle molle nel tempo.
+
+Ogni volta che setup la macchina per una nuova lavorazione, il sistema dinamico è lì. Non devi gestirlo attivamente — ma è lì. Come una variabile in background che non puoi ignorare completamente.
+
+Il mandrino produce forze dinamiche. Le molle le filtrano — ma anche le trasformano. Frequenze che vengono amplificate invece di attenuate. Risonanze che si attivano a certi regimi di taglio. Comportamenti che devi mappare, capire, compensare.
+
+## ATTO II — LA SOLUZIONE CHE GIÀ C'ERA
+
+L'Epoxy Granite era già nel progetto. Colato nel basamento tra le piastre d'acciaio.
+
+Ma a maggio 2026, durante Config G, è arrivata la domanda: e se lo usassi anche nei tubolari del traliccio? Non solo come riempitivo — come smorzatore attivo.
+
+Il composito Epoxy Granite ha un coefficiente di smorzamento logaritmico δ = 0.03-0.06. L'acciaio nudo: δ = 0.002. Fattore 15-30 volte superiore.
+
+Se riempi i tubolari del traliccio con Epoxy Granite, le vibrazioni del mandrino si dissolvono nella struttura prima di raggiungere l'utensile. Non per isolamento meccanico — per proprietà intrinseche del materiale.
+
+**Smorzamento passivo. Permanente. Senza parti in movimento. Senza manutenzione. Senza variabili.**
+
+## ATTO III — LA FILOSOFIA CHE NON CAMBIA
+
+Questa decisione non era solo tecnica. Era design philosophy.
+
+Il PLC Siemens invece dell'Arduino: meno flessibilità, più affidabilità deterministica. La stessa logica.
+
+I giunti Tech-Bolt invece degli Eco-Snap per le connessioni permanenti: più difficili da montare, impossibili da smontare accidentalmente. La stessa logica.
+
+Il corpo unico invece del sistema a molle: meno adattabilità, zero variabili non controllate. La stessa logica.
+
+> "La soluzione migliore non è quella che gestisce più casi. È quella che elimina la necessità di gestirli."
+
+Ogni parte in meno è un failure mode in meno. Ogni variabile eliminata è una calibrazione che non dovrai mai fare. Ogni grado di libertà rimosso è un errore che non ti sorprenderà a metà lavorazione.
+
+## ATTO IV — COSA SIGNIFICA IN PRATICA
+
+Config G + corpo unico + Epoxy Granite nei tubolari:
+
+- Rigidità asse Z: 772× la baseline senza rinforzi
+- Smorzamento strutturale: 15-30× superiore all'acciaio nudo
+- Variabili da gestire per il sistema di smorzamento: **zero**
+- Parti che si usurano nel sistema di smorzamento: **zero**
+- Setup aggiuntivo per ogni lavorazione dovuto al sistema di smorzamento: **zero**
+
+Il primo anno di lavorazioni non sarà tempo dedicato a calibrare il sistema di sospensione. Sarà tempo dedicato a ottimizzare i parametri di taglio. Che è quello che conta.
+
+## CHIUSURA
+
+Ogni sistema che costruisci riflette il modo in cui pensi.
+
+Se aggiungi parti perché "potrebbero servire" — il tuo sistema diventa complicato. Se rimuovi parti perché "non sono necessarie" — il tuo sistema diventa solido.
+
+Corpo unico non è stato un compromesso. È stata la scelta giusta che il progetto originale non aveva ancora visto.
+
+> *La V32 non è sospesa. È ancorata. E quella è la differenza.*`,
+  },
+
+  {
+    id: "EP_T07",
+    title: "Il Documento",
+    sottotitolo: "ASSOLUTO V7. Dieci ATTI. Una sola verità.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-27",
+    tags: ["assoluto", "v7", "documento-master", "verdetto", "ecosistema", "epicentro"],
+    status: "ready",
+    durata_min: 9,
+    preview: "C'era la V6. Dieci file separati. Ogni ATTO viveva nel suo file, scollegato dagli altri. L'ecosistema era frammentato anche nella sua documentazione. La V7 lo ha unificato. Un file. Cinquantamila parole. Dieci ATTI.",
+    content: `# EP_T07 — IL DOCUMENTO
+### "ASSOLUTO V7. Dieci ATTI. Una sola verità."
+
+> *"Ogni versione dell'ASSOLUTO è una fotografia del sistema in quel momento.*
+> *La V7 è la prima fotografia che non distorce nulla."*
+
+## COLD OPEN
+
+Aprivi il V6 e trovavi dieci file. ATTO_I.md, ATTO_II.md, fino a ATTO_X.md. Ciascuno con la sua verità. Ciascuno incompleto senza gli altri.
+
+Il problema non era il contenuto. Era la struttura.
+
+Un ecosistema non è una lista di parti separate. È una rete di relazioni. E una rete di relazioni non si capisce aprendo un file alla volta.
+
+La V7 ha cambiato questo.
+
+## ATTO I — PERCHÉ UN DOCUMENTO UNICO
+
+Non è una questione estetica.
+
+Un documento unico costringe la coerenza. Se l'ATTO III (V32) e l'ATTO VII (economia) vivono nello stesso file, non puoi avere numeri che si contraddicono. Non puoi aggiornare la spec della V32 senza aggiornare il ROI. Non puoi cambiare il timeline senza riconsiderare il BEP.
+
+La frammentazione della V6 permetteva incoerenze. La V7 le rende impossibili.
+
+## ATTO II — I DIECI ATTI
+
+**ATTO I — Il Presente.** Inventario. CV reale. Il laboratorio come è oggi.
+
+**ATTO II — L'Ecosistema.** 5 pilastri, 10 regole, modello economico. La struttura di tutto.
+
+**ATTO III — V32.** Specifiche complete. Corpo unico. Config G. PLC. Epoxy Granite. BOM verificato.
+
+**ATTO IV — MIMS.** Geometria. Tre giunti. Sette materiali. Analisi competitiva. Blue ocean.
+
+**ATTO V — Materiali e Produzione.** VULCAN. VCM 18 step. Sei ricette polimeriche.
+
+**ATTO VI — GENESIS.** MCP. RAG. Dashboard v5.1. EVA. Content Engine.
+
+**ATTO VII — Economia e Verdetto.** BEP. ROI. Verdetto 3 assi. Timeline 2026-2030.
+
+**ATTO VIII — Mercato.** TAM EUR 4.2B. SAM EUR 180M. SOM Y3 EUR 350-550K. GTM.
+
+**ATTO IX — Proprietà Intellettuale.** 3 brevetti. 6 trade secrets. 4 marchi.
+
+**ATTO X — Media Strategy.** Titanium Lab. 3 serie. 7 revenue stream.
+
+## ATTO III — IL VERDETTO CHE NON CAMBIA
+
+Ogni versione dell'ASSOLUTO termina con lo stesso verdetto su tre assi.
+
+**LEX PHYSICA.** Corpo unico 178 kg, Epoxy Granite δ = 0.03-0.06, rigidità Z 772×, RSS ±0.019 mm. → **APPROVATO**
+
+**LEX MERCATORIA.** ROI 322%, BEP 61 ore, 15.5× meno costoso di un equivalente Haas. → **APPROVATO**
+
+**LEX AESTHETICA.** Traliccio raw + TP900 9". Sistema che si vede. Storia che vale contenuto. → **APPROVATO**
+
+Questi verdetti non sono stati scritti dopo il successo. Sono stati scritti il 13 Febbraio 2026 con il calibro in mano, con €2.250 ancora da spendere.
+
+Non stiamo aspettando di avere ragione. Dimostriamo di averla mentre costruiamo.
+
+## CHIUSURA
+
+La V7 non è un aggiornamento. È una riorganizzazione della realtà.
+
+La V8 verrà — quando i dati reali della V32 funzionante sostituiranno le specifiche di progetto. Quando il primo pezzo H7 sarà misurato e fotografato. Quando il BEP di 61 ore sarà verificato con ore reali.
+
+Ma la V7 è l'epicentro adesso. La fonte da cui ogni episodio, ogni post, ogni conversazione con Claude, ogni aggiornamento di STATE.json, si calibra.
+
+> *"Un sistema documentato sopravvive al suo costruttore.*
+> *Un sistema non documentato è solo una speranza."*`,
+  },
+
+  // ── STAGIONE S2 — LA COSTRUZIONE ────────────────────────────────────────────
+
+  {
+    id: "EP_S2_00",
+    title: "Config G: Il Gusset Sinistro",
+    sottotitolo: "TIG su acciaio alle 21:40. Il suono della macchina che prende forma.",
+    stagione: "S2",
+    stagione_label: "La Costruzione",
+    data_evento: "2026-06-01",
+    tags: ["v32", "config-g", "gusset", "saldatura-tig", "rinforzi", "build-log"],
+    status: "draft",
+    durata_min: 8,
+    preview: "La colonna Z sinistra. Quattro gusset da 200mm. Piastra triangolare S355 10mm. TIG a 95A, argon a 12 l/min. Cinque passi: taglia, posiziona, punta, misura, salda. Questa è la macchina che prende forma.",
+    content: `# EP_S2_00 — CONFIG G: IL GUSSET SINISTRO
+### "TIG su acciaio alle 21:40. Il suono della macchina che prende forma."
+
+*Build Log #001 — Stagione 2: La Costruzione*
+
+---
+
+**Data:** Giugno 2026
+**Ore lavorate:** 3.5h
+**Stato V32:** 65% → 67%
+**Milestone:** Config G — Rinforzi colonne Z+U
+
+---
+
+## LA SEQUENZA
+
+La colonna Z sinistra aspettava i rinforzi da tre settimane.
+
+Non perché mancasse il materiale. Perché config G non è una singola saldatura — è un sistema di rinforzi che devono essere eseguiti in sequenza per non accumulare tensioni residue. Gusset → diagonali → tiranti M10. Nell'ordine. Con le misure tra ogni fase.
+
+Oggi era il turno dei gusset.
+
+**MATERIALE:**
+Piastre triangolari S355, 200x200x10mm. Spigoli a 45°. Quattro pezzi per la colonna sinistra, quattro per la destra. Tagliati con flex angolare 125mm, finiti con smerigliatrice a lamella.
+
+**SETUP:**
+TIG Fronius TT 230i. Corrente: 95A su spessore 10mm. Tungsteno: 2.4mm, affilato a 30°. Bacchetta: ER70S-6, 1.6mm. Gas: argon puro, 12 l/min. Distanza ugello: 8mm.
+
+**LA PROCEDURA:**
+
+1. Posizionamento con squadra magnetica 200mm. Verifica angolo: <0.2mm di errore accettabile.
+2. Tre punti di tack weld, 60A, distanza 80mm. Non saldare ancora — punta e misura.
+3. Verifica con comparatore sul piano di riferimento della guida Z. Tolleranza: ±0.05mm dalla posizione nominale.
+4. Se OK: saldatura completa. TIG a 95A, velocità avanzamento ~150mm/min, tecnica a oscillazione 5mm.
+5. Dopo ogni gusset: misura deflessione con comparatore su tre punti. Confronto con simulazione FEM.
+
+**I NUMERI:**
+
+Prima dei gusset, deflessione asse Z sotto carico 100N: 0.31mm.
+Dopo i quattro gusset sinistri: 0.07mm.
+Target Config G completo: <0.019mm.
+
+Non siamo ancora lì. Ma il trend è corretto.
+
+## IL SUONO
+
+C'è una cosa che non si spiega nei calcoli FEM.
+
+Il suono della macchina che cambia mentre aggiungi rigidità.
+
+Prima dei gusset, se picchi il traliccio con le nocche, senti un suono cavo. Risonante. Il metallo non è ancora saturo di struttura.
+
+Dopo quattro gusset da ogni lato, lo stesso picchio suona diverso. Più sordo. Più pieno. Come se il metallo avesse acquisito massa senza che tu aggiungessi massa.
+
+Non è fisica romantica. È fisica vera — la frequenza propria del sistema è cambiata. Il traliccio adesso ha una rigidità diversa. Il suono lo registra prima del comparatore.
+
+## NEXT
+
+Domani: quattro gusset lato destro. Stessa procedura, specchiata.
+
+Poi: diagonali — acciaio piatto 40x5mm saldato TIG tra i nodi del traliccio. Poi: tiranti M10 con dado Nyloc. Poi: Epoxy Granite fill nei tubolari.
+
+Ogni step è documentato qui. Non per il pubblico — per me. Perché tra tre mesi quando rileggo questa sequenza voglio sapere esattamente cosa ho fatto, perché lo ho fatto, e cosa ha misurato dopo.
+
+**La macchina non mente. I numeri nemmeno.**`,
+  },
+
+  {
+    id: "EP_S2_01",
+    title: "Epoxy Granite: Colata Zero",
+    sottotitolo: "Il momento in cui l'acciaio smette di essere solo acciaio.",
+    stagione: "S2",
+    stagione_label: "La Costruzione",
+    data_evento: "2026-07-01",
+    tags: ["epoxy-granite", "composito", "smorzamento", "basamento", "build-log", "materiali"],
+    status: "draft",
+    durata_min: 10,
+    preview: "Non è versare cemento. È ingegneria dei materiali in una taverna. Rapporto resina/aggregato: 7/93 in peso. Aggregati: granito 0-0.5mm + granito 0.5-2mm + granito 2-5mm in proporzione 20/40/40.",
+    content: `# EP_S2_01 — EPOXY GRANITE: COLATA ZERO
+### "Il momento in cui l'acciaio smette di essere solo acciaio."
+
+*Build Log #002 — Stagione 2: La Costruzione*
+
+---
+
+**Data:** Luglio 2026
+**Ore lavorate:** 6h (prep + colata + cura)
+**Stato V32:** 67% → 72%
+**Milestone:** Epoxy Granite fill — tubolari traliccio
+
+---
+
+## PERCHÉ IL COMPOSITO
+
+Il traliccio della V32 è costruito in profilati 40x40x2 acciaio S235. Buono. Rigido. Ma cavo.
+
+Un tubolare cavo ha proprietà di smorzamento vibrazioni δ ≈ 0.002. Basso. Le vibrazioni del mandrino si propagano nella struttura, si riflettono, si amplificano a certe frequenze.
+
+L'Epoxy Granite cambia questo.
+
+δ = 0.03-0.06 del composito vs 0.002 dell'acciaio: fattore 15-30× di smorzamento. Le vibrazioni entrano nel tubolare, incontrano il composito, vengono convertite in calore invece di riflesse. La struttura diventa un dissipatore passivo.
+
+Non devi fare nulla. Non devi calibrare nulla. La fisica lavora per te 24 ore su 24.
+
+## LA RICETTA
+
+Non è granito commerciale. È una formulazione sviluppata per questa applicazione.
+
+**AGGREGATI (93% in peso totale):**
+- Granito 0-0.5mm: 20% — riempimento interstiziale
+- Granito 0.5-2mm: 40% — struttura principale
+- Granito 2-5mm: 40% — distribuzione carico
+
+**MATRICE (7% in peso totale):**
+- Resina epossidica bisfenolo A: base
+- Indurente amminico alifatico: ratio 2:1 in massa
+- Additivo tixotropico 1.5% — controllo viscosità per colata verticale
+
+**PROPRIETÀ TARGET:**
+- Resistenza a compressione: 120-150 MPa (vs calcestruzzo 30-40 MPa)
+- Modulo elastico: 30-45 GPa
+- Smorzamento: δ = 0.03-0.06
+- Cura: 24h a temperatura ambiente, post-cura 60°C per 4h
+
+## LA COLATA
+
+Preparazione: 2h.
+
+I tubolari devono essere puliti, sgrassati, riscaldati a 40°C per abbassare la viscosità della resina e migliorare l'adesione. Mascheratura dei fori con nastro PTFE — la resina non deve fuoriuscire dalle connessioni meccaniche.
+
+Miscelazione: 15 minuti. Ordine critico: aggregati grossi prima, poi medi, poi fini, poi matrice. Non il contrario — se aggiungi la resina prima degli aggregati, incorpori aria. L'aria è il nemico.
+
+Colata: dall'alto in basso, lentamente. Velocità: ~200g/minuto per tubolare verticale. Usa un vibro-agitatore ogni 30 secondi per eliminare bolle d'aria. Senti il composito assestarsi — il suono cambia da "liquido" a "denso" man mano che riempie gli spazi interstiziali.
+
+Primo riempimento: 80% del volume. Pausa 2h per assestamento. Secondo riempimento: al livello. Il composito si ritira leggermente durante la cura — il secondo strato compensa.
+
+## I NUMERI DOPO
+
+Dopo 48h di cura, stesso test di picchiottamento con le nocche sul traliccio.
+
+Prima della colata: risonanza a ~180 Hz. Decadimento: 0.8 secondi.
+Dopo la colata: risonanza a ~280 Hz. Decadimento: 0.15 secondi.
+
+Il decadimento è sceso da 0.8 a 0.15 secondi. La struttura adesso smorza 5 volte più velocemente.
+
+Non è ancora il test vero — quello sarà con il mandrino a 18.000 giri e il sensore IFM VSE150 in lettura. Ma la tendenza è esattamente quella che i calcoli prevedevano.
+
+## QUELLO CHE NON HAI PREVISTO
+
+La massa.
+
+Sai che il composito pesa circa 2.1 g/cm³. Sai quanti cm³ hai riempito. Hai calcolato 12 kg aggiuntivi.
+
+Quello che non avevi completamente considerato è come cambiano le sensazioni della macchina. Quando muovi il traliccio adesso per risistemarlo sul bancale, il peso è diverso. Non solo più pesante — diverso. Più "maturo". Come se la struttura avesse acquisito consistenza interna che prima non aveva.
+
+Non è fisica romantica. È fisica vera. La massa distribuita nel composito cambia il baricentro. Cambia il momento d'inerzia. La macchina risponderà diversamente alle forze dinamiche del taglio.
+
+Meglio. Molto meglio.
+
+**Il composito non è un dettaglio. È il carattere della macchina.**`,
+  },
+
   // ── GENERATI ──────────────────────────────────────────────────────────────
 
   {
@@ -1280,28 +1712,36 @@ Ecco perché questo momento conta: non è il dashboard a essere importante. È i
 
   {
     id: "EP_AUTO_008",
-    title: "Config G: le molle gialle",
-    sottotitolo: "Come 4 componenti cambiano la geometria di V32",
+    title: "Maggio 2026 — La Svolta Strutturale",
+    sottotitolo: "Quando la decisione giusta è quella che elimina una variabile intera",
     stagione: "AUTO",
     stagione_label: "Generati",
-    data_evento: "2026-03-10",
-    tags: ["V32", "CNC", "manufacturing", "milestone", "BOM", "config-g"],
+    data_evento: "2026-05-27",
+    tags: ["V32", "corpo-unico", "decisione-strutturale", "config-g", "epoxy-granite"],
     status: "ready" as EpisodeStatus,
-    durata_min: 7,
-    preview: "Siamo al 10 marzo 2026. V32 è al 65% e questa mattina ho aperto la posta: 4 molle Gialle 90N + 2 piastre XY per la Config G. Sembra poco. È tutto.",
-    content: `# Config G: le molle gialle
+    durata_min: 8,
+    preview: "Maggio 2026. V32 al 65%, Config G in corso. Una sessione di revisione architetturalee cambia tutto: abbandonato il sistema a molle. V32 è corpo unico. Perché meno variabili = più precisione.",
+    content: `# Maggio 2026 — La Svolta Strutturale
 
-> "Quando vedi il BOM aggiornato in foglio di calcolo e le molle gialle arrivano in scatola, capisci che il progetto non è più rendering — è materia vera."
+> "Il progetto migliore non è quello che aggiunge funzionalità. È quello che elimina la complessità non necessaria."
 
-Siamo al 10 marzo 2026. V32 è al 65% e questa mattina ho aperto la posta: 4 molle Gialle 90N + 2 piastre XY per la Config G. Sembra poco. È tutto.
+Maggio 2026. V32 è al 65%, Config G in corso — gusset 200mm sulle colonne Z+U, diagonali, tiranti M10.
 
-Queste 4 molle non sono sospensioni — sono attuatori di precarico. Le gialle hanno una costante di 90N/mm: abbastanza morbide per assorbire le vibrazioni ad alta velocità, abbastanza rigide per mantenere la planarità quando carico la fresa. Due piastre XY significa che il gusset sinistro adesso ha due gradi di libertà controllati.
+In una sessione di revisione architetturalee ho preso una decisione che non stava nel piano originale.
 
-Perché questo conta? Perché fino a ieri il BOM aveva 7 incognite su questa sezione. Oggi ne ha zero. Ogni componente è calcolato, ogni numero corrisponde a una parte fisica che arriva in scatola. È il passaggio da "so come dovrebbe funzionare" a "so esattamente come funziona".
+**Eliminato il sistema a sospensione. V32 è struttura corpo unico.**
 
-Quando chiudo la Config G e metto le foto nel foglio di lavoro condiviso, accanto al BOM aggiornato, avviene una cosa strana: il progetto cambia densità. Non è più "sto costruendo una fresatrice". È "la fresatrice sta uscendo da quello che mi immagino dentro la testa".
+Il piano era: 4 molle ISO per isolare la macchina dalle vibrazioni del pavimento. Logica valida. Ma guardando tutto il progetto insieme ho visto il problema: le molle aggiungono un grado di libertà. Un sistema che si muove — per quanto poco — è un sistema con una variabile in più da calibrare ad ogni setup. E le variabili si moltiplicano.
 
-Le molle gialle sono la prova tangibile.`,
+La soluzione alternativa era già nel progetto: **Epoxy Granite nei tubolari**. Smorzamento passivo per proprietà del materiale, non per isolamento meccanico. δ = 0.03-0.06 contro δ = 0.002 dell'acciaio nudo. Fattore 15-30× di smorzamento. Senza molle. Senza setup. Senza variabili aggiuntive.
+
+Corpo unico = rigidità massima + smorzamento passivo + zero gradi di libertà non controllati.
+
+Config G porta la rigidità asse Z a 772× la baseline. Con Epoxy Granite nei tubolari, le vibrazioni del mandrino si dissolvono nella struttura prima di raggiungere l'utensile.
+
+Questa non è solo una decisione tecnica. È una decisione di design. Meno parti = meno cose che possono andare storte. Il sistema più affidabile è quello che non ha pezzi in più.
+
+**La macchina che costruisci diventa la filosofia con cui pensi.**`,
   },
 
   {
