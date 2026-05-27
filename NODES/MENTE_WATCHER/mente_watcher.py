@@ -1,5 +1,5 @@
-# mente_watcher.py | TITANIUM_OS / NODES / MENTE_WATCHER | v1.0 | 2026-03-11
-# Guarda C:\Users\Matteo\Desktop\LA MIA MENTE\ in background
+# mente_watcher.py | TITANIUM_OS / NODES / MENTE_WATCHER | v1.2 | 2026-05-27
+# Guarda MICROINDUSTRY\MENTE\ in background (path dinamico via Path.home())
 # Quando un file cambia -> chiama POST /api/scan (api_server:5001)
 # Output: aggiorna DATA/mente_digest.json automaticamente
 # Avvio: incluso in START_ECOSYSTEM.bat
@@ -15,7 +15,8 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 # ── CONFIG ────────────────────────────────────────────────────
-MENTE_DIR   = Path(r"C:\Users\Matteo\Desktop\LA MIA MENTE")
+import os
+MENTE_DIR   = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 API_SCAN    = "http://localhost:5001/api/scan"
 DEBOUNCE_S  = 8.0   # secondi di quiete prima di scansionare
 LOG_PATH    = Path(__file__).resolve().parents[2] / "VERSIONS" / "mente_watcher.log"

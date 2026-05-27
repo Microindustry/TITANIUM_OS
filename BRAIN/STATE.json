@@ -6,12 +6,12 @@
     "description": "Stato live ECOSYSTEM_OS — basato su ASSOLUTO V6.0",
     "system": "GENESIS OS — ecosystem v1.0"
   },
-  "last_update": "2026-03-10T21:21:16.118809",
+  "last_update": "2026-05-27T11:10:00.000000",
   "active_milestone": "Config G — Rinforzi colonne Z+U",
   "ciclo_position": "COSTRUISCI",
-  "last_action": "Modifica a api_server.py",
+  "last_action": "MCP server + RAG v3.0 + daily_brief operativi — stack GENESIS completo",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
-  "session_count": 3,
+  "session_count": 4,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -69,7 +69,10 @@
   ],
   "ideas_inbox": 0,
   "nodes": {
-    "MENTE_SCANNER": "ATTIVO — python NODES/MENTE_SCANNER/scanner.py (818 estrazioni)",
+    "MENTE_SCANNER": "ATTIVO — python NODES/MENTE_SCANNER/scanner.py → MICROINDUSTRY/MENTE/",
+    "MENTE_RAG": "ATTIVO — ChromaDB + SentenceTransformer (11 chunk, paraphrase-multilingual-MiniLM-L12-v2)",
+    "MCP_SERVER": "ATTIVO — MCP/titanium_mcp_server.py (5 tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready)",
+    "DAILY_BRIEF": "ATTIVO — AUTOMATIONS/core/daily_brief.py → DATA/daily_brief_last.md",
     "WATCHER": "ATTIVO — python AUTOMATIONS/core/watcher.py (backup+changelog+state)",
     "N8N": "ATTIVO — npx n8n (localhost:5678, SQLite, EUR 0/mese)",
     "API_SERVER": "ATTIVO — python api_server.py (localhost:5001)",

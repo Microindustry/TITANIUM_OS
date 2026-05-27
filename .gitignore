@@ -8,3 +8,6 @@ VERSIONS/snapshots/
 node_modules/
 dist/
 .vite/
+# ChromaDB — indice vettoriale, si rebuild da MENTE/
+NODES/MENTE_RAG/chroma_db/
+DATA/daily_brief_last.md

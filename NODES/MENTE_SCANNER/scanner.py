@@ -1,5 +1,5 @@
-# scanner.py | ECOSYSTEM_OS / NODES / MENTE_SCANNER | v1.0 | 2026-03-09
-# Legge C:\Users\Matteo\Desktop\LA MIA MENTE\ ricorsivamente
+# scanner.py | TITANIUM_OS / NODES / MENTE_SCANNER | v1.2 | 2026-05-27
+# Legge MICROINDUSTRY\MENTE\ ricorsivamente (path dinamico via Path.home())
 # Estrae: decisioni, spec tecniche, milestone, nomi personaggi
 # Output: TITANIUM_OS\DATA\mente_digest.json
 
@@ -15,7 +15,7 @@ if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # ── CONFIG ────────────────────────────────────────────────────
-MENTE_DIR  = Path(r"C:\Users\Matteo\Desktop\LA MIA MENTE")
+MENTE_DIR  = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 OUTPUT_DIR = Path(__file__).resolve().parents[2] / "DATA"
 OUTPUT_FILE = OUTPUT_DIR / "mente_digest.json"
 

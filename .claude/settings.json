@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "titanium-os": {
+      "command": "C:\\Users\\benen\\tools\\python311\\python.exe",
+      "args": [
+        "C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\MCP\\titanium_mcp_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS",
+        "MENTE_DIR": "C:\\Users\\benen\\MICROINDUSTRY\\MENTE"
+      }
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "PowerShell(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebSearch(*)",
+      "WebFetch(*)",
+      "mcp__computer-use(*)"
+    ],
+    "deny": []
+  }
+}
