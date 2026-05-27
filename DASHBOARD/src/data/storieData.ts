@@ -371,7 +371,9 @@ SINAPSI è il posto dove questa storia viene raccolta, strutturata e conservata.
     tags: ["V32", "manufacturing", "precisione", "MIMS", "artigianato-industriale"],
     status: "ready" as EpisodeStatus,
     durata_min: 7,
-    preview: "8 pezzi, geometria perfetta — Quando guardi un pezzo fresato bene, vedi il codice che l'ha genera.",
+    preview: "# 8 pezzi, geometria perfetta
+
+> Quando guardi un pezzo fresato bene, vedi il codice che l\'ha genera",
     content: `# 8 pezzi, geometria perfetta
 
 > Quando guardi un pezzo fresato bene, vedi il codice che l'ha generato. Non è poesia, è geometria pura.
@@ -402,7 +404,9 @@ Un pezzo fresato bene non è arte. È promessa mantenuta.`,
     tags: ["V32", "automazione", "HMI", "manufacturing", "system"],
     status: "ready" as EpisodeStatus,
     durata_min: 7,
-    preview: "HMI acquisito, V32 respira — Un HMI non è uno schermo. È il luogo dove il pensiero diventa istruzione.",
+    preview: "# HMI acquisito, V32 respira
+
+> "Un HMI non è uno schermo. È il luogo dove il pensiero diventa istru",
     content: `# HMI acquisito, V32 respira
 
 > "Un HMI non è uno schermo. È il luogo dove il pensiero diventa istruzione, e l'istruzione diventa materia."
@@ -439,7 +443,9 @@ Questo è il salto.`,
     tags: ["V32", "CNC", "assembly", "precision", "milestone"],
     status: "ready" as EpisodeStatus,
     durata_min: 7,
-    preview: "Asse X: le guide parlano — Quando chiudi l'ultimo bullone e la guida scorre senza attrito, capisci che il pezzo è vivo.",
+    preview: "# Asse X: le guide parlano
+
+> *"Quando chiudi il ultimo bullone e la guida scorre senza attrito, cap",
     content: `# Asse X: le guide parlano
 
 > *"Quando chiudi il ultimo bullone e la guida scorre senza attrito, capisci che il pezzo è vivo."*
@@ -476,7 +482,9 @@ Asse X: vivo. Sistema: respirando.`,
     tags: ["TITANIUM_OS", "automation", "dashboard", "milestone"],
     status: "ready" as EpisodeStatus,
     durata_min: 7,
-    preview: "Dashboard Live: Il Sistema Vede — Quando il sistema inizia a vedersi da solo, smetti di gestire macchine.",
+    preview: "# Dashboard Live: Il Sistema Vede
+
+> "Quando il sistema inizia a vedersi da solo, smetti di gestire ",
     content: `# Dashboard Live: Il Sistema Vede
 
 > "Quando il sistema inizia a vedersi da solo, smetti di gestire macchine e cominci a gestire informazione. Tutto cambia."
@@ -511,7 +519,9 @@ Senza che io faccia nulla. Basta guardare.`,
     tags: ["V32", "CNC", "manufacturing", "milestone", "BOM"],
     status: "ready" as EpisodeStatus,
     durata_min: 7,
-    preview: "Config G: le molle gialle — Quando vedi il BOM aggiornato e le molle gialle arrivano in scatola, capisci che è materia vera.",
+    preview: "# Config G: le molle gialle
+
+> *"Quando vedi il BOM aggiornato in foglio di calcolo e le molle giall",
     content: `# Config G: le molle gialle
 
 > *"Quando vedi il BOM aggiornato in foglio di calcolo e le molle gialle arrivano in scatola, capisci che il progetto non è più rendering — è materia vera"*
@@ -544,7 +554,13 @@ Questo è il momento in cui i sistemi complessi si trasformano da piani a realt�
     tags: ["saldatura", "struttura", "CNC"],
     status: "ready" as EpisodeStatus,
     durata_min: 8,
-    preview: "Fondamenta d'acciaio TIG — Se questo non tiene a 178 chili di macchina sopra, non è un errore di calcolo.",
+    preview: "# Fondamenta d\'acciaio TIG
+
+# V32 Build Log — Ep. 07: Basamento Traliccio
+
+---
+
+> "Se questo non tie",
     content: `# Fondamenta d'acciaio TIG
 
 # V32 Build Log — Ep. 07: Basamento Traliccio
@@ -603,7 +619,9 @@ Il traliccio non è bello. È rigido.`,
     tags: ["milestone", "knowledge-base", "brain-system"],
     status: "ready" as EpisodeStatus,
     durata_min: 8,
-    preview: "Knowledge Base Popolata e Architettura Assoluto — Il Letto È Assoluto, milestone 10 Marzo 2026.",
+    preview: "# Knowledge Base Popolata e Architettura Assoluto
+
+# V32 // Milestone 10 Marzo 2026 — Il Letto È Ass",
     content: `# Knowledge Base Popolata e Architettura Assoluto
 
 # V32 // Milestone 10 Marzo 2026 — Il Letto È Assoluto
@@ -672,8 +690,16 @@ Lo faccio domani mattina. Prima delle 8:00. Prima che l'ADHD decida che c'è qua
     tags: ["CNC", "artigianato industriale", "system builder", "V32", "manufacturing"],
     status: "ready" as EpisodeStatus,
     durata_min: 8,
-    preview: "Matteo Benenati mostra i componenti V32 arrivati a febbraio. Fresatrice CNC al 65%, MIMS al 30%: ecco cosa significa davvero.",
-    content: `# Episodio 14 — I Componenti Ci Sono
+    preview: "# Componenti V32: dalla teoria alla fabbrica
+
+# Episodio 14 — I Componenti Ci Sono
+
+---
+
+> "Adesso è",
+    content: `# Componenti V32: dalla teoria alla fabbrica
+
+# Episodio 14 — I Componenti Ci Sono
 
 ---
 
