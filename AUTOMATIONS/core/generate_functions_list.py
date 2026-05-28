@@ -221,10 +221,11 @@ def generate() -> str:
     ai_cmds = [
         ("claude-ti",          "Apre Claude Code in TITANIUM_OS con --dangerously-skip-permissions"),
         ("brief",              "Genera e mostra il daily brief"),
-        ("rag 'query'",        "Cerca nel RAG ChromaDB"),
-        ("rag -Rebuild",       "Forza rebuild RAG (attenzione: 2376+ chunk, lento)"),
-        ("rag -Stats",         "Mostra statistiche RAG (chunk count, documenti)"),
-        ("rag-rebuild",        "Alias diretto per rebuild RAG"),
+        ("rag 'query'",        "Cerca nel RAG v4.0 (hybrid BM25+semantico+reranker)"),
+        ("rag-update",         "Rebuild INCREMENTALE — solo file nuovi/modificati (<20 sec)"),
+        ("rag -Rebuild",       "Full rebuild RAG (reset indice) — ~1-3 min"),
+        ("rag -Stats",         "Statistiche RAG (chunk, file, config)"),
+        ("rag-rebuild",        "Full rebuild alias — con avviso durata"),
     ]
     for name, desc in ai_cmds:
         lines.append(f"  {name:<30} {desc}")
@@ -318,6 +319,17 @@ def generate() -> str:
     lines.append(section("ALIAS POWERSHELL"))
     for name, target in aliases:
         lines.append(f"  {name:<10} → {target}")
+
+    # ── documentazione ──
+    lines.append(section("DOCUMENTAZIONE"))
+    docs = [
+        ("DOCS/MANUALE_SISTEMA.md",     "Guida completa — comandi, esempi, flussi, troubleshooting"),
+        ("MAPPA_SISTEMA.md",            "Mappa filesystem e architettura (Desktop)"),
+        ("Desktop/RIAVVIO_SESSIONE.txt","Prompt pronto per riaprire sessione Claude"),
+        ("Desktop/FUNZIONI_SISTEMA.txt","Questo file — lista auto-generata"),
+    ]
+    for path, desc in docs:
+        lines.append(f"  {path:<45} {desc}")
 
     lines.append(f"\n{'═' * 70}")
     lines.append(f"  Aggiornato: {now}  |  Script: AUTOMATIONS/core/generate_functions_list.py")
