@@ -1,294 +1,410 @@
-# milestone_to_episode.py
-# parte di: TITANIUM_OS / CONTENT_ENGINE
-# versione: 1.0 / data: 2026-03-19
-#
-# Legge BRAIN/STATE.json → per ogni milestone non ancora coperto
-# chiama Claude API → genera episodio podcast .md → aggiorna storieData.ts
-#
-# Uso locale:  python CONTENT_ENGINE/scripts/milestone_to_episode.py
-# Uso CI:      come sopra, con ANTHROPIC_API_KEY come env var
+"""
+========================================================
+CONTENT ENGINE — MILESTONE TO EPISODE GENERATOR
+Modulo    : milestone_to_episode.py
+Parte di  : CONTENT_ENGINE/scripts/
+Versione  : 1.0.0
+Data      : 2026-03-18
+========================================================
+Funzione  : Legge STATE.json, trova milestone senza episodio,
+            chiama Claude API per generare storytelling podcast,
+            salva .md in DATABASE/episodes/SA_AUTO/,
+            aggiorna DASHBOARD/src/data/storieData.ts.
+Input     : STATE.json (milestones.verified)
+Output    : .md episodi + storieData.ts aggiornato
+Avvio     : python milestone_to_episode.py
+            python milestone_to_episode.py --all   (forza rigenerazione)
+========================================================
+"""
 
-import json
-import os
-import re
 import sys
-from datetime import datetime
+import re
+import json
+import argparse
+import logging
 from pathlib import Path
-
-import anthropic
+from datetime import datetime
 
 # ── Paths ──────────────────────────────────────────────────────────────────
-ROOT = Path(__file__).parent.parent.parent
-STATE_PATH    = ROOT / "BRAIN" / "STATE.json"
-STORIE_PATH   = ROOT / "DASHBOARD" / "src" / "data" / "storieData.ts"
-EPISODES_DIR  = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
+# LOGICA: path relativi — CONTENT_ENGINE e' il parent di scripts/
+CONTENT_ENGINE  = Path(__file__).resolve().parent.parent
+# LOGICA: TITANIUM_OS risale da CONTENT_ENGINE se dentro il repo,
+#         altrimenti usa env var
+import os
+_tos_env = os.getenv("TITANIUM_OS_ROOT")
+if _tos_env:
+    TITANIUM_OS = Path(_tos_env)
+elif (CONTENT_ENGINE.parent / "BRAIN").exists():
+    # LOGICA: CONTENT_ENGINE e' dentro TITANIUM_OS
+    TITANIUM_OS = CONTENT_ENGINE.parent
+else:
+    # LOGICA: CONTENT_ENGINE e' su Desktop accanto a TITANIUM_OS
+    TITANIUM_OS = CONTENT_ENGINE.parent / "TITANIUM_OS"
+STATE_JSON      = TITANIUM_OS / "BRAIN" / "STATE.json"
+EPISODES_DIR    = CONTENT_ENGINE / "DATABASE" / "episodes" / "SA_AUTO"
+PROCESSED_FILE  = CONTENT_ENGINE / "DATABASE" / "PROCESSED_MILESTONES.json"
+STORIE_DATA_TS  = TITANIUM_OS / "DASHBOARD" / "src" / "data" / "storieData.ts"
+LOG_PATH        = CONTENT_ENGINE / "scripts" / "logs" / "generator.log"
+
 EPISODES_DIR.mkdir(parents=True, exist_ok=True)
+LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-# ── Claude client ──────────────────────────────────────────────────────────
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [GENERATOR] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        logging.FileHandler(LOG_PATH, encoding="utf-8"),
+        logging.StreamHandler(sys.stdout),
+    ]
+)
+log = logging.getLogger("generator")
 
-# ── Leggi milestones ────────────────────────────────────────────────────────
-def load_milestones() -> list[str]:
-    with open(STATE_PATH, encoding="utf-8") as f:
-        state = json.load(f)
-    return state.get("milestones", {}).get("verified", [])
+# ── Claude API ─────────────────────────────────────────────────────────────
+def _get_retry_client():
+    """Importa _api_retry da AUTOMATIONS/core/ se disponibile, altrimenti fallback."""
+    try:
+        # LOGICA: aggiungi AUTOMATIONS/core/ al path per usare _api_retry
+        core_path = TITANIUM_OS / "AUTOMATIONS" / "core"
+        if str(core_path) not in sys.path:
+            sys.path.insert(0, str(core_path))
+        from _api_retry import get_client, call_claude
+        return get_client(), call_claude
+    except ImportError:
+        # LOGICA: fallback se _api_retry non disponibile (es. GitHub Actions)
+        import anthropic
+        client = anthropic.Anthropic()
+        def _simple_call(c, *, model, max_tokens, system="", user=""):
+            msg = c.messages.create(
+                model=model, max_tokens=max_tokens, system=system,
+                messages=[{"role": "user", "content": user}]
+            )
+            return msg.content[0].text
+        return client, _simple_call
 
-# ── Controlla episodi già generati ─────────────────────────────────────────
-def already_generated() -> set[str]:
-    """Ritorna set di milestone text già coperti da episodi AUTO."""
-    existing = set()
-    for md_file in EPISODES_DIR.glob("EP_AUTO_*.md"):
-        content = md_file.read_text(encoding="utf-8")
-        # cerca riga "milestone:" nel frontmatter
-        m = re.search(r'^milestone:\s*"(.+)"', content, re.MULTILINE)
-        if m:
-            existing.add(m.group(1))
-    return existing
 
-# ── Genera episodio via Claude ──────────────────────────────────────────────
-def generate_episode(milestone: str, ep_num: int, context: dict) -> dict:
-    """Chiama Claude con 2 passaggi: haiku per struttura, sonnet per narrativa."""
+def generate_episode_content(milestone: str, context: dict) -> str:
+    """Chiama Claude API per generare episodio storytelling podcast."""
+    client, call_fn = _get_retry_client()
 
-    ctx_v32   = context.get('v32_pct', 65)
-    ctx_mims  = context.get('mims_pct', 30)
-    ctx_focus = context.get('focus_today', 'costruzione V32')
-    ctx_block = context.get('blockers', ['nessuno'])[0] if context.get('blockers') else 'nessuno'
+    pillars_summary = "\n".join([
+        f"- {k}: {v.get('phase','?')} ({v.get('pct_complete',0)}%)"
+        for k, v in context.get("pillars", {}).items()
+    ])
 
-    # ── PASS 1: haiku → metadati strutturati (veloce, economico) ──────────
-    meta_prompt = f"""Milestone: "{milestone}"
-Progetto: V32 fresatrice CNC {ctx_v32}%, MIMS {ctx_mims}%, TITANIUM_OS, VULCAN pressa 20t, EVA WhatsApp bot.
+    prompt = f"""Sei lo scrittore del podcast "Il Sistema" — storia personale di Matteo Benenati,
+artigiano industriale che costruisce TITANIUM_OS: una fresatrice CNC (V32), connettori modulari (MIMS),
+automazioni (GENESIS), una pressa polimeri (VULCAN), e un centro estetico gestito con AI (EVA/Vita Natura).
 
-Genera due cose per questo milestone di Matteo Benenati (artigiano industriale + system builder):
-1. Metadati episodio podcast
-2. Hook reel Instagram/YouTube (stile Simone Rizzo: wow immediato + dato concreto + open loop finale)
+Scrivi un episodio podcast completo in italiano, prima persona (voce di Matteo).
+Tono: diretto, tecnico, zero retorica. Come raccontare a un amico in officina.
 
-Rispondi SOLO con JSON su una riga:
-{{"title":"titolo narrativo 3-5 parole","sottotitolo":"frase evocativa max 10 parole","tags":["tag1","tag2","tag3"],"durata_min":8,"preview":"prima frase episodio diretta max 120 caratteri","reel_hook":"script reel 60-80 parole in italiano fluido, prima persona. Struttura: apertura con dato concreto e visivo → problema che c era prima → azione tecnica precisa → domanda aperta che crea attesa. Zero parentesi, zero template. Solo testo da leggere in camera."}}"""
+MILESTONE DA RACCONTARE:
+"{milestone}"
 
-    meta_msg = client.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=300,
-        messages=[{"role": "user", "content": meta_prompt}]
-    )
-    meta_raw = meta_msg.content[0].text.strip()
-    meta_raw = re.sub(r'^```json\s*', '', meta_raw)
-    meta_raw = re.sub(r'\s*```$', '', meta_raw.strip())
-    meta = json.loads(meta_raw)
+CONTESTO PROGETTO:
+{pillars_summary}
 
-    # ── PASS 2: sonnet → narrativa di qualita con XML + system + few-shot ──
-    # Tecnica: system prompt separato + XML tags + 2 few-shot in-context
-    # Fonte: Anthropic docs 2025 + arXiv style-transfer research
-    SYSTEM = """Sei Matteo Benenati — artigiano industriale + system builder. Scrivi sempre in prima persona.
+FORMATO OBBLIGATORIO:
+---
+## COLD OPEN
+[2-3 righe ad effetto che introducono il momento]
 
-<identita>
-15 anni officina: TIG titanio MotoGP (SCProject), robot ESSEGI packaging, presse DATWLER, QC LU.VE refrigerazione.
-Ora: fresatrice CNC V32 da zero (178kg, 3 assi, ±0.019mm) + TITANIUM_OS sopra (React+Python+automazioni AI).
-Paralleli: MIMS connettori fisici modulari, VULCAN pressa 20t + ricette polimeri, EVA AI WhatsApp per Maria.
-ADHD — il sistema e lo scaffolding cognitivo. Senza STATE.json ti perdi.
-</identita>
+## ATTO I — [titolo]
+[contesto: perché questo milestone è importante, cosa c'era prima]
 
-<stile>
-Frasi corte. Spezzate. Come pensi tu, non come uno scrittore.
-Dati tecnici reali: numeri, tolleranze, nomi materiali, comandi shell, nomi file.
-Lavoro fisico: si sente l officina, il metallo, il fumo della saldatura.
-Codice: si sente il terminale aperto alle 23:00, il cursore che lampeggia.
-VIETATO: "questo momento", "straordinario", "incredibile", "viaggio", "sfida", "percorso".
-PREFERITO: "Ho scoperto che...", "Il problema era...", "Ora so che...", numeri, azioni precise.
-</stile>
+## ATTO II — [titolo]
+[il momento specifico: cosa è successo, come, perché conta]
 
-<esempi_voce>
-<esempio_1>
-Officina, martedi, 21:40. Il tubo 40x40x3 e in morsa. TIG in mano — stesso setup degli scarichi MotoGP, stessa macchina, elettrodo tungsteno 2.4mm affilato a 30°. Sbaglio l angolo sul giunto, rifaccio il tacco. Non e un dramma. E un dato: "giunto a T su S235, approccio ottimale 15° non 20°". Lo scrivo in STATE.json.
-</esempio_1>
-<esempio_2>
-Il terminale dice: ModuleNotFoundError. E la terza volta in due ore. Non e un errore — e il sistema che mi dice che ho saltato un passaggio. Apro BRAIN/STATE.json: prossimo step era "install dipendenze". Non l avevo fatto. ADHD. Il sistema funziona solo se lo aggiorno in tempo reale, non a fine sessione.
-</esempio_2>
-</esempi_voce>"""
+## ATTO III — [titolo]
+[conseguenze: cosa cambia adesso, cosa si sblocca]
 
-    narrative_user = f"""<milestone>"{milestone}"</milestone>
-<contesto_ora>
-  focus: {ctx_focus}
-  blocker_attivo: {ctx_block}
-  v32_completamento: {ctx_v32}%
-  mims_completamento: {ctx_mims}%
-</contesto_ora>
-
-<istruzioni>
-Scrivi episodio podcast (500-650 parole, markdown) con questa struttura:
-1. Citazione in prima persona tra > — una cosa che hai pensato o detto quel giorno, secca
-2. Scena esatta: dove eri, che ora era, gesto fisico o comando preciso
-3. Il bivio: cosa non funzionava prima, cosa cambia dopo questo milestone
-4. Connessione al sistema: come si innesta in V32 / TITANIUM_OS / MIMS / VULCAN
-5. Ultima riga: una frase sola. Corta. Vera. Niente aggettivi.
-</istruzioni>"""
-
-    narrative_msg = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=2000,
-        system=SYSTEM,
-        messages=[{"role": "user", "content": narrative_user}]
-    )
-
-    meta["content"] = narrative_msg.content[0].text.strip()
-    return meta
-
-# ── Salva episodio .md ──────────────────────────────────────────────────────
-def save_episode_md(ep_id: str, milestone: str, data: dict, date_str: str) -> Path:
-    reel = data.get('reel_hook', '').replace('"', "'")
-    content = f"""---
-id: "{ep_id}"
-milestone: "{milestone}"
-title: "{data['title']}"
-sottotitolo: "{data['sottotitolo']}"
-stagione: "AUTO"
-data_evento: "{date_str}"
-tags: {json.dumps(data['tags'], ensure_ascii=False)}
-status: "ready"
-durata_min: {data['durata_min']}
-reel_hook: "{reel}"
-generated: "{datetime.now().isoformat()}"
+## CHIUSURA
+[citazione in corsivo — la frase che rimane]
 ---
 
-# {data['title']}
+Lunghezza: 600-900 parole. Struttura in sezioni chiare. NO bullet point. Solo prosa."""
 
-{data['content']}
+    return call_fn(client, model="claude-sonnet-4-6",
+                   max_tokens=1500, system="", user=prompt)
+
+
+# ── Helpers ────────────────────────────────────────────────────────────────
+def milestone_to_id(milestone: str, idx: int) -> str:
+    """Genera ID episodio da testo milestone."""
+    # Estrai data se presente (es. "13 Feb 2026")
+    date_match = re.search(r'\((\d{1,2}\s+\w+\s+\d{4})\)', milestone)
+    suffix = f"{idx:02d}"
+    return f"EP_AUTO_{suffix}"
+
+
+def milestone_to_slug(milestone: str) -> str:
+    """Genera slug file da testo milestone."""
+    clean = re.sub(r'[^\w\s]', '', milestone.lower())
+    clean = re.sub(r'\s+', '_', clean.strip())
+    return clean[:40]
+
+
+def extract_date(milestone: str) -> str:
+    """Estrae data dal testo milestone, fallback oggi."""
+    months = {
+        "gen": "01", "feb": "02", "mar": "03", "apr": "04",
+        "mag": "05", "giu": "06", "lug": "07", "ago": "08",
+        "set": "09", "ott": "10", "nov": "11", "dic": "12"
+    }
+    m = re.search(r'(\d{1,2})\s+(\w+)\s+(\d{4})', milestone, re.IGNORECASE)
+    if m:
+        day, mon_str, year = m.group(1), m.group(2).lower()[:3], m.group(3)
+        mon = months.get(mon_str, "01")
+        return f"{year}-{mon}-{day.zfill(2)}"
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def load_processed() -> dict:
+    if PROCESSED_FILE.exists():
+        return json.loads(PROCESSED_FILE.read_text(encoding="utf-8"))
+    return {"processed": []}
+
+
+def save_processed(data: dict):
+    PROCESSED_FILE.write_text(
+        json.dumps(data, indent=2, ensure_ascii=False),
+        encoding="utf-8"
+    )
+
+
+def milestone_to_subtitle(milestone: str) -> str:
+    """Genera sottotitolo descrittivo dal testo del milestone."""
+    m = milestone.lower()
+    if "dashboard" in m or "react" in m:
+        return "Il sistema diventa visibile"
+    if "asse" in m or "guida" in m or "servo" in m:
+        return "Un asse prende vita"
+    if "hmi" in m or "tp900" in m or "plc" in m:
+        return "Il cervello della macchina"
+    if "saldato" in m or "tig" in m or "gusset" in m:
+        return "Metallo che diventa struttura"
+    if "epoxy" in m or "granite" in m or "composito" in m:
+        return "Il carattere della macchina"
+    if "mcp" in m or "rag" in m or "chroma" in m:
+        return "La memoria esternalizzata"
+    if "assoluto" in m or "documento" in m:
+        return "La verità messa su carta"
+    if "bronzin" in m or "pezzi" in m or "lavorat" in m:
+        return "Geometria che diventa linguaggio"
+    if "componenti" in m or "bom" in m or "ordinato" in m:
+        return "Dalla teoria alla fisica"
+    if "content" in m or "episodi" in m or "dataset" in m:
+        return "La storia documentata"
+    if "milestone" in m or "completato" in m:
+        return "Un passo avanti nel sistema"
+    return "Milestone verificato · auto-generato"
+
+
+def build_frontmatter(ep_id: str, milestone: str, date: str) -> str:
+    short_title = milestone[:50].rstrip(".,")
+    subtitle = milestone_to_subtitle(milestone)
+    return f"""---
+id: {ep_id}
+title: "{short_title}"
+sottotitolo: "{subtitle}"
+stagione: AUTO
+stagione_label: "Generato"
+data_evento: {date}
+data_generato: {datetime.now().strftime("%Y-%m-%d")}
+tags: [auto_generato, milestone, titanium_os]
+status: ready
+durata_min: 8
+formato: podcast
+fonte: STATE.json → milestones.verified
+llm_use: training
+lingua: it
+milestone_originale: "{milestone}"
+---
+
 """
-    path = EPISODES_DIR / f"{ep_id}.md"
-    path.write_text(content, encoding="utf-8")
-    return path
 
-# ── Genera TypeScript per storieData.ts ────────────────────────────────────
-def build_ts_block(episodes_data: list[dict]) -> str:
-    blocks = []
-    for ep in episodes_data:
-        content_escaped = ep['content'].replace('`', r'\`').replace('${', r'\${')
-        preview_escaped = ep['preview'].replace("'", "\\'")
-        block = f"""  {{
-    id: "{ep['id']}",
-    title: "{ep['title']}",
-    sottotitolo: "{ep['sottotitolo']}",
+
+def save_episode_md(ep_id: str, milestone: str, content: str, date: str) -> Path:
+    slug = milestone_to_slug(milestone)
+    filename = f"{ep_id}_{slug}.md"
+    filepath = EPISODES_DIR / filename
+    full_content = f"# {ep_id} — Milestone\n### \"{milestone[:60]}\"\n\n" + build_frontmatter(ep_id, milestone, date) + content
+    filepath.write_text(full_content, encoding="utf-8")
+    log.info(f"Salvato: {filepath.name}")
+    return filepath
+
+
+def build_ts_entry(ep_id: str, milestone: str, date: str, content: str) -> str:
+    """Genera entry TypeScript per storieData.ts."""
+    title = milestone[:50].rstrip(".,")
+    subtitle = milestone_to_subtitle(milestone)
+    preview = content[:150].replace('"', '\\"').replace('\n', ' ').strip()
+    content_escaped = content.replace('`', '\\`').replace('${', '\\${')
+    tags_raw = ["auto_generato", "milestone"]
+    tags = json.dumps(tags_raw)
+
+    return f"""  {{
+    id: "{ep_id}",
+    title: "{title}",
+    sottotitolo: "{subtitle}",
     stagione: "AUTO",
-    stagione_label: "Generati",
-    data_evento: "{ep['date']}",
-    tags: {json.dumps(ep['tags'], ensure_ascii=False)},
-    status: "ready" as EpisodeStatus,
-    durata_min: {ep['durata_min']},
-    preview: "{preview_escaped}",
+    stagione_label: "Generato",
+    data_evento: "{date}",
+    tags: {tags},
+    status: "ready",
+    durata_min: 8,
+    preview: "{preview}",
     content: `{content_escaped}`,
   }},"""
-        blocks.append(block)
-    return "\n".join(blocks)
 
-# ── Aggiorna storieData.ts ─────────────────────────────────────────────────
-def update_storie_ts(new_episodes_ts: str):
-    text = STORIE_PATH.read_text(encoding="utf-8")
-    # sostituisce il blocco tra i markers
-    pattern = r'(  // AUTO_GENERATED_START\n).*?(  // AUTO_GENERATED_END)'
-    replacement = f'  // AUTO_GENERATED_START\n{new_episodes_ts}\n  // AUTO_GENERATED_END'
-    updated = re.sub(pattern, replacement, text, flags=re.DOTALL)
-    STORIE_PATH.write_text(updated, encoding="utf-8")
+
+def update_storie_data_ts(new_entries: list[str]):
+    """Aggiunge nuovi episodi alla sezione AUTO di storieData.ts."""
+    if not STORIE_DATA_TS.exists():
+        log.warning("storieData.ts non trovato, skip aggiornamento dashboard.")
+        return
+
+    content = STORIE_DATA_TS.read_text(encoding="utf-8")
+
+    START_MARKER = "// AUTO_GENERATED_START"
+    END_MARKER   = "// AUTO_GENERATED_END"
+
+    new_block = "\n".join(new_entries)
+
+    if START_MARKER in content and END_MARKER in content:
+        # Sostituisce il blocco esistente
+        pattern = re.compile(
+            rf"{re.escape(START_MARKER)}.*?{re.escape(END_MARKER)}",
+            re.DOTALL
+        )
+        replacement = f"{START_MARKER}\n{new_block}\n  {END_MARKER}"
+        content = pattern.sub(replacement, content)
+    else:
+        # Aggiunge prima della chiusura dell'array EPISODES
+        insert_before = "];"
+        if insert_before in content:
+            block = f"\n  {START_MARKER}\n{new_block}\n  {END_MARKER}\n"
+            content = content.replace(
+                "// ── STAGIONE T ───────────────────────────────────────────────",
+                f"// ── STAGIONE AUTO (generata) ──────────────────────────────\n  {START_MARKER}\n  {END_MARKER}\n\n  // ── STAGIONE T ─────────────────────────────────────────────"
+            )
+            # Dopo il blocco AUTO aggiunto, riapplica con entries
+            if START_MARKER in content:
+                pattern = re.compile(
+                    rf"{re.escape(START_MARKER)}.*?{re.escape(END_MARKER)}",
+                    re.DOTALL
+                )
+                replacement = f"{START_MARKER}\n{new_block}\n  {END_MARKER}"
+                content = pattern.sub(replacement, content)
+
+    STORIE_DATA_TS.write_text(content, encoding="utf-8")
+    log.info(f"storieData.ts aggiornato con {len(new_entries)} episodi auto.")
+
 
 # ── Main ───────────────────────────────────────────────────────────────────
 def main():
-    print("── milestone_to_episode ──────────────────────────────")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--all", action="store_true", help="Forza rigenerazione di tutti i milestone")
+    args = parser.parse_args()
 
-    milestones = load_milestones()
-    done = already_generated()
+    # Leggi STATE.json
+    if not STATE_JSON.exists():
+        log.error(f"STATE.json non trovato: {STATE_JSON}")
+        sys.exit(1)
 
-    # Carica contesto da STATE.json
-    with open(STATE_PATH, encoding="utf-8") as f:
-        state = json.load(f)
+    state = json.loads(STATE_JSON.read_text(encoding="utf-8"))
+    milestones = state.get("milestones", {}).get("verified", [])
     context = {
-        "v32_pct":      state["pillars"]["V32"]["pct_complete"],
-        "mims_pct":     state["pillars"]["MIMS"]["pct_complete"],
-        "focus_today":  state.get("focus_today", ""),
-        "blockers":     state.get("blockers", []),
+        "pillars": state.get("pillars", {}),
+        "active_milestone": state.get("active_milestone", ""),
     }
 
-    # Episodi già nel file .ts (AUTO section) — li rileggiamo tutti per non perderli
-    existing_ts_episodes = []
-    for md_file in sorted(EPISODES_DIR.glob("EP_AUTO_*.md")):
-        content = md_file.read_text(encoding="utf-8")
-        fm_match = re.search(r'^---\n(.*?)\n---', content, re.DOTALL)
-        if not fm_match:
-            continue
-        fm = fm_match.group(1)
-        body = content[fm_match.end():].strip()
-        def fm_get(key):
-            m = re.search(rf'^{key}:\s*"?(.+?)"?\s*$', fm, re.MULTILINE)
-            return m.group(1).strip('"') if m else ""
-        tags_m = re.search(r'^tags:\s*(\[.*?\])', fm, re.MULTILINE)
-        dur_m  = re.search(r'^durata_min:\s*(\d+)', fm, re.MULTILINE)
-        existing_ts_episodes.append({
-            "id":         fm_get("id"),
-            "title":      fm_get("title"),
-            "sottotitolo":fm_get("sottotitolo"),
-            "date":       fm_get("data_evento"),
-            "tags":       json.loads(tags_m.group(1)) if tags_m else [],
-            "durata_min": int(dur_m.group(1)) if dur_m else 7,
-            "preview":    fm_get("preview") if re.search(r'^preview:', fm, re.MULTILINE) else body[:100],
-            "content":    body,
-        })
-
-    # calcola prossimo numero disponibile UNA volta sola, poi incrementa
-    existing_nums = []
-    for f in EPISODES_DIR.glob("EP_AUTO_*.md"):
-        m = re.search(r'EP_AUTO_(\d+)', f.stem)
-        if m:
-            existing_nums.append(int(m.group(1)))
-    next_num = max(existing_nums, default=0) + 1
-
-    # Genera nuovi episodi per milestone non ancora coperti
-    new_count = 0
-    for i, milestone in enumerate(milestones):
-        if milestone in done:
-            print(f"  ✓ già coperto: {milestone[:50]}")
-            continue
-
-        ep_id  = f"EP_AUTO_{next_num:03d}"
-        ep_num = next_num
-        next_num += 1
-        # estrai data dal milestone se presente, altrimenti usa oggi
-        date_m = re.search(r'\((\d{1,2})\s+(\w+)\s+(\d{4})\)', milestone)
-        mesi = {"Gen":1,"Feb":2,"Mar":3,"Apr":4,"Mag":5,"Giu":6,"Lug":7,"Ago":8,"Set":9,"Ott":10,"Nov":11,"Dic":12}
-        if date_m:
-            giorno, mese_it, anno = date_m.group(1), date_m.group(2), date_m.group(3)
-            mese_n = mesi.get(mese_it[:3], 1)
-            date_str = f"{anno}-{mese_n:02d}-{int(giorno):02d}"
-        else:
-            date_str = datetime.now().strftime("%Y-%m-%d")
-
-        print(f"  → generando {ep_id}: {milestone[:60]}...")
-        try:
-            data = generate_episode(milestone, ep_num, context)
-        except Exception as e:
-            print(f"     ERRORE: {e}")
-            continue
-
-        path = save_episode_md(ep_id, milestone, data, date_str)
-        print(f"     salvato: {path.name}")
-
-        existing_ts_episodes.append({
-            "id":          ep_id,
-            "title":       data["title"],
-            "sottotitolo": data["sottotitolo"],
-            "date":        date_str,
-            "tags":        data["tags"],
-            "durata_min":  data["durata_min"],
-            "preview":     data["preview"],
-            "content":     data["content"],
-        })
-        new_count += 1
-
-    if new_count == 0 and not existing_ts_episodes:
-        print("  Nessun episodio da aggiornare.")
+    if not milestones:
+        log.info("Nessun milestone trovato in STATE.json")
         return
 
-    # Aggiorna storieData.ts con tutti gli episodi AUTO
-    ts_block = build_ts_block(existing_ts_episodes)
-    update_storie_ts(ts_block)
-    print(f"\n  storieData.ts aggiornato — {new_count} nuovi episodi, {len(existing_ts_episodes)} totali AUTO")
-    print("── done ──────────────────────────────────────────────")
+    processed = load_processed()
+    done_set = set(processed["processed"]) if not args.all else set()
+
+    # LOGICA: dedup — controlla anche file .md gia' esistenti su disco
+    existing_slugs = {f.stem for f in EPISODES_DIR.glob("EP_AUTO_*.md")} if EPISODES_DIR.exists() else set()
+
+    new_episodes_ts = []
+    count = 0
+
+    for idx, milestone in enumerate(milestones):
+        if milestone in done_set:
+            log.info(f"Skip (gia' processato): {milestone[:50]}")
+            continue
+
+        ep_id  = milestone_to_id(milestone, idx)
+        slug = milestone_to_slug(milestone)
+        expected_stem = f"{ep_id}_{slug}"
+
+        # LOGICA: dedup su disco — se il file esiste gia', skip
+        if expected_stem in existing_slugs:
+            log.info(f"Skip (file esiste): {expected_stem}")
+            if milestone not in processed["processed"]:
+                processed["processed"].append(milestone)
+                save_processed(processed)
+            continue
+
+        log.info(f"Generando episodio per: {milestone[:60]}...")
+        date   = extract_date(milestone)
+
+        # Genera contenuto via Claude API
+        content = generate_episode_content(milestone, context)
+
+        # Salva .md
+        save_episode_md(ep_id, milestone, content, date)
+
+        # Prepara entry TypeScript
+        new_episodes_ts.append(build_ts_entry(ep_id, milestone, date, content))
+
+        # Marca come processato
+        processed["processed"].append(milestone)
+        save_processed(processed)
+        count += 1
+
+    if new_episodes_ts:
+        # Carica tutti gli episodi auto esistenti per ricostruire il blocco completo
+        all_auto_ts = _load_all_auto_ts()
+        all_auto_ts.extend(new_episodes_ts)
+        update_storie_data_ts(all_auto_ts)
+        log.info(f"Completato: {count} nuovi episodi generati.")
+    else:
+        log.info("Nessun nuovo milestone da processare.")
+
+
+def _load_all_auto_ts() -> list[str]:
+    """Ricostruisce le entry TS dagli .md già generati (per rebuild completo)."""
+    entries = []
+    if not EPISODES_DIR.exists():
+        return entries
+    for md_file in sorted(EPISODES_DIR.glob("EP_AUTO_*.md")):
+        text = md_file.read_text(encoding="utf-8", errors="ignore")
+        # Estrai frontmatter
+        fm_match = re.search(r'---\n(.*?)\n---', text, re.DOTALL)
+        if not fm_match:
+            continue
+        fm_text = fm_match.group(1)
+        ep_id = re.search(r'^id:\s*(.+)$', fm_text, re.M)
+        title = re.search(r'^title:\s*"(.+)"$', fm_text, re.M)
+        date  = re.search(r'^data_evento:\s*(.+)$', fm_text, re.M)
+        milestone = re.search(r'^milestone_originale:\s*"(.+)"$', fm_text, re.M)
+        if not (ep_id and title and date):
+            continue
+        # Corpo dopo il frontmatter
+        body = text.split('---\n', 2)[-1] if text.count('---') >= 2 else text
+        entries.append(build_ts_entry(
+            ep_id.group(1).strip(),
+            milestone.group(1) if milestone else title.group(1),
+            date.group(1).strip(),
+            body[:1200]
+        ))
+    return entries
+
 
 if __name__ == "__main__":
     main()

@@ -315,7 +315,8 @@ def health():
 
 # ── CONTENT ENGINE — CE-1/CE-2/CE-3/CE-4 ─────────────────────
 
-ARCHIVE_DIR = CONTENT_ENGINE / "archive"
+ARCHIVE_DIR   = CONTENT_ENGINE / "archive"
+SA_AUTO_DIR   = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes" / "SA_AUTO"
 
 @app.post("/api/content/trigger")
 def content_trigger():
@@ -603,6 +604,43 @@ def content_distribute():
         return jsonify({"ok": False, "error": "timeout (60s)"}), 504
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
+
+@app.get("/api/episodes")
+def get_episodes():
+    """Lista episodi auto-generati da CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/."""
+    import re as _re
+    if not SA_AUTO_DIR.exists():
+        return jsonify({"ok": True, "total": 0, "episodes": []})
+    episodes = []
+    for md_file in sorted(SA_AUTO_DIR.glob("EP_AUTO_*.md"), key=lambda f: f.name):
+        try:
+            text = md_file.read_text(encoding="utf-8", errors="replace")
+            fm_match = _re.search(r'---\n(.*?)\n---', text, _re.DOTALL)
+            fm = {}
+            if fm_match:
+                for line in fm_match.group(1).splitlines():
+                    if ":" in line:
+                        k, _, v = line.partition(":")
+                        fm[k.strip()] = v.strip().strip('"')
+            body = text.split("---\n", 2)[-1] if text.count("---") >= 2 else text
+            episodes.append({
+                "id":       fm.get("id", md_file.stem),
+                "title":    fm.get("title", md_file.stem),
+                "sottotitolo": fm.get("sottotitolo", "Milestone verificato"),
+                "stagione": fm.get("stagione", "AUTO"),
+                "data_evento": fm.get("data_evento", ""),
+                "status":   fm.get("status", "ready"),
+                "durata_min": int(fm.get("durata_min", 8)),
+                "tags":     [t.strip() for t in fm.get("tags", "").strip("[]").split(",") if t.strip()],
+                "milestone": fm.get("milestone_originale", ""),
+                "preview":  body.strip()[:200],
+                "file":     md_file.name,
+                "modified": datetime.fromtimestamp(md_file.stat().st_mtime).isoformat(),
+            })
+        except Exception:
+            continue
+    return jsonify({"ok": True, "total": len(episodes), "episodes": episodes})
+
 
 # ── MAIN ─────────────────────────────────────────────────────
 if __name__ == "__main__":

@@ -15,6 +15,7 @@ Avvio     : python state_watcher.py
 ========================================================
 """
 
+import os
 import sys
 import json
 import time
@@ -32,7 +33,14 @@ except ImportError:
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 SCRIPTS_DIR    = Path(__file__).resolve().parent
-TITANIUM_OS    = Path("C:/Users/Matteo/Desktop/TITANIUM_OS")
+_tos_env = os.environ.get("TITANIUM_OS_ROOT")
+_ce = SCRIPTS_DIR.parent.parent  # scripts/../.. = TITANIUM_OS root
+if _tos_env:
+    TITANIUM_OS = Path(_tos_env)
+elif (_ce / "BRAIN").exists():
+    TITANIUM_OS = _ce
+else:
+    TITANIUM_OS = Path.home() / "TITANIUM_OS" / "TITANIUM_OS"
 STATE_JSON     = TITANIUM_OS / "BRAIN" / "STATE.json"
 GENERATOR      = SCRIPTS_DIR / "milestone_to_episode.py"
 LOG_PATH       = SCRIPTS_DIR / "logs" / "state_watcher.log"
