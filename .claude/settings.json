@@ -7,6 +7,10 @@
           {
             "type": "command",
             "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\AUTOMATIONS\\core\\generate_restart_prompt.py"
+          },
+          {
+            "type": "command",
+            "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\AUTOMATIONS\\core\\generate_functions_list.py"
           }
         ]
       }
