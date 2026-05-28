@@ -1,4 +1,4 @@
-# generate_restart_prompt.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-05-28
+# generate_restart_prompt.py | TITANIUM_OS / AUTOMATIONS / core | v1.2 | 2026-05-28
 # Genera RIAVVIO_SESSIONE.txt con metadati completi
 # Trigger: hook Stop Claude Code + alias PS `update-restart`
 
@@ -175,10 +175,28 @@ LINK:
     return out
 
 
+def save_to_mente(content: str, state: dict) -> None:
+    sess_dir = MENTE / "SESSIONI"
+    sess_dir.mkdir(parents=True, exist_ok=True)
+    date_str  = datetime.now().strftime("%Y-%m-%d")
+    sess_n    = state.get("session_count", "?")
+    raw       = state.get("active_milestone", "sessione")
+    import re
+    milestone = re.sub(r"_+", "_", "".join(c if c.isalnum() or c in "-+" else "_" for c in raw))[:40].strip("_")
+    fname     = sess_dir / f"{date_str}_s{sess_n}_{milestone}.md"
+    # Non sovrascrivere se esiste già (più sessioni nello stesso giorno → aggiungi suffisso)
+    if fname.exists():
+        fname = sess_dir / f"{date_str}_s{sess_n}_{milestone}_{datetime.now().strftime('%H%M')}.md"
+    fname.write_text(content, encoding="utf-8")
+    print(f"[restart_prompt] MENTE/SESSIONI: {fname.name}")
+
+
 def main():
+    s       = load_state()
     content = generate()
     OUT.write_text(content, encoding="utf-8")
-    print(f"[restart_prompt] Scritto: {OUT} ({len(content)} chars)")
+    print(f"[restart_prompt] Desktop: {OUT} ({len(content)} chars)")
+    save_to_mente(content, s)
 
 
 if __name__ == "__main__":
