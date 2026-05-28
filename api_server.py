@@ -13,7 +13,7 @@ from datetime import datetime
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -32,12 +32,16 @@ _home          = Path.home()
 MENTE_DIR      = Path(os.environ.get("MENTE_DIR",          str(_home / "MICROINDUSTRY" / "MENTE")))
 CONTENT_ENGINE = Path(os.environ.get("CONTENT_ENGINE_DIR", str(_home / "MICROINDUSTRY" / "CONTENT_ENGINE")))
 CONTENT_DIR    = CONTENT_ENGINE / "produzione_contenuti"
+FOTO_DIR       = Path(os.environ.get("FOTO_DIR",            str(_home / "MICROINDUSTRY" / "FOTO")))
+MICROINDUSTRY  = _home / "MICROINDUSTRY"
 
-# Radici consentite per /api/open (sicurezza)
+# Radici consentite per /api/open e /api/media (sicurezza)
 ALLOWED_ROOTS = [
     ROOT.resolve(),
     MENTE_DIR.resolve(),
     CONTENT_ENGINE.resolve(),
+    FOTO_DIR.resolve(),
+    MICROINDUSTRY.resolve(),
 ]
 
 # ── HELPERS ──────────────────────────────────────────────────
@@ -640,6 +644,147 @@ def get_episodes():
         except Exception:
             continue
     return jsonify({"ok": True, "total": len(episodes), "episodes": episodes})
+
+
+# ── MEDIA — serve foto e PDF nel browser ─────────────────────
+
+MEDIA_EXTENSIONS = {
+    ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
+    ".gif": "image/gif", ".webp": "image/webp",
+    ".pdf": "application/pdf",
+    ".mp4": "video/mp4", ".mov": "video/quicktime",
+}
+
+@app.get("/api/media/<path:rel_path>")
+def serve_media(rel_path: str):
+    """
+    Serve immagini e PDF inline nel browser.
+    rel_path: percorso relativo a MICROINDUSTRY/
+    Es: GET /api/media/FOTO/V32_BUILD/Config_G/stato_20260528/V32_20260528_01_telaio_frontale_taverna.jpeg
+    """
+    target = (MICROINDUSTRY / rel_path).resolve()
+    if not any(str(target).startswith(str(r)) for r in ALLOWED_ROOTS):
+        return jsonify({"ok": False, "error": "percorso non consentito"}), 403
+    if not target.exists() or not target.is_file():
+        return jsonify({"ok": False, "error": "file non trovato"}), 404
+    mime = MEDIA_EXTENSIONS.get(target.suffix.lower())
+    if not mime:
+        return jsonify({"ok": False, "error": "tipo file non supportato"}), 415
+    return send_file(str(target), mimetype=mime)
+
+
+@app.get("/api/photos")
+def list_photos():
+    """
+    Lista foto in FOTO/V32_BUILD/ con URL servibili.
+    ?subdir=Config_G/stato_20260528  filtra per sottocartella.
+    """
+    subdir = request.args.get("subdir", "")
+    base   = FOTO_DIR / "V32_BUILD"
+    if subdir:
+        base = base / subdir
+    if not base.exists():
+        return jsonify({"ok": True, "total": 0, "photos": []})
+
+    IMAGE_EXT = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
+    photos = []
+    for f in sorted(base.rglob("*")):
+        if f.suffix.lower() not in IMAGE_EXT:
+            continue
+        rel = f.relative_to(MICROINDUSTRY).as_posix()
+        stat = f.stat()
+        photos.append({
+            "name":     f.name,
+            "rel_path": rel,
+            "url":      f"/api/media/{rel}",
+            "subdir":   str(f.parent.relative_to(FOTO_DIR / "V32_BUILD")),
+            "size_kb":  round(stat.st_size / 1024, 1),
+            "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
+        })
+    return jsonify({"ok": True, "total": len(photos), "photos": photos})
+
+
+@app.get("/api/pdfs")
+def list_pdfs():
+    """Lista PDF in MENTE/ con URL per apertura inline."""
+    pdfs = []
+    for f in sorted(MENTE_DIR.rglob("*.pdf")):
+        rel = f.relative_to(MICROINDUSTRY).as_posix()
+        stat = f.stat()
+        pdfs.append({
+            "name":     f.name,
+            "rel_path": rel,
+            "url":      f"/api/media/{rel}",
+            "subdir":   str(f.parent.relative_to(MENTE_DIR)),
+            "size_kb":  round(stat.st_size / 1024, 1),
+            "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
+        })
+    return jsonify({"ok": True, "total": len(pdfs), "pdfs": pdfs})
+
+
+# ── PROGRAMMI — avvia/ferma processi sul PC ───────────────────
+
+import shutil as _shutil
+
+# Mappa nome → comando (usare sempre path assoluti o env var)
+_SUMATRAPDF = str(Path(os.environ.get("LOCALAPPDATA","")) / "SumatraPDF" / "SumatraPDF.exe")
+_FFMPEG_BIN = next(
+    (str(p.parent) for p in Path(os.environ.get("LOCALAPPDATA","")).glob(
+        "Microsoft/WinGet/Packages/Gyan.FFmpeg*/ffmpeg-*/bin/ffmpeg.exe"
+    ) if p.exists()),
+    "ffmpeg"
+)
+
+PROGRAMS = {
+    "dashboard": {
+        "cmd": ["cmd", "/c", "start", "http://localhost:5173"],
+        "desc": "Apre Dashboard nel browser (localhost:5173)",
+    },
+    "n8n": {
+        "cmd": ["cmd", "/c", "start", "http://localhost:5678"],
+        "desc": "Apre n8n nel browser (localhost:5678)",
+    },
+    "explorer_foto": {
+        "cmd": ["explorer", str(FOTO_DIR / "V32_BUILD")],
+        "desc": "Apre Esplora File su FOTO/V32_BUILD/",
+    },
+    "explorer_mente": {
+        "cmd": ["explorer", str(MENTE_DIR)],
+        "desc": "Apre Esplora File su MENTE/",
+    },
+    "explorer_titanium": {
+        "cmd": ["explorer", str(ROOT)],
+        "desc": "Apre Esplora File su TITANIUM_OS/",
+    },
+    "explorer_assoluto": {
+        "cmd": ["explorer", str(MENTE_DIR / "ASSOLUTO")],
+        "desc": "Apre Esplora File su MENTE/ASSOLUTO/ (documenti V7/V8)",
+    },
+    "sumatrapdf": {
+        "cmd": [_SUMATRAPDF],
+        "desc": "Apre SumatraPDF (finestra vuota — poi trascina PDF)",
+    },
+}
+
+@app.get("/api/programs")
+def list_programs():
+    """Lista programmi/azioni avviabili via API."""
+    return jsonify({
+        "ok": True,
+        "programs": [{"id": k, "desc": v["desc"]} for k, v in PROGRAMS.items()]
+    })
+
+@app.post("/api/programs/<name>/run")
+def run_program(name: str):
+    """Avvia un programma/azione registrata."""
+    prog = PROGRAMS.get(name)
+    if not prog:
+        return jsonify({"ok": False, "error": f"programma non trovato: {name}"}), 404
+    try:
+        subprocess.Popen(prog["cmd"], shell=False)
+        return jsonify({"ok": True, "launched": name, "desc": prog["desc"]})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
 
 
 # ── MAIN ─────────────────────────────────────────────────────

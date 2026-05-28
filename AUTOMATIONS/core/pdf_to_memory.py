@@ -1,12 +1,14 @@
-# pdf_to_memory.py | TITANIUM_OS / AUTOMATIONS / core | v1.0 | 2026-03-10
+# pdf_to_memory.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-05-28
 # Modulo: Conversore PDF → Memoria Ecosystem
 # Parte di: GENESIS / AUTOMATIONS
-# Input:  TITANIUM_OS/PDF_DROP/*.pdf  (drag & drop)
-# Output: BRAIN/KNOWLEDGE/ (informazioni) | BRAIN/ASSOLUTO/ (atti formali)
+# Input:  TITANIUM_OS/PDF_DROP/*.pdf  (drag & drop) | oppure --file <path>
+# Output: BRAIN/KNOWLEDGE/ | BRAIN/ASSOLUTO/ | oppure --mente <subdir> → MICROINDUSTRY/MENTE/<subdir>/
 #
 # USO:
-#   python pdf_to_memory.py           <- processa tutti i PDF in PDF_DROP ora
-#   python pdf_to_memory.py --watch   <- modalità watch (gira in background)
+#   python pdf_to_memory.py                          <- processa tutti i PDF in PDF_DROP ora
+#   python pdf_to_memory.py --watch                  <- modalità watch (gira in background)
+#   python pdf_to_memory.py --file doc.pdf           <- file specifico → PDF_DROP pipeline
+#   python pdf_to_memory.py --file doc.pdf --mente V32 --keep --rag  <- → MENTE/V32/, no spostamento, rag-rebuild
 
 import sys
 import os
@@ -35,6 +37,8 @@ ERRORS      = PDF_DROP / "_ERRORS"
 KNOWLEDGE   = ROOT / "BRAIN" / "KNOWLEDGE"
 ASSOLUTO    = ROOT / "BRAIN" / "ASSOLUTO"
 VERSIONS_DB = ROOT / "DATA" / "pdf_versions.json"
+MENTE_ROOT  = Path(os.environ.get("MENTE_DIR",
+              str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 
 # Keywords per riconoscere ATTI FORMALI (doc legali/burocratici/contrattuali)
 ATTO_KEYWORDS = [
@@ -293,13 +297,115 @@ def watch_mode():
         observer.stop()
     observer.join()
 
+# ── MENTE OUTPUT ──────────────────────────────────────────────────────────────
+def process_pdf_to_mente(pdf_path: Path, mente_subdir: str, keep: bool = True) -> bool:
+    """
+    Variante MENTE: estrae testo PDF e scrive .md in MENTE_ROOT/<mente_subdir>/.
+    Non sposta il PDF originale per default (keep=True).
+    """
+    print(f"\n[PDF→MENTE] {pdf_path.name} → MENTE/{mente_subdir}/")
+    out_dir = MENTE_ROOT / mente_subdir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    try:
+        pages_text = []
+        with pdfplumber.open(pdf_path) as pdf:
+            n_pages = len(pdf.pages)
+            for i, page in enumerate(pdf.pages):
+                raw = page.extract_text() or ""
+                tables = page.extract_tables()
+                table_md = ""
+                for table in tables:
+                    if table:
+                        rows = [" | ".join(str(c or "") for c in row) for row in table if row]
+                        table_md += "\n\n**[TABELLA]**\n" + "\n".join(rows)
+                pages_text.append(f"## Pagina {i+1}\n\n{raw.strip()}{table_md}")
+
+        full_text = "\n\n---\n\n".join(pages_text)
+        if not full_text.strip():
+            print(f"[WARN] PDF scansionato (nessun testo estraibile): {pdf_path.name}")
+            return False
+
+        timestamp = datetime.now().strftime("%Y-%m-%d")
+        out_name  = f"{clean_filename(pdf_path.stem)}.md"
+        out_path  = out_dir / out_name
+
+        frontmatter = f"""---
+source: {pdf_path.name}
+mente_subdir: {mente_subdir}
+date_processed: {timestamp}
+pages: {n_pages}
+processed_by: pdf_to_memory.py v1.1
+---
+
+"""
+        content = frontmatter + f"# {pdf_path.stem}\n\n" + full_text
+        out_path.write_text(content, encoding="utf-8")
+        print(f"[OK]   Scritto: {out_path}")
+        print(f"       {n_pages} pagine estratte.")
+
+        if not keep:
+            dest = PROCESSED / f"{clean_filename(pdf_path.stem)}_{timestamp}{pdf_path.suffix}"
+            PROCESSED.mkdir(parents=True, exist_ok=True)
+            shutil.move(str(pdf_path), str(dest))
+            print(f"[ARCH] PDF archiviato → {dest.name}")
+
+        return True
+
+    except Exception as e:
+        print(f"[ERROR] {pdf_path.name}: {e}")
+        return False
+
+
+def run_rag_rebuild():
+    """Triggera rag-rebuild dopo ingestione PDF."""
+    rag_engine = ROOT / "NODES" / "RAG_ENGINE" / "rag_engine.py"
+    if not rag_engine.exists():
+        # Prova path alternativo
+        rag_engine = ROOT / "AUTOMATIONS" / "core" / "rag_engine.py"
+    if not rag_engine.exists():
+        print("[WARN] rag_engine.py non trovato — rag-rebuild saltato.")
+        return
+    print("\n[RAG] Avvio rag-rebuild...")
+    import subprocess
+    result = subprocess.run(
+        [sys.executable, str(rag_engine), "--rebuild"],
+        capture_output=True, text=True, timeout=120
+    )
+    if result.returncode == 0:
+        print("[RAG] Rebuild completato.")
+    else:
+        print(f"[RAG] Errore rebuild: {result.stderr[-300:]}")
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    # Crea tutte le cartelle necessarie se non esistono
+    import argparse
+    parser = argparse.ArgumentParser(description="PDF → TITANIUM_OS Memory")
+    parser.add_argument("--file",  type=str, default=None, help="Processa file PDF specifico")
+    parser.add_argument("--mente", type=str, default=None, help="Output a MENTE/<subdir>/ invece di BRAIN/")
+    parser.add_argument("--keep",  action="store_true",    help="Non spostare il PDF originale")
+    parser.add_argument("--rag",   action="store_true",    help="Esegui rag-rebuild dopo ingestione")
+    parser.add_argument("--watch", action="store_true",    help="Modalità watch su PDF_DROP")
+    args = parser.parse_args()
+
     for d in [PDF_DROP, PROCESSED, ERRORS, KNOWLEDGE]:
         d.mkdir(parents=True, exist_ok=True)
 
-    if "--watch" in sys.argv:
+    if args.watch:
         watch_mode()
+    elif args.file:
+        pdf_path = Path(args.file).resolve()
+        if not pdf_path.exists():
+            print(f"[ERROR] File non trovato: {pdf_path}")
+            sys.exit(1)
+        if args.mente:
+            ok = process_pdf_to_mente(pdf_path, args.mente, keep=args.keep)
+        else:
+            ok = process_pdf(pdf_path)
+        if ok and args.rag:
+            run_rag_rebuild()
     else:
         scan_drop_folder()
+        if args.rag:
+            run_rag_rebuild()
