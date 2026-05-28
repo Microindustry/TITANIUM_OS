@@ -58,8 +58,17 @@ def rag_stats() -> str:
         if not db.exists():
             return "DB non trovato"
         client = chromadb.PersistentClient(path=str(db))
-        col = client.get_collection("mente_knowledge")
-        return f"{col.count()} chunk"
+        col = client.get_collection("mente")
+        # Leggi anche manifest per file count
+        manifest = TI_ROOT / "NODES" / "MENTE_RAG" / "rag_manifest.json"
+        files_n = ""
+        if manifest.exists():
+            try:
+                m = __import__("json").loads(manifest.read_text(encoding="utf-8"))
+                files_n = f" | {len(m.get('files', {}))} file"
+            except Exception:
+                pass
+        return f"{col.count()} chunk{files_n}"
     except Exception:
         return "non verificabile"
 

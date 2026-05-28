@@ -84,7 +84,7 @@ Blocker attivo: Manca mandrino 2.2kW ER20 — da ordinare
 | Nodo | Comando | Stato |
 |------|---------|-------|
 | MCP Server | auto (`.claude/settings.json`) | ATTIVO — 5 tool |
-| MENTE RAG | `rag "query"` / `rag-rebuild` | ATTIVO — 39 chunk |
+| MENTE RAG | `rag "query"` / `rag-update` / `rag-rebuild` | ATTIVO v4.0 — hybrid BM25+semantico+CrossEncoder — incrementale |
 | Daily Brief | `brief` | ATTIVO → `DATA/daily_brief_last.md` |
 | MENTE Scanner | `python NODES/MENTE_SCANNER/scanner.py` | ATTIVO → `MICROINDUSTRY/MENTE/` |
 | MENTE Watcher | watch fs → `/api/scan` | ATTIVO |
@@ -93,8 +93,13 @@ Blocker attivo: Manca mandrino 2.2kW ER20 — da ordinare
 | n8n | `npx n8n` (porta 5678) | ATTIVO |
 | EVA WhatsApp | — | PENDING |
 
-**Dopo ogni modifica a MENTE/ → esegui `rag-rebuild`.**
-RAG usa ChromaDB + `paraphrase-multilingual-MiniLM-L12-v2` (offline, 384-dim, IT/EN/DE/FR).
+**Dopo ogni modifica a MENTE/ → esegui `rag-update` (incrementale, <20 sec).**
+Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
+- Semantico: ChromaDB + `paraphrase-multilingual-MiniLM-L12-v2` (384-dim, IT/EN/DE/FR)
+- Keyword: TF-IDF BM25 (sklearn, ngram 1-2) — ricorda termini tecnici esatti
+- Reranker: `cross-encoder/ms-marco-MiniLM-L-6-v2` — riordina top-15 → top-5
+- Merge: Reciprocal Rank Fusion (k=60)
+- Chunk: 512 chars / stride 200 — ottimale per Q&A tecnico
 
 ---
 

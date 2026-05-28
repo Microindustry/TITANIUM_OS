@@ -1,17 +1,17 @@
 {
   "meta": {
     "created": "2026-03-09T11:49:54.730580",
-    "updated": "2026-05-28T23:00:00.000000",
-    "version": "2.4.0",
-    "description": "Stato live TITANIUM_OS — ASSOLUTO V7+V8 + Tela v4.1 + Agenti + Research Agent",
-    "system": "TITANIUM OS — ecosystem v1.1"
+    "updated": "2026-05-28T23:30:00.000000",
+    "version": "2.5.0",
+    "description": "Stato live TITANIUM_OS — RAG v4.0 hybrid + audit sistema + regole AI 2024-2025",
+    "system": "TITANIUM OS — ecosystem v1.2"
   },
-  "last_update": "2026-05-28T23:00:00.000000",
+  "last_update": "2026-05-28T23:30:00.000000",
   "active_milestone": "Config G — Rinforzi colonne Z+U",
   "ciclo_position": "COSTRUISCI",
-  "last_action": "Sessione 28 Mag 2026: V8_DELTA, foto V32 organizzate, Tela v4.1 (MatteoSection), research_agent.py (11 sorgenti), sistema agenti validatori (8 agenti, agents_db.json), pdf_to_memory v1.1, api_server media/foto/PDF, START_LOGIN.bat, profilo PS aggiornato",
+  "last_action": "Sessione 28 Mag 2026 (cont.): RAG v4.0 hybrid (BM25+semantico+CrossEncoder+incrementale), audit bottleneck, fix rag_stats(), Stop hook RAG update, PS rag-update/rag-rebuild, STATE v2.5.0",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
-  "session_count": 7,
+  "session_count": 8,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -33,11 +33,11 @@
     },
     "GENESIS": {
       "status": "building",
-      "phase": "Tela v4.1 + RAG 2376+ chunk + 8 agenti validatori + Research Agent 11 sorgenti",
-      "pct_complete": 65,
-      "next": "RAG rebuild incremental (no timeout) + EVA WhatsApp pilot + aggiunta agenti DB",
+      "phase": "RAG v4.0 hybrid + agenti + research — ecosystem v1.2",
+      "pct_complete": 72,
+      "next": "EVA WhatsApp pilot + Dashboard agenti panel + GitHub profile pubblico",
       "atto": "V",
-      "last_activity": "2026-05-28T23:00:00.000000"
+      "last_activity": "2026-05-28T23:30:00.000000"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -81,7 +81,9 @@
       "Dashboard Tela v4.1 — MatteoSection: skill tree, interessi, principi, 2030 (28 Mag 2026)",
       "Research Agent — 11 sorgenti (OpenAlex, arXiv, Semantic Scholar, Baidu, CNKI, GitHub, tesi EU) (28 Mag 2026)",
       "Sistema Agenti Validatori — 8 agenti in agents_db.json (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) (28 Mag 2026)",
-      "CLAUDE_CAPABILITIES_TITANIUM.md — profilo capacità Claude per l'ecosistema (28 Mag 2026)"
+      "CLAUDE_CAPABILITIES_TITANIUM.md — profilo capacità Claude per l'ecosistema (28 Mag 2026)",
+      "RAG v4.0 — hybrid BM25+semantico+CrossEncoder+incrementale (28 Mag 2026)",
+      "Audit sistema — bottleneck identificati e risolti (28 Mag 2026)"
     ],
     "next": "Rinforzi Config G (gusset + diag + tiranti M10) + V8 documento completo dopo decisione silent blocks",
     "target_capannone": "15 Luglio 2030"
@@ -89,21 +91,20 @@
   "focus_today": "Config G: gusset sinistra — stima 3 ore officina. Decisione silent blocks v.A o v.B prima di scrivere V8.",
   "blockers": [
     "Manca mandrino 2.2kW ER20 — da ordinare",
-    "Silent blocks: decisione Version A (senza) vs Version B (con Ø18) — prerequisito V8",
-    "RAG rebuild: 2376 chunk > 2min timeout — serve --incremental flag"
+    "Silent blocks: decisione Version A (senza) vs Version B (con Ø18) — prerequisito V8"
   ],
   "ideas_inbox": 0,
   "nodes": {
     "MENTE_SCANNER":    "ATTIVO — NODES/MENTE_SCANNER/scanner.py (818+ estrazioni)",
-    "MENTE_RAG":        "ATTIVO — ChromaDB + SentenceTransformer (2376+ chunk) — rebuild necessario dopo sessione 28 Mag",
+    "MENTE_RAG":        "ATTIVO v4.0 — hybrid BM25+semantico+CrossEncoder | incrementale via manifest | chunk 512/200",
     "MENTE_WATCHER":    "ATTIVO — NODES/MENTE_WATCHER/mente_watcher.py",
     "MCP_SERVER":       "ATTIVO — MCP/titanium_mcp_server.py (5 tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready)",
     "DAILY_BRIEF":      "ATTIVO — AUTOMATIONS/core/daily_brief.py → DATA/daily_brief_last.md",
-    "API_SERVER":       "ATTIVO — api_server.py (localhost:5001) — nuovi endpoint: /api/media /api/photos /api/pdfs /api/programs",
+    "API_SERVER":       "ATTIVO — api_server.py (localhost:5001) — endpoint: /api/media /api/photos /api/pdfs /api/programs",
     "DASHBOARD":        "ATTIVO — DASHBOARD/ React Vite (localhost:5173) — Tela v4.1 + MatteoSection",
     "N8N":              "ATTIVO — npx n8n (localhost:5678, SQLite)",
-    "RESEARCH_AGENT":   "NUOVO — NODES/RESEARCH_AGENT/research_agent.py — 11 sorgenti (arXiv, OpenAlex, Semantic Scholar, Baidu, CNKI, GitHub, tesi EU)",
-    "AGENTS":           "NUOVO — NODES/AGENTS/ — agents_db.json (8 agenti) + validator_agent.py — alias PS: ask, agents",
+    "RESEARCH_AGENT":   "ATTIVO — NODES/RESEARCH_AGENT/research_agent.py — 11 sorgenti (arXiv, OpenAlex, Semantic Scholar, Baidu, CNKI, GitHub, tesi EU)",
+    "AGENTS":           "ATTIVO — NODES/AGENTS/ — agents_db.json (8 agenti) + validator_agent.py — alias PS: ask, agents",
     "EVA":              "pending — WhatsApp Business API setup",
     "V32_WATCHER":      "future — post assemblaggio completo"
   },
@@ -114,5 +115,15 @@
     "ffmpeg":       "8.1.1 — %LOCALAPPDATA%\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg...",
     "sumatrapdf":   "%LOCALAPPDATA%\\SumatraPDF\\SumatraPDF.exe",
     "git":          "C:\\Program Files\\Git\\cmd\\"
+  },
+  "rag_config": {
+    "version":     "4.0",
+    "model":       "paraphrase-multilingual-MiniLM-L12-v2",
+    "reranker":    "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "chunk_size":  512,
+    "chunk_stride": 200,
+    "hybrid":      "BM25 (TF-IDF) + semantic cosine, merged via RRF k=60",
+    "incremental": true,
+    "manifest":    "NODES/MENTE_RAG/rag_manifest.json"
   }
 }
