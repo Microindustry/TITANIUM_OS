@@ -8,6 +8,7 @@ import os
 import json
 import subprocess
 import logging
+import threading
 from pathlib import Path
 from datetime import datetime
 
@@ -861,6 +862,14 @@ REGOLA GLOSSARIO: Quando usi un termine tecnico o sigla che potrebbe non essere 
                         "model": "claude-haiku-4-5"})
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
+
+
+@app.route("/api/restart", methods=["POST"])
+def api_restart():
+    """Termina il processo — il watchdog riavvia con codice aggiornato."""
+    logger.info("Restart richiesto via /api/restart")
+    threading.Timer(0.5, lambda: os._exit(0)).start()
+    return jsonify({"ok": True, "msg": "Riavvio in corso..."})
 
 
 # ── MAIN ─────────────────────────────────────────────────────
