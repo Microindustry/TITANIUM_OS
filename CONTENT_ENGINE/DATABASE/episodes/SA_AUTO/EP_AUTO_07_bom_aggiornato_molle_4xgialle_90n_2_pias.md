@@ -1,0 +1,68 @@
+# EP_AUTO_07 — Milestone
+### "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY Config G ("
+
+---
+id: EP_AUTO_07
+title: "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY "
+sottotitolo: "Dalla teoria alla fisica"
+stagione: AUTO
+stagione_label: "Generato"
+data_evento: 2026-03-10
+data_generato: 2026-05-29
+tags: [auto_generato, milestone, titanium_os]
+status: ready
+durata_min: 8
+formato: podcast
+fonte: STATE.json → milestones.verified
+llm_use: training
+lingua: it
+milestone_originale: "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY Config G (10 Mar 2026)"
+---
+
+# IL SISTEMA — Episodio 14
+
+## COLD OPEN
+
+Dieci marzo duemilaventisei. Officina, fine pomeriggio. Sul banco ho quattro molle gialle e due piastre di alluminio fresato. Sembra poco. Ma quei pezzi sono la differenza tra una macchina che si muove e una macchina che *lavora*.
+
+---
+
+## ATTO I — Prima delle molle
+
+Devo spiegarti perché questo aggiornamento al BOM — la distinta base, per chi non lavora con i fogli di componenti — non è una cosa burocratica. Non è un file che aggiorno per tenermi in ordine. È il momento in cui smetti di lavorare a memoria e la macchina comincia ad esistere davvero su carta, prima ancora che in metallo.
+
+La V32 è la fresatrice CNC che sto costruendo in casa. Tre assi, costruzione da zero, Config G. Sessantacinque percento completata. Il Config G è la variante con i rinforzi strutturali — ho scelto questa strada perché so già cosa voglio farci sopra: lavorare i polimeri per VULCAN, fare pezzi di precisione per MIMS, chiudere una catena produttiva che adesso esiste solo in testa mia e in un file GENESIS.
+
+Il problema che avevo prima era semplice e fastidioso allo stesso tempo: l'asse Z ballava. Non tanto, ma abbastanza. Con una fresatrice, "abbastanza" non esiste. O è precisa o è un problema. Avevo delle molle di richiamo che non tenevano il carico in modo costante — cedevano leggermente sotto vibrazione, e quella cedenza si traduceva in errore dimensionale sul pezzo. Micron, sì. Ma micron sbagliati.
+
+Ho passato due settimane a ragionare sul sistema di precarico. Ho guardato configurazioni di altri builder, ho fatto i calcoli sul carico del mandrino, ho considerato il peso dell'asse e la velocità di lavoro. E alla fine sono arrivato a una scelta precisa: quattro molle gialle da 90 Newton, in configurazione parallela, abbinate a due piastre XY ridisegnate.
+
+---
+
+## ATTO II — Le piastre XY e le molle gialle
+
+Le piastre XY nella Config G non sono le stesse della versione base. Le ho ridisegnate con una sezione trasversale maggiorata — cinque millimetri in più di spessore sull'appoggio del cuscinetto lineare — e ho aggiunto due fori passanti per l'alloggiamento delle molle che nella versione precedente non c'erano. Sembra una modifica piccola. In realtà è una modifica che cambia il comportamento dell'asse sotto carico dinamico.
+
+Le molle gialle — 90 Newton ciascuna, passo medio, acciaio da costruzione — lavorano in precarico costante sull'asse Z. Quattro in parallelo mi danno 360 Newton di forza stabilizzante. Ho calcolato che con il mandrino che ho scelto, un Teknomotor da 1.5 kilowatt, e la corsa di 120 millimetri, questo precarico è sufficiente a eliminare il gioco residuo anche in passate laterali aggressive.
+
+Il dieci marzo ho aggiornato il BOM ufficiale. Non è stato solo scrivere quattro righe su un foglio. Ho dovuto verificare che le quote delle sedi molle sulle piastre XY fossero corrette, che il pre-assemblaggio fosse fattibile senza smontare il portale, che i codici componente fossero aggiornati nel sistema GENESIS per tracciabilità. Perché tutto quello che costruisco deve poter essere replicato, modificato, capito da me tra sei mesi quando magari non ricordo più perché ho fatto quella scelta.
+
+Questo è il punto. GENESIS non è solo una dashboard. È la memoria del progetto. E aggiornare il BOM dentro GENESIS significa che quella scelta — quelle molle, quelle piastre — è adesso parte del sistema, non solo della mia testa.
+
+---
+
+## ATTO III — Cosa si sblocca adesso
+
+Con il BOM aggiornato e la Config G al sessantacinque percento, ho tutto quello che mi serve per ordinare la componentistica mancante e portare la V32 a completamento entro il prossimo checkpoint. E questo sblocca molto più di una fresatrice.
+
+MIMS — i connettori modulari che devo produrre — aspetta la V32. Ha un design completo, è al trenta percento solo perché non ho ancora la macchina per fare i pezzi. Una volta che la V32 gira, MIMS accelera. E quando MIMS ha i connettori pronti, si chiude il primo anello della catena: V32 produce componenti per MIMS, MIMS connette VULCAN, VULCAN processa i polimeri che la V32 ha lavorato. È un sistema che si alimenta.
+
+Nel frattempo GENESIS continua a girare — dashboard v7.0, Story Agent attivo, RAG v4.0 che già indicizza tutto. Vita Natura aspetta che EVA sia pronta per andare live, e EVA aspetta che io abbia il tempo di finire l'integrazione con il sistema prenotazioni. Tutto è connesso. Tutto dipende da qualcosa d'altro.
+
+Ma oggi, quelle quattro molle gialle e due piastre ridisegnate mi dicono che sono sulla strada giusta. Non c'è retorica in questo. È meccanica. Funziona o non funziona. E questa configurazione funzionerà.
+
+---
+
+## CHIUSURA
+
+*"Un BOM aggiornato non è carta. È una promessa che hai fatto alla macchina: so esattamente cosa sei, e so esattamente cosa ti chiederò di fare."*
