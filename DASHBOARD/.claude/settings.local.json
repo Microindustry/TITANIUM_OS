@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc:*)"
-    ]
+      "Bash(*)",
+      "PowerShell(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebSearch(*)",
+      "WebFetch(*)",
+      "Agent(*)",
+      "mcp__computer-use(*)"
+    ],
+    "deny": []
   }
 }
