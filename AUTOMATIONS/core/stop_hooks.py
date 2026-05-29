@@ -17,6 +17,7 @@ RAG_ENGINE = TI_ROOT / "NODES" / "MENTE_RAG" / "rag_engine.py"
 
 TIMEOUT_SEC = 45
 RAG_WINDOW_MIN = 120  # considera MENTE/ "toccata" se file modificati entro questi minuti
+STORY_AGENT = TI_ROOT / "NODES" / "STORY_AGENT" / "story_agent.py"
 
 
 def mente_was_touched() -> bool:
@@ -59,6 +60,15 @@ def main():
         ("restart_prompt", [PYTHON, str(CORE / "generate_restart_prompt.py")]),
         ("functions_list", [PYTHON, str(CORE / "generate_functions_list.py")]),
     ]
+
+    # Story agent — avviato in background detached (può durare 30-60 sec per la chiamata API)
+    if STORY_AGENT.exists():
+        subprocess.Popen(
+            [PYTHON, str(STORY_AGENT)],
+            cwd=str(TI_ROOT),
+            creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
+            if sys.platform == "win32" else 0,
+        )
 
     rag_touched = mente_was_touched()
 

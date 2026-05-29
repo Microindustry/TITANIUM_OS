@@ -1,84 +1,119 @@
 # CONTENT ENGINE — DATABASE EPISODI
-## Dataset LLM Training + Podcast + YouTube + LinkedIn
+## TITANIUM_OS — Archivio narrativo completo
+*Aggiornato: 2026-05-29 | Episodi totali: 36+*
 
 ---
 
-## STAGIONE S0 — Le Origini (pre-sistema)
+## STRUTTURA STAGIONI
 
-| ID | Titolo | Data | Status | Min |
-|----|--------|------|--------|-----|
-| EP_S0_00 | Il Socio | pre-2026 | source | 9 |
-| EP_S0_01 | L'Organismo | pre-2026 | source | 11 |
-| EP_S0_02 | La Verifica | 2026-02-13 | source | 13 |
-| EP_S0_03 | La Formula | pre-2026 | source | 11 |
-
-## STAGIONE S1 — Il Presente (storia principale)
-
-| ID | Titolo | Data | Status | Min |
-|----|--------|------|--------|-----|
-| EP_00 | Origine | 2025-09-01 | source | 13 |
-| EP_01 | La Taverna | 2025-10-01 | source | 11 |
-| EP_02 | Il Reattore | 2025-11-01 | source | 19 |
-| EP_03 | Il Paradosso | 2025-12-01 | source | 15 |
-| EP_04 | Il Segnale | 2026-01-01 | source | 11 |
-| EP_05 | Il Verdetto | 2026-02-01 | source | 17 |
-
-## STAGIONE ST — Il Sistema (GENESIS, architettura, decisioni)
-
-| ID | Titolo | Data | Status | Min |
-|----|--------|------|--------|-----|
-| EP_T01 | La Dashboard | 2026-03-09 | ready | 10 |
-| EP_T02 | NeuroMap | 2026-03-15 | ready | 9 |
-| EP_T03 | VULCAN | 2026-03-18 | ready | 11 |
-| EP_T04 | SINAPSI | 2026-03-18 | ready | 9 |
-| EP_T05 | Il Sistema Pensa | 2026-05-27 | ready | 12 |
-| EP_T06 | Meno Parti | 2026-05-20 | ready | 11 |
-| EP_T07 | Il Documento | 2026-05-27 | ready | 9 |
-
-## STAGIONE S2 — La Costruzione (build log fisici)
-
-| ID | Titolo | Data | Status | Min |
-|----|--------|------|--------|-----|
-| EP_S2_00 | Config G: Il Gusset Sinistro | 2026-06-01 | draft | 8 |
-| EP_S2_01 | Epoxy Granite: Colata Zero | 2026-07-01 | draft | 10 |
-
-## AUTO — Generati da STATE.json
-
-| ID | Titolo | Data | Status | Min |
-|----|--------|------|--------|-----|
-| EP_AUTO_002 | 8 pezzi, geometria perfetta | 2026-03-22 | ready | 7 |
-| EP_AUTO_003 | HMI acquisito, V32 respira | 2026-03-22 | ready | 7 |
-| EP_AUTO_005 | Asse X: le guide parlano | 2026-03-22 | ready | 7 |
-| EP_AUTO_006 | Dashboard Live: Il Sistema Vede | 2026-03-09 | ready | 7 |
-| EP_AUTO_008 | Maggio 2026 — La Svolta Strutturale | 2026-05-27 | ready | 8 |
-| EP_AUTO_010 | Fondamenta d'acciaio TIG | 2026-03-22 | ready | 8 |
-| EP_AUTO_011 | Knowledge Base Popolata | 2026-03-10 | ready | 8 |
-| EP_AUTO_012 | Componenti V32: dalla teoria alla fabbrica | 2026-03-22 | ready | 8 |
+```
+S0 — Origini          → il seme (3 file, 150 livelli, prima foto)
+S1 — Il Presente      → storia principale (skills → taverna → V32 → 2030)
+S2 — Il Sistema       → maggio 2026: il sistema che impara (RAG, corpo unico, agenti)
+S3 — La Costruzione   → build log fisici (gusset, epoxy, mandrino, primo pezzo H7)
+AUTO                  → generati automaticamente da milestone STATE.json
+```
 
 ---
 
-## Source directories
+## S0 — ORIGINI (pre-sistema)
+*Il seme. Prima che ci fosse un sistema.*
 
-- `S0_ORIGINI/` → originali da MENTE/SESSIONI/STORIE/ — da migrare con frontmatter
-- `S1_PRESENTE/` → originali da MENTE/SESSIONI/STORIE/ — da migrare con frontmatter
-- `ST_SISTEMA/` → episodi con frontmatter LLM-ready ✓
-- `S2_COSTRUZIONE/` → build log fisici — in produzione
-- `AUTO/` → generati da content_trigger.py su milestone STATE.json
+| ID | File | Titolo | Data | Status |
+|----|------|--------|------|--------|
+| S0_00 | `S0_ORIGINI/EP_S0_00_IL_SOCIO.md` | Il Socio | pre-2026 | ready |
+| S0_01 | `S0_ORIGINI/EP_S0_01_L_ORGANISMO.md` | L'Organismo | pre-2026 | ready |
+| S0_02 | `S0_ORIGINI/EP_S0_02_LA_VERIFICA.md` | La Verifica | 2026-02-13 | ready |
+| S0_03 | `S0_ORIGINI/EP_S0_03_LA_FORMULA.md` | La Formula | pre-2026 | ready |
 
-## Arco narrativo
+---
+
+## S1 — IL PRESENTE (storia principale)
+*Da quindici anni di industria a 0.008 mm nel 2030.*
+
+| ID | File | Titolo | Data | Status |
+|----|------|--------|------|--------|
+| S1_00 | `S1_PRESENTE/EP_00_ORIGINE.md` | Origine | 2026-03-01 | ready |
+| S1_01 | `S1_PRESENTE/EP_01_LA_TAVERNA.md` | La Taverna | 2026-03-01 | ready |
+| S1_02 | `S1_PRESENTE/EP_02_IL_REATTORE.md` | Il Reattore | 2026-03-01 | ready |
+| S1_03 | `S1_PRESENTE/EP_03_IL_PARADOSSO.md` | Il Paradosso | 2026-03-01 | ready |
+| S1_04 | `S1_PRESENTE/EP_04_IL_SEGNALE.md` | Il Segnale | 2026-03-01 | ready |
+| S1_05 | `S1_PRESENTE/EP_05_IL_VERDETTO.md` | Il Verdetto | 2026-03-01 | ready |
+
+**Documento compendio:** `MENTE/SESSIONI/STORIE/FILONE_UNICO.md` — S0+S1 come testo continuo
+
+---
+
+## S2 — IL SISTEMA (maggio 2026 — il sistema che impara)
+*Ogni decisione aggiorna il sistema. Ogni aggiornamento cambia le decisioni future.*
+
+| ID | File | Titolo | Nucleo | Status |
+|----|------|--------|--------|--------|
+| S2_00 | `S2_SISTEMA/EP_S2_00_IL_DISTACCO.md` | Il Distacco | Corpo unico vs molle — la scelta migliore | ready |
+| S2_01 | `S2_SISTEMA/EP_S2_01_IL_CERVELLO_IBRIDO.md` | Il Cervello Ibrido | RAG v4.0 BM25+semantico+CrossEncoder | ready |
+| S2_02 | `S2_SISTEMA/EP_S2_02_L_ORCHESTRATORE.md` | L'Orchestratore | stop_hooks 4.7s + Research Agent 13 fonti | ready |
+| S2_03 | `S2_SISTEMA/EP_S2_03_LA_TELA.md` | La Tela | CanvasLayout v5→v6→v6.1 + MatteoSection | ready |
+| S2_04 | `S2_SISTEMA/EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md` | Il CV che Nessuno Capisce | AI come competenza — GitHub come prova | ready |
+| S2_05 | `S2_SISTEMA/EP_S2_05_IL_SILENZIO.md` | Il Silenzio | 63 giorni persi → story_agent automatico | ready |
+| S2_AUTO | `S2_SISTEMA/EP_2026*` | Episodi auto (story_agent) | Generati ogni notte da git log | auto |
+
+---
+
+## S3 — LA COSTRUZIONE (in produzione — build log fisici)
+*Dalla progettazione alla macchina reale. Ogni pezzo documentato.*
+
+| ID | File | Titolo | Status |
+|----|------|--------|--------|
+| S3_00 | — | Il Gusset Sinistro | da scrivere (dopo saldatura) |
+| S3_01 | — | Epoxy Granite — Colata Zero | da scrivere (dopo fill) |
+| S3_02 | — | Il Mandrino | da scrivere (dopo ordine + montaggio) |
+| S3_03 | — | Il Primo Pezzo H7 | da scrivere (chiude il ciclo S1) |
+
+---
+
+## AUTO — Generati da milestone STATE.json
+*Legacy — vecchio content_trigger.py. Da riorganizzare in S0/S1/S2.*
+
+| ID | Titolo | Data | Status |
+|----|--------|------|--------|
+| EP_AUTO_002 | 8 pezzi, geometria perfetta | 2026-03-22 | ready |
+| EP_AUTO_003 | HMI acquisito, V32 respira | 2026-03-22 | ready |
+| EP_AUTO_005 | Asse X: le guide parlano | 2026-03-22 | ready |
+| EP_AUTO_006 | Dashboard Live: Il Sistema Vede | 2026-03-09 | ready |
+| EP_AUTO_008 | Maggio 2026 — La Svolta Strutturale | 2026-05-27 | ready |
+| EP_AUTO_010 | Fondamenta d'acciaio TIG | 2026-03-22 | ready |
+| EP_AUTO_011 | Knowledge Base Popolata | 2026-03-10 | ready |
+| EP_AUTO_012 | Componenti V32 | 2026-03-22 | ready |
+| EP_AUTO_013-019 | Vari milestone | 2026-05-27/28 | ready |
+
+---
+
+## AUTOMAZIONE STORY AGENT
+
+**Script:** `NODES/STORY_AGENT/story_agent.py`
+**Cron Windows:** ogni notte alle 02:07 — `TITANIUM_OS_StoryAgent`
+**Stop hook:** ogni fine sessione Claude Code — genera bozza immediata
+**Output:** `S2_SISTEMA/EP_YYYYMMDD_*.md` + mirror in `MENTE/SESSIONI/STORIE/S2_SISTEMA/`
+
+**Comando manuale:**
+```powershell
+# episodi nuovi (commit dall'ultima run)
+python NODES\STORY_AGENT\story_agent.py
+
+# backfill completo storico
+python NODES\STORY_AGENT\story_agent.py --backfill --max 20
+```
+
+---
+
+## VISION FUTURA — S4+
 
 ```
-S0 Origini        → il seme (tre file, 150 livelli, prima foto)
-S1 Presente       → la storia principale (skills, taverna, V32, MIMS, EVA, verdetto 2030)
-ST Sistema        → il sistema nervoso (Dashboard, GENESIS, decisioni architetturali)
-S2 Costruzione    → build log fisici (gusset, Epoxy Granite, assi, primo pezzo)
-AUTO              → milestone → episodio automatico
+S4 — La Scala      → dal lab al laboratorio (2027-2028)
+S5 — Il Mercato    → MIMS nel marketplace, primi clienti B2B
+S6 — Il Capannone  → luglio 2030, fine del ciclo, inizio del prossimo
 ```
 
-## Prossimi episodi da scrivere
-
-- EP_S2_02: Asse Y — guida destra prima, poi sinistra
-- EP_S2_03: Il Mandrino (quando arriva il 2.2kW ER20)
-- EP_S2_04: Primo Pezzo H7 — il numero che chiude il ciclo
-- EP_T08: Il Brevetto — come si costruisce un moat con la conoscenza di processo
-- EP_S0_04: L'Investimento — EUR 2.250 e il recupero dell'81%
+**Avatar futuro (AVA):** navigazione interattiva degli episodi nella dashboard,
+movimento 3D tra stagioni, generazione reel automatica da episodio selezionato.
+Questo è S4+ lavoro — il materiale narrativo lo generiamo adesso.
