@@ -15,13 +15,25 @@ del temp_log.txt
 
 if "%COMMITS%"=="" (
     echo [night_push] nessun commit da pushare — skip
-    exit /b 0
+) else (
+    echo [night_push] push in corso...
+    git push origin main
+    if errorlevel 1 (
+        echo [night_push] ERR: push fallito
+    ) else (
+        echo [night_push] OK: push completato
+    )
 )
 
-echo [night_push] push in corso...
-git push origin main
-if errorlevel 1 (
-    echo [night_push] ERR: push fallito
-) else (
-    echo [night_push] OK: push completato
+:: Aggiorna sempre il profilo GitHub (stato live)
+echo [night_push] aggiornamento GitHub profile...
+C:\Users\benen\tools\python311\python.exe C:\Users\benen\TITANIUM_OS\TITANIUM_OS\AUTOMATIONS\core\update_github_profile.py >> "%TITANIUM_ROOT%\DATA\logs\night_push.log" 2>&1
+
+:: Rigenera dataset episodi se sono cresciuti (settimanale via day check)
+for /f %%d in ('powershell -Command "(Get-Date).DayOfWeek"') do set DAY=%%d
+if "%DAY%"=="Saturday" (
+    echo [night_push] sabato: rigenero dataset episodi...
+    C:\Users\benen\tools\python311\python.exe C:\Users\benen\TITANIUM_OS\TITANIUM_OS\CONTENT_ENGINE\scripts\episodes_to_dataset.py >> "%TITANIUM_ROOT%\DATA\logs\night_push.log" 2>&1
 )
+
+echo [night_push] done %DATE% %TIME% >> "%TITANIUM_ROOT%\DATA\logs\night_push.log"
