@@ -82,7 +82,7 @@ class DebouncedScanner:
             try:
                 env = {**os.environ, "MENTE_DIR": str(MENTE_DIR), "PYTHONPATH": str(REPO_ROOT)}
                 result = subprocess.run(
-                    [PYTHON, str(RAG_SCRIPT), "--rebuild"],
+                    [PYTHON, str(RAG_SCRIPT), "--incremental"],
                     capture_output=True, text=True, timeout=300, env=env,
                 )
                 if result.returncode == 0:

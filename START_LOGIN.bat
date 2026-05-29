@@ -1,6 +1,5 @@
 @echo off
-:: START_LOGIN.bat — Auto-avvio TITANIUM_OS al login | v1.1 | 2026-05-28
-:: Avvia API + Dashboard istantaneamente, RAG rebuild in background.
+:: START_LOGIN.bat — Auto-avvio TITANIUM_OS al login | v1.2 | 2026-05-29
 :: Non blocca il login — tutto non-bloccante.
 
 set PYTHON=%USERPROFILE%\tools\python311\python.exe
@@ -14,17 +13,17 @@ if exist "%USERPROFILE%\TITANIUM_OS\_VAULT\KEYS\titanium_os.env" (
     )
 )
 
-:: 1. API Server
-start /B "TITANIUM-API" "%PYTHON%" "%TI_ROOT%api_server.py"
+:: 1. Watchdog (supervisore — avvia e monitora API + WATCHER + MENTE_WATCHER)
+start /B "TITANIUM-WATCHDOG" "%PYTHON%" "%TI_ROOT%CORE\watchdog.py"
 
 :: 2. Dashboard
 start /B "TITANIUM-DASH" cmd /c "cd /d %TI_ROOT%DASHBOARD && %NODE%\npm.cmd run dev --silent"
 
-:: 3. RAG rebuild in background (non blocca)
+:: 3. RAG rebuild in background (sync iniziale MENTE/ -> ChromaDB)
 start /B "TITANIUM-RAG" "%PYTHON%" "%TI_ROOT%NODES\MENTE_RAG\rag_engine.py" --rebuild
 
-:: 4. MENTE Watcher
-start /B "TITANIUM-WATCHER" "%PYTHON%" "%TI_ROOT%NODES\MENTE_WATCHER\mente_watcher.py"
+:: 4. n8n
+start /B "TITANIUM-N8N" cmd /c "%NODE%\npx.cmd n8n"
 
 :: 5. Apri Windows Terminal in TITANIUM_OS (claude-ti pronto)
 set WT=%LOCALAPPDATA%\Microsoft\WindowsApps\wt.exe
