@@ -887,5 +887,63 @@ Aggiorna la riga in cima al file:
 
 ---
 
-*Manuale generato in sessione #8 — 2026-05-28*
-*Prossimo aggiornamento automatico: alla chiusura della sessione corrente.*
+---
+
+## 16. Content Engine — Episodi e Story Agent
+
+### Struttura stagioni
+
+```
+S0 — Origini        → 4 ep  — il seme (pre-sistema)
+S1 — Il Presente    → 6 ep  — storia principale (skills → 2030)
+S2 — Il Sistema     → 6+ ep — maggio 2026, il sistema che impara
+S3 — Costruzione    → da scrivere — build log fisici (gusset, mandrino, primo pezzo)
+AUTO                → generati da milestones — legacy content_trigger
+MOMENTI             → episodi brevi (5-7 min) — singola decisione o scoperta
+```
+
+### Story Agent — generazione automatica
+
+Lo story agent analizza git commits e sessioni recenti e genera automaticamente bozze di episodi.
+
+```powershell
+# manuale — episodi dai commit recenti non processati
+python NODES\STORY_AGENT\story_agent.py
+
+# backfill — tutto lo storico git
+python NODES\STORY_AGENT\story_agent.py --backfill --max 20
+
+# alias PS
+new-episode          # equivalente al comando manuale sopra
+```
+
+**Automatismi:**
+- **Stop hook** — ogni fine sessione Claude Code lancia story_agent in background
+- **Task Scheduler** — ogni notte alle 02:07 (`TITANIUM_OS_StoryAgent`)
+
+Output: `CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_YYYYMMDD_*.md`
+Mirror automatico: `MICROINDUSTRY/MENTE/SESSIONI/STORIE/S2_SISTEMA/`
+
+### Episodi Intermezzo (MOMENTI)
+
+I Momenti sono episodi brevi (5-7 min) per catturare una singola decisione, scoperta o svolta senza aspettare un episodio principale. Formato:
+
+```markdown
+# MOMENTO — [Titolo breve]
+**Data:** YYYY-MM-DD | **Durata:** 5-7 min | **Tipo:** decisione/scoperta/svolta
+
+[2-3 paragrafi narrativi + reel_hook]
+```
+
+**Quando usarli:** decisione tecnica singola, fix importante, insight di officina, acquisto strategico.
+**Dove salvarli:** `CONTENT_ENGINE/DATABASE/episodes/MOMENTI/`
+
+### INDEX episodi
+
+Vedi `CONTENT_ENGINE/DATABASE/INDEX.md` per la lista completa aggiornata di tutti gli episodi.
+Il manuale non duplica l'INDEX — vai direttamente lì per lo stato aggiornato.
+
+---
+
+*Manuale aggiornato in sessione #9 — 2026-05-29*
+*Story agent attivo: cron 02:07 + stop hook ogni sessione.*
