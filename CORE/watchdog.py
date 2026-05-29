@@ -3,8 +3,8 @@
 TITANIUM_OS — AUTOMATION WATCHDOG (#14)
 Modulo    : watchdog.py
 Parte di  : CORE/
-Versione  : 1.0.0
-Data      : 2026-03-16
+Versione  : 1.1.0
+Data      : 2026-05-29
 ========================================================
 Monitora i processi critici di TITANIUM_OS.
 Se uno crasha, lo riavvia automaticamente.
@@ -17,16 +17,20 @@ Avvio: pythonw CORE/watchdog.py (silenzioso)
 import sys
 import os
 import time
-import logging
 import subprocess
 from pathlib import Path
-from datetime import datetime
 
 # ── CONFIGURAZIONE ────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
-LOG_PATH = ROOT / "DATA" / "logs" / "watchdog.log"
-LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+try:
+    from CORE.log import get_logger
+    log = get_logger("watchdog")
+except ImportError:
+    import logging
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [WATCHDOG] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+    log = logging.getLogger("watchdog")
 
 # Intervallo di controllo in secondi
 CHECK_INTERVAL = 30
@@ -49,19 +53,6 @@ PROCESSES = {
         "use_pythonw": False,  # flask ha bisogno di stdout
     },
 }
-
-# ── LOGGING ──────────────────────────────────────────────────
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [WATCHDOG] %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    handlers=[
-        logging.FileHandler(LOG_PATH, encoding="utf-8"),
-        logging.StreamHandler(sys.stdout),
-    ]
-)
-log = logging.getLogger("watchdog")
-
 
 # ── HELPERS ──────────────────────────────────────────────────
 
