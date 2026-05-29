@@ -3,7 +3,7 @@
 TITANIUM_OS — AUTOMATION WATCHDOG (#14)
 Modulo    : watchdog.py
 Parte di  : CORE/
-Versione  : 1.1.0
+Versione  : 1.2.0
 Data      : 2026-05-29
 ========================================================
 Monitora i processi critici di TITANIUM_OS.
@@ -52,6 +52,11 @@ PROCESSES = {
         "cmd": [sys.executable, str(ROOT / "api_server.py")],
         "use_pythonw": False,  # flask ha bisogno di stdout
     },
+    "dashboard": {
+        "match": "vite",
+        "cmd": None,  # avviato via npm — usa _restart_dashboard
+        "use_pythonw": False,
+    },
 }
 
 # ── HELPERS ──────────────────────────────────────────────────
@@ -74,13 +79,28 @@ def _is_running(match: str) -> bool:
         return True  # assume attivo per evitare riavvii falsi
 
 
+def _restart_dashboard():
+    """Riavvia la dashboard Vite via npm run dev."""
+    node_dir = Path(os.environ.get("USERPROFILE", str(Path.home()))) / "tools" / "nodejs"
+    npm = node_dir / "npm.cmd"
+    dash_dir = ROOT / "DASHBOARD"
+    subprocess.Popen(
+        [str(npm), "run", "dev", "--silent"],
+        cwd=str(dash_dir),
+        creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP,
+    )
+    log.info("RIAVVIATA: dashboard (Vite :5173)")
+
+
 def _restart(name: str, config: dict):
     """Riavvia un processo crashato."""
     log.warning(f"CRASH RILEVATO: {name} — riavvio in corso...")
+    if name == "dashboard":
+        _restart_dashboard()
+        return
     try:
         cmd = config["cmd"]
         if config.get("use_pythonw"):
-            # Sostituisce python con pythonw (avvio silenzioso)
             pythonw = Path(sys.executable).parent / "pythonw.exe"
             if pythonw.exists():
                 cmd = [str(pythonw)] + cmd[1:]
