@@ -787,6 +787,71 @@ def run_program(name: str):
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
+# ── AGENTS ───────────────────────────────────────────────────
+
+AGENTS_DB = BASE_DIR / "NODES" / "AGENTS" / "agents_db.json"
+
+@app.get("/api/agents")
+def get_agents():
+    """Lista agenti da agents_db.json."""
+    if not AGENTS_DB.exists():
+        return jsonify({"agents": {}}), 404
+    data = json.loads(AGENTS_DB.read_text(encoding="utf-8"))
+    return jsonify(data)
+
+@app.post("/api/agents/ask")
+def agents_ask():
+    """Invia domanda a un agente e restituisce la risposta."""
+    body = request.get_json(silent=True) or {}
+    agent_key = body.get("agent", "").strip()
+    question  = body.get("question", "").strip()
+    use_rag   = body.get("use_rag", False)
+
+    if not agent_key or not question:
+        return jsonify({"ok": False, "error": "agent e question obbligatori"}), 400
+
+    # carica agenti
+    if not AGENTS_DB.exists():
+        return jsonify({"ok": False, "error": "agents_db.json non trovato"}), 500
+    db = json.loads(AGENTS_DB.read_text(encoding="utf-8"))
+    agents = db.get("agents", {})
+    agent = agents.get(agent_key)
+    if not agent:
+        return jsonify({"ok": False, "error": f"agente '{agent_key}' non trovato"}), 404
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        return jsonify({"ok": False, "error": "ANTHROPIC_API_KEY mancante"}), 500
+
+    try:
+        import anthropic as _ant
+        client = _ant.Anthropic(api_key=api_key)
+
+        system_prompt = f"""Sei {agent['name']} {agent.get('emoji','')} — {agent['role']}.
+
+EXPERTISE:
+{chr(10).join(f"- {e}" for e in agent.get('expertise', []))}
+
+TONO: {agent.get('tone', '')}
+
+Sei integrato in TITANIUM_OS, il sistema cognitivo di Matteo Benenati (artigiano industriale, ADHD, CNC V32 in taverna 12mq, Milano).
+Rispondi in italiano. Sii tecnico, preciso, diretto. Non c'è limite di lunghezza — rispondi quanto serve.
+
+REGOLA GLOSSARIO: Quando usi un termine tecnico o sigla che potrebbe non essere familiare, subito dopo la parola aggiungi una mini-spiegazione tra parentesi quadre in corsivo piccolo, es: "profilato HEA [¹ sezione d'acciaio a doppio T, ottimizzata per carichi flessionali]". Per i termini più importanti della risposta, aggiungi al fondo una sezione "📖 GLOSSARIO RAPIDO" con 2-3 righe max per termine: nome → definizione pratica → perché conta in questo contesto."""
+
+        response = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1024,
+            system=system_prompt,
+            messages=[{"role": "user", "content": question}],
+        )
+        answer = response.content[0].text
+        return jsonify({"ok": True, "agent": agent_key, "answer": answer,
+                        "model": "claude-haiku-4-5"})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
 # ── MAIN ─────────────────────────────────────────────────────
 if __name__ == "__main__":
     print("=" * 50)

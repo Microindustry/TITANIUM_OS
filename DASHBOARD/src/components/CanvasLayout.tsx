@@ -4,8 +4,7 @@
 import { useState, useRef, useEffect } from "react";
 import {
   ArrowLeft, ArrowRight, AlertTriangle, CheckCircle2,
-  StickyNote, Zap, Activity, RefreshCw, ScanLine,
-  FileText, ChevronRight, User, Cpu, Layers,
+  StickyNote, ChevronRight, User, Cpu, Layers,
   Box, Mic, Circle,
 } from "lucide-react";
 import { useGlobalState } from "../hooks/SystemStateContext";
@@ -60,90 +59,6 @@ function Breadcrumb({ stack, onBack }: { stack: NavNode[]; onBack: () => void })
   );
 }
 
-// ── HOME: HERO STATUS ─────────────────────────────────────────────────────────
-function HeroStatus({ state, online }: { state: any; online: boolean }) {
-  const [nextInput, setNextInput] = useState("");
-  const milestone  = state?.active_milestone ?? "—";
-  const nextStep   = state?.next_step ?? "—";
-  const blockers: string[] = state?.blockers ?? [];
-
-  const saveNext = () => {
-    if (!nextInput.trim()) return;
-    api("/api/state", { method: "PATCH", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ next_step: nextInput.trim() }) });
-    setNextInput("");
-  };
-
-  const removeBlocker = (b: string) =>
-    api("/api/state", { method: "PATCH", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ blockers: blockers.filter(x => x !== b) }) });
-
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-      {/* Milestone */}
-      <div className="lg:col-span-2 bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5
-                      shadow-lg shadow-emerald-500/5">
-        <div className="flex items-center gap-2 mb-2">
-          <div className={`w-2 h-2 rounded-full ${online ? "bg-emerald-400 animate-pulse" : "bg-slate-600"}`} />
-          <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-            Milestone attivo · {online ? "LIVE" : "offline"}
-          </span>
-        </div>
-        <h2 className="text-lg font-bold text-white mb-3 leading-snug">{milestone}</h2>
-        <div className="flex items-start gap-2 mb-4">
-          <ArrowRight size={13} className="text-emerald-400 flex-shrink-0 mt-0.5" />
-          <span className="text-sm text-emerald-300 leading-snug">{nextStep}</span>
-        </div>
-        <div className="flex gap-2">
-          <input
-            value={nextInput}
-            onChange={e => setNextInput(e.target.value)}
-            onKeyDown={e => e.key === "Enter" && saveNext()}
-            placeholder="Aggiorna prossimo step..."
-            className="flex-1 bg-slate-800/60 border border-slate-700/50 rounded-lg px-3 py-2 text-sm
-                       text-slate-200 placeholder-slate-700 focus:outline-none focus:border-emerald-500/40"
-          />
-          <button onClick={saveNext}
-            className="px-3 py-2 bg-emerald-900/30 border border-emerald-500/30 hover:border-emerald-400
-                       text-emerald-400 rounded-lg text-xs font-mono uppercase tracking-wider transition-colors">
-            set
-          </button>
-        </div>
-      </div>
-
-      {/* Blockers */}
-      <div className={`bg-slate-900/80 border rounded-2xl p-5 shadow-lg ${
-        blockers.length ? "border-rose-500/30 shadow-rose-500/5" : "border-slate-700/50"
-      }`}>
-        <div className="flex items-center gap-2 mb-3">
-          <AlertTriangle size={12} className={blockers.length ? "text-rose-400" : "text-slate-600"} />
-          <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Blockers</span>
-          {blockers.length > 0 && (
-            <span className="ml-auto text-[9px] font-mono bg-rose-900/40 text-rose-400 px-1.5 py-0.5 rounded">
-              {blockers.length}
-            </span>
-          )}
-        </div>
-        {blockers.length === 0 ? (
-          <div className="flex items-center gap-2 text-sm text-slate-600">
-            <CheckCircle2 size={13} className="text-emerald-500/40" /> Nessun blocker
-          </div>
-        ) : (
-          <div className="space-y-2">
-            {blockers.map(b => (
-              <div key={b} className="flex items-start gap-2 group">
-                <span className="text-rose-500 mt-0.5 flex-shrink-0 text-xs">▶</span>
-                <span className="text-sm text-slate-300 flex-1 leading-snug">{b}</span>
-                <button onClick={() => removeBlocker(b)}
-                  className="opacity-0 group-hover:opacity-100 text-slate-700 hover:text-rose-400 text-xs transition-opacity">✕</button>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
 
 // ── HOME: PILLAR GRID — celle grandi e fisiche ────────────────────────────────
 function PillarGrid({ state, onEnter }: { state: any; onEnter: (id: RoomId, label: string) => void }) {
@@ -258,45 +173,6 @@ function QuickNotes({ state }: { state: any }) {
   );
 }
 
-// ── HOME: QUICK ACTIONS ───────────────────────────────────────────────────────
-const ACTIONS = [
-  { id: "scan",  label: "Scan MENTE",  icon: ScanLine,  color: "text-emerald-400 border-emerald-500/30 hover:border-emerald-400 hover:bg-emerald-900/20", endpoint: "/api/scan",        method: "POST" },
-  { id: "rag",   label: "RAG Rebuild", icon: RefreshCw, color: "text-cyan-400 border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-900/20",             endpoint: "/api/rag/rebuild", method: "POST" },
-  { id: "brief", label: "Daily Brief", icon: FileText,  color: "text-indigo-400 border-indigo-500/30 hover:border-indigo-400 hover:bg-indigo-900/20",     endpoint: "/api/daily-brief", method: "POST" },
-  { id: "check", label: "API Health",  icon: Activity,  color: "text-slate-400 border-slate-600 hover:border-slate-400 hover:bg-slate-800/40",            endpoint: "/api/health",      method: "GET" },
-];
-
-function QuickActions() {
-  const [st, setSt] = useState<Record<string, "idle" | "loading" | "ok" | "err">>({});
-  const run = async (a: typeof ACTIONS[0]) => {
-    setSt(s => ({ ...s, [a.id]: "loading" }));
-    const res = await api(a.endpoint, { method: a.method, headers: { "Content-Type": "application/json" }, body: a.method === "GET" ? undefined : "{}" });
-    setSt(s => ({ ...s, [a.id]: res ? "ok" : "err" }));
-    setTimeout(() => setSt(s => ({ ...s, [a.id]: "idle" })), 2000);
-  };
-  return (
-    <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
-      <div className="flex items-center gap-2 mb-3">
-        <Zap size={12} className="text-cyan-400" />
-        <span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Azioni rapide</span>
-      </div>
-      <div className="grid grid-cols-2 gap-2">
-        {ACTIONS.map(a => {
-          const Icon = a.icon;
-          const status = st[a.id] ?? "idle";
-          return (
-            <button key={a.id} onClick={() => run(a)} disabled={status === "loading"}
-              className={`flex items-center gap-2 px-3 py-2.5 rounded-xl border bg-slate-900/50
-                          text-sm font-mono transition-all disabled:opacity-50 ${a.color}`}>
-              <Icon size={12} className={status === "loading" ? "animate-spin" : ""} />
-              <span className="text-xs">{status === "ok" ? "OK ✓" : status === "err" ? "ERR" : a.label}</span>
-            </button>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 // ── HOME: ACCESSO RAPIDO SEZIONI ──────────────────────────────────────────────
 function SectionLinks({ onEnter }: { onEnter: (id: RoomId, label: string) => void }) {
@@ -315,7 +191,7 @@ function SectionLinks({ onEnter }: { onEnter: (id: RoomId, label: string) => voi
         return (
           <button
             key={s.label}
-            onClick={() => s.id ? onEnter(s.id, s.label) : navigateTo(s.nav!)}
+            onClick={() => s.id ? onEnter(s.id, s.label) : navigateTo(s.nav! as any)}
             className="group flex items-center gap-2.5 p-3 rounded-xl border border-slate-800
                        bg-slate-900/60 hover:border-slate-600 hover:bg-slate-800/60 transition-all text-left"
           >
@@ -669,9 +545,21 @@ function ClaudeRoom() {
 }
 
 // ── CANVAS PRINCIPALE ─────────────────────────────────────────────────────────
-export function CanvasLayout() {
+export function CanvasLayout({ room: externalRoom }: { room?: string }) {
   const { state, isOnline: online } = useGlobalState();
-  const [navStack, setNavStack] = useState<NavNode[]>([{ id: "home", label: "Home" }]);
+
+  // Se viene passata una room dall'esterno (da App.tsx sidebar), usiamo quella
+  // altrimenti manteniamo la navigazione interna con stack
+  const [navStack, setNavStack] = useState<NavNode[]>([
+    { id: (externalRoom as RoomId) ?? "home", label: externalRoom?.toUpperCase() ?? "Home" }
+  ]);
+
+  // Sincronizza con prop esterna
+  useEffect(() => {
+    if (externalRoom) {
+      setNavStack([{ id: externalRoom as RoomId, label: externalRoom.toUpperCase() }]);
+    }
+  }, [externalRoom]);
 
   const currentRoom = navStack[navStack.length - 1].id;
 
@@ -681,7 +569,6 @@ export function CanvasLayout() {
   };
   const popRoom = () => setNavStack(s => s.length > 1 ? s.slice(0, -1) : s);
 
-  // ESC per tornare indietro
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape" && navStack.length > 1) popRoom();
@@ -691,53 +578,45 @@ export function CanvasLayout() {
   }, [navStack]);
 
   return (
-    <div className="h-full flex flex-col" style={{ background: "radial-gradient(ellipse at 20% 0%, #0d1f3c 0%, #070d1a 50%, #050a14 100%)" }}>
-      {/* Breadcrumb */}
-      <Breadcrumb stack={navStack} onBack={popRoom} />
+    <div className="h-full flex flex-col">
+      {/* Breadcrumb — solo se navigazione interna attiva */}
+      {navStack.length > 1 && <Breadcrumb stack={navStack} onBack={popRoom} />}
 
-      {/* Contenuto con scroll */}
-      <div className="flex-1 overflow-y-scroll" style={{ touchAction: "pan-y" }}>
-        <div className="max-w-6xl mx-auto px-4 py-5 space-y-4">
+      <div className="flex-1 overflow-y-auto">
+        <div className="max-w-5xl mx-auto px-5 py-5 space-y-5">
 
           {/* ── HOME ── */}
           {currentRoom === "home" && (
             <>
-              {/* Status compatto */}
               <div className="flex items-center gap-3 flex-wrap">
                 <div>
-                  <h1 className="text-2xl font-black text-white tracking-tight">TITANIUM_OS</h1>
-                  <p className="text-[10px] text-slate-500 font-mono mt-0.5">
+                  <h1 className="text-xl font-black text-white tracking-tight">TITANIUM_OS</h1>
+                  <p className="text-[9px] text-slate-600 font-mono mt-0.5">
                     {new Date().toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" })}
                     {" · "}{online
-                      ? <span className="text-emerald-400">sistema live</span>
+                      ? <span className="text-emerald-400">live</span>
                       : <span className="text-slate-600">offline</span>}
                   </p>
                 </div>
-                {/* Milestone pill */}
-                <div className="ml-auto flex items-center gap-2 bg-slate-900/80 border border-slate-700/50 rounded-xl px-4 py-2.5">
-                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+                <div className="ml-auto flex items-center gap-2 bg-slate-900/60 border border-slate-800 rounded-xl px-3 py-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Milestone</div>
-                    <div className="text-sm font-bold text-white">{state?.active_milestone ?? "—"}</div>
+                    <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest">Milestone</div>
+                    <div className="text-[11px] font-bold text-white">{state?.active_milestone ?? "—"}</div>
                   </div>
                 </div>
-                {/* Blockers pill */}
                 {(state?.blockers ?? []).length > 0 && (
-                  <div className="flex items-center gap-2 bg-rose-950/60 border border-rose-500/40 rounded-xl px-4 py-2.5">
-                    <AlertTriangle size={13} className="text-rose-400 flex-shrink-0" />
+                  <div className="flex items-center gap-2 bg-rose-950/40 border border-rose-500/30 rounded-xl px-3 py-2">
+                    <AlertTriangle size={11} className="text-rose-400 flex-shrink-0" />
                     <div>
-                      <div className="text-[9px] font-mono text-rose-400/70 uppercase tracking-widest">Blockers</div>
-                      <div className="text-sm font-bold text-rose-300">{state.blockers.length} attivi</div>
+                      <div className="text-[8px] font-mono text-rose-400/60 uppercase tracking-widest">Blockers</div>
+                      <div className="text-[11px] font-bold text-rose-300">{state?.blockers?.length ?? 0}</div>
                     </div>
                   </div>
                 )}
               </div>
-
-              {/* Le 5 celle — protagoniste */}
               <PillarGrid state={state} onEnter={pushRoom} />
-
-              {/* Sezioni secondarie — discreto in fondo */}
-              <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-800/40">
+              <div className="pt-2 border-t border-slate-800/40">
                 <SectionLinks onEnter={pushRoom} />
               </div>
             </>

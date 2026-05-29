@@ -347,7 +347,7 @@ export function MdManager() {
           )}
         </div>
         <button
-          onClick={load}
+          onClick={() => load()}
           disabled={loading}
           className="p-1.5 text-slate-600 hover:text-emerald-400 border border-slate-700 rounded-lg transition-colors disabled:opacity-40"
         >

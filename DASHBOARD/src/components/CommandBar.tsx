@@ -201,7 +201,7 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
       let body: Record<string, unknown>;
       if (field === "blocker") {
         // append to array
-        const cur = await callAPI("/api/state", "GET");
+        await callAPI("/api/state", "GET");
         body = { blockers: [editVal.trim()] };
       } else {
         body = { [field]: editVal.trim() };

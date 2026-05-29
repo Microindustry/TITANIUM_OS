@@ -618,7 +618,7 @@ export function NeuroOSLayout({ systemState }: { systemState?: any }) {
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const [mapSize,     setMapSize]     = useState({ w: 1000, h: 580 });
   const [showNote,    setShowNote]    = useState(false);
-  const [animKey,     setAnimKey]     = useState(0);
+  const [_animKey,    setAnimKey]     = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [zoomNode,    setZoomNode]    = useState<string | null>(null);
   const mapRef = useRef<HTMLDivElement>(null);

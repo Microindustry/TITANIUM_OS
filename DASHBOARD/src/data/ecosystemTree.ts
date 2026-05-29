@@ -11,7 +11,7 @@ export interface EcoNode {
   children?: EcoNode[];
 }
 
-const _u = (typeof process !== 'undefined' && process.env.USERNAME) || 'benen';
+const _u = 'benen';
 const R  = `C:/Users/${_u}/TITANIUM_OS/TITANIUM_OS`;
 const M  = `C:/Users/${_u}/MICROINDUSTRY/MENTE`;
 const S  = `C:/Users/${_u}/MICROINDUSTRY/WORKSPACE`;
