@@ -1,9 +1,10 @@
-# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.0 | 2026-05-27
+# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.1 | 2026-05-29
 # Server MCP locale — espone TITANIUM_OS a Claude Code via stdio
 # Tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready
 
 import sys
 import json
+import logging
 import asyncio
 from datetime import datetime
 from pathlib import Path
@@ -22,6 +23,12 @@ STATE_FILE = REPO_ROOT / "BRAIN" / "STATE.json"
 DATA_DIR   = REPO_ROOT / "DATA"
 
 sys.path.insert(0, str(REPO_ROOT))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("mcp_server")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [mcp_server] %(levelname)s %(message)s")
+    logger = logging.getLogger("mcp_server")
 
 # ── SERVER INIT ─────────────────────────────────────────────────────────
 server = Server("titanium-os")
@@ -124,8 +131,10 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                 payload = {section: state[section]}
             else:
                 payload = state
+            logger.info("get_state section=%s", section or "all")
             return _ok(json.dumps(payload, ensure_ascii=False, indent=2))
         except Exception as e:
+            logger.error("get_state: %s", e)
             return _ok(f"Errore lettura STATE.json: {e}")
 
     # ── update_milestone ─────────────────────────────────────────────────
@@ -155,8 +164,10 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             with open(STATE_FILE, "w", encoding="utf-8") as f:
                 json.dump(state, f, ensure_ascii=False, indent=2)
 
+            logger.info("update_milestone: %s", {k: v for k, v in arguments.items()})
             return _ok(f"STATE.json aggiornato alle {state['last_update'][:16]}")
         except Exception as e:
+            logger.error("update_milestone: %s", e)
             return _ok(f"Errore update STATE.json: {e}")
 
     # ── search_mente ─────────────────────────────────────────────────────
@@ -166,11 +177,13 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             query   = arguments["query"]
             top_k   = int(arguments.get("top_k", 5))
             rebuild = bool(arguments.get("rebuild", False))
+            logger.info("search_mente: '%s' top_k=%d rebuild=%s", query, top_k, rebuild)
             if rebuild:
                 from NODES.MENTE_RAG.rag_engine import build_index
                 build_index(force=True)
             return _ok(search_and_format(query, top_k))
         except Exception as e:
+            logger.error("search_mente: %s", e)
             return _ok(f"Errore RAG search: {e}")
 
     # ── get_daily_brief ──────────────────────────────────────────────────

@@ -216,6 +216,6 @@ if __name__ == "__main__":
     corrections = run_auto_linker(target, dry_run=args.dry_run)
 
     if args.dry_run and corrections:
-        print(f"\nCorrezioni simulate ({len(corrections)}):")
+        log.info("Correzioni simulate (%d):", len(corrections))
         for c in corrections:
-            print(f"  {c['file']}: '{c['old']}' → '{c['new']}'")
+            log.info("  %s: '%s' → '%s'", c["file"], c["old"], c["new"])

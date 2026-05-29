@@ -263,6 +263,7 @@ def run_full_backup():
 # TEST STANDALONE
 # ============================================================
 if __name__ == "__main__":
-    print("Test: full backup manuale")
+    log = logging.getLogger("backup")
+    log.info("Test: full backup manuale")
     result = run_full_backup()
-    print(f"Backup salvato in: {result}")
+    log.info("Backup salvato in: %s", result)

@@ -267,7 +267,7 @@ if __name__ == "__main__":
         path = CONTENT_ENGINE / "produzione_contenuti" / path
 
     if not path.exists():
-        print(f"File non trovato: {path}")
+        log.error("File non trovato: %s", path)
         sys.exit(1)
 
     channels = []
@@ -277,10 +277,11 @@ if __name__ == "__main__":
         channels.append("telegram")
 
     if not channels:
-        print("Specifica almeno un canale: --linkedin, --telegram, --all")
+        log.error("Specifica almeno un canale: --linkedin, --telegram, --all")
         sys.exit(1)
 
     results = distribute_file(path, channels)
     for r in results:
         status = "OK" if r.get("ok") else "FAIL"
-        print(f"  [{status}] {r.get('platform', '?')} — {r.get('post_id') or r.get('message_id') or r.get('error', '')}")
+        log.info("[%s] %s — %s", status, r.get("platform", "?"),
+                 r.get("post_id") or r.get("message_id") or r.get("error", ""))

@@ -216,4 +216,4 @@ if __name__ == "__main__":
 
     files = run_pipeline(source_content, tema, formats=formati)
     for f in files:
-        print(f"  → {f.name}")
+        log.info("→ %s", f.name)

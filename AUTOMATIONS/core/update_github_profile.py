@@ -2,12 +2,21 @@
 # Aggiorna automaticamente il README del profilo GitHub (Microindustry/Microindustry)
 # Legge STATE.json per milestone e versione aggiornati
 
-import os, sys, json, base64, subprocess
+import os, sys, json, base64, subprocess, logging
 from pathlib import Path
 from datetime import datetime
 
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+_ROOT_UGP = Path(__file__).resolve().parents[3] / "TITANIUM_OS"
+sys.path.insert(0, str(_ROOT_UGP))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("update_github_profile")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [github_profile] %(levelname)s %(message)s")
+    logger = logging.getLogger("update_github_profile")
 
 BASE = Path(__file__).resolve().parents[3]
 STATE_FILE = BASE / "TITANIUM_OS" / "BRAIN" / "STATE.json"
@@ -159,9 +168,9 @@ def update_profile(readme_content):
     )
 
     if result.returncode == 0:
-        print(f"[GitHub Profile] Aggiornato: {datetime.now().strftime('%H:%M:%S')}")
+        logger.info("Profile aggiornato: %s", datetime.now().strftime("%H:%M:%S"))
     else:
-        print(f"[GitHub Profile] ERRORE: {result.stderr[:200]}")
+        logger.error("ERRORE aggiornamento: %s", result.stderr[:200])
 
 if __name__ == "__main__":
     state = load_state()

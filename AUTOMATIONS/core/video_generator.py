@@ -309,9 +309,9 @@ if __name__ == "__main__":
         if not path.is_absolute():
             path = CONTENT_ENGINE / "produzione_contenuti" / path
         result = generate_from_script(path)
-        print(f"\nVideo: {result}")
+        log.info("Video: %s", result)
     elif args.text:
         result = generate_video(args.text, output_name=args.name)
-        print(f"\nVideo: {result}")
+        log.info("Video: %s", result)
     else:
         parser.print_help()

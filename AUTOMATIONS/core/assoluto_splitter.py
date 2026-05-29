@@ -25,8 +25,18 @@ import sys
 import json
 import shutil
 import argparse
+import logging
 from pathlib import Path
 from datetime import datetime
+
+_ROOT_AS = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_AS))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("assoluto_splitter")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [assoluto] %(levelname)s %(message)s")
+    logger = logging.getLogger("assoluto_splitter")
 
 # ============================================================
 # CONFIGURAZIONE
@@ -97,8 +107,7 @@ def split(input_path: Path = None, verbose: bool = True):
         input_path = MASTER_PATH
 
     if not input_path.exists():
-        print(f"ERRORE: File non trovato: {input_path}")
-        print(f"Copia il tuo ASSOLUTO V6.0 in: {MASTER_PATH}")
+        logger.error("File non trovato: %s — copia il tuo ASSOLUTO in: %s", input_path, MASTER_PATH)
         return False
 
     # Crea cartelle se non esistono
@@ -113,7 +122,7 @@ def split(input_path: Path = None, verbose: bool = True):
         lines = f.readlines()
 
     if verbose:
-        print(f"\n[SPLITTER] Analisi: {input_path.name} ({len(lines)} righe)")
+        logger.info("Analisi: %s (%d righe)", input_path.name, len(lines))
 
     # ---- Parsing: suddividi in sezioni per Atto ----------------
     sections = {}          # {nome_file: [righe]}
@@ -148,9 +157,7 @@ def split(input_path: Path = None, verbose: bool = True):
 
     # ---- Scrittura file atti ------------------------------------
     if not sections:
-        print("[SPLITTER] ATTENZIONE: nessun Atto rilevato. Verificare formato master.")
-        print("  Il documento deve contenere righe come: '# ATTO III: ...'")
-        # Salva comunque tutto come un unico atto
+        logger.warning("Nessun Atto rilevato — verificare formato master. Il doc deve contenere righe come: '# ATTO III: ...'")
         sections["ATTO_COMPLETO"] = lines
 
     saved = []
@@ -164,7 +171,7 @@ def split(input_path: Path = None, verbose: bool = True):
 
         saved.append(fname)
         if verbose:
-            print(f"  ✓ {fname}.md ({len(content_lines)} righe)")
+            logger.info("✓ %s.md (%d righe)", fname, len(content_lines))
 
     # ---- Aggiorna changelog ASSOLUTO ---------------------------
     _write_assoluto_changelog(
@@ -173,7 +180,7 @@ def split(input_path: Path = None, verbose: bool = True):
     )
 
     if verbose:
-        print(f"\n[SPLITTER] Completato: {len(saved)} atti salvati in {ATTI_DIR}")
+        logger.info("Completato: %d atti salvati in %s", len(saved), ATTI_DIR)
 
     return True
 
@@ -194,7 +201,7 @@ def compose(output_path: Path = None, verbose: bool = True):
         output_path = MASTER_PATH
 
     if not ATTI_DIR.exists() or not any(ATTI_DIR.iterdir()):
-        print(f"ERRORE: Nessun atto trovato in {ATTI_DIR}")
+        logger.error("Nessun atto trovato in %s", ATTI_DIR)
         return False
 
     # Ordine degli atti per composizione
@@ -212,7 +219,7 @@ def compose(output_path: Path = None, verbose: bool = True):
     ]
 
     if verbose:
-        print(f"\n[COMPOSER] Composizione master: {output_path.name}")
+        logger.info("Composizione master: %s", output_path.name)
 
     composed_lines = []
 
@@ -234,7 +241,7 @@ def compose(output_path: Path = None, verbose: bool = True):
             composed_lines.append("\n\n---\n\n")
             included.append(fname)
             if verbose:
-                print(f"  ✓ {fname}.md")
+                logger.info("✓ %s.md", fname)
 
     # Aggiungi eventuali atti non nell'ordine standard
     for atto_file in sorted(ATTI_DIR.glob("*.md")):
@@ -246,7 +253,7 @@ def compose(output_path: Path = None, verbose: bool = True):
             composed_lines.append("\n\n---\n\n")
             included.append(fname)
             if verbose:
-                print(f"  ✓ {fname}.md (extra)")
+                logger.info("✓ %s.md (extra)", fname)
 
     # Archivia versione precedente
     _archive_master()
@@ -262,8 +269,7 @@ def compose(output_path: Path = None, verbose: bool = True):
 
     if verbose:
         total_lines = sum(len(l.split("\n")) for l in composed_lines)
-        print(f"\n[COMPOSER] Master salvato: {output_path}")
-        print(f"  {len(included)} atti inclusi, ~{total_lines} righe totali")
+        logger.info("Master salvato: %s (%d atti, ~%d righe)", output_path, len(included), total_lines)
 
     return True
 
@@ -334,20 +340,18 @@ def main():
         compose(output_path=args.output)
 
     elif args.action == "status":
-        print(f"\n[ASSOLUTO STATUS]")
-        print(f"  Master   : {MASTER_PATH}")
-        print(f"  Esiste   : {'✓' if MASTER_PATH.exists() else '✗'}")
-        print(f"  Atti dir : {ATTI_DIR}")
+        logger.info("ASSOLUTO STATUS — master: %s [%s]",
+                    MASTER_PATH, "✓" if MASTER_PATH.exists() else "✗")
+        logger.info("Atti dir: %s", ATTI_DIR)
         if ATTI_DIR.exists():
             atti = list(ATTI_DIR.glob("*.md"))
-            print(f"  Atti     : {len(atti)}")
+            logger.info("Atti: %d", len(atti))
             for a in sorted(atti):
                 lines = len(a.read_text(encoding="utf-8").split("\n"))
-                print(f"    - {a.name} ({lines} righe)")
+                logger.info("  - %s (%d righe)", a.name, lines)
         if VERSIONS_DIR.exists():
             versions = list(VERSIONS_DIR.glob("*.md"))
-            print(f"  Versioni : {len(versions)}")
-        print()
+            logger.info("Versioni: %d", len(versions))
 
 
 if __name__ == "__main__":

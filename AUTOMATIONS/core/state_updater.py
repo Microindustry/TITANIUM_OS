@@ -419,4 +419,4 @@ if __name__ == "__main__":
     set_focus_today("Config G: gusset sinistra — stima 3 ore")
 
     # Stampa summary
-    print(get_state_summary())
+    log.info(get_state_summary())

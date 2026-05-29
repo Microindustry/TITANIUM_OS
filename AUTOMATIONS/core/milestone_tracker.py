@@ -18,8 +18,19 @@ Schedulazione Windows (Task Scheduler):
 """
 
 import json
+import sys
+import logging
 from pathlib import Path
 from datetime import datetime, date, timedelta
+
+_ROOT_MT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_MT))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("milestone_tracker")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [milestone_tracker] %(levelname)s %(message)s")
+    logger = logging.getLogger("milestone_tracker")
 
 # ============================================================
 # CONFIGURAZIONE
@@ -218,7 +229,7 @@ def run_daily_brief():
         f.write(f"# Daily Brief — {datetime.now().strftime('%Y-%m-%d')}\n\n")
         f.write(brief)
 
-    print(f"Brief salvato: INBOX/{fname}")
+    logger.info("Brief salvato: INBOX/%s", fname)
     return fpath
 
 

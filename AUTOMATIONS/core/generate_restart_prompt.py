@@ -4,9 +4,20 @@
 
 import json
 import os
+import sys
+import logging
 import subprocess
 from pathlib import Path
 from datetime import datetime
+
+_ROOT_GRP = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_GRP))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("generate_restart_prompt")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [restart_prompt] %(levelname)s %(message)s")
+    logger = logging.getLogger("generate_restart_prompt")
 
 TI_ROOT  = Path(__file__).resolve().parents[2]
 STATE    = TI_ROOT / "BRAIN" / "STATE.json"
@@ -188,14 +199,14 @@ def save_to_mente(content: str, state: dict) -> None:
     if fname.exists():
         fname = sess_dir / f"{date_str}_s{sess_n}_{milestone}_{datetime.now().strftime('%H%M')}.md"
     fname.write_text(content, encoding="utf-8")
-    print(f"[restart_prompt] MENTE/SESSIONI: {fname.name}")
+    logger.info("MENTE/SESSIONI: %s", fname.name)
 
 
 def main():
     s       = load_state()
     content = generate()
     OUT.write_text(content, encoding="utf-8")
-    print(f"[restart_prompt] Desktop: {OUT} ({len(content)} chars)")
+    logger.info("Desktop: %s (%d chars)", OUT, len(content))
     save_to_mente(content, s)
 
 

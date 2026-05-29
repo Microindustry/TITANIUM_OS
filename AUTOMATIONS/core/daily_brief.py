@@ -1,14 +1,24 @@
-# daily_brief.py | TITANIUM_OS / AUTOMATIONS / core | v1.0 | 2026-05-27
+# daily_brief.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-05-29
 # Genera brief mattutino da BRAIN/STATE.json + contenuti pronti
 # Output: stringa markdown (stampata a console) + DATA/daily_brief_last.md
 
 import sys
 import json
+import logging
 from datetime import datetime
 from pathlib import Path
 
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+_ROOT_DB = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_DB))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("daily_brief")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [daily_brief] %(levelname)s %(message)s")
+    logger = logging.getLogger("daily_brief")
 
 # ── PATH ────────────────────────────────────────────────────────────────
 REPO_ROOT      = Path(__file__).resolve().parents[2]
@@ -123,6 +133,7 @@ def run() -> str:
     brief = generate_brief()
     DATA_DIR.mkdir(exist_ok=True)
     OUTPUT_FILE.write_text(brief, encoding="utf-8")
+    logger.info("Brief salvato: %s", OUTPUT_FILE)
     return brief
 
 if __name__ == "__main__":

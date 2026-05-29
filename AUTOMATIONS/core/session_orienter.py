@@ -22,8 +22,18 @@ oppure doppio click su SESSION_START.bat
 import json
 import sys
 import os
+import logging
 from pathlib import Path
 from datetime import datetime
+
+_ROOT_SO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_SO))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("session_orienter")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [session_orienter] %(levelname)s %(message)s")
+    logger = logging.getLogger("session_orienter")
 
 # ============================================================
 # CONFIGURAZIONE

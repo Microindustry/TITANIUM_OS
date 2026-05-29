@@ -6,10 +6,19 @@ Uso: python computer_use_agent.py "Apri il browser e vai su localhost:5173"
      python computer_use_agent.py "Fai uno screenshot e salvalo"
 """
 
-import os, sys, time, base64, json, argparse
+import os, sys, time, base64, json, argparse, logging
 from pathlib import Path
 from io import BytesIO
 import anthropic
+
+_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("computer_use")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [computer_use] %(levelname)s %(message)s")
+    logger = logging.getLogger("computer_use")
 import mss
 import mss.tools
 import pyautogui
@@ -126,14 +135,13 @@ def run(task: str, verbose: bool = True, save_shots: bool = False):
     _load_env()
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
-        print("[ERRORE] ANTHROPIC_API_KEY non trovata nel vault.")
+        logger.error("ANTHROPIC_API_KEY non trovata nel vault.")
         sys.exit(1)
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    print(f"\n[ COMPUTER_USE ] Task: {task}")
-    print(f"  Modello: {MODEL} | Beta: {BETA}")
-    print(f"  Schermo scala: {SCALE}x | Max loop: {MAX_LOOPS}\n")
+    logger.info("Task: %s", task)
+    logger.info("Modello: %s | Beta: %s | Scala: %sx | Max loop: %d", MODEL, BETA, SCALE, MAX_LOOPS)
 
     messages = [{"role": "user", "content": task}]
     loop = 0
@@ -187,11 +195,11 @@ def run(task: str, verbose: bool = True, save_shots: bool = False):
                 betas=[BETA],
             )
         except Exception as e:
-            print(f"[ERRORE API] {e}")
+            logger.error("API error: %s", e)
             break
 
         if verbose:
-            print(f"  Loop {loop} | stop_reason: {resp.stop_reason}")
+            logger.info("Loop %d | stop_reason: %s", loop, resp.stop_reason)
 
         # Processa risposta
         tool_uses = []
@@ -203,28 +211,27 @@ def run(task: str, verbose: bool = True, save_shots: bool = False):
                 tool_uses.append(block)
 
         if text_parts:
-            print(f"  Claude: {' '.join(text_parts)[:200]}")
+            logger.info("Claude: %s", " ".join(text_parts)[:200])
 
         # Aggiungi risposta assistant alla conversazione
         messages.append({"role": "assistant", "content": resp.content})
 
         # Se nessun tool_use → task completato
         if not tool_uses or resp.stop_reason == "end_turn":
-            print(f"\n[ DONE ] Task completato in {loop} loop.")
+            logger.info("Task completato in %d loop.", loop)
             break
 
-        # Esegui azioni
         last_tool_id = None
         for tu in tool_uses:
             last_tool_id = tu.id
             action = tu.input
             result = execute_action(action, img_w, img_h)
             if verbose:
-                print(f"    → {result}")
-            time.sleep(0.4)  # pausa tra azioni
+                logger.debug("→ %s", result)
+            time.sleep(0.4)
 
     else:
-        print(f"\n[ TIMEOUT ] Raggiunti {MAX_LOOPS} loop, task interrotto.")
+        logger.warning("Raggiunti %d loop, task interrotto.", MAX_LOOPS)
 
 
 def main():

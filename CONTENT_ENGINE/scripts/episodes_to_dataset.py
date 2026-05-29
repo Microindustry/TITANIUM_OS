@@ -1,4 +1,4 @@
-# episodes_to_dataset.py | TITANIUM_OS / CONTENT_ENGINE | v1.1 | 2026-05-29
+# episodes_to_dataset.py | TITANIUM_OS / CONTENT_ENGINE | v1.2 | 2026-05-29
 import sys
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -13,8 +13,18 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
 import json
 import os
 import re
+import logging
 from pathlib import Path
 import anthropic
+
+_ROOT_EDS = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_EDS))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("episodes_to_dataset")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [episodes_to_dataset] %(levelname)s %(message)s")
+    logger = logging.getLogger("episodes_to_dataset")
 
 ROOT       = Path(__file__).parent.parent.parent
 EP_DIR     = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
@@ -90,7 +100,7 @@ def episode_to_samples(episode: dict) -> list[dict]:
                 "output": p["a"]
             })
     except Exception as e:
-        print(f"     QA error per {episode['id']}: {e}")
+        logger.warning("QA error per %s: %s", episode["id"], e)
 
     return samples
 
@@ -98,29 +108,23 @@ def episode_to_samples(episode: dict) -> list[dict]:
 def main():
     files = sorted(list(EP_DIR.glob("EP_AUTO_*.md")) + list(EP_DIR.glob("EP_*.md")))
     if not files:
-        print("Nessun episodio trovato.")
+        logger.warning("Nessun episodio trovato.")
         return
 
-    print(f"episodes_to_dataset — {len(files)} episodi")
-    print("-" * 40)
+    logger.info("episodes_to_dataset — %d episodi", len(files))
 
     all_samples = []
     for md_path in files:
         ep = load_episode(md_path)
-        print(f"  {ep['id']}: {ep['title']} ...", end=" ", flush=True)
         samples = episode_to_samples(ep)
         all_samples.extend(samples)
-        print(f"{len(samples)} campioni")
+        logger.info("  %s: %s — %d campioni", ep["id"], ep["title"][:50], len(samples))
 
-    # scrivi JSONL
-    with open(OUT_FILE, 'w', encoding='utf-8') as f:
+    with open(OUT_FILE, "w", encoding="utf-8") as f:
         for s in all_samples:
-            f.write(json.dumps(s, ensure_ascii=False) + '\n')
+            f.write(json.dumps(s, ensure_ascii=False) + "\n")
 
-    print("-" * 40)
-    print(f"totale campioni: {len(all_samples)}")
-    print(f"dataset: {OUT_FILE}")
-    print(f"uso: LlamaFactory -> train con {OUT_FILE}")
+    logger.info("totale campioni: %d | dataset: %s", len(all_samples), OUT_FILE)
 
 
 if __name__ == "__main__":

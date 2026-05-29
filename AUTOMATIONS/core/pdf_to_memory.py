@@ -15,6 +15,7 @@ import os
 import json
 import re
 import shutil
+import logging
 from pathlib import Path
 from datetime import datetime
 
@@ -22,11 +23,19 @@ from datetime import datetime
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
+_ROOT_PTM = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_PTM))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("pdf_to_memory")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [pdf_to_memory] %(levelname)s %(message)s")
+    logger = logging.getLogger("pdf_to_memory")
+
 try:
     import pdfplumber
 except ImportError:
-    print("[ERROR] pdfplumber non installato.")
-    print("        Esegui: pip install pdfplumber")
+    logger.error("pdfplumber non installato — esegui: pip install pdfplumber")
     sys.exit(1)
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
@@ -121,7 +130,7 @@ def process_pdf(pdf_path: Path) -> bool:
 
     Restituisce True se ok, False se errore.
     """
-    print(f"\n[PDF] Processo: {pdf_path.name}")
+    logger.info("Processo: %s", pdf_path.name)
 
     try:
         # ── 1. ESTRAZIONE TESTO ───────────────────────────────────────────────
@@ -143,15 +152,14 @@ def process_pdf(pdf_path: Path) -> bool:
 
         # PDF scansionato (immagine): testo vuoto
         if not full_text.strip():
-            print(f"[WARN] Testo vuoto — probabilmente PDF scansionato: {pdf_path.name}")
-            print(f"       Spostato in _ERRORS per revisione manuale.")
+            logger.warning("Testo vuoto — PDF scansionato: %s — spostato in _ERRORS", pdf_path.name)
             shutil.move(str(pdf_path), str(ERRORS / pdf_path.name))
             return False
 
         # ── 2. CLASSIFICAZIONE ────────────────────────────────────────────────
         doc_type = classify(full_text)
         output_dir = ASSOLUTO if doc_type == "ATTO" else KNOWLEDGE
-        print(f"[CLASS] Tipo: {doc_type} → cartella: BRAIN/{output_dir.name}/")
+        logger.info("Tipo: %s → BRAIN/%s/", doc_type, output_dir.name)
 
         # ── 3. VERSIONING ─────────────────────────────────────────────────────
         db = load_versions_db()
@@ -163,14 +171,13 @@ def process_pdf(pdf_path: Path) -> bool:
             prev_data = db[existing_key]
             version_num = prev_data["version"] + 1
             prev_file   = prev_data["current_file"]
-            print(f"[VER]  Versione precedente trovata: v{prev_data['version']} ({prev_file})")
-            print(f"[VER]  Questa sarà v{version_num}")
+            logger.info("Versione precedente: v%d (%s) → questa v%d", prev_data["version"], prev_file, version_num)
         else:
             # Documento nuovo
             version_num = 1
             prev_file   = None
             existing_key = base_key
-            print(f"[VER]  Nuovo documento, assegno v1")
+            logger.info("Nuovo documento, assegno v1")
 
         timestamp = datetime.now().strftime("%Y-%m-%d")
         out_name  = f"{clean_filename(pdf_path.stem)}_v{version_num}.md"
@@ -206,7 +213,7 @@ processed_by: pdf_to_memory.py v1.0
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(content)
 
-        print(f"[OK]   Scritto: {out_path.relative_to(ROOT)}")
+        logger.info("Scritto: %s", out_path.relative_to(ROOT))
 
         # ── 5. AGGIORNA DATABASE VERSIONI ─────────────────────────────────────
         history = db.get(existing_key, {}).get("history", [])
@@ -229,12 +236,12 @@ processed_by: pdf_to_memory.py v1.0
         # ── 6. SPOSTA PDF IN _PROCESSED ───────────────────────────────────────
         dest_name = f"{clean_filename(pdf_path.stem)}_v{version_num}_{timestamp}{pdf_path.suffix}"
         shutil.move(str(pdf_path), str(PROCESSED / dest_name))
-        print(f"[DONE] PDF archiviato → _PROCESSED/{dest_name}")
+        logger.info("PDF archiviato → _PROCESSED/%s", dest_name)
 
         return True
 
     except Exception as e:
-        print(f"[ERROR] {pdf_path.name}: {e}")
+        logger.error("%s: %s", pdf_path.name, e)
         try:
             shutil.move(str(pdf_path), str(ERRORS / pdf_path.name))
         except Exception:
@@ -246,15 +253,15 @@ def scan_drop_folder():
     """Processa tutti i PDF presenti in PDF_DROP in questo momento."""
     pdfs = sorted(PDF_DROP.glob("*.pdf")) + sorted(PDF_DROP.glob("*.PDF"))
     if not pdfs:
-        print("[INFO] Nessun PDF trovato in PDF_DROP/ — trascina i file qui.")
+        logger.info("Nessun PDF trovato in PDF_DROP/ — trascina i file qui.")
         return
-    print(f"[SCAN] {len(pdfs)} PDF trovati. Inizio elaborazione...\n")
+    logger.info("%d PDF trovati. Inizio elaborazione...", len(pdfs))
     ok  = sum(1 for p in pdfs if process_pdf(p))
     err = len(pdfs) - ok
-    print(f"\n{'='*50}")
-    print(f"[FINE] OK: {ok}  |  ERRORI: {err}  |  TOTALE: {len(pdfs)}")
     if err:
-        print(f"       File con errori → PDF_DROP/_ERRORS/")
+        logger.warning("OK: %d | ERRORI: %d | TOTALE: %d — file con errori → PDF_DROP/_ERRORS/", ok, err, len(pdfs))
+    else:
+        logger.info("OK: %d | TOTALE: %d", ok, len(pdfs))
 
 # ── WATCH: monitora PDF_DROP continuamente ────────────────────────────────────
 def watch_mode():
@@ -267,7 +274,7 @@ def watch_mode():
         from watchdog.observers import Observer
         from watchdog.events import FileSystemEventHandler
     except ImportError:
-        print("[ERROR] watchdog non installato. Esegui: pip install watchdog")
+        logger.error("watchdog non installato — esegui: pip install watchdog")
         sys.exit(1)
 
     class PDFHandler(FileSystemEventHandler):
@@ -285,15 +292,13 @@ def watch_mode():
     observer.schedule(PDFHandler(), str(PDF_DROP), recursive=False)
     observer.start()
 
-    print(f"[WATCH] Monitorando: {PDF_DROP}")
-    print(f"        Trascina qualsiasi PDF nella cartella — processo automatico.")
-    print(f"        Premi Ctrl+C per fermare.\n")
+    logger.info("Watch attivo: %s — trascina PDF per processo automatico. Ctrl+C per fermare.", PDF_DROP)
     try:
         import time
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        print("\n[WATCH] Fermato.")
+        logger.info("Watch fermato.")
         observer.stop()
     observer.join()
 
@@ -303,7 +308,7 @@ def process_pdf_to_mente(pdf_path: Path, mente_subdir: str, keep: bool = True) -
     Variante MENTE: estrae testo PDF e scrive .md in MENTE_ROOT/<mente_subdir>/.
     Non sposta il PDF originale per default (keep=True).
     """
-    print(f"\n[PDF→MENTE] {pdf_path.name} → MENTE/{mente_subdir}/")
+    logger.info("%s → MENTE/%s/", pdf_path.name, mente_subdir)
     out_dir = MENTE_ROOT / mente_subdir
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -323,7 +328,7 @@ def process_pdf_to_mente(pdf_path: Path, mente_subdir: str, keep: bool = True) -
 
         full_text = "\n\n---\n\n".join(pages_text)
         if not full_text.strip():
-            print(f"[WARN] PDF scansionato (nessun testo estraibile): {pdf_path.name}")
+            logger.warning("PDF scansionato (nessun testo estraibile): %s", pdf_path.name)
             return False
 
         timestamp = datetime.now().strftime("%Y-%m-%d")
@@ -341,19 +346,18 @@ processed_by: pdf_to_memory.py v1.1
 """
         content = frontmatter + f"# {pdf_path.stem}\n\n" + full_text
         out_path.write_text(content, encoding="utf-8")
-        print(f"[OK]   Scritto: {out_path}")
-        print(f"       {n_pages} pagine estratte.")
+        logger.info("Scritto: %s (%d pagine)", out_path, n_pages)
 
         if not keep:
             dest = PROCESSED / f"{clean_filename(pdf_path.stem)}_{timestamp}{pdf_path.suffix}"
             PROCESSED.mkdir(parents=True, exist_ok=True)
             shutil.move(str(pdf_path), str(dest))
-            print(f"[ARCH] PDF archiviato → {dest.name}")
+            logger.info("PDF archiviato → %s", dest.name)
 
         return True
 
     except Exception as e:
-        print(f"[ERROR] {pdf_path.name}: {e}")
+        logger.error("%s: %s", pdf_path.name, e)
         return False
 
 
@@ -364,18 +368,18 @@ def run_rag_rebuild():
         # Prova path alternativo
         rag_engine = ROOT / "AUTOMATIONS" / "core" / "rag_engine.py"
     if not rag_engine.exists():
-        print("[WARN] rag_engine.py non trovato — rag-rebuild saltato.")
+        logger.warning("rag_engine.py non trovato — rag-rebuild saltato.")
         return
-    print("\n[RAG] Avvio rag-rebuild...")
+    logger.info("Avvio rag-rebuild...")
     import subprocess
     result = subprocess.run(
         [sys.executable, str(rag_engine), "--rebuild"],
         capture_output=True, text=True, timeout=120
     )
     if result.returncode == 0:
-        print("[RAG] Rebuild completato.")
+        logger.info("RAG rebuild completato.")
     else:
-        print(f"[RAG] Errore rebuild: {result.stderr[-300:]}")
+        logger.error("RAG rebuild errore: %s", result.stderr[-300:])
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -397,7 +401,7 @@ if __name__ == "__main__":
     elif args.file:
         pdf_path = Path(args.file).resolve()
         if not pdf_path.exists():
-            print(f"[ERROR] File non trovato: {pdf_path}")
+            logger.error("File non trovato: %s", pdf_path)
             sys.exit(1)
         if args.mente:
             ok = process_pdf_to_mente(pdf_path, args.mente, keep=args.keep)

@@ -185,8 +185,7 @@ def compile_toc(file_path: Path, dry_run: bool = False) -> bool:
             log.error(f"Scrittura fallita {file_path}: {e}")
             return False
     else:
-        print(f"[DRY RUN] TOC che verrebbe generato per {file_path.name}:")
-        print(toc_block)
+        log.info("[DRY RUN] TOC che verrebbe generato per %s:\n%s", file_path.name, toc_block)
 
     return True
 

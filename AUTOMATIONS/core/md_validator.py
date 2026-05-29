@@ -222,10 +222,10 @@ if __name__ == "__main__":
     result = validate_file(path)
 
     if args.json:
-        print(json.dumps(result, indent=2, ensure_ascii=False))
+        print(json.dumps(result, indent=2, ensure_ascii=False))  # output dati: resta print
     else:
         for issue in result["issues"]:
             line_info = f"L{issue.get('line', '?')} " if "line" in issue else ""
-            print(f"  [{issue['type']}] {line_info}{issue['rule']}: {issue['message']}")
+            log.info("[%s] %s%s: %s", issue["type"], line_info, issue["rule"], issue["message"])
 
     sys.exit(1 if result["errors"] > 0 else 0)

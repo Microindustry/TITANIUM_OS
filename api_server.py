@@ -1,4 +1,4 @@
-# api_server.py | ECOSYSTEM_OS | v1.2 | 2026-05-27
+# api_server.py | ECOSYSTEM_OS | v1.3 | 2026-05-29
 # Flask API server — serve dati reali al dashboard React
 # Endpoints: STATE.json, mente_digest.json, trigger scanner, update state
 # Run: python api_server.py  (porta 5001)
@@ -7,11 +7,20 @@ import sys
 import os
 import json
 import subprocess
+import logging
 from pathlib import Path
 from datetime import datetime
 
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("api_server")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [api_server] %(levelname)s %(message)s")
+    logger = logging.getLogger("api_server")
 
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
@@ -854,10 +863,7 @@ REGOLA GLOSSARIO: Quando usi un termine tecnico o sigla che potrebbe non essere 
 
 # ── MAIN ─────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("=" * 50)
-    print("  ECOSYSTEM_OS API SERVER v1.0")
-    print(f"  Porta: 5001")
-    print(f"  STATE:  {STATE_FILE}")
-    print(f"  DIGEST: {DIGEST_FILE}")
-    print("=" * 50)
+    logger.info("ECOSYSTEM_OS API SERVER v1.3 — porta 5001")
+    logger.info("STATE:  %s", STATE_FILE)
+    logger.info("DIGEST: %s", DIGEST_FILE)
     app.run(port=5001, debug=False)

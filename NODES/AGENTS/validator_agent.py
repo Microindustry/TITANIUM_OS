@@ -5,13 +5,23 @@
 import os
 import sys
 import json
+import logging
 import argparse
 from pathlib import Path
+
+_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("validator_agent")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [validator_agent] %(levelname)s %(message)s")
+    logger = logging.getLogger("validator_agent")
 
 try:
     import anthropic
 except ImportError:
-    print("anthropic non installato: pip install anthropic")
+    logger.error("anthropic non installato: pip install anthropic")
     sys.exit(1)
 
 MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
@@ -152,7 +162,7 @@ def run_agent(agent_key: str, question: str, use_rag: bool = True) -> str:
 
     rag_context = ""
     if use_rag:
-        print(f"  Recupero contesto RAG per: '{question[:60]}...'")
+        logger.info("Recupero contesto RAG per: '%s...'", question[:60])
         rag_context = get_rag_context(question)
 
     system_prompt = f"""Sei {agent['name']} {agent['emoji']} — {agent['role']}.
@@ -203,8 +213,8 @@ def main():
         return
 
     agent = AGENTS[args.agent]
-    print(f"\n  {agent['emoji']} {agent['name']} — {agent['role']}")
-    print(f"  Domanda: {args.question[:80]}\n")
+    logger.info("%s %s — %s", agent["emoji"], agent["name"], agent["role"])
+    logger.info("Domanda: %s", args.question[:80])
 
     answer = run_agent(args.agent, args.question, use_rag=not args.no_rag)
     print(answer)

@@ -6,6 +6,7 @@ import os
 import sys
 import io
 import json
+import logging
 import subprocess
 import re
 from datetime import datetime, timedelta
@@ -16,13 +17,22 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
+_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("story_agent")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [story_agent] %(levelname)s %(message)s")
+    logger = logging.getLogger("story_agent")
+
 try:
     import anthropic
 except ImportError:
-    print("[story_agent] anthropic non installato")
+    logger.error("anthropic non installato")
     sys.exit(1)
 
-TI_ROOT   = Path(__file__).resolve().parents[2]
+TI_ROOT   = _ROOT
 MENTE     = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 CE_ROOT   = TI_ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes" / "S2_SISTEMA"
 ST_ROOT   = MENTE / "SESSIONI" / "STORIE" / "S2_SISTEMA"
@@ -238,26 +248,26 @@ Includi sempre il reel_hook alla fine."""
 def save_episode(slug: str, content: str, date: str):
     for dest in [CE_ROOT / f"{slug}.md", ST_ROOT / f"{slug}.md"]:
         dest.write_text(content, encoding="utf-8")
-        print(f"  [OK] {dest.relative_to(TI_ROOT) if TI_ROOT in dest.parents else dest.name}")
+        logger.info("salvato: %s", dest.relative_to(TI_ROOT) if TI_ROOT in dest.parents else dest.name)
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
 def main(backfill: bool = False, max_groups: int = 5):
-    print(f"\n[story_agent] {datetime.now().strftime('%H:%M:%S')} — avvio")
+    logger.info("avvio%s", " (backfill)" if backfill else "")
 
     state = load_state()
     last_commit = None if backfill else state.get("last_commit")
 
     commits = git_log_since(last_commit, max_commits=80 if backfill else 30)
     if not commits:
-        print("[story_agent] nessun commit nuovo — skip")
+        logger.info("nessun commit nuovo — skip")
         state["last_run"] = datetime.now().isoformat()
         save_state(state)
         return
 
     groups = group_commits_by_theme(commits)
-    print(f"[story_agent] {len(commits)} commit -> {len(groups)} gruppi tematici")
+    logger.info("%d commit -> %d gruppi tematici", len(commits), len(groups))
 
     sessions = get_recent_sessions(days=7 if backfill else 3)
     snapshot = get_project_snapshot()
@@ -266,25 +276,24 @@ def main(backfill: bool = False, max_groups: int = 5):
     for group in groups[:max_groups]:
         slug = episode_slug(group)
         if episode_exists(slug) and not backfill:
-            print(f"  [--] già esiste: {slug}")
+            logger.debug("già esiste: %s — skip", slug)
             continue
 
-        print(f"  [>>] genero: {slug} ({len(group['commits'])} commit)")
+        logger.info("genero: %s (%d commit)", slug, len(group["commits"]))
         content = generate_episode(group, sessions, snapshot)
         if content:
             save_episode(slug, content, group["date"])
             state["episodes_generated"].append({"slug": slug, "date": group["date"]})
             generated += 1
         else:
-            print(f"  [ERR] generazione fallita per {slug}")
+            logger.error("generazione fallita per %s", slug)
 
-    # aggiorna last_commit al più recente
     if commits:
         state["last_commit"] = commits[0]["hash"]
     state["last_run"] = datetime.now().isoformat()
     save_state(state)
 
-    print(f"[story_agent] done — {generated} episodi generati")
+    logger.info("done — %d episodi generati", generated)
 
 
 if __name__ == "__main__":

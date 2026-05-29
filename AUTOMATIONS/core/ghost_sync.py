@@ -287,7 +287,7 @@ if __name__ == "__main__":
 
     if args.setup:
         _save_default_config()
-        print(f"Config creata in {CONFIG_PATH} — modificala con remote/branch corretti.")
+        log.info("Config creata in %s — modificala con remote/branch corretti.", CONFIG_PATH)
         sys.exit(0)
 
     if not _is_git_repo():

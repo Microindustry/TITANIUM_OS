@@ -3,12 +3,20 @@
 # Rebuild incrementale via manifest (mtime+size) — solo file nuovi/modificati
 # Pattern: Hybrid RRF + two-stage retrieval (2024-2025 state-of-art)
 
-import os, sys, re, json, pickle
+import os, sys, re, json, pickle, logging
 from datetime import datetime
 from pathlib import Path
 
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("rag_engine")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [rag_engine] %(levelname)s %(message)s")
+    logger = logging.getLogger("rag_engine")
 
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
@@ -179,13 +187,13 @@ def build_index(force: bool = False) -> int:
 
     # Migrazione da v3: dati presenti ma nessun manifest → full rebuild
     if collection.count() > 0 and not force and not manifest["files"]:
-        print("[RAG v4] Migrazione da v3 rilevata — full rebuild (una tantum)...")
-        print("[RAG v4] Prima migrazione può richiedere 3-5 min. Le successive <20 sec.")
+        logger.info("Migrazione da v3 rilevata — full rebuild (una tantum)...")
+        logger.info("Prima migrazione può richiedere 3-5 min. Le successive <20 sec.")
         manifest   = {"chunk_ver": CHUNK_VER, "files": {}}
         collection = _get_collection(reset=True)
         force      = True
 
-    print(f"[RAG v4] {'Full rebuild' if force else 'Rebuild incrementale'} — {MENTE_DIR}")
+    logger.info("%s — %s", "Full rebuild" if force else "Rebuild incrementale", MENTE_DIR)
 
     corpus     = {} if force else _load_corpus()
     prev_files = manifest.get("files", {})
@@ -208,7 +216,7 @@ def build_index(force: bool = False) -> int:
                 ids=batch_ids[i:i+50],
                 metadatas=batch_meta[i:i+50],
             )
-        print(f"  [+{len(batch_docs)} chunk] upserted")
+        logger.debug("+%d chunk upserted", len(batch_docs))
         batch_docs.clear(); batch_ids.clear(); batch_meta.clear()
 
     for path in all_paths:
@@ -251,9 +259,9 @@ def build_index(force: bool = False) -> int:
         new_files[rel] = {**sig, "chunk_ids": cids}
 
         if len(batch_docs) >= 200:
-            flush()
+            flush()  # flush incrementale
 
-    flush()
+    flush()  # flush finale
 
     # File eliminati
     for rel in set(prev_files) - {str(p.relative_to(MENTE_DIR)) for p in all_paths}:
@@ -268,14 +276,12 @@ def build_index(force: bool = False) -> int:
     _save_corpus(corpus)
 
     total = collection.count()
-    print(
-        f"[RAG v4] Totale: {total} chunk | "
-        f"+add:{added} mod:{modified} skip:{skipped} -del:{removed_chunks}"
-    )
+    logger.info("Totale: %d chunk | +add:%d mod:%d skip:%d -del:%d",
+                total, added, modified, skipped, removed_chunks)
 
-    print(f"[RAG v4] Fit TF-IDF BM25 su {len(corpus)} chunk...")
+    logger.info("Fit TF-IDF BM25 su %d chunk...", len(corpus))
     _fit_tfidf(corpus)
-    print("[RAG v4] Completo — semantico + BM25 + reranker pronti.")
+    logger.info("Completo — semantico + BM25 + reranker pronti.")
     return total
 
 # ── SEARCH ────────────────────────────────────────────────────────────────────

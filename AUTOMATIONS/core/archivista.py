@@ -297,4 +297,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     out = run(tema=args.tema, formato=args.formato)
-    print(f"\nFile generato: {out}")
+    log.info("File generato: %s", out)

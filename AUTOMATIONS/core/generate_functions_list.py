@@ -4,8 +4,19 @@
 import json
 import os
 import re
+import sys
+import logging
 from pathlib import Path
 from datetime import datetime
+
+_ROOT_GFL = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_GFL))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("generate_functions_list")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [functions_list] %(levelname)s %(message)s")
+    logger = logging.getLogger("generate_functions_list")
 
 TI_ROOT  = Path(__file__).resolve().parents[2]
 DESKTOP  = Path.home() / "OneDrive" / "Desktop"
@@ -356,7 +367,7 @@ def generate() -> str:
 def main():
     content = generate()
     OUT.write_text(content, encoding="utf-8")
-    print(f"[functions_list] Scritto: {OUT} ({len(content.splitlines())} righe)")
+    logger.info("Scritto: %s (%d righe)", OUT, len(content.splitlines()))
 
 
 if __name__ == "__main__":

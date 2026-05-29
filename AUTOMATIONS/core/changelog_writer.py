@@ -230,4 +230,4 @@ if __name__ == "__main__":
     write_changelog_entry("MODIFIED", "BRAIN/CLAUDE.md", ts)
     write_changelog_entry("CREATED", "PILLARS/V32/config_g_notes.md", ts)
     write_manual_entry("Test manuale changelog", "NOTE")
-    print(f"Changelog scritto in: {CHANGELOG_PATH}")
+    log.info("Changelog scritto in: %s", CHANGELOG_PATH)

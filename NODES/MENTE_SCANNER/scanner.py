@@ -1,4 +1,4 @@
-# scanner.py | TITANIUM_OS / NODES / MENTE_SCANNER | v1.2 | 2026-05-27
+# scanner.py | TITANIUM_OS / NODES / MENTE_SCANNER | v1.3 | 2026-05-29
 # Legge MICROINDUSTRY\MENTE\ ricorsivamente (path dinamico via Path.home())
 # Estrae: decisioni, spec tecniche, milestone, nomi personaggi
 # Output: TITANIUM_OS\DATA\mente_digest.json
@@ -7,12 +7,21 @@ import os
 import sys
 import json
 import re
+import logging
 from datetime import datetime
 from pathlib import Path
 
 # Fix encoding Windows console
 if sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("scanner")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [scanner] %(levelname)s %(message)s")
+    logger = logging.getLogger("scanner")
 
 # ── CONFIG ────────────────────────────────────────────────────
 MENTE_DIR  = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
@@ -138,13 +147,8 @@ def scan() -> dict:
     total_decisions, total_specs, total_milestones = 0, 0, 0
     files_read, files_skipped = 0, 0
 
-    print(f"\n{'='*60}")
-    print(f"  MENTE_SCANNER — ECOSYSTEM_OS v1.0")
-    print(f"  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"{'='*60}")
-    print(f"  Fonte: {MENTE_DIR}")
-    print(f"  Output: {OUTPUT_FILE}")
-    print(f"{'='*60}\n")
+    logger.info("MENTE_SCANNER avvio — fonte: %s", MENTE_DIR)
+    logger.info("Output: %s", OUTPUT_FILE)
 
     for path in sorted(MENTE_DIR.rglob("*")):
         if not path.is_file():
@@ -176,15 +180,14 @@ def scan() -> dict:
             total_milestones += nm
             files_read += 1
 
-            status = "✓" if (nd + ns + nm) > 0 else "○"
-            print(f"  {status} {rel}")
-            if nd: print(f"      decisions: {nd}")
-            if ns: print(f"      specs:      {ns}")
-            if nm: print(f"      milestones: {nm}")
+            if (nd + ns + nm) > 0:
+                logger.debug("✓ %s — d:%d s:%d m:%d", rel, nd, ns, nm)
+            else:
+                logger.debug("○ %s", rel)
         else:
             entry["extracts"] = {}
             files_skipped += 1
-            print(f"  · {rel} [{ext or 'no-ext'}]")
+            logger.debug("· %s [%s] — skip", rel, ext or "no-ext")
 
         files_data.append(entry)
 
@@ -204,15 +207,9 @@ def scan() -> dict:
         "by_file": files_data,
     }
 
-    print(f"\n{'='*60}")
-    print(f"  RISULTATI")
-    print(f"  File totali:    {len(files_data)}")
-    print(f"  File letti:     {files_read}")
-    print(f"  File saltati:   {files_skipped}")
-    print(f"  Decisioni:      {total_decisions}")
-    print(f"  Spec tecniche:  {total_specs}")
-    print(f"  Milestone:      {total_milestones}")
-    print(f"{'='*60}\n")
+    logger.info("Scan completato — file:%d letti:%d saltati:%d | d:%d s:%d m:%d",
+                len(files_data), files_read, files_skipped,
+                total_decisions, total_specs, total_milestones)
 
     return digest
 
@@ -221,7 +218,7 @@ def scan() -> dict:
 
 if __name__ == "__main__":
     if not MENTE_DIR.exists():
-        print(f"[ERRORE] Cartella non trovata: {MENTE_DIR}")
+        logger.error("Cartella non trovata: %s", MENTE_DIR)
         exit(1)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -231,5 +228,5 @@ if __name__ == "__main__":
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(digest, f, ensure_ascii=False, indent=2)
 
-    print(f"  ✓ Digest salvato: {OUTPUT_FILE}")
-    print(f"    {digest['global_summary']['total_extractions']} estrazioni totali\n")
+    logger.info("Digest salvato: %s (%d estrazioni)",
+                OUTPUT_FILE, digest["global_summary"]["total_extractions"])

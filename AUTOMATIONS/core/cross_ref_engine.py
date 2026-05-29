@@ -36,8 +36,18 @@ import json
 import sys
 import argparse
 import shutil
+import logging
 from pathlib import Path
 from datetime import datetime
+
+_ROOT_CRE = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_CRE))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("cross_ref_engine")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [cross_ref] %(levelname)s %(message)s")
+    logger = logging.getLogger("cross_ref_engine")
 
 # ============================================================
 # CONFIGURAZIONE
@@ -58,8 +68,7 @@ PDF_INBOX = ASSOLUTO_DIR / "PDF_INBOX"    # dove metti i PDF originali
 def _load_dep_map() -> dict:
     """Carica la dependency map."""
     if not DEP_MAP_PATH.exists():
-        print(f"ERRORE: dependency_map.json non trovato in {DEP_MAP_PATH}")
-        print("Crea il file con i tuoi valori master.")
+        logger.error("dependency_map.json non trovato in %s", DEP_MAP_PATH)
         return {}
     with open(DEP_MAP_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -127,26 +136,21 @@ def cmd_extract(pdf_dir: Path = None):
     try:
         import fitz  # pymupdf
     except ImportError:
-        print("\n[EXTRACT] pymupdf non installato.")
-        print("  Esegui: pip install pymupdf")
-        print()
+        logger.warning("pymupdf non installato — esegui: pip install pymupdf")
         _print_manual_fallback()
         return
 
     pdf_files = list(src_dir.glob("*.pdf")) + list(src_dir.glob("*.PDF"))
 
     if not pdf_files:
-        print(f"\n[EXTRACT] Nessun PDF trovato in: {src_dir}")
-        print(f"  Copia i tuoi PDF degli atti in quella cartella, poi riesegui.")
-        print()
+        logger.warning("Nessun PDF trovato in: %s", src_dir)
         _print_manual_fallback()
         return
 
-    print(f"\n[EXTRACT] Trovati {len(pdf_files)} PDF in {src_dir}")
-    print()
+    logger.info("Trovati %d PDF in %s", len(pdf_files), src_dir)
 
     for pdf_path in sorted(pdf_files):
-        print(f"  Elaborazione: {pdf_path.name}")
+        logger.info("Elaborazione: %s", pdf_path.name)
 
         try:
             doc = fitz.open(str(pdf_path))
@@ -159,13 +163,10 @@ def cmd_extract(pdf_dir: Path = None):
 
             doc.close()
 
-            # Pulizia testo estratto
             full_text = "\n\n".join(pages_text)
             full_text = _clean_pdf_text(full_text)
 
-            # Nome output: usa nome PDF come base
             stem = pdf_path.stem
-            # Normalizza nome: ATTO_III_V32.pdf → ATTO_III_V32
             out_name = _normalize_atto_name(stem)
             out_path = ATTI_DIR / f"{out_name}.md"
 
@@ -176,14 +177,12 @@ def cmd_extract(pdf_dir: Path = None):
                 f.write("---\n\n")
                 f.write(full_text)
 
-            lines = full_text.count("\n")
-            print(f"    → {out_name}.md ({lines} righe)")
+            logger.info("→ %s.md (%d righe)", out_name, full_text.count("\n"))
 
         except Exception as e:
-            print(f"    ERRORE: {e}")
+            logger.error("ERRORE %s: %s", pdf_path.name, e)
 
-    print(f"\n[EXTRACT] Completato. File in: {ATTI_DIR}")
-    print("  Prossimo step: python cross_ref_engine.py check")
+    logger.info("Extract completato. File in: %s", ATTI_DIR)
 
 
 def _clean_pdf_text(text: str) -> str:
@@ -275,11 +274,10 @@ def cmd_scan(verbose: bool = True) -> dict:
     atti_files = list(ATTI_DIR.glob("*.md")) if ATTI_DIR.exists() else []
 
     if not atti_files:
-        print(f"\n[SCAN] Nessun atto trovato in {ATTI_DIR}")
-        print("  Prima esegui: python cross_ref_engine.py extract")
+        logger.warning("Nessun atto trovato in %s — esegui prima: extract", ATTI_DIR)
         return {}
 
-    print(f"\n[SCAN] Analisi {len(atti_files)} atti, {len(dep_map)} chiavi...\n")
+    logger.info("Scan: %d atti, %d chiavi...", len(atti_files), len(dep_map))
 
     results = {}  # {key: {atto_name: [righe]}}
 
@@ -353,10 +351,10 @@ def cmd_check():
     atti_files = list(ATTI_DIR.glob("*.md")) if ATTI_DIR.exists() else []
 
     if not atti_files:
-        print(f"\n[CHECK] Nessun atto trovato in {ATTI_DIR}")
+        logger.warning("Nessun atto trovato in %s", ATTI_DIR)
         return
 
-    print(f"\n[CHECK] Verifica coerenza cross-atto...\n")
+    logger.info("Check: verifica coerenza cross-atto...")
 
     issues = []
     ok_count = 0
@@ -459,10 +457,8 @@ def cmd_propagate(key: str, new_value: str, dry_run: bool = False):
     dep_map = _load_dep_map()
 
     if key not in dep_map:
-        print(f"\n[PROPAGATE] Chiave '{key}' non trovata nella dependency map.")
-        print("  Chiavi disponibili:")
-        for k, v in dep_map.items():
-            print(f"    {k}: {v.get('label', '')} = {v.get('master_value', '')}")
+        logger.error("Chiave '%s' non trovata nella dependency map.", key)
+        logger.info("Chiavi disponibili: %s", ", ".join(dep_map.keys()))
         return
 
     entry = dep_map[key]
@@ -629,8 +625,7 @@ def cmd_report():
     with open(report_path, "w", encoding="utf-8") as f:
         f.writelines(lines)
 
-    print(f"\n[REPORT] Salvato: {report_path.name}")
-    print(f"  {len(dep_map)} chiavi documentate")
+    logger.info("Report salvato: %s (%d chiavi)", report_path.name, len(dep_map))
     return report_path
 
 

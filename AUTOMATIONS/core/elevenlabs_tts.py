@@ -191,9 +191,9 @@ if __name__ == "__main__":
         if not path.is_absolute():
             path = CONTENT_ENGINE / "produzione_contenuti" / path
         result = convert_file(path, voice_id=args.voice)
-        print(f"\nAudio: {result}")
+        log.info("Audio: %s", result)
     elif args.text:
         result = convert_to_speech(args.text, output_name=args.name, voice_id=args.voice)
-        print(f"\nAudio: {result}")
+        log.info("Audio: %s", result)
     else:
         parser.print_help()

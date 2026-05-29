@@ -5,9 +5,19 @@ import os
 import subprocess
 import sys
 import time
+import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+
+_ROOT_SH = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_SH))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("stop_hooks")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [stop_hooks] %(levelname)s %(message)s")
+    logger = logging.getLogger("stop_hooks")
 
 TI_ROOT    = Path(__file__).resolve().parents[2]
 PYTHON     = sys.executable
@@ -54,7 +64,7 @@ def run_script(label: str, args: list) -> tuple:
 
 
 def main():
-    print(f"\n[stop_hooks] {datetime.now().strftime('%H:%M:%S')} — avvio")
+    logger.info("avvio")
 
     tasks = [
         ("restart_prompt", [PYTHON, str(CORE / "generate_restart_prompt.py")]),
@@ -93,16 +103,16 @@ def main():
                 results.append((futures[future], 0, False, str(e)))
 
     elapsed_total = time.time() - t0_total
-    print(f"[stop_hooks] done in {elapsed_total:.1f}s")
+    logger.info("done in %.1fs", elapsed_total)
 
     for label, elapsed, ok, out in sorted(results, key=lambda r: r[1]):
         status = "OK " if ok else "ERR"
-        print(f"  [{status}] {label:<20} {elapsed:.1f}s  {out}")
+        (logger.info if ok else logger.warning)("[%s] %s  %.1fs  %s", status, label, elapsed, out)
 
     if rag_touched:
-        print(f"  [BG] rag_incremental       avviato in background (detached)")
+        logger.info("[BG] rag_incremental avviato in background (detached)")
     else:
-        print(f"  [--] rag_incremental       skipped — MENTE/ invariata (ultime {RAG_WINDOW_MIN}min)")
+        logger.debug("[--] rag_incremental skipped — MENTE/ invariata (ultime %dmin)", RAG_WINDOW_MIN)
 
 
 if __name__ == "__main__":

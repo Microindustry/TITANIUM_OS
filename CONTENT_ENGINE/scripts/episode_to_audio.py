@@ -1,17 +1,22 @@
-# episode_to_audio.py
-# parte di: TITANIUM_OS / CONTENT_ENGINE
-# versione: 1.0 / data: 2026-03-22
-#
+# episode_to_audio.py | TITANIUM_OS / CONTENT_ENGINE | v1.1 | 2026-05-29
 # Converte episodi .md in audio .wav per podcast
 # Provider: Kokoro TTS (offline, gratuito) via RealtimeTTS
-#
 # Setup: pip install RealtimeTTS kokoro-onnx
 # Uso:   python CONTENT_ENGINE/scripts/episode_to_audio.py [EP_AUTO_001]
-#        senza argomenti: processa tutti gli episodi senza audio
 
 import re
 import sys
+import logging
 from pathlib import Path
+
+_ROOT_ETA = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_ROOT_ETA))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("episode_to_audio")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [episode_to_audio] %(levelname)s %(message)s")
+    logger = logging.getLogger("episode_to_audio")
 
 ROOT       = Path(__file__).parent.parent.parent
 EP_DIR     = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
@@ -47,19 +52,18 @@ def render_audio(ep_id: str, title: str, text: str) -> Path:
     try:
         from RealtimeTTS import TextToAudioStream, KokoroEngine
     except ImportError:
-        print("  INSTALL: pip install RealtimeTTS kokoro-onnx")
+        logger.warning("INSTALL: pip install RealtimeTTS kokoro-onnx")
         return None
 
     out_path = AUDIO_DIR / f"{ep_id}.wav"
     if out_path.exists():
-        print(f"  gia presente: {out_path.name}")
+        logger.info("già presente: %s", out_path.name)
         return out_path
 
-    # Kokoro: voce italiana (fallback inglese se non disponibile)
-    engine = KokoroEngine(voice="if_nicola")   # italiano maschile
+    engine = KokoroEngine(voice="if_nicola")
     stream = TextToAudioStream(engine)
 
-    print(f"  rendering audio ({len(text.split())} parole)...")
+    logger.info("rendering audio (%d parole)...", len(text.split()))
     stream.feed(text)
     stream.play_async()
 
@@ -89,28 +93,26 @@ def main():
         files = sorted(EP_DIR.glob("EP_AUTO_*.md"))
 
     if not files:
-        print("Nessun episodio trovato.")
+        logger.warning("Nessun episodio trovato.")
         return
 
-    print(f"episode_to_audio — {len(files)} episodi")
-    print("-" * 40)
+    logger.info("episode_to_audio — %d episodi", len(files))
 
     for md_path in files:
         if not md_path.exists():
-            print(f"  NON TROVATO: {md_path.name}")
+            logger.warning("NON TROVATO: %s", md_path.name)
             continue
 
         ep_id = md_path.stem
         title, content = extract_content(md_path)
-        print(f"  {ep_id}: {title}")
+        logger.info("%s: %s", ep_id, title)
 
         out = render_audio(ep_id, title, content)
         if out:
             kb = out.stat().st_size // 1024
-            print(f"     salvato: {out.name} ({kb} KB)")
+            logger.info("salvato: %s (%d KB)", out.name, kb)
 
-    print("-" * 40)
-    print(f"audio in: {AUDIO_DIR}")
+    logger.info("audio in: %s", AUDIO_DIR)
 
 
 if __name__ == "__main__":

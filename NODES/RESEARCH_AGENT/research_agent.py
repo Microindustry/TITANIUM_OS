@@ -7,6 +7,7 @@ import sys
 import time
 import json
 import hashlib
+import logging
 import argparse
 import requests
 from pathlib import Path
@@ -16,6 +17,14 @@ from urllib.parse import quote_plus, urljoin
 # Fix encoding Windows cp1252
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+try:
+    from CORE.log import get_logger
+    logger = get_logger("research_agent")
+except ImportError:
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [research_agent] %(levelname)s %(message)s")
+    logger = logging.getLogger("research_agent")
 
 MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 OUT_DIR = MENTE / "KNOWLEDGE" / "RESEARCH"
@@ -56,7 +65,7 @@ def search_arxiv(query: str, max_results: int = 5) -> list[dict]:
                 })
         return results
     except Exception as ex:
-        print(f"  [arxiv] Errore: {ex}")
+        logger.warning("[arxiv] %s", ex)
         return []
 
 
@@ -88,7 +97,7 @@ def search_semantic_scholar(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [semantic_scholar] Errore: {ex}")
+        logger.warning("[semantic_scholar] %s", ex)
         return []
 
 
@@ -115,7 +124,7 @@ def search_openlibrary(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [openlibrary] Errore: {ex}")
+        logger.warning("[openlibrary] %s", ex)
         return []
 
 
@@ -141,7 +150,7 @@ def search_core_ac(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [core_ac] Errore: {ex}")
+        logger.warning("[core_ac] %s", ex)
         return []
 
 
@@ -178,7 +187,7 @@ def search_openalex(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [openalex] Errore: {ex}")
+        logger.warning("[openalex] %s", ex)
         return []
 
 
@@ -204,7 +213,7 @@ def search_theses_fr(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [theses_fr] Errore: {ex}")
+        logger.warning("[theses_fr] %s", ex)
         return []
 
 
@@ -224,7 +233,7 @@ def search_dart_europe(query: str, max_results: int = 5) -> list[dict]:
             "year": "",
         }]
     except Exception as ex:
-        print(f"  [dart_europe] Errore: {ex}")
+        logger.warning("[dart_europe] %s", ex)
         return []
 
 
@@ -263,7 +272,7 @@ def search_baidu_scholar(query: str, max_results: int = 5) -> list[dict]:
             }]
         return results
     except Exception as ex:
-        print(f"  [baidu_scholar] Errore: {ex}")
+        logger.warning("[baidu_scholar] %s", ex)
         return []
 
 
@@ -286,7 +295,7 @@ def search_cnki_free(query: str, max_results: int = 5) -> list[dict]:
             "year": "",
         }]
     except Exception as ex:
-        print(f"  [cnki] Errore: {ex}")
+        logger.warning("[cnki] %s", ex)
         return []
 
 
@@ -314,7 +323,7 @@ def search_github_repos(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [github] Errore: {ex}")
+        logger.warning("[github] %s", ex)
         return []
 
 
@@ -351,7 +360,7 @@ def search_base(query: str, max_results: int = 5) -> list[dict]:
             })
         return results
     except Exception as ex:
-        print(f"  [base] Errore: {ex}")
+        logger.warning("[base] %s", ex)
         return []
 
 
@@ -403,7 +412,7 @@ def search_politesi(query: str, max_results: int = 5) -> list[dict]:
             }]
         return results
     except Exception as ex:
-        print(f"  [politesi] Errore: {ex}")
+        logger.warning("[politesi] %s", ex)
         return []
 
 
@@ -432,7 +441,7 @@ def enrich_with_unpaywall(results: list[dict], email: str = "benenatimatteo.mb@g
         except Exception:
             continue
     if enriched:
-        print(f"  [unpaywall] {enriched} PDF gratuiti trovati")
+        logger.info("[unpaywall] %d PDF gratuiti trovati", enriched)
     return results
 
 
@@ -513,7 +522,7 @@ def run_rag_rebuild():
     if py.exists() and rag.exists():
         import subprocess
         subprocess.Popen([str(py), str(rag), "--rebuild"])
-        print("  [RAG] rebuild avviato in background")
+        logger.info("[RAG] rebuild avviato in background")
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -588,25 +597,24 @@ def main():
     else:
         selected = [s.strip() for s in args.sources.split(",") if s.strip() in SOURCES]
     if not selected:
-        print(f"Sorgenti non valide. Disponibili: {', '.join(SOURCES.keys())}")
+        logger.error("Sorgenti non valide. Disponibili: %s", ", ".join(SOURCES.keys()))
         sys.exit(1)
 
-    print(f"\n  RESEARCH AGENT — query: '{args.query}' | dominio: '{args.domain or 'generale'}'")
-    print(f"  Sorgenti: {', '.join(selected)} | max {args.max} per sorgente\n")
+    logger.info("query: '%s' | dominio: '%s' | sorgenti: %s | max %d",
+                args.query, args.domain or "generale", ", ".join(selected), args.max)
 
     all_results = []
     for src in selected:
-        print(f"  Ricerca su {src}...")
+        logger.info("Ricerca su %s...", src)
         results = SOURCES[src](args.query, args.max)
-        print(f"  -> {len(results)} risultati")
+        logger.info("%s -> %d risultati", src, len(results))
         all_results.extend(results)
-        time.sleep(1)  # cortesia verso le API
+        time.sleep(1)
 
     if not all_results:
-        print("\n  Nessun risultato trovato.")
+        logger.warning("Nessun risultato trovato.")
         return
 
-    # Deduplica per titolo
     seen = set()
     unique = []
     for r in all_results:
@@ -615,23 +623,24 @@ def main():
             seen.add(k)
             unique.append(r)
 
-    print(f"\n  {len(unique)} risultati unici trovati:")
+    logger.info("%d risultati unici trovati:", len(unique))
     for i, r in enumerate(unique, 1):
-        print(f"  [{i:02d}] [{r['source']}] {r['title'][:80]}")
+        line = f"[{i:02d}] [{r['source']}] {r['title'][:80]}"
         if r.get("authors"):
-            print(f"       {r['authors']} {r.get('year','')}")
+            line += f" — {r['authors']} {r.get('year','')}"
+        logger.info(line)
 
     if args.dry_run:
-        print("\n  [dry-run] Nessun file salvato.")
+        logger.info("[dry-run] Nessun file salvato.")
         return
 
     saved = []
     for r in unique:
         path = save_result(r, args.query, args.domain)
         saved.append(path)
-        print(f"  [OK] {path.name}")
+        logger.info("salvato: %s", path.name)
 
-    print(f"\n  {len(saved)} documenti salvati in {OUT_DIR}")
+    logger.info("%d documenti salvati in %s", len(saved), OUT_DIR)
 
     if args.enrich:
         unique = enrich_with_unpaywall(unique)

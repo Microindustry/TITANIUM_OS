@@ -293,10 +293,10 @@ if __name__ == "__main__":
     elif args.search:
         results = search(args.search)
         if results:
-            print(f"\nRisultati per '{args.search}':")
+            log.info("Risultati per '%s':", args.search)
             for r in results:
-                print(f"  [{r['match_count']} match] {r['path']} — {r['title']}")
+                log.info("  [%d match] %s — %s", r["match_count"], r["path"], r["title"])
         else:
-            print(f"Nessun risultato per '{args.search}'")
+            log.info("Nessun risultato per '%s'", args.search)
     else:
         parser.print_help()
