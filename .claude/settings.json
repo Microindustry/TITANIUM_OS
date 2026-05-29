@@ -6,15 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\AUTOMATIONS\\core\\generate_restart_prompt.py"
-          },
-          {
-            "type": "command",
-            "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\AUTOMATIONS\\core\\generate_functions_list.py"
-          },
-          {
-            "type": "command",
-            "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\NODES\\MENTE_RAG\\rag_engine.py --incremental"
+            "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\AUTOMATIONS\\core\\stop_hooks.py"
           }
         ]
       }
@@ -43,7 +35,7 @@
       "Grep(*)",
       "WebSearch(*)",
       "WebFetch(*)",
-      "mcp__computer-use(*)"
+      "mcp__computer-use__*"
     ],
     "deny": []
   }

@@ -1,4 +1,4 @@
-# research_agent.py | TITANIUM_OS / NODES / RESEARCH_AGENT | v1.0 | 2026-05-28
+# research_agent.py | TITANIUM_OS / NODES / RESEARCH_AGENT | v1.1 | 2026-05-29
 # Trova paper, tesi, libri tecnici dal web e li ingesta in MENTE/ → RAG
 
 import os
@@ -12,6 +12,10 @@ import requests
 from pathlib import Path
 from datetime import datetime
 from urllib.parse import quote_plus, urljoin
+
+# Fix encoding Windows cp1252
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 OUT_DIR = MENTE / "KNOWLEDGE" / "RESEARCH"
@@ -302,7 +306,7 @@ def search_github_repos(query: str, max_results: int = 5) -> list[dict]:
         for repo in r.json().get("items", []):
             results.append({
                 "source": "github",
-                "title": f"{repo['full_name']} ⭐{repo.get('stargazers_count',0)}",
+                "title": f"{repo['full_name']} [{repo.get('stargazers_count',0)} stars]",
                 "abstract": repo.get("description", "") or f"Repository GitHub: {repo['full_name']}",
                 "url": repo["html_url"],
                 "authors": repo.get("owner", {}).get("login", ""),
@@ -312,6 +316,124 @@ def search_github_repos(query: str, max_results: int = 5) -> list[dict]:
     except Exception as ex:
         print(f"  [github] Errore: {ex}")
         return []
+
+
+def search_base(query: str, max_results: int = 5) -> list[dict]:
+    """BASE (Bielefeld Academic Search Engine) — 300M+ doc, include repo italiani."""
+    url = "https://api.base-search.net/cgi-bin/BaseHttpSearchInterface.fcgi"
+    params = {
+        "func": "PerformSearch",
+        "query": query,
+        "hits": max_results,
+        "offset": 0,
+        "format": "json",
+    }
+    try:
+        r = requests.get(url, params=params, headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        docs = r.json().get("response", {}).get("docs", [])
+        results = []
+        for d in docs:
+            title    = d.get("dctitle", [""])[0] if isinstance(d.get("dctitle"), list) else d.get("dctitle", "")
+            abstract = d.get("dcdescription", [""])[0] if isinstance(d.get("dcdescription"), list) else d.get("dcdescription", "")
+            link     = d.get("dclink", [""])[0] if isinstance(d.get("dclink"), list) else d.get("dclink", "")
+            authors  = d.get("dccreator", [])
+            year     = str(d.get("dcyear", ""))
+            if not title or len(abstract) < 20:
+                continue
+            results.append({
+                "source": "base",
+                "title":   title,
+                "abstract": str(abstract)[:800],
+                "url":     link,
+                "authors": ", ".join(authors[:3]) if isinstance(authors, list) else str(authors),
+                "year":    year,
+            })
+        return results
+    except Exception as ex:
+        print(f"  [base] Errore: {ex}")
+        return []
+
+
+def search_politesi(query: str, max_results: int = 5) -> list[dict]:
+    """POLITesi — tesi magistrali e dottorali Politecnico di Milano via OAI-PMH."""
+    url = "https://www.politesi.polimi.it/oai/request"
+    params = {
+        "verb": "ListRecords",
+        "metadataPrefix": "oai_dc",
+    }
+    try:
+        r = requests.get(url, params=params, headers=HEADERS, timeout=20)
+        r.raise_for_status()
+        records = re.findall(r'<record>(.*?)</record>', r.text, re.DOTALL)
+        query_words = set(query.lower().split())
+        results = []
+        for rec in records:
+            title_m    = re.search(r'<dc:title>(.*?)</dc:title>', rec, re.DOTALL)
+            desc_m     = re.search(r'<dc:description>(.*?)</dc:description>', rec, re.DOTALL)
+            creator_m  = re.findall(r'<dc:creator>(.*?)</dc:creator>', rec, re.DOTALL)
+            id_m       = re.search(r'<dc:identifier>(https?://[^<]+)</dc:identifier>', rec)
+            date_m     = re.search(r'<dc:date>(\d{4})', rec)
+            if not title_m:
+                continue
+            title    = re.sub(r'<[^>]+>', '', title_m.group(1)).strip()
+            abstract = re.sub(r'<[^>]+>', '', desc_m.group(1)).strip() if desc_m else ""
+            # Filtra per query match
+            text_lower = (title + " " + abstract).lower()
+            if not any(w in text_lower for w in query_words):
+                continue
+            results.append({
+                "source": "politesi",
+                "title":   title,
+                "abstract": abstract[:800] if abstract else f"Tesi Politecnico Milano: {title}",
+                "url":     id_m.group(1) if id_m else "https://www.politesi.polimi.it",
+                "authors": ", ".join(creator_m[:2]),
+                "year":    date_m.group(1) if date_m else "",
+            })
+            if len(results) >= max_results:
+                break
+        if not results:
+            return [{
+                "source": "politesi",
+                "title": f"POLITesi — ricerca: {query}",
+                "abstract": "Repository tesi Politecnico Milano (magistrali e dottorali). Forte su: meccanica, meccatronica, manifattura, automazione, ingegneria dei materiali.",
+                "url": f"https://www.politesi.polimi.it/handle/10589/1?mode=simple&query={quote_plus(query)}",
+                "authors": "",
+                "year": "",
+            }]
+        return results
+    except Exception as ex:
+        print(f"  [politesi] Errore: {ex}")
+        return []
+
+
+def enrich_with_unpaywall(results: list[dict], email: str = "benenatimatteo.mb@gmail.com") -> list[dict]:
+    """Arricchisce risultati con PDF gratuiti via Unpaywall (per DOI trovati)."""
+    enriched = 0
+    for r in results:
+        doi = None
+        url = r.get("url", "")
+        if "doi.org/" in url:
+            doi = url.split("doi.org/")[-1].strip()
+        if not doi:
+            continue
+        try:
+            resp = requests.get(
+                f"https://api.unpaywall.org/v2/{doi}?email={email}",
+                headers=HEADERS, timeout=8
+            )
+            if resp.status_code == 200:
+                data = resp.json()
+                best = data.get("best_oa_location")
+                if best and best.get("url_for_pdf"):
+                    r["pdf_url"] = best["url_for_pdf"]
+                    r["abstract"] += f"\n\n**PDF gratuito:** {best['url_for_pdf']}"
+                    enriched += 1
+        except Exception:
+            continue
+    if enriched:
+        print(f"  [unpaywall] {enriched} PDF gratuiti trovati")
+    return results
 
 
 def search_doaj(query: str, max_results: int = 5) -> list[dict]:
@@ -408,6 +530,8 @@ SOURCES = {
     "baidu_scholar":    search_baidu_scholar,
     "cnki":             search_cnki_free,
     "github":           search_github_repos,
+    "base":             search_base,
+    "politesi":         search_politesi,
 }
 
 DEFAULT_SOURCES = ["openalex", "semantic_scholar", "arxiv"]
@@ -424,17 +548,22 @@ SOURCE_DESCRIPTIONS = {
     "baidu_scholar":    "400M+ paper cinesi — forte su CNC, manifattura, materiali",
     "cnki":             "60M paper CNKI cinesi — il più grande DB accademico cinese",
     "github":           "Repository GitHub — CNC, RAG, automazione, codice open source",
+    "base":             "300M+ documenti accademici incl. repository italiani (Bielefeld)",
+    "politesi":         "Tesi magistrali e dottorali Politecnico di Milano (OAI-PMH)",
 }
 
 # Preset di ricerca per dominio
 DOMAIN_PRESETS = {
-    "V32":        ["openalex", "arxiv", "semantic_scholar", "baidu_scholar"],
-    "acquaponica": ["openalex", "semantic_scholar", "theses_fr", "baidu_scholar"],
-    "CNC":        ["openalex", "arxiv", "baidu_scholar", "cnki", "github"],
+    "V32":        ["openalex", "arxiv", "semantic_scholar", "baidu_scholar", "base"],
+    "acquaponica": ["openalex", "semantic_scholar", "theses_fr", "baidu_scholar", "base"],
+    "CNC":        ["openalex", "arxiv", "baidu_scholar", "cnki", "github", "politesi"],
     "PLC":        ["semantic_scholar", "openalex", "baidu_scholar", "github"],
     "AI":         ["arxiv", "semantic_scholar", "openalex", "github"],
-    "elettrica":  ["openalex", "semantic_scholar", "theses_fr"],
+    "elettrica":  ["openalex", "semantic_scholar", "theses_fr", "base"],
     "gomma":      ["openalex", "semantic_scholar", "baidu_scholar", "cnki"],
+    "ITA":        ["politesi", "base", "dart_europe", "theses_fr", "doaj"],
+    "brevetti":   ["base", "openalex", "semantic_scholar"],
+    "MIMS":       ["openalex", "arxiv", "baidu_scholar", "politesi", "base"],
 }
 
 
@@ -447,9 +576,17 @@ def main():
     parser.add_argument("--max",     "-n", type=int, default=5, help="Risultati per sorgente (default 5)")
     parser.add_argument("--rag",          action="store_true", help="Esegui rag-rebuild dopo ingestione")
     parser.add_argument("--dry-run",      action="store_true", help="Mostra risultati senza salvare")
+    parser.add_argument("--enrich",       action="store_true", help="Arricchisci con PDF gratuiti via Unpaywall")
+    parser.add_argument("--preset",  "-p", default="", help=f"Usa preset sorgenti per dominio: {', '.join(DOMAIN_PRESETS.keys())}")
     args = parser.parse_args()
 
-    selected = [s.strip() for s in args.sources.split(",") if s.strip() in SOURCES]
+    # Preset dominio ha precedenza su --sources se specificato
+    if args.preset and args.preset in DOMAIN_PRESETS:
+        selected = DOMAIN_PRESETS[args.preset]
+        if not args.domain:
+            args.domain = args.preset
+    else:
+        selected = [s.strip() for s in args.sources.split(",") if s.strip() in SOURCES]
     if not selected:
         print(f"Sorgenti non valide. Disponibili: {', '.join(SOURCES.keys())}")
         sys.exit(1)
@@ -461,7 +598,7 @@ def main():
     for src in selected:
         print(f"  Ricerca su {src}...")
         results = SOURCES[src](args.query, args.max)
-        print(f"  → {len(results)} risultati")
+        print(f"  -> {len(results)} risultati")
         all_results.extend(results)
         time.sleep(1)  # cortesia verso le API
 
@@ -492,9 +629,12 @@ def main():
     for r in unique:
         path = save_result(r, args.query, args.domain)
         saved.append(path)
-        print(f"  ✓ {path.name}")
+        print(f"  [OK] {path.name}")
 
     print(f"\n  {len(saved)} documenti salvati in {OUT_DIR}")
+
+    if args.enrich:
+        unique = enrich_with_unpaywall(unique)
 
     if args.rag:
         run_rag_rebuild()

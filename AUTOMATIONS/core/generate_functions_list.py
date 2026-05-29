@@ -152,6 +152,17 @@ RESEARCH_SOURCES = [
     ("baidu_scholar",    "400M+ paper cinesi — forte su CNC, manifattura"),
     ("cnki",             "60M paper CNKI — più grande DB accademico cinese"),
     ("github",           "Repository open source — CNC, RAG, automazione"),
+    ("base",             "300M+ doc accademici incl. repository italiani (Bielefeld)"),
+    ("politesi",         "Tesi Politecnico Milano — meccanica, manifattura, meccatronica"),
+]
+
+RESEARCH_PRESETS = [
+    ("ITA",      "politesi, base, dart_europe, theses_fr, doaj"),
+    ("CNC",      "openalex, arxiv, baidu_scholar, cnki, github, politesi"),
+    ("V32",      "openalex, arxiv, semantic_scholar, baidu_scholar, base"),
+    ("MIMS",     "openalex, arxiv, baidu_scholar, politesi, base"),
+    ("AI",       "arxiv, semantic_scholar, openalex, github"),
+    ("brevetti", "base, openalex, semantic_scholar"),
 ]
 
 
@@ -257,6 +268,9 @@ def generate() -> str:
     lines.append("  Sorgenti disponibili:")
     for src, desc in RESEARCH_SOURCES:
         lines.append(f"    {src:<20} {desc}")
+    lines.append("\n  Preset dominio (--preset / -p):")
+    for preset, srcs in RESEARCH_PRESETS:
+        lines.append(f"    {preset:<12} {srcs}")
 
     # ── git ──
     lines.append(section("GIT — shortcuts"))
