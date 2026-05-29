@@ -1,0 +1,11 @@
+{
+  "titanium_os": {
+    "file_name": "dataset.jsonl",
+    "file_sha1": null,
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}
