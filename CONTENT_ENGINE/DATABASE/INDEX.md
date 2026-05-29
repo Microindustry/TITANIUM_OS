@@ -71,6 +71,19 @@ AUTO                  → generati automaticamente da milestone STATE.json
 
 ---
 
+## MOMENTI — Episodi intermezzo (5-7 min)
+*Singola decisione, scoperta o svolta. Inseribili tra qualsiasi episodio principale.*
+
+| ID | File | Titolo | Posizione narrativa | Status |
+|----|------|--------|---------------------|--------|
+| MOM_01 | `MOMENTI/MOM_01_LA_PRIMA_AUTOMAZIONE.md` | La Prima Automazione | S1_05 → S2_00 | ready |
+| MOM_02 | `MOMENTI/MOM_02_LA_MAPPA.md` | La Mappa | S1_05 → S2_00 | ready |
+| MOM_03 | `MOMENTI/MOM_03_L_ESERCITO.md` | L'Esercito | S2_02 → S2_03 | ready |
+| MOM_04 | `MOMENTI/MOM_04_IL_DOCUMENTO_MASTER.md` | Il Documento Master | S1_05 → S2_00 | ready |
+| MOM_05 | `MOMENTI/MOM_05_CONFIG_A_G.md` | Config A→G | S1_02 → S1_03 | ready |
+
+---
+
 ## AUTO — Generati da milestone STATE.json
 *Legacy — vecchio content_trigger.py. Da riorganizzare in S0/S1/S2.*
 
