@@ -1,4 +1,4 @@
-// CanvasLayout.tsx | TITANIUM_OS / DASHBOARD | v6.0 | 2026-05-29
+// CanvasLayout.tsx | TITANIUM_OS / DASHBOARD | v6.1 | 2026-05-29
 // Command center con navigazione drill-down — celle una dentro l'altra
 
 import { useState, useRef, useEffect } from "react";
@@ -23,14 +23,14 @@ interface NavNode { id: RoomId; label: string }
 
 // ── COLORI PILASTRI ───────────────────────────────────────────────────────────
 const PILLAR_CFG: Record<string, {
-  color: string; bar: string; bg: string; border: string;
-  glow: string; room: RoomId;
+  color: string; colorDim: string; bar: string; bg: string; border: string;
+  glow: string; room: RoomId; gradient: string;
 }> = {
-  V32:         { color: "#34d399", bar: "bg-emerald-400", bg: "bg-emerald-500/8",  border: "border-emerald-500/30", glow: "shadow-emerald-500/20", room: "v32"     },
-  MIMS:        { color: "#fbbf24", bar: "bg-amber-400",   bg: "bg-amber-500/8",    border: "border-amber-500/30",   glow: "shadow-amber-500/20",   room: "mims"    },
-  GENESIS:     { color: "#22d3ee", bar: "bg-cyan-400",    bg: "bg-cyan-500/8",     border: "border-cyan-500/30",    glow: "shadow-cyan-500/20",    room: "genesis" },
-  VITA_NATURA: { color: "#a78bfa", bar: "bg-violet-400",  bg: "bg-violet-500/8",   border: "border-violet-500/30",  glow: "shadow-violet-500/20",  room: "eva"     },
-  IDENTITY:    { color: "#94a3b8", bar: "bg-slate-400",   bg: "bg-slate-500/8",    border: "border-slate-600/30",   glow: "shadow-slate-500/10",   room: "matteo"  },
+  V32:         { color: "#34d399", colorDim: "#34d39940", bar: "bg-emerald-400", bg: "bg-emerald-950/60",  border: "border-emerald-500/50", glow: "0 0 40px #34d39920", room: "v32",     gradient: "from-emerald-950/80 to-slate-900/90" },
+  MIMS:        { color: "#fbbf24", colorDim: "#fbbf2440", bar: "bg-amber-400",   bg: "bg-amber-950/60",    border: "border-amber-500/50",   glow: "0 0 40px #fbbf2420", room: "mims",    gradient: "from-amber-950/80 to-slate-900/90"   },
+  GENESIS:     { color: "#22d3ee", colorDim: "#22d3ee40", bar: "bg-cyan-400",    bg: "bg-cyan-950/60",     border: "border-cyan-500/50",    glow: "0 0 40px #22d3ee20", room: "genesis", gradient: "from-cyan-950/80 to-slate-900/90"    },
+  VITA_NATURA: { color: "#a78bfa", colorDim: "#a78bfa40", bar: "bg-violet-400",  bg: "bg-violet-950/60",   border: "border-violet-500/50",  glow: "0 0 40px #a78bfa20", room: "eva",     gradient: "from-violet-950/80 to-slate-900/90"  },
+  IDENTITY:    { color: "#94a3b8", colorDim: "#94a3b840", bar: "bg-slate-400",   bg: "bg-slate-800/60",    border: "border-slate-500/50",   glow: "0 0 40px #94a3b815", room: "matteo",  gradient: "from-slate-800/80 to-slate-900/90"   },
 };
 
 function pct(p: any): number { return Number(p?.pct_complete ?? p?.pct ?? 0); }
@@ -145,43 +145,73 @@ function HeroStatus({ state, online }: { state: any; online: boolean }) {
   );
 }
 
-// ── HOME: PILLAR GRID ─────────────────────────────────────────────────────────
+// ── HOME: PILLAR GRID — celle grandi e fisiche ────────────────────────────────
 function PillarGrid({ state, onEnter }: { state: any; onEnter: (id: RoomId, label: string) => void }) {
   const pillars = state?.pillars ?? {};
   const entries = Object.entries(pillars) as [string, any][];
   if (!entries.length) return null;
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
       {entries.map(([key, p]) => {
-        const cfg = PILLAR_CFG[key] ?? { color: "#94a3b8", bar: "bg-slate-400", bg: "bg-slate-500/8", border: "border-slate-600/30", glow: "shadow-slate-500/10", room: "home" as RoomId };
+        const cfg = PILLAR_CFG[key] ?? {
+          color: "#94a3b8", colorDim: "#94a3b840", bar: "bg-slate-400",
+          bg: "bg-slate-800/60", border: "border-slate-500/50",
+          glow: "0 0 40px #94a3b815", room: "home" as RoomId, gradient: "from-slate-800/80 to-slate-900/90"
+        };
         const progress = pct(p);
-        const next = (p?.next ?? p?.phase ?? "").slice(0, 60);
+        const statusText = p?.status === "in_progress" ? "IN CORSO"
+          : p?.status === "waiting_v32" ? "IN ATTESA"
+          : p?.status === "building" ? "BUILDING"
+          : p?.status === "active" ? "ATTIVO"
+          : p?.status ?? "";
 
         return (
           <button
             key={key}
             onClick={() => onEnter(cfg.room, key.replace("_", " "))}
-            className={`group text-left rounded-2xl border ${cfg.bg} ${cfg.border}
-                        hover:brightness-125 transition-all duration-200 p-4
-                        shadow-lg ${cfg.glow} hover:shadow-xl hover:-translate-y-0.5`}
+            className={`group relative text-left rounded-2xl overflow-hidden
+                        bg-gradient-to-br ${cfg.gradient}
+                        border-2 ${cfg.border}
+                        transition-all duration-300 p-6 min-h-[200px] flex flex-col
+                        hover:-translate-y-1 hover:border-opacity-80`}
+            style={{ boxShadow: cfg.glow }}
           >
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-[10px] font-bold font-mono uppercase tracking-wider"
-                    style={{ color: cfg.color }}>
-                {key.replace("_", " ")}
+            {/* Glow angolo top-left */}
+            <div className="absolute top-0 left-0 w-24 h-24 rounded-full opacity-20 blur-2xl pointer-events-none"
+                 style={{ background: cfg.color }} />
+
+            {/* Header */}
+            <div className="flex items-start justify-between mb-auto">
+              <div>
+                <div className="text-[11px] font-black font-mono uppercase tracking-[0.2em] mb-1"
+                     style={{ color: cfg.color }}>
+                  {key.replace("_", " ")}
+                </div>
+                {statusText && (
+                  <div className="text-[8px] font-mono uppercase tracking-widest px-1.5 py-0.5 rounded"
+                       style={{ color: cfg.color, background: cfg.colorDim }}>
+                    {statusText}
+                  </div>
+                )}
+              </div>
+              <ChevronRight size={16} className="transition-all duration-200 mt-0.5"
+                            style={{ color: cfg.color, opacity: 0.5 }} />
+            </div>
+
+            {/* Percentuale grande */}
+            <div className="my-4">
+              <span className="text-6xl font-black tabular-nums text-white leading-none">
+                {progress}
               </span>
-              <ChevronRight size={11} className="text-slate-700 group-hover:text-slate-400
-                            group-hover:translate-x-0.5 transition-all" />
+              <span className="text-2xl font-bold ml-1" style={{ color: cfg.color }}>%</span>
             </div>
-            <div className="text-3xl font-bold text-white mb-2 tabular-nums">
-              {progress}<span className="text-sm text-slate-600">%</span>
-            </div>
-            <div className="h-1 bg-slate-800 rounded-full mb-2 overflow-hidden">
+
+            {/* Barra progresso */}
+            <div className="h-1.5 bg-black/40 rounded-full overflow-hidden">
               <div className={`h-full rounded-full ${cfg.bar} transition-all duration-700`}
                    style={{ width: `${progress}%` }} />
             </div>
-            {next && <p className="text-[10px] text-slate-500 leading-snug line-clamp-2">{next}</p>}
           </button>
         );
       })}
@@ -661,7 +691,7 @@ export function CanvasLayout() {
   }, [navStack]);
 
   return (
-    <div className="h-full flex flex-col bg-[#020617]">
+    <div className="h-full flex flex-col" style={{ background: "radial-gradient(ellipse at 20% 0%, #0d1f3c 0%, #070d1a 50%, #050a14 100%)" }}>
       {/* Breadcrumb */}
       <Breadcrumb stack={navStack} onBack={popRoom} />
 
@@ -672,26 +702,42 @@ export function CanvasLayout() {
           {/* ── HOME ── */}
           {currentRoom === "home" && (
             <>
-              <div className="flex items-center justify-between">
+              {/* Status compatto */}
+              <div className="flex items-center gap-3 flex-wrap">
                 <div>
-                  <h1 className="text-xl font-bold text-white tracking-tight">TITANIUM_OS</h1>
+                  <h1 className="text-2xl font-black text-white tracking-tight">TITANIUM_OS</h1>
                   <p className="text-[10px] text-slate-500 font-mono mt-0.5">
                     {new Date().toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" })}
-                    {" · "}{online ? "sistema live" : "offline"}
+                    {" · "}{online
+                      ? <span className="text-emerald-400">sistema live</span>
+                      : <span className="text-slate-600">offline</span>}
                   </p>
                 </div>
+                {/* Milestone pill */}
+                <div className="ml-auto flex items-center gap-2 bg-slate-900/80 border border-slate-700/50 rounded-xl px-4 py-2.5">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+                  <div>
+                    <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Milestone</div>
+                    <div className="text-sm font-bold text-white">{state?.active_milestone ?? "—"}</div>
+                  </div>
+                </div>
+                {/* Blockers pill */}
+                {(state?.blockers ?? []).length > 0 && (
+                  <div className="flex items-center gap-2 bg-rose-950/60 border border-rose-500/40 rounded-xl px-4 py-2.5">
+                    <AlertTriangle size={13} className="text-rose-400 flex-shrink-0" />
+                    <div>
+                      <div className="text-[9px] font-mono text-rose-400/70 uppercase tracking-widest">Blockers</div>
+                      <div className="text-sm font-bold text-rose-300">{state.blockers.length} attivi</div>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <HeroStatus state={state} online={online} />
+              {/* Le 5 celle — protagoniste */}
               <PillarGrid state={state} onEnter={pushRoom} />
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <QuickNotes state={state} />
-                <QuickActions />
-              </div>
-
-              <div className="bg-slate-900/60 border border-slate-800/60 rounded-2xl p-4">
-                <p className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-3">Sezioni</p>
+              {/* Sezioni secondarie — discreto in fondo */}
+              <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-800/40">
                 <SectionLinks onEnter={pushRoom} />
               </div>
             </>
