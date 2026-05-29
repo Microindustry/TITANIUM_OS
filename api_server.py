@@ -789,7 +789,7 @@ def run_program(name: str):
 
 # ── AGENTS ───────────────────────────────────────────────────
 
-AGENTS_DB = BASE_DIR / "NODES" / "AGENTS" / "agents_db.json"
+AGENTS_DB = ROOT / "NODES" / "AGENTS" / "agents_db.json"
 
 @app.get("/api/agents")
 def get_agents():
