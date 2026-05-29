@@ -15,12 +15,13 @@ cd /d "%TITANIUM_ROOT%"
 
 echo [night_research] avvio %DATE% %TIME%
 
-:: topic fissi — V32 e materiali
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py -Query "epoxy granite vibration damping CNC machine tool" -Domain V32 -Rag -MaxResults 5
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py -Query "linear guide preload stiffness precision machining" -Domain V32 -Rag -MaxResults 5
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py -Query "polymer composite injection molding tile manufacturing" -Domain MIMS -Rag -MaxResults 5
+:: topic fissi — V32 e materiali (sintassi corretta argparse)
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "epoxy granite vibration damping CNC machine tool" --domain V32 --rag --max 5
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "linear guide preload stiffness precision machining" --domain V32 --rag --max 5
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "polymer composite injection molding tile manufacturing" --domain MIMS --rag --max 5
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5
 
-:: RAG update dopo la ricerca
+:: RAG update incrementale dopo la ricerca
 "%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental
 
 echo [night_research] done

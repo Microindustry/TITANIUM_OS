@@ -8,6 +8,13 @@ VERSIONS/snapshots/
 node_modules/
 dist/
 .vite/
-# ChromaDB — indice vettoriale, si rebuild da MENTE/
+# ChromaDB + RAG internals — si rebuild da MENTE/, possono contenere dati sensibili
 NODES/MENTE_RAG/chroma_db/
+NODES/MENTE_RAG/rag_corpus.jsonl
+NODES/MENTE_RAG/rag_manifest.json
+NODES/MENTE_RAG/rag_tfidf.pkl
+NODES/MENTE_RAG/mente_index.json
 DATA/daily_brief_last.md
+DATA/computer_use_shots/
+MODELS/
+CONTENT_ENGINE/DATABASE/training/dataset.jsonl

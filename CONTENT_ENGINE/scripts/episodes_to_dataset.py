@@ -1,6 +1,7 @@
-# episodes_to_dataset.py
-# parte di: TITANIUM_OS / CONTENT_ENGINE
-# versione: 1.0 / data: 2026-03-22
+# episodes_to_dataset.py | TITANIUM_OS / CONTENT_ENGINE | v1.1 | 2026-05-29
+import sys
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 #
 # Converte episodi .md in dataset JSONL per fine-tuning LLM
 # Strategia: chunking strutturale + auto-QA via Claude haiku
@@ -119,7 +120,7 @@ def main():
     print("-" * 40)
     print(f"totale campioni: {len(all_samples)}")
     print(f"dataset: {OUT_FILE}")
-    print(f"uso: LlamaFactory → train con {OUT_FILE}")
+    print(f"uso: LlamaFactory -> train con {OUT_FILE}")
 
 
 if __name__ == "__main__":
