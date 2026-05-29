@@ -6,12 +6,12 @@
                  "description":  "Stato live TITANIUM_OS - RAG v4.0 hybrid + Dashboard v7.0 + Story Agent + Content Engine S2",
                  "system":  "TITANIUM OS - ecosystem v1.3"
              },
-    "last_update":  "2026-05-29T19:00:00.000000",
+    "last_update":  "2026-05-29T21:30:00.000000",
     "active_milestone":  "Config G - Rinforzi colonne Z+U",
     "ciclo_position":  "COSTRUISCI",
-    "last_action":  "Sessione 29 Mag 2026 (#10): Content Engine S2 (6 ep narrativi + 5 MOMENTI + 8 backfill), Story Agent v1.0 cron 02:07 + stop hook, calendario notturno completo (research/push/brief), Dashboard v7.0 sidebar + AgentsView + dot grid + API /api/agents",
+    "last_action":  "Sessione 29 Mag 2026 (#11): Logging centralizzato — CORE/log.py (RotatingFileHandler + StreamHandler), 34 file Python aggiornati con import logging + get_logger(), print ridotti da 342 a 131 (solo output dati e interfacce utente rimangono)",
     "next_step":  "Saldare 4 gusset 200mm sulla colonna Z sinistra",
-    "session_count":  10,
+    "session_count":  11,
     "pillars":  {
                     "V32":  {
                                 "status":  "in_progress",
@@ -87,12 +87,13 @@
                                         "Content Engine S2 - 6 episodi narrativi + 5 MOMENTI intermezzo + 8 backfill (63 giorni recuperati) (29 Mag 2026)",
                                         "Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)",
                                         "Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)",
-                                        "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)"
+                                        "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)",
+                                        "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)"
                                     ],
                        "next":  "Rinforzi Config G (gusset + diag + tiranti M10) + V8 documento completo dopo decisione silent blocks",
                        "target_capannone":  "15 Luglio 2030"
                    },
-    "focus_today":  "Prossima sessione: saldare gusset Z sinistra (fisico) + AgentsView log Claude->agenti + decisione silent blocks v.A/v.B",
+    "focus_today":  "Prossima sessione: saldare gusset Z sinistra (fisico) + decisione silent blocks v.A/v.B + verifica log DATA/logs/ funzionanti",
     "blockers":  [
                      "Manca mandrino 2.2kW ER20 - da ordinare",
                      "Silent blocks: decisione Version A (senza) vs Version B (con 18mm) - prerequisito V8"
