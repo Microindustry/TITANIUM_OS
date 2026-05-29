@@ -11,16 +11,18 @@ import logging
 from pathlib import Path
 from datetime import datetime
 
-if sys.stdout.encoding != "utf-8":
+if sys.stdout is not None and sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 try:
     from CORE.log import get_logger
     logger = get_logger("api_server")
-except ImportError:
+except Exception:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [api_server] %(levelname)s %(message)s")
     logger = logging.getLogger("api_server")
+
+logger.info("api_server.py caricato")
 
 from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
