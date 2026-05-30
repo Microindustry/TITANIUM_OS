@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [TITANIUM VENTURES - TECHNICAL MANIFESTO](#titanium-ventures---technical-manifesto)
+  - [1. TITANIUM V32 (The Machine)](#1-titanium-v32-the-machine)
+  - [2. EVA (The Economy)](#2-eva-the-economy)
+  - [3. MIMS (The Product)](#3-mims-the-product)
+
+<!-- /TOC -->
+
 # TITANIUM VENTURES - TECHNICAL MANIFESTO
 
 ## 1. TITANIUM V32 (The Machine)

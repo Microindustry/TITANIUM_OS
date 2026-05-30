@@ -5,6 +5,15 @@ argument-hint: [opzionale: filtro stagione es. AUTO]
 allowed-tools: Bash, Read
 disable-model-invocation: false
 ---
+<!-- TOC -->
+
+- [Dataset LLM  TITANIUM_OS Content Engine](#dataset-llm-titaniumos-content-engine)
+  - [Steps](#steps)
+  - [Formato output (standard 2025)](#formato-output-standard-2025)
+  - [Pipeline completa](#pipeline-completa)
+
+<!-- /TOC -->
+
 
 # Dataset LLM — TITANIUM_OS Content Engine
 

@@ -4,6 +4,14 @@ description: Genera o mostra il reel_hook di un episodio TITANIUM_OS per Instagr
 argument-hint: [EP_AUTO_XXX oppure vuoto per l'ultimo episodio]
 allowed-tools: Read, Grep, Bash
 ---
+<!-- TOC -->
+
+- [Reel Hook  TITANIUM_OS Content Engine](#reel-hook-titaniumos-content-engine)
+  - [Steps](#steps)
+  - [Tono](#tono)
+
+<!-- /TOC -->
+
 
 # Reel Hook — TITANIUM_OS Content Engine
 

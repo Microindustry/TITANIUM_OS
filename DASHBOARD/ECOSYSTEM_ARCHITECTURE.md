@@ -1,3 +1,21 @@
+<!-- TOC -->
+
+- [ECOSYSTEM_ARCHITECTURE.md  v2.0  2026-03-16](#ecosystemarchitecturemd-v20-2026-03-16)
+- [Basato su ASSOLUTO V6.0  15 ATTI](#basato-su-assoluto-v60-15-atti)
+- [Concetto: 1024 assi  sistema ricorsivo che si autoalimenta](#concetto-1024-assi-sistema-ricorsivo-che-si-autoalimenta)
+  - [VISIONE (ATTO XIV  La Libertà Industriale)](#visione-atto-xiv-la-libertà-industriale)
+  - [CICLO RICORSIVO (ATTO VI)](#ciclo-ricorsivo-atto-vi)
+  - [ALBERO CARTELLE  TITANIUM_OS (v2.0  2026-03-16)](#albero-cartelle-titaniumos-v20-2026-03-16)
+  - [4 PILASTRI (ASSOLUTO V6.0)](#4-pilastri-assoluto-v60)
+  - [PERSONAGGI (ATTO IV)](#personaggi-atto-iv)
+  - [V32 SPEC (ATTO II  VIII)](#v32-spec-atto-ii-viii)
+  - [MIMS (ATTO III)](#mims-atto-iii)
+  - [COMANDI RAPIDI](#comandi-rapidi)
+  - [STATO AUTOMAZIONI (2026-03-16)](#stato-automazioni-2026-03-16)
+  - [TIMELINE (ATTO XII)](#timeline-atto-xii)
+
+<!-- /TOC -->
+
 # ECOSYSTEM_ARCHITECTURE.md | v2.0 | 2026-03-16
 # Basato su ASSOLUTO V6.0 — 15 ATTI
 # Concetto: 1024 assi — sistema ricorsivo che si autoalimenta

@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [React  TypeScript  Vite](#react-typescript-vite)
+  - [React Compiler](#react-compiler)
+  - [Expanding the ESLint configuration](#expanding-the-eslint-configuration)
+
+<!-- /TOC -->
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -5,6 +5,15 @@ argument-hint: [descrizione-milestone es. "Asse Y assemblato (Mar 2026)"]
 allowed-tools: Read, Bash
 disable-model-invocation: false
 ---
+<!-- TOC -->
+
+- [Aggiorna Stato  TITANIUM_OS](#aggiorna-stato-titaniumos)
+  - [Milestone da aggiungere](#milestone-da-aggiungere)
+  - [Steps](#steps)
+  - [Formato milestone standard](#formato-milestone-standard)
+
+<!-- /TOC -->
+
 
 # Aggiorna Stato — TITANIUM_OS
 
