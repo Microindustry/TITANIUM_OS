@@ -2850,8 +2850,8 @@ GENESIS è il cervello di tutto. Swarm di agenti, RAG graph-aware alla versione 
 Intendo guardare nel senso fisico del termine. Uno schermo. Un'interfaccia. Un'applicazione che non ha API, che non ha terminale, che non ti dà nessun output strutturato. Un software anni Novanta che gira su un PC industriale e che comunica solo attraverso finestre, pulsanti, menu a tendina. Roba che in officina conosci bene — i software dei controlli CNC, i`,
   },
   {
-    id: "EP_AUTO_33",
-    title: "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js ra",
+    id: "EP_AUTO_35",
+    title: "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet",
     sottotitolo: "Milestone verificato · auto-generato",
     stagione: "AUTO",
     stagione_label: "Generato",
@@ -2859,136 +2859,86 @@ Intendo guardare nel senso fisico del termine. Uno schermo. Un'interfaccia. Un'a
     tags: ["auto_generato", "milestone"],
     status: "ready",
     durata_min: 8,
-    preview: "# Il Sistema — Episodio 23 ## \"La Mappa che Respira\"  ---  ## COLD OPEN  Trentuno nodi. Tre dimensioni. Un sistema che finalmente si vede dall'alto. S",
-    content: `# Il Sistema — Episodio 23
-## "La Mappa che Respira"
-
----
+    preview: "# Il Sistema — Episodio 23  ## COLD OPEN  C'è un momento in cui smetti di buttare soldi all'API e inizi a costruire un cervello che pensa da solo. Pe",
+    content: `
+# Il Sistema — Episodio 23
 
 ## COLD OPEN
 
-Trentuno nodi. Tre dimensioni. Un sistema che finalmente si vede dall'alto.
-Stamattina ho aperto il browser, ho guardato la rete ruotare su se stessa nel canvas Three.js, e per la prima volta ho pensato: *sì, questa roba esiste davvero.*
+C'è un momento in cui smetti di buttare soldi all'API e inizi a costruire un cervello che pensa da solo. Per me quel momento ha una data precisa: 30 maggio 2026. Si chiama ARGUS v2.0, e ha cambiato come il sistema vede il mondo.
 
 ---
 
-## ATTO I — Prima del 30 maggio esisteva solo il rumore
+## ATTO I — Il Problema dei Occhi Ciechi
 
-Devo spiegarti una cosa che non si capisce dall'esterno. Quando costruisci un sistema grande — intendo grande nel senso di tanti layer, tanti componenti che si parlano, tante dipendenze incrociate — arriva un momento in cui perdi il filo. Non perdi la direzione. Perdi la *mappa*. E senza mappa, ogni decisione costa il doppio perché prima devi ricostruire mentalmente dove sei.
+Lasciami spiegare da dove vengo, perché senza contesto questa cosa sembra solo un aggiornamento software. Non lo è.
 
-Io avevo GENESIS che girava all'83%, con il suo swarm NEXUS, il RAG graph-aware alla versione 5, il protocollo MCP 1.3, e il watchdog swarm parallelo che monitora tutto. Avevo V32 in costruzione fisica — la Config G dei rinforzi, 65% completata, bulloni veri, alluminio vero, assi da allineare. Avevo MIMS che aspetta pazientemente che la catena V32-VULCAN si consolidi prima di esplodere. Avevo Vita Natura con EVA in fase pilota, il sito, le prenotazioni, una logica AI che deve girare in un contesto completamente diverso dall'officina. E avevo IDENTITY — il CV, la dashboard, la documentazione delle capabilities — che è forse il componente più sottovalutato di tutti, perché senza identità chiara non vendi niente a nessuno.
+ARGUS è il layer di visione di TITANIUM_OS. È quella parte del sistema che guarda uno schermo, un'interfaccia, un documento, e capisce cosa c'è scritto, cosa sta succedendo, dove cliccare. È letteralmente gli occhi dell'automazione. E fino alla versione precedente, ogni volta che ARGUS doveva guardare qualcosa, mandava tutto a Claude Sonnet. Ogni screenshot. Ogni frame. Ogni campo di testo.
 
-Cinque sistemi. Percentuali diverse. Dipendenze non ovvie. E io che tenevo tutto in testa come uno stivale pieno d'acqua.
+Il risultato era semplice: funzionava bene, ma costava un casino. Quando hai un sistema che gira su GENESIS — che già di suo è un'architettura swarm con NEXUS, RAG graph-aware v5, MCP v1.3 e un watchdog parallelo — ogni chiamata API che puoi eliminare è ossigeno in più. Perché il sistema scala. E quando scala, i costi scalano con lui.
 
-La versione 1 della mappa era statica. Un documento, una tabella, qualcosa che guardavi e ti dava l'istantanea del momento. Utile, ma morta. Non ti diceva *perché* un componente era bloccato, non ti mostrava la tensione tra un sistema e l'altro, non ti faceva sentire il peso reale di quello che mancava.
-
----
-
-## ATTO II — Il 30 maggio: quando i dati iniziano a parlare in 3D
-
-L'idea era semplice in teoria e bastarda in pratica. Prendere tutti i nodi del sistema — ogni componente, ogni dipendenza, ogni stato — e proiettarli in uno spazio tridimensionale usando t-SNE. Non per fare la cosa bella. Per fare la cosa *vera*: il t-SNE collassa le distanze ad alta dimensionalità in qualcosa che occhi umani possono leggere. Se due nodi sono vicini nello spazio 3D, significa che hanno qualcosa in comune — dipendenze condivise, stati simili, pressione analoga nel sistema.
-
-Ho implementato tutto in Three.js raw, senza framework sopra, perché volevo controllo totale sul rendering. Ogni nodo è una sfera. Il colore dice lo stato. La posizione dice la relazione. Puoi ruotare, zoomare, cliccare su un nodo e fare drill-down: vedi il dettaglio del componente, i blocchi attivi, le dipendenze upstream e downstream. La MAPPA v2.0 non è più statica. È una rete che respira.
-
-Poi c'è il watchdog psutil. Questo è il pezzo che sembra banale e invece è fondamentale. psutil gira in background e monitora le risorse reali — CPU, memoria, processi — mentre il sistema lavora. Se qualcosa si inceppa, il watchdog lo vede prima che tu te ne accorga. L'ho integrato nel layer di monitoraggio di GENESIS, così lo swarm ha visibilità non solo sullo stato logico dei task, ma anche sullo stato fisico della macchina che li esegue.
-
-Il lazy loading chiude il cerchio. Con trentuno nodi attivi e una rete 3D che gira nel browser, non puoi caricare tutto subito. Il lazy loading carica i dettagli solo quando li chiedi — click su un nodo, i dati arrivano. Tutto il resto rimane leggero. È la differenza tra uno strumento che usi e uno strumento che ti usa.
-
----
-
-## ATTO III — Cosa si sblocca adesso
-
-La mappa v2.0 non è un upgrade estetico. È un cambio di paradigma operativo.
-
-GENESIS ora ha un pannello di controllo visivo che non esisteva prima. Posso vedere dove lo swarm sta lavorando, dove sta aspettando, dove c'è attrito. Posso prendere decisioni in secondi invece che in minuti. E con il watchdog psutil integrato, le decisioni sono informate anche dal piano fisico, non solo logico.
-
-Per V32, che è ancora al 65% con i rinforzi Config G, la mappa mi dice esattamente perché MIMS è bloccato: finché la catena V32-VULCAN non è chiusa, certi connettori modulari non hanno un contesto fisico su cui appoggiarsi. Non è un problema di design — MIMS ha il design completo. È un problema di sequenza. Adesso lo vedo nel grafo, visivamente, senza doverlo ricostruire ogni volta.
-
-Per Vita Natura e EVA, il drill-down mi mostra che il 40% di completamento nasconde una distribuzione asimmetrica: il sito e le prenotazioni sono più avanti, il pilota AI ha ancora punti ciechi. Con la mappa posso allocare il prossimo sprint in modo chirurgico.
-
-IDENTITY al 45% sembrava un numero vago. Adesso è un nodo nel grafo con dipend`,
+L'altra cosa che mi dava fasti`,
   },
   {
-    id: "EP_AUTO_34",
-    title: "ScreenAgent v1.0 - screenshot + griglia puntini ro",
-    sottotitolo: "La memoria esternalizzata",
+    id: "EP_AUTO_35",
+    title: "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet",
+    sottotitolo: "Milestone verificato · auto-generato",
     stagione: "AUTO",
     stagione_label: "Generato",
     data_evento: "2026-05-30",
     tags: ["auto_generato", "milestone"],
     status: "ready",
     durata_min: 8,
-    preview: "# Il Sistema — Episodio 23 ## \"ScreenAgent v1.0: Quando la macchina ha imparato a guardare\"  ---  ## COLD OPEN  Tieni d'occhio lo schermo. Adesso ti m",
+    preview: "# Il Sistema — Episodio 23  ## COLD OPEN  C'è un momento in cui smetti di buttare soldi all'API e inizi a costruire un cervello che pensa da solo. Per",
     content: `# Il Sistema — Episodio 23
-## "ScreenAgent v1.0: Quando la macchina ha imparato a guardare"
-
----
 
 ## COLD OPEN
 
-Tieni d'occhio lo schermo. Adesso ti mando uno screenshot. Aspetta che analizzi. Clicca lì. Copia. Sposta.
-
-Questo è quello che fa una persona davanti a un computer. Da oggi, lo fa anche il sistema.
+C'è un momento in cui smetti di buttare soldi all'API e inizi a costruire un cervello che pensa da solo. Per me quel momento ha una data precisa: 30 maggio 2026. Si chiama ARGUS v2.0, e ha cambiato come il sistema vede il mondo.
 
 ---
 
-## ATTO I — Prima c'era solo testo
+## ATTO I — Il Problema dei Occhi Ciechi
 
-Devo spiegarti da dove vengo, altrimenti questo milestone non ti dice nulla.
+Lasciami spiegare da dove vengo, perché senza contesto questa cosa sembra solo un aggiornamento software. Non lo è.
 
-GENESIS è il cervello di tutto. Swarm di agenti, RAG graph-aware alla versione cinque, orchestrazione MCP v1.3, watchdog parallelo che sorveglia gli altri agenti mentre lavorano. Siamo all'ottantatré percento. Non è poco. Ma c'era un problema strutturale che stava diventando sempre più evidente mentre costruivo: il sistema sapeva *leggere*, sapeva *ragionare*, sapeva *rispondere*. Non sapeva *guardare*.
+ARGUS è il layer di visione di TITANIUM_OS. È quella parte del sistema che guarda uno schermo, un'interfaccia, un documento, e capisce cosa c'è scritto, cosa sta succedendo, dove cliccare. È letteralmente gli occhi dell'automazione. E fino alla versione precedente, ogni volta che ARGUS doveva guardare qualcosa, mandava tutto a Claude Sonnet. Ogni screenshot. Ogni frame. Ogni campo di testo.
 
-Intendo guardare nel senso fisico del termine. Uno schermo. Un'interfaccia. Un'applicazione che non ha API, che non ha terminale, che non ti dà nessun output strutturato. Un software anni Novanta che gira su un PC industriale e che comunica solo attraverso finestre, pulsanti, menu a tendina. Roba che in officina conosci bene — i software dei controlli CNC, i gestionali vecchi, le interfacce proprietarie che il fornitore non aggiorna da dieci anni e che non aggiornerà mai.
+Il risultato era semplice: funzionava bene, ma costava un casino. Quando hai un sistema che gira su GENESIS — che già di suo è un'architettura swarm con NEXUS, RAG graph-aware v5, MCP v1.3 e un watchdog parallelo — ogni chiamata API che puoi eliminare è ossigeno in più. Perché il sistema scala. E quando scala, i costi scalano con lui.
 
-Come ci parla un agente AI? Non ci parla. Punto. O almeno, non ci parlava.
+L'altra cosa che mi dava fastidio era la latenza. Sonnet è rapido, ma una chiamata API è sempre una chiamata API. Ha un round trip. Ha un punto di fallimento esterno. E io non voglio che il cervello del mio sistema dipenda dalla connessione internet per fare cose che potrebbe fare da solo, in locale, in cinquanta millisecondi.
 
-Questa era la lacuna. Un sistema intelligente che si ferma davanti a qualsiasi cosa non abbia un'interfaccia pulita. Un meccanico bravissimo che non riesce ad aprire il cofano perché manca la chiave giusta.
-
----
-
-## ATTO II — Trenta maggio 2026
-
-ScreenAgent v1.0 nasce da una domanda semplice: cosa vede un essere umano davanti a uno schermo e cosa fa con quello che vede?
-
-Vede un'immagine. La interpreta. Decide dove cliccare. Esegue.
-
-Ho costruito esattamente questo, pezzo per pezzo. Prima il layer di acquisizione: screenshot in tempo reale dello schermo, catturato con precisione. Poi la griglia — una sovrapposizione venti per quindici di punti rossi, una mesh che trasforma ogni pixel dello schermo in una coordinata numerica precisa. Non è una soluzione elegante, è una soluzione *funzionante*, che è quello che conta.
-
-Quella griglia è il dizionario. È il modo con cui dico a Claude Vision: "Questo schermo è uno spazio con quattrocentottantasei punti di riferimento. Dimmi dove guardare." Claude riceve lo screenshot con la griglia sovrapposta, analizza, restituisce una coordinata. Il sistema converte quella coordinata in un click simulato. Mouse, tastiera, hotkey, drag and drop — tutto eseguito programmaticamente, tutto invisibile, tutto automatico.
-
-Il primo test lo ricordo bene. Ho aperto un'applicazione volutamente stupida, una di quelle con interfaccia grafica piatta e zero accesso esterno. Ho dato un'istruzione in linguaggio naturale. Il sistema ha fatto lo screenshot, ha sovrapposto la griglia, ha mandato tutto a Claude Vision, ha ricevuto la risposta, ha calcolato la coordinata, ha cliccato.
-
-Ha cliccato nel posto giusto.
-
-Non al secondo tentativo. Non dopo correzioni. Al primo.
-
-Stavo in officina da solo e ho detto "ecco" a voce alta, come si fa quando una saldatura viene perfetta al primo passaggio e non c'è nessuno intorno ma devi comunque dirlo.
+Quindi mi sono messo a riprogettare ARGUS da zero.
 
 ---
 
-## ATTO III — Cosa si sblocca adesso
+## ATTO II — Tre Strati, Una Gerarchia
 
-Cambia molto. Te lo dico in modo concreto, senza giri di parole.
+L'idea di base è stupida nella sua semplicità, come tutte le idee buone. Non mandare tutto a Sonnet. Manda a Sonnet solo quello che non riesci a risolvere prima.
 
-V32 è la fresatrice CNC che sto costruendo, siamo al sessantacinque percento con i rinforzi della Config G. Quando sarà completa, dovrà dialogare con software di controllo industriale. Alcuni di quei software non hanno interfacce moderne. ScreenAgent è la mano che li tocca.
+Così ho costruito un'architettura a tre livelli.
 
-VULCAN, la pressa polimeri, stessa storia. MIMS aspetta che la catena V32-VULCAN sia completa per andare avanti. Ogni nodo della catena che diventa più robusto avvicina MIMS al suo trenta percento di avanzamento al prossimo step.
+Il primo livello, L1, è completamente locale. YOLO per la detection visiva degli elementi a schermo, OCR per estrarre il testo. Nessuna API, nessuna dipendenza esterna. Se ARGUS vede un pulsante con scritto "Conferma", L1 lo trova, lo legge, e lo passa avanti in meno di un secondo. Finisce lì. Costo: zero.
 
-EVA, il sistema AI che gestisce Vita Natura, il centro estetico, deve operare su prenotazioni, calendari, interfacce web che cambiano. ScreenAgent le dà occhi. Non metaforicamente — operativamente.
+Il secondo livello, L2, entra in gioco quando L1 non è abbastanza sicuro. Parliamo di text matching, pattern recognition su strutture note, confronto con template già visti. È ancora tutto interno al sistema. È più lento di L1, ma sempre veloce, e ancora senza API. L2 risolve la maggior parte dei casi ambigui — interfacce che cambiano leggermente, testi con formattazione strana, layout che variano tra sessioni.
 
-Ma c'è qualcosa di più grande che voglio dirti. ScreenAgent v1.0 non è solo uno strumento. È una prova di concetto su un principio che guida tutto il progetto: nessun sistema dovrebbe fermarsi perché l'ambiente non è collaborativo. Un sistema robusto lavora con quello che trova, non con quello che vorrebbe trovare. Questa filosofia la applico in officina da vent'anni — adatti l'utensile al pezzo, non il pezzo all'utensile. L'ho messa dentro il codice.
+Solo quando L2 alza la mano e dice "non so" — solo allora arriva L3. Sonnet. Il fallback intelligente. E Sonnet è bravo esattamente perché lo usi per le cose difficili, non per tutto. Gli dai il caso veramente complesso, lui lo risolve, e quella risposta può anche alimentare il RAG per la prossima volta.
 
-Adesso GENESIS ha percezione visiva. È un salto di qualità, non di quantità.
+Il risultato lo vedo nelle metriche: costo API meno ottanta percento. Non è un'ottimizzazione marginale. È una ristrutturazione completa di dove sta l'intelligenza. Prima stava tutta fuori, sul cloud di Anthropic. Adesso sta qui, in locale, e solo l'eccezione viaggia fuori.
 
----
-
-## CHIUSURA
-
-*La differenza tra un sistema che ragiona e un sistema che lavora è che uno dei due sa aprire il cofano da solo.*
+Ho chiamato l'intera architettura OmniParser plus Sonnet, perché OmniParser è il framework che ho usato come base per integrare YOLO e OCR in un pipeline coerente. Non ho reinventato la ruota. Ho preso pezzi che funzionavano e li ho messi insieme in modo che avessero senso per TITANIUM_OS.
 
 ---
 
-Prossimo episodio: aggiornamento V32, Config G rinforzi — cosa significa davvero costruire una fresatrice con le proprie mani nel 2026.`,
+## ATTO III — Cosa Si Sblocca Adesso
+
+Concretamente, con ARGUS v2.0 in produzione, posso scalare GENESIS in modo che non mi spaventi economicamente. Il sistema di automazione può girare più a lungo, su più task in parallelo, senza che la bolletta API diventi il collo di bottiglia.
+
+Per VITA_NATURA, dove EVA deve interagire con interfacce di prenotazione, calendari, gestionali del centro estetico, questo significa che il pilot può diventare deployment reale. Prima ero cauto perché ogni sessione di EVA con molte operazioni visive aveva un costo non banale. Adesso L1 e L2 assorbono l'ottanta percento delle interazioni. EVA lavora, il cliente vede il servizio, io non vedo la fattura crescere ad ogni click.
+
+Per V32 e VULCAN il discorso è diverso ma collegato. Quando V32 sarà online — siamo a Config G, sessantacinque percento, i rinforzi strutturali stanno venendo fuori bene — e quando MIMS avrà la catena completa V32 verso VULCAN, ARGUS dovrà monitorare interfacce di controllo CNC, leggere parametri, riconoscere stati macchina. Con la vecchia architettura avrei pensato due volte prima di mettere visione AI su un loop di controllo industriale per questioni di latenza e costo. Con L1 locale, posso farlo serenamente.
+
+ARGUS v2.0 non è solo un modulo aggiornato. È la prova che costruire il sistema in modo modulare, con layer separati, paga. Ogni pezzo può evolvere`,
   },
   // AUTO_GENERATED_END
 ];
