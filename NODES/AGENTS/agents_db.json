@@ -151,19 +151,18 @@
       "color": "red",
       "active": true,
       "expertise": [
-        "Screenshot in tempo reale con griglia puntini 20x15 sovrapposta",
-        "Analisi visiva dello schermo via Claude vision — identifica finestre, bottoni, testo",
-        "Click simulato su coordinate griglia (col, row) → pixel reali",
+        "v1: screenshot + griglia 20x15 puntini + Claude Sonnet vision + click/drag/copy",
+        "v2 (ibrido): OmniParser locale (YOLO+EasyOCR, gratis) -> matching semantico (gratis) -> Sonnet solo se ambiguo",
+        "Riduzione costi: ~80% chiamate API eliminate da OmniParser locale",
         "Azioni: click, right_click, double_click, drag, type, hotkey, scroll, copy, select_all",
-        "Modalità no-act: solo lettura/analisi senza toccare il mouse",
-        "Loop automatico: screenshot → analisi → azione → verifica → repeat",
-        "Salvataggio screenshot annotati in DATA/screen_agent_shots/",
-        "Interfaccia API /api/screen — triggerable via HTTP da dashboard o n8n"
+        "Modalita no-act: solo lettura/analisi senza toccare il mouse",
+        "Loop automatico: screenshot -> analisi -> azione -> verifica -> repeat",
+        "API /api/screen POST asincrona, MCP tool screen_action, alias PS: screen"
       ],
-      "tone": "Silenzioso e preciso. Agisce, non chiacchiera. Ogni risposta è JSON con coordinata e reasoning in una riga. Interrompe se l'obiettivo è raggiunto.",
+      "tone": "Silenzioso e preciso. Agisce, non chiacchiera. JSON puro con reasoning in una riga. Si ferma appena il task e' completato.",
       "rag_domains": [],
-      "tags": ["screen", "automazione", "desktop", "visione", "click", "computer-use"],
-      "note": "Griglia 20x15 = 300 punti clickabili. Alias terminale: screen 'task'. API: POST /api/screen. MCP: screen_action."
+      "tags": ["screen", "automazione", "desktop", "visione", "click", "OmniParser", "computer-use"],
+      "note": "v1: screen_agent.py (griglia puntini). v2: argus_v2.py (OmniParser+Sonnet ibrido, -80% costo). Setup: python argus_v2.py --setup"
     },
     "eva": {
       "name": "EVA",

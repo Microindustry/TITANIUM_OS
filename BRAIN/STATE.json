@@ -6,10 +6,10 @@
     "description": "TITANIUM_OS v2.9.0 — ScreenAgent v1.0: griglia puntini + visione Claude + click simulato + MAPPA v2 + RETE t-SNE 3D",
     "system": "TITANIUM OS - ecosystem v1.4"
   },
-  "last_update": "2026-05-30T17:12:51.621476",
+  "last_update": "2026-05-30T20:14:12.914115",
   "active_milestone": "Config G - Rinforzi colonne Z+U",
   "ciclo_position": "COSTRUISCI",
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
+  "last_action": "Modifica a model.pt.metadata",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
   "session_count": 20,
   "pillars": {
@@ -90,7 +90,8 @@
       "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)",
       "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)",
       "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js raw) + watchdog psutil + lazy loading (30 Mag 2026)",
-      "ScreenAgent v1.0 - screenshot + griglia puntini rossi 20x15 + Claude vision + click simulato + copy/drag/hotkey (30 Mag 2026)"
+      "ScreenAgent v1.0 - screenshot + griglia puntini rossi 20x15 + Claude vision + click simulato + copy/drag/hotkey (30 Mag 2026)",
+      "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet: L1 YOLO+OCR locale, L2 text matching, L3 Sonnet fallback - costo API -80% (30 Mag 2026)"
     ],
     "next": "Rinforzi Config G (gusset + diag + tiranti M10) + V8 documento completo dopo decisione silent blocks",
     "target_capannone": "15 Luglio 2030"
@@ -115,7 +116,7 @@
     "STORY_AGENT": "ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO",
     "NIGHT_PUSH": "ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico",
     "COMPUTER_USE": "ATTIVO v1.1 - NODES/COMPUTER_USE/ - ComputerUse + BrowserAgent + CDP + ScreenAgent griglia puntini | alias: screen",
-    "ARGUS": "ATTIVO v1.0 - agente ARGUS (screen_agent.py) - griglia 20x15 + Claude vision + click/drag/copy | alias: screen | API: POST /api/screen | MCP: screen_action | agents_db: argus",
+    "ARGUS": "ATTIVO v2.0 - v1: screen_agent.py (griglia+Sonnet) | v2: argus_v2.py (OmniParser+Sonnet ibrido, -80% costo) | setup: python argus_v2.py --setup | alias: screen | API: /api/screen | MCP: screen_action",
     "GOOGLE_CALENDAR": "ATTIVO - mcp__claude_ai_Google_Calendar__* - legge/crea eventi | account benenatimatteo.mb@gmail.com",
     "GMAIL": "ATTIVO - mcp__claude_ai_Gmail__* - search, draft, labels | account benenatimatteo.mb@gmail.com",
     "EVA": "pending - WhatsApp Business API setup",
