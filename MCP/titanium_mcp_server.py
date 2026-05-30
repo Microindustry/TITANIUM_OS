@@ -144,6 +144,39 @@ async def list_tools() -> list[types.Tool]:
             },
         ),
         types.Tool(
+            name="update_session_context",
+            description="Aggiorna DATA/session_context.json con i topic discussi nella sessione corrente. Chiamare quando si cambia argomento importante o a fine sessione. Serve per RIAVVIO_SESSIONE.txt alla prossima sessione.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "last_discussed": {
+                        "type": "string",
+                        "description": "Descrizione concisa di cosa stavamo facendo/discutendo (1-2 frasi)",
+                    },
+                    "active_topics": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Lista topic attivi in questa sessione",
+                    },
+                    "open_threads": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Cose lasciate aperte da riprendere",
+                    },
+                    "decisions_made": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Decisioni prese in questa sessione",
+                    },
+                    "next_action": {
+                        "type": "string",
+                        "description": "Prossima azione suggerita per la sessione successiva",
+                    },
+                },
+                "required": ["last_discussed"],
+            },
+        ),
+        types.Tool(
             name="save_session",
             description="Salva le decisioni chiave della sessione in MENTE/SESSIONI/ per il RAG futuro. Usa a fine sessione o quando prendi decisioni importanti.",
             inputSchema={
@@ -292,6 +325,43 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         except Exception as e:
             logger.error("rag_update: %s", e)
             return _ok(f"Errore rag_update: {e}")
+
+    # ── update_session_context ───────────────────────────────────
+    elif name == "update_session_context":
+        try:
+            ctx_file = DATA_DIR / "session_context.json"
+            ctx = {}
+            if ctx_file.exists():
+                with open(ctx_file, encoding="utf-8") as f:
+                    ctx = json.load(f)
+
+            with open(STATE_FILE, encoding="utf-8") as f:
+                state = json.load(f)
+
+            ctx["session_number"] = state.get("session_count", ctx.get("session_number", 0))
+            ctx["session_date"]   = datetime.now().strftime("%Y-%m-%d")
+            ctx["last_updated"]   = datetime.now().isoformat()
+
+            if arguments.get("last_discussed"):
+                ctx["last_discussed"] = arguments["last_discussed"]
+            if arguments.get("active_topics"):
+                ctx["active_topics"] = arguments["active_topics"]
+            if arguments.get("open_threads"):
+                ctx["open_threads"] = arguments["open_threads"]
+            if arguments.get("decisions_made"):
+                ctx["decisions_made"] = arguments["decisions_made"]
+            if arguments.get("next_action"):
+                ctx["next_action"] = arguments["next_action"]
+            ctx["blockers"] = state.get("blockers", [])
+
+            with open(ctx_file, "w", encoding="utf-8") as f:
+                json.dump(ctx, f, ensure_ascii=False, indent=2)
+
+            logger.info("update_session_context: %s", arguments.get("last_discussed", "")[:60])
+            return _ok(f"session_context.json aggiornato — RIAVVIO_SESSIONE.txt sarà generato allo stop.")
+        except Exception as e:
+            logger.error("update_session_context: %s", e)
+            return _ok(f"Errore update_session_context: {e}")
 
     # ── save_session ─────────────────────────────────────────────
     elif name == "save_session":

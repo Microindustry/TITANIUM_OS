@@ -1,0 +1,31 @@
+{
+  "session_number": 14,
+  "session_date": "2026-05-30",
+  "last_updated": "2026-05-30T10:37:00",
+  "last_discussed": "Costruito NEXUS swarm orchestrator v1.0 (NODES/NEXUS/nexus.py), RAG graph-aware v5.0 con networkx (114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA), MCP v1.3 con tool nexus + rag_update + save_session. Watchdog swarm parallelo v1.3. Fix vault env in Task Scheduler per task notturni.",
+  "active_topics": [
+    "NEXUS swarm orchestrator",
+    "RAG graph-aware v5.0",
+    "MCP v1.3 — 7 tool",
+    "Watchdog swarm v1.3",
+    "Fix task notturni vault env"
+  ],
+  "open_threads": [
+    "EVA WhatsApp pilot — WhatsApp Business API setup pending",
+    "AgentsView log Claude->agenti (non chat Matteo->agente)",
+    "GitHub profile pubblico + CV aggiornato AI skills",
+    "Gusset 200mm saldatura Z sinistra (fisico, la Taverna)",
+    "Decisione silent blocks v.A (senza) vs v.B (con 18mm) — prerequisito V8"
+  ],
+  "decisions_made": [
+    "NEXUS usa ThreadPoolExecutor per parallelismo agenti",
+    "RAG graph networkx — 114 nodi, 218 archi",
+    "MCP v1.3: 7 tool totali",
+    "Logging centralizzato CORE/log.py — 34 file aggiornati"
+  ],
+  "next_action": "Sistema continuita sessione — RIAVVIO_SESSIONE.txt + stop hook",
+  "blockers": [
+    "Mandrino 2.2kW ER20 da ordinare",
+    "Silent blocks: decisione v.A vs v.B"
+  ]
+}

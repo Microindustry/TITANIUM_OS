@@ -1,1 +1,21 @@
-{"permissions":{"allow":["mcp__Claude_Preview__preview_screenshot","mcp__Claude_Preview__preview_logs","mcp__Claude_Preview__preview_console_logs"]}}
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_screenshot",
+      "mcp__Claude_Preview__preview_logs",
+      "mcp__Claude_Preview__preview_console_logs"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\Users\\benen\\tools\\python311\\python.exe C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\generate_restart_prompt.py"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+=== RIAVVIO SESSIONE #15 — 30/05/2026 10:42 ===
+Ultima sessione: #14 — 2026-05-30
+
+━━━ STAVAMO PARLANDO DI ━━━
+Costruito NEXUS swarm orchestrator v1.0 (NODES/NEXUS/nexus.py), RAG graph-aware v5.0 con networkx (114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA), MCP v1.3 con tool nexus + rag_update + save_session. Watchdog swarm parallelo v1.3. Fix vault env in Task Scheduler per task notturni.
+
+━━━ TOPIC ATTIVI ━━━
+  • NEXUS swarm orchestrator
+  • RAG graph-aware v5.0
+  • MCP v1.3 — 7 tool
+  • Watchdog swarm v1.3
+  • Fix task notturni vault env
+
+━━━ THREAD APERTI (da riprendere) ━━━
+  → EVA WhatsApp pilot — WhatsApp Business API setup pending
+  → AgentsView log Claude->agenti (non chat Matteo->agente)
+  → GitHub profile pubblico + CV aggiornato AI skills
+  → Gusset 200mm saldatura Z sinistra (fisico, la Taverna)
+  → Decisione silent blocks v.A (senza) vs v.B (con 18mm) — prerequisito V8
+
+━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
+  ✓ NEXUS usa ThreadPoolExecutor per parallelismo agenti
+  ✓ RAG graph networkx — 114 nodi, 218 archi
+  ✓ MCP v1.3: 7 tool totali
+  ✓ Logging centralizzato CORE/log.py — 34 file aggiornati
+
+━━━ PROSSIMA AZIONE SUGGERITA ━━━
+  Sistema continuita sessione — RIAVVIO_SESSIONE.txt + stop hook
+
+━━━ BLOCKERS ━━━
+  ⚠ Mandrino 2.2kW ER20 da ordinare
+  ⚠ Silent blocks: decisione v.A vs v.B
+
+━━━ STATO PILASTRI ━━━
+  V32: 65% — Gusset + diagonali + tiranti M10 + Epoxy fill
+  MIMS: 30% — Completare V32 -> costruire VULCAN -> primo stampo test
+  GENESIS: 83% — EVA WhatsApp pilot + AgentsView log consultazioni Claude->ag
+  VITA_NATURA: 40% — EVA WhatsApp bot pilot - Maria Rule zero-click
+  IDENTITY: 45% — GitHub profile pubblico + CV file originale aggiornato con A
+
+━━━ ULTIMI COMMIT ━━━
+51e4dc6 state: v2.8.0 â€” NEXUS swarm + RAG graph v5 + MCP v1.3 + ecosystem v1.4 â€” GENESIS 83%
+e2c0110 feat: NEXUS swarm orchestrator v1.0 + RAG graph-aware v5.0 + MCP v1.3
+85bed9d feat: swarm watchdog v1.3 + MCP rag_update + save_session (context rot fix)
+5c0d21a fix: caricamento vault env in task notturni â€” GH_TOKEN + ANTHROPIC_API_KEY da Task Scheduler
+9ba9516 auto: story_agent Ã”Ã‡Ã¶ episodi generati 30/05/2026
+
+Generato: 30/05/2026 10:42

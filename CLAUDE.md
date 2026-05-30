@@ -1,3 +1,23 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  CLAUDE.md](#titaniumos-claudemd)
+  - [CHI È MATTEO](#chi-è-matteo)
+  - [INIZIO SESSIONE (protocollo fisso)](#inizio-sessione-protocollo-fisso)
+  - [FILESYSTEM  dove va ogni file (non inventare)](#filesystem-dove-va-ogni-file-non-inventare)
+    - [SISTEMA](#sistema)
+    - [MICROINDUSTRY (dati lavoro)](#microindustry-dati-lavoro)
+    - [Tabella rapida](#tabella-rapida)
+  - [DATI MASTER (verificati fisicamente  non inventare)](#dati-master-verificati-fisicamente-non-inventare)
+  - [MILESTONE ATTUALE](#milestone-attuale)
+  - [GENESIS STACK  nodi attivi](#genesis-stack-nodi-attivi)
+  - [PERSONAGGI AI](#personaggi-ai)
+  - [LE 10 REGOLE  TITANIUM_OS OPERATING PRINCIPLES](#le-10-regole-titaniumos-operating-principles)
+  - [SETUP GETAC](#setup-getac)
+  - [REGOLE CODICE (non negoziabili)](#regole-codice-non-negoziabili)
+  - [PIPELINE CONOSCENZA (il loop che si autoalimenta)](#pipeline-conoscenza-il-loop-che-si-autoalimenta)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — CLAUDE.md
 *Versione: 4.0.0 | Aggiornato: 2026-05-27 | Macchina: Getac (benen)*
 
@@ -13,13 +33,14 @@ Matteo Benenati — artigiano industriale + system builder.
 ## INIZIO SESSIONE (protocollo fisso)
 
 ```
-1. Leggi BRAIN/STATE.json       → riassunto in <10 secondi, zero domande
-2. Enunci: milestone attivo + prossimo step + blockers
-3. Lavora — ogni frammento utile va catturato
-4. Fine sessione → aggiorna STATE.json + commit + push
+1. Leggi RIAVVIO_SESSIONE.txt   → di cosa stavamo parlando l'ultima sessione
+2. Leggi BRAIN/STATE.json       → milestone attivo + pilastri + blockers
+3. Enunci in <10 sec: dove eravamo + prossimo step — zero domande
+4. Lavora — chiama update_session_context (MCP) quando cambia topic importante
+5. Fine sessione → update_session_context + aggiorna STATE.json + commit + push
 ```
 
-Non chiedere "da dove partiamo?". Lo stato è in STATE.json. Leggilo.
+Non chiedere "da dove partiamo?". Leggi RIAVVIO_SESSIONE.txt prima di tutto.
 
 ---
 
