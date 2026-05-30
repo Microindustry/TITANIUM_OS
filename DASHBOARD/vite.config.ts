@@ -228,6 +228,13 @@ export default defineConfig({
       '/api/sanitizer': 'http://localhost:5001',
       '/api/rag': 'http://localhost:5001',
       '/api/daily-brief': 'http://localhost:5001',
+      '/api/agents': 'http://localhost:5001',
+      '/api/screen': 'http://localhost:5001',
+      '/api/media': 'http://localhost:5001',
+      '/api/photos': 'http://localhost:5001',
+      '/api/pdfs': 'http://localhost:5001',
+      '/api/programs': 'http://localhost:5001',
+      '/api/restart': 'http://localhost:5001',
     },
   },
   build: {

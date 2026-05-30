@@ -34,6 +34,7 @@ const AGENT_STYLE: Record<string, {
   themis: { glow: "0 0 60px #818cf820", border: "border-indigo-500/40",  bg: "bg-indigo-950/20",   badge: "bg-indigo-500/15 text-indigo-300",  accent: "text-indigo-400",  dot: "bg-indigo-400",  gradient: "from-indigo-950/60 via-slate-900/80 to-slate-950" },
   aria:   { glow: "0 0 60px #a855f720", border: "border-purple-500/40",  bg: "bg-purple-950/20",   badge: "bg-purple-500/15 text-purple-300",  accent: "text-purple-400",  dot: "bg-purple-400",  gradient: "from-purple-950/60 via-slate-900/80 to-slate-950" },
   eva:    { glow: "0 0 60px #ec489920", border: "border-pink-500/40",    bg: "bg-pink-950/20",     badge: "bg-pink-500/15 text-pink-300",      accent: "text-pink-400",    dot: "bg-pink-400",    gradient: "from-pink-950/60 via-slate-900/80 to-slate-950" },
+  argus:  { glow: "0 0 60px #ef444420", border: "border-red-500/40",     bg: "bg-red-950/20",      badge: "bg-red-500/15 text-red-300",        accent: "text-red-400",     dot: "bg-red-400",     gradient: "from-red-950/60 via-slate-900/80 to-slate-950" },
 };
 
 const DEFAULT_STYLE = AGENT_STYLE.themis;

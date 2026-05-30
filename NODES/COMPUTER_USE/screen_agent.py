@@ -1,8 +1,8 @@
-# screen_agent.py | TITANIUM_OS / NODES / COMPUTER_USE | v1.0 | 2026-05-30
+﻿# screen_agent.py | TITANIUM_OS / NODES / COMPUTER_USE | v1.0 | 2026-05-30
 """
 Agente visivo a griglia di puntini.
 
-Loop: screenshot → griglia sovrapposta → Claude analizza → azione → repeat.
+Loop: screenshot -> griglia sovrapposta -> Claude analizza -> azione -> repeat.
 
 La griglia divide lo schermo in COLS x ROWS punti rossi.
 Claude vede l'immagine annotata e risponde con coordinate griglia (col, row).
@@ -18,6 +18,14 @@ Uso:
 import os, sys, time, base64, json, argparse, logging
 from pathlib import Path
 from io import BytesIO
+
+# Fix encoding Windows cp1252 -> utf-8
+if sys.stdout is not None:
+    try: sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception: pass
+if sys.stderr is not None:
+    try: sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception: pass
 
 _ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(_ROOT))
@@ -35,13 +43,13 @@ import pyperclip
 from PIL import Image, ImageDraw, ImageFont
 import anthropic
 
-# ── Paths ────────────────────────────────────────────────────────────────────
+# -- Paths --------------------------------------------------------------------
 BASE_DIR  = Path(__file__).resolve().parents[3]
 VAULT_ENV = BASE_DIR / "_VAULT" / "KEYS" / "titanium_os.env"
 SHOTS_DIR = BASE_DIR / "DATA" / "screen_agent_shots"
 SHOTS_DIR.mkdir(parents=True, exist_ok=True)
 
-# ── Config ────────────────────────────────────────────────────────────────────
+# -- Config --------------------------------------------------------------------
 MODEL      = "claude-sonnet-4-6"
 GRID_COLS  = 20        # colonne griglia (asse X)
 GRID_ROWS  = 15        # righe griglia (asse Y)
@@ -65,7 +73,7 @@ def _load_env():
                 os.environ.setdefault(k.strip(), v.strip())
 
 
-# ── Screenshot ────────────────────────────────────────────────────────────────
+# -- Screenshot ----------------------------------------------------------------
 
 def capture() -> tuple[Image.Image, int, int]:
     """Cattura schermo principale. Ritorna (PIL Image, width, height) originali."""
@@ -76,7 +84,7 @@ def capture() -> tuple[Image.Image, int, int]:
     return img, img.width, img.height
 
 
-# ── Griglia puntini ───────────────────────────────────────────────────────────
+# -- Griglia puntini -----------------------------------------------------------
 
 def overlay_grid(img: Image.Image, cols: int, rows: int) -> tuple[Image.Image, list]:
     """
@@ -127,11 +135,11 @@ def save_shot(img: Image.Image, tag: str = "") -> Path:
     ts = time.strftime("%H%M%S")
     p = SHOTS_DIR / f"{ts}_{tag}.png"
     img.save(p)
-    logger.debug("shot → %s", p)
+    logger.debug("shot -> %s", p)
     return p
 
 
-# ── Conversione griglia → schermo ─────────────────────────────────────────────
+# -- Conversione griglia -> schermo ---------------------------------------------
 
 def grid_to_screen(col: int, row: int, real_w: int, real_h: int,
                    cols: int, rows: int) -> tuple[int, int]:
@@ -141,30 +149,30 @@ def grid_to_screen(col: int, row: int, real_w: int, real_h: int,
     return x, y
 
 
-# ── Claude ────────────────────────────────────────────────────────────────────
+# -- Claude --------------------------------------------------------------------
 
 def _build_system(cols: int, rows: int) -> str:
     return f"""Sei un agente di automazione desktop. Vedi lo schermo con una griglia di puntini rossi sovrapposta.
 
-GRIGLIA: {cols} colonne (0–{cols-1}) × {rows} righe (0–{rows-1}).
+GRIGLIA: {cols} colonne (0-{cols-1}) x {rows} righe (0-{rows-1}).
 Le etichette gialle "(col,row)" appaiono ogni 5 punti come riferimento.
 
 Rispondi SOLO con JSON valido, NESSUN altro testo:
 
 {{
   "action": "click" | "right_click" | "double_click" | "drag" | "type" | "hotkey" | "scroll" | "select_all" | "copy" | "analyze" | "done",
-  "col": <int>,           // colonna griglia — per click/drag
-  "row": <int>,           // riga griglia — per click/drag
+  "col": <int>,           // colonna griglia -- per click/drag
+  "row": <int>,           // riga griglia -- per click/drag
   "col2": <int>,          // destinazione drag (colonna)
   "row2": <int>,          // destinazione drag (riga)
   "text": "<testo>",      // per type: testo da scrivere | per hotkey: "ctrl+c"
   "scroll_dir": "up|down",
   "scroll_amount": <int>,
-  "reasoning": "<una riga: cosa stai facendo e perché>"
+  "reasoning": "<una riga: cosa stai facendo e perche>"
 }}
 
 Regole:
-- Identifica l'elemento target, trova il puntino più vicino, usa quelle coordinate.
+- Identifica l'elemento target, trova il puntino piu vicino, usa quelle coordinate.
 - Dopo ogni click aspetti il prossimo screenshot per vedere il risultato.
 - "analyze": solo leggi/descrivi lo schermo senza agire (per tasks descrittivi).
 - "done": task completato, includi il risultato in "reasoning".
@@ -172,18 +180,32 @@ Regole:
 
 
 def _parse_json(text: str) -> dict:
+    import re
     text = text.strip()
-    if text.startswith("```"):
-        parts = text.split("```")
-        text = parts[1].lstrip("json").strip() if len(parts) > 1 else text
+    # Prova diretto
     try:
         return json.loads(text)
     except json.JSONDecodeError:
-        logger.warning("JSON non valido: %s", text[:150])
-        return {"action": "done", "reasoning": f"Risposta non parsabile: {text[:80]}"}
+        pass
+    # Estrai da ```json ... ```
+    m = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(1))
+        except json.JSONDecodeError:
+            pass
+    # Estrai il primo { ... } dalla risposta
+    m = re.search(r"\{[^{}]*\}", text, re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(0))
+        except json.JSONDecodeError:
+            pass
+    logger.warning("JSON non trovato: %s", text[:150])
+    return {"action": "done", "reasoning": f"Risposta non parsabile: {text[:80]}"}
 
 
-# ── Esecuzione azione ─────────────────────────────────────────────────────────
+# -- Esecuzione azione ---------------------------------------------------------
 
 def execute_action(action: dict, real_w: int, real_h: int,
                    cols: int, rows: int) -> str | None:
@@ -199,35 +221,35 @@ def execute_action(action: dict, real_w: int, real_h: int,
     if act == "click":
         x, y = _xy()
         pyautogui.click(x, y)
-        logger.info("→ click (%d,%d) → screen(%d,%d) | %s", action.get("col"), action.get("row"), x, y, reasoning)
+        logger.info("-> click (%d,%d) -> screen(%d,%d) | %s", action.get("col"), action.get("row"), x, y, reasoning)
 
     elif act == "right_click":
         x, y = _xy()
         pyautogui.rightClick(x, y)
-        logger.info("→ right_click (%d,%d) | %s", action.get("col"), action.get("row"), reasoning)
+        logger.info("-> right_click (%d,%d) | %s", action.get("col"), action.get("row"), reasoning)
 
     elif act == "double_click":
         x, y = _xy()
         pyautogui.doubleClick(x, y)
-        logger.info("→ double_click (%d,%d) | %s", action.get("col"), action.get("row"), reasoning)
+        logger.info("-> double_click (%d,%d) | %s", action.get("col"), action.get("row"), reasoning)
 
     elif act == "drag":
         x1, y1 = _xy("col", "row")
         x2, y2 = _xy("col2", "row2")
         pyautogui.drag(x1, y1, x2 - x1, y2 - y1, duration=0.4, button="left")
-        logger.info("→ drag (%d,%d)→(%d,%d) | %s", x1, y1, x2, y2, reasoning)
+        logger.info("-> drag (%d,%d)->(%d,%d) | %s", x1, y1, x2, y2, reasoning)
 
     elif act == "type":
         text = action.get("text", "")
         pyperclip.copy(text)
         time.sleep(0.15)
         pyautogui.hotkey("ctrl", "v")
-        logger.info("→ type (clipboard): %s", text[:60])
+        logger.info("-> type (clipboard): %s", text[:60])
 
     elif act == "hotkey":
         keys = [k.strip() for k in action.get("text", "").lower().split("+")]
         pyautogui.hotkey(*keys)
-        logger.info("→ hotkey: %s | %s", action.get("text"), reasoning)
+        logger.info("-> hotkey: %s | %s", action.get("text"), reasoning)
 
     elif act == "scroll":
         x, y = _xy()
@@ -235,29 +257,29 @@ def execute_action(action: dict, real_w: int, real_h: int,
         amount = action.get("scroll_amount", 3)
         delta = amount if direction == "up" else -amount
         pyautogui.scroll(delta, x=x, y=y)
-        logger.info("→ scroll %s %d @ (%d,%d) | %s", direction, amount, x, y, reasoning)
+        logger.info("-> scroll %s %d @ (%d,%d) | %s", direction, amount, x, y, reasoning)
 
     elif act == "select_all":
         x, y = _xy()
         pyautogui.click(x, y)
         time.sleep(0.1)
         pyautogui.hotkey("ctrl", "a")
-        logger.info("→ select_all @ (%d,%d) | %s", x, y, reasoning)
+        logger.info("-> select_all @ (%d,%d) | %s", x, y, reasoning)
 
     elif act == "copy":
         pyautogui.hotkey("ctrl", "c")
         time.sleep(0.25)
         clipboard = pyperclip.paste()
-        logger.info("→ copy → clipboard: %s", clipboard[:120])
+        logger.info("-> copy -> clipboard: %s", clipboard[:120])
         return clipboard
 
     elif act == "analyze":
-        logger.info("→ analyze: %s", reasoning)
+        logger.info("-> analyze: %s", reasoning)
 
     return None
 
 
-# ── Loop principale ───────────────────────────────────────────────────────────
+# -- Loop principale -----------------------------------------------------------
 
 def run(task: str, cols: int = GRID_COLS, rows: int = GRID_ROWS,
         save_shots: bool = False, no_act: bool = False,
@@ -333,7 +355,7 @@ def run(task: str, cols: int = GRID_COLS, rows: int = GRID_ROWS,
         if not no_act:
             result = execute_action(action, real_w, real_h, cols, rows)
             if result is not None:
-                # Testo copiato → aggiungi alla conversazione come contesto
+                # Testo copiato -> aggiungi alla conversazione come contesto
                 messages.append({
                     "role": "user",
                     "content": f"[Clipboard copiato]: {result[:500]}"
@@ -356,10 +378,10 @@ def run(task: str, cols: int = GRID_COLS, rows: int = GRID_ROWS,
     return last_reasoning
 
 
-# ── CLI ───────────────────────────────────────────────────────────────────────
+# -- CLI -----------------------------------------------------------------------
 
 def main():
-    p = argparse.ArgumentParser(description="TITANIUM_OS ScreenAgent — griglia puntini")
+    p = argparse.ArgumentParser(description="TITANIUM_OS ScreenAgent -- griglia puntini")
     p.add_argument("task", help="Cosa fare sullo schermo")
     p.add_argument("-s", "--save-shots", action="store_true", help="Salva screenshot annotati in DATA/screen_agent_shots/")
     p.add_argument("-n", "--no-act",     action="store_true", help="Solo analisi, non eseguire azioni fisiche")
