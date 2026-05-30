@@ -1,136 +1,136 @@
 {
-    "meta":  {
-                 "created":  "2026-03-09T11:49:54.730580",
-                 "updated":  "2026-05-29T19:00:00.000000",
-                 "version":  "2.7.0",
-                 "description":  "Stato live TITANIUM_OS - RAG v4.0 hybrid + Dashboard v7.0 + Story Agent + Content Engine S2",
-                 "system":  "TITANIUM OS - ecosystem v1.3"
-             },
-    "last_update":  "2026-05-29T21:30:00.000000",
-    "active_milestone":  "Config G - Rinforzi colonne Z+U",
-    "ciclo_position":  "COSTRUISCI",
-    "last_action":  "Sessione 29 Mag 2026 (#11): Logging centralizzato — CORE/log.py (RotatingFileHandler + StreamHandler), 34 file Python aggiornati con import logging + get_logger(), print ridotti da 342 a 131 (solo output dati e interfacce utente rimangono)",
-    "next_step":  "Saldare 4 gusset 200mm sulla colonna Z sinistra",
-    "session_count":  11,
-    "pillars":  {
-                    "V32":  {
-                                "status":  "in_progress",
-                                "phase":  "CNC 3 assi IN COSTRUZIONE - Config G rinforzi",
-                                "pct_complete":  65,
-                                "next":  "Gusset + diagonali + tiranti M10 + Epoxy fill",
-                                "chain":  "V32 fresa stampi -> VULCAN riempie -> MIMS nasce",
-                                "location":  "La Taverna (lab sotto casa)",
-                                "atto":  "II, VII, VIII",
-                                "notes":  "Profilati: telaio 40x40x3 S235 + colonne/portale 60x60. Silent blocks 18mm IN VALUTAZIONE (v.A senza / v.B con). Altezza XY vincolata >=300mm guide Z. Dimensioni reali: h905mm, largh 800/900mm. Delta EG: 0.03-0.06 corretto."
-                            },
-                    "MIMS":  {
-                                 "status":  "waiting_v32",
-                                 "phase":  "Design completo - attende catena V32->VULCAN",
-                                 "pct_complete":  30,
-                                 "next":  "Completare V32 -> costruire VULCAN -> primo stampo test",
-                                 "chain":  "V32->VULCAN->MIMS",
-                                 "atto":  "III, X"
-                             },
-                    "GENESIS":  {
-                                    "status":  "building",
-                                    "phase":  "Dashboard v7.0 + Story Agent + agenti + RAG v4.0 - ecosystem v1.3",
-                                    "pct_complete":  78,
-                                    "next":  "EVA WhatsApp pilot + AgentsView log consultazioni Claude->agenti + GitHub profile pubblico",
-                                    "atto":  "V",
-                                    "last_activity":  "2026-05-29T19:00:00.000000"
-                                },
-                    "VITA_NATURA":  {
-                                        "status":  "active",
-                                        "phase":  "Sito + prenotazioni + EVA pilot",
-                                        "pct_complete":  40,
-                                        "next":  "EVA WhatsApp bot pilot - Maria Rule zero-click",
-                                        "atto":  "IV"
-                                    },
-                    "IDENTITY":  {
-                                     "status":  "in_progress",
-                                     "phase":  "CV aggiornato + MatteoSection dashboard + CLAUDE capabilities doc",
-                                     "pct_complete":  45,
-                                     "next":  "GitHub profile pubblico + CV file originale aggiornato con AI skills",
-                                     "atto":  "IX"
-                                 }
-                },
-    "milestones":  {
-                       "verified":  [
-                                        "Componenti V32 presenti (foto 13 Feb 2026)",
-                                        "8 pezzi interfaccia lavorati (bronzine + scalini)",
-                                        "HMI TP900 Comfort acquisito",
-                                        "Basamento traliccio saldato TIG",
-                                        "Asse X assemblato (guide+vite+servo)",
-                                        "ECOSYSTEM_OS dashboard v1.0 - celle draggabili live (09 Mar 2026)",
-                                        "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 file) (10 Mar 2026)",
-                                        "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY Config G (10 Mar 2026)",
-                                        "Content Engine v2 - 22 episodi + dual-pass haiku/sonnet + dataset.jsonl (22 Mar 2026)",
-                                        "Ottimizzazione Claude Code - .claudeignore, settings.json, rules/, skills portabili (26 Mar 2026)",
-                                        "Dashboard v5.0 - Zustand + TanStack Query + navigazione guidata (27 Mag 2026)",
-                                        "SINAPSI->MENTE migrazione - 41 doc + STORIE + ASSOLUTO + VULCAN + CV (27 Mag 2026)",
-                                        "Dashboard v5.1 - CommandBar Ctrl+K + storieData v2.0 (10 ep rich) + proxy fix (27 Mag 2026)",
-                                        "ASSOLUTO V7 - documento master unico, 10 ATTI unificati, aggiornato maggio 2026 (27 Mag 2026)",
-                                        "Storytelling FILONE_UNICO - S0+S1 completa, mappa ricorsioni (28 Mag 2026)",
-                                        "pdf_to_memory.py v1.1 - flag --file/--mente/--keep/--rag (28 Mag 2026)",
-                                        "V7_X_v8.md - estrazione completa 33pp PDF in MENTE/ASSOLUTO/ (28 Mag 2026)",
-                                        "V8_DELTA.md - correzioni strutturali foto vs V7: profilati, silent blocks, quote reali (28 Mag 2026)",
-                                        "Foto V32 organizzate - 7 foto rinominate in FOTO/V32_BUILD/Config_G/stato_20260528/ (28 Mag 2026)",
-                                        "api_server.py - endpoint /api/media /api/photos /api/pdfs /api/programs (28 Mag 2026)",
-                                        "ffmpeg 8.1.1 + SumatraPDF installati + profilo PS aggiornato (28 Mag 2026)",
-                                        "START_LOGIN.bat v1.1 - auto-avvio ecosistema + Windows Terminal claude-ti al login (28 Mag 2026)",
-                                        "Dashboard Tela v4.1 - MatteoSection: skill tree, interessi, principi, 2030 (28 Mag 2026)",
-                                        "Research Agent - 13 sorgenti (arXiv, OpenAlex, Semantic Scholar, BASE, POLITesi, Baidu, CNKI, GitHub, Unpaywall) (28 Mag 2026)",
-                                        "Sistema Agenti Validatori - 8 agenti in agents_db.json (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) (28 Mag 2026)",
-                                        "CLAUDE_CAPABILITIES_TITANIUM.md - profilo capacita Claude per l'ecosistema (28 Mag 2026)",
-                                        "RAG v4.0 - hybrid BM25+semantico+CrossEncoder+incrementale (28 Mag 2026)",
-                                        "Audit sistema - bottleneck identificati e risolti (28 Mag 2026)",
-                                        "Content Engine S2 - 6 episodi narrativi + 5 MOMENTI intermezzo + 8 backfill (63 giorni recuperati) (29 Mag 2026)",
-                                        "Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)",
-                                        "Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)",
-                                        "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)",
-                                        "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)"
-                                    ],
-                       "next":  "Rinforzi Config G (gusset + diag + tiranti M10) + V8 documento completo dopo decisione silent blocks",
-                       "target_capannone":  "15 Luglio 2030"
-                   },
-    "focus_today":  "Prossima sessione: saldare gusset Z sinistra (fisico) + decisione silent blocks v.A/v.B + verifica log DATA/logs/ funzionanti",
-    "blockers":  [
-                     "Manca mandrino 2.2kW ER20 - da ordinare",
-                     "Silent blocks: decisione Version A (senza) vs Version B (con 18mm) - prerequisito V8"
-                 ],
-    "ideas_inbox":  0,
-    "nodes":  {
-                  "MENTE_SCANNER":  "ATTIVO - NODES/MENTE_SCANNER/scanner.py (818+ estrazioni)",
-                  "MENTE_RAG":  "ATTIVO v4.0 - hybrid BM25+semantico+CrossEncoder | incrementale via manifest | chunk 512/200",
-                  "MENTE_WATCHER":  "ATTIVO - NODES/MENTE_WATCHER/mente_watcher.py",
-                  "MCP_SERVER":  "ATTIVO - MCP/titanium_mcp_server.py (5 tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready)",
-                  "DAILY_BRIEF":  "ATTIVO - AUTOMATIONS/core/daily_brief.py -> DATA/daily_brief_last.md",
-                  "API_SERVER":  "ATTIVO - api_server.py (localhost:5001) - endpoint: /api/media /api/photos /api/pdfs /api/programs /api/agents /api/agents/ask",
-                  "DASHBOARD":  "ATTIVO v7.0 - DASHBOARD/ React Vite (localhost:5173) - sidebar + AgentsView + dot grid",
-                  "N8N":  "ATTIVO - npx n8n (localhost:5678, SQLite)",
-                  "RESEARCH_AGENT":  "ATTIVO v1.1 - NODES/RESEARCH_AGENT/research_agent.py - 13 sorgenti | cron 03:37 NightResearch",
-                  "AGENTS":  "ATTIVO - NODES/AGENTS/ - agents_db.json (8 agenti) + validator_agent.py + /api/agents/ask | alias: ask, agents",
-                  "STORY_AGENT":  "ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO",
-                  "NIGHT_PUSH":  "ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico",
-                  "EVA":  "pending - WhatsApp Business API setup",
-                  "V32_WATCHER":  "future - post assemblaggio completo"
-              },
-    "tools_installed":  {
-                            "python":  "3.11 - C:\\Users\\benen\\tools\\python311\\",
-                            "node":  "22 - C:\\Users\\benen\\tools\\nodejs\\",
-                            "gh":  "2.92 - C:\\Users\\benen\\tools\\gh\\",
-                            "ffmpeg":  "8.1.1 - %LOCALAPPDATA%\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg...",
-                            "sumatrapdf":  "%LOCALAPPDATA%\\SumatraPDF\\SumatraPDF.exe",
-                            "git":  "C:\\Program Files\\Git\\cmd\\"
-                        },
-    "rag_config":  {
-                       "version":  "4.0",
-                       "model":  "paraphrase-multilingual-MiniLM-L12-v2",
-                       "reranker":  "cross-encoder/ms-marco-MiniLM-L-6-v2",
-                       "chunk_size":  512,
-                       "chunk_stride":  200,
-                       "hybrid":  "BM25 (TF-IDF) + semantic cosine, merged via RRF k=60",
-                       "incremental":  true,
-                       "manifest":  "NODES/MENTE_RAG/rag_manifest.json"
-                   }
+  "meta": {
+    "created": "2026-03-09T11:49:54.730580",
+    "updated": "2026-05-30T10:29:15",
+    "version": "2.8.0",
+    "description": "TITANIUM_OS v2.8.0 — NEXUS swarm + RAG graph v5 + MCP v1.3 + watchdog swarm + vault fix notturno",
+    "system": "TITANIUM OS - ecosystem v1.4"
+  },
+  "last_update": "2026-05-30T10:29:15.505363",
+  "active_milestone": "Config G - Rinforzi colonne Z+U",
+  "ciclo_position": "COSTRUISCI",
+  "last_action": "Modifica a rag_graph.pkl",
+  "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
+  "session_count": 12,
+  "pillars": {
+    "V32": {
+      "status": "in_progress",
+      "phase": "CNC 3 assi IN COSTRUZIONE - Config G rinforzi",
+      "pct_complete": 65,
+      "next": "Gusset + diagonali + tiranti M10 + Epoxy fill",
+      "chain": "V32 fresa stampi -> VULCAN riempie -> MIMS nasce",
+      "location": "La Taverna (lab sotto casa)",
+      "atto": "II, VII, VIII",
+      "notes": "Profilati: telaio 40x40x3 S235 + colonne/portale 60x60. Silent blocks 18mm IN VALUTAZIONE (v.A senza / v.B con). Altezza XY vincolata >=300mm guide Z. Dimensioni reali: h905mm, largh 800/900mm. Delta EG: 0.03-0.06 corretto."
+    },
+    "MIMS": {
+      "status": "waiting_v32",
+      "phase": "Design completo - attende catena V32->VULCAN",
+      "pct_complete": 30,
+      "next": "Completare V32 -> costruire VULCAN -> primo stampo test",
+      "chain": "V32->VULCAN->MIMS",
+      "atto": "III, X"
+    },
+    "GENESIS": {
+      "status": "building",
+      "phase": "NEXUS swarm + RAG graph-aware v5 + MCP v1.3 + watchdog swarm parallelo",
+      "pct_complete": 83,
+      "next": "EVA WhatsApp pilot + AgentsView log consultazioni Claude->agenti",
+      "atto": "V",
+      "last_activity": "2026-05-30T10:29:15"
+    },
+    "VITA_NATURA": {
+      "status": "active",
+      "phase": "Sito + prenotazioni + EVA pilot",
+      "pct_complete": 40,
+      "next": "EVA WhatsApp bot pilot - Maria Rule zero-click",
+      "atto": "IV"
+    },
+    "IDENTITY": {
+      "status": "in_progress",
+      "phase": "CV aggiornato + MatteoSection dashboard + CLAUDE capabilities doc",
+      "pct_complete": 45,
+      "next": "GitHub profile pubblico + CV file originale aggiornato con AI skills",
+      "atto": "IX"
+    }
+  },
+  "milestones": {
+    "verified": [
+      "Componenti V32 presenti (foto 13 Feb 2026)",
+      "8 pezzi interfaccia lavorati (bronzine + scalini)",
+      "HMI TP900 Comfort acquisito",
+      "Basamento traliccio saldato TIG",
+      "Asse X assemblato (guide+vite+servo)",
+      "ECOSYSTEM_OS dashboard v1.0 - celle draggabili live (09 Mar 2026)",
+      "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 file) (10 Mar 2026)",
+      "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY Config G (10 Mar 2026)",
+      "Content Engine v2 - 22 episodi + dual-pass haiku/sonnet + dataset.jsonl (22 Mar 2026)",
+      "Ottimizzazione Claude Code - .claudeignore, settings.json, rules/, skills portabili (26 Mar 2026)",
+      "Dashboard v5.0 - Zustand + TanStack Query + navigazione guidata (27 Mag 2026)",
+      "SINAPSI->MENTE migrazione - 41 doc + STORIE + ASSOLUTO + VULCAN + CV (27 Mag 2026)",
+      "Dashboard v5.1 - CommandBar Ctrl+K + storieData v2.0 (10 ep rich) + proxy fix (27 Mag 2026)",
+      "ASSOLUTO V7 - documento master unico, 10 ATTI unificati, aggiornato maggio 2026 (27 Mag 2026)",
+      "Storytelling FILONE_UNICO - S0+S1 completa, mappa ricorsioni (28 Mag 2026)",
+      "pdf_to_memory.py v1.1 - flag --file/--mente/--keep/--rag (28 Mag 2026)",
+      "V7_X_v8.md - estrazione completa 33pp PDF in MENTE/ASSOLUTO/ (28 Mag 2026)",
+      "V8_DELTA.md - correzioni strutturali foto vs V7: profilati, silent blocks, quote reali (28 Mag 2026)",
+      "Foto V32 organizzate - 7 foto rinominate in FOTO/V32_BUILD/Config_G/stato_20260528/ (28 Mag 2026)",
+      "api_server.py - endpoint /api/media /api/photos /api/pdfs /api/programs (28 Mag 2026)",
+      "ffmpeg 8.1.1 + SumatraPDF installati + profilo PS aggiornato (28 Mag 2026)",
+      "START_LOGIN.bat v1.1 - auto-avvio ecosistema + Windows Terminal claude-ti al login (28 Mag 2026)",
+      "Dashboard Tela v4.1 - MatteoSection: skill tree, interessi, principi, 2030 (28 Mag 2026)",
+      "Research Agent - 13 sorgenti (arXiv, OpenAlex, Semantic Scholar, BASE, POLITesi, Baidu, CNKI, GitHub, Unpaywall) (28 Mag 2026)",
+      "Sistema Agenti Validatori - 8 agenti in agents_db.json (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) (28 Mag 2026)",
+      "CLAUDE_CAPABILITIES_TITANIUM.md - profilo capacita Claude per l'ecosistema (28 Mag 2026)",
+      "RAG v4.0 - hybrid BM25+semantico+CrossEncoder+incrementale (28 Mag 2026)",
+      "Audit sistema - bottleneck identificati e risolti (28 Mag 2026)",
+      "Content Engine S2 - 6 episodi narrativi + 5 MOMENTI intermezzo + 8 backfill (63 giorni recuperati) (29 Mag 2026)",
+      "Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)",
+      "Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)",
+      "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)",
+      "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)"
+    ],
+    "next": "Rinforzi Config G (gusset + diag + tiranti M10) + V8 documento completo dopo decisione silent blocks",
+    "target_capannone": "15 Luglio 2030"
+  },
+  "focus_today": "Prossima sessione: saldare gusset Z sinistra (fisico) + decisione silent blocks v.A/v.B + verifica log DATA/logs/ funzionanti",
+  "blockers": [
+    "Manca mandrino 2.2kW ER20 - da ordinare",
+    "Silent blocks: decisione Version A (senza) vs Version B (con 18mm) - prerequisito V8"
+  ],
+  "ideas_inbox": 0,
+  "nodes": {
+    "MENTE_SCANNER": "ATTIVO - NODES/MENTE_SCANNER/scanner.py (818+ estrazioni)",
+    "MENTE_RAG": "ATTIVO v4.0 - hybrid BM25+semantico+CrossEncoder | incrementale via manifest | chunk 512/200",
+    "MENTE_WATCHER": "ATTIVO - NODES/MENTE_WATCHER/mente_watcher.py",
+    "MCP_SERVER": "ATTIVO - MCP/titanium_mcp_server.py (5 tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready)",
+    "DAILY_BRIEF": "ATTIVO - AUTOMATIONS/core/daily_brief.py -> DATA/daily_brief_last.md",
+    "API_SERVER": "ATTIVO - api_server.py (localhost:5001) - endpoint: /api/media /api/photos /api/pdfs /api/programs /api/agents /api/agents/ask",
+    "DASHBOARD": "ATTIVO v7.0 - DASHBOARD/ React Vite (localhost:5173) - sidebar + AgentsView + dot grid",
+    "N8N": "ATTIVO - npx n8n (localhost:5678, SQLite)",
+    "RESEARCH_AGENT": "ATTIVO v1.1 - NODES/RESEARCH_AGENT/research_agent.py - 13 sorgenti | cron 03:37 NightResearch",
+    "AGENTS": "ATTIVO - NODES/AGENTS/ - agents_db.json (8 agenti) + validator_agent.py + /api/agents/ask | alias: ask, agents",
+    "STORY_AGENT": "ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO",
+    "NIGHT_PUSH": "ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico",
+    "EVA": "pending - WhatsApp Business API setup",
+    "V32_WATCHER": "future - post assemblaggio completo"
+  },
+  "tools_installed": {
+    "python": "3.11 - C:\\Users\\benen\\tools\\python311\\",
+    "node": "22 - C:\\Users\\benen\\tools\\nodejs\\",
+    "gh": "2.92 - C:\\Users\\benen\\tools\\gh\\",
+    "ffmpeg": "8.1.1 - %LOCALAPPDATA%\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg...",
+    "sumatrapdf": "%LOCALAPPDATA%\\SumatraPDF\\SumatraPDF.exe",
+    "git": "C:\\Program Files\\Git\\cmd\\"
+  },
+  "rag_config": {
+    "version": "4.0",
+    "model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "chunk_size": 512,
+    "chunk_stride": 200,
+    "hybrid": "BM25 (TF-IDF) + semantic cosine, merged via RRF k=60",
+    "incremental": true,
+    "manifest": "NODES/MENTE_RAG/rag_manifest.json"
+  }
 }
