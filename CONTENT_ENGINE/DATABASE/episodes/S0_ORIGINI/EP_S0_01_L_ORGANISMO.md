@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_01  LORGANISMO](#eps001-lorganismo)
+    - [Non stiamo più parlando di tre progetti separati. Stiamo parlando di un solo grande organismo.](#non-stiamo-più-parlando-di-tre-progetti-separati-stiamo-parlando-di-un-solo-grande-organismo)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL MOMENTO DELLA CONVERGENZA](#atto-i-il-momento-della-convergenza)
+  - [ATTO II  I TRE RAMI](#atto-ii-i-tre-rami)
+  - [ATTO III  IL MOTORE DI PARALLELISMO](#atto-iii-il-motore-di-parallelismo)
+  - [ATTO IV  IL NUMERO](#atto-iv-il-numero)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S0_01 — L'ORGANISMO
 ### "Non stiamo più parlando di tre progetti separati. Stiamo parlando di un solo grande organismo."
 

@@ -1,0 +1,446 @@
+{
+  "views": {
+    "DASHBOARD/ECOSYSTEM_ARCHITECTURE.md": {
+      "title": "ECOSYSTEM_ARCHITECTURE.md | v2.0 | 2026-03-16",
+      "updated_at": "2026-05-30T10:30:33.914103",
+      "endpoint": "/api/view/DASHBOARD__ECOSYSTEM_ARCHITECTURE.md"
+    },
+    "DASHBOARD/README.md": {
+      "title": "React + TypeScript + Vite",
+      "updated_at": "2026-05-30T10:30:34.180773",
+      "endpoint": "/api/view/DASHBOARD__README.md"
+    },
+    "DASHBOARD/TITANIUM_MANIFESTO.md": {
+      "title": "TITANIUM VENTURES - TECHNICAL MANIFESTO",
+      "updated_at": "2026-05-30T10:30:34.286461",
+      "endpoint": "/api/view/DASHBOARD__TITANIUM_MANIFESTO.md"
+    },
+    "CLAUDE.md": {
+      "title": "TITANIUM_OS — CLAUDE.md",
+      "updated_at": "2026-05-30T10:42:16.987757",
+      "endpoint": "/api/view/CLAUDE.md"
+    },
+    ".claude/skills/dataset/SKILL.md": {
+      "title": "Dataset LLM — TITANIUM_OS Content Engine",
+      "updated_at": "2026-05-30T10:43:24.949378",
+      "endpoint": "/api/view/.claude__skills__dataset__SKILL.md"
+    },
+    ".claude/skills/aggiorna-stato/SKILL.md": {
+      "title": "Aggiorna Stato — TITANIUM_OS",
+      "updated_at": "2026-05-30T10:43:25.077583",
+      "endpoint": "/api/view/.claude__skills__aggiorna-stato__SKILL.md"
+    },
+    ".claude/skills/genera-episodio/SKILL.md": {
+      "title": "Genera Episodio — TITANIUM_OS Content Engine",
+      "updated_at": "2026-05-30T10:43:25.203248",
+      "endpoint": "/api/view/.claude__skills__genera-episodio__SKILL.md"
+    },
+    ".claude/skills/reel/SKILL.md": {
+      "title": "Reel Hook — TITANIUM_OS Content Engine",
+      "updated_at": "2026-05-30T10:43:25.329169",
+      "endpoint": "/api/view/.claude__skills__reel__SKILL.md"
+    },
+    "DOCS/TITANIUM_OS_V1.md": {
+      "title": "TITANIUM_OS — V1",
+      "updated_at": "2026-05-30T15:08:27.548088",
+      "endpoint": "/api/view/DOCS__TITANIUM_OS_V1.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260529_auto_avvio_completo_al_login_start_.md": {
+      "title": "TITANIUM_OS — Episodio 2.08",
+      "updated_at": "2026-05-30T15:15:49.557194",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260529_auto_avvio_completo_al_login_start_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260530_dashboard_sempre_attiva_watchdog_v1.md": {
+      "title": "TITANIUM_OS — Stagione 1, Episodio 14",
+      "updated_at": "2026-05-30T15:15:49.630004",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260530_dashboard_sempre_attiva_watchdog_v1.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md": {
+      "title": "EP_AUTO_20 — Milestone",
+      "updated_at": "2026-05-30T15:15:49.687863",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md": {
+      "title": "EP_AUTO_21 — Milestone",
+      "updated_at": "2026-05-30T15:15:49.761322",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md": {
+      "title": "EP_AUTO_22 — Milestone",
+      "updated_at": "2026-05-30T15:15:49.836122",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md": {
+      "title": "EP_AUTO_23 — Milestone",
+      "updated_at": "2026-05-30T15:15:49.978423",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md": {
+      "title": "EP_AUTO_24 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.050397",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md": {
+      "title": "EP_AUTO_25 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.116219",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md": {
+      "title": "EP_AUTO_26 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.187028",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md": {
+      "title": "EP_AUTO_27 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.252854",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md": {
+      "title": "EP_AUTO_28 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.358256",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md": {
+      "title": "EP_AUTO_29 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.431905",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_30_calendario_notturno_completo_storyagent_.md": {
+      "title": "EP_AUTO_30 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.505713",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_30_calendario_notturno_completo_storyagent_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md": {
+      "title": "EP_AUTO_31 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.573534",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md": {
+      "title": "EP_AUTO_32 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.686368",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md": {
+      "title": "EP_AUTO_00 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.760982",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md": {
+      "title": "EP_AUTO_01 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.839807",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_02_hmi_tp900_comfort_acquisito.md": {
+      "title": "EP_AUTO_02 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.914890",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_02_hmi_tp900_comfort_acquisito.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_03_basamento_traliccio_saldato_tig.md": {
+      "title": "EP_AUTO_03 — Milestone",
+      "updated_at": "2026-05-30T15:15:50.989214",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_03_basamento_traliccio_saldato_tig.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_04_asse_x_assemblato_guideviteservo.md": {
+      "title": "EP_AUTO_04 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.058489",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_04_asse_x_assemblato_guideviteservo.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md": {
+      "title": "EP_AUTO_05 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.161138",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md": {
+      "title": "EP_AUTO_06 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.250191",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md": {
+      "title": "EP_AUTO_07 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.315137",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md": {
+      "title": "EP_AUTO_08 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.374655",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md": {
+      "title": "EP_AUTO_09 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.432074",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md": {
+      "title": "EP_AUTO_10 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.497901",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_11_sinapsimente_migrazione_41_doc_storie_as.md": {
+      "title": "EP_AUTO_11 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.606783",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_11_sinapsimente_migrazione_41_doc_storie_as.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md": {
+      "title": "EP_AUTO_12 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.679191",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md": {
+      "title": "EP_AUTO_13 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.740759",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_14_storytelling_filone_unico_s0s1_completa_.md": {
+      "title": "EP_AUTO_14 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.801675",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_14_storytelling_filone_unico_s0s1_completa_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_15_pdf_to_memorypy_v11_flag_filementekeepra.md": {
+      "title": "EP_AUTO_15 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.858196",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_15_pdf_to_memorypy_v11_flag_filementekeepra.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_16_v7_x_v8md_estrazione_completa_33pp_pdf_i.md": {
+      "title": "EP_AUTO_16 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.922045",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_16_v7_x_v8md_estrazione_completa_33pp_pdf_i.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_17_v8_deltamd_correzioni_strutturali_foto_v.md": {
+      "title": "EP_AUTO_17 — Milestone",
+      "updated_at": "2026-05-30T15:15:51.986436",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_17_v8_deltamd_correzioni_strutturali_foto_v.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_18_foto_v32_organizzate_7_foto_rinominate_i.md": {
+      "title": "EP_AUTO_18 — Milestone",
+      "updated_at": "2026-05-30T15:15:52.045073",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_18_foto_v32_organizzate_7_foto_rinominate_i.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md": {
+      "title": "EP_AUTO_19 — Milestone",
+      "updated_at": "2026-05-30T15:15:52.113474",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260529_task_scheduler_ottimizzazione_scrip.md": {
+      "title": "TITANIUM_OS — S2E03",
+      "updated_at": "2026-05-30T15:15:52.179993",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260529_task_scheduler_ottimizzazione_scrip.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/MOMENTI/MOM_05_CONFIG_A_G.md": {
+      "title": "MOMENTO — Config A→G",
+      "updated_at": "2026-05-29T11:48:50.181274",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__MOMENTI__MOM_05_CONFIG_A_G.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/MOMENTI/MOM_04_IL_DOCUMENTO_MASTER.md": {
+      "title": "MOMENTO — Il Documento Master",
+      "updated_at": "2026-05-29T11:48:30.442517",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__MOMENTI__MOM_04_IL_DOCUMENTO_MASTER.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/MOMENTI/MOM_03_L_ESERCITO.md": {
+      "title": "MOMENTO — L'Esercito",
+      "updated_at": "2026-05-29T11:48:13.782452",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__MOMENTI__MOM_03_L_ESERCITO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/MOMENTI/MOM_02_LA_MAPPA.md": {
+      "title": "MOMENTO — La Mappa",
+      "updated_at": "2026-05-29T11:47:53.791548",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__MOMENTI__MOM_02_LA_MAPPA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/MOMENTI/MOM_01_LA_PRIMA_AUTOMAZIONE.md": {
+      "title": "MOMENTO — La Prima Automazione",
+      "updated_at": "2026-05-29T11:47:37.509496",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__MOMENTI__MOM_01_LA_PRIMA_AUTOMAZIONE.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260319_fix_typescript_errors_unused_imports.md": {
+      "title": "TITANIUM_OS — S1E09",
+      "updated_at": "2026-05-30T15:15:52.531729",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260319_fix_typescript_errors_unused_imports.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260322_docs_ecosystem_manifest_documento_fon.md": {
+      "title": "TITANIUM_OS — Stagione 1, Episodio 12",
+      "updated_at": "2026-05-30T15:15:52.594945",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260322_docs_ecosystem_manifest_documento_fon.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md": {
+      "title": "TITANIUM_OS — Stagione 1, Episodio 12",
+      "updated_at": "2026-05-30T15:15:52.663559",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260527_auto_episodi_generati_da_state_json_202.md": {
+      "title": "TITANIUM_OS — S1E08",
+      "updated_at": "2026-05-30T15:15:52.738509",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260527_auto_episodi_generati_da_state_json_202.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260528_matteosection_v4_2_skill_espandibili_pe.md": {
+      "title": "TITANIUM_OS — S1E09",
+      "updated_at": "2026-05-30T15:15:52.837643",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260528_matteosection_v4_2_skill_espandibili_pe.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260529_chore_permissions_allow_all_dashboard.md": {
+      "title": "TITANIUM_OS — S1E08",
+      "updated_at": "2026-05-30T15:15:52.911547",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260529_chore_permissions_allow_all_dashboard.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md": {
+      "title": "TITANIUM_OS — S1E09",
+      "updated_at": "2026-05-30T15:15:52.982204",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_05_IL_SILENZIO.md": {
+      "title": "EP_S2_05 — IL SILENZIO",
+      "updated_at": "2026-05-30T15:15:53.040267",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_S2_05_IL_SILENZIO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md": {
+      "title": "EP_S2_04 — IL CV CHE NESSUNO CAPISCE",
+      "updated_at": "2026-05-30T15:15:53.133842",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_03_LA_TELA.md": {
+      "title": "EP_S2_03 — LA TELA",
+      "updated_at": "2026-05-30T15:15:53.197268",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_S2_03_LA_TELA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_02_L_ORCHESTRATORE.md": {
+      "title": "EP_S2_02 — L'ORCHESTRATORE",
+      "updated_at": "2026-05-30T15:15:53.258590",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_S2_02_L_ORCHESTRATORE.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_01_IL_CERVELLO_IBRIDO.md": {
+      "title": "EP_S2_01 — IL CERVELLO IBRIDO",
+      "updated_at": "2026-05-30T15:15:53.321290",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_S2_01_IL_CERVELLO_IBRIDO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_00_IL_DISTACCO.md": {
+      "title": "EP_S2_00 — IL DISTACCO",
+      "updated_at": "2026-05-30T15:15:53.380764",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_S2_00_IL_DISTACCO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_019.md": {
+      "title": "Dieci atti, un documento master",
+      "updated_at": "2026-05-30T15:15:53.472300",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_019.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_018.md": {
+      "title": "Dashboard che comanda tutto: Ctrl+K",
+      "updated_at": "2026-05-27T13:59:18.500934",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_018.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_017.md": {
+      "title": "41 documenti, una mente digitale",
+      "updated_at": "2026-05-30T15:15:53.582246",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_017.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_016.md": {
+      "title": "Dashboard che parla il tuo linguaggio",
+      "updated_at": "2026-05-30T15:15:53.646644",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_016.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_014.md": {
+      "title": "22 episodi: il motore dei contenuti",
+      "updated_at": "2026-05-30T15:15:53.737401",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_014.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_015.md": {
+      "title": "Portabilità delle skill: il framework invisibile",
+      "updated_at": "2026-05-27T13:59:18.497935",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_015.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_013.md": {
+      "title": "Molle gialle: la precisione che cambia tutto",
+      "updated_at": "2026-05-30T15:15:53.850328",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_013.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_011.md": {
+      "title": "Knowledge Base Popolata e Architettura Assoluto",
+      "updated_at": "2026-05-27T00:09:14.507918",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_011.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_012.md": {
+      "title": "Componenti V32: dalla teoria alla fabbrica",
+      "updated_at": "2026-05-30T15:15:53.993244",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_012.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_002.md": {
+      "title": "8 pezzi, geometria perfetta",
+      "updated_at": "2026-05-27T00:09:14.492295",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_002.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_003.md": {
+      "title": "HMI acquisito, V32 respira",
+      "updated_at": "2026-05-27T00:09:14.492295",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_003.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_005.md": {
+      "title": "Asse X: le guide parlano",
+      "updated_at": "2026-05-27T00:09:14.492295",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_005.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_006.md": {
+      "title": "Dashboard Live: Il Sistema Vede",
+      "updated_at": "2026-05-27T00:09:14.492295",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_006.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_008.md": {
+      "title": "Config G: le molle gialle",
+      "updated_at": "2026-05-27T00:09:14.492295",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_008.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_010.md": {
+      "title": "Fondamenta d'acciaio TIG",
+      "updated_at": "2026-05-27T00:09:14.492295",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_010.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S0_ORIGINI/EP_S0_03_LA_FORMULA.md": {
+      "title": "EP_S0_03 — LA FORMULA",
+      "updated_at": "2026-05-30T15:15:54.389789",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_03_LA_FORMULA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S0_ORIGINI/EP_S0_02_LA_VERIFICA.md": {
+      "title": "EP_S0_02 — LA VERIFICA",
+      "updated_at": "2026-05-30T15:15:54.450010",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_02_LA_VERIFICA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S0_ORIGINI/EP_S0_01_L_ORGANISMO.md": {
+      "title": "EP_S0_01 — L'ORGANISMO",
+      "updated_at": "2026-05-30T15:15:54.542061",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_01_L_ORGANISMO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S0_ORIGINI/EP_S0_00_IL_SOCIO.md": {
+      "title": "EP_S0_00 — IL SOCIO",
+      "updated_at": "2026-05-30T15:15:54.607263",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_00_IL_SOCIO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_05_IL_VERDETTO.md": {
+      "title": "EP_05 — IL VERDETTO",
+      "updated_at": "2026-05-30T15:15:54.672773",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_05_IL_VERDETTO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_04_IL_SEGNALE.md": {
+      "title": "EP_04 — IL SEGNALE",
+      "updated_at": "2026-05-30T15:15:54.733801",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_04_IL_SEGNALE.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_03_IL_PARADOSSO.md": {
+      "title": "EP_03 — IL PARADOSSO",
+      "updated_at": "2026-05-30T15:15:54.799265",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_03_IL_PARADOSSO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_02_IL_REATTORE.md": {
+      "title": "EP_02 — IL REATTORE",
+      "updated_at": "2026-05-30T15:15:54.898819",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_02_IL_REATTORE.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_01_LA_TAVERNA.md": {
+      "title": "EP_01 — LA TAVERNA",
+      "updated_at": "2026-05-30T15:15:54.960597",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_01_LA_TAVERNA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_00_ORIGINE.md": {
+      "title": "EP_00 — ORIGINE",
+      "updated_at": "2026-05-30T15:15:55.023903",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_00_ORIGINE.md"
+    }
+  },
+  "last_built": "2026-05-30T16:41:32.238307",
+  "total": 88
+}

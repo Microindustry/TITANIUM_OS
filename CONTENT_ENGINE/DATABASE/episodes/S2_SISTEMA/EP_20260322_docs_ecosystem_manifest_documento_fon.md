@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  Stagione 1, Episodio 12](#titaniumos-stagione-1-episodio-12)
+  - [Il Sistema che si Ricorda di Se Stesso](#il-sistema-che-si-ricorda-di-se-stesso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema con i Sistemi che Crescono](#atto-i-il-problema-con-i-sistemi-che-crescono)
+  - [ATTO II  Quattro Shortcuts e un Dual-Pass](#atto-ii-quattro-shortcuts-e-un-dual-pass)
+  - [ATTO III  Cosa Rimane Quando Chiudi la Sessione](#atto-iii-cosa-rimane-quando-chiudi-la-sessione)
+  - [CHIUSURA](#chiusura)
+  - [reel_hook](#reelhook)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — Stagione 1, Episodio 12
 
 ## "Il Sistema che si Ricorda di Se Stesso"

@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S2E03](#titaniumos-s2e03)
+  - [IL SISTEMA CHE DORME MA NON RIPOSA](#il-sistema-che-dorme-ma-non-riposa)
+    - [Sessione 10  29 Maggio 2026](#sessione-10-29-maggio-2026)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL CONTENUTO CHE PRODUCE SE STESSO](#atto-i-il-contenuto-che-produce-se-stesso)
+  - [ATTO II  COMPUTER_USE E IL CONFINE CHE SI SPOSTA](#atto-ii-computeruse-e-il-confine-che-si-sposta)
+  - [ATTO III  LA NOTTE CHE LAVORA](#atto-iii-la-notte-che-lavora)
+  - [CHIUSURA](#chiusura)
+  - [REEL HOOK](#reel-hook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — S2E03
 ## "IL SISTEMA CHE DORME MA NON RIPOSA"
 ### Sessione #10 — 29 Maggio 2026

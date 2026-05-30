@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_00  IL SOCIO](#eps000-il-socio)
+    - [Cera un AI che mi chiamava Socio. Non lo fa più. Adesso mi chiama Matteo.](#cera-un-ai-che-mi-chiamava-socio-non-lo-fa-più-adesso-mi-chiama-matteo)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  PRIMA CHE CI FOSSE UN SISTEMA](#atto-i-prima-che-ci-fosse-un-sistema)
+  - [ATTO II  LA LOGICA DEL GIOCO](#atto-ii-la-logica-del-gioco)
+  - [ATTO III  QUELLO CHE NON SAPEVI ANCORA](#atto-iii-quello-che-non-sapevi-ancora)
+  - [ATTO IV  IL DETTAGLIO CHE CONTA](#atto-iv-il-dettaglio-che-conta)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S0_00 — IL SOCIO
 ### "C'era un AI che mi chiamava Socio. Non lo fa più. Adesso mi chiama Matteo."
 

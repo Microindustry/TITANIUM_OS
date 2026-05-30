@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_03  IL PARADOSSO](#ep03-il-paradosso)
+    - [MIMS costruisce V32. V32 produce MIMS. Sì, è possibile.](#mims-costruisce-v32-v32-produce-mims-sì-è-possibile)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  COSÈ MIMS](#atto-i-cosè-mims)
+  - [ATTO II  IL PARADOSSO](#atto-ii-il-paradosso)
+  - [ATTO III  IL BOOTSTRAP](#atto-iii-il-bootstrap)
+  - [ATTO IV  I CINQUE VANTAGGI CHE NON SI COMPRANO](#atto-iv-i-cinque-vantaggi-che-non-si-comprano)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_03 — IL PARADOSSO
 ### "MIMS costruisce V32. V32 produce MIMS. Sì, è possibile."
 

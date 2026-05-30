@@ -11,6 +11,15 @@ durata_min: 8
 reel_hook: "[Vedi questi 47 componenti V32 arrivati oggi]. [Prima erano solo CAD 3D, niente di concreto]. [Ho verificato tolleranze su fresatrice CNC al 65% di completamento, testato fit MIMS, fotografato tutto]. [Ma sai cosa succede quando assembliamo la pressa VULCAN 20t la prossima settimana? — guarda il prossimo episodio]"
 generated: "2026-03-22T18:31:12.518594"
 ---
+<!-- TOC -->
+
+- [Componenti V32: dalla teoria alla fabbrica](#componenti-v32-dalla-teoria-alla-fabbrica)
+- [Episodio 14  I Componenti Ci Sono](#episodio-14-i-componenti-ci-sono)
+  - [Il Bivio](#il-bivio)
+  - [Connessione al Sistema](#connessione-al-sistema)
+
+<!-- /TOC -->
+
 
 # Componenti V32: dalla teoria alla fabbrica
 

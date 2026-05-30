@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S1E09](#titaniumos-s1e09)
+  - [La Macchina che Ricorda](#la-macchina-che-ricorda)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)
+  - [ATTO II  RAG v4.0: Quando la Ricerca Smette di Essere Casuale](#atto-ii-rag-v40-quando-la-ricerca-smette-di-essere-casuale)
+  - [ATTO III  Il Manuale. E Cosa Significa Scriverlo.](#atto-iii-il-manuale-e-cosa-significa-scriverlo)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — S1E09
 ## "La Macchina che Ricorda"
 

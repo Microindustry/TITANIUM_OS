@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_05  IL SILENZIO](#eps205-il-silenzio)
+    - [25 marzo  27 maggio. 63 giorni. Un commit.](#25-marzo-27-maggio-63-giorni-un-commit)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  COSA È SUCCESSO IN QUEI 63 GIORNI](#atto-i-cosa-è-successo-in-quei-63-giorni)
+  - [ATTO II  IL VALORE DELLA STORIA PERDUTA](#atto-ii-il-valore-della-storia-perduta)
+  - [ATTO III  LA RISPOSTA](#atto-iii-la-risposta)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S2_05 — IL SILENZIO
 ### "25 marzo → 27 maggio. 63 giorni. Un commit."
 

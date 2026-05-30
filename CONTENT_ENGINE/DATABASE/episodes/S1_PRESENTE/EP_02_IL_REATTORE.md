@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [EP_02  IL REATTORE](#ep02-il-reattore)
+    - [178 kg di precisione assoluta. Costruiti a mano.](#178-kg-di-precisione-assoluta-costruiti-a-mano)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  PERCHÉ NON HAI COMPRATO UNA CNC](#atto-i-perché-non-hai-comprato-una-cnc)
+  - [ATTO II  LE MOLLE GIALLE](#atto-ii-le-molle-gialle)
+  - [ATTO III  LE 9 PIASTRE E I 8 CUSTODI](#atto-iii-le-9-piastre-e-i-8-custodi)
+  - [ATTO IV  IL CERVELLO](#atto-iv-il-cervello)
+  - [ATTO V  IL NUMERO](#atto-v-il-numero)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_02 — IL REATTORE
 ### "178 kg di precisione assoluta. Costruiti a mano."
 

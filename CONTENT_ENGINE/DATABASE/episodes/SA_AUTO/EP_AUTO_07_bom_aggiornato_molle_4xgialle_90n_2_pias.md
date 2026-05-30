@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_07  Milestone](#epauto07-milestone)
+    - [BOM aggiornato: molle 4xGialle 90N  2 piastre XY Config G (](#bom-aggiornato-molle-4xgialle-90n-2-piastre-xy-config-g)
+- [IL SISTEMA  Episodio 14](#il-sistema-episodio-14)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima delle molle](#atto-i-prima-delle-molle)
+  - [ATTO II  Le piastre XY e le molle gialle](#atto-ii-le-piastre-xy-e-le-molle-gialle)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_07 — Milestone
 ### "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY Config G ("
 

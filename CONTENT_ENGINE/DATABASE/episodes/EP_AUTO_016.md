@@ -11,6 +11,15 @@ durata_min: 8
 reel_hook: "Guarda, fino a tre settimane fa la dashboard della fresatrice mi mandava il dato ma non sapevo se era aggiornato davvero. Aspettavo, ricaricavo, perdevo minuti su minuti. Poi ho collegato Zustand per la cache locale e TanStack Query per il sincronismo real-time. Ora apro il pannello e il dato c'è già, fresco, pronto. Ma aspetta, perché i dati di production sono ancora fermi al caricamento precedente? Scopri come l'ho risolto."
 generated: "2026-05-27T11:31:12.038949"
 ---
+<!-- TOC -->
+
+- [Dashboard che parla il tuo linguaggio](#dashboard-che-parla-il-tuo-linguaggio)
+- [Dashboard v5.0  Quando il sistema smette di mentire](#dashboard-v50-quando-il-sistema-smette-di-mentire)
+  - [Il bivio](#il-bivio)
+  - [Connessione al sistema](#connessione-al-sistema)
+
+<!-- /TOC -->
+
 
 # Dashboard che parla il tuo linguaggio
 

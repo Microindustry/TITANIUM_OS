@@ -11,6 +11,17 @@ durata_min: 8
 reel_hook: "Ho appena finito di costruire un content engine che produce 22 episodi al mese con dataset pulito e due livelli di scrittura: haiku per l'impatto visivo, sonnet per la profondità narrativa. Prima gestivo tutto a manuale, perdevo tre giorni di lavoro solo per organizzare i materiali. Adesso carico i dati grezzi, il sistema passa prima sulla forma breve, poi sulla forma estesa, e mi consegna tutto pronto. Come scalereste questo per 100 episodi senza impazzire?"
 generated: "2026-05-27T11:30:14.766042"
 ---
+<!-- TOC -->
+
+- [22 episodi: il motore dei contenuti](#22-episodi-il-motore-dei-contenuti)
+- [Content Engine v2  Episodio: Il Sistema Che Scrive Se Stesso](#content-engine-v2-episodio-il-sistema-che-scrive-se-stesso)
+  - [Scena](#scena)
+  - [Il Bivio](#il-bivio)
+  - [Connessione al Sistema](#connessione-al-sistema)
+  - [Chiusura](#chiusura)
+
+<!-- /TOC -->
+
 
 # 22 episodi: il motore dei contenuti
 

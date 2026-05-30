@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_04  IL CV CHE NESSUNO CAPISCE](#eps204-il-cv-che-nessuno-capisce)
+    - [Artigiano. Robot. CNC. AI. Il curriculum che nessun recruiter sa leggere.](#artigiano-robot-cnc-ai-il-curriculum-che-nessun-recruiter-sa-leggere)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL PROBLEMA DEL CV IBRIDO](#atto-i-il-problema-del-cv-ibrido)
+  - [ATTO II  AI COME COMPETENZA REALE](#atto-ii-ai-come-competenza-reale)
+  - [ATTO III  GITHUB COME PROVA](#atto-iii-github-come-prova)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S2_04 — IL CV CHE NESSUNO CAPISCE
 ### "Artigiano. Robot. CNC. AI. Il curriculum che nessun recruiter sa leggere."
 

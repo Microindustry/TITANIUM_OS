@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [EP_AUTO_08  Milestone](#epauto08-milestone)
+    - [Content Engine v2 - 22 episodi  dual-pass haiku/sonnet  da](#content-engine-v2---22-episodi-dual-pass-haikusonnet-da)
+- [IL SISTEMA  Episodio 22](#il-sistema-episodio-22)
+  - [La macchina che scrive se stessa](#la-macchina-che-scrive-se-stessa)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima che esistesse la memoria](#atto-i-prima-che-esistesse-la-memoria)
+  - [ATTO II  Ventidue episodi e il doppio passaggio](#atto-ii-ventidue-episodi-e-il-doppio-passaggio)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_08 — Milestone
 ### "Content Engine v2 - 22 episodi + dual-pass haiku/sonnet + da"
 

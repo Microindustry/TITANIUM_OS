@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  Episodio 2.08](#titaniumos-episodio-208)
+  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  342 PRINT CHE URLANO NEL VUOTO](#atto-i-342-print-che-urlano-nel-vuoto)
+  - [ATTO II  UN LOGGER, 34 FILE, UN UNICO FILO](#atto-ii-un-logger-34-file-un-unico-filo)
+  - [ATTO III  IL SISTEMA CHE SI AVVIA DA SOLO](#atto-iii-il-sistema-che-si-avvia-da-solo)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — Episodio 2.08
 ## "Il Sistema Che Si Ricorda di Sé"
 

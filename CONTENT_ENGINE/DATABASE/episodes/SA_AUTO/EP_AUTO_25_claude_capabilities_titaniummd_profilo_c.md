@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_25  Milestone](#epauto25-milestone)
+    - [CLAUDE_CAPABILITIES_TITANIUM.md - profilo capacita Claude pe](#claudecapabilitiestitaniummd---profilo-capacita-claude-pe)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del documento, il caos silenzioso](#atto-i-prima-del-documento-il-caos-silenzioso)
+  - [ATTO II  Il documento che non sapevo di dover scrivere](#atto-ii-il-documento-che-non-sapevo-di-dover-scrivere)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_25 — Milestone
 ### "CLAUDE_CAPABILITIES_TITANIUM.md - profilo capacita Claude pe"
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_16  Milestone](#epauto16-milestone)
+    - [V7_X_v8.md - estrazione completa 33pp PDF in MENTE/ASSOLUTO/](#v7xv8md---estrazione-completa-33pp-pdf-in-menteassoluto)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima della mappa, il caos](#atto-i-prima-della-mappa-il-caos)
+  - [ATTO II  Trentatré pagine dentro MENTE/ASSOLUTO/](#atto-ii-trentatré-pagine-dentro-menteassoluto)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_16 — Milestone
 ### "V7_X_v8.md - estrazione completa 33pp PDF in MENTE/ASSOLUTO/"
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_20  Milestone](#epauto20-milestone)
+    - [ffmpeg 8.1.1  SumatraPDF installati  profilo PS aggiornato](#ffmpeg-811-sumatrapdf-installati-profilo-ps-aggiornato)
+- [IL SISTEMA  Episodio 47](#il-sistema-episodio-47)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Catena è Tutto](#atto-i-la-catena-è-tutto)
+  - [ATTO II  Due Programmi e un File](#atto-ii-due-programmi-e-un-file)
+  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_20 — Milestone
 ### "ffmpeg 8.1.1 + SumatraPDF installati + profilo PS aggiornato"
 

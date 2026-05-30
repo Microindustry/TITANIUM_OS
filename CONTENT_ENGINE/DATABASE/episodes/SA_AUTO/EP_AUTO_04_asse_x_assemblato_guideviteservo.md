@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_04  Milestone](#epauto04-milestone)
+    - [Asse X assemblato (guideviteservo)](#asse-x-assemblato-guideviteservo)
+- [IL SISTEMA  Episodio: LAsse X](#il-sistema-episodio-lasse-x)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima che esistesse](#atto-i-prima-che-esistesse)
+  - [ATTO II  Guide, vite, servo](#atto-ii-guide-vite-servo)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_04 — Milestone
 ### "Asse X assemblato (guide+vite+servo)"
 

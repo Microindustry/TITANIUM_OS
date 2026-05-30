@@ -11,6 +11,17 @@ durata_min: 8
 reel_hook: "Ho appena migrato quarantuno documenti dal mio archivio fisico a un'infrastruttura cloud integrata. Prima perdevo tempo a cercare specifiche tecniche fra tre scatoloni diversi. Oggi accedo a tutto da qualunque macchina, dalla fresatrice V32 alla pressa VULCAN, in tre secondi. Quarant'anni di know-how industriale ora vivono in una mente digitale che non dorme. Ma sai quale pezzo più critico che ho digitalizzato? Continua a scoprire cosa cambierà nel tuo workflow."
 generated: "2026-05-27T11:31:44.166280"
 ---
+<!-- TOC -->
+
+- [41 documenti, una mente digitale](#41-documenti-una-mente-digitale)
+- [SINAPSIMENTE: 41 Documenti e una Migrazione](#sinapsimente-41-documenti-e-una-migrazione)
+  - [La Scena](#la-scena)
+  - [Il Bivio](#il-bivio)
+  - [Connessione al Sistema](#connessione-al-sistema)
+  - [LUltima Riga](#lultima-riga)
+
+<!-- /TOC -->
+
 
 # 41 documenti, una mente digitale
 

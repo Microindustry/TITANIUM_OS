@@ -1,3 +1,24 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  Stagione 1, Episodio 12](#titaniumos-stagione-1-episodio-12)
+  - [Il Sistema Che Si Guarda](#il-sistema-che-si-guarda)
+    - [Dashboard v5.0  quando il software impara a leggere se stesso](#dashboard-v50-quando-il-software-impara-a-leggere-se-stesso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema del Doppio Stato](#atto-i-il-problema-del-doppio-stato)
+    - [Marzo 2026  tre giorni prima della Dashboard v5.0](#marzo-2026-tre-giorni-prima-della-dashboard-v50)
+    - [La Decisione](#la-decisione)
+  - [ATTO II  Zustand, TanStack e lArchitettura della Chiarezza](#atto-ii-zustand-tanstack-e-larchitettura-della-chiarezza)
+    - [25 marzo 2026  Dashboard v5.0](#25-marzo-2026-dashboard-v50)
+    - [Il Numero che Conta](#il-numero-che-conta)
+  - [ATTO III  La Taverna Come Sistema](#atto-iii-la-taverna-come-sistema)
+    - [Maggio 2026  Config G, colonne ZU](#maggio-2026-config-g-colonne-zu)
+    - [Una Nota sui Permessi Windows](#una-nota-sui-permessi-windows)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — Stagione 1, Episodio 12
 
 ## "Il Sistema Che Si Guarda"

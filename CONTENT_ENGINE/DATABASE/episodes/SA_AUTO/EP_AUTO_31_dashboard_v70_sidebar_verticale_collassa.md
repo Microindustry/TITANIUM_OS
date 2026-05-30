@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_31  Milestone](#epauto31-milestone)
+    - [Dashboard v7.0 - sidebar verticale collassabile  AgentsView](#dashboard-v70---sidebar-verticale-collassabile-agentsview)
+- [Il Sistema  Episodio 14](#il-sistema-episodio-14)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del vetro](#atto-i-prima-del-vetro)
+  - [ATTO II  v7.0 e il momento in cui il sistema si è visto](#atto-ii-v70-e-il-momento-in-cui-il-sistema-si-è-visto)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_31 — Milestone
 ### "Dashboard v7.0 - sidebar verticale collassabile + AgentsView"
 

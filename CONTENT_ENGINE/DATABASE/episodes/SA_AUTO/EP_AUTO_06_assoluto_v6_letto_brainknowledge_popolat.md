@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_06  Milestone](#epauto06-milestone)
+    - [ASSOLUTO V6 letto  BRAIN/KNOWLEDGE popolata (15 file) (10 M](#assoluto-v6-letto-brainknowledge-popolata-15-file-10-m)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del linguaggio, il caos](#atto-i-prima-del-linguaggio-il-caos)
+  - [ATTO II  Quindici file, una memoria](#atto-ii-quindici-file-una-memoria)
+  - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_06 — Milestone
 ### "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 file) (10 M"
 

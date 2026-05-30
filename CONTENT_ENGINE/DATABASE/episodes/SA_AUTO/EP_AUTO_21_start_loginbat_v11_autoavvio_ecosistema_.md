@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_21  Milestone](#epauto21-milestone)
+    - [START_LOGIN.bat v1.1 - auto-avvio ecosistema  Windows Termi](#startloginbat-v11---auto-avvio-ecosistema-windows-termi)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema del Primo Minuto](#atto-i-il-problema-del-primo-minuto)
+  - [ATTO II  START_LOGIN.bat v1.1](#atto-ii-startloginbat-v11)
+  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_21 — Milestone
 ### "START_LOGIN.bat v1.1 - auto-avvio ecosistema + Windows Termi"
 

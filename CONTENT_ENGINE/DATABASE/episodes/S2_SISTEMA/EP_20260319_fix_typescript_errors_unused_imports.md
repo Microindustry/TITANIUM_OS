@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S1E09](#titaniumos-s1e09)
+  - [Il Sistema Respira da Solo](#il-sistema-respira-da-solo)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LA PULIZIA CHE NON SI VEDE](#atto-i-la-pulizia-che-non-si-vede)
+  - [ATTO II  TRE WORKFLOW, UNIDEA](#atto-ii-tre-workflow-unidea)
+  - [ATTO III  IL README COME SPECCHIO](#atto-iii-il-readme-come-specchio)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — S1E09
 ## "Il Sistema Respira da Solo"
 

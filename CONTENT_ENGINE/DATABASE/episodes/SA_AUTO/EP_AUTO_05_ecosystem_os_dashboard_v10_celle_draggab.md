@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_05  Milestone](#epauto05-milestone)
+    - [ECOSYSTEM_OS dashboard v1.0 - celle draggabili live (09 Mar](#ecosystemos-dashboard-v10---celle-draggabili-live-09-mar)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del 9 marzo](#atto-i-prima-del-9-marzo)
+  - [ATTO II  Le celle che si muovono](#atto-ii-le-celle-che-si-muovono)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_05 — Milestone
 ### "ECOSYSTEM_OS dashboard v1.0 - celle draggabili live (09 Mar "
 

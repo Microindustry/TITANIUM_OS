@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S1E09](#titaniumos-s1e09)
+  - [Il Sistema Che Si Ricorda da Solo](#il-sistema-che-si-ricorda-da-solo)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Velocità Che Non Si Vede](#atto-i-la-velocità-che-non-si-vede)
+  - [ATTO II  La Dashboard Che Respira](#atto-ii-la-dashboard-che-respira)
+  - [ATTO III  Config G è ancora lì](#atto-iii-config-g-è-ancora-lì)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — S1E09
 ## "Il Sistema Che Si Ricorda da Solo"
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_12  Milestone](#epauto12-milestone)
+    - [Dashboard v5.1 - CommandBar CtrlK  storieData v2.0 (10 ep](#dashboard-v51---commandbar-ctrlk-storiedata-v20-10-ep)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del comando](#atto-i-prima-del-comando)
+  - [ATTO II  Il momento del comando](#atto-ii-il-momento-del-comando)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_12 — Milestone
 ### "Dashboard v5.1 - CommandBar Ctrl+K + storieData v2.0 (10 ep "
 

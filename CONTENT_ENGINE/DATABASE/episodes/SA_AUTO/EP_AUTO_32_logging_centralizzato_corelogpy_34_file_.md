@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_32  Milestone](#epauto32-milestone)
+    - [Logging centralizzato - CORE/log.py  34 file aggiornati, Ro](#logging-centralizzato---corelogpy-34-file-aggiornati-ro)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [342 Voci nel Buio](#342-voci-nel-buio)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Rumore di Fondo](#atto-i-il-rumore-di-fondo)
+  - [ATTO II  CORE/log.py](#atto-ii-corelogpy)
+  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
+
+<!-- /TOC -->
+
 # EP_AUTO_32 — Milestone
 ### "Logging centralizzato - CORE/log.py + 34 file aggiornati, Ro"
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_09  Milestone](#epauto09-milestone)
+    - [Ottimizzazione Claude Code - .claudeignore, settings.json, r](#ottimizzazione-claude-code---claudeignore-settingsjson-r)
+- [Il Sistema  Episodio 14](#il-sistema-episodio-14)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il caos silenzioso](#atto-i-il-caos-silenzioso)
+  - [ATTO II  Struttura o morte](#atto-ii-struttura-o-morte)
+  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_09 — Milestone
 ### "Ottimizzazione Claude Code - .claudeignore, settings.json, r"
 

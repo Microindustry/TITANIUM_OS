@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [EP_AUTO_23  Milestone](#epauto23-milestone)
+    - [Research Agent - 13 sorgenti (arXiv, OpenAlex, Semantic Scho](#research-agent---13-sorgenti-arxiv-openalex-semantic-scho)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [Le Sorgenti](#le-sorgenti)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima di avere occhi](#atto-i-prima-di-avere-occhi)
+  - [ATTO II  Il giorno delle tredici sorgenti](#atto-ii-il-giorno-delle-tredici-sorgenti)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_23 — Milestone
 ### "Research Agent - 13 sorgenti (arXiv, OpenAlex, Semantic Scho"
 

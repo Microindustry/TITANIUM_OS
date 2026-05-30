@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  Stagione 1, Episodio 14](#titaniumos-stagione-1-episodio-14)
+  - [Il Cane da Guardia](#il-cane-da-guardia)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)
+  - [ATTO II  Anatomia di un Watchdog](#atto-ii-anatomia-di-un-watchdog)
+  - [ATTO III  Stato del Sistema e il Peso di un  dirty](#atto-iii-stato-del-sistema-e-il-peso-di-un-dirty)
+  - [CHIUSURA](#chiusura)
+  - [REEL HOOK](#reel-hook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — Stagione 1, Episodio 14
 
 ## "Il Cane da Guardia"

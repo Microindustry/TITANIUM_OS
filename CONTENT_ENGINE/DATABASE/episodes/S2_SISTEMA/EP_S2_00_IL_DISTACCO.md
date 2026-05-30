@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_00  IL DISTACCO](#eps200-il-distacco)
+    - [Le molle erano giuste. Il corpo unico è meglio.](#le-molle-erano-giuste-il-corpo-unico-è-meglio)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  PERCHÉ LE MOLLE ERANO GIUSTE](#atto-i-perché-le-molle-erano-giuste)
+  - [ATTO II  IL MOMENTO IN CUI CAMBIA TUTTO](#atto-ii-il-momento-in-cui-cambia-tutto)
+  - [ATTO III  LA DECISIONE](#atto-iii-la-decisione)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S2_00 — IL DISTACCO
 ### "Le molle erano giuste. Il corpo unico è meglio."
 

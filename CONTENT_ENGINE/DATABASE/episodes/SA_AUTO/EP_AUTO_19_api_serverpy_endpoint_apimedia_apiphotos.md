@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_19  Milestone](#epauto19-milestone)
+    - [api_server.py - endpoint /api/media /api/photos /api/pdfs /a](#apiserverpy---endpoint-apimedia-apiphotos-apipdfs-a)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del server, cera il caos dei file](#atto-i-prima-del-server-cera-il-caos-dei-file)
+  - [ATTO II  api_server.py: quattro endpoint, una spina dorsale](#atto-ii-apiserverpy-quattro-endpoint-una-spina-dorsale)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_19 — Milestone
 ### "api_server.py - endpoint /api/media /api/photos /api/pdfs /a"
 

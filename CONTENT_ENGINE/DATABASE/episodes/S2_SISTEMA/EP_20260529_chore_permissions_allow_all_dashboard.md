@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S1E08](#titaniumos-s1e08)
+  - [Tagliare il Grasso](#tagliare-il-grasso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Peso delle Cose che Funzionano](#atto-i-il-peso-delle-cose-che-funzionano)
+  - [ATTO II  Permessi e Frizioni Invisibili](#atto-ii-permessi-e-frizioni-invisibili)
+  - [ATTO III  Config G](#atto-iii-config-g)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — S1E08
 
 ## "Tagliare il Grasso"

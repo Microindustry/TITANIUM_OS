@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_26  Milestone](#epauto26-milestone)
+    - [RAG v4.0 - hybrid BM25semanticoCrossEncoderincrementale (](#rag-v40---hybrid-bm25semanticocrossencoderincrementale)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima di capire, si cercava a caso](#atto-i-prima-di-capire-si-cercava-a-caso)
+  - [ATTO II  Ibrido, reranking, e la memoria che cresce](#atto-ii-ibrido-reranking-e-la-memoria-che-cresce)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_26 — Milestone
 ### "RAG v4.0 - hybrid BM25+semantico+CrossEncoder+incrementale ("
 

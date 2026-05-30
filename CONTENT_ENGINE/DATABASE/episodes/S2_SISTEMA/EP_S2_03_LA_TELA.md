@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_03  LA TELA](#eps203-la-tela)
+    - [La dashboard non mostra dati. Mostra chi sei.](#la-dashboard-non-mostra-dati-mostra-chi-sei)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL PROBLEMA DELLA COMPLESSITÀ](#atto-i-il-problema-della-complessità)
+  - [ATTO II  LEVOLUZIONE IN TRE VERSIONI](#atto-ii-levoluzione-in-tre-versioni)
+  - [ATTO III  MATTEOSECTION](#atto-iii-matteosection)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S2_03 — LA TELA
 ### "La dashboard non mostra dati. Mostra chi sei."
 

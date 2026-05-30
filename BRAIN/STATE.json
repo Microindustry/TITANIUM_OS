@@ -2,16 +2,16 @@
   "meta": {
     "created": "2026-03-09T11:49:54.730580",
     "updated": "2026-05-30T10:29:15",
-    "version": "2.8.0",
-    "description": "TITANIUM_OS v2.8.0 — NEXUS swarm + RAG graph v5 + MCP v1.3 + watchdog swarm + vault fix notturno",
+    "version": "2.9.0",
+    "description": "TITANIUM_OS v2.9.0 — ScreenAgent v1.0: griglia puntini + visione Claude + click simulato + MAPPA v2 + RETE t-SNE 3D",
     "system": "TITANIUM OS - ecosystem v1.4"
   },
-  "last_update": "2026-05-30T15:08:50.256739",
+  "last_update": "2026-05-30T16:46:46.471839",
   "active_milestone": "Config G - Rinforzi colonne Z+U",
   "ciclo_position": "COSTRUISCI",
-  "last_action": "Modifica a .gitignore",
+  "last_action": "Modifica a screen_agent.bat.tmp.1520.5ad7324b8e46",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
-  "session_count": 16,
+  "session_count": 20,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -37,7 +37,7 @@
       "pct_complete": 83,
       "next": "EVA WhatsApp pilot + AgentsView log consultazioni Claude->agenti",
       "atto": "V",
-      "last_activity": "2026-05-30T10:30:30.452372"
+      "last_activity": "2026-05-30T15:15:42.118781"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -88,7 +88,9 @@
       "Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)",
       "Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)",
       "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)",
-      "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)"
+      "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)",
+      "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js raw) + watchdog psutil + lazy loading (30 Mag 2026)",
+      "ScreenAgent v1.0 - screenshot + griglia puntini rossi 20x15 + Claude vision + click simulato + copy/drag/hotkey (30 Mag 2026)"
     ],
     "next": "Rinforzi Config G (gusset + diag + tiranti M10) + V8 documento completo dopo decisione silent blocks",
     "target_capannone": "15 Luglio 2030"
@@ -112,7 +114,8 @@
     "AGENTS": "ATTIVO - NODES/AGENTS/ - agents_db.json (8 agenti) + validator_agent.py + /api/agents/ask | alias: ask, agents",
     "STORY_AGENT": "ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO",
     "NIGHT_PUSH": "ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico",
-    "COMPUTER_USE": "ATTIVO v1.0 - NODES/COMPUTER_USE/ - ComputerUse + BrowserAgent + CDP | START_LOGIN.bat aggiornato con --remote-debugging-port=9222",
+    "COMPUTER_USE": "ATTIVO v1.1 - NODES/COMPUTER_USE/ - ComputerUse + BrowserAgent + CDP + ScreenAgent griglia puntini | alias: screen",
+    "SCREEN_AGENT": "ATTIVO v1.0 - NODES/COMPUTER_USE/screen_agent.py - griglia 20x15 puntini rossi + Claude vision + click/type/drag/copy | screen 'task'",
     "GOOGLE_CALENDAR": "ATTIVO - mcp__claude_ai_Google_Calendar__* - legge/crea eventi | account benenatimatteo.mb@gmail.com",
     "GMAIL": "ATTIVO - mcp__claude_ai_Gmail__* - search, draft, labels | account benenatimatteo.mb@gmail.com",
     "EVA": "pending - WhatsApp Business API setup",

@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_02  LORCHESTRATORE](#eps202-lorchestratore)
+    - [4.7 secondi. 13 fonti. Il sistema che coordina sé stesso.](#47-secondi-13-fonti-il-sistema-che-coordina-sé-stesso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL PROBLEMA DELLA FINE SESSIONE](#atto-i-il-problema-della-fine-sessione)
+  - [ATTO II  STOP HOOKS](#atto-ii-stop-hooks)
+  - [ATTO III  RESEARCH AGENT v1.1](#atto-iii-research-agent-v11)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S2_02 — L'ORCHESTRATORE
 ### "4.7 secondi. 13 fonti. Il sistema che coordina sé stesso."
 

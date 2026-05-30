@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_01  IL CERVELLO IBRIDO](#eps201-il-cervello-ibrido)
+    - [Un archivio diventa un organismo](#un-archivio-diventa-un-organismo)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL PROBLEMA CHE NON VEDEVI](#atto-i-il-problema-che-non-vedevi)
+  - [ATTO II  I TRE SISTEMI](#atto-ii-i-tre-sistemi)
+  - [ATTO III  IL MANIFEST](#atto-iii-il-manifest)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S2_01 — IL CERVELLO IBRIDO
 ### "Un archivio diventa un organismo"
 

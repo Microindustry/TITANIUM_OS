@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-05-29T11:00:18.331969",
+  "scanned_at": "2026-05-30T15:12:58.718343",
   "source_dir": "C:\\Users\\benen\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 96,
+  "total_files": 144,
   "files_read": 5,
-  "files_skipped": 91,
+  "files_skipped": 139,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -418,6 +418,202 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\ai\\a_systematic_literature_review_on_the_use_of_artificial_inte.md",
+      "type": "md",
+      "size_kb": 1.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\ai\\characterising_the_agriculture_40_landscapeemerging_trends_c.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\ai\\from_smart_farming_towards_agriculture_50_a_review_on_crop_d.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\ai\\harnessing_artificial_intelligence_capabilities_to_improve_c.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\ai\\how_technology_is_changing_work_and_organizations.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\ai\\towards_6g_wireless_communication_networks_vision_enabling_t.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\agentic_rag_hybrid_2025.md",
+      "type": "md",
+      "size_kb": 2.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\ai_powered_educational_agents_opportunities_innovations_and_.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\beyond_automation_unveiling_the_potential_of_agentic_intelli.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\computer_use_agent_survey_2025.md",
+      "type": "md",
+      "size_kb": 1.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\e2e_process_automation_leveraging_generative_ai_and_idp_base.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\finetune_llm_local_cpu_2025.md",
+      "type": "md",
+      "size_kb": 2.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\human_centeredness_in_translation.md",
+      "type": "md",
+      "size_kb": 1.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\multiagent_orchestration_2025.md",
+      "type": "md",
+      "size_kb": 2.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\review_of_autonomous_and_collaborative_agentic_ai_and_multi_.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\mims\\a_review_on_natural_fiber_reinforced_polymer_composite_for_b.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\mims\\cost_effective_manufacturing_of_damage_tolerant_integral_arm.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\mims\\joint_optimization_of_radio_and_computational_resources_for_.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\mims\\sustainable_fiberreinforced_composites_a_review.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\an_overview_on_economic_machining_of_hardened_steels_by_hard.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\epoxy_granite_cnc_damping_2024.md",
+      "type": "md",
+      "size_kb": 3.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\feed_drive_condition_monitoring_using_modal_parameters.md",
+      "type": "md",
+      "size_kb": 1.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\mathematical_modeling_of_friction_force_in_lm_ball_guides.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\mechanical_properties_of_polymer_concrete.md",
+      "type": "md",
+      "size_kb": 1.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\non_contact_measurement_machine_for_freeform_optics.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\static_and_dynamic_behavior_of_steel_reinforced_epoxy_granit.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\static_and_dynamic_performance_improvement_of_conventional_c.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\variable_stiffness_actuators_review_on_design_and_components.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\FIGURE_PROFESSIONALI.md",
       "type": "md",
       "size_kb": 25.3,
@@ -775,6 +971,27 @@
       "extracts": {}
     },
     {
+      "path": "SESSIONI\\2026-05-29_s10_Config_G_-_Rinforzi_colonne_Z+U.md",
+      "type": "md",
+      "size_kb": 4.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-05-29_s11_Config_G_-_Rinforzi_colonne_Z+U.md",
+      "type": "md",
+      "size_kb": 4.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-05-29_s11_Config_G_-_Rinforzi_colonne_Z+U_2327.md",
+      "type": "md",
+      "size_kb": 4.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "SESSIONI\\2026-05-29_s8_Config_G_Rinforzi_colonne_Z+U.md",
       "type": "md",
       "size_kb": 4.5,
@@ -792,6 +1009,13 @@
       "path": "SESSIONI\\2026-05-29_s8_Config_G_Rinforzi_colonne_Z+U_1031.md",
       "type": "md",
       "size_kb": 4.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-05-30_v2.8.0-release-nexus-rag-graph.md",
+      "type": "md",
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
@@ -897,6 +1121,118 @@
       "path": "SESSIONI\\STORIE\\S1_PRESENTE\\EP_05_IL_VERDETTO.md",
       "type": "md",
       "size_kb": 6.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260319_fix_typescript_errors_unused_imports.md",
+      "type": "md",
+      "size_kb": 8.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260322_docs_ecosystem_manifest_documento_fon.md",
+      "type": "md",
+      "size_kb": 9.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md",
+      "type": "md",
+      "size_kb": 9.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260527_auto_episodi_generati_da_state_json_202.md",
+      "type": "md",
+      "size_kb": 7.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260528_matteosection_v4_2_skill_espandibili_pe.md",
+      "type": "md",
+      "size_kb": 8.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260529_auto_avvio_completo_al_login_start_.md",
+      "type": "md",
+      "size_kb": 6.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
+      "type": "md",
+      "size_kb": 6.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md",
+      "type": "md",
+      "size_kb": 7.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
+      "type": "md",
+      "size_kb": 8.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
+      "type": "md",
+      "size_kb": 8.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_00_IL_DISTACCO.md",
+      "type": "md",
+      "size_kb": 5.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
+      "type": "md",
+      "size_kb": 5.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
+      "type": "md",
+      "size_kb": 5.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
+      "type": "md",
+      "size_kb": 5.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md",
+      "type": "md",
+      "size_kb": 5.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
+      "type": "md",
+      "size_kb": 6.0,
       "readable": false,
       "extracts": {}
     },

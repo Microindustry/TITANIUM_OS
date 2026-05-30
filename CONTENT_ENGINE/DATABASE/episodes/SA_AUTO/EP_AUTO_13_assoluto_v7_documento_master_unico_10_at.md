@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_13  Milestone](#epauto13-milestone)
+    - [ASSOLUTO V7 - documento master unico, 10 ATTI unificati, agg](#assoluto-v7---documento-master-unico-10-atti-unificati-agg)
+- [IL SISTEMA  Episodio 31](#il-sistema-episodio-31)
+  - [ASSOLUTO V7: Quando il Caos Diventa Architettura](#assoluto-v7-quando-il-caos-diventa-architettura)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del documento, cera il rumore](#atto-i-prima-del-documento-cera-il-rumore)
+  - [ATTO II  Il giorno in cui ho unificato tutto](#atto-ii-il-giorno-in-cui-ho-unificato-tutto)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+
+<!-- /TOC -->
+
 # EP_AUTO_13 — Milestone
 ### "ASSOLUTO V7 - documento master unico, 10 ATTI unificati, agg"
 

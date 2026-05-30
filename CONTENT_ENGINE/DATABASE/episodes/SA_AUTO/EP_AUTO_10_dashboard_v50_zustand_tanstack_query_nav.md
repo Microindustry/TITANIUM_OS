@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_10  Milestone](#epauto10-milestone)
+    - [Dashboard v5.0 - Zustand  TanStack Query  navigazione guid](#dashboard-v50---zustand-tanstack-query-navigazione-guid)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del mappa, cera il buio](#atto-i-prima-del-mappa-cera-il-buio)
+  - [ATTO II  Zustand, TanStack, e una navigazione che finalmente guida](#atto-ii-zustand-tanstack-e-una-navigazione-che-finalmente-guida)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_10 — Milestone
 ### "Dashboard v5.0 - Zustand + TanStack Query + navigazione guid"
 

@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [EP_AUTO_27  Milestone](#epauto27-milestone)
+    - [Audit sistema - bottleneck identificati e risolti (28 Mag 20](#audit-sistema---bottleneck-identificati-e-risolti-28-mag-20)
+- [IL SISTEMA  Episodio 14](#il-sistema-episodio-14)
+  - [Audit sistema  bottleneck identificati e risolti](#audit-sistema-bottleneck-identificati-e-risolti)
+    - [28 maggio 2026](#28-maggio-2026)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il rumore sotto il rumore](#atto-i-il-rumore-sotto-il-rumore)
+  - [ATTO II  Aprire il cofano](#atto-ii-aprire-il-cofano)
+  - [ATTO III  Quello che si sblocca adesso](#atto-iii-quello-che-si-sblocca-adesso)
+
+<!-- /TOC -->
+
 # EP_AUTO_27 — Milestone
 ### "Audit sistema - bottleneck identificati e risolti (28 Mag 20"
 

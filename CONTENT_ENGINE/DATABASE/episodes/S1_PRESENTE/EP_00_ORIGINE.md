@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_00  ORIGINE](#ep00-origine)
+    - [Quindici anni per capire una cosa sola](#quindici-anni-per-capire-una-cosa-sola)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL CURRICULUM CHE NON MANDA NESSUNO](#atto-i-il-curriculum-che-non-manda-nessuno)
+  - [ATTO II  LA CONNESSIONE](#atto-ii-la-connessione)
+  - [ATTO III  LA SCINTILLA](#atto-iii-la-scintilla)
+  - [ATTO IV  LA DOMANDA GIUSTA](#atto-iv-la-domanda-giusta)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_00 — ORIGINE
 ### "Quindici anni per capire una cosa sola"
 

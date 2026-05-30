@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [EP_AUTO_01  Milestone](#epauto01-milestone)
+    - [8 pezzi interfaccia lavorati (bronzine  scalini)](#8-pezzi-interfaccia-lavorati-bronzine-scalini)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [Bronzine e Scalini](#bronzine-e-scalini)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima di quei pezzi, cera solo intenzione](#atto-i-prima-di-quei-pezzi-cera-solo-intenzione)
+  - [ATTO II  Il momento in officina](#atto-ii-il-momento-in-officina)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_01 — Milestone
 ### "8 pezzi interfaccia lavorati (bronzine + scalini)"
 

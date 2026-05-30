@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_AUTO_15  Milestone](#epauto15-milestone)
+    - [pdf_to_memory.py v1.1 - flag --file/--mente/--keep/--rag (28](#pdftomemorypy-v11---flag---file--mente--keep--rag-28)
+- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema della Memoria Morta](#atto-i-il-problema-della-memoria-morta)
+  - [ATTO II  Quattro Flag, Una Decisione](#atto-ii-quattro-flag-una-decisione)
+  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
+
+<!-- /TOC -->
+
 # EP_AUTO_15 — Milestone
 ### "pdf_to_memory.py v1.1 - flag --file/--mente/--keep/--rag (28"
 

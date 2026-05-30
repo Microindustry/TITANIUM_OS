@@ -11,6 +11,15 @@ durata_min: 8
 reel_hook: "Ho appena montato quattro molle gialle da 90 Newton sulla mia fresatrice e il risultato è pazzesco. Prima, con le vecchie molle, l'asse XY ballava durante i passaggi veloci, creavo difetti che poi dovevo limmare manualmente. Oggi ho installato la config G con le due piastre dedicate e il sistema è stabile come non lo era mai. Ma la vera scoperta è come questo cambia anche la velocità di lavorazione. Vuoi sapere quanto ho guadagnato solo questa settimana?"
 generated: "2026-05-27T11:29:47.118608"
 ---
+<!-- TOC -->
+
+- [Molle gialle: la precisione che cambia tutto](#molle-gialle-la-precisione-che-cambia-tutto)
+- [V32  Episodio 14: Config G](#v32-episodio-14-config-g)
+  - [Il bivio](#il-bivio)
+  - [Connessione al sistema](#connessione-al-sistema)
+
+<!-- /TOC -->
+
 
 # Molle gialle: la precisione che cambia tutto
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_18  Milestone](#epauto18-milestone)
+    - [Foto V32 organizzate - 7 foto rinominate in FOTO/V32_BUILD/C](#foto-v32-organizzate---7-foto-rinominate-in-fotov32buildc)
+- [IL SISTEMA  Episodio 47](#il-sistema-episodio-47)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il caos che non vedi finché non lo guardi](#atto-i-il-caos-che-non-vedi-finché-non-lo-guardi)
+  - [ATTO II  Sette file, una convenzione, un momento che vale](#atto-ii-sette-file-una-convenzione-un-momento-che-vale)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_18 — Milestone
 ### "Foto V32 organizzate - 7 foto rinominate in FOTO/V32_BUILD/C"
 

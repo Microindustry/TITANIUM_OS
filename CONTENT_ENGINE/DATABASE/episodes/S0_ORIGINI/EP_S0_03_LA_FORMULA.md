@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_03  LA FORMULA](#eps003-la-formula)
+    - [79 di margine su hardware. Questo numero non esiste. Eppure cè.](#79-di-margine-su-hardware-questo-numero-non-esiste-eppure-cè)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL MERCATO È ROTTO](#atto-i-il-mercato-è-rotto)
+  - [ATTO II  LA MATEMATICA DELLABBONDANZA](#atto-ii-la-matematica-dellabbondanza)
+  - [ATTO III  IL NUMERO MAGICO](#atto-iii-il-numero-magico)
+  - [ATTO IV  LASIMMETRIA](#atto-iv-lasimmetria)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S0_03 — LA FORMULA
 ### "79% di margine su hardware. Questo numero non esiste. Eppure c'è."
 

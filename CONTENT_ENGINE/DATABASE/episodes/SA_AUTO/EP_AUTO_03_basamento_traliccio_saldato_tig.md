@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_AUTO_03  Milestone](#epauto03-milestone)
+    - [Basamento traliccio saldato TIG](#basamento-traliccio-saldato-tig)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del metallo](#atto-i-prima-del-metallo)
+  - [ATTO II  TIG su traliccio](#atto-ii-tig-su-traliccio)
+  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_03 — Milestone
 ### "Basamento traliccio saldato TIG"
 

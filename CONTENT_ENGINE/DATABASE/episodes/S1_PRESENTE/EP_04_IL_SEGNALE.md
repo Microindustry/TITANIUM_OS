@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_04  IL SEGNALE](#ep04-il-segnale)
+    - [Ho costruito unAI per la donna che amo. Si chiama Eva.](#ho-costruito-unai-per-la-donna-che-amo-si-chiama-eva)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  VITA NATURA](#atto-i-vita-natura)
+  - [ATTO II  LA MARIA RULE](#atto-ii-la-maria-rule)
+  - [ATTO III  COSA FA EVA OGNI GIORNO](#atto-iii-cosa-fa-eva-ogni-giorno)
+  - [ATTO IV  PERCHÉ QUESTO APPARTIENE ALLECOSISTEMA](#atto-iv-perché-questo-appartiene-allecosistema)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_04 — IL SEGNALE
 ### "Ho costruito un'AI per la donna che amo. Si chiama Eva."
 

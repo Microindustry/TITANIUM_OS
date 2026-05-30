@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S1E08](#titaniumos-s1e08)
+  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LARCHIVIO CHE CAMMINA](#atto-i-larchivio-che-cammina)
+  - [ATTO II  ASSOLUTO V7, O DEL DOCUMENTO CHE NON DOVREBBE ESISTERE](#atto-ii-assoluto-v7-o-del-documento-che-non-dovrebbe-esistere)
+  - [ATTO III  CTRLK E IL PROBLEMA DEL CONTESTO](#atto-iii-ctrlk-e-il-problema-del-contesto)
+  - [CHIUSURA  SESSIONE 8, GIT DIRTY, 150 CHUNK](#chiusura-sessione-8-git-dirty-150-chunk)
+  - [REEL HOOK](#reel-hook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — S1E08
 ## "Il Sistema Che Si Ricorda di Sé"
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_02  LA VERIFICA](#eps002-la-verifica)
+    - [13 Febbraio 2026. Prima foto. Primo calibro. Prima volta che il sistema diventa reale.](#13-febbraio-2026-prima-foto-primo-calibro-prima-volta-che-il-sistema-diventa-reale)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LINVENTARIO DI GUERRA](#atto-i-linventario-di-guerra)
+  - [ATTO II  IL NUMERO CHE CAMBIA TUTTO](#atto-ii-il-numero-che-cambia-tutto)
+  - [ATTO III  IL VERDETTO DEI TRE ASSI](#atto-iii-il-verdetto-dei-tre-assi)
+  - [ATTO IV  LA NOTA A PIÈ DI PAGINA](#atto-iv-la-nota-a-piè-di-pagina)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_S0_02 — LA VERIFICA
 ### "13 Febbraio 2026. Prima foto. Primo calibro. Prima volta che il sistema diventa reale."
 

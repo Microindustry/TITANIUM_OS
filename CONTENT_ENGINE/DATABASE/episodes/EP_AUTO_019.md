@@ -11,6 +11,17 @@ durata_min: 8
 reel_hook: "Avevo dieci flussi di lavoro paralleli sulla fresatrice V32, ognuno con la sua documentazione, i suoi errori. Perdevo tre ore a settimana solo a sincronizzare le versioni. A maggio ho fatto una cosa: ho unificato tutto in ASSOLUTO V7, dieci atti in un documento unico. Dal giorno dopo, zero conflitti, zero rielaborazioni. Vuoi sapere il sistema che ho usato per non fare tornare indietro nemmeno un pezzo?"
 generated: "2026-05-27T14:55:16.054586"
 ---
+<!-- TOC -->
+
+- [Dieci atti, un documento master](#dieci-atti-un-documento-master)
+- [ASSOLUTO V7  Episodio Podcast](#assoluto-v7-episodio-podcast)
+  - [La Scena](#la-scena)
+  - [Il Bivio](#il-bivio)
+  - [Connessione al Sistema](#connessione-al-sistema)
+  - [Il Numero che Conta](#il-numero-che-conta)
+
+<!-- /TOC -->
+
 
 # Dieci atti, un documento master
 

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_01  LA TAVERNA](#ep01-la-taverna)
+    - [Il laboratorio peggiore del mondo. La scelta migliore della mia vita.](#il-laboratorio-peggiore-del-mondo-la-scelta-migliore-della-mia-vita)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LE CONDIZIONI PERFETTE NON ESISTONO](#atto-i-le-condizioni-perfette-non-esistono)
+  - [ATTO II  INVENTARIO DI GUERRA](#atto-ii-inventario-di-guerra)
+  - [ATTO III  IL PARADOSSO DEL SOLAIO](#atto-iii-il-paradosso-del-solaio)
+  - [ATTO IV  QUELLO CHE CÈ GIÀ](#atto-iv-quello-che-cè-già)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_01 — LA TAVERNA
 ### "Il laboratorio peggiore del mondo. La scelta migliore della mia vita."
 

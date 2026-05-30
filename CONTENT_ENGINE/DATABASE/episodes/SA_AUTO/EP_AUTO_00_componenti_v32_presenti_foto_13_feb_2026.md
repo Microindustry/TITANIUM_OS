@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_00  Milestone](#epauto00-milestone)
+    - [Componenti V32 presenti (foto 13 Feb 2026)](#componenti-v32-presenti-foto-13-feb-2026)
+- [IL SISTEMA  Episodio 14](#il-sistema-episodio-14)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima della foto, cera solo il progetto](#atto-i-prima-della-foto-cera-solo-il-progetto)
+  - [ATTO II  Il momento in cui il CAD smette di essere lunica realtà](#atto-ii-il-momento-in-cui-il-cad-smette-di-essere-lunica-realtà)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_00 — Milestone
 ### "Componenti V32 presenti (foto 13 Feb 2026)"
 

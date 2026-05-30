@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_29  Milestone](#epauto29-milestone)
+    - [Story Agent v1.0 - generazione episodi automatica da git log](#story-agent-v10---generazione-episodi-automatica-da-git-log)
+- [IL SISTEMA  Episodio: Story Agent v1.0](#il-sistema-episodio-story-agent-v10)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del silenzio cera il rumore](#atto-i-prima-del-silenzio-cera-il-rumore)
+  - [ATTO II  Il momento in cui il sistema ha imparato a raccontarsi](#atto-ii-il-momento-in-cui-il-sistema-ha-imparato-a-raccontarsi)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_29 — Milestone
 ### "Story Agent v1.0 - generazione episodi automatica da git log"
 
