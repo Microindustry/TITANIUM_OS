@@ -1,4 +1,4 @@
-# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.2 | 2026-05-30
+# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.3 | 2026-05-30
 # Server MCP locale — espone TITANIUM_OS a Claude Code via stdio
 # Tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready
 
@@ -109,6 +109,24 @@ async def list_tools() -> list[types.Tool]:
                         "default": 10,
                     }
                 },
+            },
+        ),
+        types.Tool(
+            name="nexus",
+            description="Orchestratore swarm: interroga più agenti in parallelo (rag, research, state). Risultati merged.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "query":   {"type": "string", "description": "Query da inviare agli agenti"},
+                    "agents":  {
+                        "type": "array",
+                        "items": {"type": "string", "enum": ["rag", "research", "state"]},
+                        "description": "Agenti da usare (default: rag + state)",
+                        "default": ["rag", "state"],
+                    },
+                    "domain":  {"type": "string", "description": "Dominio per research agent (V32, MIMS, GENESIS)", "default": "GENESIS"},
+                },
+                "required": ["query"],
             },
         ),
         types.Tool(
@@ -245,6 +263,22 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             return _ok("\n".join(lines))
         except Exception as e:
             return _ok(f"Errore list_content_ready: {e}")
+
+    # ── nexus ────────────────────────────────────────────────────
+    elif name == "nexus":
+        try:
+            from NODES.NEXUS.nexus import run_swarm, SwarmTask, format_results, AGENT_REGISTRY
+            query   = arguments["query"]
+            agents  = arguments.get("agents", ["rag", "state"])
+            domain  = arguments.get("domain", "GENESIS")
+            valid   = [a for a in agents if a in AGENT_REGISTRY]
+            tasks   = [SwarmTask(a, query, {"domain": domain}) for a in valid]
+            results = run_swarm(tasks)
+            logger.info("nexus: %d agenti, query='%s'", len(tasks), query)
+            return _ok(format_results(results))
+        except Exception as e:
+            logger.error("nexus: %s", e)
+            return _ok(f"Errore nexus: {e}")
 
     # ── rag_update ───────────────────────────────────────────────
     elif name == "rag_update":
