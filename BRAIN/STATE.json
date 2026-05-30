@@ -6,12 +6,12 @@
     "description": "TITANIUM_OS v2.8.0 — NEXUS swarm + RAG graph v5 + MCP v1.3 + watchdog swarm + vault fix notturno",
     "system": "TITANIUM OS - ecosystem v1.4"
   },
-  "last_update": "2026-05-30T10:29:15.505363",
+  "last_update": "2026-05-30T12:28:52.065283",
   "active_milestone": "Config G - Rinforzi colonne Z+U",
   "ciclo_position": "COSTRUISCI",
-  "last_action": "Modifica a rag_graph.pkl",
+  "last_action": "Modifica a vite.config.ts",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
-  "session_count": 12,
+  "session_count": 16,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -37,7 +37,7 @@
       "pct_complete": 83,
       "next": "EVA WhatsApp pilot + AgentsView log consultazioni Claude->agenti",
       "atto": "V",
-      "last_activity": "2026-05-30T10:29:15"
+      "last_activity": "2026-05-30T10:30:30.452372"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -112,6 +112,9 @@
     "AGENTS": "ATTIVO - NODES/AGENTS/ - agents_db.json (8 agenti) + validator_agent.py + /api/agents/ask | alias: ask, agents",
     "STORY_AGENT": "ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO",
     "NIGHT_PUSH": "ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico",
+    "COMPUTER_USE": "ATTIVO v1.0 - NODES/COMPUTER_USE/ - ComputerUse + BrowserAgent + CDP | START_LOGIN.bat aggiornato con --remote-debugging-port=9222",
+    "GOOGLE_CALENDAR": "ATTIVO - mcp__claude_ai_Google_Calendar__* - legge/crea eventi | account benenatimatteo.mb@gmail.com",
+    "GMAIL": "ATTIVO - mcp__claude_ai_Gmail__* - search, draft, labels | account benenatimatteo.mb@gmail.com",
     "EVA": "pending - WhatsApp Business API setup",
     "V32_WATCHER": "future - post assemblaggio completo"
   },
