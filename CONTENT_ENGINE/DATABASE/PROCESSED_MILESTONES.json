@@ -32,6 +32,8 @@
     "Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)",
     "Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)",
     "Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)",
-    "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)"
+    "Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)",
+    "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js raw) + watchdog psutil + lazy loading (30 Mag 2026)",
+    "ScreenAgent v1.0 - screenshot + griglia puntini rossi 20x15 + Claude vision + click simulato + copy/drag/hotkey (30 Mag 2026)"
   ]
 }
