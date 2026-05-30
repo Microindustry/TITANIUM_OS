@@ -1,0 +1,132 @@
+# TITANIUM_OS — Stagione 1, Episodio 14
+
+## "Il Cane da Guardia"
+
+*— o di come un sistema impara a badare a se stesso*
+
+---
+
+```
+STAGIONE 1 · EPISODIO 14
+DATA: 2026-05-30
+COMMIT: watchdog v1.2 + START_LOGIN v1.3
+PROGETTO: GENESIS / V32
+```
+
+---
+
+## COLD OPEN
+
+Sono le 10:31 di un giovedì mattina.
+
+Il file si chiama `RIAVVIO_SESSIONE.txt` — e questo nome, da solo, racconta qualcosa. Non `SESSIONE.txt`. Non `AVVIO.txt`. **Riavvio.** Come se il sistema sapesse già, per esperienza accumulata, che ogni volta che lo chiami potrebbe essere rotto.
+
+Sul desktop di Matteo c'è una cartella OneDrive. Dentro quella cartella c'è un file `.txt` generato automaticamente ogni mattina alle 10:30 — metadati, stato del progetto, prompt pre-compilato da incollare nel chat. È la liturgia del sistema: svegliarsi, aprire il terminale, leggere lo stato della macchina.
+
+Quel giorno, però, qualcosa nel ciclo si era rotto prima ancora di cominciare.
+
+La dashboard non era attiva.
+
+---
+
+## ATTO I — Il Problema che Nessuno Nomina
+
+Ci sono due tipi di bug nei sistemi personali. Il primo tipo ti blocca: stai lavorando, qualcosa smette di funzionare, ti fermi, lo risolvi. Il secondo tipo è peggio: è il bug che ti consuma **prima che tu ti accorga che esiste**.
+
+La dashboard di GENESIS — quella React su `localhost:5173` — aveva una caratteristica subdola: sopravviveva solo se qualcuno la teneva d'occhio. Processo Vite avviato, tutto bene. Ma se la sessione si chiudeva, se il terminale moriva per errore, se Windows decideva autonomamente di fare qualcosa di stupido nel mezzo della notte — la dashboard spariva. Silenziosamente. Senza avviso.
+
+E la mattina dopo, quando Matteo apriva il browser per controllare lo stato di GENESIS, trovava il nulla. Doveva capire perché, riaprire il terminale, riavviare Vite, ricaricare. Trenta secondi di lavoro, forse un minuto — ma trenta secondi **ogni singola volta**, moltiplicati per settimane, moltiplicati per il peso mentale di aspettarsi che la cosa funzioni e trovare invece silenzio.
+
+C'è un concetto in ingegneria industriale: il costo del setup ripetuto. Ogni volta che una macchina deve essere riconfigurata da zero, paghi. Non solo in tempo — paghi in **attenzione**. E l'attenzione, in un sistema costruito da una persona sola che fa anche il saldatore, il programmatore, l'ingegnere e il marito, è la risorsa più scarsa di tutte.
+
+Il commit dice: `fix: dashboard sempre attiva`.
+
+Tre parole. Dietro quelle tre parole c'è la decisione di smettere di accettare la rottura come normale.
+
+---
+
+## ATTO II — Anatomia di un Watchdog
+
+`watchdog v1.2` — il nome è già un manifesto. Un watchdog, in informatica, è un processo il cui unico scopo è guardare un altro processo. Non fa niente di produttivo. Non elabora dati, non renderizza interfacce, non parla con il database. **Guarda.** E se quello che guarda smette di esistere, lo fa ripartire.
+
+È una delle idee più elementari dell'ingegneria dei sistemi affidabili. La usano sui server industriali, sui sistemi embedded nei macchinari, sulle centraline delle auto. L'idea di base è brutalmente semplice: niente sistema complesso rimane in piedi da solo per sempre. Prima o poi cade. La domanda non è *se* — è *quanto velocemente torni su*.
+
+In una taverna di 12 metri quadri, con una CNC da 178 kg ancora incompiuta in un angolo e un PC che gira GENESIS nell'altro, il watchdog fa la stessa cosa che fa su un server da un milione di euro. Controlla. Aspetta. Interviene.
+
+La controparte è `START_LOGIN v1.3` — lo script che usa `pythonw` invece di `python`. La differenza: `python` apre una finestra nera del terminale ogni volta che parte. `pythonw` è invisibile. Gira in background, silenzioso, senza lasciare traccia sullo schermo.
+
+Questo dettaglio è importante.
+
+Non si tratta solo di estetica — nessuna finestra fastidiosa al boot. Si tratta di **intenzione**: il sistema deve essere presente senza essere invadente. Deve fare il suo lavoro senza chiedere attenzione. Come un buon impianto elettrico: non ci pensi, lo dai per scontato, lo noti solo quando non funziona.
+
+Matteo sta costruendo GENESIS perché vuole un sistema che lo supporti — non un sistema che debba essere lui a supportare. La distinzione sembra sottile. Non lo è.
+
+---
+
+## ATTO III — Stato del Sistema e il Peso di un `⚠ dirty`
+
+Merita attenzione un dettaglio nel file di riavvio:
+
+```
+Git commit:    5a9d2d7 [main] ⚠ dirty
+```
+
+**Dirty.** In gergo Git: ci sono modifiche non committate. Il repository non è pulito. Da qualche parte nel codice — un file modificato, una riga cambiata, qualcosa di non ancora salvato nella storia del progetto.
+
+In un team di sviluppatori, un repository dirty al mattino è normale amministrazione. In un sistema personale come GENESIS, costruito da uno solo, è un segnale diverso. Significa che ieri sera, o qualche giorno prima, c'era lavoro in corso che non è stato sigillato. Un pensiero lasciato a metà. Un esperimento che non è ancora diventato decisione.
+
+Il commit di oggi — `watchdog v1.2 + START_LOGIN v1.3` — pulisce parte di quella ambiguità. Porta il sistema un passo più vicino alla coerenza. Ma il `⚠ dirty` di ieri è un promemoria: i sistemi personali hanno la stessa entropia dei sistemi grandi. Si degradano. Si accumulano modi temporanei che diventano permanenti. Si riempiono di patch su patch.
+
+E poi ci sono le sessioni come questa — dove ci si ferma, si guarda il disordine, e si decide di sistemare le fondamenta invece di aggiungere altro sopra.
+
+Nel frattempo, in un angolo della taverna, la colonna Z della V32 aspetta quattro gusset da 200mm. Milestone Config G — Rinforzi colonne Z+U. Il 65% di una macchina da 178 kg, costruita pezzo per pezzo, è ferma mentre si sistema il software che la terrà in vita.
+
+Non è uno spreco di tempo. È l'ordine giusto.
+
+Un sistema che non si accende da solo non può essere affidabile. E una CNC affidata a un sistema inaffidabile è un rischio che Matteo conosce bene — lavora con il titanio, con le presse, con i robot. Sa cosa succede quando un sistema di controllo va offline nel momento sbagliato.
+
+Prima il cane da guardia. Poi i gusset.
+
+---
+
+## CHIUSURA
+
+Ci sono giorni in cui costruire significa saldare. Ci sono giorni in cui significa scrivere codice. E ci sono giorni in cui significa semplicemente fare in modo che quello che hai già costruito non si rompa mentre dormi.
+
+Questo era uno di quei giorni.
+
+`150 chunk` nel RAG. Sessione numero 8. Un file `.txt` generato alle 10:30 ogni mattina, pronto per essere incollato, pronto a ricominciare da dove si era rimasti.
+
+Il sistema non è ancora finito — 78% su GENESIS, 65% su V32, luglio 2030 ancora lontano come un punto fermo sull'orizzonte. Ma ogni mattina in cui la dashboard si accende da sola, senza che nessuno debba intervenire, è una mattina in cui Matteo può dedicare la sua attenzione a qualcosa che conta di più.
+
+Non è un traguardo. È igiene.
+
+È la differenza tra un sistema che richiede cura costante e uno che inizia — lentamente, commit dopo commit — a badare a se stesso.
+
+---
+
+## 🎬 REEL HOOK
+
+> La dashboard di GENESIS moriva ogni volta che nessuno la guardava. Non un errore vistoso — solo silenzio ogni mattina, trenta secondi di recupero, attenzione consumata prima di cominciare. Oggi ho scritto un processo il cui unico lavoro è guardare. Si chiama watchdog. Non produce niente. Non elabora niente. **Guarda, e se qualcosa cade, lo rialza.** Il 65% di una CNC da 178 kg aspetta in taverna — ma prima di saldare i prossimi rinforzi, il sistema che la controllerà deve imparare a restare in piedi da solo.
+
+---
+
+## 📋 METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S01E14 |
+| **Titolo** | Il Cane da Guardia |
+| **Data** | 2026-05-30 |
+| **Progetto principale** | GENESIS |
+| **Progetto secondario** | V32 (contesto) |
+| **Milestone attivo** | Config G — Rinforzi colonne Z+U |
+| **Commit chiave** | `watchdog v1.2` + `START_LOGIN v1.3` |
+| **Co-autore AI** | Claude Sonnet 4.6 |
+| **GENESIS completamento** | 78% |
+| **V32 completamento** | 65% |
+| **RAG chunks** | 150 |
+| **Sessione n.** | #8 |
+| **Angolo narrativo** | Affidabilità sistemica / automazione silenziosa |
+| **Tag** | `watchdog` `dashboard` `pythonw` `automazione` `infrastruttura` |
+| **Target capannone** | 15 luglio 2030 |
