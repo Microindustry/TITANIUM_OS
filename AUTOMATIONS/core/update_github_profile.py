@@ -22,6 +22,15 @@ BASE = Path(__file__).resolve().parents[3]
 STATE_FILE = BASE / "TITANIUM_OS" / "BRAIN" / "STATE.json"
 GH = str(Path.home() / "tools" / "gh" / "gh.exe")
 
+# Carica env vars dal vault (necessario quando eseguito da Task Scheduler)
+_env_file = Path.home() / "TITANIUM_OS" / "_VAULT" / "KEYS" / "titanium_os.env"
+if _env_file.exists():
+    for _line in _env_file.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 def load_state():
     try:
         return json.loads(STATE_FILE.read_text(encoding="utf-8"))

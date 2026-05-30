@@ -32,6 +32,15 @@ TRAIN_DIR  = ROOT / "CONTENT_ENGINE" / "DATABASE" / "training"
 TRAIN_DIR.mkdir(parents=True, exist_ok=True)
 OUT_FILE   = TRAIN_DIR / "dataset.jsonl"
 
+# Carica env vars dal vault (necessario quando eseguito da Task Scheduler)
+_env_file = Path.home() / "TITANIUM_OS" / "_VAULT" / "KEYS" / "titanium_os.env"
+if _env_file.exists():
+    for _line in _env_file.read_text(encoding="utf-8").splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 
