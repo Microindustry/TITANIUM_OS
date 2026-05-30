@@ -280,7 +280,7 @@ def run(task: str, cols: int = GRID_COLS, rows: int = GRID_ROWS,
     logger.info("ScreenAgent v1.0 | Task: %s | Griglia: %dx%d", task, cols, rows)
 
     for loop in range(1, max_loops + 1):
-        logger.info("─── Loop %d/%d ───", loop, max_loops)
+        logger.info("--- Loop %d/%d ---", loop, max_loops)
 
         # Screenshot + griglia
         img, real_w, real_h = capture()

@@ -1,4 +1,4 @@
-# api_server.py | ECOSYSTEM_OS | v1.3 | 2026-05-29
+# api_server.py | ECOSYSTEM_OS | v1.4 | 2026-05-30
 # Flask API server — serve dati reali al dashboard React
 # Endpoints: STATE.json, mente_digest.json, trigger scanner, update state
 # Run: python api_server.py  (porta 5001)
@@ -30,6 +30,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)  # permetti richieste da localhost:5173 (Vite)
+
+_screen_jobs: dict = {}  # job_id → {status, task, result, thread}
 
 # ── PERCORSI ─────────────────────────────────────────────────
 ROOT        = Path(__file__).parent
@@ -988,6 +990,68 @@ def rag_graph_data():
         })
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
+
+
+@app.route("/api/screen", methods=["POST"])
+def api_screen():
+    """
+    Avvia screen_agent in background.
+    Body JSON: {"task": "...", "no_act": false, "save_shots": false, "cols": 20, "rows": 15}
+    Ritorna subito job_id; usa GET /api/screen/<job_id> per il risultato.
+    """
+    data    = request.get_json(force=True, silent=True) or {}
+    task    = data.get("task", "")
+    if not task:
+        return jsonify({"ok": False, "error": "task mancante"}), 400
+
+    no_act     = bool(data.get("no_act",     False))
+    save_shots = bool(data.get("save_shots", False))
+    cols       = int(data.get("cols", 20))
+    rows       = int(data.get("rows", 15))
+    loops      = int(data.get("loops", 20))
+
+    import uuid, time as _time
+    job_id = str(uuid.uuid4())[:8]
+    _screen_jobs[job_id] = {"status": "running", "task": task, "result": None, "started": _time.time()}
+
+    py = str(Path(sys.executable))
+    agent = str(ROOT / "NODES" / "COMPUTER_USE" / "screen_agent.py")
+
+    def _run():
+        args = [py, agent, task, "--cols", str(cols), "--rows", str(rows), "--loops", str(loops)]
+        if no_act:     args.append("--no-act")
+        if save_shots: args.append("--save-shots")
+        try:
+            r = subprocess.run(args, capture_output=True, text=True, timeout=300)
+            out = r.stdout.strip()
+            last = [l for l in out.splitlines() if l.startswith("Risultato:")]
+            result = last[-1].replace("Risultato:", "").strip() if last else out[-500:]
+            _screen_jobs[job_id]["status"] = "done"
+            _screen_jobs[job_id]["result"] = result
+            logger.info("screen job %s done: %s", job_id, result[:80])
+        except Exception as e:
+            _screen_jobs[job_id]["status"] = "error"
+            _screen_jobs[job_id]["result"] = str(e)
+
+    _screen_jobs[job_id]["thread"] = threading.Thread(target=_run, daemon=True)
+    _screen_jobs[job_id]["thread"].start()
+    logger.info("screen job %s avviato: %s", job_id, task[:60])
+    return jsonify({"ok": True, "job_id": job_id, "task": task})
+
+
+@app.route("/api/screen/<job_id>", methods=["GET"])
+def api_screen_status(job_id):
+    """Stato e risultato di un job screen_agent."""
+    job = _screen_jobs.get(job_id)
+    if not job:
+        return jsonify({"ok": False, "error": "job non trovato"}), 404
+    return jsonify({
+        "ok": True,
+        "job_id": job_id,
+        "status": job["status"],
+        "task":   job["task"],
+        "result": job["result"],
+    })
 
 
 @app.route("/api/restart", methods=["POST"])

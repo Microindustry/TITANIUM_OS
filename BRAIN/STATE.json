@@ -6,10 +6,10 @@
     "description": "TITANIUM_OS v2.9.0 — ScreenAgent v1.0: griglia puntini + visione Claude + click simulato + MAPPA v2 + RETE t-SNE 3D",
     "system": "TITANIUM OS - ecosystem v1.4"
   },
-  "last_update": "2026-05-30T16:46:46.471839",
+  "last_update": "2026-05-30T16:54:18.939302",
   "active_milestone": "Config G - Rinforzi colonne Z+U",
   "ciclo_position": "COSTRUISCI",
-  "last_action": "Modifica a screen_agent.bat.tmp.1520.5ad7324b8e46",
+  "last_action": "Modifica a titanium_mcp_server.py",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
   "session_count": 20,
   "pillars": {
@@ -115,7 +115,7 @@
     "STORY_AGENT": "ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO",
     "NIGHT_PUSH": "ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico",
     "COMPUTER_USE": "ATTIVO v1.1 - NODES/COMPUTER_USE/ - ComputerUse + BrowserAgent + CDP + ScreenAgent griglia puntini | alias: screen",
-    "SCREEN_AGENT": "ATTIVO v1.0 - NODES/COMPUTER_USE/screen_agent.py - griglia 20x15 puntini rossi + Claude vision + click/type/drag/copy | screen 'task'",
+    "ARGUS": "ATTIVO v1.0 - agente ARGUS (screen_agent.py) - griglia 20x15 + Claude vision + click/drag/copy | alias: screen | API: POST /api/screen | MCP: screen_action | agents_db: argus",
     "GOOGLE_CALENDAR": "ATTIVO - mcp__claude_ai_Google_Calendar__* - legge/crea eventi | account benenatimatteo.mb@gmail.com",
     "GMAIL": "ATTIVO - mcp__claude_ai_Gmail__* - search, draft, labels | account benenatimatteo.mb@gmail.com",
     "EVA": "pending - WhatsApp Business API setup",

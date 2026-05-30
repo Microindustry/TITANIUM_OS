@@ -1,4 +1,4 @@
-# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.3 | 2026-05-30
+# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.4 | 2026-05-30
 # Server MCP locale — espone TITANIUM_OS a Claude Code via stdio
 # Tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready
 
@@ -174,6 +174,30 @@ async def list_tools() -> list[types.Tool]:
                     },
                 },
                 "required": ["last_discussed"],
+            },
+        ),
+        types.Tool(
+            name="screen_action",
+            description="Chiama ARGUS — agente visivo desktop. Screenshot + griglia 20x15 puntini → Claude analizza → click/type/drag/copy. Usa quando devi: controllare cosa c'è sullo schermo, cliccare elementi UI, copiare testo da una finestra, verificare risultati di operazioni desktop.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "task": {
+                        "type": "string",
+                        "description": "Cosa fare sullo schermo (es: 'Clicca sul pulsante Login', 'Dimmi cosa vedi', 'Copia il titolo della finestra')",
+                    },
+                    "no_act": {
+                        "type": "boolean",
+                        "description": "Se true: solo analisi visiva, nessun click/azione fisica. Default false.",
+                        "default": False,
+                    },
+                    "save_shots": {
+                        "type": "boolean",
+                        "description": "Salva screenshot annotati in DATA/screen_agent_shots/. Default false.",
+                        "default": False,
+                    },
+                },
+                "required": ["task"],
             },
         ),
         types.Tool(
@@ -399,6 +423,28 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         except Exception as e:
             logger.error("save_session: %s", e)
             return _ok(f"Errore save_session: {e}")
+
+    # ── screen_action ────────────────────────────────────────────────────
+    elif name == "screen_action":
+        try:
+            import subprocess, sys as _sys
+            task       = arguments["task"]
+            no_act     = arguments.get("no_act", False)
+            save_shots = arguments.get("save_shots", False)
+            py    = _sys.executable
+            agent = str(REPO_ROOT / "NODES" / "COMPUTER_USE" / "screen_agent.py")
+            args  = [py, agent, task]
+            if no_act:     args.append("--no-act")
+            if save_shots: args.append("--save-shots")
+            logger.info("screen_action: %s", task[:60])
+            r = subprocess.run(args, capture_output=True, text=True, timeout=300, encoding="utf-8", errors="replace")
+            out = r.stdout.strip()
+            lines = [l for l in out.splitlines() if "Claude:" in l or "Risultato:" in l or "Completato:" in l]
+            summary = "\n".join(lines[-5:]) if lines else out[-600:]
+            return _ok(f"ScreenAgent completato.\n\n{summary}")
+        except Exception as e:
+            logger.error("screen_action: %s", e)
+            return _ok(f"Errore screen_action: {e}")
 
     return _ok(f"Tool sconosciuto: {name}")
 
