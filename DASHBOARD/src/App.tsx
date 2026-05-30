@@ -1,7 +1,28 @@
 // App.tsx | TITANIUM_OS | v6.0 | 2026-05-29
 // Layout sidebar — navigazione spaziale, design architetturale
 
-import { useEffect, useState, lazy, Suspense, useCallback } from "react";
+import { useEffect, useState, lazy, Suspense, useCallback, Component, type ReactNode, type ErrorInfo } from "react";
+
+// ── Error Boundary globale ────────────────────────────────────
+class GlobalErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
+  constructor(props: any) { super(props); this.state = { error: null }; }
+  static getDerivedStateFromError(e: Error) { return { error: e }; }
+  componentDidCatch(e: Error, info: ErrorInfo) { console.error("[TITANIUM] crash:", e, info); }
+  render() {
+    if (this.state.error) return (
+      <div style={{ background: "#050a14", color: "#f43f5e", fontFamily: "monospace", padding: 32, height: "100vh", overflow: "auto" }}>
+        <div style={{ fontSize: 11, color: "#06b6d4", marginBottom: 8 }}>TITANIUM_OS — RUNTIME ERROR</div>
+        <div style={{ fontSize: 13, fontWeight: "bold", marginBottom: 16 }}>{this.state.error.message}</div>
+        <pre style={{ fontSize: 9, color: "#475569", whiteSpace: "pre-wrap" }}>{this.state.error.stack}</pre>
+        <button onClick={() => { this.setState({ error: null }); window.location.reload(); }}
+          style={{ marginTop: 24, padding: "8px 16px", background: "#1e293b", border: "1px solid #334155", color: "#94a3b8", cursor: "pointer", borderRadius: 6, fontFamily: "monospace", fontSize: 10 }}>
+          RELOAD
+        </button>
+      </div>
+    );
+    return this.props.children;
+  }
+}
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
@@ -23,6 +44,8 @@ const NeuroOSLayout  = lazy(() => import("./components/NeuroOSLayout").then(m =>
 const LayersView     = lazy(() => import("./components/LayersView"));
 const StorieView     = lazy(() => import("./components/StorieView").then(m => ({ default: m.StorieView })));
 const EcosystemView  = lazy(() => import("./components/EcosystemView").then(m => ({ default: m.EcosystemView })));
+const RagGraphView   = lazy(() => import("./components/RagGraphView").then(m => ({ default: m.RagGraphView })));
+const MappaView      = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -334,8 +357,8 @@ function AppInner() {
             {/* Sistema */}
             {view === "agenti"   && <AgentsView />}
             {view === "storie"   && <StorieView />}
-            {view === "mappa"    && <NeuroOSLayout systemState={sys.state} />}
-            {view === "rete"     && <EcosystemView systemState={sys.state} />}
+            {view === "mappa"    && <MappaView systemState={sys.state as any} />}
+            {view === "rete"     && <RagGraphView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
             {view === "sinapsi"  && <LayersView />}
             {view === "canvas"   && <CanvasLayout room="home" />}
@@ -352,8 +375,10 @@ function AppInner() {
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <AppInner />
-    </QueryClientProvider>
+    <GlobalErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <AppInner />
+      </QueryClientProvider>
+    </GlobalErrorBoundary>
   );
 }

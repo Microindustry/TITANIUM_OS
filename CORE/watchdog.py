@@ -19,6 +19,7 @@ import os
 import time
 import subprocess
 from pathlib import Path
+import psutil
 
 # ── CONFIGURAZIONE ────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent
@@ -64,15 +65,14 @@ PROCESSES = {
 def _is_running(match: str) -> bool:
     """Controlla se un processo con 'match' nel commandline è attivo."""
     try:
-        result = subprocess.run(
-            ["wmic", "process", "get", "commandline"],
-            capture_output=True, text=True, timeout=10
-        )
-        # Normalizza separatori per confronto cross-platform
         match_norm = match.replace("/", "\\").lower()
-        for line in result.stdout.splitlines():
-            if match_norm in line.lower():
-                return True
+        for proc in psutil.process_iter(["cmdline"]):
+            try:
+                cmdline = " ".join(proc.info["cmdline"] or []).replace("/", "\\").lower()
+                if match_norm in cmdline:
+                    return True
+            except (psutil.NoSuchProcess, psutil.AccessDenied):
+                continue
         return False
     except Exception as e:
         log.error(f"Errore check processo '{match}': {e}")
@@ -87,7 +87,7 @@ def _restart_dashboard():
     subprocess.Popen(
         [str(npm), "run", "dev", "--silent"],
         cwd=str(dash_dir),
-        creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP,
+        creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.CREATE_NO_WINDOW,
     )
     log.info("RIAVVIATA: dashboard (Vite :5173)")
 
@@ -108,7 +108,7 @@ def _restart(name: str, config: dict):
         subprocess.Popen(
             cmd,
             cwd=str(ROOT),
-            creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
+            creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.CREATE_NO_WINDOW
         )
         log.info(f"RIAVVIATO: {name}")
     except Exception as e:

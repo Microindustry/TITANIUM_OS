@@ -864,6 +864,132 @@ REGOLA GLOSSARIO: Quando usi un termine tecnico o sigla che potrebbe non essere 
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
+@app.get("/api/rag/vectors")
+def rag_vectors():
+    """
+    Proiezione 2D degli embedding ChromaDB via t-SNE.
+    Un punto per documento (centroide dei suoi chunk).
+    Cached in DATA/rag_vectors_cache.json — invalida quando count cambia.
+    """
+    import numpy as np
+    cache_path = ROOT / "DATA" / "rag_vectors_cache.json"
+
+    try:
+        import chromadb as _chroma
+        chroma_path = ROOT / "NODES" / "MENTE_RAG" / "chroma_db"
+        client = _chroma.PersistentClient(path=str(chroma_path))
+        col = client.get_collection("mente")
+        total_chunks = col.count()
+
+        # Usa cache se il count non è cambiato
+        if cache_path.exists():
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            if cached.get("chunk_count") == total_chunks:
+                return jsonify({"ok": True, **cached})
+
+        # Carica tutti gli embedding
+        result = col.get(include=["embeddings", "metadatas"], limit=total_chunks)
+        embeddings = np.array(result["embeddings"], dtype=np.float32)
+        sources    = [m.get("source", "unknown") for m in result["metadatas"]]
+
+        # Raggruppa per documento — centroide degli embedding
+        from collections import defaultdict
+        doc_embs: dict[str, list] = defaultdict(list)
+        for emb, src in zip(embeddings, sources):
+            doc_embs[src].append(emb)
+
+        doc_ids      = list(doc_embs.keys())
+        doc_centroids = np.array([np.mean(v, axis=0) for v in doc_embs.values()], dtype=np.float32)
+        doc_chunks   = [len(doc_embs[d]) for d in doc_ids]
+
+        # t-SNE 3D (perplexity adattiva al dataset)
+        from sklearn.manifold import TSNE
+        perp = min(30, max(5, len(doc_ids) // 4))
+        tsne = TSNE(n_components=3, perplexity=perp, random_state=42, max_iter=1000)
+        coords_3d = tsne.fit_transform(doc_centroids)
+
+        # Normalizza in [-1, 1] per asse
+        for axis in range(3):
+            mn, mx = coords_3d[:, axis].min(), coords_3d[:, axis].max()
+            if mx > mn:
+                coords_3d[:, axis] = 2 * (coords_3d[:, axis] - mn) / (mx - mn) - 1
+
+        def _folder(src: str) -> str:
+            parts = src.replace("\\", "/").split("/")
+            return parts[0] + "/" if parts else src
+
+        points = []
+        for i, doc_id in enumerate(doc_ids):
+            src_norm = doc_id.replace("\\", "/")
+            folder = _folder(src_norm)
+            label  = src_norm.split("/")[-1]
+            points.append({
+                "id":          src_norm,
+                "label":       label,
+                "folder":      folder,
+                "chunk_count": doc_chunks[i],
+                "x":           round(float(coords_3d[i, 0]), 4),
+                "y":           round(float(coords_3d[i, 1]), 4),
+                "z":           round(float(coords_3d[i, 2]), 4),
+            })
+
+        payload = {
+            "ok":          True,
+            "chunk_count": total_chunks,
+            "doc_count":   len(points),
+            "points":      points,
+        }
+        cache_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        return jsonify(payload)
+
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
+@app.get("/api/rag/graph")
+def rag_graph_data():
+    """Esporta il grafo RAG v5 come JSON per react-force-graph-2d."""
+    try:
+        import pickle as _pickle
+        graph_path = ROOT / "NODES" / "MENTE_RAG" / "rag_graph.pkl"
+        if not graph_path.exists():
+            return jsonify({"ok": False, "error": "rag_graph.pkl non trovato — esegui rag_graph.py --build"}), 404
+        with open(graph_path, "rb") as f:
+            G = _pickle.load(f)
+
+        nodes = []
+        for node_id, data in G.nodes(data=True):
+            nodes.append({
+                "id":          node_id,
+                "folder":      data.get("folder", ""),
+                "chunk_count": data.get("chunk_count", 1),
+                "label":       node_id.split("/")[-1] or node_id,
+            })
+
+        links = []
+        for src, tgt, data in G.edges(data=True):
+            links.append({
+                "source": src,
+                "target": tgt,
+                "type":   data.get("type", ""),
+                "weight": round(data.get("weight", 0.5), 3),
+            })
+
+        # Top hub nodes per grado (in+out)
+        degree = sorted(G.degree(), key=lambda x: x[1], reverse=True)[:10]
+        top_hubs = [{"id": n, "degree": d} for n, d in degree]
+
+        return jsonify({
+            "ok":      True,
+            "nodes":   nodes,
+            "links":   links,
+            "stats":   {"nodes": len(nodes), "edges": len(links)},
+            "top_hubs": top_hubs,
+        })
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
 @app.route("/api/restart", methods=["POST"])
 def api_restart():
     """Termina il processo — il watchdog riavvia con codice aggiornato."""
