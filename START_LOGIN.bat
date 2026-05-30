@@ -14,6 +14,9 @@ if exist "%USERPROFILE%\TITANIUM_OS\_VAULT\KEYS\titanium_os.env" (
     )
 )
 
+:: 0. Chrome con remote-debugging-port — abilita Playwright CDP (computer_use)
+start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --no-first-run --no-default-browser-check
+
 :: 1. Watchdog — pythonw = silenzioso, sopravvive alla chiusura del bat
 start "" "%PYTHONW%" "%TI_ROOT%CORE\watchdog.py"
 
