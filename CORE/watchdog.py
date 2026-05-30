@@ -3,7 +3,7 @@
 TITANIUM_OS — AUTOMATION WATCHDOG (#14)
 Modulo    : watchdog.py
 Parte di  : CORE/
-Versione  : 1.2.0
+Versione  : 1.3.0
 Data      : 2026-05-29
 ========================================================
 Monitora i processi critici di TITANIUM_OS.
@@ -115,29 +115,44 @@ def _restart(name: str, config: dict):
         log.error(f"ERRORE riavvio {name}: {e}")
 
 
-# ── MAIN LOOP ─────────────────────────────────────────────────
+# ── MAIN LOOP (swarm parallelo) ───────────────────────────────
+
+import threading
+
+def _check_one(name: str, config: dict, restart_counts: dict, lock: threading.Lock):
+    """Controlla un singolo processo in un thread dedicato."""
+    if not _is_running(config["match"]):
+        with lock:
+            restart_counts[name] += 1
+        _restart(name, config)
+        time.sleep(5)
+
 
 def main():
     log.info("=" * 50)
-    log.info("TITANIUM_OS WATCHDOG — Avvio")
-    log.info(f"Controllo ogni {CHECK_INTERVAL}s — {len(PROCESSES)} processi monitorati")
+    log.info("TITANIUM_OS WATCHDOG — Avvio (swarm parallelo)")
+    log.info(f"Controllo ogni {CHECK_INTERVAL}s — {len(PROCESSES)} processi in parallelo")
     log.info("=" * 50)
 
     restart_counts = {name: 0 for name in PROCESSES}
+    lock = threading.Lock()
 
     while True:
-        for name, config in PROCESSES.items():
-            if not _is_running(config["match"]):
-                restart_counts[name] += 1
-                _restart(name, config)
-                # Attendi 5s dopo riavvio prima del prossimo check
-                time.sleep(5)
-            # else: processo attivo, nessuna azione
+        threads = [
+            threading.Thread(
+                target=_check_one,
+                args=(name, config, restart_counts, lock),
+                daemon=True,
+            )
+            for name, config in PROCESSES.items()
+        ]
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join(timeout=20)
 
-        # Log stato ogni 10 cicli (ogni ~5 minuti)
-        cycle_log = " | ".join(
-            f"{n}: {restart_counts[n]} restart" for n in PROCESSES
-        )
+        with lock:
+            cycle_log = " | ".join(f"{n}: {restart_counts[n]}r" for n in PROCESSES)
         log.info(f"CHECK OK — {cycle_log}")
 
         time.sleep(CHECK_INTERVAL)

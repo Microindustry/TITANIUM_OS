@@ -1,4 +1,4 @@
-# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.1 | 2026-05-29
+# titanium_mcp_server.py | TITANIUM_OS / MCP | v1.2 | 2026-05-30
 # Server MCP locale — espone TITANIUM_OS a Claude Code via stdio
 # Tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready
 
@@ -70,7 +70,7 @@ async def list_tools() -> list[types.Tool]:
         ),
         types.Tool(
             name="search_mente",
-            description="Cerca nei documenti MICROINDUSTRY/MENTE/ tramite RAG (TF-IDF). Ritorna i chunk più rilevanti.",
+            description="Cerca nei documenti MICROINDUSTRY/MENTE/ tramite RAG ibrido (ChromaDB semantico + TF-IDF BM25 + CrossEncoder reranker). Ritorna i chunk più rilevanti.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -109,6 +109,43 @@ async def list_tools() -> list[types.Tool]:
                         "default": 10,
                     }
                 },
+            },
+        ),
+        types.Tool(
+            name="rag_update",
+            description="Aggiorna incrementalmente il RAG ChromaDB dopo modifiche a MENTE/. Più veloce di rebuild completo.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "force_rebuild": {
+                        "type": "boolean",
+                        "description": "Forza rebuild completo (default false — usa incrementale)",
+                        "default": False,
+                    }
+                },
+            },
+        ),
+        types.Tool(
+            name="save_session",
+            description="Salva le decisioni chiave della sessione in MENTE/SESSIONI/ per il RAG futuro. Usa a fine sessione o quando prendi decisioni importanti.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "topic": {
+                        "type": "string",
+                        "description": "Tema della sessione (es: 'watchdog-swarm', 'v32-gusset-config')",
+                    },
+                    "content": {
+                        "type": "string",
+                        "description": "Contenuto da salvare: decisioni, misure, blockers risolti, apprendimenti",
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Tag per la ricerca (es: ['V32', 'GENESIS', 'struttura'])",
+                    },
+                },
+                "required": ["topic", "content"],
             },
         ),
     ]
@@ -208,6 +245,56 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             return _ok("\n".join(lines))
         except Exception as e:
             return _ok(f"Errore list_content_ready: {e}")
+
+    # ── rag_update ───────────────────────────────────────────────
+    elif name == "rag_update":
+        try:
+            from NODES.MENTE_RAG.rag_engine import build_index
+            force = bool(arguments.get("force_rebuild", False))
+            mode  = "Full rebuild" if force else "Incrementale"
+            logger.info("rag_update: %s", mode)
+            n = build_index(force=force)
+            return _ok(f"RAG aggiornato ({mode}) — {n} chunk indicizzati.")
+        except Exception as e:
+            logger.error("rag_update: %s", e)
+            return _ok(f"Errore rag_update: {e}")
+
+    # ── save_session ─────────────────────────────────────────────
+    elif name == "save_session":
+        try:
+            import os
+            mente_dir = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
+            sessioni_dir = mente_dir / "SESSIONI"
+            sessioni_dir.mkdir(parents=True, exist_ok=True)
+
+            topic   = arguments["topic"].lower().replace(" ", "_")
+            content = arguments["content"]
+            tags    = arguments.get("tags", [])
+            today   = datetime.now().strftime("%Y-%m-%d")
+            fname   = f"{today}_{topic}.md"
+            fpath   = sessioni_dir / fname
+
+            tag_str = ", ".join(tags) if tags else ""
+            md = f"# Sessione: {topic}\n*Data: {today}*\n"
+            if tag_str:
+                md += f"*Tag: {tag_str}*\n"
+            md += f"\n{content}\n"
+
+            fpath.write_text(md, encoding="utf-8")
+            logger.info("save_session: %s", fpath)
+
+            # RAG update incrementale automatico
+            try:
+                from NODES.MENTE_RAG.rag_engine import build_index
+                build_index(force=False)
+                rag_msg = " RAG aggiornato."
+            except Exception:
+                rag_msg = " (RAG update fallito — esegui rag-update manualmente)"
+
+            return _ok(f"Sessione salvata: {fpath}.{rag_msg}")
+        except Exception as e:
+            logger.error("save_session: %s", e)
+            return _ok(f"Errore save_session: {e}")
 
     return _ok(f"Tool sconosciuto: {name}")
 
