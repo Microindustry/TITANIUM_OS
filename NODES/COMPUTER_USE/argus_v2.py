@@ -93,7 +93,7 @@ def _load_omniparser():
     try:
         import easyocr
         from ultralytics import YOLO
-        yolo_path = WEIGHTS_DIR / "icon_detect" / "best.pt"
+        yolo_path = WEIGHTS_DIR / "icon_detect" / "model.pt"
         if not yolo_path.exists():
             logger.warning("OmniParser weights non trovati in %s -- usa --setup", WEIGHTS_DIR)
             return None
