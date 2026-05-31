@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [protocol.md  knowledge/mims  v1.0  2026-03-10](#protocolmd-knowledgemims-v10-2026-03-10)
+- [MIMS  Protocollo e Filosofia](#mims-protocollo-e-filosofia)
+- [Fonte: ASSOLUTO V6  Blocco 7](#fonte-assoluto-v6-blocco-7)
+  - [I 3 Pilastri MIMS](#i-3-pilastri-mims)
+  - [Geometria Unificata (DNA)](#geometria-unificata-dna)
+  - [Gap di Mercato](#gap-di-mercato)
+  - [Reversibilità  Vincolo Assoluto](#reversibilità-vincolo-assoluto)
+
+<!-- /TOC -->
+
 # protocol.md | knowledge/mims | v1.0 | 2026-03-10
 # MIMS — Protocollo e Filosofia
 # Fonte: ASSOLUTO V6 — Blocco 7

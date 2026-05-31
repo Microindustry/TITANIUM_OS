@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [pricing-strategy.md  knowledge/economics  v1.0  2026-03-10](#pricing-strategymd-knowledgeeconomics-v10-2026-03-10)
+- [Strategia Prezzi  MIMS  Precision Lab](#strategia-prezzi-mims-precision-lab)
+- [Fonte: ASSOLUTO V6  Blocco 1](#fonte-assoluto-v6-blocco-1)
+  - [Precision Lab](#precision-lab)
+  - [MIMS  Unit Economics (scenario fusione)](#mims-unit-economics-scenario-fusione)
+  - [Gerarchia Prezzi Connettori MIMS](#gerarchia-prezzi-connettori-mims)
+  - [Leva Finanziaria](#leva-finanziaria)
+
+<!-- /TOC -->
+
 # pricing-strategy.md | knowledge/economics | v1.0 | 2026-03-10
 # Strategia Prezzi — MIMS + Precision Lab
 # Fonte: ASSOLUTO V6 — Blocco 1

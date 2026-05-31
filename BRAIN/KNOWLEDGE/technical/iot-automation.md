@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [iot-automation.md  knowledge/technical  v1.0  2026-03-10](#iot-automationmd-knowledgetechnical-v10-2026-03-10)
+- [Architettura IoT e Automazione  n8n  ESP32](#architettura-iot-e-automazione-n8n-esp32)
+- [Fonte: ASSOLUTO V6  Blocco 2](#fonte-assoluto-v6-blocco-2)
+  - [Architettura n8n](#architettura-n8n)
+  - [Webhook](#webhook)
+  - [AI Agent (Nodo n8n)  4 Componenti](#ai-agent-nodo-n8n-4-componenti)
+  - [ESP32](#esp32)
+  - [Sicurezza IoT](#sicurezza-iot)
+  - [Integrazione V32](#integrazione-v32)
+
+<!-- /TOC -->
+
 # iot-automation.md | knowledge/technical | v1.0 | 2026-03-10
 # Architettura IoT e Automazione — n8n + ESP32
 # Fonte: ASSOLUTO V6 — Blocco 2

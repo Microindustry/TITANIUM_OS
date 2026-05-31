@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [market-analysis.md  knowledge/mims  v1.0  2026-03-10](#market-analysismd-knowledgemims-v10-2026-03-10)
+- [MIMS  Analisi Mercato e Posizionamento](#mims-analisi-mercato-e-posizionamento)
+- [Fonte: ASSOLUTO V6  Blocco 7](#fonte-assoluto-v6-blocco-7)
+  - [Gap di Mercato (I 2 Poli)](#gap-di-mercato-i-2-poli)
+  - [Posizionamento Premium](#posizionamento-premium)
+  - [Target di Mercato](#target-di-mercato)
+  - [Brevettabilità](#brevettabilità)
+
+<!-- /TOC -->
+
 # market-analysis.md | knowledge/mims | v1.0 | 2026-03-10
 # MIMS — Analisi Mercato e Posizionamento
 # Fonte: ASSOLUTO V6 — Blocco 7

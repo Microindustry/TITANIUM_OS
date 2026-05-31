@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [applications.md  knowledge/mims  v1.0  2026-03-10](#applicationsmd-knowledgemims-v10-2026-03-10)
+- [MIMS  Applicazioni Verticali](#mims-applicazioni-verticali)
+- [Fonte: ASSOLUTO V6  Blocco 7](#fonte-assoluto-v6-blocco-7)
+  - [6 Linee Applicative](#6-linee-applicative)
+  - [Fit Park 4.0 (Applicazione Flagship)](#fit-park-40-applicazione-flagship)
+  - [Creators Program](#creators-program)
+
+<!-- /TOC -->
+
 # applications.md | knowledge/mims | v1.0 | 2026-03-10
 # MIMS — Applicazioni Verticali
 # Fonte: ASSOLUTO V6 — Blocco 7

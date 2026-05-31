@@ -1,3 +1,20 @@
+<!-- TOC -->
+
+- [the-board-prompts.md  system/personas  v1.0  2026-03-10](#the-board-promptsmd-systempersonas-v10-2026-03-10)
+- [Prompt Operativi  I 7 Specialisti del Consiglio](#prompt-operativi-i-7-specialisti-del-consiglio)
+- [Invocazione: THEMIS attiva lo specialista giusto in base al contesto](#invocazione-themis-attiva-lo-specialista-giusto-in-base-al-contesto)
+  - [Come funziona](#come-funziona)
+  - [1. IL FISICO](#1-il-fisico)
+  - [2. IL MATEMATICO](#2-il-matematico)
+  - [3. LINGEGNERE](#3-lingegnere)
+  - [4. LAVVOCATO DEL DIAVOLO](#4-lavvocato-del-diavolo)
+  - [5. LO STRATEGA](#5-lo-stratega)
+  - [6. IL COPYWRITER](#6-il-copywriter)
+  - [7. IL DIRETTORE DI PRODUZIONE](#7-il-direttore-di-produzione)
+  - [Combinazioni Frequenti](#combinazioni-frequenti)
+
+<!-- /TOC -->
+
 # the-board-prompts.md | system/personas | v1.0 | 2026-03-10
 # Prompt Operativi — I 7 Specialisti del Consiglio
 # Invocazione: THEMIS attiva lo specialista giusto in base al contesto

@@ -1,3 +1,21 @@
+<!-- TOC -->
+
+- [genesis-architecture.md  knowledge/technical  v1.0  2026-03-10](#genesis-architecturemd-knowledgetechnical-v10-2026-03-10)
+- [GENESIS  Architettura Infrastruttura Digitale](#genesis-architettura-infrastruttura-digitale)
+- [Fonte: ASSOLUTO V6  STATE.json  AUTOMATIONS/core/](#fonte-assoluto-v6-statejson-automationscore)
+  - [Cosè GENESIS](#cosè-genesis)
+  - [Stato attuale: 25 completato](#stato-attuale-25-completato)
+  - [Architettura (3 Layer)](#architettura-3-layer)
+  - [Nodi Pianificati](#nodi-pianificati)
+    - [MENTE_SCANNER (priorità ALTA)](#mentescanner-priorità-alta)
+    - [Watcher PDF_DROP (priorità ALTA)](#watcher-pdfdrop-priorità-alta)
+    - [n8n Self-Hosted (priorità MEDIA)](#n8n-self-hosted-priorità-media)
+    - [EVA WhatsApp Bot (priorità MEDIA)](#eva-whatsapp-bot-priorità-media)
+    - [V32_WATCHER (priorità BASSA  post assemblaggio)](#v32watcher-priorità-bassa-post-assemblaggio)
+  - [Roadmap GENESIS](#roadmap-genesis)
+
+<!-- /TOC -->
+
 # genesis-architecture.md | knowledge/technical | v1.0 | 2026-03-10
 # GENESIS — Architettura Infrastruttura Digitale
 # Fonte: ASSOLUTO V6 + STATE.json + AUTOMATIONS/core/

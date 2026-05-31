@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_AUTO_33  Milestone](#epauto33-milestone)
+    - [MAPPA drill-down v2.0  RETE t-SNE 3D (Three.js raw)  watch](#mappa-drill-down-v20-rete-t-sne-3d-threejs-raw-watch)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [La Mappa che Respira](#la-mappa-che-respira)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima del 30 maggio esisteva solo il rumore](#atto-i-prima-del-30-maggio-esisteva-solo-il-rumore)
+  - [ATTO II  Il 30 maggio: quando i dati iniziano a parlare in 3D](#atto-ii-il-30-maggio-quando-i-dati-iniziano-a-parlare-in-3d)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+
+<!-- /TOC -->
+
 # EP_AUTO_33 — Milestone
 ### "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js raw) + watch"
 

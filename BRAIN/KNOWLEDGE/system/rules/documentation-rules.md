@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [documentation-rules.md  system/rules  v1.0  2026-03-10](#documentation-rulesmd-systemrules-v10-2026-03-10)
+- [Standard Documentazione](#standard-documentazione)
+- [Fonte: ASSOLUTO V6  Blocco 4](#fonte-assoluto-v6-blocco-4)
+  - [Gestione Fonti](#gestione-fonti)
+  - [Gerarchia Documentale](#gerarchia-documentale)
+  - [Formattazione](#formattazione)
+  - [Versionamento SemVer](#versionamento-semver)
+  - [Regola Aggiornamento](#regola-aggiornamento)
+
+<!-- /TOC -->
+
 # documentation-rules.md | system/rules | v1.0 | 2026-03-10
 # Standard Documentazione
 # Fonte: ASSOLUTO V6 — Blocco 4

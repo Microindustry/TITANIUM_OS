@@ -1,3 +1,20 @@
+<!-- TOC -->
+
+- [lex-digitalis.md  system/rules  v1.0  2026-03-10](#lex-digitalismd-systemrules-v10-2026-03-10)
+- [Protocollo Codice  LEX DIGITALIS](#protocollo-codice-lex-digitalis)
+- [Fonte: ASSOLUTO V6  Blocco 6](#fonte-assoluto-v6-blocco-6)
+  - [A. Commenti Logici](#a-commenti-logici)
+  - [B. Sicurezza  Environment](#b-sicurezza-environment)
+  - [C. Legge del Micro-Step](#c-legge-del-micro-step)
+  - [D. Trasmissione Dati IoT](#d-trasmissione-dati-iot)
+  - [E. Send-on-Delta (ESP32)](#e-send-on-delta-esp32)
+  - [F. Sicurezza Webhook](#f-sicurezza-webhook)
+  - [G. Visualizzazione Narrativa AVA HUD](#g-visualizzazione-narrativa-ava-hud)
+  - [H. Header File Python (obbligatorio)](#h-header-file-python-obbligatorio)
+  - [I. Percorsi](#i-percorsi)
+
+<!-- /TOC -->
+
 # lex-digitalis.md | system/rules | v1.0 | 2026-03-10
 # Protocollo Codice — LEX DIGITALIS
 # Fonte: ASSOLUTO V6 — Blocco 6

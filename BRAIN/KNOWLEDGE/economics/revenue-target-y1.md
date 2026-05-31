@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [revenue-target-y1.md  knowledge/economics  v1.0  2026-03-10](#revenue-target-y1md-knowledgeeconomics-v10-2026-03-10)
+- [Target Revenue Unificato  Anno 1](#target-revenue-unificato-anno-1)
+  - [Target Anno 1  Breakdown Mensile](#target-anno-1-breakdown-mensile)
+  - [Scenari](#scenari)
+  - [Regole](#regole)
+  - [Formula Semplificata](#formula-semplificata)
+  - [Costi Fissi Stimati (da sottrarre)](#costi-fissi-stimati-da-sottrarre)
+
+<!-- /TOC -->
+
 # revenue-target-y1.md | knowledge/economics | v1.0 | 2026-03-10
 # Target Revenue Unificato — Anno 1
 

@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [VULCAN  Manifesto](#vulcan-manifesto)
+  - [Cosè VULCAN](#cosè-vulcan)
+  - [Perché esiste](#perché-esiste)
+  - [Come funziona](#come-funziona)
+  - [Le Ricette](#le-ricette)
+  - [Il Brevetto](#il-brevetto)
+  - [Dipendenze e Sequenza](#dipendenze-e-sequenza)
+  - [Filosofia](#filosofia)
+  - [Riferimenti](#riferimenti)
+
+<!-- /TOC -->
+
 # VULCAN — Manifesto
 **Versione:** 1.0 | **Data:** 2026-03-18 | **Autore:** Matteo Benenati
 

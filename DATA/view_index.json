@@ -439,8 +439,178 @@
       "title": "EP_00 — ORIGINE",
       "updated_at": "2026-05-30T15:15:55.023903",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_00_ORIGINE.md"
+    },
+    "BRAIN/CONTEXT_INJECT.md": {
+      "title": "TITANIUM_OS — CONTEXT INJECT",
+      "updated_at": "2026-05-31T03:00:11.029832",
+      "endpoint": "/api/view/BRAIN__CONTEXT_INJECT.md"
+    },
+    "BRAIN/ECOSYSTEM_MANIFEST.md": {
+      "title": "ECOSYSTEM MANIFEST — TITANIUM",
+      "updated_at": "2026-05-31T13:57:50.381550",
+      "endpoint": "/api/view/BRAIN__ECOSYSTEM_MANIFEST.md"
+    },
+    "BRAIN/KNOWLEDGE/economics/pricing-strategy.md": {
+      "title": "pricing-strategy.md | knowledge/economics | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:51.820423",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__economics__pricing-strategy.md"
+    },
+    "BRAIN/KNOWLEDGE/economics/revenue-model.md": {
+      "title": "revenue-model.md | knowledge/economics | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:53.182541",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__economics__revenue-model.md"
+    },
+    "BRAIN/KNOWLEDGE/economics/revenue-target-y1.md": {
+      "title": "revenue-target-y1.md | knowledge/economics | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:54.576802",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__economics__revenue-target-y1.md"
+    },
+    "BRAIN/KNOWLEDGE/economics/risk-analysis.md": {
+      "title": "risk-analysis.md | knowledge/economics | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:55.910392",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__economics__risk-analysis.md"
+    },
+    "BRAIN/KNOWLEDGE/economics/roi-analysis.md": {
+      "title": "roi-analysis.md | knowledge/economics | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:57.263245",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__economics__roi-analysis.md"
+    },
+    "BRAIN/KNOWLEDGE/mims/applications.md": {
+      "title": "applications.md | knowledge/mims | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:58.601003",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__mims__applications.md"
+    },
+    "BRAIN/KNOWLEDGE/mims/configurations.md": {
+      "title": "configurations.md | knowledge/mims | v1.1 | 2026-03-10",
+      "updated_at": "2026-05-31T13:57:59.983685",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__mims__configurations.md"
+    },
+    "BRAIN/KNOWLEDGE/mims/fit-park-specs.md": {
+      "title": "fit-park-specs.md | knowledge/mims | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:01.344453",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__mims__fit-park-specs.md"
+    },
+    "BRAIN/KNOWLEDGE/mims/market-analysis.md": {
+      "title": "market-analysis.md | knowledge/mims | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:02.739541",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__mims__market-analysis.md"
+    },
+    "BRAIN/KNOWLEDGE/mims/protocol.md": {
+      "title": "protocol.md | knowledge/mims | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:04.145039",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__mims__protocol.md"
+    },
+    "BRAIN/KNOWLEDGE/system/NEUROMAPV3_BUILD.md": {
+      "title": "NEUROMAPV3 — Build Reference",
+      "updated_at": "2026-05-31T13:58:05.536948",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__NEUROMAPV3_BUILD.md"
+    },
+    "BRAIN/KNOWLEDGE/system/personas/ava.md": {
+      "title": "ava.md | system/personas | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:06.855899",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__personas__ava.md"
+    },
+    "BRAIN/KNOWLEDGE/system/personas/eva.md": {
+      "title": "eva.md | system/personas | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:08.221559",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__personas__eva.md"
+    },
+    "BRAIN/KNOWLEDGE/system/personas/the-board-prompts.md": {
+      "title": "the-board-prompts.md | system/personas | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:09.509559",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__personas__the-board-prompts.md"
+    },
+    "BRAIN/KNOWLEDGE/system/personas/themis.md": {
+      "title": "themis.md | system/personas | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:10.702794",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__personas__themis.md"
+    },
+    "BRAIN/KNOWLEDGE/system/rules/ai-behavior.md": {
+      "title": "ai-behavior.md | system/rules | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:12.152384",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__rules__ai-behavior.md"
+    },
+    "BRAIN/KNOWLEDGE/system/rules/documentation-rules.md": {
+      "title": "documentation-rules.md | system/rules | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:13.818743",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__rules__documentation-rules.md"
+    },
+    "BRAIN/KNOWLEDGE/system/rules/lex-digitalis.md": {
+      "title": "lex-digitalis.md | system/rules | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:15.534377",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__rules__lex-digitalis.md"
+    },
+    "BRAIN/KNOWLEDGE/system/rules/neuro-sincrono.md": {
+      "title": "neuro-sincrono.md | system/rules | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:17.145660",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__system__rules__neuro-sincrono.md"
+    },
+    "BRAIN/KNOWLEDGE/technical/genesis-architecture.md": {
+      "title": "genesis-architecture.md | knowledge/technical | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:18.733911",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__technical__genesis-architecture.md"
+    },
+    "BRAIN/KNOWLEDGE/technical/iot-automation.md": {
+      "title": "iot-automation.md | knowledge/technical | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:20.288362",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__technical__iot-automation.md"
+    },
+    "BRAIN/KNOWLEDGE/technical/tech-stack-unified.md": {
+      "title": "tech-stack-unified.md | knowledge/technical | v1.0 | 2026-03-10",
+      "updated_at": "2026-05-31T13:58:21.880889",
+      "endpoint": "/api/view/BRAIN__KNOWLEDGE__technical__tech-stack-unified.md"
+    },
+    "BRAIN/RULES.md": {
+      "title": "LE 10 REGOLE DELL'ECOSISTEMA",
+      "updated_at": "2026-05-31T13:58:23.419913",
+      "endpoint": "/api/view/BRAIN__RULES.md"
+    },
+    "CONTENT_ENGINE/DATABASE/INDEX.md": {
+      "title": "CONTENT ENGINE — DATABASE EPISODI",
+      "updated_at": "2026-05-31T13:58:24.817505",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__INDEX.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md": {
+      "title": "EP_AUTO_33 — Milestone",
+      "updated_at": "2026-05-31T13:58:26.316001",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md": {
+      "title": "EP_AUTO_34 — Milestone",
+      "updated_at": "2026-05-31T13:58:27.805034",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md": {
+      "title": "EP_AUTO_35 — Milestone",
+      "updated_at": "2026-05-31T13:58:29.233928",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md"
+    },
+    "DOCS/ASSOLUTO/ASSOLUTO_V7.md": {
+      "title": "ASSOLUTO V7 — TITANIUM VENTURES",
+      "updated_at": "2026-05-31T13:58:31.940718",
+      "endpoint": "/api/view/DOCS__ASSOLUTO__ASSOLUTO_V7.md"
+    },
+    "DOCS/MANUALE_SISTEMA.md": {
+      "title": "MANUALE TITANIUM_OS — Guida completa al sistema",
+      "updated_at": "2026-05-31T13:58:33.464624",
+      "endpoint": "/api/view/DOCS__MANUALE_SISTEMA.md"
+    },
+    "INBOX/session_brief_20260309_115007.md": {
+      "title": "SESSION BRIEF — 2026-03-09 11:50:07",
+      "updated_at": "2026-05-31T13:58:34.998751",
+      "endpoint": "/api/view/INBOX__session_brief_20260309_115007.md"
+    },
+    "MATTEO/PROGETTI/VULCAN/VULCAN_MANIFESTO.md": {
+      "title": "VULCAN — Manifesto",
+      "updated_at": "2026-05-31T13:58:36.555903",
+      "endpoint": "/api/view/MATTEO__PROGETTI__VULCAN__VULCAN_MANIFESTO.md"
+    },
+    "README.md": {
+      "title": "TITANIUM_OS",
+      "updated_at": "2026-05-31T13:58:37.998916",
+      "endpoint": "/api/view/README.md"
     }
   },
-  "last_built": "2026-05-30T16:41:32.238307",
-  "total": 88
+  "last_built": "2026-05-31T14:00:35.140088",
+  "total": 122
 }

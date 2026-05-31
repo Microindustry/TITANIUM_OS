@@ -1,3 +1,25 @@
+<!-- TOC -->
+
+- [NEUROMAPV3  Build Reference](#neuromapv3-build-reference)
+  - [Cosè](#cosè)
+  - [Estetica  Linguaggio visivo](#estetica-linguaggio-visivo)
+    - [Palette](#palette)
+    - [Animazioni](#animazioni)
+    - [SVG details](#svg-details)
+  - [Architettura  Come funziona](#architettura-come-funziona)
+    - [Stack di navigazione](#stack-di-navigazione)
+    - [Geometria radiale](#geometria-radiale)
+    - [Drill-down flow](#drill-down-flow)
+    - [Live data](#live-data)
+  - [Struttura dati DRILL_CHILDREN](#struttura-dati-drillchildren)
+  - [Come estendere](#come-estendere)
+    - [Aggiungere figli a un nodo esistente](#aggiungere-figli-a-un-nodo-esistente)
+    - [Aggiungere livello L0](#aggiungere-livello-l0)
+    - [Aggiungere drill profondo (L3)](#aggiungere-drill-profondo-l3)
+  - [Riferimento visivo](#riferimento-visivo)
+
+<!-- /TOC -->
+
 # NEUROMAPV3 — Build Reference
 **Versione:** 3.0 | **Data:** 2026-03-18 | **Autore:** Claude Sonnet 4.6 + Matteo Benenati
 **File sorgente:** `DASHBOARD/src/components/NeuroMapView.tsx`

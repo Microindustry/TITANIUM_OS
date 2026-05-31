@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [tech-stack-unified.md  knowledge/technical  v1.0  2026-03-10](#tech-stack-unifiedmd-knowledgetechnical-v10-2026-03-10)
+- [Stack Tecnologico Completo  TITANIUM_OS](#stack-tecnologico-completo-titaniumos)
+  - [Software Development](#software-development)
+  - [IoT / Hardware](#iot-hardware)
+  - [Automazione / Orchestrazione](#automazione-orchestrazione)
+  - [Dashboard / Visualizzazione](#dashboard-visualizzazione)
+  - [Database / Storage](#database-storage)
+  - [Deployment](#deployment)
+
+<!-- /TOC -->
+
 # tech-stack-unified.md | knowledge/technical | v1.0 | 2026-03-10
 # Stack Tecnologico Completo — TITANIUM_OS
 

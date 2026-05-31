@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [ECOSYSTEM MANIFEST  TITANIUM](#ecosystem-manifest-titanium)
+  - [Identità](#identità)
+  - [Gerarchia Layer](#gerarchia-layer)
+  - [Livelli di visibilità](#livelli-di-visibilità)
+  - [Principio fondante](#principio-fondante)
+  - [Origine](#origine)
+  - [Visualizzazione target](#visualizzazione-target)
+
+<!-- /TOC -->
+
 # ECOSYSTEM MANIFEST — TITANIUM
 
 > Il sistema nervoso digitale di Matteo Benenati.

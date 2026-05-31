@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  CONTEXT INJECT](#titaniumos-context-inject)
+- [Incolla questo allinizio di ogni sessione Claude senza memoria](#incolla-questo-allinizio-di-ogni-sessione-claude-senza-memoria)
+- [Generato: 2026-05-29  Fonte: STATE.json v2.5.0  CLAUDE.md v4.0.0](#generato-2026-05-29-fonte-statejson-v250-claudemd-v400)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — CONTEXT INJECT
 # Incolla questo all'inizio di ogni sessione Claude senza memoria
 # Generato: 2026-05-29 | Fonte: STATE.json v2.5.0 + CLAUDE.md v4.0.0

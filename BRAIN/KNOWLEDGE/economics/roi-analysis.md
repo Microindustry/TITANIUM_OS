@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [roi-analysis.md  knowledge/economics  v1.0  2026-03-10](#roi-analysismd-knowledgeeconomics-v10-2026-03-10)
+- [ROI e Analisi Economica V32](#roi-e-analisi-economica-v32)
+- [Fonte: ASSOLUTO V6  Blocco 1](#fonte-assoluto-v6-blocco-1)
+  - [Modello Interno (leva produttiva)](#modello-interno-leva-produttiva)
+  - [Modello Cliente (storytelling vs conto terzi)](#modello-cliente-storytelling-vs-conto-terzi)
+  - [Break-even V32 (dato narrativo  non fisso)](#break-even-v32-dato-narrativo-non-fisso)
+  - [Target Economico Anno 1](#target-economico-anno-1)
+  - [Piano Azione 90 Giorni](#piano-azione-90-giorni)
+
+<!-- /TOC -->
+
 # roi-analysis.md | knowledge/economics | v1.0 | 2026-03-10
 # ROI e Analisi Economica V32
 # Fonte: ASSOLUTO V6 — Blocco 1

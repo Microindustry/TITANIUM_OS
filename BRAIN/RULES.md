@@ -1,3 +1,25 @@
+<!-- TOC -->
+
+- [LE 10 REGOLE DELLECOSISTEMA](#le-10-regole-dellecosistema)
+  - [1. Niente è finito](#1-niente-è-finito)
+  - [2. Tutto si connette](#2-tutto-si-connette)
+  - [3. Documenta mentre costruisci](#3-documenta-mentre-costruisci)
+  - [4. Scala organicamente](#4-scala-organicamente)
+  - [5. Automatizza il ripetitivo](#5-automatizza-il-ripetitivo)
+  - [6. Costruisci ciò che usi](#6-costruisci-ciò-che-usi)
+  - [7. Insegna ciò che impari](#7-insegna-ciò-che-impari)
+  - [8. Proteggi il sapere](#8-proteggi-il-sapere)
+  - [9. Reinvesti sempre](#9-reinvesti-sempre)
+  - [10. Libertà sopra profitto](#10-libertà-sopra-profitto)
+  - [REGOLE SISTEMA  PDF_TO_MEMORY](#regole-sistema-pdftomemory)
+    - [Gerarchia output](#gerarchia-output)
+    - [Regole versioning](#regole-versioning)
+    - [Regole classificazione ATTO](#regole-classificazione-atto)
+    - [Flusso drag  drop](#flusso-drag-drop)
+    - [Come avviare](#come-avviare)
+
+<!-- /TOC -->
+
 # LE 10 REGOLE DELL'ECOSISTEMA
 *Vincoli operativi — ogni decisione viene filtrata qui*
 

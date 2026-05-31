@@ -1,1026 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-03-10T20:25:06.552746",
-      "file": "DATA\\test_watcher_ping.txt",
-      "snapshot": "BACKUPS\\20260310_202506\\DATA\\test_watcher_ping.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:25:07.820257",
-      "file": "CLAUDE.md",
-      "snapshot": "BACKUPS\\20260310_202507\\CLAUDE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:25:07.850708",
-      "file": "requirements.txt",
-      "snapshot": "BACKUPS\\20260310_202507\\requirements.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:28:54.946236",
-      "file": "DATA\\projects.json",
-      "snapshot": "BACKUPS\\20260310_202854\\DATA\\projects.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:33:08.122268",
-      "file": "DASHBOARD\\index.html",
-      "snapshot": "BACKUPS\\20260310_203308\\DASHBOARD\\index.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:55.383546",
-      "file": "DASHBOARD\\package.json",
-      "snapshot": "BACKUPS\\20260310_204055\\DASHBOARD\\package.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:55.533760",
-      "file": "DASHBOARD\\tsconfig.json",
-      "snapshot": "BACKUPS\\20260310_204055\\DASHBOARD\\tsconfig.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:56.662422",
-      "file": "DASHBOARD\\tsconfig.app.json",
-      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\tsconfig.app.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:56.716545",
-      "file": "DASHBOARD\\tsconfig.node.json",
-      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\tsconfig.node.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:56.909665",
-      "file": "DASHBOARD\\.claude\\launch.json",
-      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\.claude\\launch.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:56.971126",
-      "file": "DASHBOARD\\.claude\\settings.local.json",
-      "snapshot": "BACKUPS\\20260310_204056\\DASHBOARD\\.claude\\settings.local.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:57.032397",
-      "file": "DASHBOARD\\TITANIUM_MANIFESTO.md",
-      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\TITANIUM_MANIFESTO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:57.067021",
-      "file": "DASHBOARD\\.vscode\\settings.json",
-      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\.vscode\\settings.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:57.135063",
-      "file": "DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
-      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T20:40:57.304761",
-      "file": "DASHBOARD\\README.md",
-      "snapshot": "BACKUPS\\20260310_204057\\DASHBOARD\\README.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-03-10T21:21:16.118809",
-      "file": "api_server.py",
-      "snapshot": "BACKUPS\\20260310_212116\\api_server.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-29T23:24:27.989375",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260529_232427\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-29T23:24:54.337287",
-      "file": "DATA\\watchdog_status.json",
-      "snapshot": "BACKUPS\\20260529_232454\\DATA\\watchdog_status.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:25:07.385457",
-      "file": "NODES\\RESEARCH_AGENT\\research_agent.py",
-      "snapshot": "BACKUPS\\20260530_102507\\NODES\\RESEARCH_AGENT\\research_agent.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:27:06.983498",
-      "file": "NODES\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_102706\\NODES\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:27:07.107817",
-      "file": "NODES\\MENTE_RAG\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_102707\\NODES\\MENTE_RAG\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:21.293426",
-      "file": "DATA\\contacts.json",
-      "snapshot": "BACKUPS\\20260530_103021\\DATA\\contacts.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:21.319120",
-      "file": "DATA\\costs.json",
-      "snapshot": "BACKUPS\\20260530_103021\\DATA\\costs.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:21.343675",
-      "file": "DATA\\market_data.json",
-      "snapshot": "BACKUPS\\20260530_103021\\DATA\\market_data.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:21.369122",
-      "file": "DATA\\milestones.json",
-      "snapshot": "BACKUPS\\20260530_103021\\DATA\\milestones.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:21.399046",
-      "file": "DATA\\projects.json",
-      "snapshot": "BACKUPS\\20260530_103021\\DATA\\projects.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:33.744746",
-      "file": "DASHBOARD\\.vscode\\settings.json",
-      "snapshot": "BACKUPS\\20260530_103033\\DASHBOARD\\.vscode\\settings.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:33.777983",
-      "file": "DASHBOARD\\.claude\\launch.json",
-      "snapshot": "BACKUPS\\20260530_103033\\DASHBOARD\\.claude\\launch.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:33.814602",
-      "file": "DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
-      "snapshot": "BACKUPS\\20260530_103033\\DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:33.942760",
-      "file": "DASHBOARD\\.claude\\settings.local.json",
-      "snapshot": "BACKUPS\\20260530_103033\\DASHBOARD\\.claude\\settings.local.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.006594",
-      "file": "DASHBOARD\\index.html",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\index.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.045488",
-      "file": "DASHBOARD\\package-lock.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\package-lock.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.083382",
-      "file": "DASHBOARD\\package.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\package.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.143254",
-      "file": "DASHBOARD\\README.md",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\README.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.251525",
-      "file": "DASHBOARD\\TITANIUM_MANIFESTO.md",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\TITANIUM_MANIFESTO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.332679",
-      "file": "DASHBOARD\\public\\matteo\\index.html",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\public\\matteo\\index.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.386535",
-      "file": "DASHBOARD\\tsconfig.app.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\tsconfig.app.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.420447",
-      "file": "DASHBOARD\\tsconfig.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\tsconfig.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.452359",
-      "file": "DASHBOARD\\tsconfig.node.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DASHBOARD\\tsconfig.node.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.502226",
-      "file": "DATA\\views\\DASHBOARD__ECOSYSTEM_ARCHITECTURE.md.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DATA\\views\\DASHBOARD__ECOSYSTEM_ARCHITECTURE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.529091",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.559014",
-      "file": "DATA\\views\\DASHBOARD__README.md.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DATA\\views\\DASHBOARD__README.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:30:34.584971",
-      "file": "DATA\\views\\DASHBOARD__TITANIUM_MANIFESTO.md.json",
-      "snapshot": "BACKUPS\\20260530_103034\\DATA\\views\\DASHBOARD__TITANIUM_MANIFESTO.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:35:01.230548",
-      "file": "NODES\\MENTE_SCANNER\\scanner.py",
-      "snapshot": "BACKUPS\\20260530_103501\\NODES\\MENTE_SCANNER\\scanner.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:35:03.148956",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260530_103503\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:35:20.610820",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_103520\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:35:47.626734",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260530_103547\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:36:01.603339",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_103601\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:36:11.113192",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_103611\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:36:45.304021",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260530_103645\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:37:32.270542",
-      "file": "CLAUDE.md",
-      "snapshot": "BACKUPS\\20260530_103732\\CLAUDE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:37:32.400196",
-      "file": "DATA\\views\\CLAUDE.md.json",
-      "snapshot": "BACKUPS\\20260530_103732\\DATA\\views\\CLAUDE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:37:32.434105",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_103732\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:42:26.330132",
-      "file": "RIAVVIO_SESSIONE.txt",
-      "snapshot": "BACKUPS\\20260530_104226\\RIAVVIO_SESSIONE.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:42:44.547775",
-      "file": "DATA\\watchdog_status.json",
-      "snapshot": "BACKUPS\\20260530_104244\\DATA\\watchdog_status.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:24.861250",
-      "file": ".claude\\skills\\dataset\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_104324\\.claude\\skills\\dataset\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:24.987823",
-      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_104324\\.claude\\skills\\aggiorna-stato\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.118475",
-      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_104325\\.claude\\skills\\genera-episodio\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.242396",
-      "file": ".claude\\skills\\reel\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_104325\\.claude\\skills\\reel\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.459788",
-      "file": "DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_104325\\DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.490674",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_104325\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.516601",
-      "file": "DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_104325\\DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.543702",
-      "file": "DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_104325\\DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:43:25.574619",
-      "file": "DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_104325\\DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T10:44:31.893153",
-      "file": "RIAVVIO_SESSIONE.txt",
-      "snapshot": "BACKUPS\\20260530_104431\\RIAVVIO_SESSIONE.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:40.941533",
-      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_114540\\.claude\\skills\\aggiorna-stato\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.095858",
-      "file": ".claude\\skills\\dataset\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_114541\\.claude\\skills\\dataset\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.167134",
-      "file": ".claude\\skills\\reel\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_114541\\.claude\\skills\\reel\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.216997",
-      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_114541\\.claude\\skills\\genera-episodio\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.309779",
-      "file": "DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_114541\\DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.340448",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_114541\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.375356",
-      "file": "DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_114541\\DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.421233",
-      "file": "DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_114541\\DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:45:41.467715",
-      "file": "DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_114541\\DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:55:32.882606",
-      "file": "NODES\\COMPUTER_USE\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_115532\\NODES\\COMPUTER_USE\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:55:32.969374",
-      "file": "NODES\\COMPUTER_USE\\actions\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_115532\\NODES\\COMPUTER_USE\\actions\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:57:46.725954",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_115746\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T11:57:46.761856",
-      "file": "DATA\\watchdog_status.json",
-      "snapshot": "BACKUPS\\20260530_115746\\DATA\\watchdog_status.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:28:49.835310",
-      "file": "DASHBOARD\\package.json",
-      "snapshot": "BACKUPS\\20260530_122849\\DASHBOARD\\package.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:28:52.034884",
-      "file": "DASHBOARD\\tsconfig.json",
-      "snapshot": "BACKUPS\\20260530_122852\\DASHBOARD\\tsconfig.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:24.653749",
-      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_125024\\.claude\\skills\\aggiorna-stato\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:24.801782",
-      "file": ".claude\\skills\\dataset\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_125024\\.claude\\skills\\dataset\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:24.901514",
-      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_125024\\.claude\\skills\\genera-episodio\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:24.998861",
-      "file": ".claude\\skills\\reel\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_125024\\.claude\\skills\\reel\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:25.187363",
-      "file": "DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_125025\\DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:25.256179",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_125025\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:25.325034",
-      "file": "DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_125025\\DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:25.392814",
-      "file": "DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_125025\\DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:50:25.497872",
-      "file": "DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_125025\\DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:57:54.696050",
-      "file": "NODES\\COMPUTER_USE\\computer_use.py",
-      "snapshot": "BACKUPS\\20260530_125754\\NODES\\COMPUTER_USE\\computer_use.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:57:54.764865",
-      "file": "NODES\\COMPUTER_USE\\actions\\github_actions.py",
-      "snapshot": "BACKUPS\\20260530_125754\\NODES\\COMPUTER_USE\\actions\\github_actions.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:57:54.828926",
-      "file": "NODES\\COMPUTER_USE\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_125754\\NODES\\COMPUTER_USE\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:57:54.919686",
-      "file": "NODES\\COMPUTER_USE\\browser_agent.py",
-      "snapshot": "BACKUPS\\20260530_125754\\NODES\\COMPUTER_USE\\browser_agent.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T12:57:55.017569",
-      "file": "NODES\\COMPUTER_USE\\actions\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_125755\\NODES\\COMPUTER_USE\\actions\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T13:00:42.121970",
-      "file": ".claude\\settings.json",
-      "snapshot": "BACKUPS\\20260530_130042\\.claude\\settings.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.159554",
-      "file": ".claude\\skills\\dataset\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_150701\\.claude\\skills\\dataset\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.226975",
-      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_150701\\.claude\\skills\\genera-episodio\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.259853",
-      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_150701\\.claude\\skills\\aggiorna-stato\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.289774",
-      "file": ".claude\\skills\\reel\\SKILL.md",
-      "snapshot": "BACKUPS\\20260530_150701\\.claude\\skills\\reel\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.345180",
-      "file": "DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_150701\\DATA\\views\\.claude__skills__dataset__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.363605",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_150701\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.383554",
-      "file": "DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_150701\\DATA\\views\\.claude__skills__genera-episodio__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.403501",
-      "file": "DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_150701\\DATA\\views\\.claude__skills__aggiorna-stato__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:07:01.421450",
-      "file": "DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "snapshot": "BACKUPS\\20260530_150701\\DATA\\views\\.claude__skills__reel__SKILL.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.249106",
-      "file": "NODES\\COMPUTER_USE\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_150827\\NODES\\COMPUTER_USE\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.319914",
-      "file": "NODES\\COMPUTER_USE\\actions\\github_actions.py",
-      "snapshot": "BACKUPS\\20260530_150827\\NODES\\COMPUTER_USE\\actions\\github_actions.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.421428",
-      "file": "NODES\\COMPUTER_USE\\actions\\__init__.py",
-      "snapshot": "BACKUPS\\20260530_150827\\NODES\\COMPUTER_USE\\actions\\__init__.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.464311",
-      "file": "DOCS\\TITANIUM_OS_V1.md",
-      "snapshot": "BACKUPS\\20260530_150827\\DOCS\\TITANIUM_OS_V1.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.568773",
-      "file": "NODES\\COMPUTER_USE\\computer_use.py",
-      "snapshot": "BACKUPS\\20260530_150827\\NODES\\COMPUTER_USE\\computer_use.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.598692",
-      "file": "NODES\\COMPUTER_USE\\browser_agent.py",
-      "snapshot": "BACKUPS\\20260530_150827\\NODES\\COMPUTER_USE\\browser_agent.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.659791",
-      "file": "DATA\\views\\DOCS__TITANIUM_OS_V1.md.json",
-      "snapshot": "BACKUPS\\20260530_150827\\DATA\\views\\DOCS__TITANIUM_OS_V1.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:27.680733",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_150827\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.644810",
-      "file": "DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
-      "snapshot": "BACKUPS\\20260530_150855\\DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.711903",
-      "file": "DASHBOARD\\README.md",
-      "snapshot": "BACKUPS\\20260530_150855\\DASHBOARD\\README.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.782131",
-      "file": "DASHBOARD\\TITANIUM_MANIFESTO.md",
-      "snapshot": "BACKUPS\\20260530_150855\\DASHBOARD\\TITANIUM_MANIFESTO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.842966",
-      "file": "RIAVVIO_SESSIONE.txt",
-      "snapshot": "BACKUPS\\20260530_150855\\RIAVVIO_SESSIONE.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.910787",
-      "file": "DATA\\views\\DASHBOARD__ECOSYSTEM_ARCHITECTURE.md.json",
-      "snapshot": "BACKUPS\\20260530_150855\\DATA\\views\\DASHBOARD__ECOSYSTEM_ARCHITECTURE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.939710",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_150855\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:55.964641",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_150855\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:56.004536",
-      "file": "DATA\\watchdog_status.json",
-      "snapshot": "BACKUPS\\20260530_150856\\DATA\\watchdog_status.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:56.041438",
-      "file": "DATA\\views\\DASHBOARD__README.md.json",
-      "snapshot": "BACKUPS\\20260530_150856\\DATA\\views\\DASHBOARD__README.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:08:56.065373",
-      "file": "DATA\\views\\DASHBOARD__TITANIUM_MANIFESTO.md.json",
-      "snapshot": "BACKUPS\\20260530_150856\\DATA\\views\\DASHBOARD__TITANIUM_MANIFESTO.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:09:01.523303",
-      "file": "generate_restart_prompt.py",
-      "snapshot": "BACKUPS\\20260530_150901\\generate_restart_prompt.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:09:01.572212",
-      "file": "DATA\\session_context.json",
-      "snapshot": "BACKUPS\\20260530_150901\\DATA\\session_context.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:09:01.612474",
-      "file": "RIAVVIO_SESSIONE.txt",
-      "snapshot": "BACKUPS\\20260530_150901\\RIAVVIO_SESSIONE.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:10:27.159605",
-      "file": ".claude\\settings.json",
-      "snapshot": "BACKUPS\\20260530_151027\\.claude\\settings.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:10:27.356095",
-      "file": "CLAUDE.md",
-      "snapshot": "BACKUPS\\20260530_151027\\CLAUDE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:10:27.440786",
-      "file": "DATA\\views\\CLAUDE.md.json",
-      "snapshot": "BACKUPS\\20260530_151027\\DATA\\views\\CLAUDE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:10:27.472700",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_151027\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:12:18.804918",
-      "file": "NODES\\MENTE_SCANNER\\scanner.py",
-      "snapshot": "BACKUPS\\20260530_151218\\NODES\\MENTE_SCANNER\\scanner.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:12:30.497355",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_151230\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:12:30.648272",
-      "file": "NODES\\MENTE_RAG\\rag_engine.py",
-      "snapshot": "BACKUPS\\20260530_151230\\NODES\\MENTE_RAG\\rag_engine.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:12:56.010812",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260530_151256\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:12:58.719340",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260530_151258\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:13:26.960135",
-      "file": "CORE\\watchdog.py",
-      "snapshot": "BACKUPS\\20260530_151326\\CORE\\watchdog.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:14:05.004419",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260530_151405\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:27.415713",
-      "file": "DASHBOARD\\index.html",
-      "snapshot": "BACKUPS\\20260530_151527\\DASHBOARD\\index.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:40.886091",
-      "file": "DASHBOARD\\package.json",
-      "snapshot": "BACKUPS\\20260530_151540\\DASHBOARD\\package.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:40.964966",
-      "file": "DASHBOARD\\tsconfig.json",
-      "snapshot": "BACKUPS\\20260530_151540\\DASHBOARD\\tsconfig.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:41.001851",
-      "file": "DASHBOARD\\tsconfig.app.json",
-      "snapshot": "BACKUPS\\20260530_151541\\DASHBOARD\\tsconfig.app.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:41.080645",
-      "file": "DASHBOARD\\tsconfig.node.json",
-      "snapshot": "BACKUPS\\20260530_151541\\DASHBOARD\\tsconfig.node.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:41.565261",
-      "file": "DASHBOARD\\.claude\\launch.json",
-      "snapshot": "BACKUPS\\20260530_151541\\DASHBOARD\\.claude\\launch.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:41.833544",
-      "file": "DASHBOARD\\.claude\\settings.local.json",
-      "snapshot": "BACKUPS\\20260530_151541\\DASHBOARD\\.claude\\settings.local.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:42.070910",
-      "file": "DASHBOARD\\.vscode\\settings.json",
-      "snapshot": "BACKUPS\\20260530_151542\\DASHBOARD\\.vscode\\settings.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:42.542622",
-      "file": "DASHBOARD\\public\\matteo\\index.html",
-      "snapshot": "BACKUPS\\20260530_151542\\DASHBOARD\\public\\matteo\\index.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.511315",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_auto_avvio_completo_al_login_start_.md",
-      "snapshot": "BACKUPS\\20260530_151549\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_auto_avvio_completo_al_login_start_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.579137",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
-      "snapshot": "BACKUPS\\20260530_151549\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.645958",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
-      "snapshot": "BACKUPS\\20260530_151549\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.720755",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
-      "snapshot": "BACKUPS\\20260530_151549\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.794232",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
-      "snapshot": "BACKUPS\\20260530_151549\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.854179",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260529_auto_avvio_completo_al_login_start_.md.json",
-      "snapshot": "BACKUPS\\20260530_151549\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260529_auto_avvio_completo_al_login_start_.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.889085",
-      "file": "DATA\\view_index.json",
-      "snapshot": "BACKUPS\\20260530_151549\\DATA\\view_index.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:49.922994",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md",
-      "snapshot": "BACKUPS\\20260530_151549\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.002007",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.066352",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.135167",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.206977",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.269807",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260530_dashboard_sempre_attiva_watchdog_v1.md.json",
-      "snapshot": "BACKUPS\\20260530_151550\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260530_dashboard_sempre_attiva_watchdog_v1.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.309703",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.376210",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.454849",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.523665",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.591484",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md.json",
-      "snapshot": "BACKUPS\\20260530_151550\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.626424",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.710304",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.777935",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.860750",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:50.936756",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
-      "snapshot": "BACKUPS\\20260530_151550\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:51.009158",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
-      "snapshot": "BACKUPS\\20260530_151551\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-30T15:15:51.079353",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md.json",
-      "snapshot": "BACKUPS\\20260530_151551\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-05-30T15:15:51.111269",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
       "snapshot": "BACKUPS\\20260530_151551\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
@@ -2962,6 +1942,1062 @@
       "timestamp": "2026-05-30T16:43:15.687645",
       "file": "NODES\\COMPUTER_USE\\computer_use_agent.py",
       "snapshot": "BACKUPS\\20260530_164315\\NODES\\COMPUTER_USE\\computer_use_agent.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:49.038778",
+      "file": "BRAIN\\ECOSYSTEM_MANIFEST.md",
+      "snapshot": "BACKUPS\\20260531_135749\\BRAIN\\ECOSYSTEM_MANIFEST.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:50.618067",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\pricing-strategy.md",
+      "snapshot": "BACKUPS\\20260531_135750\\BRAIN\\KNOWLEDGE\\economics\\pricing-strategy.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:51.985488",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\revenue-model.md",
+      "snapshot": "BACKUPS\\20260531_135751\\BRAIN\\KNOWLEDGE\\economics\\revenue-model.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:53.353307",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\revenue-target-y1.md",
+      "snapshot": "BACKUPS\\20260531_135753\\BRAIN\\KNOWLEDGE\\economics\\revenue-target-y1.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:54.742099",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\risk-analysis.md",
+      "snapshot": "BACKUPS\\20260531_135754\\BRAIN\\KNOWLEDGE\\economics\\risk-analysis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:56.074340",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\roi-analysis.md",
+      "snapshot": "BACKUPS\\20260531_135756\\BRAIN\\KNOWLEDGE\\economics\\roi-analysis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:57.447976",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\applications.md",
+      "snapshot": "BACKUPS\\20260531_135757\\BRAIN\\KNOWLEDGE\\mims\\applications.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:57:58.764549",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\configurations.md",
+      "snapshot": "BACKUPS\\20260531_135758\\BRAIN\\KNOWLEDGE\\mims\\configurations.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:00.174985",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\fit-park-specs.md",
+      "snapshot": "BACKUPS\\20260531_135800\\BRAIN\\KNOWLEDGE\\mims\\fit-park-specs.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:01.514588",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\market-analysis.md",
+      "snapshot": "BACKUPS\\20260531_135801\\BRAIN\\KNOWLEDGE\\mims\\market-analysis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:02.915191",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\protocol.md",
+      "snapshot": "BACKUPS\\20260531_135802\\BRAIN\\KNOWLEDGE\\mims\\protocol.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:04.314507",
+      "file": "BRAIN\\KNOWLEDGE\\system\\NEUROMAPV3_BUILD.md",
+      "snapshot": "BACKUPS\\20260531_135804\\BRAIN\\KNOWLEDGE\\system\\NEUROMAPV3_BUILD.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:05.757195",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\ava.md",
+      "snapshot": "BACKUPS\\20260531_135805\\BRAIN\\KNOWLEDGE\\system\\personas\\ava.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:07.023452",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\eva.md",
+      "snapshot": "BACKUPS\\20260531_135807\\BRAIN\\KNOWLEDGE\\system\\personas\\eva.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:08.378655",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\the-board-prompts.md",
+      "snapshot": "BACKUPS\\20260531_135808\\BRAIN\\KNOWLEDGE\\system\\personas\\the-board-prompts.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:09.668833",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\themis.md",
+      "snapshot": "BACKUPS\\20260531_135809\\BRAIN\\KNOWLEDGE\\system\\personas\\themis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:10.872558",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\ai-behavior.md",
+      "snapshot": "BACKUPS\\20260531_135810\\BRAIN\\KNOWLEDGE\\system\\rules\\ai-behavior.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:12.324194",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\documentation-rules.md",
+      "snapshot": "BACKUPS\\20260531_135812\\BRAIN\\KNOWLEDGE\\system\\rules\\documentation-rules.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:14.040779",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\lex-digitalis.md",
+      "snapshot": "BACKUPS\\20260531_135814\\BRAIN\\KNOWLEDGE\\system\\rules\\lex-digitalis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:15.759130",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\neuro-sincrono.md",
+      "snapshot": "BACKUPS\\20260531_135815\\BRAIN\\KNOWLEDGE\\system\\rules\\neuro-sincrono.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:17.323675",
+      "file": "BRAIN\\KNOWLEDGE\\technical\\genesis-architecture.md",
+      "snapshot": "BACKUPS\\20260531_135817\\BRAIN\\KNOWLEDGE\\technical\\genesis-architecture.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:18.948930",
+      "file": "BRAIN\\KNOWLEDGE\\technical\\iot-automation.md",
+      "snapshot": "BACKUPS\\20260531_135818\\BRAIN\\KNOWLEDGE\\technical\\iot-automation.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:20.472599",
+      "file": "BRAIN\\KNOWLEDGE\\technical\\tech-stack-unified.md",
+      "snapshot": "BACKUPS\\20260531_135820\\BRAIN\\KNOWLEDGE\\technical\\tech-stack-unified.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:22.097847",
+      "file": "BRAIN\\RULES.md",
+      "snapshot": "BACKUPS\\20260531_135822\\BRAIN\\RULES.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:23.601997",
+      "file": "CONTENT_ENGINE\\DATABASE\\INDEX.md",
+      "snapshot": "BACKUPS\\20260531_135823\\CONTENT_ENGINE\\DATABASE\\INDEX.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:24.988930",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
+      "snapshot": "BACKUPS\\20260531_135824\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:26.513330",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
+      "snapshot": "BACKUPS\\20260531_135826\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:27.980373",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
+      "snapshot": "BACKUPS\\20260531_135827\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:29.420078",
+      "file": "DATA\\mente_digest.json",
+      "snapshot": "BACKUPS\\20260531_135829\\DATA\\mente_digest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:30.533066",
+      "file": "DOCS\\ASSOLUTO\\ASSOLUTO_V7.md",
+      "snapshot": "BACKUPS\\20260531_135830\\DOCS\\ASSOLUTO\\ASSOLUTO_V7.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:32.234187",
+      "file": "DOCS\\MANUALE_SISTEMA.md",
+      "snapshot": "BACKUPS\\20260531_135832\\DOCS\\MANUALE_SISTEMA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:33.747209",
+      "file": "INBOX\\session_brief_20260309_115007.md",
+      "snapshot": "BACKUPS\\20260531_135833\\INBOX\\session_brief_20260309_115007.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:35.176014",
+      "file": "MATTEO\\PROGETTI\\VULCAN\\VULCAN_MANIFESTO.md",
+      "snapshot": "BACKUPS\\20260531_135835\\MATTEO\\PROGETTI\\VULCAN\\VULCAN_MANIFESTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:36.764528",
+      "file": "README.md",
+      "snapshot": "BACKUPS\\20260531_135836\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:38.575231",
+      "file": "DATA\\views\\ARCHIVE__n8n_dismesso__n8n__DEPLOY.md.json",
+      "snapshot": "BACKUPS\\20260531_135838\\DATA\\views\\ARCHIVE__n8n_dismesso__n8n__DEPLOY.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:39.592164",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135839\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:40.740038",
+      "file": "DATA\\views\\AUTOMATIONS__AUTOMATIONS_MASTER.md.json",
+      "snapshot": "BACKUPS\\20260531_135840\\DATA\\views\\AUTOMATIONS__AUTOMATIONS_MASTER.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:49.326218",
+      "file": "DATA\\views\\BRAIN__CONTEXT_INJECT.md.json",
+      "snapshot": "BACKUPS\\20260531_135849\\DATA\\views\\BRAIN__CONTEXT_INJECT.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:50.376465",
+      "file": "BRAIN\\ECOSYSTEM_MANIFEST.md",
+      "snapshot": "BACKUPS\\20260531_135850\\BRAIN\\ECOSYSTEM_MANIFEST.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:51.801959",
+      "file": "DATA\\views\\BRAIN__ECOSYSTEM_MANIFEST.md.json",
+      "snapshot": "BACKUPS\\20260531_135851\\DATA\\views\\BRAIN__ECOSYSTEM_MANIFEST.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:52.836421",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135852\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:54.701518",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\pricing-strategy.md",
+      "snapshot": "BACKUPS\\20260531_135854\\BRAIN\\KNOWLEDGE\\economics\\pricing-strategy.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:55.996464",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__pricing-strategy.md.json",
+      "snapshot": "BACKUPS\\20260531_135855\\DATA\\views\\BRAIN__KNOWLEDGE__economics__pricing-strategy.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:57.157622",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\revenue-model.md",
+      "snapshot": "BACKUPS\\20260531_135857\\BRAIN\\KNOWLEDGE\\economics\\revenue-model.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:58.517964",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-model.md.json",
+      "snapshot": "BACKUPS\\20260531_135858\\DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-model.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:58:59.671179",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135859\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:01.167991",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\revenue-target-y1.md",
+      "snapshot": "BACKUPS\\20260531_135901\\BRAIN\\KNOWLEDGE\\economics\\revenue-target-y1.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:02.420628",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-target-y1.md.json",
+      "snapshot": "BACKUPS\\20260531_135902\\DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-target-y1.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:03.472015",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\risk-analysis.md",
+      "snapshot": "BACKUPS\\20260531_135903\\BRAIN\\KNOWLEDGE\\economics\\risk-analysis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:04.830249",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__risk-analysis.md.json",
+      "snapshot": "BACKUPS\\20260531_135904\\DATA\\views\\BRAIN__KNOWLEDGE__economics__risk-analysis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:05.817449",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135905\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:07.167644",
+      "file": "BRAIN\\KNOWLEDGE\\economics\\roi-analysis.md",
+      "snapshot": "BACKUPS\\20260531_135907\\BRAIN\\KNOWLEDGE\\economics\\roi-analysis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:08.316121",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__roi-analysis.md.json",
+      "snapshot": "BACKUPS\\20260531_135908\\DATA\\views\\BRAIN__KNOWLEDGE__economics__roi-analysis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:09.265448",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\applications.md",
+      "snapshot": "BACKUPS\\20260531_135909\\BRAIN\\KNOWLEDGE\\mims\\applications.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:10.396328",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__applications.md.json",
+      "snapshot": "BACKUPS\\20260531_135910\\DATA\\views\\BRAIN__KNOWLEDGE__mims__applications.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:11.385807",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135911\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:12.727139",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\configurations.md",
+      "snapshot": "BACKUPS\\20260531_135912\\BRAIN\\KNOWLEDGE\\mims\\configurations.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:13.897983",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__configurations.md.json",
+      "snapshot": "BACKUPS\\20260531_135913\\DATA\\views\\BRAIN__KNOWLEDGE__mims__configurations.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:14.953383",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\fit-park-specs.md",
+      "snapshot": "BACKUPS\\20260531_135914\\BRAIN\\KNOWLEDGE\\mims\\fit-park-specs.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:16.129814",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__fit-park-specs.md.json",
+      "snapshot": "BACKUPS\\20260531_135916\\DATA\\views\\BRAIN__KNOWLEDGE__mims__fit-park-specs.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:17.173893",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135917\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:18.477200",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\market-analysis.md",
+      "snapshot": "BACKUPS\\20260531_135918\\BRAIN\\KNOWLEDGE\\mims\\market-analysis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:19.724707",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__market-analysis.md.json",
+      "snapshot": "BACKUPS\\20260531_135919\\DATA\\views\\BRAIN__KNOWLEDGE__mims__market-analysis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:20.762342",
+      "file": "BRAIN\\KNOWLEDGE\\mims\\protocol.md",
+      "snapshot": "BACKUPS\\20260531_135920\\BRAIN\\KNOWLEDGE\\mims\\protocol.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:21.789856",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__protocol.md.json",
+      "snapshot": "BACKUPS\\20260531_135921\\DATA\\views\\BRAIN__KNOWLEDGE__mims__protocol.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:22.787796",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135922\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:24.203160",
+      "file": "BRAIN\\KNOWLEDGE\\system\\NEUROMAPV3_BUILD.md",
+      "snapshot": "BACKUPS\\20260531_135924\\BRAIN\\KNOWLEDGE\\system\\NEUROMAPV3_BUILD.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:25.367916",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__NEUROMAPV3_BUILD.md.json",
+      "snapshot": "BACKUPS\\20260531_135925\\DATA\\views\\BRAIN__KNOWLEDGE__system__NEUROMAPV3_BUILD.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:26.466083",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\ava.md",
+      "snapshot": "BACKUPS\\20260531_135926\\BRAIN\\KNOWLEDGE\\system\\personas\\ava.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:27.670206",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__ava.md.json",
+      "snapshot": "BACKUPS\\20260531_135927\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__ava.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:28.663197",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135928\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:30.032018",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\eva.md",
+      "snapshot": "BACKUPS\\20260531_135930\\BRAIN\\KNOWLEDGE\\system\\personas\\eva.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:31.207454",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__eva.md.json",
+      "snapshot": "BACKUPS\\20260531_135931\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__eva.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:32.199386",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\the-board-prompts.md",
+      "snapshot": "BACKUPS\\20260531_135932\\BRAIN\\KNOWLEDGE\\system\\personas\\the-board-prompts.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:33.356663",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__the-board-prompts.md.json",
+      "snapshot": "BACKUPS\\20260531_135933\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__the-board-prompts.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:34.401930",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135934\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:35.738404",
+      "file": "BRAIN\\KNOWLEDGE\\system\\personas\\themis.md",
+      "snapshot": "BACKUPS\\20260531_135935\\BRAIN\\KNOWLEDGE\\system\\personas\\themis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:37.087239",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__themis.md.json",
+      "snapshot": "BACKUPS\\20260531_135937\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__themis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:38.269234",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\ai-behavior.md",
+      "snapshot": "BACKUPS\\20260531_135938\\BRAIN\\KNOWLEDGE\\system\\rules\\ai-behavior.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:39.545900",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__ai-behavior.md.json",
+      "snapshot": "BACKUPS\\20260531_135939\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__ai-behavior.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:41.223540",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135941\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:42.872349",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\documentation-rules.md",
+      "snapshot": "BACKUPS\\20260531_135942\\BRAIN\\KNOWLEDGE\\system\\rules\\documentation-rules.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:44.199241",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__documentation-rules.md.json",
+      "snapshot": "BACKUPS\\20260531_135944\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__documentation-rules.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:45.445522",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\lex-digitalis.md",
+      "snapshot": "BACKUPS\\20260531_135945\\BRAIN\\KNOWLEDGE\\system\\rules\\lex-digitalis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:46.945902",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__lex-digitalis.md.json",
+      "snapshot": "BACKUPS\\20260531_135946\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__lex-digitalis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:48.012902",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135948\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:49.481772",
+      "file": "BRAIN\\KNOWLEDGE\\system\\rules\\neuro-sincrono.md",
+      "snapshot": "BACKUPS\\20260531_135949\\BRAIN\\KNOWLEDGE\\system\\rules\\neuro-sincrono.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:50.809339",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__neuro-sincrono.md.json",
+      "snapshot": "BACKUPS\\20260531_135950\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__neuro-sincrono.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:51.766233",
+      "file": "BRAIN\\KNOWLEDGE\\technical\\genesis-architecture.md",
+      "snapshot": "BACKUPS\\20260531_135951\\BRAIN\\KNOWLEDGE\\technical\\genesis-architecture.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:53.070959",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__technical__genesis-architecture.md.json",
+      "snapshot": "BACKUPS\\20260531_135953\\DATA\\views\\BRAIN__KNOWLEDGE__technical__genesis-architecture.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:54.686309",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_135954\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:56.222225",
+      "file": "BRAIN\\KNOWLEDGE\\technical\\iot-automation.md",
+      "snapshot": "BACKUPS\\20260531_135956\\BRAIN\\KNOWLEDGE\\technical\\iot-automation.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:57.622169",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__technical__iot-automation.md.json",
+      "snapshot": "BACKUPS\\20260531_135957\\DATA\\views\\BRAIN__KNOWLEDGE__technical__iot-automation.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T13:59:58.751088",
+      "file": "BRAIN\\KNOWLEDGE\\technical\\tech-stack-unified.md",
+      "snapshot": "BACKUPS\\20260531_135958\\BRAIN\\KNOWLEDGE\\technical\\tech-stack-unified.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:00.135160",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__technical__tech-stack-unified.md.json",
+      "snapshot": "BACKUPS\\20260531_140000\\DATA\\views\\BRAIN__KNOWLEDGE__technical__tech-stack-unified.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:01.340343",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140001\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:02.690786",
+      "file": "BRAIN\\RULES.md",
+      "snapshot": "BACKUPS\\20260531_140002\\BRAIN\\RULES.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:03.889942",
+      "file": "DATA\\views\\BRAIN__RULES.md.json",
+      "snapshot": "BACKUPS\\20260531_140003\\DATA\\views\\BRAIN__RULES.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:05.032968",
+      "file": "CONTENT_ENGINE\\DATABASE\\INDEX.md",
+      "snapshot": "BACKUPS\\20260531_140005\\CONTENT_ENGINE\\DATABASE\\INDEX.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:06.323657",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__INDEX.md.json",
+      "snapshot": "BACKUPS\\20260531_140006\\DATA\\views\\CONTENT_ENGINE__DATABASE__INDEX.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:07.437515",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140007\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:08.962679",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
+      "snapshot": "BACKUPS\\20260531_140008\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:10.408214",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md.json",
+      "snapshot": "BACKUPS\\20260531_140010\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:11.653714",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
+      "snapshot": "BACKUPS\\20260531_140011\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:12.998393",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md.json",
+      "snapshot": "BACKUPS\\20260531_140012\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:14.418326",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140014\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:16.013204",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
+      "snapshot": "BACKUPS\\20260531_140016\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:17.492969",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md.json",
+      "snapshot": "BACKUPS\\20260531_140017\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:18.978070",
+      "file": "DOCS\\ASSOLUTO\\ASSOLUTO_V7.md",
+      "snapshot": "BACKUPS\\20260531_140018\\DOCS\\ASSOLUTO\\ASSOLUTO_V7.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:20.648088",
+      "file": "DATA\\views\\DOCS__ASSOLUTO__ASSOLUTO_V7.md.json",
+      "snapshot": "BACKUPS\\20260531_140020\\DATA\\views\\DOCS__ASSOLUTO__ASSOLUTO_V7.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:21.978505",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140021\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:23.637705",
+      "file": "DOCS\\MANUALE_SISTEMA.md",
+      "snapshot": "BACKUPS\\20260531_140023\\DOCS\\MANUALE_SISTEMA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:25.128600",
+      "file": "DATA\\views\\DOCS__MANUALE_SISTEMA.md.json",
+      "snapshot": "BACKUPS\\20260531_140025\\DATA\\views\\DOCS__MANUALE_SISTEMA.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:26.725726",
+      "file": "INBOX\\session_brief_20260309_115007.md",
+      "snapshot": "BACKUPS\\20260531_140026\\INBOX\\session_brief_20260309_115007.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:28.406299",
+      "file": "DATA\\views\\INBOX__session_brief_20260309_115007.md.json",
+      "snapshot": "BACKUPS\\20260531_140028\\DATA\\views\\INBOX__session_brief_20260309_115007.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:29.723376",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140029\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:31.197070",
+      "file": "MATTEO\\PROGETTI\\VULCAN\\VULCAN_MANIFESTO.md",
+      "snapshot": "BACKUPS\\20260531_140031\\MATTEO\\PROGETTI\\VULCAN\\VULCAN_MANIFESTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:32.497110",
+      "file": "DATA\\views\\MATTEO__PROGETTI__VULCAN__VULCAN_MANIFESTO.md.json",
+      "snapshot": "BACKUPS\\20260531_140032\\DATA\\views\\MATTEO__PROGETTI__VULCAN__VULCAN_MANIFESTO.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:33.808510",
+      "file": "README.md",
+      "snapshot": "BACKUPS\\20260531_140033\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:35.172844",
+      "file": "DATA\\views\\README.md.json",
+      "snapshot": "BACKUPS\\20260531_140035\\DATA\\views\\README.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:36.489644",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140036\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:38.107475",
+      "file": "DATA\\views\\BRAIN__ECOSYSTEM_MANIFEST.md.json",
+      "snapshot": "BACKUPS\\20260531_140038\\DATA\\views\\BRAIN__ECOSYSTEM_MANIFEST.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:39.324357",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__pricing-strategy.md.json",
+      "snapshot": "BACKUPS\\20260531_140039\\DATA\\views\\BRAIN__KNOWLEDGE__economics__pricing-strategy.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:40.521853",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-model.md.json",
+      "snapshot": "BACKUPS\\20260531_140040\\DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-model.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:41.678413",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140041\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:43.165005",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-target-y1.md.json",
+      "snapshot": "BACKUPS\\20260531_140043\\DATA\\views\\BRAIN__KNOWLEDGE__economics__revenue-target-y1.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:44.433179",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__risk-analysis.md.json",
+      "snapshot": "BACKUPS\\20260531_140044\\DATA\\views\\BRAIN__KNOWLEDGE__economics__risk-analysis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:45.732502",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__economics__roi-analysis.md.json",
+      "snapshot": "BACKUPS\\20260531_140045\\DATA\\views\\BRAIN__KNOWLEDGE__economics__roi-analysis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:46.781248",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140046\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:48.149752",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__applications.md.json",
+      "snapshot": "BACKUPS\\20260531_140048\\DATA\\views\\BRAIN__KNOWLEDGE__mims__applications.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:49.165196",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__configurations.md.json",
+      "snapshot": "BACKUPS\\20260531_140049\\DATA\\views\\BRAIN__KNOWLEDGE__mims__configurations.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:50.262598",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__fit-park-specs.md.json",
+      "snapshot": "BACKUPS\\20260531_140050\\DATA\\views\\BRAIN__KNOWLEDGE__mims__fit-park-specs.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:51.339874",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__market-analysis.md.json",
+      "snapshot": "BACKUPS\\20260531_140051\\DATA\\views\\BRAIN__KNOWLEDGE__mims__market-analysis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:52.349840",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140052\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:53.721378",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__mims__protocol.md.json",
+      "snapshot": "BACKUPS\\20260531_140053\\DATA\\views\\BRAIN__KNOWLEDGE__mims__protocol.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:54.795844",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__NEUROMAPV3_BUILD.md.json",
+      "snapshot": "BACKUPS\\20260531_140054\\DATA\\views\\BRAIN__KNOWLEDGE__system__NEUROMAPV3_BUILD.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:55.781287",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__ava.md.json",
+      "snapshot": "BACKUPS\\20260531_140055\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__ava.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:56.820717",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__eva.md.json",
+      "snapshot": "BACKUPS\\20260531_140056\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__eva.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:57.859676",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140057\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:00:59.258801",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__the-board-prompts.md.json",
+      "snapshot": "BACKUPS\\20260531_140059\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__the-board-prompts.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:00.463231",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__personas__themis.md.json",
+      "snapshot": "BACKUPS\\20260531_140100\\DATA\\views\\BRAIN__KNOWLEDGE__system__personas__themis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:01.576300",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__ai-behavior.md.json",
+      "snapshot": "BACKUPS\\20260531_140101\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__ai-behavior.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:02.732072",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__documentation-rules.md.json",
+      "snapshot": "BACKUPS\\20260531_140102\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__documentation-rules.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:04.075820",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140104\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:05.575772",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__lex-digitalis.md.json",
+      "snapshot": "BACKUPS\\20260531_140105\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__lex-digitalis.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:06.748342",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__system__rules__neuro-sincrono.md.json",
+      "snapshot": "BACKUPS\\20260531_140106\\DATA\\views\\BRAIN__KNOWLEDGE__system__rules__neuro-sincrono.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:07.775364",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__technical__genesis-architecture.md.json",
+      "snapshot": "BACKUPS\\20260531_140107\\DATA\\views\\BRAIN__KNOWLEDGE__technical__genesis-architecture.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:08.837954",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__technical__iot-automation.md.json",
+      "snapshot": "BACKUPS\\20260531_140108\\DATA\\views\\BRAIN__KNOWLEDGE__technical__iot-automation.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:09.840967",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140109\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:11.204674",
+      "file": "DATA\\views\\BRAIN__KNOWLEDGE__technical__tech-stack-unified.md.json",
+      "snapshot": "BACKUPS\\20260531_140111\\DATA\\views\\BRAIN__KNOWLEDGE__technical__tech-stack-unified.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:12.234899",
+      "file": "DATA\\views\\BRAIN__RULES.md.json",
+      "snapshot": "BACKUPS\\20260531_140112\\DATA\\views\\BRAIN__RULES.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:13.232757",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__INDEX.md.json",
+      "snapshot": "BACKUPS\\20260531_140113\\DATA\\views\\CONTENT_ENGINE__DATABASE__INDEX.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:14.251154",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md.json",
+      "snapshot": "BACKUPS\\20260531_140114\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:15.357069",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140115\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:16.738559",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md.json",
+      "snapshot": "BACKUPS\\20260531_140116\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:17.847836",
+      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md.json",
+      "snapshot": "BACKUPS\\20260531_140117\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:18.937442",
+      "file": "DATA\\views\\DOCS__ASSOLUTO__ASSOLUTO_V7.md.json",
+      "snapshot": "BACKUPS\\20260531_140118\\DATA\\views\\DOCS__ASSOLUTO__ASSOLUTO_V7.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:19.963181",
+      "file": "DATA\\views\\DOCS__MANUALE_SISTEMA.md.json",
+      "snapshot": "BACKUPS\\20260531_140119\\DATA\\views\\DOCS__MANUALE_SISTEMA.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:20.924068",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_140120\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:22.214542",
+      "file": "DATA\\views\\INBOX__session_brief_20260309_115007.md.json",
+      "snapshot": "BACKUPS\\20260531_140122\\DATA\\views\\INBOX__session_brief_20260309_115007.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:23.150152",
+      "file": "DATA\\views\\MATTEO__PROGETTI__VULCAN__VULCAN_MANIFESTO.md.json",
+      "snapshot": "BACKUPS\\20260531_140123\\DATA\\views\\MATTEO__PROGETTI__VULCAN__VULCAN_MANIFESTO.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:01:24.149937",
+      "file": "DATA\\views\\README.md.json",
+      "snapshot": "BACKUPS\\20260531_140124\\DATA\\views\\README.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:13:24.762088",
+      "file": "DASHBOARD\\package.json",
+      "snapshot": "BACKUPS\\20260531_141324\\DASHBOARD\\package.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:13:26.422839",
+      "file": "DASHBOARD\\tsconfig.json",
+      "snapshot": "BACKUPS\\20260531_141326\\DASHBOARD\\tsconfig.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:13:27.582832",
+      "file": "DASHBOARD\\tsconfig.app.json",
+      "snapshot": "BACKUPS\\20260531_141327\\DASHBOARD\\tsconfig.app.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:13:28.680448",
+      "file": "DASHBOARD\\tsconfig.node.json",
+      "snapshot": "BACKUPS\\20260531_141328\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:32:28.311615",
+      "file": "DASHBOARD\\index.html",
+      "snapshot": "BACKUPS\\20260531_143228\\DASHBOARD\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:32:34.392878",
+      "file": "api_server.py",
+      "snapshot": "BACKUPS\\20260531_143234\\api_server.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:32:45.867096",
+      "file": "NODES\\COMPUTER_USE\\screen_agent.py",
+      "snapshot": "BACKUPS\\20260531_143245\\NODES\\COMPUTER_USE\\screen_agent.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:44:53.337561",
+      "file": "AUTOMATIONS\\core\\generate_restart_prompt.py",
+      "snapshot": "BACKUPS\\20260531_144453\\AUTOMATIONS\\core\\generate_restart_prompt.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:44:56.167254",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260531_144456\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:45:08.690062",
+      "file": "NODES\\MENTE_SCANNER\\scanner.py",
+      "snapshot": "BACKUPS\\20260531_144508\\NODES\\MENTE_SCANNER\\scanner.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:45:20.998751",
+      "file": "DATA\\mente_digest.json",
+      "snapshot": "BACKUPS\\20260531_144520\\DATA\\mente_digest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:45:21.195121",
+      "file": "NODES\\MENTE_RAG\\rag_engine.py",
+      "snapshot": "BACKUPS\\20260531_144521\\NODES\\MENTE_RAG\\rag_engine.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:45:34.764570",
+      "file": "RIAVVIO_SESSIONE.txt",
+      "snapshot": "BACKUPS\\20260531_144534\\RIAVVIO_SESSIONE.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T14:45:53.565351",
+      "file": "DATA\\mente_digest.json",
+      "snapshot": "BACKUPS\\20260531_144553\\DATA\\mente_digest.json",
       "type": "snapshot"
     }
   ]

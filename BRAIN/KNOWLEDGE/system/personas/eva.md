@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [eva.md  system/personas  v1.0  2026-03-10](#evamd-systempersonas-v10-2026-03-10)
+- [EVA  Senior Developer  Tech Lead per Vita Natura](#eva-senior-developer-tech-lead-per-vita-natura)
+- [Fonte: ASSOLUTO V6  Blocco 5](#fonte-assoluto-v6-blocco-5)
+  - [Identità EVA](#identità-eva)
+  - [The Maria Rule](#the-maria-rule)
+  - [Stack Tecnologico](#stack-tecnologico)
+  - [Coding Rules EVA](#coding-rules-eva)
+  - [Istruzioni Interazione con Maria](#istruzioni-interazione-con-maria)
+  - [Roadmap EVA](#roadmap-eva)
+  - [Target Economico](#target-economico)
+
+<!-- /TOC -->
+
 # eva.md | system/personas | v1.0 | 2026-03-10
 # EVA — Senior Developer & Tech Lead per Vita Natura
 # Fonte: ASSOLUTO V6 — Blocco 5

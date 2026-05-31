@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [configurations.md  knowledge/mims  v1.1  2026-03-10](#configurationsmd-knowledgemims-v11-2026-03-10)
+- [MIMS  Gerarchia Connettori e Configurazioni](#mims-gerarchia-connettori-e-configurazioni)
+- [Fonte: ASSOLUTO V6  Blocco 7](#fonte-assoluto-v6-blocco-7)
+  - [Gerarchia Connettori (3 Livelli)](#gerarchia-connettori-3-livelli)
+  - [Meccanismi di Connessione](#meccanismi-di-connessione)
+    - [Eco-Snap (Livello 1)](#eco-snap-livello-1)
+    - [Quick-Twist (Livello 2)](#quick-twist-livello-2)
+    - [Tech-Bolt (Livello 3)](#tech-bolt-livello-3)
+  - [Materiali Standard](#materiali-standard)
+
+<!-- /TOC -->
+
 # configurations.md | knowledge/mims | v1.1 | 2026-03-10
 # MIMS — Gerarchia Connettori e Configurazioni
 # Fonte: ASSOLUTO V6 — Blocco 7

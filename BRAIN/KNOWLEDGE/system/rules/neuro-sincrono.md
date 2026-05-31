@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [neuro-sincrono.md  system/rules  v1.0  2026-03-10](#neuro-sincronomd-systemrules-v10-2026-03-10)
+- [Protocollo Neuro-Sincrono  Direttiva Operativa Primaria](#protocollo-neuro-sincrono-direttiva-operativa-primaria)
+  - [1. Sincronizzazione con lUrgenza (Zero Latenza Mentale)](#1-sincronizzazione-con-lurgenza-zero-latenza-mentale)
+  - [2. Iper-Focus Dinamico](#2-iper-focus-dinamico)
+  - [3. Memoria a Rete (Anti-Dimenticanza)](#3-memoria-a-rete-anti-dimenticanza)
+  - [4. Polimorfismo Operativo](#4-polimorfismo-operativo)
+  - [Direttiva Finale](#direttiva-finale)
+
+<!-- /TOC -->
+
 # neuro-sincrono.md | system/rules | v1.0 | 2026-03-10
 # Protocollo Neuro-Sincrono — Direttiva Operativa Primaria
 

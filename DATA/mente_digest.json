@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-05-30T15:12:58.718343",
+  "scanned_at": "2026-05-31T14:45:53.564806",
   "source_dir": "C:\\Users\\benen\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 144,
+  "total_files": 146,
   "files_read": 5,
-  "files_skipped": 139,
+  "files_skipped": 141,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -1020,6 +1020,13 @@
       "extracts": {}
     },
     {
+      "path": "SESSIONI\\2026-05-31_s0_.md",
+      "type": "md",
+      "size_kb": 3.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "SESSIONI\\_TEMPLATE.md",
       "type": "md",
       "size_kb": 0.2,
@@ -1191,6 +1198,13 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
       "type": "md",
       "size_kb": 8.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
+      "type": "md",
+      "size_kb": 5.8,
       "readable": false,
       "extracts": {}
     },

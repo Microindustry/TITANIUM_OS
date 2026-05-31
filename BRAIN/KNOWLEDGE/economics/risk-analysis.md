@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [risk-analysis.md  knowledge/economics  v1.0  2026-03-10](#risk-analysismd-knowledgeeconomics-v10-2026-03-10)
+- [Stress Test e Difesa  Analisi Rischi](#stress-test-e-difesa-analisi-rischi)
+- [Fonte: ASSOLUTO V6  Blocco 1](#fonte-assoluto-v6-blocco-1)
+  - [Rischio Qualità HubSpoke](#rischio-qualità-hubspoke)
+  - [Rischio Noleggio Fit Park](#rischio-noleggio-fit-park)
+  - [Rischio Finanziario](#rischio-finanziario)
+  - [Piano Difesa Pre-Mortem](#piano-difesa-pre-mortem)
+
+<!-- /TOC -->
+
 # risk-analysis.md | knowledge/economics | v1.0 | 2026-03-10
 # Stress Test e Difesa — Analisi Rischi
 # Fonte: ASSOLUTO V6 — Blocco 1

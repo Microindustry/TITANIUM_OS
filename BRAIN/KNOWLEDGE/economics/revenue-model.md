@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [revenue-model.md  knowledge/economics  v1.0  2026-03-10](#revenue-modelmd-knowledgeeconomics-v10-2026-03-10)
+- [Modello di Revenue  Triade dei Flussi](#modello-di-revenue-triade-dei-flussi)
+- [Fonte: ASSOLUTO V6  Blocco 1](#fonte-assoluto-v6-blocco-1)
+  - [Triade dei Flussi (Diversificazione)](#triade-dei-flussi-diversificazione)
+  - [Business Model MIMS  Cavallo di Troia](#business-model-mims-cavallo-di-troia)
+  - [Hub  Spoke (Fabbrica Liquida)](#hub-spoke-fabbrica-liquida)
+  - [Creators Program (Viral RD)](#creators-program-viral-rd)
+  - [Fit Park 4.0](#fit-park-40)
+
+<!-- /TOC -->
+
 # revenue-model.md | knowledge/economics | v1.0 | 2026-03-10
 # Modello di Revenue — Triade dei Flussi
 # Fonte: ASSOLUTO V6 — Blocco 1

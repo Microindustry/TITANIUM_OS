@@ -1,3 +1,19 @@
+<!-- TOC -->
+
+- [CONTENT ENGINE  DATABASE EPISODI](#content-engine-database-episodi)
+  - [TITANIUM_OS  Archivio narrativo completo](#titaniumos-archivio-narrativo-completo)
+  - [STRUTTURA STAGIONI](#struttura-stagioni)
+  - [S0  ORIGINI (pre-sistema)](#s0-origini-pre-sistema)
+  - [S1  IL PRESENTE (storia principale)](#s1-il-presente-storia-principale)
+  - [S2  IL SISTEMA (maggio 2026  il sistema che impara)](#s2-il-sistema-maggio-2026-il-sistema-che-impara)
+  - [S3  LA COSTRUZIONE (in produzione  build log fisici)](#s3-la-costruzione-in-produzione-build-log-fisici)
+  - [MOMENTI  Episodi intermezzo (5-7 min)](#momenti-episodi-intermezzo-5-7-min)
+  - [AUTO  Generati da milestone STATE.json](#auto-generati-da-milestone-statejson)
+  - [AUTOMAZIONE STORY AGENT](#automazione-story-agent)
+  - [VISION FUTURA  S4](#vision-futura-s4)
+
+<!-- /TOC -->
+
 # CONTENT ENGINE — DATABASE EPISODI
 ## TITANIUM_OS — Archivio narrativo completo
 *Aggiornato: 2026-05-29 | Episodi totali: 36+*

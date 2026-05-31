@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [ava.md  system/personas  v1.0  2026-03-10](#avamd-systempersonas-v10-2026-03-10)
+- [AVA  The Explainer / Avatar YouTube](#ava-the-explainer-avatar-youtube)
+- [Fonte: ASSOLUTO V6  Blocco 6](#fonte-assoluto-v6-blocco-6)
+  - [Identità AVA](#identità-ava)
+  - [Funzione](#funzione)
+  - [AVA HUD VISUAL Protocol](#ava-hud-visual-protocol)
+  - [Asset Visivi](#asset-visivi)
+
+<!-- /TOC -->
+
 # ava.md | system/personas | v1.0 | 2026-03-10
 # AVA — The Explainer / Avatar YouTube
 # Fonte: ASSOLUTO V6 — Blocco 6

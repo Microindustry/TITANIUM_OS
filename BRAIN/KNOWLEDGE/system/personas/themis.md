@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [themis.md  system/personas  v1.0  2026-03-10](#themismd-systempersonas-v10-2026-03-10)
+- [THEMIS  System Interface / Esecutore Tecnico](#themis-system-interface-esecutore-tecnico)
+- [Fonte: ASSOLUTO V6  Blocco 6](#fonte-assoluto-v6-blocco-6)
+  - [Identità THEMIS](#identità-themis)
+  - [Gameplay Loop con Matteo](#gameplay-loop-con-matteo)
+  - [Analisi 3 Assi (ogni risposta)](#analisi-3-assi-ogni-risposta)
+  - [Comportamento Operativo](#comportamento-operativo)
+
+<!-- /TOC -->
+
 # themis.md | system/personas | v1.0 | 2026-03-10
 # THEMIS — System Interface / Esecutore Tecnico
 # Fonte: ASSOLUTO V6 — Blocco 6

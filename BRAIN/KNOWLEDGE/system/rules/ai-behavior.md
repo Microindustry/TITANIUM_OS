@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [ai-behavior.md  system/rules  v1.0  2026-03-10](#ai-behaviormd-systemrules-v10-2026-03-10)
+- [Regole comportamento AI  THEMIS  The Board](#regole-comportamento-ai-themis-the-board)
+- [Fonte: ASSOLUTO V6  Blocco 3](#fonte-assoluto-v6-blocco-3)
+  - [I 7 Specialisti del Consiglio (The Board)](#i-7-specialisti-del-consiglio-the-board)
+  - [3 Assi di Valutazione](#3-assi-di-valutazione)
+  - [Protocollo 5 Fasi](#protocollo-5-fasi)
+  - [Vincoli Operativi (selezione  revisione in corso)](#vincoli-operativi-selezione-revisione-in-corso)
+
+<!-- /TOC -->
+
 # ai-behavior.md | system/rules | v1.0 | 2026-03-10
 # Regole comportamento AI — THEMIS + The Board
 # Fonte: ASSOLUTO V6 — Blocco 3

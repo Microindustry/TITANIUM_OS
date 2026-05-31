@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [fit-park-specs.md  knowledge/mims  v1.0  2026-03-10](#fit-park-specsmd-knowledgemims-v10-2026-03-10)
+- [Fit Park 4.0  Specifiche Tecniche](#fit-park-40-specifiche-tecniche)
+- [Fonte: ASSOLUTO V6  revenue-model.md  applications.md](#fonte-assoluto-v6-revenue-modelmd-applicationsmd)
+  - [Concept](#concept)
+  - [Specifiche Strutturali](#specifiche-strutturali)
+  - [Accesso e Pagamento](#accesso-e-pagamento)
+  - [Economia](#economia)
+  - [Manutenzione Preventiva](#manutenzione-preventiva)
+  - [Rischi e Mitigazioni](#rischi-e-mitigazioni)
+  - [DA COMPLETARE (bloccanti prima di produzione)](#da-completare-bloccanti-prima-di-produzione)
+
+<!-- /TOC -->
+
 # fit-park-specs.md | knowledge/mims | v1.0 | 2026-03-10
 # Fit Park 4.0 — Specifiche Tecniche
 # Fonte: ASSOLUTO V6 + revenue-model.md + applications.md

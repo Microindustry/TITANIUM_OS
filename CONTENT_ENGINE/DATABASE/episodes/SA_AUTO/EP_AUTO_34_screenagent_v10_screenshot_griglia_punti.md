@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [EP_AUTO_34  Milestone](#epauto34-milestone)
+    - [ScreenAgent v1.0 - screenshot  griglia puntini rossi 20x15](#screenagent-v10---screenshot-griglia-puntini-rossi-20x15)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [ScreenAgent v1.0: Quando la macchina ha imparato a guardare](#screenagent-v10-quando-la-macchina-ha-imparato-a-guardare)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima cera solo testo](#atto-i-prima-cera-solo-testo)
+  - [ATTO II  Trenta maggio 2026](#atto-ii-trenta-maggio-2026)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AUTO_34 — Milestone
 ### "ScreenAgent v1.0 - screenshot + griglia puntini rossi 20x15 "
 

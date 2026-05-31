@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_AUTO_35  Milestone](#epauto35-milestone)
+    - [ARGUS v2.0 - architettura ibrida OmniParserSonnet: L1 YOLO](#argus-v20---architettura-ibrida-omniparsersonnet-l1-yolo)
+- [Il Sistema  Episodio 23](#il-sistema-episodio-23)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Problema dei Occhi Ciechi](#atto-i-il-problema-dei-occhi-ciechi)
+  - [ATTO II  Tre Strati, Una Gerarchia](#atto-ii-tre-strati-una-gerarchia)
+  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
+
+<!-- /TOC -->
+
 # EP_AUTO_35 — Milestone
 ### "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet: L1 YOLO+"
 
