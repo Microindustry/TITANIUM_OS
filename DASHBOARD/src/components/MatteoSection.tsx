@@ -23,7 +23,6 @@ function NodeTile({
 }) {
   const [open, setOpen] = useState(false);
   const st = ST[node.status];
-  const Icon = st.icon;
   const { done, total, active, pct } = nodeProgress(node);
   const hasChildren = !node.isLeaf && (node.children?.length ?? 0) > 0;
   const isClickable = hasChildren && onClick;

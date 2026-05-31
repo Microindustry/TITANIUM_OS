@@ -1,4 +1,4 @@
-// skillTreeData.ts | TITANIUM_OS / DASHBOARD | v2.0 | 2026-05-31
+// skillTreeData.ts | TITANIUM_OS / DASHBOARD | v3.0 | 2026-05-31
 // Skill tree Matteo — gerarchia N livelli: Aree → Categorie → Skill → Dettaglio
 
 export type SkillStatus = "done" | "active" | "blocked" | "future";
@@ -26,6 +26,7 @@ const rose    = { color: "text-rose-400",    border: "border-rose-500/40",    bg
 const violet  = { color: "text-violet-400",  border: "border-violet-500/40",  bg: "bg-violet-950/20",  dot: "bg-violet-400"  };
 const orange  = { color: "text-orange-400",  border: "border-orange-500/40",  bg: "bg-orange-950/20",  dot: "bg-orange-400"  };
 const slate   = { color: "text-slate-400",   border: "border-slate-600/30",   bg: "bg-slate-800/20",   dot: "bg-slate-500"   };
+const teal    = { color: "text-teal-400",    border: "border-teal-500/40",    bg: "bg-teal-950/20",    dot: "bg-teal-400"    };
 
 function leaf(id: string, label: string, status: SkillStatus, note?: string): SkillNode {
   const c = status === "done" ? emerald : status === "active" ? amber : status === "blocked" ? { color:"text-slate-500", border:"border-slate-700/30", bg:"bg-slate-900/40", dot:"bg-slate-600" } : { color:"text-slate-700", border:"border-slate-800/20", bg:"bg-slate-900/20", dot:"bg-slate-800" };
@@ -45,20 +46,45 @@ export const SKILL_ROOT: SkillNode = {
     {
       id: "fondamenta", label: "Fondamenta", icon: "⚡", status: "done", ...emerald,
       children: [
-        leaf("f01", "TIG acciaio strutturale", "done", "15 anni officina"),
-        leaf("f02", "TIG titanio gr.1/gr.2", "done", "SCProject MotoGP — corrente 200A"),
-        leaf("f03", "MIG acciaio / inox", "done", "officina propria"),
-        leaf("f04", "Lettura disegno tecnico", "done"),
-        leaf("f05", "Metrologia (calibro, micrometro, comparatore)", "done"),
-        leaf("f06", "Robot Panasonic — programmazione percorsi", "done", "ESSEGI"),
-        leaf("f07", "Robot cobot — setup fixture", "done", "ESSEGI"),
-        leaf("f08", "Presse industriali", "done", "DATWLER"),
-        leaf("f09", "QC linea di produzione", "done", "LU.VE refrigerazione"),
-        leaf("f10", "Tornio manuale (base)", "done"),
-        leaf("f11", "Fresatrice manuale (base)", "done"),
-        leaf("f12", "Taglio plasma / smerigliatrice angolare", "done"),
-        leaf("f13", "Lettura schemi elettrici", "done"),
-        leaf("f14", "Saldatura a punti / resistenza", "done"),
+
+        {
+          id: "fond_saldatura", label: "Saldatura", icon: "🔥", status: "done", ...emerald,
+          children: [
+            leaf("f01", "TIG acciaio strutturale", "done", "15 anni officina"),
+            leaf("f02", "TIG titanio gr.1/gr.2", "done", "SCProject MotoGP — corrente 200A"),
+            leaf("f03", "MIG acciaio / inox", "done", "officina propria"),
+            leaf("f14", "Saldatura a punti / resistenza", "done"),
+          ],
+        },
+
+        {
+          id: "fond_lavorazione", label: "Lavorazione meccanica", icon: "⚙", status: "done", ...emerald,
+          children: [
+            leaf("f10", "Tornio manuale (base)", "done"),
+            leaf("f11", "Fresatrice manuale (base)", "done"),
+            leaf("f12", "Taglio plasma / smerigliatrice angolare", "done"),
+          ],
+        },
+
+        {
+          id: "fond_automazione", label: "Automazione industriale", icon: "🤖", status: "done", ...emerald,
+          children: [
+            leaf("f06", "Robot Panasonic — programmazione percorsi", "done", "ESSEGI"),
+            leaf("f07", "Robot cobot — setup fixture", "done", "ESSEGI"),
+            leaf("f08", "Presse industriali", "done", "DATWLER"),
+          ],
+        },
+
+        {
+          id: "fond_qualita", label: "Qualità & Basi tecniche", icon: "📐", status: "done", ...emerald,
+          children: [
+            leaf("f04", "Lettura disegno tecnico", "done"),
+            leaf("f05", "Metrologia (calibro, micrometro, comparatore)", "done"),
+            leaf("f09", "QC linea di produzione", "done", "LU.VE refrigerazione"),
+            leaf("f13", "Lettura schemi elettrici", "done"),
+          ],
+        },
+
       ],
     },
 
@@ -67,7 +93,6 @@ export const SKILL_ROOT: SkillNode = {
       id: "v32", label: "V32 CNC", icon: "🔩", status: "active", ...amber,
       children: [
 
-        // Struttura
         {
           id: "v32_struttura", label: "Struttura meccanica", icon: "🏗", status: "active", ...amber,
           children: [
@@ -86,7 +111,6 @@ export const SKILL_ROOT: SkillNode = {
           ],
         },
 
-        // Cinematica
         {
           id: "v32_cinematica", label: "Cinematica", icon: "↔", status: "active", ...amber,
           children: [
@@ -105,7 +129,6 @@ export const SKILL_ROOT: SkillNode = {
           ],
         },
 
-        // Azionamenti
         {
           id: "v32_azionamenti", label: "Azionamenti", icon: "⚙", status: "active", ...amber,
           children: [
@@ -124,7 +147,6 @@ export const SKILL_ROOT: SkillNode = {
           ],
         },
 
-        // Controllo
         {
           id: "v32_controllo", label: "Controllo PLC/HMI", icon: "🖥", status: "active", ...cyan,
           children: [
@@ -143,7 +165,6 @@ export const SKILL_ROOT: SkillNode = {
           ],
         },
 
-        // Sensoristica
         {
           id: "v32_sensori", label: "Sensoristica", icon: "📡", status: "active", ...indigo,
           children: [
@@ -158,7 +179,6 @@ export const SKILL_ROOT: SkillNode = {
           ],
         },
 
-        // Validazione
         {
           id: "v32_validazione", label: "Validazione e prima parte", icon: "✓", status: "future", ...rose,
           children: [
@@ -172,6 +192,7 @@ export const SKILL_ROOT: SkillNode = {
             leaf("v08", "ROI 322% anno 1 documentato", "future"),
           ],
         },
+
       ],
     },
 
@@ -179,49 +200,118 @@ export const SKILL_ROOT: SkillNode = {
     {
       id: "software", label: "Software & AI", icon: "🧠", status: "active", ...violet,
       children: [
-        leaf("sw01", "Python 3.11 — scripting + automazioni", "done"),
-        leaf("sw02", "Flask API server", "done"),
-        leaf("sw03", "React 19 + TypeScript", "done"),
-        leaf("sw04", "RAG ibrido — ChromaDB + BM25 + CrossEncoder", "done"),
-        leaf("sw05", "MCP server (Model Context Protocol)", "done"),
-        leaf("sw06", "Multi-agente NEXUS swarm", "done"),
-        leaf("sw07", "Computer use ARGUS v2 — OmniParser", "done"),
-        leaf("sw08", "Story Agent — git commit → episodio podcast", "done"),
-        leaf("sw09", "Dashboard React 19 — v7.0", "done"),
-        leaf("sw10", "n8n workflow automation", "active"),
-        leaf("sw11", "EVA WhatsApp Business API", "blocked"),
-        leaf("sw12", "Fine-tuning LLM su dataset TITANIUM_OS", "future"),
-        leaf("sw13", "Modello proprio dominio manifatturiero", "future"),
-        leaf("sw14", "AVA YouTube avatar", "future"),
+
+        {
+          id: "sw_infra", label: "Infrastruttura", icon: "🏗", status: "done", ...violet,
+          children: [
+            leaf("sw01", "Python 3.11 — scripting + automazioni", "done"),
+            leaf("sw02", "Flask API server", "done"),
+            leaf("sw03", "React 19 + TypeScript", "done"),
+            leaf("sw09", "Dashboard React 19 — v7.0", "done"),
+          ],
+        },
+
+        {
+          id: "sw_ai", label: "AI & Agenti", icon: "🤖", status: "done", ...violet,
+          children: [
+            leaf("sw04", "RAG ibrido — ChromaDB + BM25 + CrossEncoder", "done"),
+            leaf("sw05", "MCP server (Model Context Protocol)", "done"),
+            leaf("sw06", "Multi-agente NEXUS swarm", "done"),
+            leaf("sw07", "Computer use ARGUS v2 — OmniParser", "done"),
+          ],
+        },
+
+        {
+          id: "sw_automazione", label: "Automazione & Workflow", icon: "⚡", status: "active", ...violet,
+          children: [
+            leaf("sw08", "Story Agent — git commit → episodio podcast", "done"),
+            leaf("sw10", "n8n workflow automation", "active"),
+            leaf("sw11", "EVA WhatsApp Business API", "blocked"),
+          ],
+        },
+
+        {
+          id: "sw_proprio", label: "AI proprietaria", icon: "🔮", status: "future", ...violet,
+          children: [
+            leaf("sw12", "Fine-tuning LLM su dataset TITANIUM_OS", "future"),
+            leaf("sw13", "Modello proprio dominio manifatturiero", "future"),
+            leaf("sw14", "AVA YouTube avatar", "future"),
+          ],
+        },
+
       ],
     },
 
-    // ── VULCAN — bloccato da v32_validazione ──────────────────────────────────
+    // ── VULCAN ────────────────────────────────────────────────────────────────
     {
       id: "vulcan", label: "VULCAN", icon: "🔥", status: "blocked", ...orange,
       note: "Si sblocca quando V32 produce il primo componente MIMS",
       children: [
-        leaf("vl01", "Pressa 20t colonne guida montate", "done"),
-        leaf("vl02", "Ricetta polimero A — PA-GF30 base", "future"),
-        leaf("vl03", "Ricetta polimero B — composito rinforzato", "future"),
-        leaf("vl04", "Ricetta polimero C — alta temperatura", "future"),
-        leaf("vl05", "Stampo test MIMS Light in ABS", "future"),
-        leaf("vl06", "Primo tile MIMS Heavy prodotto", "future"),
-        leaf("vl07", "Brevetto processo polimeri depositato", "future"),
+
+        {
+          id: "vl_hardware", label: "Hardware pressa", icon: "🏭", status: "done", ...orange,
+          children: [
+            leaf("vl01", "Pressa 20t colonne guida montate", "done"),
+          ],
+        },
+
+        {
+          id: "vl_materiali", label: "Ricette materiali", icon: "🧪", status: "blocked", ...orange,
+          children: [
+            leaf("vl02", "Ricetta polimero A — PA-GF30 base", "future"),
+            leaf("vl03", "Ricetta polimero B — composito rinforzato", "future"),
+            leaf("vl04", "Ricetta polimero C — alta temperatura", "future"),
+          ],
+        },
+
+        {
+          id: "vl_produzione", label: "Produzione MIMS", icon: "⚙", status: "blocked", ...orange,
+          children: [
+            leaf("vl05", "Stampo test MIMS Light in ABS", "future"),
+            leaf("vl06", "Primo tile MIMS Heavy prodotto", "future"),
+          ],
+        },
+
+        {
+          id: "vl_ip", label: "IP & Business", icon: "📜", status: "future", ...orange,
+          children: [
+            leaf("vl07", "Brevetto processo polimeri depositato", "future"),
+          ],
+        },
+
       ],
     },
 
     // ── PRECISION LAB ─────────────────────────────────────────────────────────
     {
-      id: "precision_lab", label: "Precision Lab", icon: "🏭", status: "blocked", ...emerald,
+      id: "precision_lab", label: "Precision Lab", icon: "🏭", status: "blocked", ...teal,
       note: "Si sblocca con V32 operativa — EUR 45/h",
       children: [
-        leaf("pl01", "Prima lavorazione cliente — EUR 45/h", "future"),
-        leaf("pl02", "BEP superato — V32 si ripaga", "future"),
-        leaf("pl03", "Listino materiali — Alu, acciaio, titanio", "future"),
-        leaf("pl04", "Workflow preventivo → produzione → consegna", "future"),
-        leaf("pl05", "Prima partnership B2B", "future"),
-        leaf("pl06", "Cashflow dal laboratorio finanzia VULCAN", "future"),
+
+        {
+          id: "pl_lancio", label: "Lancio commerciale", icon: "🚀", status: "blocked", ...teal,
+          children: [
+            leaf("pl01", "Prima lavorazione cliente — EUR 45/h", "future"),
+            leaf("pl02", "BEP superato — V32 si ripaga", "future"),
+          ],
+        },
+
+        {
+          id: "pl_operativo", label: "Operativo", icon: "📋", status: "blocked", ...teal,
+          children: [
+            leaf("pl03", "Listino materiali — Alu, acciaio, titanio", "future"),
+            leaf("pl04", "Workflow preventivo → produzione → consegna", "future"),
+          ],
+        },
+
+        {
+          id: "pl_scala", label: "Scala & Partnership", icon: "📈", status: "future", ...teal,
+          children: [
+            leaf("pl05", "Prima partnership B2B", "future"),
+            leaf("pl06", "Cashflow dal laboratorio finanzia VULCAN", "future"),
+          ],
+        },
+
       ],
     },
 
@@ -230,16 +320,42 @@ export const SKILL_ROOT: SkillNode = {
       id: "capannone", label: "Capannone 2030", icon: "🎯", status: "future", ...slate,
       note: "Target: 15 Luglio 2030",
       children: [
-        leaf("cp01", "Capitale accumulato dal Precision Lab", "future"),
-        leaf("cp02", "Capannone trovato e affittato", "future"),
-        leaf("cp03", "V32 spostata e reinstallata", "future"),
-        leaf("cp04", "VULCAN operativo nel capannone", "future"),
-        leaf("cp05", "Prima produzione MIMS industriale", "future"),
-        leaf("cp06", "Team — primo collaboratore assunto", "future"),
-        leaf("cp07", "Fit Park 4.0 — prima installazione", "future"),
-        leaf("cp08", "Libertà — 15 Luglio 2030", "future"),
+
+        {
+          id: "cap_finanziario", label: "Capitale & Spazio", icon: "💰", status: "future", ...slate,
+          children: [
+            leaf("cp01", "Capitale accumulato dal Precision Lab", "future"),
+            leaf("cp02", "Capannone trovato e affittato", "future"),
+          ],
+        },
+
+        {
+          id: "cap_setup", label: "Setup macchine", icon: "🔩", status: "future", ...slate,
+          children: [
+            leaf("cp03", "V32 spostata e reinstallata", "future"),
+            leaf("cp04", "VULCAN operativo nel capannone", "future"),
+          ],
+        },
+
+        {
+          id: "cap_produzione", label: "Produzione & Team", icon: "👥", status: "future", ...slate,
+          children: [
+            leaf("cp05", "Prima produzione MIMS industriale", "future"),
+            leaf("cp06", "Team — primo collaboratore assunto", "future"),
+          ],
+        },
+
+        {
+          id: "cap_visione", label: "Visione", icon: "🌟", status: "future", ...slate,
+          children: [
+            leaf("cp07", "Fit Park 4.0 — prima installazione", "future"),
+            leaf("cp08", "Libertà — 15 Luglio 2030", "future"),
+          ],
+        },
+
       ],
     },
+
   ],
 };
 
