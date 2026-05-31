@@ -1,72 +1,82 @@
-=== RIAVVIO SESSIONE #18 — 31/05/2026 15:10 ===
-Ultima sessione: #17 — 2026-05-31
+=== RIAVVIO SESSIONE #19 — 31/05/2026 15:30 ===
+Ultima sessione: #18 — 2026-05-31
 
 ━━━ STAVAMO PARLANDO DI ━━━
-skillTreeData v3.0 — sub-categorie N livelli scalate su tutti i nodi dell'albero.
-V32 aveva già 6 categorie (Struttura, Cinematica, Azionamenti, Controllo, Sensoristica, Validazione).
-Sessione 17: stesso pattern applicato a Fondamenta (4 cat), Software&AI (4 cat), VULCAN (4 cat), Precision Lab (3 cat), Capannone (4 cat).
-MatteoSection.tsx invariata — navStack già N-livelli generica.
+MIMS — analisi profonda da ASSOLUTO_V7 + MENTE/MIMS/ + file SINAPSI.
+Poi implementazione view MIMS N-livelli nella dashboard (stesso pattern skill tree).
+In parallelo: costruzione del pattern N-livelli come architettura universale per tutto il sito.
 
 ━━━ TOPIC ATTIVI ━━━
-  • skillTreeData v3.0 — N livelli su tutti i nodi (DONE, pushato 54750ba)
-  • MatteoSection v3.0 — navStack N livelli immersivo
-  • Dashboard v7.0+ — AutomationsView, MimsRoom v2, NightScheduleWidget
-  • GitHub vetrina pitch investitori — profile README + cognitive-os LIVE
-  • Incontro investitori — partner software Microindustry go-to-market
+  • MimsSection v1.0 — navStack N-livelli PUSHATO (commit b76aecb)
+  • mimsData.ts — 5 aree, 19 categorie, 57 foglie con dati reali da ASSOLUTO_V7
+  • Pattern N-livelli — da applicare a tutto il sito (REGOLA ARCHITETTONICA)
+  • skillTreeData v3.0 — sub-categorie N-livelli su tutti i nodi (sessione precedente)
+  • MIMS memory — 3 file memoria scritti (core, market, ip)
+
+━━━ REGOLA ARCHITETTONICA N-LIVELLI (SALVA BENE) ━━━
+  Il pattern N-livelli è la BASE di tutto il sito dashboard.
+  Struttura: Area → Categorie → Foglie (→ micro-passi futuri)
+  Implementazione tecnica:
+    - Data file: SkillNode[] con isLeaf flag, status, color, note
+    - Componente: navStack (useState array), NodeTile, NodeLevel
+    - NodeTile: gestisce sia categorie (drill-in) che foglie (expand note)
+    - NodeLevel: griglia categorie (2-3 col lg) + griglia foglie (2-4 col xl)
+    - Breadcrumb: stack di navigazione con goTo(idx) per salto diretto
+    - Stat header: done/active/blocked/future + progress bar
+  File di riferimento:
+    DASHBOARD/src/data/skillTreeData.ts (v3.0) — pattern skill tree
+    DASHBOARD/src/data/mimsData.ts (v1.0) — pattern MIMS
+    DASHBOARD/src/components/MatteoSection.tsx (v3.0) — componente NavStack
+    DASHBOARD/src/components/MimsSection.tsx (v1.0) — componente NavStack MIMS
+  Da applicare ancora a: V32 view, GENESIS view, EVA view, VITA NATURA view
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → Livelli SOTTO ogni skill foglia (micro-passi checklist di esecuzione)
-      — era la domanda aperta della sessione 16, ancora da decidere
-  → Pitch investitori — prep materiale deck quando torna dall'incontro
+  → Applicare N-livelli alle altre view: V32, GENESIS, EVA — "prima però vanno modificate altre cose" (Matteo)
+  → Decidere cosa va modificato prima nel sito (Matteo non ha specificato)
+  → Micro-passi (livello sotto ogni foglia) — checklist esecuzione — da valutare se implementare
+  → Pitch investitori — partner software Microindustry go-to-market — imminente
   → V32 fisico: gusset Z sinistra da saldare (La Taverna)
   → EVA WhatsApp pilot — ancora pending
-  → n8n workflow automation — sw10 status "active"
+  → Eco-Snap costo produzione da chiarire: V6=€0.08 vs V7=€0.30 (+275%)
+  → Fit Park: dati base mancanti (dimensioni, attrezzi, costo kit) — da completare o togliere da roadmap
 
 ━━━ DECISIONI PRESE IN QUESTA SESSIONE ━━━
-  ✓ Sub-categorie aggiunte a tutti i nodi: Fondamenta/Software/VULCAN/Precision Lab/Capannone
-  ✓ Fondamenta: Saldatura | Lavorazione meccanica | Automazione industriale | Qualità & Basi tecniche
-  ✓ Software&AI: Infrastruttura | AI & Agenti | Automazione & Workflow | AI proprietaria
-  ✓ VULCAN: Hardware pressa | Ricette materiali | Produzione MIMS | IP & Business
-  ✓ Precision Lab: Lancio commerciale | Operativo | Scala & Partnership
-  ✓ Capannone: Capitale & Spazio | Setup macchine | Produzione & Team | Visione
-  ✓ Fix unused vars: pink rimosso da skillTreeData.ts, Icon rimosso da MatteoSection.tsx
-  ✓ Regola appresa: /verify va tagliato presto — minima spesa massima resa
+  ✓ Pattern N-livelli = architettura universale per TUTTA la dashboard
+  ✓ skillTreeData v3.0 — sub-categorie aggiunte a tutti i nodi (sessione 17)
+  ✓ MimsSection v1.0 — view MIMS N-livelli (5 aree, 57 foglie, dati reali)
+  ✓ Fit Park NON è il focus di MIMS — è n.13 di 14 applicazioni
+  ✓ Competitor MIMS = alluminio estruso T-slot (Bosch, Item, 80/20, Vention)
+  ✓ Idea subscription box (KiwiCo-style) — da rielaborare, non ora
+  ✓ MIMS-DMP è il materiale chiave brevettabile (δ>0.05 vs Epoxy Granite)
+  ✓ B2 brevetto URGENTE — dopo 100 pezzi venduti
+  ✓ Trade secrets: MAI pubblicare ricette complete (%), solo "cosa" e "perché"
+  ✓ Memory MIMS scritta: project_mims_core.md + project_mims_market.md + project_mims_ip.md
 
-━━━ STATO SKILL TREE (skillTreeData.ts v3.0) ━━━
-  114 foglie totali
-  Root → 6 aree → categorie → skill foglie
-  V32: 6 cat (Struttura/Cinematica/Azionamenti/Controllo/Sensoristica/Validazione) — invariato
-  Fondamenta: 4 cat — tutte DONE (14 foglie)
-  Software&AI: 4 cat — 9 done, 1 active (n8n), 1 blocked (EVA), 3 future
-  VULCAN: 4 cat — 1 done (pressa), resto blocked/future
-  Precision Lab: 3 cat — tutto future (bloccato da V32)
-  Capannone: 4 cat — tutto future (target 2030)
-
-  File: DASHBOARD/src/data/skillTreeData.ts (v3.0)
-  Componente: DASHBOARD/src/components/MatteoSection.tsx (v3.0, invariata)
-
-━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Decidere sui micro-passi (livello sotto ogni skill foglia):
-  - Checklist esecuzione per ogni skill (3-5 sotto-passi pratici)
-  - Es: "Gusset 200mm colonna Z sinistra" → [Misura posizione, Taglio piastra, Punti di tack, Saldatura TIG, Verifica perpendicolare]
-  - Implementare solo se ha valore navigabile — non per decorazione
+━━━ MIMS — DATI CHIAVE DA RICORDARE ━━━
+  DNA: tile 190×190mm, D29.9mm H7/g6, foro Ø16mm
+  3 giunti: Eco-Snap (€1.50, 0 utensili) → Quick-Twist (€4, 0 utensili) → Tech-Bolt (€7, chiave 13mm)
+  7 materiali: STD/HVY/DMP/ECO/FLR/ACS/MET — stesso stampo
+  TAM €4.2B / SAM €180M / SOM Y3 €300-450K
+  Margini B2C: 78-82%
+  Prima applicazione da attaccare: banco lavoro maker + rack utensili (Q4 2026)
 
 ━━━ BLOCKERS ━━━
-  ⚠ Mandrino 2.2kW ER20 da ordinare (BLOCKER V32 principale)
+  ⚠ Mandrino 2.2kW ER20 da ordinare (BLOCKER V32)
   ⚠ Silent blocks: decisione v.A vs v.B (prerequisito V8)
+  ⚠ V32 non completata → VULCAN bloccata → MIMS produzione bloccata
 
 ━━━ STATO PILASTRI ━━━
   V32: 65% — Config G gusset + diagonali + tiranti M10
-  MIMS: 30% — attende catena V32→VULCAN
-  GENESIS: 83% — Dashboard v7.0+, EVA pending
-  VITA_NATURA: 40% — EVA WhatsApp bot
-  IDENTITY: 50% — Skill tree N livelli v3.0
+  MIMS: 30% — design completo, attende V32→VULCAN
+  GENESIS: 83% — Dashboard v7.0+ con MimsSection N-livelli
+  VITA_NATURA: 40% — EVA WhatsApp pending
+  IDENTITY: 50% — Skill tree N-livelli v3.0
 
 ━━━ ULTIMI COMMIT ━━━
-  54750ba feat: skillTreeData v3.0 -- sub-categorie N livelli su tutti i nodi
-  acb993d chore: sync completo sessione 16 -- BRAIN, CONTENT_ENGINE, DOCS, VERSIONS, INBOX
-  54cea7a session: salvataggio sessione 16 -- skill tree N livelli + pitch investitori
-  6476182 feat: MatteoSection v3.0 -- navStack N livelli, mappa navigabile immersiva tile grandi
-  8d0fdce feat: MatteoSection skill tree v2.0 -- caselle sbloccabili per milestone V32+ecosistema
+  b76aecb feat: MimsSection v1.0 -- view MIMS N-livelli navStack
+  a40400d session: salvataggio sessione 17 -- skillTreeData v3.0
+  54750ba feat: skillTreeData v3.0 -- sub-categorie N livelli tutti i nodi
+  acb993d chore: sync completo sessione 16
+  54cea7a session: salvataggio sessione 16
 
-Generato: 31/05/2026 15:10
+Generato: 31/05/2026 15:30
