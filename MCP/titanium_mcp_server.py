@@ -1,6 +1,7 @@
 # titanium_mcp_server.py | TITANIUM_OS / MCP | v1.4 | 2026-05-30
 # Server MCP locale — espone TITANIUM_OS a Claude Code via stdio
-# Tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready
+# Tools (10): get_state, update_milestone, search_mente, get_daily_brief, list_content_ready,
+#             nexus, rag_update, update_session_context, screen_action, save_session
 
 import sys
 import json
