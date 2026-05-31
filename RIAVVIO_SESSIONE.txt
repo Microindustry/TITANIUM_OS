@@ -1,61 +1,58 @@
-=== RIAVVIO SESSIONE #16 — 31/05/2026 14:45 ===
-Ultima sessione: #15 — 2026-05-31
+=== RIAVVIO SESSIONE #18 — 31/05/2026 15:10 ===
+Ultima sessione: #17 — 2026-05-31
 
 ━━━ STAVAMO PARLANDO DI ━━━
-MatteoSection skill tree N livelli — mappa navigabile immersiva per la view IDENTITY nella dashboard. NavStack infinito, tile grandi colorate, drill-down per categoria → sotto-categorie → skill. Stavamo valutando se aggiungere 2 livelli ulteriori: uno sopra (Domini: Fisico/Digitale/Business) e/o uno sotto (micro-passi per ogni skill, tipo checklist di esecuzione).
+skillTreeData v3.0 — sub-categorie N livelli scalate su tutti i nodi dell'albero.
+V32 aveva già 6 categorie (Struttura, Cinematica, Azionamenti, Controllo, Sensoristica, Validazione).
+Sessione 17: stesso pattern applicato a Fondamenta (4 cat), Software&AI (4 cat), VULCAN (4 cat), Precision Lab (3 cat), Capannone (4 cat).
+MatteoSection.tsx invariata — navStack già N-livelli generica.
 
 ━━━ TOPIC ATTIVI ━━━
-  • MatteoSection v3.0 — navStack N livelli PUSHATO (commit 6476182)
-  • GitHub vetrina pitch investitori — profile README + TITANIUM_OS README + cognitive-os repo LIVE
-  • Incontro con investitori settimana prossima — partner software vuole portare Microindustry go-to-market
-  • Dashboard v7.0+ — AutomationsView sidebar, MimsRoom v2 DNA 29.9mm, NightScheduleWidget
+  • skillTreeData v3.0 — N livelli su tutti i nodi (DONE, pushato 54750ba)
+  • MatteoSection v3.0 — navStack N livelli immersivo
+  • Dashboard v7.0+ — AutomationsView, MimsRoom v2, NightScheduleWidget
+  • GitHub vetrina pitch investitori — profile README + cognitive-os LIVE
+  • Incontro investitori — partner software Microindustry go-to-market
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → MatteoSection: aggiungere 2 livelli — domanda aperta su COSA mettere:
-      SOPRA: Domini (Fisico/Digitale/Business) che raggruppano le macro-aree
-      SOTTO: Micro-passi per ogni skill foglia (checklist esecuzione)
-      Matteo vuole capire cosa mettere prima di implementare — ragionare insieme
-  → Pitch investitori settimana prossima — preparare materiale
+  → Livelli SOTTO ogni skill foglia (micro-passi checklist di esecuzione)
+      — era la domanda aperta della sessione 16, ancora da decidere
+  → Pitch investitori — prep materiale deck quando torna dall'incontro
   → V32 fisico: gusset Z sinistra da saldare (La Taverna)
   → EVA WhatsApp pilot — ancora pending
-  → MATTEO room separata (CV immersivo con skill industry/digital) — era nella home prima come SectionLink, ora solo IDENTITY nel sidebar
+  → n8n workflow automation — sw10 status "active"
 
 ━━━ DECISIONI PRESE IN QUESTA SESSIONE ━━━
-  ✓ MatteoSection diventa skill tree navigabile N livelli (non CV statico)
-  ✓ skillTreeData.ts v2.0 — gerarchia completa: Root → Macro → Categorie V32 → Skill → (futuro: micro-passi)
-  ✓ AutomationsView aggiunta alla sidebar (era completa ma non raggiungibile)
-  ✓ MimsRoom v2 — DNA 29.9mm, 3 livelli, Tech-Bolt, filiera V32→VULCAN→MIMS→FitPark
-  ✓ NightScheduleWidget nella home — mostra i 5 task notturni con stato live (✓ eseguito se già passata l'ora)
-  ✓ GitHub vetrina: profile README + TITANIUM_OS README v7.0 + cognitive-os (metodo come prodotto)
-  ✓ Regola salvata: MAI dire "recuperato" per i componenti V32/VULCAN
-  ✓ Partner investitori: Matteo = metodo+IP, partner = scala software; frame "per noi+", non exit prematura
+  ✓ Sub-categorie aggiunte a tutti i nodi: Fondamenta/Software/VULCAN/Precision Lab/Capannone
+  ✓ Fondamenta: Saldatura | Lavorazione meccanica | Automazione industriale | Qualità & Basi tecniche
+  ✓ Software&AI: Infrastruttura | AI & Agenti | Automazione & Workflow | AI proprietaria
+  ✓ VULCAN: Hardware pressa | Ricette materiali | Produzione MIMS | IP & Business
+  ✓ Precision Lab: Lancio commerciale | Operativo | Scala & Partnership
+  ✓ Capannone: Capitale & Spazio | Setup macchine | Produzione & Team | Visione
+  ✓ Fix unused vars: pink rimosso da skillTreeData.ts, Icon rimosso da MatteoSection.tsx
+  ✓ Regola appresa: /verify va tagliato presto — minima spesa massima resa
 
-━━━ STATO SKILL TREE (skillTreeData.ts) ━━━
-  Struttura attuale:
-    Root → Fondamenta (14 skill, tutte DONE)
-         → V32 CNC → 6 sotto-categorie → skill foglie
-              Struttura (12): 6 done, 1 active (gusset Z sx), 5 blocked
-              Cinematica (12): 4 done, 8 blocked/future
-              Azionamenti (12): 3 done, 2 active (drive X + mandrino), 7 blocked
-              Controllo (12): 4 done, 1 active, 7 blocked
-              Sensoristica (8): 3 done, 5 future
-              Validazione (8): 0 done, 8 future
-         → Software & AI (14 skill): 9 done, 1 active (n8n), 4 future
-         → VULCAN (7): 1 done, 6 future — bloccato
-         → Precision Lab (6): 0 done — bloccato
-         → Capannone 2030 (8): 0 done — futuro
+━━━ STATO SKILL TREE (skillTreeData.ts v3.0) ━━━
+  114 foglie totali
+  Root → 6 aree → categorie → skill foglie
+  V32: 6 cat (Struttura/Cinematica/Azionamenti/Controllo/Sensoristica/Validazione) — invariato
+  Fondamenta: 4 cat — tutte DONE (14 foglie)
+  Software&AI: 4 cat — 9 done, 1 active (n8n), 1 blocked (EVA), 3 future
+  VULCAN: 4 cat — 1 done (pressa), resto blocked/future
+  Precision Lab: 3 cat — tutto future (bloccato da V32)
+  Capannone: 4 cat — tutto future (target 2030)
 
-  File: DASHBOARD/src/data/skillTreeData.ts (v2.0)
-  Componente: DASHBOARD/src/components/MatteoSection.tsx (v3.0)
+  File: DASHBOARD/src/data/skillTreeData.ts (v3.0)
+  Componente: DASHBOARD/src/components/MatteoSection.tsx (v3.0, invariata)
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Ragionare sui 2 livelli aggiuntivi per il skill tree:
-  - SOPRA: Domini (Fisico/Digitale/Business) — mappa a 3 colori dei macro-domini
-  - SOTTO: Micro-passi checklist — ogni skill diventa un mini-manuale
-  Poi: prep pitch investitori (deck/materiale) quando Matteo torna dall'incontro
+  Decidere sui micro-passi (livello sotto ogni skill foglia):
+  - Checklist esecuzione per ogni skill (3-5 sotto-passi pratici)
+  - Es: "Gusset 200mm colonna Z sinistra" → [Misura posizione, Taglio piastra, Punti di tack, Saldatura TIG, Verifica perpendicolare]
+  - Implementare solo se ha valore navigabile — non per decorazione
 
 ━━━ BLOCKERS ━━━
-  ⚠ Mandrino 2.2kW ER20 da ordinare (BLOCKER V32)
+  ⚠ Mandrino 2.2kW ER20 da ordinare (BLOCKER V32 principale)
   ⚠ Silent blocks: decisione v.A vs v.B (prerequisito V8)
 
 ━━━ STATO PILASTRI ━━━
@@ -63,14 +60,13 @@ MatteoSection skill tree N livelli — mappa navigabile immersiva per la view ID
   MIMS: 30% — attende catena V32→VULCAN
   GENESIS: 83% — Dashboard v7.0+, EVA pending
   VITA_NATURA: 40% — EVA WhatsApp bot
-  IDENTITY: 45% — Skill tree live (MatteoSection v3.0)
+  IDENTITY: 50% — Skill tree N livelli v3.0
 
-━━━ COMMIT QUESTA SESSIONE ━━━
-  6476182 feat: MatteoSection v3.0 -- navStack N livelli
-  8d0fdce feat: MatteoSection skill tree v2.0 -- caselle sbloccabili
-  12a6f85 feat: dashboard home -- NightScheduleWidget + fix V32 spec
-  7118784 feat: dashboard -- AutomationsView in sidebar + MimsRoom v2
-  90a681a state: milestone 37 -- Dashboard v7.0+
-  GitHub: profile README v2.0 + TITANIUM_OS README v7.0 + cognitive-os LIVE
+━━━ ULTIMI COMMIT ━━━
+  54750ba feat: skillTreeData v3.0 -- sub-categorie N livelli su tutti i nodi
+  acb993d chore: sync completo sessione 16 -- BRAIN, CONTENT_ENGINE, DOCS, VERSIONS, INBOX
+  54cea7a session: salvataggio sessione 16 -- skill tree N livelli + pitch investitori
+  6476182 feat: MatteoSection v3.0 -- navStack N livelli, mappa navigabile immersiva tile grandi
+  8d0fdce feat: MatteoSection skill tree v2.0 -- caselle sbloccabili per milestone V32+ecosistema
 
-Generato: 31/05/2026 14:45
+Generato: 31/05/2026 15:10

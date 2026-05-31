@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.0.0"
   },
-  "last_update": "2026-05-31T14:45:53.565351",
-  "active_milestone": "",
-  "last_action": "Modifica a mente_digest.json",
-  "next_step": "",
-  "session_count": 0,
+  "last_update": "2026-05-31T15:03:10.475622",
+  "active_milestone": "skillTreeData v3.0 — sub-categorie N livelli",
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
+  "next_step": "Decidere livelli SOTTO ogni skill foglia (micro-passi checklist)",
+  "session_count": 3,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,19 +19,21 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 10,
-      "last_activity": "2026-05-31T14:44:53.337561"
+      "last_activity": "2026-05-31T14:49:11.275513"
     },
     "VITA_NATURA": {
       "status": "active",
       "pct_complete": 40
     },
     "IDENTITY": {
-      "status": "pending",
-      "pct_complete": 20
+      "status": "active",
+      "pct_complete": 50
     }
   },
   "milestones": {
-    "verified": [],
+    "verified": [
+      "skillTreeData v3.0 — sub-categorie N livelli su tutti i nodi (Mag 2026)"
+    ],
     "next": "",
     "target_capannone": "2030-07-15"
   },
