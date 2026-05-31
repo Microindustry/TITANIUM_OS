@@ -630,10 +630,23 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
                 )}
               </div>
               <PillarGrid state={state} onEnter={pushRoom} />
-              <div className="pt-2 border-t border-slate-800/40">
-                <SectionLinks onEnter={pushRoom} />
+
+              {/* ── SPLIT: sinistra=Identity, destra=navigazione ── */}
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-5 pt-2 border-t border-slate-800/40">
+                {/* LEFT — Identity skill tree */}
+                <div className="bg-slate-900/60 border border-slate-700/30 rounded-2xl p-4 overflow-hidden">
+                  <div className="text-[7px] font-mono text-slate-600 uppercase tracking-[0.3em] mb-3">
+                    Identity — Percorso
+                  </div>
+                  <MatteoSection />
+                </div>
+
+                {/* RIGHT — navigazione rapida + schedule */}
+                <div className="space-y-4">
+                  <SectionLinks onEnter={pushRoom} />
+                  <NightScheduleWidget />
+                </div>
               </div>
-              <NightScheduleWidget />
             </>
           )}
 

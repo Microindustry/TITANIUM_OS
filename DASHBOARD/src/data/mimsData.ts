@@ -8,7 +8,6 @@ const emerald= { color: "text-emerald-400", border: "border-emerald-500/40", bg:
 const orange = { color: "text-orange-400",  border: "border-orange-500/40",  bg: "bg-orange-950/20",  dot: "bg-orange-400"  };
 const cyan   = { color: "text-cyan-400",    border: "border-cyan-500/40",    bg: "bg-cyan-950/20",    dot: "bg-cyan-400"    };
 const violet = { color: "text-violet-400",  border: "border-violet-500/40",  bg: "bg-violet-950/20",  dot: "bg-violet-400"  };
-const rose   = { color: "text-rose-400",    border: "border-rose-500/40",    bg: "bg-rose-950/20",    dot: "bg-rose-400"    };
 const teal   = { color: "text-teal-400",    border: "border-teal-500/40",    bg: "bg-teal-950/20",    dot: "bg-teal-400"    };
 const slate  = { color: "text-slate-400",   border: "border-slate-600/30",   bg: "bg-slate-800/20",   dot: "bg-slate-500"   };
 
@@ -42,23 +41,127 @@ export const MIMS_ROOT: SkillNode = {
           id: "connettori", label: "3 Giunti proprietari", icon: "🔗", status: "done", ...emerald,
           note: "Cavallo di Troia: Eco-Snap → Quick-Twist → Tech-Bolt",
           children: [
-            leaf("cn01", "Eco-Snap — 0 utensili, 15-25 kg, €1.50 B2C", "done", "ABS/PA6 elastico — EN 71 giocattoli — entry"),
-            leaf("cn02", "Quick-Twist — 0 utensili, 50-80 kg, €4.00 B2C", "done", "PA-GF30 + inserto acciaio — quarter-turn 90° — maker"),
-            leaf("cn03", "Tech-Bolt — chiave 13mm, 200-400 kg, €7.00 B2C", "done", "42CrMo4 nitrurato — brevetto Presta e Blocca — industria"),
+
+            {
+              id: "cn_eco", label: "Eco-Snap", icon: "🔗", status: "done", ...emerald,
+              note: "Entry: 0 utensili — 15-25 kg — €1.50 B2C",
+              children: [
+                leaf("cn01_mat", "Materiale — ABS/PA6 + clip elastomero integrato", "done"),
+                leaf("cn01_car", "Carico max 15-25 kg/tile — fit H7/g6 D29.9mm ±0.02mm", "done"),
+                leaf("cn01_pro", "Produzione — stampo singola cavità, ciclo ~35s, assemblaggio zero", "done"),
+                leaf("cn01_cer", "Certificazione — EN 71 giocattoli — barriera tecnica minima", "done"),
+              ],
+            },
+
+            {
+              id: "cn_qtwist", label: "Quick-Twist", icon: "🔗", status: "done", ...emerald,
+              note: "Maker: 0 utensili — 50-80 kg — €4.00 B2C",
+              children: [
+                leaf("cn02_mat", "Materiale — PA-GF30 + inserto C45 temprato", "done"),
+                leaf("cn02_car", "Carico max 50-80 kg/tile — quarter-turn 90° + spring clip", "done"),
+                leaf("cn02_pro", "Produzione — 2 parti (corpo + inserto), assemblaggio automatico", "done"),
+                leaf("cn02_tol", "Tolleranza — H7 D29.9mm, fit meccanico preciso, zero gioco assiale", "done"),
+              ],
+            },
+
+            {
+              id: "cn_tbolt", label: "Tech-Bolt", icon: "🔗", status: "done", ...emerald,
+              note: "Industria: chiave 13mm — 200-400 kg — €7.00 B2C",
+              children: [
+                leaf("cn03_mat", "Materiale — 42CrMo4 nitrurato + dado M10 inox A4-70", "done"),
+                leaf("cn03_car", "Carico max 200-400 kg/tile — coppia serraggio 25-35 Nm", "done"),
+                leaf("cn03_bre", "Brevetto 'Presta e Blocca' — auto-bloccaggio sotto carico dinamico", "done"),
+                leaf("cn03_tra", "Trattamento — nitrurazione gassosa 0.3mm profondità, HV 700+", "done"),
+              ],
+            },
+
           ],
         },
 
         {
           id: "materiali", label: "7 Materiali — stesso stampo", icon: "🧪", status: "active", ...amber,
-          note: "DNA 29.9mm invariante su tutti i materiali",
+          note: "DNA 29.9mm invariante — 1 stampo, 7 materiali",
           children: [
-            leaf("mt01", "MIMS-STD — PP+CaCO3+FV — €8/tile B2C", "active", "T 180-200°C, €1.80 costo — Q4 2026"),
-            leaf("mt02", "MIMS-HVY — PA6-GF30 — €15/tile B2C", "active", "T 250-270°C, pre-essiccazione 4h obbligatoria — Q1 2027"),
-            leaf("mt03", "MIMS-DMP — TPU+EPDM+grafite — δ>0.05", "future", "Antivibrante 2.5× Epoxy Granite — BREVETTABILE — Q2 2027"),
-            leaf("mt04", "MIMS-ECO — PP riciclato 80% — €0.25-0.35/tile", "future", "Green, educativo, più economico in assoluto — H2 2027"),
-            leaf("mt05", "MIMS-FLR — PA6/PP+EPDM — pavimentazione", "future", "Antiscivolo integrato, UV resistant — 2028"),
-            leaf("mt06", "MIMS-ACS — EVA+sughero — assorbimento acustico >0.6", "future", "Studi, uffici, sale riunioni — 2028"),
-            leaf("mt07", "MIMS-MET — Alu 6060-T5 / Acciaio fresato V32", "active", "Strutture ibride — prodotto da V32"),
+
+            {
+              id: "mt_std", label: "MIMS-STD", icon: "🧪", status: "active", ...amber,
+              note: "PP+CaCO3+FV — €8/tile B2C — Q4 2026",
+              children: [
+                leaf("mt01_cmp", "Composizione — PP base + CaCO3 (opacizzante+rigidità) + FV corta (rinforzo)", "active", "Ricetta completa: TS1 — MAI pubblicare %"),
+                leaf("mt01_pro", "Processo VCM — T 180-200°C / vuoto <50 mbar / ciclo ~12 min", "active"),
+                leaf("mt01_tgt", "Target — E>1.8 GPa / impatto>25 kJ/m² / costo prod. €1.80", "active"),
+                leaf("mt01_sta", "Stato — Q4 2026, primo materiale, validazione 20 tile", "active"),
+              ],
+            },
+
+            {
+              id: "mt_hvy", label: "MIMS-HVY", icon: "🧪", status: "active", ...amber,
+              note: "PA6-GF30 — €15/tile B2C — Q1 2027",
+              children: [
+                leaf("mt02_cmp", "Composizione — PA6 base + GF30 rinforzato + stabilizzatori termici", "active", "Ricetta: TS2 — MAI pubblicare additivi"),
+                leaf("mt02_pro", "Processo VCM — T 250-270°C / pre-essicazione 4h 80°C / ciclo ~18 min", "active"),
+                leaf("mt02_tgt", "Target — E>6 GPa / impatto>60 kJ/m² / costo prod. €3.20", "active"),
+                leaf("mt02_sta", "Stato — Q1 2027, secondo materiale dopo STD validato", "active"),
+              ],
+            },
+
+            {
+              id: "mt_dmp", label: "MIMS-DMP", icon: "🧪", status: "future",
+              color: "text-slate-700", border: "border-slate-800/20", bg: "bg-slate-900/20", dot: "bg-slate-800",
+              note: "TPU+EPDM+grafite — δ>0.05 — BREVETTABILE — Q2 2027",
+              children: [
+                leaf("mt03_cmp", "Composizione — TPU elastomero + EPDM + grafite conduttiva + cariche minerali", "future", "Ricetta: TS3 — MAI pubblicare rapporto TPU/EPDM o % grafite"),
+                leaf("mt03_pro", "Processo — variante VCM bassa T + vulcanizzazione parziale", "future"),
+                leaf("mt03_tgt", "Target — loss factor δ>0.05 / Shore A 65-75 / smorzamento 2.5× Epoxy Granite", "future"),
+                leaf("mt03_bre", "Brevettabile — δ>0.05 su tile modulare = claim unico — B1 Q4 2027", "future"),
+              ],
+            },
+
+            {
+              id: "mt_eco", label: "MIMS-ECO", icon: "🧪", status: "future",
+              color: "text-slate-700", border: "border-slate-800/20", bg: "bg-slate-900/20", dot: "bg-slate-800",
+              note: "PP riciclato 80%+ — €0.25-0.35/tile — H2 2027",
+              children: [
+                leaf("mt04_cmp", "Composizione — PP riciclato 80%+ + compatibilizzatore + pigmento naturale", "future", "Formula: TS4 parziale"),
+                leaf("mt04_cer", "Certificazione — EN 15343 tracciabilità polimero riciclato", "future"),
+                leaf("mt04_tgt", "Target — costo €0.25-0.35/tile, geometria identica STD", "future"),
+                leaf("mt04_sta", "Stato — H2 2027, dopo MIMS-HVY validato", "future"),
+              ],
+            },
+
+            {
+              id: "mt_flr", label: "MIMS-FLR", icon: "🧪", status: "future",
+              color: "text-slate-700", border: "border-slate-800/20", bg: "bg-slate-900/20", dot: "bg-slate-800",
+              note: "PA6/PP+EPDM — pavimentazione industriale — 2028",
+              children: [
+                leaf("mt05_cmp", "Composizione — PA6/PP blend + superficie EPDM antiscivolo + UV-C resist", "future"),
+                leaf("mt05_tgt", "Target — attrito >0.5 (wet) / UV 4000h xenon / carico >200 kg/tile", "future"),
+                leaf("mt05_sta", "Stato — 2028, richiede validazione ambientale EN 13893", "future"),
+              ],
+            },
+
+            {
+              id: "mt_acs", label: "MIMS-ACS", icon: "🧪", status: "future",
+              color: "text-slate-700", border: "border-slate-800/20", bg: "bg-slate-900/20", dot: "bg-slate-800",
+              note: "EVA+sughero — NRC>0.60 — 2028",
+              children: [
+                leaf("mt06_cmp", "Composizione — EVA cella chiusa + granuli sughero naturale + binding agent", "future"),
+                leaf("mt06_tgt", "Target — NRC>0.60 / densità 80-120 kg/m³ / certificazione ISO 354", "future"),
+                leaf("mt06_sta", "Stato — 2028, mercato studio/ufficio/sala riunioni", "future"),
+              ],
+            },
+
+            {
+              id: "mt_met", label: "MIMS-MET", icon: "🧪", status: "active", ...amber,
+              note: "Alu 6060-T5 / Acciaio — strutture ibride — prodotto da V32",
+              children: [
+                leaf("mt07_mat", "Materiale — Alu 6060-T5: σ_yield 160 MPa / Rm 215 MPa", "active"),
+                leaf("mt07_pro", "Produzione — fresatura V32 / anodizzazione naturale 15-20μm", "active"),
+                leaf("mt07_tol", "Tolleranza — fit H7/g6 D29.9 ±0.01mm — strutture ibride metallo/polimero", "active"),
+                leaf("mt07_sta", "Stato — dipendente completamento V32 Config G", "active"),
+              ],
+            },
+
           ],
         },
 
