@@ -1,0 +1,40 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_03_LA_TELA.md",
+  "title": "EP_S2_03 — LA TELA",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_S2_03  LA TELA](#eps203-la-tela)\n    - [La dashboard non mostra dati. Mostra chi sei.](#la-dashboard-non-mostra-dati-mostra-chi-sei)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA DELLA COMPLESSITÀ](#atto-i-il-problema-della-complessità)\n  - [ATTO II  LEVOLUZIONE IN TRE VERSIONI](#atto-ii-levoluzione-in-tre-versioni)\n  - [ATTO III  MATTEOSECTION](#atto-iii-matteosection)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"La dashboard non mostra dati. Mostra chi sei.\"",
+      "content": "**Formato:** Video-podcast | Durata stimata: 9-11 min\n**Tono:** Visivo, architetturale — il cockpit come specchio del sistema\n**Data evento:** 27-29 maggio 2026\n**Fonte:** Commit CanvasLayout v5→v6→v6.1 + MatteoSection v4.2"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — IL PROBLEMA DELLA COMPLESSITÀ",
+      "content": "TITANIUM_OS a maggio 2026 ha 5 pilastri, 8 nodi attivi, 8 agenti, decine di file di configurazione, STATE.json come fonte di verità, un RAG con migliaia di chunk, GitHub Actions, stop hooks, Research Agent.\n\nLa complessità non è un problema in sé. Il problema è quando la complessità supera la tua capacità di tenerla in testa.\n\nCon l'ADHD, questo threshold è più basso. Non più basso in modo negativo — più basso in modo che richiede sistemi compensativi. Se non hai una rappresentazione visiva del sistema, lavori su un sottoinsieme di ciò che esiste. Il resto sparisce.\n\nLa dashboard è lo scaffolding cognitivo principale. Non perché ti dice cosa fare — ma perché ti mostra cosa esiste.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — L'EVOLUZIONE IN TRE VERSIONI",
+      "content": "**CanvasLayout v5.0 (27 maggio):**\nPrima versione con Zustand + TanStack Query. 1116 righe in un file unico → split in 290 righe + componenti separati. Fondamenta architetturali. Celle draggabili, stato persistente, navigazione tra view.\n\nIl problema: le celle erano piccole. Troppo testo, troppa densità. ADHD e alta densità di informazione non vanno d'accordo. La dashboard sembrava un pannello di controllo di un Boeing — tutto lì, tutto visibile, tutto troppo.\n\n**CanvasLayout v6.0 (28 maggio):**\nDrill-down navigation. Le celle non mostrano tutto — mostrano l'essenziale. Click su una cella → entra nel dettaglio. Il concetto cambia: non un pannello piatto, ma uno spazio con profondità.\n\nCelle una dentro l'altra. La struttura rispecchia la struttura del sistema: hai pilastri che contengono nodi che contengono funzioni. La navigazione è la stessa struttura del progetto.\n\n**CanvasLayout v6.1 (29 maggio):**\nCelle grandi. Glow. Gradiente navy. Home semplificata — solo ciò che serve al primo sguardo.\n\nLa regola che ha guidato questa versione: se devi leggere più di 3 secondi per capire dove sei, l'UI ha fallito. La Tela v6.1 risponde alla domanda \"dove sono?\" in meno di un secondo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — MATTEOSECTION",
+      "content": "L'aggiunta più personale del ciclo.\n\nMatteoSection v4.2 — la sezione della dashboard dedicata allo skill tree personale. Non a TITANIUM_OS — a Matteo Benenati.\n\nQuattro company espandibili: DATWLER, SCProject, ESSEGI, LU.VE. Ogni azienda si espande con le skill acquisite, le tecnologie usate, le competenze sviluppate. Accanto: gli interessi attuali con dettaglio.\n\nPerché è nella dashboard di un OS personale?\n\nPerché il sistema non è separato dalla persona. TITANIUM_OS non è uno strumento che usi — è un'estensione di come pensi. Se lo separi da chi sei, perdi la coerenza che lo rende utile.\n\nMatteoSection risponde a una domanda che ogni sessione implicitamente richiede: chi sta costruendo questo, e perché è credibile farlo?\n\nLa risposta è lì: quindici anni di lavoro fisico su materiali reali, quattro aziende, competenze che normalmente non si trovano insieme. Non come CV — come mappa. Puoi vedere il pattern. Capisci perché V32 esiste. Capisci perché MIMS esiste. Capisci perché qualcuno che sa saldare titanio e scrivere Python sta costruendo un OS cognitivo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "La Tela non è finita. Non lo sarà mai — un cockpit si aggiorna con il sistema che rappresenta.\n\nMa il principio è stabilito: la complessità deve essere navigabile. Non nascosta, non compressa — navigabile. Cioè: hai una vista dall'alto, puoi zoomare in un componente, puoi tornare indietro.\n\nL'episodio successivo è il momento in cui questo cockpit si riempie di qualcosa di nuovo: gli agenti. Non più dati statici — risposte dinamiche.\n\n> *La dashboard non è documentazione. È il sistema che si osserva da solo.*\n\n---\n\n**reel_hook:** \"Avevo un sistema cognitivo con 5 pilastri, 8 nodi, 8 agenti, decine di configurazioni. Nella mia testa ci stava solo il 60%. Il resto scompariva tra una sessione e l'altra. Ho costruito la Tela — una dashboard React con drill-down navigation. Celle grandi, glow navy, ogni cella si apre in una view dedicata. Il principio: se ci metti più di 3 secondi a capire dove sei, l'UI ha fallito. Ora apro, guardo 2 secondi, so tutto. Non perché ho una memoria migliore — perché ho smesso di usare la memoria per questo.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 03 |\n| Arco | Lo scaffolding visivo — il sistema che si osserva |\n| Tecnologie | React, Vite, Zustand, TanStack Query, CanvasLayout |\n| Connessione S2 | Prepara il terreno per il pannello agenti (EP futuro) |"
+    }
+  ],
+  "word_count": 899,
+  "updated_at": "2026-05-30T15:15:53.197268",
+  "built_at": "2026-05-31T15:07:23.317224"
+}

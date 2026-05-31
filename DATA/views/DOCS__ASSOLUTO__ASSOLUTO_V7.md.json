@@ -1,0 +1,385 @@
+{
+  "path": "DOCS/ASSOLUTO/ASSOLUTO_V7.md",
+  "title": "ASSOLUTO V7 — TITANIUM VENTURES",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [ASSOLUTO V7  TITANIUM VENTURES](#assoluto-v7-titanium-ventures)\n  - [INDICE](#indice)\n  - [PROLOGO](#prologo)\n  - [ATTO I  IL PRESENTE](#atto-i-il-presente)\n    - [Inventario Competenze (Verificato Fisicamente)](#inventario-competenze-verificato-fisicamente)\n    - [Il Laboratorio  La Taverna](#il-laboratorio-la-taverna)\n    - [CV Navigabile  La Catena](#cv-navigabile-la-catena)\n  - [ATTO II  LECOSISTEMA](#atto-ii-lecosistema)\n    - [I 5 Pilastri](#i-5-pilastri)\n    - [La Logica di Sistema](#la-logica-di-sistema)\n    - [Il Modello Economico  3 Stream Principali](#il-modello-economico-3-stream-principali)\n    - [Le 10 Regole  Titanium Ventures Operating Principles](#le-10-regole-titanium-ventures-operating-principles)\n  - [ATTO III  V32: LA MACCHINA](#atto-iii-v32-la-macchina)\n    - [Overview V32](#overview-v32)\n    - [DECISIONE STRUTTURALE  CORPO UNICO (Maggio 2026)](#decisione-strutturale-corpo-unico-maggio-2026)\n    - [Basamento  Traliccio Saldato](#basamento-traliccio-saldato)\n    - [Config G  Rinforzi Strutturali](#config-g-rinforzi-strutturali)\n    - [Assi XYZ](#assi-xyz)\n    - [Elettronica e Controllo](#elettronica-e-controllo)\n    - [Epoxy Granite  Riempimento Tubolari](#epoxy-granite-riempimento-tubolari)\n    - [Precisione  Analisi RSS](#precisione-analisi-rss)\n    - [BOM Completo V32 (Selezionato  Componenti Principali)](#bom-completo-v32-selezionato-componenti-principali)\n  - [ATTO IV  MIMS: IL PRODOTTO](#atto-iv-mims-il-prodotto)\n    - [Filosofia MIMS](#filosofia-mims)\n    - [I 3 Giunti Proprietari](#i-3-giunti-proprietari)\n    - [Le Piastrine 40mm  3 Versioni](#le-piastrine-40mm-3-versioni)\n    - [Configurazioni Standard MIMS](#configurazioni-standard-mims)\n    - [Multi-Materiale  5 Materiali](#multi-materiale-5-materiali)\n    - [10 Applicazioni MIMS](#10-applicazioni-mims)\n    - [Analisi Competitiva Riassunto](#analisi-competitiva-riassunto)\n  - [ATTO V  MATERIALI E PRODUZIONE](#atto-v-materiali-e-produzione)\n    - [Pressa 4 Colonne  VULCAN](#pressa-4-colonne-vulcan)\n    - [Il Processo VCM  18 Step](#il-processo-vcm-18-step)\n    - [Le 6 Ricette Polimeriche](#le-6-ricette-polimeriche)\n    - [Fornitori  Materie Prime](#fornitori-materie-prime)\n  - [ATTO VI  GENESIS: LINFRASTRUTTURA DIGITALE](#atto-vi-genesis-linfrastruttura-digitale)\n    - [Stack GENESIS (Stato: Maggio 2026)](#stack-genesis-stato-maggio-2026)\n    - [MCP Server  5 Tool](#mcp-server-5-tool)\n    - [MENTE RAG](#mente-rag)\n    - [Dashboard v5.1](#dashboard-v51)\n    - [API Server](#api-server)\n    - [Daily Brief](#daily-brief)\n    - [MENTE  Knowledge Base](#mente-knowledge-base)\n    - [n8n  Orchestrazione](#n8n-orchestrazione)\n    - [EVA  WhatsApp Automation (PENDING)](#eva-whatsapp-automation-pending)\n    - [I 7 Personaggi AI  Ecosystem Agents](#i-7-personaggi-ai-ecosystem-agents)\n    - [Content Engine v2](#content-engine-v2)\n  - [ATTO VII  ECONOMIA E VERDETTO](#atto-vii-economia-e-verdetto)\n    - [Economia Consolidata  Tutti gli Stream](#economia-consolidata-tutti-gli-stream)\n    - [V32  BEP e ROI](#v32-bep-e-roi)\n    - [MIMS  Unit Economics](#mims-unit-economics)\n    - [Skill Tree  150 Livelli (3 Alberi)](#skill-tree-150-livelli-3-alberi)\n    - [Timeline 2026-2030  20 Milestone](#timeline-2026-2030-20-milestone)\n    - [Il Verdetto dei Tre Assi (Aggiornato Maggio 2026)](#il-verdetto-dei-tre-assi-aggiornato-maggio-2026)\n    - [La Regola 9 Applicata  Reinvestimento 60](#la-regola-9-applicata-reinvestimento-60)\n  - [ATTO VIII  IL MERCATO](#atto-viii-il-mercato)\n    - [TAM / SAM / SOM  Dimensione del Mercato](#tam-sam-som-dimensione-del-mercato)\n    - [I 5 Gap del Mercato che MIMS Riempie](#i-5-gap-del-mercato-che-mims-riempie)\n    - [Go-to-Market  Le 3 Fasi](#go-to-market-le-3-fasi)\n    - [Matrice Posizionamento](#matrice-posizionamento)\n    - [Canali Vendita  Priorità per Fase](#canali-vendita-priorità-per-fase)\n  - [ATTO IX  LA PROPRIETÀ INTELLETTUALE](#atto-ix-la-proprietà-intellettuale)\n    - [Mappa IP  Difesa a 6 Strati](#mappa-ip-difesa-a-6-strati)\n    - [I 3 Brevetti Pianificati](#i-3-brevetti-pianificati)\n    - [I 6 Trade Secrets](#i-6-trade-secrets)\n    - [Registrazioni Pianificate](#registrazioni-pianificate)\n  - [ATTO X  LA MEDIA STRATEGY](#atto-x-la-media-strategy)\n    - [Titanium Lab  Il Formato Flagship](#titanium-lab-il-formato-flagship)\n    - [Le 3 Serie Parallele](#le-3-serie-parallele)\n    - [Piano Editoriale  4 Trimestri Anno 1](#piano-editoriale-4-trimestri-anno-1)\n    - [I 7 Stream di Monetizzazione](#i-7-stream-di-monetizzazione)\n    - [Digital Products  Tier Pricing](#digital-products-tier-pricing)\n    - [SEO Keywords  Opportunità](#seo-keywords-opportunità)\n  - [EPILOGO  IL CAPANNONE](#epilogo-il-capannone)\n  - [APPENDICE  STATO SISTEMA (Snapshot 2026-05-27)](#appendice-stato-sistema-snapshot-2026-05-27)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "ASSOLUTO V7 — TITANIUM VENTURES",
+      "content": "*Versione: 7.0.0 | Data: 2026-05-27 | Autore: Matteo Benenati | Macchina: Getac*\n\n> **Questo è il documento master unico di Titanium Ventures.**\n> Supera e sostituisce ASSOLUTO V6 (10 file separati).\n> Contiene tutto: fisico, digitale, economico, strategico.\n> Ogni decisione presa è qui. Ogni numero è verificato."
+    },
+    {
+      "level": 2,
+      "title": "PROLOGO",
+      "content": "Matteo Benenati. Artigiano industriale.\n\n15 anni di industria manifatturiera: saldatura TIG/MIG su titanio per componenti MotoGP (SCProject), programmazione robot industriali (ESSEGI), manutenzione presse (DATWLER), controllo qualità su componenti climatizzatori (LU.VE). Non è formazione accademica. È sapere sedimentato sui banchi delle fabbriche, nelle mani, nel corpo.\n\nQuesto documento non è un business plan. È una mappa del territorio che sto costruendo — e la mappa viene aggiornata ogni volta che il territorio cambia.\n\n**Maggio 2026: Stato attuale**\n- V32: struttura corpo unico, Config G rinforzi al 65%\n- GENESIS: stack digitale operativo (MCP, RAG, Dashboard v5.1)\n- MIMS: design completato, attende catena V32→VULCAN\n- VITA NATURA: sito attivo, EVA WhatsApp in sviluppo\n- IDENTITY: Content Engine v2 operativo, 10 episodi core, FILONE_UNICO completato\n\nIl capannone entro 2030. Non come obiettivo lavorativo — come obiettivo di sovranità.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — IL PRESENTE",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Inventario Competenze (Verificato Fisicamente)",
+      "content": "| Competenza | Anni | Livello | Contesto |\n|-----------|------|---------|----------|\n| Saldatura TIG/MIG titanio | 8+ | Expert | SCProject — componenti MotoGP |\n| Saldatura TIG acciaio/alluminio | 12+ | Expert | Multi-employer |\n| Programmazione PLC Siemens S7 | 6+ | Advanced | ESSEGI — robot industriali |\n| Disegno tecnico / GD&T | 10+ | Advanced | DATWLER, LU.VE |\n| Controllo qualità CMM | 4+ | Intermediate | LU.VE — tolleranze ±0.01mm |\n| Python / automazione | 3 | Intermediate | TITANIUM_OS |\n| CNC setup e programmazione | 5+ | Intermediate | Multi-employer |\n| Elettronica industriale | 4+ | Intermediate | PLC, HMI, fieldbus |\n| Sistemi pneumatici/idraulici | 6+ | Advanced | Presse, robot |\n| Gestione fornitori | 5+ | Intermediate | Componenti industriali smessi |"
+    },
+    {
+      "level": 3,
+      "title": "Il Laboratorio — La Taverna",
+      "content": "Posizione: seminterrato sotto casa, Boffalora sopra Ticino (MI).\nSuperficie: ~25 m².\nNickname: \"La Taverna\".\n\n**Attrezzatura verificata:**\n- V32 CNC 3 assi — IN COSTRUZIONE (Config G — 65%)\n- Saldatrice TIG (titanio + acciaio)\n- Saldatrice MIG\n- Pressa 4 colonne recupero industriale (15 ton)\n- Tornio manuale piccolo\n- Banco lavoro acciaio\n- Utensili manuali completi\n- Strumentazione metrologica: calibri digitali, micrometri, comparatori\n\n**Prossimi acquisti:**\n- Mandrino 2.2 kW ER20 (BLOCKER V32)\n- Fresa HSS per alluminio"
+    },
+    {
+      "level": 3,
+      "title": "CV Navigabile — La Catena",
+      "content": "```\nLU.VE (QC) → DATWLER (presse) → ESSEGI (robot) → SCProject (MotoGP TIG) → Titanium Ventures\n```\n\nOgni tappa ha aggiunto uno strato. Il risultato è un profilo impossibile da formare in aula: artigiano industriale che sa programmare, saldare titanio, gestire PLC, e costruire sistemi software.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — L'ECOSISTEMA",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "I 5 Pilastri",
+      "content": "```\nV32 (hardware)\n  └─ VULCAN (stampi pressa)\n       └─ MIMS (prodotto fisico)\n            └─ GENESIS (infrastruttura digitale)\n                 └─ IDENTITY (media + IP + brand)\n```\n\nLa catena è sequenziale ma non bloccante. Ogni pilastro può avanzare in parallelo — ma V32 sblocca VULCAN che sblocca MIMS in produzione."
+    },
+    {
+      "level": 3,
+      "title": "La Logica di Sistema",
+      "content": "**V32** è il moltiplicatore di capacità produttiva. Senza V32, ogni pezzo richiede lavorazione esterna a EUR 60-120/h. Con V32 a EUR 45/h interne, il margine MIMS diventa sostenibile.\n\n**VULCAN** è la pressa modificata per stampaggio VCM (Vacuum Compression Molding) dei tile MIMS. È la macchina di produzione, non la macchina di precisione.\n\n**MIMS** è il prodotto fisico — sistema modulare brevettabile, scalabile, distribuibile.\n\n**GENESIS** è l'infrastruttura cognitiva che gestisce tutto: RAG, MCP, dashboard, automazioni. Non è un accessorio — è il sistema nervoso dell'ecosistema.\n\n**IDENTITY** è il brand, il canale YouTube, il contenuto tecnico che genera autorità, traffico, e clienti a costo marginale zero."
+    },
+    {
+      "level": 3,
+      "title": "Il Modello Economico — 3 Stream Principali",
+      "content": "| Stream | Fonte | Margine | Timeline |\n|--------|-------|---------|----------|\n| V32 Precision Lab | Lavorazioni CNC conto terzi | 82% | Q3 2026 (post-Config G) |\n| MIMS Products | Vendita tile + giunti + kit | 67-82% | Q2 2027 |\n| EVA SaaS | Automazione micro-imprese | 85-90% | Q4 2026 pilot |\n\n**Revenue consolidato Y3 (2028):** EUR 350K-550K SOM"
+    },
+    {
+      "level": 3,
+      "title": "Le 10 Regole — Titanium Ventures Operating Principles",
+      "content": "> *Un sistema che gira da solo vale più di 10 abitudini che dipendono dalla volontà.*\n\n1. **Niente è finito — ogni cosa è una versione.** Non aspettare la perfezione.\n2. **Identifica → Automatizza → Scala.** 3 ripetizioni → script. Ogni giorno → nodo. Nodo con valore → scala.\n3. **Cattura mentre costruisci.** Ogni decisione in MENTE/. Ogni sessione in MENTE/SESSIONI/. Il RAG la recupera domani.\n4. **Leva cognitiva: 1 input → N output.** Milestone → episodio + reel + LinkedIn + RAG update.\n5. **Costruisci ciò che usi.** TITANIUM_OS gestisce la costruzione di TITANIUM_OS. Meta-ricorsività.\n6. **Output misurabile sempre.** mm, ore, euro, chunk RAG, commit. Se non lo misuro, non esiste.\n7. **Tutto si connette — nessun silo.** V32 → episodio → dataset LLM → RAG → Claude più informato su V32.\n8. **Proteggi il sapere.** `_VAULT/` per i segreti. RAG per la conoscenza. Git per il codice.\n9. **Reinvesti il margine — 60% Anno 1.** BEP V32 = 61 ore. Ogni ora sopra BEP: reinvesti.\n10. **Libertà sopra profitto.** Il capannone entro 2030 non è business — è sovranità.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — V32: LA MACCHINA",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Overview V32",
+      "content": "| Parametro | Valore | Note |\n|-----------|--------|------|\n| Tipo | CNC 3 assi | X + Y + Z |\n| Struttura | **Corpo unico** | Decisione strutturale Maggio 2026 |\n| Massa totale | **178 kg** | Telaio + assi + elettronica |\n| Investimento | EUR 2.250 | 100% componenti recupero industriale |\n| Precisione RSS | ±0.019 mm | IT6-IT7 (verificato con BudgetError RSS) |\n| Tariffa Precision Lab | EUR 45/h | Interno: ~EUR 8/h (utensili + energia) |\n| BEP | **61 ore** = 1.4 mesi | ROI Anno 1: 322% |\n| ROI Anno 1 | 322% | Su investimento EUR 2.250 |\n| Stato costruzione | **65%** — Config G | Rinforzi colonne Z+U |\n| Location | La Taverna (lab sotto casa) | Boffalora sopra Ticino |"
+    },
+    {
+      "level": 3,
+      "title": "DECISIONE STRUTTURALE — CORPO UNICO (Maggio 2026)",
+      "content": "> **Abbandonato il sistema a molle. V32 è struttura corpo unico.**\n\n**Decisione presa:** Maggio 2026, sessione di revisione architetturale.\n\n**Motivazione:**\n- Rigidità superiore per lavorazione titanio ad alta precisione\n- Eliminazione variabili di setup (frequenza di risonanza f0 non più un parametro da gestire)\n- Semplificazione strutturale: meno componenti, meno punti di cedimento\n- Adatto a carichi laterali elevati (fresatura)\n\n**Cosa è stato rimosso:**\n- 4 molle ISO gialle 90N (erano previste per isolamento vibrazioni)\n- Piastre sandwich XY (non più necessarie come interfaccia molle)\n- Calcoli f0=3.83 Hz (obsoleti)\n\n**Cosa rimane:**\n- Smorzamento vibrazioni tramite **Epoxy Granite** (riempimento tubolari)\n- Struttura traliccio saldato TIG — basamento + colonne Z/U\n- Stessa elettronica PLC S7-314C + TP900 Comfort\n\n**Impatto su V6:** Il Capitolo 8 (Sospensione) di ATTO III V6 è obsoleto. Il modello fisico aggiornato è corpo unico + Epoxy Granite come smorzamento."
+    },
+    {
+      "level": 3,
+      "title": "Basamento — Traliccio Saldato",
+      "content": "**Materiale:** Tubolari acciaio 40x40x3 mm S235JR\n**Configurazione:** 8 Custodi + struttura traliccio 3D\n**Saldatura:** TIG — Matteo esegue in proprio\n\n**Dimensioni piano di lavoro:**\n- Corsa X: 400 mm\n- Corsa Y: 300 mm\n- Corsa Z: 150 mm\n- Ingombro totale macchina: ~900×600×600 mm\n\n**8 Custodi (bronzine lavorazione interna):**\n- 8 pezzi interfaccia lavorati — verificati fisicamente (foto Febbraio 2026)\n- Tolleranze: H7/g6 per tutti gli accoppiamenti lineari\n- Materiale: bronzo (recupero)"
+    },
+    {
+      "level": 3,
+      "title": "Config G — Rinforzi Strutturali",
+      "content": "**Status: 65% completato | Sessione #4**\n\nConfig G = rinforzo massimo delle colonne Z e U tramite 4 elementi:\n\n| Elemento | Specifiche | Stato |\n|---------|-----------|-------|\n| Gusset colonne Z | 4x gusset 200mm acciaio | **PROSSIMO STEP FISICO** |\n| Gusset colonne U | 4x gusset 200mm acciaio | Dopo Z |\n| Diagonali | Tubolari 20x20x2 inclinati | Dopo gusset |\n| Tiranti M10 | Acciaio precompresso | Dopo diagonali |\n\n**Prossimo step fisico:** Saldare 4 gusset 200mm sulla colonna Z sinistra (stima: 3 ore officina).\n\n**Blocker attivo:** Manca mandrino 2.2 kW ER20 — da ordinare.\n\n**Config G — Beneficio rigidità:**\n- Incremento rigidità: 772× rispetto struttura senza rinforzi\n- Freq. propria spostata sopra zona critica fresatura\n- Risultato: precisione RSS ±0.019 mm confermata"
+    },
+    {
+      "level": 3,
+      "title": "Assi XYZ",
+      "content": "**Asse X (completato):**\n- Guide lineari HGR15 × 400mm\n- Vite sfera SFU1605 × 430mm\n- Servomotore + driver\n- Accoppiamento elastico\n\n**Asse Y (in assemblaggio):**\n- Stessa configurazione di X\n- Corsa 300 mm\n\n**Asse Z (pianificato — post Config G):**\n- Guide lineari HGR12 × 200mm (componenti recupero)\n- Vite sfera SFU1204 × 220mm\n- Servomotore verticale"
+    },
+    {
+      "level": 3,
+      "title": "Elettronica e Controllo",
+      "content": "**PLC:** Siemens S7-314C-2 DP (recupero industria)\n- CPU 314C: 32 DI, 16 DO, 4 AI, 2 AO\n- Fieldbus Profibus DP\n- Memoria: 192 KB + 2 MB Micro Memory Card\n\n**HMI:** TP900 Comfort (recupero — EUR 0)\n- Display 9\" TFT touch, 800×480\n- PROFINET + MPI/Profibus\n- WinCC Runtime Advanced\n\n**Driver servo:** Adeguati ai servomotori recupero\n\n**Software:**\n- TIA Portal V16 (Step 7 + WinCC)\n- CAM: Fusion 360 + post-processor custom"
+    },
+    {
+      "level": 3,
+      "title": "Epoxy Granite — Riempimento Tubolari",
+      "content": "**Funzione:** Smorzamento vibrazioni passive nei tubolari della struttura (rimpiazza molle).\n\n**Ricetta base (pubblicabile):**\n- Aggregato: mix quarzo 0.5-2mm + polvere quarzo (rapporto 70/30 volumetrico)\n- Resina: epossidica bicomponente bassa viscosità\n- Rapporto aggregato/resina: ~85/15 volumetrico\n- Additivo: grafite 2-3% (smorzamento aggiuntivo)\n\n**Parametri processo:**\n- Temperatura ambiente: 18-25°C\n- Umidità < 60% RH\n- Tempo pot life resina: ~60 minuti\n- Cura: 24h a temperatura ambiente + 48h cura post\n\n**Smorzamento:** δ = 0.03-0.06 (vs acciaio δ = 0.002) — fattore 15-30×"
+    },
+    {
+      "level": 3,
+      "title": "Precisione — Analisi RSS",
+      "content": "**BudgetError RSS V32:**\n\n| Fonte Errore | Errore (mm) | Classe |\n|------------|------------|--------|\n| Vite sfera SFU1605 (P5) | ±0.008 | Vite |\n| Guide HGR15 (H) | ±0.005 | Guida |\n| Parallelismo basamento | ±0.008 | Struttura |\n| Dilatazione termica (ΔT=5°C) | ±0.004 | Termico |\n| Gioco accoppiamenti | ±0.006 | Cinematica |\n| **RSS Totale** | **±0.019** | **IT6-IT7** |\n\nIT6-IT7 è la classe di precisione delle macchine utensili di qualità media-alta."
+    },
+    {
+      "level": 3,
+      "title": "BOM Completo V32 (Selezionato — Componenti Principali)",
+      "content": "| Componente | Q.tà | Fonte | Costo |\n|-----------|------|-------|-------|\n| Tubolari acciaio 40x40x3 S235 | ~12 m | Commercio | EUR 80 |\n| Guide lineari HGR15 (varie lunghezze) | 4 | Recupero | EUR 0 |\n| Guide lineari HGR12 | 2 | Recupero | EUR 0 |\n| Viti sfera SFU1605 | 2 | Acquisto | EUR 80 |\n| Vite sfera SFU1204 | 1 | Acquisto | EUR 40 |\n| Servomotori (3 assi) | 3 | Recupero | EUR 0 |\n| Driver servo (3 assi) | 3 | Recupero | EUR 0 |\n| PLC S7-314C-2DP | 1 | Recupero | EUR 0 |\n| HMI TP900 Comfort | 1 | Recupero | EUR 0 |\n| Bronzine (8 Custodi) | 8 | Recupero + lavorazione | EUR 150 |\n| Gusset acciaio 200mm | 8 | Acquisto | EUR 40 |\n| Tiranti M10 + dadi | 20 | Commercio | EUR 20 |\n| Epoxy bicomponente | 5 kg | Acquisto | EUR 60 |\n| Aggregato quarzo | 15 kg | Acquisto | EUR 20 |\n| Mandrino 2.2 kW ER20 | 1 | **DA ORDINARE** | EUR ~180 |\n| Varie (bulloneria, cavi, ecc.) | — | — | EUR 80 |\n| **TOTALE** | | | **EUR ~750** |\n\n*Nota: il costo EUR 2.250 include lavorazioni esterne per bronzine e alcune lavorazioni CNC non eseguibili senza V32 stessa.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO IV — MIMS: IL PRODOTTO",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Filosofia MIMS",
+      "content": "**MIMS** = Micro-Industry Modular System.\n\nNon è un sistema di scaffalature. Non è Bosch Rexroth per poveri. È il primo sistema modulare industriale che parte da EUR 30, si assembla senza utensili, e funziona con 5+ materiali dallo stesso standard geometrico.\n\n**La geometria sacra:**\n- Tile: 190×190 mm, foro croce centrale D29.9mm H7/g6, 4 fori passanti 10mm nei quadranti\n- Piastrina: 40×40 mm, stesso schema fori (versione compatta)\n- Standard dimensionale: ogni tile è compatibile con ogni giunto in ogni orientamento\n\n**Perché 190mm?** Multiplo di 10 (progettazione), compatibile con profili 40mm (Bosch/Item), adatto a fori M8/M10 standard industria.\n\n**Perché 40×40mm piastrina?** = ¼ di tile. Stesso schema fori. Permette connessioni angolari senza tile intera."
+    },
+    {
+      "level": 3,
+      "title": "I 3 Giunti Proprietari",
+      "content": "**Eco-Snap (0 utensili)**\n- Snap-fit in PPcompliance elastica\n- Portata: 15-25 kg (trazione assiale)\n- Applicazioni: pareti, pannelli, uso domestico/educativo\n- Costo produzione: EUR 0.30 | B2C: EUR 1.50\n\n**Quick-Twist (0 utensili)**\n- Innesto rotazionale 90°, serraggio a camma\n- Portata: 50-80 kg\n- Applicazioni: banchi lavoro, isole lavoro, strutture leggere\n- Costo produzione: EUR 0.90 | B2C: EUR 4.00\n\n**Tech-Bolt (chiave 13mm)**\n- Bullone M10 + inserto esagonale in tile\n- Portata: 200-400 kg (dipende da materiale tile)\n- Applicazioni: strutture industriali, supporto macchinari, utilizzo permanente\n- Costo produzione: EUR 1.50 | B2C: EUR 7.00"
+    },
+    {
+      "level": 3,
+      "title": "Le Piastrine 40mm — 3 Versioni",
+      "content": "| Versione | Materiale | Funzione |\n|---------|---------|---------|\n| Piastrina Base | PP standard | Connessione angolare, adattatore |\n| Piastrina Angolare | PA-GF30 | Giunzione strutturale 90° |\n| Piastrina MET | Alluminio | Strutture metalliche miste |"
+    },
+    {
+      "level": 3,
+      "title": "Configurazioni Standard MIMS",
+      "content": "| Configurazione | Descrizione | Tile Necessari | Prezzo Indicativo |\n|---------------|-----------|--------------|-----------------|\n| Kit Entry | 4 tile + 4 Eco-Snap | 4 | EUR 30-50 |\n| Bench Base | 12 tile + giunti misti | 12 | EUR 120 |\n| Isola Lavoro 1 banco | 20 tile + struttura | 20 | EUR 350 |\n| Isola Lavoro 3 banchi | 60 tile + struttura | 60 | EUR 1.100 |\n| Rack attrezzature | 30 tile + giunti | 30 | EUR 500 |\n| Sistema parete utensili | 24 tile + accessori | 24 | EUR 400 |"
+    },
+    {
+      "level": 3,
+      "title": "Multi-Materiale — 5+ Materiali",
+      "content": "| Codice | Materiale | Applicazione | Densità |\n|--------|---------|------------|--------|\n| STD | PP + CaCO3 + fibra vetro | Uso generale, indoor | 1.15 g/cm³ |\n| HVY | PA6-GF30 | Strutturale, carichi > 200kg | 1.35 g/cm³ |\n| DMP | TPU+EPDM+grafite | Smorzamento vibrazioni, banchi CNC | 1.25 g/cm³ |\n| ECO | PP riciclato post-industriale | Eco-building, costi bassi | 1.08 g/cm³ |\n| FLR | EPDM + silicati | Pavimentazioni, antiscivolo | 1.30 g/cm³ |\n| ACS | EVA + additivi fonoassorbenti | Pannelli acustici | 1.10 g/cm³ |\n| MET | Alluminio 6060-T5 | Strutture ibride metallo-polimero | 2.70 g/cm³ |\n\n*Stesso CAD, 7 materiali. Un solo stampo MIMS produce tutti i materiali non-metallici.*"
+    },
+    {
+      "level": 3,
+      "title": "10+ Applicazioni MIMS",
+      "content": "1. **Banco lavoro maker** — isola lavoro configurabile, espandibile, mobile\n2. **Dime di fissaggio** — fixture per saldatura, assemblaggio, misurazione\n3. **Rack utensili** — organizzazione officina modulare\n4. **Supporto macchine** — tavolo sacrificale CNC, lathe stand\n5. **Sistema parete officina** — french cleat potenziato, 10× più portante\n6. **Armadio modulare** — mobile seminterrato / garage\n7. **Scaffalatura lean** — kanban board, 5S stand, storage\n8. **Kit educativi STEM** — strutture didattiche riconfigurabili\n9. **Isola lavoro industriale lean** — linea produzione PMI\n10. **Supporto elettronica** — rack per quadri elettrici, server mini\n11. **Architettura effimera** — stand fiera, espositore, separé\n12. **Pannello acustico** (tile ACS) — studio recording, sala riunioni"
+    },
+    {
+      "level": 3,
+      "title": "Analisi Competitiva Riassunto",
+      "content": "| | Bosch | Item | 80/20 | Vention | **MIMS** |\n|-|-------|------|-------|---------|---------|\n| Prezzo/metro | EUR 15-40 | EUR 12-35 | EUR 18-45 | EUR 20-50 | **EUR 8-15** |\n| MOQ | EUR 200+ | EUR 150+ | EUR 300+ | EUR 500+ | **EUR 30** |\n| Zero-tool | NO | NO | NO | NO | **SÌ** |\n| Multi-materiale | NO | NO | NO | NO | **SÌ (7)** |\n| Lock-in | ALTO | ALTO | MEDIO | MEDIO | **ZERO** |\n\n**MIMS occupa il blue ocean:** prezzo basso + zero-tool assembly. Mercato 90% inesplorato dai competitor.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO V — MATERIALI E PRODUZIONE",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Pressa 4 Colonne — VULCAN",
+      "content": "**Pressa di produzione:** recupero industriale, modificata per VCM.\n\n| Parametro | Valore |\n|-----------|--------|\n| Forza massima | 15 ton |\n| Corsa punzone | 200 mm |\n| Tavola | 400×400 mm |\n| Cilindro | Recupero industriale |\n| Controllo | Valvola proporzionale + PLC |\n\n**Modifiche per VULCAN:**\n- Aggiunta sistema vacuum (Edwards RV3)\n- Camera stampo stagno (guarnizioni O-ring perimetrali)\n- Controllo temperatura stampo (ROPEX)\n- Interfaccia PLC per sequenza VCM\n\n**Edwards RV3 Vacuum Pump:**\n- Portata: 3 m³/h\n- Pressione finale: < 0.5 mbar\n- Potenza: 250W\n- Funzione: estrazione aria + gas dalla camera stampo durante pressione\n\n**Sistema Termico ROPEX:**\n- Controllo temperatura ±0.5°C\n- Zone di riscaldamento: stampo superiore + inferiore\n- Range: 150-250°C (copre PP, PA6, TPU)"
+    },
+    {
+      "level": 3,
+      "title": "Il Processo VCM — 18 Step",
+      "content": "Il VCM (Vacuum Compression Molding) è il processo proprietario per produzione tile MIMS.\n\n**Principio:** granuli polimero → riscaldamento nello stampo → compressione + vacuum → raffreddamento → tile finita.\n\n**Sequenza (schema semplificato):**\n\n1. Pulizia stampo (aria compressa + alcool IPA)\n2. Applicazione distaccante (Chemlease 70-90, strato sottile)\n3. Pesata granuli (formula specifica per ricetta)\n4. Caricamento stampo (distribuzione uniforme)\n5. Chiusura camera (O-ring check)\n6. Accensione riscaldamento ROPEX (rampa 5°C/min fino a T_processo)\n7. Attesa stabilizzazione T (±1°C per 3 min)\n8. Apertura vacuum (Edwards RV3 on)\n9. Attesa vacuum < 2 mbar (timing critico — trade secret)\n10. Discesa punzone (velocità controllata PLC)\n11. Applicazione forza massima (step, non impatto)\n12. Mantenimento P+V+T (tempo — trade secret)\n13. Inizio raffreddamento (aria compressa stampo esterno)\n14. Stop vacuum a T_demold\n15. Rilascio pressione graduale\n16. Attesa T_demold (< 60°C per PP, < 80°C per PA6)\n17. Apertura stampo\n18. Estrazione tile + ispezione visiva\n\n**Parametri per ricetta (PUBBLICO — range approssimativo):**\n- PP STD: T 185-195°C, P 8-12 ton, vacuum < 2 mbar\n- PA6-GF30: T 230-245°C, P 10-15 ton, vacuum < 1 mbar\n- TPU/EPDM blend: T 165-180°C, P 6-10 ton, vacuum < 3 mbar\n\n*Timing esatto, gap O-ring, profili termici specifici = Trade Secret TS5.*"
+    },
+    {
+      "level": 3,
+      "title": "Le 6 Ricette Polimeriche",
+      "content": "*(Schema pubblico — percentuali e parametri esatti = Trade Secret)*\n\n| Codice | Base | Caratteristica Chiave | Uso |\n|--------|------|----------------------|-----|\n| MIMS-STD | PP + CaCO3 + fibra vetro | Bilanciato, economico | Uso generale |\n| MIMS-HVY | PA6-GF30 | Alta resistenza meccanica | Strutturale pesante |\n| MIMS-DMP | TPU + EPDM + grafite | δ > 0.05 (smorzamento superiore a Epoxy Granite) | Banchi CNC, vibrazione |\n| MIMS-ECO | PP riciclato post-ind. | 80% riciclato, carbon footprint basso | Eco, build, mercato verde |\n| MIMS-FLR | EPDM + silicati | Antiusura, antiscivolo, resistenza UV | Pavimenti, outdoor |\n| MIMS-ACS | EVA + additivi fonoassorbenti | Coefficiente assorbimento acustico > 0.6 | Pannelli acustici |\n\n**MIMS-DMP — Il Materiale Chiave:**\n- Decremento logaritmico δ > 0.05\n- Confronto: Epoxy Granite δ = 0.02-0.03; acciaio δ = 0.002\n- Applicazione principale: tile sotto macchine CNC, sotto servomotori, banchi di misura\n- Vantaggio: smorzamento passivo 2.5× superiore a Epoxy Granite, senza riempimento permanente"
+    },
+    {
+      "level": 3,
+      "title": "Fornitori — Materie Prime",
+      "content": "| Materiale | Fornitore Principale | Alternativa | Lead Time |\n|---------|---------------------|------------|----------|\n| PP standard | Versalis (IT) / Basell | Sabic | 1-2 settimane |\n| PA6-GF30 | DSM / Lanxess | EMS-Grivory | 2-3 settimane |\n| TPU | Covestro (Desmopan) | BASF (Elastollan) | 2-3 settimane |\n| EPDM | Lanxess | ExxonMobil | 1-2 settimane |\n| CaCO3 (filler) | Omyacarb (Omya IT) | Imerys | 1 settimana |\n| Grafite | SGL Carbon | Imerys Graphite | 2-4 settimane |\n| Fibra vetro short | Owens Corning | Jushi Group | 2-3 settimane |\n| PP riciclato | Recovery Europa | Plastix | 1-2 settimane |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO VI — GENESIS: L'INFRASTRUTTURA DIGITALE",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Stack GENESIS (Stato: Maggio 2026)",
+      "content": "GENESIS è l'infrastruttura digitale che gestisce l'intero ecosistema. Non è un progetto futuro — è operativo.\n\n```\nGENESIS STACK — OPERATIVO\n├── MCP Server (5 tool) — ATTIVO\n├── MENTE RAG (50+ chunk) — ATTIVO\n├── Dashboard v5.1 — ATTIVO\n├── API Server (porta 5001) — ATTIVO\n├── Daily Brief — ATTIVO\n├── MENTE Scanner — ATTIVO (818+ estrazioni)\n├── MENTE Watcher — ATTIVO\n├── n8n (porta 5678) — ATTIVO\n└── EVA WhatsApp — PENDING\n```"
+    },
+    {
+      "level": 3,
+      "title": "MCP Server — 5 Tool",
+      "content": "File: `TITANIUM_OS/TITANIUM_OS/MCP/titanium_mcp_server.py`\n\n| Tool | Funzione |\n|------|---------|\n| `get_state` | Legge BRAIN/STATE.json — stato live sistema |\n| `update_milestone` | Aggiorna milestone/step/blockers in STATE.json |\n| `search_mente` | Query RAG ChromaDB — ricerca in MENTE/ |\n| `get_daily_brief` | Daily brief preformattato (markdown) |\n| `list_content_ready` | Lista episodi Content Engine pronti per produzione |\n\n**Utilizzo:** Claude Code + MCP = Claude che conosce lo stato del sistema senza dover rileggere ogni file ogni sessione. Il MCP azzera il context setup time."
+    },
+    {
+      "level": 3,
+      "title": "MENTE RAG",
+      "content": "**Stack:**\n- Database: ChromaDB (locale, nessun cloud)\n- Encoder: `paraphrase-multilingual-MiniLM-L12-v2` (384-dim, IT/EN/DE/FR)\n- Source: `MICROINDUSTRY/MENTE/` — tutti i `.md`\n- Chunk count: **50+ chunk** (post-migrazione SINAPSI, Maggio 2026)\n- MENTE Scanner: 818+ estrazioni da documenti\n\n**Come funziona:**\n```\nMENTE/ (markdown) → scanner.py → ChromaDB\nClaude query → search_mente → top-k chunk → risposta contestualizzata\n```\n\n**Comandi:**\n```bash\nrag \"query\"          # ricerca semantica\nrag-rebuild          # reindicizza ChromaDB dopo modifiche a MENTE/\n```\n\n**Regola:** Ogni modifica a `MENTE/` → eseguire `rag-rebuild`. L'indice non si aggiorna automaticamente."
+    },
+    {
+      "level": 3,
+      "title": "Dashboard v5.1",
+      "content": "**Stack:** React + Vite + Zustand + TanStack Query + Tailwind\n**Porta:** localhost:5173\n**Backend:** API Server Python Flask (porta 5001)\n\n**Features:**\n- 5 pilastri live con stato/percentuale (lettura STATE.json via proxy)\n- CommandBar Ctrl+K — navigazione rapida a tutti i nodi\n- QuickActions — azioni frequenti in 1 click\n- storieData v2.0 — 10 episodi core con metadata rich (titolo, durata, status, skill tree)\n- Celle Zustand draggabili\n- TanStack Query per aggiornamenti real-time\n\n**Milestone:** Dashboard v5.0 completata 27 Maggio 2026 (Zustand + TanStack Query + navigazione guidata). v5.1 completata stesso giorno (CommandBar + storieData v2.0 + proxy fix)."
+    },
+    {
+      "level": 3,
+      "title": "API Server",
+      "content": "**File:** `TITANIUM_OS/TITANIUM_OS/api_server.py`\n**Stack:** Flask\n**Porta:** 5001\n\n**Endpoint principali:**\n```\nGET  /api/state           → STATE.json\nPOST /api/state           → aggiorna STATE.json\nGET  /api/mente/search    → query RAG\nPOST /api/scan            → trigger MENTE Scanner\nGET  /api/brief           → daily brief\nGET  /api/content         → lista episodi\n```"
+    },
+    {
+      "level": 3,
+      "title": "Daily Brief",
+      "content": "**File:** `TITANIUM_OS/TITANIUM_OS/AUTOMATIONS/core/daily_brief.py`\n**Output:** `DATA/daily_brief_last.md`\n**Comando:** `brief`\n\nGenera ogni mattina:\n- Stato milestones (da STATE.json)\n- Blockers attivi\n- Prossimi step per pilastro\n- Contenuti pronti per produzione\n- TODO del giorno"
+    },
+    {
+      "level": 3,
+      "title": "MENTE — Knowledge Base",
+      "content": "**Directory:** `MICROINDUSTRY/MENTE/`\n**Struttura:**\n\n```\nMENTE/\n├── V32/          ← CNC: BOM, schemi, note officina, decisioni\n├── MIMS/         ← design, protocollo fisico, ricette\n├── VITA_NATURA/  ← sito, EVA, procedure centro estetico\n├── OFFICINA/     ← attrezzatura, fornitori, TIG/MIG\n├── KNOWLEDGE/    ← libri, corsi, repo di riferimento\n│   ├── ASSOLUTO/ ← questo file + V6\n│   └── SINAPSI/  ← mappa idee migrata (41 doc — Maggio 2026)\n└── SESSIONI/     ← decisioni dalle chat (YYYY-MM-DD_tema.md)\n    └── STORIE/   ← narrativa completa (FILONE_UNICO.md)\n```\n\n**Migrazione SINAPSI→MENTE (27 Maggio 2026):**\n- 41 documenti migrati da SINAPSI/ a MENTE/\n- Include: STORIE, ASSOLUTO V6, VULCAN, CV, IDEE_NON_SVILUPPATE\n- 135 idee catalogate nel file idee"
+    },
+    {
+      "level": 3,
+      "title": "n8n — Orchestrazione",
+      "content": "**Porta:** localhost:5678\n**Storage:** SQLite (EUR 0/mese — no cloud)\n**Uso attuale:**\n- Webhook trigger per azioni GENESIS\n- Pipeline future: ESP32 IoT → n8n → API Server → Dashboard"
+    },
+    {
+      "level": 3,
+      "title": "EVA — WhatsApp Automation (PENDING)",
+      "content": "**Scopo:** Automazione prenotazioni + risposta clienti per Vita Natura (centro estetico Maria).\n\n**Architettura pianificata:**\n```\nWhatsApp Business API\n    ↓\nn8n (webhook)\n    ↓\nClaude API (NLP intent recognition)\n    ↓\nGoogle Calendar (prenotazioni)\n    ↓\nWhatsApp (risposta)\n```\n\n**Maria Rule:**\n- EVA parla sempre come \"il sistema di Vita Natura\" — mai come AI\n- Tono: professionale ma caldo, italiano standard\n- Limite: non decide nulla di non-standard → passa a Maria\n- Fallback: \"Ti rispondo entro [X]\" → notifica Maria su Telegram\n\n**Status:** Setup WhatsApp Business API pendente."
+    },
+    {
+      "level": 3,
+      "title": "I 7 Personaggi AI — Ecosystem Agents",
+      "content": "| Nome | Ruolo | Stato |\n|------|-------|-------|\n| **THEMIS** | Esecuzione tecnica, codifica, analisi V32/GENESIS | **Attivo** |\n| **EVA** | WhatsApp automation, prenotazioni Vita Natura | **In sviluppo** |\n| **AVA** | YouTube avatar, script, reel, voiceover | **Pianificato** |\n| ARIA | Life OS, ADHD scaffolding, scheduling | Futuro |\n| NEXUS | Orchestratore agenti multi-AI | Futuro |\n| TESLA | Hardware, elettronica, CNC, IoT | Futuro |\n| FORGE | Meccanica, officina, saldatura, MIMS | Futuro |"
+    },
+    {
+      "level": 3,
+      "title": "Content Engine v2",
+      "content": "**Stato:** ATTIVO — 10 episodi core + dataset JSONL\n\n**Stack:**\n- Dual-pass: haiku (draft rapido) + sonnet (refine)\n- Output: script YouTube + dataset.jsonl (training fine-tuning futuro)\n- Storage: `MICROINDUSTRY/MENTE/KNOWLEDGE/` + `CONTENT_ENGINE/`\n\n**FILONE_UNICO.md:** narrativa completa S0+S1 — 241 righe. Completato 27 Maggio 2026.\n\n**Pipeline produzione episodi:**\n```\nIdea da MENTE/SESSIONI/ → Content Engine → script → AVA pipeline → YouTube\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO VII — ECONOMIA E VERDETTO",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Economia Consolidata — Tutti gli Stream",
+      "content": "| Stream | Anno 1 (Low) | Anno 1 (High) | Anno 2 | Anno 3 |\n|--------|-------------|-------------|--------|--------|\n| V32 Precision Lab | EUR 2.500 | EUR 5.000 | EUR 8.000 | EUR 15.000 |\n| MIMS (prodotti) | EUR 3.000 | EUR 8.000 | EUR 22.500 | EUR 45.000 |\n| EVA SaaS (Vita Natura pilot + multi) | EUR 1.800 | EUR 3.600 | EUR 10.000 | EUR 30.000 |\n| YouTube AdSense | EUR 200 | EUR 600 | EUR 3.500 | EUR 10.000 |\n| MIMS indotto YouTube | incluso sopra | incluso sopra | incluso | incluso |\n| Affiliate marketing | EUR 100 | EUR 500 | EUR 2.000 | EUR 5.500 |\n| Digital products | EUR 200 | EUR 500 | EUR 3.500 | EUR 8.500 |\n| Community/Patreon | EUR 100 | EUR 300 | EUR 2.000 | EUR 5.500 |\n| Sponsorship | EUR 0 | EUR 0 | EUR 3.500 | EUR 10.000 |\n| **TOTALE** | **EUR 7.900** | **EUR 18.600** | **EUR 55.000** | **EUR 130.000** |\n\n**Note:**\n- Anno 1 = 2026 (anno di costruzione + lancio, non anno pieno di revenue)\n- Anno 2 = 2027 (primo anno pieno V32 operativa + MIMS in vendita)\n- Anno 3 = 2028 (scala + B2B + marketplace)\n- Margine medio portfolio: 75-82%"
+    },
+    {
+      "level": 3,
+      "title": "V32 — BEP e ROI",
+      "content": "| Metrica | Valore |\n|---------|--------|\n| Investimento | EUR 2.250 |\n| Tariffa Precision Lab | EUR 45/h |\n| Costi variabili/h | EUR 8 (utensili + energia) |\n| Margine netto/h | EUR 37 |\n| BEP | **61 ore** |\n| BEP tempo reale | **1.4 mesi** (a 3h/giorno lavorativo) |\n| ROI Anno 1 | **322%** (stima 200h fatturate) |\n| Revenue Anno 1 V32 | EUR 7.400 (200h × EUR 37 netto) |"
+    },
+    {
+      "level": 3,
+      "title": "MIMS — Unit Economics",
+      "content": "| Prodotto | Costo Prod. | Prezzo B2C | Margine | Prezzo B2B | Margine B2B |\n|---------|------------|-----------|--------|-----------|------------|\n| Tile 190 STD | EUR 1.80 | EUR 8 | 78% | EUR 4.50 | 60% |\n| Tile 190 HVY | EUR 3.50 | EUR 15 | 77% | EUR 9 | 61% |\n| Tile 190 MET | EUR 8 | EUR 25 | 68% | EUR 16 | 50% |\n| Piastrina STD | EUR 0.40 | EUR 2 | 80% | EUR 1.20 | 67% |\n| Giunto Eco-Snap | EUR 0.30 | EUR 1.50 | 80% | EUR 0.80 | 63% |\n| Giunto QT | EUR 0.90 | EUR 4 | 78% | EUR 2.50 | 64% |\n| Giunto TB | EUR 1.50 | EUR 7 | 79% | EUR 4.50 | 67% |\n| Kit Bench Base | EUR 25 | EUR 120 | 79% | EUR 75 | 67% |\n| Isola 3 banchi | EUR 200 | EUR 1.100 | 82% | EUR 700 | 71% |"
+    },
+    {
+      "level": 3,
+      "title": "Skill Tree — 150 Livelli (3 Alberi)",
+      "content": "**Albero Titanium (hardware — V32, MIMS, officina):**\n- L1-10: Fondamenta (basamento TIG, bronzine, guida lineari)\n- L11-20: Struttura (Config G, Epoxy Granite, assi)\n- L21-30: Polimeri base (PP, PA6, processi base)\n- L31-40: Elettronica (PLC S7, HMI, profibus)\n- L41-50: CNC operativo (calibrazione, primo pezzo, G-code)\n- L51-60: MIMS production (stampo, VCM, ricette)\n- L61-80: Advanced (polimero DMP, tolerance stack, H7)\n\n**Albero GENESIS (digitale — software, AI, automazione):**\n- L1-20: Core (Python, Git, CLI, API)\n- L21-40: AI integrazione (Claude API, MCP, RAG)\n- L41-60: Sistemi (Docker, n8n, database)\n- L61-80: Agenti (EVA, NEXUS, orchestrazione)\n\n**Albero IDENTITY (brand — media, IP, community):**\n- L1-20: Content base (YouTube, script, Shorts)\n- L21-40: Authority (SEO, community, Maker Faire)\n- L41-60: IP (brevetti, marchi, licensing)\n- L61-80: Scale (marketplace, B2B, international)"
+    },
+    {
+      "level": 3,
+      "title": "Timeline 2026-2030 — 20 Milestone",
+      "content": "| # | Milestone | Data Target | Status |\n|---|-----------|------------|--------|\n| 1 | Basamento traliccio saldato TIG | Gen 2026 | ✅ COMPLETATO |\n| 2 | Asse X assemblato completo | Feb 2026 | ✅ COMPLETATO |\n| 3 | 8 Custodi lavorati (bronzine) | Feb 2026 | ✅ COMPLETATO |\n| 4 | HMI TP900 Comfort acquisito | Feb 2026 | ✅ COMPLETATO |\n| 5 | GENESIS Dashboard v5.1 + RAG 50+ chunk | Mag 2026 | ✅ COMPLETATO |\n| 6 | **Config G — gusset + diag + tiranti M10** | **Giu 2026** | **IN CORSO — 65%** |\n| 7 | Mandrino 2.2 kW ER20 installato | Giu 2026 | ⏳ DA ORDINARE |\n| 8 | Asse Y assemblato | Lug 2026 | ⏳ PROSSIMO |\n| 9 | Asse Z assemblato | Ago 2026 | ⏳ |\n| 10 | Epoxy Granite fill completo | Set 2026 | ⏳ |\n| 11 | PLC S7 + TP900 collegati, test I/O | Ott 2026 | ⏳ |\n| 12 | Primo movimento coordinato XYZ | Nov 2026 | ⏳ |\n| 13 | Primo pezzo H7 (prova di precisione) | Dic 2026 | ⏳ |\n| 14 | V32 operativa Precision Lab | Q1 2027 | ⏳ |\n| 15 | Primo tile MIMS da VULCAN | Q2 2027 | ⏳ |\n| 16 | MIMS in vendita online | Q3 2027 | ⏳ |\n| 17 | Maker Faire — prima fiera | Q3 2027 | ⏳ |\n| 18 | Brevetto B2 MIMS filing | Q4 2027 | ⏳ |\n| 19 | EUR 1K/mese revenue stabile | Q4 2027 | ⏳ |\n| 20 | **Capannone** | **15 Lug 2030** | 🎯 TARGET |"
+    },
+    {
+      "level": 3,
+      "title": "Il Verdetto dei Tre Assi (Aggiornato Maggio 2026)",
+      "content": "---\n\n**LEX PHYSICA — Il Verdetto della Materia**\n\n*Domanda: V32 può raggiungere IT6-IT7 con i componenti attuali?*\n\nAnalisi RSS: ±0.019 mm. IT6-IT7 = ±0.013 mm a ±0.025 mm (dipende dalla quota nominale).\n\n**VERDETTO: APPROVATO.**\nLa struttura corpo unico (decisione Maggio 2026) migliora la rigidità rispetto al progetto originale a molle. Config G porta la rigidità a 772× baseline. L'analisi RSS dimostra fattibilità a IT6-IT7 per pezzi nella corsa di lavoro (entro 200mm dal centro).\n\n---\n\n**LEX MERCATORIA — Il Verdetto del Mercato**\n\n*Domanda: c'è un mercato per MIMS? E per Precision Lab?*\n\nMIMS: TAM EUR 4.2B, SAM EUR 180M, SOM Y3 EUR 300-450K. 5 gap di mercato non coperti dai competitor. Blue ocean prezzo-basso + zero-tool.\n\nPrecision Lab: TAM Italia EUR 1.8B, SAM Lombardia EUR 25M, SOM EUR 15-25K/anno (30 clienti × 5h/mese).\n\n**VERDETTO: APPROVATO.**\nIl mercato esiste, è misurabile, e non richiede educazione del cliente. Un hobbista che vede MIMS capisce immediatamente il valore. Una PMI che cerca lavorazioni CNC sotto EUR 45/h non ne trova facilmente.\n\n---\n\n**LEX AESTHETICA — Il Verdetto dell'Identità**\n\n*Domanda: il brand Titanium Ventures è autentico e difendibile?*\n\nL'autenticità non si costruisce — si documenta. 15 anni di industria reale, macchina costruita davvero con componenti recupero, saldature TIG eseguite in prima persona. AVA + canale YouTube = autorità tecnica filmata.\n\n**VERDETTO: APPROVATO.**\nIl posizionamento \"artigiano industriale che costruisce la propria libertà\" è narrativamente unico e difficilmente replicabile da un competitor che non ha vissuto quella esperienza.\n\n---"
+    },
+    {
+      "level": 3,
+      "title": "La Regola 9 Applicata — Reinvestimento 60%",
+      "content": "**Anno 1 (2026) — Piano reinvestimento:**\n\n| Stream | Revenue Stima | Reinvestimento (60%) | Target |\n|--------|-------------|---------------------|--------|\n| Precision Lab | EUR 3.000-7.000 | EUR 1.800-4.200 | Mandrino + utensili CNC |\n| EVA pilot | EUR 1.800-3.600 | EUR 1.080-2.160 | WhatsApp API + infra |\n| YouTube (se attivo) | EUR 200-600 | EUR 120-360 | Attrezzatura riprese |\n| **TOTALE** | **EUR 5.000-11.200** | **EUR 3.000-6.720** | |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO VIII — IL MERCATO",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "TAM / SAM / SOM — Dimensione del Mercato",
+      "content": "**MIMS — Sistemi Modulari Strutturali**\n\n| Livello | Valore | Calcolo |\n|---------|--------|---------|\n| TAM | EUR 4.2 miliardi | Mercato globale profili modulari industriali + workstation + scaffalature (Grand View Research 2024) |\n| SAM | EUR 180 milioni | PMI manifatturiere IT + maker/FabLab Italia + EU Sud con budget < EUR 5K |\n| SOM Anno 3 | EUR 300K-450K | 1.000-1.500 clienti via YouTube + marketplace + rete diretta |\n\n**V32 Precision Lab**\n\n| Livello | Valore | Calcolo |\n|---------|--------|---------|\n| TAM | EUR 1.8 miliardi | Servizi CNC su misura Italia (UCIMU 2024) |\n| SAM | EUR 25 milioni | Prototipi + piccole serie Lombardia per maker, startup, studi design |\n| SOM Anno 3 | EUR 15K-25K/anno | 30 clienti × 5h/mese × EUR 45/h |\n\n**EVA SaaS — Automazione Micro-Imprese**\n\n| Livello | Valore | Calcolo |\n|---------|--------|---------|\n| TAM | EUR 2.5 miliardi | Software automazione micro-imprese servizi EU |\n| SAM | EUR 120 milioni | Centri estetici + parrucchieri + studi IT con < 5 dipendenti |\n| SOM Anno 3 | EUR 30K-60K/anno | 25-40 clienti × EUR 100-150/mese |\n\n**SOM Consolidato Anno 3:**\n\n| Stream | Low | High | Margine |\n|--------|-----|------|---------|\n| MIMS | EUR 300K | EUR 450K | 72% |\n| Precision Lab | EUR 15K | EUR 25K | 82% |\n| EVA SaaS | EUR 30K | EUR 60K | 85% |\n| YouTube + Content | EUR 5K | EUR 15K | 95% |\n| **TOTALE** | **EUR 350K** | **EUR 550K** | **~75%** |"
+    },
+    {
+      "level": 3,
+      "title": "I 5 Gap del Mercato che MIMS Riempie",
+      "content": "| # | Gap | Problema Attuale | Soluzione MIMS |\n|---|-----|-----------------|----------------|\n| 1 | Prezzo d'ingresso | MOQ EUR 200-500, EUR 15+/metro | Kit Entry EUR 30, piastrina EUR 0.40 |\n| 2 | Multi-materiale | Solo alluminio estruso | PP / PA-GF30 / acciaio / composito / bio |\n| 3 | Zero-tool assembly | Chiavi, bulloni, curva apprendimento | Eco-Snap: 0 utensili; Quick-Twist: 0 utensili |\n| 4 | Micro-manifattura | Nessuno supporta produzione locale | File CAD aperti, producibili con V32/P1S/qualsiasi CNC |\n| 5 | Community design | Vention: cloud chiuso; altri: zero | Marketplace + revenue sharing 10/5% |"
+    },
+    {
+      "level": 3,
+      "title": "Go-to-Market — Le 3 Fasi",
+      "content": "| Fase | Periodo | Obiettivi | KPI Target |\n|------|---------|-----------|-----------|\n| **SEED** | Q2-Q4 2026 | Credibilità, 50 follower qualificati, PMF | YouTube 500 sub, beta tester 10, email 200 |\n| **GROW** | Q1-Q4 2027 | 200 clienti paganti, pricing validato | Clienti 200, EUR 3K/mese, YouTube 3K sub |\n| **SCALE** | 2028+ | 1.500+ clienti, B2B contratti, marketplace | EUR 15K/mese, YouTube 10K sub, B2B 20 contratti |\n\n**Content-Led Growth Flywheel:**\n```\nCostruisci reale → Filma → YouTube → Audience → Configuratore → Vendite → Feedback → Migliora → Nuovo contenuto\n                                                                                        ↑_______________________↑\n```\n\n**Budget Marketing Anno 1:** EUR 600-900 totale (sito + dominio + 1 fiera + kit beta + packaging)."
+    },
+    {
+      "level": 3,
+      "title": "Matrice Posizionamento",
+      "content": "```\n                    SEMPLICE ←————————→ COMPLESSO\nALTO       |              Vention    | Bosch/Item\n           |                         |\n           |————————————————————————|\nPREZZO     | MIMS Pro     | 80/20   | Creform\nMEDIO      | (Quick-Twist)|         |\n           |————————————————————————|\nBASSO      | MIMS Entry   | MIMS Maker  | IKEA/Amazon\n           | (Eco-Snap)   | (Quick-Twist)|\n           |\n           ← BLUE OCEAN (90% mercato potenziale — inesplorato)\n```"
+    },
+    {
+      "level": 3,
+      "title": "Canali Vendita — Priorità per Fase",
+      "content": "| Fase | Canali Primari | Canali Secondari |\n|------|---------------|-----------------|\n| SEED 2026 | YouTube + link, sito diretto, beta kit | — (nessun marketplace prematuro) |\n| GROW 2027 | Sito + configuratore, fiere maker, marketplace MIMS | Amazon/Etsy test |\n| SCALE 2028+ | B2B diretto, Hub&Spoke FabLab, e-commerce B2B | Tutti attivi |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO IX — LA PROPRIETÀ INTELLETTUALE",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Mappa IP — Difesa a 6 Strati",
+      "content": "| Strato | Protezione | Cosa Protegge | Durata | Costo Y1-Y3 |\n|--------|-----------|--------------|--------|------------|\n| Brevetti (3) | Legale — monopolio | Polimero + geometria MIMS + processo VCM | 20 anni | EUR 8.500-18.000 |\n| Trade Secrets (6) | Segretezza | Ricette complete + parametri processo | Illimitata | EUR 100-200 |\n| Marchi (4) | Legale — identità | Titanium Ventures + MIMS + loghi | 10 anni rinnovabili | EUR 1.000-1.700 |\n| Design (1) | Legale — estetica | Geometria piastrina MIMS 40mm | 5+5 anni EU | EUR 350-500 |\n| Know-how (tacito) | Esperienza | TIG/MIG + robot + presse + QC + disegno | Illimitata | EUR 0 (15 anni) |\n| Network (relazionale) | Fiducia | Fornitori, colleghi, contatti industria | Illimitata | EUR 0 |\n| **TOTALE** | | | | **EUR 10.000-20.000** |"
+    },
+    {
+      "level": 3,
+      "title": "I 3 Brevetti Pianificati",
+      "content": "**B1 — Formulazione polimero composito MIMS-DMP**\n- Oggetto: composito ad alto smorzamento (δ > 0.05) per macchine utensili\n- Claim chiave: formulazione TPU + EPDM + grafite con decremento logaritmico specifico\n- Timeline: Q4 2027 (richiede dati sperimentali validati)\n- Costo stimato: EUR 3.000-5.000\n\n**B2 — Sistema di giunzione modulare multi-materiale (geometria MIMS)**\n- Oggetto: geometria croce D29.9 H7/g6 + 4 fori 10mm + 3 giunti a zero utensili\n- Claim chiave: stesso standard geometrico accommoda 3+ tipi giunzione + 5+ materiali senza modifica\n- Timeline: Q2 2027 (urgente — prodotto in vendita)\n- Costo stimato: EUR 3.300-5.200\n\n**B3 — Processo VCM integrato con stampo modulare**\n- Oggetto: stampaggio compressione sotto vuoto con stampo intercambiabile <10 min\n- Claim chiave: combinazione vacuum + compressione + cambio cavità rapido per micro-produzione\n- Timeline: Q1 2028 (dopo 6 mesi produzione)\n- Costo stimato: EUR 2.000-3.500"
+    },
+    {
+      "level": 3,
+      "title": "I 6 Trade Secrets",
+      "content": "| # | Segreto | Pubblico (YouTube) | MAI Pubblicato |\n|---|---------|---------------------|----------------|\n| TS1 | MIMS-STD Ricetta completa | Si usa PP + CaCO3 + fibra. Generico. | Percentuali esatte, sequenza miscelazione, parametri T/P/t |\n| TS2 | MIMS-HVY Ricetta completa | PA6 + fibra vetro = resistenza. Generico. | Percentuali, pre-essicazione PA6, profilo termico specifico |\n| TS3 | MIMS-DMP Ricetta smorzamento | Si testa materiale smorzante, δ > 0.05. Risultato generico. | Formula esatta, grado reticolazione, rapporto TPU/EPDM |\n| TS4 | MIMS-ECO/FLR/ACS Ricette secondarie | Usiamo materiale riciclato/pavimento/acustico. Generico. | Tutte le formule, compatibilizzanti, masterbatch specifici |\n| TS5 | Processo VCM ottimizzato | Usiamo vacuum + compressione. Concetto generale. | Timing esatto vacuum, gap O-ring, rampe T specifiche, pressioni |\n| TS6 | Polimero proprietario v1-v2 | Stiamo sviluppando materiale nuovo. Teaser. | TUTTO. Formula, processo, risultati test, fornitori |\n\n**Regola Coca-Cola:** Un trade secret protegge per sempre — finché rimane segreto. Un brevetto scade dopo 20 anni e pubblica la formula. Per le ricette MIMS, il trade secret è superiore al brevetto."
+    },
+    {
+      "level": 3,
+      "title": "Registrazioni Pianificate",
+      "content": "| # | Tipo | Oggetto | Classi | Costo | Timeline |\n|---|------|---------|--------|-------|----------|\n| M1 | Marchio UIBM denominativo | TITANIUM VENTURES | 7, 6, 42 | EUR 250-400 | Q1 2027 |\n| M2 | Marchio UIBM denominativo | MIMS | 6, 20, 17 | EUR 250-400 | Q1 2027 |\n| M3 | Marchio UIBM figurativo | Logo TV + Logo MIMS | Come M1+M2 | EUR 500-800 | Q2 2027 |\n| M4 | Design RCD EUIPO | Geometria piastrina 40mm (croce + 4 fori) | — | EUR 350-500 | Q2 2027 |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO X — LA MEDIA STRATEGY",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Titanium Lab — Il Formato Flagship",
+      "content": "**Titanium Lab** è il video-podcast settimanale: Matteo lavora in laboratorio, spiega, riflette. Non tutorial. Non vlog. Documentario in tempo reale di un artigiano industriale che costruisce la propria libertà.\n\n| Parametro | Valore |\n|-----------|--------|\n| Durata | 25-40 minuti |\n| Cadenza | 1 episodio/settimana (mercoledì) |\n| Setting | La Taverna — V32 + pressa + banco MIMS visibili |\n| Lingua | Italiano primario + sottotitoli EN automatici |\n| Tono | Riflessivo, tecnico, accessibile. Mai vendita diretta. |\n| Conduzione | Matteo alla camera + AVA overlay animati per concetti tecnici |\n\n**Struttura episodio:**\n```\nCold open (30s) → Intro (15s) → Teoria/contesto (8 min) → \nLavoro pratico (15 min) → Riflessione/lezione (5 min) → Outro + CTA (30s)\n```"
+    },
+    {
+      "level": 3,
+      "title": "Le 3 Serie Parallele",
+      "content": "**Serie 1 — LONG-FORM (YouTube, 15-40 min)**\n\n| Serie | Frequenza | Funzione |\n|-------|-----------|---------|\n| Titanium Lab (flagship) | 1/settimana (mercoledì) | Autorità + watch time + podcast |\n| Build Log V32 | 1/settimana (sabato) | SEO \"CNC build\" + proof of concept |\n| Polimeri Sperimentali | 2/mese (venerdì alternato) | IP positioning + unicità contenuto |\n| Python per Maker | 2/mese (venerdì alternato) | Lead developer + community EVA |\n\n**Serie 2 — SHORT-FORM (Shorts/Reels/TikTok, 30-60s)**\n\n| Serie | Frequenza | Funzione |\n|-------|-----------|---------|\n| MIMS in 60 Secondi | 3/settimana (lun-mer-ven) | Awareness + subscriber growth |\n| Tool Tips | 2/settimana (mar-gio) | Engagement + credibilità pratica |\n| Failures & Wins | 1/settimana (domenica) | Autenticità + viralità potenziale |\n\n**Serie 3 — AUDIO (Podcast, Spotify/Apple)**\n- Titanium Lab Audio: estrazione automatica dall'episodio video\n- Behind the Machine: riflessione personale, audio esclusivo 1/mese\n\n**Totale produzione settimanale:** 3 long-form + 6 short-form = 9 contenuti\n**Totale annuo:** 156 long-form + 312 short-form = 468 contenuti\n**Tempo produzione:** 12-16 ore/settimana (→ sotto 10h con pipeline AVA)"
+    },
+    {
+      "level": 3,
+      "title": "Piano Editoriale — 4 Trimestri Anno 1",
+      "content": "| Trimestre | Tema | Focus Long-Form | Milestone Integrata | KPI Target |\n|-----------|------|----------------|---------------------|-----------|\n| Q1 (sett 1-13) | LE FONDAMENTA | V32 storia, BOM recovery, Config G, Epoxy Granite | Config G completato | Sub 300-500, video 30+ |\n| Q2 (sett 14-26) | LA MACCHINA | Assi Y+Z, PLC, primo movimento, MIMS lancio | V32 assemblaggio, primo tile | Sub 800-1.500, beta 10 |\n| Q3 (sett 27-39) | IL PRODOTTO | Primo pezzo H7, stampi, MIMS in vendita | V32 Precision Lab attiva | Sub 1.500-3.000, clienti 50+ |\n| Q4 (sett 40-52) | L'ECOSISTEMA | MIMS+V32+EVA convergenza, bilancio Anno 1 | EVA pilot, Brevetto B2 filing | Sub 3.000-5.000, EUR 3K/mese |"
+    },
+    {
+      "level": 3,
+      "title": "I 7 Stream di Monetizzazione",
+      "content": "| # | Stream | Anno 1 Low | Anno 1 High | Anno 3 | Prerequisito |\n|---|--------|-----------|-----------|--------|-------------|\n| 1 | YouTube AdSense | EUR 200 | EUR 600 | EUR 10.000 | 1.000 sub + 4.000 ore |\n| 2 | MIMS vendite indotte | EUR 3.000 | EUR 8.000 | EUR 45.000 | Configuratore + MIMS disponibili |\n| 3 | Precision Lab lead | EUR 2.000 | EUR 4.000 | EUR 12.500 | V32 operativa + video proof |\n| 4 | Affiliate (componenti) | EUR 100 | EUR 500 | EUR 5.500 | Audience engaged |\n| 5 | Sponsorship | EUR 0 | EUR 0 | EUR 10.000 | 5.000+ sub |\n| 6 | Digital products | EUR 200 | EUR 500 | EUR 8.500 | Libreria contenuti + audience trust |\n| 7 | Community/Patreon | EUR 100 | EUR 300 | EUR 5.500 | 1.000+ true fans |\n| **TOTALE** | | **EUR 5.600** | **EUR 13.900** | **EUR 97.000** | |"
+    },
+    {
+      "level": 3,
+      "title": "Digital Products — Tier Pricing",
+      "content": "| Prodotto | Prezzo | Target | Costo Marginale |\n|---------|--------|--------|----------------|\n| CAD Templates MIMS (pack 10) | EUR 9 | Maker con CNC/3D printer | EUR 0 |\n| Ebook \"Polimeri per Maker\" | EUR 19 | Curious + maker R&D | EUR 0 |\n| Corso \"MIMS da Zero a Banco\" | EUR 49 | Maker seri, FabLab | EUR 0 |\n| Corso \"V32 Build Complete\" | EUR 99 | CNC builder avanzati | EUR 0 |\n| Consulenza 1:1 (1 ora) | EUR 80 | B2B, progettisti | EUR 0 (tempo) |\n| Patreon Base | EUR 5/mese | Fan base | EUR 0 |\n| Patreon Pro | EUR 15/mese | Maker attivi | EUR 0 |\n| Patreon Industrial | EUR 50/mese | B2B, partner | EUR 0 |\n\n**Costo marginale ZERO.** Un corso creato una volta genera revenue per anni."
+    },
+    {
+      "level": 3,
+      "title": "SEO Keywords — Opportunità",
+      "content": "| Keyword | Volume/mese | Competizione | Serie Target |\n|---------|------------|-------------|-------------|\n| CNC build log / DIY CNC | 5K-15K (EN), 500-1K (IT) | Media | Build Log V32 |\n| modular workstation / banco modulare | 2K-8K (EN), 200-500 (IT) | Bassa | MIMS in 60s |\n| epoxy granite CNC | 1K-3K (EN), 100-300 (IT) | Bassa | Polimeri Sperimentali |\n| vacuum compression molding DIY | 500-2K (EN), 50-200 (IT) | **MOLTO BASSA** | Polimeri + Titanium Lab |\n| Siemens PLC tutorial / S7 300 | 2K-5K (EN), 300-800 (IT) | Media-alta | Titanium Lab |\n| Python automation maker | 3K-8K (EN), 200-500 (IT) | Media | Python per Maker |\n\n*\"vacuum compression molding DIY\" = quasi zero concorrenza. Un singolo video può dominare per anni.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "EPILOGO — IL CAPANNONE",
+      "content": "**15 Luglio 2030.**\n\nNon come traguardo. Come orizzonte.\n\nIl capannone non è un obiettivo lavorativo. È un obiettivo di sovranità.\n\nSignifica: spazio fisico dove la macchina non dipende dal volume del seminterrato. Dove la produzione MIMS scala senza limitazioni. Dove i visitatori vengono a vedere come si costruisce la libertà artigianale con strumenti industriali e sistemi cognitivi.\n\nLa catena che porta lì:\n\n```\nConfig G completato (Giu 2026)\n    ↓\nV32 operativa (Q1 2027)\n    ↓\nPrimo tile MIMS (Q2 2027)\n    ↓\nMIMS in vendita (Q3 2027)\n    ↓\nEUR 5K/mese stabile (Q2 2028)\n    ↓\nCapannone — affitto + attrezzatura (Q3 2030)\n```\n\nIl BEP del capannone è calcolabile. Non è un sogno. È una proiezione con variabili.\n\n**L'unica regola che conta:** ogni giorno che lavori nell'ecosistema accumula compounding. La macchina fisica, il sistema digitale, il brand, il know-how. Tutto si accresce. Tutto si connette. Niente si disperde.\n\n*Questo documento esiste perché la memoria biologica è inaffidabile. Il RAG è affidabile. Ogni parola qui vale per tutte le sessioni future.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "APPENDICE — STATO SISTEMA (Snapshot 2026-05-27)",
+      "content": "```json\n{\n  \"active_milestone\": \"Config G — Rinforzi colonne Z+U\",\n  \"pct_complete\": 65,\n  \"next_step_fisico\": \"Saldare 4 gusset 200mm colonna Z sinistra\",\n  \"session_count\": 5,\n  \"blocker\": \"Manca mandrino 2.2kW ER20\",\n  \"last_build\": \"Dashboard v5.1 — CommandBar Ctrl+K + storieData v2.0 + SINAPSI→MENTE (41 doc)\",\n  \"pilastri\": {\n    \"V32\": \"65% — Config G IN CORSO\",\n    \"MIMS\": \"30% — attende catena V32→VULCAN\",\n    \"GENESIS\": \"55% — stack operativo, EVA pending\",\n    \"VITA_NATURA\": \"40% — sito attivo, EVA pending\",\n    \"IDENTITY\": \"35% — Content Engine v2 attivo, FILONE_UNICO completato\"\n  },\n  \"nodes\": {\n    \"MCP\": \"ATTIVO — 5 tool\",\n    \"RAG\": \"ATTIVO — 50+ chunk ChromaDB\",\n    \"Dashboard\": \"ATTIVO — v5.1 porta 5173\",\n    \"API\": \"ATTIVO — porta 5001\",\n    \"n8n\": \"ATTIVO — porta 5678\",\n    \"EVA\": \"PENDING\"\n  }\n}\n```\n\n---\n\n*ASSOLUTO V7 — Titanium Ventures | Matteo Benenati | 2026-05-27*\n*Supera: V6_ATTO_I_II.md, V6_ATTO_III_V32.md, V6_ATTO_IV_MIMS.md, V6_ATTO_V_MATERIALI.md, V6_ATTO_VI_GENESIS.md, V6_ATTO_VII_VERDETTO.md, V6_ATTO_VIII_MERCATO.md, V6_ATTO_IX_IP.md, V6_ATTO_X_MEDIA.md*"
+    }
+  ],
+  "word_count": 7043,
+  "updated_at": "2026-05-31T13:58:31.940718",
+  "built_at": "2026-05-31T15:07:11.298431"
+}

@@ -1,0 +1,45 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_04_IL_SEGNALE.md",
+  "title": "EP_04 — IL SEGNALE",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_04  IL SEGNALE](#ep04-il-segnale)\n    - [Ho costruito unAI per la donna che amo. Si chiama Eva.](#ho-costruito-unai-per-la-donna-che-amo-si-chiama-eva)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  VITA NATURA](#atto-i-vita-natura)\n  - [ATTO II  LA MARIA RULE](#atto-ii-la-maria-rule)\n  - [ATTO III  COSA FA EVA OGNI GIORNO](#atto-iii-cosa-fa-eva-ogni-giorno)\n  - [ATTO IV  PERCHÉ QUESTO APPARTIENE ALLECOSISTEMA](#atto-iv-perché-questo-appartiene-allecosistema)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Ho costruito un'AI per la donna che amo. Si chiama Eva.\"",
+      "content": "**Formato:** Video-podcast | Durata stimata: 10-12 min\n**Tono:** Personale, caldo — l'unico episodio dove entra la vita reale non tecnica\n**Personaggi attivi:** Matteo (voce), AVA (interfaccia), EVA (sistema, mai visibile)\n**Fonte:** ASSOLUTO V6 — Atto VI §26, §28 (EVA, la Maria Rule)"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — VITA NATURA",
+      "content": "Maria gestisce un centro estetico a Boffalora sopra Ticino.\n\nNon è un dettaglio del mio ecosistema. È il motivo per cui l'ecosistema esiste nella forma in cui esiste.\n\nVita Natura ha clienti. Appuntamenti. Un calendario. Liste di attesa. Promemoria da mandare. Recensioni da raccogliere. Compleanni da ricordare. Promozioni da comunicare. Prodotti da riordinare quando le scorte scendono.\n\nTutto questo, ogni giorno, è lavoro manuale. Ripetitivo. Ad alto attrito cognitivo. Il tipo di lavoro che prende ore e non crea valore — gestisce solo quello che già esiste.\n\n*[AVA mostra: lista 23 attività settimanali ripetitive nel business di un centro estetico.]*\n\nMaria è brava nel suo lavoro. Non ha bisogno di essere brava anche in ogni compito burocratico che circonda il suo lavoro.\n\nEVA è la risposta a questa differenza.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — LA MARIA RULE",
+      "content": "C'è una regola che governa tutto lo sviluppo di EVA.\n\nUna sola regola. Non negoziabile.\n\n**Per Maria deve essere zero-click. Semplice magia.**\n\nNon \"facile da usare\". Non \"intuitivo\". Non \"con un breve tutorial\". Zero-click.\n\nEVA funziona, o non esiste.\n\n*[AVA mostra: schema architettura EVA — tutto il backend complesso visibile; interfaccia verso Maria = un messaggio WhatsApp normale.]*\n\nDal punto di vista di Maria, EVA è un assistente che le manda messaggi. Risponde alle domande dei clienti. Gestisce le prenotazioni. Ricorda i compleanni. Manda i promemoria.\n\nDal nostro punto di vista, EVA è:\n- Python 3.12 su VPS\n- API WhatsApp Business via n8n\n- Google Calendar per la lettura degli slot\n- Database clienti JSON con storico completo\n- LLM (Claude) per la generazione dei messaggi\n- Logica condizionale per promozioni, follow-up, stagionalità\n\nLa complessità è nostra. La semplicità è sua.\n\nQuesta è ingegneria del software orientata a una persona reale, non a un utente astratto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — COSA FA EVA OGNI GIORNO",
+      "content": "*[AVA genera timeline giornaliera EVA: ogni azione mappata con orario.]*\n\n**08:00** — EVA legge il calendario. Identifica gli appuntamenti del giorno. Manda i promemoria automatici ai clienti.\n\n**08:05** — EVA controlla le ricorrenze. Compleanni nei prossimi 3 giorni? Messaggio personalizzato con offerta.\n\n**10:00** — Un cliente chiede via WhatsApp: \"Avete disponibilità per giovedì pomeriggio?\" EVA legge il calendario, trova il primo slot libero, risponde con il link di prenotazione precompilato.\n\n**18:00** — Fine giornata. EVA analizza gli appuntamenti completati. Manda automaticamente i messaggi di follow-up: \"Come è andata? Ci farebbe piacere una tua recensione.\"\n\n**23:00** — Report serale per Maria: appuntamenti domani, messaggi inviati, prenotazioni ricevute. Un messaggio. Una lettura. Trenta secondi.\n\nRevenue automatica stimata anno 1: €1,500/mese. Non perché faccia miracoli. Perché **il ripetitivo eseguito perfettamente ogni giorno si accumula**.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO IV — PERCHÉ QUESTO APPARTIENE ALL'ECOSISTEMA",
+      "content": "EVA non è un progetto separato. È il ramo finanziatore dell'ecosistema.\n\nAnno 1, mentre la V32 è ancora in assemblaggio e MIMS è ancora in prototipazione, EVA genera cash flow. Quello stesso cash flow va in componenti: il mandrino 2.2kW, le viti per l'asse Y, il quadro IP54.\n\n*[AVA mostra il flusso: EVA revenue → V32 upgrade → MIMS produzione → marketplace revenue → V32 Mk2]*\n\nMa c'è un secondo motivo più sottile.\n\nEVA è il primo client zero dell'intero stack Genesis. Tutto quello che costruisco per EVA — l'architettura multi-agente, l'integrazione con WhatsApp, il sistema di memoria clienti, la logica di calendario — è la stessa infrastruttura che poi diventa Genesis per altri business.\n\nEVA è il prototipo che si paga da solo mentre viene sviluppato.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "*[Schermata telefono di Maria: notifica EVA, tre prenotazioni ricevute stanotte.]*\n\nHo costruito EVA per un motivo semplice.\n\nMaria è brava nel suo lavoro. Ha costruito qualcosa di reale in un posto piccolo, con clienti veri che tornano ogni mese. Merita che le parti ripetitive del suo lavoro vengano gestite da qualcosa che non si stanca, non dimentica, non ha brutte giornate.\n\nIl codice Python è complesso. L'integrazione n8n è articolata. La logica di gestione degli stati conversazionali ha richiesto settimane di iterazione.\n\nMa quello che Maria vede è un assistente che risponde ai suoi clienti, ricorda i compleanni, e ogni mattina alle 8 le dice cosa ha da fare.\n\nLa tecnologia più sofisticata è quella che sembra magia a chi la usa.\n\n> \"Per Maria deve essere zero-click. Semplice magia.\n> Per noi è codice Python e n8n complesso.\"\n> — La Maria Rule. Prima e unica regola di sviluppo EVA.\n\nE mentre EVA lavora di notte — mentre i messaggi partono, i promemoria arrivano, le prenotazioni si accumulano — quella stessa notte la V32 fresa. I dati dai sensori IFM si registrano. Il ciclo amplificante gira.\n\nÈ il 2026. Non sai ancora come andrà. Ma il sistema è in moto.\n\n---\n\n> *Ponte → EP_05:*\n> Luglio 2030. Il display del comparatore segna ancora 0.008 mm.\n> Le stesse mani. Lo stesso numero.\n> Cosa è cambiato, e cosa non lo sarà mai.\n\n*Continua in EP_05 — Il Verdetto*"
+    }
+  ],
+  "word_count": 1037,
+  "updated_at": "2026-05-30T15:15:54.733801",
+  "built_at": "2026-05-31T15:07:17.775727"
+}

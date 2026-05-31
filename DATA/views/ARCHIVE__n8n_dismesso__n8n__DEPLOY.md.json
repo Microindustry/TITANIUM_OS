@@ -1,0 +1,135 @@
+{
+  "path": "ARCHIVE/n8n_dismesso/n8n/DEPLOY.md",
+  "title": "DEPLOY.md | AUTOMATIONS/deploy/n8n | v1.1 | 2026-03-10",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [DEPLOY.md  AUTOMATIONS/deploy/n8n  v1.1  2026-03-10](#deploymd-automationsdeployn8n-v11-2026-03-10)\n- [Guida deploy n8n su Oracle Cloud Free Tier (GRATIS)](#guida-deploy-n8n-su-oracle-cloud-free-tier-gratis)\n  - [Perche Oracle Cloud Free Tier](#perche-oracle-cloud-free-tier)\n  - [1. Crea account Oracle Cloud](#1-crea-account-oracle-cloud)\n  - [2. Crea VM Always Free](#2-crea-vm-always-free)\n  - [3. Apri porte firewall](#3-apri-porte-firewall)\n    - [3a. Security List (OCI Console)](#3a-security-list-oci-console)\n    - [3b. iptables (sul server via SSH)](#3b-iptables-sul-server-via-ssh)\n  - [4. Setup server (SSH)](#4-setup-server-ssh)\n  - [5. Configura](#5-configura)\n  - [6. DNS](#6-dns)\n  - [7. Avvia](#7-avvia)\n  - [8. Verifica](#8-verifica)\n  - [9. Primo workflow: Webhook ESP32](#9-primo-workflow-webhook-esp32)\n  - [Costo mensile](#costo-mensile)\n  - [Manutenzione](#manutenzione)\n  - [Limiti da sapere](#limiti-da-sapere)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Guida deploy n8n su Oracle Cloud Free Tier (GRATIS)",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "1. Crea account Oracle Cloud",
+      "content": "- Vai su https://cloud.oracle.com/\n- Registrati (serve carta di credito per verifica, NON viene addebitato nulla)\n- Region: **eu-milan-1** (Milano) o **eu-frankfurt-1**\n- Dopo la registrazione: attendi attivazione (pochi minuti)"
+    },
+    {
+      "level": 2,
+      "title": "2. Crea VM Always Free",
+      "content": "- Console OCI > Compute > Instances > Create Instance\n- Impostazioni:\n  - **Shape**: VM.Standard.A1.Flex (ARM Ampere)\n  - **OCPU**: 4 (max gratuito)\n  - **RAM**: 24 GB (max gratuito)\n  - **OS**: Ubuntu 24.04 (Canonical)\n  - **Boot volume**: 100 GB (max gratuito 200 GB)\n  - **SSH Key**: carica la tua chiave pubblica\n  - **Networking**: crea VCN + subnet pubblica (wizard automatico)"
+    },
+    {
+      "level": 2,
+      "title": "3. Apri porte firewall",
+      "content": "Oracle ha 2 livelli di firewall: Security List (OCI) + iptables (OS)."
+    },
+    {
+      "level": 3,
+      "title": "3a. Security List (OCI Console)",
+      "content": "- Networking > Virtual Cloud Networks > la tua VCN > Security Lists\n- Aggiungi Ingress Rules:\n  - Porta 80 (HTTP): Source 0.0.0.0/0, TCP\n  - Porta 443 (HTTPS): Source 0.0.0.0/0, TCP"
+    },
+    {
+      "level": 3,
+      "title": "3b. iptables (sul server via SSH)",
+      "content": "```bash\nsudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT\nsudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT\nsudo netfilter-persistent save\n```"
+    },
+    {
+      "level": 2,
+      "title": "4. Setup server (SSH)",
+      "content": "```bash"
+    },
+    {
+      "level": 1,
+      "title": "Connettiti",
+      "content": "ssh ubuntu@<IP_PUBBLICO>"
+    },
+    {
+      "level": 1,
+      "title": "Aggiorna e installa Docker",
+      "content": "sudo apt update && sudo apt upgrade -y\ncurl -fsSL https://get.docker.com | sudo sh\nsudo usermod -aG docker $USER"
+    },
+    {
+      "level": 1,
+      "title": "Rientra per applicare il gruppo",
+      "content": "exit\nssh ubuntu@<IP_PUBBLICO>"
+    },
+    {
+      "level": 1,
+      "title": "Crea cartella deploy",
+      "content": "mkdir -p ~/n8n && cd ~/n8n\n```\n\nCopia i file sul server:\n```bash"
+    },
+    {
+      "level": 1,
+      "title": "Dal tuo PC Windows (Git Bash o PowerShell)",
+      "content": "scp docker-compose.yml .env.example ubuntu@<IP_PUBBLICO>:~/n8n/\n```"
+    },
+    {
+      "level": 2,
+      "title": "5. Configura",
+      "content": "```bash\ncd ~/n8n\ncp .env.example .env\nnano .env"
+    },
+    {
+      "level": 1,
+      "title": "Compila: dominio, password DB, password n8n",
+      "content": "```"
+    },
+    {
+      "level": 2,
+      "title": "6. DNS",
+      "content": "Punta il dominio all'IP pubblico Oracle:\n- Record A: `auto` -> `<IP_PUBBLICO>`\n- TTL: 300 (poi alza a 3600 dopo verifica)\n\nAlternativa gratis senza dominio: usa un servizio DNS gratuito (es. DuckDNS, FreeDNS)."
+    },
+    {
+      "level": 2,
+      "title": "7. Avvia",
+      "content": "```bash\ncd ~/n8n\ndocker compose up -d"
+    },
+    {
+      "level": 1,
+      "title": "Verifica",
+      "content": "docker compose ps\ndocker compose logs -f n8n\n```"
+    },
+    {
+      "level": 2,
+      "title": "8. Verifica",
+      "content": "- Apri `https://<tuo-dominio>`\n- Login con N8N_USER / N8N_PASSWORD\n- SSL automatico via Let's Encrypt"
+    },
+    {
+      "level": 2,
+      "title": "9. Primo workflow: Webhook ESP32",
+      "content": "1. Crea nuovo workflow in n8n\n2. Aggiungi nodo \"Webhook\" -> POST `/esp32-data`\n3. Aggiungi nodo \"Function\" per parsing payload\n4. Aggiungi nodo \"HTTP Request\" per forward a TITANIUM_OS API\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Costo mensile",
+      "content": "| Voce | EUR/mese |\n|------|----------|\n| Oracle Cloud Free Tier | 0.00 |\n| Dominio (opzionale) | 0.00 (DuckDNS) o ~1.00 (.it) |\n| **Totale** | **EUR 0.00** |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Manutenzione",
+      "content": "```bash"
+    },
+    {
+      "level": 1,
+      "title": "Aggiorna n8n",
+      "content": "cd ~/n8n\ndocker compose pull\ndocker compose up -d"
+    },
+    {
+      "level": 1,
+      "title": "Backup database",
+      "content": "docker compose exec postgres pg_dump -U n8n n8n > backup_$(date +%Y%m%d).sql\n```"
+    },
+    {
+      "level": 2,
+      "title": "Limiti da sapere",
+      "content": "- L'istanza puo' essere reclamata da Oracle se idle per 7 giorni consecutivi (risolvibile con cron job `curl localhost:5678` ogni giorno)\n- Ampere A1 e' ARM: tutte le immagini Docker usate (n8n, postgres, traefik) supportano ARM nativamente\n- Se la region Milano e' piena, prova Frankfurt o Amsterdam"
+    }
+  ],
+  "word_count": 712,
+  "updated_at": "2026-05-31T15:07:11.093030",
+  "built_at": "2026-05-31T15:07:32.252393"
+}

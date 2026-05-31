@@ -1,0 +1,70 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/INDEX.md",
+  "title": "CONTENT ENGINE — DATABASE EPISODI",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [CONTENT ENGINE  DATABASE EPISODI](#content-engine-database-episodi)\n  - [TITANIUM_OS  Archivio narrativo completo](#titaniumos-archivio-narrativo-completo)\n  - [STRUTTURA STAGIONI](#struttura-stagioni)\n  - [S0  ORIGINI (pre-sistema)](#s0-origini-pre-sistema)\n  - [S1  IL PRESENTE (storia principale)](#s1-il-presente-storia-principale)\n  - [S2  IL SISTEMA (maggio 2026  il sistema che impara)](#s2-il-sistema-maggio-2026-il-sistema-che-impara)\n  - [S3  LA COSTRUZIONE (in produzione  build log fisici)](#s3-la-costruzione-in-produzione-build-log-fisici)\n  - [MOMENTI  Episodi intermezzo (5-7 min)](#momenti-episodi-intermezzo-5-7-min)\n  - [AUTO  Generati da milestone STATE.json](#auto-generati-da-milestone-statejson)\n  - [AUTOMAZIONE STORY AGENT](#automazione-story-agent)\n  - [VISION FUTURA  S4](#vision-futura-s4)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "TITANIUM_OS — Archivio narrativo completo",
+      "content": "*Aggiornato: 2026-05-29 | Episodi totali: 36+*"
+    },
+    {
+      "level": 2,
+      "title": "S0 — ORIGINI (pre-sistema)",
+      "content": "*Il seme. Prima che ci fosse un sistema.*\n\n| ID | File | Titolo | Data | Status |\n|----|------|--------|------|--------|\n| S0_00 | `S0_ORIGINI/EP_S0_00_IL_SOCIO.md` | Il Socio | pre-2026 | ready |\n| S0_01 | `S0_ORIGINI/EP_S0_01_L_ORGANISMO.md` | L'Organismo | pre-2026 | ready |\n| S0_02 | `S0_ORIGINI/EP_S0_02_LA_VERIFICA.md` | La Verifica | 2026-02-13 | ready |\n| S0_03 | `S0_ORIGINI/EP_S0_03_LA_FORMULA.md` | La Formula | pre-2026 | ready |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "S1 — IL PRESENTE (storia principale)",
+      "content": "*Da quindici anni di industria a 0.008 mm nel 2030.*\n\n| ID | File | Titolo | Data | Status |\n|----|------|--------|------|--------|\n| S1_00 | `S1_PRESENTE/EP_00_ORIGINE.md` | Origine | 2026-03-01 | ready |\n| S1_01 | `S1_PRESENTE/EP_01_LA_TAVERNA.md` | La Taverna | 2026-03-01 | ready |\n| S1_02 | `S1_PRESENTE/EP_02_IL_REATTORE.md` | Il Reattore | 2026-03-01 | ready |\n| S1_03 | `S1_PRESENTE/EP_03_IL_PARADOSSO.md` | Il Paradosso | 2026-03-01 | ready |\n| S1_04 | `S1_PRESENTE/EP_04_IL_SEGNALE.md` | Il Segnale | 2026-03-01 | ready |\n| S1_05 | `S1_PRESENTE/EP_05_IL_VERDETTO.md` | Il Verdetto | 2026-03-01 | ready |\n\n**Documento compendio:** `MENTE/SESSIONI/STORIE/FILONE_UNICO.md` — S0+S1 come testo continuo\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "S2 — IL SISTEMA (maggio 2026 — il sistema che impara)",
+      "content": "*Ogni decisione aggiorna il sistema. Ogni aggiornamento cambia le decisioni future.*\n\n| ID | File | Titolo | Nucleo | Status |\n|----|------|--------|--------|--------|\n| S2_00 | `S2_SISTEMA/EP_S2_00_IL_DISTACCO.md` | Il Distacco | Corpo unico vs molle — la scelta migliore | ready |\n| S2_01 | `S2_SISTEMA/EP_S2_01_IL_CERVELLO_IBRIDO.md` | Il Cervello Ibrido | RAG v4.0 BM25+semantico+CrossEncoder | ready |\n| S2_02 | `S2_SISTEMA/EP_S2_02_L_ORCHESTRATORE.md` | L'Orchestratore | stop_hooks 4.7s + Research Agent 13 fonti | ready |\n| S2_03 | `S2_SISTEMA/EP_S2_03_LA_TELA.md` | La Tela | CanvasLayout v5→v6→v6.1 + MatteoSection | ready |\n| S2_04 | `S2_SISTEMA/EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md` | Il CV che Nessuno Capisce | AI come competenza — GitHub come prova | ready |\n| S2_05 | `S2_SISTEMA/EP_S2_05_IL_SILENZIO.md` | Il Silenzio | 63 giorni persi → story_agent automatico | ready |\n| S2_AUTO | `S2_SISTEMA/EP_2026*` | Episodi auto (story_agent) | Generati ogni notte da git log | auto |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "S3 — LA COSTRUZIONE (in produzione — build log fisici)",
+      "content": "*Dalla progettazione alla macchina reale. Ogni pezzo documentato.*\n\n| ID | File | Titolo | Status |\n|----|------|--------|--------|\n| S3_00 | — | Il Gusset Sinistro | da scrivere (dopo saldatura) |\n| S3_01 | — | Epoxy Granite — Colata Zero | da scrivere (dopo fill) |\n| S3_02 | — | Il Mandrino | da scrivere (dopo ordine + montaggio) |\n| S3_03 | — | Il Primo Pezzo H7 | da scrivere (chiude il ciclo S1) |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "MOMENTI — Episodi intermezzo (5-7 min)",
+      "content": "*Singola decisione, scoperta o svolta. Inseribili tra qualsiasi episodio principale.*\n\n| ID | File | Titolo | Posizione narrativa | Status |\n|----|------|--------|---------------------|--------|\n| MOM_01 | `MOMENTI/MOM_01_LA_PRIMA_AUTOMAZIONE.md` | La Prima Automazione | S1_05 → S2_00 | ready |\n| MOM_02 | `MOMENTI/MOM_02_LA_MAPPA.md` | La Mappa | S1_05 → S2_00 | ready |\n| MOM_03 | `MOMENTI/MOM_03_L_ESERCITO.md` | L'Esercito | S2_02 → S2_03 | ready |\n| MOM_04 | `MOMENTI/MOM_04_IL_DOCUMENTO_MASTER.md` | Il Documento Master | S1_05 → S2_00 | ready |\n| MOM_05 | `MOMENTI/MOM_05_CONFIG_A_G.md` | Config A→G | S1_02 → S1_03 | ready |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "AUTO — Generati da milestone STATE.json",
+      "content": "*Legacy — vecchio content_trigger.py. Da riorganizzare in S0/S1/S2.*\n\n| ID | Titolo | Data | Status |\n|----|--------|------|--------|\n| EP_AUTO_002 | 8 pezzi, geometria perfetta | 2026-03-22 | ready |\n| EP_AUTO_003 | HMI acquisito, V32 respira | 2026-03-22 | ready |\n| EP_AUTO_005 | Asse X: le guide parlano | 2026-03-22 | ready |\n| EP_AUTO_006 | Dashboard Live: Il Sistema Vede | 2026-03-09 | ready |\n| EP_AUTO_008 | Maggio 2026 — La Svolta Strutturale | 2026-05-27 | ready |\n| EP_AUTO_010 | Fondamenta d'acciaio TIG | 2026-03-22 | ready |\n| EP_AUTO_011 | Knowledge Base Popolata | 2026-03-10 | ready |\n| EP_AUTO_012 | Componenti V32 | 2026-03-22 | ready |\n| EP_AUTO_013-019 | Vari milestone | 2026-05-27/28 | ready |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "AUTOMAZIONE STORY AGENT",
+      "content": "**Script:** `NODES/STORY_AGENT/story_agent.py`\n**Cron Windows:** ogni notte alle 02:07 — `TITANIUM_OS_StoryAgent`\n**Stop hook:** ogni fine sessione Claude Code — genera bozza immediata\n**Output:** `S2_SISTEMA/EP_YYYYMMDD_*.md` + mirror in `MENTE/SESSIONI/STORIE/S2_SISTEMA/`\n\n**Comando manuale:**\n```powershell"
+    },
+    {
+      "level": 1,
+      "title": "episodi nuovi (commit dall'ultima run)",
+      "content": "python NODES\\STORY_AGENT\\story_agent.py"
+    },
+    {
+      "level": 1,
+      "title": "backfill completo storico",
+      "content": "python NODES\\STORY_AGENT\\story_agent.py --backfill --max 20\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "VISION FUTURA — S4+",
+      "content": "```\nS4 — La Scala      → dal lab al laboratorio (2027-2028)\nS5 — Il Mercato    → MIMS nel marketplace, primi clienti B2B\nS6 — Il Capannone  → luglio 2030, fine del ciclo, inizio del prossimo\n```\n\n**Avatar futuro (AVA):** navigazione interattiva degli episodi nella dashboard,\nmovimento 3D tra stagioni, generazione reel automatica da episodio selezionato.\nQuesto è S4+ lavoro — il materiale narrativo lo generiamo adesso."
+    }
+  ],
+  "word_count": 793,
+  "updated_at": "2026-05-31T13:58:24.817505",
+  "built_at": "2026-05-31T15:07:07.795898"
+}

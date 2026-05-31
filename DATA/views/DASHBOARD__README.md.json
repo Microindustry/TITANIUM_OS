@@ -1,0 +1,30 @@
+{
+  "path": "DASHBOARD/README.md",
+  "title": "React + TypeScript + Vite",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [React  TypeScript  Vite](#react-typescript-vite)\n  - [React Compiler](#react-compiler)\n  - [Expanding the ESLint configuration](#expanding-the-eslint-configuration)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "React + TypeScript + Vite",
+      "content": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.\n\nCurrently, two official plugins are available:\n\n- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh\n- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh"
+    },
+    {
+      "level": 2,
+      "title": "React Compiler",
+      "content": "The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation)."
+    },
+    {
+      "level": 2,
+      "title": "Expanding the ESLint configuration",
+      "content": "If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:\n\n```js\nexport default defineConfig([\n  globalIgnores(['dist']),\n  {\n    files: ['**/*.{ts,tsx}'],\n    extends: [\n      // Other configs...\n\n      // Remove tseslint.configs.recommended and replace with this\n      tseslint.configs.recommendedTypeChecked,\n      // Alternatively, use this for stricter rules\n      tseslint.configs.strictTypeChecked,\n      // Optionally, add this for stylistic rules\n      tseslint.configs.stylisticTypeChecked,\n\n      // Other configs...\n    ],\n    languageOptions: {\n      parserOptions: {\n        project: ['./tsconfig.node.json', './tsconfig.app.json'],\n        tsconfigRootDir: import.meta.dirname,\n      },\n      // other options...\n    },\n  },\n])\n```\n\nYou can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:\n\n```js\n// eslint.config.js\nimport reactX from 'eslint-plugin-react-x'\nimport reactDom from 'eslint-plugin-react-dom'\n\nexport default defineConfig([\n  globalIgnores(['dist']),\n  {\n    files: ['**/*.{ts,tsx}'],\n    extends: [\n      // Other configs...\n      // Enable lint rules for React\n      reactX.configs['recommended-typescript'],\n      // Enable lint rules for React DOM\n      reactDom.configs.recommended,\n    ],\n    languageOptions: {\n      parserOptions: {\n        project: ['./tsconfig.node.json', './tsconfig.app.json'],\n        tsconfigRootDir: import.meta.dirname,\n      },\n      // other options...\n    },\n  },\n])\n```"
+    }
+  ],
+  "word_count": 330,
+  "updated_at": "2026-05-30T10:30:34.180773",
+  "built_at": "2026-05-31T14:53:03.800158"
+}

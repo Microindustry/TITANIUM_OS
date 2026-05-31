@@ -1,0 +1,35 @@
+{
+  "path": ".claude/skills/genera-episodio/SKILL.md",
+  "title": "Genera Episodio — TITANIUM_OS Content Engine",
+  "meta": {
+    "name": "genera-episodio",
+    "description": "Genera un episodio podcast da un milestone di TITANIUM_OS. Usa quando vuoi convertire un milestone da STATE.json in un episodio narrativo completo con reel_hook. Esegue milestone_to_episode.py con dual-pass Claude haiku+sonnet.",
+    "argument-hint": "[testo-milestone oppure vuoto per tutti i nuovi]",
+    "allowed-tools": "Read, Bash, Grep"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Genera Episodio  TITANIUM_OS Content Engine](#genera-episodio-titaniumos-content-engine)\n  - [Steps](#steps)\n  - [Output atteso](#output-atteso)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Genera Episodio — TITANIUM_OS Content Engine",
+      "content": "Genera episodio podcast da milestone TITANIUM_OS."
+    },
+    {
+      "level": 2,
+      "title": "Steps",
+      "content": "1. Leggi `BRAIN/STATE.json` e mostra i milestones.verified disponibili\n2. Se `$ARGUMENTS` è vuoto: esegui script per tutti i nuovi milestone non ancora coperti\n3. Se `$ARGUMENTS` contiene testo: aggiungi temporaneamente il milestone e genera solo quello\n\n```bash\ncd \"$HOME/TITANIUM_OS/TITANIUM_OS\"\nANTHROPIC_API_KEY=!`cat .env 2>/dev/null | grep ANTHROPIC_API_KEY | cut -d= -f2` PYTHONIOENCODING=utf-8 python CONTENT_ENGINE/scripts/milestone_to_episode.py\n```\n\n4. Mostra il frontmatter + reel_hook dell'episodio generato\n5. Chiedi se vuoi fare commit su GitHub"
+    },
+    {
+      "level": 2,
+      "title": "Output atteso",
+      "content": "- Nuovo file `CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_XXX.md`\n- `DASHBOARD/src/data/storieData.ts` aggiornato\n- Reel hook pronto da girare in camera"
+    }
+  ],
+  "word_count": 184,
+  "updated_at": "2026-05-30T10:43:25.203248",
+  "built_at": "2026-05-31T14:58:33.282705"
+}

@@ -1,0 +1,55 @@
+{
+  "path": "INBOX/session_brief_20260309_115007.md",
+  "title": "SESSION BRIEF — 2026-03-09 11:50:07",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [SESSION BRIEF  2026-03-09 11:50:07](#session-brief-2026-03-09-115007)\n  - [Milestone attiva](#milestone-attiva)\n  - [Prossimo step](#prossimo-step)\n  - [Focus oggi](#focus-oggi)\n  - [Pilastri](#pilastri)\n  - [Target prossimi](#target-prossimi)\n  - [Blockers](#blockers)\n  - [Prompt sessione](#prompt-sessione)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "SESSION BRIEF — 2026-03-09 11:50:07",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "Milestone attiva",
+      "content": "Config G — Rinforzi colonne Z+U"
+    },
+    {
+      "level": 2,
+      "title": "Prossimo step",
+      "content": "Saldare 4 gusset 200mm sulla colonna Z sinistra"
+    },
+    {
+      "level": 2,
+      "title": "Focus oggi",
+      "content": "Config G: gusset sinistra — stima 3 ore officina"
+    },
+    {
+      "level": 2,
+      "title": "Pilastri",
+      "content": "V32             [██████░░░░]  65%  in_progress\n                   Fase   : Config G rinforzi\n                   Prossimo: Gusset + diagonali + tiranti M10\n  MIMS            [███░░░░░░░]  30%  waiting_press\n                   Fase   : Design completo, attende pressa\n                   Prossimo: Acquistare martinetto + resistenze pressa\n  GENESIS         [█░░░░░░░░░]  10%  building\n                   Fase   : TITANIUM_OS setup\n                   Prossimo: Avviare watcher + core automations\n  VITA_NATURA     [████░░░░░░]  40%  active\n                   Fase   : Sito + prenotazioni\n                   Prossimo: EVA WhatsApp bot pilot\n  IDENTITY        [██░░░░░░░░]  20%  pending\n                   Fase   : Riposizionamento professionale\n                   Prossimo: Aggiornare CV + LinkedIn per ruoli tecnici"
+    },
+    {
+      "level": 2,
+      "title": "Target prossimi",
+      "content": "# 6 [2026-Q1     ] Rinforzi Config G — PROSSIMO\n  # 7 [2026-Q2     ] Epoxy Granite fill + YouTube Ep.01 — PIANIFICATO\n  # 8 [2026-Q2     ] Colonne Z+U definitive — PIANIFICATO\n  # 9 [2026-Q2     ] Primo video YouTube — PIANIFICATO\n  #10 [2026-Q3     ] Pressa 4 colonne operativa — PIANIFICATO\n  #11 [2026-Q3     ] V32 assemblaggio completo — PIANIFICATO"
+    },
+    {
+      "level": 2,
+      "title": "Blockers",
+      "content": "🔴 Manca mandrino 2.2kW ER20 — da ordinare"
+    },
+    {
+      "level": 2,
+      "title": "Prompt sessione",
+      "content": "```\n[TITANIUM_OS — SESSION CONTEXT]\nData: 2026-03-09 11:50\nMilestone attiva: Config G — Rinforzi colonne Z+U\nUltimo step: Milestone impostata: Config G — Rinforzi colonne Z+U\nProssimo step: Saldare 4 gusset 200mm sulla colonna Z sinistra\nFocus oggi: Config G: gusset sinistra — stima 3 ore officina\nBlockers: Manca mandrino 2.2kW ER20 — da ordinare\n\nStato pilastri:\n  V32: in_progress (65%)\n  MIMS: waiting_press (30%)\n  GENESIS: building (10%)\n  VITA_NATURA: active (40%)\n  IDENTITY: pending (20%)\n\nTASK SESSIONE:\n[Descrivi qui cosa vuoi fare oggi]\n\nRegola: THEMIS pianifica prima di eseguire. Conferma il piano prima di scrivere codice.\n```"
+    }
+  ],
+  "word_count": 289,
+  "updated_at": "2026-05-31T13:58:34.998751",
+  "built_at": "2026-05-31T15:07:11.822412"
+}

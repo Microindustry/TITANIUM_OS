@@ -1,0 +1,31 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_005.md",
+  "title": "Asse X: le guide parlano",
+  "meta": {
+    "id": "EP_AUTO_005",
+    "milestone": "Asse X assemblato (guide+vite+servo)",
+    "title": "Asse X: le guide parlano",
+    "sottotitolo": "178 kg di precisione. Quando l'hardware diventa software.",
+    "stagione": "AUTO",
+    "data_evento": "2026-03-22",
+    "tags": "[\"V32\", \"CNC\", \"assembly\", \"precision\", \"milestone\"]",
+    "status": "ready",
+    "durata_min": "7",
+    "generated": "2026-03-22T17:47:03.008149"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "Asse X: le guide parlano",
+      "content": "> *\"Quando chiudi il ultimo bullone e la guida scorre senza attrito, capisci che il pezzo è vivo.\"*\n\nStamattina ho finito l'asse X della V32. Guide THK 25 mm, vite Hiwin a ricircolo da 16 mm, servo Nema 34 con drive Leadshine. Tre ore di assembly, due ore di test geometrico.\n\nLa sequenza è stata precisa: prima il basamento della guida sinistra, poi gli spacer di allineamento (±0.05 mm), montaggio della vite con precarico a 2 Nm, accoppiamento motore tramite giunto elastico, calibrazione del fine corsa con encoder. Standard, ma non banale.\n\nCosa è successo veramente? Ho trasformato 8 chilogrammi di acciaio e componenti in uno **stadio di movimento controllato**. Non è solo meccanica. È il primo sensore della macchina—il punto dove i comandi software incontrano la realtà fisica. Ogni movimento dell'asse X verrà registrato, misurato, corretto.\n\nQuesto mi serve per V32, certo. Ma il valore sta altrove.\n\nLa V32 è il prototipo. Quando sarà completata al 100%, diventerà un **nodo dentro TITANIUM_OS**. L'asse X non farà solo fresare: farà misura, feedback, adattamento. Ogni passata di utensile genererà dati. Quei dati alimenteranno il modello cognitivo del sistema—la macchina imparerà dagli scarti, dalla finitura, dalla geometria reale versus quella teorica.\n\nVedi il collegamento? MIMS (i connettori modulari) a 30% di sviluppo, sono qui per questo. Quando avrò altri assi pronti—Y, Z, mandrino—dovrò pluggarli senza rifare il wiring, senza ridefinire i protocolli. L'asse X è il primo test di quella modularità.\n\nE il blocco attuale? Il mandrino 2.2 kW ER20 non è arrivato. Non posso procedere oltre fino a quando non lo ordino. Significa che **il valore di questa assembly non è bloccato**—procedo parallelo. Domani Config G, il gusset sinistro. Tre ore di fresatura, ma con gli strumenti manuali, nelle tre ore di officina che ho planificato.\n\nIl motivo per cui questo momento conta non è la precisione—quella è scontata, è specifica tecnica. Il motivo è che ho chiuso il primo **ciclo di feedback reale**. Ho disegnato, ho costruito, ho testato, ho imparato dove la realtà devia dal CAD di 0.3 mm (la vite aveva precarico asimmetrico, le guide avevano un'usura micrometrica su un lato).\n\nQuesta informazione non la ricevo via email. La sento con le mani. E ora è codificata nel sistema.\n\nQuando inizierò il training di TITANIUM_OS con i dati della V32, avrò già settimane di esperienza operativa. Non partirò da zero. Partirò dalla realtà assemblata.\n\nAsse X: vivo. Sistema: respirando."
+    }
+  ],
+  "word_count": 467,
+  "updated_at": "2026-05-27T00:09:14.492295",
+  "built_at": "2026-05-31T15:07:12.328808"
+}

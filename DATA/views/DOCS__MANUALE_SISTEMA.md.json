@@ -1,0 +1,730 @@
+{
+  "path": "DOCS/MANUALE_SISTEMA.md",
+  "title": "MANUALE TITANIUM_OS — Guida completa al sistema",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [MANUALE TITANIUM_OS  Guida completa al sistema](#manuale-titaniumos-guida-completa-al-sistema)\n  - [INDICE](#indice)\n  - [1. Cosè TITANIUM_OS](#1-cosè-titaniumos)\n    - [Struttura a livello alto](#struttura-a-livello-alto)\n    - [Concetto chiave: il loop che si autoalimenta](#concetto-chiave-il-loop-che-si-autoalimenta)\n  - [2. Aprire il sistema](#2-aprire-il-sistema)\n    - [Apertura rapida (modo normale)](#apertura-rapida-modo-normale)\n    - [Apertura da zero (dopo riavvio PC)](#apertura-da-zero-dopo-riavvio-pc)\n    - [Riaprire una sessione interrotta](#riaprire-una-sessione-interrotta)\n    - [Aggiornamento automatico al login (se configurato)](#aggiornamento-automatico-al-login-se-configurato)\n  - [3. Navigazione rapida](#3-navigazione-rapida)\n    - [Navigazione TITANIUM_OS](#navigazione-titaniumos)\n    - [Navigazione MICROINDUSTRY](#navigazione-microindustry)\n    - [Comandi di apertura file/cartelle](#comandi-di-apertura-filecartelle)\n  - [4. RAG  la tua memoria esternalizzata](#4-rag-la-tua-memoria-esternalizzata)\n    - [Cosa è il RAG (in parole semplici)](#cosa-è-il-rag-in-parole-semplici)\n    - [Come funziona tecnicamente (v4.0)](#come-funziona-tecnicamente-v40)\n    - [Comandi RAG](#comandi-rag)\n    - [Cosa mettere in MENTE/](#cosa-mettere-in-mente)\n    - [Quando il RAG si aggiorna automaticamente](#quando-il-rag-si-aggiorna-automaticamente)\n  - [5. Agenti validatori](#5-agenti-validatori)\n    - [Cosa sono](#cosa-sono)\n    - [Agenti disponibili](#agenti-disponibili)\n    - [Come usarli](#come-usarli)\n    - [Esempi pratici per ogni agente](#esempi-pratici-per-ogni-agente)\n    - [Come funziona internamente](#come-funziona-internamente)\n    - [Aggiungere un nuovo agente](#aggiungere-un-nuovo-agente)\n  - [6. Research Agent  ricerca accademica](#6-research-agent-ricerca-accademica)\n    - [A cosa serve](#a-cosa-serve)\n    - [Comandi](#comandi)\n    - [Sorgenti disponibili](#sorgenti-disponibili)\n    - [Preset domini disponibili](#preset-domini-disponibili)\n    - [Output](#output)\n  - [7. Claude Code  il tuo co-pilot](#7-claude-code-il-tuo-co-pilot)\n    - [Aprire Claude Code](#aprire-claude-code)\n    - [Principi di utilizzo](#principi-di-utilizzo)\n    - [Come Claude legge il contesto](#come-claude-legge-il-contesto)\n    - [MCP Server (integrazione avanzata)](#mcp-server-integrazione-avanzata)\n    - [Stop Hook  cosa succede alla chiusura](#stop-hook-cosa-succede-alla-chiusura)\n    - [/compact  gestire il contesto lungo](#compact-gestire-il-contesto-lungo)\n  - [8. Dashboard e API Server](#8-dashboard-e-api-server)\n    - [Avvio](#avvio)\n    - [Dashboard (http://localhost:5173)](#dashboard-httplocalhost5173)\n    - [API Server (http://localhost:5001)](#api-server-httplocalhost5001)\n    - [Daily Brief](#daily-brief)\n  - [9. Git  salva e sincronizza il lavoro](#9-git-salva-e-sincronizza-il-lavoro)\n    - [Comandi base](#comandi-base)\n    - [Cosa NON va nel git](#cosa-non-va-nel-git)\n    - [Convenzioni per i messaggi commit](#convenzioni-per-i-messaggi-commit)\n  - [10. Media  PDF e foto](#10-media-pdf-e-foto)\n    - [Aprire PDF](#aprire-pdf)\n    - [Aprire foto](#aprire-foto)\n    - [Lista media via browser](#lista-media-via-browser)\n    - [Convertire PDF in note (pdf_to_memory)](#convertire-pdf-in-note-pdftomemory)\n  - [11. Controllo sistema](#11-controllo-sistema)\n    - [Stato rapido](#stato-rapido)\n    - [Avvio e arresto](#avvio-e-arresto)\n    - [Aggiornamento file di stato](#aggiornamento-file-di-stato)\n    - [Utilità](#utilità)\n  - [12. Flussi di lavoro completi](#12-flussi-di-lavoro-completi)\n    - [Flusso A  Sessione di sviluppo software](#flusso-a-sessione-di-sviluppo-software)\n    - [Flusso B  Sessione officina  documentazione](#flusso-b-sessione-officina-documentazione)\n    - [Flusso C  Domanda tecnica con validazione](#flusso-c-domanda-tecnica-con-validazione)\n    - [Flusso D  Ricerca accademica per un problema](#flusso-d-ricerca-accademica-per-un-problema)\n    - [Flusso E  Riavvio di una sessione interrotta](#flusso-e-riavvio-di-una-sessione-interrotta)\n  - [13. Troubleshooting](#13-troubleshooting)\n    - [Il RAG non trova quello che ho appena scritto](#il-rag-non-trova-quello-che-ho-appena-scritto)\n    - [Claude non conosce la V32 / non sa del gusset](#claude-non-conosce-la-v32-non-sa-del-gusset)\n    - [API Server non risponde](#api-server-non-risponde)\n    - [Dashboard non si apre (localhost:5173)](#dashboard-non-si-apre-localhost5173)\n    - [Errore command not found per python/pip/node](#errore-command-not-found-per-pythonpipnode)\n    - [rag-rebuild va in timeout](#rag-rebuild-va-in-timeout)\n    - [Claude sembra dimenticare cose dette nella stessa sessione](#claude-sembra-dimenticare-cose-dette-nella-stessa-sessione)\n    - [Un agente non risponde](#un-agente-non-risponde)\n    - [GitHub auth scaduta](#github-auth-scaduta)\n  - [14. Glossario tecnico](#14-glossario-tecnico)\n  - [15. Come aggiornare questo manuale](#15-come-aggiornare-questo-manuale)\n    - [Quando aggiornare](#quando-aggiornare)\n    - [Come aggiornare](#come-aggiornare)\n    - [Versioning](#versioning)\n  - [16. Content Engine  Episodi e Story Agent](#16-content-engine-episodi-e-story-agent)\n    - [Struttura stagioni](#struttura-stagioni)\n    - [Story Agent  generazione automatica](#story-agent-generazione-automatica)\n    - [Episodi Intermezzo (MOMENTI)](#episodi-intermezzo-momenti)\n    - [INDEX episodi](#index-episodi)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "MANUALE TITANIUM_OS — Guida completa al sistema",
+      "content": "*Versione: 1.0 | 2026-05-28 | Aggiornato: ad ogni sessione significativa*\n\n> **Come usare questo manuale**\n> Leggi dall'inizio per capire il sistema nella sua totalità.\n> Oppure vai diretto alla sezione che ti serve — ogni sezione è autonoma.\n> Ogni comando è mostrato prima in forma semplice, poi con tutti i parametri disponibili."
+    },
+    {
+      "level": 2,
+      "title": "1. Cos'è TITANIUM_OS",
+      "content": "TITANIUM_OS è il tuo sistema operativo cognitivo personale. Non è un programma singolo — è un ecosistema di strumenti che lavorano insieme per:\n\n- **Ricordare al posto tuo** (RAG, MENTE/)\n- **Validare decisioni tecniche** (Agenti: tesla, forge, aqua, ecc.)\n- **Trovare ricerca accademica** (Research Agent, 11 sorgenti)\n- **Tenere traccia dello stato del progetto** (STATE.json, Dashboard)\n- **Automatizzare le operazioni ripetitive** (Hook, script, alias)"
+    },
+    {
+      "level": 3,
+      "title": "Struttura a livello alto",
+      "content": "```\nC:\\Users\\benen\\\n├── TITANIUM_OS\\\n│   ├── TITANIUM_OS\\        ← TUTTO IL CODICE (repo git)\n│   │   ├── BRAIN\\          ← STATE.json (stato del sistema)\n│   │   ├── NODES\\          ← moduli attivi (RAG, Agenti, Research...)\n│   │   ├── AUTOMATIONS\\    ← script automatici\n│   │   ├── DASHBOARD\\      ← interfaccia web React\n│   │   ├── MCP\\            ← integrazione con Claude Code\n│   │   └── DOCS\\           ← questo manuale\n│   └── _VAULT\\KEYS\\        ← API keys e segreti (MAI nel git)\n│\n├── MICROINDUSTRY\\\n│   ├── MENTE\\              ← LA TUA BASE DI CONOSCENZA (fonte del RAG)\n│   │   ├── V32\\            ← tutto sul CNC V32\n│   │   ├── OFFICINA\\       ← attrezzatura, fornitori\n│   │   ├── SESSIONI\\       ← note di ogni sessione Claude\n│   │   └── ASSOLUTO\\       ← documenti master (V7, V8...)\n│   ├── CAD\\                ← file 3D (STL, STEP, DXF)\n│   ├── FOTO\\               ← documentazione visiva build\n│   └── FINANCE\\            ← conti, BEP, ROI\n│\n└── Desktop\\\n    ├── RIAVVIO_SESSIONE.txt  ← prompt pronto per riaprire Claude\n    └── FUNZIONI_SISTEMA.txt  ← lista di tutti i comandi disponibili\n```"
+    },
+    {
+      "level": 3,
+      "title": "Concetto chiave: il loop che si autoalimenta",
+      "content": "```\nLavori in officina / leggi qualcosa / prendi una decisione\n        ↓\nScrivi una nota in MENTE/SESSIONI/  (60 secondi)\n        ↓\nrag-update  (20 secondi — indicizza la nota)\n        ↓\nLa prossima volta che chiedi a Claude, sa già quella cosa\n        ↓\nRisposta migliore → decisione migliore → altra nota → loop\n```\n\nOgni documento aggiunto a MENTE/ vale per tutte le sessioni future. È interesse composto sulla conoscenza.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "2. Aprire il sistema",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Apertura rapida (modo normale)",
+      "content": "Apri PowerShell e digita:\n\n```powershell\nclaude-ti\n```\n\nQuesto:\n1. Ti porta nella cartella `TITANIUM_OS/TITANIUM_OS/`\n2. Apre Claude Code con tutti i permessi abilitati\n3. Claude legge automaticamente `STATE.json` e ti dice dove eri rimasto"
+    },
+    {
+      "level": 3,
+      "title": "Apertura da zero (dopo riavvio PC)",
+      "content": "```powershell\nstart-titanium   # avvia API (porta 5001) + Dashboard (porta 5173)\nclaude-ti        # apre Claude Code\n```"
+    },
+    {
+      "level": 3,
+      "title": "Riaprire una sessione interrotta",
+      "content": "Sul Desktop hai `RIAVVIO_SESSIONE.txt`. Contiene un prompt pronto. Procedura:\n\n1. Apri Claude Code (`claude-ti`)\n2. Copia il testo da `RIAVVIO_SESSIONE.txt`\n3. Incollalo come primo messaggio\n4. Claude sa esattamente dove eri rimasto"
+    },
+    {
+      "level": 3,
+      "title": "Aggiornamento automatico al login (se configurato)",
+      "content": "Se hai configurato `START_LOGIN.bat`, al login di Windows si apre automaticamente un terminale con Claude Code già pronto in `TITANIUM_OS/`.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "3. Navigazione rapida",
+      "content": "Tutti questi comandi sostituiscono `cd C:\\Users\\benen\\...` con una parola sola."
+    },
+    {
+      "level": 3,
+      "title": "Navigazione TITANIUM_OS",
+      "content": "| Comando | Dove va | Quando usarlo |\n|---------|---------|---------------|\n| `ti` | `TITANIUM_OS/TITANIUM_OS/` | lavorare sul codice |\n| `tiv` | `TITANIUM_OS/_VAULT/` | gestire segreti/API keys |\n| `tirepo` | `TITANIUM_OS/` | root del repository git |\n| `tiw` | `TITANIUM_OS/WORKSPACE/` | progetti locali pre-git |"
+    },
+    {
+      "level": 3,
+      "title": "Navigazione MICROINDUSTRY",
+      "content": "| Comando | Dove va | Quando usarlo |\n|---------|---------|---------------|\n| `mi` | `MICROINDUSTRY/` | root progetti |\n| `mente` | `MICROINDUSTRY/MENTE/` | base di conoscenza |\n| `cad` | `MICROINDUSTRY/CAD/` | file 3D |\n| `foto` | `MICROINDUSTRY/FOTO/` | documentazione visiva |\n| `fin` | `MICROINDUSTRY/FINANCE/` | finanza |\n| `ce` | `MICROINDUSTRY/CONTENT_ENGINE/` | YouTube, podcast, script |\n| `ws` | `MICROINDUSTRY/WORKSPACE/` | lavoro corrente |\n| `pers` | `PERSONALE/` | documenti personali |\n| `inbox` | `Desktop/INBOX/` | drop zone per file da processare |"
+    },
+    {
+      "level": 3,
+      "title": "Comandi di apertura file/cartelle",
+      "content": "| Comando | Cosa fa |\n|---------|---------|\n| `exp` | apre Explorer nella cartella corrente |\n| `vault` | apre Explorer in `_VAULT/` |\n| `docs` | apre Explorer in Documenti |\n| `mappa` | apre `MAPPA_SISTEMA.md` in Cursor/Notepad |\n\n**Esempio pratico:**\n```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Voglio vedere le note sul V32",
+      "content": "mente\nexp       # si apre Explorer in MENTE/"
+    },
+    {
+      "level": 1,
+      "title": "Voglio modificare un file CAD",
+      "content": "cad\nexp       # si apre Explorer in CAD/\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "4. RAG — la tua memoria esternalizzata",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Cosa è il RAG (in parole semplici)",
+      "content": "RAG = Retrieval-Augmented Generation. In pratica: quando fai una domanda a Claude, invece di rispondere solo con quello che sa dall'addestramento, Claude prima **cerca nei tuoi documenti** in `MENTE/` e poi risponde usando quelle informazioni specifiche.\n\nÈ come avere un assistente che prima di rispondere va a controllare tutti i tuoi appunti."
+    },
+    {
+      "level": 3,
+      "title": "Come funziona tecnicamente (v4.0)",
+      "content": "```\nLa tua domanda: \"Qual è il BEP del V32?\"\n        ↓\n1. RICERCA SEMANTICA: trova chunk di testo simili per significato\n   (usa embedding — vettori matematici che catturano il \"senso\")\n        ↓\n2. RICERCA KEYWORD (BM25): trova chunk che contengono le parole esatte\n   (come una ricerca testuale, ottimo per numeri e termini tecnici)\n        ↓\n3. MERGE RRF: combina i due risultati (prende i migliori di entrambi)\n        ↓\n4. RERANKER: ordina i 15 migliori con un modello più preciso → top 5\n        ↓\nClaude risponde usando quei 5 chunk come contesto\n```\n\n**Perché due tipi di ricerca?** La semantica trova concetti simili ma può mancare termini esatti. La keyword trova \"V32\", \"Ø18\", \"Config G\", \"EUR 2.250\" esattamente. Insieme sono molto più potenti."
+    },
+    {
+      "level": 3,
+      "title": "Comandi RAG",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Cercare qualcosa",
+      "content": "rag 'dimensioni telaio V32'\nrag 'BEP ore lavoro'\nrag 'come si salda TIG titanio'"
+    },
+    {
+      "level": 1,
+      "title": "Aggiornare l'indice dopo aver aggiunto file a MENTE/",
+      "content": "rag-update              # incrementale: solo file nuovi/modificati (<20 sec)\nrag-rebuild             # reset completo (~1-3 min) — solo se necessario"
+    },
+    {
+      "level": 1,
+      "title": "Vedere le statistiche",
+      "content": "rag -Stats\n```\n\n**Esempio output di una ricerca:**\n```"
+    },
+    {
+      "level": 2,
+      "title": "RAG v4 — 'BEP V32'",
+      "content": "1. ASSOLUTO/V7_master.md  (score: 8.23)\n   ...BEP V32: 61 ore = 1.4 mesi | ROI Anno 1: 322% | Tariffa: EUR 45/h...\n\n2. V32/note_economiche.md  (score: 6.11)\n   ...investimento totale EUR 2.250 — recuperato in 61 ore di lavoro...\n```"
+    },
+    {
+      "level": 3,
+      "title": "Cosa mettere in MENTE/",
+      "content": "**Regola**: se lo sai ora e potresti doverlo ricercare in futuro → scrivi in MENTE/.\n\n```\nMENTE/\n├── SESSIONI/         ← note di ogni sessione (decisioni prese, cose scoperte)\n├── V32/              ← tutto sulla CNC: misure, BOM, note officina, errori\n├── OFFICINA/         ← fornitori, prezzi, procedure saldatura\n├── ASSOLUTO/         ← documenti master (V7, V8, FILONE_UNICO)\n├── KNOWLEDGE/        ← libri letti, corsi, ricerche\n│   └── RESEARCH/     ← output del Research Agent\n└── VITA_NATURA/      ← tutto sul centro estetico\n```\n\n**Come aggiungere un appunto veloce:**\n\nCrea un file `.md` in MENTE/SESSIONI/ con questa struttura:\n```markdown"
+    },
+    {
+      "level": 1,
+      "title": "YYYY-MM-DD — tema breve",
+      "content": "*nota rapida*"
+    },
+    {
+      "level": 2,
+      "title": "Decisioni prese",
+      "content": "- ho scelto il silentblock versione B (Ø18 h30) perché..."
+    },
+    {
+      "level": 2,
+      "title": "Misure/dati",
+      "content": "- altezza colonna: 905mm effettivi (non 900mm come in V7)"
+    },
+    {
+      "level": 2,
+      "title": "Da fare",
+      "content": "- ordinare mandrino 2.2kW ER20\n```\n\nPoi esegui `rag-update` e quella info è disponibile in tutte le sessioni future."
+    },
+    {
+      "level": 3,
+      "title": "Quando il RAG si aggiorna automaticamente",
+      "content": "Lo Stop hook (eseguito alla chiusura di ogni sessione Claude) esegue automaticamente `rag --incremental`. Quindi ogni volta che chiudi Claude, l'indice viene aggiornato con i file aggiunti in quella sessione.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "5. Agenti validatori",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Cosa sono",
+      "content": "Gli agenti sono istanze specializzate di Claude con un profilo tecnico preciso. Invece di fare una domanda generica, la fai a un \"esperto\" specifico che ha: conoscenza del dominio, accesso al tuo RAG, e un tono appropriato."
+    },
+    {
+      "level": 3,
+      "title": "Agenti disponibili",
+      "content": "| Comando | Agente | Specializzazione |\n|---------|--------|-----------------|\n| `ask -Agent tesla` | TESLA ⚡ | Elettrica civile/industriale, quadri, VFD, normativa CEI |\n| `ask -Agent forge` | FORGE 🔧 | Meccanica, officina, saldatura, CNC, tolleranze |\n| `ask -Agent aqua` | AQUA 🌿 | Acquaponica, bioreattori, serre, idronica |\n| `ask -Agent lex` | LEX ⚖️ | Normativa, sicurezza macchine, marcatura CE, brevetti |\n| `ask -Agent plc` | PLC 🖥️ | Siemens S7, TIA Portal, HMI, motion control |\n| `ask -Agent themis` | THEMIS 🔮 | Analisi V32/GENESIS, validazione progetto completo |"
+    },
+    {
+      "level": 3,
+      "title": "Come usarli",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Forma base",
+      "content": "ask -Agent forge -Question \"Quanto regge un gusset 200mm in S235 con carico laterale?\""
+    },
+    {
+      "level": 1,
+      "title": "Senza RAG (risposta più veloce, solo conoscenza dell'agente)",
+      "content": "ask -Agent tesla -NoRag -Question \"Riassumi CEI 64-8 sezione 4\""
+    },
+    {
+      "level": 1,
+      "title": "Lista agenti disponibili",
+      "content": "agents\n```"
+    },
+    {
+      "level": 3,
+      "title": "Esempi pratici per ogni agente",
+      "content": "**TESLA — domande elettriche:**\n```powershell\nask -Agent tesla -Question \"Come dimensiono il cablaggio del VFD per il mandrino 2.2kW a 400V trifase?\"\nask -Agent tesla -Question \"Che sezione cavo uso per 16A a 10 metri?\"\nask -Agent tesla -Question \"Differenza tra messa a terra TN-S e TN-C-S per un laboratorio?\"\n```\n\n**FORGE — domande meccaniche:**\n```powershell\nask -Agent forge -Question \"Saldatura TIG su S235: parametri per spessore 3mm?\"\nask -Agent forge -Question \"Tolleranza IT6 su foro Ø18 — quale alesatoio uso?\"\nask -Agent forge -Question \"Come calcolo la freccia di un profilato 60x60x3 con carico a mezza campata di 500mm?\"\n```\n\n**AQUA — acquaponica/biologia:**\n```powershell\nask -Agent aqua -Question \"Rapporto pesce/piante per sistema chiuso con tilapia?\"\nask -Agent aqua -Question \"Come calibro un bioreattore a media fissa per 500L?\"\n```\n\n**LEX — normativa:**\n```powershell\nask -Agent lex -Question \"Quali direttive si applicano a una macchina CNC autocostruita per uso proprio?\"\nask -Agent lex -Question \"Ho bisogno della marcatura CE per vendere pezzi lavorati dalla V32?\"\n```\n\n**PLC — Siemens/automazione:**\n```powershell\nask -Agent plc -Question \"Come configuro un asse lineare in TIA Portal con drive Siemens V20?\"\nask -Agent plc -Question \"Differenza tra FB e FC in Siemens S7?\"\n```\n\n**THEMIS — analisi strategica:**\n```powershell\nask -Agent themis -Question \"Dove siamo con la V32 e qual è il prossimo step critico?\"\nask -Agent themis -Question \"Ha senso partire con la versione B silent blocks o salto a corpo unico senza?\"\n```"
+    },
+    {
+      "level": 3,
+      "title": "Come funziona internamente",
+      "content": "1. Carichi il profilo dell'agente da `agents_db.json`\n2. Si cerca nel RAG con i domini dell'agente (es. forge cerca in \"V32, OFFICINA, meccanica\")\n3. Claude riceve: profilo agente + contesto RAG + domanda → risponde come quell'esperto"
+    },
+    {
+      "level": 3,
+      "title": "Aggiungere un nuovo agente",
+      "content": "Apri `NODES/AGENTS/agents_db.json` e aggiungi un blocco:\n```json\n\"mio_agente\": {\n  \"name\": \"NOME\",\n  \"emoji\": \"🔬\",\n  \"role\": \"Ruolo in una frase\",\n  \"active\": true,\n  \"expertise\": [\"area 1\", \"area 2\"],\n  \"tone\": \"Tecnico, preciso, con esempi pratici\",\n  \"rag_domains\": [\"dominio1\", \"dominio2\"],\n  \"tags\": [\"tag1\", \"tag2\"]\n}\n```\n\nNessun altro file da modificare — il validator_agent.py lo carica automaticamente.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "6. Research Agent — ricerca accademica",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "A cosa serve",
+      "content": "Cerca automaticamente paper, tesi, libri e repository su 11 sorgenti accademiche. Utile per trovare ricerche su materiali, tecniche, normative, senza cercare manualmente su Google Scholar."
+    },
+    {
+      "level": 3,
+      "title": "Comandi",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Ricerca base",
+      "content": "research -Query \"epoxy granite vibration damping CNC\""
+    },
+    {
+      "level": 1,
+      "title": "Con dominio (usa preset di keywords aggiuntive)",
+      "content": "research -Query \"damping machine tools\" -Domain V32"
+    },
+    {
+      "level": 1,
+      "title": "Con RAG integrato (salva in MENTE/ e indicizza)",
+      "content": "research -Query \"aquaponics biofilter design\" -Domain acquaponica -Rag"
+    },
+    {
+      "level": 1,
+      "title": "Specificare sorgenti",
+      "content": "research -Query \"tilapia density recirculating\" -Sources \"openalex,theses_fr\""
+    },
+    {
+      "level": 1,
+      "title": "Più risultati",
+      "content": "research -Query \"epoxy granite\" -Max 10"
+    },
+    {
+      "level": 1,
+      "title": "Anteprima senza eseguire",
+      "content": "research -Query \"silent block vibration isolation\" -DryRun\n```"
+    },
+    {
+      "level": 3,
+      "title": "Sorgenti disponibili",
+      "content": "| Sorgente | Contenuto | Usa per |\n|----------|-----------|---------|\n| `openalex` | 250M paper open access | ricerca generale |\n| `semantic_scholar` | 250M paper con abstract | ricerca con abstract |\n| `arxiv` | preprint tecnici/scientifici | ricerca più recente |\n| `core_ac` | 200M paper full-text | testi completi |\n| `theses_fr` | tesi dottorali EU | approfondimento tecnico |\n| `dart_europe` | 1.3M tesi universitarie EU | idem |\n| `openlibrary` | libri tecnici open access | libri di testo |\n| `doaj` | articoli peer-reviewed | qualità verificata |\n| `baidu_scholar` | 400M+ paper cinesi | CNC, manifattura |\n| `cnki` | 60M paper CNKI | DB accademico cinese |\n| `github` | repository open source | codice, strumenti |\n\n**Quando usare le sorgenti cinesi**: per CNC, manifattura, lavorazione metalli — la Cina ha una produzione accademica enorme su questi temi, spesso con informazioni pratiche non trovabili altrove."
+    },
+    {
+      "level": 3,
+      "title": "Preset domini disponibili",
+      "content": "```powershell\n-Domain V32          # CNC, macchine utensili, epoxy granite, linear guides\n-Domain acquaponica  # hydroponics, aquaponics, biofilter, recirculating\n-Domain CNC          # CNC machining, servo control, G-code\n-Domain PLC          # Siemens, TIA Portal, ladder logic\n-Domain AI           # machine learning, LLM, RAG, embedding\n-Domain elettrica    # electrical, CEI, IEC, VFD, motor\n-Domain gomma        # rubber, silicone, elastomers, mold\n```"
+    },
+    {
+      "level": 3,
+      "title": "Output",
+      "content": "I risultati vengono salvati automaticamente in:\n```\nMENTE/KNOWLEDGE/RESEARCH/[domain]/YYYY-MM-DD_query.md\n```\n\nCon flag `-Rag` vengono anche indicizzati nel RAG dopo il salvataggio.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "7. Claude Code — il tuo co-pilot",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Aprire Claude Code",
+      "content": "```powershell\nclaude-ti     # apre Claude Code in TITANIUM_OS/ con tutti i permessi\n```"
+    },
+    {
+      "level": 3,
+      "title": "Principi di utilizzo",
+      "content": "**Non spiegare, chiedi di fare.** Claude ha accesso completo ai file e può modificarli direttamente. Invece di \"puoi spiegarmi come...\" usa \"fai...\".\n\n**Esempi di comandi efficaci:**\n\n```"
+    },
+    {
+      "level": 1,
+      "title": "Meno efficace:",
+      "content": "\"Puoi spiegarmi come funziona il rag_engine.py?\""
+    },
+    {
+      "level": 1,
+      "title": "Più efficace:",
+      "content": "\"Leggi rag_engine.py e dimmi se c'è qualcosa da ottimizzare\"\n\"Aggiungi la funzione X a rag_engine.py\"\n\"Trova tutti i file che usano chromadb e dimmi se c'è consistenza\"\n```"
+    },
+    {
+      "level": 3,
+      "title": "Come Claude legge il contesto",
+      "content": "All'apertura, Claude legge automaticamente:\n- `BRAIN/STATE.json` → dove eri rimasto, milestone attivo, blockers\n- `.claude/CLAUDE.md` (TITANIUM_OS) → regole operative del progetto\n- `~/.claude/CLAUDE.md` (globale) → regole globali di Matteo\n\nNon devi riepilogare la sessione precedente — Claude sa già tutto."
+    },
+    {
+      "level": 3,
+      "title": "MCP Server (integrazione avanzata)",
+      "content": "Il sistema ha un server MCP che dà a Claude tool specializzati:\n\n```\nget_state          → legge STATE.json completo\nupdate_milestone   → aggiorna lo stato di un pillar\nsearch_mente       → cerca nel RAG direttamente\nget_daily_brief    → legge l'ultimo brief\nlist_content_ready → lista contenuti pronti per pubblicazione\n```\n\nQuesti si attivano automaticamente — non devi fare nulla."
+    },
+    {
+      "level": 3,
+      "title": "Stop Hook — cosa succede alla chiusura",
+      "content": "Ogni volta che chiudi Claude Code, vengono eseguiti automaticamente:\n1. `generate_restart_prompt.py` → aggiorna `RIAVVIO_SESSIONE.txt` sul Desktop\n2. `generate_functions_list.py` → aggiorna `FUNZIONI_SISTEMA.txt` sul Desktop\n3. `rag_engine.py --incremental` → aggiorna l'indice RAG con i nuovi file"
+    },
+    {
+      "level": 3,
+      "title": "/compact — gestire il contesto lungo",
+      "content": "Quando la sessione diventa molto lunga (risposte lente, Claude \"dimentica\" cose dette prima), usa:\n```\n/compact\n```\nQuesto comprime la storia della conversazione mantenendo il contesto essenziale. Non perde il lavoro in corso.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "8. Dashboard e API Server",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Avvio",
+      "content": "```powershell\nstart-titanium    # avvia tutto (API porta 5001 + Dashboard porta 5173)\nstart-api         # solo API server\nstart-dashboard   # solo dashboard\n```"
+    },
+    {
+      "level": 3,
+      "title": "Dashboard (http://localhost:5173)",
+      "content": "Interfaccia grafica del sistema. Contiene:\n- **Tela** — pannello principale con tutti i nodi attivi\n- **Stato V32** — avanzamento build\n- **STORIE** — archivio episodi\n- **MatteoSection** — profilo skill, interessi, principi, orizzonte 2030\n- **CommandBar** — `Ctrl+K` per accesso rapido a tutto"
+    },
+    {
+      "level": 3,
+      "title": "API Server (http://localhost:5001)",
+      "content": "Backend Flask che espone i dati del sistema. Endpoint principali:\n\n```\nGET  /api/health              → stato server\nGET  /api/state               → tutto STATE.json\nPATCH /api/state              → aggiorna STATE.json\nGET  /api/daily-brief         → legge ultimo brief\nPOST /api/daily-brief         → genera nuovo brief\nGET  /api/photos              → lista foto con URL\nGET  /api/pdfs                → lista PDF in MENTE/\nPOST /api/rag/rebuild         → avvia rebuild RAG in background\nGET  /api/rag/status          → statistiche RAG\n```"
+    },
+    {
+      "level": 3,
+      "title": "Daily Brief",
+      "content": "```powershell\nbrief   # genera e mostra il brief del giorno\n```\n\nIl brief contiene: milestone attivo, step successivo, blockers, ultime note in MENTE/.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "9. Git — salva e sincronizza il lavoro",
+      "content": "Il codice vive in `TITANIUM_OS/TITANIUM_OS/` ed è sincronizzato su GitHub."
+    },
+    {
+      "level": 3,
+      "title": "Comandi base",
+      "content": "```powershell\ngs                  # git status — vedi cosa è cambiato\ngp                  # git pull — scarica aggiornamenti da GitHub\nglog                # git log — ultimi 20 commit in formato grafico"
+    },
+    {
+      "level": 1,
+      "title": "Commit e push in un comando",
+      "content": "gpush               # commit con messaggio \"update\" e push\ngpush \"messaggio\"   # commit con messaggio personalizzato\n```\n\n**Esempi:**\n```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Dopo una sessione di sviluppo",
+      "content": "gpush \"feat: aggiunto agente AQUA v2 con parametri bioreattore\""
+    },
+    {
+      "level": 1,
+      "title": "Dopo aver aggiornato documenti",
+      "content": "gpush \"docs: V8 completo con decisione silent blocks v.B\""
+    },
+    {
+      "level": 1,
+      "title": "Salvataggio rapido",
+      "content": "gpush\n```"
+    },
+    {
+      "level": 3,
+      "title": "Cosa NON va nel git",
+      "content": "```\n_VAULT/KEYS/          ← API keys, .env → MAI nel git\nNODES/MENTE_RAG/chroma_db/   ← ChromaDB binary → MAI (già in .gitignore)\n```"
+    },
+    {
+      "level": 3,
+      "title": "Convenzioni per i messaggi commit",
+      "content": "```\nfeat: nuova funzionalità\nfix: correzione bug\ndocs: aggiornamento documentazione\nrefactor: riscrittura senza cambiare comportamento\nchore: manutenzione (aggiornamento dipendenze, ecc.)\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "10. Media — PDF e foto",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Aprire PDF",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Apre la cartella MENTE/ASSOLUTO/ in Explorer (tutti i PDF)",
+      "content": "pdf"
+    },
+    {
+      "level": 1,
+      "title": "Apre un PDF specifico per nome (cerca in MENTE/ASSOLUTO/)",
+      "content": "pdf V7_X_v8.md"
+    },
+    {
+      "level": 1,
+      "title": "Apre un PDF con path completo",
+      "content": "pdf \"C:\\Users\\benen\\Downloads\\datasheet.pdf\"\n```"
+    },
+    {
+      "level": 3,
+      "title": "Aprire foto",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Apre la cartella foto build V32 (default: V32_BUILD)",
+      "content": "apri-foto"
+    },
+    {
+      "level": 1,
+      "title": "Apre una sottocartella specifica",
+      "content": "apri-foto V32_BUILD\\Config_G\\stato_20260528\n```"
+    },
+    {
+      "level": 3,
+      "title": "Lista media via browser",
+      "content": "```powershell\nopen-pdf      # apre http://localhost:5001/api/pdfs nel browser\nopen-photos   # apre http://localhost:5001/api/photos nel browser\n```"
+    },
+    {
+      "level": 3,
+      "title": "Convertire PDF in note (pdf_to_memory)",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Estrai testo da PDF e salvalo in MENTE/",
+      "content": "python NODES\\PDF_TO_MEMORY\\pdf_to_memory.py --file \"documento.pdf\""
+    },
+    {
+      "level": 1,
+      "title": "Con flag --rag: aggiorna automaticamente l'indice dopo l'estrazione",
+      "content": "python NODES\\PDF_TO_MEMORY\\pdf_to_memory.py --file \"documento.pdf\" --rag\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "11. Controllo sistema",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Stato rapido",
+      "content": "```powershell\nti-status    # API server attivo? GitHub auth? milestone? blockers?\n```\n\n**Output esempio:**\n```\n  TITANIUM_OS STATUS\n  -----------------------------------\n  API Server:  ATTIVO\n  GitHub:      autenticato\n  Milestone:   Config G — Rinforzi colonne Z+U\n  Next:        Saldare 4 gusset 200mm sulla colonna Z sinistra\n```"
+    },
+    {
+      "level": 3,
+      "title": "Avvio e arresto",
+      "content": "```powershell\nstart-titanium    # avvia API (5001) + Dashboard (5173)\nstop-titanium     # ferma tutti i processi Python\nstart-api         # solo API\nstart-dashboard   # solo Dashboard\nstart-scanner     # avvia MENTE_SCANNER (estrazione documenti)\n```"
+    },
+    {
+      "level": 3,
+      "title": "Aggiornamento file di stato",
+      "content": "```powershell\nreload             # ricarica il profilo PowerShell (dopo modifiche al profilo)\nupdate-restart     # aggiorna RIAVVIO_SESSIONE.txt manualmente\nupdate-funzioni    # aggiorna FUNZIONI_SISTEMA.txt manualmente\n```"
+    },
+    {
+      "level": 3,
+      "title": "Utilità",
+      "content": "```powershell\nwhich python      # trova il path di un eseguibile\nmkcd nuova-dir    # crea cartella e ci entra\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "12. Flussi di lavoro completi",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Flusso A — Sessione di sviluppo software",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "1. Apri il sistema",
+      "content": "claude-ti"
+    },
+    {
+      "level": 1,
+      "title": "(nessun input necessario — avviene automaticamente)",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "3. Lavori con Claude — chiedi, modifica, crea",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "aggiorna RIAVVIO_SESSIONE.txt + FUNZIONI_SISTEMA.txt + RAG)",
+      "content": "```"
+    },
+    {
+      "level": 3,
+      "title": "Flusso B — Sessione officina → documentazione",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Dopo una giornata in officina, documenta le decisioni prese",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "1. Vai in MENTE/SESSIONI/",
+      "content": "cd \"C:\\Users\\benen\\MICROINDUSTRY\\MENTE\\SESSIONI\""
+    },
+    {
+      "level": 1,
+      "title": "Esempio: 2026-05-29_gusset_sinistra_saldato.md",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "3. Aggiorna RAG",
+      "content": "rag-update"
+    },
+    {
+      "level": 1,
+      "title": "4. Opzionale: chiedi a Claude cosa cambia nel progetto",
+      "content": "claude-ti"
+    },
+    {
+      "level": 1,
+      "title": "\"Ho saldato il gusset sinistro. Aggiorna STATE.json e dimmi il prossimo step.\"",
+      "content": "```"
+    },
+    {
+      "level": 3,
+      "title": "Flusso C — Domanda tecnica con validazione",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Hai un dubbio tecnico — lo vuoi validare",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "1. Usa l'agente appropriato",
+      "content": "ask -Agent forge -Question \"Il profilato 40x40x3 S235 regge 50kg di testa tool + mandrino su 300mm di sbalzo?\""
+    },
+    {
+      "level": 1,
+      "title": "2. Se vuole anche ricerca accademica",
+      "content": "research -Query \"CNC spindle cantilever deflection S235 steel\" -Domain V32"
+    },
+    {
+      "level": 1,
+      "title": "(copia la risposta in MENTE/V32/calcoli_strutturali.md)",
+      "content": "rag-update\n```"
+    },
+    {
+      "level": 3,
+      "title": "Flusso D — Ricerca accademica per un problema",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Hai un problema specifico — cerchi se qualcuno l'ha già risolto",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "1. Ricerca con dominio e RAG",
+      "content": "research -Query \"epoxy granite damping ratio CNC machine tool\" -Domain V32 -Rag -Max 8"
+    },
+    {
+      "level": 1,
+      "title": "E indicizzati nel RAG automaticamente (con -Rag)",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "2. Poi chiedi al RAG quello che hai trovato",
+      "content": "rag \"epoxy granite smorzamento vibrazione\""
+    },
+    {
+      "level": 1,
+      "title": "\"Ho appena aggiunto ricerche su epoxy granite. Dimmi cosa ci serve per il riempimento V32.\"",
+      "content": "```"
+    },
+    {
+      "level": 3,
+      "title": "Flusso E — Riavvio di una sessione interrotta",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "Metodo 1 — automatico (usa RIAVVIO_SESSIONE.txt)",
+      "content": "claude-ti"
+    },
+    {
+      "level": 1,
+      "title": "incolla il contenuto di Desktop\\RIAVVIO_SESSIONE.txt come primo messaggio",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "Metodo 2 — da zero",
+      "content": "claude-ti"
+    },
+    {
+      "level": 1,
+      "title": "\"Leggi STATE.json e MAPPA_SISTEMA.md, poi dimmi dove siamo.\"",
+      "content": "```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "13. Troubleshooting",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "\"Il RAG non trova quello che ho appena scritto\"",
+      "content": "```powershell\nrag-update    # hai aggiunto file a MENTE/ ma non hai aggiornato l'indice?\n```"
+    },
+    {
+      "level": 3,
+      "title": "\"Claude non conosce la V32\" / \"non sa del gusset\"",
+      "content": "1. La nota è in `MENTE/`? Controlla con `mente` poi `exp`\n2. Il RAG è aggiornato? `rag -Stats` mostra il numero di file indicizzati\n3. Forza rebuild: `rag-rebuild`"
+    },
+    {
+      "level": 3,
+      "title": "\"API Server non risponde\"",
+      "content": "```powershell\nti-status         # controlla lo stato\nstop-titanium     # ferma tutto\nstart-api         # riavvia l'API\n```"
+    },
+    {
+      "level": 3,
+      "title": "\"Dashboard non si apre (localhost:5173)\"",
+      "content": "```powershell\nstop-titanium\nstart-dashboard   # riavvia solo la dashboard\n```"
+    },
+    {
+      "level": 3,
+      "title": "\"Errore 'command not found' per python/pip/node\"",
+      "content": "Il profilo PowerShell non è caricato. Esegui:\n```powershell\nreload            # ricarica il profilo\n```\n\nSe non funziona, apri un nuovo terminale PowerShell — il profilo si carica automaticamente."
+    },
+    {
+      "level": 3,
+      "title": "\"rag-rebuild va in timeout\"",
+      "content": "Con v4.0 usa `rag-update` invece di `rag-rebuild`. Se devi fare un full rebuild, eseguilo in una finestra separata:\n```powershell\nStart-Process powershell -ArgumentList \"-NoExit -Command `\"ti; python NODES\\MENTE_RAG\\rag_engine.py --rebuild`\"\"\n```\nIl rebuild continua in background — puoi continuare a lavorare."
+    },
+    {
+      "level": 3,
+      "title": "\"Claude sembra 'dimenticare' cose dette nella stessa sessione\"",
+      "content": "Il contesto è troppo lungo. Usa:\n```\n/compact\n```\nQuesto comprime la storia mantenendo l'essenziale. Non perdi il lavoro."
+    },
+    {
+      "level": 3,
+      "title": "\"Un agente non risponde\"",
+      "content": "```powershell\nagents    # lista agenti disponibili — controlla che sia attivo\nask -Agent forge -NoRag -Question \"test\"    # prova senza RAG\n```"
+    },
+    {
+      "level": 3,
+      "title": "\"GitHub auth scaduta\"",
+      "content": "```powershell\nti-status    # mostra se sei autenticato\n! gh auth login    # riesegui il login (usa ! per eseguire nel terminale)\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "14. Glossario tecnico",
+      "content": "**Chunk** — un pezzo di testo estratto da un documento. Il RAG divide ogni file in chunk da ~512 caratteri con overlap, per poter recuperare le parti rilevanti senza caricare tutto.\n\n**Embedding** — rappresentazione matematica di un testo come vettore di numeri. Testi simili nel significato hanno vettori \"vicini\". Il modello usato è `paraphrase-multilingual-MiniLM-L12-v2` (384 dimensioni, funziona in italiano).\n\n**BM25** — algoritmo di ricerca testuale che pesa le parole chiave per frequenza e rarità. Ottimo per trovare termini tecnici esatti. Nel sistema è implementato via TF-IDF sklearn.\n\n**RRF (Reciprocal Rank Fusion)** — algoritmo di merge. Combina i ranking di due liste (semantica + BM25) in un unico ranking. Formula: `score = Σ 1/(k + rank)` dove k=60. Il vantaggio è che funziona bene anche quando i due sistemi hanno scale di score diverse.\n\n**CrossEncoder / Reranker** — modello che prende (query, documento) come coppia e dà un punteggio di rilevanza più preciso degli embedding. Più lento ma più accurato. Nel sistema: fetch-15 → rerank → top-5.\n\n**ChromaDB** — database vettoriale embedded (gira in locale, nessun server). Salva gli embedding e permette ricerche per similarità coseno.\n\n**STATE.json** — il file JSON che contiene lo stato completo del sistema: milestone, pillar, blockers, sessioni, nodi. È la \"fonte unica di verità\" del progetto.\n\n**Hook Stop** — script che vengono eseguiti automaticamente quando Claude Code viene chiuso. Nel sistema: aggiorna RIAVVIO_SESSIONE.txt, FUNZIONI_SISTEMA.txt, e l'indice RAG.\n\n**MCP (Model Context Protocol)** — protocollo di Anthropic per dare a Claude strumenti personalizzati. Il server MCP di TITANIUM_OS espone `get_state`, `search_mente`, ecc.\n\n**Pillar** — uno dei 5 progetti principali tracciati in STATE.json: V32, MIMS, GENESIS, VITA_NATURA, IDENTITY. Ognuno ha % completamento, fase, prossimo step.\n\n**Manifest (RAG)** — file JSON (`rag_manifest.json`) che tiene traccia di mtime e dimensione di ogni file in MENTE/. Il rebuild incrementale confronta questi valori e riprocessa solo i file cambiati.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "15. Come aggiornare questo manuale",
+      "content": "Questo manuale si aggiorna a ogni sessione significativa, esattamente come STATE.json."
+    },
+    {
+      "level": 3,
+      "title": "Quando aggiornare",
+      "content": "- Aggiunti nuovi comandi al profilo PS → aggiorna sezione 3 o sezione relativa\n- Nuovo nodo/agente → aggiorna sezione 5 o 6\n- Cambiata architettura RAG → aggiorna sezione 4\n- Nuovo flusso di lavoro scoperto → aggiungi in sezione 12\n- Nuovo problema risolto → aggiungi in sezione 13"
+    },
+    {
+      "level": 3,
+      "title": "Come aggiornare",
+      "content": "```\nclaude-ti\n\"Aggiorna DOCS/MANUALE_SISTEMA.md con il nuovo comando X che fa Y\"\n```\n\nClaude si occupa della modifica — tu descrivi cosa aggiungere."
+    },
+    {
+      "level": 3,
+      "title": "Versioning",
+      "content": "Aggiorna la riga in cima al file:\n```markdown\n*Versione: 1.1 | 2026-05-29 | aggiunta sezione RAG v4.1*\n```\n\n---\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "16. Content Engine — Episodi e Story Agent",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Struttura stagioni",
+      "content": "```\nS0 — Origini        → 4 ep  — il seme (pre-sistema)\nS1 — Il Presente    → 6 ep  — storia principale (skills → 2030)\nS2 — Il Sistema     → 6+ ep — maggio 2026, il sistema che impara\nS3 — Costruzione    → da scrivere — build log fisici (gusset, mandrino, primo pezzo)\nAUTO                → generati da milestones — legacy content_trigger\nMOMENTI             → episodi brevi (5-7 min) — singola decisione o scoperta\n```"
+    },
+    {
+      "level": 3,
+      "title": "Story Agent — generazione automatica",
+      "content": "Lo story agent analizza git commits e sessioni recenti e genera automaticamente bozze di episodi.\n\n```powershell"
+    },
+    {
+      "level": 1,
+      "title": "manuale — episodi dai commit recenti non processati",
+      "content": "python NODES\\STORY_AGENT\\story_agent.py"
+    },
+    {
+      "level": 1,
+      "title": "backfill — tutto lo storico git",
+      "content": "python NODES\\STORY_AGENT\\story_agent.py --backfill --max 20"
+    },
+    {
+      "level": 1,
+      "title": "alias PS",
+      "content": "new-episode          # equivalente al comando manuale sopra\n```\n\n**Automatismi:**\n- **Stop hook** — ogni fine sessione Claude Code lancia story_agent in background\n- **Task Scheduler** — ogni notte alle 02:07 (`TITANIUM_OS_StoryAgent`)\n\nOutput: `CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_YYYYMMDD_*.md`\nMirror automatico: `MICROINDUSTRY/MENTE/SESSIONI/STORIE/S2_SISTEMA/`"
+    },
+    {
+      "level": 3,
+      "title": "Episodi Intermezzo (MOMENTI)",
+      "content": "I Momenti sono episodi brevi (5-7 min) per catturare una singola decisione, scoperta o svolta senza aspettare un episodio principale. Formato:\n\n```markdown"
+    },
+    {
+      "level": 1,
+      "title": "MOMENTO — [Titolo breve]",
+      "content": "**Data:** YYYY-MM-DD | **Durata:** 5-7 min | **Tipo:** decisione/scoperta/svolta\n\n[2-3 paragrafi narrativi + reel_hook]\n```\n\n**Quando usarli:** decisione tecnica singola, fix importante, insight di officina, acquisto strategico.\n**Dove salvarli:** `CONTENT_ENGINE/DATABASE/episodes/MOMENTI/`"
+    },
+    {
+      "level": 3,
+      "title": "INDEX episodi",
+      "content": "Vedi `CONTENT_ENGINE/DATABASE/INDEX.md` per la lista completa aggiornata di tutti gli episodi.\nIl manuale non duplica l'INDEX — vai direttamente lì per lo stato aggiornato.\n\n---\n\n*Manuale aggiornato in sessione #9 — 2026-05-29*\n*Story agent attivo: cron 02:07 + stop hook ogni sessione.*"
+    }
+  ],
+  "word_count": 4707,
+  "updated_at": "2026-05-31T13:58:33.464624",
+  "built_at": "2026-05-31T15:07:11.506983"
+}

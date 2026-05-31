@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
+  "title": "EP_AUTO_26 — Milestone",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_26  Milestone](#epauto26-milestone)\n    - [RAG v4.0 - hybrid BM25semanticoCrossEncoderincrementale (](#rag-v40---hybrid-bm25semanticocrossencoderincrementale)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di capire, si cercava a caso](#atto-i-prima-di-capire-si-cercava-a-caso)\n  - [ATTO II  Ibrido, reranking, e la memoria che cresce](#atto-ii-ibrido-reranking-e-la-memoria-che-cresce)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"RAG v4.0 - hybrid BM25+semantico+CrossEncoder+incrementale (\"",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "Il Sistema — Episodio 23",
+      "content": "---"
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Stavo guardando lo schermo alle undici di sera, con il caffè freddo sul banco e i trucioli di alluminio ancora nelle scarpe dall'officina. E il sistema mi ha risposto in un modo che non mi aspettavo. Non sbagliato. Non lento. Preciso. Come se avesse capito davvero quello che stavo chiedendo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Prima di capire, si cercava a caso",
+      "content": "Devo spiegarti cosa c'era prima, altrimenti non capisci perché questa cosa conta.\n\nGENESIS ha una base di conoscenza enorme a questo punto. Ci sono dentro i parametri di lavoro della V32, i disegni concettuali dei MIMS, le procedure di VULCAN, i log di EVA, le note su Vita Natura. Anni di lavoro che ho trascritto, caricato, organizzato. Un archivio vivo.\n\nIl problema è che un archivio, da solo, non serve a niente se non riesci a tirare fuori la cosa giusta al momento giusto.\n\nLa versione precedente del RAG — il sistema che recupera le informazioni prima di rispondere — funzionava con la ricerca semantica. Cioè: prendi la domanda, la trasformi in un vettore matematico, cerchi i documenti più vicini nello spazio vettoriale. Funziona bene quando la domanda è vaga, concettuale, quando stai cercando qualcosa che non sai esattamente come si chiama.\n\nMa se ti serve il parametro esatto della velocità di avanzamento per la Config G della V32? Se vuoi sapere cosa ho scritto precisamente su un componente specifico dei MIMS tre settimane fa? La ricerca semantica ti porta vicino, ma non abbastanza. Ti porta nel quartiere giusto, ma non all'indirizzo.\n\nQuindi succedeva che il sistema recuperava roba pertinente ma non quella roba lì. E le risposte erano corrette in senso generale ma imprecise nei dettagli tecnici. Per un centro estetico, magari passi. Per una fresatrice CNC che deve lavorare il titanio, no. Non puoi passare.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — Ibrido, reranking, e la memoria che cresce",
+      "content": "Il 28 maggio 2026 ho chiuso il ciclo su RAG v4.0. Non è stato un giorno solo — è stata la chiusura di un lavoro che andava avanti da settimane — ma quel giorno ho testato tutto insieme e ha tenuto.\n\nL'architettura è ibrida: BM25 più semantico. BM25 è un algoritmo di ricerca testuale classico, quello che usano i motori di ricerca da decenni. Cerca parole chiave, termini esatti, corrispondenze letterali. Lo metti insieme alla ricerca semantica e ottieni qualcosa di interessante: prendi la precisione del testo esatto e la flessibilità del significato. Se chiedi della \"Config G con rinforzi trasversali\" ti arriva sia la nota dove ho scritto esattamente quelle parole, sia i documenti dove ho parlato dello stesso concetto con termini diversi.\n\nMa il vero salto è il CrossEncoder. Dopo che i due sistemi recuperano i candidati, il CrossEncoder li riordina. Non guarda i documenti uno per uno in isolamento — li valuta rispetto alla domanda specifica, in coppia. È computazionalmente più pesante, ma il risultato è che la lista finale è ordinata davvero per rilevanza, non per prossimità vettoriale astratta. Il documento che conta di più arriva primo.\n\nE poi c'è la parte incrementale. L'archivio non è statico. Ogni volta che aggiungo una nota, un log, un documento, il sistema si aggiorna senza ricostruire tutto da zero. Prima era un problema: aggiungevo roba e dovevo aspettare il reindicizzazione completa. Adesso no. Entra, viene integrato, e il sistema ne tiene conto subito.\n\nQuella sera ho fatto la stessa domanda che mi aveva dato problemi settimane prima — qualcosa di specifico sui parametri della fresatrice — e la risposta era esatta. Non approssimata. Esatta. Con il riferimento al documento giusto, al passaggio giusto.\n\nHo bevuto il caffè freddo lo stesso. Ma soddisfatto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Cosa si sblocca adesso",
+      "content": "RAG v4.0 non è un aggiornamento estetico. Cambia il modo in cui GENESIS funziona come ecosistema.\n\nLo Story Agent adesso può costruire narrative coerenti pescando dalla base di conoscenza in modo affidabile. I report di avanzamento — quello che uso per tenere traccia di dove sono su V32, MIMS, VULCAN — sono più precisi perché il contesto che arriva agli agenti è quello giusto.\n\nPer Vita Natura e il pilot di EVA, questo significa che quando il sistema risponde a una cliente o gestisce una prenotazione, la base informativa che usa è aggiornata in tempo reale e recuperata in modo preciso. Non lavoro su dati vecchi o approssimati.\n\nE per me, praticamente, significa che posso finalmente mettere dentro tutto il lavoro che ho lasciato fuori perché tanto \"non veniva recuperato bene\". Quella mole di note tecniche, quella documentazione intermedia, quei ragionamenti a metà che ho scritto alle due di notte e poi lasciato lì — adesso entra nell'archivio e conta.\n\nIl sistema sta diventando una memoria esterna che funziona davvero. Non un archivio da consultare, ma qualcosa che risponde.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "*La differenza tra un archivio e una memoria è che la memoria sa cosa cercare quando non glielo dici tu.*\n\n---"
+    }
+  ],
+  "word_count": 954,
+  "updated_at": "2026-05-30T15:15:50.187028",
+  "built_at": "2026-05-31T15:07:25.876439"
+}

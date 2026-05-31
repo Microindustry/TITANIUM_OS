@@ -1,0 +1,45 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S1_PRESENTE/EP_01_LA_TAVERNA.md",
+  "title": "EP_01 — LA TAVERNA",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_01  LA TAVERNA](#ep01-la-taverna)\n    - [Il laboratorio peggiore del mondo. La scelta migliore della mia vita.](#il-laboratorio-peggiore-del-mondo-la-scelta-migliore-della-mia-vita)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LE CONDIZIONI PERFETTE NON ESISTONO](#atto-i-le-condizioni-perfette-non-esistono)\n  - [ATTO II  INVENTARIO DI GUERRA](#atto-ii-inventario-di-guerra)\n  - [ATTO III  IL PARADOSSO DEL SOLAIO](#atto-iii-il-paradosso-del-solaio)\n  - [ATTO IV  QUELLO CHE CÈ GIÀ](#atto-iv-quello-che-cè-già)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Il laboratorio peggiore del mondo. La scelta migliore della mia vita.\"",
+      "content": "**Formato:** Video-podcast | Durata stimata: 10-12 min\n**Tono:** Pratico, senza romanticismo, quasi ironico\n**Personaggi attivi:** Matteo (voce + presenza fisica), AVA (dati e overlay grafici)\n**Fonte:** ASSOLUTO V6 — Atto I §1.4, §1.5"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — LE CONDIZIONI PERFETTE NON ESISTONO",
+      "content": "Esiste una bugia che si racconta ogni artigiano, ogni ingegnere, ogni maker del mondo.\n\n\"Lo faccio quando avrò lo spazio giusto.\"\n\"Lo faccio quando avrò il capannone.\"\n\"Lo faccio quando avrò i fondi.\"\n\n*[AVA mostra il countdown: \"Persone che aspettano le condizioni perfette: in attesa da media 4.7 anni.\"]*\n\nLa taverna non è il piano B. È il piano A.\n\nNon perché sia ideale — non lo è. Ma perché **il vincolo creativo è il miglior ingegnere che esista**.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — INVENTARIO DI GUERRA",
+      "content": "*[AVA genera una tabella in overlay: ogni riga è un vincolo, ogni riga ha una soluzione.]*\n\n**12 m² disponibili.**\nVincolo: impossibile assemblare la macchina intera in una volta.\nSoluzione: assemblaggio modulare per sottogruppi. Bassamento → sospensione → sandwich XY → colonne Z. Un blocco per volta.\n\n**230V monofase, 16A.**\nVincolo: no trifase, niente mandrino da >2.2kW.\nSoluzione: VFD monofase-trifase. Mandrino 2.2kW ER20. Basta.\n\n**Solaio domestico.**\nVincolo: carico massimo ~300 kg/m².\nSoluzione: V32 = 178 kg su 0.8 m² = 222 kg/m². Dentro i limiti. Calcolato.\n\n**No aspirazione industriale.**\nVincolo: polvere da fresatura, vapori resine.\nSoluzione: aspiratore portatile + cappa DIY + maschera FFP3 per le resine.\n\n**Pavimento non perfettamente piano.**\nVincolo: CNC di precisione su superficie irregolare.\nSoluzione: piedini regolabili + livellamento con comparatore.\n\n**Illuminazione domestica.**\nVincolo: insufficiente per controllo qualità.\nSoluzione: lampade LED task + lente d'ingrandimento. Costo: €30.\n\nOgni vincolo ha una risposta. Non elegante. Funzionante.\n\n> **\"Se funziona in taverna, funziona ovunque.\"**\n> Questo diventa il test di robustezza per ogni soluzione dell'ecosistema.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — IL PARADOSSO DEL SOLAIO",
+      "content": "C'è una cosa che la taverna ha che nessun capannone affittato avrebbe.\n\nZero overhead.\n\nNessun affitto. Nessun contratto. Nessun mese in cui sei obbligato a produrre per coprire i costi fissi anche quando stai solo progettando.\n\nL'anno 1 è zero spese di laboratorio. Tutto il cash flow — che al break-even sono 61 ore di lavoro conto terzi — va in materiali, componenti, upgrade.\n\nIl capannone del 2030 si paga con i margini accumulati in taverna dal 2026.\n\n*[AVA mostra il modello: freccia da \"zero overhead anno 1\" → \"60% reinvestimento\" → \"cash flow Q2 2026\" → \"laboratorio 2028\" → \"capannone 2030\"]*\n\nNon è romantico. È geometria finanziaria.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO IV — QUELLO CHE C'È GIÀ",
+      "content": "*[Panoramica sul banco: inventario fisico visibile]*\n\nLa gente vede la taverna e pensa: \"poco\".\nChi capisce vede: **un laboratorio con più intelligenza per metro quadro di qualsiasi startup finanziata.**\n\n- PLC Siemens S7-314C: controllo macchina di livello industriale reale.\n- HMI TP900 Comfort 9\": interfaccia operatore da 2.800 euro. Più di quanto costa tutto l'investimento mancante.\n- Sensori IFM VSE150 (x3): monitoraggio vibrazioni in tempo reale. Non \"sento che vibra\" — \"0.003 mm/s RMS, dati registrati\".\n- Basler acA1920-25gm: camera industriale per controllo qualità visivo.\n- Edwards RV3: pompa vacuum per stampaggio e bloccaggio pezzo.\n- Bambu Lab P1S: stampa PA-GF30. Non PLA da hobbysti — poliammide rinforzata vetro.\n- Saldatrice TIG + MIG: personali. Non a noleggio, non in condivisione.\n\n> \"Non sei un hobbista che ha comprato un kit CNC su Amazon. Sei un artigiano industriale che ha saldato titanio per MotoGP, programmato robot, manutenuto presse a 250 bar, e testato pezzi fino alla rottura.\"\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "*[Slow zoom su basamento saldato. Le saldature TIG sono pulite. Non sembrano fatte in una taverna.]*\n\nApple è nata in un garage.\nHP è nata in un garage.\nAmazon è nata in un garage.\n\nNessuno di loro stava aspettando le condizioni perfette.\n\nLa differenza è che quella taverna ha un PLC Siemens, un HMI da 2.800 euro, e quindici anni di esperienza industriale consolidata.\n\nQuando ti sposterai in un laboratorio vero — e succederà, 2028 nel piano — saprai già come ottimizzare ogni metro quadro, gestire ogni vincolo, produrre qualità in condizioni non ottimali.\n\nLa taverna non è il punto di partenza.\nÈ la prima prova di concept.\n\nE il test di robustezza — *\"se funziona in taverna, funziona ovunque\"* — non vale solo per la struttura fisica. Vale per ogni soluzione dell'ecosistema. Quando in EP_03 risolverai il paradosso MIMS↔V32 partendo da prototipi stampati in 3D, stai applicando la stessa logica: parti con quello che hai, abbastanza preciso da funzionare adesso, abbastanza robusto da costruire qualcosa di meglio. Quando in EP_04 costruirai EVA con il vincolo \"zero-click per Maria\", stai applicando la stessa logica: il vincolo è il requisito di progettazione più onesto che esiste.\n\n---\n\n> *Ponte → EP_02:*\n> Perché non hai comprato una CNC?\n> Non è una domanda retorica. La risposta cambia tutto.\n\n*Continua in EP_02 — Il Reattore*"
+    }
+  ],
+  "word_count": 967,
+  "updated_at": "2026-05-30T15:15:54.960597",
+  "built_at": "2026-05-31T15:07:16.096811"
+}

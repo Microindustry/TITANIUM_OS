@@ -1,0 +1,31 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_008.md",
+  "title": "Config G: le molle gialle",
+  "meta": {
+    "id": "EP_AUTO_008",
+    "milestone": "BOM aggiornato: molle 4×Gialle 90N + 2 piastre XY Config G (10 Mar 2026)",
+    "title": "Config G: le molle gialle",
+    "sottotitolo": "Come 4 componenti cambiano la geometria di V32",
+    "stagione": "AUTO",
+    "data_evento": "2026-03-10",
+    "tags": "[\"V32\", \"CNC\", \"manufacturing\", \"milestone\", \"BOM\"]",
+    "status": "ready",
+    "durata_min": "7",
+    "generated": "2026-03-22T17:47:42.661466"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "Config G: le molle gialle",
+      "content": "> *\"Quando vedi il BOM aggiornato in foglio di calcolo e le molle gialle arrivano in scatola, capisci che il progetto non è più rendering — è materia vera\"*\n\nSiamo al 10 marzo 2026. V32 è al 65% e questa mattina ho aperto la posta: 4 molle Gialle 90N + 2 piastre XY per la Config G. Sembra poco. È tutto.\n\nFacciamo un passo indietro. V32 non è una fresatrice — è un sistema. La geometria della testata, il bloccaggio dell'utensile, la compensazione dei giochi, la rigidità strutturale: ogni mil·limetro conta quando lavori a ±0.019mm di tolleranza. Il gusset sinistro è uno dei tre punti critici della carcassa. Non è decorativo. È il braccio di leva che trasferisce la forza dalla colonna al mandrino senza flettere.\n\nQueste 4 molle non sono sospensioni — sono attuatori di precarico. Le gialle hanno una costante di 90N/mm: abbastanza morbide per assorbire le vibrazioni ad alta velocità, abbastanza rigide per mantenere la planarità quando carico la fresa. Due piastre XY significa che il gusset sinistro adesso ha due gradi di libertà controllati. Puoi aggiustare l'assetto della testata dal tavolo di lavoro, senza svitare niente.\n\nPerché questo conta? Perché fino a ieri il BOM aveva 7 incognite su questa sezione. Oggi ne ha zero. Ogni componente è calcolato, ogni numero corrisponde a una parte fisica che arriva in scatola. È il passaggio da \"so come dovrebbe funzionare\" a \"so esattamente come funziona\".\n\nStamattina ho iniziato la Config G in officina. 3 ore stimate per incastrare il gusset, pre-assemblare il piastra XY, montare le molle nel loro alloggiamento, verificare il gioco assiale con il comparatore. Non è fretta. È precisione.\n\nMentre lavoro, vedo il pattern che lego a TITANIUM_OS e MIMS: ogni sottosistema di V32 è modulare come i connettori MIMS. Il gusset può essere tolto, ricalibrato, sostituito senza touch il resto della testata. È la stessa logica che guida TITANIUM_OS — ogni funzione è un blocco, niente è hardcoded. Puoi swappare i layer cognitivi di EVA (WhatsApp → database → IA → response) come monti una molla su una piastra.\n\nIl blocker rimane: aspetto il mandrino 2.2kW ER20. Arriva da tre fornitori, nessuno ha stock — mi hanno promesso 18 giorni. Nel frattempo, V32 avanza sul resto. Non blocco il progetto su una parte. Lo aggiro. È una lezione che vale in fabbrica e in software: aspetta il critical path, non aspetta il bordocampo.\n\nQuando chiudo la Config G e metto le foto nel foglio di lavoro condiviso, accanto al BOM aggiornato, avviene una cosa strana: il progetto cambia densità. Non è più \"sto costruendo una fresatrice\". È \"la fresatrice sta uscendo da quello che mi immagino dentro la testa\". Le molle gialle sono la prova tangibile.\n\nQuesto è il momento in cui i sistemi complessi si trasformano da piani a realtà. Non quando finisci — quando inizi a vedere ogni componente nel suo posto."
+    }
+  ],
+  "word_count": 536,
+  "updated_at": "2026-05-27T00:09:14.492295",
+  "built_at": "2026-05-31T15:07:12.742985"
+}

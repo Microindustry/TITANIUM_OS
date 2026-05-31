@@ -1,0 +1,41 @@
+{
+  "path": ".claude/skills/aggiorna-stato/SKILL.md",
+  "title": "Aggiorna Stato — TITANIUM_OS",
+  "meta": {
+    "name": "aggiorna-stato",
+    "description": "Aggiorna STATE.json di TITANIUM_OS con un nuovo milestone verificato. Usa dopo aver completato un pezzo fisico, un feature del software, o una fase del progetto. Aggiunge il milestone, fa commit git, e offre di generare l'episodio.",
+    "argument-hint": "[descrizione-milestone es. \"Asse Y assemblato (Mar 2026)\"]",
+    "allowed-tools": "Read, Bash",
+    "disable-model-invocation": "false"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Aggiorna Stato  TITANIUM_OS](#aggiorna-stato-titaniumos)\n  - [Milestone da aggiungere](#milestone-da-aggiungere)\n  - [Steps](#steps)\n  - [Formato milestone standard](#formato-milestone-standard)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Aggiorna Stato — TITANIUM_OS",
+      "content": "Aggiunge nuovo milestone verificato a `BRAIN/STATE.json`."
+    },
+    {
+      "level": 2,
+      "title": "Milestone da aggiungere",
+      "content": "$ARGUMENTS"
+    },
+    {
+      "level": 2,
+      "title": "Steps",
+      "content": "1. Leggi `BRAIN/STATE.json` — mostra milestones.verified esistenti\n2. Aggiungi `$ARGUMENTS` in fondo all'array `milestones.verified`\n3. Aggiorna `focus_today` se rilevante\n4. Valida JSON (no trailing comma, encoding corretto)\n5. Salva il file\n\n```bash\ncd \"$HOME/TITANIUM_OS/TITANIUM_OS\"\ngit add BRAIN/STATE.json\ngit commit -m \"state: nuovo milestone — $ARGUMENTS\"\ngit push origin main\n```\n\n6. Chiedi: \"Vuoi generare l'episodio podcast per questo milestone ora? → /genera-episodio\""
+    },
+    {
+      "level": 2,
+      "title": "Formato milestone standard",
+      "content": "`\"Descrizione azione completata (Mese Anno)\"`\nEsempio: `\"Asse Y assemblato con vite SFU1605 (Mar 2026)\"`"
+    }
+  ],
+  "word_count": 184,
+  "updated_at": "2026-05-30T10:43:25.077583",
+  "built_at": "2026-05-31T14:58:33.448886"
+}

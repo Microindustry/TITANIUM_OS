@@ -1,82 +1,48 @@
-=== RIAVVIO SESSIONE #19 — 31/05/2026 15:30 ===
-Ultima sessione: #18 — 2026-05-31
+=== RIAVVIO SESSIONE #15 — 31/05/2026 15:58 ===
+Ultima sessione: #14 — 2026-05-30
 
 ━━━ STAVAMO PARLANDO DI ━━━
-MIMS — analisi profonda da ASSOLUTO_V7 + MENTE/MIMS/ + file SINAPSI.
-Poi implementazione view MIMS N-livelli nella dashboard (stesso pattern skill tree).
-In parallelo: costruzione del pattern N-livelli come architettura universale per tutto il sito.
+Costruito NEXUS swarm orchestrator v1.0 (NODES/NEXUS/nexus.py), RAG graph-aware v5.0 con networkx (114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA), MCP v1.3 con tool nexus + rag_update + save_session. Watchdog swarm parallelo v1.3. Fix vault env in Task Scheduler per task notturni.
 
 ━━━ TOPIC ATTIVI ━━━
-  • MimsSection v1.0 — navStack N-livelli PUSHATO (commit b76aecb)
-  • mimsData.ts — 5 aree, 19 categorie, 57 foglie con dati reali da ASSOLUTO_V7
-  • Pattern N-livelli — da applicare a tutto il sito (REGOLA ARCHITETTONICA)
-  • skillTreeData v3.0 — sub-categorie N-livelli su tutti i nodi (sessione precedente)
-  • MIMS memory — 3 file memoria scritti (core, market, ip)
-
-━━━ REGOLA ARCHITETTONICA N-LIVELLI (SALVA BENE) ━━━
-  Il pattern N-livelli è la BASE di tutto il sito dashboard.
-  Struttura: Area → Categorie → Foglie (→ micro-passi futuri)
-  Implementazione tecnica:
-    - Data file: SkillNode[] con isLeaf flag, status, color, note
-    - Componente: navStack (useState array), NodeTile, NodeLevel
-    - NodeTile: gestisce sia categorie (drill-in) che foglie (expand note)
-    - NodeLevel: griglia categorie (2-3 col lg) + griglia foglie (2-4 col xl)
-    - Breadcrumb: stack di navigazione con goTo(idx) per salto diretto
-    - Stat header: done/active/blocked/future + progress bar
-  File di riferimento:
-    DASHBOARD/src/data/skillTreeData.ts (v3.0) — pattern skill tree
-    DASHBOARD/src/data/mimsData.ts (v1.0) — pattern MIMS
-    DASHBOARD/src/components/MatteoSection.tsx (v3.0) — componente NavStack
-    DASHBOARD/src/components/MimsSection.tsx (v1.0) — componente NavStack MIMS
-  Da applicare ancora a: V32 view, GENESIS view, EVA view, VITA NATURA view
+  • NEXUS swarm orchestrator
+  • RAG graph-aware v5.0
+  • MCP v1.3 — 7 tool
+  • Watchdog swarm v1.3
+  • Fix task notturni vault env
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → Applicare N-livelli alle altre view: V32, GENESIS, EVA — "prima però vanno modificate altre cose" (Matteo)
-  → Decidere cosa va modificato prima nel sito (Matteo non ha specificato)
-  → Micro-passi (livello sotto ogni foglia) — checklist esecuzione — da valutare se implementare
-  → Pitch investitori — partner software Microindustry go-to-market — imminente
-  → V32 fisico: gusset Z sinistra da saldare (La Taverna)
-  → EVA WhatsApp pilot — ancora pending
-  → Eco-Snap costo produzione da chiarire: V6=€0.08 vs V7=€0.30 (+275%)
-  → Fit Park: dati base mancanti (dimensioni, attrezzi, costo kit) — da completare o togliere da roadmap
+  → EVA WhatsApp pilot — WhatsApp Business API setup pending
+  → AgentsView log Claude->agenti (non chat Matteo->agente)
+  → GitHub profile pubblico + CV aggiornato AI skills
+  → Gusset 200mm saldatura Z sinistra (fisico, la Taverna)
+  → Decisione silent blocks v.A (senza) vs v.B (con 18mm) — prerequisito V8
 
-━━━ DECISIONI PRESE IN QUESTA SESSIONE ━━━
-  ✓ Pattern N-livelli = architettura universale per TUTTA la dashboard
-  ✓ skillTreeData v3.0 — sub-categorie aggiunte a tutti i nodi (sessione 17)
-  ✓ MimsSection v1.0 — view MIMS N-livelli (5 aree, 57 foglie, dati reali)
-  ✓ Fit Park NON è il focus di MIMS — è n.13 di 14 applicazioni
-  ✓ Competitor MIMS = alluminio estruso T-slot (Bosch, Item, 80/20, Vention)
-  ✓ Idea subscription box (KiwiCo-style) — da rielaborare, non ora
-  ✓ MIMS-DMP è il materiale chiave brevettabile (δ>0.05 vs Epoxy Granite)
-  ✓ B2 brevetto URGENTE — dopo 100 pezzi venduti
-  ✓ Trade secrets: MAI pubblicare ricette complete (%), solo "cosa" e "perché"
-  ✓ Memory MIMS scritta: project_mims_core.md + project_mims_market.md + project_mims_ip.md
+━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
+  ✓ NEXUS usa ThreadPoolExecutor per parallelismo agenti
+  ✓ RAG graph networkx — 114 nodi, 218 archi
+  ✓ MCP v1.3: 7 tool totali
+  ✓ Logging centralizzato CORE/log.py — 34 file aggiornati
 
-━━━ MIMS — DATI CHIAVE DA RICORDARE ━━━
-  DNA: tile 190×190mm, D29.9mm H7/g6, foro Ø16mm
-  3 giunti: Eco-Snap (€1.50, 0 utensili) → Quick-Twist (€4, 0 utensili) → Tech-Bolt (€7, chiave 13mm)
-  7 materiali: STD/HVY/DMP/ECO/FLR/ACS/MET — stesso stampo
-  TAM €4.2B / SAM €180M / SOM Y3 €300-450K
-  Margini B2C: 78-82%
-  Prima applicazione da attaccare: banco lavoro maker + rack utensili (Q4 2026)
+━━━ PROSSIMA AZIONE SUGGERITA ━━━
+  Sistema continuita sessione — RIAVVIO_SESSIONE.txt + stop hook
 
 ━━━ BLOCKERS ━━━
-  ⚠ Mandrino 2.2kW ER20 da ordinare (BLOCKER V32)
-  ⚠ Silent blocks: decisione v.A vs v.B (prerequisito V8)
-  ⚠ V32 non completata → VULCAN bloccata → MIMS produzione bloccata
+  ⚠ Mandrino 2.2kW ER20 da ordinare
+  ⚠ Silent blocks: decisione v.A vs v.B
 
 ━━━ STATO PILASTRI ━━━
-  V32: 65% — Config G gusset + diagonali + tiranti M10
-  MIMS: 30% — design completo, attende V32→VULCAN
-  GENESIS: 83% — Dashboard v7.0+ con MimsSection N-livelli
-  VITA_NATURA: 40% — EVA WhatsApp pending
-  IDENTITY: 50% — Skill tree N-livelli v3.0
+  V32: 65% — 
+  MIMS: 30% — 
+  GENESIS: 10% — 
+  VITA_NATURA: 40% — 
+  IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
-  b76aecb feat: MimsSection v1.0 -- view MIMS N-livelli navStack
-  a40400d session: salvataggio sessione 17 -- skillTreeData v3.0
-  54750ba feat: skillTreeData v3.0 -- sub-categorie N livelli tutti i nodi
-  acb993d chore: sync completo sessione 16
-  54cea7a session: salvataggio sessione 16
+8baf2ff feat: MappaView v5.0 -- cerchi SVG radiali N-livelli drill-down
+821bfda feat: MappaView v4.0 -- navStack tile N-livelli, no force-graph
+0dcddfa feat: GenesisSection v1.0 -- N-livelli OS digitale
+100a7b7 feat: MIMS dati tecnici N+1 + Identity in home sinistra
+2ba53f2 session: salvataggio sessione 18 -- MimsSection N-livelli + pattern architettonico
 
-Generato: 31/05/2026 15:30
+Generato: 31/05/2026 15:58

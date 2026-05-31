@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [Matteo Benenati  Microindustry](#matteo-benenati-microindustry)
+  - [Chi sono](#chi-sono)
+  - [Processo evolutivo](#processo-evolutivo)
+  - [Progetti attivi](#progetti-attivi)
+  - [TITANIUM_OS  Architettura v3.2](#titaniumos-architettura-v32)
+  - [Stack](#stack)
+  - [Content Engine  come funziona](#content-engine-come-funziona)
+  - [Changelog TITANIUM_OS](#changelog-titaniumos)
+  - [Filosofia](#filosofia)
+
+<!-- /TOC -->
+
 ## Matteo Benenati — Microindustry
 
 ```

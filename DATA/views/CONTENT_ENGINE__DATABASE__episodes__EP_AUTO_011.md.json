@@ -1,0 +1,36 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_011.md",
+  "title": "Knowledge Base Popolata e Architettura Assoluto",
+  "meta": {
+    "id": "EP_AUTO_011",
+    "milestone": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 file) (10 Mar 2026)",
+    "title": "Knowledge Base Popolata e Architettura Assoluto",
+    "sottotitolo": "15 file integrati nel sistema cognitivo centrale",
+    "stagione": "AUTO",
+    "data_evento": "2026-03-10",
+    "tags": "[\"milestone\", \"knowledge-base\", \"brain-system\"]",
+    "status": "ready",
+    "durata_min": "8",
+    "generated": "2026-03-22T18:26:33.549620"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "Knowledge Base Popolata e Architettura Assoluto",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "V32 // Milestone 10 Marzo 2026 — Il Letto È Assoluto",
+      "content": "---\n\n> \"Il letto è fatto. Il cervello sa dove si trova. Adesso si costruisce.\"\n\n---\n\nEra un lunedì. Le 22:47. Officina ancora calda — avevo lavorato fino alle 20:00 sulla gusset destra, poi ero salito in casa.\n\nLaptop aperto sul tavolo della cucina. Maria dormiva già.\n\nHo aperto il terminale e ho lanciato:\n\n```bash\npython brain_loader.py --target KNOWLEDGE --batch ./docs/v32/\n```\n\nQuindici file caricati. Uno per uno. I nomi li ricordo ancora:\n`v32_frame_geometry.md`, `v32_tolerances_stack.md`, `titanium_os_arch_v3.json`, `mims_connector_spec_r1.md`, `spindle_map_er20.md` — e gli altri dieci.\n\nIl sistema ha risposto:\n\n```\n[OK] KNOWLEDGE populated — 15 nodes active\n[OK] BRAIN index rebuilt — 0 conflicts\n```\n\nZero conflitti. Prima volta in tre settimane.\n\nPrima di quel momento il knowledge base era un casino. File sparsi. Nomi duplicati. TITANIUM_OS non trovava i riferimenti incrociati — cercavi la tolleranza di un foro e ti tornava un documento vuoto. Con l'ADHD, un sistema che non risponde è peggio di nessun sistema. Apri, non trovi, chiudi. Perdi il filo. Perdi venti minuti. Poi un'ora.\n\nIl letto della V32 — quello fisico — era già fissato da metà febbraio. 178 kg. Piano in ghisa. Parallelismo verificato a 0.012mm su 600mm di corsa con il comparatore Mitutoyo 513. Quello era il dato fisico.\n\nMa il \"letto assoluto\" della milestone non è solo il piano in ghisa.\n\nÈ che quella sera TITANIUM_OS ha ricevuto la geometria completa del frame. Le quote reali. I punti di riferimento. Da lì in poi il sistema sa dove si trova ogni asse. Sa che l'asse X ha un'escursione di 420mm. Sa che la tolleranza in stack sui tre assi è ±0.019mm. Sa che il mandrino andrà montato a centro-linea Z con offset +37.5mm dal piano di riferimento.\n\nQueste non sono informazioni generiche. Sono vincoli. Il sistema li usa per ragionare.\n\nQuesto è il bivio: prima, TITANIUM_OS era un'interfaccia React con Python dietro. Bella da vedere, vuota dentro. Dopo quella sera, ha memoria. Può rispondere a \"qual è il gioco massimo ammissibile sul giunto MIMS in condizione di carico assiale?\" — e trovare la risposta nel grafo, non inventarla.\n\nIl collegamento con MIMS è diretto. I connettori modulari fisici si agganciano al frame della V32. Se il frame non è documentato con precisione nel knowledge base, MIMS non può essere dimensionato correttamente. Il file `mims_connector_spec_r1.md` dentro BRAIN contiene già le forze di interfaccia — 340N assiale, 180N laterale. Dati reali. Misurati.\n\nVULCAN aspetta. EVA aspetta. Tutto aspetta che la macchina esista davvero — fisicamente e digitalmente.\n\nOggi il blocco attivo è la gusset sinistra. Tre ore di officina stimate. Smussi, fori M8, saldatura TIG — probabilmente alluminio 6082, stessa scelta della destra. Ma c'è un problema che non si risolve in officina: manca il mandrino. 2.2kW, attacco ER20. È da ordinare. Senza quello, posso costruire tutto il frame perfetto che voglio — la macchina non taglia.\n\nHo già la scheda tecnica. Ho già il fornitore. Manca solo che prema \"ordina\".\n\nLo faccio domani mattina. Prima delle 8:00. Prima che l'ADHD decida che c'è qualcos'altro di più urgente.\n\n---\n\n**Un letto senza mandrino è solo un tavolo.**"
+    }
+  ],
+  "word_count": 584,
+  "updated_at": "2026-05-27T00:09:14.507918",
+  "built_at": "2026-05-31T15:07:13.097447"
+}

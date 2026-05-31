@@ -1,0 +1,55 @@
+{
+  "path": "MATTEO/PROGETTI/VULCAN/VULCAN_MANIFESTO.md",
+  "title": "VULCAN — Manifesto",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [VULCAN  Manifesto](#vulcan-manifesto)\n  - [Cosè VULCAN](#cosè-vulcan)\n  - [Perché esiste](#perché-esiste)\n  - [Come funziona](#come-funziona)\n  - [Le Ricette](#le-ricette)\n  - [Il Brevetto](#il-brevetto)\n  - [Dipendenze e Sequenza](#dipendenze-e-sequenza)\n  - [Filosofia](#filosofia)\n  - [Riferimenti](#riferimenti)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "VULCAN — Manifesto",
+      "content": "**Versione:** 1.0 | **Data:** 2026-03-18 | **Autore:** Matteo Benenati"
+    },
+    {
+      "level": 2,
+      "title": "Perché esiste",
+      "content": "Il problema di MIMS era la produzione: come si stampano tile polimeriche in modo ripetibile, calibrato, brevettabile?\n\nLa risposta non era comprare una pressa industriale da €80.000.\nLa risposta era costruirla con quello che c'era già.\n\nLe colonne guida DATWLER — colonne che avevo già usato in un contesto di presse industriali — sono diventate la struttura portante. Il martinetto Vevor 20t è diventato l'attuatore a 3 stati. La logica è semplice: **il passato industriale diventa infrastruttura del futuro**.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Come funziona",
+      "content": "**Struttura fisica:**\n- 4 colonne guida DATWLER come telaio strutturale\n- Martinetto idraulico Vevor 20t come attuatore principale\n- 3 stati operativi: `IDLE` / `SEMI` (pressione parziale) / `FULL` (pressione massima)\n- Stampi intercambiabili per geometrie tile diverse\n\n**Processo:**\n1. Preparazione polimero secondo ricetta target\n2. Carico in stampo preriscaldato\n3. Pressione calibrata (stato `SEMI` → cura parziale → stato `FULL`)\n4. Raffreddamento controllato\n5. Estrazione tile → ispezione → archiviazione dati di produzione\n\n**Parametri critici per ogni ricetta:**\n- Temperatura (°C) al carico\n- Pressione (bar) per stato SEMI e FULL\n- Tempo di cura (min) per fase\n- Durezza Shore target (A o D)\n- Densità e porosità superficiale\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Le Ricette",
+      "content": "Le ricette sono il vero valore di VULCAN.\n\nNon è la pressa che crea il moat competitivo — una pressa si compra. È la formula polimerica che determina le proprietà fisiche della tile: resistenza al carico, comportamento al taglio, elasticità all'incastro, degradazione UV.\n\n**Stato attuale:** 0% — da sviluppare completamente.\n\n**Target:**\n- Ricetta A: tile standard, durezza Shore D50-60, resistenza outdoor\n- Ricetta B: tile flessibile, Shore D35-45, applicazioni indoor\n- Ricetta C: tile rinforzata (carica minerale), Shore D70+, applicazioni industriali\n\nOgni ricetta andrà documentata con: materie prime, proporzioni, processo, test di accettazione, lotto di riferimento.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Il Brevetto",
+      "content": "La formula polimerica sarà brevettata.\n\nNon la geometria della tile — quella si vede e si copia. Non la pressa — quella si compra.\nLa formula. Il processo. La combinazione specifica di polimero + parametri + geometria che produce **quella** proprietà meccanica.\n\nIl brevetto trasforma MIMS da prodotto a barriera all'ingresso.\n\n**Stato attuale:** 0% — richiede ricette consolidate come base documentale.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Dipendenze e Sequenza",
+      "content": "```\nVULCAN STRUTTURA (20%) → completare telaio + martinetto\n    ↓\nVULCAN RICETTE (0%) → sviluppare formule A/B/C → test iterativi\n    ↓\nVULCAN BREVETTO (0%) → documentazione IP → deposito\n    ↓\nMIMS TILE → produzione in serie\n    ↓\nMIMS FIT PARK → installazione primo caso d'uso\n```\n\n**Blockers attuali:**\n- Telaio: da completare il montaggio finale delle colonne guide\n- Ricette: richiede accesso a materiali polimerici + laboratorio test\n- Brevetto: richiede consulente IP (post-ricette)\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Filosofia",
+      "content": "VULCAN non è solo una macchina.\n\nÈ la prova che l'esperienza industriale accumulata in 15 anni — le presse di DATWLER, la precisione di SCProject, la qualità di LU.VE — si cristallizza in un sistema proprietario che nessuno può replicare senza lo stesso percorso.\n\nOgni cordone di saldatura fatto su scarichi MotoGP in titanio, ogni colonna guida montata su una pressa industriale, ogni ciclo di QC eseguito su uno scambiatore di calore: tutto converge qui.\n\n**VULCAN è il distillato dell'artigiano.**\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Riferimenti",
+      "content": "- Martinetto: Vevor 20t idraulico — specifiche tecniche in `BRAIN/KNOWLEDGE/`\n- Colonne guida: DATWLER — riutilizzate da esperienza lavorativa precedente\n- Pressa target MIMS: `BRAIN/STATE.json` → pillar `mims`\n- Connessione con CV: `SINAPSI/index.html` → DATWLER → \"guide→VULCAN\""
+    }
+  ],
+  "word_count": 630,
+  "updated_at": "2026-05-31T13:58:36.555903",
+  "built_at": "2026-05-31T15:07:10.410021"
+}

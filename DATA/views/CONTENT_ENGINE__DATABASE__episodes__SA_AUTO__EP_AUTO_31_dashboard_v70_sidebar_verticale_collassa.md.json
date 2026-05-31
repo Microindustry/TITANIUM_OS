@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
+  "title": "EP_AUTO_31 — Milestone",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_31  Milestone](#epauto31-milestone)\n    - [Dashboard v7.0 - sidebar verticale collassabile  AgentsView](#dashboard-v70---sidebar-verticale-collassabile-agentsview)\n- [Il Sistema  Episodio 14](#il-sistema-episodio-14)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del vetro](#atto-i-prima-del-vetro)\n  - [ATTO II  v7.0 e il momento in cui il sistema si è visto](#atto-ii-v70-e-il-momento-in-cui-il-sistema-si-è-visto)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Dashboard v7.0 - sidebar verticale collassabile + AgentsView\"",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "Il Sistema — Episodio 14",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Erano le undici di sera, la luce al neon dell'officina era ancora accesa, e io stavo guardando uno schermo che finalmente mi rispondeva come doveva. Non con un log di errori. Non con un timeout. Con una sidebar che scorreva, un'interfaccia che respirava, e ventinove maggio duemilaventisei scritto nel commit come una firma.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Prima del vetro",
+      "content": "Devo spiegarti cosa c'era prima, altrimenti non capisci perché quella sera contava.\n\nGENESIS è il sistema nervoso di tutto. Non è \"il software\" — è la cosa che tiene insieme la V32 mentre la costruisco, che parla con VULCAN quando VULCAN esiste, che gestirà EVA nel centro estetico, che sa dove sono i connettori MIMS anche quando io non lo so. È il cuore di TITANIUM_OS. E per mesi, quel cuore aveva un'interfaccia che sembrava un foglio Excel dimenticato sul desktop di un ufficio contabilità del 2009.\n\nNon sto esagerando. La dashboard era funzionale — gli agenti giravano, il RAG v4.0 recuperava contesto, lo Story Agent scriveva, i dati si muovevano. Ma guardare quella roba era come guardare dentro un motore attraverso un foro di tre millimetri. Vedevi qualcosa. Non capivi niente. E soprattutto non riuscivi a spiegarlo a nessuno, perché non c'era nessun punto d'appoggio visivo, nessuna gerarchia, nessun posto dove i tuoi occhi potevano atterrare e dire \"ok, sono qui.\"\n\nQuando costruisci qualcosa di fisico — una fresatrice, una pressa — sai sempre dove sei. La Config G dei rinforzi della V32 ha un angolo, una dimensione, una relazione spaziale con il resto del telaio. È concreta. Un sistema software invece può espandersi in tutte le direzioni senza che te ne accorga, e a un certo punto ti ritrovi a navigare qualcosa che hai costruito tu, ma che non riesci più a leggere.\n\nQuello era il problema. GENESIS aveva smesso di essere leggibile.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — v7.0 e il momento in cui il sistema si è visto",
+      "content": "La Dashboard v7.0 non è arrivata in una notte. È arrivata dopo una serie di decisioni precise, una dietro l'altra, come quando stai facendo un piano di lavorazione e sai che l'ordine conta.\n\nPrima la sidebar verticale collassabile. Sembra banale. Non lo è. Una sidebar collassabile significa che il sistema ha una spina dorsale che può farsi da parte quando devi lavorare, e tornare quando devi orientarti. Non è estetica — è architettura. Quando lavoro sulla V32 ho bisogno di vedere il piano completo, e quando lavoro pezzo per pezzo ho bisogno che il piano non mi sia davanti agli occhi. Stessa cosa qui.\n\nPoi AgentsView. Questo è il pezzo che mi ha fermato davanti allo schermo.\n\nGlassmorphism — ovvero vetro, trasparenza, profondità — applicato alla vista degli agenti. Gli agenti di GENESIS non sono processi anonimi in una lista. Sono entità che fanno cose specifiche: recuperano documenti, generano testo, coordinano workflow, parlano con l'API. E adesso li vedi. Vedi la loro presenza nello spazio dell'interfaccia come oggetti distinti, separati, riconoscibili. Il dot grid sullo sfondo non è decorazione — è griglia, è struttura, è la sensazione che tutto quello che vedi abbia coordinate.\n\nE poi l'API. `/api/agents`. Ventinove caratteri che aprono GENESIS al mondo. Non devi più guardare dentro il sistema dalla dashboard — puoi interrogarlo dall'esterno, puoi farci parlare altri sistemi, puoi costruire sopra. VULCAN un giorno parlerà con quella API. EVA probabilmente anche.\n\nQuella sera ho fatto girare il primo test sull'endpoint. Ha risposto in centottantadue millisecondi. Ho chiuso il terminale e sono andato a dormire.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Cosa si sblocca adesso",
+      "content": "GENESIS è all'settantotto percento. Non è finito, ma adesso ha una forma che puoi mostrare a qualcuno senza dover spiegare per venti minuti cosa stai guardando. Questo conta più di quanto pensi, perché TITANIUM_OS non è solo roba mia — prima o poi deve parlare con clienti, con fornitori, con chi gestirà Vita Natura, con chi comprerà i connettori MIMS.\n\nLa V32 è al sessantacinque percento con la Config G. I rinforzi del telaio sono il lavoro fisico più impegnativo del progetto in questo momento. Ma quando la V32 sarà completa, GENESIS sarà il sistema che la monitora, che registra i cicli di lavorazione, che connette quella macchina alla catena V32→VULCAN che MIMS aspetta per avanzare oltre il trenta percento.\n\nEVA e Vita Natura sono al quaranta percento. Il sito c'è, le prenotazioni ci sono, il pilot è partito. Adesso che GENESIS ha un'API stabile e una dashboard leggibile, EVA ha un cervello a cui agganciarsi in modo pulito.\n\nTutto si connette. Non in modo romantico — in modo tecnico. Un endpoint chiama un agente, un agente recupera contesto dal RAG, il RAG sa quello che è successo in officina la settimana scorsa. Questo è TITANIUM_OS: un sistema che si ricorda di se stesso.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "*\"Non costruisci un'interfaccia perché sia bella. La costruisci perché il sistema possa finalmente di"
+    }
+  ],
+  "word_count": 970,
+  "updated_at": "2026-05-30T15:15:50.573534",
+  "built_at": "2026-05-31T15:07:27.247988"
+}

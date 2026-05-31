@@ -1,0 +1,40 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_S2_01_IL_CERVELLO_IBRIDO.md",
+  "title": "EP_S2_01 — IL CERVELLO IBRIDO",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_S2_01  IL CERVELLO IBRIDO](#eps201-il-cervello-ibrido)\n    - [Un archivio diventa un organismo](#un-archivio-diventa-un-organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA CHE NON VEDEVI](#atto-i-il-problema-che-non-vedevi)\n  - [ATTO II  I TRE SISTEMI](#atto-ii-i-tre-sistemi)\n  - [ATTO III  IL MANIFEST](#atto-iii-il-manifest)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Un archivio diventa un organismo\"",
+      "content": "**Formato:** Video-podcast | Durata stimata: 11-13 min\n**Tono:** Tecnico narrativo — architettura AI spiegata con metafore fisiche\n**Data evento:** 28 maggio 2026\n**Fonte:** Sessione audit sistema + RAG v4.0 + 2026-05-28_audit_sistema_rag_v4.md"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — IL PROBLEMA CHE NON VEDEVI",
+      "content": "Per mesi il RAG funzionava. Cercavi, trovavi. Abbastanza spesso da non notare quando non trovavi.\n\nIl 28 maggio l'audit rivela il pattern: quando cercavi termini tecnici esatti — \"Ø18\", \"Config G\", \"V32 rigidità asse Z\" — il sistema spesso restituiva chunk generici. Il modello semantico è addestrato sulla lingua, non sulla tua nomenclatura. \"Config G\" per lui è uguale a \"configurazione G\" è uguale a \"configurazione geometrica\". Non è sbagliato — è impreciso.\n\n2376 chunk nel database. Rebuilda ogni volta da zero. >2 minuti di timeout. Non scalabile.\n\nDue anni di sessioni e documentazione, e ogni volta che volevi aggiornare l'indice aspettavi 2 minuti mentre il sistema ri-processava cose che non erano cambiate.\n\nIl bottleneck non era nel modello. Era nell'architettura.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — I TRE SISTEMI",
+      "content": "La ricerca AI 2024-2025 ha una risposta consolidata per questo problema. Si chiama hybrid retrieval con reranker. Non è una novità accademica — è già in produzione nei sistemi enterprise. La novità è applicarla in 12 m² su un laptop Getac.\n\n**Sistema 1 — ChromaDB semantico (già esistente):**\nIl modello `paraphrase-multilingual-MiniLM-L12-v2` converte ogni chunk in un vettore 384-dimensionale. Query → embedding → cosine similarity → top-15 candidati. Forte su concetti, metafore, domande aperte. Debole su codici tecnici e numeri esatti.\n\n**Sistema 2 — TF-IDF BM25 (nuovo):**\nUn modello statistico classico. Non capisce il significato — conta le occorrenze. Se cerchi \"Ø18 h30\", trova esattamente i chunk che contengono \"Ø18 h30\". Nessuna approssimazione semantica. Debole su sinonimi e concetti astratti. Fortissimo su keyword esatte, codici parte, nomi propri.\n\n**Sistema 3 — CrossEncoder reranker (nuovo):**\nPrende i 15 candidati dell'RRF e li riordina. Non con embedding — con attenzione bidirezionale. Legge ogni chunk in relazione alla query, capisce il contesto, mette in cima ciò che risponde davvero.\n\nI tre sistemi non si sostituiscono — si completano. RRF (Reciprocal Rank Fusion) li fonde con formula matematica k=60. Il risultato è più preciso di qualsiasi sistema singolo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — IL MANIFEST",
+      "content": "Il secondo problema — rebuild da zero ogni volta — ha una soluzione diversa.\n\nUn file JSON. `rag_manifest.json`. Traccia ogni documento con timestamp e dimensione. Quando esegui `rag-update`, il sistema confronta il manifest con lo stato attuale del filesystem. Elabora solo i file nuovi o modificati.\n\nDa >2 minuti a <20 secondi.\n\nIl dato più importante non è la velocità. È la scalabilità. Con 2376 chunk il rebuild era lento ma fattibile. Con 10.000 chunk — con due anni di sessioni, documenti V8, tesi universitarie del Research Agent — sarebbe stato impossibile. Il manifest risolve il problema prima che diventi un muro.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Dopo il deploy RAG v4.0, la prima query di test: \"decisione corpo unico maggio 2026 motivazioni strutturali\".\n\nRisultato: chunk esatti. Sessione 27 maggio, V8_DELTA.md, note tecniche su rigidità Z. Cinque risultati. Tutti pertinenti. Ordinati per rilevanza reale, non per vicinanza vettoriale.\n\nIl knowledge base non è più un archivio che risponde a parole. È un sistema che risponde a intenzioni.\n\nLa differenza la vedi quando stai costruendo qualcosa di complesso e non riesci a ricordare perché hai preso una decisione di tre settimane fa. Cerchi. E il sistema te lo ricorda — non approssimativamente. Esattamente.\n\n> *Non costruire una memoria. Costruisci un sistema che ricorda al posto tuo.*\n> *La differenza è che il sistema non dimentica tra una sessione e l'altra.*\n\n---\n\n**reel_hook:** \"Ho avuto 2376 pezzi di conoscenza nel mio sistema RAG. Funzionava. Non abbastanza. Il problema: cerchi 'Ø18 h30' e il sistema trova chunk su diametri e altezze generici perché l'AI capisce il concetto ma non il codice tecnico esatto. Soluzione: due sistemi in parallelo. Uno semantico (capisce il significato), uno BM25 (trova keyword esatte). Li fondi con RRF. Poi aggiungi un reranker CrossEncoder che riordina i 15 risultati per rilevanza reale. Risultato: la stessa query trova esattamente quello che cerchi. Non una cosa simile. Quello. Se costruisci un sistema con dati tecnici, questo è il modo. Il resto è approssimazione.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 01 |\n| Arco | L'archivio che diventa organismo |\n| Tecnologie | ChromaDB, TF-IDF BM25, CrossEncoder, RRF, manifest incrementale |\n| Connessione S2 | Introduce il tema dell'auto-diagnosi — il sistema che trova i propri errori |"
+    }
+  ],
+  "word_count": 913,
+  "updated_at": "2026-05-30T15:15:53.321290",
+  "built_at": "2026-05-31T15:07:22.097599"
+}

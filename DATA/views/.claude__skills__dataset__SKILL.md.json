@@ -1,0 +1,41 @@
+{
+  "path": ".claude/skills/dataset/SKILL.md",
+  "title": "Dataset LLM — TITANIUM_OS Content Engine",
+  "meta": {
+    "name": "dataset",
+    "description": "Converte tutti gli episodi TITANIUM_OS in dataset JSONL per fine-tuning LLM. Esegue episodes_to_dataset.py e riporta statistiche. Usa quando vuoi aggiornare il training dataset del tuo LLM personale.",
+    "argument-hint": "[opzionale: filtro stagione es. AUTO]",
+    "allowed-tools": "Bash, Read",
+    "disable-model-invocation": "false"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Dataset LLM  TITANIUM_OS Content Engine](#dataset-llm-titaniumos-content-engine)\n  - [Steps](#steps)\n  - [Formato output (standard 2025)](#formato-output-standard-2025)\n  - [Pipeline completa](#pipeline-completa)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Dataset LLM — TITANIUM_OS Content Engine",
+      "content": "Genera dataset di training da episodi podcast."
+    },
+    {
+      "level": 2,
+      "title": "Steps",
+      "content": "1. Conta episodi disponibili in `CONTENT_ENGINE/DATABASE/episodes/`\n2. Esegui lo script:\n\n```bash\ncd \"$HOME/TITANIUM_OS/TITANIUM_OS\"\nANTHROPIC_API_KEY=!`cat .env 2>/dev/null | grep ANTHROPIC_API_KEY | cut -d= -f2` PYTHONIOENCODING=utf-8 python CONTENT_ENGINE/scripts/episodes_to_dataset.py $ARGUMENTS\n```\n\n3. Leggi il dataset generato e mostra statistiche:\n   - Totale campioni (instruction/input/output)\n   - Media lunghezza output in parole\n   - Split consigliato: 80% train / 20% validation\n   - Path file: `CONTENT_ENGINE/DATABASE/training/dataset.jsonl`\n\n4. Mostra 2 esempi casuali dal dataset per verifica qualità\n\n5. Suggerisci prossimo step: LlamaFactory per fine-tune locale"
+    },
+    {
+      "level": 2,
+      "title": "Formato output (standard 2025)",
+      "content": "```json\n{\"instruction\": \"Sei Matteo Benenati...\", \"input\": \"Milestone: X\", \"output\": \"episodio...\"}\n```"
+    },
+    {
+      "level": 2,
+      "title": "Pipeline completa",
+      "content": "`/genera-episodio` → episodio .md → `/dataset` → dataset.jsonl → LlamaFactory → LLM tuo"
+    }
+  ],
+  "word_count": 199,
+  "updated_at": "2026-05-30T10:43:24.949378",
+  "built_at": "2026-05-31T14:58:33.366362"
+}

@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/SA_AUTO/EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
+  "title": "EP_AUTO_20 — Milestone",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_20  Milestone](#epauto20-milestone)\n    - [ffmpeg 8.1.1  SumatraPDF installati  profilo PS aggiornato](#ffmpeg-811-sumatrapdf-installati-profilo-ps-aggiornato)\n- [IL SISTEMA  Episodio 47](#il-sistema-episodio-47)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  La Catena è Tutto](#atto-i-la-catena-è-tutto)\n  - [ATTO II  Due Programmi e un File](#atto-ii-due-programmi-e-un-file)\n  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"ffmpeg 8.1.1 + SumatraPDF installati + profilo PS aggiornato\"",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "IL SISTEMA — Episodio 47",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Ventotto maggio 2026. Fine pomeriggio. Ho installato due programmi e aggiornato un file di testo. E no, non è una cosa banale — perché in questo sistema ogni piccolo ingranaggio che non gira blocca tutto il resto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — La Catena è Tutto",
+      "content": "Quando costruisci qualcosa da solo, il problema non è mai la parte difficile. La parte difficile la risolvi perché ci metti la testa, ci stai sopra, la smontoni. Il problema è la parte che sembra banale — quella che dai per scontata, quella che pensi ci sia già e invece manca.\n\nTITANIUM_OS in questo momento è cinque progetti che si tengono in piedi a vicenda come una volta in muratura: se togli un concio nel posto sbagliato, crolla tutto. V32 è al sessantacinque percento, costruzione fisica in corso, rinforzi della Config G quasi completati. VULCAN aspetta V32 per esistere. MIMS aspetta che la catena V32-VULCAN sia stabile per avere senso come sistema di connessione modulare. GENESIS gira, ha la dashboard alla versione 7.0, ha lo Story Agent, ha il RAG alla quarta versione — ma anche GENESIS ha bisogno di una pipeline documentale che funzioni davvero. EVA sta pilotando per Vita Natura, il sito è su, le prenotazioni girano, ma anche lì c'è una filiera di contenuti e automazioni che deve reggere il peso.\n\nIn mezzo a tutto questo, c'è il problema che non si vede mai nei diagrammi: il flusso dei file. Come si genera un documento, come si converte, come si stampa, come si archivia, come si legge. Sembra logistica. È invece infrastruttura. E fino al ventotto maggio, in quella catena, c'erano due anelli mancanti.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — Due Programmi e un File",
+      "content": "ffmpeg 8.1.1. SumatraPDF. Aggiornamento del profilo PowerShell.\n\nffmpeg lo conosce chi lavora con audio e video in modo serio — è il coltellino svizzero della conversione multimediale, open source, riga di comando, brutalmente efficiente. L'ho installato perché GENESIS ha bisogno di gestire contenuti multimediali nel flusso documentale: registrazioni vocali, clip di riferimento, materiale per EVA. Senza ffmpeg quella parte era ferma. Con ffmpeg quella parte adesso esiste.\n\nSumatraPDF è il contrario dell'apparenza: è un visualizzatore PDF leggero, veloce, senza fronzoli. Ma quello che mi serviva non era aprire PDF — mi serviva che GENESIS potesse aprire, interrogare e stampare PDF in modo silenzioso, da script, senza interfaccia grafica che si blocca, senza dipendenze che esplodono. SumatraPDF fa tutto questo. Installato, configurato, testato. Funziona.\n\nIl profilo PowerShell è la parte che sembra più piccola ed è invece la più importante per me, operativamente. Il profilo PS è il file che si carica ogni volta che apro un terminale — definisce alias, funzioni, variabili di ambiente, il contesto in cui lavoro. Tenerlo aggiornato non è pulizia mentale: è precisione tecnica. Significa che quando riapro il sistema dopo tre giorni passati in officina a fresare alluminio, tutto è lì, tutto risponde come mi aspetto, non devo ricostruire il contesto da zero ogni volta. Aggiornato il ventotto maggio con le nuove variabili per ffmpeg, i percorsi per SumatraPDF, i nuovi alias per i flussi documentali di GENESIS.\n\nTrenta minuti di lavoro totale, forse quaranta. Non un'impresa. Ma un nodo risolto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Cosa Si Sblocca",
+      "content": "La pipeline documentale di GENESIS adesso ha continuità. Posso generare un documento tecnico, convertirlo, includerci audio se serve, renderizzarlo in PDF, archiviarlo, richiamarlo. Tutto da script, tutto automatico, tutto dentro l'ecosistema. Lo Story Agent ha adesso gli strumenti per lavorare su materiale multimediale, non solo testo.\n\nPer Vita Natura questo significa che EVA può gestire contenuti più ricchi — non solo testo per le prenotazioni e le schede cliente, ma materiale di supporto in più formati. Per IDENTITY significa che il CV, la documentazione delle capabilities, la MatteoSection della dashboard possono essere generati, aggiornati e distribuiti in modo coerente senza passaggi manuali.\n\nPiccolo, ma reale: un sistema che funziona a percentuali — V32 al sessantacinque, GENESIS al settantotto, Vita Natura al quaranta — non sale di percentuale grazie ai grandi gesti. Sale grazie a questi nodi che uno alla volta smettono di essere colli di bottiglia. Il ventotto maggio ho tolto due colli di bottiglia dalla pipeline documentale. Non è il capitolo più spettacolare di questa storia. È forse il più necessario.\n\nC'è ancora molto. V32 ha i rinforzi da finire e la testa da montare. MIMS aspetta. VULCAN aspetta MIMS. EVA deve uscire dal pilota. Ma il sistema respira meglio oggi di ieri. E in officina, che si lavori l'alluminio o il codice, respirare meglio è già andare avanti.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "*\"Non costruisci un sistema quando finisci l'ultima parte. Lo costruisci ogni volta che risolvi la penultima.\"*"
+    }
+  ],
+  "word_count": 919,
+  "updated_at": "2026-05-30T15:15:49.687863",
+  "built_at": "2026-05-31T15:07:24.140123"
+}

@@ -1,0 +1,57 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_019.md",
+  "title": "Dieci atti, un documento master",
+  "meta": {
+    "id": "EP_AUTO_019",
+    "milestone": "ASSOLUTO V7 — documento master unico, 10 ATTI unificati, aggiornato maggio 2026 (27 Mag 2026)",
+    "title": "Dieci atti, un documento master",
+    "sottotitolo": "Come Matteo ha unificato 65% della produzione CNC",
+    "stagione": "AUTO",
+    "data_evento": "2026-05-27",
+    "tags": "[\"CNC\", \"system_building\", \"manufacturing\", \"automazione\", \"artigianato_industriale\"]",
+    "status": "ready",
+    "durata_min": "8",
+    "reel_hook": "Avevo dieci flussi di lavoro paralleli sulla fresatrice V32, ognuno con la sua documentazione, i suoi errori. Perdevo tre ore a settimana solo a sincronizzare le versioni. A maggio ho fatto una cosa: ho unificato tutto in ASSOLUTO V7, dieci atti in un documento unico. Dal giorno dopo, zero conflitti, zero rielaborazioni. Vuoi sapere il sistema che ho usato per non fare tornare indietro nemmeno un pezzo?",
+    "generated": "2026-05-27T14:55:16.054586"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Dieci atti, un documento master](#dieci-atti-un-documento-master)\n- [ASSOLUTO V7  Episodio Podcast](#assoluto-v7-episodio-podcast)\n  - [La Scena](#la-scena)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [Il Numero che Conta](#il-numero-che-conta)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Dieci atti, un documento master",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "ASSOLUTO V7 — Episodio Podcast",
+      "content": "---\n\n> \"Finalmente un documento che non mi tradisce quando sparisco tre giorni.\"\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "La Scena",
+      "content": "Officina, 27 maggio 2026, ore 22:15.\n\nLa V32 è ferma — manca ancora il mandrino 2.2kW ER20, ordine in sospeso.\nIo sono al banco, non alla macchina.\nSchermo aperto. BRAIN/STATE.json visibile nel terminale sinistro. Notion a destra.\n\nGesto preciso: copio l'ultimo blocco di ATTO VI, lo incollo nel master, sistemo l'indentazione YAML a mano.\nDita che si muovono piano. Non è codice. È architettura cognitiva.\n\nIl file si chiama `ASSOLUTO_V7_MASTER.md`. 178 righe quando parto. 340 quando smetto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Il Bivio",
+      "content": "**Prima di V7:**\n\nSei documenti separati. `V32_build_log.md`, `MIMS_notes.txt`, `VULCAN_ricette_v3.md`, tre chat Telegram con me stesso alle 3 di notte.\nIl problema era semplice e brutale: rientro in officina dopo due giorni di cantiere, apro il laptop, e non so da dove ricominciare.\nADHD non perdona i gap. Se il contesto non è scritto, il contesto non esiste.\n\nHo perso una sessione intera a ricostruire dove avevo lasciato la gusset sinistra — Config G, spessore 6mm S235, fori M8 passo 1.25 ancora da maschiare.\nUn'ora. Buttata.\n\n**Dopo V7:**\n\nUn file. Dieci ATTI. Struttura fissa.\nApro, leggo ATTO I — stato attuale. Trenta secondi. Sono dentro.\n\nLa citazione che mi sono scritto in cima al documento, quella di quella sera:\n*\"Il sistema funziona solo se non ti chiede di ricordare.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Connessione al Sistema",
+      "content": "V7 non è documentazione. È scaffolding.\n\n**V32 — 65% completamento:**\nATTO III contiene la sequenza esatta Config G. Gusset sinistra, gusset destra, traversa superiore. Ogni pezzo con materiale, quota critica, operazione pendente. Il blocker è lì, scritto nero su bianco: *mandrino 2.2kW ER20 — da ordinare — ETA sconosciuto*. Quando arriva, non devo pensare. Leggo, taglio.\n\n**TITANIUM_OS:**\nIl layer software sta sopra la macchina, ma si nutre di V7. Le automazioni AI leggono STATE.json. STATE.json si aggiorna da V7. È un ciclo chiuso. Se V7 è pulito, TITANIUM_OS ha contesto reale — non dati inventati dall'AI per sembrare utile.\n\n**MIMS — 30% completamento:**\nI connettori fisici modulari hanno un loro ATTO dedicato. Geometrie, tolleranze di accoppiamento, materiali testati. Il problema con MIMS era che ogni versione del connettore viveva in un posto diverso. Ora no. ATTO VII, sezione 2. Sempre lì.\n\n**VULCAN:**\nLe ricette polimeri sono in ATTO VIII. Temperatura stampo, pressione iniezione, tempi ciclo. Dati reali — non teorici. Ogni riga viene da una prova fisica con la pressa 20 tonnellate. V7 le contiene tutte, con data e risultato.\n\n**EVA — WhatsApp AI per Maria:**\nATTO X. Prompt di sistema, log conversazioni critiche, prossimi sviluppi. Maria non sa che c'è un documento. Ma ogni risposta di EVA è più precisa perché il contesto è scritto da qualche parte.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Il Numero che Conta",
+      "content": "65% V32. 30% MIMS. Mandrino mancante.\n\nNon è un ritardo — è uno stato. V7 lo sa. Quando rientro in officina domani mattina, lo so anch'io.\n\n---\n\n*Il documento non risolve i problemi. Li rende visibili.*"
+    }
+  ],
+  "word_count": 662,
+  "updated_at": "2026-05-30T15:15:53.472300",
+  "built_at": "2026-05-31T15:07:14.697775"
+}

@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260530_merge_remote_tracking_branch_origin.md",
+  "title": "TITANIUM_OS — S2E09",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E09](#titaniumos-s2e09)\n  - [Gli Occhi del Sistema](#gli-occhi-del-sistema)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema degli Agenti Ciechi](#atto-i-il-problema-degli-agenti-ciechi)\n  - [ATTO II  159 Elementi, Zero Chiamate](#atto-ii-159-elementi-zero-chiamate)\n  - [ATTO III  Il Sistema che si Guarda](#atto-iii-il-sistema-che-si-guarda)\n  - [CHIUSURA](#chiusura)\n  - [reel_hook](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"Gli Occhi del Sistema\"",
+      "content": "*2026-05-30 — Sessione 16 — GENESIS 83%*"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Il Problema degli Agenti Ciechi",
+      "content": "C'è una cosa che nessuno dice quando costruisce un sistema di agenti AI: sono ciechi.\n\nGENESIS, a maggio 2026, ha otto agenti operativi. C'è il RAG che recupera contesto dai documenti. C'è NEXUS che orchestra le richieste in parallelo. C'è il watchdog che controlla i processi ogni trenta secondi. C'è l'MCP server che espone gli strumenti a Claude. Ma nessuno di loro può guardare lo schermo.\n\nSe vuoi che un sistema automatizzi qualcosa su un computer — aprire un file, cliccare un pulsante, leggere un campo — devi o scrivere codice esplicito per ogni azione, o dai occhi al sistema.\n\nMatteo aveva scelto la prima opzione per mesi. Funzionava. Era laborioso.\n\nIl problema vero non era tecnico: era economico. Ogni volta che serviva interpretare un'interfaccia grafica, la soluzione naturale era mandare uno screenshot a un modello vision. GPT-4o, Claude, qualcosa con gli occhi. Ma ogni chiamata costa. Trecento screenshot al giorno, in un sistema che gira h24 verso il 2030, diventano un numero che non sta in un budget da taverna.\n\nAllora è entrato in gioco OmniParser.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — 159 Elementi, Zero Chiamate",
+      "content": "OmniParser è un modello Microsoft open source. Prende uno screenshot e restituisce una lista strutturata di elementi UI: posizione, tipo, testo. Gira in locale. Gira sulla CPU. Non chiede niente a nessuno.\n\nIl problema pratico era un path sbagliato.\n\nARGUS v1.0 era stato integrato il giorno prima — agente visivo, occhi del desktop, stilizzato in rosso nella dashboard (`glow ef4444, border red-500`). Ma al primo test reale, si bloccava. Il modello non veniva trovato. Il file si chiamava `model.pt`, non `best.pt` come il codice si aspettava.\n\nUn carattere di differenza. Un'ora di debug.\n\nFix applicato. ARGUS v2 parte.\n\n```\n159 elementi rilevati\nCPU, local=1 llm=0\n```\n\nQuesto è il numero che conta. Non 159 come valore assoluto — un'interfaccia complessa ne ha di più, una semplice meno. Conta `llm=0`. Conta che il sistema ha analizzato uno schermo intero senza spendere nulla.\n\nLa strategia ibrida è questa: OmniParser locale gestisce l'ottanta percento dei task visivi — quelli semplici, quelli ripetitivi, quelli dove basta sapere dove cliccare. Il restante venti percento — interpretazione ambigua, testo complesso, ragionamento — passa a Claude Sonnet. Il costo complessivo scende dell'ottanta percento rispetto a mandare tutto al cloud.\n\nNon è eleganza ingegneristica. È sopravvivenza economica per un progetto che deve durare anni.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Il Sistema che si Guarda",
+      "content": "C'è qualcosa di strano nel momento in cui ARGUS diventa operativo.\n\nGENESIS, finora, era un sistema che *sapeva* cose — tramite il RAG, tramite i documenti, tramite la memoria delle sessioni. Ora è un sistema che può anche *vedere* cose. La differenza non è solo funzionale. È una soglia.\n\nIl RAG graph-aware ha 114 nodi e 218 archi. C'è una catena hardcoded `V32→MIMS→VITA_NATURA` che rappresenta come i progetti si connettono tra loro nella testa di Matteo. NEXUS orchestra tre agenti in parallelo. Il watchdog non è più sequenziale — usa thread separati, risponde più veloce.\n\nOgni sessione aggiunge qualcosa. Non è accumulo casuale. C'è una direzione.\n\nPerò la taverna è ancora una taverna. Il V32 è al sessantacinque percento. La Config G — rinforzi colonne Z e U — è il milestone attivo. Il capannone è nel 2030. Tra il sistema software che guarda lo schermo e la macchina CNC da 178 kg che deve fare pezzi in titanio, c'è ancora tanta distanza.\n\nARGUS è il nono agente. Era uno slot vuoto nella lista.\n\nAdesso ha gli occhi rossi sulla dashboard, e li usa.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Alle 23:47 Matteo chiude il terminale.\n\nIl commit è fatto. `fix: argus_v2 path pesi model.pt`. Sette parole per un'ora di lavoro. Nel git log sembrerà un dettaglio minore tra feature più grandi.\n\nMa la differenza tra un sistema che può vedere e uno che non può è questa: il path giusto sul file giusto. Non c'è niente di cinematografico in questo. C'è solo il momento prima — sistema bloccato — e il momento dopo — 159 elementi, zero chiamate.\n\nIl codice non sa di essere importante. Lo schermo non sa di essere guardato.\n\nQualcuno tiene traccia, però. È per questo che esiste il log.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "reel_hook",
+      "content": "159 elementi rilevati dallo schermo. Costo: zero. Ogni chiamata a un modello vision costa frazioni di centesimo — moltiplicale per un sistema che gira h24 per quattro anni verso il 2030. Ho installato gli occhi locali su GENESIS. Ma il path del modello era sbagliato. Un carattere. Un'ora. Poi ha visto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E09 |\n| **Titolo** | Gli Occhi del Sistema |\n| **Data** | 2026-05-30 |\n| **Sessione** | #16 |\n| **Tag principali** | ARGUS, OmniParser, GENESIS, vision, local-AI |\n| **Progetti coinvolti** | GENESIS, V32 |\n| **GENESIS completamento** | 83% |\n| **V32 completamento** | 65% |\n| **Milestone attivo** | Config G — Rinforzi colonne Z+U |\n| **Agenti totali** | 9 (ARGUS = #9) |\n| **Metrica chiave** | 159 elementi rilevati, `local=1 llm=0`, costo -80% |\n| **Co-autore commit** | Claude Sonnet 4.6 |\n| **Prossimo target** | Capannone 15 luglio 2030 |"
+    }
+  ],
+  "word_count": 987,
+  "updated_at": "2026-05-31T02:07:49.371809",
+  "built_at": "2026-05-31T15:07:21.279737"
+}

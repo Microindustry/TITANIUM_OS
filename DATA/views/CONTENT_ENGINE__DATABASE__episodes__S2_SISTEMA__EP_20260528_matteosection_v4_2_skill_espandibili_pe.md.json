@@ -1,0 +1,55 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260528_matteosection_v4_2_skill_espandibili_pe.md",
+  "title": "TITANIUM_OS — S1E09",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E09](#titaniumos-s1e09)\n  - [La Macchina che Ricorda](#la-macchina-che-ricorda)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)\n  - [ATTO II  RAG v4.0: Quando la Ricerca Smette di Essere Casuale](#atto-ii-rag-v40-quando-la-ricerca-smette-di-essere-casuale)\n  - [ATTO III  Il Manuale. E Cosa Significa Scriverlo.](#atto-iii-il-manuale-e-cosa-significa-scriverlo)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"La Macchina che Ricorda\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Ore 23:47. Il cursore lampeggia su un terminale Windows.\n\nIl file si chiama `RIAVVIO_SESSIONE.txt`.\n\nNon è un documento. È una promessa. Ogni volta che Matteo chiude Claude — ogni volta che la sessione si azzera, che il contesto evapora, che l'AI torna a essere una lavagna bianca — questo file esiste per ricominciare da dove si era rimasti. Non dall'inizio. Da *lì*.\n\n```\nGenerato: 2026-05-29 10:31\nSTATE: v2.5.0\nRAG: 150 chunk\nSessioni: #8\n```\n\nSessione numero otto. Ogni numero è una cicatrice di lavoro reale.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Il Problema che Nessuno Nomina",
+      "content": "C'è una cosa che non si dice mai nei video dei maker su YouTube.\n\nOgni volta che riapri il progetto — il giorno dopo, tre giorni dopo, lunedì mattina prima del lavoro — devi *ricostruire il contesto nella testa*. Dove eri. Cosa avevi deciso. Perché avevi scelto quella soluzione e non l'altra. È un costo invisibile, silenzioso, che si accumula ogni sessione come interesse composto al contrario.\n\nPer Matteo questo costo è doppio. C'è il progetto fisico — V32, colonne, gusset, epoxy granite — e c'è GENESIS, il sistema cognitivo che deve supportarlo. Due mondi paralleli, entrambi in costruzione, entrambi che si evolvono. Dimenticare un dettaglio in uno dei due può costare ore.\n\nLa soluzione tradizionale è un quaderno. Oppure un file Word pieno di note. Oppure — nella versione più ambiziousa — un sistema di documentazione che tutti iniziano e nessuno mantiene.\n\nMatteo ha costruito qualcosa di diverso.\n\nHa costruito un sistema che ricorda per lui.\n\n---\n\nIl commit del 28 maggio non ha un singolo protagonista. Ha sei. E capire come stanno insieme è capire cosa sta diventando GENESIS.\n\nIl primo: `generate_restart_prompt v1.2`.\n\nOgni volta che Matteo scrive `/stop` — fine sessione, Claude si spegne — un hook automatico salva lo stato in `MENTE/SESSIONI/`. Non solo un log. Un prompt già formattato, pronto per essere incollato all'apertura successiva. Il sistema scrive il suo stesso riavvio.\n\nÈ una cosa piccola. È una cosa enorme.\n\nPerché significa che la *continuità* smette di dipendere dalla memoria di Matteo. Smette di essere un atto di volontà. Diventa infrastruttura.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — RAG v4.0: Quando la Ricerca Smette di Essere Casuale",
+      "content": "Il secondo protagonista del commit è più tecnico. E più importante.\n\n`rag_engine.py v4.0`.\n\nPer capire cosa cambia, bisogna capire cosa c'era prima.\n\nRAG v3 era semantico puro. Prendevi una domanda, la convertivi in un vettore, trovavi i chunk più vicini nello spazio vettoriale. Funziona bene quando sai *come stai cercando*. Funziona male quando stai cercando *qualcosa di specifico* con parole esatte — un numero di commit, un nome di componente, una sigla.\n\nI sistemi semantici puri hanno un punto cieco: la precisione lessicale.\n\nv4.0 risolve con un approccio ibrido:\n\n```\nBM25 (TF-IDF) — ricerca keyword esatta\n+\nSemantico (embedding) — ricerca per significato\n+\nRRF (Reciprocal Rank Fusion) — fusione dei risultati\n+\nCrossEncoder reranker — riordina per rilevanza finale\n```\n\nNon è teoria. È la differenza tra chiedere *\"cosa ho deciso sulle colonne Z\"* e ricevere i 150 chunk ordinati per rilevanza reale, non per vicinanza vettoriale approssimata.\n\n150 chunk. Otto sessioni. Ogni decisione presa, ogni spec tecnica scritta, ogni ragionamento documentato — tutto raggiungibile in sotto-secondo, con ranking che funziona.\n\nIl sistema non è più una libreria. È una memoria che sa *dove guardare*.\n\n---\n\nPoi ci sono gli agenti.\n\n`NODES/AGENTS/`: TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA.\n\nOtto validatori. Ognuno con un dominio. FORGE per la meccanica. LEX per i vincoli normativi. AQUA per i sistemi idraulici. THEMIS per la coerenza logica. EVA — lo stesso nome del progetto WhatsApp per Maria — qui è l'agente di interfaccia.\n\nNon sono ancora attivi in modo completo. Ma la struttura esiste. E la struttura è il 70% del lavoro.\n\nUn sistema ad agenti validatori significa questo: quando Matteo prende una decisione su V32 — un materiale, una tolleranza, un giunto — non è più solo lui a valutarla. Ogni agente passa la decisione attraverso il proprio filtro. FORGE dice se regge meccanicamente. LEX dice se ci sono vincoli che non ha considerato. THEMIS dice se è coerente con le decisioni precedenti.\n\nÈ un sistema progettato per trovare i propri errori prima che diventino metallo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Il Manuale. E Cosa Significa Scriverlo.",
+      "content": "Il commit che colpisce di più non è il più tecnico.\n\nÈ questo: `MANUALE_SISTEMA.md v1.0 — guida completa consumer-friendly`.\n\nMatteo ha scritto un manuale. Per se stesso.\n\nNon per gli utenti. Non per GitHub. Per il Matteo delle 7:00 di lunedì mattina, caffè in mano, prima di andare in fabbrica, con venti minuti per aprire una sessione e non ricordare come funziona il comando `rag-update`.\n\n*Consumer-friendly* non è un termine aziendale in questo contesto. È un atto di rispetto verso una versione futura di sé stesso che sarà stanca, o di fretta, o semplicemente distratta.\n\nIl manuale copre:\n- RAG v4.0 — comandi, differenza tra `rag-update` (incrementale) e `rag-rebuild` (full)\n- Sistema agenti — come interrogarli, quando usarli\n- Research agent — come delegare la ricerca\n- Git — workflow del progetto, come leggere i commit\n- `FUNZIONI_SISTEMA.txt` — la lista auto-generata di tutte le funzioni disponibili\n\nQuest'ultima è un dettaglio che dice tutto: `generate_functions_list.py` genera automaticamente la lista di cosa il sistema sa fare. Non è documentazione statica. Si aggiorna quando il sistema si aggiorna.\n\nIl sistema documenta se stesso. Il sistema si riavvia da solo. Il sistema valida le proprie decisioni.\n\n---\n\nC'è anche il commit del storytelling. `Fix 6 bottleneck + Dashboard v2.1`. Cinque nuovi episodi. Il fix narrativo sull'evoluzione *molle → corpo unico* — quella svolta tecnica di V32 che nella dashboard era raccontata in modo confuso, e che ora ha la sua sequenza corretta.\n\nLa storia del progetto, dentro il progetto stesso.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Matteo non ha saldato niente il 28 maggio.\n\nIl Milestone attivo è Config G — *Rinforzi colonne Z+U*. I gusset da 200mm sulla colonna Z sinistra aspettano. Il ferro aspetta. La taverna da 12 m² aspetta.\n\nMa quello che è stato costruito in questa sessione reggerà ogni sessione futura.\n\nC'è una differenza tra costruire *cose* e costruire *la capacità di costruire cose*. Entrambe sono necessarie. Spesso, nel mezzo di un progetto fisico, la seconda sembra meno urgente. Sembra overhead. Sembra che stai perdendo tempo mentre il vero lavoro aspetta.\n\nPoi arriva lunedì. E il sistema si riavvia da solo. E RAG trova il chunk giusto in 80 millisecondi. E il manuale risponde alla domanda prima che tu la finisca di formulare.\n\nE capisci che la taverna da 12 m² non è più solo il posto dove c'è la macchina.\n\nÈ il posto dove c'è anche il sistema che la sta costruendo.\n\n`STATE v2.5.0. Sessioni: #8. RAG: 150 chunk.`\n\nIl capannone è il 15 luglio 2030.\n\nMancano 1509 giorni.\n\nIl contatore non si azzera più.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "> RAG v4.0 su GENESIS: BM25 + semantico + CrossEncoder. 150 chunk, 8 sessioni, sotto-secondo.\n> Il problema non era la ricerca. Era che ogni lunedì mattina il sistema dimenticava tutto.\n> Ora si riavvia da solo — prompt generato all'Stop hook, context già caricato.\n> Prossimo: 4 gusset da 200mm. Colonna Z sinistra. Config G.\n> *Vediamo se il sistema regge quando torna il ferro.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E09 |\n| **Titolo** | La Macchina che Ricorda |\n| **Data registrazione** | 2026-05-28 |\n| **STATE** | v2.5.0 |\n| **Sessione** | #8 |\n| **Commit principale** | `5a9d2d7` + multipli 28/05 |\n| **Focus narrativo** | GENESIS — memoria, continuità, auto-documentazione |\n| **Progetto fisico** | V32 — Config G (in attesa) |\n| **Milestone prossimo** | Gusset 200mm colonna Z sinistra |\n| **RAG chunks** | 150 |\n| **Agenti definiti** | 8 (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) |\n| **Tag** | `#GENESIS` `#RAG` `#automazione` `#continuità` `#V32` `#artigianato_cognitivo` |\n| **Target capannone** | 15 luglio 2030 |\n| **Giorni rimanenti** | ~1509 |"
+    }
+  ],
+  "word_count": 1376,
+  "updated_at": "2026-05-30T15:15:52.837643",
+  "built_at": "2026-05-31T15:07:18.161451"
+}

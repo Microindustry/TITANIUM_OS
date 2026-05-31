@@ -1,0 +1,45 @@
+{
+  "path": "BRAIN/ECOSYSTEM_MANIFEST.md",
+  "title": "ECOSYSTEM MANIFEST — TITANIUM",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [ECOSYSTEM MANIFEST  TITANIUM](#ecosystem-manifest-titanium)\n  - [Identità](#identità)\n  - [Gerarchia Layer](#gerarchia-layer)\n  - [Livelli di visibilità](#livelli-di-visibilità)\n  - [Principio fondante](#principio-fondante)\n  - [Origine](#origine)\n  - [Visualizzazione target](#visualizzazione-target)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "ECOSYSTEM MANIFEST — TITANIUM",
+      "content": "> Il sistema nervoso digitale di Matteo Benenati.\n> Costruito da un artigiano industriale con ADHD.\n> Ogni nodo è un pezzo reale. Ogni connessione è un flusso vivo."
+    },
+    {
+      "level": 2,
+      "title": "Gerarchia Layer",
+      "content": "```\nTITANIUM (brand / umbrella / identità)\n│\n├── GENESIS OS (cervello vivo)\n│   ├── STATE.json — stato corrente, milestones, focus, blockers\n│   ├── BRAIN/KNOWLEDGE/ — 15 file di contesto per LLM\n│   ├── watcher / state_updater — sistema nervoso autonomo\n│   └── agent_loop (futuro) — decisioni autonome\n│\n├── ECOSYSTEM (rete / API / connessioni)\n│   ├── api_server.py — endpoints REST\n│   ├── n8n_bridge.json — orchestrazione workflow\n│   └── MCP servers — filesystem, github, fetch, sqlite\n│\n├── DASHBOARD (interfaccia visiva)\n│   ├── NeuroMapView — mappa SVG drill-down immersiva\n│   ├── NeuroOSLayout — vista mappa con dot grid + pulse\n│   ├── CanvasLayout — canvas draggabile\n│   ├── SINAPSI (LayersView) — database layer per progetto\n│   ├── StorieView — episodi podcast + LLM dataset\n│   └── EcosystemView (futuro) — la rete a nodi infinita\n│\n├── CONTENT ENGINE (storytelling / narrazione / brand)\n│   ├── milestone_to_episode.py — STATE.json → episodio podcast\n│   ├── episodes_to_dataset.py — episodi → training JSONL\n│   ├── episode_to_audio.py — TTS Kokoro offline\n│   ├── DATABASE/episodes/ — .md con frontmatter LLM-ready\n│   └── reel_hook — script 60-80 parole per IG/YT\n│\n├── PRODOTTI FISICI\n│   ├── V32 — fresatrice CNC 3 assi (178kg, ±0.019mm)\n│   ├── MIMS — connettori modulari fisici\n│   ├── VULCAN — pressa 20t + ricette polimeri + brevetto\n│   └── FIT PARK 4.0 — area fitness con tornello MIMS\n│\n├── PRODOTTI DIGITALI\n│   ├── EVA — AI assistant WhatsApp per Vita Natura\n│   └── LLM Matteo (futuro) — modello fine-tuned sulla narrazione\n│\n└── IDENTITÀ PUBBLICA\n    ├── GitHub Microindustry — repo + profilo README\n    ├── CV Navigabile — layer espandibili, proof-of-work reali\n    ├── Podcast — episodi audio da Content Engine\n    ├── Social — reel IG/YT, LinkedIn, contenuto tecnico\n    └── MATTEO map — mappa SVG standalone navigabile\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Livelli di visibilità",
+      "content": "| Livello | Icona | Cosa contiene | Chi lo vede |\n|---------|-------|---------------|-------------|\n| **CORE** | 🔒 | STATE.json, blockers, ADHD scaffolding, note private | Solo Matteo |\n| **SISTEMA** | 🔧 | Architettura, code, automazioni, knowledge graph | Matteo + Claude |\n| **PROGETTO** | 📋 | V32 progress, MIMS spec, VULCAN ricette, EVA config | Collaboratori |\n| **PUBBLICO** | 🌐 | Storytelling, CV, GitHub, podcast, reel, portfolio | Tutti |\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Principio fondante",
+      "content": "> L'ecosistema non è un portfolio.\n> Non è un prodotto.\n> È il sistema nervoso di un artigiano con ADHD\n> che costruisce macchine fisiche e software per non perdere il filo.\n>\n> La complessità non è un difetto — è il territorio.\n> Il sistema la rende navigabile.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Origine",
+      "content": "Tutto parte da ASSOLUTO V7 — il documento che mappa ogni decisione,\nogni pezzo fisico, ogni connessione tra progetti.\nÈ la Bibbia del sistema. Il resto è implementazione.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Visualizzazione target",
+      "content": "La dashboard deve mostrare questa rete come **nodi vivi connessi**:\n- Centro: MATTEO\n- Primo anello: layer (PRIVATO / PUBBLICO)\n- Ogni nodo si espande in sotto-nodi\n- Colori per tipo (fisico/digitale/narrazione/sistema)\n- Connessioni animate tra nodi correlati\n- Pulse sui nodi attivi (focus_today)\n- Glow sui nodi con blocker\n- Drill infinito: ogni nodo è un sotto-ecosistema\n\nRiferimento visivo: @alexandra.kassis — rete di agenti con particelle colorate.\nTecnica: SVG + force-directed layout o radial tree, React, dati da STATE.json via API."
+    }
+  ],
+  "word_count": 503,
+  "updated_at": "2026-05-31T13:57:50.381550",
+  "built_at": "2026-05-31T15:07:06.063813"
+}

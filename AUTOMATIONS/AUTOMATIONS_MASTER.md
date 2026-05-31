@@ -1,3 +1,20 @@
+<!-- TOC -->
+
+- [AUTOMATIONS MASTER LIST](#automations-master-list)
+  - [LEGENDA](#legenda)
+  - [ATTIVE (28)](#attive-28)
+  - [DA IMPLEMENTARE  PRIORITÀ ALTA (3)](#da-implementare-priorità-alta-3)
+  - [DA IMPLEMENTARE  PRIORITÀ MEDIA (6)](#da-implementare-priorità-media-6)
+  - [DA IMPLEMENTARE  PRIORITÀ BASSA (5)](#da-implementare-priorità-bassa-5)
+  - [CONTENT ENGINE  PIPELINE CREATIVA (nuova architettura)](#content-engine-pipeline-creativa-nuova-architettura)
+    - [Flusso](#flusso)
+    - [Step da costruire](#step-da-costruire)
+    - [Struttura cartelle CONTENT_ENGINE](#struttura-cartelle-contentengine)
+  - [REGOLE DI AGGIORNAMENTO](#regole-di-aggiornamento)
+  - [STATS](#stats)
+
+<!-- /TOC -->
+
 # AUTOMATIONS MASTER LIST
 **Versione**: 1.1
 **Aggiornato**: 2026-03-16

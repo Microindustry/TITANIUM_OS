@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260529_auto_avvio_completo_al_login_start_.md",
+  "title": "TITANIUM_OS — Episodio 2.08",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 2.08](#titaniumos-episodio-208)\n  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  342 PRINT CHE URLANO NEL VUOTO](#atto-i-342-print-che-urlano-nel-vuoto)\n  - [ATTO II  UN LOGGER, 34 FILE, UN UNICO FILO](#atto-ii-un-logger-34-file-un-unico-filo)\n  - [ATTO III  IL SISTEMA CHE SI AVVIA DA SOLO](#atto-iii-il-sistema-che-si-avvia-da-solo)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"Il Sistema Che Si Ricorda di Sé\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — 342 PRINT CHE URLANO NEL VUOTO",
+      "content": "C'è un momento preciso in cui capisci che un sistema ha smesso di essere un prototipo e ha bisogno di diventare una macchina.\n\nNon è quando funziona. È quando cominci a non capire *perché* funziona.\n\nGENESIS aveva 342 chiamate `print()` sparse in decine di file Python. Alcune loggavano errori. Alcune loggavano stato. Alcune erano lì dai primissimi giorni — quando bastava vedere qualcosa passare nel terminale per sentirsi dire che andava tutto bene.\n\nIl problema con i `print()` è che sono sordi. Non sanno l'ora. Non sanno da dove vengono. Non si salvano da nessuna parte. Spariscono non appena chiudi la finestra — e se il processo gira in background con `pythonw`, non le vedi nemmeno.\n\n`sys.stdout è None.`\n\nQuella riga nel commit dice tutto. Un processo figlio avviato con `DETACHED_PROCESS` — il modo in cui Windows lancia i programmi senza aprire una finestra — non ha stdout. Ogni `print()` lanciata in quel contesto è un urlo in una stanza senza aria. Il messaggio esiste. Non arriva da nessuna parte.\n\nLa soluzione non era silenziare gli errori. Era costruire un sistema che sapesse *dove stava parlando* prima di aprire bocca.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — UN LOGGER, 34 FILE, UN UNICO FILO",
+      "content": "`CORE/log.py` è 40 righe di Python.\n\nFa una cosa sola: quando un modulo vuole loggare qualcosa, chiama `get_logger()` con il suo nome e riceve un logger configurato — `RotatingFileHandler` da 5MB con tre file di rotazione, output in `DATA/logs/`, più `StreamHandler` per il terminale quando c'è un terminale disponibile.\n\nIl guard per `sys.stdout` è lì: se lo stdout non esiste, il `StreamHandler` non viene agganciato. Nessuna eccezione. Nessun crash silenzioso.\n\n34 file aggiornati in un giorno.\n\n`watchdog.py` migrato. `api_server.py` migrato. Il modulo story agent migrato. L'updater del profilo GitHub migrato. Ogni file che prima urlava nel vuoto ora scrive in `DATA/logs/` con timestamp, nome modulo, livello di severità.\n\nI `print()` rimasti sono 131. Erano 342.\n\nNon è ancora zero — e probabilmente non sarà mai zero, perché alcuni `print()` sono output intenzionale verso l'utente, non diagnostica interna. Ma la distinzione ora esiste. Prima non esisteva.\n\nC'è una differenza sottile tra un sistema che *funziona* e un sistema che *sa di funzionare*. Il primo va bene finché non si rompe. Il secondo, quando si rompe, ti dice dove.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — IL SISTEMA CHE SI AVVIA DA SOLO",
+      "content": "`START_LOGIN.bat v1.2` è un file batch di Windows che gira all'avvio della sessione utente.\n\nIn ordine: avvia il Watchdog da `CORE/`. Avvia la Dashboard. Lancia il rebuild del RAG. Avvia n8n. Apre Windows Terminal.\n\n`mente_watcher` è incremental — non ricostruisce tutto da zero ogni volta, controlla i delta.\n\n`/api/restart` è un endpoint POST su Flask. Quando viene chiamato, avvia un thread che aspetta 0.5 secondi e poi chiama `os._exit(0)`. Il delay esiste perché la risposta HTTP deve tornare al client prima che il processo muoia. Senza quello, la connessione si chiude bruscamente e il client non sa se il restart è partito o se qualcosa è andato storto.\n\n`RunLevel Highest` nell'aggiornamento del profilo GitHub significa che il task scheduler di Windows esegue lo script con privilegi elevati. Aggiorna il README del profilo Microindustry/Microindustry con lo stato live di GENESIS — completamento, milestone attivo, ultimo commit.\n\nTutto questo insieme fa una cosa: quando Matteo accende il computer la mattina, GENESIS è già sveglio. Non deve avviare processi. Non deve aspettare. Il file `RIAVVIO_SESSIONE.txt` è già lì, sul desktop, con i metadati della sessione precedente, pronto per essere incollato in Claude.\n\nIl sistema si ricorda di sé. Questo era il punto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "C'è una sensazione strana nel lavorare su un sistema che documenta sé stesso mentre lo costruisci.\n\nIl RAG ha 150 chunk. Sono estratti di sessioni, decisioni, specifiche tecniche, errori corretti. Ogni volta che Matteo riapre una sessione, parte del contesto è già lì — non perché lo ha scritto a mano, ma perché il sistema lo ha salvato mentre lavorava.\n\nLa colonna Z della V32 aspetta ancora i suoi quattro gusset da 200mm. Config G è al 65% come il giorno prima. Il titanio non si salda da solo.\n\nMa c'erano 342 chiamate `print()` che urlavano nel vuoto. Ora ci sono 131, e le altre 211 hanno trovato un posto dove andare.\n\nA volte il lavoro non è avanzare. È sistemare il terreno su cui camminerai dopo.\n\nIl dirty flag sul branch main verrà risolto. I gusset verranno saldati. Il capannone è ancora al 2030.\n\nIntanto, il sistema si è ricordato di sé.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "342 `print()` in un sistema che gira senza terminale. Stdout era None — ogni log spariva nel nulla. In un giorno: CORE/log.py, 34 file migrati, 211 chiamate convertite. Non perché GENESIS non funzionasse. Perché quando si romperà, voglio sapere esattamente dove.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E08 |\n| **Titolo** | Il Sistema Che Si Ricorda di Sé |\n| **Data** | 2026-05-29 |\n| **Progetto primario** | GENESIS |\n| **Milestone** | Logging centralizzato completato |\n| **Componenti** | CORE/log.py · watchdog.py · api_server.py · START_LOGIN.bat · mente_watcher |\n| **Metrica chiave** | print() ridotti da 342 a 131 — 34 file migrati |\n| **V32 completamento** | 65% — Config G in corso |\n| **GENESIS completamento** | 78% |\n| **Prossimo step** | Saldare 4 gusset 200mm — colonna Z sinistra |\n| **Target capannone** | 15 luglio 2030 |\n| **Tag narrativo** | infrastruttura · resilienza · auto-avvio · logging |"
+    }
+  ],
+  "word_count": 1075,
+  "updated_at": "2026-05-30T15:15:49.557194",
+  "built_at": "2026-05-31T15:07:18.713710"
+}

@@ -1,0 +1,57 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/EP_AUTO_017.md",
+  "title": "41 documenti, una mente digitale",
+  "meta": {
+    "id": "EP_AUTO_017",
+    "milestone": "SINAPSI→MENTE migrazione — 41 doc + STORIE + ASSOLUTO + VULCAN + CV (27 Mag 2026)",
+    "title": "41 documenti, una mente digitale",
+    "sottotitolo": "Come ho migrato 27 anni di know-how industriale nel cloud",
+    "stagione": "AUTO",
+    "data_evento": "2026-05-27",
+    "tags": "[\"CNC\", \"automazione\", \"system-building\", \"artigianalità-digitale\", \"VULCAN\"]",
+    "status": "ready",
+    "durata_min": "8",
+    "reel_hook": "Ho appena migrato quarantuno documenti dal mio archivio fisico a un'infrastruttura cloud integrata. Prima perdevo tempo a cercare specifiche tecniche fra tre scatoloni diversi. Oggi accedo a tutto da qualunque macchina, dalla fresatrice V32 alla pressa VULCAN, in tre secondi. Quarant'anni di know-how industriale ora vivono in una mente digitale che non dorme. Ma sai quale pezzo più critico che ho digitalizzato? Continua a scoprire cosa cambierà nel tuo workflow.",
+    "generated": "2026-05-27T11:31:44.166280"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [41 documenti, una mente digitale](#41-documenti-una-mente-digitale)\n- [SINAPSIMENTE: 41 Documenti e una Migrazione](#sinapsimente-41-documenti-e-una-migrazione)\n  - [La Scena](#la-scena)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [LUltima Riga](#lultima-riga)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "41 documenti, una mente digitale",
+      "content": ""
+    },
+    {
+      "level": 1,
+      "title": "SINAPSI→MENTE: 41 Documenti e una Migrazione",
+      "content": "---\n\n> \"Ho spostato tutto. Non so ancora cosa ho.\"\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "La Scena",
+      "content": "Lunedì sera. 22:15. Schermo unico acceso in officina.\n\nCursor aperto su `BRAIN/STATE.json`. Terminale a sinistra — Python 3.11, virtual env attivo. A destra: cartella `SINAPSI/` con 41 file `.md` che aspettano da tre settimane.\n\nIl gusset sinistro della V32 è sul banco. Acciaio S235, 6mm. Lo guardo ogni tanto tra un commit e l'altro. Mi ricorda che il 65% non è il 100%.\n\nComando eseguito alle 22:19:\n\n```bash\npython migrate_sinapsi.py --source ./SINAPSI --target ./MENTE --validate\n```\n\nOutput: `41 files processed. 0 errors. 6 warnings.`\n\nI warning li leggo uno per uno. Tre sono link rotti. Due sono tag non mappati. Uno è un file che si chiama `ASSOLUTO_v7_FINALE_davvero.md` — e capisco subito il problema.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Il Bivio",
+      "content": "**Prima:** il sapere era sparpagliato. STORIE in una cartella. VULCAN in un'altra. CV in un Google Doc del 2023. ASSOLUTO in cinque versioni diverse senza data chiara.\n\nCercavo qualcosa e trovavo una versione vecchia. Oppure non trovavo niente e lo riscrivevo da capo. Con l'ADHD questo non è inefficienza — è invisibilità. Se non lo vedo strutturato, non esiste.\n\n**Dopo:** un unico grafo. 41 nodi. Collegati.\n\n`MENTE/` non è un archivio. È un sistema nervoso. Ogni documento ha metadati: `created`, `updated`, `project_tag`, `status`. Lo stato è `draft` / `active` / `frozen`. Nessun file senza tag.\n\nLa milestone del 27 maggio 2026 non è una scadenza — è un checkpoint di verifica. Se arrivo lì e il grafo è navigabile, ho vinto quella parte.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Connessione al Sistema",
+      "content": "La migrazione si innesta ovunque, contemporaneamente.\n\n**V32 — fresatrice CNC:** ogni decisione di progetto — tolleranze, materiali, sequenza assi — ora ha un documento padre in `MENTE/V32/`. Quando il mandrino 2.2kW ER20 arriva (da ordinare, blocker attivo), la procedura di montaggio è già scritta. Non la scrivo sotto stress.\n\n**TITANIUM_OS:** il layer React legge `MENTE/STATE.json` come source of truth. Se aggiorno un documento, l'interfaccia lo riflette. Non è magia — è un webhook locale su filesystem watch. `watchdog` + `FastAPI`. Quaranta righe di Python.\n\n**MIMS — connettori modulari:** la documentazione dei connettori era in testa. Solo in testa. Ora è in `MENTE/MIMS/connettori_spec_v1.md`. Il 30% di completamento del progetto è reale solo perché ora lo vedo scritto.\n\n**VULCAN — pressa 20t:** le ricette polimeri erano su carta. Carta vera, con le macchie di grasso. Le ho trascritte tutte. Ora sono in `MENTE/VULCAN/ricette/`. Con parametri: temperatura, tempo ciclo, pressione di iniezione. Confrontabili.\n\n**EVA — WhatsApp AI:** EVA può rispondere su qualsiasi progetto perché il contesto è in `MENTE/`. Prima pescava da frammenti. Ora pesca da documenti strutturati.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "L'Ultima Riga",
+      "content": "Il sapere scritto sopravvive alla sessione."
+    }
+  ],
+  "word_count": 627,
+  "updated_at": "2026-05-30T15:15:53.582246",
+  "built_at": "2026-05-31T15:07:14.313739"
+}

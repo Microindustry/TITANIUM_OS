@@ -1,0 +1,4 @@
+# TITANIUM_OS — CHANGELOG
+*Archiviato: changelog_archive_20260531_093513.md*
+
+- `2026-05-30 16:46:26` ✏️ MODIFIED — START_ECOSYSTEM.bat

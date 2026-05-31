@@ -1,3 +1,25 @@
+<!-- TOC -->
+
+- [DEPLOY.md  AUTOMATIONS/deploy/n8n  v1.1  2026-03-10](#deploymd-automationsdeployn8n-v11-2026-03-10)
+- [Guida deploy n8n su Oracle Cloud Free Tier (GRATIS)](#guida-deploy-n8n-su-oracle-cloud-free-tier-gratis)
+  - [Perche Oracle Cloud Free Tier](#perche-oracle-cloud-free-tier)
+  - [1. Crea account Oracle Cloud](#1-crea-account-oracle-cloud)
+  - [2. Crea VM Always Free](#2-crea-vm-always-free)
+  - [3. Apri porte firewall](#3-apri-porte-firewall)
+    - [3a. Security List (OCI Console)](#3a-security-list-oci-console)
+    - [3b. iptables (sul server via SSH)](#3b-iptables-sul-server-via-ssh)
+  - [4. Setup server (SSH)](#4-setup-server-ssh)
+  - [5. Configura](#5-configura)
+  - [6. DNS](#6-dns)
+  - [7. Avvia](#7-avvia)
+  - [8. Verifica](#8-verifica)
+  - [9. Primo workflow: Webhook ESP32](#9-primo-workflow-webhook-esp32)
+  - [Costo mensile](#costo-mensile)
+  - [Manutenzione](#manutenzione)
+  - [Limiti da sapere](#limiti-da-sapere)
+
+<!-- /TOC -->
+
 # DEPLOY.md | AUTOMATIONS/deploy/n8n | v1.1 | 2026-03-10
 # Guida deploy n8n su Oracle Cloud Free Tier (GRATIS)
 
