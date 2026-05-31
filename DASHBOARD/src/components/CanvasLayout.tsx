@@ -217,7 +217,7 @@ function V32Room({ state }: { state: any }) {
     { k: "Massa",       v: "178 kg — corpo unico" },
     { k: "Struttura",   v: "S235 saldato TIG" },
     { k: "Precisione",  v: "±0.019 mm (IT6-IT7)" },
-    { k: "Investimento",v: "EUR 2.250 (recupero)" },
+    { k: "Investimento",v: "EUR 2.250" },
     { k: "BEP",         v: "61 ore = 1.4 mesi" },
     { k: "ROI Anno 1",  v: "322%" },
     { k: "Localizzaz.", v: "La Taverna (12m²)" },
@@ -606,6 +606,67 @@ function ClaudeRoom() {
   );
 }
 
+// ── NIGHT SCHEDULE WIDGET ────────────────────────────────────────────────────
+const NIGHT_TASKS = [
+  { time: "02:07", label: "Story Agent",    desc: "episodi da git log",          color: "text-violet-400", dot: "bg-violet-500" },
+  { time: "03:00", label: "Deep Freeze",    desc: "backup AES-256",              color: "text-cyan-400",   dot: "bg-cyan-500"   },
+  { time: "03:37", label: "Night Research", desc: "13 sorgenti scientifiche",    color: "text-indigo-400", dot: "bg-indigo-500" },
+  { time: "04:07", label: "Night Push",     desc: "git push automatico",         color: "text-emerald-400",dot: "bg-emerald-500"},
+  { time: "07:30", label: "Daily Brief",    desc: "report mattutino generato",   color: "text-amber-400",  dot: "bg-amber-500"  },
+];
+
+function NightScheduleWidget() {
+  const now = new Date();
+  const nowMin = now.getHours() * 60 + now.getMinutes();
+
+  const isDone = (time: string) => {
+    const [h, m] = time.split(":").map(Number);
+    return nowMin > h * 60 + m;
+  };
+
+  return (
+    <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+      <div className="flex items-center justify-between mb-3">
+        <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest flex items-center gap-1.5">
+          <div className="w-1 h-1 rounded-full bg-indigo-500/60" />
+          Sistema notturno — gira mentre dormi
+        </div>
+        <div className="text-[8px] font-mono text-slate-700">
+          {now.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}
+        </div>
+      </div>
+      <div className="grid grid-cols-5 gap-2">
+        {NIGHT_TASKS.map(t => {
+          const done = isDone(t.time);
+          return (
+            <div key={t.time}
+              className={`rounded-xl p-2.5 border transition-all ${
+                done
+                  ? "bg-slate-900 border-slate-800 opacity-50"
+                  : "bg-slate-900/80 border-slate-700/60"
+              }`}>
+              <div className="flex items-center gap-1.5 mb-1">
+                <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${done ? "bg-slate-600" : t.dot}`}
+                     style={!done ? { boxShadow: `0 0 6px currentColor` } : {}} />
+                <span className={`text-[9px] font-mono tabular-nums ${done ? "text-slate-600" : t.color}`}>
+                  {t.time}
+                </span>
+              </div>
+              <div className={`text-[9px] font-bold font-mono leading-tight ${done ? "text-slate-600" : "text-slate-300"}`}>
+                {t.label}
+              </div>
+              <div className="text-[8px] text-slate-600 leading-tight mt-0.5">{t.desc}</div>
+              {done && (
+                <div className="text-[7px] font-mono text-emerald-600 mt-1">✓ eseguito</div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 // ── CANVAS PRINCIPALE ─────────────────────────────────────────────────────────
 export function CanvasLayout({ room: externalRoom }: { room?: string }) {
   const { state, isOnline: online } = useGlobalState();
@@ -681,6 +742,7 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
               <div className="pt-2 border-t border-slate-800/40">
                 <SectionLinks onEnter={pushRoom} />
               </div>
+              <NightScheduleWidget />
             </>
           )}
 
