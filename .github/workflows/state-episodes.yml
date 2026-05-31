@@ -6,11 +6,7 @@
 name: Auto-generate Episodes from STATE
 
 on:
-  workflow_dispatch:  # trigger manuale da GitHub UI
-  push:
-    branches: [main]
-    paths:
-      - 'BRAIN/STATE.json'
+  workflow_dispatch:  # solo manuale -- StoryAgent locale fa questo alle 02:07
 
 jobs:
   generate:

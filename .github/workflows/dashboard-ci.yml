@@ -5,13 +5,7 @@
 name: Dashboard CI
 
 on:
-  workflow_dispatch:  # trigger manuale da GitHub UI
-  push:
-    branches: [main]
-    paths:
-      - 'DASHBOARD/src/**'
-      - 'DASHBOARD/package.json'
-      - 'DASHBOARD/tsconfig*.json'
+  workflow_dispatch:  # solo manuale -- dashboard gira in locale su Getac
 
 jobs:
   build:
