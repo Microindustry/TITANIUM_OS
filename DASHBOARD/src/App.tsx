@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical,
+  Users, FlaskConical, AlertTriangle,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -72,6 +72,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
   { id: "mappa",       label: "MAPPA",      icon: GitBranch,     color: "text-emerald-400",group: "system"  },
   { id: "rete",        label: "RETE",       icon: Globe,         color: "text-cyan-400",   group: "system"  },
+  { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
 
 const PILLAR_COLORS: Record<string, { bar: string; text: string }> = {
@@ -355,7 +356,8 @@ function AppInner() {
             {view === "genesis"  && <CanvasLayout room="genesis" />}
             {view === "mims"     && <CanvasLayout room="mims" />}
             {view === "eva"      && <CanvasLayout room="eva" />}
-            {view === "identity" && <CanvasLayout room="matteo" />}
+            {view === "identity"  && <CanvasLayout room="matteo" />}
+            {view === "critiche"  && <CanvasLayout room="critiche" />}
             {/* Sistema */}
             {view === "agenti"      && <AgentsView />}
             {view === "automazioni" && (

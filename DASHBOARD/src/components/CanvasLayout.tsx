@@ -12,6 +12,7 @@ import { useUIStore } from "../stores/systemStore";
 import { MatteoSection } from "./MatteoSection";
 import { MimsSection } from "./MimsSection";
 import { GenesisSection } from "./GenesisSection";
+import { CriticheSection } from "./CriticheSection";
 import { ClaudeSection } from "./ClaudeSection";
 
 // ── API helper ────────────────────────────────────────────────────────────────
@@ -19,7 +20,7 @@ const api = (url: string, opts?: RequestInit) =>
   fetch(url, opts).then(r => r.json()).catch(() => null);
 
 // ── NAVIGAZIONE A STACK ───────────────────────────────────────────────────────
-type RoomId = "home" | "v32" | "genesis" | "mims" | "eva" | "matteo" | "claude";
+type RoomId = "home" | "v32" | "genesis" | "mims" | "eva" | "matteo" | "claude" | "critiche";
 interface NavNode { id: RoomId; label: string }
 
 // ── COLORI PILASTRI ───────────────────────────────────────────────────────────
@@ -580,6 +581,11 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
           {currentRoom === "eva"     && <EvaRoom state={state} />}
           {currentRoom === "matteo"  && <MatteoRoom />}
           {currentRoom === "claude"  && <ClaudeRoom />}
+          {currentRoom === "critiche" && (
+            <div className="bg-slate-900/80 border border-rose-500/20 rounded-2xl p-5">
+              <CriticheSection />
+            </div>
+          )}
 
         </div>
       </div>
