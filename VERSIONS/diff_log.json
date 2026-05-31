@@ -1,36 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-05-31T14:45:34.764570",
-      "file": "RIAVVIO_SESSIONE.txt",
-      "snapshot": "BACKUPS\\20260531_144534\\RIAVVIO_SESSIONE.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-31T14:45:53.565351",
-      "file": "DATA\\mente_digest.json",
-      "snapshot": "BACKUPS\\20260531_144553\\DATA\\mente_digest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-31T14:47:03.765302",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260531_144703\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-31T14:47:10.216936",
-      "file": ".claude\\settings.json",
-      "snapshot": "BACKUPS\\20260531_144710\\.claude\\settings.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-05-31T14:47:10.476895",
-      "file": "CLAUDE.md",
-      "snapshot": "BACKUPS\\20260531_144710\\CLAUDE.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-05-31T14:47:10.627565",
       "file": "DATA\\views\\CLAUDE.md.json",
       "snapshot": "BACKUPS\\20260531_144710\\DATA\\views\\CLAUDE.md.json",
@@ -2998,6 +2968,36 @@
       "timestamp": "2026-05-31T19:21:24.530926",
       "file": "DASHBOARD\\tsconfig.node.json",
       "snapshot": "BACKUPS\\20260531_192124\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T19:26:45.856504",
+      "file": "DASHBOARD\\.claude\\settings.local.json",
+      "snapshot": "BACKUPS\\20260531_192645\\DASHBOARD\\.claude\\settings.local.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T19:26:46.322599",
+      "file": "CLAUDE.md",
+      "snapshot": "BACKUPS\\20260531_192646\\CLAUDE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T19:26:46.638629",
+      "file": "DATA\\views\\CLAUDE.md.json",
+      "snapshot": "BACKUPS\\20260531_192646\\DATA\\views\\CLAUDE.md.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T19:26:46.771639",
+      "file": "DATA\\view_index.json",
+      "snapshot": "BACKUPS\\20260531_192646\\DATA\\view_index.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-05-31T19:27:08.303396",
+      "file": ".claude\\settings.json",
+      "snapshot": "BACKUPS\\20260531_192708\\.claude\\settings.json",
       "type": "snapshot"
     }
   ]
