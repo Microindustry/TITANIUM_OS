@@ -4,60 +4,50 @@
 
 ---
 
-## La storia
+## Cos'è
 
-Ci sono persone che lavorano il metallo di giorno e scrivono codice di notte.
+TITANIUM_OS è il sistema operativo cognitivo che gestisce **Microindustry** — un'entità operativa che produce valore fisico e digitale allo stesso tempo.
 
-Quindici anni di industria pesante: saldature TIG/MIG sul titanio per i team MotoGP, robot di assemblaggio, presse industriali, controllo qualità. Mani nell'acciaio, testa sempre su più fronti.
+Non è un framework generico. È costruito intorno a un caso d'uso specifico: un artigiano industriale che costruisce una fresatrice CNC di precisione, un sistema di connettori modulari (MIMS) per sfidare l'alluminio estruso di mercato, e una pipeline automatizzata che trasforma ogni milestone in contenuto, conoscenza, e dataset AI.
 
-Il problema? Un cervello che funziona a raffica non può tenere tutto in memoria. Le idee arrivano a valanga, i progetti si moltiplicano, la concentrazione si spezza nel momento sbagliato. Un'agenda non basta. Un task manager non basta.
-
-Serviva qualcosa di diverso: non uno strumento, ma un **sistema operativo per la mente**.
-
-TITANIUM_OS è quel sistema. Costruito pezzo per pezzo, come si costruisce una macchina CNC — con precisione, con intenzione, senza sprechi.
+Un uomo. Un sistema. Valore misurabile ogni giorno.
 
 ---
 
-## Cosa gestisce
+## La catena
 
-| Pilastro | Cos'è | Stato |
-|----------|-------|-------|
-| **V32** | Fresatrice CNC 3 assi, 178 kg corpo unico — ±0.019 mm | Config G, 65% |
-| **MIMS** | Sistema connettori modulari (prodotto industriale) | Attende pressa |
-| **GENESIS** | Stack AI: RAG + MCP + automazioni + dashboard | Attivo |
-| **VITA_NATURA** | Centro estetico — EVA bot WhatsApp per prenotazioni | In sviluppo |
-| **IDENTITY** | Riposizionamento professionale | 20% |
+```
+OFFICINA                              GENESIS STACK
+    │                                       │
+    ▼                                       ▼
+V32 CNC ──→ VULCAN pressa ──→ MIMS tiles ──→ FIT PARK 4.0
+(±0.019mm)  (20t polimeri)   (vs alu estr.)  (prodotto mercato)
+    │
+    └──→ TITANIUM_OS
+              ├── RAG ibrido           — ogni decisione tecnica ricercabile
+              ├── 8 agenti AI          — ognuno nel suo dominio
+              ├── Calendario notturno  — 5 task automatici mentre dormi
+              ├── Content Engine       — da milestone a episodio podcast
+              └── ARGUS v2            — computer use con visione AI
+```
 
 ---
 
 ## Architettura: 3 layer
 
-```
-┌──────────────────────────────────────────────┐
-│  BRAIN / STATE.json   ← fonte unica di verità│
-│  chi sono, dove sono, cosa faccio dopo       │
-├──────────────────────────────────────────────┤
-│  GENESIS STACK        ← il cervello AI       │
-│  MCP server · RAG · daily brief · automazioni│
-├──────────────────────────────────────────────┤
-│  DASHBOARD React      ← il cruscotto visivo  │
-│  stato live, nodi attivi, pilastri           │
-└──────────────────────────────────────────────┘
-```
-
 ### Layer 1 — BRAIN/STATE.json
 
-Ogni sessione di lavoro inizia leggendo un file JSON. Contiene lo stato live di ogni progetto, il milestone attivo, i blockers, il prossimo step. Niente domande, niente recap. Operativi in 10 secondi.
+La fonte unica di verità. Ogni sessione inizia leggendo questo file: milestone attivo, blockers, prossimo step, stato di ogni pilastro. Nessuna domanda, nessun recap. Operativi in 10 secondi.
 
 ```json
 {
   "active_milestone": "Config G — Rinforzi colonne Z+U",
-  "ciclo_position": "COSTRUISCI",
   "next_step": "Saldare 4 gusset 200mm sulla colonna Z sinistra",
   "blockers": ["Manca mandrino 2.2kW ER20 — da ordinare"],
   "pillars": {
-    "V32": { "pct_complete": 65, "status": "in_progress" },
-    "GENESIS": { "pct_complete": 40, "status": "building" }
+    "V32":     { "pct_complete": 65, "status": "in_progress" },
+    "GENESIS": { "pct_complete": 83, "status": "building" },
+    "MIMS":    { "pct_complete": 30, "status": "waiting_v32" }
   }
 }
 ```
@@ -66,175 +56,202 @@ Ogni sessione di lavoro inizia leggendo un file JSON. Contiene lo stato live di 
 
 ### Layer 2 — GENESIS Stack
 
-Questo è il cuore del sistema. Quattro componenti che lavorano insieme.
+#### MCP Server — `MCP/titanium_mcp_server.py`
 
-#### 2a. MCP Server — `MCP/titanium_mcp_server.py`
-
-Un **Model Context Protocol server** è il modo in cui Claude Code accede agli strumenti locali. Invece di leggere file manualmente ogni sessione, Claude carica il server e ha accesso diretto ai dati in tempo reale.
-
-Il server espone 5 tool:
+Model Context Protocol server: Claude Code si collega e ha accesso diretto ai dati locali in tempo reale, senza copiare o incollare niente.
 
 ```
-get_state          → legge BRAIN/STATE.json (o una sezione specifica)
-update_milestone   → aggiorna milestone/pilastri/blockers direttamente
-search_mente       → ricerca semantica su tutti i documenti in MENTE/
-get_daily_brief    → genera il brief mattutino completo
-list_content_ready → lista i file pronti per la pubblicazione
+get_state          → legge STATE.json o una sezione specifica
+update_milestone   → aggiorna milestone/pilastri/blockers
+search_mente       → ricerca semantica su MENTE/ (RAG)
+get_daily_brief    → brief mattutino completo
+list_content_ready → file pronti per pubblicazione
+nexus_query        → interroga lo swarm NEXUS
+rag_update         → aggiorna indice RAG incrementalmente
 ```
-
-**Esempio pratico:** chiedo a Claude "qual è il prossimo step su V32?" — Claude chiama `get_state(section="pillars")` e risponde in tempo reale senza che io debba copiare/incollare niente.
-
-Il server si carica automaticamente da `.claude/settings.json` ogni volta che si apre Claude Code.
 
 ---
 
-#### 2b. RAG Engine — `NODES/MENTE_RAG/rag_engine.py`
+#### RAG v4.0 — `NODES/MENTE_RAG/rag_engine.py`
 
-**RAG** (Retrieval Augmented Generation) significa: invece di chiedere a un modello AI cosa sa di un argomento, gli dai tu i documenti giusti e lui risponde basandosi su quelli.
-
-Tecnicamente:
-- I documenti in `MICROINDUSTRY/MENTE/` vengono divisi in pezzi da 800 caratteri
-- Ogni pezzo viene convertito in un vettore numerico da 384 dimensioni (un "embedding") usando il modello `paraphrase-multilingual-MiniLM-L12-v2` — funziona offline, capisce italiano/inglese/tedesco
-- I vettori vengono salvati in **ChromaDB**, un database vettoriale locale
-- Quando cerchi qualcosa, la query viene trasformata nello stesso tipo di vettore e ChromaDB trova i pezzi di documento più simili per significato (non solo per parole chiave)
+Retrieval Augmented Generation ibrido — non risponde da training, risponde dai tuoi documenti.
 
 ```
-MENTE/ (documenti) → embedding → ChromaDB → ricerca semantica
+Input: MICROINDUSTRY/MENTE/ (800+ documenti IT/EN/DE)
+       ↓
+Embedding: paraphrase-multilingual-MiniLM-L12-v2 (384-dim, offline)
+       ↓
+Indice dual: ChromaDB (semantico) + TF-IDF BM25 (keyword)
+       ↓
+Reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 → top-5 da top-15
+       ↓
+Merge: Reciprocal Rank Fusion (k=60)
+       ↓
+Output: chunk rilevanti con score, usati da Claude come contesto
 ```
 
-**Esempio pratico:** cerchi `rag "mandrino spindle V32"` → trova il documento con "Mandrino 2.2kW ER20 — DA ORDINARE" anche se non hai usato le stesse parole esatte.
+Incrementale: solo i file modificati vengono re-embeddati (<20 sec).
 
 ```bash
-rag "specifiche colonne Z"           # cerca per significato
-rag-rebuild                          # ricostruisce l'indice dopo aver aggiunto documenti
-rag --stats                          # 39 chunk indicizzati, modello, path
+rag "specifiche colonne Z"    # ricerca per significato
+rag-update                    # aggiorna solo file nuovi/modificati
+rag-rebuild                   # reset completo
 ```
 
-Indice attuale: **39 chunk** su V32, GENESIS, architetture AI, pattern di riferimento.
+Repo standalone: [hybrid-rag](https://github.com/Microindustry/hybrid-rag)
 
 ---
 
-#### 2c. Daily Brief — `AUTOMATIONS/core/daily_brief.py`
+#### NEXUS Swarm — `NODES/NEXUS/nexus.py`
 
-Legge `BRAIN/STATE.json` e genera ogni mattina un report markdown pronto:
+Orchestratore multi-agente con ThreadPoolExecutor. Query complessa → NEXUS distribuisce agli agenti specializzati in parallelo → aggrega i risultati.
 
-```markdown
-# TITANIUM_OS — Daily Brief
-**Wednesday 27 May 2026** | generato alle 07:30
-
-## MILESTONE ATTUALE
-Config G — Rinforzi colonne Z+U
-Focus oggi: Saldare gusset sinistra — stima 3 ore officina
-
-## BLOCKERS
-  - Manca mandrino 2.2kW ER20 — da ordinare
-
-## PILASTRI
-  - V32 [in_progress] 65% → Gusset + diagonali + tiranti M10
-  - GENESIS [building] 40% → MCP server operativo
 ```
-
-Eseguibile con `brief` da terminale. Output salvato in `DATA/daily_brief_last.md`.
+nexus "analisi strutturale colonna Z V32"
+    ├── THEMIS   → analisi tecnica codice/sistema
+    ├── FORGE    → meccanica, saldatura, officina
+    └── TESLA    → elettronica, sensori, PLC
+    → risultato aggregato in <5 sec
+```
 
 ---
 
-#### 2d. Automazioni Python — `AUTOMATIONS/core/`
+#### ARGUS v2 — `NODES/COMPUTER_USE/argus_v2.py`
 
-Una pipeline silenziosa in background:
+Computer use con architettura ibrida a 3 livelli — costo API -80% rispetto a Sonnet puro.
 
-| Modulo | Cosa fa |
+```
+L1 — OmniParser locale (YOLO + OCR)   → fast, gratis, preciso per elementi standard
+L2 — Text matching                     → cerca testo esatto nell'output L1
+L3 — Claude Sonnet fallback            → solo se L1/L2 falliscono
+```
+
+Repo standalone: [desktop-agent](https://github.com/Microindustry/desktop-agent)
+
+---
+
+#### Story Agent — `NODES/STORY_AGENT/story_agent.py`
+
+Ogni notte alle 02:07 legge i commit Git delle ultime 24h e genera episodi podcast narrativi in automatico.
+
+```
+git log → milestone estratti → Claude Haiku (draft) → Claude Sonnet (final)
+       → EP_AUTO_XXX.md con frontmatter → storieData.ts aggiornato
+       → dataset LLM training (.jsonl)
+```
+
+36+ episodi generati. Ogni milestone diventa prova documentata.
+
+Repo standalone: [git-narrator](https://github.com/Microindustry/git-narrator)
+
+---
+
+#### Calendario notturno
+
+| Ora | Task | Descrizione |
+|-----|------|-------------|
+| 02:07 | Story Agent | Genera episodi dai commit |
+| 03:00 | Deep Freeze | Backup AES-256 + snapshot |
+| 03:37 | Night Research | Scansiona 13 database scientifici |
+| 04:07 | Night Push | `git push` automatico |
+| 07:30 | Daily Brief | Report mattutino in `DATA/daily_brief_last.md` |
+
+Repo ricerca standalone: [multi-source-research](https://github.com/Microindustry/multi-source-research)
+
+---
+
+### Layer 3 — Dashboard v7.0
+
+React 19 + Vite + Tailwind v4. Legge `STATE.json` via API server (porta 5001).
+
+```
+Views principali:
+  AgentsView      — stato live 8 agenti, glassmorphism + dot grid
+  MAPPA v2.0      — drill-down SVG immersiva, pilastri cliccabili
+  RETE t-SNE 3D   — Three.js, nodi knowledge base in spazio 3D
+  StorieView      — 36+ episodi, timeline narrativa
+  MatteoSection   — CV immersivo: skill tree + principi + timeline
+  CanvasView      — canvas draggabile, milestone live
+```
+
+---
+
+## 8 Agenti AI
+
+| Agente | Dominio |
 |--------|---------|
-| `mente_watcher.py` | Guarda `MICROINDUSTRY/MENTE/` — quando aggiungi un file, trigghera `rag-rebuild` automaticamente |
-| `archivista.py` | Backup con versionamento: 30 snapshot per file |
-| `content_pipeline.py` | Documento grezzo → script LinkedIn + podcast + YouTube via Claude API |
-| `elevenlabs_tts.py` | Testo → audio MP3 per episodi podcast |
-| `social_distributor.py` | Distribuisce contenuti su più canali contemporaneamente |
-| `deep_link.py` | Collega oggetti fisici (componenti V32) a documentazione digitale |
+| **THEMIS** | Tecnico: codice, analisi, V32, GENESIS |
+| **FORGE** | Meccanica: officina, saldatura, MIMS, CNC |
+| **TESLA** | Hardware: elettronica, PLC Siemens, IoT |
+| **LEX** | Legale: brevetti, GDPR, contratti |
+| **SIEMENS** | Automazione: S7, HMI TP900, Profinet |
+| **AQUA** | Fluidodinamica e materiali |
+| **ARIA** | Life OS: ADHD scaffolding, scheduling |
+| **EVA** | Business: WhatsApp, prenotazioni Vita Natura |
 
----
-
-### Layer 3 — Dashboard React
-
-Interfaccia stile terminale industriale. Legge `STATE.json` via `api_server.py` (porta 5001) e mostra tutto in tempo reale: milestone, nodi attivi, pilastri, content engine.
+Tutti accedono alla stessa knowledge base RAG. Ognuno opera solo nel suo dominio.
 
 ```bash
-start-titanium    # avvia API + Dashboard in un comando
-ti-status         # stato rapido da terminale
+ask FORGE "qual è il gioco ottimale per i tiranti M10 Config G?"
+ask TESLA "compatibilità encoder Siemens con drive attuale V32?"
 ```
 
 ---
 
-## Multi-Agente: THEMIS, EVA, AVA
+## MIMS — sfidare l'alluminio estruso
 
-Il sistema è progettato per ospitare agenti AI specializzati, ognuno con un dominio preciso:
+Il mercato delle strutture modulari industriali è dominato da profili in alluminio estruso (Item, Bosch Rexroth, MayTec). Standard, costosi, supply chain lunga, zero lock-in.
 
-| Agente | Ruolo | Stato |
-|--------|-------|-------|
-| **THEMIS** | Esecuzione tecnica — codice, analisi, V32, GENESIS | Attivo |
-| **EVA** | Business automation — WhatsApp, prenotazioni Vita Natura | In sviluppo |
-| **AVA** | YouTube avatar — script, reel, episodi podcast | Pianificato |
-| ARIA | Life OS — scheduling, ADHD scaffolding | Futuro |
-| NEXUS | Orchestratore — coordina gli altri agenti | Futuro |
-| TESLA | Hardware/elettronica — CNC, PLC, IoT | Futuro |
-| FORGE | Meccanica/officina — V32, MIMS, saldatura | Futuro |
+MIMS rompe questo schema:
+- **Tiles in polimero composito** — prodotte da VULCAN (pressa 20t + ricette proprietarie A/B/C)
+- **Connettore fisico brevettato** — non interoperabile con standard di mercato
+- **Produzione locale on-demand** — V32 produce le tiles, niente supply chain esterna
+- **Prima applicazione**: Fit Park 4.0 — area fitness con tornello MIMS proprietario
 
-La logica: ogni agente accede alla stessa knowledge base (`MENTE/`) ma opera nel suo dominio. EVA non sa di codice, THEMIS non sa di prenotazioni estetiche.
-
----
-
-## La macchina fisica: V32
-
-Mentre il software gira, in officina c'è una fresatrice CNC da 178 kg in costruzione da zero.
-
-- **Struttura**: corpo unico — telaio traliccio saldato TIG (non più su sistema a molle)
-- **Controllo**: HMI TP900 Comfort + PLC Siemens
-- **Investimento**: EUR 2.250
-- **Precisione RSS**: ±0.019 mm (IT6-IT7, equivalente a uno spessore di capello umano)
-- **BEP**: 61 ore di lavoro = 1.4 mesi a tariffa EUR 45/h
-- **ROI anno 1**: 322%
-- **Milestone attivo**: Config G — rinforzi colonne Z+U (gusset 200mm + diagonali + tiranti M10)
-
-Il software serve anche a questo: ogni decisione tecnica, ogni spec, ogni componente è documentato in `MENTE/V32/` e ricercabile via RAG.
+La catena: V32 produce → VULCAN stampa → MIMS connette → FitPark installa.
 
 ---
 
 ## Stack tecnico
 
 ```
-Python 3.11        — automazioni, API server, MCP, RAG
-ChromaDB 1.5.x     — database vettoriale locale per RAG
-SentenceTransformer — embeddings multilingua offline (384-dim)
-MCP (Anthropic)    — protocollo per tool use nativo con Claude Code
-React + Vite       — dashboard locale
-Tailwind CSS       — UI
-Flask              — API server porta 5001
-n8n (locale)       — workflow automation (localhost:5678)
-Claude API         — content generation, THEMIS/EVA
-Windows 10 Pro     — OS host (Getac)
+Fisico      TIG/MIG titanio · Alu 7075 CNC · Siemens S7+TP900 · Pressa VEVOR 20t
+AI          Claude Sonnet 4.6 (orchestrazione) · Haiku 4.5 (content gen)
+            OmniParser + YOLO (ARGUS v2) · CrossEncoder (RAG rerank)
+Backend     Python 3.11 · Flask · ChromaDB · SentenceTransformer · MCP Anthropic
+Frontend    React 19 · TypeScript · Vite · Tailwind v4 · Three.js · Zustand · TanStack Query
+Automation  n8n (locale) · Task Scheduler Windows · Git hooks
+Integraz.   Gmail MCP · Google Calendar MCP · IFTTT
+Infra       GitHub · Windows 10 Pro Getac · self-hosted
 ```
 
 ---
 
-## Struttura del repo
+## Struttura repo
 
 ```
 TITANIUM_OS/
 ├── BRAIN/
-│   ├── STATE.json          ← fonte unica di verità
-│   └── KNOWLEDGE/          ← documenti tecnici interni
+│   ├── STATE.json              ← fonte unica di verità
+│   ├── KNOWLEDGE/              ← documenti tecnici interni
+│   └── RULES.md                ← regole operative sistema
 ├── MCP/
-│   └── titanium_mcp_server.py  ← 5 tool esposti a Claude Code
+│   └── titanium_mcp_server.py  ← 7 tool esposti a Claude Code
 ├── NODES/
-│   ├── MENTE_RAG/          ← ChromaDB + SentenceTransformer
-│   │   ├── rag_engine.py
-│   │   └── chroma_db/      ← indice vettoriale (gitignored)
-│   ├── MENTE_SCANNER/      ← estrae decisioni/spec da PDF/DOCX
-│   └── MENTE_WATCHER/      ← watch fs → trigger rebuild
+│   ├── MENTE_RAG/              ← RAG v4.0 ibrido BM25+semantico+CrossEncoder
+│   ├── NEXUS/                  ← swarm orchestrator multi-agente
+│   ├── AGENTS/                 ← agents_db.json + validator_agent.py
+│   ├── STORY_AGENT/            ← generazione episodi da git log
+│   ├── COMPUTER_USE/           ← ARGUS v2 + ScreenAgent
+│   ├── RESEARCH_AGENT/         ← 13 sorgenti scientifiche
+│   ├── MENTE_SCANNER/          ← estrazione doc da PDF/DOCX
+│   └── MENTE_WATCHER/          ← watch fs → trigger RAG update
 ├── AUTOMATIONS/
-│   └── core/               ← pipeline Python (brief, content, backup...)
-├── DASHBOARD/              ← React + Vite (porta 5173)
-├── DATA/                   ← output JSON, logs, brief generati
-└── api_server.py           ← Flask porta 5001
+│   └── core/                   ← daily_brief · night_push · deep_freeze
+├── DASHBOARD/                  ← React 19 + Vite (porta 5173)
+├── CONTENT_ENGINE/             ← 36+ episodi · dataset .jsonl
+├── DATA/                       ← output JSON · logs · brief · views
+└── api_server.py               ← Flask porta 5001
 ```
 
 ---
@@ -242,45 +259,36 @@ TITANIUM_OS/
 ## Avviare il sistema
 
 ```powershell
-# Da PowerShell (con profilo TITANIUM_OS caricato)
 start-titanium        # API server + Dashboard
-
-# Strumenti AI
-brief                 # genera daily brief
+brief                 # daily brief
 rag "query"           # ricerca semantica su MENTE/
-rag-rebuild           # ricostruisce indice RAG
-
-# Stato rapido
-ti-status             # controlla API, GitHub auth, STATE.json
+rag-update            # aggiorna RAG incrementalmente
+screen "azione"       # ARGUS v2 computer use
+ask AGENTE "query"    # interroga un agente specifico
+nexus "query"         # swarm tutti gli agenti rilevanti
+ti-status             # controlla stato sistema
 ```
 
 ---
 
-## Aggiungere conoscenza al sistema
+## Repo standalone delle automazioni
 
-Il RAG migliora ogni volta che aggiungi documenti:
-
-```
-1. Crea un file in MICROINDUSTRY/MENTE/[categoria]/
-   Formato: qualsiasi .md .txt .pdf .docx
-
-2. Usa il template MENTE/SESSIONI/_TEMPLATE.md
-   per catturare decisioni dalle conversazioni Claude
-
-3. Esegui: rag-rebuild
-
-4. Il sistema ora conosce quella informazione
-   e la usa nelle ricerche e nel daily brief
-```
+| Repo | Cosa fa |
+|------|---------|
+| [hybrid-rag](https://github.com/Microindustry/hybrid-rag) | RAG locale ibrido BM25+semantico+CrossEncoder |
+| [git-narrator](https://github.com/Microindustry/git-narrator) | Da git log a episodi podcast narrativi |
+| [desktop-agent](https://github.com/Microindustry/desktop-agent) | Computer use: controlla qualsiasi finestra o browser |
+| [claude-session-bridge](https://github.com/Microindustry/claude-session-bridge) | Continuità di sessione zero-friction per Claude Code |
+| [multi-source-research](https://github.com/Microindustry/multi-source-research) | Ricerca su 13 database scientifici in un comando |
 
 ---
 
-## L'origine
+## Chi costruisce questo
 
-Nessuna laurea in informatica. Solo 15 anni di officina, un cervello che non si ferma mai, e la necessità assoluta di costruire strumenti che funzionino davvero.
+Nessuna laurea in informatica. 15 anni di industria pesante: TIG/MIG titanio scarichi MotoGP @ SCProject, robot ESSEGI, presse DATWLER, QC LU.VE.
 
 TITANIUM_OS è lo scaffolding cognitivo di chi costruisce macchine fisiche e sistemi digitali allo stesso tempo. È anche la dimostrazione che chiunque — con abbastanza ostinazione — può costruire il proprio sistema operativo personale.
 
 ---
 
-*Versione: 3.1.0 | Aggiornato: 2026-05-27 | Macchina: Getac | Sessione: #4*
+*Versione: 7.0.0 | Aggiornato: 2026-05-31 | Macchina: Getac*
