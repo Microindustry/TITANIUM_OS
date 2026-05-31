@@ -1,3 +1,22 @@
+<!-- TOC -->
+
+- [TITANIUM_OS](#titaniumos)
+  - [Cosè](#cosè)
+  - [La catena](#la-catena)
+  - [Architettura: 3 layer](#architettura-3-layer)
+    - [Layer 1  BRAIN/STATE.json](#layer-1-brainstatejson)
+    - [Layer 2  GENESIS Stack](#layer-2-genesis-stack)
+    - [Layer 3  Dashboard v7.0](#layer-3-dashboard-v70)
+  - [8 Agenti AI](#8-agenti-ai)
+  - [MIMS  sfidare lalluminio estruso](#mims-sfidare-lalluminio-estruso)
+  - [Stack tecnico](#stack-tecnico)
+  - [Struttura repo](#struttura-repo)
+  - [Avviare il sistema](#avviare-il-sistema)
+  - [Repo standalone delle automazioni](#repo-standalone-delle-automazioni)
+  - [Chi costruisce questo](#chi-costruisce-questo)
+
+<!-- /TOC -->
+
 # TITANIUM_OS
 
 > *Quando il cervello non basta, costruisci un sistema.*

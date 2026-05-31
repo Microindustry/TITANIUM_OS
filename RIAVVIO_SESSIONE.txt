@@ -1,48 +1,76 @@
-=== RIAVVIO SESSIONE #15 — 31/05/2026 09:29 ===
-Ultima sessione: #14 — 2026-05-30
+=== RIAVVIO SESSIONE #16 — 31/05/2026 14:45 ===
+Ultima sessione: #15 — 2026-05-31
 
 ━━━ STAVAMO PARLANDO DI ━━━
-Costruito NEXUS swarm orchestrator v1.0 (NODES/NEXUS/nexus.py), RAG graph-aware v5.0 con networkx (114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA), MCP v1.3 con tool nexus + rag_update + save_session. Watchdog swarm parallelo v1.3. Fix vault env in Task Scheduler per task notturni.
+MatteoSection skill tree N livelli — mappa navigabile immersiva per la view IDENTITY nella dashboard. NavStack infinito, tile grandi colorate, drill-down per categoria → sotto-categorie → skill. Stavamo valutando se aggiungere 2 livelli ulteriori: uno sopra (Domini: Fisico/Digitale/Business) e/o uno sotto (micro-passi per ogni skill, tipo checklist di esecuzione).
 
 ━━━ TOPIC ATTIVI ━━━
-  • NEXUS swarm orchestrator
-  • RAG graph-aware v5.0
-  • MCP v1.3 — 7 tool
-  • Watchdog swarm v1.3
-  • Fix task notturni vault env
+  • MatteoSection v3.0 — navStack N livelli PUSHATO (commit 6476182)
+  • GitHub vetrina pitch investitori — profile README + TITANIUM_OS README + cognitive-os repo LIVE
+  • Incontro con investitori settimana prossima — partner software vuole portare Microindustry go-to-market
+  • Dashboard v7.0+ — AutomationsView sidebar, MimsRoom v2 DNA 29.9mm, NightScheduleWidget
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → EVA WhatsApp pilot — WhatsApp Business API setup pending
-  → AgentsView log Claude->agenti (non chat Matteo->agente)
-  → GitHub profile pubblico + CV aggiornato AI skills
-  → Gusset 200mm saldatura Z sinistra (fisico, la Taverna)
-  → Decisione silent blocks v.A (senza) vs v.B (con 18mm) — prerequisito V8
+  → MatteoSection: aggiungere 2 livelli — domanda aperta su COSA mettere:
+      SOPRA: Domini (Fisico/Digitale/Business) che raggruppano le macro-aree
+      SOTTO: Micro-passi per ogni skill foglia (checklist esecuzione)
+      Matteo vuole capire cosa mettere prima di implementare — ragionare insieme
+  → Pitch investitori settimana prossima — preparare materiale
+  → V32 fisico: gusset Z sinistra da saldare (La Taverna)
+  → EVA WhatsApp pilot — ancora pending
+  → MATTEO room separata (CV immersivo con skill industry/digital) — era nella home prima come SectionLink, ora solo IDENTITY nel sidebar
 
-━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
-  ✓ NEXUS usa ThreadPoolExecutor per parallelismo agenti
-  ✓ RAG graph networkx — 114 nodi, 218 archi
-  ✓ MCP v1.3: 7 tool totali
-  ✓ Logging centralizzato CORE/log.py — 34 file aggiornati
+━━━ DECISIONI PRESE IN QUESTA SESSIONE ━━━
+  ✓ MatteoSection diventa skill tree navigabile N livelli (non CV statico)
+  ✓ skillTreeData.ts v2.0 — gerarchia completa: Root → Macro → Categorie V32 → Skill → (futuro: micro-passi)
+  ✓ AutomationsView aggiunta alla sidebar (era completa ma non raggiungibile)
+  ✓ MimsRoom v2 — DNA 29.9mm, 3 livelli, Tech-Bolt, filiera V32→VULCAN→MIMS→FitPark
+  ✓ NightScheduleWidget nella home — mostra i 5 task notturni con stato live (✓ eseguito se già passata l'ora)
+  ✓ GitHub vetrina: profile README + TITANIUM_OS README v7.0 + cognitive-os (metodo come prodotto)
+  ✓ Regola salvata: MAI dire "recuperato" per i componenti V32/VULCAN
+  ✓ Partner investitori: Matteo = metodo+IP, partner = scala software; frame "per noi+", non exit prematura
+
+━━━ STATO SKILL TREE (skillTreeData.ts) ━━━
+  Struttura attuale:
+    Root → Fondamenta (14 skill, tutte DONE)
+         → V32 CNC → 6 sotto-categorie → skill foglie
+              Struttura (12): 6 done, 1 active (gusset Z sx), 5 blocked
+              Cinematica (12): 4 done, 8 blocked/future
+              Azionamenti (12): 3 done, 2 active (drive X + mandrino), 7 blocked
+              Controllo (12): 4 done, 1 active, 7 blocked
+              Sensoristica (8): 3 done, 5 future
+              Validazione (8): 0 done, 8 future
+         → Software & AI (14 skill): 9 done, 1 active (n8n), 4 future
+         → VULCAN (7): 1 done, 6 future — bloccato
+         → Precision Lab (6): 0 done — bloccato
+         → Capannone 2030 (8): 0 done — futuro
+
+  File: DASHBOARD/src/data/skillTreeData.ts (v2.0)
+  Componente: DASHBOARD/src/components/MatteoSection.tsx (v3.0)
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Sistema continuita sessione — RIAVVIO_SESSIONE.txt + stop hook
+  Ragionare sui 2 livelli aggiuntivi per il skill tree:
+  - SOPRA: Domini (Fisico/Digitale/Business) — mappa a 3 colori dei macro-domini
+  - SOTTO: Micro-passi checklist — ogni skill diventa un mini-manuale
+  Poi: prep pitch investitori (deck/materiale) quando Matteo torna dall'incontro
 
 ━━━ BLOCKERS ━━━
-  ⚠ Mandrino 2.2kW ER20 da ordinare
-  ⚠ Silent blocks: decisione v.A vs v.B
+  ⚠ Mandrino 2.2kW ER20 da ordinare (BLOCKER V32)
+  ⚠ Silent blocks: decisione v.A vs v.B (prerequisito V8)
 
 ━━━ STATO PILASTRI ━━━
-  V32: 65% — Gusset + diagonali + tiranti M10 + Epoxy fill
-  MIMS: 30% — Completare V32 -> costruire VULCAN -> primo stampo test
-  GENESIS: 83% — EVA WhatsApp pilot + AgentsView log consultazioni Claude->ag
-  VITA_NATURA: 40% — EVA WhatsApp bot pilot - Maria Rule zero-click
-  IDENTITY: 45% — GitHub profile pubblico + CV file originale aggiornato con A
+  V32: 65% — Config G gusset + diagonali + tiranti M10
+  MIMS: 30% — attende catena V32→VULCAN
+  GENESIS: 83% — Dashboard v7.0+, EVA pending
+  VITA_NATURA: 40% — EVA WhatsApp bot
+  IDENTITY: 45% — Skill tree live (MatteoSection v3.0)
 
-━━━ ULTIMI COMMIT ━━━
-38c19db chore: disabilita push trigger CI workflows -- stop spam email GitHub
-45e5b88 auto: story_agent ÔÇö episodi generati 31/05/2026
-506f20a Merge remote-tracking branch 'origin/main'
-98d232e fix: argus_v2 path pesi model.pt (non best.pt) -- OmniParser operativo
-fc82854 auto: episodi generati da STATE.json 2026-05-30
+━━━ COMMIT QUESTA SESSIONE ━━━
+  6476182 feat: MatteoSection v3.0 -- navStack N livelli
+  8d0fdce feat: MatteoSection skill tree v2.0 -- caselle sbloccabili
+  12a6f85 feat: dashboard home -- NightScheduleWidget + fix V32 spec
+  7118784 feat: dashboard -- AutomationsView in sidebar + MimsRoom v2
+  90a681a state: milestone 37 -- Dashboard v7.0+
+  GitHub: profile README v2.0 + TITANIUM_OS README v7.0 + cognitive-os LIVE
 
-Generato: 31/05/2026 09:29
+Generato: 31/05/2026 14:45
