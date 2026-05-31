@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users,
+  Users, FlaskConical,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -45,7 +45,8 @@ const LayersView     = lazy(() => import("./components/LayersView"));
 const StorieView     = lazy(() => import("./components/StorieView").then(m => ({ default: m.StorieView })));
 const EcosystemView  = lazy(() => import("./components/EcosystemView").then(m => ({ default: m.EcosystemView })));
 const RagGraphView   = lazy(() => import("./components/RagGraphView").then(m => ({ default: m.RagGraphView })));
-const MappaView      = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
+const MappaView          = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
+const AutomationsView    = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.AutomationsView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -66,10 +67,11 @@ const NAV_ITEMS: NavItem[] = [
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
   { id: "identity", label: "IDENTITY", icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
   // Sistema
-  { id: "agenti",   label: "AGENTI",   icon: Users,         color: "text-indigo-400", group: "system",  dot: "bg-indigo-400"  },
-  { id: "storie",   label: "STORIE",   icon: Mic,           color: "text-rose-400",   group: "system"  },
-  { id: "mappa",    label: "MAPPA",    icon: GitBranch,     color: "text-emerald-400",group: "system"  },
-  { id: "rete",     label: "RETE",     icon: Globe,         color: "text-cyan-400",   group: "system"  },
+  { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
+  { id: "automazioni", label: "AUTOMAZ.",   icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
+  { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
+  { id: "mappa",       label: "MAPPA",      icon: GitBranch,     color: "text-emerald-400",group: "system"  },
+  { id: "rete",        label: "RETE",       icon: Globe,         color: "text-cyan-400",   group: "system"  },
 ];
 
 const PILLAR_COLORS: Record<string, { bar: string; text: string }> = {
@@ -355,8 +357,20 @@ function AppInner() {
             {view === "eva"      && <CanvasLayout room="eva" />}
             {view === "identity" && <CanvasLayout room="matteo" />}
             {/* Sistema */}
-            {view === "agenti"   && <AgentsView />}
-            {view === "storie"   && <StorieView />}
+            {view === "agenti"      && <AgentsView />}
+            {view === "automazioni" && (
+              <div className="h-full overflow-y-auto">
+                <div className="max-w-5xl mx-auto px-5 py-5">
+                  <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <FlaskConical size={10} className="text-amber-400" />
+                    <span className="text-amber-400/70">Automazioni</span>
+                    <span className="text-slate-700">— pipeline live del sistema</span>
+                  </div>
+                  <AutomationsView />
+                </div>
+              </div>
+            )}
+            {view === "storie"      && <StorieView />}
             {view === "mappa"    && <MappaView systemState={sys.state as any} />}
             {view === "rete"     && <RagGraphView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}

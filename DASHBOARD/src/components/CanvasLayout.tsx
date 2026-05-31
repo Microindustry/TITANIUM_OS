@@ -420,51 +420,113 @@ function MimsRoom({ state }: { state: any }) {
   const progress = pct(p);
   return (
     <div className="space-y-4">
+      {/* Header */}
       <div className="bg-amber-500/8 border border-amber-500/30 rounded-2xl p-5">
         <div className="flex items-end justify-between mb-3">
           <div>
-            <div className="text-[10px] font-mono text-amber-400/70 uppercase tracking-widest mb-1">MIMS — Micro-Industry Modular System</div>
+            <div className="text-[10px] font-mono text-amber-400/70 uppercase tracking-widest mb-1">
+              MIMS — Lego per l'industria pesante
+            </div>
             <div className="text-4xl font-bold text-white tabular-nums">
               {progress}<span className="text-lg text-slate-500 ml-1">%</span>
             </div>
           </div>
-          <div className="text-[10px] font-mono text-amber-300">Design completo — attende V32</div>
+          <div className="text-right text-[10px] font-mono text-amber-300 leading-relaxed">
+            Design completo<br />
+            <span className="text-slate-500">attende catena V32→VULCAN</span>
+          </div>
         </div>
         <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
           <div className="h-full bg-amber-400 rounded-full" style={{ width: `${progress}%` }} />
         </div>
       </div>
+
+      {/* Gap di mercato */}
+      <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
+        <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Il gap di mercato</div>
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div className="bg-red-950/30 border border-red-500/20 rounded-xl p-3">
+            <div className="text-[9px] font-mono text-red-400 mb-1">POLO 1</div>
+            <div className="text-[10px] font-bold text-slate-300 mb-1">Alluminio estruso</div>
+            <div className="text-[9px] text-slate-500 leading-snug">Modulare ma flessibile<br/>Costo alto per uso pesante</div>
+          </div>
+          <div className="bg-amber-950/40 border border-amber-500/40 rounded-xl p-3 relative">
+            <div className="text-[9px] font-mono text-amber-400 mb-1">MIMS</div>
+            <div className="text-[10px] font-bold text-amber-300 mb-1">Lo spazio vuoto</div>
+            <div className="text-[9px] text-amber-200/70 leading-snug">Rigidità + Reversibilità<br/>Produzione locale</div>
+          </div>
+          <div className="bg-slate-800/50 border border-slate-700/30 rounded-xl p-3">
+            <div className="text-[9px] font-mono text-slate-500 mb-1">POLO 2</div>
+            <div className="text-[10px] font-bold text-slate-400 mb-1">Carpenteria saldata</div>
+            <div className="text-[9px] text-slate-500 leading-snug">Rigida ma irreversibile<br/>Lead time 4–8 settimane</div>
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {/* DNA */}
         <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
-          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Specifiche</div>
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">DNA — Geometria invariante</div>
           {[
-            { k: "Tile",          v: "190×190 mm" },
-            { k: "Piastrine",     v: "40×40 mm" },
-            { k: "Giunti",        v: "Eco-Snap · Quick-Twist · Tech-Bolt" },
-            { k: "Materiali",     v: "7 dallo stesso standard geometrico" },
-            { k: "Prezzo",        v: "da EUR 30 (vs Bosch/Item EUR 150+)" },
-            { k: "MOQ",           v: "Zero" },
-            { k: "Certificaz.",   v: "V32 come proof of concept pubblico" },
+            { k: "Sezione croce",  v: "29.9 mm (H7/g6)" },
+            { k: "Foro passante",  v: "Ø 16 mm" },
+            { k: "Fit",            v: "H7/g6 — scorrevole preciso" },
+            { k: "Retrocompat.",   v: "Ogni connettore futuro funziona" },
+            { k: "Principio",      v: "Stesso DNA, modulo variabile" },
+            { k: "MOQ",            v: "Zero — produzione locale on-demand" },
           ].map(s => (
             <div key={s.k} className="flex justify-between gap-3 mb-2">
               <span className="text-[10px] font-mono text-slate-500">{s.k}</span>
               <span className="text-[10px] text-slate-200 text-right">{s.v}</span>
             </div>
           ))}
+          <div className="mt-3 pt-3 border-t border-slate-800 text-[9px] font-mono text-amber-400/70">
+            La forma è primordiale — il valore è nel protocollo
+          </div>
         </div>
+
+        {/* 3 livelli */}
         <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
-          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Catena produzione</div>
-          {["V32 completa la fresatura",
-            "VULCAN (pressa 15t VCM) stampa tiles",
-            "Primo stampo test in alluminio 7075",
-            "Certificazione: se regge V32, regge tutto",
-            "Marketplace tiles → revenue stream",
-            "Blue ocean: nessun competitor sotto EUR 100"].map((s, i) => (
-            <div key={i} className="flex items-start gap-2 mb-2">
-              <span className="text-amber-500/60 font-mono text-[10px] flex-shrink-0">{i + 1}.</span>
-              <span className="text-[11px] text-slate-300 leading-snug">{s}</span>
+          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">3 livelli — un ecosistema</div>
+          {[
+            { lv: "1", nome: "MIMS Light",  mec: "Eco-Snap", mat: "ABS / PA6",                  target: "Maker, scuole",         col: "text-slate-400 border-slate-600" },
+            { lv: "2", nome: "MIMS Pro",    mec: "Quick-Twist", mat: "PA-GF30 + anima metall.",   target: "Artigiani, PMI",        col: "text-amber-400 border-amber-500/30" },
+            { lv: "3", nome: "MIMS Heavy",  mec: "Tech-Bolt ★", mat: "42CrMo4 nitr. + GS 400-15", target: "Industria B2B",         col: "text-orange-400 border-orange-500/40" },
+          ].map(l => (
+            <div key={l.lv} className={`border rounded-xl p-3 mb-2 ${l.col.split(" ")[1]}`}>
+              <div className="flex items-center justify-between mb-1">
+                <span className={`text-[9px] font-mono font-bold ${l.col.split(" ")[0]}`}>Lv.{l.lv} — {l.nome}</span>
+                <span className="text-[8px] font-mono text-slate-500">{l.target}</span>
+              </div>
+              <div className="text-[9px] text-slate-400">{l.mec} · {l.mat}</div>
             </div>
           ))}
+          <div className="mt-2 bg-orange-950/30 border border-orange-500/20 rounded-lg p-2">
+            <div className="text-[9px] font-mono text-orange-400">Tech-Bolt "Presta e Blocca" — Brevettabile Modello Utilità</div>
+            <div className="text-[9px] text-slate-500 mt-0.5">Nessuna deformazione · Riusabile infinitamente</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Filiera */}
+      <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-4">
+        <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Filiera chiusa</div>
+        <div className="flex items-center gap-2 flex-wrap text-[10px] font-mono">
+          {[
+            { label: "V32 CNC", sub: "±0.019mm", col: "text-emerald-400 border-emerald-500/30" },
+            { label: "→", sub: "", col: "text-slate-600" },
+            { label: "VULCAN 20t", sub: "ricette A/B/C", col: "text-amber-400 border-amber-500/30" },
+            { label: "→", sub: "", col: "text-slate-600" },
+            { label: "MIMS tiles", sub: "su demand", col: "text-orange-400 border-orange-500/30" },
+            { label: "→", sub: "", col: "text-slate-600" },
+            { label: "FIT PARK 4.0", sub: "mercato", col: "text-rose-400 border-rose-500/30" },
+          ].map((n, i) => n.label === "→"
+            ? <span key={i} className={n.col}>{n.label}</span>
+            : <div key={i} className={`border rounded-lg px-2 py-1 ${n.col.split(" ")[1]}`}>
+                <div className={n.col.split(" ")[0]}>{n.label}</div>
+                {n.sub && <div className="text-[8px] text-slate-500">{n.sub}</div>}
+              </div>
+          )}
         </div>
       </div>
     </div>
