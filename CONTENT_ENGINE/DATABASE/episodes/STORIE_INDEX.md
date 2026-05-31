@@ -22,7 +22,18 @@
 
 ---
 
-## ⚠ DISALLINEAMENTO DISCO ↔ DASHBOARD (recupero)
+## ✅ RECUPERO COMPLETATO (31/05/2026)
+
+11 episodi narrativi reimportati nella dashboard via `CONTENT_ENGINE/scripts/sync_storie.py`
+(storieData 64 → 75 episodi). ID = stem completo per evitare collisioni con entry esistenti.
+Rilanciabile in sicurezza: `python sync_storie.py` (dry-run) / `--write`.
+
+- 6× `EP_S2_*` (IL DISTACCO, CERVELLO IBRIDO, ORCHESTRATORE, LA TELA, IL CV, IL SILENZIO) → stagione **ST**
+- 5× `MOM_*` (PRIMA AUTOMAZIONE, LA MAPPA, L'ESERCITO, DOCUMENTO MASTER, CONFIG A→G) → stagione **MOM** (nuova)
+
+---
+
+## ⚠ STORICO DISALLINEAMENTO DISCO ↔ DASHBOARD (pre-recupero)
 
 Conteggio .md su disco vs entry in `storieData.ts` (audit Opus 31/05):
 

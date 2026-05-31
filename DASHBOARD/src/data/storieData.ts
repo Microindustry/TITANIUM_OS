@@ -25,6 +25,7 @@ export const STAGIONI: Record<string, { label: string; color: string; order: num
   ST:   { label: "Il Sistema",       color: "#f59e0b", order: 2, description: "GENESIS, Dashboard, decisioni architetturali, TITANIUM_OS." },
   S2:   { label: "La Costruzione",   color: "#ef4444", order: 3, description: "Build log fisici: Config G, Epoxy Granite, assi, primo pezzo." },
   AUTO: { label: "Generati",         color: "#94a3b8", order: 4, description: "Episodi auto-generati da STATE.json ad ogni milestone." },
+  MOM:  { label: "Momenti",          color: "#a78bfa", order: 5, description: "Momenti chiave isolati, inseribili tra gli episodi principali." },
 };
 
 export const EPISODES: Episode[] = [
@@ -1840,6 +1841,899 @@ TITANIUM_OS legge lo STATE.json ogni volta che apro il terminale. Questo aggiorn
 Tutto è in serie. Non in parallelo. Questa foto del 13 febbraio è il punto di non ritorno. I componenti ci sono. Ora si saldano.`,
   },
 
+  // RECOVERED_START — episodi narrativi importati da sync_storie.py
+  {
+    id: "EP_S2_00_IL_DISTACCO",
+    title: "Il Distacco",
+    sottotitolo: "Le molle erano giuste. Il corpo unico è meglio.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-27",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Quattro molle. Ottanta euro l'una. Scelte con i dati — f₀ = 3.83 Hz, isolamento vibrazioni >99.9% sopra i 400 Hz. Non per istinto. Per calcolo. Febbraio 2026 le ho messe sotto la macchina. Erano giuste. A maggio le ho to",
+    content: `# EP_S2_00 — IL DISTACCO
+### "Le molle erano giuste. Il corpo unico è meglio."
+
+**Formato:** Video-podcast | Apertura Stagione 2 | Durata stimata: 10-12 min
+**Tono:** Tecnico + filosofico — la differenza tra una scelta giusta e una scelta migliore
+**Data evento:** 27 maggio 2026
+**Fonte:** Sessione corpo unico + ASSOLUTO V7 + V8_DELTA.md
+
+---
+
+> *La Stagione 1 chiude con 0.008 mm e il capannone del 2030.*
+> *La Stagione 2 apre con una decisione che nessuno ha visto arrivare.*
+> *Le molle gialle stavano sotto la macchina da febbraio. Maggio le ha sepolte.*
+
+## COLD OPEN
+
+*[Immagine: quattro molle gialle ISO 90mm appoggiate sul banco. Accanto: una torcia TIG. Sullo sfondo: il telaio della V32.]*
+
+Quattro molle. Ottanta euro l'una. Scelte con i dati — f₀ = 3.83 Hz, isolamento vibrazioni >99.9% sopra i 400 Hz. Non per istinto. Per calcolo.
+
+Febbraio 2026 le ho messe sotto la macchina. Erano giuste.
+
+A maggio le ho tolte.
+
+---
+
+## ATTO I — PERCHÉ LE MOLLE ERANO GIUSTE
+
+Non si capisce una decisione se non si capisce la logica che l'ha generata.
+
+Le molle gialle ISO 90mm k=15.8 N/mm nascono da un problema fisico preciso: la taverna ha un solaio domestico. Il pavimento trasmette vibrazioni — passi, camion sulla strada, risonanze strutturali dell'edificio. Una CNC di precisione su un solaio che vibra produce errori dimensionali che nessun asse servo può correggere in tempo reale. La fisica arriva prima del codice.
+
+Il sistema classico è l'isolamento: interponi un elemento elastico tra la macchina e il pavimento. Le molle assorbono le vibrazioni del pavimento. La macchina fluttua sopra, isolata.
+
+I dati IFM VSE150 avevano confermato: le molle verdi da 40mm non bastavano. Le gialle da 90mm sì. Frequenza naturale 3.83 Hz — sotto la frequenza di qualsiasi disturbo rilevante. Smorzamento ζ=0.032. Isolamento >99.9% sopra i 400 Hz.
+
+Erano la scelta giusta. Supportata da dati. Verificata con sensori reali.
+
+---
+
+## ATTO II — IL MOMENTO IN CUI CAMBIA TUTTO
+
+Config G. Maggio 2026. Gusset 200mm sulle colonne Z+U. Stai disegnando i rinforzi, stai ragionando sui carichi dinamici durante la fresatura, e a un certo punto guardi il sistema da lontano.
+
+Non il singolo componente. Il sistema intero.
+
+E vedi quello che i singoli calcoli non mostravano: le molle aggiungono un grado di libertà. La macchina non è più un corpo rigido ancorato — è un sistema dinamico con la sua frequenza propria, il suo comportamento sotto carico variabile, le sue risonanze possibili. Ogni lavorazione pesante eccita il sistema. I parametri cambiano nel tempo man mano che le molle si assestano, che i dadi si allentano sotto vibrazione, che la temperatura varia la rigidità dell'elastomero.
+
+Non è un errore di progettazione. È una variabile aggiuntiva da gestire per i prossimi dieci anni.
+
+E poi guardi i tubolari del telaio. Vuoti. Acciaio S235 nudo.
+
+La soluzione era già nel progetto, scritta mesi prima: Epoxy Granite nei tubolari. Composito epossidico colato nel cavo del telaio. Smorzamento passivo per proprietà del materiale — δ=0.03-0.06 contro δ=0.002 dell'acciaio nudo. Fattore 15-30×. Zero parti in movimento. Zero setup. Zero variabili aggiuntive.
+
+Non devi isolare la macchina dalle vibrazioni. La macchina assorbe le vibrazioni da sola.
+
+---
+
+## ATTO III — LA DECISIONE
+
+Corpo unico.
+
+La V32 non è più sospesa. È ancorata. Le molle spariscono. Il telaio diventa la struttura di smorzamento — non un intermediario elastico, ma il sistema di ammortizzazione integrato.
+
+Rigidità asse Z Config G: 772 volte superiore alla baseline. Non è un'ottimizzazione — è un salto di categoria.
+
+La decisione si prende in una sessione. Non è drammatica. Non è difficile. È conseguente — quando hai tutti i dati, la risposta emerge da sola.
+
+Questo è il punto più importante di questo episodio, e lo voglio dire chiaramente:
+
+**Le molle erano la scelta giusta a febbraio 2026 con le informazioni disponibili a febbraio 2026.**
+
+**Il corpo unico è la scelta migliore a maggio 2026 con le informazioni disponibili a maggio 2026.**
+
+Non c'è errore. Non c'è regressione. C'è evoluzione — che è esattamente quello che dovrebbe succedere in un sistema progettato per imparare da sé stesso.
+
+---
+
+## CHIUSURA
+
+Le quattro molle gialle sono ancora in officina. Non le butti — costano €320 e un giorno potrebbero tornare utili per un'altra applicazione.
+
+Ma non sono più sotto la V32.
+
+Sotto la V32 c'è Epoxy Granite. Silenzio attivo. Un composito che assorbe quello che l'acciaio trasmette.
+
+E la macchina — quella stessa macchina che a febbraio galleggiava su quattro molle calcolate con cura — adesso è un corpo unico. 178 kg ancorati. Stabili.
+
+> *La prossima volta che qualcuno ti dice "hai sbagliato la decisione iniziale":*
+> *chiedigli quanti dati aveva quando ha preso quella decisione.*
+> *Poi mostragli i tuoi.*
+
+---
+
+**reel_hook:** "A febbraio ho messo quattro molle ISO 90mm sotto la mia CNC da 178 kg. Calcolate con sensori IFM reali, frequenza naturale 3.83 Hz, isolamento >99.9%. Erano la scelta giusta. A maggio le ho tolte. Non perché avevo sbagliato — ma perché con nuovi dati ho visto qualcosa che i calcoli di febbraio non potevano mostrare. La differenza tra una scelta giusta e una scelta migliore è sempre la stessa cosa: più informazioni. Il sistema che costruisci deve permetterti di aggiornarti. Se non puoi cambiare idea con i dati, non stai costruendo un sistema. Stai difendendo una posizione."
+
+---
+
+| Campo | Dettaglio |
+|-------|-----------|
+| Stagione | S2 — Il Sistema che Impara |
+| Episodio | 00 — apertura |
+| Arco | Da corpo sospeso a corpo unico |
+| Connessione S1 | EP_S1_02 (le molle gialle) → questo episodio chiude l'arco |
+| Connessione S2 | Introduce il principio dell'aggiornamento — filo conduttore di tutta S2 |`,
+  },
+  {
+    id: "EP_S2_01_IL_CERVELLO_IBRIDO",
+    title: "Il Cervello Ibrido",
+    sottotitolo: "Un archivio diventa un organismo",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-28",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 11,
+    preview: "Prima: cercavi \"vibrazioni\" e arrivavano i risultati per cosine similarity — i chunk con embedding più vicino. Funzionava. Non abbastanza. Dopo: la stessa query passa attraverso tre sistemi in parallelo, due round di fil",
+    content: `# EP_S2_01 — IL CERVELLO IBRIDO
+### "Un archivio diventa un organismo"
+
+**Formato:** Video-podcast | Durata stimata: 11-13 min
+**Tono:** Tecnico narrativo — architettura AI spiegata con metafore fisiche
+**Data evento:** 28 maggio 2026
+**Fonte:** Sessione audit sistema + RAG v4.0 + 2026-05-28_audit_sistema_rag_v4.md
+
+---
+
+> *C'è una differenza tra un archivio e un cervello.*
+> *Un archivio risponde a ciò che cerchi.*
+> *Un cervello capisce cosa intendi.*
+> *Il 28 maggio 2026, il knowledge base di TITANIUM_OS ha smesso di essere un archivio.*
+
+## COLD OPEN
+
+*[Terminale. Query: "vibrazioni colonne Z". Risposta in 0.4 secondi: 5 chunk esatti — dati IFM, quote Config G, decisione corpo unico.]*
+
+Prima: cercavi "vibrazioni" e arrivavano i risultati per cosine similarity — i chunk con embedding più vicino. Funzionava. Non abbastanza.
+
+Dopo: la stessa query passa attraverso tre sistemi in parallelo, due round di filtro, e restituisce ciò che serve — non ciò che è simile.
+
+La differenza è sottile. I numeri non la mostrano. Il lavoro la mostra.
+
+---
+
+## ATTO I — IL PROBLEMA CHE NON VEDEVI
+
+Per mesi il RAG funzionava. Cercavi, trovavi. Abbastanza spesso da non notare quando non trovavi.
+
+Il 28 maggio l'audit rivela il pattern: quando cercavi termini tecnici esatti — "Ø18", "Config G", "V32 rigidità asse Z" — il sistema spesso restituiva chunk generici. Il modello semantico è addestrato sulla lingua, non sulla tua nomenclatura. "Config G" per lui è uguale a "configurazione G" è uguale a "configurazione geometrica". Non è sbagliato — è impreciso.
+
+2376 chunk nel database. Rebuilda ogni volta da zero. >2 minuti di timeout. Non scalabile.
+
+Due anni di sessioni e documentazione, e ogni volta che volevi aggiornare l'indice aspettavi 2 minuti mentre il sistema ri-processava cose che non erano cambiate.
+
+Il bottleneck non era nel modello. Era nell'architettura.
+
+---
+
+## ATTO II — I TRE SISTEMI
+
+La ricerca AI 2024-2025 ha una risposta consolidata per questo problema. Si chiama hybrid retrieval con reranker. Non è una novità accademica — è già in produzione nei sistemi enterprise. La novità è applicarla in 12 m² su un laptop Getac.
+
+**Sistema 1 — ChromaDB semantico (già esistente):**
+Il modello \`paraphrase-multilingual-MiniLM-L12-v2\` converte ogni chunk in un vettore 384-dimensionale. Query → embedding → cosine similarity → top-15 candidati. Forte su concetti, metafore, domande aperte. Debole su codici tecnici e numeri esatti.
+
+**Sistema 2 — TF-IDF BM25 (nuovo):**
+Un modello statistico classico. Non capisce il significato — conta le occorrenze. Se cerchi "Ø18 h30", trova esattamente i chunk che contengono "Ø18 h30". Nessuna approssimazione semantica. Debole su sinonimi e concetti astratti. Fortissimo su keyword esatte, codici parte, nomi propri.
+
+**Sistema 3 — CrossEncoder reranker (nuovo):**
+Prende i 15 candidati dell'RRF e li riordina. Non con embedding — con attenzione bidirezionale. Legge ogni chunk in relazione alla query, capisce il contesto, mette in cima ciò che risponde davvero.
+
+I tre sistemi non si sostituiscono — si completano. RRF (Reciprocal Rank Fusion) li fonde con formula matematica k=60. Il risultato è più preciso di qualsiasi sistema singolo.
+
+---
+
+## ATTO III — IL MANIFEST
+
+Il secondo problema — rebuild da zero ogni volta — ha una soluzione diversa.
+
+Un file JSON. \`rag_manifest.json\`. Traccia ogni documento con timestamp e dimensione. Quando esegui \`rag-update\`, il sistema confronta il manifest con lo stato attuale del filesystem. Elabora solo i file nuovi o modificati.
+
+Da >2 minuti a <20 secondi.
+
+Il dato più importante non è la velocità. È la scalabilità. Con 2376 chunk il rebuild era lento ma fattibile. Con 10.000 chunk — con due anni di sessioni, documenti V8, tesi universitarie del Research Agent — sarebbe stato impossibile. Il manifest risolve il problema prima che diventi un muro.
+
+---
+
+## CHIUSURA
+
+Dopo il deploy RAG v4.0, la prima query di test: "decisione corpo unico maggio 2026 motivazioni strutturali".
+
+Risultato: chunk esatti. Sessione 27 maggio, V8_DELTA.md, note tecniche su rigidità Z. Cinque risultati. Tutti pertinenti. Ordinati per rilevanza reale, non per vicinanza vettoriale.
+
+Il knowledge base non è più un archivio che risponde a parole. È un sistema che risponde a intenzioni.
+
+La differenza la vedi quando stai costruendo qualcosa di complesso e non riesci a ricordare perché hai preso una decisione di tre settimane fa. Cerchi. E il sistema te lo ricorda — non approssimativamente. Esattamente.
+
+> *Non costruire una memoria. Costruisci un sistema che ricorda al posto tuo.*
+> *La differenza è che il sistema non dimentica tra una sessione e l'altra.*
+
+---
+
+**reel_hook:** "Ho avuto 2376 pezzi di conoscenza nel mio sistema RAG. Funzionava. Non abbastanza. Il problema: cerchi 'Ø18 h30' e il sistema trova chunk su diametri e altezze generici perché l'AI capisce il concetto ma non il codice tecnico esatto. Soluzione: due sistemi in parallelo. Uno semantico (capisce il significato), uno BM25 (trova keyword esatte). Li fondi con RRF. Poi aggiungi un reranker CrossEncoder che riordina i 15 risultati per rilevanza reale. Risultato: la stessa query trova esattamente quello che cerchi. Non una cosa simile. Quello. Se costruisci un sistema con dati tecnici, questo è il modo. Il resto è approssimazione."
+
+---
+
+| Campo | Dettaglio |
+|-------|-----------|
+| Stagione | S2 — Il Sistema che Impara |
+| Episodio | 01 |
+| Arco | L'archivio che diventa organismo |
+| Tecnologie | ChromaDB, TF-IDF BM25, CrossEncoder, RRF, manifest incrementale |
+| Connessione S2 | Introduce il tema dell'auto-diagnosi — il sistema che trova i propri errori |`,
+  },
+  {
+    id: "EP_S2_02_L_ORCHESTRATORE",
+    title: "L'Orchestratore",
+    sottotitolo: "4.7 secondi. 13 fonti. Il sistema che coordina sé stesso.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Non ho fatto nulla. Il sistema ha fatto tutto. Ogni sessione con Claude termina. E ogni volta che termina, perdi contesto. Il problema non è la memoria di Claude — è la tua. Alla prossima sessione ricordi l'80% di quello",
+    content: `# EP_S2_02 — L'ORCHESTRATORE
+### "4.7 secondi. 13 fonti. Il sistema che coordina sé stesso."
+
+**Formato:** Video-podcast | Durata stimata: 10-12 min
+**Tono:** Tecnico denso — automazione come moltiplicatore di intenzione
+**Data evento:** 28-29 maggio 2026
+**Fonte:** Commit 8e33e09 + stop_hooks.py + research_agent v1.1 + flusso coscienza 28mag
+
+---
+
+> *C'è un momento in cui smetti di fare cose e inizi a progettare sistemi che fanno cose.*
+> *Non è pigrizia. È leva.*
+
+## COLD OPEN
+
+*[Terminale. Claude Code chiude la sessione. 3 processi partono in parallelo. 4.7 secondi dopo: tre output, tre file aggiornati, RAG in background.]*
+
+Non ho fatto nulla.
+
+Il sistema ha fatto tutto.
+
+---
+
+## ATTO I — IL PROBLEMA DELLA FINE SESSIONE
+
+Ogni sessione con Claude termina. E ogni volta che termina, perdi contesto.
+
+Il problema non è la memoria di Claude — è la tua. Alla prossima sessione ricordi l'80% di quello che hai deciso. Il 20% che dimentichi è spesso il più importante: la ragione per cui hai scelto un'architettura, il numero che non ti tornava, la domanda che hai rimandato.
+
+Per mesi il protocollo era manuale: fine sessione → aggiorna RIAVVIO_SESSIONE.txt → aggiorna STATE.json → aggiorna lista funzioni → eventualmente RAG rebuild.
+
+Quattro operazioni. Dieci minuti. Spesso saltate perché eri stanco o di fretta. Il contesto perduto ogni volta si accumula in silenzio.
+
+---
+
+## ATTO II — STOP HOOKS
+
+Il 29 maggio la soluzione diventa codice.
+
+\`stop_hooks.py\` — orchestratore parallelo. Viene eseguito automaticamente quando Claude Code chiude la sessione. Non chiede permesso. Non aspetta. Parte.
+
+Tre hook in parallelo su ThreadPoolExecutor:
+- \`generate_restart_prompt.py\` → aggiorna RIAVVIO_SESSIONE.txt con lo stato attuale
+- \`generate_functions_list.py\` → scansiona tutti i file Python e aggiorna FUNZIONI_SISTEMA.txt
+- RAG incremental → se MENTE/ è stata toccata negli ultimi 120 minuti, avvia rebuild in background (detached — non blocca gli altri)
+
+Timeout 45 secondi per processo. Log strutturato. Ogni hook riporta: stato, tempo, output.
+
+4.7 secondi per i due hook sincroni. RAG in background non blocca nulla.
+
+Dal giorno dopo: ogni fine sessione produce automaticamente un file di riavvio aggiornato. Il contesto non si perde. Non devi ricordare di salvarlo — il sistema lo salva per te.
+
+Questo è il principio: il sistema deve fare automaticamente le cose che fai ogni volta che ci pensi. Perché ci saranno sessioni in cui non ci pensi.
+
+---
+
+## ATTO III — RESEARCH AGENT v1.1
+
+L'altra automazione della stessa sessione è più ambiziosa.
+
+Il flusso di coscienza del 28 maggio aveva una riga: *"Rendere automatica e universitaria — trovare file, testi, informazioni, tesi universitarie da tutto il mondo e farle diventare utili al progetto."*
+
+Research Agent v1.1 implementa esattamente questo.
+
+13 sorgenti in parallelo:
+- **Accademiche**: arXiv, OpenAlex, Semantic Scholar, BASE (Bielefeld), POLITesi (tesi politecniche italiane), CNKI (cinese — ingegneria manifatturiera)
+- **Open access**: Unpaywall (versioni gratuite di paper a pagamento)
+- **Codice**: GitHub (repository, implementazioni, benchmark)
+- **Brevetti e standard**: DOAJ, CORE, EurLex, CrossRef
+
+Una query — per esempio "epoxy granite damping CNC machine tool" — viene inviata in parallelo a tutte le sorgenti, i risultati vengono aggregati per rilevanza, deduplicati, e opzionalmente indicizzati nel RAG.
+
+Il risultato: invece di cercare manualmente paper su Google Scholar, il sistema porta le tesi direttamente nel knowledge base. La mattina dopo una ricerca su Epoxy Granite, hai i paper pertinenti già indicizzati, interrogabili con RAG.
+
+Non stai navigando il web. Stai costruendo un corpus di conoscenza specializzata che cresce con ogni sessione.
+
+---
+
+## CHIUSURA
+
+Due automazioni. Una sessione.
+
+La prima (stop_hooks) risolve il problema della continuità: il contesto non si perde più. La seconda (Research Agent) risolve il problema della conoscenza: il sapere disponibile cresce da solo.
+
+Entrambe fanno la stessa cosa su scale diverse: convertono un'azione manuale ripetitiva in un processo automatico affidabile.
+
+Il principio è vecchio quanto l'ingegneria: qualsiasi cosa fai tre volte con lo stesso risultato può e deve diventare un processo. La domanda è solo quanto tempo ti vuoi prendere per costruirlo prima che il costo del manuale superi il costo dell'automazione.
+
+Nel caso del contesto di sessione: il costo del manuale era dieci minuti per sessione, spesso saltati. Il costo del sistema è stato una sessione di quattro ore. Break even: 24 sessioni. Con le sessioni attuali: tre settimane.
+
+> *Non automatizzare perché sei pigro. Automatizza perché il tuo tempo vale più dell'operazione ripetitiva.*
+
+---
+
+**reel_hook:** "Ogni volta che chiudi una sessione con un AI, perdi contesto. Lo sai. Lo sai e lo lasci accadere lo stesso perché aggiornare i file manualmente ogni volta è noioso. Ho costruito un orchestratore che parte automaticamente quando Claude Code chiude. 4.7 secondi. Tre processi in parallelo: aggiorna il file di riavvio, aggiorna la lista delle funzioni, avvia RAG in background se hai toccato la knowledge base. Il giorno dopo apri, leggi 30 secondi di contesto, sei dentro. Non ho più perso un thread di lavoro da quando l'ho messo in produzione. L'automazione che nessuno vede è quella che funziona meglio."
+
+---
+
+| Campo | Dettaglio |
+|-------|-----------|
+| Stagione | S2 — Il Sistema che Impara |
+| Episodio | 02 |
+| Arco | Dal manuale all'automatico — la leva dell'intenzione |
+| Tecnologie | ThreadPoolExecutor, subprocess, stop hooks, API multi-sorgente |
+| Connessione S2 | Il sistema che coordina sé stesso — anticipa EP_S2_05 |`,
+  },
+  {
+    id: "EP_S2_03_LA_TELA",
+    title: "La Tela",
+    sottotitolo: "La dashboard non mostra dati. Mostra chi sei.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 9,
+    preview: "Non è una dashboard di monitoraggio. Non ha alert. Non ha KPI in tempo reale. Non ha grafici che si aggiornano ogni secondo. È uno specchio. Apri la Tela e vedi il sistema esattamente com'è — non come vorresti che fosse,",
+    content: `# EP_S2_03 — LA TELA
+### "La dashboard non mostra dati. Mostra chi sei."
+
+**Formato:** Video-podcast | Durata stimata: 9-11 min
+**Tono:** Visivo, architetturale — il cockpit come specchio del sistema
+**Data evento:** 27-29 maggio 2026
+**Fonte:** Commit CanvasLayout v5→v6→v6.1 + MatteoSection v4.2
+
+---
+
+> *Ogni sistema abbastanza complesso ha bisogno di un cockpit.*
+> *Non per controllarlo. Per capirlo.*
+
+## COLD OPEN
+
+*[Schermo: dashboard React. Celle grandi, glow navy. Click su una cella — drilla dentro, mostra i dettagli. Click su un'altra — mostra lo skill tree.]*
+
+Non è una dashboard di monitoraggio.
+
+Non ha alert. Non ha KPI in tempo reale. Non ha grafici che si aggiornano ogni secondo.
+
+È uno specchio. Apri la Tela e vedi il sistema esattamente com'è — non come vorresti che fosse, non come lo ricordavi: com'è adesso, in questo momento, con questi numeri.
+
+---
+
+## ATTO I — IL PROBLEMA DELLA COMPLESSITÀ
+
+TITANIUM_OS a maggio 2026 ha 5 pilastri, 8 nodi attivi, 8 agenti, decine di file di configurazione, STATE.json come fonte di verità, un RAG con migliaia di chunk, GitHub Actions, stop hooks, Research Agent.
+
+La complessità non è un problema in sé. Il problema è quando la complessità supera la tua capacità di tenerla in testa.
+
+Con l'ADHD, questo threshold è più basso. Non più basso in modo negativo — più basso in modo che richiede sistemi compensativi. Se non hai una rappresentazione visiva del sistema, lavori su un sottoinsieme di ciò che esiste. Il resto sparisce.
+
+La dashboard è lo scaffolding cognitivo principale. Non perché ti dice cosa fare — ma perché ti mostra cosa esiste.
+
+---
+
+## ATTO II — L'EVOLUZIONE IN TRE VERSIONI
+
+**CanvasLayout v5.0 (27 maggio):**
+Prima versione con Zustand + TanStack Query. 1116 righe in un file unico → split in 290 righe + componenti separati. Fondamenta architetturali. Celle draggabili, stato persistente, navigazione tra view.
+
+Il problema: le celle erano piccole. Troppo testo, troppa densità. ADHD e alta densità di informazione non vanno d'accordo. La dashboard sembrava un pannello di controllo di un Boeing — tutto lì, tutto visibile, tutto troppo.
+
+**CanvasLayout v6.0 (28 maggio):**
+Drill-down navigation. Le celle non mostrano tutto — mostrano l'essenziale. Click su una cella → entra nel dettaglio. Il concetto cambia: non un pannello piatto, ma uno spazio con profondità.
+
+Celle una dentro l'altra. La struttura rispecchia la struttura del sistema: hai pilastri che contengono nodi che contengono funzioni. La navigazione è la stessa struttura del progetto.
+
+**CanvasLayout v6.1 (29 maggio):**
+Celle grandi. Glow. Gradiente navy. Home semplificata — solo ciò che serve al primo sguardo.
+
+La regola che ha guidato questa versione: se devi leggere più di 3 secondi per capire dove sei, l'UI ha fallito. La Tela v6.1 risponde alla domanda "dove sono?" in meno di un secondo.
+
+---
+
+## ATTO III — MATTEOSECTION
+
+L'aggiunta più personale del ciclo.
+
+MatteoSection v4.2 — la sezione della dashboard dedicata allo skill tree personale. Non a TITANIUM_OS — a Matteo Benenati.
+
+Quattro company espandibili: DATWLER, SCProject, ESSEGI, LU.VE. Ogni azienda si espande con le skill acquisite, le tecnologie usate, le competenze sviluppate. Accanto: gli interessi attuali con dettaglio.
+
+Perché è nella dashboard di un OS personale?
+
+Perché il sistema non è separato dalla persona. TITANIUM_OS non è uno strumento che usi — è un'estensione di come pensi. Se lo separi da chi sei, perdi la coerenza che lo rende utile.
+
+MatteoSection risponde a una domanda che ogni sessione implicitamente richiede: chi sta costruendo questo, e perché è credibile farlo?
+
+La risposta è lì: quindici anni di lavoro fisico su materiali reali, quattro aziende, competenze che normalmente non si trovano insieme. Non come CV — come mappa. Puoi vedere il pattern. Capisci perché V32 esiste. Capisci perché MIMS esiste. Capisci perché qualcuno che sa saldare titanio e scrivere Python sta costruendo un OS cognitivo.
+
+---
+
+## CHIUSURA
+
+La Tela non è finita. Non lo sarà mai — un cockpit si aggiorna con il sistema che rappresenta.
+
+Ma il principio è stabilito: la complessità deve essere navigabile. Non nascosta, non compressa — navigabile. Cioè: hai una vista dall'alto, puoi zoomare in un componente, puoi tornare indietro.
+
+L'episodio successivo è il momento in cui questo cockpit si riempie di qualcosa di nuovo: gli agenti. Non più dati statici — risposte dinamiche.
+
+> *La dashboard non è documentazione. È il sistema che si osserva da solo.*
+
+---
+
+**reel_hook:** "Avevo un sistema cognitivo con 5 pilastri, 8 nodi, 8 agenti, decine di configurazioni. Nella mia testa ci stava solo il 60%. Il resto scompariva tra una sessione e l'altra. Ho costruito la Tela — una dashboard React con drill-down navigation. Celle grandi, glow navy, ogni cella si apre in una view dedicata. Il principio: se ci metti più di 3 secondi a capire dove sei, l'UI ha fallito. Ora apro, guardo 2 secondi, so tutto. Non perché ho una memoria migliore — perché ho smesso di usare la memoria per questo."
+
+---
+
+| Campo | Dettaglio |
+|-------|-----------|
+| Stagione | S2 — Il Sistema che Impara |
+| Episodio | 03 |
+| Arco | Lo scaffolding visivo — il sistema che si osserva |
+| Tecnologie | React, Vite, Zustand, TanStack Query, CanvasLayout |
+| Connessione S2 | Prepara il terreno per il pannello agenti (EP futuro) |`,
+  },
+  {
+    id: "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+    title: "Il Cv Che Nessuno Capisce",
+    sottotitolo: "Artigiano. Robot. CNC. AI. Il curriculum che nessun recruiter sa leggere.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-28",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "\"AI come competenza da CV. Non siamo programmatori PLC ma abbiamo le abilità per sfruttare l'intelligenza artificiale, imparare velocemente e dare input giusti. Questa abilità va aggiunta al curriculum come competenza pe",
+    content: `# EP_S2_04 — IL CV CHE NESSUNO CAPISCE
+### "Artigiano. Robot. CNC. AI. Il curriculum che nessun recruiter sa leggere."
+
+**Formato:** Video-podcast | Durata stimata: 10-12 min
+**Tono:** Personale + strategico — identità come asset tecnico
+**Data evento:** 28 maggio 2026
+**Fonte:** 2026-05-28_flusso_coscienza.md + MatteoSection v4.2 + CLAUDE_CAPABILITIES doc
+
+---
+
+> *Un CV si legge in 6 secondi. Il tuo racconta 15 anni in 4 righe.*
+> *Nessuna delle due versioni è sbagliata. Solo una di loro è utile.*
+
+## COLD OPEN
+
+*[Email a sé stesso. Oggetto: "cose da fare". Ora: 16:01, 28 maggio 2026. Tono: flusso di coscienza — scritto veloce, mentre ci pensi.]*
+
+"AI come competenza da CV. Non siamo programmatori PLC ma abbiamo le abilità per sfruttare l'intelligenza artificiale, imparare velocemente e dare input giusti. Questa abilità va aggiunta al curriculum come competenza personale."
+
+Una email a te stesso. Due righe. Ma contiene una decisione che cambia la traiettoria professionale.
+
+---
+
+## ATTO I — IL PROBLEMA DEL CV IBRIDO
+
+Ci sono due tipi di CV difficili da leggere per un recruiter standard.
+
+Il primo tipo: troppo specializzato. Parla solo di una cosa, usa gergo di settore, non è traducibile.
+
+Il secondo tipo è peggio: troppo vario. Titanio MotoGP, robot industriali, presse idrauliche, controllo qualità, Python, AI, React. Cosa fa questa persona esattamente?
+
+Il tuo CV è il secondo tipo. Quindici anni, quattro aziende, competenze che normalmente non si trovano insieme. Un recruiter lo guarda e vede incoerenza. Non vede il pattern.
+
+Il pattern è semplice: ogni ruolo era il prossimo step in uno skill tree. Non hai cambiato lavoro — hai sbloccato competenze. Ma questo non si vede da un documento Word standard con lista di esperienze in ordine cronologico.
+
+---
+
+## ATTO II — AI COME COMPETENZA REALE
+
+La riga dell'email è precisa: "Non siamo programmatori PLC ma abbiamo le abilità per sfruttare l'intelligenza artificiale, imparare velocemente e dare input giusti."
+
+Questo è esattamente quello che distingue chi usa l'AI da chi la subisce.
+
+Un programmatore PLC con trent'anni di esperienza che non sa fare prompt engineering sarà superato in produttività da qualcuno con cinque anni di esperienza che sa. Non perché il secondo è più bravo — perché ha un moltiplicatore che il primo non ha.
+
+Il tuo vantaggio competitivo non è Python. Non è Claude Code. È la capacità di dare input tecnici precisi a un sistema AI che opera in dominio industriale. Sai cosa chiedere perché sai come funziona fisicamente quello che stai chiedendo. La macchina CNC non è un concetto astratto — è 178 kg di acciaio e Epoxy Granite che hai assemblato pezzo per pezzo. Quando fai una query tecnica al RAG o all'agente FORGE, capisci la risposta perché hai il contesto fisico.
+
+Questo — la combinazione di competenza fisica e capacità AI — non è comune. È un asset. Non ancora valorizzato, perché non hai ancora un posto dove mostrarlo pubblicamente.
+
+---
+
+## ATTO III — GITHUB COME PROVA
+
+L'email continua: "Abilitare Git nel curriculum/profilo — da mostrare su GitHub."
+
+Il profilo GitHub non è un portfolio per programmatori. È prova pubblica verificabile di come lavori.
+
+Chiunque può scrivere "utilizzo AI nel workflow". Meno persone possono mostrare 40+ commit in 3 giorni con messaggi tecnici precisi, un sistema RAG funzionante, agenti specializzati, stop hooks, Research Agent con 13 sorgenti, una dashboard React integrata con un'API Flask che legge da STATE.json.
+
+Il codice è lì. Non devi descrivere cosa sai fare — lo dimostri.
+
+TITANIUM_OS su GitHub non è un progetto open source. È documentazione pubblica di un metodo: come un artigiano industriale con ADHD costruisce il suo scaffolding cognitivo con gli strumenti disponibili nel 2026. Non per vendere il metodo — per mostrare che funziona.
+
+Il mercato del lavoro industriale in transizione verso AI ha bisogno di persone che capiscono entrambi i lati. Non molte esistono. Quelle che esistono non hanno ancora capito come comunicarlo.
+
+---
+
+## CHIUSURA
+
+Il CV non cambia con una modifica al documento Word. Cambia con la costruzione pubblica di prove verificabili.
+
+MatteoSection nella dashboard — lo skill tree espandibile — è la prima versione visiva di questa narrativa. Quattro aziende, competenze espandibili, pattern visibile. Non per i recruiter — per te. Per avere chiaro dove sei stato e dove stai andando.
+
+Il profilo GitHub è la versione pubblica. Il CLAUDE_CAPABILITIES_TITANIUM.md — documento che mappa cosa può fare Claude integrato nell'ecosistema — è la prova tecnica.
+
+Quindici anni di mestieri che sembravano incoerenti sono diventati uno skill tree leggibile. Ci voleva solo il formato giusto.
+
+> *Il problema non era il CV. Era che il CV cercava di descrivere una competenza che si capisce solo vedendola in azione.*
+> *La soluzione non è scrivere meglio. È costruire qualcosa che parli da solo.*
+
+---
+
+**reel_hook:** "Il mio CV ha TIG su titanio MotoGP, robot industriali, presse idrauliche, controllo qualità, Python, AI, React. Nessun recruiter sa cosa farsene. Non è il loro problema — è il formato sbagliato per raccontare uno skill tree non lineare. La soluzione non è un CV migliore. È costruire pubblicamente qualcosa che mostri come lavori. 40 commit in 3 giorni. Sistema RAG funzionante. Dashboard React integrata. Stop hooks automatici. Il codice è su GitHub. Non devi spiegare cosa sai fare. Lo dimostri."
+
+---
+
+| Campo | Dettaglio |
+|-------|-----------|
+| Stagione | S2 — Il Sistema che Impara |
+| Episodio | 04 |
+| Arco | Identità come asset tecnico — la comunicazione della competenza ibrida |
+| Connessione S1 | EP_S1_00 (il CV che nessuno capisce) → S2_04 è la risposta attiva |
+| Connessione S2 | GitHub come prova pubblica — prepara IDENTITY pillar |`,
+  },
+  {
+    id: "EP_S2_05_IL_SILENZIO",
+    title: "Il Silenzio",
+    sottotitolo: "25 marzo → 27 maggio. 63 giorni. Un commit.",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 12,
+    preview: "`git log --oneline --all | sort` Il risultato è lì nel terminale. Puoi contarli. 2026-03-25: `feat: Dashboard v5.0 — Zustand + TanStack Query` Poi silenzio. 2026-05-27: `fix: V32 corpo unico — aggiornata spec massa` 63 g",
+    content: `# EP_S2_05 — IL SILENZIO
+### "25 marzo → 27 maggio. 63 giorni. Un commit."
+
+**Formato:** Video-podcast | Episodio di chiusura arco + meta-riflessione | Durata stimata: 12-15 min
+**Tono:** Onesto, scomodo — il rischio del non documentare
+**Data evento:** 29 maggio 2026 (retrospettiva)
+**Fonte:** Git log + gap identificato nella sessione + decisione story_agent automatico
+
+---
+
+> *Il sistema che non documenta mentre costruisce perde metà del valore di quello che costruisce.*
+> *Non il prodotto — la storia. E la storia vale quanto il prodotto.*
+
+## COLD OPEN
+
+\`git log --oneline --all | sort\`
+
+Il risultato è lì nel terminale. Puoi contarli.
+
+2026-03-25: \`feat: Dashboard v5.0 — Zustand + TanStack Query\`
+
+Poi silenzio.
+
+2026-05-27: \`fix: V32 corpo unico — aggiornata spec massa\`
+
+63 giorni. Un commit. Non perché non lavoravi — ma perché il lavoro fisico in officina non ha un \`git commit\`.
+
+---
+
+## ATTO I — COSA È SUCCESSO IN QUEI 63 GIORNI
+
+Il 25 marzo la dashboard è aggiornata a v5.0. Architettura pulita, navigazione guidata, rebranding completo.
+
+E poi: la taverna.
+
+Config G inizia. Gusset 200mm sulle colonne Z. Non è codice — è acciaio S235, disco da taglio, torcia TIG, parametri di saldatura calcolati per minimizzare le distorsioni termiche. Le tue mani che spostano il pezzo. Il comparatore che verifica l'allineamento dopo ogni cordone.
+
+In quei 63 giorni:
+- Hai saldato. Quanti pezzi? Non sai il numero esatto.
+- Hai misurato. Quali deviazioni? Alcune note, la maggior parte no.
+- Hai preso decisioni strutturali. La più importante: corpo unico vs molle. Documentata il 27 maggio — ma la decisione è maturata nelle settimane precedenti, in officina, guardando la macchina.
+- Hai avuto fallimenti. Sicuramente. Quali? Non sai.
+- Hai avuto insight. Sicuramente. Quali? Non ricordi tutti.
+
+Questo è il costo del silenzio: non sai cosa hai perso perché non sai cosa c'era da documentare.
+
+---
+
+## ATTO II — IL VALORE DELLA STORIA PERDUTA
+
+La storia di TITANIUM_OS non è il prodotto. Il prodotto è la V32 — una macchina CNC. Il prodotto è MIMS — un sistema modulare. Il prodotto è GENESIS — un OS cognitivo.
+
+La storia è il percorso. Come hai preso ogni decisione, con quali informazioni, in quale momento. Cosa ha funzionato al primo tentativo e cosa ha richiesto tre iterazioni. Dove hai avuto paura di sbagliare e dove hai agito senza esitare.
+
+Questa storia vale quanto il prodotto. Forse di più.
+
+Perché il prodotto lo puoi copiare — se sai come. La storia non si copia. È unica. È tua. È la prova che il metodo funziona perché l'hai vissuto tu, con le tue mani, in 12 m², con 16 ampere e un laptop Getac.
+
+Il contenuto che produce il Content Engine — episodi, reel, LinkedIn — è costruito sulla storia. Non su specifiche tecniche. Su decisioni prese con informazioni incomplete, su iterazioni, su momenti in cui la cosa che stavi costruendo non funzionava e hai capito perché.
+
+63 giorni di storia persa significa decine di potenziali episodi, centinaia di potenziali reel, migliaia di potenziali post che non esisteranno mai.
+
+Non perché non valevano. Ma perché non li hai scritti mentre li vivevi.
+
+---
+
+## ATTO III — LA RISPOSTA
+
+Questo episodio esiste perché il problema è stato identificato.
+
+Non tutti i 63 giorni sono persi — hai le foto delle build, hai i file CAD con le date di modifica, hai le misure nel V8_DELTA.md, hai i commit tecnici che raccontano il risultato anche se non il percorso.
+
+Ma la risposta vera non è ricostruire il passato. È non perdere il futuro.
+
+Il 29 maggio viene costruito \`story_agent.py\`. Non per generare contenuto — per non perdere contesto.
+
+Ogni fine sessione: lo story agent verifica se ci sono commit nuovi non ancora narrativizzati. Se ci sono, genera automaticamente una bozza di episodio. Non perfetta — una bozza. Il materiale grezzo che mantiene vivo il filo narrativo.
+
+Domani mattina apri e trovi già un draft. Ci metti 20 minuti a renderlo pubblicabile. Senza lo story agent, quel materiale esiste solo nel git log — leggibile tecnicamente, opaco narrativamente.
+
+Il sistema non scrive al posto tuo. Cattura il materiale perché non scompaia.
+
+---
+
+## CHIUSURA
+
+Il gap 25 marzo → 27 maggio è chiuso.
+
+Non perché abbiamo recuperato tutto quello che c'era — ma perché ora il sistema cattura automaticamente ciò che succede. Nessun episodio futuro andrà perso per mancanza di tempo o energia.
+
+Quello che è successo in quei 63 giorni ha formato la macchina che hai adesso. Ha formato la decisione del corpo unico. Ha formato i dati su cui si basa il V8. Ha formato le mani che tengono il calibro.
+
+Non è andato perso del tutto. È nei pezzi.
+
+Ma la prossima volta che passi 63 giorni in officina senza documentare, lo story agent ci sarà. E almeno il contesto dei commit — cosa hai cambiato, quando, perché — sarà lì, narrativizzato, pronto.
+
+> *Il sistema che costruisci oggi deve catturare il lavoro che farai domani.*
+> *Non puoi fidarti della memoria. Puoi fidarti del codice che gira mentre dormi.*
+
+---
+
+**reel_hook:** "Ho guardato il mio git log e ho trovato un buco. 25 marzo → 27 maggio. 63 giorni. Un commit. Non perché non lavoravo — lavoravo ogni giorno in officina su Config G. Ma il lavoro fisico non ha un git commit. Non ha un documento. Non ha un episodio. Sessanta-tre giorni di decisioni, fallimenti, insight — persi. Non completamente: ci sono le foto, i CAD, le misure. Ma la storia — perché hai fatto quella scelta, cosa hai provato prima, cosa non ha funzionato — quella non c'è. Ho costruito uno story agent automatico. Ogni fine sessione verifica i commit nuovi e genera una bozza. Non per scrivere al posto mio — per non perdere il materiale."
+
+---
+
+| Campo | Dettaglio |
+|-------|-----------|
+| Stagione | S2 — Il Sistema che Impara |
+| Episodio | 05 — chiusura stagione |
+| Arco | Il costo del silenzio → la risposta automatica |
+| Meta | Questo episodio è la ragione per cui story_agent esiste |
+| Connessione S3 | S3 inizia con il sistema completamente automatizzato — niente più gap |`,
+  },
+  {
+    id: "MOM_01_LA_PRIMA_AUTOMAZIONE",
+    title: "La Prima Automazione",
+    sottotitolo: "Il sistema che scrive sé stesso",
+    stagione: "MOM",
+    stagione_label: "Momenti",
+    data_evento: "2026-03-22",
+    tags: ["narrativo", "mom", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "22 marzo 2026. Il sistema genera il suo primo episodio podcast da solo. Non da solo nel senso poetico. Da solo nel senso tecnico: `milestone_to_episode.py` legge un milestone da `STATE.json`, costruisce un prompt XML con",
+    content: `# MOMENTO — La Prima Automazione
+### "Il sistema che scrive sé stesso"
+
+**Formato:** Momento breve | 5-7 min | Inseribile tra S1_05 e S2_00
+**Data:** 22 marzo 2026
+**Fonte:** Commit \`feat: Content Engine v2 — dual-pass prompt + XML + few-shot + dataset fix\`
+
+---
+
+22 marzo 2026. Il sistema genera il suo primo episodio podcast da solo.
+
+Non da solo nel senso poetico. Da solo nel senso tecnico: \`milestone_to_episode.py\` legge un milestone da \`STATE.json\`, costruisce un prompt XML con few-shot examples, chiama Claude Haiku per la prima bozza, poi Claude Sonnet per il raffinamento, e produce un file markdown completo con \`reel_hook\` incluso.
+
+Due passaggi. Due modelli. Un episodio.
+
+Il punto non è la qualità dell'episodio — è che il processo è replicabile. Ogni volta che un milestone viene verificato e aggiunto a STATE.json, il sistema può generare il contenuto corrispondente senza che tu scriva una parola. Il lavoro fisico in officina diventa automaticamente narrazione digitale. 1 input → N output.
+
+Quel giorno vengono generati 22 episodi da 22 milestone già presenti in STATE.json. Ventidue episodi che stavano aspettando di essere scritti da quando i milestone erano stati verificati. Il sistema ha colmato il gap in una sessione.
+
+Il dataset.jsonl — il file di training per il LLM personale — cresce di 22 esempi.
+
+Non stai solo documentando il progetto. Stai costruendo il dataset che addestrerà il modello che documenterà il progetto successivo.
+
+**reel_hook:** "22 marzo 2026. Ho aggiunto l'ultimo milestone a STATE.json. Poi ho eseguito uno script. Due minuti dopo avevo 22 episodi podcast pronti, scritti da zero. Non da un template — da una pipeline dual-pass: Claude Haiku per la bozza grezza, Claude Sonnet per il raffinamento. Ogni episodio aveva il reel_hook. Ogni episodio alimentava il dataset di training. Ho capito lì che il Content Engine non era un tool per creare contenuto. Era un loop: costruisci → documenta → genera → pubblica → impara → costruisci meglio."
+
+---
+*Stagione: S1.5 — Il Gap | Posizione: dopo S1_05, prima S2_00*`,
+  },
+  {
+    id: "MOM_02_LA_MAPPA",
+    title: "La Mappa",
+    sottotitolo: "La prima volta che il sistema si vede da fuori",
+    stagione: "MOM",
+    stagione_label: "Momenti",
+    data_evento: "2026-03-25",
+    tags: ["narrativo", "mom", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "C'è un momento preciso in cui un sistema smette di essere una lista di file e diventa qualcosa che puoi guardare. Per TITANIUM_OS quel momento è il 18 marzo 2026. NeuroMap — una visualizzazione immersiva dell'ecosistema.",
+    content: `# MOMENTO — La Mappa
+### "La prima volta che il sistema si vede da fuori"
+
+**Formato:** Momento breve | 5-7 min | Inseribile tra S1_05 e S2_00
+**Data:** 18-25 marzo 2026
+**Fonte:** Commit \`feat: TITANIUM_OS v3.2 — NeuroMap immersivo\` + \`feat: Dashboard v5.0\`
+
+---
+
+C'è un momento preciso in cui un sistema smette di essere una lista di file e diventa qualcosa che puoi guardare.
+
+Per TITANIUM_OS quel momento è il 18 marzo 2026. NeuroMap — una visualizzazione immersiva dell'ecosistema. Non un diagramma statico — un grafo interattivo dove ogni nodo è un componente, ogni arco è una dipendenza, e puoi navigare cliccando.
+
+V32 → VULCAN → MIMS. GENESIS → RAG → Claude. EVA → Maria → Vita Natura. I pilastri non sono categorie su una lista. Sono nodi in uno spazio. Le frecce mostrano chi dipende da chi. Puoi vedere dove si concentra la complessità, dove il sistema è fragile, dove è ridondante.
+
+Una settimana dopo, il 25 marzo, arriva Dashboard v5.0 — Zustand, TanStack Query, navigazione guidata tra view. Il NeuroMap diventa parte di qualcosa di più grande: la Tela. Non solo una mappa — un cockpit. Puoi aprire la dashboard e vedere lo stato di ogni pilastro, i commit recenti, i blockers, il daily brief.
+
+Prima di quella data il sistema esisteva ma non si vedeva. Era distribuito in file, commit, note, conversazioni. Dopo quella data puoi aprire un browser, e il sistema è lì — tutto insieme, navigabile, comprensibile in 10 secondi.
+
+Questo è il tipo di investimento che sembra ridondante finché non smetti di farlo. Poi ti accorgi di stare lavorando alla cieca.
+
+**reel_hook:** "Per sei mesi avevo costruito TITANIUM_OS senza mai vederlo tutto insieme. V32, MIMS, GENESIS, EVA — esistevano come cartelle e file, non come sistema. Il 18 marzo ho costruito NeuroMap: grafo interattivo, nodi cliccabili, dipendenze visibili. Per la prima volta ho visto dove il sistema era fragile, dove era ridondante, dove mancava un collegamento che avevo già pianificato ma non ancora costruito. Sette giorni dopo: Dashboard v5.0, cockpit completo. Apertura: 10 secondi per capire tutto. Prima: 5 minuti di ricostruzione mentale ogni sessione. Non costruire un sistema senza prima costruire la sua rappresentazione."
+
+---
+*Stagione: S1.5 — Il Gap | Posizione: dopo S1_05, prima S2_00*`,
+  },
+  {
+    id: "MOM_03_L_ESERCITO",
+    title: "L'Esercito",
+    sottotitolo: "Otto esperti che non dormono mai",
+    stagione: "MOM",
+    stagione_label: "Momenti",
+    data_evento: "2026-05-28",
+    tags: ["narrativo", "mom", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "28 maggio 2026. Una sessione. Otto agenti. TESLA — tecnico elettrico industriale. CEI, IEC, VFD monofase→trifase per motori CNC. Dimensiona cavi, coordina protezioni, avvisa sui rischi. FORGE — ingegnere meccanico. S235,",
+    content: `# MOMENTO — L'Esercito
+### "Otto esperti che non dormono mai"
+
+**Formato:** Momento breve | 5-7 min | Inseribile tra S2_02 e S2_03
+**Data:** 28 maggio 2026
+**Fonte:** Commit \`feat: Sistema Agenti Validatori — 8 agenti in agents_db.json\`
+
+---
+
+28 maggio 2026. Una sessione. Otto agenti.
+
+TESLA — tecnico elettrico industriale. CEI, IEC, VFD monofase→trifase per motori CNC. Dimensiona cavi, coordina protezioni, avvisa sui rischi.
+
+FORGE — ingegnere meccanico. S235, TIG/MIG, IT6-IT7, Epoxy Granite, vibrazioni. Parla in mm e kg. Se qualcosa non torna lo dice senza diplomazia.
+
+AQUA — esperto acquaponica. Ciclo azoto, NFT/DWC, bioreattori, microalghe. Bilancia scienza e DIY.
+
+LEX — consulente normativo. Direttiva CE 2006/42/CE, marcatura CE, brevetti IT/EU, GDPR. Cita la norma, distingue obbligo da raccomandazione.
+
+SIEMENS — programmatore PLC. TIA Portal, LAD/FBD/SCL, motion control, Profibus/Profinet. Scrive snippet di logica quando serve.
+
+THEMIS — analista TITANIUM_OS. Valida il progetto completo su tre assi: Lex Physica, Lex Mercatoria, Lex Aesthetica. Zero ambiguità.
+
+ARIA — ADHD scaffolding. Strutture esterne, time blocking, reset cognitivo. In sviluppo.
+
+EVA — WhatsApp automation. La logica di Maria: zero-click, complessità nascosta, semplice magia. In sviluppo.
+
+Sono definiti in \`agents_db.json\` — un file. Se aggiungi un agente, non tocchi il codice. Se cambi il tono di uno, non tocchi il codice. Il sistema legge il database all'avvio e carica l'agente con la persona giusta.
+
+La cosa più importante non è che esistono — è che sono specializzati. Non "chiedi a Claude una domanda tecnica". "Chiedi a FORGE se la sezione 60x60 regge il carico dinamico durante la fresatura a 24.000 giri". La risposta è diversa. È contestualizzata. È della persona giusta.
+
+Da quel giorno, quando hai un dubbio tecnico, hai un esperto a disposizione in 30 secondi.
+
+**reel_hook:** "Ho avuto un dubbio sul VFD per il mandrino trifase. Ho chiesto a TESLA. Risposta: 14 righe tecniche, normativa CEI specifica, avviso sui rischi di sovratensione al frenaggio rigenerativo. 40 secondi. Nessuna ricerca su Google. Nessuna attesa. TESLA è uno degli otto agenti di TITANIUM_OS — ognuno specializzato in un dominio: elettrica, meccanica, acquaponica, normativa, PLC, analisi sistemica. Sono definiti in un JSON. Chiamati da CLI. Integrati nel RAG. Il prossimo passo: vederli nella dashboard."
+
+---
+*Stagione: S2 — Il Sistema | Posizione: tra S2_02 e S2_03*`,
+  },
+  {
+    id: "MOM_04_IL_DOCUMENTO_MASTER",
+    title: "Il Documento Master",
+    sottotitolo: "Da sei file a uno. Da chaos a struttura.",
+    stagione: "MOM",
+    stagione_label: "Momenti",
+    data_evento: "2026-05-27",
+    tags: ["narrativo", "mom", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "27 maggio 2026. ASSOLUTO V7 nasce da una fusione. Non da una riscrittura — da una fusione. Sei documenti separati che nel tempo si erano accumulati — versioni diverse, note sparse, capitoli isolati — diventano un file un",
+    content: `# MOMENTO — Il Documento Master
+### "Da sei file a uno. Da chaos a struttura."
+
+**Formato:** Momento breve | 5-7 min | Inseribile tra S1_05 e S2_00
+**Data:** 27 maggio 2026
+**Fonte:** Commit \`feat: ASSOLUTO V7 — documento master unico + PDF generatore\`
+
+---
+
+27 maggio 2026. ASSOLUTO V7 nasce da una fusione.
+
+Non da una riscrittura — da una fusione. Sei documenti separati che nel tempo si erano accumulati — versioni diverse, note sparse, capitoli isolati — diventano un file unico. Dieci ATTI. Struttura fissa. Una sola fonte di verità.
+
+Il problema che risolve è sottile ma devastante per chi lavora con ADHD: quando la conoscenza è distribuita in sei file, ogni sessione inizia con una fase di ricostruzione. Dove avevo scritto quella cosa? In quale versione? Quale era l'ultima? Quella fase di ricostruzione prende 10-20 minuti. Non è tempo buttato — è tempo che sottrae a ciò che conta.
+
+ASSOLUTO V7 risolve questo con una regola semplice: tutto è lì. Dati verificati fisicamente. Decisioni strutturali con data. Specifiche tecniche con fonte. Se non è in ASSOLUTO, non è parte del progetto ufficiale.
+
+178 kg — corpo unico. ±0.019 mm — precisione RSS. EUR 2.250 — investimento totale. ROI Anno 1: 322%. BEP: 61 ore. Target capannone: 15 luglio 2030.
+
+Non sono stime. Sono dati verificati con calibro, sensore IFM, foglio Excel. Il documento non è aspirazionale — è un inventario di guerra.
+
+V7 diventa anche il documento che le persone citano quando parlano del framework. Non per il contenuto tecnico — per il metodo: come si costruisce un ecosistema da zero documentando ogni decisione nel momento in cui viene presa, con i dati disponibili in quel momento, senza aspettare la versione "definitiva".
+
+**reel_hook:** "Ho avuto sei file con la documentazione del mio progetto. ASSOLUTO V1 scritto in una notte. V3 con i dati delle molle. V5 con il BEP. V6 con le foto. Nessuno era completo. Tutti erano parzialmente veri. Il 27 maggio li ho fusi in ASSOLUTO V7: dieci ATTI, dati verificati, struttura fissa. Una sola fonte di verità. La settimana dopo le persone iniziavano a citarlo come framework, non come spec tecnica. La differenza tra un documento e un framework è semplice: il framework descrive il metodo, non solo il risultato."
+
+---
+*Stagione: S1.5 — Il Gap | Posizione: tra S1_05 e S2_00*`,
+  },
+  {
+    id: "MOM_05_CONFIG_A_G",
+    title: "Config A→G",
+    sottotitolo: "Sette configurazioni per trovare quella giusta",
+    stagione: "MOM",
+    stagione_label: "Momenti",
+    data_evento: "2026-05-31",
+    tags: ["narrativo", "mom", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Config G non è la prima configurazione. È la settima. A→B→C→D→E→F→G. Sette versioni della stessa architettura, ognuna con una ragione per esistere e una ragione per essere superata. Config A era il piano originale: guide",
+    content: `# MOMENTO — Config A→G
+### "Sette configurazioni per trovare quella giusta"
+
+**Formato:** Momento breve | 5-7 min | Inseribile tra S1_02 e S1_03
+**Data:** febbraio → maggio 2026
+**Fonte:** V8_DELTA.md + STATE.json + sessioni V32
+
+---
+
+Config G non è la prima configurazione. È la settima.
+
+A→B→C→D→E→F→G. Sette versioni della stessa architettura, ognuna con una ragione per esistere e una ragione per essere superata.
+
+Config A era il piano originale: guide Z sulle colonne, portale fisso, piastra porta-mandrino standard. Pulito sulla carta. Problematico nella realtà — le colonne a 40x40 non reggevano la rigidità necessaria per IT6 con carico dinamico.
+
+Config B aggiungeva rinforzi laterali. Riduceva il problema, non lo eliminava.
+
+Config C cambiava la geometria del portale. Migliore rigidità. Vincoli di altezza XY non rispettati (≥300mm guide Z richiesti, non ottenibili con quella geometria).
+
+Config D tornava indietro su alcune scelte di C, provava colonne 60x60. Primo commit fisico verificato.
+
+Config E introduceva le molle — isolamento vibrazioni passivo. Funzionava. Aggiungeva un grado di libertà che avrebbe creato variabili nel lungo periodo.
+
+Config F era un'ottimizzazione di E con piastre XY ridisegnate. Quasi lì.
+
+Config G — quella attuale — abbandona le molle, adotta corpo unico, aggiunge gusset 200mm sulle colonne Z+U, diagonali, tiranti M10. Epoxy Granite nel fill. Rigidità asse Z: 772 volte la baseline. Smorzamento: δ=0.03-0.06.
+
+Il punto non è che ci sono volute sette configurazioni. Il punto è che ogni configurazione era la risposta corretta alle informazioni disponibili in quel momento. Non c'era un modo per saltare da Config A a Config G senza passare per B, C, D, E, F. Ogni step rivelava qualcosa che il precedente non poteva mostrare.
+
+Questo è il processo reale dell'ingegneria: non trovare la soluzione perfetta al primo tentativo, ma creare un sistema in cui ogni tentativo insegna qualcosa che il tentativo successivo può usare.
+
+**reel_hook:** "Ho progettato la mia CNC sette volte. Non perché avevo sbagliato — perché ogni versione mi dava informazioni che la versione precedente non poteva darmi. Config A→F hanno preso da gennaio a maggio 2026. Config G ha preso due settimane. Non le sei prima erano tempo sprecato: erano il costo di acquisizione delle informazioni necessarie per fare Config G nel modo giusto. Se hai un processo che non funziona e lo rifaresti uguale, stai sprecando tempo. Se ogni iterazione ti insegna qualcosa di nuovo, stai investendo."
+
+---
+*Stagione: S1 — Il Presente | Posizione: tra S1_02 (Il Reattore) e S1_03 (Il Paradosso)*`,
+  },
+  // RECOVERED_END
   // AUTO_GENERATED_START
   {
     id: "EP_AUTO_00",
