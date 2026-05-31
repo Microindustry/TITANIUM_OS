@@ -78,11 +78,12 @@ function PillarGrid({ state, onEnter }: { state: any; onEnter: (id: RoomId, labe
           glow: "0 0 40px #94a3b815", room: "home" as RoomId, gradient: "from-slate-800/80 to-slate-900/90"
         };
         const progress = pct(p);
-        const statusText = p?.status === "in_progress" ? "IN CORSO"
-          : p?.status === "waiting_v32" ? "IN ATTESA"
-          : p?.status === "building" ? "BUILDING"
-          : p?.status === "active" ? "ATTIVO"
-          : p?.status ?? "";
+        const rawStatus = String(p?.status ?? "");
+        const statusText = rawStatus === "in_progress" ? "IN CORSO"
+          : rawStatus.startsWith("waiting") ? "IN ATTESA"
+          : rawStatus === "building" ? "BUILDING"
+          : rawStatus === "active" ? "ATTIVO"
+          : rawStatus.toUpperCase();
 
         return (
           <button
@@ -605,7 +606,7 @@ export const PILLARS_DATA = [
   { label: "MIMS",        pct: 30, bar: "bg-amber-500",   note: "Attende V32→VULCAN", atto: "III" },
   { label: "GENESIS",     pct: 55, bar: "bg-cyan-500",    note: "Stack operativo",    atto: "V" },
   { label: "VITA NATURA", pct: 40, bar: "bg-indigo-400",  note: "EVA pilot",          atto: "IV" },
-  { label: "IDENTITY",    pct: 35, bar: "bg-slate-500",   note: "Content Engine v2",  atto: "—" },
+  { label: "IDENTITY",    pct: 50, bar: "bg-slate-500",   note: "Content Engine v2",  atto: "—" },
 ];
 export function CellFocusStandalone()   { return null; }
 export function CellCicloStandalone()   { return null; }

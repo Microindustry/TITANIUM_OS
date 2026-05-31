@@ -54,7 +54,7 @@ export const GENESIS_ROOT: SkillNode = {
           id: "dashboard", label: "Dashboard", icon: "📊", status: "active", ...cyan,
           note: "React + Vite · porta 5173 · questa UI",
           children: [
-            leaf("db01", "React 18 + Vite + TypeScript + Tailwind", "active"),
+            leaf("db01", "React 19 + Vite + TypeScript + Tailwind", "active"),
             leaf("db02", "TanStack Query — stato condiviso, zero fetch duplicati", "active"),
             leaf("db03", "Zustand — UI store (view, sidebar, scroll)", "active"),
             leaf("db04", "NavStack N-livelli — pattern universale dashboard", "active", "Usato da: MatteoSection, MimsSection, GenesisSection"),
@@ -64,13 +64,18 @@ export const GENESIS_ROOT: SkillNode = {
 
         {
           id: "mcp", label: "MCP Server", icon: "🤖", status: "active", ...cyan,
-          note: "5 tool nativi — Claude abita nell'ecosistema",
+          note: "10 tool nativi · v1.4 — Claude abita nell'ecosistema",
           children: [
-            leaf("mcp01", "get_state — legge STATE.json live", "active"),
-            leaf("mcp02", "update_milestone — aggiorna milestone + commit", "active"),
-            leaf("mcp03", "search_mente — RAG query da Claude", "active"),
-            leaf("mcp04", "update_session_context — aggiorna RIAVVIO_SESSIONE.txt", "active"),
-            leaf("mcp05", "run_script — esegue script Python del sistema", "active"),
+            leaf("mcp01", "get_state — legge STATE.json live (milestone, pilastri, blockers)", "active"),
+            leaf("mcp02", "update_milestone — aggiorna milestone/pilastri/blockers + commit", "active"),
+            leaf("mcp03", "search_mente — RAG ibrido query da Claude", "active"),
+            leaf("mcp04", "get_daily_brief — brief mattutino on-demand", "active"),
+            leaf("mcp05", "list_content_ready — file pronti in CONTENT_ENGINE", "active"),
+            leaf("mcp06", "nexus — orchestratore swarm multi-agente (rag+research+state)", "active"),
+            leaf("mcp07", "rag_update — update incrementale ChromaDB dopo MENTE/", "active"),
+            leaf("mcp08", "update_session_context — DATA/session_context.json", "active"),
+            leaf("mcp09", "screen_action — ARGUS agente visivo desktop (griglia 20x15)", "active"),
+            leaf("mcp10", "save_session — salva decisioni in MENTE/SESSIONI/ per RAG", "active"),
           ],
         },
 
@@ -114,6 +119,7 @@ export const GENESIS_ROOT: SkillNode = {
             leaf("rag04", "Reciprocal Rank Fusion (k=60) — merge semantico+keyword", "active"),
             leaf("rag05", "rag-update incrementale (<20s) / rag-rebuild completo", "active"),
             leaf("rag06", "Sorgente: MENTE/ — ogni doc aggiunto è memoria permanente", "active"),
+            leaf("rag07", "Graph-aware — rag_graph.py networkx: nodi+archi, catene V32→MIMS→VITA_NATURA", "active", "Layer grafo sopra l'engine v4.0 hybrid"),
           ],
         },
 
@@ -125,7 +131,7 @@ export const GENESIS_ROOT: SkillNode = {
             leaf("ag02", "EVA — WhatsApp bot Maria — prenotazioni Vita Natura", "blocked", "WhatsApp pilot PENDING"),
             leaf("ag03", "AVA — YouTube avatar — script, reel, contenuti", "future"),
             leaf("ag04", "ARIA — Life OS, ADHD scaffolding, scheduling", "future"),
-            leaf("ag05", "NEXUS — orchestratore multi-agente", "future"),
+            leaf("ag05", "NEXUS — orchestratore swarm multi-agente", "active", "Live: NODES/NEXUS/nexus.py + tool MCP 'nexus' — ThreadPoolExecutor parallelo"),
             leaf("ag06", "TESLA — hardware IoT, sensori, CNC monitoring", "future"),
             leaf("ag07", "FORGE — officina AI, saldatura, progettazione meccanica", "future"),
           ],
@@ -265,7 +271,7 @@ export const GENESIS_ROOT: SkillNode = {
         {
           id: "gr_next", label: "Prossimo", icon: "📈", status: "future", ...slate,
           children: [
-            leaf("gr05", "NEXUS — orchestratore multi-agente", "future"),
+            leaf("gr05", "NEXUS swarm — live v1.0 (NODES/NEXUS + tool MCP)", "done"),
             leaf("gr06", "TESLA — monitoring CNC IoT in tempo reale", "future"),
             leaf("gr07", "FORGE — AI officina: saldatura + progettazione", "future"),
             leaf("gr08", "LLM fine-tuned su episodi TITANIUM_OS", "future"),

@@ -61,16 +61,16 @@ const SYSTEM_TREE: MapNode[] = [
   },
   {
     id: "GENESIS", label: "GENESIS", type: "pillar", status: "active", pillar: "GENESIS",
-    desc: "OS digitale · API Flask · Dashboard React · RAG v4.0 · MCP 5 tool · n8n", pct: 83, hasChildren: true,
+    desc: "OS digitale · API Flask · Dashboard React 19 · RAG v4.0+graph · MCP 10 tool · n8n", pct: 83, hasChildren: true,
     children: [
       {
         id:"gen-infra", label:"INFRA", type:"node", status:"active", pillar:"GENESIS", pct:90,
-        desc:"API Flask 5001 · Dashboard React 5173 · MCP Server 5 tool · n8n 5678 · Git/GitHub",
+        desc:"API Flask 5001 · Dashboard React 5173 · MCP Server 10 tool · n8n 5678 · Git/GitHub",
         hasChildren:true,
         children: [
           { id:"gi-api",  label:"API SERVER", type:"leaf", status:"active", pillar:"GENESIS", desc:"/api/state · /api/rag/* · /api/brief · /api/scan · Flask Python 3.11", isLeaf:true },
-          { id:"gi-dash", label:"DASHBOARD",  type:"leaf", status:"active", pillar:"GENESIS", desc:"React 18 + Vite + TypeScript + Tailwind · TanStack Query · Zustand store", isLeaf:true },
-          { id:"gi-mcp",  label:"MCP SERVER", type:"leaf", status:"active", pillar:"GENESIS", desc:"5 tool: get_state · update_milestone · search_mente · update_session · run_script", isLeaf:true },
+          { id:"gi-dash", label:"DASHBOARD",  type:"leaf", status:"active", pillar:"GENESIS", desc:"React 19 + Vite + TypeScript + Tailwind · TanStack Query · Zustand store", isLeaf:true },
+          { id:"gi-mcp",  label:"MCP SERVER", type:"leaf", status:"active", pillar:"GENESIS", desc:"10 tool v1.4: get_state · update_milestone · search_mente · get_daily_brief · list_content_ready · nexus · rag_update · update_session_context · screen_action · save_session", isLeaf:true },
           { id:"gi-n8n",  label:"N8N",        type:"leaf", status:"active", pillar:"GENESIS", desc:"13 workflow attivi + 14 pipeline · porta 5678 · orchestratore eventi locali", isLeaf:true },
         ],
       },
@@ -79,7 +79,7 @@ const SYSTEM_TREE: MapNode[] = [
         desc:"RAG v4.0 hybrid BM25+semantic+CrossEncoder · 7 agenti pianificati · Daily Brief",
         hasChildren:true,
         children: [
-          { id:"gi-rag",   label:"MENTE RAG",  type:"leaf", status:"active",  pillar:"GENESIS", desc:"ChromaDB + BM25 + CrossEncoder + RRF k=60 · multilingual 384-dim · chunk 512/200", isLeaf:true },
+          { id:"gi-rag",   label:"MENTE RAG",  type:"leaf", status:"active",  pillar:"GENESIS", desc:"v4.0 hybrid: ChromaDB + BM25 + CrossEncoder + RRF k=60 · multilingual 384-dim · chunk 512/200 · + layer grafo rag_graph.py networkx", isLeaf:true },
           { id:"gi-themis",label:"THEMIS",      type:"leaf", status:"active",  pillar:"GENESIS", desc:"Claude Sonnet · codice + analisi · MCP tools · sessioni continue", isLeaf:true },
           { id:"gi-eva",   label:"EVA",         type:"leaf", status:"pending", pillar:"GENESIS", desc:"WhatsApp bot Maria · prenotazioni Vita Natura · n8n workflow · PENDING", isLeaf:true },
           { id:"gi-brief", label:"DAILY BRIEF", type:"leaf", status:"active",  pillar:"GENESIS", desc:"Script Python → DATA/daily_brief_last.md · STATE + RAG + meteo", isLeaf:true },
@@ -94,7 +94,7 @@ const SYSTEM_TREE: MapNode[] = [
     id: "VITA_NATURA", label: "VITA NATURA", type: "pillar", status: "active", pillar: "VITA_NATURA",
     desc: "Centro estetico Maria · Boffalora s/T (MI) · EVA WhatsApp bot · Google integrations", pct: 40, hasChildren: true,
     children: [
-      { id:"vn-eva",      label:"EVA BOT",  type:"leaf", status:"building", pillar:"VITA_NATURA", pct:40,  desc:"n8n workflow · WhatsApp Business API · risposte automatiche · Maria Rule", isLeaf:true },
+      { id:"vn-eva",      label:"EVA BOT",  type:"leaf", status:"pending",  pillar:"VITA_NATURA", pct:40,  desc:"n8n workflow · WhatsApp Business API (setup pending) · risposte automatiche · Maria Rule", isLeaf:true },
       { id:"vn-calendar", label:"CALENDAR", type:"leaf", status:"active",   pillar:"VITA_NATURA", pct:100, desc:"Google Calendar MCP · legge/crea eventi · integrato in Claude Code", isLeaf:true },
       { id:"vn-gmail",    label:"GMAIL",    type:"leaf", status:"active",   pillar:"VITA_NATURA", pct:100, desc:"Gmail MCP · search, draft, labels · benenatimatteo.mb@gmail.com live", isLeaf:true },
       { id:"vn-sito",     label:"SITO WEB", type:"leaf", status:"pending",  pillar:"VITA_NATURA", pct:20,  desc:"Sito centro estetico · prenotazioni online · SEO locale · in sviluppo", isLeaf:true },
