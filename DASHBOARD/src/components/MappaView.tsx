@@ -61,7 +61,7 @@ const SYSTEM_TREE: MapNode[] = [
   },
   {
     id: "GENESIS", label: "GENESIS", type: "pillar", status: "active", pillar: "GENESIS",
-    desc: "OS digitale · API Flask · Dashboard React 19 · RAG v4.0+graph · MCP 10 tool · n8n", pct: 83, hasChildren: true,
+    desc: "OS digitale · API Flask · Dashboard React 19 · RAG v4.0+graph · MCP 10 tool · n8n", pct: 55, hasChildren: true,
     children: [
       {
         id:"gen-infra", label:"INFRA", type:"node", status:"active", pillar:"GENESIS", pct:90,

@@ -1,53 +1,52 @@
-=== RIAVVIO SESSIONE #16 — 31/05/2026 ===
+=== RIAVVIO SESSIONE #16 — 31/05/2026 20:19 ===
 Ultima sessione: #15 — 2026-05-31
 
-━━━ AUDIT OPUS 4.8 (questa sessione) ━━━
-Audit tecnico completo dashboard + dati live. criticheData.ts v2.0: +18 findings verificate (au01-au18), 2 critiche chiuse (gc02 TS pulito exit 0, v32c06 V32 coerente), 3 corrette (gc01/gc05/gc10). tsc --noEmit pulito.
-ROOT CAUSE trovata (au18): MappaView ridefinisce SYSTEM_TREE a mano invece di importare genesisData/mimsData/skillTreeData → ogni dato vive in 2 posti → causa di TUTTE le divergenze pct/status.
-TOP findings: STATE.blockers era [] vuoto mentre 2 blocker reali → dashboard mentiva (FIXATO in STATE.json). session_count=6 ma sei a #15. active_milestone fermo a 9 sessioni fa. GENESIS pct = 10/55/83 in 3 file. EVA = 4 status diversi. MCP 5 tool scritti vs 7 reali. RAG v4.0 scritto vs v5.0 graph reale. React 18 scritto vs 19 installato.
-
-━━━ STAVAMO PARLANDO DI (sessione 15) ━━━
-Costruito NEXUS swarm orchestrator v1.0 (NODES/NEXUS/nexus.py), RAG graph-aware v5.0 con networkx (114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA), MCP v1.3 con tool nexus + rag_update + save_session. Watchdog swarm parallelo v1.3. Fix vault env in Task Scheduler per task notturni.
+━━━ STAVAMO PARLANDO DI ━━━
+Audit tecnico Opus completo della dashboard + dati live: 18 findings in criticheData.ts, fix di 8 incoerenze (MCP 10 tool reali, React 19, NEXUS live, RAG graph, EVA status, waiting_press, IDENTITY 50, GENESIS 55). Sistemato il sistema di handoff sessione: generate_restart_prompt.py ora e' SELF-HEALING (deriva da git se session_context e' stale). Fix git credential helper (manager-core->manager + gh setup-git) e profilo PowerShell de-hardcodato.
 
 ━━━ TOPIC ATTIVI ━━━
-  • NEXUS swarm orchestrator
-  • RAG graph-aware v5.0
-  • MCP v1.3 — 7 tool
-  • Watchdog swarm v1.3
-  • Fix task notturni vault env
+  • Audit criticheData v2.0 — 18 findings au01-au18
+  • Fix incoerenze dati: MCP 10 tool, React 19, NEXUS live, RAG graph
+  • RIAVVIO self-healing — auto-deriva da git se context stale
+  • Git push bloccato in sandbox — pushare dal terminale reale
+  • Profilo PS de-hardcodato + credential helper fixato
+  • Strutturare STORIE (episodi) + VERSIONI GitHub
 
 ━━━ THREAD APERTI (da riprendere) ━━━
+  → Push manuale dei commit locali: git push origin main
+  → GENESIS pct: deciso 55 — confermare o ricalibrare
+  → Refactor au18: MappaView deve importare i data file invece di duplicare SYSTEM_TREE
+  → Strutturare STORIE: story_agent + storieData.ts
+  → Strutturare VERSIONI GitHub: changelog + tag/release
   → EVA WhatsApp pilot — WhatsApp Business API setup pending
-  → AgentsView log Claude->agenti (non chat Matteo->agente)
-  → GitHub profile pubblico + CV aggiornato AI skills
-  → Gusset 200mm saldatura Z sinistra (fisico, la Taverna)
-  → Decisione silent blocks v.A (senza) vs v.B (con 18mm) — prerequisito V8
+  → Decisione silent blocks v.A vs v.B — prerequisito V8
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
-  ✓ NEXUS usa ThreadPoolExecutor per parallelismo agenti
-  ✓ RAG graph networkx — 114 nodi, 218 archi
-  ✓ MCP v1.3: 7 tool totali
-  ✓ Logging centralizzato CORE/log.py — 34 file aggiornati
+  ✓ GENESIS pct unificato a 55 (il 10 in STATE era errore: contava solo i nodi done)
+  ✓ EVA status unificato a pending (WhatsApp API setup)
+  ✓ Credential helper git: manager + gh auth setup-git (era manager-core rotto)
+  ✓ RIAVVIO self-healing invece di dipendere dal tool MCP update_session_context
+  ✓ MCP server ha 10 tool reali (v1.4), non 5 ne 7
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Sistema continuita sessione — RIAVVIO_SESSIONE.txt + stop hook
+  Strutturare STORIE (episodi) e VERSIONI GitHub; pushare i 6 commit locali dal terminale reale
 
 ━━━ BLOCKERS ━━━
-  ⚠ Mandrino 2.2kW ER20 da ordinare
-  ⚠ Silent blocks: decisione v.A vs v.B
+  ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
+  ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
 ━━━ STATO PILASTRI ━━━
   V32: 65% — 
   MIMS: 30% — 
-  GENESIS: 10% — 
+  GENESIS: 55% — 
   VITA_NATURA: 40% — 
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
-8baf2ff feat: MappaView v5.0 -- cerchi SVG radiali N-livelli drill-down
-821bfda feat: MappaView v4.0 -- navStack tile N-livelli, no force-graph
-0dcddfa feat: GenesisSection v1.0 -- N-livelli OS digitale
-100a7b7 feat: MIMS dati tecnici N+1 + Identity in home sinistra
-2ba53f2 session: salvataggio sessione 18 -- MimsSection N-livelli + pattern architettonico
+c836eae docs: header MCP server elenca i 10 tool reali (era 5)
+17661e4 fix: risolve 7 incoerenze dati da audit (MCP 10 tool, React 19, NEXUS live, RAG graph, EVA, waiting_press)
+ec92e45 feat: critiche audit Opus 2026-05-31 -- 18 nuove findings + fix STATE.blockers
+f8953cd session: salvataggio sessione 19 -- CriticheSection + MappaView cerchi + GenesisSection
+77b243e feat: CriticheSection v1.0 -- audit N-livelli per progetto
 
-Generato: 31/05/2026 15:58
+Generato: 31/05/2026 20:19
