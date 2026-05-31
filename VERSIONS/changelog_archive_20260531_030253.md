@@ -1,4 +1,0 @@
-# TITANIUM_OS — CHANGELOG
-*Archiviato: changelog_archive_20260531_030253.md*
-
-- `2026-05-30 15:08:27` ✏️ MODIFIED — DOCS\TITANIUM_OS_V1.md

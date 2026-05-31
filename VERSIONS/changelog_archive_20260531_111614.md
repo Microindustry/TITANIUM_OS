@@ -1,4 +1,0 @@
-# TITANIUM_OS — CHANGELOG
-*Archiviato: changelog_archive_20260531_111614.md*
-
-- `2026-05-30 20:17:53` ✏️ MODIFIED — DATA\views\DASHBOARD__TITANIUM_MANIFESTO.md.json
