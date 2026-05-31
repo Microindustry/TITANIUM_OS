@@ -11,6 +11,7 @@ import { useGlobalState } from "../hooks/SystemStateContext";
 import { useUIStore } from "../stores/systemStore";
 import { MatteoSection } from "./MatteoSection";
 import { MimsSection } from "./MimsSection";
+import { GenesisSection } from "./GenesisSection";
 import { ClaudeSection } from "./ClaudeSection";
 
 // ── API helper ────────────────────────────────────────────────────────────────
@@ -329,88 +330,10 @@ function V32Room({ state }: { state: any }) {
 }
 
 // ── ROOM: GENESIS ─────────────────────────────────────────────────────────────
-function GenesisRoom({ state }: { state: any }) {
-  const p = state?.pillars?.GENESIS ?? {};
-  const progress = pct(p);
-  const nodes = state?.nodes ?? {};
-  const activeNodes = Object.entries(nodes).filter(([, v]) => String(v).includes("ATTIVO"));
-  const pendingNodes = Object.entries(nodes).filter(([, v]) => !String(v).includes("ATTIVO"));
-
+function GenesisRoom(_: { state: any }) {
   return (
-    <div className="space-y-4">
-      {/* Header */}
-      <div className="bg-cyan-500/8 border border-cyan-500/30 rounded-2xl p-5">
-        <div className="flex items-end justify-between mb-3">
-          <div>
-            <div className="text-[10px] font-mono text-cyan-400/70 uppercase tracking-widest mb-1">GENESIS — Ecosystem OS</div>
-            <div className="text-4xl font-bold text-white tabular-nums">
-              {progress}<span className="text-lg text-slate-500 ml-1">%</span>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-[10px] font-mono text-slate-500">v5.2 live</div>
-            <div className="text-sm text-cyan-300 mt-1">{p?.phase ?? ""}</div>
-          </div>
-        </div>
-        <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-          <div className="h-full bg-cyan-400 rounded-full transition-all duration-700"
-               style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {/* Nodi attivi */}
-        <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-              Nodi attivi ({activeNodes.length})
-            </div>
-          </div>
-          <div className="space-y-2">
-            {activeNodes.map(([k, v]) => (
-              <div key={k} className="flex items-start gap-2">
-                <span className="text-emerald-500 text-[10px] flex-shrink-0 mt-0.5 font-mono">✓</span>
-                <div>
-                  <div className="text-[11px] font-mono text-slate-300">{k}</div>
-                  <div className="text-[9px] text-slate-600 leading-snug">{String(v).replace("ATTIVO — ", "").slice(0, 60)}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Stack + pendenti */}
-        <div className="space-y-3">
-          <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
-            <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-3">Stack</div>
-            {[
-              { k: "Frontend",  v: "React · Vite · Zustand · TanStack Query" },
-              { k: "Backend",   v: "Python 3.11 · Flask · ChromaDB · MCP" },
-              { k: "AI",        v: "Claude Sonnet · RAG v4.0 hybrid · 8 agenti" },
-              { k: "Research",  v: "13 sorgenti: OpenAlex · BASE · POLITesi" },
-              { k: "Automaz.",  v: "n8n · Stop hooks orchestratore" },
-            ].map(s => (
-              <div key={s.k} className="flex justify-between gap-3 mb-1.5">
-                <span className="text-[10px] font-mono text-slate-500">{s.k}</span>
-                <span className="text-[10px] text-slate-300 text-right">{s.v}</span>
-              </div>
-            ))}
-          </div>
-
-          {pendingNodes.length > 0 && (
-            <div className="bg-slate-900/80 border border-amber-500/20 rounded-2xl p-4">
-              <div className="text-[10px] font-mono text-amber-400/70 uppercase tracking-widest mb-2">Pending</div>
-              {pendingNodes.map(([k, v]) => (
-                <div key={k} className="flex items-center gap-2 mb-1">
-                  <span className="text-amber-500/60 text-[10px] font-mono">○</span>
-                  <span className="text-[10px] text-slate-400">{k} — {String(v).slice(0, 40)}</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
+    <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
+      <GenesisSection />
     </div>
   );
 }
