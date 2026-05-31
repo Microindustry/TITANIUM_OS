@@ -1,7 +1,12 @@
-=== RIAVVIO SESSIONE #15 — 31/05/2026 15:58 ===
-Ultima sessione: #14 — 2026-05-30
+=== RIAVVIO SESSIONE #16 — 31/05/2026 ===
+Ultima sessione: #15 — 2026-05-31
 
-━━━ STAVAMO PARLANDO DI ━━━
+━━━ AUDIT OPUS 4.8 (questa sessione) ━━━
+Audit tecnico completo dashboard + dati live. criticheData.ts v2.0: +18 findings verificate (au01-au18), 2 critiche chiuse (gc02 TS pulito exit 0, v32c06 V32 coerente), 3 corrette (gc01/gc05/gc10). tsc --noEmit pulito.
+ROOT CAUSE trovata (au18): MappaView ridefinisce SYSTEM_TREE a mano invece di importare genesisData/mimsData/skillTreeData → ogni dato vive in 2 posti → causa di TUTTE le divergenze pct/status.
+TOP findings: STATE.blockers era [] vuoto mentre 2 blocker reali → dashboard mentiva (FIXATO in STATE.json). session_count=6 ma sei a #15. active_milestone fermo a 9 sessioni fa. GENESIS pct = 10/55/83 in 3 file. EVA = 4 status diversi. MCP 5 tool scritti vs 7 reali. RAG v4.0 scritto vs v5.0 graph reale. React 18 scritto vs 19 installato.
+
+━━━ STAVAMO PARLANDO DI (sessione 15) ━━━
 Costruito NEXUS swarm orchestrator v1.0 (NODES/NEXUS/nexus.py), RAG graph-aware v5.0 con networkx (114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA), MCP v1.3 con tool nexus + rag_update + save_session. Watchdog swarm parallelo v1.3. Fix vault env in Task Scheduler per task notturni.
 
 ━━━ TOPIC ATTIVI ━━━

@@ -1,5 +1,6 @@
-// criticheData.ts | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
+// criticheData.ts | TITANIUM_OS / DASHBOARD | v2.0 | 2026-05-31
 // Critiche, suggerimenti e miglioramenti per progetto — aggiornabile ogni sessione
+// v2.0 — audit Opus 4.8: verifica codice + dati live. tsc --noEmit pulito (exit 0).
 
 import { type SkillNode, type SkillStatus } from "./skillTreeData";
 
@@ -62,8 +63,8 @@ export const CRITICHE_ROOT: SkillNode = {
         {
           id: "cr_v32_dati", label: "Dati & Coerenza", icon: "📐", status: "active", ...amber,
           children: [
-            crit("v32c06", "pct 65% in STATE vs dati inconsistenti nei view", "active",
-              "STATE.json dice 65%, ma skillTreeData e MappaView hanno valori diversi. Sincronizzare."),
+            crit("v32c06", "pct V32 65% — verificato coerente ovunque", "done",
+              "VERIFICATO: STATE=65, MappaView=65, mimsData v32p01=65, PILLARS_DATA=65. V32 è l'unico pilastro coerente. Il problema vero è su GENESIS/IDENTITY → vedi cr_audit."),
             crit("v32c07", "BEP 61 ore — aggiornato dopo Config G?", "future",
               "Il BEP è calcolato su configurazione precedente. Rivalutare dopo completion."),
           ],
@@ -129,15 +130,15 @@ export const CRITICHE_ROOT: SkillNode = {
           id: "cr_cod", label: "Codice", icon: "💻", status: "active", ...cyan,
           children: [
             crit("gc01", "NodeTile/NodeLevel triplicato in 3 file", "active",
-              "MatteoSection, MimsSection, GenesisSection hanno la stessa logica copiata. Estrarre in componenti condivisi."),
-            crit("gc02", "Errori TS ignorati: EcosystemView, MappaView useMemo", "active",
-              "Build fallisce silenziosamente. Fixare o silenziare con // @ts-ignore con commento."),
+              "CONFERMATA: MatteoSection, MimsSection, GenesisSection hanno NodeTile (~60 righe) + NodeLevel identici, cambia solo il colore accent (amber/cyan). Estrarre in <NodeTile accent=...> condiviso → -180 righe."),
+            crit("gc02", "Errori TS — verificato: nessuno", "done",
+              "VERIFICATO Opus: npx tsc --noEmit --skipLibCheck → exit 0, zero errori. La build TS è pulita. Critica chiusa."),
             crit("gc03", "CanvasLayout.tsx > 650 righe — monolite", "future",
               "Ogni Room dovrebbe essere un file separato. Refactor quando si aggiunge la prossima sezione."),
             crit("gc04", "Dati duplicati: SYSTEM_TREE in MappaView vs genesisData/mimsData", "active",
               "Se aggiorni mimsData.ts non si aggiorna MappaView. Unica fonte di verità necessaria."),
-            crit("gc05", "GENESIS pct 83% in STATE ≠ genesisData pct reale", "future",
-              "I due sistemi non si parlano. La dashboard mostra dati diversi a seconda della view."),
+            crit("gc05", "GENESIS pct: TRE valori diversi nel codice", "active",
+              "CORRETTA: STATE.json=10%, MappaView SYSTEM_TREE=83%, CanvasLayout PILLARS_DATA=55%. La sidebar mostra 10 (STATE), la MAPPA mostra 83. Tre fonti, tre numeri. Decidere il valore vero e renderlo unico."),
           ],
         },
 
@@ -158,8 +159,8 @@ export const CRITICHE_ROOT: SkillNode = {
         {
           id: "cr_infra", label: "Infrastruttura", icon: "🔌", status: "active", ...cyan,
           children: [
-            crit("gc10", "n8n: 13 workflow non documentati", "active",
-              "Se n8n si spegne o si resetta, quali automazioni si perdono? Documentare in AUTOMATIONS_MASTER.md."),
+            crit("gc10", "n8n: 13 workflow non documentati + architettura contraddittoria", "active",
+              "CONFERMATA + AGGRAVATA: AUTOMATIONS_MASTER.md documenta 28 automazioni PYTHON ma NON i 13 workflow n8n (solo il Content Engine). Inoltre contraddizione architetturale: AUTOMATIONS_MASTER dice n8n su Oracle Cloud (docker-compose + PostgreSQL + Traefik), genesisData dice 'npx n8n locale, dati in ~/.n8n/'. Quale gira davvero?"),
             crit("gc11", "RAG rebuild necessario dopo questa sessione", "active",
               "Aggiunti file in MENTE/ senza rag-rebuild. Eseguire: rag-rebuild o /api/rag/rebuild."),
             crit("gc12", "RIAVVIO_SESSIONE.txt aggiornamento manuale", "future",
@@ -213,6 +214,75 @@ export const CRITICHE_ROOT: SkillNode = {
           "L'obiettivo esiste ma non c'è un roadmap con checkpoint annuali. Aggiungere in STATE.json."),
         crit("sc05", "ADHD scaffolding: il sistema aiuta o complica?", "future",
           "Ogni sessione si aggiungono cose. Fare un audit trimestrale: cosa NON uso? Rimuovere senza pietà."),
+      ],
+    },
+
+    // ── AUDIT OPUS — INCOERENZE DATI VERIFICATE (31/05/2026) ─────────────────
+    {
+      id: "cr_audit", label: "Audit Opus — Dati live", icon: "🔬", status: "active", ...rose,
+      note: "Findings verificati leggendo codice + STATE.json + data files. Ogni voce è riproducibile.",
+      children: [
+
+        {
+          id: "cr_audit_state", label: "STATE.json marcio", icon: "💾", status: "active", ...rose,
+          children: [
+            crit("au01", "STATE.blockers = [] vuoto → dashboard mostra 'zero blocker'", "active",
+              "CRITICO: STATE.json ha blockers:[] ma RIAVVIO_SESSIONE lista 2 blocker reali (mandrino 2.2kW, silent blocks v.A/v.B). V32Room e Home leggono state.blockers → mostrano 'Nessun blocker / 0'. La dashboard MENTE. Fix: scrivere i blocker reali in STATE.blockers o farli derivare dalle foglie 'blocked'."),
+            crit("au02", "session_count = 6 ma sei alla sessione #15", "active",
+              "STATE.session_count=6, RIAVVIO_SESSIONE dice SESSIONE #15. Il contatore è desincronizzato di 9. state_updater.py non incrementa o STATE è stato sovrascritto a mano. Fonte unica di verità inaffidabile."),
+            crit("au03", "active_milestone fermo a 'skillTreeData v3.0'", "active",
+              "STATE.active_milestone non riflette il lavoro delle sessioni 14-15 (NEXUS swarm, RAG graph v5.0, MCP v1.3). Regola CLAUDE.md: 'ogni fine sessione → aggiorna STATE.json'. Non rispettata. La Home mostra un milestone vecchio di 9 sessioni."),
+            crit("au04", "meta.version '1.0.0' mentre il sistema è v6/v7", "future",
+              "STATE.meta.version='1.0.0' non significa nulla: App=v6.0, dashboard=v7, RAG=v5. Campo morto. O lo si allinea o si rimuove."),
+            crit("au05", "MIMS status 'waiting_press' non mappato nella UI", "active",
+              "BUG: STATE MIMS.status='waiting_press' ma PillarGrid (CanvasLayout) gestisce solo 'waiting_v32'. Risultato: la cella MIMS mostra la stringa grezza 'waiting_press' invece di 'IN ATTESA'. Aggiungere il case o normalizzare gli status."),
+          ],
+        },
+
+        {
+          id: "cr_audit_pct", label: "Percentuali divergenti", icon: "📊", status: "active", ...amber,
+          children: [
+            crit("au06", "GENESIS pct: 10 / 55 / 83 — tre numeri", "active",
+              "STATE=10%, CanvasLayout PILLARS_DATA=55%, MappaView SYSTEM_TREE=83%. Tre file, tre verità. La sidebar dice 10, la mappa 83. Vedi anche gc05."),
+            crit("au07", "IDENTITY pct: 50 vs 35", "active",
+              "STATE=50%, MappaView=50%, ma CanvasLayout PILLARS_DATA=35%. PILLARS_DATA è legacy hardcoded e diverge. Allineare o cancellare PILLARS_DATA."),
+            crit("au08", "PILLARS_DATA legacy hardcoded in CanvasLayout", "active",
+              "CanvasLayout esporta PILLARS_DATA con pct fissi (65/30/55/40/35) che contraddicono STATE live. È dead-data: nessuna view la usa più ma resta come trappola. Rimuovere insieme a CellFocusStandalone & co. (8 export no-op)."),
+            crit("au09", "MIMS %: computato (NodeLevel) vs dichiarato (30)", "active",
+              "MimsSection calcola pct = done/total foglie (può dare es. 22%), MappaView dichiara 30, STATE dice 30. Stesso pilastro, due metodi di calcolo. Decidere: % derivata dalle foglie OPPURE dichiarata, non entrambe."),
+            crit("au10", "ROOT_NODE TITANIUM OS pct=60 inventato", "future",
+              "MappaView ROOT_NODE.pct=60 hardcoded, nessuna fonte. Dovrebbe essere la media pesata dei pilastri (oggi ~39 con STATE). Calcolarla o toglierla."),
+          ],
+        },
+
+        {
+          id: "cr_audit_stale", label: "Dati tecnici obsoleti", icon: "🕸", status: "active", ...amber,
+          children: [
+            crit("au11", "MCP: data files dicono 5 tool, realtà 7", "active",
+              "genesisData (mcp01-05) e MappaView gi-mcp elencano 5 tool. RIAVVIO_SESSIONE: 'MCP v1.3 — 7 tool' (aggiunti nexus, rag_update, save_session). I file dashboard sono 2 versioni indietro. Aggiungere i 2 tool mancanti."),
+            crit("au12", "NEXUS: 'done' in skillTree, 'future' in genesisData", "active",
+              "CONTRADDIZIONE: skillTreeData sw06='Multi-agente NEXUS swarm' done + RIAVVIO dice 'NEXUS swarm v1.0 costruito (NODES/NEXUS/nexus.py)'. Ma genesisData ag05 e gr05 lo segnano 'future'. NEXUS esiste o no? Allineare a 'done/active'."),
+            crit("au13", "RAG: data dice v4.0, realtà v5.0 graph-aware", "active",
+              "genesisData nodo 'MENTE RAG v4.0' e MappaView gi-rag descrivono solo l'hybrid v4.0. RIAVVIO: 'RAG graph-aware v5.0 con networkx, 114 nodi, 218 archi, catene V32->MIMS->VITA_NATURA'. Manca tutto il layer grafo. Aggiornare."),
+            crit("au14", "React 18 scritto, React 19 installato", "active",
+              "genesisData db01 e MappaView gi-dash dicono 'React 18'. package.json: react ^19.2.4. skillTreeData sw03 dice giustamente React 19. Correggere i due data file."),
+            crit("au15", "EVA: 4 status diversi nello stesso sistema", "active",
+              "Stessa entità EVA: genesisData ag02='blocked', MappaView gi-eva='pending', vn-eva='building 40%', skillTree sw11='blocked'. Quattro file, quattro stati. Definire UN solo status per EVA e propagarlo."),
+          ],
+        },
+
+        {
+          id: "cr_audit_docs", label: "Documentazione divergente", icon: "📄", status: "active", ...cyan,
+          children: [
+            crit("au16", "AUTOMATIONS_MASTER.md fermo al 2026-03-16", "active",
+              "2.5 mesi stale. Dichiara '34 automazioni, 0 da implementare' ma non include NEXUS, MCP server, stop hooks, RAG v4/v5, ARGUS computer-use, watchdog swarm v1.3. La 'master list' non è più master. Rigenerare o marcarla come storica."),
+            crit("au17", "Scanner punta a 'LA MIA MENTE/' (path morto)", "active",
+              "AUTOMATIONS_MASTER #10: Mente Scanner scansiona 'LA MIA MENTE/' → mente_digest.json. CLAUDE.md canonico: MICROINDUSTRY/MENTE/. Path divergente: o lo scanner gira su una cartella che non esiste più, o la doc è sbagliata. Verificare scanner.py."),
+            crit("au18", "Fonte unica di verità: nessuna. SYSTEM_TREE duplica i 3 data file", "active",
+              "MappaView ridefinisce a mano l'intero albero (SYSTEM_TREE) invece di importare genesisData/mimsData/skillTreeData. Ogni modifica va replicata in 2 posti → è la causa-radice di au06-au15. Fix architetturale: MappaView deve consumare i ROOT esistenti, non una copia."),
+          ],
+        },
+
       ],
     },
 
