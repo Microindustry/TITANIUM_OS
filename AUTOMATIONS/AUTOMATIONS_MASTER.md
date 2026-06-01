@@ -16,9 +16,14 @@
 <!-- /TOC -->
 
 # AUTOMATIONS MASTER LIST
-**Versione**: 1.1
-**Aggiornato**: 2026-03-16
+**Versione**: 1.2
+**Aggiornato**: 2026-06-01
 **Fonte**: Lista consolidata da esplorazione progetto + Protocollo Evolutivo MD-Cloud
+
+> ⚠ NOTA (audit Opus 01/06): questa lista NON include i nodi aggiunti dopo marzo —
+> MCP server (10 tool), NEXUS swarm, RAG v4.0 hybrid + graph, Story Agent, stop hooks,
+> ARGUS computer-use, watchdog swarm. Da rigenerare. I 13 workflow n8n non sono qui elencati
+> singolarmente (solo il Content Engine).
 
 ---
 
@@ -44,7 +49,7 @@
 | 7 | **PDF to Memory** | `AUTOMATIONS/core/pdf_to_memory.py` | Drag-drop in PDF_DROP/ | PDF → Markdown, classifica ATTO/INFO, versioning |
 | 8 | **Cross-Ref Engine** | `AUTOMATIONS/core/cross_ref_engine.py` | CLI manuale | Sync valori cross-documento (prezzi, misure, date) |
 | 9 | **Assoluto Splitter** | `AUTOMATIONS/core/assoluto_splitter.py` | CLI manuale | Split/compose documento master ASSOLUTO V6 |
-| 10 | **Mente Scanner** | `NODES/MENTE_SCANNER/scanner.py` | API `/api/trigger/scanner` o manuale | Scansiona `LA MIA MENTE/` → DATA/mente_digest.json (818 estrazioni) |
+| 10 | **Mente Scanner** | `NODES/MENTE_SCANNER/scanner.py` | API `/api/trigger/scanner` o manuale | Scansiona `MICROINDUSTRY/MENTE/` (env MENTE_DIR) → DATA/mente_digest.json |
 | 11 | **API Server** | `api_server.py` | Avvio con START_ECOSYSTEM.bat | Flask localhost:5001 → serve dati al dashboard React |
 | 12 | **n8n Engine** | `AUTOMATIONS/deploy/n8n/docker-compose.yml` | Sempre attivo (Oracle Cloud) | n8n + PostgreSQL + Traefik, localhost:5678 |
 | 13 | **Batch Launchers** | `*.bat` (7 file root) | Manuale doppio click | START/STOP/SESSION/SETUP/ECOSYSTEM/PDF/CLAUDE |

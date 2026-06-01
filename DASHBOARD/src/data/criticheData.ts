@@ -250,8 +250,8 @@ export const CRITICHE_ROOT: SkillNode = {
               "PARZIALE: IDENTITY allineato 35→50. MA PILLARS_DATA è ancora importato da NeuroOSLayout (view legacy 'neuro') insieme a 8 export no-op (CellFocusStandalone & co.) → non cancellabile senza refactor di NeuroOSLayout. Vero fix: rimuovere la view 'neuro' (duplicato di MappaView, vedi gc09) e tutto il dead-code collegato."),
             crit("au09", "MIMS %: computato (NodeLevel) vs dichiarato (30)", "active",
               "MimsSection calcola pct = done/total foglie (può dare es. 22%), MappaView dichiara 30, STATE dice 30. Stesso pilastro, due metodi di calcolo. Decidere: % derivata dalle foglie OPPURE dichiarata, non entrambe."),
-            crit("au10", "ROOT_NODE TITANIUM OS pct=60 inventato", "future",
-              "MappaView ROOT_NODE.pct=60 hardcoded, nessuna fonte. Dovrebbe essere la media pesata dei pilastri (oggi ~39 con STATE). Calcolarla o toglierla."),
+            crit("au10", "ROOT_NODE TITANIUM OS pct=60 inventato", "done",
+              "FIXATO Opus: ROOT_NODE.pct 60→48 = media dei 5 pilastri (65+30+55+40+50)/5. Coerente con STATE. (Futuro: calcolarla a runtime invece che hardcoded.)"),
           ],
         },
 
@@ -275,9 +275,9 @@ export const CRITICHE_ROOT: SkillNode = {
           id: "cr_audit_docs", label: "Documentazione divergente", icon: "📄", status: "active", ...cyan,
           children: [
             crit("au16", "AUTOMATIONS_MASTER.md fermo al 2026-03-16", "active",
-              "2.5 mesi stale. Dichiara '34 automazioni, 0 da implementare' ma non include NEXUS, MCP server, stop hooks, RAG v4/v5, ARGUS computer-use, watchdog swarm v1.3. La 'master list' non è più master. Rigenerare o marcarla come storica."),
-            crit("au17", "Scanner punta a 'LA MIA MENTE/' (path morto)", "active",
-              "AUTOMATIONS_MASTER #10: Mente Scanner scansiona 'LA MIA MENTE/' → mente_digest.json. CLAUDE.md canonico: MICROINDUSTRY/MENTE/. Path divergente: o lo scanner gira su una cartella che non esiste più, o la doc è sbagliata. Verificare scanner.py."),
+              "MITIGATA Opus: aggiunta nota di staleness in testa (elenca cosa manca: MCP 10 tool, NEXUS, RAG hybrid+graph, Story Agent, hooks, ARGUS, watchdog) + data 01/06. Rigenerazione completa = TODO (richiede scan nodi attuali, non economico ora)."),
+            crit("au17", "Scanner: doc diceva 'LA MIA MENTE/' (path morto)", "done",
+              "RISOLTO Opus: verificato scanner.py v1.3 → usa il path CORRETTO (MENTE_DIR env o Path.home()/MICROINDUSTRY/MENTE). Era solo la doc AUTOMATIONS_MASTER sbagliata → corretta a 'MICROINDUSTRY/MENTE/ (env MENTE_DIR)'. Il codice era a posto."),
             crit("au19", "VERSIONS: loop runaway changelog — ROOT CAUSE fixata", "done",
               "RISOLTO Opus: watcher.py IGNORE_DIRS escludeva VERSIONS/BACKUPS ma NON DATA/ → le scritture derivate (views/*.json, semantic_index.db) prodotte dal watcher stesso ri-triggeravano changelog+backup in cascata. Aggiunto 'DATA' a IGNORE_DIRS + filtro file '.tmp.' e '.db-journal'. 408 archivi gia' disindicizzati+gitignorati. NB: riavviare il watcher perche' il fix abbia effetto."),
             crit("au20", "STORIE: 11 episodi narrativi recuperati nella dashboard", "done",

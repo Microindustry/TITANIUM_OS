@@ -32,7 +32,7 @@ const NODE_ICON: Record<string, string> = {
 // ── DATI SISTEMA ──────────────────────────────────────────────────────────────
 const ROOT_NODE: MapNode = {
   id: "OS", label: "TITANIUM OS", type: "root", status: "active",
-  pillar: "ROOT", desc: "Sistema operativo cognitivo di Matteo Benenati. V32+MIMS+GENESIS+VITA NATURA+IDENTITY.", pct: 60,
+  pillar: "ROOT", desc: "Sistema operativo cognitivo di Matteo Benenati. V32+MIMS+GENESIS+VITA NATURA+IDENTITY.", pct: 48,
 };
 
 const SYSTEM_TREE: MapNode[] = [
