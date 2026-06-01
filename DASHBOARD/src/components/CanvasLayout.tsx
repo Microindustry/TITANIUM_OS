@@ -500,6 +500,7 @@ function NightScheduleWidget() {
 // ── CANVAS PRINCIPALE ─────────────────────────────────────────────────────────
 export function CanvasLayout({ room: externalRoom }: { room?: string }) {
   const { state, isOnline: online } = useGlobalState();
+  const navigateTo = useUIStore(s => s.navigateTo);
 
   // Se viene passata una room dall'esterno (da App.tsx sidebar), usiamo quella
   // altrimenti manteniamo la navigazione interna con stack
@@ -559,7 +560,16 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
                       : <span className="text-slate-600">offline</span>}
                   </p>
                 </div>
-                <div className="ml-auto flex items-center gap-2 bg-slate-900/60 border border-slate-800 rounded-xl px-3 py-2">
+                <button onClick={() => navigateTo("pitch" as any)}
+                  className="ml-auto flex items-center gap-2 rounded-xl px-3.5 py-2 border border-emerald-500/40
+                             bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400/60 transition-all group">
+                  <span className="text-emerald-400 text-xs">▶</span>
+                  <div className="text-left leading-tight">
+                    <div className="text-[8px] font-mono text-emerald-400/60 uppercase tracking-widest">Modalità</div>
+                    <div className="text-[11px] font-bold text-emerald-300">Presentazione</div>
+                  </div>
+                </button>
+                <div className="flex items-center gap-2 bg-slate-900/60 border border-slate-800 rounded-xl px-3 py-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
                   <div>
                     <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest">Milestone</div>
