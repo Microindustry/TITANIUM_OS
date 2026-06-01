@@ -1,37 +1,33 @@
-=== RIAVVIO SESSIONE #16 — 01/06/2026 22:19 ===
-Ultima sessione: #15 — 2026-05-31
-  ⚠ contesto AUTO-DERIVATO da git (chiama update_session_context)
+=== RIAVVIO SESSIONE #17 — 01/06/2026 22:44 ===
+Ultima sessione: #16 — 2026-06-01
+
 ━━━ STAVAMO PARLANDO DI ━━━
-[auto-derivato dai commit di oggi — session_context.json fermo a 2026-05-31; ricorda il tool MCP update_session_context]
-  feat: bottone 'Presentazione' sulla HOME -> lancia la vista PITCH; feat: vista PITCH — racconto investor-facing (la dashboard parla per te); feat(tema): tappa 1 — sistema temi dark/light + toggle (dark default identico); design: mockup tema CHIARO per valutazione (file separato, zero rischio sul vero)
+Pass estetico + nuova vista PITCH (racconto investor-facing che presenta TITANIUM_OS senza dover parlare). Costruito il loop screenshot (Edge headless + dash_shot.bat) per vedere e iterare la UI in sicurezza. Sistema temi dark/light con toggle (dark resta default). Hero HOME rinforzato, pilastri con descrizione, glow premium, bottone Presentazione. Tutto additivo, niente toccato dell'esistente.
 
 ━━━ TOPIC ATTIVI ━━━
-  • feat: bottone 'Presentazione' sulla HOME -> lancia la vista PITCH
-  • feat: vista PITCH — racconto investor-facing (la dashboard parla per te)
-  • feat(tema): tappa 1 — sistema temi dark/light + toggle (dark default identico)
-  • design: mockup tema CHIARO per valutazione (file separato, zero rischio sul vero)
-  • style: glow radiale soffuso sul fondo — profondita premium
-  • style: pilastri con descrizione 1-riga + header 'I 5 pilastri' + tool screenshot
-  • style: hero HOME piu forte (titolo 3xl + accento, tagline leggibile)
-  • feat: potatura sicura UX + hero investor-facing
-  • feat: MIMS = idea (critiche mercato congelate->leve), cascata ridimensionata, audit trimestrale implementato
-  • fix: changelog archivia a chunk (oltre 3000) invece che per-evento
-  • chore: chiude status critiche gia risolte (au01/02/03/06 -> done)
-  • fix: chiude au10/au17 + mitiga au16 (ROOT pct, doc scanner, staleness note)
+  • Vista PITCH — narrazione investor-facing (6 atti)
+  • Tool screenshot dash_shot.bat (Edge headless) — vedere la UI
+  • Sistema temi dark/light (dark default)
+  • Hero HOME + pilastri con descrizione + glow premium
+  • Bottone Presentazione -> PITCH
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → Push manuale dei commit locali: git push origin main
-  → GENESIS pct: deciso 55 — confermare o ricalibrare
-  → Refactor au18: MappaView deve importare i data file invece di duplicare SYSTEM_TREE
-  → Strutturare STORIE: story_agent + storieData.ts
-  → Strutturare VERSIONI GitHub: changelog + tag/release
-  → EVA WhatsApp pilot — WhatsApp Business API setup pending
-  → Decisione silent blocks v.A vs v.B — prerequisito V8
+  → Push manuale: git push origin main + git push origin v3.0.0
+  → Rifinire PITCH insieme vedendo lo schermo
+  → Tappa 2 tema light (card interne) — solo se richiesto, dark e' preferito
+  → MIMS: sviluppare l'idea + brevetto B2 (priorita reale)
+  → EVA WhatsApp pilot — bridge economico, setup API pending
+  → gc01: estrarre NodeTile condiviso (maintainability, da fare supervisionato)
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
+  ✓ Vista PITCH come modalita presentazione (la dashboard parla per Matteo)
+  ✓ Tema: dark resta default, light esiste come opzione (toggle)
+  ✓ Loop screenshot Edge headless = come 'vedo' la UI per iterare sicuro
+  ✓ Lavoro sempre additivo + commit isolati (paura di Matteo: niente cancella-e-rifai)
+  ✓ MIMS = idea in sviluppo, critiche mercato congelate, brevetti priorita
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Strutturare STORIE + VERSIONI GitHub; pushare i commit
+  Rientro Matteo: aprire la PITCH e rifinirla insieme, oppure attaccare MIMS/EVA. Pushare i ~25 commit + tag v3.0.0.
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
@@ -45,10 +41,10 @@ Ultima sessione: #15 — 2026-05-31
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
+5722883 chore: RIAVVIO continuita sessione + store default home
 f4a0a96 feat: bottone 'Presentazione' sulla HOME -> lancia la vista PITCH
 a1cb8f5 feat: vista PITCH — racconto investor-facing (la dashboard parla per te)
 4d7bcff feat(tema): tappa 1 — sistema temi dark/light + toggle (dark default identico)
 013feb8 design: mockup tema CHIARO per valutazione (file separato, zero rischio sul vero)
-d68e9cf style: glow radiale soffuso sul fondo — profondita premium
 
-Generato: 01/06/2026 22:19
+Generato: 01/06/2026 22:44
