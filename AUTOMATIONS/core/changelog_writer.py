@@ -110,7 +110,11 @@ def _archive_old_changelog():
     with open(CHANGELOG_PATH, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
-    if len(lines) <= MAX_CHANGELOG_LINES:
+    # Archivia SOLO con overflow sostanziale (a chunk), non a ogni evento.
+    # Prima archiviava le ~3 righe oltre 2000 ad OGNI modifica file -> 1 archivio
+    # per evento (centinaia di file). Ora scatta a 3000 e archivia ~1000 righe.
+    ARCHIVE_TRIGGER = MAX_CHANGELOG_LINES + 1000   # 3000
+    if len(lines) <= ARCHIVE_TRIGGER:
         return
 
     # Archivia: prendi le righe più vecchie
