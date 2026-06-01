@@ -529,14 +529,16 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
             <>
               <div className="flex items-center gap-3 flex-wrap">
                 <div>
-                  <h1 className="text-xl font-black text-white tracking-tight">TITANIUM_OS</h1>
-                  <p className="text-[10px] text-slate-400 mt-1 max-w-md leading-relaxed">
+                  <h1 className="text-3xl font-black text-white tracking-tight leading-none">
+                    TITANIUM<span className="text-emerald-400">_</span>OS
+                  </h1>
+                  <p className="text-xs text-slate-300 mt-2 max-w-xl leading-relaxed">
                     Il sistema operativo personale di un artigiano industriale.
-                    <span className="text-emerald-400/90"> CNC di precisione</span>,
-                    <span className="text-amber-400/90"> materiali modulari brevettabili</span>,
-                    <span className="text-cyan-400/90"> automazione AI</span> — costruiti da zero.
+                    <span className="text-emerald-400 font-semibold"> CNC di precisione</span>,
+                    <span className="text-amber-400 font-semibold"> materiali modulari brevettabili</span>,
+                    <span className="text-cyan-400 font-semibold"> automazione AI</span> — costruiti da zero.
                   </p>
-                  <p className="text-[9px] text-slate-600 font-mono mt-1">
+                  <p className="text-[9px] text-slate-600 font-mono mt-1.5">
                     {new Date().toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" })}
                     {" · "}{online
                       ? <span className="text-emerald-400">live</span>
