@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle, Sun, Moon,
+  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -47,6 +47,7 @@ const EcosystemView  = lazy(() => import("./components/EcosystemView").then(m =>
 const RagGraphView   = lazy(() => import("./components/RagGraphView").then(m => ({ default: m.RagGraphView })));
 const MappaView          = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
 const AutomationsView    = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.AutomationsView })));
+const PitchView          = lazy(() => import("./components/PitchView").then(m => ({ default: m.PitchView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -67,6 +68,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
   { id: "identity", label: "IDENTITY", icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
   // Sistema
+  { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
   { id: "automazioni", label: "AUTOMAZ.",   icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
@@ -388,6 +390,7 @@ function AppInner() {
               </div>
             )}
             {view === "storie"      && <StorieView />}
+            {view === "pitch"       && <PitchView />}
             {view === "mappa"    && <MappaView systemState={sys.state as any} />}
             {view === "rete"     && <RagGraphView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}

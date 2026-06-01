@@ -5,7 +5,8 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 export type ViewMode = "home" | "v32" | "genesis" | "mims" | "eva" | "identity"
-                     | "agenti" | "storie" | "mappa" | "rete" | "sinapsi" | "canvas" | "neuro" | "automazioni";
+                     | "agenti" | "storie" | "mappa" | "rete" | "sinapsi" | "canvas" | "neuro" | "automazioni"
+                     | "pitch";
 
 export type Theme = "dark" | "light";
 
