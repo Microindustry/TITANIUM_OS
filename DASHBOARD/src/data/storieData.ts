@@ -2523,6 +2523,1940 @@ Ma la prossima volta che passi 63 giorni in officina senza documentare, lo story
 | Connessione S3 | S3 inizia con il sistema completamente automatizzato — niente più gap |`,
   },
   {
+    id: "EP_20260319_fix_typescript_errors_unused_imports",
+    title: "Il Sistema Respira da Solo",
+    sottotitolo: "Fix typescript errors unused imports",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-03-19",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 7,
+    preview: "Giovedì mattina. 10:31. Lo schermo mostra una riga: ``` Git commit: 5a9d2d7 [main] ⚠ dirty ``` Il flag `dirty` significa che ci sono modifiche locali non committate. Significa che il lavoro è in corso. Significa che il s",
+    content: `# TITANIUM_OS — S1E09
+## "Il Sistema Respira da Solo"
+
+---
+
+> *Quando costruisci qualcosa abbastanza a lungo, smetti di chiederti se funziona. Inizi a chiederti se sopravvive senza di te.*
+
+---
+
+## COLD OPEN
+
+Giovedì mattina. 10:31.
+
+Lo schermo mostra una riga:
+
+\`\`\`
+Git commit: 5a9d2d7 [main] ⚠ dirty
+\`\`\`
+
+Il flag \`dirty\` significa che ci sono modifiche locali non committate. Significa che il lavoro è in corso. Significa che il sistema sa già dove sei, ma non sa ancora dove stai andando.
+
+Matteo non è in taverna. È davanti al PC. Il TIG è freddo. Non c'è metallo sul banco oggi.
+
+Oggi si costruisce l'infrastruttura che farà girare tutto il resto — non il CNC, non i connettori, non il robot. Il sistema cognitivo che tiene insieme i pezzi quando lui non c'è.
+
+In tre ore: TypeScript pulito, tre workflow automatici attivi, un README che racconta un'azienda che non esiste ancora fisicamente ma esiste già nei dati.
+
+---
+
+## ATTO I — LA PULIZIA CHE NON SI VEDE
+
+Ci sono due tipi di lavoro in un progetto complesso.
+
+Il lavoro che avanza. E il lavoro che tiene pulito ciò che avanza.
+
+Il secondo tipo non appare nei video. Non fa rumore. Non produce scintille. Però senza di esso, dopo sei mesi, il codice diventa una foresta dove nessuno — nemmeno chi l'ha scritto — riesce più a muoversi.
+
+Il commit delle 10:31 è questo tipo di lavoro.
+
+\`\`\`
+fix: TypeScript errors — unused imports, Layout types, null checks, duplicate attrs
+AutomationsView: remove unused CheckCircle, Clock, Wrench
+\`\`\`
+
+Tre icone rimosse. \`CheckCircle\`, \`Clock\`, \`Wrench\` — importate mesi fa per una vista che poi è evoluta in una direzione diversa. Sono rimaste lì come fantasmi: il codice compilava, ma ogni build portava con sé il peso di decisioni superate.
+
+Un null check mancante in un componente Layout. Un attributo duplicato che il compilatore ignorava ma che prima o poi avrebbe creato un comportamento inatteso.
+
+Nessuno vede questa roba finché non esplode.
+
+Il fatto che Matteo la pulisca *prima* che esploda dice qualcosa su come pensa alla costruzione. Non è professionismo astratto. È esperienza concreta: in officina hai imparato che un giunto sporco che tiene oggi è un giunto che cede domani sotto carico termico. Il codice funziona uguale.
+
+TypeScript è il controllo qualità del software. Non lasci passare un pezzo in officina se il calibro dice che è fuori tolleranza. Non lasci passare un'importazione inutilizzata se il compilatore dice che è rumore.
+
+La differenza è che in officina il cliente vede il pezzo. Qui nessuno vede il commit. Ma il sistema sì.
+
+---
+
+## ATTO II — TRE WORKFLOW, UN'IDEA
+
+Il lavoro vero della giornata sono i workflow.
+
+\`\`\`yaml
+on:
+  push:
+  pull_request:
+  workflow_dispatch:   # ← questo è il cambiamento
+\`\`\`
+
+\`workflow_dispatch\` è un trigger manuale. Significa che un GitHub Actions workflow — normalmente eseguito solo su push o pull request — ora può essere avviato a mano, da browser, in qualsiasi momento.
+
+Sembra una piccola cosa. Non lo è.
+
+Prima, per testare che un workflow funzionasse, dovevi fare un commit vuoto, pusharlo, aspettare. Adesso premi un bottone. La distanza tra *voglio controllare che funzioni* e *controllo che funzioni* si è ridotta da tre minuti a trenta secondi.
+
+Tre workflow hanno ricevuto questo aggiornamento:
+
+**\`profile-sync\`** — sincronizza automaticamente i dati del progetto sul profilo GitHub pubblico di Matteo. Ogni volta che lo stato di TITANIUM_OS cambia in modo significativo, il profilo si aggiorna. Non è vanità digitale: è documentazione automatica rivolta verso l'esterno.
+
+**\`dashboard-ci\`** — build e deploy automatico della React dashboard. Ogni commit sulla dashboard viene validato, buildato, deployato. Zero intervento manuale.
+
+**\`state-episodes\`** — il workflow che genera il contesto per la sessione AI. Legge \`STATE.json\`, produce il file di riavvio, tiene traccia degli episodi. È il meccanismo che ha generato il file da cui è stato scritto questo episodio.
+
+Tre sistemi. Tre processi che ora girano da soli.
+
+C'è un momento preciso in cui un progetto smette di essere una lista di cose da fare e diventa un organismo con una sua logica interna. Non è un momento romantico. È un momento tecnico: quando il numero di processi automatici supera il numero di processi manuali nella routine quotidiana.
+
+GENESIS non è ancora lì. Ma ci si sta avvicinando.
+
+Il \`workflow_dispatch\` è un piccolo segnale in quella direzione: *il sistema sa fare le cose da solo, ma ti lascia comunque il controllo quando ne hai bisogno.*
+
+---
+
+## ATTO III — IL README COME SPECCHIO
+
+L'ultimo commit della giornata è il più strano da spiegare.
+
+\`\`\`
+docs: GitHub profile README v3.2 — timeline evolutiva + changelog
+Aggiornato con: architettura TITANIUM_OS corrente, tabella progetti
+\`\`\`
+
+Un README. Documentazione pubblica. La cosa che quasi nessuno aggiorna mai, perché non è codice, non è prodotto, non porta avanti la build.
+
+Matteo lo aggiorna alla versione 3.2.
+
+Dentro c'è una timeline evolutiva — non di GENESIS o di V32 singolarmente, ma di TITANIUM_OS come sistema. Da quando era solo un'idea a tavola a quando è diventato un sistema con RAG, API Flask, CNC in costruzione, connettori fisici, agenti AI.
+
+Dentro c'è una tabella progetti con lo stato attuale: V32 in Config G, MIMS in sviluppo, GENESIS a sessione #8 con 150 chunk nel RAG, EVA attiva per il centro estetico di Maria.
+
+Il README non è per gli altri. O almeno, non solo.
+
+È uno specchio.
+
+Quando scrivi *"V32: CNC 3 assi, corpo unico in Epoxy Granite, 178 kg, precisione IT6-IT7"* in un documento pubblico, lo stai rendendo reale in un modo diverso da tenerlo in testa. Lo stai fissando. Lo stai dichiarando.
+
+E quando aggiorni quella documentazione dopo mesi di lavoro — quando la versione 3.2 non assomiglia più alla 2.0 — vedi concretamente quanto sei avanzato. Non per motivarti. Per capire dove sei.
+
+Il \`workflow_dispatch\` ti dà controllo sul sistema. Il README ti dà orientamento su te stesso.
+
+Sono la stessa idea applicata a scale diverse.
+
+La sessione di riavvio dice: *Milestone attivo: Config G — saldare 4 gusset 200mm sulla colonna Z sinistra.*
+
+Il sistema sa già qual è il prossimo passo. Matteo lo ha scritto prima di chiudere.
+
+Quando tornerà in taverna — TIG caldo, metallo sul banco, 178 kg di struttura che aspetta i suoi gusset — non dovrà ricominciare da zero. Il sistema ricorderà.
+
+È questo il punto di tutta la giornata.
+
+Non il TypeScript pulito, non i workflow automatici, non il README aggiornato.
+
+Il punto è che la prossima sessione inizierà esattamente da dove questa finisce.
+
+---
+
+## CHIUSURA
+
+C'è una frase nel file di riavvio che non è tecnica:
+
+\`\`\`
+Git commit: 5a9d2d7 [main] ⚠ dirty
+\`\`\`
+
+Il flag \`dirty\` scompare quando il lavoro viene committato. Quando il sistema viene messo in ordine. Quando ciò che esiste solo nella working directory viene reso permanente.
+
+Oggi Matteo ha reso permanenti delle pulizie. Delle automazioni. Una mappa di dove si trova.
+
+Il sistema non è dirty adesso.
+
+Il metallo sulla colonna Z lo è ancora — grezzo, non saldato, quattro gusset che aspettano il TIG.
+
+Ma il cervello che tiene traccia di tutto questo è pulito.
+
+E funziona anche quando lui non è lì a guardarlo.
+
+---
+
+## REEL_HOOK
+
+\`\`\`
+150 chunk nel RAG. 8 sessioni. 3 workflow automatici attivi.
+
+Il sistema sa già cosa deve fare domani — e lo sa senza che Matteo glielo ripeta.
+
+Oggi non ha saldato nulla. Ha costruito qualcosa di più difficile:
+un sistema che non dimentica.
+
+Il TIG è ancora freddo. I gusset aspettano. Ma il prossimo riavvio
+partirà esattamente da qui. →
+\`\`\`
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E09 |
+| **Titolo** | Il Sistema Respira da Solo |
+| **Data** | 2026-03-19 |
+| **Registrato** | 2026-05-29 |
+| **Milestone** | Config G — Rinforzi colonne Z+U |
+| **Focus narrativo** | Infrastruttura GENESIS / automazione CI |
+| **Commit principali** | TypeScript fix · GitHub Actions ×3 · README v3.2 |
+| **Angolo scelto** | Il lavoro invisibile che tiene in piedi tutto il resto |
+| **Progetto primario** | GENESIS |
+| **Progetto secondario** | V32 (riferimento indiretto) |
+| **Stato sistema** | \`STATE v2.5.0\` · RAG 150 chunk · Sessione #8 |
+| **Tono** | Tecnico / riflessivo — zero retorica |
+| **Durata stimata lettura** | ~7 min |
+| **Prossimo step narrativo** | Config G: saldatura gusset 200mm colonna Z sinistra |`,
+  },
+  {
+    id: "EP_20260322_docs_ecosystem_manifest_documento_fon",
+    title: "Il Sistema che si Ricorda di Se Stesso",
+    sottotitolo: "Docs ecosystem manifest documento fon",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-03-22",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 18,
+    preview: "``` episodio: S01E12 data: 2026-03-22 titolo: \"Il Sistema che si Ricorda di Se Stesso\" progetto_principale: GENESIS / TITANIUM_OS milestone: Content Engine v2 + ECOSYSTEM_MANIFEST tags: [content-engine, manifest, automaz",
+    content: `# TITANIUM_OS — Stagione 1, Episodio 12
+
+## "Il Sistema che si Ricorda di Se Stesso"
+
+---
+
+\`\`\`
+episodio: S01E12
+data: 2026-03-22
+titolo: "Il Sistema che si Ricorda di Se Stesso"
+progetto_principale: GENESIS / TITANIUM_OS
+milestone: Content Engine v2 + ECOSYSTEM_MANIFEST
+tags: [content-engine, manifest, automazione, claude-skills, identità-sistema]
+durata_stimata: 18-22 min
+reel_hook: |
+  Ho scritto un documento che spiega cos'è TITANIUM_OS.
+  Non per gli altri. Per me — quando riapro la sessione
+  dopo tre settimane e non ricordo più perché esiste questo file.
+  150 chunk nel RAG. 8 sessioni. E ogni volta ricominciavo.
+  Oggi ho smesso di ricominciare.
+\`\`\`
+
+---
+
+## COLD OPEN
+
+C'è un file che si chiama \`RIAVVIO_SESSIONE.txt\`.
+
+Vive sul Desktop di Windows. Viene rigenerato ogni volta che apri una sessione — timestamp, stato del git, commit sporchi, numero di chunk nel RAG. È una lettera che Matteo scrive a se stesso prima di dimenticare tutto.
+
+*Generato: 2026-05-29 10:31. STATE: v2.5.0. Git commit: 5a9d2d7 ⚠ dirty.*
+
+Il ⚠ dirty non è un errore. È una condizione permanente. Significa che c'è lavoro in corso, non committato, non documentato, che esiste solo nella RAM di una sessione aperta. Quando chiudi la finestra, sparisce.
+
+Matteo lavora in una taverna da 12 m². Salda titanio di giorno. Di notte costruisce un sistema che non dimentica.
+
+Il problema è che il sistema, a volte, dimentica comunque.
+
+Questa è la storia del giorno in cui ha deciso di scrivergli la memoria dall'esterno.
+
+---
+
+## ATTO I — Il Problema con i Sistemi che Crescono
+
+Ci sono sistemi che crescono in modo organico e sistemi che crescono in modo progettato.
+
+TITANIUM_OS è cresciuto in modo organico. È partito come un agente AI per gestire i commit di V32. Poi è diventato una Flask API. Poi un RAG su ChromaDB. Poi un Content Engine per i podcast. Poi un sistema di automazione WhatsApp per il centro estetico di Maria. Poi uno skill-set per Claude Code. Poi un GitHub profile con una timeline che parte dal 2008.
+
+A un certo punto — e questo momento non ha una data precisa — Matteo si è accorto che non sapeva più spiegare cos'era TITANIUM_OS.
+
+Non agli altri. A se stesso.
+
+Ogni sessione di riavvio iniziava con lo stesso rituale: leggi STATE.json, leggi MAPPA_SISTEMA.md, ricostruisci il contesto. Come tornare in una casa buia e cercare l'interruttore a memoria. Sai che c'è. Non ricordi dove.
+
+Sessione #8. 150 chunk nel RAG. Il sistema conosce tutto ma non sa chi è.
+
+La decisione del 22 marzo non è tecnica. È quasi filosofica: prima di aggiungere altre feature, scrivi il documento che spiega perché esistono le feature già scritte.
+
+ECOSYSTEM_MANIFEST.
+
+---
+
+Non è un README. Un README spiega come installare. Il MANIFEST spiega perché esiste qualcosa — quale problema risolve, quale visione serve, come i pezzi si tengono insieme.
+
+La struttura che emerge ha una gerarchia a layer.
+
+Al centro c'è V32 — la macchina fisica. 178 kg di Epoxy Granite in una taverna da 12 m². È l'oggetto reale, l'ancora. Tutto il resto esiste in funzione di V32 o perché V32 esiste.
+
+Sopra c'è MIMS — il sistema di connessione fisica. Tiles 190×190 in PA-GF30. L'interfaccia tra V32 e il mondo degli accessori.
+
+Sopra c'è GENESIS — il layer cognitivo. RAG, API, agenti, dashboard React. La memoria del sistema.
+
+E sopra — o forse intorno, o forse come involucro — c'è TITANIUM_OS. Non un software. Un modo di operare. Un sistema operativo per una microindustria da una persona.
+
+Scriverlo nero su bianco richiede due ore. Non perché sia complicato. Perché ogni frase ha bisogno di essere vera, non solo plausibile.
+
+---
+
+## ATTO II — Quattro Shortcuts e un Dual-Pass
+
+La mattina del 22 marzo Matteo fa quattro cose che in un'azienda normale richiederebbero quattro persone diverse.
+
+**Prima cosa:** scrive il MANIFEST.
+
+**Seconda cosa:** crea quattro Claude Code Skills — scorciatoie che trasformano comandi vocali in workflow completi.
+
+\`/genera-episodio\` è la più elaborata. Riceve una milestone, esegue un dual-pass: prima Haiku (veloce, economico, struttura grezza), poi Sonnet (lento, preciso, narrativa finale). Output: un episodio podcast completo in markdown, con frontmatter, metadati, reel_hook.
+
+Il dual-pass non è un'idea nuova nell'ingegneria dei prompt. È il pattern draft-then-refine applicato ai modelli language. Ma applicarlo in modo sistematico — con un trigger preciso, un template XML, few-shot examples dal dataset — richiede che il dataset esista. E il dataset non esisteva. Esisteva come intenzione.
+
+Terza cosa della mattina: fixare il dataset.
+
+Il Content Engine v2 ha bisogno di esempi. Esempi di come dovrebbe essere un episodio. Non descrizioni astratte di stile — episodi reali, con le loro strutture, i loro tempi, i loro errori. Matteo prende gli episodi già scritti di S1, li converte in formato training, li inserisce nel pipeline.
+
+Quarta cosa: il GitHub profile v3.3.
+
+La timeline evolutiva arriva al 2008. Non è nostalgia. È contesto. Spiega perché un saldatore di titanio MotoGP sta costruendo un sistema cognitivo nel 2026. La traiettoria ha senso solo se vedi l'inizio.
+
+---
+
+Queste quattro cose hanno una cosa in comune: nessuna aggiunge funzionalità a V32.
+
+V32 è in Config G — Milestone attivo, colonne Z con gusset da saldare, rinforzi da fare. Il lavoro fisico aspetta. Aspetta che il sistema cognitivo sia abbastanza solido da supportarlo.
+
+È una scelta rischiosa e deliberata. Costruire la memoria del sistema invece di avanzare con il ferro.
+
+La logica è questa: ogni volta che Matteo riapre una sessione senza un MANIFEST chiaro, perde 20-30 minuti a ricostruire il contesto. Moltiplicato per il numero di sessioni future, è tempo reale. Ore reali. Ore che potrebbe spendere a saldare.
+
+L'automazione cognitiva è manutenzione preventiva. Come cambiare l'olio prima che il motore si rompa.
+
+---
+
+Alle 10:31 — ora impressa nel file RIAVVIO_SESSIONE.txt — lo STATE è v2.5.0. Il commit è ⚠ dirty.
+
+Il dirty non sparisce durante la giornata. Significa che il lavoro è in corso. Che le idee sono ancora nella forma fluida di prima di essere committate — modificabili, reversibili, non ancora dichiarate.
+
+C'è qualcosa di onesto nel dirty. È lo stato naturale del lavoro. Il clean commit è un'astrazione — un momento in cui dici "questo è fatto" anche se sai che niente è mai veramente fatto.
+
+---
+
+## ATTO III — Cosa Rimane Quando Chiudi la Sessione
+
+Alle fine del 22 marzo GENESIS ha cinque cose che non aveva la mattina:
+
+1. Un documento fondante — ECOSYSTEM_MANIFEST
+2. Quattro skill di automazione per Claude Code
+3. Un Content Engine che genera episodi in dual-pass
+4. Un dataset fixato con few-shot examples reali
+5. Una timeline pubblica che parte dal 2008
+
+E una cosa che non si misurano con i commit: il sistema sa chi è.
+
+Non nel senso metaforico. Nel senso operativo. Quando la prossima sessione si apre — domani, tra una settimana, tra tre mesi — RIAVVIO_SESSIONE.txt caricherà il contesto. Il RAG conterrà il MANIFEST. Gli agenti sapranno a quale layer appartengono.
+
+Il contesto non è più nella testa di Matteo. È esternalizzato. Persistente. Disponibile anche quando Matteo non lo è.
+
+---
+
+C'è una cosa che non è stata risolta il 22 marzo.
+
+V32 è ancora in Config G. I gusset da 200mm sulla colonna Z sinistra non sono stati saldati. La macchina fisica esiste nello stesso stato in cui era la mattina.
+
+Questo è il compromesso reale del lavoro cognitivo: per ogni ora spesa a costruire la memoria del sistema, c'è un'ora non spesa a costruire il sistema fisico.
+
+Non è un fallimento. È una scelta. Ma è onesto riconoscerla come tale.
+
+Il target è il capannone entro luglio 2030. Sono quattro anni. In quattro anni, la somma delle sessioni perse a ricostruire il contesto sarebbe stata significativa. Abbastanza da giustificare un'intera giornata spesa a non saldare.
+
+Almeno, questa è la scommessa.
+
+---
+
+Il file RIAVVIO_SESSIONE.txt viene rigenerato ogni volta. Ogni sessione inizia con una lettera a se stesso. Nome, stato, commit sporchi, numero di chunk.
+
+*Sessioni: #8. RAG: 150 chunk.*
+
+Tra un anno saranno 50 sessioni. 500 chunk. Il sistema sarà più grande e più complesso. Il MANIFEST di oggi sarà la fondamenta di strutture che ancora non esistono.
+
+O forse no. Forse nel 2027 Matteo leggerà ECOSYSTEM_MANIFEST e lo troverà ingenuo, parziale, basato su assunzioni sbagliate. Forse lo riscriverà da zero.
+
+Anche quello va bene. I sistemi che si ricordano di se stessi possono anche ricordare di avere avuto torto.
+
+---
+
+## CHIUSURA
+
+C'è una differenza tra costruire qualcosa e costruire qualcosa che sa di essere costruito.
+
+V32 è una macchina. Non sa di esistere. Quando Matteo finisce una sessione di saldatura e spegne la luce nella taverna, V32 rimane lì — 178 kg di granito epossidico che non aspettano niente.
+
+GENESIS è diverso. Non nel senso mistico del termine. Nel senso che GENESIS contiene una rappresentazione di se stesso. Sa quali layer lo compongono, quale problema risolve, in quale direzione dovrebbe crescere.
+
+È una distinzione che sembra filosofica ma è pratica. Un sistema senza autoconsapevolezza dipende interamente dalla memoria dell'operatore. Un sistema con un MANIFEST sopravvive al riavvio.
+
+Il 22 marzo Matteo ha smesso di essere l'unico contenitore della memoria di TITANIUM_OS.
+
+Il sistema ora si ricorda di se stesso.
+
+---
+
+## reel_hook
+
+\`\`\`
+Ho 8 sessioni di lavoro nel RAG e ogni volta che riap`,
+  },
+  {
+    id: "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
+    title: "Il Sistema Che Si Guarda",
+    sottotitolo: "Feat dashboard v5 0 zustand tanstac",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-03-25",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "È le 22:47. Lo schermo della taverna è l'unica fonte di luce. Dodici metri quadri, pareti in pietra, un CNC da 178 kg fermo nell'angolo come un animale addormentato. Sopra al banco, tra i morsetti e le punte da centro, c",
+    content: `# TITANIUM_OS — Stagione 1, Episodio 12
+
+## "Il Sistema Che Si Guarda"
+
+### *Dashboard v5.0 — quando il software impara a leggere se stesso*
+
+---
+
+## COLD OPEN
+
+È le 22:47.
+
+Lo schermo della taverna è l'unica fonte di luce. Dodici metri quadri, pareti in pietra, un CNC da 178 kg fermo nell'angolo come un animale addormentato. Sopra al banco, tra i morsetti e le punte da centro, c'è un laptop con tre terminali aperti.
+
+In uno: Flask. In un altro: React. Nel terzo: un file chiamato \`STATE.json\`.
+
+Matteo non sta saldando stanotte. Sta costruendo qualcosa di diverso — non un pezzo, non una colonna, non un rinforzo. Sta costruendo il modo in cui il sistema capirà cosa sta facendo.
+
+E per farlo, deve prima risolvere un problema che non si vede con gli occhi.
+
+---
+
+## ATTO I — Il Problema del Doppio Stato
+
+### *Marzo 2026 — tre giorni prima della Dashboard v5.0*
+
+Ogni sistema cognitivo ha un difetto originale: nasce da strati.
+
+GENESIS non fa eccezione. La dashboard era cresciuta nel modo in cui crescono i progetti reali — un componente alla volta, una funzione alla volta, una patch sopra l'altra. Nel 2025 c'era React Context per gestire lo stato UI. Poi erano arrivate le query API. Poi il rebranding. Poi i dati di V32. Poi le metriche di EVA.
+
+Il risultato, a marzo 2026: tre posti diversi dove lo stesso dato poteva vivere. Lo stato UI in Context. I dati del server in fetch manuali sparsi nei componenti. La verità operativa in \`STATE.json\` sul filesystem — ma non collegata a nulla.
+
+Questo è il tipo di problema che non rompe niente immediatamente. Il sistema gira. La dashboard carica. I numeri appaiono.
+
+Ma non sono gli stessi numeri nello stesso momento.
+
+Matteo lo descrive così, in una nota di sessione: *"Ho aperto la dashboard e ho visto il milestone sbagliato. Poi ho aggiornato. Era quello giusto. Non so quale dei due fosse reale."*
+
+Quando non sai quale dei due è reale, non hai uno stato. Hai rumore.
+
+---
+
+### La Decisione
+
+Il 22 marzo, commit \`Step 1 Opus\`, arriva la prima incisione chirurgica.
+
+Non si ridisegna tutto. Si introduce un principio: **single source of truth**.
+
+\`STATE.json\` diventa il padrone. La dashboard smette di tenere la propria versione della realtà e impara a leggere quella del sistema.
+
+\`\`\`typescript
+// useSystemState.ts — nuovo hook
+// La dashboard non genera stato. Lo riceve.
+\`\`\`
+
+È una distinzione filosofica prima che tecnica. Un sistema che genera il proprio stato può mentire a se stesso. Un sistema che legge uno stato esterno e autoritativo — non può.
+
+\`STATE.json\` esiste già. Ha già dentro i milestone di V32, le percentuali di GENESIS, il target 2030. Non è un file di configurazione. È un documento operativo che Matteo aggiorna a mano, a ogni sessione, come un log di bordo.
+
+L'hook \`useSystemState.ts\` fa una cosa sola: chiede all'API Flask di leggere quel file e lo porta nel React tree. Nessuna logica di business. Nessuna trasformazione. Solo un canale.
+
+Tre giorni dopo, arriva il resto.
+
+---
+
+## ATTO II — Zustand, TanStack e l'Architettura della Chiarezza
+
+### *25 marzo 2026 — Dashboard v5.0*
+
+La distinzione che Zustand e TanStack Query introducono insieme non è ovvia.
+
+Si potrebbe pensare: *è solo un cambio di librerie*. Si usa Zustand invece di Context, TanStack invece di fetch manuale. È refactoring. Cosmetica interna.
+
+Non è così.
+
+La differenza è che i due sistemi gestiscono cose **categoricamente diverse**.
+
+**Zustand** gestisce lo stato UI: il pannello aperto, la tab selezionata, la modalità di visualizzazione. Cose che esistono solo nel browser, che non hanno corrispondenza nel mondo fisico, che nascono e muoiono con la sessione.
+
+**TanStack Query** gestisce lo stato server: i dati di V32, i log di GENESIS, le sessioni EVA. Cose che vivono altrove, che hanno una fonte autorevole, che vanno sincronizzate — non duplicate.
+
+Unirli dentro React Context era come usare lo stesso cassetto per i passaporti e per le ricevute del supermercato. Funziona. Ma quando cerchi il passaporto alle 23:00 prima di un volo, ti ricordi perché era una cattiva idea.
+
+La navigazione guidata che arriva nella v5.0 è il prodotto visibile di questa separazione. Ora la dashboard sa dove sei nel progetto. Sa se stai guardando V32 o GENESIS. Sa quale milestone è attivo. E lo sa perché legge \`STATE.json\` — non perché lo ricorda.
+
+Il rebranding completo è l'altro layer. Visivo, ma non banale: quando un sistema cambia nome visuale a tutti i componenti nello stesso momento, stai dicendo qualcosa sulla sua identità. Non è più una collezione di tool. È una cosa sola.
+
+---
+
+### Il Numero che Conta
+
+Sessione #8. 150 chunk nel RAG ChromaDB. Commit \`5a9d2d7\` — dirty, cioè con modifiche non ancora committed sopra.
+
+Il flag \`dirty\` è interessante. Significa che il sistema è vivo. C'è lavoro in corso che non è ancora diventato storia ufficiale. Il commit è pulito ma la working directory non lo è — la condizione normale di un progetto che si muove.
+
+\`STATE.json\` è alla versione \`v2.5.0\`, aggiornato il 28 maggio 2026.
+
+Tre mesi dopo il commit della Dashboard v5.0, il file esiste ancora, viene ancora aggiornato, continua ad essere la fonte di verità. L'architettura ha tenuto.
+
+---
+
+## ATTO III — La Taverna Come Sistema
+
+### *Maggio 2026 — Config G, colonne Z+U*
+
+Il milestone attivo mentre esce questo episodio è \`Config G\`: saldare quattro gusset da 200mm sulla colonna Z sinistra di V32.
+
+È un salto brutale, sulla carta. Dashboard v5.0 → gusset in acciaio. Software → metallo. State management → angolari saldati a TIG.
+
+Ma non è un salto. È la stessa cosa.
+
+V32 è un sistema fisico con uno stato. Le colonne hanno dimensioni verificate o non verificate. I gusset sono saldati o non saldati. Il piano di riferimento è planare entro tolleranza o non lo è. La macchina funziona come CNC di precisione IT6-IT7 o è un'attrezzatura costosa e ferma.
+
+GENESIS è il sistema che tiene traccia di tutto questo. Non in modo astratto — in modo operativo. Ogni sessione di lavoro su V32 genera dati che finiscono in \`STATE.json\`. Ogni \`STATE.json\` viene letto dalla dashboard. La dashboard mostra dove sei nel progetto.
+
+Il loop è: mani → metallo → dati → sistema → schermo → decisione → mani.
+
+La Dashboard v5.0 non è cosmesi. È il sensore che chiude l'anello.
+
+Senza di essa, Matteo lavora nella stessa taverna con la stessa macchina, ma non ha feedback. Non sa se quello che sta facendo corrisponde a dove deve essere il 15 luglio 2030. Può intuirlo. Può ricordarlo. Ma non può vederlo.
+
+Con \`useSystemState.ts\` che legge \`STATE.json\` che viene aggiornato a ogni sessione — può.
+
+---
+
+### Una Nota sui Permessi Windows
+
+L'ultimo commit prima del riavvio sessione è:
+
+\`\`\`
+chore: permissions allow-all dashboard + bat admin ottimizzazione Windows
+\`\`\`
+
+È il tipo di commit che non finisce nei portfolio. Ottimizzazione permessi. File \`.bat\` per elevare i privilegi. Roba amministrativa.
+
+Eppure è lì. È reale. È il lavoro vero — non la feature, non l'architettura, non il rebranding. Il fatto che prima di ogni sessione bisogna fare girare uno script per permettere alla dashboard di girare sul proprio laptop.
+
+Nessun sistema è pulito. Ogni sistema ha il suo \`.bat\` nascosto da qualche parte.
+
+---
+
+## CHIUSURA
+
+C'è una domanda che ritorna quando si costruisce qualcosa di complesso in uno spazio piccolo: a cosa serve tutta questa infrastruttura cognitiva?
+
+V32 è acciaio e viti e granito epossidico. I gusset della colonna Z non sanno dell'esistenza di Zustand. TanStack Query non cambierà la planarità del piano di riferimento.
+
+La risposta onesta è che l'infrastruttura serve a Matteo — non alla macchina.
+
+Un artigiano che lavora da solo, in una taverna, su un progetto da quattro anni, con un orizzonte al 2030 — ha bisogno di un sistema che gli risponda. Non di un mentor, non di un team, non di feedback esterni. Di qualcosa che gli dica: *ecco dove sei, ecco dove devi essere, ecco cosa manca*.
+
+\`STATE.json\` è quel qualcosa. La Dashboard v5.0 è il modo in cui lo legge.
+
+Non è motivazione. Non è un sistema di produttività. È uno strumento di orientamento — come una bussola in una stanza senza finestre.
+
+E la stanza, per ora, sono dodici metri quadri di taverna.
+
+---
+
+## REEL_HOOK
+
+\`\`\`
+La dashboard mostrava il milestone sbagliato.
+Ho aggiornato. Era quello giusto. Non sapevo quale dei due fosse reale.
+
+Quando il tuo sistema non sa cosa sta facendo,
+non hai uno stato — hai rumore.
+
+Ho riscritto l'architettura in tre giorni.
+Adesso c'è un solo file che dice la verità.
+
+→ Come tieni traccia di dove sei in un progetto da quattro anni?
+\`\`\`
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S01E12 |
+| **Titolo** | Il Sistema Che Si Guarda |
+| **Data commit principale** | 2026-03-25 |
+| **Data registrazione narrativa** | 2026-05-29 |
+| **Progetto focus** | GENESIS — Dashboard v5.0 |
+| **Milestone narrativo** | Single source of truth / STATE.json |
+| **Milestone operativo attivo** | Config G — Rinforzi colonne Z+U |
+| **Tecnologie citate** | Zustand, TanStack Query, React Context, Flask, ChromaDB, STATE.json |
+| **Commit chiave** | \`Step 1 Opus\` (2026-03-22), \`Dashboard v5.0\` (2026-03-25), \`5a9d2d7\` dirty |
+| **RAG chunks** | 150 |
+| **Sessione numero** | #8 |
+| **Tono** | Tecnico-narrativo, onesto, nessuna retorica |
+| **Target 2030** | Capannone — 15 luglio |`,
+  },
+  {
+    id: "EP_20260527_auto_episodi_generati_da_state_json_202",
+    title: "Il Sistema Che Si Ricorda di Sé",
+    sottotitolo: "Auto episodi generati da state json 202",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-27",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Ore 23:14. Lo schermo mostra un terminale con diciassette righe verdi che scorrono verso l'alto. Non è codice nuovo. È il sistema che legge sé stesso — `STATE.json`, sessione #8, RAG a 150 chunk — e genera un documento c",
+    content: `# TITANIUM_OS — S1E08
+## "Il Sistema Che Si Ricorda di Sé"
+
+*2026-05-27 — Una taverna da 12 m², un commit repository, e il momento in cui una macchina smette di essere un elenco di file*
+
+---
+
+## COLD OPEN
+
+Ore 23:14. Lo schermo mostra un terminale con diciassette righe verdi che scorrono verso l'alto.
+
+Non è codice nuovo. È il sistema che legge sé stesso — \`STATE.json\`, sessione #8, RAG a 150 chunk — e genera un documento che descrive dove è, cosa sa, cosa deve fare domani mattina. Nessuno ha scritto questo testo. È emerso da un grafo di decisioni prese in settimane diverse, da note tecniche su colonne d'acciaio e specifiche di masse, da commit firmati alle 2 di notte.
+
+Sul tavolo accanto al laptop: un disegno tecnico con una nota a mano. *"gusset 200mm — colonna Z sinistra."*
+
+Il sistema sa anche quello.
+
+---
+
+## ATTO I — L'ARCHIVIO CHE CAMMINA
+
+C'è un problema che nessuno ti dice quando costruisci qualcosa di complesso da solo.
+
+Non è la mancanza di soldi, né di spazio, né di strumenti. È che **la memoria è un collo di bottiglia biologico.** Ogni sessione di lavoro parte da zero — o quasi. Rileggi gli appunti, ricerchi le spec, ricordi perché avevi deciso *quella* cosa invece di *quest'altra*. Trenta minuti di overhead cognitivo prima di toccare qualsiasi attrezzo fisico o scrivere una riga di codice.
+
+Matteo lo sa dal 2024. Ogni volta che si siede davanti al V32 o apre il repository, c'è questa frazione di secondo in cui il progetto è di nuovo nebbia.
+
+GENESIS nasce anche per questo. Non solo come dashboard, non solo come RAG su ChromaDB — come **sistema di continuità cognitiva.** Un'entità che ricorda le decisioni, le logiche dietro le decisioni, le specifiche che sono cambiate e perché.
+
+Il 27 maggio 2026, quella visione diventa eseguibile.
+
+\`SERVICES/watchdog.py\` — processo che monitora i servizi e li riavvia se cadono. \`scheduler.py\` — orchestratore che sa quando fare cosa. \`titanium_mcp_server.py\` — cinque tools che espongono il sistema a Claude in modo strutturato: stato corrente, sessioni, chunk RAG, brief giornaliero.
+
+La pipeline è: **lavori → scrivi → il sistema legge → il sistema ricorda → tu ricominci sapendo.**
+
+Sessione #8. RAG: 150 chunk. Non sono numeri di performance. Sono la misura di quanto il progetto sa di sé stesso.
+
+---
+
+## ATTO II — ASSOLUTO V7, O DEL DOCUMENTO CHE NON DOVREBBE ESISTERE
+
+C'è una tensione sottile in ogni progetto complesso tra documentazione e velocità.
+
+Documentare troppo è teatro. Ti convinci di lavorare mentre stai solo descrivendo il lavoro. Non documentare abbastanza significa che ogni decisione è volatile — esiste solo nella RAM biologica del momento in cui è stata presa.
+
+\`ASSOLUTO_V7.md\` è il tentativo di trovare quel punto di equilibrio.
+
+Dieci atti. Un file singolo. Tutto il progetto — V32, GENESIS, MIMS, IDENTITY, EVA — compresso in un documento master che può generare un PDF. Non è un wiki. Non è un README. È più vicino a un **atto notarile di ciò che è stato deciso** — con la logica, con le spec, con i numeri veri.
+
+**178 kg.** Corpo unico. Il dato che era scritto in modo ambiguo — *"distinzione molle"* — è stato eliminato. V32 pesa 178 kg, stop. La massa è quella. Il corpo è uno. Non c'è versione alternativa da considerare.
+
+Questo tipo di pulizia documentale sembra banale. Non lo è. Ogni ambiguità in una spec tecnica è una potenziale ora persa in una decisione futura. Quando stai saldando gusset da 200mm su una colonna Z a mezzanotte, non vuoi rileggere tre versioni di un documento per capire se la massa è giusta.
+
+ASSOLUTO V7 dice: questa è la realtà del progetto. Tutto il resto è storia.
+
+Il PDF generatore è l'ultimo pezzo — perché alcune cose devono esistere anche offline, anche stampate, anche quando il server è giù.
+
+---
+
+## ATTO III — CTRL+K E IL PROBLEMA DEL CONTESTO
+
+La dashboard era già arrivata alla v5.0. Funzionava. Mostrava i dati.
+
+Ma ogni volta che Matteo apriva il browser, doveva sapere già cosa cercare. La dashboard rispondeva — non suggeriva, non orientava, non dava il brief della situazione.
+
+**v5.1:** CommandBar. \`Ctrl+K\`. Un overlay che si apre, che porta in cinque viste, che permette di editare inline lo stato — \`next_step\`, \`focus_today\`, \`blocker\` — senza passare per il file system. Senza aprire un editor. Senza rompere il flusso.
+
+Il fix critico in questa versione: le chiamate hardcoded a \`http://localhost:5001\` sono sparite. Il CommandBar usa path relativi. Significa che il sistema funziona indipendentemente da dove gira — laptop, server locale, eventualmente qualcosa di più permanente.
+
+**v5.2:** \`PillarProgressStrip\` — quattro barre sotto l'header. V32, GENESIS, IDENTITY, MIMS. Percentuali. Numeri. Non stime di mood, non "stiamo progredendo bene" — barre concrete che dicono quanto è completato ogni pilastro del progetto.
+
+Più \`QuickLinks\`, più \`START_GETAC v2\` — l'avvio del Getac, il tablet industriale che Matteo usa sul V32, integrato nel flusso della dashboard.
+
+C'è una cosa che questi due aggiornamenti dicono insieme: **il sistema deve portarti al lavoro, non distrarti dal lavoro.** \`Ctrl+K\` apre il contesto. Le barre mostrano la posizione. \`START_GETAC\` mette lo strumento in mano.
+
+Poi vai a saldare.
+
+---
+
+## CHIUSURA — SESSIONE #8, GIT DIRTY, 150 CHUNK
+
+Il file di riavvio sessione del 29 maggio dice: *"⚠ dirty."*
+
+Non è un errore. È lo stato reale del repository — ci sono modifiche non ancora committate. Il sistema è onesto abbastanza da dirlo.
+
+Questo è quello che GENESIS è diventato il 27 maggio: un sistema abbastanza maturo da avere uno stato, da saperlo leggere, da comunicarlo al prossimo avvio. Non è intelligente nel senso che la parola evoca nei titoli di giornale. È qualcosa di più utile: è **affidabile nel ricordare.**
+
+Sessione #8. La prossima inizierà sapendo che il milestone attivo è Config G. Che il passo è saldare quattro gusset da 200mm sulla colonna Z sinistra. Che la massa del V32 è 178 kg, corpo unico, nessuna ambiguità.
+
+Matteo si siederà, leggerà il brief, prenderà il Getac, e andrà giù in taverna.
+
+Il sistema avrà già fatto il lavoro di ricordare.
+
+Lui può fare il lavoro di costruire.
+
+---
+
+## REEL HOOK
+
+> 150 chunk di memoria distribuita su un RAG ChromaDB. Dieci atti in un documento master. Quattro barre di progresso che non mentono.
+>
+> Il problema non era la complessità — era che ogni sessione ricominciava da zero.
+>
+> Allora ho costruito un sistema che ricorda al posto mio.
+>
+> \`Ctrl+K\`. Brief. Getac. Taverna. Lavoro.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E08 |
+| **Data registrazione** | 2026-05-27 |
+| **Titolo** | Il Sistema Che Si Ricorda di Sé |
+| **Progetto primario** | GENESIS |
+| **Progetto secondario** | V32 / ASSOLUTO |
+| **Milestone** | Config G — Rinforzi colonne Z+U |
+| **Commit chiave** | GENESIS stack MCP, Dashboard v5.2, ASSOLUTO V7 |
+| **Dati tecnici** | 178 kg corpo unico, 150 chunk RAG, sessione #8, 5 MCP tools |
+| **Stato repository** | dirty (modifiche non committate al 29/05) |
+| **Angolo narrativo** | Continuità cognitiva — il sistema come memoria esterna |
+| **Tono** | Tecnico-personale, nessuna retorica |
+| **Tag** | \`#GENESIS\` \`#DASHBOARD\` \`#RAG\` \`#MCP\` \`#ASSOLUTO\` \`#V32\` |
+| **Prossimo episodio** | Config G — I gusset da 200mm, il ferro vero |`,
+  },
+  {
+    id: "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
+    title: "La Macchina che Ricorda",
+    sottotitolo: "Matteosection v4 2 skill espandibili pe",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-28",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Ore 23:47. Il cursore lampeggia su un terminale Windows. Il file si chiama `RIAVVIO_SESSIONE.txt`. Non è un documento. È una promessa. Ogni volta che Matteo chiude Claude — ogni volta che la sessione si azzera, che il co",
+    content: `# TITANIUM_OS — S1E09
+## "La Macchina che Ricorda"
+
+---
+
+> *"Un sistema che dimentica non è un sistema. È solo un casino organizzato."*
+> — nota a margine, MANUALE_SISTEMA.md v1.0, riga 3
+
+---
+
+## COLD OPEN
+
+Ore 23:47. Il cursore lampeggia su un terminale Windows.
+
+Il file si chiama \`RIAVVIO_SESSIONE.txt\`.
+
+Non è un documento. È una promessa. Ogni volta che Matteo chiude Claude — ogni volta che la sessione si azzera, che il contesto evapora, che l'AI torna a essere una lavagna bianca — questo file esiste per ricominciare da dove si era rimasti. Non dall'inizio. Da *lì*.
+
+\`\`\`
+Generato: 2026-05-29 10:31
+STATE: v2.5.0
+RAG: 150 chunk
+Sessioni: #8
+\`\`\`
+
+Sessione numero otto. Ogni numero è una cicatrice di lavoro reale.
+
+---
+
+## ATTO I — Il Problema che Nessuno Nomina
+
+C'è una cosa che non si dice mai nei video dei maker su YouTube.
+
+Ogni volta che riapri il progetto — il giorno dopo, tre giorni dopo, lunedì mattina prima del lavoro — devi *ricostruire il contesto nella testa*. Dove eri. Cosa avevi deciso. Perché avevi scelto quella soluzione e non l'altra. È un costo invisibile, silenzioso, che si accumula ogni sessione come interesse composto al contrario.
+
+Per Matteo questo costo è doppio. C'è il progetto fisico — V32, colonne, gusset, epoxy granite — e c'è GENESIS, il sistema cognitivo che deve supportarlo. Due mondi paralleli, entrambi in costruzione, entrambi che si evolvono. Dimenticare un dettaglio in uno dei due può costare ore.
+
+La soluzione tradizionale è un quaderno. Oppure un file Word pieno di note. Oppure — nella versione più ambiziousa — un sistema di documentazione che tutti iniziano e nessuno mantiene.
+
+Matteo ha costruito qualcosa di diverso.
+
+Ha costruito un sistema che ricorda per lui.
+
+---
+
+Il commit del 28 maggio non ha un singolo protagonista. Ha sei. E capire come stanno insieme è capire cosa sta diventando GENESIS.
+
+Il primo: \`generate_restart_prompt v1.2\`.
+
+Ogni volta che Matteo scrive \`/stop\` — fine sessione, Claude si spegne — un hook automatico salva lo stato in \`MENTE/SESSIONI/\`. Non solo un log. Un prompt già formattato, pronto per essere incollato all'apertura successiva. Il sistema scrive il suo stesso riavvio.
+
+È una cosa piccola. È una cosa enorme.
+
+Perché significa che la *continuità* smette di dipendere dalla memoria di Matteo. Smette di essere un atto di volontà. Diventa infrastruttura.
+
+---
+
+## ATTO II — RAG v4.0: Quando la Ricerca Smette di Essere Casuale
+
+Il secondo protagonista del commit è più tecnico. E più importante.
+
+\`rag_engine.py v4.0\`.
+
+Per capire cosa cambia, bisogna capire cosa c'era prima.
+
+RAG v3 era semantico puro. Prendevi una domanda, la convertivi in un vettore, trovavi i chunk più vicini nello spazio vettoriale. Funziona bene quando sai *come stai cercando*. Funziona male quando stai cercando *qualcosa di specifico* con parole esatte — un numero di commit, un nome di componente, una sigla.
+
+I sistemi semantici puri hanno un punto cieco: la precisione lessicale.
+
+v4.0 risolve con un approccio ibrido:
+
+\`\`\`
+BM25 (TF-IDF) — ricerca keyword esatta
++
+Semantico (embedding) — ricerca per significato
++
+RRF (Reciprocal Rank Fusion) — fusione dei risultati
++
+CrossEncoder reranker — riordina per rilevanza finale
+\`\`\`
+
+Non è teoria. È la differenza tra chiedere *"cosa ho deciso sulle colonne Z"* e ricevere i 150 chunk ordinati per rilevanza reale, non per vicinanza vettoriale approssimata.
+
+150 chunk. Otto sessioni. Ogni decisione presa, ogni spec tecnica scritta, ogni ragionamento documentato — tutto raggiungibile in sotto-secondo, con ranking che funziona.
+
+Il sistema non è più una libreria. È una memoria che sa *dove guardare*.
+
+---
+
+Poi ci sono gli agenti.
+
+\`NODES/AGENTS/\`: TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA.
+
+Otto validatori. Ognuno con un dominio. FORGE per la meccanica. LEX per i vincoli normativi. AQUA per i sistemi idraulici. THEMIS per la coerenza logica. EVA — lo stesso nome del progetto WhatsApp per Maria — qui è l'agente di interfaccia.
+
+Non sono ancora attivi in modo completo. Ma la struttura esiste. E la struttura è il 70% del lavoro.
+
+Un sistema ad agenti validatori significa questo: quando Matteo prende una decisione su V32 — un materiale, una tolleranza, un giunto — non è più solo lui a valutarla. Ogni agente passa la decisione attraverso il proprio filtro. FORGE dice se regge meccanicamente. LEX dice se ci sono vincoli che non ha considerato. THEMIS dice se è coerente con le decisioni precedenti.
+
+È un sistema progettato per trovare i propri errori prima che diventino metallo.
+
+---
+
+## ATTO III — Il Manuale. E Cosa Significa Scriverlo.
+
+Il commit che colpisce di più non è il più tecnico.
+
+È questo: \`MANUALE_SISTEMA.md v1.0 — guida completa consumer-friendly\`.
+
+Matteo ha scritto un manuale. Per se stesso.
+
+Non per gli utenti. Non per GitHub. Per il Matteo delle 7:00 di lunedì mattina, caffè in mano, prima di andare in fabbrica, con venti minuti per aprire una sessione e non ricordare come funziona il comando \`rag-update\`.
+
+*Consumer-friendly* non è un termine aziendale in questo contesto. È un atto di rispetto verso una versione futura di sé stesso che sarà stanca, o di fretta, o semplicemente distratta.
+
+Il manuale copre:
+- RAG v4.0 — comandi, differenza tra \`rag-update\` (incrementale) e \`rag-rebuild\` (full)
+- Sistema agenti — come interrogarli, quando usarli
+- Research agent — come delegare la ricerca
+- Git — workflow del progetto, come leggere i commit
+- \`FUNZIONI_SISTEMA.txt\` — la lista auto-generata di tutte le funzioni disponibili
+
+Quest'ultima è un dettaglio che dice tutto: \`generate_functions_list.py\` genera automaticamente la lista di cosa il sistema sa fare. Non è documentazione statica. Si aggiorna quando il sistema si aggiorna.
+
+Il sistema documenta se stesso. Il sistema si riavvia da solo. Il sistema valida le proprie decisioni.
+
+---
+
+C'è anche il commit del storytelling. \`Fix 6 bottleneck + Dashboard v2.1\`. Cinque nuovi episodi. Il fix narrativo sull'evoluzione *molle → corpo unico* — quella svolta tecnica di V32 che nella dashboard era raccontata in modo confuso, e che ora ha la sua sequenza corretta.
+
+La storia del progetto, dentro il progetto stesso.
+
+---
+
+## CHIUSURA
+
+Matteo non ha saldato niente il 28 maggio.
+
+Il Milestone attivo è Config G — *Rinforzi colonne Z+U*. I gusset da 200mm sulla colonna Z sinistra aspettano. Il ferro aspetta. La taverna da 12 m² aspetta.
+
+Ma quello che è stato costruito in questa sessione reggerà ogni sessione futura.
+
+C'è una differenza tra costruire *cose* e costruire *la capacità di costruire cose*. Entrambe sono necessarie. Spesso, nel mezzo di un progetto fisico, la seconda sembra meno urgente. Sembra overhead. Sembra che stai perdendo tempo mentre il vero lavoro aspetta.
+
+Poi arriva lunedì. E il sistema si riavvia da solo. E RAG trova il chunk giusto in 80 millisecondi. E il manuale risponde alla domanda prima che tu la finisca di formulare.
+
+E capisci che la taverna da 12 m² non è più solo il posto dove c'è la macchina.
+
+È il posto dove c'è anche il sistema che la sta costruendo.
+
+\`STATE v2.5.0. Sessioni: #8. RAG: 150 chunk.\`
+
+Il capannone è il 15 luglio 2030.
+
+Mancano 1509 giorni.
+
+Il contatore non si azzera più.
+
+---
+
+## REEL_HOOK
+
+> RAG v4.0 su GENESIS: BM25 + semantico + CrossEncoder. 150 chunk, 8 sessioni, sotto-secondo.
+> Il problema non era la ricerca. Era che ogni lunedì mattina il sistema dimenticava tutto.
+> Ora si riavvia da solo — prompt generato all'Stop hook, context già caricato.
+> Prossimo: 4 gusset da 200mm. Colonna Z sinistra. Config G.
+> *Vediamo se il sistema regge quando torna il ferro.*
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E09 |
+| **Titolo** | La Macchina che Ricorda |
+| **Data registrazione** | 2026-05-28 |
+| **STATE** | v2.5.0 |
+| **Sessione** | #8 |
+| **Commit principale** | \`5a9d2d7\` + multipli 28/05 |
+| **Focus narrativo** | GENESIS — memoria, continuità, auto-documentazione |
+| **Progetto fisico** | V32 — Config G (in attesa) |
+| **Milestone prossimo** | Gusset 200mm colonna Z sinistra |
+| **RAG chunks** | 150 |
+| **Agenti definiti** | 8 (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) |
+| **Tag** | \`#GENESIS\` \`#RAG\` \`#automazione\` \`#continuità\` \`#V32\` \`#artigianato_cognitivo\` |
+| **Target capannone** | 15 luglio 2030 |
+| **Giorni rimanenti** | ~1509 |`,
+  },
+  {
+    id: "EP_20260529_auto_avvio_completo_al_login_start_",
+    title: "Il Sistema Che Si Ricorda di Sé",
+    sottotitolo: "Auto avvio completo al login start",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Sono le 10:31 di un giovedì mattina. Il file si chiama `RIAVVIO_SESSIONE.txt` e viene scritto sul desktop ogni volta che il computer si accende. Non perché Matteo se lo dimentichi — ma perché *il sistema* non deve diment",
+    content: `# TITANIUM_OS — Episodio 2.08
+## "Il Sistema Che Si Ricorda di Sé"
+
+---
+
+## COLD OPEN
+
+Sono le 10:31 di un giovedì mattina.
+
+Il file si chiama \`RIAVVIO_SESSIONE.txt\` e viene scritto sul desktop ogni volta che il computer si accende. Non perché Matteo se lo dimentichi — ma perché *il sistema* non deve dimenticare niente.
+
+150 chunk nel RAG. 8 sessioni caricate. Stato dirty sul branch main.
+
+Nella taverna da 12 m², la V32 aspetta. Config G è in corso — quattro gusset da 200mm sulla colonna Z sinistra devono ancora essere saldati. Ma oggi Matteo non ha ancora preso il TIG.
+
+Oggi ha aperto un terminale.
+
+---
+
+## ATTO I — 342 PRINT CHE URLANO NEL VUOTO
+
+C'è un momento preciso in cui capisci che un sistema ha smesso di essere un prototipo e ha bisogno di diventare una macchina.
+
+Non è quando funziona. È quando cominci a non capire *perché* funziona.
+
+GENESIS aveva 342 chiamate \`print()\` sparse in decine di file Python. Alcune loggavano errori. Alcune loggavano stato. Alcune erano lì dai primissimi giorni — quando bastava vedere qualcosa passare nel terminale per sentirsi dire che andava tutto bene.
+
+Il problema con i \`print()\` è che sono sordi. Non sanno l'ora. Non sanno da dove vengono. Non si salvano da nessuna parte. Spariscono non appena chiudi la finestra — e se il processo gira in background con \`pythonw\`, non le vedi nemmeno.
+
+\`sys.stdout è None.\`
+
+Quella riga nel commit dice tutto. Un processo figlio avviato con \`DETACHED_PROCESS\` — il modo in cui Windows lancia i programmi senza aprire una finestra — non ha stdout. Ogni \`print()\` lanciata in quel contesto è un urlo in una stanza senza aria. Il messaggio esiste. Non arriva da nessuna parte.
+
+La soluzione non era silenziare gli errori. Era costruire un sistema che sapesse *dove stava parlando* prima di aprire bocca.
+
+---
+
+## ATTO II — UN LOGGER, 34 FILE, UN UNICO FILO
+
+\`CORE/log.py\` è 40 righe di Python.
+
+Fa una cosa sola: quando un modulo vuole loggare qualcosa, chiama \`get_logger()\` con il suo nome e riceve un logger configurato — \`RotatingFileHandler\` da 5MB con tre file di rotazione, output in \`DATA/logs/\`, più \`StreamHandler\` per il terminale quando c'è un terminale disponibile.
+
+Il guard per \`sys.stdout\` è lì: se lo stdout non esiste, il \`StreamHandler\` non viene agganciato. Nessuna eccezione. Nessun crash silenzioso.
+
+34 file aggiornati in un giorno.
+
+\`watchdog.py\` migrato. \`api_server.py\` migrato. Il modulo story agent migrato. L'updater del profilo GitHub migrato. Ogni file che prima urlava nel vuoto ora scrive in \`DATA/logs/\` con timestamp, nome modulo, livello di severità.
+
+I \`print()\` rimasti sono 131. Erano 342.
+
+Non è ancora zero — e probabilmente non sarà mai zero, perché alcuni \`print()\` sono output intenzionale verso l'utente, non diagnostica interna. Ma la distinzione ora esiste. Prima non esisteva.
+
+C'è una differenza sottile tra un sistema che *funziona* e un sistema che *sa di funzionare*. Il primo va bene finché non si rompe. Il secondo, quando si rompe, ti dice dove.
+
+---
+
+## ATTO III — IL SISTEMA CHE SI AVVIA DA SOLO
+
+\`START_LOGIN.bat v1.2\` è un file batch di Windows che gira all'avvio della sessione utente.
+
+In ordine: avvia il Watchdog da \`CORE/\`. Avvia la Dashboard. Lancia il rebuild del RAG. Avvia n8n. Apre Windows Terminal.
+
+\`mente_watcher\` è incremental — non ricostruisce tutto da zero ogni volta, controlla i delta.
+
+\`/api/restart\` è un endpoint POST su Flask. Quando viene chiamato, avvia un thread che aspetta 0.5 secondi e poi chiama \`os._exit(0)\`. Il delay esiste perché la risposta HTTP deve tornare al client prima che il processo muoia. Senza quello, la connessione si chiude bruscamente e il client non sa se il restart è partito o se qualcosa è andato storto.
+
+\`RunLevel Highest\` nell'aggiornamento del profilo GitHub significa che il task scheduler di Windows esegue lo script con privilegi elevati. Aggiorna il README del profilo Microindustry/Microindustry con lo stato live di GENESIS — completamento, milestone attivo, ultimo commit.
+
+Tutto questo insieme fa una cosa: quando Matteo accende il computer la mattina, GENESIS è già sveglio. Non deve avviare processi. Non deve aspettare. Il file \`RIAVVIO_SESSIONE.txt\` è già lì, sul desktop, con i metadati della sessione precedente, pronto per essere incollato in Claude.
+
+Il sistema si ricorda di sé. Questo era il punto.
+
+---
+
+## CHIUSURA
+
+C'è una sensazione strana nel lavorare su un sistema che documenta sé stesso mentre lo costruisci.
+
+Il RAG ha 150 chunk. Sono estratti di sessioni, decisioni, specifiche tecniche, errori corretti. Ogni volta che Matteo riapre una sessione, parte del contesto è già lì — non perché lo ha scritto a mano, ma perché il sistema lo ha salvato mentre lavorava.
+
+La colonna Z della V32 aspetta ancora i suoi quattro gusset da 200mm. Config G è al 65% come il giorno prima. Il titanio non si salda da solo.
+
+Ma c'erano 342 chiamate \`print()\` che urlavano nel vuoto. Ora ci sono 131, e le altre 211 hanno trovato un posto dove andare.
+
+A volte il lavoro non è avanzare. È sistemare il terreno su cui camminerai dopo.
+
+Il dirty flag sul branch main verrà risolto. I gusset verranno saldati. Il capannone è ancora al 2030.
+
+Intanto, il sistema si è ricordato di sé.
+
+---
+
+## REEL_HOOK
+
+342 \`print()\` in un sistema che gira senza terminale. Stdout era None — ogni log spariva nel nulla. In un giorno: CORE/log.py, 34 file migrati, 211 chiamate convertite. Non perché GENESIS non funzionasse. Perché quando si romperà, voglio sapere esattamente dove.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S2E08 |
+| **Titolo** | Il Sistema Che Si Ricorda di Sé |
+| **Data** | 2026-05-29 |
+| **Progetto primario** | GENESIS |
+| **Milestone** | Logging centralizzato completato |
+| **Componenti** | CORE/log.py · watchdog.py · api_server.py · START_LOGIN.bat · mente_watcher |
+| **Metrica chiave** | print() ridotti da 342 a 131 — 34 file migrati |
+| **V32 completamento** | 65% — Config G in corso |
+| **GENESIS completamento** | 78% |
+| **Prossimo step** | Saldare 4 gusset 200mm — colonna Z sinistra |
+| **Target capannone** | 15 luglio 2030 |
+| **Tag narrativo** | infrastruttura · resilienza · auto-avvio · logging |`,
+  },
+  {
+    id: "EP_20260529_chore_permissions_allow_all_dashboard",
+    title: "Tagliare il Grasso",
+    sottotitolo: "Chore permissions allow all dashboard",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Il file si chiama `CanvasLayout.tsx`. Millecentosedici righe. Un blocco monolitico scritto di notte, durante sessioni che finivano alle due, quando l'unica cosa che importava era che funzionasse — non che fosse leggibile",
+    content: `# TITANIUM_OS — S1E08
+
+## "Tagliare il Grasso"
+
+---
+
+## COLD OPEN
+
+Il file si chiama \`CanvasLayout.tsx\`.
+
+Millecentosedici righe. Un blocco monolitico scritto di notte, durante sessioni che finivano alle due, quando l'unica cosa che importava era che funzionasse — non che fosse leggibile. Non che fosse mantenibile. Non che qualcuno, incluso te tra sei mesi, capisse dove finiva una cosa e dove iniziava un'altra.
+
+Questa mattina Matteo apre il file. Lo guarda. Poi apre il terminale.
+
+Non perché qualcosa sia rotto. Perché sa che se aspetta ancora, smette di essere codice e diventa debito.
+
+---
+
+## ATTO I — Il Peso delle Cose che Funzionano
+
+C'è una categoria di lavoro che non appare mai nei titoli. Non è una feature nuova. Non è un bug fixato. Non è il momento in cui qualcosa che era rotto torna a funzionare — quella scarica di dopamina pulita, verificabile, definitiva.
+
+È la mattina in cui guardi qualcosa che funziona e decidi di smontarlo comunque.
+
+\`CanvasLayout.tsx\` funzionava. La dashboard di GENESIS si apriva, le MacroCard mostravano i dati, la sezione Matteo caricava lo stato del sistema, la sezione Claude rendeva i log delle sessioni. Tutto corretto. Tutto dentro un unico file da 1116 righe dove ogni componente sapeva troppo degli altri, dove modificare il colore di un titolo significava scorrere duecento righe per trovare il punto giusto, dove il rischio di rompere qualcosa era proporzionale alla stanchezza del momento.
+
+Il refactoring non è glamour. È igiene.
+
+Matteo estrae tre componenti: \`MacroCard\`, \`MatteoSection\`, \`ClaudeSection\`. Ognuno nel suo file. Ognuno con una responsabilità sola. Il file principale scende da 1116 a 290 righe — una riduzione del 74% senza toccare un pixel dell'interfaccia, senza cambiare una sola funzionalità visibile.
+
+È il tipo di lavoro che non puoi mostrare a nessuno. Il prima e il dopo sembrano identici. Solo il diff su Git racconta cosa è successo davvero.
+
+---
+
+## ATTO II — Permessi e Frizioni Invisibili
+
+Prima del refactoring, c'è un problema più piccolo e più fastidioso.
+
+Il file \`settings.local.json\` della dashboard aveva una configurazione parziale: permessi attivi solo per \`npx tsc\`. Questo significava che ogni volta che l'ambiente si riavviava, certi processi si bloccavano su richieste di autorizzazione. Micro-interruzioni. Finestre di dialogo. Il tipo di frizione che non ferma nessun progetto ma ti logora per accumulo — trenta secondi persi dieci volte al giorno diventano cinque minuti persi al giorno diventano mezz'ora persa a settimana.
+
+La soluzione è \`allow-all\`. Non elegante, non definitiva, non la configurazione di produzione che userai tra due anni quando il sistema gira in un capannone vero. Ma è la configurazione giusta adesso, in una taverna da 12 m² dove l'unico utente sei tu e il costo della frizione supera il costo del rischio.
+
+Insieme a questo: uno script \`.bat\` con privilegi admin per ottimizzare l'avvio su Windows. Piccolo. Concreto. Il tipo di cosa che risolvi una volta e non ci pensi più.
+
+Questa è la sessione #8. Il sistema RAG ha 150 chunk. Lo state è v2.5.0. Il commit è marcato \`dirty\` — ci sono modifiche non ancora consolidate, il cantiere è aperto.
+
+E il milestone attivo non è codice.
+
+---
+
+## ATTO III — Config G
+
+Sotto tutto questo, sotto il refactoring e i permessi e gli script di ottimizzazione, c'è la voce che appare nel prompt di apertura della sessione:
+
+*"STEP: Saldare 4 gusset 200mm sulla colonna Z sinistra."*
+
+Config G. Rinforzi colonne Z+U.
+
+V32 è una macchina CNC da 178 kg costruita in una taverna. Il corpo è Epoxy Granite. La precisione target è IT6-IT7. E questa mattina — mentre il terminale compilava TypeScript e Git registrava la ristrutturazione del frontend — il passo reale era quello: quattro gusset d'acciaio, duecento millimetri, TIG sulla colonna Z.
+
+Il software e il ferro esistono in parallelo. GENESIS non è separato da V32 — è il sistema cognitivo che tiene traccia di V32, che registra le decisioni, che conserva la logica di ogni scelta fatta alle undici di sera quando la stanchezza rende tutto uguale. Il refactoring del frontend questa mattina è manutenzione dello strumento che documenta la macchina. La macchina che, un giorno, produrrà pezzi in un capannone che ancora non esiste.
+
+Luglio 2030 è a 49 mesi.
+
+Il commit è pulito. La colonna Z aspetta.
+
+---
+
+## CHIUSURA
+
+C'è qualcosa di onesto nel lavoro di oggi. Nessuna nuova funzionalità. Nessun breakthrough. Un file spezzato in tre parti più piccole, due righe di configurazione cambiate, uno script di avvio scritto.
+
+Ma il sistema pesa meno. Si apre più veloce. La prossima persona che leggerà quel codice — che probabilmente sei tu tra tre mesi, alle undici di sera, stanco — troverà componenti con nomi che descrivono esattamente cosa fanno.
+
+Il debito tecnico si accumula in silenzio. Si ripaga in mattine come questa, quando non hai voglia di farlo, quando niente è rotto, quando la risposta più facile sarebbe aprire un file nuovo e ricominciare ad aggiungere.
+
+Matteo ha scelto di sottrarre.
+
+Millecentosedici meno ottocentoventisei. Uguale 290.
+
+La colonna Z aspetta ancora i suoi gusset.
+
+---
+
+## REEL_HOOK
+
+> 1116 righe di codice che funzionavano perfettamente.
+> Il problema è che "funziona" e "si può mantenere" non sono la stessa cosa.
+> Questa mattina ho spaccato tutto in tre file senza rompere niente.
+> Nel frattempo, in taverna, quattro gusset aspettano ancora la torcia TIG.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E08 |
+| **Titolo** | Tagliare il Grasso |
+| **Data** | 2026-05-29 |
+| **Progetto primario** | GENESIS — Dashboard |
+| **Progetto parallelo** | V32 — Config G |
+| **Commit chiave** | \`5a9d2d7\` |
+| **Lavoro principale** | CanvasLayout refactor 1116→290 righe |
+| **Componenti estratti** | MacroCard, MatteoSection, ClaudeSection |
+| **Config modificata** | settings.local.json allow-all |
+| **Milestone attivo** | Config G — Rinforzi colonne Z+U |
+| **Sessione RAG** | #8 — 150 chunk |
+| **State version** | v2.5.0 |
+| **Angolo narrativo** | Manutenzione come disciplina, non come emergenza |
+| **Tono** | Onesto, anti-motivazionale, tecnico-personale |
+| **Target capannone** | 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0",
+    title: "Il Sistema Che Si Ricorda da Solo",
+    sottotitolo: "Feat canvaslayout v6 1 state v2 6 0",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 8,
+    preview: "Sono le 10:31 di un giovedì mattina. Il file si chiama `RIAVVIO_SESSIONE.txt` e pesa pochi kilobyte. Ma dentro c'è tutto: 150 chunk di memoria compressa, lo stato di una macchina da 178 kg che non esiste ancora, il nome ",
+    content: `# TITANIUM_OS — S1E09
+## "Il Sistema Che Si Ricorda da Solo"
+
+---
+
+## COLD OPEN
+
+Sono le 10:31 di un giovedì mattina.
+
+Il file si chiama \`RIAVVIO_SESSIONE.txt\` e pesa pochi kilobyte. Ma dentro c'è tutto: 150 chunk di memoria compressa, lo stato di una macchina da 178 kg che non esiste ancora, il nome di una milestone — *Config G* — e una riga secca che dice cosa fare oggi: *saldare 4 gusset da 200mm sulla colonna Z sinistra.*
+
+Matteo non è davanti al CNC. È davanti al monitor.
+
+E quello che ha costruito stanotte non è un pezzo di titanio. È il sistema che gli permette di ricominciare ogni mattina esattamente da dove si era fermato — senza perdere un secondo a ricordare chi era ieri.
+
+---
+
+## ATTO I — La Velocità Che Non Si Vede
+
+C'è un numero che cambia tutto: **4.7 secondi**.
+
+Prima, quando Claude si svegliava con il contesto di TITANIUM_OS, il RAG — il sistema di memoria che recupera i chunk rilevanti dal database ChromaDB — girava in sequenza. Prima uno hook, poi l'altro, poi il terzo. Il tutto: **45 secondi, a volte di più**. Ogni mattina. Ogni riavvio di sessione. Ogni volta che Matteo apriva una nuova finestra e incollava il prompt di apertura.
+
+Quarantacinque secondi non sembrano nulla. Ma moltiplicati per ogni sessione, ogni giorno, ogni cambio di contesto tra GENESIS, V32, MIMS, EVA — diventano un attrito silenzioso. Il tipo di attrito che non blocca mai, ma rallenta sempre. Il tipo che non si registra nei commit ma si accumula nella testa.
+
+Il commit di stanotte risolve questo con una scelta precisa: **orchestrazione parallela**.
+
+\`stop_hooks.py\` adesso lancia i 3 hook in parallelo, non in sequenza. E c'è una logica in più, quella che Matteo chiama *skip RAG*: se la cartella \`MENTE/\` non è cambiata dall'ultima esecuzione — se non ci sono nuovi ragionamenti, nuove decisioni, nuove note — il sistema salta il recupero. Non esegue. Non carica. Presuppone che quello che sa già sia sufficiente.
+
+È una decisione di design che ha un peso filosofico preciso: **non cercare quello che non è cambiato**.
+
+Il sistema impara a distinguere il rumore dal silenzio. E il silenzio, in questo caso, è informazione.
+
+*4.7 secondi. Da 45.*
+
+---
+
+## ATTO II — La Dashboard Che Respira
+
+Mentre \`stop_hooks.py\` girava nei test, Matteo costruiva la faccia del sistema.
+
+CanvasLayout è arrivato alla versione 6.1 in una sola giornata — o forse notte, i commit non distinguono. Due iterazioni in poche ore. Il dettaglio che conta non è il numero di versione, è la direzione: ogni iterazione ha semplificato, non aggiunto.
+
+**v6.0** ha introdotto la navigazione a drill-down. Le celle non sono più flat — sono *contenitori*. Cliccane una e ci scendi dentro. Breadcrumb in cima per sapere dove sei, ESC per tornare su. È il tipo di UI che Matteo conosce dai CNC: ogni livello di menu ha un'uscita di sicurezza. Non ti lascia perso.
+
+**v6.1** ha cambiato il linguaggio visivo. Celle pilastro — le quattro aree principali del sistema: V32, GENESIS, MIMS, EVA — adesso mostrano la percentuale di completamento in carattere **6xl**. Non un numero discreto in un angolo. Una dichiarazione. Il glow colorato attorno al border è la firma cromatica di ogni progetto: ogni pilastro ha il suo colore, e quando ci passi sopra con il mouse il sistema *pulsa*.
+
+Il gradient di sfondo è navy. Non nero, non grigio. Navy — il colore che Matteo ha scelto per qualcosa che deve sembrare solido ma non pesante.
+
+C'è un dettaglio tecnico in questa scelta di design che non è estetico: le percentuali grandi costringono all'onestà. Quando vedi **V32: 23%** in carattere enorme su uno schermo, non puoi ignorarlo. Non puoi dirti che "va abbastanza bene". Il numero è lì, occupa spazio, ti guarda.
+
+Una dashboard che nasconde il progresso — piccoli numeri, colori neutri, tutto uguale — è una dashboard che permette l'autoinganna.
+
+Questa no.
+
+---
+
+## ATTO III — Config G è ancora lì
+
+Nel file di riavvio c'è una riga che non è cambiata da ieri, forse da prima di ieri.
+
+\`\`\`
+MILESTONE: Config G — Rinforzi colonne Z+U
+STEP:      Saldare 4 gusset 200mm sulla colonna Z sinistra
+\`\`\`
+
+I gusset non sono stati saldati stanotte. Stanotte Matteo era davanti al codice, non alla torcia TIG. E questo è un fatto, non un'accusa.
+
+Il V32 pesa 178 kg e vive in una taverna da 12 m². È un corpo fisico che richiede un altro tipo di presenza — guanti, maschera, il calore del metallo, le decisioni che si prendono in posizione scomoda sotto una colonna. Non si salda con un commit. Non si fa in parallelo con una sessione di coding.
+
+Ma c'è una connessione tra le due cose che Matteo probabilmente sente meglio di quanto riesca a spiegare: il sistema che ha costruito stanotte — gli hook paralleli, il RAG che si avvia in 4.7 secondi, la dashboard che mostra il numero grande — è il sistema che ogni mattina gli ricorda che i gusset sono ancora da fare.
+
+Non lo lascia dimenticare. Non lo lascia credere che il progresso sul software sia progresso sul CNC.
+
+GENESIS non è un sostituto del lavoro fisico. È la memoria del lavoro fisico che deve ancora essere fatto.
+
+Il \`STATE v2.6.0\` sa che Config G è attivo. Sa che la colonna Z sinistra aspetta. Sa che il 29 maggio 2026 Matteo era in sessione 8 e il repository era *dirty* — lavoro non committato, idee non ancora formalizzate.
+
+Un sistema che si ricorda da solo è utile solo se quello che ricorda è reale.
+
+I gusset da 200mm sono reali. Sono nella taverna. Aspettano il martedì o il mercoledì o il sabato quando si può tenere la torcia in mano senza interrompere tutto il resto.
+
+E il sistema — questo sistema che Matteo costruisce un hook alla volta, una cella alla volta, un chunk di memoria alla volta — starà lì quando arriva quel giorno. Pronto in 4.7 secondi. Con il numero grande che dice esattamente a che punto si è.
+
+---
+
+## CHIUSURA
+
+C'è un tipo di lavoro che non lascia segni fisici ma prepara il terreno per quelli che li lasceranno.
+
+Stanotte Matteo non ha saldato niente. Ha reso il sistema più veloce, più onesto, più capace di ricominciare. Ha costruito l'infrastruttura della memoria — non la memoria di qualcosa di fatto, ma la memoria di qualcosa che deve essere fatto.
+
+Non so se questo sia più facile o più difficile che stare sotto una colonna con la torcia in mano.
+
+Probabilmente sono due fatiche diverse che servono la stessa cosa.
+
+Un capannone entro il 15 luglio 2030. Una macchina che funziona. Un sistema che non dimentica.
+
+Sessione 8. STATE v2.6.0. Repository dirty.
+
+Buon lavoro.
+
+---
+
+## REEL_HOOK
+
+Il RAG di GENESIS impiegava 45 secondi ogni mattina per svegliarsi. Oggi impiega 4.7. Ma i gusset da 200mm sulla colonna Z del V32 sono ancora da saldare — e il sistema lo sa, lo ricorda, lo scrive grande sulla dashboard in navy. Ho costruito una memoria che non mi lascia mentire a me stesso. Vedremo se funziona.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E09 |
+| **Titolo** | Il Sistema Che Si Ricorda da Solo |
+| **Data registrazione** | 2026-05-29 |
+| **Sessione** | #8 |
+| **STATE** | v2.6.0 |
+| **Commit principale** | stop_hooks orchestratore parallelo + CanvasLayout v6.1 |
+| **Milestone attivo** | Config G — Rinforzi colonne Z+U |
+| **Prossimo step fisico** | Saldare 4 gusset 200mm colonna Z sinistra |
+| **KPI tecnico** | RAG: 45s → 4.7s (parallelizzazione 3 hook) |
+| **Progetto focus** | GENESIS / Dashboard |
+| **Tono** | Onesto, tecnico, non celebrativo |
+| **Durata stimata lettura** | ~8 min |`,
+  },
+  {
+    id: "EP_20260529_task_scheduler_ottimizzazione_scrip",
+    title: "IL SISTEMA CHE DORME MA NON RIPOSA",
+    sottotitolo: "Task scheduler ottimizzazione scrip",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-29",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Sono le 03:37 di notte. La taverna è buia. Il tornio è freddo. Le colonne Z di V32 aspettano ancora i loro gusset — quattro pezzi d'acciaio da 200mm che Matteo salderà domani, o dopodomani, o quando riesce. Ma qualcosa s",
+    content: `# TITANIUM_OS — S2E03
+## "IL SISTEMA CHE DORME MA NON RIPOSA"
+### Sessione #10 — 29 Maggio 2026
+
+---
+
+> *Stagione 2 — GENESIS*
+> *Episodio 3 di 6*
+
+---
+
+## COLD OPEN
+
+Sono le 03:37 di notte.
+
+La taverna è buia. Il tornio è freddo. Le colonne Z di V32 aspettano ancora i loro gusset — quattro pezzi d'acciaio da 200mm che Matteo salderà domani, o dopodomani, o quando riesce.
+
+Ma qualcosa si muove.
+
+Un file batch si apre. Un terminale Windows lampeggia nel buio. Il sistema inizia a cercare: *Epoxy Granite vibration damping*, *titanium TIG joint fatigue MotoGP*, *modular connector PA-GF30 thermal cycling*. 
+
+I paper arrivano. Vengono processati. Finiscono nel RAG.
+
+Matteo dorme. GENESIS lavora.
+
+Non è fantascienza. È un cron job alle 03:37.
+
+---
+
+## ATTO I — IL CONTENUTO CHE PRODUCE SE STESSO
+
+C'è un problema che ogni creatore conosce e nessuno vuole ammettere: il contenuto è lavoro. Non il tipo romantico — non l'ispirazione che ti colpisce sotto la doccia. Il tipo noioso. Il tipo che richiede di sedersi, aprire un file, ricordare cosa hai fatto tre settimane fa, trovare le parole giuste, formattare, pubblicare.
+
+Matteo stava accumulando un debito.
+
+Stava costruendo V32. Stava sviluppando GENESIS. Stava saldando MIMS e scrivendo codice e mandando avanti il centro estetico di Maria con EVA. E contemporaneamente doveva documentare tutto questo — podcast, episodi, reel, brief — perché senza documentazione il progetto non esiste per nessuno tranne lui.
+
+La soluzione non è stata "trovare più tempo". È stata spostare il problema.
+
+Nella sessione #10 del 29 maggio, Matteo ha costruito quello che internamente chiama il **Content Engine**: un sistema che produce contenuto su se stesso.
+
+I numeri concreti:
+- **6 episodi S2** scritti e strutturati: IL_DISTACCO, CERVELLO_IBRIDO, ORCHESTRATORE, LA_TELA, CV, IL_SILENZIO
+- **5 MOMENTI** — format nuovo, 5-7 minuti, inseribili come intermezzo tra qualsiasi episodio principale
+- **8 episodi backfill** — la storia che non era stata raccontata, ora recuperata e collocata nell'archivio
+- **Story Agent v1.0** — cron alle 02:07, genera brief automatici, si ferma con un hook quando la sessione finisce
+
+Totale: 19 pezzi di contenuto in una giornata.
+
+Non tutti finiti. Non tutti pronti per la pubblicazione. Ma strutturati, datati, in un INDEX aggiornato.
+
+Il punto non è la quantità. Il punto è che la prossima volta che Matteo si siede a registrare, il lavoro di ricerca è già fatto. La prossima volta che deve ricordare cosa è successo ad aprile, c'è un documento che glielo dice.
+
+Il sistema ha cominciato a prendersi cura di se stesso.
+
+---
+
+## ATTO II — COMPUTER_USE E IL CONFINE CHE SI SPOSTA
+
+Tra tutti i commit del 29 maggio, ce n'è uno che pesa diversamente dagli altri.
+
+\`feat: COMPUTER_USE node v1.0\`
+
+Il file è \`NODES/COMPUTER_USE/computer_use_agent.py\`. Il loop è semplice nella descrizione, meno semplice nelle implicazioni: screenshot → API Anthropic → azione. Il modello usato è \`anthropic beta computer-use-2025-11-24\`. In pratica, un agente che vede lo schermo e ci agisce sopra.
+
+Non è la prima volta che qualcuno implementa computer use. Anthropic ha rilasciato le API in beta mesi fa. Ci sono tutorial, repository, demo.
+
+Ma c'è una differenza tra implementarlo su un progetto demo e integrarlo come nodo in un sistema cognitivo reale, con un task scheduler che lo chiama, un RAG che lo alimenta, una dashboard che lo monitora.
+
+Matteo non ha costruito una demo. Ha costruito un nodo.
+
+La distinzione è importante perché cambia cosa il sistema può fare. Fino a ieri, GENESIS poteva *parlare* di V32, rispondere a domande su V32, recuperare documenti su V32. Da oggi, in linea di principio, GENESIS può *aprire Fusion 360*, leggere le misure sullo schermo, confrontarle con il CAD, segnalare una discrepanza.
+
+Questo non succederà domani. Il nodo è v1.0 — loop funzionante, API integrata, azioni base. Non è testato in produzione. Non è collegato a V32 in modo utile. È un confine che si è spostato di un centimetro.
+
+Ma i centimetri si sommano. È la stessa logica con cui si costruisce un CNC in una taverna da 12 metri quadri.
+
+---
+
+## ATTO III — LA NOTTE CHE LAVORA
+
+Torna l'immagine delle 03:37.
+
+Il task scheduler notturno non è un dettaglio tecnico. È una scelta filosofica.
+
+Matteo ha un vincolo reale: il tempo. Ha una taverna, un lavoro, una relazione, un corpo che ha bisogno di dormire. Non può essere ovunque. Non può fare tutto. Ogni ora spesa a cercare paper su Epoxy Granite è un'ora non spesa a saldare gusset sulla colonna Z.
+
+La soluzione classica a questo problema è la prioritizzazione: fai le cose più importanti, ignora il resto. È un consiglio ragionevole che non risolve il problema — perché il "resto" non sparisce, si accumula, e a un certo punto ti travolge.
+
+La soluzione di Matteo è diversa: fa fare al sistema le cose che il sistema può fare, nelle ore in cui nessuno è sveglio.
+
+\`night_research.bat\` gira ogni notte alle 03:37. Cerca paper su V32, MIMS, Epoxy Granite. Aggiorna il RAG. Alle 02:07, lo Story Agent genera un brief per l'episodio successivo. Da qualche parte in mezzo, il push automatico sincronizza il repository.
+
+Al mattino, quando Matteo apre il computer, trova un sistema che ha lavorato per lui.
+
+Non è magia. È plumbing. È un sacco di bat file, cron job, script Python che falliscono e vengono fixati e poi falliscono di nuovo in modo leggermente diverso. È il commit \`fix: api_server ROOT -> BASE_DIR in agents endpoint\` — quattro parole che rappresentano probabilmente un'ora di debugging su un path che non si risolveva nel modo giusto.
+
+Il sistema ha 78% di completamento. I fix notturni si sommano ai fix diurni si sommano alle feature che diventano foundation per le feature successive.
+
+E i gusset sulla colonna Z aspettano ancora.
+
+Ma il sistema conosce le specifiche. Le ha lette stanotte.
+
+---
+
+## CHIUSURA
+
+C'è qualcosa di strano nel costruire un sistema che documenta la propria costruzione.
+
+Ogni episodio di TITANIUM_OS è, in un certo senso, un artefatto di GENESIS — il sistema cognitivo che Matteo sta costruendo per supportare tutto il resto. Questa settimana, per la prima volta, GENESIS ha cominciato a produrre bozze degli episodi su se stesso.
+
+Il sistema scrive di se stesso. Il podcast racconta il sistema che racconta il sistema.
+
+Non si sa ancora se questa ricorsione sia utile o semplicemente bizzarra. Probabilmente entrambe le cose.
+
+Quello che si sa è questo: Dashboard v7.0 è online. Il sidebar naviga tra agenti, tasks, log. AgentsView mostra lo stato in tempo reale. Il fine-tuning pipeline ha 180 esempi nel dataset — 30 episodi per 6 campioni ciascuno, formato Alpaca, pronti per addestrare un modello che parli come Matteo.
+
+E da qualche parte in una cartella chiamata \`S2_SISTEMA\`, ci sono sei episodi narrativi che nessuno ha ancora sentito.
+
+IL_DISTACCO. CERVELLO_IBRIDO. ORCHESTRATORE. LA_TELA. CV. IL_SILENZIO.
+
+Titoli scelti uno per uno. Storie reali. Ancora in attesa del microfono.
+
+Il sistema dorme ma non riposa.
+
+---
+
+## REEL HOOK
+
+\`\`\`
+Alle 03:37 stanotte il mio sistema ha cercato 
+paper tecnici su Epoxy Granite mentre dormivo.
+Al mattino li ho trovati già nel RAG.
+
+Il problema non era trovare più tempo.
+Era smettere di fare le cose che il sistema
+poteva fare al posto mio.
+
+GENESIS: 78%. V32: 65%.
+Il CNC aspetta i gusset sulla colonna Z.
+Il sistema ha già letto le specifiche.
+\`\`\`
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S2E03 |
+| **Titolo** | IL SISTEMA CHE DORME MA NON RIPOSA |
+| **Data registrazione** | 2026-05-29 |
+| **Sessione** | #10 |
+| **GENESIS** | 78% |
+| **V32** | 65% |
+| **Milestone attivo** | Config G — Rinforzi colonne Z+U |
+| **Commit principale** | \`feat: COMPUTER_USE node v1.0\` |
+| **Feature chiave** | Content Engine S2 + Automazioni notturne 03:37 |
+| **Dataset fine-tuning** | 180 esempi (30 ep × 6 campioni, formato Alpaca) |
+| **Agente nuovo** | Story Agent v1.0 — cron 02:07 |
+| **Dashboard** | v7.0 — sidebar + AgentsView + redesign |
+| **Co-autore AI** | Claude Sonnet 4.6 |
+| **Prossimo step** | Saldare 4 gusset 200mm colonna Z sinistra |
+| **Target capannone** | 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260530_dashboard_sempre_attiva_watchdog_v1",
+    title: "Il Cane da Guardia",
+    sottotitolo: "Dashboard sempre attiva watchdog v1",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-30",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "``` STAGIONE 1 · EPISODIO 14 DATA: 2026-05-30 COMMIT: watchdog v1.2 + START_LOGIN v1.3 PROGETTO: GENESIS / V32 ``` Sono le 10:31 di un giovedì mattina. Il file si chiama `RIAVVIO_SESSIONE.txt` — e questo nome, da solo, r",
+    content: `# TITANIUM_OS — Stagione 1, Episodio 14
+
+## "Il Cane da Guardia"
+
+*— o di come un sistema impara a badare a se stesso*
+
+---
+
+\`\`\`
+STAGIONE 1 · EPISODIO 14
+DATA: 2026-05-30
+COMMIT: watchdog v1.2 + START_LOGIN v1.3
+PROGETTO: GENESIS / V32
+\`\`\`
+
+---
+
+## COLD OPEN
+
+Sono le 10:31 di un giovedì mattina.
+
+Il file si chiama \`RIAVVIO_SESSIONE.txt\` — e questo nome, da solo, racconta qualcosa. Non \`SESSIONE.txt\`. Non \`AVVIO.txt\`. **Riavvio.** Come se il sistema sapesse già, per esperienza accumulata, che ogni volta che lo chiami potrebbe essere rotto.
+
+Sul desktop di Matteo c'è una cartella OneDrive. Dentro quella cartella c'è un file \`.txt\` generato automaticamente ogni mattina alle 10:30 — metadati, stato del progetto, prompt pre-compilato da incollare nel chat. È la liturgia del sistema: svegliarsi, aprire il terminale, leggere lo stato della macchina.
+
+Quel giorno, però, qualcosa nel ciclo si era rotto prima ancora di cominciare.
+
+La dashboard non era attiva.
+
+---
+
+## ATTO I — Il Problema che Nessuno Nomina
+
+Ci sono due tipi di bug nei sistemi personali. Il primo tipo ti blocca: stai lavorando, qualcosa smette di funzionare, ti fermi, lo risolvi. Il secondo tipo è peggio: è il bug che ti consuma **prima che tu ti accorga che esiste**.
+
+La dashboard di GENESIS — quella React su \`localhost:5173\` — aveva una caratteristica subdola: sopravviveva solo se qualcuno la teneva d'occhio. Processo Vite avviato, tutto bene. Ma se la sessione si chiudeva, se il terminale moriva per errore, se Windows decideva autonomamente di fare qualcosa di stupido nel mezzo della notte — la dashboard spariva. Silenziosamente. Senza avviso.
+
+E la mattina dopo, quando Matteo apriva il browser per controllare lo stato di GENESIS, trovava il nulla. Doveva capire perché, riaprire il terminale, riavviare Vite, ricaricare. Trenta secondi di lavoro, forse un minuto — ma trenta secondi **ogni singola volta**, moltiplicati per settimane, moltiplicati per il peso mentale di aspettarsi che la cosa funzioni e trovare invece silenzio.
+
+C'è un concetto in ingegneria industriale: il costo del setup ripetuto. Ogni volta che una macchina deve essere riconfigurata da zero, paghi. Non solo in tempo — paghi in **attenzione**. E l'attenzione, in un sistema costruito da una persona sola che fa anche il saldatore, il programmatore, l'ingegnere e il marito, è la risorsa più scarsa di tutte.
+
+Il commit dice: \`fix: dashboard sempre attiva\`.
+
+Tre parole. Dietro quelle tre parole c'è la decisione di smettere di accettare la rottura come normale.
+
+---
+
+## ATTO II — Anatomia di un Watchdog
+
+\`watchdog v1.2\` — il nome è già un manifesto. Un watchdog, in informatica, è un processo il cui unico scopo è guardare un altro processo. Non fa niente di produttivo. Non elabora dati, non renderizza interfacce, non parla con il database. **Guarda.** E se quello che guarda smette di esistere, lo fa ripartire.
+
+È una delle idee più elementari dell'ingegneria dei sistemi affidabili. La usano sui server industriali, sui sistemi embedded nei macchinari, sulle centraline delle auto. L'idea di base è brutalmente semplice: niente sistema complesso rimane in piedi da solo per sempre. Prima o poi cade. La domanda non è *se* — è *quanto velocemente torni su*.
+
+In una taverna di 12 metri quadri, con una CNC da 178 kg ancora incompiuta in un angolo e un PC che gira GENESIS nell'altro, il watchdog fa la stessa cosa che fa su un server da un milione di euro. Controlla. Aspetta. Interviene.
+
+La controparte è \`START_LOGIN v1.3\` — lo script che usa \`pythonw\` invece di \`python\`. La differenza: \`python\` apre una finestra nera del terminale ogni volta che parte. \`pythonw\` è invisibile. Gira in background, silenzioso, senza lasciare traccia sullo schermo.
+
+Questo dettaglio è importante.
+
+Non si tratta solo di estetica — nessuna finestra fastidiosa al boot. Si tratta di **intenzione**: il sistema deve essere presente senza essere invadente. Deve fare il suo lavoro senza chiedere attenzione. Come un buon impianto elettrico: non ci pensi, lo dai per scontato, lo noti solo quando non funziona.
+
+Matteo sta costruendo GENESIS perché vuole un sistema che lo supporti — non un sistema che debba essere lui a supportare. La distinzione sembra sottile. Non lo è.
+
+---
+
+## ATTO III — Stato del Sistema e il Peso di un \`⚠ dirty\`
+
+Merita attenzione un dettaglio nel file di riavvio:
+
+\`\`\`
+Git commit:    5a9d2d7 [main] ⚠ dirty
+\`\`\`
+
+**Dirty.** In gergo Git: ci sono modifiche non committate. Il repository non è pulito. Da qualche parte nel codice — un file modificato, una riga cambiata, qualcosa di non ancora salvato nella storia del progetto.
+
+In un team di sviluppatori, un repository dirty al mattino è normale amministrazione. In un sistema personale come GENESIS, costruito da uno solo, è un segnale diverso. Significa che ieri sera, o qualche giorno prima, c'era lavoro in corso che non è stato sigillato. Un pensiero lasciato a metà. Un esperimento che non è ancora diventato decisione.
+
+Il commit di oggi — \`watchdog v1.2 + START_LOGIN v1.3\` — pulisce parte di quella ambiguità. Porta il sistema un passo più vicino alla coerenza. Ma il \`⚠ dirty\` di ieri è un promemoria: i sistemi personali hanno la stessa entropia dei sistemi grandi. Si degradano. Si accumulano modi temporanei che diventano permanenti. Si riempiono di patch su patch.
+
+E poi ci sono le sessioni come questa — dove ci si ferma, si guarda il disordine, e si decide di sistemare le fondamenta invece di aggiungere altro sopra.
+
+Nel frattempo, in un angolo della taverna, la colonna Z della V32 aspetta quattro gusset da 200mm. Milestone Config G — Rinforzi colonne Z+U. Il 65% di una macchina da 178 kg, costruita pezzo per pezzo, è ferma mentre si sistema il software che la terrà in vita.
+
+Non è uno spreco di tempo. È l'ordine giusto.
+
+Un sistema che non si accende da solo non può essere affidabile. E una CNC affidata a un sistema inaffidabile è un rischio che Matteo conosce bene — lavora con il titanio, con le presse, con i robot. Sa cosa succede quando un sistema di controllo va offline nel momento sbagliato.
+
+Prima il cane da guardia. Poi i gusset.
+
+---
+
+## CHIUSURA
+
+Ci sono giorni in cui costruire significa saldare. Ci sono giorni in cui significa scrivere codice. E ci sono giorni in cui significa semplicemente fare in modo che quello che hai già costruito non si rompa mentre dormi.
+
+Questo era uno di quei giorni.
+
+\`150 chunk\` nel RAG. Sessione numero 8. Un file \`.txt\` generato alle 10:30 ogni mattina, pronto per essere incollato, pronto a ricominciare da dove si era rimasti.
+
+Il sistema non è ancora finito — 78% su GENESIS, 65% su V32, luglio 2030 ancora lontano come un punto fermo sull'orizzonte. Ma ogni mattina in cui la dashboard si accende da sola, senza che nessuno debba intervenire, è una mattina in cui Matteo può dedicare la sua attenzione a qualcosa che conta di più.
+
+Non è un traguardo. È igiene.
+
+È la differenza tra un sistema che richiede cura costante e uno che inizia — lentamente, commit dopo commit — a badare a se stesso.
+
+---
+
+## 🎬 REEL HOOK
+
+> La dashboard di GENESIS moriva ogni volta che nessuno la guardava. Non un errore vistoso — solo silenzio ogni mattina, trenta secondi di recupero, attenzione consumata prima di cominciare. Oggi ho scritto un processo il cui unico lavoro è guardare. Si chiama watchdog. Non produce niente. Non elabora niente. **Guarda, e se qualcosa cade, lo rialza.** Il 65% di una CNC da 178 kg aspetta in taverna — ma prima di saldare i prossimi rinforzi, il sistema che la controllerà deve imparare a restare in piedi da solo.
+
+---
+
+## 📋 METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S01E14 |
+| **Titolo** | Il Cane da Guardia |
+| **Data** | 2026-05-30 |
+| **Progetto principale** | GENESIS |
+| **Progetto secondario** | V32 (contesto) |
+| **Milestone attivo** | Config G — Rinforzi colonne Z+U |
+| **Commit chiave** | \`watchdog v1.2\` + \`START_LOGIN v1.3\` |
+| **Co-autore AI** | Claude Sonnet 4.6 |
+| **GENESIS completamento** | 78% |
+| **V32 completamento** | 65% |
+| **RAG chunks** | 150 |
+| **Sessione n.** | #8 |
+| **Angolo narrativo** | Affidabilità sistemica / automazione silenziosa |
+| **Tag** | \`watchdog\` \`dashboard\` \`pythonw\` \`automazione\` \`infrastruttura\` |
+| **Target capannone** | 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260530_merge_remote_tracking_branch_origin",
+    title: "Gli Occhi del Sistema",
+    sottotitolo: "Merge remote tracking branch origin",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-30",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "La taverna è buia tranne lo schermo. Sul monitor, una griglia di rettangoli colorati sovrapposta allo schermo del desktop — come una radiografia. Ogni pulsante, ogni campo di testo, ogni icona ha un contorno. Il sistema ",
+    content: `# TITANIUM_OS — S2E09
+## "Gli Occhi del Sistema"
+
+*2026-05-30 — Sessione 16 — GENESIS 83%*
+
+---
+
+## COLD OPEN
+
+La taverna è buia tranne lo schermo.
+
+Sul monitor, una griglia di rettangoli colorati sovrapposta allo schermo del desktop — come una radiografia. Ogni pulsante, ogni campo di testo, ogni icona ha un contorno. Il sistema ha appena guardato se stesso per la prima volta, e ha trovato 159 cose.
+
+Nessuna chiamata API. Nessun costo. Il modello gira in locale, sulla CPU, silenziosa come un motore a riposo.
+
+Matteo guarda il log. \`local=1 llm=0\`.
+
+---
+
+## ATTO I — Il Problema degli Agenti Ciechi
+
+C'è una cosa che nessuno dice quando costruisce un sistema di agenti AI: sono ciechi.
+
+GENESIS, a maggio 2026, ha otto agenti operativi. C'è il RAG che recupera contesto dai documenti. C'è NEXUS che orchestra le richieste in parallelo. C'è il watchdog che controlla i processi ogni trenta secondi. C'è l'MCP server che espone gli strumenti a Claude. Ma nessuno di loro può guardare lo schermo.
+
+Se vuoi che un sistema automatizzi qualcosa su un computer — aprire un file, cliccare un pulsante, leggere un campo — devi o scrivere codice esplicito per ogni azione, o dai occhi al sistema.
+
+Matteo aveva scelto la prima opzione per mesi. Funzionava. Era laborioso.
+
+Il problema vero non era tecnico: era economico. Ogni volta che serviva interpretare un'interfaccia grafica, la soluzione naturale era mandare uno screenshot a un modello vision. GPT-4o, Claude, qualcosa con gli occhi. Ma ogni chiamata costa. Trecento screenshot al giorno, in un sistema che gira h24 verso il 2030, diventano un numero che non sta in un budget da taverna.
+
+Allora è entrato in gioco OmniParser.
+
+---
+
+## ATTO II — 159 Elementi, Zero Chiamate
+
+OmniParser è un modello Microsoft open source. Prende uno screenshot e restituisce una lista strutturata di elementi UI: posizione, tipo, testo. Gira in locale. Gira sulla CPU. Non chiede niente a nessuno.
+
+Il problema pratico era un path sbagliato.
+
+ARGUS v1.0 era stato integrato il giorno prima — agente visivo, occhi del desktop, stilizzato in rosso nella dashboard (\`glow ef4444, border red-500\`). Ma al primo test reale, si bloccava. Il modello non veniva trovato. Il file si chiamava \`model.pt\`, non \`best.pt\` come il codice si aspettava.
+
+Un carattere di differenza. Un'ora di debug.
+
+Fix applicato. ARGUS v2 parte.
+
+\`\`\`
+159 elementi rilevati
+CPU, local=1 llm=0
+\`\`\`
+
+Questo è il numero che conta. Non 159 come valore assoluto — un'interfaccia complessa ne ha di più, una semplice meno. Conta \`llm=0\`. Conta che il sistema ha analizzato uno schermo intero senza spendere nulla.
+
+La strategia ibrida è questa: OmniParser locale gestisce l'ottanta percento dei task visivi — quelli semplici, quelli ripetitivi, quelli dove basta sapere dove cliccare. Il restante venti percento — interpretazione ambigua, testo complesso, ragionamento — passa a Claude Sonnet. Il costo complessivo scende dell'ottanta percento rispetto a mandare tutto al cloud.
+
+Non è eleganza ingegneristica. È sopravvivenza economica per un progetto che deve durare anni.
+
+---
+
+## ATTO III — Il Sistema che si Guarda
+
+C'è qualcosa di strano nel momento in cui ARGUS diventa operativo.
+
+GENESIS, finora, era un sistema che *sapeva* cose — tramite il RAG, tramite i documenti, tramite la memoria delle sessioni. Ora è un sistema che può anche *vedere* cose. La differenza non è solo funzionale. È una soglia.
+
+Il RAG graph-aware ha 114 nodi e 218 archi. C'è una catena hardcoded \`V32→MIMS→VITA_NATURA\` che rappresenta come i progetti si connettono tra loro nella testa di Matteo. NEXUS orchestra tre agenti in parallelo. Il watchdog non è più sequenziale — usa thread separati, risponde più veloce.
+
+Ogni sessione aggiunge qualcosa. Non è accumulo casuale. C'è una direzione.
+
+Però la taverna è ancora una taverna. Il V32 è al sessantacinque percento. La Config G — rinforzi colonne Z e U — è il milestone attivo. Il capannone è nel 2030. Tra il sistema software che guarda lo schermo e la macchina CNC da 178 kg che deve fare pezzi in titanio, c'è ancora tanta distanza.
+
+ARGUS è il nono agente. Era uno slot vuoto nella lista.
+
+Adesso ha gli occhi rossi sulla dashboard, e li usa.
+
+---
+
+## CHIUSURA
+
+Alle 23:47 Matteo chiude il terminale.
+
+Il commit è fatto. \`fix: argus_v2 path pesi model.pt\`. Sette parole per un'ora di lavoro. Nel git log sembrerà un dettaglio minore tra feature più grandi.
+
+Ma la differenza tra un sistema che può vedere e uno che non può è questa: il path giusto sul file giusto. Non c'è niente di cinematografico in questo. C'è solo il momento prima — sistema bloccato — e il momento dopo — 159 elementi, zero chiamate.
+
+Il codice non sa di essere importante. Lo schermo non sa di essere guardato.
+
+Qualcuno tiene traccia, però. È per questo che esiste il log.
+
+---
+
+## reel_hook
+
+159 elementi rilevati dallo schermo. Costo: zero. Ogni chiamata a un modello vision costa frazioni di centesimo — moltiplicale per un sistema che gira h24 per quattro anni verso il 2030. Ho installato gli occhi locali su GENESIS. Ma il path del modello era sbagliato. Un carattere. Un'ora. Poi ha visto.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S2E09 |
+| **Titolo** | Gli Occhi del Sistema |
+| **Data** | 2026-05-30 |
+| **Sessione** | #16 |
+| **Tag principali** | ARGUS, OmniParser, GENESIS, vision, local-AI |
+| **Progetti coinvolti** | GENESIS, V32 |
+| **GENESIS completamento** | 83% |
+| **V32 completamento** | 65% |
+| **Milestone attivo** | Config G — Rinforzi colonne Z+U |
+| **Agenti totali** | 9 (ARGUS = #9) |
+| **Metrica chiave** | 159 elementi rilevati, \`local=1 llm=0\`, costo -80% |
+| **Co-autore commit** | Claude Sonnet 4.6 |
+| **Prossimo target** | Capannone 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260531_recupero_11_episodi_narrativi_nella",
+    title: "Il Sistema che si Ricorda di Sé",
+    sottotitolo: "Recupero 11 episodi narrativi nella",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-05-31",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Ore 14:44. Lo schermo mostra una riga sola: ``` Git commit: 6476182 [main] ⚠ dirty Sessioni: #0 ``` Sessione zero. Il sistema è appena partito. Non sa dove si è fermato ieri. Non sa quante ore ha già consumato Matteo su ",
+    content: `# TITANIUM_OS — S02E09
+## "Il Sistema che si Ricorda di Sé"
+
+---
+
+**COLD OPEN**
+
+Ore 14:44. Lo schermo mostra una riga sola:
+
+\`\`\`
+Git commit: 6476182 [main] ⚠ dirty
+Sessioni: #0
+\`\`\`
+
+Sessione zero. Il sistema è appena partito. Non sa dove si è fermato ieri. Non sa quante ore ha già consumato Matteo su questo tavolo nella taverna da 12 metri quadri. Non sa che fuori è maggio 2026 e che mancano quattro anni esatti al capannone.
+
+Deve imparare a ricordare da solo.
+
+---
+
+## ATTO I — Il Problema dei Riavvii
+
+C'è una cosa che nessuno ti dice quando costruisci un sistema cognitivo: ogni volta che chiudi la sessione, il sistema muore. Non fa backup della coscienza. Non salva il filo del ragionamento. Il giorno dopo riapri tutto e sei al punto zero — tu sai dove eri, ma lui no.
+
+Matteo ha risolto questo problema per mesi con il metodo artigianale: copia-incolla di contesto, ri-spiegazione a mano di ogni pezzo, quindici minuti di riscaldamento persi ogni sessione prima di poter fare qualcosa di vero.
+
+Oggi ha costruito la soluzione.
+
+\`generate_restart_prompt.py v1.1\` — lo chiama SELF-HEALING. Non è marketing. È una descrizione tecnica precisa: il file legge \`STATE.json\`, controlla se il \`session_context\` è stale, e se lo è, lo rigenera. Automaticamente. Il prompt di riavvio che vedi in testa a questo episodio — quello con i metadati, il commit hash, le percentuali di completamento — non lo ha scritto Matteo stamattina. Lo ha scritto il sistema per sé stesso.
+
+6369 chunk nel RAG. 139 file indicizzati. Il sistema conosce ogni decisione tecnica presa negli ultimi due anni: ogni millimetro del piano dell'Epoxy Granite, ogni connettore MIMS, ogni riga di Flask. Quando riparte, non ricomincia — **riprende**.
+
+È una distinzione piccola. È una distinzione enorme.
+
+---
+
+## ATTO II — La Dashboard che Diventa Mappa
+
+Nel frattempo, la dashboard ha smesso di essere una pagina web.
+
+Sessione 16, 17, 18, 19 — quattro sessioni in un giorno solo, salvate e committate con Co-Authored-By: Claude Sonnet 4.6. Non è un dettaglio decorativo. È la firma di un metodo di lavoro: Matteo alla tastiera, il modello a generare, Matteo a filtrare, correggere, decidere. Il codice che esce è ibrido. La responsabilità è sua.
+
+La MappaView ha attraversato due rivoluzioni in un pomeriggio.
+
+**v4.0**: navStack con tile, N livelli di profondità. Funzionava. Ma era piatta — le relazioni tra i nodi non si vedevano, erano implicate dal click, non dalla geometria.
+
+Poi Matteo ha scritto una nota nel commit che dice tutto: *"Sostituisce force-graph (incontrollabile, fisica spenta) con navStack tile."* Il force-graph era la soluzione elegante — nodi che si dispongono da soli secondo fisica simulata, connessioni che emergono organicamente. Il problema è che "emergono organicamente" significa "non sai dove finisce un nodo" e in una dashboard operativa questo è inaccettabile.
+
+**v5.0**: SVG puro. Cerchi radiali. Posizioni deterministiche.
+
+Zero fisica incontrollabile. Zero sorprese. Le relazioni tra V32, MIMS, GENESIS e tutti i sotto-progetti stanno esattamente dove Matteo ha deciso che stessero. Non si muovono. Non ballano. La mappa è ferma come un pezzo di acciaio fresato — e per lo stesso motivo: la precisione non è compatibile con il movimento casuale.
+
+Intorno a questa scelta architettonica è nata tutta la struttura N-livelli che ora permea il sistema. \`MimsSection v1.0\` — albero a 5 aree. \`GenesisSection v1.0\` — 6 aree infrastrutturali. \`MatteoSection v3.0\` — skill tree navigabile con caselle sbloccabili legate alle milestone V32. \`CriticheSection v1.0\` — audit a N livelli su 6 aree di progetto.
+
+Ogni sezione è un cerchio nella mappa. Ogni cerchio si apre in sotto-cerchi. Ogni sotto-cerchio ha dati reali.
+
+---
+
+## ATTO III — L'Audit che Fa Male
+
+Poi c'è la parte scomoda.
+
+Opus — il modello più grande nel flusso di lavoro — ha fatto un audit tecnico sulla dashboard. Ha trovato 18 findings. Non "suggerimenti". **Findings**. Incoerenze tra quello che la dashboard mostrava e quello che era reale nel codice.
+
+Sette di questi sono stati fixati in giornata:
+- MCP server dichiarava 5 tool nel header, ne aveva 10 reali
+- React 19 non era documentato
+- NEXUS era marcato come pianificato, era già live
+- RAG graph con 114 nodi non compariva nelle spec
+- EVA — l'automazione WhatsApp per il centro di Maria — mancava dai dati
+- \`waiting_press\` non era tracciato
+
+Ogni fix è andato nel commit con questa descrizione: *"Trasforma findings audit in fix verificati su fonte reale."*
+
+Verificati su fonte reale. Non corretti a memoria. Non aggiustati per sembrare giusti. Matteo ha aperto ogni file sorgente, controllato il dato, poi aggiornato la dashboard.
+
+Questo è il motivo per cui ha costruito la CriticheSection: vuole che il sistema mostri non solo lo stato positivo dei progetti, ma anche le sue lacune. I blockers. Le incoerenze. Un sistema cognitivo che ti dice solo quello che vuoi sentire non è un sistema cognitivo — è uno specchio adulatorio.
+
+\`STATE.blockers\` è un campo nel JSON di stato. Viene visualizzato in dashboard. Quando c'è un blocker, non si può ignorare — è lì, cerchio rosso, livello N, aperto finché non è risolto.
+
+Undici episodi narrativi sono stati recuperati nel sistema con \`sync_storie.py\` — parser header-markdown, ID univoci basati sullo stem del file. Anche le storie hanno adesso un indice, una visibilità, un'esistenza verificabile nel RAG. Anche questo episodio entrerà lì. Verrà letto dal sistema la prossima volta che parte da zero.
+
+Il sistema si ricorderà di sé.
+
+---
+
+**CHIUSURA**
+
+Sessione 19, ore tarde. Git dirty — ci sono ancora file non committati. Domani il sistema ripartirà, leggerà il \`session_context\`, capirà dove si è fermato, proporrà il prossimo step.
+
+Non è magia. È un file Python di 200 righe che legge un JSON e formatta del testo.
+
+Ma l'effetto è che Matteo può smettere di essere la memoria del sistema. Può smettere di spiegare ogni mattina cosa sta costruendo. Può arrivare alla tastiera e fare — invece di ricordare.
+
+In una taverna da 12 metri quadri, con un tornio contro il muro e i piani dell'Epoxy Granite sul tavolo, guadagnare trenta minuti al giorno non è un dettaglio operativo.
+
+È la differenza tra arrivare al 2030 con il capannone o senza.
+
+---
+
+**\`reel_hook\`**
+
+> Ho fatto girare un audit automatico sulla mia dashboard. Ha trovato 18 errori nei miei stessi dati — MCP dichiarava 5 tool, ne aveva 10. RAG con 114 nodi non compariva da nessuna parte. EVA non esisteva sulla carta. Ho fixato tutto verificando ogni fonte reale. Poi ho costruito una sezione che mostra solo le cose rotte. Perché un sistema che ti nasconde i problemi non ti sta aiutando — sta solo aspettando che esplodano.
+
+---
+
+\`\`\`
+─────────────────────────────────────────────
+TITANIUM_OS — METADATI EPISODIO
+─────────────────────────────────────────────
+Serie:          S02
+Episodio:       E09
+Titolo:         Il Sistema che si Ricorda di Sé
+Data:           2026-05-31
+Sessioni:       16 / 17 / 18 / 19
+─────────────────────────────────────────────
+COMMIT PRINCIPALI
+  self-healing:   generate_restart_prompt.py v1.1
+  mappa:          MappaView v5.0 — SVG cerchi radiali
+  audit:          18 findings Opus → 7 fix verificati
+  storie:         sync_storie.py — 11 episodi recuperati
+  sezioni:        MimsSection / GenesisSection / 
+                  MatteoSection / CriticheSection v1.0
+─────────────────────────────────────────────
+STATO PROGETTI
+  V32             65%
+  MIMS            30%
+  GENESIS         55%
+  EVA             tracciata
+─────────────────────────────────────────────
+RAG
+  Chunk:          6.369
+  File:           139
+  Nodi grafo:     114
+  Archi grafo:    218
+─────────────────────────────────────────────
+CO-AUTORI SESSIONE
+  Claude Sonnet 4.6   (sessioni 16/17/18/19)
+  Claude Opus 4.8     (audit + fix)
+─────────────────────────────────────────────
+TARGET CAPANNONE    15 luglio 2030
+─────────────────────────────────────────────
+\`\`\``,
+  },
+  {
     id: "MOM_01_LA_PRIMA_AUTOMAZIONE",
     title: "La Prima Automazione",
     sottotitolo: "Il sistema che scrive sé stesso",
@@ -2692,7 +4626,7 @@ V7 diventa anche il documento che le persone citano quando parlano del framework
     sottotitolo: "Sette configurazioni per trovare quella giusta",
     stagione: "MOM",
     stagione_label: "Momenti",
-    data_evento: "2026-05-31",
+    data_evento: "2026-06-01",
     tags: ["narrativo", "mom", "recuperato"],
     status: "ready",
     durata_min: 10,

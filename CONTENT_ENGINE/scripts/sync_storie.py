@@ -24,9 +24,10 @@ STORIE_TS = ROOT / "DASHBOARD" / "src" / "data" / "storieData.ts"
 START_MARK = "  // RECOVERED_START — episodi narrativi importati da sync_storie.py"
 END_MARK   = "  // RECOVERED_END"
 
-# cartella -> (stagione, label). I narrativi vivono fuori da SA_AUTO.
+# cartella -> (glob, stagione, label). I narrativi vivono fuori da SA_AUTO.
 SOURCES = [
-    ("S2_SISTEMA", "EP_S2_*.md", "ST",  "Il Sistema"),
+    ("S2_SISTEMA", "EP_S2_*.md", "ST",  "Il Sistema"),   # narrativi hand-craft
+    ("S2_SISTEMA", "EP_2*.md",   "ST",  "Il Sistema"),   # dev-log story_agent (EP_YYYYMMDD)
     ("MOMENTI",    "MOM_*.md",   "MOM", "Momenti"),
 ]
 
@@ -40,24 +41,35 @@ def parse_episode(md: Path, stagione: str, label: str) -> dict | None:
     # togli blocco TOC
     body = re.sub(r"<!--\s*TOC\s*-->.*?<!--\s*/TOC\s*-->", "", raw, flags=re.DOTALL).strip()
 
-    # titolo: prima riga "# ... — TITOLO"
-    m_title = re.search(r"^#\s+(.+?)\s+[—-]\s+(.+)$", body, re.M)
-    if not m_title:
+    # ── titolo + sottotitolo: due formati ──────────────────────────────────
+    # A) narrativo hand-craft:  "# EP_X — TITOLO"  +  '### "sottotitolo"'
+    # B) dev-log story_agent:   "# TITANIUM_OS — S1E09"  +  '## "Titolo Vero"'
+    m_narr = re.search(r"^#\s+(?:EP_|MOM|MOMENTO).+?\s+[—-]\s+(.+)$", body, re.M)
+    m_auto = re.search(r'^##\s+"(.+?)"\s*$', body, re.M)
+    if m_narr:
+        title = m_narr.group(1).strip()
+        if title.isupper():
+            title = title.title()
+        m_sub = re.search(r'^###\s+"?(.+?)"?\s*$', body, re.M)
+        sottotitolo = m_sub.group(1).strip().strip('"') if m_sub else ""
+    elif m_auto:
+        title = m_auto.group(1).strip()
+        # sottotitolo derivato dal nome file (commit subject leggibile)
+        slug = re.sub(r"^EP_\d{8}_", "", md.stem)
+        sottotitolo = slug.replace("_", " ").strip().capitalize()
+    else:
         return None
-    title = m_title.group(2).strip()
-    if title.isupper():
-        title = title.title()
 
-    # sottotitolo: prima riga '### "..."'
-    m_sub = re.search(r'^###\s+"?(.+?)"?\s*$', body, re.M)
-    sottotitolo = m_sub.group(1).strip().strip('"') if m_sub else ""
-
-    # data: cerca una data italiana nel testo (Data:/Data evento:/prima occorrenza)
+    # data: dal filename EP_YYYYMMDD_ se presente, altrimenti data italiana nel testo
     data_evento = datetime.now().strftime("%Y-%m-%d")
-    m_date = re.search(r"(\d{1,2})\s+(" + "|".join(MONTHS) + r")\s+(\d{4})", body, re.I)
-    if m_date:
-        d, mon, y = m_date.group(1), m_date.group(2).lower(), m_date.group(3)
-        data_evento = f"{y}-{MONTHS[mon]}-{d.zfill(2)}"
+    m_fn = re.match(r"EP_(\d{4})(\d{2})(\d{2})_", md.stem)
+    if m_fn:
+        data_evento = f"{m_fn.group(1)}-{m_fn.group(2)}-{m_fn.group(3)}"
+    else:
+        m_date = re.search(r"(\d{1,2})\s+(" + "|".join(MONTHS) + r")\s+(\d{4})", body, re.I)
+        if m_date:
+            d, mon, y = m_date.group(1), m_date.group(2).lower(), m_date.group(3)
+            data_evento = f"{y}-{MONTHS[mon]}-{d.zfill(2)}"
 
     # durata: "Durata ... NN"
     m_dur = re.search(r"[Dd]urata[^0-9]*(\d{1,3})", body)
@@ -121,7 +133,11 @@ def main():
     args = ap.parse_args()
 
     ts = STORIE_TS.read_text(encoding="utf-8")
-    existing_ids = set(re.findall(r'id:\s*"([^"]+)"', ts))
+    # existing_ids = solo gli ID FUORI dal blocco RECOVERED, cosi' un re-run
+    # rigenera il blocco con TUTTI i recuperati (incrementale e idempotente)
+    ts_wo_block = re.sub(re.escape(START_MARK) + r".*?" + re.escape(END_MARK),
+                         "", ts, flags=re.DOTALL)
+    existing_ids = set(re.findall(r'id:\s*"([^"]+)"', ts_wo_block))
 
     episodes = []
     for folder, glob, stagione, label in SOURCES:

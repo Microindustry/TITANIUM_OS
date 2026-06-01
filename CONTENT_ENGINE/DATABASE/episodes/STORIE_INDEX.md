@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [STORIE  Indice Episodi  Struttura](#storie-indice-episodi-struttura)
+  - [STRUTTURA STAGIONI](#struttura-stagioni)
+  - [RECUPERO COMPLETATO (31/05/2026)](#recupero-completato-31052026)
+  - [STORICO DISALLINEAMENTO DISCO  DASHBOARD (pre-recupero)](#storico-disallineamento-disco-dashboard-pre-recupero)
+    - [Episodi NARRATIVI presenti su disco ma NON in dashboard (priorità recupero):](#episodi-narrativi-presenti-su-disco-ma-non-in-dashboard-priorità-recupero)
+    - [Azione di recupero](#azione-di-recupero)
+
+<!-- /TOC -->
+
 # STORIE — Indice Episodi & Struttura
 
 *Mappa canonica del podcast "Il Sistema". Versione: 1.0 | 2026-05-31*
