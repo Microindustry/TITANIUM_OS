@@ -35,6 +35,8 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 IGNORE_DIRS = {
     "BACKUPS",
     "VERSIONS",
+    "DATA",            # output derivato (views/*.json, semantic_index.db): NON ri-triggerare
+                       #   -> era la causa del loop runaway changelog (au19)
     "__pycache__",
     ".git",
     "node_modules",
@@ -167,6 +169,10 @@ class TitaniumHandler(FileSystemEventHandler):
 
         # Ignora per estensione
         if p.suffix.lower() in IGNORE_EXTENSIONS:
+            return True
+
+        # Ignora file temporanei di scrittura atomica (es. file.ts.tmp.3916.abcdef)
+        if ".tmp." in p.name or p.name.endswith(".db-journal"):
             return True
 
         # Ignora per nome file
