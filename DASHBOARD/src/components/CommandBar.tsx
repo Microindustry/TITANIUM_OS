@@ -76,19 +76,9 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
   const CMDS: Cmd[] = [
     // ── NAVIGAZIONE
     {
-      id: "go-canvas", label: "CANVAS", desc: "Banco di lavoro — stato, blockers, docs", icon: Grid3X3,
-      color: "text-slate-300", group: "nav", keywords: ["canvas", "lavoro", "home"],
-      action: () => { onNavigate("canvas"); onClose(); },
-    },
-    {
-      id: "go-neuro", label: "MAPPA", desc: "Naviga l'ecosistema — drill-down infinito", icon: GitBranch,
-      color: "text-emerald-400", group: "nav", keywords: ["mappa", "neuro", "ecosystem", "nodi"],
-      action: () => { onNavigate("neuro"); onClose(); },
-    },
-    {
-      id: "go-sinapsi", label: "SINAPSI", desc: "Approfondisci — pilastri, skill, proof", icon: Layers,
-      color: "text-indigo-400", group: "nav", keywords: ["sinapsi", "layers", "pilastri", "v32", "mims"],
-      action: () => { onNavigate("sinapsi"); onClose(); },
+      id: "go-mappa", label: "MAPPA", desc: "Naviga l'ecosistema — cerchi radiali, drill-down infinito", icon: GitBranch,
+      color: "text-emerald-400", group: "nav", keywords: ["mappa", "ecosystem", "nodi", "drill"],
+      action: () => { onNavigate("mappa"); onClose(); },
     },
     {
       id: "go-storie", label: "STORIE", desc: "Episodi podcast + dataset fine-tuning", icon: Mic,
