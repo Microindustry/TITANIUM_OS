@@ -226,12 +226,12 @@ export const CRITICHE_ROOT: SkillNode = {
         {
           id: "cr_audit_state", label: "STATE.json marcio", icon: "💾", status: "active", ...rose,
           children: [
-            crit("au01", "STATE.blockers = [] vuoto → dashboard mostra 'zero blocker'", "active",
-              "CRITICO: STATE.json ha blockers:[] ma RIAVVIO_SESSIONE lista 2 blocker reali (mandrino 2.2kW, silent blocks v.A/v.B). V32Room e Home leggono state.blockers → mostrano 'Nessun blocker / 0'. La dashboard MENTE. Fix: scrivere i blocker reali in STATE.blockers o farli derivare dalle foglie 'blocked'."),
-            crit("au02", "session_count = 6 ma sei alla sessione #15", "active",
-              "STATE.session_count=6, RIAVVIO_SESSIONE dice SESSIONE #15. Il contatore è desincronizzato di 9. state_updater.py non incrementa o STATE è stato sovrascritto a mano. Fonte unica di verità inaffidabile."),
-            crit("au03", "active_milestone fermo a 'skillTreeData v3.0'", "active",
-              "STATE.active_milestone non riflette il lavoro delle sessioni 14-15 (NEXUS swarm, RAG graph v5.0, MCP v1.3). Regola CLAUDE.md: 'ogni fine sessione → aggiorna STATE.json'. Non rispettata. La Home mostra un milestone vecchio di 9 sessioni."),
+            crit("au01", "STATE.blockers = [] vuoto → dashboard mostra 'zero blocker'", "done",
+              "FIXATO Opus: popolato STATE.blockers con i 2 reali (mandrino 2.2kW ER20, silent blocks v.A/v.B). Persistito tra i cicli del watcher. La dashboard ora mostra i blocker veri."),
+            crit("au02", "session_count = 6 ma sei alla sessione #15", "done",
+              "FIXATO Opus: STATE.session_count 6→15, allineato a session_context.json. NB strutturale: state_updater.py non incrementa il contatore (va fatto a SessionStart) — fix profondo rimandato per non spendere."),
+            crit("au03", "active_milestone fermo a 'skillTreeData v3.0'", "done",
+              "FIXATO Opus: STATE.active_milestone aggiornato a 'Audit Opus + handoff sessione self-healing (sessione 15)' + session_context recuperato. La Home ora mostra il milestone reale."),
             crit("au04", "meta.version '1.0.0' mentre il sistema è v6/v7", "future",
               "STATE.meta.version='1.0.0' non significa nulla: App=v6.0, dashboard=v7, RAG=v5. Campo morto. O lo si allinea o si rimuove."),
             crit("au05", "MIMS status 'waiting_press' non mappato nella UI", "done",
@@ -242,8 +242,8 @@ export const CRITICHE_ROOT: SkillNode = {
         {
           id: "cr_audit_pct", label: "Percentuali divergenti", icon: "📊", status: "active", ...amber,
           children: [
-            crit("au06", "GENESIS pct: 10 / 55 / 83 — tre numeri", "active",
-              "STATE=10%, CanvasLayout PILLARS_DATA=55%, MappaView SYSTEM_TREE=83%. Tre file, tre verità. La sidebar dice 10, la mappa 83. Vedi anche gc05."),
+            crit("au06", "GENESIS pct: 10 / 55 / 83 — tre numeri", "done",
+              "FIXATO Opus: unificato a 55 ovunque (STATE 10→55, MappaView 83→55, PILLARS_DATA già 55). Il 10 era errore: contava solo i nodi 'done' ignorando le decine 'active' operative."),
             crit("au07", "IDENTITY pct: 50 vs 35", "done",
               "FIXATO Opus: PILLARS_DATA IDENTITY allineato a 50 (= STATE). Ora STATE/MappaView/PILLARS_DATA concordano su 50."),
             crit("au08", "PILLARS_DATA legacy hardcoded in CanvasLayout", "active",
