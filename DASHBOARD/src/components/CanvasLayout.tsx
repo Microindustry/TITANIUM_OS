@@ -37,6 +37,15 @@ const PILLAR_CFG: Record<string, {
 
 function pct(p: any): number { return Number(p?.pct_complete ?? p?.pct ?? 0); }
 
+// Essenza di ogni pilastro — una riga che spiega a chi guarda (investitori/amici)
+const PILLAR_DESC: Record<string, string> = {
+  V32:         "Fresatrice CNC di precisione, costruita da zero",
+  MIMS:        "Materiali modulari brevettabili — il sogno grande",
+  GENESIS:     "Il cervello digitale: AI, automazione, memoria",
+  VITA_NATURA: "EVA — assistente AI per il centro estetico",
+  IDENTITY:    "Brand, contenuti e percorso personale",
+};
+
 // ── BREADCRUMB ────────────────────────────────────────────────────────────────
 function Breadcrumb({ stack, onBack }: { stack: NavNode[]; onBack: () => void }) {
   if (stack.length <= 1) return null;
@@ -107,6 +116,11 @@ function PillarGrid({ state, onEnter }: { state: any; onEnter: (id: RoomId, labe
                      style={{ color: cfg.color }}>
                   {key.replace("_", " ")}
                 </div>
+                {PILLAR_DESC[key] && (
+                  <div className="text-[9px] text-slate-400 leading-snug mb-1.5 max-w-[150px]">
+                    {PILLAR_DESC[key]}
+                  </div>
+                )}
                 {statusText && (
                   <div className="text-[8px] font-mono uppercase tracking-widest px-1.5 py-0.5 rounded"
                        style={{ color: cfg.color, background: cfg.colorDim }}>
@@ -561,6 +575,10 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
                     </div>
                   </div>
                 )}
+              </div>
+              <div className="flex items-center gap-3 pt-1">
+                <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-slate-500">I 5 pilastri</span>
+                <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
               </div>
               <PillarGrid state={state} onEnter={pushRoom} />
 
