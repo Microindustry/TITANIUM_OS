@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle,
+  Users, FlaskConical, AlertTriangle, Sun, Moon,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -168,7 +168,7 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
   return (
     <aside className={`flex-shrink-0 flex flex-col border-r border-slate-800/60 transition-all duration-300
                         ${collapsed ? "w-14" : "w-52"}`}
-           style={{ background: "rgba(5,8,20,0.97)" }}>
+           style={{ background: "var(--shell-panel)" }}>
 
       {/* Logo */}
       <div className={`flex-shrink-0 h-12 flex items-center border-b border-slate-800/60
@@ -282,7 +282,12 @@ function AppInner() {
   const setView = useUIStore(s => s.setView);
   const collapsed = useUIStore(s => s.sidebarCollapsed);
   const toggleSidebar = useUIStore(s => s.toggleSidebar);
+  const theme = useUIStore(s => s.theme);
+  const toggleTheme = useUIStore(s => s.toggleTheme);
   const [cmdOpen, setCmdOpen] = useState(false);
+
+  // Applica il tema al root (CSS [data-theme] -> token shell)
+  useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
 
   const navigate = useCallback((v: ViewMode) => setView(v), [setView]);
   const pillars = sys.state?.pillars ?? {};
@@ -299,13 +304,13 @@ function AppInner() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden"
-         style={{ background: "#050a14", fontFamily: "'JetBrains Mono', 'Fira Code', monospace" }}>
+         style={{ background: "var(--shell-bg)", fontFamily: "'JetBrains Mono', 'Fira Code', monospace" }}>
 
       <CommandBar open={cmdOpen} onClose={() => setCmdOpen(false)} onNavigate={navigate as any} />
 
       {/* ── TOP STRIP (12px) — linea live ── */}
       <div className="flex-shrink-0 h-8 border-b border-slate-800/50 flex items-center justify-between px-4"
-           style={{ background: "rgba(5,8,20,0.98)" }}>
+           style={{ background: "var(--shell-strip)" }}>
         <div className="flex items-center gap-3">
           <div className={`w-1.5 h-1.5 rounded-full ${sys.isOnline ? "bg-emerald-500 animate-pulse" : "bg-slate-700"}`} />
           <span className="text-[8px] font-mono text-slate-600 uppercase tracking-widest hidden sm:block">
@@ -315,6 +320,11 @@ function AppInner() {
           <span className="text-[8px] font-mono text-slate-500">{milestone?.slice(0, 40)}</span>
         </div>
         <div className="flex items-center gap-3">
+          <button onClick={toggleTheme}
+            title={theme === "dark" ? "Tema chiaro" : "Tema scuro"}
+            className="flex items-center text-slate-500 hover:text-amber-400 transition-colors">
+            {theme === "dark" ? <Sun size={11} /> : <Moon size={11} />}
+          </button>
           <Clock />
           <button onClick={() => setCmdOpen(true)}
             className="flex items-center gap-1 text-[8px] font-mono text-slate-600 hover:text-slate-300
@@ -342,15 +352,15 @@ function AppInner() {
 
         {/* Main content */}
         <main className="flex-1 overflow-hidden relative">
-          {/* Glow radiale soffuso — profondità premium */}
+          {/* Glow radiale soffuso — profondità premium (token tema) */}
           <div className="absolute inset-0 pointer-events-none"
                style={{
-                 background: "radial-gradient(1100px 480px at 12% -8%, rgba(16,185,129,0.07), transparent 60%), radial-gradient(900px 460px at 100% -5%, rgba(34,211,238,0.05), transparent 55%)",
+                 background: "radial-gradient(1100px 480px at 12% -8%, var(--glow-a), transparent 60%), radial-gradient(900px 460px at 100% -5%, var(--glow-b), transparent 55%)",
                }} />
-          {/* Dot grid decorativo — fondo */}
+          {/* Dot grid decorativo — fondo (token tema) */}
           <div className="absolute inset-0 pointer-events-none"
                style={{
-                 backgroundImage: "radial-gradient(circle, rgba(148,163,184,0.04) 1px, transparent 1px)",
+                 backgroundImage: "radial-gradient(circle, var(--dotgrid) 1px, transparent 1px)",
                  backgroundSize: "28px 28px",
                }} />
 

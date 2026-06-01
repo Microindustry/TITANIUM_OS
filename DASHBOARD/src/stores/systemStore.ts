@@ -7,6 +7,8 @@ import { persist } from "zustand/middleware";
 export type ViewMode = "home" | "v32" | "genesis" | "mims" | "eva" | "identity"
                      | "agenti" | "storie" | "mappa" | "rete" | "sinapsi" | "canvas" | "neuro" | "automazioni";
 
+export type Theme = "dark" | "light";
+
 interface UIState {
   view: ViewMode;
   setView: (v: ViewMode) => void;
@@ -17,6 +19,8 @@ interface UIState {
   toggleSidebar: () => void;
   expandedCell: string | null;
   expandCell: (id: string | null) => void;
+  theme: Theme;
+  toggleTheme: () => void;
 }
 
 export const useUIStore = create<UIState>()(
@@ -31,10 +35,12 @@ export const useUIStore = create<UIState>()(
       toggleSidebar: () => set(s => ({ sidebarCollapsed: !s.sidebarCollapsed })),
       expandedCell: null,
       expandCell: (id) => set({ expandedCell: id }),
+      theme: "dark",
+      toggleTheme: () => set(s => ({ theme: s.theme === "dark" ? "light" : "dark" })),
     }),
     {
       name: "titanium_ui_v3",
-      partialize: (s) => ({ view: s.view, sidebarCollapsed: s.sidebarCollapsed }),
+      partialize: (s) => ({ view: s.view, sidebarCollapsed: s.sidebarCollapsed, theme: s.theme }),
     }
   )
 );

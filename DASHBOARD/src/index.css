@@ -53,6 +53,28 @@
   --color-yellow-500: #eab308;
 }
 
+/* ─── THEME TOKENS (shell) — dark default, light opt-in ── */
+/* Tappa 1: tema la cornice (canvas, top-strip, sidebar). Le card interne
+   migreranno ai token alla tappa 2. Dark = valori identici a prima. */
+:root {
+  --shell-bg:    #050a14;
+  --shell-panel: rgba(5,8,20,0.97);
+  --shell-strip: rgba(5,8,20,0.98);
+  --shell-line:  rgba(148,163,184,0.10);
+  --dotgrid:     rgba(148,163,184,0.04);
+  --glow-a:      rgba(16,185,129,0.07);
+  --glow-b:      rgba(34,211,238,0.05);
+}
+[data-theme="light"] {
+  --shell-bg:    #eef1f8;
+  --shell-panel: rgba(255,255,255,0.88);
+  --shell-strip: rgba(255,255,255,0.92);
+  --shell-line:  rgba(15,23,42,0.08);
+  --dotgrid:     rgba(15,23,42,0.035);
+  --glow-a:      rgba(5,150,105,0.08);
+  --glow-b:      rgba(8,145,178,0.06);
+}
+
 /* ─── TYPOGRAPHY ───────────────────────────────────────── */
 @font-face {
   font-family: 'JetBrains';
