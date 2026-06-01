@@ -342,6 +342,11 @@ function AppInner() {
 
         {/* Main content */}
         <main className="flex-1 overflow-hidden relative">
+          {/* Glow radiale soffuso — profondità premium */}
+          <div className="absolute inset-0 pointer-events-none"
+               style={{
+                 background: "radial-gradient(1100px 480px at 12% -8%, rgba(16,185,129,0.07), transparent 60%), radial-gradient(900px 460px at 100% -5%, rgba(34,211,238,0.05), transparent 55%)",
+               }} />
           {/* Dot grid decorativo — fondo */}
           <div className="absolute inset-0 pointer-events-none"
                style={{
