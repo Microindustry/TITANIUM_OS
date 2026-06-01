@@ -75,8 +75,8 @@ export const CRITICHE_ROOT: SkillNode = {
 
     // ── MIMS ────────────────────────────────────────────────────────────────
     {
-      id: "cr_mims", label: "MIMS", icon: "⬡", status: "active", ...rose,
-      note: "Prodotto, business model, IP — audit completo",
+      id: "cr_mims", label: "MIMS", icon: "⬡", status: "future", ...violet,
+      note: "IDEA in sviluppo (non ancora prodotto). Le critiche di mercato sono PREMATURE — qui diventano leve da girare a nostro vantaggio quando consolidiamo. Priorità reale ORA: solo i brevetti.",
       children: [
 
         {
@@ -94,7 +94,8 @@ export const CRITICHE_ROOT: SkillNode = {
         },
 
         {
-          id: "cr_mims_business", label: "Business & GTM", icon: "📊", status: "active", ...rose,
+          id: "cr_mims_business", label: "Business & GTM — (idea, non ancora)", icon: "📊", status: "future", ...violet,
+          note: "Domande di mercato CONGELATE finché l'idea non è consolidata. Non sono falle: sono i punti dove gireremo le critiche dei competitor a nostro vantaggio. Si riattivano quando MIMS passa da idea a progetto.",
           children: [
             crit("mc05", "TAM €4.2B — fonte Grand View Research verificata?", "active",
               "Citata ma mai linkato il report originale. Verificare che sia il mercato giusto (modular systems, non solo T-slot)."),
@@ -204,8 +205,8 @@ export const CRITICHE_ROOT: SkillNode = {
       id: "cr_sistema", label: "Sistema (trasversale)", icon: "⚙", status: "active", ...rose,
       note: "Problemi che toccano più pilastri contemporaneamente",
       children: [
-        crit("sc01", "Dipendenza a cascata: V32→VULCAN→MIMS blocca tutto", "active",
-          "Se V32 ritarda di 2 mesi, MIMS ritarda di 2+ mesi. Serve un piano B per testare VULCAN senza stampi V32."),
+        crit("sc01", "Catena V32→VULCAN→MIMS — RIDIMENSIONATA", "done",
+          "CORRETTA (Matteo 01/06): non è un blocco drammatico. V32 si finirà ed è la FONTE PRIMARIA di reddito (oltre al lavoro). VULCAN ha già struttura + guide, manca solo il martinetto (~€50). A CNC ultimata si attivano gli stampi, che saranno comunque prototipati/prodotti in 3D. Il piano B (stampi 3D) esiste già nel piano."),
         crit("sc02", "Nessun KPI misurabile settimana per settimana", "active",
           "I % di completamento si aggiornano a mano senza criteri chiari. Definire: cosa significa +5%?"),
         crit("sc03", "Backup _VAULT: AES-256 deep_freeze.py — ultimo run?", "future",
@@ -214,6 +215,24 @@ export const CRITICHE_ROOT: SkillNode = {
           "L'obiettivo esiste ma non c'è un roadmap con checkpoint annuali. Aggiungere in STATE.json."),
         crit("sc05", "ADHD scaffolding: il sistema aiuta o complica?", "future",
           "Ogni sessione si aggiungono cose. Fare un audit trimestrale: cosa NON uso? Rimuovere senza pietà."),
+      ],
+    },
+
+    // ── AUDIT TRIMESTRALE — "COSA NON USO" ──────────────────────────────────
+    {
+      id: "cr_pulizia", label: "Audit Trimestrale — Cosa Rimuovere", icon: "🧹", status: "active", ...amber,
+      note: "Regola ADHD: il sistema cresce, va POTATO. Ogni 3 mesi — cosa NON uso? Candidati elencati, MAI cancellati alla cieca (git li conserva). Prossimo audit: 2026-09-01.",
+      children: [
+        crit("pul01", "View 'neuro' (NeuroOSLayout) — duplicato di MappaView", "future",
+          "Già fuori dalla sidebar (solo via Ctrl+K). Fa la stessa cosa di MappaView. Candidato #1 alla rimozione: meno confusione, una sola mappa. Recuperabile da git se serve."),
+        crit("pul02", "View 'sinapsi' (LayersView) — legacy", "future",
+          "Terza topologia dello stesso sistema. Tieni MappaView, valuta di togliere questa. In git resta."),
+        crit("pul03", "PILLARS_DATA + 8 export no-op in CanvasLayout", "future",
+          "Dead-code legacy (CellFocusStandalone & co). Si rimuove SOLO insieme a NeuroOSLayout che li importa. Un colpo solo, sicuro."),
+        crit("pul04", "Sidebar 12 voci → troppe per ADHD", "future",
+          "Collassare il gruppo 'Sistema' a comparsa: a vista solo i 5 pilastri + HOME. Meno carico cognitivo, più presentabile."),
+        crit("pul05", "Decidere insieme prima di togliere", "active",
+          "Questa lista è il PATTO: io segnalo, tu decidi, poi lo facciamo in un commit isolato. Nessuna sorpresa, niente lavoro perso."),
       ],
     },
 
