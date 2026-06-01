@@ -1,0 +1,153 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  S02E09](#titaniumos-s02e09)
+  - [Il Sistema che si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)
+  - [ATTO I  Il Problema dei Riavvii](#atto-i-il-problema-dei-riavvii)
+  - [ATTO II  La Dashboard che Diventa Mappa](#atto-ii-la-dashboard-che-diventa-mappa)
+  - [ATTO III  LAudit che Fa Male](#atto-iii-laudit-che-fa-male)
+
+<!-- /TOC -->
+
+# TITANIUM_OS — S02E09
+## "Il Sistema che si Ricorda di Sé"
+
+---
+
+**COLD OPEN**
+
+Ore 14:44. Lo schermo mostra una riga sola:
+
+```
+Git commit: 6476182 [main] ⚠ dirty
+Sessioni: #0
+```
+
+Sessione zero. Il sistema è appena partito. Non sa dove si è fermato ieri. Non sa quante ore ha già consumato Matteo su questo tavolo nella taverna da 12 metri quadri. Non sa che fuori è maggio 2026 e che mancano quattro anni esatti al capannone.
+
+Deve imparare a ricordare da solo.
+
+---
+
+## ATTO I — Il Problema dei Riavvii
+
+C'è una cosa che nessuno ti dice quando costruisci un sistema cognitivo: ogni volta che chiudi la sessione, il sistema muore. Non fa backup della coscienza. Non salva il filo del ragionamento. Il giorno dopo riapri tutto e sei al punto zero — tu sai dove eri, ma lui no.
+
+Matteo ha risolto questo problema per mesi con il metodo artigianale: copia-incolla di contesto, ri-spiegazione a mano di ogni pezzo, quindici minuti di riscaldamento persi ogni sessione prima di poter fare qualcosa di vero.
+
+Oggi ha costruito la soluzione.
+
+`generate_restart_prompt.py v1.1` — lo chiama SELF-HEALING. Non è marketing. È una descrizione tecnica precisa: il file legge `STATE.json`, controlla se il `session_context` è stale, e se lo è, lo rigenera. Automaticamente. Il prompt di riavvio che vedi in testa a questo episodio — quello con i metadati, il commit hash, le percentuali di completamento — non lo ha scritto Matteo stamattina. Lo ha scritto il sistema per sé stesso.
+
+6369 chunk nel RAG. 139 file indicizzati. Il sistema conosce ogni decisione tecnica presa negli ultimi due anni: ogni millimetro del piano dell'Epoxy Granite, ogni connettore MIMS, ogni riga di Flask. Quando riparte, non ricomincia — **riprende**.
+
+È una distinzione piccola. È una distinzione enorme.
+
+---
+
+## ATTO II — La Dashboard che Diventa Mappa
+
+Nel frattempo, la dashboard ha smesso di essere una pagina web.
+
+Sessione 16, 17, 18, 19 — quattro sessioni in un giorno solo, salvate e committate con Co-Authored-By: Claude Sonnet 4.6. Non è un dettaglio decorativo. È la firma di un metodo di lavoro: Matteo alla tastiera, il modello a generare, Matteo a filtrare, correggere, decidere. Il codice che esce è ibrido. La responsabilità è sua.
+
+La MappaView ha attraversato due rivoluzioni in un pomeriggio.
+
+**v4.0**: navStack con tile, N livelli di profondità. Funzionava. Ma era piatta — le relazioni tra i nodi non si vedevano, erano implicate dal click, non dalla geometria.
+
+Poi Matteo ha scritto una nota nel commit che dice tutto: *"Sostituisce force-graph (incontrollabile, fisica spenta) con navStack tile."* Il force-graph era la soluzione elegante — nodi che si dispongono da soli secondo fisica simulata, connessioni che emergono organicamente. Il problema è che "emergono organicamente" significa "non sai dove finisce un nodo" e in una dashboard operativa questo è inaccettabile.
+
+**v5.0**: SVG puro. Cerchi radiali. Posizioni deterministiche.
+
+Zero fisica incontrollabile. Zero sorprese. Le relazioni tra V32, MIMS, GENESIS e tutti i sotto-progetti stanno esattamente dove Matteo ha deciso che stessero. Non si muovono. Non ballano. La mappa è ferma come un pezzo di acciaio fresato — e per lo stesso motivo: la precisione non è compatibile con il movimento casuale.
+
+Intorno a questa scelta architettonica è nata tutta la struttura N-livelli che ora permea il sistema. `MimsSection v1.0` — albero a 5 aree. `GenesisSection v1.0` — 6 aree infrastrutturali. `MatteoSection v3.0` — skill tree navigabile con caselle sbloccabili legate alle milestone V32. `CriticheSection v1.0` — audit a N livelli su 6 aree di progetto.
+
+Ogni sezione è un cerchio nella mappa. Ogni cerchio si apre in sotto-cerchi. Ogni sotto-cerchio ha dati reali.
+
+---
+
+## ATTO III — L'Audit che Fa Male
+
+Poi c'è la parte scomoda.
+
+Opus — il modello più grande nel flusso di lavoro — ha fatto un audit tecnico sulla dashboard. Ha trovato 18 findings. Non "suggerimenti". **Findings**. Incoerenze tra quello che la dashboard mostrava e quello che era reale nel codice.
+
+Sette di questi sono stati fixati in giornata:
+- MCP server dichiarava 5 tool nel header, ne aveva 10 reali
+- React 19 non era documentato
+- NEXUS era marcato come pianificato, era già live
+- RAG graph con 114 nodi non compariva nelle spec
+- EVA — l'automazione WhatsApp per il centro di Maria — mancava dai dati
+- `waiting_press` non era tracciato
+
+Ogni fix è andato nel commit con questa descrizione: *"Trasforma findings audit in fix verificati su fonte reale."*
+
+Verificati su fonte reale. Non corretti a memoria. Non aggiustati per sembrare giusti. Matteo ha aperto ogni file sorgente, controllato il dato, poi aggiornato la dashboard.
+
+Questo è il motivo per cui ha costruito la CriticheSection: vuole che il sistema mostri non solo lo stato positivo dei progetti, ma anche le sue lacune. I blockers. Le incoerenze. Un sistema cognitivo che ti dice solo quello che vuoi sentire non è un sistema cognitivo — è uno specchio adulatorio.
+
+`STATE.blockers` è un campo nel JSON di stato. Viene visualizzato in dashboard. Quando c'è un blocker, non si può ignorare — è lì, cerchio rosso, livello N, aperto finché non è risolto.
+
+Undici episodi narrativi sono stati recuperati nel sistema con `sync_storie.py` — parser header-markdown, ID univoci basati sullo stem del file. Anche le storie hanno adesso un indice, una visibilità, un'esistenza verificabile nel RAG. Anche questo episodio entrerà lì. Verrà letto dal sistema la prossima volta che parte da zero.
+
+Il sistema si ricorderà di sé.
+
+---
+
+**CHIUSURA**
+
+Sessione 19, ore tarde. Git dirty — ci sono ancora file non committati. Domani il sistema ripartirà, leggerà il `session_context`, capirà dove si è fermato, proporrà il prossimo step.
+
+Non è magia. È un file Python di 200 righe che legge un JSON e formatta del testo.
+
+Ma l'effetto è che Matteo può smettere di essere la memoria del sistema. Può smettere di spiegare ogni mattina cosa sta costruendo. Può arrivare alla tastiera e fare — invece di ricordare.
+
+In una taverna da 12 metri quadri, con un tornio contro il muro e i piani dell'Epoxy Granite sul tavolo, guadagnare trenta minuti al giorno non è un dettaglio operativo.
+
+È la differenza tra arrivare al 2030 con il capannone o senza.
+
+---
+
+**`reel_hook`**
+
+> Ho fatto girare un audit automatico sulla mia dashboard. Ha trovato 18 errori nei miei stessi dati — MCP dichiarava 5 tool, ne aveva 10. RAG con 114 nodi non compariva da nessuna parte. EVA non esisteva sulla carta. Ho fixato tutto verificando ogni fonte reale. Poi ho costruito una sezione che mostra solo le cose rotte. Perché un sistema che ti nasconde i problemi non ti sta aiutando — sta solo aspettando che esplodano.
+
+---
+
+```
+─────────────────────────────────────────────
+TITANIUM_OS — METADATI EPISODIO
+─────────────────────────────────────────────
+Serie:          S02
+Episodio:       E09
+Titolo:         Il Sistema che si Ricorda di Sé
+Data:           2026-05-31
+Sessioni:       16 / 17 / 18 / 19
+─────────────────────────────────────────────
+COMMIT PRINCIPALI
+  self-healing:   generate_restart_prompt.py v1.1
+  mappa:          MappaView v5.0 — SVG cerchi radiali
+  audit:          18 findings Opus → 7 fix verificati
+  storie:         sync_storie.py — 11 episodi recuperati
+  sezioni:        MimsSection / GenesisSection / 
+                  MatteoSection / CriticheSection v1.0
+─────────────────────────────────────────────
+STATO PROGETTI
+  V32             65%
+  MIMS            30%
+  GENESIS         55%
+  EVA             tracciata
+─────────────────────────────────────────────
+RAG
+  Chunk:          6.369
+  File:           139
+  Nodi grafo:     114
+  Archi grafo:    218
+─────────────────────────────────────────────
+CO-AUTORI SESSIONE
+  Claude Sonnet 4.6   (sessioni 16/17/18/19)
+  Claude Opus 4.8     (audit + fix)
+─────────────────────────────────────────────
+TARGET CAPANNONE    15 luglio 2030
+─────────────────────────────────────────────
+```
