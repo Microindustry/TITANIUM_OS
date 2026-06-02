@@ -1,12 +1,13 @@
 @echo off
-:: ============================================================
-:: TITANIUM_OS — Lancia Claude Code dalla cartella corretta
-:: Claude Code leggera' automaticamente CLAUDE.md + STATE.json
-:: ============================================================
-cd /d "%USERPROFILE%\TITANIUM_OS\TITANIUM_OS"
+:: CLAUDE_CODE.bat — Lancia Claude Code in TITANIUM_OS | v2.0 | 2026-06-02
+:: Doppio click per aprire Claude Code nella cartella corretta
+set TI_ROOT=%USERPROFILE%\TITANIUM_OS
+set CLAUDE=%USERPROFILE%\AppData\Roaming\Claude\claude-code\2.1.160\claude.exe
+
 echo.
-echo   TITANIUM_OS — Avvio Claude Code
-echo   Cartella: %CD%
-echo   CLAUDE.md: presente
+echo   TITANIUM_OS - Avvio Claude Code
+echo   Cartella: %TI_ROOT%
 echo.
-claude
+
+cd /d "%TI_ROOT%"
+start "" "%CLAUDE%" --dangerously-skip-permissions
