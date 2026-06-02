@@ -6,40 +6,35 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Daily Brief](#titaniumos-daily-brief)\n  - [MILESTONE ATTUALE](#milestone-attuale)\n  - [BLOCKERS](#blockers)\n  - [PILASTRI](#pilastri)\n  - [NODI](#nodi)\n  - [PROSSIMO STEP](#prossimo-step)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Daily Brief](#titaniumos-daily-brief)\n  - [MILESTONE ATTUALE](#milestone-attuale)\n  - [BLOCKERS](#blockers)\n  - [PILASTRI](#pilastri)\n  - [PROSSIMO STEP](#prossimo-step)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
       "title": "TITANIUM_OS — Daily Brief",
-      "content": "**Sunday 31 May 2026** | generato alle 07:30"
+      "content": "**Monday 01 June 2026** | generato alle 07:30"
     },
     {
       "level": 2,
       "title": "MILESTONE ATTUALE",
-      "content": "**Config G - Rinforzi colonne Z+U**\nFocus oggi: Prossima sessione: saldare gusset Z sinistra (fisico) + decisione silent blocks v.A/v.B + verifica log DATA/logs/ funzionanti"
+      "content": "**Audit Opus + handoff sessione self-healing (sessione 15)**\nFocus oggi:"
     },
     {
       "level": 2,
       "title": "BLOCKERS",
-      "content": "- Manca mandrino 2.2kW ER20 - da ordinare\n  - Silent blocks: decisione Version A (senza) vs Version B (con 18mm) - prerequisito V8"
+      "content": "- Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS\n  - Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
     },
     {
       "level": 2,
       "title": "PILASTRI",
-      "content": "- **V32** [in_progress] 65% → Gusset + diagonali + tiranti M10 + Epoxy fill\n  - **MIMS** [waiting_v32] 30% → Completare V32 -> costruire VULCAN -> primo stampo test\n  - **GENESIS** [building] 83% → EVA WhatsApp pilot + AgentsView log consultazioni Claude->agenti\n  - **VITA_NATURA** [active] 40% → EVA WhatsApp bot pilot - Maria Rule zero-click\n  - **IDENTITY** [in_progress] 45% → GitHub profile pubblico + CV file originale aggiornato con AI skills"
-    },
-    {
-      "level": 2,
-      "title": "NODI",
-      "content": "✓ MENTE_SCANNER: ATTIVO - NODES/MENTE_SCANNER/scanner.py (818+ estrazioni)\n  ✓ MENTE_RAG: ATTIVO v4.0 - hybrid BM25+semantico+CrossEncoder | incrementale via manifest | chunk 512/200\n  ✓ MENTE_WATCHER: ATTIVO - NODES/MENTE_WATCHER/mente_watcher.py\n  ✓ MCP_SERVER: ATTIVO - MCP/titanium_mcp_server.py (5 tools: get_state, update_milestone, search_mente, get_daily_brief, list_content_ready)\n  ✓ DAILY_BRIEF: ATTIVO - AUTOMATIONS/core/daily_brief.py -> DATA/daily_brief_last.md\n  ✓ API_SERVER: ATTIVO - api_server.py (localhost:5001) - endpoint: /api/media /api/photos /api/pdfs /api/programs /api/agents /api/agents/ask\n  ✓ DASHBOARD: ATTIVO v7.0 - DASHBOARD/ React Vite (localhost:5173) - sidebar + AgentsView + dot grid\n  ✓ N8N: ATTIVO - npx n8n (localhost:5678, SQLite)\n  ✓ RESEARCH_AGENT: ATTIVO v1.1 - NODES/RESEARCH_AGENT/research_agent.py - 13 sorgenti | cron 03:37 NightResearch\n  ✓ AGENTS: ATTIVO - NODES/AGENTS/ - agents_db.json (8 agenti) + validator_agent.py + /api/agents/ask | alias: ask, agents\n  ✓ STORY_AGENT: ATTIVO v1.0 - NODES/STORY_AGENT/story_agent.py - cron 02:07 + stop hook | 36+ episodi S0/S1/S2/MOMENTI/AUTO\n  ✓ NIGHT_PUSH: ATTIVO - AUTOMATIONS/core/night_push.bat - cron 04:07 git push automatico\n  ✓ COMPUTER_USE: ATTIVO v1.1 - NODES/COMPUTER_USE/ - ComputerUse + BrowserAgent + CDP + ScreenAgent griglia puntini | alias: screen\n  ✓ ARGUS: ATTIVO v2.0 - v1: screen_agent.py (griglia+Sonnet) | v2: argus_v2.py (OmniParser+Sonnet ibrido, -80% costo) | setup: python argus_v2.py --setup | alias: screen | API: /api/screen | MCP: screen_action\n  ✓ GOOGLE_CALENDAR: ATTIVO - mcp__claude_ai_Google_Calendar__* - legge/crea eventi | account benenatimatteo.mb@gmail.com\n  ✓ GMAIL: ATTIVO - mcp__claude_ai_Gmail__* - search, draft, labels | account benenatimatteo.mb@gmail.com\n  ○ EVA: pending - WhatsApp Business API setup\n  ○ V32_WATCHER: future - post assemblaggio completo"
+      "content": "- **V32** [in_progress] 65% → —\n  - **MIMS** [waiting_press] 30% → —\n  - **GENESIS** [building] 55% → —\n  - **VITA_NATURA** [active] 40% → —\n  - **IDENTITY** [active] 50% → —"
     },
     {
       "level": 2,
       "title": "PROSSIMO STEP",
-      "content": "→ Saldare 4 gusset 200mm sulla colonna Z sinistra"
+      "content": "→ Strutturare STORIE + VERSIONI GitHub; pushare i commit"
     }
   ],
-  "word_count": 384,
-  "updated_at": "2026-05-31T07:30:02.188351",
-  "built_at": "2026-05-31T08:52:41.210625"
+  "word_count": 99,
+  "updated_at": "2026-06-01T07:30:02.327953",
+  "built_at": "2026-06-01T07:30:02.343578"
 }

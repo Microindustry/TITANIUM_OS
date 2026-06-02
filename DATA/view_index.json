@@ -617,7 +617,7 @@
     },
     "AUTOMATIONS/AUTOMATIONS_MASTER.md": {
       "title": "AUTOMATIONS MASTER LIST",
-      "updated_at": "2026-05-31T15:07:10.743451",
+      "updated_at": "2026-06-01T06:17:19.271417",
       "endpoint": "/api/view/AUTOMATIONS__AUTOMATIONS_MASTER.md"
     },
     "ARCHIVE/n8n_dismesso/n8n/DEPLOY.md": {
@@ -634,8 +634,23 @@
       "title": "TITANIUM_OS — S2E09",
       "updated_at": "2026-05-31T02:07:49.371809",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260530_merge_remote_tracking_branch_origin.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260531_recupero_11_episodi_narrativi_nella.md": {
+      "title": "TITANIUM_OS — S02E09",
+      "updated_at": "2026-06-01T02:08:03.613858",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260531_recupero_11_episodi_narrativi_nella.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/STORIE_INDEX.md": {
+      "title": "STORIE — Indice Episodi & Struttura",
+      "updated_at": "2026-06-01T06:10:25.531825",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__STORIE_INDEX.md"
+    },
+    "DATA/daily_brief_last.md": {
+      "title": "TITANIUM_OS — Daily Brief",
+      "updated_at": "2026-06-01T07:30:02.327953",
+      "endpoint": "/api/view/DATA__daily_brief_last.md"
     }
   },
-  "last_built": "2026-05-31T19:19:26.572411",
-  "total": 127
+  "last_built": "2026-06-01T22:48:06.762561",
+  "total": 130
 }
