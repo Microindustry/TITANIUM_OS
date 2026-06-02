@@ -1,46 +1,54 @@
 {
   "meta": {
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
-  "last_update": "2026-06-01T22:50:36.401003",
-  "active_milestone": "Vista PITCH + pass estetico + sistema temi (sessione 16)",
-  "last_action": "Modifica a START_LOGIN.bat",
-  "next_step": "Rifinire PITCH insieme; MIMS idea+brevetti; pushare i commit + tag v3.0.0",
-  "session_count": 20,
+  "last_update": "2026-06-02T17:00:00.000000",
+  "active_milestone": "Migrazione PC fisso completata — macchina principale operativa",
+  "last_action": "Migrazione completa: clone repo, tool installati, GitHub sbloccato, push OK",
+  "next_step": "Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
+  "session_count": 21,
   "pillars": {
-    "V32": {
-      "status": "in_progress",
-      "pct_complete": 65
-    },
-    "MIMS": {
-      "status": "waiting_press",
-      "pct_complete": 30
-    },
-    "GENESIS": {
-      "status": "building",
-      "pct_complete": 55,
-      "last_activity": "2026-06-01T22:11:35.153320"
-    },
-    "VITA_NATURA": {
-      "status": "active",
-      "pct_complete": 40
-    },
-    "IDENTITY": {
-      "status": "active",
-      "pct_complete": 50
-    }
+    "V32": { "status": "in_progress", "pct_complete": 65 },
+    "MIMS": { "status": "waiting_press", "pct_complete": 30 },
+    "GENESIS": { "status": "building", "pct_complete": 60, "last_activity": "2026-06-02T17:00:00.000000" },
+    "VITA_NATURA": { "status": "active", "pct_complete": 40 },
+    "IDENTITY": { "status": "active", "pct_complete": 50 }
   },
   "milestones": {
     "verified": [
-      "skillTreeData v3.0 — sub-categorie N livelli su tutti i nodi (Mag 2026)"
+      "skillTreeData v3.0 — sub-categorie N livelli su tutti i nodi (Mag 2026)",
+      "Migrazione PC fisso (DESKTOP-IFACE2R) completata — 02/06/2026",
+      "Git history pulita (model.safetensors rimosso, .git 978MB->72MB)",
+      "Push main + tag v3.0.0 su GitHub sbloccato e pushato",
+      "Tool installati: Python 3.11, Node.js, gh CLI, Tailscale, pip requirements",
+      "MICROINDUSTRY + OmniParser weights migrati",
+      "Memory Getac importata su PC fisso"
     ],
-    "next": "",
+    "next": "Rifinire PITCH + MIMS + EVA",
     "target_capannone": "2030-07-15"
   },
-  "focus_today": "",
+  "machine": {
+    "hostname": "DESKTOP-IFACE2R",
+    "user": "teo",
+    "role": "principale 24/7",
+    "gpu": "GTX 1070 8GB CUDA 13.0",
+    "ram": "16GB",
+    "ip_lan": "192.168.0.112"
+  },
+  "focus_today": "Migrazione PC fisso completata — pronti per riprendere PITCH/MIMS/EVA",
   "blockers": [
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
-    "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
+    "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8",
+    "Tailscale: fare login dal browser sul PC fisso (una tantum)",
+    "powercfg 24/7: eseguire come AMMINISTRATORE (apri PowerShell come admin, incolla i 4 comandi)"
   ],
-  "ideas_inbox": 0
+  "ideas_inbox": 0,
+  "nodes": {
+    "MENTE_SCANNER": "pronto — python NODES/MENTE_SCANNER/scanner.py",
+    "WATCHER": "pronto — python AUTOMATIONS/core/watcher.py",
+    "N8N": "da configurare — npx n8n (localhost:5678)",
+    "API_SERVER": "pronto — python api_server.py (localhost:5001)",
+    "EVA": "pending — WhatsApp API setup",
+    "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
+  }
 }
