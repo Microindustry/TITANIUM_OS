@@ -26,3 +26,6 @@ DATA/mockup_*.png
 DATA/dash_*.png
 DATA/pitch*.png
 DATA/home*.png
+
+NODES/COMPUTER_USE/omniparser_weights/
+*.safetensors
