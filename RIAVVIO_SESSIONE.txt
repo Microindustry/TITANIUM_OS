@@ -1,50 +1,54 @@
-=== RIAVVIO SESSIONE #17 — 01/06/2026 22:44 ===
-Ultima sessione: #16 — 2026-06-01
+=== RIAVVIO SESSIONE #18 — 02/06/2026 19:25 ===
+Ultima sessione: #17 — 2026-06-01
 
 ━━━ STAVAMO PARLANDO DI ━━━
-Pass estetico + nuova vista PITCH (racconto investor-facing che presenta TITANIUM_OS senza dover parlare). Costruito il loop screenshot (Edge headless + dash_shot.bat) per vedere e iterare la UI in sicurezza. Sistema temi dark/light con toggle (dark resta default). Hero HOME rinforzato, pilastri con descrizione, glow premium, bottone Presentazione. Tutto additivo, niente toccato dell'esistente.
+Reso il PC fisso (DESKTOP-IFACE2R, utente teo) PIENAMENTE OPERATIVO. Verificato che la migrazione era incompleta: lo stack Python era quasi vuoto (solo Flask). Installato tutto: torch 2.6.0+cu124 (GPU GTX 1070 8GB, CUDA attiva), chromadb, sentence-transformers, sklearn, transformers + VC++ Redistributable. RAG buildato (6497 chunk, 145 file MENTE) e verificato dal vivo. Dashboard (:5173 --host) + API (:5001) attive. Confermata stessa LAN fisso(.112)↔Getac(.148). RAG visualizzato sul sito (viste RETE 3D + RagGraph, dati reali via API). Generato deck Gamma dalla PITCH. Descript connesso e pronto per il content engine.
 
 ━━━ TOPIC ATTIVI ━━━
-  • Vista PITCH — narrazione investor-facing (6 atti)
-  • Tool screenshot dash_shot.bat (Edge headless) — vedere la UI
-  • Sistema temi dark/light (dark default)
-  • Hero HOME + pilastri con descrizione + glow premium
-  • Bottone Presentazione -> PITCH
+  • PC fisso operativo: stack RAG + CUDA + dashboard/API
+  • RAG su GPU — query da terminale o /api/rag/search; viste RETE/graph nel sito
+  • Modello uso: fisso = server 24/7, Getac = client (LAN + Tailscale)
+  • Gamma deck PITCH: https://gamma.app/generations/GVE89pG3SibkJ8kMa0AsZ
+  • Descript connesso (content engine, 87 episodi / AVA)
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → Push manuale: git push origin main + git push origin v3.0.0
-  → Rifinire PITCH insieme vedendo lo schermo
-  → Tappa 2 tema light (card interne) — solo se richiesto, dark e' preferito
-  → MIMS: sviluppare l'idea + brevetto B2 (priorita reale)
-  → EVA WhatsApp pilot — bridge economico, setup API pending
-  → gc01: estrarre NodeTile condiviso (maintainability, da fare supervisionato)
+  → Push: 'gp' nel terminale CMD (commit locali: allineamento, STATE, RIAVVIO)
+  → FIREWALL 5173 (PowerShell admin) per dashboard dal Getac in LAN
+  → tailscale login SUL FISSO (per uso fuori casa) — su Getac è già loggato
+  → Ruotare il token GitHub gho_ in chiaro in ti_autorun.cmd (gitignorato ma da rigenerare)
+  → Rifinire PITCH · MIMS brevetto B2 (priorità) · EVA WhatsApp pilot
+  → Integrazioni da accendere: Gamma (fatto), Descript (fatto), valutare Canva/Drive/IFTTT
+  → Primo progetto Descript da un video/audio (quando dà un URL)
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
-  ✓ Vista PITCH come modalita presentazione (la dashboard parla per Matteo)
-  ✓ Tema: dark resta default, light esiste come opzione (toggle)
-  ✓ Loop screenshot Edge headless = come 'vedo' la UI per iterare sicuro
-  ✓ Lavoro sempre additivo + commit isolati (paura di Matteo: niente cancella-e-rifai)
-  ✓ MIMS = idea in sviluppo, critiche mercato congelate, brevetti priorita
+  ✓ Fisso = server (un solo dev server --host), Getac = client che apre il browser
+  ✓ Stack RAG installato CON GPU (torch cu124) — non CPU
+  ✓ ti_autorun.cmd messo in .gitignore (conteneva token in chiaro)
+  ✓ STATE.json corretto: prima diceva 'requirements installati' ma era falso
+  ✓ Deck PITCH via Gamma in modalità preserve (testo fedele, niente invenzioni)
+  ✓ Lavoro additivo + commit isolati (paura di Matteo: niente cancella-e-rifai)
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Rientro Matteo: aprire la PITCH e rifinirla insieme, oppure attaccare MIMS/EVA. Pushare i ~25 commit + tag v3.0.0.
+  Sessione con un amico (domande a Claude) — solo risposte, prendere spunto, poi
+  elaborare insieme su richiesta di Matteo. Poi: 2 comandi admin (firewall+tailscale)
+  e pushare con 'gp'.
 
 ━━━ BLOCKERS ━━━
+  ⚠ Firewall 5173 da aprire (admin) — dashboard dal Getac in LAN
+  ⚠ tailscale login sul fisso (admin/browser) — uso fuori casa
+  ⚠ Token GitHub gho_ in chiaro in ti_autorun.cmd — rigenerare su GitHub
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
 ━━━ STATO PILASTRI ━━━
-  V32: 65% — 
-  MIMS: 30% — 
-  GENESIS: 55% — 
-  VITA_NATURA: 40% — 
-  IDENTITY: 50% — 
+  V32: 65%
+  MIMS: 30%
+  GENESIS: 70% — stack RAG operativo su GPU
+  VITA_NATURA: 40%
+  IDENTITY: 50%
 
-━━━ ULTIMI COMMIT ━━━
-5722883 chore: RIAVVIO continuita sessione + store default home
-f4a0a96 feat: bottone 'Presentazione' sulla HOME -> lancia la vista PITCH
-a1cb8f5 feat: vista PITCH — racconto investor-facing (la dashboard parla per te)
-4d7bcff feat(tema): tappa 1 — sistema temi dark/light + toggle (dark default identico)
-013feb8 design: mockup tema CHIARO per valutazione (file separato, zero rischio sul vero)
+━━━ MACCHINA ━━━
+  Fisso: DESKTOP-IFACE2R / teo / 192.168.0.112 / GTX 1070 8GB CUDA / 16GB RAM
+  Getac: 192.168.0.148 (LAN) + 100.79.8.110 (Tailscale, già loggato)
 
-Generato: 01/06/2026 22:44
+Generato: 02/06/2026 19:25
