@@ -8,7 +8,7 @@ import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch } from "luci
 // DATI AUTOMAZIONI
 // ─────────────────────────────────────────────────────────────
 
-type Priority = "attiva" | "alta" | "media" | "bassa" | "ce";
+type Priority = "attiva" | "notturna" | "alta" | "media" | "bassa" | "ce";
 
 interface Automation {
   id: number;
@@ -138,6 +138,61 @@ const AUTOMATIONS: Automation[] = [
     trigger: "Doppio click manuale",
     cosa_fa: "Script Windows per avviare componenti: START_TITANIUM_OS.bat (watcher in background), SESSION_START.bat (session brief), STOP_TITANIUM_OS.bat (ferma watcher), SETUP_SCHEDULER.bat (Task Scheduler), START_ECOSYSTEM.bat (API + dashboard), APRI_PDF_DROP.bat, CLAUDE_CODE.bat.",
     come_potenziare: "Creare un launcher unico TITANIUM_MASTER.bat che avvia tutto in sequenza. Aggiungere check salute (verifica che watcher e API siano up). Aggiungere icona tray Windows per status live.",
+  },
+
+  // ── NOTTURNE (Task Scheduler — schedulate sul fisso, utente teo) ──
+  {
+    id: 30, priority: "notturna",
+    nome: "Story Agent notturno",
+    file: "NODES/STORY_AGENT/run_story_agent.bat",
+    trigger: "Task Scheduler — TI_StoryAgent, ogni notte 02:07",
+    cosa_fa: "Genera episodi narrativi dai commit recenti raggruppati per tema (max 10), poi committa gli episodi nuovi. Path portabili via _ti_paths.bat — niente più hardcode benen.",
+    come_potenziare: "Generare anche il reel_hook per ogni episodio. Inviare su Telegram un digest degli episodi prodotti. Throttling se i commit della giornata sono pochi.",
+    dipende_da: ["Batch Launchers"],
+    alimenta: ["Multi-format Content Pipeline"],
+  },
+  {
+    id: 31, priority: "notturna",
+    nome: "Night Research",
+    file: "AUTOMATIONS/core/night_research.bat",
+    trigger: "Task Scheduler — TI_NightResearch, ogni notte 03:37",
+    cosa_fa: "Research agent su topic fissi (epoxy granite, guide lineari, composite molding, AI agent) per V32/MIMS/GENESIS, poi RAG update incrementale. Risolve Python/MENTE_DIR via _ti_paths.bat.",
+    come_potenziare: "Topic dinamici letti da STATE.json (blockers/milestone attivi). Salvare un report sintetico delle scoperte. Limitare a paper post-2023.",
+    alimenta: ["MENTE RAG"],
+  },
+  {
+    id: 32, priority: "notturna",
+    nome: "Night Push",
+    file: "AUTOMATIONS/core/night_push.bat",
+    trigger: "Task Scheduler — TI_NightPush, ogni notte 04:07",
+    cosa_fa: "Push su GitHub dei commit del giorno (auth via gh keyring, zero token in chiaro) + aggiorna il profilo GitHub. Il sabato rigenera il dataset episodi per il fine-tuning.",
+    come_potenziare: "Eseguire prima il sanitizer come gate pre-push. Notifica Telegram con il riassunto dei commit pushati. Skip pulito se la rete è offline.",
+    dipende_da: ["Batch Launchers"],
+  },
+  {
+    id: 33, priority: "notturna",
+    nome: "Daily Brief",
+    file: "AUTOMATIONS/core/daily_brief.py",
+    trigger: "Task Scheduler — TI_DailyBrief, ogni mattina 07:30",
+    cosa_fa: "Brief mattutino: dove sei, cosa hai fatto ieri, prossime milestone, countdown capannone (15 lug 2030). Output in DATA/daily_brief_last.md.",
+    come_potenziare: "Lettura ad alta voce con Edge TTS all'avvio. Invio automatico su Telegram. Suggerimento del prossimo task in base ai blockers.",
+  },
+  {
+    id: 34, priority: "notturna",
+    nome: "Deep Freeze (backup AES-256)",
+    file: "AUTOMATIONS/core/deep_freeze.py",
+    trigger: "Task Scheduler — TI_DeepFreeze, domenica 03:00",
+    cosa_fa: "Backup settimanale crittografato AES-256 dell'ecosistema, con rotazione (max 8 freeze) e manifest. Protegge il sapere anche in caso di guasto disco.",
+    come_potenziare: "Sync su Google Drive (15GB free) o S3. Notifica con dimensione e checksum. Verifica integrità automatica post-freeze.",
+  },
+  {
+    id: 35, priority: "notturna",
+    nome: "Fine-Tune LLM (GPU)",
+    file: "AUTOMATIONS/core/night_finetune.bat",
+    trigger: "Task Scheduler — TI_FineTune, domenica 01:00",
+    cosa_fa: "Fine-tuning LoRA del Personal LLM (TinyLlama-1.1B) sul dataset episodi, su GPU GTX 1070 (CUDA, fp16). Guard llamafactory: skip pulito se la dipendenza manca. llamafactory 0.9.5 installato ✓.",
+    come_potenziare: "Salire a un modello 3B quando la VRAM lo consente. Valutazione automatica post-training (perplexity sul validation set). Versionare i checkpoint in MODELS/.",
+    dipende_da: ["Night Push"],
   },
 
   // ── ALTA PRIORITÀ ───────────────────────────────────────────
@@ -325,7 +380,8 @@ const AUTOMATIONS: Automation[] = [
 // COLORI E BADGE PER PRIORITÀ
 // ─────────────────────────────────────────────────────────────
 const PRIORITY_CONFIG: Record<Priority, { label: string; color: string; bg: string; border: string; dot: string }> = {
-  attiva: { label: "ATTIVA",   color: "text-emerald-400", bg: "bg-emerald-900/20", border: "border-emerald-500/40", dot: "bg-emerald-500" },
+  attiva:   { label: "ATTIVA",     color: "text-emerald-400", bg: "bg-emerald-900/20", border: "border-emerald-500/40", dot: "bg-emerald-500" },
+  notturna: { label: "🌙 NOTTURNA", color: "text-indigo-300",  bg: "bg-indigo-900/20",  border: "border-indigo-500/40",  dot: "bg-indigo-400"  },
   alta:   { label: "🔧 ALTA",  color: "text-rose-400",    bg: "bg-rose-900/20",    border: "border-rose-500/40",    dot: "bg-rose-500"    },
   media:  { label: "🟡 MEDIA", color: "text-amber-400",   bg: "bg-amber-900/20",   border: "border-amber-500/40",   dot: "bg-amber-500"   },
   bassa:  { label: "🟢 BASSA", color: "text-slate-400",   bg: "bg-slate-800",      border: "border-slate-700",      dot: "bg-slate-500"   },
@@ -508,12 +564,13 @@ export function AutomationsView() {
   const [tab, setTab] = useState<Tab>("architettura");
 
   const attive   = AUTOMATIONS.filter(a => a.priority === "attiva");
+  const notturne = AUTOMATIONS.filter(a => a.priority === "notturna");
   const daFare   = AUTOMATIONS.filter(a => ["alta", "media", "bassa"].includes(a.priority));
   const ce       = AUTOMATIONS.filter(a => a.priority === "ce");
 
   const TABS: Array<{ id: Tab; label: string; count: number; color: string }> = [
     { id: "architettura",  label: "ARCHITETTURA",   count: 0,         color: "text-slate-400" },
-    { id: "attive",        label: "ATTIVE",          count: attive.length,  color: "text-emerald-400" },
+    { id: "attive",        label: "ATTIVE",          count: attive.length + notturne.length,  color: "text-emerald-400" },
     { id: "da_fare",       label: "DA FARE",         count: daFare.length,  color: "text-amber-400"   },
     { id: "content_engine",label: "CONTENT ENGINE",  count: ce.length,      color: "text-cyan-400"    },
   ];
@@ -582,6 +639,16 @@ export function AutomationsView() {
       {tab === "attive" && (
         <div className="space-y-2">
           {attive.map(a => <AutoCard key={a.id} a={a} />)}
+
+          {/* Sottocartella Notturne — stessa cartella ATTIVE, piccola scritta, colore indigo */}
+          {notturne.length > 0 && (
+            <>
+              <div className="text-[9px] font-mono text-indigo-300 uppercase tracking-widest border-t border-slate-800 pt-3 mt-1 flex items-center gap-1.5">
+                🌙 Notturne — schedulate (Task Scheduler) ({notturne.length})
+              </div>
+              {notturne.map(a => <AutoCard key={a.id} a={a} />)}
+            </>
+          )}
         </div>
       )}
 
