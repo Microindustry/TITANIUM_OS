@@ -27,9 +27,5 @@ if not defined CLAUDE (
 )
 
 cd /d "%TI_ROOT%"
-echo.
-echo   TITANIUM_OS - riprendo l'ultima sessione...
-echo   %CLAUDE%
-echo.
-start "" "%CLAUDE%" --dangerously-skip-permissions --continue
+start "" "%CLAUDE%" --dangerously-skip-permissions "Leggi RIAVVIO_SESSIONE.txt e BRAIN/STATE.json e riprendi: dimmi in meno di 10 secondi dove eravamo e il prossimo step, senza domande."
 endlocal
