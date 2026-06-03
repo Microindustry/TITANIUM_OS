@@ -515,6 +515,55 @@ def watchdog_status():
     return jsonify({"ok": True, **json.loads(status_path.read_text(encoding="utf-8"))})
 
 
+@app.get("/api/tasks/notturne")
+def tasks_notturne():
+    """Stato live dei task notturni da Windows Task Scheduler (TI_*).
+    Usa Get-ScheduledTask via PowerShell: State/LastTaskResult sono enum/codici
+    indipendenti dalla lingua (a differenza del CSV di schtasks, localizzato)."""
+    ps = (
+        "$ErrorActionPreference='SilentlyContinue';"
+        "@(Get-ScheduledTask -TaskName 'TI_*' | ForEach-Object {"
+        "  $i=$_|Get-ScheduledTaskInfo;"
+        "  [pscustomobject]@{"
+        "    name=$_.TaskName; state=[string]$_.State;"
+        "    next=if($i.NextRunTime){$i.NextRunTime.ToString('yyyy-MM-dd HH:mm')}else{''};"
+        "    last=if($i.LastRunTime){$i.LastRunTime.ToString('yyyy-MM-dd HH:mm')}else{''};"
+        "    result=[int]$i.LastTaskResult"
+        "  }}) | ConvertTo-Json -Compress"
+    )
+    RESULT_LABELS = {
+        0: "OK", 1: "errore generico",
+        267009: "in esecuzione", 267010: "pronto", 267011: "mai eseguito",
+        267014: "terminato", 2147750687: "istanza gia' attiva",
+    }
+    try:
+        r = subprocess.run(
+            ["powershell", "-NoProfile", "-NonInteractive", "-Command", ps],
+            capture_output=True, text=True, timeout=25,
+            encoding="utf-8", errors="replace",
+        )
+        out = (r.stdout or "").strip()
+        if not out:
+            return jsonify({"ok": True, "tasks": {}, "note": "nessun task TI_ trovato"})
+        parsed = json.loads(out)
+        if isinstance(parsed, dict):
+            parsed = [parsed]
+        tasks = {}
+        for t in parsed:
+            res = t.get("result")
+            tasks[t.get("name", "?")] = {
+                "state":       t.get("state", ""),
+                "next_run":    t.get("next", ""),
+                "last_run":    t.get("last", ""),
+                "last_result": res,
+                "last_result_label": RESULT_LABELS.get(res, (f"0x{res:08X}" if isinstance(res, int) else str(res))),
+                "active":      t.get("state") in ("Ready", "Running"),
+            }
+        return jsonify({"ok": True, "tasks": tasks})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
 @app.get("/api/sanitizer/report")
 def sanitizer_report():
     """Legge l'ultimo report del sanitizer."""

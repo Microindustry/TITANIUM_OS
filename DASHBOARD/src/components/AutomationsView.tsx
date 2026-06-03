@@ -1,8 +1,8 @@
 // AutomationsView.tsx | TITANIUM_OS DASHBOARD | v1.0 | 2026-03-11
 // Mappa visuale di tutte le automazioni — note IT + ramificazioni + potenziamento
 
-import { useState } from "react";
-import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch, Moon } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch, Moon, RefreshCw } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
 // DATI AUTOMAZIONI
@@ -20,6 +20,16 @@ interface Automation {
   priority: Priority;
   dipende_da?: string[];
   alimenta?: string[];
+  task?: string;   // nome task in Windows Task Scheduler (per stato live)
+}
+
+// Stato live di un task da Task Scheduler (GET /api/tasks/notturne)
+interface TaskLive {
+  state: string;            // Ready | Running | Disabled | ...
+  next_run: string;
+  last_run: string;
+  last_result_label: string;
+  active: boolean;
 }
 
 const AUTOMATIONS: Automation[] = [
@@ -142,7 +152,7 @@ const AUTOMATIONS: Automation[] = [
 
   // ── NOTTURNE (Task Scheduler — schedulate sul fisso, utente teo) ──
   {
-    id: 30, priority: "notturna",
+    id: 30, priority: "notturna", task: "TI_StoryAgent",
     nome: "Story Agent notturno",
     file: "NODES/STORY_AGENT/run_story_agent.bat",
     trigger: "Task Scheduler — TI_StoryAgent, ogni notte 02:07",
@@ -152,7 +162,7 @@ const AUTOMATIONS: Automation[] = [
     alimenta: ["Multi-format Content Pipeline"],
   },
   {
-    id: 31, priority: "notturna",
+    id: 31, priority: "notturna", task: "TI_NightResearch",
     nome: "Night Research",
     file: "AUTOMATIONS/core/night_research.bat",
     trigger: "Task Scheduler — TI_NightResearch, ogni notte 03:37",
@@ -161,7 +171,7 @@ const AUTOMATIONS: Automation[] = [
     alimenta: ["MENTE RAG"],
   },
   {
-    id: 32, priority: "notturna",
+    id: 32, priority: "notturna", task: "TI_NightPush",
     nome: "Night Push",
     file: "AUTOMATIONS/core/night_push.bat",
     trigger: "Task Scheduler — TI_NightPush, ogni notte 04:07",
@@ -170,7 +180,7 @@ const AUTOMATIONS: Automation[] = [
     dipende_da: ["Batch Launchers"],
   },
   {
-    id: 33, priority: "notturna",
+    id: 33, priority: "notturna", task: "TI_DailyBrief",
     nome: "Daily Brief",
     file: "AUTOMATIONS/core/daily_brief.py",
     trigger: "Task Scheduler — TI_DailyBrief, ogni mattina 07:30",
@@ -178,7 +188,7 @@ const AUTOMATIONS: Automation[] = [
     come_potenziare: "Lettura ad alta voce con Edge TTS all'avvio. Invio automatico su Telegram. Suggerimento del prossimo task in base ai blockers.",
   },
   {
-    id: 34, priority: "notturna",
+    id: 34, priority: "notturna", task: "TI_DeepFreeze",
     nome: "Deep Freeze (backup AES-256)",
     file: "AUTOMATIONS/core/deep_freeze.py",
     trigger: "Task Scheduler — TI_DeepFreeze, domenica 03:00",
@@ -186,7 +196,7 @@ const AUTOMATIONS: Automation[] = [
     come_potenziare: "Sync su Google Drive (15GB free) o S3. Notifica con dimensione e checksum. Verifica integrità automatica post-freeze.",
   },
   {
-    id: 35, priority: "notturna",
+    id: 35, priority: "notturna", task: "TI_FineTune",
     nome: "Fine-Tune LLM (GPU)",
     file: "AUTOMATIONS/core/night_finetune.bat",
     trigger: "Task Scheduler — TI_FineTune, domenica 01:00",
@@ -391,7 +401,7 @@ const PRIORITY_CONFIG: Record<Priority, { label: string; color: string; bg: stri
 // ─────────────────────────────────────────────────────────────
 // COMPONENTE CARD SINGOLA AUTOMAZIONE
 // ─────────────────────────────────────────────────────────────
-function AutoCard({ a }: { a: Automation }) {
+function AutoCard({ a, live }: { a: Automation; live?: TaskLive }) {
   const [open, setOpen] = useState(false);
   const cfg = PRIORITY_CONFIG[a.priority];
 
@@ -404,6 +414,22 @@ function AutoCard({ a }: { a: Automation }) {
       >
         <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${cfg.dot}`} />
         <span className="text-xs font-mono font-bold text-white flex-1">{a.nome}</span>
+
+        {/* Badge stato LIVE da Task Scheduler */}
+        {live && (
+          <span
+            title={`Stato: ${live.state} · prossima: ${live.next_run || "—"} · ultimo esito: ${live.last_result_label}`}
+            className={`flex items-center gap-1 text-[8px] font-mono px-2 py-0.5 rounded border flex-shrink-0 ${
+              live.active
+                ? "border-emerald-500/40 text-emerald-400 bg-emerald-900/20"
+                : "border-slate-600/40 text-slate-400 bg-slate-800/40"
+            }`}
+          >
+            <span className={`w-1.5 h-1.5 rounded-full ${live.active ? "bg-emerald-400 animate-pulse" : "bg-slate-500"}`} />
+            {live.active ? "ATTIVO" : live.state || "?"}
+          </span>
+        )}
+
         <span className={`text-[8px] font-mono px-2 py-0.5 rounded border ${cfg.border} ${cfg.color} flex-shrink-0`}>
           {cfg.label}
         </span>
@@ -413,6 +439,16 @@ function AutoCard({ a }: { a: Automation }) {
       {/* Corpo espandibile */}
       {open && (
         <div className="px-4 pb-4 space-y-3 border-t border-slate-800">
+          {/* Stato live da Task Scheduler */}
+          {live && (
+            <div className="flex flex-wrap gap-x-6 gap-y-1 pt-3 text-[10px] font-mono">
+              <span className="text-slate-500">stato: <span className={live.active ? "text-emerald-400" : "text-slate-300"}>{live.state}</span></span>
+              <span className="text-slate-500">prossima: <span className="text-sky-300">{live.next_run || "—"}</span></span>
+              <span className="text-slate-500">ultima: <span className="text-slate-300">{live.last_run || "mai"}</span></span>
+              <span className="text-slate-500">esito: <span className="text-slate-300">{live.last_result_label}</span></span>
+            </div>
+          )}
+
           {/* File + trigger */}
           <div className="flex gap-4 pt-3">
             <div className="flex-1">
@@ -561,6 +597,29 @@ function ArchitetturaDiagram() {
 // ─────────────────────────────────────────────────────────────
 export function NotturneView() {
   const notturne = AUTOMATIONS.filter(a => a.priority === "notturna");
+  const [live, setLive]   = useState<Record<string, TaskLive>>({});
+  const [apiOk, setApiOk] = useState<boolean | null>(null);   // null = caricamento
+  const [updated, setUpdated] = useState<string>("");
+
+  useEffect(() => {
+    let alive = true;
+    const load = () => {
+      fetch("/api/tasks/notturne", { signal: AbortSignal.timeout(20000) })
+        .then(r => r.json())
+        .then(d => {
+          if (!alive) return;
+          if (d.ok) { setLive(d.tasks || {}); setApiOk(true); setUpdated(new Date().toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit", second: "2-digit" })); }
+          else setApiOk(false);
+        })
+        .catch(() => { if (alive) setApiOk(false); });
+    };
+    load();
+    const id = setInterval(load, 30_000);   // refresh ogni 30s
+    return () => { alive = false; clearInterval(id); };
+  }, []);
+
+  const liveOf = (a: Automation) => (a.task ? live[a.task] : undefined);
+  const activeCount = notturne.filter(a => liveOf(a)?.active).length;
 
   return (
     <div className="space-y-3">
@@ -573,18 +632,41 @@ export function NotturneView() {
               Automazioni notturne — Task Scheduler (utente teo)
             </div>
             <div className="text-[8px] font-mono text-slate-500 mb-2">
-              Registrate e attive · il PC resta sveglio (sleep off) · click per dettaglio
+              {apiOk === false
+                ? "API offline — avvia api_server.py per lo stato live · orari sotto"
+                : "Stato live da Task Scheduler · refresh ogni 30s · click per dettaglio"}
             </div>
             <div className="flex items-end gap-1.5">
-              <span className="text-3xl font-black text-sky-300 tabular-nums">{notturne.length}</span>
-              <span className="text-slate-600 font-mono mb-0.5 text-sm">task attivi</span>
+              <span className="text-3xl font-black text-sky-300 tabular-nums">
+                {apiOk ? activeCount : notturne.length}
+              </span>
+              <span className="text-slate-600 font-mono mb-0.5 text-sm">
+                {apiOk ? `attivi su ${notturne.length}` : "task schedulati"}
+              </span>
             </div>
           </div>
           <div className="text-right">
-            <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-emerald-500/40 bg-emerald-900/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-wider">Schedulati</span>
-            </div>
+            {apiOk === null && (
+              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-600/40 bg-slate-800/40">
+                <RefreshCw size={10} className="text-slate-400 animate-spin" />
+                <span className="text-[9px] font-mono text-slate-400 uppercase tracking-wider">Lettura…</span>
+              </div>
+            )}
+            {apiOk === true && (
+              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-emerald-500/40 bg-emerald-900/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-wider">Live</span>
+              </div>
+            )}
+            {apiOk === false && (
+              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-amber-500/40 bg-amber-900/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span className="text-[9px] font-mono text-amber-400 uppercase tracking-wider">Offline</span>
+              </div>
+            )}
+            {updated && apiOk && (
+              <div className="text-[7px] font-mono text-slate-600 mt-1">agg. {updated}</div>
+            )}
           </div>
         </div>
 
@@ -603,8 +685,8 @@ export function NotturneView() {
         </div>
       </div>
 
-      {/* Cards (riusa AutoCard: cosa fa + trigger/orario + come potenziare) */}
-      {notturne.map(a => <AutoCard key={a.id} a={a} />)}
+      {/* Cards con stato live per ciascun task */}
+      {notturne.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
 
       <div className="text-center py-1">
         <span className="text-[7px] font-mono text-slate-800 uppercase tracking-[0.3em]">
