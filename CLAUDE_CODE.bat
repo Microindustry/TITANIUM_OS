@@ -1,13 +1,35 @@
 @echo off
-:: CLAUDE_CODE.bat — Lancia Claude Code in TITANIUM_OS | v2.0 | 2026-06-02
-:: Doppio click per aprire Claude Code nella cartella corretta
+:: CLAUDE_CODE.bat — Lancia Claude Code in TITANIUM_OS riprendendo l'ultima sessione | v3.0 | 2026-06-03
+:: Doppio click: apre Claude nella cartella giusta e RIPRENDE la conversazione (--continue).
+:: Risolve claude.exe in modo dinamico (robusto agli update di versione e al GUID del pacchetto Store).
+setlocal enabledelayedexpansion
 set TI_ROOT=%USERPROFILE%\TITANIUM_OS
-set CLAUDE=%USERPROFILE%\AppData\Roaming\Claude\claude-code\2.1.160\claude.exe
+set PKGROOT=%USERPROFILE%\AppData\Local\Packages
 
-echo.
-echo   TITANIUM_OS - Avvio Claude Code
-echo   Cartella: %TI_ROOT%
-echo.
+:: 1) trova la cartella del pacchetto Store (Claude_*)
+set CC_DIR=
+for /f "delims=" %%p in ('dir /b /a:d "%PKGROOT%\Claude_*" 2^>nul') do (
+    if exist "%PKGROOT%\%%p\LocalCache\Roaming\Claude\claude-code" set "CC_DIR=%PKGROOT%\%%p\LocalCache\Roaming\Claude\claude-code"
+)
+:: fallback: vecchio path Roaming non pacchettizzato
+if not defined CC_DIR if exist "%USERPROFILE%\AppData\Roaming\Claude\claude-code" set "CC_DIR=%USERPROFILE%\AppData\Roaming\Claude\claude-code"
+
+:: 2) prendi la versione installata piu' recente (per data)
+set CLAUDE=
+if defined CC_DIR for /f "delims=" %%v in ('dir /b /a:d /o-d "%CC_DIR%" 2^>nul') do (
+    if not defined CLAUDE if exist "%CC_DIR%\%%v\claude.exe" set "CLAUDE=%CC_DIR%\%%v\claude.exe"
+)
+
+if not defined CLAUDE (
+    echo [ERRORE] claude.exe non trovato. Controlla l'installazione di Claude Code.
+    pause
+    exit /b 1
+)
 
 cd /d "%TI_ROOT%"
-start "" "%CLAUDE%" --dangerously-skip-permissions
+echo.
+echo   TITANIUM_OS - riprendo l'ultima sessione...
+echo   %CLAUDE%
+echo.
+start "" "%CLAUDE%" --dangerously-skip-permissions --continue
+endlocal
