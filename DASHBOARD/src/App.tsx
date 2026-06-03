@@ -1,7 +1,7 @@
 // App.tsx | TITANIUM_OS | v6.0 | 2026-05-29
 // Layout sidebar — navigazione spaziale, design architetturale
 
-import { useEffect, useState, lazy, Suspense, useCallback, Component, type ReactNode, type ErrorInfo } from "react";
+import { useEffect, useState, lazy, Suspense, useCallback, Component, Fragment, type ReactNode, type ErrorInfo } from "react";
 
 // ── Error Boundary globale ────────────────────────────────────
 class GlobalErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -47,6 +47,7 @@ const EcosystemView  = lazy(() => import("./components/EcosystemView").then(m =>
 const RagGraphView   = lazy(() => import("./components/RagGraphView").then(m => ({ default: m.RagGraphView })));
 const MappaView          = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
 const AutomationsView    = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.AutomationsView })));
+const NotturneView       = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.NotturneView })));
 const PitchView          = lazy(() => import("./components/PitchView").then(m => ({ default: m.PitchView })));
 const MetodoView         = lazy(() => import("./components/MetodoView").then(m => ({ default: m.MetodoView })));
 
@@ -207,7 +208,27 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
             Sistema
           </div>
         )}
-        {systemItems.map(item => <NavBtn key={item.id} item={item} />)}
+        {systemItems.map(item => (
+          <Fragment key={item.id}>
+            <NavBtn item={item} />
+            {/* Sotto-voce: Notturne — annidata sotto AUTOMAZ., piccola e blu */}
+            {item.id === "automazioni" && !collapsed && (
+              <button
+                onClick={() => onNavigate("notturne")}
+                title="Automazioni notturne — schedulate"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "notturne"
+                    ? "bg-sky-950/40 text-sky-300 border border-sky-500/30"
+                    : "text-slate-600 hover:text-sky-300 hover:bg-sky-950/20 border border-transparent"}`}
+              >
+                <Moon size={11} className="flex-shrink-0 text-sky-400" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  Notturne
+                </span>
+              </button>
+            )}
+          </Fragment>
+        ))}
       </nav>
 
       {/* Footer sidebar */}
@@ -388,6 +409,18 @@ function AppInner() {
                     <span className="text-slate-700">— pipeline live del sistema</span>
                   </div>
                   <AutomationsView />
+                </div>
+              </div>
+            )}
+            {view === "notturne"    && (
+              <div className="h-full overflow-y-auto">
+                <div className="max-w-5xl mx-auto px-5 py-5">
+                  <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-4 flex items-center gap-2">
+                    <Moon size={10} className="text-sky-400" />
+                    <span className="text-sky-400/70">Automazioni notturne</span>
+                    <span className="text-slate-700">— schedulate su Task Scheduler</span>
+                  </div>
+                  <NotturneView />
                 </div>
               </div>
             )}

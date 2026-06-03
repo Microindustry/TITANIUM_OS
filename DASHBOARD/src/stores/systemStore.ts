@@ -6,7 +6,7 @@ import { persist } from "zustand/middleware";
 
 export type ViewMode = "home" | "v32" | "genesis" | "mims" | "eva" | "identity"
                      | "agenti" | "storie" | "mappa" | "rete" | "sinapsi" | "canvas" | "neuro" | "automazioni"
-                     | "pitch" | "metodo";
+                     | "notturne" | "pitch" | "metodo";
 
 export type Theme = "dark" | "light";
 

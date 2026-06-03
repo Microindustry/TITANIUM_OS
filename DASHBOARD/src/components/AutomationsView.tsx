@@ -2,7 +2,7 @@
 // Mappa visuale di tutte le automazioni — note IT + ramificazioni + potenziamento
 
 import { useState } from "react";
-import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch } from "lucide-react";
+import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch, Moon } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
 // DATI AUTOMAZIONI
@@ -550,6 +550,66 @@ function ArchitetturaDiagram() {
             <span className="text-[9px] font-mono text-slate-500">{l.label}</span>
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// VISTA DEDICATA — AUTOMAZIONI NOTTURNE (sidebar → Notturne)
+// Verifica al volo: quali sono, cosa fanno, quando girano, se attive
+// ─────────────────────────────────────────────────────────────
+export function NotturneView() {
+  const notturne = AUTOMATIONS.filter(a => a.priority === "notturna");
+
+  return (
+    <div className="space-y-3">
+      {/* Header stato */}
+      <div className="bg-indigo-950/20 border border-indigo-500/30 rounded-2xl p-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="text-[8px] font-mono text-indigo-300/70 uppercase tracking-widest mb-1 flex items-center gap-1.5">
+              <Moon size={9} className="text-sky-400" />
+              Automazioni notturne — Task Scheduler (utente teo)
+            </div>
+            <div className="text-[8px] font-mono text-slate-500 mb-2">
+              Registrate e attive · il PC resta sveglio (sleep off) · click per dettaglio
+            </div>
+            <div className="flex items-end gap-1.5">
+              <span className="text-3xl font-black text-sky-300 tabular-nums">{notturne.length}</span>
+              <span className="text-slate-600 font-mono mb-0.5 text-sm">task attivi</span>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-emerald-500/40 bg-emerald-900/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-wider">Schedulati</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Orari a colpo d'occhio */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-3 pt-3 border-t border-indigo-500/20">
+          {[
+            { t: "02:07", n: "StoryAgent" }, { t: "03:37", n: "Research" },
+            { t: "04:07", n: "Push" },       { t: "07:30", n: "Daily Brief" },
+            { t: "dom 03:00", n: "DeepFreeze" }, { t: "dom 01:00", n: "FineTune (GPU)" },
+          ].map(s => (
+            <div key={s.n} className="flex items-center gap-1.5 text-[9px] font-mono">
+              <span className="text-sky-300 tabular-nums w-14">{s.t}</span>
+              <span className="text-slate-500">{s.n}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Cards (riusa AutoCard: cosa fa + trigger/orario + come potenziare) */}
+      {notturne.map(a => <AutoCard key={a.id} a={a} />)}
+
+      <div className="text-center py-1">
+        <span className="text-[7px] font-mono text-slate-800 uppercase tracking-[0.3em]">
+          register_night_tasks.ps1 · path portabili via _ti_paths.bat
+        </span>
       </div>
     </div>
   );
