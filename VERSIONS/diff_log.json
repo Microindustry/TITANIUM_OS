@@ -1,144 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-01T06:11:25.404330",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_017.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_017.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.478031",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_018.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_018.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.556136",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_019.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__EP_AUTO_019.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.634277",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_00_IL_SOCIO.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_00_IL_SOCIO.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.712380",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_01_L_ORGANISMO.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_01_L_ORGANISMO.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.788876",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_02_LA_VERIFICA.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_02_LA_VERIFICA.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.882614",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_03_LA_FORMULA.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_S0_03_LA_FORMULA.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:25.960711",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_00_ORIGINE.md.json",
-      "snapshot": "BACKUPS\\20260601_061125\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_00_ORIGINE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.048624",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_01_LA_TAVERNA.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_01_LA_TAVERNA.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.123457",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_02_IL_REATTORE.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_02_IL_REATTORE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.211775",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_03_IL_PARADOSSO.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_03_IL_PARADOSSO.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.290259",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_04_IL_SEGNALE.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_04_IL_SEGNALE.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.368367",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_05_IL_VERDETTO.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__S1_PRESENTE__EP_05_IL_VERDETTO.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.447175",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.525281",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.603388",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_02_hmi_tp900_comfort_acquisito.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_02_hmi_tp900_comfort_acquisito.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.681494",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_03_basamento_traliccio_saldato_tig.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_03_basamento_traliccio_saldato_tig.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.759601",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_04_asse_x_assemblato_guideviteservo.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_04_asse_x_assemblato_guideviteservo.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.837682",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:26.931404",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md.json",
-      "snapshot": "BACKUPS\\20260601_061126\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:27.024437",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md.json",
-      "snapshot": "BACKUPS\\20260601_061127\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:27.106951",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md.json",
-      "snapshot": "BACKUPS\\20260601_061127\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T06:11:27.191126",
-      "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md.json",
-      "snapshot": "BACKUPS\\20260601_061127\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-01T06:11:27.265306",
       "file": "DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md.json",
       "snapshot": "BACKUPS\\20260601_061127\\DATA\\views\\CONTENT_ENGINE__DATABASE__episodes__SA_AUTO__EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md.json",
@@ -2998,6 +2860,144 @@
       "timestamp": "2026-06-01T22:48:05.288777",
       "file": "CLAUDE.md",
       "snapshot": "BACKUPS\\20260601_224805\\CLAUDE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:14.535919",
+      "file": ".claude\\settings.json",
+      "snapshot": "BACKUPS\\20260603_144414\\.claude\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:14.629623",
+      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
+      "snapshot": "BACKUPS\\20260603_144414\\.claude\\skills\\aggiorna-stato\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:14.692109",
+      "file": ".claude\\skills\\dataset\\SKILL.md",
+      "snapshot": "BACKUPS\\20260603_144414\\.claude\\skills\\dataset\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:14.738973",
+      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
+      "snapshot": "BACKUPS\\20260603_144414\\.claude\\skills\\genera-episodio\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:14.770215",
+      "file": ".claude\\skills\\reel\\SKILL.md",
+      "snapshot": "BACKUPS\\20260603_144414\\.claude\\skills\\reel\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:14.817079",
+      "file": "CLAUDE.md",
+      "snapshot": "BACKUPS\\20260603_144414\\CLAUDE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:44:45.184223",
+      "file": "RIAVVIO_SESSIONE.txt",
+      "snapshot": "BACKUPS\\20260603_144445\\RIAVVIO_SESSIONE.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:28.866180",
+      "file": "DASHBOARD\\package.json",
+      "snapshot": "BACKUPS\\20260603_145328\\DASHBOARD\\package.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:29.284871",
+      "file": "DASHBOARD\\tsconfig.json",
+      "snapshot": "BACKUPS\\20260603_145329\\DASHBOARD\\tsconfig.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:37.811862",
+      "file": "DASHBOARD\\index.html",
+      "snapshot": "BACKUPS\\20260603_145337\\DASHBOARD\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.318335",
+      "file": "DASHBOARD\\tsconfig.app.json",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\tsconfig.app.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.339826",
+      "file": "DASHBOARD\\tsconfig.node.json",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.537594",
+      "file": "DASHBOARD\\.claude\\launch.json",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\.claude\\launch.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.600079",
+      "file": "DASHBOARD\\.claude\\settings.local.json",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\.claude\\settings.local.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.704903",
+      "file": "DASHBOARD\\.vscode\\settings.json",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\.vscode\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.780923",
+      "file": "DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.905869",
+      "file": "DASHBOARD\\pnpm-workspace.yaml",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\pnpm-workspace.yaml",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:38.968367",
+      "file": "DASHBOARD\\public\\matteo\\index.html",
+      "snapshot": "BACKUPS\\20260603_145338\\DASHBOARD\\public\\matteo\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:39.077716",
+      "file": "DASHBOARD\\README.md",
+      "snapshot": "BACKUPS\\20260603_145339\\DASHBOARD\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:53:39.296403",
+      "file": "DASHBOARD\\TITANIUM_MANIFESTO.md",
+      "snapshot": "BACKUPS\\20260603_145339\\DASHBOARD\\TITANIUM_MANIFESTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:56:01.021198",
+      "file": "NODES\\MENTE_RAG\\rag_engine.py",
+      "snapshot": "BACKUPS\\20260603_145601\\NODES\\MENTE_RAG\\rag_engine.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:56:19.708621",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260603_145619\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T14:56:54.187219",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260603_145654\\NODES\\MENTE_RAG\\rag_manifest.json",
       "type": "snapshot"
     }
   ]

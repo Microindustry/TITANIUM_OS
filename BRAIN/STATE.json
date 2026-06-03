@@ -2,17 +2,33 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-02T17:45:00.000000",
+  "last_update": "2026-06-03T14:57:36.626033",
   "active_milestone": "PC fisso pienamente operativo — stack Python/RAG installato, CUDA attiva, RAG indicizzato",
-  "last_action": "Installato stack Python (torch cu124, chromadb, sentence-transformers) + VC++ redist; RAG buildato (6497 chunk, 145 file) e verificato su GPU GTX 1070",
+  "last_action": "Modifica a chroma.sqlite3",
   "next_step": "Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
-  "session_count": 22,
+  "session_count": 23,
   "pillars": {
-    "V32": { "status": "in_progress", "pct_complete": 65 },
-    "MIMS": { "status": "waiting_press", "pct_complete": 30 },
-    "GENESIS": { "status": "building", "pct_complete": 70, "last_activity": "2026-06-02T17:45:00.000000" },
-    "VITA_NATURA": { "status": "active", "pct_complete": 40 },
-    "IDENTITY": { "status": "active", "pct_complete": 50 }
+    "V32": {
+      "status": "in_progress",
+      "pct_complete": 65
+    },
+    "MIMS": {
+      "status": "waiting_press",
+      "pct_complete": 30
+    },
+    "GENESIS": {
+      "status": "building",
+      "pct_complete": 70,
+      "last_activity": "2026-06-03T14:53:39.339002"
+    },
+    "VITA_NATURA": {
+      "status": "active",
+      "pct_complete": 40
+    },
+    "IDENTITY": {
+      "status": "active",
+      "pct_complete": 50
+    }
   },
   "milestones": {
     "verified": [

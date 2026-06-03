@@ -2,42 +2,42 @@
   "views": {
     "DASHBOARD/ECOSYSTEM_ARCHITECTURE.md": {
       "title": "ECOSYSTEM_ARCHITECTURE.md | v2.0 | 2026-03-16",
-      "updated_at": "2026-05-30T10:30:33.914103",
+      "updated_at": "2026-06-02T16:38:09.101115",
       "endpoint": "/api/view/DASHBOARD__ECOSYSTEM_ARCHITECTURE.md"
     },
     "DASHBOARD/README.md": {
       "title": "React + TypeScript + Vite",
-      "updated_at": "2026-05-30T10:30:34.180773",
+      "updated_at": "2026-06-02T16:38:09.101115",
       "endpoint": "/api/view/DASHBOARD__README.md"
     },
     "DASHBOARD/TITANIUM_MANIFESTO.md": {
       "title": "TITANIUM VENTURES - TECHNICAL MANIFESTO",
-      "updated_at": "2026-05-30T10:30:34.286461",
+      "updated_at": "2026-06-02T16:38:09.101115",
       "endpoint": "/api/view/DASHBOARD__TITANIUM_MANIFESTO.md"
     },
     "CLAUDE.md": {
       "title": "TITANIUM_OS — CLAUDE.md",
-      "updated_at": "2026-05-30T10:42:16.987757",
+      "updated_at": "2026-06-02T16:38:09.050976",
       "endpoint": "/api/view/CLAUDE.md"
     },
     ".claude/skills/dataset/SKILL.md": {
       "title": "Dataset LLM — TITANIUM_OS Content Engine",
-      "updated_at": "2026-05-30T10:43:24.949378",
+      "updated_at": "2026-06-02T16:38:08.991037",
       "endpoint": "/api/view/.claude__skills__dataset__SKILL.md"
     },
     ".claude/skills/aggiorna-stato/SKILL.md": {
       "title": "Aggiorna Stato — TITANIUM_OS",
-      "updated_at": "2026-05-30T10:43:25.077583",
+      "updated_at": "2026-06-02T16:38:08.991037",
       "endpoint": "/api/view/.claude__skills__aggiorna-stato__SKILL.md"
     },
     ".claude/skills/genera-episodio/SKILL.md": {
       "title": "Genera Episodio — TITANIUM_OS Content Engine",
-      "updated_at": "2026-05-30T10:43:25.203248",
+      "updated_at": "2026-06-02T16:38:08.991037",
       "endpoint": "/api/view/.claude__skills__genera-episodio__SKILL.md"
     },
     ".claude/skills/reel/SKILL.md": {
       "title": "Reel Hook — TITANIUM_OS Content Engine",
-      "updated_at": "2026-05-30T10:43:25.329169",
+      "updated_at": "2026-06-02T16:38:08.991037",
       "endpoint": "/api/view/.claude__skills__reel__SKILL.md"
     },
     "DOCS/TITANIUM_OS_V1.md": {
@@ -651,6 +651,6 @@
       "endpoint": "/api/view/DATA__daily_brief_last.md"
     }
   },
-  "last_built": "2026-06-01T22:48:06.762561",
+  "last_built": "2026-06-03T14:53:39.323378",
   "total": 130
 }
