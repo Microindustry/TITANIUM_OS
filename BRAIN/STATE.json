@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-03T14:57:36.626033",
+  "last_update": "2026-06-03T15:07:35.817564",
   "active_milestone": "PC fisso pienamente operativo — stack Python/RAG installato, CUDA attiva, RAG indicizzato",
-  "last_action": "Modifica a chroma.sqlite3",
+  "last_action": "Modifica a .gitignore",
   "next_step": "Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
   "session_count": 23,
   "pillars": {
@@ -52,19 +52,19 @@
     "role": "principale 24/7",
     "gpu": "GTX 1070 8GB CUDA 13.0",
     "ram": "16GB",
-    "ip_lan": "192.168.0.112"
+    "ip_lan": "192.168.0.112",
+    "ip_tailscale": "100.125.152.124"
   },
   "focus_today": "Migrazione PC fisso completata — pronti per riprendere PITCH/MIMS/EVA",
   "blockers": [
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
     "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8",
-    "Tailscale: login dal browser sul PC fisso (una tantum) — serve per aprire la dashboard dal Getac quando e' fuori rete (http://<ip-tailscale>:5173)",
-    "Firewall 5173: aprire porta da ADMIN per accesso dashboard dal Getac su stessa LAN. Comando: New-NetFirewallRule -DisplayName 'TITANIUM Dashboard 5173' -Direction Inbound -LocalPort 5173 -Protocol TCP -Action Allow",
+    "Token GitHub gho_ in chiaro in ti_autorun.cmd (gitignorato) — DA RUOTARE su GitHub e sostituire nel file",
     "powercfg 24/7: eseguire come AMMINISTRATORE (apri PowerShell come admin, incolla i 4 comandi)"
   ],
   "ideas_inbox": 0,
   "nodes": {
-    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | 6497 chunk indicizzati (CUDA cu124)",
+    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | 6518 chunk indicizzati (CUDA cu124)",
     "MENTE_SCANNER": "pronto — python NODES/MENTE_SCANNER/scanner.py",
     "WATCHER": "pronto — python AUTOMATIONS/core/watcher.py",
     "N8N": "da configurare — npx n8n (localhost:5678)",
