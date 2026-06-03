@@ -1,32 +1,34 @@
 {
-  "session_number": 16,
-  "session_date": "2026-06-01",
-  "last_updated": "2026-06-01T22:45:00",
-  "last_discussed": "Pass estetico + nuova vista PITCH (racconto investor-facing che presenta TITANIUM_OS senza dover parlare). Costruito il loop screenshot (Edge headless + dash_shot.bat) per vedere e iterare la UI in sicurezza. Sistema temi dark/light con toggle (dark resta default). Hero HOME rinforzato, pilastri con descrizione, glow premium, bottone Presentazione. Tutto additivo, niente toccato dell'esistente.",
+  "session_number": 19,
+  "session_date": "2026-06-03",
+  "last_updated": "2026-06-03T15:45:00",
+  "last_discussed": "Sessione amico (dev Flutter) recuperata dai log e archiviata in MENTE + RAG. Hardening e sblocco del fisso: processi sistemati (n8n up, zombie killato, dashboard riavviata), RAG aggiornato (6518 chunk), pnpm installato, firewall 5173 aperto, Tailscale loggato sul fisso. ROTAZIONE COMPLETA token GitHub -> auth via gh keyring (zero segreti in chiaro). Creata vista METODO sul sito. Scoperte e iniziata bonifica automazioni/profilo con path Getac hardcoded (hook Stop + generate_restart_prompt.bat corretti).",
   "active_topics": [
-    "Vista PITCH — narrazione investor-facing (6 atti)",
-    "Tool screenshot dash_shot.bat (Edge headless) — vedere la UI",
-    "Sistema temi dark/light (dark default)",
-    "Hero HOME + pilastri con descrizione + glow premium",
-    "Bottone Presentazione -> PITCH"
+    "Sicurezza: token ruotato, auth git via gh keyring (gp = solo git push)",
+    "Dashboard raggiungibile LAN 192.168.0.112:5173 + Tailscale 100.125.152.124:5173",
+    "n8n self-hosted attivo :5678 (account locale, credenziali in _VAULT/ACCOUNTS)",
+    "Vista METODO live sul sito (chi/cosa/come, nata dalle domande del dev)",
+    "Bonifica path Getac (benen) negli script: hook Stop e restart_prompt fixati"
   ],
   "open_threads": [
-    "Push manuale: git push origin main + git push origin v3.0.0",
-    "Rifinire PITCH insieme vedendo lo schermo",
-    "Tappa 2 tema light (card interne) — solo se richiesto, dark e' preferito",
-    "MIMS: sviluppare l'idea + brevetto B2 (priorita reale)",
-    "EVA WhatsApp pilot — bridge economico, setup API pending",
-    "gc01: estrarre NodeTile condiviso (maintainability, da fare supervisionato)"
+    "PRIORITA: ripensare automazioni notturne per il fisso (path env, finetune su GPU, ri-registrare Task Scheduler, manca _VAULT/KEYS/titanium_os.env)",
+    "CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop usa il path Store, funziona)",
+    "powercfg 24/7 da admin per tenere il fisso sempre attivo",
+    "Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot",
+    "Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire"
   ],
   "decisions_made": [
-    "Vista PITCH come modalita presentazione (la dashboard parla per Matteo)",
-    "Tema: dark resta default, light esiste come opzione (toggle)",
-    "Loop screenshot Edge headless = come 'vedo' la UI per iterare sicuro",
-    "Lavoro sempre additivo + commit isolati (paura di Matteo: niente cancella-e-rifai)",
-    "MIMS = idea in sviluppo, critiche mercato congelate, brevetti priorita"
+    "Token: strada B (gh keyring) invece di token in chiaro — risolto alla radice",
+    "pnpm installato globalmente (path %APPDATA%/npm/pnpm.cmd atteso da START_LOGIN)",
+    "n8n = account LOCALE self-hosted (no cloud, no abbonamento)",
+    "Vista METODO additiva (nuovo file + 4 punti wiring, nessuna view toccata)",
+    "Credenziali in _VAULT (fuori da git, _VAULT/ aggiunto a .gitignore)",
+    "Hook Stop e generate_restart_prompt.bat de-hardcodati (%USERPROFILE%)"
   ],
-  "next_action": "Rientro Matteo: aprire la PITCH e rifinirla insieme, oppure attaccare MIMS/EVA. Pushare i ~25 commit + tag v3.0.0.",
+  "next_action": "Ripensare le automazioni notturne per il fisso: de-hardcodare i path (regola CLAUDE.md), creare _VAULT/KEYS/titanium_os.env, valutare finetune su GPU, script che registra i task in Task Scheduler. Tutto additivo, commit isolati.",
   "blockers": [
+    "Automazioni notturne SPENTE sul fisso (path Getac + non schedulate + env mancante)",
+    "powercfg 24/7 da admin",
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
     "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
   ]

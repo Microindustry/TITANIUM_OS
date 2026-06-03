@@ -1,2 +1,2 @@
 @echo off
-"C:\Users\benen\tools\python311\python.exe" "C:\Users\benen\TITANIUM_OS\TITANIUM_OS\generate_restart_prompt.py"
+"%USERPROFILE%\AppData\Local\Programs\Python\Python311\python.exe" "%USERPROFILE%\TITANIUM_OS\generate_restart_prompt.py"

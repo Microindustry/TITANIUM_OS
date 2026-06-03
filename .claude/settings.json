@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cmd /c C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\generate_restart_prompt.bat"
+            "command": "cmd /c %USERPROFILE%\\TITANIUM_OS\\generate_restart_prompt.bat"
           }
         ]
       }

@@ -1,59 +1,52 @@
-=== RIAVVIO SESSIONE #19 — 03/06/2026 ===
-Ultima sessione: #18 — 2026-06-02
+=== RIAVVIO SESSIONE #20 — 03/06/2026 15:43 ===
+Ultima sessione: #19 — 2026-06-03
 
 ━━━ STAVAMO PARLANDO DI ━━━
-Sessione con un amico (dev Flutter) che ha fatto domande sul sistema. Recuperate dai
-log e archiviate in MENTE/SESSIONI/2026-06-02_domande-amico-dev-flutter.md + RAG.
-Poi giro di hardening e sblocco del fisso: verificati/sistemati i processi (n8n up,
-zombie killato, dashboard riavviata), RAG aggiornato (6518 chunk), pnpm installato,
-firewall 5173 aperto, Tailscale loggato sul fisso, e ROTAZIONE COMPLETA del token
-GitHub → auth via gh keyring (zero segreti in chiaro). Creata vista METODO sul sito
-(spiegazione chi/cosa/come, nata dalle domande dell'amico). A fine sessione scoperto
-che le AUTOMAZIONI NOTTURNE sono spente/rotte sul fisso.
+Sessione amico (dev Flutter) recuperata dai log e archiviata in MENTE + RAG. Hardening e sblocco del fisso: processi sistemati (n8n up, zombie killato, dashboard riavviata), RAG aggiornato (6518 chunk), pnpm installato, firewall 5173 aperto, Tailscale loggato sul fisso. ROTAZIONE COMPLETA token GitHub -> auth via gh keyring (zero segreti in chiaro). Creata vista METODO sul sito. Scoperte e iniziata bonifica automazioni/profilo con path Getac hardcoded (hook Stop + generate_restart_prompt.bat corretti).
 
 ━━━ TOPIC ATTIVI ━━━
-  • Token GitHub: ruotato, auth via gh keyring — gp = solo `git push`
-  • Dashboard raggiungibile: LAN http://192.168.0.112:5173 · Tailscale http://100.125.152.124:5173
-  • n8n self-hosted attivo :5678 (account locale, credenziali in _VAULT/ACCOUNTS/n8n.md)
-  • Vista METODO live sul sito (gruppo Sistema, accanto a PITCH)
-  • Automazioni notturne: SPENTE sul fisso (vedi thread aperto)
+  • Sicurezza: token ruotato, auth git via gh keyring (gp = solo git push)
+  • Dashboard raggiungibile LAN 192.168.0.112:5173 + Tailscale 100.125.152.124:5173
+  • n8n self-hosted attivo :5678 (account locale, credenziali in _VAULT/ACCOUNTS)
+  • Vista METODO live sul sito (chi/cosa/come, nata dalle domande del dev)
+  • Bonifica path Getac (benen) negli script: hook Stop e restart_prompt fixati
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → PRIORITÀ: ripensare le 3 automazioni notturne per il fisso
-      - night_research / night_finetune / night_push hanno path Getac (C:\Users\benen,
-        tools\python311) → riscrivere con path via env (%USERPROFILE%, PYTHON da env)
-      - manca _VAULT\KEYS\titanium_os.env sul fisso → research agent senza API key
-      - NON registrate in Task Scheduler sul fisso → non scattano comunque
-      - finetune gira su CPU (TinyLlama LoRA) → ora c'è GPU GTX 1070, ripensare
-      - night_push: con keyring non serve più token nel bat (git push autentica solo)
-  → powercfg 24/7 da ADMIN (4 comandi) per tenere il fisso sempre attivo
-  → Rifinire PITCH · MIMS brevetto B2 (priorità) · EVA WhatsApp pilot
+  → PRIORITA: ripensare automazioni notturne per il fisso (path env, finetune su GPU, ri-registrare Task Scheduler, manca _VAULT/KEYS/titanium_os.env)
+  → CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop usa il path Store, funziona)
+  → powercfg 24/7 da admin per tenere il fisso sempre attivo
+  → Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot
   → Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
   ✓ Token: strada B (gh keyring) invece di token in chiaro — risolto alla radice
-  ✓ pnpm installato globalmente (path %APPDATA%\npm\pnpm.cmd, atteso da START_LOGIN)
+  ✓ pnpm installato globalmente (path %APPDATA%/npm/pnpm.cmd atteso da START_LOGIN)
   ✓ n8n = account LOCALE self-hosted (no cloud, no abbonamento)
-  ✓ Vista METODO additiva (nuovo file, 4 punti di wiring, niente view toccate)
-  ✓ Password/credenziali in _VAULT (fuori da git, _VAULT/ aggiunto a .gitignore)
-  ✓ Lavoro additivo + commit isolati (paura di Matteo: niente cancella-e-rifai)
+  ✓ Vista METODO additiva (nuovo file + 4 punti wiring, nessuna view toccata)
+  ✓ Credenziali in _VAULT (fuori da git, _VAULT/ aggiunto a .gitignore)
+  ✓ Hook Stop e generate_restart_prompt.bat de-hardcodati (%USERPROFILE%)
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Ripensare le automazioni notturne per il fisso: de-hardcodare i path (regola CLAUDE.md),
-  creare _VAULT\KEYS\titanium_os.env, valutare finetune su GPU, e uno script che
-  registra i task in Task Scheduler. Tutto additivo, commit isolati.
+  Ripensare le automazioni notturne per il fisso: de-hardcodare i path (regola CLAUDE.md), creare _VAULT/KEYS/titanium_os.env, valutare finetune su GPU, script che registra i task in Task Scheduler. Tutto additivo, commit isolati.
 
 ━━━ BLOCKERS ━━━
-  ⚠ Automazioni notturne spente sul fisso (path Getac + non schedulate + env mancante)
-  ⚠ powercfg 24/7 da admin
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
+  ⚠ Automazioni notturne SPENTE sul fisso: night_research/night_finetune/night_push hanno path Getac (C:\Users\benen, tools\python311), manca _VAULT\KEYS\titanium_os.env, e NON sono registrate in Task Scheduler. Da ripensare per fisso (path via env, finetune su GPU, ri-registrare task).
+  ⚠ powercfg 24/7: eseguire come AMMINISTRATORE (apri PowerShell come admin, incolla i 4 comandi)
 
 ━━━ STATO PILASTRI ━━━
-  V32: 65% | MIMS: 30% | GENESIS: 70% | VITA_NATURA: 40% | IDENTITY: 50%
+  V32: 65% — 
+  MIMS: 30% — 
+  GENESIS: 70% — 
+  VITA_NATURA: 40% — 
+  IDENTITY: 50% — 
 
-━━━ MACCHINA ━━━
-  Fisso: DESKTOP-IFACE2R / teo / 192.168.0.112 (Tailscale 100.125.152.124) / GTX 1070 8GB CUDA / 16GB RAM
-  Getac: 192.168.0.148 (LAN) + 100.79.8.110 (Tailscale)
+━━━ ULTIMI COMMIT ━━━
+906f5c3 chore: chiusura sessione #19 — STATE + RIAVVIO (token risolto, n8n attivo, automazioni notturne come blocker prioritario)
+407fbd6 feat: vista METODO — spiegazione chi/cosa/come del sistema (nata dalle domande di un dev esterno)
+7c8a76c chore: verifica rotazione token completata (gh keyring, token nuovo)
+a7c45e8 chore: credenziali git via gh keyring (rimosso token in chiaro da ti_autorun.cmd)
+8d697db chore: blocker firewall+tailscale risolti; _VAULT gitignore; STATE allineato (tailscale 100.125.152.124, 6518 chunk)
 
-Generato: 03/06/2026
+Generato: 03/06/2026 15:43

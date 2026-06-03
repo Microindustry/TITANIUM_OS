@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-01T16:59:06.327853",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
-      "snapshot": "BACKUPS\\20260601_165906\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T16:59:06.609096",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
-      "snapshot": "BACKUPS\\20260601_165906\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-01T16:59:06.758253",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_016.md",
-      "snapshot": "BACKUPS\\20260601_165906\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_016.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-01T16:59:06.897159",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_017.md",
       "snapshot": "BACKUPS\\20260601_165906\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_017.md",
@@ -2998,6 +2980,24 @@
       "timestamp": "2026-06-03T15:35:43.854841",
       "file": "CONTENT_ENGINE\\DATABASE\\training\\train_config.yaml",
       "snapshot": "BACKUPS\\20260603_153543\\CONTENT_ENGINE\\DATABASE\\training\\train_config.yaml",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T15:40:11.818138",
+      "file": ".claude\\launch.json",
+      "snapshot": "BACKUPS\\20260603_154011\\.claude\\launch.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T15:42:32.260593",
+      "file": "RIAVVIO_SESSIONE.txt",
+      "snapshot": "BACKUPS\\20260603_154232\\RIAVVIO_SESSIONE.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-03T15:43:49.256895",
+      "file": "RIAVVIO_SESSIONE.txt",
+      "snapshot": "BACKUPS\\20260603_154349\\RIAVVIO_SESSIONE.txt",
       "type": "snapshot"
     }
   ]

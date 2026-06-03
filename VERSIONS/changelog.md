@@ -2919,3 +2919,8 @@
 - `2026-06-03 15:34:40` ✏️ MODIFIED — setup.py
 - `2026-06-03 15:35:43` ✏️ MODIFIED — CONTENT_ENGINE\DATABASE\training\train_config.yaml
 - `2026-06-03 15:37:09` 🗑️ DELETED — RIAVVIO_SESSIONE.txt
+- `2026-06-03 15:40:11` ✏️ MODIFIED — .claude\launch.json
+- `2026-06-03 15:41:38` 🗑️ DELETED — .claude\settings.json
+- `2026-06-03 15:42:20` 🗑️ DELETED — generate_restart_prompt.bat
+- `2026-06-03 15:42:32` ✏️ MODIFIED — RIAVVIO_SESSIONE.txt
+- `2026-06-03 15:43:49` ✏️ MODIFIED — RIAVVIO_SESSIONE.txt
