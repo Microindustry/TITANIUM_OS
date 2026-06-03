@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation,
+  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -48,6 +48,7 @@ const RagGraphView   = lazy(() => import("./components/RagGraphView").then(m => 
 const MappaView          = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
 const AutomationsView    = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.AutomationsView })));
 const PitchView          = lazy(() => import("./components/PitchView").then(m => ({ default: m.PitchView })));
+const MetodoView         = lazy(() => import("./components/MetodoView").then(m => ({ default: m.MetodoView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -69,6 +70,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "identity", label: "IDENTITY", icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
   // Sistema
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
+  { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
   { id: "automazioni", label: "AUTOMAZ.",   icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
@@ -391,6 +393,7 @@ function AppInner() {
             )}
             {view === "storie"      && <StorieView />}
             {view === "pitch"       && <PitchView />}
+            {view === "metodo"      && <MetodoView />}
             {view === "mappa"    && <MappaView systemState={sys.state as any} />}
             {view === "rete"     && <RagGraphView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
