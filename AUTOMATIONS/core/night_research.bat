@@ -16,11 +16,21 @@ if not defined PYTHON (
     exit /b 1
 )
 
-:: topic fissi - V32 e materiali (sintassi corretta argparse)
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "epoxy granite vibration damping CNC machine tool" --domain V32 --rag --max 5 >> "%LOG%" 2>&1
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "linear guide preload stiffness precision machining" --domain V32 --rag --max 5 >> "%LOG%" 2>&1
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "polymer composite injection molding tile manufacturing" --domain MIMS --rag --max 5 >> "%LOG%" 2>&1
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5 >> "%LOG%" 2>&1
+:: topic GUIDATI da STATE + RAG (night_topics.py scrive DATA\night_topics.txt)
+"%PYTHON%" AUTOMATIONS\core\night_topics.py >> "%LOG%" 2>&1
+
+set "TOPICS=%TI_ROOT%\DATA\night_topics.txt"
+if exist "%TOPICS%" (
+    :: un research per ogni riga "query|dominio" - letto da FILE (nessun sub-shell)
+    for /f "usebackq tokens=1,2 delims=|" %%q in ("%TOPICS%") do (
+        echo [night_research] topic: %%q [dominio %%r] >> "%LOG%"
+        "%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "%%q" --domain %%r --rag --max 5 >> "%LOG%" 2>&1
+    )
+) else (
+    echo [night_research] night_topics.txt assente - fallback topic fissi >> "%LOG%"
+    "%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "epoxy granite vibration damping CNC machine tool" --domain V32 --rag --max 5 >> "%LOG%" 2>&1
+    "%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5 >> "%LOG%" 2>&1
+)
 
 :: RAG update incrementale dopo la ricerca
 "%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental >> "%LOG%" 2>&1
