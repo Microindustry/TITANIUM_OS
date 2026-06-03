@@ -1,27 +1,28 @@
 @echo off
-:: night_research.bat | TITANIUM_OS | v1.0 | 2026-05-29
-:: Research Agent notturno — cerca paper su topic V32/MIMS/Epoxy Granite
-:: Eseguito da Task Scheduler ogni notte (ore diverse da StoryAgent per non sovraccaricare)
+:: night_research.bat | TITANIUM_OS | v2.0 | 2026-06-03
+:: Research Agent notturno - cerca paper su topic V32/MIMS/Epoxy Granite
+:: Eseguito da Task Scheduler ogni notte (ore diverse da StoryAgent)
+:: v2.0: path portabili via _ti_paths.bat (no hardcode benen)
 
-set TITANIUM_ROOT=C:\Users\benen\TITANIUM_OS\TITANIUM_OS
-set PYTHON=C:\Users\benen\tools\python311\python.exe
-set ENV_FILE=C:\Users\benen\TITANIUM_OS\_VAULT\KEYS\titanium_os.env
+call "%~dp0_ti_paths.bat"
+cd /d "%TI_ROOT%"
 
-for /f "usebackq tokens=1,2 delims==" %%a in ("%ENV_FILE%") do (
-    if not "%%a"=="" if not "%%b"=="" set "%%a=%%b"
+set "LOG=%TI_ROOT%\DATA\logs\night_research.log"
+echo [night_research] avvio %DATE% %TIME% >> "%LOG%"
+echo [night_research] PYTHON=%PYTHON% >> "%LOG%"
+
+if not defined PYTHON (
+    echo [night_research] ERR: python non trovato >> "%LOG%"
+    exit /b 1
 )
 
-cd /d "%TITANIUM_ROOT%"
-
-echo [night_research] avvio %DATE% %TIME%
-
-:: topic fissi — V32 e materiali (sintassi corretta argparse)
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "epoxy granite vibration damping CNC machine tool" --domain V32 --rag --max 5
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "linear guide preload stiffness precision machining" --domain V32 --rag --max 5
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "polymer composite injection molding tile manufacturing" --domain MIMS --rag --max 5
-"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5
+:: topic fissi - V32 e materiali (sintassi corretta argparse)
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "epoxy granite vibration damping CNC machine tool" --domain V32 --rag --max 5 >> "%LOG%" 2>&1
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "linear guide preload stiffness precision machining" --domain V32 --rag --max 5 >> "%LOG%" 2>&1
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "polymer composite injection molding tile manufacturing" --domain MIMS --rag --max 5 >> "%LOG%" 2>&1
+"%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5 >> "%LOG%" 2>&1
 
 :: RAG update incrementale dopo la ricerca
-"%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental
+"%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental >> "%LOG%" 2>&1
 
-echo [night_research] done
+echo [night_research] done %DATE% %TIME% >> "%LOG%"
