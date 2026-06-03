@@ -1,0 +1,55 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260601_session_salvataggio_sessione_16_vis.md",
+  "title": "TITANIUM_OS — Episodio S1E16",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio S1E16](#titaniumos-episodio-s1e16)\n  - [La Dashboard Parla per Te](#la-dashboard-parla-per-te)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il problema invisibile](#atto-i-il-problema-invisibile)\n  - [ATTO II  Il loop che nessuno vede arrivare](#atto-ii-il-loop-che-nessuno-vede-arrivare)\n  - [ATTO III  Estetica come fondazione, non decorazione](#atto-iii-estetica-come-fondazione-non-decorazione)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"La Dashboard Parla per Te\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "È domenica sera. Tua sorella ti guarda mentre scrolli la dashboard sul portatile. Fa una domanda semplice: *\"Ma cos'è esattamente quello che stai costruendo?\"*\n\nTu non sai da dove cominciare. Dici tre cose, poi ne dici altre tre. Lei annuisce, ma i suoi occhi vanno altrove.\n\nNon è un problema di visione. È un problema di interfaccia.\n\nQuello che Matteo ha costruito oggi non è una feature. È la risposta a quella domanda — incisa in HTML, scrollabile, sempre pronta.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Il problema invisibile",
+      "content": "C'è una categoria di lavoro che non appare nei log tecnici. Non è un bug. Non è un refactor. È il problema che esiste da quando hai aperto il primo file: **il sistema non sa presentarsi da solo.**\n\nGENESIS a questa data ha 6.369 chunk nel RAG. Centotrentanove file. Ottantasette storie. Quindici sessioni archiviate. Cinque pilastri costruiti mattone per mattone: V32, MIMS, GENESIS, EVA, VITA.\n\nTutto questo vive dentro un terminale, dentro commit messages, dentro `STATE.json`. Vivo per chi sa guardare. Muto per chiunque altro.\n\nIl commit che apre la sessione 16 si chiama `feat: bottone 'Presentazione' sulla HOME`. Un bottone. Un solo bottone sulla pagina principale.\n\nMa quel bottone fa una cosa precisa: lancia la vista PITCH.\n\nMatteo ha costruito la voce del sistema.\n\n---\n\nLa vista PITCH è additiva — parola chiave nei messaggi di commit. *\"Zero rischio sull'esistente.\"* Significa che Matteo non ha toccato nulla di quello che funzionava. Ha aggiunto uno strato sopra. Narrazione scrollabile, investor-facing, progettata per spiegare il progetto a qualcuno che non ha mai aperto un terminale.\n\nNon è marketing. È documentazione con una gerarchia visiva.\n\nLa logica è chirurgica: quando qualcuno è in piedi accanto a te e guarda lo schermo, non hai tempo di aprire dieci tab. Un click. La dashboard parla per te.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — Il loop che nessuno vede arrivare",
+      "content": "Mentre la PITCH veniva costruita, sotto c'era un incendio silenzioso.\n\n**AU19.** Codice anomalia. Root cause: `_archive_old_changelog` archiviava le righe *per evento*, non a chunk. Ogni scrittura nel changelog triggerava il watcher. Il watcher notava il cambiamento. Scriveva nel changelog. Che triggerava il watcher. Che scriveva nel changelog.\n\nUn loop runaway. Un cane che si morde la coda, ma in Python, alle 2 di notte, su un sistema che gira in background mentre lavori su altro.\n\nLa fix è elegante nella sua semplicità: `watcher.py` riceve un'istruzione nuova — `IGNORE_DIRS += DATA`. I file di output derivato non ri-triggerano il ciclo. La soglia di archiviazione passa da *per-evento* a *oltre 3.000 righe*.\n\nIl sistema smette di mangiare se stesso.\n\n---\n\nNella stessa sessione: audit di cinque anomalie pregresse. AU01, AU02, AU03, AU06 — chiuse. Erano già risolte, ma non marcate come tali. Ogni anomalia aperta è rumore cognitivo, anche se non è più un problema reale. Matteo le chiude.\n\nAU10: il nodo ROOT_NODE nella MappaView segnava un completamento del 60%. Sbagliato. La media reale dei cinque pilastri era 48%. La percentuale scende. Il numero è peggiore. Ma è vero.\n\n*Questo è il tipo di decisione che non vedi nel portfolio di nessuno.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Estetica come fondazione, non decorazione",
+      "content": "Alle 23:14 — il timestamp non è nei metadati ma si sente nella sequenza dei commit — arriva il sistema temi.\n\n**Tappa 1: dark/light toggle.** Fondazione modulare con Tailwind v4 token. Il tema dark rimane identico a prima. Zero regressioni. Il tema light non è un'inversione del dark — è progettato da zero, con token semantici e contrasto minimo 4.5:1.\n\nPrima viene il mockup. File separato. Zero rischio sul sistema reale. Matteo valuta, poi implementa.\n\nIl commit `style: glow radiale soffuso sul fondo` arriva dopo. Emerald in alto a sinistra, cyan in alto a destra. Opacità 0.05-0.07. *\"Look intenzionale\"* — lo scrive lui stesso nel messaggio di commit. Non è un effetto aggiunto per far sembrare il lavoro più lungo. È la differenza tra uno schermo che appare e uno che esiste.\n\n---\n\nI pilastri nella HOME ricevono una descrizione di una riga ciascuno. Header aggiunto: *\"I 5 pilastri\"*. Screenshot dei tool integrati.\n\nLa logica è la stessa della PITCH: qualcuno guarda lo schermo. Non sa cosa sono V32 e MIMS. Adesso lo sa.\n\nLoop di verifica: screenshot headless con Edge. Il ciclo è `see → edit → verify`. Non si pubblica senza guardare. Non si guarda senza uno strumento che non mente.\n\n---\n\nNella CommandBar vengono rimosse tre voci legacy: *canvas*, *neuro*, *sinapsi*. Nomi che avevano senso in sessioni passate, che non ne hanno più. Una sola voce rimane. Il menu diventa navigabile in tre secondi invece di dodici.\n\nMIMS riceve un aggiornamento di stato: le critiche di mercato vengono congelate e convertite in leve. La cascata viene ridimensionata. L'audit trimestrale viene implementato. Matteo aveva preso questa decisione prima — il commit la formalizza.\n\n---\n\nE poi, quasi in fondo alla giornata: `feat: recupera anche i 12 dev-log story_agent`.\n\nIl parser di `sync_storie.py` viene esteso per leggere il formato `story_agent` — titolo con `##`, data estratta dal filename. Dodici storie che esistevano ma non erano contate. Il contatore passa da 75 a 87.\n\nNessuna storia era stata persa. Erano solo invisibili al sistema.\n\nAdesso no.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "C'è una versione di questa giornata che si racconta così: *\"Ho fatto un po' di UI e fixato dei bug.\"*\n\nC'è un'altra versione.\n\nMatteo ha costruito la voce del sistema. Ha spento un loop che consumava risorse in silenzio. Ha abbassato una percentuale perché quella vera era più bassa. Ha eliminato tre pulsanti che non servivano più. Ha recuperato dodici storie che il sistema non riusciva a vedere.\n\nOgni decisione di questa sessione condivide una struttura: *rendere visibile quello che esiste, rimuovere quello che non serve più.*\n\nNon è ottimismo. È manutenzione.\n\nGENESIS è al 55%. V32 al 65%. Il capannone è a luglio 2030.\n\nTra una sessione e l'altra, il sistema impara a parlare.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "```\n87 storie nel RAG. 12 non venivano contate — parser sbagliato, format diverso. \nEsistevano. Erano invisibili al sistema.\nUn commit le ha recuperate. Nessuna riga di contenuto è cambiata.\nQuante cose esistono già, nel tuo progetto, che il sistema non riesce ancora a vedere?\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E16 |\n| **Data** | 2026-06-01 |\n| **Titolo** | La Dashboard Parla per Te |\n| **Sessione** | #16 |\n| **Commit totali** | 14 |\n| **Milestone** | Vista PITCH + pass estetico + sistema temi |\n| **V32** | 65% |\n| **GENESIS** | 55% |\n| **MIMS** | 30% |\n| **Anomalie chiuse** | AU01 AU02 AU03 AU06 AU10 AU16 AU17 AU19 |\n| **Storie RAG** | 75 → 87 |\n| **Chunk RAG** | 6.369 |\n| **Co-author sessione** | Claude Opus 4.8 |\n| **Tag narrativo** | UX · audit · visibilità · loop-fix · estetica |\n| **Target capannone** | 15 luglio 2030 |"
+    }
+  ],
+  "word_count": 1179,
+  "updated_at": "2026-06-03T15:34:09.825170",
+  "built_at": "2026-06-03T15:34:09.835616"
+}

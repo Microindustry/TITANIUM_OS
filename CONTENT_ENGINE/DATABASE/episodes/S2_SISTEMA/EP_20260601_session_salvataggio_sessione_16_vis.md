@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  Episodio S1E16](#titaniumos-episodio-s1e16)
+  - [La Dashboard Parla per Te](#la-dashboard-parla-per-te)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il problema invisibile](#atto-i-il-problema-invisibile)
+  - [ATTO II  Il loop che nessuno vede arrivare](#atto-ii-il-loop-che-nessuno-vede-arrivare)
+  - [ATTO III  Estetica come fondazione, non decorazione](#atto-iii-estetica-come-fondazione-non-decorazione)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [METADATI EPISODIO](#metadati-episodio)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — Episodio S1E16
 ## "La Dashboard Parla per Te"
 

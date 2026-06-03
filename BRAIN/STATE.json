@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-03T15:22:03.342900",
+  "last_update": "2026-06-03T15:37:09.822218",
   "active_milestone": "PC fisso pienamente operativo — stack Python/RAG installato, CUDA attiva, RAG indicizzato",
-  "last_action": "Modifica a ti_autorun.cmd",
-  "next_step": "Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
+  "next_step": "Ripensare automazioni notturne per il fisso (path env + GPU finetune + task) · Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
   "session_count": 23,
   "pillars": {
     "V32": {
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-03T14:53:39.339002"
+      "last_activity": "2026-06-03T15:34:31.450140"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -41,7 +41,11 @@
       "Memory Getac importata su PC fisso",
       "Stack Python RAG installato (torch 2.6.0+cu124, chromadb, sentence-transformers, sklearn) + VC++ redist — 02/06/2026",
       "CUDA operativa su GTX 1070 8GB (torch.cuda.is_available=True)",
-      "Indice RAG buildato e verificato: 6497 chunk da 145 file MENTE, query GPU OK"
+      "Indice RAG buildato e verificato: 6497 chunk da 145 file MENTE, query GPU OK",
+      "Sicurezza: token GitHub ruotato — auth git via gh keyring, zero segreti in chiaro, vecchio gho_ revocato (03/06/2026)",
+      "Firewall 5173 aperto + Tailscale loggato sul fisso (100.125.152.124) — dashboard via LAN e da remoto (03/06/2026)",
+      "n8n self-hosted attivo (account locale, no cloud) + pnpm installato; avvio al login operativo (03/06/2026)",
+      "Vista METODO sul sito — spiegazione chi/cosa/come del sistema, nata dalle domande di un dev esterno (03/06/2026)"
     ],
     "next": "Rifinire PITCH + MIMS + EVA",
     "target_capannone": "2030-07-15"
@@ -59,7 +63,7 @@
   "blockers": [
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
     "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8",
-    "Token GitHub gho_ in chiaro in ti_autorun.cmd (gitignorato) — DA RUOTARE su GitHub e sostituire nel file",
+    "Automazioni notturne SPENTE sul fisso: night_research/night_finetune/night_push hanno path Getac (C:\\Users\\benen, tools\\python311), manca _VAULT\\KEYS\\titanium_os.env, e NON sono registrate in Task Scheduler. Da ripensare per fisso (path via env, finetune su GPU, ri-registrare task).",
     "powercfg 24/7: eseguire come AMMINISTRATORE (apri PowerShell come admin, incolla i 4 comandi)"
   ],
   "ideas_inbox": 0,
@@ -67,7 +71,7 @@
     "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | 6518 chunk indicizzati (CUDA cu124)",
     "MENTE_SCANNER": "pronto — python NODES/MENTE_SCANNER/scanner.py",
     "WATCHER": "pronto — python AUTOMATIONS/core/watcher.py",
-    "N8N": "da configurare — npx n8n (localhost:5678)",
+    "N8N": "ATTIVO — npx n8n (localhost:5678), account owner locale self-hosted",
     "API_SERVER": "pronto — python api_server.py (localhost:5001)",
     "EVA": "pending — WhatsApp API setup",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
