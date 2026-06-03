@@ -13,7 +13,7 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
-if sys.stdout.encoding != "utf-8":
+if sys.stdout is not None and sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 # ── CONFIG ────────────────────────────────────────────────────
@@ -25,14 +25,16 @@ STATUS_FILE = REPO_ROOT / "DATA" / "watchdog_status.json"
 CHECK_S     = 30    # controlla ogni 30 secondi
 WRITE_S     = 60    # scrive status ogni 60 secondi
 
+# pythonw.exe non ha stdout/stderr (None) -> aggiungi lo StreamHandler solo se presente
+_handlers = [logging.FileHandler(LOG_DIR / "watchdog.log", encoding="utf-8")]
+if sys.stdout is not None:
+    _handlers.append(logging.StreamHandler(sys.stdout))
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [WATCHDOG] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    handlers=[
-        logging.FileHandler(LOG_DIR / "watchdog.log", encoding="utf-8"),
-        logging.StreamHandler(sys.stdout),
-    ],
+    handlers=_handlers,
 )
 log = logging.getLogger("watchdog")
 

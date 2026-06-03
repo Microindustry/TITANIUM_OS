@@ -8,11 +8,11 @@
     "6 task registrati e Pronta (StoryAgent 02:07, Research 03:37, Push 04:07, Brief 07:30, DeepFreeze dom 03:00, FineTune dom 01:00)",
     "Finetune su GPU GTX 1070 (fp16) + guard llamafactory; llamafactory 0.9.5 installato",
     "Dashboard: vista/sidebar Notturne + stato live da Task Scheduler (/api/tasks/notturne)",
-    "Flask api_server riavviato detached con il nuovo endpoint; Vite riavviato (proxy /api/tasks)"
+    "Flask api_server riavviato detached con il nuovo endpoint; Vite riavviato (proxy /api/tasks)",
+    "TI_Watchdog ri-registrato (AtLogon, RunLevel Highest) + watchdog.py reso pythonw-safe (guard sys.stdout None); ora supervisiona api_server + mente_watcher (status fresco, 0 restart)"
   ],
   "open_threads": [
-    "Watchdog NON attivo sul fisso: api_server gira detached ma nessuno lo rilancia se cade (status file fermo al 02/06). Valutare ri-registrare TI_Watchdog/automation_watchdog",
-    "register_night_tasks.ps1 supera set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi",
+    "register_night_tasks.ps1 + register_watchdog.ps1 superano set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi",
     "CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop Store funziona)",
     "Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot",
     "Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire"

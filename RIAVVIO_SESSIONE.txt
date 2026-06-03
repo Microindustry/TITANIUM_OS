@@ -1,4 +1,4 @@
-=== RIAVVIO SESSIONE #21 — 03/06/2026 21:19 ===
+=== RIAVVIO SESSIONE #21 — 03/06/2026 21:26 ===
 Ultima sessione: #20 — 2026-06-03
 
 ━━━ STAVAMO PARLANDO DI ━━━
@@ -10,10 +10,10 @@ Automazioni notturne: da SPENTE/rotte a portabili e ATTIVE sul fisso. De-hardcod
   • Finetune su GPU GTX 1070 (fp16) + guard llamafactory; llamafactory 0.9.5 installato
   • Dashboard: vista/sidebar Notturne + stato live da Task Scheduler (/api/tasks/notturne)
   • Flask api_server riavviato detached con il nuovo endpoint; Vite riavviato (proxy /api/tasks)
+  • TI_Watchdog ri-registrato (AtLogon, RunLevel Highest) + watchdog.py reso pythonw-safe (guard sys.stdout None); ora supervisiona api_server + mente_watcher (status fresco, 0 restart)
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → Watchdog NON attivo sul fisso: api_server gira detached ma nessuno lo rilancia se cade (status file fermo al 02/06). Valutare ri-registrare TI_Watchdog/automation_watchdog
-  → register_night_tasks.ps1 supera set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi
+  → register_night_tasks.ps1 + register_watchdog.ps1 superano set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi
   → CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop Store funziona)
   → Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot
   → Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire
@@ -41,10 +41,10 @@ Automazioni notturne: da SPENTE/rotte a portabili e ATTIVE sul fisso. De-hardcod
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
+111368d chore: chiusura sessione #20 — automazioni notturne live + dashboard
 ff6e20e feat(notturne): stato LIVE da Task Scheduler nella vista Notturne
 a9c0fa5 feat(dashboard): voce sidebar "Notturne" (blu) sotto AUTOMAZ. + vista dedicata
 e632656 ﻿feat(dashboard): sottocartella Notturne in Automazioni + STATE aggiornato
 d6490fc feat: automazioni notturne portabili — de-hardcodate da path Getac (benen)
-5313e2f fix: launcher apre sessione fresca con prompt-RIAVVIO (usa il sistema di restart, non --continue)
 
-Generato: 03/06/2026 21:19
+Generato: 03/06/2026 21:26
