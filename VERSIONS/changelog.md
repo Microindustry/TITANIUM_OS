@@ -2721,3 +2721,4 @@
 - `2026-06-03 14:57:36` ✨ CREATED — NODES\MENTE_RAG\chroma_db\chroma.sqlite3-journal
 - `2026-06-03 14:57:36` ✏️ MODIFIED — NODES\MENTE_RAG\chroma_db\chroma.sqlite3
 - `2026-06-03 15:07:35` 🗑️ DELETED — .gitignore
+- `2026-06-03 15:22:03` ✏️ MODIFIED — ti_autorun.cmd
