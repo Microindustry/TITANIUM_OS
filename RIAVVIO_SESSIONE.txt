@@ -1,39 +1,37 @@
-=== RIAVVIO SESSIONE #20 — 03/06/2026 15:43 ===
-Ultima sessione: #19 — 2026-06-03
+=== RIAVVIO SESSIONE #21 — 03/06/2026 21:19 ===
+Ultima sessione: #20 — 2026-06-03
 
 ━━━ STAVAMO PARLANDO DI ━━━
-Sessione amico (dev Flutter) recuperata dai log e archiviata in MENTE + RAG. Hardening e sblocco del fisso: processi sistemati (n8n up, zombie killato, dashboard riavviata), RAG aggiornato (6518 chunk), pnpm installato, firewall 5173 aperto, Tailscale loggato sul fisso. ROTAZIONE COMPLETA token GitHub -> auth via gh keyring (zero segreti in chiaro). Creata vista METODO sul sito. Scoperte e iniziata bonifica automazioni/profilo con path Getac hardcoded (hook Stop + generate_restart_prompt.bat corretti).
+Automazioni notturne: da SPENTE/rotte a portabili e ATTIVE sul fisso. De-hardcodati gli script (path Getac->teo) via resolver centrale _ti_paths.bat, registrati i 6 task in Task Scheduler, finetune ottimizzato su GPU (llamafactory 0.9.5 installato). Poi rappresentate nella dashboard: sottocartella Notturne nel tab ATTIVE, voce sidebar blu sotto AUTOMAZ., e STATO LIVE letto da Task Scheduler (endpoint Flask /api/tasks/notturne via Get-ScheduledTask + proxy Vite).
 
 ━━━ TOPIC ATTIVI ━━━
-  • Sicurezza: token ruotato, auth git via gh keyring (gp = solo git push)
-  • Dashboard raggiungibile LAN 192.168.0.112:5173 + Tailscale 100.125.152.124:5173
-  • n8n self-hosted attivo :5678 (account locale, credenziali in _VAULT/ACCOUNTS)
-  • Vista METODO live sul sito (chi/cosa/come, nata dalle domande del dev)
-  • Bonifica path Getac (benen) negli script: hook Stop e restart_prompt fixati
+  • Automazioni notturne portabili: _ti_paths.bat resolver (TI_ROOT/PYTHON/GH no-hardcode)
+  • 6 task registrati e Pronta (StoryAgent 02:07, Research 03:37, Push 04:07, Brief 07:30, DeepFreeze dom 03:00, FineTune dom 01:00)
+  • Finetune su GPU GTX 1070 (fp16) + guard llamafactory; llamafactory 0.9.5 installato
+  • Dashboard: vista/sidebar Notturne + stato live da Task Scheduler (/api/tasks/notturne)
+  • Flask api_server riavviato detached con il nuovo endpoint; Vite riavviato (proxy /api/tasks)
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → PRIORITA: ripensare automazioni notturne per il fisso (path env, finetune su GPU, ri-registrare Task Scheduler, manca _VAULT/KEYS/titanium_os.env)
-  → CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop usa il path Store, funziona)
-  → powercfg 24/7 da admin per tenere il fisso sempre attivo
+  → Watchdog NON attivo sul fisso: api_server gira detached ma nessuno lo rilancia se cade (status file fermo al 02/06). Valutare ri-registrare TI_Watchdog/automation_watchdog
+  → register_night_tasks.ps1 supera set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi
+  → CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop Store funziona)
   → Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot
   → Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
-  ✓ Token: strada B (gh keyring) invece di token in chiaro — risolto alla radice
-  ✓ pnpm installato globalmente (path %APPDATA%/npm/pnpm.cmd atteso da START_LOGIN)
-  ✓ n8n = account LOCALE self-hosted (no cloud, no abbonamento)
-  ✓ Vista METODO additiva (nuovo file + 4 punti wiring, nessuna view toccata)
-  ✓ Credenziali in _VAULT (fuori da git, _VAULT/ aggiunto a .gitignore)
-  ✓ Hook Stop e generate_restart_prompt.bat de-hardcodati (%USERPROFILE%)
+  ✓ Path portabili via resolver _ti_paths.bat (DRY), niente piu' C:\Users\benen negli script notturni
+  ✓ Risoluzione Python/gh senza sub-shell (PATH-search) per evitare il banner AutoRun catturato nel for /f
+  ✓ .bat sempre CRLF + ASCII (cmd non legge LF; log OEM puliti); .ps1 con accenti => UTF-8 con BOM
+  ✓ Finetune su GPU (fp16 true) con guard llamafactory (skip pulito se assente)
+  ✓ Stato live task via Get-ScheduledTask (State/LastTaskResult lingua-indipendenti), non schtasks CSV localizzato
+  ✓ Notturne in dashboard come sotto-sezione/sotto-voce (non nuovo livello/tab), colore indigo/blu
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Ripensare le automazioni notturne per il fisso: de-hardcodare i path (regola CLAUDE.md), creare _VAULT/KEYS/titanium_os.env, valutare finetune su GPU, script che registra i task in Task Scheduler. Tutto additivo, commit isolati.
+  Sessione chiusa. Riprendere da: watchdog sul fisso (ri-registrare per resilienza api_server), poi PITCH + MIMS brevetto B2 + EVA WhatsApp pilot.
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
-  ⚠ Automazioni notturne SPENTE sul fisso: night_research/night_finetune/night_push hanno path Getac (C:\Users\benen, tools\python311), manca _VAULT\KEYS\titanium_os.env, e NON sono registrate in Task Scheduler. Da ripensare per fisso (path via env, finetune su GPU, ri-registrare task).
-  ⚠ powercfg 24/7: eseguire come AMMINISTRATORE (apri PowerShell come admin, incolla i 4 comandi)
 
 ━━━ STATO PILASTRI ━━━
   V32: 65% — 
@@ -43,10 +41,10 @@ Sessione amico (dev Flutter) recuperata dai log e archiviata in MENTE + RAG. Har
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
-906f5c3 chore: chiusura sessione #19 — STATE + RIAVVIO (token risolto, n8n attivo, automazioni notturne come blocker prioritario)
-407fbd6 feat: vista METODO — spiegazione chi/cosa/come del sistema (nata dalle domande di un dev esterno)
-7c8a76c chore: verifica rotazione token completata (gh keyring, token nuovo)
-a7c45e8 chore: credenziali git via gh keyring (rimosso token in chiaro da ti_autorun.cmd)
-8d697db chore: blocker firewall+tailscale risolti; _VAULT gitignore; STATE allineato (tailscale 100.125.152.124, 6518 chunk)
+ff6e20e feat(notturne): stato LIVE da Task Scheduler nella vista Notturne
+a9c0fa5 feat(dashboard): voce sidebar "Notturne" (blu) sotto AUTOMAZ. + vista dedicata
+e632656 ﻿feat(dashboard): sottocartella Notturne in Automazioni + STATE aggiornato
+d6490fc feat: automazioni notturne portabili — de-hardcodate da path Getac (benen)
+5313e2f fix: launcher apre sessione fresca con prompt-RIAVVIO (usa il sistema di restart, non --continue)
 
-Generato: 03/06/2026 15:43
+Generato: 03/06/2026 21:19

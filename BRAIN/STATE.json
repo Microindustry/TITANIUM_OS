@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-03T20:56:52.587731",
+  "last_update": "2026-06-03T21:19:24.819781",
   "active_milestone": "Automazioni notturne portabili e ottimizzate (GPU) — resolver _ti_paths.bat, registrar UAC, finetune CUDA",
-  "last_action": "Modifica a tsconfig.node.json",
-  "next_step": "Lanciare register_night_tasks.ps1 (UAC) per schedulare i task · Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
-  "session_count": 24,
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
+  "next_step": "Watchdog sul fisso (resilienza api_server) · Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
+  "session_count": 25,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-03T20:56:45.205668"
+      "last_activity": "2026-06-03T21:09:19.794383"
     },
     "VITA_NATURA": {
       "status": "active",
