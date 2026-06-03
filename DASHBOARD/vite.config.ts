@@ -226,6 +226,7 @@ export default defineConfig({
       '/api/view-index': 'http://localhost:5001',
       '/api/watchdog': 'http://localhost:5001',
       '/api/tasks': 'http://localhost:5001',
+      '/api/llm': 'http://localhost:5001',
       '/api/sanitizer': 'http://localhost:5001',
       '/api/rag': 'http://localhost:5001',
       '/api/daily-brief': 'http://localhost:5001',

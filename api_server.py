@@ -564,6 +564,37 @@ def tasks_notturne():
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
+@app.get("/api/llm/local/status")
+def llm_local_status():
+    """Stato del Personal LLM locale: pronto solo dopo il primo night_finetune."""
+    try:
+        sys.path.insert(0, str(ROOT))
+        from NODES.LOCAL_LLM.infer import is_ready, ADAPTER_DIR
+        return jsonify({"ok": True, "ready": is_ready(), "model": "titanium_llm_v1", "path": str(ADAPTER_DIR)})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
+@app.post("/api/llm/local")
+def llm_local():
+    """Inferenza sul Personal LLM locale (TinyLlama+LoRA prodotto da night_finetune).
+    Consuma il modello che il finetune produce -> chiude il loop. 503 se non ancora addestrato."""
+    data   = request.get_json(force=True, silent=True) or {}
+    prompt = (data.get("prompt") or "").strip()
+    if not prompt:
+        return jsonify({"ok": False, "error": "campo 'prompt' obbligatorio"}), 400
+    try:
+        sys.path.insert(0, str(ROOT))
+        from NODES.LOCAL_LLM.infer import is_ready, generate
+        if not is_ready():
+            return jsonify({"ok": False, "ready": False,
+                            "error": "modello locale non ancora addestrato (primo finetune domenica 01:00)"}), 503
+        answer = generate(prompt, max_new_tokens=int(data.get("max_tokens", 256)))
+        return jsonify({"ok": True, "ready": True, "model": "titanium_llm_v1", "answer": answer})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
 @app.get("/api/sanitizer/report")
 def sanitizer_report():
     """Legge l'ultimo report del sanitizer."""
