@@ -353,6 +353,17 @@ def update_storie_data_ts(new_entries: list[str]):
     log.info(f"storieData.ts aggiornato con {len(new_entries)} episodi auto.")
 
 
+def _next_auto_index() -> int:
+    """Prossimo numero EP_AUTO libero su disco — evita ID duplicati (fix au20)."""
+    mx = -1
+    if EPISODES_DIR.exists():
+        for f in EPISODES_DIR.glob("EP_AUTO_*.md"):
+            m = re.match(r"EP_AUTO_(\d+)", f.stem)
+            if m:
+                mx = max(mx, int(m.group(1)))
+    return mx + 1
+
+
 # ── Main ───────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser()
@@ -383,24 +394,26 @@ def main():
 
     new_episodes_ts = []
     count = 0
-    prev_ep = load_previous_episode()   # continuita' col backlog gia' esistente
+    prev_ep  = load_previous_episode()   # continuita' col backlog gia' esistente
+    auto_idx = _next_auto_index()        # ID collision-free: prossimo numero libero (fix au20)
 
     for idx, milestone in enumerate(milestones):
         if milestone in done_set:
             log.info(f"Skip (gia' processato): {milestone[:50]}")
             continue
 
-        ep_id  = milestone_to_id(milestone, idx)
         slug = milestone_to_slug(milestone)
-        expected_stem = f"{ep_id}_{slug}"
 
-        # LOGICA: dedup su disco — se il file esiste gia', skip
-        if expected_stem in existing_slugs:
-            log.info(f"Skip (file esiste): {expected_stem}")
+        # LOGICA: dedup su disco per SLUG (indipendente dall'indice -> niente ID duplicati)
+        if any(stem.endswith(f"_{slug}") for stem in existing_slugs):
+            log.info(f"Skip (file esiste): _{slug}")
             if milestone not in processed["processed"]:
                 processed["processed"].append(milestone)
                 save_processed(processed)
             continue
+
+        ep_id = f"EP_AUTO_{auto_idx:02d}"
+        auto_idx += 1
 
         log.info(f"Generando episodio per: {milestone[:60]}...")
         date   = extract_date(milestone)
