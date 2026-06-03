@@ -83,50 +83,101 @@ def _get_retry_client():
         return client, _simple_call
 
 
-def generate_episode_content(milestone: str, context: dict) -> str:
-    """Chiama Claude API per generare episodio storytelling podcast."""
+def retrieve_context(milestone: str, k: int = 6) -> str:
+    """Recupera fatti reali dal RAG (MENTE/) sul milestone — grounding dell'episodio."""
+    try:
+        if str(TITANIUM_OS) not in sys.path:
+            sys.path.insert(0, str(TITANIUM_OS))
+        from NODES.MENTE_RAG.rag_engine import search
+        results = search(milestone, top_k=k)
+        if not results:
+            return ""
+        return "\n".join(f"- [{r['source']}] {r['preview'].strip()}" for r in results)
+    except Exception as e:
+        log.warning(f"RAG context non disponibile ({e}) — episodio non grounded")
+        return ""
+
+
+def load_previous_episode() -> dict:
+    """Ultimo episodio AUTO generato: titolo + chiusura — per dare continuita' narrativa."""
+    if not EPISODES_DIR.exists():
+        return {}
+    mds = sorted(EPISODES_DIR.glob("EP_AUTO_*.md"))
+    if not mds:
+        return {}
+    text = mds[-1].read_text(encoding="utf-8", errors="ignore")
+    title = re.search(r'^title:\s*"(.+)"$', text, re.M)
+    # estrai la sezione CHIUSURA (la frase che rimane)
+    chiusura = re.search(r'##\s*CHIUSURA\s*(.+?)(?:\n##|\Z)', text, re.DOTALL | re.IGNORECASE)
+    return {
+        "title":    title.group(1) if title else "",
+        "chiusura": (chiusura.group(1).strip()[:300] if chiusura else ""),
+    }
+
+
+def generate_episode_content(milestone: str, context: dict,
+                             rag_context: str = "", prev: dict | None = None) -> str:
+    """Chiama Claude API per generare episodio storytelling podcast, grounded sul RAG
+    e collegato all'episodio precedente (filo narrativo)."""
     client, call_fn = _get_retry_client()
+    prev = prev or {}
 
     pillars_summary = "\n".join([
-        f"- {k}: {v.get('phase','?')} ({v.get('pct_complete',0)}%)"
+        f"- {k}: {v.get('phase', v.get('status','?'))} ({v.get('pct_complete',0)}%)"
         for k, v in context.get("pillars", {}).items()
     ])
+
+    fonti_block = (
+        f"\nFATTI DAL TUO ARCHIVIO (MENTE/RAG) — usa QUESTI dati reali, numeri e decisioni; NON inventare:\n{rag_context}\n"
+        if rag_context else
+        "\n(Nessun fatto specifico recuperato dall'archivio: resta sui fatti del milestone, non inventare numeri.)\n"
+    )
+
+    continuita_block = ""
+    if prev.get("title"):
+        continuita_block = (
+            f"\nEPISODIO PRECEDENTE (per continuita', NON ripeterlo):\n"
+            f"- Titolo: {prev['title']}\n"
+            f"- Chiudeva con: {prev.get('chiusura','')}\n"
+            f"Apri richiamando in una riga dove eravamo rimasti, poi vai avanti.\n"
+        )
 
     prompt = f"""Sei lo scrittore del podcast "Il Sistema" — storia personale di Matteo Benenati,
 artigiano industriale che costruisce TITANIUM_OS: una fresatrice CNC (V32), connettori modulari (MIMS),
 automazioni (GENESIS), una pressa polimeri (VULCAN), e un centro estetico gestito con AI (EVA/Vita Natura).
 
 Scrivi un episodio podcast completo in italiano, prima persona (voce di Matteo).
-Tono: diretto, tecnico, zero retorica. Come raccontare a un amico in officina.
+Tono: diretto, tecnico, concreto, zero retorica. Come raccontare a un amico in officina.
+Aggancia il racconto a numeri, materiali e decisioni REALI (vedi i fatti dall'archivio). Niente frasi vuote.
 
 MILESTONE DA RACCONTARE:
 "{milestone}"
 
 CONTESTO PROGETTO:
 {pillars_summary}
-
+{fonti_block}{continuita_block}
 FORMATO OBBLIGATORIO:
 ---
 ## COLD OPEN
-[2-3 righe ad effetto che introducono il momento]
+[2-3 righe ad effetto che introducono il momento; se c'e' continuita', richiama dove eravamo]
 
 ## ATTO I — [titolo]
-[contesto: perché questo milestone è importante, cosa c'era prima]
+[contesto: perche' questo milestone conta, cosa c'era prima — usa i fatti dall'archivio]
 
 ## ATTO II — [titolo]
-[il momento specifico: cosa è successo, come, perché conta]
+[il momento specifico: cosa e' successo, come, con quali numeri/materiali/scelte tecniche]
 
 ## ATTO III — [titolo]
-[conseguenze: cosa cambia adesso, cosa si sblocca]
+[conseguenze concrete: cosa cambia adesso, cosa si sblocca, prossimo passo]
 
 ## CHIUSURA
-[citazione in corsivo — la frase che rimane]
+[citazione in corsivo — la frase che rimane, collegata al filo della storia]
 ---
 
-Lunghezza: 600-900 parole. Struttura in sezioni chiare. NO bullet point. Solo prosa."""
+Lunghezza: 900-1300 parole. Sezioni chiare. NO bullet point. Solo prosa densa di sostanza."""
 
     return call_fn(client, model="claude-sonnet-4-6",
-                   max_tokens=1500, system="", user=prompt)
+                   max_tokens=2600, system="", user=prompt)
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────
@@ -332,6 +383,7 @@ def main():
 
     new_episodes_ts = []
     count = 0
+    prev_ep = load_previous_episode()   # continuita' col backlog gia' esistente
 
     for idx, milestone in enumerate(milestones):
         if milestone in done_set:
@@ -353,8 +405,16 @@ def main():
         log.info(f"Generando episodio per: {milestone[:60]}...")
         date   = extract_date(milestone)
 
-        # Genera contenuto via Claude API
-        content = generate_episode_content(milestone, context)
+        # Recupera fatti reali dal RAG + genera contenuto grounded e collegato al precedente
+        rag_ctx = retrieve_context(milestone)
+        if rag_ctx:
+            log.info(f"  RAG: {len(rag_ctx.splitlines())} fonti recuperate per il grounding")
+        content = generate_episode_content(milestone, context, rag_context=rag_ctx, prev=prev_ep)
+
+        # Aggiorna la continuita' per il prossimo episodio (titolo + chiusura di questo)
+        _ch = re.search(r'##\s*CHIUSURA\s*(.+?)(?:\n##|\Z)', content, re.DOTALL | re.IGNORECASE)
+        prev_ep = {"title": milestone[:50].rstrip(".,"),
+                   "chiusura": (_ch.group(1).strip()[:300] if _ch else "")}
 
         # Salva .md
         save_episode_md(ep_id, milestone, content, date)
