@@ -1,0 +1,94 @@
+<!-- TOC -->
+
+- [EP_AUTO_50  Milestone](#epauto50-milestone)
+    - [Automazioni notturne portabili: _ti_paths.bat (resolver TI_R](#automazioni-notturne-portabili-tipathsbat-resolver-tir)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il problema dei sistemi che dormono con te](#atto-i-il-problema-dei-sistemi-che-dormono-con-te)
+  - [ATTO II  _ti_paths.bat e il registro notturno](#atto-ii-tipathsbat-e-il-registro-notturno)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
+# EP_AUTO_50 — Milestone
+### "Automazioni notturne portabili: _ti_paths.bat (resolver TI_R"
+
+---
+id: EP_AUTO_50
+title: "Automazioni notturne portabili: _ti_paths.bat (res"
+sottotitolo: "Milestone verificato · auto-generato"
+stagione: AUTO
+stagione_label: "Generato"
+data_evento: 2026-06-03
+data_generato: 2026-06-03
+tags: [auto_generato, milestone, titanium_os]
+status: ready
+durata_min: 8
+formato: podcast
+fonte: STATE.json → milestones.verified
+llm_use: training
+lingua: it
+milestone_originale: "Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)"
+---
+
+## COLD OPEN
+
+La scorsa volta ho detto che un sistema che non sai spiegare in trenta secondi esiste solo nella tua testa. Bene. Adesso vi racconto cosa succede quando quel sistema impara a lavorare anche mentre dormi — e soprattutto, come ci si assicura che lo faccia senza che tu debba essere lì a tenere la mano.
+
+---
+
+## ATTO I — Il problema dei sistemi che dormono con te
+
+Facciamo un passo indietro. Il tre giugno duemilaventisei mi trovo con una situazione che conosco bene: ho costruito cose che funzionano, ma funzionano quando ci sono io. STORY_AGENT è attivo, versione uno punto zero, il file è `NODES/STORY_AGENT/story_agent.py`, il cron gira a mezzanotte. NIGHT_PUSH è attivo, `AUTOMATIONS/core/night_push.bat`, cron alle quattro e sette di mattina. Il RAG graph è a centoquattordici nodi e duecentodiciotto archi. Il watchdog controlla i processi in parallelo via threading.
+
+Su carta: tutto funziona. Nella realtà: dipende da dove ti trovi.
+
+Il problema nasce dalla migrazione. L'ho documentata in archivio — giugno duemilaventisei, migrazione verso il PC fisso in taverna, quello con la GPU 1070 Ti, il cervello ventiquattro su ventiquattro. Il Getac diventa mobile, si collega via Tailscale. È la scelta giusta: la GPU serve per il finetune in fp16, non puoi farlo su un portatile da cantiere. Però adesso hai due macchine, due ambienti, due set di path. E qui inizia il casino vero.
+
+Ogni automazione notturna aveva i path scritti a mano. `C:\Users\Matteo\Documents\TITANIUM_OS\PYTHON` — hardcoded. Funziona finché sei sul PC fisso. Appena sposti uno script sul Getac, o cambi il nome utente, o monti il progetto in un percorso diverso: tutto si rompe. Il NIGHT_PUSH non trova gli script. Il finetune non trova il modello. La ricerca notturna cerca in una cartella che non esiste su quella macchina.
+
+Non è un bug elegante. È il tipo di problema che ti fa perdere tre ore alle dieci di sera perché uno script ha fallito silenziosamente alle quattro del mattino e tu non te ne accorgi finché non controlli il log.
+
+Avevo già risolto questo problema per il MCP — `titanium_mcp_server.py` carica con PYTHONPATH e MENTE_DIR già configurati nel `settings.json`, il profilo PowerShell è aggiornato con quattordici righe dedicate a TITANIUM_OS. Ma le automazioni notturne erano rimaste indietro. Erano ancora nel vecchio mondo degli indirizzi fisici.
+
+---
+
+## ATTO II — `_ti_paths.bat` e il registro notturno
+
+La soluzione ha un nome brutto e una logica pulita: `_ti_paths.bat`.
+
+L'idea è semplice. Prima di fare qualsiasi cosa — prima del push su GitHub, prima del finetune, prima della ricerca notturna — ogni script chiama questo file. Lui risolve `TI_ROOT`, `PYTHON`, `GH` senza sapere in anticipo su quale macchina sta girando. Non c'è un percorso scritto a mano. Legge l'ambiente, trova le variabili, le espone agli script successivi. Se sei sul PC fisso, trova la GPU e imposta il path della taverna. Se sei sul Getac, trova Tailscale e si adatta.
+
+Questo è il concetto di no-hardcode applicato alle automazioni. Non è roba teorica — è la differenza tra uno script che funziona ovunque e uno che funziona solo sulla tua scrivania.
+
+Poi ho separato i tre blocchi notturni in modo chirurgico. `night_research` fa la ricerca e aggiorna il RAG. `night_push` fa il commit e spinge su GitHub — quando non ci sono file da un gigabyte che bloccano tutto, come era successo a giugno. `night_finetune` prende i dati nuovi e fa un ciclo di finetune con la GPU in fp16, con un guard llamafactory che interrompe il processo se qualcosa va storto prima di corrompere il modello base.
+
+Lo STORY_AGENT ha ricevuto una modifica specifica: de-Getac. Prima girava sul Getac perché era lì che lavoravo di giorno. Adesso è separato dalla macchina fisica. Può girare sul PC fisso in taverna, dove c'è la potenza di calcolo, e comunicare i risultati tramite Tailscale. Non è più legato al portatile da campo.
+
+L'ultimo pezzo è `register_night_tasks.ps1`. Questo script registra tutte le task notturne nel Task Scheduler di Windows con auto-UAC — significa che si auto-eleva ai privilegi di amministratore durante la registrazione senza che tu debba aprire PowerShell come admin, navigare tra menu, cliccare tre volte. Esegui lo script una volta, lui chiede conferma, registra tutto. Le automazioni notturne diventano parte del sistema operativo della macchina, non processi che devi avviare a mano.
+
+Il finetune con GPU in fp16 vale una parola in più. La 1070 Ti non è una scheda moderna — è del duemiladicassette, otto gigabyte di VRAM. Il fp16, la precisione a sedici bit invece di trentadue, dimezza l'occupazione di memoria. Con il guard llamafactory puoi fare cicli di addestramento su modelli di dimensioni ragionevoli senza rischiare out-of-memory a metà notte. Se il processo si blocca, il guard lo rileva, salva lo stato, chiude pulito. Al mattino trovi il log, non un crash silenzioso.
+
+Tutto questo è entrato in produzione il tre giugno duemilaventisei.
+
+---
+
+## ATTO III — Cosa si sblocca adesso
+
+Partiamo dai numeri reali: GENESIS è al settanta percento, V32 è al sessantacinque, VITA_NATURA è al quaranta. Questi numeri si muovono di notte adesso — almeno in parte.
+
+Cosa significa concretamente. Il RAG di MENTE lavora mentre dormo. Ogni ricerca notturna aggiunge nodi al grafo — era a centoquattordici nodi e duecentodiciotto archi quando ho fatto questo aggiornamento, adesso cresce in autonomia. Il finetune notturno porta il modello locale ad adattarsi ai dati nuovi che entrano durante il giorno. Al mattino apro il brief e ho informazioni elaborate, non dati grezzi.
+
+Per V32 — la fresatrice CNC che è al sessantacinque percento — questo significa che posso documentare una sessione di lavorazione di notte, lo STORY_AGENT la processa, il RAG la indicizza, e la mattina dopo ho quella sessione disponibile come contesto per la sessione successiva. Non devo ricordarmi io dove eravamo. Il sistema lo ricorda.
+
+MIMS è bloccato sulla pressa — waiting press, trenta percento. Lì non c'è molto che le automazioni notturne possano fare finché la pressa non arriva. Ma quando arriverà, il sistema sarà pronto a documentare ogni ciclo.
+
+EVA è ancora in pending — il setup dell'API WhatsApp Business non è ancora completato. Anche il V32_WATCHER è futuro, post-assemblaggio completo. Questi sono i prossimi nodi che si accenderanno.
+
+Il prossimo step concreto è verificare la catena completa per sette giorni di fila: che `night_push` spinga effettivamente senza blocchi, che il finetune completi i cicli senza out-of-memory sulla 1070 Ti, che lo STORY_AGENT de-Getac generi output coerente dalla macchina fissa. Sette giorni di log puliti prima di dichiararlo stabile.
+
+---
+
+## CHIUSURA
+
+*Un sistema che lavora solo quando ci sei tu non è un sistema — è un'abitudine cara.*

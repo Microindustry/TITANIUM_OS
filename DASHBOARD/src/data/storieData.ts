@@ -5708,65 +5708,429 @@ Il risultato era semplice: funzionava bene, ma costava un casino. Quando hai un 
 L'altra cosa che mi dava fasti`,
   },
   {
-    id: "EP_AUTO_35",
-    title: "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet",
+    id: "EP_AUTO_36",
+    title: "skillTreeData v3.0 — sub-categorie N livelli su tu",
     sottotitolo: "Milestone verificato · auto-generato",
     stagione: "AUTO",
     stagione_label: "Generato",
-    data_evento: "2026-05-30",
+    data_evento: "2026-06-03",
     tags: ["auto_generato", "milestone"],
     status: "ready",
     durata_min: 8,
-    preview: "# Il Sistema — Episodio 23  ## COLD OPEN  C'è un momento in cui smetti di buttare soldi all'API e inizi a costruire un cervello che pensa da solo. Per",
-    content: `# Il Sistema — Episodio 23
+    preview: "# IL SISTEMA — Episodio: skillTreeData v3.0  ---  ## COLD OPEN  Stavamo finendo di cablare ARGUS v2.0, OmniParser e Sonnet insieme, un occhio ibrido",
+    content: `
+# IL SISTEMA — Episodio: skillTreeData v3.0
+
+---
 
 ## COLD OPEN
 
-C'è un momento in cui smetti di buttare soldi all'API e inizi a costruire un cervello che pensa da solo. Per me quel momento ha una data precisa: 30 maggio 2026. Si chiama ARGUS v2.0, e ha cambiato come il sistema vede il mondo.
+Stavamo finendo di cablare ARGUS v2.0, OmniParser e Sonnet insieme, un occhio ibrido che legge lo schermo come lo leggerei io. Quella sessione mi ha lasciato una frase in testa che non riuscivo a togliermi: *la precisione non è compatibile con il movimento casuale.* L'ho scritta nel log e poi ci ho dormito sopra. Il giorno dopo ho capito che non stavo parlando solo della macchina.
 
 ---
 
-## ATTO I — Il Problema dei Occhi Ciechi
+## ATTO I — Prima della mappa, il caos
 
-Lasciami spiegare da dove vengo, perché senza contesto questa cosa sembra solo un aggiornamento software. Non lo è.
+Devo essere onesto su com'era la situazione prima di maggio 2026.
 
-ARGUS è il layer di visione di TITANIUM_OS. È quella parte del sistema che guarda uno schermo, un'interfaccia, un documento, e capisce cosa c'è scritto, cosa sta succedendo, dove cliccare. È letteralmente gli occhi dell'automazione. E fino alla versione precedente, ogni volta che ARGUS doveva guardare qualcosa, mandava tutto a Claude Sonnet. Ogni screenshot. Ogni frame. Ogni campo di testo.
+Avevo cinque progetti attivi in parallelo: V32 al sessantacinque percento, MIMS bloccato in attesa della pressa al trenta, GENESIS in costruzione al settanta, VITA_NATURA operativo ma grezzo al quaranta, IDENTITY a metà strada. Ognuno con le sue sessioni, i suoi file, le sue decisioni sparse su documenti che si accumulavano senza una struttura che li tenesse in relazione. Il sistema RAG v4.0 ibrido — BM25 più semantico più CrossEncoder più incrementale — me lo ero costruito apposta per navigare in quel materiale, ma il problema non era trovare l'informazione. Era capire *dove stavo*.
 
-Il risultato era semplice: funzionava bene, ma costava un casino. Quando hai un sistema che gira su GENESIS — che già di suo è un'architettura swarm con NEXUS, RAG graph-aware v5, MCP v1.3 e un watchdog parallelo — ogni chiamata API che puoi eliminare è ossigeno in più. Perché il sistema scala. E quando scala, i costi scalano con lui.
-
-L'altra cosa che mi dava fastidio era la latenza. Sonnet è rapido, ma una chiamata API è sempre una chiamata API. Ha un round trip. Ha un punto di fallimento esterno. E io non voglio che il cervello del mio sistema dipenda dalla connessione internet per fare cose che potrebbe fare da solo, in locale, in cinquanta millisecondi.
-
-Quindi mi sono messo a riprogettare ARGUS da zero.
-
----
-
-## ATTO II — Tre Strati, Una Gerarchia
-
-L'idea di base è stupida nella sua semplicità, come tutte le idee buone. Non mandare tutto a Sonnet. Manda a Sonnet solo quello che non riesci a risolvere prima.
-
-Così ho costruito un'architettura a tre livelli.
-
-Il primo livello, L1, è completamente locale. YOLO per la detection visiva degli elementi a schermo, OCR per estrarre il testo. Nessuna API, nessuna dipendenza esterna. Se ARGUS vede un pulsante con scritto "Conferma", L1 lo trova, lo legge, e lo passa avanti in meno di un secondo. Finisce lì. Costo: zero.
-
-Il secondo livello, L2, entra in gioco quando L1 non è abbastanza sicuro. Parliamo di text matching, pattern recognition su strutture note, confronto con template già visti. È ancora tutto interno al sistema. È più lento di L1, ma sempre veloce, e ancora senza API. L2 risolve la maggior parte dei casi ambigui — interfacce che cambiano leggermente, testi con formattazione strana, layout che variano tra sessioni.
-
-Solo quando L2 alza la mano e dice "non so" — solo allora arriva L3. Sonnet. Il fallback intelligente. E Sonnet è bravo esattamente perché lo usi per le cose difficili, non per tutto. Gli dai il caso veramente complesso, lui lo risolve, e quella risposta può anche alimentare il RAG per la prossima volta.
-
-Il risultato lo vedo nelle metriche: costo API meno ottanta percento. Non è un'ottimizzazione marginale. È una ristrutturazione completa di dove sta l'intelligenza. Prima stava tutta fuori, sul cloud di Anthropic. Adesso sta qui, in locale, e solo l'eccezione viaggia fuori.
-
-Ho chiamato l'intera architettura OmniParser plus Sonnet, perché OmniParser è il framework che ho usato come base per integrare YOLO e OCR in un pipeline coerente. Non ho reinventato la ruota. Ho preso pezzi che funzionavano e li ho messi insieme in modo che avessero senso per TITANIUM_OS.
+Un artigiano in officina sa esattamente dove s`,
+  },
+  {
+    id: "EP_AUTO_37",
+    title: "Migrazione PC fisso (DESKTOP-IFACE2R) completata —",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# Il Sistema — Episodio: \"Il Cervello Fisso\" *Migrazione DESKTOP-IFACE2R completata — 02/06/2026*  ---  ## COLD OPEN  L'episodio scorso chiudevo con",
+    content: `
+# Il Sistema — Episodio: "Il Cervello Fisso"
+*Migrazione DESKTOP-IFACE2R completata — 02/06/2026*
 
 ---
 
-## ATTO III — Cosa Si Sblocca Adesso
+## COLD OPEN
 
-Concretamente, con ARGUS v2.0 in produzione, posso scalare GENESIS in modo che non mi spaventi economicamente. Il sistema di automazione può girare più a lungo, su più task in parallelo, senza che la bolletta API diventi il collo di bottiglia.
+L'episodio scorso chiudevo con una frase secca: una mappa che non ti dice dove sei fermo è solo decorazione. Bene. Adesso ti dico dove ero fermo io: su un portatile che faceva tutto, mal, ovunque, senza continuità. Oggi ti racconto come ho messo un cervello fisso sotto il pavimento della casa.
 
-Per VITA_NATURA, dove EVA deve interagire con interfacce di prenotazione, calendari, gestionali del centro estetico, questo significa che il pilot può diventare deployment reale. Prima ero cauto perché ogni sessione di EVA con molte operazioni visive aveva un costo non banale. Adesso L1 e L2 assorbono l'ottanta percento delle interazioni. EVA lavora, il cliente vede il servizio, io non vedo la fattura crescere ad ogni click.
+---
 
-Per V32 e VULCAN il discorso è diverso ma collegato. Quando V32 sarà online — siamo a Config G, sessantacinque percento, i rinforzi strutturali stanno venendo fuori bene — e quando MIMS avrà la catena completa V32 verso VULCAN, ARGUS dovrà monitorare interfacce di controllo CNC, leggere parametri, riconoscere stati macchina. Con la vecchia architettura avrei pensato due volte prima di mettere visione AI su un loop di controllo industriale per questioni di latenza e costo. Con L1 locale, posso farlo serenamente.
+## ATTO I — Il Problema che Non Sembrava un Problema
 
-ARGUS v2.0 non è solo un modulo aggiornato. È la prova che costruire il sistema in modo modulare, con layer separati, paga. Ogni pezzo può evolvere`,
+Lasciami spiegare la situazione reale, perché dall'esterno sembra una cosa banale: "hai spostato dei file su un altro computer". No. Non è quello.
+
+Il Getac — il portatile da campo che uso in officina, sul banco, davanti alla fresatrice — stava portando troppa roba. Era il terminale mobile, ma stava diventando anche il server dei ragionamenti, il posto dove giravan i modelli, il posto dove tenevo lo stato del sistema. Ogni volta che lo spegnevo o lo portavo fuori rete, il Sistema si fermava. Non perché ci fosse un errore — perché non c'era continuità fisica. Un artigiano industriale non può permettersi che il cervello del progetto si spenga quando esce a prendere un caffè.
+
+Il punto di rottura l'ho toccato quando ho `,
+  },
+  {
+    id: "EP_AUTO_38",
+    title: "Git history pulita (model.safetensors rimosso, .gi",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "---  ## COLD OPEN  La settimana scorsa abbiamo spostato il cervello su un ferro fisso. DESKTOP-IFACE2R. Infrastruttura, non borsa da viaggio. Bene. M",
+    content: `
+---
+
+## COLD OPEN
+
+La settimana scorsa abbiamo spostato il cervello su un ferro fisso. DESKTOP-IFACE2R. Infrastruttura, non borsa da viaggio. Bene. Ma prima di costruire sopra, dovevo pulire sotto. E "pulire" in questo caso significava aprire una storia di 978 megabyte e capire perché pesava così tanto.
+
+---
+
+## ATTO I — Il Peso Sbagliato
+
+Quando hai un repository Git che pesa quasi un gigabyte, c'è qualcosa che non va. Non è un problema di codice. Il codice di TITANIUM_OS — dashboard, MCP server, specifiche V32, logica GENESIS — tutto insieme non arriva a qualche decina di megabyte. 978 MB è roba diversa. È qualcosa che non dovrebbe essere lì.
+
+Ho aperto la history. Ho cercato. E l'ho trovato: \`model.safetensors\`. Un file di modello, probabilmente finito dentro il repo durante una sessione di test su EVA o su qualche integrazione AI. Uno di quei momenti in cui stai lavorando veloce, hai la testa su un problema specifico, e il \`git add .\` porta dentro tutto senza che tu ci pensi. Succede. Non è una tragedia. Ma va risolto.
+
+Il problema con i file binari grossi in Git non è solo lo spazio su disco. È la storia. Git tiene ogni versione di ogni file committato. Quindi quel \`model.saf`,
+  },
+  {
+    id: "EP_AUTO_39",
+    title: "Push main + tag v3.0.0 su GitHub sbloccato e pusha",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "---  ## COLD OPEN  L'episodio scorso eravamo fermi davanti a una storia Git gonfia di 978 megabyte — quasi tutto un file di modello che non doveva st",
+    content: `
+---
+
+## COLD OPEN
+
+L'episodio scorso eravamo fermi davanti a una storia Git gonfia di 978 megabyte — quasi tutto un file di modello che non doveva stare lì. L'abbiamo pulita. 72 megabyte di storia vera, il resto eliminato. Adesso che il repo era onesto, mancava solo un'ultima cosa: mandarlo su. Push main. Tag v3.0.0. GitHub sbloccato.
+
+---
+
+## ATTO I — IL BLOCCO CHE NON ERA UN BLOCCO TECNICO
+
+Quando dico "push bloccato" devo essere preciso, perché la parola "bloccato" può significare cose diverse.
+
+Non era un errore di autenticazione. Non era un problema di rete. Era un file da un gigabyte che stava dentro la storia del repository — il \`model.safetensors\` che mi ero portato dietro per settimane senza accorgermene — e GitHub non accetta oggetti sopra i 100 megabyte. Punto. Nessuna eccezione, nessun workaround pigro. O pulisci, o non pusha.
+
+Quello che avevo fatto nell'episodio precedente era appunto quello: riscrivere la storia con \`git filter-repo\`, rimuovere il blob da ogni commit che lo aveva toccato, verificare che il \`.gitignore\` fosse aggiornato per bloccare certi path in futuro. Tutto documentato, commit isolati, niente cancella-e-rifai — quella è una regola che mi sono dato`,
+  },
+  {
+    id: "EP_AUTO_40",
+    title: "Tool installati: Python 3.11, Node.js, gh CLI, Tai",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# IL SISTEMA — Episodio: \"Fondamenta\"  ---  ## COLD OPEN  Avevamo appena pushato il tag v3.0.0. Sapevo da dove ricominciare. Bene. Perché il giorno d",
+    content: `
+# IL SISTEMA — Episodio: "Fondamenta"
+
+---
+
+## COLD OPEN
+
+Avevamo appena pushato il tag v3.0.0. Sapevo da dove ricominciare. Bene. Perché il giorno dopo ho dovuto ricominciare davvero — e la prima cosa che ti chiede un sistema serio è: su cosa gira?
+
+---
+
+## ATTO I — Prima di costruire, costruisci il terreno
+
+Fammi dire una cosa che sembra ovvia ma non lo è: un progetto CNC, una pressa per polimeri, un sistema di automazione industriale — fisici o digitali, poco cambia — crollano se le fondamenta sono improvvisate. Io lo so perché l'ho fatto nel modo sbagliato. Ho scritto codice Python su una macchina con tre versioni di Python installate e nessuna configurata bene. Ho eseguito script Node su versioni che non ricordavo nemmeno di aver installato. Ho usato Git dal terminale di Windows senza mai toccare \`gh\` CLI. Funzionava? Più o meno. Era un sistema? No. Era polvere tenuta insieme dall'abitudine.
+
+TITANIUM_OS ha sei aree attive in questo momento. V32, la fresatrice CNC, è al 65% — il cinematismo è definito, i profili in alluminio sono ordinati, manca ancora l'assemblaggio della struttura portante e tutta la parte di controllo elettronico. MIMS, i connettori modulari, è al 30% e as`,
+  },
+  {
+    id: "EP_AUTO_41",
+    title: "MICROINDUSTRY + OmniParser weights migrati",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# IL SISTEMA — Episodio: MICROINDUSTRY + OmniParser Weights Migrati  ---  ## COLD OPEN  La settimana scorsa abbiamo posato le fondamenta digitali — P",
+    content: `
+# IL SISTEMA — Episodio: MICROINDUSTRY + OmniParser Weights Migrati
+
+---
+
+## COLD OPEN
+
+La settimana scorsa abbiamo posato le fondamenta digitali — Python 3.11, Node.js, gh CLI, tutto in fila. E ho chiuso dicendo che le fondamenta non si vedono quando l'edificio è in piedi. Si vedono quando trema. Bene. Questa settimana l'edificio ha tremato, e le fondamenta hanno tenuto. Parliamo di cosa è successo dopo.
+
+---
+
+## ATTO I — Il Problema che Non Si Vede dal Budget
+
+Devo spiegarti una cosa che sembra tecnica ma è sostanzialmente un problema di soldi e di controllo.
+
+TITANIUM_OS vive su GitHub. Il repository si chiama, appunto, \`github.com/Microindustry/TITANIUM_OS\`. Quel nome — Microindustry — non è un dettaglio casuale. È l'identità sotto cui sto costruendo tutto: la fresatrice V32 al 65%, GENESIS all'incirca al 70%, MIMS fermo in attesa della pressa, VULCAN ancora da definire, e Vita Natura attivo al 40%. Un ecosistema che esiste prima in codice, poi in metallo.
+
+Il problema è questo: quando costruisci automazione su un'interfaccia grafica — un gestionale, un pannello di controllo, qualsiasi cosa abbia bottoni, campi, finestre — hai bisogno che qualcosa "veda" quello che vede l'occh`,
+  },
+  {
+    id: "EP_AUTO_42",
+    title: "Memory Getac importata su PC fisso",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "## COLD OPEN  La settimana scorsa avevo detto che un sistema autonomo non è quello che non dipende da niente — è quello che ha scelto consapevolmente",
+    content: `
+## COLD OPEN
+
+La settimana scorsa avevo detto che un sistema autonomo non è quello che non dipende da niente — è quello che ha scelto consapevolmente da cosa dipendere. Bene. Questa settimana ho applicato quel principio al cervello fisico del sistema. Perché un cervello che gira su un laptop da cantiere, con la batteria che balla e la RAM strozzata, non è un cervello — è una scommessa.
+
+---
+
+## ATTO I — Il problema si chiama continuità
+
+Parliamoci chiaro: il Getac è una macchina solida. L'ho scelto perché sopravvive a una fresatrice in funzione accanto, a trucioli d'alluminio nell'aria, a una giornata in cui tutto va storto e il laptop finisce sul banco con mezzo bicchiere d'acqua vicino. È robusto. Ma "robusto" non significa "adatto a fare il cervello 24/7 di un sistema industriale".
+
+Il problema non era il Getac in sé. Era l'architettura. Avevo un modello AI, dati, stato del progetto, file di sessione — tutto che viveva su un sistema mobile. Ogni volta che spegnevo, ogni volta che uscivo dall'officina, ogni volta che dovevo andare in un altro posto, il cervello si fermava. E un sistema che si ferma non è un sistema — è un appunto su un foglio.
+
+In parallelo, in taverna avevo già`,
+  },
+  {
+    id: "EP_AUTO_43",
+    title: "Stack Python RAG installato (torch 2.6.0+cu124, ch",
+    sottotitolo: "La memoria esternalizzata",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# IL SISTEMA — Episodio: \"Il Cervello Prende Forma\"  ---  ## COLD OPEN  Avevamo appena spostato la memoria dal Getac al PC fisso — un cervello mobile",
+    content: `
+# IL SISTEMA — Episodio: "Il Cervello Prende Forma"
+
+---
+
+## COLD OPEN
+
+Avevamo appena spostato la memoria dal Getac al PC fisso — un cervello mobile diventato infrastruttura. Ma un'infrastruttura senza motore di ragionamento è solo uno scaffale ordinato. Il 2 giugno 2026, su quel Getac, ho installato lo stack che trasforma MENTE da archivio in qualcosa che risponde.
+
+---
+
+## ATTO I — Il Problema Che Non Era di Codice
+
+Facciamo un passo indietro di una settimana, perché la storia di questa milestone inizia con un errore che non capivo.
+
+ChromaDB era lì. sentence-transformers era lì. Li avevo installati, avevo scritto il RAG engine, avevo visto i numeri di versione scorrere nel terminale — chromadb 1.5.9, sentence-transformers 5.5.1 — e pensavo di essere a posto. Poi avevo provato a importarli e il processo moriva. Nessun messaggio utile, nessuna stack trace che mi dicesse qualcosa di sensato. Solo silenzio, o peggio, un exit code che non spiegava niente.
+
+Ho passato un pezzo di quella sessione a guardare il codice come se il problema fosse nel codice. Non lo era. Ho riscritto parti del RAG engine — 138 righe aggiunte, 84 rimosse, una revisione completa — nella convinzione che ci f`,
+  },
+  {
+    id: "EP_AUTO_44",
+    title: "CUDA operativa su GTX 1070 8GB (torch.cuda.is_avai",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "---  ## COLD OPEN  La settimana scorsa avevamo chiuso con lo stack Python RAG che girava — torch caricato, moduli attivi, il Getac che rispondeva sen",
+    content: `
+---
+
+## COLD OPEN
+
+La settimana scorsa avevamo chiuso con lo stack Python RAG che girava — torch caricato, moduli attivi, il Getac che rispondeva senza che io dovessi metterci le mani. Infrastruttura invisibile, dicevo. Bene. Oggi quella stessa infrastruttura ha fatto un passo avanti che cambia tutto: ho aperto il terminale sul PC fisso in taverna, ho lanciato due righe di Python, e ho letto \`True\`.
+
+---
+
+## ATTO I — Il Problema che Non Avevo Ancora Risolto
+
+Devo fare un passo indietro di qualche settimana per spiegare perché quel \`True\` vale quello che vale.
+
+Quando ho iniziato a costruire GENESIS — il modulo di automazione intelligente di TITANIUM_OS — ho capito subito che il punto critico non era il codice. Il codice lo scrivi, lo correggi, lo riscrivi. Il punto critico era il modello. Un LLM locale, addestrato su dati miei, che conosce le mie macchine, il mio linguaggio, i miei processi. Non un modello generico che mi spiega come fare il pane.
+
+Il percorso logico era chiaro: prendi gli episodi del podcast, costruisci un \`dataset.jsonl\`, fai fine-tuning con LoRA su un modello base. Fine. Semplice sulla carta.
+
+Il problema è che fine-tuning su CPU è una sofferenza. Non un'opinio`,
+  },
+  {
+    id: "EP_AUTO_45",
+    title: "Indice RAG buildato e verificato: 6497 chunk da 14",
+    sottotitolo: "La memoria esternalizzata",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "## COLD OPEN  La volta scorsa avevamo acceso la GPU — `torch.cuda.is_available()` aveva restituito `True`, e avevo detto che quello era il momento ch",
+    content: `
+## COLD OPEN
+
+La volta scorsa avevamo acceso la GPU — \`torch.cuda.is_available()\` aveva restituito \`True\`, e avevo detto che quello era il momento che contava. Avevo ragione. Ma non sapevo ancora cosa significava davvero, finché non ho visto il numero: 6.497.
+
+---
+
+## ATTO I — Prima del numero, c'era il caos
+
+Faccio un passo indietro. Perché per capire cos'è 6.497, devi sapere cos'era MENTE prima.
+
+MENTE è la memoria del sistema. Non è una metafora — è una cartella piena di file Markdown. Ogni decisione presa su V32, ogni calcolo sui rinforzi delle colonne Z, ogni sessione di debug su GENESIS, ogni nota su EVA e Vita Natura: tutto scritto in testo, organizzato per data e argomento, salvato su disco. In maggio 2026 siamo migrati con SINAPSI — abbiamo rimesso in ordine l'archivio, riclassificato tutto, creato una struttura che reggesse il peso di quello che stavo costruendo. Il risultato è stato 145 file Markdown. Centoquarantacinque documenti che contengono la storia tecnica di TITANIUM_OS.
+
+Il problema è che un file Markdown da solo non serve a niente se non riesci a interrogarlo. Puoi aprire ogni file, scorrere, cercare — ma non scala. Quando sei nel mezzo di una sessione di lavo`,
+  },
+  {
+    id: "EP_AUTO_46",
+    title: "Sicurezza: token GitHub ruotato — auth git via gh ",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# IL SISTEMA — Episodio: Chiavi  ---  ## COLD OPEN  L'episodio scorso ho chiuso con 6.497 chunk. Il sistema sapeva dove stava. Bene. Ma sapere dove s",
+    content: `
+# IL SISTEMA — Episodio: Chiavi
+
+---
+
+## COLD OPEN
+
+L'episodio scorso ho chiuso con 6.497 chunk. Il sistema sapeva dove stava. Bene. Ma sapere dove stai non serve a niente se qualcun altro può entrare dalla porta sul retro mentre tu stai costruendo. Oggi parliamo di porte. E di come le ho chiuse.
+
+---
+
+## ATTO I — Il problema che non vedi finché non lo vedi
+
+Nella LEX_DIGITALIS — che è il documento che governa come scrivo codice in TITANIUM_OS, dalle istruzioni per i relay della V32 fino alle chiamate API di EVA — c'è una regola scritta in grassetto: zero segreti in chiaro. Zero. La regola esiste perché l'ho messa io, e l'ho messa io perché so cosa succede quando non c'è. Non è teoria. È la differenza tra un sistema che hai costruito e un sistema che appartiene a chiunque riesca a leggere un file di testo.
+
+Il principio si chiama Zero-Trust. In pratica significa: niente API key nel codice, niente token hardcoded, niente password in un file di configurazione che finisce in un repository. Tutto passa da variabili d'ambiente. In Python è \`os.getenv('OPENAI_API_KEY')\`. In C++ sul firmware della V32 è una costante caricata da un header che non entra mai nel versioning. Non è complicato`,
+  },
+  {
+    id: "EP_AUTO_47",
+    title: "Firewall 5173 aperto + Tailscale loggato sul fisso",
+    sottotitolo: "Il sistema diventa visibile",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# IL SISTEMA — Episodio: \"La Porta Aperta al Momento Giusto\"  ---  ## COLD OPEN  L'episodio scorso chiudeva con una frase precisa: un sistema che non",
+    content: `
+# IL SISTEMA — Episodio: "La Porta Aperta al Momento Giusto"
+
+---
+
+## COLD OPEN
+
+L'episodio scorso chiudeva con una frase precisa: un sistema che non si protegge è solo un archivio aperto. Avevo ruotato i token GitHub, messo un confine tra il codice e il mondo esterno. Bene. Ma un confine senza accesso controllato è solo un muro cieco — e io ho bisogno di vedere dentro la macchina anche quando non ci sono fisicamente. Il 3 giugno 2026 ho aperto la porta giusta, nella direzione giusta, con la serratura giusta. Porta 5173. Firewall. Tailscale. E tutto quello che stava aspettando in coda ha cominciato a muoversi.
+
+---
+
+## ATTO I — Perché un IP fisso e una porta cambiano tutto
+
+Devo spiegare il contesto, perché altrimenti sembra una cosa tecnica da smanettoni e non lo è. È una decisione infrastrutturale che ha impatto diretto su V32, GENESIS, VULCAN, tutto.
+
+A febbraio avevo fatto una migrazione importante. Il cervello del sistema — il PC fisso in taverna, quello con la GPU 1070 Ti — era diventato il nodo centrale. Il concetto era semplice: un cervello H24 che non si spegne, non va a letto, non deve ricaricarsi. Il Getac, il portatile militarizzato, diventa la mano mobile — lo porto i`,
+  },
+  {
+    id: "EP_AUTO_48",
+    title: "n8n self-hosted attivo (account locale, no cloud) ",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "## COLD OPEN  La porta 5173 l'avevo aperta solo verso i nodi che conosco per nome. Il passo successivo era dare a quei nodi qualcosa di concreto da f",
+    content: `
+## COLD OPEN
+
+La porta 5173 l'avevo aperta solo verso i nodi che conosco per nome. Il passo successivo era dare a quei nodi qualcosa di concreto da fare — un'officina vera, non un foglio di calcolo. Il 3 giugno ho installato quell'officina.
+
+---
+
+## ATTO I — Il costo dell'affitto che non vedi
+
+Prima di spiegarti cosa ho fatto, ti dico cosa avevo di fronte.
+
+n8n è lo strumento che fa girare EVA — il sistema di automazione che gestisce i flussi di Vita Natura, coordina gli agenti AI del sistema, connette l'API server che gira su localhost:5001 con la dashboard React su 5173, con il research agent v1.1 che sta girando sui nodi. Non è un accessorio. È la colonna vertebrale operativa di GENESIS, e GENESIS è al 70% — il che significa che ogni pezzo di infrastruttura che installo adesso è load-bearing. Non posso sbagliare il materiale.
+
+La scelta era binaria: cloud o self-hosted.
+
+Il cloud ha una sua logica. Zero manutenzione, pronto in cinque minuti, SSL gestito da altri, uptime monitorato da altri. Se sei un consulente che deve dimostrare qualcosa a un cliente entro venerdì, ha senso. Ma io non sono un consulente. Sono un artigiano che costruisce un sistema che deve girare mentre la fr`,
+  },
+  {
+    id: "EP_AUTO_49",
+    title: "Vista METODO sul sito — spiegazione chi/cosa/come ",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "# IL SISTEMA — Episodio: \"La Vista METODO\"  ---  ## COLD OPEN  La settimana scorsa ti ho lasciato con una frase su n8n e sui punti singoli di guasto.",
+    content: `
+# IL SISTEMA — Episodio: "La Vista METODO"
+
+---
+
+## COLD OPEN
+
+La settimana scorsa ti ho lasciato con una frase su n8n e sui punti singoli di guasto. L'idea era semplice: un sistema che aspetta che tu lo accenda ogni mattina non è un sistema, è un'abitudine cara. Bene. Quella conversazione ha aperto una porta che non mi aspettavo, e quello che è entrato dalla porta è stato un dev Flutter con domande serie.
+
+---
+
+## ATTO I — Quando qualcuno dall'esterno ti guarda dentro
+
+Il tre giugno del 2026 ho fatto una cosa insolita: ho lasciato Claude — il mio layer AI che chiamo THEMIS quando lavora sul codice — in compagnia di un amico. Sviluppatore, lavora in Flutter e Dart, fa backend e migrazioni. Uno che di architetture se ne intende. Non uno che fa domande per cortesia. Uno che fa domande per smontarti.
+
+La sua prima reazione, mentre scorreva la struttura di TITANIUM_OS, è stata diretta: «lo state facendo in modo non convenzionale». Non era un complimento con punto interrogativo. Era una constatazione. E io capisco cosa intendeva, perché TITANIUM_OS non nasce da un libro di testo. Nasce da un'officina, da una fresatrice CNC che chiamo V32 e che in questo momento è al sessantacinque perc`,
+  },
+  {
+    id: "EP_AUTO_50",
+    title: "Automazioni notturne portabili: _ti_paths.bat (res",
+    sottotitolo: "Milestone verificato · auto-generato",
+    stagione: "AUTO",
+    stagione_label: "Generato",
+    data_evento: "2026-06-03",
+    tags: ["auto_generato", "milestone"],
+    status: "ready",
+    durata_min: 8,
+    preview: "## COLD OPEN  La scorsa volta ho detto che un sistema che non sai spiegare in trenta secondi esiste solo nella tua testa. Bene. Adesso vi racconto co",
+    content: `
+## COLD OPEN
+
+La scorsa volta ho detto che un sistema che non sai spiegare in trenta secondi esiste solo nella tua testa. Bene. Adesso vi racconto cosa succede quando quel sistema impara a lavorare anche mentre dormi — e soprattutto, come ci si assicura che lo faccia senza che tu debba essere lì a tenere la mano.
+
+---
+
+## ATTO I — Il problema dei sistemi che dormono con te
+
+Facciamo un passo indietro. Il tre giugno duemilaventisei mi trovo con una situazione che conosco bene: ho costruito cose che funzionano, ma funzionano quando ci sono io. STORY_AGENT è attivo, versione uno punto zero, il file è \`NODES/STORY_AGENT/story_agent.py\`, il cron gira a mezzanotte. NIGHT_PUSH è attivo, \`AUTOMATIONS/core/night_push.bat\`, cron alle quattro e sette di mattina. Il RAG graph è a centoquattordici nodi e duecentodiciotto archi. Il watchdog controlla i processi in parallelo via threading.
+
+Su carta: tutto funziona. Nella realtà: dipende da dove ti trovi.
+
+Il problema nasce dalla migrazione. L'ho documentata in archivio — giugno duemilaventisei, migrazione verso il PC fisso in taverna, quello con la GPU 1070 Ti, il cervello ventiquattro su ventiquattro. Il Getac diventa mobile, si collega via Ta`,
   },
   // AUTO_GENERATED_END
 ];

@@ -291,7 +291,8 @@ def build_ts_entry(ep_id: str, milestone: str, date: str, content: str) -> str:
     title = milestone[:50].rstrip(".,")
     subtitle = milestone_to_subtitle(milestone)
     preview = content[:150].replace('"', '\\"').replace('\n', ' ').strip()
-    content_escaped = content.replace('`', '\\`').replace('${', '\\${')
+    # escapa prima i backslash (path C:\... nei template literal JS), poi backtick e ${
+    content_escaped = content.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
     tags_raw = ["auto_generato", "milestone"]
     tags = json.dumps(tags_raw)
 
@@ -330,7 +331,9 @@ def update_storie_data_ts(new_entries: list[str]):
             re.DOTALL
         )
         replacement = f"{START_MARKER}\n{new_block}\n  {END_MARKER}"
-        content = pattern.sub(replacement, content)
+        # repl come funzione: i backslash nel contenuto (path C:\Users -> \U) NON
+        # vengono interpretati come escape della regex (fix re.error bad escape)
+        content = pattern.sub(lambda _m: replacement, content)
     else:
         # Aggiunge prima della chiusura dell'array EPISODES
         insert_before = "];"
@@ -347,7 +350,9 @@ def update_storie_data_ts(new_entries: list[str]):
                     re.DOTALL
                 )
                 replacement = f"{START_MARKER}\n{new_block}\n  {END_MARKER}"
-                content = pattern.sub(replacement, content)
+                # repl come funzione: i backslash nel contenuto (path C:\Users -> \U) NON
+        # vengono interpretati come escape della regex (fix re.error bad escape)
+        content = pattern.sub(lambda _m: replacement, content)
 
     STORIE_DATA_TS.write_text(content, encoding="utf-8")
     log.info(f"storieData.ts aggiornato con {len(new_entries)} episodi auto.")
@@ -368,7 +373,14 @@ def _next_auto_index() -> int:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--all", action="store_true", help="Forza rigenerazione di tutti i milestone")
+    parser.add_argument("--sync", action="store_true", help="Solo ricostruzione storieData.ts dai .md su disco (no generazione, no API)")
     args = parser.parse_args()
+
+    if args.sync:
+        all_auto = _load_all_auto_ts()
+        update_storie_data_ts(all_auto)
+        log.info(f"Sync: storieData.ts ricostruito da {len(all_auto)} episodi AUTO su disco.")
+        return
 
     # Leggi STATE.json
     if not STATE_JSON.exists():
