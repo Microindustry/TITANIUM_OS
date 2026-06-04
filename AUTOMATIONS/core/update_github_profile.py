@@ -20,7 +20,15 @@ except ImportError:
 
 BASE = Path(__file__).resolve().parents[3]
 STATE_FILE = BASE / "TITANIUM_OS" / "BRAIN" / "STATE.json"
-GH = str(Path.home() / "tools" / "gh" / "gh.exe")
+# gh risolto dinamicamente: PATH -> Program Files -> tools (legacy). No hardcode benen/tools.
+import shutil as _shutil
+GH = (_shutil.which("gh")
+      or next((p for p in [
+          Path(os.environ.get("ProgramFiles", r"C:\Program Files")) / "GitHub CLI" / "gh.exe",
+          Path.home() / "tools" / "gh" / "gh.exe",
+      ] if p.exists()), None)
+      or "gh")
+GH = str(GH)
 
 # Carica env vars dal vault (necessario quando eseguito da Task Scheduler)
 _env_file = Path.home() / "TITANIUM_OS" / "_VAULT" / "KEYS" / "titanium_os.env"

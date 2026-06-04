@@ -8,12 +8,14 @@ cd /d "%TI_ROOT%"
 
 set "LOG=%TI_ROOT%\DATA\logs\night_push.log"
 
-:: verifica se c'e' qualcosa da pushare
+:: c'e' qualcosa da pushare? Uso un FLAG basato sulla dimensione del file, NON il testo
+:: del commit: i subject con ')' (es. "feat(storie)") chiuderebbero il blocco IF -> errore 255.
 git log origin/main..HEAD --oneline > "%TEMP%\ti_night_log.txt" 2>&1
-set /p COMMITS=<"%TEMP%\ti_night_log.txt"
-del "%TEMP%\ti_night_log.txt"
+set "HAVE_COMMITS="
+for %%A in ("%TEMP%\ti_night_log.txt") do if %%~zA GTR 0 set "HAVE_COMMITS=1"
+del "%TEMP%\ti_night_log.txt" 2>nul
 
-if "%COMMITS%"=="" (
+if not defined HAVE_COMMITS (
     echo [night_push] nessun commit da pushare - skip >> "%LOG%"
 ) else (
     echo [night_push] push in corso... >> "%LOG%"
