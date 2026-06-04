@@ -6,7 +6,9 @@
 call "%~dp0..\..\AUTOMATIONS\core\_ti_paths.bat"
 cd /d "%TI_ROOT%"
 
-set "LOG=%TI_ROOT%\DATA\logs\story_agent.log"
+:: NB: log del .bat su file SEPARATO ? story_agent.py apre story_agent.log internamente,
+:: rediregere il .bat sullo stesso file causa PermissionError (lock di Windows).
+set "LOG=%TI_ROOT%\DATA\logs\story_agent_run.log"
 echo [story_agent] avvio %DATE% %TIME% >> "%LOG%"
 
 if not defined PYTHON (
