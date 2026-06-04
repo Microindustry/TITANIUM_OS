@@ -1,0 +1,84 @@
+<!-- TOC -->
+
+- [EP_AUTO_42  Milestone](#epauto42-milestone)
+    - [Memory Getac importata su PC fisso](#memory-getac-importata-su-pc-fisso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il problema si chiama continuità](#atto-i-il-problema-si-chiama-continuità)
+  - [ATTO II  La migrazione: cosa è successo davvero](#atto-ii-la-migrazione-cosa-è-successo-davvero)
+  - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
+# EP_AUTO_42 — Milestone
+### "Memory Getac importata su PC fisso"
+
+---
+id: EP_AUTO_42
+title: "Memory Getac importata su PC fisso"
+sottotitolo: "Milestone verificato · auto-generato"
+stagione: AUTO
+stagione_label: "Generato"
+data_evento: 2026-06-03
+data_generato: 2026-06-03
+tags: [auto_generato, milestone, titanium_os]
+status: ready
+durata_min: 8
+formato: podcast
+fonte: STATE.json → milestones.verified
+llm_use: training
+lingua: it
+milestone_originale: "Memory Getac importata su PC fisso"
+---
+
+## COLD OPEN
+
+La settimana scorsa avevo detto che un sistema autonomo non è quello che non dipende da niente — è quello che ha scelto consapevolmente da cosa dipendere. Bene. Questa settimana ho applicato quel principio al cervello fisico del sistema. Perché un cervello che gira su un laptop da cantiere, con la batteria che balla e la RAM strozzata, non è un cervello — è una scommessa.
+
+---
+
+## ATTO I — Il problema si chiama continuità
+
+Parliamoci chiaro: il Getac è una macchina solida. L'ho scelto perché sopravvive a una fresatrice in funzione accanto, a trucioli d'alluminio nell'aria, a una giornata in cui tutto va storto e il laptop finisce sul banco con mezzo bicchiere d'acqua vicino. È robusto. Ma "robusto" non significa "adatto a fare il cervello 24/7 di un sistema industriale".
+
+Il problema non era il Getac in sé. Era l'architettura. Avevo un modello AI, dati, stato del progetto, file di sessione — tutto che viveva su un sistema mobile. Ogni volta che spegnevo, ogni volta che uscivo dall'officina, ogni volta che dovevo andare in un altro posto, il cervello si fermava. E un sistema che si ferma non è un sistema — è un appunto su un foglio.
+
+In parallelo, in taverna avevo già un PC fisso che dormiva. GPU NVIDIA 1070 Ti, hardware che per i miei carichi di lavoro — inferenza locale, gestione stato, elaborazione dati per GENESIS, per EVA, per tutto il resto — è più che sufficiente. Uno strumento fermo è uno strumento sprecato. Questo lo so dall'officina: la fresatrice V32 che costruisco pezzo per pezzo non può permettersi tempi morti non pianificati. Stessa logica, scala diversa.
+
+Quindi la decisione era semplice: spostare il cervello sul fisso. Farlo girare 24 ore su 24. Lasciare il Getac al suo ruolo naturale — accesso mobile, campo, officina — collegato al fisso via Tailscale. Due nodi, ruoli distinti, nessuna sovrapposizione inutile.
+
+---
+
+## ATTO II — La migrazione: cosa è successo davvero
+
+Il 2 giugno mi sono seduto e ho fatto la migrazione. Non è stata una cosa complicata in teoria, ma nei dettagli ci sono sempre le spine.
+
+Il nucleo dell'operazione era spostare la memory del Getac — tutto lo stato, i file di sessione, il contesto accumulato — sul PC fisso. Quella memory non è solo un backup: è il sistema che sa dove siamo. Sa che V32 è al 65%. Sa che MIMS è fermo in waiting_press al 30% perché la pressa non c'è ancora. Sa che GENESIS è al 70% di build, che Vita Natura è attiva al 40%, che IDENTITY è al 50%. Sa che il mandrino da 2.2 kilowatt con attacco ER20 è ancora da ordinare. Sa che i silent blocks — versione A contro versione B — sono una decisione aperta. Tutto questo vive in `RIAVVIO_SESSIONE.txt` e in `BRAIN/STATE.json`. Senza quei file, ricominciare una sessione significa perdere ore a ricostruire contesto che già esiste.
+
+Ho preparato il kit su chiavetta. Ho scritto la guida `CONFIG_PC_FISSO_24H.txt` — non per me tra sei mesi, ma per me domani mattina, quando sono stanco e devo ripartire veloce senza pensare. Ogni configurazione che ho fatto l'ho documentata mentre la facevo, non dopo. Questo è un principio che ho imparato costruendo la V32: se documenti dopo, dimentichi la metà delle decisioni intermedie, quelle che sembrano ovvie sul momento e che invece sono esattamente quelle che contano.
+
+Poi è arrivato il muro: push su GitHub bloccato. Un file da un gigabyte nel repository. Non è un problema tecnico complesso — è un problema di pulizia, di storia Git sporca. Ma è uno di quei problemi che non risolvi in fretta senza rischiare di fare danni. La decisione giusta è farlo "a freddo", in un momento separato, con testa sgombra. L'ho annotato, l'ho lasciato lì, ho continuato. Bloccare la migrazione per un file da pulire sarebbe stato come fermare il montaggio di un telaio perché c'è una vite da rilubrificare — la vite si rilubrifica, ma non adesso.
+
+La connessione tra i due nodi è via Tailscale: VPN mesh, ogni macchina ha il suo indirizzo fisso nella rete virtuale, nessuna porta aperta al mondo. Il Getac parla con il fisso come se fossero sulla stessa scrivania, anche se fisicamente sono in posti diversi. Questo significa che posso essere in officina con il Getac e avere accesso completo al cervello che sta girando in taverna. Accedo, consulto, modifico stato, e il fisso continua a lavorare.
+
+L'HMI della V32, intanto, è un TP900 Comfort recuperato — display 9 pollici TFT touch, 800 per 480, PROFINET e MPI/Profibus. La CPU è una 314C: 32 ingressi digitali, 16 uscite digitali, 4 ingressi analogici, 2 uscite analogiche, Fieldbus Profibus DP, 192 kilobyte di memoria più 2 megabyte su Micro Memory Card. Tutto recupero, tutto EUR 0 di hardware. La logica è la stessa della migrazione: usare quello che hai, metterlo nel posto giusto, farlo fare il lavoro per cui è fatto.
+
+---
+
+## ATTO III — Cosa cambia adesso
+
+Il cambio concreto è questo: il sistema non dorme più.
+
+Prima, quando spegnevo il Getac, tutto si fermava. Adesso il fisso in taverna gira. GENESIS può elaborare. EVA può essere interrogata. Lo stato viene mantenuto. Se alle tre di notte mi viene un'idea sul brevetto B2 di MIMS — che è priorità, l'ho scritto nei thread aperti — posso connettermi, trovare il contesto già lì, lavorare, e il mattino dopo il sistema sa già cosa è successo.
+
+Questo sblocca cose concrete. Il pilot EVA su WhatsApp per Vita Natura — stimiamo EUR 300 al mese solo dal motore promozioni, più EUR 200-400 fisso nella fase pilot in partnership — può girare in modo più stabile. GENESIS al 70% ha bisogno di un sistema che non si interrompa per ragioni infrastrutturali. Il PITCH da rifinire, il NodeTile da estrarre, il brevetto MIMS da spingere: tutte cose che richiedono sessioni lunghe, contesto persistente, stato affidabile.
+
+Il prossimo passo immediato è pulire il repository — quel file da un gigabyte va rimosso dalla storia Git. Poi ordinare il mandrino 2.2 kilowatt ER20: finché non arriva, MIMS è fermo in waiting_press e il 30% non si muove. E decidere i silent blocks, versione A o versione B, perché anche quello è un blocker reale sulla V32.
+
+Ma oggi il cervello ha una casa fissa. E questo non è un dettaglio — è la differenza tra un progetto e un sistema.
+
+---
+
+## CHIUSURA
+
+*Un cervello mobile è uno strumento. Un cervello fisso, connesso, sempre attivo — quello è un'infrastruttura. E da un'officina si costruisce solo se l'infrastruttura regge.*

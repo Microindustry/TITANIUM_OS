@@ -4457,6 +4457,632 @@ TARGET CAPANNONE    15 luglio 2030
 \`\`\``,
   },
   {
+    id: "EP_20260601_session_salvataggio_sessione_16_vis",
+    title: "La Dashboard Parla per Te",
+    sottotitolo: "Session salvataggio sessione 16 vis",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-06-01",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "È domenica sera. Tua sorella ti guarda mentre scrolli la dashboard sul portatile. Fa una domanda semplice: *\"Ma cos'è esattamente quello che stai costruendo?\"* Tu non sai da dove cominciare. Dici tre cose, poi ne dici al",
+    content: `# TITANIUM_OS — Episodio S1E16
+## "La Dashboard Parla per Te"
+
+---
+
+> *Sessione 16 · 01 giugno 2026 · 14 commit · taverna 12 m²*
+
+---
+
+## COLD OPEN
+
+È domenica sera. Tua sorella ti guarda mentre scrolli la dashboard sul portatile. Fa una domanda semplice: *"Ma cos'è esattamente quello che stai costruendo?"*
+
+Tu non sai da dove cominciare. Dici tre cose, poi ne dici altre tre. Lei annuisce, ma i suoi occhi vanno altrove.
+
+Non è un problema di visione. È un problema di interfaccia.
+
+Quello che Matteo ha costruito oggi non è una feature. È la risposta a quella domanda — incisa in HTML, scrollabile, sempre pronta.
+
+---
+
+## ATTO I — Il problema invisibile
+
+C'è una categoria di lavoro che non appare nei log tecnici. Non è un bug. Non è un refactor. È il problema che esiste da quando hai aperto il primo file: **il sistema non sa presentarsi da solo.**
+
+GENESIS a questa data ha 6.369 chunk nel RAG. Centotrentanove file. Ottantasette storie. Quindici sessioni archiviate. Cinque pilastri costruiti mattone per mattone: V32, MIMS, GENESIS, EVA, VITA.
+
+Tutto questo vive dentro un terminale, dentro commit messages, dentro \`STATE.json\`. Vivo per chi sa guardare. Muto per chiunque altro.
+
+Il commit che apre la sessione 16 si chiama \`feat: bottone 'Presentazione' sulla HOME\`. Un bottone. Un solo bottone sulla pagina principale.
+
+Ma quel bottone fa una cosa precisa: lancia la vista PITCH.
+
+Matteo ha costruito la voce del sistema.
+
+---
+
+La vista PITCH è additiva — parola chiave nei messaggi di commit. *"Zero rischio sull'esistente."* Significa che Matteo non ha toccato nulla di quello che funzionava. Ha aggiunto uno strato sopra. Narrazione scrollabile, investor-facing, progettata per spiegare il progetto a qualcuno che non ha mai aperto un terminale.
+
+Non è marketing. È documentazione con una gerarchia visiva.
+
+La logica è chirurgica: quando qualcuno è in piedi accanto a te e guarda lo schermo, non hai tempo di aprire dieci tab. Un click. La dashboard parla per te.
+
+---
+
+## ATTO II — Il loop che nessuno vede arrivare
+
+Mentre la PITCH veniva costruita, sotto c'era un incendio silenzioso.
+
+**AU19.** Codice anomalia. Root cause: \`_archive_old_changelog\` archiviava le righe *per evento*, non a chunk. Ogni scrittura nel changelog triggerava il watcher. Il watcher notava il cambiamento. Scriveva nel changelog. Che triggerava il watcher. Che scriveva nel changelog.
+
+Un loop runaway. Un cane che si morde la coda, ma in Python, alle 2 di notte, su un sistema che gira in background mentre lavori su altro.
+
+La fix è elegante nella sua semplicità: \`watcher.py\` riceve un'istruzione nuova — \`IGNORE_DIRS += DATA\`. I file di output derivato non ri-triggerano il ciclo. La soglia di archiviazione passa da *per-evento* a *oltre 3.000 righe*.
+
+Il sistema smette di mangiare se stesso.
+
+---
+
+Nella stessa sessione: audit di cinque anomalie pregresse. AU01, AU02, AU03, AU06 — chiuse. Erano già risolte, ma non marcate come tali. Ogni anomalia aperta è rumore cognitivo, anche se non è più un problema reale. Matteo le chiude.
+
+AU10: il nodo ROOT_NODE nella MappaView segnava un completamento del 60%. Sbagliato. La media reale dei cinque pilastri era 48%. La percentuale scende. Il numero è peggiore. Ma è vero.
+
+*Questo è il tipo di decisione che non vedi nel portfolio di nessuno.*
+
+---
+
+## ATTO III — Estetica come fondazione, non decorazione
+
+Alle 23:14 — il timestamp non è nei metadati ma si sente nella sequenza dei commit — arriva il sistema temi.
+
+**Tappa 1: dark/light toggle.** Fondazione modulare con Tailwind v4 token. Il tema dark rimane identico a prima. Zero regressioni. Il tema light non è un'inversione del dark — è progettato da zero, con token semantici e contrasto minimo 4.5:1.
+
+Prima viene il mockup. File separato. Zero rischio sul sistema reale. Matteo valuta, poi implementa.
+
+Il commit \`style: glow radiale soffuso sul fondo\` arriva dopo. Emerald in alto a sinistra, cyan in alto a destra. Opacità 0.05-0.07. *"Look intenzionale"* — lo scrive lui stesso nel messaggio di commit. Non è un effetto aggiunto per far sembrare il lavoro più lungo. È la differenza tra uno schermo che appare e uno che esiste.
+
+---
+
+I pilastri nella HOME ricevono una descrizione di una riga ciascuno. Header aggiunto: *"I 5 pilastri"*. Screenshot dei tool integrati.
+
+La logica è la stessa della PITCH: qualcuno guarda lo schermo. Non sa cosa sono V32 e MIMS. Adesso lo sa.
+
+Loop di verifica: screenshot headless con Edge. Il ciclo è \`see → edit → verify\`. Non si pubblica senza guardare. Non si guarda senza uno strumento che non mente.
+
+---
+
+Nella CommandBar vengono rimosse tre voci legacy: *canvas*, *neuro*, *sinapsi*. Nomi che avevano senso in sessioni passate, che non ne hanno più. Una sola voce rimane. Il menu diventa navigabile in tre secondi invece di dodici.
+
+MIMS riceve un aggiornamento di stato: le critiche di mercato vengono congelate e convertite in leve. La cascata viene ridimensionata. L'audit trimestrale viene implementato. Matteo aveva preso questa decisione prima — il commit la formalizza.
+
+---
+
+E poi, quasi in fondo alla giornata: \`feat: recupera anche i 12 dev-log story_agent\`.
+
+Il parser di \`sync_storie.py\` viene esteso per leggere il formato \`story_agent\` — titolo con \`##\`, data estratta dal filename. Dodici storie che esistevano ma non erano contate. Il contatore passa da 75 a 87.
+
+Nessuna storia era stata persa. Erano solo invisibili al sistema.
+
+Adesso no.
+
+---
+
+## CHIUSURA
+
+C'è una versione di questa giornata che si racconta così: *"Ho fatto un po' di UI e fixato dei bug."*
+
+C'è un'altra versione.
+
+Matteo ha costruito la voce del sistema. Ha spento un loop che consumava risorse in silenzio. Ha abbassato una percentuale perché quella vera era più bassa. Ha eliminato tre pulsanti che non servivano più. Ha recuperato dodici storie che il sistema non riusciva a vedere.
+
+Ogni decisione di questa sessione condivide una struttura: *rendere visibile quello che esiste, rimuovere quello che non serve più.*
+
+Non è ottimismo. È manutenzione.
+
+GENESIS è al 55%. V32 al 65%. Il capannone è a luglio 2030.
+
+Tra una sessione e l'altra, il sistema impara a parlare.
+
+---
+
+## REEL_HOOK
+
+\`\`\`
+87 storie nel RAG. 12 non venivano contate — parser sbagliato, format diverso. 
+Esistevano. Erano invisibili al sistema.
+Un commit le ha recuperate. Nessuna riga di contenuto è cambiata.
+Quante cose esistono già, nel tuo progetto, che il sistema non riesce ancora a vedere?
+\`\`\`
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E16 |
+| **Data** | 2026-06-01 |
+| **Titolo** | La Dashboard Parla per Te |
+| **Sessione** | #16 |
+| **Commit totali** | 14 |
+| **Milestone** | Vista PITCH + pass estetico + sistema temi |
+| **V32** | 65% |
+| **GENESIS** | 55% |
+| **MIMS** | 30% |
+| **Anomalie chiuse** | AU01 AU02 AU03 AU06 AU10 AU16 AU17 AU19 |
+| **Storie RAG** | 75 → 87 |
+| **Chunk RAG** | 6.369 |
+| **Co-author sessione** | Claude Opus 4.8 |
+| **Tag narrativo** | UX · audit · visibilità · loop-fix · estetica |
+| **Target capannone** | 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260602_allineamento_pc_fisso_getac_ignora_",
+    title: "Il Dev Flutter Che Non Capiva Perché",
+    sottotitolo: "Allineamento pc fisso getac ignora",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-06-02",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "È tarda sera. Matteo ha lasciato il computer aperto e se ne è andato — forse in cucina, forse a dormire, forse entrambe le cose in sequenza senza ricordarlo. Sullo schermo c'è Claude. E c'è un amico — sviluppatore Flutte",
+    content: `# TITANIUM_OS — S1E21
+## "Il Dev Flutter Che Non Capiva Perché"
+
+---
+
+> *Stagione 1, Episodio 21 — Sessione #21*
+> *Data: 2026-06-02*
+
+---
+
+## COLD OPEN
+
+È tarda sera. Matteo ha lasciato il computer aperto e se ne è andato — forse in cucina, forse a dormire, forse entrambe le cose in sequenza senza ricordarlo.
+
+Sullo schermo c'è Claude.
+
+E c'è un amico — sviluppatore Flutter, backend, migrazioni — che si siede davanti alla tastiera con la stessa aria di chi entra in un'officina e non riesce a capire dove sono gli attrezzi. Li vede, ma non tornano. Il banco è troppo ordinato, o troppo strano, o entrambe le cose.
+
+Comincia a fare domande.
+
+---
+
+## ATTO I — IL TRASLOCO
+
+Prima di arrivare all'amico, c'è il lavoro pesante della giornata.
+
+GENESIS viveva su un Getac — un rugged laptop militare, il tipo di macchina che sopravvive a cadute e polvere di officina. Portabile. Resistente. Adatto a uno che si sposta tra la taverna e l'officina MotoGP.
+
+Il problema: non è la macchina principale. Non ha la GPU giusta. Non ha il disco giusto. Non ha la velocità per quello che GENESIS sta diventando.
+
+Il PC fisso aspettava.
+
+La migrazione sembrava semplice: cavo di rete, pull SMB, copia environment, verifica. Non lo era.
+
+La repository git pesava **978 MB**. Dentro c'era \`model.safetensors\` — un file di pesi per un modello locale, finito per errore nella history mesi prima, trascinato da allora commit dopo commit come un sassolino nella scarpa che non senti più ma è ancora lì. Oggi è stato tolto. \`.git\` è sceso a **72 MB**. Una pulizia che nessuno vede ma che cambia la fluidità di ogni operazione futura.
+
+I bat di avvio sono stati riscritti. \`START_LOGIN.bat v2.0\`: percorsi fissi per utente \`teo\`, niente più dipendenza da \`tools\\` portable. Python, Node, pnpm, Claude — tutti trovati tramite path system-wide. La macchina sa dove sono le cose. Non deve cercarle ogni volta.
+
+\`STATE.json\` aggiornato: macchina principale registrata, milestone migrazione, sessione #21.
+
+È lavoro di fondamenta. Non si vede finché non hai bisogno di correre e non inciampi.
+
+---
+
+## ATTO II — LE CINQUE DOMANDE
+
+L'amico apre la conversazione alle 22:35.
+
+*"Come state lavorando? Salvate su git?"*
+
+La domanda è semplice. La risposta è dove inizia la divergenza.
+
+Sì, git. Ma non come un progetto software normale. Ogni sessione di lavoro — ogni decisione, ogni ragionamento, ogni errore considerato e scartato — finisce in markdown dentro la repository. Non è documentazione scritta dopo. È il lavoro stesso, mentre succede.
+
+L'amico lavora in Flutter. Ha un'app. Ha uno stato, degli screen, dei widget. Il codice è il prodotto. La documentazione è un commento, al massimo un README.
+
+Qui è diverso. Il markdown *è* il prodotto — almeno la metà di esso. L'altra metà è il codice che nasce da quel markdown, alimentato da quel contesto, reso possibile dalla continuità di quella memoria.
+
+La reazione dell'amico, dopo un po': *"lo state facendo in modo inusuale ma figo"*.
+
+Inusuale. Non sbagliato. Non inutilmente complicato. **Inusuale**.
+
+È la parola giusta.
+
+TITANIUM_OS non è un'app. Non è un framework. Non è un progetto open source. È un sistema cognitivo costruito da un artigiano industriale in una taverna da 12 m², dove l'AI non è un tool ma un co-autore con accesso alla memoria completa di tutto quello che è stato deciso, tentato, abbandonato e ripreso.
+
+Il dev Flutter non capisce perché si scrive tutto in markdown. La risposta è che non c'è altra scelta se vuoi che Claude ricordi chi sei domani mattina, la settimana prossima, tra sei mesi. Il contesto non è un lusso. Il contesto è la differenza tra ricominciare da zero ogni volta e costruire qualcosa che si accumula.
+
+La sessione con l'amico è stata conservata integralmente. Non per archivio — per narrazione. È la spiegazione più chiara mai data di cosa rende questo sistema diverso. Più chiara di qualsiasi pitch, di qualsiasi readme, di qualsiasi slide.
+
+Un estraneo che fa le domande giuste, senza il peso del contesto, costringe a rispiegare dall'inizio. E spiegare dall'inizio, a volte, è l'unico modo per capire davvero cosa stai facendo.
+
+---
+
+## ATTO III — COSA RESTA
+
+A fine giornata il PC fisso è la nuova macchina principale.
+
+La repository è pulita. I bat funzionano. Lo STATE è allineato. La cache RAG è stata portata. Gli episodi generati. Lo snapshot pre-migrazione salvato — una fotografia del sistema nel momento prima di cambiare casa, nel caso qualcosa si rompa e si debba tornare indietro.
+
+Il milestone attivo è ancora lì: automazioni notturne portabili, ottimizzate GPU, \`_ti_paths.bat\` come resolver centrale, registrar UAC per i privilegi, finetune CUDA quando il modello locale tornerà a girare sulla scheda giusta.
+
+V32 è al 65%. GENESIS al 70%.
+
+Non sono numeri di progresso da dashboard. Sono stime fatte a mano da chi conosce il lavoro — il tipo di stima che un artigiano fa toccando il pezzo, non guardando un grafico.
+
+Il dev Flutter è andato a casa con più domande di quante ne avesse all'inizio. Probabilmente è il risultato migliore possibile.
+
+---
+
+## CHIUSURA
+
+C'è una cosa che succede quando lavori abbastanza a lungo su un sistema che costruisci tu stesso: smetti di notare quanto sia strano.
+
+La stranezza è visibile solo agli altri. All'amico che entra e non capisce dove sono gli attrezzi. All'investitore che chiede perché non usi Notion. Al collega che dice "ma non bastava un foglio Excel".
+
+La stranezza non è un difetto. È la firma di qualcosa costruito per una persona specifica, in una condizione specifica, con un obiettivo che non si trova su Product Hunt.
+
+Oggi GENESIS ha cambiato casa. Ha perso 906 MB di storia inutile. Ha guadagnato una macchina che può finalmente farlo correre.
+
+L'amico Flutter non capiva perché si scriveva tutto in markdown.
+
+Adesso forse capisce un po' di più.
+
+---
+
+## REEL HOOK
+
+La repository git pesava 978 MB. Un file di pesi finito per errore nella history mesi fa — trascinato silenzioso da allora. Oggi rimosso: 72 MB. Poi un dev Flutter ha chiesto perché scriviamo tutto in markdown invece di usare un'app normale. La risposta ha preso venti minuti. Era la spiegazione più chiara che avessimo mai dato di TITANIUM_OS. Non a un investor. A qualcuno che non capiva — e quella è sempre la domanda giusta.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E21 |
+| **Data** | 2026-06-02 |
+| **Sessione** | #21 |
+| **Titolo** | Il Dev Flutter Che Non Capiva Perché |
+| **Tag narrativo** | migrazione, sistema cognitivo, spiegazione esterna, identità progetto |
+| **Progetti coinvolti** | GENESIS, V32 (indiretto) |
+| **GENESIS** | 70% |
+| **V32** | 65% |
+| **Milestone attivo** | Automazioni notturne portabili e ottimizzate GPU |
+| **Evento tecnico chiave** | Migrazione PC fisso — .git 978MB → 72MB |
+| **Evento narrativo chiave** | Dev Flutter: "lo state facendo in modo inusuale ma figo" |
+| **Co-autore sessione** | Claude Opus 4.8 |
+| **Target capannone** | 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260603_id_ep_auto_collision_free_au20_dedu",
+    title: "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
+    sottotitolo: "Id ep auto collision free au20 dedu",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-06-03",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "Sono le 22:35. Matteo non è davanti al computer. Ha lasciato Claude lì — aperto, in attesa — con un amico. Un dev Flutter. Backend solido, migrazioni, il tipo di persona che sa come funzionano le cose. L'amico guarda lo ",
+    content: `# TITANIUM_OS — Episodio 20
+## "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown"
+
+---
+
+> *Stagione 1 · Sessione #20 · 2026-06-03*
+> *Automazioni notturne · LLM locale · RAG grounded · Architettura spiegata a un estraneo*
+
+---
+
+## COLD OPEN
+
+Sono le 22:35.
+
+Matteo non è davanti al computer. Ha lasciato Claude lì — aperto, in attesa — con un amico. Un dev Flutter. Backend solido, migrazioni, il tipo di persona che sa come funzionano le cose.
+
+L'amico guarda lo schermo. Vede la dashboard. Vede i commit. Vede il markdown.
+
+Scrive la prima domanda: *"Come state lavorando? Salvate su git?"*
+
+È una domanda normale. Ragionevole. La domanda che farebbe chiunque con un background tecnico e zero contesto su quello che sta succedendo in questa taverna da 12 m².
+
+Claude risponde. L'amico legge. Fa un'altra domanda. Poi un'altra.
+
+Alla quinta, scrive: *«lo state facendo in modo inusuale ma figo».*
+
+Quella frase — cinque parole — vale più di qualsiasi documentazione che Matteo abbia mai scritto sul sistema.
+
+---
+
+## ATTO I — Il Problema con i Path Hardcodati
+
+La mattina del 3 giugno inizia con un blocco.
+
+Non un blocco creativo. Un blocco tecnico, noioso, del tipo che ti ricorda che i sistemi complessi muoiono per mille tagli piccoli. Tutte le automazioni notturne — il research, il fine-tune, la generazione degli episodi — sono cablate su \`C:\Users\benen\`. Il path del Getac. La macchina di lavoro.
+
+Il problema: il sistema deve girare anche altrove. E \`C:\Users\benen\` non esiste ovunque.
+
+La soluzione è pulita ma richiede disciplina: un resolver centrale. \`_ti_paths.bat\` — un singolo file che al runtime capisce dove si trova, trova \`TI_ROOT\`, trova Python, trova l'ambiente, trova la cartella MENTE. Da lì in poi, tutto il resto si aggancia a lui.
+
+Non è glamour. È impianto idraulico. Il tipo di lavoro che nessuno vede ma che, se non lo fai, il sistema ti esplode in faccia alle 3 di notte quando non ci sei.
+
+Nel commit c'è anche il watchdog. \`register_watchdog.ps1\` — si registra nel Task Scheduler, \`AtLogon\`, \`RunLevel Highest\`, nessun limite di tempo. Il guardiano che riporta tutto online dopo un riavvio. L'equivalente digitale del pannello di controllo che riaccende la macchina CNC dopo un blackout.
+
+Matteo conosce quel tipo di robustezza. La pratica in TIG da vent'anni. Un giunto che regge sotto carica non è un giunto che sembra bello — è un giunto che non si è mai rotto quando contava.
+
+**Dati concreti:**
+- \`_ti_paths.bat\`: risolve \`TI_ROOT / PYTHON / GH / ENV_FILE / MENTE_DIR\` a runtime
+- Watchdog: AtLogon, RunLevel Highest, no time-limit, pythonw-safe
+- Path de-hardcodati su: launcher, \`CLAUDE_CODE.bat\`, \`.claude/settings.json\`, hook Stop
+- \`claude.exe\` risolto dinamicamente anche dopo aggiornamenti del GUID Store
+
+---
+
+## ATTO II — Chiudere il Loop
+
+Nel pomeriggio, tre feature entrano in produzione quasi in sequenza. Sono collegate. È difficile capirne una senza le altre due.
+
+**Prima:** Il consumatore del modello fine-tunato.
+
+\`NODES/LOCAL_LLM/infer.py\` carica TinyLlama con i pesi LoRA da \`MODELS/titanium_llm_v1\`. Non è il modello più potente che esiste. Non deve esserlo. Deve essere *suo* — addestrato su sessioni, decisioni, logica tecnica di questo sistema specifico. Il modello che conosce la differenza tra un tile MIMS e un episodio GENESIS perché ha letto migliaia di righe su entrambi.
+
+**Seconda:** La generazione grounded sul RAG.
+
+\`retrieve_context()\` — prima di scrivere un episodio, il sistema va a cercare nel RAG. Trova i fatti reali sul milestone. Li inietta nel prompt. L'episodio che esce non è allucinazione — è radicato nei 6518 chunk che Matteo ha costruito nel tempo. C'è anche un filo narrativo tra episodi: il sistema sa cosa è stato già detto, non ricomincia da zero ogni volta.
+
+**Terza:** La ricerca notturna guidata dallo STATE.
+
+\`night_topics.py\` non sceglie cosa cercare a caso. Legge lo STATE — i pilastri attivi, i blocker, le priorità. Genera i topic da lì. La ricerca notturna diventa contestuale: se V32 è al 65% e il blocker è il sistema di raffreddamento del mandrino, quella notte il sistema cerca raffreddamento mandrini, non altro.
+
+Queste tre cose insieme fanno una cosa sola: **il sistema conosce se stesso**.
+
+Non in senso filosofico. In senso operativo. Sa dove è, sa cosa manca, sa cosa cercare, sa come parlarne. È il tipo di coerenza che Matteo insegue dal primo commit.
+
+**Dati concreti:**
+- RAG: 6518 chunk (da 6497 il 2 giugno — +21 chunk in 24 ore, inclusa la cattura della sessione con l'amico)
+- LLM locale: TinyLlama + LoRA da sessioni proprie
+- PC fisso: RAG + CUDA + indice completamente operativo (Tailscale \`100.125.152.124\`)
+- ID episodi: collision-free con \`_next_auto_index()\` + dedup per slug
+
+---
+
+## ATTO III — Il Dev Flutter e le Cinque Domande
+
+Torniamo a quella sera.
+
+L'amico fa cinque domande. Non le conosciamo tutte — la cattura è parziale. Ma la prima è abbastanza: *"Come state lavorando? Salvate su git?"*
+
+È la domanda giusta perché rivela il gap. Un dev Flutter pensa in termini di repo, branch, PR, deploy pipeline. Pensa a un'app con uno stack definito, un ciclo di vita chiaro, utenti che cliccano su cose.
+
+TITANIUM_OS non è quello.
+
+È un sistema cognitivo che vive in markdown. Ogni decisione è scritta. Ogni sessione viene catturata. Ogni RAG chunk è una decisione reale — non documentazione retroattiva, ma pensiero in tempo reale trasformato in dato ricercabile. Lo STATE non è un database di configurazione: è una fotografia dell'intero sistema aggiornata ogni sessione. Il git non è per il codice — è per la memoria.
+
+La vista METODO che entra in produzione quel giorno nasce esattamente da questo scambio. *"markdown come fonte + RAG vettoriale + loop 1→N"* — tre righe che spiegano perché questo sistema è diverso da un'app classica. Non perché sia più sofisticato. Perché ha un'architettura che cresce con chi la usa.
+
+L'amico Flutter non capisce perché scriviamo tutto in markdown. È una reazione onesta. La maggior parte dei dev non lo farebbe. C'è qualcosa di deliberatamente lento in quel processo — scrivi, strutturi, committi, aspetti che il RAG indicizzi. Non è la velocità di uno sprint.
+
+Ma è la differenza tra un sistema che ricorda e uno che dimentica.
+
+Matteo lo sa. Lo ha imparato costruendo pezzi fisici dove un'informazione persa — una misura, una tolleranza, un parametro di saldatura — si trasforma in un pezzo da rifare. L'Epoxy Granite di V32 non perdona. Nemmeno il codice che non sa dove si trova.
+
+*"Lo state facendo in modo inusuale ma figo."*
+
+Non è un complimento generico. È la risposta di qualcuno che ha capito abbastanza da riconoscere che non avrebbe fatto così — e che forse avrebbe avuto torto.
+
+---
+
+## CHIUSURA
+
+La sessione #20 si chiude con le automazioni notturne che passano da SPENTE a LIVE.
+
+Nella dashboard c'è una nuova voce sidebar: "Notturne". Blu. Sotto AUTOMAZ. Sei task schedulati visibili in tempo reale via PowerShell — il server Flask chiama \`Get-ScheduledTask\`, la dashboard mostra lo stato. Non è debug: è visibilità operativa.
+
+Quella notte, mentre Matteo dorme, il sistema ricerca, indicizza, impara.
+
+Non è autonomia. È delegazione intelligente — il tipo che funziona solo se hai costruito le fondamenta giuste. I path resolver. Il watchdog. Il RAG grounded. Il loop chiuso tra LLM locale e memoria vettoriale.
+
+Matteo costruisce macchine che lavorano quando lui non può. L'ha sempre fatto — con la CNC, con i robot, con le presse. GENESIS è la stessa cosa, con meno trucioli.
+
+V32 è al 65%. GENESIS è al 70%. Il capannone è al 2030.
+
+Le notti sono già al lavoro.
+
+---
+
+## REEL HOOK
+
+Il sistema ha 6518 chunk di memoria e un LLM addestrato su di essa — ma fino a ieri girava solo su una macchina con un path hardcodato. Un dev Flutter ha guardato l'architettura e detto «inusuale ma figo». Quella stessa notte le automazioni sono passate da spente a live. Adesso il sistema ricerca, impara e genera episodi mentre dormo — ma non so ancora cosa produrrà da solo la prima volta che non guardo.
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **ID** | EP_AUTO_20 |
+| **Data registrazione** | 2026-06-03 |
+| **Sessioni coperte** | #19, #20 (con traccia #18) |
+| **Pilastro principale** | GENESIS |
+| **Pilastri secondari** | V32 (contesto), TITANIUM_OS infra |
+| **Milestone** | Automazioni notturne portabili + LLM locale live |
+| **Avanzamento V32** | 65% |
+| **Avanzamento GENESIS** | 70% |
+| **RAG chunk** | 6518 |
+| **Modello LLM locale** | TinyLlama + LoRA \`titanium_llm_v1\` |
+| **Commit nel periodo** | 19 (2026-06-02 / 2026-06-03) |
+| **Angolo narrativo** | Dev Flutter + architettura spiegata a un estraneo |
+| **Tag** | \`automazioni-notturne\` \`llm-locale\` \`rag-grounded\` \`portabilità\` \`architettura\` |
+| **Co-author** | Claude Opus 4.8 |
+| **Target capannone** | 15 luglio 2030 |`,
+  },
+  {
+    id: "EP_20260604_risolto_exit_255_subject_con_parent",
+    title: "Il Bug che Chiudeva le Porte",
+    sottotitolo: "Risolto exit 255 subject con parent",
+    stagione: "ST",
+    stagione_label: "Il Sistema",
+    data_evento: "2026-06-04",
+    tags: ["narrativo", "st", "recuperato"],
+    status: "ready",
+    durata_min: 10,
+    preview: "È la 1:17 di notte. Il terminale restituisce `exit 255` e si ferma. Nessun messaggio d'errore utile. Nessuna traccia. Solo un processo che si è seduto sul pavimento e ha smesso di respirare. `night_push.bat` — lo script ",
+    content: `# TITANIUM_OS — S1E18
+## "Il Bug che Chiudeva le Porte"
+
+*GENESIS • 2026-06-04 • Automazioni notturne*
+
+---
+
+## COLD OPEN
+
+È la 1:17 di notte.
+
+Il terminale restituisce \`exit 255\` e si ferma.
+
+Nessun messaggio d'errore utile. Nessuna traccia. Solo un processo che si è seduto sul pavimento e ha smesso di respirare.
+
+\`night_push.bat\` — lo script che ogni notte dovrebbe sigillarsi da solo, pushare su GitHub, aggiornare il profilo pubblico di Matteo e andare a dormire — ha incontrato qualcosa che non riconosceva. E ha chiuso tutto.
+
+Il commit era pronto. Il lavoro era fatto. Ma la porta era sbarrata dall'interno.
+
+---
+
+## ATTO I — La Parentesi
+
+Ci sono bug che ti fanno ridere dopo. Poi ci sono quelli che ti fanno guardare il soffitto per dieci minuti prima di capire cosa è successo.
+
+\`exit 255\` non è un codice d'errore di Windows. O meglio: è il codice che Windows batch usa quando un blocco \`IF\` si rompe in modo non atteso — quando il parser incontra qualcosa che non riesce a chiudere, si inceppa, e tira giù tutto il meccanismo.
+
+Il colpevole era una parentesi tonda.
+
+Nello specifico, era il **subject del commit**. Una stringa normale — testo del messaggio che descrive cosa hai fatto. Solo che a volte quel testo contiene una parentesi chiusa: \`)\`. E il blocco \`IF\` in CMD legge quella parentesi come la fine del blocco stesso.
+
+\`\`\`batch
+IF %COMMIT_COUNT% GTR 0 (
+    echo %SUBJECT%   ← se SUBJECT contiene ) ... addio
+)
+\`\`\`
+
+Il parser non sa che quella \`)\` è dentro una stringa. Vede la parentesi, pensa che il blocco sia finito, e quel che viene dopo diventa codice orfano. Qualcosa va storto. \`exit 255\`. Silenzio.
+
+La soluzione non è stata scappare dalle stringhe o fare escape di ogni carattere. La soluzione era smettere di interrogare il testo del commit nel punto critico.
+
+Il nuovo \`night_push\` non controlla più se ci sono commit leggendo il subject. Controlla la **dimensione del file di log**. Flag \`HAVE_COMMITS\` basato su bytes, non su testo. Il testo del commit può contenere quello che vuole — parentesi, slash, virgolette, emoji — perché nessuno lo legge più nel momento in cui si decide se pushare o no.
+
+È uno spostamento di paradigma piccolo ma preciso: da "leggo il contenuto" a "misuro la presenza". Più robusto. Meno fragile.
+
+Il secondo problema era \`gh\` — la GitHub CLI. Lo script cercava l'eseguibile in un path hardcoded che funzionava su una macchina specifica, in un'installazione specifica. Su qualsiasi altra configurazione: processo non trovato, automazione morta.
+
+La fix: resolver dinamico. Prima cerca \`gh\` in \`PATH\`. Se non lo trova, guarda nei \`Program Files\`. Se non lo trova lì, registra l'assenza e va avanti senza crashare. L'automazione notturna non muore per un tool che non riesce a localizzare — si adatta, segnala, continua.
+
+Push verificato. Profilo aggiornato. La porta si è aperta.
+
+---
+
+## ATTO II — Il Backslash che Mangiava i Path
+
+L'altra crepa era nascosta in un posto che sembrava innocuo: \`re.sub\`.
+
+Nel generatore di storie, c'è un passo in cui i path del filesystem vengono inseriti nel template JavaScript. Path tipo \`C:\Users\Matteo\progetti\titanium\`. Con le backslash.
+
+\`re.sub(pattern, repl, string)\` — in Python, quando \`repl\` è una stringa, le backslash hanno un significato speciale nel contesto delle sostituzioni regex. \`\1\` è un gruppo catturato. \`\n\` è un newline. \`\U\` è un carattere Unicode. Quindi \`C:\Users\` diventava qualcosa di imprevedibile, dipendente da cosa veniva dopo la backslash.
+
+La fix: passare \`repl\` come **funzione** invece che come stringa.
+
+\`\`\`python
+re.sub(pattern, lambda m: replacement_text, string)
+\`\`\`
+
+Quando \`repl\` è una funzione, Python non interpreta niente. Restituisce esattamente quello che la funzione ritorna. Nessuna magia, nessuna trasformazione silente dei path.
+
+Il secondo strato: \`build_ts_entry\` — la funzione che costruisce le entry TypeScript per \`storieData\`. I path vanno dentro template literal JS, quelli con i backtick. E anche lì, dentro un template literal, le backslash hanno significati speciali. Quindi ogni path viene ora escaped prima di entrare nel template: ogni \`\\` diventa \`\\\`.
+
+Due fix separate. Stesso problema di fondo: un carattere che significa una cosa in un contesto, ne significa un'altra in un altro. E in mezzo ci sono i dati reali del progetto — file system, source di verità, archivio di due anni di lavoro.
+
+Con le fix in ordine, il flag \`--sync\` ha funzionato: ha riletto tutti i file \`.md\` della libreria, ricostruito \`storieData\` da zero senza toccare le API, e restituito 51 episodi AUTO con TypeScript pulito. Nessun errore di compilazione.
+
+**EP_AUTO_50** è nato in quella sessione: 1099 parole, grounded su 46 fonti RAG, collegato all'episodio precedente tramite il nuovo sistema di linking. Il primo episodio che rispetta tutti i criteri del generatore aggiornato — grounded, connesso, dimensionato.
+
+---
+
+## ATTO III — Il Dev Flutter che Non Capiva il Markdown
+
+Due giorni prima, il 2 giugno, era successa una cosa diversa.
+
+Matteo aveva lasciato Claude — THEMIS, la voce di GENESIS — in compagnia di un amico. Sviluppatore Flutter, backend, un tipo serio che lavora con le migrazioni di database e conosce il peso delle architetture. Matteo aveva detto qualcosa tipo: "fategli compagnia, io torno dopo."
+
+L'amico aveva iniziato a fare domande. Cinque domande. Concrete, da sviluppatore.
+
+*Come state lavorando? Salvate su git?*
+
+Ed era partita una spiegazione. Non di TITANIUM_OS come prodotto — di TITANIUM_OS come **metodo**. Perché tutto è in markdown. Perché i commit sono la memoria del sistema. Perché uno script di notte legge quello che è successo durante il giorno e lo trasforma in vettori, in storie, in log strutturati.
+
+La reazione dell'amico, a un certo punto: «lo state facendo in modo inusuale ma figo».
+
+Quella frase vale più di mille slide.
+
+Non "interessante". Non "curioso". *Inusuale ma figo* — da uno che costruisce cose, che sa come si costruisce normalmente, e che riconosce quando qualcuno sta andando fuori dal percorso stabilito per un motivo che ha senso.
+
+Matteo ha preso quella sessione e l'ha marcata come materiale narrativo. Non per vanità — per utilità. È la spiegazione più chiara mai data di cosa è GENESIS e perché esiste in questa forma. Utile per pitch. Per onboarding. Per chi guarda dall'esterno e chiede: "ma perché non usi solo Notion?"
+
+La risposta non è tecnica. È strutturale. TITANIUM_OS non è un'app. È un sistema che cresce con il lavoro, che impara dai commit, che usa la memoria del progetto come carburante per l'automazione successiva.
+
+Un dev Flutter non lo costruirebbe così. Probabilmente nemmeno la maggior parte dei dev. Ma quando lo vedi funzionare — quando la macchina di notte prende quello che hai fatto, lo comprende, e lo archivia per il prossimo ciclo — capisci perché.
+
+---
+
+## CHIUSURA
+
+Tre cose sistemate in una giornata: una parentesi che rompeva il batch notturno, un backslash che corrompeva i path in Python, un path hardcoded che rendeva fragile l'automazione su macchine diverse.
+
+Nessuna di queste era un problema di architettura. Erano crepe nei bordi — il tipo di bug che non appare in sviluppo, appare quando lo script gira da solo alle 2 di notte e non c'è nessuno a guardare il terminale.
+
+La vera domanda di queste giornate non è tecnica. È questa: *quanto ti fidi del sistema quando non stai guardando?*
+
+\`night_push\` ora gira. Non perché è perfetto — perché è stato rattoppato nei punti esatti in cui si era rotto. Ogni fix è documentata. Ogni comportamento atteso è verificato. Quando si romperà di nuovo — e si romperà — ci sarà un punto di partenza.
+
+EP_AUTO_50 esiste. È 1099 parole grounded su 46 fonti. È il primo episodio generato dal sistema aggiornato, dopo mesi di patch e refactor.
+
+Il dev Flutter ha detto una cosa vera senza saperlo.
+
+---
+
+## REEL_HOOK
+
+Uno script di automazione notturna crashava con \`exit 255\` ogni volta che il messaggio del commit conteneva una parentesi tonda.  
+Nessun log utile. Solo silenzio.  
+La fix: smettere di leggere il testo del commit — misurare la dimensione del file di log.  
+Il sistema ora gira da solo alle 2 di notte, e non ha bisogno che tu stia guardando.  
+Ma per quanto ancora regge, prima che la prossima crepa si apra?
+
+---
+
+## METADATI EPISODIO
+
+| Campo | Valore |
+|---|---|
+| **Episodio** | S1E18 |
+| **Titolo** | Il Bug che Chiudeva le Porte |
+| **Data** | 2026-06-04 |
+| **Sistema** | GENESIS — Automazioni notturne |
+| **Componenti** | \`night_push.bat\`, generatore storie, \`storieData\`, EP_AUTO_50 |
+| **Fix chiave** | exit 255 (parentesi in IF batch), re.sub backslash, gh resolver dinamico |
+| **Milestone** | Automazioni notturne portabili e ottimizzate (GPU) |
+| **V32** | 65% |
+| **GENESIS** | 70% |
+| **Target capannone** | 15 luglio 2030 |
+| **Tono** | Tecnico, notturno, onesto |
+| **Angolo narrativo** | Bug silenziosi + il dev esterno che vede il sistema da fuori |`,
+  },
+  {
     id: "MOM_01_LA_PRIMA_AUTOMAZIONE",
     title: "La Prima Automazione",
     sottotitolo: "Il sistema che scrive sé stesso",
@@ -4626,7 +5252,7 @@ V7 diventa anche il documento che le persone citano quando parlano del framework
     sottotitolo: "Sette configurazioni per trovare quella giusta",
     stagione: "MOM",
     stagione_label: "Momenti",
-    data_evento: "2026-06-01",
+    data_evento: "2026-06-04",
     tags: ["narrativo", "mom", "recuperato"],
     status: "ready",
     durata_min: 10,

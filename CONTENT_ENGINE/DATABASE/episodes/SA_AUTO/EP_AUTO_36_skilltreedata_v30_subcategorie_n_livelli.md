@@ -1,0 +1,101 @@
+<!-- TOC -->
+
+- [EP_AUTO_36  Milestone](#epauto36-milestone)
+    - [skillTreeData v3.0  sub-categorie N livelli su tutti i nodi](#skilltreedata-v30-sub-categorie-n-livelli-su-tutti-i-nodi)
+- [IL SISTEMA  Episodio: skillTreeData v3.0](#il-sistema-episodio-skilltreedata-v30)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Prima della mappa, il caos](#atto-i-prima-della-mappa-il-caos)
+  - [ATTO II  skillTreeData v3.0: cosa ho fatto davvero](#atto-ii-skilltreedata-v30-cosa-ho-fatto-davvero)
+  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
+# EP_AUTO_36 — Milestone
+### "skillTreeData v3.0 — sub-categorie N livelli su tutti i nodi"
+
+---
+id: EP_AUTO_36
+title: "skillTreeData v3.0 — sub-categorie N livelli su tu"
+sottotitolo: "Milestone verificato · auto-generato"
+stagione: AUTO
+stagione_label: "Generato"
+data_evento: 2026-06-03
+data_generato: 2026-06-03
+tags: [auto_generato, milestone, titanium_os]
+status: ready
+durata_min: 8
+formato: podcast
+fonte: STATE.json → milestones.verified
+llm_use: training
+lingua: it
+milestone_originale: "skillTreeData v3.0 — sub-categorie N livelli su tutti i nodi (Mag 2026)"
+---
+
+# IL SISTEMA — Episodio: skillTreeData v3.0
+
+---
+
+## COLD OPEN
+
+Stavamo finendo di cablare ARGUS v2.0, OmniParser e Sonnet insieme, un occhio ibrido che legge lo schermo come lo leggerei io. Quella sessione mi ha lasciato una frase in testa che non riuscivo a togliermi: *la precisione non è compatibile con il movimento casuale.* L'ho scritta nel log e poi ci ho dormito sopra. Il giorno dopo ho capito che non stavo parlando solo della macchina.
+
+---
+
+## ATTO I — Prima della mappa, il caos
+
+Devo essere onesto su com'era la situazione prima di maggio 2026.
+
+Avevo cinque progetti attivi in parallelo: V32 al sessantacinque percento, MIMS bloccato in attesa della pressa al trenta, GENESIS in costruzione al settanta, VITA_NATURA operativo ma grezzo al quaranta, IDENTITY a metà strada. Ognuno con le sue sessioni, i suoi file, le sue decisioni sparse su documenti che si accumulavano senza una struttura che li tenesse in relazione. Il sistema RAG v4.0 ibrido — BM25 più semantico più CrossEncoder più incrementale — me lo ero costruito apposta per navigare in quel materiale, ma il problema non era trovare l'informazione. Era capire *dove stavo*.
+
+Un artigiano in officina sa esattamente dove si trova su un pezzo: vede le quote, tocca il materiale, sente il suono della fresa. Con il sistema era diverso. Avevo competenze mappate — saldatura TIG/MIG su titanio e inox, quindici anni su scarichi MotoGP con SCProject, programmazione robot e cobot tre anni con ESSEGI, manutenzione presse idrauliche — ma non avevo un modo per vedere tutte queste cose insieme e capire quale skill stava alimentando quale progetto, quale nodo era bloccato, quale era pronto per essere sbloccato.
+
+Il vecchio skill tree era piatto. Aveva nodi, aveva colori, aveva percentuali. Ma era come avere una fresatrice senza assi Z: puoi muoverti in piano quanto vuoi, la profondità non la tocchi mai.
+
+Dalla documentazione V6.0 — ottanta pagine scritte in quell'audit — era già emerso che la skill tree era mappata su centocinquanta livelli distribuiti su tre alberi. I numeri c'erano già. Mancava la struttura che li rendesse navigabili in modo coerente.
+
+---
+
+## ATTO II — skillTreeData v3.0: cosa ho fatto davvero
+
+La svolta è arrivata con una decisione architettonica precisa: nessuna sezione del sistema può avere un singolo livello di profondità.
+
+Suona banale detto così. Non lo è.
+
+Quando ho iniziato a costruire skillTreeData v3.0, ho preso ogni nodo e l'ho obbligato a diramarsi. Non perché mi piacesse l'estetica degli alberi, ma perché una competenza senza sotto-competenze è una dichiarazione vuota. Dire "so programmare un robot" non dice niente. Dire che so fare path planning su cobot collaborativi, che so gestire un'emergenza elettrica su una cella automatizzata, che so integrare un encoder esterno su un asse servoassistito — quello dice qualcosa. Quelli sono nodi reali. Quelli hanno un peso.
+
+Ho preso MIMS e l'ho aperto in cinque aree: connettori modulari, tolleranze di montaggio, compatibilità materiali, cicli di test, documentazione cliente. Ogni area con i suoi sotto-nodi. L'albero di MIMS non è ancora completo perché MIMS è in attesa della pressa — e questo è un dato che si vede nell'albero stesso: i nodi che dipendono da VULCAN sono marcati come bloccati. Non è una nota a margine. È struttura.
+
+GENESIS ha sei aree infrastrutturali: alimentazione elettrica, logica di controllo, interfaccia operatore, sicurezza attiva, manutenzione predittiva, integrazione con il resto del sistema. Settanta percento completato significa che quattro aree su sei sono in stato avanzato, due hanno ancora lavoro aperto — e nell'albero si vede esattamente quali.
+
+La sezione che mi ha preso più tempo è stata MatteoSection v3.0. Quello è lo skill tree personale, le caselle sbloccabili legate alle milestone di V32. Ogni volta che chiudo una fase sulla fresatrice, si sblocca qualcosa nella mappa. Non è una metafora. È un meccanismo concreto: ho definito le dipendenze in modo che alcune competenze non possano essere dichiarate acquisite finché non ho una milestone reale a cui agganciarle. Se non ho completato la configurazione degli assi Z e U su V32 — e ho ancora quei rinforzi delle colonne da verificare dalla sessione del 29 maggio — quella casella rimane chiusa.
+
+CriticheSection v1.0 è l'audit a N livelli su sei aree di progetto. L'ho costruita per ultima perché volevo che fosse onesta: non un posto dove mettere le cose che funzionano, ma uno strumento per vedere dove sono vulnerabile. Sei aree, ognuna con i suoi livelli, ognuna con una valutazione che non cambia se non cambia qualcosa nel mondo fisico.
+
+La mappa visualizzata è fatta di cerchi. Ogni cerchio principale è un progetto o una dimensione di sistema. Ogni cerchio si apre in sotto-cerchi. Ogni sotto-cerchio ha un colore che dipende dallo stato reale. Quando guardo quella mappa, vedo il sistema come vedrei un pezzo sul bancone: posso girarlo, aprire un'area, entrare nel dettaglio, uscire. Posso capire dove è fermo e perché.
+
+---
+
+## ATTO III — Cosa si sblocca adesso
+
+La prima conseguenza concreta è che ora posso fare triage in modo affidabile.
+
+MIMS è al trenta percento e lo rimarrà finché VULCAN non è operativo. Questo non è un problema — è un dato. Prima di v3.0 quel trenta percento mi pesava come un fallimento. Adesso lo leggo per quello che è: una dipendenza esterna su una macchina che sto ancora costruendo. Il lavoro su MIMS che posso fare senza la pressa è mappato, è identificabile, e posso farlo avanzare su quei nodi specifici senza aspettare.
+
+GENESIS al settanta percento con sei aree infrastrutturali mappate significa che posso lavorare sulle due aree aperte in modo chirurgico. Niente movimenti casuali, appunto.
+
+Per V32, le caselle sbloccabili di MatteoSection mi danno un percorso: chiudo la verifica sui rinforzi delle colonne Z e U, aggiorno lo stato nella mappa, e si apre il livello successivo. Non è gamification. È una catena di dipendenze reali che mi impedisce di raccontarmi che qualcosa è fatto quando non lo è.
+
+VITA_NATURA e EVA sono al quaranta percento — il centro estetico gestito con AI sta girando, ma c'è ancora lavoro sull'interfaccia operatore e sull'integrazione con il flusso di dati. Nell'albero, quelle aree sono visibili. Le priorità sono chiare.
+
+Il prossimo passo immediato è agganciarsi all'audit bottleneck uscito dalla sessione del 28 maggio — RAG v4.0 è operativo, il sistema sa dove cercare, ma l'albero mi dice anche dove *non* cercare, che è altrettanto importante. Meno entropia, più segnale.
+
+Ho centocinquanta livelli mappati su tre alberi. Adesso sono navigabili.
+
+---
+
+## CHIUSURA
+
+*La precisione non è compatibile con il movimento casuale. E una mappa che non ti dice dove sei fermo è solo decorazione.*
+
+---
