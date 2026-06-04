@@ -109,20 +109,26 @@ def esc_str(s: str) -> str:
     return s.replace("\\", "\\\\").replace('"', '\\"')
 
 
+def _js(s) -> str:
+    """Stringa JS sicura via JSON: escapa backslash/backtick/virgolette/newline/${.
+    Bulletproof, niente template literal fragili (i contenuti hanno path e regex)."""
+    return json.dumps(s, ensure_ascii=False)
+
+
 def to_ts(ep: dict) -> str:
     return (
         "  {\n"
-        f'    id: "{esc_str(ep["id"])}",\n'
-        f'    title: "{esc_str(ep["title"])}",\n'
-        f'    sottotitolo: "{esc_str(ep["sottotitolo"])}",\n'
-        f'    stagione: "{ep["stagione"]}",\n'
-        f'    stagione_label: "{esc_str(ep["stagione_label"])}",\n'
-        f'    data_evento: "{ep["data_evento"]}",\n'
-        f'    tags: {json.dumps(ep["tags"])},\n'
-        f'    status: "{ep["status"]}",\n'
+        f'    id: {_js(ep["id"])},\n'
+        f'    title: {_js(ep["title"])},\n'
+        f'    sottotitolo: {_js(ep["sottotitolo"])},\n'
+        f'    stagione: {_js(ep["stagione"])},\n'
+        f'    stagione_label: {_js(ep["stagione_label"])},\n'
+        f'    data_evento: {_js(ep["data_evento"])},\n'
+        f'    tags: {json.dumps(ep["tags"], ensure_ascii=False)},\n'
+        f'    status: {_js(ep["status"])},\n'
         f'    durata_min: {ep["durata_min"]},\n'
-        f'    preview: "{esc_str(ep["preview"])}",\n'
-        f'    content: `{esc_tpl(ep["content"])}`,\n'
+        f'    preview: {_js(ep["preview"])},\n'
+        f'    content: {_js(ep["content"])},\n'
         "  },"
     )
 

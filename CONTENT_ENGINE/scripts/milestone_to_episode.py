@@ -286,28 +286,31 @@ def save_episode_md(ep_id: str, milestone: str, content: str, date: str) -> Path
     return filepath
 
 
+def _js(s) -> str:
+    """Stringa JS sicura via JSON (escapa backslash, backtick, virgolette, newline, ${).
+    Bulletproof: impossibile rompere il parsing (a differenza dei template literal)."""
+    return json.dumps(s, ensure_ascii=False)
+
+
 def build_ts_entry(ep_id: str, milestone: str, date: str, content: str) -> str:
-    """Genera entry TypeScript per storieData.ts."""
+    """Genera entry TypeScript per storieData.ts (stringhe via JSON, no template literal)."""
     title = milestone[:50].rstrip(".,")
     subtitle = milestone_to_subtitle(milestone)
-    preview = content[:150].replace('"', '\\"').replace('\n', ' ').strip()
-    # escapa prima i backslash (path C:\... nei template literal JS), poi backtick e ${
-    content_escaped = content.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
-    tags_raw = ["auto_generato", "milestone"]
-    tags = json.dumps(tags_raw)
+    preview = content[:150].replace('\n', ' ').strip()
+    tags = json.dumps(["auto_generato", "milestone"])
 
     return f"""  {{
-    id: "{ep_id}",
-    title: "{title}",
-    sottotitolo: "{subtitle}",
+    id: {_js(ep_id)},
+    title: {_js(title)},
+    sottotitolo: {_js(subtitle)},
     stagione: "AUTO",
     stagione_label: "Generato",
-    data_evento: "{date}",
+    data_evento: {_js(date)},
     tags: {tags},
     status: "ready",
     durata_min: 8,
-    preview: "{preview}",
-    content: `{content_escaped}`,
+    preview: {_js(preview)},
+    content: {_js(content)},
   }},"""
 
 
