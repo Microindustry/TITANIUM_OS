@@ -1,0 +1,71 @@
+{
+  "last_audit": "2026-06-05T15:09:12",
+  "date": "2026-06-05",
+  "git_head": "c716e81",
+  "rag_chunks": 6507,
+  "n_episodes": 106,
+  "n_commits_7d": 129,
+  "pillars": {
+    "V32": 65,
+    "MIMS": 30,
+    "GENESIS": 70,
+    "VITA_NATURA": 40,
+    "IDENTITY": 50
+  },
+  "log_issues": [
+    {
+      "log": "night_research.log",
+      "tipo": "rate-limit sorgente"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "timeout di rete"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "ricerca a vuoto"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "errore esplicito"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "rate-limit sorgente"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "timeout di rete"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "ricerca a vuoto"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "errore esplicito"
+    },
+    {
+      "log": "story_agent.log",
+      "tipo": "crash/eccezione"
+    },
+    {
+      "log": "story_agent.log",
+      "tipo": "errore esplicito"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "crash/eccezione"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "errore esplicito"
+    }
+  ],
+  "critiche": {
+    "added": 6,
+    "total": 6,
+    "open": 6
+  },
+  "verdict": "ATTENZIONE"
+}

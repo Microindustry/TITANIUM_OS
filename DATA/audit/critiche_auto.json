@@ -1,0 +1,74 @@
+[
+  {
+    "id": "AUD-e41e59c419",
+    "date": "2026-06-05",
+    "git": "c716e81",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "129 commit in 7 giorni (media 18/giorno) con il milestone EVA WhatsApp pilot ancora in next_step e non in active_milestone. La velocità di commit è alta ma il focus è frammentato su 6+ fronti simultanei (EVA, RAG, storie, portabilità, watchdog, PITCH). Il rischio concreto è che nessuno dei fronti raggiunga uno stato 'done and stable' prima che venga aperto il successivo.",
+    "azione": "Prima della sessione odierna, scegliere UN solo output consegnabile entro 48h tra: (1) EVA WhatsApp pilot con credenziali reali, (2) watchdog sul fisso stabile, (3) PITCH finalizzato. Congelare gli altri in STATE.parked fino al completamento del primo.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-05"
+  },
+  {
+    "id": "AUD-d6390fac74",
+    "date": "2026-06-05",
+    "git": "c716e81",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "Il contatore chunk è sceso da 6518 (STATE del 3/06) a 6507 stanotte: -11 chunk. Con la pipeline di ricerca in crash totale e nessun ingestion riuscita, il RAG non cresce ma regredisce. Se la pulizia automatica dei duplicati è aggressiva e l'ingestion fallisce, il delta diventa negativo in modo silenzioso.",
+    "azione": "Verificare se il calo è dovuto a dedup/pruning o a un bug di reindexing. Aggiungere un assert nel task notturno: se chunk_count < chunk_count_precedente di oltre il 2%, abortire e loggare CRITICAL invece di sovrascrivere l'indice.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-05"
+  },
+  {
+    "id": "AUD-cdeebaeab3",
+    "date": "2026-06-05",
+    "git": "c716e81",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'silent blocks v.A vs v.B' è aperto senza criterio di chiusura: è una decisione binaria (senza / 18mm) che blocca V8 ma non ha un owner né una deadline. Decisioni di design meccanico lasciate aperte in STATE degradano in paralisi per overthinking.",
+    "azione": "Definire il criterio di scelta in 30 minuti: stimare la frequenza di risonanza attesa della struttura con e senza silent block. Se non si ha un modello FEM, decidere empiricamente con v.B (18mm) come default conservativo e loggare la rationale in DOCS. Chiudere il blocker.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-05"
+  },
+  {
+    "id": "AUD-ccca297c5d",
+    "date": "2026-06-05",
+    "git": "c716e81",
+    "area": "V32",
+    "severity": "alta",
+    "finding": "Il pilastro V32 è al 65% ma il mandrino 2.2kW ER20 non è ancora ordinato e blocca l'intera fresatura stampi MIMS. Non è un blocker generico: senza quel componente fisico nessun avanzamento su MIMS (30%) è possibile. Il pilastro MIMS è già il più basso del sistema e dipende da un'azione di acquisto che non ha una data.",
+    "azione": "Entro oggi: trovare fornitore (es. Teknomotor, HSD, o usato eBay industriale), ottenere preventivo, inserire data di consegna stimata in STATE.blockers. Trasformare il blocker da 'da ordinare' a 'ordinato il GG/MM, consegna stimata GG/MM'.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-05"
+  },
+  {
+    "id": "AUD-1f6ee60ef7",
+    "date": "2026-06-05",
+    "git": "c716e81",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "4 log su 4 mostrano errori espliciti stanotte: night_research, research_agent, story_agent e night_push hanno tutti crash/eccezione + errore esplicito. La pipeline notturna non ha completato un ciclo pulito. Il commit c6b0d86 aveva già fixato exit 255 su night_push, ma il log mostra crash ancora attivi: il fix non ha chiuso il problema o ne ha esposto uno nuovo.",
+    "azione": "Aprire night_push.log e story_agent.log, isolare lo stacktrace dell'eccezione, verificare se il crash di story_agent blocca il push a valle. Se sì, aggiungere try/except con exit code 0 sullo story_agent per non interrompere la catena.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-05"
+  },
+  {
+    "id": "AUD-09d16b31c6",
+    "date": "2026-06-05",
+    "git": "c716e81",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "night_research.log e research_agent.log presentano contemporaneamente rate-limit, timeout di rete, ricerca a vuoto ed errore esplicito — tutti e quattro i tipi di fallimento nella stessa notte. I commit recenti (gate di rilevanza, topic dinamici da STATE) hanno aggiunto logica ma non retry/backoff. Il RAG si nutre di questi agenti: se la ricerca è a vuoto stanotte, i chunk non crescono e il delta 6507→6518 di ieri non si replica.",
+    "azione": "Implementare exponential backoff (3 tentativi, delay 5-30s) sulle chiamate HTTP in research_agent.py e night_research.py. Aggiungere un flag 'partial_success' nel log così il brief mattutino distingue 'zero articoli' da 'crash totale'.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-05"
+  }
+]
