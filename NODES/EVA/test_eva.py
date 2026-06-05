@@ -2,12 +2,18 @@
 # Test offline del cervello EVA: intenti stateless + flusso prenotazione multi-turno.
 # Esegui:  python NODES\EVA\test_eva.py   (exit 0 = tutto verde)
 
+import os
 import sys
+import tempfile
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# Isola la inbox EVA in una cartella temporanea: i test non sporcano DATA/eva.
+os.environ["EVA_DATA_DIR"] = tempfile.mkdtemp(prefix="eva_test_")
+
 import eva_brain
 import eva_session
+import eva_inbox
 
 _fail = 0
 
@@ -50,6 +56,21 @@ conv("C", "vorrei prenotare un massaggio")
 check(eva_session.active("C"), "sessione attiva")
 r = conv("C", "lascia perdere")
 check(r["intent"] == "annulla_prenotazione" and not eva_session.active("C"), "annullato e sessione chiusa")
+
+print("== Slot strutturati nel risultato ==")
+eva_session.reset_session("D")
+conv("D", "vorrei prenotare un massaggio domani alle 16")
+r = conv("D", "Anna")
+check(r.get("slots", {}).get("name") == "Anna", "risultato porta gli slot a flusso completo")
+check(r["slots"].get("time") == "16:00" and "Massaggio" in r["slots"].get("service", ""), "slot service/time corretti")
+
+print("== Inbox handoff ==")
+rec = eva_inbox.record_handoff({"sender": "39333", "intent": "prenotazione",
+                                "reply": "ok", "slots": {"service": "Massaggio", "name": "Anna"}})
+check(rec["status"] == "nuovo" and "ts" in rec, "record con status/ts di default")
+recs = eva_inbox.read_handoffs()
+check(len(recs) >= 1 and recs[-1]["sender"] == "39333", "handoff riletto dalla inbox")
+check(len(eva_inbox.read_handoffs(status="chiuso")) == 0, "filtro status esclude i non-chiusi")
 
 print()
 if _fail:

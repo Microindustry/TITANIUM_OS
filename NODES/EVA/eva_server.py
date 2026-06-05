@@ -40,6 +40,7 @@ except Exception:
     logger = logging.getLogger("eva_server")
 
 import eva_brain
+import eva_inbox
 
 # ── Carica env dal vault (necessario se lanciato da Task Scheduler / login) ────
 _env_file = Path.home() / "TITANIUM_OS" / "_VAULT" / "KEYS" / "titanium_os.env"
@@ -125,9 +126,23 @@ def receive():
                 body = msg.get("text", {}).get("body", "")
                 res = eva_brain.handle_message(body, sender=sender)
                 logger.info("%s [%s] -> %s", sender, res["intent"], res["reply"][:80])
+                # Handoff -> registra in inbox cosi' una persona del centro puo' richiamare
+                if res.get("handoff"):
+                    eva_inbox.record_handoff({
+                        "sender": sender, "intent": res["intent"],
+                        "reply": res["reply"], "slots": res.get("slots"),
+                    })
                 send_whatsapp(sender, res["reply"])
                 results.append(res)
     return jsonify({"handled": len(results), "results": results})
+
+@app.get("/inbox")
+def inbox():
+    # Handoff verso l'operatore (ultimi N, opz. solo i nuovi). Per pannello/n8n.
+    limit = request.args.get("limit", default=50, type=int)
+    only_new = request.args.get("nuovi", default="0") in ("1", "true", "yes")
+    recs = eva_inbox.read_handoffs(limit=limit, status="nuovo" if only_new else None)
+    return jsonify({"count": len(recs), "handoffs": recs})
 
 @app.get("/health")
 def health():

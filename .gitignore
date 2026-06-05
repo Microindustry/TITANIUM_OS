@@ -21,6 +21,8 @@ DATA/daily_brief_last.md
 DATA/computer_use_shots/
 # EVA — config con dati reali del centro (orari/servizi/clienti): non versionare
 NODES/EVA/config.json
+# EVA runtime: inbox handoff (PII cliente) + stato sessioni — MAI in git
+DATA/eva/
 MODELS/
 CONTENT_ENGINE/DATABASE/training/dataset.jsonl
 

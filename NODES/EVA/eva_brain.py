@@ -131,14 +131,17 @@ def compose_reply(text: str, intent: str) -> dict:
 
 # ── API pubblica del cervello ─────────────────────────────────────────────────
 
-def _result(sender, intent, reply, handoff) -> dict:
-    return {
+def _result(sender, intent, reply, handoff, slots=None) -> dict:
+    res = {
         "ts": datetime.now().isoformat(timespec="seconds"),
         "sender": sender,
         "intent": intent,
         "reply": reply,
         "handoff": handoff,
     }
+    if slots:
+        res["slots"] = slots  # slot prenotazione, presenti solo a flusso completo
+    return res
 
 def handle_message(text: str, sender: str | None = None) -> dict:
     """Punto d'ingresso unico: testo -> {intent, reply, handoff, ts, sender}.
@@ -158,7 +161,7 @@ def handle_message(text: str, sender: str | None = None) -> dict:
         res = eva_session.advance(sender, text, match_service)
         if res.get("done"):
             eva_session.reset_session(sender)
-        return _result(sender, "prenotazione", res["reply"], res["handoff"])
+        return _result(sender, "prenotazione", res["reply"], res["handoff"], res.get("slots"))
 
     # 2) Classificazione normale
     intent = classify_intent(text)
@@ -169,7 +172,7 @@ def handle_message(text: str, sender: str | None = None) -> dict:
         res = eva_session.advance(sender, text, match_service)
         if res.get("done"):
             eva_session.reset_session(sender)
-        return _result(sender, "prenotazione", res["reply"], res["handoff"])
+        return _result(sender, "prenotazione", res["reply"], res["handoff"], res.get("slots"))
 
     # 4) Intenti senza stato
     out = compose_reply(text, intent)

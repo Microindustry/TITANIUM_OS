@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [EVA  Assistente WhatsApp (Vita Natura)](#eva-assistente-whatsapp-vita-natura)
+  - [File](#file)
+  - [Provare subito (offline, zero setup)](#provare-subito-offline-zero-setup)
+  - [Collegare WhatsApp vero (quando pronti)](#collegare-whatsapp-vero-quando-pronti)
+  - [Note di design](#note-di-design)
+  - [Prossimi step](#prossimi-step)
+
+<!-- /TOC -->
+
 # EVA — Assistente WhatsApp (Vita Natura)
 
 > Stato: **pilot v0.2** — scaffold dry-run + prenotazione multi-turno (slot-filling).
@@ -12,6 +23,7 @@ in `eva_brain.py` (rule-based, sostituibile con NLU LLM); il webhook Meta in `ev
 |------|-------|
 | `eva_brain.py` | Classifica l'intento e compone la risposta. Testabile offline. |
 | `eva_session.py` | Stato conversazione: prenotazione multi-turno (servizio→giorno→ora→nome). |
+| `eva_inbox.py` | Inbox handoff: registra le richieste passate all'operatore in `DATA/eva/handoffs.jsonl`. |
 | `eva_server.py` | Webhook Flask per WhatsApp Cloud API. Dry-run di default. |
 | `test_eva.py` | Test offline (intenti + flusso prenotazione). `python NODES\EVA\test_eva.py`. |
 | `config.example.json` | Template (orari, servizi, risposte). Copia in `config.json`. |
@@ -58,13 +70,17 @@ python NODES\EVA\eva_server.py
 - **Handoff umano**: per prenotazioni/annullamenti EVA conferma di passare a una persona del
   centro (`handoff=true`), invece di garantire slot che non puo' verificare. L'aggancio reale
   all'agenda (Google Calendar MCP / n8n) e' lo step successivo.
+- **Inbox handoff**: ogni handoff viene registrato in `DATA/eva/handoffs.jsonl` (gitignored, PII).
+  L'operatore lo legge con `python NODES\EVA\eva_inbox.py --nuovi` o via `GET /inbox` del webhook.
+  E' la base per le notifiche n8n al centro.
 - **NLU**: `classify_intent()` e' rule-based; si sostituira' con Claude o LLM locale tenendo la
   stessa firma `handle_message(text) -> {intent, reply, handoff}`.
 
 ## Prossimi step
 
 - [x] Flusso prenotazione multi-turno (slot-filling: servizio → giorno → ora → nome → handoff).
+- [x] Inbox handoff persistente (`DATA/eva/handoffs.jsonl`) + CLI/endpoint per l'operatore.
 - [ ] Collegare l'agenda reale (Google Calendar) per slot/disponibilita'.
-- [ ] Wiring in n8n per notifiche al centro al momento dell'handoff.
+- [ ] Wiring in n8n: leggere `/inbox` (status=nuovo) e notificare il centro all'handoff.
 - [ ] Sostituire la NLU rule-based con LLM (intent + estrazione entita').
 - [ ] Persistere lo stato sessione (ora in memoria) se serve sopravvivere ai restart.
