@@ -8,7 +8,7 @@ set PYTHONW=%USERPROFILE%\AppData\Local\Programs\Python\Python311\pythonw.exe
 set PNPM=%USERPROFILE%\AppData\Roaming\npm\pnpm.cmd
 set NODE=C:\Program Files\nodejs
 set TI_ROOT=%USERPROFILE%\TITANIUM_OS
-set CLAUDE=%USERPROFILE%\AppData\Roaming\Claude\claude-code\2.1.160\claude.exe
+call "%TI_ROOT%\_resolve_claude.bat"
 
 :: Carica variabili d'ambiente dal vault
 if exist "%TI_ROOT%\_VAULT\KEYS\titanium_os.env" (
