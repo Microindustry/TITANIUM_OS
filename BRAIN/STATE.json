@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-06T00:02:04.919656",
-  "active_milestone": "Chat RAG vera in dashboard (P4a) + leva LLM locale Ollama/Qwen (P4b) — completato il lavoro interrotto della #30",
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
-  "next_step": "Accendere leva locale: installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M` (Matteo) · restart api_server (SERVICES/restart_api.ps1 o login) · poi P1b critiche live (cartella clinica) · P5 agenti visibili · P3a episodi orfani",
+  "last_update": "2026-06-06T00:06:53.382015",
+  "active_milestone": "Sessione autonoma #31: P4a chat RAG + P4b leva locale + P1b cartella clinica viva + audit agenti P5 (tutto committato, build verde)",
+  "last_action": "Audit roster agenti (AGENTS_AUDIT.md) + spuntato il piano",
+  "next_step": "DECISIONI MATTEO: (1) installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M` per accendere leva locale · (2) restart api_server (SERVICES/restart_api.ps1) per endpoint live · (3) prune roster agenti (AGENTS_AUDIT.md: aqua/plc) · LAVORO: P1a AUTOMAZ a livelli+stato live · P1c livelli da progressi reali · P2 storia-avventura",
   "session_count": 31,
   "pillars": {
     "V32": {
