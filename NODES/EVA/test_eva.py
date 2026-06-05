@@ -84,6 +84,10 @@ check(rec["status"] == "nuovo" and "ts" in rec, "record con status/ts di default
 recs = eva_inbox.read_handoffs()
 check(len(recs) >= 1 and recs[-1]["sender"] == "39333", "handoff riletto dalla inbox")
 check(len(eva_inbox.read_handoffs(status="chiuso")) == 0, "filtro status esclude i non-chiusi")
+check(eva_inbox.close_handoff() == 0, "close senza filtri non chiude nulla (no chiusure di massa)")
+n = eva_inbox.close_handoff(ts=rec["ts"])
+check(n == 1 and len(eva_inbox.read_handoffs(status="nuovo")) == 0, "close_handoff per ts segna chiuso")
+check(len(eva_inbox.read_handoffs(status="chiuso")) == 1, "l'handoff chiuso risulta tra i chiusi")
 
 print()
 if _fail:

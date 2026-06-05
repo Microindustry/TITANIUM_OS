@@ -71,8 +71,9 @@ python NODES\EVA\eva_server.py
   centro (`handoff=true`), invece di garantire slot che non puo' verificare. L'aggancio reale
   all'agenda (Google Calendar MCP / n8n) e' lo step successivo.
 - **Inbox handoff**: ogni handoff viene registrato in `DATA/eva/handoffs.jsonl` (gitignored, PII).
-  L'operatore lo legge con `python NODES\EVA\eva_inbox.py --nuovi` o via `GET /inbox` del webhook.
-  E' la base per le notifiche n8n al centro.
+  L'operatore lo legge con `python NODES\EVA\eva_inbox.py --nuovi` o via `GET /inbox` del webhook,
+  e chiude una richiesta gestita con `python NODES\EVA\eva_inbox.py --chiudi <ts>`.
+  Le richieste ancora aperte compaiono anche nel daily brief. E' la base per le notifiche n8n.
 - **NLU**: `classify_intent()` e' rule-based; si sostituira' con Claude o LLM locale tenendo la
   stessa firma `handle_message(text) -> {intent, reply, handoff}`.
 
