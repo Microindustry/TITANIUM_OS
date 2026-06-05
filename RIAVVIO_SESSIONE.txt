@@ -1,50 +1,47 @@
-=== RIAVVIO SESSIONE #21 — 03/06/2026 21:26 ===
-Ultima sessione: #20 — 2026-06-03
+=== RIAVVIO SESSIONE #31 — 06/06/2026 ===
+Ultima sessione: #31 (autonoma, Matteo a dormire) — 2026-06-06
 
 ━━━ STAVAMO PARLANDO DI ━━━
-Automazioni notturne: da SPENTE/rotte a portabili e ATTIVE sul fisso. De-hardcodati gli script (path Getac->teo) via resolver centrale _ti_paths.bat, registrati i 6 task in Task Scheduler, finetune ottimizzato su GPU (llamafactory 0.9.5 installato). Poi rappresentate nella dashboard: sottocartella Notturne nel tab ATTIVE, voce sidebar blu sotto AUTOMAZ., e STATO LIVE letto da Task Scheduler (endpoint Flask /api/tasks/notturne via Get-ScheduledTask + proxy Vite).
+Completato il lavoro interrotto della #30: la CHAT RAG VERA in dashboard (P4a)
++ la LEVA LLM LOCALE (P4b). Il RAG non e' piu' solo magazzino: ora si interroga
+dalla dashboard (sotto-voce ciano "Chat RAG" sotto GENESIS) e risponde citando
+le fonti reali di MENTE/. Con toggle motore Claude/Locale (Ollama+Qwen).
 
-━━━ TOPIC ATTIVI ━━━
-  • Automazioni notturne portabili: _ti_paths.bat resolver (TI_ROOT/PYTHON/GH no-hardcode)
-  • 6 task registrati e Pronta (StoryAgent 02:07, Research 03:37, Push 04:07, Brief 07:30, DeepFreeze dom 03:00, FineTune dom 01:00)
-  • Finetune su GPU GTX 1070 (fp16) + guard llamafactory; llamafactory 0.9.5 installato
-  • Dashboard: vista/sidebar Notturne + stato live da Task Scheduler (/api/tasks/notturne)
-  • Flask api_server riavviato detached con il nuovo endpoint; Vite riavviato (proxy /api/tasks)
-  • TI_Watchdog ri-registrato (AtLogon, RunLevel Highest) + watchdog.py reso pythonw-safe (guard sys.stdout None); ora supervisiona api_server + mente_watcher (status fresco, 0 restart)
+━━━ COSA HO TROVATO (sessione interrotta) ━━━
+  • RagChatView.tsx + /api/rag/chat + /api/llm/ollama/status + ollama_client.py
+    erano GIA' costruiti ma NON committati e NON testati (interrotto prima del commit).
+  • Avevo aggiunto per errore un /api/rag/ask ridondante -> RIMOSSO (c'era gia' /chat).
+  • tsc -b falliva per 6 errori di tipo PRE-ESISTENTI (non miei) -> sistemati.
+
+━━━ FATTO QUESTA SESSIONE ━━━
+  ✓ Commit 1bd09e5 (feat rag P4a/P4b): chat RAG + leva locale + build verde
+  ✓ Commit 3258887 (chore): SERVICES/restart_api.ps1 (restart api_server auto-UAC)
+  ✓ Testato /api/rag/chat via test_client: HTTP 200, engine_used=claude, fonti
+    citate (v32_specifiche.md), risposta "178 kg corpo unico" corretta — REALE.
+  ✓ Leva locale onesta: available=false -> fallback Claude con flag (no teatro)
+  ✓ Spuntati PROSSIMA_SESSIONE.md + Desktop\TITANIUM_OS_PIANO.txt (P4a FATTO, P4b leva)
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → register_night_tasks.ps1 + register_watchdog.ps1 superano set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi
-  → CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop Store funziona)
-  → Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot
-  → Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire
+  → ACCENDERE LEVA LOCALE: installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M`
+  → RESTART api_server per endpoint LIVE: doppio click SERVICES\restart_api.ps1
+    (auto-UAC). Oppure va live da solo al prossimo login (watchdog AtLogon).
+  → P1b: critiche LIVE in dashboard da critiche_auto.json (cartella clinica, Visione B)
+  → P5: agenti visibili ("sto interrogando X") + verificare se sono giusti per noi
+  → P3a: recuperare episodi orfani in episodes.json
 
-━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
-  ✓ Path portabili via resolver _ti_paths.bat (DRY), niente piu' C:\Users\benen negli script notturni
-  ✓ Risoluzione Python/gh senza sub-shell (PATH-search) per evitare il banner AutoRun catturato nel for /f
-  ✓ .bat sempre CRLF + ASCII (cmd non legge LF; log OEM puliti); .ps1 con accenti => UTF-8 con BOM
-  ✓ Finetune su GPU (fp16 true) con guard llamafactory (skip pulito se assente)
-  ✓ Stato live task via Get-ScheduledTask (State/LastTaskResult lingua-indipendenti), non schtasks CSV localizzato
-  ✓ Notturne in dashboard come sotto-sezione/sotto-voce (non nuovo livello/tab), colore indigo/blu
-
-━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Sessione chiusa. Riprendere da: watchdog sul fisso (ri-registrare per resilienza api_server), poi PITCH + MIMS brevetto B2 + EVA WhatsApp pilot.
+━━━ MURO TECNICO INCONTRATO ━━━
+  ⚠ api_server (PID elevato, spawnato dal watchdog RunLevel Highest) NON e'
+    uccidibile da shell normale (Medium IL). Restart richiede UAC: per questo
+    restart_api.ps1 si auto-eleva. Endpoint nuovi non live nell'istanza corrente
+    finche' non si fa il restart (o login).
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
-━━━ STATO PILASTRI ━━━
-  V32: 65% — 
-  MIMS: 30% — 
-  GENESIS: 70% — 
-  VITA_NATURA: 40% — 
-  IDENTITY: 50% — 
-
 ━━━ ULTIMI COMMIT ━━━
-111368d chore: chiusura sessione #20 — automazioni notturne live + dashboard
-ff6e20e feat(notturne): stato LIVE da Task Scheduler nella vista Notturne
-a9c0fa5 feat(dashboard): voce sidebar "Notturne" (blu) sotto AUTOMAZ. + vista dedicata
-e632656 ﻿feat(dashboard): sottocartella Notturne in Automazioni + STATE aggiornato
-d6490fc feat: automazioni notturne portabili — de-hardcodate da path Getac (benen)
+  3258887 chore(services): restart_api.ps1 — riavvio api_server con auto-UAC
+  1bd09e5 feat(rag): Chat RAG vera in dashboard + leva LLM locale (P4a/P4b)
+  64c7212 docs(p4b): ricerca LLM locale (Simone Rizzo) + decisione Qwen2.5-7B-Q4
 
-Generato: 03/06/2026 21:26
+Generato: 06/06/2026 (sessione autonoma)

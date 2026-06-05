@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-05T20:47:00.827767",
-  "active_milestone": "Agenti de-teatro (P5: RAG grounding reale + fonti) + RETE alimentata dal RAG (P4a: archi = similarità coseno reale)",
-  "last_action": "Modifica a rag_tfidf.pkl",
-  "next_step": "P5 ruolo operativo (THEMIS↔critiche_auto.json) · P4b LLM locale/Simone Rizzo · chat RAG vera in dashboard · riavviare api_server (live)",
-  "session_count": 29,
+  "last_update": "2026-06-06T00:02:04.919656",
+  "active_milestone": "Chat RAG vera in dashboard (P4a) + leva LLM locale Ollama/Qwen (P4b) — completato il lavoro interrotto della #30",
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
+  "next_step": "Accendere leva locale: installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M` (Matteo) · restart api_server (SERVICES/restart_api.ps1 o login) · poi P1b critiche live (cartella clinica) · P5 agenti visibili · P3a episodi orfani",
+  "session_count": 31,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-05T20:44:16.530964"
+      "last_activity": "2026-06-05T23:47:00.013762"
     },
     "VITA_NATURA": {
       "status": "active",
