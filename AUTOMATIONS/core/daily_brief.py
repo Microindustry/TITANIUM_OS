@@ -5,6 +5,7 @@
 import sys
 import json
 import logging
+import subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -52,6 +53,46 @@ def _list_content_ready() -> list[dict]:
     ready.sort(key=lambda x: x["modified"], reverse=True)
     return ready[:10]
 
+# Codici LastTaskResult "non errore" (Windows Task Scheduler)
+_TASK_OK      = 0           # 0x0  successo
+_TASK_RUNNING = 267009      # 0x41301 in esecuzione
+_TASK_NEUTRAL = {267008, 267010, 267011}  # ready / no-more-runs / mai eseguito
+
+def _night_tasks_health() -> list[dict]:
+    """Legge lo stato dei task TI_ da Task Scheduler. [] se non disponibile."""
+    cmd = (
+        "Get-ScheduledTask | Where-Object { $_.TaskName -like 'TI_*' } | "
+        "ForEach-Object { $i = $_ | Get-ScheduledTaskInfo; [pscustomobject]@{"
+        "name=$_.TaskName; state=[string]$_.State; result=$i.LastTaskResult; "
+        "last=$(if($i.LastRunTime){$i.LastRunTime.ToString('s')}else{''}) } } | "
+        "Sort-Object name | ConvertTo-Json -Compress"
+    )
+    try:
+        out = subprocess.run(
+            ["powershell", "-NoProfile", "-Command", cmd],
+            capture_output=True, text=True, timeout=20,
+        ).stdout.strip()
+        if not out:
+            return []
+        data = json.loads(out)
+        return data if isinstance(data, list) else [data]
+    except Exception as e:
+        logger.warning("night tasks health non disponibile: %s", e)
+        return []
+
+def _task_icon(result) -> str:
+    try:
+        r = int(result)
+    except (TypeError, ValueError):
+        return "○"
+    if r == _TASK_OK:
+        return "✓"
+    if r == _TASK_RUNNING:
+        return "▶"
+    if r in _TASK_NEUTRAL:
+        return "○"
+    return "⚠"
+
 def _pillar_line(name: str, data: dict) -> str:
     pct  = data.get("pct_complete", "?")
     nxt  = data.get("next", "—")
@@ -85,6 +126,22 @@ def generate_brief() -> str:
         lines.append("## BLOCKERS")
         for b in blockers:
             lines.append(f"  - {b}")
+        lines.append("")
+
+    # ── SALUTE TASK NOTTURNI (segnala fallimenti silenziosi)
+    tasks = _night_tasks_health()
+    if tasks:
+        failed = [t for t in tasks
+                  if _task_icon(t.get("result")) == "⚠"]
+        header = "## TASK NOTTURNI"
+        if failed:
+            header += f"  ⚠ {len(failed)} FALLITO/I — controlla i log!"
+        lines.append(header)
+        for t in tasks:
+            icon = _task_icon(t.get("result"))
+            last = (t.get("last") or "").replace("T", " ")
+            lines.append(f"  {icon} {t.get('name')} — {t.get('state')} "
+                         f"(result {t.get('result')}, last {last or 'mai'})")
         lines.append("")
 
     # ── PILASTRI
