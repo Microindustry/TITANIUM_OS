@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [P4B  LLM locale per RAG offline: ricerca  decisione](#p4b-llm-locale-per-rag-offline-ricerca-decisione)
+  - [Contesto](#contesto)
+  - [Cosa fa Simone Rizzo (verificato)](#cosa-fa-simone-rizzo-verificato)
+  - [Decisione (calibrata su 8GB VRAM, da ricerca tecnica 2026)](#decisione-calibrata-su-8gb-vram-da-ricerca-tecnica-2026)
+  - [Come si integra (NON ancora implementato  additivo, leva predisposta)](#come-si-integra-non-ancora-implementato-additivo-leva-predisposta)
+  - [Verdetto](#verdetto)
+  - [Fonti](#fonti)
+
+<!-- /TOC -->
+
 # P4B — LLM locale per RAG offline: ricerca + decisione
 
 *Ricerca: 2026-06-05 · fonte ispirazione: Simone Rizzo (richiesta di Matteo nel PIANO P4b)*

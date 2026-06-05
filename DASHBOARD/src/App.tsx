@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen,
+  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -43,13 +43,13 @@ const AgentsView     = lazy(() => import("./components/AgentsView").then(m => ({
 const NeuroOSLayout  = lazy(() => import("./components/NeuroOSLayout").then(m => ({ default: m.NeuroOSLayout })));
 const LayersView     = lazy(() => import("./components/LayersView"));
 const StorieView     = lazy(() => import("./components/StorieView").then(m => ({ default: m.StorieView })));
-const EcosystemView  = lazy(() => import("./components/EcosystemView").then(m => ({ default: m.EcosystemView })));
 const RagGraphView   = lazy(() => import("./components/RagGraphView").then(m => ({ default: m.RagGraphView })));
 const MappaView          = lazy(() => import("./components/MappaView").then(m => ({ default: m.MappaView })));
 const AutomationsView    = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.AutomationsView })));
 const NotturneView       = lazy(() => import("./components/AutomationsView").then(m => ({ default: m.NotturneView })));
 const PitchView          = lazy(() => import("./components/PitchView").then(m => ({ default: m.PitchView })));
 const MetodoView         = lazy(() => import("./components/MetodoView").then(m => ({ default: m.MetodoView })));
+const RagChatView        = lazy(() => import("./components/RagChatView").then(m => ({ default: m.RagChatView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -198,7 +198,27 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
             Pilastri
           </div>
         )}
-        {pillarItems.map(item => <NavBtn key={item.id} item={item} />)}
+        {pillarItems.map(item => (
+          <Fragment key={item.id}>
+            <NavBtn item={item} />
+            {/* Sotto-voce: Chat RAG — annidata sotto GENESIS, piccola e ciano */}
+            {item.id === "genesis" && !collapsed && (
+              <button
+                onClick={() => onNavigate("ragchat")}
+                title="Chat RAG — chiedi al knowledge base, risposte con fonti"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "ragchat"
+                    ? "bg-cyan-950/40 text-cyan-300 border border-cyan-500/30"
+                    : "text-slate-600 hover:text-cyan-300 hover:bg-cyan-950/20 border border-transparent"}`}
+              >
+                <Brain size={11} className="flex-shrink-0 text-cyan-400" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  Chat RAG
+                </span>
+              </button>
+            )}
+          </Fragment>
+        ))}
 
         {/* Separatore */}
         <div className="my-2 border-t border-slate-800/60" />
@@ -429,6 +449,7 @@ function AppInner() {
             {view === "metodo"      && <MetodoView />}
             {view === "mappa"    && <MappaView systemState={sys.state as any} />}
             {view === "rete"     && <RagGraphView />}
+            {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
             {view === "sinapsi"  && <LayersView />}
             {view === "canvas"   && <CanvasLayout room="home" />}

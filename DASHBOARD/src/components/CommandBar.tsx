@@ -3,13 +3,11 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import {
-  Search, Grid3X3, GitBranch, Layers, Mic, Globe,
+  Search, GitBranch, Mic, Globe,
   Scan, RefreshCw, FileText, Activity, AlertTriangle,
   Target, Flame, ChevronRight, Check, X, Loader2,
 } from "lucide-react";
-import { useUIStore } from "../stores/systemStore";
-
-type ViewMode = "canvas" | "neuro" | "sinapsi" | "storie" | "rete";
+import { useUIStore, type ViewMode } from "../stores/systemStore";
 
 // ─── COMANDI DISPONIBILI ─────────────────────────────────────────────────────
 

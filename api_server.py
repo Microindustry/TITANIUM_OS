@@ -595,6 +595,19 @@ def llm_local():
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
+@app.get("/api/llm/ollama/status")
+def llm_ollama_status():
+    """Stato della leva locale Ollama+Qwen (P4b) per il toggle della chat RAG.
+    available=False quando la leva e' spenta (Ollama non installato): la chat
+    fa fallback a Claude, niente teatro."""
+    try:
+        sys.path.insert(0, str(ROOT))
+        from NODES.LOCAL_LLM.ollama_client import status as ollama_status
+        return jsonify({"ok": True, **ollama_status()})
+    except Exception as e:
+        return jsonify({"ok": False, "available": False, "error": str(e)}), 200
+
+
 @app.get("/api/sanitizer/report")
 def sanitizer_report():
     """Legge l'ultimo report del sanitizer."""
@@ -986,6 +999,82 @@ primaria e cita la fonte tra [ ]. Se il contesto non basta, dillo invece di inve
         return jsonify({"ok": True, "agent": agent_key, "answer": answer,
                         "model": "claude-haiku-4-5",
                         "sources": sources, "rag_used": bool(rag_context)})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
+@app.post("/api/rag/chat")
+def rag_chat():
+    """Chat RAG VERA (PUNTO 4a): chiedi -> risposta + fonti, ancorata a MENTE.
+    Toggle motore (PUNTO 4b): 'claude' (haiku, sempre attivo) o 'local'
+    (Ollama+Qwen, leva predisposta). Se 'local' e Ollama e' giu' -> fallback
+    onesto a Claude con flag, niente teatro. RETE resta mappa, questa e' il RAG."""
+    body     = request.get_json(silent=True) or {}
+    question = (body.get("question") or "").strip()
+    engine   = (body.get("engine") or "claude").strip().lower()
+    top_k    = int(body.get("top_k", 5))
+    if not question:
+        return jsonify({"ok": False, "error": "campo 'question' obbligatorio"}), 400
+
+    # 1 — Retrieval reale dal RAG (CANONE MENTE + ricerca), con fonti
+    rag_context, sources = "", []
+    try:
+        sys.path.insert(0, str(ROOT))
+        from NODES.MENTE_RAG.rag_engine import search as rag_search_fn
+        seen = set()
+        for h in rag_search_fn(question, top_k=top_k):
+            src = h.get("source", "?")
+            txt = (h.get("text") or h.get("preview") or "").strip()
+            if txt:
+                rag_context += f"\n[{src}]\n{txt}\n"
+                if src not in seen:
+                    seen.add(src)
+                    sources.append({"source": src, "score": round(float(h.get("score", 0)), 3)})
+    except Exception as e:
+        return jsonify({"ok": False, "error": f"RAG non disponibile: {e}"}), 503
+
+    if not rag_context:
+        return jsonify({"ok": True, "answer": "Nessun chunk rilevante in MENTE per questa domanda. "
+                        "Aggiungi un documento e lancia rag-update.", "sources": [],
+                        "engine_used": "none"}), 200
+
+    system_prompt = (
+        "Sei l'assistente RAG di TITANIUM_OS, il sistema cognitivo di Matteo Benenati "
+        "(artigiano industriale, CNC V32, Milano). Rispondi in italiano, tecnico e diretto. "
+        "USA SOLO il contesto qui sotto come fonte primaria e cita i file tra [ ]. "
+        "Se il contesto non basta, dillo invece di inventare.\n\n"
+        "CONTESTO DAL KNOWLEDGE BASE (MENTE/ via RAG):\n" + rag_context
+    )
+
+    # 2 — Generazione: motore locale (leva) o Claude (default), con fallback onesto
+    fallback = False
+    if engine == "local":
+        try:
+            from NODES.LOCAL_LLM.ollama_client import is_available, has_model, generate as ollama_gen, DEFAULT_MODEL
+            if is_available() and has_model(DEFAULT_MODEL):
+                answer = ollama_gen(question, system=system_prompt, max_tokens=512)
+                return jsonify({"ok": True, "answer": answer, "sources": sources,
+                                "engine_used": "local", "model": DEFAULT_MODEL})
+            fallback = True   # leva spenta -> Claude
+        except Exception as _oe:
+            app.logger.warning("rag_chat: Ollama ko (%s) -> fallback Claude", _oe)
+            fallback = True
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        return jsonify({"ok": False, "error": "ANTHROPIC_API_KEY mancante (e motore locale non disponibile)"}), 500
+    try:
+        import anthropic as _ant
+        client = _ant.Anthropic(api_key=api_key)
+        response = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1024,
+            system=system_prompt,
+            messages=[{"role": "user", "content": question}],
+        )
+        return jsonify({"ok": True, "answer": response.content[0].text, "sources": sources,
+                        "engine_used": "claude", "model": "claude-haiku-4-5",
+                        "fallback": fallback})
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
 
