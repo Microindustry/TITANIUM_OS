@@ -11,12 +11,17 @@ import urllib.error
 
 OLLAMA_URL   = "http://127.0.0.1:11434"  # 127.0.0.1 non localhost: rifiuto immediato se giu' (no fallback IPv6)
 DEFAULT_MODEL = "qwen2.5:7b-instruct-q4_K_M"   # vedi P4B_RESEARCH.md
-_TIMEOUT      = 1.5    # ping veloce: la dashboard non deve appendere
+_TIMEOUT      = 1.5    # ping veloce: la dashboard fa il fetch in background, non blocca
+
+# Opener SENZA proxy: se in env c'e' HTTP_PROXY/HTTPS_PROXY, urlopen ci farebbe
+# passare ANCHE le chiamate a localhost -> errore/latenza. localhost non va mai
+# via proxy, quindi lo disabilitiamo esplicitamente per robustezza.
+_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))
 
 
-def _get(path: str, timeout: int = _TIMEOUT):
+def _get(path: str, timeout: float = _TIMEOUT):
     req = urllib.request.Request(OLLAMA_URL + path, method="GET")
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+    with _OPENER.open(req, timeout=timeout) as r:
         return json.loads(r.read().decode("utf-8"))
 
 
@@ -79,7 +84,7 @@ def generate(prompt: str, system: str = "", model: str = DEFAULT_MODEL,
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+    with _OPENER.open(req, timeout=timeout) as r:
         data = json.loads(r.read().decode("utf-8"))
     return (data.get("response") or "").strip()
 
