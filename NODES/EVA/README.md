@@ -11,7 +11,7 @@
 
 # EVA — Assistente WhatsApp (Vita Natura)
 
-> Stato: **pilot v0.2** — scaffold dry-run + prenotazione multi-turno (slot-filling).
+> Stato: **pilot v0.3** — dry-run + prenotazione multi-turno + inbox handoff persistente + sessioni su disco.
 > Persona: EVA (WhatsApp automation, prenotazioni Vita Natura). Vedi `CLAUDE.md` › PERSONAGGI AI.
 
 EVA risponde su WhatsApp a orari, servizi e richieste di prenotazione. La logica vive

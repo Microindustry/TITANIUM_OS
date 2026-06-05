@@ -1,4 +1,4 @@
-# eva_brain.py | TITANIUM_OS / NODES / EVA | v0.1 | 2026-06-05
+# eva_brain.py | TITANIUM_OS / NODES / EVA | v0.2 | 2026-06-05
 # Cervello di EVA: classifica l'intento di un messaggio in arrivo e compone la
 # risposta. Rule-based + slot-filling minimale per le prenotazioni di Vita Natura.
 #

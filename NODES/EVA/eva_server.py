@@ -1,4 +1,4 @@
-# eva_server.py | TITANIUM_OS / NODES / EVA | v0.1 | 2026-06-05
+# eva_server.py | TITANIUM_OS / NODES / EVA | v0.3 | 2026-06-05
 # Webhook Flask per WhatsApp Cloud API (Meta) — riceve i messaggi, li passa a
 # eva_brain e risponde. Funziona in DRY-RUN senza credenziali (logga la risposta
 # invece di inviarla), cosi' lo si puo' provare prima di collegare l'account Meta.
@@ -148,7 +148,7 @@ def inbox():
 def health():
     return jsonify({
         "node": "EVA",
-        "version": "0.1",
+        "version": "0.3",
         "dry_run": DRY_RUN,
         "configured": bool(TOKEN and PHONE_ID),
         "verify_token_set": VERIFY_TOKEN != "titanium-eva",
