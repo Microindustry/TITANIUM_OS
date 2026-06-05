@@ -608,6 +608,26 @@ def llm_ollama_status():
         return jsonify({"ok": False, "available": False, "error": str(e)}), 200
 
 
+@app.get("/api/critiche/auto")
+def critiche_auto():
+    """Cartella clinica viva (P1b): le critiche generate dal self-audit
+    notturno (night_audit.py su Sonnet). La dashboard le mostra LIVE accanto
+    al canone manuale (criticheData.ts) -> le critiche crescono da sole."""
+    f = ROOT / "DATA" / "audit" / "critiche_auto.json"
+    if not f.exists():
+        return jsonify({"ok": True, "findings": [], "total": 0, "open": 0}), 200
+    try:
+        items = json.loads(f.read_text(encoding="utf-8"))
+        if not isinstance(items, list):
+            items = []
+        open_n = sum(1 for c in items if c.get("status") == "open")
+        # piu' recenti prima
+        items.sort(key=lambda c: c.get("last_seen") or c.get("date") or "", reverse=True)
+        return jsonify({"ok": True, "findings": items, "total": len(items), "open": open_n})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e), "findings": []}), 500
+
+
 @app.get("/api/sanitizer/report")
 def sanitizer_report():
     """Legge l'ultimo report del sanitizer."""

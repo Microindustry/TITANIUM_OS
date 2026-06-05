@@ -1,9 +1,10 @@
 // CriticheSection.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
 // Critiche & Miglioramenti — N-livelli per progetto, aggiornabile ogni sessione
 
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, AlertTriangle, CheckCircle2, Clock, Lock } from "lucide-react";
+import { useState, useEffect, useMemo } from "react";
+import { ChevronLeft, ChevronRight, AlertTriangle, CheckCircle2, Clock, Lock, Activity } from "lucide-react";
 import { CRITICHE_ROOT } from "../data/criticheData";
+import { buildAutoBranch, type AutoFinding } from "../data/criticheAuto";
 import { nodeProgress, getAllLeaves, type SkillNode } from "../data/skillTreeData";
 
 // ── STATUS STYLES — tema rose/red per distinguere dalle altre view ─────────
@@ -143,15 +144,35 @@ function NodeLevel({ node, onDrillIn }: { node: SkillNode; onDrillIn: (n: SkillN
 }
 
 export function CriticheSection() {
+  // Cartella clinica viva (P1b): findings dal self-audit notturno, innestati
+  // come ramo LIVE accanto al canone manuale di criticheData.ts.
+  const [autoFindings, setAutoFindings] = useState<AutoFinding[]>([]);
+  useEffect(() => {
+    fetch("/api/critiche/auto")
+      .then(r => r.json())
+      .then(d => { if (d.ok && Array.isArray(d.findings)) setAutoFindings(d.findings); })
+      .catch(() => { /* offline: resta solo il canone manuale */ });
+  }, []);
+
+  // Root = canone manuale + ramo auto-audit in testa (se presente)
+  const root = useMemo<SkillNode>(() => {
+    const branch = buildAutoBranch(autoFindings);
+    if (!branch) return CRITICHE_ROOT;
+    return { ...CRITICHE_ROOT, children: [branch, ...(CRITICHE_ROOT.children ?? [])] };
+  }, [autoFindings]);
+
   const [stack, setStack] = useState<SkillNode[]>([CRITICHE_ROOT]);
+  // Quando arrivano i findings il root cambia: riallinea solo se sei alla radice
+  useEffect(() => { setStack(s => (s.length === 1 ? [root] : s)); }, [root]);
   const current = stack[stack.length - 1];
 
-  const leaves  = getAllLeaves(CRITICHE_ROOT);
+  const leaves  = getAllLeaves(root);
   const active  = leaves.filter(l => l.status === "active").length;
   const blocked = leaves.filter(l => l.status === "blocked").length;
   const future  = leaves.filter(l => l.status === "future").length;
   const done    = leaves.filter(l => l.status === "done").length;
-  const pct     = Math.round((done / leaves.length) * 100);
+  const pct     = leaves.length ? Math.round((done / leaves.length) * 100) : 0;
+  const autoOpen = autoFindings.filter(f => (f.status || "open").toLowerCase() === "open").length;
 
   const drillIn = (node: SkillNode) => { setStack(s => [...s, node]); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goBack  = () => setStack(s => s.length > 1 ? s.slice(0, -1) : s);
@@ -167,8 +188,15 @@ export function CriticheSection() {
               <AlertTriangle size={9} className="text-rose-400" />
               Critiche & Miglioramenti — Audit continuo
             </div>
-            <div className="text-[8px] font-mono text-slate-500 mb-2">
-              Aggiornabile ogni sessione · click critica per dettaglio · done = risolto
+            <div className="text-[8px] font-mono text-slate-500 mb-2 flex items-center gap-2">
+              <span>Canone manuale + auto-audit notturno · click critica per dettaglio</span>
+              {autoFindings.length > 0 && (
+                <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded
+                                 bg-rose-500/10 border border-rose-500/30 text-rose-300">
+                  <Activity size={8} className="animate-pulse" />
+                  {autoFindings.length} live · {autoOpen} aperti
+                </span>
+              )}
             </div>
             <div className="flex items-end gap-1.5">
               <span className="text-3xl font-black text-rose-300 tabular-nums">{active}</span>
@@ -223,7 +251,7 @@ export function CriticheSection() {
 
       <div className="text-center py-1">
         <span className="text-[7px] font-mono text-slate-800 uppercase tracking-[0.3em]">
-          Aggiorna criticheData.ts ogni sessione · punto per punto
+          Canone: criticheData.ts · Live: night_audit → critiche_auto.json
         </span>
       </div>
     </div>
