@@ -43,6 +43,19 @@ FETCH_K        = TOP_K * 3   # candidati pre-rerank
 RRF_K          = 60
 SUPPORTED_EXT  = {".md", ".txt", ".py", ".json"}
 
+# CANONE vs RICERCA (Punto 4a): la ricerca web atterra in KNOWLEDGE/RESEARCH ma
+# NON entra nel RAG canonico — eviterebbe il garbage-in (paper irrilevanti che
+# diluiscono il segnale delle decisioni V32/MIMS). Resta su file, consultabile;
+# il digest notturno la sintetizza separatamente. Path relativi a MENTE_DIR.
+EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),)
+
+
+def _is_excluded(path: Path) -> bool:
+    """True se il file vive in una cartella esclusa dal canone (es. RICERCA web)."""
+    rel = str(path.relative_to(MENTE_DIR))
+    return any(rel == d or rel.startswith(d + os.sep) for d in EXCLUDE_REL_DIRS)
+
+
 # ── CHROMA ────────────────────────────────────────────────────────────────────
 
 def _get_collection(reset: bool = False):
@@ -201,6 +214,7 @@ def build_index(force: bool = False) -> int:
     all_paths  = sorted(
         p for p in MENTE_DIR.rglob("*")
         if p.is_file() and p.suffix.lower() in SUPPORTED_EXT
+        and not _is_excluded(p)
     )
 
     added = modified = skipped = removed_chunks = 0
