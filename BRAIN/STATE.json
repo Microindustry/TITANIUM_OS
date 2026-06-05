@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-05T15:12:24.508492",
-  "active_milestone": "Self-audit notturno + ricerca ottimizzata — RAG CANONE vs RICERCA, gate rilevanza, cartella clinica automatica (Punto 0b/1b)",
-  "last_action": "Modifica a build_episodes_json.py",
-  "next_step": "Surface cartella clinica + system_health in dashboard/brief (Punto 1b) · Avventura educativa (Punto 2) · PITCH + MIMS B2 + EVA pilot",
-  "session_count": 28,
+  "last_update": "2026-06-05T20:47:00.827767",
+  "active_milestone": "Agenti de-teatro (P5: RAG grounding reale + fonti) + RETE alimentata dal RAG (P4a: archi = similarità coseno reale)",
+  "last_action": "Modifica a rag_tfidf.pkl",
+  "next_step": "P5 ruolo operativo (THEMIS↔critiche_auto.json) · P4b LLM locale/Simone Rizzo · chat RAG vera in dashboard · riavviare api_server (live)",
+  "session_count": 29,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-05T15:10:54.219000"
+      "last_activity": "2026-06-05T20:44:16.530964"
     },
     "VITA_NATURA": {
       "status": "active",
