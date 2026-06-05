@@ -941,6 +941,22 @@ def agents_ask():
             except Exception as _re:
                 app.logger.warning("agents_ask: RAG non disponibile (%s) - rispondo senza", _re)
 
+        # Ruolo operativo (P5): THEMIS (analista sistema) legge la CARTELLA CLINICA
+        # — le critiche del self-audit notturno. Vive in DATA/audit, FUORI dal RAG
+        # (escluso dal canone), quindi serve un hook dedicato, non la ricerca.
+        if agent_key == "themis":
+            crit_f = ROOT / "DATA" / "audit" / "critiche_auto.json"
+            if crit_f.exists():
+                try:
+                    aperte = [c for c in json.loads(crit_f.read_text(encoding="utf-8"))
+                              if c.get("status") == "open"][:12]
+                    if aperte:
+                        rag_context += "\n[CARTELLA CLINICA — critiche aperte dal self-audit notturno]\n"
+                        for c in aperte:
+                            rag_context += f"- ({c.get('severity')}/{c.get('area')}) {c.get('finding')} → {c.get('azione')}\n"
+                except Exception as _ce:
+                    app.logger.warning("agents_ask: critiche non lette (%s)", _ce)
+
         system_prompt = f"""Sei {agent['name']} {agent.get('emoji','')} — {agent['role']}.
 
 EXPERTISE:
