@@ -1,15 +1,20 @@
-# eva_session.py | TITANIUM_OS / NODES / EVA | v0.1 | 2026-06-05
+# eva_session.py | TITANIUM_OS / NODES / EVA | v0.2 | 2026-06-05
 # Stato conversazione per la prenotazione multi-turno di EVA.
 #
 # Principio di sicurezza: EVA NON conferma slot da sola (un centro estetico non puo'
 # rischiare doppie prenotazioni). Raccoglie i dati su piu' messaggi e poi consegna un
 # riepilogo all'operatore (handoff). L'aggancio reale all'agenda e' uno step successivo.
 #
-# Stato in memoria per processo (dict per mittente) con TTL. Per il pilot e' sufficiente;
-# in produzione si potra' spostare in Redis/SQLite mantenendo la stessa interfaccia.
+# Stato per mittente (dict) con TTL, persistito su DATA/eva/sessions.json: sopravvive a
+# un restart del processo. Per il pilot e' sufficiente; in produzione si potra' spostare
+# in Redis/SQLite mantenendo la stessa interfaccia.
 
+import os
 import re
+import json
 import time
+import tempfile
+from pathlib import Path
 from datetime import datetime
 
 # Stati del flusso di prenotazione
@@ -22,7 +27,47 @@ DONE        = "done"
 
 TTL_SECONDS = 30 * 60  # una sessione inattiva scade dopo 30 min
 
-_SESSIONS: dict[str, dict] = {}
+# ── Persistenza su disco ───────────────────────────────────────────────────────
+# Le sessioni sopravvivono a un restart del webhook (Task Scheduler/watchdog/crash):
+# una prenotazione a meta' non si perde lasciando il cliente appeso. Stesso DATA/eva
+# di eva_inbox (gitignored, PII), override via EVA_DATA_DIR.
+
+NODE_DIR = Path(__file__).resolve().parent
+ROOT = NODE_DIR.parents[1]  # .../TITANIUM_OS
+
+def _sessions_path() -> Path:
+    d = os.environ.get("EVA_DATA_DIR", "").strip()
+    base = Path(d) if d else (ROOT / "DATA" / "eva")
+    base.mkdir(parents=True, exist_ok=True)
+    return base / "sessions.json"
+
+def _prune(d: dict, now: float) -> dict:
+    return {k: v for k, v in d.items()
+            if isinstance(v, dict) and (now - v.get("updated", 0)) <= TTL_SECONDS}
+
+def _load() -> dict:
+    p = _sessions_path()
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+        return _prune(data, time.time()) if isinstance(data, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        return {}  # file corrotto/illeggibile: si riparte pulito, non si blocca EVA
+
+def _save():
+    """Scrive le sessioni in modo atomico (temp + replace) per non lasciare file
+    parziali se il processo muore a meta' scrittura."""
+    p = _sessions_path()
+    try:
+        fd, tmp = tempfile.mkstemp(dir=str(p.parent), suffix=".tmp")
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            json.dump(_SESSIONS, fh, ensure_ascii=False)
+        os.replace(tmp, p)
+    except OSError:
+        pass
+
+_SESSIONS: dict[str, dict] = _load()
 
 # ── Gestione sessioni ─────────────────────────────────────────────────────────
 
@@ -39,6 +84,7 @@ def get_session(sender: str) -> dict:
 
 def reset_session(sender: str):
     _SESSIONS.pop(sender, None)
+    _save()
 
 def active(sender: str) -> bool:
     s = _SESSIONS.get(sender)
@@ -86,9 +132,16 @@ def start_booking(sender: str, service: dict | None) -> dict:
         s["slots"]["service"] = service["name"]
         s["slots"]["duration"] = service.get("duration", "")
         s["state"] = ASK_DAY
+    _save()
     return s
 
 def advance(sender: str, text: str, match_service_fn) -> dict:
+    """Fa avanzare il flusso e persiste lo stato (qualunque sia il ramo d'uscita)."""
+    res = _advance(sender, text, match_service_fn)
+    _save()
+    return res
+
+def _advance(sender: str, text: str, match_service_fn) -> dict:
     """Fa avanzare il flusso con il messaggio corrente.
     Ritorna {reply, handoff, done}. match_service_fn(text)->dict|None dal brain."""
     s = get_session(sender)

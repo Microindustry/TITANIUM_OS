@@ -82,5 +82,5 @@ python NODES\EVA\eva_server.py
 - [x] Inbox handoff persistente (`DATA/eva/handoffs.jsonl`) + CLI/endpoint per l'operatore.
 - [ ] Collegare l'agenda reale (Google Calendar) per slot/disponibilita'.
 - [ ] Wiring in n8n: leggere `/inbox` (status=nuovo) e notificare il centro all'handoff.
+- [x] Persistere lo stato sessione (`DATA/eva/sessions.json`): sopravvive ai restart del webhook.
 - [ ] Sostituire la NLU rule-based con LLM (intent + estrazione entita').
-- [ ] Persistere lo stato sessione (ora in memoria) se serve sopravvivere ai restart.

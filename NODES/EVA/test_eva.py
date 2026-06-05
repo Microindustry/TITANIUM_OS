@@ -64,6 +64,19 @@ r = conv("D", "Anna")
 check(r.get("slots", {}).get("name") == "Anna", "risultato porta gli slot a flusso completo")
 check(r["slots"].get("time") == "16:00" and "Massaggio" in r["slots"].get("service", ""), "slot service/time corretti")
 
+print("== Persistenza sessioni (sopravvive al restart) ==")
+import importlib
+eva_session.reset_session("P")
+conv("P", "vorrei prenotare un massaggio")   # avvia, stato su disco
+conv("P", "venerdi")                          # avanza
+check(eva_session.active("P"), "sessione P attiva prima del 'restart'")
+# Simula un riavvio del processo: ricarica il modulo -> rilegge da sessions.json
+eva_session = importlib.reload(eva_session)
+eva_brain.eva_session = eva_session           # ri-aggancia il brain al modulo ricaricato
+check(eva_session.active("P"), "sessione P ripristinata dopo reload")
+r = conv("P", "alle 11")
+check("nome" in r["reply"].lower(), "il flusso riprende dal punto giusto post-restart")
+
 print("== Inbox handoff ==")
 rec = eva_inbox.record_handoff({"sender": "39333", "intent": "prenotazione",
                                 "reply": "ok", "slots": {"service": "Massaggio", "name": "Anna"}})
