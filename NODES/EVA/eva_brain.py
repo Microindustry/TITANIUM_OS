@@ -22,6 +22,11 @@ if sys.stdout is not None and sys.stdout.encoding and sys.stdout.encoding.lower(
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 NODE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(NODE_DIR))
+import eva_session
+
+# Frasi che annullano una prenotazione in corso
+CANCEL_BOOKING = re.compile(r"\b(annull|lascia perdere|non importa|stop|ricomincia)\w*", re.I)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -126,18 +131,49 @@ def compose_reply(text: str, intent: str) -> dict:
 
 # ── API pubblica del cervello ─────────────────────────────────────────────────
 
-def handle_message(text: str, sender: str | None = None) -> dict:
-    """Punto d'ingresso unico: testo -> {intent, reply, handoff, ts, sender}."""
-    text = (text or "").strip()
-    intent = classify_intent(text)
-    out = compose_reply(text, intent)
+def _result(sender, intent, reply, handoff) -> dict:
     return {
         "ts": datetime.now().isoformat(timespec="seconds"),
         "sender": sender,
         "intent": intent,
-        "reply": out["reply"],
-        "handoff": out["handoff"],
+        "reply": reply,
+        "handoff": handoff,
     }
+
+def handle_message(text: str, sender: str | None = None) -> dict:
+    """Punto d'ingresso unico: testo -> {intent, reply, handoff, ts, sender}.
+
+    Se c'e' un sender, la prenotazione diventa un flusso multi-turno (slot-filling)
+    gestito da eva_session: EVA raccoglie servizio/giorno/ora/nome e poi consegna un
+    riepilogo all'operatore (handoff), senza confermare slot da sola.
+    """
+    text = (text or "").strip()
+
+    # 1) Prenotazione gia' in corso per questo mittente
+    if sender and eva_session.active(sender):
+        if CANCEL_BOOKING.search(text):
+            eva_session.reset_session(sender)
+            return _result(sender, "annulla_prenotazione",
+                           "Ok, ho annullato la richiesta. Quando vuoi ripartire dimmi pure.", False)
+        res = eva_session.advance(sender, text, match_service)
+        if res.get("done"):
+            eva_session.reset_session(sender)
+        return _result(sender, "prenotazione", res["reply"], res["handoff"])
+
+    # 2) Classificazione normale
+    intent = classify_intent(text)
+
+    # 3) Nuova prenotazione -> avvia il flusso (serve un sender per tenere lo stato)
+    if intent == "prenotazione" and sender:
+        eva_session.start_booking(sender, match_service(text))
+        res = eva_session.advance(sender, text, match_service)
+        if res.get("done"):
+            eva_session.reset_session(sender)
+        return _result(sender, "prenotazione", res["reply"], res["handoff"])
+
+    # 4) Intenti senza stato
+    out = compose_reply(text, intent)
+    return _result(sender, intent, out["reply"], out["handoff"])
 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 

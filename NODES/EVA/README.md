@@ -1,6 +1,6 @@
 # EVA — Assistente WhatsApp (Vita Natura)
 
-> Stato: **pilot v0.1** — scaffold funzionante in *dry-run* (nessuna credenziale richiesta).
+> Stato: **pilot v0.2** — scaffold dry-run + prenotazione multi-turno (slot-filling).
 > Persona: EVA (WhatsApp automation, prenotazioni Vita Natura). Vedi `CLAUDE.md` › PERSONAGGI AI.
 
 EVA risponde su WhatsApp a orari, servizi e richieste di prenotazione. La logica vive
@@ -11,7 +11,9 @@ in `eva_brain.py` (rule-based, sostituibile con NLU LLM); il webhook Meta in `ev
 | File | Ruolo |
 |------|-------|
 | `eva_brain.py` | Classifica l'intento e compone la risposta. Testabile offline. |
+| `eva_session.py` | Stato conversazione: prenotazione multi-turno (servizio→giorno→ora→nome). |
 | `eva_server.py` | Webhook Flask per WhatsApp Cloud API. Dry-run di default. |
+| `test_eva.py` | Test offline (intenti + flusso prenotazione). `python NODES\EVA\test_eva.py`. |
 | `config.example.json` | Template (orari, servizi, risposte). Copia in `config.json`. |
 | `config.json` | Dati reali del centro — **gitignored**, non versionato. |
 
@@ -61,7 +63,8 @@ python NODES\EVA\eva_server.py
 
 ## Prossimi step
 
+- [x] Flusso prenotazione multi-turno (slot-filling: servizio → giorno → ora → nome → handoff).
 - [ ] Collegare l'agenda reale (Google Calendar) per slot/disponibilita'.
-- [ ] Flusso prenotazione multi-turno (slot-filling: servizio → giorno → ora → conferma).
-- [ ] Wiring in n8n per notifiche al centro + log conversazioni in MENTE/VITA_NATURA.
+- [ ] Wiring in n8n per notifiche al centro al momento dell'handoff.
 - [ ] Sostituire la NLU rule-based con LLM (intent + estrazione entita').
+- [ ] Persistere lo stato sessione (ora in memoria) se serve sopravvivere ai restart.
