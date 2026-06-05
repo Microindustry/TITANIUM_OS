@@ -293,7 +293,27 @@ def main(backfill: bool = False, max_groups: int = 5):
     state["last_run"] = datetime.now().isoformat()
     save_state(state)
 
+    # Gli episodi appena scritti su disco devono entrare in episodes.json (la fonte
+    # che il dashboard renderizza), altrimenti nascono orfani/invisibili. Best-effort.
+    if generated:
+        sync_episodes_json()
+
     logger.info("done — %d episodi generati", generated)
+
+
+def sync_episodes_json():
+    """Importa i nuovi .md in DASHBOARD/src/data/episodes.json (dedup + recupero).
+    Non solleva: un errore di sync non deve far fallire il run notturno."""
+    try:
+        import importlib.util
+        builder = TI_ROOT / "CONTENT_ENGINE" / "scripts" / "build_episodes_json.py"
+        spec = importlib.util.spec_from_file_location("build_episodes_json", builder)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        mod.main()
+        logger.info("episodes.json sincronizzato")
+    except Exception as e:
+        logger.warning("sync episodes.json fallito (episodi su disco, recuperabili con build_episodes_json.py): %s", e)
 
 
 if __name__ == "__main__":
