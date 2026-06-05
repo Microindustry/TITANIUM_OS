@@ -15,10 +15,13 @@ interface Agent {
   tone: string;
 }
 
+interface Source { source: string; score: number; }
+
 interface Message {
   role: "user" | "agent";
   text: string;
   ts: number;
+  sources?: Source[];
 }
 
 // ── PALETTE PER AGENTE ────────────────────────────────────────────────────────
@@ -131,7 +134,7 @@ function ChatPanel({ id, agent }: { id: string; agent: Agent }) {
       });
       const data = await res.json();
       if (data.ok) {
-        setMessages(m => [...m, { role: "agent", text: data.answer, ts: Date.now() }]);
+        setMessages(m => [...m, { role: "agent", text: data.answer, ts: Date.now(), sources: data.sources ?? [] }]);
       } else {
         setMessages(m => [...m, { role: "agent", text: `⚠ ${data.error}`, ts: Date.now() }]);
       }
@@ -210,6 +213,19 @@ function ChatPanel({ id, agent }: { id: string; agent: Agent }) {
               <div className="whitespace-pre-wrap font-mono text-[12px] leading-[1.6]">
                 {msg.text}
               </div>
+              {msg.role === "agent" && msg.sources && msg.sources.length > 0 && (
+                <div className="mt-2 pt-2 border-t border-slate-700/40 flex flex-wrap gap-1">
+                  <span className="w-full text-[8px] text-slate-600 font-mono uppercase tracking-wider mb-0.5">
+                    Fonti RAG ({msg.sources.length})
+                  </span>
+                  {msg.sources.map((sr, j) => (
+                    <span key={j} title={`score ${sr.score}`}
+                          className={`text-[8px] px-1.5 py-0.5 rounded font-mono ${s.badge}`}>
+                      {sr.source.split(/[\\/]/).pop()}
+                    </span>
+                  ))}
+                </div>
+              )}
               <div className="text-[9px] text-slate-600 mt-2 font-mono">
                 {new Date(msg.ts).toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}
               </div>
@@ -270,7 +286,7 @@ function ChatPanel({ id, agent }: { id: string; agent: Agent }) {
           </button>
         </div>
         <div className="text-[9px] text-slate-700 font-mono mt-1.5 pl-1">
-          Enter per inviare · Shift+Enter per andare a capo · claude-haiku-4-5
+          Enter per inviare · Shift+Enter per andare a capo · claude-haiku-4-5 + RAG MENTE
         </div>
       </div>
     </div>

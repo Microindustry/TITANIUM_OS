@@ -899,7 +899,7 @@ def agents_ask():
     body = request.get_json(silent=True) or {}
     agent_key = body.get("agent", "").strip()
     question  = body.get("question", "").strip()
-    use_rag   = body.get("use_rag", False)
+    use_rag   = body.get("use_rag", True)   # default ON: l'agente DEVE ancorarsi a MENTE
 
     if not agent_key or not question:
         return jsonify({"ok": False, "error": "agent e question obbligatori"}), 400
@@ -921,6 +921,26 @@ def agents_ask():
         import anthropic as _ant
         client = _ant.Anthropic(api_key=api_key)
 
+        # RAG grounding: l'agente recupera DAVVERO da MENTE prima di rispondere.
+        # Prima la UI prometteva "accesso al knowledge base" ma /ask lo ignorava
+        # (use_rag mai usato) -> era teatro. Ora e' reale e ritorna le fonti.
+        rag_context, sources = "", []
+        if use_rag:
+            try:
+                sys.path.insert(0, str(ROOT))
+                from NODES.MENTE_RAG.rag_engine import search as rag_search_fn
+                seen_src = set()
+                for h in rag_search_fn(question, top_k=5):
+                    src = h.get("source", "?")
+                    txt = (h.get("text") or h.get("preview") or "").strip()
+                    if txt:
+                        rag_context += f"\n[{src}]\n{txt}\n"
+                        if src not in seen_src:          # dedup fonti per file
+                            seen_src.add(src)
+                            sources.append({"source": src, "score": round(float(h.get("score", 0)), 3)})
+            except Exception as _re:
+                app.logger.warning("agents_ask: RAG non disponibile (%s) - rispondo senza", _re)
+
         system_prompt = f"""Sei {agent['name']} {agent.get('emoji','')} — {agent['role']}.
 
 EXPERTISE:
@@ -933,6 +953,13 @@ Rispondi in italiano. Sii tecnico, preciso, diretto. Non c'è limite di lunghezz
 
 REGOLA GLOSSARIO: Quando usi un termine tecnico o sigla che potrebbe non essere familiare, subito dopo la parola aggiungi una mini-spiegazione tra parentesi quadre in corsivo piccolo, es: "profilato HEA [¹ sezione d'acciaio a doppio T, ottimizzata per carichi flessionali]". Per i termini più importanti della risposta, aggiungi al fondo una sezione "📖 GLOSSARIO RAPIDO" con 2-3 righe max per termine: nome → definizione pratica → perché conta in questo contesto."""
 
+        if rag_context:
+            system_prompt += f"""
+
+CONTESTO DAL KNOWLEDGE BASE (MENTE/ via RAG) — usa questi estratti come fonte
+primaria e cita la fonte tra [ ]. Se il contesto non basta, dillo invece di inventare:
+{rag_context}"""
+
         response = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=1024,
@@ -941,7 +968,8 @@ REGOLA GLOSSARIO: Quando usi un termine tecnico o sigla che potrebbe non essere 
         )
         answer = response.content[0].text
         return jsonify({"ok": True, "agent": agent_key, "answer": answer,
-                        "model": "claude-haiku-4-5"})
+                        "model": "claude-haiku-4-5",
+                        "sources": sources, "rag_used": bool(rag_context)})
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
 
