@@ -1,4 +1,4 @@
-# daily_brief.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-05-29
+# daily_brief.py | TITANIUM_OS / AUTOMATIONS / core | v1.2 | 2026-06-05
 # Genera brief mattutino da BRAIN/STATE.json + contenuti pronti
 # Output: stringa markdown (stampata a console) + DATA/daily_brief_last.md
 
@@ -80,6 +80,18 @@ def _night_tasks_health() -> list[dict]:
         logger.warning("night tasks health non disponibile: %s", e)
         return []
 
+def _eva_pending() -> list[dict]:
+    """Handoff EVA ancora da gestire (status=nuovo). [] se inbox assente/vuota."""
+    try:
+        eva_dir = REPO_ROOT / "NODES" / "EVA"
+        if str(eva_dir) not in sys.path:
+            sys.path.insert(0, str(eva_dir))
+        import eva_inbox
+        return eva_inbox.read_handoffs(status="nuovo")
+    except Exception as e:
+        logger.warning("EVA inbox non leggibile: %s", e)
+        return []
+
 def _task_icon(result) -> str:
     try:
         r = int(result)
@@ -126,6 +138,22 @@ def generate_brief() -> str:
         lines.append("## BLOCKERS")
         for b in blockers:
             lines.append(f"  - {b}")
+        lines.append("")
+
+    # ── EVA: RICHIESTE CLIENTI IN ATTESA (prenotazioni da richiamare/confermare)
+    pending = _eva_pending()
+    if pending:
+        lines.append(f"## EVA — RICHIESTE IN ATTESA ({len(pending)})")
+        for h in pending:
+            slots = h.get("slots") or {}
+            if slots:
+                desc = (f"{slots.get('service', '?')} · {slots.get('day', '?')} "
+                        f"{slots.get('time', '')} — {slots.get('name', '?')}".rstrip())
+            else:
+                desc = (h.get("reply") or "")[:60]
+            when = (h.get("ts") or "")[:16].replace("T", " ")
+            lines.append(f"  - [{when}] {h.get('sender', '?')}: {desc}")
+        lines.append("  → richiama/conferma in agenda, poi segna 'chiuso' nella inbox EVA")
         lines.append("")
 
     # ── SALUTE TASK NOTTURNI (segnala fallimenti silenziosi)
