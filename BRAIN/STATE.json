@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-03T21:19:24.819781",
-  "active_milestone": "Automazioni notturne portabili e ottimizzate (GPU) — resolver _ti_paths.bat, registrar UAC, finetune CUDA",
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
-  "next_step": "Watchdog sul fisso (resilienza api_server) · Rifinire PITCH + MIMS brevetto B2 + EVA WhatsApp pilot",
-  "session_count": 25,
+  "last_update": "2026-06-05T15:12:24.508492",
+  "active_milestone": "Self-audit notturno + ricerca ottimizzata — RAG CANONE vs RICERCA, gate rilevanza, cartella clinica automatica (Punto 0b/1b)",
+  "last_action": "Modifica a build_episodes_json.py",
+  "next_step": "Surface cartella clinica + system_health in dashboard/brief (Punto 1b) · Avventura educativa (Punto 2) · PITCH + MIMS B2 + EVA pilot",
+  "session_count": 28,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-03T21:09:19.794383"
+      "last_activity": "2026-06-05T15:10:54.219000"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -46,7 +46,8 @@
       "Firewall 5173 aperto + Tailscale loggato sul fisso (100.125.152.124) — dashboard via LAN e da remoto (03/06/2026)",
       "n8n self-hosted attivo (account locale, no cloud) + pnpm installato; avvio al login operativo (03/06/2026)",
       "Vista METODO sul sito — spiegazione chi/cosa/come del sistema, nata dalle domande di un dev esterno (03/06/2026)",
-      "Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)"
+      "Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)",
+      "Notturne ottimizzate + self-audit: RAG CANONE vs RICERCA (-448 chunk garbage purgati), gate rilevanza ricerca (--min-rel), topic puliti, night_audit.py su Sonnet genera cartella clinica automatica (DATA/audit), TI_NightAudit @03:52 (05/06/2026)"
     ],
     "next": "Rifinire PITCH + MIMS + EVA",
     "target_capannone": "2030-07-15"
