@@ -58,7 +58,7 @@ Il sistema NON è lo scaffolding personale di Matteo: è **la base per QUALSIASI
 
 ### PUNTO 1 — DATI VIVI (uccidere il "dashboard-teatro")
 - 1a. **AUTOMAZ (casella sx):** vecchio stile, **non a N-livelli, non funziona**. + **AUDIT REALE** delle "13 attive / 3 alta priorità": che ruolo hanno, **stanno girando davvero**, perché lo stato è fermo. Poi riscriverla a livelli + collegarla allo **stato reale** (Task Scheduler + processi), come fatto per le Notturne.
-- 1b. **Critiche:** non aumentano (criticheData.ts a mano) → alimentarle da audit automatico/STATE → diventano la "cartella clinica" (Visione B).
+- 1b. ✅ **FATTO (06/06)** — **Critiche LIVE = cartella clinica viva.** La vista CRITICHE innesta un ramo "🔬 Auto-audit notturno" dai findings che night_audit (Sonnet) genera in `critiche_auto.json` (`GET /api/critiche/auto` + `criticheAuto.ts`). Crescono da sole, canone manuale intatto in testa, badge "N live · M aperti". Testato: 6 findings reali. (Resta: chiudere il loop status open→done quando una critica è risolta.)
 - 1c. **Livelli (lv):** non salgono da soli → collegarli a progressi reali.
 - 1d. **SOTTOCASELLE sidebar** (come 🌙 Notturne: sotto-voce piccola colorata; ognuna con la sua vista, niente link morti):
   - sotto **AUTOMAZ**: 🌙 Notturne (blu, fatto) · ⚙ Watchdog (verde = stato servizi live) · 🔬 Ricerca (ambra = "cosa ho scoperto stanotte", lega col Punto 6b)
@@ -77,8 +77,8 @@ NON la biografia di Matteo. Avventura fantastica **educativa** per bambini/non-t
 - 2h. Formati: testo ora; animazioni/YouTube/ebook = **leve predisposte, SPENTE** (non ora).
 
 ### PUNTO 3 — NON PERDERE EPISODI + LEGGIBILITÀ
-- 3a. **Non perdere niente:** recuperare TUTTI i .md (inclusi orfani di oggi: EP_AUTO_50, EP_20260602/03/04) in `episodes.json`; audit che ogni episodio su disco sia in dashboard.
-- 3b. **Far leggere TUTTI i testi delle storie** — anche cambiando **layout**: ogni episodio leggibile per intero (vista lettura / redesign StorieView).
+- 3a. ✅ **VERIFICATO FATTO (06/06)** — `audit_episodes.py`: 0 orfani, 114 voci in episodes.json, ogni .md su disco è in dashboard. Nessun content vuoto/corto (tutti i 114 hanno testo pieno).
+- 3b. ✅ **GIÀ OK (06/06)** — StorieView ha un renderer markdown (MdLine: h1/h3/bold/paragrafi): all'espansione mostra `ep.content` **per intero**. La preoccupazione "testi tagliati" era pre-renderer. (Eventuale redesign "vista lettura" dedicata = nice-to-have, non urgente.)
 
 ### PUNTO 4 — RAG vero + LLM
 - 4a. ✅ **FATTO (06/06)** — **Chat RAG vera** in dashboard: sotto-voce ciano "Chat RAG" sotto GENESIS, `POST /api/rag/chat` retrieval reale da MENTE/ + sintesi + **fonti citate** (testato: "178 kg corpo unico" cita v32_specifiche.md). RETE resta mappa, non è il RAG. (Resta aperto lo sdoppio CANONE vs RICERCA — già mitigato dal purge -448 chunk garbage della notte precedente.)
