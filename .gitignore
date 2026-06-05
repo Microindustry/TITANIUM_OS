@@ -19,6 +19,8 @@ NODES/MENTE_RAG/rag_tfidf.pkl
 NODES/MENTE_RAG/mente_index.json
 DATA/daily_brief_last.md
 DATA/computer_use_shots/
+# EVA — config con dati reali del centro (orari/servizi/clienti): non versionare
+NODES/EVA/config.json
 MODELS/
 CONTENT_ENGINE/DATABASE/training/dataset.jsonl
 

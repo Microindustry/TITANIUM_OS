@@ -1,0 +1,20 @@
+{
+  "_note": "Copia in config.json e personalizza. config.json e' gitignored (dati business). Nessun token qui: i segreti stanno in _VAULT/KEYS/titanium_os.env.",
+  "business": {
+    "name": "Vita Natura",
+    "city": "Boffalora sopra Ticino (MI)",
+    "hours": "mar-sab 9:00-19:00, lun e dom chiuso",
+    "human_handoff_note": "Quando handoff=true, EVA avvisa che una persona del centro confermera'."
+  },
+  "services": [
+    { "name": "Pulizia viso", "keywords": ["pulizia viso", "viso", "pulizia"], "duration": "60 min", "price": "da concordare" },
+    { "name": "Massaggio rilassante", "keywords": ["massaggio", "rilassante", "schiena"], "duration": "50 min", "price": "da concordare" },
+    { "name": "Manicure", "keywords": ["manicure", "unghie", "mani"], "duration": "45 min", "price": "da concordare" },
+    { "name": "Pedicure", "keywords": ["pedicure", "piedi"], "duration": "60 min", "price": "da concordare" },
+    { "name": "Trattamento corpo", "keywords": ["corpo", "trattamento corpo", "anticellulite"], "duration": "60 min", "price": "da concordare" }
+  ],
+  "replies": {
+    "saluto": "Ciao! Sono EVA, l'assistente di Vita Natura. Posso dirti orari, servizi o aiutarti a prenotare.",
+    "fallback": "Non sono sicura di aver capito. Posso aiutarti con orari, servizi o una prenotazione, oppure ti passo una persona del centro."
+  }
+}
