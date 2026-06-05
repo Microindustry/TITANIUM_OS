@@ -75,14 +75,15 @@ def main():
         for q in SEEDS.get(dom, []):
             candidates.append((q, dom))
 
-    # 2) candidati specifici da milestone + blocker (agganciati al dominio per keyword)
+    # 2) milestone/blocker NON diventano query grezze: erano gergo interno
+    #    ("...resolver _ti_paths bat registrar UA") -> 0 risultati + rumore web.
+    #    Servono invece da BOOST di priorita': se citano un dominio, i suoi seed
+    #    (query EN gia' ben formate) salgono in cima.
+    boost = set()
     for txt in [state.get("active_milestone", "")] + list(state.get("blockers", [])):
         dom = _domain_of(txt or "")
         if dom:
-            q = re.sub(r"\(.*?\)|[^\w\s]", " ", txt)
-            q = re.sub(r"\s+", " ", q).strip()
-            if len(q) > 12:
-                candidates.append((q[:80], dom))
+            boost.add(dom)
 
     # dedup mantenendo l'ordine
     seen, uniq = set(), []
@@ -109,8 +110,9 @@ def main():
     for q, d in uniq:
         cov = coverage(q)
         scored.append((q, d, cov, cov < GAP_THRESHOLD))
-    # gap prima, poi copertura crescente (i piu' deboli prima)
-    scored.sort(key=lambda x: (not x[3], x[2]))
+    # ordine: dominio "boostato" da milestone/blocker prima, poi gap, poi
+    # copertura crescente (i temi piu' deboli nel RAG vanno colmati prima).
+    scored.sort(key=lambda x: (x[1] not in boost, not x[3], x[2]))
 
     picked = scored[:MAX_TOPICS]
     OUT.parent.mkdir(parents=True, exist_ok=True)

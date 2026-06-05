@@ -481,6 +481,18 @@ def slug(text: str) -> str:
     return re.sub(r'[\s-]+', '_', s)[:60]
 
 
+def relevance_score(result: dict, query: str) -> float:
+    """Frazione di keyword (>3 char) della query presenti in titolo+abstract.
+    Gate anti garbage-in: openalex/semantic_scholar a volte restituiscono paper
+    larghi (es. '6G networks', 'service robots 2018') che non c'entrano con la
+    query. Sotto soglia -> scartati prima di toccare il disco."""
+    kws = {w for w in re.findall(r"[a-zA-Zàèéìòù]+", query.lower()) if len(w) > 3}
+    if not kws:
+        return 1.0
+    hay = (result.get("title", "") + " " + result.get("abstract", "")).lower()
+    return sum(1 for w in kws if w in hay) / len(kws)
+
+
 def save_result(result: dict, query: str, domain: str) -> Path:
     """Salva un risultato come markdown in MENTE/KNOWLEDGE/RESEARCH/."""
     subdir = OUT_DIR / slug(domain) if domain else OUT_DIR
@@ -587,6 +599,8 @@ def main():
     parser.add_argument("--dry-run",      action="store_true", help="Mostra risultati senza salvare")
     parser.add_argument("--enrich",       action="store_true", help="Arricchisci con PDF gratuiti via Unpaywall")
     parser.add_argument("--preset",  "-p", default="", help=f"Usa preset sorgenti per dominio: {', '.join(DOMAIN_PRESETS.keys())}")
+    parser.add_argument("--min-rel", type=float, default=0.34,
+                        help="Soglia rilevanza: frazione minima di keyword query nel risultato (default 0.34, 0=off)")
     args = parser.parse_args()
 
     # Preset dominio ha precedenza su --sources se specificato
@@ -622,6 +636,17 @@ def main():
         if k not in seen:
             seen.add(k)
             unique.append(r)
+
+    # Gate di rilevanza (anti garbage-in): scarta i risultati poco pertinenti.
+    if args.min_rel > 0:
+        before = len(unique)
+        unique = [r for r in unique if relevance_score(r, args.query) >= args.min_rel]
+        if before - len(unique):
+            logger.info("gate rilevanza: %d/%d scartati (soglia %.2f)",
+                        before - len(unique), before, args.min_rel)
+        if not unique:
+            logger.warning("Nessun risultato sopra la soglia di rilevanza (%.2f).", args.min_rel)
+            return
 
     logger.info("%d risultati unici trovati:", len(unique))
     for i, r in enumerate(unique, 1):
