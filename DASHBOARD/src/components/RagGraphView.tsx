@@ -11,8 +11,12 @@ interface VecPoint {
   id: string; label: string; folder: string;
   chunk_count: number; x: number; y: number; z: number;
 }
+interface VecLink {
+  source: number; target: number; weight: number;
+}
 interface VecData {
-  ok: boolean; chunk_count: number; doc_count: number; points: VecPoint[];
+  ok: boolean; chunk_count: number; doc_count: number;
+  points: VecPoint[]; links?: VecLink[];
 }
 
 const FOLDER_COLOR: Record<string, string> = {
@@ -37,10 +41,12 @@ const SCALE = 8;
 // ── componente Three.js incapsulato ───────────────────────────
 function ThreeScene({
   points,
+  links,
   onHover,
   onClick,
 }: {
   points: VecPoint[];
+  links: VecLink[];
   onHover: (p: VecPoint | null, x: number, y: number) => void;
   onClick: (p: VecPoint | null) => void;
 }) {
@@ -118,6 +124,27 @@ function ThreeScene({
       const pts = new THREE.Points(geo, mat);
       scene.add(pts);
 
+      // ── archi semantici: similarita' embedding REALE dal RAG (P4a) ──
+      // intensita' della linea = peso coseno; sky-blue per il tema RAG/ciano.
+      if (links.length) {
+        const lpos: number[] = [], lcol: number[] = [];
+        for (const l of links) {
+          const a = points[l.source], b = points[l.target];
+          if (!a || !b) continue;
+          lpos.push(a.x * SCALE, a.y * SCALE, a.z * SCALE,
+                    b.x * SCALE, b.y * SCALE, b.z * SCALE);
+          const t = Math.min(1, Math.max(0.3, (l.weight - 0.5) / 0.5));
+          lcol.push(0.22 * t, 0.74 * t, 0.97 * t, 0.22 * t, 0.74 * t, 0.97 * t);
+        }
+        const lgeo = new THREE.BufferGeometry();
+        lgeo.setAttribute("position", new THREE.Float32BufferAttribute(lpos, 3));
+        lgeo.setAttribute("color",    new THREE.Float32BufferAttribute(lcol, 3));
+        const lmat = new THREE.LineBasicMaterial({
+          vertexColors: true, transparent: true, opacity: 0.3, depthWrite: false,
+        });
+        scene.add(new THREE.LineSegments(lgeo, lmat));
+      }
+
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping  = true;
       controls.dampingFactor  = 0.08;
@@ -155,7 +182,7 @@ function ThreeScene({
       if (el.contains(s.renderer.domElement)) el.removeChild(s.renderer.domElement);
       stateRef.current = null;
     };
-  }, [points]);
+  }, [points, links]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const s = stateRef.current;
@@ -229,13 +256,23 @@ export function RagGraphView() {
 
   useEffect(() => { load(); }, [load]);
 
-  const visible = useMemo(() => {
-    if (!data) return [];
+  // punti filtrati + archi RIMAPPATI sugli indici visibili (gli archi del
+  // backend usano indici sull'array pieno: senza remap il filtro li romperebbe).
+  const { visible, visibleLinks } = useMemo(() => {
+    if (!data) return { visible: [] as VecPoint[], visibleLinks: [] as VecLink[] };
     const q = query.toLowerCase();
-    return data.points.filter(p =>
+    const keep = (p: VecPoint) =>
       (!folderFilter || p.folder === folderFilter) &&
-      (!q || p.label.toLowerCase().includes(q) || p.folder.toLowerCase().includes(q))
-    );
+      (!q || p.label.toLowerCase().includes(q) || p.folder.toLowerCase().includes(q));
+    const remap = new Map<number, number>();
+    const vis: VecPoint[] = [];
+    data.points.forEach((p, i) => { if (keep(p)) { remap.set(i, vis.length); vis.push(p); } });
+    const vlinks: VecLink[] = [];
+    for (const l of data.links ?? []) {
+      const a = remap.get(l.source), b = remap.get(l.target);
+      if (a !== undefined && b !== undefined) vlinks.push({ source: a, target: b, weight: l.weight });
+    }
+    return { visible: vis, visibleLinks: vlinks };
   }, [data, folderFilter, query]);
 
   const allFolders = useMemo(() =>
@@ -259,13 +296,13 @@ export function RagGraphView() {
                 <div className="text-[14px] font-bold font-mono text-emerald-400">{visible.length}</div>
               </div>
               <div className="flex-1 p-2 rounded border border-slate-800 bg-slate-900/40 text-center">
-                <div className="text-[7px] font-mono text-slate-600">chunk</div>
-                <div className="text-[14px] font-bold font-mono text-cyan-400">{data.chunk_count}</div>
+                <div className="text-[7px] font-mono text-slate-600">archi</div>
+                <div className="text-[14px] font-bold font-mono text-sky-400">{visibleLinks.length}</div>
               </div>
             </div>
           )}
           <div className="text-[7px] font-mono text-slate-700 leading-relaxed">
-            384-dim → t-SNE 3D<br />vicini = simili
+            384-dim → t-SNE 3D<br />archi = similarità coseno reale
           </div>
         </div>
 
@@ -336,6 +373,7 @@ export function RagGraphView() {
           <ThreeScene
             key={`${folderFilter}-${query}`}
             points={visible}
+            links={visibleLinks}
             onHover={onHover}
             onClick={setSelected}
           />

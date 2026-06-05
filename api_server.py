@@ -991,10 +991,12 @@ def rag_vectors():
         col = client.get_collection("mente")
         total_chunks = col.count()
 
-        # Usa cache se il count non è cambiato
-        if cache_path.exists():
+        # Usa cache se il count non è cambiato (e contiene i links — invalida i
+        # cache vecchi pre-P4a). ?force=1 la bypassa (il frontend lo manda già).
+        force = request.args.get("force")
+        if cache_path.exists() and not force:
             cached = json.loads(cache_path.read_text(encoding="utf-8"))
-            if cached.get("chunk_count") == total_chunks:
+            if cached.get("chunk_count") == total_chunks and "links" in cached:
                 return jsonify({"ok": True, **cached})
 
         # Carica tutti gli embedding
@@ -1024,6 +1026,26 @@ def rag_vectors():
             if mx > mn:
                 coords_3d[:, axis] = 2 * (coords_3d[:, axis] - mn) / (mx - mn) - 1
 
+        # ── Archi semantici: similarita' coseno REALE tra centroidi documento ──
+        # P4a "RETE alimentata dal RAG": gli archi nascono dagli embedding del RAG
+        # (non da euristiche folder/keyword del vecchio rag_graph.pkl). Per ogni
+        # nodo i suoi top-K vicini sopra soglia. Indici allineati a `points`.
+        norm = doc_centroids / (np.linalg.norm(doc_centroids, axis=1, keepdims=True) + 1e-8)
+        sim  = norm @ norm.T
+        np.fill_diagonal(sim, -1.0)
+        SIM_THRESH, SIM_TOPK = 0.55, 4
+        links, seen_pairs = [], set()
+        for i in range(len(doc_ids)):
+            for j in np.argsort(sim[i])[::-1][:SIM_TOPK]:
+                w = float(sim[i, int(j)])
+                if w < SIM_THRESH:
+                    continue
+                a, b = (i, int(j)) if i < int(j) else (int(j), i)
+                if (a, b) in seen_pairs:
+                    continue
+                seen_pairs.add((a, b))
+                links.append({"source": a, "target": b, "weight": round(w, 3)})
+
         def _folder(src: str) -> str:
             parts = src.replace("\\", "/").split("/")
             return parts[0] + "/" if parts else src
@@ -1048,6 +1070,7 @@ def rag_vectors():
             "chunk_count": total_chunks,
             "doc_count":   len(points),
             "points":      points,
+            "links":       links,
         }
         cache_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         return jsonify(payload)
