@@ -1,13 +1,16 @@
-### TITANIUM_OS Personal LLM — LLaMA-Factory LoRA CPU config
-### Modello: TinyLlama-1.1B-Chat-v1.0 (1.1B params — ottimale per CPU)
-### Dataset: 180 esempi da episodi TITANIUM_OS
-### Esecuzione: notte (Task Scheduler), solo CPU
+### TITANIUM_OS Personal LLM — LLaMA-Factory LoRA config (uso MANUALE)
+### Modello: TinyLlama-1.1B-Chat-v1.0
+### Dataset: episodi TITANIUM_OS
+### NB: l'automazione notturna NON usa questo file — TI_FineTune lancia
+###     night_finetune.bat che passa i parametri via CLI (GPU/fp16, path da %TI_ROOT%).
+###     Questo yaml serve solo per run manuali; eseguire dalla root del repo.
+### Path RELATIVI (portabili) — niente C:\Users\benen hardcoded.
 
 model_name_or_path: TinyLlama/TinyLlama-1.1B-Chat-v1.0
 
 ### Dataset
 dataset: titanium_os
-dataset_dir: C:\Users\benen\TITANIUM_OS\TITANIUM_OS\CONTENT_ENGINE\DATABASE\training
+dataset_dir: CONTENT_ENGINE/DATABASE/training
 template: default
 
 ### LoRA
@@ -27,7 +30,7 @@ warmup_ratio: 0.1
 max_grad_norm: 1.0
 
 ### Output
-output_dir: C:\Users\benen\TITANIUM_OS\TITANIUM_OS\MODELS\titanium_llm_v1
+output_dir: MODELS/titanium_llm_v1
 logging_steps: 10
 save_steps: 50
 save_total_limit: 2
