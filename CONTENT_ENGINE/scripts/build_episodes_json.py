@@ -30,6 +30,7 @@ import audit_episodes as audit  # riusa il matching disco<->json (stesse regole)
 STAGIONE_LABEL = {
     "S0": "Le Origini", "S1": "Il Presente", "ST": "Il Sistema",
     "S2": "La Costruzione", "AUTO": "Generati", "MOM": "Momenti",
+    "AV": "L'Avventura",   # binario educativo (Nina + THEMIS contro l'Entropia)
 }
 
 
@@ -50,6 +51,8 @@ def _parse_frontmatter(raw: str) -> dict:
 
 def _season_from_path(path: Path) -> str:
     s = str(path).upper()
+    if "S_AVVENTURA" in s:
+        return "AV"          # binario educativo (stagione "L'Avventura")
     if "S2_SISTEMA" in s:
         return "ST"          # i dev-log del sistema vanno nella stagione "Il Sistema"
     if "S0_ORIGINI" in s:

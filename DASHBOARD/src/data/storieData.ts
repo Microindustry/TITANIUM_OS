@@ -27,6 +27,7 @@ export const STAGIONI: Record<string, { label: string; color: string; order: num
   S2:   { label: "La Costruzione",   color: "#ef4444", order: 3, description: "Build log fisici: Config G, Epoxy Granite, assi, primo pezzo." },
   AUTO: { label: "Generati",         color: "#94a3b8", order: 4, description: "Episodi auto-generati da STATE.json ad ogni milestone." },
   MOM:  { label: "Momenti",          color: "#a78bfa", order: 5, description: "Momenti chiave isolati, inseribili tra gli episodi principali." },
+  AV:   { label: "L'Avventura",      color: "#ec4899", order: 6, description: "Binario educativo: il mondo fantastico che spiega la tecnologia ai bambini. Nina + THEMIS contro l'Entropia." },
 };
 
 export const EPISODES: Episode[] = episodesData as unknown as Episode[];
