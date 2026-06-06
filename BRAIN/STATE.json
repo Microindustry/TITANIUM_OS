@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-06T12:51:59.797414",
-  "active_milestone": "Sessione autonoma #31: P4a chat RAG + P4b leva locale + P1b cartella clinica viva + audit agenti P5 (tutto committato, build verde)",
-  "last_action": "Modifica a .gitignore",
-  "next_step": "DECISIONI MATTEO: (1) installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M` per accendere leva locale · (2) restart api_server (SERVICES/restart_api.ps1) per endpoint live · (3) prune roster agenti (AGENTS_AUDIT.md: aqua/plc) · LAVORO: P1a AUTOMAZ a livelli+stato live · P1c livelli da progressi reali · P2 storia-avventura",
-  "session_count": 31,
+  "last_update": "2026-06-06T13:08:23.695297",
+  "active_milestone": "Sessione #32: P1a IL GROSSO fatto — array AUTOMAZ riscritto con stato operativo reale (persistente/event/scheduled/on-demand/dormiente), ~14 file 'da creare' erano FALSI (esistono su disco), 5 sottostimati cablati corretti. Ollama installato + qwen2.5:7b in download.",
+  "last_action": "Modifica a AUTOMATIONS_AUDIT.md",
+  "next_step": "Quando il pull Ollama finisce: verificare leva locale accesa (has_model=true, toggle Locale risponde da Qwen). LAVORO: collegare badge persistente al vivo (/api/watchdog/status) nella view principale · P1c livelli da progressi reali · P2 storia-avventura. ANOMALIA: TI_NightAudit @03:52 da verificare.",
+  "session_count": 32,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-06T07:30:01.834496"
+      "last_activity": "2026-06-06T13:08:23.695297"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -47,7 +47,8 @@
       "n8n self-hosted attivo (account locale, no cloud) + pnpm installato; avvio al login operativo (03/06/2026)",
       "Vista METODO sul sito — spiegazione chi/cosa/come del sistema, nata dalle domande di un dev esterno (03/06/2026)",
       "Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)",
-      "Notturne ottimizzate + self-audit: RAG CANONE vs RICERCA (-448 chunk garbage purgati), gate rilevanza ricerca (--min-rel), topic puliti, night_audit.py su Sonnet genera cartella clinica automatica (DATA/audit), TI_NightAudit @03:52 (05/06/2026)"
+      "Notturne ottimizzate + self-audit: RAG CANONE vs RICERCA (-448 chunk garbage purgati), gate rilevanza ricerca (--min-rel), topic puliti, night_audit.py su Sonnet genera cartella clinica automatica (DATA/audit), TI_NightAudit @03:52 (05/06/2026)",
+      "P1a il grosso: view AUTOMAZ riscritta con stato operativo reale (persistente/event/scheduled/on-demand/dormiente) + badge live da /api/watchdog/status e /api/tasks/notturne; ~14 file 'da creare' erano falsi (esistono su disco), 5 sottostimati event-driven corretti; anomalia TI_NightAudit risolta (gira @03:52 OK). Commit 5f148a7+b70b4e2, build verde (06/06/2026)"
     ],
     "next": "Rifinire PITCH + MIMS + EVA",
     "target_capannone": "2030-07-15"

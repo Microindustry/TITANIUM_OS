@@ -67,10 +67,11 @@
 
 ## Anomalie da chiudere
 
-1. **TI_NightAudit: lo scheduler dice "mai eseguito"** ma `critiche_auto.json`
-   ha findings datati 05/06 e c'è `DATA/logs/night_audit.log`. → il self-audit
-   è girato **fuori dal task** (manuale o altro trigger). Il task @03:52 va
-   verificato/riparato, altrimenti la cartella clinica non si aggiorna da sola.
+1. ~~**TI_NightAudit: lo scheduler dice "mai eseguito"**~~ **[RISOLTO 06/06]**
+   `/api/tasks/notturne` ora riporta `TI_NightAudit: last_run 2026-06-06 03:52,
+   result 0 (OK)`. Il task **gira davvero via scheduler** — il "mai eseguito"
+   era un dato stale letto prima del primo run notturno. Nessuna riparazione
+   necessaria: la cartella clinica si aggiorna da sola.
 2. **TI_DeepFreeze / TI_FineTune**: mai partiti perché schedulati di domenica e
    la domenica non è ancora arrivata dopo la registrazione — atteso, ricontrollare
    dopo il primo weekend.
@@ -92,3 +93,31 @@ processi per i persistenti). Il fix:
 
 > Non ho riscritto l'array (40 voci) in questa sessione: è il grosso del P1a e
 > va fatto con calma/collegato al vivo. Questo audit è la base per farlo.
+
+## AGGIORNAMENTO 06/06 (sessione #32) — il grosso FATTO + scoperta
+
+Riscritto l'array (commit `5f148a7`, additivo, build verde). **Scoperta che
+l'audit non aveva colto**: i ~14 file marcati "(da creare)" **esistono già su
+disco**, solo con nomi diversi da quelli citati nella view:
+
+| view diceva "(da creare)" | file reale su disco | stato reale |
+|---|---|---|
+| `watchdog_monitor.py` | `automation_watchdog.py` | persistente (TI_Watchdog) |
+| `cloud_sync.py` | `ghost_sync.py` | dormiente |
+| `semantic_index.py` | `semantic_indexer.py` | **event (cablato)** |
+| `toc_generator.py` | `toc_compiler.py` | **event (cablato)** |
+| `md_validator.py` | `md_validator.py` | **event (cablato)** |
+| `auto_linker.py` | `auto_linker.py` | **event (cablato)** |
+| (mancava la card) | `md_view_pipeline.py` | **event (cablato)** |
+| `topic_analyzer.py` | `sentiment_topic.py` | dormiente |
+| `acl_manager.py` | `acl_manager.py` | dormiente |
+| `deeplink_creator.py` | `deep_link.py` | dormiente |
+| `archivista.py` | `archivista.py` | dormiente |
+| `formatter.py` | `content_pipeline.py` | dormiente |
+| `sanitizer.py` | `sanitizer.py` | dormiente (ha API report) |
+
+Quindi la classe corretta non è "pianificata/da creare" ma **dormiente**
+(esiste, non cablata a nessun trigger). Aggiunto campo `stato` a ogni voce +
+badge UI + striscia conteggio per stato. **Resta**: collegare il badge
+`persistente` al vivo (`/api/watchdog/status`) anche nella view principale
+(oggi solo le Notturne leggono `/api/tasks/notturne`).
