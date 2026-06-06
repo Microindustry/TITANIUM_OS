@@ -1,47 +1,55 @@
-=== RIAVVIO SESSIONE #31 — 06/06/2026 ===
-Ultima sessione: #31 (autonoma, Matteo a dormire) — 2026-06-06
+=== RIAVVIO SESSIONE #31 → #32 — 06/06/2026 ===
+Ultima sessione: #31 (autonoma, Matteo al lavoro) — 2026-06-06
+Push GitHub: OK (main @ b1b20d5). Una nuova sessione riprende DA QUI.
 
-━━━ STAVAMO PARLANDO DI ━━━
-Completato il lavoro interrotto della #30: la CHAT RAG VERA in dashboard (P4a)
-+ la LEVA LLM LOCALE (P4b). Il RAG non e' piu' solo magazzino: ora si interroga
-dalla dashboard (sotto-voce ciano "Chat RAG" sotto GENESIS) e risponde citando
-le fonti reali di MENTE/. Con toggle motore Claude/Locale (Ollama+Qwen).
+━━━ DOVE SIAMO (enuncialo in <10 sec) ━━━
+Sessione autonoma #31 completata: Chat RAG vera in dashboard (P4a) + leva LLM
+locale Ollama/Qwen (P4b) + cartella clinica viva (P1b) + audit agenti (P5) e
+audit automazioni (P1a). Tutto committato e pushato, build tsc -b verde.
+Prossimo: le 3 decisioni di Matteo qui sotto, poi il grosso del P1a.
 
-━━━ COSA HO TROVATO (sessione interrotta) ━━━
-  • RagChatView.tsx + /api/rag/chat + /api/llm/ollama/status + ollama_client.py
-    erano GIA' costruiti ma NON committati e NON testati (interrotto prima del commit).
-  • Avevo aggiunto per errore un /api/rag/ask ridondante -> RIMOSSO (c'era gia' /chat).
-  • tsc -b falliva per 6 errori di tipo PRE-ESISTENTI (non miei) -> sistemati.
+━━━ FATTO QUESTA SESSIONE (commit) ━━━
+  ✓ 1bd09e5  P4a chat RAG (/api/rag/chat) + P4b leva locale (ollama_client,
+             toggle Claude/Locale, fallback onesto) + fix 6 errori TS pre-esistenti
+  ✓ 3258887  SERVICES/restart_api.ps1 (restart api_server auto-UAC)
+  ✓ f5d6c1f  P1b cartella clinica viva: vista CRITICHE innesta ramo LIVE da
+             critiche_auto.json (/api/critiche/auto + criticheAuto.ts)
+  ✓ 34f16c6  P5 audit roster agenti -> NODES/AGENTS/AGENTS_AUDIT.md
+  ✓ 9aebaf6  P1a audit automazioni -> AUTOMATIONS/AUTOMATIONS_AUDIT.md
+  ✓ verificato: P3a 0 episodi orfani, P3b testi interi (niente da fare)
+  ✓ tutto testato via Flask test_client (chat RAG + critiche/auto = REALI)
 
-━━━ FATTO QUESTA SESSIONE ━━━
-  ✓ Commit 1bd09e5 (feat rag P4a/P4b): chat RAG + leva locale + build verde
-  ✓ Commit 3258887 (chore): SERVICES/restart_api.ps1 (restart api_server auto-UAC)
-  ✓ Testato /api/rag/chat via test_client: HTTP 200, engine_used=claude, fonti
-    citate (v32_specifiche.md), risposta "178 kg corpo unico" corretta — REALE.
-  ✓ Leva locale onesta: available=false -> fallback Claude con flag (no teatro)
-  ✓ Spuntati PROSSIMA_SESSIONE.md + Desktop\TITANIUM_OS_PIANO.txt (P4a FATTO, P4b leva)
+━━━ 3 DECISIONI/AZIONI DI MATTEO (1 click/comando ciascuna) ━━━
+  1. RESTART api_server per endpoint LIVE: doppio click SERVICES\restart_api.ps1
+     (auto-UAC). MOTIVO: api_server gira ELEVATO (spawnato dal watchdog Highest),
+     una shell normale non puo' ucciderlo per ricaricare il codice nuovo.
+     Finche' non lo fai, Chat RAG e Critiche-live danno 404 in dashboard.
+     (Alternativa: va live da solo al prossimo login — watchdog AtLogon.)
+  2. ACCENDERE LEVA LOCALE: installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M`
+  3. PRUNE ROSTER AGENTI: decisione di visione (multi-progetto?). Vedi
+     NODES/AGENTS/AGENTS_AUDIT.md (aqua fuori scope, plc sovradimensionato).
 
-━━━ THREAD APERTI (da riprendere) ━━━
-  → ACCENDERE LEVA LOCALE: installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M`
-  → RESTART api_server per endpoint LIVE: doppio click SERVICES\restart_api.ps1
-    (auto-UAC). Oppure va live da solo al prossimo login (watchdog AtLogon).
-  → P1b: critiche LIVE in dashboard da critiche_auto.json (cartella clinica, Visione B)
-  → P5: agenti visibili ("sto interrogando X") + verificare se sono giusti per noi
-  → P3a: recuperare episodi orfani in episodes.json
+━━━ PROSSIMO LAVORO (quando riprendi) ━━━
+  → P1a IL GROSSO: riscrivere l'array AUTOMAZ (40 voci hardcoded) a livelli +
+    stato LIVE (come Notturne), separare le "pianificate"/da-creare dalle reali,
+    correggere le 5 voci sottostimate. Base pronta: AUTOMATIONS/AUTOMATIONS_AUDIT.md.
+    NB: tocca la UI -> screenshot prima, additivo, commit isolati (paura di Matteo).
+  → Anomalia da chiudere: TI_NightAudit risultava "mai via scheduler" ma produce
+    la cartella clinica (ora 06/06 OK) -> verificare il task @03:52.
+  → P1c livelli da progressi reali · P2 storia-avventura (creativo, con Matteo).
 
-━━━ MURO TECNICO INCONTRATO ━━━
-  ⚠ api_server (PID elevato, spawnato dal watchdog RunLevel Highest) NON e'
-    uccidibile da shell normale (Medium IL). Restart richiede UAC: per questo
-    restart_api.ps1 si auto-eleva. Endpoint nuovi non live nell'istanza corrente
-    finche' non si fa il restart (o login).
+━━━ MURO TECNICO (ricorda) ━━━
+  ⚠ api_server elevato non uccidibile da shell Medium IL -> restart_api.ps1 (UAC).
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
 ━━━ ULTIMI COMMIT ━━━
-  3258887 chore(services): restart_api.ps1 — riavvio api_server con auto-UAC
+  b1b20d5 chore: snapshot chiusura sessione #31 — salva tutto per PC/sessione nuova
+  9aebaf6 docs(automations): audit reale P1a — la view AUTOMAZ mente in 2 direzioni
+  34f16c6 docs(agents): audit roster P5 — aqua/plc fuori scope
+  f5d6c1f feat(critiche): cartella clinica viva — critiche LIVE dal self-audit (P1b)
   1bd09e5 feat(rag): Chat RAG vera in dashboard + leva LLM locale (P4a/P4b)
-  64c7212 docs(p4b): ricerca LLM locale (Simone Rizzo) + decisione Qwen2.5-7B-Q4
 
-Generato: 06/06/2026 (sessione autonoma)
+Generato: 06/06/2026 — chiusura sessione #31, pronto per ripresa in nuova sessione
