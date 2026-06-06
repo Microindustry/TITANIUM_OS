@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-02T08:57:39.143146",
-  "source_dir": "C:\\Users\\benen\\MICROINDUSTRY\\MENTE",
-  "output_file": "C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 150,
+  "scanned_at": "2026-06-06T03:39:20.629976",
+  "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
+  "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
+  "total_files": 197,
   "files_read": 5,
-  "files_skipped": 145,
+  "files_skipped": 192,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -376,6 +376,13 @@
       "text_len": 46147
     },
     {
+      "path": "KNOWLEDGE\\FONTI_UTILI.md",
+      "type": "md",
+      "size_kb": 3.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\REPOS\\bOS_multi_agent_patterns.md",
       "type": "md",
       "size_kb": 1.7,
@@ -460,6 +467,20 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_cloudedge_collaborative_architecture_for_multimodal_llm_ba.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_survey_of_large_language_models.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\agentic_rag_hybrid_2025.md",
       "type": "md",
       "size_kb": 2.5,
@@ -481,9 +502,37 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\brave_new_world_service_robots_in_the_frontline.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\caging_the_agents_a_zero_trust_security_architecture_for_aut.md",
+      "type": "md",
+      "size_kb": 2.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\computer_use_agent_survey_2025.md",
       "type": "md",
       "size_kb": 1.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\demystifying_instruction_mixing_for_fine_tuning_large_langua.md",
+      "type": "md",
+      "size_kb": 1.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\differentially_private_fine_tuning_of_language_models.md",
+      "type": "md",
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
@@ -495,9 +544,44 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\edge_intelligence_paving_the_last_mile_of_artificial_intelli.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\federated_sketching_lora_a_flexible_framework_for_heterogene.md",
+      "type": "md",
+      "size_kb": 1.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\fedshield_llm_a_secure_and_scalable_federated_fine_tuned_lar.md",
+      "type": "md",
+      "size_kb": 2.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\finetune_llm_local_cpu_2025.md",
       "type": "md",
       "size_kb": 2.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\fl_dplora_an_integrated_and_efficient_privacy_preserving_tra.md",
+      "type": "md",
+      "size_kb": 2.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\from_llm_reasoning_to_autonomous_ai_agents_a_comprehensive_r.md",
+      "type": "md",
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -509,6 +593,34 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\large_language_models_encode_clinical_knowledge.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\learning_analytics_and_ai_politics_pedagogy_and_practices.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\learning_from_failure_integrating_negative_examples_when_fin.md",
+      "type": "md",
+      "size_kb": 2.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\lora_finetuning_of_a_small_3b_llm_for_clinical_information_e.md",
+      "type": "md",
+      "size_kb": 2.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\multiagent_orchestration_2025.md",
       "type": "md",
       "size_kb": 2.0,
@@ -516,9 +628,65 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\parameter_efficient_fine_tuning_of_large_scale_pre_trained_l.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\pfflora_personalized_fourier_lora_fine_tuning_of_federated_l.md",
+      "type": "md",
+      "size_kb": 1.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\quantum_espresso_a_modular_and_open_source_software_project_.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\review_of_autonomous_and_collaborative_agentic_ai_and_multi_.md",
       "type": "md",
       "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\scipy_10_fundamental_algorithms_for_scientific_computing_in_.md",
+      "type": "md",
+      "size_kb": 1.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\splitllm_hierarchical_split_learning_for_large_language_mode.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\the_atomic_simulation_environmenta_python_library_for_workin.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\towards_6g_wireless_communication_networks_vision_enabling_t.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\wizardlm_empowering_large_pre_trained_language_models_to_fol.md",
+      "type": "md",
+      "size_kb": 1.9,
       "readable": false,
       "extracts": {}
     },
@@ -551,6 +719,13 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\a_kinematic_errors_prediction_and_accuracy_improvement_metho.md",
+      "type": "md",
+      "size_kb": 2.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\a_new_two_stage_degradation_model_for_the_preload_of_linear_.md",
       "type": "md",
       "size_kb": 1.9,
@@ -558,9 +733,44 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\a_review_of_vibration_based_structural_health_monitoring_wit.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\advancements_and_applications_of_lightweight_structures_a_co.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\advances_in_connection_techniques_for_raw_bamboo_structuresa.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\an_overview_on_economic_machining_of_hardened_steels_by_hard.md",
       "type": "md",
       "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\analysis_of_factors_affecting_the_straightness_of_assembled_.md",
+      "type": "md",
+      "size_kb": 1.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\contact_properties_research_for_linear_sliding_guide_rail_wi.md",
+      "type": "md",
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -579,6 +789,13 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\finite_element_analysis_and_structure_optimization_of_a_gant.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mathematical_modeling_of_friction_force_in_lm_ball_guides.md",
       "type": "md",
       "size_kb": 1.3,
@@ -589,6 +806,13 @@
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mechanical_properties_of_polymer_concrete.md",
       "type": "md",
       "size_kb": 1.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\modeling_of_cnc_machine_tool_line_rail_assembly_accuracy_and.md",
+      "type": "md",
+      "size_kb": 1.7,
       "readable": false,
       "extracts": {}
     },
@@ -607,6 +831,27 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\novel_procedures_for_sustainable_design_in_structural_rehabi.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\research_on_the_error_averaging_effect_in_a_rolling_guide_pa.md",
+      "type": "md",
+      "size_kb": 1.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\research_on_wear_modeling_of_linear_rolling_guide_pair_based.md",
+      "type": "md",
+      "size_kb": 2.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\static_and_dynamic_behavior_of_steel_reinforced_epoxy_granit.md",
       "type": "md",
       "size_kb": 1.4,
@@ -615,6 +860,27 @@
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\static_and_dynamic_performance_improvement_of_conventional_c.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\stiffness_analysis_of_parallel_manipulators_with_preloaded_p.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\the_optical_corrector_for_the_dark_energy_spectroscopic_inst.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\the_robotic_multiobject_focal_plane_system_of_the_dark_energ.md",
       "type": "md",
       "size_kb": 1.4,
       "readable": false,
@@ -915,6 +1181,13 @@
       "extracts": {}
     },
     {
+      "path": "MIMS\\brevetto_B2_bozza.md",
+      "type": "md",
+      "size_kb": 9.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "README.md",
       "type": "md",
       "size_kb": 0.5,
@@ -1037,6 +1310,20 @@
       "path": "SESSIONI\\2026-05-31_s0_.md",
       "type": "md",
       "size_kb": 3.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-06-02_domande-amico-dev-flutter.md",
+      "type": "md",
+      "size_kb": 4.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-06-05_lavoro_autonomo.md",
+      "type": "md",
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
@@ -1233,6 +1520,48 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
       "type": "md",
       "size_kb": 7.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260602_allineamento_pc_fisso_getac_ignora_.md",
+      "type": "md",
+      "size_kb": 7.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
+      "type": "md",
+      "size_kb": 8.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260604_episodi_su_episodes_json_bulletproo.md",
+      "type": "md",
+      "size_kb": 9.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
+      "type": "md",
+      "size_kb": 8.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
+      "type": "md",
+      "size_kb": 7.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
+      "type": "md",
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },

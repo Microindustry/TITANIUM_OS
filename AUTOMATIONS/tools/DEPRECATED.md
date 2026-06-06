@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [AUTOMATIONS/tools  script legacy vs attuali](#automationstools-script-legacy-vs-attuali)
+  - [ATTUALI (portabili  tenere)](#attuali-portabili-tenere)
+  - [LEGACY (hardcoded benen / DESKTOP-DIUB4EJ  rotti su questa macchina teo)](#legacy-hardcoded-benen-desktop-diub4ej-rotti-su-questa-macchina-teo)
+    - [Come rimuoverli (quando decidi)](#come-rimuoverli-quando-decidi)
+  - [Avvio ecosistema al login  RISOLTO (nessun gap)](#avvio-ecosistema-al-login-risolto-nessun-gap)
+
+<!-- /TOC -->
+
 # AUTOMATIONS/tools — script legacy vs attuali
 
 Audit del 2026-06-05. Chiude il thread "valutare se rimuovere i vecchi registrar".

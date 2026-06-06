@@ -1,0 +1,45 @@
+{
+  "path": "AUTOMATIONS/tools/DEPRECATED.md",
+  "title": "AUTOMATIONS/tools — script legacy vs attuali",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [AUTOMATIONS/tools  script legacy vs attuali](#automationstools-script-legacy-vs-attuali)\n  - [ATTUALI (portabili  tenere)](#attuali-portabili-tenere)\n  - [LEGACY (hardcoded benen / DESKTOP-DIUB4EJ  rotti su questa macchina teo)](#legacy-hardcoded-benen-desktop-diub4ej-rotti-su-questa-macchina-teo)\n    - [Come rimuoverli (quando decidi)](#come-rimuoverli-quando-decidi)\n  - [Avvio ecosistema al login  RISOLTO (nessun gap)](#avvio-ecosistema-al-login-risolto-nessun-gap)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "AUTOMATIONS/tools — script legacy vs attuali",
+      "content": "Audit del 2026-06-05. Chiude il thread \"valutare se rimuovere i vecchi registrar\".\n**Nessuno script è stato cancellato**: la rimozione è una decisione di Matteo. Qui solo\nla mappa e la raccomandazione."
+    },
+    {
+      "level": 2,
+      "title": "✅ ATTUALI (portabili — tenere)",
+      "content": "| Script | Cosa fa | Note |\n|--------|---------|------|\n| `register_night_tasks.ps1` | Registra i 6 task notturni in Task Scheduler | Path dinamici (`$PSScriptRoot`), `$env:USERNAME`, auto-UAC. Registra: TI_StoryAgent, TI_NightResearch, TI_NightPush, TI_DailyBrief, TI_DeepFreeze, TI_FineTune |\n| `register_watchdog.ps1` | Registra `TI_Watchdog` (AtLogon, RunLevel Highest) | Portabile, supervisiona api_server + mente_watcher |\n| `../../SETUP_ADMIN.bat` (root) | 24/7 (no standby) + RDP + OpenSSH | **Pulito, machine-agnostic — tenere.** Non è hardcoded benen |"
+    },
+    {
+      "level": 2,
+      "title": "⚠️ LEGACY (hardcoded `benen` / `DESKTOP-DIUB4EJ` — rotti su questa macchina `teo`)",
+      "content": "Tutti **superati** dai due registrar portabili sopra. Falliscono o registrano task\nverso path inesistenti (`C:\\Users\\benen\\...`) se eseguiti sul fisso.\n\n| Script | Hardcoding | Superato da | Raccomandazione |\n|--------|-----------|-------------|-----------------|\n| `set_tasks_hl.ps1` | `C:\\Users\\benen`, UserId \"benen\" | `register_night_tasks.ps1` | **Rimuovere** |\n| `SETUP_ADMIN_COMPLETE.ps1` | `C:\\Users\\benen`, `$USER=\"benen\"`, prompt password | `register_night_tasks.ps1` + `register_watchdog.ps1` | **Rimuovere** |\n| `fix_tasks_admin.ps1` | `C:\\Users\\benen\\...\\night_finetune.bat` | `register_night_tasks.ps1` (TI_FineTune) | **Rimuovere** |\n| `optimize_windows_admin.bat` | `DESKTOP-DIUB4EJ\\benen`, `C:\\Users\\benen` | `register_night_tasks.ps1` + SETUP_ADMIN.bat | **Rimuovere** |\n| `FIX_ADMIN_TASKS.bat` | `/ru \"benen\"`, `C:\\Users\\benen` | `register_night_tasks.ps1` | **Rimuovere** |\n| `../../START_GETAC.bat` (root) | Launcher Getac (benen) | `START_LOGIN.bat` (fisso) | Rimuovere o archiviare se il Getac non si usa più |"
+    },
+    {
+      "level": 3,
+      "title": "Come rimuoverli (quando decidi)",
+      "content": "```powershell"
+    },
+    {
+      "level": 1,
+      "title": "dalla cartella tools\\ — git rm così resta nella history e si può recuperare",
+      "content": "git rm set_tasks_hl.ps1 SETUP_ADMIN_COMPLETE.ps1 fix_tasks_admin.ps1 `\n       optimize_windows_admin.bat FIX_ADMIN_TASKS.bat\ngit rm ..\\..\\START_GETAC.bat   # opzionale, solo se molli il Getac\ngit commit -m \"chore(tools): rimuovo registrar legacy hardcoded benen (superati dai portabili)\"\n```"
+    },
+    {
+      "level": 2,
+      "title": "✅ Avvio ecosistema al login — RISOLTO (nessun gap)",
+      "content": "I vecchi script registravano un task **`TI_StartEcosystem`**. Il nuovo registrar non lo\ncrea, ma **non serve**: sul fisso l'avvio al login è gestito da un collegamento nella\ncartella Esecuzione automatica:\n\n```\nshell:startup\\TITANIUM_OS.lnk  ->  C:\\Users\\teo\\TITANIUM_OS\\START_LOGIN.bat  (verificato 2026-06-05)\n```\n\nQuindi al login parte `START_LOGIN.bat` (dashboard, n8n, chrome-CDP, api_server, watcher).\nI servizi core sono inoltre coperti da `TI_Watchdog`, che li rilancia se cadono.\n\n> Nota: `START_LOGIN.bat` ora risolve `claude.exe` dinamicamente (commit del 2026-06-05),\n> quindi anche l'avvio al login apre Claude Code correttamente."
+    }
+  ],
+  "word_count": 425,
+  "updated_at": "2026-06-05T23:46:47.328082",
+  "built_at": "2026-06-06T12:52:13.842762"
+}

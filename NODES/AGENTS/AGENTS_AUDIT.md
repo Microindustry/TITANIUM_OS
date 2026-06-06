@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [AGENTS  Audit roster (P5: verifica se sono perfetti per noi)](#agents-audit-roster-p5-verifica-se-sono-perfetti-per-noi)
+  - [Roster attuale (agents_db.json, 9 agenti)](#roster-attuale-agentsdbjson-9-agenti)
+  - [Mismatch col canone CLAUDE.md (PERSONAGGI AI)](#mismatch-col-canone-claudemd-personaggi-ai)
+  - [Raccomandazione (DECISIONE A MATTEO)](#raccomandazione-decisione-a-matteo)
+  - [Stato P5 già fatto (sessioni 30-31)](#stato-p5-già-fatto-sessioni-30-31)
+
+<!-- /TOC -->
+
 # AGENTS — Audit roster (P5: "verifica se sono perfetti per noi")
 
 *06/06/2026 · sessione autonoma · richiesta di Matteo nel PIANO P5*

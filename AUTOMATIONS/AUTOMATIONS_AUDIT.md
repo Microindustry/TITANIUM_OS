@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [AUTOMAZIONI  Audit reale (P1a: stanno girando davvero?)](#automazioni-audit-reale-p1a-stanno-girando-davvero)
+  - [Il problema: la view AUTOMAZ mente in DUE direzioni](#il-problema-la-view-automaz-mente-in-due-direzioni)
+  - [Cosa gira DAVVERO (verificato)](#cosa-gira-davvero-verificato)
+    - [Processi persistenti (3)  supervisionati dal watchdog](#processi-persistenti-3-supervisionati-dal-watchdog)
+    - [Scheduled (Task Scheduler TI_)  stato reale 06/06](#scheduled-task-scheduler-ti-stato-reale-0606)
+    - [Event-driven (girano quando il watcher vede un cambio file, NON persistenti)](#event-driven-girano-quando-il-watcher-vede-un-cambio-file-non-persistenti)
+    - [On-demand (manuale / API / MCP)](#on-demand-manuale-api-mcp)
+  - [Anomalie da chiudere](#anomalie-da-chiudere)
+  - [Raccomandazione (fix P1a vero, prossimo step)](#raccomandazione-fix-p1a-vero-prossimo-step)
+
+<!-- /TOC -->
+
 # AUTOMAZIONI — Audit reale (P1a: "stanno girando davvero?")
 
 *06/06/2026 · sessione autonoma · richiesta di Matteo nel PIANO P1a*

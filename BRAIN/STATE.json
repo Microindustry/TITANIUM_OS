@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-06T00:06:53.382015",
+  "last_update": "2026-06-06T12:51:59.797414",
   "active_milestone": "Sessione autonoma #31: P4a chat RAG + P4b leva locale + P1b cartella clinica viva + audit agenti P5 (tutto committato, build verde)",
-  "last_action": "Audit roster agenti (AGENTS_AUDIT.md) + spuntato il piano",
+  "last_action": "Modifica a .gitignore",
   "next_step": "DECISIONI MATTEO: (1) installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M` per accendere leva locale · (2) restart api_server (SERVICES/restart_api.ps1) per endpoint live · (3) prune roster agenti (AGENTS_AUDIT.md: aqua/plc) · LAVORO: P1a AUTOMAZ a livelli+stato live · P1c livelli da progressi reali · P2 storia-avventura",
   "session_count": 31,
   "pillars": {
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-05T23:47:00.013762"
+      "last_activity": "2026-06-06T07:30:01.834496"
     },
     "VITA_NATURA": {
       "status": "active",

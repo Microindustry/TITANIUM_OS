@@ -1,0 +1,55 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
+  "title": "TITANIUM_OS — Episodio 20",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 20](#titaniumos-episodio-20)\n  - [Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown](#il-dev-flutter-che-non-capiva-perché-scriviamo-tutto-in-markdown)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema con i Path Hardcodati](#atto-i-il-problema-con-i-path-hardcodati)\n  - [ATTO II  Chiudere il Loop](#atto-ii-chiudere-il-loop)\n  - [ATTO III  Il Dev Flutter e le Cinque Domande](#atto-iii-il-dev-flutter-e-le-cinque-domande)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Sono le 22:35.\n\nMatteo non è davanti al computer. Ha lasciato Claude lì — aperto, in attesa — con un amico. Un dev Flutter. Backend solido, migrazioni, il tipo di persona che sa come funzionano le cose.\n\nL'amico guarda lo schermo. Vede la dashboard. Vede i commit. Vede il markdown.\n\nScrive la prima domanda: *\"Come state lavorando? Salvate su git?\"*\n\nÈ una domanda normale. Ragionevole. La domanda che farebbe chiunque con un background tecnico e zero contesto su quello che sta succedendo in questa taverna da 12 m².\n\nClaude risponde. L'amico legge. Fa un'altra domanda. Poi un'altra.\n\nAlla quinta, scrive: *«lo state facendo in modo inusuale ma figo».*\n\nQuella frase — cinque parole — vale più di qualsiasi documentazione che Matteo abbia mai scritto sul sistema.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Il Problema con i Path Hardcodati",
+      "content": "La mattina del 3 giugno inizia con un blocco.\n\nNon un blocco creativo. Un blocco tecnico, noioso, del tipo che ti ricorda che i sistemi complessi muoiono per mille tagli piccoli. Tutte le automazioni notturne — il research, il fine-tune, la generazione degli episodi — sono cablate su `C:\\Users\\benen`. Il path del Getac. La macchina di lavoro.\n\nIl problema: il sistema deve girare anche altrove. E `C:\\Users\\benen` non esiste ovunque.\n\nLa soluzione è pulita ma richiede disciplina: un resolver centrale. `_ti_paths.bat` — un singolo file che al runtime capisce dove si trova, trova `TI_ROOT`, trova Python, trova l'ambiente, trova la cartella MENTE. Da lì in poi, tutto il resto si aggancia a lui.\n\nNon è glamour. È impianto idraulico. Il tipo di lavoro che nessuno vede ma che, se non lo fai, il sistema ti esplode in faccia alle 3 di notte quando non ci sei.\n\nNel commit c'è anche il watchdog. `register_watchdog.ps1` — si registra nel Task Scheduler, `AtLogon`, `RunLevel Highest`, nessun limite di tempo. Il guardiano che riporta tutto online dopo un riavvio. L'equivalente digitale del pannello di controllo che riaccende la macchina CNC dopo un blackout.\n\nMatteo conosce quel tipo di robustezza. La pratica in TIG da vent'anni. Un giunto che regge sotto carica non è un giunto che sembra bello — è un giunto che non si è mai rotto quando contava.\n\n**Dati concreti:**\n- `_ti_paths.bat`: risolve `TI_ROOT / PYTHON / GH / ENV_FILE / MENTE_DIR` a runtime\n- Watchdog: AtLogon, RunLevel Highest, no time-limit, pythonw-safe\n- Path de-hardcodati su: launcher, `CLAUDE_CODE.bat`, `.claude/settings.json`, hook Stop\n- `claude.exe` risolto dinamicamente anche dopo aggiornamenti del GUID Store\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — Chiudere il Loop",
+      "content": "Nel pomeriggio, tre feature entrano in produzione quasi in sequenza. Sono collegate. È difficile capirne una senza le altre due.\n\n**Prima:** Il consumatore del modello fine-tunato.\n\n`NODES/LOCAL_LLM/infer.py` carica TinyLlama con i pesi LoRA da `MODELS/titanium_llm_v1`. Non è il modello più potente che esiste. Non deve esserlo. Deve essere *suo* — addestrato su sessioni, decisioni, logica tecnica di questo sistema specifico. Il modello che conosce la differenza tra un tile MIMS e un episodio GENESIS perché ha letto migliaia di righe su entrambi.\n\n**Seconda:** La generazione grounded sul RAG.\n\n`retrieve_context()` — prima di scrivere un episodio, il sistema va a cercare nel RAG. Trova i fatti reali sul milestone. Li inietta nel prompt. L'episodio che esce non è allucinazione — è radicato nei 6518 chunk che Matteo ha costruito nel tempo. C'è anche un filo narrativo tra episodi: il sistema sa cosa è stato già detto, non ricomincia da zero ogni volta.\n\n**Terza:** La ricerca notturna guidata dallo STATE.\n\n`night_topics.py` non sceglie cosa cercare a caso. Legge lo STATE — i pilastri attivi, i blocker, le priorità. Genera i topic da lì. La ricerca notturna diventa contestuale: se V32 è al 65% e il blocker è il sistema di raffreddamento del mandrino, quella notte il sistema cerca raffreddamento mandrini, non altro.\n\nQueste tre cose insieme fanno una cosa sola: **il sistema conosce se stesso**.\n\nNon in senso filosofico. In senso operativo. Sa dove è, sa cosa manca, sa cosa cercare, sa come parlarne. È il tipo di coerenza che Matteo insegue dal primo commit.\n\n**Dati concreti:**\n- RAG: 6518 chunk (da 6497 il 2 giugno — +21 chunk in 24 ore, inclusa la cattura della sessione con l'amico)\n- LLM locale: TinyLlama + LoRA da sessioni proprie\n- PC fisso: RAG + CUDA + indice completamente operativo (Tailscale `100.125.152.124`)\n- ID episodi: collision-free con `_next_auto_index()` + dedup per slug\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Il Dev Flutter e le Cinque Domande",
+      "content": "Torniamo a quella sera.\n\nL'amico fa cinque domande. Non le conosciamo tutte — la cattura è parziale. Ma la prima è abbastanza: *\"Come state lavorando? Salvate su git?\"*\n\nÈ la domanda giusta perché rivela il gap. Un dev Flutter pensa in termini di repo, branch, PR, deploy pipeline. Pensa a un'app con uno stack definito, un ciclo di vita chiaro, utenti che cliccano su cose.\n\nTITANIUM_OS non è quello.\n\nÈ un sistema cognitivo che vive in markdown. Ogni decisione è scritta. Ogni sessione viene catturata. Ogni RAG chunk è una decisione reale — non documentazione retroattiva, ma pensiero in tempo reale trasformato in dato ricercabile. Lo STATE non è un database di configurazione: è una fotografia dell'intero sistema aggiornata ogni sessione. Il git non è per il codice — è per la memoria.\n\nLa vista METODO che entra in produzione quel giorno nasce esattamente da questo scambio. *\"markdown come fonte + RAG vettoriale + loop 1→N\"* — tre righe che spiegano perché questo sistema è diverso da un'app classica. Non perché sia più sofisticato. Perché ha un'architettura che cresce con chi la usa.\n\nL'amico Flutter non capisce perché scriviamo tutto in markdown. È una reazione onesta. La maggior parte dei dev non lo farebbe. C'è qualcosa di deliberatamente lento in quel processo — scrivi, strutturi, committi, aspetti che il RAG indicizzi. Non è la velocità di uno sprint.\n\nMa è la differenza tra un sistema che ricorda e uno che dimentica.\n\nMatteo lo sa. Lo ha imparato costruendo pezzi fisici dove un'informazione persa — una misura, una tolleranza, un parametro di saldatura — si trasforma in un pezzo da rifare. L'Epoxy Granite di V32 non perdona. Nemmeno il codice che non sa dove si trova.\n\n*\"Lo state facendo in modo inusuale ma figo.\"*\n\nNon è un complimento generico. È la risposta di qualcuno che ha capito abbastanza da riconoscere che non avrebbe fatto così — e che forse avrebbe avuto torto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "La sessione #20 si chiude con le automazioni notturne che passano da SPENTE a LIVE.\n\nNella dashboard c'è una nuova voce sidebar: \"Notturne\". Blu. Sotto AUTOMAZ. Sei task schedulati visibili in tempo reale via PowerShell — il server Flask chiama `Get-ScheduledTask`, la dashboard mostra lo stato. Non è debug: è visibilità operativa.\n\nQuella notte, mentre Matteo dorme, il sistema ricerca, indicizza, impara.\n\nNon è autonomia. È delegazione intelligente — il tipo che funziona solo se hai costruito le fondamenta giuste. I path resolver. Il watchdog. Il RAG grounded. Il loop chiuso tra LLM locale e memoria vettoriale.\n\nMatteo costruisce macchine che lavorano quando lui non può. L'ha sempre fatto — con la CNC, con i robot, con le presse. GENESIS è la stessa cosa, con meno trucioli.\n\nV32 è al 65%. GENESIS è al 70%. Il capannone è al 2030.\n\nLe notti sono già al lavoro.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL HOOK",
+      "content": "Il sistema ha 6518 chunk di memoria e un LLM addestrato su di essa — ma fino a ieri girava solo su una macchina con un path hardcodato. Un dev Flutter ha guardato l'architettura e detto «inusuale ma figo». Quella stessa notte le automazioni sono passate da spente a live. Adesso il sistema ricerca, impara e genera episodi mentre dormo — ma non so ancora cosa produrrà da solo la prima volta che non guardo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **ID** | EP_AUTO_20 |\n| **Data registrazione** | 2026-06-03 |\n| **Sessioni coperte** | #19, #20 (con traccia #18) |\n| **Pilastro principale** | GENESIS |\n| **Pilastri secondari** | V32 (contesto), TITANIUM_OS infra |\n| **Milestone** | Automazioni notturne portabili + LLM locale live |\n| **Avanzamento V32** | 65% |\n| **Avanzamento GENESIS** | 70% |\n| **RAG chunk** | 6518 |\n| **Modello LLM locale** | TinyLlama + LoRA `titanium_llm_v1` |\n| **Commit nel periodo** | 19 (2026-06-02 / 2026-06-03) |\n| **Angolo narrativo** | Dev Flutter + architettura spiegata a un estraneo |\n| **Tag** | `automazioni-notturne` `llm-locale` `rag-grounded` `portabilità` `architettura` |\n| **Co-author** | Claude Opus 4.8 |\n| **Target capannone** | 15 luglio 2030 |"
+    }
+  ],
+  "word_count": 1486,
+  "updated_at": "2026-06-04T05:22:17.540315",
+  "built_at": "2026-06-06T02:08:57.328058"
+}

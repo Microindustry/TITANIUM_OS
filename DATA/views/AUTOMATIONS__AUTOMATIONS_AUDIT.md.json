@@ -1,0 +1,60 @@
+{
+  "path": "AUTOMATIONS/AUTOMATIONS_AUDIT.md",
+  "title": "AUTOMAZIONI — Audit reale (P1a: \"stanno girando davvero?\")",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [AUTOMAZIONI  Audit reale (P1a: stanno girando davvero?)](#automazioni-audit-reale-p1a-stanno-girando-davvero)\n  - [Il problema: la view AUTOMAZ mente in DUE direzioni](#il-problema-la-view-automaz-mente-in-due-direzioni)\n  - [Cosa gira DAVVERO (verificato)](#cosa-gira-davvero-verificato)\n    - [Processi persistenti (3)  supervisionati dal watchdog](#processi-persistenti-3-supervisionati-dal-watchdog)\n    - [Scheduled (Task Scheduler TI_)  stato reale 06/06](#scheduled-task-scheduler-ti-stato-reale-0606)\n    - [Event-driven (girano quando il watcher vede un cambio file, NON persistenti)](#event-driven-girano-quando-il-watcher-vede-un-cambio-file-non-persistenti)\n    - [On-demand (manuale / API / MCP)](#on-demand-manuale-api-mcp)\n  - [Anomalie da chiudere](#anomalie-da-chiudere)\n  - [Raccomandazione (fix P1a vero, prossimo step)](#raccomandazione-fix-p1a-vero-prossimo-step)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "AUTOMAZIONI — Audit reale (P1a: \"stanno girando davvero?\")",
+      "content": "*06/06/2026 · sessione autonoma · richiesta di Matteo nel PIANO P1a*\n\n> Matteo (P1a): *\"AUDIT REALE delle 13 attive / 3 alta priorità: che ruolo\n> hanno, stanno girando davvero, perché lo stato è fermo.\"* Questa è la verità\n> verificata contro Task Scheduler + processi + codice del watcher."
+    },
+    {
+      "level": 2,
+      "title": "Il problema: la view AUTOMAZ mente in DUE direzioni",
+      "content": "`AutomationsView.tsx` ha un array **hardcoded di 40 voci** (13 attiva · 6 notturna\n· 3 alta · 6 media · 5 bassa · 7 ce). Confrontato con la realtà:\n\n1. **SOVRASTIMA** — ~14 voci puntano a file marcati \"(da creare)\" che **non\n   esistono** (watchdog_monitor, sanitizer, cloud_sync, toc_generator,\n   archivista, topic_analyzer, acl_manager, deeplink_creator, formatter,\n   semantic_index, ...). Sono *pianificate*, non automazioni: listarle come tali\n   è teatro.\n2. **SOTTOSTIMA** — moduli che **esistono e girano davvero** (event-driven dal\n   watcher) sono marcati \"(da creare)\" nella view: `md_validator.py`,\n   `semantic_indexer.py`, `toc_compiler.py`, `auto_linker.py`,\n   `md_view_pipeline.py` (verificati su disco + importati da watcher.py)."
+    },
+    {
+      "level": 2,
+      "title": "Cosa gira DAVVERO (verificato)",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "Processi persistenti (3) — supervisionati dal watchdog",
+      "content": "- `watcher.py` — osserva il filesystem, triggera le automazioni event-driven.\n- `api_server.py` — Flask :5001.\n- `mente_watcher.py` — watch MENTE/ → /api/scan."
+    },
+    {
+      "level": 3,
+      "title": "Scheduled (Task Scheduler `TI_*`) — stato reale 06/06",
+      "content": "| Task | Stato | Ultimo run | Esito |\n|------|-------|-----------|-------|\n| TI_Watchdog | **Running** | 03/06 21:24 | in esecuzione (0x41001) |\n| TI_DailyBrief | Ready | 05/06 07:30 | **0 OK** |\n| TI_NightPush | Ready | 05/06 04:07 | **0 OK** |\n| TI_NightResearch | Ready | 05/06 03:37 | **0 OK** |\n| TI_StoryAgent | Ready | 05/06 02:07 | **0 OK** |\n| TI_DeepFreeze | Ready | mai (dom 03:00) | non ancora partito |\n| TI_FineTune | Ready | mai (dom 01:00) | non ancora partito |\n| TI_NightAudit | Ready | **mai (via scheduler)** | ⚠ vedi sotto |"
+    },
+    {
+      "level": 3,
+      "title": "Event-driven (girano quando il watcher vede un cambio file, NON persistenti)",
+      "content": "`backup.py`, `changelog_writer.py`, `state_updater.py`, `md_validator.py`,\n`semantic_indexer.py`, `toc_compiler.py`, `auto_linker.py`, `md_view_pipeline.py`.\n→ Sono \"attive\" solo nel senso che il watcher le chiama sugli eventi. Non sono\n13 processi indipendenti in esecuzione."
+    },
+    {
+      "level": 3,
+      "title": "On-demand (manuale / API / MCP)",
+      "content": "`scanner.py`, `daily_brief.py` (anche schedulato), `milestone_tracker.py`,\n`pdf_to_memory.py`, `cross_ref_engine.py`, `assoluto_splitter.py`,\n`deep_freeze.py`."
+    },
+    {
+      "level": 2,
+      "title": "Anomalie da chiudere",
+      "content": "1. **TI_NightAudit: lo scheduler dice \"mai eseguito\"** ma `critiche_auto.json`\n   ha findings datati 05/06 e c'è `DATA/logs/night_audit.log`. → il self-audit\n   è girato **fuori dal task** (manuale o altro trigger). Il task @03:52 va\n   verificato/riparato, altrimenti la cartella clinica non si aggiorna da sola.\n2. **TI_DeepFreeze / TI_FineTune**: mai partiti perché schedulati di domenica e\n   la domenica non è ancora arrivata dopo la registrazione — atteso, ricontrollare\n   dopo il primo weekend.\n3. **\"3 alta priorità\"**: sono tutte voci \"(da creare)\" → non esistono. Lo \"stato\n   fermo\" che vedi è corretto: non c'è niente da far girare."
+    },
+    {
+      "level": 2,
+      "title": "Raccomandazione (fix P1a vero, prossimo step)",
+      "content": "Lo stato reale ESISTE già via API (`/api/tasks/notturne` per le scheduled,\nprocessi per i persistenti). Il fix:\n1. Aggiungere un campo `stato: \"persistente\" | \"scheduled\" | \"event\" | \"on-demand\"\n   | \"pianificata\"` a ogni voce dell'array (o meglio: **derivarlo live**).\n2. Le \"pianificata\" (da creare) in una sezione separata \"Roadmap automazioni\",\n   non mescolate con quelle reali.\n3. Correggere le 5 voci sottostimate (md_validator & co.) da \"da creare\" a\n   \"event-driven attiva\".\n4. Collegare il badge stato al vivo come fatto per le Notturne (Get-ScheduledTask\n   + processi), così la view smette di essere un quadro statico.\n\n> Non ho riscritto l'array (40 voci) in questa sessione: è il grosso del P1a e\n> va fatto con calma/collegato al vivo. Questo audit è la base per farlo."
+    }
+  ],
+  "word_count": 683,
+  "updated_at": "2026-06-06T05:10:01.229201",
+  "built_at": "2026-06-06T12:52:13.780276"
+}

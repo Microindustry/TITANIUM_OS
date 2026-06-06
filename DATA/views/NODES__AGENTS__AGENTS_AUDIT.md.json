@@ -1,0 +1,40 @@
+{
+  "path": "NODES/AGENTS/AGENTS_AUDIT.md",
+  "title": "AGENTS — Audit roster (P5: \"verifica se sono perfetti per noi\")",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [AGENTS  Audit roster (P5: verifica se sono perfetti per noi)](#agents-audit-roster-p5-verifica-se-sono-perfetti-per-noi)\n  - [Roster attuale (agents_db.json, 9 agenti)](#roster-attuale-agentsdbjson-9-agenti)\n  - [Mismatch col canone CLAUDE.md (PERSONAGGI AI)](#mismatch-col-canone-claudemd-personaggi-ai)\n  - [Raccomandazione (DECISIONE A MATTEO)](#raccomandazione-decisione-a-matteo)\n  - [Stato P5 già fatto (sessioni 30-31)](#stato-p5-già-fatto-sessioni-30-31)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "AGENTS — Audit roster (P5: \"verifica se sono perfetti per noi\")",
+      "content": "*06/06/2026 · sessione autonoma · richiesta di Matteo nel PIANO P5*\n\n> Nota di Matteo (Desktop\\TITANIUM_OS_PIANO.txt, P5): *\"non so nemmeno se sono\n> perfetti per noi, verifica e ottimizza.\"* Questo doc è la verifica. Il **prune\n> del roster non l'ho fatto io**: è una decisione di visione (vedi sotto)."
+    },
+    {
+      "level": 2,
+      "title": "Roster attuale (`agents_db.json`, 9 agenti)",
+      "content": "| id | nome | ruolo | active | rag_domains | nel progetto? |\n|----|------|-------|--------|-------------|---------------|\n| tesla | TESLA ⚡ | elettrico industriale/civile | ✅ | V32, OFFICINA | **Sì** — quadri/VFD per V32 |\n| forge | FORGE 🔧 | meccanico + officina | ✅ | V32, MIMS, OFFICINA | **Core** — saldatura/CNC/MIMS |\n| aqua | AQUA 🌿 | acquaponica/serre/bioreattori | ✅ | KNOWLEDGE, acquaponica, serre | **❌ Fuori scope** — non esiste acquaponica in TITANIUM_OS; i domini RAG `acquaponica`/`serre` non esistono in MENTE/ |\n| lex | LEX 📋 | tecnico-legale/normativo | ✅ | ASSOLUTO, MIMS | **Sì** — brevetti MIMS, CE |\n| plc | SIEMENS 🖥️ | PLC Siemens S7/TIA | ✅ | V32, OFFICINA | **❓ Dubbio** — il V32 è una CNC hobby in taverna 12mq (controller tipo GRBL/LinuxCNC), non un impianto Siemens S7-1500. Sovradimensionato per ora |\n| themis | THEMIS ⚖️ | analista sistema/V32/GENESIS | ✅ | ASSOLUTO, V32, MIMS, GENESIS | **Core** — già operativo (legge cartella clinica) |\n| aria | ARIA 🧠 | Life OS / ADHD | ⬜ false | SESSIONI, PERSONALE | **Sì** (futuro) — coerente col canone |\n| argus | ARGUS 👁️ | screen agent / computer-use | ✅ | — | **Sì** — desktop-agent reale |\n| eva | EVA 💬 | WhatsApp / Vita Natura | ⬜ false | VITA_NATURA | **Core** (in sviluppo) |"
+    },
+    {
+      "level": 2,
+      "title": "Mismatch col canone CLAUDE.md (PERSONAGGI AI)",
+      "content": "Canone CLAUDE.md: **THEMIS, EVA, AVA, ARIA, NEXUS, TESLA, FORGE**.\n\n- **Nel canone ma NON in agents_db:** `AVA` (avatar YouTube/reel), `NEXUS`\n  (orchestratore agenti). → se sono personaggi reali, vanno aggiunti; se no,\n  vanno tolti dal canone CLAUDE.md per coerenza.\n- **In agents_db ma NON nel canone:** `aqua`, `lex`, `plc/SIEMENS`, `argus`.\n  `argus` = lo screen agent reale (ok, solo da canonizzare). `aqua`/`plc` =\n  probabili residui di un template agenti generico."
+    },
+    {
+      "level": 2,
+      "title": "Raccomandazione (DECISIONE A MATTEO)",
+      "content": "Il sistema è \"la base per QUALSIASI progetto\" → `aqua`/`plc` **potrebbero** essere\ngeneralità voluta per verticali futuri. Per questo NON ho pruunato il roster.\nOpzioni, in ordine di quanto le consiglio:\n\n1. **(consigliata) Curare il roster \"per noi adesso\":** `active:false` su `aqua`\n   (fuori scope) e `plc` (sovradimensionato), così spariscono dalla chat attiva\n   ma restano disponibili (reversibile, git li conserva). Allineare CLAUDE.md.\n2. **Tenere tutto** se la visione multi-progetto è prioritaria: allora aggiungere\n   `aqua`/`plc` al canone CLAUDE.md con la nota \"verticali futuri\".\n3. **Aggiungere AVA + NEXUS** ad agents_db se diventano operativi (oggi non lo sono).\n\n> Quando Matteo decide, l'azione è 1 riga per agente (`\"active\": false`) o\n> l'aggiunta di una entry: additivo, isolato, reversibile."
+    },
+    {
+      "level": 2,
+      "title": "Stato P5 già fatto (sessioni #30-31)",
+      "content": "- ✅ RAG grounding reale in `/api/agents/ask` (+fonti in UI) — basta teatro.\n- ✅ THEMIS ruolo operativo: legge `DATA/audit/critiche_auto.json` (cartella clinica).\n- ✅ Chat RAG diretta separata dagli agenti (`/api/rag/chat`).\n- ⬜ Visibilità \"sto interrogando gli agenti\" nella chat Claude (richiesta P5):\n  è comportamento mio in sessione, non codice — da rendere abitudine quando\n  un task tecnico tocca un dominio agente (THEMIS↔sistema, FORGE↔MIMS/officina)."
+    }
+  ],
+  "word_count": 549,
+  "updated_at": "2026-06-06T12:51:48.570043",
+  "built_at": "2026-06-06T12:51:48.570043"
+}
