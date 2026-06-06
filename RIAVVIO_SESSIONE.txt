@@ -1,55 +1,50 @@
-=== RIAVVIO SESSIONE #31 → #32 — 06/06/2026 ===
-Ultima sessione: #31 (autonoma, Matteo al lavoro) — 2026-06-06
-Push GitHub: OK (main @ b1b20d5). Una nuova sessione riprende DA QUI.
+=== RIAVVIO SESSIONE #32 → #33 — 06/06/2026 ===
+Sessione #32 (Matteo presente, interattiva). Una nuova sessione riprende DA QUI.
 
 ━━━ DOVE SIAMO (enuncialo in <10 sec) ━━━
-Sessione autonoma #31 completata: Chat RAG vera in dashboard (P4a) + leva LLM
-locale Ollama/Qwen (P4b) + cartella clinica viva (P1b) + audit agenti (P5) e
-audit automazioni (P1a). Tutto committato e pushato, build tsc -b verde.
-Prossimo: le 3 decisioni di Matteo qui sotto, poi il grosso del P1a.
+Sessione #32: chiuso P1a (view AUTOMAZ a stato operativo reale + badge live),
+ACCESA la leva LLM locale (Ollama + Qwen2.5-7B sulla GPU), e LANCIATO il
+binario AVVENTURA (bibbia del mondo + episodio pilota). Tutto committato, build verde.
 
 ━━━ FATTO QUESTA SESSIONE (commit) ━━━
-  ✓ 1bd09e5  P4a chat RAG (/api/rag/chat) + P4b leva locale (ollama_client,
-             toggle Claude/Locale, fallback onesto) + fix 6 errori TS pre-esistenti
-  ✓ 3258887  SERVICES/restart_api.ps1 (restart api_server auto-UAC)
-  ✓ f5d6c1f  P1b cartella clinica viva: vista CRITICHE innesta ramo LIVE da
-             critiche_auto.json (/api/critiche/auto + criticheAuto.ts)
-  ✓ 34f16c6  P5 audit roster agenti -> NODES/AGENTS/AGENTS_AUDIT.md
-  ✓ 9aebaf6  P1a audit automazioni -> AUTOMATIONS/AUTOMATIONS_AUDIT.md
-  ✓ verificato: P3a 0 episodi orfani, P3b testi interi (niente da fare)
-  ✓ tutto testato via Flask test_client (chat RAG + critiche/auto = REALI)
+  ✓ 5f148a7  P1a il grosso: array AUTOMAZ con campo `stato` (persistente/event/
+             scheduled/on-demand/dormiente). SCOPERTA: i ~14 file "(da creare)"
+             ESISTONO su disco (nomi diversi) -> sono "dormienti", non da creare.
+             5 sottostimati event-driven corretti (cablati in watcher.py).
+  ✓ b70b4e2  badge stato LIVE anche nella view principale (/api/watchdog/status
+             + /api/tasks/notturne), refresh 30s.
+  ✓ 6198787  docs: STATE + audit aggiornati. Anomalia TI_NightAudit RISOLTA
+             (gira @03:52 OK, il "mai eseguito" era dato stale).
+  ✓ 8979d14  P2 binario AVVENTURA: BIBBIA_DEL_MONDO.md + pilota EP_AV_00
+             "La Bambina e la Giuntura" (stagione AV). Nina+THEMIS vs l'Entropia.
 
-━━━ 3 DECISIONI/AZIONI DI MATTEO (1 click/comando ciascuna) ━━━
-  1. RESTART api_server per endpoint LIVE: doppio click SERVICES\restart_api.ps1
-     (auto-UAC). MOTIVO: api_server gira ELEVATO (spawnato dal watchdog Highest),
-     una shell normale non puo' ucciderlo per ricaricare il codice nuovo.
-     Finche' non lo fai, Chat RAG e Critiche-live danno 404 in dashboard.
-     (Alternativa: va live da solo al prossimo login — watchdog AtLogon.)
-  2. ACCENDERE LEVA LOCALE: installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M`
-  3. PRUNE ROSTER AGENTI: decisione di visione (multi-progetto?). Vedi
-     NODES/AGENTS/AGENTS_AUDIT.md (aqua fuori scope, plc sovradimensionato).
+━━━ LEVA LOCALE — ACCESA ━━━
+  Ollama installato (serve su :11434) + qwen2.5:7b-instruct-q4_K_M scaricato.
+  /api/llm/ollama/status: available=true, model_ready=true. Test GPU OK.
+  Il toggle "Locale" nella chat ora risponde da Qwen (niente fallback).
+  Avvio Ollama via app: C:\Users\teo\AppData\Local\Programs\Ollama\ollama.exe
+
+━━━ DECISIONE MODELLI (3 gradini) ━━━
+  Qwen 7B locale (gratis/privato/offline, per dati MIMS sensibili)
+   -> MiniMax M3 cloud (cheap workhorse via OpenRouter, bulk NON sensibile)
+   -> Claude/Opus (decisioni + qualita').
+  REGOLA: MENTE/MIMS sensibile mai su M3 (provider cinese).
+  TODO: cablare M3 nel toggle chat (serve key OpenRouter in _VAULT/KEYS).
 
 ━━━ PROSSIMO LAVORO (quando riprendi) ━━━
-  → P1a IL GROSSO: riscrivere l'array AUTOMAZ (40 voci hardcoded) a livelli +
-    stato LIVE (come Notturne), separare le "pianificate"/da-creare dalle reali,
-    correggere le 5 voci sottostimate. Base pronta: AUTOMATIONS/AUTOMATIONS_AUDIT.md.
-    NB: tocca la UI -> screenshot prima, additivo, commit isolati (paura di Matteo).
-  → Anomalia da chiudere: TI_NightAudit risultava "mai via scheduler" ma produce
-    la cartella clinica (ora 06/06 OK) -> verificare il task @03:52.
-  → P1c livelli da progressi reali · P2 storia-avventura (creativo, con Matteo).
-
-━━━ MURO TECNICO (ricorda) ━━━
-  ⚠ api_server elevato non uccidibile da shell Medium IL -> restart_api.ps1 (UAC).
+  → P2: EP_AV_01..04 (bozza su Qwen/M3 + rifinitura), poi Critiche=quest e
+    MAPPA=mondo. Eventuale filtro/vista dedicata stagione AV.
+  → P1c: livelli (lv) che salgono da progressi reali.
+  → Cablare MiniMax M3 nel toggle (Locale / M3 / Claude).
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
 ━━━ ULTIMI COMMIT ━━━
-  b1b20d5 chore: snapshot chiusura sessione #31 — salva tutto per PC/sessione nuova
-  9aebaf6 docs(automations): audit reale P1a — la view AUTOMAZ mente in 2 direzioni
-  34f16c6 docs(agents): audit roster P5 — aqua/plc fuori scope
-  f5d6c1f feat(critiche): cartella clinica viva — critiche LIVE dal self-audit (P1b)
-  1bd09e5 feat(rag): Chat RAG vera in dashboard + leva LLM locale (P4a/P4b)
+  8979d14 feat(storie): P2 binario AVVENTURA (mondo educativo)
+  6198787 docs(automaz): STATE + audit (file esistono, anomalia risolta)
+  b70b4e2 feat(automaz): badge stato LIVE nella view principale
+  5f148a7 feat(automaz): P1a il grosso — AUTOMAZ con stato operativo reale
 
-Generato: 06/06/2026 — chiusura sessione #31, pronto per ripresa in nuova sessione
+Generato: 06/06/2026 — chiusura lavoro sessione #32.
