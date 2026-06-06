@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-06-05T15:09:12",
-  "date": "2026-06-05",
-  "git_head": "c716e81",
-  "rag_chunks": 6507,
-  "n_episodes": 106,
-  "n_commits_7d": 129,
+  "last_audit": "2026-06-06T03:52:36",
+  "date": "2026-06-06",
+  "git_head": "de19d33",
+  "rag_chunks": 6584,
+  "n_episodes": 108,
+  "n_commits_7d": 134,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -16,10 +16,6 @@
     {
       "log": "night_research.log",
       "tipo": "rate-limit sorgente"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "timeout di rete"
     },
     {
       "log": "night_research.log",
@@ -64,8 +60,8 @@
   ],
   "critiche": {
     "added": 6,
-    "total": 6,
-    "open": 6
+    "total": 12,
+    "open": 12
   },
   "verdict": "ATTENZIONE"
 }

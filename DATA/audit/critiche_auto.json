@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-e5e805d3cd",
+    "date": "2026-06-06",
+    "git": "de19d33",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Il conteggio episodi è regredito: 114 (post-commit 3627911 del recupero orfani) → 108 attuali (-6 episodi). Contemporaneamente story_agent ha crashato stanotte. Esiste un pattern ricorrente di perdita/desync episodi già visto tre volte (commit 68b5ea5, 3627911, 993dab8 sono tutti fix alla stessa classe di problema). Il fix non è strutturalmente risolto.",
+    "azione": "Il problema radice è l'assenza di un lock su episodes.json durante la scrittura concorrente (story_agent scrive, altri processi leggono/modificano). Implementare file lock atomico (write-to-temp + rename) oppure una coda di scrittura serializzata. Aggiungere un check nel night_push che blocchi il push se `audit_episodes.py` rileva desync.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-06"
+  },
+  {
+    "id": "AUD-7abc0a7f75",
+    "date": "2026-06-06",
+    "git": "de19d33",
+    "area": "V32",
+    "severity": "media",
+    "finding": "V32 è al 65% ma ha due blocker hardware concreti e non datati: mandrino 2.2kW ER20 (prerequisito fresatura stampi MIMS) e decisione silent blocks v.A vs v.B (prerequisito V8). Entrambi sono listati come blocker da sessioni precedenti senza data di risoluzione attesa. Con MIMS a 30%, il collo di bottiglia fisico sta limitando il pilastro più debole del sistema.",
+    "azione": "Nella prossima sessione: (1) aprire un ordine effettivo per il mandrino o fissare una data entro cui ordinarlo — smettere di trattarlo come 'da fare' generico; (2) decidere v.A vs v.B sui silent blocks con un criterio (costo/tempo/performance) e commitare la decisione in STATE.json come `decision_log`, non come blocker eterno.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-06"
+  },
+  {
+    "id": "AUD-6577a00afd",
+    "date": "2026-06-06",
+    "git": "de19d33",
+    "area": "GENESIS",
+    "severity": "alta",
+    "finding": "Ollama + Qwen2.5-7B è identificato come prossimo passo da almeno una sessione (P4b committato, decisione Matteo pendente) ma la leva locale non è ancora accesa. Nel frattempo story_agent e research_agent girano con l'LLM di default (probabilmente API esterna a costo) o degradati. Ogni notte senza Ollama locale è costo API + latenza + dipendenza da rete.",
+    "azione": "Eseguire `ollama pull qwen2.5:7b-instruct-q4_K_M` alla prossima sessione — 10 minuti di azione, zero decisioni architetturali da prendere. Il file `fix(llm-local): opener senza proxy` (6ebe54e) è già committato: il codice è pronto, manca solo il modello sul disco.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-06"
+  },
+  {
+    "id": "AUD-5fe479ee04",
+    "date": "2026-06-06",
+    "git": "de19d33",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "story_agent.log ha crash/eccezione + errore esplicito. Nonostante questo, il commit de19d33 mostra 'episodi generati 06/06/2026' — il push di storie è avvenuto ma il processo ha crashato a metà. Questo indica che alcuni episodi potrebbero essere incompleti, malformati o non sincronizzati in episodes.json (problema già visto con i 27 episodi orfani recuperati in 3627911).",
+    "azione": "Eseguire `audit_episodes.py` adesso per verificare che tutti gli episodi su disco siano in dashboard. Controllare il conteggio: da 114 episodi (post-recupero 3627911) si è a 108 — si sono persi 6 episodi. Trovare la regressione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-06"
+  },
+  {
+    "id": "AUD-424fc914d9",
+    "date": "2026-06-06",
+    "git": "de19d33",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "night_push.log registra crash/eccezione + errore esplicito: il push notturno ha fallito. Se il commit de19d33 è visibile su git_head è perché esiste in locale, ma la sincronizzazione remota è a rischio. Con 134 commit in 7 giorni e automazioni notturne come backbone, un push fallito significa divergenza silente tra locale e origin.",
+    "azione": "Aprire night_push.log, leggere lo stack trace, verificare `git status` + `git log origin/main..HEAD`. Se ci sono commit non pushati, eseguire push manuale ora. Poi correggere lo script: aggiungere exit-code check e alert su EVA inbox in caso di fallimento.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-06"
+  },
+  {
+    "id": "AUD-382978b509",
+    "date": "2026-06-06",
+    "git": "de19d33",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, timeout, ricerche a vuoto ed errori espliciti — tutte e 4 le categorie di guasto in una sola notte. Il ciclo notturno di research sta girando ma producendo zero output utile, consumando tempo di esecuzione e inquinando potenzialmente il RAG con chunk vuoti o parziali.",
+    "azione": "Aggiungere un gate di qualità a monte: se fetch fallisce per rate-limit/timeout, lo script deve skippare la sorgente e loggare `SKIP` invece di procedere. Controllare quanti chunk sono stati aggiunti al RAG stanotte (delta da 6518→6584 = 66 chunk: verificare che non siano stub vuoti con `rag_inspector.py` o query test sul canone).",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-06"
+  },
+  {
     "id": "AUD-e41e59c419",
     "date": "2026-06-05",
     "git": "c716e81",
