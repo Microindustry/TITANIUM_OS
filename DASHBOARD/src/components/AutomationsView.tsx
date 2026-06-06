@@ -734,6 +734,40 @@ type Tab = "architettura" | "attive" | "da_fare" | "content_engine";
 export function AutomationsView() {
   const [tab, setTab] = useState<Tab>("architettura");
 
+  // Stato LIVE: task schedulati (/api/tasks/notturne) + processi persistenti
+  // (/api/watchdog/status). Così il badge "ATTIVO" sulle card non è cosmetico.
+  const [tasksLive, setTasksLive] = useState<Record<string, TaskLive>>({});
+  const [procsLive, setProcsLive] = useState<Record<string, { alive: boolean; pid?: number }>>({});
+
+  useEffect(() => {
+    let alive = true;
+    const load = () => {
+      fetch("/api/tasks/notturne", { signal: AbortSignal.timeout(20000) })
+        .then(r => r.json()).then(d => { if (alive && d.ok) setTasksLive(d.tasks || {}); })
+        .catch(() => {});
+      fetch("/api/watchdog/status", { signal: AbortSignal.timeout(20000) })
+        .then(r => r.json()).then(d => { if (alive && d.ok) setProcsLive(d.services || {}); })
+        .catch(() => {});
+    };
+    load();
+    const id = setInterval(load, 30_000);
+    return () => { alive = false; clearInterval(id); };
+  }, []);
+
+  // Deriva un TaskLive uniforme per qualsiasi card (processo persistente o task).
+  const liveOf = (a: Automation): TaskLive | undefined => {
+    if (a.proc && procsLive[a.proc]) {
+      const s = procsLive[a.proc];
+      return {
+        state: s.alive ? "Running" : "Stopped", next_run: "", last_run: "",
+        last_result_label: s.alive ? `vivo · pid ${s.pid ?? "?"}` : "giù",
+        active: s.alive,
+      };
+    }
+    if (a.task && tasksLive[a.task]) return tasksLive[a.task];
+    return undefined;
+  };
+
   const attive   = AUTOMATIONS.filter(a => a.priority === "attiva");
   const notturne = AUTOMATIONS.filter(a => a.priority === "notturna");
   const daFare   = AUTOMATIONS.filter(a => ["alta", "media", "bassa"].includes(a.priority));
@@ -836,7 +870,7 @@ export function AutomationsView() {
 
       {tab === "attive" && (
         <div className="space-y-2">
-          {attive.map(a => <AutoCard key={a.id} a={a} />)}
+          {attive.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
 
           {/* Sottocartella Notturne — stessa cartella ATTIVE, piccola scritta, colore indigo */}
           {notturne.length > 0 && (
@@ -844,7 +878,7 @@ export function AutomationsView() {
               <div className="text-[9px] font-mono text-indigo-300 uppercase tracking-widest border-t border-slate-800 pt-3 mt-1 flex items-center gap-1.5">
                 🌙 Notturne — schedulate (Task Scheduler) ({notturne.length})
               </div>
-              {notturne.map(a => <AutoCard key={a.id} a={a} />)}
+              {notturne.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
             </>
           )}
         </div>
@@ -861,7 +895,7 @@ export function AutomationsView() {
                   — Priorità {PRIORITY_CONFIG[p].label} ({items.length})
                 </div>
                 <div className="space-y-2">
-                  {items.map(a => <AutoCard key={a.id} a={a} />)}
+                  {items.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
                 </div>
               </div>
             );
