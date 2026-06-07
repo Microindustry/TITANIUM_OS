@@ -20,10 +20,15 @@ interface VecData {
 }
 
 const FOLDER_COLOR: Record<string, string> = {
+  // MENTE (sorgente Conoscenza/RAG)
   "V32/": "#10b981", "MIMS/": "#f59e0b", "GENESIS/": "#06b6d4",
   "OFFICINA/": "#f97316", "SESSIONI/": "#f43f5e", "KNOWLEDGE/": "#818cf8",
   "VITA_NATURA/": "#a78bfa", "STORIE/": "#ec4899",
   "ASSOLUTO/": "#eab308", "VULCAN/": "#ef4444",
+  // Repo (sorgente Sistema/Graphify)
+  "NODES/": "#06b6d4", "AUTOMATIONS/": "#f59e0b", "DASHBOARD/": "#ec4899",
+  "CORE/": "#10b981", "BRAIN/": "#a78bfa", "MCP/": "#22d3ee",
+  "SERVICES/": "#f97316", "CONTENT_ENGINE/": "#f43f5e", "DOCS/": "#64748b",
 };
 
 function folderColor(f: string) {
@@ -241,20 +246,25 @@ export function RagGraphView() {
   const [hovered, setHovered]   = useState<{ p: VecPoint; x: number; y: number } | null>(null);
   const [query, setQuery]       = useState("");
   const [folderFilter, setFolderFilter] = useState<string | null>(null);
+  // Sorgente del grafo: conoscenza (RAG, embedding) oppure sistema (Graphify, relazioni reali)
+  const [source, setSource]     = useState<"rag" | "graphify">("rag");
+
+  const ENDPOINT = { rag: "/api/rag/vectors", graphify: "/api/graph/graphify" };
 
   const load = useCallback(async (force = false) => {
     setLoading(true); setError(null);
     try {
-      const r = await fetch(force ? "/api/rag/vectors?force=1" : "/api/rag/vectors");
+      const base = ENDPOINT[source];
+      const r = await fetch(force ? `${base}?force=1` : base);
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       const d: VecData = await r.json();
       if (!d.ok) throw new Error((d as any).error);
       setData(d);
     } catch (e: any) { setError(e.message); }
     finally { setLoading(false); }
-  }, []);
+  }, [source]);
 
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { setFolderFilter(null); setSelected(null); load(); }, [load]);
 
   // punti filtrati + archi RIMAPPATI sugli indici visibili (gli archi del
   // backend usano indici sull'array pieno: senza remap il filtro li romperebbe).
@@ -287,8 +297,28 @@ export function RagGraphView() {
 
       {/* ── Sidebar ── */}
       <div className="w-44 flex-shrink-0 flex flex-col border-r border-slate-800/60 p-3 gap-3 overflow-y-auto">
+        {/* Sorgente del grafo */}
         <div>
-          <div className="text-[7px] font-mono text-slate-700 uppercase tracking-widest mb-2">embedding 3D</div>
+          <div className="text-[7px] font-mono text-slate-700 uppercase tracking-widest mb-1.5">grafo di</div>
+          <div className="flex gap-1">
+            {([["rag", "Conoscenza", "#06b6d4"], ["graphify", "Sistema", "#10b981"]] as const).map(([k, lbl, c]) => (
+              <button key={k} onClick={() => setSource(k)}
+                className="flex-1 px-2 py-1.5 rounded text-[8px] font-mono font-bold uppercase tracking-wider border transition-all"
+                style={{
+                  borderColor: source === k ? c : "#1e293b",
+                  background: source === k ? c + "1f" : "transparent",
+                  color: source === k ? c : "#475569",
+                }}>
+                {lbl}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="text-[7px] font-mono text-slate-700 uppercase tracking-widest mb-2">
+            {source === "rag" ? "embedding 3D" : "knowledge graph"}
+          </div>
           {data && (
             <div className="flex gap-1.5 mb-1">
               <div className="flex-1 p-2 rounded border border-slate-800 bg-slate-900/40 text-center">
@@ -302,7 +332,9 @@ export function RagGraphView() {
             </div>
           )}
           <div className="text-[7px] font-mono text-slate-700 leading-relaxed">
-            384-dim → t-SNE 3D<br />archi = similarità coseno reale
+            {source === "rag"
+              ? <>384-dim → t-SNE 3D<br />archi = similarità coseno reale</>
+              : <>Graphify (AST + Leiden)<br />archi = relazioni reali nel codice</>}
           </div>
         </div>
 

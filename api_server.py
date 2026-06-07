@@ -1219,6 +1219,106 @@ def rag_vectors():
         return jsonify(payload)
 
     except Exception as e:
+        # Indice stale nel processo long-running (es. dopo un rebuild senza restart):
+        # invalida la cache e dai un messaggio azionabile invece di un 500 nudo.
+        try:
+            if cache_path.exists():
+                cache_path.unlink()
+        except Exception:
+            pass
+        return jsonify({
+            "ok": False,
+            "error": f"RAG index non leggibile ({e}). Riavvia l'API: SERVICES/restart_api.ps1",
+        }), 503
+
+
+@app.get("/api/graph/graphify")
+def graphify_graph():
+    """Grafo Graphify (knowledge graph del repo) nella STESSA forma di /api/rag/vectors,
+    cosi' la vista RETE lo renderizza senza modifiche al motore 3D.
+    Layout 3D per community (fibonacci sphere + jitter deterministico). Cache su disco."""
+    import math, random
+    gpath = ROOT / "graphify-out" / "graph.json"
+    cache_path = ROOT / "DATA" / "graphify_layout_cache.json"
+    if not gpath.exists():
+        return jsonify({"ok": False,
+                        "error": "graphify-out/graph.json assente — esegui `graphify update .`"}), 404
+    try:
+        g = json.loads(gpath.read_text(encoding="utf-8"))
+        nodes = g.get("nodes", [])
+        links_raw = g.get("links", g.get("edges", []))
+        commit = g.get("built_at_commit", "")
+
+        force = request.args.get("force")
+        if cache_path.exists() and not force:
+            cached = json.loads(cache_path.read_text(encoding="utf-8"))
+            if cached.get("doc_count") == len(nodes) and cached.get("commit") == commit:
+                return jsonify({"ok": True, **cached})
+
+        ids = [n.get("id") for n in nodes]
+        idx = {nid: i for i, nid in enumerate(ids)}
+
+        # grado (per dimensionare i nodi)
+        deg = [0] * len(ids)
+        edges = []
+        for l in links_raw:
+            s, t = idx.get(l.get("source")), idx.get(l.get("target"))
+            if s is None or t is None or s == t:
+                continue
+            deg[s] += 1; deg[t] += 1
+            edges.append({"source": s, "target": t, "weight": round(float(l.get("weight", 1.0)), 3)})
+
+        # centri community su una sfera di fibonacci -> cluster separati e leggibili
+        comms = sorted({n.get("community", 0) for n in nodes})
+        cmap = {c: i for i, c in enumerate(comms)}
+        C = max(1, len(comms))
+        ga = math.pi * (3 - math.sqrt(5))
+        def center(i):
+            y = 1 - (i / (C - 1)) * 2 if C > 1 else 0.0
+            r = math.sqrt(max(0.0, 1 - y * y))
+            th = ga * i
+            return (math.cos(th) * r, y, math.sin(th) * r)
+        centers = [center(i) for i in range(C)]
+
+        coords = []
+        for n in nodes:
+            cx, cy, cz = centers[cmap.get(n.get("community", 0), 0)]
+            rnd = random.Random(hash(str(n.get("id"))) & 0xffffffff)
+            jit = 0.22
+            coords.append([cx * 2 + (rnd.random() - .5) * jit,
+                           cy * 2 + (rnd.random() - .5) * jit,
+                           cz * 2 + (rnd.random() - .5) * jit])
+        # normalizza in [-1,1] per asse
+        for ax in range(3):
+            vals = [c[ax] for c in coords]
+            mn, mx = min(vals), max(vals)
+            if mx > mn:
+                for c in coords:
+                    c[ax] = 2 * (c[ax] - mn) / (mx - mn) - 1
+
+        def _folder(src):
+            src = (src or "").replace("\\", "/")
+            return (src.split("/")[0] + "/") if "/" in src else (src or "·")
+
+        points = []
+        for i, n in enumerate(nodes):
+            points.append({
+                "id": n.get("id"),
+                "label": n.get("label") or (n.get("id") or "")[:24],
+                "folder": _folder(n.get("source_file")),
+                "chunk_count": max(1, deg[i]),
+                "x": round(coords[i][0], 4), "y": round(coords[i][1], 4), "z": round(coords[i][2], 4),
+            })
+
+        payload = {"ok": True, "doc_count": len(points), "chunk_count": len(points),
+                   "community_count": len(comms), "commit": commit,
+                   "points": points, "links": edges}
+        try:
+            cache_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        except Exception:
+            pass
+        return jsonify(payload)
+    except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
 
 

@@ -36,9 +36,18 @@
       leggibili, flood AUTO (66 ep) chiuso di default, apri/chiudi tutto. Dati intatti.
 - [✓] **Revisione salva/apertura**: skill `salva` + step 4b (memorie durature + refresh
       grafo Graphify); `CLAUDE.md` apertura → puntatore a CONTROLLO. Build 0 errori TS.
-- [ ] **Nomi sidebar obsoleti**: rinominare AUTOMAZ./RETE/MAPPA in chiaro (⚠ collisione
-      "Bussola": MAPPA→? , RETE→RAG da confermare). CONTROLLO già traduce tutto in italiano.
-- [ ] Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO.
+- [✓] **RETE riparata + integrata Graphify** (la tua idea del RAG-Wiki/grafo): era rotta
+      (500, due processi API sulla 5001 → indice stale; risolto col restart). Ora ha un
+      **interruttore sorgente**: "Conoscenza" (grafo RAG, archi = coseno reale) ↔ "Sistema"
+      (grafo Graphify, 5966 nodi/6317 archi/696 community, layout 3D per community). Nuovo
+      endpoint `/api/graph/graphify` (stessa forma di /api/rag/vectors → motore 3D invariato).
+      Endpoint RAG blindato (niente più 500 nudo: cache invalidata + messaggio azionabile).
+      ⚠ il toggle "Sistema" va LIVE al prossimo restart API (carica l'endpoint nuovo).
+- [ ] **MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina
+      si muove tra le tappe (Loop→…→Agenti). [deciso con Matteo, da costruire]
+- [ ] **Nomi sidebar obsoleti**: AUTOMAZ./MAPPA in chiaro (⚠ collisione "Bussola": da
+      confermare). RETE ora è di fatto il grafo RAG+Wiki → valutare rinomina "GRAFO/WIKI".
+- [ ] Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO/RETE.
 - [💡] STORIA: il Centro di Controllo + RAG→Wiki sono materiale episodio (sistema che si
       rende leggibile da solo).
 
