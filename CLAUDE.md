@@ -33,14 +33,19 @@ Matteo Benenati — artigiano industriale + system builder.
 ## INIZIO SESSIONE (protocollo fisso)
 
 ```
-1. Leggi RIAVVIO_SESSIONE.txt   → di cosa stavamo parlando l'ultima sessione
-2. Leggi BRAIN/STATE.json       → milestone attivo + pilastri + blockers
-3. Enunci in <10 sec: dove eravamo + prossimo step — zero domande
-4. Lavora — chiama update_session_context (MCP) quando cambia topic importante
-5. Fine sessione → update_session_context + aggiorna STATE.json + commit + push
+1. Leggi DA_FARE_FATTO.md       → la BUSSOLA: cosa è fatto / cosa resta (scaletta viva)
+2. Leggi RIAVVIO_SESSIONE.txt   → di cosa stavamo parlando l'ultima sessione
+3. Leggi BRAIN/STATE.json       → milestone attivo + pilastri + blockers
+4. Enunci in <10 sec: dove eravamo + prossimo step — zero domande
+5. Lavora — aggiorna DA_FARE_FATTO.md STRADA FACENDO (non solo a fine)
+6. Fine sessione → aggiorna DA_FARE_FATTO.md + STATE.json + RIAVVIO + commit + push
 ```
 
-Non chiedere "da dove partiamo?". Leggi RIAVVIO_SESSIONE.txt prima di tutto.
+Non chiedere "da dove partiamo?". Leggi DA_FARE_FATTO.md e RIAVVIO_SESSIONE.txt prima di tutto.
+
+**BUSSOLA (DA_FARE_FATTO.md):** scaletta condivisa io↔Matteo. Regole: non si cancella
+mai (si cambia stato `[✓]/[◐]/[ ]/[✗]/[💡]`), append in cima, canonica nel repo +
+mirror su Desktop `da fare e cosa ho fatto.txt` (tenerli allineati).
 
 ---
 
