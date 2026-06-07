@@ -17,7 +17,7 @@
     },
     "CLAUDE.md": {
       "title": "TITANIUM_OS — CLAUDE.md",
-      "updated_at": "2026-06-02T16:38:09.050976",
+      "updated_at": "2026-06-07T11:14:20.352902",
       "endpoint": "/api/view/CLAUDE.md"
     },
     ".claude/skills/dataset/SKILL.md": {
@@ -819,8 +819,18 @@
       "title": "BIBBIA DEL MONDO — \"Il Sistema\" (binario Avventura)",
       "updated_at": "2026-06-07T03:00:21.651606",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__BIBBIA_DEL_MONDO.md"
+    },
+    ".claude/skills/salva/SKILL.md": {
+      "title": "SALVA — chiusura sessione TITANIUM_OS",
+      "updated_at": "2026-06-07T16:28:18.239394",
+      "endpoint": "/api/view/.claude__skills__salva__SKILL.md"
+    },
+    "DA_FARE_FATTO.md": {
+      "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
+      "updated_at": "2026-06-07T16:29:53.750466",
+      "endpoint": "/api/view/DA_FARE_FATTO.md"
     }
   },
-  "last_built": "2026-06-07T11:14:08.079536",
-  "total": 164
+  "last_built": "2026-06-07T16:29:53.844196",
+  "total": 166
 }

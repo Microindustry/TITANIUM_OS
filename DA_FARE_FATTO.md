@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 32-33  06-07/06/2026](#sessione-32-33-06-07062026)
+    - [FATTO](#fatto)
+    - [DA FARE (prossimo  in ordine di priorità)](#da-fare-prossimo-in-ordine-di-priorità)
+    - [IDEE / NOTE](#idee-note)
+
+<!-- /TOC -->
+
 # DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS
 
 *Questa è la scaletta condivisa io↔Matteo: dove siamo, cosa è fatto, cosa resta.*
@@ -12,6 +22,39 @@
   `da fare e cosa ho fatto.txt`. Li tengo allineati.
 - Il PIANO completo (visione, punti P1-P8) vive nel mirror Desktop + in
   `PROSSIMA_SESSIONE.md`. Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #34 · 07/06/2026
+
+### [◐] VERIFICA TOTALE (prima delle automazioni)
+- [✓] **Git**: `origin/main` allineato (0↔0). Tutto il lavoro reale committato+pushato.
+      Modifiche non committate = SOLO auto-generate (TOC skill, `DATA/views` rigenerati,
+      `STATE.json`, changelog). Nessun lavoro umano in sospeso.
+- [✓] **Cartelle (check in toto)**: 20 dir top-level, struttura coerente — AUTOMATIONS 59,
+      NODES 67, CONTENT_ENGINE 131, BRAIN 39, DOCS 5, SERVICES 5, CORE 3.
+- [ ] **CLAUDE.md OBSOLETO** ⚠ — header `v4.0.0 · Macchina: Getac (benen)` + sezione
+      FILESYSTEM + `SETUP GETAC` usano `C:\Users\benen\...`, ma la macchina reale è
+      `DESKTOP-IFACE2R` / utente `teo` (migrazione 02/06). Aggiornare benen→teo, Getac→fisso.
+- [ ] **Path hardcoded `C:\Users\benen`** ⚠ (viola regola "MAI hardcode") in 6 file:
+      `AUTOMATIONS/tools/{FIX_ADMIN_TASKS.bat, fix_tasks_admin.ps1, optimize_windows_admin.bat,
+      SETUP_ADMIN_COMPLETE.ps1, set_tasks_hl.ps1}` + `migrate_to_new_pc.ps1`. De-hardcodare
+      via `_ti_paths.bat`. NB: le notturne girano comunque (TI_NightAudit @03:52 OK) → i task
+      attivi usano già il resolver portabile; questi script tools/ sono legacy.
+
+### [ ] DECISO OGGI — prossimo grande pezzo
+- [ ] **GRAPHIFY = livello WIKI dell'arco macro** (deciso 07/06). Adottare Graphify
+      (repo `safishamsi/graphify`): knowledge-graph su MENTE/+repo via Tree-sitter +
+      NetworkX + Leiden community detection, export Obsidian. È il salto `RAG→Wiki`
+      che manca. **Additivo** al RAG vettoriale (non sostituisce → coerente con
+      architettura ibrida + paura cancella-e-rifai). Motivo tecnico: il RAG vettoriale
+      ha mostrato limiti reali (night_audit ha purgato 448 chunk-spazzatura); il grafo
+      cattura *relazioni*, non similarità. Possibile backend reale della vista RETE.
+      Claim upstream: ~71x meno token/query, memoria persistente.
+      → Step 1: PoC isolato (grafo su una cartella + export Obsidian, numeri reali).
+      → Fari di ricerca (NON ora): Anthropic "When AI builds itself" (RSI = la tua
+        regola #5 in piccolo); RecursiveMAS (Stanford+NVIDIA, agenti in spazio latente,
+        −34÷75% token) = orizzonte stadio `Agenti→Orchestrazione`.
 
 ---
 

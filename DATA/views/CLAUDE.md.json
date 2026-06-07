@@ -94,7 +94,7 @@
       "content": "```\nOfficina / Chat / Web\n        ↓\nMENTE/SESSIONI/YYYY-MM-DD_tema.md   ← cattura manuale (60 sec)\n        ↓\nrag-rebuild                          ← indicizza in ChromaDB\n        ↓\nClaude conosce quella info nelle sessioni future\n        ↓\nMigliore output → migliore documentazione → RAG più ricco\n```\n\nQuesto è il compounding del sapere. Ogni documento aggiunto vale per sempre."
     }
   ],
-  "word_count": 1080,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-07T11:14:08.063939"
+  "word_count": 1133,
+  "updated_at": "2026-06-07T11:14:20.352902",
+  "built_at": "2026-06-07T16:29:53.844196"
 }

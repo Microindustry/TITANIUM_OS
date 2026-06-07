@@ -1,0 +1,56 @@
+{
+  "path": ".claude/skills/salva/SKILL.md",
+  "title": "SALVA — chiusura sessione TITANIUM_OS",
+  "meta": {
+    "name": "salva",
+    "description": "Chiusura sessione TITANIUM_OS — \"salva tutto\". Aggiorna la bussola (DA_FARE_FATTO.md) + mirror Desktop, STATE.json, RIAVVIO_SESSIONE.txt; verifica storie e build; commit + push. Usa quando Matteo dice \"salva\" (di solito apre una nuova sessione subito dopo).",
+    "argument-hint": "[opzionale: nota di chiusura]",
+    "allowed-tools": "Read, Edit, Write, Bash",
+    "disable-model-invocation": "false"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [SALVA  chiusura sessione TITANIUM_OS](#salva-chiusura-sessione-titaniumos)\n  - [1. Bussola (la rotta condivisa)  DA_FARE_FATTO.md](#1-bussola-la-rotta-condivisa-dafarefattomd)\n  - [2. Stato  BRAIN/STATE.json](#2-stato-brainstatejson)\n  - [3. Ripresa  RIAVVIO_SESSIONE.txt](#3-ripresa-riavviosessionetxt)\n  - [4. Verifiche (niente teatro: numeri reali)](#4-verifiche-niente-teatro-numeri-reali)\n  - [5. GitHub  commit  push](#5-github-commit-push)\n  - [6. Conferma a Matteo](#6-conferma-a-matteo)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "SALVA — chiusura sessione TITANIUM_OS",
+      "content": "Quando Matteo dice **\"salva\"** sta per aprire una nuova sessione: tutto ciò che\nserve per riprendere senza perdere nulla DEVE essere su disco, committato e pushato.\nEsegui i passi in ordine. Nota di chiusura (se data): $ARGUMENTS"
+    },
+    {
+      "level": 2,
+      "title": "1. Bussola (la rotta condivisa) — `DA_FARE_FATTO.md`",
+      "content": "- Sposta in `[✓] FATTO` ciò che è stato completato in sessione (NON cancellare le\n  righe vecchie: cambia solo lo stato `[✓]/[◐]/[ ]/[✗]/[💡]`).\n- Aggiungi i nuovi `[ ] DA FARE` emersi.\n- **Riordina** i DA FARE per priorità: in cima il primo punto da cui ripartire.\n- Allinea il mirror Desktop `da fare e cosa ho fatto.txt` (stesso contenuto del\n  blocco DA FARE/FATTO)."
+    },
+    {
+      "level": 2,
+      "title": "2. Stato — `BRAIN/STATE.json`",
+      "content": "- `active_milestone` = cosa si è chiuso in sessione · `last_action` · `next_step`\n  = il primo punto della bussola.\n- Aggiungi 1 riga a `milestones.verified` per ogni pezzo verificato (build verde).\n- Valida il JSON (`python -c \"import json;json.load(open('BRAIN/STATE.json',encoding='utf-8'))\"`)."
+    },
+    {
+      "level": 2,
+      "title": "3. Ripresa — `RIAVVIO_SESSIONE.txt`",
+      "content": "- Rigenera: dove siamo (<10 sec), fatto in sessione (commit), prossimo lavoro,\n  blockers, ultimi commit."
+    },
+    {
+      "level": 2,
+      "title": "4. Verifiche (niente teatro: numeri reali)",
+      "content": "```bash\npython CONTENT_ENGINE/scripts/audit_episodes.py        # 0 orfani atteso\npython CONTENT_ENGINE/scripts/build_episodes_json.py   # importa eventuali nuovi .md\ncd DASHBOARD && npx tsc -b                              # build deve essere verde\n```\n- Refresh bussola per la dashboard: `python NODES/AUDIT_AGENT/night_audit.py --bussola-only`"
+    },
+    {
+      "level": 2,
+      "title": "5. GitHub — commit + push",
+      "content": "```bash\ngit add -A\ngit commit -m \"chore(salva): chiusura sessione — <riassunto>\"\ngit push origin main          # se il push è bloccato: lo farà TI_NightPush\ngit rev-list --count origin/main..main   # deve dire 0 (tutto pushato)\n```"
+    },
+    {
+      "level": 2,
+      "title": "6. Conferma a Matteo",
+      "content": "Una riga: \"Salvato. Prossima sessione si riparte da: <primo punto bussola>.\"\n\n> Regola d'oro: non si perde nulla. Se qualcosa non si è potuto salvare (es. push\n> bloccato), DILLO esplicitamente e indica chi lo recupererà (es. TI_NightPush)."
+    }
+  ],
+  "word_count": 416,
+  "updated_at": "2026-06-07T16:28:18.239394",
+  "built_at": "2026-06-07T16:28:18.239394"
+}

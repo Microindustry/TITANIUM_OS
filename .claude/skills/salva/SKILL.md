@@ -5,6 +5,18 @@ argument-hint: [opzionale: nota di chiusura]
 allowed-tools: Read, Edit, Write, Bash
 disable-model-invocation: false
 ---
+<!-- TOC -->
+
+- [SALVA  chiusura sessione TITANIUM_OS](#salva-chiusura-sessione-titaniumos)
+  - [1. Bussola (la rotta condivisa)  DA_FARE_FATTO.md](#1-bussola-la-rotta-condivisa-dafarefattomd)
+  - [2. Stato  BRAIN/STATE.json](#2-stato-brainstatejson)
+  - [3. Ripresa  RIAVVIO_SESSIONE.txt](#3-ripresa-riavviosessionetxt)
+  - [4. Verifiche (niente teatro: numeri reali)](#4-verifiche-niente-teatro-numeri-reali)
+  - [5. GitHub  commit  push](#5-github-commit-push)
+  - [6. Conferma a Matteo](#6-conferma-a-matteo)
+
+<!-- /TOC -->
+
 
 # SALVA — chiusura sessione TITANIUM_OS
 

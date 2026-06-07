@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-07T11:45:47.096805",
+  "last_update": "2026-06-07T16:38:44.642376",
   "active_milestone": "Sessione #32-33: P1a + leva locale + binario AVVENTURA (Nina) + Bussola↔CRITICHE + skill 'salva' + PERCORSO EVOLUTIVO a canone (spirale/Pietre/3 strati/dual coding) + arco macro 'storia dell'IA' (Loop→Automazione→LLM→RAG→Wiki→Agenti, stile Simone Rizzo) + visione (libro IA per il bambino del 2024, su progetto reale, predisposto ai ricavi). Tutto committato+pushato, build verde.",
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
+  "last_action": "Modifica a DA_FARE_FATTO.md",
   "next_step": "PRIMO PUNTO bussola: #1 automatizzare le storie di Nina (pipeline 2 stadi: auto estrae concept brief dai tecnici → Claude scrive definitivo). Poi #2 EP_AV_01, #3 rinomini MAPPA→BUSSOLA/RETE→RAG (⚠ collisione nome Bussola, confermare). Leggere DA_FARE_FATTO.md riordinato.",
-  "session_count": 36,
+  "session_count": 37,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-07T10:58:24.254251"
+      "last_activity": "2026-06-07T16:31:24.768786"
     },
     "VITA_NATURA": {
       "status": "active",
