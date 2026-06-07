@@ -206,8 +206,10 @@ fatto vero dal canone tecnico e lo si traduce in fiaba (Nina + THEMIS + l'Entrop
 **COME si generano (pipeline a 2 stadi — rispetta "niente bozze"):**
 1. **Stadio AUTOMATICO (prepara, non scrive):** un passo notturno/agente scorre i nuovi
    episodi tecnici e ne estrae un **"concept brief"**: {concetto reale, fatti/numeri,
-   personaggio-guida adatto, possibile metafora}. Mette i brief in coda. Questo è il
-   lavoro tedioso, ed è giusto automatizzarlo.
+   personaggio-guida adatto, possibile metafora, **Pietre nuove + Pietre richiamate**,
+   **i 3 strati** (bambino/curioso/esperto), **key-image**}. Mette i brief in coda.
+   Questo è il lavoro tedioso, ed è giusto automatizzarlo.
+   → La didattica (spirale, rimandi, strati, immagini) è in `PERCORSO_EVOLUTIVO.md`.
 2. **Stadio DEFINITIVO (scrive Claude):** dal concept brief, Claude scrive l'episodio
    **già finito** (qualità, canone bibbia), e va subito in posizione definitiva
    (`S_AVVENTURA/`, stagione AV, via build_episodes_json). Niente brutta copia da 7B.

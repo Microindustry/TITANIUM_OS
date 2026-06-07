@@ -132,3 +132,13 @@ E quella, è la prossima avventura.
 *Hai capito il Grande Loop? Provalo tu: la prossima volta che aggiusti o costruisci
 qualcosa, lascia una traccia di come hai fatto. Hai appena fatto girare il tuo primo
 Loop.*
+
+---
+
+<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->
+**Pietre nuove:** `⟡1` il Grande Loop (un gesto, tre frutti) · `⟡2` l'Entropia/il Disordine
+**Pietre richiamate:** nessuna (è il primo episodio)
+**Key-image:** un anello che gira con tre frutti (il Loop) · ruggine che si sgretola (l'Entropia)
+**3 strati:** bambino = smonta/rimonta la sveglia · curioso = "tenere a bada il disordine" ·
+esperto/papà = la traccia scritta è ciò che rende un gesto *ripetibile* (la base dell'automazione)
+

@@ -42,6 +42,10 @@
       (1 concetto reale → 1 avventura); pipeline 2 stadi: auto estrae "concept brief",
       Claude scrive l'episodio DEFINITIVO (no bozze).
 - [✓] Verificato 07/06: storie 0 orfani (120 in dashboard, 111 .md), GitHub allineato.
+- [✓] PERCORSO EVOLUTIVO a canone (PERCORSO_EVOLUTIVO.md): spirale + ripetizione
+      spaziata + dual coding + sistema "Pietre" (i numerini di rimando) + 3 strati
+      (bambino/curioso/esperto-papà-fabbro) + standard immagini per animazione.
+      Pilota EP_AV_00 marcato con Pietre ⟡1 Grande Loop, ⟡2 Entropia.
 
 ### [ ] DA FARE (prossimo — in ordine di priorità)
 - [ ] **#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):
@@ -49,6 +53,9 @@
       coda; poi Claude scrive l'episodio definitivo dal brief. Pipeline a 2 stadi
       (bibbia sez. 9). L'auto PREPARA, la scrittura resta di qualità.
 - [ ] **#2 EP_AV_01 "l'Automazione"** — primo episodio Nina dopo il pilota (definitivo).
+      Deve seguire PERCORSO_EVOLUTIVO.md: Pietre nuove/richiamate + 3 strati + key-image.
+- [ ] **#2b indice PIETRE.md** (mappa concetto→episodio→richiami) + descrizione key-image
+      di ogni Pietra (anche solo a parole finché l'animazione è spenta).
 - [ ] **#3 RINOMINI dashboard** [richiesta Matteo 07/06]: MAPPA → **BUSSOLA**,
       RETE → **RAG**. ⚠ COLLISIONE NOME: oggi "Bussola" è già il ramo todo in CRITICHE.
       Da risolvere: il ramo todo si chiama "SCALETTA"/"ROTTA" (file resta DA_FARE_FATTO.md)
