@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-dd28c36b33",
+    "date": "2026-06-07",
+    "git": "80af36c",
+    "area": "MIMS",
+    "severity": "alta",
+    "finding": "Il mandrino 2.2kW ER20 è prerequisito bloccante per la fresatura stampi MIMS, pilastro al 30% — il più basso di tutto il sistema. Non è un reminder: è un collo di bottiglia fisico che blocca qualsiasi avanzamento hardware. Nessun commit MIMS negli ultimi 7 giorni conferma lo stallo.",
+    "azione": "Entro oggi: emettere ordine mandrino o identificare fornitore con lead-time. Parallelamente, sbloccare la decisione silent blocks v.A vs v.B — sono due blockers separati sullo stesso pilastro, lasciarli aperti insieme è il modo più rapido per tenere MIMS fermo a 30% indefinitamente.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-07"
+  },
+  {
+    "id": "AUD-acb07023f5",
+    "date": "2026-06-07",
+    "git": "80af36c",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerca a vuoto ed errore esplicito — tripla failure nella stessa run. Il RAG cresce (6693 chunk) ma l'ingestion notturna di nuova conoscenza è di fatto bloccata. Il sistema si auto-nutre male.",
+    "azione": "Verificare quale sorgente ha scatenato il rate-limit (probabile arXiv o Semantic Scholar). Implementare backoff esponenziale + rotazione sorgenti nel research_agent. Controllare quanti topic notturni hanno prodotto 0 chunk nuovi nelle ultime 3 notti — se trend, il RAG è stagnante nonostante il numero alto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-07"
+  },
+  {
+    "id": "AUD-a7179fdc41",
+    "date": "2026-06-07",
+    "git": "80af36c",
+    "area": "GENESIS",
+    "severity": "alta",
+    "finding": "story_agent.log ha crash/eccezione + errore esplicito la stessa notte in cui auto_commit mostra 'episodi generati 07/06/2026'. Il commit esiste ma il log segnala crash: probabile generazione parziale o episodi corrotti scritti su episodes.json prima dell'eccezione. Precedente: gli stessi sintomi avevano prodotto 27 episodi orfani (commit 3627911).",
+    "azione": "Eseguire audit_episodes.py adesso e confrontare count dashboard con n_episodes=112. Se divergono, isolare gli episodi scritti stanotte e verificare JSON valido. Aggiungere validazione schema post-scrittura nello story_agent prima del sync.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-07"
+  },
+  {
+    "id": "AUD-6a65c1c1c8",
+    "date": "2026-06-07",
+    "git": "80af36c",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Critiche=quest e MAPPA=mondo sono listati come collegamento da fare per P2, ma CriticheSection e MappaView esistono già nella dashboard (commit 037a559, 8baf2ff). Il rischio è che EP_AV_01..04 vengano generati senza grounding sulla mappa-mondo, replicando il problema degli episodi orfani già vissuto (commit 3627911): episodi narrativamente disconnessi che poi richiedono recupero manuale.",
+    "azione": "Prima di generare EP_AV_01, completare il collegamento Critiche→quest e MAPPA→mondo come contesto obbligatorio per lo story_agent AVVENTURA. Trattare questo come prerequisito di generazione, non come task parallelo.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-07"
+  },
+  {
+    "id": "AUD-4d536633e5",
+    "date": "2026-06-07",
+    "git": "80af36c",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "night_push.log riporta crash/eccezione + errore esplicito: il commit automatico notturno ha fallito. Con 121 commit in 7 giorni il push notturno è infrastruttura critica — se cade, il lavoro delle automazioni non entra nel repo e la continuità sessione si rompe silenziosamente.",
+    "azione": "Aprire night_push.log, isolare l'eccezione esatta (exit code, messaggio). Verificare che git HEAD 80af36c sia effettivamente su remote. Aggiungere alert esplicito in TI_NightAudit se night_push.log contiene 'error|exception' — oggi l'anomalia è stata silenziosa.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-07"
+  },
+  {
+    "id": "AUD-29ebcd4044",
+    "date": "2026-06-07",
+    "git": "80af36c",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "MiniMax M3 è listato come next_step ('cablare nel toggle chat') ma richiede una key OpenRouter in _VAULT non ancora inserita. Qwen locale è acceso (model_ready=true) ma EP_AV_01..04 dipende anche dalla rifinitura su M3. Il binario AVVENTURA è lanciato senza il suo tool di rifinitura operativo — rischio di produrre bozze non rifinibili in pipeline.",
+    "azione": "Recuperare la key OpenRouter, inserirla in _VAULT, verificare che il toggle chat la legga correttamente prima di avviare EP_AV_01. Non avviare produzione episodi in pipeline se un nodo della catena di qualità è offline.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-07"
+  },
+  {
     "id": "AUD-e5e805d3cd",
     "date": "2026-06-06",
     "git": "de19d33",
