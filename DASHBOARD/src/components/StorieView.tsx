@@ -131,14 +131,14 @@ function EpisodeCard({ ep }: { ep: Episode }) {
   );
 }
 
-export function StorieView() {
+export function StorieView({ initialStagione = null }: { initialStagione?: string | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
 
-  const [filterStagione, setFilterStagione] = useState<string | null>(null);
+  const [filterStagione, setFilterStagione] = useState<string | null>(initialStagione);
   const [filterStatus, setFilterStatus] = useState<EpisodeStatus | null>(null);
-  const [expandedSeason, setExpandedSeason] = useState<string | null>(null);
+  const [expandedSeason, setExpandedSeason] = useState<string | null>(initialStagione);
 
   const filtered = EPISODES.filter(ep => {
     if (filterStagione && ep.stagione !== filterStagione) return false;

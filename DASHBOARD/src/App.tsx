@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain,
+  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain, Sparkles,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -247,6 +247,22 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </span>
               </button>
             )}
+            {/* Sotto-voce: Avventura — annidata sotto STORIE, piccola e rosa (binario educativo) */}
+            {item.id === "storie" && !collapsed && (
+              <button
+                onClick={() => onNavigate("avventura")}
+                title="L'Avventura — il mondo educativo (Nina + THEMIS)"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "avventura"
+                    ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
+                    : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
+              >
+                <Sparkles size={11} className="flex-shrink-0 text-pink-400" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  Avventura
+                </span>
+              </button>
+            )}
           </Fragment>
         ))}
       </nav>
@@ -445,6 +461,7 @@ function AppInner() {
               </div>
             )}
             {view === "storie"      && <StorieView />}
+            {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "pitch"       && <PitchView />}
             {view === "metodo"      && <MetodoView />}
             {view === "mappa"    && <MappaView systemState={sys.state as any} />}
