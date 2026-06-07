@@ -37,3 +37,6 @@ NODES/COMPUTER_USE/omniparser_weights/
 
 # Contiene token/segreti locali (GH_TOKEN, PATH macchina) — MAI in git
 ti_autorun.cmd
+# Graphify (knowledge graph): output rigenerabile, può contenere estratti di MENTE/ — resta locale
+graphify-out/
+**/graphify-out/

@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "created": "2026-06-07",
+    "source": "BRAIN/AI_NEWS_WATCHER_BRIEF.md",
+    "note": "Stato del watcher AI-news a tier. Separato da BRAIN/STATE.json. Scaffold: il watcher non gira ancora (manca wiring API)."
+  },
+  "config": {
+    "tiers": {
+      "tier1": { "frequency_hours": 48, "max_sources": 10, "desc": "ha gia' dimostrato utilita'" },
+      "tier2": { "frequency_hours": 168, "desc": "settimanale, tutti gli altri" },
+      "tier3": { "frequency_hours": null, "desc": "sospesi, rivalutazione manuale" }
+    },
+    "rotation": {
+      "promote_t2_to_t1": "2+ criticita' rilevanti in 2 settimane",
+      "demote_t1_to_t2": "nessun segnale per 3 settimane",
+      "demote_t2_to_t3": "nessun segnale per 6 settimane"
+    }
+  },
+  "sources": [
+    { "name": "safishamsi", "kind": "github", "handle": "github.com/safishamsi", "tier": 2, "note": "autore Graphify", "last_signal": "2026-06-07" },
+    { "name": "Cole Medin", "kind": "github", "handle": "github.com/coleam00", "tier": 1, "note": "Archon, context-engineering-intro", "last_signal": null },
+    { "name": "AI Jason", "kind": "github", "handle": "github.com/JayZeeDesign", "tier": 1, "note": "awesome-claude-skills", "last_signal": null },
+    { "name": "Simon Willison", "kind": "github", "handle": "github.com/simonw", "tier": 1, "note": null, "last_signal": null },
+    { "name": "Simone Rizzo", "kind": "github", "handle": "github.com/simone-rizzo", "tier": 1, "note": "IT", "last_signal": null },
+    { "name": "gabriaprile", "kind": "instagram", "handle": "@gabriaprile", "tier": 2, "note": "ha segnalato Graphify", "last_signal": "2026-06-07" },
+    { "name": "dariofontanel.ai", "kind": "instagram", "handle": "@dariofontanel.ai", "tier": 2, "note": "spunto LLM-Wiki Karpathy", "last_signal": "2026-06-07" }
+  ],
+  "criticita": [
+    {
+      "id": "graphify-2026-06-07",
+      "fonte": "gabriaprile (IG) / github.com/safishamsi/graphify",
+      "url": "https://github.com/safishamsi/graphify",
+      "sintesi": "Knowledge graph locale (AST tree-sitter + Leiden) per Claude Code: meno token, memoria persistente.",
+      "rilevanza": "alta",
+      "stato": "IMPLEMENTATO",
+      "visto_il": "2026-06-07"
+    }
+  ]
+}

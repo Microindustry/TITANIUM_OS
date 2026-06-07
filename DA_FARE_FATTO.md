@@ -42,19 +42,33 @@
       via `_ti_paths.bat`. NB: le notturne girano comunque (TI_NightAudit @03:52 OK) → i task
       attivi usano già il resolver portabile; questi script tools/ sono legacy.
 
-### [ ] DECISO OGGI — prossimo grande pezzo
-- [ ] **GRAPHIFY = livello WIKI dell'arco macro** (deciso 07/06). Adottare Graphify
-      (repo `safishamsi/graphify`): knowledge-graph su MENTE/+repo via Tree-sitter +
-      NetworkX + Leiden community detection, export Obsidian. È il salto `RAG→Wiki`
-      che manca. **Additivo** al RAG vettoriale (non sostituisce → coerente con
-      architettura ibrida + paura cancella-e-rifai). Motivo tecnico: il RAG vettoriale
-      ha mostrato limiti reali (night_audit ha purgato 448 chunk-spazzatura); il grafo
-      cattura *relazioni*, non similarità. Possibile backend reale della vista RETE.
-      Claim upstream: ~71x meno token/query, memoria persistente.
-      → Step 1: PoC isolato (grafo su una cartella + export Obsidian, numeri reali).
-      → Fari di ricerca (NON ora): Anthropic "When AI builds itself" (RSI = la tua
-        regola #5 in piccolo); RecursiveMAS (Stanford+NVIDIA, agenti in spazio latente,
-        −34÷75% token) = orizzonte stadio `Agenti→Orchestrazione`.
+### [◐] GRAPHIFY — livello WIKI dell'arco macro (RAG→Wiki)
+- [✓] **GRAPHIFY IN PRODUZIONE** (07/06). Installato isolato (uv tool, MIT, gratis) +
+      skill `/graphify` in Claude Code. **Grafo del repo: 515 file → 5966 nodi · 6317
+      archi · 696 community in 13.2s**, 100% locale, zero API. Query verificata:
+      `graphify query "RAG..."` ritorna all'istante `rag_engine.py:search()`,
+      `rag_graph.py:build_graph()` con riga+community — *senza rileggere i file*
+      (= il beneficio "zero token sprecati"). Output gitignored (`graphify-out/`).
+- [✓] PoC: code-graph perfetto/istantaneo. Doc-graph via qwen-7B locale = scarso
+      (il 7B torna prosa non-JSON, 11 nodi/4 doc in 5 min) → estrattore MENTE rinviato.
+- [✓] DECISO: estrattore MENTE = **ibrido per sensibilità** (cloud per doc NON
+      sensibili / locale-o-code-graph per i segreti V32-BOM/MIMS). NB: BRAIN/+CORE/
+      sono già nel repo pubblico → nessun segreto, lì si può usare il cloud liberamente.
+- [ ] Prossimo Graphify: (a) grafo semantico di BRAIN/ via skill in-sessione (modello
+      dell'IDE, no chiave); (b) refresh automatico (`graphify watch`/`update`) come nodo;
+      (c) valutare Graphify come backend reale della vista RETE.
+- [💡] STORIA: `RAG→Wiki` è uno stadio dell'arco macro Nina → candidato episodio
+      AV + milestone "spettacolare" su GitHub (richiesta Matteo).
+- [ ] Fari di ricerca (NON ora): Anthropic "When AI builds itself" (RSI = regola #5
+      in piccolo); RecursiveMAS (Stanford+NVIDIA, latente, −34÷75% token).
+
+### [◐] AI NEWS WATCHER + lista creator (dalla chat desktop)
+- [✓] Brief catturato in `BRAIN/AI_NEWS_WATCHER_BRIEF.md` (30+ creator con handle GitHub,
+      logica tier 48h/settimanale/sospesi + rotazione, sorgenti, decisioni implementative).
+- [✓] Scaffold stato: `DATA/ai_news_watcher_state.json` (tier + criticità; Graphify = #1 IMPLEMENTATO).
+- [ ] Costruire il watcher 48h: architettura (job su titanium-scanner vs repo separato) +
+      wiring API (YouTube Data v3, GitHub REST, fetch siti). ⚠ richiede chiavi API.
+- [ ] Sorgente Instagram via RSS terze parti — da valutare (no API pubblica).
 
 ---
 
