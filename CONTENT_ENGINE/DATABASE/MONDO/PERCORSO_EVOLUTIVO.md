@@ -119,7 +119,45 @@ volta, e un invito a rifarlo da soli. Questo è ciò che resta — a 8 anni e a 
 
 ---
 
-## 6. COME SI USA (operativo)
+## 6-bis. LA SPINA DORSALE — "la storia dell'IA" (arco macro)
+
+Il percorso non è una lista di concetti scollegati: è **un arco unico**, la storia di
+come nasce un'intelligenza artificiale, raccontata come il viaggio di Nina. È il **libro
+di storia dell'IA** che un bambino del 2024 leggerà/guarderà animato — e ogni tappa è
+**ancorata a un pezzo reale del progetto OS** (così è vera, non inventata).
+
+Ordine dell'arco (la sequenza giusta, alla **Simone Rizzo**: dal modello agli agenti,
+costruiti da zero, spiegati semplici — [Rizzo AI Academy](https://www.rizzoaiacademy.com/),
+[YouTube](https://www.youtube.com/@simone_rizzo98), [RAG da zero](https://github.com/simone-rizzo/agente-ai-rag)):
+
+| # | Tappa (Pietra madre) | In Nina | Pezzo reale del progetto | Valore a chi lo usa |
+|---|---|---|---|---|
+| 1 | **Il Loop / la traccia** | EP_AV_00 (fatto) | il sistema che cattura e ripete | imparare a non perdere il sapere |
+| 2 | **L'automazione** | EP_AV_01 | watcher + notturne | un gesto che si ripete da solo |
+| 3 | **L'LLM (il modello che parla)** | — | Claude / Qwen locale | una mente che capisce il linguaggio |
+| 4 | **Il RAG (memoria + fonti)** | — | MENTE RAG (6500+ chunk) | risposte vere, citate, non inventate |
+| 5 | **La Wiki / conoscenza** | — | MENTE/ + viste dashboard | organizzare il sapere perché serva |
+| 6 | **Gli Agenti (entità che fanno)** | — | THEMIS, EVA, FORGE… | far lavorare il sistema da solo |
+| 7 | **L'orchestrazione** | — | NEXUS (futuro) | tante menti che collaborano |
+
+Regole dell'arco:
+- **Ogni tappa è la base della successiva** (Pietre): non si arriva al RAG senza l'LLM,
+  non agli agenti senza il RAG. È la spirale a scala macro.
+- **Sempre ancorata al reale**: la tappa "RAG" mostra il RAG vero del progetto. Questo
+  rende il libro **basato su un progetto OS reale** (non una favola astratta) — ed è ciò
+  che lo rende credibile per l'esperto e prezioso per chi vuole costruirsi il suo.
+- **Predisposto al valore/economia**: l'arco è anche un **corso travestito da fiaba**.
+  Chi lo guarda impara a costruirsi il proprio sistema → è la leva economica futura
+  (vedi bibbia: formati/leve predisposte, spente finché non è il momento).
+
+## 6-ter. NOTA — Simone Rizzo come riferimento di stile
+
+Tenere Simone Rizzo come **modello di divulgazione**: costruire da zero, niente fuffa,
+una cosa per volta, dal concreto all'astratto. Il binario Avventura è la **versione per
+bambini (e papà fabbri)** dello stesso arco LLM→RAG→agenti — la stessa onestà tecnica,
+ma in fiaba. *(Coerente con la skill `reel`, già "stile Simone Rizzo".)*
+
+## 7. COME SI USA (operativo)
 
 - La **mappa delle Pietre** (quale concetto, quale episodio lo fonda, cosa richiama) si
   tiene in coda agli episodi e, in prospettiva, in un indice `PIETRE.md` o in dashboard.

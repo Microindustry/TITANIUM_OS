@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-07T11:39:35.468886",
-  "active_milestone": "Sessione #32-33: P1a + leva locale + binario AVVENTURA (Nina) + Bussola↔CRITICHE collegata (night_audit→bussola_todos.json→ramo CRITICHE) + skill 'salva' + processo episodi Nina definito (bibbia sez.9). Tutto committato, build verde.",
-  "last_action": "Modifica a DA_FARE_FATTO.md",
+  "last_update": "2026-06-07T11:45:47.096805",
+  "active_milestone": "Sessione #32-33: P1a + leva locale + binario AVVENTURA (Nina) + Bussola↔CRITICHE + skill 'salva' + PERCORSO EVOLUTIVO a canone (spirale/Pietre/3 strati/dual coding) + arco macro 'storia dell'IA' (Loop→Automazione→LLM→RAG→Wiki→Agenti, stile Simone Rizzo) + visione (libro IA per il bambino del 2024, su progetto reale, predisposto ai ricavi). Tutto committato+pushato, build verde.",
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
   "next_step": "PRIMO PUNTO bussola: #1 automatizzare le storie di Nina (pipeline 2 stadi: auto estrae concept brief dai tecnici → Claude scrive definitivo). Poi #2 EP_AV_01, #3 rinomini MAPPA→BUSSOLA/RETE→RAG (⚠ collisione nome Bussola, confermare). Leggere DA_FARE_FATTO.md riordinato.",
   "session_count": 36,
   "pillars": {
@@ -50,7 +50,8 @@
       "Notturne ottimizzate + self-audit: RAG CANONE vs RICERCA (-448 chunk garbage purgati), gate rilevanza ricerca (--min-rel), topic puliti, night_audit.py su Sonnet genera cartella clinica automatica (DATA/audit), TI_NightAudit @03:52 (05/06/2026)",
       "P1a il grosso: view AUTOMAZ riscritta con stato operativo reale (persistente/event/scheduled/on-demand/dormiente) + badge live da /api/watchdog/status e /api/tasks/notturne; ~14 file 'da creare' erano falsi (esistono su disco), 5 sottostimati event-driven corretti; anomalia TI_NightAudit risolta (gira @03:52 OK). Commit 5f148a7+b70b4e2, build verde (06/06/2026)",
       "P2 binario AVVENTURA (Nina): bibbia del mondo + pilota EP_AV_00 (Grande Loop), stagione AV + sotto-voce sidebar; processo di generazione definito (1 concetto reale→1 avventura, pipeline 2 stadi) (07/06/2026)",
-      "Bussola↔CRITICHE: DA_FARE_FATTO.md (scaletta viva, letta a inizio sessione) collegata alla cartella clinica via night_audit→bussola_todos.json→ramo 'Bussola' in CRITICHE; skill 'salva' per chiusura sessione standardizzata (07/06/2026)"
+      "Bussola↔CRITICHE: DA_FARE_FATTO.md (scaletta viva, letta a inizio sessione) collegata alla cartella clinica via night_audit→bussola_todos.json→ramo 'Bussola' in CRITICHE; skill 'salva' per chiusura sessione standardizzata (07/06/2026)",
+      "Percorso evolutivo Nina a canone (PERCORSO_EVOLUTIVO.md): curriculum a spirale + ripetizione spaziata + dual coding + sistema Pietre (rimandi) + 3 strati + arco macro 'storia dell'IA' (LLM→RAG→agenti, stile Simone Rizzo) ancorato al progetto reale; visione libro-IA per il bambino del 2024 predisposto ai ricavi (07/06/2026)"
     ],
     "next": "Rifinire PITCH + MIMS + EVA",
     "target_capannone": "2030-07-15"

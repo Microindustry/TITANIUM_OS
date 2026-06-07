@@ -44,6 +44,17 @@ Fonti ricerca: Cyberchase / Magic School Bus / Dinosaur Train / Blue's Clues
 (pattern surrogato+guida+quest), [Coding Lab — STEM shows](https://www.codinglab.com.sg/blog/top-stem-shows-for-children),
 [Scholastic — STEAM shows](https://www.scholastic.com/parents/school-success/learning-toolkit-blog/kids--steam-programming.html).
 
+**LA VISIONE (Matteo, 07/06):** questo è, di fatto, **il libro di storia dell'IA** che un
+bambino del 2024 leggerà — animato — per crescere capace di capire l'IA. Tre proprietà che
+NON sono negoziabili:
+1. **Basato su un progetto OS reale** (TITANIUM_OS): ogni concetto è ancorato a un pezzo che
+   esiste e gira. Non una favola astratta: una storia vera resa fiaba.
+2. **Dà valore a chi lo usa**: chi lo guarda impara a costruirsi il proprio sistema. È un
+   corso travestito da avventura (vedi PERCORSO_EVOLUTIVO.md, arco LLM→RAG→agenti).
+3. **Predisposto agli ingressi economici**: la struttura (episodi, arco, formati animati)
+   è già pronta a diventare prodotto. Leve di monetizzazione **predisposte e spente**
+   finché non funziona — coerente con la regola "prima deve funzionare".
+
 ---
 
 ## 1. IL MONDO — "Il Sistema"

@@ -26,6 +26,14 @@ alla vista CRITICHE. Skill "salva" creata. Tutto committato, build verde.
      "BUSSOLA". CONFERMARE con Matteo prima di toccare.
   #4 Critiche=quest · MAPPA(→Bussola)=mondo · #5 M3 nel toggle · #6 P1c livelli.
 
+━━━ MONDO NINA — canone pronto (leggi prima di scrivere episodi) ━━━
+  • BIBBIA_DEL_MONDO.md = mondo/personaggi/visione (libro storia IA per il bambino
+    2024, su progetto reale, dà valore a chi lo usa, predisposto ai ricavi).
+  • PERCORSO_EVOLUTIVO.md = didattica: spirale, Pietre (rimandi ⟡n), 3 strati
+    (bambino/curioso/papà-fabbro), dual coding/immagini, e ARCO MACRO "storia dell'IA":
+    Loop→Automazione→LLM→RAG→Wiki→Agenti→Orchestrazione (stile Simone Rizzo), ogni
+    tappa ancorata a un pezzo reale del progetto. Gli episodi seguono quest'ordine.
+
 ━━━ DA SAPERE ━━━
   • Leva locale ON: Ollama serve su :11434, qwen2.5:7b pronto.
   • Bussola↔CRITICHE va LIVE al riavvio di api_server (SERVICES/restart_api.ps1)

@@ -46,13 +46,17 @@
       spaziata + dual coding + sistema "Pietre" (i numerini di rimando) + 3 strati
       (bambino/curioso/esperto-papà-fabbro) + standard immagini per animazione.
       Pilota EP_AV_00 marcato con Pietre ⟡1 Grande Loop, ⟡2 Entropia.
+- [✓] ARCO MACRO = "la storia dell'IA": spina dorsale Loop→Automazione→LLM→RAG→Wiki→
+      Agenti→Orchestrazione (stile Simone Rizzo), ogni tappa ancorata a un pezzo REALE
+      del progetto OS. VISIONE a canone (bibbia): libro di storia dell'IA per il bambino
+      del 2024, sul progetto reale, dà valore a chi lo usa, predisposto ai ricavi (spenti).
 
 ### [ ] DA FARE (prossimo — in ordine di priorità)
 - [ ] **#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):
       passo auto che estrae i "concept brief" dai nuovi episodi tecnici e li mette in
       coda; poi Claude scrive l'episodio definitivo dal brief. Pipeline a 2 stadi
       (bibbia sez. 9). L'auto PREPARA, la scrittura resta di qualità.
-- [ ] **#2 EP_AV_01 "l'Automazione"** — primo episodio Nina dopo il pilota (definitivo).
+- [ ] **#2 EP_AV_01 "l'Automazione"** — tappa 2 dell'arco (poi LLM→RAG→Wiki→Agenti).
       Deve seguire PERCORSO_EVOLUTIVO.md: Pietre nuove/richiamate + 3 strati + key-image.
 - [ ] **#2b indice PIETRE.md** (mappa concetto→episodio→richiami) + descrizione key-image
       di ogni Pietra (anche solo a parole finché l'animazione è spenta).
