@@ -42,6 +42,9 @@
       (1 concetto reale → 1 avventura); pipeline 2 stadi: auto estrae "concept brief",
       Claude scrive l'episodio DEFINITIVO (no bozze).
 - [✓] Verificato 07/06: storie 0 orfani (120 in dashboard, 111 .md), GitHub allineato.
+- [✓] FIX avvio sessione: CLAUDE_CODE.bat (lanciato dal collegamento Desktop
+      "Claude Code [TI]") ora legge DA_FARE_FATTO.md + RIAVVIO_SESSIONE.txt +
+      BRAIN/STATE.json (prima leggeva solo RIAVVIO+STATE, non la bussola).
 - [✓] PERCORSO EVOLUTIVO a canone (PERCORSO_EVOLUTIVO.md): spirale + ripetizione
       spaziata + dual coding + sistema "Pietre" (i numerini di rimando) + 3 strati
       (bambino/curioso/esperto-papà-fabbro) + standard immagini per animazione.

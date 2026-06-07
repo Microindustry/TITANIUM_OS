@@ -15,5 +15,5 @@ if not defined CLAUDE (
 )
 
 cd /d "%TI_ROOT%"
-start "" "%CLAUDE%" --dangerously-skip-permissions "Leggi RIAVVIO_SESSIONE.txt e BRAIN/STATE.json e riprendi: dimmi in meno di 10 secondi dove eravamo e il prossimo step, senza domande."
+start "" "%CLAUDE%" --dangerously-skip-permissions "Leggi DA_FARE_FATTO.md (la bussola: cosa e' fatto / cosa resta), poi RIAVVIO_SESSIONE.txt e BRAIN/STATE.json, e riprendi: dimmi in meno di 10 secondi dove eravamo e il prossimo step (il primo punto della bussola), senza domande."
 endlocal
