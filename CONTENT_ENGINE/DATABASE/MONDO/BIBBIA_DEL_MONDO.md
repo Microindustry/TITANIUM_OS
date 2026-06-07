@@ -181,3 +181,37 @@ un agente cambia funzione, cambia il suo potere nella storia. Niente teatro.
 > qualità, non brutta copia. Il motore locale/economico (Qwen/M3) serve per ricerca e
 > supporto, non per sfornare draft da rifinire. Un episodio entra in canone solo quando
 > è pronto, e va subito nella sua posizione definitiva (come EP_AV_00).
+
+---
+
+## 9. COME SI GENERANO GLI EPISODI DI NINA (il processo)
+
+**La fonte (la "guida"): gli episodi tecnici reali.** Gli episodi auto-generati
+(`SA_AUTO`, `S2_SISTEMA`, milestone) raccontano cosa è successo davvero nel sistema.
+Ogni evento tecnico contiene **un concetto** che si può insegnare. Quel concetto è il
+seme di un episodio di Nina. Esempio: il commit "P1a stato reale" → concetto "una mappa
+deve dire la verità" → avventura di Nina sulla differenza tra una cosa che *sembra*
+funzionare e una che funziona davvero.
+
+**Regola 1 — da 1 concetto reale, 1 avventura.** Non si inventa tecnologia: si prende un
+fatto vero dal canone tecnico e lo si traduce in fiaba (Nina + THEMIS + l'Entropia,
+1 concetto, open loop). La precisione tecnica è il vincolo, non un optional.
+
+**QUANDO si generano (cadenza):**
+- **NON ogni notte in automatico.** Qualità > quantità ("niente bozze"). Un episodio
+  Nina nasce quando c'è un concetto che vale, o quando Matteo lo chiede.
+- Cadenza target: **1 episodio Nina per ogni concetto-chiave** che emerge dai tecnici,
+  scelto, non sfornato.
+
+**COME si generano (pipeline a 2 stadi — rispetta "niente bozze"):**
+1. **Stadio AUTOMATICO (prepara, non scrive):** un passo notturno/agente scorre i nuovi
+   episodi tecnici e ne estrae un **"concept brief"**: {concetto reale, fatti/numeri,
+   personaggio-guida adatto, possibile metafora}. Mette i brief in coda. Questo è il
+   lavoro tedioso, ed è giusto automatizzarlo.
+2. **Stadio DEFINITIVO (scrive Claude):** dal concept brief, Claude scrive l'episodio
+   **già finito** (qualità, canone bibbia), e va subito in posizione definitiva
+   (`S_AVVENTURA/`, stagione AV, via build_episodes_json). Niente brutta copia da 7B.
+
+→ L'automazione **raccoglie e propone** (i brief); la **scrittura resta di qualità**.
+Così si automatizza senza tradire "niente bozze". *(Questo è il candidato "automatizzare
+le storie" per la prossima sessione — vedi DA_FARE_FATTO.md.)*

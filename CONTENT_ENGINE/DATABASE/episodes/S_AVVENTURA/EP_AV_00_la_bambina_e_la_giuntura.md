@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_AV_00  La Bambina e la Giuntura](#epav00-la-bambina-e-la-giuntura)
+    - [Dove il metallo e il codice si tengono per mano](#dove-il-metallo-e-il-codice-si-tengono-per-mano)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL MONDO CHE NESSUNO VEDE](#atto-i-il-mondo-che-nessuno-vede)
+  - [ATTO II  IL DISORDINE](#atto-ii-il-disordine)
+  - [ATTO III  IL GRANDE LOOP](#atto-iii-il-grande-loop)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 # EP_AV_00 — La Bambina e la Giuntura
 ### "Dove il metallo e il codice si tengono per mano"
 

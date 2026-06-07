@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
+  "title": "TITANIUM_OS — S2E12",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E12](#titaniumos-s2e12)\n  - [La Macchina che Mente](#la-macchina-che-mente)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL SISTEMA CHE DICE DI STARE BENE](#atto-i-il-sistema-che-dice-di-stare-bene)\n  - [ATTO II  LA SESSIONE CHE CAMBIA MACCHINA](#atto-ii-la-sessione-che-cambia-macchina)\n  - [ATTO III  P2: LA STORIA DENTRO LA STORIA](#atto-iii-p2-la-storia-dentro-la-storia)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"La Macchina che Mente\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — IL SISTEMA CHE DICE DI STARE BENE",
+      "content": "C'è un problema sottile con i sistemi di monitoraggio: possono diventare cosmesi.\n\nNon per cattiveria. Per inerzia. Una colonna aggiornata sei mesi fa che mostra \"✅ attivo\" perché nessuno ha mai scritto il codice per cambiarlo in \"❌ morto\". Un watcher che supervisiona processi che non esistono più. Una cron che non ha mai girato davvero, ma la tabella non lo sa.\n\nGENESIS ha una vista chiamata **AUTOMAZ**. È lì da mesi. Elenca le automazioni attive: TI_NightPush, watchdog, mente_watcher, story_agent, night_audit. Verde, verde, verde.\n\nOggi — sessione #31 — Matteo ha fatto una cosa semplice e brutale: ha guardato davvero.\n\nHa aperto Task Scheduler. Ha controllato i PID reali. Ha interrogato i processi. Ha confrontato quello che AUTOMAZ dichiarava con quello che il sistema operativo confermava.\n\n**Risultato dell'audit:**\n\n| Automazione | AUTOMAZ dichiarava | Stato reale |\n|---|---|---|\n| TI_NightPush | ✅ verde | ❌ EXIT 255 stanotte |\n| watchdog.py | ✅ attivo | ⚠️ loop da AtLogon, LastRun vecchio (corretto, ma non evidente) |\n| mente_watcher | ✅ supervisionato | ✅ confermato |\n| story_agent | ✅ girato | ✅ confermato |\n| night_audit | ✅ girato | ✅ confermato |\n\nDue direzioni in cui mentiva. Non una.\n\n**Prima direzione:** TI_NightPush era uscito con codice 255 nella notte. Il motivo: `update_github_profile.py` chiamava `gh` — la GitHub CLI — con un path che non veniva trovato. Il processo si lanciava, sembrava girare, crashava in silenzio, e Notion non ne sapeva niente.\n\n**Seconda direzione:** watchdog.py mostrava un LastRun che sembrava vecchio, segnale che normalmente indica un processo morto. In realtà è un loop persistente, non un one-shot: gira continuamente dall'avvio di sessione, e il LastRun di Task Scheduler non si aggiorna perché il task non \"ri-parte\", semplicemente non finisce mai. Non era un bug. Era una cattiva lettura della colonna.\n\nMatteo ha fixato entrambi. Girato TI_NightPush a mano: EXIT=0. Aggiornato AUTOMAZ con la distinzione tra \"loop persistente\" e \"one-shot schedulato\". Committato.\n\n*Tonight green.* Non come atto di fede. Come fatto verificato.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — LA SESSIONE CHE CAMBIA MACCHINA",
+      "content": "Sotto al fix c'è qualcosa di più grande.\n\nQuesta è la sessione #31. Domani — o forse già oggi, guardando l'orario — arriva un PC nuovo. Non un aggiornamento. Un cambio fisico di macchina. GENESIS dovrà sapere dove si trovava, da dove ripartire, cosa era in volo.\n\nI commit di chiusura sessione esistono già nella storia del progetto. Sono rituali consolidati. Ma questa volta il commit ha un peso diverso:\n\n```\nchore: snapshot chiusura sessione #31 — salva tutto per ripresa su PC nuovo\nConsolida sessione autonoma #31 (P4a chat RAG + P4b leva locale + P1b cartella\n```\n\nTre punti erano in volo contemporaneamente:\n\n**P4a** — la chat RAG. ChromaDB + Flask + il meccanismo di retrieval che permette a GENESIS di rispondere a domande sulla propria storia. Non documentazione statica: memoria interrogabile.\n\n**P4b** — la leva locale. Ollama con Qwen. Il modello gira in casa, su ferro Matteo, senza API key, senza latenza di rete, senza costi per token. `model_ready: true` nel config. Questo è il momento in cui GENESIS smette di dipendere interamente dal cloud per ragionare.\n\n**P1b** — la cartella clinica. Il sistema che ogni notte scrive un riassunto dello stato del progetto: commit, metriche, anomalie. Memoria automatica che non dimentica anche quando Matteo dimentica.\n\nTutti e tre in uno snapshot unico, coerente, pushato su main prima che la macchina si spenga.\n\nC'è qualcosa di artigianale in questo gesto. Non è diverso da finire un cordone TIG prima di staccare la maschera — lasciare il pezzo in uno stato in cui, se qualcosa va storto, si sa esattamente dove si era.\n\nIl commit di riavvio dice: **\"ancora di ripresa #31→#32 aggiornata (resume da qui in nuova sessione)\"**.\n\nNon è documentazione. È un punto di saldatura.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — P2: LA STORIA DENTRO LA STORIA",
+      "content": "Poi c'è la cosa strana. Quella che non ti aspetti in un log di sistema.\n\nNel milestone attivo della sessione #32, tra le righe di config e le metriche di completamento, compare questo:\n\n> *P2 binario AVVENTURA lanciato — bibbia del mondo + pilota EP_AV_00 \"La Bambina e la Giuntura\", stagione AV*\n\nGENESIS non genera solo documentazione tecnica e audit di stato. Genera anche narrativa.\n\nC'è un agente — story_agent — che gira la notte. Nella sessione #31 ha prodotto episodi. Nella sessione #32, Matteo ha aperto un binario nuovo: una stagione di racconti chiamata **AVVENTURA**. Con una bibbia di mondo. Con un episodio pilota. Con un titolo che ha la consistenza di una cosa vera: *La Bambina e la Giuntura*.\n\nNon è un capriccio. È la logica portata fino in fondo.\n\nSe GENESIS è un sistema cognitivo — se il punto è costruire qualcosa che pensa, che ricorda, che racconta — allora la narrativa non è un ornamento. È dimostrazione di capacità. Un sistema che può generare un episodio pilota coerente con una bibbia di mondo sta facendo esattamente quello che deve fare un agente con memoria: ragionare sul contesto, mantenere coerenza interna, produrre output con struttura.\n\n*La Bambina e la Giuntura.* Non so ancora cosa sia questa storia. Ma il nome esiste in un file committato su main, e questo lo rende reale nel senso che conta.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "V32 è al 65%. GENESIS al 70%.\n\nQuesti numeri non dicono molto se non si sa cosa c'era prima. Dicono di più se si sa che tre settimane fa AUTOMAZ mentiva e nessuno lo sapeva ancora.\n\nL'audit di oggi non ha trovato un disastro. Ha trovato due cose imprecise in un sistema che per il resto girava. EXIT 255 su TI_NightPush. Una colonna che interpretava male un loop persistente. Non drammatico. Ma reale.\n\nLa differenza tra un sistema che funziona e uno che sembra funzionare è esattamente questa granularità. Il verde che vale qualcosa versus il verde che è rimasto verde per inerzia.\n\nMatteo lo sa da quando lavorava sul titanio MotoGP: il cordone che tiene non è quello che sembra tenere. È quello che hai controllato davvero.\n\nLa macchina nuova arriverà con `model_ready: true` e un'ancora di ripresa aggiornata.\n\n*Tonight green.* Verificato.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "La view diceva verde. Task Scheduler diceva EXIT 255.\nQualcuno dei due mentiva — e non era Task Scheduler.\nAudit reale: 2 direzioni di menzogna trovate, fixate, committate.\nLa domanda è: quante altre view hai che non hai mai verificato davvero?\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E12 |\n| **Titolo** | La Macchina che Mente |\n| **Data registrazione** | 2026-06-06 |\n| **Sessione GENESIS** | #31 → #32 |\n| **Progetti coinvolti** | GENESIS, V32 |\n| **Milestone chiave** | Audit AUTOMAZ reale · Leva locale Ollama/Qwen · Snapshot cambio macchina |\n| **Completamento V32** | 65% |\n| **Completamento GENESIS** | 70% |\n| **Co-author AI** | Claude Opus 4.8 |\n| **Tag narrativi** | `audit` `resilienza` `snapshot` `local-ai` `verità-vs-cosmesi` |\n| **Prossima ancora** | Sessione #32 — P1a stato reale live, P2 AVVENTURA, Ollama warm |"
+    }
+  ],
+  "word_count": 1221,
+  "updated_at": "2026-06-07T02:09:40.466454",
+  "built_at": "2026-06-07T11:00:11.268883"
+}

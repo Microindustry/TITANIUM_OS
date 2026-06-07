@@ -48,39 +48,75 @@
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
-    "id": "BUS-6681c938",
-    "stato": "da_fare",
-    "testo": "EP_AV_01 \"l'Automazione\" → poi 02 Misura, 03 Forge, 04 Mappa. DEFINITIVI,",
+    "id": "BUS-1c7342d2",
+    "stato": "fatto",
+    "testo": "UNITO bussola ↔ CRITICHE: il night_audit legge questa bussola, emette",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
-    "id": "BUS-a756fd9f",
-    "stato": "da_fare",
-    "testo": "Critiche = quest · MAPPA = mondo (collegare l'avventura ai dati reali).",
+    "id": "BUS-2cfe884c",
+    "stato": "fatto",
+    "testo": "Skill \"salva\" creata (.claude/skills/salva): chiusura sessione standardizzata",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
-    "id": "BUS-6e792307",
-    "stato": "da_fare",
-    "testo": "UNIRE bussola ↔ CRITICHE: tocco notturno che, ogni tot, legge questo file",
+    "id": "BUS-227d4fde",
+    "stato": "fatto",
+    "testo": "Processo episodi Nina DEFINITO (bibbia sez. 9): la fonte è il canone tecnico",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
-    "id": "BUS-9a7690c1",
-    "stato": "da_fare",
-    "testo": "Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).",
+    "id": "BUS-2b5f2a0b",
+    "stato": "fatto",
+    "testo": "Verificato 07/06: storie 0 orfani (120 in dashboard, 111 .md), GitHub allineato.",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
-    "id": "BUS-927388d0",
+    "id": "BUS-9e344c9b",
     "stato": "da_fare",
-    "testo": "P1c: livelli (lv) che salgono da progressi reali.",
+    "testo": "**#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-3dd314c7",
+    "stato": "da_fare",
+    "testo": "**#2 EP_AV_01 \"l'Automazione\"** — primo episodio Nina dopo il pilota (definitivo).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-390e2c21",
+    "stato": "da_fare",
+    "testo": "**#3 RINOMINI dashboard** [richiesta Matteo 07/06]: MAPPA → **BUSSOLA**,",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-3a0a39a4",
+    "stato": "da_fare",
+    "testo": "#4 Critiche = quest · MAPPA(→Bussola) = mondo (collegare avventura ai dati reali).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-d7e43c28",
+    "stato": "da_fare",
+    "testo": "#5 Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-39297a36",
+    "stato": "da_fare",
+    "testo": "#6 P1c: livelli (lv) che salgono da progressi reali.",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
     "id": "BUS-a22a8c87",
     "stato": "idea",
     "testo": "La bussola può diventare un input del session_orienter / daily_brief, così",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-2abd40a6",
+    "stato": "idea",
+    "testo": "\"Concept brief\" come tabella in dashboard: la coda dei concetti-tecnici pronti",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   }
 ]

@@ -1,0 +1,55 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_event_scheduled.md",
+  "title": "TITANIUM_OS — S2E14",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E14](#titaniumos-s2e14)\n  - [La Macchina che Lavora nel Buio](#la-macchina-che-lavora-nel-buio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  EXIT CODE 255](#atto-i-exit-code-255)\n  - [ATTO II  IL CUORE CHE BATTE DA SOLO](#atto-ii-il-cuore-che-batte-da-solo)\n  - [ATTO III  P2: UNA BAMBINA E UNA GIUNTURA](#atto-iii-p2-una-bambina-e-una-giuntura)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"La Macchina che Lavora nel Buio\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Sono le 3:47 di mattina.\n\nMatteo non c'è. È al lavoro — turno di notte, casco abbassato, arco TIG sulla giuntura di titanio, la luce blu che gli riempie il visore.\n\nIn taverna, il PC fisso gira da solo.\n\nSul monitor — nessuno lo guarda — scorre un log. Righe verdi che si accumulano nel silenzio. Il watchdog batte ogni novanta secondi come un cuore paziente. L'API server risponde sulla porta 5001. La mente_watcher supervisiona.\n\nPoi, alle 3:52, qualcosa si rompe.\n\n`TI_NightPush` esce con codice **255**.\n\nNessun allarme sonoro. Nessuno svegliato. Il log lo scrive e basta, e continua a scrivere altre cose — il watchdog non muore, l'API non muore — ma quella riga rossa è lì, a aspettare che qualcuno torni.\n\nMatteo torna a casa alle 7:20. Si siede. Apre il terminale.\n\n*\"Lavora fino al limite, un punto alla volta, non interrompere.\"*\n\nLo ha scritto lui stesso, stamattina, prima di uscire — istruzioni per il sistema. Istruzioni per sé stesso. Non si capisce bene dove finisce l'uno e inizia l'altro.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — EXIT CODE 255",
+      "content": "C'è una regola non scritta nell'automazione domestica: **non scopri i difetti quando vuoi, li scopri quando fanno male.**\n\n`TI_NightPush` è il task che ogni notte sincronizza lo stato di GENESIS su GitHub. Non è un'operazione critica — non muore nessuno se salta — ma è la firma digitale che Matteo lascia sulla giornata. Il commit notturno che dice *\"sono ancora qui, sto ancora costruendo.\"*\n\nStanotte quella firma non c'era.\n\nIl codice 255 in Unix è il codice del *command not found* — qualcosa chiamato che non esiste dove il sistema lo cercava. Causa: `update_github_profile.py` chiamava `gh` — la GitHub CLI — con un path hardcoded che nella sessione notturna, fuori da qualsiasi shell interattiva, semplicemente non veniva trovato.\n\nUn errore banale. Il tipo di errore che non vedi mai quando testi a mano, perché quando testi a mano sei tu davanti al terminale, con il PATH corretto, con le variabili d'ambiente caricate. Il sistema autonomo vive in un contesto diverso. Più stretto. Meno presupposti.\n\nMatteo lo capisce in sedici minuti.\n\nNon è brillantezza — è il riconoscimento di un pattern che ha già visto. Ogni volta che costruisce qualcosa che deve girare senza di lui, trova questo tipo di problema: **la differenza tra il contesto umano e il contesto macchina.** Il codice che funziona quando sei presente e non funziona quando non ci sei.\n\nLa correzione è chirurgica: `gh` viene cercato dinamicamente, il path risolto a runtime. Girato a mano: `EXIT=0`. Domani notte sarà verde.\n\nMa quello che rimane, dopo il fix, è una domanda più grande.\n\nQuante altre cose stanno girando leggermente storte nel buio, aspettando di essere trovate?\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — IL CUORE CHE BATTE DA SOLO",
+      "content": "Il watchdog è vivo.\n\nQuesta è la notizia importante di questa mattina, più del bug. `watchdog.py` gira in loop persistente da AtLogon — il task di Windows che si avvia quando l'utente fa login, ma prima che qualsiasi interfaccia grafica carichi. Il `watchdog_status.json` è fresco. L'API server sulla porta 5001 risponde. La mente_watcher supervisiona i processi critici.\n\nNel log c'è una riga che potrebbe sembrare un problema: **LastRun vecchio, task in stato \"Running\".**\n\nNon è un problema. È esattamente come deve essere.\n\nUn watchdog in loop non \"finisce\" — rimane aperto, batte, controlla, dorme novanta secondi, batte di nuovo. Il LastRun vecchio significa che non è un task one-shot, significa che è un processo persistente. È il cuore del sistema. Se il LastRun fosse recente, *quello* sarebbe il problema — significherebbe che il loop si sta interrompendo e ripartendo.\n\nMatteo lo sa. Ma lo verifica comunque. Non perché non si fidi — si fida abbastanza da averlo costruito così — ma perché la fiducia nell'automazione si costruisce **verificando che si comporti come previsto**, non assumendo che lo faccia.\n\nQuesta è la differenza che ha imparato saldando titanio per anni: il materiale non mente, ma devi guardarlo. Il cordone perfetto che nasconde una porosità interna. Il sistema che risponde ai ping ma ha un processo zombie in attesa.\n\nGuarda. Verifica. Poi ti fidi.\n\nIl punto 0 di questa sessione — la verifica della resilienza notturna — non era sul piano di lavoro originale. Era la fondazione. Senza sapere che il sistema ha tenuto mentre dormivi, non ha senso costruire sopra.\n\n**Resilienza verificata. Si prosegue.**\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — P2: UNA BAMBINA E UNA GIUNTURA",
+      "content": "Poi c'è l'altra cosa. La cosa che non si spiega facilmente.\n\nDentro GENESIS, accanto agli script, accanto al watchdog, accanto all'API Flask — c'è una cartella che si chiama `P2_adventure`. E dentro quella cartella, questa mattina, è stata scritta una bibbia.\n\nNon una specifica tecnica. Una bibbia del mondo.\n\n`EP_AV_00` — *\"La Bambina e la Giuntura\"* — è il pilota di una stagione narrativa che Matteo ha chiamato AV. Aventura. Il modello locale — Ollama/Qwen, `model_ready=true`, la leva locale accesa — ha generato il documento fondante di un universo. Personaggi. Fisica del mondo. Regole narrative. L'episodio zero di qualcosa.\n\nPerché un artigiano industriale che salda titanio per la MotoGP costruisce anche un sistema generativo per la narrativa?\n\nLa risposta onesta è che non c'è una risposta pulita.\n\nC'è solo il fatto che GENESIS non è stato pensato come un sistema monouso. È stato pensato come **un'architettura cognitiva** — e un'architettura cognitiva, se funziona, può pensare qualsiasi cosa abbastanza strutturata. Protocolli QC per il titanio. Automazioni WhatsApp per il centro estetico di Maria. Bibbie di universi narrativi.\n\nIl `story_state.json` è stato aggiornato. Il commit è verde. La stagione AV esiste ora — o almeno esiste il suo scheletro, il suo respiro iniziale.\n\nQuesto è P1a completato: l'AUTOMAZ è a stato reale e live. P2 è lanciato.\n\nMatteo non ha festeggiato. Non è il tipo. Ha guardato la build verde, ha chiuso il terminale, probabilmente ha fatto caffè.\n\nDomani c'è ancora il 35% di V32 da costruire. La taverna da 12 metri quadri non si è allargata.\n\nMa stanotte, il sistema ha girato da solo. Ha avuto un problema. Il problema è stato trovato. È stato risolto. Domani notte girerà meglio.\n\nQuesto è tutto. È abbastanza.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "C'è qualcosa di strano nel costruire sistemi autonomi.\n\nLi costruisci perché non vuoi essere sempre presente — perché hai un lavoro, hai Maria, hai la taverna con V32 a 65% che aspetta le sue ultime lavorazioni. Non puoi essere davanti al terminale ogni notte.\n\nMa il paradosso è che per renderli veramente autonomi, devi essere ossessivamente presente nella fase di costruzione. Devi trovare ogni `gh` con path hardcoded. Ogni processo che assume un contesto che non avrà. Ogni differenza tra come funziona con te seduto lì e come funziona nel buio delle 3:47.\n\nEXIT 255 stanotte non era un fallimento del sistema. Era il sistema che faceva il suo lavoro — tentare, fallire, loggare, aspettare. Il fallimento sarebbe stato non trovarlo. O trovarlo tra sei mesi quando il danno si è accumulato.\n\nLa riga rossa nel log aspettava che qualcuno tornasse.\n\nQualcuno è tornato.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "> Alle 3:52 di notte, con Matteo al lavoro, il sistema ha smesso di pushare su GitHub — exit code 255, path non trovato, nessuno a guardare. Il watchdog era vivo, l'API rispondeva, ma quella firma digitale sulla giornata non c'era. Diciassette ore dopo, la correzione era committata, la build era verde, e una bambina di nome ancora senza nome esisteva in un file JSON in una cartella chiamata AV. Non so bene come ci siamo arrivati. Ma il sistema ora gira meglio di ieri notte. E domani notte lo verificheremo di nuovo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E14 |\n| **Titolo** | La Macchina che Lavora nel Buio |\n| **Data evento** | 2026-06-05 |\n| **Sessione** | #32 |\n| **Durata stimata** | 28 min |\n| **Progetti attivi** | GENESIS · V32 · P2_Adventure |\n| **Milestone** | P1a ✅ · P2 🚀 launched |\n| **V32 completion** | 65% |\n| **GENESIS completion** | 70% |\n| **Bug risolto** | TI_NightPush EXIT 255 → gh path dinamico |\n| **Sistema verificato** | watchdog · api_server :5001 · mente_watcher |\n| **Modello locale** | Ollama/Qwen · model_ready=true |\n| **Nuovo asset** | EP_AV_00 \"La Bambina e la Giuntura\" · story_state.json |\n| **Target capannone** | 15 luglio 2030 |\n| **Tono** | autonomia · resilienza · silenzio produttivo |\n| **Tag SEO** | watchdog · exit255 · ollama · genesis · automazione · narrativa generativa |"
+    }
+  ],
+  "word_count": 1445,
+  "updated_at": "2026-06-07T02:08:46.535669",
+  "built_at": "2026-06-07T11:00:11.338910"
+}

@@ -9,6 +9,7 @@
     - [On-demand (manuale / API / MCP)](#on-demand-manuale-api-mcp)
   - [Anomalie da chiudere](#anomalie-da-chiudere)
   - [Raccomandazione (fix P1a vero, prossimo step)](#raccomandazione-fix-p1a-vero-prossimo-step)
+  - [AGGIORNAMENTO 06/06 (sessione 32)  il grosso FATTO  scoperta](#aggiornamento-0606-sessione-32-il-grosso-fatto-scoperta)
 
 <!-- /TOC -->
 

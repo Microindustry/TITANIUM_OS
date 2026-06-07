@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-06T03:39:20.629976",
+  "scanned_at": "2026-06-07T03:38:40.802964",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 197,
+  "total_files": 207,
   "files_read": 5,
-  "files_skipped": 192,
+  "files_skipped": 202,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -768,9 +768,30 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\concept_and_prototype_of_a_3_component_extruder_for_fusion_d.md",
+      "type": "md",
+      "size_kb": 1.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\contact_properties_research_for_linear_sliding_guide_rail_wi.md",
       "type": "md",
       "size_kb": 2.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\data_driven_design_of_epoxygranite_machine_foundations_bayes.md",
+      "type": "md",
+      "size_kb": 3.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\design_and_analysis_of_epoxy_granite_vertical_machining_cent.md",
+      "type": "md",
+      "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
@@ -813,6 +834,13 @@
       "path": "KNOWLEDGE\\RESEARCH\\V32\\modeling_of_cnc_machine_tool_line_rail_assembly_accuracy_and.md",
       "type": "md",
       "size_kb": 1.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\neural_emulation_of_gravity_driven_geohazard_runout.md",
+      "type": "md",
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -873,6 +901,13 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\structural_investigation_of_steel_reinforced_epoxy_granite_m.md",
+      "type": "md",
+      "size_kb": 1.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\the_optical_corrector_for_the_dark_energy_spectroscopic_inst.md",
       "type": "md",
       "size_kb": 1.4,
@@ -887,9 +922,23 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\thermal_model_of_an_omnimagnet_for_performance_assessment_an.md",
+      "type": "md",
+      "size_kb": 2.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\variable_stiffness_actuators_review_on_design_and_components.md",
       "type": "md",
       "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_and_tribological_properties_of_epoxy_granite_compo.md",
+      "type": "md",
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
@@ -1562,6 +1611,27 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
       "type": "md",
       "size_kb": 8.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
+      "type": "md",
+      "size_kb": 7.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
+      "type": "md",
+      "size_kb": 5.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_event_scheduled.md",
+      "type": "md",
+      "size_kb": 8.8,
       "readable": false,
       "extracts": {}
     },

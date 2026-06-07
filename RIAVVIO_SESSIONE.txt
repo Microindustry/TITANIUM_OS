@@ -1,50 +1,39 @@
-=== RIAVVIO SESSIONE #32 → #33 — 06/06/2026 ===
-Sessione #32 (Matteo presente, interattiva). Una nuova sessione riprende DA QUI.
+=== RIAVVIO SESSIONE #33 → #34 — 07/06/2026 ===
+Sessione #32-33 (Matteo presente). Una nuova sessione riprende DA QUI.
+PRIMA DI TUTTO: leggi DA_FARE_FATTO.md (la bussola) — è la rotta riordinata.
 
 ━━━ DOVE SIAMO (enuncialo in <10 sec) ━━━
-Sessione #32: chiuso P1a (view AUTOMAZ a stato operativo reale + badge live),
-ACCESA la leva LLM locale (Ollama + Qwen2.5-7B sulla GPU), e LANCIATO il
-binario AVVENTURA (bibbia del mondo + episodio pilota). Tutto committato, build verde.
+Chiuso P1a, accesa la leva locale (Qwen su GPU), lanciato il binario AVVENTURA
+(Nina) con pilota + processo di generazione, e collegata la BUSSOLA (da fare/fatto)
+alla vista CRITICHE. Skill "salva" creata. Tutto committato, build verde.
 
 ━━━ FATTO QUESTA SESSIONE (commit) ━━━
-  ✓ 5f148a7  P1a il grosso: array AUTOMAZ con campo `stato` (persistente/event/
-             scheduled/on-demand/dormiente). SCOPERTA: i ~14 file "(da creare)"
-             ESISTONO su disco (nomi diversi) -> sono "dormienti", non da creare.
-             5 sottostimati event-driven corretti (cablati in watcher.py).
-  ✓ b70b4e2  badge stato LIVE anche nella view principale (/api/watchdog/status
-             + /api/tasks/notturne), refresh 30s.
-  ✓ 6198787  docs: STATE + audit aggiornati. Anomalia TI_NightAudit RISOLTA
-             (gira @03:52 OK, il "mai eseguito" era dato stale).
-  ✓ 8979d14  P2 binario AVVENTURA: BIBBIA_DEL_MONDO.md + pilota EP_AV_00
-             "La Bambina e la Giuntura" (stagione AV). Nina+THEMIS vs l'Entropia.
+  ✓ 5f148a7/b70b4e2  P1a: AUTOMAZ a stato operativo reale + badge live
+  ✓ 6198787          docs P1a + anomalia TI_NightAudit risolta
+  ✓ 8979d14/bc9a86b  P2 AVVENTURA: bibbia + pilota EP_AV_00 (Nina) definitivo
+  ✓ 95eb5fb          sotto-voce "Avventura" nella sidebar sotto STORIE
+  ✓ bb2eec1          bussola DA_FARE_FATTO.md + letta a inizio sessione (CLAUDE.md)
+  ✓ 767a9de          Bussola↔CRITICHE: night_audit→bussola_todos.json→ramo CRITICHE
+  ✓ (questo salva)   skill "salva" + processo episodi Nina (bibbia sez.9) + riordino
 
-━━━ LEVA LOCALE — ACCESA ━━━
-  Ollama installato (serve su :11434) + qwen2.5:7b-instruct-q4_K_M scaricato.
-  /api/llm/ollama/status: available=true, model_ready=true. Test GPU OK.
-  Il toggle "Locale" nella chat ora risponde da Qwen (niente fallback).
-  Avvio Ollama via app: C:\Users\teo\AppData\Local\Programs\Ollama\ollama.exe
+━━━ PROSSIMO LAVORO — dal PRIMO PUNTO della bussola ━━━
+  #1 AUTOMATIZZARE LE STORIE DI NINA (candidato): pipeline 2 stadi — auto estrae
+     "concept brief" dai nuovi episodi tecnici → Claude scrive l'episodio DEFINITIVO
+     (no bozze). Vedi BIBBIA_DEL_MONDO.md sez.9 + DA_FARE_FATTO.md.
+  #2 EP_AV_01 "l'Automazione" (definitivo, 1 concetto).
+  #3 RINOMINI dashboard: MAPPA→BUSSOLA, RETE→RAG. ⚠ COLLISIONE: "Bussola" è già il
+     ramo todo in CRITICHE → il ramo todo diventa "SCALETTA/ROTTA", MAPPA prende
+     "BUSSOLA". CONFERMARE con Matteo prima di toccare.
+  #4 Critiche=quest · MAPPA(→Bussola)=mondo · #5 M3 nel toggle · #6 P1c livelli.
 
-━━━ DECISIONE MODELLI (3 gradini) ━━━
-  Qwen 7B locale (gratis/privato/offline, per dati MIMS sensibili)
-   -> MiniMax M3 cloud (cheap workhorse via OpenRouter, bulk NON sensibile)
-   -> Claude/Opus (decisioni + qualita').
-  REGOLA: MENTE/MIMS sensibile mai su M3 (provider cinese).
-  TODO: cablare M3 nel toggle chat (serve key OpenRouter in _VAULT/KEYS).
-
-━━━ PROSSIMO LAVORO (quando riprendi) ━━━
-  → P2: EP_AV_01..04 (bozza su Qwen/M3 + rifinitura), poi Critiche=quest e
-    MAPPA=mondo. Eventuale filtro/vista dedicata stagione AV.
-  → P1c: livelli (lv) che salgono da progressi reali.
-  → Cablare MiniMax M3 nel toggle (Locale / M3 / Claude).
+━━━ DA SAPERE ━━━
+  • Leva locale ON: Ollama serve su :11434, qwen2.5:7b pronto.
+  • Bussola↔CRITICHE va LIVE al riavvio di api_server (SERVICES/restart_api.ps1)
+    o al prossimo login — endpoint /api/bussola/todos nuovo.
+  • "salva" = skill che fa la chiusura completa (bussola+STATE+RIAVVIO+verifiche+push).
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
-━━━ ULTIMI COMMIT ━━━
-  8979d14 feat(storie): P2 binario AVVENTURA (mondo educativo)
-  6198787 docs(automaz): STATE + audit (file esistono, anomalia risolta)
-  b70b4e2 feat(automaz): badge stato LIVE nella view principale
-  5f148a7 feat(automaz): P1a il grosso — AUTOMAZ con stato operativo reale
-
-Generato: 06/06/2026 — chiusura lavoro sessione #32.
+Generato: 07/06/2026 — chiusura sessione #32-33 ("salva").

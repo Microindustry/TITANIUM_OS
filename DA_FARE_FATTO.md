@@ -36,14 +36,29 @@
       i todo aperti vanno anche a Sonnet come contesto (area ROADMAP). Endpoint
       /api/bussola/todos. Si rigenera ogni notte. [richiesta Matteo 07/06 — FATTO]
       ⚠ va LIVE al riavvio di api_server (restart_api.ps1) o al prossimo login.
+- [✓] Skill "salva" creata (.claude/skills/salva): chiusura sessione standardizzata
+      (bussola+mirror, STATE, RIAVVIO, verifiche storie/build, commit+push).
+- [✓] Processo episodi Nina DEFINITO (bibbia sez. 9): la fonte è il canone tecnico
+      (1 concetto reale → 1 avventura); pipeline 2 stadi: auto estrae "concept brief",
+      Claude scrive l'episodio DEFINITIVO (no bozze).
+- [✓] Verificato 07/06: storie 0 orfani (120 in dashboard, 111 .md), GitHub allineato.
 
-### [ ] DA FARE (prossimo)
-- [ ] EP_AV_01 "l'Automazione" → poi 02 Misura, 03 Forge, 04 Mappa. DEFINITIVI,
-      non bozze. Un concetto per episodio.
-- [ ] Critiche = quest · MAPPA = mondo (collegare l'avventura ai dati reali).
-- [ ] Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).
-- [ ] P1c: livelli (lv) che salgono da progressi reali.
+### [ ] DA FARE (prossimo — in ordine di priorità)
+- [ ] **#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):
+      passo auto che estrae i "concept brief" dai nuovi episodi tecnici e li mette in
+      coda; poi Claude scrive l'episodio definitivo dal brief. Pipeline a 2 stadi
+      (bibbia sez. 9). L'auto PREPARA, la scrittura resta di qualità.
+- [ ] **#2 EP_AV_01 "l'Automazione"** — primo episodio Nina dopo il pilota (definitivo).
+- [ ] **#3 RINOMINI dashboard** [richiesta Matteo 07/06]: MAPPA → **BUSSOLA**,
+      RETE → **RAG**. ⚠ COLLISIONE NOME: oggi "Bussola" è già il ramo todo in CRITICHE.
+      Da risolvere: il ramo todo si chiama "SCALETTA"/"ROTTA" (file resta DA_FARE_FATTO.md)
+      e MAPPA prende "BUSSOLA". → CONFERMA Matteo prima di implementare.
+- [ ] #4 Critiche = quest · MAPPA(→Bussola) = mondo (collegare avventura ai dati reali).
+- [ ] #5 Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).
+- [ ] #6 P1c: livelli (lv) che salgono da progressi reali.
 
 ### [💡] IDEE / NOTE
 - [💡] La bussola può diventare un input del session_orienter / daily_brief, così
       anche le automazioni "sanno dove siamo", non solo io.
+- [💡] "Concept brief" come tabella in dashboard: la coda dei concetti-tecnici pronti
+      a diventare avventure di Nina (visibilità del processo).
