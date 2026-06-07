@@ -65,10 +65,15 @@
 ### [◐] AI NEWS WATCHER + lista creator (dalla chat desktop)
 - [✓] Brief catturato in `BRAIN/AI_NEWS_WATCHER_BRIEF.md` (30+ creator con handle GitHub,
       logica tier 48h/settimanale/sospesi + rotazione, sorgenti, decisioni implementative).
-- [✓] Scaffold stato: `DATA/ai_news_watcher_state.json` (tier + criticità; Graphify = #1 IMPLEMENTATO).
-- [ ] Costruire il watcher 48h: architettura (job su titanium-scanner vs repo separato) +
-      wiring API (YouTube Data v3, GitHub REST, fetch siti). ⚠ richiede chiavi API.
-- [ ] Sorgente Instagram via RSS terze parti — da valutare (no API pubblica).
+- [✓] **WATCHER v1 KEYLESS COSTRUITO+TESTATO**: `NODES/AI_NEWS_WATCHER/watcher.py` + launcher
+      `AUTOMATIONS/core/night_ai_watch.bat`. 4 sorgenti, ZERO chiavi: GitHub (gh: eventi
+      utenti + topic claude-code/ai-agents), siti RSS, YouTube RSS (@handle→channel_id con
+      cookie consenso). Verificato: 67+30 segnali reali (es. "Uber Caps Usage of AI Tools
+      Like Claude Code"). Tier+rotazione con guard anti-falsa-retrocessione. Stato gitignored.
+- [ ] Schedulare `night_ai_watch.bat` ogni 48h (Task Scheduler, richiede UAC) — prossimo step.
+- [ ] Upgrade con 1 chiave Google: YouTube Data v3 (stats) + Gemini (grafo MENTE/ cloud).
+- [ ] Instagram: rimandato (no API) — recuperare servizio terzo. `Anthropic News` non ha RSS.
+- [ ] Opzionale: vista dashboard criticità + far sfociare i segnali utili in STATE/RAG.
 
 ---
 

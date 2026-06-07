@@ -91,10 +91,21 @@ con: `fonte, url, sintesi (1 riga), rilevanza, stato, tier, visto_il`.
 ## 5. STATO IMPLEMENTAZIONE (07/06/2026)
 
 - [✓] Brief catturato nel repo (questo file).
-- [✓] **Graphify implementato** (criticità #1 di questa lista — vedi changelog RAG→Wiki).
-- [✓] Scaffold stato tier: `DATA/ai_news_watcher_state.json`.
-- [ ] Watcher 48h: architettura + wiring API (richiede chiavi YouTube/GitHub) — da costruire.
-- [ ] Sorgente Instagram (RSS terze parti) — da valutare.
+- [✓] **Graphify implementato** (criticità #1 di questa lista — vedi milestone RAG→Wiki).
+- [✓] **WATCHER v1 KEYLESS COSTRUITO E TESTATO**: `NODES/AI_NEWS_WATCHER/watcher.py` +
+      launcher `AUTOMATIONS/core/night_ai_watch.bat`. Logica a tier + rotazione (con guard
+      anti-falsa-retrocessione). 4 sorgenti funzionanti, **zero chiavi**:
+  - **GitHub** (via `gh` CLI): eventi utente (release/repo nuovi/resi pubblici) + topic
+    `claude-code`/`ai-agents`. Verificato: 67 segnali reali in una passata.
+  - **Siti** RSS/Atom (Simon Willison, Latent Space, LangChain blog…).
+  - **YouTube** RSS nativo (@handle→channel_id risolto con UA browser + cookie consenso).
+    Verificato: Fireship/Matt Wolfe 15+15.
+  - Stato runtime in `DATA/ai_news_watcher_state.json` (gitignored: cambia a ogni passata).
+- [ ] **Schedulazione 48h**: registrare `night_ai_watch.bat` come task (richiede UAC) — prossimo step.
+- [ ] **Upgrade con chiave Google** (1 sola): YouTube Data API v3 (statistiche video) +
+      Gemini (grafo semantico MENTE/ via cloud). `Anthropic News` non ha RSS → da agganciare diversamente.
+- [ ] **Instagram**: rimandato (no API pubblica) — recuperare servizio terzo quando serve.
+- [ ] **Vista dashboard** delle criticità (opzionale) + sfociare i segnali utili in `STATE.json`/RAG.
 
 ---
 

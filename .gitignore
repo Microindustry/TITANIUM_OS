@@ -40,3 +40,5 @@ ti_autorun.cmd
 # Graphify (knowledge graph): output rigenerabile, può contenere estratti di MENTE/ — resta locale
 graphify-out/
 **/graphify-out/
+# AI News Watcher: stato runtime (criticità a ogni passata) — roster in codice + BRAIN/brief
+DATA/ai_news_watcher_state.json
