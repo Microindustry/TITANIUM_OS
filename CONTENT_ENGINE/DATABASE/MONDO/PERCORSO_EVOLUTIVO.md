@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [PERCORSO EVOLUTIVO  come imparano i lettori di Nina](#percorso-evolutivo-come-imparano-i-lettori-di-nina)
+  - [1. I 4 PRINCIPI (con la ricerca dietro)](#1-i-4-principi-con-la-ricerca-dietro)
+  - [2. LE PIETRE  il sistema dei rimandi (i numerini)](#2-le-pietre-il-sistema-dei-rimandi-i-numerini)
+  - [3. I 3 STRATI  perché piace al bambino E al papà fabbro](#3-i-3-strati-perché-piace-al-bambino-e-al-papà-fabbro)
+  - [4. LA SPIRALE IN AZIONE  esempio: il RAG (come chiesto da Matteo)](#4-la-spirale-in-azione-esempio-il-rag-come-chiesto-da-matteo)
+  - [5. LE IMMAGINI  pensate già per lanimazione e per restare in testa](#5-le-immagini-pensate-già-per-lanimazione-e-per-restare-in-testa)
+  - [6-bis. LA SPINA DORSALE  la storia dellIA (arco macro)](#6-bis-la-spina-dorsale-la-storia-dellia-arco-macro)
+  - [6-ter. NOTA  Simone Rizzo come riferimento di stile](#6-ter-nota-simone-rizzo-come-riferimento-di-stile)
+  - [7. COME SI USA (operativo)](#7-come-si-usa-operativo)
+
+<!-- /TOC -->
+
 # PERCORSO EVOLUTIVO — come imparano i lettori di Nina
 
 *Versione: 1.0 | 2026-06-07 | Canon del binario AVVENTURA · complementare a BIBBIA_DEL_MONDO.md*

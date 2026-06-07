@@ -33,9 +33,9 @@
       `STATE.json`, changelog). Nessun lavoro umano in sospeso.
 - [✓] **Cartelle (check in toto)**: 20 dir top-level, struttura coerente — AUTOMATIONS 59,
       NODES 67, CONTENT_ENGINE 131, BRAIN 39, DOCS 5, SERVICES 5, CORE 3.
-- [ ] **CLAUDE.md OBSOLETO** ⚠ — header `v4.0.0 · Macchina: Getac (benen)` + sezione
-      FILESYSTEM + `SETUP GETAC` usano `C:\Users\benen\...`, ma la macchina reale è
-      `DESKTOP-IFACE2R` / utente `teo` (migrazione 02/06). Aggiornare benen→teo, Getac→fisso.
+- [✓] **CLAUDE.md AGGIORNATO** (07/06) — v4.1.0: header + FILESYSTEM (struttura PIATTA
+      `C:\Users\teo\TITANIUM_OS`) + tabella + `SETUP MACCHINA` con path REALI verificati
+      (Python AppData, Node/gh Program Files, TI_ROOT/PYTHONPATH/MENTE_DIR). Getac→fisso, benen→teo.
 - [ ] **Path hardcoded `C:\Users\benen`** ⚠ (viola regola "MAI hardcode") in 6 file:
       `AUTOMATIONS/tools/{FIX_ADMIN_TASKS.bat, fix_tasks_admin.ps1, optimize_windows_admin.bat,
       SETUP_ADMIN_COMPLETE.ps1, set_tasks_hl.ps1}` + `migrate_to_new_pc.ps1`. De-hardcodare

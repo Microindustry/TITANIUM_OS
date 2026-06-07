@@ -797,7 +797,7 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_00_la_bambina_e_la_giuntura.md": {
       "title": "EP_AV_00 — La Bambina e la Giuntura",
-      "updated_at": "2026-06-06T23:44:26.258450",
+      "updated_at": "2026-06-07T11:38:43.240634",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_00_la_bambina_e_la_giuntura.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md": {
@@ -817,7 +817,7 @@
     },
     "CONTENT_ENGINE/DATABASE/MONDO/BIBBIA_DEL_MONDO.md": {
       "title": "BIBBIA DEL MONDO — \"Il Sistema\" (binario Avventura)",
-      "updated_at": "2026-06-07T03:00:21.651606",
+      "updated_at": "2026-06-07T16:41:16.692656",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__BIBBIA_DEL_MONDO.md"
     },
     ".claude/skills/salva/SKILL.md": {
@@ -829,8 +829,13 @@
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
       "updated_at": "2026-06-07T16:29:53.750466",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
+      "title": "PERCORSO EVOLUTIVO — come imparano i lettori di Nina",
+      "updated_at": "2026-06-07T16:41:16.770763",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__PERCORSO_EVOLUTIVO.md"
     }
   },
-  "last_built": "2026-06-07T16:29:53.844196",
-  "total": 166
+  "last_built": "2026-06-07T16:41:20.929987",
+  "total": 167
 }

@@ -10,6 +10,7 @@
   - [6. FORMATI (leve predisposte, P2f)](#6-formati-leve-predisposte-p2f)
   - [7. STAGIONE  INTEGRAZIONE TECNICA](#7-stagione-integrazione-tecnica)
   - [8. ROADMAP EPISODI (binario Avventura)](#8-roadmap-episodi-binario-avventura)
+  - [9. COME SI GENERANO GLI EPISODI DI NINA (il processo)](#9-come-si-generano-gli-episodi-di-nina-il-processo)
 
 <!-- /TOC -->
 

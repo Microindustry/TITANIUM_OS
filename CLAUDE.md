@@ -12,21 +12,21 @@
   - [GENESIS STACK  nodi attivi](#genesis-stack-nodi-attivi)
   - [PERSONAGGI AI](#personaggi-ai)
   - [LE 10 REGOLE  TITANIUM_OS OPERATING PRINCIPLES](#le-10-regole-titaniumos-operating-principles)
-  - [SETUP GETAC](#setup-getac)
+  - [SETUP MACCHINA (fissa DESKTOP-IFACE2R)](#setup-macchina-fissa-desktop-iface2r)
   - [REGOLE CODICE (non negoziabili)](#regole-codice-non-negoziabili)
   - [PIPELINE CONOSCENZA (il loop che si autoalimenta)](#pipeline-conoscenza-il-loop-che-si-autoalimenta)
 
 <!-- /TOC -->
 
 # TITANIUM_OS — CLAUDE.md
-*Versione: 4.0.0 | Aggiornato: 2026-05-27 | Macchina: Getac (benen)*
+*Versione: 4.1.0 | Aggiornato: 2026-06-07 | Macchina: fissa DESKTOP-IFACE2R (utente `teo`, 24/7)*
 
 ## CHI È MATTEO
 Matteo Benenati — artigiano industriale + system builder.
 - 15+ anni industria: TIG/MIG titanio (MotoGP @ SCProject), robot (ESSEGI), presse (DATWLER), QC (LU.VE)
 - ADHD probabile: TITANIUM_OS è il suo scaffolding cognitivo — ogni nodo elimina un carico mentale
 - Compagna: Maria → Vita Natura (centro estetico, Boffalora sopra Ticino, MI)
-- OS: Windows 10 Pro | IDE: Cursor + Claude Code | Macchina: Getac
+- OS: Windows 10 Pro | IDE: Cursor + Claude Code | Macchina: fissa DESKTOP-IFACE2R (24/7) — migrazione dal Getac 02/06/2026
 
 ---
 
@@ -53,13 +53,15 @@ mirror su Desktop `da fare e cosa ho fatto.txt` (tenerli allineati).
 
 ### SISTEMA
 ```
-C:\Users\benen\TITANIUM_OS\
-  TITANIUM_OS\      ← repo git — TUTTO IL CODICE QUI
+C:\Users\teo\TITANIUM_OS\      ← repo git (PIATTO) — TUTTO IL CODICE QUI
   _VAULT\KEYS\      ← .env, API keys (MAI git)
   _VAULT\ACCOUNTS\  ← credenziali
   _VAULT\BACKUPS\   ← AES-256 da deep_freeze.py
-  WORKSPACE\        ← progetti locali pre-git
+C:\Users\teo\MICROINDUSTRY\    ← dati lavoro (MENTE = fonte RAG), fuori dal repo
 ```
+*NB: struttura PIATTA sul fisso. Sul vecchio Getac era annidata `…\TITANIUM_OS\TITANIUM_OS\`;*
+*qui il repo è direttamente `C:\Users\teo\TITANIUM_OS`. Nel codice: mai path assoluti,*
+*si deriva da `Path(__file__).parents[N]` / `TI_ROOT` / `MENTE_DIR` (vedi REGOLE CODICE).*
 
 ### MICROINDUSTRY (dati lavoro)
 ```
@@ -79,7 +81,7 @@ FINANCE\            ← fatture, BEP, ROI, fornitori
 ### Tabella rapida
 | Tipo file | Dove |
 |-----------|------|
-| Codice Python/JS/TS | `TITANIUM_OS/TITANIUM_OS/` |
+| Codice Python/JS/TS | `C:\Users\teo\TITANIUM_OS\` (sottocartelle NODES/AUTOMATIONS/…) |
 | API keys / .env | `_VAULT/KEYS/` |
 | Note V32 / decisioni officina | `MENTE/V32/` |
 | Decisioni dalle chat | `MENTE/SESSIONI/YYYY-MM-DD_tema.md` |
@@ -179,17 +181,22 @@ Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
 
 ---
 
-## SETUP GETAC
+## SETUP MACCHINA (fissa DESKTOP-IFACE2R)
 
 ```
-Username:   benen
-Python:     C:\Users\benen\tools\python311\python.exe
-Node/npm:   C:\Users\benen\tools\nodejs\
-GitHub CLI: C:\Users\benen\tools\gh\gh.exe
+Username:   teo
+Python:     C:\Users\teo\AppData\Local\Programs\Python\Python311\python.exe (3.11.9)
+Node/npm:   C:\Program Files\nodejs\ (node v24)
+GitHub CLI: C:\Program Files\GitHub CLI\gh.exe
 Env vars:   _VAULT/KEYS/titanium_os.env
-PYTHONPATH: C:\Users\benen\TITANIUM_OS\TITANIUM_OS
-MENTE_DIR:  C:\Users\benen\MICROINDUSTRY\MENTE
+TI_ROOT:    C:\Users\teo\TITANIUM_OS
+PYTHONPATH: C:\Users\teo\TITANIUM_OS
+MENTE_DIR:  C:\Users\teo\MICROINDUSTRY\MENTE
+GPU:        GTX 1070 8GB (CUDA) · RAM 16GB · IP LAN 192.168.0.112 · Tailscale 100.125.152.124
 ```
+*NB: gli script notturni NON hardcodano questi path — `AUTOMATIONS/core/_ti_paths.bat`*
+*risolve TI_ROOT da `%~dp0`, Python/gh dal PATH (fallback LocalAppData / Program Files).*
+*Restano da de-hardcodare alcuni script legacy in `AUTOMATIONS/tools/` (vedi bussola).*
 
 ---
 
