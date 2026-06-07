@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain, Sparkles,
+  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain, Sparkles, Gauge,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -50,6 +50,7 @@ const NotturneView       = lazy(() => import("./components/AutomationsView").the
 const PitchView          = lazy(() => import("./components/PitchView").then(m => ({ default: m.PitchView })));
 const MetodoView         = lazy(() => import("./components/MetodoView").then(m => ({ default: m.MetodoView })));
 const RagChatView        = lazy(() => import("./components/RagChatView").then(m => ({ default: m.RagChatView })));
+const ControlloView      = lazy(() => import("./components/ControlloView").then(m => ({ default: m.ControlloView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -70,6 +71,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
   { id: "identity", label: "IDENTITY", icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
   // Sistema
+  { id: "controllo",   label: "CONTROLLO",   icon: Gauge,         color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
@@ -460,6 +462,7 @@ function AppInner() {
                 </div>
               </div>
             )}
+            {view === "controllo"   && <ControlloView />}
             {view === "storie"      && <StorieView />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "pitch"       && <PitchView />}

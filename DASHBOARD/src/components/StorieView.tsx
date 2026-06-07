@@ -1,10 +1,11 @@
 // StorieView.tsx — Inventario episodi podcast + LLM training dataset
 // parte di: TITANIUM_OS / DASHBOARD
-// versione: 2.0 / data: 2026-05-28
+// versione: 3.0 / data: 2026-06-07
+// v3.0: stagioni a fisarmonica (divisione chiara), titoli leggibili, flood AUTO chiuso di default
 
 import { useState } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
-import { Mic, Clock, ChevronDown, ChevronUp, ArrowLeft, Layers, BookOpen } from "lucide-react";
+import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2 } from "lucide-react";
 import { useContentFiles } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
 
@@ -14,6 +15,9 @@ const STATUS_CONFIG: Record<EpisodeStatus, { label: string; color: string; dot: 
   source:  { label: "SOURCE",  color: "text-blue-400",    dot: "bg-blue-400" },
   pending: { label: "IN CODA", color: "text-slate-500",   dot: "bg-slate-500" },
 };
+
+// Stagioni "rumorose" chiuse di default (il loro volume annega le altre)
+const COLLAPSED_BY_DEFAULT = new Set(["AUTO"]);
 
 // ── Markdown line renderer ──────────────────────────────────────────────────
 function renderMdLine(line: string, idx: number) {
@@ -44,7 +48,6 @@ function renderMdLine(line: string, idx: number) {
   if (line === "" || line === "---") {
     return <div key={idx} className="my-2" />;
   }
-  // inline bold
   const parts = line.split(/(\*\*[^*]+\*\*)/g);
   return (
     <p key={idx} className="text-xs text-slate-300 leading-relaxed my-0.5">
@@ -57,71 +60,57 @@ function renderMdLine(line: string, idx: number) {
   );
 }
 
-function EpisodeCard({ ep }: { ep: Episode }) {
+function EpisodeCard({ ep, color }: { ep: Episode; color: string }) {
   const [open, setOpen] = useState(false);
-  const stagione = STAGIONI[ep.stagione];
   const status = STATUS_CONFIG[ep.status];
   const lines = ep.content.split("\n");
 
   return (
     <div
-      className="rounded-xl border border-slate-700/60 bg-slate-900/60 backdrop-blur transition-all duration-200"
-      style={{ borderColor: open ? stagione.color + "55" : undefined }}
+      className="rounded-lg border bg-slate-900/50 backdrop-blur transition-all duration-150 hover:bg-slate-900/80"
+      style={{ borderColor: open ? color + "66" : "rgba(51,65,85,0.5)" }}
     >
       {/* Header row */}
       <button
-        className="w-full text-left px-4 py-3 flex items-start gap-3"
+        className="w-full text-left px-3.5 py-3 flex items-center gap-3"
         onClick={() => setOpen(v => !v)}
       >
         {/* ID badge */}
         <span
-          className="shrink-0 text-[10px] font-mono font-bold px-2 py-0.5 rounded mt-0.5"
-          style={{ background: stagione.color + "22", color: stagione.color }}
+          className="shrink-0 text-[10px] font-mono font-bold px-2 py-1 rounded self-start"
+          style={{ background: color + "1f", color }}
         >
           {ep.id}
         </span>
 
-        {/* Title + preview */}
+        {/* Title block — titolo sempre leggibile, niente troncatura aggressiva */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-baseline gap-2 flex-wrap">
-            <span className="text-sm font-semibold text-slate-100">{ep.title}</span>
-            <span className="text-xs text-slate-400 italic truncate max-w-xs">{ep.sottotitolo}</span>
-          </div>
-          {!open && (
-            <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">{ep.preview}</p>
+          <h4 className="text-sm font-semibold text-slate-100 leading-snug">{ep.title}</h4>
+          {ep.sottotitolo && (
+            <p className="text-xs text-slate-400 italic leading-snug mt-0.5 line-clamp-1">{ep.sottotitolo}</p>
           )}
         </div>
 
-        {/* Meta row right */}
-        <div className="shrink-0 flex items-center gap-3 text-xs text-slate-500">
-          <span className="flex items-center gap-1">
-            <Clock size={11} />
-            {ep.durata_min}m
-          </span>
-          <span className={`flex items-center gap-1 font-medium ${status.color}`}>
+        {/* Meta */}
+        <div className="shrink-0 flex items-center gap-3 text-xs text-slate-500 self-start mt-0.5">
+          <span className="hidden sm:flex items-center gap-1"><Clock size={11} />{ep.durata_min}m</span>
+          <span className={`flex items-center gap-1.5 font-medium ${status.color}`}>
             <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
-            {status.label}
+            <span className="hidden sm:inline">{status.label}</span>
           </span>
-          {open ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+          {open ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
         </div>
       </button>
 
       {/* Expanded content */}
       {open && (
         <div className="px-4 pb-4 border-t border-slate-700/40">
-          {/* Tags + date */}
           <div className="flex flex-wrap gap-1 mt-3 mb-4">
             {ep.tags.map(t => (
-              <span key={t} className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">
-                #{t}
-              </span>
+              <span key={t} className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">#{t}</span>
             ))}
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-500 ml-auto">
-              {ep.data_evento}
-            </span>
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-500 ml-auto">{ep.data_evento}</span>
           </div>
-
-          {/* Rendered markdown content */}
           <div className="rounded-lg bg-slate-950/60 px-5 py-4 overflow-hidden">
             {lines.map((line, i) => renderMdLine(line, i))}
           </div>
@@ -136,26 +125,38 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
 
-  const [filterStagione, setFilterStagione] = useState<string | null>(initialStagione);
   const [filterStatus, setFilterStatus] = useState<EpisodeStatus | null>(null);
-  const [expandedSeason, setExpandedSeason] = useState<string | null>(initialStagione);
 
-  const filtered = EPISODES.filter(ep => {
-    if (filterStagione && ep.stagione !== filterStagione) return false;
-    if (filterStatus && ep.status !== filterStatus) return false;
-    return true;
+  // Stagioni aperte: tutte tranne quelle "rumorose"; se si arriva su una stagione, apri solo quella
+  const [openSeasons, setOpenSeasons] = useState<Set<string>>(() => {
+    if (initialStagione) return new Set([initialStagione]);
+    return new Set(Object.keys(STAGIONI).filter(k => !COLLAPSED_BY_DEFAULT.has(k)));
   });
 
-  // Group by stagione
-  const grouped = Object.entries(STAGIONI)
+  const toggleSeason = (key: string) =>
+    setOpenSeasons(prev => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
+    });
+
+  const allKeys = Object.keys(STAGIONI);
+  const allOpen = openSeasons.size >= allKeys.length;
+  const setAll = (open: boolean) => setOpenSeasons(open ? new Set(allKeys) : new Set());
+
+  const statusFiltered = (eps: Episode[]) =>
+    filterStatus ? eps.filter(ep => ep.status === filterStatus) : eps;
+
+  // Sezioni per stagione (ordine canonico), solo quelle con episodi
+  const sections = Object.entries(STAGIONI)
     .sort((a, b) => a[1].order - b[1].order)
     .map(([key, s]) => ({
       key,
       ...s,
-      episodes: filtered.filter(ep => ep.stagione === key),
+      episodes: statusFiltered(EPISODES.filter(ep => ep.stagione === key)),
       total: EPISODES.filter(ep => ep.stagione === key).length,
     }))
-    .filter(g => g.episodes.length > 0);
+    .filter(g => g.total > 0);
 
   const totalMin = EPISODES.reduce((s, e) => s + e.durata_min, 0);
   const readyCount = EPISODES.filter(e => e.status === "ready").length;
@@ -177,7 +178,11 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           <p className="text-xs text-slate-500">
             Podcast · LLM dataset · {readyCount} pronti su {EPISODES.length}
           </p>
-          <button onClick={() => navigateTo("sinapsi", "content")} className="ml-auto text-[9px] font-mono text-indigo-400/60 hover:text-indigo-400 uppercase tracking-wider flex items-center gap-1">
+          <button onClick={() => setAll(!allOpen)} className="ml-auto text-[9px] font-mono text-slate-500/70 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
+            {allOpen ? <Minimize2 size={9} /> : <Maximize2 size={9} />}
+            {allOpen ? "chiudi tutto" : "apri tutto"}
+          </button>
+          <button onClick={() => navigateTo("sinapsi", "content")} className="text-[9px] font-mono text-indigo-400/60 hover:text-indigo-400 uppercase tracking-wider flex items-center gap-1">
             <Layers size={9} /> content engine
           </button>
           <button onClick={() => navigateTo("canvas")} className="text-[9px] font-mono text-slate-500/60 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
@@ -185,42 +190,20 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           </button>
         </div>
 
-        {/* Season filter pills */}
+        {/* Status filter pills */}
         <div className="flex flex-wrap gap-2 mt-4">
-          {Object.entries(STAGIONI).map(([key, s]) => {
-            const count = EPISODES.filter(ep => ep.stagione === key).length;
-            const active = filterStagione === key;
-            return (
-              <button
-                key={key}
-                onClick={() => {
-                  setFilterStagione(active ? null : key);
-                  setExpandedSeason(active ? null : key);
-                }}
-                className="text-xs px-3 py-1 rounded-full border transition-all flex items-center gap-1.5"
-                style={{
-                  borderColor: active ? s.color : "#334155",
-                  background: active ? s.color + "22" : "transparent",
-                  color: active ? s.color : "#64748b",
-                }}
-              >
-                {s.label}
-                <span className="text-[10px] opacity-60">{count}</span>
-              </button>
-            );
-          })}
-          <div className="w-px bg-slate-700 mx-1" />
           {(["ready", "source", "draft"] as EpisodeStatus[]).map(st => {
             const cfg = STATUS_CONFIG[st];
+            const active = filterStatus === st;
             return (
               <button
                 key={st}
-                onClick={() => setFilterStatus(filterStatus === st ? null : st)}
+                onClick={() => setFilterStatus(active ? null : st)}
                 className="text-xs px-3 py-1 rounded-full border transition-all flex items-center gap-1.5"
                 style={{
-                  borderColor: filterStatus === st ? "#475569" : "#1e293b",
-                  background: filterStatus === st ? "#1e293b" : "transparent",
-                  color: filterStatus === st ? "#e2e8f0" : "#475569",
+                  borderColor: active ? "#475569" : "#1e293b",
+                  background: active ? "#1e293b" : "transparent",
+                  color: active ? "#e2e8f0" : "#475569",
                 }}
               >
                 <span className={`w-1.5 h-1.5 rounded-full ${cfg.dot}`} />
@@ -229,63 +212,65 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
             );
           })}
         </div>
-
-        {/* Season description — shown when a season is selected */}
-        {filterStagione && STAGIONI[filterStagione]?.description && (
-          <div
-            className="mt-3 ml-0 px-3 py-2 rounded-lg text-xs text-slate-400 italic flex items-start gap-2"
-            style={{ background: STAGIONI[filterStagione].color + "11", borderLeft: `2px solid ${STAGIONI[filterStagione].color}44` }}
-          >
-            <BookOpen size={11} className="mt-0.5 shrink-0" style={{ color: STAGIONI[filterStagione].color }} />
-            {STAGIONI[filterStagione].description}
-          </div>
-        )}
       </div>
 
-      {/* ── Episode list ── */}
-      <div className="flex-1 overflow-y-auto px-6 py-5 space-y-6">
-        {grouped.map(g => (
-          <div key={g.key}>
-            {/* Stagione header */}
+      {/* ── Stagioni a fisarmonica ── */}
+      <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4 space-y-3">
+        {sections.map(g => {
+          const isOpen = openSeasons.has(g.key);
+          const shown = g.episodes.length;
+          return (
             <div
-              className="flex items-center gap-2 mb-3 cursor-pointer group"
-              onClick={() => setExpandedSeason(expandedSeason === g.key ? null : g.key)}
+              key={g.key}
+              className="rounded-xl border overflow-hidden"
+              style={{ borderColor: isOpen ? g.color + "44" : "rgba(30,41,59,0.8)", background: isOpen ? g.color + "08" : "transparent" }}
             >
-              <span
-                className="text-xs font-bold tracking-widest uppercase"
-                style={{ color: g.color }}
+              {/* Intestazione stagione — LA DIVISIONE, forte e colorata */}
+              <button
+                onClick={() => toggleSeason(g.key)}
+                className="w-full flex items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-white/[0.02]"
               >
-                {g.label}
-              </span>
-              <div className="flex-1 h-px" style={{ background: g.color + "33" }} />
-              <span className="text-xs font-mono text-slate-600">{g.episodes.length} ep</span>
-            </div>
+                <span className="shrink-0" style={{ color: g.color }}>
+                  {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+                </span>
+                <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: g.color }} />
+                <span className="text-sm font-bold tracking-wider uppercase shrink-0" style={{ color: g.color }}>
+                  {g.label}
+                </span>
+                <span className="hidden md:block text-[11px] text-slate-500 italic truncate flex-1 min-w-0">
+                  {g.description}
+                </span>
+                <span
+                  className="ml-auto shrink-0 text-xs font-mono px-2 py-0.5 rounded-full"
+                  style={{ background: g.color + "1a", color: g.color }}
+                >
+                  {filterStatus && shown !== g.total ? `${shown}/${g.total}` : g.total} ep
+                </span>
+              </button>
 
-            {/* Season description inline when not filtered */}
-            {!filterStagione && g.description && (
-              <p className="text-[11px] text-slate-600 italic mb-3 ml-0">
-                {g.description}
-              </p>
-            )}
-
-            {/* Episodes */}
-            <div className="space-y-2">
-              {g.episodes.map(ep => (
-                <EpisodeCard key={ep.id} ep={ep} />
-              ))}
+              {/* Episodi della stagione */}
+              {isOpen && (
+                <div className="px-3 pb-3 pt-1 space-y-2">
+                  {shown === 0 ? (
+                    <p className="text-xs text-slate-600 italic px-2 py-3 text-center">
+                      Nessun episodio con questo filtro.
+                    </p>
+                  ) : (
+                    g.episodes.map(ep => <EpisodeCard key={ep.id} ep={ep} color={g.color} />)
+                  )}
+                </div>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
 
         {/* Prossimi episodi */}
-        <div className="mt-4 rounded-xl border border-dashed border-slate-700/40 px-4 py-5 text-center space-y-1">
-          <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-2">In pipeline</p>
-          <p className="text-xs text-slate-600 font-mono">
-            S2: Asse Y · Primo Pezzo H7 · Mandrino Day
+        <div className="mt-2 rounded-xl border border-dashed border-slate-700/40 px-4 py-5 text-center space-y-1">
+          <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5">
+            <BookOpen size={10} /> In pipeline
           </p>
-          <p className="text-xs text-slate-700 font-mono">
-            ST: Il Brevetto · EP_T08
-          </p>
+          <p className="text-xs text-slate-600 font-mono">S2: Asse Y · Primo Pezzo H7 · Mandrino Day</p>
+          <p className="text-xs text-slate-700 font-mono">ST: Il Brevetto · EP_T08</p>
           <p className="text-[10px] text-slate-700 font-mono mt-2">
             AUTO: generati da STATE.json su ogni milestone verificato
           </p>

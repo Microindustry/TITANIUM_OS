@@ -2405,3 +2405,15 @@
 - `2026-06-07 17:12:52` 🗑️ DELETED — .gitignore
 - `2026-06-07 17:13:14` 🗑️ DELETED — BRAIN\AI_NEWS_WATCHER_BRIEF.md
 - `2026-06-07 17:13:27` 🗑️ DELETED — DA_FARE_FATTO.md
+- `2026-06-07 17:22:55` ✏️ MODIFIED — DASHBOARD\src\App.css
+- `2026-06-07 17:22:55` ✏️ MODIFIED — DASHBOARD\src\index.css
+- `2026-06-07 17:26:02` 🗑️ DELETED — DASHBOARD\src\components\StorieView.tsx
+- `2026-06-07 17:28:44` ✏️ MODIFIED — .claude\skills\salva\SKILL.md
+- `2026-06-07 17:28:44` ✏️ MODIFIED — .claude\skills\dataset\SKILL.md
+- `2026-06-07 17:28:44` ✏️ MODIFIED — .claude\skills\genera-episodio\SKILL.md
+- `2026-06-07 17:28:44` ✏️ MODIFIED — .claude\skills\reel\SKILL.md
+- `2026-06-07 17:28:44` ✏️ MODIFIED — .claude\skills\aggiorna-stato\SKILL.md
+- `2026-06-07 17:28:44` ✏️ MODIFIED — DASHBOARD\.gitignore
+- `2026-06-07 17:30:37` 🗑️ DELETED — DASHBOARD\src\stores\systemStore.ts
+- `2026-06-07 17:30:37` 🗑️ DELETED — DASHBOARD\src\App.tsx
+- `2026-06-07 17:30:43` 🗑️ DELETED — DASHBOARD\src\App.tsx

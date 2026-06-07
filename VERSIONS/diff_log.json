@@ -1,36 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-07T11:00:16.600919",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "snapshot": "BACKUPS\\20260607_110016\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T11:00:16.671052",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
-      "snapshot": "BACKUPS\\20260607_110016\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T11:00:16.740636",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
-      "snapshot": "BACKUPS\\20260607_110016\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T11:00:16.810962",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
-      "snapshot": "BACKUPS\\20260607_110016\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T11:00:16.879994",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
-      "snapshot": "BACKUPS\\20260607_110016\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-07T11:00:16.941080",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
       "snapshot": "BACKUPS\\20260607_110016\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
@@ -2998,6 +2968,36 @@
       "timestamp": "2026-06-07T16:57:48.675893",
       "file": "graphify-out\\manifest.json",
       "snapshot": "BACKUPS\\20260607_165748\\graphify-out\\manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-07T17:28:44.304389",
+      "file": ".claude\\skills\\salva\\SKILL.md",
+      "snapshot": "BACKUPS\\20260607_172844\\.claude\\skills\\salva\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-07T17:28:44.386801",
+      "file": ".claude\\skills\\dataset\\SKILL.md",
+      "snapshot": "BACKUPS\\20260607_172844\\.claude\\skills\\dataset\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-07T17:28:44.449290",
+      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
+      "snapshot": "BACKUPS\\20260607_172844\\.claude\\skills\\genera-episodio\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-07T17:28:44.511776",
+      "file": ".claude\\skills\\reel\\SKILL.md",
+      "snapshot": "BACKUPS\\20260607_172844\\.claude\\skills\\reel\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-07T17:28:44.589884",
+      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
+      "snapshot": "BACKUPS\\20260607_172844\\.claude\\skills\\aggiorna-stato\\SKILL.md",
       "type": "snapshot"
     }
   ]
