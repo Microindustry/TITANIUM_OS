@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [BIBBIA DEL MONDO  Il Sistema (binario Avventura)](#bibbia-del-mondo-il-sistema-binario-avventura)
+  - [0. PERCHÉ ESISTE (e su cosa è fondato)](#0-perché-esiste-e-su-cosa-è-fondato)
+  - [1. IL MONDO  Il Sistema](#1-il-mondo-il-sistema)
+  - [2. IL NEMICO  lEntropia (il cattivo a 360)](#2-il-nemico-lentropia-il-cattivo-a-360)
+  - [3. I PROTAGONISTI (scelti DOPO la ricerca  P2a-bis / P2g)](#3-i-protagonisti-scelti-dopo-la-ricerca-p2a-bis-p2g)
+  - [4. IL CAST DEL MONDO (abitanti  potere  funzione REALE)](#4-il-cast-del-mondo-abitanti-potere-funzione-reale)
+  - [5. REGOLE NARRATIVE (canone)](#5-regole-narrative-canone)
+  - [6. FORMATI (leve predisposte, P2f)](#6-formati-leve-predisposte-p2f)
+  - [7. STAGIONE  INTEGRAZIONE TECNICA](#7-stagione-integrazione-tecnica)
+  - [8. ROADMAP EPISODI (binario Avventura)](#8-roadmap-episodi-binario-avventura)
+
+<!-- /TOC -->
+
 # BIBBIA DEL MONDO — "Il Sistema" (binario Avventura)
 
 *Versione: 1.0 | 2026-06-06 | Canone narrativo del binario AVVENTURA (stagione AV)*
@@ -162,5 +177,7 @@ un agente cambia funzione, cambia il suo potere nella storia. Niente teatro.
 - EP_AV_03 — il Fabbro Forge: dare forma alla materia (dal disegno al pezzo).
 - EP_AV_04 — la Mappa Vivente: come un mondo si tiene in ordine da solo.
 
-*(Gli episodi dopo il pilota possono essere bozzati dal motore economico — Qwen locale
-/ M3 — e rifiniti; il pilota e la bibbia sono fondamenta, fatte bene.)*
+> **Niente bozze** (regola di Matteo, 07/06): ogni episodio si scrive già definitivo —
+> qualità, non brutta copia. Il motore locale/economico (Qwen/M3) serve per ricerca e
+> supporto, non per sfornare draft da rifinire. Un episodio entra in canone solo quando
+> è pronto, e va subito nella sua posizione definitiva (come EP_AV_00).
