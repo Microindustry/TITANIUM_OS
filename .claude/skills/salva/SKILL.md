@@ -50,6 +50,13 @@ cd DASHBOARD && npx tsc -b                              # build deve essere verd
 ```
 - Refresh bussola per la dashboard: `python NODES/AUDIT_AGENT/night_audit.py --bussola-only`
 
+## 4b. Memoria + grafo (durata oltre la sessione)
+- **Memorie**: se sono emersi fatti durevoli (decisioni, preferenze di Matteo, stato
+  progetti non deducibile dal codice), aggiorna `.claude/.../memory/` + 1 riga in `MEMORY.md`.
+  Non duplicare ciò che è già nel repo/git.
+- **Grafo Graphify** (se installato): rinfresca il grafo del codice — veloce, locale, no LLM:
+  `graphify update .` (output `graphify-out/`, gitignored). Tiene il "Wiki" allineato al repo.
+
 ## 5. GitHub — commit + push
 ```bash
 git add -A

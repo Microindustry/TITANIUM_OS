@@ -2417,3 +2417,6 @@
 - `2026-06-07 17:30:37` 🗑️ DELETED — DASHBOARD\src\stores\systemStore.ts
 - `2026-06-07 17:30:37` 🗑️ DELETED — DASHBOARD\src\App.tsx
 - `2026-06-07 17:30:43` 🗑️ DELETED — DASHBOARD\src\App.tsx
+- `2026-06-07 17:32:12` 🗑️ DELETED — .claude\skills\salva\SKILL.md
+- `2026-06-07 17:32:36` 🗑️ DELETED — **CLAUDE.md**
+- `2026-06-07 17:32:56` 🗑️ DELETED — DA_FARE_FATTO.md

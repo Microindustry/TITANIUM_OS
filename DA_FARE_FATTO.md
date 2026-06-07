@@ -27,6 +27,21 @@
 
 ## Sessione #34 · 07/06/2026
 
+### [◐] INTERFACCIA — anti-sovraccarico ("troppi strumenti, non so gestire")
+- [✓] **CONTROLLO** (nuova vista, in cima a Sistema): un posto solo che elenca ogni
+      strumento/nodo in italiano semplice — cosa fa · come si usa · se è acceso. Gruppi:
+      Conoscenza, Occhi sul mondo, Automazioni, Contenuti, Personaggi, Infrastruttura.
+      Righe cliccabili → portano alla vista. `ControlloView.tsx`. (commit 52518f4)
+- [✓] **STORIE v3.0**: stagioni a fisarmonica (la divisione si vede subito), titoli
+      leggibili, flood AUTO (66 ep) chiuso di default, apri/chiudi tutto. Dati intatti.
+- [✓] **Revisione salva/apertura**: skill `salva` + step 4b (memorie durature + refresh
+      grafo Graphify); `CLAUDE.md` apertura → puntatore a CONTROLLO. Build 0 errori TS.
+- [ ] **Nomi sidebar obsoleti**: rinominare AUTOMAZ./RETE/MAPPA in chiaro (⚠ collisione
+      "Bussola": MAPPA→? , RETE→RAG da confermare). CONTROLLO già traduce tutto in italiano.
+- [ ] Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO.
+- [💡] STORIA: il Centro di Controllo + RAG→Wiki sono materiale episodio (sistema che si
+      rende leggibile da solo).
+
 ### [◐] VERIFICA TOTALE (prima delle automazioni)
 - [✓] **Git**: `origin/main` allineato (0↔0). Tutto il lavoro reale committato+pushato.
       Modifiche non committate = SOLO auto-generate (TOC skill, `DATA/views` rigenerati,

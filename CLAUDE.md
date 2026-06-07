@@ -43,6 +43,10 @@ Matteo Benenati — artigiano industriale + system builder.
 
 Non chiedere "da dove partiamo?". Leggi DA_FARE_FATTO.md e RIAVVIO_SESSIONE.txt prima di tutto.
 
+**Vista CONTROLLO (dashboard):** il *Centro di Controllo* è il posto unico che elenca
+ogni strumento/nodo in italiano semplice (cosa fa · come si usa · se è acceso) — è lì che
+Matteo governa il sistema senza tenerlo a mente. Tienilo aggiornato quando aggiungi nodi.
+
 **BUSSOLA (DA_FARE_FATTO.md):** scaletta condivisa io↔Matteo. Regole: non si cancella
 mai (si cambia stato `[✓]/[◐]/[ ]/[✗]/[💡]`), append in cima, canonica nel repo +
 mirror su Desktop `da fare e cosa ho fatto.txt` (tenerli allineati).
