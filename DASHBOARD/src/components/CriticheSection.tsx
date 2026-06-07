@@ -5,6 +5,7 @@ import { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, AlertTriangle, CheckCircle2, Clock, Lock, Activity } from "lucide-react";
 import { CRITICHE_ROOT } from "../data/criticheData";
 import { buildAutoBranch, type AutoFinding } from "../data/criticheAuto";
+import { buildBussolaBranch, type BussolaTodo } from "../data/bussolaTodos";
 import { nodeProgress, getAllLeaves, type SkillNode } from "../data/skillTreeData";
 
 // ── STATUS STYLES — tema rose/red per distinguere dalle altre view ─────────
@@ -147,19 +148,25 @@ export function CriticheSection() {
   // Cartella clinica viva (P1b): findings dal self-audit notturno, innestati
   // come ramo LIVE accanto al canone manuale di criticheData.ts.
   const [autoFindings, setAutoFindings] = useState<AutoFinding[]>([]);
+  const [bussola, setBussola] = useState<BussolaTodo[]>([]);
   useEffect(() => {
     fetch("/api/critiche/auto")
       .then(r => r.json())
       .then(d => { if (d.ok && Array.isArray(d.findings)) setAutoFindings(d.findings); })
       .catch(() => { /* offline: resta solo il canone manuale */ });
+    fetch("/api/bussola/todos")
+      .then(r => r.json())
+      .then(d => { if (d.ok && Array.isArray(d.todos)) setBussola(d.todos); })
+      .catch(() => { /* offline: nessun ramo bussola */ });
   }, []);
 
-  // Root = canone manuale + ramo auto-audit in testa (se presente)
+  // Root = canone manuale + ramo BUSSOLA (la rotta) + ramo auto-audit, in testa
   const root = useMemo<SkillNode>(() => {
-    const branch = buildAutoBranch(autoFindings);
-    if (!branch) return CRITICHE_ROOT;
-    return { ...CRITICHE_ROOT, children: [branch, ...(CRITICHE_ROOT.children ?? [])] };
-  }, [autoFindings]);
+    const branches = [buildBussolaBranch(bussola), buildAutoBranch(autoFindings)]
+      .filter((b): b is SkillNode => b !== null);
+    if (branches.length === 0) return CRITICHE_ROOT;
+    return { ...CRITICHE_ROOT, children: [...branches, ...(CRITICHE_ROOT.children ?? [])] };
+  }, [autoFindings, bussola]);
 
   const [stack, setStack] = useState<SkillNode[]>([CRITICHE_ROOT]);
   // Quando arrivano i findings il root cambia: riallinea solo se sei alla radice

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "BUS-5a705a73",
+    "stato": "fatto",
+    "testo": "P1a AUTOMAZ → view a stato operativo reale (persistente/event/scheduled/",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-16134d3f",
+    "stato": "fatto",
+    "testo": "Leva LLM locale ACCESA: Ollama + Qwen2.5-7B sulla GPU (model_ready=true).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-4a227479",
+    "stato": "fatto",
+    "testo": "P2 binario AVVENTURA: `BIBBIA_DEL_MONDO.md` + pilota `EP_AV_00` \"La Bambina",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-9bf10f38",
+    "stato": "fatto",
+    "testo": "Sotto-voce \"Avventura\" nella sidebar sotto STORIE (rosa). (commit 95eb5fb)",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-59b6e8aa",
+    "stato": "fatto",
+    "testo": "Anomalia TI_NightAudit risolta (gira @03:52 OK).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-a503c00d",
+    "stato": "fatto",
+    "testo": "Notte autonoma: story_agent 3 episodi + night_audit + push su GitHub.",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-fdfccc71",
+    "stato": "fatto",
+    "testo": "Decisione: l'Avventura RESTA sotto-voce (NON diventa front-page). [Matteo]",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-1a7b3dfa",
+    "stato": "fatto",
+    "testo": "Bussola standardizzata: questo file, letto a inizio sessione.",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-6681c938",
+    "stato": "da_fare",
+    "testo": "EP_AV_01 \"l'Automazione\" → poi 02 Misura, 03 Forge, 04 Mappa. DEFINITIVI,",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-a756fd9f",
+    "stato": "da_fare",
+    "testo": "Critiche = quest · MAPPA = mondo (collegare l'avventura ai dati reali).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-6e792307",
+    "stato": "da_fare",
+    "testo": "UNIRE bussola ↔ CRITICHE: tocco notturno che, ogni tot, legge questo file",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-9a7690c1",
+    "stato": "da_fare",
+    "testo": "Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-927388d0",
+    "stato": "da_fare",
+    "testo": "P1c: livelli (lv) che salgono da progressi reali.",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-a22a8c87",
+    "stato": "idea",
+    "testo": "La bussola può diventare un input del session_orienter / daily_brief, così",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  }
+]

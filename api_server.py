@@ -628,6 +628,24 @@ def critiche_auto():
         return jsonify({"ok": False, "error": str(e), "findings": []}), 500
 
 
+@app.get("/api/bussola/todos")
+def bussola_todos():
+    """Bussola viva (DA_FARE_FATTO.md) -> todo strutturati per la vista CRITICHE.
+    Il file e' rigenerato dal night_audit (deterministico): la scaletta da-fare/fatto
+    di Matteo appare in dashboard accanto alle critiche di sistema."""
+    f = ROOT / "DATA" / "audit" / "bussola_todos.json"
+    if not f.exists():
+        return jsonify({"ok": True, "todos": [], "total": 0, "open": 0}), 200
+    try:
+        items = json.loads(f.read_text(encoding="utf-8"))
+        if not isinstance(items, list):
+            items = []
+        open_n = sum(1 for t in items if t.get("stato") in ("da_fare", "in_corso", "non_fatto"))
+        return jsonify({"ok": True, "todos": items, "total": len(items), "open": open_n})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e), "todos": []}), 500
+
+
 @app.get("/api/sanitizer/report")
 def sanitizer_report():
     """Legge l'ultimo report del sanitizer."""

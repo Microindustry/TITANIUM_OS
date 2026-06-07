@@ -31,14 +31,16 @@
 - [✓] Notte autonoma: story_agent 3 episodi + night_audit + push su GitHub.
 - [✓] Decisione: l'Avventura RESTA sotto-voce (NON diventa front-page). [Matteo]
 - [✓] Bussola standardizzata: questo file, letto a inizio sessione.
+- [✓] UNITO bussola ↔ CRITICHE: il night_audit legge questa bussola, emette
+      bussola_todos.json e la mostra come ramo "📋 Bussola" nella vista CRITICHE;
+      i todo aperti vanno anche a Sonnet come contesto (area ROADMAP). Endpoint
+      /api/bussola/todos. Si rigenera ogni notte. [richiesta Matteo 07/06 — FATTO]
+      ⚠ va LIVE al riavvio di api_server (restart_api.ps1) o al prossimo login.
 
 ### [ ] DA FARE (prossimo)
 - [ ] EP_AV_01 "l'Automazione" → poi 02 Misura, 03 Forge, 04 Mappa. DEFINITIVI,
       non bozze. Un concetto per episodio.
 - [ ] Critiche = quest · MAPPA = mondo (collegare l'avventura ai dati reali).
-- [ ] UNIRE bussola ↔ CRITICHE: tocco notturno che, ogni tot, legge questo file
-      e aggiorna/arricchisce la cartella clinica (o ne trova potenzialità).
-      Standardizzare il percorso. [richiesta Matteo 07/06]
 - [ ] Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).
 - [ ] P1c: livelli (lv) che salgono da progressi reali.
 

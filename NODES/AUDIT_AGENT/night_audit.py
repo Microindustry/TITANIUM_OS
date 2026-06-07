@@ -39,6 +39,8 @@ EPISODES  = TI_ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
 AUDIT_DIR = TI_ROOT / "DATA" / "audit"
 CRITICHE  = AUDIT_DIR / "critiche_auto.json"
 HEALTH    = AUDIT_DIR / "system_health.json"
+BUSSOLA       = TI_ROOT / "DA_FARE_FATTO.md"           # la scaletta viva (da fare/fatto)
+BUSSOLA_TODOS = AUDIT_DIR / "bussola_todos.json"       # estratto strutturato per la dashboard (CRITICHE)
 
 MODEL     = "claude-sonnet-4-6"   # economico, NO Opus (regola #4)
 TODAY     = datetime.now().strftime("%Y-%m-%d")
@@ -74,9 +76,57 @@ def _git(*args: str) -> str:
         return ""
 
 
+# ── BUSSOLA (DA_FARE_FATTO.md) — collegamento alla cartella clinica ──────────────
+
+# glifo nel [ ] -> stato della riga
+_BUSSOLA_STATO = {"✓": "fatto", "◐": "in_corso", "": "da_fare", "✗": "non_fatto", "💡": "idea"}
+_BUSSOLA_LINE  = re.compile(r"^\s*[-*]?\s*\[([^\]]*)\]\s*(.+?)\s*$")
+_BUSSOLA_SESS  = re.compile(r"^##\s+(.*sessione.*)$", re.IGNORECASE)
+
+
+def parse_bussola() -> list[dict]:
+    """Estrae le righe-todo da DA_FARE_FATTO.md con il loro stato e la sessione.
+    Deterministico (niente LLM): la bussola e' la fonte, qui la rendiamo struttura."""
+    if not BUSSOLA.exists():
+        return []
+    todos, sessione = [], ""
+    for raw in BUSSOLA.read_text(encoding="utf-8", errors="replace").splitlines():
+        ms = _BUSSOLA_SESS.match(raw)
+        if ms:
+            sessione = ms.group(1).strip()
+            continue
+        m = _BUSSOLA_LINE.match(raw)
+        if not m:
+            continue
+        glyph = m.group(1).strip()
+        testo = m.group(2).strip()
+        # salta le righe di legenda (es. "[✓] fatto · [◐] in corso ...")
+        if not testo or testo.lower().startswith(("fatto", "in corso", "da fare", "non fatto", "idea")):
+            continue
+        stato = _BUSSOLA_STATO.get(glyph, "da_fare")
+        todos.append({
+            "id": "BUS-" + hashlib.sha1(testo.lower().encode("utf-8")).hexdigest()[:8],
+            "stato": stato, "testo": testo, "sessione": sessione,
+        })
+    return todos
+
+
+def write_bussola_todos() -> dict:
+    """Scrive DATA/audit/bussola_todos.json (consumato dalla dashboard CRITICHE)."""
+    AUDIT_DIR.mkdir(parents=True, exist_ok=True)
+    todos = parse_bussola()
+    BUSSOLA_TODOS.write_text(json.dumps(todos, ensure_ascii=False, indent=2), encoding="utf-8")
+    aperti = sum(1 for t in todos if t["stato"] in ("da_fare", "in_corso", "non_fatto"))
+    logger.info("bussola: %d todo (%d aperti) -> bussola_todos.json", len(todos), aperti)
+    return {"total": len(todos), "open": aperti}
+
+
 def collect_signals() -> dict:
     state = _read_json(STATE_F, {})
     since = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+    # bussola: i todo aperti diventano contesto per l'LLM ("trova potenzialita'")
+    bussola_open = [t["testo"] for t in parse_bussola()
+                    if t["stato"] in ("da_fare", "in_corso")][:20]
 
     # commit ultima settimana
     commits = [l for l in _git("log", f"--since={since}", "--format=%h %s").splitlines() if l]
@@ -115,6 +165,7 @@ def collect_signals() -> dict:
         "n_episodes": len(ep_files),
         "rag_chunks": rag_chunks,
         "log_issues": log_issues,
+        "bussola_open": bussola_open,
     }
 
 
@@ -124,8 +175,9 @@ SYSTEM_PROMPT = """Sei l'auditor interno di TITANIUM_OS, il sistema operativo pe
 Il tuo compito: la "cartella clinica" del sistema. Non una to-do generica: diagnostica che accende la lampadina.
 Ricevi i segnali di salute di stanotte. Produci 3-6 CRITICHE concrete, verificabili, azionabili.
 Regole: niente lodi, niente fuffa. Ogni critica = un rischio o un'inefficienza REALE leggibile dai dati. Se i log mostrano guasti, quelli vengono prima.
+Considera anche "bussola_open" (la scaletta da-fare di Matteo): se un todo aperto e' a rischio di essere dimenticato, e' bloccante per altro, o sbloccherebbe valore, emetti UNA critica area "ROADMAP" che lo evidenzi (max 1-2). Non ripetere pari pari il todo: di' perche' conta ORA.
 Rispondi SOLO con un array JSON, niente testo attorno. Schema per elemento:
-{"area":"RAG|RICERCA|NOTTURNE|V32|MIMS|GENESIS|SISTEMA","severity":"alta|media|bassa","finding":"cosa non va, dai dati","azione":"il prossimo passo concreto"}"""
+{"area":"RAG|RICERCA|NOTTURNE|V32|MIMS|GENESIS|SISTEMA|ROADMAP","severity":"alta|media|bassa","finding":"cosa non va, dai dati","azione":"il prossimo passo concreto"}"""
 
 
 def critiche_via_llm(signals: dict) -> list[dict] | None:
@@ -236,6 +288,11 @@ def already_today() -> bool:
 
 def main():
     force = "--force" in sys.argv
+    # la bussola si rinfresca SEMPRE (anche se l'audit LLM e' gia' girato oggi):
+    # e' deterministica e a costo zero, e la dashboard deve vedere i todo aggiornati.
+    write_bussola_todos()
+    if "--bussola-only" in sys.argv:
+        return
     if already_today() and not force:
         logger.info("audit gia' eseguito oggi (%s) - skip (--force per rifare)", TODAY)
         return
