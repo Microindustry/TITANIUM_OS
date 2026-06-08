@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-06-07T03:52:33",
-  "date": "2026-06-07",
-  "git_head": "80af36c",
-  "rag_chunks": 6693,
-  "n_episodes": 112,
-  "n_commits_7d": 121,
+  "last_audit": "2026-06-08T03:52:38",
+  "date": "2026-06-08",
+  "git_head": "959ba65",
+  "rag_chunks": 6729,
+  "n_episodes": 113,
+  "n_commits_7d": 109,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -55,9 +55,9 @@
     }
   ],
   "critiche": {
-    "added": 6,
-    "total": 18,
-    "open": 18
+    "added": 11,
+    "total": 29,
+    "open": 29
   },
   "verdict": "ATTENZIONE"
 }
