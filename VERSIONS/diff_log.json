@@ -1,12 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-07T17:46:28.606420",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-07T17:46:28.676369",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_00_ORIGINE.md",
       "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_00_ORIGINE.md",
@@ -2998,6 +2992,12 @@
       "timestamp": "2026-06-09T06:50:35.758187",
       "file": "DASHBOARD\\src\\data\\episodes.json",
       "snapshot": "BACKUPS\\20260609_065035\\DASHBOARD\\src\\data\\episodes.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:52:44.046249",
+      "file": "RIAVVIO_SESSIONE.txt",
+      "snapshot": "BACKUPS\\20260609_065244\\RIAVVIO_SESSIONE.txt",
       "type": "snapshot"
     }
   ]
