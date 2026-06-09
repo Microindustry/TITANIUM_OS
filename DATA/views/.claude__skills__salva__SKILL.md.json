@@ -12,7 +12,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [SALVA  chiusura sessione TITANIUM_OS](#salva-chiusura-sessione-titaniumos)\n  - [1. Bussola (la rotta condivisa)  DA_FARE_FATTO.md](#1-bussola-la-rotta-condivisa-dafarefattomd)\n  - [2. Stato  BRAIN/STATE.json](#2-stato-brainstatejson)\n  - [3. Ripresa  RIAVVIO_SESSIONE.txt](#3-ripresa-riavviosessionetxt)\n  - [4. Verifiche (niente teatro: numeri reali)](#4-verifiche-niente-teatro-numeri-reali)\n  - [5. GitHub  commit  push](#5-github-commit-push)\n  - [6. Conferma a Matteo](#6-conferma-a-matteo)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [SALVA  chiusura sessione TITANIUM_OS](#salva-chiusura-sessione-titaniumos)\n  - [1. Bussola (la rotta condivisa)  DA_FARE_FATTO.md](#1-bussola-la-rotta-condivisa-dafarefattomd)\n  - [2. Stato  BRAIN/STATE.json](#2-stato-brainstatejson)\n  - [3. Ripresa  RIAVVIO_SESSIONE.txt](#3-ripresa-riavviosessionetxt)\n  - [4. Verifiche (niente teatro: numeri reali)](#4-verifiche-niente-teatro-numeri-reali)\n  - [4b. Memoria  grafo (durata oltre la sessione)](#4b-memoria-grafo-durata-oltre-la-sessione)\n  - [5. GitHub  commit  push](#5-github-commit-push)\n  - [6. Conferma a Matteo](#6-conferma-a-matteo)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -41,6 +41,11 @@
     },
     {
       "level": 2,
+      "title": "4b. Memoria + grafo (durata oltre la sessione)",
+      "content": "- **Memorie**: se sono emersi fatti durevoli (decisioni, preferenze di Matteo, stato\n  progetti non deducibile dal codice), aggiorna `.claude/.../memory/` + 1 riga in `MEMORY.md`.\n  Non duplicare ciò che è già nel repo/git.\n- **Grafo Graphify** (se installato): rinfresca il grafo del codice — veloce, locale, no LLM:\n  `graphify update .` (output `graphify-out/`, gitignored). Tiene il \"Wiki\" allineato al repo."
+    },
+    {
+      "level": 2,
       "title": "5. GitHub — commit + push",
       "content": "```bash\ngit add -A\ngit commit -m \"chore(salva): chiusura sessione — <riassunto>\"\ngit push origin main          # se il push è bloccato: lo farà TI_NightPush\ngit rev-list --count origin/main..main   # deve dire 0 (tutto pushato)\n```"
     },
@@ -50,7 +55,7 @@
       "content": "Una riga: \"Salvato. Prossima sessione si riparte da: <primo punto bussola>.\"\n\n> Regola d'oro: non si perde nulla. Se qualcosa non si è potuto salvare (es. push\n> bloccato), DILLO esplicitamente e indica chi lo recupererà (es. TI_NightPush)."
     }
   ],
-  "word_count": 416,
-  "updated_at": "2026-06-07T16:28:18.239394",
-  "built_at": "2026-06-07T17:28:44.370172"
+  "word_count": 495,
+  "updated_at": "2026-06-08T10:41:15.718518",
+  "built_at": "2026-06-09T06:40:18.571263"
 }

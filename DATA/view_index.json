@@ -17,7 +17,7 @@
     },
     "CLAUDE.md": {
       "title": "TITANIUM_OS — CLAUDE.md",
-      "updated_at": "2026-06-07T11:14:20.352902",
+      "updated_at": "2026-06-07T17:32:36.820730",
       "endpoint": "/api/view/CLAUDE.md"
     },
     ".claude/skills/dataset/SKILL.md": {
@@ -822,12 +822,12 @@
     },
     ".claude/skills/salva/SKILL.md": {
       "title": "SALVA — chiusura sessione TITANIUM_OS",
-      "updated_at": "2026-06-07T16:28:18.239394",
+      "updated_at": "2026-06-08T10:41:15.718518",
       "endpoint": "/api/view/.claude__skills__salva__SKILL.md"
     },
     "DA_FARE_FATTO.md": {
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
-      "updated_at": "2026-06-07T16:29:53.750466",
+      "updated_at": "2026-06-08T03:52:02.142435",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
@@ -844,8 +844,23 @@
       "title": "Graph Report - TITANIUM_OS  (2026-06-07)",
       "updated_at": "2026-06-07T16:57:48.379215",
       "endpoint": "/api/view/graphify-out__GRAPH_REPORT.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md": {
+      "title": "TITANIUM_OS — S2E08",
+      "updated_at": "2026-06-08T02:07:58.651232",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260608_night_audit_cartella_clinica_08_06_.md": {
+      "title": "TITANIUM_OS — Episodio #34",
+      "updated_at": "2026-06-09T02:07:53.650906",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260608_night_audit_cartella_clinica_08_06_.md"
+    },
+    "BRAIN/AI_NEWS_WATCHER_BRIEF.md": {
+      "title": "AI NEWS WATCHER — BRIEF",
+      "updated_at": "2026-06-09T06:41:01.053675",
+      "endpoint": "/api/view/BRAIN__AI_NEWS_WATCHER_BRIEF.md"
     }
   },
-  "last_built": "2026-06-07T17:28:44.636747",
-  "total": 169
+  "last_built": "2026-06-09T06:41:01.069319",
+  "total": 172
 }

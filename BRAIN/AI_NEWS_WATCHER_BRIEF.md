@@ -1,3 +1,22 @@
+<!-- TOC -->
+
+- [AI NEWS WATCHER  BRIEF](#ai-news-watcher-brief)
+  - [1. LISTA CREATOR (30)](#1-lista-creator-30)
+    - [Tecnici / LLM](#tecnici-llm)
+    - [Agenti / Builder  PRIORITÀ ALTA](#agenti-builder-priorità-alta)
+    - [News / Tool](#news-tool)
+    - [Big Picture](#big-picture)
+    - [Italiani  PRIORITÀ ALTA](#italiani-priorità-alta)
+    - [Tool ufficiali](#tool-ufficiali)
+    - [Nuovi da aggiungere](#nuovi-da-aggiungere)
+  - [2. LOGICA DI MONITORAGGIO (a tier)](#2-logica-di-monitoraggio-a-tier)
+  - [3. SORGENTI DA MONITORARE](#3-sorgenti-da-monitorare)
+  - [4. DECISIONI IMPLEMENTATIVE (delegate al terminale)](#4-decisioni-implementative-delegate-al-terminale)
+  - [5. STATO IMPLEMENTAZIONE (07/06/2026)](#5-stato-implementazione-07062026)
+  - [NOTA OPERATIVA](#nota-operativa)
+
+<!-- /TOC -->
+
 # AI NEWS WATCHER — BRIEF
 *Origine: sessione Claude desktop "AI News Watcher + Creator List" (spunto: reel di
 dariofontanel.ai su LLM-Wiki di Karpathy). Catturato nel repo 07/06/2026 (sessione #34).*

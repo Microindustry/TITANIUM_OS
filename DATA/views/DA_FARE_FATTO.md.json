@@ -6,15 +6,35 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)\n  - [Sessione 32-33  06-07/06/2026](#sessione-32-33-06-07062026)\n    - [FATTO](#fatto)\n    - [DA FARE (prossimo  in ordine di priorità)](#da-fare-prossimo-in-ordine-di-priorità)\n    - [IDEE / NOTE](#idee-note)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)\n  - [Sessione 34  07/06/2026](#sessione-34-07062026)\n    - [INTERFACCIA  anti-sovraccarico (troppi strumenti, non so gestire)](#interfaccia-anti-sovraccarico-troppi-strumenti-non-so-gestire)\n    - [VERIFICA TOTALE (prima delle automazioni)](#verifica-totale-prima-delle-automazioni)\n    - [GRAPHIFY  livello WIKI dellarco macro (RAGWiki)](#graphify-livello-wiki-dellarco-macro-ragwiki)\n    - [AI NEWS WATCHER  lista creator (dalla chat desktop)](#ai-news-watcher-lista-creator-dalla-chat-desktop)\n  - [Sessione 32-33  06-07/06/2026](#sessione-32-33-06-07062026)\n    - [FATTO](#fatto)\n    - [DA FARE (prossimo  in ordine di priorità)](#da-fare-prossimo-in-ordine-di-priorità)\n    - [IDEE / NOTE](#idee-note)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
       "content": "*Questa è la scaletta condivisa io↔Matteo: dove siamo, cosa è fatto, cosa resta.*\n*Si legge a INIZIO sessione e si aggiorna STRADA FACENDO (non a fine soltanto).*\n\n**REGOLE DELLA BUSSOLA (standard):**\n- **Non si cancella mai.** Si cambia solo lo stato di una riga. Se una cosa salta,\n  si scrive `[✗] non fatto — motivo`, non si toglie.\n- **Append in cima**: il blocco della sessione più recente va in alto.\n- Stati: `[✓] fatto` · `[◐] in corso` · `[ ] da fare` · `[✗] non fatto` · `[💡] idea`.\n- Canonica = QUESTO file (repo, versionato). Mirror per Matteo = Desktop\n  `da fare e cosa ho fatto.txt`. Li tengo allineati.\n- Il PIANO completo (visione, punti P1-P8) vive nel mirror Desktop + in\n  `PROSSIMA_SESSIONE.md`. Qui sta la scaletta operativa, non tutto il piano."
+    },
+    {
+      "level": 2,
+      "title": "Sessione #32-33 · 06-07/06/2026",
+      "content": ""
+    },
+    {
+      "level": 3,
+      "title": "[✓] FATTO",
+      "content": "- [✓] P1a AUTOMAZ → view a stato operativo reale (persistente/event/scheduled/\n      on-demand/dormiente) + badge live da `/api/watchdog/status` e\n      `/api/tasks/notturne`. Scoperta: i ~14 file \"(da creare)\" esistevano già\n      → \"dormienti\". (commit 5f148a7, b70b4e2)\n- [✓] Leva LLM locale ACCESA: Ollama + Qwen2.5-7B sulla GPU (model_ready=true).\n- [✓] P2 binario AVVENTURA: `BIBBIA_DEL_MONDO.md` + pilota `EP_AV_00` \"La Bambina\n      e la Giuntura\" (Nina + THEMIS vs l'Entropia), in posizione definitiva.\n      (commit 8979d14, bc9a86b)\n- [✓] Sotto-voce \"Avventura\" nella sidebar sotto STORIE (rosa). (commit 95eb5fb)\n- [✓] Anomalia TI_NightAudit risolta (gira @03:52 OK).\n- [✓] Notte autonoma: story_agent 3 episodi + night_audit + push su GitHub.\n- [✓] Decisione: l'Avventura RESTA sotto-voce (NON diventa front-page). [Matteo]\n- [✓] Bussola standardizzata: questo file, letto a inizio sessione.\n- [✓] UNITO bussola ↔ CRITICHE: il night_audit legge questa bussola, emette\n      bussola_todos.json e la mostra come ramo \"📋 Bussola\" nella vista CRITICHE;\n      i todo aperti vanno anche a Sonnet come contesto (area ROADMAP). Endpoint\n      /api/bussola/todos. Si rigenera ogni notte. [richiesta Matteo 07/06 — FATTO]\n      ⚠ va LIVE al riavvio di api_server (restart_api.ps1) o al prossimo login.\n- [✓] Skill \"salva\" creata (.claude/skills/salva): chiusura sessione standardizzata\n      (bussola+mirror, STATE, RIAVVIO, verifiche storie/build, commit+push).\n- [✓] Processo episodi Nina DEFINITO (bibbia sez. 9): la fonte è il canone tecnico\n      (1 concetto reale → 1 avventura); pipeline 2 stadi: auto estrae \"concept brief\",\n      Claude scrive l'episodio DEFINITIVO (no bozze).\n- [✓] Verificato 07/06: storie 0 orfani (120 in dashboard, 111 .md), GitHub allineato.\n- [✓] FIX avvio sessione: CLAUDE_CODE.bat (lanciato dal collegamento Desktop\n      \"Claude Code [TI]\") ora legge DA_FARE_FATTO.md + RIAVVIO_SESSIONE.txt +\n      BRAIN/STATE.json (prima leggeva solo RIAVVIO+STATE, non la bussola).\n- [✓] PERCORSO EVOLUTIVO a canone (PERCORSO_EVOLUTIVO.md): spirale + ripetizione\n      spaziata + dual coding + sistema \"Pietre\" (i numerini di rimando) + 3 strati\n      (bambino/curioso/esperto-papà-fabbro) + standard immagini per animazione.\n      Pilota EP_AV_00 marcato con Pietre ⟡1 Grande Loop, ⟡2 Entropia.\n- [✓] ARCO MACRO = \"la storia dell'IA\": spina dorsale Loop→Automazione→LLM→RAG→Wiki→\n      Agenti→Orchestrazione (stile Simone Rizzo), ogni tappa ancorata a un pezzo REALE\n      del progetto OS. VISIONE a canone (bibbia): libro di storia dell'IA per il bambino\n      del 2024, sul progetto reale, dà valore a chi lo usa, predisposto ai ricavi (spenti)."
+    },
+    {
+      "level": 3,
+      "title": "[ ] DA FARE (prossimo — in ordine di priorità)",
+      "content": "- [ ] **#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):\n      passo auto che estrae i \"concept brief\" dai nuovi episodi tecnici e li mette in\n      coda; poi Claude scrive l'episodio definitivo dal brief. Pipeline a 2 stadi\n      (bibbia sez. 9). L'auto PREPARA, la scrittura resta di qualità.\n- [ ] **#2 EP_AV_01 \"l'Automazione\"** — tappa 2 dell'arco (poi LLM→RAG→Wiki→Agenti).\n      Deve seguire PERCORSO_EVOLUTIVO.md: Pietre nuove/richiamate + 3 strati + key-image.\n- [ ] **#2b indice PIETRE.md** (mappa concetto→episodio→richiami) + descrizione key-image\n      di ogni Pietra (anche solo a parole finché l'animazione è spenta).\n- [ ] **#3 RINOMINI dashboard** [richiesta Matteo 07/06]: MAPPA → **BUSSOLA**,\n      RETE → **RAG**. ⚠ COLLISIONE NOME: oggi \"Bussola\" è già il ramo todo in CRITICHE.\n      Da risolvere: il ramo todo si chiama \"SCALETTA\"/\"ROTTA\" (file resta DA_FARE_FATTO.md)\n      e MAPPA prende \"BUSSOLA\". → CONFERMA Matteo prima di implementare.\n- [ ] #4 Critiche = quest · MAPPA(→Bussola) = mondo (collegare avventura ai dati reali).\n- [ ] #5 Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).\n- [ ] #6 P1c: livelli (lv) che salgono da progressi reali."
+    },
+    {
+      "level": 3,
+      "title": "[💡] IDEE / NOTE",
+      "content": "- [💡] La bussola può diventare un input del session_orienter / daily_brief, così\n      anche le automazioni \"sanno dove siamo\", non solo io.\n- [💡] \"Concept brief\" come tabella in dashboard: la coda dei concetti-tecnici pronti\n      a diventare avventure di Nina (visibilità del processo)."
     }
   ],
-  "word_count": 768,
-  "updated_at": "2026-06-07T16:29:53.750466",
-  "built_at": "2026-06-07T16:29:53.750465"
+  "word_count": 1597,
+  "updated_at": "2026-06-08T03:52:02.142435",
+  "built_at": "2026-06-09T06:41:00.710006"
 }

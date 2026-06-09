@@ -1,5 +1,209 @@
 [
   {
+    "id": "BUS-0e89c6ff",
+    "stato": "da_fare",
+    "testo": "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-c80fad5a",
+    "stato": "da_fare",
+    "testo": "(#sessione-34-07062026)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-a602b628",
+    "stato": "da_fare",
+    "testo": "(#interfaccia-anti-sovraccarico-troppi-strumenti-non-so-gestire)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-fd2f42be",
+    "stato": "da_fare",
+    "testo": "(#verifica-totale-prima-delle-automazioni)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-e892990b",
+    "stato": "da_fare",
+    "testo": "(#graphify-livello-wiki-dellarco-macro-ragwiki)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-e8af2ba7",
+    "stato": "da_fare",
+    "testo": "(#ai-news-watcher-lista-creator-dalla-chat-desktop)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-f8107ec9",
+    "stato": "da_fare",
+    "testo": "(#sessione-32-33-06-07062026)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-bf2d5bbc",
+    "stato": "da_fare",
+    "testo": "(#fatto)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-85e6fcb9",
+    "stato": "da_fare",
+    "testo": "(#da-fare-prossimo-in-ordine-di-priorità)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-b9ebd1dd",
+    "stato": "da_fare",
+    "testo": "(#idee-note)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-f6f18985",
+    "stato": "fatto",
+    "testo": "**CONTROLLO** (nuova vista, in cima a Sistema): un posto solo che elenca ogni",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-a57234d3",
+    "stato": "fatto",
+    "testo": "**STORIE v3.0**: stagioni a fisarmonica (la divisione si vede subito), titoli",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-29b0b556",
+    "stato": "fatto",
+    "testo": "**Revisione salva/apertura**: skill `salva` + step 4b (memorie durature + refresh",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-431aa77c",
+    "stato": "fatto",
+    "testo": "**RETE riparata + integrata Graphify** (la tua idea del RAG-Wiki/grafo): era rotta",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-b838eabb",
+    "stato": "da_fare",
+    "testo": "**MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-4f5d929a",
+    "stato": "da_fare",
+    "testo": "**Nomi sidebar obsoleti**: AUTOMAZ./MAPPA in chiaro (⚠ collisione \"Bussola\": da",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-e17b8719",
+    "stato": "da_fare",
+    "testo": "Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO/RETE.",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-b46b6025",
+    "stato": "idea",
+    "testo": "STORIA: il Centro di Controllo + RAG→Wiki sono materiale episodio (sistema che si",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-e6d82b53",
+    "stato": "fatto",
+    "testo": "**Git**: `origin/main` allineato (0↔0). Tutto il lavoro reale committato+pushato.",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-5859ae48",
+    "stato": "fatto",
+    "testo": "**Cartelle (check in toto)**: 20 dir top-level, struttura coerente — AUTOMATIONS 59,",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-51a62315",
+    "stato": "fatto",
+    "testo": "**CLAUDE.md AGGIORNATO** (07/06) — v4.1.0: header + FILESYSTEM (struttura PIATTA",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-c8556c35",
+    "stato": "da_fare",
+    "testo": "**Path hardcoded `C:\\Users\\benen`** ⚠ (viola regola \"MAI hardcode\") in 6 file:",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-c32976c1",
+    "stato": "fatto",
+    "testo": "**GRAPHIFY IN PRODUZIONE** (07/06). Installato isolato (uv tool, MIT, gratis) +",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-3fcdc3fc",
+    "stato": "fatto",
+    "testo": "PoC: code-graph perfetto/istantaneo. Doc-graph via qwen-7B locale = scarso",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-8c884509",
+    "stato": "fatto",
+    "testo": "DECISO: estrattore MENTE = **ibrido per sensibilità** (cloud per doc NON",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-37e51309",
+    "stato": "da_fare",
+    "testo": "Prossimo Graphify: (a) grafo semantico di BRAIN/ via skill in-sessione (modello",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-9fed0a44",
+    "stato": "idea",
+    "testo": "STORIA: `RAG→Wiki` è uno stadio dell'arco macro Nina → candidato episodio",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-d8a1f79c",
+    "stato": "da_fare",
+    "testo": "Fari di ricerca (NON ora): Anthropic \"When AI builds itself\" (RSI = regola #5",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-67a56c61",
+    "stato": "fatto",
+    "testo": "Brief catturato in `BRAIN/AI_NEWS_WATCHER_BRIEF.md` (30+ creator con handle GitHub,",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-c6a3cbcf",
+    "stato": "fatto",
+    "testo": "**WATCHER v1 KEYLESS COSTRUITO+TESTATO**: `NODES/AI_NEWS_WATCHER/watcher.py` + launcher",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-1ff1b149",
+    "stato": "da_fare",
+    "testo": "Schedulare `night_ai_watch.bat` ogni 48h (Task Scheduler, richiede UAC) — prossimo step.",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-71cef96e",
+    "stato": "da_fare",
+    "testo": "Upgrade con 1 chiave Google: YouTube Data v3 (stats) + Gemini (grafo MENTE/ cloud).",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-9fd83299",
+    "stato": "da_fare",
+    "testo": "Instagram: rimandato (no API) — recuperare servizio terzo. `Anthropic News` non ha RSS.",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-0d86bef1",
+    "stato": "da_fare",
+    "testo": "Opzionale: vista dashboard criticità + far sfociare i segnali utili in STATE/RAG.",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
     "id": "BUS-5a705a73",
     "stato": "fatto",
     "testo": "P1a AUTOMAZ → view a stato operativo reale (persistente/event/scheduled/",
@@ -69,6 +273,12 @@
     "id": "BUS-2b5f2a0b",
     "stato": "fatto",
     "testo": "Verificato 07/06: storie 0 orfani (120 in dashboard, 111 .md), GitHub allineato.",
+    "sessione": "Sessione #32-33 · 06-07/06/2026"
+  },
+  {
+    "id": "BUS-cfab9174",
+    "stato": "fatto",
+    "testo": "FIX avvio sessione: CLAUDE_CODE.bat (lanciato dal collegamento Desktop",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {

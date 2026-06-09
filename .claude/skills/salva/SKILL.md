@@ -12,6 +12,7 @@ disable-model-invocation: false
   - [2. Stato  BRAIN/STATE.json](#2-stato-brainstatejson)
   - [3. Ripresa  RIAVVIO_SESSIONE.txt](#3-ripresa-riavviosessionetxt)
   - [4. Verifiche (niente teatro: numeri reali)](#4-verifiche-niente-teatro-numeri-reali)
+  - [4b. Memoria  grafo (durata oltre la sessione)](#4b-memoria-grafo-durata-oltre-la-sessione)
   - [5. GitHub  commit  push](#5-github-commit-push)
   - [6. Conferma a Matteo](#6-conferma-a-matteo)
 

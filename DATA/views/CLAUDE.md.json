@@ -6,17 +6,17 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  CLAUDE.md](#titaniumos-claudemd)\n  - [CHI È MATTEO](#chi-è-matteo)\n  - [INIZIO SESSIONE (protocollo fisso)](#inizio-sessione-protocollo-fisso)\n  - [FILESYSTEM  dove va ogni file (non inventare)](#filesystem-dove-va-ogni-file-non-inventare)\n    - [SISTEMA](#sistema)\n    - [MICROINDUSTRY (dati lavoro)](#microindustry-dati-lavoro)\n    - [Tabella rapida](#tabella-rapida)\n  - [DATI MASTER (verificati fisicamente  non inventare)](#dati-master-verificati-fisicamente-non-inventare)\n  - [MILESTONE ATTUALE](#milestone-attuale)\n  - [GENESIS STACK  nodi attivi](#genesis-stack-nodi-attivi)\n  - [PERSONAGGI AI](#personaggi-ai)\n  - [LE 10 REGOLE  TITANIUM_OS OPERATING PRINCIPLES](#le-10-regole-titaniumos-operating-principles)\n  - [SETUP GETAC](#setup-getac)\n  - [REGOLE CODICE (non negoziabili)](#regole-codice-non-negoziabili)\n  - [PIPELINE CONOSCENZA (il loop che si autoalimenta)](#pipeline-conoscenza-il-loop-che-si-autoalimenta)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  CLAUDE.md](#titaniumos-claudemd)\n  - [CHI È MATTEO](#chi-è-matteo)\n  - [INIZIO SESSIONE (protocollo fisso)](#inizio-sessione-protocollo-fisso)\n  - [FILESYSTEM  dove va ogni file (non inventare)](#filesystem-dove-va-ogni-file-non-inventare)\n    - [SISTEMA](#sistema)\n    - [MICROINDUSTRY (dati lavoro)](#microindustry-dati-lavoro)\n    - [Tabella rapida](#tabella-rapida)\n  - [DATI MASTER (verificati fisicamente  non inventare)](#dati-master-verificati-fisicamente-non-inventare)\n  - [MILESTONE ATTUALE](#milestone-attuale)\n  - [GENESIS STACK  nodi attivi](#genesis-stack-nodi-attivi)\n  - [PERSONAGGI AI](#personaggi-ai)\n  - [LE 10 REGOLE  TITANIUM_OS OPERATING PRINCIPLES](#le-10-regole-titaniumos-operating-principles)\n  - [SETUP MACCHINA (fissa DESKTOP-IFACE2R)](#setup-macchina-fissa-desktop-iface2r)\n  - [REGOLE CODICE (non negoziabili)](#regole-codice-non-negoziabili)\n  - [PIPELINE CONOSCENZA (il loop che si autoalimenta)](#pipeline-conoscenza-il-loop-che-si-autoalimenta)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
       "title": "TITANIUM_OS — CLAUDE.md",
-      "content": "*Versione: 4.0.0 | Aggiornato: 2026-05-27 | Macchina: Getac (benen)*"
+      "content": "*Versione: 4.1.0 | Aggiornato: 2026-06-07 | Macchina: fissa DESKTOP-IFACE2R (utente `teo`, 24/7)*"
     },
     {
       "level": 2,
       "title": "CHI È MATTEO",
-      "content": "Matteo Benenati — artigiano industriale + system builder.\n- 15+ anni industria: TIG/MIG titanio (MotoGP @ SCProject), robot (ESSEGI), presse (DATWLER), QC (LU.VE)\n- ADHD probabile: TITANIUM_OS è il suo scaffolding cognitivo — ogni nodo elimina un carico mentale\n- Compagna: Maria → Vita Natura (centro estetico, Boffalora sopra Ticino, MI)\n- OS: Windows 10 Pro | IDE: Cursor + Claude Code | Macchina: Getac"
+      "content": "Matteo Benenati — artigiano industriale + system builder.\n- 15+ anni industria: TIG/MIG titanio (MotoGP @ SCProject), robot (ESSEGI), presse (DATWLER), QC (LU.VE)\n- ADHD probabile: TITANIUM_OS è il suo scaffolding cognitivo — ogni nodo elimina un carico mentale\n- Compagna: Maria → Vita Natura (centro estetico, Boffalora sopra Ticino, MI)\n- OS: Windows 10 Pro | IDE: Cursor + Claude Code | Macchina: fissa DESKTOP-IFACE2R (24/7) — migrazione dal Getac 02/06/2026"
     },
     {
       "level": 2,
@@ -26,7 +26,7 @@
     {
       "level": 3,
       "title": "SISTEMA",
-      "content": "```\nC:\\Users\\benen\\TITANIUM_OS\\\n  TITANIUM_OS\\      ← repo git — TUTTO IL CODICE QUI\n  _VAULT\\KEYS\\      ← .env, API keys (MAI git)\n  _VAULT\\ACCOUNTS\\  ← credenziali\n  _VAULT\\BACKUPS\\   ← AES-256 da deep_freeze.py\n  WORKSPACE\\        ← progetti locali pre-git\n```"
+      "content": "```\nC:\\Users\\teo\\TITANIUM_OS\\      ← repo git (PIATTO) — TUTTO IL CODICE QUI\n  _VAULT\\KEYS\\      ← .env, API keys (MAI git)\n  _VAULT\\ACCOUNTS\\  ← credenziali\n  _VAULT\\BACKUPS\\   ← AES-256 da deep_freeze.py\nC:\\Users\\teo\\MICROINDUSTRY\\    ← dati lavoro (MENTE = fonte RAG), fuori dal repo\n```\n*NB: struttura PIATTA sul fisso. Sul vecchio Getac era annidata `…\\TITANIUM_OS\\TITANIUM_OS\\`;*\n*qui il repo è direttamente `C:\\Users\\teo\\TITANIUM_OS`. Nel codice: mai path assoluti,*\n*si deriva da `Path(__file__).parents[N]` / `TI_ROOT` / `MENTE_DIR` (vedi REGOLE CODICE).*"
     },
     {
       "level": 3,
@@ -36,7 +36,7 @@
     {
       "level": 3,
       "title": "Tabella rapida",
-      "content": "| Tipo file | Dove |\n|-----------|------|\n| Codice Python/JS/TS | `TITANIUM_OS/TITANIUM_OS/` |\n| API keys / .env | `_VAULT/KEYS/` |\n| Note V32 / decisioni officina | `MENTE/V32/` |\n| Decisioni dalle chat | `MENTE/SESSIONI/YYYY-MM-DD_tema.md` |\n| File CAD (STL/STEP/DXF) | `CAD/[progetto]/` |\n| Foto build | `FOTO/V32_BUILD/` |\n| Script episodi podcast | `CONTENT_ENGINE/produzione_contenuti/` |\n| Documenti personali | `PERSONALE/DOCUMENTI/[categoria]/` |\n\n---"
+      "content": "| Tipo file | Dove |\n|-----------|------|\n| Codice Python/JS/TS | `C:\\Users\\teo\\TITANIUM_OS\\` (sottocartelle NODES/AUTOMATIONS/…) |\n| API keys / .env | `_VAULT/KEYS/` |\n| Note V32 / decisioni officina | `MENTE/V32/` |\n| Decisioni dalle chat | `MENTE/SESSIONI/YYYY-MM-DD_tema.md` |\n| File CAD (STL/STEP/DXF) | `CAD/[progetto]/` |\n| Foto build | `FOTO/V32_BUILD/` |\n| Script episodi podcast | `CONTENT_ENGINE/produzione_contenuti/` |\n| Documenti personali | `PERSONALE/DOCUMENTI/[categoria]/` |\n\n---"
     },
     {
       "level": 2,
@@ -65,8 +65,8 @@
     },
     {
       "level": 2,
-      "title": "SETUP GETAC",
-      "content": "```\nUsername:   benen\nPython:     C:\\Users\\benen\\tools\\python311\\python.exe\nNode/npm:   C:\\Users\\benen\\tools\\nodejs\\\nGitHub CLI: C:\\Users\\benen\\tools\\gh\\gh.exe\nEnv vars:   _VAULT/KEYS/titanium_os.env\nPYTHONPATH: C:\\Users\\benen\\TITANIUM_OS\\TITANIUM_OS\nMENTE_DIR:  C:\\Users\\benen\\MICROINDUSTRY\\MENTE\n```\n\n---"
+      "title": "SETUP MACCHINA (fissa DESKTOP-IFACE2R)",
+      "content": "```\nUsername:   teo\nPython:     C:\\Users\\teo\\AppData\\Local\\Programs\\Python\\Python311\\python.exe (3.11.9)\nNode/npm:   C:\\Program Files\\nodejs\\ (node v24)\nGitHub CLI: C:\\Program Files\\GitHub CLI\\gh.exe\nEnv vars:   _VAULT/KEYS/titanium_os.env\nTI_ROOT:    C:\\Users\\teo\\TITANIUM_OS\nPYTHONPATH: C:\\Users\\teo\\TITANIUM_OS\nMENTE_DIR:  C:\\Users\\teo\\MICROINDUSTRY\\MENTE\nGPU:        GTX 1070 8GB (CUDA) · RAM 16GB · IP LAN 192.168.0.112 · Tailscale 100.125.152.124\n```\n*NB: gli script notturni NON hardcodano questi path — `AUTOMATIONS/core/_ti_paths.bat`*\n*risolve TI_ROOT da `%~dp0`, Python/gh dal PATH (fallback LocalAppData / Program Files).*\n*Restano da de-hardcodare alcuni script legacy in `AUTOMATIONS/tools/` (vedi bussola).*\n\n---"
     },
     {
       "level": 2,
@@ -94,7 +94,7 @@
       "content": "```\nOfficina / Chat / Web\n        ↓\nMENTE/SESSIONI/YYYY-MM-DD_tema.md   ← cattura manuale (60 sec)\n        ↓\nrag-rebuild                          ← indicizza in ChromaDB\n        ↓\nClaude conosce quella info nelle sessioni future\n        ↓\nMigliore output → migliore documentazione → RAG più ricco\n```\n\nQuesto è il compounding del sapere. Ogni documento aggiunto vale per sempre."
     }
   ],
-  "word_count": 1133,
-  "updated_at": "2026-06-07T11:14:20.352902",
-  "built_at": "2026-06-07T16:29:53.844196"
+  "word_count": 1315,
+  "updated_at": "2026-06-07T17:32:36.820730",
+  "built_at": "2026-06-09T06:41:00.788111"
 }

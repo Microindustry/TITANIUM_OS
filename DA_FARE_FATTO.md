@@ -1,6 +1,11 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 34  07/06/2026](#sessione-34-07062026)
+    - [INTERFACCIA  anti-sovraccarico (troppi strumenti, non so gestire)](#interfaccia-anti-sovraccarico-troppi-strumenti-non-so-gestire)
+    - [VERIFICA TOTALE (prima delle automazioni)](#verifica-totale-prima-delle-automazioni)
+    - [GRAPHIFY  livello WIKI dellarco macro (RAGWiki)](#graphify-livello-wiki-dellarco-macro-ragwiki)
+    - [AI NEWS WATCHER  lista creator (dalla chat desktop)](#ai-news-watcher-lista-creator-dalla-chat-desktop)
   - [Sessione 32-33  06-07/06/2026](#sessione-32-33-06-07062026)
     - [FATTO](#fatto)
     - [DA FARE (prossimo  in ordine di priorità)](#da-fare-prossimo-in-ordine-di-priorità)
@@ -43,8 +48,13 @@
       endpoint `/api/graph/graphify` (stessa forma di /api/rag/vectors → motore 3D invariato).
       Endpoint RAG blindato (niente più 500 nudo: cache invalidata + messaggio azionabile).
       ⚠ il toggle "Sistema" va LIVE al prossimo restart API (carica l'endpoint nuovo).
-- [ ] **MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina
-      si muove tra le tappe (Loop→…→Agenti). [deciso con Matteo, da costruire]
+- [◐] **MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina
+      si muove tra le tappe (Loop→…→Agenti). [deciso con Matteo]
+  - [✓] **Bozza mappa multi-livello** scritta: `CONTENT_ENGINE/DATABASE/MONDO/MAPPA_AVVENTURA.md`
+        — Mondo → 7 Regioni (l'arco IA) → episodi/semi tecnici → 3 strati + grafo Pietre.
+        Ancorata al canone + materiale reale (ogni regione ha 9-25 episodi-fonte). Pronta
+        ad albero per diventare i dati di una vista MAPPA navigabile.
+  - [ ] Trasformarla in dati per la vista (N-livelli) + scrivere gli episodi mancanti.
 - [ ] **Nomi sidebar obsoleti**: AUTOMAZ./MAPPA in chiaro (⚠ collisione "Bussola": da
       confermare). RETE ora è di fatto il grafo RAG+Wiki → valutare rinomina "GRAFO/WIKI".
 - [ ] Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO/RETE.
