@@ -65,11 +65,12 @@
         scopre l'allucinazione (bugia con la faccia sicura) + il cervello ibrido (Claude/Qwen),
         open loop → RAG. Mini-arco Loop→Automazione→LLM completo. (AV=3, 0 orfani, build verde)
   - [ ] Scrivere gli episodi mancanti (Regioni 4-7: RAG, Wiki, Agenti, Orchestrazione).
-  - [ ] ⚠ **Incoerenza ⟡ da risolvere (con Matteo)**: EP_AV_00 numera l'Entropia come `⟡2`,
-        ma l'arco usa `⟡2`=Automazione. In EP_AV_01 ho citato le Pietre per NOME (no clash).
-        Decidere: l'Entropia è una Pietra a sé (fuori arco) o si rinumera? Non tocco il pilota.
-- [ ] **Nomi sidebar obsoleti**: AUTOMAZ./MAPPA in chiaro (⚠ collisione "Bussola": da
-      confermare). RETE ora è di fatto il grafo RAG+Wiki → valutare rinomina "GRAFO/WIKI".
+  - [✓] **Incoerenza ⟡ RISOLTA** (09/06): convenzione a canone (PERCORSO_EVOLUTIVO §2) —
+        `⟡1`–`⟡7` = le 7 tappe dell'arco; le forze fuori-arco usano una lettera → `⟡E`=l'Entropia.
+        Aggiornati EP_AV_00 (⟡2→⟡E), EP_AV_01 (⟡2 Automazione), EP_AV_02 (⟡3 LLM) + MAPPA.
+- [✓] **Nomi sidebar sistemati** (09/06): `AUTOMAZ.`→`AUTOMAZIONI` · `RETE`→`GRAFO`
+      (ora è il grafo RAG+Wiki; CommandBar allineato, "rete" resta keyword). `MAPPA` tenuto
+      (chiaro, evita la collisione con "Bussola" di CRITICHE).
 - [ ] Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO/RETE.
 - [💡] STORIA: il Centro di Controllo + RAG→Wiki sono materiale episodio (sistema che si
       rende leggibile da solo).

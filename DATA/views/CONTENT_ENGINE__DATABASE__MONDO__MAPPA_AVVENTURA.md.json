@@ -31,12 +31,12 @@
     {
       "level": 3,
       "title": "Regione 2 · L'OFFICINA CHE GIRA SOLA — *l'Automazione* ⟡2",
-      "content": "- **Concetto:** un incantesimo che, una volta detto, si ripete da solo senza di te.\n- **Vero dietro:** watcher + task notturni — il gesto ripetuto diventa codice che gira.\n- **Episodi Nina:** ✍️ `EP_AV_01` l'Automazione *(materiale pronto)*.\n- **Semi tecnici:** `MOM_01` La Prima Automazione · `EP_AUTO_29` Story Agent · \"Il Sistema\n  Respira da Solo\" · \"Il Sistema Che Si Ricorda da Solo\".\n- **Pietre:** fonda ⟡2 · richiama ⟡1 (il Loop diventa automatico)."
+      "content": "- **Concetto:** un incantesimo che, una volta detto, si ripete da solo senza di te.\n- **Vero dietro:** watcher + task notturni — il gesto ripetuto diventa codice che gira.\n- **Episodi Nina:** ✅ `EP_AV_01` \"L'Incantesimo che si Ripete\" *(scritto, definitivo)*.\n- **Semi tecnici:** `MOM_01` La Prima Automazione · `EP_AUTO_29` Story Agent · \"Il Sistema\n  Respira da Solo\" · \"Il Sistema Che Si Ricorda da Solo\".\n- **Pietre:** fonda ⟡2 · richiama ⟡1 (il Loop diventa automatico)."
     },
     {
       "level": 3,
       "title": "Regione 3 · LA MENTE CHE PARLA — *l'LLM* ⟡3",
-      "content": "- **Concetto:** una mente che capisce le parole e risponde — ma da sola si può sbagliare.\n- **Vero dietro:** Claude (in cloud) + Qwen locale sulla GPU; il \"cervello ibrido\".\n- **Episodi Nina:** 💤 `EP_AV_xx` la Mente che Parla.\n- **Semi tecnici:** `EP_S2_01` Il Cervello Ibrido · \"Leva LLM locale accesa (Qwen)\" ·\n  `EP_AUTO_25` Profilo Capabilities.\n- **Pietre:** fonda ⟡3 · richiama ⟡1."
+      "content": "- **Concetto:** una mente che capisce le parole e risponde — ma da sola si può sbagliare.\n- **Vero dietro:** Claude (in cloud) + Qwen locale sulla GPU; il \"cervello ibrido\".\n- **Episodi Nina:** ✅ `EP_AV_02` \"La Mente che Parla\" *(scritto, definitivo)*.\n- **Semi tecnici:** `EP_S2_01` Il Cervello Ibrido · \"Leva LLM locale accesa (Qwen)\" ·\n  `EP_AUTO_25` Profilo Capabilities.\n- **Pietre:** fonda ⟡3 · richiama ⟡1."
     },
     {
       "level": 3,
@@ -74,7 +74,7 @@
       "content": "- Questa bozza è già **strutturata ad albero** (Mondo → 7 Regioni → episodi/semi → strati):\n  pronta a diventare i dati di una vista MAPPA navigabile dell'Avventura (riuso del drill-down N-livelli).\n- **Materiale pronto** per scrivere subito `EP_AV_01` (Automazione, ⟡2) e impostare la Regione 5\n  (Wiki/grafo) — è quella con più semi (25).\n- Da popolare man mano: indice `PIETRE.md` + key-image (descritte, finché l'animazione è spenta)."
     }
   ],
-  "word_count": 1389,
-  "updated_at": "2026-06-09T06:42:13.680649",
-  "built_at": "2026-06-09T06:42:13.680648"
+  "word_count": 1420,
+  "updated_at": "2026-06-09T12:36:17.030310",
+  "built_at": "2026-06-09T12:36:17.080852"
 }

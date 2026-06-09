@@ -8,6 +8,18 @@ status: ready
 durata_min: 6
 tags: avventura, educativo, bambini, nina, themis, automazione, loop, entropia
 ---
+<!-- TOC -->
+
+- [EP_AV_01  LIncantesimo che si Ripete](#epav01-lincantesimo-che-si-ripete)
+    - [Un gesto giusto insegnato a una macchina, che lo rifà da solo  anche mentre dormi](#un-gesto-giusto-insegnato-a-una-macchina-che-lo-rifà-da-solo-anche-mentre-dormi)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL GESTO STANCO](#atto-i-il-gesto-stanco)
+  - [ATTO II  INSEGNARE IL GESTO](#atto-ii-insegnare-il-gesto)
+  - [ATTO III  LESERCITO CHE LAVORA DI NOTTE](#atto-iii-lesercito-che-lavora-di-notte)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 
 # EP_AV_01 — L'Incantesimo che si Ripete
 ### "Un gesto giusto insegnato a una macchina, che lo rifà da solo — anche mentre dormi"
@@ -127,8 +139,8 @@ macchina, o anche solo a qualcun altro. Hai appena reso un gesto più forte di t
 ---
 
 <!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->
-**Pietra nuova:** l'**Automazione** (arco, tappa 2): *un gesto giusto, scritto bene, si ripete da solo.*
-**Pietre richiamate:** il **Grande Loop** `⟡1 → EP_AV_00` (la traccia scritta è ciò che la macchina può leggere) · l'**Entropia** (il Disordine entra dalla "lampada spenta", dal gesto saltato).
+**Pietra nuova:** `⟡2` l'**Automazione** (arco, tappa 2): *un gesto giusto, scritto bene, si ripete da solo.*
+**Pietre richiamate:** il **Grande Loop** `⟡1 → EP_AV_00` (la traccia scritta è ciò che la macchina può leggere) · l'**Entropia** `⟡E` (il Disordine entra dalla "lampada spenta", dal gesto saltato).
 **Key-image:** la traccia (foglietto) che passa dalla mano alla macchina · le lampade che si accendono in fila da sole, di notte.
 **3 strati:** bambino = il timer che accende la luce da solo · curioso = "questo si chiama automazione: insegni il gesto una volta" · esperto/papà = l'automazione toglie il *single-point-of-failure* (non dipendere da una sola mano) — il gesto ripetuto diventa codice (watcher + task notturni del progetto reale).
 **Aggancio reale:** MOM_01 "La Prima Automazione" · Story Agent · i task notturni (`night_*`, l'AI News Watcher) · "Il Sistema Respira da Solo".

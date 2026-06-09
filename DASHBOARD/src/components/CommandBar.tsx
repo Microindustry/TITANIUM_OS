@@ -84,8 +84,8 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
       action: () => { onNavigate("storie"); onClose(); },
     },
     {
-      id: "go-rete", label: "RETE", desc: "Grafo connessioni tra progetti", icon: Globe,
-      color: "text-cyan-400", group: "nav", keywords: ["rete", "grafo", "connessioni", "graph"],
+      id: "go-rete", label: "GRAFO", desc: "Grafo della conoscenza (RAG) e del sistema (Graphify)", icon: Globe,
+      color: "text-cyan-400", group: "nav", keywords: ["grafo", "rete", "wiki", "rag", "graphify", "connessioni", "graph"],
       action: () => { onNavigate("rete"); onClose(); },
     },
 

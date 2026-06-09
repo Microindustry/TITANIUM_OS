@@ -76,10 +76,10 @@ const NAV_ITEMS: NavItem[] = [
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
-  { id: "automazioni", label: "AUTOMAZ.",   icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
+  { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
   { id: "mappa",       label: "MAPPA",      icon: GitBranch,     color: "text-emerald-400",group: "system"  },
-  { id: "rete",        label: "RETE",       icon: Globe,         color: "text-cyan-400",   group: "system"  },
+  { id: "rete",        label: "GRAFO",      icon: Globe,         color: "text-cyan-400",   group: "system"  },
   { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
 

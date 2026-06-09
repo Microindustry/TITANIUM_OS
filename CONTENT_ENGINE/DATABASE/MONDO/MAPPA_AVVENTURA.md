@@ -34,7 +34,10 @@
 
 Due terre che sembrano separate ma sono la stessa: **Atomi** (metallo, caldo) e **Bit**
 (codice, freddo), cucite da un ponte. La legge del mondo è il **Grande Loop** ⟡1.
-Il nemico è l'**Entropia** (il Disordine). Si attraversa con **Nina** (non sa) + **THEMIS** (sa).
+Il nemico è l'**Entropia** `⟡E` (il Disordine). Si attraversa con **Nina** (non sa) + **THEMIS** (sa).
+
+> Pietre: `⟡1`–`⟡7` = le 7 tappe dell'arco (sotto). Le forze del mondo fuori-arco usano una
+> lettera: `⟡E` = l'Entropia. *(vedi PERCORSO_EVOLUTIVO.md §2)*
 
 **Luoghi-radice** (sempre presenti, da cui si raggiunge tutto):
 - **La Giuntura** — il ponte Atomi↔Bit, cuore del mondo (dove energia → struttura).

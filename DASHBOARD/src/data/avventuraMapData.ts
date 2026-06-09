@@ -92,10 +92,10 @@ export const REGIONI: Regione[] = [
   {
     n: 5, nome: "La Grande Mappa", tappa: "la Wiki / il grafo", pietra: "⟡5 la Conoscenza-organizzata", colore: "#a78bfa",
     concetto: "Non basta avere tutto: serve come sono legate le cose. Una mappa di fili.",
-    vero: "Il salto RAG→Wiki: il grafo di relazioni (Graphify) e la vista RETE.",
-    pezzoReale: "MENTE/ + grafo (Graphify / RETE)",
+    vero: "Il salto RAG→Wiki: il grafo di relazioni (Graphify) e la vista GRAFO.",
+    pezzoReale: "MENTE/ + grafo (Graphify / vista GRAFO)",
     episodi: [{ id: "EP_AV_04", titolo: "la Grande Mappa", stato: "da-scrivere" }],
-    semi: ["EP_T02 NeuroMap", "EP_T01 La Dashboard", "EP_S2_03 La Tela", "Graphify / RETE-grafo"],
+    semi: ["EP_T02 NeuroMap", "EP_T01 La Dashboard", "EP_S2_03 La Tela", "Graphify / vista GRAFO"],
     pietreRichiamate: ["⟡4 RAG"],
   },
   {

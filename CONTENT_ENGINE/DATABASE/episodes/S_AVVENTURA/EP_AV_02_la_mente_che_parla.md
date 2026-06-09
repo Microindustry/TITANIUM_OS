@@ -8,6 +8,18 @@ status: ready
 durata_min: 7
 tags: avventura, educativo, bambini, nina, themis, llm, modello, allucinazione
 ---
+<!-- TOC -->
+
+- [EP_AV_02  La Mente che Parla](#epav02-la-mente-che-parla)
+    - [Una macchina che capisce le parole  ma che a volte dice una bugia con la faccia sicura](#una-macchina-che-capisce-le-parole-ma-che-a-volte-dice-una-bugia-con-la-faccia-sicura)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LA MENTE NELLA TORRE](#atto-i-la-mente-nella-torre)
+  - [ATTO II  LA BUGIA CON LA FACCIA SICURA](#atto-ii-la-bugia-con-la-faccia-sicura)
+  - [ATTO III  LE DUE MENTI (il cervello ibrido)](#atto-iii-le-due-menti-il-cervello-ibrido)
+  - [CHIUSURA](#chiusura)
+
+<!-- /TOC -->
+
 
 # EP_AV_02 — La Mente che Parla
 ### "Una macchina che capisce le parole — ma che a volte dice una bugia con la faccia sicura"
@@ -133,8 +145,8 @@ cosa più importante: una risposta sicura non è per forza una risposta vera.*
 ---
 
 <!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->
-**Pietra nuova:** l'**LLM / la Mente che Parla** (arco, tappa 3): *capisce e mette in fila le parole indovinando la successiva; può sbagliare con sicurezza (allucinazione).*
-**Pietre richiamate:** l'**Automazione** `→ EP_AV_01` (la macchina che fa ma non capisce → ora una che capisce) · il **Grande Loop** `⟡1` (la Mente ha "imparato" leggendo tanto).
+**Pietra nuova:** `⟡3` l'**LLM / la Mente che Parla** (arco, tappa 3): *capisce e mette in fila le parole indovinando la successiva; può sbagliare con sicurezza (allucinazione).*
+**Pietre richiamate:** l'**Automazione** `⟡2 → EP_AV_01` (la macchina che fa ma non capisce → ora una che capisce) · il **Grande Loop** `⟡1` (la Mente ha "imparato" leggendo tanto).
 **Key-image:** la torre di parole-lucciole · la "bugia con la faccia sicura" (una campana d'argento che si dissolve) · le due Menti (una grande lontana, una piccola in casa).
 **3 strati:** bambino = l'amico che parla bene ma a volte se la inventa · curioso = "questo si chiama LLM, e l'errore sicuro si chiama allucinazione" · esperto/papà = predice il token successivo; il *cervello ibrido* (Claude cloud per potenza + Qwen locale per riservatezza) è il pezzo reale del progetto.
 **Aggancio reale:** EP_S2_01 "Il Cervello Ibrido" · la leva LLM locale (Qwen sulla GPU) + Claude.

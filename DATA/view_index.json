@@ -827,7 +827,7 @@
     },
     "DA_FARE_FATTO.md": {
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
-      "updated_at": "2026-06-08T03:52:02.142435",
+      "updated_at": "2026-06-09T06:50:56.926236",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
@@ -862,10 +862,20 @@
     },
     "CONTENT_ENGINE/DATABASE/MONDO/MAPPA_AVVENTURA.md": {
       "title": "MAPPA DELL'AVVENTURA — bozza multi-livello (il mondo dove Nina si muove)",
-      "updated_at": "2026-06-09T06:42:13.680649",
+      "updated_at": "2026-06-09T12:36:17.030310",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__MAPPA_AVVENTURA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_02_la_mente_che_parla.md": {
+      "title": "La Mente che Parla",
+      "updated_at": "2026-06-09T12:33:01.633704",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_02_la_mente_che_parla.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_01_l_automazione.md": {
+      "title": "L'Incantesimo che si Ripete",
+      "updated_at": "2026-06-09T12:33:01.734540",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_01_l_automazione.md"
     }
   },
-  "last_built": "2026-06-09T06:48:27.365107",
-  "total": 173
+  "last_built": "2026-06-09T12:37:15.395653",
+  "total": 175
 }

@@ -59,6 +59,11 @@ episodio, con il suo esempio semplice. Da lì in poi è un punto d'appoggio.
 - Notazione inline (piccola, non invadente): un concetto che si appoggia a una Pietra
   porta un piccolo rimando, es. il Grande Loop`⟡1`. Il lettore esperto lo ignora; chi
   non ricorda segue il numerino e va a **ripassare** quella Pietra.
+- **Numerazione (canone, 09/06):** `⟡1`…`⟡7` sono le **Pietre dell'arco** = le 7 tappe
+  della storia dell'IA (⟡1 Loop, ⟡2 Automazione, ⟡3 LLM, ⟡4 RAG, ⟡5 Wiki, ⟡6 Agenti,
+  ⟡7 Orchestrazione). I concetti fondanti **fuori dall'arco** (forze del mondo) usano una
+  **lettera**, non un numero: es. `⟡E` = l'Entropia. Così la sequenza dell'arco resta pulita
+  e non collide con le Pietre "di sfondo".
 - **Non** è una nota a piè di pagina: è "il numero della pagina da studiare". Nel libro
   sarà un numerino di pagina; negli episodi è l'**ID dell'episodio** che fonda la Pietra.
 - Ogni episodio dichiara in fondo:

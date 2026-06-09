@@ -136,7 +136,7 @@ Loop.*
 ---
 
 <!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->
-**Pietre nuove:** `⟡1` il Grande Loop (un gesto, tre frutti) · `⟡2` l'Entropia/il Disordine
+**Pietre nuove:** `⟡1` il Grande Loop (un gesto, tre frutti) · `⟡E` l'Entropia/il Disordine *(forza ricorrente, fuori dalla sequenza dell'arco)*
 **Pietre richiamate:** nessuna (è il primo episodio)
 **Key-image:** un anello che gira con tre frutti (il Loop) · ruggine che si sgretola (l'Entropia)
 **3 strati:** bambino = smonta/rimonta la sveglia · curioso = "tenere a bada il disordine" ·
