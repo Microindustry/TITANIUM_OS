@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-fef36bb20e",
+    "date": "2026-06-09",
+    "git": "2290cdc",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Il grafo Graphify ha 5966 nodi sul repo ma il passo successivo (grafo semantico di BRAIN/ via skill) non è ancora schedulato né ha un criterio di completamento misurabile. Graphify è indicato come 'candidato backend vista RETE' ma la vista RETE esiste già con toggle sorgente (commit e6df71b): se il grafo semantico non viene valutato entro 1-2 sessioni, il toggle rimane in uno stato indeterminato e la decisione architetturale RETE=grafo vs RETE=RAG-coseno rimane aperta.",
+    "azione": "Definire in STATE un criterio binario per la valutazione: es. 'Graphify è backend RETE se query su BRAIN/ restituisce risultati più rilevanti di RAG su 3 domande campione'. Eseguire il test nella prossima sessione. Decidere e chiudere il toggle.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-09"
+  },
+  {
+    "id": "AUD-f581176aea",
+    "date": "2026-06-09",
+    "git": "2290cdc",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "4 log su 4 mostrano errori stanotte: story_agent.log e night_push.log hanno crash/eccezioni E errori espliciti. Eppure il commit 2290cdc risulta pushato. O il push è parziale/silenzioso, o la logica di retry maschera i fallimenti restituendo exit code 0. I log di night_research e research_agent mostrano rate-limit + ricerca a vuoto + errore esplicito simultanei: la pipeline non ha backoff né fallback sorgente.",
+    "azione": "Aprire story_agent.log e night_push.log, leggere la traceback completa. Verificare che il commit 2290cdc contenga episodi reali e non un file vuoto/vecchio. Aggiungere exit code non-zero esplicito ai .bat in caso di eccezione, così Task Scheduler registra il fallimento invece di mostrare verde.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-09"
+  },
+  {
+    "id": "AUD-de9dd87629",
+    "date": "2026-06-09",
+    "git": "2290cdc",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Entrambi i log di ricerca (night_research + research_agent) registrano rate-limit, ricerca a vuoto ed errore esplicito nella stessa notte. Il watcher AI News è keyless per scelta (GitHub + RSS + YouTube senza API key), ma la combinazione dei tre segnali indica che la maggior parte delle query notturne non produce output utile. I chunk RAG crescono (6764) ma se la ricerca notturna fallisce sistematicamente, l'indice si arricchisce solo di contenuto vecchio.",
+    "azione": "Controllare quanti articoli effettivamente indicizzati stanotte vs. tentativi. Implementare backoff esponenziale su rate-limit e skip+log su sorgente vuota invece di errore bloccante. Schedulare night_ai_watch.bat (già in bussola) è prerequisito per avere una sorgente alternativa affidabile.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-09"
+  },
+  {
+    "id": "AUD-cae2ab4af9",
+    "date": "2026-06-09",
+    "git": "2290cdc",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La schedulazione di night_ai_watch.bat ogni 48h (richiede UAC + Task Scheduler) è in bussola da almeno una sessione ma non è stata eseguita. Questa non è una feature opzionale: è il prerequisito per avere il watcher AI News funzionante con dati freschi. I log di stanotte mostrano già ricerca a vuoto — senza scheduling il watcher esiste solo come codice morto.",
+    "azione": "Aprire Task Scheduler con privilegi admin, registrare night_ai_watch.bat con trigger ogni 48h. Se UAC è il blocco reale, usare restart_api.ps1 come modello (già ha auto-UAC, commit 3258887). Fatto in 15 minuti, attiva una pipeline che oggi non gira.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-09"
+  },
+  {
+    "id": "AUD-a2ebe976b1",
+    "date": "2026-06-09",
+    "git": "2290cdc",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "In bussola_open appare ancora '**Path hardcoded `C:\\Users\\benen`** ⚠ in 6 file'. Il CLAUDE.md è stato aggiornato alla macchina fissa (commit 8f0ea22) ma i 6 file legacy non sono stati de-hardcodati. Su PC fisso (utente teo) questi path rompono silenziosamente qualsiasi automazione che li attraversi — incluse quelle notturne appena crashate.",
+    "azione": "grep ricorsivo su tutto il repo per 'benen', lista i 6 file, sostituire con variabile d'ambiente %USERPROFILE% o con la risoluzione dinamica già usata in _resolve_claude.bat. Fatto in una sessione breve, sblocca stabilità delle notturne.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-09"
+  },
+  {
+    "id": "AUD-8e75cba2de",
+    "date": "2026-06-09",
+    "git": "2290cdc",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è presente da almeno 2 sessioni e V32 è fermo al 65%. Il pilastro ha il punteggio più alto tra quelli fisici ma la fresatura stampi MIMS è esplicitamente bloccata da un acquisto non ancora effettuato. Non è un problema tecnico: è una decisione non presa che congela lavoro reale.",
+    "azione": "Entro la sessione: verificare disponibilità e prezzo mandrino (Teknomotor, HSD, o equivalente ER20 2.2kW), inserire ordine o fissare data ordine in STATE.json come campo 'mandrino_order_date'. Stessa logica per silent blocks: decidere v.A vs v.B oggi, mettere la decisione in STATE così non ricompare come blocker aperto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-09"
+  },
+  {
     "id": "AUD-edd491cd60",
     "date": "2026-06-08",
     "git": "959ba65",
