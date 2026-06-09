@@ -42,3 +42,5 @@ graphify-out/
 **/graphify-out/
 # AI News Watcher: stato runtime (criticità a ogni passata) — roster in codice + BRAIN/brief
 DATA/ai_news_watcher_state.json
+# Sync incrementale: stamp hash per non rifare lavoro inutile
+DATA/.sync_bussola.hash

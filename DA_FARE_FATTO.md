@@ -33,6 +33,15 @@
 ## Sessione #34 · 07/06/2026
 
 ### [◐] INTERFACCIA — anti-sovraccarico ("troppi strumenti, non so gestire")
+- [✓] **AGGIORNAMENTI AUTOMATIZZATI** (09/06, richiesta Matteo): `AUTOMATIONS/core/sync_dashboard.py`
+      — rebuild STORIE (episodes.json) + refresh CRITICHE (bussola_todos) **solo se cambiano**
+      (gate su mtime/hash, near-istantaneo). Agganciato all'**hook Stop** esistente
+      (`generate_restart_prompt.bat`) → gira da solo a fine sessione. Già automatici prima:
+      RIAVVIO (hook Stop), episodes nel story_agent notturno, bussola_todos nel night_audit @03:52.
+      ⚠ Il **mirror Desktop** lo tengo a mano/`salva` (contiene il PIANO completo: auto-sovrascriverlo
+      rischierebbe di perderlo — se vuoi lo rendo mirror puro spostando il PIANO in PROSSIMA_SESSIONE.md).
+- [✓] **STORIE → 2 sotto-voci** (09/06): sotto STORIE ora ci sono **NINA** (→ episodi, stagione AV)
+      e **Mappa Avventura** (→ la mappa, indentata sotto Nina). [richiesta Matteo]
 - [✓] **CONTROLLO** (nuova vista, in cima a Sistema): un posto solo che elenca ogni
       strumento/nodo in italiano semplice — cosa fa · come si usa · se è acceso. Gruppi:
       Conoscenza, Occhi sul mondo, Automazioni, Contenuti, Personaggi, Infrastruttura.
