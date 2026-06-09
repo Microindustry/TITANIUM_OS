@@ -1,12 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-08T02:08:03.517456",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "snapshot": "BACKUPS\\20260608_020803\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-08T02:08:03.579941",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
       "snapshot": "BACKUPS\\20260608_020803\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
@@ -2998,6 +2992,12 @@
       "timestamp": "2026-06-09T12:42:48.027151",
       "file": "DASHBOARD\\.vscode\\settings.json",
       "snapshot": "BACKUPS\\20260609_124248\\DASHBOARD\\.vscode\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T12:43:51.159960",
+      "file": "NODES\\AUDIT_AGENT\\night_audit.py",
+      "snapshot": "BACKUPS\\20260609_124351\\NODES\\AUDIT_AGENT\\night_audit.py",
       "type": "snapshot"
     }
   ]

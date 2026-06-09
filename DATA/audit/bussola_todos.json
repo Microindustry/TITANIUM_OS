@@ -85,14 +85,56 @@
   },
   {
     "id": "BUS-b838eabb",
-    "stato": "da_fare",
+    "stato": "in_corso",
     "testo": "**MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina",
     "sessione": "Sessione #34 · 07/06/2026"
   },
   {
-    "id": "BUS-4f5d929a",
+    "id": "BUS-d31851b5",
+    "stato": "fatto",
+    "testo": "**Bozza mappa multi-livello** scritta: `CONTENT_ENGINE/DATABASE/MONDO/MAPPA_AVVENTURA.md`",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-d03f32cd",
+    "stato": "fatto",
+    "testo": "**EP_AV_01 scritto** (definitivo): \"L'Incantesimo che si Ripete\" (l'Automazione,",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-7460cfef",
+    "stato": "fatto",
+    "testo": "**VISTA \"Mappa dell'Avventura\" costruita** (`AvventuraMapView.tsx` + `avventuraMapData.ts`):",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-d0addb48",
+    "stato": "fatto",
+    "testo": "**Avventura → NINA sotto STORIE** (09/06): la sotto-voce \"Avventura\" è diventata",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-5a78c1ce",
+    "stato": "fatto",
+    "testo": "**EP_AV_02 scritto** (definitivo): \"La Mente che Parla\" (l'LLM, Regione 3) — Nina",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-72ed3b6f",
     "stato": "da_fare",
-    "testo": "**Nomi sidebar obsoleti**: AUTOMAZ./MAPPA in chiaro (⚠ collisione \"Bussola\": da",
+    "testo": "Scrivere gli episodi mancanti (Regioni 4-7: RAG, Wiki, Agenti, Orchestrazione).",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-df7746cf",
+    "stato": "fatto",
+    "testo": "**Incoerenza ⟡ RISOLTA** (09/06): convenzione a canone (PERCORSO_EVOLUTIVO §2) —",
+    "sessione": "Sessione #34 · 07/06/2026"
+  },
+  {
+    "id": "BUS-e6f6ecdd",
+    "stato": "fatto",
+    "testo": "**Nomi sidebar sistemati** (09/06): `AUTOMAZ.`→`AUTOMAZIONI` · `RETE`→`GRAFO`",
     "sessione": "Sessione #34 · 07/06/2026"
   },
   {
