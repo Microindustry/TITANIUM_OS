@@ -1,96 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-07T17:46:27.360089",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.430366",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.510377",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.580411",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.658497",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.740981",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.810483",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.886027",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:27.991002",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
-      "snapshot": "BACKUPS\\20260607_174627\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:28.070505",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:28.146197",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:28.216240",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_04_IL_DOCUMENTO_MASTER.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_04_IL_DOCUMENTO_MASTER.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:28.286623",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_05_CONFIG_A_G.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_05_CONFIG_A_G.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:28.366414",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-07T17:46:28.446270",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_01_L_ORGANISMO.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_01_L_ORGANISMO.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-07T17:46:28.526432",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
       "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
@@ -2998,6 +2908,96 @@
       "timestamp": "2026-06-09T06:44:27.821928",
       "file": "CONTENT_ENGINE\\scripts\\audit_episodes.py",
       "snapshot": "BACKUPS\\20260609_064427\\CONTENT_ENGINE\\scripts\\audit_episodes.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:14.703457",
+      "file": "DASHBOARD\\package.json",
+      "snapshot": "BACKUPS\\20260609_064814\\DASHBOARD\\package.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:14.828427",
+      "file": "DASHBOARD\\tsconfig.json",
+      "snapshot": "BACKUPS\\20260609_064814\\DASHBOARD\\tsconfig.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:14.896425",
+      "file": "DASHBOARD\\tsconfig.app.json",
+      "snapshot": "BACKUPS\\20260609_064814\\DASHBOARD\\tsconfig.app.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:14.974532",
+      "file": "DASHBOARD\\tsconfig.node.json",
+      "snapshot": "BACKUPS\\20260609_064814\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:25.930324",
+      "file": "DASHBOARD\\index.html",
+      "snapshot": "BACKUPS\\20260609_064825\\DASHBOARD\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.026507",
+      "file": "DASHBOARD\\.claude\\launch.json",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\.claude\\launch.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.122244",
+      "file": "DASHBOARD\\.claude\\settings.local.json",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\.claude\\settings.local.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.278630",
+      "file": "DASHBOARD\\.vscode\\settings.json",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\.vscode\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.373625",
+      "file": "DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\ECOSYSTEM_ARCHITECTURE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.568638",
+      "file": "DASHBOARD\\pnpm-workspace.yaml",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\pnpm-workspace.yaml",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.678618",
+      "file": "DASHBOARD\\public\\matteo\\index.html",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\public\\matteo\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:26.850453",
+      "file": "DASHBOARD\\README.md",
+      "snapshot": "BACKUPS\\20260609_064826\\DASHBOARD\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:27.271379",
+      "file": "DASHBOARD\\TITANIUM_MANIFESTO.md",
+      "snapshot": "BACKUPS\\20260609_064827\\DASHBOARD\\TITANIUM_MANIFESTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:29.684935",
+      "file": "DASHBOARD\\dist\\matteo\\index.html",
+      "snapshot": "BACKUPS\\20260609_064829\\DASHBOARD\\dist\\matteo\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:48:31.458144",
+      "file": "DASHBOARD\\dist\\index.html",
+      "snapshot": "BACKUPS\\20260609_064831\\DASHBOARD\\dist\\index.html",
       "type": "snapshot"
     }
   ]

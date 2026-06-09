@@ -82,6 +82,9 @@ const GRUPPI: Gruppo[] = [
       { nome: "Avventura (Nina)", stato: "on", goto: "avventura",
         cosa: "Il binario educativo: il mondo che spiega la tecnologia ai bambini (Nina + THEMIS).",
         come: "Vista 'Avventura' (sotto Storie)." },
+      { nome: "Mappa dell'Avventura", stato: "on", goto: "avventura-mappa",
+        cosa: "Il mondo di Nina a livelli: le 7 Regioni (la storia dell'IA) ancorate al progetto reale.",
+        come: "Apri la mappa: scendi nelle Regioni, vedi episodi e concetti." },
     ],
   },
   {

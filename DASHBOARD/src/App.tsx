@@ -51,6 +51,7 @@ const PitchView          = lazy(() => import("./components/PitchView").then(m =>
 const MetodoView         = lazy(() => import("./components/MetodoView").then(m => ({ default: m.MetodoView })));
 const RagChatView        = lazy(() => import("./components/RagChatView").then(m => ({ default: m.RagChatView })));
 const ControlloView      = lazy(() => import("./components/ControlloView").then(m => ({ default: m.ControlloView })));
+const AvventuraMapView   = lazy(() => import("./components/AvventuraMapView").then(m => ({ default: m.AvventuraMapView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -463,6 +464,7 @@ function AppInner() {
               </div>
             )}
             {view === "controllo"   && <ControlloView />}
+            {view === "avventura-mappa" && <AvventuraMapView />}
             {view === "storie"      && <StorieView />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "pitch"       && <PitchView />}
