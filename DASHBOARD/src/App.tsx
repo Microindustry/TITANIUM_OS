@@ -250,19 +250,19 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </span>
               </button>
             )}
-            {/* Sotto-voce: Avventura — annidata sotto STORIE, piccola e rosa (binario educativo) */}
+            {/* Sotto-voce: NINA — il mondo dell'Avventura (apre la Mappa); rosa (binario educativo) */}
             {item.id === "storie" && !collapsed && (
               <button
-                onClick={() => onNavigate("avventura")}
-                title="L'Avventura — il mondo educativo (Nina + THEMIS)"
+                onClick={() => onNavigate("avventura-mappa")}
+                title="Nina — il mondo dell'Avventura (la mappa: 7 Regioni + episodi)"
                 className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                  ${view === "avventura"
+                  ${view === "avventura-mappa" || view === "avventura"
                     ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
                     : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
               >
                 <Sparkles size={11} className="flex-shrink-0 text-pink-400" />
                 <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                  Avventura
+                  Nina
                 </span>
               </button>
             )}

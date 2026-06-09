@@ -31,12 +31,25 @@ export function AvventuraMapView() {
         {/* Header */}
         <div className="flex items-center gap-3 mb-1">
           <Sparkles size={20} className="text-pink-400" />
-          <h2 className="text-lg font-bold text-slate-100 tracking-wide">La Mappa dell'Avventura</h2>
-          <span className="ml-auto text-[9px] font-mono text-slate-600">bozza · il mondo di Nina</span>
+          <h2 className="text-lg font-bold tracking-wide"
+            style={{ background: "linear-gradient(90deg,#f59e0b,#ec4899,#22d3ee)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+            La Mappa dell'Avventura
+          </h2>
+          <button onClick={() => navigate("avventura")}
+            className="ml-auto flex items-center gap-1.5 text-[9px] font-mono text-pink-400/70 hover:text-pink-300 uppercase tracking-wider border border-pink-500/20 hover:border-pink-500/40 rounded px-2 py-1 transition-all">
+            <Mic size={9} /> tutti gli episodi
+          </button>
         </div>
-        <p className="text-xs text-slate-500 mb-5 ml-8">
+        <p className="text-xs text-slate-500 mb-1 ml-8">
           Il viaggio di Nina tra le 7 Regioni — la storia dell'IA, ogni tappa ancorata a un pezzo reale del progetto.
         </p>
+        {/* le due Terre: Atomi (caldo) ↔ Bit (freddo), cucite dalla Giuntura */}
+        <div className="flex items-center gap-2 mb-5 ml-8 text-[9px] font-mono">
+          <span className="text-amber-400/80">⬡ Atomi</span>
+          <span className="flex-1 h-px max-w-[120px]" style={{ background: "linear-gradient(90deg,#f59e0b55,#22d3ee55)" }} />
+          <span className="text-cyan-400/80">Bit ◇</span>
+          <span className="text-slate-600 ml-2">· cuciti dalla Giuntura</span>
+        </div>
 
         {/* LIVELLO 0 — IL MONDO */}
         <div className="rounded-xl border border-pink-500/20 bg-pink-500/[0.04] mb-5 overflow-hidden">

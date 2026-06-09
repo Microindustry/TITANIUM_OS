@@ -59,8 +59,11 @@
         (watcher/notturne), open loop → l'LLM. Importato (123 ep, AV=2, 0 orfani).
   - [✓] **VISTA "Mappa dell'Avventura" costruita** (`AvventuraMapView.tsx` + `avventuraMapData.ts`):
         accordion a livelli — Mondo (luoghi/cast) → 7 Regioni → concetto/vero/pezzo reale/episodi/
-        semi/Pietre. Additiva (non tocca la MAPPA sistema). Raggiungibile da CONTROLLO→Contenuti.
-        Build verde (0 TS, vite ok). Episodi "scritti" cliccabili → vista Avventura.
+        semi/Pietre. Additiva (non tocca la MAPPA sistema). Build verde (0 TS, vite ok).
+  - [✓] **Avventura → NINA sotto STORIE** (09/06): la sotto-voce "Avventura" è diventata
+        **NINA** e apre la **Mappa dell'Avventura** (è il posto giusto, non più nascosta in
+        CONTROLLO). Mappa = hub: header con le due Terre (Atomi↔Bit) + "tutti gli episodi";
+        episodi scritti cliccabili → reader. [richiesta Matteo: "troppo bella per stare là"]
   - [✓] **EP_AV_02 scritto** (definitivo): "La Mente che Parla" (l'LLM, Regione 3) — Nina
         scopre l'allucinazione (bugia con la faccia sicura) + il cervello ibrido (Claude/Qwen),
         open loop → RAG. Mini-arco Loop→Automazione→LLM completo. (AV=3, 0 orfani, build verde)
