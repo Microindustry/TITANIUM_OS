@@ -86,7 +86,7 @@ successiva** (non si entra nel RAG senza l'LLM, ecc. — la spirale a scala macr
 ### Regione 3 · LA MENTE CHE PARLA — *l'LLM* ⟡3
 - **Concetto:** una mente che capisce le parole e risponde — ma da sola si può sbagliare.
 - **Vero dietro:** Claude (in cloud) + Qwen locale sulla GPU; il "cervello ibrido".
-- **Episodi Nina:** 💤 `EP_AV_xx` la Mente che Parla.
+- **Episodi Nina:** ✅ `EP_AV_02` "La Mente che Parla" *(scritto, definitivo)*.
 - **Semi tecnici:** `EP_S2_01` Il Cervello Ibrido · "Leva LLM locale accesa (Qwen)" ·
   `EP_AUTO_25` Profilo Capabilities.
 - **Pietre:** fonda ⟡3 · richiama ⟡1.

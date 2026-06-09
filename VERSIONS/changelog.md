@@ -2306,3 +2306,8 @@
 - `2026-06-09 06:48:31` ✨ CREATED — DASHBOARD\dist\assets\NeuroOSLayout-Cp6UppdP.js
 - `2026-06-09 06:48:31` ✨ CREATED — DASHBOARD\dist\assets\AgentsView-CxB_DwGb.js
 - `2026-06-09 06:48:41` 🗑️ DELETED — DA_FARE_FATTO.md
+- `2026-06-09 06:50:35` ✏️ MODIFIED — DASHBOARD\src\data\episodes.json
+- `2026-06-09 06:50:43` 🗑️ DELETED — DASHBOARD\src\data\avventuraMapData.ts
+- `2026-06-09 06:50:44` 🗑️ DELETED — DASHBOARD\src\components\AvventuraMapView.tsx
+- `2026-06-09 06:50:46` 🗑️ DELETED — CONTENT_ENGINE\DATABASE\MONDO\MAPPA_AVVENTURA.md
+- `2026-06-09 06:50:56` 🗑️ DELETED — DA_FARE_FATTO.md

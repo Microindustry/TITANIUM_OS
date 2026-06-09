@@ -1,12 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-07T17:46:28.526432",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
-      "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-07T17:46:28.606420",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
       "snapshot": "BACKUPS\\20260607_174628\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
@@ -2998,6 +2992,12 @@
       "timestamp": "2026-06-09T06:48:31.458144",
       "file": "DASHBOARD\\dist\\index.html",
       "snapshot": "BACKUPS\\20260609_064831\\DASHBOARD\\dist\\index.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T06:50:35.758187",
+      "file": "DASHBOARD\\src\\data\\episodes.json",
+      "snapshot": "BACKUPS\\20260609_065035\\DASHBOARD\\src\\data\\episodes.json",
       "type": "snapshot"
     }
   ]

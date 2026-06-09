@@ -76,7 +76,7 @@ export const REGIONI: Regione[] = [
     concetto: "Una mente che capisce le parole e risponde — ma da sola si può sbagliare.",
     vero: "Claude (cloud) + Qwen locale sulla GPU: il cervello ibrido.",
     pezzoReale: "Claude / Qwen locale (leva LLM)",
-    episodi: [{ id: "EP_AV_02", titolo: "la Mente che Parla", stato: "da-scrivere" }],
+    episodi: [{ id: "EP_AV_02", titolo: "La Mente che Parla", stato: "scritto" }],
     semi: ["EP_S2_01 Il Cervello Ibrido", "Leva LLM locale (Qwen)", "EP_AUTO_25 Capabilities"],
     pietreRichiamate: ["⟡1 Loop"],
   },

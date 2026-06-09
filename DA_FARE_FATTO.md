@@ -61,7 +61,10 @@
         accordion a livelli — Mondo (luoghi/cast) → 7 Regioni → concetto/vero/pezzo reale/episodi/
         semi/Pietre. Additiva (non tocca la MAPPA sistema). Raggiungibile da CONTROLLO→Contenuti.
         Build verde (0 TS, vite ok). Episodi "scritti" cliccabili → vista Avventura.
-  - [ ] Scrivere gli episodi mancanti (Regioni 3-7: LLM, RAG, Wiki, Agenti, Orchestrazione).
+  - [✓] **EP_AV_02 scritto** (definitivo): "La Mente che Parla" (l'LLM, Regione 3) — Nina
+        scopre l'allucinazione (bugia con la faccia sicura) + il cervello ibrido (Claude/Qwen),
+        open loop → RAG. Mini-arco Loop→Automazione→LLM completo. (AV=3, 0 orfani, build verde)
+  - [ ] Scrivere gli episodi mancanti (Regioni 4-7: RAG, Wiki, Agenti, Orchestrazione).
   - [ ] ⚠ **Incoerenza ⟡ da risolvere (con Matteo)**: EP_AV_00 numera l'Entropia come `⟡2`,
         ma l'arco usa `⟡2`=Automazione. In EP_AV_01 ho citato le Pietre per NOME (no clash).
         Decidere: l'Entropia è una Pietra a sé (fuori arco) o si rinumera? Non tocco il pilota.

@@ -18,7 +18,7 @@ const EP_STATO: Record<EpStato, { label: string; dot: string; text: string }> = 
 
 export function AvventuraMapView() {
   const navigate = useUIStore(s => s.navigateTo);
-  const [open, setOpen] = useState<Set<number>>(() => new Set([1, 2])); // regioni con episodi scritti
+  const [open, setOpen] = useState<Set<number>>(() => new Set([1, 2, 3])); // regioni con episodi scritti
   const [mondoOpen, setMondoOpen] = useState(true);
 
   const toggle = (n: number) =>
