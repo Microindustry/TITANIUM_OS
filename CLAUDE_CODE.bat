@@ -1,6 +1,8 @@
 @echo off
-:: CLAUDE_CODE.bat - Lancia Claude Code in TITANIUM_OS riprendendo l'ultima sessione | v3.0 | 2026-06-03
-:: Doppio click: apre Claude nella cartella giusta e RIPRENDE la conversazione (--continue).
+:: CLAUDE_CODE.bat - Lancia Claude Code in TITANIUM_OS | v3.1 | 2026-06-09
+:: Doppio click: apre Claude nella cartella giusta e avvia una sessione NUOVA che riprende
+:: lo stato leggendo i file di handoff (DA_FARE_FATTO.md + RIAVVIO_SESSIONE.txt + STATE.json).
+:: Niente --continue: contesto pulito ogni volta, la continuita' passa dai file (by design).
 :: Risolve claude.exe in modo dinamico (robusto agli update di versione e al GUID del pacchetto Store).
 setlocal enabledelayedexpansion
 set TI_ROOT=%USERPROFILE%\TITANIUM_OS

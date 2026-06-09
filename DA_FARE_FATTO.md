@@ -35,6 +35,12 @@
 ## Sessione #34 · 07/06/2026
 
 ### [◐] INTERFACCIA — anti-sovraccarico ("troppi strumenti, non so gestire")
+- [✓] **Apertura sessione verificata** (09/06): collegamento Desktop "Claude Code [TI]" →
+      `CLAUDE_CODE.bat` (risolve claude.exe v2.1.165 + prompt "Leggi DA_FARE_FATTO+RIAVVIO+STATE").
+      "TITANIUM_OS [PS]" → PowerShell in TI_ROOT col profilo. Fix: commento `--continue` fuorviante
+      nel bat corretto (apre sessione fresca by design). **Profilo PS de-hardcodato** ($env:USERPROFILE/
+      LOCALAPPDATA/APPDATA, a prova di migrazione) + `.local\bin` nel PATH (graphify) — backup `.bak_20260609`.
+      ⚠ Il profilo PS sta in Documents (non in git): valutare copia di riferimento nel repo per la prossima migrazione.
 - [✓] **AGGIORNAMENTI AUTOMATIZZATI** (09/06, richiesta Matteo): `AUTOMATIONS/core/sync_dashboard.py`
       — rebuild STORIE (episodes.json) + refresh CRITICHE (bussola_todos) **solo se cambiano**
       (gate su mtime/hash, near-istantaneo). Agganciato all'**hook Stop** esistente
