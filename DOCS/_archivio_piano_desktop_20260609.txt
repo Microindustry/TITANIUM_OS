@@ -1,0 +1,258 @@
+# ARCHIVIO — copia PIANO che stava sul Desktop (consolidato il 09/06 in PROSSIMA_SESSIONE.md)
+# La casa viva del PIANO ora e PROSSIMA_SESSIONE.md. Questo file e solo storico.
+
+========================================================================
+ TITANIUM_OS — PIANO COMPLETO (da rileggere / consultabile)
+ Consolidato sessione #20-21 · 04/06/2026
+ Copie: questo file (Desktop) + PROSSIMA_SESSIONE.md (radice repo)
+========================================================================
+
+------------------------------------------------------------------------
+VISIONE (la piu' aggiornata)
+------------------------------------------------------------------------
+Il sistema NON e' lo scaffolding personale di Matteo. E' LA BASE PER
+QUALSIASI PROGETTO: noi -> CNC, un altro -> un'altra cosa.
+GENESIS = piattaforma + servizio di scalabilita' + product studio.
+
+COSA VENDIAMO (il valore):
+ (A) Il sistema/engine — il metodo che porta un'idea da zero a prodotto,
+     riusabile e scalabile.
+ (B) La "cartella clinica" del sistema/macchina — le CRITICHE non sono
+     una to-do: sono la diagnostica che "accende la lampadina"
+     all'ingegnere. Storia clinica viva di una macchina = IP vendibile.
+ (C) L'universo-storie EDUCATIVO — avventure animate / YouTube / ebook
+     che spiegano la tecnologia del 2026 a un bambino del 2024, per
+     crescerlo predisposto a modelli sempre piu' complessi.
+     Prodotto + missione + audience.
+
+GO-TO-MARKET: il brand personale di Matteo (riconoscibile: rete reale,
+figlio, aperitivi, LinkedIn con buona visibilita').
+=> NIENTE sul progetto su LinkedIn finche' non funziona ("prima deve
+   funzionare"). V32/MIMS/capannone = vetrina + hobby, pagati dal sistema.
+
+MODO DI LAVORARE: "va fatto tutto insieme" (olistico). Matteo in
+hyperfocus, ci mette tutto, ha famiglia, "un po' qua un po' la'".
+Mi chiama SOCIO. Mio compito: cavalcare l'energia ma tenerla
+olistica-MA-sequenziata (una cosa che funziona, non 10 a meta') e
+proteggere la sostenibilita'. Paletto: NIENTE TEATRO — se e' prodotto,
+dev'essere reale/autonomo/dimostrabile.
+
+------------------------------------------------------------------------
+PRINCIPI OPERATIVI
+------------------------------------------------------------------------
+1. Completare e far FUNZIONARE > soldi. EVA/cassa dopo.
+2. Additivo, reversibile, committato. Mai cancella-e-rifai.
+   NON perdere episodi/contenuti.
+3. Ibrido: locale + Claude, RETE + RAG (integrare, non sostituire).
+4. ECONOMIA MODELLI (Matteo brucia Opus + reset): Opus solo per
+   strategia/architettura, risposte brevi. Routine -> Sonnet/Haiku.
+   Ripetitivo/notturno -> script + n8n + LLM locale.
+   Non far fare a Opus cio' che fa uno script.
+5. Generazione episodi: decide Claude il metodo e lo consegna
+   funzionante (niente revisione-escaping a Matteo).
+6. Output misurabile per ogni automazione, altrimenti non esiste.
+7. NON FERMARTI finche' non si esaurisce il limite dell'abbonamento di
+   Matteo: avanza in continuo senza aspettare input ad ogni passo; il
+   grosso su modelli economici, Opus solo per le decisioni. Mai lasciare
+   il sistema fermo (combinare con la regola economia #4).
+
+------------------------------------------------------------------------
+AZIONI — PUNTO PER PUNTO
+------------------------------------------------------------------------
+
+PUNTO 0 — AUTONOMIA (prima di tutto)
+  Problema vero: "io mi blocco, tu ti blocchi, tutto si blocca".
+  0a. Io giro dopo la sessione SOLO via agenti schedulati (cron/routine).
+  0b. Agente notturno autonomo che ogni notte, da solo, e committa:
+      ricerca -> aggiorna RAG -> genera 1 episodio-avventura ->
+      self-audit che AGGIUNGE critiche -> aggiorna livelli su progressi
+      reali -> commit.
+  0c. Gira su modelli economici (NO Opus), guardrail additivi/reversibili.
+
+PUNTO 1 — DATI VIVI (uccidere il "dashboard-teatro")
+  1a. [FATTO 06/06 - il grosso, commit 5f148a7] Riscritto l'array AUTOMAZ
+      (40 voci) in modo ADDITIVO (nessuna voce rimossa) con campo `stato`
+      operativo reale: persistente | event | scheduled | on-demand | dormiente.
+      SCOPERTA: la view era ANCORA piu' falsa dell'audit - i ~14 file "(da
+      creare)" ESISTONO gia' su disco con nomi diversi (watchdog_monitor->
+      automation_watchdog, cloud_sync->ghost_sync, semantic_index->
+      semantic_indexer, toc_generator->toc_compiler, topic_analyzer->
+      sentiment_topic, deeplink_creator->deep_link, formatter->content_pipeline...).
+      Quindi NON "da creare" ma "dormienti" (esistono, non cablati). Corretti
+      anche i 5 sottostimati (md_validator/auto_linker/semantic_indexer/
+      toc_compiler/md_view_pipeline = event-driven REALI cablati in watcher.py).
+      Badge STATO su ogni card + striscia-verita con conteggio per stato.
+      build tsc -b verde. RESTA: collegare il badge persistente al vivo
+      (/api/watchdog/status) anche nella view principale (oggi solo Notturne).
+      ANOMALIA APERTA: TI_NightAudit "mai via scheduler" ma critiche_auto.json
+      ha dati -> task @03:52 da verificare.
+  1b. [FATTO 06/06] Critiche LIVE = cartella clinica viva. La vista CRITICHE
+      innesta un ramo "Auto-audit notturno" dai findings che night_audit
+      (Sonnet) genera in critiche_auto.json (GET /api/critiche/auto +
+      criticheAuto.ts). Crescono da sole, canone manuale intatto in testa,
+      badge "N live . M aperti". Testato: 6 findings reali. Commit f5d6c1f.
+      Resta: chiudere il loop status open->done quando una critica e' risolta.
+  1c. Livelli (lv): non salgono da soli -> collegarli a progressi reali.
+  1d. SOTTOCASELLE sidebar (come Notturne: sotto-voce piccola colorata,
+      ognuna con la sua vista — niente link morti):
+      - sotto AUTOMAZ: Notturne (blu, FATTO) · Watchdog (verde=stato
+        servizi live) · Ricerca (ambra="cosa ho scoperto stanotte", P.6b)
+      - sotto STORIE: Avventura (viola=stagione educativa, P.2e) ·
+        Tecnici (slate=dev-log/milestone)
+      - sotto GENESIS: RAG chat (ciano=chiedi->risposta+fonti, P.4a)
+        [FATTO 06/06, col toggle motore Claude/Locale di P.4b dentro] ·
+        LLM locale: per ora vive nel toggle della chat (voce indigo
+        separata = opzionale)
+
+PUNTO 2 — STORIA-AVVENTURA (binario nuovo, in PARALLELO ai tecnici)
+  [LANCIATO 06/06 - commit 8979d14] Creata la BIBBIA_DEL_MONDO.md
+  (CONTENT_ENGINE/DATABASE/MONDO/) + pilota EP_AV_00 "La Bambina e la
+  Giuntura" (stagione AV registrata, build verde). Ricerca P2g fatta
+  (pattern Cyberchase/Magic School Bus/Dinosaur Train). DECISO:
+   - Mondo = la GIUNTURA dove Atomi<->Bit sono la stessa terra (lingua=Python).
+   - Nemico = l'ENTROPIA/il Disordine (il "cattivo a 360" reale).
+   - Protagonisti = NINA (bambina, surrogato del pubblico) + THEMIS (guida reale).
+   - Cast = agenti reali, potere = funzione reale (no teatro).
+   - Pilota insegna il GRANDE LOOP (un gesto, tre frutti) = concetto vero da EP_S0_00.
+  RESTA: EP_AV_01..04 (bozza su Qwen/M3 + rifinitura), Critiche=quest,
+  MAPPA=mondo, eventuale vista/filtro stagione AV dedicata.
+  --- nota originale ---
+  NON la biografia di Matteo. Avventura fantastica educativa per
+  bambini/non-tecnici che spiega man mano architettura e principi.
+  2a. Bibbia personaggi a DOC: THEMIS, EVA, AVA, ARIA, NEXUS, TESLA,
+      FORGE + agenti dashboard -> ruolo, carattere, "potere"=funzione
+      reale. Fanno PARTE del mondo/storia (sono nell'ecosistema) MA NON
+      sono automaticamente i protagonisti (correzione Matteo: "questo
+      non l'ho mai detto").
+  2a-bis. PROTAGONISTI = li sceglie Claude, DOPO ricerca (vedi 2g).
+  2b. Mondo: ambientazione tipo Python (o piu' adatta — decide Claude).
+  2c. Critiche = quest/avventure; MAPPA = mappa del mondo (aggiornabile).
+  2d. Sottocartella/stagione "Avventura" sotto Storie (manca ancora).
+  2e. 1 episodio-avventura pilota. Il vecchio pilota-biografia
+      "Il Mondo" si ridimensiona.
+  2f. Formati: testo ora; animazioni/YouTube/ebook = leve predisposte,
+      SPENTE (non ora).
+  2g. RICERCA PROTAGONISTI (PRIMA di scrivere la storia): studiare cosa
+      rende "vincenti" i personaggi educativi, casi "da 0 ce l'hanno
+      fatta", e SCEGLIERE i protagonisti dell'avventura.
+      TONO: cose tecniche spiegate in modo SEMPLICE (tecniche fino a un
+      certo punto, non oltre). Gli agenti AI restano comprimari/mondo,
+      non per forza protagonisti.
+
+PUNTO 3 — NON PERDERE EPISODI + LEGGIBILITA'
+  3a. Non perdere niente: recuperare TUTTI i .md (inclusi orfani di oggi:
+      EP_AUTO_50, EP_20260602/03/04) in episodes.json; audit che ogni
+      episodio su disco sia in dashboard.
+  3b. Far leggere TUTTI i testi delle storie — anche cambiando LAYOUT:
+      ogni episodio leggibile per intero (vista lettura / redesign).
+
+PUNTO 4 — RAG vero + LLM
+  4a. [FATTO 06/06] Chat RAG vera in dashboard: sotto-voce ciano "Chat RAG"
+      sotto GENESIS, POST /api/rag/chat = retrieval reale da MENTE/ +
+      sintesi + FONTI CITATE (testato: "178 kg corpo unico" cita
+      v32_specifiche.md). RETE resta mappa, NON e' il RAG. Commit 1bd09e5,
+      build tsc -b verde. Sdoppio CANONE vs RICERCA: gia' mitigato dal
+      purge -448 chunk garbage della notte precedente.
+  4b. [LEVA PREDISPOSTA 06/06] Pivot deciso: Ollama + Qwen2.5-7B-Q4
+      (P4B_RESEARCH.md, ispirato a Simone Rizzo - verificato). Fatto:
+      ollama_client.py + toggle Claude/Locale nella chat + endpoint
+      /api/llm/ollama/status. Leva ONESTA: oggi available=false ->
+      fallback a Claude con flag, niente teatro.
+      [06/06 ACCESA] Ollama installato + qwen2.5:7b-instruct-q4_K_M scaricato
+      (4.7 GB). Endpoint /api/llm/ollama/status: available=true, model_ready=true.
+      Test GPU OK. Il toggle "Locale" nella chat ora risponde da Qwen (no fallback).
+      [DECISO 06/06] 3 gradini modello: Qwen 7B locale (gratis/privato/offline,
+      per dati MIMS sensibili) -> MiniMax M3 cloud (cheap workhorse via OpenRouter,
+      per bulk NON sensibile, da cablare con key in _VAULT) -> Claude/Opus
+      (decisioni+qualita'). REGOLA: MENTE/MIMS sensibile mai su M3 (provider cinese).
+      TODO: cablare M3 nel toggle (serve key OpenRouter). Dataset episodi -> few-shot.
+
+PUNTO 5 — AGENTI usati davvero
+  [FATTO 06/06 - grounding + ruolo operativo]
+   - RAG grounding reale in /api/agents/ask (+fonti UI). Basta teatro.
+   - THEMIS legge la cartella clinica (critiche_auto.json) - ruolo operativo.
+   - Chat RAG diretta separata dagli agenti (/api/rag/chat).
+  [VERIFICA FATTA 06/06 - "sono perfetti per noi?"]
+   - AUDIT in NODES/AGENTS/AGENTS_AUDIT.md: aqua (acquaponica) FUORI SCOPE,
+     plc/SIEMENS sovradimensionato per CNC hobby; AVA+NEXUS nel canone
+     CLAUDE.md ma non in agents_db. PRUNE = decisione TUA (visione multi-
+     progetto): opzioni nel doc, azione = 1 riga active:false per agente.
+  [APERTO] Visibilita' "sto interrogando gli agenti" nella chat Claude:
+   e' comportamento mio in sessione (non codice) - lo rendo abitudine quando
+   un task tocca un dominio agente. + comparsa NELLA storia (P2, non ora).
+
+PUNTO 6 — RICERCA come compito + LEVE predisposte
+  6a. Ricerca di mercato (MIMS/Microindustry) + ricerca geometrie adatte
+      (MIMS) come task ricorrenti.
+  6b. Ricerche "per migliorare il sistema" con OUTPUT VISIBILE in
+      dashboard ("cosa ho scoperto stanotte").
+  6c. Social/LinkedIn/animazione: NON ora. Se una ricerca trova un modo
+      economico -> predisporre la leva (pronta, spenta).
+
+PUNTO 7 — NOTTURNE ridecise dalla salute del sistema
+  Non orari arbitrari: event-driven dove possibile, notturno solo per
+  batch pesante. Ogni automazione con output misurabile e un perche'.
+
+PUNTO 8 — RIORGANIZZAZIONE FILESYSTEM (PC)
+  Riposizionare i file per ottimizzazione; cartelle utili su Desktop;
+  ELIMINARE la chiavetta (consolidare i contenuti); sistemare in modo
+  intelligente. Prerequisito: audit (vedi Attacco) di file/cartelle/
+  librerie che non servono.
+
+------------------------------------------------------------------------
+ATTACCO A 360 (il cattivo) — guida l'audit
+------------------------------------------------------------------------
+ 1. Single point of failure: Matteo. Il sistema lo accudisce invece di
+    liberarlo. -> risolto solo dal Punto 0.
+ 2. Complessita' > valore. RIBALTATO dalla Visione: se il sistema E' il
+    prodotto, ok — ma dev'essere vendibile/dimostrabile (no teatro).
+    Resta vero: serve ALMENO una cosa end-to-end da mostrare.
+ 3. Zero ricavi. EVA pending; capannone senza soldi. (Accettato: prima
+    far funzionare.)
+ 4. Dashboard-teatro. Critiche/livelli/automazioni statici = falso. ->P1.
+ 5. MIMS IP scoperto. Brevetto B2 urgente, trade secret in chiaro.
+    DA PROTEGGERE A PRESCINDERE.
+ 6. Fragilita' tecnica. Rotture ripetute. -> mitigato con episodes.json.
+ 7. Audience che forse non esiste. Brand prima del prodotto = vanita' ->
+    per questo "prima deve funzionare". Giusto.
+ 8. LLM locale = vanity compute. -> P.4b (pivot).
+ 9. Pitch debole se IP traballa + zero trazione + metriche-teatro.
+    -> P1 + P5 (MIMS).
+10. Costo-opportunita'. RIBALTATO: se GENESIS e' il prodotto, le ore su
+    GENESIS sono sul prodotto. Resta valido solo per MIMS IP.
+ +  Audit richiesto: struttura sistema, priorita' reali, LIBRERIE/FILE
+    che non portano a nulla (dead code, orfani, dipendenze inutili)
+    -> input per il Punto 8.
+
+------------------------------------------------------------------------
+STATO ATTUALE (gia' fatto e funzionante)
+------------------------------------------------------------------------
+ - Automazioni notturne portabili + 6 task schedulati + watchdog vivo
+   (api_server + mente_watcher).
+ - RAG ~6654 chunk; ricerca notturna guidata da STATE.
+ - Episodi migrati a episodes.json (bulletproof, 88 episodi);
+   sync_storie.py RITIRATO.
+ - Dashboard stabile (Vite OK), n8n attivo (0 workflow), Flask :5001,
+   Vite :5173.
+ - [06/06] Chat RAG vera (P4a) + leva LLM locale Ollama/Qwen (P4b):
+   commit 1bd09e5, build verde, endpoint testato via test_client.
+ - llamafactory installato ma finetune locale = da pivotare
+   (P.4b -> deciso Ollama+Qwen).
+
+ NOTA RESTART (06/06): api_server gira elevato (spawnato dal watchdog
+ Highest); una shell normale non puo' ucciderlo. Gli endpoint nuovi vanno
+ LIVE da soli al prossimo login (watchdog AtLogon ricarica il codice).
+ Per attivarli SUBITO: doppio click su SERVICES\restart_api.ps1 (auto-UAC).
+
+------------------------------------------------------------------------
+COME RIPRENDERE
+------------------------------------------------------------------------
+ Apri la sessione e di': "parti dal punto N".
+ Default consigliato: 0 (autonomia) -> 1 (dati vivi) ->
+                      3 (non perdere + leggibilita') -> 2 (avventura).
+ Prima cosa possibile: rendere il sistema capace di avanzare senza
+ di te, su modelli economici (non bruciare Opus).
+
+ TODO comandi: riscrivere CLAUDE.md con questa visione (oggi descrive
+ solo "scaffolding personale" + ha ancora path Getac/benen residui).
+========================================================================

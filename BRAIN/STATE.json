@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-09T12:51:42.608879",
+  "last_update": "2026-06-09T13:06:38.157139",
   "active_milestone": "Sessione #34: CLAUDE.md v4.1.0 + RAG→WIKI Graphify in produzione + AI News Watcher v1 keyless + UI anti-sovraccarico (Centro di Controllo, STORIE a fisarmonica) + RETE riparata e integrata col grafo Graphify (toggle Conoscenza/Sistema) + binario AVVENTURA: bozza Mappa multi-livello + vista 'Mappa dell'Avventura' + 3 episodi (EP_AV_00/01/02: Loop→Automazione→LLM). Tutto committato+pushato.",
   "last_action": "Modifica a DA_FARE_FATTO.md",
   "next_step": "[Matteo al risveglio] Guardare: CONTROLLO, STORIE rifatta, RETE→toggle 'Sistema' (dopo restart API), CONTROLLO→Mappa dell'Avventura, e i 3 episodi di Nina. Poi decidere: rinomina nomi sidebar (⚠ collisione 'Bussola'), schedulare watcher 48h (UAC), incoerenza ⟡ pilota-vs-arco, scrivere EP_AV_03+ (RAG/Wiki/Agenti/Orchestrazione).",
-  "session_count": 43,
+  "session_count": 44,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-09T12:51:08.011561"
+      "last_activity": "2026-06-09T13:05:36.443441"
     },
     "VITA_NATURA": {
       "status": "active",

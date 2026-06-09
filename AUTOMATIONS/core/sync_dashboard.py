@@ -50,7 +50,7 @@ def _run(rel_args: list[str]) -> None:
 
 
 def sync(verbose: bool = False) -> dict:
-    did = {"storie": False, "critiche": False}
+    did = {"storie": False, "critiche": False, "desktop": False}
     try:
         # 1) STORIE: rebuild episodes.json se un .md episodio è più recente
         ep_dir = BASE / "CONTENT_ENGINE" / "DATABASE" / "episodes"
@@ -66,11 +66,21 @@ def sync(verbose: bool = False) -> dict:
         if bussola.exists() and (not todos.exists() or _changed_by_hash(bussola, stamp)):
             _run(["NODES/AUDIT_AGENT/night_audit.py", "--bussola-only"])
             did["critiche"] = True
+
+        # 3) DESKTOP: mirror PURO di DA_FARE_FATTO.md (il PIANO vive in PROSSIMA_SESSIONE.md)
+        desk = Path.home() / "Desktop" / "da fare e cosa ho fatto.txt"
+        if bussola.exists():
+            src = bussola.read_text(encoding="utf-8")
+            cur = desk.read_text(encoding="utf-8") if desk.exists() else None
+            if cur != src:
+                desk.write_text(src, encoding="utf-8")
+                did["desktop"] = True
     except Exception:
         pass
     if verbose:
         print(f"sync: storie={'rebuilt' if did['storie'] else 'ok'} · "
-              f"critiche={'refreshed' if did['critiche'] else 'ok'}")
+              f"critiche={'refreshed' if did['critiche'] else 'ok'} · "
+              f"desktop={'mirrored' if did['desktop'] else 'ok'}")
     return did
 
 

@@ -19,7 +19,8 @@
 <!-- /TOC -->
 
 # PROSSIMA SESSIONE — Piano (lista da seguire punto per punto)
-*Consolidato sessione #20-21 · 04/06/2026 · gemello di `Desktop/TITANIUM_OS_PIANO.txt`*
+*Consolidato sessione #20-21 · 04/06/2026 · **casa UNICA del PIANO** (09/06: il Desktop è ora
+solo mirror della bussola; la vecchia copia Desktop è in `DOCS/_archivio_piano_desktop_20260609.txt`).*
 
 > Regola d'oro: **completare e far FUNZIONARE l'ecosistema prima dei soldi.**
 > Additivo, reversibile, committato. **Non perdere episodi/contenuti.** Ibrido (locale+Claude, RETE+RAG).

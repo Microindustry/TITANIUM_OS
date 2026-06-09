@@ -48,8 +48,10 @@ ogni strumento/nodo in italiano semplice (cosa fa · come si usa · se è acceso
 Matteo governa il sistema senza tenerlo a mente. Tienilo aggiornato quando aggiungi nodi.
 
 **BUSSOLA (DA_FARE_FATTO.md):** scaletta condivisa io↔Matteo. Regole: non si cancella
-mai (si cambia stato `[✓]/[◐]/[ ]/[✗]/[💡]`), append in cima, canonica nel repo +
-mirror su Desktop `da fare e cosa ho fatto.txt` (tenerli allineati).
+mai (si cambia stato `[✓]/[◐]/[ ]/[✗]/[💡]`), append in cima, canonica nel repo. Il
+Desktop `da fare e cosa ho fatto.txt` è un **mirror puro auto-aggiornato** (lo scrive
+`AUTOMATIONS/core/sync_dashboard.py` a fine sessione, hook Stop — non editarlo a mano).
+Il PIANO completo (P0-P8) vive solo in `PROSSIMA_SESSIONE.md`.
 
 ---
 

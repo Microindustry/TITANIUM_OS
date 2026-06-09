@@ -23,10 +23,12 @@
   si scrive `[✗] non fatto — motivo`, non si toglie.
 - **Append in cima**: il blocco della sessione più recente va in alto.
 - Stati: `[✓] fatto` · `[◐] in corso` · `[ ] da fare` · `[✗] non fatto` · `[💡] idea`.
-- Canonica = QUESTO file (repo, versionato). Mirror per Matteo = Desktop
-  `da fare e cosa ho fatto.txt`. Li tengo allineati.
-- Il PIANO completo (visione, punti P1-P8) vive nel mirror Desktop + in
-  `PROSSIMA_SESSIONE.md`. Qui sta la scaletta operativa, non tutto il piano.
+- Canonica = QUESTO file (repo, versionato). Il Desktop `da fare e cosa ho fatto.txt`
+  è un **mirror PURO auto-aggiornato** (copia identica di questo file, scritta da
+  `AUTOMATIONS/core/sync_dashboard.py` a fine sessione via hook Stop). Non si edita a mano.
+- Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
+  (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
+  Qui sta la scaletta operativa, non tutto il piano.
 
 ---
 
@@ -38,8 +40,9 @@
       (gate su mtime/hash, near-istantaneo). Agganciato all'**hook Stop** esistente
       (`generate_restart_prompt.bat`) → gira da solo a fine sessione. Già automatici prima:
       RIAVVIO (hook Stop), episodes nel story_agent notturno, bussola_todos nel night_audit @03:52.
-      ⚠ Il **mirror Desktop** lo tengo a mano/`salva` (contiene il PIANO completo: auto-sovrascriverlo
-      rischierebbe di perderlo — se vuoi lo rendo mirror puro spostando il PIANO in PROSSIMA_SESSIONE.md).
+- [✓] **Mirror Desktop PURO** (09/06, scelta B): il Desktop `da fare e cosa ho fatto.txt` è ora
+      una copia identica auto-aggiornata di questo file (sync_dashboard → hook Stop). Il PIANO (P0-P8)
+      vive **solo** in `PROSSIMA_SESSIONE.md`; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt` (perdita zero).
 - [✓] **STORIE → 2 sotto-voci** (09/06): sotto STORIE ora ci sono **NINA** (→ episodi, stagione AV)
       e **Mappa Avventura** (→ la mappa, indentata sotto Nina). [richiesta Matteo]
 - [✓] **CONTROLLO** (nuova vista, in cima a Sistema): un posto solo che elenca ogni

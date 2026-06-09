@@ -1,18 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-09T02:07:54.296567",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_012.md",
-      "snapshot": "BACKUPS\\20260609_020754\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_012.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-09T02:07:54.371031",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
-      "snapshot": "BACKUPS\\20260609_020754\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-09T02:07:54.440981",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
       "snapshot": "BACKUPS\\20260609_020754\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
@@ -2998,6 +2986,18 @@
       "timestamp": "2026-06-09T12:48:33.393156",
       "file": "NODES\\AGENTS\\agents_db.json",
       "snapshot": "BACKUPS\\20260609_124833\\NODES\\AGENTS\\agents_db.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T13:03:51.441529",
+      "file": "PROSSIMA_SESSIONE.md",
+      "snapshot": "BACKUPS\\20260609_130351\\PROSSIMA_SESSIONE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-09T13:05:10.017786",
+      "file": "DOCS\\_archivio_piano_desktop_20260609.txt",
+      "snapshot": "BACKUPS\\20260609_130510\\DOCS\\_archivio_piano_desktop_20260609.txt",
       "type": "snapshot"
     }
   ]
