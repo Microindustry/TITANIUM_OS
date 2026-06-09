@@ -54,7 +54,13 @@
         — Mondo → 7 Regioni (l'arco IA) → episodi/semi tecnici → 3 strati + grafo Pietre.
         Ancorata al canone + materiale reale (ogni regione ha 9-25 episodi-fonte). Pronta
         ad albero per diventare i dati di una vista MAPPA navigabile.
-  - [ ] Trasformarla in dati per la vista (N-livelli) + scrivere gli episodi mancanti.
+  - [✓] **EP_AV_01 scritto** (definitivo): "L'Incantesimo che si Ripete" (l'Automazione,
+        Regione 2) — Nina capisce che un gesto insegnato una volta si ripete da solo
+        (watcher/notturne), open loop → l'LLM. Importato (123 ep, AV=2, 0 orfani).
+  - [ ] Trasformarla in dati per la vista (N-livelli) + scrivere gli episodi mancanti (Regioni 3-7).
+  - [ ] ⚠ **Incoerenza ⟡ da risolvere (con Matteo)**: EP_AV_00 numera l'Entropia come `⟡2`,
+        ma l'arco usa `⟡2`=Automazione. In EP_AV_01 ho citato le Pietre per NOME (no clash).
+        Decidere: l'Entropia è una Pietra a sé (fuori arco) o si rinumera? Non tocco il pilota.
 - [ ] **Nomi sidebar obsoleti**: AUTOMAZ./MAPPA in chiaro (⚠ collisione "Bussola": da
       confermare). RETE ora è di fatto il grafo RAG+Wiki → valutare rinomina "GRAFO/WIKI".
 - [ ] Altre viste da ripulire una a una (estetica/nomi) — dopo STORIE/CONTROLLO/RETE.

@@ -1,3 +1,22 @@
+<!-- TOC -->
+
+- [MAPPA DELLAVVENTURA  bozza multi-livello (il mondo dove Nina si muove)](#mappa-dellavventura-bozza-multi-livello-il-mondo-dove-nina-si-muove)
+  - [LIVELLO 0  IL MONDO (Il Sistema)](#livello-0-il-mondo-il-sistema)
+  - [LIVELLO 1  LE 7 REGIONI (larco: la storia dellIA)](#livello-1-le-7-regioni-larco-la-storia-dellia)
+  - [LIVELLO 2  DENTRO OGNI REGIONE](#livello-2-dentro-ogni-regione)
+    - [Regione 1  LA TRACCIA  il Grande Loop 1](#regione-1-la-traccia-il-grande-loop-1)
+    - [Regione 2  LOFFICINA CHE GIRA SOLA  lAutomazione 2](#regione-2-lofficina-che-gira-sola-lautomazione-2)
+    - [Regione 3  LA MENTE CHE PARLA  lLLM 3](#regione-3-la-mente-che-parla-lllm-3)
+    - [Regione 4  LA BIBLIOTECA DELLE FONTI  il RAG 4](#regione-4-la-biblioteca-delle-fonti-il-rag-4)
+    - [Regione 5  LA GRANDE MAPPA  la Wiki / il grafo 5](#regione-5-la-grande-mappa-la-wiki-il-grafo-5)
+    - [Regione 6  LESERCITO SILENZIOSO  gli Agenti 6](#regione-6-lesercito-silenzioso-gli-agenti-6)
+    - [Regione 7  IL DIRETTORE  lOrchestrazione 7](#regione-7-il-direttore-lorchestrazione-7)
+  - [LIVELLO 3  DENTRO UN EPISODIO (esempio sul pilota)](#livello-3-dentro-un-episodio-esempio-sul-pilota)
+  - [IL GRAFO DELLE PIETRE (prerequisiti  la spirale a scala macro)](#il-grafo-delle-pietre-prerequisiti-la-spirale-a-scala-macro)
+  - [NOTE PER LA PROSSIMA TAPPA (non ora)](#note-per-la-prossima-tappa-non-ora)
+
+<!-- /TOC -->
+
 # MAPPA DELL'AVVENTURA — bozza multi-livello (il mondo dove Nina si muove)
 
 *Versione: 0.1 BOZZA | 2026-06-07 | Canon del binario AVVENTURA · si appoggia a
@@ -59,7 +78,7 @@ successiva** (non si entra nel RAG senza l'LLM, ecc. — la spirale a scala macr
 ### Regione 2 · L'OFFICINA CHE GIRA SOLA — *l'Automazione* ⟡2
 - **Concetto:** un incantesimo che, una volta detto, si ripete da solo senza di te.
 - **Vero dietro:** watcher + task notturni — il gesto ripetuto diventa codice che gira.
-- **Episodi Nina:** ✍️ `EP_AV_01` l'Automazione *(materiale pronto)*.
+- **Episodi Nina:** ✅ `EP_AV_01` "L'Incantesimo che si Ripete" *(scritto, definitivo)*.
 - **Semi tecnici:** `MOM_01` La Prima Automazione · `EP_AUTO_29` Story Agent · "Il Sistema
   Respira da Solo" · "Il Sistema Che Si Ricorda da Solo".
 - **Pietre:** fonda ⟡2 · richiama ⟡1 (il Loop diventa automatico).
