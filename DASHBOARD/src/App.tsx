@@ -52,6 +52,7 @@ const MetodoView         = lazy(() => import("./components/MetodoView").then(m =
 const RagChatView        = lazy(() => import("./components/RagChatView").then(m => ({ default: m.RagChatView })));
 const ControlloView      = lazy(() => import("./components/ControlloView").then(m => ({ default: m.ControlloView })));
 const AvventuraMapView   = lazy(() => import("./components/AvventuraMapView").then(m => ({ default: m.AvventuraMapView })));
+const ProcedimentiView   = lazy(() => import("./components/ProcedimentiView").then(m => ({ default: m.ProcedimentiView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -287,15 +288,24 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
 
       {/* Footer sidebar */}
       <div className={`flex-shrink-0 p-2 border-t border-slate-800/60 space-y-1`}>
-        {/* Status online */}
-        {!collapsed && (
-          <div className="flex items-center gap-2 px-3 py-1.5">
-            <Activity size={9} className={online ? "text-emerald-500" : "text-slate-600"} />
-            <span className={`text-[8px] font-mono uppercase tracking-widest ${online ? "text-emerald-500/70" : "text-slate-600"}`}>
+        {/* Status online — cliccabile: apre i Procedimenti (come gira il sistema) */}
+        <button
+          onClick={() => onNavigate("procedimenti")}
+          title="API live — clicca: come gira il sistema (apertura, profilo, automazioni)"
+          className={`group w-full flex items-center gap-2 rounded-lg transition-all
+            ${collapsed ? "justify-center px-0 py-2" : "px-3 py-1.5"}
+            ${view === "procedimenti" ? "bg-slate-800/70" : "hover:bg-slate-800/40"}`}
+        >
+          <Activity size={9} className={online ? "text-emerald-500" : "text-slate-600"} />
+          {!collapsed && (
+            <span className={`text-[8px] font-mono uppercase tracking-widest flex-1 text-left ${online ? "text-emerald-500/70" : "text-slate-600"}`}>
               {online ? "API live" : "offline"}
             </span>
-          </div>
-        )}
+          )}
+          {!collapsed && (
+            <span className="text-[7px] font-mono text-slate-700 group-hover:text-slate-400 uppercase">info</span>
+          )}
+        </button>
         {/* Toggle collapse */}
         <button onClick={onToggle}
           className="w-full flex items-center justify-center py-2 rounded-lg
@@ -479,6 +489,7 @@ function AppInner() {
               </div>
             )}
             {view === "controllo"   && <ControlloView />}
+            {view === "procedimenti" && <ProcedimentiView />}
             {view === "avventura-mappa" && <AvventuraMapView />}
             {view === "storie"      && <StorieView />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}

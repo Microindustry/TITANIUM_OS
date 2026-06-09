@@ -35,6 +35,10 @@
 ## Sessione #34 · 07/06/2026
 
 ### [◐] INTERFACCIA — anti-sovraccarico ("troppi strumenti, non so gestire")
+- [✓] **Vista PROCEDIMENTI** (09/06, richiesta Matteo "voglio consultarlo"): cliccando lo
+      stato **"API live"** (footer sidebar) si apre una pagina che spiega — in italiano semplice —
+      come gira il sistema: (1) apertura sessione, (2) il profilo, (3) aggiornamenti automatici
+      a fine sessione, (4) notturne + **cosa otteniamo**. `ProcedimentiView.tsx`. Build verde.
 - [✓] **Apertura sessione verificata** (09/06): collegamento Desktop "Claude Code [TI]" →
       `CLAUDE_CODE.bat` (risolve claude.exe v2.1.165 + prompt "Leggi DA_FARE_FATTO+RIAVVIO+STATE").
       "TITANIUM_OS [PS]" → PowerShell in TI_ROOT col profilo. Fix: commento `--continue` fuorviante
