@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-10T12:23:07.352641",
+  "last_update": "2026-06-10T12:29:46.438009",
   "active_milestone": "Sessione #35: SISTEMA VERIFICA reale (git pulito, build TS 0 errori, RAG GPU ok) + RETE riparata (restart API → /api/graph/graphify e /api/rag/vectors da 404/500 → 200, toggle Conoscenza/Sistema LIVE) + n8n installato GLOBALE (2.25.6) e avvio-al-login riagganciato (START_LOGIN.bat usa binario globale, fallback npx) + diagnosi STORIE (124 ep ma lavoro recente 0 episodi) + VISIONE Nina-PRODOTTO catturata nel canone (BIBBIA §0-bis: derivazione educativa di MIMS, scaletta/changelog-driven, scope tech+finanza).",
-  "last_action": "Modifica a ControlloView.tsx",
+  "last_action": "Modifica a night_audit.py",
   "next_step": "STORIE: creare i 'semi' tecnici reali del lavoro recente che hanno 0 episodi (Graphify/RAG→Wiki, RETE-grafo, AI Watcher, Centro di Controllo) → CONTENT_ENGINE/DATABASE/episodes + build_episodes_json.py. POI Nina rifatta da zero (impronta validata, agganciata alla scaletta). POI nodo SELF_IMPROVE (agente autonomo notturno, read-only+PR, mai merge auto su main).",
   "session_count": 44,
   "pillars": {
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-10T12:22:32.795350"
+      "last_activity": "2026-06-10T12:29:46.366038"
     },
     "VITA_NATURA": {
       "status": "active",

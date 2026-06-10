@@ -1,18 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-09T12:36:41.145331",
-      "file": "DASHBOARD\\tsconfig.json",
-      "snapshot": "BACKUPS\\20260609_123641\\DASHBOARD\\tsconfig.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-09T12:36:41.225332",
-      "file": "DASHBOARD\\tsconfig.app.json",
-      "snapshot": "BACKUPS\\20260609_123641\\DASHBOARD\\tsconfig.app.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-09T12:36:41.288343",
       "file": "DASHBOARD\\tsconfig.node.json",
       "snapshot": "BACKUPS\\20260609_123641\\DASHBOARD\\tsconfig.node.json",
@@ -2998,6 +2986,18 @@
       "timestamp": "2026-06-10T12:22:31.905666",
       "file": "DASHBOARD\\tsconfig.node.json",
       "snapshot": "BACKUPS\\20260610_122231\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-10T12:29:46.366038",
+      "file": "AUTOMATIONS\\core\\sync_dashboard.py",
+      "snapshot": "BACKUPS\\20260610_122946\\AUTOMATIONS\\core\\sync_dashboard.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-10T12:29:46.438009",
+      "file": "NODES\\AUDIT_AGENT\\night_audit.py",
+      "snapshot": "BACKUPS\\20260610_122946\\NODES\\AUDIT_AGENT\\night_audit.py",
       "type": "snapshot"
     }
   ]
