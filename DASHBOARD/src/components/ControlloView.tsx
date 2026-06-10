@@ -6,7 +6,7 @@
 import { useGlobalState } from "../hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "../stores/systemStore";
 import {
-  Gauge, Brain, Network, Radar, Moon, FileSearch, Mic, Sparkles,
+  Gauge, Brain, Radar, Moon, Mic,
   Bot, Server, ArrowRight, Circle,
 } from "lucide-react";
 

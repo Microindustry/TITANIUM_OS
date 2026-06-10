@@ -797,7 +797,7 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_00_la_bambina_e_la_giuntura.md": {
       "title": "EP_AV_00 — La Bambina e la Giuntura",
-      "updated_at": "2026-06-07T11:38:43.240634",
+      "updated_at": "2026-06-09T12:35:53.624994",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_00_la_bambina_e_la_giuntura.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md": {
@@ -817,7 +817,7 @@
     },
     "CONTENT_ENGINE/DATABASE/MONDO/BIBBIA_DEL_MONDO.md": {
       "title": "BIBBIA DEL MONDO — \"Il Sistema\" (binario Avventura)",
-      "updated_at": "2026-06-07T16:41:16.692656",
+      "updated_at": "2026-06-10T12:16:11.932819",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__BIBBIA_DEL_MONDO.md"
     },
     ".claude/skills/salva/SKILL.md": {
@@ -827,12 +827,12 @@
     },
     "DA_FARE_FATTO.md": {
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
-      "updated_at": "2026-06-09T06:50:56.926236",
+      "updated_at": "2026-06-09T20:43:51.110830",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
       "title": "PERCORSO EVOLUTIVO — come imparano i lettori di Nina",
-      "updated_at": "2026-06-07T16:41:16.770763",
+      "updated_at": "2026-06-09T12:36:12.133652",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__PERCORSO_EVOLUTIVO.md"
     },
     "NODES/graphify-out/GRAPH_REPORT.md": {
@@ -867,15 +867,20 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_02_la_mente_che_parla.md": {
       "title": "La Mente che Parla",
-      "updated_at": "2026-06-09T12:33:01.633704",
+      "updated_at": "2026-06-09T12:35:57.326216",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_02_la_mente_che_parla.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_01_l_automazione.md": {
       "title": "L'Incantesimo che si Ripete",
-      "updated_at": "2026-06-09T12:33:01.734540",
+      "updated_at": "2026-06-09T12:35:53.709830",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_01_l_automazione.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260609_vista_procedimenti_consultabile_da_.md": {
+      "title": "TITANIUM_OS — S2 E07",
+      "updated_at": "2026-06-10T02:07:53.463137",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260609_vista_procedimenti_consultabile_da_.md"
     }
   },
-  "last_built": "2026-06-09T13:03:51.521852",
-  "total": 175
+  "last_built": "2026-06-10T12:22:00.458531",
+  "total": 176
 }

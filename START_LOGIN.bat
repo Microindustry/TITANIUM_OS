@@ -6,6 +6,7 @@
 set PYTHON=%USERPROFILE%\AppData\Local\Programs\Python\Python311\python.exe
 set PYTHONW=%USERPROFILE%\AppData\Local\Programs\Python\Python311\pythonw.exe
 set PNPM=%USERPROFILE%\AppData\Roaming\npm\pnpm.cmd
+set N8N=%USERPROFILE%\AppData\Roaming\npm\n8n.cmd
 set NODE=C:\Program Files\nodejs
 set TI_ROOT=%USERPROFILE%\TITANIUM_OS
 call "%TI_ROOT%\_resolve_claude.bat"
@@ -29,8 +30,12 @@ start "" cmd /c "cd /d "%TI_ROOT%\DASHBOARD" && "%PNPM%" dev --silent"
 :: 3. RAG rebuild in background (sync MENTE/ -> ChromaDB)
 start "" "%PYTHONW%" "%TI_ROOT%\NODES\MENTE_RAG\rag_engine.py" --rebuild
 
-:: 4. n8n — porta 5678
-start "" cmd /c ""%NODE%\npx.cmd" n8n"
+:: 4. n8n — porta 5678 (binario globale installato 09/06; fallback npx se assente)
+if exist "%N8N%" (
+    start "" cmd /c ""%N8N%" start"
+) else (
+    start "" cmd /c ""%NODE%\npx.cmd" n8n"
+)
 
 :: 5. Watchdog (backup + changelog + state)
 start "" "%PYTHONW%" "%TI_ROOT%\AUTOMATIONS\core\watcher.py"

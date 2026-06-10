@@ -2,6 +2,7 @@
 
 - [BIBBIA DEL MONDO  Il Sistema (binario Avventura)](#bibbia-del-mondo-il-sistema-binario-avventura)
   - [0. PERCHÉ ESISTE (e su cosa è fondato)](#0-perché-esiste-e-su-cosa-è-fondato)
+  - [0-bis. VISIONE 09/06  Nina è un PRODOTTO (la derivazione educativa di MIMS)](#0-bis-visione-0906-nina-è-un-prodotto-la-derivazione-educativa-di-mims)
   - [1. IL MONDO  Il Sistema](#1-il-mondo-il-sistema)
   - [2. IL NEMICO  lEntropia (il cattivo a 360)](#2-il-nemico-lentropia-il-cattivo-a-360)
   - [3. I PROTAGONISTI (scelti DOPO la ricerca  P2a-bis / P2g)](#3-i-protagonisti-scelti-dopo-la-ricerca-p2a-bis-p2g)
@@ -55,6 +56,43 @@ NON sono negoziabili:
 3. **Predisposto agli ingressi economici**: la struttura (episodi, arco, formati animati)
    è già pronta a diventare prodotto. Leve di monetizzazione **predisposte e spente**
    finché non funziona — coerente con la regola "prima deve funzionare".
+
+---
+
+## 0-bis. VISIONE 09/06 — Nina è un PRODOTTO (la derivazione educativa di MIMS)
+
+*Aggiunto 09/06 da una nota vocale di Matteo (post turno di notte). Estende §0, non lo sostituisce.*
+
+Quattro cose che alzano il livello di cosa è Nina. Non sono "colore": sono vincoli di prodotto.
+
+1. **Nina = la versione educativa introduttiva di MIMS** (MICRO INDUSTRY MODULAR SYSTEM).
+   Non è un sotto-progetto a sé: è una **derivazione del prodotto**. La ricerca del prodotto
+   perfetto — modularità, scalabilità, un processo standardizzato applicabile nell'industria —
+   ha un gemello educativo: Nina. Stessa filosofia (moduli, scala, riuso), pubblico diverso
+   (le nuove generazioni). *(lega [[project_mims_core]] + [[project_mims_market]])*
+
+2. **La domanda-madre (perché esiste, davvero).** "Come faccio a crescere mio figlio (2024) con
+   le tradizioni di famiglia — la domenica a pranzo, il vestito buono, i cartoni — quando davanti
+   mi trovo roba che nemmeno io, adulto appassionato, riesco a capire?" Nina nasce qui: rende
+   comprensibile alla generazione di suo figlio un mondo che corre più veloce dei genitori.
+
+3. **Scaletta-driven / changelog-driven (il motore).** Nina **segue e interagisce con la scaletta
+   reale** (`DA_FARE_FATTO.md` + i changelog). Il protagonista è la **persona curiosa, non
+   l'esperto "corretto"**: attraversa una tecnologia dopo l'altra, la implementa, sbaglia, la
+   ottimizza — *io sbaglio → sistemo → aggiorno*. Ogni cambiamento/upgrade/ottimizzazione è già
+   tracciato in un `.md` (regola "non perdere i dati"): un filtro di rilevanza riconosce ciò che
+   conta e da lì si auto-generano gli episodi. Nina = il **diario animato del percorso vero di
+   apprendimento**, non una favola inventata a tavolino. *(vedi §9 — il processo)*
+
+4. **Scope più largo dell'arco IA + nuova verticale FINANZA.** L'arco "storia dell'IA"
+   (LLM→RAG→agenti) resta la **spina dorsale**, ma Nina non è limitata a quello: può raccontare
+   come **storia della buonanotte** qualsiasi cosa complessa — *es. "cos'è un ambiente Python"*.
+   Il modello mentale è il cartone VHS di vent'anni fa che ti spiegava il corpo umano: nessuno ti
+   vieta di imparare *cosa sono* questi strumenti e *come si ottimizzano*. E — "da bravo papà" —
+   ci entreranno anche **lezioni di finanza personale**. (Verticali: Tech · Finanza · [aperte].)
+
+> In una riga: **Nina è MIMS per la mente di un bambino** — lo stesso sistema modulare, scalabile
+> e tracciato che costruisce l'officina, usato per costruire la testa della prossima generazione.
 
 ---
 

@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-09T03:38:50.155364",
+  "scanned_at": "2026-06-10T03:38:38.783368",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 219,
+  "total_files": 220,
   "files_read": 5,
-  "files_skipped": 214,
+  "files_skipped": 215,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -1709,6 +1709,13 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
       "type": "md",
       "size_kb": 7.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
+      "type": "md",
+      "size_kb": 6.9,
       "readable": false,
       "extracts": {}
     },

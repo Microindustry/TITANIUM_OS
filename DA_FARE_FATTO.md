@@ -32,6 +32,33 @@
 
 ---
 
+## Sessione #35 · 10/06/2026
+
+### [◐] STORIE — episodi reali del lavoro recente (PRIORITÀ prossima sessione)
+- [✓] Diagnosi (09/06): 124 episodi ma quasi tutti AUTO/recap; il lavoro grosso recente
+      ha **0 episodi** → graphify=0, watcher=0, wiki=0, controllo=0. AV (Nina) solo 3.
+- [ ] **Creare i "semi" tecnici mancanti** (= materiale-fonte che poi nutre Nina):
+      Graphify/RAG→Wiki · RETE-grafo · AI News Watcher · Centro di Controllo. Sorgenti in
+      `CONTENT_ENGINE/DATABASE/episodes/` (S2_SISTEMA/SA_AUTO) → `scripts/build_episodes_json.py`.
+- [ ] Decidere all'avvio: generazione via pipeline `milestone_to_episode` vs scrittura a mano.
+
+### [💡] NINA = PRODOTTO (derivazione educativa di MIMS) — visione 09/06, catturata
+- [✓] Canone aggiornato: `BIBBIA_DEL_MONDO.md` **§0-bis** + memoria durevole. Nina = versione
+      educativa introduttiva di **MIMS**, scaletta/changelog-driven (la persona curiosa che
+      *sbaglia→sistema→aggiorna*), scope > arco IA (anche "cos'è un ambiente Python") + verticale **finanza**.
+- [ ] **Nina probabilmente da RIFARE DA ZERO**: impronta EP_AV_00/01/02 validata come STILE,
+      ma struttura da agganciare alla scaletta reale. **Dopo** gli episodi reali.
+
+### [ ] SELF_IMPROVE — agente autonomo notturno (NODO, DOPO gli episodi) [idea Matteo 10/06]
+- **Cosa**: una sessione che si apre da sola, interroga il sistema, identifica errori/migliorie,
+  **propone** le fix. Non parte da zero: estende `night_audit.py` (@03:52, Sonnet → cartella clinica).
+- **Guardrail non negoziabile** (regola "additivo, mai cancella-e-rifai"): **read-only + propone
+  su branch/PR, MAI merge automatico su `main`**. Tu approvi al mattino. Versioni, non verità.
+- **Modelli**: Sonnet/Haiku per scansionare la notte, **Opus solo sulle decisioni** (regola lavoro continuo).
+- [ ] Da costruire come nodo dopo le STORIE. [posizione in scaletta: dopo gli episodi, prima di scalare Nina]
+
+---
+
 ## Sessione #34 · 07/06/2026
 
 ### [◐] INTERFACCIA — anti-sovraccarico ("troppi strumenti, non so gestire")
@@ -101,6 +128,17 @@
       rende leggibile da solo).
 
 ### [◐] VERIFICA TOTALE (prima delle automazioni)
+- [✓] **SISTEMA VERIFICA (09/06, sessione #35)**: check reale eseguito.
+      Git pulito (origin/main 0↔0, solo `watchdog_status.json` auto-gen). Build TS dashboard
+      **0 errori** (`tsc --noEmit`). RAG GPU CLI risponde corretto (Config G). API 5001 ✓ ·
+      Dashboard 5173 ✓ · **n8n 5678 ✓** (`/healthz`={"status":"ok"}). **n8n installato GLOBALE**
+      (`npm i -g n8n` → 2.25.6, binario `%AppData%\npm\n8n.cmd`): da ora `n8n start` parte
+      subito senza reinstall npx. **[✓] avvio-al-login riagganciato** (09/06): `START_LOGIN.bat`
+      step 4 ora usa `%N8N% start` (binario globale) con fallback a npx se assente — prima
+      reinstallava ~4min a ogni login, ora parte in secondi. **RETE riparata
+      live**: `/api/graph/graphify` e `/api/rag/vectors` davano 404/500 perché l'API girava
+      il codice pre-notte → eseguito `restart_api.ps1` → entrambi **HTTP 200** (toggle
+      Conoscenza/Sistema ora operativo). Resta aperto: path hardcoded `benen` in 6 file tools/ legacy.
 - [✓] **Git**: `origin/main` allineato (0↔0). Tutto il lavoro reale committato+pushato.
       Modifiche non committate = SOLO auto-generate (TOC skill, `DATA/views` rigenerati,
       `STATE.json`, changelog). Nessun lavoro umano in sospeso.

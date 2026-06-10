@@ -16,7 +16,7 @@
     {
       "level": 2,
       "title": "2. LE PIETRE — il sistema dei rimandi (i \"numerini\")",
-      "content": "Ogni **concetto fondante** è una **Pietra** numerata. È introdotta UNA volta, in un\nepisodio, con il suo esempio semplice. Da lì in poi è un punto d'appoggio.\n\n- Notazione inline (piccola, non invadente): un concetto che si appoggia a una Pietra\n  porta un piccolo rimando, es. il Grande Loop`⟡1`. Il lettore esperto lo ignora; chi\n  non ricorda segue il numerino e va a **ripassare** quella Pietra.\n- **Non** è una nota a piè di pagina: è \"il numero della pagina da studiare\". Nel libro\n  sarà un numerino di pagina; negli episodi è l'**ID dell'episodio** che fonda la Pietra.\n- Ogni episodio dichiara in fondo:\n  - **Pietre nuove**: i concetti che fonda (con numero).\n  - **Pietre richiamate**: `⟡n → EP_AV_xx` (cosa ripassare).\n- Questo costruisce un **grafo dei prerequisiti**: un episodio avanzato non può usare una\n  Pietra non ancora posata. È anche ciò che alimenta la ripetizione spaziata (un\n  controllo automatico può dire \"la Pietra 1 non torna da 5 episodi → richiamala\").\n\n> Le Pietre sono il ponte tra didattica e produzione: il \"concept brief\" della pipeline\n> (bibbia sez.9) include sempre *quali Pietre fonda e quali richiama*.\n\n---"
+      "content": "Ogni **concetto fondante** è una **Pietra** numerata. È introdotta UNA volta, in un\nepisodio, con il suo esempio semplice. Da lì in poi è un punto d'appoggio.\n\n- Notazione inline (piccola, non invadente): un concetto che si appoggia a una Pietra\n  porta un piccolo rimando, es. il Grande Loop`⟡1`. Il lettore esperto lo ignora; chi\n  non ricorda segue il numerino e va a **ripassare** quella Pietra.\n- **Numerazione (canone, 09/06):** `⟡1`…`⟡7` sono le **Pietre dell'arco** = le 7 tappe\n  della storia dell'IA (⟡1 Loop, ⟡2 Automazione, ⟡3 LLM, ⟡4 RAG, ⟡5 Wiki, ⟡6 Agenti,\n  ⟡7 Orchestrazione). I concetti fondanti **fuori dall'arco** (forze del mondo) usano una\n  **lettera**, non un numero: es. `⟡E` = l'Entropia. Così la sequenza dell'arco resta pulita\n  e non collide con le Pietre \"di sfondo\".\n- **Non** è una nota a piè di pagina: è \"il numero della pagina da studiare\". Nel libro\n  sarà un numerino di pagina; negli episodi è l'**ID dell'episodio** che fonda la Pietra.\n- Ogni episodio dichiara in fondo:\n  - **Pietre nuove**: i concetti che fonda (con numero).\n  - **Pietre richiamate**: `⟡n → EP_AV_xx` (cosa ripassare).\n- Questo costruisce un **grafo dei prerequisiti**: un episodio avanzato non può usare una\n  Pietra non ancora posata. È anche ciò che alimenta la ripetizione spaziata (un\n  controllo automatico può dire \"la Pietra 1 non torna da 5 episodi → richiamala\").\n\n> Le Pietre sono il ponte tra didattica e produzione: il \"concept brief\" della pipeline\n> (bibbia sez.9) include sempre *quali Pietre fonda e quali richiama*.\n\n---"
     },
     {
       "level": 2,
@@ -49,7 +49,7 @@
       "content": "- La **mappa delle Pietre** (quale concetto, quale episodio lo fonda, cosa richiama) si\n  tiene in coda agli episodi e, in prospettiva, in un indice `PIETRE.md` o in dashboard.\n- La **pipeline di generazione** (bibbia sez.9) usa questo file: ogni \"concept brief\"\n  dichiara Pietre nuove + richiami + i 3 strati + la key-image.\n- **Controllo ripetizione spaziata** (futuro, automazione): segnala quando una Pietra\n  importante non viene richiamata da troppi episodi → candidato richiamo.\n\n> Prossimo passo a canone: man mano che nascono gli episodi, popolare l'indice delle\n> Pietre e disegnare le key-image (anche solo descritte, finché l'animazione è spenta)."
     }
   ],
-  "word_count": 1734,
-  "updated_at": "2026-06-07T16:41:16.770763",
-  "built_at": "2026-06-09T12:36:12.143636"
+  "word_count": 1800,
+  "updated_at": "2026-06-09T12:36:12.133652",
+  "built_at": "2026-06-09T20:51:36.767489"
 }

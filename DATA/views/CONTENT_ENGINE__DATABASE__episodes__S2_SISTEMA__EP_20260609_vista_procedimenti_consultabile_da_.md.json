@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260609_vista_procedimenti_consultabile_da_.md",
+  "title": "TITANIUM_OS — S2 E07",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2 E07](#titaniumos-s2-e07)\n  - [Il Mondo di Nina](#il-mondo-di-nina)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  La Domanda che Non Ti Aspetti](#atto-i-la-domanda-che-non-ti-aspetti)\n  - [ATTO II  Il Canone e le Pietre](#atto-ii-il-canone-e-le-pietre)\n  - [ATTO III  Il Desktok come Specchio](#atto-iii-il-desktok-come-specchio)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"Il Mondo di Nina\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — La Domanda che Non Ti Aspetti",
+      "content": "Ci sono giorni in cui costruisci strumenti. E poi ci sono i giorni in cui ti fermi e chiedi: *per chi?*\n\nLa sessione #34 era partita come tutte le altre — bussola dei todo, verifica del flusso di apertura, un fix al `.bat` di CLAUDE_CODE che aveva un commento sbagliato. Roba di manutenzione. Il tipo di lavoro che non finisce mai nei titoli ma tiene in piedi tutto il resto.\n\nPoi Matteo aveva chiesto una cosa strana.\n\nNon \"aggiungi questa feature\". Non \"risolvi questo bug\". Aveva chiesto di spostare la Mappa dell'Avventura fuori dalla sezione CONTROLLO perché era *troppo bella per stare lì*.\n\nQuesta è una frase che i project manager non dicono mai. È la frase di qualcuno che ha costruito qualcosa e se ne è accorto solo dopo, guardandola da fuori.\n\nLa Mappa dell'Avventura era nata come materiale didattico — un modo per spiegare GENESIS a una bambina senza dire \"RAG\" e \"ChromaDB\" e \"agenti AI\". Un mondo con regioni. Una protagonista. Una storia che cammina in parallelo alla storia reale.\n\nIl problema era che aveva funzionato troppo bene.\n\nAdesso era un hub navigabile, con sotto-voci proprie sotto STORIE, con episodi scritti e committati — EP_AV_00, EP_AV_01, EP_AV_02 — e la sezione CONTROLLO, quella seria, quella con i grafici e le API, stava diventando il posto sbagliato per contenerla.\n\nLe cose belle hanno bisogno di spazio.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — Il Canone e le Pietre",
+      "content": "Nel mezzo della giornata era emersa un'incoerenza.\n\nLe Pietre ⟡ — le sette tappe dell'arco narrativo di Nina — si erano moltiplicate. Qualcuno (il sistema, un agente, la deriva naturale di un documento che cresce) aveva cominciato a usare il simbolo ⟡ anche per le forze che stavano *fuori* dall'arco. Le ⟡ erano diventate troppo.\n\nIn un progetto software normale, questa è una cosa da dieci minuti. Rinomini una variabile, aggiorni i riferimenti, chiudi il ticket.\n\nIn un progetto con un binario narrativo canonico, è diverso. Perché il canone non è un database — è un accordo. Tra Matteo e il sistema, tra il sistema e chiunque leggerà Nina in futuro. Se le Pietre ⟡ significano tutto, non significano niente.\n\nIl fix `canon+ui` aveva risolto l'incoerenza: ⟡1–⟡7 restano le sette tappe, punto. Le forze fuori-arco usano una notazione separata. I nomi nella sidebar vengono scritti in chiaro, non in codice.\n\nÈ il tipo di decisione che non si vede, che non produce nessuna feature nuova, che non sposta nessun indicatore di progresso. Ma senza quel fix, ogni episodio futuro di Nina avrebbe costruito su una fondazione traballante.\n\nNel pomeriggio erano arrivati EP_AV_01 e EP_AV_02.\n\nEP_AV_01: *\"L'Incantesimo che si Ripete\"* — l'Automazione. Nina incontra una cosa che fa sempre la stessa sequenza di gesti, precisa, instancabile, e capisce che non è magia. È un pattern che qualcuno ha scritto una volta e che adesso gira da solo.\n\nEP_AV_02: *\"La Mente che Parla\"* — l'LLM. Continua l'open loop del primo: una macchina che *capisce*. O almeno sembra. Nina deve decidere cosa significa capire quando non sei sicuro che dentro ci sia qualcuno.\n\nSono episodi per una bambina. Sono anche, se li leggi in un certo modo, la descrizione più onesta di GENESIS che Matteo abbia mai scritto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Il Desktok come Specchio",
+      "content": "Verso sera era arrivata la Scelta B.\n\nMatteo aveva due opzioni per il file desktop \"da fare e cosa ho fatto.txt\". Opzione A: gestirlo a mano. Opzione B: renderlo un mirror automatico — una copia che si aggiorna da sola ogni volta che il sistema chiude una sessione.\n\nHa scelto la B.\n\nSembra una scelta banale. È invece una scelta su come Matteo vuole rapportarsi con la propria memoria di lavoro. Non vuole tenere un registro — vuole che il registro esista già, aggiornato, quando si siede. Il desktop come specchio del sistema, non come promemoria manuale.\n\nLa stessa logica aveva guidato la domanda \"non dovrebbero già essere automatizzate?\" sugli aggiornamenti della dashboard. Matteo non vuole cliccare un bottone per vedere i dati aggiornati. Vuole che i dati siano già lì. Il hook Stop di Claude — il momento in cui una sessione finisce — diventa il trigger per aggiornare tutto.\n\nQuesta è la differenza tra un sistema che usi e un sistema che lavora con te.\n\nIl consolidamento della notte autonoma #34 aveva chiuso il cerchio: STATE.json aggiornato, milestone attivo confermato, quattro nuovi `verified` — watcher v1, UI CONTROLLO, e altri due. La bussola dei todo riletta dalla sorgente: 27 aperti, nessuno perso, nessuno inventato.\n\nIl sistema sa dove siamo.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "C'è qualcosa di strano nel costruire un mondo per spiegare a una bambina come funziona un sistema cognitivo, e poi accorgersi che il mondo è diventato parte del sistema.\n\nNina non è un prodotto. Non è un deliverable. È il modo in cui Matteo ha scelto di rendere visibile qualcosa che altrimenti resterebbe invisibile — non i commit, non i file JSON, ma il *perché* di tutto questo.\n\nGENESIS sta al 70%. V32 sta al 65%. Il capannone è a quattro anni.\n\nE da qualche parte in un file markdown, una bambina sta per incontrare una macchina che sembra capire.\n\nL'open loop resterà aperto finché Nina non avrà una risposta.\n\nMatteo nemmeno lui ce l'ha ancora, del tutto.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "27 todo aperti in bussola, un sistema cognitivo al 70%, una bambina di nome Nina che cammina verso una macchina che parla.  \nIl problema: come spieghi \"intelligenza artificiale\" senza mentire?  \nMatteo ha scritto due episodi di un mondo fantasy per rispondere a quella domanda — e il sistema li ha committati da solo a mezzanotte.  \nEP_AV_03 non esiste ancora.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "METADATI EPISODIO",
+      "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2 E07 |\n| **Titolo** | Il Mondo di Nina |\n| **Data registrazione** | 2026-06-09 |\n| **Sessione GENESIS** | #34 |\n| **Commit totali** | ~14 commit |\n| **Milestone attivo** | CLAUDE.md v4.1.0 + RAG→WIKI + AI News Watcher v1 + binario AVVENTURA |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Feature principali** | EP_AV_01 + EP_AV_02, Mappa Avventura come hub, mirror desktop automatico, fix canone ⟡, dashboard auto-update hook Stop |\n| **Angolo narrativo** | Il binario AVVENTURA — come un sistema cognitivo genera un mondo per spiegarsi |\n| **Target capannone** | 15 luglio 2030 |\n| **Tag** | `#genesis` `#avventura` `#nina` `#canone` `#automazione` `#sessione34` |"
+    }
+  ],
+  "word_count": 1177,
+  "updated_at": "2026-06-10T02:07:53.463137",
+  "built_at": "2026-06-10T12:21:54.338365"
+}
