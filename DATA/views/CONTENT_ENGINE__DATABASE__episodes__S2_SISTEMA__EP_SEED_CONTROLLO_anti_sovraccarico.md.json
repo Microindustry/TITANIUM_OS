@@ -1,0 +1,54 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_CONTROLLO_anti_sovraccarico.md",
+  "title": "Il Centro di Controllo — un posto solo da cui governare",
+  "meta": {
+    "id": "EP_SEED_CONTROLLO",
+    "title": "Il Centro di Controllo — un posto solo da cui governare",
+    "sottotitolo": "Troppi strumenti, niente di cui ricordarsi. La vista che dice di ogni nodo: cosa fa, come si usa, se è acceso.",
+    "stagione": "ST",
+    "data_evento": "2026-06-07",
+    "tags": "[centro-di-controllo, dashboard, anti-sovraccarico, adhd, scaffolding, ux, genesis]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Il Centro di Controllo  un posto solo da cui governare](#il-centro-di-controllo-un-posto-solo-da-cui-governare)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Il Centro di Controllo — un posto solo da cui governare",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "A un certo punto il sistema è diventato più grande della mia testa. RAG, watcher,\nn8n, API, dashboard, scanner, automazioni notturne. Tutti utili. Tutti accesi (forse).\nE ogni volta che ne aprivo uno mi chiedevo: *com'è che si lancia, questo? è su? cosa\nfa di preciso?* Il sistema costruito per **togliermi carico mentale** aveva ricominciato\na darmene."
+    },
+    {
+      "level": 2,
+      "title": "IL PROBLEMA",
+      "content": "Questo non è un dettaglio estetico, per me è strutturale. Lavoro meglio quando non devo\n*tenere a mente* — è tutto il senso di TITANIUM_OS come scaffolding cognitivo. Un sistema\ncon venti nodi che vivono solo nella mia memoria non è uno strumento di sovranità: è un\nnuovo capo a cui rispondere. La complessità che non si vede si paga in ansia."
+    },
+    {
+      "level": 2,
+      "title": "L'AZIONE",
+      "content": "Ho costruito la vista **CONTROLLO** — il *Centro di Controllo*: **un posto unico** che\nelenca ogni strumento del sistema, in **italiano semplice**, con tre cose sole per ciascuno:\n- **cosa fa** (a parole, non in gergo)\n- **come si usa** (il comando, lì pronto)\n- **se è acceso** (stato live, non una promessa)\n\nInsieme: STORIE rifatte **a fisarmonica** per non scommergere, la skill **`salva`** per\nchiudere la sessione in modo standard, e l'apertura del sistema che ora punta **dritta\nsu CONTROLLO**. La prima cosa che vedo non è il caos: è il quadro."
+    },
+    {
+      "level": 2,
+      "title": "IL RISULTATO",
+      "content": "Adesso governo il sistema **senza tenerlo a mente**. Apro, guardo il Centro di Controllo,\nvedo cosa gira e cosa no, e agisco. Il carico è tornato dove deve stare: sullo schermo,\nnon nella testa. E c'è un effetto collaterale che vale doppio — un sistema che si spiega\nda solo in italiano semplice è anche un sistema **cedibile**: domani qualcun altro può\ncapirlo senza di me.\n\nLa regola non scritta: ogni nodo nuovo che aggiungo, lo aggiungo **anche qui**. Se non\nè nel Centro di Controllo, per me non esiste."
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "Ho costruito un sistema per togliermi carico mentale. Poi è diventato venti nodi\nche vivevano solo nella mia testa — e mi sono accorto che era tornato a essere un peso.\nCosì ho fatto un posto solo: per ogni strumento, cosa fa, come si usa, se è acceso.\nIn italiano, non in gergo. Stato vero, non promesse.\nAdesso il sistema lo governo guardandolo, non ricordandolo. E chiunque può raccoglierlo."
+    }
+  ],
+  "word_count": 480,
+  "updated_at": "2026-06-10T12:58:39.628382",
+  "built_at": "2026-06-10T18:51:11.788049"
+}

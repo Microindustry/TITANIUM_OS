@@ -1,6 +1,17 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 36  10/06/2026  STORIE risanate  4 semi tecnici](#sessione-36-10062026-storie-risanate-4-semi-tecnici)
+    - [STORIE  diagnosi completa del sistema (oltre al content gap)](#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)
+    - [Build potenziato (radice del problema metadati)](#build-potenziato-radice-del-problema-metadati)
+    - [4 SEMI TECNICI scritti a mano (stagione ST, con REEL_HOOK)  il content gap chiuso](#4-semi-tecnici-scritti-a-mano-stagione-st-con-reelhook-il-content-gap-chiuso)
+    - [Igiene episodes.json (additiva, nulla cancellato)](#igiene-episodesjson-additiva-nulla-cancellato)
+    - [RIFARE LE STORIE  N-LIVELLI SUI CONTENUTI (il lavoro vero della sessione interrotta)](#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)
+    - [parcheggio NINA RAG/Wiki (EP_AV_03/04)  scritti ma PREMATURI (Nina viene dopo)](#parcheggio-nina-ragwiki-epav0304-scritti-ma-prematuri-nina-viene-dopo)
+  - [Sessione 35  10/06/2026](#sessione-35-10062026)
+    - [STORIE  episodi reali del lavoro recente (FATTO in 36)](#storie-episodi-reali-del-lavoro-recente-fatto-in-36)
+    - [NINA  PRODOTTO (derivazione educativa di MIMS)  visione 09/06, catturata](#nina-prodotto-derivazione-educativa-di-mims-visione-0906-catturata)
+    - [SELF_IMPROVE  agente autonomo notturno (NODO, DOPO gli episodi) idea Matteo 10/06](#selfimprove-agente-autonomo-notturno-nodo-dopo-gli-episodi-idea-matteo-1006)
   - [Sessione 34  07/06/2026](#sessione-34-07062026)
     - [INTERFACCIA  anti-sovraccarico (troppi strumenti, non so gestire)](#interfaccia-anti-sovraccarico-troppi-strumenti-non-so-gestire)
     - [VERIFICA TOTALE (prima delle automazioni)](#verifica-totale-prima-delle-automazioni)
@@ -32,15 +43,77 @@
 
 ---
 
+## Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici
+
+### [✓] STORIE — diagnosi completa del sistema (oltre al content gap)
+- [✓] Sistema sano sul plumbing: 125 ep, 0 orfani, 0 mojibake reale (il `�` era solo
+      il terminale cp1252 che non rende `—`/`→`; dati UTF-8 puliti), pipeline ok.
+- [✓] 3 problemi reali trovati: (1) content gap sui 4 lavori recenti, (2) 13 recap con
+      titolo-serie generico + 0 tag/sottotitolo, (3) data futura EP_S2_01 (2026-07-01).
+
+### [✓] Build potenziato (radice del problema metadati)
+- [✓] `build_episodes_json.py`: ora legge **frontmatter YAML** e lo **toglie dal contenuto**
+      → ogni `.md` scritto a mano entra ricco (tag/sottotitolo) E renderizza pulito. Additivo.
+
+### [✓] 4 SEMI TECNICI scritti a mano (stagione ST, con REEL_HOOK) — il content gap chiuso
+- [✓] Graphify/RAG→Wiki (`EP_SEED_GRAPHIFY`) · RETE-grafo (`EP_SEED_RETE`) ·
+      AI News Watcher (`EP_SEED_WATCHER`) · Centro di Controllo (`EP_SEED_CONTROLLO`).
+- [✓] File rinominati `EP_SEED_*` per evitare collisione `derive_id_from_name` con date esistenti.
+- [✓] Decisione presa (Matteo): scrittura a mano in S2_SISTEMA, non pipeline.
+
+### [✓] Igiene episodes.json (additiva, nulla cancellato)
+- [✓] 13 recap: promosso il **titolo reale** nascosto (`## "..."`) a `title`, serie→sottotitolo,
+      tag derivati dal contenuto (`enrich_recap_episodes.py`).
+- [✓] Data futura clampata a oggi. Stato finale: 129 ep · 0 titoli generici · 0 date future · 0 senza tag.
+- [✓] Build TS dashboard verde (exit 0).
+
+### [◐] RIFARE LE STORIE — N-LIVELLI SUI CONTENUTI (il lavoro vero della sessione interrotta)
+> Correzione rotta: Matteo → "non Nina adesso, stavamo RIFACENDO LE STORIE, ottimizzato,
+> cercando librerie GitHub". **Nina viene DOPO** e si baserà su queste storie (devono essere
+> dettagliate). Pattern chiave: *lo stesso N-livelli del skill-tree, ma sui CONTENUTI*.
+- [✓] Diagnosi: `episodes.json` era una **lista PIATTA** → impossibile appendere approfondimenti.
+- [✓] Ricerca librerie: scartati framework pesanti (Astro/Contentlayer = riscrivere la dashboard,
+      viola "additivo"). Adottato il modello **GitHub-Docs** (gerarchia via frontmatter), in-stack.
+- [✓] `build_episodes_json.py`: legge `parent`/`level` dal frontmatter + `build_tree()` calcola
+      `children[]` e il `level` dalla catena (anti-ciclo). Additivo: i 132 ep piatti restano LV0.
+- [✓] Tipo TS `Episode` esteso (parent_id/level/children opzionali) — retrocompatibile.
+- [✓] `StorieView` card **RICORSIVA**: un episodio con figli mostra gli approfondimenti annidati
+      e indentati (profondità libera); le stagioni elencano solo i LV0 (no figli come fratelli).
+- [✓] PROVA su contenuto vero: `EP_SEED_GRAPHIFY_L1_COMMUNITY` (community detection) agganciato a
+      `EP_SEED_GRAPHIFY` → padre `children:[…]`, figlio `parent/level:1`. 133 ep · tsc exit 0.
+- [✓] **Graphify completato a LV1** (4 approfondimenti, tutti agganciati a `EP_SEED_GRAPHIFY`):
+      community detection · nodi-dio/centralità · query·path·explain · estrattore MENTE ibrido.
+      136 ep · tsc exit 0. Voce 1ª persona · ~6 min · gancio Nina in coda a ognuno · LV illimitati.
+- [✓] **MAPPA di Nina rifatta percorribile a LV** (indicazioni Matteo): `AvventuraMapView` ora è
+      drill-down + briciole + "torna su"; verticali **Tech (7 Regioni)** + **Finanza (predisposto)**;
+      profondità presa dall'**albero vero degli episodi** → si aggiorna da sola man mano che creo.
+      Rinominata "Mappa Avventura" → **"Mappa"**; mappa di sistema → **"ARCHITETTURA"** (no collisione).
+      LV **senza limite** + guardia anti-ciclo. Titolo "Mappa di Nina · le avventure".
+- [✓] **Tutti e 4 i semi completi a LV1** (13 approfondimenti totali, build verde, 145 ep):
+      · GRAPHIFY (4): community · nodi-dio · query/path/explain · estrattore MENTE ibrido
+      · RETE (3): t-SNE 3D · toggle 2 sorgenti (stessa forma) · bug-di-stato (2 server + indice stale)
+      · WATCHER (3): keyless (gh/RSS/YouTube) · tier 48h+rotazione · gate rilevanza (min-rel)
+      · CONTROLLO (3): stato-live (vs promessa) · scaffolding cognitivo · cedibilità
+      Ognuno ha "aggancio Nina" in coda → sono la fonte dettagliata su cui Nina poggerà.
+- [ ] PROSSIMO possibile: LV2 dove serve (es. modularità sotto community) · oppure il passo notturno
+      che propone i *concept brief* (bibbia §9) · oppure iniziare a derivare Nina dai semi LV1.
+
+### [✗→parcheggio] NINA RAG/Wiki (EP_AV_03/04) — scritti ma PREMATURI (Nina viene dopo)
+- [✓] `EP_AV_03` Biblioteca delle Fonti (RAG) · `EP_AV_04` Grande Mappa (Wiki) scritti definitivi.
+- [✗] Fuori sequenza: Matteo ha chiarito che Nina viene DOPO le STORIE rifatte. **Non cancellati**
+      (additivo): restano come riferimento/stile per quando si riprende Nina (racconto lungo a livelli).
+
+---
+
 ## Sessione #35 · 10/06/2026
 
-### [◐] STORIE — episodi reali del lavoro recente (PRIORITÀ prossima sessione)
+### [✓] STORIE — episodi reali del lavoro recente (FATTO in #36)
 - [✓] Diagnosi (09/06): 124 episodi ma quasi tutti AUTO/recap; il lavoro grosso recente
       ha **0 episodi** → graphify=0, watcher=0, wiki=0, controllo=0. AV (Nina) solo 3.
-- [ ] **Creare i "semi" tecnici mancanti** (= materiale-fonte che poi nutre Nina):
+- [✓] **Creati i "semi" tecnici mancanti** (= materiale-fonte che poi nutre Nina):
       Graphify/RAG→Wiki · RETE-grafo · AI News Watcher · Centro di Controllo. Sorgenti in
       `CONTENT_ENGINE/DATABASE/episodes/` (S2_SISTEMA/SA_AUTO) → `scripts/build_episodes_json.py`.
-- [ ] Decidere all'avvio: generazione via pipeline `milestone_to_episode` vs scrittura a mano.
+- [✓] Deciso all'avvio: scrittura a mano (no pipeline `milestone_to_episode`).
 
 ### [💡] NINA = PRODOTTO (derivazione educativa di MIMS) — visione 09/06, catturata
 - [✓] Canone aggiornato: `BIBBIA_DEL_MONDO.md` **§0-bis** + memoria durevole. Nina = versione

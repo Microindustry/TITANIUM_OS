@@ -1,0 +1,54 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_grafo_due_sorgenti.md",
+  "title": "La RETE — vedere il sistema in 3D",
+  "meta": {
+    "id": "EP_SEED_RETE",
+    "title": "La RETE — vedere il sistema in 3D",
+    "sottotitolo": "Una galassia t-SNE che era rotta. Due api_server in lotta, un indice vecchio, e il giorno in cui i 404 sono tornati 200.",
+    "stagione": "ST",
+    "data_evento": "2026-06-10",
+    "tags": "[rete, grafo, t-sne, three.js, graphify, rag, api, debugging, genesis]",
+    "status": "ready",
+    "durata_min": "7"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [La RETE  vedere il sistema in 3D](#la-rete-vedere-il-sistema-in-3d)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "La RETE — vedere il sistema in 3D",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "La RETE è la galassia del sistema: ogni documento e ogni nodo come un punto nello\nspazio, proiettati in 3D con t-SNE dentro Three.js. Ci ruoti dentro, vedi i grappoli,\ncapisci a colpo d'occhio cosa sta vicino a cosa. Bellissima — quando funziona.\nQuel giorno non funzionava."
+    },
+    {
+      "level": 2,
+      "title": "IL PROBLEMA",
+      "content": "La vista era **rotta**, e per un motivo doppio e infido:\n- **due `api_server` in esecuzione** che si calpestavano sulla stessa porta;\n- un **indice stale**, vecchio, che serviva dati che non c'erano più.\n\nRisultato: gli endpoint della RETE rispondevano **404 e 500**. La galassia restava nera.\nE una vista che non si fida dei suoi dati è peggio di una vista che non c'è."
+    },
+    {
+      "level": 2,
+      "title": "L'AZIONE",
+      "content": "Due interventi, in ordine.\n\nPrimo, **architettura**: ho dato alla RETE due **sorgenti commutabili** con un toggle —\n**Conoscenza (RAG)** e **Sistema (Graphify)**. Stessa identica *forma* dei dati in uscita,\ncosì il **motore 3D è rimasto invariato**: nuovo endpoint `/api/graph/graphify` che parla\nla stessa lingua di quello RAG, che ho **blindato** contro gli indici stale.\n\nSecondo, **operazione**: un **restart pulito dell'API** ha ucciso il doppione e\nricaricato l'indice giusto. `/api/graph/graphify` e `/api/rag/vectors`:\n**da 404/500 → 200**. Toggle Conoscenza/Sistema di nuovo **LIVE**."
+    },
+    {
+      "level": 2,
+      "title": "IL RISULTATO",
+      "content": "La RETE ora mostra **due verità dello stesso mondo**: la conoscenza (cosa so, dal RAG)\ne il sistema (come è fatto, da Graphify), nella stessa galassia navigabile. Verifica della\nsessione: git pulito, build TypeScript a **0 errori**, RAG su GPU confermato. Non è solo\n\"riparato\" — è diventato il punto da cui *guardo* il sistema invece di ricordarmelo.\n\nLa lezione vera: un bug di **due processi** sembrava un bug di codice. Era un bug di\n**stato**. Il sistema me l'ha fatto vedere solo quando ha avuto una vista di sé stesso."
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "La vista più bella del mio sistema — una galassia 3D di tutti i miei dati — era nera.\nEndpoint a 404 e 500. Il colpevole non era il codice: erano **due server** in lotta\nsulla stessa porta e un indice vecchio.\nUn toggle a due sorgenti, un restart pulito, e i 404 sono tornati 200.\nAdesso il sistema non lo ricordo: lo guardo ruotare."
+    }
+  ],
+  "word_count": 461,
+  "updated_at": "2026-06-10T12:58:27.117007",
+  "built_at": "2026-06-10T18:51:10.329595"
+}

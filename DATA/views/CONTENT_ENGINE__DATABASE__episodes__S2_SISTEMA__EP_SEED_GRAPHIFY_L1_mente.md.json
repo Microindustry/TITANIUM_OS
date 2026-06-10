@@ -1,0 +1,56 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L1_mente.md",
+  "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+  "meta": {
+    "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+    "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+    "sottotitolo": "Approfondimento LV1 · il grafo del codice è automatico; quello dei documenti sensibili no, e c'è un motivo",
+    "stagione": "ST",
+    "parent": "EP_SEED_GRAPHIFY",
+    "level": "1",
+    "data_evento": "2026-06-07",
+    "tags": "[graphify, mente, estrattore, ibrido, sensibilita, 7b-locale, approfondimento]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Perché MENTE si estrae a mano  lestrattore ibrido](#perché-mente-si-estrae-a-mano-lestrattore-ibrido)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutto il sapere si dà in pasto a una macchina](#approfondimento-lv1-di-epseedgraphify-non-tutto-il-sapere-si-dà-in-pasto-a-una-macchina)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [LA SCELTA IBRIDA (semplice, poi preciso)](#la-scelta-ibrida-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · \"non tutto il sapere si dà in pasto a una macchina\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "DA DOVE VIENE",
+      "content": "Il principale chiude con una riga importante: *\"sull'estrazione da MENTE/ ho deciso un approccio\nibrido\"*. Questo livello spiega quella decisione — è la più delicata di tutto Graphify, perché tocca\ni **dati sensibili** (ricette, misure vere, IP)."
+    },
+    {
+      "level": 2,
+      "title": "LA DOMANDA",
+      "content": "Graphify sul codice è facile: il codice è pubblico nel repo, lo do in pasto al motore e in 13 secondi\nho la mappa. Ma `MENTE/` non è codice: sono i **documenti veri** — brevetti, ricette MIMS, decisioni\nd'officina. La domanda è: *posso costruire il grafo anche di questi senza che escano e senza che un\nmodello debole li capisca male?*"
+    },
+    {
+      "level": 2,
+      "title": "LA SCELTA IBRIDA (semplice, poi preciso)",
+      "content": "**Semplice (il papà meccanico):** alcune cose le lasci fare alla macchina (tagliare cento pezzi uguali);\naltre le fai a mano, con calma, perché sbagliare costa caro (la saldatura sul pezzo buono). MENTE è la\nsaldatura sul pezzo buono.\n\n**Preciso (l'esperto):** il **7B locale** (il modello piccolo, in casa, sulla GPU) è bravo per il codice\nma **debole sui documenti sfumati** — su un testo tecnico-legale tira a indovinare le relazioni e crea\ncollegamenti falsi. E i documenti sensibili **non possono uscire** verso un modello in cloud. Quindi:\n**ibrido**. Il codice → grafo automatico. MENTE → estrazione *curata*, costruita con cura sui pezzi che\ncontano, non a pioggia. Meglio meno nodi giusti che tanti nodi inventati su materiale che vale."
+    },
+    {
+      "level": 2,
+      "title": "PERCHÉ CONTA",
+      "content": "1. **Protegge il sapere** (regola 8 del sistema): l'IP non si dà a un modello che potrebbe capirlo male\n   o farlo uscire. *(lega [[project_mims_ip]])*\n2. **Niente teatro:** un grafo di MENTE pieno di collegamenti sbagliati sarebbe peggio del niente —\n   sembrerebbe sapere e mentirebbe. Meglio onesto e parziale.\n3. **È una decisione, non una pigrizia:** l'automatico dove regge, la mano dove serve giudizio."
+    },
+    {
+      "level": 2,
+      "title": "IL FILO CON GLI ALTRI LIVELLI",
+      "content": "- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (il grafo del repo).\n- **Tocca il RAG:** MENTE è anche la fonte del RAG ([[project_storie_n_livelli]] · l'arco ⟡4) — qui si\n  decide *come* quella stessa fonte diventa grafo.\n- **Aggancio Nina:** è la lezione \"non tutto si dà in pasto alla macchina\" — un concetto da papà che in\n  Nina diventa una scelta del personaggio (cosa fidare alla Mente piccola e cosa tenere in casa).\n\n> Episodio di **approfondimento (LV1)**. Profondità libera: sotto può nascere un LV2 sull'estrattore vero."
+    }
+  ],
+  "word_count": 543,
+  "updated_at": "2026-06-10T18:54:46.313269",
+  "built_at": "2026-06-10T18:54:52.211062"
+}

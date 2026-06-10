@@ -1,0 +1,54 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_WATCHER_keyless.md",
+  "title": "AI News Watcher — restare sul pezzo senza chiavi",
+  "meta": {
+    "id": "EP_SEED_WATCHER",
+    "title": "AI News Watcher — restare sul pezzo senza chiavi",
+    "sottotitolo": "30 creator, 4 sorgenti, zero API key. Il nodo che guarda l'IA muoversi mentre io costruisco metallo.",
+    "stagione": "ST",
+    "data_evento": "2026-06-07",
+    "tags": "[ai-news-watcher, watcher, keyless, rss, github, youtube, automazione, genesis]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [AI News Watcher  restare sul pezzo senza chiavi](#ai-news-watcher-restare-sul-pezzo-senza-chiavi)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "AI News Watcher — restare sul pezzo senza chiavi",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Il problema di chi costruisce con l'IA non è che le cose vanno veloci. È che vanno\nveloci *mentre fai altro*. Io passo le giornate su titanio, BOM, mandrini. Intanto\nescono modelli, repo, tecniche che cambiano cosa è possibile. Perdere il filo non è\nuna distrazione: è restare indietro su uno strumento che è metà del mio vantaggio."
+    },
+    {
+      "level": 2,
+      "title": "IL PROBLEMA",
+      "content": "La soluzione ovvia — API a pagamento, scraper fragili, l'ennesimo servizio cloud da\ngestire e da pagare — viola due regole della casa: **proteggi il sapere** e **non\ndipendere da chiavi che possono scadere o costare**. Volevo un radar, non un altro\nabbonamento."
+    },
+    {
+      "level": 2,
+      "title": "L'AZIONE",
+      "content": "Ho prima **catturato il dominio**: `BRAIN/AI_NEWS_WATCHER_BRIEF.md` con **30+ creator**\n(handle inclusi) e una logica a **tier con finestra 48h e rotazione** — chi conta di più\nviene guardato più spesso, gli altri a turno, senza ridondanza.\n\nPoi l'ho costruito **KEYLESS**: `NODES/AI_NEWS_WATCHER/watcher.py` + launcher\n`night_ai_watch.bat`. **4 sorgenti, zero chiavi:**\n- **GitHub** via la CLI `gh` (già autenticata sulla macchina)\n- **siti** via RSS\n- **YouTube** via RSS dei canali\n- tier + rotazione dal brief\n\nTestato a freddo: **67 + 30 segnali reali** raccolti al primo giro."
+    },
+    {
+      "level": 2,
+      "title": "IL RISULTATO",
+      "content": "Adesso ho un radar che gira di notte e non costa niente da tenere acceso: nessuna API\nkey da ruotare, nessun servizio che può alzare il prezzo o chiudere. La notizia arriva\na me dentro il sistema, già filtrata per rilevanza, invece di rincorrerla su dieci feed.\n\nÈ la regola 2 applicata a sé stessa: *se lo fai ogni giorno, diventa un nodo*. Stare\ninformato era un'abitudine che dipendeva dalla mia volontà. Ora è un processo che gira da solo."
+    },
+    {
+      "level": 2,
+      "title": "REEL_HOOK",
+      "content": "L'IA non corre veloce: corre veloce **mentre fai altro**. E io faccio metallo tutto il giorno.\nLa soluzione ovvia era l'ennesima API a pagamento. L'ho rifiutata.\nHo costruito un radar a **zero chiavi**: GitHub, RSS, YouTube — 30 creator, tier a rotazione,\n67 segnali reali al primo giro. Gira di notte, non costa niente da tenere acceso.\nRestare sul pezzo ha smesso di dipendere dalla mia memoria."
+    }
+  ],
+  "word_count": 438,
+  "updated_at": "2026-06-10T12:58:33.404412",
+  "built_at": "2026-06-10T18:51:11.293781"
+}

@@ -1,0 +1,56 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L1_query.md",
+  "title": "Interrogare la mappa, non i file — query, path, explain",
+  "meta": {
+    "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+    "title": "Interrogare la mappa, non i file — query, path, explain",
+    "sottotitolo": "Approfondimento LV1 · come chiedo \"come gira X?\" senza che Claude rilegga il repo (zero token)",
+    "stagione": "ST",
+    "parent": "EP_SEED_GRAPHIFY",
+    "level": "1",
+    "data_evento": "2026-06-07",
+    "tags": "[graphify, query, path, explain, grafo, token, approfondimento]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Interrogare la mappa, non i file  query, path, explain](#interrogare-la-mappa-non-i-file-query-path-explain)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si interroga, non si rilegge](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-interroga-non-si-rilegge)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [I TRE MODI DI CHIEDERE](#i-tre-modi-di-chiedere)\n  - [PERCHÉ CONTA (il risparmio vero)](#perché-conta-il-risparmio-vero)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · \"il grafo si interroga, non si rilegge\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "DA DOVE VIENE",
+      "content": "Nel principale dico: *\"adesso chiedo al grafo, non ai file — zero token sprecati\"*. Questo livello\nspiega **come** si interroga il grafo: i tre verbi che uso davvero — `query`, `path`, `explain`."
+    },
+    {
+      "level": 2,
+      "title": "LA DOMANDA",
+      "content": "Prima, per sapere \"come gira il sistema RAG?\", Claude apriva i file uno per uno e bruciava token a\nleggere tutto, ogni volta. La domanda: *posso avere la risposta strutturale senza far rileggere niente\na nessuno?*"
+    },
+    {
+      "level": 2,
+      "title": "I TRE MODI DI CHIEDERE",
+      "content": "- **`query` — trova.** \"Dammi i nodi che parlano di RAG.\" Ti torna l'insieme giusto, non l'intero repo.\n  È il punto di partenza: da dove guardo.\n- **`path` — collega.** \"Come arriva il watcher notturno fino alla dashboard?\" Ti dà la **catena di\n  nodi** che li unisce — i passaggi, non solo gli estremi. È la differenza tra sapere *che* due cose si\n  toccano e sapere *come*.\n- **`explain` — racconta.** \"Spiegami questo sottosistema.\" Mette insieme nodi + archi + community e ti\n  restituisce il senso strutturale: chi dipende da chi, dove vive la decisione.\n\nTre verbi, una mappa sola. Non leggo i fogli: chiedo alla mappa dei fogli."
+    },
+    {
+      "level": 2,
+      "title": "PERCHÉ CONTA (il risparmio vero)",
+      "content": "**Semplice (il bambino):** invece di leggere tutto il libro per trovare una cosa, guardi l'indice e\nvai dritto. **Vero dietro (l'esperto):** la risposta è O(sottografo), non O(repo) — non rileggo 515 file\nda migliaia di token, interrogo una struttura già costruita. Il costo crolla, e la risposta è *più*\nprecisa perché è strutturale, non \"ho letto e ho riassunto\"."
+    },
+    {
+      "level": 2,
+      "title": "IL FILO CON GLI ALTRI LIVELLI",
+      "content": "- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (perché esiste la mappa).\n- **Usa gli altri LV1:** `query` ti porta nei [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] (quartieri), `path`\n  passa spesso dai [[EP_SEED_GRAPHIFY_L1_GODNODE]] (i nodi-dio sono i crocevia).\n- **Aggancio Nina:** è il \"come si usa\" della Grande Mappa — Nina non legge tutti i fogli, *chiede alla\n  mappa e segue i fili* (`EP_AV_04`).\n\n> Episodio di **approfondimento (LV1)**. Nessun limite di profondità: sotto `path` ci può stare un LV2\n> sugli algoritmi di cammino, se servirà."
+    }
+  ],
+  "word_count": 479,
+  "updated_at": "2026-06-10T18:54:46.406996",
+  "built_at": "2026-06-10T18:54:52.289192"
+}
