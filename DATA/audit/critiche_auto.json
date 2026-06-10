@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-ff87fd042e",
+    "date": "2026-06-10",
+    "git": "b6aca47",
+    "area": "V32",
+    "severity": "media",
+    "finding": "V32 è al 65% ma ha due blocker fisici indipendenti aperti da più sessioni: mandrino 2.2kW ER20 (prerequisito fresatura stampi MIMS) e decisione silent blocks v.A/v.B (prerequisito V8). Nessuno dei 100 commit degli ultimi 7 giorni tocca V32 o MIMS. Il pilastro fisico si sta congelandoun mentre quello software cresce.",
+    "azione": "Aprire ordine mandrino oggi: è una decisione di acquisto, non tecnica. Per i silent blocks, fissare un criterio di scelta entro questa sessione (es. misura vibrazione attesa vs costo) e chiudere il blocker con una decisione documentata, anche se è 'v.A senza per ora'.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-10"
+  },
+  {
+    "id": "AUD-da2427a331",
+    "date": "2026-06-10",
+    "git": "b6aca47",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Entrambi i log di ricerca (night_research e research_agent) mostrano rate-limit + ricerca a vuoto + errore esplicito nella stessa notte. Il watcher è keyless (v1 by design) ma attacca sorgenti con limiti stretti. Con 100 commit in 7 giorni il sistema sta crescendo ma il modulo ricerca è il più fragile e produce rumore senza valore.",
+    "azione": "Controllare quale sorgente specifica genera il rate-limit (GitHub API anonima o RSS). Aggiungere backoff esponenziale e cache 'già scaricato oggi' se assenti. Valutare di anticipare il task 'Schedulare night_ai_watch ogni 48h' proprio per ridurre la frequenza di hit sulle sorgenti fragili.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-10"
+  },
+  {
+    "id": "AUD-c13e4e1a22",
+    "date": "2026-06-10",
+    "git": "b6aca47",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "4 agenti su 4 hanno guasti stanotte: story_agent (crash+errore esplicito), night_push (crash+errore esplicito), night_research e research_agent (rate-limit+ricerca a vuoto+errore esplicito su entrambi). L'intera pipeline notturna è in stato di guasto multiplo simultaneo, non degradazione parziale.",
+    "azione": "Aprire i 4 log prima di qualsiasi altra attività: identificare se night_push è crashato DOPO story_agent (catena di dipendenza) o in parallelo. Se night_push ha fallito, verificare che b6aca47 sia effettivamente su remoto e non solo locale. Poi isolare il rate-limit su research: quale sorgente, quante notti consecutive colpita.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-10"
+  },
+  {
+    "id": "AUD-7b8585d0ae",
+    "date": "2026-06-10",
+    "git": "b6aca47",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La schedulazione di `night_ai_watch.bat` ogni 48h richiede UAC ed è esplicitamente in bussola_open come 'prossimo step'. Con il watcher che stanotte ha prodotto rate-limit e ricerca a vuoto, girare ogni 24h su sorgenti limitate è la causa diretta del degrado — non è un'ottimizzazione futura, è la correzione del guasto attuale.",
+    "azione": "Schedulare il task a 48h con Task Scheduler in questa sessione (richiede UAC, fare mentre si è fisicamente alla macchina): questo dimezza il carico sulle sorgenti keyless e riduce la probabilità di rate-limit notturni ricorrenti.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-10"
+  },
+  {
+    "id": "AUD-73793bf5df",
+    "date": "2026-06-10",
+    "git": "b6aca47",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "night_push ha un crash/errore esplicito: se il push notturno è fallito, il commit b6aca47 'auto: story_agent - episodi generati 10/06/2026' potrebbe non essere su remoto. Il git_head indicato nel report coincide con quel commit automatico, ma l'audit non può verificare autonomamente lo stato del remoto.",
+    "azione": "Eseguire subito `git status` e `git log --oneline origin/main..HEAD` per verificare quanti commit sono rimasti locali. Se ci sono commit non pushati, eseguire push manuale prima di iniziare la sessione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-10"
+  },
+  {
+    "id": "AUD-5af1bc5b23",
+    "date": "2026-06-10",
+    "git": "b6aca47",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "6 file contengono path hardcoded `C:\\Users\\benen` — violazione esplicita della regola di portabilità del sistema, già documentata in bussola_open. Con la macchina fissa 'teo' come riferimento in CLAUDE.md v4.1.0, questi file sono bombe a orologeria: qualsiasi esecuzione notturna su un path diverso produce silenziosamente risultati sbagliati o crash.",
+    "azione": "Listare i 6 file con `grep -r 'benen' --include='*.py' --include='*.bat' --include='*.ps1' --include='*.yaml' -l` e sostituire con variabile dinamica (`%USERPROFILE%` o `os.path.expanduser`) in un singolo commit atomico. Priorità alta perché i crash notturni potrebbero avere questa radice.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-10"
+  },
+  {
     "id": "AUD-fef36bb20e",
     "date": "2026-06-09",
     "git": "2290cdc",
