@@ -3007,7 +3007,9 @@
     "content": "# I 696 quartieri — la community detection\n### Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · \"il grafo si divide da solo in temi\"\n\n## DA DOVE VIENE QUESTO APPROFONDIMENTO\n\nNell'episodio principale (`EP_SEED_GRAPHIFY`) il dato passava veloce: *515 file → 5.966 nodi,\n6.317 archi, **696 community** in 13,2 secondi*. Quel numero — **696** — meritava un livello in\npiù. Non l'ho deciso io a tavolino: i 696 gruppi sono **emersi** dalla struttura. Questo è\nl'approfondimento che spiega *come*.\n\n## LA DOMANDA\n\nHai una nuvola di 6.000 puntini legati da 6.000 fili. Nessuno ha mai messo un'etichetta. Eppure\nalcuni puntini si tengono per mano fra loro molto più che col resto: i file dell'officina con i\nfile dell'officina, i moduli RAG coi moduli RAG, le notturne con le notturne.\n\nLa domanda è: **si possono trovare questi grumi senza saperli già?** Cioè — può il grafo\ndividersi da solo nei suoi temi, invece che farmi taggare 515 file a mano?\n\n## COME FUNZIONA (semplice, poi preciso)\n\n**Semplice (il bambino / il papà fabbro):** immagina una festa. Non sai chi conosce chi, ma se\nguardi *chi parla con chi*, vedi formarsi capannelli. Le persone che si parlano tanto fra loro,\ne poco col resto, **sono un gruppo**. Nessuno ha fatto la lista degli invitati per tavolo: i\ntavoli si sono formati da soli, guardando le chiacchiere.\n\n**Preciso (l'esperto):** è la **community detection**. L'algoritmo cerca la divisione che\nmassimizza la **modularità** — una misura che premia i gruppi con *molti archi dentro* e *pochi\narchi fuori*. Famiglia Louvain/Leiden: parte da ogni nodo come gruppo a sé, poi sposta i nodi nel\ngruppo del vicino se questo **alza** la modularità, e ripete finché non migliora più. Il bello: è\nquasi-lineare → per quello 6.000 nodi si chiudono in **secondi**, non in ore.\n\n696 gruppi su 5.966 nodi vuol dire ~8-9 nodi a quartiere in media: una **granularità fine**, da\n\"sottosistema/tema\", non da \"tre macro-aree generiche\". È il livello giusto per orientarsi.\n\n## PERCHÉ CONTA PER IL SISTEMA\n\nTre cose concrete, non teoria:\n1. **Orientamento gratis.** I quartieri sono un indice del repo che nessuno ha scritto a mano e\n   che si **riaggiorna** quando il codice cambia. La mappa non invecchia.\n2. **Trovare i ponti.** I nodi che stanno *fra* due quartieri (poche connessioni ma strategiche)\n   sono i punti fragili: tocchi lì e muovi due mondi. La community detection li fa risaltare.\n3. **Domande più strette.** Invece di \"leggi tutto il repo\", chiedo \"cosa c'è nel quartiere RAG e\n   come tocca quello delle notturne?\" → meno token, risposta strutturale.\n\n## IL FILO CON GLI ALTRI LIVELLI\n\n- **Sale al principale:** `EP_SEED_GRAPHIFY` (la mappa intera, il salto RAG→Wiki).\n- **Si lega in avanti (Nina):** è il \"vero dietro\" dei **quartieri** in `EP_AV_04 — La Grande Mappa`\n  (i gruppi che si formano da soli, raccontati a un bambino). Questo LV1 è la fonte tecnica\n  dettagliata su cui quella fiaba poggia.\n- **Prossimi LV1 possibili sotto Graphify:** i *god-node* (i nodi-dio / centralità) · `query/path/explain`\n  (come si interroga il grafo) · l'estrattore **ibrido** da `MENTE/` (sensibilità dei documenti).\n\n> Questo è un episodio di **approfondimento (LV1)**: vive *sotto* il suo principale. Il sistema STORIE\n> ora regge questa profondità — un episodio può avere figli, e i figli figli, all'infinito.",
     "parent_id": "EP_SEED_GRAPHIFY",
     "level": 1,
-    "children": [],
+    "children": [
+      "EP_SEED_GRAPHIFY_L2_MODULARITA"
+    ],
     "recuperato": true
   },
   {
@@ -3081,7 +3083,9 @@
     "content": "# Interrogare la mappa, non i file — query, path, explain\n### Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · \"il grafo si interroga, non si rilegge\"\n\n## DA DOVE VIENE\n\nNel principale dico: *\"adesso chiedo al grafo, non ai file — zero token sprecati\"*. Questo livello\nspiega **come** si interroga il grafo: i tre verbi che uso davvero — `query`, `path`, `explain`.\n\n## LA DOMANDA\n\nPrima, per sapere \"come gira il sistema RAG?\", Claude apriva i file uno per uno e bruciava token a\nleggere tutto, ogni volta. La domanda: *posso avere la risposta strutturale senza far rileggere niente\na nessuno?*\n\n## I TRE MODI DI CHIEDERE\n\n- **`query` — trova.** \"Dammi i nodi che parlano di RAG.\" Ti torna l'insieme giusto, non l'intero repo.\n  È il punto di partenza: da dove guardo.\n- **`path` — collega.** \"Come arriva il watcher notturno fino alla dashboard?\" Ti dà la **catena di\n  nodi** che li unisce — i passaggi, non solo gli estremi. È la differenza tra sapere *che* due cose si\n  toccano e sapere *come*.\n- **`explain` — racconta.** \"Spiegami questo sottosistema.\" Mette insieme nodi + archi + community e ti\n  restituisce il senso strutturale: chi dipende da chi, dove vive la decisione.\n\nTre verbi, una mappa sola. Non leggo i fogli: chiedo alla mappa dei fogli.\n\n## PERCHÉ CONTA (il risparmio vero)\n\n**Semplice (il bambino):** invece di leggere tutto il libro per trovare una cosa, guardi l'indice e\nvai dritto. **Vero dietro (l'esperto):** la risposta è O(sottografo), non O(repo) — non rileggo 515 file\nda migliaia di token, interrogo una struttura già costruita. Il costo crolla, e la risposta è *più*\nprecisa perché è strutturale, non \"ho letto e ho riassunto\".\n\n## IL FILO CON GLI ALTRI LIVELLI\n\n- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (perché esiste la mappa).\n- **Usa gli altri LV1:** `query` ti porta nei [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] (quartieri), `path`\n  passa spesso dai [[EP_SEED_GRAPHIFY_L1_GODNODE]] (i nodi-dio sono i crocevia).\n- **Aggancio Nina:** è il \"come si usa\" della Grande Mappa — Nina non legge tutti i fogli, *chiede alla\n  mappa e segue i fili* (`EP_AV_04`).\n\n> Episodio di **approfondimento (LV1)**. Nessun limite di profondità: sotto `path` ci può stare un LV2\n> sugli algoritmi di cammino, se servirà.",
     "parent_id": "EP_SEED_GRAPHIFY",
     "level": 1,
-    "children": [],
+    "children": [
+      "EP_SEED_GRAPHIFY_L2_CAMMINI"
+    ],
     "recuperato": true
   },
   {
@@ -3228,7 +3232,9 @@
     "content": "# Da 5000 numeri a una galassia — il t-SNE\n### Approfondimento LV1 di [[EP_SEED_RETE]] · \"vedere con gli occhi una cosa che vive in 384 dimensioni\"\n\n## DA DOVE VIENE\n\nNel principale dico che la RETE proietta ogni dato \"in 3D con t-SNE dentro Three.js\". Parola passata\nveloce. Qui spiego il trucco che rende possibile *vedere* il sistema: come si passa da una montagna di\nnumeri a una galassia che puoi ruotare con il dito.\n\n## LA DOMANDA\n\nOgni documento, nel RAG, è un **vettore**: una lista di ~384 numeri che ne cattura il significato. Il\ncomputer ci lavora benissimo. Ma io ho due occhi e uno schermo: **non vedo in 384 dimensioni**. La\ndomanda è: come faccio a *guardare* qualcosa che vive in uno spazio che non posso immaginare?\n\n## COME FUNZIONA (semplice, poi preciso)\n\n**Semplice (il papà meccanico):** è come fare la **fotografia** di una scultura. La scultura è 3D, la\nfoto è 2D — perdi qualcosa, ma scegli l'angolo che tiene insieme le cose che stanno vicine. Il t-SNE fa\nla foto: schiaccia tante dimensioni in poche, **tenendo vicini i punti che erano vicini davvero**.\n\n**Preciso (l'esperto):** il **t-SNE** non conserva le distanze esatte, conserva il **vicinato**. Guarda\nchi è simile a chi nello spazio grande e cerca una disposizione in 3D dove quei simili restano\nraggruppati. Per questo vedi *grappoli*: non sono decorazione, sono temi che si tengono. (È il motivo\nper cui non leggi i numeri sugli assi: contano le **vicinanze**, non le coordinate.)\n\n## PERCHÉ CONTA\n\n1. **Capisci a colpo d'occhio.** Un grappolo denso = un'area di sapere fitta; un punto isolato = una nota\n   orfana. Lo vedi in un secondo, senza aprire niente.\n2. **Trovi i buchi.** Spazi vuoti nella galassia = argomenti su cui ho poco. La mappa mostra anche ciò\n   che *manca*.\n3. **È onesto.** La foto può ingannare se la scambi per la realtà: il t-SNE avvicina, non misura. Saperlo\n   ti tiene dal trarre conclusioni sbagliate dalle distanze.\n\n## IL FILO CON GLI ALTRI LIVELLI\n\n- **Sale al principale:** [[EP_SEED_RETE]] (la galassia 3D del sistema).\n- **Fratelli LV1:** [[EP_SEED_RETE_L1_TOGGLE]] (le due sorgenti), [[EP_SEED_RETE_L1_BUGSTATO]] (il bug di stato).\n- **Aggancio Nina:** \"fare la foto di una cosa che non si può vedere tutta intera\" — una metafora pronta\n  per spiegare a un bambino cos'è un *embedding* senza dire la parola.\n\n> Approfondimento (LV1). Profondità libera: sotto può stare un LV2 su PCA/UMAP vs t-SNE, se servirà.",
     "parent_id": "EP_SEED_RETE",
     "level": 1,
-    "children": [],
+    "children": [
+      "EP_SEED_RETE_L2_UMAP"
+    ],
     "recuperato": true
   },
   {
@@ -3300,6 +3306,81 @@
     "content": "# Chi guardare più spesso — il tier a rotazione 48h\n### Approfondimento LV1 di [[EP_SEED_WATCHER]] · \"non tutti meritano la stessa attenzione, ogni giorno\"\n\n## DA DOVE VIENE\n\nIl principale nomina \"tier con finestra 48h e rotazione\" e tira dritto. È la logica che decide **dove\npunta il radar ogni notte**: il pezzo che evita sia lo spreco sia i buchi. Qui la apro.\n\n## LA DOMANDA\n\nHo 30+ creator da seguire. Se li guardo **tutti ogni notte**, sprecro tempo e rivedo le stesse cose\n(ridondanza). Se ne guardo **pochi e sempre quelli**, perdo gli altri. La domanda: come do più attenzione\na chi conta di più, **senza** dimenticare il resto?\n\n## COME FUNZIONA (semplice, poi preciso)\n\n**Semplice (il papà meccanico):** i clienti grossi li chiami spesso, i piccoli a turno. Nessuno resta\nsenza chiamata, ma non chiami tutti ogni giorno.\n\n**Preciso (l'esperto):** ogni fonte ha un **tier** (quanto conta). I tier alti vengono guardati a ogni\ngiro; i tier bassi **a rotazione**, un sottoinsieme diverso ogni volta. La **finestra 48h** evita la\nridondanza: se ho già visto una fonte di recente, non la rivedo subito. Risultato: copertura completa\n**nel tempo**, costo basso **ogni notte**. È scheduling, non casualità.\n\n## PERCHÉ CONTA\n\n1. **Efficienza onesta:** spendi attenzione dove rende, senza fingere di leggere tutto.\n2. **Niente buchi:** la rotazione garantisce che prima o poi tutti tornano.\n3. **Regolabile:** alzi/abbassi un tier e cambi la priorità senza riscrivere il nodo.\n\n## IL FILO CON GLI ALTRI LIVELLI\n\n- **Sale al principale:** [[EP_SEED_WATCHER]].\n- **Fratelli LV1:** [[EP_SEED_WATCHER_L1_KEYLESS]] (da dove guarda), [[EP_SEED_WATCHER_L1_GATE]] (cosa tiene).\n- **Aggancio Nina:** \"i clienti grossi spesso, i piccoli a turno\" — una lezione di **priorità e\n  attenzione** semplicissima da animare.\n\n> Approfondimento (LV1). Profondità libera.",
     "parent_id": "EP_SEED_WATCHER",
     "level": 1,
+    "children": [],
+    "recuperato": true
+  },
+  {
+    "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+    "title": "I cammini — come si trova la strada tra due nodi",
+    "sottotitolo": "Approfondimento LV2 · cosa succede davvero quando chiedo \"path\" al grafo: la ricerca della via più corta",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-07",
+    "tags": [
+      "graphify",
+      "path",
+      "bfs",
+      "cammino-minimo",
+      "grafo",
+      "lv2",
+      "approfondimento"
+    ],
+    "status": "ready",
+    "durata_min": 5,
+    "preview": "I cammini — come si trova la strada tra due nodi Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_QUERY · \"cosa fa, dentro, il verbo path\" DA DOVE VIENE un livello più giù Nel livello sopra ho detto che pat",
+    "content": "# I cammini — come si trova la strada tra due nodi\n### Approfondimento LV2 di [[EP_SEED_GRAPHIFY_L1_QUERY]] · \"cosa fa, dentro, il verbo path\"\n\n## DA DOVE VIENE (un livello più giù)\n\nNel livello sopra ho detto che `path` \"ti dà la catena di nodi che unisce due cose\". Ma *come* la trova, tra\nmilioni di percorsi possibili? Qui scendo sul motore: la ricerca del **cammino più corto**.\n\n## LA DOMANDA\n\nTra il watcher notturno e la dashboard ci sono mille strade nel grafo. Io ne voglio **una**, e la voglio\n**corta** (i passaggi che contano, non un giro lunghissimo). Come la trovo senza provarle tutte?\n\n## COME SI CERCA LA STRADA (semplice, poi preciso)\n\n**Semplice (il papà meccanico):** parti dal punto A e ti allarghi a cerchi — prima tutti i vicini, poi i\nvicini dei vicini — finché tocchi B. La prima volta che lo tocchi, **sei arrivato per la via più corta**,\nperché ti sei allargato in modo ordinato.\n\n**Preciso (l'esperto):** è una **BFS** (ricerca in ampiezza): esplori il grafo a strati di distanza\ncrescente. Il primo strato che raggiunge la destinazione è il **cammino minimo** in numero di salti. Se gli\narchi hanno un \"peso\" (non tutti i legami contano uguale) si passa a **Dijkstra**, stessa idea ma a costo\nminimo invece che a salti minimi. In entrambi i casi: niente forza bruta, si esplora con ordine e ci si\nferma appena si arriva.\n\n## PERCHÉ CONTA\n\n1. **Spiega le dipendenze:** il cammino più corto tra due nodi è *come* l'uno influenza l'altro — la catena\n   reale, non una vaga \"sono collegati\".\n2. **Trova i colli di bottiglia:** se tutti i cammini passano da un nodo, quello è un crocevia (lega i\n   [[EP_SEED_GRAPHIFY_L1_GODNODE]]).\n3. **È efficiente:** esplori solo quel che serve per arrivare, non tutto il grafo.\n\n## IL FILO\n\n- **Sale a:** [[EP_SEED_GRAPHIFY_L1_QUERY]] → [[EP_SEED_GRAPHIFY]].\n- **Aggancio Nina:** \"allargarsi a cerchi finché tocchi la meta\" è un gioco da spiegare a un bambino (la\n  caccia al tesoro in cui controlli prima le stanze vicine). È la BFS, senza la parola.\n\n> Approfondimento (LV2). Profondità libera: sotto, A* e le euristiche (LV3).",
+    "parent_id": "EP_SEED_GRAPHIFY_L1_QUERY",
+    "level": 2,
+    "children": [],
+    "recuperato": true
+  },
+  {
+    "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+    "title": "La modularità — il voto che decide i quartieri",
+    "sottotitolo": "Approfondimento LV2 · la singola misura che dice se una divisione in gruppi è \"buona\", e come la si massimizza",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-07",
+    "tags": [
+      "graphify",
+      "modularita",
+      "louvain",
+      "community",
+      "grafo",
+      "lv2",
+      "approfondimento"
+    ],
+    "status": "ready",
+    "durata_min": 5,
+    "preview": "La modularità — il voto che decide i quartieri Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_COMMUNITY · \"come fa l'algoritmo a sapere se ha diviso bene?\" DA DOVE VIENE un livello più giù Nel livello sop",
+    "content": "# La modularità — il voto che decide i quartieri\n### Approfondimento LV2 di [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] · \"come fa l'algoritmo a sapere se ha diviso bene?\"\n\n## DA DOVE VIENE (un livello più giù)\n\nNel livello sopra (i quartieri) ho detto che l'algoritmo \"massimizza la **modularità**\" e sono andato\navanti. Ma quella parola è tutto il segreto: è il **voto** che dice se una divisione in gruppi è buona o\nno. Qui scendo a vederla — è il punto in cui la community detection smette di essere magia.\n\n## LA DOMANDA\n\nHai diviso 6.000 nodi in 696 gruppi. Come fai a sapere se è una **buona** divisione e non una a caso? Ti\nserve un **numero unico** che premi le divisioni sensate e punisca quelle stupide. Qual è?\n\n## COSA MISURA (semplice, poi preciso)\n\n**Semplice (il papà meccanico):** un buon reparto è quello dove la gente parla **tanto dentro** e **poco\nfuori**. Se due reparti si parlano più tra loro che al loro interno, li hai divisi male. La modularità\nmette un voto a questo.\n\n**Preciso (l'esperto):** la **modularità Q** confronta gli archi *dentro* i gruppi con quelli che ti\naspetteresti **per puro caso** (a parità di numero di connessioni per nodo). Q alto = i gruppi hanno molti\npiù legami interni del previsto → divisione vera, non casuale. Louvain/Leiden non fanno altro che cercare,\nspostando nodi, la disposizione che **alza Q il più possibile**, fermandosi quando nessuno spostamento la\nmigliora. Una cosa onesta da sapere: Q ha un *limite di risoluzione* — sotto una certa scala tende a\nfondere gruppetti veri; per quello a volte si gira con una \"risoluzione\" regolabile.\n\n## PERCHÉ CONTA\n\n1. **È un voto, non un'opinione:** la qualità della mappa dei quartieri è un numero, non un parere.\n2. **Spiega la velocità:** massimizzare Q in modo goloso (greedy) è quasi-lineare → i 13 secondi del seme.\n3. **Ti dice quando NON fidarti:** Q bassa = non ci sono veri gruppi, è tutto mescolato. Saperlo evita di\n   inventare struttura dove non c'è (niente teatro).\n\n## IL FILO\n\n- **Sale a:** [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] → [[EP_SEED_GRAPHIFY]].\n- **Aggancio Nina:** \"parlano tanto dentro e poco fuori\" è la regola del buon gruppo, spiegabile a un\n  bambino con i banchi di scuola. La modularità è il voto del maestro.\n\n> Approfondimento (LV2). Si può scendere ancora: sotto qui ci starebbe la formula esatta di Q (LV3).",
+    "parent_id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+    "level": 2,
+    "children": [],
+    "recuperato": true
+  },
+  {
+    "id": "EP_SEED_RETE_L2_UMAP",
+    "title": "t-SNE contro UMAP — due modi di fare la foto",
+    "sottotitolo": "Approfondimento LV2 · perché esistono due tecniche per schiacciare le dimensioni, e quando scegliere l'una o l'altra",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-10",
+    "tags": [
+      "rete",
+      "t-sne",
+      "umap",
+      "riduzione-dimensioni",
+      "struttura-globale",
+      "lv2",
+      "approfondimento"
+    ],
+    "status": "ready",
+    "durata_min": 5,
+    "preview": "t SNE contro UMAP — due modi di fare la foto Approfondimento LV2 di EP_SEED_RETE_L1_TSNE · \"non c'è una sola foto giusta\" DA DOVE VIENE un livello più giù Nel livello sopra ho detto che il t SNE \"fa l",
+    "content": "# t-SNE contro UMAP — due modi di fare la foto\n### Approfondimento LV2 di [[EP_SEED_RETE_L1_TSNE]] · \"non c'è una sola foto giusta\"\n\n## DA DOVE VIENE (un livello più giù)\n\nNel livello sopra ho detto che il t-SNE \"fa la foto\" tenendo vicini i punti vicini. Ma non è l'unica\ntecnica per farlo: c'è **UMAP**, e sceglierne una invece dell'altra cambia *cosa* vedi. Qui scendo sulla\ndifferenza, perché spiega perché certe galassie sembrano fatte di isole e altre di continenti.\n\n## LA DOMANDA\n\nSchiacciare 384 dimensioni in 3 vuol dire **buttare via** informazione. La domanda è: *quale* informazione\ntieni? Le vicinanze piccole (chi è vicinissimo a chi) o anche le distanze grandi (quanto sono lontane due\nintere zone)?\n\n## LA DIFFERENZA (semplice, poi preciso)\n\n**Semplice (il papà meccanico):** due fotografi. Uno fa **ritratti** perfetti dei gruppetti ma sballa le\ndistanze tra i gruppi. L'altro fa una **foto aerea**: i gruppi sono meno nitidi, ma capisci come sono\ndisposti nel paesaggio.\n\n**Preciso (l'esperto):**\n- **t-SNE** = il ritrattista. Cura il **vicinato locale** (i grappoli sono bellissimi e separati), ma le\n  **distanze tra grappoli non sono affidabili** — due isole vicine sullo schermo possono essere lontane\n  davvero.\n- **UMAP** = la foto aerea. Tiene meglio la **struttura globale** (le distanze tra zone hanno più senso) ed\n  è di solito **più veloce** su tanti punti.\n\nNessuna delle due è \"la verità\": sono due compromessi diversi sullo stesso sacrificio.\n\n## PERCHÉ CONTA\n\n1. **Leggi la galassia giusta:** se ti interessano i temi (grappoli) → t-SNE; se ti interessa come i temi\n   si relazionano nel grande → UMAP.\n2. **Eviti l'errore classico:** dare peso alle distanze in un t-SNE. Sapere *che foto stai guardando* ti\n   salva da conclusioni sbagliate.\n3. **È una manopola di prodotto:** la RETE può offrire l'una o l'altra a seconda della domanda.\n\n## IL FILO\n\n- **Sale a:** [[EP_SEED_RETE_L1_TSNE]] → [[EP_SEED_RETE]].\n- **Aggancio Nina:** \"il ritratto e la foto aerea\" — due modi di guardare la stessa cosa, perfetti per\n  insegnare a un bambino che *ogni mappa sceglie cosa mostrare e cosa perdere*.\n\n> Approfondimento (LV2). Profondità libera.",
+    "parent_id": "EP_SEED_RETE_L1_TSNE",
+    "level": 2,
     "children": [],
     "recuperato": true
   }
