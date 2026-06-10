@@ -18,6 +18,10 @@ export interface Episode {
   durata_min: number;
   preview: string;
   content: string;
+  // gerarchia "a livelli" sui contenuti (pattern N-livelli del skill-tree, sui contenuti)
+  parent_id?: string | null; // null/assente = episodio principale (LV0)
+  level?: number;            // 0 = principale · 1+ = approfondimento
+  children?: string[];       // id degli episodi-figlio (approfondimenti)
 }
 
 export const STAGIONI: Record<string, { label: string; color: string; order: number; description: string }> = {

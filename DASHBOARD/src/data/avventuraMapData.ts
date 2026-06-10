@@ -52,6 +52,73 @@ export const MONDO = {
   ] as MondoCast[],
 };
 
+// ── MAPPA A LIVELLI (percorribile) ──────────────────────────────────────────
+// La Mappa di Nina = un albero navigabile. Due movimenti:
+//   GIÙ  (figli)  = approfondire lo stesso tema (la profondità viene dall'albero
+//                   VERO degli episodi: parent/children in episodes.json).
+//   DI LATO (fratelli sotto una radice) = cambiare discorso / verticale (Tech, Finanza…).
+export type MappaNodoTipo = "verticale" | "ramo" | "episodio";
+
+export interface MappaNodo {
+  id: string;
+  nome: string;
+  tipo: MappaNodoTipo;
+  colore?: string;
+  sottotitolo?: string;
+  concetto?: string;     // per il bambino
+  vero?: string;         // per l'esperto / il papà meccanico
+  pietra?: string;
+  pezzoReale?: string;
+  episodeId?: string;    // link a un episodio reale (apre in STORIE; i figli LV+ vengono da lì)
+  stato?: EpStato;
+  figli?: MappaNodo[];   // rami statici (verticali/regioni); gli episodi prendono i figli dal vero
+}
+
+export const MAPPA_RADICE: MappaNodo = {
+  id: "root",
+  nome: "Mappa",
+  tipo: "verticale",
+  sottotitolo: "Il mondo di Nina, percorribile — scendi per approfondire, vai di lato per cambiare discorso.",
+  figli: [
+    {
+      id: "v-tech",
+      nome: "Tech · la Storia dell'IA",
+      tipo: "verticale",
+      colore: "#22d3ee",
+      sottotitolo: "Loop → Automazione → LLM → RAG → Wiki → Agenti → Orchestrazione",
+      concetto: "Come nasce un'intelligenza artificiale, una tappa alla volta — ogni tappa ancorata a un pezzo vero del sistema.",
+      figli: REGIONI.map((r): MappaNodo => ({
+        id: `reg-${r.n}`,
+        nome: r.nome,
+        tipo: "ramo",
+        colore: r.colore,
+        sottotitolo: r.tappa,
+        concetto: r.concetto,
+        vero: r.vero,
+        pietra: r.pietra,
+        pezzoReale: r.pezzoReale,
+        figli: r.episodi.map((ep): MappaNodo => ({
+          id: ep.id,
+          nome: ep.titolo,
+          tipo: "episodio",
+          colore: r.colore,
+          episodeId: ep.id,
+          stato: ep.stato,
+        })),
+      })),
+    },
+    {
+      id: "v-finanza",
+      nome: "Finanza personale",
+      tipo: "verticale",
+      colore: "#34d399",
+      sottotitolo: "predisposto — da riempire",
+      concetto: "Da bravo papà: cosa sono i soldi, come si tengono in ordine, come crescono nel tempo.",
+      figli: [],
+    },
+  ],
+};
+
 export const REGIONI: Regione[] = [
   {
     n: 1, nome: "La Traccia", tappa: "il Loop", pietra: "⟡1 il Grande Loop", colore: "#6366f1",

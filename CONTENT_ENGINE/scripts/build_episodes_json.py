@@ -38,7 +38,7 @@ def _parse_frontmatter(raw: str) -> dict:
     """Estrae i campi 'key: value' (stile YAML leggero) dalla testa del file."""
     fm = {}
     for line in raw.splitlines()[:40]:
-        m = re.match(r'^(id|title|sottotitolo|stagione|data_evento|tags|status|durata_min)\s*:\s*(.+)$', line)
+        m = re.match(r'^(id|title|sottotitolo|stagione|data_evento|tags|status|durata_min|parent|level)\s*:\s*(.+)$', line)
         if not m:
             continue
         k, v = m.group(1), m.group(2).strip()
@@ -62,9 +62,16 @@ def _season_from_path(path: Path) -> str:
     return "AUTO"            # SA_AUTO e milestone auto-generati
 
 
+def _strip_frontmatter(text: str) -> str:
+    """Toglie un eventuale blocco frontmatter YAML fenced (--- ... ---) in testa,
+    cosi i campi key:value non finiscono nel contenuto renderizzato. I metadati
+    restano letti da _parse_frontmatter (che scansiona le prime righe a parte)."""
+    return re.sub(r"\A\s*---\s*\n.*?\n---\s*\n", "", text, count=1, flags=re.DOTALL)
+
+
 def _episode_from_md(path: Path, used_ids: set) -> dict:
     raw = path.read_text(encoding="utf-8", errors="replace")
-    body = audit.strip_toc(raw).strip()
+    body = _strip_frontmatter(audit.strip_toc(raw)).strip()
     fm = _parse_frontmatter(raw)
     meta = audit.extract_md_meta(path)
 
@@ -100,6 +107,15 @@ def _episode_from_md(path: Path, used_ids: set) -> dict:
     except (TypeError, ValueError):
         durata = max(3, min(20, round(words / 180)))
 
+    # gerarchia "a livelli" (additiva): un episodio puo' essere figlio-approfondimento
+    # di un altro. Modello GitHub-Docs: il padre dichiara i figli; qui il figlio dichiara
+    # il padre (piu' robusto contro id mancanti). 'children' viene calcolato in build_tree().
+    parent = fm.get("parent") or None
+    try:
+        level = int(fm.get("level"))
+    except (TypeError, ValueError):
+        level = 0  # default top-level; build_tree() lo corregge dalla catena dei parent
+
     return {
         "id": eid,
         "title": title,
@@ -112,8 +128,45 @@ def _episode_from_md(path: Path, used_ids: set) -> dict:
         "durata_min": durata,
         "preview": preview,
         "content": body,
+        "parent_id": parent,   # None = episodio principale (LV0)
+        "level": level,        # 0 = principale · 1+ = approfondimento
+        "children": [],        # calcolato in build_tree() (id dei figli)
         "recuperato": True,  # traccia che e' stato importato dall'audit (non scritto a mano)
     }
+
+
+def build_tree(eps: list) -> int:
+    """Normalizza la gerarchia 'a livelli' su TUTTI gli episodi (additivo, idempotente).
+    - garantisce i campi parent_id/level/children anche sui vecchi episodi piatti;
+    - calcola children[] dai parent_id (modello albero, profondita' libera);
+    - ricava level dalla catena dei parent (0 = principale, +1 per ogni approfondimento);
+    - parent inesistente -> trattato come principale (non perde l'episodio).
+    Ritorna il numero di relazioni padre->figlio collegate."""
+    by_id = {}
+    for e in eps:
+        e.setdefault("parent_id", None)
+        e.setdefault("level", 0)
+        e["children"] = []  # ricalcolato sempre da zero
+        by_id[e.get("id")] = e
+
+    linked = 0
+    for e in eps:
+        pid = e.get("parent_id")
+        if pid and pid in by_id and pid != e.get("id"):
+            by_id[pid]["children"].append(e["id"])
+            linked += 1
+        else:
+            e["parent_id"] = None  # padre mancante -> promosso a principale
+
+    # level derivato dalla catena (con guardia anti-ciclo)
+    def depth(e, seen):
+        pid = e.get("parent_id")
+        if not pid or pid not in by_id or pid in seen:
+            return 0
+        return 1 + depth(by_id[pid], seen | {e.get("id")})
+    for e in eps:
+        e["level"] = depth(e, set())
+    return linked
 
 
 def clean_title(t: str) -> str:
@@ -196,9 +249,14 @@ def main():
         for rid in recovered:
             print(f"  + {rid}")
 
+    # 5) gerarchia a livelli (additiva): parent/level/children su tutti gli episodi
+    linked = build_tree(eps)
+
     EPISODES_JSON.write_text(json.dumps(eps, ensure_ascii=False, indent=2), encoding="utf-8")
+    n_appr = sum(1 for e in eps if e.get("level", 0) > 0)
     print(f"\ntitoli ripuliti: {fixed} | episodi: {before} -> {len(eps)} "
           f"({len(set(e['id'] for e in eps))} id unici)")
+    print(f"gerarchia: {linked} relazioni padre->figlio · {n_appr} episodi di approfondimento (LV1+)")
 
 
 if __name__ == "__main__":

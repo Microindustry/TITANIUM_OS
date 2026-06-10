@@ -79,7 +79,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
-  { id: "mappa",       label: "MAPPA",      icon: GitBranch,     color: "text-emerald-400",group: "system"  },
+  { id: "mappa",       label: "ARCHITETTURA", icon: GitBranch,   color: "text-emerald-400",group: "system"  },
   { id: "rete",        label: "GRAFO",      icon: Globe,         color: "text-cyan-400",   group: "system"  },
   { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
@@ -269,7 +269,7 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </button>
                 <button
                   onClick={() => onNavigate("avventura-mappa")}
-                  title="Mappa dell'Avventura — le 7 Regioni del mondo di Nina"
+                  title="Mappa di Nina — le avventure, percorribile a livelli (senza limite di profondità)"
                   className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-12 pr-3 py-1.5
                     ${view === "avventura-mappa"
                       ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
@@ -277,7 +277,7 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 >
                   <Map size={10} className="flex-shrink-0 text-pink-400/80" />
                   <span className="text-[8px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                    Mappa Avventura
+                    Mappa
                   </span>
                 </button>
               </>

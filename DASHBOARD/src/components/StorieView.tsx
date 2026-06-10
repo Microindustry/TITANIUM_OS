@@ -60,10 +60,24 @@ function renderMdLine(line: string, idx: number) {
   );
 }
 
-function EpisodeCard({ ep, color }: { ep: Episode; color: string }) {
+// Card episodio — RICORSIVA: se l'episodio ha figli (approfondimenti LV1+), li mostra
+// annidati e indentati dentro la sezione espansa. Profondita' libera (pattern N-livelli
+// del skill-tree, applicato ai CONTENUTI). 'childrenOf' risolve gli id-figlio in episodi.
+function EpisodeCard({
+  ep,
+  color,
+  depth = 0,
+  childrenOf,
+}: {
+  ep: Episode;
+  color: string;
+  depth?: number;
+  childrenOf: (ep: Episode) => Episode[];
+}) {
   const [open, setOpen] = useState(false);
   const status = STATUS_CONFIG[ep.status];
   const lines = ep.content.split("\n");
+  const kids = childrenOf(ep);
 
   return (
     <div
@@ -93,6 +107,15 @@ function EpisodeCard({ ep, color }: { ep: Episode; color: string }) {
 
         {/* Meta */}
         <div className="shrink-0 flex items-center gap-3 text-xs text-slate-500 self-start mt-0.5">
+          {kids.length > 0 && (
+            <span
+              className="hidden sm:flex items-center gap-1 font-mono"
+              style={{ color }}
+              title={`${kids.length} approfondimenti`}
+            >
+              <Layers size={11} />{kids.length}
+            </span>
+          )}
           <span className="hidden sm:flex items-center gap-1"><Clock size={11} />{ep.durata_min}m</span>
           <span className={`flex items-center gap-1.5 font-medium ${status.color}`}>
             <span className={`w-1.5 h-1.5 rounded-full ${status.dot}`} />
@@ -114,6 +137,21 @@ function EpisodeCard({ ep, color }: { ep: Episode; color: string }) {
           <div className="rounded-lg bg-slate-950/60 px-5 py-4 overflow-hidden">
             {lines.map((line, i) => renderMdLine(line, i))}
           </div>
+
+          {/* Approfondimenti (figli) — annidati e indentati: i livelli sui contenuti */}
+          {kids.length > 0 && (
+            <div
+              className="mt-3 pl-3 space-y-2 border-l-2"
+              style={{ borderColor: color + "55" }}
+            >
+              <p className="text-[10px] font-mono uppercase tracking-widest flex items-center gap-1.5" style={{ color }}>
+                <Layers size={10} /> Approfondimenti · LV{depth + 1}
+              </p>
+              {kids.map(k => (
+                <EpisodeCard key={k.id} ep={k} color={color} depth={depth + 1} childrenOf={childrenOf} />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -147,14 +185,21 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   const statusFiltered = (eps: Episode[]) =>
     filterStatus ? eps.filter(ep => ep.status === filterStatus) : eps;
 
+  // Indice id->episodio + risolutore dei figli (approfondimenti) per la card ricorsiva
+  const byId = new Map(EPISODES.map(e => [e.id, e]));
+  const childrenOf = (ep: Episode): Episode[] =>
+    (ep.children ?? []).map(id => byId.get(id)).filter((e): e is Episode => !!e);
+  // Solo i principali (LV0) compaiono nell'elenco di stagione: i figli vivono annidati
+  const isTopLevel = (ep: Episode) => !ep.parent_id;
+
   // Sezioni per stagione (ordine canonico), solo quelle con episodi
   const sections = Object.entries(STAGIONI)
     .sort((a, b) => a[1].order - b[1].order)
     .map(([key, s]) => ({
       key,
       ...s,
-      episodes: statusFiltered(EPISODES.filter(ep => ep.stagione === key)),
-      total: EPISODES.filter(ep => ep.stagione === key).length,
+      episodes: statusFiltered(EPISODES.filter(ep => ep.stagione === key && isTopLevel(ep))),
+      total: EPISODES.filter(ep => ep.stagione === key && isTopLevel(ep)).length,
     }))
     .filter(g => g.total > 0);
 
@@ -256,7 +301,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
                       Nessun episodio con questo filtro.
                     </p>
                   ) : (
-                    g.episodes.map(ep => <EpisodeCard key={ep.id} ep={ep} color={g.color} />)
+                    g.episodes.map(ep => <EpisodeCard key={ep.id} ep={ep} color={g.color} childrenOf={childrenOf} />)
                   )}
                 </div>
               )}
