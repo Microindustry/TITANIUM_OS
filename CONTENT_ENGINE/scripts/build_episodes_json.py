@@ -33,6 +33,48 @@ STAGIONE_LABEL = {
     "AV": "L'Avventura",   # binario educativo (Nina + THEMIS contro l'Entropia)
 }
 
+# ── STRUTTURA A 2 ASSI (canone: DATABASE/STORIE_STRUTTURA_2ASSI.md, NCP-compatibile) ──
+# Asse RUOLO = diario del sistema (tipo, derivato dalla stagione). Asse NINA = percorso
+# educativo (concetto/regione/pietra/giro_spirale/richiama), solo se l'episodio insegna.
+# Rebuild-safe: la narrativa si ricalcola a ogni build (a differenza dello spike che la
+# scriveva nel json e veniva persa). I miei N-livelli alimentano il giro_spirale: un
+# approfondimento (figlio) = un giro più profondo sullo stesso concetto del padre.
+ROLE_FROM_STAGIONE = {
+    "S0": "origine", "S1": "presente", "ST": "sistema", "S2": "costruzione",
+    "MOM": "momento", "AUTO": "auto", "AV": "avventura",
+}
+REGIONI_NINA = {
+    0: "LA MATERIA", 1: "LA TRACCIA", 2: "L'OFFICINA CHE GIRA SOLA",
+    3: "LA MENTE CHE PARLA", 4: "LA BIBLIOTECA DELLE FONTI", 5: "LA GRANDE MAPPA",
+    6: "L'ESERCITO SILENZIOSO", 7: "IL DIRETTORE",
+}
+# id concetto-fondante -> (concetto, regione, giro_base, richiama, stato)
+NINA_SEED = {
+    # i 4 semi (fonte) — dalla tabella PILOTA del canone
+    "EP_SEED_CONTROLLO": ("un posto solo per governare il disordine", 7, 1, [], "fonte"),
+    "EP_SEED_WATCHER":   ("stare informati senza farlo a mano", 2, 2, ["⟡1"], "fonte"),
+    "EP_SEED_GRAPHIFY":  ("la mappa della conoscenza", 5, 1, ["⟡4"], "fonte"),
+    "EP_SEED_RETE":      ("vedere il sistema come una mappa", 5, 2, ["⟡4"], "fonte"),
+    # gli episodi di Nina (adattati)
+    "EP_AV_00": ("il Grande Loop", 1, 1, [], "adattato"),
+    "EP_AV_01": ("l'Automazione", 2, 1, ["⟡1"], "adattato"),
+    "EP_AV_02": ("l'LLM, la mente che parla", 3, 1, ["⟡1"], "adattato"),
+    "EP_AV_03": ("il RAG, la biblioteca delle fonti", 4, 1, ["⟡3"], "adattato"),
+    "EP_AV_04": ("la Wiki, la grande mappa", 5, 1, ["⟡4"], "adattato"),
+    # le fonti tecniche dell'arco (Pietre)
+    "EP_FILONE_00": ("la materia: scelta, controllo, precisione", 0, 1, [], "fonte"),
+    "EP_S0_00":     ("il Socio: un gesto, più frutti", 1, 1, [], "fonte"),
+    "MOM_01_LA_PRIMA_AUTOMAZIONE": ("la prima automazione", 2, 1, ["⟡1"], "fonte"),
+    "EP_S2_01_IL_CERVELLO_IBRIDO": ("il cervello ibrido: cloud + locale", 3, 1, ["⟡1"], "fonte"),
+    "EP_T05": ("il sistema pensa: recupero con fonti", 4, 1, ["⟡3"], "fonte"),
+    "EP_T04": ("SINAPSI: la memoria che collega", 4, 2, ["⟡3"], "fonte"),
+    "EP_T02": ("NeuroMap: il sistema come mappa", 5, 1, ["⟡4"], "fonte"),
+    "EP_T01": ("la Dashboard: vedere il sistema", 5, 1, ["⟡4"], "fonte"),
+    "MOM_03_L_ESERCITO": ("l'esercito: tante entità che fanno", 6, 1, ["⟡2", "⟡4"], "fonte"),
+    "EP_S2_02_L_ORCHESTRATORE": ("l'orchestratore: chi fa cosa e quando", 7, 1, ["⟡5", "⟡6"], "fonte"),
+    "EP_S2_03_LA_TELA": ("la Tela: il calendario notturno", 7, 2, ["⟡6"], "fonte"),
+}
+
 
 def _parse_frontmatter(raw: str) -> dict:
     """Estrae i campi 'key: value' (stile YAML leggero) dalla testa del file."""
@@ -169,6 +211,48 @@ def build_tree(eps: list) -> int:
     return linked
 
 
+def apply_narrativa(eps: list) -> int:
+    """Struttura a 2 assi (additiva, idempotente, rebuild-safe).
+    - asse_ruolo.tipo su TUTTI gli episodi, derivato dalla stagione;
+    - asse_nina sui concetti-fondanti (NINA_SEED) o se gia' dichiarato nell'episodio;
+    - i figli (approfondimenti) EREDITANO l'asse_nina del padre con giro_spirale +1
+      (un approfondimento = un giro piu' profondo della spirale sullo stesso concetto).
+    Ritorna quanti episodi hanno un asse_nina."""
+    by_id = {e.get("id"): e for e in eps}
+
+    for e in eps:
+        narr = e.get("narrativa") or {}
+        ar = narr.get("asse_ruolo") or {}
+        ar.setdefault("tipo", ROLE_FROM_STAGIONE.get(e.get("stagione"), "auto"))
+        narr["asse_ruolo"] = ar
+        e["narrativa"] = narr
+
+    for eid, (concetto, reg, giro, richiama, stato) in NINA_SEED.items():
+        e = by_id.get(eid)
+        if not e:
+            continue
+        e["narrativa"]["asse_nina"] = {
+            "concetto": concetto, "regione": reg, "regione_nome": REGIONI_NINA[reg],
+            "pietra": f"⟡{reg}", "giro_spirale": giro, "richiama": richiama, "stato_nina": stato,
+        }
+
+    # eredita ai figli in ordine di profondita' (il padre e' gia' risolto)
+    for e in sorted(eps, key=lambda x: x.get("level", 0)):
+        if e.get("level", 0) == 0:
+            continue
+        if "asse_nina" in e.get("narrativa", {}):
+            continue  # mappatura esplicita ha la precedenza
+        p = by_id.get(e.get("parent_id"))
+        pn = p and p.get("narrativa", {}).get("asse_nina")
+        if not pn:
+            continue
+        child = dict(pn)
+        child["giro_spirale"] = pn.get("giro_spirale", 1) + 1
+        e["narrativa"]["asse_nina"] = child
+
+    return sum(1 for e in eps if "asse_nina" in e.get("narrativa", {}))
+
+
 def clean_title(t: str) -> str:
     if not t:
         return t
@@ -252,11 +336,15 @@ def main():
     # 5) gerarchia a livelli (additiva): parent/level/children su tutti gli episodi
     linked = build_tree(eps)
 
+    # 6) struttura a 2 assi (asse_ruolo per tutti, asse_nina sui concetti + eredità ai figli)
+    n_nina = apply_narrativa(eps)
+
     EPISODES_JSON.write_text(json.dumps(eps, ensure_ascii=False, indent=2), encoding="utf-8")
     n_appr = sum(1 for e in eps if e.get("level", 0) > 0)
     print(f"\ntitoli ripuliti: {fixed} | episodi: {before} -> {len(eps)} "
           f"({len(set(e['id'] for e in eps))} id unici)")
     print(f"gerarchia: {linked} relazioni padre->figlio · {n_appr} episodi di approfondimento (LV1+)")
+    print(f"2 assi: asse_ruolo su tutti · asse_nina su {n_nina} episodi (concetti + approfondimenti)")
 
 
 if __name__ == "__main__":

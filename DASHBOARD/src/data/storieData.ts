@@ -22,6 +22,14 @@ export interface Episode {
   parent_id?: string | null; // null/assente = episodio principale (LV0)
   level?: number;            // 0 = principale · 1+ = approfondimento
   children?: string[];       // id degli episodi-figlio (approfondimenti)
+  // struttura a 2 assi (canone STORIE_STRUTTURA_2ASSI.md, NCP-compatibile)
+  narrativa?: {
+    asse_ruolo?: { tipo?: string; fase_sistema?: string };
+    asse_nina?: {
+      concetto?: string; regione?: number; regione_nome?: string;
+      pietra?: string; giro_spirale?: number; richiama?: string[]; stato_nina?: string;
+    };
+  };
 }
 
 export const STAGIONI: Record<string, { label: string; color: string; order: number; description: string }> = {
