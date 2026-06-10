@@ -61,6 +61,8 @@ NINA_SEED = {
     "EP_AV_02": ("l'LLM, la mente che parla", 3, 1, ["⟡1"], "adattato"),
     "EP_AV_03": ("il RAG, la biblioteca delle fonti", 4, 1, ["⟡3"], "adattato"),
     "EP_AV_04": ("la Wiki, la grande mappa", 5, 1, ["⟡4"], "adattato"),
+    "EP_AV_05": ("gli Agenti, l'esercito silenzioso", 6, 1, ["⟡2", "⟡4"], "adattato"),
+    "EP_AV_06": ("l'Orchestrazione, il direttore", 7, 1, ["⟡5", "⟡6"], "adattato"),
     # le fonti tecniche dell'arco (Pietre)
     "EP_FILONE_00": ("la materia: scelta, controllo, precisione", 0, 1, [], "fonte"),
     "EP_S0_00":     ("il Socio: un gesto, più frutti", 1, 1, [], "fonte"),

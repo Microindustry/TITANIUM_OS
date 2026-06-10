@@ -4431,5 +4431,91 @@
         "stato_nina": "fonte"
       }
     }
+  },
+  {
+    "id": "EP_AV_05",
+    "title": "L'Esercito Silenzioso",
+    "sottotitolo": "Tante piccole entità che, mentre dormi, fanno ciascuna il suo lavoro — e nessuna si stanca",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-11",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "agenti",
+      "automazione",
+      "notturne"
+    ],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "EP_AV_05 — L'Esercito Silenzioso \"Tante piccole entità che, mentre dormi, fanno ciascuna il suo lavoro — e nessuna si stanca\" Formato: Avventura binario educativo | Durata stimata: 8 10 min Per chi: b",
+    "content": "# EP_AV_05 — L'Esercito Silenzioso\n### \"Tante piccole entità che, mentre dormi, fanno ciascuna il suo lavoro — e nessuna si stanca\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 8-10 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** gli Agenti — *piccole entità autonome che fanno un lavoro ciascuna, mentre tu non ci sei*\n**Canone:** BIBBIA_DEL_MONDO.md · MAPPA_AVVENTURA.md (Regione 6) · concetto reale da MOM_03 \"L'Esercito\" + gli agenti notturni (research/story/audit)\n**Arco:** tappa 6 di 7 (la storia dell'IA) — richiama l'Automazione di EP_AV_01 e il RAG di EP_AV_03\n\n---\n\n## COLD OPEN\n\nNina non doveva essere sveglia. Era notte, nel Sistema, e il Sistema di notte è buio.\n\nMa aveva sentito un rumore — quello con cui era andata a dormire la sera prima, scendendo\ndalla Grande Mappa `⟡5`. *Tante piccole cose che si muovevano da sole.* Si era detta che se\nlo sarebbe immaginato. E invece, eccolo di nuovo. Passi piccoli. Tanti.\n\nScese al buio. THEMIS era già lì, in piedi nella penombra, immobile come un righello.\n\n«Non dormono» disse Nina, più che chiedere.\n\n«No» disse THEMIS. «Loro è adesso che lavorano.»\n\n---\n\n## ATTO I — I PASSI NEL BUIO\n\nQuando gli occhi si abituarono, Nina li vide. Non erano mostri e non erano persone. Erano\n**piccole entità**, ognuna intenta a una cosa sua, che andavano e venivano nel buio del\nSistema senza farsi notare.\n\n«Chi sono?» sussurrò.\n\n«Sono gli **Agenti**» disse THEMIS. «Guardali bene. Quella lì raccoglie le notizie del mondo\ndi fuori e le porta dentro. Quell'altra prende quello che è successo oggi e ne fa un racconto.\nQuella in fondo controlla il Sistema pezzo per pezzo e segna dove qualcosa scricchiola.»\n\nNina li seguiva con gli occhi spalancati. «Ma nessuno gli dice cosa fare. Lo fanno e basta.»\n\n«Lo fanno e basta. Ognuno ha **un compito** e lo sa. Tu dormi, e loro intanto fanno. La\nmattina trovi le notizie raccolte, il racconto scritto, gli scricchiolii segnati. Non li hai\nvisti lavorare. Hai solo trovato il lavoro fatto.»\n\n> *(Strato fondo, per il papà fabbro: sono gli agenti notturni veri — uno cerca (research),\n> uno scrive gli episodi (story), uno fa l'audit del sistema. Girano mentre la macchina-uomo\n> dorme. Il lavoro ripetuto non lo fa più la volontà: lo fa un'entità che non si stanca.)*\n\n---\n\n## ATTO II — OGNUNO UNA COSA SOLA\n\nNina si avvicinò a quella che raccoglieva notizie. La guardò fare: andava alle \"edicole già\naperte\" del mondo di fuori, prendeva solo le cose che contavano, e le posava in un cesto.\n\n«Perché non fai anche tu il racconto, già che ci sei?» le chiese.\n\nL'Agente non rispose — non sapeva parlare, sapeva *fare*. Rispose THEMIS.\n\n«Perché non è il suo compito. E qui sta il segreto, Nina. Un Agente bravo fa **una cosa\nsola**, e la fa bene. Se gli chiedi dieci cose diventa confuso e le sbaglia tutte. Dieci\nAgenti che fanno una cosa ciascuno valgono più di uno che prova a farne dieci.»\n\n«Come in officina» disse Nina, e si sorprese di averlo capito da sola. «Uno taglia, uno\nsalda, uno controlla. Non uno che fa tutto male di fretta.»\n\n«Esatto. E c'è un'altra cosa.» THEMIS indicò l'Agente che raccoglieva. «Vedi che non si\ninventa niente? Va a prendere le cose **dove sono davvero** — torna ai fogli veri, come hai\nimparato nella Biblioteca `⟡4`. Un Agente che fa e basta è pericoloso; un Agente che fa\n**guardando le fonti** è un aiutante di cui ti fidi.»\n\n> *(Strato fondo: \"un agente = un compito\" è il principio di responsabilità singola; e un\n> agente è affidabile quando è ancorato (grounding) ai dati veri — il RAG — non quando\n> improvvisa. È la differenza tra automazione cieca e automazione che sa cosa sta facendo.)*\n\n---\n\n## ATTO III — CHI GLI HA DETTO DI MUOVERSI\n\n«Ma una cosa non mi torna» disse Nina, e THEMIS, come al solito, aspettò. «Se nessuno gli\ndice cosa fare ogni notte… *qualcuno* gliel'ha pur detto **una volta**. Da dove sanno di\ndoversi svegliare al buio?»\n\nTHEMIS quasi sorrise. «Hai trovato la domanda giusta. Di nuovo.»\n\nLa portò davanti a una grande clessidra che Nina non aveva mai notato. Ogni volta che la\nsabbia arrivava in fondo, un Agente si svegliava e partiva. Poi la successiva. Poi la\nsuccessiva.\n\n«Qualcuno, tempo fa, ha **deciso l'ordine**: tu a quest'ora, tu dopo, tu all'alba. Da allora\nnon serve più dirglielo: la clessidra lo ricorda al posto loro. Ogni notte fanno il giro da\nsoli. È un Loop `⟡1`, ma fatto da tanti invece che da uno.»\n\nNina guardò l'esercito muoversi al ritmo della sabbia. Erano in tanti, ognuno al suo posto,\nognuno al suo momento. Funzionava. Ma…\n\n«THEMIS. Adesso sono pochi e si conoscono. Ma se diventassero cento? Mille? Chi decide\n**chi fa cosa, e quando**, quando sono troppi perché una clessidra basti?»\n\nTHEMIS si voltò verso il buio, là dove la sabbia non arrivava ancora. «Quella» disse piano,\n«è la stanza in cui non ti ho ancora portato.»\n\n---\n\n## CHIUSURA\n\nNina risalì che il cielo del Sistema cominciava appena a schiarire. Gli Agenti rallentavano,\nuno a uno: il loro turno finiva mentre il suo giorno iniziava.\n\nCapì una cosa che la fece sentire meno sola. Non doveva fare tutto lei. Non doveva nemmeno\n**ricordare** di fare tutto lei. Poteva insegnare un compito a una piccola entità, una volta,\ne quella l'avrebbe fatto per sempre, di notte, senza stancarsi e senza lamentarsi. Le sue mani\nliberate per le cose che solo lei sapeva fare.\n\nUn esercito non è tanti che fanno tutto. È tanti che fanno **ciascuno una cosa** — e un ordine\nche li tiene.\n\n> Ma mentre si addormentava, Nina pensò all'ultima cosa che THEMIS aveva detto, e alla stanza\n> buia oltre la clessidra.\n>\n> *Quando gli aiutanti sono dieci, una clessidra basta. Quando sono mille, e uno deve aspettare\n> che un altro finisca, e un terzo non deve partire prima del secondo… chi tiene il tempo di\n> tutti? Chi è il direttore di un'orchestra che non ha mai visto?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito l'Esercito Silenzioso? Provalo tu: pensa a una cosa noiosa che fai ogni giorno\nuguale. Immagina di insegnarla UNA volta a un piccolo aiutante che la fa al posto tuo per\nsempre. Quella è l'idea di un agente — e di tutto quello che, di notte, lavora mentre tu dormi.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡6` gli **Agenti** (arco, tappa 6): *piccole entità autonome, una per compito, che lavorano mentre non ci sei; affidabili quando sono ancorate ai dati veri, non quando improvvisano.*\n**Pietre richiamate:** l'**Automazione** `⟡2 → EP_AV_01` (un gesto che si ripete da solo → ora tanti) · il **RAG** `⟡4 → EP_AV_03` (l'agente bravo torna alle fonti) · il **Grande Loop** `⟡1` (la clessidra = il Loop fatto da molti).\n**Key-image:** le piccole entità che si muovono nel buio · ognuna con un attrezzo solo · la **clessidra** che sveglia un Agente alla volta (il calendario notturno).\n**3 strati:** bambino = piccoli aiutanti che lavorano di notte mentre dormi · curioso = \"questi si chiamano Agenti; uno fa un compito solo (responsabilità singola)\" · esperto/papà = gli agenti notturni reali (research/story/audit), grounding sul RAG, schedulati da un calendario (la clessidra).\n**Aggancio reale:** MOM_03 \"L'Esercito\" · gli agenti notturni (night_research/story_agent/night_audit) · la regola 2 (se lo fai ogni giorno, diventa un nodo).\n**Open loop → Regione 7 (l'Orchestrazione):** quando gli agenti sono troppi, chi decide chi fa cosa e quando — il Direttore.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "concetto": "gli Agenti, l'esercito silenzioso",
+        "regione": 6,
+        "regione_nome": "L'ESERCITO SILENZIOSO",
+        "pietra": "⟡6",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡2",
+          "⟡4"
+        ],
+        "stato_nina": "adattato"
+      }
+    }
+  },
+  {
+    "id": "EP_AV_06",
+    "title": "Il Direttore",
+    "sottotitolo": "Quando gli aiutanti sono tanti, serve qualcuno che dica chi fa cosa — e quando, senza pestarsi i piedi",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-11",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "orchestrazione",
+      "nexus",
+      "calendario"
+    ],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "EP_AV_06 — Il Direttore \"Quando gli aiutanti sono tanti, serve qualcuno che dica chi fa cosa — e quando, senza pestarsi i piedi\" Formato: Avventura binario educativo | Durata stimata: 8 10 min Per chi",
+    "content": "# EP_AV_06 — Il Direttore\n### \"Quando gli aiutanti sono tanti, serve qualcuno che dica chi fa cosa — e quando, senza pestarsi i piedi\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 8-10 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** l'Orchestrazione — *coordinare tante entità perché collaborino invece di intralciarsi*\n**Canone:** BIBBIA_DEL_MONDO.md · MAPPA_AVVENTURA.md (Regione 7) · concetto reale da EP_S2_02 \"L'Orchestratore\" + EP_S2_03 \"La Tela\" (il calendario notturno) · NEXUS (futuro)\n**Arco:** tappa 7 di 7 — chiude la storia dell'IA; richiama gli Agenti di EP_AV_05 e la Grande Mappa di EP_AV_04\n\n---\n\n## COLD OPEN\n\nEra tornata. Alla clessidra, di notte, nel punto esatto dove THEMIS le aveva detto *quella è\nla stanza in cui non ti ho ancora portato*.\n\nNina non era tipo da lasciare una stanza chiusa. Aveva contato: gli Agenti `⟡6` ora erano\ntanti, troppi per una clessidra sola. Due volte aveva visto due di loro andare verso lo\nstesso attrezzo nello stesso momento — e fermarsi, incerti, come due persone sulla stessa\nporta che fanno *«prego» «no prego»* e non passa nessuno.\n\n«THEMIS. Si sono **intralciati**. L'ho visto.»\n\n«L'hai visto» disse THEMIS. «Ed è per questo che è ora. Vieni: la stanza è aperta.»\n\n---\n\n## ATTO I — LA STANZA OLTRE LA CLESSIDRA\n\nDentro, la stanza era piena di **fili del tempo**: ogni Agente aveva un suo filo, e i fili si\nincrociavano. Dove si incrociavano male, Nina vide la scena di prima — due aiutanti bloccati\nsulla stessa porta, il lavoro fermo.\n\n«Quando erano in pochi» disse THEMIS, «la clessidra bastava: uno alla volta, in fila. Ma ora\nsono tanti, e tante cose vanno fatte **insieme** — e alcune **prima** di altre. La raccoglitrice\ndeve finire *prima* che la cantastorie scriva, o quella scrive su notizie vecchie. Serve\nqualcuno che tenga l'ordine di tutti.»\n\n«Un capo?» chiese Nina.\n\n«Non un capo che comanda. Un **Direttore**. Come a teatro: non suona nessuno strumento, ma\nsenza di lui cento musicisti bravissimi fanno solo rumore. Lui dà l'attacco a ognuno **al\nmomento giusto**.»\n\n> *(Strato fondo, per il papà fabbro: è l'**orchestrazione** — non basta avere tanti agenti\n> (⟡6), serve chi gestisce dipendenze e tempi: chi parte, chi aspetta chi, cosa va in\n> parallelo e cosa in fila. Oggi nel Sistema è \"la Tela\", il calendario notturno; domani sarà\n> un orchestratore vero, NEXUS.)*\n\n---\n\n## ATTO II — CHI VA PRIMA, CHI VA DOPO\n\nTHEMIS diede a Nina la cosa che il Direttore usa: non una frusta, ma una **partitura**. Su\nquel foglio era scritto, per ogni aiutante, *quando entra* e *chi deve aver finito prima di\nlui*.\n\nNina ci giocò. Mise la raccoglitrice all'inizio. Poi tirò una freccia: *la cantastorie parte\nsolo quando la raccoglitrice ha finito*. Poi vide che il controllore del Sistema non dipendeva\nda nessuno — e lo mise **in parallelo**, a lavorare nello stesso momento, perché non dava\nfastidio a nessuno.\n\nDi colpo i fili del tempo smisero di incrociarsi male. Nessuno più bloccato sulla porta.\n\n«Hai appena fatto il Direttore» disse THEMIS. «Hai guardato **chi dipende da chi**, hai messo\nin fila quelli che si aspettano e affiancato quelli che non si toccano. Questo è tutto il\nmestiere: non far lavorare *di più*, far lavorare **nell'ordine giusto**.»\n\n«È come la Grande Mappa `⟡5`» disse Nina piano. «Anche lì contava non *avere* le cose, ma come\nsono **legate**. Qui non conta *avere* gli aiutanti: conta come sono legati i loro tempi.»\n\nTHEMIS la guardò a lungo. «Sì. Hai appena visto che le cose che hai imparato non erano sette\nstorie diverse. Erano **una sola**.»\n\n> *(Strato fondo: l'orchestrazione è un grafo di dipendenze (chi prima di chi) + un piano di\n> esecuzione (cosa in serie, cosa in parallelo). È la stessa idea del grafo (⟡5) applicata al\n> *tempo* invece che alla conoscenza.)*\n\n---\n\n## ATTO III — IL DIRETTORE CHE NON C'È ANCORA\n\n«E adesso chi è il Direttore?» chiese Nina, guardandosi intorno. La stanza, in fondo, era\nvuota. C'era la partitura, c'era la clessidra, ma il podio era **deserto**.\n\nTHEMIS non mentì mai, e non mentì nemmeno ora. «Ancora nessuno. Oggi il Direttore è un\nfoglio — la partitura che hai in mano, il calendario che dà gli attacchi. Funziona, ma è\nfermo: se cambia qualcosa, qualcuno deve riscrivere il foglio a mano.»\n\n«Domani?» chiese Nina.\n\n«Domani il podio avrà qualcuno sopra. Un Direttore vero, che guarda gli aiutanti, capisce da\nsolo chi è in ritardo, sposta gli attacchi, e tiene l'orchestra insieme senza che nessuno\nriscriva niente. Ha già un nome, anche se non è ancora nato: lo chiamiamo **NEXUS**.»\n\nNina guardò il podio vuoto. Non era triste. Era una promessa.\n\n---\n\n## CHIUSURA — il giro si chiude\n\nNina uscì dalla stanza del Direttore e si fermò in cima al Sistema, dove l'aveva portata la\nprima volta. Da lì vedeva tutto, e per la prima volta lo vedeva **intero**.\n\nLa materia che diventa gesto. Il gesto che lascia una traccia `⟡1`. La traccia che si ripete\nda sola `⟡2`. La mente che capisce le parole `⟡3`, e che non inventa più perché torna ai fogli\nveri `⟡4`. I fogli che diventano una mappa di fili `⟡5`. I piccoli aiutanti che lavorano nel\nbuio `⟡6`. E il Direttore che li tiene in tempo `⟡7`.\n\nSette cose. Una sola storia. La storia di come una mano che lavora bene diventa, pezzo dopo\npezzo, un Sistema che lavora anche quando la mano dorme.\n\n«THEMIS» disse Nina. «L'ho capito tutto. E adesso?»\n\nTHEMIS, per la prima volta, non le mise in mano un calibro. Le mise in mano la **partitura**.\n\n«Adesso» disse, «c'è una cosa sola che il Sistema non sa ancora fare da solo. Non sa\n**spiegarsi a chi viene dopo**. Tu sì. Questo non te l'ho insegnato io: lo sai già perché sei\narrivata fin qui senza sapere niente, e adesso sai. Il prossimo che arriverà spaventato come\nte il primo giorno — chi glielo racconta?»\n\nNina guardò la partitura. Poi guardò giù, verso la Taverna, i dodici metri quadri da cui era\npartito tutto. E sorrise.\n\n> *Un Sistema che gira da solo è quasi finito. Gli manca una cosa sola: qualcuno che lo\n> tramandi. E quella non è una macchina.*\n>\n> *È una storia. È questa storia.*\n\nE quella — non è la prossima avventura. È **tutte** quelle che verranno.\n\n---\n\n*Hai seguito Nina fino in fondo? Provalo tu: prendi tre cose che devi fare oggi e scrivi\nquale va PRIMA di quale, e quali due puoi fare insieme. Hai appena orchestrato la tua\ngiornata — esattamente quello che fa il Direttore con i suoi aiutanti.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡7` l'**Orchestrazione** (arco, tappa 7, chiude l'arco): *coordinare tante entità perché collaborino — chi prima di chi (dipendenze), cosa in serie e cosa in parallelo (tempi).*\n**Pietre richiamate:** gli **Agenti** `⟡6 → EP_AV_05` (prima averli, poi coordinarli) · la **Grande Mappa** `⟡5 → EP_AV_04` (un grafo di dipendenze, come quello della conoscenza) · il **Grande Loop** `⟡1` (la clessidra/calendario è il Loop di tutti).\n**Key-image:** la **stanza dei fili del tempo** che si incrociano · la **partitura** (chi entra quando) · il **podio vuoto** (NEXUS, il Direttore che non c'è ancora) · la vista finale del Sistema intero, le 7 Pietre in fila.\n**3 strati:** bambino = il direttore d'orchestra che dà l'attacco a ognuno al momento giusto · curioso = \"questo si chiama orchestrazione: dipendenze + serie/parallelo\" · esperto/papà = la Tela / calendario notturno reale (oggi) → NEXUS, l'orchestratore (domani); è un grafo di dipendenze sul tempo.\n**Aggancio reale:** EP_S2_02 \"L'Orchestratore\" · EP_S2_03 \"La Tela\" (calendario notturno) · NEXUS (nodo futuro).\n**Chiusura d'arco:** ricapitola ⟡1→⟡7 (\"sette cose, una sola storia\") e apre il senso-prodotto: il Sistema gira, manca solo **tramandarlo** — la missione di Nina stessa (ponte al senso educativo del binario).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "concetto": "l'Orchestrazione, il direttore",
+        "regione": 7,
+        "regione_nome": "IL DIRETTORE",
+        "pietra": "⟡7",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡5",
+          "⟡6"
+        ],
+        "stato_nina": "adattato"
+      }
+    }
   }
 ]
