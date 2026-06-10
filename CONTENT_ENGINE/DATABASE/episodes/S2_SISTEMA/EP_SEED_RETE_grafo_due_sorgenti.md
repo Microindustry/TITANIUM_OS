@@ -68,3 +68,11 @@ Endpoint a 404 e 500. Il colpevole non era il codice: erano **due server** in lo
 sulla stessa porta e un indice vecchio.
 Un toggle a due sorgenti, un restart pulito, e i 404 sono tornati 200.
 Adesso il sistema non lo ricordo: lo guardo ruotare.
+
+## FATTI (per il RAG)
+
+- **FATTO:** la RETE è la galassia del sistema: ogni nodo/documento come punto, proiettato in 3D con **t-SNE** dentro **Three.js**, navigabile.
+- **CAUSA (bug):** era rotta (endpoint a **404/500**) per **due `api_server` sulla stessa porta** + un **indice stale**. Bug di **STATO**, non di codice.
+- **AZIONE:** toggle a **2 sorgenti** — **Conoscenza (RAG)** e **Sistema (Graphify)** — con *stessa forma dati* → motore 3D invariato; nuovo endpoint `/api/graph/graphify`; **restart pulito** → 200.
+- **DECISIONE:** contratto dati identico tra le due sorgenti (disaccoppiamento: un'interfaccia, due implementazioni).
+- **LOGICA:** una vista di sé stesso ha fatto trovare il bug; lo stato (processi/porte/indici) è invisibile finché non lo si guarda.

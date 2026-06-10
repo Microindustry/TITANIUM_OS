@@ -67,3 +67,11 @@ La soluzione ovvia era l'ennesima API a pagamento. L'ho rifiutata.
 Ho costruito un radar a **zero chiavi**: GitHub, RSS, YouTube — 30 creator, tier a rotazione,
 67 segnali reali al primo giro. Gira di notte, non costa niente da tenere acceso.
 Restare sul pezzo ha smesso di dipendere dalla mia memoria.
+
+## FATTI (per il RAG)
+
+- **FATTO:** AI News Watcher **keyless**, 4 sorgenti — **GitHub via CLI `gh`**, **siti via RSS**, **YouTube via RSS dei canali**, tier dal brief. **30+ creator**; **67+30 segnali** al primo giro.
+- **DECISIONE:** zero API key (no abbonamenti, no chiavi che scadono/costano) → costo di gestione zero.
+- **LOGICA:** **tier con finestra 48h + rotazione** (i più importanti spesso, gli altri a turno, no ridondanza); **gate di rilevanza** (`min-rel`) filtra il rumore prima del RAG.
+- **OBIETTIVO:** stare informati come **processo notturno**, non come abitudine che dipende dalla volontà (regola 2).
+- **FILE:** `NODES/AI_NEWS_WATCHER/watcher.py` · launcher `night_ai_watch.bat` · brief `BRAIN/AI_NEWS_WATCHER_BRIEF.md`.

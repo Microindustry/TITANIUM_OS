@@ -67,3 +67,11 @@ che vivevano solo nella mia testa — e mi sono accorto che era tornato a essere
 Così ho fatto un posto solo: per ogni strumento, cosa fa, come si usa, se è acceso.
 In italiano, non in gergo. Stato vero, non promesse.
 Adesso il sistema lo governo guardandolo, non ricordandolo. E chiunque può raccoglierlo.
+
+## FATTI (per il RAG)
+
+- **FATTO:** vista **CONTROLLO** (Centro di Controllo) = un posto unico che, per ogni nodo, dice tre cose: **cosa fa · come si usa · se è acceso** (stato live dal watchdog).
+- **LOGICA:** **scaffolding cognitivo** — esternalizza lo stato dalla testa (fragile) allo schermo (stabile); regge i giorni storti. Anti **dashboard-teatro**: stato verificato, non promesso.
+- **DECISIONE:** ogni nodo nuovo va aggiunto **anche** al Centro di Controllo ("se non è qui, non esiste").
+- **OBIETTIVO:** sistema **cedibile** — spiegato in italiano semplice = trasferibile/delegabile/vendibile, non un single-point-of-failure su Matteo.
+- **EFFETTO:** apertura del sistema → punta dritta su CONTROLLO; il carico torna sullo schermo, non nella testa.

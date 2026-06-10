@@ -65,3 +65,11 @@ Il problema: il RAG ti dice cosa c'è scritto, non come le cose si tengono insie
 In 13 secondi ho trasformato l'intero repo in una mappa di 5.966 nodi e 696 cluster —
 tutto in locale, zero cloud. Ora chiedo alla mappa, non ai file.
 Il sistema ha iniziato a spiegare sé stesso.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Graphify trasforma il repo (515 file) in knowledge graph: **5.966 nodi · 6.317 archi · 696 community in 13,2 s**, su CPU, senza GPU richiesta.
+- **DECISIONE:** 100% locale, licenza MIT, esposto come skill `/graphify` in Claude Code → nessun documento sensibile esce dalla macchina.
+- **LOGICA:** il RAG recupera il *testo*; il grafo dà la *struttura* (chi-chiama-chi, dipendenze). È il salto RAG→Wiki (Pietra ⟡5).
+- **DECISIONE:** estrazione da `MENTE/` **ibrida** — il 7B locale è debole sui documenti sensibili, quindi lì il grafo si costruisce curato, non a pioggia.
+- **OBIETTIVO:** interrogare il grafo (query/path/explain) invece di rileggere i file → zero token sprecati su domande strutturali.
