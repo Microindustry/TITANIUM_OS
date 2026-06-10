@@ -6,9 +6,9 @@
 // approfondimenti (LV1+) sono letti dall'albero VERO degli episodi (episodes.json).
 // Additiva: non tocca la MAPPA del sistema.
 
-import { useState } from "react";
-import { MONDO, MAPPA_RADICE, type MappaNodo, type EpStato } from "../data/avventuraMapData";
-import { EPISODES } from "../data/storieData";
+import { useState, useMemo } from "react";
+import { MONDO, type MappaNodo, type EpStato } from "../data/avventuraMapData";
+import { EPISODES, type Episode } from "../data/storieData";
 import { useUIStore } from "../stores/systemStore";
 import {
   Sparkles, ChevronRight, ArrowLeft, Layers, Mic, Users, MapPin, ArrowRight, BookOpen, Home,
@@ -25,6 +25,63 @@ const EP_STATO: Record<EpStato, { label: string; dot: string; text: string }> = 
   "da-scrivere": { label: "DA SCRIVERE", dot: "bg-amber-400",   text: "text-amber-400" },
   "futuro":      { label: "PIÙ AVANTI",  dot: "bg-slate-600",   text: "text-slate-500" },
 };
+
+// ── la Mappa di Nina è DATA-DRIVEN dall'asse_nina (canone 2 assi) ──
+// Le Regioni 0-7 si popolano da sole con i concetti veri (top-level) che le abitano;
+// ogni concetto porta dietro i suoi approfondimenti (i giri di spirale = i figli LV1+).
+const REGIONI_NINA: Record<number, string> = {
+  0: "LA MATERIA", 1: "LA TRACCIA", 2: "L'OFFICINA CHE GIRA SOLA",
+  3: "LA MENTE CHE PARLA", 4: "LA BIBLIOTECA DELLE FONTI", 5: "LA GRANDE MAPPA",
+  6: "L'ESERCITO SILENZIOSO", 7: "IL DIRETTORE",
+};
+const REGION_COLORE: Record<number, string> = {
+  0: "#b45309", 1: "#6366f1", 2: "#f59e0b", 3: "#10b981",
+  4: "#ef4444", 5: "#a78bfa", 6: "#818cf8", 7: "#22d3ee",
+};
+const isTop = (e: Episode) => !e.parent_id;
+const giro = (e: Episode) => e.narrativa?.asse_nina?.giro_spirale ?? 1;
+
+function buildTechRegioni(): MappaNodo[] {
+  const out: MappaNodo[] = [];
+  for (let n = 0; n <= 7; n++) {
+    const eps = EPISODES
+      .filter(e => isTop(e) && e.narrativa?.asse_nina?.regione === n)
+      .sort((a, b) => giro(a) - giro(b));
+    if (!eps.length) continue;
+    const col = REGION_COLORE[n];
+    out.push({
+      id: `reg-${n}`, nome: REGIONI_NINA[n], tipo: "ramo", colore: col,
+      pietra: `⟡${n}`, sottotitolo: `${eps.length} concetti`,
+      figli: eps.map((e): MappaNodo => ({
+        id: e.id, nome: e.title, tipo: "episodio", colore: col,
+        episodeId: e.id, sottotitolo: e.narrativa?.asse_nina?.concetto ?? e.sottotitolo,
+        stato: e.narrativa?.asse_nina?.stato_nina === "adattato" ? "scritto" : "da-scrivere",
+      })),
+    });
+  }
+  return out;
+}
+
+function buildMappa(): MappaNodo {
+  return {
+    id: "root", nome: "Mappa", tipo: "verticale",
+    sottotitolo: "Il mondo di Nina, percorribile — scendi per approfondire, vai di lato per cambiare discorso.",
+    figli: [
+      {
+        id: "v-tech", nome: "Tech · la Storia dell'IA", tipo: "verticale", colore: "#22d3ee",
+        sottotitolo: "La Materia → Loop → Automazione → LLM → RAG → Wiki → Agenti → Orchestrazione",
+        concetto: "Come nasce un'intelligenza artificiale, una tappa alla volta — ancorata a pezzi veri del sistema.",
+        figli: buildTechRegioni(),
+      },
+      {
+        id: "v-finanza", nome: "Finanza personale", tipo: "verticale", colore: "#34d399",
+        sottotitolo: "predisposto — da riempire",
+        concetto: "Da bravo papà: cosa sono i soldi, come si tengono in ordine, come crescono nel tempo.",
+        figli: [],
+      },
+    ],
+  };
+}
 
 // figli "vivi" di un nodo: rami statici, oppure gli approfondimenti REALI se è un episodio
 function nodeChildren(node: MappaNodo): MappaNodo[] {
@@ -46,7 +103,8 @@ function statoReale(node: MappaNodo): EpStato {
 
 export function AvventuraMapView() {
   const navigate = useUIStore(s => s.navigateTo);
-  const [stack, setStack] = useState<MappaNodo[]>([MAPPA_RADICE]);
+  const radice = useMemo(buildMappa, []);
+  const [stack, setStack] = useState<MappaNodo[]>([radice]);
   const current = stack[stack.length - 1];
   // LV senza limite di profondità: la navigazione è infinita per design.
   // Unica guardia: non si rientra in un antenato già nel percorso (anti-ciclo).
