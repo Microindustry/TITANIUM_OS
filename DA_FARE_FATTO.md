@@ -95,8 +95,27 @@
       · WATCHER (3): keyless (gh/RSS/YouTube) · tier 48h+rotazione · gate rilevanza (min-rel)
       · CONTROLLO (3): stato-live (vs promessa) · scaffolding cognitivo · cedibilità
       Ognuno ha "aggancio Nina" in coda → sono la fonte dettagliata su cui Nina poggerà.
-- [ ] PROSSIMO possibile: LV2 dove serve (es. modularità sotto community) · oppure il passo notturno
-      che propone i *concept brief* (bibbia §9) · oppure iniziare a derivare Nina dai semi LV1.
+- [✓] **LV2** fatti sui punti ricchi: modularità (sotto community) · t-SNE vs UMAP (sotto t-SNE) ·
+      cammini/BFS (sotto query). Max profondità 2, build verde.
+
+### [◐] NOTTE AUTONOMA #36b · 10/06 — allineato i N-livelli al tuo blueprint a 2 ASSI
+> Trovato `CONTENT_ENGINE/DATABASE/STORIE_STRUTTURA_2ASSI.md` (spike 10/06): è il VERO "rifare le
+> storie" — 2 assi (RUOLO=diario · NINA=percorso educativo), un FILONE "Dal metallo alla mente"
+> (4 atti da ⟡0 LA MATERIA), libreria **NCP (Narrative Context Protocol, MIT)**, requisito
+> `## FATTI (per il RAG)`. I miei N-livelli ci si incastrano: l'approfondimento = un giro di spirale.
+- [✓] **2 assi rebuild-safe nel builder** (`apply_narrativa`): asse_ruolo (da stagione) su tutti i
+      148 ep + asse_nina sui concetti (NINA_SEED) ereditato ai figli con giro_spirale +1. Lo spike
+      scriveva nel json e si perdeva al rebuild → ora si ricalcola sempre. Tipo TS `narrativa` opz.
+- [✓] asse_nina su 36 ep (i 4 semi + EP_AV_* + fonti tecniche dell'arco + loro approfondimenti).
+- [✓] Recuperati i file spike non committati (canone 2assi, remap_pilot, enrich_recap, EP_FILONE_00).
+- [✓] **Mappa data-driven da asse_nina**: Regioni ⟡0-⟡7 si popolano da sole (fonte+Nina, giro di spirale), approfondimenti annidati. Cresce da sola.
+- [✓] **`## FATTI (per il RAG)`** sui 4 semi + riflusso in `MICROINDUSTRY/MENTE/KNOWLEDGE/genesis_nodi_fatti.md` (serve `rag-update` per indicizzare).
+- [✓] **Aggiornamenti automatici compatibili**: story_agent rebuilda via build_episodes_json → gli AUTO prendono asse_ruolo + tree da soli. Nessun fix necessario.
+- [✓] **3 LV2** (modularità, t-SNE↔UMAP, cammini/BFS) + **indice PIETRE.md** auto-generato (8/8 Pietre posate, 38 ep indicizzati).
+- [✓] **ARCO NINA COMPLETO ⟡1→⟡7**: scritti `EP_AV_05` (Agenti) + `EP_AV_06` (Direttore/Orchestrazione, chiude l'arco e apre il senso-prodotto "tramandare").
+- [ ] **DA DECIDERE con Matteo (NINA):** il Nina **⟡0 LA MATERIA** (prequel "dal metallo") riapre l'opening di `EP_AV_00` → scelta tua. Poi: Nina "lunghissima" multi-giro + il filo "Nina ha il suo OS/agente che si perde come me" (visione 10/06, da mettere a canone).
+- [ ] **DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO) · `EP_AV_03/04` (parcheggiati) ora combaciano con l'arco: togliere il "parcheggio"?
+- Stato notte: **150 ep · 16 approfondimenti (LV1-2) · arco Nina 7/7 (manca ⟡0) · build verde · 8 commit isolati su main (NO push)**.
 
 ### [✗→parcheggio] NINA RAG/Wiki (EP_AV_03/04) — scritti ma PREMATURI (Nina viene dopo)
 - [✓] `EP_AV_03` Biblioteca delle Fonti (RAG) · `EP_AV_04` Grande Mappa (Wiki) scritti definitivi.
