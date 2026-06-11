@@ -172,9 +172,18 @@ FORMATO OBBLIGATORIO:
 
 ## CHIUSURA
 [citazione in corsivo — la frase che rimane, collegata al filo della storia]
+
+## FATTI (per il RAG)
+[3-6 righe di fatti atomici, terzo requisito del canone — l'episodio deve INSEGNARE al
+sistema, non solo raccontare (regola 7). Forma che il RAG recupera secco:
+- DECISIONE: <cosa deciso, col numero/parametro reale>
+- LOGICA: <perche', la causa tecnica>
+- OBIETTIVO: <cosa sblocca / prossimo passo misurabile>
+Solo specifiche e logica progettuale, MAI ricette o segreti.]
 ---
 
-Lunghezza: 900-1300 parole. Sezioni chiare. NO bullet point. Solo prosa densa di sostanza."""
+Lunghezza: 900-1300 parole nei 3 atti. Sezioni chiare. NO bullet point nella prosa
+(i bullet SOLO nel blocco FATTI). Prosa densa di sostanza."""
 
     return call_fn(client, model="claude-sonnet-4-6",
                    max_tokens=2600, system="", user=prompt)
