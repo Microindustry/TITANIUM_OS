@@ -1,6 +1,7 @@
 <!-- TOC -->
 
-- [PIETRE  lindice dellarco (concetto  episodio)](#pietre-lindice-dellarco-concetto-episodio)
+- [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
+- [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
   - [0  LA MATERIA  (2 episodi)](#0-la-materia-2-episodi)
   - [1  LA TRACCIA  (2 episodi)](#1-la-traccia-2-episodi)
   - [2  LOFFICINA CHE GIRA SOLA  (6 episodi)](#2-lofficina-che-gira-sola-6-episodi)
@@ -9,19 +10,26 @@
   - [5  LA GRANDE MAPPA  (15 episodi)](#5-la-grande-mappa-15-episodi)
   - [6  LESERCITO SILENZIOSO  (2 episodi)](#6-lesercito-silenzioso-2-episodi)
   - [7  IL DIRETTORE  (7 episodi)](#7-il-direttore-7-episodi)
+- [Verticale: Finanza personale](#verticale-finanza-personale)
+  - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)
+  - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)
+  - [3  IL CUSCINETTO  (0 episodi)](#3-il-cuscinetto-0-episodi)
+  - [4  FAR LAVORARE I SOLDI  (0 episodi)](#4-far-lavorare-i-soldi-0-episodi)
 
 <!-- /TOC -->
 
-# PIETRE — l'indice dell'arco (concetto → episodio)
+# PIETRE — l'indice dei concetti (concetto → episodio)
 
 *Generato da `generate_pietre_index.py` il 2026-06-11 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
-> Ogni **Pietra** ⟡n è un concetto fondante dell'arco "storia dell'IA". Sotto ciascuna:
-> gli episodi che la **fondano** o **approfondiscono**, in ordine di *giro di spirale*
-> (1 = base, 2+ = più a fondo). `fonte` = materiale tecnico · `adattato` = episodio di Nina.
+> Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
+> **Finanza** (₣, l'asse "di lato"). Sotto ciascuna Pietra gli episodi che la **fondano**
+> o **approfondiscono**, per *giro di spirale*. `fonte` = tecnico · `adattato` = episodio Nina.
 
 ---
+
+# Verticale: Tech · la Storia dell'IA
 
 ## ⟡0 · LA MATERIA  (2 episodi)
 
@@ -104,6 +112,28 @@
 
 ---
 
+# Verticale: Finanza personale
+
+## ₣1 · IL VALORE  (1 episodi)
+
+| giro | episodio | concetto | stato | richiama |
+|:--:|---|---|:--:|---|
+| 1 | `EP_AV_FIN_01` Il Valore — cosa sono davvero i soldi | cosa sono i soldi: lavoro e fiducia, scambiabili | adattato | — |
+
+## ₣2 · SPENDERE MENO DI QUANTO ENTRA  (0 episodi)
+
+*(ancora nessun episodio — Pietra da posare)*
+
+## ₣3 · IL CUSCINETTO  (0 episodi)
+
+*(ancora nessun episodio — Pietra da posare)*
+
+## ₣4 · FAR LAVORARE I SOLDI  (0 episodi)
+
+*(ancora nessun episodio — Pietra da posare)*
+
+---
+
 **Regola dei prerequisiti (spirale macro):** un episodio non può usare una Pietra non
 ancora posata. `richiama` elenca le Pietre già note che riattiva (ripetizione spaziata).
-⟡0 (la materia) è la radice: la posa per prima, la richiamano tutte.
+⟡0 (la materia) è la radice dell'arco Tech; la richiamano tutte.

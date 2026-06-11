@@ -38,20 +38,26 @@ const REGION_COLORE: Record<number, string> = {
   0: "#b45309", 1: "#6366f1", 2: "#f59e0b", 3: "#10b981",
   4: "#ef4444", 5: "#a78bfa", 6: "#818cf8", 7: "#22d3ee",
 };
+// verticale FINANZA (l'asse "di lato": cambiare discorso)
+const REGIONI_FINANZA: Record<number, string> = {
+  1: "IL VALORE", 2: "SPENDERE MENO DI QUANTO ENTRA", 3: "IL CUSCINETTO", 4: "FAR LAVORARE I SOLDI",
+};
 const isTop = (e: Episode) => !e.parent_id;
 const giro = (e: Episode) => e.narrativa?.asse_nina?.giro_spirale ?? 1;
+const verticaleOf = (e: Episode) => e.narrativa?.asse_nina?.verticale ?? "tech";
 
-function buildTechRegioni(): MappaNodo[] {
+// costruisce i nodi-Regione di una verticale dai concetti veri (data-driven)
+function buildRegioni(verticale: string, regioni: Record<number, string>, prefix: string, colore: (n: number) => string): MappaNodo[] {
   const out: MappaNodo[] = [];
-  for (let n = 0; n <= 7; n++) {
+  for (const n of Object.keys(regioni).map(Number).sort((a, b) => a - b)) {
     const eps = EPISODES
-      .filter(e => isTop(e) && e.narrativa?.asse_nina?.regione === n)
+      .filter(e => isTop(e) && verticaleOf(e) === verticale && e.narrativa?.asse_nina?.regione === n)
       .sort((a, b) => giro(a) - giro(b));
     if (!eps.length) continue;
-    const col = REGION_COLORE[n];
+    const col = colore(n);
     out.push({
-      id: `reg-${n}`, nome: REGIONI_NINA[n], tipo: "ramo", colore: col,
-      pietra: `⟡${n}`, sottotitolo: `${eps.length} concetti`,
+      id: `${verticale}-reg-${n}`, nome: regioni[n], tipo: "ramo", colore: col,
+      pietra: `${prefix}${n}`, sottotitolo: `${eps.length} concetti`,
       figli: eps.map((e): MappaNodo => ({
         id: e.id, nome: e.title, tipo: "episodio", colore: col,
         episodeId: e.id, sottotitolo: e.narrativa?.asse_nina?.concetto ?? e.sottotitolo,
@@ -61,6 +67,9 @@ function buildTechRegioni(): MappaNodo[] {
   }
   return out;
 }
+
+const buildTechRegioni = () => buildRegioni("tech", REGIONI_NINA, "⟡", n => REGION_COLORE[n]);
+const buildFinanzaRegioni = () => buildRegioni("finanza", REGIONI_FINANZA, "₣", () => "#34d399");
 
 function buildMappa(): MappaNodo {
   return {
@@ -75,9 +84,9 @@ function buildMappa(): MappaNodo {
       },
       {
         id: "v-finanza", nome: "Finanza personale", tipo: "verticale", colore: "#34d399",
-        sottotitolo: "predisposto — da riempire",
+        sottotitolo: "Il Valore → Spendere meno di quanto entra → Il Cuscinetto → Far lavorare i soldi",
         concetto: "Da bravo papà: cosa sono i soldi, come si tengono in ordine, come crescono nel tempo.",
-        figli: [],
+        figli: buildFinanzaRegioni(),
       },
     ],
   };

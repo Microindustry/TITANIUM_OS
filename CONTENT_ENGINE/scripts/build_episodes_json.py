@@ -48,6 +48,11 @@ REGIONI_NINA = {
     3: "LA MENTE CHE PARLA", 4: "LA BIBLIOTECA DELLE FONTI", 5: "LA GRANDE MAPPA",
     6: "L'ESERCITO SILENZIOSO", 7: "IL DIRETTORE",
 }
+# verticale FINANZA personale (asse "di lato": cambiare discorso) — regioni proprie, Pietre ₣
+REGIONI_FINANZA = {
+    1: "IL VALORE", 2: "SPENDERE MENO DI QUANTO ENTRA",
+    3: "IL CUSCINETTO", 4: "FAR LAVORARE I SOLDI",
+}
 # id concetto-fondante -> (concetto, regione, giro_base, richiama, stato)
 NINA_SEED = {
     # i 4 semi (fonte) — dalla tabella PILOTA del canone
@@ -76,6 +81,10 @@ NINA_SEED = {
     "MOM_03_L_ESERCITO": ("l'esercito: tante entità che fanno", 6, 1, ["⟡2", "⟡4"], "fonte"),
     "EP_S2_02_L_ORCHESTRATORE": ("l'orchestratore: chi fa cosa e quando", 7, 1, ["⟡5", "⟡6"], "fonte"),
     "EP_S2_03_LA_TELA": ("la Tela: il calendario notturno", 7, 2, ["⟡6"], "fonte"),
+}
+# verticale finanza: id -> (concetto, regione, giro, richiama, stato)
+FINANZA_SEED = {
+    "EP_AV_FIN_01": ("cosa sono i soldi: lavoro e fiducia, scambiabili", 1, 1, [], "adattato"),
 }
 
 
@@ -230,14 +239,19 @@ def apply_narrativa(eps: list) -> int:
         narr["asse_ruolo"] = ar
         e["narrativa"] = narr
 
-    for eid, (concetto, reg, giro, richiama, stato) in NINA_SEED.items():
-        e = by_id.get(eid)
-        if not e:
-            continue
-        e["narrativa"]["asse_nina"] = {
-            "concetto": concetto, "regione": reg, "regione_nome": REGIONI_NINA[reg],
-            "pietra": f"⟡{reg}", "giro_spirale": giro, "richiama": richiama, "stato_nina": stato,
-        }
+    def _set_nina(seed: dict, verticale: str, regioni: dict, prefix: str):
+        for eid, (concetto, reg, giro, richiama, stato) in seed.items():
+            e = by_id.get(eid)
+            if not e:
+                continue
+            e["narrativa"]["asse_nina"] = {
+                "verticale": verticale, "concetto": concetto, "regione": reg,
+                "regione_nome": regioni.get(reg, "?"), "pietra": f"{prefix}{reg}",
+                "giro_spirale": giro, "richiama": richiama, "stato_nina": stato,
+            }
+
+    _set_nina(NINA_SEED, "tech", REGIONI_NINA, "⟡")
+    _set_nina(FINANZA_SEED, "finanza", REGIONI_FINANZA, "₣")
 
     # eredita ai figli in ordine di profondita' (il padre e' gia' risolto)
     for e in sorted(eps, key=lambda x: x.get("level", 0)):

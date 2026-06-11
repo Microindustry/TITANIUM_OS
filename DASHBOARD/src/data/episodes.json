@@ -50,6 +50,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "il Grande Loop",
         "regione": 1,
         "regione_nome": "LA TRACCIA",
@@ -89,6 +90,7 @@
         "tipo": "origine"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "il Socio: un gesto, più frutti",
         "regione": 1,
         "regione_nome": "LA TRACCIA",
@@ -375,6 +377,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la Dashboard: vedere il sistema",
         "regione": 5,
         "regione_nome": "LA GRANDE MAPPA",
@@ -413,6 +416,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "NeuroMap: il sistema come mappa",
         "regione": 5,
         "regione_nome": "LA GRANDE MAPPA",
@@ -481,6 +485,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "SINAPSI: la memoria che collega",
         "regione": 4,
         "regione_nome": "LA BIBLIOTECA DELLE FONTI",
@@ -521,6 +526,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "il sistema pensa: recupero con fonti",
         "regione": 4,
         "regione_nome": "LA BIBLIOTECA DELLE FONTI",
@@ -907,6 +913,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "il cervello ibrido: cloud + locale",
         "regione": 3,
         "regione_nome": "LA MENTE CHE PARLA",
@@ -943,6 +950,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "l'orchestratore: chi fa cosa e quando",
         "regione": 7,
         "regione_nome": "IL DIRETTORE",
@@ -980,6 +988,7 @@
         "tipo": "sistema"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la Tela: il calendario notturno",
         "regione": 7,
         "regione_nome": "IL DIRETTORE",
@@ -1366,6 +1375,7 @@
         "tipo": "momento"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la prima automazione",
         "regione": 2,
         "regione_nome": "L'OFFICINA CHE GIRA SOLA",
@@ -1427,6 +1437,7 @@
         "tipo": "momento"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "l'esercito: tante entità che fanno",
         "regione": 6,
         "regione_nome": "L'ESERCITO SILENZIOSO",
@@ -3379,6 +3390,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "l'Automazione",
         "regione": 2,
         "regione_nome": "L'OFFICINA CHE GIRA SOLA",
@@ -3421,6 +3433,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "l'LLM, la mente che parla",
         "regione": 3,
         "regione_nome": "LA MENTE CHE PARLA",
@@ -3494,6 +3507,7 @@
         "fase_sistema": "GENESIS"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "un posto solo per governare il disordine",
         "regione": 7,
         "regione_nome": "IL DIRETTORE",
@@ -3538,6 +3552,7 @@
         "fase_sistema": "GENESIS"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la mappa della conoscenza",
         "regione": 5,
         "regione_nome": "LA GRANDE MAPPA",
@@ -3587,6 +3602,7 @@
         "fase_sistema": "GENESIS"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "vedere il sistema come una mappa",
         "regione": 5,
         "regione_nome": "LA GRANDE MAPPA",
@@ -3634,6 +3650,7 @@
         "fase_sistema": "GENESIS"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "stare informati senza farlo a mano",
         "regione": 2,
         "regione_nome": "L'OFFICINA CHE GIRA SOLA",
@@ -3687,6 +3704,7 @@
         "tipo": "origine"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la materia: scelta, controllo, precisione",
         "regione": 0,
         "regione_nome": "LA MATERIA",
@@ -3728,6 +3746,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "il RAG, la biblioteca delle fonti",
         "regione": 4,
         "regione_nome": "LA BIBLIOTECA DELLE FONTI",
@@ -3772,6 +3791,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la Wiki, la grande mappa",
         "regione": 5,
         "regione_nome": "LA GRANDE MAPPA",
@@ -4462,6 +4482,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "gli Agenti, l'esercito silenzioso",
         "regione": 6,
         "regione_nome": "L'ESERCITO SILENZIOSO",
@@ -4505,6 +4526,7 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "l'Orchestrazione, il direttore",
         "regione": 7,
         "regione_nome": "IL DIRETTORE",
@@ -4571,10 +4593,53 @@
         "tipo": "avventura"
       },
       "asse_nina": {
+        "verticale": "tech",
         "concetto": "la Materia: il gesto sul metallo, la radice di tutto",
         "regione": 0,
         "regione_nome": "LA MATERIA",
         "pietra": "⟡0",
+        "giro_spirale": 1,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    }
+  },
+  {
+    "id": "EP_AV_FIN_01",
+    "title": "Il Valore — cosa sono davvero i soldi",
+    "sottotitolo": "Verticale Finanza · una moneta non vale per il metallo: vale per il lavoro che ci sta dentro e per la fiducia di tutti",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-11",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "finanza",
+      "soldi",
+      "valore",
+      "scambio"
+    ],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "EP_AV_FIN_01 — Il Valore \"Cosa sono davvero i soldi\" Formato: Avventura binario educativo · verticale Finanza personale | Durata stimata: 7 9 min Per chi: bambini e curiosi di ogni età | Insegna: cos'",
+    "content": "# EP_AV_FIN_01 — Il Valore\n### \"Cosa sono davvero i soldi\"\n\n**Formato:** Avventura (binario educativo · **verticale Finanza personale**) | Durata stimata: 7-9 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** cos'è il denaro — *lavoro conservato + una fiducia condivisa; un modo per scambiare valore*\n**Canone:** BIBBIA_DEL_MONDO.md §0-bis/§0-ter (Nina = MIMS per la mente; verticali Tech · Finanza) · Regione ₣1 IL VALORE\n**Verticale:** Finanza (l'asse \"di lato\": si cambia discorso rispetto all'arco IA, stesso mondo, stessa Nina)\n\n---\n\n## COLD OPEN\n\nAlla Taverna, quel giorno, non si parlava di codice né di metallo. Si parlava di **scambi**.\n\nNina aveva fatto una cosa con le sue mani — un piccolo gancio, buono, fatto bene `⟡0`. Lo\nvoleva scambiare con un pane. Ma il fornaio non gli serviva un gancio. Voleva del legno. E\nquello del legno non voleva pane: voleva chiodi. Nina si ritrovò a correre in tondo, con il\nsuo bel gancio in mano, e niente da mangiare.\n\n«THEMIS» disse, frustrata, «il mio gancio è buono. Perché non riesco a prendere niente?»\n\n«Perché stai usando lo strumento sbagliato» disse THEMIS. «Ti manca una cosa che il mondo\nha inventato proprio per questo. Vieni.»\n\n---\n\n## ATTO I — IL BARATTO CHE NON TORNAVA\n\nTHEMIS le spiegò il giro che aveva appena fatto. «Tu hai un gancio. Lui vuole legno. Quello\ndel legno vuole chiodi. Per mangiare dovresti fare tre scambi nell'ordine giusto, e sperare\nche tornino tutti. Si chiama **baratto**, ed è faticoso: funziona solo se due persone\nvogliono *esattamente* quello che ha l'altro, **nello stesso momento**.»\n\n«Quasi mai» disse Nina.\n\n«Quasi mai. Per questo gli uomini hanno inventato un trucco: una cosa che **tutti accettano**,\nsempre. Così tu vendi il gancio a chi lo vuole, prendi quella cosa, e con quella prendi il\npane. Non servono più tre scambi che combaciano: ne bastano due semplici.»\n\nTHEMIS le mise in mano una **moneta**.\n\n> *(Strato fondo, per il papà: il baratto ha il problema della \"doppia coincidenza dei\n> bisogni\". Il denaro lo risolve facendo da **mezzo di scambio** universale — non devi più\n> trovare chi vuole proprio la tua cosa.)*\n\n---\n\n## ATTO II — LAVORO CONSERVATO\n\nNina guardò la moneta. Era piccola, di metallo. «Ma questa non vale niente. È un dischetto.\nIl mio gancio almeno serve a qualcosa.»\n\n«Hai ragione e hai torto» disse THEMIS. «Il metallo del dischetto non vale quasi niente. Ma\nla moneta non vale per *il metallo*. Vale per **il lavoro che ci hai messo per averla**.»\n\nNina non capì subito. THEMIS continuò.\n\n«Tu hai lavorato per fare il gancio. Quel lavoro — la tua fatica, il tuo tempo, la tua\nbravura — non sparisce quando vendi il gancio: si **conserva** dentro la moneta. La moneta è\n**lavoro messo da parte**. Domani, quando hai fame, tiri fuori la moneta: stai usando il\nlavoro di ieri per il pane di oggi. È come la traccia che resta `⟡1`, ma del *valore*.»\n\nNina strinse la moneta più forte. Adesso non era più un dischetto. Era il suo gancio, il suo\ntempo, le sue mani — in una forma che poteva spendere quando voleva.\n\n> *(Strato fondo: il denaro è una **riserva di valore** — permette di trasferire il frutto\n> del lavoro nel tempo. Per questo conta *come* lo guadagni: dentro c'è lavoro vero.)*\n\n---\n\n## ATTO III — LA FIDUCIA DI TUTTI\n\n«Una cosa ancora non mi torna» disse Nina. «Perché il fornaio accetta il dischetto? Lui non\nha visto il mio lavoro. Per lui è solo metallo.»\n\n«E qui c'è il segreto più grande» disse THEMIS, e abbassò la voce come per una cosa\nimportante. «Il fornaio accetta la moneta perché **si fida** che domani anche *qualcun altro*\nla accetterà da lui. La moneta funziona solo se **tutti credono** che funzioni. Non è il\nmetallo a tenerla in piedi: è la **fiducia di tutti**, insieme.»\n\nNina ci pensò. «Quindi i soldi sono… una promessa che ci facciamo tutti?»\n\nTHEMIS la guardò con quel mezzo sorriso. «Hai trovato la frase giusta. Di nuovo. Il denaro è\n**lavoro conservato** *più* **una promessa condivisa**. Tolto uno dei due, è solo un\ndischetto. È la cosa più simile alla fiducia che puoi tenere in tasca.»\n\n---\n\n## CHIUSURA\n\nNina comprò il pane. Un solo scambio, semplice. E le rimase in mano un'altra moneta — il\nlavoro di ieri che non aveva ancora usato.\n\nLa rigirò tra le dita. Aveva capito una cosa che a scuola non le avevano mai detta così: i\nsoldi non sono il fine, sono uno **strumento** — come il calibro, come un buon martello. Uno\nstrumento per scambiare il tuo lavoro con quello degli altri, senza correre in tondo. E come\nogni strumento, conta **saperlo usare**.\n\nI soldi sono lavoro che hai conservato, e una promessa che il mondo si fa. Trattali per\nquello che sono: non magia, non sporco. Uno strumento.\n\n> Quella sera Nina mise da parte la moneta avanzata in un vasetto. E le venne un pensiero.\n>\n> *Se ogni giorno il lavoro che entra è più di quello che spendo, il vasetto cresce da solo.\n> E se invece spendo più di quanto entra… il vasetto si svuota anche se lavoro tanto. Da cosa\n> dipende, allora — da quanto guadagno, o da quanto tengo?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito il Valore? Provalo tu: la prossima volta che hai una monetina, pensa a quale\nlavoro c'è dentro (di chi te l'ha data, o tuo). Non è un dischetto: è tempo e fatica di\nqualcuno, in una forma che puoi scambiare. Ecco cosa sono davvero i soldi.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `₣1` il **Valore** (verticale Finanza, radice): *il denaro è lavoro conservato + una fiducia condivisa; uno strumento di scambio che risolve il baratto. Conta come lo guadagni e saperlo usare.*\n**Pietre richiamate:** la **Materia** `⟡0` (il gesto/lavoro vero che finisce \"dentro\" la moneta) · il **Grande Loop** `⟡1` (la moneta = valore che resta nel tempo).\n**Key-image:** Nina che corre in tondo col gancio (il baratto che non torna) · la **moneta** in mano · il dischetto che \"diventa\" il suo gancio (lavoro conservato) · il **vasetto** che cresce.\n**3 strati:** bambino = dal baratto difficile alla moneta che tutti accettano · curioso = \"il denaro è mezzo di scambio + riserva di valore\" · esperto/papà = risolve la doppia coincidenza dei bisogni; il valore sta nel lavoro e nella fiducia condivisa, non nel metallo.\n**Aggancio reale:** la regola 9 del sistema (reinvesti il margine) nasce da qui; tono \"da bravo papà\" (§0-bis). Verticale Finanza, prima Pietra.\n**Open loop → ₣2 (Spendere meno di quanto entra):** non conta solo quanto guadagni, ma quanto **tieni** — il vasetto che cresce.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "finanza",
+        "concetto": "cosa sono i soldi: lavoro e fiducia, scambiabili",
+        "regione": 1,
+        "regione_nome": "IL VALORE",
+        "pietra": "₣1",
         "giro_spirale": 1,
         "richiama": [],
         "stato_nina": "adattato"

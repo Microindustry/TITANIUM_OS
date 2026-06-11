@@ -26,6 +26,7 @@ export interface Episode {
   narrativa?: {
     asse_ruolo?: { tipo?: string; fase_sistema?: string };
     asse_nina?: {
+      verticale?: string; // "tech" (arco IA) · "finanza" · ... (l'asse "di lato")
       concetto?: string; regione?: number; regione_nome?: string;
       pietra?: string; giro_spirale?: number; richiama?: string[]; stato_nina?: string;
     };
