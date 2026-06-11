@@ -15,7 +15,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Graphify  il repo che si disegna da solo](#graphify-il-repo-che-si-disegna-da-solo)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Graphify  il repo che si disegna da solo](#graphify-il-repo-che-si-disegna-da-solo)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -46,9 +46,14 @@
       "level": 2,
       "title": "REEL_HOOK",
       "content": "Il mio progetto è 515 file. Capire come funziona, ogni volta, costava token e tempo.\nIl problema: il RAG ti dice cosa c'è scritto, non come le cose si tengono insieme.\nIn 13 secondi ho trasformato l'intero repo in una mappa di 5.966 nodi e 696 cluster —\ntutto in locale, zero cloud. Ora chiedo alla mappa, non ai file.\nIl sistema ha iniziato a spiegare sé stesso."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Graphify trasforma il repo (515 file) in knowledge graph: **5.966 nodi · 6.317 archi · 696 community in 13,2 s**, su CPU, senza GPU richiesta.\n- **DECISIONE:** 100% locale, licenza MIT, esposto come skill `/graphify` in Claude Code → nessun documento sensibile esce dalla macchina.\n- **LOGICA:** il RAG recupera il *testo*; il grafo dà la *struttura* (chi-chiama-chi, dipendenze). È il salto RAG→Wiki (Pietra ⟡5).\n- **DECISIONE:** estrazione da `MENTE/` **ibrida** — il 7B locale è debole sui documenti sensibili, quindi lì il grafo si costruisce curato, non a pioggia.\n- **OBIETTIVO:** interrogare il grafo (query/path/explain) invece di rileggere i file → zero token sprecati su domande strutturali."
     }
   ],
-  "word_count": 438,
-  "updated_at": "2026-06-10T12:58:20.652500",
-  "built_at": "2026-06-10T18:54:46.125813"
+  "word_count": 558,
+  "updated_at": "2026-06-11T02:08:06.955577",
+  "built_at": "2026-06-11T13:57:34.986097"
 }

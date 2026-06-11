@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-10T12:29:46.438009",
-  "active_milestone": "Sessione #35: SISTEMA VERIFICA reale (git pulito, build TS 0 errori, RAG GPU ok) + RETE riparata (restart API → /api/graph/graphify e /api/rag/vectors da 404/500 → 200, toggle Conoscenza/Sistema LIVE) + n8n installato GLOBALE (2.25.6) e avvio-al-login riagganciato (START_LOGIN.bat usa binario globale, fallback npx) + diagnosi STORIE (124 ep ma lavoro recente 0 episodi) + VISIONE Nina-PRODOTTO catturata nel canone (BIBBIA §0-bis: derivazione educativa di MIMS, scaletta/changelog-driven, scope tech+finanza).",
-  "last_action": "Modifica a night_audit.py",
-  "next_step": "STORIE: creare i 'semi' tecnici reali del lavoro recente che hanno 0 episodi (Graphify/RAG→Wiki, RETE-grafo, AI Watcher, Centro di Controllo) → CONTENT_ENGINE/DATABASE/episodes + build_episodes_json.py. POI Nina rifatta da zero (impronta validata, agganciata alla scaletta). POI nodo SELF_IMPROVE (agente autonomo notturno, read-only+PR, mai merge auto su main).",
-  "session_count": 44,
+  "last_update": "2026-06-11T14:12:56.701135",
+  "active_milestone": "Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA 0-ter (Nina ha il suo OS) + indice PIETRE auto-generato + FATTI(per il RAG) sui 4 semi. 153 ep, build TS verde, ~14 commit isolati.",
+  "last_action": "Modifica a STORIE_INDEX.md",
+  "next_step": "Approvare UAC del restart API (RAG torna 200). Poi: FINANZA reg2 \"Spendere meno di quanto entra\" (open loop pronto). FOCUS: usare Fable 5 (entro 22/06) per SELF_IMPROVE/red-team (audit critico 360 + migliorie prioritizzate, proposte PR mai merge auto su main). Decisioni aperte: scalare asse_nina ai 129, viste 2 assi in dashboard, Nina 0 MATERIA gia fatto (EP_AV_M0).",
+  "session_count": 47,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-10T12:29:46.366038"
+      "last_activity": "2026-06-11T14:10:21.849231"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -61,7 +61,13 @@
       "Binario AVVENTURA esteso: bozza MAPPA_AVVENTURA.md multi-livello (Mondo→7 Regioni dell'arco IA→semi tecnici→Pietre) + vista navigabile 'Mappa dell'Avventura' (AvventuraMapView) + 3 episodi definitivi EP_AV_00/01/02 (Loop→Automazione→LLM), build verde (09/06/2026)",
       "SISTEMA VERIFICA + RETE riparata: restart API ha portato /api/graph/graphify e /api/rag/vectors da 404/500 → 200 (toggle RETE Conoscenza/Sistema ora LIVE); git pulito, build TS 0 errori, RAG GPU verificato (10/06/2026)",
       "n8n installato globale (npm i -g n8n, 2.25.6) + avvio-al-login riagganciato: START_LOGIN.bat step 4 usa binario globale (%N8N% start) con fallback npx — niente più reinstall ~4min a ogni login (10/06/2026)",
-      "VISIONE Nina-PRODOTTO a canone (BIBBIA §0-bis): Nina = versione educativa introduttiva di MIMS (derivazione del prodotto), scaletta/changelog-driven (persona curiosa che sbaglia→sistema→aggiorna), scope > arco IA (anche 'cos'è un ambiente Python') + verticale finanza personale; nodo SELF_IMPROVE (agente autonomo notturno read-only+PR) messo in bussola dopo gli episodi (10/06/2026)"
+      "VISIONE Nina-PRODOTTO a canone (BIBBIA §0-bis): Nina = versione educativa introduttiva di MIMS (derivazione del prodotto), scaletta/changelog-driven (persona curiosa che sbaglia→sistema→aggiorna), scope > arco IA (anche 'cos'è un ambiente Python') + verticale finanza personale; nodo SELF_IMPROVE (agente autonomo notturno read-only+PR) messo in bussola dopo gli episodi (10/06/2026)",
+      "STORIE a 2 ASSI rebuild-safe (RUOLO da stagione su tutti + NINA su 40 concetti) integrate coi N-livelli sui contenuti (parent/level/children, build_tree); modello GitHub-Docs/NCP; lo spike scriveva nel json e si perdeva -> ora ricalcolato a ogni build (11/06)",
+      "Mappa di Nina percorribile a LV illimitati, data-driven dall asse_nina: Regioni 0-7 (Tech) + verticale FINANZA (1-4) si popolano da sole; rinominata Mappa, mappa di sistema -> ARCHITETTURA (11/06)",
+      "ARCO NINA COMPLETO 8/8: EP_AV_M0 Materia, AV_00 Loop, 01 Automazione, 02 LLM, 03 RAG, 04 Wiki, 05 Agenti, 06 Orchestrazione; +EP_AV_FIN_01 Il Valore (verticale finanza) (11/06)",
+      "Canon BIBBIA 0-ter: Nina ha il suo OS (si perde come Matteo, glielo costruisce il papa-meccanico; la Mappa E l OS di Nina) (11/06)",
+      "Indice PIETRE.md auto-generato (Tech+Finanza) + blocco FATTI(per il RAG) sui 4 semi + riflusso MENTE/KNOWLEDGE/genesis_nodi_fatti.md (11/06)",
+      "Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)"
     ],
     "next": "Rifinire PITCH + MIMS + EVA",
     "target_capannone": "2030-07-15"

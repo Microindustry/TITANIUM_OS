@@ -1,0 +1,56 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_WATCHER_L1_keyless.md",
+  "title": "Guardare senza chiavi — gh, RSS, YouTube",
+  "meta": {
+    "id": "EP_SEED_WATCHER_L1_KEYLESS",
+    "title": "Guardare senza chiavi — gh, RSS, YouTube",
+    "sottotitolo": "Approfondimento LV1 · quattro sorgenti, zero API key: come si resta informati senza pagare un abbonamento",
+    "stagione": "ST",
+    "parent": "EP_SEED_WATCHER",
+    "level": "1",
+    "data_evento": "2026-06-07",
+    "tags": "[watcher, keyless, rss, github-cli, youtube, approfondimento]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Guardare senza chiavi  gh, RSS, YouTube](#guardare-senza-chiavi-gh-rss-youtube)\n    - [Approfondimento LV1 di EP_SEED_WATCHER  informarsi è un diritto, non un abbonamento](#approfondimento-lv1-di-epseedwatcher-informarsi-è-un-diritto-non-un-abbonamento)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [LE QUATTRO SORGENTI (e perché niente chiavi)](#le-quattro-sorgenti-e-perché-niente-chiavi)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "Approfondimento LV1 di [[EP_SEED_WATCHER]] · \"informarsi è un diritto, non un abbonamento\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "DA DOVE VIENE",
+      "content": "Il principale dice \"KEYLESS, 4 sorgenti, zero chiavi\" e va avanti. Ma il *keyless* è il cuore del nodo:\nè ciò che lo rende gratis da tenere acceso per sempre. Qui spiego **come** si guarda il mondo senza una\nsola API key."
+    },
+    {
+      "level": 2,
+      "title": "LA DOMANDA",
+      "content": "La via comoda per un radar di notizie è un'API a pagamento: paghi, hai una chiave, fai le chiamate. Ma\nuna chiave **scade, costa, si revoca** — e diventa un padrone. La domanda: i dati che mi servono sono già\npubblici da qualche parte *senza* bisogno di una chiave?"
+    },
+    {
+      "level": 2,
+      "title": "LE QUATTRO SORGENTI (e perché niente chiavi)",
+      "content": "**Semplice (il papà meccanico):** invece di abbonarti a un servizio che ti porta le riviste, vai tu\nall'edicola che è già aperta e gratuita. Le edicole già aperte sono quattro.\n\n**Preciso (l'esperto):**\n- **GitHub** via la **CLI `gh`** — già autenticata sulla macchina: uso un attrezzo che ho già loggato,\n  non una nuova chiave da gestire.\n- **Siti** via **RSS** — il feed è un formato pubblico fatto apposta per essere letto da una macchina.\n- **YouTube** via **RSS dei canali** — ogni canale ha un feed pubblico: niente API key di YouTube.\n- **tier + rotazione** dal brief (chi guardare e quanto spesso).\n\nTutto roba **pubblica e stabile**. Primo giro a freddo: **67 + 30 segnali reali**."
+    },
+    {
+      "level": 2,
+      "title": "PERCHÉ CONTA",
+      "content": "1. **Costo di gestione zero:** niente da ruotare, niente che alza il prezzo o chiude. (Regola 8: proteggi\n   il sapere; e non dipendere da chiavi.)\n2. **Robustezza:** meno dipendenze esterne = meno cose che si rompono di notte mentre dormi.\n3. **Riusabile:** lo stesso schema \"usa ciò che è già pubblico\" vale per mille altri radar."
+    },
+    {
+      "level": 2,
+      "title": "IL FILO CON GLI ALTRI LIVELLI",
+      "content": "- **Sale al principale:** [[EP_SEED_WATCHER]] (il radar che gira di notte).\n- **Fratelli LV1:** [[EP_SEED_WATCHER_L1_TIER]] (chi guardare di più), [[EP_SEED_WATCHER_L1_GATE]] (filtrare il rumore).\n- **Aggancio Nina:** \"le edicole già aperte\" — metafora pronta per spiegare a un bambino la differenza tra\n  un dato *pubblico* (RSS) e uno *chiuso* (dietro chiave).\n\n> Approfondimento (LV1). Nessun limite di profondità."
+    }
+  ],
+  "word_count": 469,
+  "updated_at": "2026-06-11T02:08:08.298267",
+  "built_at": "2026-06-11T13:57:35.181259"
+}

@@ -1,0 +1,56 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L1_tsne.md",
+  "title": "Da 5000 numeri a una galassia — il t-SNE",
+  "meta": {
+    "id": "EP_SEED_RETE_L1_TSNE",
+    "title": "Da 5000 numeri a una galassia — il t-SNE",
+    "sottotitolo": "Approfondimento LV1 · come si schiaccia un mondo a tante dimensioni in 3 che puoi ruotare con gli occhi",
+    "stagione": "ST",
+    "parent": "EP_SEED_RETE",
+    "level": "1",
+    "data_evento": "2026-06-10",
+    "tags": "[rete, t-sne, embedding, dimensioni, three.js, approfondimento]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Da 5000 numeri a una galassia  il t-SNE](#da-5000-numeri-a-una-galassia-il-t-sne)\n    - [Approfondimento LV1 di EP_SEED_RETE  vedere con gli occhi una cosa che vive in 384 dimensioni](#approfondimento-lv1-di-epseedrete-vedere-con-gli-occhi-una-cosa-che-vive-in-384-dimensioni)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "Approfondimento LV1 di [[EP_SEED_RETE]] · \"vedere con gli occhi una cosa che vive in 384 dimensioni\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "DA DOVE VIENE",
+      "content": "Nel principale dico che la RETE proietta ogni dato \"in 3D con t-SNE dentro Three.js\". Parola passata\nveloce. Qui spiego il trucco che rende possibile *vedere* il sistema: come si passa da una montagna di\nnumeri a una galassia che puoi ruotare con il dito."
+    },
+    {
+      "level": 2,
+      "title": "LA DOMANDA",
+      "content": "Ogni documento, nel RAG, è un **vettore**: una lista di ~384 numeri che ne cattura il significato. Il\ncomputer ci lavora benissimo. Ma io ho due occhi e uno schermo: **non vedo in 384 dimensioni**. La\ndomanda è: come faccio a *guardare* qualcosa che vive in uno spazio che non posso immaginare?"
+    },
+    {
+      "level": 2,
+      "title": "COME FUNZIONA (semplice, poi preciso)",
+      "content": "**Semplice (il papà meccanico):** è come fare la **fotografia** di una scultura. La scultura è 3D, la\nfoto è 2D — perdi qualcosa, ma scegli l'angolo che tiene insieme le cose che stanno vicine. Il t-SNE fa\nla foto: schiaccia tante dimensioni in poche, **tenendo vicini i punti che erano vicini davvero**.\n\n**Preciso (l'esperto):** il **t-SNE** non conserva le distanze esatte, conserva il **vicinato**. Guarda\nchi è simile a chi nello spazio grande e cerca una disposizione in 3D dove quei simili restano\nraggruppati. Per questo vedi *grappoli*: non sono decorazione, sono temi che si tengono. (È il motivo\nper cui non leggi i numeri sugli assi: contano le **vicinanze**, non le coordinate.)"
+    },
+    {
+      "level": 2,
+      "title": "PERCHÉ CONTA",
+      "content": "1. **Capisci a colpo d'occhio.** Un grappolo denso = un'area di sapere fitta; un punto isolato = una nota\n   orfana. Lo vedi in un secondo, senza aprire niente.\n2. **Trovi i buchi.** Spazi vuoti nella galassia = argomenti su cui ho poco. La mappa mostra anche ciò\n   che *manca*.\n3. **È onesto.** La foto può ingannare se la scambi per la realtà: il t-SNE avvicina, non misura. Saperlo\n   ti tiene dal trarre conclusioni sbagliate dalle distanze."
+    },
+    {
+      "level": 2,
+      "title": "IL FILO CON GLI ALTRI LIVELLI",
+      "content": "- **Sale al principale:** [[EP_SEED_RETE]] (la galassia 3D del sistema).\n- **Fratelli LV1:** [[EP_SEED_RETE_L1_TOGGLE]] (le due sorgenti), [[EP_SEED_RETE_L1_BUGSTATO]] (il bug di stato).\n- **Aggancio Nina:** \"fare la foto di una cosa che non si può vedere tutta intera\" — una metafora pronta\n  per spiegare a un bambino cos'è un *embedding* senza dire la parola.\n\n> Approfondimento (LV1). Profondità libera: sotto può stare un LV2 su PCA/UMAP vs t-SNE, se servirà."
+    }
+  ],
+  "word_count": 541,
+  "updated_at": "2026-06-11T02:08:07.905168",
+  "built_at": "2026-06-11T13:57:35.274988"
+}

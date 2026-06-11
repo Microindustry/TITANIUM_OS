@@ -6,6 +6,78 @@
     "sessione": ""
   },
   {
+    "id": "BUS-55770484",
+    "stato": "da_fare",
+    "testo": "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-885b5992",
+    "stato": "da_fare",
+    "testo": "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-2369c118",
+    "stato": "da_fare",
+    "testo": "(#build-potenziato-radice-del-problema-metadati)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-4e62d0cf",
+    "stato": "da_fare",
+    "testo": "(#4-semi-tecnici-scritti-a-mano-stagione-st-con-reelhook-il-content-gap-chiuso)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-b26a815d",
+    "stato": "da_fare",
+    "testo": "(#igiene-episodesjson-additiva-nulla-cancellato)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-14d5cad8",
+    "stato": "da_fare",
+    "testo": "(#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-2ca0bce3",
+    "stato": "da_fare",
+    "testo": "(#notte-autonoma-36b-1006-allineato-i-n-livelli-al-tuo-blueprint-a-2-assi)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-2297ff00",
+    "stato": "da_fare",
+    "testo": "(#parcheggio-nina-ragwiki-epav0304-scritti-ma-prematuri-nina-viene-dopo)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-e0438b8b",
+    "stato": "da_fare",
+    "testo": "(#sessione-35-10062026)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-e1988926",
+    "stato": "da_fare",
+    "testo": "(#storie-episodi-reali-del-lavoro-recente-fatto-in-36)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-e5df6395",
+    "stato": "da_fare",
+    "testo": "(#nina-prodotto-derivazione-educativa-di-mims-visione-0906-catturata)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-b2e73574",
+    "stato": "da_fare",
+    "testo": "(#selfimprove-agente-autonomo-notturno-nodo-dopo-gli-episodi-idea-matteo-1006)",
+    "sessione": ""
+  },
+  {
     "id": "BUS-c80fad5a",
     "stato": "da_fare",
     "testo": "(#sessione-34-07062026)",
@@ -60,21 +132,261 @@
     "sessione": ""
   },
   {
+    "id": "BUS-07ec4fae",
+    "stato": "fatto",
+    "testo": "`EP_AV_M0` \"La Materia\" (⟡0, la radice \"dal metallo\"): THEMIS porta Nina alla radice",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-ce3e0f56",
+    "stato": "fatto",
+    "testo": "EP_AV_03 (RAG ⟡4) + EP_AV_04 (Wiki ⟡5): tolto il \"parcheggio\", sono canonici nell'arco.",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-e780ff63",
+    "stato": "fatto",
+    "testo": "Nina ha un sistema/agente suo (scaffolding) che il papà-meccanico le costruisce; si perde",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-82c3ff81",
+    "stato": "fatto",
+    "testo": "`narrativa.asse_nina.verticale` (tech ⟡ / finanza ₣); REGIONI_FINANZA (Valore/Spendere meno/",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-b74db574",
+    "stato": "fatto",
+    "testo": "`EP_AV_FIN_01` \"Il Valore\" (₣1): baratto→moneta, lavoro conservato + fiducia condivisa. Open loop → ₣2.",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-2b7e2e95",
+    "stato": "da_fare",
+    "testo": "PROSSIMO finanza (open loop pronto): ₣2 \"Spendere meno di quanto entra\" · poi ₣3 ₣4.",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-f539f95a",
+    "stato": "fatto",
+    "testo": "**Crash dashboard risolto**: `MAPPA_RADICE` usava `REGIONI` prima dell'init (ReferenceError TDZ);",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-de226f85",
+    "stato": "fatto",
+    "testo": "Verifiche: audit 0 orfani · API 5001, grafo `/api/graph/graphify`, dashboard 5173 → **200**.",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-a0c2868f",
+    "stato": "da_fare",
+    "testo": "**RAG `/api/rag/vectors` → 503** (indice ChromaDB stale). Lanciato `SERVICES/restart_api.ps1`",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-a5d5fe75",
+    "stato": "da_fare",
+    "testo": "Usare **Fable 5** (fino al 22/06) per **farmi \"attaccare\"**: audit critico 360 (fragilità,",
+    "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
+  },
+  {
+    "id": "BUS-53e3bb38",
+    "stato": "fatto",
+    "testo": "Sistema sano sul plumbing: 125 ep, 0 orfani, 0 mojibake reale (il `�` era solo",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-1b033bf8",
+    "stato": "fatto",
+    "testo": "3 problemi reali trovati: (1) content gap sui 4 lavori recenti, (2) 13 recap con",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-61fa266b",
+    "stato": "fatto",
+    "testo": "`build_episodes_json.py`: ora legge **frontmatter YAML** e lo **toglie dal contenuto**",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-5d09de08",
+    "stato": "fatto",
+    "testo": "Graphify/RAG→Wiki (`EP_SEED_GRAPHIFY`) · RETE-grafo (`EP_SEED_RETE`) ·",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-40d94bc4",
+    "stato": "fatto",
+    "testo": "File rinominati `EP_SEED_*` per evitare collisione `derive_id_from_name` con date esistenti.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-ea15b9d2",
+    "stato": "fatto",
+    "testo": "Decisione presa (Matteo): scrittura a mano in S2_SISTEMA, non pipeline.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-9fc040ac",
+    "stato": "fatto",
+    "testo": "13 recap: promosso il **titolo reale** nascosto (`## \"...\"`) a `title`, serie→sottotitolo,",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-b7e5d03b",
+    "stato": "fatto",
+    "testo": "Data futura clampata a oggi. Stato finale: 129 ep · 0 titoli generici · 0 date future · 0 senza tag.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-96eaaa96",
+    "stato": "fatto",
+    "testo": "Build TS dashboard verde (exit 0).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-dd3f78c8",
+    "stato": "fatto",
+    "testo": "Diagnosi: `episodes.json` era una **lista PIATTA** → impossibile appendere approfondimenti.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-be4f34ff",
+    "stato": "fatto",
+    "testo": "Ricerca librerie: scartati framework pesanti (Astro/Contentlayer = riscrivere la dashboard,",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-f6dfc66d",
+    "stato": "fatto",
+    "testo": "`build_episodes_json.py`: legge `parent`/`level` dal frontmatter + `build_tree()` calcola",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-3840bd3c",
+    "stato": "fatto",
+    "testo": "Tipo TS `Episode` esteso (parent_id/level/children opzionali) — retrocompatibile.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-0849fdcc",
+    "stato": "fatto",
+    "testo": "`StorieView` card **RICORSIVA**: un episodio con figli mostra gli approfondimenti annidati",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-88e8d98b",
+    "stato": "fatto",
+    "testo": "PROVA su contenuto vero: `EP_SEED_GRAPHIFY_L1_COMMUNITY` (community detection) agganciato a",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-a32a36a3",
+    "stato": "fatto",
+    "testo": "**Graphify completato a LV1** (4 approfondimenti, tutti agganciati a `EP_SEED_GRAPHIFY`):",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-1a27ef4a",
+    "stato": "fatto",
+    "testo": "**MAPPA di Nina rifatta percorribile a LV** (indicazioni Matteo): `AvventuraMapView` ora è",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-9617f254",
+    "stato": "fatto",
+    "testo": "**Tutti e 4 i semi completi a LV1** (13 approfondimenti totali, build verde, 145 ep):",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-62a619f8",
+    "stato": "fatto",
+    "testo": "**LV2** fatti sui punti ricchi: modularità (sotto community) · t-SNE vs UMAP (sotto t-SNE) ·",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-9e5b6614",
+    "stato": "fatto",
+    "testo": "**2 assi rebuild-safe nel builder** (`apply_narrativa`): asse_ruolo (da stagione) su tutti i",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-f5efbda6",
+    "stato": "fatto",
+    "testo": "asse_nina su 36 ep (i 4 semi + EP_AV_* + fonti tecniche dell'arco + loro approfondimenti).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-1dc911fe",
+    "stato": "fatto",
+    "testo": "Recuperati i file spike non committati (canone 2assi, remap_pilot, enrich_recap, EP_FILONE_00).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-8a9ee17c",
+    "stato": "fatto",
+    "testo": "**Mappa data-driven da asse_nina**: Regioni ⟡0-⟡7 si popolano da sole (fonte+Nina, giro di spirale), approfondimenti annidati. Cresce da sola.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-88e95e6b",
+    "stato": "fatto",
+    "testo": "**`## FATTI (per il RAG)`** sui 4 semi + riflusso in `MICROINDUSTRY/MENTE/KNOWLEDGE/genesis_nodi_fatti.md` (serve `rag-update` per indicizzare).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-15e52968",
+    "stato": "fatto",
+    "testo": "**Aggiornamenti automatici compatibili**: story_agent rebuilda via build_episodes_json → gli AUTO prendono asse_ruolo + tree da soli. Nessun fix necessario.",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-005a6973",
+    "stato": "fatto",
+    "testo": "**3 LV2** (modularità, t-SNE↔UMAP, cammini/BFS) + **indice PIETRE.md** auto-generato (8/8 Pietre posate, 38 ep indicizzati).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-2d830784",
+    "stato": "fatto",
+    "testo": "**ARCO NINA COMPLETO ⟡1→⟡7**: scritti `EP_AV_05` (Agenti) + `EP_AV_06` (Direttore/Orchestrazione, chiude l'arco e apre il senso-prodotto \"tramandare\").",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-a42997c7",
+    "stato": "da_fare",
+    "testo": "**DA DECIDERE con Matteo (NINA):** il Nina **⟡0 LA MATERIA** (prequel \"dal metallo\") riapre l'opening di `EP_AV_00` → scelta tua. Poi: Nina \"lunghissima\" multi-giro + il filo \"Nina ha il suo OS/agente che si perde come me\" (visione 10/06, da mettere a canone).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-3d652f1c",
+    "stato": "da_fare",
+    "testo": "**DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO).",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
+    "id": "BUS-c3167662",
+    "stato": "fatto",
+    "testo": "`EP_AV_03` Biblioteca delle Fonti (RAG, ⟡4) · `EP_AV_04` Grande Mappa (Wiki, ⟡5): definitivi,",
+    "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
+  },
+  {
     "id": "BUS-a1c5b051",
     "stato": "fatto",
     "testo": "Diagnosi (09/06): 124 episodi ma quasi tutti AUTO/recap; il lavoro grosso recente",
     "sessione": "Sessione #35 · 10/06/2026"
   },
   {
-    "id": "BUS-dcbfcdea",
-    "stato": "da_fare",
-    "testo": "**Creare i \"semi\" tecnici mancanti** (= materiale-fonte che poi nutre Nina):",
+    "id": "BUS-98ecacb1",
+    "stato": "fatto",
+    "testo": "**Creati i \"semi\" tecnici mancanti** (= materiale-fonte che poi nutre Nina):",
     "sessione": "Sessione #35 · 10/06/2026"
   },
   {
-    "id": "BUS-474ff0f0",
-    "stato": "da_fare",
-    "testo": "Decidere all'avvio: generazione via pipeline `milestone_to_episode` vs scrittura a mano.",
+    "id": "BUS-bc910fd6",
+    "stato": "fatto",
+    "testo": "Deciso all'avvio: scrittura a mano (no pipeline `milestone_to_episode`).",
     "sessione": "Sessione #35 · 10/06/2026"
   },
   {

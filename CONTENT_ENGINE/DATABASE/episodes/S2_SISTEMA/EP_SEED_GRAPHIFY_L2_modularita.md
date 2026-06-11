@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [La modularità  il voto che decide i quartieri](#la-modularità-il-voto-che-decide-i-quartieri)
+    - [Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_COMMUNITY  come fa lalgoritmo a sapere se ha diviso bene?](#approfondimento-lv2-di-epseedgraphifyl1community-come-fa-lalgoritmo-a-sapere-se-ha-diviso-bene)
   - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)
   - [LA DOMANDA](#la-domanda)
   - [COSA MISURA (semplice, poi preciso)](#cosa-misura-semplice-poi-preciso)

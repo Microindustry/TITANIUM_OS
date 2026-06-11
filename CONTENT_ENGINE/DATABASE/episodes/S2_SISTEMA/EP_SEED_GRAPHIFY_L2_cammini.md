@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [I cammini  come si trova la strada tra due nodi](#i-cammini-come-si-trova-la-strada-tra-due-nodi)
+    - [Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_QUERY  cosa fa, dentro, il verbo path](#approfondimento-lv2-di-epseedgraphifyl1query-cosa-fa-dentro-il-verbo-path)
   - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)
   - [LA DOMANDA](#la-domanda)
   - [COME SI CERCA LA STRADA (semplice, poi preciso)](#come-si-cerca-la-strada-semplice-poi-preciso)

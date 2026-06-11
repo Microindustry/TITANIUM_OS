@@ -13,6 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Due verità dello stesso mondo  il toggle a due sorgenti](#due-verità-dello-stesso-mondo-il-toggle-a-due-sorgenti)
+    - [Approfondimento LV1 di EP_SEED_RETE  la stessa galassia, due modi di guardarla](#approfondimento-lv1-di-epseedrete-la-stessa-galassia-due-modi-di-guardarla)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [IL TRUCCO: STESSA FORMA, MOTORE INVARIATO](#il-trucco-stessa-forma-motore-invariato)

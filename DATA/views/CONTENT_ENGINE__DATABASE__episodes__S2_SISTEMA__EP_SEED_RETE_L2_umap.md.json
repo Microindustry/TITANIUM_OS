@@ -1,0 +1,56 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L2_umap.md",
+  "title": "t-SNE contro UMAP — due modi di fare la foto",
+  "meta": {
+    "id": "EP_SEED_RETE_L2_UMAP",
+    "title": "t-SNE contro UMAP — due modi di fare la foto",
+    "sottotitolo": "Approfondimento LV2 · perché esistono due tecniche per schiacciare le dimensioni, e quando scegliere l'una o l'altra",
+    "stagione": "ST",
+    "parent": "EP_SEED_RETE_L1_TSNE",
+    "level": "2",
+    "data_evento": "2026-06-10",
+    "tags": "[rete, t-sne, umap, riduzione-dimensioni, struttura-globale, lv2, approfondimento]",
+    "status": "ready",
+    "durata_min": "5"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [t-SNE contro UMAP  due modi di fare la foto](#t-sne-contro-umap-due-modi-di-fare-la-foto)\n    - [Approfondimento LV2 di EP_SEED_RETE_L1_TSNE  non cè una sola foto giusta](#approfondimento-lv2-di-epseedretel1tsne-non-cè-una-sola-foto-giusta)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [LA DIFFERENZA (semplice, poi preciso)](#la-differenza-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "Approfondimento LV2 di [[EP_SEED_RETE_L1_TSNE]] · \"non c'è una sola foto giusta\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "DA DOVE VIENE (un livello più giù)",
+      "content": "Nel livello sopra ho detto che il t-SNE \"fa la foto\" tenendo vicini i punti vicini. Ma non è l'unica\ntecnica per farlo: c'è **UMAP**, e sceglierne una invece dell'altra cambia *cosa* vedi. Qui scendo sulla\ndifferenza, perché spiega perché certe galassie sembrano fatte di isole e altre di continenti."
+    },
+    {
+      "level": 2,
+      "title": "LA DOMANDA",
+      "content": "Schiacciare 384 dimensioni in 3 vuol dire **buttare via** informazione. La domanda è: *quale* informazione\ntieni? Le vicinanze piccole (chi è vicinissimo a chi) o anche le distanze grandi (quanto sono lontane due\nintere zone)?"
+    },
+    {
+      "level": 2,
+      "title": "LA DIFFERENZA (semplice, poi preciso)",
+      "content": "**Semplice (il papà meccanico):** due fotografi. Uno fa **ritratti** perfetti dei gruppetti ma sballa le\ndistanze tra i gruppi. L'altro fa una **foto aerea**: i gruppi sono meno nitidi, ma capisci come sono\ndisposti nel paesaggio.\n\n**Preciso (l'esperto):**\n- **t-SNE** = il ritrattista. Cura il **vicinato locale** (i grappoli sono bellissimi e separati), ma le\n  **distanze tra grappoli non sono affidabili** — due isole vicine sullo schermo possono essere lontane\n  davvero.\n- **UMAP** = la foto aerea. Tiene meglio la **struttura globale** (le distanze tra zone hanno più senso) ed\n  è di solito **più veloce** su tanti punti.\n\nNessuna delle due è \"la verità\": sono due compromessi diversi sullo stesso sacrificio."
+    },
+    {
+      "level": 2,
+      "title": "PERCHÉ CONTA",
+      "content": "1. **Leggi la galassia giusta:** se ti interessano i temi (grappoli) → t-SNE; se ti interessa come i temi\n   si relazionano nel grande → UMAP.\n2. **Eviti l'errore classico:** dare peso alle distanze in un t-SNE. Sapere *che foto stai guardando* ti\n   salva da conclusioni sbagliate.\n3. **È una manopola di prodotto:** la RETE può offrire l'una o l'altra a seconda della domanda."
+    },
+    {
+      "level": 2,
+      "title": "IL FILO",
+      "content": "- **Sale a:** [[EP_SEED_RETE_L1_TSNE]] → [[EP_SEED_RETE]].\n- **Aggancio Nina:** \"il ritratto e la foto aerea\" — due modi di guardare la stessa cosa, perfetti per\n  insegnare a un bambino che *ogni mappa sceglie cosa mostrare e cosa perdere*.\n\n> Approfondimento (LV2). Profondità libera."
+    }
+  ],
+  "word_count": 476,
+  "updated_at": "2026-06-11T02:08:08.016044",
+  "built_at": "2026-06-11T13:57:34.707005"
+}

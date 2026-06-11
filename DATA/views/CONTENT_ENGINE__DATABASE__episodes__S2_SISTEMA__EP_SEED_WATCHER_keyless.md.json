@@ -15,7 +15,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [AI News Watcher  restare sul pezzo senza chiavi](#ai-news-watcher-restare-sul-pezzo-senza-chiavi)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [AI News Watcher  restare sul pezzo senza chiavi](#ai-news-watcher-restare-sul-pezzo-senza-chiavi)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -46,9 +46,14 @@
       "level": 2,
       "title": "REEL_HOOK",
       "content": "L'IA non corre veloce: corre veloce **mentre fai altro**. E io faccio metallo tutto il giorno.\nLa soluzione ovvia era l'ennesima API a pagamento. L'ho rifiutata.\nHo costruito un radar a **zero chiavi**: GitHub, RSS, YouTube — 30 creator, tier a rotazione,\n67 segnali reali al primo giro. Gira di notte, non costa niente da tenere acceso.\nRestare sul pezzo ha smesso di dipendere dalla mia memoria."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** AI News Watcher **keyless**, 4 sorgenti — **GitHub via CLI `gh`**, **siti via RSS**, **YouTube via RSS dei canali**, tier dal brief. **30+ creator**; **67+30 segnali** al primo giro.\n- **DECISIONE:** zero API key (no abbonamenti, no chiavi che scadono/costano) → costo di gestione zero.\n- **LOGICA:** **tier con finestra 48h + rotazione** (i più importanti spesso, gli altri a turno, no ridondanza); **gate di rilevanza** (`min-rel`) filtra il rumore prima del RAG.\n- **OBIETTIVO:** stare informati come **processo notturno**, non come abitudine che dipende dalla volontà (regola 2).\n- **FILE:** `NODES/AI_NEWS_WATCHER/watcher.py` · launcher `night_ai_watch.bat` · brief `BRAIN/AI_NEWS_WATCHER_BRIEF.md`."
     }
   ],
-  "word_count": 438,
-  "updated_at": "2026-06-10T12:58:33.404412",
-  "built_at": "2026-06-10T18:51:11.293781"
+  "word_count": 549,
+  "updated_at": "2026-06-11T02:08:08.109792",
+  "built_at": "2026-06-11T13:57:35.458111"
 }

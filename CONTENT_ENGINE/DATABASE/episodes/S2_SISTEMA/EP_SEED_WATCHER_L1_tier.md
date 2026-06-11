@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Chi guardare più spesso  il tier a rotazione 48h](#chi-guardare-più-spesso-il-tier-a-rotazione-48h)
+    - [Approfondimento LV1 di EP_SEED_WATCHER  non tutti meritano la stessa attenzione, ogni giorno](#approfondimento-lv1-di-epseedwatcher-non-tutti-meritano-la-stessa-attenzione-ogni-giorno)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)

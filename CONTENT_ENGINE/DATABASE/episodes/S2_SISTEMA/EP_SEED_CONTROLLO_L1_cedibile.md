@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Un sistema spiegato è un sistema cedibile](#un-sistema-spiegato-è-un-sistema-cedibile)
+    - [Approfondimento LV1 di EP_SEED_CONTROLLO  in italiano, non in gergo](#approfondimento-lv1-di-epseedcontrollo-in-italiano-non-in-gergo)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)

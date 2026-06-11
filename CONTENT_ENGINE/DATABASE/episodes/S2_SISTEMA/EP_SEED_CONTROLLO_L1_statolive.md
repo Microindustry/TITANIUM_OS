@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Se è acceso, non se dovrebbe  lo stato live](#se-è-acceso-non-se-dovrebbe-lo-stato-live)
+    - [Approfondimento LV1 di EP_SEED_CONTROLLO  stato vero, non promesse](#approfondimento-lv1-di-epseedcontrollo-stato-vero-non-promesse)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)

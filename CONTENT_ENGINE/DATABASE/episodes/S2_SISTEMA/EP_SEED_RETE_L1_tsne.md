@@ -13,6 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Da 5000 numeri a una galassia  il t-SNE](#da-5000-numeri-a-una-galassia-il-t-sne)
+    - [Approfondimento LV1 di EP_SEED_RETE  vedere con gli occhi una cosa che vive in 384 dimensioni](#approfondimento-lv1-di-epseedrete-vedere-con-gli-occhi-una-cosa-che-vive-in-384-dimensioni)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)

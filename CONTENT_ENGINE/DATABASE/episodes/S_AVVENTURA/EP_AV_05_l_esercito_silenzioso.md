@@ -11,7 +11,7 @@ tags: avventura, educativo, bambini, nina, themis, agenti, automazione, notturne
 <!-- TOC -->
 
 - [EP_AV_05  LEsercito Silenzioso](#epav05-lesercito-silenzioso)
-    - [Tante piccole entità che, mentre dormi, fanno ciascuna il suo lavoro](#tante-piccole-entità-che-mentre-dormi-fanno-ciascuna-il-suo-lavoro)
+    - [Tante piccole entità che, mentre dormi, fanno ciascuna il suo lavoro  e nessuna si stanca](#tante-piccole-entità-che-mentre-dormi-fanno-ciascuna-il-suo-lavoro-e-nessuna-si-stanca)
   - [COLD OPEN](#cold-open)
   - [ATTO I  I PASSI NEL BUIO](#atto-i-i-passi-nel-buio)
   - [ATTO II  OGNUNO UNA COSA SOLA](#atto-ii-ognuno-una-cosa-sola)

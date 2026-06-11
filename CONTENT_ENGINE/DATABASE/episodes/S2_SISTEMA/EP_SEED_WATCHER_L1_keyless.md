@@ -13,6 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Guardare senza chiavi  gh, RSS, YouTube](#guardare-senza-chiavi-gh-rss-youtube)
+    - [Approfondimento LV1 di EP_SEED_WATCHER  informarsi è un diritto, non un abbonamento](#approfondimento-lv1-di-epseedwatcher-informarsi-è-un-diritto-non-un-abbonamento)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [LE QUATTRO SORGENTI (e perché niente chiavi)](#le-quattro-sorgenti-e-perché-niente-chiavi)

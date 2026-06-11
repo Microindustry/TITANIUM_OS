@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-10T03:38:38.783368",
+  "scanned_at": "2026-06-11T14:08:02.036763",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 220,
+  "total_files": 224,
   "files_read": 5,
-  "files_skipped": 215,
+  "files_skipped": 219,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -379,6 +379,13 @@
       "path": "KNOWLEDGE\\FONTI_UTILI.md",
       "type": "md",
       "size_kb": 3.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\genesis_nodi_fatti.md",
+      "type": "md",
+      "size_kb": 2.3,
       "readable": false,
       "extracts": {}
     },
@@ -803,6 +810,13 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\behavior_of_granite_epoxy_composite_beams_subjected_to_mecha.md",
+      "type": "md",
+      "size_kb": 1.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\concept_and_prototype_of_a_3_component_extruder_for_fusion_d.md",
       "type": "md",
       "size_kb": 1.5,
@@ -1009,6 +1023,13 @@
       "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_and_tribological_properties_of_epoxy_granite_compo.md",
       "type": "md",
       "size_kb": 2.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_damping_analysis_of_lightweight_structures_in_mach.md",
+      "type": "md",
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -1716,6 +1737,13 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
       "type": "md",
       "size_kb": 6.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
+      "type": "md",
+      "size_kb": 8.0,
       "readable": false,
       "extracts": {}
     },

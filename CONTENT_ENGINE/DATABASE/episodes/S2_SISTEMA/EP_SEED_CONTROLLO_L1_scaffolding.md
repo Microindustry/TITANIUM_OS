@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Il carico va sullo schermo, non nella testa](#il-carico-va-sullo-schermo-non-nella-testa)
+    - [Approfondimento LV1 di EP_SEED_CONTROLLO  non ricordare: guardare](#approfondimento-lv1-di-epseedcontrollo-non-ricordare-guardare)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)

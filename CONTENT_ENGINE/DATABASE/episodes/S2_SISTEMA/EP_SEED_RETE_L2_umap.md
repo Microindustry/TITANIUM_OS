@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [t-SNE contro UMAP  due modi di fare la foto](#t-sne-contro-umap-due-modi-di-fare-la-foto)
+    - [Approfondimento LV2 di EP_SEED_RETE_L1_TSNE  non cè una sola foto giusta](#approfondimento-lv2-di-epseedretel1tsne-non-cè-una-sola-foto-giusta)
   - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)
   - [LA DOMANDA](#la-domanda)
   - [LA DIFFERENZA (semplice, poi preciso)](#la-differenza-semplice-poi-preciso)

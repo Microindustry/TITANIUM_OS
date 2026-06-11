@@ -13,6 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Il gate di rilevanza  tenere il segnale, buttare il rumore](#il-gate-di-rilevanza-tenere-il-segnale-buttare-il-rumore)
+    - [Approfondimento LV1 di EP_SEED_WATCHER  raccogliere è facile, scegliere è il lavoro](#approfondimento-lv1-di-epseedwatcher-raccogliere-è-facile-scegliere-è-il-lavoro)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)

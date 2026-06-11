@@ -11,7 +11,7 @@ tags: avventura, educativo, bambini, nina, themis, orchestrazione, nexus, calend
 <!-- TOC -->
 
 - [EP_AV_06  Il Direttore](#epav06-il-direttore)
-    - [Quando gli aiutanti sono tanti, serve qualcuno che dica chi fa cosa  e quando](#quando-gli-aiutanti-sono-tanti-serve-qualcuno-che-dica-chi-fa-cosa-e-quando)
+    - [Quando gli aiutanti sono tanti, serve qualcuno che dica chi fa cosa  e quando, senza pestarsi i piedi](#quando-gli-aiutanti-sono-tanti-serve-qualcuno-che-dica-chi-fa-cosa-e-quando-senza-pestarsi-i-piedi)
   - [COLD OPEN](#cold-open)
   - [ATTO I  LA STANZA OLTRE LA CLESSIDRA](#atto-i-la-stanza-oltre-la-clessidra)
   - [ATTO II  CHI VA PRIMA, CHI VA DOPO](#atto-ii-chi-va-prima-chi-va-dopo)

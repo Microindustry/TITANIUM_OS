@@ -1,49 +1,62 @@
-=== RIAVVIO SESSIONE #35 → #36 — 10/06/2026 ===
-Matteo rientrato da turno di notte gravoso. Questa sessione ha messo a posto il sistema
-e CATTURATO la visione di Nina-prodotto. La prossima parte DRITTA dagli EPISODI.
-PRIMA DI TUTTO: leggi DA_FARE_FATTO.md (la bussola).
+=== RIAVVIO SESSIONE #37 → #38 — 11/06/2026 ===
+Sessione lunghissima (notte autonoma + rientro Matteo). Rifatte LE STORIE sul serio e
+COMPLETATO l'arco di Nina. PRIMA DI TUTTO: leggi DA_FARE_FATTO.md (la bussola).
+
+━━━ SE APRI DA APP DESKTOP (non Claude Code CLI) ━━━
+La continuità sta in 3 file del repo: DA_FARE_FATTO.md + questo file + BRAIN/STATE.json.
+Fai `git pull` e leggili. NB: memoria durevole, CLAUDE.md e skill (salva/graphify) sono
+SOLO su Claude Code (CLI) — l'app Desktop NON le ha. CLI = continuità piena.
 
 ━━━ DOVE SIAMO (enuncialo in <10 sec) ━━━
-Sistema verde e verificato. Riparata la RETE (toggle Conoscenza/Sistema ora LIVE), n8n
-installato globale + avvio-al-login veloce. Diagnosi STORIE: 124 episodi ma il lavoro
-recente (Graphify/RETE/Watcher/Controllo) ha 0 episodi. Visione Nina alzata di livello e
-messa al sicuro nel canone. PROSSIMO LAVORO DECISO DA MATTEO: si parte dagli EPISODI.
+"Rifare le storie" è FATTO: struttura a 2 ASSI (RUOLO=diario · NINA=percorso educativo)
+rebuild-safe, integrata coi N-livelli sui CONTENUTI (un approfondimento = un giro di
+spirale). La Mappa di Nina è percorribile a LV illimitati e DATA-DRIVEN. L'arco Nina è
+COMPLETO 8/8 (⟡0 Materia → ⟡7 Orchestrazione) + attivata la verticale FINANZA (₣1).
+153 episodi, build TS verde, ~14 commit isolati su main.
 
-━━━ FATTO QUESTA SESSIONE (#35) ━━━
-  ✓ SISTEMA VERIFICA reale: git pulito · build TS 0 errori · RAG GPU ok · servizi su.
-  ✓ RETE riparata: restart API → /api/graph/graphify e /api/rag/vectors da 404/500 → 200.
-    Toggle "Sistema" (grafo Graphify) ora LIVE.
-  ✓ n8n: avviato → installato GLOBALE (npm i -g n8n, 2.25.6) → START_LOGIN.bat step 4 usa
-    il binario globale (%N8N% start) con fallback npx. Avvio-al-login veloce.
-  ✓ Diagnosi STORIE: 124 ep (AUTO 66, ST 37, S1 6, S0 5, MOM 5, AV 3, S2 2). Il lavoro
-    recente NON ha episodi (graphify=0, watcher=0, wiki=0, controllo=0).
-  ✓ VISIONE Nina-PRODOTTO catturata: BIBBIA_DEL_MONDO.md §0-bis (Nina = derivazione
-    educativa di MIMS · scaletta/changelog-driven · persona curiosa che sbaglia→sistema→
-    aggiorna · scope > arco IA, anche "cos'è un ambiente Python" + verticale FINANZA).
-  ✗ EP_AV_03 (Nina, la Biblioteca/RAG): scritto e poi RIMOSSO — Matteo: "non partire da Nina".
+━━━ FATTO QUESTA SESSIONE (#37, commit principali) ━━━
+  ✓ N-livelli sui contenuti: episodes.json non più piatto (parent/level/children, build_tree).
+  ✓ 2 ASSI rebuild-safe (apply_narrativa): asse_ruolo su tutti + asse_nina su 40 concetti;
+    i figli ereditano l'asse_nina del padre con giro_spirale+1. Tipo TS narrativa opz.
+  ✓ 13 approfondimenti LV1 + 3 LV2 sui 4 semi (graphify/rete/watcher/controllo).
+  ✓ Mappa di Nina rifatta percorribile + data-driven (Regioni ⟡0-⟡7 Tech + ₣1-4 Finanza);
+    "Mappa Avventura"→"Mappa"; mappa di sistema→"ARCHITETTURA".
+  ✓ ARCO NINA 8/8: EP_AV_M0 Materia · AV_00 Loop · 01 Auto · 02 LLM · 03 RAG · 04 Wiki ·
+    05 Agenti · 06 Direttore. + EP_AV_FIN_01 "Il Valore" (verticale finanza).
+  ✓ Canon BIBBIA §0-ter: Nina ha il suo OS (si perde come Matteo; la Mappa È il suo OS).
+  ✓ Indice PIETRE.md auto-generato (Tech+Finanza) + FATTI(per il RAG) sui 4 semi + riflusso
+    in MICROINDUSTRY/MENTE/KNOWLEDGE/genesis_nodi_fatti.md (serve `rag-update` per indicizzarlo).
+  ✓ FIX crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ — usava REGIONI prima dell'init).
+  ✓ EP_AV_03/04: tolto il "parcheggio", sono canonici nell'arco.
 
-━━━ PROSSIMO LAVORO (Matteo: "nella prossima sessione iniziamo con gli episodi") ━━━
-  1. PRIORITÀ → STORIE REALI: creare i "semi" tecnici del lavoro recente che oggi mancano
-     (0 episodi): Graphify/RAG→Wiki · RETE-grafo · AI News Watcher · Centro di Controllo.
-     Sono il materiale-fonte che poi nutre Nina. Sorgenti in CONTENT_ENGINE/DATABASE/
-     episodes/ (S2_SISTEMA / SA_AUTO) → build con scripts/build_episodes_json.py.
-  2. POI Nina: probabilmente RIFATTA DA ZERO. Impronta EP_AV_00/01/02 validata come STILE
-     (avventura + concetti semplici + un po' tecnico), MA la struttura deve agganciarsi
-     alla scaletta reale (io sbaglio→sistemo→aggiorno) ed essere scope-largo (tech+finanza).
-     Canone aggiornato: BIBBIA §0-bis + MAPPA_AVVENTURA.md + PERCORSO_EVOLUTIVO.md.
+━━━ ⚠ DA FARE SUBITO (azione di Matteo) ━━━
+  • RAG /api/rag/vectors dava 503 (indice ChromaDB stale: "Error finding id"). Ho lanciato
+    SERVICES/restart_api.ps1 ma RICHIEDE UAC (admin): APPROVA il prompt → RAG torna 200.
+    Verifica: curl http://localhost:5001/api/rag/vectors  (atteso 200).
+  • Se MENTE è cambiata: `rag-update` per indicizzare genesis_nodi_fatti.md.
+
+━━━ PROSSIMO LAVORO ━━━
+  1. FINANZA ₣2 "Spendere meno di quanto entra" (la regola 9 per un bambino) — open loop
+     già piazzato in EP_AV_FIN_01. Poi ₣3 Il Cuscinetto, ₣4 Far lavorare i soldi.
+  2. FOCUS richiesto da Matteo: usare FABLE 5 (disponibile fino al 22/06) per SELF_IMPROVE /
+     RED-TEAM — "farmi attaccare": audit critico a 360 (fragilità, teatro/dati finti,
+     sicurezza, debito tecnico, incoerenze) → migliorie prioritizzate → proposte stile PR,
+     MAI merge automatico su main. È il nodo SELF_IMPROVE.
 
 ━━━ DA DECIDERE CON MATTEO ━━━
-  • "Messaggio di Gu" (monetizzazione/"guadagnare al massimo"): dato per valutato+integrato
-    nella visione MIMS+Nina; se è un testo specifico, Matteo lo incolla e si analizza.
-  • Episodi reali: generazione via pipeline milestone_to_episode (serve API/notturna) vs
-    scrittura a mano in S2_SISTEMA. Decidere all'avvio.
-  • Incoerenza ⟡ pilota(Entropia=⟡2) vs arco(Automazione=⟡2): da riconciliare.
-
-━━━ NON COMMITTATO (in attesa di "salva") ━━━
-  START_LOGIN.bat · BIBBIA_DEL_MONDO.md (§0-bis) · DA_FARE_FATTO.md · memoria · watchdog_status.json
+  • Scalare asse_nina ai 129 episodi (ora 40, solo concetti) — script di rimappatura assistito.
+  • Viste dashboard sui 2 assi (timeline RUOLO oltre alla Mappa per Nina).
+  • Temi/profondità della verticale Finanza (sono personali, per suo figlio).
 
 ━━━ BLOCKERS ━━━
   ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
   ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
 
-Generato: 10/06/2026 — chiusura sessione #35.
+━━━ ULTIMI COMMIT ━━━
+  a079416 fix(mappa): rimossa MAPPA_RADICE (crash TDZ)
+  4f06bf7 docs(bussola): sessione #37
+  1eb9656 feat(nina): verticale FINANZA + EP_AV_FIN_01
+  490e304 canon(nina): BIBBIA §0-ter Nina ha il suo OS
+  4fd5658 content(nina): EP_AV_M0 La Materia (arco 8/8)
+
+Generato: 11/06/2026 — chiusura sessione #37.

@@ -13,6 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Non era un bug di codice, era un bug di stato](#non-era-un-bug-di-codice-era-un-bug-di-stato)
+    - [Approfondimento LV1 di EP_SEED_RETE  il codice era giusto, il mondo intorno no](#approfondimento-lv1-di-epseedrete-il-codice-era-giusto-il-mondo-intorno-no)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [I DUE GUASTI DI STATO](#i-due-guasti-di-stato)

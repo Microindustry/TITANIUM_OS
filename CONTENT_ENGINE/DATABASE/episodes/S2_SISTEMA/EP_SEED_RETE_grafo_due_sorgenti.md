@@ -16,6 +16,7 @@ durata_min: 7
   - [LAZIONE](#lazione)
   - [IL RISULTATO](#il-risultato)
   - [REEL_HOOK](#reelhook)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 

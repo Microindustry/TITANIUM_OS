@@ -1,0 +1,56 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L1_toggle.md",
+  "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+  "meta": {
+    "id": "EP_SEED_RETE_L1_TOGGLE",
+    "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+    "sottotitolo": "Approfondimento LV1 · Conoscenza (cosa so) e Sistema (come sono fatto) nella stessa galassia, senza toccare il motore 3D",
+    "stagione": "ST",
+    "parent": "EP_SEED_RETE",
+    "level": "1",
+    "data_evento": "2026-06-10",
+    "tags": "[rete, toggle, rag, graphify, contratto-dati, api, approfondimento]",
+    "status": "ready",
+    "durata_min": "6"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Due verità dello stesso mondo  il toggle a due sorgenti](#due-verità-dello-stesso-mondo-il-toggle-a-due-sorgenti)\n    - [Approfondimento LV1 di EP_SEED_RETE  la stessa galassia, due modi di guardarla](#approfondimento-lv1-di-epseedrete-la-stessa-galassia-due-modi-di-guardarla)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [IL TRUCCO: STESSA FORMA, MOTORE INVARIATO](#il-trucco-stessa-forma-motore-invariato)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "Approfondimento LV1 di [[EP_SEED_RETE]] · \"la stessa galassia, due modi di guardarla\"",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "DA DOVE VIENE",
+      "content": "Nel principale la riparazione introduce un toggle: **Conoscenza (RAG)** e **Sistema (Graphify)**. Sembra\nun dettaglio da bottone. È invece la decisione di architettura che ha reso la RETE riusabile. Qui spiego\nperché."
+    },
+    {
+      "level": 2,
+      "title": "LA DOMANDA",
+      "content": "Avevo due grafi diversi: uno dei **documenti** (cosa so — il RAG) e uno della **struttura** (come è fatto\nil sistema — Graphify). Volevo vederli **entrambi** nella stessa galassia 3D. La domanda: lo riscrivo due\nvolte il motore di visualizzazione (uno per sorgente), o c'è un modo per non duplicare niente?"
+    },
+    {
+      "level": 2,
+      "title": "IL TRUCCO: STESSA FORMA, MOTORE INVARIATO",
+      "content": "**Semplice (il papà meccanico):** è come l'attacco rapido del mandrino. Cambi la punta, ma l'**attacco**\nè sempre lo stesso, così la macchina non la tocchi. Le punte sono le due sorgenti; l'attacco è la *forma\ndei dati*.\n\n**Preciso (l'esperto):** ho dato alle due sorgenti lo **stesso contratto dati** in uscita — nuovo endpoint\n`/api/graph/graphify` che parla *identica* la lingua di quello RAG (stessi campi: nodi, archi, posizioni).\nCosì il **motore 3D è rimasto invariato**: non sa nemmeno quale sorgente sta disegnando. Il toggle cambia\nsolo *da dove arrivano i dati*, non *come si disegnano*. Un'interfaccia, due implementazioni — è il\ndisaccoppiamento fatto bene."
+    },
+    {
+      "level": 2,
+      "title": "PERCHÉ CONTA",
+      "content": "1. **Non duplichi il lavoro** (né i bug): un motore solo da mantenere.\n2. **Aggiungere una terza sorgente domani** costa poco: basta che rispetti il contratto.\n3. **Due verità affiancate:** la conoscenza e la struttura nello stesso spazio → vedi se *quello che so*\n   e *come sono fatto* combaciano o no. È diagnostica, non estetica."
+    },
+    {
+      "level": 2,
+      "title": "IL FILO CON GLI ALTRI LIVELLI",
+      "content": "- **Sale al principale:** [[EP_SEED_RETE]] (la RETE riparata).\n- **Fratelli LV1:** [[EP_SEED_RETE_L1_TSNE]] (come si disegna), [[EP_SEED_RETE_L1_BUGSTATO]] (perché si era rotta).\n- **Lega altrove:** la sorgente \"Sistema\" è il grafo di [[EP_SEED_GRAPHIFY]] — qui lo si *guarda* in 3D.\n- **Aggancio Nina:** \"lo stesso attacco, due punte\" — metafora pronta per spiegare un'**interfaccia** (un\n  patto sulla forma) a chi non programma.\n\n> Approfondimento (LV1). Nessun tetto di profondità."
+    }
+  ],
+  "word_count": 482,
+  "updated_at": "2026-06-11T02:08:07.811446",
+  "built_at": "2026-06-11T13:57:33.678827"
+}

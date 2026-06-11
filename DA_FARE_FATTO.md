@@ -61,7 +61,19 @@
       Cuscinetto/Far lavorare i soldi). Mappa + PIETRE sdoppiate per verticale.
 - [✓] `EP_AV_FIN_01` "Il Valore" (₣1): baratto→moneta, lavoro conservato + fiducia condivisa. Open loop → ₣2.
 - [ ] PROSSIMO finanza (open loop pronto): ₣2 "Spendere meno di quanto entra" · poi ₣3 ₣4.
-- Stato: **153 ep · arco Tech 8/8 + Finanza ₣1 · 9 Pietre posate · build verde · commit isolati (NO push)**.
+
+### [✓] FIX + verifiche (rientro Matteo)
+- [✓] **Crash dashboard risolto**: `MAPPA_RADICE` usava `REGIONI` prima dell'init (ReferenceError TDZ);
+      rimossa (era codice morto) → radice ora data-driven in `buildMappa()`. tsc verde.
+- [✓] Verifiche: audit 0 orfani · API 5001, grafo `/api/graph/graphify`, dashboard 5173 → **200**.
+- [⚠] **RAG `/api/rag/vectors` → 503** (indice ChromaDB stale). Lanciato `SERVICES/restart_api.ps1`
+      → **richiede UAC**: Matteo approva il prompt → RAG torna 200. (Stesso "bug di stato" di EP_SEED_RETE.)
+
+### [ ] FOCUS prossima sessione (Matteo): Fable 5 + SELF_IMPROVE
+- [ ] Usare **Fable 5** (fino al 22/06) per **farmi "attaccare"**: audit critico 360 (fragilità,
+      teatro, sicurezza, debito, incoerenze) → migliorie prioritizzate → proposte PR, mai merge auto su main.
+
+- Stato: **153 ep · arco Tech 8/8 + Finanza ₣1 · 9 Pietre · build verde · ~14 commit isolati**.
 
 ---
 

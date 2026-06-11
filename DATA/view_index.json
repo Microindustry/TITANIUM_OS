@@ -17,7 +17,7 @@
     },
     "CLAUDE.md": {
       "title": "TITANIUM_OS — CLAUDE.md",
-      "updated_at": "2026-06-07T17:32:36.820730",
+      "updated_at": "2026-06-09T13:06:14.431404",
       "endpoint": "/api/view/CLAUDE.md"
     },
     ".claude/skills/dataset/SKILL.md": {
@@ -752,7 +752,7 @@
     },
     "PROSSIMA_SESSIONE.md": {
       "title": "PROSSIMA SESSIONE — Piano (lista da seguire punto per punto)",
-      "updated_at": "2026-06-06T00:11:25.571230",
+      "updated_at": "2026-06-09T13:05:58.928623",
       "endpoint": "/api/view/PROSSIMA_SESSIONE.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260604_episodi_su_episodes_json_bulletproo.md": {
@@ -827,7 +827,7 @@
     },
     "DA_FARE_FATTO.md": {
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
-      "updated_at": "2026-06-09T20:43:51.110830",
+      "updated_at": "2026-06-11T03:52:02.212038",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
@@ -879,8 +879,148 @@
       "title": "TITANIUM_OS — S2 E07",
       "updated_at": "2026-06-10T02:07:53.463137",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260609_vista_procedimenti_consultabile_da_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_grafo_del_repo.md": {
+      "title": "Graphify — il repo che si disegna da solo",
+      "updated_at": "2026-06-11T02:08:06.955577",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_grafo_del_repo.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_grafo_due_sorgenti.md": {
+      "title": "La RETE — vedere il sistema in 3D",
+      "updated_at": "2026-06-11T02:08:07.608360",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_RETE_grafo_due_sorgenti.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_WATCHER_keyless.md": {
+      "title": "AI News Watcher — restare sul pezzo senza chiavi",
+      "updated_at": "2026-06-11T02:08:08.109792",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_WATCHER_keyless.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_CONTROLLO_anti_sovraccarico.md": {
+      "title": "Il Centro di Controllo — un posto solo da cui governare",
+      "updated_at": "2026-06-11T02:08:06.565066",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_CONTROLLO_anti_sovraccarico.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_03_la_biblioteca_delle_fonti.md": {
+      "title": "La Biblioteca delle Fonti",
+      "updated_at": "2026-06-10T13:57:38.223366",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_03_la_biblioteca_delle_fonti.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_04_la_grande_mappa.md": {
+      "title": "La Grande Mappa",
+      "updated_at": "2026-06-10T13:58:43.154392",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_04_la_grande_mappa.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L1_community.md": {
+      "title": "I 696 quartieri — la community detection",
+      "updated_at": "2026-06-10T18:51:00.484121",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_L1_community.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S0_ORIGINI/EP_FILONE_00_la_materia.md": {
+      "title": "La Materia — il telaio, la scelta, il controllo",
+      "updated_at": "2026-06-10T18:54:41.985440",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S0_ORIGINI__EP_FILONE_00_la_materia.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L1_godnode.md": {
+      "title": "I nodi-dio — le stelle che tengono il grafo",
+      "updated_at": "2026-06-10T18:54:46.219541",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_L1_godnode.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L1_mente.md": {
+      "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+      "updated_at": "2026-06-10T18:54:46.313269",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_L1_mente.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L1_query.md": {
+      "title": "Interrogare la mappa, non i file — query, path, explain",
+      "updated_at": "2026-06-10T18:54:46.406996",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_L1_query.md"
+    },
+    "CONTENT_ENGINE/DATABASE/STORIE_STRUTTURA_2ASSI.md": {
+      "title": "STORIE — Struttura a 2 Assi (spike)",
+      "updated_at": "2026-06-10T19:06:38.936804",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__STORIE_STRUTTURA_2ASSI.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/PIETRE.md": {
+      "title": "PIETRE — l'indice dei concetti (concetto → episodio)",
+      "updated_at": "2026-06-11T14:05:35.692836",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__PIETRE.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260610_consuntivo_notte_autonoma_36b_stori.md": {
+      "title": "TITANIUM_OS — S2E09",
+      "updated_at": "2026-06-11T02:08:00.368019",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260610_consuntivo_notte_autonoma_36b_stori.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_CONTROLLO_L1_cedibile.md": {
+      "title": "Un sistema spiegato è un sistema cedibile",
+      "updated_at": "2026-06-11T02:08:06.658794",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_CONTROLLO_L1_cedibile.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_CONTROLLO_L1_scaffolding.md": {
+      "title": "Il carico va sullo schermo, non nella testa",
+      "updated_at": "2026-06-11T02:08:06.768121",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_CONTROLLO_L1_scaffolding.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_CONTROLLO_L1_statolive.md": {
+      "title": "Se è acceso, non se dovrebbe — lo stato live",
+      "updated_at": "2026-06-11T02:08:06.861848",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_CONTROLLO_L1_statolive.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L2_cammini.md": {
+      "title": "I cammini — come si trova la strada tra due nodi",
+      "updated_at": "2026-06-11T02:08:07.422699",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_L2_cammini.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_GRAPHIFY_L2_modularita.md": {
+      "title": "La modularità — il voto che decide i quartieri",
+      "updated_at": "2026-06-11T02:08:07.513487",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_GRAPHIFY_L2_modularita.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L1_bugstato.md": {
+      "title": "Non era un bug di codice, era un bug di stato",
+      "updated_at": "2026-06-11T02:08:07.717693",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_RETE_L1_bugstato.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L1_toggle.md": {
+      "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+      "updated_at": "2026-06-11T02:08:07.811446",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_RETE_L1_toggle.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L1_tsne.md": {
+      "title": "Da 5000 numeri a una galassia — il t-SNE",
+      "updated_at": "2026-06-11T02:08:07.905168",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_RETE_L1_tsne.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_RETE_L2_umap.md": {
+      "title": "t-SNE contro UMAP — due modi di fare la foto",
+      "updated_at": "2026-06-11T02:08:08.016044",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_RETE_L2_umap.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_WATCHER_L1_gate.md": {
+      "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+      "updated_at": "2026-06-11T02:08:08.203499",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_WATCHER_L1_gate.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_WATCHER_L1_keyless.md": {
+      "title": "Guardare senza chiavi — gh, RSS, YouTube",
+      "updated_at": "2026-06-11T02:08:08.298267",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_WATCHER_L1_keyless.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_SEED_WATCHER_L1_tier.md": {
+      "title": "Chi guardare più spesso — il tier a rotazione 48h",
+      "updated_at": "2026-06-11T02:08:08.407616",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_SEED_WATCHER_L1_tier.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_05_l_esercito_silenzioso.md": {
+      "title": "L'Esercito Silenzioso",
+      "updated_at": "2026-06-11T02:08:08.969388",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_05_l_esercito_silenzioso.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_AV_06_il_direttore.md": {
+      "title": "Il Direttore",
+      "updated_at": "2026-06-11T02:08:09.063143",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_AV_06_il_direttore.md"
     }
   },
-  "last_built": "2026-06-10T12:22:00.458531",
-  "total": 176
+  "last_built": "2026-06-11T14:12:56.816978",
+  "total": 204
 }

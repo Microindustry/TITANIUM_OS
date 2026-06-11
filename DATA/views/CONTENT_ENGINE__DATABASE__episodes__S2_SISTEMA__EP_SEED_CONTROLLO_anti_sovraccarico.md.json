@@ -15,7 +15,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Il Centro di Controllo  un posto solo da cui governare](#il-centro-di-controllo-un-posto-solo-da-cui-governare)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Il Centro di Controllo  un posto solo da cui governare](#il-centro-di-controllo-un-posto-solo-da-cui-governare)\n  - [COLD OPEN](#cold-open)\n  - [IL PROBLEMA](#il-problema)\n  - [LAZIONE](#lazione)\n  - [IL RISULTATO](#il-risultato)\n  - [REEL_HOOK](#reelhook)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -46,9 +46,14 @@
       "level": 2,
       "title": "REEL_HOOK",
       "content": "Ho costruito un sistema per togliermi carico mentale. Poi è diventato venti nodi\nche vivevano solo nella mia testa — e mi sono accorto che era tornato a essere un peso.\nCosì ho fatto un posto solo: per ogni strumento, cosa fa, come si usa, se è acceso.\nIn italiano, non in gergo. Stato vero, non promesse.\nAdesso il sistema lo governo guardandolo, non ricordandolo. E chiunque può raccoglierlo."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** vista **CONTROLLO** (Centro di Controllo) = un posto unico che, per ogni nodo, dice tre cose: **cosa fa · come si usa · se è acceso** (stato live dal watchdog).\n- **LOGICA:** **scaffolding cognitivo** — esternalizza lo stato dalla testa (fragile) allo schermo (stabile); regge i giorni storti. Anti **dashboard-teatro**: stato verificato, non promesso.\n- **DECISIONE:** ogni nodo nuovo va aggiunto **anche** al Centro di Controllo (\"se non è qui, non esiste\").\n- **OBIETTIVO:** sistema **cedibile** — spiegato in italiano semplice = trasferibile/delegabile/vendibile, non un single-point-of-failure su Matteo.\n- **EFFETTO:** apertura del sistema → punta dritta su CONTROLLO; il carico torna sullo schermo, non nella testa."
     }
   ],
-  "word_count": 480,
-  "updated_at": "2026-06-10T12:58:39.628382",
-  "built_at": "2026-06-10T18:51:11.788049"
+  "word_count": 594,
+  "updated_at": "2026-06-11T02:08:06.565066",
+  "built_at": "2026-06-11T13:57:34.247783"
 }
