@@ -1,4 +1,7 @@
-# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.0 | 2026-06-05
+# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.1 | 2026-06-11
+# v1.1: log scan evidence-based — filtro 36h per riga (le righe ereditano la data
+#       più vicina), \bERROR\b non matcha più "errore", segnali con riga+data,
+#       prompt Sonnet vincolato all'estratto (fix falso "doppio crash" AUD-f6721639a6)
 # Self-audit notturno (Punto 0b + 1b "cartella clinica"). Ogni notte, da solo:
 #  - legge STATE, git log recente, conteggio episodi, stato RAG e SALUTE dei log
 #    della catena notturna (ricerca/story/push: errori, 429, ricerche a vuoto);
@@ -46,13 +49,35 @@ MODEL     = "claude-sonnet-4-6"   # economico, NO Opus (regola #4)
 TODAY     = datetime.now().strftime("%Y-%m-%d")
 
 # Pattern di guasto cercati nei log della catena notturna
+# NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
 LOG_FAIL_PATTERNS = [
     (r"Traceback|PermissionError|FileNotFoundError", "crash/eccezione"),
     (r"\b429\b|rate limit|Too Many Requests",        "rate-limit sorgente"),
-    (r"Read timed out|timeout",                       "timeout di rete"),
+    (r"Read timed out|\btimeout\b",                   "timeout di rete"),
     (r"Nessun risultato|0 risultati|0 documenti",     "ricerca a vuoto"),
-    (r"ERR:|ERROR|push fallito",                       "errore esplicito"),
+    (r"ERR:|\bERROR\b|push fallito",                  "errore esplicito"),
 ]
+# Finestra di rilevanza: una riga di guasto più vecchia di così è storia, non guasto attivo
+LOG_FRESH_HOURS = 36
+
+_LINE_DATE_RX = [
+    (re.compile(r"(\d{4})-(\d{2})-(\d{2})"), "ymd"),   # 2026-06-11 02:07:03
+    (re.compile(r"(\d{2})/(\d{2})/(\d{4})"), "dmy"),   # done 11/06/2026 4:07
+]
+
+def _line_date(line: str):
+    """Estrae la data da una riga di log (None se assente)."""
+    for rx, kind in _LINE_DATE_RX:
+        m = rx.search(line)
+        if not m:
+            continue
+        try:
+            if kind == "ymd":
+                return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+            return datetime(int(m.group(3)), int(m.group(2)), int(m.group(1)))
+        except ValueError:
+            continue
+    return None
 NIGHT_LOGS = ["night_research.log", "research_agent.log", "story_agent_run.log",
               "story_agent.log", "night_push.log", "rag_engine.log",
               "update_github_profile.log"]
@@ -142,16 +167,43 @@ def collect_signals() -> dict:
         if m:
             rag_chunks = int(m[-1])
 
-    # SALUTE log notturni: scansiona le ultime ~80 righe di ognuno
+    # SALUTE log notturni: ultime ~80 righe, ma una riga conta solo se RECENTE
+    # (ogni riga eredita la data più vicina nel log: prima quella sopra, poi quella
+    # sotto — un traceback senza timestamp appartiene alla run che lo chiude).
+    cutoff = datetime.now() - timedelta(hours=LOG_FRESH_HOURS)
     log_issues = []
     for name in NIGHT_LOGS:
         f = LOGS_DIR / name
         if not f.exists():
             continue
-        tail = "\n".join(f.read_text(encoding="utf-8", errors="replace").splitlines()[-80:])
-        for pat, label in LOG_FAIL_PATTERNS:
-            if re.search(pat, tail, re.IGNORECASE):
-                log_issues.append({"log": name, "tipo": label})
+        lines = f.read_text(encoding="utf-8", errors="replace").splitlines()[-80:]
+        pairs = []
+        ctx = None
+        for ln in lines:                       # forward fill: data più vicina sopra
+            d = _line_date(ln)
+            if d:
+                ctx = d
+            pairs.append([ln, ctx])
+        below = None
+        for i in range(len(pairs) - 1, -1, -1):  # backward fill per le righe iniziali
+            if pairs[i][1] is None:
+                pairs[i][1] = below
+            else:
+                below = pairs[i][1]
+        seen = set()
+        for ln, d in pairs:
+            if d is not None and d < cutoff:
+                continue                        # riga storica: non rifirare per settimane
+            for pat, label in LOG_FAIL_PATTERNS:
+                if label in seen:
+                    continue
+                if re.search(pat, ln, re.IGNORECASE):
+                    seen.add(label)
+                    log_issues.append({
+                        "log": name, "tipo": label,
+                        "riga": ln.strip()[:200],
+                        "data": d.strftime("%Y-%m-%d") if d else "sconosciuta",
+                    })
 
     return {
         "date": TODAY,
@@ -175,6 +227,7 @@ SYSTEM_PROMPT = """Sei l'auditor interno di TITANIUM_OS, il sistema operativo pe
 Il tuo compito: la "cartella clinica" del sistema. Non una to-do generica: diagnostica che accende la lampadina.
 Ricevi i segnali di salute di stanotte. Produci 3-6 CRITICHE concrete, verificabili, azionabili.
 Regole: niente lodi, niente fuffa. Ogni critica = un rischio o un'inefficienza REALE leggibile dai dati. Se i log mostrano guasti, quelli vengono prima.
+EVIDENZE: ogni log_issue include la riga esatta ("riga") e la sua data. Cita SOLO ciò che la riga mostra davvero: vietato dire "confermato dai log" o inventare conseguenze (push fallito, commit incompleto) non presenti nell'estratto. Se non hai la riga, il guasto non esiste. Nel finding riporta l'estratto tra virgolette con la data.
 Considera anche "bussola_open" (la scaletta da-fare di Matteo): se un todo aperto e' a rischio di essere dimenticato, e' bloccante per altro, o sbloccherebbe valore, emetti UNA critica area "ROADMAP" che lo evidenzi (max 1-2). Non ripetere pari pari il todo: di' perche' conta ORA.
 Rispondi SOLO con un array JSON, niente testo attorno. Schema per elemento:
 {"area":"RAG|RICERCA|NOTTURNE|V32|MIMS|GENESIS|SISTEMA|ROADMAP","severity":"alta|media|bassa","finding":"cosa non va, dai dati","azione":"il prossimo passo concreto"}"""
