@@ -5,6 +5,7 @@
 
 import sys
 import os
+import re
 import json
 import subprocess
 import logging
@@ -29,7 +30,14 @@ from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # permetti richieste da localhost:5173 (Vite)
+# CORS ristretto: solo dashboard locale, LAN privata e Tailscale — NON "*".
+# L'API ha endpoint di lettura/scrittura file: con "*" qualsiasi pagina web aperta
+# nel browser potrebbe chiamarla (drive-by su localhost). Niente IP hardcoded: regex di rete.
+CORS(app, origins=[
+    re.compile(r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$"),
+    re.compile(r"^https?://192\.168\.\d{1,3}\.\d{1,3}(:\d+)?$"),     # LAN privata
+    re.compile(r"^https?://100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\.\d{1,3}\.\d{1,3}(:\d+)?$"),  # Tailscale CGNAT
+])
 
 _screen_jobs: dict = {}  # job_id → {status, task, result, thread}
 

@@ -1,4 +1,4 @@
-// vite.config.ts | TITANIUM_OS | v2.0 | 2026-03-23
+// vite.config.ts | TITANIUM_OS | v2.1 | 2026-06-11
 // Middleware dev: serve API core direttamente (STATE, md-files, file)
 // Flask rimane per operazioni pesanti (scan, TTS, video, semantic search)
 
@@ -15,8 +15,11 @@ const CONTENT_DIR = process.env.CONTENT_ENGINE_DIR || `C:\\Users\\${process.env.
 const SKIP_DIRS = new Set(['BACKUPS', 'VERSIONS', 'node_modules', '__pycache__', '.git', 'venv', '.venv'])
 
 // ── helpers ──────────────────────────────────────────────────
+// NB: niente Access-Control-Allow-Origin — la dashboard chiama questi endpoint
+// same-origin (fetch relative); con '*' qualsiasi sito nel browser potrebbe
+// leggere/scrivere STATE.json via PATCH /api/state (drive-by su localhost).
 function json(res: ServerResponse, data: unknown, status = 200) {
-  res.writeHead(status, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' })
+  res.writeHead(status, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify(data))
 }
 
@@ -55,9 +58,9 @@ function handleApi(req: IncomingMessage, res: ServerResponse): boolean {
   const url = new URL(req.url!, `http://localhost`)
   const p = url.pathname
 
-  // OPTIONS preflight
+  // OPTIONS preflight (same-origin: nessun header CORS necessario)
   if (req.method === 'OPTIONS') {
-    res.writeHead(204, { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET,PATCH,POST', 'Access-Control-Allow-Headers': 'Content-Type' })
+    res.writeHead(204, { 'Allow': 'GET,PATCH,POST,OPTIONS' })
     res.end(); return true
   }
 
