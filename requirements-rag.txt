@@ -1,0 +1,20 @@
+# requirements-rag.txt | TITANIUM_OS / MENTE_RAG | v1.0 | 2026-06-11
+# Stack RAG verificato funzionante su DESKTOP-IFACE2R (GTX 1070, CUDA).
+# Era installato a mano e NON documentato: su una macchina nuova
+# `pip install -r requirements.txt` non ricostruiva il sistema (lezione
+# pagata nella migrazione Getac -> fisso del 02/06/2026).
+#
+# Installazione:
+#   pip install -r requirements-rag.txt
+# NB torch con CUDA su Windows richiede l'index dedicato, es.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+#
+# Versioni = quelle installate e verificate (pip list 11/06/2026).
+# Aggiornale solo dopo aver ri-verificato: rag-rebuild + query GPU OK.
+
+torch==2.12.0
+transformers==5.6.0
+sentence-transformers==5.5.1
+chromadb==1.5.9
+scikit-learn==1.9.0
+numpy==2.4.6
