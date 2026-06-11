@@ -74,50 +74,10 @@ export interface MappaNodo {
   figli?: MappaNodo[];   // rami statici (verticali/regioni); gli episodi prendono i figli dal vero
 }
 
-export const MAPPA_RADICE: MappaNodo = {
-  id: "root",
-  nome: "Mappa",
-  tipo: "verticale",
-  sottotitolo: "Il mondo di Nina, percorribile — scendi per approfondire, vai di lato per cambiare discorso.",
-  figli: [
-    {
-      id: "v-tech",
-      nome: "Tech · la Storia dell'IA",
-      tipo: "verticale",
-      colore: "#22d3ee",
-      sottotitolo: "Loop → Automazione → LLM → RAG → Wiki → Agenti → Orchestrazione",
-      concetto: "Come nasce un'intelligenza artificiale, una tappa alla volta — ogni tappa ancorata a un pezzo vero del sistema.",
-      figli: REGIONI.map((r): MappaNodo => ({
-        id: `reg-${r.n}`,
-        nome: r.nome,
-        tipo: "ramo",
-        colore: r.colore,
-        sottotitolo: r.tappa,
-        concetto: r.concetto,
-        vero: r.vero,
-        pietra: r.pietra,
-        pezzoReale: r.pezzoReale,
-        figli: r.episodi.map((ep): MappaNodo => ({
-          id: ep.id,
-          nome: ep.titolo,
-          tipo: "episodio",
-          colore: r.colore,
-          episodeId: ep.id,
-          stato: ep.stato,
-        })),
-      })),
-    },
-    {
-      id: "v-finanza",
-      nome: "Finanza personale",
-      tipo: "verticale",
-      colore: "#34d399",
-      sottotitolo: "predisposto — da riempire",
-      concetto: "Da bravo papà: cosa sono i soldi, come si tengono in ordine, come crescono nel tempo.",
-      figli: [],
-    },
-  ],
-};
+// NB: la radice della Mappa (verticali Tech/Finanza + Regioni) è costruita a runtime
+// in AvventuraMapView.buildMappa(), DATA-DRIVEN dall'asse_nina degli episodi reali.
+// (La vecchia costante statica MAPPA_RADICE è stata rimossa: usava REGIONI prima della
+// sua inizializzazione → ReferenceError a load. La verità ora viene dai dati, non da qui.)
 
 export const REGIONI: Regione[] = [
   {
