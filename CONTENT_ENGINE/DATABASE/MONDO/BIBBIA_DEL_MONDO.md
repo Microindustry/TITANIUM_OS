@@ -96,6 +96,44 @@ Quattro cose che alzano il livello di cosa è Nina. Non sono "colore": sono vinc
 
 ---
 
+## 0-ter. VISIONE 10/06 — Nina ha il suo OS (e si perde come noi)
+
+*Aggiunto 11/06 da una nota vocale di Matteo (10/06). Estende §0-bis. È il livello META del mondo.*
+
+Quattro cose che danno a Nina la stessa struttura del nostro sistema — non come metafora, ma come
+**meccanica della storia**.
+
+1. **Nina ha il suo OS / la sua agente.** Come Matteo ha TITANIUM_OS, Nina ha un **sistema suo** che
+   *chiede, la corregge, sistema le cose* — un'aiutante che le tiene insieme il percorso. Non è
+   onnisciente: è uno scaffolding, esattamente come il nostro. *(lega [[project_storie_n_livelli]])*
+
+2. **Nina si perde — come me.** Il motore emotivo: Nina **non è l'esperta corretta**, è la **persona
+   curiosa che si smarrisce**, dimentica, sbaglia strada (la stessa testa-che-corre di Matteo, ADHD
+   come scaffolding [[user_matteo]]). Per questo *vuole un OS che tenga tutto*: non per pigrizia, per
+   sopravvivenza cognitiva. Chi guarda si riconosce in chi si perde, non in chi sa già.
+
+3. **Glielo costruisce il papà — il meccanico.** L'OS di Nina non cade dal cielo: **lo costruisce il
+   Costruttore** (la presenza-papà, mai protagonista — regola 4). Il fabbro che le forgia gli attrezzi
+   della mente come forgia il metallo (⟡0 LA MATERIA). È il gesto d'amore del genitore che dà ai figli
+   non le risposte, ma **il sistema per trovarsele**.
+
+4. **"Dentro la macchina": prodotto + LV + storia in un solo contenitore.** L'OS di Nina è il posto dove
+   convivono **il prodotto** (il sistema reale), **i LV** (scendi = approfondisci · di lato = cambi
+   discorso, es. finanza) e **la storia** (gli episodi). È la **Mappa** (vista in dashboard): l'OS di
+   Nina È la mappa percorribile. *(lega [[project_storie_n_livelli]] — i 2 assi + N-livelli sono già la
+   sua spina: asse RUOLO = il diario, asse NINA = il percorso, profondità LV = i giri di spirale.)*
+
+> In una riga: **il viaggio di Nina è il nostro viaggio**. Lei costruisce (col papà) lo stesso tipo di
+> sistema che noi costruiamo — un OS che tiene tutto perché la testa, da sola, si perde. La storia
+> insegna *facendo vedere come si costruisce lo scaffolding*, non solo i concetti.
+
+**Conseguenza operativa per gli episodi:** d'ora in poi un'avventura di Nina può mostrarla **usare /
+costruire il suo OS** (chiedere all'aiutante, correggersi, non perdere la traccia) — meta-ricorsività
+(regola 5: costruisci ciò che usi). E può, da ogni punto, **scendere** (approfondire) o **andare di lato**
+(nuova verticale: finanza personale prima fra tutte).
+
+---
+
 ## 1. IL MONDO — "Il Sistema"
 
 Un mondo unico dove **due terre che tutti credono separate sono in realtà la stessa
