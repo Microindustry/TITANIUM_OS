@@ -1,4 +1,6 @@
-# api_server.py | ECOSYSTEM_OS | v1.4 | 2026-05-30
+# api_server.py | ECOSYSTEM_OS | v1.5 | 2026-06-11
+# v1.5: hardening sicurezza (red-team #38) — denylist .env/_VAULT in path_allowed,
+#       validazione path-aware (no prefix-match), auth X-API-Key per chiamate remote
 # Flask API server — serve dati reali al dashboard React
 # Endpoints: STATE.json, mente_digest.json, trigger scanner, update state
 # Run: python api_server.py  (porta 5001)
@@ -41,6 +43,22 @@ CORS(app, origins=[
 
 _screen_jobs: dict = {}  # job_id → {status, task, result, thread}
 
+# ── AUTH: localhost passa libero (la dashboard è same-host); le chiamate REMOTE
+# (LAN/Tailscale) richiedono X-API-Key == TI_API_KEY. CORS difende il browser,
+# non un curl diretto da un device della tailnet: questo sì. Fail-closed da remoto.
+_API_KEY = os.environ.get("TI_API_KEY", "").strip()
+_LOCAL_IPS = {"127.0.0.1", "::1", "localhost"}
+
+@app.before_request
+def _require_auth():
+    if request.method == "OPTIONS" or request.path == "/api/health":
+        return None
+    if (request.remote_addr or "") in _LOCAL_IPS:
+        return None                       # stessa macchina: la dashboard locale
+    if _API_KEY and request.headers.get("X-API-Key", "") == _API_KEY:
+        return None                       # remoto autenticato
+    return jsonify({"ok": False, "error": "non autorizzato (chiamata remota senza X-API-Key valida)"}), 401
+
 # ── PERCORSI ─────────────────────────────────────────────────
 ROOT        = Path(__file__).parent
 STATE_FILE  = ROOT / "BRAIN" / "STATE.json"
@@ -65,6 +83,18 @@ ALLOWED_ROOTS = [
     FOTO_DIR.resolve(),
     MICROINDUSTRY.resolve(),
 ]
+
+# File/cartelle con segreti: dentro ROOT ma MAI servibili via API.
+# (.env e _VAULT/ vivono dentro ROOT → la sola allowlist non basta a proteggerli)
+_DENY_NAMES = {".env"}
+_DENY_DIRS  = {"_VAULT", "BACKUPS"}
+
+def path_allowed(target: Path) -> bool:
+    """Validazione path-aware: target dentro una radice consentita (no prefix-match
+    su stringa, che lascerebbe passare TITANIUM_OS_OLD) e fuori dalla denylist segreti."""
+    if target.name in _DENY_NAMES or any(part in _DENY_DIRS for part in target.parts):
+        return False
+    return any(target == r or r in target.parents for r in ALLOWED_ROOTS)
 
 # ── HELPERS ──────────────────────────────────────────────────
 
@@ -138,7 +168,7 @@ def read_file():
     if not raw:
         return jsonify({"ok": False, "error": "path mancante"}), 400
     target = Path(raw).resolve()
-    if not any(str(target).startswith(str(r)) for r in ALLOWED_ROOTS):
+    if not path_allowed(target):
         return jsonify({"ok": False, "error": "percorso non consentito"}), 403
     if not target.exists():
         return jsonify({"ok": False, "error": f"non trovato: {target}"}), 404
@@ -167,7 +197,7 @@ def open_path():
         return jsonify({"ok": False, "error": "path mancante"}), 400
     target = Path(raw).resolve()
     # Verifica che il path sia dentro una radice consentita
-    if not any(str(target).startswith(str(r)) for r in ALLOWED_ROOTS):
+    if not path_allowed(target):
         return jsonify({"ok": False, "error": "percorso non consentito"}), 403
     if not target.exists():
         return jsonify({"ok": False, "error": f"non trovato: {target}"}), 404
@@ -208,7 +238,7 @@ def save_md():
     if not path_str:
         return jsonify({"ok": False, "error": "path mancante"}), 400
     target = Path(path_str).resolve()
-    if not str(target).startswith(str(ROOT.resolve())):
+    if not path_allowed(target) or not (target == ROOT.resolve() or ROOT.resolve() in target.parents):
         return jsonify({"ok": False, "error": "percorso non consentito"}), 403
     if target.suffix.lower() != ".md":
         return jsonify({"ok": False, "error": "solo file .md consentiti"}), 400
@@ -816,7 +846,7 @@ def serve_media(rel_path: str):
     Es: GET /api/media/FOTO/V32_BUILD/Config_G/stato_20260528/V32_20260528_01_telaio_frontale_taverna.jpeg
     """
     target = (MICROINDUSTRY / rel_path).resolve()
-    if not any(str(target).startswith(str(r)) for r in ALLOWED_ROOTS):
+    if not path_allowed(target):
         return jsonify({"ok": False, "error": "percorso non consentito"}), 403
     if not target.exists() or not target.is_file():
         return jsonify({"ok": False, "error": "file non trovato"}), 404
