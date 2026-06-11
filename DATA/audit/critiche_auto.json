@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-f6721639a6",
+    "date": "2026-06-11",
+    "git": "8caec84",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "Doppio crash notturno confermato dai log: story_agent.log e night_push.log riportano entrambi 'crash/eccezione' + 'errore esplicito'. Significa che stanotte gli episodi potrebbero non essere stati generati correttamente E il push automatico su git potrebbe essere fallito — con il rischio che il commit '8caec84 auto: story_agent' sia incompleto o provenga da un retry parziale.",
+    "azione": "Aprire story_agent.log e night_push.log, isolare lo stack trace esatto. Verificare che episodes.json post-commit sia integro (conteggio atteso vs reale) e che il push abbia incluso tutti i file generati stanotte. Se il push è fallito, eseguire manualmente git status + git push prima della prossima sessione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-c459273bcf",
+    "date": "2026-06-11",
+    "git": "8caec84",
+    "area": "GENESIS",
+    "severity": "bassa",
+    "finding": "GENESIS è al 70% ma il pillar IDENTITY è al 50% e Nina — che è il prodotto derivato di MIMS e il vettore educativo di GENESIS — ha ancora l'impronta non validata. I commit mostrano sei episodi EP_AV scritti e un arco ⟡1→⟡7 dichiarato completo, ma la voce bussola '#parcheggio-nina' segnala esplicitamente che Nina è prematura. Rischio: contenuto già prodotto che potrebbe richiedere rework se l'impronta cambia dopo la validazione.",
+    "azione": "Prima di scrivere altri episodi Nina, completare la validazione dell'impronta (una sessione dedicata, output: documento 'Nina v1 validata' nel canone). Congelare la produzione di nuovi EP_AV fino ad allora per evitare debito di contenuto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-adffea46c6",
+    "date": "2026-06-11",
+    "git": "8caec84",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "6851 chunk nel RAG ma nessuna metrica di qualità nei log: non c'è evidenza di test di retrieval reale dopo la riparazione delle API della sessione #35. Il toggle Conoscenza/Sistema è tornato LIVE ma 'funziona tecnicamente' non equivale a 'recupera chunk rilevanti'. Con una base dati di questa dimensione, la degradazione silente del retrieval è probabile.",
+    "azione": "Eseguire un batch di 5-10 query campione sul RAG (copre GENESIS, V32, MIMS, STORIE, RETE) e confrontare i chunk restituiti con quelli attesi. Se il recall è sotto il 70% su query note, prioritizzare il re-embedding o la pulizia dei metadati prima di aggiungere altri chunk.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-721766d80d",
+    "date": "2026-06-11",
+    "git": "8caec84",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il nodo SELF_IMPROVE (agente autonomo notturno read-only+PR) è catturato in bussola ma rimane bloccato dalla pipeline STORIE non ancora completata. Il rischio non è il ritardo in sé: è che stanotte story_agent e night_push hanno crashato senza nessun meccanismo di auto-riparazione o alerting. SELF_IMPROVE, una volta attivo, ridurrebbe esattamente questa classe di guasti silenziosi — ogni notte che passa senza di lui è una notte in cui i crash non vengono rilevati fino all'audit successivo.",
+    "azione": "Definire il MVP minimo di SELF_IMPROVE come priorità immediatamente dopo la chiusura dei 4 semi tecnici: anche solo un agente che legge i log notturni e apre una PR con un report strutturato azzera il problema della cecità post-crash attuale.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-6659e61b12",
+    "date": "2026-06-11",
+    "git": "8caec84",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "94 commit in 7 giorni con velocity altissima sul fronte STORIE/contenuti, ma i pillar fisici sono fermi: V32=65% e MIMS=30% con due blocker hardware espliciti (mandrino 2.2kW ER20 e silent blocks) che non hanno ricevuto alcun commit nella settimana. Il sistema cresce in digitale mentre l'infrastruttura fisica — che è il prerequisito reale della monetizzazione artigianale — è bloccata per una decisione d'acquisto.",
+    "azione": "Dedicare i primi 15 minuti della prossima sessione umana a chiudere la decisione silent blocks (v.A vs v.B) e mettere in ordine il mandrino ER20. Sono gate sequenziali: finché restano aperti, V32 e MIMS non avanzano indipendentemente da quanti commit vengono fatti sul software.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-1645f75be2",
+    "date": "2026-06-11",
+    "git": "8caec84",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano simultaneamente rate-limit, ricerca a vuoto ed errore esplicito — tre tipologie di fallimento sulla stessa notte. Non è rumore casuale: indica che le sorgenti esterne sono sistematicamente inaccessibili o che le query notturne consumano la quota API prima di produrre risultati utili.",
+    "azione": "Controllare quali sorgenti hanno triggerato il rate-limit (probabilmente la stessa in entrambi i log). Implementare un backoff esponenziale per sorgente + capping delle chiamate per run. Valutare se i due agenti (night_research e research_agent) stiano interrogando le stesse API in parallelo, raddoppiando il consumo di quota.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
     "id": "AUD-ff87fd042e",
     "date": "2026-06-10",
     "git": "b6aca47",
