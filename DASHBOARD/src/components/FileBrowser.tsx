@@ -162,10 +162,8 @@ function CategoryPanel({ cat, root, onOpen }: {
   const [loading, setLoading] = useState(true);
   const [error, setError]   = useState<string | null>(null);
 
-  // Path assoluto: gestisce CONTENT_ENGINE (fuori da ROOT) vs sottocartelle di ROOT
-  const absPath = cat.subPath.startsWith("CONTENT_ENGINE")
-    ? `C:\\Users\\Matteo\\Desktop\\CONTENT_ENGINE`
-    : `${root}\\${cat.subPath}`;
+  // Path assoluto derivato da ROOT (CONTENT_ENGINE vive nel repo dalla migrazione 06/2026)
+  const absPath = `${root}\\${cat.subPath}`;
 
   useEffect(() => {
     fetch(`/api/file?path=${encodeURIComponent(absPath)}`)
