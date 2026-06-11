@@ -56,6 +56,7 @@ NINA_SEED = {
     "EP_SEED_GRAPHIFY":  ("la mappa della conoscenza", 5, 1, ["⟡4"], "fonte"),
     "EP_SEED_RETE":      ("vedere il sistema come una mappa", 5, 2, ["⟡4"], "fonte"),
     # gli episodi di Nina (adattati)
+    "EP_AV_M0": ("la Materia: il gesto sul metallo, la radice di tutto", 0, 1, [], "adattato"),
     "EP_AV_00": ("il Grande Loop", 1, 1, [], "adattato"),
     "EP_AV_01": ("l'Automazione", 2, 1, ["⟡1"], "adattato"),
     "EP_AV_02": ("l'LLM, la mente che parla", 3, 1, ["⟡1"], "adattato"),

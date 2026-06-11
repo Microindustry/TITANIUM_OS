@@ -1,7 +1,7 @@
 <!-- TOC -->
 
 - [PIETRE  lindice dellarco (concetto  episodio)](#pietre-lindice-dellarco-concetto-episodio)
-  - [0  LA MATERIA  (1 episodi)](#0-la-materia-1-episodi)
+  - [0  LA MATERIA  (2 episodi)](#0-la-materia-2-episodi)
   - [1  LA TRACCIA  (2 episodi)](#1-la-traccia-2-episodi)
   - [2  LOFFICINA CHE GIRA SOLA  (6 episodi)](#2-lofficina-che-gira-sola-6-episodi)
   - [3  LA MENTE CHE PARLA  (2 episodi)](#3-la-mente-che-parla-2-episodi)
@@ -14,7 +14,7 @@
 
 # PIETRE — l'indice dell'arco (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-06-10 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-06-11 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** ⟡n è un concetto fondante dell'arco "storia dell'IA". Sotto ciascuna:
@@ -23,10 +23,11 @@
 
 ---
 
-## ⟡0 · LA MATERIA  (1 episodi)
+## ⟡0 · LA MATERIA  (2 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
+| 1 | `EP_AV_M0` La Materia | la Materia: il gesto sul metallo, la radice di tutto | adattato | — |
 | 1 | `EP_FILONE_00` La Materia — il telaio, la scelta, il controllo | la materia: scelta, controllo, precisione | fonte | — |
 
 ## ⟡1 · LA TRACCIA  (2 episodi)
