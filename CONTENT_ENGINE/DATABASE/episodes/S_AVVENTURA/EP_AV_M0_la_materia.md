@@ -11,7 +11,7 @@ tags: avventura, educativo, bambini, nina, themis, forge, materia, precisione, r
 <!-- TOC -->
 
 - [EP_AV_M0  La Materia](#epavm0-la-materia)
-    - [Prima del codice cera il metallo  e un gesto fatto bene a mano](#prima-del-codice-cera-il-metallo-e-un-gesto-fatto-bene-a-mano)
+    - [Prima del codice cera il metallo  e un gesto fatto bene a mano. La radice di tutto.](#prima-del-codice-cera-il-metallo-e-un-gesto-fatto-bene-a-mano-la-radice-di-tutto)
   - [COLD OPEN](#cold-open)
   - [ATTO I  SOTTO LA GIUNTURA](#atto-i-sotto-la-giuntura)
   - [ATTO II  IL SOFFIO DI TROPPO](#atto-ii-il-soffio-di-troppo)
