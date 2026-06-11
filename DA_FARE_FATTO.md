@@ -7,6 +7,7 @@
     - [4 SEMI TECNICI scritti a mano (stagione ST, con REEL_HOOK)  il content gap chiuso](#4-semi-tecnici-scritti-a-mano-stagione-st-con-reelhook-il-content-gap-chiuso)
     - [Igiene episodes.json (additiva, nulla cancellato)](#igiene-episodesjson-additiva-nulla-cancellato)
     - [RIFARE LE STORIE  N-LIVELLI SUI CONTENUTI (il lavoro vero della sessione interrotta)](#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)
+    - [NOTTE AUTONOMA 36b  10/06  allineato i N-livelli al tuo blueprint a 2 ASSI](#notte-autonoma-36b-1006-allineato-i-n-livelli-al-tuo-blueprint-a-2-assi)
     - [parcheggio NINA RAG/Wiki (EP_AV_03/04)  scritti ma PREMATURI (Nina viene dopo)](#parcheggio-nina-ragwiki-epav0304-scritti-ma-prematuri-nina-viene-dopo)
   - [Sessione 35  10/06/2026](#sessione-35-10062026)
     - [STORIE  episodi reali del lavoro recente (FATTO in 36)](#storie-episodi-reali-del-lavoro-recente-fatto-in-36)
@@ -114,13 +115,12 @@
 - [✓] **3 LV2** (modularità, t-SNE↔UMAP, cammini/BFS) + **indice PIETRE.md** auto-generato (8/8 Pietre posate, 38 ep indicizzati).
 - [✓] **ARCO NINA COMPLETO ⟡1→⟡7**: scritti `EP_AV_05` (Agenti) + `EP_AV_06` (Direttore/Orchestrazione, chiude l'arco e apre il senso-prodotto "tramandare").
 - [ ] **DA DECIDERE con Matteo (NINA):** il Nina **⟡0 LA MATERIA** (prequel "dal metallo") riapre l'opening di `EP_AV_00` → scelta tua. Poi: Nina "lunghissima" multi-giro + il filo "Nina ha il suo OS/agente che si perde come me" (visione 10/06, da mettere a canone).
-- [ ] **DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO) · `EP_AV_03/04` (parcheggiati) ora combaciano con l'arco: togliere il "parcheggio"?
+- [ ] **DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO).
 - Stato notte: **150 ep · 16 approfondimenti (LV1-2) · arco Nina 7/7 (manca ⟡0) · build verde · 8 commit isolati su main (NO push)**.
 
-### [✗→parcheggio] NINA RAG/Wiki (EP_AV_03/04) — scritti ma PREMATURI (Nina viene dopo)
-- [✓] `EP_AV_03` Biblioteca delle Fonti (RAG) · `EP_AV_04` Grande Mappa (Wiki) scritti definitivi.
-- [✗] Fuori sequenza: Matteo ha chiarito che Nina viene DOPO le STORIE rifatte. **Non cancellati**
-      (additivo): restano come riferimento/stile per quando si riprende Nina (racconto lungo a livelli).
+### [✓] NINA RAG/Wiki (EP_AV_03/04) — CANONICI nell'arco (parcheggio TOLTO, Matteo 11/06)
+- [✓] `EP_AV_03` Biblioteca delle Fonti (RAG, ⟡4) · `EP_AV_04` Grande Mappa (Wiki, ⟡5): definitivi,
+      parte piena della spina dorsale Nina ⟡1→⟡7. Non più "prematuri": combaciano con l'arco.
 
 ---
 
