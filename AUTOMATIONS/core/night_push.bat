@@ -22,6 +22,8 @@ if not defined HAVE_COMMITS (
     git push origin main >> "%LOG%" 2>&1
     if errorlevel 1 (
         echo [night_push] ERR: push fallito >> "%LOG%"
+        :: propaga il fallimento: senza questo LastTaskResult resta 0 e il guasto e' invisibile
+        exit /b 1
     ) else (
         echo [night_push] OK: push completato >> "%LOG%"
     )

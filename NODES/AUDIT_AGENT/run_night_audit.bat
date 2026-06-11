@@ -22,9 +22,11 @@ if not defined PYTHON (
 :: commit additivo SOLO della cartella clinica (isolato dal resto)
 git add DATA\audit\critiche_auto.json DATA\audit\system_health.json
 
-git diff --cached --quiet
+:: --quiet e commit con PATHSPEC ESPLICITO: committa SOLO la cartella clinica,
+:: mai lo staging accidentale di altri processi (mente_watcher, indexer) che gira di notte.
+git diff --cached --quiet -- DATA\audit\critiche_auto.json DATA\audit\system_health.json
 if errorlevel 1 (
-    git commit -m "auto: night_audit - cartella clinica %DATE%" >> "%LOG%" 2>&1
+    git commit -m "auto: night_audit - cartella clinica %DATE%" -- DATA\audit\critiche_auto.json DATA\audit\system_health.json >> "%LOG%" 2>&1
     echo [night_audit] commit fatto >> "%LOG%"
 ) else (
     echo [night_audit] nessuna variazione audit - skip commit >> "%LOG%"

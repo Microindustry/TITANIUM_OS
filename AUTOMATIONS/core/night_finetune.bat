@@ -28,7 +28,9 @@ echo [%date% %time%] Fine-tuning avviato (GPU/fp16) >> "%LOG%"
 echo Modello: TinyLlama-1.1B ^| Dataset: titanium_os ^| LoRA rank=8 >> "%LOG%"
 
 :: Training su GPU (fp16 true). batch=2 ok su 8GB con TinyLlama-1.1B LoRA.
-"%PYTHON%" -m llamafactory.train ^
+:: NB: invocazione via llamafactory.cli train — "-m llamafactory.train" NON e' eseguibile
+:: (e' un package, non un __main__): fallisce in silenzio. Fix red-team #38.
+"%PYTHON%" -m llamafactory.cli train ^
     --stage sft ^
     --do_train true ^
     --model_name_or_path TinyLlama/TinyLlama-1.1B-Chat-v1.0 ^
@@ -50,6 +52,7 @@ echo Modello: TinyLlama-1.1B ^| Dataset: titanium_os ^| LoRA rank=8 >> "%LOG%"
 
 if errorlevel 1 (
     echo [%date% %time%] Fine-tuning FALLITO >> "%LOG%"
+    exit /b 1
 ) else (
     echo [%date% %time%] Fine-tuning COMPLETATO - modello in %MODELS%\titanium_llm_v1 >> "%LOG%"
 )
