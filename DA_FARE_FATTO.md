@@ -44,6 +44,27 @@
 
 ---
 
+## Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza
+
+### [✓] EP_AV_03/04 canonici (parcheggio tolto) + ARCO NINA 8/8 (⟡0→⟡7)
+- [✓] `EP_AV_M0` "La Materia" (⟡0, la radice "dal metallo"): THEMIS porta Nina alla radice
+      (non prequel — la scopre alla fine), introduce FORGE, precisione = relazione (±0,019),
+      "non automatizzare un gesto non fatto bene a mano". Ora ogni Regione ⟡0-⟡7 ha il suo Nina.
+- [✓] EP_AV_03 (RAG ⟡4) + EP_AV_04 (Wiki ⟡5): tolto il "parcheggio", sono canonici nell'arco.
+
+### [✓] Canon §0-ter — Nina ha il suo OS (visione 10/06 a BIBBIA)
+- [✓] Nina ha un sistema/agente suo (scaffolding) che il papà-meccanico le costruisce; si perde
+      come Matteo; "dentro la macchina" = prodotto+LV+storia = la Mappa È l'OS di Nina. Meta-ricorsività.
+
+### [✓] Verticale FINANZA attivata (l'asse "di lato")
+- [✓] `narrativa.asse_nina.verticale` (tech ⟡ / finanza ₣); REGIONI_FINANZA (Valore/Spendere meno/
+      Cuscinetto/Far lavorare i soldi). Mappa + PIETRE sdoppiate per verticale.
+- [✓] `EP_AV_FIN_01` "Il Valore" (₣1): baratto→moneta, lavoro conservato + fiducia condivisa. Open loop → ₣2.
+- [ ] PROSSIMO finanza (open loop pronto): ₣2 "Spendere meno di quanto entra" · poi ₣3 ₣4.
+- Stato: **153 ep · arco Tech 8/8 + Finanza ₣1 · 9 Pietre posate · build verde · commit isolati (NO push)**.
+
+---
+
 ## Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici
 
 ### [✓] STORIE — diagnosi completa del sistema (oltre al content gap)
