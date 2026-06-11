@@ -1,0 +1,12 @@
+{
+  "// nota": "Estensioni consigliate per TITANIUM_OS (Python 3.11 + React/TS/Vite/Tailwind + PowerShell). VS Code le propone all'apertura della cartella.",
+  "recommendations": [
+    "anthropic.claude-code",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.powershell"
+  ]
+}
