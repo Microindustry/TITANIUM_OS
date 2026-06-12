@@ -36,3 +36,15 @@ Ora il blocker è diverso: manca il mandrino 2.2kW ER20. Sto ordinando dalla Ger
 La V32 passa da "macchina che fresano io" a "macchina che parla con il mio sistema".
 
 Questo è il salto.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'HMI installato su V32 è un **Siemens TP900 Comfort**, touchscreen da **9"**, certificazione **IP65**, con integrazione nativa su **SINUMERIK**, connesso via **Profibus** al PLC. Tempo di installazione sul pannello di controllo: **40 minuti**.
+
+- **FATTO:** I sensori di telemetria attivi su V32 dopo l'installazione HMI includono: **DS18B20** (temperatura, posizionato sulla testa fresatrice), **ADXL345** (accelerometro per vibrazione, montato sul telaio), più lettura di posizione assoluta delle tre assi, velocità di avanzamento e consumo energetico.
+
+- **DECISIONE:** L'HMI comunica con TITANIUM_OS tramite **API REST** (ricezione istruzioni) e restituisce dati di telemetria al sistema centrale per ottimizzazione dei cicli successivi. **LOGICA:** creare un feedback loop tra macchina e sistema cognitivo centrale, non intelligenza locale ma intelligenza di ecosistema.
+
+- **FATTO:** Il blocker attuale per V32 è l'assenza del **mandrino 2.2kW ER20**, ordinato dalla Germania con consegna stimata **lunedì**. Le tre assi e i cicli di controllo sono già operativi.
+
+- **OBIETTIVO:** Ogni componente MIMS fresato da V32 riceverà un **QR code** contenente materiale, tolleranze, ricetta di lavorazione ed esito dei test. VULCAN (la pressa) leggerà il codice e applicherà automaticamente la ricetta corrispondente.

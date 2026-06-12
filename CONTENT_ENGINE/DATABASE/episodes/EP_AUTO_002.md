@@ -30,3 +30,17 @@ MIMS (i connettori modulari fisici) ha ancora il 30% da fare, ma adesso so quale
 Perché racconto questo? Perché in una cultura dove tutto è software, dove il fisico sembra secondario, questi 8 pezzi di metallo sono il fondamento. Sono il proof-of-concept che un artigiano può costruire non solo con le mani, ma con **sistemi**. VULCAN (la pressa, il brevetto sui polimeri), EVA (l'AI per Maria), TITANIUM_OS: sono tutte estensioni dello stesso principio. Costruire processi che si replicano, che si scalano, che rimangono precise.
 
 Un pezzo fresato bene non è arte. È promessa mantenuta.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Lavorati 8 pezzi interfaccia (bronzine + scalini di posizionamento) per il sistema V32-MIMS con tolleranza **±0.015 mm**.
+
+- **FATTO:** Il primo pezzo ha richiesto **45 minuti di setup** (zeratura mandrino, taratura comparatori, test geometria); i successivi 7 pezzi hanno richiesto **20-25 minuti ciascuno** in flusso seriale.
+
+- **FATTO:** Tempo totale di lavorazione dichiarato: **3 ore nette** per l'intera serie di 8 pezzi.
+
+- **STATO:** La macchina V32 è al **65%** di completamento; il blocker attuale è il mandrino **2.2 kW ER20**, ordinato e atteso entro 2 giorni dalla data dell'episodio (2026-03-22).
+
+- **STATO:** MIMS (connettori modulari fisici) risulta al **70% completato** (30% ancora da fare) alla data dell'episodio.
+
+- **DECISIONE:** TITANIUM_OS traccia ogni ciclo e tempo di setup della V32 per costruire un database comportamentale reale della macchina; la logica è disporre di dati empirici completi al termine della build.

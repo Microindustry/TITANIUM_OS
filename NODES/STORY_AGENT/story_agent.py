@@ -1,6 +1,8 @@
-# story_agent.py | TITANIUM_OS / NODES / STORY_AGENT | v1.0 | 2026-05-29
+# story_agent.py | TITANIUM_OS / NODES / STORY_AGENT | v1.1 | 2026-06-11
 # Genera episodi narrativi automaticamente da git commits, sessioni, milestone
 # Gira come Stop hook + cron notturno — PC sempre acceso, zero perdita di materiale
+# v1.1: prompt allineato al canone 2-assi — ogni episodio emette ## FATTI (per il RAG)
+#       (terzo requisito: l'episodio deve insegnare al sistema, non solo raccontare)
 
 import os
 import sys
@@ -191,7 +193,20 @@ Ogni episodio ha:
 - 3 ATTI narrativi con dati tecnici reali
 - CHIUSURA con riflessione non retorica
 - reel_hook finale (3-5 righe, stile Simone Rizzo: dato concreto → problema → azione → open loop)
+- blocco "## FATTI (per il RAG)" — vedi sotto, OBBLIGATORIO
 - Tabella metadati finale
+
+## FATTI (per il RAG) — terzo requisito del canone
+Un episodio non è solo una bella storia: deve INSEGNARE al sistema (regola 7: il loop
+V32 → episodio → RAG → Claude più informato). In coda, prima della tabella metadati,
+aggiungi SEMPRE un blocco così:
+
+## FATTI (per il RAG)
+- DECISIONE: <cosa è stato deciso, con il numero/parametro reale>
+- LOGICA: <perché, la causa tecnica verificabile>
+- OBIETTIVO: <cosa sblocca / prossimo passo misurabile>
+(3-6 righe, fatti atomici con numeri e decisioni, in forma che il RAG recupera secco.
+Solo specifiche e logica progettuale — MAI ricette o segreti: quelli restano in MENTE/_VAULT.)
 
 Rispondi SOLO con il markdown dell'episodio. Nessuna spiegazione prima o dopo."""
 

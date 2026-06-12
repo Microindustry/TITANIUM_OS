@@ -1,8 +1,9 @@
 @echo off
-:: night_research.bat | TITANIUM_OS | v2.0 | 2026-06-03
+:: night_research.bat | TITANIUM_OS | v2.1 | 2026-06-11
 :: Research Agent notturno - cerca paper su topic V32/MIMS/Epoxy Granite
 :: Eseguito da Task Scheduler ogni notte (ore diverse da StoryAgent)
 :: v2.0: path portabili via _ti_paths.bat (no hardcode benen)
+:: v2.1: + riflusso FATTI episodi -> MENTE prima del rag-update (chiude il loop regola 7)
 
 call "%~dp0_ti_paths.bat"
 cd /d "%TI_ROOT%"
@@ -32,7 +33,13 @@ if exist "%TOPICS%" (
     "%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5 >> "%LOG%" 2>&1
 )
 
-:: RAG update incrementale dopo la ricerca
+:: RIFLUSSO: i FATTI degli episodi (generati da story_agent alle 02:07) tornano in
+:: MENTE/<dominio>/ — la conoscenza INTERNA del progetto entra nel RAG. Chiude il loop
+:: (regola 7). Va PRIMA del rag-update, cosi episodi + paper si indicizzano in un colpo.
+echo [night_research] riflusso FATTI episodi -> MENTE >> "%LOG%"
+"%PYTHON%" CONTENT_ENGINE\scripts\fatti_reflux.py >> "%LOG%" 2>&1
+
+:: RAG update incrementale: indicizza paper ESTERNI (ricerca) + FATTI INTERNI (riflusso)
 "%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental >> "%LOG%" 2>&1
 
 echo [night_research] done %DATE% %TIME% >> "%LOG%"
