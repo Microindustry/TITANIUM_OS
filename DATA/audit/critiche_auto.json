@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-780b0164d1",
+    "date": "2026-06-12",
+    "git": "16aa6a1",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il todo 'selfimprove — agente autonomo notturno nodo dopo gli episodi' è in bussola_open da S34 senza trazione. Con story_agent che crasha stanotte e research_agent degradato, il sistema notturno sta girando su infrastruttura fragile. Costruire un livello di auto-miglioramento sopra fondamenta instabili produrrebbe un agente che amplifica i fallimenti invece di correggerli.",
+    "azione": "Congelare il todo selfimprove fino a quando S38 non ha chiuso i 4 fix isolati (inclusa igiene RAG) e i log notturni tornano puliti per almeno 2 notti consecutive. Aggiungere una precondizione esplicita nella bussola: 'selfimprove: sbloccato solo dopo 2 notti audit verde'.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-12"
+  },
+  {
+    "id": "AUD-7305dbac94",
+    "date": "2026-06-12",
+    "git": "16aa6a1",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Silent blocks: decisione v.A vs v.B — prerequisito V8' è aperto da almeno una sessione. V32 è al 65% ma V8 non può avanzare senza questa decisione. Non è un problema tecnico: è una decisione di Matteo non presa che blocca un intero sotto-progetto fisico mentre il focus è sul software.",
+    "azione": "Fissare la decisione silent blocks entro la prossima sessione fisica (non software): documentare i pro/contro delle due versioni in max 10 righe su bussola e chiuderla. Il costo di posticipare è che V8 rimane frozen mentre V32 avanza su altri fronti, creando debito di sequenza nel progetto macchina.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-12"
+  },
+  {
+    "id": "AUD-3d18950630",
+    "date": "2026-06-12",
+    "git": "16aa6a1",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerche a vuoto ed errori espliciti — tre classi di fallimento in parallelo sullo stesso agente. Non è rumore casuale: il sistema di raccolta notturna è strutturalmente degradato, probabilmente per assenza di backoff/retry o rotazione sorgenti.",
+    "azione": "Leggere i due log affiancati per isolare se i rate-limit sono sulla stessa sorgente (stesso dominio/API) e se l'errore esplicito è conseguente o indipendente. Implementare nel branch S38 un backoff esponenziale minimo (es. 30s dopo 429) e un contatore di successi/fallimenti per sorgente, così il watchdog auto-restart a 10s non maschera il problema ciclando a vuoto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-12"
+  },
+  {
+    "id": "AUD-26bc800f64",
+    "date": "2026-06-12",
+    "git": "16aa6a1",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "RAG_chunks = 6918 ma il milestone S38 cita esplicitamente 'RAG 200' come target da verificare — probabile che si riferisca a 200 documenti indicizzati o a una soglia di recall, non ai chunk grezzi. Il numero grezzo di chunk non dice nulla sulla qualità: con la ristrutturazione 2 assi + N-livelli di S37, i metadati parent/level/children potrebbero non essere stati re-indicizzati, rendendo il RAG cieco alla gerarchia appena costruita.",
+    "azione": "Prima del merge S38, eseguire una query di smoke-test sul RAG che richiami esplicitamente un contenuto LV2 (es. 't-SNE vs UMAP') e verificare che il chunk restituito abbia i metadati level/parent corretti. Se i metadati mancano, lanciare un re-index parziale sui soli file modificati in S37 prima di considerare 'RAG 200' verificato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-12"
+  },
+  {
+    "id": "AUD-1f2d1b2630",
+    "date": "2026-06-12",
+    "git": "16aa6a1",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Il commit a079416 ha rimosso MAPPA_RADICE per un ReferenceError TDZ a load — un crash da variabile usata prima della dichiarazione (temporal dead zone). Questo tipo di bug sopravvive ai test se il bundle viene caricato in ordine diverso. Con 97 commit in 7 giorni e refactoring pesante, il rischio di regressione silente al prossimo cambio di import order è concreto.",
+    "azione": "Aggiungere al branch S38 un test di smoke sulla dashboard al cold-start (apertura diretta URL senza cache) che verifichi l'assenza di errori console. In alternativa, convertire la costante incriminata in una funzione lazy o spostarla in un modulo separato importato esplicitamente dopo il DOM ready.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-12"
+  },
+  {
+    "id": "AUD-0a13140626",
+    "date": "2026-06-12",
+    "git": "16aa6a1",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "story_agent.log mostra crash/eccezione ed errore esplicito stanotte: il generatore di episodi ha fallito durante l'autonomia. Con 146 episodi e una pipeline che produce commit automatici ogni notte, un crash silenzioso significa episodi mancanti o corrotti senza che Matteo se ne accorga alla ripresa della sessione.",
+    "azione": "Prima di aprire S38, ispezionare story_agent.log per identificare la traccia dell'eccezione (probabile KeyError o path mismatch dopo la ristrutturazione 2 assi). Verificare che episodes.json post-run di stanotte sia integro e coerente col conteggio atteso. Se il crash è riproducibile, aggiungere try/except con fallback a log strutturato prima del merge del branch fix/redteam-s38.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-12"
+  },
+  {
     "id": "AUD-f6721639a6",
     "date": "2026-06-11",
     "git": "8caec84",
@@ -24,6 +96,30 @@
     "last_seen": "2026-06-11"
   },
   {
+    "id": "AUD-b8240df53f",
+    "date": "2026-06-11",
+    "git": "402c1fc",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm)' è prerequisito per V8 e rimane aperto senza alcun commit di analisi o decisione negli ultimi 7 giorni. Una scelta binaria non documentata blocca un sotto-sistema meccanico intero.",
+    "azione": "Fissare la decisione in un commit esplicito con motivazione (peso, costo, rigidità attesa). Se servono dati per scegliere, identificare quale test o calcolo sblocca la decisione e schedularlo come primo task V32 della prossima sessione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-b3f995e318",
+    "date": "2026-06-11",
+    "git": "402c1fc",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Semantic Scholar bloccato da rate-limit in entrambe le run notturne: \"2026-06-11 03:37:27 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu\" e \"2026-06-11 03:37:39 [...] query=linear+guide+rail+preload+stiffness+preci\" — entrambe chiudono con \"semantic_scholar -> 0 risultati\". Le query riguardano V32 (rigidità strutturale frame, precarico guide lineari): ricerca tecnica core a zero output stanotte.",
+    "azione": "Aggiungere backoff esponenziale + jitter tra le chiamate a Semantic Scholar, oppure distribuire le query su finestre orarie separate. Verificare se il limite è per-IP o per-chiave e valutare l'uso dell'API key ufficiale (piano gratuito aumenta i rate limit).",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
     "id": "AUD-adffea46c6",
     "date": "2026-06-11",
     "git": "8caec84",
@@ -31,6 +127,18 @@
     "severity": "media",
     "finding": "6851 chunk nel RAG ma nessuna metrica di qualità nei log: non c'è evidenza di test di retrieval reale dopo la riparazione delle API della sessione #35. Il toggle Conoscenza/Sistema è tornato LIVE ma 'funziona tecnicamente' non equivale a 'recupera chunk rilevanti'. Con una base dati di questa dimensione, la degradazione silente del retrieval è probabile.",
     "azione": "Eseguire un batch di 5-10 query campione sul RAG (copre GENESIS, V32, MIMS, STORIE, RETE) e confrontare i chunk restituiti con quelli attesi. Se il recall è sotto il 70% su query note, prioritizzare il re-embedding o la pulizia dei metadati prima di aggiungere altri chunk.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-9f61e6d42c",
+    "date": "2026-06-11",
+    "git": "402c1fc",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Fable 5 per SELF_IMPROVE/red-team ha scadenza 22/06 dichiarata nel next_step, ma non risulta nessun commit di setup, scaffolding o anche solo documento di spec nelle ultime sessioni. Con milestone #37 appena chiusa e RAG offline, il rischio è che la finestra di 11 giorni si consumi in lavoro di contenuto senza mai avviare l'audit critico.",
+    "azione": "Creare entro la sessione corrente un file FABLE5_PLAN.md con: obiettivo minimo (quali aree auditare), criterio di 'fatto', e vincolo esplicito 'PR mai merge auto su main'. Questo rende la deadline azionabile e non solo annotata.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
     "status": "open",
     "last_seen": "2026-06-11"
@@ -60,6 +168,30 @@
     "last_seen": "2026-06-11"
   },
   {
+    "id": "AUD-5a971a41d9",
+    "date": "2026-06-11",
+    "git": "402c1fc",
+    "area": "V32",
+    "severity": "alta",
+    "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito esplicito per la fresatura stampi MIMS, e V32 è al 65% con MIMS al 30%. Non risulta nessun commit degli ultimi 7 giorni che registri un ordine effettuato o anche solo un preventivo acquisito: il blocco hardware è fermo in lista senza traccia di avanzamento.",
+    "azione": "Aprire ordine o almeno richiedere preventivo formale entro la sessione corrente. Registrare il riferimento ordine/fornitore in un commit o nota di bussola per rendere il blocco tracciabile e non solo dichiarato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-2a62f773f9",
+    "date": "2026-06-11",
+    "git": "402c1fc",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La decisione 'scalare asse_nina ai 129' è classificata come aperta nel next_step ma non ha nessun todo associato in bussola_open né commit di analisi. Con la struttura a 2 assi appena stabilizzata (milestone #37) e l'indice PIETRE auto-generato, questo è il momento a costo minimo per valutare la scalabilità: più si aggiungono episodi sopra una struttura non validata per 129 entry, più costoso diventa un eventuale refactor.",
+    "azione": "Aprire un todo esplicito in bussola con la domanda concreta da rispondere: 'asse_nina a 129 — quali campi cambiano, quale impatto su mappa e indice PIETRE?' Una sessione di spike da 30 minuti ora vale più di un refactor dopo altri 20 episodi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
     "id": "AUD-1645f75be2",
     "date": "2026-06-11",
     "git": "8caec84",
@@ -67,6 +199,18 @@
     "severity": "alta",
     "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano simultaneamente rate-limit, ricerca a vuoto ed errore esplicito — tre tipologie di fallimento sulla stessa notte. Non è rumore casuale: indica che le sorgenti esterne sono sistematicamente inaccessibili o che le query notturne consumano la quota API prima di produrre risultati utili.",
     "azione": "Controllare quali sorgenti hanno triggerato il rate-limit (probabilmente la stessa in entrambi i log). Implementare un backoff esponenziale per sorgente + capping delle chiamate per run. Valutare se i due agenti (night_research e research_agent) stiano interrogando le stesse API in parallelo, raddoppiando il consumo di quota.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-11"
+  },
+  {
+    "id": "AUD-0551833ac1",
+    "date": "2026-06-11",
+    "git": "402c1fc",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il RAG è offline: next_step dichiara esplicitamente 'Approvare UAC del restart API (RAG torna 200)' come primo passo bloccante. Con 6851 chunk indicizzati e la chat RAG integrata in dashboard, ogni sessione che parte senza questo step lavora cieca sul canone.",
+    "azione": "Prima di qualsiasi altro lavoro di sessione: eseguire restart_api.ps1 con UAC, verificare risposta 200 su /api/health, poi procedere. Valutare se il restart possa essere automatizzato all'avvio senza richiedere intervento manuale ogni volta.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
     "status": "open",
     "last_seen": "2026-06-11"
@@ -225,7 +369,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-c97403be34",
@@ -237,7 +381,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-77abb05083",
@@ -249,7 +393,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-6bb972e811",
@@ -261,7 +405,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -285,7 +429,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-28f6d2e10b",
@@ -297,7 +441,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-14717de2a5",
@@ -309,7 +453,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-11"
   },
   {
     "id": "AUD-100c8670cd",
