@@ -42,4 +42,8 @@ echo [night_research] riflusso FATTI episodi -> MENTE >> "%LOG%"
 :: RAG update incrementale: indicizza paper ESTERNI (ricerca) + FATTI INTERNI (riflusso)
 "%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental >> "%LOG%" 2>&1
 
+:: VERSIONA IL SAPERE: committa l'evoluzione di MENTE nel suo git locale (regola 1).
+:: Cosi i fatti vecchi non spariscono quando il riflusso li riscrive: restano nello storico.
+call "%~dp0mente_version.bat" >> "%LOG%" 2>&1
+
 echo [night_research] done %DATE% %TIME% >> "%LOG%"
