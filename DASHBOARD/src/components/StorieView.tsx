@@ -89,12 +89,17 @@ function EpisodeCard({
         className="w-full text-left px-3.5 py-3 flex items-center gap-3"
         onClick={() => setOpen(v => !v)}
       >
-        {/* ID badge */}
+        {/* Badge: la DATA dell'episodio (identificativo serio per la timeline),
+            non l'id-slug grezzo. L'id resta come tooltip per chi sviluppa. */}
         <span
           className="shrink-0 text-[10px] font-mono font-bold px-2 py-1 rounded self-start"
           style={{ background: color + "1f", color }}
+          title={ep.id}
         >
-          {ep.id}
+          {(() => {
+            const d = (ep.data_evento || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+            return d ? `${d[3]}.${d[2]}.${d[1].slice(2)}` : ep.stagione;
+          })()}
         </span>
 
         {/* Title block — titolo sempre leggibile, niente troncatura aggressiva */}
