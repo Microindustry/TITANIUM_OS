@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -127,3 +128,17 @@ Intanto, il sistema si è ricordato di sé.
 | **Prossimo step** | Saldare 4 gusset 200mm — colonna Z sinistra |
 | **Target capannone** | 15 luglio 2030 |
 | **Tag narrativo** | infrastruttura · resilienza · auto-avvio · logging |
+
+## FATTI (per il RAG)
+
+- **FATTO:** GENESIS aveva 342 chiamate `print()` sparse in decine di file Python prima della migrazione al sistema di logging strutturato.
+
+- **DECISIONE:** Creato `CORE/log.py` (40 righe) come logger centralizzato con `RotatingFileHandler` da 5MB, 3 file di rotazione, output in `DATA/logs/`, e `StreamHandler` condizionale — agganciato solo se `sys.stdout` non è `None` (guard per processi `DETACHED_PROCESS` su Windows). **LOGICA:** I processi avviati senza finestra non hanno stdout; i `print()` in quel contesto vengono persi silenziosamente.
+
+- **FATTO:** In un giorno migrati 34 file (tra cui `watchdog.py`, `api_server.py`, story agent, updater profilo GitHub). Dopo la migrazione le chiamate `print()` residue sono 131 su 342 originali (211 convertite).
+
+- **FATTO:** `START_LOGIN.bat v1.2` si esegue all'avvio della sessione utente Windows e avvia in sequenza: Watchdog da `CORE/`, Dashboard, rebuild RAG (incrementale, solo delta), n8n, Windows Terminal. Scrive `RIAVVIO_SESSIONE.txt` sul desktop con i metadati della sessione precedente.
+
+- **DECISIONE:** L'endpoint `/api/restart` (POST, Flask) avvia un thread con delay di 0.5 secondi prima di chiamare `os._exit(0)`. **LOGICA:** Il delay garantisce che la risposta HTTP torni al client prima che il processo termini, evitando chiusura brusca della connessione.
+
+- **FATTO:** Il RAG di GENESIS al momento dell'episodio contiene 150 chunk estratti da 8 sessioni caricate. La colonna Z della V32 (Config G) è al 65% — mancano 4 gusset da 200mm da saldare.

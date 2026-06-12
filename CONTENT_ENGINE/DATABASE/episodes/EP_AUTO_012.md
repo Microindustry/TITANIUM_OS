@@ -17,6 +17,7 @@ generated: "2026-03-22T18:31:12.518594"
 - [Episodio 14  I Componenti Ci Sono](#episodio-14-i-componenti-ci-sono)
   - [Il Bivio](#il-bivio)
   - [Connessione al Sistema](#connessione-al-sistema)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -81,3 +82,17 @@ Questa foto del 13 febbraio è il punto di non ritorno.
 ---
 
 I componenti ci sono. Ora si saldano.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il progetto V32 (fresatrice CNC epoxy-granite) risulta al **65% di completamento** al 13 febbraio 2026, con i componenti fisici ricevuti e documentati fotograficamente.
+
+- **FATTO:** I componenti V32 ricevuti includono guide lineari **THK SSR20**, cuscinetti **SKF** e profili estrusi per telaio; la guida Z misura **600mm** in acciaio temprato rettificato.
+
+- **PRECISIONE:** La tolleranza di progetto della V32 è **±0.019mm**, calcolata su una struttura di **178kg**; il punto critico attuale è la gusset sinistra (Config G), nodo portale X / colonna verticale sinistra, con tubo **60x60x4mm S235**.
+
+- **DECISIONE:** Il mandrino **2.2kW ER20** è identificato come blocker principale per la fase di test, ma non blocca l'assemblaggio del telaio; la stima per la Config G è **3-4 ore** di lavoro.
+
+- **FATTO:** La dipendenza progettuale è dichiarata in serie: **MIMS** (connettori modulari, al 30%) attende la V32 per taglio piastre a tolleranza; **VULCAN** (pressa 20t) attende i test polimeri; i test polimeri attendono la V32 funzionante.
+
+- **FATTO:** Lo stato operativo di V32 è tracciato nel file `BRAIN/STATE.json` con parametro `completamento_v32: 65%` e `prossimo_step: "Config G — gusset sinistra"`; il dato viene letto da EVA (AI WhatsApp) per aggiornamenti di stato in tempo reale.

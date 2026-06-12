@@ -9,6 +9,7 @@
   - [CHIUSURA  SESSIONE 8, GIT DIRTY, 150 CHUNK](#chiusura-sessione-8-git-dirty-150-chunk)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -138,3 +139,17 @@ Lui può fare il lavoro di costruire.
 | **Tono** | Tecnico-personale, nessuna retorica |
 | **Tag** | `#GENESIS` `#DASHBOARD` `#RAG` `#MCP` `#ASSOLUTO` `#V32` |
 | **Prossimo episodio** | Config G — I gusset da 200mm, il ferro vero |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il RAG di GENESIS ha raggiunto **150 chunk** alla sessione **#8** (27 maggio 2026). **LOGICA:** I chunk RAG sono usati come misura quantitativa della conoscenza accumulata dal sistema su sé stesso.
+
+- **DECISIONE:** La massa del V32 è fissata a **178 kg**, corpo unico, con eliminazione di ogni formulazione ambigua precedente ("distinzione molle"). **LOGICA:** Ogni ambiguità in una spec tecnica genera overhead decisionale futuro; il dato univoco evita rilavorazioni durante operazioni fisiche (es. saldatura notturna).
+
+- **FATTO:** `titanium_mcp_server.py` espone **5 tools** strutturati che rendono accessibili a Claude: stato corrente, sessioni, chunk RAG e brief giornaliero. **LOGICA:** Standardizzare l'interfaccia AI→sistema tramite MCP per continuità cognitiva tra sessioni.
+
+- **DECISIONE:** Dashboard v5.1 sostituisce le chiamate hardcoded a `http://localhost:5001` con **path relativi**. **LOGICA:** Rendere il sistema portabile e indipendente dall'ambiente di esecuzione (laptop, server locale, futuro hardware permanente).
+
+- **FATTO:** La dashboard v5.2 introduce `PillarProgressStrip`: **4 barre di avanzamento** sotto l'header per i pilastri V32, GENESIS, IDENTITY, MIMS. **LOGICA:** Visualizzazione percentuale concreta dello stato di ogni pilastro, senza stime qualitative.
+
+- **FATTO:** Il gusset della colonna Z sinistra del V32 ha dimensione **200 mm** (nota tecnica manoscritta presente in sessione #8). **LOGICA:** Dato strutturale acquisito nel RAG come parte della documentazione fisica della macchina.

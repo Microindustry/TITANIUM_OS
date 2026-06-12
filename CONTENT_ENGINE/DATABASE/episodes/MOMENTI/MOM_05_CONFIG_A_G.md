@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [MOMENTO  Config AG](#momento-config-ag)
+    - [Sette configurazioni per trovare quella giusta](#sette-configurazioni-per-trovare-quella-giusta)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # MOMENTO — Config A→G
 ### "Sette configurazioni per trovare quella giusta"
 
@@ -33,3 +41,17 @@ Questo è il processo reale dell'ingegneria: non trovare la soluzione perfetta a
 
 ---
 *Stagione: S1 — Il Presente | Posizione: tra S1_02 (Il Reattore) e S1_03 (Il Paradosso)*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Config A (piano originale V32) prevedeva guide Z sulle colonne, portale fisso e piastra porta-mandrino standard; scartata perché le colonne 40x40 non garantivano rigidità sufficiente per tolleranza IT6 con carico dinamico.
+
+- **FATTO:** Config C fu scartata perché non rispettava il vincolo minimo di altezza asse Z (≥300mm per le guide Z) con la geometria di portale adottata.
+
+- **FATTO:** Config D introdusse colonne 60x60 e rappresentò il primo commit fisico verificato nel processo iterativo A→G.
+
+- **FATTO:** Config E introdusse un sistema di isolamento vibrazioni passivo a molle; funzionante ma scartato perché aggiungeva un grado di libertà con variabili imprevedibili nel lungo periodo.
+
+- **DECISIONE:** Config G (configurazione attuale V32) abbandona le molle e adotta corpo unico con gusset 200mm su colonne Z+U, diagonali, tiranti M10 e fill in Epoxy Granite. **LOGICA:** eliminare le variabili introdotte dalle molle massimizzando rigidità e smorzamento strutturale.
+
+- **PRECISIONE:** Config G raggiunge rigidità asse Z pari a 772 volte la baseline e smorzamento δ=0.03–0.06. Intervallo temporale totale iterazioni A→F: gennaio–maggio 2026; Config G completata in due settimane.

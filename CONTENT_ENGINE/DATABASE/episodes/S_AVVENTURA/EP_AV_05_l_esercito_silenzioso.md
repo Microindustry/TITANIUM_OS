@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, agenti, automazione, notturne
   - [ATTO II  OGNUNO UNA COSA SOLA](#atto-ii-ognuno-una-cosa-sola)
   - [ATTO III  CHI GLI HA DETTO DI MUOVERSI](#atto-iii-chi-gli-ha-detto-di-muoversi)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -162,3 +163,15 @@ sempre. Quella è l'idea di un agente — e di tutto quello che, di notte, lavor
 **3 strati:** bambino = piccoli aiutanti che lavorano di notte mentre dormi · curioso = "questi si chiamano Agenti; uno fa un compito solo (responsabilità singola)" · esperto/papà = gli agenti notturni reali (research/story/audit), grounding sul RAG, schedulati da un calendario (la clessidra).
 **Aggancio reale:** MOM_03 "L'Esercito" · gli agenti notturni (night_research/story_agent/night_audit) · la regola 2 (se lo fai ogni giorno, diventa un nodo).
 **Open loop → Regione 7 (l'Orchestrazione):** quando gli agenti sono troppi, chi decide chi fa cosa e quando — il Direttore.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_05 introduce il concetto di **agenti notturni** nel progetto TITANIUM_OS: entità autonome attive mentre l'utente (Matteo) non opera — un agente di research, uno di story (scrittura episodi), uno di audit del sistema.
+
+- **PRINCIPIO:** **"Un agente = un compito"** è la regola progettuale esplicita: un agente con responsabilità singola è affidabile; un agente a cui si assegnano più compiti li esegue male. Questo corrisponde al principio di responsabilità singola applicato all'architettura agenti di GENESIS.
+
+- **DECISIONE:** Gli agenti sono **orchestrati da schedulazione fissa** (metafora: clessidra con ordine prestabilito), non da istruzioni manuali ripetute ogni ciclo. L'ordine di attivazione viene definito una volta sola e poi si auto-ripete in loop notturno.
+
+- **FATTO:** Un agente è considerato affidabile nel sistema TITANIUM_OS solo se **ancorato a fonti reali** (grounding tramite RAG), non se genera output autonomamente senza verifica. Questo collega EP_AV_05 al concetto di RAG introdotto in EP_AV_03.
+
+- **OBIETTIVO:** L'episodio anticipa esplicitamente un problema aperto: **la governance di molti agenti** (coordinamento a scala — "chi decide chi fa cosa quando sono cento o mille") è identificata come la "stanza non ancora esplorata", cioè una fase futura del progetto non ancora definita.

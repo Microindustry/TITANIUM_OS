@@ -8,6 +8,7 @@
   - [ATTO II  Il momento in cui il sistema ha imparato a raccontarsi](#atto-ii-il-momento-in-cui-il-sistema-ha-imparato-a-raccontarsi)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -87,3 +88,17 @@ L'ecosistema v1.3 di GENESIS ha adesso gli occhi aperti anche di notte.
 *"Un sistema che non sa raccontarsi non può crescere. Adesso il mio sa farlo. Alle due e sette, senza che io debba essere sveglio."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Story Agent v1.0 è entrato in produzione reale il 29 maggio 2026, con primo episodio generato automaticamente confermato.
+
+- **DECISIONE:** Il cron job di Story Agent è schedulato alle 02:07. **LOGICA:** Orario notturno di consolidamento, fuori dalle sessioni di lavoro attive.
+
+- **DECISIONE:** Lo stop hook (micro-log automatico a ogni chiusura sessione) è stato identificato come componente critica del sistema, non il cron. **LOGICA:** Senza stop hook i dati in ingresso al cron sarebbero incompleti, rendendo l'agente peggiore di nessun agente.
+
+- **FATTO:** Al momento del milestone EP_AUTO_29, GENESIS risulta al 78% di completamento e Vita Natura (EVA) al 40%.
+
+- **FATTO:** V32 è alla Config G (rinforzi strutturali), con avanzamento dichiarato al 65% di assemblaggio.
+
+- **FATTO:** MIMS è fermo al 30% in attesa che la catena V32-VULCAN raggiunga maturità sufficiente per riceverlo.

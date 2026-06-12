@@ -8,6 +8,7 @@
   - [ATTO II  Quindici file, una memoria](#atto-ii-quindici-file-una-memoria)
   - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -81,3 +82,15 @@ Il letto c'è. Adesso si costruisce sopra.
 ## CHIUSURA
 
 *"Non stavo insegnando al sistema a ricordare.
+
+## FATTI (per il RAG)
+
+- **MILESTONE:** Il 10 marzo 2026 (ore 23:14) viene completata la popolazione di BRAIN/KNOWLEDGE con 15 file strutturati, segnando l'attivazione di ASSOLUTO V6 come layer cognitivo di TITANIUM_OS. **LOGICA:** Prima di questo momento ogni sessione di lavoro e ogni agente GENESIS partiva senza contesto persistente.
+
+- **FATTO:** ASSOLUTO V6 non è un agente né una dashboard, ma uno strato di memoria dichiarativa: intercetta ogni query e consulta BRAIN/KNOWLEDGE prima di rispondere, restituendo contesto su stato dei moduli, decisioni prese, priorità attive e profilo utente.
+
+- **FATTO:** I 15 file di BRAIN/KNOWLEDGE includono un file di stato dei progetti con percentuali reali e una "MatteoSection" — descrizione di Matteo Benenati in terza persona, pensata per essere letta dal sistema (identità, blocchi cognitivi, motivazioni).
+
+- **STATO:** Al momento della milestone, MIMS è fermo al 30% per dipendenza dalla catena V32; V32 è al 65% con Config G (rinforzi telaio) in corso; EVA è in fase pilota su Vita Natura; IDENTITY layer è a metà costruzione.
+
+- **DECISIONE:** La prossima milestone prioritaria è Config G completa sulla V32. **LOGICA:** VULCAN e MIMS hanno dipendenze fisiche dalla V32 — la fresatura dei connettori modulari non è virtualizzabile, quindi il loro avanzamento è bloccato fino al completamento del telaio.

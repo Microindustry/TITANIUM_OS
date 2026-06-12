@@ -8,6 +8,7 @@
   - [ATTO II  La Vista METODO: chi, cosa, come](#atto-ii-la-vista-metodo-chi-cosa-come)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,17 @@ Per MIMS c'è ancora la pressa. Finché VULCAN non è operativa, quei connettori
 *Un sistema che non sai spiegare in trenta secondi a qualcuno che non lo ha mai visto — è un sistema che esiste solo nella tua testa. E la tua testa non è un server affidabile.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Al 03/06/2026, i moduli di TITANIUM_OS hanno i seguenti livelli di completamento: V32 (CNC) al 65%, MIMS (connettori modulari) al 30%, GENESIS (automazione ESP32/webhook) al 70%, EVA/VITA_NATURA al 40%, IDENTITY al 50%.
+
+- **FATTO:** EVA gestisce prenotazioni e lettura mail per il centro estetico Vita Natura; i livelli dall'11 al 20 (inventory alert, generazione PDF ricevute, widget web, autonomia totale) risultano non ancora completati al momento dell'episodio.
+
+- **OBIETTIVO:** EVA raggiungerà autonomia operativa all'80% al livello 20 dell'organismo VITA_NATURA.
+
+- **DECISIONE:** Il protocollo LEX_DIGITALIS impone che ogni agente AI compili la propria funzione e richieda conferma esplicita ("Socio, funzione compilata. Procedo con il loop principale?") prima di procedere — separazione tra esecuzione e autorizzazione umana.
+
+- **FATTO:** L'infrastruttura di automazione fisica GENESIS è basata su rete di ESP32 collegati tramite webhook a n8n come layer di orchestrazione.
+
+- **FATTO:** La Vista METODO sul sito nasce il 03/06/2026 come risposta alle domande di un dev Flutter esterno, che ha evidenziato l'assenza di una documentazione leggibile dall'esterno in meno di cinque minuti sulla struttura di TITANIUM_OS.

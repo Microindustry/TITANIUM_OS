@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -136,3 +137,15 @@ EP_AV_03 non esiste ancora.
 | **Angolo narrativo** | Il binario AVVENTURA — come un sistema cognitivo genera un mondo per spiegarsi |
 | **Target capannone** | 15 luglio 2030 |
 | **Tag** | `#genesis` `#avventura` `#nina` `#canone` `#automazione` `#sessione34` |
+
+## FATTI (per il RAG)
+
+- **FATTO:** La Mappa dell'Avventura è stata spostata dalla sezione CONTROLLO alla sezione STORIE, con sotto-voci proprie e episodi committati: EP_AV_00, EP_AV_01, EP_AV_02. **LOGICA:** La sezione CONTROLLO (grafici, API) era ritenuta il contesto sbagliato per contenere materiale narrativo diventato hub navigabile autonomo.
+
+- **DECISIONE:** Le Pietre ⟡ sono state riassegnate esclusivamente alle sette tappe dell'arco narrativo di Nina (⟡1–⟡7); le forze fuori-arco usano una notazione separata. **LOGICA:** Il simbolo ⟡ si era moltiplicato per uso improprio; fix `canon+ui` ripristina il canone come accordo stabile su cui costruire episodi futuri.
+
+- **FATTO:** Il file desktop "da fare e cosa ho fatto.txt" è stato impostato come mirror automatico (Scelta B), aggiornato dal sistema a ogni chiusura di sessione tramite hook Stop di Claude, anziché gestito manualmente.
+
+- **FATTO:** Al termine della notte autonoma #34 lo STATE.json risulta aggiornato con 4 nuovi `verified` (watcher v1, UI CONTROLLO + altri due), 27 todo aperti riletti dalla sorgente, 44 commit totali di sessione.
+
+- **OBIETTIVO:** GENESIS è indicato al 70% di completamento; V32 al 65%; orizzonte capannone stimato a quattro anni.

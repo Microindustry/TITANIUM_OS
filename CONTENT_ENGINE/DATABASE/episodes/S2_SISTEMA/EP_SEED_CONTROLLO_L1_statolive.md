@@ -19,6 +19,7 @@ durata_min: 5
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -63,3 +64,13 @@ dichiarata "attiva" che non lo è. Se non posso misurarlo, non lo scrivo verde.
   *dire* una cosa e *verificarla*.
 
 > Approfondimento (LV1). Profondità libera.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Centro di Controllo di TITANIUM_OS distingue tra "stato dichiarato" e "stato live": il badge di ogni nodo è collegato a un watchdog che verifica attivamente (processo risponde? porta aperta? ultimo ciclo andato a buon fine?), non a un testo fisso scritto una volta.
+
+- **DECISIONE:** Verde su un badge = verificato in tempo reale dal watchdog. **LOGICA:** Uno stato falso è considerato peggiore di nessuno stato — fa credere che tutto funzioni e ritarda la scoperta del problema.
+
+- **PRINCIPIO:** Se uno stato non è misurabile in tempo reale, non viene scritto verde. **LOGICA:** Anti-teatro: nessun nodo viene dichiarato attivo se non è verificabile adesso.
+
+- **FATTO:** Una vista live ha individuato un conflitto tra due server nella rete di TITANIUM_OS (episodio di riferimento: EP_SEED_RETE_L1_BUGSTATO), citato come esempio concreto dell'utilità del monitoraggio in tempo reale rispetto allo stato dichiarato.

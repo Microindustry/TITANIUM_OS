@@ -8,6 +8,7 @@
   - [ATTO II  v7.0 e il momento in cui il sistema si è visto](#atto-ii-v70-e-il-momento-in-cui-il-sistema-si-è-visto)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,15 @@ Tutto si connette. Non in modo romantico — in modo tecnico. Un endpoint chiama
 ## CHIUSURA
 
 *"Non costruisci un'interfaccia perché sia bella. La costruisci perché il sistema possa finalmente di
+
+## FATTI (per il RAG)
+
+- **FATTO:** La Dashboard GENESIS v7.0 è stata completata il 29 maggio 2026 con le seguenti componenti: sidebar verticale collassabile, AgentsView con estetica glassmorphism e dot grid, endpoint API `/api/agents`.
+
+- **FATTO:** Il primo test sull'endpoint `/api/agents` ha restituito risposta in **182 millisecondi**.
+
+- **FATTO:** Al momento del rilascio della Dashboard v7.0, lo stato di avanzamento dei sottoprogetti è: GENESIS al **78%**, V32 al **65%** (Config G rinforzi telaio), MIMS oltre il **30%** bloccato in attesa del completamento V32, EVA/Vita Natura al **40%**.
+
+- **DECISIONE:** La sidebar collassabile è stata progettata come elemento architetturale (non estetico): permette di nascondere la navigazione globale durante il lavoro operativo e richiamarla per l'orientamento, replicando la logica del piano di lavorazione CNC. **LOGICA:** Coerenza tra spazio fisico (officina/fresatrice) e spazio digitale (dashboard).
+
+- **OBIETTIVO:** L'API `/api/agents` è progettata per rendere GENESIS interrogabile da sistemi esterni; i candidati all'integrazione espliciti nell'episodio sono VULCAN ed EVA.

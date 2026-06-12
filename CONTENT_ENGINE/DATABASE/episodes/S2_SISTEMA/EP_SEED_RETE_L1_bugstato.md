@@ -19,6 +19,7 @@ durata_min: 6
   - [I DUE GUASTI DI STATO](#i-due-guasti-di-stato)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -70,3 +71,13 @@ La cura non è stata toccare il codice: **restart pulito** (uccide il doppione) 
   l'errore non è sempre *nella cosa*, a volte è in *come è messa*. Candidato fonte per un'avventura di Nina.
 
 > Approfondimento (LV1). Profondità libera.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sistema RETE mostrava errori 404 e 500 sugli endpoint. La causa non era nel codice, ma nello stato runtime: due processi `api_server` attivi sulla stessa porta e un indice stale. **LOGICA:** Con due processi che condividono la stessa porta, le richieste vengono smistate in modo non deterministico tra i due; l'indice vecchio restituiva riferimenti a dati non più presenti.
+
+- **DECISIONE:** La risoluzione ha richiesto un restart pulito (per eliminare il processo duplicato) e il ricarico dell'indice aggiornato, senza modificare il codice. **LOGICA:** Il codice era corretto; il guasto risiedeva interamente nello stato del sistema in esecuzione.
+
+- **FATTO:** Dopo restart pulito + ricarico indice, gli endpoint sono passati da 404/500 a 200. **LOGICA:** Conferma che il problema era esclusivamente di stato e non di logica applicativa.
+
+- **OBIETTIVO:** Introdurre una "vista dello stato" (Centro di Controllo, EP_SEED_CONTROLLO) per rendere visibile ciò che è attivo a runtime — processi, porte, cache, indici, variabili d'ambiente. **LOGICA:** Lo stato non risiede nei file sorgente ma in cosa è acceso in un dato momento; senza uno specchio del sistema il debug di stato richiede ore.

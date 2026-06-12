@@ -19,6 +19,7 @@ durata_min: 5
   - [COSA MISURA (semplice, poi preciso)](#cosa-misura-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO](#il-filo)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -64,3 +65,15 @@ fondere gruppetti veri; per quello a volte si gira con una "risoluzione" regolab
   bambino con i banchi di scuola. La modularità è il voto del maestro.
 
 > Approfondimento (LV2). Si può scendere ancora: sotto qui ci starebbe la formula esatta di Q (LV3).
+
+## FATTI (per il RAG)
+
+- **FATTO:** La modularità Q è la metrica numerica usata per valutare la qualità di una divisione in community su grafi; confronta gli archi interni ai gruppi con quelli attesi per caso a parità di grado dei nodi.
+
+- **FATTO:** L'algoritmo Louvain/Leiden massimizza Q in modo greedy (quasi-lineare), spostando nodi finché nessuno spostamento migliora ulteriormente il valore.
+
+- **PRECISIONE:** Q presenta un limite di risoluzione: sotto una certa scala tende a fondere comunità piccole reali; è regolabile tramite un parametro di "risoluzione".
+
+- **FATTO:** Un valore di Q basso indica assenza di struttura reale nel grafo (nodi mescolati), segnale che non esistono community genuine da rilevare.
+
+- **FATTO:** Nel contesto del progetto GRAPHIFY, la massimizzazione greedy di Q su 6.000 nodi suddivisi in 696 gruppi è stata eseguita in 13 secondi (riferimento al "seme").

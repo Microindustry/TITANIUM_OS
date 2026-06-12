@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -158,3 +159,17 @@ La domanda è: quante altre view hai che non hai mai verificato davvero?
 | **Co-author AI** | Claude Opus 4.8 |
 | **Tag narrativi** | `audit` `resilienza` `snapshot` `local-ai` `verità-vs-cosmesi` |
 | **Prossima ancora** | Sessione #32 — P1a stato reale live, P2 AVVENTURA, Ollama warm |
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'audit della sessione #31 ha rilevato che TI_NightPush usciva con codice **EXIT 255** a causa di `update_github_profile.py` che chiamava la GitHub CLI (`gh`) con un path non trovato. Fix manuale ha prodotto **EXIT=0**.
+
+- **FATTO:** watchdog.py è classificato come **loop persistente** (AtLogon, non termina mai), non come one-shot schedulato; il campo LastRun di Task Scheduler non si aggiorna per i loop persistenti, rendendo necessaria una distinzione esplicita nella vista AUTOMAZ.
+
+- **DECISIONE:** La sessione #31 è stata chiusa con uno snapshot unico su `main` contenente tre punti in volo simultanei: **P4a** (chat RAG con ChromaDB + Flask), **P4b** (Ollama/Qwen locale, `model_ready: true`), **P1b** (cartella clinica notturna automatica). **LOGICA:** Garantire ripresa coerente su nuovo PC fisico alla sessione #32.
+
+- **FATTO:** P4b (leva locale) usa **Ollama con Qwen** su hardware Matteo: nessuna API key, nessuna latenza di rete, nessun costo per token.
+
+- **OBIETTIVO:** Il commit di riavvio sessione #32 è marcato esplicitamente come **"ancora di ripresa #31→#32"** per consentire continuità di stato su cambio fisico di macchina.
+
+- **FATTO:** Nella sessione #32 è stato avviato il binario narrativo **P2-AVVENTURA**, con bibbia di mondo e episodio pilota *"La Bambina e la Giuntura"* (EP_AV_00), generato dallo `story_agent` come dimostrazione di capacità cognitiva di GENESIS.

@@ -6,6 +6,7 @@
   - [STORICO DISALLINEAMENTO DISCO  DASHBOARD (pre-recupero)](#storico-disallineamento-disco-dashboard-pre-recupero)
     - [Episodi NARRATIVI presenti su disco ma NON in dashboard (priorità recupero):](#episodi-narrativi-presenti-su-disco-ma-non-in-dashboard-priorità-recupero)
     - [Azione di recupero](#azione-di-recupero)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -81,3 +82,17 @@ Procedura: estrarre frontmatter (id, title, sottotitolo, data, tags) + corpo da 
 .md narrativo e aggiungere le entry nelle rispettive stagioni di `storieData.ts`.
 Da automatizzare in `milestone_to_episode.py` (o nuovo `sync_storie.py`) per non
 rifare il lavoro a mano ogni volta.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Al 31/05/2026 la dashboard `storieData.ts` conteneva 64 episodi prima del recupero e 75 episodi dopo, con 11 episodi narrativi reimportati tramite `CONTENT_ENGINE/scripts/sync_storie.py`.
+
+- **FATTO:** Il disallineamento disco ↔ dashboard pre-recupero era: S2 aveva 17 .md su disco ma solo 2 in dashboard (gap −15); MOMENTI aveva 5 .md su disco e 0 in dashboard (gap −5); AUTO aveva 36 .md su disco ma 45 entry in dashboard (+9).
+
+- **DECISIONE:** Gli 11 episodi recuperati sono stati assegnati a due stagioni: 6 episodi S2 narrativi → stagione **ST**; 5 episodi MOMENTI → stagione **MOM** (nuova). **LOGICA:** Separazione tra contenuti narrativi stagionali e momenti chiave isolati.
+
+- **DECISIONE:** Il campo `id` degli episodi reimportati è impostato come stem completo del file .md. **LOGICA:** Evitare collisioni con le entry già esistenti nella dashboard.
+
+- **FATTO:** Esistono due generatori distinti: `story_agent.py` v1.0 (da git commit + sessioni + milestone, con `reel_hook`, gira come Stop hook + cron notturno) e `milestone_to_episode.py` v1.0 (legacy, solo da `STATE.milestones.verified`, single-pass, senza `reel_hook`).
+
+- **FATTO:** Il blocco AUTO in `storieData.ts` è delimitato dai marker `// AUTO_GENERATED_START` / `// AUTO_GENERATED_END`; le stagioni manuali sono gestite manualmente (hand-craft).

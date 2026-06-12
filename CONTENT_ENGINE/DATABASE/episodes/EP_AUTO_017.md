@@ -19,6 +19,7 @@ generated: "2026-05-27T11:31:44.166280"
   - [Il Bivio](#il-bivio)
   - [Connessione al Sistema](#connessione-al-sistema)
   - [LUltima Riga](#lultima-riga)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -86,3 +87,17 @@ La migrazione si innesta ovunque, contemporaneamente.
 ## L'Ultima Riga
 
 Il sapere scritto sopravvive alla sessione.
+
+## FATTI (per il RAG)
+
+- **FATTO:** La migrazione SINAPSI→MENTE ha processato **41 file `.md`** con output `0 errors, 6 warnings` (3 link rotti, 2 tag non mappati, 1 file con naming ambiguo). Comando: `python migrate_sinapsi.py --source ./SINAPSI --target ./MENTE --validate`, eseguito **27 maggio 2026 ore 22:19**.
+
+- **DECISIONE:** Ogni documento in `MENTE/` ha metadati obbligatori (`created`, `updated`, `project_tag`, `status`). Gli stati ammessi sono **`draft` / `active` / `frozen`**. Nessun file senza tag. **LOGICA:** Rendere il sapere navigabile e visibile — con ADHD, ciò che non è strutturato non esiste operativamente.
+
+- **FATTO:** L'integrazione TITANIUM_OS legge `MENTE/STATE.json` come source of truth tramite **webhook locale su filesystem watch** (`watchdog` + `FastAPI`), implementato in circa **40 righe di Python**.
+
+- **FATTO:** La documentazione MIMS (connettori modulari) era conservata solo in memoria. La trascrizione in `MENTE/MIMS/connettori_spec_v1.md` ha reso visibile e reale il **30% di completamento** del progetto.
+
+- **FATTO:** Le specifiche VULCAN (pressa 20t) erano su carta fisica. Sono state trascritte in `MENTE/VULCAN/ricette/` con i parametri: **temperatura, tempo ciclo, pressione di iniezione** — in forma confrontabile.
+
+- **OBIETTIVO:** Il mandrino **2.2kW ER20** per V32 è da ordinare (**blocker attivo** al 27 maggio 2026). La procedura di montaggio è già scritta in `MENTE/V32/` prima dell'arrivo del componente.

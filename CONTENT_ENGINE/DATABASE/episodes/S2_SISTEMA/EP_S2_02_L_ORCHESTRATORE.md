@@ -7,6 +7,7 @@
   - [ATTO II  STOP HOOKS](#atto-ii-stop-hooks)
   - [ATTO III  RESEARCH AGENT v1.1](#atto-iii-research-agent-v11)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -115,3 +116,17 @@ Nel caso del contesto di sessione: il costo del manuale era dieci minuti per ses
 | Arco | Dal manuale all'automatico — la leva dell'intenzione |
 | Tecnologie | ThreadPoolExecutor, subprocess, stop hooks, API multi-sorgente |
 | Connessione S2 | Il sistema che coordina sé stesso — anticipa EP_S2_05 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** `stop_hooks.py` è un orchestratore parallelo che si esegue automaticamente alla chiusura di ogni sessione Claude Code, lanciando 3 hook su ThreadPoolExecutor: `generate_restart_prompt.py` (aggiorna RIAVVIO_SESSIONE.txt), `generate_functions_list.py` (aggiorna FUNZIONI_SISTEMA.txt), e un RAG incremental rebuild in background (detached). **LOGICA:** Automatizza 4 operazioni manuali (~10 min) che venivano spesso saltate per stanchezza o fretta, evitando perdita cumulativa di contesto.
+
+- **PRECISIONE:** I due hook sincroni di stop_hooks.py completano in **4.7 secondi**. Il RAG rebuild parte in background detached e non blocca gli altri processi. Timeout impostato a **45 secondi** per processo.
+
+- **DECISIONE:** Il RAG rebuild viene avviato solo se la cartella MENTE/ è stata modificata negli **ultimi 120 minuti**. **LOGICA:** Evita rebuild inutili a ogni sessione, limitandolo ai casi in cui la knowledge base è stata effettivamente aggiornata.
+
+- **FATTO:** Research Agent v1.1 interroga **13 sorgenti in parallelo**: arXiv, OpenAlex, Semantic Scholar, BASE (Bielefeld), POLITesi, CNKI, Unpaywall, GitHub, DOAJ, CORE, EurLex, CrossRef. I risultati vengono aggregati per rilevanza, deduplicati e opzionalmente indicizzati nel RAG di GENESIS.
+
+- **DECISIONE:** Il break-even del sistema stop_hooks è stato calcolato in **24 sessioni** (~3 settimane al ritmo attuale). **LOGICA:** Costo manuale = 10 min/sessione spesso saltati; costo di costruzione del sistema = una sessione da 4 ore.
+
+- **FATTO:** Commit di riferimento per entrambe le automazioni (stop_hooks + Research Agent v1.1): **8e33e09**, datato 28-29 maggio 2026.

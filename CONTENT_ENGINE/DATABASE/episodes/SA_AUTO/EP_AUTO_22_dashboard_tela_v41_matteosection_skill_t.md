@@ -9,6 +9,7 @@
   - [ATTO II  Tela v4.1, MatteoSection](#atto-ii-tela-v41-matteosection)
   - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -93,3 +94,15 @@ Quella dashboard adesso sa chi sono.
 *"Costruire una macchina è semplice: sai cosa deve fare. Costruire il sistema che la governa è più difficile: devi decidere cosa vuoi tu."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** La MatteoSection di Tela v4.1 era ferma al 45% prima del 28 maggio 2026, quando è stata portata a uno stato funzionale.
+
+- **FATTO:** Al momento dell'episodio, V32 è al 65% con i rinforzi della Config G, GENESIS è a quasi l'80%, MIMS è in attesa di completamento della catena.
+
+- **DECISIONE:** La MatteoSection è strutturata in quattro blocchi: skill tree (con CNC al centro e rami verso programmazione, automazione, ML, gestione processi), interessi, principi operativi, visione 2030. **LOGICA:** Fornire a GENESIS un contesto identitario solido per calibrare le risposte degli agenti senza ambiguità.
+
+- **OBIETTIVO:** Entro il 2030 — V32 completata e operativa, MIMS in produzione, GENESIS in autonomia supervisionata, VITA NATURA/EVA come modello replicabile.
+
+- **FATTO:** GENESIS è già integrato con lo Story Agent al momento della milestone (28 maggio 2026).

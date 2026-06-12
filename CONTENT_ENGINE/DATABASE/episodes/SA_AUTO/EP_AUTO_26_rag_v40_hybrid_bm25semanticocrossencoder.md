@@ -8,6 +8,7 @@
   - [ATTO II  Ibrido, reranking, e la memoria che cresce](#atto-ii-ibrido-reranking-e-la-memoria-che-cresce)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -93,3 +94,15 @@ Il sistema sta diventando una memoria esterna che funziona davvero. Non un archi
 *La differenza tra un archivio e una memoria è che la memoria sa cosa cercare quando non glielo dici tu.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **MILESTONE:** RAG v4.0 chiuso e testato il **28 maggio 2026** come componente del progetto GENESIS (stack AI di TITANIUM_OS).
+
+- **FATTO:** L'architettura RAG v4.0 è **ibrida BM25 + semantico**: BM25 gestisce la ricerca per parole chiave/termini esatti, la ricerca semantica gestisce la prossimità concettuale; i due sistemi operano in parallelo prima del reranking.
+
+- **DECISIONE:** Aggiunto un **CrossEncoder** come fase di reranking post-retrieval. **Logica:** valuta i documenti candidati in coppia con la domanda specifica (non in isolamento), producendo una lista ordinata per rilevanza reale anziché per prossimità vettoriale astratta; computazionalmente più pesante ma più preciso.
+
+- **DECISIONE:** Il sistema adotta un'indicizzazione **incrementale**. **Logica:** i nuovi documenti (note, log, documenti tecnici) vengono integrati senza ricostruzione completa dell'indice, rendendo il contenuto disponibile immediatamente dopo l'aggiunta.
+
+- **FATTO:** La base di conoscenza di GENESIS contiene parametri di lavoro della V32, disegni concettuali dei MIMS, procedure di VULCAN, log di EVA e note su Vita Natura; con RAG v4.0 questa base è interrogabile in tempo reale dagli agenti (Story Agent, report di avanzamento, pilot EVA).

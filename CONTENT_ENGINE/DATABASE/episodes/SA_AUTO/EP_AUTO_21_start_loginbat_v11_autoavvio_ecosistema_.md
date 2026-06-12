@@ -8,6 +8,7 @@
   - [ATTO II  START_LOGIN.bat v1.1](#atto-ii-startloginbat-v11)
   - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -93,3 +94,17 @@ L'ecosistema adesso mi aspetta al boot. Non è una metafora. È letterale.
 *Un sistema ben costruito non ti chiede di essere pronto. Ti prepara lui.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** `START_LOGIN.bat v1.1` è stato messo in produzione il 28 maggio 2026 e si avvia automaticamente al login di Windows, aprendo Windows Terminal con il profilo Claude-TI (contesto TITANIUM_OS precaricato).
+
+- **DECISIONE:** La v1.1 ha introdotto un timeout di avvio rispetto alla v1.0 per risolvere un problema di timing (crash silenzioso del terminale quando si apriva prima della completa inizializzazione del desktop). **LOGICA:** Due righe aggiuntive hanno reso il processo stabile.
+
+- **FATTO:** Al momento della milestone (28 mag 2026), GENESIS risulta al 78% di completamento con dashboard v7.0 + Story Agent attivi e RAG alla quarta versione.
+
+- **FATTO:** V32 risulta al 65% di completamento, in Config G, con rinforzi strutturali quasi completati.
+
+- **FATTO:** La catena di dipendenze attiva è: MIMS → VULCAN (VULCAN aspetta MIMS, MIMS aspetta la catena).
+
+- **OBIETTIVO:** Il principio progettuale trasversale a TITANIUM_OS (V32, GENESIS, EVA, START_LOGIN) è la riduzione dell'attrito operativo, non per comodità ma per aumentare la frequenza d'uso e quindi la velocità di crescita del sistema.

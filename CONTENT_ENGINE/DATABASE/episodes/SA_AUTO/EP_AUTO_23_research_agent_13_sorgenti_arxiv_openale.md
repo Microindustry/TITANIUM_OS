@@ -9,6 +9,7 @@
   - [ATTO II  Il giorno delle tredici sorgenti](#atto-ii-il-giorno-delle-tredici-sorgenti)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -90,3 +91,17 @@ E poi c'è qualcosa di più sottile. Il Research Agent alimenta il RAG, che alim
 *"Non cerco più — chiedo. E la differenza tra le due cose è tutto il tempo che ho per costruire."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Research Agent è stato attivato il 28 maggio 2026 con 13 sorgenti integrate: arXiv, OpenAlex, Semantic Scholar, BASE, POLITesi, Baidu Scholar, CNKI, GitHub, Unpaywall, più alcune specializzate.
+
+- **FATTO:** L'agente interroga le sorgenti in parallelo, deduplica i risultati e costruisce una sintesi strutturata che confluisce direttamente nel RAG di GENESIS; non è un aggregatore di link.
+
+- **FATTO:** La prima query operativa riguardava il damping nelle strutture CNC fresate in acciaio, con focus su una finestra di frequenza problematica intorno ai 140 Hz sul telaio della V32 in configurazione G. L'agente ha restituito 17 paper rilevanti in meno di 4 minuti.
+
+- **FATTO:** Al momento dell'attivazione del Research Agent, l'ecosistema GENESIS era all'78% con dashboard v7.0, Story Agent e RAG v4 già operativi.
+
+- **DECISIONE:** Per il progetto MIMS (connettori modulari) è stata eseguita una query su sistemi di accoppiamento rapido in ambienti vibranti; l'avanzamento del progetto rimane bloccato in attesa della catena V32-VULCAN. **LOGICA:** Il Research Agent viene usato per preparare il design in anticipo rispetto allo sblocco dei blocchi a monte.
+
+- **FATTO:** La V32 (CNC in configurazione G) risultava ai rinforzi strutturali al 65% di avanzamento al momento della milestone EP_AUTO_23.

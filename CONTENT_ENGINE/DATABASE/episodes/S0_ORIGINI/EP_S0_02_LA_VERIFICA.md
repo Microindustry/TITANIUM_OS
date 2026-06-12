@@ -8,6 +8,7 @@
   - [ATTO III  IL VERDETTO DEI TRE ASSI](#atto-iii-il-verdetto-dei-tre-assi)
   - [ATTO IV  LA NOTA A PIÈ DI PAGINA](#atto-iv-la-nota-a-piè-di-pagina)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -177,3 +178,15 @@ Il calibro misura il metallo. La frase misura le decisioni.
 - *"Lex Physica / Mercatoria / Aesthetica" → in EP_05 il verdetto finale usa la stessa struttura*
 - *"Non costruiamo prodotti. Costruiamo libertà." → frame di EP_00 e EP_05*
 - *"La precisione della V32 dipende dalla tua lucidità" → ADHD come parametro di sistema*
+
+## FATTI (per il RAG)
+
+- **FATTO:** La sezione del sandwich strutturale XY della V32 misurata il 13 Febbraio 2026 con calibro digitale è **49.48 mm**. **LOGICA:** La misura corrisponde al progetto (guida lineare + profilo alluminio 45x45 + piastra base 15mm + profilo copri-viti 50x10mm, totale ~49.5mm), validando la coerenza tra calcolo e costruzione fisica.
+
+- **FATTO:** Parametri dinamici del sistema di isolamento V32: massa **178 kg**, frequenza propria **f₀ = 3.83 Hz** con **4 molle ISO verdi**, isolamento **>99.9% @400Hz**, deflessione Z Config G **0.0006mm @100N** (772× più rigido della baseline), RSS totale **±0.019mm** (classe IT6-IT7). **LOGICA:** Questi valori costituiscono il superamento della verifica LEX PHYSICA.
+
+- **FATTO:** Analisi economica al 13 Febbraio 2026: asset recuperato **€9.499 (81%)**, investimento aggiuntivo **€2.250**, asset totale **€11.749**, ROI **322%**, BEP **61 ore (1.4 mesi)**. **LOGICA:** Confronto vs Haas: 15.5× meno costoso a parità di classe prestazionale.
+
+- **FATTO:** Il framework di valutazione adottato per V32 è strutturato su tre assi formali denominati **LEX PHYSICA** (funzionamento fisico), **LEX MERCATORIA** (convenienza economica), **LEX AESTHETICA** (valore narrativo/estetico). **LOGICA:** Formalizzato nella V3.0 come protocollo decisionale esplicito, applicato a ogni decisione progettuale del sistema TITANIUM_OS.
+
+- **FATTO:** Componenti hardware verificati e presenti al 13 Febbraio 2026 includono: **PLC Siemens S7-314C + PS307**, **HMI Siemens TP900 Comfort 9" (€2.800)**, **sensori IFM VSE150**, **servo DELTA 400W** (montato su asse X), **9 piastre acciaio

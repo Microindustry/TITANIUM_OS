@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [Metadati Episodio](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -171,3 +172,17 @@ ma almeno ora so dove accendere la luce.
 | **Target** | Capannone — 15 luglio 2030 |
 | **Tono** | Tecnico-contemplativo, notturno |
 | **Commit principale** | `night_audit` + `story_agent` — 2026-06-08 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il grafo di dipendenze generato da Graphify sul repository GENESIS conta **5.966 nodi**, prodotto localmente (zero cloud), interrogabile via skill `/graphify` dentro GENESIS stesso.
+
+- **FATTO:** Nella sessione #34 del 8 giugno 2026 Graphify è entrato in produzione con query di verifica superata: il sistema risponde correttamente alla domanda "Cosa dipende da questo file?".
+
+- **DECISIONE:** Il file **CLAUDE.md** è stato portato alla versione **v4.1.0** (quarta architettura del documento). **LOGICA:** Le versioni precedenti (1.x–3.x) contenevano ambiguità che generavano comportamenti inconsistenti negli agenti; la v4.1.0 stabilisce il "contratto cognitivo" stabile per GENESIS e gli agenti AI.
+
+- **FATTO:** Lo stato di avanzamento registrato dal `night_audit` dell'8 giugno 2026: **GENESIS 70%**, **V32 65%**, CLAUDE.md v4.1.0 committato, AI News Watcher scaffold catturato (non in produzione completa).
+
+- **OBIETTIVO:** L'**AI News Watcher** è progettato per generare brief automatici per **30+ creator** con un sistema a tier; lo scaffold è stato committato e pushato nella sessione #34.
+
+- **FATTO:** Il `night_audit` è uno script automatico che gira circa alle **23:45** ogni notte e produce una "cartella clinica" strutturata del sistema (file toccati, stato di `story_state.json`, avanzamento milestone), distinta da un diario perché registra fatti e non intenzioni.

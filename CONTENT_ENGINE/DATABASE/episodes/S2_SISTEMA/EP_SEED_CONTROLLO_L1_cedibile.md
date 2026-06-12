@@ -19,6 +19,7 @@ durata_min: 5
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -64,3 +65,13 @@ delegabile, ereditabile**.
   Centro di Controllo fa per gli adulti quello che Nina fa per i bambini.
 
 > Approfondimento (LV1). Profondità libera.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Centro di Controllo descrive ogni nodo in linguaggio naturale (cosa fa / come si usa / se è acceso), non in gergo tecnico.
+
+- **DECISIONE:** La leggibilità del sistema è scelta progettuale esplicita, non stilistica: trasforma la conoscenza tacita (nella testa del creatore) in conoscenza esplicita (sullo schermo, leggibile da chiunque). **LOGICA:** Un sistema comprensibile da un terzo è trasferibile; uno che richiede l'autore è un single-point-of-failure.
+
+- **OBIETTIVO:** Il sistema deve valere anche senza Matteo — deve essere vendibile, delegabile, ereditabile. **LOGICA:** Se il sapere su come gira il sistema vive solo nella testa di una persona, il sistema non è un prodotto ma un ostaggio.
+
+- **FATTO:** L'episodio è classificato come approfondimento LV1 di EP_SEED_CONTROLLO, con episodi fratelli EP_SEED_CONTROLLO_L1_STATOLIVE e EP_SEED_CONTROLLO_L1_SCAFFOLDING.

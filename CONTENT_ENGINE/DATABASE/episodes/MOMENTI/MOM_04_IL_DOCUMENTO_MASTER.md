@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [MOMENTO  Il Documento Master](#momento-il-documento-master)
+    - [Da sei file a uno. Da chaos a struttura.](#da-sei-file-a-uno-da-chaos-a-struttura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # MOMENTO — Il Documento Master
 ### "Da sei file a uno. Da chaos a struttura."
 
@@ -25,3 +33,15 @@ V7 diventa anche il documento che le persone citano quando parlano del framework
 
 ---
 *Stagione: S1.5 — Il Gap | Posizione: tra S1_05 e S2_00*
+
+## FATTI (per il RAG)
+
+- **FATTO:** ASSOLUTO V7 nasce il 27 maggio 2026 dalla fusione di 6 documenti separati in un file unico strutturato in 10 ATTI a fonte fissa.
+
+- **FATTO:** Il costo stimato di ricostruzione del contesto con documentazione distribuita era 10-20 minuti per sessione di lavoro, identificato come problema critico per operatività ADHD.
+
+- **FATTO:** I parametri verificati contenuti in ASSOLUTO V7 sono: massa corpo unico **178 kg**, precisione RSS **±0.019 mm**, investimento totale **EUR 2.250**, ROI Anno 1 **322%**, BEP **61 ore**, target capannone **15 luglio 2030**.
+
+- **DECISIONE:** Tutti i dati in ASSOLUTO devono essere verificati fisicamente (calibro, sensore IFM, foglio Excel) — nessun dato aspirazionale. **LOGICA:** Il documento funziona come inventario di guerra, non come documento progettuale speculativo.
+
+- **DECISIONE:** La regola operativa di ASSOLUTO è "se non è in ASSOLUTO, non è parte del progetto ufficiale". **LOGICA:** Elimina ambiguità su quale versione o file sia la fonte canonica del progetto.

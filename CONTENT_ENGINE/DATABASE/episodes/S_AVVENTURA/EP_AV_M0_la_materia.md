@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, forge, materia, precisione, r
   - [ATTO II  IL SOFFIO DI TROPPO](#atto-ii-il-soffio-di-troppo)
   - [ATTO III  PERCHÉ SI PARTE DA QUI](#atto-iii-perché-si-parte-da-qui)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -155,3 +156,15 @@ toccato la radice di tutto: prima la mano impara, poi la macchina ripete.*
 **3 strati:** bambino = il fabbro che fa un pezzo giusto con le mani · curioso = "la precisione è una relazione, non un numero" · esperto/papà = ±0,019 mm (IT6/IT7) è il margine d'accoppiamento; la materia precede l'astrazione; non automatizzare un gesto sbagliato (lo moltiplichi).
 **Aggancio reale:** EP_FILONE_00 "La Materia" · i dati V32 (±0,019 mm, corpo unico 178 kg) · introduce FORGE (fabbro degli Atomi, nodo officina/MIMS).
 **Open loop → Regione 1 (il Grande Loop):** un gesto fatto bene una volta — e se restasse, se lasciasse una traccia che insegna? → `EP_AV_00`.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_M0 appartiene alla stagione AV, è la tappa 0 di 7 dell'arco narrativo educativo (regione ⟡0 LA MATERIA), con durata stimata 8-10 minuti.
+
+- **PRECISIONE:** Il margine di tolleranza citato come riferimento reale per i pezzi meccanici è ±0,019 mm, corrispondente alle classi IT6/IT7. Questo valore non è trattato come dato isolato ma come relazione tra il pezzo, il materiale e il componente a cui si accoppia.
+
+- **DECISIONE:** Il principio progettuale stabilito è che non si automatizza un gesto prima di averlo padroneggiato manualmente. **LOGICA:** Automatizzare un gesto errato moltiplica l'errore su scala; la macchina non corregge, amplifica.
+
+- **FATTO:** Il personaggio FORGE (il fabbro degli Atomi) viene introdotto in questo episodio come figura canonica del sistema TITANIUM_OS, collocata sotto la Giuntura (il livello dove Atomi e Bit si toccano), gerarchicamente alla radice di tutto il sistema.
+
+- **OBIETTIVO:** EP_AV_M0 stabilisce il fondamento concettuale dell'intero arco: la materia fisica (il gesto manuale sul pezzo reale) precede e sostiene ogni astrazione digitale. Questo principio viene dichiarato richiamabile da tutte le tappe successive.

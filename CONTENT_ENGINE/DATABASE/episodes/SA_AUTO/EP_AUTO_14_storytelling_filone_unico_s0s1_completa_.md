@@ -9,6 +9,7 @@
   - [ATTO II  S0 più S1, la mappa delle ricorsioni](#atto-ii-s0-più-s1-la-mappa-delle-ricorsioni)
   - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -94,3 +95,15 @@ La V32 finisce la Config G. Poi MIMS. Poi VULCAN. Il sistema respira nell'ordine
 *Non stavo costruendo cinque cose. Stavo costruendo una cosa sola — e oggi ho trovato le parole per dirmelo.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** La V32 (CNC epoxy-granite) ha i rinforzi della Config G al 65% di completamento alla data del 28 maggio 2026. **LOGICA:** Identificato come collo di bottiglia critico dell'intero sistema: il completamento di Config G sblocca in sequenza MIMS, poi VULCAN.
+
+- **FATTO:** GENESIS risulta al 78% di completamento alla data del 28 maggio 2026, con dashboard v7.0, agenti, RAG v4.0 e Story Agent attivi. **LOGICA:** Il sistema non poteva essere addestrato con contesto coerente prima della stesura del documento S0+S1 come filone unico.
+
+- **FATTO:** EVA/Vita Natura (centro estetico) risulta al 40% di completamento alla data del 28 maggio 2026. **LOGICA:** Identificata come prima applicazione commerciale di EVA, agente di GENESIS, in attesa di un contesto sistemico definito.
+
+- **DECISIONE:** Redazione del documento S0+S1 come "FILONE_UNICO" — narrativa strutturata in sequenza che descrive origine (S0) e struttura operativa (S1) di TITANIUM_OS. **LOGICA:** Adottato come documento di riferimento del sistema per dare contesto coerente al training di GENESIS e alla gestione delle priorità operative.
+
+- **FATTO:** La dipendenza ricorsiva identificata è: V32 Config G → MIMS → VULCAN → prototipazione componenti per GENESIS → ottimizzazione dell'intero sistema. **LOGICA:** I cinque sotto-progetti (V32, MIMS, VULCAN, GENESIS, EVA/Vita Natura) sono ridefiniti come un sistema unico con cinque manifestazioni, non come progetti indipendenti.

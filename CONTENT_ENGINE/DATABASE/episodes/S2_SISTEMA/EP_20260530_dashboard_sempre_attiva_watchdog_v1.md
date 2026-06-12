@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -144,3 +145,15 @@ Non è un traguardo. È igiene.
 | **Angolo narrativo** | Affidabilità sistemica / automazione silenziosa |
 | **Tag** | `watchdog` `dashboard` `pythonw` `automazione` `infrastruttura` |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** La dashboard GENESIS è un'applicazione React che gira su `localhost:5173` tramite processo Vite; se il processo viene interrotto (chiusura sessione, crash del terminale, riavvio Windows), la dashboard sparisce silenziosamente senza avviso.
+
+- **DECISIONE:** Implementato `watchdog v1.2` per monitorare e riavviare automaticamente il processo della dashboard GENESIS in caso di interruzione. **LOGICA:** Eliminare il costo di setup ripetuto (stimato in 30–60 secondi ogni accesso) e ridurre il carico cognitivo su un operatore singolo.
+
+- **DECISIONE:** `START_LOGIN` aggiornato alla versione v1.3 usando `pythonw` al posto di `python`. **LOGICA:** `pythonw` esegue lo script in background senza aprire finestre terminale visibili al boot, rendendo il sistema presente ma non invadente.
+
+- **FATTO:** Il commit identificato è `5a9d2d7 [main]` con stato `⚠ dirty` (modifiche non committate presenti nel repository al momento del riavvio sessione).
+
+- **FATTO:** Il file di stato giornaliero si chiama `RIAVVIO_SESSIONE.txt`, generato automaticamente ogni mattina alle 10:30 su OneDrive; contiene metadati, stato del progetto e prompt pre-compilato per la sessione di lavoro.

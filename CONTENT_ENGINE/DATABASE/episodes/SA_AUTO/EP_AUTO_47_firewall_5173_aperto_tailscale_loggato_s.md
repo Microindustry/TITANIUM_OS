@@ -8,6 +8,7 @@
   - [ATTO II  Porta 5173, IP 100.125.152.124, e la logica dello stack](#atto-ii-porta-5173-ip-100125152124-e-la-logica-dello-stack)
   - [ATTO III  Cosa si sblocca adesso e dove va il prossimo passo](#atto-iii-cosa-si-sblocca-adesso-e-dove-va-il-prossimo-passo)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -91,3 +92,17 @@ Il sistema ha adesso un indirizzo. Non metaforicamente. Letteralmente: `100.125.
 *Aprire una porta non è mai il problema. Il problema è sapere dove porta, chi può usarla, e cosa succede se la lasci aperta al vento sbagliato. Il 3 giugno ho aperto la porta 5173 — ma l'ho aperta solo verso i nodi che conosco per nome.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il PC fisso in taverna (GPU GTX 1070 Ti) è il nodo centrale H24 di TITANIUM_OS; il Getac (portatile militarizzato) è il terminale mobile che dipende dal fisso per la capacità computazionale.
+
+- **DECISIONE:** Il 3 giugno 2026 è stata aperta la porta TCP 5173 sul firewall Windows del PC fisso, con regola in entrata limitata alla rete Tailscale (non esposta a internet). **LOGICA:** La porta 5173 serve l'interfaccia web locale di GENESIS (stack Vite); limitarla a Tailscale crea un corridoio cifrato senza esporre il servizio pubblicamente.
+
+- **FATTO:** L'IP Tailscale assegnato al PC fisso è `100.125.152.124`. È un indirizzo stabile, indipendente da DHCP del router e dalla rete fisica utilizzata.
+
+- **DECISIONE:** Tailscale è stato scelto come VPN mesh per connettere Getac e PC fisso. **LOGICA:** Bypassa i problemi di NAT domestico senza modifiche invasive al router, cifra il traffico e assegna IP stabili a ogni nodo autenticato.
+
+- **FATTO:** La connessione è stata verificata in due scenari: via LAN diretta (`http://100.125.152.124:5173`) e via 4G con Getac fuori dalla rete domestica — entrambi con esito positivo.
+
+- **FATTO:** Al momento dell'episodio era presente una pendenza bloccante sul repository GitHub: un file da circa 1 GB aveva inquinato la storia del repo, rendendo il push impossibile; la risoluzione richiedeva `git filter-branch` o BFG Repo Cleaner.

@@ -32,3 +32,17 @@ Il blocker rimane: aspetto il mandrino 2.2kW ER20. Arriva da tre fornitori, ness
 Quando chiudo la Config G e metto le foto nel foglio di lavoro condiviso, accanto al BOM aggiornato, avviene una cosa strana: il progetto cambia densità. Non è più "sto costruendo una fresatrice". È "la fresatrice sta uscendo da quello che mi immagino dentro la testa". Le molle gialle sono la prova tangibile.
 
 Questo è il momento in cui i sistemi complessi si trasformano da piani a realtà. Non quando finisci — quando inizi a vedere ogni componente nel suo posto.
+
+## FATTI (per il RAG)
+
+- **FATTO:** V32 è al 65% di completamento alla data del 10 marzo 2026.
+
+- **DECISIONE:** Config G adotta 4 molle gialle con costante elastica 90N/mm come attuatori di precarico sulla testata. **LOGICA:** Abbastanza morbide per assorbire vibrazioni ad alta velocità, abbastanza rigide per mantenere la planarità sotto carico fresa.
+
+- **FATTO:** Config G include 2 piastre XY montate sul gusset sinistro, conferendo 2 gradi di libertà controllati per la regolazione dell'assetto della testata senza disassemblaggio.
+
+- **FATTO:** La tolleranza di lavoro target di V32 è ±0.019mm.
+
+- **FATTO:** Il mandrino 2.2kW ER20 è il blocker critico al 10 marzo 2026; stima di approvvigionamento 18 giorni, nessun fornitore ha stock disponibile.
+
+- **DECISIONE:** Il BOM della sezione gusset sinistro passa da 7 incognite a 0 con l'aggiornamento Config G del 10 marzo 2026. **LOGICA:** Ogni componente è calcolato e corrisponde a una parte fisica ricevuta.

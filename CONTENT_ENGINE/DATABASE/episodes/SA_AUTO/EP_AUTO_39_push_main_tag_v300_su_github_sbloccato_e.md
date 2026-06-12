@@ -7,6 +7,7 @@
   - [ATTO II  TRE WORKFLOW E UN TAG](#atto-ii-tre-workflow-e-un-tag)
   - [ATTO III  COSA CAMBIA ADESSO](#atto-iii-cosa-cambia-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -101,3 +102,17 @@ La differenza tra un artigiano industriale e un hobbista non è la qualità del 
 *Il tag non certifica che ho finito. Certifica che so da dove ricomincio.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il repository `Microindustry/TITANIUM_OS` aveva una storia Git gonfia da 978 MB a causa del file `model.safetensors`; dopo la pulizia con `git filter-repo` la storia è scesa a 72 MB.
+
+- **FATTO:** GitHub blocca il push di oggetti superiori a 100 MB; il file `model.safetensors` superava 1 GB ed era la causa diretta del push bloccato.
+
+- **DECISIONE:** Aggiunto trigger `workflow_dispatch` ai workflow GitHub Actions esistenti (`push`, `pull_request`). **LOGICA:** Permette di avviare manualmente le pipeline senza dover fare commit vuoti, evitando inquinamento della storia Git durante il debug dei workflow.
+
+- **FATTO:** Il tag `v3.0.0` è stato pushato sul branch `main` del repo `Microindustry/TITANIUM_OS` in data 2026-06-03.
+
+- **DECISIONE:** Il salto di versione a `v3.0.0` (major) riflette una discontinuità strutturale: infrastruttura a due macchine con Tailscale (PC fisso con GPU GTX 1070 Ti in taverna + Getac in mobilità), sistema sessioni Markdown collegato a RAG vettoriale, workflow automatizzati e presenza pubblica su GitHub. **LOGICA:** Il numero di major versione non è marketing ma marcatore di identità architetturale.
+
+- **FATTO:** GENESIS risulta al 70% di completamento al momento del push (dato troncato a fine episodio).

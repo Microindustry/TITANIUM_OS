@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -124,3 +125,17 @@ La colonna Z aspetta ancora i suoi gusset.
 | **Angolo narrativo** | Manutenzione come disciplina, non come emergenza |
 | **Tono** | Onesto, anti-motivazionale, tecnico-personale |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il file `CanvasLayout.tsx` della dashboard GENESIS contava 1116 righe monolitiche; dopo il refactoring è stato suddiviso in tre componenti separati (`MacroCard`, `MatteoSection`, `ClaudeSection`), portando il file principale a 290 righe. **LOGICA:** Riduzione del 74% del codice nel file principale senza modifiche funzionali o visibili all'interfaccia.
+
+- **DECISIONE:** Il file `settings.local.json` della dashboard è stato impostato su `allow-all` per i permessi di processo. **LOGICA:** La configurazione precedente (permessi attivi solo per `npx tsc`) generava richieste di autorizzazione a ogni riavvio dell'ambiente; in un setup monoutente la frizione da micro-interruzioni supera il rischio di sicurezza.
+
+- **FATTO:** È stato creato uno script `.bat` con privilegi admin per ottimizzare l'avvio del sistema su Windows.
+
+- **FATTO:** Alla sessione S1E08 il sistema RAG di GENESIS conta 150 chunk e lo stato del sistema è versione `v2.5.0`, con commit marcato `dirty`.
+
+- **OBIETTIVO:** Step attivo su V32 in S1E08: saldatura TIG di 4 gusset da 200 mm sulla colonna Z sinistra (progetto "Config G — Rinforzi colonne Z+U"). **PRECISIONE:** V32 è una macchina CNC da 178 kg in corpo Epoxy Granite con target di precisione IT6-IT7.
+
+- **FATTO:** Il milestone temporale del progetto TITANIUM_OS è fissato a luglio 2030, distante 49 mesi dalla data dell'episodio S1E08.

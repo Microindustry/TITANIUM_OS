@@ -7,6 +7,7 @@
   - [ATTO II  Riscrivere la Storia (nel Senso Letterale)](#atto-ii-riscrivere-la-storia-nel-senso-letterale)
   - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -94,3 +95,15 @@ Un repo da 72 MB non fa notizia. Non è il tipo di traguardo che metti in una pr
 *978 megabyte di storia sbagliata. 72 di storia vera. La differenza non è nel numero — è nel fatto che adesso quello che vedi è quello che c'è.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il repository Git di TITANIUM_OS pesava **978 MB** a causa del file `model.safetensors` incistato nella history, probabilmente aggiunto accidentalmente durante sessioni di test su EVA o integrazioni AI.
+
+- **DECISIONE:** Per rimuovere il file dalla history è stato usato `git filter-repo` (non `git filter-branch`). **LOGICA:** `filter-repo` è considerato più veloce, chirurgico e privo degli edge case di `filter-branch` per riscrittura completa della history Git.
+
+- **RISULTATO:** Dopo la pulizia con `git filter-repo`, la cartella `.git` è scesa da **978 MB a 72 MB** (-906 MB). Il peso residuo di 72 MB rappresenta la dimensione reale del codice di TITANIUM_OS (dashboard, MCP server, specifiche V32, logica GENESIS).
+
+- **DECISIONE:** Eseguito `git push --force` sul remote GitHub dopo aver verificato assenza di branch aperti o lavori in sospeso. **LOGICA:** Operazione considerata pulita per repo personale a singolo contributore; il remote è stato allineato alla history riscritta in locale.
+
+- **FATTO:** La regola di versionamento dichiarata per TITANIUM_OS è "commit isolati e additivi" — le correzioni entrano nella history come atti consapevoli, non tramite cancella-e-rifai generici.

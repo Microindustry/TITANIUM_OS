@@ -10,6 +10,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -177,3 +178,15 @@ Il sistema ha già letto le specifiche.
 | **Co-autore AI** | Claude Sonnet 4.6 |
 | **Prossimo step** | Saldare 4 gusset 200mm colonna Z sinistra |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Content Engine sviluppato nella sessione #10 del 29 maggio 2026 ha prodotto 19 pezzi di contenuto strutturati in una giornata: 6 episodi S2, 5 MOMENTI (format da 5-7 minuti), 8 episodi backfill. **LOGICA:** Separare la fase di strutturazione/ricerca dalla fase di registrazione, riducendo il debito di documentazione accumulato.
+
+- **DECISIONE:** Implementazione del nodo `COMPUTER_USE v1.0` in `NODES/COMPUTER_USE/computer_use_agent.py` con loop screenshot → API Anthropic → azione, usando il modello `anthropic beta computer-use-2025-11-24`. **LOGICA:** Integrarlo come nodo nel sistema cognitivo GENESIS (non come demo isolata), abilitando in prospettiva interazione diretta con software CAD come Fusion 360.
+
+- **FATTO:** Lo Story Agent v1.0 è un cron job schedulato alle 02:07 che genera brief automatici per gli episodi successivi, fermandosi con un hook al termine della sessione.
+
+- **FATTO:** Il task scheduler notturno `night_research.bat` gira alle 03:37 ogni notte, eseguendo ricerche automatiche su topic quali *Epoxy Granite vibration damping*, *titanium TIG joint fatigue MotoGP*, *modular connector PA-GF30 thermal cycling*, e aggiornando il RAG. **LOGICA:** Delegare al sistema le attività di ricerca nelle ore notturne per non sottrarre tempo operativo (saldatura, sviluppo) alle ore diurne.
+
+- **OBIETTIVO:** Le colonne Z di V32 attendono ancora i gusset — quattro pezzi d'acciaio da 200 mm — da saldare. **LOGICA:** Attività fisica bloccata dai vincoli di tempo, non da vincoli tecnici.

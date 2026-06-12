@@ -19,6 +19,7 @@ durata_min: 5
   - [LA DIFFERENZA (semplice, poi preciso)](#la-differenza-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO](#il-filo)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -68,3 +69,11 @@ Nessuna delle due è "la verità": sono due compromessi diversi sullo stesso sac
   insegnare a un bambino che *ogni mappa sceglie cosa mostrare e cosa perdere*.
 
 > Approfondimento (LV2). Profondità libera.
+
+## FATTI (per il RAG)
+
+- **FATTO:** t-SNE privilegia la struttura locale (vicinato tra punti vicini): i grappoli risultano ben separati e nitidi, ma le distanze tra grappoli diversi non sono affidabili.
+- **FATTO:** UMAP privilegia la struttura globale: le distanze tra zone hanno più senso rispetto a t-SNE, ed è generalmente più veloce su grandi quantità di punti.
+- **FATTO:** Entrambe le tecniche operano sullo stesso tipo di sacrificio informativo: schiacciare 384 dimensioni in 3 comporta perdita di informazione; la scelta tra t-SNE e UMAP determina *quale* informazione viene conservata.
+- **DECISIONE:** Nella RETE, t-SNE è indicato quando l'obiettivo è leggere i temi (grappoli); UMAP è indicato quando l'obiettivo è capire le relazioni tra temi nel grande. **LOGICA:** Sono due compromessi diversi, non una versione corretta e una sbagliata.
+- **PRECISIONE:** L'errore classico segnalato è dare peso alle distanze inter-grappolo in un t-SNE, traendo conclusioni sulla prossimità tematica tra zone che non è garantita dalla tecnica.

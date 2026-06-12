@@ -17,6 +17,7 @@ generated: "2026-05-27T11:29:47.118608"
 - [V32  Episodio 14: Config G](#v32-episodio-14-config-g)
   - [Il bivio](#il-bivio)
   - [Connessione al sistema](#connessione-al-sistema)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -76,3 +77,17 @@ Il sistema funziona perché l'ho costruito quando stavo bene, non quando stavo d
 ---
 
 La gusset sinistra ha tre ore di officina davanti, il mandrino non c'è ancora, e il numero che conta è ±0.019.
+
+## FATTI (per il RAG)
+
+- **FATTO:** La V32 (CNC epoxy-granite) richiede una ripetibilità di ±0.019mm sull'asse XY come tolleranza di progetto.
+
+- **DECISIONE:** Passaggio da Config D (4x molle 60N) a Config G (4x molle gialle 90N + 2x piastre XY dedicate). **LOGICA:** Config D produceva ripetibilità di ±0.031mm sotto carico laterale, fuori dalla tolleranza di progetto ±0.019mm; il vincolo di appoggio sulla slitta Y era asimmetrico.
+
+- **FATTO:** Le molle gialle 90N sostituiscono le 60N mantenendo stessa sede e stesso diametro esterno — solo il rateo cambia. Carico totale risultante: 4 × 90N = 360N.
+
+- **FATTO:** Il mandrino 2.2kW ER20 è il blocker attuale della V32 (stato al 65% al 10 Mar 2026); la meccanica viene completata prima del suo arrivo per ridurre il lavoro residuo alle sole connessioni elettriche.
+
+- **FATTO:** VULCAN (pressa 20t) è in pausa sulla parte utensili fino a quando la V32 non è operativa, perché alcune geometrie degli stampi sono previste in autoproduzione sulla V32.
+
+- **FATTO:** La milestone viene registrata in `BRAIN/STATE.json` come `"BOM v2.1 — 4x molla gialla 90N + 2x piastra XY Config G"` con data e ora, per tracciabilità del log di progetto.

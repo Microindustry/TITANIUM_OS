@@ -9,6 +9,7 @@
   - [ATTO II  Quello Che È Successo Stanotte](#atto-ii-quello-che-è-successo-stanotte)
   - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -93,3 +94,15 @@ Un artigiano, finalmente, che scala.
 *"L'officina vera non è dove tieni gli attrezzi. È quello che continua a lavorare anche quando hai spento la luce."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il calendario notturno di TITANIUM_OS esegue 5 agenti in sequenza: StoryAgent alle 02:07, DeepFreeze alle 03:00, NightResearch alle 03:37, NightPush alle 04:07, DailyBrief alle 07:30. **LOGICA:** Coprono l'intera finestra notturna senza intervento umano.
+
+- **FATTO:** La prima esecuzione completa del calendario notturno è avvenuta nella notte tra il 28 e il 29 maggio 2026. **LOGICA:** Questa data è il milestone verificato di riferimento per l'automazione notturna di GENESIS.
+
+- **DECISIONE:** DeepFreeze (03:00) esegue uno snapshot completo di tutti i progetti attivi — V32, MIMS, GENESIS, VULCAN, Vita Natura, blocco Identity (CV e capability doc). **LOGICA:** Fornisce un punto di ritorno preciso e una memoria permanente dello stato dell'ecosistema ogni notte.
+
+- **FATTO:** V32 (CNC epoxy-granite 3 assi) è al 65% di completamento al 29 maggio 2026; in corso i rinforzi della configurazione G, nervature del telaio posteriore per assorbimento vibrazioni in lavorazione alluminio a piena velocità. **LOGICA:** V32 è prerequisito per VULCAN, che produce i componenti meccanici dei connettori MIMS.
+
+- **DECISIONE:** NightPush (04:07) aggiorna la dashboard GENESIS v7.0 e propaga dati a MIMS (percorso V32-VULCAN) e a EVA (Vita Natura). **LOGICA:** Garantisce il riallineamento automatico dell'intero ecosistema prima dell'inizio della giornata operativa.

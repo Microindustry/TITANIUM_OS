@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, orchestrazione, nexus, calend
   - [ATTO II  CHI VA PRIMA, CHI VA DOPO](#atto-ii-chi-va-prima-chi-va-dopo)
   - [ATTO III  IL DIRETTORE CHE NON CÈ ANCORA](#atto-iii-il-direttore-che-non-cè-ancora)
   - [CHIUSURA  il giro si chiude](#chiusura-il-giro-si-chiude)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -166,3 +167,15 @@ giornata — esattamente quello che fa il Direttore con i suoi aiutanti.*
 **3 strati:** bambino = il direttore d'orchestra che dà l'attacco a ognuno al momento giusto · curioso = "questo si chiama orchestrazione: dipendenze + serie/parallelo" · esperto/papà = la Tela / calendario notturno reale (oggi) → NEXUS, l'orchestratore (domani); è un grafo di dipendenze sul tempo.
 **Aggancio reale:** EP_S2_02 "L'Orchestratore" · EP_S2_03 "La Tela" (calendario notturno) · NEXUS (nodo futuro).
 **Chiusura d'arco:** ricapitola ⟡1→⟡7 ("sette cose, una sola storia") e apre il senso-prodotto: il Sistema gira, manca solo **tramandarlo** — la missione di Nina stessa (ponte al senso educativo del binario).
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sistema GENESIS conta almeno 6 agenti attivi (simbolo `⟡6`), numero sufficiente a generare conflitti di accesso concorrente sulle risorse.
+
+- **FATTO:** Il meccanismo di orchestrazione attualmente in uso è denominato "la Tela" — un calendario notturno statico (partitura fissa) che definisce l'ordine di esecuzione degli agenti, ma richiede riscrittura manuale ad ogni variazione.
+
+- **DECISIONE:** La raccoglitrice è posizionata come agente prioritario (primo in sequenza); la cantastorie parte **solo dopo** il completamento della raccoglitrice, per evitare che elabori dati obsoleti. **LOGICA:** dipendenza dati: output di un agente è input dell'altro.
+
+- **DECISIONE:** Il controllore del Sistema viene eseguito **in parallelo** agli altri agenti. **LOGICA:** non ha dipendenze in ingresso dagli altri agenti, quindi non genera conflitti e può sovrapporsi temporalmente.
+
+- **OBIETTIVO:** Il componente futuro **NEXUS** è designato come orchestratore dinamico per GENESIS: dovrà rilevare autonomamente ritardi, ricalcolare l'ordine di esecuzione e gestire dipendenze senza intervento manuale. Status al 2026-06-11: non ancora implementato.

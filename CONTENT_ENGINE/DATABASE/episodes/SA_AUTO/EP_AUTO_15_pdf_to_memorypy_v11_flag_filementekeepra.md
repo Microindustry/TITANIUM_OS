@@ -7,6 +7,7 @@
   - [ATTO I  Il Problema della Memoria Morta](#atto-i-il-problema-della-memoria-morta)
   - [ATTO II  Quattro Flag, Una Decisione](#atto-ii-quattro-flag-una-decisione)
   - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -86,3 +87,17 @@ Per Vita Natura significa che EVA smette di essere un pilota generico e diventa 
 Per la V32 e per tutto il ciclo fisico — la documentazione tecnica della Config G, i parametri di rinforzo, le specifiche di tolleranza — entra nel sistema in modo permanente. Quando arriverà il momento di costruire la MIMS, GENESIS avrà già in memoria la logica meccanica che collega la fresatrice alla pressa.
 
 Un sistema che costruisce macchine deve ricordare come
+
+## FATTI (per il RAG)
+
+- **FATTO:** `pdf_to_memory.py` v1.1 rilasciata il 28 maggio 2026, evoluzione dalla v1.0 (che aveva path hardcoded). Introduce 4 flag distinti: `--file`, `--mente`, `--keep`, `--rag`.
+
+- **DECISIONE:** Il flag `--mente` indirizza il documento nella memoria strutturata di GENESIS (non solo nel RAG come chunk indicizzato). **LOGICA:** distinzione tra archiviazione recuperabile e conoscenza integrata nel sistema.
+
+- **DECISIONE:** Il flag `--keep` gestisce la persistenza a lungo termine vs contestuale. **LOGICA:** prima del v1.1 non esisteva granularità — tutto restava o tutto spariva al reset.
+
+- **FATTO:** Il flag `--rag` forza l'indicizzazione nel retrieval aumentato senza passare dalla memoria strutturata; tempo dichiarato di disponibilità per ricerca semantica: 30 secondi.
+
+- **FATTO:** Test effettuato sulla documentazione EVA (Vita Natura): manuale operativo caricato con `--mente --keep`, schede trattamenti con `--rag`, protocolli di prenotazione con `--mente`.
+
+- **FATTO:** Al momento della milestone, GENESIS risulta al 78% e V32 (CNC tre assi, Config G con rinforzi) al 65%.

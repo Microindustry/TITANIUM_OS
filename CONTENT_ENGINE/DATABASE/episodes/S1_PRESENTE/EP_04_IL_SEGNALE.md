@@ -8,6 +8,7 @@
   - [ATTO III  COSA FA EVA OGNI GIORNO](#atto-iii-cosa-fa-eva-ogni-giorno)
   - [ATTO IV  PERCHÉ QUESTO APPARTIENE ALLECOSISTEMA](#atto-iv-perché-questo-appartiene-allecosistema)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -147,3 +148,15 @@ E mentre EVA lavora di notte — mentre i messaggi partono, i promemoria arrivan
 > Cosa è cambiato, e cosa non lo sarà mai.
 
 *Continua in EP_05 — Il Verdetto*
+
+## FATTI (per il RAG)
+
+- **FATTO:** EVA è costruito su Python 3.12 su VPS, con API WhatsApp Business via n8n, Google Calendar per la lettura degli slot, database clienti in JSON con storico completo, LLM Claude per la generazione dei messaggi e logica condizionale per promozioni, follow-up e stagionalità.
+
+- **DECISIONE:** L'interfaccia verso Maria segue la "Maria Rule": zero-click, zero tutorial — dal suo punto di vista EVA è solo un assistente che le manda messaggi WhatsApp normali. Tutta la complessità architetturale è nascosta lato sistema. **LOGICA:** La tecnologia deve essere trasparente all'utente finale reale, non a un utente astratto.
+
+- **OBIETTIVO:** Revenue stimata da EVA anno 1: €1.500/mese. **LOGICA:** Non da funzionalità straordinarie, ma dall'esecuzione perfetta e automatica delle attività ripetitive (promemoria, follow-up, compleanni, prenotazioni) ogni giorno senza errori.
+
+- **FATTO:** EVA è il client zero dello stack GENESIS: l'architettura multi-agente, l'integrazione WhatsApp, il sistema di memoria clienti e la logica di calendario sviluppati per EVA costituiscono l'infrastruttura riutilizzabile per altri business.
+
+- **DECISIONE:** Il cash flow generato da EVA (anno 1, mentre V32 e MIMS sono ancora in sviluppo) viene ridiretto in componenti hardware: mandrino 2.2kW, viti asse Y, quadro IP54. **LOGICA:** EVA è il ramo finanziatore dell'ecosistema TITANIUM_OS nella fase pre-produzione.

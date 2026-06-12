@@ -8,6 +8,7 @@
   - [ATTO I  Il Rumore di Fondo](#atto-i-il-rumore-di-fondo)
   - [ATTO II  CORE/log.py](#atto-ii-corelogpy)
   - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -77,4 +78,16 @@ Adesso quando GENESIS ha un comportamento anomalo, apro genesis.log e leggo la s
 
 Questo è il tipo di lavoro che non vedi finché non ti manca. È il lavoro che fa sì che tra sei mesi, quando qualcosa va storto alle tre di notte, io non debba ricostruire il passato a memoria. Ce l'ho scritto.
 
-C'è anche un'altra cosa. Il logging mi ha costretto a rileggere trentaquattro file e capire esattamente cosa comunicava ogni parte del sistema. È stato un audit involontario. Ho trovato due logiche ridondanti in GENESIS. Ho trovato un percorso di errore in EVA che non gestiva un caso limite. Li ho corretti mentre ero lì. Non 
+C'è anche un'altra cosa. Il logging mi ha costretto a rileggere trentaquattro file e capire esattamente cosa comunicava ogni parte del sistema. È stato un audit involontario. Ho trovato due logiche ridondanti in GENESIS. Ho trovato un percorso di errore in EVA che non gestiva un caso limite. Li ho corretti mentre ero lì. Non
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il milestone di logging centralizzato è stato completato il 29 maggio 2026, aggiornando 34 file del progetto TITANIUM_OS.
+
+- **DECISIONE:** Creato modulo CORE/log.py come punto unico di gestione log; implementato RotatingFileHandler con scrittura su file in DATA/logs/ e canali nominati per modulo (genesis.log, eva.log, v32.log). **LOGICA:** Evitare la perdita di messaggi diagnostici legata alla sessione di terminale aperta; rendere i log consultabili, filtrabili e persistenti.
+
+- **FATTO:** I print statements sono stati ridotti da 342 a 131 nei 34 file aggiornati; 211 print diagnostici convertiti in chiamate log strutturate con livello di severità (debug/info/warning/error/critical), timestamp e nome del modulo.
+
+- **PRECISIONE:** I print rimasti (131) sono quelli destinati all'output operatore/interfaccia utente; solo i print diagnostici e di sistema sono stati migrati al logger.
+
+- **FATTO:** Durante il refactoring dei 34 file sono stati individuati e corretti due logiche ridondanti in GENESIS e un caso limite non gestito nel percorso di errore di EVA.

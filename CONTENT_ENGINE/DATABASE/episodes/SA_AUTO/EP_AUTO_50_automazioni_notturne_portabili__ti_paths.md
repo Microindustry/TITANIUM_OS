@@ -7,6 +7,7 @@
   - [ATTO II  _ti_paths.bat e il registro notturno](#atto-ii-tipathsbat-e-il-registro-notturno)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -92,3 +93,17 @@ Il prossimo step concreto è verificare la catena completa per sette giorni di f
 ## CHIUSURA
 
 *Un sistema che lavora solo quando ci sei tu non è un sistema — è un'abitudine cara.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il RAG graph di TITANIUM_OS al 03/06/2026 conta 114 nodi e 218 archi, con watchdog che controlla i processi in parallelo via threading.
+
+- **DECISIONE:** Migrazione delle automazioni notturne dal Getac al PC fisso in taverna (GPU GTX 1070 Ti, 8 GB VRAM, operativo 24/7); il Getac diventa macchina mobile collegata via Tailscale. **LOGICA:** La GPU è necessaria per il finetune in fp16 e non è praticabile su portatile da cantiere.
+
+- **DECISIONE:** Introduzione di `_ti_paths.bat` come resolver centralizzato per `TI_ROOT`, `PYTHON`, `GH` senza path hardcoded. **LOGICA:** Le automazioni notturne avevano path scritti a mano (`C:\Users\Matteo\Documents\TITANIUM_OS\PYTHON`); qualsiasi cambio macchina o percorso causava fallimenti silenziosi rilevati solo a log freddo.
+
+- **FATTO:** I tre blocchi notturni sono separati in: `night_research` (aggiornamento RAG), `night_push` (`AUTOMATIONS/core/night_push.bat`, cron ore 04:07), `night_finetune` (ciclo GPU fp16 con guard llamafactory). STORY_AGENT gira da `NODES/STORY_AGENT/story_agent.py`, cron mezzanotte.
+
+- **DECISIONE:** `register_night_tasks.ps1` registra tutte le task notturne nel Task Scheduler di Windows con auto-elevazione UAC. **LOGICA:** Elimina la necessità di avviare manualmente PowerShell come amministratore; esecuzione singola dello script sufficiente per rendere le automazioni persistenti nel sistema operativo.
+
+- **FATTO:** Il finetune notturno usa fp16 (precisione 16 bit) sulla GTX 1070 Ti per dimezzare l'occupazione di VRAM (8 GB disponibili); il guard llamafactory interrompe il processo in caso di anomalia per proteggere il modello base.

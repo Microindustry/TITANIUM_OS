@@ -7,6 +7,7 @@
   - [ATTO II  La migrazione: cosa è successo davvero](#atto-ii-la-migrazione-cosa-è-successo-davvero)
   - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -82,3 +83,17 @@ Ma oggi il cervello ha una casa fissa. E questo non è un dettaglio — è la di
 ## CHIUSURA
 
 *Un cervello mobile è uno strumento. Un cervello fisso, connesso, sempre attivo — quello è un'infrastruttura. E da un'officina si costruisce solo se l'infrastruttura regge.*
+
+## FATTI (per il RAG)
+
+- **DECISIONE:** La memory del progetto (stato, file di sessione, contesto) è stata migrata dal Getac al PC fisso il 2 giugno. **LOGICA:** Il Getac era usato come cervello 24/7 del sistema ma essendo mobile interrompeva il funzionamento continuo; il fisso garantisce operatività h24.
+
+- **FATTO:** Il PC fisso in taverna monta una GPU NVIDIA 1070 Ti, considerata sufficiente per i carichi di lavoro previsti: inferenza locale, gestione stato, elaborazione dati per GENESIS ed EVA.
+
+- **FATTO:** La connessione tra i due nodi (Getac e PC fisso) avviene via Tailscale — VPN mesh con indirizzo fisso per ogni macchina nella rete virtuale, nessuna porta aperta al mondo esterno.
+
+- **FATTO:** L'HMI della V32 è un TP900 Comfort recuperato: display 9" TFT touch 800×480, PROFINET e MPI/Profibus. La CPU è una 314C con 32 DI, 16 DO, 4 AI, 2 AO, Profibus DP, 192 KB di memoria + 2 MB su Micro Memory Card. Costo hardware: EUR 0 (recupero).
+
+- **PRECISIONE:** Lo stato progettuale documentato in `BRAIN/STATE.json` e `RIAVVIO_SESSIONE.txt` al momento della migrazione riportava: V32 al 65%, MIMS al 30% (waiting_press), GENESIS al 70%, Vita Natura al 40%, IDENTITY al 50%.
+
+- **FATTO:** Durante la migrazione è emerso un blocco push su GitHub causato da un file da ~1 GB nella storia del repository; la risoluzione è stata deliberatamente posticipata a un momento separato per non interrompere il flusso principale della migrazione.

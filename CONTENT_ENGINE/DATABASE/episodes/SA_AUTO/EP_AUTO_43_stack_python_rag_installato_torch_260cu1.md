@@ -8,6 +8,7 @@
   - [ATTO II  Un Click, un Riavvio, uno Stack Completo](#atto-ii-un-click-un-riavvio-uno-stack-completo)
   - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -95,3 +96,15 @@ Il prossimo passo immediato è caricare l'archivio completo su ChromaDB — tutt
 *L'infrastruttura regge quando non ti accorgi che regge. Quel giorno il Getac si è avviato, i moduli hanno caricato, il motore ha risposto — e io ero già passato al problema successivo. È così che deve funzionare.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Lo stack RAG installato sul Getac il 02/06/2026 include: torch 2.6.0+cu124, chromadb 1.5.9, sentence-transformers 5.5.1, sklearn, Visual C++ Redistributable x64. **LOGICA:** Le dipendenze compilate di chromadb e sentence-transformers richiedono le DLL di runtime Microsoft (VC++ Redist); senza di esse i moduli non partono indipendentemente da pip o versione Python.
+
+- **DECISIONE:** Prima dell'installazione del VC++ Redistributable, è stato implementato un RAG fallback in pure Python (TF-IDF + BM25, zero dipendenze esterne) con la stessa API del motore ChromaDB. **LOGICA:** Garantire continuità operativa durante il blocco ambientale; l'API identica ha permesso la sostituzione drop-in senza riscrittura del resto del sistema.
+
+- **FATTO:** Il RAG engine riscritto ha subito una revisione di 138 righe aggiunte e 84 rimosse per passare da TF-IDF a embedding reali (sentence-transformers) e da struttura in memoria a vector store persistente (ChromaDB). **LOGICA:** Il contratto API è rimasto invariato per non rompere le dipendenze a monte.
+
+- **FATTO:** Il fix per il blocco ambientale era noto e documentato nel setup log di TITANIUM_OS come "fix permanente (1 click)": installer `vc_redist.x64.exe` da `https://aka.ms/vs/17/release/vc_redist.x64.exe`, seguito da riavvio macchina.
+
+- **OBIETTIVO:** Al momento dell'episodio lo stato avanzamento dei sottoprogetti è: GENESIS 70%, V32 65%, MIMS in stato `waiting_press`.

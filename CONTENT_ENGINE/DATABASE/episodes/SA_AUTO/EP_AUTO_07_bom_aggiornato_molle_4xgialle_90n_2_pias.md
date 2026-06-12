@@ -8,6 +8,7 @@
   - [ATTO II  Le piastre XY e le molle gialle](#atto-ii-le-piastre-xy-e-le-molle-gialle)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,15 @@ Ma oggi, quelle quattro molle gialle e due piastre ridisegnate mi dicono che son
 ## CHIUSURA
 
 *"Un BOM aggiornato non è carta. È una promessa che hai fatto alla macchina: so esattamente cosa sei, e so esattamente cosa ti chiederò di fare."*
+
+## FATTI (per il RAG)
+
+- **FATTO:** La fresatrice CNC V32 (Config G) è al 65% di completamento alla data del 10 marzo 2026. **LOGICA:** Config G è la variante con rinforzi strutturali, scelta per lavorare polimeri (VULCAN) e pezzi di precisione (MIMS).
+
+- **DECISIONE:** BOM V32 aggiornato con 4 molle gialle da 90 N ciascuna in configurazione parallela sull'asse Z. **LOGICA:** Il precarico risultante è 360 N, calcolato sufficiente a eliminare il gioco residuo sotto carico dinamico con il mandrino Teknomotor 1,5 kW e corsa Z di 120 mm.
+
+- **DECISIONE:** Le piastre XY Config G sono state ridisegnate con 5 mm di spessore aggiuntivo sull'appoggio del cuscinetto lineare e due fori passanti per alloggiamento molle assenti nella versione base. **LOGICA:** Modifica necessaria per integrare il sistema di precarico e migliorare il comportamento dell'asse sotto carico dinamico.
+
+- **FATTO:** Il progetto MIMS (connettori modulari) è al 30% di completamento perché la sua progressione è bloccata dalla mancata disponibilità della V32. **LOGICA:** La V32 è la macchina designata alla produzione fisica dei componenti MIMS.
+
+- **FATTO:** GENESIS è al livello dashboard v7.0 con Story Agent attivo e RAG v4.0. **LOGICA:** Il BOM viene aggiornato dentro GENESIS per garantire tracciabilità e replicabilità delle scelte progettuali nel tempo.

@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -141,3 +142,17 @@ La repository git pesava 978 MB. Un file di pesi finito per errore nella history
 | **Evento narrativo chiave** | Dev Flutter: "lo state facendo in modo inusuale ma figo" |
 | **Co-autore sessione** | Claude Opus 4.8 |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** La repository git di GENESIS pesava **978 MB** a causa del file `model.safetensors` (pesi di un modello locale) finito per errore nella history e trascinato per mesi. Dopo la pulizia, `.git` è sceso a **72 MB**.
+
+- **DECISIONE:** GENESIS è stato migrato dal Getac (rugged laptop) al PC fisso come macchina principale. **LOGICA:** Il Getac non disponeva della GPU e del disco adeguati alle esigenze crescenti di GENESIS.
+
+- **FATTO:** `START_LOGIN.bat v2.0` è stato riscritto con percorsi fissi per l'utente `teo`, eliminando la dipendenza da `tools\` portable. Python, Node, pnpm e Claude vengono ora risolti tramite path system-wide.
+
+- **FATTO:** Lo `STATE.json` è stato aggiornato con: macchina principale registrata, milestone migrazione, sessione **#21** (data 2026-06-02).
+
+- **OBIETTIVO:** Milestone attivo post-migrazione include: automazioni notturne portabili, ottimizzate GPU, `_ti_paths.bat` come resolver centrale, registrar UAC per i privilegi, finetune CUDA per il modello locale sulla scheda dedicata.
+
+- **PRECISIONE:** Stato avanzamento stimato a mano da Matteo: **V32 al 65%**, **GENESIS al 70%**.

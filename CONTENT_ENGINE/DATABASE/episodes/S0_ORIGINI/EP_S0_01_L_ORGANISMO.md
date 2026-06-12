@@ -8,6 +8,7 @@
   - [ATTO III  IL MOTORE DI PARALLELISMO](#atto-iii-il-motore-di-parallelismo)
   - [ATTO IV  IL NUMERO](#atto-iv-il-numero)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -156,3 +157,15 @@ Il capannone non è ancora costruito. È già *progettato*.
 - *"Python + Saldatura come superpotere" → eco EP_00 (skill tree) e EP_02 (perché non hai comprato una CNC)*
 - *"Il motore di parallelismo" → eco EP_03 (meta-ricorsività) e EP_04 (EVA come finanziatore)*
 - *"Luglio 2030, 35 anni" → EP_05 — questo episodio è la promessa che EP_05 mantiene*
+
+## FATTI (per il RAG)
+
+- **OBIETTIVO:** Raggiungere il Capannone e la Libertà Industriale entro Luglio 2030 (età 35 anni). **LOGICA:** Definito come milestone verificabile con coordinata temporale precisa, non come obiettivo generico.
+
+- **FATTO:** Il target di cash flow per EVA (ramo finanziatore) è €1.500/mese automatici entro 6 mesi dall'avvio. **LOGICA:** Cifra scelta perché copre la spesa mensile hardware della V32 senza attingere ad altre risorse.
+
+- **FATTO:** Il costo di investimento stimato per la V32 è €2.250, a fronte di un costo di replicazione industriale equivalente stimato in €35.000. **LOGICA:** Differenziale che definisce il posizionamento "Giant Killer" vs concorrenza industriale.
+
+- **DECISIONE:** Il superpotere strategico di Matteo è identificato come "Python + Saldatura" (competenza software + competenza fisica). **LOGICA:** Combinazione assente nei profili standard; consente di controllare sia la progettazione meccanica che il codice che governa la macchina.
+
+- **FATTO:** L'ecosistema TITANIUM_OS è strutturato in tre rami interdipendenti: EVA (cash flow), MIMS/V32 (valore tecnico), THE ARCHITECT (canale YouTube/content). **LOGICA:** Un'unica azione (es. calibrazione CNC con script Python registrata a schermo) genera output simultanei su tutti e tre i rami.

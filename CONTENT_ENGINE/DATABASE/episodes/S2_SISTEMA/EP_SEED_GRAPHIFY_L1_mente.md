@@ -19,6 +19,7 @@ durata_min: 6
   - [LA SCELTA IBRIDA (semplice, poi preciso)](#la-scelta-ibrida-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -68,3 +69,15 @@ contano, non a pioggia. Meglio meno nodi giusti che tanti nodi inventati su mate
   Nina diventa una scelta del personaggio (cosa fidare alla Mente piccola e cosa tenere in casa).
 
 > Episodio di **approfondimento (LV1)**. Profondità libera: sotto può nascere un LV2 sull'estrattore vero.
+
+## FATTI (per il RAG)
+
+- **DECISIONE:** L'estrazione del grafo da `MENTE/` (documenti sensibili) è ibrida: codice → grafo automatico; documenti MENTE → estrazione manuale e curata. **LOGICA:** Il modello 7B locale è considerato debole sui documenti sfumati e crea collegamenti falsi; i documenti sensibili non possono uscire verso modelli cloud.
+
+- **FATTO:** Il grafo del codice (repo) viene costruito automaticamente dal motore Graphify in 13 secondi.
+
+- **FATTO:** I documenti in `MENTE/` contengono materiale classificato come IP sensibile: brevetti, ricette MIMS, decisioni d'officina. Questi non vengono processati dal modello 7B locale né inviati a modelli cloud.
+
+- **OBIETTIVO:** Il criterio di qualità del grafo MENTE è esplicito: preferire meno nodi corretti a tanti nodi inventati — un grafo con collegamenti falsi su materiale IP è considerato peggiore del niente.
+
+- **DECISIONE:** Il modello utilizzato per l'estrazione automatica del codice è un 7B in esecuzione locale su GPU, non un modello cloud.

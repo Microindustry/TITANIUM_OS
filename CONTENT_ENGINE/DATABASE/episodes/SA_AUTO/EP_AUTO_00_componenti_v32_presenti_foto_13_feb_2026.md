@@ -8,6 +8,7 @@
   - [ATTO II  Il momento in cui il CAD smette di essere lunica realtà](#atto-ii-il-momento-in-cui-il-cad-smette-di-essere-lunica-realtà)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -75,3 +76,17 @@ Il tredici febbraio ha spostato il baricentro del progetto. Non ancora verso il 
 ## CHIUSURA
 
 *Il progetto non inizia quando hai l'idea. Non inizia quando finisci il CAD. Inizia il giorno in cui puoi appoggiarci sopra una mano.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** V32 è una fresatrice CNC a tre assi, configurazione "Config G", con rinforzi strutturali riprogettati più volte e tolleranze calcolate; al 13 Feb 2026 risultava completata al **65%** sulla carta, con i componenti fisici presenti in officina a quella data.
+
+- **MILESTONE:** Il **13 febbraio 2026** è la data verificata in cui i componenti fisici di V32 (guide lineari, supporti lavorati, elementi strutturali Config G) sono stati confermati presenti in officina, registrata come milestone in `STATE.json → milestones.verified`.
+
+- **FATTO:** MIMS (sistema di connettori modulari) ha design completo ma è fermo al **30%** di avanzamento, bloccato dalla mancanza della catena V32-VULCAN come realtà fisica operativa.
+
+- **FATTO:** GENESIS (stack AI/software) è al **78%** di completamento; comprende dashboard versione **7.0**, Story Agent operativo e RAG alla **quarta iterazione**.
+
+- **DECISIONE:** L'architettura di TITANIUM_OS prevede una dipendenza sequenziale esplicita: V32 deve essere operativa prima che MIMS abbia senso produttivo, e MIMS deve funzionare prima che VULCAN (pressa polimeri) possa ricevere i polimeri con la geometria corretta. **LOGICA:** ogni componente è un nodo che sblocca il successivo nella catena produttiva.
+
+- **FATTO:** EVA (automazione centro estetico Vita Natura) segue un percorso parallelo all'hardware, con attività in corso su sito, prenotazioni e un pilot AI in fase di apprendimento delle logiche operative del centro estetico.

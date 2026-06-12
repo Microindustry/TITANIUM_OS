@@ -11,6 +11,14 @@ durata_min: 8
 reel_hook: "Tre settimane fa controllavo la fresatrice con sette click diversi. Adesso premo Ctrl+K e ho tutto sotto le dita: parametri CNC, log delle storieData, stato della pressa VULCAN. Non è magia, è architettura. Abbiamo risolto anche quel bug del proxy che ci mangiava tre ore di downtime al mese. Il dato che non ti aspetti? Il tempo di setup è sceso da dodici minuti a trentasei secondi. Come cambierebbe il tuo flusso di lavoro se avessi il controllo totale con una scorciatoia?"
 generated: "2026-05-27T11:32:13.899896"
 ---
+<!-- TOC -->
+
+- [Dashboard che comanda tutto: CtrlK](#dashboard-che-comanda-tutto-ctrlk)
+- [Episodio 23  CommandBar, Proxy e la Gusset Sinistra](#episodio-23-commandbar-proxy-e-la-gusset-sinistra)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # Dashboard che comanda tutto: Ctrl+K
 
@@ -104,3 +112,17 @@ La dashboard v5.1 mi mostra la catena intera in una schermata.
 ---
 
 Ordino il mandrino domani mattina, poi vado in officina.
+
+## FATTI (per il RAG)
+
+- **FATTO:** La Dashboard TITANIUM_OS raggiunge la milestone v5.1 il 27 maggio 2026, con l'aggiunta della CommandBar attivabile tramite shortcut `Ctrl+K`.
+
+- **DECISIONE:** Il proxy CORS è stato risolto con tre righe in `vite.config.ts` (`proxy: { '/api': 'http://localhost:8000' }`), eliminando il conflitto tra frontend React (porta 3000) e backend Python (porta 8000). **LOGICA:** Il bug non era codice ma configurazione mancante, tracciata in STATE.json da sessioni precedenti e mai eseguita.
+
+- **FATTO:** Il tempo di setup/ricerca operativa è sceso da 12 minuti a 36 secondi dopo l'introduzione della CommandBar.
+
+- **FATTO:** La storieData passa dalla v1 (oggetto piatto: titolo, data, testo) alla v2.0 (struttura rich con milestone, contesto, blockers attivi, percentuale completamento) su 10 episodi.
+
+- **FATTO:** Il progetto V32 (CNC epoxy-granite) è al 65% di completamento al 27 maggio 2026. Blocker attivi: mandrino 2.2kW attacco ER20 (da ordinare) e gusset sinistra (stima 3 ore officina, tubo 40x40, due giunti a T, saldatura MIG).
+
+- **FATTO:** MIMS è al 30% di completamento; il suo avanzamento è bloccato dalla fresatrice V32, e a sua volta blocca VULCAN (test polimeri sotto pressa).

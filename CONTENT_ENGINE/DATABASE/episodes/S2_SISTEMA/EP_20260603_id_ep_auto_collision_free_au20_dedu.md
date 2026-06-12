@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -163,3 +164,17 @@ Il sistema ha 6518 chunk di memoria e un LLM addestrato su di essa — ma fino a
 | **Tag** | `automazioni-notturne` `llm-locale` `rag-grounded` `portabilità` `architettura` |
 | **Co-author** | Claude Opus 4.8 |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il file `_ti_paths.bat` risolve a runtime le variabili `TI_ROOT`, `PYTHON`, `GH`, `ENV_FILE` e `MENTE_DIR`, eliminando i path hardcodati su `C:\Users\benen` (Getac). **LOGICA:** Consente al sistema di girare su macchine diverse senza modifiche ai singoli script.
+
+- **DECISIONE:** Il watchdog (`register_watchdog.ps1`) è registrato nel Task Scheduler con trigger `AtLogon`, `RunLevel Highest`, nessun limite di tempo, modalità `pythonw-safe`. **LOGICA:** Garantisce il ripristino automatico di tutte le automazioni dopo qualsiasi riavvio, senza intervento manuale.
+
+- **FATTO:** Il RAG conta 6518 chunk al 3 giugno 2026, con un incremento di +21 chunk in 24 ore rispetto al 2 giugno (da 6497). Il nodo di inferenza locale usa TinyLlama con pesi LoRA da `MODELS/titanium_llm_v1`.
+
+- **FATTO:** Il PC fisso è raggiungibile via Tailscale all'IP `100.125.152.124` e ospita RAG + CUDA + indice completamente operativo.
+
+- **DECISIONE:** `night_topics.py` genera i topic di ricerca notturna leggendo lo STATE del sistema (pilastri attivi, blocker, priorità), non con selezione casuale. **LOGICA:** La ricerca notturna risulta contestuale al milestone corrente — es. se V32 è bloccato sul raffreddamento mandrino, quella notte si cerca solo su quello.
+
+- **FATTO:** La generazione degli episodi usa `retrieve_context()` per iniettare fatti dal RAG nel prompt prima della scrittura, con gestione del filo narrativo tra episodi. Gli ID episodi sono collision-free tramite `_next_auto_index()` con deduplicazione per slug.

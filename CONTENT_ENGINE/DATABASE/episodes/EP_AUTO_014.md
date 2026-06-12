@@ -19,6 +19,7 @@ generated: "2026-05-27T11:30:14.766042"
   - [Il Bivio](#il-bivio)
   - [Connessione al Sistema](#connessione-al-sistema)
   - [Chiusura](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -80,3 +81,15 @@ Tutto si innesta.
 ## Chiusura
 
 Il sistema scrive il sistema, e io smetto di aspettare l'umore giusto.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Content Engine v2 è configurato per produrre 22 episodi al mese con un singolo comando (`python engine.py --episodes 22 --pass dual --output dataset.jsonl`), con output in formato `dataset.jsonl` (22 righe, una per episodio).
+
+- **DECISIONE:** Architettura dual-pass: modello haiku per il draft veloce (~4 secondi), modello sonnet per il secondo passaggio di struttura e coerenza. **LOGICA:** Separare generazione e revisione per non dipendere dalla disponibilità cognitiva (ADHD); il terzo passaggio umano è stimato in 10 minuti, non un'ora.
+
+- **FATTO:** Ogni riga del `dataset.jsonl` contiene i campi `topic`, `voice_score`, `revision_flag`. Il file funge anche da training data per versioni future del sistema (campioni di voce approvati).
+
+- **DECISIONE:** Il Content Engine gira dentro TITANIUM_OS con la stessa architettura React+Python del pannello macchina; l'endpoint `/api/content/generate` replica il pattern di `/api/machine/status`. **LOGICA:** Un solo sistema con due facce, non due sistemi separati.
+
+- **FATTO:** Il blocco della V32 (mandrino ER20 2.2kW non arrivato) viene registrato in `STATE.json` con i campi `"blocker_v32"` e `"task_switched"`, consentendo il riallocamento del task in corso senza perdere il contesto.

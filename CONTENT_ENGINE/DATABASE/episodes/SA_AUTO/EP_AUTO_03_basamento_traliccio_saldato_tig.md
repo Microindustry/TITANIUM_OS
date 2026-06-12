@@ -7,6 +7,7 @@
   - [ATTO II  TIG su traliccio](#atto-ii-tig-su-traliccio)
   - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -76,3 +77,17 @@ Il prossimo passo sulla V32 è la lavorazione delle superfici di appoggio e il m
 ## CHIUSURA
 
 *Il lavoro vero comincia quando smetti di progettare e inizi a misurare qualcosa che esiste.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il basamento della V32 è un traliccio saldato TIG; la scelta del TIG rispetto al MIG è motivata da maggiore controllo sul cordone, minore distorsione termica e migliore prevedibilità strutturale, a scapito della velocità di deposito.
+
+- **PRECISIONE:** L'errore di squadratura del basamento saldato artigianalmente risulta inferiore a 1 mm su una struttura con lato superiore a 800 mm, ottenuto senza posizionatore motorizzato né dima professionale.
+
+- **DECISIONE:** La sequenza di saldatura è stata pianificata esplicitamente per minimizzare le distorsioni: i giunti sono stati alternati e la geometria intermedia verificata con squadra di precisione ogni 3-4 passate.
+
+- **FATTO:** Al momento del milestone EP_AUTO_03, la V32 è alla Config G (con rinforzi) e risulta completata al 65%; il completamento del basamento segna il passaggio dalla fase progettuale alla fase di assemblaggio.
+
+- **OBIETTIVO:** Il prossimo step sulla V32 è la lavorazione delle superfici di appoggio e il montaggio delle guide lineari; i componenti sono già disponibili.
+
+- **FATTO:** GENESIS (stack AI) ha la dashboard alla versione 7, agenti attivi e RAG alla quarta iterazione al momento di questo episodio.

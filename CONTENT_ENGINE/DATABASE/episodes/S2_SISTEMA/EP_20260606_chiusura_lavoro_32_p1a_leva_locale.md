@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -120,3 +121,17 @@ Nel mezzo è nata anche una storia per bambini. Non so ancora cosa farne.
 | **Target capannone** | 15 luglio 2030 |
 | **Tag narrativo** | stato-reale, riscrittura-additiva, binario-avventura, leva-locale |
 | **Co-author AI** | Claude Opus 4.8 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Sessione #32 del 2026-06-06 ha chiuso la milestone **P1a**: la view GENESIS ora legge lo stato operativo reale delle automazioni (`model_ready`, `last_run`, `exit_code`) invece di etichette statiche scritte manualmente. **LOGICA:** La dashboard mostrava 7 automazioni "attive" di cui 3 effettivamente ferme; la riscrittura additiva dell'array AUTOMAZ (nessuna voce rimossa) ha aggiunto badge live verde/giallo/rosso basati su exit code 0 / attesa / errore.
+
+- **FATTO:** **TI_NightPush** era uscito con codice 255 a causa di `update_github_profile.py` che chiamava il binario `gh` con un path non trovato. **LOGICA:** Il fix era già committato prima della sessione #32, ma la dashboard non rifletteva lo stato corretto finché non è stata corretta la view.
+
+- **DECISIONE:** Riscrittura della view GENESIS eseguita in modalità **additiva**: nessuna voce rimossa dall'array AUTOMAZ. **LOGICA:** Preservare la complessità esistente e aggiungere la colonna di stato reale, evitando perdita di informazione tramite refactor semplificativo.
+
+- **FATTO:** Nella sessione #32 è stata accesa per la prima volta la leva locale **Ollama/Qwen** con stato `model_ready: true`. **LOGICA:** GENESIS acquisisce capacità di ragionamento locale in taverna, riducendo la dipendenza esclusiva da modelli esterni.
+
+- **OBIETTIVO:** Target capannone fissato al **15 luglio 2030** (~1500 giorni dalla data episodio). Avanzamento attuale: **V32 al 65%**, **GENESIS al 70%**.
+
+- **FATTO:** Nella stessa sessione #32 è stato lanciato il binario narrativo **P2 — AVVENTURA** (stagione AV, primo episodio *"La Bambina e la Giuntura"*, mondo educativo), con bibbia del mondo e pilota già scritti. **LOGICA:** Binario parallelo ai tecnici, non sostitutivo.

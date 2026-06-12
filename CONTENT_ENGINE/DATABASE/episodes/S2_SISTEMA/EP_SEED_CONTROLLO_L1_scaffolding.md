@@ -19,6 +19,7 @@ durata_min: 5
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -63,3 +64,15 @@ ricostruisci.
   bisogno (lei si perde come me): il sistema che ricorda al posto suo.
 
 > Approfondimento (LV1). Nessun limite di profondità.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Centro di Controllo di TITANIUM_OS nasce con l'obiettivo esplicito di esternalizzare lo stato dei nodi del progetto su uno schermo, eliminando il pedaggio mentale di ricaricare in memoria lo stato di ogni componente ad ogni accesso.
+
+- **FATTO:** Matteo identifica circa 20 nodi attivi nel sistema che, senza uno strumento di visualizzazione, devono essere tenuti contemporaneamente in memoria di lavoro.
+
+- **DECISIONE:** Il modello cognitivo adottato è lo **scaffolding cognitivo**: lo stato del sistema risiede nello strumento (stabile, non dimentica), non nella testa dell'operatore (fragile, soggetta a stanchezza). **LOGICA:** La memoria di lavoro è considerata una risorsa scarsa e costosa, ancora più critica in presenza di pattern ADHD; esternalizzare lo stato riduce il sovraccarico e l'ansia associata.
+
+- **OBIETTIVO:** Il Centro di Controllo deve funzionare anche nelle condizioni peggiori dell'operatore (turno di notte, pochissimo sonno), essendo robusto dove la memoria umana non lo è.
+
+- **FATTO:** L'episodio è classificato come approfondimento LV1 di `EP_SEED_CONTROLLO`, con episodi fratelli `EP_SEED_CONTROLLO_L1_STATOLIVE` (lo stato deve essere veritiero) e `EP_SEED_CONTROLLO_L1_CEDIBILE` (lo stato deve essere leggibile da altri operatori).

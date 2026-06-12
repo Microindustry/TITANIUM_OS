@@ -7,6 +7,7 @@
   - [ATTO II  torch.cuda.is_available()  True](#atto-ii-torchcudaisavailable-true)
   - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -114,3 +115,17 @@ Il prossimo passo concreto è semplice: preparare i primi cinquanta esempi del d
 *Quando costruisci un sistema, i momenti che contano non sono sempre quelli che sembrano grandi. A volte è due righe di Python e una parola: True. Poi sai dove sei, e puoi andare avanti.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** La GTX 1070 8GB installata sul PC fisso in taverna è operativa con CUDA 12.4 e torch 2.6.0+cu124: `torch.cuda.is_available()` restituisce `True`, `torch.cuda.get_device_name(0)` restituisce `NVIDIA GeForce GTX 1070`.
+
+- **FATTO:** Il test matriciale `torch.mm` su tensori 1000×1000 è stato eseguito correttamente su GPU senza fallback CPU, confermando che il calcolo tensoriale è disponibile per GENESIS.
+
+- **DECISIONE:** Per il fine-tuning LoRA locale di GENESIS viene usato il PC fisso con GTX 1070 (GPU) invece del percorso CPU-only. **LOGICA:** Su GPU anche una 1070 riduce il tempo di fine-tuning da ore a minuti rispetto alla CPU, rendendo le iterazioni praticamente fattibili.
+
+- **FATTO:** Con 8GB di VRAM e quantizzazione a 4-bit, i modelli target compatibili per inferenza e fine-tuning LoRA sono nella fascia 7B: Mistral 7B, LLaMA 3.1 8B (quantizzazione aggressiva), Qwen2.5 7B.
+
+- **FATTO:** LLaMA-Factory versione 0.9.2 è la release documentata nell'archivio di Matteo per Windows 10/11 con supporto LoRA; con CUDA operativa viene usato il backend GPU al posto del workaround CPU-only (thread GitHub #7733).
+
+- **FATTO:** Il paper arXiv:2507.01806 (*"LoRA Fine-Tuning Without GPUs"*, luglio 2025) è stato valutato e scartato come percorso principale per GENESIS, essendo rilevante solo in assenza di GPU disponibile.

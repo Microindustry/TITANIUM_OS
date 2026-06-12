@@ -8,6 +8,7 @@
   - [ATTO II  Il documento che non sapevo di dover scrivere](#atto-ii-il-documento-che-non-sapevo-di-dover-scrivere)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -87,3 +88,17 @@ Il documento è parte del modulo IDENTITY, che è al 45%. Ma ha spostato qualcos
 *"Non basta sapere che funziona. Devi sapere perché funziona, dove si ferma, e cosa succede dopo."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il documento `CLAUDE_CAPABILITIES_TITANIUM.md` è stato creato il 28 maggio 2026 come profilo ufficiale delle capacità di Claude all'interno dell'ecosistema TITANIUM_OS. **LOGICA:** Fornire uno "zero comune" di riferimento per tutti i componenti del sistema invece di lasciare che ogni agente interpretasse autonomamente il ruolo dell'AI.
+
+- **FATTO:** Al momento della creazione del documento, GENESIS era alla versione 1.3 con dashboard v7.0, Story Agent attivo e RAG alla versione 4.0. **LOGICA:** Questi erano i componenti operativi già attivi intorno a Claude al momento della formalizzazione del profilo.
+
+- **FATTO:** V32 era al 65% di completamento in configurazione Config G, con i rinforzi strutturali in fase di completamento. **LOGICA:** Stato di avanzamento di V32 al 28 maggio 2026, rilevante per contestualizzare il momento della milestone.
+
+- **DECISIONE:** Il profilo operativo di Claude per EVA (Vita Natura) è stato documentato separatamente rispetto ai sottomoduli tecnici come V32/VULCAN. **LOGICA:** Il contesto estetico richiede un profilo di interazione orientato alle persone, non alle tolleranze meccaniche, pur usando le stesse capacità sottostanti.
+
+- **FATTO:** Il modulo IDENTITY risulta al 45% di completamento al momento della creazione del documento. **LOGICA:** `CLAUDE_CAPABILITIES_TITANIUM.md` è classificato come parte del modulo IDENTITY e la sua creazione ha influenzato la visione del restante 55% da completare.
+
+- **FATTO:** Le limitazioni documentate di Claude in TITANIUM_OS includono: nessuna memoria persistente nativa tra sessioni, nessun accesso diretto ai sensori in tempo reale senza layer intermedio, necessità di contesto esplicito a ogni reset del thread. **LOGICA:** Queste limitazioni definiscono i confini architetturali entro cui progettare i flussi di integrazione AI nel sistema.

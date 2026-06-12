@@ -8,6 +8,7 @@
   - [ATTO II  Quattro tool, un sistema](#atto-ii-quattro-tool-un-sistema)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,17 @@ V32 è ancora al 65% perché mancano pezzi fisici — quelli non li installo da 
 ## CHIUSURA
 
 *Le fondamenta non si vedono quando l'edificio è in piedi. Si vedono quando trema.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Stack di sviluppo TITANIUM_OS su Windows: Python 3.11.9 installato in `C:\Users\benen\tools\python311\python.exe`, con dipendenze `mcp 1.27.1` e `anthropic 0.104.1`.
+
+- **DECISIONE:** Versione `anthropic 0.104.1` scelta perché supporta i tool use aggiornati necessari a EVA per le chiamate strutturate sui dati di Vita Natura. **LOGICA:** Senza quella versione SDK, le chiamate strutturate di EVA non funzionano.
+
+- **FATTO:** Node.js versione 22 installato; stack frontend: TypeScript + React + Zustand (state management) + Tailwind CSS, usato per l'interfaccia di GENESIS.
+
+- **FATTO:** `gh` CLI versione 2.92 installato per gestione GitHub integrata da terminale (issue, pull request, release). Il tag v3.0.0 era già stato pushato alla sessione precedente.
+
+- **FATTO:** Tailscale installato come mesh network cifrata basata su WireGuard, per connettere i dispositivi di sviluppo in rete privata senza esporre porte pubbliche — prerequisito per la comunicazione tra GENESIS e il server EVA di Vita Natura.
+
+- **OBIETTIVO:** Avanzamento aree TITANIUM_OS al momento dell'episodio: V32 65%, GENESIS 70%, EVA/Vita Natura 40%, MIMS 30%, IDENTITY 50%.

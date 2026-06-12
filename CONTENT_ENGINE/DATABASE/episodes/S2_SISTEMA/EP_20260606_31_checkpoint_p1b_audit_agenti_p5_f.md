@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -175,3 +176,15 @@ GENESIS ha 7 agenti nel roster. 2 non servono ancora — rimossi. 2 non esistono
 | **Target capannone** | 15 luglio 2030 |
 | **Tag narrativo** | audit · autonomia · confini · onestà tecnica |
 | **Angolo scelto** | L'audit degli agenti come atto di onestà verso sé stessi |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Gli agenti AQUA (gestione idrica/ambientale capannone) e PLC (integrazione PLC industriali) sono stati marcati **fuori scope** e rimossi dalla lista attiva di GENESIS perché riferiti al capannone futuro (orizzonte 2030), non all'attuale setup taverna da 12 m² con V32 ancora senza assi in movimento.
+
+- **FATTO:** Gli agenti AVA e NEXUS risultano **mancanti** nel roster di GENESIS — citati in vecchi documenti di architettura ma mai implementati né definiti con precisione. L'audit P5 li ha portati in superficie e nominati come buchi noti.
+
+- **DECISIONE:** La vista "cartella clinica" della dashboard GENESIS è stata migrata da un file statico (`criticheData.ts`, aggiornato a mano) a una **pipeline live** (milestone P1b): le critiche vengono ora estratte automaticamente dal self-audit di GENESIS in tempo reale, senza commit manuali. **LOGICA:** Un file aggiornato manualmente produce ritardi e dimenticanze; la pipeline garantisce che la dashboard rifletta lo stato percepito dal sistema, non la memoria dell'operatore.
+
+- **FATTO:** Il fix `fix(llm-local): opener senza proxy per le chiamate a Ollama localhost` risolve un conflitto tra le variabili d'ambiente `HTTP_PROXY`/`HTTPS_PROXY` presenti nel sistema Windows di Matteo e le chiamate Flask→Ollama su `localhost:11434`. La soluzione è un `opener` custom Python che bypassa il proxy per le chiamate locali.
+
+- **FATTO:** Lo stato operativo di GENESIS è tracciato nel file `story_state.json` (memoria operativa, non documentazione), aggiornato a fine sessione con il campo `next_step`. Alla sessione #31 la prima voce aperta è la scelta del modello Ollama da usare per la leva LLM locale (milestone P4b già accesa).

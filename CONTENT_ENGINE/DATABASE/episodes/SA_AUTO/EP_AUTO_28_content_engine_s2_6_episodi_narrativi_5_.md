@@ -8,6 +8,7 @@
   - [ATTO II  Il Content Engine entra in funzione](#atto-ii-il-content-engine-entra-in-funzione)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -81,3 +82,15 @@ Il prossimo episodio è già scritto nella testa. Config G finisce. O non finisc
 ## CHIUSURA
 
 *"Sessantatré giorni non erano persi. Erano solo in attesa di qualcuno che li recuperasse. Quel qualcuno dovevo essere io — e finalmente ho costruito lo strumento per farlo."*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Content Engine S2 è composto da 6 episodi narrativi lunghi, 5 MOMENTI intermezzo (formato ~15 minuti, tema singolo) e 8 episodi di backfill, per un totale di 19 unità di contenuto prodotte in questa milestone.
+
+- **FATTO:** Il backfill copre 63 giorni di lavoro documentato in frammenti (note vocali, log, file di progetto) mai convertito in formato narrativo prima di questa milestone (29 Mag 2026).
+
+- **DECISIONE:** GENESIS/Story Agent viene usato come scaffolding narrativo (analisi log, note, file di progetto → struttura episodica), ma la scrittura finale rimane a Matteo. **LOGICA:** Separare il recupero strutturale automatico dalla voce narrativa umana.
+
+- **FATTO:** Stato avanzamento progetti al momento della milestone: V32 Config G con rinforzi struttura al 65%; EVA in pilota su Vita Natura al 40%; GENESIS dashboard v7.0, RAG alla 4ª iterazione; MIMS in attesa che la catena V32-VULCAN sia operativa.
+
+- **DECISIONE:** Il Content Engine è classificato come componente interno di TITANIUM_OS, non come progetto di comunicazione parallelo. **LOGICA:** La narrazione continua serve anche come sistema di controllo interno — il backfill ha rivelato 3 assunzioni su MIMS identificate come rimandamenti non come decisioni reali.

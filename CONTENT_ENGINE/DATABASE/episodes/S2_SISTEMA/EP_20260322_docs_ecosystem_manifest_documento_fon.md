@@ -195,3 +195,15 @@ Il sistema ora si ricorda di se stesso.
 
 ```
 Ho 8 sessioni di lavoro nel RAG e ogni volta che riap
+
+## FATTI (per il RAG)
+
+- **FATTO:** GENESIS/TITANIUM_OS ha raggiunto 150 chunk nel RAG distribuiti su 8 sessioni di lavoro alla data del 22 marzo 2026.
+
+- **DECISIONE:** Creato ECOSYSTEM_MANIFEST come documento di identità del sistema — distinto dal README (che spiega l'installazione) — con lo scopo di documentare perché esistono le feature e come i layer si tengono insieme. **LOGICA:** Ogni sessione di riavvio richiedeva ricostruzione manuale del contesto; il MANIFEST risolve la perdita di identità sistemica tra sessioni.
+
+- **FATTO:** L'architettura a layer di TITANIUM_OS è: V32 (macchina fisica, 178 kg di Epoxy Granite, taverna 12 m²) → MIMS (tiles 190×190 mm in PA-GF30) → GENESIS (RAG, API, agenti, dashboard React) → TITANIUM_OS (sistema operativo per microindustria mono-persona).
+
+- **DECISIONE:** Lo skill `/genera-episodio` usa un dual-pass: prima Claude Haiku (struttura grezza, veloce, economico), poi Claude Sonnet (narrativa finale, preciso). **LOGICA:** Pattern draft-then-refine applicato ai modelli language con trigger preciso, template XML e few-shot examples dal dataset di episodi S1.
+
+- **FATTO:** Il file `RIAVVIO_SESSIONE.txt` viene rigenerato a ogni apertura di sessione con timestamp, stato git, commit sporchi e numero di chunk nel RAG. Lo stato "dirty" indica lavoro in corso non committato, condizione definita permanente.

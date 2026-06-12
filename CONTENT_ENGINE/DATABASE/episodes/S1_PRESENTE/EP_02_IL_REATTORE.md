@@ -9,6 +9,7 @@
   - [ATTO IV  IL CERVELLO](#atto-iv-il-cervello)
   - [ATTO V  IL NUMERO](#atto-v-il-numero)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -164,3 +165,17 @@ Parti da dove sei. Costruisci abbastanza da costruire qualcosa di meglio.
 > Se sembra un loop chiuso senza uscita, è perché cerchi l'inizio nel posto sbagliato.
 
 *Continua in EP_03 — Il Paradosso*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il basamento della Titanium V32 è un sandwich ibrido acciaio/Epoxy Granite con frequenza naturale f₀ = 3.83 Hz, smorzamento ζ = 0.032 e rigidità sull'asse Z 772 volte superiore alla configurazione baseline.
+
+- **DECISIONE:** Upgrade delle molle di isolamento da molle verdi 40mm a molle gialle ISO 90mm (costante k = 15.8 N/mm, frequenza di risonanza 3.83 Hz), disposta su 4 punti. **LOGICA:** I test con sensori IFM VSE150 (3 sensori) hanno dimostrato un delta di smorzamento significativo a favore delle gialle 90mm rispetto alle verdi 40mm.
+
+- **FATTO:** La struttura portante comprende 9 piastre d'acciaio rettificato da 15mm di spessore (più 2 aggiuntive per il sandwich XY), traliccio tubolare 40x40x2 saldato TIG, profili alluminio 90x45 a 6 cave (asse Y) e 45x45 a 4 cave (asse X).
+
+- **FATTO:** L'interfaccia XY/basamento è realizzata tramite 8 Custodi — pezzi lavorati CNC con scalino e foro D26, abbinati a bronzine CuSn8 e barre rettificate D20 — disposti 4 superiori + 4 inferiori in geometria simmetrica.
+
+- **DECISIONE:** Il controllo macchina è affidato a un PLC Siemens S7-314C con ciclo di scansione deterministico di 0.1ms, interfacciato con HMI TP900 Comfort via PROFIBUS DP. **LOGICA:** Garantisce determinismo del segnale, diagnostica integrata per sensori e scalabilità verso altri sottosistemi (pressa MIMS, automazione capannone).
+
+- **FATTO:** La V32 monta 3 encoder, 2 assi servo, 1 asse stepper (Y), sensori IFM VSE150 per vibrazioni in tempo reale e camera Basler per controllo qualità visivo.

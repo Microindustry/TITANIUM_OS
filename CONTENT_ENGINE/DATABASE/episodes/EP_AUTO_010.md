@@ -10,6 +10,14 @@ status: "ready"
 durata_min: 8
 generated: "2026-03-22T18:26:01.175771"
 ---
+<!-- TOC -->
+
+- [Fondamenta dacciaio TIG](#fondamenta-dacciaio-tig)
+- [V32 Build Log  Ep. 07: Basamento Traliccio](#v32-build-log-ep-07-basamento-traliccio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # Fondamenta d'acciaio TIG
 
@@ -58,3 +66,17 @@ EVA ha già mandato un reminder a Maria: "Matteo stasera non cena, è in officin
 ---
 
 Il traliccio non è bello. È rigido.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il basamento traliccio V32 è costruito con profili in acciaio S355, sezione 60x60x4mm; i nodi sono rinforzati con gusset triangolari 150x150x6mm in S355.
+
+- **DECISIONE:** Saldatura TIG eseguita a 95A con tungsteno da 2.4mm e bacchetta ER70S-6 da 1.6mm; punti di tack a 60A, tre punti distanziati 80mm, tolleranza angolare accettata a 0.1mm. **LOGICA:** Garantire allineamento geometrico prima della passata di radice e riempimento.
+
+- **FATTO:** Simulazione FEM in FreeCAD (carico puntuale 500N, vincoli fissi ai 4 piedini): deformazione massima nel nodo critico senza gusset = 0.31mm; con gusset = 0.07mm. Tolleranza di lavoro V32 = ±0.019mm.
+
+- **FATTO:** Il portale Y pesa 47kg, si muove con accelerazioni fino a 800mm/s² e il basamento deve sostenere un peso complessivo macchina di 178kg.
+
+- **DECISIONE:** Il primo componente fisico tracciato in TITANIUM_OS è la gusset sinistra, ID `STR-GUS-L-001`, aggiornata via CLI con stato `welded`; la Config G risulta `partial_complete` per blocker attivo: mancanza mandrino 2.2kW ER20 (stima consegna 8-10 giorni, stima completamento post-sblocco 3 ore).
+
+- **PRECISIONE:** Gas argon utilizzato alla portata di 12 l/min durante la saldatura TIG del basamento.

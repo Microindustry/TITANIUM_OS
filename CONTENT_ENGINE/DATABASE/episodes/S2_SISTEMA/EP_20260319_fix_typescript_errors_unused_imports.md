@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -204,3 +205,15 @@ partirà esattamente da qui. →
 | **Tono** | Tecnico / riflessivo — zero retorica |
 | **Durata stimata lettura** | ~7 min |
 | **Prossimo step narrativo** | Config G: saldatura gusset 200mm colonna Z sinistra |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il commit `5a9d2d7` rimuove importazioni TypeScript inutilizzate (`CheckCircle`, `Clock`, `Wrench`) dalla vista `AutomationsView`, corregge null check mancante in un componente Layout e rimuove attributi duplicati. **LOGICA:** Pulizia preventiva del codice prima che errori silenti causino comportamenti inattesi in produzione.
+
+- **DECISIONE:** I workflow GitHub Actions `profile-sync`, `dashboard-ci` e `state-episodes` vengono aggiornati con il trigger `workflow_dispatch`. **LOGICA:** Ridurre il tempo di test da ~3 minuti (commit vuoto + push + attesa) a ~30 secondi (avvio manuale da browser), mantenendo il controllo umano quando necessario.
+
+- **FATTO:** `state-episodes` è il workflow che legge `STATE.json`, produce il file di riavvio della sessione AI e tiene traccia degli episodi. **LOGICA:** È il meccanismo core della continuità cognitiva di GENESIS tra sessioni.
+
+- **FATTO:** Il README del profilo GitHub viene portato alla versione 3.2 con timeline evolutiva di TITANIUM_OS e tabella progetti. **LOGICA:** Funzione di documentazione esterna automaticamente aggiornata, non solo comunicazione pubblica.
+
+- **PRECISIONE:** Stato progetti al momento del commit: V32 in Config G, MIMS in sviluppo, GENESIS a sessione #8 con 150 chunk nel RAG, EVA attiva per il centro estetico di Maria.

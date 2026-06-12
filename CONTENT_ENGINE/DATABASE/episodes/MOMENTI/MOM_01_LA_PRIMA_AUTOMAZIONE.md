@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [MOMENTO  La Prima Automazione](#momento-la-prima-automazione)
+    - [Il sistema che scrive sé stesso](#il-sistema-che-scrive-sé-stesso)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # MOMENTO — La Prima Automazione
 ### "Il sistema che scrive sé stesso"
 
@@ -25,3 +33,15 @@ Non stai solo documentando il progetto. Stai costruendo il dataset che addestrer
 
 ---
 *Stagione: S1.5 — Il Gap | Posizione: dopo S1_05, prima S2_00*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il Content Engine v2 usa una pipeline dual-pass: Claude Haiku genera la prima bozza, Claude Sonnet esegue il raffinamento, producendo un file markdown completo con `reel_hook` incluso.
+
+- **FATTO:** Lo script `milestone_to_episode.py` legge i milestone da `STATE.json`, costruisce un prompt XML con few-shot examples e chiama i due modelli in sequenza.
+
+- **FATTO:** Il 22 marzo 2026, in una singola sessione, vengono generati 22 episodi podcast da 22 milestone già presenti in `STATE.json`.
+
+- **FATTO:** Ogni episodio generato aggiunge un esempio al file `dataset.jsonl`, il dataset di training per il LLM personale di Matteo. Quella sessione ha aggiunto 22 esempi.
+
+- **OBIETTIVO:** Il loop progettuale del Content Engine è: costruisci milestone verificato → aggiunta a STATE.json → generazione automatica episodio → alimentazione dataset di training → modello migliora per il progetto successivo.

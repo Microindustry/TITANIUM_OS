@@ -8,6 +8,7 @@
   - [ATTO III  IL NUMERO MAGICO](#atto-iii-il-numero-magico)
   - [ATTO IV  LASIMMETRIA](#atto-iv-lasimmetria)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -163,3 +164,17 @@ E le prove sono: una piastra fresata H7, quattro molle gialle che non oscillano,
 - *"Il corpo indistruttibile + il cervello del cliente" → eco EP_02 (V32 come reattore, non prodotto)*
 - *"Non chiedi fiducia, mostri prove" → il calibro di EP_00 e EP_02*
 - *"La struttura lavora per te dopo il gomito" → eco EP_05 (EVA revenue automatica, V32 che fresa di notte)*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Costo di produzione unitario del connettore MIMS per fusione = €2,50. Prezzo di vendita = €12,00. Margine lordo unitario = €9,50. Margine percentuale = 79%.
+
+- **FATTO:** Tempo ciclo per fusione = 45 secondi per pezzo, contro 20-30 minuti di lavorazione tradizionale (fresatura/tornitura). La fusione elimina lo sfrido: si inietta solo il materiale necessario.
+
+- **FATTO:** Costo stampo industriale = €15.000. Specifiche: acciaio temperato HRC 50+, lavorato con elettroerosione, certificato per 100.000+ cicli senza manutenzione.
+
+- **DECISIONE:** Break-even dello stampo = 1.578 pezzi (calcolo: €15.000 ÷ €9,50). Dal pezzo 1.579 in poi ogni ciclo genera €9,50 di profitto netto (stampo già ammortizzato). **LOGICA:** La soglia è considerata raggiungibile con un singolo ordine pilota da distributore o ~3 mesi di produzione continua.
+
+- **FATTO:** BOM della V32 = ~€4.800. Asset recuperato dichiarato = €11.749. ROI dichiarato anno 1 = 322%. BEP = 61 ore di lavoro fatturate.
+
+- **FATTO:** Prezzo di acquisto V32 completa per il cliente (meccanica da Matteo + elettronica separata) = €8.000-10.000, contro €30.000-50.000 di un equivalente industriale entry-level. ROI stimato per il cliente = meno di 6 mesi.

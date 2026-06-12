@@ -8,6 +8,7 @@
   - [ATTO I  Prima del documento, cera il rumore](#atto-i-prima-del-documento-cera-il-rumore)
   - [ATTO II  Il giorno in cui ho unificato tutto](#atto-ii-il-giorno-in-cui-ho-unificato-tutto)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -82,3 +83,15 @@ Seconda: GENESIS diventa il motore di lettura del sistema. Il RAG v4.0 può ora 
 Terza: posso parlare di TITANIUM_OS a qualcuno che non sa niente di V32 o VULCAN e portarlo a capire in cinque minuti. Questo vale per un potenziale partner, per un investitore, per un cliente di VITA NATURA che vuole capire chi c'è dietro EVA. La chiarezza esterna comincia sempre dalla chiarezza interna.
 
 Non sono al traguardo. V32 è al sessantacinque percento e i rinforzi della Config G sono il lavoro dei prossimi mesi. VULCAN aspetta. MIMS aspetta VULCAN. C'è ancora molta strada. Ma adesso quella strada ha
+
+## FATTI (per il RAG)
+
+- **FATTO:** ASSOLUTO V7 è il documento master unificato di TITANIUM_OS, creato il 27 maggio 2026, strutturato in 10 ATTI che coprono tutti i componenti del progetto.
+
+- **FATTO:** Lo stato di avanzamento al momento della milestone è: V32 (Config G, rinforzi strutturali) al 65%, GENESIS (dashboard v7.0, Story Agent attivo, RAG v4.0) al 78%, EVA/VITA NATURA (sito attivo, pilot in corso) al 40%, IDENTITY al 45%.
+
+- **DECISIONE:** MIMS è in attesa deliberata — il design è completo ma il componente non avanza fino al completamento di V32 e VULCAN. **LOGICA:** dipendenza tecnica esplicita, non blocco progettuale.
+
+- **DECISIONE:** GENESIS è identificato come il componente più maturo e candidato a trainare gli altri. **LOGICA:** RAG v4.0 può indicizzare ASSOLUTO V7 come fonte primaria, unificando il contesto per tutti gli agenti incluso lo Story Agent.
+
+- **OBIETTIVO:** Con ASSOLUTO V7 ogni sessione di lavoro parte dal documento master per orientare le priorità strategiche, eliminando l'effetto "urgenza casuale" (lavorare su ciò che urla più forte invece di ciò che è prioritario).

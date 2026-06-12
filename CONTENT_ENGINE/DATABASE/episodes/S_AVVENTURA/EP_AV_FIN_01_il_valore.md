@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, finanza, soldi, valore, scamb
   - [ATTO II  LAVORO CONSERVATO](#atto-ii-lavoro-conservato)
   - [ATTO III  LA FIDUCIA DI TUTTI](#atto-iii-la-fiducia-di-tutti)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -145,3 +146,15 @@ qualcuno, in una forma che puoi scambiare. Ecco cosa sono davvero i soldi.*
 **3 strati:** bambino = dal baratto difficile alla moneta che tutti accettano · curioso = "il denaro è mezzo di scambio + riserva di valore" · esperto/papà = risolve la doppia coincidenza dei bisogni; il valore sta nel lavoro e nella fiducia condivisa, non nel metallo.
 **Aggancio reale:** la regola 9 del sistema (reinvesti il margine) nasce da qui; tono "da bravo papà" (§0-bis). Verticale Finanza, prima Pietra.
 **Open loop → ₣2 (Spendere meno di quanto entra):** non conta solo quanto guadagni, ma quanto **tieni** — il vasetto che cresce.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_FIN_01 appartiene alla verticale Finanza del progetto TITANIUM_OS (non alla verticale Tech/IA), classificato come formato "Avventura educativa" con durata stimata 7-9 minuti, rivolto a bambini e adulti curiosi.
+
+- **FATTO:** I personaggi attivi in questo episodio sono Nina e THEMIS; Nina è identificata nel canone come "MIMS per la mente" (riferimento a BIBBIA_DEL_MONDO.md §0-bis/§0-ter).
+
+- **OBIETTIVO:** L'episodio insegna che il denaro ha due componenti definite esplicitamente: **lavoro conservato** + **promessa/fiducia condivisa**; tolto uno dei due, la moneta è solo un dischetto di metallo.
+
+- **FATTO:** Il problema economico illustrato è la "doppia coincidenza dei bisogni" propria del baratto: richiede tre scambi nell'ordine giusto; il denaro lo risolve riducendo a due scambi semplici tramite un mezzo di scambio universale.
+
+- **FATTO:** L'episodio appartiene alla Regione ₣1 IL VALORE del canone di mondo, stagione AV, e termina con un gancio narrativo esplicito alla prossima avventura (tema: differenza tra quanto si guadagna e quanto si trattiene).

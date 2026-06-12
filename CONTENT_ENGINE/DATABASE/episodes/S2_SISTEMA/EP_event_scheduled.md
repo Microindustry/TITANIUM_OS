@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -167,3 +168,15 @@ Qualcuno è tornato.
 | **Target capannone** | 15 luglio 2030 |
 | **Tono** | autonomia · resilienza · silenzio produttivo |
 | **Tag SEO** | watchdog · exit255 · ollama · genesis · automazione · narrativa generativa |
+
+## FATTI (per il RAG)
+
+- **FATTO:** `TI_NightPush` è il task notturno che sincronizza lo stato di GENESIS su GitHub tramite commit automatico. **LOGICA:** Funge da firma digitale giornaliera dello stato di avanzamento del progetto.
+
+- **DECISIONE:** Il path di `gh` (GitHub CLI) viene risolto dinamicamente a runtime invece di essere hardcoded. **LOGICA:** Il contesto di esecuzione notturna (fuori da shell interattiva) non carica le variabili d'ambiente e il PATH come il contesto utente manuale, causava EXIT CODE 255 (command not found).
+
+- **FATTO:** `watchdog.py` è configurato come loop persistente avviato tramite task AtLogon di Windows (prima del caricamento della GUI). **LOGICA:** Il ciclo batte ogni 90 secondi; un LastRun vecchio nel task scheduler indica corretto funzionamento persistente, non un'anomalia.
+
+- **FATTO:** L'API server di GENESIS risponde sulla porta **5001**. La supervisione dei processi critici è affidata al componente `mente_watcher`.
+
+- **FATTO:** Il modello AI locale usato in GENESIS è **Ollama/Qwen**, con stato `model_ready=true`, utilizzato anche per generazione narrativa nel sotto-progetto `P2_adventure`.

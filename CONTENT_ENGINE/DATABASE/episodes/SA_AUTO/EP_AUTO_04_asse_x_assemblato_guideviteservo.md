@@ -8,6 +8,7 @@
   - [ATTO II  Guide, vite, servo](#atto-ii-guide-vite-servo)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,11 @@ Io torno in officina. Y non si assembla da solo.
 *"La macchina non ti chiede se ci credi. Ti chiede se sei in officina."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** La V32 è una fresatrice CNC a tre assi con struttura in epoxy-granite, configurazione "Config G" con rinforzi strutturali al 65%.
+- **DECISIONE:** L'asse X della V32 è composto da tre componenti principali: guide lineari profilate, vite a ricircolo di sfere con precarico, e servomotore. **LOGICA:** I tre elementi devono dialogare con precisione: le guide definiscono il piano di scorrimento, la vite converte moto rotativo in traslazione lineare, il servo esegue e conferma il comando.
+- **DECISIONE:** Il servomotore è stato dimensionato con margine calcolato sui cicli reali della V32, non sovradimensionato per sicurezza emotiva. **LOGICA:** Ottimizzazione basata su utilizzo reale previsto, non su buffer conservativi arbitrari.
+- **FATTO:** Il milestone EP_AUTO_04 certifica l'asse X assemblato e testato con primo movimento manuale (andata e ritorno) senza vibrazioni, cigolii o strattoni sulla struttura Config G.
+- **OBIETTIVO:** L'operatività della catena V32-VULCAN è prerequisito per avanzare MIMS oltre il 30% di completamento.

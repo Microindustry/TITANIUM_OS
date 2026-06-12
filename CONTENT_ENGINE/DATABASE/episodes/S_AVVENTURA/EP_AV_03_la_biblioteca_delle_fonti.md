@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, rag, ricerca, fonti, memoria
   - [ATTO II  CERCARE PER SIGNIFICATO, NON PER PAROLA](#atto-ii-cercare-per-significato-non-per-parola)
   - [ATTO III  I TRE FOGLI E IL DITO CHE INDICA](#atto-iii-i-tre-fogli-e-il-dito-che-indica)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -166,3 +167,15 @@ una cosa sicurissima, chiedi "da dove lo sai?". Se sa puntare il dito su un fogl
 **3 strati:** bambino = l'amico bugiardo a cui dai i fogli veri e che ora deve mostrare da dove · curioso = "questo si chiama RAG: recupero + risposta con le fonti; cercare per *significato* non per parola" · esperto/papà = MENTE RAG reale: ricerca semantica (ChromaDB) **+** keyword (BM25) fuse insieme, reranker che riordina i top, risposta citata; ~6.5k chunk indicizzati, e cresce in modo incrementale.
 **Aggancio reale:** EP_T05 "Il Sistema Pensa" · EP_T04 "SINAPSI" · EP_AUTO_26 "RAG v4.0" (BM25+semantico+CrossEncoder, RRF) · il nodo MENTE_RAG su GPU.
 **Open loop → Regione 5 (la Wiki / il grafo):** i fogli si parlano tra loro; vedere non i fogli ma **i fili che li legano** — la Grande Mappa.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_03 è la tappa 4 di 7 dell'arco narrativo "storia dell'IA" nel progetto TITANIUM_OS, ambientato nella Regione 4 della mappa avventura.
+
+- **FATTO:** Il RAG (Retrieval-Augmented Generation) è descritto nel canone TITANIUM_OS come un sistema a due componenti obbligatorie: (1) recupero dei fogli/documenti pertinenti dalla Biblioteca, (2) obbligo per la Mente di citare la fonte (il foglio specifico) per ogni risposta fornita.
+
+- **DECISIONE:** La ricerca nella Biblioteca usa **due modalità combinate**: ricerca per significato (semantica) e ricerca per parola esatta (termine/codice preciso), con un terzo passo di riordino per tenere solo i risultati più pertinenti. **LOGICA:** la sola ricerca semantica non basta quando contano nomi, misure o codici esatti.
+
+- **FATTO:** Il vincolo operativo imposto alla Mente nel RAG è: rispondere *solo* guardando i fogli forniti (tipicamente tre), e dichiarare "non lo so" se l'informazione non è presente nei fogli — togliendo il permesso di indovinare o rispondere a memoria.
+
+- **FATTO:** Questo episodio si collega canonicamente a EP_T05 "Il Sistema Pensa" e a EP_AUTO_26 "RAG v4.0", che rappresentano la versione tecnica reale del concetto narrativo esposto qui.

@@ -11,6 +11,14 @@ durata_min: 8
 reel_hook: "Tre progetti diversi: una fresatrice, un software di gestione, un bot WhatsApp. Io ricomincio da zero ogni volta, tre volte lo stesso lavoro. Poi ho centralizzato tutto in rules, skills portabili e settings.json condivisi. Una sola volta scrivo bene, infinite volte lo riuso. Non è solo velocità, è moltiplicare quello che funziona senza riscrivere. Vuoi sapere qual è stata la prima skill che mi ha salvato il tempo?"
 generated: "2026-05-27T11:30:42.781587"
 ---
+<!-- TOC -->
+
+- [Portabilità delle skill: il framework invisibile](#portabilità-delle-skill-il-framework-invisibile)
+- [Config G e il terminale alle 23:00](#config-g-e-il-terminale-alle-2300)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # Portabilità delle skill: il framework invisibile
 
@@ -78,3 +86,17 @@ Per VULCAN: le ricette polimeri sono in `rules/vulcan.md`. Pressione, temperatur
 ---
 
 Il contesto non si perde più se lo scrivi prima di chiudere il terminale.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Claude Code vedeva file irrilevanti (`node_modules/`, `.pyc`, dump di STATE.json) causando perdita di contesto tra sessioni; soluzione adottata: file `.claudeignore` per escluderli.
+
+- **DECISIONE:** Creare directory `rules/` con file markdown per progetto (`v32.md`, `titanium_os.md`, `workflow.md`, `mims.md`, `vulcan.md`) come layer di contesto persistente portabile tra sessioni e macchine. **LOGICA:** Evitare di ricostruire il brief manualmente ad ogni sessione, particolarmente critico con ADHD.
+
+- **FATTO:** `settings.json` definisce directory attiva, progetto corrente e file STATE da leggere per primo all'avvio di Claude Code.
+
+- **FATTO:** TITANIUM_OS legge STATE.json ad ogni avvio; con questa configurazione Claude Code legge `rules/` allo stesso modo — i due layer condividono la stessa convenzione di inizializzazione.
+
+- **PRECISIONE:** Episodio connettori MIMS: pin a passo 2.54mm, tolleranza ±0.05mm — sessione persa perché Claude rigenerò un file già esistente fuori dal contesto attivo.
+
+- **STATO:** Config G (V32) al 65% alla data dell'episodio (26 marzo 2026); gusset sinistra come prossimo pezzo; materiale S235; giunto anteriore già fit-check superato.

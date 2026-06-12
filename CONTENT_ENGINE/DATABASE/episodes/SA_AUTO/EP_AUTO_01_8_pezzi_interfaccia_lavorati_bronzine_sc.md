@@ -9,6 +9,7 @@
   - [ATTO II  Il momento in officina](#atto-ii-il-momento-in-officina)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -91,3 +92,15 @@ Otto pezzi. Bronzine e scalini. La distanza tra l'idea e l'oggetto si accorcia o
 *"La precisione non è perfezionismo. È rispetto per quello che verrà dopo."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** V32 è una fresatrice CNC a tre assi costruita da zero, attualmente alla configurazione G (settima iterazione progettuale), con avanzamento complessivo al 65%.
+
+- **FATTO:** Sono stati lavorati 8 pezzi di interfaccia per V32: bronzine (in bronzo, con tolleranze strette per accoppiamento controllato con gli alberi) e scalini (riferimenti geometrici per il posizionamento reciproco degli assi), tutti verificati con micrometro e tutti entro tolleranza.
+
+- **DECISIONE:** Le bronzine sono state realizzate in bronzo con tolleranze strette per garantire accoppiamento né troppo stretto (blocco) né troppo largo (perdita di precisione). **LOGICA:** Il bronzo segnala immediatamente gli errori di lavorazione e non ammette deroghe sul range di misura.
+
+- **FATTO:** La catena produttiva fisica del progetto è V32 → VULCAN → MIMS: V32 produce componenti metallici, VULCAN lavora polimeri, MIMS gestisce la connessione modulare. Senza V32 operativa, la catena esiste solo sulla carta.
+
+- **FATTO:** Al momento dell'episodio, GENESIS è alla Dashboard v7.0 con Story Agent attivo e RAG alla quarta versione; il sistema di gestione e automazione risulta al 78% di avanzamento, il più avanzato tra i sottoprogetti.

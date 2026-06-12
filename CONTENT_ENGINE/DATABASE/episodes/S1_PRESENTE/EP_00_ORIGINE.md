@@ -8,6 +8,7 @@
   - [ATTO III  LA SCINTILLA](#atto-iii-la-scintilla)
   - [ATTO IV  LA DOMANDA GIUSTA](#atto-iv-la-domanda-giusta)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -124,3 +125,17 @@ Con quindici anni di esperienza industriale, 9 piastre d'acciaio, e una visione 
 > Non il laboratorio ideale. Il laboratorio giusto.
 
 *Continua in EP_01 — La Taverna*
+
+## FATTI (per il RAG)
+
+- **FATTO:** La V32 (CNC epoxy-granite) ha un basamento strutturale realizzato con profili in acciaio 40x40 saldati TIG.
+
+- **FATTO:** Il progetto V32 è stato avviato con materiali già in possesso: 9 piastre d'acciaio rettificato da 15mm di spessore, un PLC Siemens S7-314C, un HMI del valore dichiarato di 2.800 euro, guide lineari, servomotori e sensori IFM.
+
+- **FATTO:** Il PLC utilizzato per la V32 è un Siemens S7-314C, definito nel testo come strumento da produzione industriale reale.
+
+- **FATTO:** La precisione di riferimento dichiarata da Matteo per la saldatura TIG su scarichi racing MotoGP era 0,1 mm di tolleranza; l'errore oltre tale soglia comportava lo scarto del pezzo.
+
+- **OBIETTIVO:** Il protocollo di verifica componenti della V32 prevede documentazione con foto e calibro per ogni componente, derivato dall'esperienza in controllo qualità (procedure SPC e test distruttivi).
+
+- **FATTO:** Il laboratorio di costruzione della V32 è uno spazio di circa 12 m² con pavimento piastrellato (definito "taverna" nel progetto).

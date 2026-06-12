@@ -7,6 +7,7 @@
   - [ATTO II  Tre comandi e una decisione di architettura](#atto-ii-tre-comandi-e-una-decisione-di-architettura)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -88,3 +89,17 @@ L'officina digitale è aperta. Ha un indirizzo fisso, si accende da sola, e ness
 ## CHIUSURA
 
 *In officina, la macchina che non parte da sola la mattina è una macchina che dipende da te per esistere. E tu non puoi permetterti di essere il punto singolo di guasto del tuo sistema.*
+
+## FATTI (per il RAG)
+
+- **DECISIONE:** n8n self-hosted installato in locale (non cloud) il 03/06/2026. **LOGICA:** Dipendenza da connessione internet e abbonamento mensile verso infrastruttura non controllata da Matteo era considerata un punto di rottura incompatibile con un sistema integrato tra macchine fisiche e software.
+
+- **FATTO:** n8n gira su `localhost:5678` con SQLite come database (file-based, nessun servizio esterno).
+
+- **FATTO:** API server EVA gira su `localhost:5001`; dashboard React su `localhost:5173`. n8n è il layer di orchestrazione che connette questi componenti con gli agenti AI di GENESIS.
+
+- **DECISIONE:** Scelto `pnpm` al posto di `npm` per la gestione dei pacchetti. **LOGICA:** pnpm non duplica i moduli node per ogni progetto ma usa link simbolici, riducendo frammentazione su disco in un ambiente con più progetti attivi contemporaneamente (dashboard React, API server, nodi agenti, n8n).
+
+- **FATTO:** Configurato avvio automatico di n8n al login di sistema, così il servizio è operativo senza intervento manuale dopo ogni riavvio.
+
+- **OBIETTIVO:** GENESIS dichiarato al 70% di completamento al momento di questo episodio (03/06/2026); n8n è considerato infrastruttura load-bearing per il completamento del sistema.

@@ -8,6 +8,7 @@
   - [ATTO II  Due Programmi e un File](#atto-ii-due-programmi-e-un-file)
   - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,17 @@ C'è ancora molto. V32 ha i rinforzi da finire e la testa da montare. MIMS aspet
 ## CHIUSURA
 
 *"Non costruisci un sistema quando finisci l'ultima parte. Lo costruisci ogni volta che risolvi la penultima."*
+
+## FATTI (per il RAG)
+
+- **FATTO:** ffmpeg versione 8.1.1 installato il 28 maggio 2026 per gestire conversione e processing di contenuti multimediali (registrazioni vocali, clip) nella pipeline documentale di GENESIS.
+
+- **FATTO:** SumatraPDF installato come visualizzatore/gestore PDF per consentire a GENESIS di aprire, interrogare e stampare PDF in modalità silenziosa da script, senza interfaccia grafica.
+
+- **FATTO:** Il profilo PowerShell aggiornato il 28 maggio 2026 con nuove variabili di ambiente per ffmpeg, percorsi per SumatraPDF e alias per i flussi documentali di GENESIS.
+
+- **PRECISIONE:** Stato avanzamento progetti al 28 maggio 2026: V32 al 65% (rinforzi Config G quasi completati), GENESIS al 78%, Vita Natura (EVA) al 40% (fase pilota attiva).
+
+- **DECISIONE:** La pipeline documentale di GENESIS richiede continuità completa: generazione documento → conversione → inclusione audio → rendering PDF → archiviazione → richiamo, tutto da script automatizzati senza passaggi manuali.
+
+- **FATTO:** Tempo totale stimato per l'installazione e configurazione dei due tool e aggiornamento del profilo PS: 30-40 minuti.

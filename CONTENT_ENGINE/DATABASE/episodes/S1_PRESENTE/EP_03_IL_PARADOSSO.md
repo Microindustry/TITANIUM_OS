@@ -8,6 +8,7 @@
   - [ATTO III  IL BOOTSTRAP](#atto-iii-il-bootstrap)
   - [ATTO IV  I CINQUE VANTAGGI CHE NON SI COMPRANO](#atto-iv-i-cinque-vantaggi-che-non-si-comprano)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -135,3 +136,17 @@ La stessa logica — parti da quello che hai, costruisci abbastanza da costruire
 > Il vincolo più preciso che abbia mai ricevuto.
 
 *Continua in EP_04 — Il Segnale*
+
+## FATTI (per il RAG)
+
+- **FATTO:** La tile base MIMS ha dimensione **190x190 mm**, è stampata a compressione in **PA-GF30** (poliammide + fibra di vetro 30%), con rigidità **9.5 GPa** e resistenza termica fino a **150°C**.
+
+- **FATTO:** Le piastrine MIMS hanno dimensione **40x40 mm** e esistono in tre versioni: standard, forata, conduttiva.
+
+- **FATTO:** I giunti MIMS sono tre tipologie: **Eco-Snap** (prototipazione rapida), **Quick-Twist** (90° senza attrezzi), **Tech-Bolt** (industriale permanente).
+
+- **DECISIONE:** Il bootstrap della V32 prevede tre fasi sequenziali — componenti MIMS primitivi (stampati FDM / tagliati laser) → assemblaggio V32 al **70%** → prime lavorazioni V32 producono stampi in **alluminio 7075 a tolleranza IT6** per la produzione MIMS industriale. **LOGICA:** Spezzare il loop circolare tramite iterazione per approssimazioni successive, non risolvendo il paradosso ma aggirandolo.
+
+- **PRECISIONE:** La V32 durante il bootstrap regge vibrazioni sotto **0.003 mm/s RMS**, soglia usata come validazione fisica per tutte le applicazioni MIMS inferiori (certificazione bottom-up).
+
+- **FATTO:** Il laser usato nella fase bootstrap è da **5W** e taglia piastrine 40x40 in **acrilico** per jig di saldatura; la stampante FDM usata è una **Bambu Lab P1S** con materiali PA-GF30 e PETG.

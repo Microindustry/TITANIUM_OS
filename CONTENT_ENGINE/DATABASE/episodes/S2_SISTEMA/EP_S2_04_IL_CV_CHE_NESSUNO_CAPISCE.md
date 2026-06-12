@@ -7,6 +7,7 @@
   - [ATTO II  AI COME COMPETENZA REALE](#atto-ii-ai-come-competenza-reale)
   - [ATTO III  GITHUB COME PROVA](#atto-iii-github-come-prova)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -103,3 +104,17 @@ Quindici anni di mestieri che sembravano incoerenti sono diventati uno skill tre
 | Arco | Identità come asset tecnico — la comunicazione della competenza ibrida |
 | Connessione S1 | EP_S1_00 (il CV che nessuno capisce) → S2_04 è la risposta attiva |
 | Connessione S2 | GitHub come prova pubblica — prepara IDENTITY pillar |
+
+## FATTI (per il RAG)
+
+- **FATTO:** La CNC V32 di Matteo pesa 178 kg ed è costruita in acciaio e Epoxy Granite, assemblata pezzo per pezzo da Matteo stesso.
+
+- **FATTO:** Il sistema TITANIUM_OS include un Research Agent con 13 sorgenti, agenti specializzati, stop hooks, una dashboard React integrata con API Flask che legge da STATE.json.
+
+- **FATTO:** Il profilo GitHub di TITANIUM_OS documenta 40+ commit in 3 giorni con messaggi tecnici precisi, usati come prova pubblica verificabile del metodo di lavoro.
+
+- **DECISIONE:** Matteo decide (28 maggio 2026) di aggiungere "utilizzo AI" come competenza esplicita nel curriculum, con logica: la capacità di dare input tecnici precisi a sistemi AI in dominio industriale è un moltiplicatore di produttività distinto dalla programmazione PLC tradizionale.
+
+- **DECISIONE:** Abilitare Git e pubblicare il profilo GitHub come sostituto del CV tradizionale. **LOGICA:** Il codice pubblico verificabile sostituisce la descrizione testuale delle competenze; TITANIUM_OS su GitHub è documentazione pubblica del metodo, non un progetto open source da vendere.
+
+- **FATTO:** MatteoSection nella dashboard TITANIUM_OS è implementata come skill tree visivo espandibile, che mappa quattro aziende e competenze in formato non cronologico, con data di riferimento episodio 28 maggio 2026.

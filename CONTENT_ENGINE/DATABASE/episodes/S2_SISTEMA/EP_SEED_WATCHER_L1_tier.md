@@ -19,6 +19,7 @@ durata_min: 5
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -61,3 +62,13 @@ ridondanza: se ho già visto una fonte di recente, non la rivedo subito. Risulta
   attenzione** semplicissima da animare.
 
 > Approfondimento (LV1). Profondità libera.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sistema Watcher gestisce 30+ creator/fonti da monitorare in parallelo.
+
+- **DECISIONE:** Le fonti vengono classificate per **tier** (livello di importanza); i tier alti vengono controllati a ogni ciclo, i tier bassi a rotazione su un sottoinsieme diverso ogni volta. **LOGICA:** Evita sia la ridondanza (rivedere sempre gli stessi) sia i buchi (dimenticare i minori).
+
+- **FATTO:** La **finestra di 48h** è il parametro che impedisce di riesaminare una fonte già vista di recente, abbassando il costo per ciclo notturno.
+
+- **DECISIONE:** La copertura totale è garantita **nel tempo** (rotazione), non ogni singola notte. **LOGICA:** Scheduling deterministico, non casualità.

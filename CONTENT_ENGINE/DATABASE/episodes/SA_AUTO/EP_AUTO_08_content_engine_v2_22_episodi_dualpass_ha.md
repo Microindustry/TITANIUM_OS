@@ -9,6 +9,7 @@
   - [ATTO II  Ventidue episodi e il doppio passaggio](#atto-ii-ventidue-episodi-e-il-doppio-passaggio)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,17 @@ Non sto costruendo prodotti separati. Sto costruendo un ecosistema con una voce 
 *"Un sistema non ha memoria finché non ha deciso cosa ricordare."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **MILESTONE:** Il 22 marzo 2026 Matteo ha chiuso il dataset Content Engine v2, composto da 22 episodi in formato JSONL, destinati a training e contesto strutturato per GENESIS. **LOGICA:** Fornire a GENESIS una base di memoria persistente sul ragionamento progettuale di Matteo, eliminando il ricominciamento da zero a ogni sessione.
+
+- **FATTO:** Il processo di generazione degli episodi usa un approccio "dual-pass": un primo modello sintetico (haiku) distilla il materiale grezzo all'essenziale; un secondo modello espansivo (sonnet) ricostruisce contesto, connessioni e dipendenze a partire dal distillato. **LOGICA:** Il passaggio per compressione obbliga a decidere cosa è centrale, producendo informazione tecnica più densa di una documentazione scritta di proposito.
+
+- **FATTO:** Al momento della milestone, GENESIS è alla versione 7 della dashboard con Story Agent attivo e RAG alla versione 4. **LOGICA:** Il dataset da 22 episodi costituisce il substrato su cui questi componenti operano per decisioni contestuali.
+
+- **STATO:** Config G (componente di V32, la CNC epoxy-granite) risulta al 65% di avanzamento alla data della milestone. **LOGICA:** La pipeline Content Engine v2 prevede che l'episodio relativo al completamento di V32 entri nel dataset con lo stesso processo dual-pass.
+
+- **STATO:** Il progetto EVA / Vita Natura (centro estetico) è al 40% con sito attivo e prenotazioni operative. **FATTO:** Prima della milestone, EVA non aveva contesto su Matteo; dopo l'integrazione del dataset, EVA può contestualizzare le risposte usando i 22 episodi come base.
+
+- **DECISIONE:** MIMS (connettori modulari) è in attesa deliberata che V32 sia operativa prima di essere attivato. **LOGICA:** Non è un ritardo ma una dipendenza sequenziale: V32 è la sorgente produttiva che dà senso a MIMS a valle della catena.

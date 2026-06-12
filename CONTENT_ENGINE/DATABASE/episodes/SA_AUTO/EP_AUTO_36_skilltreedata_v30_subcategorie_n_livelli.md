@@ -8,6 +8,7 @@
   - [ATTO II  skillTreeData v3.0: cosa ho fatto davvero](#atto-ii-skilltreedata-v30-cosa-ho-fatto-davvero)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -99,3 +100,17 @@ Ho centocinquanta livelli mappati su tre alberi. Adesso sono navigabili.
 *La precisione non è compatibile con il movimento casuale. E una mappa che non ti dice dove sei fermo è solo decorazione.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Lo skill tree precedente (pre-v3.0) era piatto: aveva nodi, colori e percentuali ma nessuna profondità gerarchica (assenza di livello Z).
+
+- **DECISIONE:** In skillTreeData v3.0 ogni nodo è obbligato a diramarsi in sotto-nodi. **LOGICA:** Una competenza senza sotto-competenze è considerata una dichiarazione vuota e non ha peso progettuale reale.
+
+- **FATTO:** A maggio 2026 i progetti attivi in parallelo erano cinque, con le seguenti percentuali di avanzamento: V32 al 65%, MIMS al 30% (bloccato in attesa della pressa), GENESIS al 70%, VITA_NATURA al 40%, IDENTITY al 50%.
+
+- **FATTO:** Il sistema RAG adottato è v4.0 ibrido, composto da BM25 + semantico + CrossEncoder + incrementale.
+
+- **FATTO:** GENESIS è suddiviso in sei aree infrastrutturali (alimentazione elettrica, logica di controllo, interfaccia operatore, sicurezza attiva, manutenzione predittiva, integrazione di sistema); il 70% completato corrisponde a quattro aree in stato avanzato e due con lavoro aperto.
+
+- **FATTO:** I nodi di MatteoSection v3.0 legati alle milestone di V32 hanno dipendenze hardcoded: una competenza non può essere dichiarata acquisita senza una milestone reale a cui agganciarla (es. la configurazione degli assi Z e U risultava ancora aperta al 29 maggio).

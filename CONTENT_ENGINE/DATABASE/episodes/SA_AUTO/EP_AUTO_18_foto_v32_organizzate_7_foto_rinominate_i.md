@@ -8,6 +8,7 @@
   - [ATTO II  Sette file, una convenzione, un momento che vale](#atto-ii-sette-file-una-convenzione-un-momento-che-vale)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,15 @@ Piccolo. Concreto. Necessario. Questo è il ritmo del Sistema.
 *"Un progetto non è la somma dei pezzi costruiti. È la somma delle decisioni tracciate. Il metallo dimentica. La documentazione no."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** La fresatrice CNC V32 è una macchina a tre assi, costruzione artigianale, attualmente in configurazione G (rinforzi strutturali), con avanzamento al 65% di completamento.
+
+- **DECISIONE:** Le 7 foto della V32 in Config G sono state rinominate e archiviate in `FOTO/V32_BUILD/Config_G/stato_20260528/` il 28 maggio 2026. **LOGICA:** Lo schema con `Config_G` + data permette confronto tra configurazioni successive (F, G, H) e ricostruzione della sequenza decisionale nel tempo.
+
+- **FATTO:** La catena V32→VULCAN→MIMS è bloccata su MIMS al 30% di avanzamento; il blocco è causato dall'attesa che V32 sia operativa per produrre i connettori modulari MIMS.
+
+- **FATTO:** GENESIS è alla versione ecosystem 1.3 con dashboard v7.0; il RAG è alla versione 4.0 e può indicizzare la documentazione fotografica della V32.
+
+- **OBIETTIVO:** Il design MIMS è descritto come completo; la dipendenza da V32 è di tipo produttivo (la macchina deve essere operativa per fabbricare i connettori), non progettuale.

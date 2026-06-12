@@ -8,6 +8,7 @@
   - [ATTO II  Zustand, TanStack, e una navigazione che finalmente guida](#atto-ii-zustand-tanstack-e-una-navigazione-che-finalmente-guida)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -87,3 +88,17 @@ Il sistema tiene traccia di sé stesso. Io posso costruire.
 ## CHIUSURA
 
 *"Non avevo bisogno di più dati. Avevo bisogno che i dati sapessero dove stavano."*
+
+## FATTI (per il RAG)
+
+- **FATTO:** La Dashboard EVA/GENESIS raggiunge la versione **v5.0** in data **27 maggio 2026**, con migrazione completa a **Zustand** per la gestione dello stato globale e integrazione **TanStack Query** per il fetching con cache intelligente.
+
+- **FATTO:** L'ecosistema GENESIS al momento della milestone risulta alla versione **v1.3**, con un completamento dichiarato dell'**78%**; include dashboard v7.0, Story Agent e sistema RAG alla versione 4.
+
+- **FATTO:** Il modulo **V32** (CNC epoxy-granite) è al **65%** di avanzamento, fermo sulla **Config G** (rinforzi strutturali); il collo di bottiglia identificato è la catena dipendente **V32 → VULCAN**, che blocca l'avanzamento di MIMS.
+
+- **FATTO:** Il modulo **MIMS** (connettori modulari) è bloccato al **36%** in attesa che la catena V32-VULCAN venga definita; non può avanzare finché questa dipendenza non è risolta.
+
+- **FATTO:** Il progetto **Vita Natura / EVA** (centro estetico) è al **40%**: sito attivo, prenotazioni funzionanti, EVA in **fase pilota** — non ancora operativa a pieno regime.
+
+- **DECISIONE:** La navigazione guidata della v5.0 è progettata per rendere esplicite le **dipendenze tra moduli** (es. V32→VULCAN→MIMS) direttamente nell'interfaccia, sostituendo la consapevolezza implicita dell'utente con tracciabilità nel grafo di sistema. **LOGICA:** ridurre il carico cognitivo di coordinamento su un sistema con almeno 26 moduli attivi e 3 macchine in costruzione simultanea.

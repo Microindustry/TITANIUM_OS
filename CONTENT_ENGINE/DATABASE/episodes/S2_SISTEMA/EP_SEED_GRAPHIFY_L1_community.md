@@ -19,6 +19,7 @@ durata_min: 6
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA PER IL SISTEMA](#perché-conta-per-il-sistema)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,15 @@ Tre cose concrete, non teoria:
 
 > Questo è un episodio di **approfondimento (LV1)**: vive *sotto* il suo principale. Il sistema STORIE
 > ora regge questa profondità — un episodio può avere figli, e i figli figli, all'infinito.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il grafo di TITANIUM_OS (episodio EP_SEED_GRAPHIFY) conta **5.966 nodi**, **6.317 archi** e **696 community**, prodotti dall'analisi di **515 file** in **13,2 secondi**.
+
+- **FATTO:** Le 696 community su 5.966 nodi producono una media di **~8-9 nodi per quartiere**, definita nell'episodio come granularità da "sottosistema/tema".
+
+- **DECISIONE:** L'algoritmo scelto per la community detection appartiene alla **famiglia Louvain/Leiden**, con criterio di ottimizzazione sulla **modularità** (massimizzare archi interni, minimizzare archi esterni). **LOGICA:** Complessità quasi-lineare → 6.000 nodi risolti in secondi anziché ore.
+
+- **OBIETTIVO:** Le community vengono usate per **restringere le query RAG** a un solo quartiere tematico (es. "quartiere RAG" vs "quartiere notturne"), riducendo i token e ottenendo risposte strutturali invece di lettura integrale del repo.
+
+- **FATTO:** I nodi posizionati *tra* due community (connessioni poche ma strategiche) vengono identificati come **punti fragili/ponte** — la community detection li fa emergere senza tagging manuale.

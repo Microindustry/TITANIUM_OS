@@ -9,6 +9,7 @@
   - [ATTO II  Trenta maggio 2026](#atto-ii-trenta-maggio-2026)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -103,3 +104,17 @@ Adesso GENESIS ha percezione visiva. È un salto di qualità, non di quantità.
 ---
 
 Prossimo episodio: aggiornamento V32, Config G rinforzi — cosa significa davvero costruire una fresatrice con le proprie mani nel 2026.
+
+## FATTI (per il RAG)
+
+- **FATTO:** ScreenAgent v1.0 è stato completato il 30 maggio 2026 come milestone verificata in STATE.json, all'interno del progetto TITANIUM_OS/GENESIS.
+
+- **DECISIONE:** La griglia di riferimento visivo scelta per ScreenAgent è una mesh 20×15 punti rossi sovrapposta allo screenshot, generando 300 coordinate numeriche discrete. **LOGICA:** Trasforma qualsiasi schermo in uno spazio indirizzabile da Claude Vision senza richiedere API o output strutturati dall'applicazione target.
+
+- **FATTO:** Il flusso operativo di ScreenAgent v1.0 è: acquisizione screenshot in tempo reale → sovrapposizione griglia 20×15 → invio a Claude Vision → restituzione coordinata → conversione in azione simulata (click, drag, hotkey, copy).
+
+- **FATTO:** GENESIS al momento del milestone è dichiarato all'83% di avanzamento, con RAG graph-aware v5, orchestrazione MCP v1.3 e watchdog parallelo attivi.
+
+- **OBIETTIVO:** ScreenAgent è identificato come il layer di interfaccia tra GENESIS e software industriali senza API moderni, inclusi i software di controllo di V32 (CNC al 65% con rinforzi Config G) e VULCAN (pressa polimeri), e le interfacce web di EVA/Vita Natura.
+
+- **LOGICA PROGETTUALE:** Il principio architetturale dichiarato è che nessun nodo del sistema deve bloccarsi per ambienti non collaborativi; ScreenAgent è l'implementazione di questo principio a livello di percezione visiva.

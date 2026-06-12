@@ -19,6 +19,7 @@ durata_min: 6
   - [I TRE MODI DI CHIEDERE](#i-tre-modi-di-chiedere)
   - [PERCHÉ CONTA (il risparmio vero)](#perché-conta-il-risparmio-vero)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -66,3 +67,13 @@ precisa perché è strutturale, non "ho letto e ho riassunto".
 
 > Episodio di **approfondimento (LV1)**. Nessun limite di profondità: sotto `path` ci può stare un LV2
 > sugli algoritmi di cammino, se servirà.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sistema Graphify introduce tre verbi di interrogazione del grafo: `query` (trova nodi), `path` (catena di nodi tra due punti), `explain` (struttura di un sottosistema con nodi + archi + community).
+
+- **DECISIONE:** Interrogare il grafo invece di rileggere i file sorgente. **LOGICA:** La complessità scende da O(repo) a O(sottografo), evitando la rilettura di 515 file da migliaia di token per ogni domanda strutturale.
+
+- **FATTO:** Il verbo `path` non restituisce solo gli estremi di una connessione ma la catena completa di nodi intermedi — risponde a *come* due componenti si toccano, non solo *che* si toccano.
+
+- **FATTO:** Il verbo `explain` aggrega nodi, archi e community per restituire la struttura di dipendenza di un sottosistema (chi dipende da chi, dove vive la decisione), senza rileggere il codice sorgente.

@@ -8,6 +8,7 @@
   - [ATTO II  Rotazione, non riparazione](#atto-ii-rotazione-non-riparazione)
   - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -93,3 +94,15 @@ Il vault è la struttura giusta per questo. Non un file di testo. Non un comment
 *Un sistema che conosce se stesso ma non si protegge è solo un archivio aperto. La conoscenza senza confine non è forza — è superficie d'attacco.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il token GitHub precedente era in formato `gho_` (vecchio formato), generato mesi prima del 3 giugno 2026 e mai ruotato; è stato revocato il 03/06/2026.
+
+- **DECISIONE:** Autenticazione Git verso GitHub migrata da token in file/variabile persistente a `gh keyring` (CLI ufficiale GitHub come credential helper). **LOGICA:** Il token non appare mai in chiaro in file, log di processo o `git config`; viene sbloccato solo da sessione utente autenticata tramite keyring cifrato dell'OS.
+
+- **FATTO:** La regola "zero segreti in chiaro" è codificata nella LEX_DIGITALIS, documento di governance del codice TITANIUM_OS; si applica a tutte le componenti (relay V32, firmware CNC, chiamate API EVA). Implementazione: `os.getenv()` in Python, header non versionato in C++ per il firmware V32.
+
+- **FATTO:** Una chiave Anthropic `sk-ant-api03-` generata a marzo risultava tracciata (troncata) in un file di log di setup; al momento dell'episodio non ancora ruotata ma segnalata per rotazione pianificata.
+
+- **OBIETTIVO:** Dopo la rotazione del token, Matteo verifica il buon esito con `git push` sul repository TITANIUM_OS e controlla `git config --list` per assenza di URL con credenziali hardcoded (`url.https://gho_...@github.com`).

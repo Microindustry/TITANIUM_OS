@@ -19,6 +19,7 @@ durata_min: 5
   - [COME SI CERCA LA STRADA (semplice, poi preciso)](#come-si-cerca-la-strada-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO](#il-filo)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -63,3 +64,13 @@ ferma appena si arriva.
   caccia al tesoro in cui controlli prima le stanze vicine). È la BFS, senza la parola.
 
 > Approfondimento (LV2). Profondità libera: sotto, A* e le euristiche (LV3).
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio è classificato come approfondimento LV2, figlio di EP_SEED_GRAPHIFY_L1_QUERY, e appartiene alla stagione ST del progetto TITANIUM_OS. Durata stimata: 5 minuti.
+
+- **FATTO:** L'algoritmo descritto per trovare il cammino minimo su grafi con archi non pesati è la BFS (ricerca in ampiezza): esplora il grafo a strati di distanza crescente e si ferma al primo strato che raggiunge la destinazione, garantendo il minimo numero di salti.
+
+- **FATTO:** Quando gli archi hanno un peso (i legami non contano tutti uguale), l'algoritmo indicato è Dijkstra, che opera a costo minimo invece che a salti minimi.
+
+- **DECISIONE:** Il livello successivo di approfondimento previsto (LV3) riguarda A* e le euristiche, esplicitamente indicato come sviluppo futuro del cammino formativo su questo argomento.

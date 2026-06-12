@@ -8,6 +8,7 @@
   - [ATTO II  Le celle che si muovono](#atto-ii-le-celle-che-si-muovono)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -87,3 +88,17 @@ E io lavoro meglio quando posso muovere i pezzi con le mani.
 ## CHIUSURA
 
 *"Una dashboard draggabile non è un vezzo grafico. È il riconoscimento che la realtà cambia ogni giorno, e il
+
+## FATTI (per il RAG)
+
+- **FATTO:** La milestone ECOSYSTEM_OS dashboard v1.0 con celle draggabili live è stata rilasciata il 09 marzo 2026 (data_evento: 2026-03-09).
+
+- **FATTO:** Al momento dell'episodio il progetto V32 (fresatrice CNC in granito epossidico) era al 65% di avanzamento, in fase Config G con rinforzi strutturali in corso.
+
+- **FATTO:** Il progetto MIMS (connettori modulari) era fermo al 30% per dipendenza dalla catena V32-VULCAN, che deve essere definita prima che MIMS possa avanzare.
+
+- **FATTO:** Il progetto GENESIS (stack AI) era all'80% di completamento, comprendente dashboard v7.0, Story Agent e RAG v4.0.
+
+- **DECISIONE:** Le celle della dashboard sono draggabili per riflettere la priorità variabile giornaliera dei cinque fronti (V32, VULCAN, MIMS, GENESIS, EVA/Vita Natura). **LOGICA:** Una dashboard statica impone un ordine fisso che non rispecchia le dipendenze e le urgenze reali del sistema in evoluzione.
+
+- **FATTO:** Il progetto EVA (automazione centro estetico Vita Natura) era in fase pilota attiva al momento del rilascio della dashboard v1.0.

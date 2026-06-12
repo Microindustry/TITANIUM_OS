@@ -19,6 +19,7 @@ durata_min: 6
   - [LE QUATTRO SORGENTI (e perché niente chiavi)](#le-quattro-sorgenti-e-perché-niente-chiavi)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -67,3 +68,15 @@ Tutto roba **pubblica e stabile**. Primo giro a freddo: **67 + 30 segnali reali*
   un dato *pubblico* (RSS) e uno *chiuso* (dietro chiave).
 
 > Approfondimento (LV1). Nessun limite di profondità.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sistema WATCHER utilizza quattro sorgenti keyless: GitHub via CLI `gh`, siti web via RSS, YouTube via RSS dei canali, e un sistema di tier + rotazione. **LOGICA:** Nessuna sorgente richiede API key, eliminando costi di gestione e dipendenze esterne revocabili.
+
+- **PRECISIONE:** Al primo giro a freddo il radar ha prodotto **67 + 30 segnali reali**. **LOGICA:** Il dato quantifica l'output concreto del sistema keyless prima di qualsiasi filtro.
+
+- **DECISIONE:** YouTube viene interrogato tramite il feed RSS pubblico di ogni canale, non tramite YouTube Data API. **LOGICA:** Ogni canale YouTube espone un feed RSS pubblico che non richiede autenticazione né quota API.
+
+- **DECISIONE:** GitHub viene interrogato tramite la CLI `gh` già autenticata sulla macchina, non tramite una nuova API key dedicata. **LOGICA:** Si riutilizza un'autenticazione esistente invece di introdurre una nuova credenziale da gestire e ruotare.
+
+- **OBIETTIVO:** Costo di gestione zero per il radar WATCHER. **LOGICA:** Nessuna chiave da ruotare, nessun abbonamento che scade o aumenta di prezzo; tutte le sorgenti sono pubbliche e stabili per design.

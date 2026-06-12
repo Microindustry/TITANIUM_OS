@@ -19,6 +19,7 @@ durata_min: 5
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -61,3 +62,11 @@ e veri** che tanti e a caso — la regola "niente teatro" applicata ai dati in i
   porta che fa entrare solo le cose abbastanza importanti.
 
 > Approfondimento (LV1). Nessun tetto di profondità.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il watcher ha raccolto ~97 segnali grezzi al primo giro di raccolta.
+- **DECISIONE:** Viene applicato un gate di rilevanza tramite parametro `--min-rel` (soglia minima di rilevanza) per filtrare i segnali in ingresso prima che entrino nel RAG. **LOGICA:** Evitare che rumore e segnali irrilevanti inquinino il sistema a valle (RAG e brief).
+- **FATTO:** Su ~97 segnali grezzi, l'obiettivo del gate è tenere i ~5 rilevanti e scartare i ~92 non pertinenti senza revisione manuale.
+- **DECISIONE:** La soglia `min-rel` è configurata come parametro regolabile (alzabile se arriva troppo rumore, abbassabile se si teme di perdere segnali). **LOGICA:** Bilanciamento dinamico tra precisione e copertura del filtro.
+- **OBIETTIVO:** Il principio guida del gate è "pochi e veri" anziché "tanti e a caso", coerente con la regola "niente teatro" applicata ai dati in ingresso al sistema GENESIS/RAG.

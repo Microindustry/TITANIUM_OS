@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, llm, modello, allucinazione
   - [ATTO II  LA BUGIA CON LA FACCIA SICURA](#atto-ii-la-bugia-con-la-faccia-sicura)
   - [ATTO III  LE DUE MENTI (il cervello ibrido)](#atto-iii-le-due-menti-il-cervello-ibrido)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -151,3 +152,15 @@ cosa più importante: una risposta sicura non è per forza una risposta vera.*
 **3 strati:** bambino = l'amico che parla bene ma a volte se la inventa · curioso = "questo si chiama LLM, e l'errore sicuro si chiama allucinazione" · esperto/papà = predice il token successivo; il *cervello ibrido* (Claude cloud per potenza + Qwen locale per riservatezza) è il pezzo reale del progetto.
 **Aggancio reale:** EP_S2_01 "Il Cervello Ibrido" · la leva LLM locale (Qwen sulla GPU) + Claude.
 **Open loop → Regione 4 (il RAG):** dare alla Mente i fogli veri e obbligarla a citare la fonte.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_02 introduce il concetto di LLM nel progetto TITANIUM_OS tramite il formato narrativo "Avventura" (serie AV), con durata stimata 8-10 minuti, destinato a bambini e pubblico generalista.
+
+- **DECISIONE:** Nel sistema GENESIS viene adottata un'architettura **ibrida a due modelli LLM**: un modello grande/esterno per problemi complessi ad alta capacità, e un modello piccolo/locale ("Mente di casa") per garantire che dati sensibili (segreti dell'officina, misure reali) non escano dal Sistema. **LOGICA:** separazione tra potenza computazionale e riservatezza dei dati proprietari.
+
+- **FATTO:** Il fenomeno di **allucinazione** degli LLM è definito nel canone di TITANIUM_OS come la capacità del modello di produrre risposte con tono sicuro anche quando i dati non sono noti, generando contenuti plausibili ma non verificati.
+
+- **OBIETTIVO:** Il finale dell'episodio anticipa esplicitamente la prossima tappa narrativa/tecnica: fornire alla Mente documenti reali del Sistema come fonte vincolante, obbligandola a rispondere solo da quelli e a citare la fonte — riferimento diretto all'implementazione di un sistema **RAG** (Retrieval-Augmented Generation).
+
+- **FATTO:** L'episodio è classificato come tappa 3 di 7 nell'arco narrativo "la storia dell'IA", e richiama EP_AV_01 (automazione) e EP_S2_01 ("Il Cervello Ibrido") come riferimenti canonici nel mondo di TITANIUM_OS.

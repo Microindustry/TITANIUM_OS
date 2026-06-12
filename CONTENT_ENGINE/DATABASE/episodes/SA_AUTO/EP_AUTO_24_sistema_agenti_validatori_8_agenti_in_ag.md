@@ -8,6 +8,7 @@
   - [ATTO II  Il 28 maggio: otto nomi nel JSON](#atto-ii-il-28-maggio-otto-nomi-nel-json)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,17 @@ Non sono più io l'unico punto di controllo. Il sistema si controlla da solo, in
 *Un artigiano non costruisce solo con le mani. Costruisce anche con la struttura che mette intorno alle mani.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il file `agents_db.json` contiene 8 agenti validatori con i seguenti nomi e domini: TESLA (elettronica/energia), FORGE (meccanica/struttura), AQUA (fluidi/raffreddamento), LEX (legale/normativa), SIEMENS (automazione industriale/PLC), THEMIS (etica/sicurezza), ARIA (software/architettura), EVA (benessere/esperienza utente).
+
+- **FATTO:** La milestone di completamento di `agents_db.json` con tutti e 8 gli agenti è datata 28 maggio 2026.
+
+- **FATTO:** La dashboard GENESIS al momento della milestone è alla versione 7.0, con RAG alla versione 4 e ecosistema alla versione 1.3.
+
+- **FATTO:** La configurazione G dei rinforzi della fresatrice CNC V32 è al 65% al momento della milestone EP_AUTO_24.
+
+- **DECISIONE:** Gli agenti validatori vengono chiamati singolarmente per dominio specifico (non in parallelo), per evitare rumore decisionale. **LOGICA:** L'agente giusto sul problema giusto nel momento giusto garantisce qualità senza overhead.
+
+- **FATTO:** Il progetto MIMS (connettori modulari) è in stato di attesa perché dipende dalla chiusura della catena V32-VULCAN, non ancora completata alla data dell'episodio.

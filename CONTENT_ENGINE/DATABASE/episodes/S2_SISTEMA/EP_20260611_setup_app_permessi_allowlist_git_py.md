@@ -10,6 +10,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -144,3 +145,17 @@ Nina ha il suo OS adesso. E anche lei si perde.
 | **Co-autore AI** | Claude Opus 4.8 |
 | **Target capannone** | 15 luglio 2030 |
 | **Tag narrativo** | tempo / radice / memoria / ordine |
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'arco narrativo di Nina (TITANIUM_OS) si compone di 8 episodi (M0, 0, 1, 2, 3, 4, 5, 6), con `EP_AV_M0` denominato "La Materia" e simbolo `⟡0`, classificato come radice dell'arco. **LOGICA:** L'episodio M0 non è un prequel lineare ma una discesa alla radice del personaggio; l'arco ha struttura canonica registrata in `§0-ter` della BIBBIA.
+
+- **FATTO:** Il sistema narrativo TITANIUM_OS conta 153 episodi totali, organizzati su due assi (RUOLO e NINA), con build TypeScript verde e stato persistito in `story_state.json`. **LOGICA:** La struttura a due assi consente episodi verticali ("prismatici") come `EP_AV_FIN_01 "Il Valore"` (verticale FINANZA) che si affiancano agli episodi lineari senza entrare nella sequenza ordinale.
+
+- **FATTO:** La sessione #37 ha prodotto 14 commit atomici; `STATE.json` aggiornato al numero 47. **LOGICA:** La chiusura di sessione include aggiornamento di `STATE.json`, scrittura di `RIAVVIO_SESSIONE.txt` e mirror su Desktop come protocollo di continuità tra sessioni.
+
+- **DECISIONE:** Rimosso `MAPPA_RADICE` dalla fase di load della dashboard per risolvere un `ReferenceError: Cannot access 'REGIONI' before initialization`. **LOGICA:** Il modulo usava `REGIONI` durante il caricamento prima che la variabile (dichiarata con `const`) fosse inizializzata dall'interprete JavaScript — temporal dead zone; fix chirurgico in 3 righe.
+
+- **FATTO:** Nella allowlist dei comandi eseguibili autonomamente da Claude (senza conferma) risultano: `git`, `python script`, `tsc`. **LOGICA:** Ridurre le interruzioni su operazioni sicure e ripetitive per aumentare la velocità operativa della sessione.
+
+- **FATTO:** V32 è indicato al 65% di avanzamento e GENESIS al 70%, con spazio di lavoro di 12 m². **LOGICA:** Parametri

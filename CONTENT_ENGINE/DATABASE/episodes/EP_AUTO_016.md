@@ -17,6 +17,7 @@ generated: "2026-05-27T11:31:12.038949"
 - [Dashboard v5.0  Quando il sistema smette di mentire](#dashboard-v50-quando-il-sistema-smette-di-mentire)
   - [Il bivio](#il-bivio)
   - [Connessione al sistema](#connessione-al-sistema)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -66,3 +67,17 @@ EVA per Maria gira su WhatsApp, lato Python. La dashboard non la gestisce dirett
 ---
 
 La dashboard adesso non mi racconta storie.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Dashboard EVA/TITANIUM_OS aggiornata alla versione 5.0 in data 2026-05-27, con stack frontend basato su Zustand (state management globale) + TanStack Query (sincronismo dati backend).
+
+- **DECISIONE:** Abbandonato `useState` locale distribuito su 12 componenti in favore di un unico store globale Zustand (`useV32Store()`), per eliminare dati divergenti tra widget. **LOGICA:** Con ADHD, la divergenza tra dato a schermo e realtà in officina rendeva impossibile sapere da dove ripartire.
+
+- **FATTO:** TanStack Query gestisce le chiamate al backend Python con cache, retry e `staleTime` configurato; lo stato `error` è visibile esplicitamente invece di produrre silenzio opaco.
+
+- **FATTO:** La V32 è al 65% di completamento al 27/05/2026; blocker attivo identificato: mandrino 2.2kW ER20 — da ordinare (evidenziato in rosso nella navigazione guidata).
+
+- **FATTO:** EVA (WhatsApp/Python) scrive su `BRAIN/STATE.json`; TanStack Query rileva il cambiamento entro 30 secondi, chiudendo il loop senza dashboard dedicata.
+
+- **FATTO:** MIMS è al 30%; l'integrazione nello store Zustand è prevista come slice separata sulla stessa architettura, senza rifondare il sistema esistente.

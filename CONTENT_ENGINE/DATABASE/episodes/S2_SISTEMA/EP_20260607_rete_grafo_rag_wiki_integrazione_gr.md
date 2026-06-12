@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI](#metadati)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -143,3 +144,17 @@ Il prossimo stadio è Agenti — ma prima bisogna capire cosa succede quando il 
 | **Debiti aperti** | 2 (segnalati, non risolti) |
 | **Target capannone** | 15 luglio 2030 |
 | **Tag narrativi** | `grafo` `memoria` `bussola` `wiki` `watcher` `leggibilità` |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il grafo del repository GENESIS (TITANIUM_OS, codice + docs) mappato con Graphify conta **5.966 nodi**, con query locale in **340ms**, senza API key esterne né server remoti.
+
+- **DECISIONE:** Integrazione di Graphify nella sorgente GENESIS tramite toggle — **ChromaDB o grafo graph-based selezionabili nella stessa chiamata**, trasparente all'utente. **LOGICA:** permettere al sistema di scegliere il layer di retrieval appropriato per tipo di domanda.
+
+- **DECISIONE:** `CLAUDE_CODE.bat` modificato per leggere all'avvio **prima DA_FARE_FATTO.md (bussola), poi STATE, poi RIAVVIO**. **LOGICA:** eliminare i ~10 minuti di riorientamento a inizio sessione causati dal mancato caricamento della bussola.
+
+- **FATTO:** La bussola DA_FARE_FATTO.md è ora collegata alla cartella CRITICHE (cartella clinica del progetto). I debiti tecnici aperti in bussola sono visibili nel sistema di allerta; nel commit di verifica di questa sessione risultano **2 debiti segnalati** (non risolti).
+
+- **FATTO:** `CLAUDE.md` aggiornato alla versione **4.1.0**, con struttura piatta su `C:\Users\teo\TITANIUM_OS` e nome macchina fissa registrato come **teo**.
+
+- **FATTO:** L'arco macro di GENESIS è esteso a 6 stadi: **Loop → Automazione → LLM → RAG → Wiki → Agenti**. La freccia verso Wiki (componente RETE/grafo) è passata da "rotta" (errore 500 da conflitto di porta su `api_server`) a **solida** dopo fix chirurgico in questa sessione.

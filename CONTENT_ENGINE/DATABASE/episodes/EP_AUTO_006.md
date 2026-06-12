@@ -34,3 +34,17 @@ Ecco perché questo momento conta: non è il dashboard a essere importante. È i
 Domani riprendo la Config G. Mandrino arriverà probabilmente giovedì. Nel frattempo, il sistema mi dirà esattamente quando sarà il momento di riprogrammare la sequenza.
 
 Senza che io faccia nulla. Basta guardare.
+
+## FATTI (per il RAG)
+
+- **MILESTONE:** ECOSYSTEM_OS dashboard v1.0 è andato live il 2026-03-09 alle 09:47, sviluppato in React con celle draggabili in tempo reale.
+
+- **FATTO:** Il dashboard integra simultaneamente quattro sottosistemi visualizzati in layout fisso: V32 (box centrale), MIMS (sinistra), VULCAN (destra), EVA (basso).
+
+- **FATTO:** Al momento del go-live, V32 era al 65% di avanzamento sul gusset sinistro, Config G, con tempo stimato di completamento 3 ore; il mandrino 2.2kW ER20 risultava mancante.
+
+- **DECISIONE:** TITANIUM_OS è progettato per rilevare blocchi operativi entro 0.3 secondi, sostituendo il workflow precedente basato su log SSH, annotazioni cartacee e script Python lanciati manualmente.
+
+- **FATTO:** La logica di transizione automatica prevede: al completamento del gusset sinistro, il sistema passa autonomamente a MIMS se il materiale è pronto, oppure emette stato "stop, aspetto il mandrino" senza intervento dell'operatore.
+
+- **OBIETTIVO:** La dashboard connette tre dimensioni progettuali dichiarate: fisico (V32), cognitivo (TITANIUM_OS), decisionale (operatore) — definite come "triangolo" necessario per la gestione in tempo reale della fabbrica.

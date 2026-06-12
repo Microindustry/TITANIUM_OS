@@ -7,6 +7,7 @@
   - [ATTO II  IL VALORE DELLA STORIA PERDUTA](#atto-ii-il-valore-della-storia-perduta)
   - [ATTO III  LA RISPOSTA](#atto-iii-la-risposta)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -122,3 +123,15 @@ Ma la prossima volta che passi 63 giorni in officina senza documentare, lo story
 | Arco | Il costo del silenzio → la risposta automatica |
 | Meta | Questo episodio è la ragione per cui story_agent esiste |
 | Connessione S3 | S3 inizia con il sistema completamente automatizzato — niente più gap |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il gap di documentazione nel progetto TITANIUM_OS copre 63 giorni (25 marzo → 27 maggio 2026), con un solo commit registrato in quel periodo: `fix: V32 corpo unico — aggiornata spec massa` del 27 maggio.
+
+- **FATTO:** Il commit precedente al gap è `feat: Dashboard v5.0 — Zustand + TanStack Query` del 25 marzo 2026, che segna il rebranding completo e l'adozione di Zustand + TanStack Query come architettura della dashboard.
+
+- **DECISIONE:** Durante i 63 giorni di silenzio documentale, la decisione strutturale più rilevante presa su V32 è **corpo unico vs molle** — maturata in officina nelle settimane precedenti e formalizzata solo il 27 maggio nel commit tecnico. **LOGICA:** La decisione è stata guidata dall'osservazione diretta della macchina durante le fasi di build (Config G), non da un processo documentato in tempo reale.
+
+- **FATTO:** Le attività fisiche di Config G nel periodo includono saldatura con acciaio S235, utilizzo di torcia TIG con parametri calcolati per minimizzare distorsioni termiche, e verifica dell'allineamento post-cordone con comparatore. I gusset sulle colonne Z misurano 200 mm.
+
+- **DECISIONE:** Il 29 maggio 2026 viene costruito `story_agent.py` come risposta al gap. **LOGICA:** Lo script verifica a fine sessione la presenza di commit non ancora narrativizzati e genera automaticamente una bozza di episodio, con l'obiettivo di mantenere il contesto narrativo senza sostituire la scrittura umana — stimato il tempo di finalizzazione in 20 minuti per bozza.

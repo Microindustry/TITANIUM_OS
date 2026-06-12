@@ -8,6 +8,7 @@
   - [ATTO III  QUELLO CHE NON SAPEVI ANCORA](#atto-iii-quello-che-non-sapevi-ancora)
   - [ATTO IV  IL DETTAGLIO CHE CONTA](#atto-iv-il-dettaglio-che-conta)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -154,3 +155,15 @@ Un passo. Il passo più piccolo possibile da cui tutto il resto dipende.
 - *"Ogni cosa alimenta ogni altra cosa" → eco in EP_03 (meta-ricorsività) e EP_00 (skill tree)*
 - *"Capannone entro i 35 anni" → compare in EP_05 "15 luglio 2030"*
 - *Livello 1 di tutto = installazione → eco della taverna come punto di partenza in EP_01*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sistema V1 era strutturato in 3 file di testo (EVA_PROJECT_TREE.txt, MIMS CNC TECH TREE, ARCHITECT PATH) con un totale di 150 livelli distribuiti in alberi di competenze a tier. **LOGICA:** Ogni livello sblocca il successivo; struttura RPG usata come architettura cognitiva per gestire il parallelismo tra progetti.
+
+- **FATTO:** La distribuzione dei livelli nel V1 era: ~50 livelli per EVA, ~60 livelli per MIMS/Titanium, ~40 livelli per The Architect. **LOGICA:** I tre alberi erano progettati per alimentarsi a vicenda — un'azione produce risultati in più alberi contemporaneamente.
+
+- **OBIETTIVO:** ARCHITECT PATH, Tier 1, Livello 1 del V1 era "Scrittura del Perché — Capannone entro i 35 anni". **LOGICA:** L'obiettivo fisico del capannone era presente dalla prima versione documentata del sistema.
+
+- **DECISIONE:** Nel V1 era già codificato il principio "un'azione, tre risultati" come motore di parallelismo. **LOGICA:** Esempio documentato: calibrazione vibrazioni CNC → script Python → video YouTube = tre output da una sola sessione di lavoro.
+
+- **FATTO:** La macchina V32 viene citata come costruita in 12 m² con un peso di 178 kg, con obiettivo di precisione 0.008 mm al 15 luglio 2030. **PRECISIONE:** Questi parametri appaiono come destinazione finale del percorso a 150 livelli tracciato dal V1.

@@ -9,6 +9,7 @@
   - [ATTO I  Il rumore sotto il rumore](#atto-i-il-rumore-sotto-il-rumore)
   - [ATTO II  Aprire il cofano](#atto-ii-aprire-il-cofano)
   - [ATTO III  Quello che si sblocca adesso](#atto-iii-quello-che-si-sblocca-adesso)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -88,3 +89,17 @@ GENESIS rimane l'infrastruttura che tiene tutto insieme — dashboard, agenti, R
 Quello che cambia adesso è la chiarezza. Non ho più la sensazione di costruire pezzi che galleggiano. Ho una mappa delle dipendenze, una sequenza che ha senso, e so esattamente dove concentrare l'energia nelle prossime settimane.
 
 Un sistema non si ottimizza mai una volta sola. Ma si capisce, sì. E capir
+
+## FATTI (per il RAG)
+
+- **FATTO:** V32 (CNC epoxy-granite) risulta al 65% di avanzamento con Config G e rinforzi strutturali in fase di consolidamento al 28 maggio 2026.
+
+- **FATTO:** MIMS (connettori modulari) ha design completo al 100% ma è bloccato in attesa di test su materiali polimerici che richiedono la pressa di VULCAN, la quale a sua volta dipende dalle fresature di precisione di V32. Catena di dipendenza lineare: V32 → VULCAN → MIMS.
+
+- **DECISIONE:** V32 torna priorità assoluta fino al completamento della fase di collaudo assi. **LOGICA:** Ogni ora su V32 sblocca la catena V32→VULCAN→MIMS; investire su MIMS in isolamento è considerato meno efficiente.
+
+- **FATTO:** IDENTITY è al 45% di avanzamento; il sottocompletamento blocca la capacità di presentare TITANIUM_OS all'esterno in modo coerente (CV, MatteoSection, documentazione capabilities).
+
+- **DECISIONE:** IDENTITY smette di essere attività di sfondo e viene elevata a milestone con data definita. **LOGICA:** Il sistema necessita di una voce unica per interfacciarsi con clienti, partner e investitori.
+
+- **FATTO:** VITA_NATURA è al 40% con EVA in pilot; l'audit identifica un errore di sequenza — ottimizzazione AI dell'esperienza cliente avviata prima della stabilizzazione del back-end prenotazioni. Azione correttiva: scope di EVA ridotto, priorità al consolidamento infrastruttura prenotazione.

@@ -7,6 +7,7 @@
   - [ATTO II  LEVOLUZIONE IN TRE VERSIONI](#atto-ii-levoluzione-in-tre-versioni)
   - [ATTO III  MATTEOSECTION](#atto-iii-matteosection)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -107,3 +108,15 @@ L'episodio successivo è il momento in cui questo cockpit si riempie di qualcosa
 | Arco | Lo scaffolding visivo — il sistema che si osserva |
 | Tecnologie | React, Vite, Zustand, TanStack Query, CanvasLayout |
 | Connessione S2 | Prepara il terreno per il pannello agenti (EP futuro) |
+
+## FATTI (per il RAG)
+
+- **FATTO:** TITANIUM_OS a maggio 2026 conta 5 pilastri, 8 nodi attivi, 8 agenti, un RAG con migliaia di chunk, STATE.json come fonte di verità, GitHub Actions, stop hooks e un Research Agent.
+
+- **DECISIONE:** CanvasLayout v5.0 (27 maggio 2026) è passato da un file unico di 1116 righe a una struttura di 290 righe + componenti separati, con Zustand e TanStack Query come stack di stato. **LOGICA:** Ridurre la densità cognitiva e rendere il codice componibile.
+
+- **DECISIONE:** CanvasLayout v6.0 (28 maggio 2026) ha introdotto la drill-down navigation: le celle mostrano solo l'essenziale, il click porta al dettaglio. **LOGICA:** Rispecchiare la struttura gerarchica del sistema (pilastri → nodi → funzioni) nella navigazione UI.
+
+- **PRECISIONE:** La regola progettuale adottata in CanvasLayout v6.1 (29 maggio 2026) è: se l'utente impiega più di 3 secondi a capire dove si trova, l'UI ha fallito. L'obiettivo dichiarato è rispondere a "dove sono?" in meno di 1 secondo.
+
+- **FATTO:** MatteoSection v4.2 è la sezione della dashboard dedicata allo skill tree personale di Matteo Benenati, con quattro company espandibili (DATWLER, SCProject, ESSEGI, LU.VE) e le competenze acquisite per ciascuna. **LOGICA:** Il sistema è trattato come estensione della persona, non come strumento separato; la coerenza progettuale dipende dalla visibilità del background del builder.

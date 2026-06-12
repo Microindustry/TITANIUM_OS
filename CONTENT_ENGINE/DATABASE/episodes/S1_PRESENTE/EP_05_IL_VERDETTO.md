@@ -9,6 +9,7 @@
   - [ATTO IV  COSA NON È CAMBIATO](#atto-iv-cosa-non-è-cambiato)
   - [CHIUSURA  LA REGOLA CHE CAMBIA TUTTO](#chiusura-la-regola-che-cambia-tutto)
   - [NOTE DI PRODUZIONE](#note-di-produzione)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -168,3 +169,17 @@ Inizia adesso. Non quando avrai il capannone.
 | Antagonista | La dipendenza. Gli orari fissi. Il lavoro che non scala. |
 | Risoluzione | Libertà industriale come risultato di sistema, non di fortuna |
 | Tono generale | Tecnico + personale. Zero motivational speech. Dati reali. |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il sensore IFM VSE150 registra vibrazioni massime durante il ciclo di lavorazione della V32 pari a **0.003 mm/s RMS**, validando l'efficacia del basamento in epoxy-granite come smorzatore.
+
+- **FATTO:** La Titanium V32 completa **12 stampi per giunti MIMS Heavy** in un ciclo notturno non presidiato con un consumo energetico di **4.2 kWh** e zero interventi manuali.
+
+- **FATTO:** La prima lavorazione conto terzi documentata (Precision Lab, luglio 2026) ha fresato alluminio 7075 raggiungendo tolleranza **IT7 / 0.019 mm**; il cliente ha richiesto un secondo lotto.
+
+- **DECISIONE:** Il break-even della V32 è fissato a **61 ore di lavorazione conto terzi** (dicembre 2026). **LOGICA:** Superata quella soglia, ogni ora fatturata è profitto netto e innesca il ciclo amplificante del cash flow.
+
+- **FATTO:** EVA raggiunge **€4.200/mese di revenue automatica** con **340 business client** nel programma SaaS (stato proiettato al 2030), avendo superato la soglia di €1.000/mese già nel 2027.
+
+- **FATTO:** Il marketplace MIMS opera con un margine dichiarato del **79%** sui kit banco (tiles PA-GF30 + giunti Quick-Twist); il modello Hub&Spoke prevede **revenue sharing al 10%** per designer/officine terze che producono o adattano il sistema su licenza.

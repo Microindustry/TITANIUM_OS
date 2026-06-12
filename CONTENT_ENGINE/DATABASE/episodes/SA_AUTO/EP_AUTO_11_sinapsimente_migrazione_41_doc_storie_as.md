@@ -8,6 +8,7 @@
   - [ATTO II  Il 27 maggio](#atto-ii-il-27-maggio)
   - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,17 @@ Quarantuno documenti spostati. Un sistema che adesso pensa invece di archiviare.
 *Costruire non è fare le cose. Costruire è sapere dove metti quello che hai fatto, in modo che domani lo trovi ancora dove serve.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il 27 maggio 2026 Matteo ha completato la migrazione da SINAPSI a MENTE di 41 documenti (inclusi STORIE, ASSOLUTO, VULCAN, CV). **LOGICA:** SINAPSI era strutturato per raccogliere, MENTE per connettere i progetti in rete; la migrazione ha richiesto mezza giornata.
+
+- **FATTO:** Al momento della migrazione, V32 era al 65% sulla configurazione G, con i rinforzi strutturali ancora in sospeso e lavori sull'asse Z in corso.
+
+- **FATTO:** GENESIS girava sull'ecosistema versione 1.3, con dashboard v7.0 e RAG aggiornato alla versione 4.0 al momento della milestone.
+
+- **FATTO:** MIMS aveva il design completo ma era bloccato in attesa del completamento di V32, che sblocca la catena produttiva verso VULCAN.
+
+- **FATTO:** EVA era in fase pilota su VITA_NATURA, con il sito attivo e prenotazioni operative al 27 maggio 2026.
+
+- **DECISIONE:** Il CV è stato integrato in MENTE come documento vivo (non archivio), insieme alle CLAUDE capabilities e alla MatteoSection della dashboard. **LOGICA:** Permettere agli agenti di avere contesto sull'identità di Matteo, non solo sui progetti in corso.

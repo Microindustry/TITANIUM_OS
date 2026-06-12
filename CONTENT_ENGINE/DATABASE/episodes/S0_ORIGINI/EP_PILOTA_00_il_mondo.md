@@ -10,6 +10,7 @@
   - [ATTO III  LA CREW NELLA MACCHINA](#atto-iii-la-crew-nella-macchina)
   - [ATTO IV  COME GIRA TUTTO](#atto-iv-come-gira-tutto)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -99,3 +100,17 @@ Ma la data non è l'obiettivo vero. L'obiettivo vero è la sovranità. Controllo
 Il Sistema è la risposta a quindici anni di lavoro per strutture di altri. Adesso la struttura la costruisco io. Pezzo per pezzo, episodio per episodio, agente per agente.
 
 Sono Matteo Benenati. Questo è Il Sistema.
+
+## FATTI (per il RAG)
+
+- **FATTO:** V32 è una fresatrice CNC a tre assi costruita da zero, con un peso di 128 kg (corpo unico) e una tolleranza di lavoro di ±0,019 mm (19 millesimi). **LOGICA:** Il nome deriva dalla versione 3.2 del progetto (terza iterazione design, seconda revisione strutturale).
+
+- **FATTO:** L'avanzamento del progetto V32 è al 65% al momento dell'episodio. **LOGICA:** Non è un acquisto ma una costruzione diretta, motivata dalla necessità di conoscenza piena dei vincoli strutturali interni.
+
+- **FATTO:** GENESIS (stack AI/automazioni) ha uno sviluppo al 70% al momento dell'episodio. **LOGICA:** È il sistema cognitivo centrale dell'ecosistema TITANIUM_OS, include RAG e agenti Python con ruoli distinti.
+
+- **FATTO:** MIMS usa una geometria proprietaria a 29,9 mm con tre livelli di mercato: Junior/Light (hobby), Mid/Pro (industria leggera), Heavy (carichi strutturali). **LOGICA:** La strategia di ingresso è definita internamente "Cavallo di Troia": acquisire base installata dal basso, poi scalare verso l'industria.
+
+- **DECISIONE:** Il perimetro geometrico del connettore MIMS è identificato come proprietà intellettuale da proteggere formalmente. **LOGICA:** È considerato la differenza tra un prodotto e un asset strategico.
+
+- **FATTO:** EVA è l'agente Python dedicato alle automazioni WhatsApp di Vita Natura (prenotazioni, conferme, follow-up clienti). **LOGICA:** Il centro estetico funge da caso reale di validazione del sistema GENESIS su clienti e metriche concrete.

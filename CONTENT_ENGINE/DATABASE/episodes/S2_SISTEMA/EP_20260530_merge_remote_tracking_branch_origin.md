@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [reel_hook](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -127,3 +128,17 @@ Qualcuno tiene traccia, però. È per questo che esiste il log.
 | **Metrica chiave** | 159 elementi rilevati, `local=1 llm=0`, costo -80% |
 | **Co-autore commit** | Claude Sonnet 4.6 |
 | **Prossimo target** | Capannone 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** ARGUS è il nono agente di GENESIS, agente visivo basato su OmniParser (Microsoft, open source), stilizzato in rosso nella dashboard (`glow ef4444, border red-500`). **LOGICA:** Aggiunge capacità di visione del desktop al sistema senza dipendere da API cloud.
+
+- **DECISIONE:** OmniParser gira in locale su CPU con flag `local=1 llm=0`, senza chiamate a modelli esterni. Al primo test reale ha rilevato 159 elementi UI su uno screenshot. **LOGICA:** Eliminare il costo per ogni frame analizzato in un sistema h24.
+
+- **DECISIONE:** Strategia ibrida visione: OmniParser locale gestisce l'80% dei task visivi (semplici, ripetitivi); il restante 20% (interpretazione ambigua, testo complesso) passa a Claude Sonnet. **LOGICA:** Riduzione stimata dell'80% del costo rispetto a inviare tutti gli screenshot al cloud.
+
+- **FATTO:** Bug risolto in ARGUS v1.0→v2: il file pesi si chiamava `model.pt`, non `best.pt` come atteso dal codice. Commit: `fix: argus_v2 path pesi model.pt`. **LOGICA:** Un path errato bloccava l'intero agente visivo; fix richiesto ~1 ora di debug.
+
+- **FATTO:** Al 2026-05-30 (Sessione #16): GENESIS al 83% di completamento, V32 al 65%. Il RAG graph-aware conta 114 nodi e 218 archi, con catena hardcoded `V32→MIMS→VITA_NATURA`. Milestone attivo V32: Config G — Rinforzi colonne Z e U.
+
+- **FATTO:** GENESIS conta otto agenti operativi prima di ARGUS: RAG, NEXUS (orchestrazione parallela), watchdog (polling ogni 30 secondi, su thread separati), MCP server. ARGUS è lo slot nove.

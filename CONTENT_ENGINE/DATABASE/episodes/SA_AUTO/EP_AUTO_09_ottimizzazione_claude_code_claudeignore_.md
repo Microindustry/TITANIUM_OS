@@ -8,6 +8,7 @@
   - [ATTO II  Struttura o morte](#atto-ii-struttura-o-morte)
   - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,15 @@ Il sistema smette di dipendere dalla mia memoria in tempo reale. Diventa replica
 ## CHIUSURA
 
 *Il problema non era la
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il 26 marzo 2026 Matteo ha introdotto un file `.claudeignore` nell'ambiente Claude Code per escludere file temporanei, build, log e cartelle rumorose, limitando il contesto visibile al solo materiale operativo rilevante.
+
+- **DECISIONE:** Centralizzazione del comportamento di Claude in un `settings.json` con parametri espliciti: lingua italiana, tono tecnico diretto, prosa strutturata senza bullet point in fase di ragionamento, massima densità informativa. **LOGICA:** Eliminare la dipendenza dall'inferenza del modello sulle preferenze di stile a ogni sessione.
+
+- **DECISIONE:** Creazione di una cartella `rules/` con file separati per ciascun sottoambiente di TITANIUM_OS (V32, GENESIS, MIMS, EVA/VITA_NATURA). **LOGICA:** Rendere il contesto di dominio persistente tra sessioni senza richiedere re-orientamento manuale.
+
+- **FATTO:** Alla data del milestone, lo stato di avanzamento riportato era: V32 al 65% con Config G dei rinforzi in lavorazione, GENESIS con dashboard v7.0 e RAG alla versione 4, EVA in fase pilota, MIMS in attesa della catena V32→VULCAN.
+
+- **DECISIONE:** Sviluppo di `skills` portabili — procedure riutilizzabili trasversali ai progetti (debug agente GENESIS, sessioni di design MIMS, valutazione readiness per VULCAN). **LOGICA:** Separare i metodi di lavoro dal contesto specifico di progetto per garantire coerenza applicativa tra sottoambienti.

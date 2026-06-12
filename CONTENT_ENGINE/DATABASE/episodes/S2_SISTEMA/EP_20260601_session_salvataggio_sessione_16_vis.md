@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -163,3 +164,17 @@ Quante cose esistono già, nel tuo progetto, che il sistema non riesce ancora a 
 | **Co-author sessione** | Claude Opus 4.8 |
 | **Tag narrativo** | UX · audit · visibilità · loop-fix · estetica |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** GENESIS a S1E16 contiene 6.369 chunk nel RAG, 139 file, 87 storie e 15 sessioni archiviate, organizzati attorno a 5 pilastri: V32, MIMS, GENESIS, EVA, VITA.
+
+- **DECISIONE:** Aggiunta vista PITCH alla HOME tramite bottone "Presentazione" con approccio additivo (zero modifiche all'esistente). **LOGICA:** Permettere la presentazione del progetto a interlocutori non tecnici con un solo click, senza aprire tab multipli.
+
+- **FATTO (anomalia AU19):** Il watcher triggerava un loop runaway perché `_archive_old_changelog` archiviava righe per-evento anziché a chunk. **FIX:** `IGNORE_DIRS += DATA` in `watcher.py` e soglia di archiviazione spostata a oltre 3.000 righe.
+
+- **DECISIONE:** Il completamento del nodo ROOT_NODE in MappaView corretto da 60% a 48% (media reale dei 5 pilastri). **LOGICA:** Preferenza esplicita per accuratezza sul dato rispetto a un valore più favorevole ma errato.
+
+- **FATTO (tema UI):** Il sistema temi dark/light è implementato con Tailwind v4 token semantici. Il tema light è progettato da zero (non inversione del dark) con contrasto minimo 4.5:1. Glow radiale: emerald alto-sinistra, cyan alto-destra, opacità 0.05–0.07.
+
+- **FATTO:** Il parser `sync_storie.py` esteso per leggere il formato `story_agent` (titolo con `##`, data da filename) ha recuperato 12 dev-log precedentemente invisibili al sistema, portando il contatore storie da 75 a 87.

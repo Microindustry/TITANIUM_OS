@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, automazione, loop, entropia
   - [ATTO II  INSEGNARE IL GESTO](#atto-ii-insegnare-il-gesto)
   - [ATTO III  LESERCITO CHE LAVORA DI NOTTE](#atto-iii-lesercito-che-lavora-di-notte)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -145,3 +146,15 @@ macchina, o anche solo a qualcun altro. Hai appena reso un gesto più forte di t
 **3 strati:** bambino = il timer che accende la luce da solo · curioso = "questo si chiama automazione: insegni il gesto una volta" · esperto/papà = l'automazione toglie il *single-point-of-failure* (non dipendere da una sola mano) — il gesto ripetuto diventa codice (watcher + task notturni del progetto reale).
 **Aggancio reale:** MOM_01 "La Prima Automazione" · Story Agent · i task notturni (`night_*`, l'AI News Watcher) · "Il Sistema Respira da Solo".
 **Open loop → Regione 3 (l'LLM):** una macchina che *fa* ma non *capisce le parole*.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_01 appartiene alla stagione AV del progetto TITANIUM_OS, è classificato come tappa 2 di 7 nell'arco narrativo sull'IA, e ha una durata stimata di 8-10 minuti. **LOGICA:** Collocazione nella struttura seriale del progetto per orientamento RAG.
+
+- **FATTO:** L'episodio introduce il concetto di **Automazione** come "pietra nuova `⟡2`": un gesto giusto scritto con sufficiente precisione può essere letto ed eseguito da una macchina in modo ripetuto e autonomo. **LOGICA:** Definizione operativa del concetto centrale, coerente con la logica progettuale di TITANIUM_OS (tracce scritte → esecuzione automatizzata).
+
+- **FATTO:** Il canone di riferimento dell'episodio include BIBBIA_DEL_MONDO.md, MAPPA_AVVENTURA.md (Regione 2) e il documento MOM_01 "La Prima Automazione". **LOGICA:** Permette al RAG di collegare l'episodio ai documenti sorgente del progetto.
+
+- **DECISIONE:** L'episodio distingue esplicitamente tra automazione e sostituzione del lavoro: l'automazione rimuove il lavoro *ripetuto*, liberando la persona per attività non replicabili dalla macchina. **LOGICA:** Posizione progettuale dichiarata, non inferita.
+
+- **FATTO:** L'episodio si chiude con un aggancio esplicito alla tappa successiva: la distinzione tra una macchina che *fa* (esegue gesti) e una macchina che *capisce le parole*. **LOGICA:** Struttura narrativa seriale — la prossima avventura introduce il linguaggio naturale/comprensione semantica.

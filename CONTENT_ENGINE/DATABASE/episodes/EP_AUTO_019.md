@@ -19,6 +19,7 @@ generated: "2026-05-27T14:55:16.054586"
   - [Il Bivio](#il-bivio)
   - [Connessione al Sistema](#connessione-al-sistema)
   - [Il Numero che Conta](#il-numero-che-conta)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -99,3 +100,15 @@ Non è un ritardo — è uno stato. V7 lo sa. Quando rientro in officina domani 
 ---
 
 *Il documento non risolve i problemi. Li rende visibili.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il documento master `ASSOLUTO_V7_MASTER.md` è cresciuto da 178 righe a 340 righe nella sessione del 27 maggio 2026, unificando 10 ATTI in un singolo file strutturato. **LOGICA:** Sostituisce 6 documenti separati (tra cui `V32_build_log.md`, `MIMS_notes.txt`, `VULCAN_ricette_v3.md`) per eliminare perdita di contesto tra sessioni di lavoro.
+
+- **FATTO:** Il progetto V32 (CNC epoxy-granite) risulta al 65% di completamento al 27 maggio 2026. **LOGICA:** Il blocker identificato è il mandrino 2.2kW ER20 (ordine in sospeso, ETA sconosciuto); la prossima operazione documentata riguarda la gusset sinistra, Config G, spessore 6mm S235, fori M8 passo 1.25 da maschiare.
+
+- **FATTO:** Il progetto MIMS (connettori modulari) risulta al 30% di completamento. **LOGICA:** La documentazione di geometrie, tolleranze di accoppiamento e materiali testati è centralizzata in ATTO VII, sezione 2 di ASSOLUTO V7.
+
+- **DECISIONE:** STATE.json si aggiorna da V7 e viene letto dalle automazioni AI di TITANIUM_OS. **LOGICA:** Il ciclo chiuso V7 → STATE.json → AI garantisce che il layer software operi su contesto reale anziché su dati generati dall'AI.
+
+- **FATTO:** Le ricette polimeri VULCAN (temperatura stampo, pressione iniezione, tempi ciclo) sono archiviate in ATTO VIII di V7, provenienti da prove fisiche con pressa da 20 tonnellate, ciascuna con data e risultato. **LOGICA:** I dati sono empirici, non teorici.

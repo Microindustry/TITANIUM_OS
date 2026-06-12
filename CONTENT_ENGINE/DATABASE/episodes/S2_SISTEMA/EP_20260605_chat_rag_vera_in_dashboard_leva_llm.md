@@ -8,6 +8,7 @@
   - [ATTO III  Quello che è cambiato](#atto-iii-quello-che-è-cambiato)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -132,3 +133,17 @@ Oggi abbiamo smesso di accettare la performance.
 | **Tag** | `rag`, `agents`, `eva`, `audit`, `llm-locale`, `teatro` |
 | **Co-autore sessione** | Claude Opus 4.8 |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il database degli episodi GENESIS presentava 27 episodi orfani: `story_agent` scriveva i file `.md` su disco ma non aggiornava `episodes.json`, creando una discrepanza tra registro ufficiale (88 episodi) e realtà su disco (114 episodi). **LOGICA:** Lo script `audit_episodes.py` (read-only) ha rilevato le 27 discrepanze e sincronizzato il registro; da quella sessione `story_agent` aggiorna il JSON a ogni generazione.
+
+- **DECISIONE:** La chat RAG in dashboard è stata corretta per interrogare ChromaDB con similarity search e iniettare i chunk nel contesto prima di chiamare il modello, invece di interrogare l'LLM direttamente. **LOGICA:** Il comportamento precedente produceva risposte dal pretraining senza grounding reale sui documenti indicizzati.
+
+- **DECISIONE:** Adozione di Qwen2.5-7B-Q4 via Ollama come LLM locale per P4b. **LOGICA:** Gira su 8GB RAM sul fisso in taverna senza dipendere da API esterne (sovranità computazionale); 7 miliardi di parametri quantizzati a 4 bit.
+
+- **FATTO:** Gli archi della RETE 3D di GENESIS sono stati ricalcolati su similarità coseno reale tra chunk del RAG: viene creato un collegamento tra ogni coppia di nodi che supera una soglia di similarità coseno. In precedenza i collegamenti erano generati da t-SNE a scopo visivo senza calcolo semantico.
+
+- **DECISIONE:** Introdotta separazione CANONE vs RICERCA nel RAG. **LOGICA:** Sessioni, episodi e decisioni verificate alimentano il RAG; la ricerca web notturna resta in `MENTE/KNOWLEDGE/RESEARCH` separata per non inquinare la memoria con contenuti non verificati.
+
+- **FATTO:** Il nodo WhatsApp di EVA non persisteva lo stato tra riavvii del webhook, causando la perdita delle sessioni di prenotazione in corso. Il fix ha scritto lo stato su disco e chiuso il loop inbox: le richieste passate all'operatore vengono registrate, lette dal brief delle 07:30 e marcate chiuse quando gestite.

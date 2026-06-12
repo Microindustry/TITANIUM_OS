@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -159,3 +160,17 @@ Ma per quanto ancora regge, prima che la prossima crepa si apra?
 | **Target capannone** | 15 luglio 2030 |
 | **Tono** | Tecnico, notturno, onesto |
 | **Angolo narrativo** | Bug silenziosi + il dev esterno che vede il sistema da fuori |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Lo script `night_push.bat` falliva con `exit 255` quando il subject del commit conteneva una parentesi chiusa `)`, interpretata dal parser CMD come chiusura del blocco `IF`.
+
+- **DECISIONE:** Il controllo sulla presenza di commit in `night_push.bat` è stato spostato dalla lettura del testo del subject alla **misurazione della dimensione del file di log** (flag `HAVE_COMMITS` basato su bytes). **LOGICA:** Il testo del commit può contenere qualsiasi carattere senza compromettere la logica di branching.
+
+- **DECISIONE:** Il resolver di `gh` (GitHub CLI) è stato reso dinamico: cerca prima in `PATH`, poi in `Program Files`, e in caso di assenza registra l'evento e prosegue senza crashare. **LOGICA:** Evitare dipendenza da path hardcoded specifici di una singola macchina.
+
+- **DECISIONE:** In `re.sub`, il parametro `repl` è stato convertito da stringa a **funzione lambda** per l'inserimento di path Windows nei template JavaScript. **LOGICA:** Quando `repl` è una funzione, Python non interpreta le backslash come sequenze speciali di sostituzione regex.
+
+- **FATTO:** I path inseriti in template literal TypeScript (backtick) vengono ora escaped prima dell'inserimento: ogni `\` diventa `\\`, tramite la funzione `build_ts_entry`.
+
+- **FATTO:** Il flag `--sync` ha ricostruito `storieData` da zero leggendo tutti i file `.md` della libreria, restituendo **51 episodi AUTO** con TypeScript pulito e nessun errore di compilazione. L'episodio **EP_AUTO_50** ha prodotto 1099 parole grounded su 46 fonti RAG.

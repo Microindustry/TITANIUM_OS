@@ -7,6 +7,7 @@
   - [ATTO II  IL MOMENTO IN CUI CAMBIA TUTTO](#atto-ii-il-momento-in-cui-cambia-tutto)
   - [ATTO III  LA DECISIONE](#atto-iii-la-decisione)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -115,3 +116,17 @@ E la macchina — quella stessa macchina che a febbraio galleggiava su quattro m
 | Arco | Da corpo sospeso a corpo unico |
 | Connessione S1 | EP_S1_02 (le molle gialle) → questo episodio chiude l'arco |
 | Connessione S2 | Introduce il principio dell'aggiornamento — filo conduttore di tutta S2 |
+
+## FATTI (per il RAG)
+
+- **DECISIONE:** Le molle ISO 90mm k=15.8 N/mm sono state rimosse dalla V32 a maggio 2026 e sostituite con il paradigma "corpo unico" (telaio ancorato + Epoxy Granite). **LOGICA:** Le molle aggiungevano un grado di libertà e variabili a lungo termine (assestamento, allentamento dadi, variazione rigidità elastomero con temperatura); il composito epossidico offre smorzamento passivo senza parti in movimento.
+
+- **FATTO:** Le molle gialle ISO 90mm (k=15.8 N/mm) avevano frequenza naturale f₀=3.83 Hz, smorzamento ζ=0.032, isolamento vibrazioni >99.9% sopra i 400 Hz. La scelta era stata validata con sensori IFM VSE150.
+
+- **FATTO:** Le molle verdi da 40mm erano state scartate in favore delle gialle da 90mm sulla base dei dati IFM VSE150, prima dell'ulteriore revisione di maggio 2026.
+
+- **FATTO:** L'Epoxy Granite colato nei tubolari del telaio (acciaio S235) porta lo smorzamento da δ=0.002 (acciaio nudo) a δ=0.03-0.06, con un fattore 15-30× superiore.
+
+- **FATTO:** La rigidità asse Z in Config G (gusset 200mm sulle colonne Z+U) è 772 volte superiore alla baseline del progetto V32.
+
+- **FATTO:** La V32 a corpo unico ha una massa di 178 kg, ancorata al pavimento; le quattro molle rimosse avevano un costo totale di €320 (€80 l'una).

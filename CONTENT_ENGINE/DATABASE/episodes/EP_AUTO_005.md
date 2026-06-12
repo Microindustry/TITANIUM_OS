@@ -36,3 +36,17 @@ Questa informazione non la ricevo via email. La sento con le mani. E ora è codi
 Quando inizierò il training di TITANIUM_OS con i dati della V32, avrò già settimane di esperienza operativa. Non partirò da zero. Partirò dalla realtà assemblata.
 
 Asse X: vivo. Sistema: respirando.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'asse X della V32 è composto da guide THK 25 mm, vite Hiwin a ricircolo da 16 mm, servo Nema 34 con drive Leadshine.
+
+- **FATTO:** Il precarico della vite è stato impostato a 2 Nm; gli spacer di allineamento hanno tolleranza ±0.05 mm.
+
+- **FATTO:** Durante il test geometrico è stata rilevata una deviazione di 0.3 mm tra il CAD e la realtà fisica, causata da precarico asimmetrico della vite e usura micrometrica asimmetrica delle guide.
+
+- **DECISIONE:** L'asse X è progettato come nodo dati: ogni passata utensile genererà dati (misura, feedback, adattamento) da alimentare al modello cognitivo di TITANIUM_OS. **LOGICA:** La V32 è il prototipo operativo su cui costruire il training del sistema AI, partendo da esperienza reale e non da dati sintetici.
+
+- **FATTO:** MIMS (connettori modulari) è al 30% di sviluppo; la sua funzione è permettere il plug-in di nuovi assi (Y, Z, mandrino) senza rifare wiring o ridefinire protocolli.
+
+- **FATTO:** Il blocco corrente sull'asse X è la mancanza del mandrino 2.2 kW ER20, non ancora ordinato; l'attività parallela pianificata è la fresatura del gusset sinistro (Config G), stimata 3 ore con strumenti manuali.

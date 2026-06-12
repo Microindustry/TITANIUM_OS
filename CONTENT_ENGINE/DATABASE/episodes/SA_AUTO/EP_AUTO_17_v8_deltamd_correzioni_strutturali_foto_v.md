@@ -8,6 +8,7 @@
   - [ATTO II  Ventiotto Maggio, Foto contro CAD](#atto-ii-ventiotto-maggio-foto-contro-cad)
   - [ATTO III  Cosa si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,15 @@ A volte il lavoro più importante che fai in una giornata è correggere qualcosa
 *"Il modello serve per costruire. La realtà serve per correggere il modello. Il lavoro vero sta nel coraggio di non saltare il secondo passaggio."*
 
 ---
+
+## FATTI (per il RAG)
+
+- **MILESTONE:** V8_DELTA.md è il documento di correzione strutturale che registra le discrepanze tra V7 (modello CAD) e la struttura fisica reale di V32, generato il 28 maggio 2026. **LOGICA:** V7 era stato costruito da tre fonti eterogenee (tavolino, foto, memoria), introducendo disallineamenti accumulati.
+
+- **FATTO:** Le discrepanze documentate in V8_DELTA sono tre: (1) sovrapposizione di materiale reale nei nodi vs. giunzione pulita nel modello, su circa 12 nodi strutturali; (2) silent blocks modellati a spessore nominale ma compressi in esercizio, con scostamento di alcuni millimetri sull'asse Z; (3) quote arrotondate per convenienza sedimentate come verità in V7. **PRECISIONE:** Le quote reali misurate hanno sostituito le quote arrotondate.
+
+- **DECISIONE:** I silent blocks di V32 devono essere considerati con lo spessore in stato compresso (pre-caricato/in esercizio), non a riposo. **LOGICA:** La compressione reale produce uno spostamento di quote che si propaga lungo tutto l'asse Z.
+
+- **STATO:** Con Config G (rinforzi strutturali), V32 raggiunge il 65% del completamento strutturale. **LOGICA:** Config G è la prima iterazione costruita su base documentale (V8_DELTA) coerente con la struttura fisica.
+
+- **DIPENDENZA:** MIMS (connettori modulari) è fermo al 30% di avanzamento perché la catena produttiva non è ancora attiva. **LOGICA:** MIMS dipende dai primi pezzi prodotti da V32 per validare la catena; V32 dipende da V8_DELTA per procedere con quote affidabili.

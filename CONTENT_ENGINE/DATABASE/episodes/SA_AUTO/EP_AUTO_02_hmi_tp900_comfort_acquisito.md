@@ -8,6 +8,7 @@
   - [ATTO II  Il TP900 Comfort](#atto-ii-il-tp900-comfort)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -77,3 +78,17 @@ Adesso ho il pannello. La prossima settimana vediamo se la rete industriale risp
 ## CHIUSURA
 
 *Una macchina senza interfaccia ti dice solo che esiste. Un'interfaccia ti dice cosa pensa.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il progetto V32 (CNC epoxy-granite) è al 65% di avanzamento con Config G montata e rinforzi del portale installati al momento dell'acquisizione dell'HMI.
+
+- **DECISIONE:** Acquisito pannello HMI Siemens TP900 Comfort (9 pollici, touch capacitivo, connessione PROFINET, compatibilità WinCC flexible e TIA Portal) come interfaccia fisica primaria dell'ecosistema TITANIUM_OS. **LOGICA:** Ridurre il tempo di intervento/monitoraggio sulla V32 durante i cicli di lavorazione, eliminando la necessità di raggiungere un computer separato.
+
+- **FATTO:** GENESIS è operativo con dashboard v7.0 e RAG v4.0 attivo con memoria dell'intero ecosistema al momento della milestone EP_AUTO_02.
+
+- **FATTO:** MIMS è fermo al 30% di avanzamento in attesa della chiusura della catena V32→VULCAN per entrare in produzione.
+
+- **OBIETTIVO:** Il TP900 Comfort è destinato a diventare punto di controllo unificato dell'isola di produzione completa (V32 + VULCAN) una volta che VULCAN sarà online.
+
+- **DECISIONE:** Posizionamento dell'HMI in posizione operatore, cablato direttamente alla rete industriale, con integrazione pianificata nella settimana successiva alla data evento (2026-05-29). **LOGICA:** Portare la dashboard v7.0 di GENESIS dal contesto ufficio/browser al flusso fisico dell'officina.

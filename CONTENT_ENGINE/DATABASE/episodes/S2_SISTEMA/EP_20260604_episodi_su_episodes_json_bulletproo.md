@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL HOOK](#reel-hook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -154,3 +155,17 @@ Il mondo è spiegato.
 | **Stato V32** | 65% |
 | **Stato GENESIS** | 70% |
 | **Target capannone** | 15 luglio 2030 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** `storieData.ts` conteneva 5.772 righe con dati di 27 episodi incorporati come template literal TypeScript; dopo la migrazione a `episodes.json` il file è sceso a 33 righe.
+
+- **DECISIONE:** Migrazione dei dati episodi da template literal TypeScript a file `episodes.json` con import. **LOGICA:** I caratteri speciali (backtick, backslash, path Windows con doppie barre) generati da StoryAgent rompevano esbuild; il JSON non ha contesto sintattico e non può innescare quell'errore.
+
+- **DECISIONE:** Adozione di `json.dumps()` in Python per serializzare le stringhe degli episodi prima della scrittura in TypeScript. **LOGICA:** Gestisce automaticamente tutti i casi edge di escaping (backslash, path Windows) senza logica artigianale nelle funzioni `build_ts_entry` e `sync_storie.to_ts`.
+
+- **FATTO:** `tsconfig` ha ricevuto il flag `resolveJsonModule: true` per abilitare l'import diretto del file `episodes.json` nel progetto TypeScript/Vite.
+
+- **OBIETTIVO:** Il sistema usa Markdown come fonte di verità primaria (versionata su git) anziché un database strutturato. **LOGICA:** Permette a un operatore singolo di documentare sessioni di lavoro in testo libero senza schemi, migration scripts o tool proprietari; lo StoryAgent trasforma successivamente quel testo in contenuto navigabile.
+
+- **FATTO:** Nella stessa sessione StoryAgent ha generato 3 nuovi episodi da 30 commit recenti, portando il totale verso la soglia dei 88 episodi pianificati.

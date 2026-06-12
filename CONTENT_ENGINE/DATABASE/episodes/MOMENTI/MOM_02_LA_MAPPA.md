@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [MOMENTO  La Mappa](#momento-la-mappa)
+    - [La prima volta che il sistema si vede da fuori](#la-prima-volta-che-il-sistema-si-vede-da-fuori)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # MOMENTO — La Mappa
 ### "La prima volta che il sistema si vede da fuori"
 
@@ -23,3 +31,15 @@ Questo è il tipo di investimento che sembra ridondante finché non smetti di fa
 
 ---
 *Stagione: S1.5 — Il Gap | Posizione: dopo S1_05, prima S2_00*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il 18 marzo 2026 viene rilasciato NeuroMap (commit `feat: TITANIUM_OS v3.2 — NeuroMap immersivo`): visualizzazione immersiva dell'ecosistema TITANIUM_OS come grafo interattivo con nodi cliccabili e archi di dipendenza.
+
+- **FATTO:** Il 25 marzo 2026 viene rilasciata Dashboard v5.0 (commit `feat: Dashboard v5.0`), costruita con Zustand e TanStack Query, che integra NeuroMap in un cockpit navigabile chiamato "la Tela".
+
+- **FATTO:** Le dipendenze mappate in NeuroMap includono: V32 → VULCAN → MIMS e GENESIS → RAG → Claude e EVA → Maria → Vita Natura.
+
+- **DECISIONE:** Dashboard v5.0 espone per ogni pilastro: stato corrente, commit recenti, blockers e daily brief, accessibili da browser. **LOGICA:** Ridurre il tempo di ricostruzione contestuale da ~5 minuti per sessione a ~10 secondi.
+
+- **OBIETTIVO:** NeuroMap è collocato nella roadmap narrativa tra S1_05 e S2_00 (Stagione S1.5 — Il Gap), segnando il punto in cui TITANIUM_OS passa da sistema distribuito in file/commit a sistema osservabile come entità unica.

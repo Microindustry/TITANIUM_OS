@@ -8,6 +8,7 @@
   - [ATTO I  Prima del 30 maggio esisteva solo il rumore](#atto-i-prima-del-30-maggio-esisteva-solo-il-rumore)
   - [ATTO II  Il 30 maggio: quando i dati iniziano a parlare in 3D](#atto-ii-il-30-maggio-quando-i-dati-iniziano-a-parlare-in-3d)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,17 @@ Per V32, che è ancora al 65% con i rinforzi Config G, la mappa mi dice esattame
 Per Vita Natura e EVA, il drill-down mi mostra che il 40% di completamento nasconde una distribuzione asimmetrica: il sito e le prenotazioni sono più avanti, il pilota AI ha ancora punti ciechi. Con la mappa posso allocare il prossimo sprint in modo chirurgico.
 
 IDENTITY al 45% sembrava un numero vago. Adesso è un nodo nel grafo con dipend
+
+## FATTI (per il RAG)
+
+- **FATTO:** GENESIS è al 83% di completamento, con swarm NEXUS, RAG graph-aware v5, protocollo MCP 1.3 e watchdog swarm parallelo integrati.
+
+- **FATTO:** V32 (CNC epoxy-granite) è al 65% di completamento, fase Config G dei rinforzi; MIMS è bloccato in attesa che la catena V32-VULCAN si consolidi prima di procedere.
+
+- **FATTO:** EVA (automazione centro estetico Vita Natura) è al 40% di completamento, con distribuzione asimmetrica: sito e prenotazioni più avanzati, pilota AI con punti ciechi ancora aperti.
+
+- **FATTO:** IDENTITY (CV, dashboard, documentazione capabilities) è al 45% di completamento alla data dell'episodio (30 maggio 2026).
+
+- **DECISIONE:** La MAPPA v2.0 è implementata in Three.js raw (senza framework) con proiezione t-SNE 3D, 31 nodi attivi, lazy loading on-click e watchdog psutil integrato nel layer di monitoraggio GENESIS. **LOGICA:** Three.js raw scelto per controllo totale sul rendering; lazy loading per mantenere il browser leggero con 31 nodi; psutil aggiunge visibilità sullo stato fisico della macchina (CPU, memoria, processi) oltre allo stato logico dei task.
+
+- **FATTO:** Il blocco di MIMS è identificato come problema di sequenza, non di design: i connettori modulari richiedono un contesto fisico fornito dalla chiusura della catena V32-VULCAN per poter essere implementati.

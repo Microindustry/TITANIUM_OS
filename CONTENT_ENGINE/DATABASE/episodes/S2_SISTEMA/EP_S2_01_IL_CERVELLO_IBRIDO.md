@@ -7,6 +7,7 @@
   - [ATTO II  I TRE SISTEMI](#atto-ii-i-tre-sistemi)
   - [ATTO III  IL MANIFEST](#atto-iii-il-manifest)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -106,3 +107,15 @@ La differenza la vedi quando stai costruendo qualcosa di complesso e non riesci 
 | Arco | L'archivio che diventa organismo |
 | Tecnologie | ChromaDB, TF-IDF BM25, CrossEncoder, RRF, manifest incrementale |
 | Connessione S2 | Introduce il tema dell'auto-diagnosi — il sistema che trova i propri errori |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il knowledge base TITANIUM_OS al 28 maggio 2026 contiene **2376 chunk** indicizzati in ChromaDB.
+
+- **FATTO:** Il rebuild completo dell'indice RAG (versioni precedenti alla v4.0) richiedeva **>2 minuti** di timeout; con l'introduzione del manifest incrementale (`rag_manifest.json`) il tempo scende a **<20 secondi**.
+
+- **DECISIONE:** Adozione di architettura **RAG v4.0 con hybrid retrieval** (ChromaDB semantico + BM25 + CrossEncoder reranker), deploy in data **28 maggio 2026**. **LOGICA:** Il solo modello semantico (`paraphrase-multilingual-MiniLM-L12-v2`, vettori 384-dimensionali) era impreciso su codici tecnici esatti (es. "Ø18 h30", "Config G"); BM25 copre le keyword esatte, il CrossEncoder riordina i candidati per rilevanza contestuale reale.
+
+- **FATTO:** La fusione dei risultati dei tre sistemi avviene tramite **RRF (Reciprocal Rank Fusion) con parametro k=60**; vengono selezionati **top-15 candidati** prima del reranking.
+
+- **DECISIONE:** Introduzione del file `rag_manifest.json` per aggiornamento incrementale dell'indice. **LOGICA:** Con 2376 chunk il rebuild era lento ma fattibile; proiettando la crescita a ~10.000 chunk (sessioni future, documenti V8, Research Agent) il rebuild totale sarebbe diventato impraticabile.

@@ -7,6 +7,7 @@
   - [ATTO II  IL DISORDINE](#atto-ii-il-disordine)
   - [ATTO III  IL GRANDE LOOP](#atto-iii-il-grande-loop)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -142,3 +143,14 @@ Loop.*
 **3 strati:** bambino = smonta/rimonta la sveglia · curioso = "tenere a bada il disordine" ·
 esperto/papà = la traccia scritta è ciò che rende un gesto *ripetibile* (la base dell'automazione)
 
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_00 è classificato come "Pilota Avventura (binario educativo)" con durata stimata 8-10 minuti, destinato a bambini e curiosi di ogni età.
+
+- **OBIETTIVO:** Il concetto centrale insegnato è il **Grande Loop**: un gesto fatto bene produce tre frutti — aggiusti (la cosa migliora), impari (acquisisci competenza), lasci una traccia (il prossimo riparte da dove sei arrivato tu).
+
+- **FATTO:** Il Grande Loop è dichiarato in canone come derivato da EP_S0_00 con il principio "un'azione, tre frutti", tracciando continuità esplicita tra l'arco educativo e quello tecnico del progetto TITANIUM_OS.
+
+- **FATTO:** L'Entropia ("il Disordine") è introdotta come forza ricorrente fuori dalla sequenza dell'arco principale — classificata con pietra `⟡E` — e definita concettualmente come tendenza naturale al degrado che si contrasta costruendo sistemi che si reggono da soli.
+
+- **DECISIONE:** Le "Pietre nuove" rilasciate in questo episodio sono `⟡1` (il Grande Loop) e `⟡E` (l'Entropia); nessuna pietra viene richiamata, confermando la funzione di episodio-zero senza prerequisiti narrativi. **LOGICA:** stabilisce la base concettuale minima per tutti gli episodi successivi del ramo AV.

@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -138,3 +139,17 @@ Il RAG di GENESIS impiegava 45 secondi ogni mattina per svegliarsi. Oggi impiega
 | **Progetto focus** | GENESIS / Dashboard |
 | **Tono** | Onesto, tecnico, non celebrativo |
 | **Durata stimata lettura** | ~8 min |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il tempo di esecuzione del RAG (ChromaDB) è stato ridotto da **45 secondi a 4.7 secondi** tramite l'introduzione dell'orchestrazione parallela dei 3 hook in `stop_hooks.py`.
+
+- **DECISIONE:** Implementata logica *skip RAG*: se la cartella `MENTE/` non è cambiata dall'ultima esecuzione, il sistema salta il recupero dei chunk. **LOGICA:** Non ricaricare dati già validi riduce attrito e tempo senza perdita di contesto.
+
+- **FATTO:** Il file di riavvio sessione `RIAVVIO_SESSIONE.txt` contiene 150 chunk di memoria compressa e lo stato corrente del progetto, inclusa la milestone attiva.
+
+- **FATTO:** CanvasLayout ha raggiunto la versione **6.1** in una singola giornata, con navigazione drill-down (v6.0) e percentuali di completamento in carattere **6xl** con glow cromatico per progetto (v6.1). Sfondo navy.
+
+- **OBIETTIVO:** Milestone attiva **Config G** — saldare 4 gusset da 200 mm sulla colonna Z sinistra del V32. Registrata nello `STATE v2.6.0` come lavoro fisico in sospeso.
+
+- **FATTO:** Il V32 è una macchina CNC in epoxy-granite da **178 kg**, ospitata in una taverna da **12 m²**.

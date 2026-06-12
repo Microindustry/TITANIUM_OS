@@ -8,6 +8,7 @@
   - [ATTO III  IL PARADOSSO DEL SOLAIO](#atto-iii-il-paradosso-del-solaio)
   - [ATTO IV  QUELLO CHE CÈ GIÀ](#atto-iv-quello-che-cè-già)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -148,3 +149,17 @@ E il test di robustezza — *"se funziona in taverna, funziona ovunque"* — non
 > Non è una domanda retorica. La risposta cambia tutto.
 
 *Continua in EP_02 — Il Reattore*
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il laboratorio "La Taverna" ha una superficie di **12 m²**, con alimentazione **230V monofase 16A** e solaio domestico con portata massima stimata di **~300 kg/m²**.
+
+- **DECISIONE:** V32 (CNC epoxy-granite) dimensionata a **178 kg su 0.8 m²** = **222 kg/m²**. **LOGICA:** Mantenersi entro i limiti del solaio domestico, calcolato preventivamente.
+
+- **DECISIONE:** Mandrino scelto a **2.2 kW ER20** con **VFD monofase-trifase**. **LOGICA:** Vincolo alimentazione monofase 16A impedisce mandrini >2.2 kW; il VFD risolve l'assenza di trifase.
+
+- **DECISIONE:** Assemblaggio V32 per sottogruppi sequenziali (bassamento → sospensione → sandwich XY → colonne Z). **LOGICA:** Impossibile assemblare la macchina intera nello spazio di 12 m² disponibile.
+
+- **FATTO:** Inventario strumentale presente in laboratorio include: PLC Siemens S7-314C, HMI TP900 Comfort 9" (valore dichiarato **€2.800**), sensori IFM VSE150 ×3, camera Basler acA1920-25gm, pompa vacuum Edwards RV3, stampante Bambu Lab P1S (materiale PA-GF30).
+
+- **OBIETTIVO:** Break-even anno 1 stimato a **61 ore di lavoro conto terzi**; overhead laboratorio anno 1 = **zero** (spazio domestico). Piano: laboratorio dedicato entro **2028**, capannone entro **2030**.

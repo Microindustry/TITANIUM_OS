@@ -7,6 +7,7 @@
   - [ATTO I  Il Problema dei Occhi Ciechi](#atto-i-il-problema-dei-occhi-ciechi)
   - [ATTO II  Tre Strati, Una Gerarchia](#atto-ii-tre-strati-una-gerarchia)
   - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -80,3 +81,17 @@ Per VITA_NATURA, dove EVA deve interagire con interfacce di prenotazione, calend
 Per V32 e VULCAN il discorso è diverso ma collegato. Quando V32 sarà online — siamo a Config G, sessantacinque percento, i rinforzi strutturali stanno venendo fuori bene — e quando MIMS avrà la catena completa V32 verso VULCAN, ARGUS dovrà monitorare interfacce di controllo CNC, leggere parametri, riconoscere stati macchina. Con la vecchia architettura avrei pensato due volte prima di mettere visione AI su un loop di controllo industriale per questioni di latenza e costo. Con L1 locale, posso farlo serenamente.
 
 ARGUS v2.0 non è solo un modulo aggiornato. È la prova che costruire il sistema in modo modulare, con layer separati, paga. Ogni pezzo può evolvere
+
+## FATTI (per il RAG)
+
+- **MILESTONE:** ARGUS v2.0 rilasciato il 30 maggio 2026. **FATTO:** Architettura ibrida OmniParser+Sonnet a tre livelli (L1 YOLO+OCR locale, L2 text matching/pattern recognition, L3 Sonnet fallback).
+
+- **DECISIONE:** L1 è completamente locale (YOLO + OCR), senza API né dipendenze esterne. **LOGICA:** Risolvere i casi standard in locale (<1 secondo, costo zero) per eliminare latenza e dipendenza da connessione internet.
+
+- **DECISIONE:** Sonnet (L3) viene invocato solo come fallback quando L2 non risolve il caso. **LOGICA:** Concentrare le chiamate API sui casi veramente complessi; le risposte L3 possono alimentare il RAG per ridurre future escalation.
+
+- **PRECISIONE:** Il risultato misurato dell'architettura a tre livelli è una riduzione del costo API del **-80%** rispetto alla versione precedente di ARGUS.
+
+- **FATTO:** ARGUS v2.0 è integrato in GENESIS, che include NEXUS, RAG graph-aware v5, MCP v1.3 e un watchdog parallelo. Il layer di visione serve sia EVA (interfacce centro estetico VITA_NATURA) sia il futuro monitoraggio CNC di V32/VULCAN.
+
+- **STATO:** V32 è a Config G, **65%** di completamento; i rinforzi strutturali sono in lavorazione al momento dell'episodio.

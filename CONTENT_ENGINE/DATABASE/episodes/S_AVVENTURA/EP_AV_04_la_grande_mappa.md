@@ -17,6 +17,7 @@ tags: avventura, educativo, bambini, nina, themis, grafo, wiki, conoscenza, rete
   - [ATTO II  I QUARTIERI CHE NESSUNO HA DISEGNATO](#atto-ii-i-quartieri-che-nessuno-ha-disegnato)
   - [ATTO III  LE STELLE CHE TENGONO TUTTO](#atto-iii-le-stelle-che-tengono-tutto)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -161,3 +162,15 @@ tua testa diventa una Mappa invece che una pila.*
 **3 strati:** bambino = la città di luci dove le cose legate stanno vicine · curioso = "questo si chiama grafo della conoscenza; i gruppi si chiamano community, i nodi centrali sono i nodi-dio" · esperto/papà = il grafo reale del progetto (Graphify: migliaia di nodi/archi in secondi, community detection, 100% locale, niente token spesi) + la vista RETE 3D navigabile.
 **Aggancio reale:** EP_SEED_GRAPHIFY (knowledge graph del repo, MIT, in casa) · EP_SEED_RETE (la RETE 3D, toggle Conoscenza/Sistema) · il salto RAG→Wiki.
 **Open loop → Regione 6 (gli Agenti):** le piccole entità che lavorano da sole nella notte — chi sono, e chi decide chi fa cosa.
+
+## FATTI (per il RAG)
+
+- **FATTO:** L'episodio EP_AV_04 appartiene alla stagione AV, è la tappa 5 di 7 dell'arco narrativo "la storia dell'IA", e richiama il RAG introdotto in EP_AV_03.
+
+- **FATTO:** Il componente tecnico di riferimento è **Graphify** (seed EP_SEED_GRAPHIFY), che costruisce un grafo della conoscenza del progetto in locale (senza inviare dati all'esterno), rilevando automaticamente migliaia di nodi e migliaia di archi in pochi secondi.
+
+- **FATTO:** Graphify rileva automaticamente le **community** (quartieri) dal grafo, identificandole tramite densità dei legami, senza classificazione manuale. Sul progetto reale ne sono emerse centinaia.
+
+- **FATTO:** Il grafo prevede l'identificazione di **nodi ad alto grado** ("nodi-dio" / stelle), ovvero nodi con centinaia di archi in uscita verso il resto della rete, la cui rimozione comporta la perdita di connettività di ampie porzioni del grafo.
+
+- **OBIETTIVO:** La vista **RETE 3D** (seed EP_SEED_RETE) è la rappresentazione visuale del grafo della conoscenza del progetto TITANIUM_OS, distinta dalla Biblioteca (RAG classico) per il fatto di mostrare i legami tra i nodi anziché i documenti come lista.

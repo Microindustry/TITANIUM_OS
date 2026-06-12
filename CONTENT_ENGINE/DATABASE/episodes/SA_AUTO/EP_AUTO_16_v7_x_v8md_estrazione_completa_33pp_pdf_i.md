@@ -8,6 +8,7 @@
   - [ATTO II  Trentatré pagine dentro MENTE/ASSOLUTO/](#atto-ii-trentatré-pagine-dentro-menteassoluto)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -79,3 +80,15 @@ L'IDENTITY section mi ha sorpreso di più. Vedere scritto chi sono, cosa so fare
 ## CHIUSURA
 
 *Se non l'hai scritto, non esiste. Se non esiste, ogni giorno ric
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il documento V7_X_v8.md è un'estrazione completa di 33 pagine depositata nella cartella MENTE/ASSOLUTO/ in data 28 maggio 2026, rappresentando la fotografia di stato di TITANIUM_OS a quella data.
+
+- **FATTO:** MENTE/ASSOLUTO/ è definita come livello di memoria operativa per contenuti non ambigui e definitivi, distinta da bozze o idee; tutto ciò che vi entra ha passato un filtraggio cognitivo (umano + agenti).
+
+- **PRECISIONE:** Stato dei sottosistemi al 28 maggio 2026: V32 (CNC Config G) al 65%, MIMS al 30% (bloccato in attesa della catena V32-VULCAN), EVA/Vita Natura al 40%, GENESIS dashboard v7.0 con RAG v4 attivo (ecosistema versione v1.3).
+
+- **DECISIONE:** Le dipendenze tra sottosistemi (es. MIMS bloccato da catena V32-VULCAN) sono state rese esplicite nel documento V7_X_v8.md con lo stato di ogni nodo, per rendere visibile la sequenza di sblocco dei passi successivi. **LOGICA:** Evitare la ricostruzione del contesto da zero ad ogni sessione di lavoro.
+
+- **FATTO:** Il documento include una sezione IDENTITY con CV e autopresentazione di Matteo trattata come dato tecnico, e una sezione sulle capabilities di Claude, entrambe parte della base documentale che GENESIS/RAG v4 utilizza come fonte di verità condivisa tra gli agenti.

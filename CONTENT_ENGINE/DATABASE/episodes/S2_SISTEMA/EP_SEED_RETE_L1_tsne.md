@@ -19,6 +19,7 @@ durata_min: 6
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -66,3 +67,13 @@ per cui non leggi i numeri sugli assi: contano le **vicinanze**, non le coordina
   per spiegare a un bambino cos'è un *embedding* senza dire la parola.
 
 > Approfondimento (LV1). Profondità libera: sotto può stare un LV2 su PCA/UMAP vs t-SNE, se servirà.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Ogni documento nel RAG di GENESIS è rappresentato come un vettore di ~384 numeri che ne cattura il significato semantico (embedding).
+
+- **FATTO:** La visualizzazione della RETE usa t-SNE per ridurre i vettori a 384 dimensioni in 3 dimensioni, renderizzati via Three.js in una galassia interattiva ruotabile.
+
+- **PRECISIONE:** Il t-SNE non conserva le distanze metriche esatte tra punti, ma conserva la struttura di **vicinato**: i punti simili nello spazio ad alta dimensione restano raggruppati nello spazio 3D ridotto.
+
+- **FATTO:** Nella visualizzazione, grappoli densi indicano aree tematiche con molti documenti; punti isolati indicano note orfane; spazi vuoti indicano argomenti non coperti dalla base di conoscenza.

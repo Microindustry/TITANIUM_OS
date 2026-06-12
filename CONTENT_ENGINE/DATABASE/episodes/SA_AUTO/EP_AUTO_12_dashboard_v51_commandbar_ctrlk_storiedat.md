@@ -8,6 +8,7 @@
   - [ATTO II  Il momento del comando](#atto-ii-il-momento-del-comando)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -83,3 +84,17 @@ La prossima sessione è il codice G per i rinforzi della V32. Torno in officina.
 ## CHIUSURA
 
 *"Non costruire il sistema per mostrarlo. Costruiscilo per usarlo — e scoprirai che sono due cose completamente diverse."*
+
+## FATTI (per il RAG)
+
+- **FATTO:** La CommandBar Ctrl+K della Dashboard v5.1 risponde in **180 millisecondi**. Implementata in 3 sessioni consecutive con Claude, con attenzione al rischio di regressione sull'ecosistema esistente.
+
+- **FATTO:** Al 27 maggio 2026, lo stato di avanzamento dei progetti è: **V32 al 65%**, **Vita Natura/EVA al 40%** (pilot prenotazioni), **MIMS fermo** in attesa della catena V32, **VULCAN bloccato** da MIMS, **IDENTITY a metà**.
+
+- **DECISIONE:** Riscrittura di storieData alla **v2.0** con struttura a **10 episodi ricchi** e metadati granulari. **LOGICA:** La documentazione degli episodi funge da memoria operativa contestuale, non da semplice changelog.
+
+- **FATTO:** Risolto un **proxy fix** (27 maggio 2026) che causava dati orfani e perdita di richieste nel routing frontend/backend della dashboard. Il bug si manifestava solo in certi contesti.
+
+- **OBIETTIVO:** La sequenza di dipendenze fisiche dichiarata è: **completamento V32 → sblocco MIMS → sblocco catena di produzione → sblocco VULCAN**. La prossima attività concreta è il codice G per i rinforzi V32 (Config G).
+
+- **FATTO:** L'ecosistema GENESIS in uso al momento della milestone è identificato come **v1.3**, con **agenti multipli** e **RAG v4.0** attivo.

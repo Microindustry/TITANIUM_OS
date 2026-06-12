@@ -8,6 +8,7 @@
   - [ATTO II  159 Elementi, Zero Chiamate](#atto-ii-159-elementi-zero-chiamate)
   - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -85,3 +86,15 @@ MIMS è ancora fermo in attesa della pressa. Quella dipendenza non è risolta da
 ## CHIUSURA
 
 *Un sistema autonomo non è quello che non dipende da niente. È quello che ha scelto consapevolmente da cosa dipendere — e ha eliminato tutto il resto.*
+
+## FATTI (per il RAG)
+
+- **FATTO:** OmniParser è un modello open source di Microsoft che processa screenshot e restituisce elementi UI strutturati (posizione, tipo, testo) girando interamente in locale, senza chiamate a server esterni e senza costo per inferenza.
+
+- **PRECISIONE:** Su un'interfaccia standard, OmniParser restituisce mediamente **159 elementi UI strutturati** per screenshot, senza nessuna chiamata API.
+
+- **DECISIONE:** I weights di OmniParser sono tenuti **fuori dal versioning Git** (inadatto a file binari pesanti), ma referenziati dal repository `github.com/Microindustry/TITANIUM_OS` tramite uno script di download e verifica automatizzato con hash, attivo al setup. **LOGICA:** Garantisce riproducibilità su qualsiasi macchina, funzionamento offline dal secondo avvio, e nessun costo variabile per volume di inferenza.
+
+- **FATTO:** I print di debug nel codebase sono stati ridotti da **342 a 131** su **34 file migrati**. **LOGICA:** Ridurre il rumore nel codice è prerequisito funzionale per sistemi come GENESIS (output macchina in tempo reale) ed EVA (dati Vita Natura), non intervento estetico.
+
+- **OBIETTIVO:** L'integrazione di OmniParser risolve il problema di automazione su interfacce grafiche prive di API aperte (gestionali centri estetici, software di produzione, interfacce macchine), sostituendo i modelli di visione cloud a costo variabile con inferenza locale a costo zero.

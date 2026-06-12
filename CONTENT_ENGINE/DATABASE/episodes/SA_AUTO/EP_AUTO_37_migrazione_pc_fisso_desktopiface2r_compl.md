@@ -8,6 +8,7 @@
   - [ATTO II  Taverna, 1070 Ti, e un File da un Gigabyte](#atto-ii-taverna-1070-ti-e-un-file-da-un-gigabyte)
   - [ATTO III  Cosa Cambia Adesso](#atto-iii-cosa-cambia-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -98,3 +99,15 @@ I silent blocks v.A vs v.B sulla fresatrice restano aperti. È una decisione che
 *Un cervello mobile è uno strumento. Un cervello fisso è un'infrastruttura. E un artigiano che confonde i due non sta costruendo un sistema — sta portando tutto con sé e chiamandolo autonomia.*
 
 ---
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il nodo centrale del Sistema è DESKTOP-IFACE2R, PC fisso collocato in taverna (sotto casa), attivo 24/7, equipaggiato con GPU GTX 1070 Ti (2017, supporto CUDA).
+
+- **DECISIONE:** Il Getac rimane terminale mobile da campo; la connessione tra Getac e DESKTOP-IFACE2R avviene tramite Tailscale (rete privata virtuale, senza apertura porte sul router). **LOGICA:** Garantire continuità del Sistema anche quando il portatile è fuori rete o in standby.
+
+- **FATTO:** Al momento della migrazione (02/06/2026), lo stato di avanzamento dei sottoprogetti era: GENESIS al 70%, V32 al 65%. EVA operativa ma dipendente dalla continuità del nodo.
+
+- **DECISIONE:** Creato file CONFIG_PC_FISSO_24H.txt su chiavetta con sequenza esatta di setup (configurazioni, variabili d'ambiente, dipendenze). **LOGICA:** Permettere la ricostruzione dell'ambiente da zero senza perdita di tempo a distanza di mesi.
+
+- **FATTO:** Push GitHub bloccato da file da 1 GB nel repository (soglia GitHub senza LFS: 100 MB). **DECISIONE:** Problema non risolto a caldo; segnato come task aperto da gestire in sessione dedicata con git filter-branch o BFG Repo Cleaner, per non bloccare la migrazione principale.

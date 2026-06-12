@@ -9,6 +9,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -200,3 +201,15 @@ Il contatore non si azzera più.
 | **Tag** | `#GENESIS` `#RAG` `#automazione` `#continuità` `#V32` `#artigianato_cognitivo` |
 | **Target capannone** | 15 luglio 2030 |
 | **Giorni rimanenti** | ~1509 |
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il file `RIAVVIO_SESSIONE.txt` generato il 2026-05-29 10:31 riporta: STATE v2.5.0, RAG con 150 chunk, sessione numero 8.
+
+- **DECISIONE:** RAG v4.0 adotta un approccio ibrido composto da BM25 (TF-IDF) per ricerca keyword esatta, embedding semantico per ricerca per significato, RRF (Reciprocal Rank Fusion) per fusione dei risultati e CrossEncoder reranker per riordino finale. **LOGICA:** RAG v3 semantico puro aveva un punto cieco sulla precisione lessicale (numeri di commit, sigle, nomi esatti); l'ibrido risolve entrambe le modalità di ricerca.
+
+- **FATTO:** Il sistema GENESIS include 8 agenti validatori in `NODES/AGENTS/`: TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA, ciascuno con dominio specializzato (es. FORGE=meccanica, LEX=vincoli normativi, AQUA=idraulica, THEMIS=coerenza logica).
+
+- **DECISIONE:** Il hook automatico su comando `/stop` salva lo stato di sessione in `MENTE/SESSIONI/` come prompt già formattato per il riavvio successivo. **LOGICA:** Rende la continuità di contesto infrastruttura automatica, non dipendente dalla memoria dell'utente.
+
+- **FATTO:** Il `MANUALE_SISTEMA.md v1.0` distingue esplicitamente tra due comandi RAG: `rag-update` (aggiornamento incrementale) e `rag-rebuild` (ricostruzione completa).

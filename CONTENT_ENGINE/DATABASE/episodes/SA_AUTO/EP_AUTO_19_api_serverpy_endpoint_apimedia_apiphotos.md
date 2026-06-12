@@ -8,6 +8,7 @@
   - [ATTO II  api_server.py: quattro endpoint, una spina dorsale](#atto-ii-apiserverpy-quattro-endpoint-una-spina-dorsale)
   - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -87,3 +88,15 @@ Domani si torna sulla V32. I rinforzi della Config G non si fresano da soli.
 ## CHIUSURA
 
 *Un sistema è vivo quando le
+
+## FATTI (per il RAG)
+
+- **FATTO:** `api_server.py` implementa quattro endpoint REST: `/api/media`, `/api/photos`, `/api/pdfs`, `/api/programs`. **LOGICA:** Centralizza l'accesso ai file di TITANIUM_OS per tutti i componenti interni (GENESIS, Story Agent, RAG v4.0), eliminando percorsi hardcoded che si rompevano al cambio di cartella.
+
+- **FATTO:** Il framework scelto per `api_server.py` è Python/FastAPI. **LOGICA:** Scelta per semplicità e leggibilità, principio esplicitato: "i sistemi complessi sopravvivono solo se le fondamenta sono leggibili."
+
+- **FATTO:** Al 28 maggio 2026, la V32 (Config G — rinforzi) è al 65% di completamento. **LOGICA:** Dato rilevato direttamente da Matteo durante la sessione; le fotografie di questa fase devono essere accessibili via `/api/photos` allo Story Agent.
+
+- **FATTO:** MIMS (connettori modulari) è fermo al 30% in attesa della stabilizzazione della catena V32-VULCAN. **LOGICA:** Il blocco è deliberato: MIMS si appoggerà all'infrastruttura dati di `api_server.py` quando la dipendenza a monte sarà risolta.
+
+- **FATTO:** VITA_NATURA e il pilota EVA sono entrambi al 40% di avanzamento alla data dell'episodio. **LOGICA:** Anche questi sotto-progetti producono media, documenti e dati di prenotazione destinati a fluire nel sistema tramite gli endpoint appena creati.

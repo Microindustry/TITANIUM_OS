@@ -16,6 +16,7 @@
   - [CHIUSURA](#chiusura)
   - [REEL_HOOK](#reelhook)
   - [METADATI EPISODIO](#metadati-episodio)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -212,3 +213,15 @@ Adesso c'è un solo file che dice la verità.
 | **Sessione numero** | #8 |
 | **Tono** | Tecnico-narrativo, onesto, nessuna retorica |
 | **Target 2030** | Capannone — 15 luglio |
+
+## FATTI (per il RAG)
+
+- **DECISIONE:** Il 22 marzo 2026 (commit `Step 1 Opus`) viene adottato il principio "single source of truth": `STATE.json` diventa la fonte autoritativa dello stato di sistema, sostituendo la gestione frammentata su React Context, fetch manuali e file locali scollegati. **LOGICA:** Con tre sorgenti di dato coesistenti, la dashboard mostrava valori inconsistenti tra un caricamento e l'altro, rendendo impossibile distinguere quale dato fosse reale.
+
+- **FATTO:** L'architettura Dashboard v5.0 (25 marzo 2026) separa esplicitamente due domini: **Zustand** per lo stato UI (pannelli, tab, modalità — esistente solo nel browser) e **TanStack Query** per lo stato server (dati V32, log GENESIS, sessioni EVA — sincronizzati da fonte esterna).
+
+- **FATTO:** L'hook `useSystemState.ts` è il canale unico che interroga l'API Flask per leggere `STATE.json` e portarne il contenuto nel React tree, senza logica di business né trasformazioni.
+
+- **PRECISIONE:** Alla sessione #8 il RAG ChromaDB contiene **150 chunk**; il commit di riferimento è `5a9d2d7` con flag `dirty` (modifiche presenti nella working directory non ancora committate).
+
+- **FATTO:** `STATE.json` è descritto come documento operativo aggiornato manualmente da Matteo a ogni sessione; contiene milestone di V32, percentuali di avanzamento GENESIS e target 2030.

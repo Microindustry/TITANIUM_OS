@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [MOMENTO  LEsercito](#momento-lesercito)
+    - [Otto esperti che non dormono mai](#otto-esperti-che-non-dormono-mai)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # MOMENTO — L'Esercito
 ### "Otto esperti che non dormono mai"
 
@@ -35,3 +43,17 @@ Da quel giorno, quando hai un dubbio tecnico, hai un esperto a disposizione in 3
 
 ---
 *Stagione: S2 — Il Sistema | Posizione: tra S2_02 e S2_03*
+
+## FATTI (per il RAG)
+
+- **FATTO:** GENESIS include 8 agenti specializzati (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) definiti in un singolo file `agents_db.json`, caricato all'avvio del sistema.
+
+- **DECISIONE:** La configurazione degli agenti è separata dal codice — aggiungere o modificare un agente richiede solo l'editing di `agents_db.json`, senza toccare il codice sorgente. **LOGICA:** Disaccoppiamento tra dati di persona/dominio e logica applicativa.
+
+- **FATTO:** TESLA copre il dominio elettrico industriale: normativa CEI/IEC, conversione VFD monofase→trifase per motori CNC, dimensionamento cavi, coordinamento protezioni e gestione rischi (es. sovratensione da frenaggio rigenerativo).
+
+- **FATTO:** FORGE copre il dominio meccanico con riferimenti espliciti a: materiale S235, saldatura TIG/MIG, tolleranze IT6-IT7, Epoxy Granite, analisi vibrazioni. Unità operative: mm e kg.
+
+- **FATTO:** LEX copre normativa CE — Direttiva Macchine 2006/42/CE, marcatura CE, brevetti IT/EU, GDPR — con distinzione esplicita tra obbligo normativo e raccomandazione.
+
+- **DECISIONE:** Gli agenti sono integrati nel RAG e richiamabili da CLI. **LOGICA:** La specializzazione per dominio produce risposte contestualizzate anziché risposte generiche, riducendo il tempo di risoluzione di un dubbio tecnico a ~30-40 secondi.

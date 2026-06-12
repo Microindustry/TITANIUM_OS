@@ -5,6 +5,7 @@
   - [ATTO I  Il Problema dei Riavvii](#atto-i-il-problema-dei-riavvii)
   - [ATTO II  La Dashboard che Diventa Mappa](#atto-ii-la-dashboard-che-diventa-mappa)
   - [ATTO III  LAudit che Fa Male](#atto-iii-laudit-che-fa-male)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -151,3 +152,17 @@ CO-AUTORI SESSIONE
 TARGET CAPANNONE    15 luglio 2030
 ─────────────────────────────────────────────
 ```
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il RAG di TITANIUM_OS contiene 6369 chunk e 139 file indicizzati al momento di questo episodio (S02E09, maggio 2026).
+
+- **DECISIONE:** La MappaView dashboard è passata da force-graph con fisica simulata (v4.0) a SVG puro con cerchi radiali e posizioni deterministiche (v5.0). **LOGICA:** Il force-graph produceva posizionamento non deterministico dei nodi, incompatibile con l'uso operativo; l'SVG statico garantisce precisione e nessuna sorpresa geometrica.
+
+- **FATTO:** `generate_restart_prompt.py v1.1` (chiamato SELF-HEALING) legge `STATE.json`, controlla se il `session_context` è stale e lo rigenera automaticamente, eliminando il riscaldamento manuale a ogni riavvio di sessione.
+
+- **FATTO:** L'audit tecnico condotto da Opus sulla dashboard ha prodotto 18 findings; 7 sono stati fixati nella stessa giornata, tra cui: MCP server dichiarava 5 tool ma ne aveva 10 reali, NEXUS era marcato come pianificato ma era già live, RAG graph con 114 nodi mancava dalle spec, EVA non compariva nei dati.
+
+- **DECISIONE:** `STATE.blockers` è un campo nel JSON di stato, visualizzato in dashboard come cerchio rosso a livello N, non chiudibile finché il blocker non è risolto. **LOGICA:** Impedisce che il sistema mostri solo stato positivo, rendendo le lacune progettuali esplicitamente visibili.
+
+- **FATTO:** `sync_storie.py` è un parser header-markdown che indicizza gli episodi narrativi nel RAG con ID univoci basati sullo stem del file; al momento dell'episodio sono stati recuperati 11 episodi narrativi.

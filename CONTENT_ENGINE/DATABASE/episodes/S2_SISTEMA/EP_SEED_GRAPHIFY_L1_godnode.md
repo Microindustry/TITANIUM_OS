@@ -19,6 +19,7 @@ durata_min: 6
   - [COME SI TROVANO (semplice, poi preciso)](#come-si-trovano-semplice-poi-preciso)
   - [PERCHÉ CONTA](#perché-conta)
   - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 
@@ -67,3 +68,15 @@ ovunque.
   grande = il Grande Loop). Questo LV1 è la fonte tecnica di quella scena.
 
 > Episodio di **approfondimento (LV1)**: vive sotto il suo principale. Profondità libera, nessun tetto.
+
+## FATTI (per il RAG)
+
+- **FATTO:** Il grafo di TITANIUM_OS analizzato in EP_SEED_GRAPHIFY conta **5.966 nodi** e circa **6.000 archi (fili)**.
+
+- **FATTO:** In quel grafo, la distribuzione dei collegamenti è fortemente asimmetrica: alcuni nodi hanno **due fili**, altri ne hanno **centinaia**.
+
+- **DECISIONE:** I nodi-dio (god-node) in TITANIUM_OS sono identificati tramite metriche di **centralità**: grado (numero di fili), betweenness (frequenza sul cammino tra due nodi), closeness (vicinanza media a tutti gli altri nodi). **LOGICA:** chi svetta su queste misure è un hub la cui modifica si propaga a tutto il sistema.
+
+- **FATTO:** Esempi espliciti di nodi-dio in TITANIUM_OS citati nel testo: **il Grande Loop, il file dei path, il motore RAG**.
+
+- **OBIETTIVO:** Identificare i nodi-dio serve a tre scopi progettuali: sapere dove **non** fare modifiche superficiali, scegliere il punto di partenza per comprendere il sistema, e riconoscere i **single-point-of-failure** da proteggere.
