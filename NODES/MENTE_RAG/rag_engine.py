@@ -3,7 +3,7 @@
 # Rebuild incrementale via manifest (mtime+size) — solo file nuovi/modificati
 # Pattern: Hybrid RRF + two-stage retrieval (2024-2025 state-of-art)
 
-import os, sys, re, json, pickle, logging
+import os, sys, re, json, pickle, logging, hashlib
 from datetime import datetime
 from pathlib import Path
 
@@ -87,7 +87,13 @@ def _chunk(text: str, sid: str) -> list[dict]:
     return chunks
 
 def _sid(rel: str) -> str:
-    return re.sub(r"[^a-zA-Z0-9_\-]", "_", rel)
+    # base leggibile dal path + hash del path ORIGINALE: due file che si normalizzano
+    # uguale (es. separatori diversi: "_" vs "—" vs "___") avevano lo STESSO id -> chunk
+    # duplicati -> DuplicateIDError nel rebuild. L'hash garantisce unicita' senza cancellare
+    # nessun file (le versioni quasi-duplicate restano, regola 1).
+    base = re.sub(r"[^a-zA-Z0-9_\-]", "_", rel)
+    h = hashlib.sha1(rel.encode("utf-8")).hexdigest()[:8]
+    return f"{base}__{h}"
 
 # ── MANIFEST ──────────────────────────────────────────────────────────────────
 
