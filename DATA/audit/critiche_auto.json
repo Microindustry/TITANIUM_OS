@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-d7ecb9b386",
+    "date": "2026-06-13",
+    "git": "5e10461",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Il RAG è offline (next_step chiede di approvare UAC per riportarlo a 200). Con 13.722 chunk indicizzati e il backfill FATTI appena completato su 146 episodi, ogni sessione notturna story_agent sta scrivendo nel vuoto: i nuovi contenuti non sono interrogabili. Il loop Regola 7 (riflusso MENTE) è spezzato a valle.",
+    "azione": "Prima azione della prossima sessione: approvare UAC restart API e verificare risposta 200 prima di qualsiasi altro lavoro. Aggiungere una health-check automatica nel night_audit che blocchi con severity=alta se RAG non risponde.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-13"
+  },
+  {
+    "id": "AUD-9e39b7e9e2",
+    "date": "2026-06-13",
+    "git": "5e10461",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Silent blocks v.A vs v.B (18mm)' è prerequisito del V8 e la decisione è ancora aperta senza criterio documentato. Una decisione binaria irrisolta non è un problema tecnico: è una scelta evitata. Finché non viene chiusa, V8 non può partire e la macchina rimane a metà.",
+    "azione": "Definire il criterio di scelta (es. analisi delle vibrazioni attese, vincoli di ingombro, costo delta) e chiudere la decisione nella prossima sessione. Documentare la scelta e la ragione in un file di decisione tecnica, non in un todo.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-13"
+  },
+  {
+    "id": "AUD-969ec042ed",
+    "date": "2026-06-13",
+    "git": "5e10461",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Entrambi i log (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerca a vuoto ed errore esplicito — tre tipologie di fallimento nella stessa notte. Non è un episodio isolato: significa che l'agente di ricerca non ha prodotto output utile e ha consumato quota inutilmente.",
+    "azione": "Ispezionare i log per identificare la sorgente che causa rate-limit e disabilitarla o throttlarla. Implementare un fallback ordinato: se sorgente A fallisce, sorgente B; se tutte falliscono, skip silenzioso con alert in cartella clinica anziché errore esplicito che inquina i log.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-13"
+  },
+  {
+    "id": "AUD-7398f79544",
+    "date": "2026-06-13",
+    "git": "5e10461",
+    "area": "GENESIS",
+    "severity": "bassa",
+    "finding": "La decisione 'scalare asse_nina ai 129 episodi' e le 'viste 2 assi in dashboard' sono marcate come aperte ma non hanno un criterio di chiusura né una sessione assegnata. Con 148 episodi già esistenti e la struttura 2 assi appena stabilizzata, ogni episodio generato senza l'asse_nina completo è metadato parziale che richiederà backfill futuro — esattamente il lavoro già fatto due volte (backfill 139, poi 146).",
+    "azione": "Decidere nella prossima sessione se scalare asse_nina ai 129 è un prerequisito bloccante per nuovi episodi o un'attività parallela. Se bloccante, sospendere story_agent sugli episodi privi di asse_nina fino a completamento. Se parallela, documentarlo esplicitamente per non fare un terzo backfill.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-13"
+  },
+  {
+    "id": "AUD-63de57cc17",
+    "date": "2026-06-13",
+    "git": "5e10461",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Fable 5 con scadenza 22/06 (meno di 10 giorni) è l'unica finestra pianificata per il SELF_IMPROVE/red-team audit. Con 78 commit in 7 giorni e lo stack in rapida evoluzione, un audit critico 360 fatto ora fotografa il sistema nel momento più denso di cambiamenti recenti. Se slitta oltre il 22/06, il contesto si perde e le proposte di miglioramento saranno meno aderenti alla realtà attuale.",
+    "azione": "Allocare esplicitamente una sessione dedicata entro il 19/06 per preparare il contesto da dare a Fable 5 (stato sistema, aree critiche, vincoli). Non aspettare che sia 'tutto pronto': l'audit vale di più fatto sul sistema imperfetto reale che su uno ideale mai raggiunto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-13"
+  },
+  {
+    "id": "AUD-24275aa2e1",
+    "date": "2026-06-13",
+    "git": "5e10461",
+    "area": "V32",
+    "severity": "alta",
+    "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito diretto della fresatura stampi MIMS, e V32 è al 65% di avanzamento. È un acquisto fisico con lead time reale (spedizione, eventuale dogana): ogni giorno senza ordine è un giorno di slittamento certo sul pilastro più strategico per il business fisico.",
+    "azione": "Emettere l'ordine del mandrino oggi. Identificare il fornitore, verificare disponibilità a magazzino, ordinare. Registrare data ordine e ETA stimata in STATO_SISTEMA.txt per tracciabilità.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-13"
+  },
+  {
     "id": "AUD-780b0164d1",
     "date": "2026-06-12",
     "git": "16aa6a1",
