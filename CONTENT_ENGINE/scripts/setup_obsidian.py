@@ -103,7 +103,73 @@ def inject_collegati() -> int:
         if new != txt:
             f.write_text(new, encoding="utf-8")
             n += 1
-    return n
+    return n, id2stem
+
+
+# fasi del filone, in ordine (combacia con storie_evoluzione.FASE_ORDER)
+_FASI = ["I · La Materia", "II · Il Secondo Cervello", "III · La Mente che Impara",
+         "IV · Il Mondo", "₣ · Il Valore (Finanza)", "Diario del Sistema"]
+
+
+def gen_evoluzione_moc(id2stem):
+    """Genera _EVOLUZIONE.md: la mappa 'come siamo arrivati qui' — le spirali dei
+    concetti (l'evoluzione del sapere) + gli atti del filone. Dai dati `evoluzione`
+    di episodes.json (scritti da storie_evoluzione). Wikilink ai nomi reali delle note."""
+    if not EPISODES_JSON.exists():
+        return False
+    eps = json.loads(EPISODES_JSON.read_text(encoding="utf-8"))
+
+    def link(eid, title=None):
+        stem = id2stem.get(eid)
+        t = title or eid
+        return f"[[{stem}|{t}]]" if stem else f"{t}"
+
+    out = ["# 🧬 EVOLUZIONE — come siamo arrivati qui",
+           "",
+           "*La storia non è una lista: è una spirale. Qui gli episodi ordinati per "
+           "**come il sapere si è evoluto** — i concetti ripresi più a fondo, le decisioni "
+           "che sono cambiate, gli atti del filone «dal metallo alla mente».*",
+           "", "> Generato da `storie_evoluzione` — non editare a mano (si rigenera).", ""]
+
+    # 1) LE SPIRALI (concetti a piu' giri) — l'evoluzione vera
+    spirali = {}
+    for e in eps:
+        sp = (e.get("evoluzione") or {}).get("spirale")
+        if sp:
+            key = tuple(x["id"] for x in sp)
+            spirali[key] = sp
+    out.append("## 🌀 Le spirali del sapere")
+    out.append("*Stesso concetto, ripreso a profondità crescente (Bruner). Ogni freccia = un'evoluzione.*")
+    out.append("")
+    if spirali:
+        for sp in sorted(spirali.values(), key=lambda s: -len(s)):
+            catena = " → ".join(f"{link(x['id'], x['title'])} _(giro {x['giro']})_" for x in sp)
+            out.append(f"- {catena}")
+    else:
+        out.append("_nessuna spirale ancora — servono concetti ripresi a giri diversi_")
+    out.append("")
+
+    # 2) GLI ATTI DEL FILONE
+    out.append("## 🎬 Gli atti del filone")
+    by_fase = {}
+    for e in eps:
+        f = (e.get("evoluzione") or {}).get("fase", "Diario del Sistema")
+        by_fase.setdefault(f, []).append(e)
+    for fase in _FASI:
+        lst = by_fase.get(fase)
+        if not lst:
+            continue
+        lst.sort(key=lambda e: e.get("data_evento", ""))
+        out.append(f"\n### {fase}  ·  {len(lst)} episodi")
+        for e in lst:
+            d = (e.get("data_evento") or "")[:10]
+            agg = (e.get("evoluzione") or {}).get("aggiorna")
+            suff = f"  ⟲ _aggiorna_ {link(agg['id'], agg['title'])}" if agg else ""
+            out.append(f"- `{d}` {link(e['id'], e.get('title', e['id']))}{suff}")
+    out.append("")
+
+    (STORIE_DST / "_EVOLUZIONE.md").write_text("\n".join(out), encoding="utf-8")
+    return True
 
 
 def gen_index():
@@ -122,8 +188,10 @@ def main() -> int:
     n = sync_episodes()
     tot = len(list(STORIE_DST.rglob("*.md"))) if STORIE_DST.exists() else 0
     print(f"  STORIE importate nel vault: {n} aggiornate · {tot} episodi totali in MENTE/STORIE/")
-    nc = inject_collegati()
+    nc, id2stem = inject_collegati()
     print(f"  Intersezioni (wikilink Collegati) iniettate in {nc} note → il grafo connette gli episodi")
+    if gen_evoluzione_moc(id2stem):
+        print("  Mappa _EVOLUZIONE.md generata (spirali + atti del filone)")
     gen_index()
     print(f"\n  Vault pronto: {MENTE}")
     print("  Apri in Obsidian (launcher Desktop) -> HOME.md -> graph view.")

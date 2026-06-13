@@ -338,6 +338,7 @@ def sync_episodes_json():
     Un errore in un passo non blocca il run notturno."""
     _run_script("CONTENT_ENGINE/scripts/build_episodes_json.py", "episodes.json sincronizzato")
     _run_script("CONTENT_ENGINE/scripts/storie_intersect.py", "intersezione episodi ricalcolata")
+    _run_script("CONTENT_ENGINE/scripts/storie_evoluzione.py", "episodi organizzati per evoluzione")
     _run_script("CONTENT_ENGINE/scripts/setup_obsidian.py", "vault Obsidian aggiornato")
 
 

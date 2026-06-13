@@ -24,7 +24,14 @@
         "tipo": "origine"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S0_03",
+        "title": "La Formula"
+      }
+    }
   },
   {
     "id": "EP_AV_00",
@@ -83,7 +90,10 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 2g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
   },
   {
     "id": "EP_S0_00",
@@ -128,7 +138,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
   },
   {
     "id": "EP_S0_01",
@@ -156,7 +169,14 @@
         "tipo": "origine"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "segue": {
+        "id": "EP_S0_02",
+        "title": "La Verifica"
+      }
+    }
   },
   {
     "id": "EP_S0_02",
@@ -184,7 +204,18 @@
         "tipo": "origine"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S0_01",
+        "title": "L'Organismo"
+      },
+      "segue": {
+        "id": "EP_S0_03",
+        "title": "La Formula"
+      }
+    }
   },
   {
     "id": "EP_S0_03",
@@ -213,7 +244,18 @@
         "tipo": "origine"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S0_02",
+        "title": "La Verifica"
+      },
+      "segue": {
+        "id": "EP_PILOTA_00",
+        "title": "Il Mondo"
+      }
+    }
   },
   {
     "id": "EP_00",
@@ -242,7 +284,14 @@
         "tipo": "presente"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "segue": {
+        "id": "EP_01",
+        "title": "La Taverna"
+      }
+    }
   },
   {
     "id": "EP_01",
@@ -270,7 +319,18 @@
         "tipo": "presente"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_00",
+        "title": "Origine"
+      },
+      "segue": {
+        "id": "EP_02",
+        "title": "Il Reattore"
+      }
+    }
   },
   {
     "id": "EP_02",
@@ -325,7 +385,18 @@
         "tipo": "tema",
         "motivo": "tema: cnc, struttura"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_01",
+        "title": "La Taverna"
+      },
+      "segue": {
+        "id": "EP_03",
+        "title": "Il Paradosso"
+      }
+    }
   },
   {
     "id": "EP_03",
@@ -354,7 +425,18 @@
         "tipo": "presente"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_02",
+        "title": "Il Reattore"
+      },
+      "segue": {
+        "id": "EP_04",
+        "title": "Il Segnale"
+      }
+    }
   },
   {
     "id": "EP_04",
@@ -383,7 +465,18 @@
         "tipo": "presente"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_03",
+        "title": "Il Paradosso"
+      },
+      "segue": {
+        "id": "EP_05",
+        "title": "Il Verdetto"
+      }
+    }
   },
   {
     "id": "EP_05",
@@ -412,7 +505,14 @@
         "tipo": "presente"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_04",
+        "title": "Il Segnale"
+      }
+    }
   },
   {
     "id": "EP_T01",
@@ -489,7 +589,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_T02",
@@ -566,7 +669,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_T03",
@@ -609,7 +715,14 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 1g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "segue": {
+        "id": "EP_20260319_fix_typescript_errors_unused_imports",
+        "title": "Il Sistema Respira da Solo"
+      }
+    }
   },
   {
     "id": "EP_T04",
@@ -687,7 +800,10 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 1g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_T05",
@@ -766,7 +882,10 @@
         "tipo": "tema",
         "motivo": "tema: dashboard, rag"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_T06",
@@ -813,7 +932,18 @@
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
+        "title": "Il Sistema Che Si Guarda"
+      },
+      "segue": {
+        "id": "EP_T07",
+        "title": "Il Documento"
+      }
+    }
   },
   {
     "id": "EP_T07",
@@ -855,7 +985,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_T06",
+        "title": "Meno Parti"
+      },
+      "segue": {
+        "id": "EP_S2_00_IL_DISTACCO",
+        "title": "Il Distacco"
+      }
+    }
   },
   {
     "id": "EP_S2_00",
@@ -884,7 +1025,14 @@
         "tipo": "costruzione"
       }
     },
-    "collegati": []
+    "collegati": [],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "segue": {
+        "id": "EP_S2_01",
+        "title": "Epoxy Granite: Colata Zero"
+      }
+    }
   },
   {
     "id": "EP_S2_01",
@@ -920,7 +1068,14 @@
         "tipo": "tema",
         "motivo": "tema: epoxy-granite, smorzamento"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S2_00",
+        "title": "Config G: Il Gusset Sinistro"
+      }
+    }
   },
   {
     "id": "EP_AUTO_002",
@@ -961,7 +1116,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_013",
+        "title": "Molle gialle: la precisione che cambia tutto"
+      },
+      "segue": {
+        "id": "EP_AUTO_003",
+        "title": "HMI acquisito, V32 respira"
+      }
+    }
   },
   {
     "id": "EP_AUTO_003",
@@ -1002,7 +1168,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_002",
+        "title": "8 Pezzi, Geometria Perfetta"
+      },
+      "segue": {
+        "id": "EP_AUTO_005",
+        "title": "Asse X: le guide parlano"
+      }
+    }
   },
   {
     "id": "EP_AUTO_005",
@@ -1043,7 +1220,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_003",
+        "title": "HMI acquisito, V32 respira"
+      },
+      "segue": {
+        "id": "EP_AUTO_010",
+        "title": "Fondamenta d'acciaio TIG"
+      }
+    }
   },
   {
     "id": "EP_AUTO_006",
@@ -1107,7 +1295,18 @@
         "tipo": "tema",
         "motivo": "tema: dashboard, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_00",
+        "title": "Componenti V32 presenti (foto 13 Feb 2026)"
+      },
+      "segue": {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv"
+      }
+    }
   },
   {
     "id": "EP_AUTO_008",
@@ -1166,7 +1365,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_015",
+        "title": "Portabilità delle skill: il framework invisibile"
+      },
+      "segue": {
+        "id": "EP_AUTO_10",
+        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga"
+      }
+    }
   },
   {
     "id": "EP_AUTO_010",
@@ -1213,7 +1423,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_005",
+        "title": "Asse X: le guide parlano"
+      },
+      "segue": {
+        "id": "EP_AUTO_012",
+        "title": "Componenti V32: dalla teoria alla fabbrica"
+      }
+    }
   },
   {
     "id": "EP_AUTO_011",
@@ -1277,7 +1498,18 @@
         "tipo": "tema",
         "motivo": "tema: milestone, rag"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv"
+      },
+      "segue": {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f"
+      }
+    }
   },
   {
     "id": "EP_AUTO_012",
@@ -1324,7 +1556,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_010",
+        "title": "Fondamenta d'acciaio TIG"
+      },
+      "segue": {
+        "id": "EP_AUTO_08",
+        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s"
+      }
+    }
   },
   {
     "id": "EP_S2_00_IL_DISTACCO",
@@ -1387,7 +1630,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_T07",
+        "title": "Il Documento"
+      },
+      "segue": {
+        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
+        "title": "Il Sistema Che Si Ricorda di Sé"
+      }
+    }
   },
   {
     "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
@@ -1462,7 +1716,10 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_S2_02_L_ORCHESTRATORE",
@@ -1538,7 +1795,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo"
+    }
   },
   {
     "id": "EP_S2_03_LA_TELA",
@@ -1613,7 +1873,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo"
+    }
   },
   {
     "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
@@ -1676,7 +1939,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
+        "title": "Il Sistema Che Si Ricorda di Sé"
+      },
+      "segue": {
+        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
+        "title": "La Macchina che Ricorda"
+      }
+    }
   },
   {
     "id": "EP_S2_05_IL_SILENZIO",
@@ -1739,7 +2013,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
+        "title": "La Macchina che Ricorda"
+      },
+      "segue": {
+        "id": "EP_20260529_auto_avvio_completo_al_login_start_",
+        "title": "Il Sistema Che Si Ricorda di Sé"
+      }
+    }
   },
   {
     "id": "EP_20260319_fix_typescript_errors_unused_imports",
@@ -1802,7 +2087,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_T03",
+        "title": "VULCAN"
+      },
+      "segue": {
+        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
+        "title": "Il Sistema che si Ricorda di Se Stesso"
+      }
+    }
   },
   {
     "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
@@ -1865,7 +2161,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260319_fix_typescript_errors_unused_imports",
+        "title": "Il Sistema Respira da Solo"
+      },
+      "segue": {
+        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
+        "title": "Il Sistema Che Si Guarda"
+      }
+    }
   },
   {
     "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
@@ -1928,7 +2235,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
+        "title": "Il Sistema che si Ricorda di Se Stesso"
+      },
+      "segue": {
+        "id": "EP_T06",
+        "title": "Meno Parti"
+      }
+    }
   },
   {
     "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
@@ -1991,7 +2309,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_S2_00_IL_DISTACCO",
+        "title": "Il Distacco"
+      },
+      "segue": {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce"
+      }
+    }
   },
   {
     "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
@@ -2054,7 +2383,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce"
+      },
+      "segue": {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio"
+      }
+    }
   },
   {
     "id": "EP_20260529_auto_avvio_completo_al_login_start_",
@@ -2117,7 +2457,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio"
+      },
+      "segue": {
+        "id": "EP_20260529_chore_permissions_allow_all_dashboard",
+        "title": "Tagliare il Grasso"
+      }
+    }
   },
   {
     "id": "EP_20260529_chore_permissions_allow_all_dashboard",
@@ -2180,7 +2531,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260529_auto_avvio_completo_al_login_start_",
+        "title": "Il Sistema Che Si Ricorda di Sé"
+      },
+      "segue": {
+        "id": "EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0",
+        "title": "Il Sistema Che Si Ricorda da Solo"
+      }
+    }
   },
   {
     "id": "EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0",
@@ -2243,7 +2605,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260529_chore_permissions_allow_all_dashboard",
+        "title": "Tagliare il Grasso"
+      },
+      "segue": {
+        "id": "EP_20260529_task_scheduler_ottimizzazione_scrip",
+        "title": "IL SISTEMA CHE DORME MA NON RIPOSA"
+      }
+    }
   },
   {
     "id": "EP_20260529_task_scheduler_ottimizzazione_scrip",
@@ -2306,7 +2679,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0",
+        "title": "Il Sistema Che Si Ricorda da Solo"
+      },
+      "segue": {
+        "id": "EP_20260530_dashboard_sempre_attiva_watchdog_v1",
+        "title": "Il Cane da Guardia"
+      }
+    }
   },
   {
     "id": "EP_20260530_dashboard_sempre_attiva_watchdog_v1",
@@ -2369,7 +2753,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260529_task_scheduler_ottimizzazione_scrip",
+        "title": "IL SISTEMA CHE DORME MA NON RIPOSA"
+      },
+      "segue": {
+        "id": "EP_20260530_merge_remote_tracking_branch_origin",
+        "title": "Gli Occhi del Sistema"
+      }
+    }
   },
   {
     "id": "EP_20260530_merge_remote_tracking_branch_origin",
@@ -2432,7 +2827,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260530_dashboard_sempre_attiva_watchdog_v1",
+        "title": "Il Cane da Guardia"
+      },
+      "segue": {
+        "id": "EP_20260531_recupero_11_episodi_narrativi_nella",
+        "title": "Il Sistema che si Ricorda di Sé"
+      }
+    }
   },
   {
     "id": "EP_20260531_recupero_11_episodi_narrativi_nella",
@@ -2495,7 +2901,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260530_merge_remote_tracking_branch_origin",
+        "title": "Gli Occhi del Sistema"
+      },
+      "segue": {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te"
+      }
+    }
   },
   {
     "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
@@ -2570,7 +2987,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
   },
   {
     "id": "MOM_02_LA_MAPPA",
@@ -2633,7 +3053,14 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "segue": {
+        "id": "MOM_04_IL_DOCUMENTO_MASTER",
+        "title": "Il Documento Master"
+      }
+    }
   },
   {
     "id": "MOM_03_L_ESERCITO",
@@ -2709,7 +3136,10 @@
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "MOM_04_IL_DOCUMENTO_MASTER",
@@ -2772,7 +3202,18 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "MOM_02_LA_MAPPA",
+        "title": "La Mappa"
+      },
+      "segue": {
+        "id": "MOM_05_CONFIG_A_G",
+        "title": "Config A→G"
+      }
+    }
   },
   {
     "id": "MOM_05_CONFIG_A_G",
@@ -2835,7 +3276,14 @@
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "MOM_04_IL_DOCUMENTO_MASTER",
+        "title": "Il Documento Master"
+      }
+    }
   },
   {
     "id": "EP_AUTO_00",
@@ -2897,7 +3345,14 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "segue": {
+        "id": "EP_AUTO_006",
+        "title": "Dashboard Live: Il Sistema Vede"
+      }
+    }
   },
   {
     "id": "EP_AUTO_01",
@@ -2959,7 +3414,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_27",
+        "title": "Audit sistema - bottleneck identificati e risolti"
+      },
+      "segue": {
+        "id": "EP_AUTO_02",
+        "title": "HMI TP900 Comfort acquisito"
+      }
+    }
   },
   {
     "id": "EP_AUTO_02",
@@ -3021,7 +3487,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_01",
+        "title": "8 Pezzi Interfaccia Lavorati (bronzine + Scalini)"
+      },
+      "segue": {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG"
+      }
+    }
   },
   {
     "id": "EP_AUTO_03",
@@ -3083,7 +3560,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_02",
+        "title": "HMI TP900 Comfort acquisito"
+      },
+      "segue": {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)"
+      }
+    }
   },
   {
     "id": "EP_AUTO_04",
@@ -3145,7 +3633,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG"
+      },
+      "segue": {
+        "id": "EP_AUTO_28",
+        "title": "Content Engine S2 - 6 episodi narrativi + 5 MOMENT"
+      }
+    }
   },
   {
     "id": "EP_AUTO_05",
@@ -3207,7 +3706,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_006",
+        "title": "Dashboard Live: Il Sistema Vede"
+      },
+      "segue": {
+        "id": "EP_AUTO_011",
+        "title": "Knowledge Base Popolata e Architettura Assoluto"
+      }
+    }
   },
   {
     "id": "EP_AUTO_06",
@@ -3269,7 +3779,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_011",
+        "title": "Knowledge Base Popolata e Architettura Assoluto"
+      },
+      "segue": {
+        "id": "EP_AUTO_07",
+        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY"
+      }
+    }
   },
   {
     "id": "EP_AUTO_07",
@@ -3331,7 +3852,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f"
+      },
+      "segue": {
+        "id": "EP_AUTO_013",
+        "title": "Molle gialle: la precisione che cambia tutto"
+      }
+    }
   },
   {
     "id": "EP_AUTO_08",
@@ -3393,7 +3925,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_012",
+        "title": "Componenti V32: dalla teoria alla fabbrica"
+      },
+      "segue": {
+        "id": "EP_AUTO_014",
+        "title": "22 Episodi: Il Motore Dei Contenuti"
+      }
+    }
   },
   {
     "id": "EP_AUTO_09",
@@ -3455,7 +3998,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_014",
+        "title": "22 Episodi: Il Motore Dei Contenuti"
+      },
+      "segue": {
+        "id": "EP_AUTO_015",
+        "title": "Portabilità delle skill: il framework invisibile"
+      }
+    }
   },
   {
     "id": "EP_AUTO_10",
@@ -3517,7 +4071,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_008",
+        "title": "Maggio 2026 — La Svolta Strutturale"
+      },
+      "segue": {
+        "id": "EP_AUTO_11",
+        "title": "SINAPSI->MENTE migrazione - 41 doc + STORIE + ASSO"
+      }
+    }
   },
   {
     "id": "EP_AUTO_11",
@@ -3579,7 +4144,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_10",
+        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga"
+      },
+      "segue": {
+        "id": "EP_AUTO_12",
+        "title": "Dashboard v5.1 - CommandBar Ctrl+K + storieData v2"
+      }
+    }
   },
   {
     "id": "EP_AUTO_12",
@@ -3641,7 +4217,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_11",
+        "title": "SINAPSI->MENTE migrazione - 41 doc + STORIE + ASSO"
+      },
+      "segue": {
+        "id": "EP_AUTO_13",
+        "title": "ASSOLUTO V7 - documento master unico, 10 ATTI unif"
+      }
+    }
   },
   {
     "id": "EP_AUTO_13",
@@ -3703,7 +4290,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_12",
+        "title": "Dashboard v5.1 - CommandBar Ctrl+K + storieData v2"
+      },
+      "segue": {
+        "id": "EP_AUTO_016",
+        "title": "Dashboard che parla il tuo linguaggio"
+      }
+    }
   },
   {
     "id": "EP_AUTO_14",
@@ -3765,7 +4363,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_019",
+        "title": "Dieci atti, un documento master"
+      },
+      "segue": {
+        "id": "EP_AUTO_15",
+        "title": "Pdf To Memory.py V1.1 - Flag --file/--mente/--keep"
+      }
+    }
   },
   {
     "id": "EP_AUTO_15",
@@ -3827,7 +4436,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_14",
+        "title": "Storytelling FILONE UNICO - S0+S1 Completa, Mappa"
+      },
+      "segue": {
+        "id": "EP_AUTO_16",
+        "title": "V7 X V8.md - Estrazione Completa 33pp PDF In MENTE"
+      }
+    }
   },
   {
     "id": "EP_AUTO_16",
@@ -3889,7 +4509,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_15",
+        "title": "Pdf To Memory.py V1.1 - Flag --file/--mente/--keep"
+      },
+      "segue": {
+        "id": "EP_AUTO_17",
+        "title": "V8 Delta.md - Correzioni Strutturali Foto Vs V7: P"
+      }
+    }
   },
   {
     "id": "EP_AUTO_17",
@@ -3951,7 +4582,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_16",
+        "title": "V7 X V8.md - Estrazione Completa 33pp PDF In MENTE"
+      },
+      "segue": {
+        "id": "EP_AUTO_18",
+        "title": "Foto V32 organizzate - 7 foto rinominate in FOTO/V"
+      }
+    }
   },
   {
     "id": "EP_AUTO_18",
@@ -4013,7 +4655,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_17",
+        "title": "V8 Delta.md - Correzioni Strutturali Foto Vs V7: P"
+      },
+      "segue": {
+        "id": "EP_AUTO_19",
+        "title": "Api Server.py - Endpoint /api/media /api/photos /a"
+      }
+    }
   },
   {
     "id": "EP_AUTO_19",
@@ -4075,7 +4728,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_18",
+        "title": "Foto V32 organizzate - 7 foto rinominate in FOTO/V"
+      },
+      "segue": {
+        "id": "EP_AUTO_20",
+        "title": "ffmpeg 8.1.1 + SumatraPDF installati + profilo PS"
+      }
+    }
   },
   {
     "id": "EP_AUTO_20",
@@ -4137,7 +4801,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_19",
+        "title": "Api Server.py - Endpoint /api/media /api/photos /a"
+      },
+      "segue": {
+        "id": "EP_AUTO_21",
+        "title": "START Login.bat V1.1 - Auto-avvio Ecosistema + Win"
+      }
+    }
   },
   {
     "id": "EP_AUTO_21",
@@ -4199,7 +4874,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_20",
+        "title": "ffmpeg 8.1.1 + SumatraPDF installati + profilo PS"
+      },
+      "segue": {
+        "id": "EP_AUTO_22",
+        "title": "Dashboard Tela v4.1 - MatteoSection: skill tree, i"
+      }
+    }
   },
   {
     "id": "EP_AUTO_22",
@@ -4261,7 +4947,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_21",
+        "title": "START Login.bat V1.1 - Auto-avvio Ecosistema + Win"
+      },
+      "segue": {
+        "id": "EP_AUTO_23",
+        "title": "Research Agent - 13 sorgenti (arXiv, OpenAlex, Sem"
+      }
+    }
   },
   {
     "id": "EP_AUTO_23",
@@ -4323,7 +5020,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_22",
+        "title": "Dashboard Tela v4.1 - MatteoSection: skill tree, i"
+      },
+      "segue": {
+        "id": "EP_AUTO_24",
+        "title": "Sistema Agenti Validatori - 8 Agenti In Agents Db"
+      }
+    }
   },
   {
     "id": "EP_AUTO_24",
@@ -4385,7 +5093,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_23",
+        "title": "Research Agent - 13 sorgenti (arXiv, OpenAlex, Sem"
+      },
+      "segue": {
+        "id": "EP_AUTO_25",
+        "title": "CLAUDE CAPABILITIES Titanium.md - Profilo Capacita"
+      }
+    }
   },
   {
     "id": "EP_AUTO_25",
@@ -4447,7 +5166,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_24",
+        "title": "Sistema Agenti Validatori - 8 Agenti In Agents Db"
+      },
+      "segue": {
+        "id": "EP_AUTO_26",
+        "title": "RAG v4.0 - hybrid BM25+semantico+CrossEncoder+incr"
+      }
+    }
   },
   {
     "id": "EP_AUTO_26",
@@ -4509,7 +5239,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_25",
+        "title": "CLAUDE CAPABILITIES Titanium.md - Profilo Capacita"
+      },
+      "segue": {
+        "id": "EP_AUTO_27",
+        "title": "Audit sistema - bottleneck identificati e risolti"
+      }
+    }
   },
   {
     "id": "EP_AUTO_27",
@@ -4571,7 +5312,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_26",
+        "title": "RAG v4.0 - hybrid BM25+semantico+CrossEncoder+incr"
+      },
+      "segue": {
+        "id": "EP_AUTO_01",
+        "title": "8 Pezzi Interfaccia Lavorati (bronzine + Scalini)"
+      }
+    }
   },
   {
     "id": "EP_AUTO_28",
@@ -4633,7 +5385,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)"
+      },
+      "segue": {
+        "id": "EP_AUTO_29",
+        "title": "Story Agent v1.0 - generazione episodi automatica"
+      }
+    }
   },
   {
     "id": "EP_AUTO_29",
@@ -4695,7 +5458,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_28",
+        "title": "Content Engine S2 - 6 episodi narrativi + 5 MOMENT"
+      },
+      "segue": {
+        "id": "EP_AUTO_30",
+        "title": "Calendario notturno completo - StoryAgent 02:07 +"
+      }
+    }
   },
   {
     "id": "EP_AUTO_30",
@@ -4757,7 +5531,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_29",
+        "title": "Story Agent v1.0 - generazione episodi automatica"
+      },
+      "segue": {
+        "id": "EP_AUTO_31",
+        "title": "Dashboard v7.0 - sidebar verticale collassabile +"
+      }
+    }
   },
   {
     "id": "EP_AUTO_31",
@@ -4819,7 +5604,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_30",
+        "title": "Calendario notturno completo - StoryAgent 02:07 +"
+      },
+      "segue": {
+        "id": "EP_AUTO_32",
+        "title": "Logging centralizzato - CORE/log.py + 34 file aggi"
+      }
+    }
   },
   {
     "id": "EP_AUTO_32",
@@ -4881,7 +5677,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_31",
+        "title": "Dashboard v7.0 - sidebar verticale collassabile +"
+      },
+      "segue": {
+        "id": "EP_AUTO_33",
+        "title": "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js ra"
+      }
+    }
   },
   {
     "id": "EP_AUTO_33",
@@ -4943,7 +5750,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_32",
+        "title": "Logging centralizzato - CORE/log.py + 34 file aggi"
+      },
+      "segue": {
+        "id": "EP_AUTO_34",
+        "title": "ScreenAgent v1.0 - screenshot + griglia puntini ro"
+      }
+    }
   },
   {
     "id": "EP_AUTO_34",
@@ -5005,7 +5823,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_33",
+        "title": "MAPPA drill-down v2.0 + RETE t-SNE 3D (Three.js ra"
+      },
+      "segue": {
+        "id": "EP_AUTO_35",
+        "title": "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet"
+      }
+    }
   },
   {
     "id": "EP_AUTO_35",
@@ -5067,7 +5896,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_34",
+        "title": "ScreenAgent v1.0 - screenshot + griglia puntini ro"
+      },
+      "segue": {
+        "id": "EP_AUTO_36",
+        "title": "skillTreeData v3.0 — sub-categorie N livelli su tu"
+      }
+    }
   },
   {
     "id": "EP_AUTO_013",
@@ -5109,7 +5949,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_07",
+        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY"
+      },
+      "segue": {
+        "id": "EP_AUTO_002",
+        "title": "8 Pezzi, Geometria Perfetta"
+      }
+    }
   },
   {
     "id": "EP_AUTO_014",
@@ -5151,7 +6002,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_08",
+        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s"
+      },
+      "segue": {
+        "id": "EP_AUTO_09",
+        "title": "Ottimizzazione Claude Code - .claudeignore, settin"
+      }
+    }
   },
   {
     "id": "EP_AUTO_015",
@@ -5187,7 +6049,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_09",
+        "title": "Ottimizzazione Claude Code - .claudeignore, settin"
+      },
+      "segue": {
+        "id": "EP_AUTO_008",
+        "title": "Maggio 2026 — La Svolta Strutturale"
+      }
+    }
   },
   {
     "id": "EP_AUTO_016",
@@ -5238,7 +6111,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_13",
+        "title": "ASSOLUTO V7 - documento master unico, 10 ATTI unif"
+      },
+      "segue": {
+        "id": "EP_AUTO_017",
+        "title": "41 Documenti, Una Mente Digitale"
+      }
+    }
   },
   {
     "id": "EP_AUTO_017",
@@ -5286,7 +6170,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_016",
+        "title": "Dashboard che parla il tuo linguaggio"
+      },
+      "segue": {
+        "id": "EP_AUTO_018",
+        "title": "Dashboard che comanda tutto: Ctrl+K"
+      }
+    }
   },
   {
     "id": "EP_AUTO_018",
@@ -5346,7 +6241,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_017",
+        "title": "41 Documenti, Una Mente Digitale"
+      },
+      "segue": {
+        "id": "EP_AUTO_019",
+        "title": "Dieci atti, un documento master"
+      }
+    }
   },
   {
     "id": "EP_AUTO_019",
@@ -5394,7 +6300,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_018",
+        "title": "Dashboard che comanda tutto: Ctrl+K"
+      },
+      "segue": {
+        "id": "EP_AUTO_14",
+        "title": "Storytelling FILONE UNICO - S0+S1 Completa, Mappa"
+      }
+    }
   },
   {
     "id": "EP_20260601",
@@ -5464,7 +6381,18 @@
         "tipo": "tema",
         "motivo": "tema: audit, dashboard, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260531_recupero_11_episodi_narrativi_nella",
+        "title": "Il Sistema che si Ricorda di Sé"
+      },
+      "segue": {
+        "id": "EP_20260602",
+        "title": "Il Dev Flutter Che Non Capiva Perché"
+      }
+    }
   },
   {
     "id": "EP_20260602",
@@ -5534,7 +6462,18 @@
         "tipo": "tema",
         "motivo": "tema: dashboard, git, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te"
+      },
+      "segue": {
+        "id": "EP_20260603",
+        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown"
+      }
+    }
   },
   {
     "id": "EP_20260603",
@@ -5606,7 +6545,18 @@
         "tipo": "tema",
         "motivo": "tema: dashboard, flutter, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260602",
+        "title": "Il Dev Flutter Che Non Capiva Perché"
+      },
+      "segue": {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown"
+      }
+    }
   },
   {
     "id": "EP_20260604",
@@ -5679,7 +6629,18 @@
         "tipo": "tema",
         "motivo": "tema: agenti, bugfix, dashboard"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260603",
+        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown"
+      },
+      "segue": {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte"
+      }
+    }
   },
   {
     "id": "EP_20260604_risolto_exit_255_subject_con_parent",
@@ -5750,7 +6711,18 @@
         "tipo": "tema",
         "motivo": "tema: bugfix, git, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown"
+      },
+      "segue": {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui"
+      }
+    }
   },
   {
     "id": "EP_AUTO_36",
@@ -5814,7 +6786,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_35",
+        "title": "ARGUS v2.0 - architettura ibrida OmniParser+Sonnet"
+      },
+      "segue": {
+        "id": "EP_AUTO_37",
+        "title": "Migrazione PC fisso (DESKTOP-IFACE2R) completata —"
+      }
+    }
   },
   {
     "id": "EP_AUTO_37",
@@ -5878,7 +6861,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_36",
+        "title": "skillTreeData v3.0 — sub-categorie N livelli su tu"
+      },
+      "segue": {
+        "id": "EP_AUTO_38",
+        "title": "Git history pulita (model.safetensors rimosso, .gi"
+      }
+    }
   },
   {
     "id": "EP_AUTO_38",
@@ -5942,7 +6936,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_37",
+        "title": "Migrazione PC fisso (DESKTOP-IFACE2R) completata —"
+      },
+      "segue": {
+        "id": "EP_AUTO_39",
+        "title": "Push main + tag v3.0.0 su GitHub sbloccato e pusha"
+      }
+    }
   },
   {
     "id": "EP_AUTO_39",
@@ -6006,7 +7011,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_38",
+        "title": "Git history pulita (model.safetensors rimosso, .gi"
+      },
+      "segue": {
+        "id": "EP_AUTO_40",
+        "title": "Tool installati: Python 3.11, Node.js, gh CLI, Tai"
+      }
+    }
   },
   {
     "id": "EP_AUTO_40",
@@ -6070,7 +7086,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_39",
+        "title": "Push main + tag v3.0.0 su GitHub sbloccato e pusha"
+      },
+      "segue": {
+        "id": "EP_AUTO_41",
+        "title": "MICROINDUSTRY + OmniParser weights migrati"
+      }
+    }
   },
   {
     "id": "EP_AUTO_41",
@@ -6134,7 +7161,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_40",
+        "title": "Tool installati: Python 3.11, Node.js, gh CLI, Tai"
+      },
+      "segue": {
+        "id": "EP_AUTO_42",
+        "title": "Memory Getac importata su PC fisso"
+      }
+    }
   },
   {
     "id": "EP_AUTO_42",
@@ -6198,7 +7236,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_41",
+        "title": "MICROINDUSTRY + OmniParser weights migrati"
+      },
+      "segue": {
+        "id": "EP_AUTO_43",
+        "title": "Stack Python RAG installato (torch 2.6.0+cu124, ch"
+      }
+    }
   },
   {
     "id": "EP_AUTO_43",
@@ -6262,7 +7311,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_42",
+        "title": "Memory Getac importata su PC fisso"
+      },
+      "segue": {
+        "id": "EP_AUTO_44",
+        "title": "CUDA Operativa Su GTX 1070 8GB (torch.cuda.is Avai"
+      }
+    }
   },
   {
     "id": "EP_AUTO_44",
@@ -6326,7 +7386,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_43",
+        "title": "Stack Python RAG installato (torch 2.6.0+cu124, ch"
+      },
+      "segue": {
+        "id": "EP_AUTO_45",
+        "title": "Indice RAG buildato e verificato: 6497 chunk da 14"
+      }
+    }
   },
   {
     "id": "EP_AUTO_45",
@@ -6390,7 +7461,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_44",
+        "title": "CUDA Operativa Su GTX 1070 8GB (torch.cuda.is Avai"
+      },
+      "segue": {
+        "id": "EP_AUTO_46",
+        "title": "Sicurezza: token GitHub ruotato — auth git via gh"
+      }
+    }
   },
   {
     "id": "EP_AUTO_46",
@@ -6454,7 +7536,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_45",
+        "title": "Indice RAG buildato e verificato: 6497 chunk da 14"
+      },
+      "segue": {
+        "id": "EP_AUTO_47",
+        "title": "Firewall 5173 aperto + Tailscale loggato sul fisso"
+      }
+    }
   },
   {
     "id": "EP_AUTO_47",
@@ -6518,7 +7611,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_46",
+        "title": "Sicurezza: token GitHub ruotato — auth git via gh"
+      },
+      "segue": {
+        "id": "EP_AUTO_48",
+        "title": "N8n Self-hosted Attivo (account Locale, No Cloud)"
+      }
+    }
   },
   {
     "id": "EP_AUTO_48",
@@ -6582,7 +7686,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_47",
+        "title": "Firewall 5173 aperto + Tailscale loggato sul fisso"
+      },
+      "segue": {
+        "id": "EP_AUTO_49",
+        "title": "Vista METODO sul sito — spiegazione chi/cosa/come"
+      }
+    }
   },
   {
     "id": "EP_AUTO_49",
@@ -6646,7 +7761,18 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_48",
+        "title": "N8n Self-hosted Attivo (account Locale, No Cloud)"
+      },
+      "segue": {
+        "id": "EP_AUTO_50",
+        "title": "Automazioni Notturne Portabili: Ti Paths.bat (res"
+      }
+    }
   },
   {
     "id": "EP_AUTO_50",
@@ -6710,7 +7836,14 @@
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_AUTO_49",
+        "title": "Vista METODO sul sito — spiegazione chi/cosa/come"
+      }
+    }
   },
   {
     "id": "EP_20260605",
@@ -6784,7 +7917,18 @@
         "tipo": "tema",
         "motivo": "tema: agenti, audit, automazione-notturna"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte"
+      },
+      "segue": {
+        "id": "EP_20260606_31",
+        "title": "Il Roster"
+      }
+    }
   },
   {
     "id": "EP_20260606_31",
@@ -6857,7 +8001,18 @@
         "tipo": "tema",
         "motivo": "tema: dashboard, flutter, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui"
+      },
+      "segue": {
+        "id": "EP_20260606",
+        "title": "Il Roster"
+      }
+    }
   },
   {
     "id": "EP_20260606",
@@ -6931,7 +8086,18 @@
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260606_31",
+        "title": "Il Roster"
+      },
+      "segue": {
+        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
+        "title": "La View Che Mentiva"
+      }
+    }
   },
   {
     "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
@@ -7000,7 +8166,18 @@
         "tipo": "tema",
         "motivo": "tema: audit, dashboard, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260606",
+        "title": "Il Roster"
+      },
+      "segue": {
+        "id": "EP_event_scheduled",
+        "title": "La Macchina che Lavora nel Buio"
+      }
+    }
   },
   {
     "id": "EP_event_scheduled",
@@ -7068,7 +8245,18 @@
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, git, milestone"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
+        "title": "La View Che Mentiva"
+      },
+      "segue": {
+        "id": "EP_20260607",
+        "title": "Il Grafo Respira"
+      }
+    }
   },
   {
     "id": "EP_20260607",
@@ -7143,7 +8331,18 @@
         "tipo": "tema",
         "motivo": "tema: agenti, bugfix, dashboard"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_event_scheduled",
+        "title": "La Macchina che Lavora nel Buio"
+      },
+      "segue": {
+        "id": "EP_20260608",
+        "title": "Il Grafo che Nessuno Vede"
+      }
+    }
   },
   {
     "id": "EP_20260608",
@@ -7216,7 +8415,18 @@
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260607",
+        "title": "Il Grafo Respira"
+      },
+      "segue": {
+        "id": "EP_20260609",
+        "title": "Il Mondo di Nina"
+      }
+    }
   },
   {
     "id": "EP_AV_01",
@@ -7297,7 +8507,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
   },
   {
     "id": "EP_AV_02",
@@ -7372,7 +8585,10 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 1g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_20260609",
@@ -7444,7 +8660,18 @@
         "tipo": "tema",
         "motivo": "tema: bugfix, dashboard, git"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260608",
+        "title": "Il Grafo che Nessuno Vede"
+      },
+      "segue": {
+        "id": "EP_20260610",
+        "title": "TITANIUM OS — S2E09"
+      }
+    }
   },
   {
     "id": "EP_SEED_CONTROLLO",
@@ -7527,7 +8754,41 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo",
+      "spirale": [
+        {
+          "id": "EP_SEED_CONTROLLO",
+          "title": "Il Centro di Controllo — un posto solo da cui governare",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+          "title": "Un sistema spiegato è un sistema cedibile",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+          "title": "Il carico va sullo schermo, non nella testa",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+          "title": "Se è acceso, non se dovrebbe — lo stato live",
+          "giro": 2
+        }
+      ],
+      "superato_da": {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "motivo": "approfondito da «Un sistema spiegato è un sistema cedibile» (giro 2)"
+      },
+      "segue": {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile"
+      }
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY",
@@ -7613,7 +8874,56 @@
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 1↔3, approfondisce)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "superato_da": {
+        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+        "title": "I 696 quartieri — la community detection",
+        "motivo": "approfondito da «I 696 quartieri — la community detection» (giro 2)"
+      },
+      "segue": {
+        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+        "title": "I 696 quartieri — la community detection"
+      }
+    }
   },
   {
     "id": "EP_SEED_RETE",
@@ -7700,7 +9010,46 @@
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_RETE",
+          "title": "La RETE — vedere il sistema in 3D",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_RETE_L1_BUGSTATO",
+          "title": "Non era un bug di codice, era un bug di stato",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TOGGLE",
+          "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TSNE",
+          "title": "Da 5000 numeri a una galassia — il t-SNE",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L2_UMAP",
+          "title": "t-SNE contro UMAP — due modi di fare la foto",
+          "giro": 4
+        }
+      ],
+      "superato_da": {
+        "id": "EP_SEED_RETE_L1_BUGSTATO",
+        "title": "Non era un bug di codice, era un bug di stato",
+        "motivo": "approfondito da «Non era un bug di codice, era un bug di stato» (giro 3)"
+      },
+      "segue": {
+        "id": "EP_SEED_RETE_L1_BUGSTATO",
+        "title": "Non era un bug di codice, era un bug di stato"
+      }
+    }
   },
   {
     "id": "EP_SEED_WATCHER",
@@ -7786,7 +9135,41 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello",
+      "spirale": [
+        {
+          "id": "EP_SEED_WATCHER",
+          "title": "AI News Watcher — restare sul pezzo senza chiavi",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_GATE",
+          "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_KEYLESS",
+          "title": "Guardare senza chiavi — gh, RSS, YouTube",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_TIER",
+          "title": "Chi guardare più spesso — il tier a rotazione 48h",
+          "giro": 3
+        }
+      ],
+      "superato_da": {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "motivo": "approfondito da «Il gate di rilevanza — tenere il segnale, buttare il rumore» (giro 3)"
+      },
+      "segue": {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore"
+      }
+    }
   },
   {
     "id": "EP_FILONE_00",
@@ -7851,7 +9234,10 @@
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
   },
   {
     "id": "EP_AV_03",
@@ -7933,7 +9319,10 @@
         "tipo": "tema",
         "motivo": "tema: rag, themis"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_AV_04",
@@ -8016,7 +9405,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
@@ -8096,7 +9488,65 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo",
+        "motivo": "evolve «Graphify — il repo che si disegna da solo» (giro 1→2)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+        "title": "I nodi-dio — le stelle che tengono il grafo",
+        "motivo": "approfondito da «I nodi-dio — le stelle che tengono il grafo» (giro 2)"
+      },
+      "precede": {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo"
+      },
+      "segue": {
+        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+        "title": "I nodi-dio — le stelle che tengono il grafo"
+      }
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
@@ -8174,7 +9624,65 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+        "title": "I 696 quartieri — la community detection",
+        "motivo": "evolve «I 696 quartieri — la community detection» (giro 2→2)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+        "motivo": "approfondito da «Perché MENTE si estrae a mano — l'estrattore ibrido» (giro 2)"
+      },
+      "precede": {
+        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+        "title": "I 696 quartieri — la community detection"
+      },
+      "segue": {
+        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido"
+      }
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY_L1_MENTE",
@@ -8253,7 +9761,65 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+        "title": "I nodi-dio — le stelle che tengono il grafo",
+        "motivo": "evolve «I nodi-dio — le stelle che tengono il grafo» (giro 2→2)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+        "title": "Interrogare la mappa, non i file — query, path, explain",
+        "motivo": "approfondito da «Interrogare la mappa, non i file — query, path, explain» (giro 2)"
+      },
+      "precede": {
+        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+        "title": "I nodi-dio — le stelle che tengono il grafo"
+      },
+      "segue": {
+        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+        "title": "Interrogare la mappa, non i file — query, path, explain"
+      }
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY_L1_QUERY",
@@ -8334,7 +9900,65 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+        "motivo": "evolve «Perché MENTE si estrae a mano — l'estrattore ibrido» (giro 2→2)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+        "title": "I cammini — come si trova la strada tra due nodi",
+        "motivo": "approfondito da «I cammini — come si trova la strada tra due nodi» (giro 3)"
+      },
+      "precede": {
+        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido"
+      },
+      "segue": {
+        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+        "title": "I cammini — come si trova la strada tra due nodi"
+      }
+    }
   },
   {
     "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
@@ -8410,7 +10034,50 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo",
+      "spirale": [
+        {
+          "id": "EP_SEED_CONTROLLO",
+          "title": "Il Centro di Controllo — un posto solo da cui governare",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+          "title": "Un sistema spiegato è un sistema cedibile",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+          "title": "Il carico va sullo schermo, non nella testa",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+          "title": "Se è acceso, non se dovrebbe — lo stato live",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare",
+        "motivo": "evolve «Il Centro di Controllo — un posto solo da cui governare» (giro 1→2)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa",
+        "motivo": "approfondito da «Il carico va sullo schermo, non nella testa» (giro 2)"
+      },
+      "precede": {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare"
+      },
+      "segue": {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa"
+      }
+    }
   },
   {
     "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
@@ -8486,7 +10153,50 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo",
+      "spirale": [
+        {
+          "id": "EP_SEED_CONTROLLO",
+          "title": "Il Centro di Controllo — un posto solo da cui governare",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+          "title": "Un sistema spiegato è un sistema cedibile",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+          "title": "Il carico va sullo schermo, non nella testa",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+          "title": "Se è acceso, non se dovrebbe — lo stato live",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "motivo": "evolve «Un sistema spiegato è un sistema cedibile» (giro 2→2)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+        "title": "Se è acceso, non se dovrebbe — lo stato live",
+        "motivo": "approfondito da «Se è acceso, non se dovrebbe — lo stato live» (giro 2)"
+      },
+      "precede": {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile"
+      },
+      "segue": {
+        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+        "title": "Se è acceso, non se dovrebbe — lo stato live"
+      }
+    }
   },
   {
     "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
@@ -8563,7 +10273,41 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo",
+      "spirale": [
+        {
+          "id": "EP_SEED_CONTROLLO",
+          "title": "Il Centro di Controllo — un posto solo da cui governare",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+          "title": "Un sistema spiegato è un sistema cedibile",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+          "title": "Il carico va sullo schermo, non nella testa",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+          "title": "Se è acceso, non se dovrebbe — lo stato live",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa",
+        "motivo": "evolve «Il carico va sullo schermo, non nella testa» (giro 2→2)"
+      },
+      "precede": {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa"
+      }
+    }
   },
   {
     "id": "EP_SEED_RETE_L1_BUGSTATO",
@@ -8642,7 +10386,55 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_RETE",
+          "title": "La RETE — vedere il sistema in 3D",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_RETE_L1_BUGSTATO",
+          "title": "Non era un bug di codice, era un bug di stato",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TOGGLE",
+          "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TSNE",
+          "title": "Da 5000 numeri a una galassia — il t-SNE",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L2_UMAP",
+          "title": "t-SNE contro UMAP — due modi di fare la foto",
+          "giro": 4
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_RETE",
+        "title": "La RETE — vedere il sistema in 3D",
+        "motivo": "evolve «La RETE — vedere il sistema in 3D» (giro 2→3)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_RETE_L1_TOGGLE",
+        "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+        "motivo": "approfondito da «Due verità dello stesso mondo — il toggle a due sorgenti» (giro 3)"
+      },
+      "precede": {
+        "id": "EP_SEED_RETE",
+        "title": "La RETE — vedere il sistema in 3D"
+      },
+      "segue": {
+        "id": "EP_SEED_RETE_L1_TOGGLE",
+        "title": "Due verità dello stesso mondo — il toggle a due sorgenti"
+      }
+    }
   },
   {
     "id": "EP_SEED_RETE_L1_TOGGLE",
@@ -8721,7 +10513,55 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_RETE",
+          "title": "La RETE — vedere il sistema in 3D",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_RETE_L1_BUGSTATO",
+          "title": "Non era un bug di codice, era un bug di stato",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TOGGLE",
+          "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TSNE",
+          "title": "Da 5000 numeri a una galassia — il t-SNE",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L2_UMAP",
+          "title": "t-SNE contro UMAP — due modi di fare la foto",
+          "giro": 4
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_RETE_L1_BUGSTATO",
+        "title": "Non era un bug di codice, era un bug di stato",
+        "motivo": "evolve «Non era un bug di codice, era un bug di stato» (giro 3→3)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_RETE_L1_TSNE",
+        "title": "Da 5000 numeri a una galassia — il t-SNE",
+        "motivo": "approfondito da «Da 5000 numeri a una galassia — il t-SNE» (giro 3)"
+      },
+      "precede": {
+        "id": "EP_SEED_RETE_L1_BUGSTATO",
+        "title": "Non era un bug di codice, era un bug di stato"
+      },
+      "segue": {
+        "id": "EP_SEED_RETE_L1_TSNE",
+        "title": "Da 5000 numeri a una galassia — il t-SNE"
+      }
+    }
   },
   {
     "id": "EP_SEED_RETE_L1_TSNE",
@@ -8801,7 +10641,55 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_RETE",
+          "title": "La RETE — vedere il sistema in 3D",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_RETE_L1_BUGSTATO",
+          "title": "Non era un bug di codice, era un bug di stato",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TOGGLE",
+          "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TSNE",
+          "title": "Da 5000 numeri a una galassia — il t-SNE",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L2_UMAP",
+          "title": "t-SNE contro UMAP — due modi di fare la foto",
+          "giro": 4
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_RETE_L1_TOGGLE",
+        "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+        "motivo": "evolve «Due verità dello stesso mondo — il toggle a due sorgenti» (giro 3→3)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_RETE_L2_UMAP",
+        "title": "t-SNE contro UMAP — due modi di fare la foto",
+        "motivo": "approfondito da «t-SNE contro UMAP — due modi di fare la foto» (giro 4)"
+      },
+      "precede": {
+        "id": "EP_SEED_RETE_L1_TOGGLE",
+        "title": "Due verità dello stesso mondo — il toggle a due sorgenti"
+      },
+      "segue": {
+        "id": "EP_SEED_RETE_L2_UMAP",
+        "title": "t-SNE contro UMAP — due modi di fare la foto"
+      }
+    }
   },
   {
     "id": "EP_SEED_WATCHER_L1_GATE",
@@ -8879,7 +10767,50 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello",
+      "spirale": [
+        {
+          "id": "EP_SEED_WATCHER",
+          "title": "AI News Watcher — restare sul pezzo senza chiavi",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_GATE",
+          "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_KEYLESS",
+          "title": "Guardare senza chiavi — gh, RSS, YouTube",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_TIER",
+          "title": "Chi guardare più spesso — il tier a rotazione 48h",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi",
+        "motivo": "evolve «AI News Watcher — restare sul pezzo senza chiavi» (giro 2→3)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_WATCHER_L1_KEYLESS",
+        "title": "Guardare senza chiavi — gh, RSS, YouTube",
+        "motivo": "approfondito da «Guardare senza chiavi — gh, RSS, YouTube» (giro 3)"
+      },
+      "precede": {
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi"
+      },
+      "segue": {
+        "id": "EP_SEED_WATCHER_L1_KEYLESS",
+        "title": "Guardare senza chiavi — gh, RSS, YouTube"
+      }
+    }
   },
   {
     "id": "EP_SEED_WATCHER_L1_KEYLESS",
@@ -8957,7 +10888,50 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello",
+      "spirale": [
+        {
+          "id": "EP_SEED_WATCHER",
+          "title": "AI News Watcher — restare sul pezzo senza chiavi",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_GATE",
+          "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_KEYLESS",
+          "title": "Guardare senza chiavi — gh, RSS, YouTube",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_TIER",
+          "title": "Chi guardare più spesso — il tier a rotazione 48h",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "motivo": "evolve «Il gate di rilevanza — tenere il segnale, buttare il rumore» (giro 3→3)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_WATCHER_L1_TIER",
+        "title": "Chi guardare più spesso — il tier a rotazione 48h",
+        "motivo": "approfondito da «Chi guardare più spesso — il tier a rotazione 48h» (giro 3)"
+      },
+      "precede": {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore"
+      },
+      "segue": {
+        "id": "EP_SEED_WATCHER_L1_TIER",
+        "title": "Chi guardare più spesso — il tier a rotazione 48h"
+      }
+    }
   },
   {
     "id": "EP_SEED_WATCHER_L1_TIER",
@@ -9035,7 +11009,41 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello",
+      "spirale": [
+        {
+          "id": "EP_SEED_WATCHER",
+          "title": "AI News Watcher — restare sul pezzo senza chiavi",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_GATE",
+          "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_KEYLESS",
+          "title": "Guardare senza chiavi — gh, RSS, YouTube",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_WATCHER_L1_TIER",
+          "title": "Chi guardare più spesso — il tier a rotazione 48h",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_WATCHER_L1_KEYLESS",
+        "title": "Guardare senza chiavi — gh, RSS, YouTube",
+        "motivo": "evolve «Guardare senza chiavi — gh, RSS, YouTube» (giro 3→3)"
+      },
+      "precede": {
+        "id": "EP_SEED_WATCHER_L1_KEYLESS",
+        "title": "Guardare senza chiavi — gh, RSS, YouTube"
+      }
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
@@ -9114,7 +11122,65 @@
         "tipo": "tema",
         "motivo": "tema: approfondimento, grafo, graphify"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+        "title": "Interrogare la mappa, non i file — query, path, explain",
+        "motivo": "evolve «Interrogare la mappa, non i file — query, path, explain» (giro 2→3)"
+      },
+      "superato_da": {
+        "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+        "title": "La modularità — il voto che decide i quartieri",
+        "motivo": "approfondito da «La modularità — il voto che decide i quartieri» (giro 3)"
+      },
+      "precede": {
+        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+        "title": "Interrogare la mappa, non i file — query, path, explain"
+      },
+      "segue": {
+        "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+        "title": "La modularità — il voto che decide i quartieri"
+      }
+    }
   },
   {
     "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
@@ -9193,7 +11259,56 @@
         "tipo": "tema",
         "motivo": "tema: approfondimento, grafo, graphify"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_GRAPHIFY",
+          "title": "Graphify — il repo che si disegna da solo",
+          "giro": 1
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
+          "title": "I 696 quartieri — la community detection",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+          "title": "I nodi-dio — le stelle che tengono il grafo",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+          "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+          "title": "Interrogare la mappa, non i file — query, path, explain",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+          "title": "I cammini — come si trova la strada tra due nodi",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+          "title": "La modularità — il voto che decide i quartieri",
+          "giro": 3
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+        "title": "I cammini — come si trova la strada tra due nodi",
+        "motivo": "evolve «I cammini — come si trova la strada tra due nodi» (giro 3→3)"
+      },
+      "precede": {
+        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+        "title": "I cammini — come si trova la strada tra due nodi"
+      }
+    }
   },
   {
     "id": "EP_SEED_RETE_L2_UMAP",
@@ -9272,7 +11387,46 @@
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_SEED_RETE",
+          "title": "La RETE — vedere il sistema in 3D",
+          "giro": 2
+        },
+        {
+          "id": "EP_SEED_RETE_L1_BUGSTATO",
+          "title": "Non era un bug di codice, era un bug di stato",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TOGGLE",
+          "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L1_TSNE",
+          "title": "Da 5000 numeri a una galassia — il t-SNE",
+          "giro": 3
+        },
+        {
+          "id": "EP_SEED_RETE_L2_UMAP",
+          "title": "t-SNE contro UMAP — due modi di fare la foto",
+          "giro": 4
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_SEED_RETE_L1_TSNE",
+        "title": "Da 5000 numeri a una galassia — il t-SNE",
+        "motivo": "evolve «Da 5000 numeri a una galassia — il t-SNE» (giro 3→4)"
+      },
+      "precede": {
+        "id": "EP_SEED_RETE_L1_TSNE",
+        "title": "Da 5000 numeri a una galassia — il t-SNE"
+      }
+    }
   },
   {
     "id": "EP_AV_05",
@@ -9354,7 +11508,10 @@
         "tipo": "tema",
         "motivo": "tema: agenti, themis"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
   },
   {
     "id": "EP_AV_06",
@@ -9436,7 +11593,10 @@
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo"
+    }
   },
   {
     "id": "EP_20260610",
@@ -9472,7 +11632,18 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260609",
+        "title": "Il Mondo di Nina"
+      },
+      "segue": {
+        "id": "EP_20260611",
+        "title": "TITANIUM OS — S2E11"
+      }
+    }
   },
   {
     "id": "EP_AV_M0",
@@ -9534,7 +11705,10 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
   },
   {
     "id": "EP_AV_FIN_01",
@@ -9590,7 +11764,10 @@
         "tipo": "continuita",
         "motivo": "porta a (stessa stagione, 0g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "₣ · Il Valore (Finanza)"
+    }
   },
   {
     "id": "EP_20260611",
@@ -9626,7 +11803,18 @@
         "tipo": "continuita",
         "motivo": "continua da (stessa stagione, 1g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260610",
+        "title": "TITANIUM OS — S2E09"
+      },
+      "segue": {
+        "id": "EP_20260612",
+        "title": "TITANIUM OS — S3 · EP. 147"
+      }
+    }
   },
   {
     "id": "EP_20260612",
@@ -9662,6 +11850,13 @@
         "tipo": "continuita",
         "motivo": "continua da (stessa stagione, 2g)"
       }
-    ]
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260611",
+        "title": "TITANIUM OS — S2E11"
+      }
+    }
   }
 ]
