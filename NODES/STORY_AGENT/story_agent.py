@@ -316,19 +316,29 @@ def main(backfill: bool = False, max_groups: int = 5):
     logger.info("done — %d episodi generati", generated)
 
 
-def sync_episodes_json():
-    """Importa i nuovi .md in DASHBOARD/src/data/episodes.json (dedup + recupero).
-    Non solleva: un errore di sync non deve far fallire il run notturno."""
+def _run_script(rel_path: str, label: str):
+    """Esegue uno script CONTENT_ENGINE come modulo. Best-effort: non solleva."""
     try:
         import importlib.util
-        builder = TI_ROOT / "CONTENT_ENGINE" / "scripts" / "build_episodes_json.py"
-        spec = importlib.util.spec_from_file_location("build_episodes_json", builder)
+        p = TI_ROOT / rel_path
+        spec = importlib.util.spec_from_file_location(p.stem, p)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         mod.main()
-        logger.info("episodes.json sincronizzato")
+        logger.info("%s ok", label)
     except Exception as e:
-        logger.warning("sync episodes.json fallito (episodi su disco, recuperabili con build_episodes_json.py): %s", e)
+        logger.warning("%s fallito: %s", label, e)
+
+
+def sync_episodes_json():
+    """Pipeline storie post-generazione (best-effort, ordine importante):
+    1. build_episodes_json: i .md nuovi entrano in episodes.json (+ albero + narrativa)
+    2. storie_intersect: ricalcola la RETE di legami fra episodi (collegati)
+    3. setup_obsidian: propaga episodi + wikilink Collegati nel vault (grafo connesso)
+    Un errore in un passo non blocca il run notturno."""
+    _run_script("CONTENT_ENGINE/scripts/build_episodes_json.py", "episodes.json sincronizzato")
+    _run_script("CONTENT_ENGINE/scripts/storie_intersect.py", "intersezione episodi ricalcolata")
+    _run_script("CONTENT_ENGINE/scripts/setup_obsidian.py", "vault Obsidian aggiornato")
 
 
 if __name__ == "__main__":
