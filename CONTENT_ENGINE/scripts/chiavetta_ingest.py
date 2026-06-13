@@ -19,7 +19,9 @@ if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
-SUBDIR = "da_chiavetta"
+# Inbox per STATO (non per provenienza): i nuovi import atterrano qui, poi
+# riordina_mente.py li smista nelle cartelle tematiche. Niente "da_chiavetta".
+SUBDIR = "_DA_ORDINARE"
 
 # sorgenti possibili (la prima che esiste vince); override con argv[1]
 DEFAULT_SOURCES = [r"G:\\", r"C:\Users\teo\Desktop\chiavetta"]

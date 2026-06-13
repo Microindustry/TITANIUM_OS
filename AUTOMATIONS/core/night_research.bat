@@ -39,6 +39,9 @@ if exist "%TOPICS%" (
 echo [night_research] riflusso FATTI episodi -> MENTE >> "%LOG%"
 "%PYTHON%" CONTENT_ENGINE\scripts\fatti_reflux.py >> "%LOG%" 2>&1
 
+:: WIKI: rigenera HOME.md + indici di dominio (vault Obsidian sempre aggiornato).
+"%PYTHON%" CONTENT_ENGINE\scripts\genera_wiki_index.py >> "%LOG%" 2>&1
+
 :: RAG update incrementale: indicizza paper ESTERNI (ricerca) + FATTI INTERNI (riflusso)
 "%PYTHON%" NODES\MENTE_RAG\rag_engine.py --incremental >> "%LOG%" 2>&1
 
