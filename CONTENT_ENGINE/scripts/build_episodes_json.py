@@ -350,6 +350,25 @@ def main():
         for rid in recovered:
             print(f"  + {rid}")
 
+    # 4-bis) INGEST DIRETTO per id di frontmatter (robusto): qualsiasi .md episodio con
+    # un `id:` non ancora presente viene aggiunto. L'orphan-recovery dell'audit faceva
+    # cilecca sui file col prefisso collidente (es. EP_AV_00_2 scambiato per EP_AV_00);
+    # qui ci si fida dell'id dichiarato, non dell'euristica sul nome.
+    EP_SRC = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
+    present = {e.get("id") for e in eps}
+    direct = []
+    if EP_SRC.exists():
+        for p in sorted(EP_SRC.rglob("*.md")):
+            fm = _parse_frontmatter(p.read_text(encoding="utf-8", errors="replace"))
+            fid = fm.get("id")
+            if fid and fid not in present:
+                ep = _episode_from_md(p, present)
+                present.add(ep["id"])
+                eps.append(ep)
+                direct.append(ep["id"])
+    if direct:
+        print(f"ingest diretto (id frontmatter): +{len(direct)} {direct}")
+
     # 5) gerarchia a livelli (additiva): parent/level/children su tutti gli episodi
     linked = build_tree(eps)
 

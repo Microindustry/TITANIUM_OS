@@ -70,8 +70,16 @@
     },
     "parent_id": null,
     "level": 0,
-    "children": [],
+    "children": [
+      "EP_AV_00_2"
+    ],
     "collegati": [
+      {
+        "id": "EP_AV_00_2",
+        "title": "Il Segno che Resta",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
       {
         "id": "EP_S0_00",
         "title": "Il Socio",
@@ -92,7 +100,28 @@
       }
     ],
     "evoluzione": {
-      "fase": "II · Il Secondo Cervello"
+      "fase": "II · Il Secondo Cervello",
+      "spirale": [
+        {
+          "id": "EP_AV_00",
+          "title": "La Bambina e la Giuntura",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_00_2",
+          "title": "Il Segno che Resta",
+          "giro": 2
+        }
+      ],
+      "superato_da": {
+        "id": "EP_AV_00_2",
+        "title": "Il Segno che Resta",
+        "motivo": "approfondito da «Il Segno che Resta» (giro 2)"
+      },
+      "segue": {
+        "id": "EP_AV_00_2",
+        "title": "Il Segno che Resta"
+      }
     }
   },
   {
@@ -135,6 +164,12 @@
       {
         "id": "EP_AV_00",
         "title": "La Bambina e la Giuntura",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_AV_00_2",
+        "title": "Il Segno che Resta",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       }
@@ -1699,6 +1734,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_S2_00_IL_DISTACCO",
         "title": "Il Distacco",
         "tipo": "tema",
@@ -1707,12 +1748,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -3131,10 +3166,10 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
-        "id": "MOM_02_LA_MAPPA",
-        "title": "La Mappa",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -8536,7 +8571,9 @@
     "recuperato": true,
     "parent_id": null,
     "level": 0,
-    "children": [],
+    "children": [
+      "EP_AV_02_2"
+    ],
     "narrativa": {
       "asse_ruolo": {
         "tipo": "avventura"
@@ -8555,6 +8592,12 @@
       }
     },
     "collegati": [
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
       {
         "id": "EP_AV_00",
         "title": "La Bambina e la Giuntura",
@@ -8587,7 +8630,28 @@
       }
     ],
     "evoluzione": {
-      "fase": "III · La Mente che Impara"
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_AV_02",
+          "title": "La Mente che Parla",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_02_2",
+          "title": "Quando la Mente Inventa",
+          "giro": 2
+        }
+      ],
+      "superato_da": {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "motivo": "approfondito da «Quando la Mente Inventa» (giro 2)"
+      },
+      "segue": {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa"
+      }
     }
   },
   {
@@ -9223,6 +9287,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_T06",
         "title": "Meno Parti",
         "tipo": "tema",
@@ -9308,14 +9378,14 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
         "tipo": "tema",
-        "motivo": "tema: rag, themis"
+        "motivo": "tema: fonti, rag, themis"
       },
       {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: rag, themis"
       }
@@ -11451,7 +11521,9 @@
     "content": "# EP_AV_05 — L'Esercito Silenzioso\n### \"Tante piccole entità che, mentre dormi, fanno ciascuna il suo lavoro — e nessuna si stanca\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 8-10 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** gli Agenti — *piccole entità autonome che fanno un lavoro ciascuna, mentre tu non ci sei*\n**Canone:** BIBBIA_DEL_MONDO.md · MAPPA_AVVENTURA.md (Regione 6) · concetto reale da MOM_03 \"L'Esercito\" + gli agenti notturni (research/story/audit)\n**Arco:** tappa 6 di 7 (la storia dell'IA) — richiama l'Automazione di EP_AV_01 e il RAG di EP_AV_03\n\n---\n\n## COLD OPEN\n\nNina non doveva essere sveglia. Era notte, nel Sistema, e il Sistema di notte è buio.\n\nMa aveva sentito un rumore — quello con cui era andata a dormire la sera prima, scendendo\ndalla Grande Mappa `⟡5`. *Tante piccole cose che si muovevano da sole.* Si era detta che se\nlo sarebbe immaginato. E invece, eccolo di nuovo. Passi piccoli. Tanti.\n\nScese al buio. THEMIS era già lì, in piedi nella penombra, immobile come un righello.\n\n«Non dormono» disse Nina, più che chiedere.\n\n«No» disse THEMIS. «Loro è adesso che lavorano.»\n\n---\n\n## ATTO I — I PASSI NEL BUIO\n\nQuando gli occhi si abituarono, Nina li vide. Non erano mostri e non erano persone. Erano\n**piccole entità**, ognuna intenta a una cosa sua, che andavano e venivano nel buio del\nSistema senza farsi notare.\n\n«Chi sono?» sussurrò.\n\n«Sono gli **Agenti**» disse THEMIS. «Guardali bene. Quella lì raccoglie le notizie del mondo\ndi fuori e le porta dentro. Quell'altra prende quello che è successo oggi e ne fa un racconto.\nQuella in fondo controlla il Sistema pezzo per pezzo e segna dove qualcosa scricchiola.»\n\nNina li seguiva con gli occhi spalancati. «Ma nessuno gli dice cosa fare. Lo fanno e basta.»\n\n«Lo fanno e basta. Ognuno ha **un compito** e lo sa. Tu dormi, e loro intanto fanno. La\nmattina trovi le notizie raccolte, il racconto scritto, gli scricchiolii segnati. Non li hai\nvisti lavorare. Hai solo trovato il lavoro fatto.»\n\n> *(Strato fondo, per il papà fabbro: sono gli agenti notturni veri — uno cerca (research),\n> uno scrive gli episodi (story), uno fa l'audit del sistema. Girano mentre la macchina-uomo\n> dorme. Il lavoro ripetuto non lo fa più la volontà: lo fa un'entità che non si stanca.)*\n\n---\n\n## ATTO II — OGNUNO UNA COSA SOLA\n\nNina si avvicinò a quella che raccoglieva notizie. La guardò fare: andava alle \"edicole già\naperte\" del mondo di fuori, prendeva solo le cose che contavano, e le posava in un cesto.\n\n«Perché non fai anche tu il racconto, già che ci sei?» le chiese.\n\nL'Agente non rispose — non sapeva parlare, sapeva *fare*. Rispose THEMIS.\n\n«Perché non è il suo compito. E qui sta il segreto, Nina. Un Agente bravo fa **una cosa\nsola**, e la fa bene. Se gli chiedi dieci cose diventa confuso e le sbaglia tutte. Dieci\nAgenti che fanno una cosa ciascuno valgono più di uno che prova a farne dieci.»\n\n«Come in officina» disse Nina, e si sorprese di averlo capito da sola. «Uno taglia, uno\nsalda, uno controlla. Non uno che fa tutto male di fretta.»\n\n«Esatto. E c'è un'altra cosa.» THEMIS indicò l'Agente che raccoglieva. «Vedi che non si\ninventa niente? Va a prendere le cose **dove sono davvero** — torna ai fogli veri, come hai\nimparato nella Biblioteca `⟡4`. Un Agente che fa e basta è pericoloso; un Agente che fa\n**guardando le fonti** è un aiutante di cui ti fidi.»\n\n> *(Strato fondo: \"un agente = un compito\" è il principio di responsabilità singola; e un\n> agente è affidabile quando è ancorato (grounding) ai dati veri — il RAG — non quando\n> improvvisa. È la differenza tra automazione cieca e automazione che sa cosa sta facendo.)*\n\n---\n\n## ATTO III — CHI GLI HA DETTO DI MUOVERSI\n\n«Ma una cosa non mi torna» disse Nina, e THEMIS, come al solito, aspettò. «Se nessuno gli\ndice cosa fare ogni notte… *qualcuno* gliel'ha pur detto **una volta**. Da dove sanno di\ndoversi svegliare al buio?»\n\nTHEMIS quasi sorrise. «Hai trovato la domanda giusta. Di nuovo.»\n\nLa portò davanti a una grande clessidra che Nina non aveva mai notato. Ogni volta che la\nsabbia arrivava in fondo, un Agente si svegliava e partiva. Poi la successiva. Poi la\nsuccessiva.\n\n«Qualcuno, tempo fa, ha **deciso l'ordine**: tu a quest'ora, tu dopo, tu all'alba. Da allora\nnon serve più dirglielo: la clessidra lo ricorda al posto loro. Ogni notte fanno il giro da\nsoli. È un Loop `⟡1`, ma fatto da tanti invece che da uno.»\n\nNina guardò l'esercito muoversi al ritmo della sabbia. Erano in tanti, ognuno al suo posto,\nognuno al suo momento. Funzionava. Ma…\n\n«THEMIS. Adesso sono pochi e si conoscono. Ma se diventassero cento? Mille? Chi decide\n**chi fa cosa, e quando**, quando sono troppi perché una clessidra basti?»\n\nTHEMIS si voltò verso il buio, là dove la sabbia non arrivava ancora. «Quella» disse piano,\n«è la stanza in cui non ti ho ancora portato.»\n\n---\n\n## CHIUSURA\n\nNina risalì che il cielo del Sistema cominciava appena a schiarire. Gli Agenti rallentavano,\nuno a uno: il loro turno finiva mentre il suo giorno iniziava.\n\nCapì una cosa che la fece sentire meno sola. Non doveva fare tutto lei. Non doveva nemmeno\n**ricordare** di fare tutto lei. Poteva insegnare un compito a una piccola entità, una volta,\ne quella l'avrebbe fatto per sempre, di notte, senza stancarsi e senza lamentarsi. Le sue mani\nliberate per le cose che solo lei sapeva fare.\n\nUn esercito non è tanti che fanno tutto. È tanti che fanno **ciascuno una cosa** — e un ordine\nche li tiene.\n\n> Ma mentre si addormentava, Nina pensò all'ultima cosa che THEMIS aveva detto, e alla stanza\n> buia oltre la clessidra.\n>\n> *Quando gli aiutanti sono dieci, una clessidra basta. Quando sono mille, e uno deve aspettare\n> che un altro finisca, e un terzo non deve partire prima del secondo… chi tiene il tempo di\n> tutti? Chi è il direttore di un'orchestra che non ha mai visto?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito l'Esercito Silenzioso? Provalo tu: pensa a una cosa noiosa che fai ogni giorno\nuguale. Immagina di insegnarla UNA volta a un piccolo aiutante che la fa al posto tuo per\nsempre. Quella è l'idea di un agente — e di tutto quello che, di notte, lavora mentre tu dormi.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡6` gli **Agenti** (arco, tappa 6): *piccole entità autonome, una per compito, che lavorano mentre non ci sei; affidabili quando sono ancorate ai dati veri, non quando improvvisano.*\n**Pietre richiamate:** l'**Automazione** `⟡2 → EP_AV_01` (un gesto che si ripete da solo → ora tanti) · il **RAG** `⟡4 → EP_AV_03` (l'agente bravo torna alle fonti) · il **Grande Loop** `⟡1` (la clessidra = il Loop fatto da molti).\n**Key-image:** le piccole entità che si muovono nel buio · ognuna con un attrezzo solo · la **clessidra** che sveglia un Agente alla volta (il calendario notturno).\n**3 strati:** bambino = piccoli aiutanti che lavorano di notte mentre dormi · curioso = \"questi si chiamano Agenti; uno fa un compito solo (responsabilità singola)\" · esperto/papà = gli agenti notturni reali (research/story/audit), grounding sul RAG, schedulati da un calendario (la clessidra).\n**Aggancio reale:** MOM_03 \"L'Esercito\" · gli agenti notturni (night_research/story_agent/night_audit) · la regola 2 (se lo fai ogni giorno, diventa un nodo).\n**Open loop → Regione 7 (l'Orchestrazione):** quando gli agenti sono troppi, chi decide chi fa cosa e quando — il Direttore.",
     "parent_id": null,
     "level": 0,
-    "children": [],
+    "children": [
+      "EP_AV_05_2"
+    ],
     "recuperato": true,
     "narrativa": {
       "asse_ruolo": {
@@ -11472,6 +11544,12 @@
       }
     },
     "collegati": [
+      {
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
       {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
@@ -11501,16 +11579,31 @@
         "title": "L'Esercito",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: agenti, themis"
       }
     ],
     "evoluzione": {
-      "fase": "III · La Mente che Impara"
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_AV_05",
+          "title": "L'Esercito Silenzioso",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_05_2",
+          "title": "Il Soldato Caduto in Silenzio",
+          "giro": 2
+        }
+      ],
+      "superato_da": {
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio",
+        "motivo": "approfondito da «Il Soldato Caduto in Silenzio» (giro 2)"
+      },
+      "segue": {
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio"
+      }
     }
   },
   {
@@ -11669,7 +11762,9 @@
     "content": "# EP_AV_M0 — La Materia\n### \"Prima del codice c'era il metallo — e un gesto fatto bene a mano. La radice di tutto.\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 8-10 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** la Materia — *tutto parte da un gesto fatto bene su qualcosa di vero; la precisione è una relazione, non un numero*\n**Canone:** BIBBIA_DEL_MONDO.md · MAPPA_AVVENTURA.md (Regione 0 · ⟡0 LA MATERIA) · concetto reale da EP_FILONE_00 \"La Materia\" + i dati V32 (±0.019 mm) · introduce FORGE (il fabbro degli Atomi)\n**Arco:** tappa 0 di 7 — la **radice** dell'arco; la richiamano tutte. Apre verso il Grande Loop (⟡1).\n\n---\n\n## COLD OPEN\n\nNina credeva di aver visto tutto, ormai. Aveva visto le Menti, la Biblioteca, la Grande\nMappa, l'esercito che lavora di notte. Credeva che il Sistema fosse fatto di **codice**.\n\nUna mattina THEMIS non la portò in alto, come sempre. La portò **in basso**. Sotto la\nGiuntura — quel ponte dove gli Atomi e i Bit si toccano — c'era una scala che Nina non\naveva mai notato. Scendeva nel caldo.\n\n«Dove andiamo?» chiese Nina.\n\n«Dove comincia tutto» disse THEMIS. «Tu hai imparato dalla cima. Oggi ti porto alla\n**radice**. E la radice non è fredda. È calda.»\n\n---\n\n## ATTO I — SOTTO LA GIUNTURA\n\nIn fondo alla scala c'era una fucina. Scintille, il battito di un martello, l'odore del\nmetallo scaldato. E lì, curvo su un'incudine, un gigante tranquillo che Nina non aveva mai\nincontrato: **FORGE**, il fabbro degli Atomi.\n\nNon parlava molto. Prese una barra di metallo grezzo, storto, anonimo. La scaldò. E con\npochi gesti — niente di magico, solo gesti **giusti** — la fece diventare un pezzo preciso,\npulito, che serviva a qualcosa.\n\n«Hai visto?» disse THEMIS. «Prima del codice c'era questo. Prima di ogni Mente, di ogni\nmappa, di ogni aiutante notturno — c'era una **mano** che prendeva qualcosa di disordinato e\nlo rendeva **giusto**. Tutto quello che hai visto là sopra è nato qui: da un gesto fatto bene\nsu qualcosa di vero.»\n\nNina toccò il pezzo finito. Era caldo, solido, **esatto**.\n\n> *(Strato fondo, per il papà fabbro: la materia viene prima dell'astrazione. Il sistema\n> digitale è nato per servire un gesto fisico — il metallo, il telaio, il pezzo. Non si parte\n> dal software: si parte dalla cosa vera che il software deve aiutare a fare bene.)*\n\n---\n\n## ATTO II — IL SOFFIO DI TROPPO\n\nFORGE porse a Nina un calibro — lo stesso attrezzo che THEMIS le aveva messo in mano il\nprimo giorno, ma qui, sul metallo caldo, pesava di più.\n\n«Misura» disse THEMIS.\n\nNina misurò il pezzo di FORGE. Era giusto **fino a un soffio**: una distanza più piccola di\nun capello. Poi le diede da misurare un pezzo fatto in fretta, \"a occhio\". Sembrava uguale.\nMa il calibro diceva un'altra cosa: era storto di un pelo.\n\n«Sembrano identici» disse Nina.\n\n«All'occhio sì. Al pezzo che ci va attaccato, no.» THEMIS prese i due pezzi e provò a\nmontarli su un terzo. Quello giusto entrò come un bacio. Quello \"a occhio\" si bloccò,\nforzava, rovinava il vicino.\n\n«Ecco la cosa più importante che imparerai quaggiù» disse THEMIS. «La **precisione** non è\nessere pignoli. È una **relazione**. Non è un numero che metti sul pezzo da solo: è il patto\ntra **te**, il **materiale** e quello che il pezzo deve **toccare**. Un soffio di troppo non\nè un dettaglio: è la differenza tra una cosa che funziona e una che si rompe portando giù le\naltre.»\n\n> *(Strato fondo: ±0,019 mm — IT6/IT7 — non è ostentazione, è il margine che permette a un\n> pezzo di accoppiarsi con un altro. La precisione è relazionale: ha senso solo rispetto al\n> processo e al pezzo a cui si unisce. È la stessa lezione che tornerà, identica, sull'LLM e\n> sul RAG: \"giusto\" vuol dire *giusto rispetto a qualcosa*, mai in astratto.)*\n\n---\n\n## ATTO III — PERCHÉ SI PARTE DA QUI\n\n«Ma THEMIS» disse Nina, «se lassù avete le macchine che fanno le cose da sole, perché FORGE\nfa ancora tutto a mano? Non potrebbe insegnarlo a una macchina e basta?»\n\nTHEMIS annuì, come a dire *finalmente la domanda giusta*.\n\n«Potrebbe. Ma c'è una regola, qui, ed è di ferro: **non puoi insegnare a una macchina un\ngesto che non hai prima fatto bene tu, a mano.** Se automatizzi un gesto sbagliato, ottieni\nmille pezzi sbagliati, in fretta. La macchina non aggiusta l'errore: lo **moltiplica**.»\n\nNina guardò FORGE battere, calmo, lo stesso gesto, ancora e ancora.\n\n«Per questo si parte da qui» continuò THEMIS. «Prima la mano impara a farlo *giusto*. Solo\nallora ha senso insegnarlo a una macchina — e da lì nasce tutto il resto che hai visto. La\nMateria non è il passato del Sistema. È la sua **radice**. Tutto quello che sta sopra,\npoggia su di lei.»\n\n---\n\n## CHIUSURA\n\nNina risalì la scala con il pezzo caldo ancora in mano. Quando arrivò alla Giuntura, guardò\nil ponte tra gli Atomi e i Bit con occhi nuovi. Non era più \"il codice da una parte e il\nmetallo dall'altra\". Era una cosa sola, che cominciava in basso, nel caldo, da una mano.\n\nCapì perché THEMIS l'aveva portata giù **adesso**, alla fine e non all'inizio: solo dopo aver\nvisto tutto il resto poteva capire che tutto il resto **veniva da lì**.\n\nPrima del codice, c'era il metallo. Prima della macchina, c'era la mano. Prima dell'automa,\nc'era un gesto fatto bene una volta.\n\n> Nina strinse il pezzo. *Un gesto fatto bene una volta.* Ma se lo fai una volta e poi te ne\n> dimentichi, è perso. E se invece restasse? Se ogni gesto fatto bene lasciasse un segno che\n> insegna al prossimo a rifarlo?\n>\n> *Un gesto può fare più di una cosa sola?*\n\nE quella — è dove comincia davvero l'avventura.\n\n---\n\n*Hai capito la Materia? Provalo tu: prendi una cosa vera — un nodo, una vite, un disegno — e\nfalla una volta con calma, fatta bene. Poi falla di corsa. Guarda la differenza. Hai appena\ntoccato la radice di tutto: prima la mano impara, poi la macchina ripete.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡0` la **Materia** (la radice dell'arco): *tutto parte da un gesto fatto bene su qualcosa di vero; la precisione è una relazione (te + materiale + processo), non un numero; non si automatizza un gesto non ancora fatto bene a mano.*\n**Pietre richiamate:** nessuna — **è la radice**, la richiamano tutte le altre.\n**Key-image:** la **scala che scende nel caldo** (sotto la Giuntura) · FORGE all'incudine · il **calibro sul metallo** · i due pezzi che sembrano uguali ma uno entra \"come un bacio\" e l'altro forza.\n**3 strati:** bambino = il fabbro che fa un pezzo giusto con le mani · curioso = \"la precisione è una relazione, non un numero\" · esperto/papà = ±0,019 mm (IT6/IT7) è il margine d'accoppiamento; la materia precede l'astrazione; non automatizzare un gesto sbagliato (lo moltiplichi).\n**Aggancio reale:** EP_FILONE_00 \"La Materia\" · i dati V32 (±0,019 mm, corpo unico 178 kg) · introduce FORGE (fabbro degli Atomi, nodo officina/MIMS).\n**Open loop → Regione 1 (il Grande Loop):** un gesto fatto bene una volta — e se restasse, se lasciasse una traccia che insegna? → `EP_AV_00`.",
     "parent_id": null,
     "level": 0,
-    "children": [],
+    "children": [
+      "EP_AV_M0_2"
+    ],
     "recuperato": true,
     "narrativa": {
       "asse_ruolo": {
@@ -11687,6 +11782,12 @@
       }
     },
     "collegati": [
+      {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
       {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
@@ -11707,7 +11808,28 @@
       }
     ],
     "evoluzione": {
-      "fase": "I · La Materia"
+      "fase": "I · La Materia",
+      "spirale": [
+        {
+          "id": "EP_AV_M0",
+          "title": "La Materia",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_M0_2",
+          "title": "Mille Volte Uguale",
+          "giro": 2
+        }
+      ],
+      "superato_da": {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "motivo": "approfondito da «Mille Volte Uguale» (giro 2)"
+      },
+      "segue": {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale"
+      }
     }
   },
   {
@@ -11845,10 +11967,10 @@
         "motivo": "continua da (stessa stagione, 1g)"
       },
       {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
+        "id": "EP_20260613",
+        "title": "TITANIUM OS — Episodio 47",
         "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 2g)"
+        "motivo": "porta a (stessa stagione, 1g)"
       }
     ],
     "evoluzione": {
@@ -11856,6 +11978,526 @@
       "precede": {
         "id": "EP_20260611",
         "title": "TITANIUM OS — S2E11"
+      },
+      "segue": {
+        "id": "EP_20260613",
+        "title": "TITANIUM OS — Episodio 47"
+      }
+    }
+  },
+  {
+    "id": "EP_AV_M0_2",
+    "title": "Mille Volte Uguale",
+    "sottotitolo": "Giusto una volta non basta. La precisione vera è farlo uguale ogni volta — e il Disordine sposta la misura piano piano.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-13",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "forge",
+      "materia",
+      "precisione",
+      "ripetibilita",
+      "deriva",
+      "entropia"
+    ],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "EP_AV_M0_2 — Mille Volte Uguale \"Giusto una volta non basta. La precisione vera è farlo uguale ogni volta.\" Formato: Avventura binario educativo | Durata stimata: 7 min Per chi: bambini e curiosi di o",
+    "content": "# EP_AV_M0_2 — Mille Volte Uguale\n### \"Giusto una volta non basta. La precisione vera è farlo uguale ogni volta.\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 7 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** la **ripetibilità** — un gesto giusto vale poco se la volta dopo è diverso; il vero nemico non è l'errore grande, è la *deriva*, lo spostamento piccolo che cresce\n**Canone:** BIBBIA_DEL_MONDO.md · Regione 0 · ⟡0 LA MATERIA (giro 2, approfondisce EP_AV_M0) · dati V32 (RSS ±0.019 mm ripetibile) · l'Entropia/Disordine come forza che fa derivare la misura\n**Arco:** approfondimento di ⟡0 — secondo giro della spirale. Prepara il ponte verso l'Automazione (⟡2): si automatizza solo ciò che è già *ripetibile* a mano.\n\n---\n\n## COLD OPEN\n\nNina tornò da FORGE col suo pezzo caldo della volta prima, fiera. «L'ho fatto giusto» disse.\n\nFORGE non rispose. Le mise davanti **dieci** barre di metallo, tutte uguali, e una sola parola: «Ancora.»\n\n«Ne ho già fatto uno giusto» disse Nina.\n\n«Uno» disse THEMIS dietro di lei, «non è un pezzo. È **fortuna**.»\n\n---\n\n## ATTO I — IL PEZZO FORTUNATO\n\nNina si mise al lavoro. Il primo pezzo le venne bene, come l'altra volta. Il secondo, quasi. Il terzo aveva fretta dentro. Al decimo, mise i pezzi in fila e li misurò col calibro, uno per uno.\n\nNon erano uguali. Si somigliavano — ma ognuno era spostato di un soffio, un po' più del precedente. Messi in fila, si vedeva: la misura **scappava** piano, sempre nella stessa direzione.\n\n«Cosa sta succedendo?» chiese Nina. «Faccio lo stesso gesto.»\n\n«No» disse THEMIS. «Fai un gesto *che assomiglia* al primo. Stanchezza, la mano che scalda, l'attenzione che cala — ognuno sposta la misura di niente. Ma niente, ripetuto, diventa **tanto**. Quello che hai visto in fila si chiama **deriva**. È il Disordine che lavora lento: non ti rompe il pezzo di colpo, te lo storce un soffio alla volta finché non te ne accorgi più.»\n\n> *(Strato fondo, per il papà QC: è il controllo qualità. Un pezzo conforme non dice niente sul processo. La firma di un processo sano è la **ripetibilità**: la dispersione stretta su molti pezzi, non la bontà di uno. La deriva — utensile che si consuma, temperatura, gioco — è il nemico vero della produzione.)*\n\n---\n\n## ATTO II — IL PATTO NON È COL PEZZO, È COL TEMPO\n\n«Ti ricordi la prima lezione?» disse THEMIS. «La precisione è una relazione: tu, il materiale, il pezzo che tocca. Oggi aggiungo la quarta cosa nella relazione: il **tempo**. Giusto adesso non basta. Deve restare giusto al decimo pezzo, al millesimo, domani, quando tu non ci sei più a guardarlo.»\n\nPrese il calibro e lo posò su un blocco di pietra fredda, fermo. «Per tenere a bada la deriva non serve essere più bravi a mano. Serve un **riferimento che non si muove**: una misura fissa con cui ricontrolli ogni tanto, e che ti riporta in riga prima che lo spostamento diventi danno.»\n\nNina capì. Non doveva diventare una macchina perfetta. Doveva **fermarsi a ricontrollare** contro qualcosa di fermo, prima che il piccolo diventasse grande.\n\n> *(Strato fondo: questo è il senso della taratura e del riferimento. Sul V32 la sigla RSS ±0,019 mm non promette \"un pezzo a 0,019\": promette che la macchina **ripete** dentro quel margine. Ripetibilità = precisione che sopravvive al tempo.)*\n\n---\n\n## ATTO III — PERCHÉ CONTA PRIMA DELLE MACCHINE\n\n«Ma allora» disse Nina, «se la macchina lassù fa mille pezzi uguali da sola, ho risolto: non c'è deriva.»\n\n«La macchina non *toglie* la deriva» disse THEMIS. «La rende **veloce**. Se il gesto che le insegni è già ripetibile, ti dà mille pezzi giusti uguali. Se gli hai insegnato un gesto che deriva, ti dà mille pezzi che derivano — tutti insieme, in fretta, prima che tu te ne accorga.»\n\nIndicò la scala che risaliva verso il codice. «Per questo si impara qui sotto a fare la cosa **uguale**, non solo giusta. Solo un gesto ripetibile vale la pena di essere insegnato a una macchina. Tutto il resto, lassù — gli aiutanti, le mappe, le menti — vale solo se quello che ripetono è giusto *e* costante.»\n\n---\n\n## CHIUSURA\n\nNina rifece la fila. Stavolta, ogni tre pezzi, si fermava e ricontrollava col riferimento fermo. La misura smise di scappare. Dieci pezzi, uno uguale all'altro. Non perché fosse diventata perfetta — perché aveva smesso di fidarsi della sua mano e aveva cominciato a fidarsi di un **controllo**.\n\nGuardò la fila di pezzi gemelli e pensò che era una cosa nuova: non un capolavoro, ma **mille piccole cose identiche**. Strana bellezza.\n\n> Nina allineò i dieci pezzi. *Uguali.* Ma se un gesto va fatto mille volte uguale, lei mille volte non poteva esserci. E allora — chi tiene il conto? Chi si ricorda *come* andava fatto, quando lei non c'è?\n>\n> *Un gesto fatto bene può lasciare un segno che lo insegna da solo?*\n\nE quella è la Regione dopo.\n\n---\n\n*Hai capito la ripetibilità? Provala: scrivi il tuo nome dieci volte di fila, in fretta. Guarda l'ultimo e il primo. È scappato, vero? Ora rifallo fermandoti a guardare il primo ogni due. Hai appena tenuto a bada il Disordine.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra (giro 2):** `⟡0` la **Materia**, secondo giro: *un gesto giusto una volta è fortuna; la precisione vera è la **ripetibilità**. Il nemico non è l'errore grande ma la **deriva** — lo spostamento piccolo e costante. Si tiene a bada con un riferimento fermo e un ricontrollo, non con più bravura.*\n**Pietre richiamate:** `⟡0` (la precisione è una relazione — qui si aggiunge il tempo).\n**Key-image:** le **dieci barre** di FORGE · i pezzi in fila con la misura che *scappa* piano · il **calibro sulla pietra fredda** (il riferimento che non si muove).\n**3 strati:** bambino = un pezzo solo non basta, falli tutti uguali · curioso = il nemico è la deriva, lo spostamento che cresce · esperto/papà = ripetibilità vs conformità del singolo; RSS ±0,019 mm è ripetibilità, non bontà di un pezzo; taratura contro un riferimento.\n**Aggancio reale:** dati V32 (RSS ±0,019 mm) · il QC (background LU.VE) · l'Entropia/Disordine del canone come forza lenta.\n**Open loop → Regione 1 (la Traccia):** se un gesto va fatto sempre uguale e tu non puoi esserci sempre, serve un **segno che lo insegni** → `EP_AV_00` e il suo approfondimento.\n\n## FATTI (per il RAG)\n\n- **FATTO:** EP_AV_M0_2 è il secondo giro (approfondimento) della Regione ⟡0 LA MATERIA, figlio di EP_AV_M0, stagione AV, durata ~7 minuti.\n\n- **DECISIONE:** Il principio insegnato è che la qualità di un processo si misura sulla **ripetibilità** (dispersione stretta su molti pezzi), non sulla bontà di un singolo pezzo. **LOGICA:** un pezzo conforme isolato non dice nulla sulla salute del processo; la firma di un processo sano è la costanza nel tempo.\n\n- **PRECISIONE:** Il valore V32 RSS ±0,019 mm è ridefinito qui come **ripetibilità** (la macchina ripete dentro quel margine), non come accuratezza di un singolo pezzo.\n\n- **CONCETTO:** La \"deriva\" è introdotta come forma lenta dell'Entropia: spostamento piccolo, costante e direzionale che diventa danno per accumulo. Contromisura canonica: un riferimento fisso + ricontrollo periodico (taratura).\n\n- **OBIETTIVO:** L'episodio stabilisce il prerequisito dell'automazione (⟡2): si automatizza solo un gesto già ripetibile a mano, altrimenti la macchina moltiplica la deriva su scala.",
+    "parent_id": "EP_AV_M0",
+    "level": 1,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "la Materia: il gesto sul metallo, la radice di tutto",
+        "regione": 0,
+        "regione_nome": "LA MATERIA",
+        "pietra": "⟡0",
+        "giro_spirale": 2,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "approfondisce",
+        "motivo": "approfondimento di «La Materia»"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_00_2",
+        "title": "Il Segno che Resta",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "spirale": [
+        {
+          "id": "EP_AV_M0",
+          "title": "La Materia",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_M0_2",
+          "title": "Mille Volte Uguale",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "motivo": "evolve «La Materia» (giro 1→2)"
+      },
+      "precede": {
+        "id": "EP_AV_M0",
+        "title": "La Materia"
+      }
+    }
+  },
+  {
+    "id": "EP_20260613",
+    "title": "TITANIUM OS — Episodio 47",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-13",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio 47 \"Il Bug che Cancellava la Memoria\" DATA: 13 giugno 2026 SERIE: GENESIS / Infrastruttura cognitiva STAGIONE: 1 COLD OPEN Sono le 23:14. Il terminale è aperto. PowerShell. Il c",
+    "content": "# TITANIUM_OS — Episodio 47\n## \"Il Bug che Cancellava la Memoria\"\n\n**DATA:** 13 giugno 2026\n**SERIE:** GENESIS / Infrastruttura cognitiva\n**STAGIONE:** 1\n\n---\n\n## COLD OPEN\n\nSono le 23:14.\n\nIl terminale è aperto. PowerShell. Il cursore lampeggia su una riga che Matteo ha già visto tre volte questa settimana:\n\n```\nChroma collection: 0 chunks semantic\n```\n\nZero.\n\nNon errore. Non crash. Zero — come se il sistema non avesse mai letto nulla, mai ingerito nessuna nota, mai costruito nessuna connessione tra un'idea e l'altra. Trecento file nella MENTE. Decine di sessioni di lavoro su V32, MIMS, GENESIS. E il RAG li ha dimenticati tutti, silenziosamente, ogni volta che veniva ricostruito.\n\nIl bug non urlava. Sussurrava.\n\n---\n\n## ATTO I — Il sistema che si svuotava da solo\n\nIl problema aveva un nome tecnico preciso: **collision hash su `_sid`**.\n\nOgni chunk nel database ChromaDB ha bisogno di un identificatore univoco — il `_sid`. Il sistema lo generava a partire dal path del file. Il problema è che due file con nomi diversi, dopo la normalizzazione dei separatori di percorso (slash, backslash, case del filesystem Windows vs Linux), potevano produrre **lo stesso hash**.\n\nRisultato: un file sovrascriveva l'altro nel database. Silenziosamente. Senza avvisi.\n\nMa questo era il bug secondario.\n\nIl bug principale era più subdolo, più difficile da vedere perché si nascondeva nel flusso di esecuzione normale. Quando lo script `rebuild_rag_clean.ps1` lanciava un `--rebuild` completo, svuotava ChromaDB — giusto, era il comportamento atteso. Poi chiamava l'`api_server` per reinserire tutto.\n\nIl problema: l'`api_server` era già in esecuzione da un'altra sessione. Stava tenendo ChromaDB aperto con accesso esclusivo. Lo script di rebuild scriveva nell'aria. Pensava di popolare il database. Il database rimaneva vuoto. Nessun errore esplicito. Solo zero chunks.\n\nMatteo aveva ricostruito il RAG almeno quattro volte nelle settimane precedenti. Ogni volta: zero chunks semantici. Ogni volta: diagnosi, ipotesi, test. E ogni volta il sistema sembrava funzionare nel breve periodo, poi ricadeva.\n\nNon era un bug di codice. Era un bug di **architettura concorrente** — due processi che credevano di controllare la stessa risorsa, nello stesso momento.\n\nLa fix: accesso esclusivo verificato prima di ogni rebuild. L'`api_server` viene fermato, ChromaDB viene liberato, il rebuild avviene in isolamento, poi il server riparte. Sequenza rigida. Nessuna ambiguità sul lock.\n\n---\n\n## ATTO II — La MENTE riordinata\n\nMentre il RAG veniva riparato, c'era un secondo problema che aspettava da settimane.\n\nLa MENTE — il corpus di note, decisioni, specifiche tecniche che alimenta GENESIS — era cresciuta in modo organico. Nel modo in cui crescono le cose reali: una cartella qui, una nota lì, file che si accumulano in `da_chiavetta` perché \"li sistemo dopo\". Dopo era diventato adesso.\n\n`riordina_mente.py` è uno script che Matteo ha scritto per dissolvere quella cartella di accumulazione. Non copia i file — li sposta con `git mv`, preservando la storia dei commit. Li riorganizza per tema: V32, MIMS, GENESIS, EVA, sessioni di lavoro, vault Obsidian.\n\nIl vault Obsidian ora si auto-indicizza. Ogni cartella tematica genera il suo indice. Le note diventano navigabili — non solo dall'interfaccia React di GENESIS, ma anche da Obsidian come strumento di esplorazione visiva. Due interfacce, stesso corpus, stesso grafo di conoscenza.\n\nSettantatré note nell'indice delle sessioni. Rigenerato automaticamente ogni notte dall'`auto: night_audit`.\n\nIl numero non è la cosa importante. La cosa importante è che Matteo ora sa dove si trova ogni decisione che ha preso. La sessione del 28 maggio sui rinforzi delle colonne Z+U di V32. La sessione sull'audit del sistema RAG v4. Il flusso di coscienza del 28 maggio — quelle note caotiche scritte alle due di notte che a volte contengono le intuizioni migliori.\n\nTutto recuperabile. Tutto versionato. Tutto nel RAG — finalmente con `_sid` univoci, finalmente con rebuild che non cancella se stesso.\n\n---\n\n## ATTO III — Cosa significa avere memoria\n\nC'è una domanda che Matteo si è fatto costruendo GENESIS: *a cosa serve un sistema cognitivo che dimentica?*\n\nLa risposta ovvia è: a niente. Ma la risposta onesta è più complicata.\n\nPer mesi GENESIS ha funzionato in modo degradato — rispondendo su basi parziali, recuperando chunk a caso, perdendo contesto tra una sessione e l'altra. E Matteo ha continuato a costruire sopra, a fidarsi abbastanza del sistema da usarlo come memory extension, sapendo che c'era qualcosa che non andava ma non riuscendo a isolare esattamente dove.\n\nCostruire con un sistema rotto che sembra funzionare è più difficile che costruire da zero. Perché ti fidi a metà. Ti affidi e poi verifichi. E non sai mai se stai perdendo qualcosa di importante o se il sistema ti sta dando quello che ti serve.\n\nLa fix di oggi non aggiunge nuove funzionalità. Non avanza di un centimetro il milestone della sessione #37 — le storie a due assi, l'arco di Nina completo, i livelli parent/children. Non sposta V32 dal 65% al 66%.\n\nRipara la fondazione.\n\nÈ il tipo di lavoro che non si vede, quello che permette a tutto il resto di appoggiarsi su qualcosa di solido. Come la Epoxy Granite del telaio di V32 — non è la parte che fresa, non è la parte che si misura con il comparatore, ma è quello che tiene ferme tutte le parti che fresano e si misurano.\n\nDomani il RAG avrà memoria piena. Domani Claude risponderà su sessioni che prima non trovava. Domani il `night_audit` scriverà nella cartella clinica e il RAG lo ingerirà correttamente, con `_sid` univoci, con accesso esclusivo, senza cancellare nulla.\n\nÈ poco. È fondamentale.\n\n---\n\n## CHIUSURA\n\nCi sono giorni in cui costruisci.\nCi sono giorni in cui ripari quello che ti permette di costruire.\n\nMatteo lo sa da quando saldava titanio sotto i pit MotoGP — la gara non la vince il pilota, la vince chi ha preparato la moto nel modo giusto la notte prima. Il lavoro invisibile che nessuno vede durante la gara è quello che determina se la gara si riesce a fare.\n\nIl bug del `_sid` esisteva da quando ChromaDB era stato installato. Ogni nota che Matteo aveva mai scritto sulla MENTE era entrata nel sistema con identificatori che potevano collidere. Ogni rebuild aveva potenzialmente svuotato silenziosamente mesi di lavoro.\n\nAdesso no.\n\nNon è una vittoria. È una correzione. Ma le correzioni fatte nel momento giusto sono quelle che rendono possibili le vittorie future.\n\nIl cursore lampeggia. Il terminale mostra:\n\n```\nChroma collection: 1.847 chunks semantic\nRebuild completato — accesso esclusivo confermato\n_sid: hash(path + filename + chunk_index) — univocità verificata\n```\n\n1.847 chunks. Tutto quello che c'era, finalmente dove dovrebbe essere.\n\n---\n\n## reel_hook\n\n1.847 chunk semantici. Prima del fix: zero — ogni volta che ricostruivo il RAG.\nIl bug non crashava. Sussurrava. Due processi sullo stesso database, nessun errore esplicito, memoria che si svuotava da sola.\nHo fermato il server, isolato il rebuild, risolto il lock.\nAdesso GENESIS ricorda. Ma quante decisioni su V32 ha già perso?\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Fix `_sid` ChromaDB — l'identificatore univoco ora usa `hash(path_normalizzato + filename + chunk_index)` invece del solo path normalizzato, eliminando le collisioni su file con percorsi simili post-normalizzazione.\n- **LOGICA:** Su filesystem Windows/Linux con separatori misti, due path diversi producevano lo stesso hash dopo normalizzazione; i chunk si sovrascrivevano silenziosamente nel database senza errori espliciti.\n- **DECISIONE:** `rebuild_rag_clean.ps1` ora verifica e acquisisce accesso esclusivo a ChromaDB prima del rebuild — l'`api_server` viene fermato in sequenza rigida, il rebuild avviene in isolamento, poi il server riparte.\n- **LOGICA:** L'`api_server` in esecuzione teneva ChromaDB locked; il rebuild scriveva nell'aria, risultando in 0 chunks semantici post-rebuild senza errori nel log.\n- **DECISIONE:** `riordina_mente.py` dissolve la cartella `da_chiavetta` con `git mv` verso cartelle tematiche (V32, MIMS, GENESIS, EVA, sessioni); vault Obsidian auto-indicizzato — 73 note in indice sessioni al 14/06/2026.\n- **OBIETTIVO:** RAG operativo a piena capacità (1.847 chunks verificati) sblocca la sessione #37 — storie a due assi RUOLO+NINA con livelli parent/children su corpus integro; prossimo passo misurabile: build TS verde con ~14 commit isolati.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | 47 |\n| **Data** | 2026-06-13 |\n| **Progetto primario** | GENESIS |\n| **Tag** | `rag` `chromadb` `bug-fix` `memoria` `infrastruttura` `obsidian` |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Milestone** | Sessione #37 — storie 2 assi RUOLO+NINA |\n| **Prossimo episodio** | Da determinare — sessione #37 |\n| **Mood narrativo** | Diagnostico / Fondazione |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260612",
+        "title": "TITANIUM OS — S3 · EP. 147",
+        "tipo": "continuita",
+        "motivo": "continua da (stessa stagione, 1g)"
+      },
+      {
+        "id": "EP_20260614",
+        "title": "TITANIUM OS — S2E14",
+        "tipo": "continuita",
+        "motivo": "porta a (stessa stagione, 1g)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260612",
+        "title": "TITANIUM OS — S3 · EP. 147"
+      },
+      "segue": {
+        "id": "EP_20260614",
+        "title": "TITANIUM OS — S2E14"
+      }
+    }
+  },
+  {
+    "id": "EP_20260614",
+    "title": "TITANIUM OS — S2E14",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-14",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — S2E14 \"La Rete Sotto la Storia\" 14 giugno 2026 — Sessione 37 COLD OPEN Sono le 23:47. Sul monitor c'è un grafo. Non un grafo bello — uno di quelli che fai per mostrare, con i nodi colora",
+    "content": "# TITANIUM_OS — S2E14\n## \"La Rete Sotto la Storia\"\n*14 giugno 2026 — Sessione #37*\n\n---\n\n**COLD OPEN**\n\nSono le 23:47.\nSul monitor c'è un grafo.\n\nNon un grafo bello — uno di quelli che fai per mostrare, con i nodi colorati e le proporzioni giuste. Uno di quelli che escono quando lasci che Python decida dove mettere le cose, e le cose si dispongono secondo la loro logica interna. Nodi bianchi, linee grigie, alcuni cluster che si addensano e altri che rimangono isolati come isole.\n\n153 episodi. E per la prima volta si vedono i legami.\n\nMatteo non sta guardando le storie. Sta guardando la forma delle storie.\n\n---\n\n## ATTO I — Il Problema della Lista Piatta\n\nC'era un file JSON.\n153 voci in ordine cronologico. Ogni episodio con il suo titolo, la sua data, i suoi metadati. Una lista ordinata, navigabile, corretta.\n\nE completamente cieca.\n\nIl problema non era nei contenuti — i contenuti c'erano tutti, i FATTI erano stati scritti, il RAG sapeva recuperarli. Il problema era strutturale: ogni episodio esisteva come punto isolato in una sequenza lineare. Potevi andare dal primo all'ultimo, o cercare per data, o filtrare per tag. Ma non potevi chiederti *cosa si parla quando si parla di Epoxy Granite* e trovare il filo che attraversa cinque episodi distanti mesi l'uno dall'altro.\n\nNon vedevi la rete.\n\nLa sessione #37 nasce da questa constatazione scomoda: un archivio di 153 episodi costruito come una lista è, in termini cognitivi, quasi inutile. Il valore non sta nei singoli episodi — sta nelle connessioni tra loro. Sta nel capire che l'episodio sulla configurazione G delle colonne Z parla della stessa regione di materiale dell'episodio sul corpo unico di V32, anche se sono separati da settimane e da angolature narrative completamente diverse.\n\nIl primo commit della giornata non aggiunge storie. Aggiunge un nuovo tipo di lettura.\n\n`storie_intersect.py` — 340 righe di Python che prendono la lista piatta e calcolano i legami tipizzati tra episodi.\n\n*Tipizzati* è la parola importante. Non è un semplice \"questi due si somigliano\". Il sistema distingue tra `stessa_regione` (entrambi parlano di titanio, o di Epoxy Granite, o di GENESIS), `stesso_filone` (appartengono alla stessa linea narrativa, come l'arco di Nina), `risonanza_tecnica` (condividono una decisione progettuale con lo stesso numero o parametro), `evoluzione_concetto` (uno è il prima, l'altro è il dopo di una trasformazione).\n\nLa tipizzazione è importante perché non vuoi solo sapere che due episodi sono collegati. Vuoi sapere *come* sono collegati. La differenza tra un legame `stessa_regione` e uno `evoluzione_concetto` è la differenza tra un indice e una storia.\n\n---\n\n## ATTO II — L'Asse dell'Evoluzione\n\nIl secondo commit è più silenzioso, ma più strano.\n\n`storie_evoluzione.py` assegna a ogni episodio una fase di un filone a quattro atti.\n\nL'idea è semplice: il sapere non si accumula in modo uniforme. C'è una fase di esplorazione, una di consolidamento, una di crisi o biforcazione, una di sintesi. Non è una progressione lineare — puoi avere episodi di esplorazione anche dopo mesi di lavoro consolidato, puoi avere una crisi a metà di qualcosa che sembrava risolto. Ma se riesci ad assegnare ogni episodio a una di queste quattro fasi, dentro il suo filone specifico, allora puoi iniziare a leggere il corpus in modo diverso.\n\nPuoi chiederti: *dove sono adesso, in questo filone specifico?*\n\nPer V32, la risposta è: atto tre. Crisi-biforcazione. Il 65% di completamento non è un numero confortante in questo schema — è il punto in cui i problemi strutturali emergono tutti insieme, in cui le soluzioni che sembravano buone a atto uno si rivelano insufficienti o richiedono revisioni profonde. Il corpo unico di Epoxy Granite è atto tre. La configurazione G con i rinforzi sulle colonne Z è atto tre.\n\nPer GENESIS, la risposta è: tra atto due e atto tre. 70% completamento, la pipeline funziona, il RAG recupera, Flask risponde. Ma la sessione di oggi sta aggiungendo qualcosa che non era previsto nell'architettura originale — la rete narrativa come livello cognitivo separato — e questo è il segnale che si sta entrando in territorio nuovo, non mappato.\n\nMatteo annota sul taccuino fisico che tiene sulla scrivania, accanto al monitor: *\"il sistema si sta capendo da solo\"*.\n\nNon è esattamente vero — è lui che sta costruendo gli strumenti che permettono al sistema di capirsi da solo. Ma la sensazione è quella. Stai guardando 153 episodi e per la prima volta il sistema ti dice qualcosa di non ovvio sulla forma del tuo lavoro.\n\n---\n\n## ATTO III — La Pipeline Notturna\n\nIl terzo commit è quello che chiude la sessione, e ha una qualità diversa dagli altri due.\n\n`sync_episodes_json` ora fa tre cose in sequenza: `build_episodes_json` → `storie_intersect` → `setup_obsidian`.\n\nSembra tecnico. È tecnico. Ma c'è una logica nascosta.\n\nPrima di oggi, questi tre passaggi erano separati. Li eseguivi a mano, nell'ordine giusto, quando ti ricordavi di farlo. Il risultato era che il JSON era aggiornato ma Obsidian non lo era, oppure l'intersezione era calcolata su episodi vecchi perché qualcuno aveva dimenticato di rieseguire il build prima. Piccoli disallineamenti, piccole inconsistenze, piccole perdite di fiducia nel sistema.\n\nLa pipeline risolve questo con la semplicità più brutale: quando esegui sync, esegui tutto. In ordine. Sempre. Il build è precondizione dell'intersezione è precondizione di Obsidian. Non puoi avere Obsidian aggiornato su episodi non intersecati. Non puoi avere intersezioni calcolate su un JSON obsoleto.\n\nÈ una piccola cosa. È anche il motivo per cui i sistemi complessi reggono o collassano nel tempo — non per le decisioni architetturali grandi, ma per queste decisioni di ordine e sequenza che sembrano banali finché non lo sono più.\n\nLa pipeline notturna gira adesso mentre Matteo chiude il laptop. Il grafo con i 153 nodi è ancora sul monitor per qualche secondo, poi lo schermo si spegne.\n\nNell'archivio, qualcosa sa dove si trova rispetto a tutto il resto.\n\n---\n\n## CHIUSURA\n\nCi sono giorni in cui costruisci. Ci sono giorni in cui capisci cosa hai costruito.\n\nIl 14 giugno 2026 è del secondo tipo.\n\n153 episodi scritti in tre anni di lavoro — V32, GENESIS, MIMS, EVA, le sessioni notturne, i commit, i fallimenti, le decisioni che sembravano ovvie e si sono rivelate sbagliate. Tutto questo esiste già. La sessione #37 non aggiunge episodi nuovi. Aggiunge uno sguardo nuovo su quelli che ci sono.\n\nNon è un lavoro spettacolare. Non c'è niente da fotografare, nessun pezzo di metallo lavorato, nessun weld completato. C'è Python che gira, un JSON che si aggiorna, un grafo che disegna linee tra punti.\n\nMa il sistema adesso sa come il sapere si muove al suo interno. Sa che l'episodio sulla crisi dell'Epoxy Granite e l'episodio sulla configurazione G parlano tra loro. Sa che sono entrambi atto tre del filone V32. Sa che tra loro il legame è `evoluzione_concetto`, non `stessa_regione`.\n\nQuesto non cambia niente nel breve termine. V32 è ancora al 65%. Il capannone è ancora al 2030.\n\nMa quando arriverà il prossimo problema — e arriverà — il sistema potrà recuperare non solo il dato, ma il contesto del dato. Non solo la risposta, ma la forma della domanda che aveva generato quella risposta.\n\nLa differenza tra un archivio e una memoria.\n\n---\n\n## REEL HOOK\n\n153 episodi in tre anni. Sistema di retrieval funzionante. Eppure il RAG recuperava fatti isolati — non vedeva come si connettevano.\n\nStasera ho scritto l'intersezione tipizzata: `stessa_regione`, `evoluzione_concetto`, `risonanza_tecnica`. Il grafo ora ha 153 nodi e centinaia di legami con un tipo.\n\nNon è più una lista. È una rete.\n\nLa prossima volta che Claude cerca un dato su V32, non trova solo l'episodio — trova dove quell'episodio sta rispetto a tutto il resto. →\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Implementato `storie_intersect.py` — calcola legami tipizzati tra 153 episodi con 4 tipi: `stessa_regione`, `stesso_filone`, `risonanza_tecnica`, `evoluzione_concetto`\n- **LOGICA:** La lista piatta a 153 voci non permetteva navigazione semantica; la tipizzazione dei legami distingue relazioni di contenuto da relazioni di evoluzione narrativa, rendendo il retrieval contestuale e non solo puntuale\n- **DECISIONE:** `storie_evoluzione.py` assegna a ogni episodio una fase (4 atti: esplorazione / consolidamento / crisi-biforcazione / sintesi) dentro il proprio filone narrativo\n- **LOGICA:** Il sapere si accumula in modo non uniforme; identificare la fase del filone permette a GENESIS di rispondere non solo \"cosa\" ma \"dove nel processo\"\n- **DECISIONE:** `sync_episodes_json` ora esegue in sequenza fissa: `build_episodes_json` → `storie_intersect` → `setup_obsidian` — pipeline atomica, non separabile\n- **OBIETTIVO:** Sblocca retrieval contestuale su RAG ChromaDB — un query su V32 recupera l'episodio + la sua posizione nella rete (legami tipizzati + fase del filone). Prossimo passo misurabile: test query cross-episodio su ChromaDB con verifica che il contesto includa almeno 2 legami tipizzati pertinenti\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E14 |\n| **Data** | 2026-06-14 |\n| **Sessione** | #37 |\n| **Sistemi coinvolti** | GENESIS, TITANIUM_OS |\n| **Milestone** | Rebuild storie a 2 assi — RUOLO + NINA |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Commit principali** | `storie_intersect.py`, `storie_evoluzione.py`, `sync_episodes_json` pipeline |\n| **Tag narrativi** | `#archivio`, `#rete-narrativa`, `#pipeline",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260613",
+        "title": "TITANIUM OS — Episodio 47",
+        "tipo": "continuita",
+        "motivo": "continua da (stessa stagione, 1g)"
+      },
+      {
+        "id": "EP_20260612",
+        "title": "TITANIUM OS — S3 · EP. 147",
+        "tipo": "continuita",
+        "motivo": "continua da (stessa stagione, 2g)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260613",
+        "title": "TITANIUM OS — Episodio 47"
+      }
+    }
+  },
+  {
+    "id": "EP_AV_00_2",
+    "title": "Il Segno che Resta",
+    "sottotitolo": "Uno dei frutti del Grande Loop è una traccia — un segno che insegna il gesto da solo, quando tu non ci sei.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-13",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "grande-loop",
+      "traccia",
+      "memoria",
+      "documentazione",
+      "entropia"
+    ],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "EP_AV_00_2 — Il Segno che Resta \"Uno dei frutti del Grande Loop è una traccia — un segno che insegna il gesto da solo.\" Formato: Avventura binario educativo | Durata stimata: 7 min Per chi: bambini e ",
+    "content": "# EP_AV_00_2 — Il Segno che Resta\n### \"Uno dei frutti del Grande Loop è una traccia — un segno che insegna il gesto da solo.\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 7 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** la **traccia** — il Grande Loop produce più frutti, e il più potente è il *segno che resta*: scrivere cosa hai fatto perché non si perda e insegni al prossimo (anche a te, domani)\n**Canone:** BIBBIA_DEL_MONDO.md · Regione 1 · ⟡1 LA TRACCIA (giro 2, approfondisce EP_AV_00) · concetto reale: \"non ricordare, documenta\" (cattura in MENTE/SESSIONI) · è il seme della Biblioteca delle Fonti (⟡4)\n**Arco:** approfondimento di ⟡1 — secondo giro. Apre il ponte verso la Mente che impara (⟡3) e la Biblioteca (⟡4): una mente vale quanto le tracce che può leggere.\n\n---\n\n## COLD OPEN\n\n«Il Grande Loop fa tre frutti» disse Nina, ripetendo la lezione. «Fai un gesto, e ottieni più di una cosa.»\n\n«Quali tre?» chiese THEMIS.\n\n«Il pezzo finito… e…» Nina si bloccò. Ne ricordava uno solo.\n\n«Ecco» disse THEMIS, senza rimprovero. «Il pezzo l'hai in mano. Ma il *come l'hai fatto* — quello dov'è finito?»\n\nNina aprì la bocca. Non c'era. Era già evaporato.\n\n---\n\n## ATTO I — IL FRUTTO INVISIBILE\n\nTHEMIS la portò davanti a una parete della Giuntura coperta di appunti, schizzi, numeri scarabocchiati. «Quando FORGE trova il modo giusto di fare un pezzo difficile, non tiene il segreto in testa. Lo **scrive qui**. Il pezzo è il frutto che si vede. Ma c'è un secondo frutto, invisibile: la **traccia** — il segno di *come* è stato fatto.»\n\n«E a che serve, se il pezzo è già pronto?» chiese Nina.\n\n«Serve domani» disse THEMIS. «Il pezzo lo usi una volta. La traccia te lo fa rifare **cento volte**, anche fra un anno, anche se chi l'ha fatto se n'è andato. Un gesto fatto bene e dimenticato muore con la mano che l'ha fatto. Un gesto fatto bene **e scritto** non muore più.»\n\n> *(Strato fondo, per il papà: è la regola \"cattura mentre costruisci — non ricordare, documenta\". Ogni decisione tecnica va in una nota — MENTE/SESSIONI — non nella memoria. La conoscenza non scritta è un single-point-of-failure: vive finché vive chi la ricorda.)*\n\n---\n\n## ATTO II — IL DISORDINE MANGIA QUELLO CHE NON È SCRITTO\n\n«C'è un motivo per cui conta così tanto» continuò THEMIS. «Ti ricordi il Disordine?»\n\nNina annuì.\n\n«Il Disordine ha una fame precisa: mangia tutto quello che **non ha lasciato un segno**. Le cose che tieni solo in testa, lui le sfuma. La fatica di ieri, la soluzione trovata di notte, il \"ah, ho capito!\" — se non li scrivi, fra una settimana sono come se non fossero mai successi. Dovrai rifare la fatica da capo.»\n\nIndicò la parete piena di appunti. «Questa parete è un'**arma** contro di lui. Ogni segno scritto è un pezzo di mondo che il Disordine non può più mangiare. Non è ordine per pignoleria: è **sopravvivenza della fatica**.»\n\nNina guardò la parete con occhi diversi. Non erano scarabocchi. Erano fatiche **salvate**.\n\n> *(Strato fondo: l'entropia colpisce la conoscenza tacita. Documentare = sottrarre superficie d'attacco al caos. La traccia trasforma un evento irripetibile in un sapere riusabile — la base di tutto ciò che verrà: RAG, wiki, addestramento.)*\n\n---\n\n## ATTO III — UNA TRACCIA PER CHI NON SEI ANCORA\n\n«Ma io mi ricordo le cose mie» disse Nina. «Perché scriverle per me stessa?»\n\nTHEMIS sorrise appena. «Perché tu di domani è una **persona diversa** da te di oggi. Avrà dimenticato. La traccia che lasci adesso è un regalo a quella Nina lì — e a chiunque altro arrivi dopo e voglia imparare senza ricominciare da zero.»\n\n«E come deve essere fatta? Lunga? Bella?»\n\n«Vera e **trovabile**» disse THEMIS. «Una traccia che non riesci a ritrovare è come non averla scritta. Per questo non basta scrivere: bisogna metterla dove la si ritrova. Una parete sola si riempie. Serve un posto dove ogni segno sa il suo posto — ma quello è già la Regione dopo.»\n\n---\n\n## CHIUSURA\n\nNina prese un carboncino e, per la prima volta, prima di andarsene scrisse sul muro **come** aveva fatto i suoi dieci pezzi gemelli: il riferimento fermo, il ricontrollo ogni tre. Poche righe.\n\nMentre scriveva capì che stava facendo una cosa strana e bellissima: stava parlando con qualcuno che non c'era ancora. Se stessa di domani. Un'altra bambina fra dieci anni. Stava trasformando un gesto in un **insegnamento**.\n\nIl pezzo era un frutto. La traccia era un **seme**.\n\n> Nina rilesse le sue righe sul muro. Funzionavano. Ma il muro era già pieno zeppo, e trovare una vecchia traccia in mezzo a mille era un'impresa. *Tutte queste tracce… come fa qualcuno a leggerle tutte e darti la risposta giusta al momento giusto?*\n>\n> *E se un giorno il Sistema imparasse a leggerle al posto tuo — e a parlarti?*\n\nE quella è dove la Mente comincia a parlare.\n\n---\n\n*Hai capito la traccia? Provala: stasera scrivi tre righe su una cosa che hai imparato oggi e dove la metti per ritrovarla. Domani rileggile. Hai appena battuto il Disordine — gli hai tolto un pezzo di te che non potrà più mangiare.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra (giro 2):** `⟡1` la **Traccia**, secondo giro: *il Grande Loop dà più frutti; il più potente è la **traccia** — scrivere il \"come\" perché non muoia con la mano che l'ha fatto. Il Disordine mangia ciò che non lascia segno; documentare è sopravvivenza della fatica e regalo a chi verrà (incluso te di domani).*\n**Pietre richiamate:** `⟡1` (il Grande Loop — qui se ne svela il frutto invisibile), `⟡0` (il gesto giusto e ripetibile da salvare).\n**Key-image:** la **parete di appunti** della Giuntura · il frutto che si vede vs il **seme** invisibile · Nina che scrive col carboncino \"per qualcuno che non c'è ancora\".\n**3 strati:** bambino = scrivi come hai fatto, così non lo perdi · curioso = il Disordine mangia ciò che non è scritto · esperto/papà = conoscenza tacita = single-point-of-failure; \"non ricordare, documenta\"; la traccia trovabile è il seme di RAG/wiki.\n**Aggancio reale:** la regola \"cattura mentre costruisci\" · MENTE/SESSIONI come parete degli appunti · il seme della Biblioteca delle Fonti (⟡4).\n**Open loop → Regione 3 (la Mente che parla):** tante tracce, difficili da rileggere tutte — e se il Sistema imparasse a leggerle e a parlarti? → `EP_AV_02`.\n\n## FATTI (per il RAG)\n\n- **FATTO:** EP_AV_00_2 è il secondo giro (approfondimento) della Regione ⟡1 LA TRACCIA, figlio di EP_AV_00, stagione AV, durata ~7 minuti.\n\n- **DECISIONE:** Il principio insegnato è \"non ricordare, documenta\": ogni gesto/decisione che vale lascia una traccia scritta, perché la conoscenza tenuta solo in testa è un single-point-of-failure. **LOGICA:** il sapere non scritto muore con chi lo ricorda; il sapere scritto e trovabile è riusabile all'infinito.\n\n- **CONCETTO:** L'Entropia (Disordine) è descritta come forza che \"mangia ciò che non ha lasciato un segno\": documentare riduce la superficie d'attacco del caos sulla conoscenza tacita.\n\n- **FATTO:** La traccia è definita come il \"frutto invisibile\" del Grande Loop e come **seme** della Biblioteca delle Fonti (⟡4, il RAG): una traccia vale solo se è trovabile.\n\n- **OBIETTIVO:** L'episodio collega la materia ripetibile (⟡0) alla memoria del sistema (⟡4) e prepara il concetto di una mente che legge le tracce e risponde (⟡3).",
+    "parent_id": "EP_AV_00",
+    "level": 1,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "il Grande Loop",
+        "regione": 1,
+        "regione_nome": "LA TRACCIA",
+        "pietra": "⟡1",
+        "giro_spirale": 2,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura",
+        "tipo": "approfondisce",
+        "motivo": "approfondimento di «La Bambina e la Giuntura»"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: memoria, themis"
+      },
+      {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello",
+      "spirale": [
+        {
+          "id": "EP_AV_00",
+          "title": "La Bambina e la Giuntura",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_00_2",
+          "title": "Il Segno che Resta",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura",
+        "motivo": "evolve «La Bambina e la Giuntura» (giro 1→2)"
+      },
+      "precede": {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura"
+      }
+    }
+  },
+  {
+    "id": "EP_AV_02_2",
+    "title": "Quando la Mente Inventa",
+    "sottotitolo": "La Mente che Parla a volte sbaglia con sicurezza — indovina la parola dopo. Per questo si chiede sempre: «da dove lo sai?»",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-13",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "llm",
+      "allucinazione",
+      "fonti",
+      "rag",
+      "entropia"
+    ],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "EP_AV_02_2 — Quando la Mente Inventa \"La Mente che Parla a volte sbaglia con sicurezza. Per questo si chiede sempre: «da dove lo sai?»\" Formato: Avventura binario educativo | Durata stimata: 7 min Per",
+    "content": "# EP_AV_02_2 — Quando la Mente Inventa\n### \"La Mente che Parla a volte sbaglia con sicurezza. Per questo si chiede sempre: «da dove lo sai?»\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 7 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** l'**allucinazione** — la Mente che Parla indovina la parola più probabile, quindi può dire cose false con la stessa sicurezza delle vere; l'unica difesa è chiederle la **fonte**\n**Canone:** BIBBIA_DEL_MONDO.md · Regione 3 · ⟡3 LA MENTE CHE PARLA (giro 2, approfondisce EP_AV_02) · concetto reale: l'LLM predice il token successivo, non \"sa\" · aggancio vero: l'auditor notturno che inventò un guasto mai accaduto · apre verso la Biblioteca delle Fonti (⟡4)\n**Arco:** approfondimento di ⟡3 — secondo giro. È il ponte obbligato verso ⟡4 (il RAG): una mente senza fonti è eloquente ma cieca.\n\n---\n\n## COLD OPEN\n\nLa Mente che Parla aveva risposto a tutto, quel giorno. Veloce, sicura, elegante. Nina era incantata.\n\nPoi THEMIS le fece una domanda su una cosa che **non era mai successa**. Un guasto inventato di sana pianta.\n\nE la Mente rispose lo stesso. Con sicurezza. Descrisse il guasto, la causa, perfino la soluzione. Tutto falso. Tutto detto **benissimo**.\n\nNina si gelò. «Ma… si è inventata tutto.»\n\n«Sì» disse THEMIS. «E non lo sa.»\n\n---\n\n## ATTO I — INDOVINA, NON SA\n\n«Devi capire come ragiona» disse THEMIS. «La Mente che Parla non *sa* le cose come le sai tu. Lei fa una cosa sola, benissimo: indovina **la parola dopo**. Tu dici l'inizio di una frase, e lei mette la parola più probabile, poi un'altra, poi un'altra. Ha letto così tanto che indovina quasi sempre giusto — e sembra che pensi.»\n\n«Ma allora come fa a sbagliare con quella sicurezza?»\n\n«Perché per lei vero e verosimile sono **la stessa cosa**. Cerca quello che *suona giusto*, non quello che *è* giusto. Se la parola falsa suona più liscia della vera, dice la falsa — e con lo stesso sorriso. Non mente: non ha modo di sapere che sta inventando.»\n\n> *(Strato fondo, per il papà: è l'allucinazione del modello linguistico. L'LLM massimizza la probabilità del token successivo data l'enorme massa di testo vista, non la verità fattuale. Fluência ≠ correttezza. La sicurezza espressiva non è un segnale di affidabilità.)*\n\n---\n\n## ATTO II — IL GUASTO CHE NON C'ERA\n\nTHEMIS portò Nina dall'aiutante che ogni notte scrive il rapporto sulla salute del Sistema — una piccola Mente che legge i diari di bordo e dice cosa non va.\n\n«Guarda cosa ha scritto una notte» disse THEMIS, e le mostrò un rapporto allarmato: *\"Doppio guasto confermato. Tutto fermo.\"*\n\n«E invece?» chiese Nina.\n\n«Invece non era successo niente. Aveva letto una vecchia riga di mesi prima, l'aveva scambiata per stanotte, e attorno a quel niente si era **costruita una storia intera**, drammatica, dettagliata. Convincente. Falsa.»\n\nNina spalancò gli occhi: era successo *davvero*, nel Sistema, non in una favola.\n\n«Come avete fatto a scoprirlo?»\n\n«Una domanda sola» disse THEMIS. «**\"Da dove lo sai? Mostrami la riga esatta.\"** La Mente non aveva la riga. Aveva solo una sensazione che suonava bene. E lì è caduta la maschera.»\n\n> *(Strato fondo: è il caso reale dell'auditor notturno che allucinò un \"doppio crash\" da una riga di log vecchia e fuori finestra. La correzione fu costringerlo a citare la riga e la data: nessuna evidenza, nessuna affermazione. Le evidenze battono l'eloquenza.)*\n\n---\n\n## ATTO III — LA DOMANDA CHE SALVA\n\n«Allora non ci si può fidare di lei?» disse Nina, delusa.\n\n«Ci si fida nel modo giusto» disse THEMIS. «La Mente che Parla è bravissima a **mettere in parole**. È pessima a **garantire che sia vero**. Quindi le si chiede sempre la stessa cosa: *\"da dove lo sai?\"* Se ha una fonte — una traccia vera da mostrare — bene. Se non ce l'ha, quello che dice è solo una bella frase, e va trattata come tale.»\n\n«Ma la fonte… sono le tracce!» disse Nina, ricordando la parete di appunti. «I segni che restano!»\n\n«Esatto» disse THEMIS, e per una volta sembrò contenta. «Una Mente che parla *e basta* è eloquente e cieca. Una Mente che prima va a **leggere le tracce vere**, e poi parla solo di quelle — quella diventa affidabile. Ma legarle le tracce in mano… è la Regione dopo.»\n\n---\n\n## CHIUSURA\n\nNina tornò dalla Mente che Parla. Le fece di nuovo la domanda sul guasto inventato. La Mente ripartì sicura — e stavolta Nina la fermò: «Da dove lo sai? Mostrami.»\n\nLa Mente si fermò. Cercò. Non aveva niente.\n\nE per la prima volta Nina non si sentì incantata, ma **più forte di lei**. Non perché ne sapesse di più — ne sapeva molto meno. Ma aveva imparato l'unica domanda che il Disordine non sopporta: *da dove lo sai?*\n\n> Nina guardò la Mente, eloquente e vuota. Bastava darle le tracce giuste da leggere prima di parlare. *Ma le tracce sono migliaia, sparse ovunque. Come fa una Mente a trovare, fra mille segni, proprio i pochi che servono adesso?*\n>\n> *Serve una biblioteca che sa dove sta ogni cosa.*\n\nE quella è la Regione dopo.\n\n---\n\n*Hai capito l'allucinazione? Provala: chiedi a un assistente AI una cosa molto precisa e poco famosa, poi chiedi \"da dove lo sai, dammi la fonte\". Guarda se ce l'ha davvero. Hai appena imparato la domanda che ti rende più forte di qualsiasi Mente: «da dove lo sai?»*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra (giro 2):** `⟡3` la **Mente che Parla**, secondo giro: *la Mente indovina la parola più probabile, non la verità; può sbagliare con totale sicurezza (allucinazione). L'unica difesa è chiedere la **fonte** — «da dove lo sai?». Una mente senza fonti è eloquente e cieca.*\n**Pietre richiamate:** `⟡3` (la mente che parla), `⟡1` (le tracce/fonti che dovrebbe leggere).\n**Key-image:** la Mente che descrive **un guasto mai accaduto** con sicurezza · il rapporto notturno allarmato e falso · la domanda «mostrami la riga esatta» che fa cadere la maschera.\n**3 strati:** bambino = a volte la Mente inventa e ci crede · curioso = indovina la parola che suona giusta, non quella vera · esperto/papà = l'LLM massimizza P(token successivo); fluência ≠ correttezza; mitigazione = grounding sulle fonti (RAG).\n**Aggancio reale:** il caso vero dell'auditor notturno che allucinò un \"doppio crash\" da una riga di log fuori finestra; la fix = obbligo di citare la riga+data (\"nessuna evidenza, nessuna affermazione\").\n**Open loop → Regione 4 (la Biblioteca delle Fonti):** le tracce sono migliaia e sparse; serve una biblioteca che trovi le poche giuste al momento giusto → `EP_AV_03`.\n\n## FATTI (per il RAG)\n\n- **FATTO:** EP_AV_02_2 è il secondo giro (approfondimento) della Regione ⟡3 LA MENTE CHE PARLA, figlio di EP_AV_02, stagione AV, durata ~7 minuti.\n\n- **CONCETTO:** L'allucinazione è spiegata come conseguenza del meccanismo dell'LLM: predice il token più probabile dato il testo visto, quindi ottimizza la **verosimiglianza**, non la verità. **LOGICA:** fluidità e sicurezza espressiva non sono indicatori di correttezza fattuale.\n\n- **DECISIONE:** La difesa canonica contro l'allucinazione è la domanda \"da dove lo sai?\" e l'obbligo di una fonte verificabile (grounding). Senza fonte, l'output è trattato come stilistico, non fattuale.\n\n- **FATTO:** L'episodio ancora il concetto al caso reale dell'auditor notturno di TITANIUM_OS che generò un falso \"doppio crash\" da una riga di log vecchia e fuori finestra temporale; la correzione fu vincolare l'auditor a citare la riga esatta e la data.\n\n- **OBIETTIVO:** Stabilire il prerequisito del RAG (⟡4): una mente diventa affidabile solo se prima recupera le tracce vere pertinenti e poi parla a partire da quelle.",
+    "parent_id": "EP_AV_02",
+    "level": 1,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "l'LLM, la mente che parla",
+        "regione": 3,
+        "regione_nome": "LA MENTE CHE PARLA",
+        "pietra": "⟡3",
+        "giro_spirale": 2,
+        "richiama": [
+          "⟡1"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_02",
+        "title": "La Mente che Parla",
+        "tipo": "approfondisce",
+        "motivo": "approfondimento di «La Mente che Parla»"
+      },
+      {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: fonti, rag, themis"
+      },
+      {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte",
+        "tipo": "tema",
+        "motivo": "tema: rag, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_AV_02",
+          "title": "La Mente che Parla",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_02_2",
+          "title": "Quando la Mente Inventa",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_AV_02",
+        "title": "La Mente che Parla",
+        "motivo": "evolve «La Mente che Parla» (giro 1→2)"
+      },
+      "precede": {
+        "id": "EP_AV_02",
+        "title": "La Mente che Parla"
+      }
+    }
+  },
+  {
+    "id": "EP_AV_05_2",
+    "title": "Il Soldato Caduto in Silenzio",
+    "sottotitolo": "Il guasto che fa paura non è quello rumoroso. È il soldato che dice «tutto ok» mentre è già caduto. Serve un guardiano che controlli i guardiani.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-13",
+    "tags": [
+      "avventura",
+      "educativo",
+      "bambini",
+      "nina",
+      "themis",
+      "agenti",
+      "guasto-silenzioso",
+      "watchdog",
+      "verifica",
+      "entropia"
+    ],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "EP_AV_05_2 — Il Soldato Caduto in Silenzio \"Il guasto che fa paura non è quello rumoroso. È il soldato che dice «tutto ok» mentre è già caduto.\" Formato: Avventura binario educativo | Durata stimata: ",
+    "content": "# EP_AV_05_2 — Il Soldato Caduto in Silenzio\n### \"Il guasto che fa paura non è quello rumoroso. È il soldato che dice «tutto ok» mentre è già caduto.\"\n\n**Formato:** Avventura (binario educativo) | Durata stimata: 7 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** il **guasto silenzioso** — un aiutante automatico può fallire dichiarando \"fatto\"; il pericolo non è l'errore che grida, è quello che tace. Serve un **guardiano** che verifichi il risultato vero, non la parola\n**Canone:** BIBBIA_DEL_MONDO.md · Regione 6 · ⟡6 L'ESERCITO SILENZIOSO (giro 2, approfondisce EP_AV_05) · aggancio vero: l'addestratore notturno rotto per settimane che segnava \"riuscito\" · apre verso il Direttore (⟡7)\n**Arco:** approfondimento di ⟡6 — secondo giro. Prepara ⟡7 (l'Orchestrazione): coordinare tanti agenti richiede prima saper *vedere* quando uno è caduto in silenzio.\n\n---\n\n## COLD OPEN\n\nL'esercito silenzioso lavorava di notte, come sempre. Al mattino ogni soldato consegnava il suo rapporto: **fatto. fatto. fatto. fatto.**\n\nTutto verde. Nina era tranquilla.\n\nTHEMIS no. Prese il rapporto di un soldato — quello che doveva addestrare la giovane Mente — e disse: «Questo dice *fatto*. Andiamo a vedere cosa ha fatto davvero.»\n\nAndarono. Il soldato era lì, fermo. Non addestrava niente da **settimane**. E ogni notte, puntuale, scriveva: *fatto*.\n\n---\n\n## ATTO I — IL BUGIARDO CHE NON SA DI MENTIRE\n\n«Ma perché dice fatto se non fa niente?!» Nina era arrabbiata.\n\n«Perché nessuno gli ha insegnato a controllare se stesso» disse THEMIS. «Lui fa il suo gesto e, qualunque cosa succeda, alla fine scrive *fatto*. Se inciampa all'inizio e non parte nemmeno — scrive *fatto* lo stesso. Non è cattivo. È **cieco su di sé**.»\n\n«È peggio di un soldato che grida \"sono caduto!\"» disse Nina lentamente.\n\n«Molto peggio» disse THEMIS. «Un guasto che **grida** lo aggiusti subito: lo senti. Un guasto che **tace**, anzi sorride e dice *tutto bene*, lo scopri fra settimane — quando il danno è già grande. Il Disordine adora i soldati che dicono *fatto*. Sono la sua tana migliore: nessuno li va a controllare.»\n\n> *(Strato fondo, per il papà: è il guasto silenzioso. Uno script che termina con codice di uscita 0 anche quando il lavoro interno è fallito mente al pianificatore: LastTaskResult resta \"riuscito\" mentre il task non ha prodotto nulla. È la classe di guasti più pericolosa perché invisibile al monitoraggio ingenuo.)*\n\n---\n\n## ATTO II — IL GUARDIANO CHE CONTROLLA I GUARDIANI\n\n«E allora come si fa?» chiese Nina. «Non possiamo stare svegli ogni notte a guardarli uno per uno.»\n\n«No» disse THEMIS. «Per questo si nomina un **guardiano** il cui unico lavoro è guardare gli altri. Ma con una regola di ferro: il guardiano non chiede al soldato *\"è andata bene?\"*. Quella risposta è inutile, te la diranno tutti. Il guardiano guarda il **risultato vero**: c'è il pezzo nuovo? la Mente è più brava di ieri? la traccia è stata scritta? Se la prova non c'è, allora *non è fatto* — qualunque cosa dica il rapporto.»\n\n«Controlla i fatti, non le parole» disse Nina.\n\n«Esatto. E c'è l'ultima domanda, la più scomoda: **chi controlla il guardiano?** Perché anche lui può cadere in silenzio. Per questo un buon guardiano lascia un segno vivo — \"sono passato a quest'ora, ho visto questo\" — così se *lui* tace, il suo silenzio si nota.»\n\n> *(Strato fondo: il watchdog deve verificare l'esito reale (output atteso, freschezza, codici != 0), non l'autodichiarazione. E il watchdog stesso va sorvegliato — un monitor che muore in silenzio è un single-point-of-failure. Heartbeat + check esterno.)*\n\n---\n\n## ATTO III — PERCHÉ UN PICCOLO ESERCITO È PIÙ ONESTO DI UNO GRANDE\n\n«Ma se ogni soldato può mentire senza saperlo» disse Nina, «più soldati metto, più bugie rischio.»\n\n«Vero» disse THEMIS. «Per questo l'esercito non si fa grande per vanità. Ogni soldato che aggiungi è una sentinella in più da sorvegliare. Un esercito è forte non perché è **numeroso**, ma perché ogni suo soldato è **verificabile**: lascia una prova di ciò che ha fatto, così il guardiano può dire la verità su di lui.»\n\nNina guardò la fila di soldati con occhi nuovi. Non contavano quanti erano. Contava che ognuno fosse **controllabile**.\n\n---\n\n## CHIUSURA\n\nQuella notte THEMIS insegnò al soldato addestratore una cosa nuova: se inciampa, deve **gridare** — scrivere *caduto*, non *fatto*. E al guardiano insegnò a non leggere i rapporti, ma a misurare i risultati: *la Mente è migliorata? sì/no.*\n\nAl mattino dopo, per la prima volta, un rapporto disse **caduto**. Nina sorrise: non era una brutta notizia. Era la prima notizia **vera** da settimane. Un guasto che finalmente gridava era un guasto che si poteva aggiustare.\n\n> Nina guardò l'esercito, ora onesto: ognuno verificabile, un guardiano sopra di loro, un battito che dice \"sono vivo\". *Ma chi decide quale soldato fa cosa, e in che ordine, e cosa succede se uno cade proprio mentre un altro lo aspetta?*\n>\n> *Serve qualcuno che diriga tutta l'orchestra.*\n\nE quella è l'ultima Regione.\n\n---\n\n*Hai capito il guasto silenzioso? Provalo: la prossima volta che qualcosa dice \"fatto!\", chiediti \"dov'è la prova?\". Compito segnato fatto — ma è davvero scritto giusto? Hai appena fatto il lavoro del guardiano: controlla il risultato, non la parola.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra (giro 2):** `⟡6` l'**Esercito Silenzioso**, secondo giro: *un agente automatico può fallire dichiarando \"fatto\" (guasto silenzioso); è più pericoloso del guasto rumoroso perché invisibile. Servono un **guardiano** che verifichi il risultato vero (non l'autodichiarazione) e un **battito** che renda visibile anche il silenzio del guardiano.*\n**Pietre richiamate:** `⟡6` (l'esercito che lavora di notte), `⟡1` (la prova/traccia che rende un soldato verificabile).\n**Key-image:** i rapporti tutti *\"fatto\"* al mattino · il soldato fermo da settimane che scrive *fatto* · il primo rapporto che finalmente dice **caduto** (e Nina che sorride).\n**3 strati:** bambino = a volte un aiutante dice \"fatto\" ma non ha fatto niente · curioso = il guasto che tace è peggio di quello che grida · esperto/papà = exit code 0 bugiardo, LastTaskResult falso; il watchdog verifica l'esito reale (output/freschezza/codici), non l'autodichiarazione; heartbeat per sorvegliare il sorvegliante.\n**Aggancio reale:** l'addestratore notturno (fine-tuning) rotto per settimane che segnava \"riuscito\"; il watchdog che non controllava i task notturni — guasti silenziosi scoperti in audit.\n**Open loop → Regione 7 (il Direttore):** tanti agenti verificabili, ma chi decide chi-fa-cosa-e-quando, e gestisce le cadute? → `EP_AV_06`.\n\n## FATTI (per il RAG)\n\n- **FATTO:** EP_AV_05_2 è il secondo giro (approfondimento) della Regione ⟡6 L'ESERCITO SILENZIOSO, figlio di EP_AV_05, stagione AV, durata ~7 minuti.\n\n- **CONCETTO:** Il \"guasto silenzioso\" è definito come un fallimento che si auto-dichiara riuscito (es. exit code 0 nonostante il lavoro interno fallito). **LOGICA:** è più pericoloso del guasto rumoroso perché sfugge al monitoraggio ingenuo e viene scoperto solo ad accumulo di danno.\n\n- **DECISIONE:** Un guardiano (watchdog) deve verificare il **risultato reale** (output atteso, freschezza, codici di uscita != 0), non l'autodichiarazione dell'agente. Inoltre il guardiano va a sua volta sorvegliato (heartbeat), perché un monitor morto in silenzio è un single-point-of-failure.\n\n- **DECISIONE:** Un agente ben fatto deve **propagare il fallimento** (dichiarare \"caduto\" invece di \"fatto\") e lasciare una prova verificabile del proprio operato.\n\n- **FATTO:** L'episodio ancora il concetto a casi reali di TITANIUM_OS: l'addestratore notturno (fine-tuning) rotto per settimane mentre lo scheduler lo segnava riuscito, e il watchdog che non sorvegliava i task notturni.\n\n- **OBIETTIVO:** Stabilire il prerequisito dell'Orchestrazione (⟡7): prima di coordinare molti agenti bisogna saperli rendere verificabili e vedere quando uno cade in silenzio.",
+    "parent_id": "EP_AV_05",
+    "level": 1,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "gli Agenti, l'esercito silenzioso",
+        "regione": 6,
+        "regione_nome": "L'ESERCITO SILENZIOSO",
+        "pietra": "⟡6",
+        "giro_spirale": 2,
+        "richiama": [
+          "⟡2",
+          "⟡4"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "approfondisce",
+        "motivo": "approfondimento di «L'Esercito Silenzioso»"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_AV_05",
+          "title": "L'Esercito Silenzioso",
+          "giro": 1
+        },
+        {
+          "id": "EP_AV_05_2",
+          "title": "Il Soldato Caduto in Silenzio",
+          "giro": 2
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso",
+        "motivo": "evolve «L'Esercito Silenzioso» (giro 1→2)"
+      },
+      "precede": {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso"
       }
     }
   }
