@@ -46,11 +46,36 @@
    (look e voce coerenti). Ma si PRODUCE l'animazione solo dopo aver validato i contenuti sul
    testo (regola 1: prima deve funzionare; leve costose spente).
 
-9. **Stella polare — il CV nel grafo.** Man mano che Nina "attraversa" un argomento, sblocca
-   una competenza: il suo percorso costruisce un **profilo/skill-tree** navigabile. Vista
-   gemella del **CV reale di Matteo** (pilastro IDENTITY: TIG/MIG, robot, presse, QC): due
-   facce dello stesso grafo di competenze. "Nina lo fa al papà" = mappa le sue competenze
-   imparando. È il layer-profilo SOPRA il curriculum — si costruisce dopo che la mappa regge.
+9. **Stella polare — il CV che si genera (= il progetto HR).** Man mano che Nina "attraversa"
+   un argomento, sblocca una competenza: il percorso costruisce un **profilo/skill-tree** che
+   si riempie da solo. È **lo stesso motore del progetto HR** "CV che si genera": unire
+   competenze **personali + professionali** in un **profilo completo della persona**. Due lati
+   di un'unica cosa — un grafo di competenze che si popola: Nina (lo costruisce nel bambino)
+   ≡ HR/CV (lo fotografa nell'adulto, es. il CV reale di Matteo: TIG/MIG, robot, presse, QC,
+   pilastro IDENTITY). Stesso engine, due prodotti. Layer-profilo SOPRA la mappa.
+
+## L'EFFETTO WOW — non è il cattivo (Matteo, 14/06)
+
+Il cattivo non è il punto (l'Entropia c'è già ed è giusta: non un nemico da battere, ma la
+**frizione** che rende l'ordine *meritato* — la stessa che muove il TITANIUM_OS reale). Il WOW
+non è una *scena*, è una **categoria** che nessun libro/cartone/corso ha. Tre cose che convergono:
+
+- **È VERO.** Ogni "potere" è uno strumento reale che funziona davvero (nel garage, nella vita).
+  Non favola astratta: fiaba ancorata a un sistema che gira.
+- **È VIVO.** Il mondo **cresce da solo**: watcher + ricerca + SELF_IMPROVE aggiungono caselle
+  nuove nel tempo. Un bambino che torna fra mesi trova **terre nuove**. Media educativo che non
+  finisce mai — impensabile per un cartone, naturale qui.
+- **TI GENERA.** Non "finisci gli episodi": finisci con una **mappa reale di chi sei diventato**
+  — il tuo CV completo (personale + professionale). L'apprendimento *produce un artefatto vero di te*.
+
+E il cuore (il wow emotivo, non meccanico): è un **padre che dà al figlio il sistema per trovare
+le risposte, non le risposte** — e il figlio, camminando la mappa, **mappa anche il padre** (il CV).
+Eredità resa tangibile. *Questo* è il wow: vero · vivo · ti genera · e ti viene da chi ti ama.
+
+**Meccanica concreta che lo rende vivo:** il bambino ha la **sua pedina**. Nina è la guida (sa);
+lo spettatore è la seconda pedina (non sa ancora) e la **sua** mappa si colora mentre impara →
+genera il **suo** CV. Non guardi: ti costruisci accanto a Nina. (Il surrogato di Magic School Bus
+portato alla sua conclusione: interattivo, e che produce te.)
 
 10. **"Che sia lunga" = open-ended per costruzione.** Nina non finisce: cresce in **ampiezza**
     (più argomenti, più profondità), non in età. Il sistema stesso la alimenta — l'AI News
