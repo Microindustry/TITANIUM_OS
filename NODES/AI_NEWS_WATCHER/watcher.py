@@ -7,6 +7,7 @@
 import os
 import re
 import sys
+import os
 import json
 import time
 import argparse
@@ -33,7 +34,37 @@ except Exception:
     logger = logging.getLogger("ai_news_watcher")
 
 STATE_PATH = BASE / "DATA" / "ai_news_watcher_state.json"
+MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
+DIGEST_PATH = MENTE / "KNOWLEDGE" / "AI_NEWS_RECENTI.md"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) TITANIUM_OS-watcher"}
+
+
+def write_digest(st: dict):
+    """Scrive un digest leggibile dei segnali recenti in MENTE/KNOWLEDGE -> entra nel
+    vault Obsidian + RAG (la ricerca notturna, che gira dopo, lo indicizza). Cosi'
+    l'agente NON lavora a vuoto: gli 'aggiornamenti AI da integrare' atterrano dove si
+    vedono (vault, ricerca semantica, brief)."""
+    crit = (st.get("criticita") or [])[:40]
+    out = ["# 📡 AI News — aggiornamenti AI da integrare",
+           "",
+           "*Generato dall'AI News Watcher (notturno): segnali recenti dai creator/repo AI seguiti. "
+           "`da_valutare` = da guardare e decidere se integrare nel progetto.*",
+           f"*Aggiornato: {_today()} · {len(crit)} segnali.*",
+           ""]
+    if not crit:
+        out.append("_nessun segnale recente (sorgenti in cooldown o nulla di nuovo)._")
+    else:
+        for c in crit:
+            url = c.get("url", "")
+            titolo = (c.get("sintesi") or "(senza titolo)").strip()
+            link = f"[{titolo}]({url})" if url else titolo
+            out.append(f"- `{c.get('visto_il','')}` **{c.get('fonte','')}** — {link}")
+    try:
+        DIGEST_PATH.parent.mkdir(parents=True, exist_ok=True)
+        DIGEST_PATH.write_text("\n".join(out), encoding="utf-8")
+        logger.info("digest AI news -> %s (%d segnali)", DIGEST_PATH, len(crit))
+    except Exception as e:
+        logger.warning("digest non scritto: %s", e)
 
 TIER_HOURS = {1: 48, 2: 168, 3: None}  # 3 = sospeso
 
@@ -299,6 +330,7 @@ def run_once(force: bool = False, only_kind: str | None = None) -> dict:
     st["criticita"] = st["criticita"][:300]
     _apply_rotation(st)
     save_state(st)
+    write_digest(st)   # surfacing: i segnali atterrano in MENTE (vault + RAG + brief)
     logger.info("Passata: %d sorgenti controllate, %d segnali nuovi.", checked, new_total)
     return {"checked": checked, "new": new_total}
 
