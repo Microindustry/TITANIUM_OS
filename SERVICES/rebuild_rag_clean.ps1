@@ -19,7 +19,15 @@ $env:MENTE_DIR = "C:\Users\teo\MICROINDUSTRY\MENTE"
 $env:PYTHONPATH = $TI
 
 Write-Host "== 1) fermo il watchdog (non deve rilanciare api durante il rebuild) ==" -ForegroundColor Cyan
-try { Stop-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop; Write-Host "  TI_Watchdog fermato" } catch { Write-Host "  (watchdog gia' fermo o assente)" }
+try { Stop-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop; Write-Host "  TI_Watchdog (task) fermato" } catch { Write-Host "  (task watchdog gia' fermo o assente)" }
+# CRITICO: Stop-ScheduledTask non uccide il processo watchdog.py gia' avviato (detached,
+# loop while-True) che RILANCIA l'api entro ~30s. Sotto admin lo killiamo davvero, altrimenti
+# l'api torna su a meta' rebuild e ChromaDB si corrompe (lezione 14/06).
+$wd = 0
+Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'watchdog\.py' } | ForEach-Object {
+    try { Stop-Process -Id $_.ProcessId -Force -ErrorAction Stop; $wd++ } catch {}
+}
+Write-Host "  processi watchdog.py terminati: $wd"
 
 Write-Host "== 2) chiudo api_server (rilascia ChromaDB) ==" -ForegroundColor Cyan
 $killed = 0
