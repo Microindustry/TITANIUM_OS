@@ -69,6 +69,12 @@ NINA_SEED = {
     "EP_AV_04": ("la Wiki, la grande mappa", 5, 1, ["⟡4"], "adattato"),
     "EP_AV_05": ("gli Agenti, l'esercito silenzioso", 6, 1, ["⟡2", "⟡4"], "adattato"),
     "EP_AV_06": ("l'Orchestrazione, il direttore", 7, 1, ["⟡5", "⟡6"], "adattato"),
+    # Nina v2 — l'apertura del viaggio (ancorata a La Materia), formato v2
+    "EP_N2_01": ("il gesto fatto bene sulla materia vera", 0, 1, [], "adattato"),
+    "EP_N2_02": ("la precisione e' una relazione (il soffio di troppo)", 0, 2, [], "adattato"),
+    "EP_N2_03": ("la ripetibilita': mille volte uguale, battere la deriva", 0, 3, [], "adattato"),
+    "EP_N2_04": ("la mappa viva: il sistema che dice la verita'", 5, 1, ["⟡0"], "adattato"),
+    "EP_N2_05": ("prima la mano poi la macchina (automazione)", 2, 1, ["⟡0"], "adattato"),
     # le fonti tecniche dell'arco (Pietre)
     "EP_FILONE_00": ("la materia: scelta, controllo, precisione", 0, 1, [], "fonte"),
     "EP_S0_00":     ("il Socio: un gesto, più frutti", 1, 1, [], "fonte"),

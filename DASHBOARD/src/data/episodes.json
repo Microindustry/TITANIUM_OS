@@ -479,6 +479,24 @@
         "title": "Maggio 2026 — La Svolta Strutturale",
         "tipo": "tema",
         "motivo": "tema: corpo-unico, epoxy-granite"
+      },
+      {
+        "id": "EP_AUTO_010",
+        "title": "Fondamenta d'acciaio TIG",
+        "tipo": "tema",
+        "motivo": "tema: cnc, struttura"
+      },
+      {
+        "id": "EP_01",
+        "title": "La Taverna",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_03",
+        "title": "Il Paradosso",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -698,6 +716,24 @@
         "title": "NeuroMap",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_AV_04",
+        "title": "La Grande Mappa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa Viva",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -758,6 +794,24 @@
       {
         "id": "EP_T01",
         "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_AV_04",
+        "title": "La Grande Mappa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa Viva",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -873,6 +927,24 @@
         "title": "Il Sistema Pensa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_T03",
+        "title": "VULCAN",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260319_fix_typescript_errors_unused_imports",
+        "title": "Il Sistema Respira da Solo",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -937,6 +1009,24 @@
         "title": "La Biblioteca delle Fonti",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_T04",
+        "title": "SINAPSI",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, rag"
+      },
+      {
+        "id": "EP_20260602",
+        "title": "Il Dev Flutter Che Non Capiva Perché",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, rag"
       }
     ],
     "evoluzione": {
@@ -987,6 +1077,18 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
+      },
+      {
+        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
+        "title": "Il Sistema Che Si Guarda",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1345,6 +1447,24 @@
         "title": "Il Dev Flutter Che Non Capiva Perché",
         "tipo": "tema",
         "motivo": "tema: dashboard, milestone"
+      },
+      {
+        "id": "EP_20260603",
+        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, milestone"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, milestone"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, milestone"
       }
     ],
     "evoluzione": {
@@ -1403,6 +1523,18 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
+      },
+      {
+        "id": "EP_AUTO_015",
+        "title": "Portabilità delle skill: il framework invisibile",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_AUTO_10",
+        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1516,6 +1648,24 @@
       {
         "id": "EP_20260603",
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: milestone, rag"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: milestone, rag"
+      },
+      {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte",
+        "tipo": "tema",
+        "motivo": "tema: milestone, rag"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: milestone, rag"
       }
@@ -1632,6 +1782,24 @@
         "title": "La Tela",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_20260319_fix_typescript_errors_unused_imports",
+        "title": "Il Sistema Respira da Solo",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -1700,6 +1868,24 @@
         "title": "La Mente che Parla",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_S2_00_IL_DISTACCO",
+        "title": "Il Distacco",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_02_L_ORCHESTRATORE",
+        "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -1761,6 +1947,24 @@
         "title": "L'Esercito",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡6 che questo richiama"
+      },
+      {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡6 che questo richiama"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_AV_06",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -1821,6 +2025,24 @@
         "title": "L'Orchestratore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_AV_06",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -1867,6 +2089,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_20260319_fix_typescript_errors_unused_imports",
+        "title": "Il Sistema Respira da Solo",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -1925,6 +2165,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_20260319_fix_typescript_errors_unused_imports",
+        "title": "Il Sistema Respira da Solo",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -1979,6 +2237,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2037,6 +2313,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2091,6 +2385,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2149,6 +2461,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2203,6 +2533,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2261,6 +2609,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2315,6 +2681,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2373,6 +2757,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2427,6 +2829,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2485,6 +2905,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2541,6 +2979,24 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2595,6 +3051,24 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
+        "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2665,6 +3139,24 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -2713,6 +3205,24 @@
         "title": "Il Documento Master",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
+      },
+      {
+        "id": "MOM_05_CONFIG_A_G",
+        "title": "Config A→G",
+        "tipo": "tema",
+        "motivo": "tema: mom, narrativo, recuperato"
+      },
+      {
+        "id": "EP_S2_00_IL_DISTACCO",
+        "title": "Il Distacco",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -2778,6 +3288,24 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -2826,6 +3354,24 @@
         "title": "L'Esercito",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
+      },
+      {
+        "id": "MOM_05_CONFIG_A_G",
+        "title": "Config A→G",
+        "tipo": "tema",
+        "motivo": "tema: mom, narrativo, recuperato"
+      },
+      {
+        "id": "EP_S2_00_IL_DISTACCO",
+        "title": "Il Distacco",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -2882,6 +3428,24 @@
         "title": "L'Esercito",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
+      },
+      {
+        "id": "MOM_04_IL_DOCUMENTO_MASTER",
+        "title": "Il Documento Master",
+        "tipo": "tema",
+        "motivo": "tema: mom, narrativo, recuperato"
+      },
+      {
+        "id": "EP_S2_00_IL_DISTACCO",
+        "title": "Il Distacco",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -2933,6 +3497,24 @@
         "title": "Basamento traliccio saldato TIG",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -2982,6 +3564,24 @@
       {
         "id": "EP_AUTO_03",
         "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3039,6 +3639,24 @@
         "title": "Basamento traliccio saldato TIG",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3092,6 +3710,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3149,6 +3785,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3202,6 +3856,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_06",
+        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3259,6 +3931,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3312,6 +4002,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3369,6 +4077,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3422,6 +4148,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3479,6 +4223,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3532,6 +4294,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3589,6 +4369,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3642,6 +4440,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3699,6 +4515,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3752,6 +4586,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3809,6 +4661,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3862,6 +4732,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3919,6 +4807,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3972,6 +4878,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4029,6 +4953,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4082,6 +5024,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4139,6 +5099,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4192,6 +5170,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4249,6 +5245,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4302,6 +5316,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4359,6 +5391,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4412,6 +5462,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4469,6 +5537,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4522,6 +5608,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4579,6 +5683,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4632,6 +5754,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4689,6 +5829,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4742,6 +5900,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4799,6 +5975,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4852,6 +6046,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5187,6 +6399,12 @@
         "title": "Dashboard che parla il tuo linguaggio",
         "tipo": "tema",
         "motivo": "tema: cnc, dashboard"
+      },
+      {
+        "id": "EP_AUTO_019",
+        "title": "Dieci atti, un documento master",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -5309,6 +6527,24 @@
         "title": "La View Che Mentiva",
         "tipo": "tema",
         "motivo": "tema: audit, bugfix, dashboard"
+      },
+      {
+        "id": "EP_20260603",
+        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, dashboard, git"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, dashboard, git"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: audit, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -5372,6 +6608,24 @@
         "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, flutter, git"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, dashboard, git"
+      },
+      {
+        "id": "EP_20260606_31",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, flutter, git"
+      },
+      {
+        "id": "EP_20260607",
+        "title": "Il Grafo Respira",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, git, milestone"
       }
     ],
     "evoluzione": {
@@ -5437,6 +6691,24 @@
         "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, bugfix, flutter"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, dashboard, git"
+      },
+      {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, dashboard, git"
+      },
+      {
+        "id": "EP_20260606_31",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, flutter, git"
       }
     ],
     "evoluzione": {
@@ -5503,6 +6775,24 @@
         "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, bugfix, flutter"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: agenti, automazione-notturna, dashboard"
+      },
+      {
+        "id": "EP_20260606_31",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: agenti, dashboard, flutter"
+      },
+      {
+        "id": "EP_20260607",
+        "title": "Il Grafo Respira",
+        "tipo": "tema",
+        "motivo": "tema: agenti, bugfix, dashboard"
       }
     ],
     "evoluzione": {
@@ -5567,6 +6857,24 @@
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, bugfix, flutter"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, git, milestone"
+      },
+      {
+        "id": "EP_20260606_31",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: flutter, git, milestone"
+      },
+      {
+        "id": "EP_20260606",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, git, milestone"
       }
     ],
     "evoluzione": {
@@ -5622,6 +6930,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5681,6 +7007,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5736,6 +7080,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5795,6 +7157,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5850,6 +7230,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5909,6 +7307,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5964,6 +7380,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6023,6 +7457,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6078,6 +7530,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6137,6 +7607,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6192,6 +7680,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6251,6 +7757,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6306,6 +7830,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6365,6 +7907,24 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6420,6 +7980,24 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_03",
+        "title": "Basamento traliccio saldato TIG",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_04",
+        "title": "Asse X assemblato (guide+vite+servo)",
+        "tipo": "tema",
+        "motivo": "tema: auto_generato, milestone"
+      },
+      {
+        "id": "EP_AUTO_05",
+        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6485,6 +8063,24 @@
         "title": "Il Grafo Respira",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, dashboard"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: agenti, automazione-notturna, dashboard"
+      },
+      {
+        "id": "EP_20260603",
+        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, dashboard, git"
+      },
+      {
+        "id": "EP_20260608",
+        "title": "Il Grafo che Nessuno Vede",
+        "tipo": "tema",
+        "motivo": "tema: agenti, audit, automazione-notturna"
       }
     ],
     "evoluzione": {
@@ -6551,6 +8147,24 @@
         "title": "Il Grafo Respira",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, dashboard"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: agenti, dashboard, flutter"
+      },
+      {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te",
+        "tipo": "tema",
+        "motivo": "tema: audit, dashboard, git"
+      },
+      {
+        "id": "EP_20260602",
+        "title": "Il Dev Flutter Che Non Capiva Perché",
+        "tipo": "tema",
+        "motivo": "tema: dashboard, flutter, git"
       }
     ],
     "evoluzione": {
@@ -6618,6 +8232,24 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
+      },
+      {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te",
+        "tipo": "tema",
+        "motivo": "tema: audit, bugfix, git"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: agenti, bugfix, git"
+      },
+      {
+        "id": "EP_20260608",
+        "title": "Il Grafo che Nessuno Vede",
+        "tipo": "tema",
+        "motivo": "tema: agenti, audit, git"
       }
     ],
     "evoluzione": {
@@ -6680,6 +8312,24 @@
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: bugfix, dashboard, git"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, dashboard, git"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: audit, dashboard, git"
+      },
+      {
+        "id": "EP_20260606_31",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: audit, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -6741,6 +8391,24 @@
         "title": "La Dashboard Parla per Te",
         "tipo": "tema",
         "motivo": "tema: bugfix, git, milestone"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, bugfix, git"
+      },
+      {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, bugfix, git"
+      },
+      {
+        "id": "EP_20260605",
+        "title": "Il Teatro Finisce Qui",
+        "tipo": "tema",
+        "motivo": "tema: automazione-notturna, git, milestone"
       }
     ],
     "evoluzione": {
@@ -6809,6 +8477,24 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, dashboard"
+      },
+      {
+        "id": "EP_20260608",
+        "title": "Il Grafo che Nessuno Vede",
+        "tipo": "tema",
+        "motivo": "tema: agenti, audit, git"
+      },
+      {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te",
+        "tipo": "tema",
+        "motivo": "tema: audit, bugfix, dashboard"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: agenti, bugfix, dashboard"
       }
     ],
     "evoluzione": {
@@ -6872,6 +8558,24 @@
       },
       {
         "id": "EP_20260606",
+        "title": "Il Roster",
+        "tipo": "tema",
+        "motivo": "tema: agenti, audit, git"
+      },
+      {
+        "id": "EP_20260609",
+        "title": "Il Mondo di Nina",
+        "tipo": "tema",
+        "motivo": "tema: agenti, git, markdown"
+      },
+      {
+        "id": "EP_20260604",
+        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: agenti, automazione-notturna, git"
+      },
+      {
+        "id": "EP_20260606_31",
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
@@ -6949,6 +8653,24 @@
         "title": "La Prima Automazione",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -7017,6 +8739,24 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -7095,6 +8835,24 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, bugfix, git"
+      },
+      {
+        "id": "EP_20260608",
+        "title": "Il Grafo che Nessuno Vede",
+        "tipo": "tema",
+        "motivo": "tema: agenti, git, markdown"
+      },
+      {
+        "id": "EP_20260601",
+        "title": "La Dashboard Parla per Te",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, dashboard, git"
+      },
+      {
+        "id": "EP_20260603",
+        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
+        "tipo": "tema",
+        "motivo": "tema: bugfix, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -7171,6 +8929,24 @@
         "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
+      {
+        "id": "EP_S2_02_L_ORCHESTRATORE",
+        "title": "L'Orchestratore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_AV_06",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -7273,6 +9049,24 @@
         "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+        "title": "Interrogare la mappa, non i file — query, path, explain",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+        "title": "I cammini — come si trova la strada tra due nodi",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔3, approfondisce)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+        "title": "La modularità — il voto che decide i quartieri",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 1↔3, approfondisce)"
       }
     ],
     "evoluzione": {
@@ -7391,6 +9185,24 @@
         "title": "Da 5000 numeri a una galassia — il t-SNE",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
+      },
+      {
+        "id": "EP_SEED_RETE_L2_UMAP",
+        "title": "t-SNE contro UMAP — due modi di fare la foto",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 2↔4, approfondisce)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
       }
     ],
     "evoluzione": {
@@ -7498,6 +9310,24 @@
         "title": "Chi guardare più spesso — il tier a rotazione 48h",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
+      },
+      {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -7587,7 +9417,25 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_03",
         "title": "Mille Volte Uguale",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
@@ -7664,6 +9512,24 @@
         "title": "Il Sistema Pensa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_T04",
+        "title": "SINAPSI",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: fonti, rag, themis"
+      },
+      {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte",
+        "tipo": "tema",
+        "motivo": "tema: rag, themis"
       }
     ],
     "evoluzione": {
@@ -7732,6 +9598,24 @@
         "title": "La Dashboard",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa Viva",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -7797,6 +9681,24 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -7915,6 +9817,24 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -8034,6 +9954,24 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -8155,6 +10093,24 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -8271,6 +10227,24 @@
         "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+        "title": "Se è acceso, non se dovrebbe — lo stato live",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -8370,6 +10344,24 @@
       {
         "id": "EP_AV_06",
         "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+        "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -8474,6 +10466,24 @@
         "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -8569,6 +10579,24 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -8678,6 +10706,24 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -8788,6 +10834,24 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -8896,6 +10960,24 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -8999,6 +11081,24 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -9102,6 +11202,24 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -9197,6 +11315,24 @@
         "title": "I 696 quartieri — la community detection",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
+        "title": "I nodi-dio — le stelle che tengono il grafo",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
+        "title": "La modularità — il voto che decide i quartieri",
+        "tipo": "tema",
+        "motivo": "tema: approfondimento, grafo, graphify"
       }
     ],
     "evoluzione": {
@@ -9316,6 +11452,24 @@
         "title": "I nodi-dio — le stelle che tengono il grafo",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
+        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
+        "title": "Interrogare la mappa, non i file — query, path, explain",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
+        "title": "I cammini — come si trova la strada tra due nodi",
+        "tipo": "tema",
+        "motivo": "tema: approfondimento, grafo, graphify"
       }
     ],
     "evoluzione": {
@@ -9426,6 +11580,24 @@
         "title": "Non era un bug di codice, era un bug di stato",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 4↔3, alla base di)"
+      },
+      {
+        "id": "EP_SEED_RETE_L1_TOGGLE",
+        "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
+        "tipo": "evoluzione",
+        "motivo": "evoluzione del concetto (giro 4↔3, alla base di)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
       }
     ],
     "evoluzione": {
@@ -9531,6 +11703,24 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -9619,6 +11809,24 @@
         "title": "L'Esercito",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡6 che questo richiama"
+      },
+      {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡6 che questo richiama"
+      },
+      {
+        "id": "EP_S2_02_L_ORCHESTRATORE",
+        "title": "L'Orchestratore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -9723,16 +11931,34 @@
         "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
       },
       {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, precisione"
+      },
+      {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
-        "id": "EP_AV_06",
-        "title": "Il Direttore",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, themis"
       }
     ],
     "evoluzione": {
@@ -9958,10 +12184,22 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: deriva, entropia, forge"
+      },
+      {
         "id": "EP_AV_M0",
         "title": "La Materia",
         "tipo": "approfondisce",
         "motivo": "approfondimento di «La Materia»"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, precisione"
       },
       {
         "id": "EP_FILONE_00",
@@ -9970,10 +12208,16 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
         "tipo": "tema",
-        "motivo": "tema: entropia, themis"
+        "motivo": "tema: forge, materia, themis"
       }
     ],
     "evoluzione": {
@@ -10145,6 +12389,24 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "tema",
         "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: memoria, themis"
+      },
+      {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: entropia, themis"
       }
     ],
     "evoluzione": {
@@ -10234,6 +12496,24 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: fonti, rag, themis"
+      },
+      {
+        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
+        "title": "Il Bug che Chiudeva le Porte",
+        "tipo": "tema",
+        "motivo": "tema: rag, themis"
       }
     ],
     "evoluzione": {
@@ -10324,6 +12604,24 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -10349,6 +12647,430 @@
         "id": "EP_AV_05",
         "title": "L'Esercito Silenzioso"
       }
+    }
+  },
+  {
+    "id": "EP_N2_01",
+    "title": "La Bambina che Chiedeva Perché",
+    "sottotitolo": "Nina trova una porta che nessuno vedeva, e dentro scopre che le cose, quelle vere, si possono capire.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-15",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "materia",
+      "curiosita",
+      "ingresso",
+      "viaggio",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 12,
+    "preview": "EP_N2_01 — La Bambina che Chiedeva Perché \"Nina trova una porta che nessuno vedeva, e dentro scopre che le cose vere si possono capire.\" Formato: Avventura Nina v2 · ~12 min · da leggere ad alta voce ",
+    "content": "# EP_N2_01 — La Bambina che Chiedeva Perché\n### \"Nina trova una porta che nessuno vedeva, e dentro scopre che le cose vere si possono capire.\"\n\n**Formato:** Avventura (Nina v2) · ~12 min · da leggere ad alta voce o da soli\n**Per chi:** un bambino, un ragazzo, un grande — e chiunque non abbia mai smesso di chiedere *perché*\n**Insegna:** la prima verità del Mestiere — *tutto quello che funziona davvero è partito da un gesto fatto bene su qualcosa di vero*. E la prima superpotenza: **chiedere perché**.\n**Materia:** La Materia (⟡0, la radice) · **Casella 1 del viaggio**\n**Posto nella Mappa:** è la porta d'ingresso. Da qui si parte, e da qui — un giorno — si potrà tornare.\n\n---\n\n> **Dove siamo (per chi entra adesso):** è il primo passo. Non serve sapere niente prima. Nina è una bambina come te che non sa ancora niente di questo mondo — e lo scopre insieme a te.\n\n---\n\n## COLD OPEN\n\nC'era una bambina che faceva una domanda di troppo.\n\nNon era maleducata. Era solo che, quando le dicevano *«è così e basta»*, lei sentiva un pizzicore dietro le orecchie, come quando stai per starnutire ma non starnutisci. *Perché* è così? E perché proprio così e non in un altro modo?\n\nSi chiamava **Nina**. E quel giorno, in fondo a un ripostiglio che sapeva di polvere e di pioggia vecchia, dietro tre scatoloni e un tappeto arrotolato, trovò una **porticina** che nessuno le aveva mai fatto notare. Non era chiusa a chiave. Era solo… non vista.\n\nNina fece la cosa che faceva sempre. Chiese *perché c'è una porta qui?* — e poi, siccome nessuno rispondeva, **l'aprì**.\n\n---\n\n## ATTO I — IL MONDO DOVE LE COSE SONO VERE\n\nDall'altra parte non c'era una stanza. C'era un **ponte**.\n\nUn ponte largo, di ferro e di luce, sospeso sopra una specie di valle. Da una parte la valle era fatta di **cose che si toccano**: metallo, legno, stoffa, bulloni, attrezzi appesi. Dall'altra era fatta di **cose che si accendono**: numeri, finestre luminose, fili sottili che correvano come formiche di luce.\n\nE la cosa strana era che il ponte le **teneva insieme**. Come se fossero la stessa cosa vista da due lati.\n\n«È la Giuntura» disse una voce.\n\nNina si voltò. C'era una donna asciutta, occhi attenti, niente fronzoli, un attrezzo in mano — un **calibro**, anche se Nina non sapeva ancora come si chiamava. La donna non sorrise per gentilezza. La guardò come si guarda qualcuno che potrebbe valere la pena.\n\n«Mi chiamo **THEMIS**» disse. «Custodisco questo posto. Qui, da una parte ci sono gli **Atomi** — la roba che pesa, che si rompe, che ti sporca le mani. Dall'altra i **Bit** — la roba che si scrive, che si conta, che corre. Quasi tutti credono che siano due mondi diversi. Non lo sono. Sono **lo stesso mondo**. E questo ponte lo dimostra.»\n\nNina, ovviamente, chiese: «Perché?»\n\nTHEMIS, per la prima volta, ebbe quasi l'ombra di un sorriso. «Brava. Hai già lo strumento più importante. Tienilo stretto.»\n\n> *(Strato fondo — per il grande che legge: la separazione tra \"lavoro manuale\" e \"lavoro digitale\" è una bugia comoda. Una saldatura ben fatta e una riga di codice ben scritta fanno la stessa identica cosa: prendono qualcosa di disordinato e lo rendono solido e ripetibile. Il digitale è nato per servire un gesto fisico, non per sostituirlo.)*\n\n---\n\n## ATTO II — IL BOTTONE CHE REGGE E IL BOTTONE CHE NO\n\nTHEMIS portò Nina sul lato degli Atomi, davanti a un banco. Sul banco c'erano due **bottoni** cuciti su due pezzi di stoffa, uno accanto all'altro.\n\n«Guarda» disse. «Sembrano uguali, vero?»\n\nErano uguali. Stesso bottone, stessa stoffa, stesso filo.\n\n«Tira.»\n\nNina tirò il primo bottone. Resse. Tirò più forte. Resse ancora — sentì la stoffa tendersi, ma il bottone non si mosse. Poi tirò il secondo. Venne via al primo strappo, con un filo penzolante e un buchino slabbrato nella stoffa.\n\n«Perché?» disse Nina. «Sono identici.»\n\n«All'occhio sì» disse THEMIS. «Ma il primo l'ha cucito qualcuno che sapeva *come*: il filo passato il numero giusto di volte, il nodo fatto dove non si vede ma dove tiene, la stoffa non bucata a caso ma nel punto che regge. Il secondo l'ha messo lì qualcuno di fretta, *a occhio*, \"tanto si vede uguale\". E infatti si vede uguale. Finché non serve davvero.»\n\nPrese il bottone caduto e lo rigirò tra le dita.\n\n«Ecco la prima cosa che imparerai qui, Nina. **Una cosa fatta bene e una cosa fatta a casaccio possono sembrare identiche.** La differenza non si vede: si *sente*, nel momento in cui devono fare il loro lavoro. Una regge. L'altra ti lascia a piedi nel momento peggiore.»\n\nNina guardò i due bottoni a lungo. Poi disse, piano: «Allora *fatto bene* non vuol dire *bello*.»\n\n«No» disse THEMIS, e stavolta era contenta sul serio. «Vuol dire *vero*. Una cosa fatta bene è una cosa che regge quando la tiri.»\n\n> *(Esempio per tutti — il test della sarta: prendi due orli. Uno cucito con calma, punti piccoli e regolari; uno fatto di corsa. Da fuori sembrano uguali. Ma lava il vestito tre volte: il primo è ancora lì, il secondo si è disfatto. Il \"fatto bene\" non è estetica, è durata.)*\n\n---\n\n## ATTO III — IL PIZZICORE DIETRO LE ORECCHIE\n\n«Ma io non so cucire un bottone così» disse Nina. «Non so fare niente di tutto questo.»\n\n«Certo che no» disse THEMIS. «Nessuno nasce sapendolo. Non è quello il punto.»\n\nSi chinò all'altezza di Nina.\n\n«Il punto è il pizzicore che senti dietro le orecchie quando ti dicono *\"è così e basta\"*. Quel pizzicore è la cosa più preziosa che hai. La maggior parte delle persone, crescendo, lo spegne — perché chiedere *perché* è scomodo, fa sentire ignoranti, rallenta. Ma chi non lo spegne… chi continua a chiedere *perché funziona?* e poi va a **provarlo con le mani**… quello diventa capace di costruire qualsiasi cosa.»\n\n«Anche le cose di luce? Quelle dall'altra parte del ponte?»\n\n«Anche quelle. Sono cugine di queste. Lo scoprirai. Ma si parte da qui, dalla roba che pesa. Perché qui non puoi barare: o il bottone regge, o non regge. La materia non ti dice bugie. È la maestra più onesta che ci sia.»\n\nNina guardò il ponte, gli Atomi da una parte e i Bit dall'altra. E per la prima volta non li vide come due posti. Li vide come **un'unica grande domanda** da aprire, pezzo per pezzo.\n\n---\n\n## CHIUSURA\n\nNina tornò a casa con un bottone in tasca — quello fatto bene, glielo aveva regalato THEMIS — e una sensazione nuova: che il mondo non fosse *«così e basta»*, ma fosse **fatto**. Fatto da qualcuno, in un certo modo, per un certo motivo. E che ogni cosa fatta nascondeva un *come* e un *perché* che si potevano scoprire.\n\nQuella notte non riuscì a dormire subito. Continuava a tirare il bottone in tasca per sentirlo reggere.\n\n> Nina strinse il bottone nel buio. *Fatto bene vuol dire che regge quando lo tiri.* Ma THEMIS aveva detto una cosa strana, sul cucirlo: *\"il numero giusto di volte\"*. **Quanto** è il giusto? Come fa una a sapere se ha messo *abbastanza* filo, o troppo, o troppo poco?\n>\n> *E se la differenza tra \"regge\" e \"non regge\" fosse una cosa che si può… misurare?*\n\nE lì, alla casella dopo, c'è un attrezzo che misura le cose più piccole di un capello.\n\n---\n\n*Provalo tu: prendi due cose fatte allo stesso modo — due nodi alle scarpe, due torri di costruzioni, due disegni. Falne uno con calma e uno di corsa. Poi mettili alla prova (cammina, soffia, tira). Quale regge? Hai appena toccato la prima verità del Mestiere — e hai usato la tua superpotenza: hai chiesto perché, e sei andato a vedere.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **La porticina non vista** dietro gli scatoloni nel ripostiglio polveroso — luce che filtra.\n2. **La Giuntura**: il ponte di ferro e luce tra la valle degli Atomi (metallo, attrezzi) e quella dei Bit (formiche di luce).\n3. **THEMIS** col calibro in mano — asciutta, occhi attenti, niente fronzoli.\n4. **I due bottoni** sul banco: uno che regge alla tirata, l'altro che vien via con il filo penzolante.\n5. **Nina nel letto al buio** che tira il bottone in tasca per sentirlo reggere.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡0` La Materia (giro 1, la radice). *Tutto ciò che funziona davvero parte da un gesto fatto bene su qualcosa di vero; \"fatto bene\" = \"regge quando lo tiri\", non \"bello\".*\n**Pietre richiamate:** nessuna — è l'ingresso, la richiamano tutte.\n**3 strati:** bambino = il bottone che regge e quello che no · curioso = fatto bene vuol dire vero, non bello; la materia non mente · grande = il digitale serve un gesto fisico; saldatura e codice fanno la stessa cosa (ordine dal disordine).\n**Cuore:** la curiosità (chiedere *perché* + andare a vedere) è la superpotenza · le cose vere si fanno bene.\n**Aggancio reale:** il mondo di Matteo (officina, metallo, precisione); la Giuntura Atomi↔Bit = TITANIUM_OS (il fisico e il digitale come una cosa sola).\n**Open loop → Casella 2 (la misura):** quanto è \"il giusto\"? La differenza tra regge e non regge si può misurare → `EP_N2_02`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_01 è la casella d'ingresso del viaggio di Nina v2, materia La Materia (⟡0), stagione AV, ~12 min.\n- **CONCETTO:** \"Fatto bene\" è definito funzionalmente come \"regge quando viene messo alla prova\", non esteticamente. Una cosa ben fatta e una fatta a caso possono essere visivamente identiche; la differenza emerge solo sotto carico/uso.\n- **PRINCIPIO:** La materia fisica è \"la maestra più onesta\": non ammette barare (o regge o non regge), per questo l'apprendimento parte da lì prima dell'astratto/digitale.\n- **CANONE:** Introdotti Nina (la curiosa, surrogato del pubblico) e THEMIS (la guida, custode della Giuntura) e il mondo (Atomi↔Bit uniti dalla Giuntura = il fisico e il digitale sono lo stesso mondo).\n- **OBIETTIVO:** stabilire la superpotenza-cardine (chiedere \"perché\" + verificare con le mani) e aprire verso la misura/precisione (⟡0, casella 2).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "il gesto fatto bene sulla materia vera",
+        "regione": 0,
+        "regione_nome": "LA MATERIA",
+        "pietra": "⟡0",
+        "giro_spirale": 1,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa Viva",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis, viaggio"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
+  },
+  {
+    "id": "EP_N2_02",
+    "title": "Il Soffio di Troppo",
+    "sottotitolo": "Nina scende nella fucina e impara che la precisione non è essere pignoli — è un patto tra te, la cosa e ciò che la cosa deve toccare.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-15",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "forge",
+      "materia",
+      "precisione",
+      "misura",
+      "calibro",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 13,
+    "preview": "EP_N2_02 — Il Soffio di Troppo \"La precisione non è essere pignoli. È un patto tra te, la cosa, e ciò che la cosa deve toccare.\" Formato: Avventura Nina v2 · ~13 min Per chi: chiunque abbia mai detto ",
+    "content": "# EP_N2_02 — Il Soffio di Troppo\n### \"La precisione non è essere pignoli. È un patto tra te, la cosa, e ciò che la cosa deve toccare.\"\n\n**Formato:** Avventura (Nina v2) · ~13 min\n**Per chi:** chiunque abbia mai detto \"vabbè, è quasi giusto\" — e poi se ne sia pentito\n**Insegna:** cos'è davvero la **precisione**: non perfezione per vanità, ma la *relazione* tra te, il materiale e il pezzo che si deve accoppiare. Un soffio di troppo non è un dettaglio: è la differenza tra una cosa che funziona e una che rompe le altre.\n**Materia:** La Materia (⟡0) · **Casella 2 del viaggio**\n**Posto nella Mappa:** un passo sotto la Giuntura. Si scende, dove fa caldo.\n\n---\n\n> **Dove siamo:** Nina ha imparato che \"fatto bene\" vuol dire \"regge quando lo tiri\" (casella 1). Restava una domanda: *quanto* è il giusto? Oggi lo misura.\n\n---\n\n## COLD OPEN\n\n«Oggi non andiamo su» disse THEMIS. «Andiamo **giù**.»\n\nSotto la Giuntura, dove Nina non era mai stata, c'era una scala che scendeva nel caldo. Più scendeva, più l'aria sapeva di metallo e di brace. In fondo, una **fucina**: scintille, il battito di un martello, e un gigante tranquillo curvo su un'incudine.\n\n«Lui è **FORGE**» disse THEMIS. «Il fabbro degli Atomi. Non parla molto. Ma con le mani dice tutto.»\n\nFORGE non alzò nemmeno lo sguardo. Prese una barra di metallo storta, anonima, brutta. La scaldò finché diventò arancione. E con pochi colpi — niente di magico, solo gesti **giusti** — la fece diventare un pezzo pulito, dritto, che serviva a qualcosa.\n\nNina lo guardò a bocca aperta. Poi, come sempre: «Perché quei colpi lì e non altri?»\n\nFORGE, per la prima volta, alzò gli occhi. E le mise in mano un attrezzo freddo e pesante.\n\n---\n\n## ATTO I — L'ATTREZZO CHE VEDE PIÙ DELL'OCCHIO\n\n«Questo è un **calibro**» disse THEMIS. «Serve a misurare le cose più piccole di quanto l'occhio riesca a vedere. Più piccole di un capello.»\n\nFORGE diede a Nina due pezzetti di metallo. «Misurali.»\n\nSembravano identici. Nina li girò, li avvicinò, li guardò controluce: uguali. Ma quando li mise nel calibro, l'attrezzo disse un'altra cosa: il primo era *giusto*; il secondo era più largo di **un soffio**. Una distanza così piccola che la mano non la sentiva e l'occhio non la vedeva.\n\n«E allora?» disse Nina. «È così poco.»\n\nTHEMIS prese un terzo pezzo — quello su cui i primi due dovevano **incastrarsi** — e provò a montarli.\n\nIl primo entrò *come un bacio*: liscio, fermo, al suo posto.\n\nIl secondo si bloccò a metà. Forzava. E nel forzare, **rovinò** il bordo del pezzo a cui doveva unirsi.\n\n«Hai visto?» disse THEMIS. «Quel soffio di troppo non era poco. Era la differenza tra *unire* e *rompere*.»\n\n> *(Esempio per tutti — il test della sarta: prova a infilare un filo in una cruna troppo stretta di un soffio. Non entra. O entra forzando e si sfilaccia. La cruna giusta e quella sbagliata sembrano uguali a occhio — ma il filo lo sa subito. La misura non è pignoleria: è far entrare il filo nella cruna.)*\n\n---\n\n## ATTO II — LA PRECISIONE È UN PATTO A TRE\n\n«Allora la precisione è fare le cose perfette» disse Nina.\n\n«No» disse THEMIS, netta. «*Perfetto* non vuol dire niente. Perfetto rispetto a cosa?»\n\nSi sedette accanto a Nina, vicino al calore della fucina.\n\n«La precisione non è una cosa che metti sul pezzo **da solo**. È un **patto a tre**: tu, il **materiale** con cui lavori, e la **cosa che il tuo pezzo deve toccare**. Il bottone deve stare nella sua asola. La vite nel suo foro. Il tuo pezzo nel pezzo del vicino. *Giusto* vuol dire **giusto rispetto a quello che deve incontrare** — mai giusto in aria, da solo.»\n\nIndicò il pezzo che FORGE aveva appena fatto. «Lui non cerca *il pezzo bello*. Cerca *il pezzo che entra come un bacio in quello accanto*. È diverso. La bellezza la guardi tu. L'incastro lo decide il pezzo vicino.»\n\nNina ci pensò. «Quindi non posso sapere se una cosa è precisa… se non so cosa deve toccare.»\n\nTHEMIS la guardò come si guarda qualcuno che ha appena capito una cosa che molti adulti non capiscono mai. «Esatto. La precisione non vive da sola. Vive **nella relazione**.»\n\n> *(Strato fondo — per il grande: nell'officina di Matteo questa \"relazione\" ha un numero: ±0,019 mm (le classi IT6/IT7). Non è ostentazione: è il margine che permette a un pezzo di accoppiarsi con un altro senza gioco e senza forzare. È la stessa lezione che tornerà identica, più avanti, sulle macchine che pensano: \"giusto\" vorrà sempre dire \"giusto rispetto a qualcosa\", mai in astratto.)*\n\n---\n\n## ATTO III — PERCHÉ FORGE FA ANCORA TUTTO A MANO\n\n«Ma FORGE» disse Nina, «se quassù avete le macchine che fanno i pezzi da sole, perché tu li fai ancora a mano? Non è più lento?»\n\nFORGE posò il martello. E parlò, per la prima e unica volta in tutto il giorno. La voce era bassa, come il suo metallo.\n\n«Perché la mano deve sapere *prima*. Se io non so fare questo pezzo giusto **con le mie mani**, non posso insegnarlo a nessuno — né a un ragazzo, né a una macchina. La mano che ha sentito il metallo cedere, scaldarsi, resistere… quella mano *sa*. E solo chi sa può controllare se la macchina poi lo fa bene.»\n\nTornò a battere. Lo stesso gesto, calmo, ancora e ancora.\n\nTHEMIS aggiunse, piano: «Quello che FORGE sa con le mani non gliel'ha dato un libro. Gliel'ha lasciato chi è venuto prima di lui, che a sua volta l'aveva imparato sbagliando, misurando, riprovando. È un regalo che si passa di mano in mano. Un giorno, quel sapere, qualcuno lo lascerà anche a te.»\n\nNina guardò le mani grandi di FORGE, e pensò a tutte le mani prima delle sue.\n\n---\n\n## CHIUSURA\n\nNina risalì la scala con un pezzo caldo in mano — giusto, esatto, che sarebbe entrato *come un bacio* nel suo vicino — e il calibro che THEMIS le aveva lasciato tenere.\n\nCapì una cosa che le sembrò enorme: che *misurare* non era una noia da grandi pignoli. Era il modo in cui le cose si **fidano** l'una dell'altra. Un pezzo preciso è un pezzo di cui gli altri pezzi si possono fidare.\n\n> Nina guardò il suo pezzo, giusto al soffio. *Bello.* Ma poi pensò: FORGE ne fa **uno** così. E se ne servissero **cento**, tutti uguali? La sua mano, per quanto brava, sarebbe stanca al decimo. La misura le scapperebbe, un soffio alla volta…\n>\n> *Come si fa a fare una cosa giusta non una volta — ma cento volte uguale?*\n\nE quella è la casella dopo. Dove si scopre il nemico lento.\n\n---\n\n*Provalo tu: prendi un righello e misura la stessa cosa che hai fatto \"a occhio\" (un disegno, un taglio di carta, la distanza tra due punti). Sei sicuro che fosse giusta? Ora prova a far combaciare due pezzi di carta che hai tagliato a occhio. Combaciano davvero, o c'è un soffio di troppo? Hai appena fatto il lavoro di FORGE.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **La scala che scende nel caldo** sotto la Giuntura — l'aria che si fa arancione.\n2. **FORGE all'incudine**: la barra storta che diventa, in pochi colpi, un pezzo pulito.\n3. **Il calibro** che misura due pezzi \"identici\" — e ne trova uno più largo di un soffio.\n4. **L'incastro**: uno entra \"come un bacio\", l'altro forza e rovina il vicino.\n5. **Le mani grandi di FORGE** che battono calme, lo stesso gesto, ancora e ancora.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡0` La Materia (giro 2). *La precisione non è perfezione astratta: è la relazione tra te, il materiale e il pezzo da accoppiare. Un soffio di troppo = unire vs rompere.*\n**Pietre richiamate:** `⟡0` (fatto bene = regge — qui si aggiunge: quanto, e rispetto a cosa).\n**3 strati:** bambino = il pezzo che entra come un bacio e quello che forza · curioso = la precisione è una relazione, non perfezione; \"giusto\" è sempre rispetto a qualcosa · grande = ±0,019 mm (IT6/IT7) è il margine d'accoppiamento; la mano deve sapere prima della macchina.\n**Cuore:** fai bene le cose vere (misurare = fidarsi) · papà/FORGE ti lascia il sapere delle mani (l'esperienza che si passa).\n**Aggancio reale:** il calibro, ±0,019 mm, FORGE = nodo officina/MIMS; il sapere artigiano tramandato.\n**Open loop → Casella 3 (la ripetibilità):** uno giusto è bravura; cento uguali è un'altra cosa — e c'è un nemico lento → `EP_N2_03`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_02, casella 2 del viaggio Nina v2, materia La Materia (⟡0), ~13 min. Introduce FORGE (il fabbro degli Atomi) e il calibro.\n- **CONCETTO:** La precisione è definita come **relazione a tre** (operatore + materiale + componente da accoppiare), non come perfezione assoluta. \"Giusto\" ha senso solo rispetto a ciò che il pezzo deve toccare.\n- **PRECISIONE:** Riferimento reale ±0,019 mm (IT6/IT7) come margine di accoppiamento, non come dato isolato.\n- **PRINCIPIO:** La mano deve padroneggiare il gesto prima della macchina (\"la mano deve sapere prima\"); solo chi sa può verificare la macchina. Il sapere artigiano si tramanda (esperienza passata di mano in mano).\n- **OBIETTIVO:** dalla misura del singolo pezzo aprire al problema della costanza su molti pezzi (ripetibilità, ⟡0 casella 3) e introdurre l'antagonista (il Disordine/deriva).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "la precisione e' una relazione (il soffio di troppo)",
+        "regione": 0,
+        "regione_nome": "LA MATERIA",
+        "pietra": "⟡0",
+        "giro_spirale": 2,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, precisione"
+      },
+      {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, precisione"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
+  },
+  {
+    "id": "EP_N2_04",
+    "title": "La Mappa Viva",
+    "sottotitolo": "Nina scopre che il mondo ha una mappa che si aggiorna da sola e non sa mentire — e che lei, sulla mappa, è una pedina che può andare ovunque.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-15",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "mappa",
+      "sistema",
+      "verita",
+      "cartamodello",
+      "viaggio",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 13,
+    "preview": "EP_N2_04 — La Mappa Viva \"Una mappa che dice sempre la verità su dov'è ogni cosa. E si disegna da sola, mentre il mondo cambia.\" Formato: Avventura Nina v2 · ~13 min Per chi: chiunque si sia mai perso",
+    "content": "# EP_N2_04 — La Mappa Viva\n### \"Una mappa che dice sempre la verità su dov'è ogni cosa. E si disegna da sola, mentre il mondo cambia.\"\n\n**Formato:** Avventura (Nina v2) · ~13 min\n**Per chi:** chiunque si sia mai perso — in una città, in un compito, nella propria testa\n**Insegna:** cos'è un **sistema** che si tiene in ordine da solo: una **mappa viva** che si aggiorna mentre il mondo cambia e che **non sa mentire**. E la differenza enorme tra una cosa che *sembra* a posto e una che *è* a posto.\n**Materia:** La Grande Mappa (⟡5) · **Casella 4 del viaggio**\n**Posto nella Mappa:** è il momento in cui Nina capisce *dov'è* — e che può muoversi.\n\n---\n\n> **Dove siamo:** Nina sa fare un gesto giusto (1), misurarlo (2), ripeterlo tenendo a bada il Disordine (3). Ma il mondo è grande, e non puoi tenere tutto a mente. Oggi scopre lo strumento che tiene in ordine il tutto.\n\n---\n\n## COLD OPEN\n\n«Mi sono persa» ammise Nina.\n\nEra tornata nel Sistema da sola, per esplorare, e si era ritrovata in un corridoio che non riconosceva, pieno di porte tutte uguali. Aveva camminato in tondo. Si vergognava un po' a dirlo.\n\nTHEMIS non la prese in giro. Anzi. «Bene» disse. «Esserti persa è la domanda giusta. Vieni. Ti faccio vedere la cosa più bella di questo posto.»\n\nLa portò in una sala rotonda. Al centro, sospesa nell'aria, c'era una **mappa di luce**. Mostrava tutto il Sistema: la Giuntura, la fucina di FORGE, i corridoi, le valli degli Atomi e dei Bit. E mentre Nina la guardava, in un angolo, **una luce nuova si accese da sola**: qualcuno, da qualche parte, aveva appena costruito qualcosa di nuovo — e la mappa l'aveva disegnato all'istante.\n\n«È **viva**» sussurrò Nina.\n\n---\n\n## ATTO I — LA MAPPA CHE NON SA MENTIRE\n\n«Questa mappa ha una regola sola» disse THEMIS, «ed è la sua magia: **dice sempre la verità.** Non quello che *dovrebbe* esserci. Quello che *c'è davvero*, adesso.»\n\nIndicò una stanza sulla mappa, segnata di un grigio spento. «Vedi questa? Sulla vecchia mappa di carta risultava \"a posto, funzionante\". Ma la mappa viva è andata a *controllare* — e ha scoperto che dentro non c'era niente, era vuota da mesi. Così l'ha segnata grigia. La carta diceva una bugia comoda. La mappa viva dice la verità scomoda.»\n\n«E perché è meglio la verità scomoda?»\n\n«Perché su una bugia non ci puoi camminare. Se la mappa ti dice \"di là c'è un ponte\" e il ponte non c'è, tu cadi. Una mappa che mente è peggio di nessuna mappa: ti fa sentire sicuro nel posto sbagliato.»\n\n> *(Esempio per tutti — il test della sarta: il **cartamodello** è la mappa di un vestito. Se è giusto e aggiornato, tagli la stoffa e tutto combacia. Ma se usi un cartamodello vecchio — fatto per un corpo diverso, o con una modifica dimenticata — tagli con sicurezza… e il vestito non si chiude. Il cartamodello \"sembrava a posto\". Una mappa deve dire la verità, o ti fa sbagliare con sicurezza.)*\n\n---\n\n## ATTO II — SEMBRARE A POSTO ≠ ESSERE A POSTO\n\n«Questa è una delle cose più importanti di tutto il viaggio» disse THEMIS, e si fermò perché Nina la guardasse bene. «C'è una differenza enorme tra una cosa che **sembra** a posto e una che **è** a posto. Il Disordine adora le cose che *sembrano* a posto: ci si nasconde dentro. Una luce verde finta, un \"tutto ok\" detto senza guardare, una mappa vecchia tenuta per pigrizia.»\n\n«Come il bottone» disse Nina piano. «Quello che sembrava cucito bene e veniva via al primo strappo.»\n\nTHEMIS si illuminò. «Esatto. Hai collegato. È sempre la stessa lezione, in posti diversi: **non fidarti di come sembra. Vai a vedere com'è davvero.** La mappa viva fa proprio questo: invece di credere ai cartellini, va a controllare e disegna la verità. Per questo non si perde, e non ti fa perdere.»\n\n> *(Strato fondo — per il grande: è la differenza tra uno stato *dichiarato* e uno stato *verificato*. Un cruscotto onesto non mostra ciò che le cose dicono di sé (\"sono accese\"), ma ciò che risulta dal controllo reale (rispondono? sono fresche? il dato c'è?). È lo stesso principio del controllo qualità e del monitoraggio fatto bene: misuri l'esito, non la promessa.)*\n\n---\n\n## ATTO III — TU SEI UNA PEDINA, E PUOI ANDARE OVUNQUE\n\n«Ma se la mappa è così grande» disse Nina, «come faccio a non perdermi più?»\n\nTHEMIS le mise una mano sulla spalla e la girò verso la mappa. E Nina vide una cosa che prima non aveva notato: su quella mappa di luce c'era **un puntino**. Piccolo, vivo. E si muoveva quando lei si muoveva.\n\n«Quella sei tu» disse THEMIS. «Sei una **pedina** su questa mappa. Ogni stanza è un argomento, una cosa da imparare, una **casella**. Tu cammini di casella in casella. Quando entri in una casella nuova, impari una cosa nuova. Quando torni in una vecchia, puoi scendere più a fondo. E la cosa bellissima è che **non c'è un ordine obbligato**: puoi andare dove ti porta la curiosità.»\n\n«Quindi non è come un libro, che lo leggi dalla prima all'ultima pagina.»\n\n«È meglio. È un libro **e** una mappa insieme. Il filo della tua storia è la strada che *tu* cammini — quella è il libro. Ma la mappa resta lì, intera, e la puoi ri-camminare in mille modi diversi. Nessuno si perde davvero, se ha una mappa viva e sa di essere una pedina che può muoversi.»\n\nE Nina capì che ogni cosa imparata accendeva una casella — e che, pezzo per pezzo, **la sua mappa si stava colorando**.\n\n---\n\n## CHIUSURA\n\nNina non si sentì più persa. Si sentì *in viaggio* — che è una cosa completamente diversa. Perso vuol dire non sapere dove sei. In viaggio vuol dire sapere dove sei **e poter scegliere dove andare**.\n\nGuardò il suo puntino sulla mappa viva, fermo sulla casella della Materia, con tre stanze già accese dietro di sé. E davanti, tutte le caselle ancora spente — terre da accendere, una per una, per tutta la vita.\n\n> Nina guardò la mappa viva colorarsi dietro di sé. Tre caselle accese. E pensò: *queste tre le ho imparate con le mani — il gesto, la misura, la ripetizione.* Ma FORGE le fa **cento volte**, e si stanca lo stesso. E se quei gesti, una volta imparati bene… si potessero **insegnare a qualcosa che non si stanca mai?**\n>\n> *Ma attenzione: insegnare a una macchina un gesto storto…*\n\nE quella è la casella che apre tutto il resto del viaggio.\n\n---\n\n*Provalo tu: disegna la mappa della tua stanza (o della tua casa) a memoria. Poi vai a controllarla davvero. Cosa avevi messo \"a memoria\" che non era giusto? Correggila guardando. Hai appena fatto una mappa viva: una che dice la verità perché sei andato a vedere.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **Nina persa** nel corridoio di porte tutte uguali — cammina in tondo.\n2. **La sala rotonda** con la **mappa di luce** sospesa che mostra tutto il Sistema.\n3. **La luce nuova** che si accende da sola in un angolo: il mondo cambia, la mappa si aggiorna.\n4. **La stanza grigia**: segnata \"vuota\" perché la mappa è andata a controllare (la verità scomoda vs il cartellino comodo).\n5. **Il puntino-Nina** sulla mappa che si muove con lei — e le caselle dietro di lei che si **colorano**.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡5` La Grande Mappa (giro 1). *Un sistema vivo tiene in ordine il tutto: una mappa che si aggiorna da sola e dice sempre la verità (lo stato verificato, non quello dichiarato). \"Sembrare a posto\" ≠ \"essere a posto\".*\n**Pietre richiamate:** `⟡0` (il bottone che sembrava cucito bene — stessa lezione: vai a vedere com'è davvero).\n**3 strati:** bambino = la mappa magica che si disegna da sola e non si perde · curioso = sembrare a posto ≠ essere a posto; una mappa che mente è peggio di nessuna mappa · grande = stato dichiarato vs verificato; un cruscotto onesto misura l'esito, non la promessa.\n**Cuore:** la curiosità (esplorare, non aver paura di essersi persi) · il sapere è vivo e si può navigare; non sei perso, sei in viaggio.\n**Aggancio reale:** la Mappa della dashboard/Obsidian che si aggiorna dai dati; \"una vista deve dire la verità\" (stato reale, non finto). Nina = pedina sul grafo = il modello navigabile del viaggio.\n**Open loop → Casella 5 (prima la mano, poi la macchina):** i gesti imparati bene si possono insegnare a qualcosa che non si stanca — ma occhio a insegnare un gesto storto → `EP_N2_05`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_04, casella 4 del viaggio Nina v2, materia La Grande Mappa (⟡5), ~13 min. Stabilisce il modello \"Nina = pedina sulla mappa navigabile\".\n- **CONCETTO:** Una mappa/sistema viva si aggiorna da sola e mostra lo **stato verificato** (ciò che risulta dal controllo) non lo **stato dichiarato** (ciò che le cose dicono di sé). Una mappa che mente è peggio di nessuna mappa.\n- **PRINCIPIO:** \"Sembrare a posto\" ≠ \"essere a posto\": il Disordine si nasconde in ciò che sembra ok; la difesa è verificare l'esito reale, non fidarsi dell'apparenza/del cartellino.\n- **META:** introdotto il modello narrativo: il mondo È una mappa (grafo), Nina è una pedina che cammina di casella in casella in qualsiasi ordine; il \"libro\" è la sua strada, la mappa resta ri-percorribile. Le caselle imparate \"si colorano\" (profilo che cresce).\n- **OBIETTIVO:** chiudere la base-Materia e aprire il ponte verso l'automazione (insegnare alla macchina un gesto già padroneggiato), casella 5.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "la mappa viva: il sistema che dice la verita'",
+        "regione": 5,
+        "regione_nome": "LA GRANDE MAPPA",
+        "pietra": "⟡5",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡0"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_AV_04",
+        "title": "La Grande Mappa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_05",
+    "title": "Prima la Mano, Poi la Macchina",
+    "sottotitolo": "Nina scopre come si insegna a qualcosa che non si stanca mai — e la regola di ferro: una macchina non aggiusta il tuo errore, lo moltiplica.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-15",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "forge",
+      "automazione",
+      "materia",
+      "ponte",
+      "eredita",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_05 — Prima la Mano, Poi la Macchina \"Una macchina non corregge il tuo errore. Lo fa mille volte, in fretta. Per questo prima deve imparare la mano.\" Formato: Avventura Nina v2 · ~14 min · chiude",
+    "content": "# EP_N2_05 — Prima la Mano, Poi la Macchina\n### \"Una macchina non corregge il tuo errore. Lo fa mille volte, in fretta. Per questo prima deve imparare la mano.\"\n\n**Formato:** Avventura (Nina v2) · ~14 min · chiude l'apertura del viaggio\n**Per chi:** chiunque abbia voglia di fare le cose più in fretta — e debba prima impararle bene\n**Insegna:** il **ponte** dal Mestiere a tutto il resto: come si \"insegna\" un gesto a qualcosa che non si stanca (una macchina, un sistema, un'automazione). E la regola di ferro: si automatizza **solo** un gesto già fatto bene a mano, perché la macchina **amplifica** — il bene e il male.\n**Materia:** L'Officina che Gira Sola (⟡2, l'automazione) · **Casella 5 del viaggio**\n**Posto nella Mappa:** la porta che dalla Materia apre tutte le altre terre.\n\n---\n\n> **Dove siamo:** Nina ha imparato a fare un gesto giusto (1), a misurarlo (2), a ripeterlo battendo il Disordine (3), e a non perdersi sulla mappa viva (4). Ora la sua mano *sa*. Ed è pronta a fare il passo che cambia tutto.\n\n---\n\n## COLD OPEN\n\n«FORGE è stanco» disse Nina.\n\nEra vero. Il fabbro aveva fatto cento pezzi gemelli quel giorno, fermandosi ogni tre a controllare col riferimento. Erano tutti giusti. Ma le sue mani grandi tremavano un po', e Nina lo aveva visto chiudere gli occhi un secondo di troppo.\n\n«Cento sono tanti» disse THEMIS. «E se ne servissero mille? Diecimila? La mano più brava del mondo, prima o poi, si ferma.»\n\n«E allora come si fa?»\n\nTHEMIS la portò in un angolo della fucina che Nina non aveva mai guardato. Lì c'era una **macchina**: ferma, silenziosa, in attesa. Non magica. Solo paziente.\n\n«Si insegna a *lei*» disse THEMIS. «Lei non si stanca mai. Ma — e ascolta bene, perché è la cosa più importante di tutto il viaggio — c'è una regola di ferro.»\n\n---\n\n## ATTO I — LA MACCHINA NON CORREGGE: AMPLIFICA\n\n«La macchina» disse THEMIS, «fa una cosa sola: **ripete il gesto che le hai insegnato**. Tante volte, identico, senza stancarsi. Ma non *capisce* quel gesto. Non sa se è giusto o storto. Lo ripete e basta.»\n\nSi fermò.\n\n«Quindi se le insegni un gesto **giusto**, ti dà mille pezzi giusti, in fretta, mentre tu dormi. Ma se le insegni un gesto **storto**… ti dà mille pezzi storti. Tutti insieme. Prima ancora che tu te ne accorga. La macchina non aggiusta il tuo errore: lo **moltiplica**.»\n\nNina sentì un brivido. «Quindi una macchina può fare un disastro mille volte più grande.»\n\n«Esatto. La macchina è un **megafono**. Urla quello che le metti in bocca: se è una cosa giusta, la fai sentire a tutti; se è una sciocchezza, fai una sciocchezza enorme. Per questo non si parte mai dalla macchina.»\n\n> *(Esempio per tutti — il test della sarta: la macchina da cucire fa mille punti perfettamente uguali in un minuto. Una meraviglia. Ma se la imposti con la tensione del filo sbagliata, ti cuce mille punti **sbagliati** uguali — un'intera cucitura da disfare. La macchina non si è \"sbagliata\": ha ripetuto fedelmente l'errore che le hai dato. Prima impari a fare il punto giusto a mano; poi imposti la macchina.)*\n\n---\n\n## ATTO II — PERCHÉ LA MANO DEVE SAPERE PRIMA\n\n«Adesso capisci» disse THEMIS, «perché FORGE fa ancora tutto a mano, anche se potrebbe insegnarlo alla macchina e basta.»\n\nNina annuì lentamente. «Perché prima la sua mano deve sapere se il gesto è giusto. Sennò insegna alla macchina una cosa storta… e ne escono mille storte.»\n\n«Brava. La mano che ha sentito il metallo, che ha sbagliato e corretto, che si è fermata al riferimento — quella mano **sa riconoscere il giusto**. E solo chi sa riconoscere il giusto può insegnarlo a una macchina *e poi controllare che lo faccia davvero*. La macchina non sostituisce la mano esperta. La **moltiplica**.»\n\nIndicò i tre passi che Nina aveva imparato: il gesto fatto bene, la misura, la ripetizione col riferimento.\n\n«Tutto quello che hai fatto finora — sembrava lento, vero? Un bottone, un pezzo, dieci pezzi. Ma non stavi facendo pezzi, Nina. Stavi **costruendo la mano che sa**. E quella mano adesso vale mille macchine, perché può insegnarle tutte.»\n\n> *(Strato fondo — per il grande: è il principio \"non automatizzare un gesto non ancora padroneggiato\". L'automazione amplifica il processo, non lo corregge: automatizzare un errore lo scala. Per questo l'ordine è sempre: prima la competenza manuale (capire e saper verificare), poi l'automazione. Chi salta il primo passo costruisce fabbriche di errori veloci.)*\n\n---\n\n## ATTO III — L'EREDITÀ: GLI STRUMENTI, NON LE RISPOSTE\n\nQuella sera FORGE fece una cosa che non aveva mai fatto. Si tolse dal collo un cordino con appeso il suo **calibro più vecchio** — consumato, lucido dall'uso di anni — e lo mise in mano a Nina.\n\nNina lo guardò, senza parole.\n\n«Te lo lascia» disse THEMIS, piano. «Non perché tu non possa comprartene uno nuovo. Ma perché in quel calibro ci sono tutte le volte che lui ha misurato, sbagliato, corretto, imparato. Non ti sta dando *le risposte*, Nina. Ti sta dando lo **strumento per trovartele da sola**. È la cosa più grande che una persona possa lasciarne a un'altra: non quello che sa, ma il **modo** per arrivare a saperlo.»\n\nNina strinse il calibro vecchio. Pesava più di quanto sembrasse — di tutto il sapere che ci era passato dentro.\n\n«Un giorno» disse THEMIS, «quando la tua mano saprà, lo lascerai a qualcun altro. E ci saranno dentro anche le *tue* volte. Funziona così, da sempre: una mano che insegna alla mano dopo. E ora — finalmente — anche alle macchine.»\n\n---\n\n## CHIUSURA\n\nNina risalì dalla fucina con due cose: un calibro vecchio al collo, e una mano che cominciava a *sapere*. Sulla mappa viva, dietro di lei, brillavano cinque caselle accese — la sua piccola costellazione di partenza.\n\nE davanti, per la prima volta, vide chiaramente la **strada aprirsi**: la casella della macchina che gira sola portava ad altre dieci, e quelle ad altre cento. Le menti che parlano, le biblioteche delle fonti, l'esercito che lavora di notte, il direttore che tiene il tempo. Terre intere, tutte da accendere.\n\nNon aveva più paura di non sapere. Aveva lo strumento per imparare qualunque cosa. E quella — capì Nina — non era la fine dell'avventura.\n\nEra esattamente l'inizio.\n\n> Nina guardò la macchina paziente nell'angolo, e la sua mano che ormai sapeva. *Le posso insegnare il mio gesto giusto.* E pensò: se una macchina può ripetere un gesto delle mani… può ripetere anche un gesto della **mente**? Pensare al posto mio, di notte, mentre dormo?\n>\n> *Cosa succede quando il Sistema impara a fare da solo le cose noiose — e mi lascia solo quelle belle?*\n\nE lì, alla casella dopo, comincia **L'Officina che Gira Sola**. Ma quella è un'altra terra della mappa. E tu, ora, sai come camminarci.\n\n---\n\n*Provalo tu: insegna a qualcuno (un amico, un fratello, mamma) a fare una cosa che TU sai fare bene — un nodo, una piega, una ricetta. Spiegagliela passo passo. Ti accorgerai di due cose: che per insegnarla devi saperla davvero bene, e che spiegarla la fai capire meglio anche a te. Hai appena fatto quello che si fa con le macchine: insegnare un gesto che padroneggi.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **FORGE stanco**: cento pezzi giusti, ma le mani che tremano un po'.\n2. **La macchina paziente** nell'angolo, ferma, in attesa di imparare.\n3. **Il megafono**: visualizzare la macchina che \"urla\" il gesto — giusto → mille giusti / storto → mille storti.\n4. **FORGE che dona il calibro vecchio** al collo di Nina — consumato, lucido d'uso.\n5. **La mappa viva con 5 caselle accese** dietro Nina, e la strada che si apre verso decine di terre nuove.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡2` L'Officina che Gira Sola (giro 1, il ponte). *Si automatizza solo un gesto già padroneggiato a mano: la macchina amplifica (ripete fedele), non corregge. Automatizzare un errore lo moltiplica.*\n**Pietre richiamate:** `⟡0` (il gesto giusto, la misura, la ripetizione: la \"mano che sa\" è il prerequisito dell'automazione).\n**3 strati:** bambino = la macchina che non si stanca, ma ripete anche gli errori · curioso = la macchina è un megafono: amplifica il giusto e lo storto; prima la mano deve sapere · grande = \"non automatizzare un gesto non padroneggiato\"; l'automazione scala il processo (errori inclusi); competenza manuale prima, automazione dopo.\n**Cuore:** papà ti ha lasciato gli strumenti, non le risposte (il calibro di FORGE = l'esperienza che si tramanda) · fai bene le cose vere · la curiosità verso il passo dopo.\n**Aggancio reale:** il principio cardine della V32/officina (\"prima la mano, poi la macchina\"); l'eredità del sapere artigiano; il ponte verso GENESIS/automazione (l'arco IA).\n**Open loop → la prossima terra (⟡2→⟡3...):** se una macchina ripete un gesto delle mani, può ripetere un gesto della mente? → l'Officina che Gira Sola, e tutto il resto della mappa.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_05, casella 5 (chiude l'apertura) del viaggio Nina v2, materia L'Officina che Gira Sola (⟡2, il ponte), ~14 min.\n- **PRINCIPIO CARDINE:** Si automatizza solo un gesto già padroneggiato a mano. La macchina **amplifica** (ripete fedelmente), non corregge: automatizzare un errore lo moltiplica su scala. Ordine obbligato: competenza manuale → automazione.\n- **CONCETTO:** L'automazione come \"megafono\": rende enorme ciò che le insegni, nel bene e nel male. La mano esperta non viene sostituita ma moltiplicata; solo chi sa riconoscere il giusto può insegnarlo a una macchina e verificarlo.\n- **CUORE/EREDITÀ:** il sapere si tramanda come **strumento, non come risposta** (il calibro consumato di FORGE): si dà il *modo* di arrivare a sapere, non le soluzioni. Catena di mani che insegnano alla mano (e ora alle macchine) successiva.\n- **OBIETTIVO:** chiudere l'arco di apertura (Materia) e aprire l'intera mappa (automazione → IA → ...), confermando il modello del viaggio infinito navigabile.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "prima la mano poi la macchina (automazione)",
+        "regione": 2,
+        "regione_nome": "L'OFFICINA CHE GIRA SOLA",
+        "pietra": "⟡2",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡0"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_N2_03",
+    "title": "Mille Volte Uguale",
+    "sottotitolo": "Nina incontra il nemico — non un mostro, ma una forza lenta che sposta tutto di un soffio finché non te ne accorgi più.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-15",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "forge",
+      "materia",
+      "ripetibilita",
+      "deriva",
+      "entropia",
+      "disordine",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 13,
+    "preview": "EP_N2_03 — Mille Volte Uguale \"Il nemico non grida. Sposta le cose di un soffio alla volta, finché non te ne accorgi più.\" Formato: Avventura Nina v2 · ~13 min Per chi: chiunque abbia iniziato bene un",
+    "content": "# EP_N2_03 — Mille Volte Uguale\n### \"Il nemico non grida. Sposta le cose di un soffio alla volta, finché non te ne accorgi più.\"\n\n**Formato:** Avventura (Nina v2) · ~13 min\n**Per chi:** chiunque abbia iniziato bene una cosa e l'abbia vista, pian piano, andare storta senza capire quando\n**Insegna:** la **ripetibilità** — fare una cosa giusta *una volta* è fortuna; farla giusta *mille volte uguale* è mestiere. E il nemico vero non è l'errore grosso: è la **deriva**, lo spostamento piccolo e costante. Si chiama **il Disordine**.\n**Materia:** La Materia (⟡0) · **Casella 3 del viaggio**\n**Posto nella Mappa:** ancora nella fucina. Ma stavolta arriva qualcuno che non si vede.\n\n---\n\n> **Dove siamo:** Nina sa misurare (casella 2): un pezzo giusto entra \"come un bacio\". Ma un pezzo solo non basta quasi mai. Oggi scopre cosa succede quando devi farne tanti — e chi le rema contro.\n\n---\n\n## COLD OPEN\n\nNina tornò da FORGE fiera, col suo pezzo giusto della volta prima. «L'ho misurato. È perfetto al soffio.»\n\nFORGE non disse niente. Le mise davanti **dieci** barre di metallo, tutte uguali. E una sola parola: «Ancora.»\n\n«Ne ho già fatto uno giusto» protestò Nina.\n\n«Uno» disse THEMIS, dietro di lei, «non è un pezzo. È **fortuna**.»\n\n---\n\n## ATTO I — LA MISURA CHE SCAPPA\n\nNina si mise al lavoro. Il primo pezzo le venne bene, come l'altra volta. Il secondo, quasi. Il terzo aveva una piccola fretta dentro. Al decimo, mise tutti i pezzi in fila e li misurò uno per uno, col calibro.\n\nNon erano uguali.\n\nSi *somigliavano*. Ma ognuno era spostato di un soffio più del precedente — sempre nella stessa direzione. Messi in fila, si vedeva chiaro: la misura **scappava** piano, come un passo che sbanda di pochissimo a ogni passo finché esci dal sentiero.\n\n«Cosa sta succedendo?» disse Nina. «Faccio lo stesso gesto!»\n\n«No» disse THEMIS. «Fai un gesto *che assomiglia* al primo. La mano si scalda, ti stanchi, l'attenzione cala — ogni volta sposti la misura di niente. Ma niente, ripetuto dieci volte, diventa **tanto**. Quello che hai visto in fila ha un nome: si chiama **deriva**.»\n\n> *(Esempio per tutti — il test della sarta: cuci a mano dieci punti uno dopo l'altro, in fretta. Guarda il primo e l'ultimo. L'ultimo è \"scappato\" — più grande, o storto, o storto dall'altra parte. Non hai sbagliato un punto: li hai spostati tutti di pochissimo, sempre nello stesso verso. Quella è la deriva.)*\n\n---\n\n## ATTO II — IL NEMICO CHE NON SI VEDE\n\n«Quella deriva» disse THEMIS, e per la prima volta la sua voce si fece seria sul serio, «non è un caso. È **lui**.»\n\n«Lui chi?»\n\n«Il **Disordine**. Alcuni lo chiamano l'Entropia. Non è un mostro, Nina. Non ha una faccia, non ride cattivo. È una **forza** — come la gravità, ma al contrario di tutto ciò che è in ordine. È quello che fa **arrugginire** il ferro, **aggrovigliare** il filo, **sparpagliare** le cose, **dimenticare** quello che sapevi. Non attacca di colpo. Lavora **lento**. Ti sposta la misura di un soffio, ti scuce un orlo di un punto, ti fa scordare un passaggio. E quando te ne accorgi, il danno è già grande.»\n\nNina guardò la fila di pezzi storti con occhi nuovi. Non erano colpa sua. Erano il Disordine al lavoro.\n\n«E come si fa a sconfiggerlo?»\n\n«Non si sconfigge» disse THEMIS. «È come voler sconfiggere la pioggia. Ma si **tiene a bada**. E la cosa bella è questa: il Disordine è fortissimo dove nessuno tiene le cose in ordine — ma **arretra** ovunque qualcuno costruisce, misura, controlla. Dove c'è metodo, lui perde terreno.»\n\n> *(Strato fondo — per il grande: è la seconda legge della termodinamica resa fiaba. L'entropia (il disordine) tende ad aumentare da sola; tenere un sistema ordinato costa energia e attenzione. La \"deriva\" in officina è reale: l'utensile che si consuma, la temperatura che cambia, il gioco che si allarga. Il nemico non è l'errore singolo — è la deriva non controllata.)*\n\n---\n\n## ATTO III — IL TRUCCO DI FORGE: IL RIFERIMENTO CHE NON SI MUOVE\n\n«Allora come fa FORGE a farne cento uguali?» chiese Nina. «Anche lui si stanca.»\n\nTHEMIS sorrise. «Guardalo.»\n\nFORGE non stava cercando di essere una macchina perfetta. Ogni tre pezzi, si **fermava**. Prendeva un blocchetto di metallo che teneva sempre nello stesso posto, freddo, fermo — un pezzo di cui si fidava — e ci confrontava il suo lavoro. Se la misura aveva iniziato a scappare, se ne accorgeva subito, e **tornava in riga** prima che il soffio diventasse danno.\n\n«Quel blocchetto si chiama **riferimento**» disse THEMIS. «È una cosa che non cambia mai. FORGE non si fida della sua mano — la sua mano si stanca, come la tua. Si fida del **riferimento**. Si ferma, controlla, corregge. Ogni poco. Per questo i suoi cento pezzi sono uguali: non perché lui è perfetto, ma perché ha un punto fermo a cui tornare.»\n\nNina rifece i suoi dieci pezzi. Stavolta, ogni tre, si fermava e controllava col riferimento. La misura smise di scappare. Dieci pezzi gemelli — non un capolavoro, ma **dieci piccole cose identiche**, di cui ci si poteva fidare tutte e dieci.\n\nE scoprì una strana bellezza in quella fila uguale.\n\n---\n\n## CHIUSURA\n\nNina capì che il Disordine non si batte con la bravura. Si batte con un'abitudine semplice e umile: **avere un punto fermo, e tornarci spesso a controllare.** La mano sbaglia. Il riferimento no. Ti fermi, guardi, correggi. E il nemico lento arretra.\n\nLe piacque pensare che il Disordine fosse là fuori, sempre, a sparpagliare il mondo — e che bastasse così poco, un blocchetto fermo e un po' di attenzione, per tenerlo a bada.\n\n> Nina allineò i dieci pezzi gemelli, contenta. *Mille volte uguale, controllando.* Ma poi pensò: e tutto il resto del mondo? La fucina, gli attrezzi, i pezzi, le cose dall'altra parte del ponte — chi tiene in ordine **tutto quanto**? Non puoi avere un riferimento per ogni cosa nella testa, ti sfuggirebbe.\n>\n> *Ci vuole… una mappa. Una mappa che dica sempre la verità su dov'è ogni cosa.*\n\nE quella mappa — incredibile a dirsi — è **viva**.\n\n---\n\n*Provalo tu: scrivi il tuo nome dieci volte di fila, veloce. Guarda il primo e l'ultimo: è scappato, vero? Ora rifallo, ma ogni due nomi fermati a guardare il primo. Resta uguale. Hai appena tenuto a bada il Disordine — col trucco di FORGE: un riferimento fermo, e tornarci spesso.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **Le dieci barre** che FORGE mette davanti a Nina — \"Ancora.\"\n2. **I dieci pezzi in fila** con la misura che *scappa* piano, sempre nello stesso verso.\n3. **Il Disordine** suggerito, non mostrato: ruggine che avanza, filo che si aggroviglia, polvere che si posa — una \"forza\" senza faccia.\n4. **Il riferimento di FORGE**: il blocchetto freddo, sempre nello stesso posto, a cui lui torna ogni tre pezzi.\n5. **La fila finale di pezzi gemelli** — uguali, e Nina che sorride di quella strana bellezza.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡0` La Materia (giro 3). *La ripetibilità è il mestiere: una cosa giusta una volta è fortuna, mille uguali è metodo. Il nemico è la deriva (spostamento piccolo e costante). Si tiene a bada con un riferimento fermo + ricontrollo, non con la bravura.*\n**Pietre richiamate:** `⟡0` (la precisione è una relazione — qui si aggiunge il tempo e la costanza).\n**3 strati:** bambino = i pezzi che scappano e il trucco del blocchetto fermo · curioso = il nemico è la deriva, lenta e invisibile; il Disordine arretra dove c'è metodo · grande = entropia/2ª legge; deriva reale (utensile, temperatura, gioco); ripetibilità = qualità del processo, non del singolo pezzo.\n**Cuore:** ordine batte caos (con umiltà e metodo, non con la bravura) · fai bene le cose vere, tante volte.\n**Aggancio reale:** la ripetibilità RSS ±0,019 della V32 (la macchina *ripete* dentro quel margine); il QC (controllo qualità); l'Entropia come \"cattivo a 360\" del canone.\n**Open loop → Casella 4 (la mappa viva):** non puoi tenere a mente un riferimento per ogni cosa — serve una mappa che dica sempre la verità → `EP_N2_04`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_03, casella 3 del viaggio Nina v2, materia La Materia (⟡0), ~13 min. Introduce l'antagonista: il Disordine/Entropia.\n- **CONCETTO:** La ripetibilità (fare uguale molte volte) è la firma della qualità di un processo, non la bontà del singolo pezzo. Il nemico è la **deriva**: spostamento piccolo, costante, direzionale, che diventa danno per accumulo.\n- **ANTAGONISTA:** Il Disordine/Entropia è definito come forza (non personaggio cattivo): fa arrugginire/aggrovigliare/sparpagliare/dimenticare; lavora lento; non si sconfigge ma si tiene a bada con struttura/metodo; arretra dove qualcuno costruisce.\n- **CONTROMISURA:** un **riferimento fisso** + ricontrollo periodico (taratura) batte la deriva meglio della bravura individuale.\n- **OBIETTIVO:** dal controllo del singolo gesto aprire al bisogno di un sistema/mappa che tenga in ordine il tutto (verso ⟡5, la mappa viva, casella 4).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "la ripetibilita': mille volte uguale, battere la deriva",
+        "regione": 0,
+        "regione_nome": "LA MATERIA",
+        "pietra": "⟡0",
+        "giro_spirale": 3,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: deriva, entropia, forge"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
     }
   }
 ]
