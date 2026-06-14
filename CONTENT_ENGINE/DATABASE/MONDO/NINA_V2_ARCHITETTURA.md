@@ -113,6 +113,32 @@ Come si tiene insieme una mappa navigabile **e** un filone unico "come un libro"
 - **Profilo/CV = la mappa che si colora.** Ogni casella "completata" riempie il profilo di Nina —
   come il salvataggio di un gioco da tavolo, gemello del CV reale del papà (vedi principio 9).
 
+## Stagioni o filone unico? E "infinito" (Matteo, 14/06)
+
+- **Filone unico, NON stagioni.** Continuità epica (sì, come One Piece: una storia sola, lunga) —
+  MA **navigabile per casella**: a differenza di One Piece non devi vederla in ordine, entri da
+  qualsiasi punto (principio 6). Le "stagioni" diventano le **Materie/Regioni** della mappa
+  (cluster di argomenti), non cancelli temporali.
+- **L'età NON è un asse.** La gestisce la **profondità** (i giri della spirale), non delle stagioni
+  per fascia. Nina resta evergreen.
+- **È ipoteticamente infinito → non si "scrivono tutti gli episodi".** Sarebbe l'approccio sbagliato.
+  Si costruisce il **MOTORE** che li genera e li fa crescere: watcher + ricerca + SELF_IMPROVE
+  **propongono** caselle nuove nel tempo, l'umano **approva** (specie il personale/valori). Il
+  curriculum di vita non si *scrive* una volta: si **coltiva** (regole 2 e 11). Cresce per sempre.
+
+## LE MATERIE — il sapere concreto che la scuola non dà
+*Mappa aperta ed estensibile. Tono: semplice, concreto, che apre la mente e spinge a
+sperimentare/cercare/capire. Ogni materia = un cluster di caselle, ogni casella a più giri.*
+
+- **Mestiere / Materia** — meccanica, precisione, fare bene a mano (la radice ⟡0; il mondo di Matteo).
+- **Programmazione / Sistemi** — come pensa una macchina, automazione, l'arco IA (materia Tech esistente).
+- **Soldi** — finanza personale, tasse, valore, far lavorare i soldi (verticale ₣ esistente, da ampliare).
+- **Scienza / Chimica** — come funzionano le cose; **sicurezza** ("cose da non mischiare") come pilastro.
+- **Relazioni & crescere** — famiglia, rispetto, corpo, diventare grandi. **Area di VALORI: contenuti e
+  linea li decide il GENITORE (Matteo).** Tono: rispetto, semplicità, adatto all'età. *(L'autore-sistema
+  scrive con rispetto e non etichetta nessuno; le scelte di valore sono del padre.)*
+- **[aperte]** — qualunque cosa serva per la vita; la mappa si estende senza rompere nulla.
+
 ## Cosa NON cambia
 - Il canone narrativo (Bibbia: mondo, personaggi, Entropia, regole), l'ancoraggio al progetto
   reale, "niente bozze" (qualità), 1 concetto reale = 1 avventura, open loop a fine episodio.
