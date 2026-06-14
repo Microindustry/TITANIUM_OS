@@ -33,7 +33,7 @@ CORPUS_PATH    = _HERE / "rag_corpus.jsonl"
 TFIDF_PATH     = _HERE / "rag_tfidf.pkl"
 COLLECTION     = "mente"
 EMBED_MODEL    = "paraphrase-multilingual-MiniLM-L12-v2"
-RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"   # multilingue (100+ lingue, IT) — ms-marco era solo EN su contenuto italiano (upgrade 14/06, testato: discrimina IT)
 
 CHUNK_SIZE     = 512    # chars (~100 token) — ottimale per Q&A tecnico
 CHUNK_STRIDE   = 200    # 61% overlap — bilancia contesto e precisione
