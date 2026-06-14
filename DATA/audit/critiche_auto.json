@@ -1,5 +1,29 @@
 [
   {
+    "id": "AUD-d19885be12",
+    "date": "2026-06-14",
+    "git": "724f523",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "night_push.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-06-14"
+  },
+  {
+    "id": "AUD-80dfddf5cc",
+    "date": "2026-06-14",
+    "git": "724f523",
+    "area": "NOTTURNE",
+    "severity": "alta",
+    "finding": "night_research.log: rilevato crash/eccezione nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-06-14"
+  },
+  {
     "id": "AUD-d7ecb9b386",
     "date": "2026-06-13",
     "git": "5e10461",
@@ -441,7 +465,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-c97403be34",
@@ -453,7 +477,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-77abb05083",
@@ -465,7 +489,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-6bb972e811",
@@ -477,7 +501,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -489,7 +513,7 @@
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-08"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-2ed0757892",
@@ -501,7 +525,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-28f6d2e10b",
@@ -513,7 +537,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-14717de2a5",
@@ -525,7 +549,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-11"
+    "last_seen": "2026-06-14"
   },
   {
     "id": "AUD-100c8670cd",
