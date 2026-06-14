@@ -67,6 +67,27 @@
   (per l'animazione). I 3 strati e i FATTI restano.
 - La **Mappa** (dashboard/Obsidian) diventa l'interfaccia primaria: si naviga lì, non si "scorre" una lista.
 
+## IL MODELLO NARRATIVO — "il libro è il viaggio sulla mappa" (Matteo, 14/06)
+
+Come si tiene insieme una mappa navigabile **e** un filone unico "come un libro":
+
+- **Nina è una pedina che cammina la Mappa.** Ogni **casella** = un argomento (un nodo del grafo).
+- **Cambia casella → cambia discorso.** Arrivare a una nuova casella = nuovo argomento = nuovo episodio.
+- **Torna su una casella → approfondisce.** Ri-visitare = scendere di livello (giro 2, 3… della spirale).
+- **La mappa è non-lineare e ri-percorribile; il libro è lineare nei PASSI di Nina.** Stessa cosa,
+  due viste: l'indice del libro è l'ordine in cui Nina ha camminato, ma la mappa esiste a parte e
+  si può ri-camminare in qualunque ordine. → filo continuo SENZA perdere la libertà di percorso.
+- **Il collante tra caselle = l'open loop.** La domanda a fine episodio è *letteralmente il passo
+  successivo del sentiero*: tira Nina alla casella dopo. (Già nel canone — qui prende senso fisico.)
+
+**Conseguenze operative:**
+- **La Mappa (dashboard/Obsidian) è il MONDO, il set.** Si anima Nina che si muove lì; il posto in
+  cui arriva "si apre" nell'episodio. La mappa non è un menu: è la geografia del racconto.
+- **Episodio = una VISITA:** "Nina arriva alla casella X" oppure "Nina ci torna e va più a fondo".
+  Autosufficiente (micro-recap dei prerequisiti) ma incatenato dal passo (open loop ← → casella dopo).
+- **Profilo/CV = la mappa che si colora.** Ogni casella "completata" riempie il profilo di Nina —
+  come il salvataggio di un gioco da tavolo, gemello del CV reale del papà (vedi principio 9).
+
 ## Cosa NON cambia
 - Il canone narrativo (Bibbia: mondo, personaggi, Entropia, regole), l'ancoraggio al progetto
   reale, "niente bozze" (qualità), 1 concetto reale = 1 avventura, open loop a fine episodio.
