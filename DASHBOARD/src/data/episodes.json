@@ -24,7 +24,14 @@
         "tipo": "origine"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "I · La Materia",
       "precede": {
@@ -90,13 +97,7 @@
         "id": "EP_AV_01",
         "title": "L'Incantesimo che si Ripete",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 2g)"
-      },
-      {
-        "id": "EP_AV_02",
-        "title": "La Mente che Parla",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 2g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -172,6 +173,12 @@
         "title": "Il Segno che Resta",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_S0_01",
+        "title": "L'Organismo",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -204,7 +211,20 @@
         "tipo": "origine"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_S0_02",
+        "title": "La Verifica",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "I · La Materia",
       "segue": {
@@ -239,7 +259,20 @@
         "tipo": "origine"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_S0_01",
+        "title": "L'Organismo",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_S0_03",
+        "title": "La Formula",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "I · La Materia",
       "precede": {
@@ -279,7 +312,20 @@
         "tipo": "origine"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_S0_02",
+        "title": "La Verifica",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "I · La Materia",
       "precede": {
@@ -319,7 +365,14 @@
         "tipo": "presente"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_01",
+        "title": "La Taverna",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "Diario del Sistema",
       "segue": {
@@ -354,7 +407,20 @@
         "tipo": "presente"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_00",
+        "title": "Origine",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_02",
+        "title": "Il Reattore",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "Diario del Sistema",
       "precede": {
@@ -419,6 +485,18 @@
         "title": "Fondamenta d'acciaio TIG",
         "tipo": "tema",
         "motivo": "tema: cnc, struttura"
+      },
+      {
+        "id": "EP_01",
+        "title": "La Taverna",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_03",
+        "title": "Il Paradosso",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -460,7 +538,20 @@
         "tipo": "presente"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_02",
+        "title": "Il Reattore",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_04",
+        "title": "Il Segnale",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "Diario del Sistema",
       "precede": {
@@ -500,7 +591,20 @@
         "tipo": "presente"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_03",
+        "title": "Il Paradosso",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_05",
+        "title": "Il Verdetto",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "Diario del Sistema",
       "precede": {
@@ -540,7 +644,14 @@
         "tipo": "presente"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_04",
+        "title": "Il Segnale",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "Diario del Sistema",
       "precede": {
@@ -739,16 +850,16 @@
     },
     "collegati": [
       {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
         "id": "EP_T04",
         "title": "SINAPSI",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 1g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -827,13 +938,13 @@
         "id": "EP_T03",
         "title": "VULCAN",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
         "id": "EP_20260319_fix_typescript_errors_unused_imports",
         "title": "Il Sistema Respira da Solo",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 1g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -966,6 +1077,18 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
+      },
+      {
+        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
+        "title": "Il Sistema Che Si Guarda",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1012,13 +1135,13 @@
         "id": "EP_T05",
         "title": "Il Sistema Pensa",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
         "id": "EP_S2_00_IL_DISTACCO",
         "title": "Il Distacco",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1060,7 +1183,14 @@
         "tipo": "costruzione"
       }
     },
-    "collegati": [],
+    "collegati": [
+      {
+        "id": "EP_S2_01",
+        "title": "Epoxy Granite: Colata Zero",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
     "evoluzione": {
       "fase": "I · La Materia",
       "segue": {
@@ -1102,6 +1232,12 @@
         "title": "Il Reattore",
         "tipo": "tema",
         "motivo": "tema: epoxy-granite, smorzamento"
+      },
+      {
+        "id": "EP_S2_00",
+        "title": "Config G: Il Gusset Sinistro",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1140,16 +1276,16 @@
     },
     "collegati": [
       {
+        "id": "EP_AUTO_013",
+        "title": "Molle gialle: la precisione che cambia tutto",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
         "id": "EP_AUTO_003",
         "title": "HMI acquisito, V32 respira",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
-        "id": "EP_AUTO_005",
-        "title": "Asse X: le guide parlano",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1195,13 +1331,13 @@
         "id": "EP_AUTO_002",
         "title": "8 Pezzi, Geometria Perfetta",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
         "id": "EP_AUTO_005",
         "title": "Asse X: le guide parlano",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1244,16 +1380,16 @@
     },
     "collegati": [
       {
-        "id": "EP_AUTO_002",
-        "title": "8 Pezzi, Geometria Perfetta",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
         "id": "EP_AUTO_003",
         "title": "HMI acquisito, V32 respira",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_AUTO_010",
+        "title": "Fondamenta d'acciaio TIG",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1389,16 +1525,16 @@
         "motivo": "tema: config-g, corpo-unico"
       },
       {
+        "id": "EP_AUTO_015",
+        "title": "Portabilità delle skill: il framework invisibile",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
         "id": "EP_AUTO_10",
         "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
-        "id": "EP_AUTO_11",
-        "title": "SINAPSI->MENTE migrazione - 41 doc + STORIE + ASSO",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1447,16 +1583,16 @@
         "motivo": "tema: cnc, struttura"
       },
       {
-        "id": "EP_AUTO_002",
-        "title": "8 Pezzi, Geometria Perfetta",
+        "id": "EP_AUTO_005",
+        "title": "Asse X: le guide parlano",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AUTO_003",
-        "title": "HMI acquisito, V32 respira",
+        "id": "EP_AUTO_012",
+        "title": "Componenti V32: dalla teoria alla fabbrica",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1580,16 +1716,16 @@
         "motivo": "tema: cnc, manufacturing"
       },
       {
-        "id": "EP_AUTO_002",
-        "title": "8 Pezzi, Geometria Perfetta",
+        "id": "EP_AUTO_010",
+        "title": "Fondamenta d'acciaio TIG",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AUTO_003",
-        "title": "HMI acquisito, V32 respira",
+        "id": "EP_AUTO_08",
+        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -5973,16 +6109,16 @@
     },
     "collegati": [
       {
-        "id": "EP_AUTO_011",
-        "title": "Knowledge Base Popolata e Architettura Assoluto",
+        "id": "EP_AUTO_07",
+        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
+        "id": "EP_AUTO_002",
+        "title": "8 Pezzi, Geometria Perfetta",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6026,16 +6162,16 @@
     },
     "collegati": [
       {
-        "id": "EP_AUTO_002",
-        "title": "8 Pezzi, Geometria Perfetta",
+        "id": "EP_AUTO_08",
+        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AUTO_003",
-        "title": "HMI acquisito, V32 respira",
+        "id": "EP_AUTO_09",
+        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6082,7 +6218,13 @@
         "id": "EP_AUTO_09",
         "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_AUTO_008",
+        "title": "Maggio 2026 — La Svolta Strutturale",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6135,16 +6277,16 @@
         "motivo": "tema: cnc, dashboard"
       },
       {
-        "id": "EP_AUTO_008",
-        "title": "Maggio 2026 — La Svolta Strutturale",
+        "id": "EP_AUTO_13",
+        "title": "ASSOLUTO V7 - documento master unico, 10 ATTI unif",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
+        "id": "EP_AUTO_017",
+        "title": "41 Documenti, Una Mente Digitale",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6194,16 +6336,10 @@
         "motivo": "tema: artigianalità-digitale, cnc, system-building"
       },
       {
-        "id": "EP_AUTO_008",
-        "title": "Maggio 2026 — La Svolta Strutturale",
+        "id": "EP_AUTO_016",
+        "title": "Dashboard che parla il tuo linguaggio",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6265,16 +6401,10 @@
         "motivo": "tema: cnc, dashboard"
       },
       {
-        "id": "EP_AUTO_008",
-        "title": "Maggio 2026 — La Svolta Strutturale",
+        "id": "EP_AUTO_019",
+        "title": "Dieci atti, un documento master",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6324,16 +6454,16 @@
         "motivo": "tema: cnc, manufacturing"
       },
       {
-        "id": "EP_AUTO_008",
-        "title": "Maggio 2026 — La Svolta Strutturale",
+        "id": "EP_AUTO_018",
+        "title": "Dashboard che comanda tutto: Ctrl+K",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
+        "id": "EP_AUTO_14",
+        "title": "Storytelling FILONE UNICO - S0+S1 Completa, Mappa",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -8620,13 +8750,13 @@
         "id": "EP_AV_01",
         "title": "L'Incantesimo che si Ripete",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
         "id": "EP_AV_03",
         "title": "La Biblioteca delle Fonti",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 1g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -9303,6 +9433,18 @@
         "title": "Maggio 2026 — La Svolta Strutturale",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
+      },
+      {
+        "id": "EP_S0_03",
+        "title": "La Formula",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_PILOTA_00",
+        "title": "Il Mondo",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11714,16 +11856,16 @@
     },
     "collegati": [
       {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
+        "id": "EP_SEED_RETE_L2_UMAP",
+        "title": "t-SNE contro UMAP — due modi di fare la foto",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_SEED_RETE_L1_BUGSTATO",
-        "title": "Non era un bug di codice, era un bug di stato",
+        "id": "EP_20260611",
+        "title": "TITANIUM OS — S2E11",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11795,16 +11937,16 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
-      },
-      {
         "id": "EP_AV_06",
         "title": "Il Direttore",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_AV_FIN_01",
+        "title": "Il Valore — cosa sono davvero i soldi",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11875,16 +12017,16 @@
     },
     "collegati": [
       {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
+        "id": "EP_AV_M0",
+        "title": "La Materia",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_AV_06",
-        "title": "Il Direttore",
+        "id": "EP_AV_M0_2",
+        "title": "Mille Volte Uguale",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 0g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11914,16 +12056,16 @@
     },
     "collegati": [
       {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
+        "id": "EP_20260610",
+        "title": "TITANIUM OS — S2E09",
         "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 1g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_SEED_RETE_L1_BUGSTATO",
-        "title": "Non era un bug di codice, era un bug di stato",
+        "id": "EP_20260612",
+        "title": "TITANIUM OS — S3 · EP. 147",
         "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 1g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11964,13 +12106,13 @@
         "id": "EP_20260611",
         "title": "TITANIUM OS — S2E11",
         "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 1g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
         "id": "EP_20260613",
         "title": "TITANIUM OS — Episodio 47",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 1g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -12117,13 +12259,13 @@
         "id": "EP_20260612",
         "title": "TITANIUM OS — S3 · EP. 147",
         "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 1g)"
+        "motivo": "continua da (arco della stagione)"
       },
       {
         "id": "EP_20260614",
         "title": "TITANIUM OS — S2E14",
         "tipo": "continuita",
-        "motivo": "porta a (stessa stagione, 1g)"
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -12164,13 +12306,7 @@
         "id": "EP_20260613",
         "title": "TITANIUM OS — Episodio 47",
         "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 1g)"
-      },
-      {
-        "id": "EP_20260612",
-        "title": "TITANIUM OS — S3 · EP. 147",
-        "tipo": "continuita",
-        "motivo": "continua da (stessa stagione, 2g)"
+        "motivo": "continua da (arco della stagione)"
       }
     ],
     "evoluzione": {

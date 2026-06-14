@@ -113,20 +113,18 @@ def compute(eps, max_links=6):
                 if len(shared) >= 2:
                     add(o["id"], 2 + len(shared), "tema", "tema: " + ", ".join(sorted(shared)[:3]))
 
-        # 6) continuita temporale nella stessa stagione (il flusso della storia)
-        my_d = _date(e)
-        if my_d:
-            same_season = [o for o in eps if o.get("stagione") == e.get("stagione")
-                           and o["id"] != eid and _date(o)]
-            same_season.sort(key=lambda o: _date(o))
-            seq = [o for o in same_season]
-            # trova vicini temporali
-            near = sorted(seq, key=lambda o: abs((_date(o) - my_d).days))[:2]
-            for o in near:
-                d = (_date(o) - my_d).days
-                if abs(d) <= 3:
-                    verso = "continua da" if d < 0 else "porta a"
-                    add(o["id"], 3, "continuita", f"{verso} (stessa stagione, {abs(d)}g)")
+        # 6) continuita nell'ARCO della stagione: lega l'episodio ai suoi VICINI nella
+        #    sequenza (sempre, anche se distanti anni). Cosi' gli archi biografici (S0/S1,
+        #    Origine->Taverna->...->Verdetto) si concatenano e nessun episodio resta isolato.
+        season = sorted([o for o in eps if o.get("stagione") == e.get("stagione") and _date(o)],
+                        key=_date)
+        sids = [o["id"] for o in season]
+        if eid in sids:
+            i = sids.index(eid)
+            if i > 0:
+                add(season[i - 1]["id"], 3, "continuita", "continua da (arco della stagione)")
+            if i < len(sids) - 1:
+                add(season[i + 1]["id"], 3, "continuita", "porta a (arco della stagione)")
 
         # ordina per score, taglia
         ranked = sorted(cand.items(), key=lambda kv: -kv[1][0])[:max_links]
