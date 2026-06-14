@@ -17,6 +17,13 @@ if not defined PYTHON (
     exit /b 1
 )
 
+:: SELF-HEAL RAG (regola 11, automiglioramento): questo task gira ELEVATO, quindi puo'
+:: fare un rebuild esclusivo senza UAC interattivo. rebuild_rag_clean ha un health-gate:
+:: se il RAG e' gia' sano non fa nulla; se e' rotto (0 chunk) ferma api+watchdog,
+:: rigenera e riavvia. Cosi' il semantico si ripara da solo invece di aspettare un click.
+echo [night_research] self-heal RAG (rebuild se vuoto) >> "%LOG%"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%TI_ROOT%\SERVICES\rebuild_rag_clean.ps1" >> "%LOG%" 2>&1
+
 :: topic GUIDATI da STATE + RAG (night_topics.py scrive DATA\night_topics.txt)
 "%PYTHON%" AUTOMATIONS\core\night_topics.py >> "%LOG%" 2>&1
 
