@@ -58,7 +58,7 @@ $stats = & $PY "$TI\NODES\MENTE_RAG\rag_engine.py" --stats 2>$null | Out-String
 $m = [regex]::Match($stats, '"chunks":\s*(\d+)')
 $chunks = if ($m.Success) { [int]$m.Groups[1].Value } else { 0 }
 if ($chunks -gt 0) { Write-Host "  OK: $chunks chunk semantici" -ForegroundColor Green }
-else { Write-Host "  ATTENZIONE: ancora 0 chunk — rilancia o controlla i log" -ForegroundColor Red }
+else { Write-Host "  ATTENZIONE: ancora 0 chunk - rilancia o controlla i log" -ForegroundColor Red }
 
 Write-Host "== 5) riavvio api_server ==" -ForegroundColor Cyan
 Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden
