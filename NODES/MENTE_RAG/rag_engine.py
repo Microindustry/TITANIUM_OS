@@ -61,14 +61,23 @@ def _is_excluded(path: Path) -> bool:
 def _get_collection(reset: bool = False):
     embed_fn = SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
     client   = chromadb.PersistentClient(path=str(CHROMA_DIR))
-    if reset:
-        try: client.delete_collection(COLLECTION)
-        except Exception: pass
-    return client.get_or_create_collection(
+    col = client.get_or_create_collection(
         name=COLLECTION,
         embedding_function=embed_fn,
         metadata={"hnsw:space": "cosine"},
     )
+    if reset:
+        # SVUOTA per-id invece di delete_collection: il collection-level delete cambia
+        # l'uuid e invalida l'handle che l'api (long-running, elevata) tiene aperto ->
+        # "Collection does not exist" + rebuild che muore a metà. Svuotando per-id l'uuid
+        # resta lo stesso: il rebuild gira pulito anche con l'api su (no UAC necessario).
+        try:
+            ids = col.get(include=[]).get("ids", [])
+            for i in range(0, len(ids), 500):
+                col.delete(ids=ids[i:i+500])
+        except Exception:
+            pass
+    return col
 
 # ── TEXT ──────────────────────────────────────────────────────────────────────
 

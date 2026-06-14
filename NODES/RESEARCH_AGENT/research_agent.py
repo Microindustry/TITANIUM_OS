@@ -599,8 +599,8 @@ def main():
     parser.add_argument("--dry-run",      action="store_true", help="Mostra risultati senza salvare")
     parser.add_argument("--enrich",       action="store_true", help="Arricchisci con PDF gratuiti via Unpaywall")
     parser.add_argument("--preset",  "-p", default="", help=f"Usa preset sorgenti per dominio: {', '.join(DOMAIN_PRESETS.keys())}")
-    parser.add_argument("--min-rel", type=float, default=0.34,
-                        help="Soglia rilevanza: frazione minima di keyword query nel risultato (default 0.34, 0=off)")
+    parser.add_argument("--min-rel", type=float, default=0.40,
+                        help="Soglia rilevanza: frazione minima di keyword query nel risultato (default 0.40, 0=off)")
     args = parser.parse_args()
 
     # Preset dominio ha precedenza su --sources se specificato
