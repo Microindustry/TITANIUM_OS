@@ -479,24 +479,6 @@
         "title": "Maggio 2026 — La Svolta Strutturale",
         "tipo": "tema",
         "motivo": "tema: corpo-unico, epoxy-granite"
-      },
-      {
-        "id": "EP_AUTO_010",
-        "title": "Fondamenta d'acciaio TIG",
-        "tipo": "tema",
-        "motivo": "tema: cnc, struttura"
-      },
-      {
-        "id": "EP_01",
-        "title": "La Taverna",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_03",
-        "title": "Il Paradosso",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -716,24 +698,6 @@
         "title": "NeuroMap",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -794,24 +758,6 @@
       {
         "id": "EP_T01",
         "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -927,24 +873,6 @@
         "title": "Il Sistema Pensa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_T03",
-        "title": "VULCAN",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1009,24 +937,6 @@
         "title": "La Biblioteca delle Fonti",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_T04",
-        "title": "SINAPSI",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
       }
     ],
     "evoluzione": {
@@ -1077,18 +987,6 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1447,24 +1345,6 @@
         "title": "Il Dev Flutter Che Non Capiva Perché",
         "tipo": "tema",
         "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
       }
     ],
     "evoluzione": {
@@ -1523,18 +1403,6 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
-      },
-      {
-        "id": "EP_AUTO_015",
-        "title": "Portabilità delle skill: il framework invisibile",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1648,24 +1516,6 @@
       {
         "id": "EP_20260603",
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: milestone, rag"
       }
@@ -1782,24 +1632,6 @@
         "title": "La Tela",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -1868,24 +1700,6 @@
         "title": "La Mente che Parla",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -1947,24 +1761,6 @@
         "title": "L'Esercito",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡6 che questo richiama"
-      },
-      {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡6 che questo richiama"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO",
-        "title": "Il Centro di Controllo — un posto solo da cui governare",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_AV_06",
-        "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -2025,24 +1821,6 @@
         "title": "L'Orchestratore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO",
-        "title": "Il Centro di Controllo — un posto solo da cui governare",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_AV_06",
-        "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -2089,24 +1867,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2165,24 +1925,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2237,24 +1979,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2313,24 +2037,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2385,24 +2091,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2461,24 +2149,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2533,24 +2203,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2609,24 +2261,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2681,24 +2315,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2757,24 +2373,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2829,24 +2427,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2905,24 +2485,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2979,24 +2541,6 @@
         "title": "L'Orchestratore",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -3051,24 +2595,6 @@
       {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -3139,24 +2665,6 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER",
-        "title": "AI News Watcher — restare sul pezzo senza chiavi",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -3205,24 +2713,6 @@
         "title": "Il Documento Master",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "MOM_05_CONFIG_A_G",
-        "title": "Config A→G",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
-        "title": "Il Cervello Ibrido",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -3288,24 +2778,6 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_AV_05_2",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -3354,24 +2826,6 @@
         "title": "L'Esercito",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "MOM_05_CONFIG_A_G",
-        "title": "Config A→G",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
-        "title": "Il Cervello Ibrido",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -3428,24 +2882,6 @@
         "title": "L'Esercito",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "MOM_04_IL_DOCUMENTO_MASTER",
-        "title": "Il Documento Master",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
-        "title": "Il Cervello Ibrido",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -3497,24 +2933,6 @@
         "title": "Basamento traliccio saldato TIG",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3564,24 +2982,6 @@
       {
         "id": "EP_AUTO_03",
         "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3639,24 +3039,6 @@
         "title": "Basamento traliccio saldato TIG",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3710,24 +3092,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3785,24 +3149,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -3856,24 +3202,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -3931,24 +3259,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4002,24 +3312,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4077,24 +3369,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4148,24 +3422,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4223,24 +3479,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4294,24 +3532,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4369,24 +3589,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4440,24 +3642,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4515,24 +3699,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4586,24 +3752,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4661,24 +3809,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4732,24 +3862,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4807,24 +3919,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4878,24 +3972,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4953,24 +4029,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5024,24 +4082,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5099,24 +4139,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5170,24 +4192,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5245,24 +4249,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5316,24 +4302,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5391,24 +4359,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5462,24 +4412,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5537,24 +4469,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5608,24 +4522,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5683,24 +4579,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5754,24 +4632,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5829,24 +4689,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5900,24 +4742,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5975,24 +4799,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6046,24 +4852,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6399,12 +5187,6 @@
         "title": "Dashboard che parla il tuo linguaggio",
         "tipo": "tema",
         "motivo": "tema: cnc, dashboard"
-      },
-      {
-        "id": "EP_AUTO_019",
-        "title": "Dieci atti, un documento master",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -6527,24 +5309,6 @@
         "title": "La View Che Mentiva",
         "tipo": "tema",
         "motivo": "tema: audit, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -6608,24 +5372,6 @@
         "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, flutter, git"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, dashboard, git"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, flutter, git"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, milestone"
       }
     ],
     "evoluzione": {
@@ -6691,24 +5437,6 @@
         "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, bugfix, flutter"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, dashboard, git"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, flutter, git"
       }
     ],
     "evoluzione": {
@@ -6775,24 +5503,6 @@
         "title": "Il Bug che Chiudeva le Porte",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, bugfix, flutter"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: agenti, automazione-notturna, dashboard"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: agenti, dashboard, flutter"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, dashboard"
       }
     ],
     "evoluzione": {
@@ -6857,24 +5567,6 @@
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, bugfix, flutter"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, milestone"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: flutter, git, milestone"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
       }
     ],
     "evoluzione": {
@@ -6930,24 +5622,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7007,24 +5681,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7080,24 +5736,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7157,24 +5795,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7230,24 +5850,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7307,24 +5909,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7380,24 +5964,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7457,24 +6023,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7530,24 +6078,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7607,24 +6137,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7680,24 +6192,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7757,24 +6251,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7830,24 +6306,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7907,24 +6365,6 @@
         "title": "HMI TP900 Comfort acquisito",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7980,24 +6420,6 @@
       {
         "id": "EP_AUTO_02",
         "title": "HMI TP900 Comfort acquisito",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_03",
-        "title": "Basamento traliccio saldato TIG",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_04",
-        "title": "Asse X assemblato (guide+vite+servo)",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_05",
-        "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -8063,24 +6485,6 @@
         "title": "Il Grafo Respira",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, dashboard"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: agenti, automazione-notturna, dashboard"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, dashboard, git"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: agenti, audit, automazione-notturna"
       }
     ],
     "evoluzione": {
@@ -8147,24 +6551,6 @@
         "title": "Il Grafo Respira",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, dashboard"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: agenti, dashboard, flutter"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, flutter, git"
       }
     ],
     "evoluzione": {
@@ -8232,24 +6618,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: audit, bugfix, git"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, git"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: agenti, audit, git"
       }
     ],
     "evoluzione": {
@@ -8312,24 +6680,6 @@
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -8391,24 +6741,6 @@
         "title": "La Dashboard Parla per Te",
         "tipo": "tema",
         "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, bugfix, git"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, bugfix, git"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, milestone"
       }
     ],
     "evoluzione": {
@@ -8477,24 +6809,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, dashboard"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: agenti, audit, git"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: audit, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, dashboard"
       }
     ],
     "evoluzione": {
@@ -8558,24 +6872,6 @@
       },
       {
         "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: agenti, audit, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: agenti, git, markdown"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: agenti, automazione-notturna, git"
-      },
-      {
-        "id": "EP_20260606_31",
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
@@ -8653,24 +6949,6 @@
         "title": "La Prima Automazione",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER",
-        "title": "AI News Watcher — restare sul pezzo senza chiavi",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -8739,24 +7017,6 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
-        "title": "Il Cervello Ibrido",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -8835,24 +7095,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, bugfix, git"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: agenti, git, markdown"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -8929,24 +7171,6 @@
         "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_AV_06",
-        "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -9049,24 +7273,6 @@
         "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
-        "title": "Interrogare la mappa, non i file — query, path, explain",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 1↔2, approfondisce)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
-        "title": "I cammini — come si trova la strada tra due nodi",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 1↔3, approfondisce)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
-        "title": "La modularità — il voto che decide i quartieri",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 1↔3, approfondisce)"
       }
     ],
     "evoluzione": {
@@ -9185,24 +7391,6 @@
         "title": "Da 5000 numeri a una galassia — il t-SNE",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
-      },
-      {
-        "id": "EP_SEED_RETE_L2_UMAP",
-        "title": "t-SNE contro UMAP — due modi di fare la foto",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 2↔4, approfondisce)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
       }
     ],
     "evoluzione": {
@@ -9310,24 +7498,6 @@
         "title": "Chi guardare più spesso — il tier a rotazione 48h",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
-      },
-      {
-        "id": "EP_AV_00",
-        "title": "La Bambina e la Giuntura",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "EP_S0_00",
-        "title": "Il Socio",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -9427,24 +7597,6 @@
         "title": "Meno Parti",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
-      },
-      {
-        "id": "EP_AUTO_008",
-        "title": "Maggio 2026 — La Svolta Strutturale",
-        "tipo": "tema",
-        "motivo": "tema: config-g, corpo-unico"
-      },
-      {
-        "id": "EP_S0_03",
-        "title": "La Formula",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_PILOTA_00",
-        "title": "Il Mondo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -9512,24 +7664,6 @@
         "title": "Il Sistema Pensa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_T04",
-        "title": "SINAPSI",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
-        "tipo": "tema",
-        "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
       }
     ],
     "evoluzione": {
@@ -9598,24 +7732,6 @@
         "title": "La Dashboard",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -9681,24 +7797,6 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -9817,24 +7915,6 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -9954,24 +8034,6 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -10093,24 +8155,6 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 2↔3, approfondisce)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -10227,24 +8271,6 @@
         "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -10344,24 +8370,6 @@
       {
         "id": "EP_AV_06",
         "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -10466,24 +8474,6 @@
         "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -10579,24 +8569,6 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -10706,24 +8678,6 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -10834,24 +8788,6 @@
         "title": "Il Sistema Pensa",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -10960,24 +8896,6 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -11081,24 +8999,6 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -11202,24 +9102,6 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -11315,24 +9197,6 @@
         "title": "I 696 quartieri — la community detection",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
-        "title": "I nodi-dio — le stelle che tengono il grafo",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
-        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L2_MODULARITA",
-        "title": "La modularità — il voto che decide i quartieri",
-        "tipo": "tema",
-        "motivo": "tema: approfondimento, grafo, graphify"
       }
     ],
     "evoluzione": {
@@ -11452,24 +9316,6 @@
         "title": "I nodi-dio — le stelle che tengono il grafo",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
-        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
-        "title": "Interrogare la mappa, non i file — query, path, explain",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 3↔2, alla base di)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
-        "title": "I cammini — come si trova la strada tra due nodi",
-        "tipo": "tema",
-        "motivo": "tema: approfondimento, grafo, graphify"
       }
     ],
     "evoluzione": {
@@ -11580,24 +9426,6 @@
         "title": "Non era un bug di codice, era un bug di stato",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 4↔3, alla base di)"
-      },
-      {
-        "id": "EP_SEED_RETE_L1_TOGGLE",
-        "title": "Due verità dello stesso mondo — il toggle a due sorgenti",
-        "tipo": "evoluzione",
-        "motivo": "evoluzione del concetto (giro 4↔3, alla base di)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
       }
     ],
     "evoluzione": {
@@ -11703,24 +9531,6 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡2 che questo richiama"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "MOM_03_L_ESERCITO",
-        "title": "L'Esercito",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -11809,24 +9619,6 @@
         "title": "L'Esercito",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡6 che questo richiama"
-      },
-      {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡6 che questo richiama"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO",
-        "title": "Il Centro di Controllo — un posto solo da cui governare",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -11941,12 +9733,6 @@
         "title": "Il Direttore",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_AV_FIN_01",
-        "title": "Il Valore — cosa sono davvero i soldi",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -12188,24 +9974,6 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "tema",
         "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_00_2",
-        "title": "Il Segno che Resta",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_05_2",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
       }
     ],
     "evoluzione": {
@@ -12377,24 +10145,6 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "tema",
         "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "tema",
-        "motivo": "tema: memoria, themis"
-      },
-      {
-        "id": "EP_AV_M0_2",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
       }
     ],
     "evoluzione": {
@@ -12484,24 +10234,6 @@
         "title": "Il Socio",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡1 che questo richiama"
-      },
-      {
-        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
-        "title": "Il Cervello Ibrido",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "tema",
-        "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
       }
     ],
     "evoluzione": {
@@ -12592,24 +10324,6 @@
         "title": "L'Incantesimo che si Ripete",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡2 che questo richiama"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "MOM_03_L_ESERCITO",
-        "title": "L'Esercito",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
