@@ -84,9 +84,9 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
       action: () => { onNavigate("storie"); onClose(); },
     },
     {
-      id: "go-rete", label: "GRAFO", desc: "Grafo della conoscenza (RAG) e del sistema (Graphify)", icon: Globe,
-      color: "text-cyan-400", group: "nav", keywords: ["grafo", "rete", "wiki", "rag", "graphify", "connessioni", "graph"],
-      action: () => { onNavigate("rete"); onClose(); },
+      id: "go-rete", label: "GRAFO RAG (legacy)", desc: "Il vecchio grafo RAG/Graphify — il grafo vero ora e' in Obsidian; lo slot e' diventato INVENTARIO", icon: Globe,
+      color: "text-cyan-400", group: "nav", keywords: ["grafo", "rete", "wiki", "rag", "graphify", "connessioni", "graph", "legacy"],
+      action: () => { onNavigate("grafo-rag"); onClose(); },
     },
 
     // ── SISTEMA

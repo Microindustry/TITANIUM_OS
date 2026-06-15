@@ -25,9 +25,9 @@ class GlobalErrorBoundary extends Component<{ children: ReactNode }, { error: Er
 }
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Home, Box, Cpu, Layers, MessageSquare, Mic, GitBranch, Globe,
+  Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain, Sparkles, Gauge, Map,
+  Users, FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Brain, Sparkles, Gauge, Map, Archive,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -53,6 +53,7 @@ const RagChatView        = lazy(() => import("./components/RagChatView").then(m 
 const ControlloView      = lazy(() => import("./components/ControlloView").then(m => ({ default: m.ControlloView })));
 const AvventuraMapView   = lazy(() => import("./components/AvventuraMapView").then(m => ({ default: m.AvventuraMapView })));
 const ProcedimentiView   = lazy(() => import("./components/ProcedimentiView").then(m => ({ default: m.ProcedimentiView })));
+const InventarioView     = lazy(() => import("./components/InventarioView").then(m => ({ default: m.InventarioView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -80,7 +81,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
   { id: "mappa",       label: "MAPPA NINA",  icon: Map,         color: "text-pink-400",   group: "system"  },
-  { id: "rete",        label: "GRAFO",      icon: Globe,         color: "text-cyan-400",   group: "system"  },
+  { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
 
@@ -496,13 +497,14 @@ function AppInner() {
             {view === "pitch"       && <PitchView />}
             {view === "metodo"      && <MetodoView />}
             {view === "mappa"    && <AvventuraMapView />}
-            {view === "rete"     && <RagGraphView />}
+            {view === "rete"     && <InventarioView />}
             {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
             {view === "sinapsi"  && <LayersView />}
             {view === "canvas"   && <CanvasLayout room="home" />}
             {view === "neuro"    && <NeuroOSLayout systemState={sys.state} />}
             {view === "architettura" && <MappaView systemState={sys.state as any} />}
+            {view === "grafo-rag" && <RagGraphView />}
           </Suspense>
         </main>
       </div>
