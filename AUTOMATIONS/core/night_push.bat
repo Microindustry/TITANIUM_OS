@@ -8,6 +8,12 @@ cd /d "%TI_ROOT%"
 
 set "LOG=%TI_ROOT%\DATA\logs\night_push.log"
 
+:: INVENTARIO NOTTURNO: i commit di stanotte -> inventario cumulativo (DOCS),
+:: committato QUI prima del push-check cosi' parte con lo stesso push.
+if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\inventario_notturno.py" >> "%LOG%" 2>&1
+git add DOCS\INVENTARIO_NOTTURNO.md >> "%LOG%" 2>&1
+git diff --cached --quiet -- DOCS\INVENTARIO_NOTTURNO.md || git commit -m "auto: inventario notturno" -- DOCS\INVENTARIO_NOTTURNO.md >> "%LOG%" 2>&1
+
 :: c'e' qualcosa da pushare? Uso un FLAG basato sulla dimensione del file, NON il testo
 :: del commit: i subject con ')' (es. "feat(storie)") chiuderebbero il blocco IF -> errore 255.
 git log origin/main..HEAD --oneline > "%TEMP%\ti_night_log.txt" 2>&1
