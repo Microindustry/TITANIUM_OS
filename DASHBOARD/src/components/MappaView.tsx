@@ -32,7 +32,7 @@ const NODE_ICON: Record<string, string> = {
 // ── DATI SISTEMA ──────────────────────────────────────────────────────────────
 const ROOT_NODE: MapNode = {
   id: "OS", label: "TITANIUM OS", type: "root", status: "active",
-  pillar: "ROOT", desc: "Sistema operativo cognitivo di Matteo Benenati. V32+MIMS+GENESIS+VITA NATURA+IDENTITY.", pct: 48,
+  pillar: "ROOT", desc: "Sistema operativo cognitivo di Matteo Benenati. V32+MIMS+GENESIS+VITA NATURA+IDENTITY.", pct: 51,
 };
 
 const SYSTEM_TREE: MapNode[] = [
@@ -61,7 +61,7 @@ const SYSTEM_TREE: MapNode[] = [
   },
   {
     id: "GENESIS", label: "GENESIS", type: "pillar", status: "active", pillar: "GENESIS",
-    desc: "OS digitale · API Flask · Dashboard React 19 · RAG v4.0+graph · MCP 10 tool · n8n", pct: 55, hasChildren: true,
+    desc: "OS digitale · API Flask · Dashboard React 19 · RAG v4.0+graph · MCP 10 tool · n8n", pct: 70, hasChildren: true,
     children: [
       {
         id:"gen-infra", label:"INFRA", type:"node", status:"active", pillar:"GENESIS", pct:90,

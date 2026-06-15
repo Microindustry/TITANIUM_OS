@@ -1,6 +1,9 @@
-// criticheData.ts | TITANIUM_OS / DASHBOARD | v2.0 | 2026-05-31
+// criticheData.ts | TITANIUM_OS / DASHBOARD | v2.1 | 2026-06-15
 // Critiche, suggerimenti e miglioramenti per progetto — aggiornabile ogni sessione
-// v2.0 — audit Opus 4.8: verifica codice + dati live. tsc --noEmit pulito (exit 0).
+// v2.0 (31/05) — audit Opus 4.8: verifica codice + dati live. tsc --noEmit pulito (exit 0).
+// v2.1 (15/06) — Opus: re-verifica delle 23 attive sul codice attuale + nuova passata "Audit 15/06".
+//   GENESIS pct ri-allineato a 70 (STATE era avanzato, hardcoded fermi a 55 → gc05 chiusa).
+//   + agente NODES/PCT_SYNC/pct_sync.py: tiene le % allineate da STATE (n04 chiusa, au18/gc04 mitigate).
 
 import { type SkillNode, type SkillStatus } from "./skillTreeData";
 
@@ -137,9 +140,9 @@ export const CRITICHE_ROOT: SkillNode = {
             crit("gc03", "CanvasLayout.tsx > 650 righe — monolite", "future",
               "Ogni Room dovrebbe essere un file separato. Refactor quando si aggiunge la prossima sezione."),
             crit("gc04", "Dati duplicati: SYSTEM_TREE in MappaView vs genesisData/mimsData", "active",
-              "Se aggiorni mimsData.ts non si aggiorna MappaView. Unica fonte di verità necessaria."),
-            crit("gc05", "GENESIS pct: TRE valori diversi nel codice", "active",
-              "CORRETTA: STATE.json=10%, MappaView SYSTEM_TREE=83%, CanvasLayout PILLARS_DATA=55%. La sidebar mostra 10 (STATE), la MAPPA mostra 83. Tre fonti, tre numeri. Decidere il valore vero e renderlo unico."),
+              "Se aggiorni mimsData.ts non si aggiorna MappaView. AGGIORNATA 15/06: per le % dei PILASTRI il problema è risolto dall'agente pct_sync (n04). Resta per i dati non-% (struttura nodi/leaf/desc): fonte unica ancora da fare per il resto dell'albero (au18)."),
+            crit("gc05", "GENESIS pct: TRE valori diversi nel codice", "done",
+              "FIXATO Opus 15/06: STATE era avanzato a 70 ma MappaView e PILLARS_DATA erano fermi a 55. Allineati entrambi a 70 (= STATE, fonte live letta dalle card). RESTA la causa-radice au18: sono const a mano non derivate → il drift tornerà al prossimo avanzamento di STATE."),
           ],
         },
 
@@ -160,10 +163,10 @@ export const CRITICHE_ROOT: SkillNode = {
         {
           id: "cr_infra", label: "Infrastruttura", icon: "🔌", status: "active", ...cyan,
           children: [
-            crit("gc10", "n8n: 13 workflow non documentati + architettura contraddittoria", "active",
-              "CONFERMATA + AGGRAVATA: AUTOMATIONS_MASTER.md documenta 28 automazioni PYTHON ma NON i 13 workflow n8n (solo il Content Engine). Inoltre contraddizione architetturale: AUTOMATIONS_MASTER dice n8n su Oracle Cloud (docker-compose + PostgreSQL + Traefik), genesisData dice 'npx n8n locale, dati in ~/.n8n/'. Quale gira davvero?"),
-            crit("gc11", "RAG rebuild necessario dopo questa sessione", "active",
-              "Aggiunti file in MENTE/ senza rag-rebuild. Eseguire: rag-rebuild o /api/rag/rebuild."),
+            crit("gc10", "n8n: 13 workflow non documentati", "active",
+              "AGGIORNATA 15/06: la contraddizione architetturale è RISOLTA — STATE conferma n8n self-hosted LOCALE (binario globale 2.25.6, localhost:5678, no cloud). Resta il gap doc: i 13 workflow non sono documentati da nessuna parte e AUTOMATIONS_MASTER.md è fermo (vedi au16). Esportare i 13 workflow in un indice."),
+            crit("gc11", "RAG semantico a ZERO (chroma) — solo keyword vivo", "active",
+              "AGGRAVATA 15/06: non è più 'rebuild dopo sessione' ma un guasto vero. BM25/keyword ~20044 OK, ma il chroma SEMANTICO = 0: api elevata + watchdog elevato girano sullo stesso ChromaDB e il full rebuild finisce a 0. AZIONE (1 click + UAC): SERVICES/rebuild_rag_clean.ps1. Fix vero: api+watchdog NON elevati. Vedi n02."),
             crit("gc12", "RIAVVIO_SESSIONE.txt aggiornamento manuale", "future",
               "Se si dimentica di aggiornarlo, la sessione successiva parte cieca. Automatizzare via hook post-sessione."),
           ],
@@ -262,7 +265,7 @@ export const CRITICHE_ROOT: SkillNode = {
           id: "cr_audit_pct", label: "Percentuali divergenti", icon: "📊", status: "active", ...amber,
           children: [
             crit("au06", "GENESIS pct: 10 / 55 / 83 — tre numeri", "done",
-              "FIXATO Opus: unificato a 55 ovunque (STATE 10→55, MappaView 83→55, PILLARS_DATA già 55). Il 10 era errore: contava solo i nodi 'done' ignorando le decine 'active' operative."),
+              "FIXATO Opus (31/05): unificato a 55. NB 15/06: STATE è poi avanzato a 70 e i due hardcoded erano rimasti a 55 → ri-allineati a 70 (vedi gc05). Conferma che senza fonte unica (au18) il drift è ricorrente."),
             crit("au07", "IDENTITY pct: 50 vs 35", "done",
               "FIXATO Opus: PILLARS_DATA IDENTITY allineato a 50 (= STATE). Ora STATE/MappaView/PILLARS_DATA concordano su 50."),
             crit("au08", "PILLARS_DATA legacy hardcoded in CanvasLayout", "active",
@@ -302,10 +305,30 @@ export const CRITICHE_ROOT: SkillNode = {
             crit("au20", "STORIE: 11 episodi narrativi recuperati nella dashboard", "done",
               "RISOLTO Opus: scritto CONTENT_ENGINE/scripts/sync_storie.py (parser header markdown, ID univoci anti-collisione, idempotente). Recuperati 6 narrativi S2 (EP_S2_00..05) in stagione ST + 5 MOMENTI (MOM_01..05) in nuova stagione MOM. storieData 64→75 episodi. tsc pulito. NB: scoperta collisione ID (disco EP_S2_00=IL DISTACCO vs storieData EP_S2_00=Gusset) → risolta con ID = stem completo."),
             crit("au18", "Fonte unica di verità: nessuna. SYSTEM_TREE duplica i 3 data file", "active",
-              "MappaView ridefinisce a mano l'intero albero (SYSTEM_TREE) invece di importare genesisData/mimsData/skillTreeData. Ogni modifica va replicata in 2 posti → è la causa-radice di au06-au15. Fix architetturale: MappaView deve consumare i ROOT esistenti, non una copia."),
+              "MappaView ridefinisce a mano l'intero albero (SYSTEM_TREE) invece di importare genesisData/mimsData/skillTreeData. AGGIORNATA 15/06: la parte più velenosa — il pct dei PILASTRI — è ora auto-sanata dall'agente pct_sync (n04), quel drift non torna più. RESTA la duplicazione strutturale dei nodi non-pct (leaf/label/desc): refactor per cui MappaView dovrebbe consumare i ROOT esistenti. Proposta (regola 11)."),
           ],
         },
 
+      ],
+    },
+
+    // ── AUDIT 15/06 — OPUS 4.8 (nuova passata sul sistema attuale) ───────────
+    {
+      id: "cr_audit_0615", label: "Audit 15/06 — Opus", icon: "🛰", status: "active", ...rose,
+      note: "Nuove critiche dalla verifica del sistema reale al 15/06 (post NINA v2 + loop autonomo). Ogni voce è verificata o tracciabile.",
+      children: [
+        crit("n01", "Chiavi API esfiltrabili NON ancora ruotate", "active",
+          "SICUREZZA. Un agente red-team ha dimostrato GET /api/file?path=…\\.env → ANTHROPIC_API_KEY + GITHUB_TOKEN in chiaro (API su Tailscale senza auth). Il fix (denylist .env/_VAULT + fail-closed) è sul branch fix/redteam-s38 NON merged. Finché non mergi+riavvii l'API le chiavi vanno considerate compromesse: RUOTARLE."),
+        crit("n02", "RAG semantico = 0 (chroma) da giorni", "active",
+          "Keyword/BM25 ~20044 OK, vettoriale a 0: api+watchdog elevati corrompono lo stesso ChromaDB → rebuild a 0. Ogni notte story/research scrivono nel semantico morto (Regola 7 spezzata a valle). 1 click: SERVICES/rebuild_rag_clean.ps1 + UAC. Vedi gc11."),
+        crit("n03", "critiche_auto rifira findings vecchi come 'recenti'", "active",
+          "La cartella clinica live (critiche_auto.json) ha voci datate 06-08 con last_seen 06-15: il night_audit a regole legge una finestra tail dei log senza filtro data né auto-close → lo stesso 'night_push.log errore' rifira per una settimana. Stessa classe del night_audit-hallucination. Fix: filtro data + dedup + chiusura automatica quando il log torna pulito."),
+        crit("n04", "Drift % pilastri (STATE ≠ dashboard) — RISOLTO con agente", "done",
+          "RISOLTO 15/06: creato NODES/PCT_SYNC/pct_sync.py — agente di coerenza che riallinea V32/MIMS/GENESIS/VITA/IDENTITY + ROOT(media) dalla FONTE UNICA STATE.json verso MappaView SYSTEM_TREE e PILLARS_DATA. Sostituisce solo cifre (non rompe il TS), idempotente, modi check/fix. Agganciato a sync_dashboard.py: gira a ogni fine sessione se STATE è cambiato → il drift % non torna più da solo. (Primo run reale: corretta ROOT 48→51 rimasta indietro dopo GENESIS→70.)"),
+        crit("n05", "Nina v2: asse_nina 40/153 → 3° backfill in arrivo", "active",
+          "15 episodi EP_N2 sul canone nuovo, ma asse_nina è ancora su ~40 concetti su 153. La decisione 'scalare a 129' è aperta da 4 sessioni senza criterio: ogni episodio nuovo è metadato parziale → backfill futuro (già fatto 2 volte). Decidere: bloccante o parallelo, e documentarlo."),
+        crit("n06", "Agenti-personaggio: teatro residuo nella vista AGENTI", "future",
+          "Gli agenti reali (story/research/audit/watcher/self_improve) girano. I 'personaggi' THEMIS/EVA/AVA/ARIA/NEXUS/TESLA/FORGE sono ancora dichiarati ma non operativi. O li si rende reali o si tolgono dalla vista: oggi è teatro che gonfia la percezione di capacità."),
       ],
     },
 

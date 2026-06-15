@@ -50,7 +50,7 @@ def _run(rel_args: list[str]) -> None:
 
 
 def sync(verbose: bool = False) -> dict:
-    did = {"storie": False, "critiche": False, "desktop": False}
+    did = {"storie": False, "critiche": False, "desktop": False, "pct": False}
     try:
         # 1) STORIE: rebuild episodes.json se un .md episodio è più recente
         ep_dir = BASE / "CONTENT_ENGINE" / "DATABASE" / "episodes"
@@ -75,12 +75,22 @@ def sync(verbose: bool = False) -> dict:
             if cur != src:
                 desk.write_text(src, encoding="utf-8")
                 did["desktop"] = True
+
+        # 4) PERCENTUALI: riallinea i pilastri della dashboard (MappaView + PILLARS_DATA
+        # + ROOT) alla FONTE UNICA STATE.json. Solo se STATE e' cambiato. Agente
+        # NODES/PCT_SYNC/pct_sync.py: sostituisce solo cifre -> non rompe il TS.
+        state = BASE / "BRAIN" / "STATE.json"
+        pstamp = BASE / "DATA" / ".sync_pct.hash"
+        if state.exists() and _changed_by_hash(state, pstamp):
+            _run(["NODES/PCT_SYNC/pct_sync.py", "--fix", "--quiet"])
+            did["pct"] = True
     except Exception:
         pass
     if verbose:
         print(f"sync: storie={'rebuilt' if did['storie'] else 'ok'} · "
               f"critiche={'refreshed' if did['critiche'] else 'ok'} · "
-              f"desktop={'mirrored' if did['desktop'] else 'ok'}")
+              f"desktop={'mirrored' if did['desktop'] else 'ok'} · "
+              f"pct={'synced' if did['pct'] else 'ok'}")
     return did
 
 
