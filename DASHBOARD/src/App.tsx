@@ -268,19 +268,6 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                     Nina
                   </span>
                 </button>
-                <button
-                  onClick={() => onNavigate("avventura-mappa")}
-                  title="Mappa di Nina — le avventure, percorribile a livelli (senza limite di profondità)"
-                  className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-12 pr-3 py-1.5
-                    ${view === "avventura-mappa"
-                      ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
-                      : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
-                >
-                  <Map size={10} className="flex-shrink-0 text-pink-400/80" />
-                  <span className="text-[8px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                    Mappa
-                  </span>
-                </button>
               </>
             )}
           </Fragment>
@@ -496,7 +483,7 @@ function AppInner() {
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "pitch"       && <PitchView />}
             {view === "metodo"      && <MetodoView />}
-            {view === "mappa"    && <AvventuraMapView />}
+            {view === "mappa"    && <MappaView source="nina" systemState={sys.state as any} />}
             {view === "rete"     && <InventarioView />}
             {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}

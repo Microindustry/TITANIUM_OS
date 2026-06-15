@@ -1,8 +1,9 @@
 // MappaView.tsx | TITANIUM_OS | v5.0 | 2026-05-31
 // Cerchi SVG radiali N-livelli — estetica originale, drill controllabile, no force-graph
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { ChevronLeft, Activity } from "lucide-react";
+import { EPISODES, type Episode } from "../data/storieData";
 
 // ── TIPI ─────────────────────────────────────────────────────────────────────
 type NodeStatus = "active" | "building" | "pending" | "future";
@@ -17,6 +18,7 @@ interface MapNode {
 const PILLAR_HEX: Record<string, string> = {
   ROOT: "#10b981", V32: "#10b981", GENESIS: "#06b6d4",
   MIMS: "#f59e0b", VITA_NATURA: "#a78bfa", IDENTITY: "#64748b",
+  NINA: "#ec4899", NINA_TECH: "#22d3ee", NINA_FIN: "#34d399",
 };
 const STATUS_HEX: Record<NodeStatus, string> = {
   active: "#10b981", building: "#f59e0b", pending: "#818cf8", future: "#334155",
@@ -112,6 +114,80 @@ const SYSTEM_TREE: MapNode[] = [
     ],
   },
 ];
+
+// ── ALBERO DI NINA — stessa grafica della mappa-sistema, ma dati VERI da asse_nina ──
+// (riusa la stessa logica data-driven di AvventuraMapView: regioni 0-7 + verticale finanza,
+//  popolate dai concetti top-level reali; i giri di spirale diventano i figli).
+const NINA_REGIONI: Record<number, string> = {
+  0: "LA MATERIA", 1: "LA TRACCIA", 2: "L'OFFICINA CHE GIRA SOLA",
+  3: "LA MENTE CHE PARLA", 4: "LA BIBLIOTECA DELLE FONTI", 5: "LA GRANDE MAPPA",
+  6: "L'ESERCITO SILENZIOSO", 7: "IL DIRETTORE",
+};
+const NINA_FINANZA: Record<number, string> = {
+  1: "IL VALORE", 2: "SPENDERE MENO DI QUANTO ENTRA", 3: "IL CUSCINETTO", 4: "FAR LAVORARE I SOLDI",
+};
+const ninaScritto = (e: Episode) => e.narrativa?.asse_nina?.stato_nina === "adattato";
+
+function buildNinaRegioni(verticale: string, regioni: Record<number, string>, pillarKey: string): MapNode[] {
+  const out: MapNode[] = [];
+  for (const n of Object.keys(regioni).map(Number).sort((a, b) => a - b)) {
+    const eps = EPISODES
+      .filter(e => !e.parent_id
+        && (e.narrativa?.asse_nina?.verticale ?? "tech") === verticale
+        && e.narrativa?.asse_nina?.regione === n)
+      .sort((a, b) => (a.narrativa?.asse_nina?.giro_spirale ?? 1) - (b.narrativa?.asse_nina?.giro_spirale ?? 1));
+    if (!eps.length) continue;
+    const concetti: MapNode[] = eps.map((e): MapNode => {
+      const figli = EPISODES.filter(c => c.parent_id === e.id);
+      return {
+        id: e.id,
+        label: e.narrativa?.asse_nina?.concetto ?? e.title,
+        type: figli.length ? "node" : "leaf",
+        status: ninaScritto(e) ? "active" : "building",
+        pillar: pillarKey,
+        desc: e.sottotitolo ?? e.title,
+        pct: ninaScritto(e) ? 100 : 0,
+        hasChildren: figli.length > 0,
+        isLeaf: figli.length === 0,
+        children: figli.map((c): MapNode => ({
+          id: c.id, label: c.title, type: "leaf", status: "active",
+          pillar: pillarKey, desc: c.sottotitolo ?? c.title, pct: 100, isLeaf: true,
+        })),
+      };
+    });
+    const scritti = eps.filter(ninaScritto).length;
+    out.push({
+      id: `nina-${verticale}-${n}`, label: regioni[n], type: "pillar",
+      status: scritti ? "active" : "building", pillar: pillarKey,
+      desc: `${eps.length} concetti · ${scritti} scritti`,
+      pct: Math.round((scritti / eps.length) * 100),
+      hasChildren: true, children: concetti,
+    });
+  }
+  return out;
+}
+
+function buildNinaTree(): { root: MapNode; tree: MapNode[] } {
+  const tree: MapNode[] = [
+    {
+      id: "nina-tech", label: "TECH · STORIA IA", type: "pillar", status: "active", pillar: "NINA_TECH",
+      desc: "La Materia → Loop → Automazione → LLM → RAG → Wiki → Agenti → Orchestrazione",
+      hasChildren: true, children: buildNinaRegioni("tech", NINA_REGIONI, "NINA_TECH"),
+    },
+    {
+      id: "nina-fin", label: "FINANZA", type: "pillar", status: "active", pillar: "NINA_FIN",
+      desc: "Il Valore → Spendere meno di quanto entra → Il Cuscinetto → Far lavorare i soldi",
+      hasChildren: true, children: buildNinaRegioni("finanza", NINA_FINANZA, "NINA_FIN"),
+    },
+  ];
+  return {
+    root: {
+      id: "NINA", label: "NINA", type: "root", status: "active", pillar: "NINA",
+      desc: "La mappa di Nina — il viaggio sul sapere, percorribile a livelli.",
+    },
+    tree,
+  };
+}
 
 // ── SVG NODO CENTRALE ─────────────────────────────────────────────────────────
 function CenterNode({ node, cx, cy, r, isBack, onClick }: {
@@ -267,11 +343,16 @@ function DetailPanel({ node, onClose, onDrill }: {
 }
 
 // ── COMPONENTE PRINCIPALE ─────────────────────────────────────────────────────
-export function MappaView({ systemState }: { systemState: any }) {
+export function MappaView({ systemState, source = "system" }: { systemState?: any; source?: "system" | "nina" }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dims, setDims]     = useState({ w: 800, h: 600 });
   const [stack, setStack]   = useState<MapNode[]>([]);
   const [selected, setSelected] = useState<MapNode | null>(null);
+
+  // source="nina" -> stessa grafica radiale, ma alimentata dai dati di Nina (asse_nina)
+  const nina = useMemo(() => buildNinaTree(), []);
+  const rootNode = source === "nina" ? nina.root : ROOT_NODE;
+  const baseTree = source === "nina" ? nina.tree : SYSTEM_TREE;
 
   useEffect(() => {
     const el = containerRef.current;
@@ -291,11 +372,11 @@ export function MappaView({ systemState }: { systemState: any }) {
 
   const level      = stack.length;
   const current    = stack[level - 1] ?? null;
-  const centerNode = current ?? ROOT_NODE;
+  const centerNode = current ?? rootNode;
 
   // Aggiorna pct dai dati live
   const pillars = systemState?.pillars ?? {};
-  const rawChildren = current?.children ?? SYSTEM_TREE;
+  const rawChildren = current?.children ?? baseTree;
   const children = rawChildren.map(n => {
     const p = pillars[n.id];
     return p ? { ...n, pct: p.pct_complete ?? n.pct } : n;
@@ -336,7 +417,7 @@ export function MappaView({ systemState }: { systemState: any }) {
           <button onClick={() => { setStack([]); setSelected(null); }}
             className="flex items-center gap-1 w-full text-left mb-0.5">
             <span className={`text-[8px] font-mono truncate transition-colors ${level === 0 ? "text-emerald-400 font-bold" : "text-slate-600 hover:text-slate-400"}`}>
-              🧭 sistema
+              {source === "nina" ? "✨ nina" : "🧭 sistema"}
             </span>
           </button>
           {stack.map((node, i) => {
