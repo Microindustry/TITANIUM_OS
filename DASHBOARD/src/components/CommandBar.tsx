@@ -74,9 +74,9 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
   const CMDS: Cmd[] = [
     // ── NAVIGAZIONE
     {
-      id: "go-mappa", label: "MAPPA", desc: "Naviga l'ecosistema — cerchi radiali, drill-down infinito", icon: GitBranch,
-      color: "text-emerald-400", group: "nav", keywords: ["mappa", "ecosystem", "nodi", "drill"],
-      action: () => { onNavigate("mappa"); onClose(); },
+      id: "go-mappa", label: "ARCHITETTURA (sistema)", desc: "La vecchia mappa di sistema — ecosistema, cerchi radiali, drill-down", icon: GitBranch,
+      color: "text-emerald-400", group: "nav", keywords: ["architettura", "mappa", "ecosystem", "nodi", "drill", "sistema"],
+      action: () => { onNavigate("architettura"); onClose(); },
     },
     {
       id: "go-storie", label: "STORIE", desc: "Episodi podcast + dataset fine-tuning", icon: Mic,

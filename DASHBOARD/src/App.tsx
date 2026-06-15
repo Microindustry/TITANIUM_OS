@@ -71,7 +71,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "genesis",  label: "GENESIS",  icon: Cpu,           color: "text-cyan-400",   group: "pillars", dot: "bg-cyan-400"    },
   { id: "mims",     label: "MIMS",     icon: Layers,        color: "text-amber-400",  group: "pillars", dot: "bg-amber-400"   },
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
-  { id: "identity", label: "IDENTITY", icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
+  { id: "identity", label: "CV",       icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
   // Sistema
   { id: "controllo",   label: "CONTROLLO",   icon: Gauge,         color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
@@ -79,7 +79,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "agenti",      label: "AGENTI",      icon: Users,         color: "text-indigo-400", group: "system", dot: "bg-indigo-400"  },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
-  { id: "mappa",       label: "ARCHITETTURA", icon: GitBranch,   color: "text-emerald-400",group: "system"  },
+  { id: "mappa",       label: "MAPPA NINA",  icon: Map,         color: "text-pink-400",   group: "system"  },
   { id: "rete",        label: "GRAFO",      icon: Globe,         color: "text-cyan-400",   group: "system"  },
   { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
@@ -495,13 +495,14 @@ function AppInner() {
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "pitch"       && <PitchView />}
             {view === "metodo"      && <MetodoView />}
-            {view === "mappa"    && <MappaView systemState={sys.state as any} />}
+            {view === "mappa"    && <AvventuraMapView />}
             {view === "rete"     && <RagGraphView />}
             {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
             {view === "sinapsi"  && <LayersView />}
             {view === "canvas"   && <CanvasLayout room="home" />}
             {view === "neuro"    && <NeuroOSLayout systemState={sys.state} />}
+            {view === "architettura" && <MappaView systemState={sys.state as any} />}
           </Suspense>
         </main>
       </div>
