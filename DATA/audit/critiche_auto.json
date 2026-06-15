@@ -9,7 +9,7 @@
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-14"
+    "last_seen": "2026-06-15"
   },
   {
     "id": "AUD-80dfddf5cc",
@@ -320,8 +320,10 @@
     "finding": "V32 è al 65% ma ha due blocker fisici indipendenti aperti da più sessioni: mandrino 2.2kW ER20 (prerequisito fresatura stampi MIMS) e decisione silent blocks v.A/v.B (prerequisito V8). Nessuno dei 100 commit degli ultimi 7 giorni tocca V32 o MIMS. Il pilastro fisico si sta congelandoun mentre quello software cresce.",
     "azione": "Aprire ordine mandrino oggi: è una decisione di acquisto, non tecnica. Per i silent blocks, fissare un criterio di scelta entro questa sessione (es. misura vibrazione attesa vs costo) e chiudere il blocker con una decisione documentata, anche se è 'v.A senza per ora'.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-10"
+    "status": "resolved",
+    "last_seen": "2026-06-10",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-da2427a331",
@@ -332,8 +334,10 @@
     "finding": "Entrambi i log di ricerca (night_research e research_agent) mostrano rate-limit + ricerca a vuoto + errore esplicito nella stessa notte. Il watcher è keyless (v1 by design) ma attacca sorgenti con limiti stretti. Con 100 commit in 7 giorni il sistema sta crescendo ma il modulo ricerca è il più fragile e produce rumore senza valore.",
     "azione": "Controllare quale sorgente specifica genera il rate-limit (GitHub API anonima o RSS). Aggiungere backoff esponenziale e cache 'già scaricato oggi' se assenti. Valutare di anticipare il task 'Schedulare night_ai_watch ogni 48h' proprio per ridurre la frequenza di hit sulle sorgenti fragili.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-10"
+    "status": "resolved",
+    "last_seen": "2026-06-10",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c13e4e1a22",
@@ -344,8 +348,10 @@
     "finding": "4 agenti su 4 hanno guasti stanotte: story_agent (crash+errore esplicito), night_push (crash+errore esplicito), night_research e research_agent (rate-limit+ricerca a vuoto+errore esplicito su entrambi). L'intera pipeline notturna è in stato di guasto multiplo simultaneo, non degradazione parziale.",
     "azione": "Aprire i 4 log prima di qualsiasi altra attività: identificare se night_push è crashato DOPO story_agent (catena di dipendenza) o in parallelo. Se night_push ha fallito, verificare che b6aca47 sia effettivamente su remoto e non solo locale. Poi isolare il rate-limit su research: quale sorgente, quante notti consecutive colpita.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-10"
+    "status": "resolved",
+    "last_seen": "2026-06-10",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7b8585d0ae",
@@ -356,8 +362,10 @@
     "finding": "La schedulazione di `night_ai_watch.bat` ogni 48h richiede UAC ed è esplicitamente in bussola_open come 'prossimo step'. Con il watcher che stanotte ha prodotto rate-limit e ricerca a vuoto, girare ogni 24h su sorgenti limitate è la causa diretta del degrado — non è un'ottimizzazione futura, è la correzione del guasto attuale.",
     "azione": "Schedulare il task a 48h con Task Scheduler in questa sessione (richiede UAC, fare mentre si è fisicamente alla macchina): questo dimezza il carico sulle sorgenti keyless e riduce la probabilità di rate-limit notturni ricorrenti.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-10"
+    "status": "resolved",
+    "last_seen": "2026-06-10",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-73793bf5df",
@@ -368,8 +376,10 @@
     "finding": "night_push ha un crash/errore esplicito: se il push notturno è fallito, il commit b6aca47 'auto: story_agent - episodi generati 10/06/2026' potrebbe non essere su remoto. Il git_head indicato nel report coincide con quel commit automatico, ma l'audit non può verificare autonomamente lo stato del remoto.",
     "azione": "Eseguire subito `git status` e `git log --oneline origin/main..HEAD` per verificare quanti commit sono rimasti locali. Se ci sono commit non pushati, eseguire push manuale prima di iniziare la sessione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-10"
+    "status": "resolved",
+    "last_seen": "2026-06-10",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-5af1bc5b23",
@@ -380,8 +390,10 @@
     "finding": "6 file contengono path hardcoded `C:\\Users\\benen` — violazione esplicita della regola di portabilità del sistema, già documentata in bussola_open. Con la macchina fissa 'teo' come riferimento in CLAUDE.md v4.1.0, questi file sono bombe a orologeria: qualsiasi esecuzione notturna su un path diverso produce silenziosamente risultati sbagliati o crash.",
     "azione": "Listare i 6 file con `grep -r 'benen' --include='*.py' --include='*.bat' --include='*.ps1' --include='*.yaml' -l` e sostituire con variabile dinamica (`%USERPROFILE%` o `os.path.expanduser`) in un singolo commit atomico. Priorità alta perché i crash notturni potrebbero avere questa radice.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-10"
+    "status": "resolved",
+    "last_seen": "2026-06-10",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-fef36bb20e",
@@ -392,8 +404,10 @@
     "finding": "Il grafo Graphify ha 5966 nodi sul repo ma il passo successivo (grafo semantico di BRAIN/ via skill) non è ancora schedulato né ha un criterio di completamento misurabile. Graphify è indicato come 'candidato backend vista RETE' ma la vista RETE esiste già con toggle sorgente (commit e6df71b): se il grafo semantico non viene valutato entro 1-2 sessioni, il toggle rimane in uno stato indeterminato e la decisione architetturale RETE=grafo vs RETE=RAG-coseno rimane aperta.",
     "azione": "Definire in STATE un criterio binario per la valutazione: es. 'Graphify è backend RETE se query su BRAIN/ restituisce risultati più rilevanti di RAG su 3 domande campione'. Eseguire il test nella prossima sessione. Decidere e chiudere il toggle.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-09"
+    "status": "resolved",
+    "last_seen": "2026-06-09",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-f581176aea",
@@ -404,8 +418,10 @@
     "finding": "4 log su 4 mostrano errori stanotte: story_agent.log e night_push.log hanno crash/eccezioni E errori espliciti. Eppure il commit 2290cdc risulta pushato. O il push è parziale/silenzioso, o la logica di retry maschera i fallimenti restituendo exit code 0. I log di night_research e research_agent mostrano rate-limit + ricerca a vuoto + errore esplicito simultanei: la pipeline non ha backoff né fallback sorgente.",
     "azione": "Aprire story_agent.log e night_push.log, leggere la traceback completa. Verificare che il commit 2290cdc contenga episodi reali e non un file vuoto/vecchio. Aggiungere exit code non-zero esplicito ai .bat in caso di eccezione, così Task Scheduler registra il fallimento invece di mostrare verde.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-09"
+    "status": "resolved",
+    "last_seen": "2026-06-09",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-de9dd87629",
@@ -416,8 +432,10 @@
     "finding": "Entrambi i log di ricerca (night_research + research_agent) registrano rate-limit, ricerca a vuoto ed errore esplicito nella stessa notte. Il watcher AI News è keyless per scelta (GitHub + RSS + YouTube senza API key), ma la combinazione dei tre segnali indica che la maggior parte delle query notturne non produce output utile. I chunk RAG crescono (6764) ma se la ricerca notturna fallisce sistematicamente, l'indice si arricchisce solo di contenuto vecchio.",
     "azione": "Controllare quanti articoli effettivamente indicizzati stanotte vs. tentativi. Implementare backoff esponenziale su rate-limit e skip+log su sorgente vuota invece di errore bloccante. Schedulare night_ai_watch.bat (già in bussola) è prerequisito per avere una sorgente alternativa affidabile.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-09"
+    "status": "resolved",
+    "last_seen": "2026-06-09",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-cae2ab4af9",
@@ -428,8 +446,10 @@
     "finding": "La schedulazione di night_ai_watch.bat ogni 48h (richiede UAC + Task Scheduler) è in bussola da almeno una sessione ma non è stata eseguita. Questa non è una feature opzionale: è il prerequisito per avere il watcher AI News funzionante con dati freschi. I log di stanotte mostrano già ricerca a vuoto — senza scheduling il watcher esiste solo come codice morto.",
     "azione": "Aprire Task Scheduler con privilegi admin, registrare night_ai_watch.bat con trigger ogni 48h. Se UAC è il blocco reale, usare restart_api.ps1 come modello (già ha auto-UAC, commit 3258887). Fatto in 15 minuti, attiva una pipeline che oggi non gira.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-09"
+    "status": "resolved",
+    "last_seen": "2026-06-09",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a2ebe976b1",
@@ -440,8 +460,10 @@
     "finding": "In bussola_open appare ancora '**Path hardcoded `C:\\Users\\benen`** ⚠ in 6 file'. Il CLAUDE.md è stato aggiornato alla macchina fissa (commit 8f0ea22) ma i 6 file legacy non sono stati de-hardcodati. Su PC fisso (utente teo) questi path rompono silenziosamente qualsiasi automazione che li attraversi — incluse quelle notturne appena crashate.",
     "azione": "grep ricorsivo su tutto il repo per 'benen', lista i 6 file, sostituire con variabile d'ambiente %USERPROFILE% o con la risoluzione dinamica già usata in _resolve_claude.bat. Fatto in una sessione breve, sblocca stabilità delle notturne.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-09"
+    "status": "resolved",
+    "last_seen": "2026-06-09",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-8e75cba2de",
@@ -452,8 +474,10 @@
     "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è presente da almeno 2 sessioni e V32 è fermo al 65%. Il pilastro ha il punteggio più alto tra quelli fisici ma la fresatura stampi MIMS è esplicitamente bloccata da un acquisto non ancora effettuato. Non è un problema tecnico: è una decisione non presa che congela lavoro reale.",
     "azione": "Entro la sessione: verificare disponibilità e prezzo mandrino (Teknomotor, HSD, o equivalente ER20 2.2kW), inserire ordine o fissare data ordine in STATE.json come campo 'mandrino_order_date'. Stessa logica per silent blocks: decidere v.A vs v.B oggi, mettere la decisione in STATE così non ricompare come blocker aperto.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-09"
+    "status": "resolved",
+    "last_seen": "2026-06-09",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-edd491cd60",
@@ -513,7 +537,7 @@
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-14"
+    "last_seen": "2026-06-15"
   },
   {
     "id": "AUD-2ed0757892",
@@ -572,8 +596,10 @@
     "finding": "story_agent.log: rilevato crash/eccezione nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/story_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-08"
+    "status": "resolved",
+    "last_seen": "2026-06-08",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0548e46fdd",
@@ -596,8 +622,10 @@
     "finding": "Il mandrino 2.2kW ER20 è prerequisito bloccante per la fresatura stampi MIMS, pilastro al 30% — il più basso di tutto il sistema. Non è un reminder: è un collo di bottiglia fisico che blocca qualsiasi avanzamento hardware. Nessun commit MIMS negli ultimi 7 giorni conferma lo stallo.",
     "azione": "Entro oggi: emettere ordine mandrino o identificare fornitore con lead-time. Parallelamente, sbloccare la decisione silent blocks v.A vs v.B — sono due blockers separati sullo stesso pilastro, lasciarli aperti insieme è il modo più rapido per tenere MIMS fermo a 30% indefinitamente.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-07"
+    "status": "resolved",
+    "last_seen": "2026-06-07",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-acb07023f5",
@@ -608,8 +636,10 @@
     "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerca a vuoto ed errore esplicito — tripla failure nella stessa run. Il RAG cresce (6693 chunk) ma l'ingestion notturna di nuova conoscenza è di fatto bloccata. Il sistema si auto-nutre male.",
     "azione": "Verificare quale sorgente ha scatenato il rate-limit (probabile arXiv o Semantic Scholar). Implementare backoff esponenziale + rotazione sorgenti nel research_agent. Controllare quanti topic notturni hanno prodotto 0 chunk nuovi nelle ultime 3 notti — se trend, il RAG è stagnante nonostante il numero alto.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-07"
+    "status": "resolved",
+    "last_seen": "2026-06-07",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a7179fdc41",
@@ -620,8 +650,10 @@
     "finding": "story_agent.log ha crash/eccezione + errore esplicito la stessa notte in cui auto_commit mostra 'episodi generati 07/06/2026'. Il commit esiste ma il log segnala crash: probabile generazione parziale o episodi corrotti scritti su episodes.json prima dell'eccezione. Precedente: gli stessi sintomi avevano prodotto 27 episodi orfani (commit 3627911).",
     "azione": "Eseguire audit_episodes.py adesso e confrontare count dashboard con n_episodes=112. Se divergono, isolare gli episodi scritti stanotte e verificare JSON valido. Aggiungere validazione schema post-scrittura nello story_agent prima del sync.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-07"
+    "status": "resolved",
+    "last_seen": "2026-06-07",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6a65c1c1c8",
@@ -632,8 +664,10 @@
     "finding": "Critiche=quest e MAPPA=mondo sono listati come collegamento da fare per P2, ma CriticheSection e MappaView esistono già nella dashboard (commit 037a559, 8baf2ff). Il rischio è che EP_AV_01..04 vengano generati senza grounding sulla mappa-mondo, replicando il problema degli episodi orfani già vissuto (commit 3627911): episodi narrativamente disconnessi che poi richiedono recupero manuale.",
     "azione": "Prima di generare EP_AV_01, completare il collegamento Critiche→quest e MAPPA→mondo come contesto obbligatorio per lo story_agent AVVENTURA. Trattare questo come prerequisito di generazione, non come task parallelo.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-07"
+    "status": "resolved",
+    "last_seen": "2026-06-07",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-4d536633e5",
@@ -644,8 +678,10 @@
     "finding": "night_push.log riporta crash/eccezione + errore esplicito: il commit automatico notturno ha fallito. Con 121 commit in 7 giorni il push notturno è infrastruttura critica — se cade, il lavoro delle automazioni non entra nel repo e la continuità sessione si rompe silenziosamente.",
     "azione": "Aprire night_push.log, isolare l'eccezione esatta (exit code, messaggio). Verificare che git HEAD 80af36c sia effettivamente su remote. Aggiungere alert esplicito in TI_NightAudit se night_push.log contiene 'error|exception' — oggi l'anomalia è stata silenziosa.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-07"
+    "status": "resolved",
+    "last_seen": "2026-06-07",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-29ebcd4044",
@@ -656,8 +692,10 @@
     "finding": "MiniMax M3 è listato come next_step ('cablare nel toggle chat') ma richiede una key OpenRouter in _VAULT non ancora inserita. Qwen locale è acceso (model_ready=true) ma EP_AV_01..04 dipende anche dalla rifinitura su M3. Il binario AVVENTURA è lanciato senza il suo tool di rifinitura operativo — rischio di produrre bozze non rifinibili in pipeline.",
     "azione": "Recuperare la key OpenRouter, inserirla in _VAULT, verificare che il toggle chat la legga correttamente prima di avviare EP_AV_01. Non avviare produzione episodi in pipeline se un nodo della catena di qualità è offline.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-07"
+    "status": "resolved",
+    "last_seen": "2026-06-07",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-e5e805d3cd",
@@ -668,8 +706,10 @@
     "finding": "Il conteggio episodi è regredito: 114 (post-commit 3627911 del recupero orfani) → 108 attuali (-6 episodi). Contemporaneamente story_agent ha crashato stanotte. Esiste un pattern ricorrente di perdita/desync episodi già visto tre volte (commit 68b5ea5, 3627911, 993dab8 sono tutti fix alla stessa classe di problema). Il fix non è strutturalmente risolto.",
     "azione": "Il problema radice è l'assenza di un lock su episodes.json durante la scrittura concorrente (story_agent scrive, altri processi leggono/modificano). Implementare file lock atomico (write-to-temp + rename) oppure una coda di scrittura serializzata. Aggiungere un check nel night_push che blocchi il push se `audit_episodes.py` rileva desync.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-06"
+    "status": "resolved",
+    "last_seen": "2026-06-06",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7abc0a7f75",
@@ -680,8 +720,10 @@
     "finding": "V32 è al 65% ma ha due blocker hardware concreti e non datati: mandrino 2.2kW ER20 (prerequisito fresatura stampi MIMS) e decisione silent blocks v.A vs v.B (prerequisito V8). Entrambi sono listati come blocker da sessioni precedenti senza data di risoluzione attesa. Con MIMS a 30%, il collo di bottiglia fisico sta limitando il pilastro più debole del sistema.",
     "azione": "Nella prossima sessione: (1) aprire un ordine effettivo per il mandrino o fissare una data entro cui ordinarlo — smettere di trattarlo come 'da fare' generico; (2) decidere v.A vs v.B sui silent blocks con un criterio (costo/tempo/performance) e commitare la decisione in STATE.json come `decision_log`, non come blocker eterno.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-06"
+    "status": "resolved",
+    "last_seen": "2026-06-06",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6577a00afd",
@@ -692,8 +734,10 @@
     "finding": "Ollama + Qwen2.5-7B è identificato come prossimo passo da almeno una sessione (P4b committato, decisione Matteo pendente) ma la leva locale non è ancora accesa. Nel frattempo story_agent e research_agent girano con l'LLM di default (probabilmente API esterna a costo) o degradati. Ogni notte senza Ollama locale è costo API + latenza + dipendenza da rete.",
     "azione": "Eseguire `ollama pull qwen2.5:7b-instruct-q4_K_M` alla prossima sessione — 10 minuti di azione, zero decisioni architetturali da prendere. Il file `fix(llm-local): opener senza proxy` (6ebe54e) è già committato: il codice è pronto, manca solo il modello sul disco.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-06"
+    "status": "resolved",
+    "last_seen": "2026-06-06",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-5fe479ee04",
@@ -704,8 +748,10 @@
     "finding": "story_agent.log ha crash/eccezione + errore esplicito. Nonostante questo, il commit de19d33 mostra 'episodi generati 06/06/2026' — il push di storie è avvenuto ma il processo ha crashato a metà. Questo indica che alcuni episodi potrebbero essere incompleti, malformati o non sincronizzati in episodes.json (problema già visto con i 27 episodi orfani recuperati in 3627911).",
     "azione": "Eseguire `audit_episodes.py` adesso per verificare che tutti gli episodi su disco siano in dashboard. Controllare il conteggio: da 114 episodi (post-recupero 3627911) si è a 108 — si sono persi 6 episodi. Trovare la regressione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-06"
+    "status": "resolved",
+    "last_seen": "2026-06-06",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-424fc914d9",
@@ -716,8 +762,10 @@
     "finding": "night_push.log registra crash/eccezione + errore esplicito: il push notturno ha fallito. Se il commit de19d33 è visibile su git_head è perché esiste in locale, ma la sincronizzazione remota è a rischio. Con 134 commit in 7 giorni e automazioni notturne come backbone, un push fallito significa divergenza silente tra locale e origin.",
     "azione": "Aprire night_push.log, leggere lo stack trace, verificare `git status` + `git log origin/main..HEAD`. Se ci sono commit non pushati, eseguire push manuale ora. Poi correggere lo script: aggiungere exit-code check e alert su EVA inbox in caso di fallimento.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-06"
+    "status": "resolved",
+    "last_seen": "2026-06-06",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-382978b509",
@@ -728,8 +776,10 @@
     "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, timeout, ricerche a vuoto ed errori espliciti — tutte e 4 le categorie di guasto in una sola notte. Il ciclo notturno di research sta girando ma producendo zero output utile, consumando tempo di esecuzione e inquinando potenzialmente il RAG con chunk vuoti o parziali.",
     "azione": "Aggiungere un gate di qualità a monte: se fetch fallisce per rate-limit/timeout, lo script deve skippare la sorgente e loggare `SKIP` invece di procedere. Controllare quanti chunk sono stati aggiunti al RAG stanotte (delta da 6518→6584 = 66 chunk: verificare che non siano stub vuoti con `rag_inspector.py` o query test sul canone).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-06"
+    "status": "resolved",
+    "last_seen": "2026-06-06",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-e41e59c419",
@@ -740,8 +790,10 @@
     "finding": "129 commit in 7 giorni (media 18/giorno) con il milestone EVA WhatsApp pilot ancora in next_step e non in active_milestone. La velocità di commit è alta ma il focus è frammentato su 6+ fronti simultanei (EVA, RAG, storie, portabilità, watchdog, PITCH). Il rischio concreto è che nessuno dei fronti raggiunga uno stato 'done and stable' prima che venga aperto il successivo.",
     "azione": "Prima della sessione odierna, scegliere UN solo output consegnabile entro 48h tra: (1) EVA WhatsApp pilot con credenziali reali, (2) watchdog sul fisso stabile, (3) PITCH finalizzato. Congelare gli altri in STATE.parked fino al completamento del primo.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-05"
+    "status": "resolved",
+    "last_seen": "2026-06-05",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-d6390fac74",
@@ -752,8 +804,10 @@
     "finding": "Il contatore chunk è sceso da 6518 (STATE del 3/06) a 6507 stanotte: -11 chunk. Con la pipeline di ricerca in crash totale e nessun ingestion riuscita, il RAG non cresce ma regredisce. Se la pulizia automatica dei duplicati è aggressiva e l'ingestion fallisce, il delta diventa negativo in modo silenzioso.",
     "azione": "Verificare se il calo è dovuto a dedup/pruning o a un bug di reindexing. Aggiungere un assert nel task notturno: se chunk_count < chunk_count_precedente di oltre il 2%, abortire e loggare CRITICAL invece di sovrascrivere l'indice.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-05"
+    "status": "resolved",
+    "last_seen": "2026-06-05",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-cdeebaeab3",
@@ -764,8 +818,10 @@
     "finding": "Il blocker 'silent blocks v.A vs v.B' è aperto senza criterio di chiusura: è una decisione binaria (senza / 18mm) che blocca V8 ma non ha un owner né una deadline. Decisioni di design meccanico lasciate aperte in STATE degradano in paralisi per overthinking.",
     "azione": "Definire il criterio di scelta in 30 minuti: stimare la frequenza di risonanza attesa della struttura con e senza silent block. Se non si ha un modello FEM, decidere empiricamente con v.B (18mm) come default conservativo e loggare la rationale in DOCS. Chiudere il blocker.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-05"
+    "status": "resolved",
+    "last_seen": "2026-06-05",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ccca297c5d",
@@ -776,8 +832,10 @@
     "finding": "Il pilastro V32 è al 65% ma il mandrino 2.2kW ER20 non è ancora ordinato e blocca l'intera fresatura stampi MIMS. Non è un blocker generico: senza quel componente fisico nessun avanzamento su MIMS (30%) è possibile. Il pilastro MIMS è già il più basso del sistema e dipende da un'azione di acquisto che non ha una data.",
     "azione": "Entro oggi: trovare fornitore (es. Teknomotor, HSD, o usato eBay industriale), ottenere preventivo, inserire data di consegna stimata in STATE.blockers. Trasformare il blocker da 'da ordinare' a 'ordinato il GG/MM, consegna stimata GG/MM'.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-05"
+    "status": "resolved",
+    "last_seen": "2026-06-05",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-1f6ee60ef7",
@@ -788,8 +846,10 @@
     "finding": "4 log su 4 mostrano errori espliciti stanotte: night_research, research_agent, story_agent e night_push hanno tutti crash/eccezione + errore esplicito. La pipeline notturna non ha completato un ciclo pulito. Il commit c6b0d86 aveva già fixato exit 255 su night_push, ma il log mostra crash ancora attivi: il fix non ha chiuso il problema o ne ha esposto uno nuovo.",
     "azione": "Aprire night_push.log e story_agent.log, isolare lo stacktrace dell'eccezione, verificare se il crash di story_agent blocca il push a valle. Se sì, aggiungere try/except con exit code 0 sullo story_agent per non interrompere la catena.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-05"
+    "status": "resolved",
+    "last_seen": "2026-06-05",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-09d16b31c6",
@@ -800,7 +860,9 @@
     "finding": "night_research.log e research_agent.log presentano contemporaneamente rate-limit, timeout di rete, ricerca a vuoto ed errore esplicito — tutti e quattro i tipi di fallimento nella stessa notte. I commit recenti (gate di rilevanza, topic dinamici da STATE) hanno aggiunto logica ma non retry/backoff. Il RAG si nutre di questi agenti: se la ricerca è a vuoto stanotte, i chunk non crescono e il delta 6507→6518 di ieri non si replica.",
     "azione": "Implementare exponential backoff (3 tentativi, delay 5-30s) sulle chiamate HTTP in research_agent.py e night_research.py. Aggiungere un flag 'partial_success' nel log così il brief mattutino distingue 'zero articoli' da 'crash totale'.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-05"
+    "status": "resolved",
+    "last_seen": "2026-06-05",
+    "resolved_on": "2026-06-15",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   }
 ]

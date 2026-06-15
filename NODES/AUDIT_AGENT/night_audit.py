@@ -1,4 +1,8 @@
-# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.1 | 2026-06-11
+# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.2 | 2026-06-15
+# v1.2: cartella clinica AUTO-PULENTE (fix n03) — una critica non più osservata da
+#       AUTO_CLOSE_DAYS giorni si auto-chiude (status=resolved) e si RIAPRE da sola
+#       se il guasto ritorna. Stop alle critiche che restano "aperte" per settimane
+#       anche quando il log è tornato pulito.
 # v1.1: log scan evidence-based — filtro 36h per riga (le righe ereditano la data
 #       più vicina), \bERROR\b non matcha più "errore", segnali con riga+data,
 #       prompt Sonnet vincolato all'estratto (fix falso "doppio crash" AUD-f6721639a6)
@@ -47,6 +51,7 @@ BUSSOLA_TODOS = AUDIT_DIR / "bussola_todos.json"       # estratto strutturato pe
 
 MODEL     = "claude-sonnet-4-6"   # economico, NO Opus (regola #4)
 TODAY     = datetime.now().strftime("%Y-%m-%d")
+AUTO_CLOSE_DAYS = 4   # una critica non ri-osservata da N giorni -> auto-resolved (riapre se ritorna)
 
 # Pattern di guasto cercati nei log della catena notturna
 # NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
@@ -297,11 +302,17 @@ def append_critiche(new: list[dict], signals: dict) -> dict:
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     existing = _read_json(CRITICHE, [])
     by_id = {c["id"]: c for c in existing if "id" in c}
+    new_cids = set()
     added = 0
     for c in new:
         cid = _cid(c)
+        new_cids.add(cid)
         if cid in by_id:
-            by_id[cid]["last_seen"] = TODAY          # gia' nota: aggiorna data
+            by_id[cid]["last_seen"] = TODAY          # ri-osservata stanotte
+            if by_id[cid].get("status") != "open":   # era chiusa -> il guasto è tornato: RIAPRI
+                by_id[cid]["status"] = "open"
+                by_id[cid].pop("resolved_on", None)
+                by_id[cid].pop("resolved_by", None)
             continue
         by_id[cid] = {
             "id": cid, "date": TODAY, "git": signals["git_head"],
@@ -311,9 +322,22 @@ def append_critiche(new: list[dict], signals: dict) -> dict:
             "status": "open", "last_seen": TODAY,
         }
         added += 1
+    # AUTO-CLOSE: una critica "open" non ri-osservata in questo giro e ferma da
+    # AUTO_CLOSE_DAYS giorni è considerata risolta (il log è tornato pulito). Non si
+    # cancella — resta nello storico come resolved e RIAPRE da sola se il guasto torna.
+    close_cutoff = (datetime.now() - timedelta(days=AUTO_CLOSE_DAYS)).strftime("%Y-%m-%d")
+    auto_closed = 0
+    for c in by_id.values():
+        if (c.get("status") == "open" and c["id"] not in new_cids
+                and c.get("last_seen", c.get("date", "")) < close_cutoff):
+            c["status"] = "resolved"
+            c["resolved_on"] = TODAY
+            c["resolved_by"] = f"auto: non più osservata da {AUTO_CLOSE_DAYS}+ giorni"
+            auto_closed += 1
     merged = sorted(by_id.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
     CRITICHE.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
-    return {"added": added, "total": len(merged), "open": sum(1 for c in merged if c.get("status") == "open")}
+    return {"added": added, "auto_closed": auto_closed,
+            "total": len(merged), "open": sum(1 for c in merged if c.get("status") == "open")}
 
 
 def write_health(signals: dict, stats: dict):
@@ -365,8 +389,8 @@ def main():
 
     stats = append_critiche(critiche, signals)
     write_health(signals, stats)
-    logger.info("done — critiche +%d (tot %d, aperte %d) | verdict %s",
-                stats["added"], stats["total"], stats["open"],
+    logger.info("done — critiche +%d, auto-chiuse %d (tot %d, aperte %d) | verdict %s",
+                stats["added"], stats.get("auto_closed", 0), stats["total"], stats["open"],
                 "ATTENZIONE" if signals["log_issues"] else "OK")
 
 
