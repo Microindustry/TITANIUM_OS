@@ -29,7 +29,7 @@ echo Modello: TinyLlama-1.1B ^| Dataset: titanium_os ^| LoRA rank=8 >> "%LOG%"
 
 :: Training su GPU (fp16 true). batch=2 ok su 8GB con TinyLlama-1.1B LoRA.
 :: NB: "-m llamafactory.cli train" — "-m llamafactory.train" e' un package NON eseguibile
-:: (falliva in silenzio da settimane segnando comunque LastTaskResult=0). Fix 14/06.
+:: (falliva in silenzio da settimane segnando comunque LastTaskResult=0). Fix 14/06 + red-team #38.
 "%PYTHON%" -m llamafactory.cli train ^
     --stage sft ^
     --do_train true ^

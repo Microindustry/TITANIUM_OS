@@ -470,7 +470,7 @@ echo [TITANIUM_OS] Avvio watcher in background...
 start /B pythonw "%WATCHER_PATH%"
 
 echo [TITANIUM_OS] Sistema attivo. Watcher in esecuzione.
-echo [TITANIUM_OS] Per fermare: Task Manager -> pythonw.exe -> Termina
+echo [TITANIUM_OS] Per fermare: Task Manager ^> pythonw.exe ^> Termina
 timeout /t 3 > nul
 """
     return content

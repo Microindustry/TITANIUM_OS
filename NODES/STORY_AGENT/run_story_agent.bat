@@ -23,9 +23,11 @@ if not defined PYTHON (
 git add CONTENT_ENGINE\DATABASE\episodes\S2_SISTEMA\
 git add NODES\STORY_AGENT\story_state.json
 
-git diff --cached --quiet
+:: --quiet e commit con PATHSPEC ESPLICITO: solo gli episodi + lo stato dello story_agent,
+:: mai lo staging accidentale di altri file toccati di notte da altri processi.
+git diff --cached --quiet -- CONTENT_ENGINE\DATABASE\episodes\S2_SISTEMA\ NODES\STORY_AGENT\story_state.json
 if errorlevel 1 (
-    git commit -m "auto: story_agent - episodi generati %DATE%" >> "%LOG%" 2>&1
+    git commit -m "auto: story_agent - episodi generati %DATE%" -- CONTENT_ENGINE\DATABASE\episodes\S2_SISTEMA\ NODES\STORY_AGENT\story_state.json >> "%LOG%" 2>&1
     echo [story_agent] commit fatto >> "%LOG%"
 ) else (
     echo [story_agent] nessun episodio nuovo - skip commit >> "%LOG%"
