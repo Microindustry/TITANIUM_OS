@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-06-14T03:52:40",
-  "date": "2026-06-14",
-  "git_head": "724f523",
-  "rag_chunks": 0,
-  "n_episodes": 154,
-  "n_commits_7d": 76,
+  "last_audit": "2026-06-15T03:52:35",
+  "date": "2026-06-15",
+  "git_head": "370cc1c",
+  "rag_chunks": 3873,
+  "n_episodes": 174,
+  "n_commits_7d": 78,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -15,43 +15,61 @@
   "log_issues": [
     {
       "log": "night_research.log",
-      "tipo": "crash/eccezione"
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-06-15 03:38:56 [research_agent      ] INFO     openalex -> 0 risultati",
+      "data": "2026-06-15"
     },
     {
       "log": "night_research.log",
-      "tipo": "rate-limit sorgente"
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-06-15 03:38:58 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
+      "data": "2026-06-15"
     },
     {
       "log": "night_research.log",
-      "tipo": "ricerca a vuoto"
+      "tipo": "errore esplicito",
+      "riga": "2026-06-15 03:38:58 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
+      "data": "2026-06-15"
     },
     {
       "log": "night_research.log",
-      "tipo": "errore esplicito"
+      "tipo": "crash/eccezione",
+      "riga": "Traceback (most recent call last):",
+      "data": "2026-06-15"
     },
     {
       "log": "research_agent.log",
-      "tipo": "rate-limit sorgente"
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-06-15 03:38:42 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=epoxy+granite+polymer+concrete+vibration+",
+      "data": "2026-06-15"
     },
     {
       "log": "research_agent.log",
-      "tipo": "ricerca a vuoto"
+      "tipo": "errore esplicito",
+      "riga": "2026-06-15 03:38:42 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=epoxy+granite+polymer+concrete+vibration+",
+      "data": "2026-06-15"
     },
     {
       "log": "research_agent.log",
-      "tipo": "errore esplicito"
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-06-15 03:38:42 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-06-15"
+    },
+    {
+      "log": "story_agent.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-06-14 12:38:50 [story_agent         ] ERROR    generazione fallita per EP_20260614_rebuild_robusto_all_api_su_svuota_p",
+      "data": "2026-06-14"
     },
     {
       "log": "night_push.log",
-      "tipo": "rate-limit sorgente"
-    },
-    {
-      "log": "night_push.log",
-      "tipo": "errore esplicito"
+      "tipo": "crash/eccezione",
+      "riga": "⚠ night_research.log: Traceback (most recent call last):",
+      "data": "2026-06-14"
     }
   ],
   "critiche": {
-    "added": 2,
+    "added": 0,
     "total": 67,
     "open": 67
   },
