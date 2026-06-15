@@ -54,6 +54,7 @@ const ControlloView      = lazy(() => import("./components/ControlloView").then(
 const AvventuraMapView   = lazy(() => import("./components/AvventuraMapView").then(m => ({ default: m.AvventuraMapView })));
 const ProcedimentiView   = lazy(() => import("./components/ProcedimentiView").then(m => ({ default: m.ProcedimentiView })));
 const InventarioView     = lazy(() => import("./components/InventarioView").then(m => ({ default: m.InventarioView })));
+const CvView             = lazy(() => import("./components/CvView").then(m => ({ default: m.CvView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -448,7 +449,7 @@ function AppInner() {
             {view === "genesis"  && <CanvasLayout room="genesis" />}
             {view === "mims"     && <CanvasLayout room="mims" />}
             {view === "eva"      && <CanvasLayout room="eva" />}
-            {view === "identity"  && <CanvasLayout room="matteo" />}
+            {view === "identity"  && <CvView />}
             {view === "critiche"  && <CanvasLayout room="critiche" />}
             {/* Sistema */}
             {view === "agenti"      && <AgentsView />}
