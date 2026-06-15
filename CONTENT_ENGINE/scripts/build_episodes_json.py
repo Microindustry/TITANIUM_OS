@@ -75,6 +75,16 @@ NINA_SEED = {
     "EP_N2_03": ("la ripetibilita': mille volte uguale, battere la deriva", 0, 3, [], "adattato"),
     "EP_N2_04": ("la mappa viva: il sistema che dice la verita'", 5, 1, ["⟡0"], "adattato"),
     "EP_N2_05": ("prima la mano poi la macchina (automazione)", 2, 1, ["⟡0"], "adattato"),
+    # Nina v2 — arco IA (caselle 6-14), formato v2 lungo/stratificato
+    "EP_N2_06": ("l'automazione: insegnare un gesto a chi non si stanca", 2, 1, ["⟡0"], "adattato"),
+    "EP_N2_07": ("l'LLM, la mente che parla: indovina la parola probabile", 3, 1, ["⟡2"], "adattato"),
+    "EP_N2_08": ("l'allucinazione della mente: da dove lo sai?", 3, 2, [], "adattato"),
+    "EP_N2_09": ("il RAG, la biblioteca delle fonti", 4, 1, ["⟡3"], "adattato"),
+    "EP_N2_10": ("il Grande Loop: la traccia che resta", 1, 1, ["⟡0"], "adattato"),
+    "EP_N2_11": ("la Grande Mappa: il sapere come grafo", 5, 2, ["⟡4"], "adattato"),
+    "EP_N2_12": ("gli agenti: l'esercito silenzioso", 6, 1, ["⟡2", "⟡1"], "adattato"),
+    "EP_N2_13": ("il guasto silenzioso e il guardiano", 6, 2, ["⟡1"], "adattato"),
+    "EP_N2_14": ("l'orchestrazione: il direttore", 7, 1, ["⟡6", "⟡0"], "adattato"),
     # le fonti tecniche dell'arco (Pietre)
     "EP_FILONE_00": ("la materia: scelta, controllo, precisione", 0, 1, [], "fonte"),
     "EP_S0_00":     ("il Socio: un gesto, più frutti", 1, 1, [], "fonte"),
@@ -91,6 +101,7 @@ NINA_SEED = {
 # verticale finanza: id -> (concetto, regione, giro, richiama, stato)
 FINANZA_SEED = {
     "EP_AV_FIN_01": ("cosa sono i soldi: lavoro e fiducia, scambiabili", 1, 1, [], "adattato"),
+    "EP_N2_15": ("il valore: i soldi sono lavoro conservato + fiducia condivisa", 1, 1, [], "adattato"),
 }
 
 

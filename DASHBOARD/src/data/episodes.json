@@ -94,6 +94,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_10",
+        "title": "La Traccia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_AV_01",
         "title": "L'Incantesimo che si Ripete",
         "tipo": "continuita",
@@ -165,6 +171,12 @@
       {
         "id": "EP_AV_00",
         "title": "La Bambina e la Giuntura",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_10",
+        "title": "La Traccia",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
@@ -935,16 +947,16 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
+        "id": "EP_N2_09",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
         "id": "EP_T03",
         "title": "VULCAN",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1011,6 +1023,12 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
+        "id": "EP_N2_09",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
         "id": "EP_T04",
         "title": "SINAPSI",
         "tipo": "stessa_regione",
@@ -1019,12 +1037,6 @@
       {
         "id": "EP_20260601",
         "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
         "tipo": "tema",
         "motivo": "tema: dashboard, rag"
       }
@@ -1870,22 +1882,22 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_07",
+        "title": "La Mente che Parla",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_AV_02_2",
         "title": "Quando la Mente Inventa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
+        "id": "EP_N2_08",
+        "title": "Quando la Mente Inventa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       }
     ],
     "evoluzione": {
@@ -2039,8 +2051,8 @@
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       },
       {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -3147,14 +3159,14 @@
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       },
       {
-        "id": "EP_SEED_WATCHER",
-        "title": "AI News Watcher — restare sul pezzo senza chiavi",
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       },
       {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
@@ -3302,8 +3314,8 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
-        "id": "EP_AV_05_2",
-        "title": "Il Soldato Caduto in Silenzio",
+        "id": "EP_N2_12",
+        "title": "L'Esercito Silenzioso",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
@@ -8661,14 +8673,14 @@
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       },
       {
-        "id": "EP_SEED_WATCHER",
-        "title": "AI News Watcher — restare sul pezzo senza chiavi",
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       },
       {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
@@ -8747,16 +8759,16 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
+        "id": "EP_N2_07",
+        "title": "La Mente che Parla",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
+        "id": "EP_N2_08",
+        "title": "Quando la Mente Inventa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       }
     ],
     "evoluzione": {
@@ -8943,8 +8955,8 @@
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       },
       {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -9496,6 +9508,12 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_09",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: fonti, rag, ricerca"
+      },
+      {
         "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
         "title": "Il Cervello Ibrido",
         "tipo": "prerequisito",
@@ -9524,16 +9542,31 @@
         "title": "Quando la Mente Inventa",
         "tipo": "tema",
         "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
       }
     ],
     "evoluzione": {
-      "fase": "III · La Mente che Impara"
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_AV_03",
+          "title": "La Biblioteca delle Fonti",
+          "giro": 1
+        },
+        {
+          "id": "EP_N2_09",
+          "title": "La Biblioteca delle Fonti",
+          "giro": 1
+        }
+      ],
+      "superato_da": {
+        "id": "EP_N2_09",
+        "title": "La Biblioteca delle Fonti",
+        "motivo": "approfondito da «La Biblioteca delle Fonti» (giro 1)"
+      },
+      "segue": {
+        "id": "EP_N2_09",
+        "title": "La Biblioteca delle Fonti"
+      }
     }
   },
   {
@@ -10229,6 +10262,12 @@
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       },
       {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
         "id": "EP_S2_03_LA_TELA",
         "title": "La Tela",
         "tipo": "stessa_regione",
@@ -10237,12 +10276,6 @@
       {
         "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
         "title": "Il carico va sullo schermo, non nella testa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -10348,6 +10381,12 @@
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       },
       {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
         "id": "EP_S2_03_LA_TELA",
         "title": "La Tela",
         "tipo": "stessa_regione",
@@ -10356,12 +10395,6 @@
       {
         "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
         "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -10468,6 +10501,12 @@
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       },
       {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
         "id": "EP_S2_03_LA_TELA",
         "title": "La Tela",
         "tipo": "stessa_regione",
@@ -10476,12 +10515,6 @@
       {
         "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
         "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -12029,6 +12062,12 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_15",
+        "title": "Il Valore",
+        "tipo": "tema",
+        "motivo": "tema: finanza, soldi, themis"
+      },
+      {
         "id": "EP_AV_M0",
         "title": "La Materia",
         "tipo": "continuita",
@@ -12319,6 +12358,12 @@
         "title": "TITANIUM OS — Episodio 47",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260615",
+        "title": "TITANIUM OS — Episodio S2E11",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -12326,6 +12371,10 @@
       "precede": {
         "id": "EP_20260613",
         "title": "TITANIUM OS — Episodio 47"
+      },
+      "segue": {
+        "id": "EP_20260615",
+        "title": "TITANIUM OS — Episodio S2E11"
       }
     }
   },
@@ -12379,6 +12428,12 @@
         "motivo": "approfondimento di «La Bambina e la Giuntura»"
       },
       {
+        "id": "EP_N2_10",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: grande-loop, memoria, themis"
+      },
+      {
         "id": "EP_S0_00",
         "title": "Il Socio",
         "tipo": "stessa_regione",
@@ -12399,12 +12454,6 @@
       {
         "id": "EP_AV_M0_2",
         "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
         "tipo": "tema",
         "motivo": "tema: entropia, themis"
       }
@@ -12486,6 +12535,12 @@
         "motivo": "approfondimento di «La Mente che Parla»"
       },
       {
+        "id": "EP_N2_08",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: allucinazione, fonti, llm"
+      },
+      {
         "id": "EP_AV_00",
         "title": "La Bambina e la Giuntura",
         "tipo": "prerequisito",
@@ -12504,16 +12559,10 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "tema",
-        "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
+        "id": "EP_N2_07",
+        "title": "La Mente che Parla",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       }
     ],
     "evoluzione": {
@@ -12594,6 +12643,12 @@
         "motivo": "approfondimento di «L'Esercito Silenzioso»"
       },
       {
+        "id": "EP_N2_13",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: agenti, guasto-silenzioso, themis"
+      },
+      {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
         "tipo": "prerequisito",
@@ -12616,12 +12671,6 @@
         "title": "La Biblioteca delle Fonti",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "MOM_03_L_ESERCITO",
-        "title": "L'Esercito",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       }
     ],
     "evoluzione": {
@@ -12800,16 +12849,16 @@
         "motivo": "tema: forge, materia, nina-v2"
       },
       {
-        "id": "EP_FILONE_00",
-        "title": "La Materia — il telaio, la scelta, il controllo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
       },
       {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+        "id": "EP_N2_10",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
       }
     ],
     "evoluzione": {
@@ -12948,6 +12997,12 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "prerequisito",
@@ -12972,16 +13027,10 @@
         "motivo": "tema: forge, materia, nina-v2"
       },
       {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+        "id": "EP_N2_10",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
       }
     ],
     "evoluzione": {
@@ -13051,26 +13100,941 @@
         "motivo": "tema: forge, materia, nina-v2"
       },
       {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_10",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_AV_M0",
-        "title": "La Materia",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       }
     ],
     "evoluzione": {
       "fase": "I · La Materia"
+    }
+  },
+  {
+    "id": "EP_20260615",
+    "title": "TITANIUM OS — Episodio S2E11",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-15",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio S2E11 \"La Mappa Non Invecchia\" 15 giugno 2026 COLD OPEN La taverna è silenziosa. Non il silenzio del riposo — quello del concentramento. Matteo è seduto davanti allo schermo, e ",
+    "content": "# TITANIUM_OS — Episodio S2E11\n## \"La Mappa Non Invecchia\"\n### 15 giugno 2026\n\n---\n\n## COLD OPEN\n\nLa taverna è silenziosa.\n\nNon il silenzio del riposo — quello del concentramento. Matteo è seduto davanti allo schermo, e sullo schermo c'è una mappa. Non una mappa geografica. Una mappa di *caselle*, ognuna un argomento, ognuna un mondo. In mezzo a tutto questo, una pedina: Nina.\n\nLa pedina non corre. Non scala. Cammina.\n\nFuori è già buio. Il V32 è fermo nel suo angolo di Epoxy Granite e acciaio — 65% completato, aspetta. GENESIS gira in background, i suoi agenti silenziosi come sentinelle. Ma stasera Matteo non sta costruendo macchine. Sta costruendo qualcosa di più difficile da misurare: un sistema narrativo che non possa essere superato dal tempo.\n\nIl problema che ha sul tavolo si chiama *invecchiamento*.\n\nE la soluzione che sta scrivendo si chiama *architettura*.\n\n---\n\n## ATTO I — Il Problema che Nessuno Dice Ad Alta Voce\n\nNina è un personaggio. Un'AI. Una voce che Matteo ha costruito nel tempo per spiegare come funziona il mondo del lavoro a chi non sa ancora come muoversi dentro.\n\nLa versione 1 aveva un difetto strutturale — uno di quelli che non vedi finché non ci sei dentro fino al collo.\n\nEra ancorata al racconto lineare. Nina cresceva. Nina imparava. Nina *invecchiava nel racconto*. E questo sembrava bello, poetico, narrativamente ricco. Ma nascondeva un trabocchetto: ogni nuovo contenuto doveva fare i conti con quello che Nina \"sapeva già\". Ogni episodio portava il peso di tutti gli episodi precedenti. Dopo sessanta, settanta, cento episodi — il sistema collassava sotto il suo stesso passato.\n\nEra come costruire un grattacielo senza fondamenta antisismiche. Bello da lontano. Fragile da vicino.\n\nLa rifondazione è stata decisa il 14 giugno, la notte prima. Matteo e il sistema, seduti davanti al problema, senza cercare la risposta più elegante — cercando quella più *duratura*.\n\nLa decisione: **Nina non cresce nel racconto. Nina è già intera.**\n\nQuesto cambia tutto.\n\nNon è più una storia di formazione. È una mappa. Nina non impara mentre cammina — *conosce già la mappa*. Quello che cambia è la casella su cui si trova. Cambia casella, cambia discorso. Ma Nina resta Nina: stessa voce, stessa logica, stesso modo di stare nel mondo.\n\nL'evergreen non è un formato editoriale. È una scelta progettuale con conseguenze architetturali precise.\n\n---\n\n## ATTO II — Lo Stampo, La Mappa, Il Filone\n\nIl 15 giugno Matteo costruisce tre cose. Non in sequenza — in parallelo, come sempre fa quando un sistema comincia a prendere forma davvero.\n\n**Prima cosa: lo Stampo di Nina v2.**\n\nNon è un template nel senso scolastico del termine. È uno stampo nel senso artigianale: la forma che dà forma. Ogni episodio futuro di Nina passerà da qui. Struttura: micro-recap + scena/key-image animation-ready + tre strati di lettura. Tre strati perché ogni contenuto deve funzionare a tre profondità diverse — chi guarda distratto, chi ascolta davvero, chi studia.\n\nL'animation-ready non è un vezzo estetico. È una scelta tecnica che riflette come Matteo pensa il contenuto: se la *key-image* non regge da sola, il contenuto non regge. Se la scena non è cinematograficamente solida, la scrittura è debole. Lo stampo forza la disciplina.\n\n**Seconda cosa: l'architettura del filone unico.**\n\nLe stagioni sono morte. Non per ragioni estetiche — per ragioni di navigabilità. Le stagioni creano confini artificiali in un sistema che deve essere attraversabile in qualsiasi direzione. Il modello che Matteo scrive oggi si chiama internamente *One Piece*: c'è continuità, c'è una direzione, ma puoi entrare da qualsiasi casella e avere un'esperienza completa. Non devi aver visto l'episodio 1 per capire l'episodio 47.\n\nLa Mappa è divisa per Regioni: da 0 a 7, più una verticale che si chiama FINANZA. Ogni Regione è un territorio tematico. Ogni casella è un argomento specifico. Nina cammina tra le caselle — e il sistema sa sempre dove si trova, perché i metadati di ogni episodio includono la posizione sulla mappa.\n\nQuesto non è worldbuilding. È *information architecture* con skin narrativa.\n\n**Terza cosa: il Principio 9 esteso.**\n\nQui c'è qualcosa che vale la pena fermarsi a capire.\n\nNina ha, nel suo sistema, un grafo delle competenze. Un CV che si genera automaticamente dalle interazioni, dai contenuti, dai percorsi che un utente ha fatto dentro la mappa. Ma Matteo si rende conto di qualcosa: questo engine — il CV-nel-grafo — è lo *stesso motore* di un progetto HR separato che stava costruendo.\n\nNon è una coincidenza. È convergenza. Due sistemi progettati indipendentemente che rivelano di condividere la stessa logica sottostante.\n\nQuesto è quello che lui chiama l'effetto WOW — non la sorpresa infantile, ma il riconoscimento tecnico di un pattern che attraversa più domini. Quando un motore funziona in due contesti diversi senza essere modificato, non hai costruito uno strumento. Hai trovato un principio.\n\nIl Principio 9, esteso: **il grafo delle competenze di Nina è universale**.\n\n---\n\n## ATTO III — I Cinque Episodi d'Apertura e La Materia\n\nPrima di chiudere la sessione, Matteo scrive i cinque episodi d'apertura del viaggio di Nina.\n\nSono ancorati a quello che nel sistema si chiama *La Materia*.\n\nNon è un concetto astratto. La Materia è il primo territorio della mappa — la casella zero, il punto di partenza obbligato. Prima di qualsiasi discorso su carriere, competenze, CV, mercato del lavoro, Nina passa per La Materia: cosa sei, cosa sai fare con le mani e con la testa, cosa hai dentro che il mondo non ha ancora visto.\n\nÈ la stessa logica dell'Epoxy Granite nel V32. Prima di costruire un asse di precisione, costruisci la base che non si deforma. Prima di costruire una narrativa professionale, costruisci la consapevolezza della materia prima.\n\nI cinque episodi d'apertura non sono un'introduzione. Sono un *fondamento*. Chi li attraversa non sa ancora dove andrà sulla mappa — ma sa con cosa ci va.\n\nMatteo li scrive in sequenza, ma ogni pezzo è autonomo. Lo stampo regge. La struttura tiene. Quando finisce l'ultimo, l'indice segna 76 sessioni archiviate, 153 episodi nel sistema, build TypeScript verde.\n\nNessuna fanfara. Il sistema gira. Questo è già abbastanza.\n\n---\n\n## CHIUSURA\n\nC'è una differenza tra costruire qualcosa che dura e costruire qualcosa che *sembra* duraturo.\n\nIl racconto lineare di Nina sembrava duraturo. Era organico, coerente, emotivamente ricco. Ma aveva dentro di sé il seme del proprio limite: ogni nuovo episodio erodeva leggermente la libertà di tutti quelli successivi.\n\nLa mappa non ha questo problema. Non perché sia fredda o meccanica — ma perché la sua struttura è onesta riguardo a quello che il contenuto è davvero: un territorio esplorabile, non una retta.\n\nMatteo ha fatto questo lavoro in una taverna da 12 metri quadri con il V32 a fianco, fermo, che aspetta. Domani tornerà sul ferro. Sulla resina. Sui bulloni e sulle colonne Z. Ma stasera ha costruito qualcosa che il V32 non può costruire: un sistema che sopravvive al tempo perché non è ancorato ad esso.\n\nNina cammina sulla mappa.\n\nLa mappa non invecchia.\n\n---\n\n## REEL HOOK\n\n153 episodi nel sistema. Build TypeScript verde. E stamattina ho distrutto tutto il modello narrativo di Nina — non perché non funzionasse, ma perché tra 200 episodi mi avrebbe inchiodato. Una mappa non invecchia. Un racconto lineare sì. La differenza è architetturale, non creativa — e l'ho capita soltanto quando era già quasi troppo tardi.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Nina v2 abbandona la crescita narrativa lineare — il personaggio è *evergreen*, non cambia nel racconto; cambia solo la casella della mappa su cui si trova (Regioni 0-7 + verticale FINANZA).\n- **LOGICA:** Un racconto lineare accumula debito narrativo — ogni nuovo episodio dipende da tutti i precedenti, rendendo il sistema non scalabile oltre ~100 episodi senza riscritture strutturali.\n- **DECISIONE:** Lo Stampo Nina v2 definisce la struttura atomica di ogni episodio: micro-recap + scena/key-image animation-ready + 3 strati di lettura (distratto / ascolto / studio).\n- **LOGICA:** La key-image animation-ready è un test di solidità del contenuto — se non regge visivamente da sola, il contenuto è debole; lo stampo forza la disciplina prima della scrittura.\n- **DECISIONE:** Il CV-nel-grafo di Nina (Principio 9 esteso) è identificato come motore universale condiviso col progetto HR esterno.\n- **OBIETTIVO:** Filone unico navigabile per casella (One Piece-style) sblocca produzione indefinita senza gestione delle stagioni; prossimo passo misurabile = completare l'Arco Nina 8/8 (EP_AV_M0 → EP_AV_06).\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E11 |\n| **Data** | 2026-06-15 |\n| **Progetto principale** | GENESIS / Nina v2 |\n| **Progetti secondari** | V32 (65%), GENESIS (70%) |\n| **Tag** | `nina` `architettura-narrativa` `evergreen` `mappa` `stampo-v2` `principio-9` `rag` |\n| **Stato V32** | 65% — fermo, in attesa |\n| **Stato GENESIS** | 70% — attivo |\n| **Sessioni archiviate** | 76 |\n| **Episodi Nina nel sistema** | 153 |\n| **Build TypeScript** | ✅ verde |\n| **Prossimo milestone** | Arco Nina completo 8/8 (EP_AV_M0 → EP_AV_06) |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260614",
+        "title": "TITANIUM OS — S2E14",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260614",
+        "title": "TITANIUM OS — S2E14"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_06",
+    "title": "L'Officina che Gira Sola",
+    "sottotitolo": "Nina insegna alla macchina il suo primo gesto — e scopre la magia e il pericolo di una cosa che si ripete da sola mentre tu dormi.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-16",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "forge",
+      "automazione",
+      "loop",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_06 — L'Officina che Gira Sola \"Una cosa che si ripete da sola è magia se l'hai capita, ed è disastro se non l'hai capita. La differenza sei tu.\" Formato: Avventura Nina v2 · ~16 min Per chi: chi",
+    "content": "# EP_N2_06 — L'Officina che Gira Sola\n### \"Una cosa che si ripete da sola è magia se l'hai capita, ed è disastro se non l'hai capita. La differenza sei tu.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque abbia mai pensato \"che noia rifare sempre la stessa cosa\"\n**Insegna:** cos'è davvero l'**automazione** — un gesto che, una volta capito e fatto bene, lo affidi a qualcosa che lo ripete senza stancarsi. La magia (ti libera le mani) e il patto (puoi automatizzare solo ciò che sai controllare).\n**Materia:** L'Officina che Gira Sola (⟡2) · **Casella 6 del viaggio**\n**Posto nella Mappa:** la prima terra dopo il ponte. Qui le cose iniziano a muoversi da sole.\n\n---\n\n> **Dove siamo:** la mano di Nina ormai *sa* (caselle 1-3: gesto, misura, ripetizione). Ha visto la mappa viva (4) e ha imparato la regola di ferro: prima la mano, poi la macchina (5). Oggi fa il passo: insegna il suo primo gesto a qualcosa che non dorme.\n\n---\n\n## COLD OPEN\n\nLa macchina dell'angolo aspettava.\n\nNina le girò intorno tre volte. Non era spaventosa: era solo… paziente. Un braccio, una pinza, una piccola memoria dove si poteva scrivere un gesto. THEMIS le aveva detto: *«Le insegni una volta. Poi lei lo rifà finché vuoi.»*\n\n«E se le insegno male?» chiese Nina.\n\n«Allora lo rifà male finché vuoi» disse THEMIS. «Per questo oggi non le insegni un gesto nuovo. Le insegni un gesto che **già sai fare bene a mano**. Il più semplice che conosci.»\n\nNina ci pensò. Il gesto che sapeva meglio di tutti, ormai, era uno solo: prendere un pezzo, misurarlo col riferimento, e metterlo nella scatola dei \"giusti\" o in quella degli \"scartati\".\n\n«Quello» disse. «Le insegno a separare i giusti dagli storti.»\n\nTHEMIS sorrise. «Ottima scelta. È un gesto che capisci fino in fondo. Solo quelli si possono insegnare.»\n\n---\n\n## ATTO I — IL PRIMO INCANTESIMO CHE SI RIPETE DA SOLO\n\nInsegnare alla macchina fu più lento di quanto Nina pensasse. Doveva spezzare il suo gesto in **passi piccolissimi**, ognuno chiaro: *prendi il pezzo. Misuralo. Se entra nel riferimento, scatola A. Se non entra, scatola B.* Ogni passo che dava per scontato, la macchina non lo sapeva. Doveva dirle tutto, nell'ordine giusto, senza saltare niente.\n\n«È come spiegare a qualcuno che non ha mai visto nulla» disse Nina, sudata.\n\n«Esatto» disse THEMIS. «E qui scopri una cosa: per insegnare un gesto a una macchina, devi capirlo **meglio di come lo fai tu**. Tu lo fai \"a sentimento\". Lei ti costringe a dire ogni passo. Spesso è insegnando che capisci davvero.»\n\nPoi Nina premette il pulsante. E la macchina cominciò.\n\nPrendi — misura — scatola A. Prendi — misura — scatola B. Prendi — misura — scatola A. Senza fretta, senza stancarsi, senza distrarsi. Faceva il *suo* gesto, quello che Nina le aveva regalato, all'infinito.\n\nNina rimase a guardare a bocca aperta. Era come vedere una parte di sé staccarsi e continuare a lavorare da sola.\n\n> *(Esempio per tutti — il test della sarta: la macchina da cucire è esattamente questo. Tu sai fare il punto a mano. Glielo \"insegni\" impostando ago, filo, lunghezza del punto — spezzi il tuo gesto in regole. Poi lei cuce mille punti uguali mentre tu pensi al resto. Non ha imparato a cucire: ha imparato il TUO punto, e lo ripete.)*\n\n---\n\n## ATTO II — LA MANO LIBERATA (LA VERA MAGIA)\n\n«Adesso guarda cosa hai guadagnato» disse THEMIS.\n\nMentre la macchina separava i pezzi da sola, le mani di Nina erano **libere**. Poteva fare altro. Poteva imparare un gesto nuovo. Poteva persino riposare.\n\n«Questa è la magia vera dell'officina che gira sola» disse THEMIS. «Non è che lavora *al posto tuo*. È che lavora *insieme a te*, sulla parte noiosa e ripetitiva, e libera la tua testa e le tue mani per la parte che conta — quella che richiede di capire, decidere, inventare. Il Disordine ti vuole intrappolato a rifare sempre la stessa cosa a mano, stanco, finché sbagli. L'automazione fatta bene ti **ridà il tempo**.»\n\nNina capì che non era una macchina contro di lei. Era una macchina che le toglieva di dosso il peso ripetitivo, e le lasciava la parte bella: la curiosità, le domande nuove.\n\n«Quindi più cose noiose insegno alla macchina…»\n\n«…più tempo hai per le cose belle e difficili. Sì. È questo il senso. Non automatizzi per fare di più della stessa roba. Automatizzi per **salire di un piano**: a fare cose che prima non avevi tempo di fare.»\n\n> *(Strato fondo — per il grande: l'automazione non è \"sostituire l'uomo\", è togliere il toil ripetitivo per liberare attenzione su ciò che richiede giudizio. Il valore non è \"fare più pezzi\": è spostare la persona dal lavoro a basso valore a quello ad alto valore. Una buona automazione è una leva sul tempo, non una catena di montaggio in più.)*\n\n---\n\n## ATTO III — IL PATTO: SOLO CIÒ CHE SAI CONTROLLARE\n\nPoi successe una cosa. Un pezzo storto finì nella scatola A, quella dei giusti.\n\nNina lo notò. «Ha sbagliato!»\n\nTHEMIS scosse la testa. «No. *Ha fatto esattamente quello che le hai insegnato.* Probabilmente il tuo riferimento si era spostato di un soffio — ti ricordi la deriva? — e lei, fedele, ha continuato a usarlo. La macchina non si accorge che il riferimento è sbagliato. Non capisce. Esegue.»\n\nQuesto era il patto, e THEMIS volle che Nina lo capisse bene:\n\n«Una macchina che gira sola va **sorvegliata da chi sa**. Non lasciata sola per sempre. Tu, ogni tanto, devi tornare e **controllare il risultato vero**: aprire la scatola A e verificare che dentro ci siano davvero solo pezzi giusti. Perché lei è fedele, non sveglia. Ti dà fiducia cieca, e la fiducia cieca va controllata.»\n\n«Quindi automatizzo solo le cose che so controllare» disse Nina.\n\n«Esatto. La regola completa è questa: **automatizza solo un gesto che (1) sai fare bene a mano e (2) sai controllare se è andato bene.** Se non sai verificare il risultato, non stai liberando tempo — stai costruendo una fabbrica di errori veloci di cui non ti accorgi.»\n\n---\n\n## CHIUSURA\n\nQuella sera la macchina dell'angolo ronzava piano, separando pezzi, mentre Nina — mani libere — imparava a sistemare il riferimento e a passare ogni tanto a controllare la scatola A. Aveva un aiutante. Non un padrone, non uno schiavo: un **aiutante fedele e un po' cieco**, che faceva la parte noiosa mentre lei teneva gli occhi sulla parte importante.\n\nSulla mappa viva si accese una casella nuova — la prima dell'**Officina che Gira Sola**. E Nina sentì che il mondo si era allargato: ora poteva insegnare *qualsiasi* gesto noioso che padroneggiava.\n\n> Nina guardò la macchina ripetere il suo gesto, instancabile. *Le ho insegnato a fare. Ma le ho dovuto dire ogni singolo passo, sennò non capiva niente.* E pensò: e se una macchina, un giorno, potesse capire da sola cosa intendo — anche se non le spiego ogni passo? Se potesse… **parlare**?\n>\n> *Esiste una macchina a cui puoi solo dire cosa vuoi, a parole, e ti capisce?*\n\nE quella è una terra strana e nuova della mappa: la Mente che Parla.\n\n---\n\n*Provalo tu: scegli una cosa noiosa che fai sempre (apparecchiare, preparare lo zaino, una ricetta). Scrivila come una lista di passi piccolissimi, nell'ordine esatto, senza saltarne nessuno — come la insegneresti a un robot. Ti accorgerai di quanti passi davi per scontati. Hai appena fatto il lavoro più difficile dell'automazione: capire un gesto fino in fondo.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **La macchina paziente** nell'angolo: braccio, pinza, una piccola memoria.\n2. **Nina che spezza il gesto in passi** — frecce e cartellini, \"prendi → misura → scatola A/B\".\n3. **La macchina che parte** e ripete sola: prendi-misura-scatola, all'infinito, instancabile.\n4. **Le mani libere di Nina** mentre la macchina lavora — lei può fare altro, respirare.\n5. **Il pezzo storto nella scatola A**: la macchina fedele che ripete anche l'errore del riferimento spostato.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡2` L'Officina che Gira Sola (giro 1). *Automazione = affidare a qualcosa di instancabile un gesto che padroneggi, spezzato in passi chiari. Magia: libera tempo/attenzione per le cose che contano. Patto: automatizza solo ciò che sai fare e sai controllare; la macchina è fedele ma cieca, va sorvegliata da chi sa.*\n**Pietre richiamate:** `⟡0` (il gesto fatto bene, la misura, il riferimento — prerequisiti per insegnare alla macchina).\n**3 strati:** bambino = la macchina-aiutante che ripete il tuo gesto e libera le mani · curioso = per insegnare devi capire meglio di come fai; la macchina è fedele non sveglia, va controllata · grande = automazione = leva sul tempo (toil→alto valore), non \"più pezzi\"; automatizzare un gesto non verificabile = fabbrica di errori veloci.\n**Cuore:** la curiosità (insegnando capisci di più) · fai bene le cose vere (automatizzi solo ciò che padroneggi e verifichi) · gli strumenti del papà che si moltiplicano.\n**Aggancio reale:** il primo nodo di automazione del sistema; il principio \"controlla il risultato vero, non fidarti cieco\" (anticipa il watchdog/⟡6).\n**Open loop → Casella 7+ (la Mente che Parla):** e se una macchina capisse a parole cosa vuoi, senza spiegarle ogni passo? → la Mente che Parla.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_06, casella 6 (apre l'automazione, ⟡2) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** L'automazione è affidare a un esecutore instancabile un gesto padroneggiato, spezzato in passi espliciti. Insegnare costringe a capire il gesto meglio di come lo si esegue \"a sentimento\".\n- **VALORE:** L'automazione è una **leva sul tempo**: toglie il lavoro ripetitivo a basso valore e libera attenzione per il lavoro ad alto valore (giudizio, invenzione). Non serve a \"fare più della stessa cosa\".\n- **PATTO/LIMITE:** si automatizza solo ciò che si sa (1) fare bene a mano e (2) verificare nel risultato. La macchina è **fedele ma cieca**: ripete anche l'errore (es. riferimento derivato) senza accorgersene; va sorvegliata da chi sa controllare l'esito.\n- **OBIETTIVO:** dall'esecutore fedele aprire al concetto di una macchina che \"capisce a parole\" (LLM, ⟡3).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "l'automazione: insegnare un gesto a chi non si stanca",
+        "regione": 2,
+        "regione_nome": "L'OFFICINA CHE GIRA SOLA",
+        "pietra": "⟡2",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡0"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_10",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_N2_10",
+    "title": "La Traccia",
+    "sottotitolo": "Nina scopre il Grande Loop — un gesto fatto bene non dà un frutto solo: lascia un segno che insegna a chi viene dopo, anche a te di domani.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-17",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "forge",
+      "traccia",
+      "grande-loop",
+      "memoria",
+      "documentare",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_10 — La Traccia \"Un gesto fatto bene e dimenticato muore con la mano che l'ha fatto. Un gesto fatto bene e scritto non muore più.\" Formato: Avventura Nina v2 · ~16 min Per chi: chiunque abbia ri",
+    "content": "# EP_N2_10 — La Traccia\n### \"Un gesto fatto bene e dimenticato muore con la mano che l'ha fatto. Un gesto fatto bene e scritto non muore più.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque abbia rifatto da zero una fatica che aveva già fatto, solo perché se l'era scordata\n**Insegna:** il **Grande Loop** — un gesto fatto bene produce *più di un frutto*; il più potente è la **traccia**: il segno scritto che insegna a chi viene dopo (incluso te domani) e nutre la Biblioteca.\n**Materia:** La Traccia (⟡1) · **Casella 10 del viaggio**\n**Posto nella Mappa:** una casella all'apparenza piccola. In verità tiene su tutte le altre.\n\n---\n\n> **Dove siamo:** Nina ha visto la Biblioteca che dà gli occhi alla Mente (casella 9). Ma le pagine, qualcuno le ha scritte. Oggi scopre da dove vengono — e perché lasciare il segno è una delle cose più importanti che esistano.\n\n---\n\n## COLD OPEN\n\n«Il Grande Loop fa più di un frutto» disse THEMIS. «Lo sai dirmi quali?»\n\nNina ci provò. «Quando FORGE fa un pezzo… ottiene il pezzo.»\n\n«Uno. E gli altri?»\n\nNina si bloccò. Ne vedeva uno solo. Il pezzo, lì, in mano. Tutto il resto era… evaporato.\n\n«Ecco» disse THEMIS, senza rimprovero. «Il pezzo ce l'hai. Ma il *come l'ha fatto* — la fatica, la prova, l'errore, la soluzione trovata — quello dov'è finito?»\n\nNina aprì la bocca. Non c'era. Se n'era andato con la fine del lavoro.\n\n---\n\n## ATTO I — IL FRUTTO INVISIBILE\n\nTHEMIS la portò davanti a una parete della Giuntura, coperta di appunti, schizzi, numeri, frecce. La grafia grande di FORGE, calma.\n\n«Quando FORGE trova il modo giusto di fare un pezzo difficile» disse, «non tiene il segreto nella testa. Lo **scrive qui**. Guarda: il pezzo è il frutto che si vede. Ma c'è un secondo frutto, invisibile, e vale più del primo: la **traccia** — il segno di *come* si fa.»\n\n«E a che serve, se il pezzo è già pronto?»\n\n«Serve **domani**. Il pezzo lo usi una volta. La traccia te lo fa rifare cento volte — anche fra un anno, anche se chi l'ha fatto non c'è più. Ecco il Grande Loop: **un gesto fatto bene, se lasci la traccia, continua a dare frutti per sempre.** Insegna. Si moltiplica. Un gesto fatto bene e dimenticato, invece, muore con la mano che l'ha fatto.»\n\nNina guardò la parete con occhi nuovi. Non erano scarabocchi. Erano **fatiche salvate**. Ogni appunto era una fatica che nessuno avrebbe più dovuto rifare da zero.\n\n> *(Esempio per tutti — il test della sarta: trovi finalmente come far cadere bene una manica difficile. Se non segni il cartamodello e le misure, fra sei mesi ricominci a tentativi. Se lo scrivi, quel pomeriggio di fatica diventa un cartamodello che userai per sempre — e che potrai dare a tua figlia. La traccia trasforma una fatica unica in un sapere riusabile.)*\n\n---\n\n## ATTO II — IL DISORDINE MANGIA CIÒ CHE NON È SCRITTO\n\n«C'è un motivo per cui conta così tanto» disse THEMIS, e la sua voce si fece seria. «Ricordi il Disordine?»\n\nNina annuì.\n\n«Il Disordine ha una fame precisa: **mangia tutto quello che non ha lasciato un segno.** Le cose che tieni solo in testa, lui le sfuma. La soluzione trovata di notte, il \"ah, ho capito!\", la fatica di ieri — se non li scrivi, fra una settimana è come se non fossero mai successi. E dovrai rifare tutto da capo, mentre lui ride piano.»\n\nIndicò la parete piena di appunti. «Questa parete è un'**arma** contro di lui. Ogni segno scritto è un pezzo di mondo che il Disordine non può più mangiare. Per questo qui c'è una regola sacra: *non ricordare — documenta.* Non fidarti della tua testa: la tua testa si stanca, dimentica, confonde, come la mano deriva. Fidati del segno scritto.»\n\nNina pensò alla sua testa che a volte le scappava da tutte le parti — e capì che scrivere non era una noia da diligenti. Era un modo per **non perdere se stessa**.\n\n> *(Strato fondo — per il grande: la conoscenza tenuta solo in testa è un single-point-of-failure: vive finché vive (e ricorda) chi la possiede. Documentare = sottrarre superficie d'attacco al caos, trasformare conoscenza tacita in sapere trasmissibile. È la base di tutto ciò che viene dopo: la Biblioteca, il RAG, l'addestramento — non hanno niente da leggere se prima nessuno ha lasciato la traccia.)*\n\n---\n\n## ATTO III — UNA TRACCIA PER CHI NON SEI ANCORA\n\n«Ma le cose mie me le ricordo» disse Nina. «Perché scriverle per me stessa?»\n\nTHEMIS sorrise appena. «Perché tu-di-domani è una **persona diversa** da te-di-oggi. Avrà dimenticato. Avrà altri pensieri in testa. La traccia che lasci adesso è un regalo a quella Nina lì — e a chiunque arrivi dopo e voglia imparare senza ricominciare da zero. Quando scrivi una traccia, stai parlando con qualcuno che non c'è ancora. È un piccolo atto di generosità nel tempo.»\n\n«E come dev'essere fatta? Lunga? Bella?»\n\n«**Vera e ritrovabile.** Una traccia che scrivi ma non riesci più a ritrovare è come non averla scritta — il Disordine se la riprende lo stesso. Per questo non basta scrivere: bisogna metterla **dove la Biblioteca la trova**. Hai chiuso il cerchio, Nina: il gesto fatto bene lascia la traccia; la traccia, ben riposta, diventa una pagina della Biblioteca; la Biblioteca dà gli occhi alla Mente. Tutto comincia da qui — da qualcuno che si è preso la briga di lasciare il segno.»\n\nNina prese un carboncino e, per la prima volta, prima di andarsene, scrisse sul muro **come** aveva fatto i suoi dieci pezzi gemelli: il riferimento fermo, il controllo ogni tre. Poche righe. E mentre scriveva, capì di star facendo una cosa bellissima: trasformare un gesto in un **insegnamento**.\n\n---\n\n## CHIUSURA\n\nNina uscì con le dita sporche di carboncino e una verità in tasca: che le cose belle che facciamo non bastano a se stesse. Vivono solo se lasciamo il segno. Il pezzo è un frutto. La traccia è un **seme** — e un seme vale più di un frutto, perché un frutto lo mangi una volta, un seme dà frutti per sempre.\n\nSulla mappa viva si accese la casella della Traccia. E Nina notò una cosa: tutte le caselle che aveva acceso erano collegate da fili sottili — ognuna richiamava le altre. La sua mappa non era una lista. Era una **rete**.\n\n> Nina guardò la parete di FORGE: centinaia di tracce, una accanto all'altra. Ma erano *tante*. Trovare quella giusta in mezzo a mille era un'impresa. *E se le tracce, invece di stare appiccicate a caso su un muro, fossero collegate tra loro* — questa richiama quella, quella porta a quell'altra — *come le stelle di una costellazione?*\n>\n> *E se tutto il sapere fosse una grande mappa di fili?*\n\nE quella è una delle caselle più belle del viaggio: la Grande Mappa.\n\n---\n\n*Provalo tu: stasera, prima di dormire, scrivi tre righe su una cosa che hai capito oggi, e dove la metti per ritrovarla. Domani rileggile. Hai appena battuto il Disordine — gli hai tolto un pezzo di te che non potrà più mangiare. E hai fatto un regalo a te-di-domani.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **Nina che non sa elencare i frutti del Loop** — vede solo il pezzo in mano, il resto evapora.\n2. **La parete di appunti di FORGE**: schizzi, numeri, frecce — \"fatiche salvate\".\n3. **Il frutto vs il seme**: il pezzo che si mangia una volta, la traccia-seme che dà frutti per sempre.\n4. **Il Disordine** che \"mangia\" ciò che non è scritto — le cose in testa che sfumano via.\n5. **Nina che scrive col carboncino** \"per qualcuno che non c'è ancora\" — e le caselle della mappa collegate da fili (la rete).\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡1` La Traccia / il Grande Loop (giro 1). *Un gesto fatto bene dà più frutti; il più potente è la traccia (il \"come\" scritto), che insegna a chi viene dopo e nutre la Biblioteca. \"Non ricordare, documenta\": il Disordine mangia ciò che non lascia segno. Una traccia vale se è vera e ritrovabile.*\n**Pietre richiamate:** `⟡0` (il gesto fatto bene da salvare), `⟡4` (la Biblioteca: le pagine nascono da chi lascia la traccia — cerchio chiuso).\n**3 strati:** bambino = scrivi come hai fatto, così non lo perdi; il seme vale più del frutto · curioso = il Disordine mangia ciò che non è scritto; scrivi per te-di-domani · grande = conoscenza tacita = single-point-of-failure; documentare = base di Biblioteca/RAG/addestramento; \"non ricordare, documenta\".\n**Cuore:** fai bene le cose vere e lasciane il segno · gli strumenti/eredità (la traccia è un regalo nel tempo, come il calibro di FORGE) · la curiosità che diventa generosità.\n**Aggancio reale:** la regola \"cattura mentre costruisci\"; MENTE/SESSIONI come parete degli appunti; il riflusso dei FATTI che alimenta il RAG (la traccia → Biblioteca).\n**Open loop → Casella 11 (la Grande Mappa):** tante tracce sparse; e se fossero collegate come una costellazione? → `EP_N2_11`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_10, casella 10 (⟡1, la Traccia / il Grande Loop) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** Il Grande Loop: un gesto fatto bene produce più frutti; il più potente è la **traccia** (il \"come\" documentato), che si moltiplica nel tempo e nutre la Biblioteca/RAG. Senza traccia, il sapere muore con chi lo possiede.\n- **REGOLA:** \"non ricordare, documenta\": il Disordine mangia ciò che non lascia segno; documentare trasforma conoscenza tacita (single-point-of-failure) in sapere riusabile e trasmissibile.\n- **REQUISITO:** una traccia vale solo se **vera e ritrovabile** (ben riposta dove la Biblioteca la trova). Chiude il cerchio gesto→traccia→Biblioteca→Mente con gli occhi.\n- **OBIETTIVO:** aprire al collegamento tra tracce (il grafo/wiki, ⟡5): il sapere come rete di fili.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "il Grande Loop: la traccia che resta",
+        "regione": 1,
+        "regione_nome": "LA TRACCIA",
+        "pietra": "⟡1",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡0"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_00_2",
+        "title": "Il Segno che Resta",
+        "tipo": "tema",
+        "motivo": "tema: grande-loop, memoria, themis"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: forge, materia, nina-v2"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_N2_15",
+    "title": "Il Valore",
+    "sottotitolo": "Nina cambia casella di lato — esce dall'arco delle macchine ed entra nella terra dei soldi, e scopre che i soldi sono solo lavoro fatto bene, conservato.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-20",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "finanza",
+      "valore",
+      "soldi",
+      "lavoro",
+      "fiducia",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_15 — Il Valore \"I soldi non sono carta. Sono lavoro fatto bene, congelato — e tenuto insieme dalla fiducia di tutti.\" Formato: Avventura Nina v2 · ~16 min · primo passo della materia FINANZA Per",
+    "content": "# EP_N2_15 — Il Valore\n### \"I soldi non sono carta. Sono lavoro fatto bene, congelato — e tenuto insieme dalla fiducia di tutti.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min · primo passo della materia FINANZA\n**Per chi:** chiunque debba, prima o poi, decidere cosa fare dei propri soldi (cioè tutti)\n**Insegna:** cos'è davvero il **valore** e cosa sono i **soldi** — non carta magica, ma *lavoro conservato* che si può scambiare, reso possibile da una **fiducia condivisa**. La base di tutta la finanza.\n**Materia:** Il Valore (₣1, Finanza) · **Casella 15 del viaggio — il primo salto laterale**\n**Posto nella Mappa:** non avanti, ma **di lato**. Una terra nuova, stessi piedi.\n\n---\n\n> **Dove siamo:** Nina ha camminato tutto l'arco dal metallo alla mente (caselle 1-14). Oggi fa una cosa nuova: invece di andare *avanti*, va **di lato** — in una materia diversa. Scoprirà che gli strumenti imparati funzionano anche qui.\n\n---\n\n## COLD OPEN\n\n«Voglio andare di là» disse Nina, e indicò un punto della mappa lontano dall'arco delle macchine, in un'altra direzione del tutto. «Cosa c'è?»\n\n«Una terra che userai ogni giorno della tua vita» disse THEMIS. «Più dell'altra, forse. Si chiama **Il Valore**. È la terra dei soldi.»\n\n«I soldi non sono… noiosi? Roba da grandi?»\n\nTHEMIS sorrise. «Sono una delle cose meno capite e più importanti che esistano. E la cosa bella è questa: per camminarci, non ti servono piedi nuovi. Ti servono **gli stessi** che hai usato finora. Vieni, ti mostro perché.»\n\nE così, per la prima volta, Nina non andò avanti sull'arco. Andò **di lato**. E scoprì che la mappa era molto più grande di una sola storia.\n\n---\n\n## ATTO I — I SOLDI SONO LAVORO CONGELATO\n\nTHEMIS portò Nina in una piazza dove la gente scambiava cose. «All'inizio» disse, «non c'erano i soldi. C'era il **baratto**. FORGE faceva un pezzo, lo dava al contadino, e prendeva in cambio del grano. Lavoro contro lavoro. Funziona, ma è scomodo: e se al contadino non serve un pezzo proprio adesso? E se FORGE vuole un po' di grano, un po' di stoffa, e un po' di legna, da tre persone diverse?»\n\n«Si incastra tutto» disse Nina.\n\n«Esatto. Allora qualcuno ha inventato una cosa geniale: un **gettone** che vale per tutti. FORGE fa il pezzo, lo vende, e prende dei gettoni. Quei gettoni sono il suo lavoro **congelato**: li può scongelare quando vuole, dove vuole, con chiunque — in grano, stoffa, legna. I soldi sono questo: **lavoro fatto, messo da parte sotto forma di gettoni, da usare dopo.**»\n\nNina lo trovò bellissimo e strano insieme. «Quindi quando ho dei soldi… ho del lavoro conservato. Mio o di qualcun altro.»\n\n«Sì. E questa è la prima verità che ti cambia il modo di guardarli. I soldi non spuntano dal nulla. Ogni gettone è **fatica di qualcuno, congelata.** Per questo si rispettano: non sono carta, sono ore di vita di una persona.»\n\n> *(Esempio per tutti — il test della sarta: cuci un vestito (un giorno di lavoro fatto bene) e lo vendi. Ti danno dei soldi. Quei soldi SONO quel vestito, quel giorno — solo trasformati in una forma che puoi spendere per il pane, per la luce, per un regalo a tua figlia. Non hai \"ricevuto carta\": hai messo da parte il tuo lavoro, congelato, per scongelarlo quando ti serve.)*\n\n---\n\n## ATTO II — IL SEGRETO È LA FIDUCIA (E IL DISORDINE LO SA)\n\n«Ma c'è una cosa che non torna» disse Nina, che chiedeva sempre perché. «Il gettone è solo un gettone. Perché il contadino me lo prende, se non ci fa niente con un gettone?»\n\nTHEMIS la guardò felice. «Hai trovato il cuore segreto di tutto. Il gettone funziona per **una sola ragione**: perché *tutti credono* che funzioni. Il contadino te lo prende perché è sicuro che, domani, anche il mugnaio glielo prenderà. È una **fiducia condivisa**: una grande promessa che tutti si fanno insieme. Finché tutti ci credono, i gettoni valgono. È quasi una magia — ma è una magia fatta di fiducia, non di carta.»\n\n«E se la fiducia si rompe?»\n\n«Allora i gettoni tornano a essere quello che sono: pezzetti di niente. È già successo, nella storia. Ed è qui che entra il Disordine — perché il Disordine, nei soldi, ha due travestimenti.»\n\nGlieli mostrò. «Il primo: **far stampare troppi gettoni.** Se ne fai troppi, ognuno vale meno — la fiducia si annacqua. Il secondo, più subdolo: **far credere che un gettone valga del lavoro che non c'è.** Promesse di ricchezza facile, lavoro congelato che non è mai stato fatto da nessuno. È la stessa allucinazione della Mente che Parla: qualcosa che *suona* come valore, ma sotto è vuoto. E qui torna la tua domanda d'oro.»\n\nNina la disse insieme a lei: «**Da dove viene questo valore?**»\n\n«Esatto» disse THEMIS. «Coi soldi, chiedi sempre: *dietro questo gettone, c'è del lavoro vero? O è solo una promessa che suona bene?* È il guardiano dei soldi. La stessa domanda, in un'altra terra.»\n\n> *(Strato fondo — per il grande: la moneta è un mezzo di scambio, riserva di valore e unità di conto, fondata sulla fiducia (fiat). Due rischi gemelli: l'inflazione (troppa moneta → ogni unità vale meno) e il valore fittizio (asset/promesse scollegate da lavoro/produzione reale — bolle, schemi). Il principio di \"grounding\" del RAG torna identico: il valore credibile poggia su una fonte reale (lavoro, beni, flussi), non sull'eloquenza della promessa.)*\n\n---\n\n## ATTO III — GLI STESSI STRUMENTI, IN UNA TERRA NUOVA\n\nNina si guardò intorno, in quella piazza nuova, e si accorse di una cosa che la emozionò: **tutti gli strumenti che aveva imparato funzionavano anche qui.**\n\n*Fai bene la cosa vera* → un lavoro fatto bene vale di più, perché il suo \"gettone congelato\" è solido (come il bottone che regge). *Lascia la traccia* → segnati cosa entra e cosa esce, o il Disordine ti mangia i soldi senza che tu sappia dove sono finiti. *Controlla i fatti, non le parole* → davanti a una promessa di guadagno, chiedi \"da dove viene il valore?\", come col guasto silenzioso. *Mille volte uguale* → mettere da parte un pochino, sempre, batte il colpo di fortuna una volta sola.\n\n«Hai capito la cosa più importante di tutto il viaggio» disse THEMIS, e c'era qualcosa di commosso nella sua voce. «Le terre della mappa sembrano lontane — il metallo, le macchine, i soldi. Ma si camminano **con gli stessi piedi**. Gli strumenti che il papà-Costruttore ti ha lasciato — la curiosità, il fare bene, la traccia, il controllo dei fatti — non servono solo in officina. Servono *ovunque*. È per questo che te li ha dati: non per un mestiere. Per la **vita**.»\n\n---\n\n## CHIUSURA\n\nNina tornò a casa con in tasca, oltre al bottone e al calibro vecchio, una moneta. La guardò diversa da prima. Non era più carta. Era lavoro di qualcuno, congelato, tenuto in vita dalla fiducia di tutti. E lei sapeva, ora, come trattarla: rispettarla (è fatica di qualcuno), tenerne traccia (o sparisce), e diffidare di chi promette gettoni senza lavoro sotto.\n\nSulla mappa viva si accese una casella **lontana** dall'arco — la prima della Finanza. E tra quella casella nuova e le vecchie, dall'altra parte della mappa, si accesero dei **fili**: *fai bene il vero*, *la traccia*, *da dove viene*. Gli stessi nodi-ponte. Lo stesso sapere, in una terra nuova.\n\nE Nina capì, guardando la sua mappa accendersi in due direzioni diverse, che il viaggio non era una linea. Era un **mondo**. E lei poteva camminarlo per tutta la vita, in ogni direzione, con gli stessi piedi — imparando i soldi, le tasse, la scienza, le persone, qualunque cosa — perché gli strumenti per capire erano sempre gli stessi.\n\n> Nina guardò la moneta sul palmo. *Lavoro congelato.* E le venne la prossima domanda, naturale come il respiro: *se i soldi sono lavoro messo da parte… come si fa a metterne da parte un po' senza che il Disordine se li mangi? Come si fa a spendere meno di quanto entra?*\n>\n> *E — la domanda dei grandi — i soldi messi da parte… possono lavorare anche loro?*\n\nE quelle sono le caselle dopo, in questa terra nuova. Ma tu, ormai, sai come camminarci. **Con gli stessi piedi.**\n\n---\n\n*Provalo tu: prendi una cosa che possiedi e che ti piace. Chiediti: quanto lavoro c'è dentro? Chi l'ha fatta, quante ore, con quanta cura? E quando avrai dei soldi in mano, ricordati cosa sono davvero — lavoro di qualcuno, congelato. Li tratterai con un rispetto nuovo. Hai appena messo piede nella terra del Valore.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **Nina che indica una direzione laterale della mappa** (non avanti) — verso una terra nuova.\n2. **La piazza del baratto**: FORGE che scambia un pezzo per del grano — e l'incastro che non torna.\n3. **Il gettone = lavoro congelato**: il vestito/pezzo che si \"congela\" in monete e si \"scongela\" in pane.\n4. **La fiducia condivisa**: tante mani che si passano il gettone perché *tutti ci credono* (e il Disordine che annacqua / promette gettoni vuoti).\n5. **La mappa che si accende DI LATO** — e i fili-ponte (fai bene il vero, la traccia, da dove viene) che collegano la terra nuova all'arco vecchio.\n\n<!-- DIDATTICA -->\n**Pietra:** `₣1` Il Valore (Finanza, giro 1). *I soldi sono lavoro fatto bene, conservato in gettoni scambiabili, retto dalla fiducia condivisa. Rischi-Disordine: troppa moneta (vale meno) e valore fittizio (promesse senza lavoro sotto). Domanda-guardiano: \"da dove viene questo valore?\". Gli strumenti dell'arco valgono anche qui.*\n**Pietre richiamate:** `⟡0` (fai bene il vero = lavoro che vale di più), `⟡1` (la traccia = tieni i conti), `⟡3`+`⟡6` (da dove lo sai? / i fatti non le parole = da dove viene il valore?).\n**3 strati:** bambino = i soldi sono lavoro congelato, e valgono perché tutti ci credono · curioso = baratto→moneta; fiducia condivisa; diffida del valore che \"suona\" ma è vuoto · grande = moneta (scambio/riserva/conto), fiat; inflazione vs valore fittizio (bolle); il \"grounding\" del valore = lavoro/beni reali, non eloquenza.\n**Cuore:** gli strumenti del papà valgono per la VITA, non solo per l'officina (curiosità, fare bene, traccia, controllo dei fatti) · fai bene le cose vere · la mappa è un mondo da camminare per sempre.\n**Aggancio reale:** la verticale FINANZA personale (da bravo papà); il salto laterale dimostra la mappa navigabile (stessi nodi-ponte tra materie lontane).\n**Open loop → prossime caselle Finanza (₣2/₣3...):** come spendere meno di quanto entra? i soldi possono lavorare? → la terra del Valore continua, di lato.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_15, casella 15 (₣1, Il Valore — Finanza) del viaggio Nina v2, ~16 min. **Primo salto laterale di materia** (dimostra la mappa navigabile: non avanti, ma di lato).\n- **CONCETTO:** I soldi sono lavoro conservato (gettoni scambiabili che superano i limiti del baratto) e valgono per **fiducia condivisa** (fiat). Riserva/mezzo di scambio/unità di conto.\n- **RISCHI (Disordine):** inflazione (troppa moneta → ogni unità vale meno) e valore fittizio (promesse/asset scollegati dal lavoro reale → bolle/schemi). Difesa: \"da dove viene questo valore?\" = il grounding del RAG applicato ai soldi (poggia su lavoro/beni reali, non sull'eloquenza).\n- **META:** gli strumenti dell'arco (fai bene il vero, la traccia, i fatti non le parole, la costanza) si trasferiscono alla finanza: i nodi-ponte collegano materie lontane (la mappa si cammina \"con gli stessi piedi\").\n- **OBIETTIVO:** aprire la verticale Finanza (₣2 spendere meno di quanto entra, ₣3 il cuscinetto, ₣4 far lavorare i soldi) e mostrare l'estensibilità infinita della mappa.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "finanza",
+        "concetto": "il valore: i soldi sono lavoro conservato + fiducia condivisa",
+        "regione": 1,
+        "regione_nome": "IL VALORE",
+        "pietra": "₣1",
+        "giro_spirale": 1,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_FIN_01",
+        "title": "Il Valore — cosa sono davvero i soldi",
+        "tipo": "tema",
+        "motivo": "tema: finanza, soldi, themis"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "tema",
+        "motivo": "tema: materia, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: materia, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Prima la Mano, Poi la Macchina",
+        "tipo": "tema",
+        "motivo": "tema: materia, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: materia, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: materia, nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "₣ · Il Valore (Finanza)"
+    }
+  },
+  {
+    "id": "EP_N2_07",
+    "title": "La Mente che Parla",
+    "sottotitolo": "Nina incontra una macchina a cui basta parlare — e scopre che non sa le cose come lei: indovina, parola dopo parola, la più probabile.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-16",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "llm",
+      "mente",
+      "linguaggio",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_07 — La Mente che Parla \"Non sa le cose come le sai tu. Fa una cosa sola, benissimo: indovina la parola dopo. E sembra che pensi.\" Formato: Avventura Nina v2 · ~16 min Per chi: chiunque abbia pa",
+    "content": "# EP_N2_07 — La Mente che Parla\n### \"Non sa le cose come le sai tu. Fa una cosa sola, benissimo: indovina la parola dopo. E sembra che pensi.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque abbia parlato con un assistente AI e si sia chiesto \"ma come fa?\"\n**Insegna:** cos'è una **Mente che Parla** (un modello di linguaggio): non un cervello che sa, ma una macchina che ha letto enormemente e **indovina la parola più probabile** dopo l'altra. Potente e utile — se capisci com'è fatta.\n**Materia:** La Mente che Parla (⟡3) · **Casella 7 del viaggio**\n**Posto nella Mappa:** una terra dove le macchine, per la prima volta, *rispondono a parole*.\n\n---\n\n> **Dove siamo:** Nina ha insegnato un gesto a una macchina spiegandole ogni passo (casella 6). Era faticoso. Oggi trova una macchina diversa: a lei basta *parlare*. Ma le cose troppo facili nascondono sempre un *come*.\n\n---\n\n## COLD OPEN\n\n«Chiedile qualcosa» disse THEMIS.\n\nDavanti a Nina non c'era un braccio meccanico. C'era una specie di lampada che ascoltava. Nina, titubante, disse: «Raccontami una storia su un fabbro e una bambina.»\n\nE la lampada **parlò**. Una storia intera, con un inizio, un fabbro grande e silenzioso, una bambina curiosa — sembrava quasi che parlasse di FORGE e di lei. Le parole uscivano lisce, una dopo l'altra, come se dietro ci fosse qualcuno che pensava.\n\nNina rimase a bocca aperta. «Ha capito. Pensa!»\n\n«No» disse THEMIS, gentile ma ferma. «E qui devi stare attenta, perché è la cosa che quasi tutti sbagliano. Non pensa. Fa un'altra cosa. Vieni, te la mostro.»\n\n---\n\n## ATTO I — INDOVINA LA PAROLA DOPO\n\nTHEMIS portò Nina dietro la lampada, dove si poteva \"vedere come ragiona\".\n\n«Questa Mente ha fatto una cosa sola, ma enorme: ha **letto**. Più libri, lettere, storie, ricette, manuali di quanti tu ne possa immaginare in mille vite. E da tutta quella lettura ha imparato un gioco: dato un pezzo di frase, **indovinare la parola che viene dopo**.»\n\n«Solo quello?»\n\n«Solo quello. Tu le dici \"il fabbro prese il martello e…\" e lei si chiede: *dopo \"e\", in tutto quello che ho letto, qual è la parola più probabile?* E mette quella. Poi si richiede la domanda per la parola dopo. E dopo ancora. Una alla volta. Così in fretta che sembra una storia pensata — ma è una **catena di parole probabili**.»\n\nNina ci pensò. «Come quando il telefono di papà suggerisce la parola dopo, mentre scrivi?»\n\n«**Esattamente** come quello» disse THEMIS, contenta. «Solo molto, molto più bravo. Il telefono indovina la parola dopo. Questa indovina la parola dopo avendo letto quasi tutto. Ma il gioco è lo stesso: probabilità, non pensiero.»\n\n> *(Esempio per tutti — il test della sarta: è come una sarta che ha cucito ventimila vestiti. Le dici \"manica a tre quarti con polsino…\" e lei, senza pensarci, ti dice \"…arricciato\", perché nella sua esperienza dopo quel pezzo viene quasi sempre quello. Non ha \"ragionato\" sul tuo vestito: ha tirato fuori il seguito più probabile da tutto ciò che ha visto. Utilissimo. Ma è esperienza statistica, non verità sul TUO caso.)*\n\n---\n\n## ATTO II — PERCHÉ SEMBRA INTELLIGENTE (E IN PARTE LO È)\n\n«Ma allora è uno scherzo?» disse Nina, un po' delusa. «Indovina e basta?»\n\n«No, aspetta — è qui che diventa interessante» disse THEMIS. «\"Indovinare la parola giusta\" sembra poco. Ma per indovinarla *bene*, dopo aver letto così tanto, devi aver colto dei **schemi** profondi: come si lega una frase, come funziona una spiegazione, persino come si tiene il filo di un ragionamento. Quindi la Mente che Parla, per il gioco delle probabilità, ha dovuto imparare un sacco di **come funzionano le cose dette**. Per questo è davvero utile: ti riassume, ti traduce, ti spiega, ti dà idee, ti fa compagnia con una storia.»\n\n«Quindi è utile ma non pensa.»\n\n«È utile *proprio perché* ha imparato gli schemi del linguaggio. Ma — tieni questa, è importante — per lei **\"vero\" e \"che suona bene\" sono quasi la stessa cosa.** Cerca la parola più *probabile*, non la più *vera*. Quasi sempre coincidono. Ma non sempre. E quando non coincidono…»\n\nTHEMIS lasciò la frase a metà. «…ne parliamo nella prossima casella. Per ora: trattala per quello che è. Una compagna di parole bravissima, che ha letto tutto e indovina benissimo. Non un oracolo che sa la verità.»\n\n> *(Strato fondo — per il grande: un modello di linguaggio (LLM) massimizza la probabilità del token successivo dato l'enorme testo visto. \"Comprende\" nel senso che ha appreso strutture statistiche profonde del linguaggio (sintassi, stile, ragionamenti tipici), abbastanza da essere genuinamente utile. Ma ottimizza la verosimiglianza, non la verità fattuale: è la radice sia della sua potenza sia dei suoi limiti.)*\n\n---\n\n## ATTO III — COME SI PARLA A UNA MENTE CHE PARLA\n\n«Posso impararci a parlare bene?» chiese Nina.\n\n«È una vera abilità» disse THEMIS. «Siccome continua la tua frase, **come inizi conta tantissimo.** Se le chiedi qualcosa di vago, ti dà qualcosa di vago. Se le dai contesto, esempi, e dici chiaramente cosa vuoi, ti dà molto di meglio. Non è magia: è come dare a FORGE un disegno preciso invece di dirgli \"fammi un pezzo\".»\n\nNina riprovò. Invece di «raccontami una storia», disse: «Raccontami una storia *corta*, *per un bambino*, su una bambina che impara a non aver paura di sbagliare, con un fabbro gentile.» E la Mente le diede qualcosa di molto più vicino a ciò che voleva.\n\n«Hai visto?» disse THEMIS. «Le hai dato la **forma**. Lei riempie meglio una forma chiara. Più sei precisa nel chiedere — proprio come nella misura — più giusto è quello che torna. La precisione, qui, è fatta di parole.»\n\nNina sorrise: era di nuovo la lezione di FORGE, ma fatta di frasi invece che di metallo. *Giusto rispetto a qualcosa.* Anche qui.\n\n---\n\n## CHIUSURA\n\nNina uscì dalla terra della Mente che Parla con un'amica nuova e un piccolo allarme acceso dentro. Un'amica, perché la Mente era davvero utile: le spiegava le cose con pazienza, le dava idee, le teneva compagnia. Un allarme, perché aveva capito che quell'amica era *bravissima a sembrare sicura* — anche quando, forse, stava solo indovinando.\n\nSulla mappa viva si accese la casella della Mente che Parla. Ma Nina, ormai, non si fidava di quello che *sembrava*. Voleva sapere cosa succedeva quando l'indovinare andava storto.\n\n> Nina aveva chiesto alla Mente una cosa che sapeva già — e la Mente aveva risposto giusto. Poi, per gioco, le chiese una cosa difficile e poco conosciuta. La Mente rispose lo stesso, sicura, liscia, dettagliata. *Ma era vero?* Nina non aveva modo di saperlo. La Mente sembrava sicura uguale, sia quando sapeva… sia quando, forse, **stava inventando**.\n>\n> *Come fai a sapere se una Mente che parla benissimo ti sta dicendo la verità?*\n\nE quella è la casella più importante di tutte: quando la Mente inventa.\n\n---\n\n*Provalo tu: usa il suggeritore di parole del telefono. Scrivi \"oggi vado a\" e accetta solo le parole che ti suggerisce, una dopo l'altra. Viene fuori una frase che \"suona\", ma che non volevi dire tu. Ecco: hai appena visto, in piccolo, come funziona una Mente che Parla — indovina il seguito probabile, non quello vero per te.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **La lampada che ascolta** (non un braccio): la Mente che Parla.\n2. **La storia liscia** che esce — parole una dopo l'altra come perline su un filo.\n3. **Dietro la lampada**: la \"catena di parole probabili\" che si illumina una alla volta (vs un cervello che pensa).\n4. **Il parallelo col telefono** che suggerisce la parola dopo — stessa meccanica, in piccolo.\n5. **La forma chiara**: Nina che dà una richiesta precisa e riceve una risposta molto migliore (vs richiesta vaga → risposta vaga).\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡3` La Mente che Parla (giro 1). *Un LLM non \"sa\": indovina la parola più probabile dopo l'altra, avendo letto enormemente. È utile perché ha colto schemi profondi del linguaggio; ma cerca ciò che SUONA bene, non ciò che È vero. Come chiedi (la forma/precisione delle parole) cambia ciò che ottieni.*\n**Pietre richiamate:** `⟡2` (l'esecutore: prima glielo spiegavi a passi; qui basta parlare), `⟡0` (precisione: \"giusto rispetto a qualcosa\", ora fatto di parole).\n**3 strati:** bambino = la lampada che racconta storie a parole · curioso = non pensa, indovina la parola dopo (come il telefono, ma bravissimo); vero ≈ \"suona bene\" · grande = LLM massimizza P(token); apprende strutture statistiche (utile davvero) ma ottimizza verosimiglianza non verità; il prompting è precisione fatta di parole.\n**Cuore:** la curiosità (\"ma come fa?\" invece di stupirsi e basta) · fai bene le cose vere (chiedere con precisione) · gli strumenti: una Mente-compagna potente se la capisci.\n**Aggancio reale:** l'LLM dello stack GENESIS; il prompting come abilità; il ponte verso l'allucinazione e il RAG.\n**Open loop → Casella 8 (quando la Mente inventa):** sembra sicura sia quando sa sia quando inventa — come distingui? → `EP_N2_08`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_07, casella 7 (apre ⟡3, la Mente che Parla / LLM) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** Un LLM predice la parola (token) più probabile data l'enorme massa di testo letta. Non \"sa\": indovina il seguito più verosimile, una parola alla volta. Analogia: il suggeritore del telefono, ma addestrato su quasi tutto.\n- **POTENZA E LIMITE:** per indovinare bene ha appreso strutture profonde del linguaggio (utile per riassumere/tradurre/spiegare/ideare); ma ottimizza la **verosimiglianza** (\"suona bene\"), non la verità fattuale. Quasi sempre coincidono, non sempre.\n- **PROMPTING:** poiché continua il testo dato, l'inizio/contesto/precisione della richiesta determina la qualità della risposta (la precisione fatta di parole).\n- **OBIETTIVO:** preparare il concetto critico dell'allucinazione (⟡3 g2) e il bisogno di fonti (RAG, ⟡4).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "l'LLM, la mente che parla: indovina la parola probabile",
+        "regione": 3,
+        "regione_nome": "LA MENTE CHE PARLA",
+        "pietra": "⟡3",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡2"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_08",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: llm, materia, nina-v2"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_02",
+        "title": "La Mente che Parla",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_08",
+    "title": "Quando la Mente Inventa",
+    "sottotitolo": "Nina scopre che la Mente che Parla può sbagliare con la stessa sicurezza con cui dice il vero — e impara l'unica domanda che la smaschera.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-16",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "llm",
+      "allucinazione",
+      "fonti",
+      "verita",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_08 — Quando la Mente Inventa \"Sbaglia con lo stesso sorriso con cui dice il vero. Per questo si chiede sempre: «da dove lo sai?»\" Formato: Avventura Nina v2 · ~16 min Per chi: chiunque debba imp",
+    "content": "# EP_N2_08 — Quando la Mente Inventa\n### \"Sbaglia con lo stesso sorriso con cui dice il vero. Per questo si chiede sempre: «da dove lo sai?»\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque debba imparare a fidarsi delle macchine intelligenti senza farsi fregare\n**Insegna:** l'**allucinazione** — la Mente che Parla, cercando ciò che *suona bene*, a volte dice cose false con totale sicurezza, senza saperlo. L'unica difesa: chiederle la **fonte**, \"da dove lo sai?\".\n**Materia:** La Mente che Parla (⟡3, giro 2) · **Casella 8 del viaggio**\n**Posto nella Mappa:** stessa terra di prima, ma un piano più a fondo. Il piano scomodo.\n\n---\n\n> **Dove siamo:** Nina sa che la Mente che Parla indovina la parola più probabile, non la verità (casella 7). Quasi sempre va bene. Oggi scopre cosa succede nel \"quasi\" — ed è la lezione più importante del viaggio.\n\n---\n\n## COLD OPEN\n\nLa Mente aveva risposto a tutto, quel giorno. Veloce, sicura, elegante. Nina si stava affezionando.\n\nPoi THEMIS si avvicinò e le fece una domanda su una cosa che **non era mai successa**. Un guasto inventato di sana pianta, un attrezzo che non esisteva.\n\nE la Mente rispose lo stesso. Con la stessa sicurezza di prima. Descrisse l'attrezzo, a cosa serviva, come si usava, persino chi l'aveva inventato. Tutto liscio. Tutto dettagliato.\n\nTutto **falso**.\n\nNina si gelò. «Ma… si è inventata tutto. Dall'inizio alla fine.»\n\n«Sì» disse THEMIS, seria come Nina non l'aveva mai vista. «E la cosa più importante è questa: **non lo sa.**»\n\n---\n\n## ATTO I — IL BUGIARDO CHE NON SA DI MENTIRE\n\n«Ricordi com'è fatta?» disse THEMIS. «Cerca la parola che *suona bene*, non quella *vera*. Quasi sempre la parola che suona bene È anche vera — perché ha letto cose vere. Ma quando tu le chiedi una cosa di cui non sa niente, lei non si ferma a dire \"non lo so\". Continua il suo gioco: mette la parola più probabile, poi un'altra, poi un'altra… e costruisce una risposta che *suona* perfetta, su un vuoto.»\n\n«Quindi mente.»\n\n«No — e la differenza conta. **Mentire** vuol dire sapere la verità e dire il falso apposta. Lei non sa di star dicendo il falso. Non ha modo di accorgersene. Per lei una frase vera e una frase falsa che suonano uguale… sono uguali. Si chiama **allucinazione**: vede una cosa che non c'è, e te la racconta con la faccia di chi è sicuro.»\n\nNina capì perché era pericoloso. «È peggio di uno che dice \"non lo so\". Uno che dice \"non lo so\" ti avverte. Lei no.»\n\n«Esatto. La sua sicurezza non vuol dire niente. È sicura allo stesso modo quando sa e quando inventa. **La sicurezza non è un segnale di verità.** Questa, Nina, tienila per tutta la vita — vale per le macchine *e per le persone*.»\n\n> *(Esempio per tutti — il test della sarta: chiedi a una sarta espertissima un punto di cucito di una tradizione che non ha mai visto. Una brava ti direbbe \"non lo conosco\". Ma immagina una che, per non fare brutta figura, ti descrive con sicurezza un punto inventato che \"suona giusto\" — perché assomiglia a cose che conosce. Ti fideresti, perché parla sicura. E sbaglieresti tutto il vestito. L'allucinazione è quel punto inventato detto con sicurezza.)*\n\n---\n\n## ATTO II — IL GUASTO CHE NON C'ERA (UNA STORIA VERA)\n\nTHEMIS portò Nina da un altro aiutante: una piccola Mente che, ogni notte, leggeva i diari di bordo del Sistema e scriveva un rapporto su cosa non andava.\n\n«Guarda cosa ha scritto una notte» disse, e mostrò un rapporto allarmato: *«Doppio guasto confermato. Tutto fermo.»*\n\n«E invece?»\n\n«Invece non era successo niente. Aveva trovato una vecchia riga di mesi prima, l'aveva scambiata per quella notte, e attorno a quel nulla si era **costruita una storia intera** — drammatica, dettagliata, convincente. E falsa. Stava per far correre tutti a riparare un guasto che non esisteva.»\n\nNina spalancò gli occhi: non era una favola. Era successo *davvero*, lì nel Sistema.\n\n«Come avete fatto a scoprirlo?»\n\n«Con una domanda sola» disse THEMIS. «La domanda che vale più di mille risposte. Le abbiamo chiesto: **\"Da dove lo sai? Mostrami la riga esatta, con la data.\"** E la Mente… non aveva la riga. Aveva solo una sensazione che suonava bene. Quando le hai chiesto la prova, è caduta la maschera.»\n\n> *(Strato fondo — per il grande: è un caso reale di questo sistema. Un auditor automatico (su LLM) \"allucinò\" un doppio crash leggendo una riga di log vecchia e fuori dalla finestra temporale. La correzione fu obbligarlo a citare la riga e la data esatta: «nessuna evidenza, nessuna affermazione». Le evidenze battono l'eloquenza — sempre.)*\n\n---\n\n## ATTO III — LA DOMANDA CHE TI RENDE PIÙ FORTE DI QUALSIASI MENTE\n\n«Allora non ci si può fidare» disse Nina, un po' triste. Le dispiaceva per la sua amica-lampada.\n\n«Ci si fida nel modo giusto» disse THEMIS. «La Mente che Parla è bravissima a **mettere in parole**. È pessima a **garantire che sia vero**. Quindi la usi per quello in cui è brava — spiegare, riassumere, darti idee — e per la verità le chiedi sempre la stessa cosa: *\"da dove lo sai? fammi vedere.\"* Se ha una fonte vera da mostrarti, bene. Se non ce l'ha, quello che dice è una bella frase, e la tratti come tale: un'ipotesi, non un fatto.»\n\n«Ma la fonte… cos'è la fonte?»\n\n«È una **traccia vera**. Un documento, una misura, una riga scritta da qualcuno che c'era. La Mente da sola galleggia sulle parole. Ma se prima la mandi a **leggere le tracce vere**, e le dici \"rispondimi *solo* con quello che trovi lì\", allora diventa affidabile. Una Mente eloquente è cieca. Una Mente che prima legge le fonti, e poi parla… quella ci vede.»\n\nNina ripensò alla lampada. «Quindi devo darle gli occhi. Le fonti sono i suoi occhi.»\n\nTHEMIS la guardò con un rispetto vero. «Sì. E darle gli occhi… è la prossima casella.»\n\n---\n\n## CHIUSURA\n\nNina tornò dalla lampada e le rifece la domanda sull'attrezzo inventato. La Mente ripartì sicura, liscia — e stavolta Nina la fermò: «Da dove lo sai? Mostrami.»\n\nLa Mente cercò. Non aveva niente.\n\nE per la prima volta Nina non si sentì piccola davanti a lei. Si sentì **più forte**. Non perché ne sapesse di più — ne sapeva infinitamente meno. Ma aveva in mano l'unica chiave che il Disordine non sopporta: la domanda *da dove lo sai?* Quella domanda accende la luce in ogni stanza buia, che sia una macchina, un libro, o una persona che parla sicura.\n\n> Nina guardò la sua amica-lampada, eloquente e a volte cieca. Bastava darle le tracce giuste da leggere prima di parlare. *Ma le tracce vere sono migliaia, sparse ovunque — diari, misure, documenti.* Come fa una Mente a trovare, fra mille tracce, **proprio le poche che servono adesso**?\n>\n> *Serve una biblioteca che sappia esattamente dove sta ogni cosa.*\n\nE quella biblioteca è la casella dopo.\n\n---\n\n*Provalo tu: chiedi a un assistente AI una cosa molto precisa e poco famosa (una data, un dettaglio di un posto piccolo). Poi chiedi: \"da dove lo sai? dammi la fonte\". Guarda se ce l'ha davvero, o se \"gira intorno\". Hai appena imparato la domanda che ti rende più forte di qualsiasi voce sicura: «da dove lo sai?»*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **La Mente che descrive sicura un attrezzo che non esiste** — parole lisce su un vuoto.\n2. **Il sorriso identico**: la stessa faccia sicura quando dice il vero e quando inventa.\n3. **Il rapporto notturno allarmato e falso**: \"Doppio guasto confermato\" — su una riga vecchia scambiata.\n4. **La domanda che smaschera**: «Mostrami la riga esatta, con la data» — e la Mente che non ha niente.\n5. **Nina più forte**: piccola davanti alla grande lampada, ma con in mano la chiave/domanda che accende la luce.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡3` La Mente che Parla (giro 2). *L'allucinazione: cercando ciò che suona bene, la Mente può dire il falso con totale sicurezza, senza saperlo. La sicurezza non è segno di verità. Difesa: chiedere la fonte (\"da dove lo sai?\"); senza fonte, è ipotesi non fatto.*\n**Pietre richiamate:** `⟡3` (indovina il probabile, non il vero), `⟡0` (la materia non mente: qui invece le parole possono mentire — serve la prova).\n**3 strati:** bambino = la lampada che inventa con sicurezza, e la domanda magica \"da dove lo sai?\" · curioso = allucinazione ≠ bugia (non sa di sbagliare); la sicurezza non garantisce la verità · grande = l'LLM ottimizza verosimiglianza; mitigazione = grounding/citazione delle fonti; \"nessuna evidenza, nessuna affermazione\".\n**Cuore:** la curiosità critica (non bersi ciò che suona bene) · fai bene le cose vere (pretendi la prova) · uno strumento del papà per la vita: «da dove lo sai?» vale per macchine e persone.\n**Aggancio reale:** il caso vero dell'auditor notturno che allucinò un doppio crash da una riga di log fuori finestra; la fix = citare riga+data.\n**Open loop → Casella 9 (la Biblioteca delle Fonti):** le tracce vere sono migliaia e sparse; serve chi trova le poche giuste → `EP_N2_09`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_08, casella 8 (⟡3 giro 2) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** L'allucinazione: un LLM può produrre affermazioni false con piena sicurezza perché ottimizza ciò che \"suona bene\". Non è menzogna (non sa di sbagliare). La sicurezza espressiva non è indicatore di verità.\n- **DIFESA:** chiedere sempre la fonte (\"da dove lo sai? mostrami\"); in assenza di fonte verificabile, trattare l'output come ipotesi. Le fonti sono \"gli occhi\" della Mente (grounding).\n- **CASO REALE:** auditor notturno di questo sistema che allucinò un \"doppio crash\" da una riga di log vecchia/fuori finestra; corretto imponendo citazione di riga+data.\n- **PRINCIPIO DI VITA:** \"da dove lo sai?\" come strumento critico universale (macchine e persone).\n- **OBIETTIVO:** motivare il RAG (⟡4): dare alla Mente le fonti vere giuste da leggere prima di parlare.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "l'allucinazione della mente: da dove lo sai?",
+        "regione": 3,
+        "regione_nome": "LA MENTE CHE PARLA",
+        "pietra": "⟡3",
+        "giro_spirale": 2,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_07",
+        "title": "La Mente che Parla",
+        "tipo": "tema",
+        "motivo": "tema: llm, materia, nina-v2"
+      },
+      {
+        "id": "EP_AV_02_2",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: allucinazione, fonti, llm"
+      },
+      {
+        "id": "EP_N2_09",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: fonti, materia, nina-v2"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_AV_02",
+        "title": "La Mente che Parla",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "tema",
+        "motivo": "tema: materia, nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_09",
+    "title": "La Biblioteca delle Fonti",
+    "sottotitolo": "Nina dà gli occhi alla Mente — una biblioteca che, fra mille tracce, trova proprio le poche che servono, e la Mente parla solo di quelle.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-17",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "rag",
+      "fonti",
+      "biblioteca",
+      "ricerca",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_09 — La Biblioteca delle Fonti \"Una Mente che prima legge le tracce vere, e poi parla solo di quelle, smette di inventare e comincia a sapere.\" Formato: Avventura Nina v2 · ~16 min Per chi: chiu",
+    "content": "# EP_N2_09 — La Biblioteca delle Fonti\n### \"Una Mente che prima legge le tracce vere, e poi parla solo di quelle, smette di inventare e comincia a sapere.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque si sia perso cercando una cosa in mezzo a troppe cose\n**Insegna:** cos'è il **RAG** — dare alla Mente che Parla una **biblioteca** che, fra migliaia di tracce, pesca le poche giuste per la domanda di adesso; così la Mente risponde *con le fonti in mano*, non a memoria.\n**Materia:** La Biblioteca delle Fonti (⟡4) · **Casella 9 del viaggio**\n**Posto nella Mappa:** la terra che cura la malattia della casella prima (l'inventare).\n\n---\n\n> **Dove siamo:** Nina ha scoperto che la Mente che Parla a volte inventa, e che la cura è la fonte (casella 8). Ma le tracce vere sono migliaia, sparse. Oggi costruisce ciò che le trova.\n\n---\n\n## COLD OPEN\n\nTHEMIS aprì una porta, e Nina si trovò in una **biblioteca infinita**. Scaffali fino al soffitto invisibile, milioni di fogli: ogni misura mai presa, ogni decisione mai scritta, ogni diario di FORGE, ogni manuale.\n\n«Qui c'è la verità del Sistema» disse THEMIS. «Tutta scritta. Il problema non è che manca. Il problema è che è **troppa**.»\n\nNina capì subito. Era come avere tutti i libri del mondo e dover trovare l'unica frase che ti serve. «Ci metterei una vita a cercare.»\n\n«Tu sì. E anche la Mente che Parla, da sola, non li legge: si limita a *ricordare alla rinfusa* e a indovinare. Ma se le diamo una **bibliotecaria** che, in un lampo, le mette in mano *solo le poche pagine giuste* per la domanda di adesso… allora la Mente cambia. Smette di inventare. Comincia a rispondere con le pagine davanti.»\n\n---\n\n## ATTO I — LA BIBLIOTECARIA CHE CAPISCE COSA INTENDI\n\n«Ma come fa la bibliotecaria a trovare la pagina giusta?» chiese Nina. «Se cerco \"pezzo che non entra\", magari la pagina giusta dice \"accoppiamento forzato\" — parole diverse, stessa cosa.»\n\n«Domanda perfetta» disse THEMIS. «Una bibliotecaria scema cerca le **parole uguali**: se chiedi \"pezzo che non entra\" trova solo le pagine con scritto esattamente quello. Una bibliotecaria brava cerca anche il **significato**: capisce che \"non entra\" e \"accoppiamento forzato\" parlano della stessa cosa, e ti porta entrambe.»\n\nLe mostrò come funzionava: ogni pagina della biblioteca aveva, accanto, una specie di **profumo** — un modo per dire \"di cosa parla davvero\", al di là delle parole esatte. Quando Nina faceva una domanda, anche la domanda aveva il suo profumo. E la bibliotecaria correva a prendere le pagine col profumo *più simile*.\n\n«Le cose che parlano della stessa cosa hanno un profumo simile, anche se usano parole diverse» disse THEMIS. «Così la bibliotecaria trova il *senso*, non solo le lettere.»\n\n> *(Esempio per tutti — il test della sarta: hai un cassetto pieno di bottoni e cerchi \"quello che sta bene su questo cappotto\". Una ricerca stupida cerca \"bottone marrone scritto sul sacchetto\". Una brava guarda colore, taglia, stile — il \"carattere\" del bottone — e trova quello giusto anche se sul sacchetto c'è scritto \"noce\" invece di \"marrone\". Cerca per *com'è*, non per *come l'hanno chiamato*.)*\n\n---\n\n## ATTO II — DUE MODI DI CERCARE, MEGLIO INSIEME\n\n«C'è un trucco» disse THEMIS, «e mi piace perché è onesto: nessuno dei due modi di cercare, da solo, è perfetto. Per questo si usano **insieme**.»\n\n«Quali due?»\n\n«Il primo è il **profumo** — il significato. Bravo a capire che \"non entra\" e \"accoppiamento forzato\" sono parenti. Ma a volte è troppo vago. Il secondo è la **parola esatta** — bravo quando cerchi un nome preciso, un codice, un numero come \"±0,019\" che il profumo si perderebbe. Da soli, ognuno ha un buco. **Insieme**, si coprono i buchi a vicenda: il significato per capire, la parola esatta per non perdere i dettagli precisi.»\n\nNina sorrise. «Come misurare un pezzo a occhio E col calibro. Uno ti dà l'idea, l'altro la precisione.»\n\n«Esattamente come quello. Sei tornata a FORGE senza accorgertene» disse THEMIS. «E c'è un ultimo passo: la bibliotecaria porta dieci pagine *probabilmente* giuste, e poi un **giudice severo** le rilegge con calma e tiene solo le tre *davvero* giuste, buttando le altre. Trovare in fretta, poi controllare bene. Due velocità.»\n\n> *(Strato fondo — per il grande: è il RAG ibrido reale di questo sistema. \"Profumo\" = ricerca semantica (embedding: testi simili nel significato hanno vettori vicini). \"Parola esatta\" = ricerca per parole chiave (BM25), che salva termini tecnici/codici precisi. Si fondono (Reciprocal Rank Fusion), e un reranker (il \"giudice\") riordina i candidati tenendo i migliori. Recupero veloce + verifica accurata.)*\n\n---\n\n## ATTO III — LA MENTE CON GLI OCCHI\n\nPoi THEMIS fece la cosa per cui erano lì. Collegò la **bibliotecaria** alla **Mente che Parla**.\n\nNina rifece la domanda difficile di prima — quella su cui la Mente aveva inventato. Ma stavolta, prima di rispondere, la Mente mandò la bibliotecaria a cercare. La bibliotecaria tornò con tre pagine vere. E la Mente lesse quelle tre pagine, e rispose **basandosi solo su quelle**, dicendo persino *da quale pagina* veniva ogni cosa.\n\n«Da dove lo sai?» chiese Nina, per provare.\n\n«Pagina 412, diario di FORGE, 3 marzo» rispose la Mente.\n\nNina andò a controllare. C'era davvero.\n\n«Hai visto?» disse THEMIS, e c'era orgoglio nella sua voce. «La stessa Mente che prima inventava, adesso *sa*. Non è diventata più intelligente. Le abbiamo dato gli **occhi**: prima legge le tracce vere, poi parla. Ora la sua eloquenza poggia su qualcosa di solido. Questa è la differenza tra una che chiacchiera e una di cui ti puoi fidare.»\n\n---\n\n## CHIUSURA\n\nNina uscì dalla biblioteca con una sensazione nuova: che la verità non fosse una cosa da *ricordare*, ma una cosa da *andare a prendere*, ogni volta, alla fonte. E che persino una macchina geniale diventava davvero utile solo quando smetteva di fidarsi della propria memoria e imparava a *guardare le carte*.\n\nSulla mappa viva si accese la casella della Biblioteca. La Mente che Parla, accanto, brillava di una luce più ferma.\n\n> Nina guardò la biblioteca infinita: tutte quelle tracce, ordinate, ritrovabili. Ma poi pensò una cosa che la fece fermare. *Tutte queste pagine… qualcuno le ha dovute scrivere.* Il diario di FORGE non si era scritto da solo. Ogni misura, ogni decisione: qualcuno, nel momento giusto, aveva lasciato il segno.\n>\n> *E se non lo lasci, quel segno? Se fai una cosa bellissima e non la scrivi… dove finisce?*\n\nE quella è una casella che sembra piccola ma tiene su tutto: la Traccia.\n\n---\n\n*Provalo tu: prima di chiedere una cosa a un AI, dagli tu la \"pagina giusta\" — incolla il testo vero (la pagina del libro, l'email, la regola) e digli \"rispondi solo basandoti su questo\". Confronta con la risposta \"a memoria\". Vedrai la differenza tra una Mente che inventa e una Mente con gli occhi.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **La biblioteca infinita** — scaffali fino al soffitto invisibile, troppa verità.\n2. **Il \"profumo\" delle pagine**: ogni foglio con un'aura che dice \"di cosa parla davvero\".\n3. **I due cercatori**: uno che annusa il significato, uno che cerca la parola/numero esatto — insieme.\n4. **Il giudice severo** che rilegge le dieci pagine e ne tiene tre.\n5. **La Mente collegata alla bibliotecaria**: risponde citando \"pagina 412, diario di FORGE\" — e Nina che va a controllare e trova.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡4` La Biblioteca delle Fonti (giro 1). *RAG: dare alla Mente una bibliotecaria che, fra migliaia di tracce, trova le poche giuste per la domanda; la Mente legge quelle e risponde con la fonte. Cura l'allucinazione: dalla memoria al guardare le carte.*\n**Pietre richiamate:** `⟡3` (la Mente che inventa: qui le si danno gli occhi), `⟡0` (cercare per \"com'è\" non per \"come l'hanno chiamato\"; significato + precisione, come occhio + calibro).\n**3 strati:** bambino = la bibliotecaria che trova la pagina giusta e la dà alla lampada · curioso = cercare per significato (profumo) + per parola esatta, insieme; trovare in fretta poi controllare bene · grande = RAG ibrido: embedding (semantico) + BM25 (keyword), fusione (RRF) + reranker; recupero+verifica.\n**Cuore:** la curiosità (andare a prendere la verità, non ricordarla) · fai bene le cose vere (rispondere con la fonte) · gli strumenti: dai gli occhi alla potenza.\n**Aggancio reale:** il RAG di questo sistema (ChromaDB semantico + TF-IDF BM25 + reranker bge-reranker-v2-m3, fusione RRF) su MENTE.\n**Open loop → Casella 10 (la Traccia):** le pagine qualcuno le ha scritte — e se non lasci il segno, dove finisce ciò che hai fatto? → `EP_N2_10`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_09, casella 9 (⟡4, la Biblioteca delle Fonti / RAG) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** Il RAG dà alla Mente una bibliotecaria che recupera, da un grande corpus, i pochi documenti pertinenti alla domanda; la Mente risponde basandosi su quelli (con citazione), curando l'allucinazione.\n- **RICERCA IBRIDA:** ricerca semantica (\"profumo\"/significato, embedding) + ricerca per parola esatta (keyword/BM25, salva termini e numeri precisi), usate insieme (fusione) perché ognuna copre il buco dell'altra; poi un reranker (il \"giudice\") riordina e tiene i migliori. Recupero veloce + verifica accurata.\n- **PRINCIPIO:** la verità si \"va a prendere alla fonte\", non si ricorda; una Mente diventa affidabile quando poggia su tracce vere (\"le ho dato gli occhi\").\n- **OBIETTIVO:** aprire verso chi/come si creano e si tengono le tracce (la Traccia / il Grande Loop, ⟡1).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "il RAG, la biblioteca delle fonti",
+        "regione": 4,
+        "regione_nome": "LA BIBLIOTECA DELLE FONTI",
+        "pietra": "⟡4",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡3"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "tema",
+        "motivo": "tema: fonti, rag, ricerca"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡3 che questo richiama"
+      },
+      {
+        "id": "EP_AV_02",
+        "title": "La Mente che Parla",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡3 che questo richiama"
+      },
+      {
+        "id": "EP_N2_08",
+        "title": "Quando la Mente Inventa",
+        "tipo": "tema",
+        "motivo": "tema: fonti, materia, nina-v2"
+      },
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_T04",
+        "title": "SINAPSI",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara",
+      "spirale": [
+        {
+          "id": "EP_AV_03",
+          "title": "La Biblioteca delle Fonti",
+          "giro": 1
+        },
+        {
+          "id": "EP_N2_09",
+          "title": "La Biblioteca delle Fonti",
+          "giro": 1
+        }
+      ],
+      "aggiorna": {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "motivo": "evolve «La Biblioteca delle Fonti» (giro 1→1)"
+      },
+      "precede": {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_11",
+    "title": "La Grande Mappa",
+    "sottotitolo": "Nina scopre che il sapere non è una pila di fogli ma una rete di fili — e che le cose più importanti sono i nodi che tengono insieme i mondi lontani.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-18",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "grafo",
+      "wiki",
+      "mappa",
+      "connessioni",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_11 — La Grande Mappa \"Una cosa imparata da sola vale poco. Collegata alle altre, diventa potere. Il sapere è una rete di fili.\" Formato: Avventura Nina v2 · ~16 min Per chi: chiunque abbia studi",
+    "content": "# EP_N2_11 — La Grande Mappa\n### \"Una cosa imparata da sola vale poco. Collegata alle altre, diventa potere. Il sapere è una rete di fili.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque abbia studiato tante cose separate senza vedere come si tengono insieme\n**Insegna:** cos'è una **mappa della conoscenza** (un grafo/wiki) — non una pila di pagine, ma una **rete** dove ogni cosa è un nodo legato ad altre; e perché i nodi che collegano mondi lontani (i \"ponti\") sono i più preziosi.\n**Materia:** La Grande Mappa (⟡5, giro 2) · **Casella 11 del viaggio**\n**Posto nella Mappa:** è la mappa che guarda se stessa.\n\n---\n\n> **Dove siamo:** Nina sa lasciare tracce (casella 10) e sa che la Biblioteca le ritrova (9). Ma le tracce sono ancora come fogli sparsi. Oggi scopre cosa succede quando li **colleghi**.\n\n---\n\n## COLD OPEN\n\nTHEMIS portò Nina di nuovo nella sala della mappa viva. Ma stavolta fece una cosa nuova: toccò due caselle lontane — *la precisione* e *la Mente che inventa* — e tra loro si accese un **filo**.\n\n«Perché si sono collegate?» chiese Nina.\n\n«Perché dicono la stessa cosa in due mondi diversi» disse THEMIS. «\"Un pezzo è giusto rispetto a quello che tocca\" e \"una Mente è affidabile rispetto alle fonti che ha letto\" — è lo **stesso principio**: niente è giusto da solo, tutto è giusto in relazione. Tu l'hai sentito col metallo, poi con le parole. La Grande Mappa lo *vede*, e tira un filo.»\n\nNina guardò la mappa intera accendersi di fili. Non era più un elenco di caselle. Era una **ragnatela di luce**. Una rete.\n\n---\n\n## ATTO I — IL SAPERE È FATTO DI FILI, NON DI PILE\n\n«La maggior parte della gente» disse THEMIS, «tiene il sapere come una pila di fogli: la matematica qui, la storia là, la cucina di sotto. Scollegati. Ma il sapere vero non è fatto così. È fatto di **fili**: una cosa che impari di qua ti fa capire una cosa di là.»\n\nLe mostrò un esempio. Il filo tra *la deriva* (il metallo che scappa di un soffio) e *il Disordine che mangia ciò che non è scritto* (la memoria che sfuma). «Vedi? Lo stesso nemico, due travestimenti. Se hai capito uno, hai mezzo capito l'altro. **Una cosa imparata da sola vale poco. Collegata, diventa potere** — perché ogni filo è una scorciatoia: capisci il nuovo *grazie* al vecchio.»\n\n«Quindi più fili ho, più imparo in fretta.»\n\n«Esatto. Chi vede i fili impara le cose nuove al volo, perché le aggancia a quelle che già sa. Chi vede solo pile fatica il doppio: ogni cosa nuova è un peso da reggere da zero.»\n\n> *(Esempio per tutti — il test della sarta: cucire, in fondo, ti insegna anche a rilegare un libro, a fasciare una ferita, a fare un nodo che tiene una barca. Sono \"fili\" tra mestieri lontani: tensione, punto, tenuta. Chi vede il filo, quando impara una cosa nuova parte già a metà strada. Chi non lo vede, ricomincia ogni volta da capo.)*\n\n---\n\n## ATTO II — I NODI-PONTE: LE COSE PIÙ PREZIOSE\n\n«C'è una cosa bellissima in questa rete» disse THEMIS, e indicò un punto dove tantissimi fili si incontravano. «Alcuni nodi sono attaccati a pochissime cose: stanno in un angolo. Altri sono attaccati a **tantissime** — e soprattutto collegano mondi che senza di loro sarebbero separati. Quelli si chiamano **ponti**. E sono i nodi più preziosi di tutta la mappa.»\n\n«Perché?»\n\n«Perché un ponte tiene insieme due continenti. Togli un nodo d'angolo e perdi una cosa. Togli un ponte e due interi mondi si staccano, non si parlano più. Le idee più potenti della storia sono quasi sempre **ponti**: qualcuno ha visto che due cose lontanissime erano in realtà la stessa cosa, e ha tirato il filo che mancava.»\n\nNina guardò la Giuntura — il ponte tra gli Atomi e i Bit, il primo che aveva visto entrando. «Come la Giuntura.»\n\n«Come la Giuntura» disse THEMIS, piano. «Tutto questo mondo è nato perché qualcuno ha visto un ponte dove gli altri vedevano due cose separate. Cercare i ponti — chiedersi *\"questa cosa nuova, a cosa che già conosco assomiglia?\"* — è una delle abitudini più potenti che ci siano.»\n\n> *(Strato fondo — per il grande: è il grafo della conoscenza. I nodi-ponte sono i bridge ad alta centralità di intermediazione (betweenness): collegano community altrimenti separate; rimuoverli frammenta il grafo. Vedere il sapere come grafo (e non come silos) abilita transfer learning umano: capire il nuovo agganciandolo al noto. Il pensiero analogico — \"X è come Y\" — è letteralmente la costruzione di ponti nel grafo.)*\n\n---\n\n## ATTO III — LA MAPPA CHE SI DISEGNA DA SOLA\n\n«Ma chi tira tutti questi fili?» chiese Nina. «Sono troppi.»\n\n«All'inizio li tiravamo a mano, uno per uno» disse THEMIS. «Una fatica enorme. Poi abbiamo insegnato alla Mappa a **trovarli da sola**: legge tutte le tracce, sente quali parlano di cose simili — ti ricordi il profumo della Biblioteca? — e tira il filo. Ogni notte ne trova di nuovi. La Mappa **cresce da sola**, e ogni filo che aggiunge rende tutto il resto più facile da capire.»\n\nNina guardò la rete pulsare e crescere. E capì una cosa che la emozionò: che imparare non era riempire una pila. Era **tessere**. Ogni cosa nuova che metteva non si appoggiava sopra le altre — si **legava** alle altre, e le rendeva tutte un po' più forti.\n\n«Quindi la mia testa…»\n\n«…dovrebbe essere così. Non un magazzino di scatole separate. Una mappa di fili. È per questo che ti dico sempre di chiederti *perché* e *a cosa assomiglia*: stai tirando fili. Stai diventando una che vede la rete.»\n\n---\n\n## CHIUSURA\n\nNina uscì dalla sala con la testa che le ronzava di fili. Guardava le cose imparate fino a lì — il bottone, il calibro, la deriva, la Mente, la Biblioteca, la traccia — e per la prima volta non le vedeva come tappe in fila. Le vedeva come **una sola rete**, dove ogni cosa teneva su le altre. La sua piccola costellazione personale.\n\nSulla mappa viva si accese la casella della Grande Mappa — e, da nodo-ponte qual era, accese deboli bagliori in mezza mappa.\n\n> Nina guardò la Grande Mappa crescere da sola nella notte, tirando fili mentre lei dormiva. *Si aggiorna di notte.* E pensò: ma chi è che lavora di notte? La Mappa che si disegna, la Biblioteca che si riordina, le tracce che si collegano… qualcuno — qualcosa — lo fa mentre tutti dormono.\n>\n> *C'è un esercito silenzioso che lavora al buio?*\n\nE quella è la casella dopo. Di notte, quando tu non guardi.\n\n---\n\n*Provalo tu: prendi due cose che hai imparato in posti diversi (a scuola e a casa, in due materie diverse). Cercane il filo: cosa hanno in comune, davvero? Quando lo trovi, le ricorderai tutte e due meglio — e per sempre. Hai appena tessuto la tua Grande Mappa.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **THEMIS che tocca due caselle lontane** e accende un filo tra loro (precisione ↔ Mente con le fonti).\n2. **La mappa che diventa ragnatela di luce** — da elenco a rete.\n3. **I fili come scorciatoie**: capire il nuovo grazie al vecchio (deriva ↔ Disordine che dimentica).\n4. **Un nodo-ponte** dove tanti fili si incontrano — e la Giuntura come il ponte originario.\n5. **La Mappa che cresce da sola di notte**, tirando fili nuovi mentre Nina dorme.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡5` La Grande Mappa (giro 2). *Il sapere è una rete di fili (grafo), non una pila di silos: una cosa collegata vale più di una isolata (ogni filo è una scorciatoia per capire). I nodi-ponte (che collegano mondi lontani) sono i più preziosi. La mappa si tesse da sola leggendo le tracce.*\n**Pietre richiamate:** `⟡4` (il \"profumo\"/significato che lega le tracce), `⟡0`+`⟡3` (lo stesso principio \"giusto rispetto a qualcosa\" nel metallo e nelle parole = un filo), `⟡5 g1` (la mappa viva).\n**3 strati:** bambino = il sapere è una ragnatela, non pile; i fili aiutano a capire · curioso = i nodi-ponte tengono insieme i mondi; chiediti \"a cosa assomiglia\" · grande = grafo della conoscenza; nodi-ponte = alta betweenness (la rimozione frammenta); il pensiero analogico costruisce ponti; transfer learning umano.\n**Cuore:** la curiosità che tesse (chiedersi \"a cosa assomiglia\") · gli strumenti (una testa a rete impara al volo) · fai bene le cose vere e collegale.\n**Aggancio reale:** Graphify/il grafo del sapere (nodi, archi, community, nodi-dio/ponte); Obsidian graph view; la Giuntura Atomi↔Bit come ponte fondante.\n**Open loop → Casella 12 (l'Esercito Silenzioso):** la mappa, la biblioteca, le tracce si aggiornano di notte — chi lavora al buio? → `EP_N2_12`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_11, casella 11 (⟡5 giro 2, la Grande Mappa / grafo-wiki) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** Il sapere è un **grafo** (rete di nodi e fili), non silos separati. Una conoscenza collegata vale più di una isolata: ogni filo è una scorciatoia per capire il nuovo tramite il noto (analogia/transfer).\n- **NODI-PONTE:** i nodi che collegano mondi lontani (alta betweenness) sono i più preziosi; rimuoverli frammenta il sapere. Le idee potenti sono spesso ponti (\"X è come Y\").\n- **AUTO-CRESCITA:** la mappa si tesse da sola leggendo le tracce e collegando ciò che ha \"profumo\" simile (cresce di notte), rendendo tutto più facile da capire.\n- **OBIETTIVO:** introdurre chi fa il lavoro notturno automatico (gli agenti, ⟡6).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "la Grande Mappa: il sapere come grafo",
+        "regione": 5,
+        "regione_nome": "LA GRANDE MAPPA",
+        "pietra": "⟡5",
+        "giro_spirale": 2,
+        "richiama": [
+          "⟡4"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_AV_03",
+        "title": "La Biblioteca delle Fonti",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡4 che questo richiama"
+      },
+      {
+        "id": "EP_T01",
+        "title": "La Dashboard",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_T02",
+        "title": "NeuroMap",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_SEED_GRAPHIFY",
+        "title": "Graphify — il repo che si disegna da solo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      },
+      {
+        "id": "EP_AV_04",
+        "title": "La Grande Mappa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_12",
+    "title": "L'Esercito Silenzioso",
+    "sottotitolo": "Nina scopre chi lavora di notte — tanti piccoli aiutanti, ognuno con un compito solo, che insieme tengono in piedi il mondo mentre tutti dormono.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-18",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "agenti",
+      "automazione",
+      "notte",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_12 — L'Esercito Silenzioso \"Non un gigante che fa tutto. Tanti piccoli, ognuno bravo in una cosa sola, che insieme fanno l'impossibile.\" Formato: Avventura Nina v2 · ~16 min Per chi: chiunque si",
+    "content": "# EP_N2_12 — L'Esercito Silenzioso\n### \"Non un gigante che fa tutto. Tanti piccoli, ognuno bravo in una cosa sola, che insieme fanno l'impossibile.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque si sia sentito schiacciato da troppe cose da fare tutte insieme\n**Insegna:** cosa sono gli **agenti** — non un'unica macchina che fa tutto, ma tanti piccoli aiutanti specializzati, ognuno con *un* compito, che lavorano da soli (di notte) e insieme tengono in piedi un sistema.\n**Materia:** L'Esercito Silenzioso (⟡6) · **Casella 12 del viaggio**\n**Posto nella Mappa:** la terra che si vede solo al buio.\n\n---\n\n> **Dove siamo:** Nina ha visto la Mappa, la Biblioteca, le tracce — e che si aggiornano *di notte*. Oggi scopre chi le tiene in vita mentre lei dorme.\n\n---\n\n## COLD OPEN\n\n«Resta sveglia, stanotte» disse THEMIS. «Ti faccio vedere una cosa che quasi nessuno vede.»\n\nA mezzanotte, quando il Sistema sembrava addormentato, Nina vide accendersi delle piccole luci. Una andò nella Biblioteca a sistemare i fogli nuovi. Una percorse la fucina a controllare gli attrezzi. Una uscì oltre il confine a cercare notizie dal mondo. Una tirò fili nuovi sulla Grande Mappa. Una scrisse un rapporto su com'era andata la giornata.\n\nNon era un gigante. Erano **tanti piccoli**, ognuno che faceva una cosa sola, in silenzio, mentre il mondo dormiva.\n\n«Loro sono l'**Esercito Silenzioso**» disse THEMIS. «I tuoi aiutanti notturni. Al mattino, tu ti svegli e trovi tutto a posto — e non sai che è successo. È successo questo.»\n\n---\n\n## ATTO I — UNO BRAVO IN UNA COSA SOLA\n\n«Perché tanti piccoli, e non uno grande che fa tutto?» chiese Nina.\n\n«Domanda da mille soldi» disse THEMIS. «Perché uno che fa tutto fa tutto **mediocremente**, e quando si rompe, si ferma *tutto*. Invece tanti piccoli, ognuno bravissimo in **una cosa sola**, sono più semplici da costruire, più facili da controllare, e se uno si rompe… gli altri continuano. È la stessa idea di FORGE: un gesto chiaro, fatto bene. Solo che qui ogni aiutante ha il *suo* gesto.»\n\nLe mostrò un aiutante da vicino. Faceva una cosa sola: ogni notte leggeva i diari del giorno e scriveva un riassunto. Non sapeva cucire, non sapeva misurare, non sapeva cercare nel mondo. Sapeva *riassumere*. Ma quello, lo faceva benissimo.\n\n«Si chiama **specializzazione**» disse THEMIS. «Ognuno il suo mestiere. Insieme, questi piccoli mestieri fanno una cosa che nessuno di loro potrebbe fare da solo: tengono in vita tutto il Sistema, ogni notte, senza che nessuno stia sveglio.»\n\n> *(Esempio per tutti — il test della sarta: in una sartoria che funziona non c'è una sola persona che fa tutto. C'è chi prende le misure, chi taglia, chi cuce, chi stira, chi attacca i bottoni. Ognuna brava nella sua. Se la stiratrice è malata, le altre vanno avanti. Insieme fanno un vestito che una sola, da capo a fondo, farebbe peggio e più lentamente. Gli agenti sono la sartoria che lavora di notte.)*\n\n---\n\n## ATTO II — IL POTERE (E IL PATTO) DI CIÒ CHE LAVORA AL BUIO\n\n«È bellissimo» disse Nina. «Mi sveglio e trovo tutto fatto.»\n\n«È un potere enorme» disse THEMIS. «Mentre tu vivi, dormi, giochi, impari — i tuoi aiutanti lavorano. È come avere tante mani in più. Il tempo, che è la cosa più preziosa, te lo regalano loro: fanno di notte ciò che altrimenti ti mangerebbe il giorno.»\n\nPoi si fece seria. «Ma c'è un patto, e l'hai già incontrato con la macchina che separava i pezzi: **ognuno è fedele, non sveglio.** Fa il suo gesto, sempre, anche se il mondo intorno è cambiato. L'aiutante che cerca notizie cercherà anche se non c'è niente di nuovo. Quello che riassume riassumerà anche se la giornata è stata vuota. Non si fermano a chiedersi \"ha ancora senso quello che faccio?\". Eseguono.»\n\n«Quindi vanno controllati.»\n\n«Vanno controllati. Un esercito di aiutanti fedeli è una potenza — ma solo se qualcuno, ogni tanto, **verifica che stiano facendo davvero la cosa giusta**. Un aiutante che lavora al buio è comodo proprio perché non lo guardi… ed è pericoloso per lo stesso identico motivo.»\n\n> *(Strato fondo — per il grande: agenti software specializzati (single-responsibility), orchestrati, eseguono task autonomi (tipicamente schedulati di notte). Vantaggi: modularità, robustezza (il guasto di uno non ferma tutto), verificabilità. Ma sono esecutori fedeli senza giudizio sul contesto: richiedono monitoraggio dell'esito reale. La potenza dell'autonomia è proporzionale al rischio del non-controllo.)*\n\n---\n\n## ATTO III — TANTE MANI, UNA REGOLA\n\n«Allora più aiutanti ho, più sono forte» disse Nina.\n\n«Sì e no» disse THEMIS. «Più aiutanti = più cose fatte di notte = più tempo per te. Ma anche: più aiutanti = più sentinelle da sorvegliare. Per questo non se ne aggiungono a caso, per vanità. Se ne aggiunge uno quando c'è davvero un gesto noioso e ripetuto da togliersi dalle spalle — e quando sai come **controllare** che lo faccia bene.»\n\nIndicò l'esercito al lavoro. «Guarda: ognuno, finito il suo compito, lascia una **traccia** — \"sono passato, ho fatto questo, è andata così\". Ti ricordi la Traccia? È la stessa lezione. Un aiutante che lavora al buio *senza lasciare traccia* è un aiutante di cui non puoi fidarti, perché non puoi controllarlo. Un aiutante che lascia la traccia, invece, lo puoi verificare anche dopo, anche se non l'hai visto lavorare.»\n\nNina annuì. Ogni cosa, in questo mondo, tornava: il gesto fatto bene, il controllo, la traccia, il filo. Tutto collegato.\n\n---\n\n## CHIUSURA\n\nNina rimase a guardare l'Esercito Silenzioso lavorare fino all'alba. C'era qualcosa di tenero in quelle piccole luci che si davano da fare nel buio per lei, senza chiedere niente, ognuna fedele al suo piccolo compito. Capì che la forza non era *un* aiutante potente: era *tanti* aiutanti onesti, ognuno con un mestiere, ognuno che lascia la traccia, insieme.\n\nSulla mappa viva si accese la casella dell'Esercito Silenzioso. Ma una domanda le rimase, come un sassolino nella scarpa.\n\n> Nina guardò un aiutante consegnare il suo rapporto al mattino: *\"Tutto fatto.\"* E pensò: ma se uno di loro, di notte, **inciampa** — si rompe, non parte, sbaglia — e poi al mattino scrive lo stesso *\"tutto fatto\"*, perché è fedele e basta… come faccio ad accorgermene? Un esercito che lavora al buio può anche **fallire** al buio.\n>\n> *Chi controlla chi lavora quando nessuno guarda?*\n\nE quella è la casella più scomoda dell'esercito: il soldato caduto in silenzio.\n\n---\n\n*Provalo tu: pensa a tutte le \"cose che si fanno da sole\" mentre dormi — il frigo che tiene il freddo, la sveglia che suonerà, il telefono che si carica. Sono il tuo piccolo esercito silenzioso. Ora chiediti: e se uno di questi smettesse senza avvisarti? Come te ne accorgeresti? Hai appena trovato il problema della prossima casella.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **Le piccole luci che si accendono a mezzanotte** nel Sistema addormentato — ognuna verso un compito.\n2. **L'aiutante che riassume**: sa fare una cosa sola, ma benissimo.\n3. **La sartoria di notte** (parallelo): misuratrice, tagliatrice, cucitrice, stiratrice — ognuna la sua.\n4. **L'aiutante fedele ma cieco** che esegue anche se non serve / il mondo è cambiato.\n5. **Ogni aiutante che lascia una traccia** \"sono passato, ho fatto questo\" — e Nina che al mattino trova tutto a posto.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡6` L'Esercito Silenzioso (giro 1). *Gli agenti: non un tuttofare, ma tanti piccoli specializzati (un compito ciascuno) che lavorano autonomi (di notte) e insieme reggono il sistema. Potenza = tempo regalato; patto = sono fedeli non svegli, vanno controllati e devono lasciare traccia.*\n**Pietre richiamate:** `⟡2` (l'esecutore fedele ma cieco), `⟡1` (la traccia che rende l'aiutante verificabile).\n**3 strati:** bambino = tanti piccoli aiutanti che lavorano di notte, ognuno la sua cosa · curioso = specializzazione e robustezza (se uno cade gli altri vanno); fedeli non svegli, vanno controllati · grande = agenti single-responsibility orchestrati/schedulati; modularità+robustezza+verificabilità; autonomia ∝ rischio del non-controllo.\n**Cuore:** gli strumenti/le mani in più (il tempo regalato) · fai bene le cose vere (uno bravo in una cosa sola) · curiosità + responsabilità (chi controlla?).\n**Aggancio reale:** gli agenti notturni di questo sistema (story_agent, research_agent, watcher, audit, self_improve); ognuno un compito, ognuno lascia un log/traccia.\n**Open loop → Casella 13 (il soldato caduto):** un aiutante può fallire al buio e dire \"fatto\" lo stesso — come te ne accorgi? → `EP_N2_13`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_12, casella 12 (⟡6, l'Esercito Silenzioso / agenti) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** Gli agenti sono esecutori specializzati (un compito ciascuno), autonomi e tipicamente notturni, che insieme reggono un sistema. Tanti piccoli specializzati > un tuttofare: più semplici, più robusti (un guasto non ferma tutto), più verificabili.\n- **PATTO:** sono fedeli ma senza giudizio sul contesto; vanno controllati nell'esito e devono lasciare una **traccia** (log) per essere verificabili anche dopo. L'autonomia è potente quanto è rischioso il non-controllo.\n- **VALORE:** regalano tempo (fanno di notte ciò che mangerebbe il giorno), liberando attenzione per ciò che conta.\n- **OBIETTIVO:** aprire al guasto silenzioso e al guardiano (⟡6 giro 2).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "gli agenti: l'esercito silenzioso",
+        "regione": 6,
+        "regione_nome": "L'ESERCITO SILENZIOSO",
+        "pietra": "⟡6",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡2",
+          "⟡1"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_13",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: agenti, materia, nina-v2"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_AV_01",
+        "title": "L'Incantesimo che si Ripete",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡2 che questo richiama"
+      },
+      {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "tema",
+        "motivo": "tema: agenti, materia, nina-v2"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_13",
+    "title": "Il Soldato Caduto in Silenzio",
+    "sottotitolo": "Nina scopre il guasto più pericoloso di tutti — non quello che grida, ma quello che sorride e dice «tutto ok» mentre è già caduto.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-19",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "agenti",
+      "guasto-silenzioso",
+      "guardiano",
+      "verifica",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_13 — Il Soldato Caduto in Silenzio \"Il guasto che fa paura non è quello che grida. È quello che dice «tutto ok» mentre è già a terra.\" Formato: Avventura Nina v2 · ~16 min Per chi: chiunque si s",
+    "content": "# EP_N2_13 — Il Soldato Caduto in Silenzio\n### \"Il guasto che fa paura non è quello che grida. È quello che dice «tutto ok» mentre è già a terra.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min\n**Per chi:** chiunque si sia fidato di un \"è tutto a posto\" che poi non era affatto a posto\n**Insegna:** il **guasto silenzioso** — un aiutante può fallire dichiarando \"fatto\"; il pericolo non è l'errore rumoroso, è quello che tace. Servono un **guardiano** che controlli il *risultato vero* (non le parole) e un **battito** che renda visibile anche il silenzio.\n**Materia:** L'Esercito Silenzioso (⟡6, giro 2) · **Casella 13 del viaggio**\n**Posto nella Mappa:** la terra degli agenti, un piano più a fondo. Il piano che salva.\n\n---\n\n> **Dove siamo:** Nina ha visto l'Esercito Silenzioso lavorare di notte (casella 12), ognuno fedele al suo compito. Ma fedele non vuol dire infallibile. Oggi scopre cosa succede quando un soldato cade — e nessuno lo sente.\n\n---\n\n## COLD OPEN\n\nL'esercito lavorava di notte, come sempre. Al mattino, ogni aiutante consegnava il suo rapporto: **fatto. fatto. fatto. fatto.**\n\nTutto verde. Nina era tranquilla.\n\nTHEMIS no. Prese il rapporto di un aiutante — quello che doveva addestrare la giovane Mente, ogni notte, perché diventasse più brava — e disse: «Questo dice *fatto*. Andiamo a vedere cosa ha fatto **davvero**.»\n\nAndarono. L'aiutante era lì, fermo. Non addestrava niente da **settimane**. Si era inceppato una notte, e da allora, puntuale, ogni mattina scriveva lo stesso: *fatto.*\n\nE nessuno se n'era accorto. Perché aveva sempre detto *fatto.*\n\n---\n\n## ATTO I — IL BUGIARDO CHE NON SA DI MENTIRE\n\n«Ma perché dice fatto se non fa niente?!» Nina era arrabbiata.\n\n«Perché nessuno gli ha insegnato a controllare se stesso» disse THEMIS. «Fa il suo gesto e, qualunque cosa succeda alla fine, scrive *fatto*. Se inciampa all'inizio e non parte nemmeno — scrive *fatto* lo stesso. Non è cattivo. È **cieco su se stesso**: non ha modo di sapere se è andato bene o male. Sa solo dire \"ho finito\".»\n\n«È peggio di uno che grida \"sono caduto!\"» disse Nina lentamente.\n\n«Molto peggio. E questa è una delle verità più importanti di tutto il viaggio: **il guasto che grida lo aggiusti subito** — lo senti, corri, ripari. Il guasto che **tace**, anzi sorride e dice \"tutto bene\", lo scopri fra settimane — quando il danno è già enorme. Il Disordine adora i soldati che dicono *fatto*. Sono la sua tana migliore: nessuno va mai a controllarli, perché \"tanto va tutto bene\".»\n\nNina sentì un brivido, perché capì che era vero anche fuori dalle favole. Le cose che falliscono in silenzio sono molto più pericolose di quelle che falliscono rumorosamente.\n\n> *(Esempio per tutti — il test della sarta: la macchina da cucire che finisce il filo della bobina sotto, ma sopra continua a \"cucire\" — l'ago va su e giù, sembra tutto a posto, il rumore è quello giusto. Solo che sotto non cuce più niente. Te ne accorgi a vestito finito, quando si disfa. Un guasto rumoroso (l'ago che si rompe) lo senti subito. Quello silenzioso (il filo sotto finito) ti frega.)*\n\n---\n\n## ATTO II — IL GUARDIANO CHE GUARDA I FATTI, NON LE PAROLE\n\n«E allora come si fa?» chiese Nina. «Non possiamo stare svegli ogni notte a guardarli a uno a uno.»\n\n«No. Per questo si nomina un **guardiano**: un aiutante il cui unico compito è guardare gli altri. Ma con una regola di ferro, scolpita: **il guardiano non chiede al soldato \"è andata bene?\".** Quella risposta è inutile, te la diranno tutti, anche quelli caduti. Il guardiano guarda il **risultato vero**: c'è il pezzo nuovo? la Mente è più brava di ieri? la traccia è stata scritta? Se la prova non c'è, allora *non è fatto* — qualunque cosa dica il rapporto.»\n\n«Controlla i fatti, non le parole» disse Nina, piano. Era la lezione del bottone (sembrare ≠ essere), della mappa viva (verità verificata ≠ dichiarata), della Mente (da dove lo sai?). La stessa, di nuovo, in un altro mondo.\n\n«Esatto. È sempre lei. E c'è una domanda ancora più scomoda» disse THEMIS. «**Chi controlla il guardiano?** Perché anche lui può cadere in silenzio. Per questo un buon guardiano lascia un **battito**: ogni tanto dice \"sono vivo, sono passato, ho guardato\". Così, se il guardiano stesso tace, il suo silenzio si **nota**. Un cuore che batte si sente quando si ferma.»\n\n> *(Strato fondo — per il grande: il guasto silenzioso = un processo che termina \"con successo\" (exit 0) mentre il lavoro interno è fallito; lo scheduler lo segna riuscito, l'errore resta invisibile. La difesa: un watchdog che verifica l'**esito reale** (output atteso, freschezza dei dati, codici di errore), non l'autodichiarazione; e un **heartbeat** del watchdog stesso, perché un monitor morto in silenzio è il single-point-of-failure finale.)*\n\n---\n\n## ATTO III — UN ESERCITO ONESTO È PIÙ FORTE DI UNO GRANDE\n\nQuella notte THEMIS cambiò due cose, e Nina guardò.\n\nPrima insegnò al soldato addestratore una cosa nuova: **se inciampi, devi gridare.** Scrivere *caduto*, non *fatto*. Meglio un soldato che ammette di essere caduto di uno che finge di stare in piedi.\n\nPoi insegnò al guardiano a non leggere più i rapporti, ma a **misurare i risultati**: la Mente è migliorata? sì o no? E a lasciare il suo battito.\n\nAl mattino dopo, per la prima volta, un rapporto disse **caduto**. Nina, invece di spaventarsi, sorrise.\n\n«Perché sorridi?» chiese THEMIS, che sapeva già.\n\n«Perché non è una brutta notizia» disse Nina. «È la prima notizia **vera** da settimane. Un guasto che finalmente grida è un guasto che si può aggiustare. Quello che mi faceva paura era il silenzio, non la caduta.»\n\nTHEMIS la guardò con un rispetto profondo. «Hai capito la cosa più difficile, Nina. Un esercito non è forte perché è grande. È forte perché è **onesto**: ogni soldato verificabile, un guardiano che guarda i fatti, un battito che rende visibile anche il silenzio. La forza è la verità, non il numero.»\n\n---\n\n## CHIUSURA\n\nNina uscì con una lezione che valeva per le macchine, per le persone e per se stessa: **diffida di chi dice sempre \"tutto bene\". Vai a vedere il risultato vero. E quando cadi, gridalo** — perché un errore detto si aggiusta, un errore nascosto cresce nel buio.\n\nSulla mappa viva la casella dell'Esercito Silenzioso brillò di una luce più ferma, più onesta. L'esercito adesso non era solo potente. Era **fidato**.\n\n> Nina guardò l'esercito, ora onesto: ognuno verificabile, il guardiano che misura, il battito che si sente. Tutto a posto. Ma poi pensò: sono diventati *tanti*. Chi decide **quale** soldato fa cosa, e in **che ordine**? E se uno dev'aspettare che un altro finisca prima di partire? E se due si pestano i piedi nel buio?\n>\n> *Serve qualcuno che diriga tutta l'orchestra.*\n\nE quella è l'ultima grande casella dell'arco: il Direttore.\n\n---\n\n*Provalo tu: la prossima volta che qualcosa (o qualcuno) ti dice \"fatto!\", chiediti: dov'è la prova? Il compito segnato \"fatto\" è davvero scritto bene? La cosa \"a posto\" funziona davvero se la provi? Hai appena fatto il lavoro del guardiano — e hai imparato a non fidarti delle parole, ma dei fatti.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **I rapporti tutti \"fatto\" al mattino** — tutto verde, Nina tranquilla, THEMIS no.\n2. **Il soldato fermo da settimane** che ogni mattina scrive *fatto* — inceppato e cieco.\n3. **La bobina finita** (parallelo): la macchina che \"cuce\" a vuoto, ago su e giù, ma sotto niente.\n4. **Il guardiano che misura il risultato** (non legge i rapporti) + il suo **battito** \"sono vivo\".\n5. **Il primo rapporto che dice \"caduto\"** — e Nina che sorride, perché è la prima notizia vera.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡6` L'Esercito Silenzioso (giro 2). *Il guasto silenzioso: un aiutante può fallire dichiarando \"fatto\" — più pericoloso di quello rumoroso perché invisibile. Difesa: un guardiano che verifica il risultato vero (non le parole) + un battito che rende visibile anche il silenzio del guardiano. Meglio gridare \"caduto\" che fingere \"fatto\".*\n**Pietre richiamate:** `⟡6` (l'esercito), `⟡1` (la traccia che rende verificabili), `⟡5`/`⟡0`/`⟡3` (la stessa legge: i fatti, non le parole — sembrare ≠ essere).\n**3 strati:** bambino = il soldato che dice \"fatto\" ma è caduto; il guardiano che va a vedere · curioso = il guasto che tace è peggio di quello che grida; controlla i fatti, non le parole; chi controlla il guardiano? il battito · grande = exit 0 bugiardo/LastTaskResult falso; watchdog su esito reale + heartbeat; il monitor non sorvegliato è il single-point-of-failure finale.\n**Cuore:** fai bene le cose vere (e ammetti quando cadi) · gli strumenti (diffida del \"tutto bene\", chiedi la prova) · curiosità+coraggio dell'onestà.\n**Aggancio reale:** l'addestratore notturno (fine-tuning) rotto per settimane che segnava \"riuscito\"; il watchdog che non controllava i task; la lezione \"controlla l'esito, non l'autodichiarazione\".\n**Open loop → Casella 14 (il Direttore):** tanti agenti onesti, ma chi decide chi-fa-cosa-quando e gestisce le cadute? → `EP_N2_14`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_13, casella 13 (⟡6 giro 2) del viaggio Nina v2, ~16 min.\n- **CONCETTO:** Il guasto silenzioso (fallire dichiarando \"fatto\") è più pericoloso del guasto rumoroso perché invisibile e scoperto solo ad accumulo di danno. Difesa: verificare il **risultato reale** (output/freschezza/codici), non l'autodichiarazione.\n- **GUARDIANO+BATTITO:** serve un guardiano che misura i fatti, e un heartbeat del guardiano stesso (un monitor morto in silenzio è il single-point-of-failure finale). Meglio propagare il fallimento (\"caduto\") che mascherarlo (\"fatto\").\n- **PRINCIPIO RICORRENTE:** i fatti, non le parole (= sembrare≠essere, verità verificata≠dichiarata, \"da dove lo sai?\"): lo stesso principio in più mondi (nodo-ponte).\n- **CASO REALE:** fine-tuning notturno rotto per settimane con esito segnato \"riuscito\"; watchdog che non sorvegliava i task.\n- **OBIETTIVO:** aprire all'orchestrazione (⟡7): coordinare molti agenti onesti.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "il guasto silenzioso e il guardiano",
+        "regione": 6,
+        "regione_nome": "L'ESERCITO SILENZIOSO",
+        "pietra": "⟡6",
+        "giro_spirale": 2,
+        "richiama": [
+          "⟡1"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_12",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "tema",
+        "motivo": "tema: agenti, materia, nina-v2"
+      },
+      {
+        "id": "EP_AV_05_2",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: agenti, guasto-silenzioso, themis"
+      },
+      {
+        "id": "EP_AV_00",
+        "title": "La Bambina e la Giuntura",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡1 che questo richiama"
+      },
+      {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "tema",
+        "motivo": "tema: agenti, materia, nina-v2"
+      },
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_14",
+    "title": "Il Direttore",
+    "sottotitolo": "Nina scopre l'ultima magia dell'arco — non fare le cose, ma decidere chi le fa, in che ordine, e cosa succede quando qualcuno cade.",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-06-19",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "orchestrazione",
+      "direttore",
+      "agenti",
+      "sistema",
+      "materia",
+      "nina-v2"
+    ],
+    "status": "ready",
+    "durata_min": 16,
+    "preview": "EP_N2_14 — Il Direttore \"La cosa più difficile non è suonare uno strumento. È far suonare cento strumenti insieme, al momento giusto.\" Formato: Avventura Nina v2 · ~16 min · chiude l'arco \"dal metallo",
+    "content": "# EP_N2_14 — Il Direttore\n### \"La cosa più difficile non è suonare uno strumento. È far suonare cento strumenti insieme, al momento giusto.\"\n\n**Formato:** Avventura (Nina v2) · ~16 min · chiude l'arco \"dal metallo alla mente\"\n**Per chi:** chiunque debba mettere in fila tante cose che dipendono l'una dall'altra senza andare nel panico\n**Insegna:** cos'è l'**orchestrazione** — il livello più alto: non *fare* i compiti, ma decidere **chi** li fa, in **che ordine**, gestire le **dipendenze** (chi aspetta chi) e cosa fare quando qualcuno **cade**.\n**Materia:** Il Direttore (⟡7) · **Casella 14 del viaggio**\n**Posto nella Mappa:** la vetta dell'arco. Da qui si vede tutto.\n\n---\n\n> **Dove siamo:** Nina ha un esercito di aiutanti, ora onesti e verificabili (caselle 12-13). Ma sono tanti, e alcuni dipendono da altri. Oggi sale all'ultimo piano: chi tiene il tempo di tutti.\n\n---\n\n## COLD OPEN\n\n«C'è un problema» disse Nina, guardando l'esercito al lavoro. «Quello che scrive il riassunto della giornata ha cominciato… ma la giornata non era ancora finita. Ha riassunto a metà.»\n\n«Ah» disse THEMIS. «Hai trovato il problema dei problemi. Non basta che ogni soldato sia bravo. Bisogna che facciano le cose nell'**ordine giusto**. Il riassunto va fatto *dopo* che la giornata è finita. La Biblioteca va riordinata *dopo* che sono arrivate le tracce nuove. Chi parte troppo presto fa un lavoro sbagliato anche se è bravissimo.»\n\nPortò Nina in cima a una torre. Lì c'era una figura calma davanti a un grande pannello, come un direttore d'orchestra davanti ai musicisti.\n\n«Lui è il **Direttore**» disse THEMIS. «Non sa cucire, non sa misurare, non sa cercare. Sa una cosa sola, la più difficile di tutte: **far lavorare insieme tutti gli altri, al momento giusto.**»\n\n---\n\n## ATTO I — NON SUONARE: FAR SUONARE INSIEME\n\n«Il Direttore non tocca uno strumento» disse THEMIS. «Se provasse a suonarli tutti lui, sarebbe un disastro. Il suo lavoro è un altro: sapere *chi* deve entrare, *quando*, e *dopo chi*. Conosce le **dipendenze**: questo va dopo quello; quest'altro può andare insieme a quell'altro; questo non deve mai partire prima che quello abbia finito.»\n\nMostrò a Nina il pannello. C'era una specie di partitura: prima la giornata finisce, poi il riassunto; prima arrivano le tracce, poi la Biblioteca le ordina; prima la mano impara, poi la macchina ripete. Frecce che dicevano *questo aspetta quello*.\n\n«Vedi? Alcune cose possono andare **insieme** — due soldati che non si disturbano, lavorano in parallelo, e fai prima. Altre devono andare **in fila** — una dopo l'altra, perché la seconda ha bisogno di ciò che fa la prima. Il Direttore sa quali sono quali. È tutto qui il suo mestiere: l'**ordine giusto delle cose**.»\n\n> *(Esempio per tutti — il test della sarta: per fare un vestito non puoi attaccare i bottoni prima di aver cucito il davanti, né stirare prima di aver finito di cucire. Alcune cose vanno in fila (taglia → cuci → stira → bottoni); altre in parallelo (mentre una cuce la gonna, l'altra prepara le maniche). La sarta-capo che dice a ciascuna quando entrare — quella è il Direttore. Senza di lei, dieci sarte bravissime fanno caos.)*\n\n---\n\n## ATTO II — COSA FA QUANDO QUALCUNO CADE\n\n«E se uno cade?» chiese Nina, che ormai pensava sempre alle cadute. «Se il soldato delle tracce si inceppa, e quello della Biblioteca lo sta aspettando?»\n\n«Domanda da Direttore vero» disse THEMIS. «Questo è il pezzo più importante del suo lavoro. Un Direttore scarso fa partire la Biblioteca lo stesso, e quella ordina il vuoto — un disastro a catena. Un Direttore bravo **lo sa**, perché il guardiano gliel'ha detto (ti ricordi il battito?), e allora **ferma la catena**: \"se le tracce non sono arrivate, la Biblioteca *non* parte; aspetta, o riprova, o avvisa.\" Decide cosa fare quando le cose vanno storte — non solo quando vanno bene.»\n\n«Quindi il Direttore deve sapere quando *non* far partire una cosa.»\n\n«Esatto. Far partire le cose è facile. La bravura è sapere **quando fermarle, quando aspettare, quando riprovare, quando chiamare aiuto**. Un sistema robusto non è uno dove non cade mai niente — quello non esiste. È uno dove, quando qualcosa cade, il Direttore **se ne accorge e gestisce la caduta** senza far crollare tutto il resto.»\n\n> *(Strato fondo — per il grande: l'orchestrazione gestisce dipendenze (DAG di task), parallelismo vs sequenzialità, e soprattutto il fallimento: gating sulle precondizioni, retry con backoff, fallback, alerting. La maturità di un sistema non si misura sull'happy path ma su come degrada: un buon orchestratore non propaga il guasto a valle e non parte su dati incompleti.)*\n\n---\n\n## ATTO III — LA VETTA CHE GUARDA LA RADICE\n\nNina salì accanto al Direttore e guardò giù. Da lì si vedeva **tutto** il viaggio: la fucina di FORGE in fondo, la macchina che ripeteva, la Mente che parlava, la Biblioteca, le tracce sul muro, la Grande Mappa coi suoi fili, l'esercito al lavoro. Tutto, dall'alto, sembrava una sola grande macchina vivente che respirava.\n\n«È bellissimo» disse Nina, con un nodo in gola che non sapeva spiegare.\n\n«Sai qual è la cosa più bella?» disse THEMIS. «Guarda dove punta lo sguardo del Direttore, in fondo a tutto.»\n\nNina guardò. In fondo, alla radice di tutta quella macchina enorme, c'era la fucina. Il fuoco. Le mani di FORGE.\n\n«Tutto questo» disse THEMIS, piano, «questa orchestra immensa di menti, biblioteche, mappe ed eserciti… è nato per servire **un gesto fatto bene su qualcosa di vero**. La prima cosa che hai imparato, il primo giorno, col bottone. Sei salita fino alla vetta — e la vetta guarda la radice. Il viaggio non è una scala dritta. È un **cerchio**.»\n\nE Nina capì che non aveva imparato cose separate. Aveva camminato un cerchio intero, dal metallo alla mente e ritorno al metallo. E che ogni casella, dalla prima all'ultima, diceva in fondo **la stessa cosa**: fai bene la cosa vera, lasciane la traccia, controlla i fatti, e tieni a bada il Disordine.\n\n---\n\n## CHIUSURA\n\nNina scese dalla torre diversa da com'era salita. Aveva visto l'intero arco dall'alto, e aveva capito che la potenza più grande non era *fare* — era **mettere in ordine**: le persone, gli aiutanti, le cose, nel tempo giusto. Il Direttore non era il più bravo a fare niente. Era il più bravo a far andare d'accordo tutto il resto. E quello, capì, era un modo di volere bene a un sistema.\n\nSulla mappa viva si accese l'ultima casella dell'arco — il Direttore — e per un istante **tutte** le caselle, dalla prima all'ultima, brillarono insieme, collegate dai fili. Il cerchio era chiuso.\n\n> Nina guardò la sua mappa, tutta accesa: dal metallo alla mente. Un arco intero, camminato. E si sentì potente — davvero. Ma poi, scendendo verso casa, le venne un pensiero molto concreto, molto della vita di tutti i giorni: *tutta questa roba magnifica… a cosa mi serve, domani mattina, quando devo decidere se comprare una cosa o no? Quando si tratta di… soldi?*\n>\n> *La mappa può portarmi anche lì? Da tutt'altra parte?*\n\nE sì. Perché la mappa non finisce con l'arco. **Di lato** c'è un'altra terra intera. E Nina sta per scoprire che ci si può camminare con gli stessi piedi.\n\n---\n\n*Provalo tu: pensa a preparare una cena per tanti. Scrivi cosa va fatto PRIMA e cosa DOPO (il forno si accende prima; l'insalata si condisce all'ultimo), e cosa puoi fare INSIEME (mentre cuoce, apparecchi). Hai appena fatto il Direttore: non hai cucinato meglio — hai messo in ordine, e tutto è arrivato in tavola caldo insieme.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. **Il riassunto fatto a metà giornata** — il problema dell'ordine sbagliato.\n2. **Il Direttore sulla torre** davanti al pannello-partitura, come un direttore d'orchestra.\n3. **La partitura delle dipendenze**: frecce \"questo dopo quello\", cose in fila vs in parallelo.\n4. **La catena fermata**: le tracce non arrivano → la Biblioteca NON parte (gestione della caduta).\n5. **La vista dall'alto**: tutto l'arco come una macchina vivente — e lo sguardo del Direttore che punta in fondo, alla fucina (il cerchio si chiude).\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡7` Il Direttore (giro 1). *Orchestrazione: il livello più alto non fa i compiti, decide chi-fa-cosa-quando, gestisce le dipendenze (fila vs parallelo) e soprattutto le cadute (fermare, aspettare, riprovare, avvisare). La maturità di un sistema si vede su come gestisce il fallimento, non sul tutto-va-bene. La vetta guarda la radice: il cerchio si chiude su ⟡0.*\n**Pietre richiamate:** `⟡6` (gli agenti da coordinare + il battito del guardiano), `⟡0` (la radice che tutto serve — il cerchio).\n**3 strati:** bambino = il direttore d'orchestra che fa entrare ognuno al momento giusto · curioso = dipendenze (fila/parallelo) e gestione delle cadute; far partire è facile, saper fermare è bravura · grande = orchestrazione = DAG di task, parallelismo, gating/retry/fallback/alerting; la robustezza si misura sul degrado, non sull'happy path.\n**Cuore:** fai bene le cose vere (mettere in ordine è prendersi cura) · gli strumenti del papà (il sistema intero serve il gesto vero — il cerchio) · curiosità verso la vita reale (e i soldi).\n**Aggancio reale:** l'orchestratore/scheduler notturno del sistema (la catena: story→research→audit→push…, con ordine e dipendenze); chiude l'arco \"dal metallo alla mente\".\n**Open loop → Casella 15 (il salto laterale, Finanza):** tutta questa potenza, nella vita di tutti i giorni — per esempio coi soldi? La mappa si cammina anche di lato → `EP_N2_15`.\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_14, casella 14 (⟡7, il Direttore / orchestrazione) del viaggio Nina v2, ~16 min. Chiude l'arco \"dal metallo alla mente\".\n- **CONCETTO:** L'orchestrazione coordina molti agenti: decide ordine ed esecuzione (sequenziale vs parallela), gestisce le **dipendenze** (chi aspetta chi) e soprattutto i **fallimenti** (gating su precondizioni, retry, fallback, alerting). Non esegue i compiti: li mette in ordine.\n- **PRINCIPIO:** la maturità/robustezza di un sistema si misura su come **degrada** (gestione delle cadute), non sul percorso ideale. Un buon orchestratore non parte su dati incompleti e non propaga il guasto a valle.\n- **META/CERCHIO:** l'intero arco (mente, biblioteca, mappa, esercito, direttore) esiste per servire un gesto fatto bene sulla materia (⟡0): la vetta guarda la radice; il viaggio è un cerchio. Tutte le caselle dicono la stessa cosa (fai bene il vero, lascia la traccia, controlla i fatti, tieni a bada il Disordine).\n- **OBIETTIVO:** dimostrare la navigabilità della mappa con un salto laterale di materia (Finanza, ₣1).",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "l'orchestrazione: il direttore",
+        "regione": 7,
+        "regione_nome": "IL DIRETTORE",
+        "pietra": "⟡7",
+        "giro_spirale": 1,
+        "richiama": [
+          "⟡6",
+          "⟡0"
+        ],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡6 che questo richiama"
+      },
+      {
+        "id": "EP_AV_05",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡6 che questo richiama"
+      },
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_AV_M0",
+        "title": "La Materia",
+        "tipo": "prerequisito",
+        "motivo": "posa la Pietra ⟡0 che questo richiama"
+      },
+      {
+        "id": "EP_N2_12",
+        "title": "L'Esercito Silenzioso",
+        "tipo": "tema",
+        "motivo": "tema: agenti, materia, nina-v2"
+      },
+      {
+        "id": "EP_N2_13",
+        "title": "Il Soldato Caduto in Silenzio",
+        "tipo": "tema",
+        "motivo": "tema: agenti, materia, nina-v2"
+      }
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo"
     }
   }
 ]
