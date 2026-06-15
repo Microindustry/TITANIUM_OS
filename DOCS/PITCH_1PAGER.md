@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  1-Pager](#titaniumos-1-pager)
+    - [Il problema](#il-problema)
+    - [La soluzione](#la-soluzione)
+    - [Come funziona  5 pilastri connessi (non un portfolio, una catena)](#come-funziona-5-pilastri-connessi-non-un-portfolio-una-catena)
+    - [La prova è fisica (numeri misurati, non slide)](#la-prova-è-fisica-numeri-misurati-non-slide)
+    - [Il team](#il-team)
+    - [Il mercato (MIMS)](#il-mercato-mims)
+    - [La visione](#la-visione)
+    - [Lask](#lask)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — 1-Pager
 
 > *Un artigiano industriale sta costruendo, da solo, il sistema operativo della sua impresa: una fabbrica personale che trasforma il lavoro fisico in un'attività che si autoalimenta.*
@@ -37,6 +51,9 @@ _La catena è intenzionale: **V32** produce gli stampi → **MIMS** diventa prod
 ### Il mercato (MIMS)
 Sistemi modulari "zero-tool" — stima preliminare TAM ~€4,2 B / SAM ~€180 M / SOM anno 3 €300–450 K.
 _⚠︎ Cifre da consolidare con fonte verificata e modello bottom-up prima di qualsiasi commitment — incluse nel piano come ipotesi, non come fatto._
+
+### Prodotto derivato — Nina (educativo)
+**Nina** è la versione narrativa/educativa del metodo: un libro-IA che *non invecchia* e *si genera da sé* (stesso engine 1 input → N output). La prova che il sistema si può raccontare e vendere, non solo costruire. → 1-pager dedicato: `DOCS/PITCH_NINA.md`.
 
 ### La visione
 Il **capannone, entro il 15/07/2030**: non un obiettivo di lavoro, un obiettivo di **sovranità produttiva** — V32, VULCAN e MIMS che girano insieme, produzione propria, libertà di costruire senza chiedere permesso.
