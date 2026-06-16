@@ -5,7 +5,9 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 export type ViewMode = "home" | "v32" | "genesis" | "mims" | "eva" | "identity"
-                     | "agenti" | "storie" | "mappa" | "architettura" | "rete" | "grafo-rag" | "cv-nina" | "mappa-gioco" | "sinapsi" | "canvas" | "neuro" | "automazioni"
+                     | "agenti" | "storie" | "mappa" | "architettura" | "rete" | "grafo-rag" | "cv-nina" | "mappa-gioco"
+                     | "pitch-nina" | "pitch-mims" | "pitch-v32" | "pitch-genesis" | "pitch-eva" | "pitch-hr"
+                     | "sinapsi" | "canvas" | "neuro" | "automazioni"
                      | "notturne" | "pitch" | "metodo" | "ragchat" | "critiche" | "avventura" | "controllo" | "avventura-mappa" | "procedimenti";
 
 export type Theme = "dark" | "light";

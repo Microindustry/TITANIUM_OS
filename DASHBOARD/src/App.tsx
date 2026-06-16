@@ -57,6 +57,7 @@ const InventarioView     = lazy(() => import("./components/InventarioView").then
 const CvView             = lazy(() => import("./components/CvView").then(m => ({ default: m.CvView })));
 const NinaCvView         = lazy(() => import("./components/NinaCvView").then(m => ({ default: m.NinaCvView })));
 const MappaGiocoView     = lazy(() => import("./components/MappaGiocoView").then(m => ({ default: m.MappaGiocoView })));
+const PitchProgettoView  = lazy(() => import("./components/PitchProgettoView").then(m => ({ default: m.PitchProgettoView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -270,6 +271,21 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                   Notturne
                 </span>
               </button>
+            )}
+            {/* Sotto-voci di PITCH: un pitch per progetto (la spiegazione vera, non i pilastri obsoleti) */}
+            {item.id === "pitch" && !collapsed && (
+              <>
+                {([["pitch-nina", "Nina"], ["pitch-mims", "MIMS"], ["pitch-v32", "V32"], ["pitch-genesis", "GENESIS"], ["pitch-eva", "EVA"], ["pitch-hr", "HR"]] as const).map(([vm, lbl]) => (
+                  <button key={vm} onClick={() => onNavigate(vm)}
+                    title={`Pitch ${lbl} — la spiegazione reale e attuale del progetto`}
+                    className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1
+                      ${view === vm
+                        ? "bg-emerald-950/40 text-emerald-300 border border-emerald-500/30"
+                        : "text-slate-600 hover:text-emerald-300 hover:bg-emerald-950/20 border border-transparent"}`}>
+                    <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">{lbl}</span>
+                  </button>
+                ))}
+              </>
             )}
             {/* Sotto-voci di STORIE: NINA (episodi) + Mappa dell'Avventura (rosa, binario educativo) */}
             {item.id === "storie" && !collapsed && (
@@ -518,6 +534,12 @@ function AppInner() {
             {view === "storie"      && <StorieView />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "pitch"       && <PitchView />}
+            {view === "pitch-nina"    && <PitchProgettoView progetto="nina" />}
+            {view === "pitch-mims"    && <PitchProgettoView progetto="mims" />}
+            {view === "pitch-v32"     && <PitchProgettoView progetto="v32" />}
+            {view === "pitch-genesis" && <PitchProgettoView progetto="genesis" />}
+            {view === "pitch-eva"     && <PitchProgettoView progetto="eva" />}
+            {view === "pitch-hr"      && <PitchProgettoView progetto="hr" />}
             {view === "metodo"      && <MetodoView />}
             {view === "mappa"    && <MappaView source="nina" systemState={sys.state as any} />}
             {view === "mappa-gioco" && <MappaGiocoView />}
