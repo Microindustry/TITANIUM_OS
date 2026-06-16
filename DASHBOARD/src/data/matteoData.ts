@@ -272,3 +272,58 @@ export const PRINCIPI: string[] = [
   "Identifica → Automatizza → Scala.",
   "Un sistema che gira da solo vale piu di 10 abitudini.",
 ];
+
+// ── PROFILO UNITO: competenze professionali + personali in un solo albero ──
+// L'idea del CV-che-si-genera (principio 9 di Nina): NON due liste separate, ma la
+// STESSA persona per DOMINIO — la mano che salda il titanio e tocca l'acquaponica,
+// la mente che costruisce il RAG e gli agenti. Il marcatore "personale" è dove la
+// passione privata incontra il mestiere. Dati ri-clusterizzati da SKILLS_*/INTERESSI.
+export type Livello = "maestria" | "operativo" | "esplorazione" | "in-apprendimento";
+export type Natura = "mano" | "mente" | "bio" | "voce";
+export type CompUnita = { label: string; livello: Livello; fonte: string; personale?: boolean };
+export type DominioCompetenza = { icon: string; nome: string; natura: Natura; claim: string; skills: CompUnita[] };
+
+export const COMPETENZE_UNITE: DominioCompetenza[] = [
+  {
+    icon: "🔧", nome: "Materia & Mano", natura: "mano",
+    claim: "Il fare fisico — dall'officina ai vertici della manifattura, fino al garage di casa.",
+    skills: [
+      { label: "TIG titanio gr.1/2", livello: "maestria", fonte: "SCProject · MotoGP" },
+      { label: "Robotica & cobot", livello: "maestria", fonte: "ESSEGI" },
+      { label: "Presse · oleodinamica · PLC", livello: "maestria", fonte: "DATWLER" },
+      { label: "QC · NDT · collaudi", livello: "maestria", fonte: "LU.VE" },
+      { label: "Progettazione CNC (V32)", livello: "operativo", fonte: "TITANIUM_OS" },
+      { label: "Impianti elettrici", livello: "in-apprendimento", fonte: "personale + V32", personale: true },
+    ],
+  },
+  {
+    icon: "🧠", nome: "Sistemi & Mente", natura: "mente",
+    claim: "Il digitale — costruire macchine che pensano, ricordano e si migliorano.",
+    skills: [
+      { label: "LLM & Prompt Engineering", livello: "operativo", fonte: "TITANIUM_OS" },
+      { label: "Python · Flask · CLI", livello: "operativo", fonte: "TITANIUM_OS" },
+      { label: "RAG · ChromaDB", livello: "operativo", fonte: "GENESIS" },
+      { label: "MCP · agenti", livello: "operativo", fonte: "TITANIUM_OS" },
+      { label: "React · dashboard", livello: "operativo", fonte: "TITANIUM_OS" },
+      { label: "n8n · automazioni", livello: "operativo", fonte: "TITANIUM_OS" },
+      { label: "Research Agent", livello: "esplorazione", fonte: "personale", personale: true },
+    ],
+  },
+  {
+    icon: "🌱", nome: "Vita & Natura", natura: "bio",
+    claim: "Il bio — la passione personale che diventa business (Vita Natura).",
+    skills: [
+      { label: "Acquaponica · ciclo azoto", livello: "esplorazione", fonte: "personale", personale: true },
+      { label: "Bioreattori · fermentazione", livello: "esplorazione", fonte: "personale", personale: true },
+      { label: "Serre · idroponica · clima", livello: "esplorazione", fonte: "personale", personale: true },
+    ],
+  },
+  {
+    icon: "🎙️", nome: "Voce & Racconto", natura: "voce",
+    claim: "Il metodo che si documenta da sé — ogni passo diventa contenuto.",
+    skills: [
+      { label: "Content Engine (1 input→N output)", livello: "esplorazione", fonte: "IDENTITY" },
+      { label: "Storytelling industriale", livello: "esplorazione", fonte: "IDENTITY" },
+    ],
+  },
+];

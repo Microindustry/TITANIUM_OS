@@ -4,8 +4,15 @@
 // sfruttando il lavoro su Nina (CV-che-si-genera). Sostituisce il vecchio room="matteo".
 
 import { useState, type ReactNode } from "react";
-import { SKILLS_INDUSTRIA, SKILLS_DIGITAL, INTERESSI, PRINCIPI, type Skill, type Interesse } from "../data/matteoData";
-import { Wrench, Cpu, Compass, Quote, ChevronDown, Mail } from "lucide-react";
+import { SKILLS_INDUSTRIA, SKILLS_DIGITAL, INTERESSI, PRINCIPI, COMPETENZE_UNITE, type Skill, type Interesse, type Livello } from "../data/matteoData";
+import { Wrench, Cpu, Compass, Quote, ChevronDown, Mail, Layers } from "lucide-react";
+
+const LIV: Record<Livello, { label: string; color: string }> = {
+  "maestria":         { label: "maestria",    color: "#34d399" },
+  "operativo":        { label: "operativo",   color: "#22d3ee" },
+  "esplorazione":     { label: "esplorazione", color: "#a78bfa" },
+  "in-apprendimento": { label: "in apprend.", color: "#fbbf24" },
+};
 
 function SkillCard({ s, accent }: { s: Skill; accent: string }) {
   const [open, setOpen] = useState(false);
@@ -96,6 +103,45 @@ export function CvView() {
           </div>
           <p className="text-[10px] text-slate-600 italic">Base viva — verrà ingegnerizzata col lavoro su Nina (il CV che si genera).</p>
         </header>
+
+        {/* ── PROFILO UNITO: professionali + personali per dominio ── */}
+        <section className="space-y-3">
+          <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-slate-200">
+            <Layers size={12} /> Il profilo completo — dove la mano e la mente si uniscono
+          </div>
+          <p className="text-[12px] text-slate-500 leading-relaxed">
+            Non due liste separate: la <span className="text-slate-300">stessa persona</span>, per dominio.
+            <span className="text-slate-400"> 👤 = dove la passione personale incontra il mestiere.</span>
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {COMPETENZE_UNITE.map(d => (
+              <div key={d.nome} className="rounded-xl border border-slate-800 bg-slate-900/40 p-3.5">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">{d.icon}</span>
+                  <div className="text-[13px] font-bold text-slate-100">{d.nome}</div>
+                </div>
+                <p className="text-[11px] text-slate-500 mt-1 mb-2.5 leading-snug">{d.claim}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {d.skills.map(s => (
+                    <span key={s.label}
+                      className="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-800/40 flex items-center gap-1.5"
+                      style={{ borderColor: LIV[s.livello].color + "55", color: "#cbd5e1" }}>
+                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: LIV[s.livello].color }} />
+                      {s.label}{s.personale && <span title="passione personale">👤</span>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-3 text-[9px] font-mono text-slate-600">
+            {(Object.keys(LIV) as Livello[]).map(k => (
+              <span key={k} className="flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full" style={{ background: LIV[k].color }} />{LIV[k].label}
+              </span>
+            ))}
+          </div>
+        </section>
 
         <Section icon={<Wrench size={12} />} title="Competenze industriali" accent="#34d399">
           <div className="grid sm:grid-cols-2 gap-3">
