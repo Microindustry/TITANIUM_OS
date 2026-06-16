@@ -17,6 +17,8 @@ NODES/MENTE_RAG/rag_corpus.jsonl
 NODES/MENTE_RAG/rag_manifest.json
 NODES/MENTE_RAG/rag_tfidf.pkl
 NODES/MENTE_RAG/mente_index.json
+# Indice semantico (binario) — rigenerabile da MENTE/, riscritto di continuo dal watcher (churn)
+DATA/semantic_index.db
 DATA/daily_brief_last.md
 DATA/computer_use_shots/
 # EVA — config con dati reali del centro (orari/servizi/clienti): non versionare
@@ -44,3 +46,7 @@ graphify-out/
 DATA/ai_news_watcher_state.json
 # Sync incrementale: stamp hash per non rifare lavoro inutile
 DATA/.sync_bussola.hash
+DATA/.sync_pct.hash
+DATA/.inventario_last.txt
+# pct_sync: report rigenerato a ogni run (runtime, non sorgente)
+DATA/audit/pct_sync.json
