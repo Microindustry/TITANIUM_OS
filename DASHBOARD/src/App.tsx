@@ -55,6 +55,8 @@ const AvventuraMapView   = lazy(() => import("./components/AvventuraMapView").th
 const ProcedimentiView   = lazy(() => import("./components/ProcedimentiView").then(m => ({ default: m.ProcedimentiView })));
 const InventarioView     = lazy(() => import("./components/InventarioView").then(m => ({ default: m.InventarioView })));
 const CvView             = lazy(() => import("./components/CvView").then(m => ({ default: m.CvView })));
+const NinaCvView         = lazy(() => import("./components/NinaCvView").then(m => ({ default: m.NinaCvView })));
+const MappaGiocoView     = lazy(() => import("./components/MappaGiocoView").then(m => ({ default: m.MappaGiocoView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -223,6 +225,22 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </span>
               </button>
             )}
+            {/* Sotto-voce: CV Nina — annidata sotto CV (identity), rosa */}
+            {item.id === "identity" && !collapsed && (
+              <button
+                onClick={() => onNavigate("cv-nina")}
+                title="Il CV di Nina — l'albero delle abilità che si riempie dagli episodi"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "cv-nina"
+                    ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
+                    : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
+              >
+                <Sparkles size={11} className="flex-shrink-0 text-pink-400" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  CV Nina
+                </span>
+              </button>
+            )}
           </Fragment>
         ))}
 
@@ -270,6 +288,22 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                   </span>
                 </button>
               </>
+            )}
+            {/* Sotto-voce: Mappa-Gioco — annidata sotto MAPPA NINA */}
+            {item.id === "mappa" && !collapsed && (
+              <button
+                onClick={() => onNavigate("mappa-gioco")}
+                title="Mappa-gioco 2D — zone, livelli, entri nei luoghi (stile Skyrim)"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "mappa-gioco"
+                    ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
+                    : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
+              >
+                <Map size={11} className="flex-shrink-0 text-pink-400/80" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  Gioco
+                </span>
+              </button>
             )}
           </Fragment>
         ))}
@@ -450,6 +484,7 @@ function AppInner() {
             {view === "mims"     && <CanvasLayout room="mims" />}
             {view === "eva"      && <CanvasLayout room="eva" />}
             {view === "identity"  && <CvView />}
+            {view === "cv-nina"   && <NinaCvView />}
             {view === "critiche"  && <CanvasLayout room="critiche" />}
             {/* Sistema */}
             {view === "agenti"      && <AgentsView />}
@@ -485,6 +520,7 @@ function AppInner() {
             {view === "pitch"       && <PitchView />}
             {view === "metodo"      && <MetodoView />}
             {view === "mappa"    && <MappaView source="nina" systemState={sys.state as any} />}
+            {view === "mappa-gioco" && <MappaGiocoView />}
             {view === "rete"     && <InventarioView />}
             {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
