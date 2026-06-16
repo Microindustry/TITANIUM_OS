@@ -7,6 +7,7 @@
     - [La prova è fisica (numeri misurati, non slide)](#la-prova-è-fisica-numeri-misurati-non-slide)
     - [Il team](#il-team)
     - [Il mercato (MIMS)](#il-mercato-mims)
+    - [Prodotto derivato  Nina (educativo)](#prodotto-derivato-nina-educativo)
     - [La visione](#la-visione)
     - [Lask](#lask)
 
@@ -31,7 +32,7 @@ Un artigiano di altissimo livello vale finché ci mette le mani. Il suo sapere n
 | Pilastro | Ruolo | Stato |
 |---|---|---|
 | **V32 — CNC** | il motore: una fresatrice di precisione costruita da zero. Produce, paga, finanzia il resto. | 65% |
-| **MIMS** | il salto di scala: materiali e connettori modulari brevettabili (DNA 29.9 mm). | 30% |
+| **MIMS** | il salto di scala: il *"Lego per l'industria pesante"* — la rigidità del saldato con la reversibilità del bullone (DNA 29.9 mm). | 30% |
 | **GENESIS** | il cervello: l'OS digitale (AI, automazione, memoria) che orchestra la costruzione di sé stesso. | 70% |
 | **VITA NATURA · EVA** | il ponte: un assistente AI che manda avanti un centro estetico → cashflow mentre il resto matura. | 40% |
 | **IDENTITY** | la voce: ogni milestone diventa una storia che documenta il metodo (brand + contenuti). | 50% |
@@ -42,6 +43,10 @@ _La catena è intenzionale: **V32** produce gli stampi → **MIMS** diventa prod
 - **±0,019 mm** di precisione · **178 kg** corpo unico · break-even V32 stimato **~61 h** di lavoro.
 - Investimento V32 ad oggi: **~€2.250** (autofinanziato). ROI anno 1 stimato **~322%**.
 - Il sistema digitale gira già: OS al 70%, automazioni notturne, memoria/RAG, generazione contenuti automatica dai milestone reali.
+- _NB: numeri tecnici ed economici **provvisori** — fotografie parziali, da consolidare._
+
+### L'asimmetria di valore (perché il modello regge)
+Non vendiamo ferro: vendiamo **accesso a una capacità produttiva** prima riservata alle grandi industrie. La fisica (massa + Epoxy Granite) sostituisce componenti costosi → la V32 è un **generatore di cassa**, non un peso a bilancio. Il cliente compra il "corpo" indistruttibile da noi e ci mette il "cervello" (elettronica): macchina finita a **una frazione** del prezzo di una industriale entry-level.
 
 ### Il team
 **Matteo Benenati** — 15+ anni ai vertici della manifattura italiana:

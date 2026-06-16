@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [NINA v2  Architettura (la costituzione)](#nina-v2-architettura-la-costituzione)
+  - [I 10 principi di Nina v2](#i-10-principi-di-nina-v2)
+  - [LEFFETTO WOW  non è il cattivo (Matteo, 14/06)](#leffetto-wow-non-è-il-cattivo-matteo-1406)
+  - [Cosa cambia in pratica (dal canone v1)](#cosa-cambia-in-pratica-dal-canone-v1)
+  - [IL MODELLO NARRATIVO  il libro è il viaggio sulla mappa (Matteo, 14/06)](#il-modello-narrativo-il-libro-è-il-viaggio-sulla-mappa-matteo-1406)
+  - [Stagioni o filone unico? E infinito (Matteo, 14/06)](#stagioni-o-filone-unico-e-infinito-matteo-1406)
+  - [LE MATERIE  il sapere concreto che la scuola non dà](#le-materie-il-sapere-concreto-che-la-scuola-non-dà)
+  - [Cosa NON cambia](#cosa-non-cambia)
+
+<!-- /TOC -->
+
 # NINA v2 — Architettura (la costituzione)
 
 *Versione: 2.0 | 2026-06-14 | Ri-fondazione. Estende BIBBIA_DEL_MONDO.md, non la sostituisce.*
@@ -138,6 +151,14 @@ sperimentare/cercare/capire. Ogni materia = un cluster di caselle, ogni casella 
   linea li decide il GENITORE (Matteo).** Tono: rispetto, semplicità, adatto all'età. *(L'autore-sistema
   scrive con rispetto e non etichetta nessuno; le scelte di valore sono del padre.)*
 - **[aperte]** — qualunque cosa serva per la vita; la mappa si estende senza rompere nulla.
+
+## Innesti da NotebookLM / Genius Loci (16/06) — additivi, rifiniscono il modello
+*Distillati dai manifesti vecchi (vedi `NINA_V2_REVIEW_NOTEBOOKLM.md`). Non cambiano la struttura, la migliorano.*
+- **Triade dell'Ingaggio** — un episodio regge se ha: **narrazione forte + sfida calibrata (Flow) + feedback continuo**. Diventa una checklist di qualità accanto ai FATTI e ai 3 strati.
+- **Etica dell'errore** — Nina sbaglia e il sistema **impara** (è il DNA del progetto: night_audit, SELF_IMPROVE). Casella esplicita: il fallimento è analisi riflessiva, non vergogna (growth mindset).
+- **Ruoli pedagogici delle guide** — le costanti (principio 7) acquistano funzioni pedagogiche tipizzate: il **Socratico** (incalza con domande, non dà risposte = il cuore WOW), il **regolatore emotivo** (mette pause quando serve). Non nuovi personaggi: modi delle guide esistenti.
+- **Materie da minare** — il curriculum edtech (Genius Loci) è una **miniera di caselle**: cittadinanza digitale, media literacy ("dietro lo schermo"), pensiero critico/bias, emozioni, consenso/limiti, sicurezza dati. Argomenti pronti, ognuno a più giri. **NON** la sua struttura settimanale lineare (contraddice il principio 2).
+- *Bivio fuori-canone: "Nina-per-le-scuole" = possibile prodotto edtech separato (stesso motore). Parcheggiato.*
 
 ## Cosa NON cambia
 - Il canone narrativo (Bibbia: mondo, personaggi, Entropia, regole), l'ancoraggio al progetto
