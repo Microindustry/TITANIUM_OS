@@ -1,5 +1,29 @@
 [
   {
+    "id": "AUD-ef3fdc440e",
+    "date": "2026-06-16",
+    "git": "a3d33de8",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "night_research.log: rilevato timeout di rete nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-06-16"
+  },
+  {
+    "id": "AUD-28ded3b794",
+    "date": "2026-06-16",
+    "git": "a3d33de8",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "research_agent.log: rilevato timeout di rete nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-06-16"
+  },
+  {
     "id": "AUD-d19885be12",
     "date": "2026-06-14",
     "git": "724f523",
@@ -9,7 +33,7 @@
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-80dfddf5cc",
@@ -21,7 +45,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-d7ecb9b386",
@@ -176,8 +200,10 @@
     "finding": "Doppio crash notturno confermato dai log: story_agent.log e night_push.log riportano entrambi 'crash/eccezione' + 'errore esplicito'. Significa che stanotte gli episodi potrebbero non essere stati generati correttamente E il push automatico su git potrebbe essere fallito — con il rischio che il commit '8caec84 auto: story_agent' sia incompleto o provenga da un retry parziale.",
     "azione": "Aprire story_agent.log e night_push.log, isolare lo stack trace esatto. Verificare che episodes.json post-commit sia integro (conteggio atteso vs reale) e che il push abbia incluso tutti i file generati stanotte. Se il push è fallito, eseguire manualmente git status + git push prima della prossima sessione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c459273bcf",
@@ -188,8 +214,10 @@
     "finding": "GENESIS è al 70% ma il pillar IDENTITY è al 50% e Nina — che è il prodotto derivato di MIMS e il vettore educativo di GENESIS — ha ancora l'impronta non validata. I commit mostrano sei episodi EP_AV scritti e un arco ⟡1→⟡7 dichiarato completo, ma la voce bussola '#parcheggio-nina' segnala esplicitamente che Nina è prematura. Rischio: contenuto già prodotto che potrebbe richiedere rework se l'impronta cambia dopo la validazione.",
     "azione": "Prima di scrivere altri episodi Nina, completare la validazione dell'impronta (una sessione dedicata, output: documento 'Nina v1 validata' nel canone). Congelare la produzione di nuovi EP_AV fino ad allora per evitare debito di contenuto.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-b8240df53f",
@@ -200,8 +228,10 @@
     "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm)' è prerequisito per V8 e rimane aperto senza alcun commit di analisi o decisione negli ultimi 7 giorni. Una scelta binaria non documentata blocca un sotto-sistema meccanico intero.",
     "azione": "Fissare la decisione in un commit esplicito con motivazione (peso, costo, rigidità attesa). Se servono dati per scegliere, identificare quale test o calcolo sblocca la decisione e schedularlo come primo task V32 della prossima sessione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-b3f995e318",
@@ -212,8 +242,10 @@
     "finding": "Semantic Scholar bloccato da rate-limit in entrambe le run notturne: \"2026-06-11 03:37:27 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu\" e \"2026-06-11 03:37:39 [...] query=linear+guide+rail+preload+stiffness+preci\" — entrambe chiudono con \"semantic_scholar -> 0 risultati\". Le query riguardano V32 (rigidità strutturale frame, precarico guide lineari): ricerca tecnica core a zero output stanotte.",
     "azione": "Aggiungere backoff esponenziale + jitter tra le chiamate a Semantic Scholar, oppure distribuire le query su finestre orarie separate. Verificare se il limite è per-IP o per-chiave e valutare l'uso dell'API key ufficiale (piano gratuito aumenta i rate limit).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-adffea46c6",
@@ -224,8 +256,10 @@
     "finding": "6851 chunk nel RAG ma nessuna metrica di qualità nei log: non c'è evidenza di test di retrieval reale dopo la riparazione delle API della sessione #35. Il toggle Conoscenza/Sistema è tornato LIVE ma 'funziona tecnicamente' non equivale a 'recupera chunk rilevanti'. Con una base dati di questa dimensione, la degradazione silente del retrieval è probabile.",
     "azione": "Eseguire un batch di 5-10 query campione sul RAG (copre GENESIS, V32, MIMS, STORIE, RETE) e confrontare i chunk restituiti con quelli attesi. Se il recall è sotto il 70% su query note, prioritizzare il re-embedding o la pulizia dei metadati prima di aggiungere altri chunk.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-9f61e6d42c",
@@ -236,8 +270,10 @@
     "finding": "Fable 5 per SELF_IMPROVE/red-team ha scadenza 22/06 dichiarata nel next_step, ma non risulta nessun commit di setup, scaffolding o anche solo documento di spec nelle ultime sessioni. Con milestone #37 appena chiusa e RAG offline, il rischio è che la finestra di 11 giorni si consumi in lavoro di contenuto senza mai avviare l'audit critico.",
     "azione": "Creare entro la sessione corrente un file FABLE5_PLAN.md con: obiettivo minimo (quali aree auditare), criterio di 'fatto', e vincolo esplicito 'PR mai merge auto su main'. Questo rende la deadline azionabile e non solo annotata.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-721766d80d",
@@ -248,8 +284,10 @@
     "finding": "Il nodo SELF_IMPROVE (agente autonomo notturno read-only+PR) è catturato in bussola ma rimane bloccato dalla pipeline STORIE non ancora completata. Il rischio non è il ritardo in sé: è che stanotte story_agent e night_push hanno crashato senza nessun meccanismo di auto-riparazione o alerting. SELF_IMPROVE, una volta attivo, ridurrebbe esattamente questa classe di guasti silenziosi — ogni notte che passa senza di lui è una notte in cui i crash non vengono rilevati fino all'audit successivo.",
     "azione": "Definire il MVP minimo di SELF_IMPROVE come priorità immediatamente dopo la chiusura dei 4 semi tecnici: anche solo un agente che legge i log notturni e apre una PR con un report strutturato azzera il problema della cecità post-crash attuale.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6659e61b12",
@@ -260,8 +298,10 @@
     "finding": "94 commit in 7 giorni con velocity altissima sul fronte STORIE/contenuti, ma i pillar fisici sono fermi: V32=65% e MIMS=30% con due blocker hardware espliciti (mandrino 2.2kW ER20 e silent blocks) che non hanno ricevuto alcun commit nella settimana. Il sistema cresce in digitale mentre l'infrastruttura fisica — che è il prerequisito reale della monetizzazione artigianale — è bloccata per una decisione d'acquisto.",
     "azione": "Dedicare i primi 15 minuti della prossima sessione umana a chiudere la decisione silent blocks (v.A vs v.B) e mettere in ordine il mandrino ER20. Sono gate sequenziali: finché restano aperti, V32 e MIMS non avanzano indipendentemente da quanti commit vengono fatti sul software.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-5a971a41d9",
@@ -272,8 +312,10 @@
     "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito esplicito per la fresatura stampi MIMS, e V32 è al 65% con MIMS al 30%. Non risulta nessun commit degli ultimi 7 giorni che registri un ordine effettuato o anche solo un preventivo acquisito: il blocco hardware è fermo in lista senza traccia di avanzamento.",
     "azione": "Aprire ordine o almeno richiedere preventivo formale entro la sessione corrente. Registrare il riferimento ordine/fornitore in un commit o nota di bussola per rendere il blocco tracciabile e non solo dichiarato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-2a62f773f9",
@@ -284,8 +326,10 @@
     "finding": "La decisione 'scalare asse_nina ai 129' è classificata come aperta nel next_step ma non ha nessun todo associato in bussola_open né commit di analisi. Con la struttura a 2 assi appena stabilizzata (milestone #37) e l'indice PIETRE auto-generato, questo è il momento a costo minimo per valutare la scalabilità: più si aggiungono episodi sopra una struttura non validata per 129 entry, più costoso diventa un eventuale refactor.",
     "azione": "Aprire un todo esplicito in bussola con la domanda concreta da rispondere: 'asse_nina a 129 — quali campi cambiano, quale impatto su mappa e indice PIETRE?' Una sessione di spike da 30 minuti ora vale più di un refactor dopo altri 20 episodi.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-1645f75be2",
@@ -296,8 +340,10 @@
     "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano simultaneamente rate-limit, ricerca a vuoto ed errore esplicito — tre tipologie di fallimento sulla stessa notte. Non è rumore casuale: indica che le sorgenti esterne sono sistematicamente inaccessibili o che le query notturne consumano la quota API prima di produrre risultati utili.",
     "azione": "Controllare quali sorgenti hanno triggerato il rate-limit (probabilmente la stessa in entrambi i log). Implementare un backoff esponenziale per sorgente + capping delle chiamate per run. Valutare se i due agenti (night_research e research_agent) stiano interrogando le stesse API in parallelo, raddoppiando il consumo di quota.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0551833ac1",
@@ -308,8 +354,10 @@
     "finding": "Il RAG è offline: next_step dichiara esplicitamente 'Approvare UAC del restart API (RAG torna 200)' come primo passo bloccante. Con 6851 chunk indicizzati e la chat RAG integrata in dashboard, ogni sessione che parte senza questo step lavora cieca sul canone.",
     "azione": "Prima di qualsiasi altro lavoro di sessione: eseguire restart_api.ps1 con UAC, verificare risposta 200 su /api/health, poi procedere. Valutare se il restart possa essere automatizzato all'avvio senza richiedere intervento manuale ogni volta.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-11"
+    "status": "resolved",
+    "last_seen": "2026-06-11",
+    "resolved_on": "2026-06-16",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ff87fd042e",
@@ -501,7 +549,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-77abb05083",
@@ -513,7 +561,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-6bb972e811",
@@ -537,7 +585,7 @@
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-2ed0757892",
@@ -549,7 +597,7 @@
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-28f6d2e10b",
@@ -561,7 +609,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-14717de2a5",
@@ -573,7 +621,7 @@
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-100c8670cd",
@@ -611,7 +659,7 @@
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-15"
+    "last_seen": "2026-06-16"
   },
   {
     "id": "AUD-dd28c36b33",
