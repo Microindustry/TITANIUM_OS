@@ -158,6 +158,8 @@ sperimentare/cercare/capire. Ogni materia = un cluster di caselle, ogni casella 
 - **Etica dell'errore** — Nina sbaglia e il sistema **impara** (è il DNA del progetto: night_audit, SELF_IMPROVE). Casella esplicita: il fallimento è analisi riflessiva, non vergogna (growth mindset).
 - **Ruoli pedagogici delle guide** — le costanti (principio 7) acquistano funzioni pedagogiche tipizzate: il **Socratico** (incalza con domande, non dà risposte = il cuore WOW), il **regolatore emotivo** (mette pause quando serve). Non nuovi personaggi: modi delle guide esistenti.
 - **Materie da minare** — il curriculum edtech (Genius Loci) è una **miniera di caselle**: cittadinanza digitale, media literacy ("dietro lo schermo"), pensiero critico/bias, emozioni, consenso/limiti, sicurezza dati. Argomenti pronti, ognuno a più giri. **NON** la sua struttura settimanale lineare (contraddice il principio 2).
+- **Layer-gioco "Real Life RPG"** — la mappa di Nina È un gioco: arrivare a una casella = una **missione**, completarla = **level-up** (XP, skill sbloccata, nodo successivo dell'albero). È il dettaglio operativo del principio 9 (CV-che-si-genera): la mappa che si colora È il salvataggio. Dà massa al "ti genera".
+- **Lente delle 3 Leggi (vero · utile · bello)** — prima di scrivere una casella, validarla su 3 assi: regge/è vero · serve davvero · è bello/ingaggia. Eredità del Giudizio di THEMIS (il vecchio "board NEXUS"), usata come **filtro qualità** (non come personaggio).
 - *Bivio fuori-canone: "Nina-per-le-scuole" = possibile prodotto edtech separato (stesso motore). Parcheggiato.*
 
 ## Cosa NON cambia
