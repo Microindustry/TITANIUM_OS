@@ -5,7 +5,8 @@
 
 import { useState, type ReactNode } from "react";
 import { SKILLS_INDUSTRIA, SKILLS_DIGITAL, INTERESSI, PRINCIPI, COMPETENZE_UNITE, type Skill, type Interesse, type Livello } from "../data/matteoData";
-import { Wrench, Cpu, Compass, Quote, ChevronDown, Mail, Layers } from "lucide-react";
+import { Wrench, Cpu, Compass, Quote, ChevronDown, Mail, Layers, Sparkles } from "lucide-react";
+import { EPISODES } from "../data/storieData";
 
 const LIV: Record<Livello, { label: string; color: string }> = {
   "maestria":         { label: "maestria",    color: "#34d399" },
@@ -13,6 +14,49 @@ const LIV: Record<Livello, { label: string; color: string }> = {
   "esplorazione":     { label: "esplorazione", color: "#a78bfa" },
   "in-apprendimento": { label: "in apprend.", color: "#fbbf24" },
 };
+
+// ── IL CV DI NINA = il gemello della Mappa di Nina, letto come abilità ──
+// Stesso engine del profilo di Matteo (CV-che-si-genera): ogni episodio scritto
+// sblocca una "casella". Data-driven dagli episodi reali (asse_nina) → si aggiorna
+// da solo man mano che nascono. I giri della spirale = i livelli di profondità.
+const NINA_REG: Record<number, string> = {
+  0: "La Materia", 1: "La Traccia", 2: "L'Officina che gira sola", 3: "La Mente che parla",
+  4: "La Biblioteca delle Fonti", 5: "La Grande Mappa", 6: "L'Esercito Silenzioso", 7: "Il Direttore",
+};
+const NINA_FIN: Record<number, string> = {
+  1: "Il Valore", 2: "Spendere meno di quanto entra", 3: "Il Cuscinetto", 4: "Far lavorare i soldi",
+};
+const GIRO: Record<number, string> = { 1: "#34d399", 2: "#22d3ee", 3: "#a78bfa" };
+const giroColor = (g: number) => GIRO[Math.min(Math.max(g, 1), 3)] ?? "#34d399";
+
+type NinaSkill = { concetto: string; giro: number; scritto: boolean };
+type NinaDominio = { icon: string; nome: string; chiave: string; skills: NinaSkill[] };
+
+function buildNinaCV(): { domini: NinaDominio[]; scritti: number; totali: number } {
+  const domini: NinaDominio[] = [];
+  let scritti = 0;
+  let totali = 0;
+  const add = (verticale: string, regioni: Record<number, string>, icon: string) => {
+    for (const n of Object.keys(regioni).map(Number).sort((a, b) => a - b)) {
+      const eps = EPISODES
+        .filter(e => !e.parent_id
+          && (e.narrativa?.asse_nina?.verticale ?? "tech") === verticale
+          && e.narrativa?.asse_nina?.regione === n)
+        .sort((a, b) => (a.narrativa?.asse_nina?.giro_spirale ?? 1) - (b.narrativa?.asse_nina?.giro_spirale ?? 1));
+      if (!eps.length) continue;
+      const skills: NinaSkill[] = eps.map(e => {
+        const sc = e.narrativa?.asse_nina?.stato_nina === "adattato";
+        totali++;
+        if (sc) scritti++;
+        return { concetto: e.narrativa?.asse_nina?.concetto ?? e.title, giro: e.narrativa?.asse_nina?.giro_spirale ?? 1, scritto: sc };
+      });
+      domini.push({ icon, nome: regioni[n] ?? `Regione ${n}`, chiave: `${verticale}-${n}`, skills });
+    }
+  };
+  add("tech", NINA_REG, "⟡");
+  add("finanza", NINA_FIN, "₣");
+  return { domini, scritti, totali };
+}
 
 function SkillCard({ s, accent }: { s: Skill; accent: string }) {
   const [open, setOpen] = useState(false);
@@ -81,6 +125,8 @@ function Section({ icon, title, accent, children }: { icon: ReactNode; title: st
 }
 
 export function CvView() {
+  const ninaCV = buildNinaCV();
+  const ninaPct = ninaCV.totali ? Math.round((ninaCV.scritti / ninaCV.totali) * 100) : 0;
   return (
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
       <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
@@ -141,6 +187,43 @@ export function CvView() {
               </span>
             ))}
           </div>
+        </section>
+
+        {/* ── IL CV DI NINA: skill-tree che si riempie man mano nascono gli episodi ── */}
+        <section className="space-y-3 pt-4 border-t border-pink-500/20">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-pink-300">
+              <Sparkles size={12} /> Il CV di Nina — l'albero delle abilità
+            </div>
+            <div className="text-[10px] font-mono text-slate-500">{ninaCV.scritti}/{ninaCV.totali} caselle · <span className="text-pink-400">{ninaPct}%</span></div>
+          </div>
+          <p className="text-[12px] text-slate-500 leading-relaxed">
+            Stesso motore del mio CV, ma per Nina: ogni episodio scritto <span className="text-slate-300">sblocca una casella</span>.
+            È il <span className="text-pink-300">gemello della Mappa di Nina</span> — lì la navighi come luoghi (tipo Skyrim), qui la leggi come abilità. Si aggiorna da solo dagli episodi.
+          </p>
+          <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-pink-500 to-emerald-500 rounded-full transition-all" style={{ width: `${ninaPct}%` }} />
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {ninaCV.domini.map(d => (
+              <div key={d.chiave} className="rounded-xl border border-slate-800 bg-slate-900/40 p-3">
+                <div className="text-[12px] font-bold text-slate-200 mb-2">{d.icon} {d.nome}</div>
+                <div className="flex flex-wrap gap-1.5">
+                  {d.skills.map((s, i) => (
+                    <span key={i}
+                      className="text-[10px] font-mono px-2 py-1 rounded-lg border flex items-center gap-1.5"
+                      style={s.scritto
+                        ? { borderColor: giroColor(s.giro) + "66", color: "#e2e8f0", background: "#1e293b66" }
+                        : { borderColor: "#33415544", color: "#64748b", background: "transparent" }}>
+                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: s.scritto ? giroColor(s.giro) : "#475569" }} />
+                      {s.concetto}{s.giro > 1 && <span className="opacity-60">·g{s.giro}</span>}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-[9px] font-mono text-slate-600">colore = giro/profondità · pieno = scritto · tenue = da scrivere — un solo albero, due viste (mappa + abilità).</p>
         </section>
 
         <Section icon={<Wrench size={12} />} title="Competenze industriali" accent="#34d399">
