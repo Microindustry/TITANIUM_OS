@@ -83,7 +83,7 @@ const SYSTEM_TREE: MapNode[] = [
         children: [
           { id:"gi-rag",   label:"MENTE RAG",  type:"leaf", status:"active",  pillar:"GENESIS", desc:"v4.0 hybrid: ChromaDB + BM25 + CrossEncoder + RRF k=60 · multilingual 384-dim · chunk 512/200 · + layer grafo rag_graph.py networkx", isLeaf:true },
           { id:"gi-themis",label:"THEMIS",      type:"leaf", status:"active",  pillar:"GENESIS", desc:"Claude Sonnet · codice + analisi · MCP tools · sessioni continue", isLeaf:true },
-          { id:"gi-eva",   label:"EVA",         type:"leaf", status:"pending", pillar:"GENESIS", desc:"WhatsApp bot Maria · prenotazioni Vita Natura · n8n workflow · PENDING", isLeaf:true },
+          { id:"gi-eva",   label:"EVA",         type:"leaf", status:"building", pillar:"GENESIS", desc:"Assistente WhatsApp Maria · pilot v0.3 REALE (brain + prenotazione multi-turno + inbox handoff + webhook dry-run) · manca token+agenda", isLeaf:true },
           { id:"gi-brief", label:"DAILY BRIEF", type:"leaf", status:"active",  pillar:"GENESIS", desc:"Script Python → DATA/daily_brief_last.md · STATE + RAG + meteo", isLeaf:true },
         ],
       },
@@ -96,7 +96,7 @@ const SYSTEM_TREE: MapNode[] = [
     id: "VITA_NATURA", label: "VITA NATURA", type: "pillar", status: "active", pillar: "VITA_NATURA",
     desc: "Centro estetico Maria · Boffalora s/T (MI) · EVA WhatsApp bot · Google integrations", pct: 40, hasChildren: true,
     children: [
-      { id:"vn-eva",      label:"EVA BOT",  type:"leaf", status:"pending",  pillar:"VITA_NATURA", pct:40,  desc:"n8n workflow · WhatsApp Business API (setup pending) · risposte automatiche · Maria Rule", isLeaf:true },
+      { id:"vn-eva",      label:"EVA BOT",  type:"leaf", status:"building",  pillar:"VITA_NATURA", pct:40,  desc:"Pilot v0.3 reale (NODES/EVA) · prenotazione multi-turno + inbox handoff · manca token WhatsApp + agenda · Maria Rule", isLeaf:true },
       { id:"vn-calendar", label:"CALENDAR", type:"leaf", status:"active",   pillar:"VITA_NATURA", pct:100, desc:"Google Calendar MCP · legge/crea eventi · integrato in Claude Code", isLeaf:true },
       { id:"vn-gmail",    label:"GMAIL",    type:"leaf", status:"active",   pillar:"VITA_NATURA", pct:100, desc:"Gmail MCP · search, draft, labels · benenatimatteo.mb@gmail.com live", isLeaf:true },
       { id:"vn-sito",     label:"SITO WEB", type:"leaf", status:"pending",  pillar:"VITA_NATURA", pct:20,  desc:"Sito centro estetico · prenotazioni online · SEO locale · in sviluppo", isLeaf:true },

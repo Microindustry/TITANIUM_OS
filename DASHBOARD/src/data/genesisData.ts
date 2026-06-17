@@ -125,10 +125,10 @@ export const GENESIS_ROOT: SkillNode = {
 
         {
           id: "agenti", label: "Agenti AI", icon: "🤖", status: "active", ...violet,
-          note: "THEMIS attivo, EVA in sviluppo, 5 pianificati",
+          note: "THEMIS attivo · EVA pilot v0.3 (piattaforma reale) · 5 pianificati",
           children: [
             leaf("ag01", "THEMIS — Claude Sonnet — codice, analisi, V32, GENESIS", "active"),
-            leaf("ag02", "EVA — WhatsApp bot Maria — prenotazioni Vita Natura", "blocked", "WhatsApp pilot PENDING"),
+            leaf("ag02", "EVA — assistente WhatsApp Maria (prenotazioni Vita Natura)", "active", "Pilot v0.3 REALE in NODES/EVA: brain + prenotazione multi-turno + inbox handoff + webhook dry-run + test. Manca solo token WhatsApp + aggancio agenda."),
             leaf("ag03", "AVA — YouTube avatar — script, reel, contenuti", "future"),
             leaf("ag04", "ARIA — Life OS, ADHD scaffolding, scheduling", "future"),
             leaf("ag05", "NEXUS — orchestratore swarm multi-agente", "active", "Live: NODES/NEXUS/nexus.py + tool MCP 'nexus' — ThreadPoolExecutor parallelo"),
@@ -262,7 +262,7 @@ export const GENESIS_ROOT: SkillNode = {
           id: "gr_now", label: "In corso", icon: "⚡", status: "active", ...amber,
           children: [
             leaf("gr01", "Dashboard v7 — N-livelli su tutte le view", "active"),
-            leaf("gr02", "EVA WhatsApp pilot — prenotazioni Maria", "blocked"),
+            leaf("gr02", "EVA — pilot v0.3 reale (prenotazioni Maria); manca token + agenda", "active"),
             leaf("gr03", "Computer Use node — desktop agent CDP", "active"),
             leaf("gr04", "RAG v4.0 hybrid — già live", "done"),
           ],
