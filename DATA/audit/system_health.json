@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-06-16T03:52:38",
-  "date": "2026-06-16",
-  "git_head": "a3d33de8",
+  "last_audit": "2026-06-17T03:52:36",
+  "date": "2026-06-17",
+  "git_head": "0e318183",
   "rag_chunks": 3873,
-  "n_episodes": 175,
-  "n_commits_7d": 97,
+  "n_episodes": 181,
+  "n_commits_7d": 98,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -16,69 +16,57 @@
     {
       "log": "night_research.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-06-16 03:39:07 [research_agent      ] INFO     openalex -> 0 risultati",
-      "data": "2026-06-16"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "timeout di rete",
-      "riga": "2026-06-16 03:39:24 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
-      "data": "2026-06-16"
+      "riga": "2026-06-17 03:38:53 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-06-17"
     },
     {
       "log": "night_research.log",
       "tipo": "rate-limit sorgente",
-      "riga": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.",
-      "data": "2026-06-16"
+      "riga": "2026-06-17 03:38:59 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-06-17"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-06-17 03:38:59 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-06-17"
     },
     {
       "log": "night_research.log",
       "tipo": "crash/eccezione",
       "riga": "Traceback (most recent call last):",
-      "data": "2026-06-16"
+      "data": "2026-06-17"
     },
     {
-      "log": "night_research.log",
+      "log": "research_agent.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-06-17 03:38:41 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=epoxy+granite+polymer+concrete+vibration+",
+      "data": "2026-06-17"
+    },
+    {
+      "log": "research_agent.log",
       "tipo": "errore esplicito",
-      "riga": "chromadb.errors.InternalError: Error executing plan: Error sending backfill request to compactor: Error constructing hnsw segment reader: Error creating hnsw segment reader: Error loading hnsw index",
-      "data": "2026-06-16"
+      "riga": "2026-06-17 03:38:41 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=epoxy+granite+polymer+concrete+vibration+",
+      "data": "2026-06-17"
     },
     {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-06-16 03:38:28 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-06-16"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "timeout di rete",
-      "riga": "2026-06-16 03:38:45 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
-      "data": "2026-06-16"
+      "riga": "2026-06-17 03:38:41 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-06-17"
     },
     {
       "log": "night_push.log",
       "tipo": "crash/eccezione",
       "riga": "⚠ night_research.log: Traceback (most recent call last):",
-      "data": "2026-06-15"
-    },
-    {
-      "log": "night_push.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "· night_research.log: 2026-06-15 03:39:04 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:",
-      "data": "2026-06-15"
-    },
-    {
-      "log": "night_push.log",
-      "tipo": "errore esplicito",
-      "riga": "· night_research.log: 2026-06-15 03:39:04 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:",
-      "data": "2026-06-15"
+      "data": "2026-06-16"
     }
   ],
   "critiche": {
-    "added": 2,
-    "auto_closed": 12,
+    "added": 0,
+    "auto_closed": 6,
     "total": 69,
-    "open": 26
+    "open": 20
   },
   "verdict": "ATTENZIONE"
 }
