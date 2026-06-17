@@ -58,6 +58,7 @@ const CvView             = lazy(() => import("./components/CvView").then(m => ({
 const NinaCvView         = lazy(() => import("./components/NinaCvView").then(m => ({ default: m.NinaCvView })));
 const MappaGiocoView     = lazy(() => import("./components/MappaGiocoView").then(m => ({ default: m.MappaGiocoView })));
 const PitchProgettoView  = lazy(() => import("./components/PitchProgettoView").then(m => ({ default: m.PitchProgettoView })));
+const SpiegaPilastroView = lazy(() => import("./components/SpiegaPilastroView").then(m => ({ default: m.SpiegaPilastroView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -478,10 +479,10 @@ function AppInner() {
           <Suspense fallback={<ViewLoader />}>
             {/* Pilastri — usa CanvasLayout con room specifica */}
             {view === "home"     && <CanvasLayout room="home" />}
-            {view === "v32"      && <CanvasLayout room="v32" />}
-            {view === "genesis"  && <CanvasLayout room="genesis" />}
-            {view === "mims"     && <CanvasLayout room="mims" />}
-            {view === "eva"      && <CanvasLayout room="eva" />}
+            {view === "v32"      && <SpiegaPilastroView pilastro="v32" />}
+            {view === "genesis"  && <SpiegaPilastroView pilastro="genesis" />}
+            {view === "mims"     && <SpiegaPilastroView pilastro="mims" />}
+            {view === "eva"      && <SpiegaPilastroView pilastro="eva" />}
             {view === "identity"  && <CvView />}
             {view === "cv-nina"   && <NinaCvView />}
             {view === "critiche"  && <CanvasLayout room="critiche" />}
