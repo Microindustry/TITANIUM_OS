@@ -1,9 +1,37 @@
+<!-- TOC -->
+
+- [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-06-16  9 commit](#2026-06-16-9-commit)
+  - [2026-06-15  12 commit](#2026-06-15-12-commit)
+
+<!-- /TOC -->
+
 # Inventario — cosa abbiamo costruito (notte per notte)
 
 > Generato da `AUTOMATIONS/core/inventario_notturno.py` a ogni catena notturna.
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-06-17 · 14 commit
+- `29d26886` auto: night_audit - cartella clinica 17/06/2026
+- `0e318183` auto: story_agent - episodi generati 17/06/2026
+- `a0e84bce` feat(pitch): un pitch per progetto (la spiegazione vera, non i pilastri obsoleti)
+- `ffd90598` content(origini): capitolizzo MIMS/VULCAN — la pelle + il Cavallo di Troia
+- `efd00cee` content(origini): 2 episodi-origine dai manifesti NotebookLM (il passato del progetto)
+- `de0ac6d1` auto: story_agent - episodi generati 17/06/2026
+- `943d1cc7` feat(dashboard): CV di Nina come vista separata + Mappa-Gioco 2D annidata
+- `80cb0e28` feat(cv): il CV di Nina — skill-tree gemello della Mappa, si riempie dagli episodi
+- `16614567` feat(cv): profilo UNITO — competenze professionali + personali per dominio
+- `a9e49caf` integra(nina/2a-passata): layer-gioco Real Life RPG + lente 3 Leggi
+- `bda4a4f2` integra(nina+pitch): innesti NotebookLM nel canone + Asimmetria di Valore nel pitch
+- `a7e2181a` docs(nina): review Storie/Nina vs notebook (Genius Loci) — build-on, non ripartire
+- `112f064e` feat(notebooklm): capture script — notebook NotebookLM -> MENTE/_DA_ORDINARE
+- `4c9ea0dd` chore(git): smetti di tracciare semantic_index.db + artefatti runtime (churn)
+
+_episodi: 181 · critiche aperte: 20 (49 risolte) · RAG: 3873 chunk_
+
+
 
 ## 2026-06-16 · 9 commit
 - `7fea5af0` auto: night_audit - cartella clinica 16/06/2026
