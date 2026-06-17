@@ -332,5 +332,31 @@ export const CRITICHE_ROOT: SkillNode = {
       ],
     },
 
+    // ── ATTACCO OPUS — 17/06 (red-team su tutti i fronti, come Opus vs Opus) ──
+    {
+      id: "cr_attacco_0617", label: "Attacco Opus — 17/06", icon: "⚔", status: "active", ...rose,
+      note: "Opus interroga il progetto su tutti i fronti. Criticità reali viste in sessione; risolte marcate done. È lo scopo di questa sezione: ricevere l'attacco e segnarlo.",
+      children: [
+        crit("att01", "Verità sparsa: i dati-pilastro vivono in 5+ posti (au18 VIVO)", "active",
+          "FRONTE DATI. Per cambiare lo stato di EVA ho dovuto editare 5 punti (genesisData ×2, MappaView ×2, + STATE). Finché non c'è UNA fonte, ogni verità si sdoppia e i pilastri ri-obsolescono da soli — è la causa-radice dei 'pilastri che non spiegano'. Fix vero: derivare le viste da una sola sorgente, non da copie."),
+        crit("att02", "EVA 'pending' mentre la piattaforma esiste — RISOLTO oggi", "done",
+          "RISOLTO 17/06: la piattaforma EVA è reale (NODES/EVA pilot v0.3: brain + prenotazione multi-turno + inbox handoff + webhook dry-run + test). Stato/desc corretti in genesisData + MappaView + pitch dedicato PITCH_EVA. Manca solo token WhatsApp + agenda."),
+        crit("att03", "Il build di PRODUZIONE non completa (tsc -b / git push → OOM)", "active",
+          "FRONTE INFRA. `tsc --noEmit` è falso-verde; il gate vero `tsc -b` va in OOM (malloc 500MB) anche con RAM libera, e pure `git push` a volte. Conseguenza grave: non puoi fare `npm run build` né deployare la dashboard. Da indagare: bitness git, repo bloat (git gc), tetto memoria ambiente."),
+        crit("att04", "RAG semantico = 0 (chroma): metà del valore RAG è morto", "active",
+          "FRONTE INTELLIGENZA. BM25/keyword OK ma il vettoriale è a 0 (api+watchdog elevati sullo stesso ChromaDB). story/research scrivono nel vuoto. 1 click: SERVICES/rebuild_rag_clean.ps1 + UAC (tuo). Lungo termine: api+watchdog NON elevati."),
+        crit("att05", "Chiavi API ancora NON ruotate (esposte, dimostrate)", "active",
+          "FRONTE SICUREZZA. Il fix /api/file è merged e live, ma le chiavi esfiltrate (ANTHROPIC/GITHUB via .env) restano compromesse finché non le RUOTI a mano. Azione tua, non rimandabile."),
+        crit("att06", "Tutto il lavoro UI recente è NON verificato a vista", "active",
+          "FRONTE PROCESSO (autocritica). Mappa-gioco, CV unito, CV Nina, pitch per-progetto, viste rimappate: tutto tsc-clean ma MAI aperto a schermo (OOM blocca il build, niente preview qui). Rischio reale: compila ma è rotto o brutto. Il gate mancante è un giro in `pnpm dev`. Finché non si fa, la qualità a video è ignota."),
+        crit("att07", "Pilastri FISICI fermi mentre il digitale sprinta", "active",
+          "FRONTE STRATEGIA. V32 (reddito vero) bloccato su mandrino ER20 + decisione silent blocks; MIMS al 30%. Decine di commit software, zero sul fronte fisico. Rischio: un sistema digitale bellissimo sopra un'officina ferma. La leva di reddito è lì, non nel codice."),
+        crit("att08", "asse_nina 59/182 + numeri pitch non verificati", "active",
+          "FRONTE CONTENUTO. asse_nina su 59/182 episodi (decisione 'scala' aperta → metadato parziale, ennesimo backfill in arrivo). Pitch: TAM €4.2B senza fonte, BOM vs €2250 incoerenti (già marcati provvisori). Da consolidare prima di un partner."),
+        crit("att09", "critiche_auto: il path a-regole genera rumore basso-segnale", "active",
+          "FRONTE META. Anche dopo il fix n03 (auto-close), la cartella clinica live mescola findings ricchi (Sonnet) e generici ('rilevato errore nelle ultime esecuzioni', regole). Proposta: usare il path-regole solo come ultima spiaggia e marcarlo a bassa severità."),
+      ],
+    },
+
   ],
 };
