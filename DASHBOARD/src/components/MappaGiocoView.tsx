@@ -71,13 +71,23 @@ export function MappaGiocoView() {
   if (!cur) return null;
 
   const items = cur.figli.map((z, i) => {
-    const t = cur.figli.length <= 1 ? 0.5 : i / (cur.figli.length - 1);
-    return { z, x: PAD + t * (W - 2 * PAD), y: H / 2 + Math.sin(i * 0.9) * 155 };
+    const n = cur.figli.length;
+    const t = n <= 1 ? 0.5 : i / (n - 1);
+    const x = PAD + t * (W - 2 * PAD);
+    const y = H * 0.46 + Math.sin(t * Math.PI * (n <= 4 ? 1.1 : 2.3)) * (H * 0.30);
+    return { z, x, y };
   });
   const road = items.map((it, i) => `${i === 0 ? "M" : "L"} ${it.x.toFixed(0)} ${it.y.toFixed(0)}`).join(" ");
 
   return (
     <div className="h-full overflow-hidden flex flex-col" style={{ background: "#0a0f1a" }}>
+      <style>{`
+        @keyframes mg-fade { from { opacity: 0; } to { opacity: 1; } }
+        .mg-zona { animation: mg-fade .45s ease backwards; }
+        .mg-can { transition: filter .18s ease; cursor: pointer; }
+        .mg-can:hover { filter: brightness(1.45); }
+        .mg-road { animation: mg-fade .8s ease backwards; }
+      `}</style>
       {/* breadcrumb */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-slate-800/60 flex-wrap">
         {stack.length > 1 && (
@@ -110,25 +120,28 @@ export function MappaGiocoView() {
               <polygon points={`${m.x - 22},${m.y + 12} ${m.x},${m.y - 45} ${m.x + 22},${m.y + 12}`} fill="#64748b" opacity={0.5} />
             </g>
           ))}
-          {/* strade (collegano i punti) */}
-          {items.length > 1 && <path d={road} fill="none" stroke="#334155" strokeWidth={11} strokeLinecap="round" opacity={0.35} />}
-          {items.length > 1 && <path d={road} fill="none" stroke="#64748b" strokeWidth={4} strokeLinecap="round" strokeDasharray="2 16" opacity={0.6} />}
-          {/* zone */}
-          {items.map(({ z, x, y }) => {
-            const col = z.scritto ? giroColor(z.livello || 1) : "#64748b";
-            const entra = z.figli.length > 0;
-            return (
-              <g key={z.id} onClick={() => entra && setStack(s => [...s, z])} style={{ cursor: entra ? "pointer" : "default" }}>
-                <circle cx={x} cy={y} r={27} fill="#0f172a" stroke={col} strokeWidth={2.5} />
-                <circle cx={x} cy={y} r={6} fill={col} />
-                {entra && <text x={x} y={y + 5} textAnchor="middle" fontSize={15} fill={col} fontWeight={700}>›</text>}
-                <rect x={x - 62} y={y + 32} width={124} height={26} rx={7} fill="#0f172aee" stroke={col + "66"} strokeWidth={1} />
-                <text x={x} y={y + 49} textAnchor="middle" fontSize={11} fontFamily="monospace" fill={col} fontWeight={700}>
-                  Lv{z.livello || 1} · {z.nome.length > 16 ? z.nome.slice(0, 15) + "…" : z.nome}
-                </text>
-              </g>
-            );
-          })}
+          {/* strade + zone (rianimano all'ingresso, key=cur.id) */}
+          <g key={cur.id}>
+            {items.length > 1 && <path className="mg-road" d={road} fill="none" stroke="#334155" strokeWidth={11} strokeLinecap="round" opacity={0.35} />}
+            {items.length > 1 && <path className="mg-road" d={road} fill="none" stroke="#64748b" strokeWidth={4} strokeLinecap="round" strokeDasharray="2 16" opacity={0.6} />}
+            {items.map(({ z, x, y }, i) => {
+              const col = z.scritto ? giroColor(z.livello || 1) : "#64748b";
+              const entra = z.figli.length > 0;
+              return (
+                <g key={z.id} className="mg-zona" style={{ animationDelay: `${i * 0.06}s` }}>
+                  <g className={entra ? "mg-can" : ""} onClick={() => entra && setStack(s => [...s, z])} style={{ cursor: entra ? "pointer" : "default" }}>
+                    <circle cx={x} cy={y} r={27} fill="#0f172a" stroke={col} strokeWidth={2.5} />
+                    <circle cx={x} cy={y} r={6} fill={col} />
+                    {entra && <text x={x} y={y + 5} textAnchor="middle" fontSize={15} fill={col} fontWeight={700}>›</text>}
+                    <rect x={x - 62} y={y + 32} width={124} height={26} rx={7} fill="#0f172aee" stroke={col + "66"} strokeWidth={1} />
+                    <text x={x} y={y + 49} textAnchor="middle" fontSize={11} fontFamily="monospace" fill={col} fontWeight={700}>
+                      Lv{z.livello || 1} · {z.nome.length > 16 ? z.nome.slice(0, 15) + "…" : z.nome}
+                    </text>
+                  </g>
+                </g>
+              );
+            })}
+          </g>
         </svg>
         <div className="absolute bottom-3 left-4 text-[9px] font-mono text-slate-600">
           2D semplificata · tastini con › si aprono (zone dentro) · colore = livello/giro · sfondo: strade + monti · da rifinire a vista
