@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive,
+  FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -59,6 +59,7 @@ const NinaCvView         = lazy(() => import("./components/NinaCvView").then(m =
 const MappaGiocoView     = lazy(() => import("./components/MappaGiocoView").then(m => ({ default: m.MappaGiocoView })));
 const PitchProgettoView  = lazy(() => import("./components/PitchProgettoView").then(m => ({ default: m.PitchProgettoView })));
 const SpiegaPilastroView = lazy(() => import("./components/SpiegaPilastroView").then(m => ({ default: m.SpiegaPilastroView })));
+const CalendarioView     = lazy(() => import("./components/CalendarioView").then(m => ({ default: m.CalendarioView })));
 
 // ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
 interface NavItem {
@@ -86,6 +87,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
   { id: "mappa",       label: "MAPPA NINA",  icon: Map,         color: "text-pink-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
+  { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
   { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
 
@@ -528,6 +530,7 @@ function AppInner() {
             {view === "mappa"    && <MappaView source="nina" systemState={sys.state as any} />}
             {view === "mappa-gioco" && <MappaGiocoView />}
             {view === "rete"     && <InventarioView />}
+            {view === "calendario" && <CalendarioView />}
             {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
             {view === "sinapsi"  && <LayersView />}
