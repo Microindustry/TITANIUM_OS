@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-06-17  14 commit](#2026-06-17-14-commit)
   - [2026-06-16  9 commit](#2026-06-16-9-commit)
   - [2026-06-15  12 commit](#2026-06-15-12-commit)
 
@@ -12,6 +13,19 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-06-18 · 7 commit
+- `f0a99e9e` auto: night_audit - cartella clinica 18/06/2026
+- `9bd62c45` auto: story_agent - episodi generati 18/06/2026
+- `4438027b` feat(pilastri/#2): i pilastri come SPIEGAZIONE a livelli (non pitch)
+- `38160198` polish(mappa-gioco): layout pieno + micro-interazioni leggere (ingresso a cascata + hover)
+- `385b283d` critiche(att06): RISOLTO — UI verificata a vista nel dev server (zero errori)
+- `fb3eff12` critiche(attacco-opus 17/06): red-team su tutti i fronti, segnato + risolto possibile
+- `093884d9` cleanup(dashboard): accantona RAG-chat + AGENTI · EVA pending -> reale
+
+_episodi: 183 · critiche aperte: 14 (55 risolte) · RAG: 3873 chunk_
+
+
 
 ## 2026-06-17 · 14 commit
 - `29d26886` auto: night_audit - cartella clinica 17/06/2026
