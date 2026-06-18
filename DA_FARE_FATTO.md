@@ -1,6 +1,12 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 37  11/06/2026  arco Nina completo  canon OS  verticale Finanza](#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)
+    - [EP_AV_03/04 canonici (parcheggio tolto)  ARCO NINA 8/8 (07)](#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)
+    - [Canon 0-ter  Nina ha il suo OS (visione 10/06 a BIBBIA)](#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)
+    - [Verticale FINANZA attivata (lasse di lato)](#verticale-finanza-attivata-lasse-di-lato)
+    - [FIX  verifiche (rientro Matteo)](#fix-verifiche-rientro-matteo)
+    - [FOCUS prossima sessione (Matteo): Fable 5  SELF_IMPROVE](#focus-prossima-sessione-matteo-fable-5-selfimprove)
   - [Sessione 36  10/06/2026  STORIE risanate  4 semi tecnici](#sessione-36-10062026-storie-risanate-4-semi-tecnici)
     - [STORIE  diagnosi completa del sistema (oltre al content gap)](#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)
     - [Build potenziato (radice del problema metadati)](#build-potenziato-radice-del-problema-metadati)
@@ -8,7 +14,7 @@
     - [Igiene episodes.json (additiva, nulla cancellato)](#igiene-episodesjson-additiva-nulla-cancellato)
     - [RIFARE LE STORIE  N-LIVELLI SUI CONTENUTI (il lavoro vero della sessione interrotta)](#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)
     - [NOTTE AUTONOMA 36b  10/06  allineato i N-livelli al tuo blueprint a 2 ASSI](#notte-autonoma-36b-1006-allineato-i-n-livelli-al-tuo-blueprint-a-2-assi)
-    - [parcheggio NINA RAG/Wiki (EP_AV_03/04)  scritti ma PREMATURI (Nina viene dopo)](#parcheggio-nina-ragwiki-epav0304-scritti-ma-prematuri-nina-viene-dopo)
+    - [NINA RAG/Wiki (EP_AV_03/04)  CANONICI nellarco (parcheggio TOLTO, Matteo 11/06)](#nina-ragwiki-epav0304-canonici-nellarco-parcheggio-tolto-matteo-1106)
   - [Sessione 35  10/06/2026](#sessione-35-10062026)
     - [STORIE  episodi reali del lavoro recente (FATTO in 36)](#storie-episodi-reali-del-lavoro-recente-fatto-in-36)
     - [NINA  PRODOTTO (derivazione educativa di MIMS)  visione 09/06, catturata](#nina-prodotto-derivazione-educativa-di-mims-visione-0906-catturata)
@@ -41,6 +47,62 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)
+
+> **METODO (correzione Matteo 18/06 — non negoziabile):** **INTEGRA, non rifare.** Migliora il
+> file che c'è, non svuotarlo per metterci una cosa più povera (= "acerbo" → spreco di crediti).
+> **USA gli agenti**: research/self_improve PROPONGONO (anche la libreria di animazione), night_audit
+> SEGNALA i guasti, i subagent Explore/Plan LEGGONO in parallelo. Non fare tutto a mano.
+> **I lavori complessi falli, non rimandarli.** **Il "salva" tiene STATE.json + questa bussola
+> sincronizzati** → la sessione dopo riparte allineata (è il buco che ha lasciato #38 stantia per giorni).
+
+### [✓] FATTO (12-18/06)
+- [✓] **NotebookLM collegato a Claude Code** (notebooklm-mcp-cli via uv tool, isolato; `nlm login` di
+      Matteo). Catturati 11 notebook / 93 sorgenti → `MENTE/_DA_ORDINARE/notebooklm/`.
+- [✓] **Innesti NotebookLM su Nina** (`NINA_V2_ARCHITETTURA.md`): Triade dell'Ingaggio, etica
+      dell'errore, ruoli pedagogici, Real Life RPG, lente 3 Leggi. + episodi origine S0_04/05/06/07.
+- [✓] **Pitch per-progetto** (`DOCS/PITCH_{NINA,MIMS,V32,GENESIS,EVA,HR}.md`) grounded — MIMS/VULCAN
+      capitalizzati (scheletro MIMS + pelle VULCAN/mattonelle, no lamiera), EVA = pilot reale v0.3.
+- [✓] **CV unito** (`CvView`) + **Nina CV** (`NinaCvView`, skill-tree dagli episodi) + **Mappa Gioco** 2D.
+- [✓] **Pilastri = spiegazione a livelli** (`SpiegaPilastroView` Lv1/2/3 + catena) — commit 4438027b.
+- [✓] Infra agenti: night_audit **auto-close** (AUTO_CLOSE_DAYS=4, 67→36 aperte), `inventario_notturno.py`,
+      `pct_sync.py` (coerenza % dalla fonte unica STATE).
+- [✓] Critiche v2.1: attacco Opus↔Opus (att01-09) + audit 15/06 (n01-06).
+- [✓] Collegamenti rapidi `Desktop\TITANIUM` (Progetto · MENTE-Obsidian · Avvia/Stop · Claude · Docs).
+
+### [✗] DEBITO — fatto a metà / acerbo (DA INTEGRARE, NON rifare)
+- [✗] **I PITCH NON SI VEDONO**: `PitchProgettoView` fa fetch via API (spenta) → fallback vuoto.
+      FIX = mostrarli SENZA API (import del .md a build time, es. Vite `?raw`, o bundle). Il contenuto
+      ESISTE già in `DOCS/PITCH_*.md` — manca solo il modo di renderizzarlo offline.
+- [✗] **PILASTRI acerbi**: `SpiegaPilastroView` ha svuotato `CanvasLayout` (le room Genesis/Mims/Eva
+      avevano contenuto reale). INTEGRARE: tenere la ricchezza del CanvasLayout + AGGIUNGERE i livelli
+      di spiegazione, non sostituirla con testo statico povero.
+- [✗] **Animazioni solo CSS**: Matteo vuole micro-interazioni **JS-controlled** (Emil Kowalski /
+      Impeccable Design), "non solo CSS". FIX = installare una libreria vera (framer-motion/motion —
+      permesso come notebooklm) e farsi PROPORRE l'approccio dall'agente research/self_improve.
+- [ ] **CALENDARIO in sidebar** (richiesta 18/06): voce nuova, lavoro giorno-per-giorno. Integra la
+      fonte che ESISTE già: `DOCS/INVENTARIO_NOTTURNO.md` (commit/giorno) + i blocchi di questa bussola.
+
+### [⚠] GUASTI segnalati dagli AGENTI (ascoltarli, non ignorarli)
+- [⚠] **night_audit "LLM audit fallito (Unterminated string)"** ricorrente 17-18/06
+      (`DATA/logs/night_audit_run.log`): l'LLM torna JSON troncato, parse non difensivo →
+      fix in `NODES/AUDIT_AGENT/night_audit.py` (retry / parse tollerante / output atteso più corto).
+- [⚠] **night_research Traceback** (`DATA/logs/night_research.log`) + semantic_scholar 429 (rumore).
+- [⚠] **RAG semantico = 0**, restart API richiede **UAC** (att04): rebuild indice ChromaDB (1 click Matteo).
+- [⚠] **CHIAVI DA RUOTARE** (red-team #38, att05): `.env` esfiltrabile via API — le ruota Matteo.
+
+### [ ] PIANO prossima sessione (PULITA) — in ordine, INTEGRANDO
+1. [ ] **Leggi tutto** (subagent Explore/Plan) PRIMA di toccare: quali viste sono reali vs rotte vs acerbe.
+2. [ ] **Pitch visibili senza API** (import `?raw`) → verifica live su localhost:5174.
+3. [ ] **Pilastri**: reintegra `CanvasLayout` + livelli (integrazione, non sostituzione).
+4. [ ] **Calendario** in sidebar da `INVENTARIO_NOTTURNO.md`.
+5. [ ] **Animazioni**: installa libreria + applica (CV/pitch/critiche), proposta dall'agente.
+6. [ ] **night_audit** parse difensivo (chiudi il guasto ricorrente).
+7. [ ] **Obsidian**: Mari/VULCAN/MIMS + riordino `_DA_ORDINARE` (verifica che apra).
+- Stato: ~182 ep · pitch invisibili · pilastri da reintegrare · animazioni da fare con lib · build da riverificare.
 
 ---
 

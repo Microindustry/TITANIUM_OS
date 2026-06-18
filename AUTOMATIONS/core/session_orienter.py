@@ -314,6 +314,12 @@ def save_brief_to_inbox(brief: dict):
 def main():
     """Entry point: genera e mostra il brief di sessione."""
 
+    # Output UTF-8 robusto: la console Windows cp1252 va in crash sui box-drawing (═, —, →).
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
     brief = generate_brief()
     print_brief(brief)
     saved = save_brief_to_inbox(brief)
