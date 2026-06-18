@@ -1,13 +1,23 @@
-// SpiegaPilastroView.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-06-18
+// SpiegaPilastroView.tsx | TITANIUM_OS / DASHBOARD | v2.0 | 2026-06-18
 // I PILASTRI come SPIEGAZIONE (non pitch): ogni pilastro a livelli Lv1→Lv3, da aprire
 // e spiegare a un amico/ingegnere/collega in 30 secondi, "che lo visualizzi nella mente".
 // Differenza col pitch: il pitch VENDE, qui si SPIEGA (essenza → come funziona → scala).
+// v2.0: INTEGRA (non sostituisce) — sotto la spiegazione torna il contenuto ricco originale
+// della room (V32Room/GenesisRoom/MimsRoom/EvaRoom) + micro-animazioni JS-controlled (motion).
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { useGlobalState } from "../hooks/SystemStateContext";
+import { V32Room, GenesisRoom, MimsRoom, EvaRoom } from "./CanvasLayout";
 
 type Livello = { lv: number; titolo: string; testo: string };
 type Pilastro = { nome: string; icona: string; accent: string; frase: string; livelli: Livello[]; catena: string };
+
+// la room ricca originale di ogni pilastro (dati, percorso, blockers) — riusata, non duplicata
+const ROOMS: Record<string, typeof V32Room> = {
+  v32: V32Room, genesis: GenesisRoom, mims: MimsRoom, eva: EvaRoom,
+};
 
 const PILASTRI: Record<string, Pilastro> = {
   v32: {
@@ -54,54 +64,115 @@ const PILASTRI: Record<string, Pilastro> = {
 const FALLBACK = PILASTRI.v32 as Pilastro;
 
 export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
+  const { state } = useGlobalState();
   const p = PILASTRI[pilastro] ?? FALLBACK;
+  const Room = ROOMS[pilastro];
   const [aperti, setAperti] = useState<number[]>([1, 2, 3]);
   const toggle = (lv: number) => setAperti(a => a.includes(lv) ? a.filter(x => x !== lv) : [...a, lv]);
 
   return (
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
-      <div className="max-w-3xl mx-auto px-6 py-8 space-y-5">
+      <div className="max-w-4xl mx-auto px-6 py-8 space-y-5">
 
-        <div className="flex items-center gap-3">
+        <motion.div
+          className="flex items-center gap-3"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="text-3xl">{p.icona}</span>
           <div>
             <div className="text-[10px] font-mono uppercase tracking-[0.3em]" style={{ color: p.accent }}>Pilastro · spiegazione</div>
             <h1 className="text-2xl font-black text-white">{p.nome}</h1>
           </div>
-        </div>
+        </motion.div>
 
-        <p className="text-[15px] text-slate-200 leading-relaxed">{p.frase}</p>
+        <motion.p
+          className="text-[15px] text-slate-200 leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.08 }}
+        >
+          {p.frase}
+        </motion.p>
 
-        {/* livelli — apri e spiega, dal più semplice al più profondo */}
+        {/* livelli — apri e spiega, dal più semplice al più profondo (entrata a cascata) */}
         <div className="space-y-2.5">
-          {p.livelli.map(l => {
+          {p.livelli.map((l, i) => {
             const open = aperti.includes(l.lv);
             return (
-              <button key={l.lv} onClick={() => toggle(l.lv)}
-                className="w-full text-left rounded-xl border bg-slate-900/40 p-4 transition-all hover:bg-slate-900/70"
-                style={{ borderColor: p.accent + (open ? "55" : "22") }}>
+              <motion.button
+                key={l.lv}
+                onClick={() => toggle(l.lv)}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.12 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ x: 3 }}
+                className="w-full text-left rounded-xl border bg-slate-900/40 p-4 hover:bg-slate-900/70"
+                style={{ borderColor: p.accent + (open ? "55" : "22") }}
+              >
                 <div className="flex items-center gap-3">
                   <span className="text-[11px] font-mono font-black px-2 py-1 rounded-lg flex-shrink-0"
                     style={{ background: p.accent + "1a", color: p.accent, border: `1px solid ${p.accent}44` }}>
                     Lv{l.lv}
                   </span>
                   <span className="text-[13px] font-bold text-slate-100">{l.titolo}</span>
+                  <motion.span
+                    className="ml-auto text-slate-500 text-[11px]"
+                    animate={{ rotate: open ? 90 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >▸</motion.span>
                 </div>
-                {open && <p className="text-[13px] text-slate-300 leading-relaxed mt-2.5 pl-1">{l.testo}</p>}
-              </button>
+                <AnimatePresence initial={false}>
+                  {open && (
+                    <motion.div
+                      key="body"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-[13px] text-slate-300 leading-relaxed mt-2.5 pl-1">{l.testo}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.button>
             );
           })}
         </div>
 
         {/* la catena: dove si incastra nel sistema */}
-        <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-4">
+        <motion.div
+          className="rounded-xl border border-slate-800 bg-slate-900/30 p-4"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.12 + p.livelli.length * 0.07 }}
+        >
           <div className="text-[10px] font-mono uppercase tracking-widest text-slate-500 mb-1.5 flex items-center gap-1.5">
             <ArrowRight size={11} style={{ color: p.accent }} /> Nella catena
           </div>
           <p className="text-[13px] text-slate-300 leading-relaxed">{p.catena}</p>
-        </div>
+        </motion.div>
 
         <p className="text-[10px] text-slate-600 italic">Spiegazione (non pitch): apri i livelli e raccontala a voce. Il pitch dedicato è sotto PITCH nella barra.</p>
+
+        {/* DENTRO IL PILASTRO — il contenuto ricco originale (dati, percorso, blockers): reintegrato, non perso */}
+        {Room && (
+          <motion.div
+            className="pt-3"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 + p.livelli.length * 0.07 }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-slate-500">Dentro il pilastro · dati e percorso</span>
+              <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
+            </div>
+            <Room state={state} />
+          </motion.div>
+        )}
+
       </div>
     </div>
   );

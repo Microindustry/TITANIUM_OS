@@ -213,6 +213,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  // motion (framer-motion) usa i Context di React: senza dedupe Vite può caricare due copie
+  // di React -> "Invalid hook call". Dedupe + pre-bundle esplicito = animazioni stabili.
+  resolve: { dedupe: ['react', 'react-dom'] },
+  optimizeDeps: { include: ['react', 'react-dom', 'motion', 'motion/react'] },
   server: {
     // Flask rimane come fallback per /api/* non gestiti dal middleware
     // (scan, TTS, video, semantic search, content/trigger, ecc.)

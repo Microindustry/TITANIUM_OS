@@ -228,7 +228,7 @@ function SectionLinks({ onEnter }: { onEnter: (id: RoomId, label: string) => voi
 }
 
 // ── ROOM: V32 ─────────────────────────────────────────────────────────────────
-function V32Room({ state }: { state: any }) {
+export function V32Room({ state }: { state: any }) {
   const p = state?.pillars?.V32 ?? {};
   const progress = pct(p);
   const specs = [
@@ -346,7 +346,7 @@ function V32Room({ state }: { state: any }) {
 }
 
 // ── ROOM: GENESIS ─────────────────────────────────────────────────────────────
-function GenesisRoom(_: { state: any }) {
+export function GenesisRoom(_: { state: any }) {
   return (
     <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
       <GenesisSection />
@@ -355,7 +355,7 @@ function GenesisRoom(_: { state: any }) {
 }
 
 // ── ROOM: MIMS ────────────────────────────────────────────────────────────────
-function MimsRoom(_: { state: any }) {
+export function MimsRoom(_: { state: any }) {
   return (
     <div className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5">
       <MimsSection />
@@ -364,7 +364,7 @@ function MimsRoom(_: { state: any }) {
 }
 
 // ── ROOM: EVA ─────────────────────────────────────────────────────────────────
-function EvaRoom({ state }: { state: any }) {
+export function EvaRoom({ state }: { state: any }) {
   const p = state?.pillars?.VITA_NATURA ?? {};
   const progress = pct(p);
   return (
