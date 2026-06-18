@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-06-17T03:52:36",
-  "date": "2026-06-17",
-  "git_head": "0e318183",
+  "last_audit": "2026-06-18T03:52:37",
+  "date": "2026-06-18",
+  "git_head": "9bd62c45",
   "rag_chunks": 3873,
-  "n_episodes": 181,
-  "n_commits_7d": 98,
+  "n_episodes": 183,
+  "n_commits_7d": 93,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -15,58 +15,64 @@
   "log_issues": [
     {
       "log": "night_research.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-06-17 03:38:53 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-06-17"
+      "tipo": "errore esplicito",
+      "riga": "2026-06-18 03:38:53 [research_agent      ] INFO     [02] [semantic_scholar] Design and Implementation of Thermal Error Compensation Method for CNC Machine T — Ying Gao, Xiaojun Xia, Yinrui Guo 2024",
+      "data": "2026-06-18"
     },
     {
       "log": "night_research.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-06-17 03:38:59 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-06-17"
+      "riga": "2026-06-18 03:38:55 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-06-18"
     },
     {
       "log": "night_research.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-06-17 03:38:59 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-06-17"
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-06-18 03:38:55 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-06-18"
     },
     {
       "log": "night_research.log",
       "tipo": "crash/eccezione",
       "riga": "Traceback (most recent call last):",
-      "data": "2026-06-17"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-06-17 03:38:41 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=epoxy+granite+polymer+concrete+vibration+",
-      "data": "2026-06-17"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-06-17 03:38:41 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=epoxy+granite+polymer+concrete+vibration+",
-      "data": "2026-06-17"
+      "data": "2026-06-18"
     },
     {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-06-17 03:38:41 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "riga": "2026-06-18 03:38:37 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-06-18"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-06-18 03:38:43 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=linear+guide+rail+preload+stiffness+preci",
+      "data": "2026-06-18"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-06-18 03:38:43 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=linear+guide+rail+preload+stiffness+preci",
+      "data": "2026-06-18"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "· night_research.log: 2026-06-17 03:39:05 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:",
       "data": "2026-06-17"
     },
     {
       "log": "night_push.log",
-      "tipo": "crash/eccezione",
-      "riga": "⚠ night_research.log: Traceback (most recent call last):",
-      "data": "2026-06-16"
+      "tipo": "errore esplicito",
+      "riga": "· night_research.log: 2026-06-17 03:39:05 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:",
+      "data": "2026-06-17"
     }
   ],
   "critiche": {
     "added": 0,
     "auto_closed": 6,
     "total": 69,
-    "open": 20
+    "open": 14
   },
   "verdict": "ATTENZIONE"
 }
