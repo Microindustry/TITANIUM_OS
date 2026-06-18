@@ -74,17 +74,17 @@
 - [✓] Collegamenti rapidi `Desktop\TITANIUM` (Progetto · MENTE-Obsidian · Avvia/Stop · Claude · Docs).
 
 ### [✗] DEBITO — fatto a metà / acerbo (DA INTEGRARE, NON rifare)
-- [✗] **I PITCH NON SI VEDONO**: `PitchProgettoView` fa fetch via API (spenta) → fallback vuoto.
-      FIX = mostrarli SENZA API (import del .md a build time, es. Vite `?raw`, o bundle). Il contenuto
-      ESISTE già in `DOCS/PITCH_*.md` — manca solo il modo di renderizzarlo offline.
-- [✗] **PILASTRI acerbi**: `SpiegaPilastroView` ha svuotato `CanvasLayout` (le room Genesis/Mims/Eva
-      avevano contenuto reale). INTEGRARE: tenere la ricchezza del CanvasLayout + AGGIUNGERE i livelli
-      di spiegazione, non sostituirla con testo statico povero.
-- [✗] **Animazioni solo CSS**: Matteo vuole micro-interazioni **JS-controlled** (Emil Kowalski /
-      Impeccable Design), "non solo CSS". FIX = installare una libreria vera (framer-motion/motion —
-      permesso come notebooklm) e farsi PROPORRE l'approccio dall'agente research/self_improve.
-- [ ] **CALENDARIO in sidebar** (richiesta 18/06): voce nuova, lavoro giorno-per-giorno. Integra la
-      fonte che ESISTE già: `DOCS/INVENTARIO_NOTTURNO.md` (commit/giorno) + i blocchi di questa bussola.
+- [✓] **PITCH ORA VISIBILI** (commit 43e74471) — NON era "API spenta": `/api/file` risolveva i path
+      relativi dal cwd (DASHBOARD) invece che da ROOT → 404 → fallback. Fix `path.resolve(ROOT,target)`
+      + denylist `.env*/_VAULT/.git` (chiude red-team #38 att05). Verificato live.
+- [✓] **PILASTRI REINTEGRATI** (commit ffea8129) — `SpiegaPilastroView` v2: spiegazione a livelli SOPRA
+      + room ricca originale (V32Room/GenesisRoom/MimsRoom/EvaRoom, esportate e riusate) SOTTO. Niente
+      più buttato. Verificato sui 4 pilastri.
+- [✓] **Animazioni JS-controlled** (commit ffea8129) — `motion` (già installato) su pilastri+calendario:
+      entrata a cascata, apertura fluida, hover. Risolto crash "Invalid hook call" con dedupe React in
+      vite.config. [resta: estendere a CV/pitch/critiche].
+- [✓] **CALENDARIO in sidebar** (commit a3bfe418) — diario giorno-per-giorno da `INVENTARIO_NOTTURNO.md`
+      (fonte esistente), card per giorno + pallini per tipo commit. Verificato (4 giorni, 42 commit).
 
 ### [⚠] GUASTI segnalati dagli AGENTI (ascoltarli, non ignorarli)
 - [⚠] **night_audit "LLM audit fallito (Unterminated string)"** ricorrente 17-18/06

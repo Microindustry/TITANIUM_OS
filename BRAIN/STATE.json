@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-18T10:28:40.977857",
+  "last_update": "2026-06-18T10:48:48.589330",
   "active_milestone": "Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout), animazioni solo CSS, calendario sidebar mancante. Metodo correttivo Matteo 18/06: INTEGRA non rifare, USA gli agenti.",
-  "last_action": "Modifica a session_brief_20260618_102840.md",
-  "next_step": "Sessione PULITA (nuova, senza contesto): 1) leggi tutto con subagent Explore/Plan PRIMA di toccare; 2) pitch visibili SENZA API (import Vite ?raw); 3) reintegra CanvasLayout nei pilastri + livelli (non sostituire); 4) CALENDARIO in sidebar da DOCS/INVENTARIO_NOTTURNO.md; 5) animazioni con libreria (framer-motion) proposta dall'agente research/self_improve; 6) fix night_audit 'Unterminated string'. REGOLA: integra, non rifare in modo acerbo.",
-  "session_count": 71,
+  "last_action": "Modifica a DA_FARE_FATTO.md",
+  "next_step": "FATTO nella sessione riparti (18/06): pitch visibili (43e74471), pilastri reintegrati+animazioni motion (ffea8129), CALENDARIO sidebar (a3bfe418), denylist .env su API. RESTANO: 1) night_audit 'Unterminated string' parse difensivo; 2) Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE; 3) estendere animazioni motion a CV/pitch/critiche; 4) link Desktop sito Maria (serve URL da Matteo). REGOLA: integra, non rifare.",
+  "session_count": 72,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-18T10:28:35.335016"
+      "last_activity": "2026-06-18T10:35:57.020605"
     },
     "VITA_NATURA": {
       "status": "active",
