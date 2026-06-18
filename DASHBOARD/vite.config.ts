@@ -150,11 +150,15 @@ function handleApi(req: IncomingMessage, res: ServerResponse): boolean {
   if (p === '/api/file' && req.method === 'GET') {
     const target = url.searchParams.get('path') || ''
     if (!target) { json(res, { ok: false, error: 'path mancante' }, 400); return true }
-    const resolved = path.resolve(target)
     const MENTE_DIR = process.env.MENTE_DIR || path.join(process.env.USERPROFILE || `C:\\Users\\${process.env.USERNAME || 'benen'}`, 'MICROINDUSTRY', 'MENTE')
+    // I path relativi si risolvono dalla ROOT del progetto (TITANIUM_OS), NON dal cwd del
+    // dev server (DASHBOARD). Senza, "DOCS/PITCH_*.md" finiva in DASHBOARD/DOCS -> 404 (pitch invisibili).
+    const resolved = path.resolve(ROOT, target)
     // Sicurezza: solo dentro ROOT, CONTENT_ENGINE o MENTE
     const allowed = resolved.startsWith(ROOT) || resolved.startsWith(CONTENT_DIR) || resolved.startsWith(MENTE_DIR)
-    if (!allowed) { json(res, { ok: false, error: 'percorso non consentito' }, 403); return true }
+    // Denylist segreti (red-team #38, att05): mai servire .env* / _VAULT / .git via API
+    const DENY = /(^|[\\/])(\.env[^\\/]*|_VAULT|\.git)([\\/]|$)/i
+    if (!allowed || DENY.test(resolved)) { json(res, { ok: false, error: 'percorso non consentito' }, 403); return true }
     try {
       const stat = fs.statSync(resolved)
       if (stat.isDirectory()) {
