@@ -585,7 +585,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-06-18"
+    "last_seen": "2026-06-20"
   },
   {
     "id": "AUD-6bb972e811",
@@ -656,8 +656,10 @@
     "finding": "story_agent.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/story_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-15"
+    "status": "resolved",
+    "last_seen": "2026-06-15",
+    "resolved_on": "2026-06-20",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0fffad3ab5",
