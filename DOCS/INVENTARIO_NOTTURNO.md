@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-06-20  5 commit](#2026-06-20-5-commit)
+  - [2026-06-18  7 commit](#2026-06-18-7-commit)
   - [2026-06-17  14 commit](#2026-06-17-14-commit)
   - [2026-06-16  9 commit](#2026-06-16-9-commit)
   - [2026-06-15  12 commit](#2026-06-15-12-commit)
@@ -13,6 +15,17 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-06-20 · 5 commit
+- `d3e671a9` chore(save): bussola #38 + STATE allineati ai fix (pitch/pilastri/calendario fatti)
+- `a3bfe418` feat(dashboard): vista CALENDARIO — diario di bordo giorno per giorno
+- `ffea8129` feat(pilastri): reintegra la room ricca sotto la spiegazione + animazioni motion
+- `43e74471` fix(dashboard): pitch ora VISIBILI + denylist segreti su /api/file
+- `b2f42331` chore(save/#38): bussola + STATE sincronizzati col debito reale + fix orienter cp1252
+
+_episodi: 183 · critiche aperte: 14 (55 risolte) · RAG: 3873 chunk_
+
+
 
 ## 2026-06-18 · 7 commit
 - `f0a99e9e` auto: night_audit - cartella clinica 18/06/2026
