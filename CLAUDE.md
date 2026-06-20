@@ -151,7 +151,7 @@ Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
 
 ---
 
-## LE 11 REGOLE — TITANIUM_OS OPERATING PRINCIPLES
+## LE 10 REGOLE — TITANIUM_OS OPERATING PRINCIPLES
 
 > *Un sistema che gira da solo vale più di 10 abitudini che dipendono dalla volontà.*
 
@@ -184,14 +184,6 @@ Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
 
 10. **Libertà sopra profitto.**
     Il capannone entro 2030 non è un obiettivo lavorativo — è un obiettivo di sovranità.
-
-11. **Automiglioramento — il sistema si costruisce da sé, ma l'umano tiene il cancello.**
-    Ogni notte il nodo SELF_IMPROVE (`NODES/SELF_IMPROVE/`) legge i segnali reali (critiche
-    audit, gap storie, salute task, news AI del watcher) e **propone** 3-6 migliorie →
-    `MENTE/KNOWLEDGE/AUTOMIGLIORAMENTO.md`. Autonomo nel *trovare e proporre*; **mai** nel
-    modificare main, cancellare, fare merge o toccare sicurezza/chiavi da solo. Le proposte
-    si approvano a mano (modello PR). L'autonomia sta nel pensiero, non nell'esecuzione cieca:
-    è ciò che rende il loop potente *e* fidabile. Il sistema gestisce la costruzione di sé stesso.
 
 ---
 
