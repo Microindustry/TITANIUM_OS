@@ -108,7 +108,12 @@
 4. [ ] **Calendario** in sidebar da `INVENTARIO_NOTTURNO.md`.
 5. [ ] **Animazioni**: installa libreria + applica (CV/pitch/critiche), proposta dall'agente.
 6. [✓] **night_audit** parse difensivo (chiuso il guasto ricorrente) — 20/06, v1.3.
-7. [ ] **Obsidian**: Mari/VULCAN/MIMS + riordino `_DA_ORDINARE` (verifica che apra).
+7. [✓] **Obsidian Mari/VULCAN/MIMS + riordino `_DA_ORDINARE`** — 20/06 (commit MENTE 604b5d2):
+       11 notebook NotebookLM smistati per tema (CANONE_ARCHIVIO/V32/MIMS/GENESIS/NINA, da
+       lista piatta di 105 note), `_SMISTAMENTO.md` curato, 3 note-ponte (MIMS "Lego per
+       l'Industria Pesante", VULCAN agganciato al grafo, hub Vita Natura/Maria), indici
+       Obsidian rigenerati. ⚠ `rag-update` bloccato da errore **ChromaDB hnsw pre-esistente**
+       (rebuild indice — 1 click Matteo, UAC): non causato dal riordino, file pronti al rebuild.
 - Stato: ~182 ep · pitch invisibili · pilastri da reintegrare · animazioni da fare con lib · build da riverificare.
 
 ---
