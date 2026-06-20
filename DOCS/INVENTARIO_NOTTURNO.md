@@ -16,6 +16,15 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-06-20 · 3 commit
+- `089af488` auto: story_agent - episodi generati 20/06/2026
+- `67c17039` auto: story_agent - episodi generati 20/06/2026
+- `e9a495a0` auto: night_audit - cartella clinica 20/06/2026
+
+_episodi: 186 · critiche aperte: 13 (56 risolte) · RAG: 3873 chunk_
+
+
+
 ## 2026-06-20 · 5 commit
 - `d3e671a9` chore(save): bussola #38 + STATE allineati ai fix (pitch/pilastri/calendario fatti)
 - `a3bfe418` feat(dashboard): vista CALENDARIO — diario di bordo giorno per giorno
