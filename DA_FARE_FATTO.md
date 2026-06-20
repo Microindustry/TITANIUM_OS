@@ -55,6 +55,24 @@
 
 ---
 
+## Sessione #39 · 20/06/2026 — fix night_audit + ECOSISTEMA vault Obsidian
+
+- [✓] **night_audit parse difensivo** v1.3 (commit `01c3cffc`) — chiuso il guasto "Unterminated string".
+- [✓] **Riordino `_DA_ORDINARE` + Obsidian Mari/VULCAN/MIMS** (commit MENTE `604b5d2`): 11 notebook
+      NotebookLM smistati per tema, `_SMISTAMENTO.md`, 3 note-ponte.
+- [✓] **ECOSISTEMA — da puntini isolati a rete** (Matteo: "rendilo un ecosistema, collega/interseca,
+      priorità STORIE/Nina/MIMS/VULCAN"). `vault_intersect` **v2** ora calcola i legami sul
+      **contenuto** (TF-IDF corpo, non solo titolo): da **106 note "nessun legame" → 7/384**, 2786
+      legami. + `storie_intersect` (948 legami, **0 episodi isolati**) + `setup_obsidian` (188 episodi
+      nel vault + wikilink + _EVOLUZIONE) + PIETRE rigenerato. **Vault: 657 note, 555 connesse**, le 7
+      isolate sono paper accademici stranieri/auto-generati (giustamente fuori). VULCAN/MIMS ora
+      agganciati a tutto il canone passato (codex, manifesti, ASSOLUTO). Commit repo `3a41d06f` + MENTE `f1e33b1`.
+      ⚠ `rag-update` ancora bloccato dall'errore **ChromaDB hnsw** (rebuild indice — 1 click Matteo, UAC).
+- [ ] **PROSSIMO**: sviluppare i prodotti MIMS/VULCAN sul sapere ora connesso (specifiche/decisioni reali),
+      e rifinire STORIE/Nina. Le info del passato adesso emergono dai Collegati — base pronta.
+
+---
+
 ## Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)
 
 > **METODO (correzione Matteo 18/06 — non negoziabile):** **INTEGRA, non rifare.** Migliora il
