@@ -1,4 +1,9 @@
-# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.2 | 2026-06-15
+# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.3 | 2026-06-20
+# v1.3: parse LLM DIFENSIVO (fix blocker "Unterminated string"). Via il regex greedy
+#       \[.*\] che si fermava all'ultimo ']' (anche dentro una stringa "finding") e
+#       troncava l'array -> ora raw_decode bilancia le parentesi rispettando le
+#       stringhe; se la risposta e' troncata (max_tokens) si recuperano gli oggetti
+#       {...} completi scartando solo l'ultimo monco. max_tokens 1500 -> 2500.
 # v1.2: cartella clinica AUTO-PULENTE (fix n03) — una critica non più osservata da
 #       AUTO_CLOSE_DAYS giorni si auto-chiude (status=resolved) e si RIAPRE da sola
 #       se il guasto ritorna. Stop alle critiche che restano "aperte" per settimane
@@ -238,6 +243,40 @@ Rispondi SOLO con un array JSON, niente testo attorno. Schema per elemento:
 {"area":"RAG|RICERCA|NOTTURNE|V32|MIMS|GENESIS|SISTEMA|ROADMAP","severity":"alta|media|bassa","finding":"cosa non va, dai dati","azione":"il prossimo passo concreto"}"""
 
 
+def _parse_critiche_json(txt: str) -> list[dict] | None:
+    """Estrae le critiche da una risposta LLM anche se TRONCATA o sporca.
+    1) raw_decode dell'array dal primo '[': bilancia le parentesi rispettando le
+       stringhe (un ']' dentro un "finding" non taglia più, niente prosa attorno).
+    2) se l'array fallisce (troncato dal max_tokens), recupera oggetto-per-oggetto
+       i {...} completi; l'ultimo monco lancia e viene scartato (teniamo i buoni)."""
+    txt = (txt or "").strip()
+    if not txt:
+        return None
+    txt = re.sub(r"^```(?:json)?\s*|\s*```$", "", txt).strip()   # toglie i fence ```
+    dec = json.JSONDecoder()
+    lb = txt.find("[")
+    if lb >= 0:
+        try:
+            data, _ = dec.raw_decode(txt, lb)
+            if isinstance(data, list):
+                return data
+        except json.JSONDecodeError:
+            pass
+    objs, i = [], 0
+    while True:
+        j = txt.find("{", i)
+        if j < 0:
+            break
+        try:
+            obj, end = dec.raw_decode(txt, j)
+            i = end
+            if isinstance(obj, dict):
+                objs.append(obj)
+        except json.JSONDecodeError:
+            break   # oggetto troncato a metà: stop, teniamo i precedenti
+    return objs or None
+
+
 def critiche_via_llm(signals: dict) -> list[dict] | None:
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
@@ -251,14 +290,16 @@ def critiche_via_llm(signals: dict) -> list[dict] | None:
     try:
         client = anthropic.Anthropic(api_key=api_key)
         resp = client.messages.create(
-            model=MODEL, max_tokens=1500, system=SYSTEM_PROMPT,
+            model=MODEL, max_tokens=2500, system=SYSTEM_PROMPT,
             messages=[{"role": "user",
                        "content": "Segnali di stanotte:\n" + json.dumps(signals, ensure_ascii=False, indent=2)}],
         )
-        txt = resp.content[0].text.strip()
-        m = re.search(r"\[.*\]", txt, re.DOTALL)
-        data = json.loads(m.group(0) if m else txt)
-        return data if isinstance(data, list) else None
+        txt = resp.content[0].text if resp.content else ""
+        data = _parse_critiche_json(txt)
+        if not data:
+            logger.warning("audit LLM: risposta vuota o non parsabile -> fallback a regole")
+            return None
+        return data
     except Exception as e:
         logger.warning("LLM audit fallito (%s) -> fallback a regole", e)
         return None

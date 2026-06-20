@@ -1,6 +1,11 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 38  12-18/06/2026  NotebookLM  pitch/CV/pilastri (con DEBITO da integrare)](#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)
+    - [FATTO (12-18/06)](#fatto-12-1806)
+    - [DEBITO  fatto a metà / acerbo (DA INTEGRARE, NON rifare)](#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)
+    - [GUASTI segnalati dagli AGENTI (ascoltarli, non ignorarli)](#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli)
+    - [PIANO prossima sessione (PULITA)  in ordine, INTEGRANDO](#piano-prossima-sessione-pulita-in-ordine-integrando)
   - [Sessione 37  11/06/2026  arco Nina completo  canon OS  verticale Finanza](#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)
     - [EP_AV_03/04 canonici (parcheggio tolto)  ARCO NINA 8/8 (07)](#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)
     - [Canon 0-ter  Nina ha il suo OS (visione 10/06 a BIBBIA)](#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)
@@ -87,9 +92,11 @@
       (fonte esistente), card per giorno + pallini per tipo commit. Verificato (4 giorni, 42 commit).
 
 ### [⚠] GUASTI segnalati dagli AGENTI (ascoltarli, non ignorarli)
-- [⚠] **night_audit "LLM audit fallito (Unterminated string)"** ricorrente 17-18/06
-      (`DATA/logs/night_audit_run.log`): l'LLM torna JSON troncato, parse non difensivo →
-      fix in `NODES/AUDIT_AGENT/night_audit.py` (retry / parse tollerante / output atteso più corto).
+- [✓] **night_audit "LLM audit fallito (Unterminated string)"** RISOLTO 20/06 (v1.3):
+      via il regex greedy `\[.*\]` (si fermava all'ultimo `]`, anche dentro una stringa
+      "finding", troncando l'array) → ora `raw_decode` bilancia rispettando le stringhe +
+      recupero oggetto-per-oggetto se il `max_tokens` tronca (scarta solo l'ultimo monco);
+      max_tokens 1500→2500. Run `--force` 19:13: 6 critiche **via LLM**, zero fallback.
 - [⚠] **night_research Traceback** (`DATA/logs/night_research.log`) + semantic_scholar 429 (rumore).
 - [⚠] **RAG semantico = 0**, restart API richiede **UAC** (att04): rebuild indice ChromaDB (1 click Matteo).
 - [⚠] **CHIAVI DA RUOTARE** (red-team #38, att05): `.env` esfiltrabile via API — le ruota Matteo.
@@ -100,7 +107,7 @@
 3. [ ] **Pilastri**: reintegra `CanvasLayout` + livelli (integrazione, non sostituzione).
 4. [ ] **Calendario** in sidebar da `INVENTARIO_NOTTURNO.md`.
 5. [ ] **Animazioni**: installa libreria + applica (CV/pitch/critiche), proposta dall'agente.
-6. [ ] **night_audit** parse difensivo (chiudi il guasto ricorrente).
+6. [✓] **night_audit** parse difensivo (chiuso il guasto ricorrente) — 20/06, v1.3.
 7. [ ] **Obsidian**: Mari/VULCAN/MIMS + riordino `_DA_ORDINARE` (verifica che apra).
 - Stato: ~182 ep · pitch invisibili · pilastri da reintegrare · animazioni da fare con lib · build da riverificare.
 
