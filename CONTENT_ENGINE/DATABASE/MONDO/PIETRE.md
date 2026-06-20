@@ -2,16 +2,16 @@
 
 - [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
 - [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
-  - [0  LA MATERIA  (2 episodi)](#0-la-materia-2-episodi)
-  - [1  LA TRACCIA  (2 episodi)](#1-la-traccia-2-episodi)
-  - [2  LOFFICINA CHE GIRA SOLA  (6 episodi)](#2-lofficina-che-gira-sola-6-episodi)
-  - [3  LA MENTE CHE PARLA  (2 episodi)](#3-la-mente-che-parla-2-episodi)
-  - [4  LA BIBLIOTECA DELLE FONTI  (3 episodi)](#4-la-biblioteca-delle-fonti-3-episodi)
-  - [5  LA GRANDE MAPPA  (15 episodi)](#5-la-grande-mappa-15-episodi)
-  - [6  LESERCITO SILENZIOSO  (2 episodi)](#6-lesercito-silenzioso-2-episodi)
-  - [7  IL DIRETTORE  (7 episodi)](#7-il-direttore-7-episodi)
+  - [0  LA MATERIA  (6 episodi)](#0-la-materia-6-episodi)
+  - [1  LA TRACCIA  (4 episodi)](#1-la-traccia-4-episodi)
+  - [2  LOFFICINA CHE GIRA SOLA  (8 episodi)](#2-lofficina-che-gira-sola-8-episodi)
+  - [3  LA MENTE CHE PARLA  (5 episodi)](#3-la-mente-che-parla-5-episodi)
+  - [4  LA BIBLIOTECA DELLE FONTI  (4 episodi)](#4-la-biblioteca-delle-fonti-4-episodi)
+  - [5  LA GRANDE MAPPA  (17 episodi)](#5-la-grande-mappa-17-episodi)
+  - [6  LESERCITO SILENZIOSO  (5 episodi)](#6-lesercito-silenzioso-5-episodi)
+  - [7  IL DIRETTORE  (8 episodi)](#7-il-direttore-8-episodi)
 - [Verticale: Finanza personale](#verticale-finanza-personale)
-  - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)
+  - [1  IL VALORE  (2 episodi)](#1-il-valore-2-episodi)
   - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)
   - [3  IL CUSCINETTO  (0 episodi)](#3-il-cuscinetto-0-episodi)
   - [4  FAR LAVORARE I SOLDI  (0 episodi)](#4-far-lavorare-i-soldi-0-episodi)
@@ -20,7 +20,7 @@
 
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-06-11 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-06-20 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -31,54 +31,68 @@
 
 # Verticale: Tech · la Storia dell'IA
 
-## ⟡0 · LA MATERIA  (2 episodi)
+## ⟡0 · LA MATERIA  (6 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_M0` La Materia | la Materia: il gesto sul metallo, la radice di tutto | adattato | — |
 | 1 | `EP_FILONE_00` La Materia — il telaio, la scelta, il controllo | la materia: scelta, controllo, precisione | fonte | — |
+| 1 | `EP_N2_01` La Bambina che Chiedeva Perché | il gesto fatto bene sulla materia vera | adattato | — |
+| 2 | `EP_AV_M0_2` Mille Volte Uguale | la Materia: il gesto sul metallo, la radice di tutto | adattato | — |
+| 2 | `EP_N2_02` Il Soffio di Troppo | la precisione e' una relazione (il soffio di troppo) | adattato | — |
+| 3 | `EP_N2_03` Mille Volte Uguale | la ripetibilita': mille volte uguale, battere la deriva | adattato | — |
 
-## ⟡1 · LA TRACCIA  (2 episodi)
+## ⟡1 · LA TRACCIA  (4 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_00` La Bambina e la Giuntura | il Grande Loop | adattato | — |
+| 1 | `EP_N2_10` La Traccia | il Grande Loop: la traccia che resta | adattato | ⟡0 |
 | 1 | `EP_S0_00` Il Socio | il Socio: un gesto, più frutti | fonte | — |
+| 2 | `EP_AV_00_2` Il Segno che Resta | il Grande Loop | adattato | — |
 
-## ⟡2 · L'OFFICINA CHE GIRA SOLA  (6 episodi)
+## ⟡2 · L'OFFICINA CHE GIRA SOLA  (8 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_01` L'Incantesimo che si Ripete | l'Automazione | adattato | ⟡1 |
+| 1 | `EP_N2_05` Prima la Mano, Poi la Macchina | prima la mano poi la macchina (automazione) | adattato | ⟡0 |
+| 1 | `EP_N2_06` L'Officina che Gira Sola | l'automazione: insegnare un gesto a chi non si stanca | adattato | ⟡0 |
 | 1 | `MOM_01_LA_PRIMA_AUTOMAZIONE` La Prima Automazione | la prima automazione | fonte | ⟡1 |
 | 2 | `EP_SEED_WATCHER` AI News Watcher — restare sul pezzo senza chiavi | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_GATE` Il gate di rilevanza — tenere il segnale, buttare il rumore | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_KEYLESS` Guardare senza chiavi — gh, RSS, YouTube | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_TIER` Chi guardare più spesso — il tier a rotazione 48h | stare informati senza farlo a mano | fonte | ⟡1 |
 
-## ⟡3 · LA MENTE CHE PARLA  (2 episodi)
+## ⟡3 · LA MENTE CHE PARLA  (5 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_02` La Mente che Parla | l'LLM, la mente che parla | adattato | ⟡1 |
+| 1 | `EP_N2_07` La Mente che Parla | l'LLM, la mente che parla: indovina la parola probabile | adattato | ⟡2 |
 | 1 | `EP_S2_01_IL_CERVELLO_IBRIDO` Il Cervello Ibrido | il cervello ibrido: cloud + locale | fonte | ⟡1 |
+| 2 | `EP_AV_02_2` Quando la Mente Inventa | l'LLM, la mente che parla | adattato | ⟡1 |
+| 2 | `EP_N2_08` Quando la Mente Inventa | l'allucinazione della mente: da dove lo sai? | adattato | — |
 
-## ⟡4 · LA BIBLIOTECA DELLE FONTI  (3 episodi)
+## ⟡4 · LA BIBLIOTECA DELLE FONTI  (4 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_03` La Biblioteca delle Fonti | il RAG, la biblioteca delle fonti | adattato | ⟡3 |
+| 1 | `EP_N2_09` La Biblioteca delle Fonti | il RAG, la biblioteca delle fonti | adattato | ⟡3 |
 | 1 | `EP_T05` Il Sistema Pensa | il sistema pensa: recupero con fonti | fonte | ⟡3 |
 | 2 | `EP_T04` SINAPSI | SINAPSI: la memoria che collega | fonte | ⟡3 |
 
-## ⟡5 · LA GRANDE MAPPA  (15 episodi)
+## ⟡5 · LA GRANDE MAPPA  (17 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_04` La Grande Mappa | la Wiki, la grande mappa | adattato | ⟡4 |
+| 1 | `EP_N2_04` La Mappa Viva | la mappa viva: il sistema che dice la verita' | adattato | ⟡0 |
 | 1 | `EP_SEED_GRAPHIFY` Graphify — il repo che si disegna da solo | la mappa della conoscenza | fonte | ⟡4 |
 | 1 | `EP_T01` La Dashboard | la Dashboard: vedere il sistema | fonte | ⟡4 |
 | 1 | `EP_T02` NeuroMap | NeuroMap: il sistema come mappa | fonte | ⟡4 |
+| 2 | `EP_N2_11` La Grande Mappa | la Grande Mappa: il sapere come grafo | adattato | ⟡4 |
 | 2 | `EP_SEED_GRAPHIFY_L1_COMMUNITY` I 696 quartieri — la community detection | la mappa della conoscenza | fonte | ⟡4 |
 | 2 | `EP_SEED_GRAPHIFY_L1_GODNODE` I nodi-dio — le stelle che tengono il grafo | la mappa della conoscenza | fonte | ⟡4 |
 | 2 | `EP_SEED_GRAPHIFY_L1_MENTE` Perché MENTE si estrae a mano — l'estrattore ibrido | la mappa della conoscenza | fonte | ⟡4 |
@@ -91,18 +105,22 @@
 | 3 | `EP_SEED_RETE_L1_TSNE` Da 5000 numeri a una galassia — il t-SNE | vedere il sistema come una mappa | fonte | ⟡4 |
 | 4 | `EP_SEED_RETE_L2_UMAP` t-SNE contro UMAP — due modi di fare la foto | vedere il sistema come una mappa | fonte | ⟡4 |
 
-## ⟡6 · L'ESERCITO SILENZIOSO  (2 episodi)
+## ⟡6 · L'ESERCITO SILENZIOSO  (5 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_05` L'Esercito Silenzioso | gli Agenti, l'esercito silenzioso | adattato | ⟡2 ⟡4 |
+| 1 | `EP_N2_12` L'Esercito Silenzioso | gli agenti: l'esercito silenzioso | adattato | ⟡2 ⟡1 |
 | 1 | `MOM_03_L_ESERCITO` L'Esercito | l'esercito: tante entità che fanno | fonte | ⟡2 ⟡4 |
+| 2 | `EP_AV_05_2` Il Soldato Caduto in Silenzio | gli Agenti, l'esercito silenzioso | adattato | ⟡2 ⟡4 |
+| 2 | `EP_N2_13` Il Soldato Caduto in Silenzio | il guasto silenzioso e il guardiano | adattato | ⟡1 |
 
-## ⟡7 · IL DIRETTORE  (7 episodi)
+## ⟡7 · IL DIRETTORE  (8 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_06` Il Direttore | l'Orchestrazione, il direttore | adattato | ⟡5 ⟡6 |
+| 1 | `EP_N2_14` Il Direttore | l'orchestrazione: il direttore | adattato | ⟡6 ⟡0 |
 | 1 | `EP_S2_02_L_ORCHESTRATORE` L'Orchestratore | l'orchestratore: chi fa cosa e quando | fonte | ⟡5 ⟡6 |
 | 1 | `EP_SEED_CONTROLLO` Il Centro di Controllo — un posto solo da cui governare | un posto solo per governare il disordine | fonte | — |
 | 2 | `EP_S2_03_LA_TELA` La Tela | la Tela: il calendario notturno | fonte | ⟡6 |
@@ -114,11 +132,12 @@
 
 # Verticale: Finanza personale
 
-## ₣1 · IL VALORE  (1 episodi)
+## ₣1 · IL VALORE  (2 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
 | 1 | `EP_AV_FIN_01` Il Valore — cosa sono davvero i soldi | cosa sono i soldi: lavoro e fiducia, scambiabili | adattato | — |
+| 1 | `EP_N2_15` Il Valore | il valore: i soldi sono lavoro conservato + fiducia condivisa | adattato | — |
 
 ## ₣2 · SPENDERE MENO DI QUANTO ENTRA  (0 episodi)
 

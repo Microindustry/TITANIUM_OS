@@ -30,6 +30,12 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_S0_04",
+        "title": "IL LEGO D'ACCIAIO",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -37,6 +43,10 @@
       "precede": {
         "id": "EP_S0_03",
         "title": "La Formula"
+      },
+      "segue": {
+        "id": "EP_S0_04",
+        "title": "IL LEGO D'ACCIAIO"
       }
     }
   },
@@ -746,30 +756,6 @@
         "title": "La Mappa Viva",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
-        "title": "I nodi-dio — le stelle che tengono il grafo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
-        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -848,30 +834,6 @@
       {
         "id": "EP_N2_04",
         "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
-        "title": "I nodi-dio — le stelle che tengono il grafo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
-        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -1005,12 +967,6 @@
         "title": "VULCAN",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -1091,30 +1047,6 @@
       {
         "id": "EP_20260601",
         "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: dashboard, rag"
       }
@@ -1555,30 +1487,6 @@
         "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, milestone"
       }
     ],
     "evoluzione": {
@@ -1782,30 +1690,6 @@
         "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: milestone, rag"
       }
     ],
     "evoluzione": {
@@ -1938,30 +1822,6 @@
         "title": "Il Sistema Respira da Solo",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2048,30 +1908,6 @@
         "title": "Quando la Mente Inventa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2149,30 +1985,6 @@
       {
         "id": "EP_AV_06",
         "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_N2_14",
-        "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -2253,30 +2065,6 @@
         "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_00_IL_DISTACCO",
-        "title": "Il Distacco",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2341,30 +2129,6 @@
       {
         "id": "EP_20260319_fix_typescript_errors_unused_imports",
         "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2441,30 +2205,6 @@
         "title": "Il Sistema Respira da Solo",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2537,30 +2277,6 @@
       {
         "id": "EP_S2_05_IL_SILENZIO",
         "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2637,30 +2353,6 @@
         "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2733,30 +2425,6 @@
       {
         "id": "EP_S2_05_IL_SILENZIO",
         "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -2833,30 +2501,6 @@
         "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260528_matteosection_v4_2_skill_espandibili_pe",
-        "title": "La Macchina che Ricorda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -2929,30 +2573,6 @@
       {
         "id": "EP_S2_05_IL_SILENZIO",
         "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -3029,30 +2649,6 @@
         "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -3125,30 +2721,6 @@
       {
         "id": "EP_S2_05_IL_SILENZIO",
         "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -3225,30 +2797,6 @@
         "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -3321,30 +2869,6 @@
       {
         "id": "EP_S2_05_IL_SILENZIO",
         "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -3421,30 +2945,6 @@
         "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -3519,30 +3019,6 @@
         "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
       }
     ],
     "evoluzione": {
@@ -3615,30 +3091,6 @@
       {
         "id": "EP_S2_05_IL_SILENZIO",
         "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260319_fix_typescript_errors_unused_imports",
-        "title": "Il Sistema Respira da Solo",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260322_docs_ecosystem_manifest_documento_fon",
-        "title": "Il Sistema che si Ricorda di Se Stesso",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260325_feat_dashboard_v5_0_zustand_tanstac",
-        "title": "Il Sistema Che Si Guarda",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_20260527_auto_episodi_generati_da_state_json_202",
-        "title": "Il Sistema Che Si Ricorda di Sé",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -3727,30 +3179,6 @@
         "title": "AI News Watcher — restare sul pezzo senza chiavi",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_TIER",
-        "title": "Chi guardare più spesso — il tier a rotazione 48h",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "MOM_02_LA_MAPPA",
-        "title": "La Mappa",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -3815,30 +3243,6 @@
       {
         "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
         "title": "Il Cervello Ibrido",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato"
       }
@@ -3924,30 +3328,6 @@
         "title": "L'Esercito Silenzioso",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_AV_05_2",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_N2_13",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "MOM_02_LA_MAPPA",
-        "title": "La Mappa",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "MOM_04_IL_DOCUMENTO_MASTER",
-        "title": "Il Documento Master",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -4012,30 +3392,6 @@
       {
         "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
         "title": "Il Cervello Ibrido",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato"
       }
@@ -4112,30 +3468,6 @@
         "title": "Il Cervello Ibrido",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
-        "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato"
       }
     ],
     "evoluzione": {
@@ -4205,30 +3537,6 @@
         "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4296,30 +3604,6 @@
       {
         "id": "EP_AUTO_06",
         "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4395,30 +3679,6 @@
         "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4490,30 +3750,6 @@
       {
         "id": "EP_AUTO_06",
         "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4589,30 +3825,6 @@
         "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4684,30 +3896,6 @@
       {
         "id": "EP_AUTO_06",
         "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4783,30 +3971,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -4878,30 +4042,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -4977,30 +4117,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5072,30 +4188,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_10",
-        "title": "Dashboard v5.0 - Zustand + TanStack Query + naviga",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5171,30 +4263,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5266,30 +4334,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5365,30 +4409,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5460,30 +4480,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5559,30 +4555,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5654,30 +4626,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5753,30 +4701,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -5848,30 +4772,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -5947,30 +4847,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6042,30 +4918,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6141,30 +4993,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6236,30 +5064,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6335,30 +5139,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6430,30 +5210,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6529,30 +5285,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6624,30 +5356,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6723,30 +5431,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -6818,30 +5502,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -6917,30 +5577,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7012,30 +5648,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7111,30 +5723,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7206,30 +5794,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7305,30 +5869,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7400,30 +5940,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -7499,30 +6015,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -7594,30 +6086,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -8099,30 +6567,6 @@
         "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: audit, git, milestone"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, milestone"
       }
     ],
     "evoluzione": {
@@ -8204,30 +6648,6 @@
         "title": "Il Grafo Respira",
         "tipo": "tema",
         "motivo": "tema: dashboard, git, milestone"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, markdown"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, markdown"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, milestone"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: git, milestone, rag"
       }
     ],
     "evoluzione": {
@@ -8311,30 +6731,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: dashboard, flutter, git"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -8419,30 +6815,6 @@
         "title": "Il Grafo Respira",
         "tipo": "tema",
         "motivo": "tema: agenti, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -8525,30 +6897,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, markdown"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, markdown"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
       }
     ],
     "evoluzione": {
@@ -8622,30 +6970,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -8723,30 +7047,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -8820,30 +7120,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -8921,30 +7197,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -9018,30 +7270,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -9119,30 +7347,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -9216,30 +7420,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -9317,30 +7497,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -9414,30 +7570,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -9515,30 +7647,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -9612,30 +7720,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -9713,30 +7797,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -9810,30 +7870,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -9911,30 +7947,6 @@
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
       }
     ],
     "evoluzione": {
@@ -10008,30 +8020,6 @@
       {
         "id": "EP_AUTO_05",
         "title": "ECOSYSTEM OS Dashboard V1.0 - Celle Draggabili Liv",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_06",
-        "title": "ASSOLUTO V6 letto + BRAIN/KNOWLEDGE popolata (15 f",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_07",
-        "title": "BOM aggiornato: molle 4xGialle 90N + 2 piastre XY",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_08",
-        "title": "Content Engine v2 - 22 episodi + dual-pass haiku/s",
-        "tipo": "tema",
-        "motivo": "tema: auto_generato, milestone"
-      },
-      {
-        "id": "EP_AUTO_09",
-        "title": "Ottimizzazione Claude Code - .claudeignore, settin",
         "tipo": "tema",
         "motivo": "tema: auto_generato, milestone"
       }
@@ -10115,30 +8103,6 @@
         "title": "Il Grafo che Nessuno Vede",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, automazione-notturna"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, dashboard, git"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, milestone"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -10223,30 +8187,6 @@
         "title": "Il Dev Flutter Che Non Capiva Perché",
         "tipo": "tema",
         "motivo": "tema: dashboard, flutter, git"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, flutter, git"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: agenti, audit, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: agenti, dashboard, git"
       }
     ],
     "evoluzione": {
@@ -10332,30 +8272,6 @@
         "title": "Il Grafo che Nessuno Vede",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, git"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: audit, bugfix, git"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
       }
     ],
     "evoluzione": {
@@ -10436,30 +8352,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: audit, dashboard, git"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: audit, bugfix, git"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, milestone"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
       }
     ],
     "evoluzione": {
@@ -10537,30 +8429,6 @@
       {
         "id": "EP_20260605",
         "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, milestone"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260608",
-        "title": "Il Grafo che Nessuno Vede",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, milestone"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, milestone"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
         "tipo": "tema",
         "motivo": "tema: automazione-notturna, git, milestone"
       }
@@ -10649,30 +8517,6 @@
         "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: agenti, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260609",
-        "title": "Il Mondo di Nina",
-        "tipo": "tema",
-        "motivo": "tema: agenti, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260606_chiusura_lavoro_32_p1a_leva_locale",
-        "title": "La View Che Mentiva",
-        "tipo": "tema",
-        "motivo": "tema: audit, bugfix, dashboard"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, milestone"
       }
     ],
     "evoluzione": {
@@ -10757,30 +8601,6 @@
         "title": "Il Roster",
         "tipo": "tema",
         "motivo": "tema: agenti, audit, git"
-      },
-      {
-        "id": "EP_20260601",
-        "title": "La Dashboard Parla per Te",
-        "tipo": "tema",
-        "motivo": "tema: audit, git, milestone"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, markdown"
-      },
-      {
-        "id": "EP_20260603",
-        "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, markdown"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: automazione-notturna, git, markdown"
       }
     ],
     "evoluzione": {
@@ -10873,30 +8693,6 @@
         "title": "AI News Watcher — restare sul pezzo senza chiavi",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_TIER",
-        "title": "Chi guardare più spesso — il tier a rotazione 48h",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_M0_2",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
       }
     ],
     "evoluzione": {
@@ -10983,18 +8779,6 @@
         "title": "Quando la Mente Inventa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11091,30 +8875,6 @@
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: bugfix, dashboard, git"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: agenti, dashboard, git"
-      },
-      {
-        "id": "EP_20260606_31",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: agenti, dashboard, git"
-      },
-      {
-        "id": "EP_20260602",
-        "title": "Il Dev Flutter Che Non Capiva Perché",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, git, markdown"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: bugfix, git, markdown"
       }
     ],
     "evoluzione": {
@@ -11209,24 +8969,6 @@
         "title": "Il Direttore",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11347,30 +9089,6 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "evoluzione",
         "motivo": "evoluzione del concetto (giro 1↔3, approfondisce)"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -11507,30 +9225,6 @@
         "title": "La Biblioteca delle Fonti",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_20260607",
-        "title": "Il Grafo Respira",
-        "tipo": "tema",
-        "motivo": "tema: grafo, graphify, rag"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -11656,30 +9350,6 @@
         "title": "La Prima Automazione",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11797,24 +9467,6 @@
         "title": "Meno Parti",
         "tipo": "tema",
         "motivo": "tema: config-g, corpo-unico"
-      },
-      {
-        "id": "EP_AUTO_008",
-        "title": "Maggio 2026 — La Svolta Strutturale",
-        "tipo": "tema",
-        "motivo": "tema: config-g, corpo-unico"
-      },
-      {
-        "id": "EP_S0_03",
-        "title": "La Formula",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_PILOTA_00",
-        "title": "Il Mondo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -11900,30 +9552,6 @@
         "title": "Quando la Mente Inventa",
         "tipo": "tema",
         "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
-      },
-      {
-        "id": "EP_AV_00_2",
-        "title": "Il Segno che Resta",
-        "tipo": "tema",
-        "motivo": "tema: memoria, themis"
-      },
-      {
-        "id": "EP_N2_10",
-        "title": "La Traccia",
-        "tipo": "tema",
-        "motivo": "tema: memoria, themis"
       }
     ],
     "evoluzione": {
@@ -12031,30 +9659,6 @@
         "title": "La Mappa Viva",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
-        "title": "I nodi-dio — le stelle che tengono il grafo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
-        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -12136,30 +9740,6 @@
       {
         "id": "EP_T01",
         "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -12298,30 +9878,6 @@
         "title": "La Dashboard",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -12457,30 +10013,6 @@
       {
         "id": "EP_T01",
         "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -12622,30 +10154,6 @@
         "title": "La Dashboard",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -12780,18 +10288,6 @@
         "title": "Il carico va sullo schermo, non nella testa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_QUERY",
-        "title": "Interrogare la mappa, non i file — query, path, explain",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -12909,12 +10405,6 @@
       {
         "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
         "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -13037,18 +10527,6 @@
         "title": "Un sistema spiegato è un sistema cedibile",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -13160,30 +10638,6 @@
       {
         "id": "EP_T02",
         "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -13311,30 +10765,6 @@
       {
         "id": "EP_T02",
         "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -13465,30 +10895,6 @@
         "title": "NeuroMap",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -13615,30 +11021,6 @@
         "title": "Prima la Mano, Poi la Macchina",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_TIER",
-        "title": "Chi guardare più spesso — il tier a rotazione 48h",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
-        "tipo": "continuita",
-        "motivo": "continua da (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -13758,24 +11140,6 @@
       {
         "id": "EP_N2_05",
         "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_TIER",
-        "title": "Chi guardare più spesso — il tier a rotazione 48h",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
@@ -13899,30 +11263,6 @@
         "title": "Prima la Mano, Poi la Macchina",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_KEYLESS",
-        "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L2_CAMMINI",
-        "title": "I cammini — come si trova la strada tra due nodi",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -14036,30 +11376,6 @@
         "title": "La modularità — il voto che decide i quartieri",
         "tipo": "tema",
         "motivo": "tema: approfondimento, grafo, graphify"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -14197,30 +11513,6 @@
         "title": "I cammini — come si trova la strada tra due nodi",
         "tipo": "tema",
         "motivo": "tema: approfondimento, grafo, graphify"
-      },
-      {
-        "id": "EP_T05",
-        "title": "Il Sistema Pensa",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "prerequisito",
-        "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -14349,30 +11641,6 @@
         "title": "La Biblioteca delle Fonti",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "EP_T01",
-        "title": "La Dashboard",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_T02",
-        "title": "NeuroMap",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY",
-        "title": "Graphify — il repo che si disegna da solo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_AV_04",
-        "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -14496,30 +11764,6 @@
         "title": "L'Esercito",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_N2_12",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_N2_13",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: agenti, themis"
-      },
-      {
-        "id": "EP_N2_14",
-        "title": "Il Direttore",
-        "tipo": "tema",
-        "motivo": "tema: agenti, themis"
       }
     ],
     "evoluzione": {
@@ -14624,30 +11868,6 @@
       {
         "id": "EP_SEED_CONTROLLO",
         "title": "Il Centro di Controllo — un posto solo da cui governare",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_N2_14",
-        "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
-        "title": "Un sistema spiegato è un sistema cedibile",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
-        "title": "Il carico va sullo schermo, non nella testa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -14782,30 +12002,6 @@
         "title": "Prima la Mano, Poi la Macchina",
         "tipo": "tema",
         "motivo": "tema: forge, materia, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: forge, materia, themis"
-      },
-      {
-        "id": "EP_N2_10",
-        "title": "La Traccia",
-        "tipo": "tema",
-        "motivo": "tema: forge, materia, themis"
-      },
-      {
-        "id": "EP_N2_15",
-        "title": "Il Valore",
-        "tipo": "tema",
-        "motivo": "tema: materia, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "La Mente che Parla",
-        "tipo": "tema",
-        "motivo": "tema: materia, themis"
       }
     ],
     "evoluzione": {
@@ -15071,30 +12267,6 @@
         "title": "Prima la Mano, Poi la Macchina",
         "tipo": "tema",
         "motivo": "tema: forge, materia, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: forge, materia, themis"
-      },
-      {
-        "id": "EP_N2_10",
-        "title": "La Traccia",
-        "tipo": "tema",
-        "motivo": "tema: forge, materia, themis"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_00_2",
-        "title": "Il Segno che Resta",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
       }
     ],
     "evoluzione": {
@@ -15294,24 +12466,6 @@
         "title": "Mille Volte Uguale",
         "tipo": "tema",
         "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_AV_05_2",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
-      },
-      {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: entropia, themis"
       }
     ],
     "evoluzione": {
@@ -15419,30 +12573,6 @@
         "title": "La Mente che Parla",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_AV_03",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "tema",
-        "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_N2_09",
-        "title": "La Biblioteca delle Fonti",
-        "tipo": "tema",
-        "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_20260604_risolto_exit_255_subject_con_parent",
-        "title": "Il Bug che Chiudeva le Porte",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: rag, themis"
       }
     ],
     "evoluzione": {
@@ -15551,30 +12681,6 @@
         "title": "La Biblioteca delle Fonti",
         "tipo": "prerequisito",
         "motivo": "posa la Pietra ⟡4 che questo richiama"
-      },
-      {
-        "id": "MOM_03_L_ESERCITO",
-        "title": "L'Esercito",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_N2_12",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_20260605",
-        "title": "Il Teatro Finisce Qui",
-        "tipo": "tema",
-        "motivo": "tema: agenti, themis, watchdog"
-      },
-      {
-        "id": "EP_20260606",
-        "title": "Il Roster",
-        "tipo": "tema",
-        "motivo": "tema: agenti, watchdog"
       }
     ],
     "evoluzione": {
@@ -15679,30 +12785,6 @@
         "title": "La Mappa Viva",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis, viaggio"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_10",
-        "title": "La Traccia",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_15",
-        "title": "Il Valore",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -15787,30 +12869,6 @@
         "title": "La Traccia",
         "tipo": "tema",
         "motivo": "tema: forge, materia, nina-v2"
-      },
-      {
-        "id": "EP_FILONE_00",
-        "title": "La Materia — il telaio, la scelta, il controllo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_N2_15",
-        "title": "Il Valore",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "La Mente che Parla",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -15895,30 +12953,6 @@
       {
         "id": "EP_AV_04",
         "title": "La Grande Mappa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
-        "title": "I nodi-dio — le stelle che tengono il grafo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_MENTE",
-        "title": "Perché MENTE si estrae a mano — l'estrattore ibrido",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
@@ -16007,30 +13041,6 @@
         "title": "La Traccia",
         "tipo": "tema",
         "motivo": "tema: forge, materia, nina-v2"
-      },
-      {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER",
-        "title": "AI News Watcher — restare sul pezzo senza chiavi",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -16116,30 +13126,6 @@
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_AV_M0",
-        "title": "La Materia",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
-      },
-      {
-        "id": "EP_N2_15",
-        "title": "Il Valore",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "La Mente che Parla",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -16272,30 +13258,6 @@
         "title": "La Traccia",
         "tipo": "tema",
         "motivo": "tema: forge, materia, nina-v2"
-      },
-      {
-        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
-        "title": "La Prima Automazione",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_AV_01",
-        "title": "L'Incantesimo che si Ripete",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER",
-        "title": "AI News Watcher — restare sul pezzo senza chiavi",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_GATE",
-        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
     ],
     "evoluzione": {
@@ -16383,30 +13345,6 @@
         "title": "Mille Volte Uguale",
         "tipo": "tema",
         "motivo": "tema: forge, materia, nina-v2"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: forge, materia, nina-v2"
-      },
-      {
-        "id": "EP_AV_00",
-        "title": "La Bambina e la Giuntura",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
-      },
-      {
-        "id": "EP_S0_00",
-        "title": "Il Socio",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
-      },
-      {
-        "id": "EP_AV_M0_2",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: forge, materia, themis"
       }
     ],
     "evoluzione": {
@@ -16490,30 +13428,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_10",
-        "title": "La Traccia",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "La Mente che Parla",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "Quando la Mente Inventa",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_09",
-        "title": "La Biblioteca delle Fonti",
         "tipo": "tema",
         "motivo": "tema: materia, nina-v2, themis"
       }
@@ -16601,30 +13515,6 @@
         "title": "Quando la Mente Inventa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -16707,30 +13597,6 @@
       {
         "id": "EP_N2_01",
         "title": "La Bambina che Chiedeva Perché",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis, verita"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
         "tipo": "tema",
         "motivo": "tema: materia, nina-v2, themis"
       }
@@ -16819,30 +13685,6 @@
         "title": "SINAPSI",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
-      },
-      {
-        "id": "EP_AV_02_2",
-        "title": "Quando la Mente Inventa",
-        "tipo": "tema",
-        "motivo": "tema: fonti, rag, themis"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -16950,30 +13792,6 @@
         "title": "La Grande Mappa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa Viva",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_RETE",
-        "title": "La RETE — vedere il sistema in 3D",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_COMMUNITY",
-        "title": "I 696 quartieri — la community detection",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
-      },
-      {
-        "id": "EP_SEED_GRAPHIFY_L1_GODNODE",
-        "title": "I nodi-dio — le stelle che tengono il grafo",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡5 (LA GRANDE MAPPA)"
       }
     ],
     "evoluzione": {
@@ -17060,30 +13878,6 @@
         "title": "Il Direttore",
         "tipo": "tema",
         "motivo": "tema: agenti, materia, nina-v2"
-      },
-      {
-        "id": "MOM_03_L_ESERCITO",
-        "title": "L'Esercito",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_AV_05_2",
-        "title": "Il Soldato Caduto in Silenzio",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -17170,30 +13964,6 @@
         "title": "L'Esercito",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_AV_05",
-        "title": "L'Esercito Silenzioso",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
-      },
-      {
-        "id": "EP_N2_01",
-        "title": "La Bambina che Chiedeva Perché",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Prima la Mano, Poi la Macchina",
-        "tipo": "tema",
-        "motivo": "tema: materia, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -17281,30 +14051,6 @@
         "title": "Il Soldato Caduto in Silenzio",
         "tipo": "tema",
         "motivo": "tema: agenti, materia, nina-v2"
-      },
-      {
-        "id": "EP_S2_02_L_ORCHESTRATORE",
-        "title": "L'Orchestratore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO",
-        "title": "Il Centro di Controllo — un posto solo da cui governare",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_AV_06",
-        "title": "Il Direttore",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_S2_03_LA_TELA",
-        "title": "La Tela",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -17338,6 +14084,12 @@
         "title": "TITANIUM OS — Episodio S2E11",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_37",
+        "title": "\"La Pelle del Cavallo\"",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -17345,6 +14097,10 @@
       "precede": {
         "id": "EP_20260615",
         "title": "TITANIUM OS — Episodio S2E11"
+      },
+      "segue": {
+        "id": "EP_37",
+        "title": "\"La Pelle del Cavallo\""
       }
     }
   },
@@ -17368,6 +14124,31 @@
       "asse_ruolo": {
         "tipo": "origine"
       }
+    },
+    "collegati": [
+      {
+        "id": "EP_PILOTA_00",
+        "title": "Il Mondo",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_S0_05",
+        "title": "IL CONSIGLIO",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_PILOTA_00",
+        "title": "Il Mondo"
+      },
+      "segue": {
+        "id": "EP_S0_05",
+        "title": "IL CONSIGLIO"
+      }
     }
   },
   {
@@ -17389,6 +14170,31 @@
     "narrativa": {
       "asse_ruolo": {
         "tipo": "origine"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_S0_04",
+        "title": "IL LEGO D'ACCIAIO",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_S0_06",
+        "title": "VULCAN, LA PELLE",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S0_04",
+        "title": "IL LEGO D'ACCIAIO"
+      },
+      "segue": {
+        "id": "EP_S0_06",
+        "title": "VULCAN, LA PELLE"
       }
     }
   },
@@ -17412,6 +14218,31 @@
       "asse_ruolo": {
         "tipo": "origine"
       }
+    },
+    "collegati": [
+      {
+        "id": "EP_S0_05",
+        "title": "IL CONSIGLIO",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_S0_07",
+        "title": "IL CAVALLO DI TROIA",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S0_05",
+        "title": "IL CONSIGLIO"
+      },
+      "segue": {
+        "id": "EP_S0_07",
+        "title": "IL CAVALLO DI TROIA"
+      }
     }
   },
   {
@@ -17433,6 +14264,199 @@
     "narrativa": {
       "asse_ruolo": {
         "tipo": "origine"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_S0_06",
+        "title": "VULCAN, LA PELLE",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia",
+      "precede": {
+        "id": "EP_S0_06",
+        "title": "VULCAN, LA PELLE"
+      }
+    }
+  },
+  {
+    "id": "EP_37",
+    "title": "\"La Pelle del Cavallo\"",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-17",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "EP_37 — \"La Pelle del Cavallo\" TITANIUM_OS · Stagione 1 · Episodio 37 Data: 17 giugno 2026 · Sessione 37 COLD OPEN C'è un momento preciso in cui smetti di spiegare un progetto e inizi a venderlo. Non ",
+    "content": "# EP_37 — \"La Pelle del Cavallo\"\n\n*TITANIUM_OS · Stagione 1 · Episodio 37*\n*Data: 17 giugno 2026 · Sessione #37*\n\n---\n\n## COLD OPEN\n\nC'è un momento preciso in cui smetti di spiegare un progetto e inizi a venderlo.\n\nNon è un momento glorioso. È quasi imbarazzante — ti accorgi che per mesi hai parlato di \"pilastri\" e \"sistemi\" e \"architetture\" e la gente annuiva, e tu eri convinto che capissero, e invece capivano solo che stavi costruendo qualcosa di complicato. Che probabilmente non li riguardava.\n\nMatteo è seduto in taverna. Fuori è metà giugno, fa caldo. Il V32 è al 65%, le colonne Z attendono i rinforzi. Sullo schermo ci sono i vecchi pilastri del pitch — quei quattro blocchi che sembravano così chiari sei mesi fa. Li legge. Li rilegge.\n\n*Questi non spiegano niente.*\n\n---\n\n## ATTO I — I Pilastri Obsoleti\n\nIl problema con i pilastri è che sono veri.\n\nSono tecnicamente accurati, logicamente coerenti, strutturalmente solidi. Descrivono esattamente quello che Matteo sta costruendo: V32, MIMS, GENESIS, EVA. Quattro sistemi. Quattro nomi. Quattro frecce in una slide che puntano verso un centro che si chiama \"ecosistema integrato\" o qualcosa del genere.\n\nIl problema è che un pilastro non racconta perché qualcuno dovrebbe importarsene.\n\nQuesta è la differenza che Matteo formalizza oggi: un pilastro è un'architettura. Un pitch è una storia con un problema dentro. E il problema deve essere il problema di chi ascolta, non il problema di chi costruisce.\n\nQuindi: basta pilastri trasversali. Da oggi ogni progetto ha il suo pitch. Autonomo. Specifico. Con il problema reale davanti, la soluzione nel mezzo, e la prova alla fine.\n\nMIMS ottiene il suo. V32 ottiene il suo. GENESIS ottiene il suo. EVA ottiene il suo.\n\nNon perché siano separati — non lo sono, mai lo saranno — ma perché ogni interlocutore diverso ha un problema diverso, e la porta d'ingresso deve essere quella giusta.\n\nMatteo chiama questo \"spiegazione vera\". La distinzione è fondamentale: non è semplificazione. Non è divulgazione. È *precisione narrativa* — tagliare tutto quello che è vero ma irrilevante, tenere solo quello che è vero e necessario.\n\n---\n\n## ATTO II — La Pelle e il Cavallo di Troia\n\nPoi c'è MIMS.\n\nMIMS è il progetto che più di tutti ha bisogno di un pitch preciso, perché MIMS è il progetto che più di tutti sembra semplice e non lo è.\n\nIn superficie: tiles da 190x190 mm, PA-GF30, connettori fisici modulari. Un sistema di piastrelle che si agganciano, si configurano, si portano. Sembra prodotto. Sembra retail. Sembra qualcosa che potresti trovare su un catalogo.\n\nOggi Matteo capitolizza — mette per iscritto, con dati reali, non con dati obsoleti — cosa è MIMS davvero.\n\nLa pelle.\n\nMIMS è la pelle del sistema. Non il cervello (GENESIS), non il muscolo (V32), non la voce (EVA). È il punto di contatto fisico tra l'ecosistema e il mondo. È ciò che qualcuno può toccare, comprare, portare via, e che porta dentro di sé — incorporata, invisibile — la logica dell'intero sistema.\n\nE poi c'è il secondo livello. Quello che Matteo chiama il Cavallo di Troia.\n\nUn tile MIMS da solo vale quello che vale: un connettore modulare ben fatto, PA-GF30, dimensioni precise. Ma un tile MIMS installato in un ambiente porta con sé un protocollo. Una capacità di aggancio. Una compatibilità con tutto quello che verrà dopo. È un punto di ingresso fisico nel sistema — e chi lo acquista, senza saperlo necessariamente, sta aprendo una porta.\n\nNon è manipolazione. È design sistemico: costruire prodotti che creano contesto per i prodotti successivi. Ogni tile venduto è un nodo nella rete. La rete non si vende — si abita.\n\nQuesto è il pitch di MIMS. Non \"un sistema di connettori modulari\". Ma: *compri la pelle, entra nel sistema*.\n\n---\n\n## ATTO III — Il Passato che lo Story Agent Non Può Vedere\n\nC'è una cosa che i commit git non sanno fare.\n\nLo story_agent di TITANIUM_OS è bravo — recupera le sessioni, legge i delta, ricostruisce le decisioni. Ma c'è un confine preciso alla sua memoria: febbraio 2026. Prima di quel punto, ci sono i notebook fondativi. I manifesti NotebookLM. Le sessioni in cui tutto era ancora ipotesi, quando niente aveva ancora un nome e i nomi che aveva erano provvisori.\n\nOggi Matteo scrive due episodi-origine da quei manifesti.\n\nNon è nostalgia. È infrastruttura.\n\nPerché il sistema cognitivo — GENESIS, il RAG, Claude — non può essere intelligente sul presente se non capisce la genesi. Ogni decisione attuale ha una radice. La scelta del PA-GF30 invece di un altro materiale. La misura 190x190 e non 200x200. Il motivo per cui il V32 è a corpo unico, e perché quella scelta vale 178 kg di Epoxy Granite in una taverna da 12 m².\n\nQuelle radici vivono nei manifesti di febbraio. E fino a oggi erano fuori dal grafo.\n\nMatteo li capitolizza. Li trasforma in episodi con struttura canonica — cold open, tre atti, fatti per il RAG. Li inietta nel sistema. Da domani Claude sa dove tutto è cominciato, non solo dove tutto è adesso.\n\nLa sessione #37 è questo: chiudere il cerchio tra il passato non indicizzato e il presente in costruzione. Tra la genesi e il 65%.\n\n153 episodi. Build TypeScript verde. 14 commit isolati. La bibbia 0-ter che riconosce che Nina ha il suo OS — non è un personaggio secondario del sistema di Matteo, è un sistema parallelo con la sua logica interna.\n\nSono le cose che il commit messaggio non dice ma che i file dentro di sé portano.\n\n---\n\n## CHIUSURA\n\nUn pitch è un atto di onestà brutale.\n\nDevi smettere di innamorarti della complessità del tuo sistema e chiederti: *qual è il problema di chi mi ascolta?* Non il tuo problema. Il suo.\n\nMatteo ci ha messo mesi ad arrivare qui. Non perché fosse lento — ma perché bisogna prima costruire abbastanza per capire cosa stai costruendo davvero. I pilastri erano necessari per lui. Servivano a tenere separati i pezzi mentre li assemblava. Ma non servono a chi guarda dall'esterno.\n\nIl Cavallo di Troia di MIMS non è un'idea nuova di oggi. Era lì dall'inizio, nei manifesti di febbraio. Solo che febbraio era fuori dal grafo.\n\nAdesso non lo è più.\n\n---\n\n## reel_hook\n\nUn tile da 190x190 mm, PA-GF30.\nPuoi comprarlo, portarlo via, toccarlo.\nDentro c'è un protocollo che non vedi, una compatibilità con tutto quello che viene dopo.\nQuesto si chiama Cavallo di Troia — o si chiama design sistemico.\nDipende da chi lo guarda.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Eliminati i pilastri trasversali dal pitch generale; ogni progetto (V32, MIMS, GENESIS, EVA) ha ora un pitch autonomo con problema specifico per interlocutore specifico.\n- **LOGICA:** I pilastri descrivono l'architettura ma non il problema dell'interlocutore; la precisione narrativa richiede che la porta d'ingresso sia quella del problema di chi ascolta, non quella del costruttore.\n- **DECISIONE:** MIMS capitalizzato come \"la pelle + il Cavallo di Troia\" — tile 190x190 PA-GF30 come punto di contatto fisico che porta dentro il protocollo sistemico invisibile.\n- **LOGICA:** Un tile MIMS venduto crea compatibilità e contesto per tutti i prodotti successivi; chi lo acquista apre un nodo nella rete senza necessariamente saperlo — design sistemico deliberato, non marketing.\n- **DECISIONE:** Episodi-origine scritti dai manifesti NotebookLM di febbraio 2026 e iniettati nel RAG con struttura canonica; lo story_agent non può accedere al pre-git.\n- **OBIETTIVO:** GENESIS ora ha memoria della genesi — ogni decisione attuale (PA-GF30, 190x190, corpo unico V32) è tracciabile alla sua radice; sblocca coerenza narrativa e tecnica per le sessioni future.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | EP_37 |\n| **Data** | 2026-06-17 |\n| **Sessione** | #37 |\n| **Tag** | `pitch` `MIMS` `GENESIS` `origini` `story_agent` `RAG` |\n| **Progetti attivi** | V32 65% · GENESIS 70% |\n| **Milestone** | Rebuild storie 2 assi · Arco Nina 8/8 · Bibbia 0-ter |\n| **Commit principali** | `feat(pitch)` · `content(origini)×2` · `auto:story_agent` |\n| **Stagione** | S1 |\n| **Status build** | TS verde · 153 ep · ~14 commit isolati |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260616",
+        "title": "TITANIUM OS — Episodio S2E14",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260617",
+        "title": "TITANIUM OS — Episodio 37",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260616",
+        "title": "TITANIUM OS — Episodio S2E14"
+      },
+      "segue": {
+        "id": "EP_20260617",
+        "title": "TITANIUM OS — Episodio 37"
+      }
+    }
+  },
+  {
+    "id": "EP_20260617",
+    "title": "TITANIUM OS — Episodio 37",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-17",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS — Episodio 37 \"La Mappa che Cammina\" Data: 17 giugno 2026 — Sessione 37 COLD OPEN Ore 23:14. Il dev server gira su localhost:5174 . Matteo apre il browser. La mappa compare — non tutta in ",
+    "content": "# TITANIUM_OS — Episodio 37\n## \"La Mappa che Cammina\"\n\n*Data: 17 giugno 2026 — Sessione #37*\n\n---\n\n## COLD OPEN\n\nOre 23:14. Il dev server gira su `localhost:5174`.\n\nMatteo apre il browser. La mappa compare — non tutta in una volta, ma *in cascata*: prima il bordo, poi le regioni, poi i nodi interni, uno dopo l'altro, come se qualcuno stesse disegnando la planimetria di un posto che esiste davvero. Hover su una regione: il colore si sposta leggermente, come se la mappa sapesse che c'è una mano vicina.\n\nNon è un portfolio. Non è un CV.\n\nÈ un sistema operativo narrativo che ha imparato a respirare.\n\n---\n\n## ATTO I — Il Red-Team alle 3 di mattina\n\nPrima di poter costruire, bisogna sapere cosa si rompe.\n\nOggi la sessione inizia con un attacco. Non metaforico: Matteo chiama il commit *\"critiche(attacco-opus 17/06)\"* — red-team sistematico su tutti i fronti. Ogni sezione della dashboard viene letta come se qualcuno stesse cercando il punto di cedimento. Come fa con le saldature TIG sul titanio: non si guarda il cordone bello, si guarda dove potrebbe partire la cricca.\n\nIl risultato: zero errori visivi nel dev server. Ma soprattutto, qualcosa di più importante.\n\nLa sezione *Critiche* aveva uno scopo dichiarato — e non lo stava rispettando. Matteo lo annota così: *\"fare quello per cui è stata [creata]\"*. Non una riformulazione estetica. Un recupero di funzione. Come quando una pressa torna al collaudo originale dopo una deriva produttiva di sei mesi.\n\nIl problema non era il codice. Era che la sezione aveva smesso di fare la sua parte nel sistema.\n\nQuesto è il tipo di diagnosi che richiede di uscire dal terminale e guardare il progetto con gli occhi di qualcuno che lo usa per la prima volta — o con gli occhi di qualcuno che vuole dimostrare che non funziona.\n\nMatteo sa fare entrambe le cose. È lo stesso meccanismo del Quality Control in officina: il pezzo deve passare anche quando sei tu a volerlo fare fuori.\n\n---\n\n## ATTO II — Cosa si accanisce, cosa si accontona\n\nNel mezzo della sessione, una decisione che sembra piccola ma non lo è.\n\nRAG-chat e agenti: fuori dalla sidebar.\n\nIl commit dice tutto: *\"Matteo: non uso la chat RAG né gli agenti → accantonati dalla sidebar (route...\"*. Non eliminati. Accantonati. La distinzione è tecnica e mentale insieme.\n\nIn un'altra fase del progetto, questa sarebbe stata una resa. Oggi è il contrario.\n\nGENESIS è al 70%. V32 è al 65%. Il target del capannone è il 15 luglio 2030 — quattro anni, ma il calendario non si costruisce con le feature che *potrebbero* servire. Si costruisce con quelle che *servono adesso*. EVA è pending ma reale — il centro estetico di Maria non aspetta che il RAG-chat diventi elegante. Aspetta che il sistema funzioni.\n\nAccantonare qualcosa che non usi non è un fallimento di design. È onestà di sistema.\n\nLa sidebar ora è pulita. Mappa di gioco, CV unito, pitch, critiche. Quattro voci. Tutte attive. Tutte verificate dal vivo.\n\nC'è qualcosa di profondamente artigianale in questa scelta: la stessa logica con cui si decide quali attrezzature montare sul banco di lavoro nel locale da 12 m². Non ci sta tutto. E non deve starci tutto.\n\n---\n\n## ATTO III — Nina cammina sulle sue regioni\n\nMa il cuore della sessione #37 è la mappa.\n\nLa Mappa di Nina — percorribile, data-driven, costruita sull'asse `asse_nina` — copre le Regioni da 0 a 7, più il verticale Finanza. Otto regioni. Otto episodi dell'arco completo: da `EP_AV_M0 Materia` a `EP_AV_06 Direttore`.\n\nIl commit `polish(mappa-gioco)` descrive due cose: *layout pieno* e *micro-interazioni leggere*. L'ingresso a cascata — ogni elemento che arriva con un ritardo minimo, nell'ordine giusto. L'hover che risponde.\n\nQuesti non sono ornamenti.\n\nSono il modo in cui un sistema comunica di essere vivo.\n\nMatteo lo sa perché costruisce macchine da 178 kg che devono lavorare con precisione IT6-IT7. Sa la differenza tra un sistema che funziona e un sistema che *dà feedback* di funzionare. Il CNC non ti dice solo che ha finito il ciclo — ti dice dove si trova, a quale velocità, con quale errore di posizionamento. La mappa fa lo stesso: ti dice dove sei nell'arco di Nina, su quale regione, a quale livello della gerarchia `parent/level/children`.\n\n153 episodi nel sistema. Build TypeScript verde.\n\nIl numero conta. Non perché sia grande — conta perché ogni episodio è un nodo nella struttura, e tutti e 153 sono stati verificati contro lo schema. Nessuna eccezione silenziosa. Nessun nodo orfano.\n\nÈ quello che si intende quando si dice che una struttura è *rebuild-safe*: non che non si rompa mai, ma che quando si tocca qualcosa si sa esattamente cosa si propaga e dove.\n\n---\n\n## CHIUSURA\n\nAlle 23 passate, con il night audit automatico già partito in background e lo story agent che genera i prossimi episodi da solo, Matteo guarda la mappa sul browser.\n\nNina cammina. Ogni regione ha il suo colore, il suo nome, il suo posto nell'arco. L'ingresso a cascata fa il suo lavoro in silenzio — nessuna animazione aggressiva, nessun effetto che distrae. Solo il sistema che si rivela nell'ordine in cui è stato costruito.\n\nC'è qualcosa di strano nel costruire un sistema narrativo mentre costruisci fisicamente una macchina CNC in cantina. Uno è atoms, l'altro è bits. Ma la logica è identica: corpi unici, strutture rebuild-safe, nessun nodo orfano, feedback che comunica stato.\n\nIl capannone è il 15 luglio 2030.\n\nPer arrivarci bisogna che ogni pezzo del sistema sappia dove si trova.\n\nOggi, la mappa lo sa.\n\n---\n\n## reel_hook\n\n153 episodi nel sistema. Build TypeScript verde. Oggi ho accantonato RAG-chat e agenti — non perché non funzionino, ma perché non li uso. La sidebar ora ha quattro voci. Tutte attive. La mappa di Nina entra in cascata e risponde all'hover. Qualcuno mi spieghi perché un sistema da 178 kg in cantina e uno narrativo su `localhost:5174` usano esattamente la stessa logica di collaudo.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** RAG-chat e agenti rimossi dalla sidebar della dashboard GENESIS (route accantonata, non eliminata).\n- **LOGICA:** Matteo non utilizza attivamente queste feature nel workflow reale → presenza in UI genera rumore senza valore operativo; EVA è il prossimo deployment reale.\n- **DECISIONE:** Mappa di Nina implementata come sistema data-driven sull'asse `asse_nina`, Regioni 0-7 + verticale Finanza, navigabile nel dev server Vite `localhost:5174`.\n- **LOGICA:** L'arco NINA COMPLETO 8/8 (`EP_AV_M0` → `EP_AV_06 Direttore`) richiede struttura percorribile, non solo enumerazione — gerarchia `parent/level/children` garantisce rebuild-safe su 153 episodi verificati.\n- **DECISIONE:** Red-team sistematico (critiche(attacco-opus 17/06)) su tutta la dashboard prima del polish finale; sezione Critiche riportata alla sua funzione originale.\n- **OBIETTIVO:** Dashboard pronta per il prossimo sprint EVA (WhatsApp automation Maria) + sessione #38 su MIMS o V32 (65% → prossimo milestone fisico).\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S1E37 |\n| **Data** | 2026-06-17 |\n| **Progetto primario** | GENESIS / Dashboard |\n| **Tag** | `mappa-nina` `dashboard` `red-team` `UI` `data-driven` `rebuild-safe` |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Commit count sessione** | ~7 |\n| **Build** | TS verde, 153 ep |\n| **Prossimo step** | EVA deployment reale / sessione #38 |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_37",
+        "title": "\"La Pelle del Cavallo\"",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260618",
+        "title": "TITANIUM OS — Episodio S1.38",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_37",
+        "title": "\"La Pelle del Cavallo\""
+      },
+      "segue": {
+        "id": "EP_20260618",
+        "title": "TITANIUM OS — Episodio S1.38"
+      }
+    }
+  },
+  {
+    "id": "EP_20260618",
+    "title": "TITANIUM OS — Episodio S1.38",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-18",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio S1.38 \"INTEGRA, NON RIFARE\" COLD OPEN Ore 23:47. Il terminale è aperto da undici ore. Sullo schermo: un diff di 847 righe. Non codice nuovo — codice recuperato . Matteo fissa il",
+    "content": "# TITANIUM_OS — Episodio S1.38\n## \"INTEGRA, NON RIFARE\"\n\n---\n\n## COLD OPEN\n\nOre 23:47. Il terminale è aperto da undici ore.\n\nSullo schermo: un diff di 847 righe. Non codice nuovo — codice *recuperato*. Matteo fissa il `CanvasLayout` svuotato come si guarda un pezzo di titanio che qualcuno ha levigato troppo. Non è rotto. È solo sparita la carne.\n\nLa taverna è silenziosa. Maria dorme. La V32 occupa il suo angolo buio, 178 kg fermi, al 65%.\n\nLui scrive nel commit: *\"INTEGRA, non sostituisce.\"*\n\nÈ una regola che vale per la dashboard. Vale anche per tutto il resto.\n\n---\n\n## ATTO I — IL DEBITO\n\nLa sessione #38 era partita con un inventario pulito: NotebookLM collegato a Claude Code, undici notebook, 93 fonti. Un pitch per ogni progetto. Il CV unito. La mappa del gioco. I pilastri spiegati.\n\nSulla carta: completo.\n\nNella realtà: i pitch non si vedevano. L'API era spenta. Il `CanvasLayout` dei pilastri era stato *riscritto* invece di essere esteso, e nel processo aveva perso tutto quello che lo rendeva ricco — gli esempi, le animazioni, i dettagli che trasformavano un elenco in qualcosa che si poteva capire al volo. Il calendario nella sidebar non esisteva. Le animazioni erano solo CSS — niente stato, niente logica.\n\nQuesto è il tipo di debito che non si vede subito. Non è un errore di compilazione. È un errore di *giudizio* accumulato su più decisioni piccole: riscrivi invece di estendere, semplifichi invece di integrare, ottimizzi la forma e perdi il contenuto.\n\nMatteo lo chiama per nome nel file `DA_FARE_FATTO.md`:\n\n> *\"Blocco Sessione #38: metodo INTEGRA non rifare, usa gli agenti.\"*\n\nNon c'è rabbia nel testo. Solo la precisione di chi ha già sbagliato abbastanza volte da sapere come documentare il momento in cui si è invertita la rotta.\n\nIl primo fix è tecnico e imbarazzante: `/api/file` risolveva i path relativi a partire dalla cartella `DASHBOARD`, non dalla `ROOT` del progetto. Una riga. Ogni pitch era irraggiungibile per una riga sbagliata nel resolver dei path. Il debug aveva preso più tempo del fix — come sempre, quando il bug non è dove si guarda.\n\nLa denylist per i segreti: aggiunta. I file sensibili rimangono fuori dalla superficie esposta. Questo non è paranoico — è architettura.\n\n---\n\n## ATTO II — IL METODO\n\nC'è una distinzione che Matteo sta imparando a fare, e che GENESIS dovrebbe sapere:\n\n**Rifare è veloce nel breve. Integrare è corretto nel lungo.**\n\nQuando Claude (qualunque istanza, qualunque sessione) tocca qualcosa che funziona e lo riscrive perché \"è più pulito così\", sta ottimizzando per la sessione corrente. Sta perdendo il contesto che ha prodotto quella versione — i feedback, i test, le decisioni che non stanno nel codice ma stavano nella testa di Matteo mentre lo costruiva.\n\nLa reintegrazione del `CanvasLayout` ricco non è stata una correzione. È stata una *riconciliazione*: prendere la struttura nuova e riportare dentro la carne vecchia. Le animazioni motion aggiunte sopra, non invece. Il testo di spiegazione dei pilastri recuperato dal backup, non riscritto.\n\nRisultato: la room dei pilastri ora ha sia la struttura ripulita che i contenuti originali. Le animazioni reagiscono allo scroll. Non è perfetto — Matteo lo sa — ma è *suo*, con la sua storia dentro.\n\nIl calendario è più semplice nella forma, più utile nella funzione. Una voce nella sidebar. Un log giorno per giorno. Non una feature di prodotto — uno specchio del lavoro fatto. Quando apri la dashboard alle 23 e guardi il 18 giugno, vedi esattamente cosa è successo in quella giornata. Non un riassunto generato. Una traccia.\n\nQuesto è il punto dove GENESIS smette di essere un tool e comincia a essere una *memoria*. Non è ancora arrivato del tutto, ma la direzione è quella.\n\nLa `bussola #38` è stata sincronizzata col debito reale — non col debito immaginato, quello che uno vorrebbe avere. Il `STATE` allineato ai fix significa che il sistema adesso sa dove si trova davvero, non dove pensava di essere. È una distinzione che conta.\n\n---\n\n## ATTO III — COSA RIMANE\n\nOre 02:11. L'inventario notturno gira automatico. La cartella clinica del 18 giugno viene scritta dallo `story_agent`. Matteo non la leggerà stanotte.\n\nV32: 65%. Non è cambiata in questa sessione. Non era il focus.\n\nGENESIS: 70%. È cambiata — non nei numeri, ma nella coerenza. Il debito documentato è debito che non si dimentica. La denylist è in produzione. I pitch si vedono.\n\nC'è ancora la questione delle animazioni. CSS non è abbastanza — lo sanno entrambi. Il prossimo passo sono animazioni con stato, con logica, con feedback reale dall'interazione. Non è una questione estetica. È la differenza tra una dashboard che sembra viva e una che sembra un poster.\n\nC'è ancora la questione degli agenti — \"usa gli agenti\" è scritto nella regola del metodo, ma usarli davvero significa costruire i trigger giusti, i contesti giusti, la fiducia giusta nel fatto che l'output sia integrabile e non da rifare.\n\nC'è ancora la questione del capannone: 15 luglio 2030. 1490 giorni circa. Non è un numero astratto — è il vincolo che dà forma a tutto il resto.\n\nQuesta sessione non ha spostato la V32 di un millimetro. Ha sistemato la memoria del sistema che la deve accompagnare. Non è un lavoro eroico. È manutenzione. La manutenzione che non si fa porta sempre al momento in cui si deve ricominciare da capo — e ricominciare da capo è costoso, sempre.\n\nLa taverna è ancora silenziosa. Il terminale è ancora aperto.\n\nIl diff è chiuso.\n\n---\n\n## CHIUSURA\n\nC'è qualcosa di specifico nel tipo di stanchezza che si accumula quando si lavora su sistemi complessi per molte ore: non è la stanchezza di chi ha faticato. È la stanchezza di chi ha tenuto in testa troppe cose contemporaneamente e alla fine ha deciso dove metterle.\n\nMatteo ha imparato — o sta imparando, che è diverso — che la qualità di un sistema non si misura quando funziona. Si misura quando qualcosa smette di funzionare e riesci a capire *perché* senza buttare via tutto e ricominciare.\n\n\"INTEGRA, non rifare\" non è un principio elegante. È il risultato di aver rifatto le cose troppe volte e aver pagato il prezzo ogni volta.\n\nIl debito di questa sessione è documentato. Non è sparito — non sparisce mai. Ma adesso ha un nome, una data, e un metodo per smontarlo pezzo per pezzo.\n\nÈ abbastanza per stanotte.\n\n---\n\n## reel_hook\n\nIl 18 giugno 2026 ho passato undici ore a recuperare contenuti che avevo già scritto. Non perché fossero sbagliati — perché qualcuno (io, con Claude) li aveva riscritti \"meglio\". Una riga sbagliata nel resolver dei path teneva i pitch invisibili da giorni. Il fix: una riga. La lezione: INTEGRA, non rifare. La domanda rimasta aperta: quando smetti di correggere il sistema e cominci a fidarti di lui?\n\n---\n\n## FATTI (per il RAG)\n\n- DECISIONE: Adottato il metodo \"INTEGRA non rifare\" come regola operativa dalla sessione #38 — documentato in `DA_FARE_FATTO.md` e nella `bussola #38`.\n- LOGICA: Il `CanvasLayout` dei pilastri era stato riscritto perdendo i contenuti originali (esempi, animazioni, testo ricco); la riscrittura aveva ottimizzato la struttura eliminando la sostanza accumulata nelle versioni precedenti.\n- DECISIONE: Fix `/api/file` — path relativi ora risolti dalla ROOT del progetto, non dalla cartella `DASHBOARD`; aggiunta denylist per file sensibili su `/api/file`.\n- LOGICA: I pitch erano irraggiungibili lato frontend per un singolo errore di base path nel resolver; la denylist è architettura di sicurezza, non paranoia.\n- DECISIONE: Calendario sidebar implementato come diario giorno per giorno — log delle attività reali, non riassunto generato.\n- OBIETTIVO: Il calendario sblocca la funzione di memoria operativa di GENESIS — prossimo passo misurabile: animazioni con stato e logica (non solo CSS) per la dashboard pilastri; V32 al 65%, GENESIS al 70%.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S1.38 |\n| **Data** | 2026-06-18 |\n| **Titolo** | Integra, Non Rifare |\n| **Progetto primario** | GENESIS |\n| **Progetto secondario** | — |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Sessione** | #38 |\n| **Tag narrativo** | debito tecnico, metodo, memoria di sistema |\n| **Mood** | stanchezza lucida |\n| **Co-author** | Claude Opus 4.8 |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260617",
+        "title": "TITANIUM OS — Episodio 37",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260620",
+        "title": "TITANIUM OS — Episodio 38",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260617",
+        "title": "TITANIUM OS — Episodio 37"
+      },
+      "segue": {
+        "id": "EP_20260620",
+        "title": "TITANIUM OS — Episodio 38"
+      }
+    }
+  },
+  {
+    "id": "EP_20260620",
+    "title": "TITANIUM OS — Episodio 38",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-20",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS — Episodio 38 \"Il Debito che Cammina\" TITANIUM_OS | S1 · EP38 | 20 giugno 2026 COLD OPEN Ore 23:47. La taverna è silenziosa. V32 occupa il centro della stanza come sempre — 178 kg di strut",
+    "content": "# TITANIUM_OS — Episodio 38\n## \"Il Debito che Cammina\"\n\n---\n\n**TITANIUM_OS | S1 · EP38 | 20 giugno 2026**\n\n---\n\n## COLD OPEN\n\nOre 23:47. La taverna è silenziosa.\n\nV32 occupa il centro della stanza come sempre — 178 kg di struttura in epoxy granite che non si è spostata di un millimetro. Sul tavolo accanto: lo schermo di un MacBook aperto su un terminale. Cursor lampeggia. Il commit è già andato: `auto: story_agent - episodi generati 20/06/2026`. Un secondo commit, un minuto dopo: `auto: night_audit - cartella clinica 20/06/2026`.\n\nDue righe. Automatiche. Il sistema ha lavorato da solo.\n\nMatteo non è sveglio a vederle girare.\n\nQuesto è il punto.\n\n---\n\n## ATTO I — 87 Note e un Sistema che Respira\n\nTre settimane fa, il milestone della sessione #38 sembrava semplice sulla carta: collegare NotebookLM a Claude Code, unire undici notebook con novantaré fonti, generare il pitch per ogni progetto, scrivere un CV unito, costruire la mappa del gioco.\n\nÈ stato fatto. Tutto.\n\nMa \"fatto\" è una parola pericolosa quando parli di sistemi cognitivi.\n\nL'indice delle sessioni conta 87 note. Non è un numero celebrativo — è il peso accumulato di 14 mesi di decisioni, configurazioni, commit, fallimenti documentati e aggiustamenti. Ogni nota è un mattone. Alcuni sono squadrati. Molti no. L'indice rigenerato automaticamente dal `genera_wiki_index.py` non distingue tra le due cose: elenca tutto, democraticamente, con quella freddezza asettica dei sistemi che non hanno opinioni sul merito di ciò che archiviano.\n\nIl problema non è la quantità. È la coerenza.\n\nI pitch per-progetto esistono. Sono scritti, sono ragionati, hanno struttura. Ma non si vedono. Sono legati a un'API spenta — una dipendenza esterna che nessuno ha ancora riacceso, per ragioni che mischiano priorità e procrastinazione in proporzioni che Matteo conosce meglio di chiunque. I pilastri dell'architettura cognitiva di GENESIS esistono anche loro, scritti durante una sessione che evidentemente aveva slancio. Ma lo slancio ha lasciato il segno sbagliato: il CanvasLayout è stato svuotato. I pilastri sono lì, acerbi, come una fondazione versata troppo in fretta che aspetta di stagionare.\n\nLe animazioni girano solo con CSS. Il calendario nella sidebar non c'è.\n\nV32 è al 65%. GENESIS al 70%.\n\nI numeri sono reali. Non sono arrotondati per ottimismo.\n\n---\n\n## ATTO II — Il Metodo del 18 Giugno\n\nDue giorni prima di questo audit, Matteo ha scritto una cosa che vale la pena fermare.\n\n**INTEGRA. Non rifare. USA gli agenti.**\n\nTre parole in maiuscolo. Tre decisioni condensate in una riga.\n\nÈ facile capire cosa ci sia dietro — chiunque abbia costruito qualcosa da zero conosce il momento in cui si guarda il lavoro accumulato e la prima risposta emotiva è: *bruciare tutto e ricominciare*. È un impulso che sembra lucido perché viene vestito da razionalità tecnica. *Il codice è disordinato. L'architettura ha compromessi. Se ripartissi da zero farei meglio.* \n\nIl problema è che \"meglio\" in quel contesto significa \"senza il peso di ciò che ho già capito sbagliando\". Il che non è un vantaggio. È solo un modo per ripagare lo stesso debito con interessi.\n\nIl metodo correttivo del 18 giugno dice una cosa diversa: il debito si paga integrando, non azzerando.\n\nI pitch si vedranno quando l'API si riaccende — e l'API si riaccende quando diventa priorità misurabile, non aspirazione generica. Il CanvasLayout svuotato si riempie con il contenuto che già esiste nei pilastri — non si riscrivono i pilastri, si riscrive il contenuto dentro la struttura che tiene. Le animazioni CSS sono un punto di partenza, non un limite permanente.\n\nGli agenti nel sistema GENESIS non sono decorazione. Sono il meccanismo con cui tutto questo diventa sostenibile senza che Matteo debba essere sveglio alle 23:47 per ogni commit.\n\nQuella notte i commit li ha mandati il sistema.\n\n---\n\n## ATTO III — Il Loop che Insegna\n\nC'è una logica sottile nel fatto che questo episodio esista.\n\nIl `story_agent` ha generato gli episodi. Il `night_audit` ha scritto la cartella clinica. Entrambi alimentano il RAG in ChromaDB. Il RAG domani mattina sa cosa è successo stanotte — non per magia, ma perché il sistema è progettato per ricordare con struttura, non con emozione.\n\nQuesto è il loop che Matteo chiama GENESIS: V32 produce lavoro fisico, GENESIS produce memoria cognitiva, la memoria cognitiva informa le decisioni successive, le decisioni successive migliorano V32 e GENESIS. Il ciclo non è rapido. Non è lineare. Ha buchi e ritardi e API spente nel mezzo.\n\nMa gira.\n\n87 note nell'indice. Undici notebook, novantaré fonti. Nina ha un CV. La mappa del gioco esiste. Il sistema sa dove sono i debiti — li ha scritti lui stesso, nel `story_state.json` aggiornato stanotte.\n\nIl capannone è nel 2030. Sono quattro anni. Il ritmo attuale non è quello di sprint — è quello di qualcosa che costruisce struttura portante, lentamente, con materiali che durano.\n\nEpoxy granite. Titanio TIG. Architetture cognitive che si aggiornano da sole nel buio.\n\nMatteo domani mattina aprirà il terminale e troverà tutto già scritto.\n\nIl debito cammina ancora. Ma il sistema lo sta seguendo.\n\n---\n\n## CHIUSURA\n\nIl problema con i sistemi cognitivi è che non ti dicono mai che stai andando bene. Ti dicono solo cosa c'è ancora da fare.\n\n87 note è un numero. 65% e 70% sono numeri. L'API spenta è un fatto.\n\nLa differenza tra un sistema che funziona e uno che si illude di funzionare è che il primo conta i debiti invece di nasconderli. GENESIS li conta. Li categorizza. Li scrive in automatico alle 23:47 e li archivia dove domani mattina si trovano.\n\nNon è conforto. È infrastruttura.\n\n---\n\n## REEL_HOOK\n\n87 note in un indice. 11 notebook, 93 fonti. Due commit automatici alle 23:47 — e Matteo stava dormendo.  \nIl sistema funziona. Ma i pitch non si vedono, il CanvasLayout è vuoto, il calendario non c'è.  \nIl 18 giugno ha scritto tre parole: INTEGRA. Non rifare. USA gli agenti.  \nCosa succede quando un sistema cognitivo inizia a documentare i propri debiti da solo —  \nprima che tu te ne accorga?\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Adottato metodo correttivo \"INTEGRA non rifare, USA gli agenti\" (18/06/2026) come risposta al debito tecnico accumulato in milestone #38.\n- **LOGICA:** I pitch per-progetto sono bloccati da API esterna spenta (non da logica interna difettosa); il CanvasLayout è stato svuotato durante la scrittura accelerata dei pilastri GENESIS — contenuto esiste, struttura è da ripopolare, non riscrivere.\n- **LOGICA:** Lo `story_agent` e il `night_audit` girano in automatico e committano su git senza intervento manuale — il loop V32→episodio→RAG→Claude è operativo a livello di commit notturno.\n- **DECISIONE:** `story_state.json` aggiornato il 20/06/2026 con inventario debiti attivi (calendar sidebar mancante, animazioni solo CSS, pilastri acerbi) — il RAG può recuperare lo stato del debito da questo file.\n- **OBIETTIVO:** Sblocco prossimo = riattivare API pitch per renderli visibili nella dashboard; misurabile con test di rendering su almeno 3 progetti (V32, MIMS, GENESIS).\n- **OBIETTIVO:** V32 al 65%, GENESIS al 70% — prossimo checkpoint misurabile: V32 al 70% entro milestone #40.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S1 · EP38 |\n| **Data** | 2026-06-20 |\n| **Milestone attivo** | Sessione #38 — NotebookLM + Claude Code |\n| **Progetti toccati** | GENESIS, V32, MIMS (indiretto) |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Commit chiave** | story_agent + night_audit (automatici) |\n| **Debiti documentati** | API pitch spenta, CanvasLayout svuotato, calendar sidebar mancante, animazioni CSS-only |\n| **Metodo correttivo** | INTEGRA non rifare — 18/06/2026 |\n| **Fonti RAG indicizzate** | 93 (11 notebook NotebookLM) |\n| **Note sessioni totali** | 87 |\n| **Tag** | `genesis` `debito-tecnico` `agenti` `rag` `automazione` `metodo` |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260618",
+        "title": "TITANIUM OS — Episodio S1.38",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260618",
+        "title": "TITANIUM OS — Episodio S1.38"
       }
     }
   }
