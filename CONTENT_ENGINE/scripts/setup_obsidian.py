@@ -178,6 +178,13 @@ def gen_index():
     subprocess.run([sys.executable, str(script)], check=False)
 
 
+def run_ecosystem_bridge():
+    """Inietta i ponti CROSS-MONDO (episodio<->sapere). Va DOPO il sync (che riscrive
+    le STORIE), altrimenti i ponti negli episodi si perderebbero alla copia successiva."""
+    script = ROOT / "CONTENT_ENGINE" / "scripts" / "ecosystem_bridge.py"
+    subprocess.run([sys.executable, str(script)], check=False)
+
+
 def main() -> int:
     print("=" * 56)
     print(" SETUP OBSIDIAN — un vault con TUTTO (sapere + storie)")
@@ -192,6 +199,8 @@ def main() -> int:
     print(f"  Intersezioni (wikilink Collegati) iniettate in {nc} note → il grafo connette gli episodi")
     if gen_evoluzione_moc(id2stem):
         print("  Mappa _EVOLUZIONE.md generata (spirali + atti del filone)")
+    run_ecosystem_bridge()
+    print("  Ponti cross-mondo (episodio↔sapere) iniettati → ecosistema unito")
     gen_index()
     print(f"\n  Vault pronto: {MENTE}")
     print("  Apri in Obsidian (launcher Desktop) -> HOME.md -> graph view.")

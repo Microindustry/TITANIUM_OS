@@ -85,6 +85,24 @@ def _read_file(path: Path) -> str:
     try: return path.read_text(encoding="utf-8", errors="replace")
     except Exception: return ""
 
+# Da quando MENTE è un vault Obsidian, ogni nota porta un blocco auto `## Collegati`
+# (liste di [[wikilink]] iniettate da vault_intersect/storie_intersect) + commenti AUTO.
+# Sono NAVIGAZIONE, non sapere: indicizzarli crea centinaia di chunk-lista quasi identici
+# che diluiscono il segnale. Si tolgono prima del chunking (efficienza RAG su vault).
+_COLLEGATI_BLK = re.compile(r"<!--\s*COLLEGATI:start.*?COLLEGATI:end\s*-->", re.DOTALL)
+_AUTO_COMMENT  = re.compile(r"^<!--\s*AUTO-GENERATO.*?-->\s*$", re.MULTILINE)
+
+def _clean_for_index(text: str) -> str:
+    text = _COLLEGATI_BLK.sub("", text)
+    text = _AUTO_COMMENT.sub("", text)
+    return text
+
+# File di pura navigazione del vault: indici e mappe auto-generate = solo wikilink.
+# Niente sapere da cercare → fuori dal RAG (il loro contenuto vive già nelle note vere).
+_NAV_FILES = {"HOME.md", "_EVOLUZIONE.md"}
+def _is_nav_file(path: Path) -> bool:
+    return path.name in _NAV_FILES or path.name.startswith("_INDEX")
+
 def _chunk(text: str, sid: str) -> list[dict]:
     chunks, start, idx = [], 0, 0
     while start < len(text):
@@ -229,7 +247,7 @@ def build_index(force: bool = False) -> int:
     all_paths  = sorted(
         p for p in MENTE_DIR.rglob("*")
         if p.is_file() and p.suffix.lower() in SUPPORTED_EXT
-        and not _is_excluded(p)
+        and not _is_excluded(p) and not _is_nav_file(p)
     )
 
     added = modified = skipped = removed_chunks = 0
@@ -271,8 +289,8 @@ def build_index(force: bool = False) -> int:
         else:
             added += 1
 
-        # Ri-chunking
-        text   = _read_file(path)
+        # Ri-chunking (pulizia vault: via blocchi Collegati + commenti auto)
+        text   = _clean_for_index(_read_file(path))
         chunks = _chunk(text, _sid(rel)) if text else []
         cids   = []
         for c in chunks:

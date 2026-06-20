@@ -22,6 +22,7 @@ PYTHON      = sys.executable
 LOG_DIR     = REPO_ROOT / "DATA" / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 STATUS_FILE = REPO_ROOT / "DATA" / "watchdog_status.json"
+MAINT_LOCK  = REPO_ROOT / "DATA" / ".maintenance.lock"   # se esiste: NON riavviare nulla
 CHECK_S     = 30    # controlla ogni 30 secondi
 WRITE_S     = 60    # scrive status ogni 60 secondi
 
@@ -119,9 +120,23 @@ def run():
         now = time.time()
         status: dict = {"checked_at": datetime.now().isoformat(), "services": {}}
 
+        # MANUTENZIONE: durante un rebuild RAG l'API viene fermata di proposito (libera il
+        # lock di ChromaDB). Se c'è il lock, NON riavviare nulla — altrimenti il watchdog
+        # resuscita l'API a metà rebuild e due scrittori corrompono l'indice.
+        # lock valido solo se fresco (<15 min): un lock orfano da uno script crashato
+        # non deve tenere giù i servizi per sempre.
+        maintenance = False
+        if MAINT_LOCK.exists():
+            age = now - MAINT_LOCK.stat().st_mtime
+            if age < 900:
+                maintenance = True
+                log.info(f"MANUTENZIONE in corso (.maintenance.lock, {int(age)}s) — riavvii sospesi")
+            else:
+                log.warning(f".maintenance.lock orfano ({int(age)}s) — ignorato, riprendo i riavvii")
+
         for name, cfg in SERVICES.items():
             alive = cfg["check"]()
-            if not alive:
+            if not alive and not maintenance:
                 restarts[name] += 1
                 log.warning(f"{cfg['label']} NON risponde — riavvio #{restarts[name]}")
                 _start(name)
