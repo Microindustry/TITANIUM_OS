@@ -1,5 +1,149 @@
 [
   {
+    "id": "AUD-fe9cac2154",
+    "date": "2026-06-21",
+    "git": "eca4bb17",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm)' è prerequisito dichiarato per V8, e il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito per la fresatura stampi MIMS. Entrambi sono decisioni/acquisti fisici che nessun agente può sbloccare. Nel frattempo V32 è al 65% e MIMS al 30%: i due pilastri hardware più indietro dipendono da azioni che non hanno una data assegnata nei dati disponibili.",
+    "azione": "Assegnare una scadenza esplicita nella bussola per ciascuna delle due decisioni fisiche (silent blocks e ordine mandrino). Anche solo fissare 'decido entro sessione #40' trasforma un blocker flottante in un task tracciabile dagli agenti notturni.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-21"
+  },
+  {
+    "id": "AUD-a3277f3bed",
+    "date": "2026-06-21",
+    "git": "eca4bb17",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Le chiavi .env sono segnalate come 'da ruotare' dal red-team #38 e compaiono ancora nei blockers attuali. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi stesse non risulta nei commits degli ultimi 7 giorni. Finché le chiavi vecchie (potenzialmente esposte durante il red-team) restano attive, la denylist è difesa parziale.",
+    "azione": "Matteo ruota fisicamente le chiavi .env (azione umana, non delegabile agli agenti) e aggiorna i segreti nei servizi dipendenti. Verificare che nessun log/commit precedente contenga valori in chiaro prima di considerare il blocker chiuso.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-21"
+  },
+  {
+    "id": "AUD-961a04366a",
+    "date": "2026-06-21",
+    "git": "eca4bb17",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il todo 'link Desktop sito Maria (serve URL da Matteo)' è rimasto aperto da sessione #38 e compare ancora nel next_step corrente. È un'informazione che blocca un agente in attesa di input umano: ogni notte che passa senza quell'URL è una notte in cui l'agente non può completare il collegamento. Non è un lavoro lungo, è un dato puntuale che rischia di scivolare indefinitamente tra le sessioni.",
+    "azione": "Fornire l'URL del sito Maria all'inizio della prossima sessione (30 secondi di lavoro) così l'agente può chiudere il task autonomamente nella stessa sessione senza aprire un quarto blocker umano in coda.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-21"
+  },
+  {
+    "id": "AUD-7f955e27a3",
+    "date": "2026-06-21",
+    "git": "eca4bb17",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Il research_agent colpisce Semantic Scholar senza backoff adeguato e riceve 429 ripetuti da almeno due notti consecutive. Il 21/06: \"2026-06-21 03:38:26 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: ...linear+guide+rail+preload+stiffness+preci\" e \"2026-06-21 03:38:40 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: ...machine+tool+frame+structural+rigidity+gu\", entrambe seguite da \"INFO semantic_scholar -> 0 risultati\". Lo stesso pattern appare nel night_push.log del 20/06: \"2026-06-20 03:39:07 [research_agent] WARNING [semantic_scholar] 429 Client Error\". La ricerca notturna su V32 (rigidità strutturale, guide lineari) produce zero risultati utili ogni notte per rate-limit, sprecando il ciclo autonomo.",
+    "azione": "Aggiungere exponential backoff con jitter (es. retry dopo 60s, 120s, 240s) prima di ogni chiamata Semantic Scholar, e loggare esplicitamente 'skip query — rate limit raggiunto' invece di registrare 0 risultati come se la query fosse vuota. Valutare cache locale delle query già eseguite per non rifare la stessa richiesta nelle notti successive.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-21"
+  },
+  {
+    "id": "AUD-528953a15c",
+    "date": "2026-06-21",
+    "git": "eca4bb17",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Oltre ai 429, nei log del 21/06 è presente un crash non gestito: night_research.log riporta \"Traceback (most recent call last):\" (data 2026-06-21) e night_push.log del 20/06 riporta \"⚠ night_research.log: Traceback (most recent call last):\". Il traceback completo non è nell'estratto, ma il pattern si ripete su due notti: il research_agent termina in eccezione dopo il rate-limit, il che significa che le query successive alla prima fallita non vengono mai eseguite.",
+    "azione": "Wrappare il corpo principale del research_agent in try/except generico con logging del traceback completo su file dedicato (research_errors.log) e continuazione sul task successivo. Il crash non deve bloccare l'intera sessione notturna di ricerca.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-21"
+  },
+  {
+    "id": "AUD-0ea25aca3c",
+    "date": "2026-06-21",
+    "git": "eca4bb17",
+    "area": "GENESIS",
+    "severity": "bassa",
+    "finding": "Il commit e3694655 (21/06) elimina la regola 11 di CLAUDE.md 'su richiesta esplicita di Matteo', pochi giorni dopo che il commit 6861abc9 l'aveva introdotta come nodo AUTOMIGLIORAMENTO ('il sistema propone, l'umano approva'). La regola era il gate formale tra proposte autonome e azioni eseguite. Rimuoverla senza un sostituto documentato lascia il comportamento del sistema in uno stato implicito: non è chiaro dai dati se esista ora un meccanismo equivalente o se le proposte di auto-miglioramento vadano in produzione senza approvazione.",
+    "azione": "Documentare esplicitamente in CLAUDE.md (o in STATE) quale meccanismo sostituisce la regola 11: se l'approvazione umana è ancora richiesta per le modifiche self-improve, scriverlo in modo verificabile dagli agenti notturni.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-21"
+  },
+  {
+    "id": "AUD-efbddfa464",
+    "date": "2026-06-20",
+    "git": "bc4a4d59",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La bussola riporta '#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli' come todo aperto. Stanotte ci sono almeno 3 guasti reali nei log (crash research_agent, 429 non gestito, zero risultati su query core V32) che rischiano di essere letti come 'rumore di fondo' invece che segnali. Se questo todo non viene collegato a una checklist di triage post-notte, il metodo di ascolto degli agenti resta un'intenzione, non un processo.",
+    "azione": "Aggiungere alla routine di avvio sessione un controllo esplicito dei log_issues della notte precedente: 5 minuti, massimo 3 righe di analisi, prima di aprire qualsiasi altro task.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-20"
+  },
+  {
+    "id": "AUD-e85421edda",
+    "date": "2026-06-20",
+    "git": "bc4a4d59",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto e compare nella bussola come debito segnalato dagli agenti. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi è azione manuale di Matteo non ancora eseguita. Chiavi non ruotate dopo un red-team equivale a esposizione nota e accettata.",
+    "azione": "Matteo ruota le chiavi .env prima della prossima sessione attiva. È un'azione di 10 minuti che chiude un rischio di sicurezza esplicito già identificato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-20"
+  },
+  {
+    "id": "AUD-b395e1d6a6",
+    "date": "2026-06-20",
+    "git": "bc4a4d59",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il blocker 'night_audit Unterminated string ricorrente (parse LLM non difensivo)' è presente sia nei next_step che nei blockers da almeno la sessione #38. Non c'è ancora un commit di fix. Un parser non difensivo su output LLM significa che ogni notte il night_audit può fallire silenziosamente o produrre dati corrotti, invalidando la cartella clinica stessa.",
+    "azione": "Wrappare il parse JSON del night_audit in try/except con fallback a parsing difensivo (es. json_repair o estrazione regex del blocco JSON). Il fix è isolato e stimabile in <1h.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-20"
+  },
+  {
+    "id": "AUD-7878e7be05",
+    "date": "2026-06-20",
+    "git": "bc4a4d59",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Due query distinte hanno restituito zero risultati: '2026-06-20 03:38:52 [research_agent] INFO openalex -> 0 risultati' e '2026-06-20 03:38:29 [research_agent] INFO semantic_scholar -> 0 risultati' (quest'ultima su epoxy granite polymer concrete vibration). Non è chiaro se il problema sia la query troppo specifica o l'indice della sorgente. Zero risultati ripetuti su query tecniche core (V32, mandrino ER20) significa che la pipeline notturna non alimenta il RAG su argomenti critici per il progetto.",
+    "azione": "Implementare query broadening automatico: se risultati=0, ritentare con termini ridotti (es. 'epoxy granite CNC' invece della stringa lunga). Loggare esplicitamente 'query broadened' per tracciare il fenomeno.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-20"
+  },
+  {
+    "id": "AUD-236654eafa",
+    "date": "2026-06-20",
+    "git": "bc4a4d59",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8' è aperto senza data di risoluzione. V32 è al 65% e il pilastro è il più avanzato, ma un prerequisito architetturale non deciso blocca V8. Ogni sessione tecnica futura su V32 che tocca V8 partirà da una base non definita.",
+    "azione": "Fissare in agenda una micro-decisione (15 minuti): Matteo sceglie v.A o v.B, il criterio viene scritto in una nota Obsidian e il blocker viene chiuso. Non serve prototipare: serve solo una scelta documentata.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-20"
+  },
+  {
+    "id": "AUD-1de48fd287",
+    "date": "2026-06-20",
+    "git": "bc4a4d59",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Il research_agent è andato in crash stanotte: '2026-06-20 03:38:54 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&' e il traceback è confermato anche in night_push.log ('⚠ night_research.log: Traceback (most recent call last):', 2026-06-20). Il rate-limit 429 di Semantic Scholar non è gestito: l'agente non fa retry con backoff né fallback su altra sorgente, termina in eccezione. Ogni notte che tocca queste query la pipeline si spezza.",
+    "azione": "Aggiungere exponential backoff (es. 60s, 120s, 240s) sul 429 di Semantic Scholar e un fallback su OpenAlex per le stesse query. Loggare il 429 come WARNING ma non lanciare eccezione non catturata.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-20"
+  },
+  {
     "id": "AUD-ef3fdc440e",
     "date": "2026-06-16",
     "git": "a3d33de8",
@@ -8,8 +152,10 @@
     "finding": "night_research.log: rilevato timeout di rete nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-16"
+    "status": "resolved",
+    "last_seen": "2026-06-16",
+    "resolved_on": "2026-06-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-28ded3b794",
@@ -20,8 +166,10 @@
     "finding": "research_agent.log: rilevato timeout di rete nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-16"
+    "status": "resolved",
+    "last_seen": "2026-06-16",
+    "resolved_on": "2026-06-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-d19885be12",
