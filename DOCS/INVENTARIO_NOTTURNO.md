@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-06-20  3 commit](#2026-06-20-3-commit)
   - [2026-06-20  5 commit](#2026-06-20-5-commit)
   - [2026-06-18  7 commit](#2026-06-18-7-commit)
   - [2026-06-17  14 commit](#2026-06-17-14-commit)
@@ -15,6 +16,21 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-06-21 · 9 commit
+- `15144de4` auto: night_audit - cartella clinica 21/06/2026
+- `eca4bb17` auto: story_agent - episodi generati 21/06/2026
+- `b71c8761` feat(ecosistema): ponti cross-mondo episodio<->sapere + RAG efficiente + manutenzione robusta
+- `e3694655` chore(CLAUDE.md): elimina la regola 11 (su richiesta esplicita di Matteo)
+- `51d8ee2a` docs(bussola): sessione #39 — ecosistema vault (vault_intersect v2, storie/pietre) + fix night_audit + riordino
+- `3a41d06f` feat(vault_intersect): v2 legami sul contenuto (TF-IDF corpo) + rete storie/pietre rigenerata
+- `decc485e` docs(bussola): punto 7 fatto — riordino _DA_ORDINARE + Obsidian Mari/VULCAN/MIMS (commit MENTE 604b5d2)
+- `01c3cffc` fix(night_audit): parse LLM difensivo — chiude il guasto ricorrente "Unterminated string"
+- `bc4a4d59` chore(salva): chiusura sessione — blockers ripuliti (pitch/pilastri risolti), next_step + focus allineati per il nuovo avvio
+
+_episodi: 187 · critiche aperte: 23 (58 risolte) · RAG: 29113 chunk_
+
+
 
 ## 2026-06-20 · 3 commit
 - `089af488` auto: story_agent - episodi generati 20/06/2026
