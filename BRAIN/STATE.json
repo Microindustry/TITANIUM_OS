@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-22T16:07:04.389819",
+  "last_update": "2026-06-22T16:24:15.825979",
   "active_milestone": "Sessione #41 (22/06): PUNTO 0 — il RAG gira INTEGRATO e si auto-cura. Watchdog riabilitato. RAG self-heal: fix radice orfani in rag_engine.py (semantico==bm25 da solo) + gate rebuild_rag_clean ora rileva la divergenza (non solo count=0). Canone VULCAN/CNC corretto su tutti i doc (telaio VULCAN=2 cilindri-guida, il 60x60 e' la CNC; croce sperimentale). Generatori contenuti GROUNDED sul RAG: story_agent v1.2 + content_pipeline. GENERATORE NINA a 2 stadi (NODES/NINA_AGENT/nina_agent.py): Architetto(haiku, RAG)+Scrittore(sonnet, bible viva) -> EP_N2_16 di prova, output in _PROPOSTI. Obsidian riconnesso (650 note) + MOC _CANONE. START_LOGIN incrementale (no piu' rebuild 3min/login).",
-  "last_action": "Modifica a .gitignore",
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
   "next_step": "PROSSIMA SESSIONE = ULTRACODE: rendere NINA DEFINITIVA — filone UNICO discorsivo inizio->fine, evolutivo+integrabile, UNA SOLA VERITA' sul RAG (canone=EP_N2 v2, vecchi EP_AV_*->archivio; ordinare il cammino con open loop concatenati; audit STORIE). Stile DECISO in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md ('diario animato del sistema vero'). Poi: animazione + voce. Vedi banner in PROSSIMA_SESSIONE.md.",
   "session_count": 82,
   "pillars": {

@@ -17,9 +17,22 @@ sono grounded sul RAG, ed esiste il GENERATORE NINA a 2 stadi. Da qui Nina parte
 • Obsidian riconnesso (650 note) + MOC MENTE/_CANONE.md (la verita' unica).
 • START_LOGIN: rebuild completo -> incrementale (login veloce). Sistema verificato: tutto attaccato.
 
+━━━ VISIONE NINA ZERO (confermata 22/06 — leggi NINA_STILE_E_PIANO.md per intero) ━━━
+Nina NON e' un cartone: e' un FILM ISTRUTTORIO percorribile/sbloccabile che TI GENERA il CV.
+Meccanismo: sblocchi episodio -> sblocchi COMPETENZA -> si colora il CV (stesso engine del pilastro HR) -> pronto al lavoro.
+• "Nina dal Giorno 0" = casella nuova nella sidebar: Nina arriva al sistema com'e' OGGI (tutto nel RAG) e lo cammina.
+• Gli episodi SONO il cibo del RAG: Nina vive su quello che il progetto gia' produce (no doppio lavoro).
+• Nina Zero MIGLIORA l'ecosistema: per grounddare ogni episodio scova allineamenti e FALLE -> chiudi -> canone migliore (regola 5).
+• Scope ILLIMITATO (competenze vere, visive): Vita pratica (soldi/valore/730/TARI), Meccanica, Elettrico (corso elettricista), IA/sistemi, [aperte].
+• Guide = maestri di bottega per materia: FORGE(meccanica) · THEMIS(misura/metodo) · TESLA(elettrico/CNC) · VESTA(Vita&Casa, NUOVA) · NEXUS/EVA/AVA.
+• La Mappa e' una vera mappa di punti-storia che si riscrive (zoom indietro + 1 pezzo) = geografia del film = salvataggio = CV.
+Generazione SUPERVISIONATA col nina_agent (NON notturna cieca): prima progetta l'arco di allineamento, poi genera e valida.
+
 ━━━ PROSSIMO LAVORO — L'ULTIMO SU NINA: renderla DEFINITIVA (in ordine) ━━━
 Stile DECISO e piano in 6 passi: MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md (leggilo per primo).
 Regola: UNA SOLA VERITA' sul RAG. Additivo, evolutivo, integrabile.
+PRIMI PASSI ULTRACODE: 1) casella "Nina dal Giorno 0" in sidebar · 2) PROGETTARE l'arco di allineamento
+(competenze dal Giorno 0 derivate dal RAG reale) · 3) report falle nina_gaps.json · 4) generare supervisionato.
 1. Canone unico = EP_N2 (v2). Spostare i vecchi EP_AV_* in S_AVVENTURA/_ARCHIVIO (NON cancellare).
 2. Ordinare il CAMMINO (il "libro"): open loop concatenati casella N -> N+1, riempire i buchi.
 3. Una sola verita': ri-verificare ogni episodio col grounding (nina_agent/RAG), allineare i FATTI,
