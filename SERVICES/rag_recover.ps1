@@ -92,8 +92,8 @@ if (-not $probeOk) {
     Write-Host "RAG risponde ma DIVERGE (semantico!=bm25). Passo a L2 per riallineare..." -ForegroundColor Yellow
 }
 
-Write-Host "== L2: rebuild completo dal corpus MENTE (~10-15 min) ==" -ForegroundColor Cyan
-& $PY $RAG --rebuild
+Write-Host "== L2: rebuild HARD dal corpus MENTE (reset fisico chroma_db, HNSW da 0) ==" -ForegroundColor Cyan
+& $PY $RAG --rebuild-hard
 $ok2 = (Probe) -and (Aligned)
 if ($ok2) { Finish "RECUPERATO al LIVELLO 2 (rebuild da corpus). RAG sano e allineato." Green }
 else      { Finish "ATTENZIONE: dopo L2 il RAG non e' sano - controlla logs/api_server.err.log" Red }

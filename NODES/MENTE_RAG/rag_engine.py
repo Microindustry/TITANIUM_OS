@@ -539,6 +539,21 @@ def drop_hnsw_index() -> int:
     return moved
 
 
+def reset_chroma_dir() -> str:
+    """RESET FISICO: sposta da parte l'INTERA cartella chroma_db (additivo, non
+    cancella). Serve perche' su chromadb 0.5.23 il reset-per-id NON azzera lo
+    spazio-label di hnswlib: dopo molti delete/re-add restano label fantasma con
+    indice > count -> 'KeyError np.uint64(N)' su alcune query. Solo ripartendo da
+    una cartella VUOTA l'HNSW rinumera da 0 e l'indice torna pulito. Ritorna il
+    nome del backup, o '' se non c'era nulla da spostare."""
+    if not CHROMA_DIR.exists():
+        return ""
+    bak = CHROMA_DIR.with_name(f"chroma_db_reset_{datetime.now():%Y%m%d_%H%M%S}")
+    CHROMA_DIR.rename(bak)
+    logger.info("RESET FISICO: chroma_db -> %s", bak.name)
+    return bak.name
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -555,6 +570,7 @@ if __name__ == "__main__":
     p.add_argument("--no-hybrid",    action="store_true", help="Solo ricerca semantica")
     p.add_argument("--probe",        action="store_true", help="Query minima di salute (exit!=0 se l'indice crasha) — per orchestratore")
     p.add_argument("--drop-hnsw",    action="store_true", help="Recovery L1: sposta il segmento HNSW corrotto (Chroma lo ricostruisce da sqlite, no ri-embed)")
+    p.add_argument("--rebuild-hard", action="store_true", help="Rebuild con RESET FISICO della cartella chroma_db (HNSW rinumera da 0: cura 'KeyError np.uint64' post delete massivi)")
     args = p.parse_args()
 
     if args.probe:
@@ -568,6 +584,11 @@ if __name__ == "__main__":
             sys.exit(2)
     elif args.drop_hnsw:
         print(json.dumps({"hnsw_dirs_moved": drop_hnsw_index()}, ensure_ascii=False))
+    elif args.rebuild_hard:
+        bak = reset_chroma_dir()
+        print(f"reset fisico chroma_db: {bak or '(vuoto)'}")
+        build_index(force=True)
+        print(json.dumps(get_index_stats(), indent=2, ensure_ascii=False))
     elif args.stats:
         print(json.dumps(get_index_stats(), indent=2, ensure_ascii=False))
     elif args.rebuild:
