@@ -1,38 +1,45 @@
-=== RIAVVIO SESSIONE #41 — 22/06/2026 ===
-Ultima sessione: #40 — 2026-06-22
+=== RIAVVIO SESSIONE #42 — 22/06/2026 (ULTRACODE) ===
+Ultima sessione: #41 — 2026-06-22
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-RAG sbloccato + ottimizzato su GPU. MIMS/VULCAN sviluppati sul sapere connesso
-(con le foto reali della pressa). Canone ripulito dal framing vietato "recuperato"
-con una regola SCALABILE. ASSOLUTO V9 scritta: tesi "smantellare l'alluminio estruso".
+PUNTO 0 RAGGIUNTO: il RAG gira INTEGRATO e si auto-cura, i generatori di contenuti
+sono grounded sul RAG, ed esiste il GENERATORE NINA a 2 stadi. Da qui Nina parte
+(e noi con lei): l'ultimo lavoro e' renderla DEFINITIVA, poi animazione e voce.
 
-━━━ FATTO IN SESSIONE #40 ━━━
-• RAG: torch 2.6.0+cu124 ripristinato (llamafactory l'aveva messo cpu) + chromadb 0.5.23
-  (la 1.5.9 aveva il compactor rotto: count inchiodato 469/32664). 32774 chunk allineati.
-• RAG ottimizzato GPU: embedder+reranker su DEVICE=cuda -> rebuild 2:48 (era ~15min cpu).
-• requirements-rag.txt v2.0 blindato (no torch cpu, no chromadb 1.x).
-• MIMS/VULCAN: SCHEDA_PRODOTTO_MIMS_VULCAN + 17 foto reali -> BUILD_REALE_20260622
-  (pressa VULCAN costruita, guide lineari, stampo mattonella provvisorio). VULCAN_MANIFESTO corretto.
-• Canone veritiero: tolto "componente recuperato/usato/EUR 0" da 49 file; canon_guard.py
-  agganciato a story_agent (pulisce alla fonte) + night_audit (segnala). REGOLA SCALABILE.
-• Dataset rigenerato (180 campioni). ASSOLUTO V9 creata + indicizzata.
+━━━ FATTO IN SESSIONE #41 ━━━
+• RAG self-heal alla RADICE: purge orfani nell'incrementale (semantico==bm25 da solo)
+  + gate rebuild_rag_clean ora rileva la DIVERGENZA (non solo count=0). Watchdog riabilitato.
+• Canone VULCAN/CNC corretto ovunque: telaio VULCAN = i 2 cilindri fanno da guida; il
+  tubolare 60x60 e' la CNC; croce centraggio sperimentale. SCHEDA+BUILD_REALE+MANIFESTO.
+• Generatori GROUNDED sul RAG: story_agent v1.2 + content_pipeline (regola 7).
+• GENERATORE NINA: NODES/NINA_AGENT/nina_agent.py — Architetto(haiku,RAG)+Scrittore(sonnet,bible).
+  Test EP_N2_16 'Il Guardiano che Non Dorme' (in S_AVVENTURA/_PROPOSTI, qualita' definitiva).
+• Obsidian riconnesso (650 note) + MOC MENTE/_CANONE.md (la verita' unica).
+• START_LOGIN: rebuild completo -> incrementale (login veloce). Sistema verificato: tutto attaccato.
 
-━━━ PROSSIMO LAVORO (in ordine) ━━━
-1. Riabilitare TI_Watchdog (1 UAC): schtasks /Change /TN TI_Watchdog /ENABLE + /Run
-   (rinfresca anche l'API col rag_engine GPU).
-2. Decidere la via connettori MIMS: compressione VULCAN vs iniezione (SCHEDA §5) -> sblocca BEP/B2.
-3. Montare il martinetto Vevor 3 stadi al centro -> 1a colata mattonella (validazione VULCAN).
-4. Ordinare mandrino 2.2kW ER20 -> stampo tile definitivo.
-5. Rifinire STORIE/Nina.
+━━━ PROSSIMO LAVORO — L'ULTIMO SU NINA: renderla DEFINITIVA (in ordine) ━━━
+Stile DECISO e piano in 6 passi: MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md (leggilo per primo).
+Regola: UNA SOLA VERITA' sul RAG. Additivo, evolutivo, integrabile.
+1. Canone unico = EP_N2 (v2). Spostare i vecchi EP_AV_* in S_AVVENTURA/_ARCHIVIO (NON cancellare).
+2. Ordinare il CAMMINO (il "libro"): open loop concatenati casella N -> N+1, riempire i buchi.
+3. Una sola verita': ri-verificare ogni episodio col grounding (nina_agent/RAG), allineare i FATTI,
+   coerenza Pietre ⟡ (c'era incoerenza ⟡2 Entropia vs Automazione).
+4. Continuita' esplicita in ogni episodio (Dove siamo + open loop).
+5. Audit STORIE (binario tecnico): verificare il grounding, correggere dove inventano.
+6. Predisporre ANIMAZIONE + VOCE (il blocco SCENE/key-image c'e' gia').
+Stile = "il diario animato del sistema vero", massima integrazione all'ecosistema.
 
 ━━━ BLOCKERS ━━━
-⚠ TI_Watchdog DISABILITATO (no self-healing) — riabilitare con 1 UAC.
+⚠ Divergenza RAG residua 0,2% (semantico vs bm25) — si auto-allinea stanotte @03:37
+  (TI_NightResearch -> rebuild_rag_clean elevato, gate migliorato, GPU esclusiva). Verificare a inizio sessione.
 ⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
-⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito stampo tile.
-⚠ Martinetto Vevor 3 stadi da montare — prerequisito 1a colata.
+⚠ Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2.
+⚠ Martinetto Vevor 3 stadi da montare + mandrino 2.2kW ER20 da ordinare (prerequisiti fisici VULCAN).
 
 ━━━ NOTE ━━━
-• RAG sano = chunks (semantico) DEVE == bm25_chunks. Se divergono -> rebuild pulito.
-• canon_guard: se emerge una frase nuova vietata, +1 riga a PAIRS in AUTOMATIONS/core/canon_guard.py.
+• RAG sano = semantico == bm25. Un solo processo GPU alla volta (GTX 1070 8GB): CLI rebuild con
+  l'API su -> CUDA OOM. Per un rebuild manuale: SERVICES/rebuild_rag_clean.ps1 (ferma l'API).
+• Generatore Nina: output in _PROPOSTI -> rivedere -> spostare in S_AVVENTURA + riga NINA_SEED in build_episodes_json.py.
+• Verita' unica per pilastro: MENTE/_CANONE.md.
 
-Generato: 22/06/2026 — fine sessione #40
+Generato: 22/06/2026 — fine sessione #41

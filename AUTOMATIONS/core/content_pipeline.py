@@ -51,6 +51,29 @@ log = logging.getLogger("content_pipeline")
 FORMATS = ["linkedin", "podcast", "video"]
 
 
+def _rag_context(query: str, k: int = 6) -> str:
+    """Fatti reali da MENTE/RAG per ancorare i formati (come story_agent /
+    milestone_to_episode). Via API locale (leggera); best-effort: se non risponde
+    torna stringa vuota e i formati restano sul contenuto sorgente, senza inventare."""
+    import urllib.request, urllib.parse
+    query = (query or "").strip()[:300]
+    if not query:
+        return ""
+    try:
+        url = "http://localhost:5001/api/rag/search?" + urllib.parse.urlencode({"q": query})
+        with urllib.request.urlopen(url, timeout=20) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        res = (data.get("results") or [])[:k]
+        if res:
+            return "\n".join(
+                f"- [{r.get('source','?')}] {(r.get('preview') or '').strip()[:240]}"
+                for r in res
+            )
+    except Exception:
+        pass
+    return ""
+
+
 def _load_template(fmt: str) -> str:
     """Carica il template per il formato."""
     template_map = {
@@ -103,11 +126,20 @@ def _generate_format(content: str, fmt: str, tema: str) -> str:
         "Sei un content producer specializzato per Matteo Benenati: "
         "artigiano industriale e system builder, ADHD, stile tecnico-poetico. "
         "I suoi 3 pilastri: Scaffolding Cognitivo, Modularità come DNA, Silenzio Operativo. "
-        "Scrivi SEMPRE in italiano. Output diretto — niente meta-commenti."
+        "Scrivi SEMPRE in italiano. Output diretto — niente meta-commenti. "
+        "CANONE: i componenti V32/VULCAN non si descrivono mai come 'recuperati/usati/EUR 0'; "
+        "usa specifica tecnica + logica. Ancorati ai FATTI DALL'ARCHIVIO qui sotto, non inventare numeri."
+    )
+
+    rag_ctx = _rag_context(tema or content[:120])
+    fonti_block = (
+        f"FATTI DALL'ARCHIVIO (MENTE/RAG) — usa QUESTI numeri/decisioni reali:\n{rag_ctx}\n\n"
+        if rag_ctx else ""
     )
 
     user = (
         f"Tema/Contenuto sorgente:\n{content[:2000]}\n\n"
+        f"{fonti_block}"
         f"Genera: {format_desc}\n\n"
         f"{'Template di riferimento:' + chr(10) + template if template else ''}"
     )

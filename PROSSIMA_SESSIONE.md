@@ -22,6 +22,19 @@
 *Consolidato sessione #20-21 · 04/06/2026 · **casa UNICA del PIANO** (09/06: il Desktop è ora
 solo mirror della bussola; la vecchia copia Desktop è in `DOCS/_archivio_piano_desktop_20260609.txt`).*
 
+> ## ▶ SESSIONE #42 (prossima) — ULTRACODE · "PUNTO 0 raggiunto, Nina parte"
+> **Stato abilitante (fatto in #41):** il RAG gira **integrato** (GPU, semantico==bm25, self-heal
+> automatico); i generatori contenuti sono **grounded sul RAG** (story_agent, content_pipeline,
+> **nina_agent** a 2 stadi); canone VULCAN/MIMS bonificato; vault Obsidian riconnesso + [[_CANONE]].
+> Da qui il RAG è solo **integrabile · scalabile · evolutivo**.
+>
+> **L'ULTIMO LAVORO su Nina (Matteo): renderla DEFINITIVA.** Oggi è troppo frammentata (EP_AV_*
+> vecchi + EP_N2_* v2 + semi), a volte "si perde" e diverge dalle STORIE (anch'esse da verificare).
+> Deve diventare un **filone UNICO, discorsivo dall'inizio alla fine**, sapendo che è **evolutivo e
+> integrabile**. **Regola: UNA SOLA VERITÀ sul RAG.** Lo **stile è deciso** (delegato a Claude):
+> vedi `MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md` (+ il piano in 6 passi lì dentro). Poi: **animazione + voce**.
+> Questo è il **Punto 0**: da qui Nina (e noi) partiamo.
+
 > Regola d'oro: **completare e far FUNZIONARE l'ecosistema prima dei soldi.**
 > Additivo, reversibile, committato. **Non perdere episodi/contenuti.** Ibrido (locale+Claude, RETE+RAG).
 > Generazione episodi: **decide Claude il metodo e lo consegna funzionante** (basta che funzioni).

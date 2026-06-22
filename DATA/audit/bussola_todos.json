@@ -6,6 +6,12 @@
     "sessione": ""
   },
   {
+    "id": "BUS-3f27b201",
+    "stato": "da_fare",
+    "testo": "(#sessione-40-22062026-rag-sbloccato-gpu-ripristinata-chromadb-stabile)",
+    "sessione": ""
+  },
+  {
     "id": "BUS-6550efc8",
     "stato": "da_fare",
     "testo": "(#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)",
@@ -202,6 +208,186 @@
     "stato": "da_fare",
     "testo": "(#idee-note)",
     "sessione": ""
+  },
+  {
+    "id": "BUS-b6faec01",
+    "stato": "fatto",
+    "testo": "**TI_Watchdog riabilitato + lanciato** (era disabilitato da 2gg, niente self-healing):",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-76e2561b",
+    "stato": "fatto",
+    "testo": "**Correzione canone VULCAN vs CNC** (Matteo, autorevole): il telaio **tubolare 60×60 /",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-66f48e94",
+    "stato": "fatto",
+    "testo": "**Desync RAG diagnosticato + risolto**: semantico 32778 ≠ bm25 31828 (950 **vettori orfani**",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-436e00f3",
+    "stato": "fatto",
+    "testo": "**FIX RADICE (additivo) — self-heal orfani in `rag_engine.py`**: a ogni incrementale,",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-52eb7b55",
+    "stato": "in_corso",
+    "testo": "**V9 = materia di studio** (Matteo): ASSOLUTO V9 va implementata con MIMS *dopo*",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-7113bc60",
+    "stato": "fatto",
+    "testo": "**story_agent v1.2 — GROUNDING RAG**: il motore narrativo notturno (Stop hook + cron)",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-4e344734",
+    "stato": "fatto",
+    "testo": "**content_pipeline.py — stesso grounding**: il distributore multi-formato (LinkedIn/podcast/",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-b3a39995",
+    "stato": "fatto",
+    "testo": "**Correzione \"scritto senza vero RAG\" (sessione #40, RAG rotto = semantico 0)**: i 3 doc",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-73dce805",
+    "stato": "fatto",
+    "testo": "**Verificato gli EPISODI NON portano l'errore**: le \"guide lineari/60×60\" negli episodi sono",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-f1ade59d",
+    "stato": "fatto",
+    "testo": "**GENERATORE NINA grounded a 2 stadi** (`NODES/NINA_AGENT/nina_agent.py`, v1.0): 1 concetto",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-5fa180fe",
+    "stato": "fatto",
+    "testo": "**Test end-to-end OK**: generato `EP_N2_16 — Il Guardiano che Non Dorme` (watchdog+self-heal,",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-f049b609",
+    "stato": "da_fare",
+    "testo": "**NON aggiunto alle notturne unattended** (di proposito): la generazione Nina resta on-demand",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-9d7bc6e6",
+    "stato": "fatto",
+    "testo": "**Obsidian riconnesso** (`setup_obsidian`): 650 note, 13 indici di dominio, 191 episodi",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-20b9e746",
+    "stato": "fatto",
+    "testo": "**Sistema verificato (tutto attaccato)**: API 5001 ok, Watchdog **Running** (sorveglia",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-1ea56ceb",
+    "stato": "fatto",
+    "testo": "**Modo migliore per far girare tutto**: (a) `START_LOGIN.bat` riga 31 da `--rebuild` completo",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-863f9e3d",
+    "stato": "da_fare",
+    "testo": "**Divergenza RAG residua 0,2%** (semantico≈32817 vs bm25≈32882): nata da incrementali in",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-78271a02",
+    "stato": "fatto",
+    "testo": "**Punto 0 PREDISPOSTO per la prossima sessione (ULTRACODE)**: banner in `PROSSIMA_SESSIONE.md`",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-95e5a93a",
+    "stato": "fatto",
+    "testo": "**Verificato (no fix necessario):** la ricerca dell'API **non** va stale dopo un reindex —",
+    "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
+  },
+  {
+    "id": "BUS-75ee5b4f",
+    "stato": "fatto",
+    "testo": "**Diagnosi del blocco \"RAG semantico = 0\"**: erano DUE guasti sovrapposti, non uno.",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-aa49e460",
+    "stato": "fatto",
+    "testo": "**GPU persa → ripristinata**: `pip install llamafactory` (manuale, 21/06 01:00) aveva",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-b2c4707f",
+    "stato": "fatto",
+    "testo": "**ChromaDB desync (`count=0`) → stabile**: era il bug del **compactor di ChromaDB 1.5.9**",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-d9dc39cf",
+    "stato": "fatto",
+    "testo": "**Verifica live**: `/api/rag/search \"geometria MIMS\"` → ASSOLUTO_V7 score **0.96** (croce",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-ce568dd3",
+    "stato": "fatto",
+    "testo": "**Blindatura `requirements-rag.txt` v2.0**: pin corretti (`torch==2.6.0+cu124` con",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-9fa59319",
+    "stato": "da_fare",
+    "testo": "**TI_Watchdog era DISABILITATO** da 2 giorni (la `finally` del vecchio `rag_clean_rebuild`",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-7463ce08",
+    "stato": "fatto",
+    "testo": "**MIMS/VULCAN sviluppati sul sapere connesso**: scheda unica `MENTE/MIMS/SCHEDA_PRODOTTO_MIMS_VULCAN.md`",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-37c3f5a3",
+    "stato": "fatto",
+    "testo": "**CANONE veritiero — regola SCALABILE** (richiesta Matteo): tolto il framing vietato \"componente",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-71c64074",
+    "stato": "fatto",
+    "testo": "**RAG OTTIMIZZATO su GPU**: embedder + reranker forzati su `DEVICE=cuda` in `rag_engine.py`",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-da5154a2",
+    "stato": "fatto",
+    "testo": "**Dataset rigenerato** (`episodes_to_dataset.py`, 180 campioni via haiku) dal canone ora pulito.",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-35c5970a",
+    "stato": "fatto",
+    "testo": "**ASSOLUTO V9 creata** (`MENTE/KNOWLEDGE/ASSOLUTO/ASSOLUTO_V9.md`, indicizzata): tesi",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
+  },
+  {
+    "id": "BUS-fa71d79c",
+    "stato": "da_fare",
+    "testo": "**PROSSIMO**: riabilitare watchdog (UAC, rinfresca anche l'API col rag_engine GPU);",
+    "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
   },
   {
     "id": "BUS-dd7ac66a",

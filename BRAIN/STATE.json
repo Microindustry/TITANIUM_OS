@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-22T14:22:34.176893",
-  "active_milestone": "Sessione #40 (22/06): RAG SBLOCCATO+OTTIMIZZATO (torch cu124 ripristinato, chromadb 0.5.23, embedder+reranker su GPU -> rebuild 2:48 vs 15min, 32774 chunk allineati). MIMS/VULCAN sviluppati sul sapere connesso + 17 foto reali analizzate (pressa VULCAN costruita, stampo provvisorio). CANONE bonificato dal framing vietato 'recuperato' con REGOLA SCALABILE (canon_guard agganciato a story_agent+night_audit). Dataset rigenerato. ASSOLUTO V9 creata (tesi: smantellare l'alluminio estruso, con contributo ingegneristico sulla scalabilita).",
-  "last_action": "Modifica a EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
-  "next_step": "Riabilitare TI_Watchdog (1 UAC: schtasks /Change /TN TI_Watchdog /ENABLE + /Run -> rinfresca anche l'API col rag_engine GPU). Poi: decidere via connettori MIMS (compressione vs iniezione, SCHEDA §5); montare martinetto Vevor 3 stadi -> 1a colata mattonella; ordinare mandrino 2.2kW ER20; rifinire STORIE/Nina.",
-  "session_count": 81,
+  "last_update": "2026-06-22T16:07:04.389819",
+  "active_milestone": "Sessione #41 (22/06): PUNTO 0 — il RAG gira INTEGRATO e si auto-cura. Watchdog riabilitato. RAG self-heal: fix radice orfani in rag_engine.py (semantico==bm25 da solo) + gate rebuild_rag_clean ora rileva la divergenza (non solo count=0). Canone VULCAN/CNC corretto su tutti i doc (telaio VULCAN=2 cilindri-guida, il 60x60 e' la CNC; croce sperimentale). Generatori contenuti GROUNDED sul RAG: story_agent v1.2 + content_pipeline. GENERATORE NINA a 2 stadi (NODES/NINA_AGENT/nina_agent.py): Architetto(haiku, RAG)+Scrittore(sonnet, bible viva) -> EP_N2_16 di prova, output in _PROPOSTI. Obsidian riconnesso (650 note) + MOC _CANONE. START_LOGIN incrementale (no piu' rebuild 3min/login).",
+  "last_action": "Modifica a .gitignore",
+  "next_step": "PROSSIMA SESSIONE = ULTRACODE: rendere NINA DEFINITIVA — filone UNICO discorsivo inizio->fine, evolutivo+integrabile, UNA SOLA VERITA' sul RAG (canone=EP_N2 v2, vecchi EP_AV_*->archivio; ordinare il cammino con open loop concatenati; audit STORIE). Stile DECISO in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md ('diario animato del sistema vero'). Poi: animazione + voce. Vedi banner in PROSSIMA_SESSIONE.md.",
+  "session_count": 82,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-22T14:19:19.539457"
+      "last_activity": "2026-06-22T16:06:39.311015"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -72,9 +72,14 @@
       "RAG OTTIMIZZATO GPU (22/06): embedder+reranker forzati DEVICE=cuda in rag_engine.py (ChromaDB default era cpu); rebuild 2:48 vs ~15min, semantico=bm25 allineato (32774=32774)",
       "MIMS/VULCAN sviluppati sul sapere connesso (22/06): SCHEDA_PRODOTTO_MIMS_VULCAN consolidata + 17 foto reali analizzate (pressa VULCAN costruita 60x60, guide lineari, stampo mattonella provvisorio) -> BUILD_REALE_20260622; VULCAN_MANIFESTO corretto (guide+martinetto Vevor 3 stadi, via 'recuperati')",
       "CANONE veritiero - regola scalabile (22/06): tolto framing vietato 'componente recuperato/usato/EUR 0' V32/VULCAN da 49 file (86 sostituzioni); AUTOMATIONS/core/canon_guard.py agganciato a story_agent.save_episode (pulisce alla fonte) + night_audit (segnale canon_violations)",
-      "ASSOLUTO V9 creata+indicizzata (22/06): tesi 'smantellare l'alluminio estruso' - ricerca mercato/crepe T-slot + contributo ingegneristico sulla scalabilita (standard-piattaforma, materia-IP, produzione distribuita); dataset rigenerato (180 campioni)"
+      "ASSOLUTO V9 creata+indicizzata (22/06): tesi 'smantellare l'alluminio estruso' - ricerca mercato/crepe T-slot + contributo ingegneristico sulla scalabilita (standard-piattaforma, materia-IP, produzione distribuita); dataset rigenerato (180 campioni)",
+      "Sessione #41 (22/06): TI_Watchdog riabilitato (self-healing on). RAG self-heal RADICE: purge orfani in rag_engine.build_index (semantico==bm25 si mantiene da solo) + gate rebuild_rag_clean rileva la divergenza semantico!=bm25 (non solo count=0)",
+      "Canone VULCAN/CNC corretto su tutti i doc (22/06): telaio VULCAN = i 2 cilindri fanno da guida (NON il tubolare 60x60, quello e' la CNC); croce centraggio sperimentale. SCHEDA §1/§3/§6 + BUILD_REALE + VULCAN_MANIFESTO riallineati e reindicizzati",
+      "Generatori contenuti GROUNDED sul RAG (22/06): story_agent v1.2 (retrieve_context via /api/rag/search + regola canone nel system prompt) + content_pipeline; allineati al pattern di milestone_to_episode (chiude il loop regola 7)",
+      "GENERATORE NINA a 2 stadi (22/06): NODES/NINA_AGENT/nina_agent.py — Architetto(haiku, grounding RAG)+Scrittore(sonnet, Character Bible viva), formato EP_N2_*, output in S_AVVENTURA/_PROPOSTI (il sistema propone, l'umano approva) + riga NINA_SEED; test EP_N2_16 'Il Guardiano che Non Dorme' qualita' definitiva",
+      "Obsidian valorizzato + sistema verificato (22/06): setup_obsidian (650 note, 13 indici, ponti cross-mondo) + MOC curato MENTE/_CANONE.md (la verita' unica); START_LOGIN rebuild->incrementale; sistema tutto-attaccato verificato (API+watchdog+RAG ok)"
     ],
-    "next": "Riabilitare TI_Watchdog (1 UAC); decidere via connettori MIMS (compressione vs iniezione); montare martinetto Vevor 3 stadi -> 1a colata mattonella; ordinare mandrino 2.2kW ER20; rifinire STORIE/Nina",
+    "next": "PROSSIMA SESSIONE ULTRACODE: rendere NINA DEFINITIVA (filone unico discorsivo, evolutivo, UNA SOLA VERITA' sul RAG; canone=EP_N2 v2, archiviare EP_AV_* vecchi, ordinare il cammino, audit STORIE) -> poi animazione+voce. Stile deciso in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Aperti: divergenza RAG 0,2% (auto-fix notturno @03:37), via connettori MIMS (SCHEDA §5), martinetto Vevor+mandrino ER20",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -86,16 +91,16 @@
     "ip_lan": "192.168.0.112",
     "ip_tailscale": "100.125.152.124"
   },
-  "focus_today": "Debito #38 INTEGRATO (pitch visibili, pilastri reintegrati, calendario, animazioni motion). Prossimo: night_audit parse difensivo, Obsidian Mari/VULCAN/MIMS, estendere motion a CV/pitch/critiche. Integra, non rifare.",
+  "focus_today": "PUNTO 0 raggiunto: RAG integrato+self-healing, generatori grounded, generatore Nina pronto, canone bonificato, Obsidian valorizzato. Prossimo (ULTRACODE): Nina DEFINITIVA (filone unico, una sola verita') + animazione/voce. Integra, non rifare.",
   "blockers": [
     "Chiavi .env da ruotare (red-team #38) — le ruota Matteo",
-    "TI_Watchdog disabilitato (no self-healing) — riabilitare con 1 UAC: schtasks /Change /TN TI_Watchdog /ENABLE + /Run",
+    "Divergenza RAG residua 0,2% (semantico vs bm25) — auto-fix notturno @03:37 (rebuild_rag_clean gate migliorato, GPU esclusiva)",
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
-    "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
+    "Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2"
   ],
   "ideas_inbox": 0,
   "nodes": {
-    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | 32774 chunk (557 file, semantico=bm25 allineato) | chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 | embedder+reranker DEVICE=cuda (rebuild ~2:48 vs 15min CPU) | reranker bge-reranker-v2-m3",
+    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | ~32800 chunk (559 file) | SELF-HEAL orfani nell'incrementale (semantico==bm25 si mantiene da solo) + gate rebuild_rag_clean rileva divergenza | chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 | embedder+reranker DEVICE=cuda | reranker bge-reranker-v2-m3 | NB: un solo processo GPU alla volta (8GB), CLI rebuild con API su -> OOM",
     "MENTE_SCANNER": "pronto — python NODES/MENTE_SCANNER/scanner.py",
     "WATCHER": "pronto — python AUTOMATIONS/core/watcher.py",
     "N8N": "ATTIVO — n8n start (binario globale 2.25.6, localhost:5678), account owner locale self-hosted; avvio-al-login via START_LOGIN.bat",

@@ -327,6 +327,24 @@ def build_index(force: bool = False) -> int:
             corpus.pop(cid, None)
             removed_chunks += 1
 
+    # Self-heal orfani: tieni il semantico allineato al corpus (== BM25) ad OGNI
+    # incrementale, cosi' il drift manifest<->ChromaDB (file accorciato, processo
+    # interrotto a meta', migrazioni) non si accumula piu' in silenzio finche' non
+    # serve un force-rebuild manuale. Gli ID validi correnti sono TUTTI nel corpus
+    # (ID derivati dal path, non dal contenuto), quindi purgare collection-corpus
+    # non puo' mai cancellare un chunk buono. Invariante: collection.count()==len(corpus).
+    if not force:
+        try:
+            live_ids = set(collection.get(include=[]).get("ids", []))
+            orphans  = list(live_ids - set(corpus.keys()))
+            for i in range(0, len(orphans), 500):
+                collection.delete(ids=orphans[i:i+500])
+            if orphans:
+                removed_chunks += len(orphans)
+                logger.info("Self-heal: purgati %d vettori orfani (semantico->corpus)", len(orphans))
+        except Exception as e:
+            logger.warning("Self-heal orfani saltato: %s", e)
+
     manifest["files"] = new_files
     _save_manifest(manifest)
     _save_corpus(corpus)

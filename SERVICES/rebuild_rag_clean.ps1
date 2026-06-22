@@ -18,15 +18,20 @@ if (-not (Test-Path $PY)) { $PY = (Get-Command python -ErrorAction SilentlyConti
 $env:MENTE_DIR = "C:\Users\teo\MICROINDUSTRY\MENTE"
 $env:PYTHONPATH = $TI
 
-# HEALTH GATE: se il RAG semantico e' gia' sano (>1000 chunk), non rifare nulla.
-# Rende lo script idempotente -> sicuro da chiamare OGNI notte (self-heal solo se rotto).
+# HEALTH GATE: il RAG e' sano solo se semantico >1000 chunk E semantico == bm25.
+# v1.1: oltre al caso "0 chunk" ora rileva anche la DIVERGENZA semantico!=bm25 (lasciata
+# da un incrementale interrotto/conflitto GPU) -> la regola "una sola verita'" vale anche
+# qui. Idempotente: se sano e allineato non fa nulla; se rotto O divergente, rebuild esclusivo.
 $pre = & $PY "$TI\NODES\MENTE_RAG\rag_engine.py" --stats 2>$null | Out-String
 $pc = [regex]::Match($pre, '"chunks":\s*(\d+)')
-if ($pc.Success -and [int]$pc.Groups[1].Value -gt 1000) {
-    Write-Host "RAG gia' sano ($($pc.Groups[1].Value) chunk semantici) - nessun rebuild necessario." -ForegroundColor Green
+$pb = [regex]::Match($pre, '"bm25_chunks":\s*(\d+)')
+$cn = if ($pc.Success) { [int]$pc.Groups[1].Value } else { 0 }
+$bn = if ($pb.Success) { [int]$pb.Groups[1].Value } else { -1 }
+if ($cn -gt 1000 -and $cn -eq $bn) {
+    Write-Host "RAG gia' sano e allineato ($cn == $bn) - nessun rebuild necessario." -ForegroundColor Green
     return
 }
-Write-Host "RAG da rigenerare (chunk semantici insufficienti) - procedo con rebuild esclusivo." -ForegroundColor Yellow
+Write-Host "RAG da rigenerare (semantico=$cn bm25=$bn: vuoto o divergente) - rebuild esclusivo." -ForegroundColor Yellow
 
 Write-Host "== 1) fermo il watchdog (non deve rilanciare api durante il rebuild) ==" -ForegroundColor Cyan
 try { Stop-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop; Write-Host "  TI_Watchdog (task) fermato" } catch { Write-Host "  (task watchdog gia' fermo o assente)" }

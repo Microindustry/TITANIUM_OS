@@ -27,8 +27,11 @@ start "" "%PYTHONW%" "%TI_ROOT%\api_server.py"
 :: 2. Dashboard — Vite porta 5173 (usa pnpm)
 start "" cmd /c "cd /d "%TI_ROOT%\DASHBOARD" && "%PNPM%" dev --silent"
 
-:: 3. RAG rebuild in background (sync MENTE/ -> ChromaDB)
-start "" "%PYTHONW%" "%TI_ROOT%\NODES\MENTE_RAG\rag_engine.py" --rebuild
+:: 3. RAG sync incrementale in background (MENTE/ -> ChromaDB). v2.1: era --rebuild
+::    completo (~3 min GPU a OGNI login) -> ora incrementale con self-heal orfani
+::    (semantico==bm25 si mantiene da solo). Il full-rebuild pulito resta nel
+::    night_research (rebuild_rag_clean health-gated) quando serve davvero.
+start "" "%PYTHONW%" "%TI_ROOT%\NODES\MENTE_RAG\rag_engine.py" --incremental
 
 :: 4. n8n — porta 5678 (binario globale installato 09/06; fallback npx se assente)
 if exist "%N8N%" (

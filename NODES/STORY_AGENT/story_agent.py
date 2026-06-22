@@ -1,8 +1,12 @@
-# story_agent.py | TITANIUM_OS / NODES / STORY_AGENT | v1.1 | 2026-06-11
+# story_agent.py | TITANIUM_OS / NODES / STORY_AGENT | v1.2 | 2026-06-22
 # Genera episodi narrativi automaticamente da git commits, sessioni, milestone
 # Gira come Stop hook + cron notturno — PC sempre acceso, zero perdita di materiale
 # v1.1: prompt allineato al canone 2-assi — ogni episodio emette ## FATTI (per il RAG)
 #       (terzo requisito: l'episodio deve insegnare al sistema, non solo raccontare)
+# v1.2: GROUNDING RAG (allineato a milestone_to_episode) — l'episodio attinge al sapere
+#       connesso di MENTE via /api/rag/search (leggero, no torch nel Stop hook; fallback al
+#       motore diretto, poi best-effort). Regola di canone nel system prompt = prevenzione
+#       alla fonte (oltre al canon_guard.clean che gira dopo). Chiude il loop regola 7.
 
 import os
 import sys
@@ -11,6 +15,8 @@ import json
 import logging
 import subprocess
 import re
+import urllib.request
+import urllib.parse
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -158,6 +164,42 @@ def get_project_snapshot() -> dict:
         return {}
 
 
+# ── GROUNDING RAG ─────────────────────────────────────────────────────────────
+
+def retrieve_context(query: str, k: int = 6) -> str:
+    """Recupera fatti reali dal RAG (MENTE/) per ancorare l'episodio — come
+    milestone_to_episode. Prima via /api/rag/search (leggera, no torch nel Stop
+    hook); se l'API e' giu', fallback al motore diretto; poi best-effort (stringa
+    vuota -> il prompt resta sui fatti del milestone, senza inventare)."""
+    query = (query or "").strip()[:300]
+    if not query:
+        return ""
+    # 1) API locale (il watchdog la tiene viva) — rilegge indice da disco a ogni query
+    try:
+        url = "http://localhost:5001/api/rag/search?" + urllib.parse.urlencode({"q": query})
+        with urllib.request.urlopen(url, timeout=20) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+        res = (data.get("results") or [])[:k]
+        if res:
+            return "\n".join(
+                f"- [{r.get('source','?')}] {(r.get('preview') or '').strip()[:240]}"
+                for r in res
+            )
+    except Exception:
+        pass
+    # 2) Fallback: motore diretto (carica torch — solo se l'API non risponde)
+    try:
+        from NODES.MENTE_RAG.rag_engine import search
+        res = search(query, top_k=k)
+        if res:
+            return "\n".join(
+                f"- [{r['source']}] {r['preview'].strip()[:240]}" for r in res
+            )
+    except Exception as e:
+        logger.warning("RAG context non disponibile (%s) — episodio non grounded", e)
+    return ""
+
+
 # ── EPISODIO ESISTENTE ────────────────────────────────────────────────────────
 
 def episode_slug(group: dict) -> str:
@@ -181,12 +223,19 @@ SYSTEM_PROMPT = """Sei il narratore di TITANIUM_OS — il sistema cognitivo di M
 Matteo è un artigiano industriale (TIG/MIG titanio MotoGP, robot, presse, QC) che costruisce:
 - V32: CNC 3 assi da 178 kg in una taverna da 12 m² — corpo unico, Epoxy Granite, precisione IT6-IT7
 - MIMS: sistema modulare di connettori fisici — tiles 190x190, PA-GF30
+- VULCAN: pressa a compressione per le "mattonelle"/pannelli MIMS — il telaio ha 2 cilindri che fungono da guida del piano premente; geometria a croce di centraggio sperimentale
 - GENESIS: il sistema cognitivo — RAG ChromaDB, Flask API, React dashboard, agenti AI, MCP server
 - EVA: WhatsApp automation per il centro estetico di Maria
 Target capannone: 15 luglio 2030
 
 Il tuo stile è quello degli episodi S1: narrativo, cinematografico, tecnico ma personale. ZERO motivational speech.
 I dati sono reali. Le decisioni sono verificate. Il tono è onesto — anche sui fallimenti e i momenti difficili.
+
+REGOLA DI CANONE (inderogabile): i componenti di V32 e VULCAN NON si descrivono MAI come
+"recuperati / usati / di recupero / a costo zero / seconda mano". Sono componenti industriali
+reali: usa SEMPRE la specifica tecnica + la logica progettuale (es. "PLC industriale Siemens
+S7-314C"). Ancorati ai FATTI DALL'ARCHIVIO (RAG) qui sotto: usa QUEI numeri e decisioni, non
+inventare quote né attribuire a VULCAN parti di altre macchine (es. il telaio CNC).
 
 Ogni episodio ha:
 - COLD OPEN cinematografico (1 immagine o scena concreta)
@@ -229,6 +278,22 @@ def generate_episode(group: dict, sessions: list[str], snapshot: dict) -> str:
     pillars = snapshot.get("pillars", {})
     last_action = snapshot.get("last_action", "")
 
+    # GROUNDING: interroga il RAG con i temi dei commit di questo gruppo, cosi'
+    # l'episodio si ancora ai fatti reali di MENTE (regola 7) invece che ai soli
+    # subject di git. La query e' la sintesi dei subject del gruppo.
+    rag_query = " ".join(c["subject"] for c in group["commits"])[:300]
+    rag_context = retrieve_context(rag_query)
+    if rag_context:
+        logger.info("RAG: %d fonti per il grounding (%s)",
+                    len(rag_context.splitlines()), rag_query[:50])
+    fonti_block = (
+        f"FATTI DAL TUO ARCHIVIO (MENTE/RAG) — usa QUESTI dati reali, numeri e decisioni; "
+        f"NON inventare e NON confondere macchine diverse:\n{rag_context}\n"
+        if rag_context else
+        "(Nessun fatto specifico recuperato dall'archivio: resta sui fatti del commit/milestone, "
+        "non inventare numeri.)\n"
+    )
+
     user_prompt = f"""Genera un episodio podcast narrativo per TITANIUM_OS basato su questo lavoro:
 
 DATA: {group['date']}
@@ -241,6 +306,7 @@ CONTESTO PROGETTO:
 - GENESIS: {pillars.get('GENESIS', {}).get('pct_complete', '?')}% completamento
 - Ultima azione: {last_action[:200]}
 
+{fonti_block}
 ESTRATTI SESSIONI RECENTI:
 {sessions_text[:1200]}
 

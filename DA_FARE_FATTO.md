@@ -57,6 +57,87 @@
 
 ---
 
+## Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto
+
+- [✓] **TI_Watchdog riabilitato + lanciato** (era disabilitato da 2gg, niente self-healing):
+      `schtasks /Change /ENABLE` + `/Run` via UAC → stato **In esecuzione**. Blocker #1 chiuso.
+- [✓] **Correzione canone VULCAN vs CNC** (Matteo, autorevole): il telaio **tubolare 60×60 /
+      ~800×600 / h~905 / guide lineari** delle foto è la **CNC**, *non* VULCAN. Il **telaio VULCAN
+      = quello con i 2 cilindri, e sono i 2 cilindri stessi a fare da guida**; misure esatte
+      **ignote** (da rilevare a calibro); geometria a **croce = sperimentale/WIP**. Corretto in
+      modo additivo in `MENTE/VULCAN/BUILD_REALE_20260622.md` (blocco ⚠ in testa) +
+      `MENTE/MIMS/SCHEDA_PRODOTTO_MIMS_VULCAN.md` (§1 e §6). Reindicizzato: search live 0.99.
+- [✓] **Desync RAG diagnosticato + risolto**: semantico 32778 ≠ bm25 31828 (950 **vettori orfani**
+      accumulati per drift manifest↔ChromaDB). Rebuild pulito via `POST /api/rag/rebuild` →
+      **32778 == 32778** allineato; API riavviata (`restart_api.ps1`, UAC) → `/api/rag/vectors`
+      live, health ok.
+- [✓] **FIX RADICE (additivo) — self-heal orfani in `rag_engine.py`**: a ogni incrementale,
+      `collection − corpus` viene purgato (gli ID sono derivati dal **path**, non dal contenuto →
+      mai cancella un chunk valido). L'invariante `semantico==bm25` ora si mantiene **da solo**;
+      basta il force-rebuild manuale di "se divergono". Testato: incrementale pulito, **32777==32777**.
+- [◐] **V9 = materia di studio** (Matteo): ASSOLUTO V9 va implementata con MIMS *dopo*
+      studio → generazione → stampa 3D, ma prima va **pensata** (non banale). Parcheggiata come
+      indirizzo, non come task immediato.
+
+### Processo CONTENUTI + automazioni — grounding RAG alla fonte
+- [✓] **story_agent v1.2 — GROUNDING RAG**: il motore narrativo notturno (Stop hook + cron)
+      generava SOLO da commit-subject + sessioni troncate, **senza interrogare il RAG**. Ora
+      `retrieve_context()` interroga `/api/rag/search` (leggera, no torch nel Stop hook; fallback
+      motore diretto) e inietta "FATTI DAL TUO ARCHIVIO" nel prompt → episodi ancorati al sapere
+      reale di MENTE (regola 7). + regola di canone + VULCAN nel system prompt (prevenzione alla
+      fonte, oltre a canon_guard.clean). Allineato al pattern già provato di `milestone_to_episode`.
+- [✓] **content_pipeline.py — stesso grounding**: il distributore multi-formato (LinkedIn/podcast/
+      video) ora ancora i 3 output ai FATTI dal RAG + regola canone nel system. Regola 4 (1 input → N output, tutti grounded).
+- [✓] **Correzione "scritto senza vero RAG" (sessione #40, RAG rotto = semantico 0)**: i 3 doc
+      VULCAN/MIMS portavano la confusione telaio. Corretti e riallineati: `SCHEDA_PRODOTTO_MIMS_VULCAN`
+      (§1/§3/§6), `BUILD_REALE_20260622` (blocco ⚠), `VULCAN_MANIFESTO` (Stato Attuale). Reindicizzati
+      (watcher auto + verifica search 0.99).
+- [✓] **Verificato gli EPISODI NON portano l'errore**: le "guide lineari/60×60" negli episodi sono
+      correttamente attribuite alla **V32** (S355), non a VULCAN; il framing "recuperato" hardware era
+      già bonificato da canon_guard (#40). → niente rigenerazione cieca di episodi hand-authored.
+- [✓] **GENERATORE NINA grounded a 2 stadi** (`NODES/NINA_AGENT/nina_agent.py`, v1.0): 1 concetto
+      reale → 1 avventura. **Stadio 1 Architetto (haiku)** interroga il RAG e progetta lo scheletro
+      (analogia "test della sarta", strato-fondo reale, open loop, FATTI atomici grounded); **Stadio 2
+      Scrittore (sonnet)** scrive l'avventura completa in voce Nina/THEMIS/FORGE dalla Character Bible
+      VIVA (letta da MENTE, resta in sync). Formato identico agli EP_N2_*; canon_guard alla fonte;
+      FATTI ricostruiti dal codice se il writer li omette. Output in `S_AVVENTURA/_PROPOSTI/` con
+      `status: proposto_da_validare` (canone: "il sistema PROPONE, l'umano APPROVA"; i VALORI li decide
+      il genitore) + riga `NINA_SEED` suggerita per la promozione.
+- [✓] **Test end-to-end OK**: generato `EP_N2_16 — Il Guardiano che Non Dorme` (watchdog+self-heal,
+      regione 6 giro 3) — grounding 27 fonti reali, strato-fondo ancorato al lavoro VERO di oggi
+      (Task Scheduler RunLevel=Highest, niente UAC, self-heal RAG). Qualità definitiva. In `_PROPOSTI/`
+      da rivedere → spostare in S_AVVENTURA + aggiungere la riga NINA_SEED a `build_episodes_json.py`.
+- [ ] **NON aggiunto alle notturne unattended** (di proposito): la generazione Nina resta on-demand
+      con approvazione umana (specie VALORI/relazioni), come da NINA_V2_ARCHITETTURA.
+
+### Chiusura #41 — Obsidian valorizzato, sistema verificato, Punto 0 predisposto
+- [✓] **Obsidian riconnesso** (`setup_obsidian`): 650 note, 13 indici di dominio, 191 episodi
+      sincronizzati nel vault, Collegati + ponti cross-mondo iniettati → i 3 doc VULCAN corretti
+      ora agganciati nel grafo. + nuovo MOC curato **`MENTE/_CANONE.md`** = "la verità unica" (un
+      puntatore per pilastro, serve alla regola "una sola verità").
+- [✓] **Sistema verificato (tutto attaccato)**: API 5001 ok, Watchdog **Running** (sorveglia
+      api+watcher), RAG search 0.98, tutte le notturne schedulate per stanotte. Dashboard 5173 +
+      n8n 5678 GIÙ (on-demand, non sorvegliati — di proposito).
+- [✓] **Modo migliore per far girare tutto**: (a) `START_LOGIN.bat` riga 31 da `--rebuild` completo
+      (~3 min/login) → **`--incremental`** (secondi, self-heal mantiene l'allineamento). (b) Migliorato
+      il **gate di `rebuild_rag_clean.ps1`**: ora rileva anche la **divergenza semantico≠bm25** (non
+      solo count=0) → le notturne self-healano la divergenza da sole ("una sola verità").
+- [⚠] **Divergenza RAG residua 0,2%** (semantico≈32817 vs bm25≈32882): nata da incrementali in
+      conflitto + **GPU OOM** (API tiene la GPU, un 2° rebuild CLI va in out-of-memory su GTX 1070 8GB).
+      Funzionalmente innocua (search 0.98); **auto-riallineata stanotte** da `TI_NightResearch` @03:37
+      (rebuild_rag_clean elevato = GPU esclusiva, niente UAC). Lezione: un solo processo GPU alla volta.
+- [✓] **Punto 0 PREDISPOSTO per la prossima sessione (ULTRACODE)**: banner in `PROSSIMA_SESSIONE.md`
+      + dottrina di stile DECISA (delegata a Claude) e piano in 6 passi in `MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md`.
+      L'ultimo lavoro Nina: renderla **filone unico definitivo** (discorsivo inizio→fine, evolutivo,
+      integrabile, **una sola verità sul RAG**), poi **animazione + voce**. Stile = "il diario animato
+      del sistema vero", massima integrazione all'ecosistema.
+- [✓] **Verificato (no fix necessario):** la ricerca dell'API **non** va stale dopo un reindex —
+      `_get_collection` riapre il client e `_kw_search` rilegge la TF-IDF da disco a OGNI query
+      (rag_engine.py:72, :192). Il 503 su `/api/rag/vectors` era **transitorio durante il rebuild**
+      (collection svuotata per-id), non staleness persistente → niente `/api/rag/reload` da aggiungere.
+
+---
+
 ## Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)
 
 - [✓] **Diagnosi del blocco "RAG semantico = 0"**: erano DUE guasti sovrapposti, non uno.

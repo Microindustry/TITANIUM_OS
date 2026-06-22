@@ -90,7 +90,9 @@ def collect() -> dict:
     dup = sorted({i for i in json_ids if json_ids.count(i) > 1})
 
     md_files = [p for p in sorted(EPISODES_DIR.rglob("*.md"))
-                if "INDEX" not in p.stem.upper()]  # gli indici non sono episodi
+                if "INDEX" not in p.stem.upper()                       # gli indici non sono episodi
+                and not any(part.startswith("_")                       # _PROPOSTI/_ARCHIVIO = staging
+                            for part in p.relative_to(EPISODES_DIR).parts[:-1])]
     orphans = []
     for p in md_files:
         m = extract_md_meta(p)

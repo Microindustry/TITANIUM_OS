@@ -350,10 +350,13 @@ def main():
             print("aggiunto EP_PILOTA_00 in cima")
 
     # 4) recupero orfani (regola d'oro: non perdere episodi). Additivo, mai sovrascrive.
+    #    Esclude le cartelle di staging/archivio (_PROPOSTI proposte Nina da validare,
+    #    _ARCHIVIO versioni vecchie): non sono canone renderizzato.
     orphan_paths = [
         ROOT / o["path"]
         for o in audit.main_collect()["orphans"]
         if "INDEX" not in Path(o["path"]).stem.upper()
+        and not any(part.startswith("_") for part in Path(o["path"]).parts[:-1])
     ]
     used_ids = {e.get("id") for e in eps}
     recovered = []
@@ -376,6 +379,11 @@ def main():
     direct = []
     if EP_SRC.exists():
         for p in sorted(EP_SRC.rglob("*.md")):
+            # le cartelle di staging/archivio non entrano nel canone renderizzato:
+            # _PROPOSTI = proposte del generatore Nina da validare; _ARCHIVIO = versioni
+            # vecchie tenute come origine (additivo, non cancellate).
+            if any(part.startswith("_") for part in p.relative_to(EP_SRC).parts[:-1]):
+                continue
             fm = _parse_frontmatter(p.read_text(encoding="utf-8", errors="replace"))
             fid = fm.get("id")
             if fid and fid not in present:
