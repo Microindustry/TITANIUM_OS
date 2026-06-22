@@ -17,12 +17,14 @@ if not defined PYTHON (
     exit /b 1
 )
 
-:: SELF-HEAL RAG (regola 11, automiglioramento): questo task gira ELEVATO, quindi puo'
-:: fare un rebuild esclusivo senza UAC interattivo. rebuild_rag_clean ha un health-gate:
-:: se il RAG e' gia' sano non fa nulla; se e' rotto (0 chunk) ferma api+watchdog,
-:: rigenera e riavvia. Cosi' il semantico si ripara da solo invece di aspettare un click.
-echo [night_research] self-heal RAG (rebuild se vuoto) >> "%LOG%"
-powershell -NoProfile -ExecutionPolicy Bypass -File "%TI_ROOT%\SERVICES\rebuild_rag_clean.ps1" >> "%LOG%" 2>&1
+:: SELF-HEAL RAG a 2 LIVELLI (regola 11): questo task gira ELEVATO, quindi recovery
+:: esclusivo senza UAC. rag_recover e' idempotente e copre ENTRAMBI i guasti:
+::   - CORRUZIONE (query crasha, es. blackout): L1 sposta solo il segmento HNSW e
+::     Chroma lo ricostruisce da sqlite (no ri-embed, secondi); L2 rebuild da corpus.
+::   - DIVERGENZA (semantico!=bm25, incrementale interrotto): L2 riallinea.
+:: Se il RAG e' gia' sano E allineato non fa nulla. (sostituisce rebuild_rag_clean, #42)
+echo [night_research] self-heal RAG a 2 livelli (corruzione + divergenza) >> "%LOG%"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%TI_ROOT%\SERVICES\rag_recover.ps1" >> "%LOG%" 2>&1
 
 :: topic GUIDATI da STATE + RAG (night_topics.py scrive DATA\night_topics.txt)
 "%PYTHON%" AUTOMATIONS\core\night_topics.py >> "%LOG%" 2>&1

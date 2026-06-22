@@ -36,7 +36,15 @@ Write-Host "  processi terminati: $killed"
 Start-Sleep -Milliseconds 1000
 
 # 2) Riavvia api_server (detached, niente finestra). Il watchdog lo adottera'.
-Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden
+# NB: -WindowStyle Hidden lascia stdout/stderr come handle OS INVALIDI: il codice
+# nativo (torch/CUDA, caricando il modello RAG) ci scrive sopra e CRASHA il processo
+# (reset connessione su /api/rag/search). Si redirige su un logfile = handle validi
+# + finalmente log diagnosticabili. (#42 blackout)
+$logDir = Join-Path $TI "logs"
+if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
+$apiLog = Join-Path $logDir "api_server.log"
+Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden `
+    -RedirectStandardOutput $apiLog -RedirectStandardError (Join-Path $logDir "api_server.err.log")
 Start-Sleep -Seconds 3
 
 # 3) Verifica /api/health

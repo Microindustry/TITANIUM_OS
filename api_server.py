@@ -18,6 +18,18 @@ from datetime import datetime
 if sys.stdout is not None and sys.stdout.encoding != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
+# Processo hidden (avviato da watchdog/START_LOGIN con -WindowStyle Hidden):
+# sys.stdout/stderr sono None. torch/HuggingFace/tqdm/chromadb scrivono progress
+# bar e warning su stderr -> scrivere su None = crash nativo del worker (reset
+# connessione, non eccezione Python). Reindirizza gli stream None su devnull cosi'
+# qualunque libreria caricata in-process (es. rag_engine sul GPU) non puo' uccidere
+# il processo. Additivo, nessun output utile perso (gira senza console). (#42 blackout)
+_devnull = open(os.devnull, "w", encoding="utf-8")
+if sys.stdout is None:
+    sys.stdout = _devnull
+if sys.stderr is None:
+    sys.stderr = _devnull
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 try:
     from CORE.log import get_logger

@@ -31,7 +31,7 @@ if ($cn -gt 1000 -and $cn -eq $bn) {
     Write-Host "RAG gia' sano e allineato ($cn == $bn) - nessun rebuild necessario." -ForegroundColor Green
     return
 }
-Write-Host "RAG da rigenerare (semantico=$cn bm25=$bn: vuoto o divergente) - rebuild esclusivo." -ForegroundColor Yellow
+Write-Host "RAG da rigenerare (semantico=$cn bm25=${bn}: vuoto o divergente) - rebuild esclusivo." -ForegroundColor Yellow
 
 Write-Host "== 1) fermo il watchdog (non deve rilanciare api durante il rebuild) ==" -ForegroundColor Cyan
 try { Stop-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop; Write-Host "  TI_Watchdog (task) fermato" } catch { Write-Host "  (task watchdog gia' fermo o assente)" }
@@ -66,7 +66,12 @@ if ($chunks -gt 0) { Write-Host "  OK: $chunks chunk semantici" -ForegroundColor
 else { Write-Host "  ATTENZIONE: ancora 0 chunk - rilancia o controlla i log" -ForegroundColor Red }
 
 Write-Host "== 5) riavvio api_server ==" -ForegroundColor Cyan
-Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden
+# redirect su logfile = handle OS validi (Hidden lascia stdout/stderr invalidi e il
+# codice nativo torch ci crasha sopra su /api/rag/search). (#42 blackout)
+$logDir = Join-Path $TI "logs"; if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
+Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden `
+    -RedirectStandardOutput (Join-Path $logDir "api_server.log") `
+    -RedirectStandardError  (Join-Path $logDir "api_server.err.log")
 
 Write-Host "== 6) riavvio watchdog ==" -ForegroundColor Cyan
 try { Start-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop; Write-Host "  TI_Watchdog riavviato" } catch { Write-Host "  (non ho potuto riavviare il watchdog: $_)" }

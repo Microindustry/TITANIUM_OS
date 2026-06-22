@@ -13,10 +13,14 @@ dist/
 .vite/
 # ChromaDB + RAG internals — si rebuild da MENTE/, possono contenere dati sensibili
 NODES/MENTE_RAG/chroma_db/
+NODES/MENTE_RAG/chroma_db_*/
 NODES/MENTE_RAG/rag_corpus.jsonl
 NODES/MENTE_RAG/rag_manifest.json
+NODES/MENTE_RAG/rag_manifest_*.json
 NODES/MENTE_RAG/rag_tfidf.pkl
 NODES/MENTE_RAG/mente_index.json
+# device override machine-local (cpu/cuda) — come .env, non versionare
+NODES/MENTE_RAG/rag_device.txt
 # Indice semantico (binario) — rigenerabile da MENTE/, riscritto di continuo dal watcher (churn)
 DATA/semantic_index.db
 DATA/daily_brief_last.md

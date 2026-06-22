@@ -1,5 +1,8 @@
-# research_agent.py | TITANIUM_OS / NODES / RESEARCH_AGENT | v1.1 | 2026-05-29
+# research_agent.py | TITANIUM_OS / NODES / RESEARCH_AGENT | v1.2 | 2026-06-23
 # Trova paper, tesi, libri tecnici dal web e li ingesta in MENTE/ → RAG
+# v1.2: resilienza (#42) — backoff esponenziale sui 429/503 (Semantic Scholar
+#       rate-limita di notte -> 0 risultati), API-key opzionale, guardia globale
+#       che logga JSON e continua invece di abortire l'intera catena notturna.
 
 import os
 import re
@@ -10,6 +13,7 @@ import hashlib
 import logging
 import argparse
 import requests
+import traceback
 from pathlib import Path
 from datetime import datetime
 from urllib.parse import quote_plus, urljoin
@@ -33,6 +37,33 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 }
+
+
+def _get_backoff(url, *, delays=(1, 4, 16), retry_status=(429, 503), **kwargs):
+    """requests.get con backoff esponenziale sui rate-limit (429/503). Le sorgenti
+    gratuite (Semantic Scholar in primis) rispondono 429 a raffica di notte: senza
+    attesa la query torna 0 risultati e la ricerca e' di fatto morta. Fa il primo
+    tentativo + fino a len(delays) retry; ritorna l'ultima Response (il chiamante
+    fa raise_for_status). (#42)"""
+    resp = requests.get(url, **kwargs)
+    for d in delays:
+        if resp.status_code not in retry_status:
+            return resp
+        logger.warning("[backoff] %s HTTP %s — attendo %ss", url.split("?")[0], resp.status_code, d)
+        time.sleep(d)
+        resp = requests.get(url, **kwargs)
+    return resp
+
+
+def _ss_headers():
+    """Header per Semantic Scholar; aggiunge x-api-key se presente in env
+    (SEMANTIC_SCHOLAR_API_KEY) -> rate-limit molto piu' alto, niente 429."""
+    h = dict(HEADERS)
+    key = os.environ.get("SEMANTIC_SCHOLAR_API_KEY", "").strip()
+    if key:
+        h["x-api-key"] = key
+    return h
+
 
 # ── SORGENTI ──────────────────────────────────────────────────────────────────
 
@@ -78,7 +109,7 @@ def search_semantic_scholar(query: str, max_results: int = 5) -> list[dict]:
         "fields": "title,abstract,authors,year,url,externalIds",
     }
     try:
-        r = requests.get(url, params=params, headers=HEADERS, timeout=15)
+        r = _get_backoff(url, params=params, headers=_ss_headers(), timeout=15)
         r.raise_for_status()
         data = r.json().get("data", [])
         results = []
@@ -620,7 +651,16 @@ def main():
     all_results = []
     for src in selected:
         logger.info("Ricerca su %s...", src)
-        results = SOURCES[src](args.query, args.max)
+        # Rete difensiva: una sorgente che esplode (bug, timeout, HTML cambiato)
+        # NON deve abortire le altre ne' la catena notturna. Logga JSON e continua.
+        try:
+            results = SOURCES[src](args.query, args.max)
+        except Exception as ex:
+            logger.error(json.dumps({
+                "event": "source_crash", "source": src, "query": args.query,
+                "error": str(ex), "traceback": traceback.format_exc(),
+            }, ensure_ascii=False))
+            results = []
         logger.info("%s -> %d risultati", src, len(results))
         all_results.extend(results)
         time.sleep(1)
@@ -675,4 +715,15 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # Guardia globale: qualunque eccezione non prevista viene loggata in JSON
+    # strutturato (timestamp dal logger) e l'agente esce con codice 1 SENZA
+    # trascinare giu' il resto della catena notturna (night_research.bat continua). (#42)
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception as ex:
+        logger.error(json.dumps({
+            "event": "fatal", "error": str(ex), "traceback": traceback.format_exc(),
+        }, ensure_ascii=False))
+        sys.exit(1)

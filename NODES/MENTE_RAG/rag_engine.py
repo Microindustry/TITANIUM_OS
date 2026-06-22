@@ -7,8 +7,25 @@ import os, sys, re, json, pickle, logging, hashlib
 from datetime import datetime
 from pathlib import Path
 
-if sys.stdout.encoding != "utf-8":
+if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+# CUDA kill-switch (#42, PRIMA di importare torch). Se il device e' forzato a CPU
+# (env RAG_DEVICE=cpu o file rag_device.txt con "cpu"), nascondi la GPU a torch ORA:
+# anche coi modelli su CPU, torch+cu124 crea comunque il contesto CUDA, e su questa
+# GTX 1070 dopo un riavvio sporco quel contesto riserva ~57 GB di COMMIT -> satura
+# Windows e impalla il PC. CUDA_VISIBLE_DEVICES="" impedisce la creazione del contesto.
+# Va fatto qui, prima di qualsiasi import che tiri dentro torch (sentence_transformers).
+def _early_cpu_gate():
+    f = os.environ.get("RAG_DEVICE", "").strip().lower()
+    if not f:
+        p = Path(__file__).resolve().parent / "rag_device.txt"
+        if p.exists():
+            try: f = p.read_text(encoding="utf-8").strip().lower()
+            except Exception: f = ""
+    if f == "cpu":
+        os.environ["CUDA_VISIBLE_DEVICES"] = ""
+_early_cpu_gate()
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 try:
@@ -38,11 +55,31 @@ RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"   # multilingue (100+ lingue, IT) —
 # DEVICE: GPU se disponibile (ottimizzazione 22/06). La embedding-function di ChromaDB
 # e il CrossEncoder default-ano su CPU -> rebuild 5-8x piu lenti e query piu lente.
 # Forzare "cuda" sulla GTX 1070 accelera embedding (indicizzazione) e rerank (query).
-try:
-    import torch as _torch
-    DEVICE = "cuda" if _torch.cuda.is_available() else "cpu"
-except Exception:
-    DEVICE = "cpu"
+#
+# OVERRIDE (22/06 #42): dopo un riavvio sporco l'init CUDA di torch+cu124 su questa
+# GTX 1070 riservava ~57 GB di COMMIT a ogni load -> saturava Windows e impallava il
+# PC (RAM fisica libera, commit esaurito -> MemoryError all'import). Su CPU lo stesso
+# load sta su ~5 GB e gira. Finche' la GPU non e' ripristinata si forza CPU senza
+# toccare lo stack: RAG_DEVICE=cpu (env) oppure file NODES/MENTE_RAG/rag_device.txt
+# con dentro "cpu". Default invariato (auto-cuda) quando non c'e' override.
+_DEVICE_FILE = _HERE / "rag_device.txt"
+
+def _resolve_device():
+    forced = os.environ.get("RAG_DEVICE", "").strip().lower()
+    if not forced and _DEVICE_FILE.exists():
+        try:
+            forced = _DEVICE_FILE.read_text(encoding="utf-8").strip().lower()
+        except Exception:
+            forced = ""
+    if forced in ("cpu", "cuda"):
+        return forced
+    try:
+        import torch as _torch
+        return "cuda" if _torch.cuda.is_available() else "cpu"
+    except Exception:
+        return "cpu"
+
+DEVICE = _resolve_device()
 
 CHUNK_SIZE     = 512    # chars (~100 token) — ottimale per Q&A tecnico
 CHUNK_STRIDE   = 200    # 61% overlap — bilancia contesto e precisione
@@ -454,6 +491,54 @@ def get_index_stats() -> dict:
         "engine":        "ChromaDB + TF-IDF RRF + CrossEncoder (v4.0)",
     }
 
+# ── RECOVERY a 2 LIVELLI (post-crash/blackout) ─────────────────────────────────
+# ChromaDB e' un motore embedded, non crash-durable: su power-loss l'indice HNSW
+# resta inconsistente con SQLite -> crash NATIVO (SIGSEGV) in lettura query. Noi
+# teniamo il corpus a parte (rag_corpus.jsonl) quindi possiamo SEMPRE ricostruire.
+#   L1 (chirurgico): sposta SOLO il segmento HNSW; Chroma lo ricostruisce dagli
+#       embedding gia' in chroma.sqlite3 -> niente ri-embedding (secondi/minuti).
+#   L2 (nucleare):   build_index(force=True), ri-embedda tutto dal corpus MENTE.
+# L'orchestratore (SERVICES/rag_recover.ps1) sonda con --probe in SUBPROCESS perche'
+# un SIGSEGV non e' catturabile in-process: lo vede solo come exit-code != 0.
+
+def _vector_segment_dirs() -> list[Path]:
+    """Cartelle UUID del segmento HNSW (scope VECTOR) presenti in CHROMA_DIR.
+    Sono i binari dell'indice che si corrompono su crash; NON contengono gli
+    embedding (quelli stanno in chroma.sqlite3)."""
+    db = CHROMA_DIR / "chroma.sqlite3"
+    if not db.exists():
+        return []
+    import sqlite3
+    dirs: list[Path] = []
+    try:
+        con = sqlite3.connect(str(db))
+        rows = con.execute("select id from segments where scope='VECTOR'").fetchall()
+        con.close()
+        for (sid,) in rows:
+            d = CHROMA_DIR / str(sid)
+            if d.is_dir():
+                dirs.append(d)
+    except Exception as e:
+        logger.warning("segment query fallita: %s", e)
+    return dirs
+
+
+def drop_hnsw_index() -> int:
+    """RECOVERY L1 (chirurgico): sposta da parte SOLO il segmento HNSW corrotto.
+    Additivo (rinomina, non cancella). Procedura ufficiale Chroma: al prossimo
+    open il motore ricostruisce l'HNSW dagli embedding in chroma.sqlite3."""
+    moved = 0
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    for d in _vector_segment_dirs():
+        try:
+            d.rename(d.with_name(f"{d.name}.hnsw_corrupt_{ts}"))
+            logger.info("L1: segmento HNSW spostato -> %s.hnsw_corrupt_%s", d.name, ts)
+            moved += 1
+        except Exception as e:
+            logger.warning("L1: non spostato %s: %s", d.name, e)
+    return moved
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -468,9 +553,22 @@ if __name__ == "__main__":
     p.add_argument("--top",          type=int, default=TOP_K)
     p.add_argument("--no-reranker",  action="store_true", help="Disabilita CrossEncoder")
     p.add_argument("--no-hybrid",    action="store_true", help="Solo ricerca semantica")
+    p.add_argument("--probe",        action="store_true", help="Query minima di salute (exit!=0 se l'indice crasha) — per orchestratore")
+    p.add_argument("--drop-hnsw",    action="store_true", help="Recovery L1: sposta il segmento HNSW corrotto (Chroma lo ricostruisce da sqlite, no ri-embed)")
     args = p.parse_args()
 
-    if args.stats:
+    if args.probe:
+        # Pensato per girare in subprocess: un HNSW corrotto fa SIGSEGV qui ->
+        # exit-code != 0 visibile all'orchestratore. Se sano stampa PROBE_OK.
+        try:
+            r = search("probe", top_k=1, use_hybrid=False, use_reranker=False)
+            print(f"PROBE_OK results={len(r)}")
+        except Exception as e:
+            print(f"PROBE_FAIL {e}")
+            sys.exit(2)
+    elif args.drop_hnsw:
+        print(json.dumps({"hnsw_dirs_moved": drop_hnsw_index()}, ensure_ascii=False))
+    elif args.stats:
         print(json.dumps(get_index_stats(), indent=2, ensure_ascii=False))
     elif args.rebuild:
         build_index(force=True)
