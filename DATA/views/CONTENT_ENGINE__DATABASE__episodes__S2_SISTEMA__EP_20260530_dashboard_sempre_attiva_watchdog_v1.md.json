@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Stagione 1, Episodio 14](#titaniumos-stagione-1-episodio-14)\n  - [Il Cane da Guardia](#il-cane-da-guardia)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)\n  - [ATTO II  Anatomia di un Watchdog](#atto-ii-anatomia-di-un-watchdog)\n  - [ATTO III  Stato del Sistema e il Peso di un  dirty](#atto-iii-stato-del-sistema-e-il-peso-di-un-dirty)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Stagione 1, Episodio 14](#titaniumos-stagione-1-episodio-14)\n  - [Il Cane da Guardia](#il-cane-da-guardia)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)\n  - [ATTO II  Anatomia di un Watchdog](#atto-ii-anatomia-di-un-watchdog)\n  - [ATTO III  Stato del Sistema e il Peso di un  dirty](#atto-iii-stato-del-sistema-e-il-peso-di-un-dirty)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -52,9 +52,14 @@
       "level": 2,
       "title": "📋 METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S01E14 |\n| **Titolo** | Il Cane da Guardia |\n| **Data** | 2026-05-30 |\n| **Progetto principale** | GENESIS |\n| **Progetto secondario** | V32 (contesto) |\n| **Milestone attivo** | Config G — Rinforzi colonne Z+U |\n| **Commit chiave** | `watchdog v1.2` + `START_LOGIN v1.3` |\n| **Co-autore AI** | Claude Sonnet 4.6 |\n| **GENESIS completamento** | 78% |\n| **V32 completamento** | 65% |\n| **RAG chunks** | 150 |\n| **Sessione n.** | #8 |\n| **Angolo narrativo** | Affidabilità sistemica / automazione silenziosa |\n| **Tag** | `watchdog` `dashboard` `pythonw` `automazione` `infrastruttura` |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La dashboard GENESIS è un'applicazione React che gira su `localhost:5173` tramite processo Vite; se il processo viene interrotto (chiusura sessione, crash del terminale, riavvio Windows), la dashboard sparisce silenziosamente senza avviso.\n\n- **DECISIONE:** Implementato `watchdog v1.2` per monitorare e riavviare automaticamente il processo della dashboard GENESIS in caso di interruzione. **LOGICA:** Eliminare il costo di setup ripetuto (stimato in 30–60 secondi ogni accesso) e ridurre il carico cognitivo su un operatore singolo.\n\n- **DECISIONE:** `START_LOGIN` aggiornato alla versione v1.3 usando `pythonw` al posto di `python`. **LOGICA:** `pythonw` esegue lo script in background senza aprire finestre terminale visibili al boot, rendendo il sistema presente ma non invadente.\n\n- **FATTO:** Il commit identificato è `5a9d2d7 [main]` con stato `⚠ dirty` (modifiche non committate presenti nel repository al momento del riavvio sessione).\n\n- **FATTO:** Il file di stato giornaliero si chiama `RIAVVIO_SESSIONE.txt`, generato automaticamente ogni mattina alle 10:30 su OneDrive; contiene metadati, stato del progetto e prompt pre-compilato per la sessione di lavoro."
     }
   ],
-  "word_count": 1399,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:24.941279"
+  "word_count": 1575,
+  "updated_at": "2026-06-12T15:56:35.413775",
+  "built_at": "2026-06-22T14:21:49.300447"
 }

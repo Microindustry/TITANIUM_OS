@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, forge, automazione, materia, ponte, eredita, nina-v2
 ---
+<!-- TOC -->
+
+- [EP_N2_05  Prima la Mano, Poi la Macchina](#epn205-prima-la-mano-poi-la-macchina)
+    - [Una macchina non corregge il tuo errore. Lo fa mille volte, in fretta. Per questo prima deve imparare la mano.](#una-macchina-non-corregge-il-tuo-errore-lo-fa-mille-volte-in-fretta-per-questo-prima-deve-imparare-la-mano)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LA MACCHINA NON CORREGGE: AMPLIFICA](#atto-i-la-macchina-non-corregge-amplifica)
+  - [ATTO II  PERCHÉ LA MANO DEVE SAPERE PRIMA](#atto-ii-perché-la-mano-deve-sapere-prima)
+  - [ATTO III  LEREDITÀ: GLI STRUMENTI, NON LE RISPOSTE](#atto-iii-leredità-gli-strumenti-non-le-risposte)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_05 — Prima la Mano, Poi la Macchina
 ### "Una macchina non corregge il tuo errore. Lo fa mille volte, in fretta. Per questo prima deve imparare la mano."

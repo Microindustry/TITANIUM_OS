@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [HR  1-Pager (il profilo che non esiste sul mercato)](#hr-1-pager-il-profilo-che-non-esiste-sul-mercato)
+    - [Lidea](#lidea)
+    - [Il caso (Matteo)](#il-caso-matteo)
+    - [Il motore (lo stesso di Nina)](#il-motore-lo-stesso-di-nina)
+    - [Perché conta](#perché-conta)
+    - [In una riga](#in-una-riga)
+
+<!-- /TOC -->
+
 # HR — 1-Pager (il profilo che non esiste sul mercato)
 
 > *Un carpentiere e manutentore che costruisce un sistema operativo, una CNC e una serie di storie. La combinazione È il valore.*

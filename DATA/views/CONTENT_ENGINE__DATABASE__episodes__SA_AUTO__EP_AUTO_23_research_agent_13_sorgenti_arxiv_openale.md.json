@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_23  Milestone](#epauto23-milestone)\n    - [Research Agent - 13 sorgenti (arXiv, OpenAlex, Semantic Scho](#research-agent---13-sorgenti-arxiv-openalex-semantic-scho)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Le Sorgenti](#le-sorgenti)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di avere occhi](#atto-i-prima-di-avere-occhi)\n  - [ATTO II  Il giorno delle tredici sorgenti](#atto-ii-il-giorno-delle-tredici-sorgenti)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_23  Milestone](#epauto23-milestone)\n    - [Research Agent - 13 sorgenti (arXiv, OpenAlex, Semantic Scho](#research-agent---13-sorgenti-arxiv-openalex-semantic-scho)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Le Sorgenti](#le-sorgenti)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di avere occhi](#atto-i-prima-di-avere-occhi)\n  - [ATTO II  Il giorno delle tredici sorgenti](#atto-ii-il-giorno-delle-tredici-sorgenti)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Non cerco più — chiedo. E la differenza tra le due cose è tutto il tempo che ho per costruire.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Research Agent è stato attivato il 28 maggio 2026 con 13 sorgenti integrate: arXiv, OpenAlex, Semantic Scholar, BASE, POLITesi, Baidu Scholar, CNKI, GitHub, Unpaywall, più alcune specializzate.\n\n- **FATTO:** L'agente interroga le sorgenti in parallelo, deduplica i risultati e costruisce una sintesi strutturata che confluisce direttamente nel RAG di GENESIS; non è un aggregatore di link.\n\n- **FATTO:** La prima query operativa riguardava il damping nelle strutture CNC fresate in acciaio, con focus su una finestra di frequenza problematica intorno ai 140 Hz sul telaio della V32 in configurazione G. L'agente ha restituito 17 paper rilevanti in meno di 4 minuti.\n\n- **FATTO:** Al momento dell'attivazione del Research Agent, l'ecosistema GENESIS era all'78% con dashboard v7.0, Story Agent e RAG v4 già operativi.\n\n- **DECISIONE:** Per il progetto MIMS (connettori modulari) è stata eseguita una query su sistemi di accoppiamento rapido in ambienti vibranti; l'avanzamento del progetto rimane bloccato in attesa della catena V32-VULCAN. **LOGICA:** Il Research Agent viene usato per preparare il design in anticipo rispetto allo sblocco dei blocchi a monte.\n\n- **FATTO:** La V32 (CNC in configurazione G) risultava ai rinforzi strutturali al 65% di avanzamento al momento della milestone EP_AUTO_23."
     }
   ],
-  "word_count": 937,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:29.833102"
+  "word_count": 1148,
+  "updated_at": "2026-06-12T16:07:20.363943",
+  "built_at": "2026-06-22T14:22:27.213054"
 }

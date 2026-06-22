@@ -15,7 +15,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AV_01  LIncantesimo che si Ripete](#epav01-lincantesimo-che-si-ripete)\n    - [Un gesto giusto insegnato a una macchina, che lo rifà da solo  anche mentre dormi](#un-gesto-giusto-insegnato-a-una-macchina-che-lo-rifà-da-solo-anche-mentre-dormi)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL GESTO STANCO](#atto-i-il-gesto-stanco)\n  - [ATTO II  INSEGNARE IL GESTO](#atto-ii-insegnare-il-gesto)\n  - [ATTO III  LESERCITO CHE LAVORA DI NOTTE](#atto-iii-lesercito-che-lavora-di-notte)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AV_01  LIncantesimo che si Ripete](#epav01-lincantesimo-che-si-ripete)\n    - [Un gesto giusto insegnato a una macchina, che lo rifà da solo  anche mentre dormi](#un-gesto-giusto-insegnato-a-una-macchina-che-lo-rifà-da-solo-anche-mentre-dormi)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL GESTO STANCO](#atto-i-il-gesto-stanco)\n  - [ATTO II  INSEGNARE IL GESTO](#atto-ii-insegnare-il-gesto)\n  - [ATTO III  LESERCITO CHE LAVORA DI NOTTE](#atto-iii-lesercito-che-lavora-di-notte)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -46,9 +46,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "In cantina, lo schermo lampeggiava piano. Nina pensò a suo papà, stanco la sera.\n\nIl giorno dopo gli mostrò una cosa piccola: un timer sulla luce del garage, che si\naccendeva da sola all'imbrunire. «Così non te lo devi ricordare» gli disse. Suo papà\nrise, e per la prima volta fu *lui* a chiederle: «come hai fatto?»\n\nUn gesto insegnato una volta. Che si ripete per sempre.\n\n> Ma quella sera Nina notò una cosa. La piccola macchina accendeva le lampade benissimo —\n> però se le chiedevi *\"perché\"* le accendevi, non sapeva rispondere. Faceva, ma non\n> *capiva*. *E se esistesse una macchina che, oltre a fare, capisce anche le parole?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito l'Automazione? Provalo tu: pensa a una cosa che fai ogni giorno sempre uguale.\nScrivi i passi, esatti, come una ricetta. Quello è il primo passo per insegnarla — a una\nmacchina, o anche solo a qualcun altro. Hai appena reso un gesto più forte di te.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡2` l'**Automazione** (arco, tappa 2): *un gesto giusto, scritto bene, si ripete da solo.*\n**Pietre richiamate:** il **Grande Loop** `⟡1 → EP_AV_00` (la traccia scritta è ciò che la macchina può leggere) · l'**Entropia** `⟡E` (il Disordine entra dalla \"lampada spenta\", dal gesto saltato).\n**Key-image:** la traccia (foglietto) che passa dalla mano alla macchina · le lampade che si accendono in fila da sole, di notte.\n**3 strati:** bambino = il timer che accende la luce da solo · curioso = \"questo si chiama automazione: insegni il gesto una volta\" · esperto/papà = l'automazione toglie il *single-point-of-failure* (non dipendere da una sola mano) — il gesto ripetuto diventa codice (watcher + task notturni del progetto reale).\n**Aggancio reale:** MOM_01 \"La Prima Automazione\" · Story Agent · i task notturni (`night_*`, l'AI News Watcher) · \"Il Sistema Respira da Solo\".\n**Open loop → Regione 3 (l'LLM):** una macchina che *fa* ma non *capisce le parole*."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio EP_AV_01 appartiene alla stagione AV del progetto TITANIUM_OS, è classificato come tappa 2 di 7 nell'arco narrativo sull'IA, e ha una durata stimata di 8-10 minuti. **LOGICA:** Collocazione nella struttura seriale del progetto per orientamento RAG.\n\n- **FATTO:** L'episodio introduce il concetto di **Automazione** come \"pietra nuova `⟡2`\": un gesto giusto scritto con sufficiente precisione può essere letto ed eseguito da una macchina in modo ripetuto e autonomo. **LOGICA:** Definizione operativa del concetto centrale, coerente con la logica progettuale di TITANIUM_OS (tracce scritte → esecuzione automatizzata).\n\n- **FATTO:** Il canone di riferimento dell'episodio include BIBBIA_DEL_MONDO.md, MAPPA_AVVENTURA.md (Regione 2) e il documento MOM_01 \"La Prima Automazione\". **LOGICA:** Permette al RAG di collegare l'episodio ai documenti sorgente del progetto.\n\n- **DECISIONE:** L'episodio distingue esplicitamente tra automazione e sostituzione del lavoro: l'automazione rimuove il lavoro *ripetuto*, liberando la persona per attività non replicabili dalla macchina. **LOGICA:** Posizione progettuale dichiarata, non inferita.\n\n- **FATTO:** L'episodio si chiude con un aggancio esplicito alla tappa successiva: la distinzione tra una macchina che *fa* (esegue gesti) e una macchina che *capisce le parole*. **LOGICA:** Struttura narrativa seriale — la prossima avventura introduce il linguaggio naturale/comprensione semantica."
     }
   ],
-  "word_count": 1131,
-  "updated_at": "2026-06-09T12:35:53.709830",
-  "built_at": "2026-06-11T14:00:27.293178"
+  "word_count": 1341,
+  "updated_at": "2026-06-12T16:02:35.553328",
+  "built_at": "2026-06-22T14:22:11.030338"
 }

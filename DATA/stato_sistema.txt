@@ -1,0 +1,34 @@
+====================================================
+ STATO TITANIUM_OS — file fisico (auto-aggiornato)
+ Monday 22 June 2026, 04:07
+====================================================
+
+>>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
+
+— Task notturni —
+  ✓ TI_StoryAgent      OK   (ultima: 22/06 02:07)
+  ✓ TI_NightResearch   OK   (ultima: 22/06 03:37)
+  ✓ TI_NightAudit      OK   (ultima: 22/06 03:52)
+  ✓ TI_NightPush       OK   (ultima: 22/06 04:07)
+  ✓ TI_DailyBrief      OK   (ultima: 21/06 07:30)
+  ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 20/06 03:37)
+
+— Servizi —
+  · API Server (5001): attivo
+  · MENTE Watcher: attivo
+
+— ⚠ GUASTI dai log (ultime 36h) —
+  ⚠ night_research.log: Traceback (most recent call last):
+  ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 20/06 03:37)
+  ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (mos
+
+— note (rumore atteso, non urgente) —
+  · night_research.log: 2026-06-22 03:38:39 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  
+  · night_research.log: 2026-06-22 03:38:45 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  
+  · night_research.log: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to 
+
+Questo file si riscrive da solo (catena notturna + watchdog).
+Se vedi ⚠, apri DATA/logs/ del task indicato.

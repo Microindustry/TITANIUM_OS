@@ -1,0 +1,278 @@
+{
+  "data": "2026-06-18",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "NOTTURNE",
+      "titolo": "Circuit-breaker + retry esponenziale per i job notturni (crash + timeout + rate-limit)",
+      "cosa": "Aggiungere al runner notturno (night_research.py / research_agent.py / night_push.py) un livello di resilienza: retry con backoff esponenziale (3 tentativi, delay 2^n * 5s), circuit-breaker che salti il job e scriva un flag 'degraded' se tutti i retry falliscono, e un exit-code standardizzato che il log parser riconosca senza ambiguità (distinguendo crash da rate-limit da empty-result).",
+      "perche": "6 finding 'alta' e 6 'media' su NOTTURNE: crash/eccezione espliciti in night_research.log e research_agent.log, rate-limit su night_push.log e research_agent.log, ricerche a vuoto e timeout di rete. Il sistema notturno è inaffidabile in modo strutturale, non episodico.",
+      "come": [
+        "1. Mappare i 3 script (night_research, research_agent, night_push) e identificare i punti di I/O di rete.",
+        "2. Estrarre una funzione `resilient_call(fn, max_retries=3, base_delay=5)` con backoff esponenziale e catch esplicito per ConnectionError, RateLimitError, EmptyResult.",
+        "3. Aggiungere un file `notturne_health.json` aggiornato a ogni run con status per job (ok/degraded/failed) e timestamp ultimo successo.",
+        "4. Il parser di log (audit) legge `notturne_health.json` prima dei log grezzi: se il file è fresco e 'ok', severity abbassata automaticamente.",
+        "5. Test locale su stub di rete che simula i 3 tipi di errore."
+      ],
+      "rischio": "Basso: nessuna modifica alla logica di business, solo wrapper di resilienza. Reversibile togliendo il wrapper.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte: 12 finding su area NOTTURNE, sev alta x3 + media x6 + alta push x1"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-18",
+    "milestone": "Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato timeout di rete nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato timeout di rete nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_push.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato crash/eccezione nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "MIMS",
+        "sev": "bassa",
+        "finding": "Pilastro MIMS fermo al 30%."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_push.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato ricerca a vuoto nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 183,
+      "rag_chunks": 3873,
+      "n_commits_7d": 93
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+      "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+      "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+      "(#verticale-finanza-attivata-lasse-di-lato)",
+      "(#fix-verifiche-rientro-matteo)",
+      "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+      "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+      "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)",
+      "(#build-potenziato-radice-del-problema-metadati)",
+      "(#4-semi-tecnici-scritti-a-mano-stagione-st-con-reelhook-il-content-gap-chiuso)",
+      "(#igiene-episodesjson-additiva-nulla-cancellato)",
+      "(#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)",
+      "(#notte-autonoma-36b-1006-allineato-i-n-livelli-al-tuo-blueprint-a-2-assi)",
+      "(#nina-ragwiki-epav0304-canonici-nellarco-parcheggio-tolto-matteo-1106)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Most Insane New Apple AI Features",
+        "url": "https://www.youtube.com/shorts/NQof8hG8FwE"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Satya on Loopcraft: Building Frontier Ecosystems",
+        "url": "https://www.latent.space/p/ainews-satya-on-loopcraft-building"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Julia Evans",
+        "url": "https://simonwillison.net/2026/Jun/15/julia-evans/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "\"They screwed us\": Personality clashes sent Anthropic's models offline",
+        "url": "https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-agent 0.3a0",
+        "url": "https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Cloudflare CAPTCHA on at least one ampersand",
+        "url": "https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Matteo Wong, The Atlantic",
+        "url": "https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "The Fable 5 Export Controls Harm US Cyber Defense",
+        "url": "https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Georgi Gerganov",
+        "url": "https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-tailscale 0.1a0",
+        "url": "https://simonwillison.net/2026/Jun/16/datasette-tailscale/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "tobocop2/lilbee ★24 — Run and manage local AI models, search your files and code, and crawl the web, a",
+        "url": "https://github.com/tobocop2/lilbee"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "yasirshabbirservices/Bricks-Builder-MCP ★1 — Bricks Builder MCP is a powerful WordPress plugin that exposes a Model Context P",
+        "url": "https://github.com/yasirshabbirservices/Bricks-Builder-MCP"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "cyzus/suzent ★61 — SUZENT: YOUR SOVEREIGN DIGITAL CO-WORKER",
+        "url": "https://github.com/cyzus/suzent"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "joeseverino/cordon ★0 — Language-agnostic command-surface contract: declare a tool once, render every vi",
+        "url": "https://github.com/joeseverino/cordon"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "calf-ai/calfkit-sdk ★119 — 🐮 The SDK to build AI agents as event-driven microservices",
+        "url": "https://github.com/calf-ai/calfkit-sdk"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "optave/ops-codegraph-tool ★69 — Code intelligence CLI — function-level dependency graph across 34 languages, 34-",
+        "url": "https://github.com/optave/ops-codegraph-tool"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "frankbria/narrative-modeling-app ★4 — An AI-driven platform for exploratory data analysis and model building. The Narr",
+        "url": "https://github.com/frankbria/narrative-modeling-app"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Chaos2Cured/FreeLattice ★30 — Part of Lumen's World — a sovereign AI platform where humans and AI build togeth",
+        "url": "https://github.com/Chaos2Cured/FreeLattice"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "momomuchu/burp-wrapper ★0 — Python wrapper for Burp Suite MCP Server API — gives AI agents full access to ev",
+        "url": "https://github.com/momomuchu/burp-wrapper"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "ViktorsBaikers/DevRites ★1 — Stop your AI from shipping half-baked code. A disciplined senior-engineer workfl",
+        "url": "https://github.com/ViktorsBaikers/DevRites"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "JSONbored/awesome-claude ★264 — HeyClaude is a curated registry and distribution surface for Claude and AI-workf",
+        "url": "https://github.com/JSONbored/awesome-claude"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "amarbel-llc/eng ★1 — Nix monorepo aggregating dotfiles, system packages, devshells, plugins, and 30+ ",
+        "url": "https://github.com/amarbel-llc/eng"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "VITASID57/Claude-code-desktop-dual-launcher ★1 — Run two Claude Desktop accounts side-by-side on Windows. Leverages Electron's --",
+        "url": "https://github.com/VITASID57/Claude-code-desktop-dual-launcher"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "gregorydickson/pickle-rick-claude ★26 — 🥒 Pickle Rick for Claude Code — autonomous PRD-driven coding loops + relentless ",
+        "url": "https://github.com/gregorydickson/pickle-rick-claude"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "yasirshabbirservices/Bricks-Builder-MCP ★1 — Bricks Builder MCP is a powerful WordPress plugin that exposes a Model Context P",
+        "url": "https://github.com/yasirshabbirservices/Bricks-Builder-MCP"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "mm7894215/TokenTracker ★721 — Track token usage across 22 AI coding tools (Claude Code, Codex, Cursor, Gemini,",
+        "url": "https://github.com/mm7894215/TokenTracker"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "simonw/datasette: release 1.0a34",
+        "url": "https://github.com/simonw/datasette/releases/tag/1.0a34"
+      },
+      {
+        "fonte": "safishamsi (Graphify)",
+        "titolo": "safishamsi/graphify: release v0.8.40",
+        "url": "https://github.com/safishamsi/graphify/releases/tag/v0.8.40"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "How Big Tech Lies About AI Layoffs",
+        "url": "https://www.youtube.com/shorts/08uMw4_BWOA"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Biggest Microsoft Build News in 82 seconds",
+        "url": "https://www.youtube.com/shorts/jKgrNh_q_b0"
+      }
+    ],
+    "n_news": 30
+  }
+}

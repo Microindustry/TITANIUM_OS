@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2 E07](#titaniumos-s2-e07)\n  - [Il Mondo di Nina](#il-mondo-di-nina)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  La Domanda che Non Ti Aspetti](#atto-i-la-domanda-che-non-ti-aspetti)\n  - [ATTO II  Il Canone e le Pietre](#atto-ii-il-canone-e-le-pietre)\n  - [ATTO III  Il Desktok come Specchio](#atto-iii-il-desktok-come-specchio)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2 E07](#titaniumos-s2-e07)\n  - [Il Mondo di Nina](#il-mondo-di-nina)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  La Domanda che Non Ti Aspetti](#atto-i-la-domanda-che-non-ti-aspetti)\n  - [ATTO II  Il Canone e le Pietre](#atto-ii-il-canone-e-le-pietre)\n  - [ATTO III  Il Desktok come Specchio](#atto-iii-il-desktok-come-specchio)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2 E07 |\n| **Titolo** | Il Mondo di Nina |\n| **Data registrazione** | 2026-06-09 |\n| **Sessione GENESIS** | #34 |\n| **Commit totali** | ~14 commit |\n| **Milestone attivo** | CLAUDE.md v4.1.0 + RAG→WIKI + AI News Watcher v1 + binario AVVENTURA |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Feature principali** | EP_AV_01 + EP_AV_02, Mappa Avventura come hub, mirror desktop automatico, fix canone ⟡, dashboard auto-update hook Stop |\n| **Angolo narrativo** | Il binario AVVENTURA — come un sistema cognitivo genera un mondo per spiegarsi |\n| **Target capannone** | 15 luglio 2030 |\n| **Tag** | `#genesis` `#avventura` `#nina` `#canone` `#automazione` `#sessione34` |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La Mappa dell'Avventura è stata spostata dalla sezione CONTROLLO alla sezione STORIE, con sotto-voci proprie e episodi committati: EP_AV_00, EP_AV_01, EP_AV_02. **LOGICA:** La sezione CONTROLLO (grafici, API) era ritenuta il contesto sbagliato per contenere materiale narrativo diventato hub navigabile autonomo.\n\n- **DECISIONE:** Le Pietre ⟡ sono state riassegnate esclusivamente alle sette tappe dell'arco narrativo di Nina (⟡1–⟡7); le forze fuori-arco usano una notazione separata. **LOGICA:** Il simbolo ⟡ si era moltiplicato per uso improprio; fix `canon+ui` ripristina il canone come accordo stabile su cui costruire episodi futuri.\n\n- **FATTO:** Il file desktop \"da fare e cosa ho fatto.txt\" è stato impostato come mirror automatico (Scelta B), aggiornato dal sistema a ogni chiusura di sessione tramite hook Stop di Claude, anziché gestito manualmente.\n\n- **FATTO:** Al termine della notte autonoma #34 lo STATE.json risulta aggiornato con 4 nuovi `verified` (watcher v1, UI CONTROLLO + altri due), 27 todo aperti riletti dalla sorgente, 44 commit totali di sessione.\n\n- **OBIETTIVO:** GENESIS è indicato al 70% di completamento; V32 al 65%; orizzonte capannone stimato a quattro anni."
     }
   ],
-  "word_count": 1177,
-  "updated_at": "2026-06-10T02:07:53.463137",
-  "built_at": "2026-06-11T14:00:26.329107"
+  "word_count": 1365,
+  "updated_at": "2026-06-12T15:58:59.670711",
+  "built_at": "2026-06-22T14:21:54.431141"
 }

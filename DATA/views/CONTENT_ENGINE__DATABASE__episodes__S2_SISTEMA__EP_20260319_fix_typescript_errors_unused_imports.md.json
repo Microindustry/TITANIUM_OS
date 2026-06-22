@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E09](#titaniumos-s1e09)\n  - [Il Sistema Respira da Solo](#il-sistema-respira-da-solo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LA PULIZIA CHE NON SI VEDE](#atto-i-la-pulizia-che-non-si-vede)\n  - [ATTO II  TRE WORKFLOW, UNIDEA](#atto-ii-tre-workflow-unidea)\n  - [ATTO III  IL README COME SPECCHIO](#atto-iii-il-readme-come-specchio)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E09](#titaniumos-s1e09)\n  - [Il Sistema Respira da Solo](#il-sistema-respira-da-solo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LA PULIZIA CHE NON SI VEDE](#atto-i-la-pulizia-che-non-si-vede)\n  - [ATTO II  TRE WORKFLOW, UNIDEA](#atto-ii-tre-workflow-unidea)\n  - [ATTO III  IL README COME SPECCHIO](#atto-iii-il-readme-come-specchio)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E09 |\n| **Titolo** | Il Sistema Respira da Solo |\n| **Data** | 2026-03-19 |\n| **Registrato** | 2026-05-29 |\n| **Milestone** | Config G — Rinforzi colonne Z+U |\n| **Focus narrativo** | Infrastruttura GENESIS / automazione CI |\n| **Commit principali** | TypeScript fix · GitHub Actions ×3 · README v3.2 |\n| **Angolo scelto** | Il lavoro invisibile che tiene in piedi tutto il resto |\n| **Progetto primario** | GENESIS |\n| **Progetto secondario** | V32 (riferimento indiretto) |\n| **Stato sistema** | `STATE v2.5.0` · RAG 150 chunk · Sessione #8 |\n| **Tono** | Tecnico / riflessivo — zero retorica |\n| **Durata stimata lettura** | ~7 min |\n| **Prossimo step narrativo** | Config G: saldatura gusset 200mm colonna Z sinistra |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il commit `5a9d2d7` rimuove importazioni TypeScript inutilizzate (`CheckCircle`, `Clock`, `Wrench`) dalla vista `AutomationsView`, corregge null check mancante in un componente Layout e rimuove attributi duplicati. **LOGICA:** Pulizia preventiva del codice prima che errori silenti causino comportamenti inattesi in produzione.\n\n- **DECISIONE:** I workflow GitHub Actions `profile-sync`, `dashboard-ci` e `state-episodes` vengono aggiornati con il trigger `workflow_dispatch`. **LOGICA:** Ridurre il tempo di test da ~3 minuti (commit vuoto + push + attesa) a ~30 secondi (avvio manuale da browser), mantenendo il controllo umano quando necessario.\n\n- **FATTO:** `state-episodes` è il workflow che legge `STATE.json`, produce il file di riavvio della sessione AI e tiene traccia degli episodi. **LOGICA:** È il meccanismo core della continuità cognitiva di GENESIS tra sessioni.\n\n- **FATTO:** Il README del profilo GitHub viene portato alla versione 3.2 con timeline evolutiva di TITANIUM_OS e tabella progetti. **LOGICA:** Funzione di documentazione esterna automaticamente aggiornata, non solo comunicazione pubblica.\n\n- **PRECISIONE:** Stato progetti al momento del commit: V32 in Config G, MIMS in sviluppo, GENESIS a sessione #8 con 150 chunk nel RAG, EVA attiva per il centro estetico di Maria."
     }
   ],
-  "word_count": 1383,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.911523"
+  "word_count": 1576,
+  "updated_at": "2026-06-12T15:55:10.580408",
+  "built_at": "2026-06-22T14:21:45.857918"
 }

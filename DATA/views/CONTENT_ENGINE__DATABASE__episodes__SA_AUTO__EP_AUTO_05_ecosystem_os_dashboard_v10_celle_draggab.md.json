@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_05  Milestone](#epauto05-milestone)\n    - [ECOSYSTEM_OS dashboard v1.0 - celle draggabili live (09 Mar](#ecosystemos-dashboard-v10---celle-draggabili-live-09-mar)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del 9 marzo](#atto-i-prima-del-9-marzo)\n  - [ATTO II  Le celle che si muovono](#atto-ii-le-celle-che-si-muovono)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_05  Milestone](#epauto05-milestone)\n    - [ECOSYSTEM_OS dashboard v1.0 - celle draggabili live (09 Mar](#ecosystemos-dashboard-v10---celle-draggabili-live-09-mar)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del 9 marzo](#atto-i-prima-del-9-marzo)\n  - [ATTO II  Le celle che si muovono](#atto-ii-le-celle-che-si-muovono)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Una dashboard draggabile non è un vezzo grafico. È il riconoscimento che la realtà cambia ogni giorno, e il"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La milestone ECOSYSTEM_OS dashboard v1.0 con celle draggabili live è stata rilasciata il 09 marzo 2026 (data_evento: 2026-03-09).\n\n- **FATTO:** Al momento dell'episodio il progetto V32 (fresatrice CNC in granito epossidico) era al 65% di avanzamento, in fase Config G con rinforzi strutturali in corso.\n\n- **FATTO:** Il progetto MIMS (connettori modulari) era fermo al 30% per dipendenza dalla catena V32-VULCAN, che deve essere definita prima che MIMS possa avanzare.\n\n- **FATTO:** Il progetto GENESIS (stack AI) era all'80% di completamento, comprendente dashboard v7.0, Story Agent e RAG v4.0.\n\n- **DECISIONE:** Le celle della dashboard sono draggabili per riflettere la priorità variabile giornaliera dei cinque fronti (V32, VULCAN, MIMS, GENESIS, EVA/Vita Natura). **LOGICA:** Una dashboard statica impone un ordine fisso che non rispecchia le dipendenze e le urgenze reali del sistema in evoluzione.\n\n- **FATTO:** Il progetto EVA (automazione centro estetico Vita Natura) era in fase pilota attiva al momento del rilascio della dashboard v1.0."
     }
   ],
-  "word_count": 962,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:27.963568"
+  "word_count": 1135,
+  "updated_at": "2026-06-12T16:04:38.613707",
+  "built_at": "2026-06-22T14:22:21.258786"
 }

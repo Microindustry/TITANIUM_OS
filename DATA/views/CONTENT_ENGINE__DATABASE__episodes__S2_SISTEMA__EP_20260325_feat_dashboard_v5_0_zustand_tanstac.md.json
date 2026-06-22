@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Stagione 1, Episodio 12](#titaniumos-stagione-1-episodio-12)\n  - [Il Sistema Che Si Guarda](#il-sistema-che-si-guarda)\n    - [Dashboard v5.0  quando il software impara a leggere se stesso](#dashboard-v50-quando-il-software-impara-a-leggere-se-stesso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema del Doppio Stato](#atto-i-il-problema-del-doppio-stato)\n    - [Marzo 2026  tre giorni prima della Dashboard v5.0](#marzo-2026-tre-giorni-prima-della-dashboard-v50)\n    - [La Decisione](#la-decisione)\n  - [ATTO II  Zustand, TanStack e lArchitettura della Chiarezza](#atto-ii-zustand-tanstack-e-larchitettura-della-chiarezza)\n    - [25 marzo 2026  Dashboard v5.0](#25-marzo-2026-dashboard-v50)\n    - [Il Numero che Conta](#il-numero-che-conta)\n  - [ATTO III  La Taverna Come Sistema](#atto-iii-la-taverna-come-sistema)\n    - [Maggio 2026  Config G, colonne ZU](#maggio-2026-config-g-colonne-zu)\n    - [Una Nota sui Permessi Windows](#una-nota-sui-permessi-windows)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Stagione 1, Episodio 12](#titaniumos-stagione-1-episodio-12)\n  - [Il Sistema Che Si Guarda](#il-sistema-che-si-guarda)\n    - [Dashboard v5.0  quando il software impara a leggere se stesso](#dashboard-v50-quando-il-software-impara-a-leggere-se-stesso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema del Doppio Stato](#atto-i-il-problema-del-doppio-stato)\n    - [Marzo 2026  tre giorni prima della Dashboard v5.0](#marzo-2026-tre-giorni-prima-della-dashboard-v50)\n    - [La Decisione](#la-decisione)\n  - [ATTO II  Zustand, TanStack e lArchitettura della Chiarezza](#atto-ii-zustand-tanstack-e-larchitettura-della-chiarezza)\n    - [25 marzo 2026  Dashboard v5.0](#25-marzo-2026-dashboard-v50)\n    - [Il Numero che Conta](#il-numero-che-conta)\n  - [ATTO III  La Taverna Come Sistema](#atto-iii-la-taverna-come-sistema)\n    - [Maggio 2026  Config G, colonne ZU](#maggio-2026-config-g-colonne-zu)\n    - [Una Nota sui Permessi Windows](#una-nota-sui-permessi-windows)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -82,9 +82,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S01E12 |\n| **Titolo** | Il Sistema Che Si Guarda |\n| **Data commit principale** | 2026-03-25 |\n| **Data registrazione narrativa** | 2026-05-29 |\n| **Progetto focus** | GENESIS — Dashboard v5.0 |\n| **Milestone narrativo** | Single source of truth / STATE.json |\n| **Milestone operativo attivo** | Config G — Rinforzi colonne Z+U |\n| **Tecnologie citate** | Zustand, TanStack Query, React Context, Flask, ChromaDB, STATE.json |\n| **Commit chiave** | `Step 1 Opus` (2026-03-22), `Dashboard v5.0` (2026-03-25), `5a9d2d7` dirty |\n| **RAG chunks** | 150 |\n| **Sessione numero** | #8 |\n| **Tono** | Tecnico-narrativo, onesto, nessuna retorica |\n| **Target 2030** | Capannone — 15 luglio |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **DECISIONE:** Il 22 marzo 2026 (commit `Step 1 Opus`) viene adottato il principio \"single source of truth\": `STATE.json` diventa la fonte autoritativa dello stato di sistema, sostituendo la gestione frammentata su React Context, fetch manuali e file locali scollegati. **LOGICA:** Con tre sorgenti di dato coesistenti, la dashboard mostrava valori inconsistenti tra un caricamento e l'altro, rendendo impossibile distinguere quale dato fosse reale.\n\n- **FATTO:** L'architettura Dashboard v5.0 (25 marzo 2026) separa esplicitamente due domini: **Zustand** per lo stato UI (pannelli, tab, modalità — esistente solo nel browser) e **TanStack Query** per lo stato server (dati V32, log GENESIS, sessioni EVA — sincronizzati da fonte esterna).\n\n- **FATTO:** L'hook `useSystemState.ts` è il canale unico che interroga l'API Flask per leggere `STATE.json` e portarne il contenuto nel React tree, senza logica di business né trasformazioni.\n\n- **PRECISIONE:** Alla sessione #8 il RAG ChromaDB contiene **150 chunk**; il commit di riferimento è `5a9d2d7` con flag `dirty` (modifiche presenti nella working directory non ancora committate).\n\n- **FATTO:** `STATE.json` è descritto come documento operativo aggiornato manualmente da Matteo a ogni sessione; contiene milestone di V32, percentuali di avanzamento GENESIS e target 2030."
     }
   ],
-  "word_count": 1679,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:24.230404"
+  "word_count": 1882,
+  "updated_at": "2026-06-12T15:55:27.278346",
+  "built_at": "2026-06-22T14:21:46.580753"
 }

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S2_04  IL CV CHE NESSUNO CAPISCE](#eps204-il-cv-che-nessuno-capisce)\n    - [Artigiano. Robot. CNC. AI. Il curriculum che nessun recruiter sa leggere.](#artigiano-robot-cnc-ai-il-curriculum-che-nessun-recruiter-sa-leggere)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA DEL CV IBRIDO](#atto-i-il-problema-del-cv-ibrido)\n  - [ATTO II  AI COME COMPETENZA REALE](#atto-ii-ai-come-competenza-reale)\n  - [ATTO III  GITHUB COME PROVA](#atto-iii-github-come-prova)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S2_04  IL CV CHE NESSUNO CAPISCE](#eps204-il-cv-che-nessuno-capisce)\n    - [Artigiano. Robot. CNC. AI. Il curriculum che nessun recruiter sa leggere.](#artigiano-robot-cnc-ai-il-curriculum-che-nessun-recruiter-sa-leggere)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA DEL CV IBRIDO](#atto-i-il-problema-del-cv-ibrido)\n  - [ATTO II  AI COME COMPETENZA REALE](#atto-ii-ai-come-competenza-reale)\n  - [ATTO III  GITHUB COME PROVA](#atto-iii-github-come-prova)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -32,9 +32,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Il CV non cambia con una modifica al documento Word. Cambia con la costruzione pubblica di prove verificabili.\n\nMatteoSection nella dashboard — lo skill tree espandibile — è la prima versione visiva di questa narrativa. Quattro aziende, competenze espandibili, pattern visibile. Non per i recruiter — per te. Per avere chiaro dove sei stato e dove stai andando.\n\nIl profilo GitHub è la versione pubblica. Il CLAUDE_CAPABILITIES_TITANIUM.md — documento che mappa cosa può fare Claude integrato nell'ecosistema — è la prova tecnica.\n\nQuindici anni di mestieri che sembravano incoerenti sono diventati uno skill tree leggibile. Ci voleva solo il formato giusto.\n\n> *Il problema non era il CV. Era che il CV cercava di descrivere una competenza che si capisce solo vedendola in azione.*\n> *La soluzione non è scrivere meglio. È costruire qualcosa che parli da solo.*\n\n---\n\n**reel_hook:** \"Il mio CV ha TIG su titanio MotoGP, robot industriali, presse idrauliche, controllo qualità, Python, AI, React. Nessun recruiter sa cosa farsene. Non è il loro problema — è il formato sbagliato per raccontare uno skill tree non lineare. La soluzione non è un CV migliore. È costruire pubblicamente qualcosa che mostri come lavori. 40 commit in 3 giorni. Sistema RAG funzionante. Dashboard React integrata. Stop hooks automatici. Il codice è su GitHub. Non devi spiegare cosa sai fare. Lo dimostri.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 04 |\n| Arco | Identità come asset tecnico — la comunicazione della competenza ibrida |\n| Connessione S1 | EP_S1_00 (il CV che nessuno capisce) → S2_04 è la risposta attiva |\n| Connessione S2 | GitHub come prova pubblica — prepara IDENTITY pillar |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La CNC V32 di Matteo pesa 178 kg ed è costruita in acciaio e Epoxy Granite, assemblata pezzo per pezzo da Matteo stesso.\n\n- **FATTO:** Il sistema TITANIUM_OS include un Research Agent con 13 sorgenti, agenti specializzati, stop hooks, una dashboard React integrata con API Flask che legge da STATE.json.\n\n- **FATTO:** Il profilo GitHub di TITANIUM_OS documenta 40+ commit in 3 giorni con messaggi tecnici precisi, usati come prova pubblica verificabile del metodo di lavoro.\n\n- **DECISIONE:** Matteo decide (28 maggio 2026) di aggiungere \"utilizzo AI\" come competenza esplicita nel curriculum, con logica: la capacità di dare input tecnici precisi a sistemi AI in dominio industriale è un moltiplicatore di produttività distinto dalla programmazione PLC tradizionale.\n\n- **DECISIONE:** Abilitare Git e pubblicare il profilo GitHub come sostituto del CV tradizionale. **LOGICA:** Il codice pubblico verificabile sostituisce la descrizione testuale delle competenze; TITANIUM_OS su GitHub è documentazione pubblica del metodo, non un progetto open source da vendere.\n\n- **FATTO:** MatteoSection nella dashboard TITANIUM_OS è implementata come skill tree visivo espandibile, che mappa quattro aziende e competenze in formato non cronologico, con data di riferimento episodio 28 maggio 2026."
     }
   ],
-  "word_count": 968,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:26.998883"
+  "word_count": 1165,
+  "updated_at": "2026-06-12T16:00:07.532388",
+  "built_at": "2026-06-22T14:22:03.206863"
 }

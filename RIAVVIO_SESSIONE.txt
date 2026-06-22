@@ -1,62 +1,38 @@
-=== RIAVVIO SESSIONE #37 → #38 — 11/06/2026 ===
-Sessione lunghissima (notte autonoma + rientro Matteo). Rifatte LE STORIE sul serio e
-COMPLETATO l'arco di Nina. PRIMA DI TUTTO: leggi DA_FARE_FATTO.md (la bussola).
+=== RIAVVIO SESSIONE #41 — 22/06/2026 ===
+Ultima sessione: #40 — 2026-06-22
 
-━━━ SE APRI DA APP DESKTOP (non Claude Code CLI) ━━━
-La continuità sta in 3 file del repo: DA_FARE_FATTO.md + questo file + BRAIN/STATE.json.
-Fai `git pull` e leggili. NB: memoria durevole, CLAUDE.md e skill (salva/graphify) sono
-SOLO su Claude Code (CLI) — l'app Desktop NON le ha. CLI = continuità piena.
+━━━ DOVE SIAMO (in 10 sec) ━━━
+RAG sbloccato + ottimizzato su GPU. MIMS/VULCAN sviluppati sul sapere connesso
+(con le foto reali della pressa). Canone ripulito dal framing vietato "recuperato"
+con una regola SCALABILE. ASSOLUTO V9 scritta: tesi "smantellare l'alluminio estruso".
 
-━━━ DOVE SIAMO (enuncialo in <10 sec) ━━━
-"Rifare le storie" è FATTO: struttura a 2 ASSI (RUOLO=diario · NINA=percorso educativo)
-rebuild-safe, integrata coi N-livelli sui CONTENUTI (un approfondimento = un giro di
-spirale). La Mappa di Nina è percorribile a LV illimitati e DATA-DRIVEN. L'arco Nina è
-COMPLETO 8/8 (⟡0 Materia → ⟡7 Orchestrazione) + attivata la verticale FINANZA (₣1).
-153 episodi, build TS verde, ~14 commit isolati su main.
+━━━ FATTO IN SESSIONE #40 ━━━
+• RAG: torch 2.6.0+cu124 ripristinato (llamafactory l'aveva messo cpu) + chromadb 0.5.23
+  (la 1.5.9 aveva il compactor rotto: count inchiodato 469/32664). 32774 chunk allineati.
+• RAG ottimizzato GPU: embedder+reranker su DEVICE=cuda -> rebuild 2:48 (era ~15min cpu).
+• requirements-rag.txt v2.0 blindato (no torch cpu, no chromadb 1.x).
+• MIMS/VULCAN: SCHEDA_PRODOTTO_MIMS_VULCAN + 17 foto reali -> BUILD_REALE_20260622
+  (pressa VULCAN costruita, guide lineari, stampo mattonella provvisorio). VULCAN_MANIFESTO corretto.
+• Canone veritiero: tolto "componente recuperato/usato/EUR 0" da 49 file; canon_guard.py
+  agganciato a story_agent (pulisce alla fonte) + night_audit (segnala). REGOLA SCALABILE.
+• Dataset rigenerato (180 campioni). ASSOLUTO V9 creata + indicizzata.
 
-━━━ FATTO QUESTA SESSIONE (#37, commit principali) ━━━
-  ✓ N-livelli sui contenuti: episodes.json non più piatto (parent/level/children, build_tree).
-  ✓ 2 ASSI rebuild-safe (apply_narrativa): asse_ruolo su tutti + asse_nina su 40 concetti;
-    i figli ereditano l'asse_nina del padre con giro_spirale+1. Tipo TS narrativa opz.
-  ✓ 13 approfondimenti LV1 + 3 LV2 sui 4 semi (graphify/rete/watcher/controllo).
-  ✓ Mappa di Nina rifatta percorribile + data-driven (Regioni ⟡0-⟡7 Tech + ₣1-4 Finanza);
-    "Mappa Avventura"→"Mappa"; mappa di sistema→"ARCHITETTURA".
-  ✓ ARCO NINA 8/8: EP_AV_M0 Materia · AV_00 Loop · 01 Auto · 02 LLM · 03 RAG · 04 Wiki ·
-    05 Agenti · 06 Direttore. + EP_AV_FIN_01 "Il Valore" (verticale finanza).
-  ✓ Canon BIBBIA §0-ter: Nina ha il suo OS (si perde come Matteo; la Mappa È il suo OS).
-  ✓ Indice PIETRE.md auto-generato (Tech+Finanza) + FATTI(per il RAG) sui 4 semi + riflusso
-    in MICROINDUSTRY/MENTE/KNOWLEDGE/genesis_nodi_fatti.md (serve `rag-update` per indicizzarlo).
-  ✓ FIX crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ — usava REGIONI prima dell'init).
-  ✓ EP_AV_03/04: tolto il "parcheggio", sono canonici nell'arco.
-
-━━━ ⚠ DA FARE SUBITO (azione di Matteo) ━━━
-  • RAG /api/rag/vectors dava 503 (indice ChromaDB stale: "Error finding id"). Ho lanciato
-    SERVICES/restart_api.ps1 ma RICHIEDE UAC (admin): APPROVA il prompt → RAG torna 200.
-    Verifica: curl http://localhost:5001/api/rag/vectors  (atteso 200).
-  • Se MENTE è cambiata: `rag-update` per indicizzare genesis_nodi_fatti.md.
-
-━━━ PROSSIMO LAVORO ━━━
-  1. FINANZA ₣2 "Spendere meno di quanto entra" (la regola 9 per un bambino) — open loop
-     già piazzato in EP_AV_FIN_01. Poi ₣3 Il Cuscinetto, ₣4 Far lavorare i soldi.
-  2. FOCUS richiesto da Matteo: usare FABLE 5 (disponibile fino al 22/06) per SELF_IMPROVE /
-     RED-TEAM — "farmi attaccare": audit critico a 360 (fragilità, teatro/dati finti,
-     sicurezza, debito tecnico, incoerenze) → migliorie prioritizzate → proposte stile PR,
-     MAI merge automatico su main. È il nodo SELF_IMPROVE.
-
-━━━ DA DECIDERE CON MATTEO ━━━
-  • Scalare asse_nina ai 129 episodi (ora 40, solo concetti) — script di rimappatura assistito.
-  • Viste dashboard sui 2 assi (timeline RUOLO oltre alla Mappa per Nina).
-  • Temi/profondità della verticale Finanza (sono personali, per suo figlio).
+━━━ PROSSIMO LAVORO (in ordine) ━━━
+1. Riabilitare TI_Watchdog (1 UAC): schtasks /Change /TN TI_Watchdog /ENABLE + /Run
+   (rinfresca anche l'API col rag_engine GPU).
+2. Decidere la via connettori MIMS: compressione VULCAN vs iniezione (SCHEDA §5) -> sblocca BEP/B2.
+3. Montare il martinetto Vevor 3 stadi al centro -> 1a colata mattonella (validazione VULCAN).
+4. Ordinare mandrino 2.2kW ER20 -> stampo tile definitivo.
+5. Rifinire STORIE/Nina.
 
 ━━━ BLOCKERS ━━━
-  ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
-  ⚠ Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8
+⚠ TI_Watchdog DISABILITATO (no self-healing) — riabilitare con 1 UAC.
+⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
+⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito stampo tile.
+⚠ Martinetto Vevor 3 stadi da montare — prerequisito 1a colata.
 
-━━━ ULTIMI COMMIT ━━━
-  a079416 fix(mappa): rimossa MAPPA_RADICE (crash TDZ)
-  4f06bf7 docs(bussola): sessione #37
-  1eb9656 feat(nina): verticale FINANZA + EP_AV_FIN_01
-  490e304 canon(nina): BIBBIA §0-ter Nina ha il suo OS
-  4fd5658 content(nina): EP_AV_M0 La Materia (arco 8/8)
+━━━ NOTE ━━━
+• RAG sano = chunks (semantico) DEVE == bm25_chunks. Se divergono -> rebuild pulito.
+• canon_guard: se emerge una frase nuova vietata, +1 riga a PAIRS in AUTOMATIONS/core/canon_guard.py.
 
-Generato: 11/06/2026 — chiusura sessione #37.
+Generato: 22/06/2026 — fine sessione #40

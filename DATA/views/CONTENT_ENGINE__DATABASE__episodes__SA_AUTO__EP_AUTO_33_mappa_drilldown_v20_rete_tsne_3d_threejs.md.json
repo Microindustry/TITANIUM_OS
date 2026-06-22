@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_33  Milestone](#epauto33-milestone)\n    - [MAPPA drill-down v2.0  RETE t-SNE 3D (Three.js raw)  watch](#mappa-drill-down-v20-rete-t-sne-3d-threejs-raw-watch)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [La Mappa che Respira](#la-mappa-che-respira)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del 30 maggio esisteva solo il rumore](#atto-i-prima-del-30-maggio-esisteva-solo-il-rumore)\n  - [ATTO II  Il 30 maggio: quando i dati iniziano a parlare in 3D](#atto-ii-il-30-maggio-quando-i-dati-iniziano-a-parlare-in-3d)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_33  Milestone](#epauto33-milestone)\n    - [MAPPA drill-down v2.0  RETE t-SNE 3D (Three.js raw)  watch](#mappa-drill-down-v20-rete-t-sne-3d-threejs-raw-watch)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [La Mappa che Respira](#la-mappa-che-respira)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del 30 maggio esisteva solo il rumore](#atto-i-prima-del-30-maggio-esisteva-solo-il-rumore)\n  - [ATTO II  Il 30 maggio: quando i dati iniziano a parlare in 3D](#atto-ii-il-30-maggio-quando-i-dati-iniziano-a-parlare-in-3d)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "ATTO III — Cosa si sblocca adesso",
       "content": "La mappa v2.0 non è un upgrade estetico. È un cambio di paradigma operativo.\n\nGENESIS ora ha un pannello di controllo visivo che non esisteva prima. Posso vedere dove lo swarm sta lavorando, dove sta aspettando, dove c'è attrito. Posso prendere decisioni in secondi invece che in minuti. E con il watchdog psutil integrato, le decisioni sono informate anche dal piano fisico, non solo logico.\n\nPer V32, che è ancora al 65% con i rinforzi Config G, la mappa mi dice esattamente perché MIMS è bloccato: finché la catena V32-VULCAN non è chiusa, certi connettori modulari non hanno un contesto fisico su cui appoggiarsi. Non è un problema di design — MIMS ha il design completo. È un problema di sequenza. Adesso lo vedo nel grafo, visivamente, senza doverlo ricostruire ogni volta.\n\nPer Vita Natura e EVA, il drill-down mi mostra che il 40% di completamento nasconde una distribuzione asimmetrica: il sito e le prenotazioni sono più avanti, il pilota AI ha ancora punti ciechi. Con la mappa posso allocare il prossimo sprint in modo chirurgico.\n\nIDENTITY al 45% sembrava un numero vago. Adesso è un nodo nel grafo con dipend"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** GENESIS è al 83% di completamento, con swarm NEXUS, RAG graph-aware v5, protocollo MCP 1.3 e watchdog swarm parallelo integrati.\n\n- **FATTO:** V32 (CNC epoxy-granite) è al 65% di completamento, fase Config G dei rinforzi; MIMS è bloccato in attesa che la catena V32-VULCAN si consolidi prima di procedere.\n\n- **FATTO:** EVA (automazione centro estetico Vita Natura) è al 40% di completamento, con distribuzione asimmetrica: sito e prenotazioni più avanzati, pilota AI con punti ciechi ancora aperti.\n\n- **FATTO:** IDENTITY (CV, dashboard, documentazione capabilities) è al 45% di completamento alla data dell'episodio (30 maggio 2026).\n\n- **DECISIONE:** La MAPPA v2.0 è implementata in Three.js raw (senza framework) con proiezione t-SNE 3D, 31 nodi attivi, lazy loading on-click e watchdog psutil integrato nel layer di monitoraggio GENESIS. **LOGICA:** Three.js raw scelto per controllo totale sul rendering; lazy loading per mantenere il browser leggero con 31 nodi; psutil aggiunge visibilità sullo stato fisico della macchina (CPU, memoria, processi) oltre allo stato logico dei task.\n\n- **FATTO:** Il blocco di MIMS è identificato come problema di sequenza, non di design: i connettori modulari richiedono un contesto fisico fornito dalla chiusura della catena V32-VULCAN per poter essere implementati."
     }
   ],
-  "word_count": 1007,
-  "updated_at": "2026-06-02T16:38:09.091001",
-  "built_at": "2026-06-11T14:00:30.781120"
+  "word_count": 1220,
+  "updated_at": "2026-06-12T16:08:57.969548",
+  "built_at": "2026-06-22T14:22:30.525175"
 }

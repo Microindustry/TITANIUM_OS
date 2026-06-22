@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_43  Milestone](#epauto43-milestone)\n    - [Stack Python RAG installato (torch 2.6.0cu124, chromadb, se](#stack-python-rag-installato-torch-260cu124-chromadb-se)\n- [IL SISTEMA  Episodio: Il Cervello Prende Forma](#il-sistema-episodio-il-cervello-prende-forma)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema Che Non Era di Codice](#atto-i-il-problema-che-non-era-di-codice)\n  - [ATTO II  Un Click, un Riavvio, uno Stack Completo](#atto-ii-un-click-un-riavvio-uno-stack-completo)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_43  Milestone](#epauto43-milestone)\n    - [Stack Python RAG installato (torch 2.6.0cu124, chromadb, se](#stack-python-rag-installato-torch-260cu124-chromadb-se)\n- [IL SISTEMA  Episodio: Il Cervello Prende Forma](#il-sistema-episodio-il-cervello-prende-forma)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema Che Non Era di Codice](#atto-i-il-problema-che-non-era-di-codice)\n  - [ATTO II  Un Click, un Riavvio, uno Stack Completo](#atto-ii-un-click-un-riavvio-uno-stack-completo)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*L'infrastruttura regge quando non ti accorgi che regge. Quel giorno il Getac si è avviato, i moduli hanno caricato, il motore ha risposto — e io ero già passato al problema successivo. È così che deve funzionare.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Lo stack RAG installato sul Getac il 02/06/2026 include: torch 2.6.0+cu124, chromadb 1.5.9, sentence-transformers 5.5.1, sklearn, Visual C++ Redistributable x64. **LOGICA:** Le dipendenze compilate di chromadb e sentence-transformers richiedono le DLL di runtime Microsoft (VC++ Redist); senza di esse i moduli non partono indipendentemente da pip o versione Python.\n\n- **DECISIONE:** Prima dell'installazione del VC++ Redistributable, è stato implementato un RAG fallback in pure Python (TF-IDF + BM25, zero dipendenze esterne) con la stessa API del motore ChromaDB. **LOGICA:** Garantire continuità operativa durante il blocco ambientale; l'API identica ha permesso la sostituzione drop-in senza riscrittura del resto del sistema.\n\n- **FATTO:** Il RAG engine riscritto ha subito una revisione di 138 righe aggiunte e 84 rimosse per passare da TF-IDF a embedding reali (sentence-transformers) e da struttura in memoria a vector store persistente (ChromaDB). **LOGICA:** Il contratto API è rimasto invariato per non rompere le dipendenze a monte.\n\n- **FATTO:** Il fix per il blocco ambientale era noto e documentato nel setup log di TITANIUM_OS come \"fix permanente (1 click)\": installer `vc_redist.x64.exe` da `https://aka.ms/vs/17/release/vc_redist.x64.exe`, seguito da riavvio macchina.\n\n- **OBIETTIVO:** Al momento dell'episodio lo stato avanzamento dei sottoprogetti è: GENESIS 70%, V32 65%, MIMS in stato `waiting_press`."
     }
   ],
-  "word_count": 1260,
-  "updated_at": "2026-06-03T21:52:46.274520",
-  "built_at": "2026-06-11T14:00:31.739644"
+  "word_count": 1493,
+  "updated_at": "2026-06-12T16:10:39.868738",
+  "built_at": "2026-06-22T14:22:33.848847"
 }

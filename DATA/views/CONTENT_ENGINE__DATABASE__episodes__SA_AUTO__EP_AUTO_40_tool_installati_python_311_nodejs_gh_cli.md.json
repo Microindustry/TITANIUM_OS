@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_40  Milestone](#epauto40-milestone)\n    - [Tool installati: Python 3.11, Node.js, gh CLI, Tailscale](#tool-installati-python-311-nodejs-gh-cli-tailscale)\n- [IL SISTEMA  Episodio: Fondamenta](#il-sistema-episodio-fondamenta)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di costruire, costruisci il terreno](#atto-i-prima-di-costruire-costruisci-il-terreno)\n  - [ATTO II  Quattro tool, un sistema](#atto-ii-quattro-tool-un-sistema)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_40  Milestone](#epauto40-milestone)\n    - [Tool installati: Python 3.11, Node.js, gh CLI, Tailscale](#tool-installati-python-311-nodejs-gh-cli-tailscale)\n- [IL SISTEMA  Episodio: Fondamenta](#il-sistema-episodio-fondamenta)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di costruire, costruisci il terreno](#atto-i-prima-di-costruire-costruisci-il-terreno)\n  - [ATTO II  Quattro tool, un sistema](#atto-ii-quattro-tool-un-sistema)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Le fondamenta non si vedono quando l'edificio è in piedi. Si vedono quando trema.*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Stack di sviluppo TITANIUM_OS su Windows: Python 3.11.9 installato in `C:\\Users\\benen\\tools\\python311\\python.exe`, con dipendenze `mcp 1.27.1` e `anthropic 0.104.1`.\n\n- **DECISIONE:** Versione `anthropic 0.104.1` scelta perché supporta i tool use aggiornati necessari a EVA per le chiamate strutturate sui dati di Vita Natura. **LOGICA:** Senza quella versione SDK, le chiamate strutturate di EVA non funzionano.\n\n- **FATTO:** Node.js versione 22 installato; stack frontend: TypeScript + React + Zustand (state management) + Tailwind CSS, usato per l'interfaccia di GENESIS.\n\n- **FATTO:** `gh` CLI versione 2.92 installato per gestione GitHub integrata da terminale (issue, pull request, release). Il tag v3.0.0 era già stato pushato alla sessione precedente.\n\n- **FATTO:** Tailscale installato come mesh network cifrata basata su WireGuard, per connettere i dispositivi di sviluppo in rete privata senza esporre porte pubbliche — prerequisito per la comunicazione tra GENESIS e il server EVA di Vita Natura.\n\n- **OBIETTIVO:** Avanzamento aree TITANIUM_OS al momento dell'episodio: V32 65%, GENESIS 70%, EVA/Vita Natura 40%, MIMS 30%, IDENTITY 50%."
     }
   ],
-  "word_count": 1382,
-  "updated_at": "2026-06-03T21:50:21.487292",
-  "built_at": "2026-06-11T14:00:31.458413"
+  "word_count": 1568,
+  "updated_at": "2026-06-12T16:10:09.556923",
+  "built_at": "2026-06-22T14:22:32.846392"
 }

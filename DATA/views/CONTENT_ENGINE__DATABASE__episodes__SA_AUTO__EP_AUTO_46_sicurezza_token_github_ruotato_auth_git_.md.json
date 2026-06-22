@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_46  Milestone](#epauto46-milestone)\n    - [Sicurezza: token GitHub ruotato  auth git via gh keyring, z](#sicurezza-token-github-ruotato-auth-git-via-gh-keyring-z)\n- [IL SISTEMA  Episodio: Chiavi](#il-sistema-episodio-chiavi)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il problema che non vedi finché non lo vedi](#atto-i-il-problema-che-non-vedi-finché-non-lo-vedi)\n  - [ATTO II  Rotazione, non riparazione](#atto-ii-rotazione-non-riparazione)\n  - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_46  Milestone](#epauto46-milestone)\n    - [Sicurezza: token GitHub ruotato  auth git via gh keyring, z](#sicurezza-token-github-ruotato-auth-git-via-gh-keyring-z)\n- [IL SISTEMA  Episodio: Chiavi](#il-sistema-episodio-chiavi)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il problema che non vedi finché non lo vedi](#atto-i-il-problema-che-non-vedi-finché-non-lo-vedi)\n  - [ATTO II  Rotazione, non riparazione](#atto-ii-rotazione-non-riparazione)\n  - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Un sistema che conosce se stesso ma non si protegge è solo un archivio aperto. La conoscenza senza confine non è forza — è superficie d'attacco.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il token GitHub precedente era in formato `gho_` (vecchio formato), generato mesi prima del 3 giugno 2026 e mai ruotato; è stato revocato il 03/06/2026.\n\n- **DECISIONE:** Autenticazione Git verso GitHub migrata da token in file/variabile persistente a `gh keyring` (CLI ufficiale GitHub come credential helper). **LOGICA:** Il token non appare mai in chiaro in file, log di processo o `git config`; viene sbloccato solo da sessione utente autenticata tramite keyring cifrato dell'OS.\n\n- **FATTO:** La regola \"zero segreti in chiaro\" è codificata nella LEX_DIGITALIS, documento di governance del codice TITANIUM_OS; si applica a tutte le componenti (relay V32, firmware CNC, chiamate API EVA). Implementazione: `os.getenv()` in Python, header non versionato in C++ per il firmware V32.\n\n- **FATTO:** Una chiave Anthropic `sk-ant-api03-` generata a marzo risultava tracciata (troncata) in un file di log di setup; al momento dell'episodio non ancora ruotata ma segnalata per rotazione pianificata.\n\n- **OBIETTIVO:** Dopo la rotazione del token, Matteo verifica il buon esito con `git push` sul repository TITANIUM_OS e controlla `git config --list` per assenza di URL con credenziali hardcoded (`url.https://gho_...@github.com`)."
     }
   ],
-  "word_count": 1283,
-  "updated_at": "2026-06-03T21:55:18.277509",
-  "built_at": "2026-06-11T14:00:32.027498"
+  "word_count": 1482,
+  "updated_at": "2026-06-12T16:11:08.509763",
+  "built_at": "2026-06-22T12:46:30.634292"
 }

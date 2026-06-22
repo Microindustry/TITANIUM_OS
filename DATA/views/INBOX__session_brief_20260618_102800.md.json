@@ -1,0 +1,55 @@
+{
+  "path": "INBOX/session_brief_20260618_102800.md",
+  "title": "SESSION BRIEF — 2026-06-18 10:28:00",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [SESSION BRIEF  2026-06-18 10:28:00](#session-brief-2026-06-18-102800)\n  - [Milestone attiva](#milestone-attiva)\n  - [Prossimo step](#prossimo-step)\n  - [Focus oggi](#focus-oggi)\n  - [Pilastri](#pilastri)\n  - [Target prossimi](#target-prossimi)\n  - [Blockers](#blockers)\n  - [Prompt sessione](#prompt-sessione)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "SESSION BRIEF — 2026-06-18 10:28:00",
+      "content": ""
+    },
+    {
+      "level": 2,
+      "title": "Milestone attiva",
+      "content": "Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout), animazioni solo CSS, calendario sidebar mancante. Metodo correttivo Matteo 18/06: INTEGRA non rifare, USA gli agenti."
+    },
+    {
+      "level": 2,
+      "title": "Prossimo step",
+      "content": "Sessione PULITA (nuova, senza contesto): 1) leggi tutto con subagent Explore/Plan PRIMA di toccare; 2) pitch visibili SENZA API (import Vite ?raw); 3) reintegra CanvasLayout nei pilastri + livelli (non sostituire); 4) CALENDARIO in sidebar da DOCS/INVENTARIO_NOTTURNO.md; 5) animazioni con libreria (framer-motion) proposta dall'agente research/self_improve; 6) fix night_audit 'Unterminated string'. REGOLA: integra, non rifare in modo acerbo."
+    },
+    {
+      "level": 2,
+      "title": "Focus oggi",
+      "content": "Salva fatto (#38). Riparti PULITO e INTEGRA il debito: pitch visibili senza API, pilastri reintegrati, calendario sidebar, animazioni con libreria. Usa gli agenti."
+    },
+    {
+      "level": 2,
+      "title": "Pilastri",
+      "content": "V32             [██████░░░░]  65%  in_progress\n  MIMS            [███░░░░░░░]  30%  waiting_press\n  GENESIS         [███████░░░]  70%  building\n  VITA_NATURA     [████░░░░░░]  40%  active\n  IDENTITY        [█████░░░░░]  50%  active"
+    },
+    {
+      "level": 2,
+      "title": "Target prossimi",
+      "content": "# 6 [2026-Q1     ] Rinforzi Config G — PROSSIMO\n  # 7 [2026-Q2     ] Epoxy Granite fill + YouTube Ep.01 — PIANIFICATO\n  # 8 [2026-Q2     ] Colonne Z+U definitive — PIANIFICATO\n  # 9 [2026-Q2     ] Primo video YouTube — PIANIFICATO\n  #10 [2026-Q3     ] Pressa 4 colonne operativa — PIANIFICATO\n  #11 [2026-Q3     ] V32 assemblaggio completo — PIANIFICATO"
+    },
+    {
+      "level": 2,
+      "title": "Blockers",
+      "content": "🔴 Pitch dashboard INVISIBILI (legati ad API spenta) — fix: import Vite ?raw del .md\n  🔴 Pilastri acerbi: CanvasLayout svuotato da SpiegaPilastroView — reintegrare, non sostituire\n  🔴 Chiavi .env da ruotare (red-team #38) — le ruota Matteo\n  🔴 night_audit 'Unterminated string' ricorrente (parse LLM non difensivo)\n  🔴 Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS\n  🔴 Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
+    },
+    {
+      "level": 2,
+      "title": "Prompt sessione",
+      "content": "```\n[TITANIUM_OS — SESSION CONTEXT]\nData: 2026-06-18 10:28\nMilestone attiva: Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout), animazioni solo CSS, calendario sidebar mancante. Metodo correttivo Matteo 18/06: INTEGRA non rifare, USA gli agenti.\nUltimo step: Modifica a CanvasLayout.tsx\nProssimo step: Sessione PULITA (nuova, senza contesto): 1) leggi tutto con subagent Explore/Plan PRIMA di toccare; 2) pitch visibili SENZA API (import Vite ?raw); 3) reintegra CanvasLayout nei pilastri + livelli (non sostituire); 4) CALENDARIO in sidebar da DOCS/INVENTARIO_NOTTURNO.md; 5) animazioni con libreria (framer-motion) proposta dall'agente research/self_improve; 6) fix night_audit 'Unterminated string'. REGOLA: integra, non rifare in modo acerbo.\nFocus oggi: Salva fatto (#38). Riparti PULITO e INTEGRA il debito: pitch visibili senza API, pilastri reintegrati, calendario sidebar, animazioni con libreria. Usa gli agenti.\nBlockers: Pitch dashboard INVISIBILI (legati ad API spenta) — fix: import Vite ?raw del .md, Pilastri acerbi: CanvasLayout svuotato da SpiegaPilastroView — reintegrare, non sostituire, Chiavi .env da ruotare (red-team #38) — le ruota Matteo, night_audit 'Unterminated string' ricorrente (parse LLM non difensivo), Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS, Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8\n\nStato pilastri:\n  V32: in_progress (65%)\n  MIMS: waiting_press (30%)\n  GENESIS: building (70%)\n  VITA_NATURA: active (40%)\n  IDENTITY: active (50%)\n\nTASK SESSIONE:\n[Descrivi qui cosa vuoi fare oggi]\n\nRegola: THEMIS pianifica prima di eseguire. Conferma il piano prima di scrivere codice.\n```"
+    }
+  ],
+  "word_count": 604,
+  "updated_at": "2026-06-18T10:28:00.350591",
+  "built_at": "2026-06-22T10:42:00.938007"
+}

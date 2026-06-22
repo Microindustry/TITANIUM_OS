@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S2_05  IL SILENZIO](#eps205-il-silenzio)\n    - [25 marzo  27 maggio. 63 giorni. Un commit.](#25-marzo-27-maggio-63-giorni-un-commit)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  COSA È SUCCESSO IN QUEI 63 GIORNI](#atto-i-cosa-è-successo-in-quei-63-giorni)\n  - [ATTO II  IL VALORE DELLA STORIA PERDUTA](#atto-ii-il-valore-della-storia-perduta)\n  - [ATTO III  LA RISPOSTA](#atto-iii-la-risposta)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S2_05  IL SILENZIO](#eps205-il-silenzio)\n    - [25 marzo  27 maggio. 63 giorni. Un commit.](#25-marzo-27-maggio-63-giorni-un-commit)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  COSA È SUCCESSO IN QUEI 63 GIORNI](#atto-i-cosa-è-successo-in-quei-63-giorni)\n  - [ATTO II  IL VALORE DELLA STORIA PERDUTA](#atto-ii-il-valore-della-storia-perduta)\n  - [ATTO III  LA RISPOSTA](#atto-iii-la-risposta)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -32,9 +32,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Il gap 25 marzo → 27 maggio è chiuso.\n\nNon perché abbiamo recuperato tutto quello che c'era — ma perché ora il sistema cattura automaticamente ciò che succede. Nessun episodio futuro andrà perso per mancanza di tempo o energia.\n\nQuello che è successo in quei 63 giorni ha formato la macchina che hai adesso. Ha formato la decisione del corpo unico. Ha formato i dati su cui si basa il V8. Ha formato le mani che tengono il calibro.\n\nNon è andato perso del tutto. È nei pezzi.\n\nMa la prossima volta che passi 63 giorni in officina senza documentare, lo story agent ci sarà. E almeno il contesto dei commit — cosa hai cambiato, quando, perché — sarà lì, narrativizzato, pronto.\n\n> *Il sistema che costruisci oggi deve catturare il lavoro che farai domani.*\n> *Non puoi fidarti della memoria. Puoi fidarti del codice che gira mentre dormi.*\n\n---\n\n**reel_hook:** \"Ho guardato il mio git log e ho trovato un buco. 25 marzo → 27 maggio. 63 giorni. Un commit. Non perché non lavoravo — lavoravo ogni giorno in officina su Config G. Ma il lavoro fisico non ha un git commit. Non ha un documento. Non ha un episodio. Sessanta-tre giorni di decisioni, fallimenti, insight — persi. Non completamente: ci sono le foto, i CAD, le misure. Ma la storia — perché hai fatto quella scelta, cosa hai provato prima, cosa non ha funzionato — quella non c'è. Ho costruito uno story agent automatico. Ogni fine sessione verifica i commit nuovi e genera una bozza. Non per scrivere al posto mio — per non perdere il materiale.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 05 — chiusura stagione |\n| Arco | Il costo del silenzio → la risposta automatica |\n| Meta | Questo episodio è la ragione per cui story_agent esiste |\n| Connessione S3 | S3 inizia con il sistema completamente automatizzato — niente più gap |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il gap di documentazione nel progetto TITANIUM_OS copre 63 giorni (25 marzo → 27 maggio 2026), con un solo commit registrato in quel periodo: `fix: V32 corpo unico — aggiornata spec massa` del 27 maggio.\n\n- **FATTO:** Il commit precedente al gap è `feat: Dashboard v5.0 — Zustand + TanStack Query` del 25 marzo 2026, che segna il rebranding completo e l'adozione di Zustand + TanStack Query come architettura della dashboard.\n\n- **DECISIONE:** Durante i 63 giorni di silenzio documentale, la decisione strutturale più rilevante presa su V32 è **corpo unico vs molle** — maturata in officina nelle settimane precedenti e formalizzata solo il 27 maggio nel commit tecnico. **LOGICA:** La decisione è stata guidata dall'osservazione diretta della macchina durante le fasi di build (Config G), non da un processo documentato in tempo reale.\n\n- **FATTO:** Le attività fisiche di Config G nel periodo includono saldatura con acciaio S235, utilizzo di torcia TIG con parametri calcolati per minimizzare distorsioni termiche, e verifica dell'allineamento post-cordone con comparatore. I gusset sulle colonne Z misurano 200 mm.\n\n- **DECISIONE:** Il 29 maggio 2026 viene costruito `story_agent.py` come risposta al gap. **LOGICA:** Lo script verifica a fine sessione la presenza di commit non ancora narrativizzati e genera automaticamente una bozza di episodio, con l'obiettivo di mantenere il contesto narrativo senza sostituire la scrittura umana — stimato il tempo di finalizzazione in 20 minuti per bozza."
     }
   ],
-  "word_count": 1031,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:27.105722"
+  "word_count": 1271,
+  "updated_at": "2026-06-12T16:00:20.356369",
+  "built_at": "2026-06-22T14:22:03.533926"
 }

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E03](#titaniumos-s2e03)\n  - [IL SISTEMA CHE DORME MA NON RIPOSA](#il-sistema-che-dorme-ma-non-riposa)\n    - [Sessione 10  29 Maggio 2026](#sessione-10-29-maggio-2026)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL CONTENUTO CHE PRODUCE SE STESSO](#atto-i-il-contenuto-che-produce-se-stesso)\n  - [ATTO II  COMPUTER_USE E IL CONFINE CHE SI SPOSTA](#atto-ii-computeruse-e-il-confine-che-si-sposta)\n  - [ATTO III  LA NOTTE CHE LAVORA](#atto-iii-la-notte-che-lavora)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E03](#titaniumos-s2e03)\n  - [IL SISTEMA CHE DORME MA NON RIPOSA](#il-sistema-che-dorme-ma-non-riposa)\n    - [Sessione 10  29 Maggio 2026](#sessione-10-29-maggio-2026)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL CONTENUTO CHE PRODUCE SE STESSO](#atto-i-il-contenuto-che-produce-se-stesso)\n  - [ATTO II  COMPUTER_USE E IL CONFINE CHE SI SPOSTA](#atto-ii-computeruse-e-il-confine-che-si-sposta)\n  - [ATTO III  LA NOTTE CHE LAVORA](#atto-iii-la-notte-che-lavora)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E03 |\n| **Titolo** | IL SISTEMA CHE DORME MA NON RIPOSA |\n| **Data registrazione** | 2026-05-29 |\n| **Sessione** | #10 |\n| **GENESIS** | 78% |\n| **V32** | 65% |\n| **Milestone attivo** | Config G — Rinforzi colonne Z+U |\n| **Commit principale** | `feat: COMPUTER_USE node v1.0` |\n| **Feature chiave** | Content Engine S2 + Automazioni notturne 03:37 |\n| **Dataset fine-tuning** | 180 esempi (30 ep × 6 campioni, formato Alpaca) |\n| **Agente nuovo** | Story Agent v1.0 — cron 02:07 |\n| **Dashboard** | v7.0 — sidebar + AgentsView + redesign |\n| **Co-autore AI** | Claude Sonnet 4.6 |\n| **Prossimo step** | Saldare 4 gusset 200mm colonna Z sinistra |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Content Engine sviluppato nella sessione #10 del 29 maggio 2026 ha prodotto 19 pezzi di contenuto strutturati in una giornata: 6 episodi S2, 5 MOMENTI (format da 5-7 minuti), 8 episodi backfill. **LOGICA:** Separare la fase di strutturazione/ricerca dalla fase di registrazione, riducendo il debito di documentazione accumulato.\n\n- **DECISIONE:** Implementazione del nodo `COMPUTER_USE v1.0` in `NODES/COMPUTER_USE/computer_use_agent.py` con loop screenshot → API Anthropic → azione, usando il modello `anthropic beta computer-use-2025-11-24`. **LOGICA:** Integrarlo come nodo nel sistema cognitivo GENESIS (non come demo isolata), abilitando in prospettiva interazione diretta con software CAD come Fusion 360.\n\n- **FATTO:** Lo Story Agent v1.0 è un cron job schedulato alle 02:07 che genera brief automatici per gli episodi successivi, fermandosi con un hook al termine della sessione.\n\n- **FATTO:** Il task scheduler notturno `night_research.bat` gira alle 03:37 ogni notte, eseguendo ricerche automatiche su topic quali *Epoxy Granite vibration damping*, *titanium TIG joint fatigue MotoGP*, *modular connector PA-GF30 thermal cycling*, e aggiornando il RAG. **LOGICA:** Delegare al sistema le attività di ricerca nelle ore notturne per non sottrarre tempo operativo (saldatura, sviluppo) alle ore diurne.\n\n- **OBIETTIVO:** Le colonne Z di V32 attendono ancora i gusset — quattro pezzi d'acciaio da 200 mm — da saldare. **LOGICA:** Attività fisica bloccata dai vincoli di tempo, non da vincoli tecnici."
     }
   ],
-  "word_count": 1395,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:24.849645"
+  "word_count": 1630,
+  "updated_at": "2026-06-12T15:56:26.058805",
+  "built_at": "2026-06-22T14:21:48.941155"
 }

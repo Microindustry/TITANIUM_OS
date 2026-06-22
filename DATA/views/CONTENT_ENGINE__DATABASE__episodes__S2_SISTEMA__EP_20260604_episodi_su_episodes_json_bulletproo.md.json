@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 28](#titaniumos-episodio-28)\n  - [Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown](#il-dev-flutter-che-non-capiva-perché-scriviamo-tutto-in-markdown)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL SISTEMA CHE SI ROMPE DA DENTRO](#atto-i-il-sistema-che-si-rompe-da-dentro)\n  - [ATTO II  COSA HA VISTO LAMICO](#atto-ii-cosa-ha-visto-lamico)\n  - [ATTO III  LEPISODIO PILOTA E I 88 CHE VENGONO DOPO](#atto-iii-lepisodio-pilota-e-i-88-che-vengono-dopo)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 28](#titaniumos-episodio-28)\n  - [Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown](#il-dev-flutter-che-non-capiva-perché-scriviamo-tutto-in-markdown)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL SISTEMA CHE SI ROMPE DA DENTRO](#atto-i-il-sistema-che-si-rompe-da-dentro)\n  - [ATTO II  COSA HA VISTO LAMICO](#atto-ii-cosa-ha-visto-lamico)\n  - [ATTO III  LEPISODIO PILOTA E I 88 CHE VENGONO DOPO](#atto-iii-lepisodio-pilota-e-i-88-che-vengono-dopo)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | 28 |\n| **Data registrazione** | 2026-06-04 |\n| **Progetto primario** | GENESIS |\n| **Progetti secondari** | V32 (contesto), MIMS (contesto) |\n| **Milestone attivo** | Automazioni notturne portabili e ottimizzate (GPU) |\n| **Parole** | ~1.050 |\n| **Tag** | `bug`, `architettura`, `StoryAgent`, `dashboard`, `RAG`, `episodio-pilota`, `dev-flutter`, `json`, `build` |\n| **Commit principali** | feat(storie)/episodes.json, fix(storie)/bulletproof, feat(storie)/3-episodi-notte, fix(story_agent)/log-separato |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** `storieData.ts` conteneva 5.772 righe con dati di 27 episodi incorporati come template literal TypeScript; dopo la migrazione a `episodes.json` il file è sceso a 33 righe.\n\n- **DECISIONE:** Migrazione dei dati episodi da template literal TypeScript a file `episodes.json` con import. **LOGICA:** I caratteri speciali (backtick, backslash, path Windows con doppie barre) generati da StoryAgent rompevano esbuild; il JSON non ha contesto sintattico e non può innescare quell'errore.\n\n- **DECISIONE:** Adozione di `json.dumps()` in Python per serializzare le stringhe degli episodi prima della scrittura in TypeScript. **LOGICA:** Gestisce automaticamente tutti i casi edge di escaping (backslash, path Windows) senza logica artigianale nelle funzioni `build_ts_entry` e `sync_storie.to_ts`.\n\n- **FATTO:** `tsconfig` ha ricevuto il flag `resolveJsonModule: true` per abilitare l'import diretto del file `episodes.json` nel progetto TypeScript/Vite.\n\n- **OBIETTIVO:** Il sistema usa Markdown come fonte di verità primaria (versionata su git) anziché un database strutturato. **LOGICA:** Permette a un operatore singolo di documentare sessioni di lavoro in testo libero senza schemi, migration scripts o tool proprietari; lo StoryAgent trasforma successivamente quel testo in contenuto navigabile.\n\n- **FATTO:** Nella stessa sessione StoryAgent ha generato 3 nuovi episodi da 30 commit recenti, portando il totale verso la soglia dei 88 episodi pianificati."
     }
   ],
-  "word_count": 1544,
-  "updated_at": "2026-06-05T02:08:07.061256",
-  "built_at": "2026-06-11T14:00:25.536378"
+  "word_count": 1760,
+  "updated_at": "2026-06-12T15:57:38.412869",
+  "built_at": "2026-06-22T14:21:51.505975"
 }

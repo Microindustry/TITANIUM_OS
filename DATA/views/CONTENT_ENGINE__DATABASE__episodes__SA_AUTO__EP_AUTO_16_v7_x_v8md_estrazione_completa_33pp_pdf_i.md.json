@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_16  Milestone](#epauto16-milestone)\n    - [V7_X_v8.md - estrazione completa 33pp PDF in MENTE/ASSOLUTO/](#v7xv8md---estrazione-completa-33pp-pdf-in-menteassoluto)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima della mappa, il caos](#atto-i-prima-della-mappa-il-caos)\n  - [ATTO II  Trentatré pagine dentro MENTE/ASSOLUTO/](#atto-ii-trentatré-pagine-dentro-menteassoluto)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_16  Milestone](#epauto16-milestone)\n    - [V7_X_v8.md - estrazione completa 33pp PDF in MENTE/ASSOLUTO/](#v7xv8md---estrazione-completa-33pp-pdf-in-menteassoluto)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima della mappa, il caos](#atto-i-prima-della-mappa-il-caos)\n  - [ATTO II  Trentatré pagine dentro MENTE/ASSOLUTO/](#atto-ii-trentatré-pagine-dentro-menteassoluto)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Se non l'hai scritto, non esiste. Se non esiste, ogni giorno ric"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il documento V7_X_v8.md è un'estrazione completa di 33 pagine depositata nella cartella MENTE/ASSOLUTO/ in data 28 maggio 2026, rappresentando la fotografia di stato di TITANIUM_OS a quella data.\n\n- **FATTO:** MENTE/ASSOLUTO/ è definita come livello di memoria operativa per contenuti non ambigui e definitivi, distinta da bozze o idee; tutto ciò che vi entra ha passato un filtraggio cognitivo (umano + agenti).\n\n- **PRECISIONE:** Stato dei sottosistemi al 28 maggio 2026: V32 (CNC Config G) al 65%, MIMS al 30% (bloccato in attesa della catena V32-VULCAN), EVA/Vita Natura al 40%, GENESIS dashboard v7.0 con RAG v4 attivo (ecosistema versione v1.3).\n\n- **DECISIONE:** Le dipendenze tra sottosistemi (es. MIMS bloccato da catena V32-VULCAN) sono state rese esplicite nel documento V7_X_v8.md con lo stato di ogni nodo, per rendere visibile la sequenza di sblocco dei passi successivi. **LOGICA:** Evitare la ricostruzione del contesto da zero ad ogni sessione di lavoro.\n\n- **FATTO:** Il documento include una sezione IDENTITY con CV e autopresentazione di Matteo trattata come dato tecnico, e una sezione sulle capabilities di Claude, entrambe parte della base documentale che GENESIS/RAG v4 utilizza come fonte di verità condivisa tra gli agenti."
     }
   ],
-  "word_count": 944,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:28.984290"
+  "word_count": 1153,
+  "updated_at": "2026-06-12T16:06:17.714712",
+  "built_at": "2026-06-22T14:22:24.891642"
 }

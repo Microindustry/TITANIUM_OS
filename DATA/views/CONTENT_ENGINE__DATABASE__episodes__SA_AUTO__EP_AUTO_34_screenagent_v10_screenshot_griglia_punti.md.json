@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_34  Milestone](#epauto34-milestone)\n    - [ScreenAgent v1.0 - screenshot  griglia puntini rossi 20x15](#screenagent-v10---screenshot-griglia-puntini-rossi-20x15)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [ScreenAgent v1.0: Quando la macchina ha imparato a guardare](#screenagent-v10-quando-la-macchina-ha-imparato-a-guardare)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima cera solo testo](#atto-i-prima-cera-solo-testo)\n  - [ATTO II  Trenta maggio 2026](#atto-ii-trenta-maggio-2026)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_34  Milestone](#epauto34-milestone)\n    - [ScreenAgent v1.0 - screenshot  griglia puntini rossi 20x15](#screenagent-v10---screenshot-griglia-puntini-rossi-20x15)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [ScreenAgent v1.0: Quando la macchina ha imparato a guardare](#screenagent-v10-quando-la-macchina-ha-imparato-a-guardare)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima cera solo testo](#atto-i-prima-cera-solo-testo)\n  - [ATTO II  Trenta maggio 2026](#atto-ii-trenta-maggio-2026)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*La differenza tra un sistema che ragiona e un sistema che lavora è che uno dei due sa aprire il cofano da solo.*\n\n---\n\nProssimo episodio: aggiornamento V32, Config G rinforzi — cosa significa davvero costruire una fresatrice con le proprie mani nel 2026."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** ScreenAgent v1.0 è stato completato il 30 maggio 2026 come milestone verificata in STATE.json, all'interno del progetto TITANIUM_OS/GENESIS.\n\n- **DECISIONE:** La griglia di riferimento visivo scelta per ScreenAgent è una mesh 20×15 punti rossi sovrapposta allo screenshot, generando 300 coordinate numeriche discrete. **LOGICA:** Trasforma qualsiasi schermo in uno spazio indirizzabile da Claude Vision senza richiedere API o output strutturati dall'applicazione target.\n\n- **FATTO:** Il flusso operativo di ScreenAgent v1.0 è: acquisizione screenshot in tempo reale → sovrapposizione griglia 20×15 → invio a Claude Vision → restituzione coordinata → conversione in azione simulata (click, drag, hotkey, copy).\n\n- **FATTO:** GENESIS al momento del milestone è dichiarato all'83% di avanzamento, con RAG graph-aware v5, orchestrazione MCP v1.3 e watchdog parallelo attivi.\n\n- **OBIETTIVO:** ScreenAgent è identificato come il layer di interfaccia tra GENESIS e software industriali senza API moderni, inclusi i software di controllo di V32 (CNC al 65% con rinforzi Config G) e VULCAN (pressa polimeri), e le interfacce web di EVA/Vita Natura.\n\n- **LOGICA PROGETTUALE:** Il principio architetturale dichiarato è che nessun nodo del sistema deve bloccarsi per ambienti non collaborativi; ScreenAgent è l'implementazione di questo principio a livello di percezione visiva."
     }
   ],
-  "word_count": 941,
-  "updated_at": "2026-06-02T16:38:09.091001",
-  "built_at": "2026-06-11T14:00:30.866564"
+  "word_count": 1150,
+  "updated_at": "2026-06-12T16:09:17.426918",
+  "built_at": "2026-06-22T14:22:30.847111"
 }

@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [I nodi-dio  le stelle che tengono il grafo](#i-nodi-dio-le-stelle-che-tengono-il-grafo)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutti i nodi pesano uguale](#approfondimento-lv1-di-epseedgraphify-non-tutti-i-nodi-pesano-uguale)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME SI TROVANO (semplice, poi preciso)](#come-si-trovano-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [I nodi-dio  le stelle che tengono il grafo](#i-nodi-dio-le-stelle-che-tengono-il-grafo)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutti i nodi pesano uguale](#approfondimento-lv1-di-epseedgraphify-non-tutti-i-nodi-pesano-uguale)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME SI TROVANO (semplice, poi preciso)](#come-si-trovano-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (la mappa intera).\n- **Fratello LV1:** [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] (i quartieri) — community = *gruppi*, nodi-dio =\n  *i pochi che li tengono insieme*. Due facce della stessa mappa.\n- **Aggancio Nina:** è il \"vero dietro\" delle **stelle** in `EP_AV_04 — La Grande Mappa` (la stella più\n  grande = il Grande Loop). Questo LV1 è la fonte tecnica di quella scena.\n\n> Episodio di **approfondimento (LV1)**: vive sotto il suo principale. Profondità libera, nessun tetto."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il grafo di TITANIUM_OS analizzato in EP_SEED_GRAPHIFY conta **5.966 nodi** e circa **6.000 archi (fili)**.\n\n- **FATTO:** In quel grafo, la distribuzione dei collegamenti è fortemente asimmetrica: alcuni nodi hanno **due fili**, altri ne hanno **centinaia**.\n\n- **DECISIONE:** I nodi-dio (god-node) in TITANIUM_OS sono identificati tramite metriche di **centralità**: grado (numero di fili), betweenness (frequenza sul cammino tra due nodi), closeness (vicinanza media a tutti gli altri nodi). **LOGICA:** chi svetta su queste misure è un hub la cui modifica si propaga a tutto il sistema.\n\n- **FATTO:** Esempi espliciti di nodi-dio in TITANIUM_OS citati nel testo: **il Grande Loop, il file dei path, il motore RAG**.\n\n- **OBIETTIVO:** Identificare i nodi-dio serve a tre scopi progettuali: sapere dove **non** fare modifiche superficiali, scegliere il punto di partenza per comprendere il sistema, e riconoscere i **single-point-of-failure** da proteggere."
     }
   ],
-  "word_count": 511,
-  "updated_at": "2026-06-10T18:54:46.219541",
-  "built_at": "2026-06-11T13:57:36.058455"
+  "word_count": 667,
+  "updated_at": "2026-06-12T16:00:58.566102",
+  "built_at": "2026-06-22T14:22:05.790070"
 }

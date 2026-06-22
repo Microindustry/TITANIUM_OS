@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [MIMS  1-Pager (il Lego per lindustria pesante)](#mims-1-pager-il-lego-per-lindustria-pesante)
+    - [Il problema (il mercato bipolare)](#il-problema-il-mercato-bipolare)
+    - [La soluzione  scheletro  pelle](#la-soluzione-scheletro-pelle)
+    - [Asset, non prodotto](#asset-non-prodotto)
+    - [Stato e prossimi passi](#stato-e-prossimi-passi)
+    - [In una riga](#in-una-riga)
+
+<!-- /TOC -->
+
 # MIMS — 1-Pager (il Lego per l'industria pesante)
 
 > *La rigidità dell'acciaio saldato con la reversibilità del bullone. Scheletro e pelle di un modo nuovo di costruire.*

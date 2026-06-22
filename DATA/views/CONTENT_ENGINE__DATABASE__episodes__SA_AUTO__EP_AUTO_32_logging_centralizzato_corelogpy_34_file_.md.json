@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_32  Milestone](#epauto32-milestone)\n    - [Logging centralizzato - CORE/log.py  34 file aggiornati, Ro](#logging-centralizzato---corelogpy-34-file-aggiornati-ro)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [342 Voci nel Buio](#342-voci-nel-buio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Rumore di Fondo](#atto-i-il-rumore-di-fondo)\n  - [ATTO II  CORE/log.py](#atto-ii-corelogpy)\n  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_32  Milestone](#epauto32-milestone)\n    - [Logging centralizzato - CORE/log.py  34 file aggiornati, Ro](#logging-centralizzato---corelogpy-34-file-aggiornati-ro)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [342 Voci nel Buio](#342-voci-nel-buio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Rumore di Fondo](#atto-i-il-rumore-di-fondo)\n  - [ATTO II  CORE/log.py](#atto-ii-corelogpy)\n  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "ATTO III — Cosa Si Sblocca",
       "content": "Il logging centralizzato non è una funzionalità. È un'infrastruttura. È la differenza tra costruire su sabbia e costruire su cemento.\n\nAdesso quando GENESIS ha un comportamento anomalo, apro genesis.log e leggo la storia minuto per minuto. Quando EVA fa una prenotazione, c'è traccia. Quando V32 sarà operativa e farà la prima passata su un pezzo reale, quel momento sarà scritto da qualche parte con il suo timestamp esatto. MIMS, quando entrerà nella catena produttiva V32-VULCAN, si collegherà a un sistema che già sa come parlare. VULCAN, la pressa polimeri, troverà il canale pronto.\n\nQuesto è il tipo di lavoro che non vedi finché non ti manca. È il lavoro che fa sì che tra sei mesi, quando qualcosa va storto alle tre di notte, io non debba ricostruire il passato a memoria. Ce l'ho scritto.\n\nC'è anche un'altra cosa. Il logging mi ha costretto a rileggere trentaquattro file e capire esattamente cosa comunicava ogni parte del sistema. È stato un audit involontario. Ho trovato due logiche ridondanti in GENESIS. Ho trovato un percorso di errore in EVA che non gestiva un caso limite. Li ho corretti mentre ero lì. Non"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il milestone di logging centralizzato è stato completato il 29 maggio 2026, aggiornando 34 file del progetto TITANIUM_OS.\n\n- **DECISIONE:** Creato modulo CORE/log.py come punto unico di gestione log; implementato RotatingFileHandler con scrittura su file in DATA/logs/ e canali nominati per modulo (genesis.log, eva.log, v32.log). **LOGICA:** Evitare la perdita di messaggi diagnostici legata alla sessione di terminale aperta; rendere i log consultabili, filtrabili e persistenti.\n\n- **FATTO:** I print statements sono stati ridotti da 342 a 131 nei 34 file aggiornati; 211 print diagnostici convertiti in chiamate log strutturate con livello di severità (debug/info/warning/error/critical), timestamp e nome del modulo.\n\n- **PRECISIONE:** I print rimasti (131) sono quelli destinati all'output operatore/interfaccia utente; solo i print diagnostici e di sistema sono stati migrati al logger.\n\n- **FATTO:** Durante il refactoring dei 34 file sono stati individuati e corretti due logiche ridondanti in GENESIS e un caso limite non gestito nel percorso di errore di EVA."
     }
   ],
-  "word_count": 936,
-  "updated_at": "2026-06-02T16:38:09.091001",
-  "built_at": "2026-06-11T14:00:30.687392"
+  "word_count": 1110,
+  "updated_at": "2026-06-12T16:08:48.977559",
+  "built_at": "2026-06-22T14:22:30.198133"
 }

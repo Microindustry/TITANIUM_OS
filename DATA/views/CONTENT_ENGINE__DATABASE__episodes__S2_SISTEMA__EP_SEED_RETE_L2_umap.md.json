@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [t-SNE contro UMAP  due modi di fare la foto](#t-sne-contro-umap-due-modi-di-fare-la-foto)\n    - [Approfondimento LV2 di EP_SEED_RETE_L1_TSNE  non cè una sola foto giusta](#approfondimento-lv2-di-epseedretel1tsne-non-cè-una-sola-foto-giusta)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [LA DIFFERENZA (semplice, poi preciso)](#la-differenza-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [t-SNE contro UMAP  due modi di fare la foto](#t-sne-contro-umap-due-modi-di-fare-la-foto)\n    - [Approfondimento LV2 di EP_SEED_RETE_L1_TSNE  non cè una sola foto giusta](#approfondimento-lv2-di-epseedretel1tsne-non-cè-una-sola-foto-giusta)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [LA DIFFERENZA (semplice, poi preciso)](#la-differenza-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO",
       "content": "- **Sale a:** [[EP_SEED_RETE_L1_TSNE]] → [[EP_SEED_RETE]].\n- **Aggancio Nina:** \"il ritratto e la foto aerea\" — due modi di guardare la stessa cosa, perfetti per\n  insegnare a un bambino che *ogni mappa sceglie cosa mostrare e cosa perdere*.\n\n> Approfondimento (LV2). Profondità libera."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** t-SNE privilegia la struttura locale (vicinato tra punti vicini): i grappoli risultano ben separati e nitidi, ma le distanze tra grappoli diversi non sono affidabili.\n- **FATTO:** UMAP privilegia la struttura globale: le distanze tra zone hanno più senso rispetto a t-SNE, ed è generalmente più veloce su grandi quantità di punti.\n- **FATTO:** Entrambe le tecniche operano sullo stesso tipo di sacrificio informativo: schiacciare 384 dimensioni in 3 comporta perdita di informazione; la scelta tra t-SNE e UMAP determina *quale* informazione viene conservata.\n- **DECISIONE:** Nella RETE, t-SNE è indicato quando l'obiettivo è leggere i temi (grappoli); UMAP è indicato quando l'obiettivo è capire le relazioni tra temi nel grande. **LOGICA:** Sono due compromessi diversi, non una versione corretta e una sbagliata.\n- **PRECISIONE:** L'errore classico segnalato è dare peso alle distanze inter-grappolo in un t-SNE, traendo conclusioni sulla prossimità tematica tra zone che non è garantita dalla tecnica."
     }
   ],
-  "word_count": 476,
-  "updated_at": "2026-06-11T02:08:08.016044",
-  "built_at": "2026-06-11T13:57:34.707005"
+  "word_count": 644,
+  "updated_at": "2026-06-12T16:01:52.693486",
+  "built_at": "2026-06-22T14:22:08.695184"
 }

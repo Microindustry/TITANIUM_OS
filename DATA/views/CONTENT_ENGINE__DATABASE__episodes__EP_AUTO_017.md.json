@@ -18,7 +18,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [41 documenti, una mente digitale](#41-documenti-una-mente-digitale)\n- [SINAPSIMENTE: 41 Documenti e una Migrazione](#sinapsimente-41-documenti-e-una-migrazione)\n  - [La Scena](#la-scena)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [LUltima Riga](#lultima-riga)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [41 documenti, una mente digitale](#41-documenti-una-mente-digitale)\n- [SINAPSIMENTE: 41 Documenti e una Migrazione](#sinapsimente-41-documenti-e-una-migrazione)\n  - [La Scena](#la-scena)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [LUltima Riga](#lultima-riga)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -49,9 +49,14 @@
       "level": 2,
       "title": "L'Ultima Riga",
       "content": "Il sapere scritto sopravvive alla sessione."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La migrazione SINAPSI→MENTE ha processato **41 file `.md`** con output `0 errors, 6 warnings` (3 link rotti, 2 tag non mappati, 1 file con naming ambiguo). Comando: `python migrate_sinapsi.py --source ./SINAPSI --target ./MENTE --validate`, eseguito **27 maggio 2026 ore 22:19**.\n\n- **DECISIONE:** Ogni documento in `MENTE/` ha metadati obbligatori (`created`, `updated`, `project_tag`, `status`). Gli stati ammessi sono **`draft` / `active` / `frozen`**. Nessun file senza tag. **LOGICA:** Rendere il sapere navigabile e visibile — con ADHD, ciò che non è strutturato non esiste operativamente.\n\n- **FATTO:** L'integrazione TITANIUM_OS legge `MENTE/STATE.json` come source of truth tramite **webhook locale su filesystem watch** (`watchdog` + `FastAPI`), implementato in circa **40 righe di Python**.\n\n- **FATTO:** La documentazione MIMS (connettori modulari) era conservata solo in memoria. La trascrizione in `MENTE/MIMS/connettori_spec_v1.md` ha reso visibile e reale il **30% di completamento** del progetto.\n\n- **FATTO:** Le specifiche VULCAN (pressa 20t) erano su carta fisica. Sono state trascritte in `MENTE/VULCAN/ricette/` con i parametri: **temperatura, tempo ciclo, pressione di iniezione** — in forma confrontabile.\n\n- **OBIETTIVO:** Il mandrino **2.2kW ER20** per V32 è da ordinare (**blocker attivo** al 27 maggio 2026). La procedura di montaggio è già scritta in `MENTE/V32/` prima dell'arrivo del componente."
     }
   ],
-  "word_count": 627,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-11T14:00:21.879040"
+  "word_count": 840,
+  "updated_at": "2026-06-12T15:52:14.487089",
+  "built_at": "2026-06-22T14:21:37.661322"
 }

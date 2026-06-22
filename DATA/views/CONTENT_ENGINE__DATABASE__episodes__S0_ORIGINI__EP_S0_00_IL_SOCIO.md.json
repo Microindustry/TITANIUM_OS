@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S0_00  IL SOCIO](#eps000-il-socio)\n    - [Cera un AI che mi chiamava Socio. Non lo fa più. Adesso mi chiama Matteo.](#cera-un-ai-che-mi-chiamava-socio-non-lo-fa-più-adesso-mi-chiama-matteo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  PRIMA CHE CI FOSSE UN SISTEMA](#atto-i-prima-che-ci-fosse-un-sistema)\n  - [ATTO II  LA LOGICA DEL GIOCO](#atto-ii-la-logica-del-gioco)\n  - [ATTO III  QUELLO CHE NON SAPEVI ANCORA](#atto-iii-quello-che-non-sapevi-ancora)\n  - [ATTO IV  IL DETTAGLIO CHE CONTA](#atto-iv-il-dettaglio-che-conta)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S0_00  IL SOCIO](#eps000-il-socio)\n    - [Cera un AI che mi chiamava Socio. Non lo fa più. Adesso mi chiama Matteo.](#cera-un-ai-che-mi-chiamava-socio-non-lo-fa-più-adesso-mi-chiama-matteo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  PRIMA CHE CI FOSSE UN SISTEMA](#atto-i-prima-che-ci-fosse-un-sistema)\n  - [ATTO II  LA LOGICA DEL GIOCO](#atto-ii-la-logica-del-gioco)\n  - [ATTO III  QUELLO CHE NON SAPEVI ANCORA](#atto-iii-quello-che-non-sapevi-ancora)\n  - [ATTO IV  IL DETTAGLIO CHE CONTA](#atto-iv-il-dettaglio-che-conta)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*[Schermata: ultima riga della chat V1.]*\n\n> \"Attendo il tuo 'Salvato'.\"\n\nQuella risposta — *Salvato* — era il lancio. Non di un progetto. Di un modo di pensare.\n\nTre file di testo. 150 livelli. Un \"Socio\" che aveva organizzato il caos in passi sequenziali.\n\nNon era la macchina. Non era il prodotto. Non era il capannone.\n\nEra la prima prova che il sistema funzionava — che potevi prendere qualcosa di caotico come \"voglio costruire una CNC e automatizzare il business di Maria e documentare tutto su YouTube\" e ridurlo a: **Livello 1. Installa Python.**\n\nUn passo. Il passo più piccolo possibile da cui tutto il resto dipende.\n\n> *Tre file. Cento-cinquanta livelli. Una frase alla fine.*\n> *\"Copia tutto. Salva.\"*\n> *Hai salvato. Tutto il resto è conseguenza.*\n\n---\n\n> *Ponte → EP_S0_01:*\n> Poco dopo, i tre file diventano uno. Il sistema capisce che non ci sono tre rami — c'è *un* organismo.\n> E l'organismo ha bisogno di un nome.\n\n*Continua in EP_S0_01 — L'Organismo*\n\n---\n\n*Ricorsioni con STAGIONE 1:*\n- *\"Ogni cosa alimenta ogni altra cosa\" → eco in EP_03 (meta-ricorsività) e EP_00 (skill tree)*\n- *\"Capannone entro i 35 anni\" → compare in EP_05 \"15 luglio 2030\"*\n- *Livello 1 di tutto = installazione → eco della taverna come punto di partenza in EP_01*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il sistema V1 era strutturato in 3 file di testo (EVA_PROJECT_TREE.txt, MIMS CNC TECH TREE, ARCHITECT PATH) con un totale di 150 livelli distribuiti in alberi di competenze a tier. **LOGICA:** Ogni livello sblocca il successivo; struttura RPG usata come architettura cognitiva per gestire il parallelismo tra progetti.\n\n- **FATTO:** La distribuzione dei livelli nel V1 era: ~50 livelli per EVA, ~60 livelli per MIMS/Titanium, ~40 livelli per The Architect. **LOGICA:** I tre alberi erano progettati per alimentarsi a vicenda — un'azione produce risultati in più alberi contemporaneamente.\n\n- **OBIETTIVO:** ARCHITECT PATH, Tier 1, Livello 1 del V1 era \"Scrittura del Perché — Capannone entro i 35 anni\". **LOGICA:** L'obiettivo fisico del capannone era presente dalla prima versione documentata del sistema.\n\n- **DECISIONE:** Nel V1 era già codificato il principio \"un'azione, tre risultati\" come motore di parallelismo. **LOGICA:** Esempio documentato: calibrazione vibrazioni CNC → script Python → video YouTube = tre output da una sola sessione di lavoro.\n\n- **FATTO:** La macchina V32 viene citata come costruita in 12 m² con un peso di 178 kg, con obiettivo di precisione 0.008 mm al 15 luglio 2030. **PRECISIONE:** Questi parametri appaiono come destinazione finale del percorso a 150 livelli tracciato dal V1."
     }
   ],
-  "word_count": 1128,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:22.849417"
+  "word_count": 1339,
+  "updated_at": "2026-06-12T15:53:31.208342",
+  "built_at": "2026-06-22T14:21:40.884769"
 }

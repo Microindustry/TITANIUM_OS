@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260613_sid_univoco_hash_del_path_setup_obs.md",
+  "title": "TITANIUM_OS — Episodio 47",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 47](#titaniumos-episodio-47)\n  - [Il Bug che Cancellava la Memoria](#il-bug-che-cancellava-la-memoria)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il sistema che si svuotava da solo](#atto-i-il-sistema-che-si-svuotava-da-solo)\n  - [ATTO II  La MENTE riordinata](#atto-ii-la-mente-riordinata)\n  - [ATTO III  Cosa significa avere memoria](#atto-iii-cosa-significa-avere-memoria)\n  - [CHIUSURA](#chiusura)\n  - [reel_hook](#reelhook)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 2,
+      "title": "\"Il Bug che Cancellava la Memoria\"",
+      "content": "**DATA:** 13 giugno 2026\n**SERIE:** GENESIS / Infrastruttura cognitiva\n**STAGIONE:** 1"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — Il sistema che si svuotava da solo",
+      "content": "Il problema aveva un nome tecnico preciso: **collision hash su `_sid`**.\n\nOgni chunk nel database ChromaDB ha bisogno di un identificatore univoco — il `_sid`. Il sistema lo generava a partire dal path del file. Il problema è che due file con nomi diversi, dopo la normalizzazione dei separatori di percorso (slash, backslash, case del filesystem Windows vs Linux), potevano produrre **lo stesso hash**.\n\nRisultato: un file sovrascriveva l'altro nel database. Silenziosamente. Senza avvisi.\n\nMa questo era il bug secondario.\n\nIl bug principale era più subdolo, più difficile da vedere perché si nascondeva nel flusso di esecuzione normale. Quando lo script `rebuild_rag_clean.ps1` lanciava un `--rebuild` completo, svuotava ChromaDB — giusto, era il comportamento atteso. Poi chiamava l'`api_server` per reinserire tutto.\n\nIl problema: l'`api_server` era già in esecuzione da un'altra sessione. Stava tenendo ChromaDB aperto con accesso esclusivo. Lo script di rebuild scriveva nell'aria. Pensava di popolare il database. Il database rimaneva vuoto. Nessun errore esplicito. Solo zero chunks.\n\nMatteo aveva ricostruito il RAG almeno quattro volte nelle settimane precedenti. Ogni volta: zero chunks semantici. Ogni volta: diagnosi, ipotesi, test. E ogni volta il sistema sembrava funzionare nel breve periodo, poi ricadeva.\n\nNon era un bug di codice. Era un bug di **architettura concorrente** — due processi che credevano di controllare la stessa risorsa, nello stesso momento.\n\nLa fix: accesso esclusivo verificato prima di ogni rebuild. L'`api_server` viene fermato, ChromaDB viene liberato, il rebuild avviene in isolamento, poi il server riparte. Sequenza rigida. Nessuna ambiguità sul lock.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — La MENTE riordinata",
+      "content": "Mentre il RAG veniva riparato, c'era un secondo problema che aspettava da settimane.\n\nLa MENTE — il corpus di note, decisioni, specifiche tecniche che alimenta GENESIS — era cresciuta in modo organico. Nel modo in cui crescono le cose reali: una cartella qui, una nota lì, file che si accumulano in `da_chiavetta` perché \"li sistemo dopo\". Dopo era diventato adesso.\n\n`riordina_mente.py` è uno script che Matteo ha scritto per dissolvere quella cartella di accumulazione. Non copia i file — li sposta con `git mv`, preservando la storia dei commit. Li riorganizza per tema: V32, MIMS, GENESIS, EVA, sessioni di lavoro, vault Obsidian.\n\nIl vault Obsidian ora si auto-indicizza. Ogni cartella tematica genera il suo indice. Le note diventano navigabili — non solo dall'interfaccia React di GENESIS, ma anche da Obsidian come strumento di esplorazione visiva. Due interfacce, stesso corpus, stesso grafo di conoscenza.\n\nSettantatré note nell'indice delle sessioni. Rigenerato automaticamente ogni notte dall'`auto: night_audit`.\n\nIl numero non è la cosa importante. La cosa importante è che Matteo ora sa dove si trova ogni decisione che ha preso. La sessione del 28 maggio sui rinforzi delle colonne Z+U di V32. La sessione sull'audit del sistema RAG v4. Il flusso di coscienza del 28 maggio — quelle note caotiche scritte alle due di notte che a volte contengono le intuizioni migliori.\n\nTutto recuperabile. Tutto versionato. Tutto nel RAG — finalmente con `_sid` univoci, finalmente con rebuild che non cancella se stesso.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — Cosa significa avere memoria",
+      "content": "C'è una domanda che Matteo si è fatto costruendo GENESIS: *a cosa serve un sistema cognitivo che dimentica?*\n\nLa risposta ovvia è: a niente. Ma la risposta onesta è più complicata.\n\nPer mesi GENESIS ha funzionato in modo degradato — rispondendo su basi parziali, recuperando chunk a caso, perdendo contesto tra una sessione e l'altra. E Matteo ha continuato a costruire sopra, a fidarsi abbastanza del sistema da usarlo come memory extension, sapendo che c'era qualcosa che non andava ma non riuscendo a isolare esattamente dove.\n\nCostruire con un sistema rotto che sembra funzionare è più difficile che costruire da zero. Perché ti fidi a metà. Ti affidi e poi verifichi. E non sai mai se stai perdendo qualcosa di importante o se il sistema ti sta dando quello che ti serve.\n\nLa fix di oggi non aggiunge nuove funzionalità. Non avanza di un centimetro il milestone della sessione #37 — le storie a due assi, l'arco di Nina completo, i livelli parent/children. Non sposta V32 dal 65% al 66%.\n\nRipara la fondazione.\n\nÈ il tipo di lavoro che non si vede, quello che permette a tutto il resto di appoggiarsi su qualcosa di solido. Come la Epoxy Granite del telaio di V32 — non è la parte che fresa, non è la parte che si misura con il comparatore, ma è quello che tiene ferme tutte le parti che fresano e si misurano.\n\nDomani il RAG avrà memoria piena. Domani Claude risponderà su sessioni che prima non trovava. Domani il `night_audit` scriverà nella cartella clinica e il RAG lo ingerirà correttamente, con `_sid` univoci, con accesso esclusivo, senza cancellare nulla.\n\nÈ poco. È fondamentale.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Ci sono giorni in cui costruisci.\nCi sono giorni in cui ripari quello che ti permette di costruire.\n\nMatteo lo sa da quando saldava titanio sotto i pit MotoGP — la gara non la vince il pilota, la vince chi ha preparato la moto nel modo giusto la notte prima. Il lavoro invisibile che nessuno vede durante la gara è quello che determina se la gara si riesce a fare.\n\nIl bug del `_sid` esisteva da quando ChromaDB era stato installato. Ogni nota che Matteo aveva mai scritto sulla MENTE era entrata nel sistema con identificatori che potevano collidere. Ogni rebuild aveva potenzialmente svuotato silenziosamente mesi di lavoro.\n\nAdesso no.\n\nNon è una vittoria. È una correzione. Ma le correzioni fatte nel momento giusto sono quelle che rendono possibili le vittorie future.\n\nIl cursore lampeggia. Il terminale mostra:\n\n```\nChroma collection: 1.847 chunks semantic\nRebuild completato — accesso esclusivo confermato\n_sid: hash(path + filename + chunk_index) — univocità verificata\n```\n\n1.847 chunks. Tutto quello che c'era, finalmente dove dovrebbe essere.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "reel_hook",
+      "content": "1.847 chunk semantici. Prima del fix: zero — ogni volta che ricostruivo il RAG.\nIl bug non crashava. Sussurrava. Due processi sullo stesso database, nessun errore esplicito, memoria che si svuotava da sola.\nHo fermato il server, isolato il rebuild, risolto il lock.\nAdesso GENESIS ricorda. Ma quante decisioni su V32 ha già perso?\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **DECISIONE:** Fix `_sid` ChromaDB — l'identificatore univoco ora usa `hash(path_normalizzato + filename + chunk_index)` invece del solo path normalizzato, eliminando le collisioni su file con percorsi simili post-normalizzazione.\n- **LOGICA:** Su filesystem Windows/Linux con separatori misti, due path diversi producevano lo stesso hash dopo normalizzazione; i chunk si sovrascrivevano silenziosamente nel database senza errori espliciti.\n- **DECISIONE:** `rebuild_rag_clean.ps1` ora verifica e acquisisce accesso esclusivo a ChromaDB prima del rebuild — l'`api_server` viene fermato in sequenza rigida, il rebuild avviene in isolamento, poi il server riparte.\n- **LOGICA:** L'`api_server` in esecuzione teneva ChromaDB locked; il rebuild scriveva nell'aria, risultando in 0 chunks semantici post-rebuild senza errori nel log.\n- **DECISIONE:** `riordina_mente.py` dissolve la cartella `da_chiavetta` con `git mv` verso cartelle tematiche (V32, MIMS, GENESIS, EVA, sessioni); vault Obsidian auto-indicizzato — 73 note in indice sessioni al 14/06/2026.\n- **OBIETTIVO:** RAG operativo a piena capacità (1.847 chunks verificati) sblocca la sessione #37 — storie a due assi RUOLO+NINA con livelli parent/children su corpus integro; prossimo passo misurabile: build TS verde con ~14 commit isolati.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | 47 |\n| **Data** | 2026-06-13 |\n| **Progetto primario** | GENESIS |\n| **Tag** | `rag` `chromadb` `bug-fix` `memoria` `infrastruttura` `obsidian` |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Milestone** | Sessione #37 — storie 2 assi RUOLO+NINA |\n| **Prossimo episodio** | Da determinare — sessione #37 |\n| **Mood narrativo** | Diagnostico / Fondazione |"
+    }
+  ],
+  "word_count": 1421,
+  "updated_at": "2026-06-14T02:09:12.885958",
+  "built_at": "2026-06-22T14:21:56.415680"
+}

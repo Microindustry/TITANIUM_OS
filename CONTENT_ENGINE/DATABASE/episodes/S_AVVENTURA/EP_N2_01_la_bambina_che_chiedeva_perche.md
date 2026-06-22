@@ -8,6 +8,19 @@ status: ready
 durata_min: 12
 tags: avventura, educativo, nina, themis, materia, curiosita, ingresso, viaggio, nina-v2
 ---
+<!-- TOC -->
+
+- [EP_N2_01  La Bambina che Chiedeva Perché](#epn201-la-bambina-che-chiedeva-perché)
+    - [Nina trova una porta che nessuno vedeva, e dentro scopre che le cose vere si possono capire.](#nina-trova-una-porta-che-nessuno-vedeva-e-dentro-scopre-che-le-cose-vere-si-possono-capire)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL MONDO DOVE LE COSE SONO VERE](#atto-i-il-mondo-dove-le-cose-sono-vere)
+  - [ATTO II  IL BOTTONE CHE REGGE E IL BOTTONE CHE NO](#atto-ii-il-bottone-che-regge-e-il-bottone-che-no)
+  - [ATTO III  IL PIZZICORE DIETRO LE ORECCHIE](#atto-iii-il-pizzicore-dietro-le-orecchie)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_01 — La Bambina che Chiedeva Perché
 ### "Nina trova una porta che nessuno vedeva, e dentro scopre che le cose vere si possono capire."

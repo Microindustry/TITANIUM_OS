@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S2_00  IL DISTACCO](#eps200-il-distacco)\n    - [Le molle erano giuste. Il corpo unico è meglio.](#le-molle-erano-giuste-il-corpo-unico-è-meglio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  PERCHÉ LE MOLLE ERANO GIUSTE](#atto-i-perché-le-molle-erano-giuste)\n  - [ATTO II  IL MOMENTO IN CUI CAMBIA TUTTO](#atto-ii-il-momento-in-cui-cambia-tutto)\n  - [ATTO III  LA DECISIONE](#atto-iii-la-decisione)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S2_00  IL DISTACCO](#eps200-il-distacco)\n    - [Le molle erano giuste. Il corpo unico è meglio.](#le-molle-erano-giuste-il-corpo-unico-è-meglio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  PERCHÉ LE MOLLE ERANO GIUSTE](#atto-i-perché-le-molle-erano-giuste)\n  - [ATTO II  IL MOMENTO IN CUI CAMBIA TUTTO](#atto-ii-il-momento-in-cui-cambia-tutto)\n  - [ATTO III  LA DECISIONE](#atto-iii-la-decisione)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -32,9 +32,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Le quattro molle gialle sono ancora in officina. Non le butti — costano €320 e un giorno potrebbero tornare utili per un'altra applicazione.\n\nMa non sono più sotto la V32.\n\nSotto la V32 c'è Epoxy Granite. Silenzio attivo. Un composito che assorbe quello che l'acciaio trasmette.\n\nE la macchina — quella stessa macchina che a febbraio galleggiava su quattro molle calcolate con cura — adesso è un corpo unico. 178 kg ancorati. Stabili.\n\n> *La prossima volta che qualcuno ti dice \"hai sbagliato la decisione iniziale\":*\n> *chiedigli quanti dati aveva quando ha preso quella decisione.*\n> *Poi mostragli i tuoi.*\n\n---\n\n**reel_hook:** \"A febbraio ho messo quattro molle ISO 90mm sotto la mia CNC da 178 kg. Calcolate con sensori IFM reali, frequenza naturale 3.83 Hz, isolamento >99.9%. Erano la scelta giusta. A maggio le ho tolte. Non perché avevo sbagliato — ma perché con nuovi dati ho visto qualcosa che i calcoli di febbraio non potevano mostrare. La differenza tra una scelta giusta e una scelta migliore è sempre la stessa cosa: più informazioni. Il sistema che costruisci deve permetterti di aggiornarti. Se non puoi cambiare idea con i dati, non stai costruendo un sistema. Stai difendendo una posizione.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 00 — apertura |\n| Arco | Da corpo sospeso a corpo unico |\n| Connessione S1 | EP_S1_02 (le molle gialle) → questo episodio chiude l'arco |\n| Connessione S2 | Introduce il principio dell'aggiornamento — filo conduttore di tutta S2 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **DECISIONE:** Le molle ISO 90mm k=15.8 N/mm sono state rimosse dalla V32 a maggio 2026 e sostituite con il paradigma \"corpo unico\" (telaio ancorato + Epoxy Granite). **LOGICA:** Le molle aggiungevano un grado di libertà e variabili a lungo termine (assestamento, allentamento dadi, variazione rigidità elastomero con temperatura); il composito epossidico offre smorzamento passivo senza parti in movimento.\n\n- **FATTO:** Le molle gialle ISO 90mm (k=15.8 N/mm) avevano frequenza naturale f₀=3.83 Hz, smorzamento ζ=0.032, isolamento vibrazioni >99.9% sopra i 400 Hz. La scelta era stata validata con sensori IFM VSE150.\n\n- **FATTO:** Le molle verdi da 40mm erano state scartate in favore delle gialle da 90mm sulla base dei dati IFM VSE150, prima dell'ulteriore revisione di maggio 2026.\n\n- **FATTO:** L'Epoxy Granite colato nei tubolari del telaio (acciaio S235) porta lo smorzamento da δ=0.002 (acciaio nudo) a δ=0.03-0.06, con un fattore 15-30× superiore.\n\n- **FATTO:** La rigidità asse Z in Config G (gusset 200mm sulle colonne Z+U) è 772 volte superiore alla baseline del progetto V32.\n\n- **FATTO:** La V32 a corpo unico ha una massa di 178 kg, ancorata al pavimento; le quattro molle rimosse avevano un costo totale di €320 (€80 l'una)."
     }
   ],
-  "word_count": 991,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:26.625920"
+  "word_count": 1213,
+  "updated_at": "2026-06-12T15:59:29.332804",
+  "built_at": "2026-06-22T14:22:01.921696"
 }

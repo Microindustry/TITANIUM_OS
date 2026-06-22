@@ -3,6 +3,7 @@
 - [BIBBIA DEL MONDO  Il Sistema (binario Avventura)](#bibbia-del-mondo-il-sistema-binario-avventura)
   - [0. PERCHÉ ESISTE (e su cosa è fondato)](#0-perché-esiste-e-su-cosa-è-fondato)
   - [0-bis. VISIONE 09/06  Nina è un PRODOTTO (la derivazione educativa di MIMS)](#0-bis-visione-0906-nina-è-un-prodotto-la-derivazione-educativa-di-mims)
+  - [0-ter. VISIONE 10/06  Nina ha il suo OS (e si perde come noi)](#0-ter-visione-1006-nina-ha-il-suo-os-e-si-perde-come-noi)
   - [1. IL MONDO  Il Sistema](#1-il-mondo-il-sistema)
   - [2. IL NEMICO  lEntropia (il cattivo a 360)](#2-il-nemico-lentropia-il-cattivo-a-360)
   - [3. I PROTAGONISTI (scelti DOPO la ricerca  P2a-bis / P2g)](#3-i-protagonisti-scelti-dopo-la-ricerca-p2a-bis-p2g)

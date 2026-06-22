@@ -5,6 +5,7 @@
     - [La soluzione](#la-soluzione)
     - [Come funziona  5 pilastri connessi (non un portfolio, una catena)](#come-funziona-5-pilastri-connessi-non-un-portfolio-una-catena)
     - [La prova è fisica (numeri misurati, non slide)](#la-prova-è-fisica-numeri-misurati-non-slide)
+    - [Lasimmetria di valore (perché il modello regge)](#lasimmetria-di-valore-perché-il-modello-regge)
     - [Il team](#il-team)
     - [Il mercato (MIMS)](#il-mercato-mims)
     - [Prodotto derivato  Nina (educativo)](#prodotto-derivato-nina-educativo)

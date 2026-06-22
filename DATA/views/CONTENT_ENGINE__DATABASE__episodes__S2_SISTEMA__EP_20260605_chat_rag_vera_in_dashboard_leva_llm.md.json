@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E31](#titaniumos-s1e31)\n  - [Il Teatro Finisce Qui](#il-teatro-finisce-qui)\n    - [COLD OPEN](#cold-open)\n  - [ATTO I  Diagnosi](#atto-i-diagnosi)\n  - [ATTO II  Il Lavoro](#atto-ii-il-lavoro)\n  - [ATTO III  Quello che è cambiato](#atto-iii-quello-che-è-cambiato)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E31](#titaniumos-s1e31)\n  - [Il Teatro Finisce Qui](#il-teatro-finisce-qui)\n    - [COLD OPEN](#cold-open)\n  - [ATTO I  Diagnosi](#atto-i-diagnosi)\n  - [ATTO II  Il Lavoro](#atto-ii-il-lavoro)\n  - [ATTO III  Quello che è cambiato](#atto-iii-quello-che-è-cambiato)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E31 |\n| **Titolo** | Il Teatro Finisce Qui |\n| **Data registrazione** | 2026-06-05 |\n| **Sessione** | Autonoma #31 |\n| **Milestone attivo** | P4a chat RAG + P4b LLM locale + P1b cartella clinica + P5 agenti reali |\n| **Commit** | 22 |\n| **Progetti toccati** | GENESIS, EVA |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Tecnologie** | ChromaDB, Ollama, Qwen2.5-7B-Q4, Flask, React, WhatsApp webhook, Windows Task Scheduler |\n| **Decisione chiave** | LLM locale = Qwen2.5-7B-Q4 su 8GB (sovranità computazionale) |\n| **Tema narrativo** | Il debito cognitivo — quando il sistema sembra funzionare ma non funziona |\n| **Tag** | `rag`, `agents`, `eva`, `audit`, `llm-locale`, `teatro` |\n| **Co-autore sessione** | Claude Opus 4.8 |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il database degli episodi GENESIS presentava 27 episodi orfani: `story_agent` scriveva i file `.md` su disco ma non aggiornava `episodes.json`, creando una discrepanza tra registro ufficiale (88 episodi) e realtà su disco (114 episodi). **LOGICA:** Lo script `audit_episodes.py` (read-only) ha rilevato le 27 discrepanze e sincronizzato il registro; da quella sessione `story_agent` aggiorna il JSON a ogni generazione.\n\n- **DECISIONE:** La chat RAG in dashboard è stata corretta per interrogare ChromaDB con similarity search e iniettare i chunk nel contesto prima di chiamare il modello, invece di interrogare l'LLM direttamente. **LOGICA:** Il comportamento precedente produceva risposte dal pretraining senza grounding reale sui documenti indicizzati.\n\n- **DECISIONE:** Adozione di Qwen2.5-7B-Q4 via Ollama come LLM locale per P4b. **LOGICA:** Gira su 8GB RAM sul fisso in taverna senza dipendere da API esterne (sovranità computazionale); 7 miliardi di parametri quantizzati a 4 bit.\n\n- **FATTO:** Gli archi della RETE 3D di GENESIS sono stati ricalcolati su similarità coseno reale tra chunk del RAG: viene creato un collegamento tra ogni coppia di nodi che supera una soglia di similarità coseno. In precedenza i collegamenti erano generati da t-SNE a scopo visivo senza calcolo semantico.\n\n- **DECISIONE:** Introdotta separazione CANONE vs RICERCA nel RAG. **LOGICA:** Sessioni, episodi e decisioni verificate alimentano il RAG; la ricerca web notturna resta in `MENTE/KNOWLEDGE/RESEARCH` separata per non inquinare la memoria con contenuti non verificati.\n\n- **FATTO:** Il nodo WhatsApp di EVA non persisteva lo stato tra riavvii del webhook, causando la perdita delle sessioni di prenotazione in corso. Il fix ha scritto lo stato su disco e chiuso il loop inbox: le richieste passate all'operatore vengono registrate, lette dal brief delle 07:30 e marcate chiuse quando gestite."
     }
   ],
-  "word_count": 1146,
-  "updated_at": "2026-06-06T02:08:54.736071",
-  "built_at": "2026-06-11T14:00:25.723823"
+  "word_count": 1444,
+  "updated_at": "2026-06-12T15:57:58.861200",
+  "built_at": "2026-06-22T14:21:52.221979"
 }

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_04  IL LEGO DACCIAIO](#eps004-il-lego-dacciaio)
+    - [Manca un sistema che abbia la rigidità del saldato e la reversibilità del bullone.](#manca-un-sistema-che-abbia-la-rigidità-del-saldato-e-la-reversibilità-del-bullone)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL MERCATO BIPOLARE](#atto-i-il-mercato-bipolare)
+  - [ATTO II  LA SINTESI](#atto-ii-la-sintesi)
+  - [ATTO III  I TRE DOGMI](#atto-iii-i-tre-dogmi)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # EP_S0_04 — IL LEGO D'ACCIAIO
 ### "Manca un sistema che abbia la rigidità del saldato e la reversibilità del bullone."
 

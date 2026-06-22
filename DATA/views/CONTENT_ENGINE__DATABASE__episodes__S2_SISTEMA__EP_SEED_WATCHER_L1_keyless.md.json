@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Guardare senza chiavi  gh, RSS, YouTube](#guardare-senza-chiavi-gh-rss-youtube)\n    - [Approfondimento LV1 di EP_SEED_WATCHER  informarsi è un diritto, non un abbonamento](#approfondimento-lv1-di-epseedwatcher-informarsi-è-un-diritto-non-un-abbonamento)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [LE QUATTRO SORGENTI (e perché niente chiavi)](#le-quattro-sorgenti-e-perché-niente-chiavi)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Guardare senza chiavi  gh, RSS, YouTube](#guardare-senza-chiavi-gh-rss-youtube)\n    - [Approfondimento LV1 di EP_SEED_WATCHER  informarsi è un diritto, non un abbonamento](#approfondimento-lv1-di-epseedwatcher-informarsi-è-un-diritto-non-un-abbonamento)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [LE QUATTRO SORGENTI (e perché niente chiavi)](#le-quattro-sorgenti-e-perché-niente-chiavi)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_WATCHER]] (il radar che gira di notte).\n- **Fratelli LV1:** [[EP_SEED_WATCHER_L1_TIER]] (chi guardare di più), [[EP_SEED_WATCHER_L1_GATE]] (filtrare il rumore).\n- **Aggancio Nina:** \"le edicole già aperte\" — metafora pronta per spiegare a un bambino la differenza tra\n  un dato *pubblico* (RSS) e uno *chiuso* (dietro chiave).\n\n> Approfondimento (LV1). Nessun limite di profondità."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il sistema WATCHER utilizza quattro sorgenti keyless: GitHub via CLI `gh`, siti web via RSS, YouTube via RSS dei canali, e un sistema di tier + rotazione. **LOGICA:** Nessuna sorgente richiede API key, eliminando costi di gestione e dipendenze esterne revocabili.\n\n- **PRECISIONE:** Al primo giro a freddo il radar ha prodotto **67 + 30 segnali reali**. **LOGICA:** Il dato quantifica l'output concreto del sistema keyless prima di qualsiasi filtro.\n\n- **DECISIONE:** YouTube viene interrogato tramite il feed RSS pubblico di ogni canale, non tramite YouTube Data API. **LOGICA:** Ogni canale YouTube espone un feed RSS pubblico che non richiede autenticazione né quota API.\n\n- **DECISIONE:** GitHub viene interrogato tramite la CLI `gh` già autenticata sulla macchina, non tramite una nuova API key dedicata. **LOGICA:** Si riutilizza un'autenticazione esistente invece di introdurre una nuova credenziale da gestire e ruotare.\n\n- **OBIETTIVO:** Costo di gestione zero per il radar WATCHER. **LOGICA:** Nessuna chiave da ruotare, nessun abbonamento che scade o aumenta di prezzo; tutte le sorgenti sono pubbliche e stabili per design."
     }
   ],
-  "word_count": 469,
-  "updated_at": "2026-06-11T02:08:08.298267",
-  "built_at": "2026-06-11T13:57:35.181259"
+  "word_count": 649,
+  "updated_at": "2026-06-12T16:02:08.012635",
+  "built_at": "2026-06-22T14:22:09.696708"
 }

@@ -62,7 +62,7 @@ Poi è arrivato il muro: push su GitHub bloccato. Un file da un gigabyte nel rep
 
 La connessione tra i due nodi è via Tailscale: VPN mesh, ogni macchina ha il suo indirizzo fisso nella rete virtuale, nessuna porta aperta al mondo. Il Getac parla con il fisso come se fossero sulla stessa scrivania, anche se fisicamente sono in posti diversi. Questo significa che posso essere in officina con il Getac e avere accesso completo al cervello che sta girando in taverna. Accedo, consulto, modifico stato, e il fisso continua a lavorare.
 
-L'HMI della V32, intanto, è un TP900 Comfort recuperato — display 9 pollici TFT touch, 800 per 480, PROFINET e MPI/Profibus. La CPU è una 314C: 32 ingressi digitali, 16 uscite digitali, 4 ingressi analogici, 2 uscite analogiche, Fieldbus Profibus DP, 192 kilobyte di memoria più 2 megabyte su Micro Memory Card. Tutto recupero, tutto EUR 0 di hardware. La logica è la stessa della migrazione: usare quello che hai, metterlo nel posto giusto, farlo fare il lavoro per cui è fatto.
+L'HMI della V32, intanto, è un TP900 Comfort industriale — display 9 pollici TFT touch, 800 per 480, PROFINET e MPI/Profibus. La CPU è una 314C: 32 ingressi digitali, 16 uscite digitali, 4 ingressi analogici, 2 uscite analogiche, Fieldbus Profibus DP, 192 kilobyte di memoria più 2 megabyte su Micro Memory Card. Tutti componenti industriali reali, zero spesa hardware aggiuntiva. La logica è la stessa della migrazione: usare quello che hai, metterlo nel posto giusto, farlo fare il lavoro per cui è fatto.
 
 ---
 
@@ -92,7 +92,7 @@ Ma oggi il cervello ha una casa fissa. E questo non è un dettaglio — è la di
 
 - **FATTO:** La connessione tra i due nodi (Getac e PC fisso) avviene via Tailscale — VPN mesh con indirizzo fisso per ogni macchina nella rete virtuale, nessuna porta aperta al mondo esterno.
 
-- **FATTO:** L'HMI della V32 è un TP900 Comfort recuperato: display 9" TFT touch 800×480, PROFINET e MPI/Profibus. La CPU è una 314C con 32 DI, 16 DO, 4 AI, 2 AO, Profibus DP, 192 KB di memoria + 2 MB su Micro Memory Card. Costo hardware: EUR 0 (recupero).
+- **FATTO:** L'HMI della V32 è un TP900 Comfort industriale: display 9" TFT touch 800×480, PROFINET e MPI/Profibus. La CPU è una 314C con 32 DI, 16 DO, 4 AI, 2 AO, Profibus DP, 192 KB di memoria + 2 MB su Micro Memory Card. Spesa hardware aggiuntiva: EUR 0 (componenti industriali gia' in dotazione).
 
 - **PRECISIONE:** Lo stato progettuale documentato in `BRAIN/STATE.json` e `RIAVVIO_SESSIONE.txt` al momento della migrazione riportava: V32 al 65%, MIMS al 30% (waiting_press), GENESIS al 70%, Vita Natura al 40%, IDENTITY al 50%.
 

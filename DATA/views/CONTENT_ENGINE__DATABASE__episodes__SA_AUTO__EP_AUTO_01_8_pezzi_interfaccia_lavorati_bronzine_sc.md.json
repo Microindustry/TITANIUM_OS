@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_01  Milestone](#epauto01-milestone)\n    - [8 pezzi interfaccia lavorati (bronzine  scalini)](#8-pezzi-interfaccia-lavorati-bronzine-scalini)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Bronzine e Scalini](#bronzine-e-scalini)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di quei pezzi, cera solo intenzione](#atto-i-prima-di-quei-pezzi-cera-solo-intenzione)\n  - [ATTO II  Il momento in officina](#atto-ii-il-momento-in-officina)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_01  Milestone](#epauto01-milestone)\n    - [8 pezzi interfaccia lavorati (bronzine  scalini)](#8-pezzi-interfaccia-lavorati-bronzine-scalini)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Bronzine e Scalini](#bronzine-e-scalini)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di quei pezzi, cera solo intenzione](#atto-i-prima-di-quei-pezzi-cera-solo-intenzione)\n  - [ATTO II  Il momento in officina](#atto-ii-il-momento-in-officina)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"La precisione non è perfezionismo. È rispetto per quello che verrà dopo.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** V32 è una fresatrice CNC a tre assi costruita da zero, attualmente alla configurazione G (settima iterazione progettuale), con avanzamento complessivo al 65%.\n\n- **FATTO:** Sono stati lavorati 8 pezzi di interfaccia per V32: bronzine (in bronzo, con tolleranze strette per accoppiamento controllato con gli alberi) e scalini (riferimenti geometrici per il posizionamento reciproco degli assi), tutti verificati con micrometro e tutti entro tolleranza.\n\n- **DECISIONE:** Le bronzine sono state realizzate in bronzo con tolleranze strette per garantire accoppiamento né troppo stretto (blocco) né troppo largo (perdita di precisione). **LOGICA:** Il bronzo segnala immediatamente gli errori di lavorazione e non ammette deroghe sul range di misura.\n\n- **FATTO:** La catena produttiva fisica del progetto è V32 → VULCAN → MIMS: V32 produce componenti metallici, VULCAN lavora polimeri, MIMS gestisce la connessione modulare. Senza V32 operativa, la catena esiste solo sulla carta.\n\n- **FATTO:** Al momento dell'episodio, GENESIS è alla Dashboard v7.0 con Story Agent attivo e RAG alla quarta versione; il sistema di gestione e automazione risulta al 78% di avanzamento, il più avanzato tra i sottoprogetti."
     }
   ],
-  "word_count": 931,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:27.583533"
+  "word_count": 1117,
+  "updated_at": "2026-06-12T16:04:04.536085",
+  "built_at": "2026-06-22T14:22:19.968452"
 }

@@ -1,0 +1,310 @@
+{
+  "data": "2026-06-14",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "RAG",
+      "titolo": "Riattivare RAG e collegare story_agent ai nuovi chunk",
+      "cosa": "Approvare UAC e portare il RAG a stato 200. Poi verificare che story_agent legga e scriva attraverso il RAG anziché in isolamento. Con 13.722 chunk indicizzati e backfill su 146 episodi appena completato, ogni sessione notturna che scrive senza RAG produce contenuto non recuperabile e non coerente con il canon.",
+      "perche": "Segnale critico (sev alta): 'RAG offline — story_agent scrive nel vuoto. 13.722 chunk e backfill FATTI appena completato su 146 episodi non vengono usati.' + salute.rag_chunks = 0.",
+      "come": [
+        "1. Matteo approva UAC per riportare RAG a 200 (passaggio bloccante, richiede intervento umano).",
+        "2. Smoke test: query di controllo su 3 episodi del backfill recente — verificare recall > 0.",
+        "3. Aggiungere al loop notturno di story_agent un check pre-esecuzione: se RAG offline → skip con log esplicito invece di proseguire silenziosamente.",
+        "4. Documentare nella BIBBIA canon la dipendenza: story_agent NON può girare senza RAG attivo."
+      ],
+      "rischio": "Senza questo fix ogni nuova sessione notturna degrada la coerenza del canon. Medio-alto se rimane aperto oltre S38.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[2] sev=alta, salute.rag_chunks=0"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RICERCA",
+      "titolo": "Circuit breaker per research_agent: tre classi di fallimento simultanee",
+      "cosa": "Il research_agent ha fallito stanotte con rate-limit + ricerca a vuoto + errore esplicito in parallelo. Non è rumore: l'agente non ha logica di degradazione. Serve un circuit breaker: se ≥2 classi di errore si verificano nella stessa sessione, l'agente si ferma, logga un report strutturato e non consuma ulteriori chiamate API.",
+      "perche": "Due segnali indipendenti (sev alta entrambi): 'Entrambi i log mostrano contemporaneamente rate-limit, ricerche a vuoto ed errore esplicito — tre tipologie di fallimento nella stessa notte.' Confermato anche dalla critica NOTTURNE sev=alta sul crash.",
+      "come": [
+        "1. Definire 3 classi di errore con codici distinti: RATE_LIMIT, EMPTY_RESULT, EXCEPTION.",
+        "2. Aggiungere contatore per sessione: se counter ≥ 2 classi distinte → raise CircuitBreakerError con dump stato.",
+        "3. Il dump va in un file separato (research_failures.jsonl) con timestamp, classe, contesto — leggibile da AUTOMIGLIORAMENTO nelle sessioni successive.",
+        "4. Aggiungere backoff esponenziale su RATE_LIMIT (non retry immediato).",
+        "5. Test locale con mock dei tre scenari prima di deploy."
+      ],
+      "rischio": "Refactor del loop interno dell'agente. Basso se i test mock coprono i tre casi. Nessun impatto su dati esistenti.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[4] e [10] sev=alta, critiche_audit_aperte[1] sev=alta"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "V32",
+      "titolo": "Chiudere il blocco decisionale Silent Blocks v.A vs v.B con criterio documentato",
+      "cosa": "La decisione binaria 'Silent blocks 18mm: v.A o v.B' è aperta da almeno una sessione e blocca V8, che a sua volta blocca l'avanzamento di V32 oltre il 65%. Non è un problema tecnico: serve una matrice di decisione con i criteri (costo, rigidità, compatibilità ER20, lead time) e una scelta esplicita di Matteo chiusa nella BIBBIA.",
+      "perche": "Due segnali V32 (sev media): 'blocco aperto senza criterio documentato — una decisione binaria irrisolta non è un problema tecnico' + 'V8 non può avanzare senza questa decisione.' V32 pillar al 65%.",
+      "come": [
+        "1. Creare documento decisionale (1 pagina max): v.A vs v.B — tabella con 4 criteri: rigidità, costo unitario, compatibilità mandrino ER20 2.2kW, tempo di setup.",
+        "2. Matteo compila la tabella e seleziona una versione — la decisione viene marcata CHIUSA con data e rationale.",
+        "3. Aggiornare il blocker V8 come sbloccato.",
+        "4. Se la scelta dipende dal mandrino ER20 (ancora da ordinare), documentare la dipendenza esplicita e ordinare mandrino in parallelo (vedi proposta seguente)."
+      ],
+      "rischio": "Zero rischio tecnico. Il rischio è continuare a rimandare: ogni sessione senza decisione è lead time sprecato.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[3] e [9] sev=media, pillar V32=65%"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-14",
+    "milestone": "Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_push.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato crash/eccezione nelle ultime esecuzioni."
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "Il RAG è offline (next_step chiede di approvare UAC per riportarlo a 200). Con 13.722 chunk indicizzati e il backfill FATTI appena completato su 146 episodi, ogni sessione notturna story_agent sta scrivendo nel vuoto: i nuovi contenuti non "
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks v.A vs v.B (18mm)' è prerequisito del V8 e la decisione è ancora aperta senza criterio documentato. Una decisione binaria irrisolta non è un problema tecnico: è una scelta evitata. Finché non viene chiusa, V8 non p"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Entrambi i log (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerca a vuoto ed errore esplicito — tre tipologie di fallimento nella stessa notte. Non è un episodio isolato: significa che l'agente di rice"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "bassa",
+        "finding": "La decisione 'scalare asse_nina ai 129 episodi' e le 'viste 2 assi in dashboard' sono marcate come aperte ma non hanno un criterio di chiusura né una sessione assegnata. Con 148 episodi già esistenti e la struttura 2 assi appena stabilizzat"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Fable 5 con scadenza 22/06 (meno di 10 giorni) è l'unica finestra pianificata per il SELF_IMPROVE/red-team audit. Con 78 commit in 7 giorni e lo stack in rapida evoluzione, un audit critico 360 fatto ora fotografa il sistema nel momento più"
+      },
+      {
+        "area": "V32",
+        "sev": "alta",
+        "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito diretto della fresatura stampi MIMS, e V32 è al 65% di avanzamento. È un acquisto fisico con lead time reale (spedizione, eventuale dogana): ogni giorno senza ordine è un giorno di"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il todo 'selfimprove — agente autonomo notturno nodo dopo gli episodi' è in bussola_open da S34 senza trazione. Con story_agent che crasha stanotte e research_agent degradato, il sistema notturno sta girando su infrastruttura fragile. Costr"
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks: decisione v.A vs v.B — prerequisito V8' è aperto da almeno una sessione. V32 è al 65% ma V8 non può avanzare senza questa decisione. Non è un problema tecnico: è una decisione di Matteo non presa che blocca un int"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Entrambi i log di ricerca (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerche a vuoto ed errori espliciti — tre classi di fallimento in parallelo sullo stesso agente. Non è rumore casuale: il sistema d"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "RAG_chunks = 6918 ma il milestone S38 cita esplicitamente 'RAG 200' come target da verificare — probabile che si riferisca a 200 documenti indicizzati o a una soglia di recall, non ai chunk grezzi. Il numero grezzo di chunk non dice nulla s"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 154,
+      "rag_chunks": 0,
+      "n_commits_7d": 76
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+      "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+      "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+      "(#verticale-finanza-attivata-lasse-di-lato)",
+      "(#fix-verifiche-rientro-matteo)",
+      "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+      "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+      "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)",
+      "(#build-potenziato-radice-del-problema-metadati)",
+      "(#4-semi-tecnici-scritti-a-mano-stagione-st-con-reelhook-il-content-gap-chiuso)",
+      "(#igiene-episodesjson-additiva-nulla-cancellato)",
+      "(#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)",
+      "(#notte-autonoma-36b-1006-allineato-i-n-livelli-al-tuo-blueprint-a-2-assi)",
+      "(#nina-ragwiki-epav0304-canonici-nellarco-parcheggio-tolto-matteo-1106)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "How Big Tech Lies About AI Layoffs",
+        "url": "https://www.youtube.com/shorts/08uMw4_BWOA"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Biggest Microsoft Build News in 82 seconds",
+        "url": "https://www.youtube.com/shorts/jKgrNh_q_b0"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Shopping Online Is About To Change Forever",
+        "url": "https://www.youtube.com/shorts/QzDCfJpVGN8"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "THIS was the whole point of Microsoft Builld",
+        "url": "https://www.youtube.com/shorts/wg9jm_d7Emk"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "GitHub Just Made a Big AI Coding Move",
+        "url": "https://www.youtube.com/shorts/X9cvCQ3qrVk"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Why Everyone Is Freaking Out About Fable 5 (Mythos)",
+        "url": "https://www.youtube.com/watch?v=2lE1-5hBfKk"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Unpopular opinion: you don't need to ask ChatGPT everything",
+        "url": "https://www.youtube.com/shorts/1greFablcZY"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: An INSANE Week… Here’s What Matters",
+        "url": "https://www.youtube.com/watch?v=nydHKXjwu0U"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] FrontierCode: Benchmarking for Code Quality over Slop",
+        "url": "https://www.latent.space/p/ainews-frontiercode-benchmarking"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Anthropic Claude Fable 5 — Mythos but Safe, with Controversial Terms",
+        "url": "https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Open Models, Model Labs vs Agent Labs, and What's Untrainable — Sarah Guo",
+        "url": "https://www.latent.space/p/ainews-open-models-model-labs-vs"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Loopcraft: The Art of Stacking Loops",
+        "url": "https://www.latent.space/p/ainews-loopcraft-the-art-of-stacking"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Fable and Mythos officially too dangerous to release",
+        "url": "https://www.latent.space/p/ainews-fable-and-mythos-officially"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette 1.0a33",
+        "url": "https://simonwillison.net/2026/Jun/11/datasette/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Claude Fable is relentlessly proactive",
+        "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Andrew Singleton",
+        "url": "https://simonwillison.net/2026/Jun/12/andrew-singleton/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "OpenAI WebRTC Audio Session, now with document context",
+        "url": "https://simonwillison.net/2026/Jun/12/openai-webrtc/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+        "url": "https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Mapping SQLite result columns back to their source `table.column`",
+        "url": "https://simonwillison.net/2026/Jun/13/sqlite-column-provenance/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "luau-wasm 0.1a0",
+        "url": "https://simonwillison.net/2026/Jun/13/luau-wasm/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Publishing WASM wheels to PyPI for use with Pyodide",
+        "url": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "timwukp/agent-skills-best-practice ★4 — 35 portable agent skills (Agent Skills spec) for Kiro & Claude Code: Scrum DevSe",
+        "url": "https://github.com/timwukp/agent-skills-best-practice"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "jnibarger01/openclaw-agentos ★0 — Local-first mission control dashboard for persistent OpenClaw agent teams",
+        "url": "https://github.com/jnibarger01/openclaw-agentos"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "AnemoneUwU/agent-forge-cli ★1 — Memex.ai-Inspired AI Knowledge Base 2026 - Smart Markdown Wiki with Graph Search",
+        "url": "https://github.com/AnemoneUwU/agent-forge-cli"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Sannderersej/12-factor-agentops ★0 — 🤖 Enhance AI reliability with 12-Factor AgentOps by implementing proven operatio",
+        "url": "https://github.com/Sannderersej/12-factor-agentops"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "ThalesGroup/agilab ★16 — Open-source platform for reproducible AI/ML workflows, from local experimentatio",
+        "url": "https://github.com/ThalesGroup/agilab"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "orobsonn/claude-harness ★0 — Harness de entrega determinística para Claude Code: toda tarefa passa por triage",
+        "url": "https://github.com/orobsonn/claude-harness"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "MGD-Ben/GPT-OSS ★3 — 🚀 Build and explore OpenAI's GPT-OSS model from scratch in Python, unlocking the",
+        "url": "https://github.com/MGD-Ben/GPT-OSS"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "gabelul/screenslop ★0 — Evidence-first design review for Apple apps. Capture runtime screenshots, AX tre",
+        "url": "https://github.com/gabelul/screenslop"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Chat2AnyLLM/awesome-claude-plugins ★105 — A curated list of awesome claude marketplaces and plugins",
+        "url": "https://github.com/Chat2AnyLLM/awesome-claude-plugins"
+      }
+    ],
+    "n_news": 30
+  }
+}

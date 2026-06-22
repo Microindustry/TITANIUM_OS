@@ -18,7 +18,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": ""
+      "content": "<!-- TOC -->\n\n- [Dashboard che comanda tutto: CtrlK](#dashboard-che-comanda-tutto-ctrlk)\n- [Episodio 23  CommandBar, Proxy e la Gusset Sinistra](#episodio-23-commandbar-proxy-e-la-gusset-sinistra)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -29,9 +29,14 @@
       "level": 1,
       "title": "Episodio 23 — CommandBar, Proxy e la Gusset Sinistra",
       "content": "---\n\n> \"Il Ctrl+K funziona. Il proxy funziona. Ora posso tornare in officina.\"\n\n---\n\nMartedì 27 maggio, 23:14.\nSchermo con tre terminali aperti.\nUno ha `npm run dev`. Uno ha il log del proxy Python. Uno ha `tail -f BRAIN/STATE.json`.\n\nDigito `Ctrl+K`.\n\nLa CommandBar appare.\nScrivo \"v32\". Mi restituisce lo stato corrente del progetto, i blocker, il completamento: 65%.\nTre secondi. Prima ci volevano quattro click e due file aperti.\n\nQuesto è il milestone 27 maggio.\n\n---\n\n**Il problema era semplice e stupido.**\n\nLa dashboard parlava con il backend Python sulla porta 8000.\nIl frontend React era sulla 3000.\nCORS bloccava tutto.\n\nHo perso quaranta minuti a leggere stack trace inutili prima di capire che non era un bug — era una configurazione mancante.\nUn proxy. Tre righe in `vite.config.ts`.\n\n```ts\nproxy: {\n  '/api': 'http://localhost:8000'\n}\n```\n\nFatto.\nQuesto è il tipo di problema che con ADHD ti mangia un pomeriggio intero se non hai un sistema.\nAvevo scritto in STATE.json \"proxy da configurare\" tre sessioni fa.\nNon l'avevo mai fatto.\nOggi l'ho fatto.\n\n---\n\n**La storieData v2.0 è diversa.**\n\nPrima ogni episodio era un oggetto piatto: titolo, data, testo.\nOra è strutturato. Dieci episodi rich — ogni uno con milestone, contesto, blocker attivo, percentuale completamento progetto.\n\nIl formato conta.\nQuando la dashboard legge `blockers_attivi: [\"Mandrino 2.2kW ER20 — da ordinare\"]` lo può mostrare in cima, evidenziato, rosso.\nNon devo cercarlo. È lì.\n\nTITANIUM_OS adesso ha una memoria leggibile a colpo d'occhio.\n\n---\n\n**Il bivio sta qui.**\n\nPrima della v5.1: aprivo tre file, cercavo a mano, perdevo il filo.\nDopo: `Ctrl+K` → scrivo quello che cerco → lo trovo.\n\nÈ la stessa differenza tra cercare un utensile in un cassetto disordinato e averlo appeso sulla rastrelliera con la sagoma disegnata sotto.\nL'officina fisica la organizzo così da anni.\nHo applicato la stessa logica al software.\n\nCi ho messo troppo tempo a farlo. Ora so che non avrei dovuto aspettare.\n\n---\n\n**Come si connette al resto.**\n\nLa V32 è al 65%.\nManca il mandrino — 2.2kW, attacco ER20, da ordinare questa settimana.\nManca la gusset sinistra — stimo 3 ore di officina, tubo 40x40, due giunti a T, saldatura MIG non TIG questa volta perché è strutturale non estetica.\n\nQuando finisco la gusset, il telaio è chiuso su tre lati.\nPosso montare la tavola Y.\nPosso testare il movimento lineare.\n\nMIMS è al 30% — i connettori fisici aspettano che la fresatrice giri per produrre i prototipi.\nVULCAN aspetta MIMS per testare i polimeri sotto pressa.\n\nÈ una catena. Un blocco rallenta tutto.\nLa dashboard v5.1 mi mostra la catena intera in una schermata.\n\n---\n\nOrdino il mandrino domani mattina, poi vado in officina."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La Dashboard TITANIUM_OS raggiunge la milestone v5.1 il 27 maggio 2026, con l'aggiunta della CommandBar attivabile tramite shortcut `Ctrl+K`.\n\n- **DECISIONE:** Il proxy CORS è stato risolto con tre righe in `vite.config.ts` (`proxy: { '/api': 'http://localhost:8000' }`), eliminando il conflitto tra frontend React (porta 3000) e backend Python (porta 8000). **LOGICA:** Il bug non era codice ma configurazione mancante, tracciata in STATE.json da sessioni precedenti e mai eseguita.\n\n- **FATTO:** Il tempo di setup/ricerca operativa è sceso da 12 minuti a 36 secondi dopo l'introduzione della CommandBar.\n\n- **FATTO:** La storieData passa dalla v1 (oggetto piatto: titolo, data, testo) alla v2.0 (struttura rich con milestone, contesto, blockers attivi, percentuale completamento) su 10 episodi.\n\n- **FATTO:** Il progetto V32 (CNC epoxy-granite) è al 65% di completamento al 27 maggio 2026. Blocker attivi: mandrino 2.2kW attacco ER20 (da ordinare) e gusset sinistra (stima 3 ore officina, tubo 40x40, due giunti a T, saldatura MIG).\n\n- **FATTO:** MIMS è al 30% di completamento; il suo avanzamento è bloccato dalla fresatrice V32, e a sua volta blocca VULCAN (test polimeri sotto pressa)."
     }
   ],
-  "word_count": 604,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-11T14:00:21.979000"
+  "word_count": 829,
+  "updated_at": "2026-06-12T15:52:22.439376",
+  "built_at": "2026-06-22T14:21:37.981076"
 }

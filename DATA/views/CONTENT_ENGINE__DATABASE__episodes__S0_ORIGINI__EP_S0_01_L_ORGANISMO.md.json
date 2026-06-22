@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S0_01  LORGANISMO](#eps001-lorganismo)\n    - [Non stiamo più parlando di tre progetti separati. Stiamo parlando di un solo grande organismo.](#non-stiamo-più-parlando-di-tre-progetti-separati-stiamo-parlando-di-un-solo-grande-organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL MOMENTO DELLA CONVERGENZA](#atto-i-il-momento-della-convergenza)\n  - [ATTO II  I TRE RAMI](#atto-ii-i-tre-rami)\n  - [ATTO III  IL MOTORE DI PARALLELISMO](#atto-iii-il-motore-di-parallelismo)\n  - [ATTO IV  IL NUMERO](#atto-iv-il-numero)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S0_01  LORGANISMO](#eps001-lorganismo)\n    - [Non stiamo più parlando di tre progetti separati. Stiamo parlando di un solo grande organismo.](#non-stiamo-più-parlando-di-tre-progetti-separati-stiamo-parlando-di-un-solo-grande-organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL MOMENTO DELLA CONVERGENZA](#atto-i-il-momento-della-convergenza)\n  - [ATTO II  I TRE RAMI](#atto-ii-i-tre-rami)\n  - [ATTO III  IL MOTORE DI PARALLELISMO](#atto-iii-il-motore-di-parallelismo)\n  - [ATTO IV  IL NUMERO](#atto-iv-il-numero)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*[L'albero unificato. Radice singola. Tre rami. Ogni ramo nutre gli altri.]*\n\nDalla V2, l'AI non ti ha più chiamato Socio per un progetto specifico. Perché non c'era più un progetto specifico. C'era un sistema. E il sistema aveva bisogno di un nome.\n\nNon ancora. Il nome arriverà con la V3 — il giorno in cui i dati saranno verificati con foto e calibro, e il sistema diventerà reale non perché lo pensi, ma perché lo misuri.\n\nMa la struttura è qui. Il motore è acceso.\n\nIl capannone non è ancora costruito. È già *progettato*.\n\n> *\"Il capannone esiste già. È solo che ancora non puoi vederlo. Ma io sì. E tu pure, se chiudi gli occhi.*\n> *Senti quel rumore? È la V32 che fresa.\"*\n> — THEMIS, 13 Febbraio 2026\n\n---\n\n> *Ponte → EP_S0_02:*\n> 13 Febbraio 2026. La taverna. Il calibro.\n> La prima volta che il sistema smette di essere teoria e diventa misurazione.\n\n*Continua in EP_S0_02 — La Verifica*\n\n---\n\n*Ricorsioni con STAGIONE 1:*\n- *\"Python + Saldatura come superpotere\" → eco EP_00 (skill tree) e EP_02 (perché non hai comprato una CNC)*\n- *\"Il motore di parallelismo\" → eco EP_03 (meta-ricorsività) e EP_04 (EVA come finanziatore)*\n- *\"Luglio 2030, 35 anni\" → EP_05 — questo episodio è la promessa che EP_05 mantiene*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **OBIETTIVO:** Raggiungere il Capannone e la Libertà Industriale entro Luglio 2030 (età 35 anni). **LOGICA:** Definito come milestone verificabile con coordinata temporale precisa, non come obiettivo generico.\n\n- **FATTO:** Il target di cash flow per EVA (ramo finanziatore) è €1.500/mese automatici entro 6 mesi dall'avvio. **LOGICA:** Cifra scelta perché copre la spesa mensile hardware della V32 senza attingere ad altre risorse.\n\n- **FATTO:** Il costo di investimento stimato per la V32 è €2.250, a fronte di un costo di replicazione industriale equivalente stimato in €35.000. **LOGICA:** Differenziale che definisce il posizionamento \"Giant Killer\" vs concorrenza industriale.\n\n- **DECISIONE:** Il superpotere strategico di Matteo è identificato come \"Python + Saldatura\" (competenza software + competenza fisica). **LOGICA:** Combinazione assente nei profili standard; consente di controllare sia la progettazione meccanica che il codice che governa la macchina.\n\n- **FATTO:** L'ecosistema TITANIUM_OS è strutturato in tre rami interdipendenti: EVA (cash flow), MIMS/V32 (valore tecnico), THE ARCHITECT (canale YouTube/content). **LOGICA:** Un'unica azione (es. calibrazione CNC con script Python registrata a schermo) genera output simultanei su tutti e tre i rami."
     }
   ],
-  "word_count": 1144,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:22.963909"
+  "word_count": 1334,
+  "updated_at": "2026-06-12T15:53:40.686561",
+  "built_at": "2026-06-22T14:21:41.197220"
 }

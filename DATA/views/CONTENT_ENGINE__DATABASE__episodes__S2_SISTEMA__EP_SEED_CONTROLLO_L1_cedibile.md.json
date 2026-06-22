@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Un sistema spiegato è un sistema cedibile](#un-sistema-spiegato-è-un-sistema-cedibile)\n    - [Approfondimento LV1 di EP_SEED_CONTROLLO  in italiano, non in gergo](#approfondimento-lv1-di-epseedcontrollo-in-italiano-non-in-gergo)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Un sistema spiegato è un sistema cedibile](#un-sistema-spiegato-è-un-sistema-cedibile)\n    - [Approfondimento LV1 di EP_SEED_CONTROLLO  in italiano, non in gergo](#approfondimento-lv1-di-epseedcontrollo-in-italiano-non-in-gergo)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_CONTROLLO]].\n- **Fratelli LV1:** [[EP_SEED_CONTROLLO_L1_STATOLIVE]], [[EP_SEED_CONTROLLO_L1_SCAFFOLDING]].\n- **Aggancio Nina:** è il **ponte diretto** al senso di Nina — spiegare semplice ciò che sembra magia. Il\n  Centro di Controllo fa per gli adulti quello che Nina fa per i bambini.\n\n> Approfondimento (LV1). Profondità libera."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Centro di Controllo descrive ogni nodo in linguaggio naturale (cosa fa / come si usa / se è acceso), non in gergo tecnico.\n\n- **DECISIONE:** La leggibilità del sistema è scelta progettuale esplicita, non stilistica: trasforma la conoscenza tacita (nella testa del creatore) in conoscenza esplicita (sullo schermo, leggibile da chiunque). **LOGICA:** Un sistema comprensibile da un terzo è trasferibile; uno che richiede l'autore è un single-point-of-failure.\n\n- **OBIETTIVO:** Il sistema deve valere anche senza Matteo — deve essere vendibile, delegabile, ereditabile. **LOGICA:** Se il sapere su come gira il sistema vive solo nella testa di una persona, il sistema non è un prodotto ma un ostaggio.\n\n- **FATTO:** L'episodio è classificato come approfondimento LV1 di EP_SEED_CONTROLLO, con episodi fratelli EP_SEED_CONTROLLO_L1_STATOLIVE e EP_SEED_CONTROLLO_L1_SCAFFOLDING."
     }
   ],
-  "word_count": 456,
-  "updated_at": "2026-06-11T02:08:06.658794",
-  "built_at": "2026-06-11T13:57:34.056781"
+  "word_count": 592,
+  "updated_at": "2026-06-12T16:00:27.875165",
+  "built_at": "2026-06-22T14:22:04.180933"
 }

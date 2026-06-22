@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 40  22/06/2026  RAG SBLOCCATO (GPU ripristinata  ChromaDB stabile)](#sessione-40-22062026-rag-sbloccato-gpu-ripristinata-chromadb-stabile)
+  - [Sessione 39  20/06/2026  fix night_audit  ECOSISTEMA vault Obsidian](#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)
   - [Sessione 38  12-18/06/2026  NotebookLM  pitch/CV/pilastri (con DEBITO da integrare)](#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)
     - [FATTO (12-18/06)](#fatto-12-1806)
     - [DEBITO  fatto a metà / acerbo (DA INTEGRARE, NON rifare)](#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)
@@ -52,6 +54,51 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)
+
+- [✓] **Diagnosi del blocco "RAG semantico = 0"**: erano DUE guasti sovrapposti, non uno.
+- [✓] **GPU persa → ripristinata**: `pip install llamafactory` (manuale, 21/06 01:00) aveva
+      **declassato `torch 2.6.0+cu124` → `2.12.0+cpu`** (CUDA spenta, embedding 8x più lenti,
+      rebuild da 2-4 min a 16 min). Reinstallato `torch/vision/audio 2.6.0+cu124` →
+      `cuda_available=True`, GTX 1070, matmul GPU OK. Embedder ora gira su `cuda:0`.
+- [✓] **ChromaDB desync (`count=0`) → stabile**: era il bug del **compactor di ChromaDB 1.5.9**
+      ("Failed to apply logs to the hnsw segment writer"): a ~32k vettori il count restava
+      inchiodato (469/32664) e la query crashava. 1.5.9 è già l'ultima → nessun fix più nuovo.
+      **Sceso a `chromadb==0.5.23`** (ultima pre-Rust, hnswlib, persistenza sincrona): rebuild
+      pulito su GPU → **count 32664 STABILE da processo nuovo**, zero crash. Ripristinati
+      `huggingface-hub 1.20.1` + `tokenizers 0.22.2` (0.5.23 li trascinava giù rompendo l'embedder).
+- [✓] **Verifica live**: `/api/rag/search "geometria MIMS"` → ASSOLUTO_V7 score **0.96** (croce
+      D29.9 H7/g6, 3 giunti, 5+ materiali). Semantico + BM25 + reranker `bge-reranker-v2-m3` su GPU.
+- [✓] **Blindatura `requirements-rag.txt` v2.0**: pin corretti (`torch==2.6.0+cu124` con
+      `--extra-index-url` cu124, `chromadb==0.5.23`) + le DUE trappole documentate nel file
+      così un futuro `pip install -r` non rirompe (né torch CPU, né chromadb 1.x).
+- [⚠] **TI_Watchdog era DISABILITATO** da 2 giorni (la `finally` del vecchio `rag_clean_rebuild`
+      del 20/06 non l'aveva riabilitato): niente self-healing. API rialzata a mano (PID nuovo,
+      0.5.23). **Riabilitazione watchdog = 1 elevazione UAC di Matteo** (comando pronto).
+- [✓] **MIMS/VULCAN sviluppati sul sapere connesso**: scheda unica `MENTE/MIMS/SCHEDA_PRODOTTO_MIMS_VULCAN.md`
+      (specifiche + economia + **decisione aperta**: connettori iniezione vs compressione). Dalle **17 foto reali**
+      (→ `FOTO/VULCAN_BUILD/20260622/`): telaio pressa **costruito** (60×60, ~800×600, h~905), guide lineari
+      montate, **stampo mattonella provvisorio**; nota `MENTE/VULCAN/BUILD_REALE_20260622.md`. Corretto
+      VULCAN_MANIFESTO (guide+martinetto Vevor 3 stadi, **via "recuperati"**). Vero next fisico: montare il martinetto → 1ª colata.
+- [✓] **CANONE veritiero — regola SCALABILE** (richiesta Matteo): tolto il framing vietato "componente
+      recuperato/usato/EUR 0" (V32/VULCAN) da **49 file** (86 sostituzioni curate, zero falsi positivi).
+      Implementata come nodo: `AUTOMATIONS/core/canon_guard.py` (auto-fix `PAIRS` + `scan()` adattivo) →
+      agganciato a `story_agent.save_episode` (pulisce alla **fonte** ogni episodio nuovo) + `night_audit`
+      (segnale `canon_violations` → critica CANONE). Bonifica massiva: `fix_recuperato_canon.py --apply`.
+- [✓] **RAG OTTIMIZZATO su GPU**: embedder + reranker forzati su `DEVICE=cuda` in `rag_engine.py`
+      (default ChromaDB era CPU → GPU all'1%). Rebuild **2:48 vs ~15 min** (5x). Count riallineato
+      **32774 = 32774** (il drift degli incrementali su file ri-chunkati chiuso col rebuild pulito).
+- [✓] **Dataset rigenerato** (`episodes_to_dataset.py`, 180 campioni via haiku) dal canone ora pulito.
+- [✓] **ASSOLUTO V9 creata** (`MENTE/KNOWLEDGE/ASSOLUTO/ASSOLUTO_V9.md`, indicizzata): tesi
+      **"smantellare l'alluminio estruso"** — ricerca sul nemico (mercato $2.4→4.36B, 4 crepe:
+      assemblaggio/giunto-ad-attrito/costo/niente-pelle) + contributo ingegneristico sulla
+      **scalabilità** (standard-piattaforma, materia-come-IP, produzione distribuita, volano).
+- [ ] **PROSSIMO**: riabilitare watchdog (UAC, rinfresca anche l'API col rag_engine GPU);
+      decidere via connettori MIMS (compressione vs iniezione); montare martinetto Vevor →
+      1ª colata mattonella; ordinare mandrino 2.2kW ER20; rifinire STORIE/Nina.
 
 ---
 

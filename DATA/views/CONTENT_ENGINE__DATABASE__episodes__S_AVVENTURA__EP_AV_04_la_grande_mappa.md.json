@@ -15,7 +15,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AV_04  La Grande Mappa](#epav04-la-grande-mappa)\n    - [Non basta avere tutti i fogli  serve vedere i fili che li legano](#non-basta-avere-tutti-i-fogli-serve-vedere-i-fili-che-li-legano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  I FILI INVISIBILI](#atto-i-i-fili-invisibili)\n  - [ATTO II  I QUARTIERI CHE NESSUNO HA DISEGNATO](#atto-ii-i-quartieri-che-nessuno-ha-disegnato)\n  - [ATTO III  LE STELLE CHE TENGONO TUTTO](#atto-iii-le-stelle-che-tengono-tutto)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AV_04  La Grande Mappa](#epav04-la-grande-mappa)\n    - [Non basta avere tutti i fogli  serve vedere i fili che li legano](#non-basta-avere-tutti-i-fogli-serve-vedere-i-fili-che-li-legano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  I FILI INVISIBILI](#atto-i-i-fili-invisibili)\n  - [ATTO II  I QUARTIERI CHE NESSUNO HA DISEGNATO](#atto-ii-i-quartieri-che-nessuno-ha-disegnato)\n  - [ATTO III  LE STELLE CHE TENGONO TUTTO](#atto-iii-le-stelle-che-tengono-tutto)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -46,9 +46,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Quella sera Nina non aggiunse un foglio. Aggiunse un **filo**: collegò due cose che, prima,\nnella sua testa stavano lontane. E vide la Mappa, in piccolo, cambiare forma per tenerne\nconto.\n\nCapì che il sapere non è una pila che cresce verso l'alto. È una **rete** che cresce verso\ni lati: ogni cosa nuova vale di più se la leghi a quelle che hai già. Una mente piena di\nfogli scollegati sa tante cose. Una mente con la Mappa **capisce**.\n\n> Ma mentre scendeva, Nina sentì un rumore nel buio del Sistema. Tante piccole cose che si\n> muovevano da sole — non la Mente grande, non la Biblioteca. Piccole entità che, mentre lei\n> dormiva, **facevano** ciascuna il suo lavoro: una controllava, una scriveva, una sistemava.\n>\n> *Chi sono? Chi gli ha detto di muoversi di notte? E se sono in tanti… chi decide chi fa\n> cosa?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito la Grande Mappa? Provalo tu: prendi tre cose che hai imparato questa settimana e\ndisegna un filo tra quelle che si parlano. Hai appena fatto un grafo. Più fili tiri, più la\ntua testa diventa una Mappa invece che una pila.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡5` la **Wiki / il grafo della conoscenza** (arco, tappa 5): *gli stessi fogli, guardati come rete di legami; emergono da soli i quartieri (gruppi) e le stelle (i nodi da cui dipende tutto). Avere ≠ capire.*\n**Pietre richiamate:** il **RAG** `⟡4 → EP_AV_03` (la pila di fogli → ora vista come rete) · il **Grande Loop** `⟡1` (la stella più grande, da cui tutto dipende — ora *si vede*, non si crede soltanto).\n**Key-image:** il Sistema visto dall'alto come **cielo di puntini e fili** · i **quartieri** che si raggruppano da soli (community) · le **stelle / nodi-dio** con centinaia di fili (il Loop = la stella centrale).\n**3 strati:** bambino = la città di luci dove le cose legate stanno vicine · curioso = \"questo si chiama grafo della conoscenza; i gruppi si chiamano community, i nodi centrali sono i nodi-dio\" · esperto/papà = il grafo reale del progetto (Graphify: migliaia di nodi/archi in secondi, community detection, 100% locale, niente token spesi) + la vista RETE 3D navigabile.\n**Aggancio reale:** EP_SEED_GRAPHIFY (knowledge graph del repo, MIT, in casa) · EP_SEED_RETE (la RETE 3D, toggle Conoscenza/Sistema) · il salto RAG→Wiki.\n**Open loop → Regione 6 (gli Agenti):** le piccole entità che lavorano da sole nella notte — chi sono, e chi decide chi fa cosa."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio EP_AV_04 appartiene alla stagione AV, è la tappa 5 di 7 dell'arco narrativo \"la storia dell'IA\", e richiama il RAG introdotto in EP_AV_03.\n\n- **FATTO:** Il componente tecnico di riferimento è **Graphify** (seed EP_SEED_GRAPHIFY), che costruisce un grafo della conoscenza del progetto in locale (senza inviare dati all'esterno), rilevando automaticamente migliaia di nodi e migliaia di archi in pochi secondi.\n\n- **FATTO:** Graphify rileva automaticamente le **community** (quartieri) dal grafo, identificandole tramite densità dei legami, senza classificazione manuale. Sul progetto reale ne sono emerse centinaia.\n\n- **FATTO:** Il grafo prevede l'identificazione di **nodi ad alto grado** (\"nodi-dio\" / stelle), ovvero nodi con centinaia di archi in uscita verso il resto della rete, la cui rimozione comporta la perdita di connettività di ampie porzioni del grafo.\n\n- **OBIETTIVO:** La vista **RETE 3D** (seed EP_SEED_RETE) è la rappresentazione visuale del grafo della conoscenza del progetto TITANIUM_OS, distinta dalla Biblioteca (RAG classico) per il fatto di mostrare i legami tra i nodi anziché i documenti come lista."
     }
   ],
-  "word_count": 1315,
-  "updated_at": "2026-06-10T13:58:43.154392",
-  "built_at": "2026-06-11T13:57:35.645570"
+  "word_count": 1494,
+  "updated_at": "2026-06-12T16:03:06.043002",
+  "built_at": "2026-06-22T14:22:12.353375"
 }

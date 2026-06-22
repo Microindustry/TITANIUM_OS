@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_07  IL CAVALLO DI TROIA](#eps007-il-cavallo-di-troia)
+    - [Il pezzo da pochi euro non è il prodotto. È il seme di uno standard.](#il-pezzo-da-pochi-euro-non-è-il-prodotto-è-il-seme-di-uno-standard)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL DNA](#atto-i-il-dna)
+  - [ATTO II  I TRE LIVELLI](#atto-ii-i-tre-livelli)
+  - [ATTO III  IL CAVALLO DI TROIA](#atto-iii-il-cavallo-di-troia)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # EP_S0_07 — IL CAVALLO DI TROIA
 ### "Il pezzo da pochi euro non è il prodotto. È il seme di uno standard."
 

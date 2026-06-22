@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 34](#titaniumos-episodio-34)\n  - [Il Grafo che Nessuno Vede](#il-grafo-che-nessuno-vede)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Cresce con Te](#atto-i-il-problema-che-cresce-con-te)\n  - [ATTO II  Graphify: 5.966 Nodi di Verità](#atto-ii-graphify-5966-nodi-di-verità)\n  - [ATTO III  La Notte Audit e il Numero che Conta](#atto-iii-la-notte-audit-e-il-numero-che-conta)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [Metadati Episodio](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 34](#titaniumos-episodio-34)\n  - [Il Grafo che Nessuno Vede](#il-grafo-che-nessuno-vede)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Cresce con Te](#atto-i-il-problema-che-cresce-con-te)\n  - [ATTO II  Graphify: 5.966 Nodi di Verità](#atto-ii-graphify-5966-nodi-di-verità)\n  - [ATTO III  La Notte Audit e il Numero che Conta](#atto-iii-la-notte-audit-e-il-numero-che-conta)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [Metadati Episodio](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "📋 Metadati Episodio",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | #34 |\n| **Titolo** | Il Grafo che Nessuno Vede |\n| **Data** | 2026-06-08 |\n| **Stagione** | S1 |\n| **Milestone** | Sessione #34: verifica totale + CLAUDE.md v4.1.0 + RAG→WIKI Graphify in produzione |\n| **Tema narrativo** | Mappa cognitiva / Complessità controllata |\n| **Progetti citati** | GENESIS, V32, EVA, AI News Watcher |\n| **Dato tecnico chiave** | 5.966 nodi, grafo 100% locale, skill /graphify verificata |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Target** | Capannone — 15 luglio 2030 |\n| **Tono** | Tecnico-contemplativo, notturno |\n| **Commit principale** | `night_audit` + `story_agent` — 2026-06-08 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il grafo di dipendenze generato da Graphify sul repository GENESIS conta **5.966 nodi**, prodotto localmente (zero cloud), interrogabile via skill `/graphify` dentro GENESIS stesso.\n\n- **FATTO:** Nella sessione #34 del 8 giugno 2026 Graphify è entrato in produzione con query di verifica superata: il sistema risponde correttamente alla domanda \"Cosa dipende da questo file?\".\n\n- **DECISIONE:** Il file **CLAUDE.md** è stato portato alla versione **v4.1.0** (quarta architettura del documento). **LOGICA:** Le versioni precedenti (1.x–3.x) contenevano ambiguità che generavano comportamenti inconsistenti negli agenti; la v4.1.0 stabilisce il \"contratto cognitivo\" stabile per GENESIS e gli agenti AI.\n\n- **FATTO:** Lo stato di avanzamento registrato dal `night_audit` dell'8 giugno 2026: **GENESIS 70%**, **V32 65%**, CLAUDE.md v4.1.0 committato, AI News Watcher scaffold catturato (non in produzione completa).\n\n- **OBIETTIVO:** L'**AI News Watcher** è progettato per generare brief automatici per **30+ creator** con un sistema a tier; lo scaffold è stato committato e pushato nella sessione #34.\n\n- **FATTO:** Il `night_audit` è uno script automatico che gira circa alle **23:45** ogni notte e produce una \"cartella clinica\" strutturata del sistema (file toccati, stato di `story_state.json`, avanzamento milestone), distinta da un diario perché registra fatti e non intenzioni."
     }
   ],
-  "word_count": 1206,
-  "updated_at": "2026-06-09T02:07:53.650906",
-  "built_at": "2026-06-11T14:00:26.219758"
+  "word_count": 1422,
+  "updated_at": "2026-06-12T15:58:51.261534",
+  "built_at": "2026-06-22T14:21:54.086983"
 }

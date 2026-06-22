@@ -6,6 +6,78 @@
     "sessione": ""
   },
   {
+    "id": "BUS-6550efc8",
+    "stato": "da_fare",
+    "testo": "(#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-246d7217",
+    "stato": "da_fare",
+    "testo": "(#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-af2b7ce3",
+    "stato": "da_fare",
+    "testo": "(#fatto-12-1806)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-a92b9c09",
+    "stato": "da_fare",
+    "testo": "(#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-e7926884",
+    "stato": "da_fare",
+    "testo": "(#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-f9aaf77b",
+    "stato": "da_fare",
+    "testo": "(#piano-prossima-sessione-pulita-in-ordine-integrando)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-32e65f05",
+    "stato": "da_fare",
+    "testo": "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-99bba441",
+    "stato": "da_fare",
+    "testo": "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-1091052c",
+    "stato": "da_fare",
+    "testo": "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-a4957f57",
+    "stato": "da_fare",
+    "testo": "(#verticale-finanza-attivata-lasse-di-lato)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-44cdad0d",
+    "stato": "da_fare",
+    "testo": "(#fix-verifiche-rientro-matteo)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-33a87f78",
+    "stato": "da_fare",
+    "testo": "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+    "sessione": ""
+  },
+  {
     "id": "BUS-55770484",
     "stato": "da_fare",
     "testo": "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
@@ -48,9 +120,9 @@
     "sessione": ""
   },
   {
-    "id": "BUS-2297ff00",
+    "id": "BUS-3e4fb1fe",
     "stato": "da_fare",
-    "testo": "(#parcheggio-nina-ragwiki-epav0304-scritti-ma-prematuri-nina-viene-dopo)",
+    "testo": "(#nina-ragwiki-epav0304-canonici-nellarco-parcheggio-tolto-matteo-1106)",
     "sessione": ""
   },
   {
@@ -130,6 +202,126 @@
     "stato": "da_fare",
     "testo": "(#idee-note)",
     "sessione": ""
+  },
+  {
+    "id": "BUS-dd7ac66a",
+    "stato": "fatto",
+    "testo": "**night_audit parse difensivo** v1.3 (commit `01c3cffc`) — chiuso il guasto \"Unterminated string\".",
+    "sessione": "Sessione #39 · 20/06/2026 — fix night_audit + ECOSISTEMA vault Obsidian"
+  },
+  {
+    "id": "BUS-8538fadc",
+    "stato": "fatto",
+    "testo": "**Riordino `_DA_ORDINARE` + Obsidian Mari/VULCAN/MIMS** (commit MENTE `604b5d2`): 11 notebook",
+    "sessione": "Sessione #39 · 20/06/2026 — fix night_audit + ECOSISTEMA vault Obsidian"
+  },
+  {
+    "id": "BUS-ed4c0964",
+    "stato": "fatto",
+    "testo": "**ECOSISTEMA — da puntini isolati a rete** (Matteo: \"rendilo un ecosistema, collega/interseca,",
+    "sessione": "Sessione #39 · 20/06/2026 — fix night_audit + ECOSISTEMA vault Obsidian"
+  },
+  {
+    "id": "BUS-bafd811b",
+    "stato": "da_fare",
+    "testo": "**PROSSIMO**: sviluppare i prodotti MIMS/VULCAN sul sapere ora connesso (specifiche/decisioni reali),",
+    "sessione": "Sessione #39 · 20/06/2026 — fix night_audit + ECOSISTEMA vault Obsidian"
+  },
+  {
+    "id": "BUS-4b370d54",
+    "stato": "fatto",
+    "testo": "**NotebookLM collegato a Claude Code** (notebooklm-mcp-cli via uv tool, isolato; `nlm login` di",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-06acdf24",
+    "stato": "fatto",
+    "testo": "**Innesti NotebookLM su Nina** (`NINA_V2_ARCHITETTURA.md`): Triade dell'Ingaggio, etica",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-c12abbd9",
+    "stato": "fatto",
+    "testo": "**Pitch per-progetto** (`DOCS/PITCH_{NINA,MIMS,V32,GENESIS,EVA,HR}.md`) grounded — MIMS/VULCAN",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-0d467f23",
+    "stato": "fatto",
+    "testo": "**CV unito** (`CvView`) + **Nina CV** (`NinaCvView`, skill-tree dagli episodi) + **Mappa Gioco** 2D.",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-47344bfa",
+    "stato": "fatto",
+    "testo": "**Pilastri = spiegazione a livelli** (`SpiegaPilastroView` Lv1/2/3 + catena) — commit 4438027b.",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-ee8bf954",
+    "stato": "fatto",
+    "testo": "Infra agenti: night_audit **auto-close** (AUTO_CLOSE_DAYS=4, 67→36 aperte), `inventario_notturno.py`,",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-ec019129",
+    "stato": "fatto",
+    "testo": "Critiche v2.1: attacco Opus↔Opus (att01-09) + audit 15/06 (n01-06).",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-889c76f7",
+    "stato": "fatto",
+    "testo": "Collegamenti rapidi `Desktop\\TITANIUM` (Progetto · MENTE-Obsidian · Avvia/Stop · Claude · Docs).",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-41a0668f",
+    "stato": "fatto",
+    "testo": "**PITCH ORA VISIBILI** (commit 43e74471) — NON era \"API spenta\": `/api/file` risolveva i path",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-6c80d58c",
+    "stato": "fatto",
+    "testo": "**PILASTRI REINTEGRATI** (commit ffea8129) — `SpiegaPilastroView` v2: spiegazione a livelli SOPRA",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-67160375",
+    "stato": "fatto",
+    "testo": "**Animazioni JS-controlled** (commit ffea8129) — `motion` (già installato) su pilastri+calendario:",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-b5b6d08a",
+    "stato": "fatto",
+    "testo": "**CALENDARIO in sidebar** (commit a3bfe418) — diario giorno-per-giorno da `INVENTARIO_NOTTURNO.md`",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-ab5d0ba3",
+    "stato": "fatto",
+    "testo": "**night_audit \"LLM audit fallito (Unterminated string)\"** RISOLTO 20/06 (v1.3):",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-9094103e",
+    "stato": "da_fare",
+    "testo": "**night_research Traceback** (`DATA/logs/night_research.log`) + semantic_scholar 429 (rumore).",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-f7be5e36",
+    "stato": "da_fare",
+    "testo": "**RAG semantico = 0**, restart API richiede **UAC** (att04): rebuild indice ChromaDB (1 click Matteo).",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
+  },
+  {
+    "id": "BUS-244d1066",
+    "stato": "da_fare",
+    "testo": "**CHIAVI DA RUOTARE** (red-team #38, att05): `.env` esfiltrabile via API — le ruota Matteo.",
+    "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
   },
   {
     "id": "BUS-07ec4fae",

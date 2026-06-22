@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [GENESIS  1-Pager (il cervello digitale)](#genesis-1-pager-il-cervello-digitale)
+    - [Cosè](#cosè)
+    - [Il principio](#il-principio)
+    - [Il ruolo](#il-ruolo)
+    - [Stato e prossimi passi](#stato-e-prossimi-passi)
+    - [In una riga](#in-una-riga)
+
+<!-- /TOC -->
+
 # GENESIS — 1-Pager (il cervello digitale)
 
 > *L'OS digitale che orchestra la costruzione di sé stesso. Il sistema che rende l'officina più capace ogni giorno.*

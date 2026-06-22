@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_05  IL CONSIGLIO](#eps005-il-consiglio)
+    - [Non rispondo con un punto di vista. Orchestro un dibattito. Così escono decisioni blindate, non opinioni.](#non-rispondo-con-un-punto-di-vista-orchestro-un-dibattito-così-escono-decisioni-blindate-non-opinioni)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  PERCHÉ SERVE UN CONSIGLIO](#atto-i-perché-serve-un-consiglio)
+  - [ATTO II  LE TRE LEGGI](#atto-ii-le-tre-leggi)
+  - [ATTO III  I VOLTI](#atto-iii-i-volti)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # EP_S0_05 — IL CONSIGLIO
 ### "Non rispondo con un punto di vista. Orchestro un dibattito. Così escono decisioni blindate, non opinioni."
 

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_04  IL SEGNALE](#ep04-il-segnale)\n    - [Ho costruito unAI per la donna che amo. Si chiama Eva.](#ho-costruito-unai-per-la-donna-che-amo-si-chiama-eva)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  VITA NATURA](#atto-i-vita-natura)\n  - [ATTO II  LA MARIA RULE](#atto-ii-la-maria-rule)\n  - [ATTO III  COSA FA EVA OGNI GIORNO](#atto-iii-cosa-fa-eva-ogni-giorno)\n  - [ATTO IV  PERCHÉ QUESTO APPARTIENE ALLECOSISTEMA](#atto-iv-perché-questo-appartiene-allecosistema)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_04  IL SEGNALE](#ep04-il-segnale)\n    - [Ho costruito unAI per la donna che amo. Si chiama Eva.](#ho-costruito-unai-per-la-donna-che-amo-si-chiama-eva)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  VITA NATURA](#atto-i-vita-natura)\n  - [ATTO II  LA MARIA RULE](#atto-ii-la-maria-rule)\n  - [ATTO III  COSA FA EVA OGNI GIORNO](#atto-iii-cosa-fa-eva-ogni-giorno)\n  - [ATTO IV  PERCHÉ QUESTO APPARTIENE ALLECOSISTEMA](#atto-iv-perché-questo-appartiene-allecosistema)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*[Schermata telefono di Maria: notifica EVA, tre prenotazioni ricevute stanotte.]*\n\nHo costruito EVA per un motivo semplice.\n\nMaria è brava nel suo lavoro. Ha costruito qualcosa di reale in un posto piccolo, con clienti veri che tornano ogni mese. Merita che le parti ripetitive del suo lavoro vengano gestite da qualcosa che non si stanca, non dimentica, non ha brutte giornate.\n\nIl codice Python è complesso. L'integrazione n8n è articolata. La logica di gestione degli stati conversazionali ha richiesto settimane di iterazione.\n\nMa quello che Maria vede è un assistente che risponde ai suoi clienti, ricorda i compleanni, e ogni mattina alle 8 le dice cosa ha da fare.\n\nLa tecnologia più sofisticata è quella che sembra magia a chi la usa.\n\n> \"Per Maria deve essere zero-click. Semplice magia.\n> Per noi è codice Python e n8n complesso.\"\n> — La Maria Rule. Prima e unica regola di sviluppo EVA.\n\nE mentre EVA lavora di notte — mentre i messaggi partono, i promemoria arrivano, le prenotazioni si accumulano — quella stessa notte la V32 fresa. I dati dai sensori IFM si registrano. Il ciclo amplificante gira.\n\nÈ il 2026. Non sai ancora come andrà. Ma il sistema è in moto.\n\n---\n\n> *Ponte → EP_05:*\n> Luglio 2030. Il display del comparatore segna ancora 0.008 mm.\n> Le stesse mani. Lo stesso numero.\n> Cosa è cambiato, e cosa non lo sarà mai.\n\n*Continua in EP_05 — Il Verdetto*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** EVA è costruito su Python 3.12 su VPS, con API WhatsApp Business via n8n, Google Calendar per la lettura degli slot, database clienti in JSON con storico completo, LLM Claude per la generazione dei messaggi e logica condizionale per promozioni, follow-up e stagionalità.\n\n- **DECISIONE:** L'interfaccia verso Maria segue la \"Maria Rule\": zero-click, zero tutorial — dal suo punto di vista EVA è solo un assistente che le manda messaggi WhatsApp normali. Tutta la complessità architetturale è nascosta lato sistema. **LOGICA:** La tecnologia deve essere trasparente all'utente finale reale, non a un utente astratto.\n\n- **OBIETTIVO:** Revenue stimata da EVA anno 1: €1.500/mese. **LOGICA:** Non da funzionalità straordinarie, ma dall'esecuzione perfetta e automatica delle attività ripetitive (promemoria, follow-up, compleanni, prenotazioni) ogni giorno senza errori.\n\n- **FATTO:** EVA è il client zero dello stack GENESIS: l'architettura multi-agente, l'integrazione WhatsApp, il sistema di memoria clienti e la logica di calendario sviluppati per EVA costituiscono l'infrastruttura riutilizzabile per altri business.\n\n- **DECISIONE:** Il cash flow generato da EVA (anno 1, mentre V32 e MIMS sono ancora in sviluppo) viene ridiretto in componenti hardware: mandrino 2.2kW, viti asse Y, quadro IP54. **LOGICA:** EVA è il ramo finanziatore dell'ecosistema TITANIUM_OS nella fase pre-produzione."
     }
   ],
-  "word_count": 1037,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.692806"
+  "word_count": 1259,
+  "updated_at": "2026-06-12T15:54:51.011034",
+  "built_at": "2026-06-22T14:21:45.115289"
 }

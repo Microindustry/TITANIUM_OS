@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [Nina/Storie  Review alla luce dei notebook (Genius Loci  co.)](#ninastorie-review-alla-luce-dei-notebook-genius-loci-co)
+  - [Verdetto: NON ripartire da prima. Build-on  4 innesti mirati.](#verdetto-non-ripartire-da-prima-build-on-4-innesti-mirati)
+  - [Cosa Genius Loci CONFERMA (siamo sulla strada giusta)](#cosa-genius-loci-conferma-siamo-sulla-strada-giusta)
+  - [Cosa RIPRENDERE  4 innesti concreti (additivi, non rompono nulla)](#cosa-riprendere-4-innesti-concreti-additivi-non-rompono-nulla)
+  - [Cosa RIFIUTARE (esplicitamente)](#cosa-rifiutare-esplicitamente)
+  - [Opzione strategica SEPARATA (non fondere nel canone personale)](#opzione-strategica-separata-non-fondere-nel-canone-personale)
+  - [STORIE (il sistema, non solo Nina)](#storie-il-sistema-non-solo-nina)
+  - [Proposta operativa (regola 11  decidiamo insieme)](#proposta-operativa-regola-11-decidiamo-insieme)
+
+<!-- /TOC -->
+
 # Nina/Storie — Review alla luce dei notebook (Genius Loci & co.)
 
 *2026-06-16 · Opus · risponde alla domanda di Matteo: "rivedi storie e nina, partire da prima o cambiare?"*

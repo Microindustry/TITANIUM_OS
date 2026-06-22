@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E09](#titaniumos-s2e09)\n  - [Gli Occhi del Sistema](#gli-occhi-del-sistema)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema degli Agenti Ciechi](#atto-i-il-problema-degli-agenti-ciechi)\n  - [ATTO II  159 Elementi, Zero Chiamate](#atto-ii-159-elementi-zero-chiamate)\n  - [ATTO III  Il Sistema che si Guarda](#atto-iii-il-sistema-che-si-guarda)\n  - [CHIUSURA](#chiusura)\n  - [reel_hook](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E09](#titaniumos-s2e09)\n  - [Gli Occhi del Sistema](#gli-occhi-del-sistema)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema degli Agenti Ciechi](#atto-i-il-problema-degli-agenti-ciechi)\n  - [ATTO II  159 Elementi, Zero Chiamate](#atto-ii-159-elementi-zero-chiamate)\n  - [ATTO III  Il Sistema che si Guarda](#atto-iii-il-sistema-che-si-guarda)\n  - [CHIUSURA](#chiusura)\n  - [reel_hook](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E09 |\n| **Titolo** | Gli Occhi del Sistema |\n| **Data** | 2026-05-30 |\n| **Sessione** | #16 |\n| **Tag principali** | ARGUS, OmniParser, GENESIS, vision, local-AI |\n| **Progetti coinvolti** | GENESIS, V32 |\n| **GENESIS completamento** | 83% |\n| **V32 completamento** | 65% |\n| **Milestone attivo** | Config G — Rinforzi colonne Z+U |\n| **Agenti totali** | 9 (ARGUS = #9) |\n| **Metrica chiave** | 159 elementi rilevati, `local=1 llm=0`, costo -80% |\n| **Co-autore commit** | Claude Sonnet 4.6 |\n| **Prossimo target** | Capannone 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** ARGUS è il nono agente di GENESIS, agente visivo basato su OmniParser (Microsoft, open source), stilizzato in rosso nella dashboard (`glow ef4444, border red-500`). **LOGICA:** Aggiunge capacità di visione del desktop al sistema senza dipendere da API cloud.\n\n- **DECISIONE:** OmniParser gira in locale su CPU con flag `local=1 llm=0`, senza chiamate a modelli esterni. Al primo test reale ha rilevato 159 elementi UI su uno screenshot. **LOGICA:** Eliminare il costo per ogni frame analizzato in un sistema h24.\n\n- **DECISIONE:** Strategia ibrida visione: OmniParser locale gestisce l'80% dei task visivi (semplici, ripetitivi); il restante 20% (interpretazione ambigua, testo complesso) passa a Claude Sonnet. **LOGICA:** Riduzione stimata dell'80% del costo rispetto a inviare tutti gli screenshot al cloud.\n\n- **FATTO:** Bug risolto in ARGUS v1.0→v2: il file pesi si chiamava `model.pt`, non `best.pt` come atteso dal codice. Commit: `fix: argus_v2 path pesi model.pt`. **LOGICA:** Un path errato bloccava l'intero agente visivo; fix richiesto ~1 ora di debug.\n\n- **FATTO:** Al 2026-05-30 (Sessione #16): GENESIS al 83% di completamento, V32 al 65%. Il RAG graph-aware conta 114 nodi e 218 archi, con catena hardcoded `V32→MIMS→VITA_NATURA`. Milestone attivo V32: Config G — Rinforzi colonne Z e U.\n\n- **FATTO:** GENESIS conta otto agenti operativi prima di ARGUS: RAG, NEXUS (orchestrazione parallela), watchdog (polling ogni 30 secondi, su thread separati), MCP server. ARGUS è lo slot nove."
     }
   ],
-  "word_count": 987,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:25.043518"
+  "word_count": 1234,
+  "updated_at": "2026-06-12T15:56:47.380023",
+  "built_at": "2026-06-22T14:21:49.663146"
 }

@@ -106,7 +106,7 @@ RSS totale ±0.019mm — classe IT6-IT7 professionale.
 
 **LEX MERCATORIA — Conviene?**
 
-Recuperato €9.499 (81%). Investimento €2.250. Asset €11.749. ROI 322%.
+Valore equivalente a nuovo €11.749. Investimento reale €2.250 (19%). ROI 322%.
 BEP 61 ore (1.4 mesi). vs Haas €35k: 15.5x meno costoso, stessa classe.
 
 > **VERDETTO LEX MERCATORIA: APPROVATO**
@@ -185,7 +185,7 @@ Il calibro misura il metallo. La frase misura le decisioni.
 
 - **FATTO:** Parametri dinamici del sistema di isolamento V32: massa **178 kg**, frequenza propria **f₀ = 3.83 Hz** con **4 molle ISO verdi**, isolamento **>99.9% @400Hz**, deflessione Z Config G **0.0006mm @100N** (772× più rigido della baseline), RSS totale **±0.019mm** (classe IT6-IT7). **LOGICA:** Questi valori costituiscono il superamento della verifica LEX PHYSICA.
 
-- **FATTO:** Analisi economica al 13 Febbraio 2026: asset recuperato **€9.499 (81%)**, investimento aggiuntivo **€2.250**, asset totale **€11.749**, ROI **322%**, BEP **61 ore (1.4 mesi)**. **LOGICA:** Confronto vs Haas: 15.5× meno costoso a parità di classe prestazionale.
+- **FATTO:** Analisi economica al 13 Febbraio 2026: valore equivalente a nuovo non speso **€9.499 (81%)**, investimento aggiuntivo **€2.250**, asset totale **€11.749**, ROI **322%**, BEP **61 ore (1.4 mesi)**. **LOGICA:** Confronto vs Haas: 15.5× meno costoso a parità di classe prestazionale.
 
 - **FATTO:** Il framework di valutazione adottato per V32 è strutturato su tre assi formali denominati **LEX PHYSICA** (funzionamento fisico), **LEX MERCATORIA** (convenienza economica), **LEX AESTHETICA** (valore narrativo/estetico). **LOGICA:** Formalizzato nella V3.0 come protocollo decisionale esplicito, applicato a ogni decisione progettuale del sistema TITANIUM_OS.
 

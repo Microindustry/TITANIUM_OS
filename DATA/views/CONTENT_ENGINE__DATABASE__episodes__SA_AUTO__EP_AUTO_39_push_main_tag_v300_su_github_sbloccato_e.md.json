@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_39  Milestone](#epauto39-milestone)\n    - [Push main  tag v3.0.0 su GitHub sbloccato e pushato](#push-main-tag-v300-su-github-sbloccato-e-pushato)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL BLOCCO CHE NON ERA UN BLOCCO TECNICO](#atto-i-il-blocco-che-non-era-un-blocco-tecnico)\n  - [ATTO II  TRE WORKFLOW E UN TAG](#atto-ii-tre-workflow-e-un-tag)\n  - [ATTO III  COSA CAMBIA ADESSO](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_39  Milestone](#epauto39-milestone)\n    - [Push main  tag v3.0.0 su GitHub sbloccato e pushato](#push-main-tag-v300-su-github-sbloccato-e-pushato)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL BLOCCO CHE NON ERA UN BLOCCO TECNICO](#atto-i-il-blocco-che-non-era-un-blocco-tecnico)\n  - [ATTO II  TRE WORKFLOW E UN TAG](#atto-ii-tre-workflow-e-un-tag)\n  - [ATTO III  COSA CAMBIA ADESSO](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Il tag non certifica che ho finito. Certifica che so da dove ricomincio.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il repository `Microindustry/TITANIUM_OS` aveva una storia Git gonfia da 978 MB a causa del file `model.safetensors`; dopo la pulizia con `git filter-repo` la storia è scesa a 72 MB.\n\n- **FATTO:** GitHub blocca il push di oggetti superiori a 100 MB; il file `model.safetensors` superava 1 GB ed era la causa diretta del push bloccato.\n\n- **DECISIONE:** Aggiunto trigger `workflow_dispatch` ai workflow GitHub Actions esistenti (`push`, `pull_request`). **LOGICA:** Permette di avviare manualmente le pipeline senza dover fare commit vuoti, evitando inquinamento della storia Git durante il debug dei workflow.\n\n- **FATTO:** Il tag `v3.0.0` è stato pushato sul branch `main` del repo `Microindustry/TITANIUM_OS` in data 2026-06-03.\n\n- **DECISIONE:** Il salto di versione a `v3.0.0` (major) riflette una discontinuità strutturale: infrastruttura a due macchine con Tailscale (PC fisso con GPU GTX 1070 Ti in taverna + Getac in mobilità), sistema sessioni Markdown collegato a RAG vettoriale, workflow automatizzati e presenza pubblica su GitHub. **LOGICA:** Il numero di major versione non è marketing ma marcatore di identità architetturale.\n\n- **FATTO:** GENESIS risulta al 70% di completamento al momento del push (dato troncato a fine episodio)."
     }
   ],
-  "word_count": 1287,
-  "updated_at": "2026-06-03T21:49:27.470062",
-  "built_at": "2026-06-11T14:00:31.365104"
+  "word_count": 1488,
+  "updated_at": "2026-06-12T16:10:01.232171",
+  "built_at": "2026-06-22T14:22:32.509552"
 }

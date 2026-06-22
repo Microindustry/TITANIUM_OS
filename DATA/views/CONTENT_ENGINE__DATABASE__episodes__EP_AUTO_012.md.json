@@ -18,7 +18,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Componenti V32: dalla teoria alla fabbrica](#componenti-v32-dalla-teoria-alla-fabbrica)\n- [Episodio 14  I Componenti Ci Sono](#episodio-14-i-componenti-ci-sono)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Componenti V32: dalla teoria alla fabbrica](#componenti-v32-dalla-teoria-alla-fabbrica)\n- [Episodio 14  I Componenti Ci Sono](#episodio-14-i-componenti-ci-sono)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -39,9 +39,14 @@
       "level": 2,
       "title": "Connessione al Sistema",
       "content": "TITANIUM_OS legge lo STATE.json ogni volta che apro il terminale. Questo aggiornamento — `completamento_v32: 65%` — non è una nota. È un parametro operativo.\n\nQuando Maria (EVA AI su WhatsApp) mi chiede \"a che punto sei con la fresatrice\", non risponde con una stima. Risponde con i dati del file. 65%. Prossimo step: gusset sinistra. Blocker: mandrino.\n\nMIMS al 30% aspetta. I connettori modulari fisici hanno senso solo quando ho la V32 che taglia le piastre di accoppiamento a tolleranza. Non prima.\n\nVULCAN — la pressa 20t — aspetta i polimeri. Aspetta i test di ricetta. Aspetta che io abbia tempo. Il tempo viene dalla V32 funzionante, che automatizza la lavorazione, che libera ore.\n\nTutto è in serie. Non in parallelo.\n\nQuesta foto del 13 febbraio è il punto di non ritorno.\n\n---\n\nI componenti ci sono. Ora si saldano."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il progetto V32 (fresatrice CNC epoxy-granite) risulta al **65% di completamento** al 13 febbraio 2026, con i componenti fisici ricevuti e documentati fotograficamente.\n\n- **FATTO:** I componenti V32 ricevuti includono guide lineari **THK SSR20**, cuscinetti **SKF** e profili estrusi per telaio; la guida Z misura **600mm** in acciaio temprato rettificato.\n\n- **PRECISIONE:** La tolleranza di progetto della V32 è **±0.019mm**, calcolata su una struttura di **178kg**; il punto critico attuale è la gusset sinistra (Config G), nodo portale X / colonna verticale sinistra, con tubo **60x60x4mm S235**.\n\n- **DECISIONE:** Il mandrino **2.2kW ER20** è identificato come blocker principale per la fase di test, ma non blocca l'assemblaggio del telaio; la stima per la Config G è **3-4 ore** di lavoro.\n\n- **FATTO:** La dipendenza progettuale è dichiarata in serie: **MIMS** (connettori modulari, al 30%) attende la V32 per taglio piastre a tolleranza; **VULCAN** (pressa 20t) attende i test polimeri; i test polimeri attendono la V32 funzionante.\n\n- **FATTO:** Lo stato operativo di V32 è tracciato nel file `BRAIN/STATE.json` con parametro `completamento_v32: 65%` e `prossimo_step: \"Config G — gusset sinistra\"`; il dato viene letto da EVA (AI WhatsApp) per aggiornamenti di stato in tempo reale."
     }
   ],
-  "word_count": 578,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-11T14:00:21.384194"
+  "word_count": 785,
+  "updated_at": "2026-06-12T15:51:33.260927",
+  "built_at": "2026-06-22T14:21:36.097843"
 }

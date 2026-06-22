@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-20T19:08:55.626197",
-  "active_milestone": "Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout), animazioni solo CSS, calendario sidebar mancante. Metodo correttivo Matteo 18/06: INTEGRA non rifare, USA gli agenti.",
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
-  "next_step": "FATTO nella sessione riparti (18/06): pitch visibili (43e74471), pilastri reintegrati+animazioni motion (ffea8129), CALENDARIO sidebar (a3bfe418), denylist .env su API. RESTANO: 1) night_audit 'Unterminated string' parse difensivo; 2) Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE; 3) estendere animazioni motion a CV/pitch/critiche; 4) link Desktop sito Maria (serve URL da Matteo). REGOLA: integra, non rifare.",
-  "session_count": 76,
+  "last_update": "2026-06-22T14:22:34.176893",
+  "active_milestone": "Sessione #40 (22/06): RAG SBLOCCATO+OTTIMIZZATO (torch cu124 ripristinato, chromadb 0.5.23, embedder+reranker su GPU -> rebuild 2:48 vs 15min, 32774 chunk allineati). MIMS/VULCAN sviluppati sul sapere connesso + 17 foto reali analizzate (pressa VULCAN costruita, stampo provvisorio). CANONE bonificato dal framing vietato 'recuperato' con REGOLA SCALABILE (canon_guard agganciato a story_agent+night_audit). Dataset rigenerato. ASSOLUTO V9 creata (tesi: smantellare l'alluminio estruso, con contributo ingegneristico sulla scalabilita).",
+  "last_action": "Modifica a EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
+  "next_step": "Riabilitare TI_Watchdog (1 UAC: schtasks /Change /TN TI_Watchdog /ENABLE + /Run -> rinfresca anche l'API col rag_engine GPU). Poi: decidere via connettori MIMS (compressione vs iniezione, SCHEDA §5); montare martinetto Vevor 3 stadi -> 1a colata mattonella; ordinare mandrino 2.2kW ER20; rifinire STORIE/Nina.",
+  "session_count": 81,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-20T19:08:48.978529"
+      "last_activity": "2026-06-22T14:19:19.539457"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -67,9 +67,14 @@
       "ARCO NINA COMPLETO 8/8: EP_AV_M0 Materia, AV_00 Loop, 01 Automazione, 02 LLM, 03 RAG, 04 Wiki, 05 Agenti, 06 Orchestrazione; +EP_AV_FIN_01 Il Valore (verticale finanza) (11/06)",
       "Canon BIBBIA 0-ter: Nina ha il suo OS (si perde come Matteo, glielo costruisce il papa-meccanico; la Mappa E l OS di Nina) (11/06)",
       "Indice PIETRE.md auto-generato (Tech+Finanza) + blocco FATTI(per il RAG) sui 4 semi + riflusso MENTE/KNOWLEDGE/genesis_nodi_fatti.md (11/06)",
-      "Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)"
+      "Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)",
+      "RAG SBLOCCATO (22/06): doppio guasto risolto — torch 2.6.0+cu124 ripristinato (llamafactory l'aveva messo cpu) + chromadb 0.5.23 (1.5.9 aveva il compactor rotto, count inchiodato 469/32664); 32774 chunk, /api/rag/search live, requirements-rag.txt v2.0 blindato",
+      "RAG OTTIMIZZATO GPU (22/06): embedder+reranker forzati DEVICE=cuda in rag_engine.py (ChromaDB default era cpu); rebuild 2:48 vs ~15min, semantico=bm25 allineato (32774=32774)",
+      "MIMS/VULCAN sviluppati sul sapere connesso (22/06): SCHEDA_PRODOTTO_MIMS_VULCAN consolidata + 17 foto reali analizzate (pressa VULCAN costruita 60x60, guide lineari, stampo mattonella provvisorio) -> BUILD_REALE_20260622; VULCAN_MANIFESTO corretto (guide+martinetto Vevor 3 stadi, via 'recuperati')",
+      "CANONE veritiero - regola scalabile (22/06): tolto framing vietato 'componente recuperato/usato/EUR 0' V32/VULCAN da 49 file (86 sostituzioni); AUTOMATIONS/core/canon_guard.py agganciato a story_agent.save_episode (pulisce alla fonte) + night_audit (segnale canon_violations)",
+      "ASSOLUTO V9 creata+indicizzata (22/06): tesi 'smantellare l'alluminio estruso' - ricerca mercato/crepe T-slot + contributo ingegneristico sulla scalabilita (standard-piattaforma, materia-IP, produzione distribuita); dataset rigenerato (180 campioni)"
     ],
-    "next": "Sessione pulita: INTEGRARE il debito #38 (pitch visibili, pilastri reintegrati, calendario sidebar, animazioni con libreria) — non rifare in modo acerbo",
+    "next": "Riabilitare TI_Watchdog (1 UAC); decidere via connettori MIMS (compressione vs iniezione); montare martinetto Vevor 3 stadi -> 1a colata mattonella; ordinare mandrino 2.2kW ER20; rifinire STORIE/Nina",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -84,13 +89,13 @@
   "focus_today": "Debito #38 INTEGRATO (pitch visibili, pilastri reintegrati, calendario, animazioni motion). Prossimo: night_audit parse difensivo, Obsidian Mari/VULCAN/MIMS, estendere motion a CV/pitch/critiche. Integra, non rifare.",
   "blockers": [
     "Chiavi .env da ruotare (red-team #38) — le ruota Matteo",
-    "night_audit 'Unterminated string' ricorrente (parse LLM non difensivo) — da fixare",
+    "TI_Watchdog disabilitato (no self-healing) — riabilitare con 1 UAC: schtasks /Change /TN TI_Watchdog /ENABLE + /Run",
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
     "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
   ],
   "ideas_inbox": 0,
   "nodes": {
-    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | 6518 chunk indicizzati (CUDA cu124)",
+    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | 32774 chunk (557 file, semantico=bm25 allineato) | chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 | embedder+reranker DEVICE=cuda (rebuild ~2:48 vs 15min CPU) | reranker bge-reranker-v2-m3",
     "MENTE_SCANNER": "pronto — python NODES/MENTE_SCANNER/scanner.py",
     "WATCHER": "pronto — python AUTOMATIONS/core/watcher.py",
     "N8N": "ATTIVO — n8n start (binario globale 2.25.6, localhost:5678), account owner locale self-hosted; avvio-al-login via START_LOGIN.bat",

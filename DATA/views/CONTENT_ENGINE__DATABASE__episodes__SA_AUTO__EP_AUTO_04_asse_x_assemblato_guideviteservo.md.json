@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_04  Milestone](#epauto04-milestone)\n    - [Asse X assemblato (guideviteservo)](#asse-x-assemblato-guideviteservo)\n- [IL SISTEMA  Episodio: LAsse X](#il-sistema-episodio-lasse-x)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima che esistesse](#atto-i-prima-che-esistesse)\n  - [ATTO II  Guide, vite, servo](#atto-ii-guide-vite-servo)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_04  Milestone](#epauto04-milestone)\n    - [Asse X assemblato (guideviteservo)](#asse-x-assemblato-guideviteservo)\n- [IL SISTEMA  Episodio: LAsse X](#il-sistema-episodio-lasse-x)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima che esistesse](#atto-i-prima-che-esistesse)\n  - [ATTO II  Guide, vite, servo](#atto-ii-guide-vite-servo)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"La macchina non ti chiede se ci credi. Ti chiede se sei in officina.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La V32 è una fresatrice CNC a tre assi con struttura in epoxy-granite, configurazione \"Config G\" con rinforzi strutturali al 65%.\n- **DECISIONE:** L'asse X della V32 è composto da tre componenti principali: guide lineari profilate, vite a ricircolo di sfere con precarico, e servomotore. **LOGICA:** I tre elementi devono dialogare con precisione: le guide definiscono il piano di scorrimento, la vite converte moto rotativo in traslazione lineare, il servo esegue e conferma il comando.\n- **DECISIONE:** Il servomotore è stato dimensionato con margine calcolato sui cicli reali della V32, non sovradimensionato per sicurezza emotiva. **LOGICA:** Ottimizzazione basata su utilizzo reale previsto, non su buffer conservativi arbitrari.\n- **FATTO:** Il milestone EP_AUTO_04 certifica l'asse X assemblato e testato con primo movimento manuale (andata e ritorno) senza vibrazioni, cigolii o strattoni sulla struttura Config G.\n- **OBIETTIVO:** L'operatività della catena V32-VULCAN è prerequisito per avanzare MIMS oltre il 30% di completamento."
     }
   ],
-  "word_count": 879,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:27.864716"
+  "word_count": 1043,
+  "updated_at": "2026-06-12T16:04:29.426775",
+  "built_at": "2026-06-22T14:22:20.946361"
 }

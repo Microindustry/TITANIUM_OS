@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S2_02  LORCHESTRATORE](#eps202-lorchestratore)\n    - [4.7 secondi. 13 fonti. Il sistema che coordina sé stesso.](#47-secondi-13-fonti-il-sistema-che-coordina-sé-stesso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA DELLA FINE SESSIONE](#atto-i-il-problema-della-fine-sessione)\n  - [ATTO II  STOP HOOKS](#atto-ii-stop-hooks)\n  - [ATTO III  RESEARCH AGENT v1.1](#atto-iii-research-agent-v11)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S2_02  LORCHESTRATORE](#eps202-lorchestratore)\n    - [4.7 secondi. 13 fonti. Il sistema che coordina sé stesso.](#47-secondi-13-fonti-il-sistema-che-coordina-sé-stesso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA DELLA FINE SESSIONE](#atto-i-il-problema-della-fine-sessione)\n  - [ATTO II  STOP HOOKS](#atto-ii-stop-hooks)\n  - [ATTO III  RESEARCH AGENT v1.1](#atto-iii-research-agent-v11)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -32,9 +32,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Due automazioni. Una sessione.\n\nLa prima (stop_hooks) risolve il problema della continuità: il contesto non si perde più. La seconda (Research Agent) risolve il problema della conoscenza: il sapere disponibile cresce da solo.\n\nEntrambe fanno la stessa cosa su scale diverse: convertono un'azione manuale ripetitiva in un processo automatico affidabile.\n\nIl principio è vecchio quanto l'ingegneria: qualsiasi cosa fai tre volte con lo stesso risultato può e deve diventare un processo. La domanda è solo quanto tempo ti vuoi prendere per costruirlo prima che il costo del manuale superi il costo dell'automazione.\n\nNel caso del contesto di sessione: il costo del manuale era dieci minuti per sessione, spesso saltati. Il costo del sistema è stato una sessione di quattro ore. Break even: 24 sessioni. Con le sessioni attuali: tre settimane.\n\n> *Non automatizzare perché sei pigro. Automatizza perché il tuo tempo vale più dell'operazione ripetitiva.*\n\n---\n\n**reel_hook:** \"Ogni volta che chiudi una sessione con un AI, perdi contesto. Lo sai. Lo sai e lo lasci accadere lo stesso perché aggiornare i file manualmente ogni volta è noioso. Ho costruito un orchestratore che parte automaticamente quando Claude Code chiude. 4.7 secondi. Tre processi in parallelo: aggiorna il file di riavvio, aggiorna la lista delle funzioni, avvia RAG in background se hai toccato la knowledge base. Il giorno dopo apri, leggi 30 secondi di contesto, sei dentro. Non ho più perso un thread di lavoro da quando l'ho messo in produzione. L'automazione che nessuno vede è quella che funziona meglio.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 02 |\n| Arco | Dal manuale all'automatico — la leva dell'intenzione |\n| Tecnologie | ThreadPoolExecutor, subprocess, stop hooks, API multi-sorgente |\n| Connessione S2 | Il sistema che coordina sé stesso — anticipa EP_S2_05 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** `stop_hooks.py` è un orchestratore parallelo che si esegue automaticamente alla chiusura di ogni sessione Claude Code, lanciando 3 hook su ThreadPoolExecutor: `generate_restart_prompt.py` (aggiorna RIAVVIO_SESSIONE.txt), `generate_functions_list.py` (aggiorna FUNZIONI_SISTEMA.txt), e un RAG incremental rebuild in background (detached). **LOGICA:** Automatizza 4 operazioni manuali (~10 min) che venivano spesso saltate per stanchezza o fretta, evitando perdita cumulativa di contesto.\n\n- **PRECISIONE:** I due hook sincroni di stop_hooks.py completano in **4.7 secondi**. Il RAG rebuild parte in background detached e non blocca gli altri processi. Timeout impostato a **45 secondi** per processo.\n\n- **DECISIONE:** Il RAG rebuild viene avviato solo se la cartella MENTE/ è stata modificata negli **ultimi 120 minuti**. **LOGICA:** Evita rebuild inutili a ogni sessione, limitandolo ai casi in cui la knowledge base è stata effettivamente aggiornata.\n\n- **FATTO:** Research Agent v1.1 interroga **13 sorgenti in parallelo**: arXiv, OpenAlex, Semantic Scholar, BASE (Bielefeld), POLITesi, CNKI, Unpaywall, GitHub, DOAJ, CORE, EurLex, CrossRef. I risultati vengono aggregati per rilevanza, deduplicati e opzionalmente indicizzati nel RAG di GENESIS.\n\n- **DECISIONE:** Il break-even del sistema stop_hooks è stato calcolato in **24 sessioni** (~3 settimane al ritmo attuale). **LOGICA:** Costo manuale = 10 min/sessione spesso saltati; costo di costruzione del sistema = una sessione da 4 ore.\n\n- **FATTO:** Commit di riferimento per entrambe le automazioni (stop_hooks + Research Agent v1.1): **8e33e09**, datato 28-29 maggio 2026."
     }
   ],
-  "word_count": 905,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:26.818918"
+  "word_count": 1141,
+  "updated_at": "2026-06-12T15:59:49.300087",
+  "built_at": "2026-06-22T14:22:02.553599"
 }

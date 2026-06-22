@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_29  Milestone](#epauto29-milestone)\n    - [Story Agent v1.0 - generazione episodi automatica da git log](#story-agent-v10---generazione-episodi-automatica-da-git-log)\n- [IL SISTEMA  Episodio: Story Agent v1.0](#il-sistema-episodio-story-agent-v10)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del silenzio cera il rumore](#atto-i-prima-del-silenzio-cera-il-rumore)\n  - [ATTO II  Il momento in cui il sistema ha imparato a raccontarsi](#atto-ii-il-momento-in-cui-il-sistema-ha-imparato-a-raccontarsi)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_29  Milestone](#epauto29-milestone)\n    - [Story Agent v1.0 - generazione episodi automatica da git log](#story-agent-v10---generazione-episodi-automatica-da-git-log)\n- [IL SISTEMA  Episodio: Story Agent v1.0](#il-sistema-episodio-story-agent-v10)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del silenzio cera il rumore](#atto-i-prima-del-silenzio-cera-il-rumore)\n  - [ATTO II  Il momento in cui il sistema ha imparato a raccontarsi](#atto-ii-il-momento-in-cui-il-sistema-ha-imparato-a-raccontarsi)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Un sistema che non sa raccontarsi non può crescere. Adesso il mio sa farlo. Alle due e sette, senza che io debba essere sveglio.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Story Agent v1.0 è entrato in produzione reale il 29 maggio 2026, con primo episodio generato automaticamente confermato.\n\n- **DECISIONE:** Il cron job di Story Agent è schedulato alle 02:07. **LOGICA:** Orario notturno di consolidamento, fuori dalle sessioni di lavoro attive.\n\n- **DECISIONE:** Lo stop hook (micro-log automatico a ogni chiusura sessione) è stato identificato come componente critica del sistema, non il cron. **LOGICA:** Senza stop hook i dati in ingresso al cron sarebbero incompleti, rendendo l'agente peggiore di nessun agente.\n\n- **FATTO:** Al momento del milestone EP_AUTO_29, GENESIS risulta al 78% di completamento e Vita Natura (EVA) al 40%.\n\n- **FATTO:** V32 è alla Config G (rinforzi strutturali), con avanzamento dichiarato al 65% di assemblaggio.\n\n- **FATTO:** MIMS è fermo al 30% in attesa che la catena V32-VULCAN raggiunga maturità sufficiente per riceverlo."
     }
   ],
-  "word_count": 926,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:30.406209"
+  "word_count": 1073,
+  "updated_at": "2026-06-12T16:08:14.515270",
+  "built_at": "2026-06-22T14:22:29.226306"
 }

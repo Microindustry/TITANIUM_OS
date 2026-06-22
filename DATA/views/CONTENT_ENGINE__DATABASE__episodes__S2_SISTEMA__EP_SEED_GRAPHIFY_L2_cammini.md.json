@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [I cammini  come si trova la strada tra due nodi](#i-cammini-come-si-trova-la-strada-tra-due-nodi)\n    - [Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_QUERY  cosa fa, dentro, il verbo path](#approfondimento-lv2-di-epseedgraphifyl1query-cosa-fa-dentro-il-verbo-path)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [COME SI CERCA LA STRADA (semplice, poi preciso)](#come-si-cerca-la-strada-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [I cammini  come si trova la strada tra due nodi](#i-cammini-come-si-trova-la-strada-tra-due-nodi)\n    - [Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_QUERY  cosa fa, dentro, il verbo path](#approfondimento-lv2-di-epseedgraphifyl1query-cosa-fa-dentro-il-verbo-path)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [COME SI CERCA LA STRADA (semplice, poi preciso)](#come-si-cerca-la-strada-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO",
       "content": "- **Sale a:** [[EP_SEED_GRAPHIFY_L1_QUERY]] → [[EP_SEED_GRAPHIFY]].\n- **Aggancio Nina:** \"allargarsi a cerchi finché tocchi la meta\" è un gioco da spiegare a un bambino (la\n  caccia al tesoro in cui controlli prima le stanze vicine). È la BFS, senza la parola.\n\n> Approfondimento (LV2). Profondità libera: sotto, A* e le euristiche (LV3)."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio è classificato come approfondimento LV2, figlio di EP_SEED_GRAPHIFY_L1_QUERY, e appartiene alla stagione ST del progetto TITANIUM_OS. Durata stimata: 5 minuti.\n\n- **FATTO:** L'algoritmo descritto per trovare il cammino minimo su grafi con archi non pesati è la BFS (ricerca in ampiezza): esplora il grafo a strati di distanza crescente e si ferma al primo strato che raggiunge la destinazione, garantendo il minimo numero di salti.\n\n- **FATTO:** Quando gli archi hanno un peso (i legami non contano tutti uguale), l'algoritmo indicato è Dijkstra, che opera a costo minimo invece che a salti minimi.\n\n- **DECISIONE:** Il livello successivo di approfondimento previsto (LV3) riguarda A* e le euristiche, esplicitamente indicato come sviluppo futuro del cammino formativo su questo argomento."
     }
   ],
-  "word_count": 480,
-  "updated_at": "2026-06-11T02:08:07.422699",
-  "built_at": "2026-06-11T13:57:35.095424"
+  "word_count": 612,
+  "updated_at": "2026-06-12T16:01:16.607443",
+  "built_at": "2026-06-22T14:22:06.767348"
 }

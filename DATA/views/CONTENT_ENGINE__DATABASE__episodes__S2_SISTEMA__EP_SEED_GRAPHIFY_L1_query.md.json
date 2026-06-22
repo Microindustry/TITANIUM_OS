@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Interrogare la mappa, non i file  query, path, explain](#interrogare-la-mappa-non-i-file-query-path-explain)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si interroga, non si rilegge](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-interroga-non-si-rilegge)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [I TRE MODI DI CHIEDERE](#i-tre-modi-di-chiedere)\n  - [PERCHÉ CONTA (il risparmio vero)](#perché-conta-il-risparmio-vero)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Interrogare la mappa, non i file  query, path, explain](#interrogare-la-mappa-non-i-file-query-path-explain)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si interroga, non si rilegge](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-interroga-non-si-rilegge)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [I TRE MODI DI CHIEDERE](#i-tre-modi-di-chiedere)\n  - [PERCHÉ CONTA (il risparmio vero)](#perché-conta-il-risparmio-vero)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (perché esiste la mappa).\n- **Usa gli altri LV1:** `query` ti porta nei [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] (quartieri), `path`\n  passa spesso dai [[EP_SEED_GRAPHIFY_L1_GODNODE]] (i nodi-dio sono i crocevia).\n- **Aggancio Nina:** è il \"come si usa\" della Grande Mappa — Nina non legge tutti i fogli, *chiede alla\n  mappa e segue i fili* (`EP_AV_04`).\n\n> Episodio di **approfondimento (LV1)**. Nessun limite di profondità: sotto `path` ci può stare un LV2\n> sugli algoritmi di cammino, se servirà."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il sistema Graphify introduce tre verbi di interrogazione del grafo: `query` (trova nodi), `path` (catena di nodi tra due punti), `explain` (struttura di un sottosistema con nodi + archi + community).\n\n- **DECISIONE:** Interrogare il grafo invece di rileggere i file sorgente. **LOGICA:** La complessità scende da O(repo) a O(sottografo), evitando la rilettura di 515 file da migliaia di token per ogni domanda strutturale.\n\n- **FATTO:** Il verbo `path` non restituisce solo gli estremi di una connessione ma la catena completa di nodi intermedi — risponde a *come* due componenti si toccano, non solo *che* si toccano.\n\n- **FATTO:** Il verbo `explain` aggrega nodi, archi e community per restituire la struttura di dipendenza di un sottosistema (chi dipende da chi, dove vive la decisione), senza rileggere il codice sorgente."
     }
   ],
-  "word_count": 479,
-  "updated_at": "2026-06-10T18:54:46.406996",
-  "built_at": "2026-06-11T13:57:35.855358"
+  "word_count": 617,
+  "updated_at": "2026-06-12T16:01:11.208569",
+  "built_at": "2026-06-22T14:22:06.446764"
 }

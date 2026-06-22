@@ -1,0 +1,294 @@
+{
+  "data": "2026-06-17",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "RAG",
+      "titolo": "Riattivare il RAG e riallineare i 13.722 chunk con la struttura 2-assi",
+      "cosa": "Approvare il UAC pendente per riportare il RAG a quota 200, poi eseguire un re-index selettivo sui chunk prodotti dallo story_agent nelle sessioni notturne post-backfill (sessioni 36-37). Verificare che i metadati parent/level/children e asse_nina siano indicizzati come campi filtrabili.",
+      "perche": "Segnale RAG sev=alta: '13.722 chunk indicizzati, backfill FATTI completato su 146 episodi, ogni sessione notturna story_agent scrive nel vuoto: i nuovi contenuti non vengono trovati'. Con 181 episodi e 98 commit in 7 giorni, ogni ciclo notturno aggiunge contenuto che non è mai recuperabile finché il RAG è offline.",
+      "come": [
+        "1. Matteo approva il UAC per riportare RAG a quota 200 (azione necessaria, non delegabile).",
+        "2. Dopo riattivazione, eseguire query di smoke-test: recuperare un chunk di EP_AV_06 e verificare che restituisca i campi asse_nina, level, parent.",
+        "3. Se i campi 2-assi mancano dallo schema dell'indice, aggiungere una migration script che ri-inietta i metadati senza cancellare i chunk esistenti (operazione additiva).",
+        "4. Schedulare un job notturno di 'chunk-audit' che confronta n_episodes in episodes.json con n_chunks indicizzati e loga il delta ogni mattina."
+      ],
+      "rischio": "Medio. Il re-index parziale può introdurre duplicati se il deduplication non è robusto. Va fatto su branch separato e validato prima di toccare la quota di produzione.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[RAG sev=alta]"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "NOTTURNE",
+      "titolo": "Stabilizzare l'agente di ricerca notturno: retry, circuit-breaker e fallback offline",
+      "cosa": "Aggiungere al research_agent un layer di resilienza a 3 livelli: (1) retry con backoff esponenziale per timeout di rete, (2) circuit-breaker che salta la fonte dopo N fallimenti consecutivi invece di crashare l'intero run, (3) fallback su cache locale delle ultime N ricerche valide quando tutte le fonti sono in rate-limit.",
+      "perche": "Tre segnali convergenti nella stessa notte: night_research.log crash/eccezione sev=alta, research_agent.log errore esplicito sev=alta, night_push.log rate-limit sev=media. Il finding lo dice esplicitamente: 'non è un episodio isolato: tre tipologie di fallimento nella stessa notte'. L'agente è fragile strutturalmente, non per un glitch.",
+      "come": [
+        "1. Audit del codice research_agent: identificare i punti dove le eccezioni di rete propagano senza catch (max 1h di lettura).",
+        "2. Wrappare le chiamate HTTP con tenacity (o equivalente) con max_attempts=3, wait_exponential(min=2, max=30).",
+        "3. Aggiungere un file sources_blacklist.json con TTL: una fonte finisce in blacklist se fallisce 3 volte in 24h, viene rimossa automaticamente dopo 48h.",
+        "4. In assenza di risultati validi, il job scrive un report 'no_results_tonight.md' invece di crashare, così night_push.log ha sempre qualcosa di coerente da processare.",
+        "5. Aggiungere un test unitario che simula timeout e verifica che il job termini con exit_code=0 anche in condizioni degradate."
+      ],
+      "rischio": "Basso. Sono modifiche difensive che non cambiano la logica di ricerca, solo la gestione degli errori. Reversibili.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[NOTTURNE sev=alta x4 + sev=media x3]"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-17",
+    "milestone": "Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato timeout di rete nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato timeout di rete nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_push.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato crash/eccezione nelle ultime esecuzioni."
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "Il RAG è offline (next_step chiede di approvare UAC per riportarlo a 200). Con 13.722 chunk indicizzati e il backfill FATTI appena completato su 146 episodi, ogni sessione notturna story_agent sta scrivendo nel vuoto: i nuovi contenuti non "
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks v.A vs v.B (18mm)' è prerequisito del V8 e la decisione è ancora aperta senza criterio documentato. Una decisione binaria irrisolta non è un problema tecnico: è una scelta evitata. Finché non viene chiusa, V8 non p"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Entrambi i log (night_research.log e research_agent.log) mostrano contemporaneamente rate-limit, ricerca a vuoto ed errore esplicito — tre tipologie di fallimento nella stessa notte. Non è un episodio isolato: significa che l'agente di rice"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "bassa",
+        "finding": "La decisione 'scalare asse_nina ai 129 episodi' e le 'viste 2 assi in dashboard' sono marcate come aperte ma non hanno un criterio di chiusura né una sessione assegnata. Con 148 episodi già esistenti e la struttura 2 assi appena stabilizzat"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Fable 5 con scadenza 22/06 (meno di 10 giorni) è l'unica finestra pianificata per il SELF_IMPROVE/red-team audit. Con 78 commit in 7 giorni e lo stack in rapida evoluzione, un audit critico 360 fatto ora fotografa il sistema nel momento più"
+      },
+      {
+        "area": "V32",
+        "sev": "alta",
+        "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito diretto della fresatura stampi MIMS, e V32 è al 65% di avanzamento. È un acquisto fisico con lead time reale (spedizione, eventuale dogana): ogni giorno senza ordine è un giorno di"
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni."
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 181,
+      "rag_chunks": 3873,
+      "n_commits_7d": 98
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+      "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+      "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+      "(#verticale-finanza-attivata-lasse-di-lato)",
+      "(#fix-verifiche-rientro-matteo)",
+      "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+      "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+      "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)",
+      "(#build-potenziato-radice-del-problema-metadati)",
+      "(#4-semi-tecnici-scritti-a-mano-stagione-st-con-reelhook-il-content-gap-chiuso)",
+      "(#igiene-episodesjson-additiva-nulla-cancellato)",
+      "(#rifare-le-storie-n-livelli-sui-contenuti-il-lavoro-vero-della-sessione-interrotta)",
+      "(#notte-autonoma-36b-1006-allineato-i-n-livelli-al-tuo-blueprint-a-2-assi)",
+      "(#nina-ragwiki-epav0304-canonici-nellarco-parcheggio-tolto-matteo-1106)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Most Insane New Apple AI Features",
+        "url": "https://www.youtube.com/shorts/NQof8hG8FwE"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Satya on Loopcraft: Building Frontier Ecosystems",
+        "url": "https://www.latent.space/p/ainews-satya-on-loopcraft-building"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Julia Evans",
+        "url": "https://simonwillison.net/2026/Jun/15/julia-evans/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "\"They screwed us\": Personality clashes sent Anthropic's models offline",
+        "url": "https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-agent 0.3a0",
+        "url": "https://simonwillison.net/2026/Jun/15/datasette-agent/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Cloudflare CAPTCHA on at least one ampersand",
+        "url": "https://simonwillison.net/2026/Jun/16/captcha-on-at-least-one-ampersand/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Matteo Wong, The Atlantic",
+        "url": "https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "The Fable 5 Export Controls Harm US Cyber Defense",
+        "url": "https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Georgi Gerganov",
+        "url": "https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-tailscale 0.1a0",
+        "url": "https://simonwillison.net/2026/Jun/16/datasette-tailscale/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "tobocop2/lilbee ★24 — Run and manage local AI models, search your files and code, and crawl the web, a",
+        "url": "https://github.com/tobocop2/lilbee"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "yasirshabbirservices/Bricks-Builder-MCP ★1 — Bricks Builder MCP is a powerful WordPress plugin that exposes a Model Context P",
+        "url": "https://github.com/yasirshabbirservices/Bricks-Builder-MCP"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "cyzus/suzent ★61 — SUZENT: YOUR SOVEREIGN DIGITAL CO-WORKER",
+        "url": "https://github.com/cyzus/suzent"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "joeseverino/cordon ★0 — Language-agnostic command-surface contract: declare a tool once, render every vi",
+        "url": "https://github.com/joeseverino/cordon"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "calf-ai/calfkit-sdk ★119 — 🐮 The SDK to build AI agents as event-driven microservices",
+        "url": "https://github.com/calf-ai/calfkit-sdk"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "optave/ops-codegraph-tool ★69 — Code intelligence CLI — function-level dependency graph across 34 languages, 34-",
+        "url": "https://github.com/optave/ops-codegraph-tool"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "frankbria/narrative-modeling-app ★4 — An AI-driven platform for exploratory data analysis and model building. The Narr",
+        "url": "https://github.com/frankbria/narrative-modeling-app"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Chaos2Cured/FreeLattice ★30 — Part of Lumen's World — a sovereign AI platform where humans and AI build togeth",
+        "url": "https://github.com/Chaos2Cured/FreeLattice"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "momomuchu/burp-wrapper ★0 — Python wrapper for Burp Suite MCP Server API — gives AI agents full access to ev",
+        "url": "https://github.com/momomuchu/burp-wrapper"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "ViktorsBaikers/DevRites ★1 — Stop your AI from shipping half-baked code. A disciplined senior-engineer workfl",
+        "url": "https://github.com/ViktorsBaikers/DevRites"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "JSONbored/awesome-claude ★264 — HeyClaude is a curated registry and distribution surface for Claude and AI-workf",
+        "url": "https://github.com/JSONbored/awesome-claude"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "amarbel-llc/eng ★1 — Nix monorepo aggregating dotfiles, system packages, devshells, plugins, and 30+ ",
+        "url": "https://github.com/amarbel-llc/eng"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "VITASID57/Claude-code-desktop-dual-launcher ★1 — Run two Claude Desktop accounts side-by-side on Windows. Leverages Electron's --",
+        "url": "https://github.com/VITASID57/Claude-code-desktop-dual-launcher"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "gregorydickson/pickle-rick-claude ★26 — 🥒 Pickle Rick for Claude Code — autonomous PRD-driven coding loops + relentless ",
+        "url": "https://github.com/gregorydickson/pickle-rick-claude"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "yasirshabbirservices/Bricks-Builder-MCP ★1 — Bricks Builder MCP is a powerful WordPress plugin that exposes a Model Context P",
+        "url": "https://github.com/yasirshabbirservices/Bricks-Builder-MCP"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "mm7894215/TokenTracker ★721 — Track token usage across 22 AI coding tools (Claude Code, Codex, Cursor, Gemini,",
+        "url": "https://github.com/mm7894215/TokenTracker"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "simonw/datasette: release 1.0a34",
+        "url": "https://github.com/simonw/datasette/releases/tag/1.0a34"
+      },
+      {
+        "fonte": "safishamsi (Graphify)",
+        "titolo": "safishamsi/graphify: release v0.8.40",
+        "url": "https://github.com/safishamsi/graphify/releases/tag/v0.8.40"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "How Big Tech Lies About AI Layoffs",
+        "url": "https://www.youtube.com/shorts/08uMw4_BWOA"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Biggest Microsoft Build News in 82 seconds",
+        "url": "https://www.youtube.com/shorts/jKgrNh_q_b0"
+      }
+    ],
+    "n_news": 30
+  }
+}

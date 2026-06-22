@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Il gate di rilevanza  tenere il segnale, buttare il rumore](#il-gate-di-rilevanza-tenere-il-segnale-buttare-il-rumore)\n    - [Approfondimento LV1 di EP_SEED_WATCHER  raccogliere è facile, scegliere è il lavoro](#approfondimento-lv1-di-epseedwatcher-raccogliere-è-facile-scegliere-è-il-lavoro)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Il gate di rilevanza  tenere il segnale, buttare il rumore](#il-gate-di-rilevanza-tenere-il-segnale-buttare-il-rumore)\n    - [Approfondimento LV1 di EP_SEED_WATCHER  raccogliere è facile, scegliere è il lavoro](#approfondimento-lv1-di-epseedwatcher-raccogliere-è-facile-scegliere-è-il-lavoro)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_WATCHER]].\n- **Fratelli LV1:** [[EP_SEED_WATCHER_L1_KEYLESS]], [[EP_SEED_WATCHER_L1_TIER]].\n- **Aggancio Nina:** \"il calibro passa/non passa\" — una soglia è un concetto perfetto per i bambini: una\n  porta che fa entrare solo le cose abbastanza importanti.\n\n> Approfondimento (LV1). Nessun tetto di profondità."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il watcher ha raccolto ~97 segnali grezzi al primo giro di raccolta.\n- **DECISIONE:** Viene applicato un gate di rilevanza tramite parametro `--min-rel` (soglia minima di rilevanza) per filtrare i segnali in ingresso prima che entrino nel RAG. **LOGICA:** Evitare che rumore e segnali irrilevanti inquinino il sistema a valle (RAG e brief).\n- **FATTO:** Su ~97 segnali grezzi, l'obiettivo del gate è tenere i ~5 rilevanti e scartare i ~92 non pertinenti senza revisione manuale.\n- **DECISIONE:** La soglia `min-rel` è configurata come parametro regolabile (alzabile se arriva troppo rumore, abbassabile se si teme di perdere segnali). **LOGICA:** Bilanciamento dinamico tra precisione e copertura del filtro.\n- **OBIETTIVO:** Il principio guida del gate è \"pochi e veri\" anziché \"tanti e a caso\", coerente con la regola \"niente teatro\" applicata ai dati in ingresso al sistema GENESIS/RAG."
     }
   ],
-  "word_count": 444,
-  "updated_at": "2026-06-11T02:08:08.203499",
-  "built_at": "2026-06-11T13:57:34.807233"
+  "word_count": 594,
+  "updated_at": "2026-06-12T16:02:00.405977",
+  "built_at": "2026-06-22T14:22:09.383330"
 }

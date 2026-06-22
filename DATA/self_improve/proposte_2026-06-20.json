@@ -1,0 +1,294 @@
+{
+  "data": "2026-06-20",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "NOTTURNE",
+      "titolo": "Stabilizzare gli agenti notturni: retry con backoff + circuit-breaker",
+      "cosa": "Aggiungere logica di retry esponenziale (max 3 tentativi, backoff 30/60/120s) e un circuit-breaker che skippa la sorgente dopo N fallimenti consecutivi, invece di crashare. Separare i log per tipo di errore: timeout / rate-limit / crash / empty-result.",
+      "perche": "Segnali ad alta severità in night_research.log, research_agent.log, night_push.log: crash/eccezione, errore esplicito, rate-limit, timeout, ricerca a vuoto — 12 finding aperti su NOTTURNE in una sola notte. Il sistema perde valore ogni notte in cui gli agenti falliscono silenziosamente.",
+      "come": [
+        "1. Identificare i punti di chiamata HTTP/API nei tre script (night_research, research_agent, night_push).",
+        "2. Wrappare ogni chiamata con un decorator retry(max=3, backoff_factor=2) usando tenacity o logica custom.",
+        "3. Aggiungere un file circuit_breaker_state.json che traccia N fallimenti per sorgente e skippa se > soglia.",
+        "4. Strutturare il log con campi: timestamp, script, sorgente, tipo_errore (enum: timeout|ratelimit|crash|empty), tentativo.",
+        "5. Test locale su una sorgente mock che ritorna 429 e 500."
+      ],
+      "rischio": "Basso. I file di produzione non vengono toccati, si aggiunge solo resilienza attorno alle chiamate esistenti.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte: 12 finding su NOTTURNE, sev alta (crash/errore esplicito) + media (timeout/rate-limit/empty)"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "MIMS",
+      "titolo": "Sbloccare MIMS dal 30%: sprint minimo su 1 modulo concreto nella prossima sessione",
+      "cosa": "MIMS è fermo al 30% da almeno due sessioni (finding bassa sev ma persistente). Non proporre un refactor completo: scegliere UN modulo specifico (il più utile agli altri pilastri, es. quello che alimenta V32 o GENESIS), definirne l'interfaccia minima e portarlo a 'usabile internamente'.",
+      "perche": "Pilastro MIMS al 30% (critiche_audit_aperte sev bassa) + assenza di gap_profondita su MIMS suggerisce che il debito è di struttura, non di contenuto. Con 73 commit in 7 giorni il ritmo c'è, manca focus su questo pilastro.",
+      "come": [
+        "1. In questa sessione: listare i moduli MIMS esistenti e identificare quale è richiamato più spesso dagli altri pilastri.",
+        "2. Definire in un file mims/MODULE_NAME/interface.md: input atteso, output garantito, stato attuale.",
+        "3. Scrivere un test di smoke (non unit test completo) che verifichi che il modulo produce output non vuoto dato un input reale.",
+        "4. Aggiornare il tracker di pilastro con % e next-action concreta."
+      ],
+      "rischio": "Minimo. È documentazione + test, nessun codice nuovo.",
+      "autonomia": "sicuro",
+      "fonte": "pillars.MIMS=30, critiche_audit_aperte finding 'Pilastro MIMS fermo al 30%'"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-20",
+    "milestone": "Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato timeout di rete nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato timeout di rete nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_push.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato crash/eccezione nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "MIMS",
+        "sev": "bassa",
+        "finding": "Pilastro MIMS fermo al 30%."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "alta",
+        "finding": "night_push.log: rilevato errore esplicito nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato ricerca a vuoto nelle ultime esecuzioni."
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni."
+      }
+    ],
+    "salute": {
+      "verdict": "OK",
+      "n_episodes": 183,
+      "rag_chunks": 3873,
+      "n_commits_7d": 73
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)",
+      "(#fatto-12-1806)",
+      "(#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)",
+      "(#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli)",
+      "(#piano-prossima-sessione-pulita-in-ordine-integrando)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+      "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+      "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+      "(#verticale-finanza-attivata-lasse-di-lato)",
+      "(#fix-verifiche-rientro-matteo)",
+      "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+      "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+      "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)",
+      "(#build-potenziato-radice-del-problema-metadati)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "PewDiePie’s FREE Odysseus AI (Full Review & Setup)",
+        "url": "https://www.youtube.com/watch?v=_7BHqZayPOc"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Midjourney Built What?!?",
+        "url": "https://www.youtube.com/shorts/Qy25rSEXpPQ"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: Fable Banned, New Open-Source Leader, Midjourney Shocker",
+        "url": "https://www.youtube.com/watch?v=Db260rUuKJg"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding",
+        "url": "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Self-Driving Lab — Joseph Krause, Radical AI",
+        "url": "https://www.latent.space/p/radical-ai"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Midjourney Medical: scan your organs like you step on a scale",
+        "url": "https://www.latent.space/p/ainews-midjourney-medical-scan-your"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "The Professor of Outputmaxxing — Anjney Midha, AMP",
+        "url": "https://www.latent.space/p/anj"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM > GPT? GLM-5.2 passes vibe check; Z.ai forecasts Open Fable by December",
+        "url": "https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-apps 0.1a3",
+        "url": "https://simonwillison.net/2026/Jun/15/datasette-apps-2/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette 1.0a34",
+        "url": "https://simonwillison.net/2026/Jun/16/datasette/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "NetNewsWire Status",
+        "url": "https://simonwillison.net/2026/Jun/17/netnewswire-status/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "<click-to-play> — a still that plays",
+        "url": "https://simonwillison.net/2026/Jun/17/click-to-play-component/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Charity Majors",
+        "url": "https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "GLM-5.2 is probably the most powerful text-only open weights LLM",
+        "url": "https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-acl 0.6a0",
+        "url": "https://simonwillison.net/2026/Jun/18/datasette-acl/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Datasette Apps: Host custom HTML applications inside Datasette",
+        "url": "https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "sepro86/claudexus ★1 — Cut AI build costs: Claude plans & verifies while unbounded waves of full-access",
+        "url": "https://github.com/sepro86/claudexus"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "siddhant-bachal/viral-product-launch-architects ★0 — 21-Agent Viral Launch Pipeline 2026 – AI Research to Multi-Channel Delivery",
+        "url": "https://github.com/siddhant-bachal/viral-product-launch-architects"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "thesongzhu/Friday ★917 — AI",
+        "url": "https://github.com/thesongzhu/Friday"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "linny006/trending-claude-skills ★6 — Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed",
+        "url": "https://github.com/linny006/trending-claude-skills"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Latent-Fields/REE_assembly ★3 — This is where ideas and information, evidence and interest combine to create REE",
+        "url": "https://github.com/Latent-Fields/REE_assembly"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Zeus-Deus/codemux ★7 — The Agentic Development Environment You Need.",
+        "url": "https://github.com/Zeus-Deus/codemux"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "MarlBurroW/hivekeep ★20 — Hivekeep is a self-hosted platform of autonomous, persistent personal AI agents.",
+        "url": "https://github.com/MarlBurroW/hivekeep"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "NousResearch/hermes-agent ★197597 — The agent that grows with you",
+        "url": "https://github.com/NousResearch/hermes-agent"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "ultimatespidermanton/surreal-surge ★0 — SurrealDB 3 Agent Toolkit 2026 – Build Multi-Model AI Apps with SurrealQL & Vect",
+        "url": "https://github.com/ultimatespidermanton/surreal-surge"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "linny006/trending-claude-skills ★6 — Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed",
+        "url": "https://github.com/linny006/trending-claude-skills"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "PranavGS2006/agent-thinktank-stack ★0 — AI Coding Memory MCP 2026: 20 Tools for Persistent Sprint & Decision Management",
+        "url": "https://github.com/PranavGS2006/agent-thinktank-stack"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "JoseAFlores777/ccp ★0 — Profiles for Claude Code — route a different account/provider per folder (offici",
+        "url": "https://github.com/JoseAFlores777/ccp"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Zeus-Deus/codemux ★7 — The Agentic Development Environment You Need.",
+        "url": "https://github.com/Zeus-Deus/codemux"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "dautovri/cloud-cost-agent ★1 — Native-first FinOps agent skill for AWS, GCP & Azure — find cloud savings inside",
+        "url": "https://github.com/dautovri/cloud-cost-agent"
+      }
+    ],
+    "n_news": 30
+  }
+}

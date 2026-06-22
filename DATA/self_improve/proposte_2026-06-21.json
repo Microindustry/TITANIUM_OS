@@ -1,0 +1,281 @@
+{
+  "data": "2026-06-21",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "RICERCA",
+      "titolo": "Exponential backoff + circuit-breaker su research_agent (Semantic Scholar / OpenAlex)",
+      "cosa": "Aggiungere al research_agent: (1) retry con backoff esponenziale (es. tentativi 1-2-4-8s, max 3 retry) su HTTP 429; (2) circuit-breaker che skippa la fonte per il resto della notte dopo N fallimenti consecutivi; (3) try/except globale attorno all'intero flusso per catturare il Traceback non gestito e scriverlo come errore strutturato nel log invece di crash.",
+      "perche": "Segnali critici multipli: '2026-06-21 03:38:26 [research_agent] WARNING [semantic_scholar] 429' ripetuto da almeno due notti; 'Traceback (most recent call last)' in night_research.log (crash non gestito); zero risultati su query core V32. Il research_agent è inutilizzabile di notte e produce rumore nei log senza valore.",
+      "come": [
+        "1. Creare branch fix/research-agent-resilience",
+        "2. Nel client HTTP del research_agent, avvolgere le chiamate con tentativi=3, sleep=2^n secondi, solo su status 429/503",
+        "3. Aggiungere contatore per-fonte: se >=3 fallimenti consecutivi, loggare 'fonte X disabilitata per questa sessione' e continuare con le altre",
+        "4. Avvolgere il main loop in try/except Exception as e: log.error('CRASH: %s', traceback.format_exc()) per eliminare Traceback non gestito",
+        "5. Test locale con mock che restituisce 429 ripetuti → verificare che non crashi",
+        "6. PR + revisione Matteo prima di merge"
+      ],
+      "rischio": "Basso. Il backoff può allungare leggermente i run notturni, ma evita crash e ban IP. Nessuna modifica a dati o sicurezza.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte: RICERCA sev=alta (429 ripetuti + Traceback crash)"
+    },
+    {},
+    {}
+  ],
+  "segnali": {
+    "data": "2026-06-21",
+    "milestone": "Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm)' è prerequisito dichiarato per V8, e il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito per la fresatura stampi MIMS. Entrambi sono decisioni/acquisti fisici che nessun"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Le chiavi .env sono segnalate come 'da ruotare' dal red-team #38 e compaiono ancora nei blockers attuali. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi stesse non risulta nei commits degli ultimi 7 gi"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il todo 'link Desktop sito Maria (serve URL da Matteo)' è rimasto aperto da sessione #38 e compare ancora nel next_step corrente. È un'informazione che blocca un agente in attesa di input umano: ogni notte che passa senza quell'URL è una no"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il research_agent colpisce Semantic Scholar senza backoff adeguato e riceve 429 ripetuti da almeno due notti consecutive. Il 21/06: \"2026-06-21 03:38:26 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: ...linear+guide+"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Oltre ai 429, nei log del 21/06 è presente un crash non gestito: night_research.log riporta \"Traceback (most recent call last):\" (data 2026-06-21) e night_push.log del 20/06 riporta \"⚠ night_research.log: Traceback (most recent call last):\""
+      },
+      {
+        "area": "GENESIS",
+        "sev": "bassa",
+        "finding": "Il commit e3694655 (21/06) elimina la regola 11 di CLAUDE.md 'su richiesta esplicita di Matteo', pochi giorni dopo che il commit 6861abc9 l'aveva introdotta come nodo AUTOMIGLIORAMENTO ('il sistema propone, l'umano approva'). La regola era "
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola riporta '#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli' come todo aperto. Stanotte ci sono almeno 3 guasti reali nei log (crash research_agent, 429 non gestito, zero risultati su query core V32) che rischiano di essere "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto e compare nella bussola come debito segnalato dagli agenti. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi è azione manuale di Matteo "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il blocker 'night_audit Unterminated string ricorrente (parse LLM non difensivo)' è presente sia nei next_step che nei blockers da almeno la sessione #38. Non c'è ancora un commit di fix. Un parser non difensivo su output LLM significa che "
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Due query distinte hanno restituito zero risultati: '2026-06-20 03:38:52 [research_agent] INFO openalex -> 0 risultati' e '2026-06-20 03:38:29 [research_agent] INFO semantic_scholar -> 0 risultati' (quest'ultima su epoxy granite polymer con"
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8' è aperto senza data di risoluzione. V32 è al 65% e il pilastro è il più avanzato, ma un prerequisito architetturale non deciso blocca V8. Ogni sessione tecnic"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il research_agent è andato in crash stanotte: '2026-06-20 03:38:54 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&'"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 187,
+      "rag_chunks": 29113,
+      "n_commits_7d": 77
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)",
+      "(#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)",
+      "(#fatto-12-1806)",
+      "(#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)",
+      "(#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli)",
+      "(#piano-prossima-sessione-pulita-in-ordine-integrando)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+      "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+      "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+      "(#verticale-finanza-attivata-lasse-di-lato)",
+      "(#fix-verifiche-rientro-matteo)",
+      "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+      "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+      "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "PewDiePie’s FREE Odysseus AI (Full Review & Setup)",
+        "url": "https://www.youtube.com/watch?v=_7BHqZayPOc"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Midjourney Built What?!?",
+        "url": "https://www.youtube.com/shorts/Qy25rSEXpPQ"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: Fable Banned, New Open-Source Leader, Midjourney Shocker",
+        "url": "https://www.youtube.com/watch?v=Db260rUuKJg"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding",
+        "url": "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Self-Driving Lab — Joseph Krause, Radical AI",
+        "url": "https://www.latent.space/p/radical-ai"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Midjourney Medical: scan your organs like you step on a scale",
+        "url": "https://www.latent.space/p/ainews-midjourney-medical-scan-your"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "The Professor of Outputmaxxing — Anjney Midha, AMP",
+        "url": "https://www.latent.space/p/anj"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM > GPT? GLM-5.2 passes vibe check; Z.ai forecasts Open Fable by December",
+        "url": "https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-apps 0.1a3",
+        "url": "https://simonwillison.net/2026/Jun/15/datasette-apps-2/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette 1.0a34",
+        "url": "https://simonwillison.net/2026/Jun/16/datasette/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "NetNewsWire Status",
+        "url": "https://simonwillison.net/2026/Jun/17/netnewswire-status/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "<click-to-play> — a still that plays",
+        "url": "https://simonwillison.net/2026/Jun/17/click-to-play-component/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Charity Majors",
+        "url": "https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "GLM-5.2 is probably the most powerful text-only open weights LLM",
+        "url": "https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-acl 0.6a0",
+        "url": "https://simonwillison.net/2026/Jun/18/datasette-acl/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Datasette Apps: Host custom HTML applications inside Datasette",
+        "url": "https://simonwillison.net/2026/Jun/18/datasette-apps/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "sepro86/claudexus ★1 — Cut AI build costs: Claude plans & verifies while unbounded waves of full-access",
+        "url": "https://github.com/sepro86/claudexus"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "siddhant-bachal/viral-product-launch-architects ★0 — 21-Agent Viral Launch Pipeline 2026 – AI Research to Multi-Channel Delivery",
+        "url": "https://github.com/siddhant-bachal/viral-product-launch-architects"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "thesongzhu/Friday ★917 — AI",
+        "url": "https://github.com/thesongzhu/Friday"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "linny006/trending-claude-skills ★6 — Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed",
+        "url": "https://github.com/linny006/trending-claude-skills"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Latent-Fields/REE_assembly ★3 — This is where ideas and information, evidence and interest combine to create REE",
+        "url": "https://github.com/Latent-Fields/REE_assembly"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Zeus-Deus/codemux ★7 — The Agentic Development Environment You Need.",
+        "url": "https://github.com/Zeus-Deus/codemux"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "MarlBurroW/hivekeep ★20 — Hivekeep is a self-hosted platform of autonomous, persistent personal AI agents.",
+        "url": "https://github.com/MarlBurroW/hivekeep"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "NousResearch/hermes-agent ★197597 — The agent that grows with you",
+        "url": "https://github.com/NousResearch/hermes-agent"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "ultimatespidermanton/surreal-surge ★0 — SurrealDB 3 Agent Toolkit 2026 – Build Multi-Model AI Apps with SurrealQL & Vect",
+        "url": "https://github.com/ultimatespidermanton/surreal-surge"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "linny006/trending-claude-skills ★6 — Auto-updated leaderboard of trending claude-skills and AI agent repos, refreshed",
+        "url": "https://github.com/linny006/trending-claude-skills"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "PranavGS2006/agent-thinktank-stack ★0 — AI Coding Memory MCP 2026: 20 Tools for Persistent Sprint & Decision Management",
+        "url": "https://github.com/PranavGS2006/agent-thinktank-stack"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "JoseAFlores777/ccp ★0 — Profiles for Claude Code — route a different account/provider per folder (offici",
+        "url": "https://github.com/JoseAFlores777/ccp"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Zeus-Deus/codemux ★7 — The Agentic Development Environment You Need.",
+        "url": "https://github.com/Zeus-Deus/codemux"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "dautovri/cloud-cost-agent ★1 — Native-first FinOps agent skill for AWS, GCP & Azure — find cloud savings inside",
+        "url": "https://github.com/dautovri/cloud-cost-agent"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E08](#titaniumos-s1e08)\n  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LARCHIVIO CHE CAMMINA](#atto-i-larchivio-che-cammina)\n  - [ATTO II  ASSOLUTO V7, O DEL DOCUMENTO CHE NON DOVREBBE ESISTERE](#atto-ii-assoluto-v7-o-del-documento-che-non-dovrebbe-esistere)\n  - [ATTO III  CTRLK E IL PROBLEMA DEL CONTESTO](#atto-iii-ctrlk-e-il-problema-del-contesto)\n  - [CHIUSURA  SESSIONE 8, GIT DIRTY, 150 CHUNK](#chiusura-sessione-8-git-dirty-150-chunk)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E08](#titaniumos-s1e08)\n  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LARCHIVIO CHE CAMMINA](#atto-i-larchivio-che-cammina)\n  - [ATTO II  ASSOLUTO V7, O DEL DOCUMENTO CHE NON DOVREBBE ESISTERE](#atto-ii-assoluto-v7-o-del-documento-che-non-dovrebbe-esistere)\n  - [ATTO III  CTRLK E IL PROBLEMA DEL CONTESTO](#atto-iii-ctrlk-e-il-problema-del-contesto)\n  - [CHIUSURA  SESSIONE 8, GIT DIRTY, 150 CHUNK](#chiusura-sessione-8-git-dirty-150-chunk)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E08 |\n| **Data registrazione** | 2026-05-27 |\n| **Titolo** | Il Sistema Che Si Ricorda di Sé |\n| **Progetto primario** | GENESIS |\n| **Progetto secondario** | V32 / ASSOLUTO |\n| **Milestone** | Config G — Rinforzi colonne Z+U |\n| **Commit chiave** | GENESIS stack MCP, Dashboard v5.2, ASSOLUTO V7 |\n| **Dati tecnici** | 178 kg corpo unico, 150 chunk RAG, sessione #8, 5 MCP tools |\n| **Stato repository** | dirty (modifiche non committate al 29/05) |\n| **Angolo narrativo** | Continuità cognitiva — il sistema come memoria esterna |\n| **Tono** | Tecnico-personale, nessuna retorica |\n| **Tag** | `#GENESIS` `#DASHBOARD` `#RAG` `#MCP` `#ASSOLUTO` `#V32` |\n| **Prossimo episodio** | Config G — I gusset da 200mm, il ferro vero |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il RAG di GENESIS ha raggiunto **150 chunk** alla sessione **#8** (27 maggio 2026). **LOGICA:** I chunk RAG sono usati come misura quantitativa della conoscenza accumulata dal sistema su sé stesso.\n\n- **DECISIONE:** La massa del V32 è fissata a **178 kg**, corpo unico, con eliminazione di ogni formulazione ambigua precedente (\"distinzione molle\"). **LOGICA:** Ogni ambiguità in una spec tecnica genera overhead decisionale futuro; il dato univoco evita rilavorazioni durante operazioni fisiche (es. saldatura notturna).\n\n- **FATTO:** `titanium_mcp_server.py` espone **5 tools** strutturati che rendono accessibili a Claude: stato corrente, sessioni, chunk RAG e brief giornaliero. **LOGICA:** Standardizzare l'interfaccia AI→sistema tramite MCP per continuità cognitiva tra sessioni.\n\n- **DECISIONE:** Dashboard v5.1 sostituisce le chiamate hardcoded a `http://localhost:5001` con **path relativi**. **LOGICA:** Rendere il sistema portabile e indipendente dall'ambiente di esecuzione (laptop, server locale, futuro hardware permanente).\n\n- **FATTO:** La dashboard v5.2 introduce `PillarProgressStrip`: **4 barre di avanzamento** sotto l'header per i pilastri V32, GENESIS, IDENTITY, MIMS. **LOGICA:** Visualizzazione percentuale concreta dello stato di ogni pilastro, senza stime qualitative.\n\n- **FATTO:** Il gusset della colonna Z sinistra del V32 ha dimensione **200 mm** (nota tecnica manoscritta presente in sessione #8). **LOGICA:** Dato strutturale acquisito nel RAG come parte della documentazione fisica della macchina."
     }
   ],
-  "word_count": 1250,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:24.339753"
+  "word_count": 1468,
+  "updated_at": "2026-06-12T15:55:37.791448",
+  "built_at": "2026-06-22T14:21:46.983221"
 }

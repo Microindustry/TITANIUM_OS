@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [NINA  1-Pager](#nina-1-pager)
+    - [Cosè](#cosè)
+    - [Il modello  il libro È il viaggio sulla mappa](#il-modello-il-libro-è-il-viaggio-sulla-mappa)
+    - [Perché è diverso](#perché-è-diverso)
+    - [Le materie (aperte, si aggiungono)](#le-materie-aperte-si-aggiungono)
+    - [Come si fa infinita](#come-si-fa-infinita)
+    - [Il legame col resto](#il-legame-col-resto)
+    - [Stato](#stato)
+    - [La visione](#la-visione)
+
+<!-- /TOC -->
+
 # NINA — 1-Pager
 
 > *Un libro che non finisce e non invecchia: il viaggio di una bambina curiosa sulla mappa del sapere. Scritto da un padre per la figlia — e costruito perché si generi da solo.*

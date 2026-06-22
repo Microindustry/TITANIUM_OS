@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_41  Milestone](#epauto41-milestone)\n    - [MICROINDUSTRY  OmniParser weights migrati](#microindustry-omniparser-weights-migrati)\n- [IL SISTEMA  Episodio: MICROINDUSTRY  OmniParser Weights Migrati](#il-sistema-episodio-microindustry-omniparser-weights-migrati)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Non Si Vede dal Budget](#atto-i-il-problema-che-non-si-vede-dal-budget)\n  - [ATTO II  159 Elementi, Zero Chiamate](#atto-ii-159-elementi-zero-chiamate)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_41  Milestone](#epauto41-milestone)\n    - [MICROINDUSTRY  OmniParser weights migrati](#microindustry-omniparser-weights-migrati)\n- [IL SISTEMA  Episodio: MICROINDUSTRY  OmniParser Weights Migrati](#il-sistema-episodio-microindustry-omniparser-weights-migrati)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Non Si Vede dal Budget](#atto-i-il-problema-che-non-si-vede-dal-budget)\n  - [ATTO II  159 Elementi, Zero Chiamate](#atto-ii-159-elementi-zero-chiamate)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Un sistema autonomo non è quello che non dipende da niente. È quello che ha scelto consapevolmente da cosa dipendere — e ha eliminato tutto il resto.*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** OmniParser è un modello open source di Microsoft che processa screenshot e restituisce elementi UI strutturati (posizione, tipo, testo) girando interamente in locale, senza chiamate a server esterni e senza costo per inferenza.\n\n- **PRECISIONE:** Su un'interfaccia standard, OmniParser restituisce mediamente **159 elementi UI strutturati** per screenshot, senza nessuna chiamata API.\n\n- **DECISIONE:** I weights di OmniParser sono tenuti **fuori dal versioning Git** (inadatto a file binari pesanti), ma referenziati dal repository `github.com/Microindustry/TITANIUM_OS` tramite uno script di download e verifica automatizzato con hash, attivo al setup. **LOGICA:** Garantisce riproducibilità su qualsiasi macchina, funzionamento offline dal secondo avvio, e nessun costo variabile per volume di inferenza.\n\n- **FATTO:** I print di debug nel codebase sono stati ridotti da **342 a 131** su **34 file migrati**. **LOGICA:** Ridurre il rumore nel codice è prerequisito funzionale per sistemi come GENESIS (output macchina in tempo reale) ed EVA (dati Vita Natura), non intervento estetico.\n\n- **OBIETTIVO:** L'integrazione di OmniParser risolve il problema di automazione su interfacce grafiche prive di API aperte (gestionali centri estetici, software di produzione, interfacce macchine), sostituendo i modelli di visione cloud a costo variabile con inferenza locale a costo zero."
     }
   ],
-  "word_count": 1218,
-  "updated_at": "2026-06-03T21:51:10.163309",
-  "built_at": "2026-06-11T14:00:31.552142"
+  "word_count": 1422,
+  "updated_at": "2026-06-12T16:10:18.658163",
+  "built_at": "2026-06-22T14:22:33.174212"
 }

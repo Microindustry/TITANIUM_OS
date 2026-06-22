@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [V32  1-Pager (la macchina madre)](#v32-1-pager-la-macchina-madre)
+    - [Cosè](#cosè)
+    - [Il vantaggio sleale](#il-vantaggio-sleale)
+    - [Il ruolo nella catena](#il-ruolo-nella-catena)
+    - [Stato e prossimi passi](#stato-e-prossimi-passi)
+    - [In una riga](#in-una-riga)
+
+<!-- /TOC -->
+
 # V32 — 1-Pager (la macchina madre)
 
 > *Una fresatrice CNC di precisione costruita da zero. È il motore: produce, paga, e finanzia tutto il resto.*

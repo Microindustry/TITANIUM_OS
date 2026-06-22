@@ -132,7 +132,7 @@ Alla fine, conta un solo numero.
 
 **0.019 mm.** Tolleranza RSS dell'asse X dopo calibrazione.
 
-Non è il numero che ti aspetti da una macchina costruita in una taverna con componenti recuperati e saldature TIG fatte a mano.
+Non è il numero che ti aspetti da una macchina costruita in una taverna con componenti industriali selezionati e saldature TIG fatte a mano.
 
 Ma è il numero che ottieni quando ogni scelta — le molle, il composito, gli 8 Custodi, la rigidità Z 772x, il controllo PLC deterministico — è stata fatta con un obiettivo: eliminare l'errore alla fonte, non compensarlo dopo.
 

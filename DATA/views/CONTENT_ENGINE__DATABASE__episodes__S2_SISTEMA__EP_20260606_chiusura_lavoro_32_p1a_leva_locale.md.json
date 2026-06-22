@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S02E08](#titaniumos-s02e08)\n  - [La View Che Mentiva](#la-view-che-mentiva)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA CHE NON URLAVA](#atto-i-il-problema-che-non-urlava)\n  - [ATTO II  RISCRITTURA ADDITIVA](#atto-ii-riscrittura-additiva)\n  - [ATTO III  IL BINARIO CHE NON DOVEVA ESISTERE](#atto-iii-il-binario-che-non-doveva-esistere)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S02E08](#titaniumos-s02e08)\n  - [La View Che Mentiva](#la-view-che-mentiva)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA CHE NON URLAVA](#atto-i-il-problema-che-non-urlava)\n  - [ATTO II  RISCRITTURA ADDITIVA](#atto-ii-riscrittura-additiva)\n  - [ATTO III  IL BINARIO CHE NON DOVEVA ESISTERE](#atto-iii-il-binario-che-non-doveva-esistere)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S02E08 |\n| **Titolo** | La View Che Mentiva |\n| **Data** | 2026-06-06 |\n| **Sessione** | #32 |\n| **Milestone chiuse** | P1a (AUTOMAZ stato reale + badge live) |\n| **Milestone aperte** | P2 AVVENTURA (binario lanciato, bibbia scritta) |\n| **Leva accesa** | Ollama/Qwen local — `model_ready: true` |\n| **Anomalia risolta** | NightAudit falso negativo + TI_NightPush exit 255 |\n| **V32** | 65% |\n| **GENESIS** | 70% |\n| **Target capannone** | 15 luglio 2030 |\n| **Tag narrativo** | stato-reale, riscrittura-additiva, binario-avventura, leva-locale |\n| **Co-author AI** | Claude Opus 4.8 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Sessione #32 del 2026-06-06 ha chiuso la milestone **P1a**: la view GENESIS ora legge lo stato operativo reale delle automazioni (`model_ready`, `last_run`, `exit_code`) invece di etichette statiche scritte manualmente. **LOGICA:** La dashboard mostrava 7 automazioni \"attive\" di cui 3 effettivamente ferme; la riscrittura additiva dell'array AUTOMAZ (nessuna voce rimossa) ha aggiunto badge live verde/giallo/rosso basati su exit code 0 / attesa / errore.\n\n- **FATTO:** **TI_NightPush** era uscito con codice 255 a causa di `update_github_profile.py` che chiamava il binario `gh` con un path non trovato. **LOGICA:** Il fix era già committato prima della sessione #32, ma la dashboard non rifletteva lo stato corretto finché non è stata corretta la view.\n\n- **DECISIONE:** Riscrittura della view GENESIS eseguita in modalità **additiva**: nessuna voce rimossa dall'array AUTOMAZ. **LOGICA:** Preservare la complessità esistente e aggiungere la colonna di stato reale, evitando perdita di informazione tramite refactor semplificativo.\n\n- **FATTO:** Nella sessione #32 è stata accesa per la prima volta la leva locale **Ollama/Qwen** con stato `model_ready: true`. **LOGICA:** GENESIS acquisisce capacità di ragionamento locale in taverna, riducendo la dipendenza esclusiva da modelli esterni.\n\n- **OBIETTIVO:** Target capannone fissato al **15 luglio 2030** (~1500 giorni dalla data episodio). Avanzamento attuale: **V32 al 65%**, **GENESIS al 70%**.\n\n- **FATTO:** Nella stessa sessione #32 è stato lanciato il binario narrativo **P2 — AVVENTURA** (stagione AV, primo episodio *\"La Bambina e la Giuntura\"*, mondo educativo), con bibbia del mondo e pilota già scritti. **LOGICA:** Binario parallelo ai tecnici, non sostitutivo."
     }
   ],
-  "word_count": 912,
-  "updated_at": "2026-06-07T02:07:42.612020",
-  "built_at": "2026-06-11T14:00:26.028380"
+  "word_count": 1168,
+  "updated_at": "2026-06-12T15:58:31.330672",
+  "built_at": "2026-06-22T14:21:53.300978"
 }

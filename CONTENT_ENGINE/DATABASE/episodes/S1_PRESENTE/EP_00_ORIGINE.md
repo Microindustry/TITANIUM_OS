@@ -80,7 +80,7 @@ Il momento è quando smetti di chiederti "cosa farò quando sarò grande" e iniz
 
 La risposta era nella dispensa.
 
-Nove piastre d'acciaio rettificato, 15mm di spessore. Un PLC Siemens S7-314C recuperato — uno strumento da produzione industriale reale, non un Arduino. Un HMI da 2.800 euro. Guide lineari. Servomotori. Sensori IFM. Tutto lì.
+Nove piastre d'acciaio rettificato, 15mm di spessore. Un PLC Siemens S7-314C industriale — uno strumento da produzione industriale reale, non un Arduino. Un HMI da 2.800 euro. Guide lineari. Servomotori. Sensori IFM. Tutto lì.
 
 Non comprato per un progetto. Accumulato perché **riconosci il valore di una cosa quando la tieni in mano**.
 
@@ -121,7 +121,7 @@ Con quindici anni di esperienza industriale, 9 piastre d'acciaio, e una visione 
 ---
 
 > *Ponte → EP_01:*
-> La risposta era nella dispensa. Nove piastre d'acciaio. Un PLC recuperato. Dodici metri quadri con le piastrelle da cucina sul pavimento.
+> La risposta era nella dispensa. Nove piastre d'acciaio. Un PLC industriale Siemens S7-314C. Dodici metri quadri con le piastrelle da cucina sul pavimento.
 > Non il laboratorio ideale. Il laboratorio giusto.
 
 *Continua in EP_01 — La Taverna*

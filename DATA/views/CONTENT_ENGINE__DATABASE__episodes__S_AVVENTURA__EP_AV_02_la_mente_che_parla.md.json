@@ -15,7 +15,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AV_02  La Mente che Parla](#epav02-la-mente-che-parla)\n    - [Una macchina che capisce le parole  ma che a volte dice una bugia con la faccia sicura](#una-macchina-che-capisce-le-parole-ma-che-a-volte-dice-una-bugia-con-la-faccia-sicura)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LA MENTE NELLA TORRE](#atto-i-la-mente-nella-torre)\n  - [ATTO II  LA BUGIA CON LA FACCIA SICURA](#atto-ii-la-bugia-con-la-faccia-sicura)\n  - [ATTO III  LE DUE MENTI (il cervello ibrido)](#atto-iii-le-due-menti-il-cervello-ibrido)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AV_02  La Mente che Parla](#epav02-la-mente-che-parla)\n    - [Una macchina che capisce le parole  ma che a volte dice una bugia con la faccia sicura](#una-macchina-che-capisce-le-parole-ma-che-a-volte-dice-una-bugia-con-la-faccia-sicura)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LA MENTE NELLA TORRE](#atto-i-la-mente-nella-torre)\n  - [ATTO II  LA BUGIA CON LA FACCIA SICURA](#atto-ii-la-bugia-con-la-faccia-sicura)\n  - [ATTO III  LE DUE MENTI (il cervello ibrido)](#atto-iii-le-due-menti-il-cervello-ibrido)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -46,9 +46,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Quella sera Nina rilesse il tema che aveva scritto a scuola con l'aiuto di una di quelle\nMenti. Una frase suonava benissimo. Ma diceva una data sbagliata.\n\nLa corresse. Poi, accanto, scrisse da dove aveva preso quella giusta: il libro, la pagina.\n\nUna mente che parla bene è un dono. Ma le parole belle non bastano: serve sapere *da dove\nvengono*.\n\n> Quella notte Nina pensò: *e se potessi dare alla Mente i fogli veri — i miei, quelli del\n> Sistema — e obbligarla a rispondere solo guardando quelli, dicendo ogni volta da quale\n> foglio ha preso la risposta?* Allora non potrebbe più inventare.\n>\n> *Esiste un modo per farlo?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito la Mente che Parla? Provalo tu: chiedi a un assistente una cosa che sai già\nbenissimo. Guarda se ha ragione — o se \"suona bene\" ma è sbagliato. Hai appena imparato la\ncosa più importante: una risposta sicura non è per forza una risposta vera.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡3` l'**LLM / la Mente che Parla** (arco, tappa 3): *capisce e mette in fila le parole indovinando la successiva; può sbagliare con sicurezza (allucinazione).*\n**Pietre richiamate:** l'**Automazione** `⟡2 → EP_AV_01` (la macchina che fa ma non capisce → ora una che capisce) · il **Grande Loop** `⟡1` (la Mente ha \"imparato\" leggendo tanto).\n**Key-image:** la torre di parole-lucciole · la \"bugia con la faccia sicura\" (una campana d'argento che si dissolve) · le due Menti (una grande lontana, una piccola in casa).\n**3 strati:** bambino = l'amico che parla bene ma a volte se la inventa · curioso = \"questo si chiama LLM, e l'errore sicuro si chiama allucinazione\" · esperto/papà = predice il token successivo; il *cervello ibrido* (Claude cloud per potenza + Qwen locale per riservatezza) è il pezzo reale del progetto.\n**Aggancio reale:** EP_S2_01 \"Il Cervello Ibrido\" · la leva LLM locale (Qwen sulla GPU) + Claude.\n**Open loop → Regione 4 (il RAG):** dare alla Mente i fogli veri e obbligarla a citare la fonte."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio EP_AV_02 introduce il concetto di LLM nel progetto TITANIUM_OS tramite il formato narrativo \"Avventura\" (serie AV), con durata stimata 8-10 minuti, destinato a bambini e pubblico generalista.\n\n- **DECISIONE:** Nel sistema GENESIS viene adottata un'architettura **ibrida a due modelli LLM**: un modello grande/esterno per problemi complessi ad alta capacità, e un modello piccolo/locale (\"Mente di casa\") per garantire che dati sensibili (segreti dell'officina, misure reali) non escano dal Sistema. **LOGICA:** separazione tra potenza computazionale e riservatezza dei dati proprietari.\n\n- **FATTO:** Il fenomeno di **allucinazione** degli LLM è definito nel canone di TITANIUM_OS come la capacità del modello di produrre risposte con tono sicuro anche quando i dati non sono noti, generando contenuti plausibili ma non verificati.\n\n- **OBIETTIVO:** Il finale dell'episodio anticipa esplicitamente la prossima tappa narrativa/tecnica: fornire alla Mente documenti reali del Sistema come fonte vincolante, obbligandola a rispondere solo da quelli e a citare la fonte — riferimento diretto all'implementazione di un sistema **RAG** (Retrieval-Augmented Generation).\n\n- **FATTO:** L'episodio è classificato come tappa 3 di 7 nell'arco narrativo \"la storia dell'IA\", e richiama EP_AV_01 (automazione) e EP_S2_01 (\"Il Cervello Ibrido\") come riferimenti canonici nel mondo di TITANIUM_OS."
     }
   ],
-  "word_count": 1135,
-  "updated_at": "2026-06-09T12:35:57.326216",
-  "built_at": "2026-06-11T14:00:27.386926"
+  "word_count": 1347,
+  "updated_at": "2026-06-12T16:02:46.607736",
+  "built_at": "2026-06-22T14:22:11.689667"
 }

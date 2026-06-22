@@ -67,7 +67,7 @@ La piastra appena fresata è ancora calda. La misuri con il comparatore — per 
 *[AVA mostra la timeline 2026-2030: ogni milestone come checkpoint.]*
 
 **Febbraio 2026 — La taverna.**
-Dodici metri quadri. 9 piastre d'acciaio. Un PLC recuperato. Gap finanziario: €2.250 per completare la V32.
+Dodici metri quadri. 9 piastre d'acciaio. Un PLC industriale Siemens S7-314C. Gap finanziario: €2.250 per completare la V32.
 
 **Luglio 2026 — Il primo pezzo pagato.**
 Precision Lab. Il primo cliente conto terzi. La V32 ha fresato alluminio 7075, IT7, 0.019mm. Il cliente ha chiesto il prezzo per un secondo lotto.

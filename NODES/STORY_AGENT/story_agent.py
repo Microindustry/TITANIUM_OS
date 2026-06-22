@@ -261,6 +261,13 @@ Includi sempre il reel_hook alla fine."""
 # ── SALVATAGGIO ───────────────────────────────────────────────────────────────
 
 def save_episode(slug: str, content: str, date: str):
+    # Canon guard (regola scalabile): pulisce alla FONTE il framing vietato
+    # "componente recuperato/usato/EUR 0" per V32/VULCAN prima di scrivere.
+    try:
+        from AUTOMATIONS.core.canon_guard import clean as _canon_clean
+        content = _canon_clean(content)
+    except Exception:
+        pass
     for dest in [CE_ROOT / f"{slug}.md", ST_ROOT / f"{slug}.md"]:
         dest.write_text(content, encoding="utf-8")
         logger.info("salvato: %s", dest.relative_to(TI_ROOT) if TI_ROOT in dest.parents else dest.name)

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_02  IL REATTORE](#ep02-il-reattore)\n    - [178 kg di precisione assoluta. Costruiti a mano.](#178-kg-di-precisione-assoluta-costruiti-a-mano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  PERCHÉ NON HAI COMPRATO UNA CNC](#atto-i-perché-non-hai-comprato-una-cnc)\n  - [ATTO II  LE MOLLE GIALLE](#atto-ii-le-molle-gialle)\n  - [ATTO III  LE 9 PIASTRE E I 8 CUSTODI](#atto-iii-le-9-piastre-e-i-8-custodi)\n  - [ATTO IV  IL CERVELLO](#atto-iv-il-cervello)\n  - [ATTO V  IL NUMERO](#atto-v-il-numero)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_02  IL REATTORE](#ep02-il-reattore)\n    - [178 kg di precisione assoluta. Costruiti a mano.](#178-kg-di-precisione-assoluta-costruiti-a-mano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  PERCHÉ NON HAI COMPRATO UNA CNC](#atto-i-perché-non-hai-comprato-una-cnc)\n  - [ATTO II  LE MOLLE GIALLE](#atto-ii-le-molle-gialle)\n  - [ATTO III  LE 9 PIASTRE E I 8 CUSTODI](#atto-iii-le-9-piastre-e-i-8-custodi)\n  - [ATTO IV  IL CERVELLO](#atto-iv-il-cervello)\n  - [ATTO V  IL NUMERO](#atto-v-il-numero)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -36,15 +36,20 @@
     {
       "level": 2,
       "title": "ATTO V — IL NUMERO",
-      "content": "Alla fine, conta un solo numero.\n\n**0.019 mm.** Tolleranza RSS dell'asse X dopo calibrazione.\n\nNon è il numero che ti aspetti da una macchina costruita in una taverna con componenti recuperati e saldature TIG fatte a mano.\n\nMa è il numero che ottieni quando ogni scelta — le molle, il composito, gli 8 Custodi, la rigidità Z 772x, il controllo PLC deterministico — è stata fatta con un obiettivo: eliminare l'errore alla fonte, non compensarlo dopo.\n\nIT6-IT7. Tolleranze da lavorazione meccanica di precisione. Su una macchina che costa meno di un quarto di qualsiasi equivalente industriale.\n\n---"
+      "content": "Alla fine, conta un solo numero.\n\n**0.019 mm.** Tolleranza RSS dell'asse X dopo calibrazione.\n\nNon è il numero che ti aspetti da una macchina costruita in una taverna con componenti industriali selezionati e saldature TIG fatte a mano.\n\nMa è il numero che ottieni quando ogni scelta — le molle, il composito, gli 8 Custodi, la rigidità Z 772x, il controllo PLC deterministico — è stata fatta con un obiettivo: eliminare l'errore alla fonte, non compensarlo dopo.\n\nIT6-IT7. Tolleranze da lavorazione meccanica di precisione. Su una macchina che costa meno di un quarto di qualsiasi equivalente industriale.\n\n---"
     },
     {
       "level": 2,
       "title": "CHIUSURA",
       "content": "*[La piastra fresata sul banco. Il comparatore. 0.008 mm.]*\n\nLa Titanium V32 non è un prodotto da vendere.\n\nÈ il reattore nucleare che alimenta tutto il resto.\n\nOgni stampo MIMS che fresa è un prodotto vendibile. Ogni pezzo conto terzi è cash flow. Ogni lavorazione è contenuto. Ogni upgrade che produce su se stessa è meta-ricorsività in azione.\n\n178 kg. 3.83 Hz. ±0.019 mm.\n\nNon sono numeri tecnici. Sono la distanza tra la dipendenza e la libertà industriale.\n\nE c'è ancora qualcosa. Mentre costruisci la V32 con componenti MIMS prototipati, e prototiphi MIMS perché la V32 non esiste ancora — emerge una domanda che sembra impossibile finché non capisci che non è un paradosso. È lo stesso principio della taverna. Lo stesso principio del CV.\n\nParti da dove sei. Costruisci abbastanza da costruire qualcosa di meglio.\n\n---\n\n> *Ponte → EP_03:*\n> La macchina costruisce i pezzi che costruiscono la macchina.\n> Se sembra un loop chiuso senza uscita, è perché cerchi l'inizio nel posto sbagliato.\n\n*Continua in EP_03 — Il Paradosso*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il basamento della Titanium V32 è un sandwich ibrido acciaio/Epoxy Granite con frequenza naturale f₀ = 3.83 Hz, smorzamento ζ = 0.032 e rigidità sull'asse Z 772 volte superiore alla configurazione baseline.\n\n- **DECISIONE:** Upgrade delle molle di isolamento da molle verdi 40mm a molle gialle ISO 90mm (costante k = 15.8 N/mm, frequenza di risonanza 3.83 Hz), disposta su 4 punti. **LOGICA:** I test con sensori IFM VSE150 (3 sensori) hanno dimostrato un delta di smorzamento significativo a favore delle gialle 90mm rispetto alle verdi 40mm.\n\n- **FATTO:** La struttura portante comprende 9 piastre d'acciaio rettificato da 15mm di spessore (più 2 aggiuntive per il sandwich XY), traliccio tubolare 40x40x2 saldato TIG, profili alluminio 90x45 a 6 cave (asse Y) e 45x45 a 4 cave (asse X).\n\n- **FATTO:** L'interfaccia XY/basamento è realizzata tramite 8 Custodi — pezzi lavorati CNC con scalino e foro D26, abbinati a bronzine CuSn8 e barre rettificate D20 — disposti 4 superiori + 4 inferiori in geometria simmetrica.\n\n- **DECISIONE:** Il controllo macchina è affidato a un PLC Siemens S7-314C con ciclo di scansione deterministico di 0.1ms, interfacciato con HMI TP900 Comfort via PROFIBUS DP. **LOGICA:** Garantisce determinismo del segnale, diagnostica integrata per sensori e scalabilità verso altri sottosistemi (pressa MIMS, automazione capannone).\n\n- **FATTO:** La V32 monta 3 encoder, 2 assi servo, 1 asse stepper (Y), sensori IFM VSE150 per vibrazioni in tempo reale e camera Basler per controllo qualità visivo."
     }
   ],
-  "word_count": 1199,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.474107"
+  "word_count": 1452,
+  "updated_at": "2026-06-22T12:48:39.553980",
+  "built_at": "2026-06-22T14:21:44.355875"
 }

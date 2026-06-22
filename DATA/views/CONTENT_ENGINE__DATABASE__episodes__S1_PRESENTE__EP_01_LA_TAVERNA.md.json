@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_01  LA TAVERNA](#ep01-la-taverna)\n    - [Il laboratorio peggiore del mondo. La scelta migliore della mia vita.](#il-laboratorio-peggiore-del-mondo-la-scelta-migliore-della-mia-vita)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LE CONDIZIONI PERFETTE NON ESISTONO](#atto-i-le-condizioni-perfette-non-esistono)\n  - [ATTO II  INVENTARIO DI GUERRA](#atto-ii-inventario-di-guerra)\n  - [ATTO III  IL PARADOSSO DEL SOLAIO](#atto-iii-il-paradosso-del-solaio)\n  - [ATTO IV  QUELLO CHE CÈ GIÀ](#atto-iv-quello-che-cè-già)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_01  LA TAVERNA](#ep01-la-taverna)\n    - [Il laboratorio peggiore del mondo. La scelta migliore della mia vita.](#il-laboratorio-peggiore-del-mondo-la-scelta-migliore-della-mia-vita)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LE CONDIZIONI PERFETTE NON ESISTONO](#atto-i-le-condizioni-perfette-non-esistono)\n  - [ATTO II  INVENTARIO DI GUERRA](#atto-ii-inventario-di-guerra)\n  - [ATTO III  IL PARADOSSO DEL SOLAIO](#atto-iii-il-paradosso-del-solaio)\n  - [ATTO IV  QUELLO CHE CÈ GIÀ](#atto-iv-quello-che-cè-già)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*[Slow zoom su basamento saldato. Le saldature TIG sono pulite. Non sembrano fatte in una taverna.]*\n\nApple è nata in un garage.\nHP è nata in un garage.\nAmazon è nata in un garage.\n\nNessuno di loro stava aspettando le condizioni perfette.\n\nLa differenza è che quella taverna ha un PLC Siemens, un HMI da 2.800 euro, e quindici anni di esperienza industriale consolidata.\n\nQuando ti sposterai in un laboratorio vero — e succederà, 2028 nel piano — saprai già come ottimizzare ogni metro quadro, gestire ogni vincolo, produrre qualità in condizioni non ottimali.\n\nLa taverna non è il punto di partenza.\nÈ la prima prova di concept.\n\nE il test di robustezza — *\"se funziona in taverna, funziona ovunque\"* — non vale solo per la struttura fisica. Vale per ogni soluzione dell'ecosistema. Quando in EP_03 risolverai il paradosso MIMS↔V32 partendo da prototipi stampati in 3D, stai applicando la stessa logica: parti con quello che hai, abbastanza preciso da funzionare adesso, abbastanza robusto da costruire qualcosa di meglio. Quando in EP_04 costruirai EVA con il vincolo \"zero-click per Maria\", stai applicando la stessa logica: il vincolo è il requisito di progettazione più onesto che esiste.\n\n---\n\n> *Ponte → EP_02:*\n> Perché non hai comprato una CNC?\n> Non è una domanda retorica. La risposta cambia tutto.\n\n*Continua in EP_02 — Il Reattore*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il laboratorio \"La Taverna\" ha una superficie di **12 m²**, con alimentazione **230V monofase 16A** e solaio domestico con portata massima stimata di **~300 kg/m²**.\n\n- **DECISIONE:** V32 (CNC epoxy-granite) dimensionata a **178 kg su 0.8 m²** = **222 kg/m²**. **LOGICA:** Mantenersi entro i limiti del solaio domestico, calcolato preventivamente.\n\n- **DECISIONE:** Mandrino scelto a **2.2 kW ER20** con **VFD monofase-trifase**. **LOGICA:** Vincolo alimentazione monofase 16A impedisce mandrini >2.2 kW; il VFD risolve l'assenza di trifase.\n\n- **DECISIONE:** Assemblaggio V32 per sottogruppi sequenziali (bassamento → sospensione → sandwich XY → colonne Z). **LOGICA:** Impossibile assemblare la macchina intera nello spazio di 12 m² disponibile.\n\n- **FATTO:** Inventario strumentale presente in laboratorio include: PLC Siemens S7-314C, HMI TP900 Comfort 9\" (valore dichiarato **€2.800**), sensori IFM VSE150 ×3, camera Basler acA1920-25gm, pompa vacuum Edwards RV3, stampante Bambu Lab P1S (materiale PA-GF30).\n\n- **OBIETTIVO:** Break-even anno 1 stimato a **61 ore di lavoro conto terzi**; overhead laboratorio anno 1 = **zero** (spazio domestico). Piano: laboratorio dedicato entro **2028**, capannone entro **2030**."
     }
   ],
-  "word_count": 967,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.374922"
+  "word_count": 1151,
+  "updated_at": "2026-06-12T15:54:20.209383",
+  "built_at": "2026-06-22T14:21:44.016787"
 }

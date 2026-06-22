@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_49  Milestone](#epauto49-milestone)\n    - [Vista METODO sul sito  spiegazione chi/cosa/come del sistem](#vista-metodo-sul-sito-spiegazione-chicosacome-del-sistem)\n- [IL SISTEMA  Episodio: La Vista METODO](#il-sistema-episodio-la-vista-metodo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Quando qualcuno dallesterno ti guarda dentro](#atto-i-quando-qualcuno-dallesterno-ti-guarda-dentro)\n  - [ATTO II  La Vista METODO: chi, cosa, come](#atto-ii-la-vista-metodo-chi-cosa-come)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_49  Milestone](#epauto49-milestone)\n    - [Vista METODO sul sito  spiegazione chi/cosa/come del sistem](#vista-metodo-sul-sito-spiegazione-chicosacome-del-sistem)\n- [IL SISTEMA  Episodio: La Vista METODO](#il-sistema-episodio-la-vista-metodo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Quando qualcuno dallesterno ti guarda dentro](#atto-i-quando-qualcuno-dallesterno-ti-guarda-dentro)\n  - [ATTO II  La Vista METODO: chi, cosa, come](#atto-ii-la-vista-metodo-chi-cosa-come)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Un sistema che non sai spiegare in trenta secondi a qualcuno che non lo ha mai visto — è un sistema che esiste solo nella tua testa. E la tua testa non è un server affidabile.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Al 03/06/2026, i moduli di TITANIUM_OS hanno i seguenti livelli di completamento: V32 (CNC) al 65%, MIMS (connettori modulari) al 30%, GENESIS (automazione ESP32/webhook) al 70%, EVA/VITA_NATURA al 40%, IDENTITY al 50%.\n\n- **FATTO:** EVA gestisce prenotazioni e lettura mail per il centro estetico Vita Natura; i livelli dall'11 al 20 (inventory alert, generazione PDF ricevute, widget web, autonomia totale) risultano non ancora completati al momento dell'episodio.\n\n- **OBIETTIVO:** EVA raggiungerà autonomia operativa all'80% al livello 20 dell'organismo VITA_NATURA.\n\n- **DECISIONE:** Il protocollo LEX_DIGITALIS impone che ogni agente AI compili la propria funzione e richieda conferma esplicita (\"Socio, funzione compilata. Procedo con il loop principale?\") prima di procedere — separazione tra esecuzione e autorizzazione umana.\n\n- **FATTO:** L'infrastruttura di automazione fisica GENESIS è basata su rete di ESP32 collegati tramite webhook a n8n come layer di orchestrazione.\n\n- **FATTO:** La Vista METODO sul sito nasce il 03/06/2026 come risposta alle domande di un dev Flutter esterno, che ha evidenziato l'assenza di una documentazione leggibile dall'esterno in meno di cinque minuti sulla struttura di TITANIUM_OS."
     }
   ],
-  "word_count": 1364,
-  "updated_at": "2026-06-03T21:57:48.460414",
-  "built_at": "2026-06-11T14:00:32.313282"
+  "word_count": 1558,
+  "updated_at": "2026-06-12T16:11:34.829515",
+  "built_at": "2026-06-22T12:46:32.540769"
 }

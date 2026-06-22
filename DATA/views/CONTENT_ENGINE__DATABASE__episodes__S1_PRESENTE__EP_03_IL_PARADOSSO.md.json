@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_03  IL PARADOSSO](#ep03-il-paradosso)\n    - [MIMS costruisce V32. V32 produce MIMS. Sì, è possibile.](#mims-costruisce-v32-v32-produce-mims-sì-è-possibile)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  COSÈ MIMS](#atto-i-cosè-mims)\n  - [ATTO II  IL PARADOSSO](#atto-ii-il-paradosso)\n  - [ATTO III  IL BOOTSTRAP](#atto-iii-il-bootstrap)\n  - [ATTO IV  I CINQUE VANTAGGI CHE NON SI COMPRANO](#atto-iv-i-cinque-vantaggi-che-non-si-comprano)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_03  IL PARADOSSO](#ep03-il-paradosso)\n    - [MIMS costruisce V32. V32 produce MIMS. Sì, è possibile.](#mims-costruisce-v32-v32-produce-mims-sì-è-possibile)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  COSÈ MIMS](#atto-i-cosè-mims)\n  - [ATTO II  IL PARADOSSO](#atto-ii-il-paradosso)\n  - [ATTO III  IL BOOTSTRAP](#atto-iii-il-bootstrap)\n  - [ATTO IV  I CINQUE VANTAGGI CHE NON SI COMPRANO](#atto-iv-i-cinque-vantaggi-che-non-si-comprano)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*[Inquadratura sul banco MIMS nel laboratorio. Tiles 190x190, gambe in tubo D16, piastrine 40x40 in PA-GF30.]*\n\nIl banco è costruito con MIMS.\nLa V32 sul banco è allineata con MIMS.\nLa V32 produce MIMS.\nMIMS struttura il banco che regge la V32.\n\nNon è un paradosso. È un ecosistema.\n\n> \"Non stai vendendo bulloni. Stai vendendo credibilità fisica. E la credibilità è la valuta più preziosa in ingegneria.\"\n\nLa stessa logica — parti da quello che hai, costruisci abbastanza da costruire qualcosa di meglio — non vale solo per la macchina. Vale per tutto il sistema. Anche per la parte che sembra la più lontana dall'officina: il ramo che finanzia tutto il resto, costruito non con il metallo ma con Python, non per te, ma per qualcuno che ami.\n\n---\n\n> *Ponte → EP_04:*\n> C'è una regola di sviluppo. Una sola. Non negoziabile.\n> \"Per lei deve essere zero-click. Semplice magia.\"\n> Il vincolo più preciso che abbia mai ricevuto.\n\n*Continua in EP_04 — Il Segnale*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La tile base MIMS ha dimensione **190x190 mm**, è stampata a compressione in **PA-GF30** (poliammide + fibra di vetro 30%), con rigidità **9.5 GPa** e resistenza termica fino a **150°C**.\n\n- **FATTO:** Le piastrine MIMS hanno dimensione **40x40 mm** e esistono in tre versioni: standard, forata, conduttiva.\n\n- **FATTO:** I giunti MIMS sono tre tipologie: **Eco-Snap** (prototipazione rapida), **Quick-Twist** (90° senza attrezzi), **Tech-Bolt** (industriale permanente).\n\n- **DECISIONE:** Il bootstrap della V32 prevede tre fasi sequenziali — componenti MIMS primitivi (stampati FDM / tagliati laser) → assemblaggio V32 al **70%** → prime lavorazioni V32 producono stampi in **alluminio 7075 a tolleranza IT6** per la produzione MIMS industriale. **LOGICA:** Spezzare il loop circolare tramite iterazione per approssimazioni successive, non risolvendo il paradosso ma aggirandolo.\n\n- **PRECISIONE:** La V32 durante il bootstrap regge vibrazioni sotto **0.003 mm/s RMS**, soglia usata come validazione fisica per tutte le applicazioni MIMS inferiori (certificazione bottom-up).\n\n- **FATTO:** Il laser usato nella fase bootstrap è da **5W** e taglia piastrine 40x40 in **acrilico** per jig di saldatura; la stampante FDM usata è una **Bambu Lab P1S** con materiali PA-GF30 e PETG."
     }
   ],
-  "word_count": 1019,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.583457"
+  "word_count": 1215,
+  "updated_at": "2026-06-12T15:54:41.678346",
+  "built_at": "2026-06-22T14:21:44.699543"
 }

@@ -18,7 +18,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [22 episodi: il motore dei contenuti](#22-episodi-il-motore-dei-contenuti)\n- [Content Engine v2  Episodio: Il Sistema Che Scrive Se Stesso](#content-engine-v2-episodio-il-sistema-che-scrive-se-stesso)\n  - [Scena](#scena)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [Chiusura](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [22 episodi: il motore dei contenuti](#22-episodi-il-motore-dei-contenuti)\n- [Content Engine v2  Episodio: Il Sistema Che Scrive Se Stesso](#content-engine-v2-episodio-il-sistema-che-scrive-se-stesso)\n  - [Scena](#scena)\n  - [Il Bivio](#il-bivio)\n  - [Connessione al Sistema](#connessione-al-sistema)\n  - [Chiusura](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -49,9 +49,14 @@
       "level": 2,
       "title": "Chiusura",
       "content": "Il sistema scrive il sistema, e io smetto di aspettare l'umore giusto."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Content Engine v2 è configurato per produrre 22 episodi al mese con un singolo comando (`python engine.py --episodes 22 --pass dual --output dataset.jsonl`), con output in formato `dataset.jsonl` (22 righe, una per episodio).\n\n- **DECISIONE:** Architettura dual-pass: modello haiku per il draft veloce (~4 secondi), modello sonnet per il secondo passaggio di struttura e coerenza. **LOGICA:** Separare generazione e revisione per non dipendere dalla disponibilità cognitiva (ADHD); il terzo passaggio umano è stimato in 10 minuti, non un'ora.\n\n- **FATTO:** Ogni riga del `dataset.jsonl` contiene i campi `topic`, `voice_score`, `revision_flag`. Il file funge anche da training data per versioni future del sistema (campioni di voce approvati).\n\n- **DECISIONE:** Il Content Engine gira dentro TITANIUM_OS con la stessa architettura React+Python del pannello macchina; l'endpoint `/api/content/generate` replica il pattern di `/api/machine/status`. **LOGICA:** Un solo sistema con due facce, non due sistemi separati.\n\n- **FATTO:** Il blocco della V32 (mandrino ER20 2.2kW non arrivato) viene registrato in `STATE.json` con i campi `\"blocker_v32\"` e `\"task_switched\"`, consentendo il riallocamento del task in corso senza perdere il contesto."
     }
   ],
-  "word_count": 652,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-11T14:00:21.569107"
+  "word_count": 848,
+  "updated_at": "2026-06-12T15:51:49.609738",
+  "built_at": "2026-06-22T14:21:36.724021"
 }

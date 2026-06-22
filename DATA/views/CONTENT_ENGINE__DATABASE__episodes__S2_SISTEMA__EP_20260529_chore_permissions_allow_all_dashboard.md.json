@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E08](#titaniumos-s1e08)\n  - [Tagliare il Grasso](#tagliare-il-grasso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Peso delle Cose che Funzionano](#atto-i-il-peso-delle-cose-che-funzionano)\n  - [ATTO II  Permessi e Frizioni Invisibili](#atto-ii-permessi-e-frizioni-invisibili)\n  - [ATTO III  Config G](#atto-iii-config-g)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E08](#titaniumos-s1e08)\n  - [Tagliare il Grasso](#tagliare-il-grasso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Peso delle Cose che Funzionano](#atto-i-il-peso-delle-cose-che-funzionano)\n  - [ATTO II  Permessi e Frizioni Invisibili](#atto-ii-permessi-e-frizioni-invisibili)\n  - [ATTO III  Config G](#atto-iii-config-g)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E08 |\n| **Titolo** | Tagliare il Grasso |\n| **Data** | 2026-05-29 |\n| **Progetto primario** | GENESIS — Dashboard |\n| **Progetto parallelo** | V32 — Config G |\n| **Commit chiave** | `5a9d2d7` |\n| **Lavoro principale** | CanvasLayout refactor 1116→290 righe |\n| **Componenti estratti** | MacroCard, MatteoSection, ClaudeSection |\n| **Config modificata** | settings.local.json allow-all |\n| **Milestone attivo** | Config G — Rinforzi colonne Z+U |\n| **Sessione RAG** | #8 — 150 chunk |\n| **State version** | v2.5.0 |\n| **Angolo narrativo** | Manutenzione come disciplina, non come emergenza |\n| **Tono** | Onesto, anti-motivazionale, tecnico-personale |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il file `CanvasLayout.tsx` della dashboard GENESIS contava 1116 righe monolitiche; dopo il refactoring è stato suddiviso in tre componenti separati (`MacroCard`, `MatteoSection`, `ClaudeSection`), portando il file principale a 290 righe. **LOGICA:** Riduzione del 74% del codice nel file principale senza modifiche funzionali o visibili all'interfaccia.\n\n- **DECISIONE:** Il file `settings.local.json` della dashboard è stato impostato su `allow-all` per i permessi di processo. **LOGICA:** La configurazione precedente (permessi attivi solo per `npx tsc`) generava richieste di autorizzazione a ogni riavvio dell'ambiente; in un setup monoutente la frizione da micro-interruzioni supera il rischio di sicurezza.\n\n- **FATTO:** È stato creato uno script `.bat` con privilegi admin per ottimizzare l'avvio del sistema su Windows.\n\n- **FATTO:** Alla sessione S1E08 il sistema RAG di GENESIS conta 150 chunk e lo stato del sistema è versione `v2.5.0`, con commit marcato `dirty`.\n\n- **OBIETTIVO:** Step attivo su V32 in S1E08: saldatura TIG di 4 gusset da 200 mm sulla colonna Z sinistra (progetto \"Config G — Rinforzi colonne Z+U\"). **PRECISIONE:** V32 è una macchina CNC da 178 kg in corpo Epoxy Granite con target di precisione IT6-IT7.\n\n- **FATTO:** Il milestone temporale del progetto TITANIUM_OS è fissato a luglio 2030, distante 49 mesi dalla data dell'episodio S1E08."
     }
   ],
-  "word_count": 1018,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:24.636559"
+  "word_count": 1239,
+  "updated_at": "2026-06-12T15:56:06.952842",
+  "built_at": "2026-06-22T14:21:48.099333"
 }

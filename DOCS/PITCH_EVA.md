@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [EVA  1-Pager (Vita Natura)](#eva-1-pager-vita-natura)
+    - [Cosè (davvero  non un placeholder)](#cosè-davvero-non-un-placeholder)
+    - [Perché conta](#perché-conta)
+    - [Stato e prossimi passi (reali)](#stato-e-prossimi-passi-reali)
+    - [In una riga](#in-una-riga)
+
+<!-- /TOC -->
+
 # EVA — 1-Pager (Vita Natura)
 
 > *Un assistente AI che manda avanti un centro estetico — e dimostra che il sistema funziona su clienti veri.*

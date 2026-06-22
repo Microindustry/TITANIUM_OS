@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 2.08](#titaniumos-episodio-208)\n  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  342 PRINT CHE URLANO NEL VUOTO](#atto-i-342-print-che-urlano-nel-vuoto)\n  - [ATTO II  UN LOGGER, 34 FILE, UN UNICO FILO](#atto-ii-un-logger-34-file-un-unico-filo)\n  - [ATTO III  IL SISTEMA CHE SI AVVIA DA SOLO](#atto-iii-il-sistema-che-si-avvia-da-solo)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 2.08](#titaniumos-episodio-208)\n  - [Il Sistema Che Si Ricorda di Sé](#il-sistema-che-si-ricorda-di-sé)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  342 PRINT CHE URLANO NEL VUOTO](#atto-i-342-print-che-urlano-nel-vuoto)\n  - [ATTO II  UN LOGGER, 34 FILE, UN UNICO FILO](#atto-ii-un-logger-34-file-un-unico-filo)\n  - [ATTO III  IL SISTEMA CHE SI AVVIA DA SOLO](#atto-iii-il-sistema-che-si-avvia-da-solo)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E08 |\n| **Titolo** | Il Sistema Che Si Ricorda di Sé |\n| **Data** | 2026-05-29 |\n| **Progetto primario** | GENESIS |\n| **Milestone** | Logging centralizzato completato |\n| **Componenti** | CORE/log.py · watchdog.py · api_server.py · START_LOGIN.bat · mente_watcher |\n| **Metrica chiave** | print() ridotti da 342 a 131 — 34 file migrati |\n| **V32 completamento** | 65% — Config G in corso |\n| **GENESIS completamento** | 78% |\n| **Prossimo step** | Saldare 4 gusset 200mm — colonna Z sinistra |\n| **Target capannone** | 15 luglio 2030 |\n| **Tag narrativo** | infrastruttura · resilienza · auto-avvio · logging |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** GENESIS aveva 342 chiamate `print()` sparse in decine di file Python prima della migrazione al sistema di logging strutturato.\n\n- **DECISIONE:** Creato `CORE/log.py` (40 righe) come logger centralizzato con `RotatingFileHandler` da 5MB, 3 file di rotazione, output in `DATA/logs/`, e `StreamHandler` condizionale — agganciato solo se `sys.stdout` non è `None` (guard per processi `DETACHED_PROCESS` su Windows). **LOGICA:** I processi avviati senza finestra non hanno stdout; i `print()` in quel contesto vengono persi silenziosamente.\n\n- **FATTO:** In un giorno migrati 34 file (tra cui `watchdog.py`, `api_server.py`, story agent, updater profilo GitHub). Dopo la migrazione le chiamate `print()` residue sono 131 su 342 originali (211 convertite).\n\n- **FATTO:** `START_LOGIN.bat v1.2` si esegue all'avvio della sessione utente Windows e avvia in sequenza: Watchdog da `CORE/`, Dashboard, rebuild RAG (incrementale, solo delta), n8n, Windows Terminal. Scrive `RIAVVIO_SESSIONE.txt` sul desktop con i metadati della sessione precedente.\n\n- **DECISIONE:** L'endpoint `/api/restart` (POST, Flask) avvia un thread con delay di 0.5 secondi prima di chiamare `os._exit(0)`. **LOGICA:** Il delay garantisce che la risposta HTTP torni al client prima che il processo termini, evitando chiusura brusca della connessione.\n\n- **FATTO:** Il RAG di GENESIS al momento dell'episodio contiene 150 chunk estratti da 8 sessioni caricate. La colonna Z della V32 (Config G) è al 65% — mancano 4 gusset da 200mm da saldare."
     }
   ],
-  "word_count": 1075,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:24.542831"
+  "word_count": 1312,
+  "updated_at": "2026-06-12T15:55:57.830708",
+  "built_at": "2026-06-22T14:21:47.741079"
 }

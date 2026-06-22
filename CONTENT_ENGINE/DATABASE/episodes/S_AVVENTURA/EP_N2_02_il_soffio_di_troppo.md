@@ -8,6 +8,19 @@ status: ready
 durata_min: 13
 tags: avventura, educativo, nina, themis, forge, materia, precisione, misura, calibro, nina-v2
 ---
+<!-- TOC -->
+
+- [EP_N2_02  Il Soffio di Troppo](#epn202-il-soffio-di-troppo)
+    - [La precisione non è essere pignoli. È un patto tra te, la cosa, e ciò che la cosa deve toccare.](#la-precisione-non-è-essere-pignoli-è-un-patto-tra-te-la-cosa-e-ciò-che-la-cosa-deve-toccare)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LATTREZZO CHE VEDE PIÙ DELLOCCHIO](#atto-i-lattrezzo-che-vede-più-dellocchio)
+  - [ATTO II  LA PRECISIONE È UN PATTO A TRE](#atto-ii-la-precisione-è-un-patto-a-tre)
+  - [ATTO III  PERCHÉ FORGE FA ANCORA TUTTO A MANO](#atto-iii-perché-forge-fa-ancora-tutto-a-mano)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_02 — Il Soffio di Troppo
 ### "La precisione non è essere pignoli. È un patto tra te, la cosa, e ciò che la cosa deve toccare."

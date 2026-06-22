@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_37  Milestone](#epauto37-milestone)\n    - [Migrazione PC fisso (DESKTOP-IFACE2R) completata  02/06/202](#migrazione-pc-fisso-desktop-iface2r-completata-0206202)\n- [Il Sistema  Episodio: Il Cervello Fisso](#il-sistema-episodio-il-cervello-fisso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Non Sembrava un Problema](#atto-i-il-problema-che-non-sembrava-un-problema)\n  - [ATTO II  Taverna, 1070 Ti, e un File da un Gigabyte](#atto-ii-taverna-1070-ti-e-un-file-da-un-gigabyte)\n  - [ATTO III  Cosa Cambia Adesso](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_37  Milestone](#epauto37-milestone)\n    - [Migrazione PC fisso (DESKTOP-IFACE2R) completata  02/06/202](#migrazione-pc-fisso-desktop-iface2r-completata-0206202)\n- [Il Sistema  Episodio: Il Cervello Fisso](#il-sistema-episodio-il-cervello-fisso)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Non Sembrava un Problema](#atto-i-il-problema-che-non-sembrava-un-problema)\n  - [ATTO II  Taverna, 1070 Ti, e un File da un Gigabyte](#atto-ii-taverna-1070-ti-e-un-file-da-un-gigabyte)\n  - [ATTO III  Cosa Cambia Adesso](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Un cervello mobile è uno strumento. Un cervello fisso è un'infrastruttura. E un artigiano che confonde i due non sta costruendo un sistema — sta portando tutto con sé e chiamandolo autonomia.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il nodo centrale del Sistema è DESKTOP-IFACE2R, PC fisso collocato in taverna (sotto casa), attivo 24/7, equipaggiato con GPU GTX 1070 Ti (2017, supporto CUDA).\n\n- **DECISIONE:** Il Getac rimane terminale mobile da campo; la connessione tra Getac e DESKTOP-IFACE2R avviene tramite Tailscale (rete privata virtuale, senza apertura porte sul router). **LOGICA:** Garantire continuità del Sistema anche quando il portatile è fuori rete o in standby.\n\n- **FATTO:** Al momento della migrazione (02/06/2026), lo stato di avanzamento dei sottoprogetti era: GENESIS al 70%, V32 al 65%. EVA operativa ma dipendente dalla continuità del nodo.\n\n- **DECISIONE:** Creato file CONFIG_PC_FISSO_24H.txt su chiavetta con sequenza esatta di setup (configurazioni, variabili d'ambiente, dipendenze). **LOGICA:** Permettere la ricostruzione dell'ambiente da zero senza perdita di tempo a distanza di mesi.\n\n- **FATTO:** Push GitHub bloccato da file da 1 GB nel repository (soglia GitHub senza LFS: 100 MB). **DECISIONE:** Problema non risolto a caldo; segnato come task aperto da gestire in sessione dedicata con git filter-branch o BFG Repo Cleaner, per non bloccare la migrazione principale."
     }
   ],
-  "word_count": 1329,
-  "updated_at": "2026-06-03T21:47:46.311045",
-  "built_at": "2026-06-11T14:00:31.162032"
+  "word_count": 1518,
+  "updated_at": "2026-06-12T16:09:43.791745",
+  "built_at": "2026-06-22T14:22:31.843616"
 }

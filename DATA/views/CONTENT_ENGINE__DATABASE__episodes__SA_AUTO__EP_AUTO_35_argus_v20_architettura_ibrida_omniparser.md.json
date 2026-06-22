@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_35  Milestone](#epauto35-milestone)\n    - [ARGUS v2.0 - architettura ibrida OmniParserSonnet: L1 YOLO](#argus-v20---architettura-ibrida-omniparsersonnet-l1-yolo)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema dei Occhi Ciechi](#atto-i-il-problema-dei-occhi-ciechi)\n  - [ATTO II  Tre Strati, Una Gerarchia](#atto-ii-tre-strati-una-gerarchia)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_35  Milestone](#epauto35-milestone)\n    - [ARGUS v2.0 - architettura ibrida OmniParserSonnet: L1 YOLO](#argus-v20---architettura-ibrida-omniparsersonnet-l1-yolo)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema dei Occhi Ciechi](#atto-i-il-problema-dei-occhi-ciechi)\n  - [ATTO II  Tre Strati, Una Gerarchia](#atto-ii-tre-strati-una-gerarchia)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "ATTO III — Cosa Si Sblocca Adesso",
       "content": "Concretamente, con ARGUS v2.0 in produzione, posso scalare GENESIS in modo che non mi spaventi economicamente. Il sistema di automazione può girare più a lungo, su più task in parallelo, senza che la bolletta API diventi il collo di bottiglia.\n\nPer VITA_NATURA, dove EVA deve interagire con interfacce di prenotazione, calendari, gestionali del centro estetico, questo significa che il pilot può diventare deployment reale. Prima ero cauto perché ogni sessione di EVA con molte operazioni visive aveva un costo non banale. Adesso L1 e L2 assorbono l'ottanta percento delle interazioni. EVA lavora, il cliente vede il servizio, io non vedo la fattura crescere ad ogni click.\n\nPer V32 e VULCAN il discorso è diverso ma collegato. Quando V32 sarà online — siamo a Config G, sessantacinque percento, i rinforzi strutturali stanno venendo fuori bene — e quando MIMS avrà la catena completa V32 verso VULCAN, ARGUS dovrà monitorare interfacce di controllo CNC, leggere parametri, riconoscere stati macchina. Con la vecchia architettura avrei pensato due volte prima di mettere visione AI su un loop di controllo industriale per questioni di latenza e costo. Con L1 locale, posso farlo serenamente.\n\nARGUS v2.0 non è solo un modulo aggiornato. È la prova che costruire il sistema in modo modulare, con layer separati, paga. Ogni pezzo può evolvere"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **MILESTONE:** ARGUS v2.0 rilasciato il 30 maggio 2026. **FATTO:** Architettura ibrida OmniParser+Sonnet a tre livelli (L1 YOLO+OCR locale, L2 text matching/pattern recognition, L3 Sonnet fallback).\n\n- **DECISIONE:** L1 è completamente locale (YOLO + OCR), senza API né dipendenze esterne. **LOGICA:** Risolvere i casi standard in locale (<1 secondo, costo zero) per eliminare latenza e dipendenza da connessione internet.\n\n- **DECISIONE:** Sonnet (L3) viene invocato solo come fallback quando L2 non risolve il caso. **LOGICA:** Concentrare le chiamate API sui casi veramente complessi; le risposte L3 possono alimentare il RAG per ridurre future escalation.\n\n- **PRECISIONE:** Il risultato misurato dell'architettura a tre livelli è una riduzione del costo API del **-80%** rispetto alla versione precedente di ARGUS.\n\n- **FATTO:** ARGUS v2.0 è integrato in GENESIS, che include NEXUS, RAG graph-aware v5, MCP v1.3 e un watchdog parallelo. Il layer di visione serve sia EVA (interfacce centro estetico VITA_NATURA) sia il futuro monitoraggio CNC di V32/VULCAN.\n\n- **STATO:** V32 è a Config G, **65%** di completamento; i rinforzi strutturali sono in lavorazione al momento dell'episodio."
     }
   ],
-  "word_count": 952,
-  "updated_at": "2026-06-02T16:38:09.091001",
-  "built_at": "2026-06-11T14:00:30.968975"
+  "word_count": 1141,
+  "updated_at": "2026-06-12T16:09:27.141038",
+  "built_at": "2026-06-22T14:22:31.196459"
 }

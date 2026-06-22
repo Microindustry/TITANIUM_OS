@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_28  Milestone](#epauto28-milestone)\n    - [Content Engine S2 - 6 episodi narrativi  5 MOMENTI intermez](#content-engine-s2---6-episodi-narrativi-5-momenti-intermez)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il problema del tempo che non si racconta](#atto-i-il-problema-del-tempo-che-non-si-racconta)\n  - [ATTO II  Il Content Engine entra in funzione](#atto-ii-il-content-engine-entra-in-funzione)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_28  Milestone](#epauto28-milestone)\n    - [Content Engine S2 - 6 episodi narrativi  5 MOMENTI intermez](#content-engine-s2---6-episodi-narrativi-5-momenti-intermez)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il problema del tempo che non si racconta](#atto-i-il-problema-del-tempo-che-non-si-racconta)\n  - [ATTO II  Il Content Engine entra in funzione](#atto-ii-il-content-engine-entra-in-funzione)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Sessantatré giorni non erano persi. Erano solo in attesa di qualcuno che li recuperasse. Quel qualcuno dovevo essere io — e finalmente ho costruito lo strumento per farlo.\"*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Content Engine S2 è composto da 6 episodi narrativi lunghi, 5 MOMENTI intermezzo (formato ~15 minuti, tema singolo) e 8 episodi di backfill, per un totale di 19 unità di contenuto prodotte in questa milestone.\n\n- **FATTO:** Il backfill copre 63 giorni di lavoro documentato in frammenti (note vocali, log, file di progetto) mai convertito in formato narrativo prima di questa milestone (29 Mag 2026).\n\n- **DECISIONE:** GENESIS/Story Agent viene usato come scaffolding narrativo (analisi log, note, file di progetto → struttura episodica), ma la scrittura finale rimane a Matteo. **LOGICA:** Separare il recupero strutturale automatico dalla voce narrativa umana.\n\n- **FATTO:** Stato avanzamento progetti al momento della milestone: V32 Config G con rinforzi struttura al 65%; EVA in pilota su Vita Natura al 40%; GENESIS dashboard v7.0, RAG alla 4ª iterazione; MIMS in attesa che la catena V32-VULCAN sia operativa.\n\n- **DECISIONE:** Il Content Engine è classificato come componente interno di TITANIUM_OS, non come progetto di comunicazione parallelo. **LOGICA:** La narrazione continua serve anche come sistema di controllo interno — il backfill ha rivelato 3 assunzioni su MIMS identificate come rimandamenti non come decisioni reali."
     }
   ],
-  "word_count": 962,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:30.312481"
+  "word_count": 1159,
+  "updated_at": "2026-06-12T16:08:07.836559",
+  "built_at": "2026-06-22T14:22:28.905506"
 }

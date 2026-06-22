@@ -18,7 +18,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Molle gialle: la precisione che cambia tutto](#molle-gialle-la-precisione-che-cambia-tutto)\n- [V32  Episodio 14: Config G](#v32-episodio-14-config-g)\n  - [Il bivio](#il-bivio)\n  - [Connessione al sistema](#connessione-al-sistema)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Molle gialle: la precisione che cambia tutto](#molle-gialle-la-precisione-che-cambia-tutto)\n- [V32  Episodio 14: Config G](#v32-episodio-14-config-g)\n  - [Il bivio](#il-bivio)\n  - [Connessione al sistema](#connessione-al-sistema)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -39,9 +39,14 @@
       "level": 2,
       "title": "Connessione al sistema",
       "content": "La Config G non è solo meccanica V32.\n\nMIMS al 30% — i connettori modulari che sto sviluppando in parallelo devono sopportare vibrazioni ripetute. Le stesse riflessioni sulle molle le sto portando lì: punto di applicazione del carico, simmetria del vincolo, rateo giusto. Non è casualità. È lo stesso problema con materiali diversi.\n\nVULCAN — la pressa 20 tonnellate — aspetta che la V32 sia operativa. Perché alcune geometrie degli stampi le voglio fresare io, non subappaltarle. Finché la V32 è al 65%, VULCAN è in pausa sulla parte utensili.\n\nTITANIUM_OS registra tutto. Ogni sessione ha un entry in `sessions_log.json`. Questa milestone diventa un nodo: prima e dopo Config G, la BOM è diversa. Chi legge il log tra sei mesi capisce esattamente dove eravamo.\n\nEVA su WhatsApp ha già mandato un promemoria automatico: *\"Ordine mandrino — verifica disponibilità fornitore IT\"*. È uscito stamattina alle 9:00. Non l'ho impostato io ieri sera — l'avevo impostato dieci giorni fa quando ho visto il lead time.\n\nIl sistema funziona perché l'ho costruito quando stavo bene, non quando stavo dimenticando.\n\n---\n\nLa gusset sinistra ha tre ore di officina davanti, il mandrino non c'è ancora, e il numero che conta è ±0.019."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La V32 (CNC epoxy-granite) richiede una ripetibilità di ±0.019mm sull'asse XY come tolleranza di progetto.\n\n- **DECISIONE:** Passaggio da Config D (4x molle 60N) a Config G (4x molle gialle 90N + 2x piastre XY dedicate). **LOGICA:** Config D produceva ripetibilità di ±0.031mm sotto carico laterale, fuori dalla tolleranza di progetto ±0.019mm; il vincolo di appoggio sulla slitta Y era asimmetrico.\n\n- **FATTO:** Le molle gialle 90N sostituiscono le 60N mantenendo stessa sede e stesso diametro esterno — solo il rateo cambia. Carico totale risultante: 4 × 90N = 360N.\n\n- **FATTO:** Il mandrino 2.2kW ER20 è il blocker attuale della V32 (stato al 65% al 10 Mar 2026); la meccanica viene completata prima del suo arrivo per ridurre il lavoro residuo alle sole connessioni elettriche.\n\n- **FATTO:** VULCAN (pressa 20t) è in pausa sulla parte utensili fino a quando la V32 non è operativa, perché alcune geometrie degli stampi sono previste in autoproduzione sulla V32.\n\n- **FATTO:** La milestone viene registrata in `BRAIN/STATE.json` come `\"BOM v2.1 — 4x molla gialla 90N + 2x piastra XY Config G\"` con data e ora, per tracciabilità del log di progetto."
     }
   ],
-  "word_count": 671,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-11T14:00:21.475380"
+  "word_count": 870,
+  "updated_at": "2026-06-12T15:51:42.204034",
+  "built_at": "2026-06-22T14:21:36.415961"
 }

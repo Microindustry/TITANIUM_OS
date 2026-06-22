@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_48  Milestone](#epauto48-milestone)\n    - [n8n self-hosted attivo (account locale, no cloud)  pnpm ins](#n8n-self-hosted-attivo-account-locale-no-cloud-pnpm-ins)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il costo dellaffitto che non vedi](#atto-i-il-costo-dellaffitto-che-non-vedi)\n  - [ATTO II  Tre comandi e una decisione di architettura](#atto-ii-tre-comandi-e-una-decisione-di-architettura)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_48  Milestone](#epauto48-milestone)\n    - [n8n self-hosted attivo (account locale, no cloud)  pnpm ins](#n8n-self-hosted-attivo-account-locale-no-cloud-pnpm-ins)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il costo dellaffitto che non vedi](#atto-i-il-costo-dellaffitto-che-non-vedi)\n  - [ATTO II  Tre comandi e una decisione di architettura](#atto-ii-tre-comandi-e-una-decisione-di-architettura)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*In officina, la macchina che non parte da sola la mattina è una macchina che dipende da te per esistere. E tu non puoi permetterti di essere il punto singolo di guasto del tuo sistema.*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **DECISIONE:** n8n self-hosted installato in locale (non cloud) il 03/06/2026. **LOGICA:** Dipendenza da connessione internet e abbonamento mensile verso infrastruttura non controllata da Matteo era considerata un punto di rottura incompatibile con un sistema integrato tra macchine fisiche e software.\n\n- **FATTO:** n8n gira su `localhost:5678` con SQLite come database (file-based, nessun servizio esterno).\n\n- **FATTO:** API server EVA gira su `localhost:5001`; dashboard React su `localhost:5173`. n8n è il layer di orchestrazione che connette questi componenti con gli agenti AI di GENESIS.\n\n- **DECISIONE:** Scelto `pnpm` al posto di `npm` per la gestione dei pacchetti. **LOGICA:** pnpm non duplica i moduli node per ogni progetto ma usa link simbolici, riducendo frammentazione su disco in un ambiente con più progetti attivi contemporaneamente (dashboard React, API server, nodi agenti, n8n).\n\n- **FATTO:** Configurato avvio automatico di n8n al login di sistema, così il servizio è operativo senza intervento manuale dopo ogni riavvio.\n\n- **OBIETTIVO:** GENESIS dichiarato al 70% di completamento al momento di questo episodio (03/06/2026); n8n è considerato infrastruttura load-bearing per il completamento del sistema."
     }
   ],
-  "word_count": 1320,
-  "updated_at": "2026-06-03T21:56:57.981727",
-  "built_at": "2026-06-11T14:00:32.219550"
+  "word_count": 1511,
+  "updated_at": "2026-06-12T16:11:25.715725",
+  "built_at": "2026-06-22T12:46:31.900674"
 }

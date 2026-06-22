@@ -1,0 +1,60 @@
+{
+  "path": "DOCS/INVENTARIO_NOTTURNO.md",
+  "title": "Inventario — cosa abbiamo costruito (notte per notte)",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)\n  - [2026-06-22  2 commit](#2026-06-22-2-commit)\n  - [2026-06-21  9 commit](#2026-06-21-9-commit)\n  - [2026-06-20  3 commit](#2026-06-20-3-commit)\n  - [2026-06-20  5 commit](#2026-06-20-5-commit)\n  - [2026-06-18  7 commit](#2026-06-18-7-commit)\n  - [2026-06-17  14 commit](#2026-06-17-14-commit)\n  - [2026-06-16  9 commit](#2026-06-16-9-commit)\n  - [2026-06-15  12 commit](#2026-06-15-12-commit)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Inventario — cosa abbiamo costruito (notte per notte)",
+      "content": "> Generato da `AUTOMATIONS/core/inventario_notturno.py` a ogni catena notturna.\n> Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.\n\n<!-- INVENTARIO:INSERT -->"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-22 · 2 commit",
+      "content": "- `84463a59` auto: night_audit - cartella clinica 22/06/2026\n- `932fe7e9` auto: story_agent - episodi generati 22/06/2026\n\n_episodi: 188 · critiche aperte: 28 (59 risolte) · RAG: 29113 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-21 · 9 commit",
+      "content": "- `15144de4` auto: night_audit - cartella clinica 21/06/2026\n- `eca4bb17` auto: story_agent - episodi generati 21/06/2026\n- `b71c8761` feat(ecosistema): ponti cross-mondo episodio<->sapere + RAG efficiente + manutenzione robusta\n- `e3694655` chore(CLAUDE.md): elimina la regola 11 (su richiesta esplicita di Matteo)\n- `51d8ee2a` docs(bussola): sessione #39 — ecosistema vault (vault_intersect v2, storie/pietre) + fix night_audit + riordino\n- `3a41d06f` feat(vault_intersect): v2 legami sul contenuto (TF-IDF corpo) + rete storie/pietre rigenerata\n- `decc485e` docs(bussola): punto 7 fatto — riordino _DA_ORDINARE + Obsidian Mari/VULCAN/MIMS (commit MENTE 604b5d2)\n- `01c3cffc` fix(night_audit): parse LLM difensivo — chiude il guasto ricorrente \"Unterminated string\"\n- `bc4a4d59` chore(salva): chiusura sessione — blockers ripuliti (pitch/pilastri risolti), next_step + focus allineati per il nuovo avvio\n\n_episodi: 187 · critiche aperte: 23 (58 risolte) · RAG: 29113 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-20 · 3 commit",
+      "content": "- `089af488` auto: story_agent - episodi generati 20/06/2026\n- `67c17039` auto: story_agent - episodi generati 20/06/2026\n- `e9a495a0` auto: night_audit - cartella clinica 20/06/2026\n\n_episodi: 186 · critiche aperte: 13 (56 risolte) · RAG: 3873 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-20 · 5 commit",
+      "content": "- `d3e671a9` chore(save): bussola #38 + STATE allineati ai fix (pitch/pilastri/calendario fatti)\n- `a3bfe418` feat(dashboard): vista CALENDARIO — diario di bordo giorno per giorno\n- `ffea8129` feat(pilastri): reintegra la room ricca sotto la spiegazione + animazioni motion\n- `43e74471` fix(dashboard): pitch ora VISIBILI + denylist segreti su /api/file\n- `b2f42331` chore(save/#38): bussola + STATE sincronizzati col debito reale + fix orienter cp1252\n\n_episodi: 183 · critiche aperte: 14 (55 risolte) · RAG: 3873 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-18 · 7 commit",
+      "content": "- `f0a99e9e` auto: night_audit - cartella clinica 18/06/2026\n- `9bd62c45` auto: story_agent - episodi generati 18/06/2026\n- `4438027b` feat(pilastri/#2): i pilastri come SPIEGAZIONE a livelli (non pitch)\n- `38160198` polish(mappa-gioco): layout pieno + micro-interazioni leggere (ingresso a cascata + hover)\n- `385b283d` critiche(att06): RISOLTO — UI verificata a vista nel dev server (zero errori)\n- `fb3eff12` critiche(attacco-opus 17/06): red-team su tutti i fronti, segnato + risolto possibile\n- `093884d9` cleanup(dashboard): accantona RAG-chat + AGENTI · EVA pending -> reale\n\n_episodi: 183 · critiche aperte: 14 (55 risolte) · RAG: 3873 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-17 · 14 commit",
+      "content": "- `29d26886` auto: night_audit - cartella clinica 17/06/2026\n- `0e318183` auto: story_agent - episodi generati 17/06/2026\n- `a0e84bce` feat(pitch): un pitch per progetto (la spiegazione vera, non i pilastri obsoleti)\n- `ffd90598` content(origini): capitolizzo MIMS/VULCAN — la pelle + il Cavallo di Troia\n- `efd00cee` content(origini): 2 episodi-origine dai manifesti NotebookLM (il passato del progetto)\n- `de0ac6d1` auto: story_agent - episodi generati 17/06/2026\n- `943d1cc7` feat(dashboard): CV di Nina come vista separata + Mappa-Gioco 2D annidata\n- `80cb0e28` feat(cv): il CV di Nina — skill-tree gemello della Mappa, si riempie dagli episodi\n- `16614567` feat(cv): profilo UNITO — competenze professionali + personali per dominio\n- `a9e49caf` integra(nina/2a-passata): layer-gioco Real Life RPG + lente 3 Leggi\n- `bda4a4f2` integra(nina+pitch): innesti NotebookLM nel canone + Asimmetria di Valore nel pitch\n- `a7e2181a` docs(nina): review Storie/Nina vs notebook (Genius Loci) — build-on, non ripartire\n- `112f064e` feat(notebooklm): capture script — notebook NotebookLM -> MENTE/_DA_ORDINARE\n- `4c9ea0dd` chore(git): smetti di tracciare semantic_index.db + artefatti runtime (churn)\n\n_episodi: 181 · critiche aperte: 20 (49 risolte) · RAG: 3873 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-16 · 9 commit",
+      "content": "- `7fea5af0` auto: night_audit - cartella clinica 16/06/2026\n- `a3d33de8` auto: story_agent - episodi generati 16/06/2026\n- `6147d392` feat(dashboard/#4): vista CV vera (non solo il rename)\n- `7adf940e` fix(dashboard/#1): MAPPA NINA dentro la grafica radiale dell'architettura (no doppione)\n- `f80f26a5` docs(pitch/#5): 1-pager Nina dedicato + link dal pitch principale\n- `bf60c1ba` feat(dashboard/#2): vista Automazioni aggiornata alle automazioni reali 15/06\n- `991b9f68` feat(dashboard/#6): slot 'GRAFO' ripensato -> 'INVENTARIO' + grafo in Obsidian\n- `b4cc84d5` feat(dashboard/#1,#4): ARCHITETTURA -> Mappa di Nina · IDENTITY -> CV\n- `d06bfff8` feat(inventario/#7): inventario notturno cumulativo di cosa abbiamo costruito\n\n_episodi: 175 · critiche aperte: 26 (43 risolte) · RAG: 3873 chunk_"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-15 · 12 commit",
+      "content": "- `b3916fb5` docs(pitch/ic01): 1-pager investor formale (problema/soluzione/mercato/team/ask)\n- `ff4cec37` fix(audit/n03): cartella clinica auto-pulente — auto-close + reopen\n- `0eb22df1` feat(critiche+pct): allinea critiche 15/06 + agente pct_sync (fonte unica STATE)\n- `d123d62b` canon(nina v2): Character Bible — coerenza look/voce/modi per animazione e voce\n- `36ad2b7a` content(nina v2): +10 episodi arco IA (06-15) lunghi e stratificati, integrati\n- `037f948d` auto: night_audit - cartella clinica 15/06/2026\n- `370cc1c9` auto: story_agent - episodi generati 15/06/2026\n- `c827c62d` content(nina v2): i 5 episodi d'apertura del viaggio (ancorati a La Materia)\n- `2221e7e9` canon(nina): filone unico navigabile (non stagioni) + infinito si coltiva + le Materie\n- `3537e805` canon(nina): CV-che-si-genera = progetto HR (stesso engine) + l'effetto WOW\n- `5c28b46e` canon(nina): modello narrativo - il libro e' il viaggio sulla mappa\n- `47602ac7` canon(nina): architettura v2 — Nina evergreen + mappa navigabile (non racconto lineare)\n\n_episodi: 174 · critiche aperte: 36 (31 risolte) · RAG: 3873 chunk_"
+    }
+  ],
+  "word_count": 952,
+  "updated_at": "2026-06-22T04:07:02.458069",
+  "built_at": "2026-06-22T10:41:03.026775"
+}

@@ -110,7 +110,7 @@ C'è un concetto che vale più dei numeri.
 *[AVA: due lati di un tavolo. Sinistra: noi. Destra: il cliente.]*
 
 **La nostra prospettiva:**
-La V32 costa in BOM ~€4.800. Con quella macchina produciamo asset da €11.749 di valore recuperato. ROI 322%. BEP 61 ore di lavoro. La macchina non è un costo — è un generatore di cassa istantaneo.
+La V32 costa in BOM ~€4.800. Con quella macchina produciamo asset dal valore equivalente a nuovo di €11.749. ROI 322%. BEP 61 ore di lavoro. La macchina non è un costo — è un generatore di cassa istantaneo.
 
 **La prospettiva del cliente che compra V32:**
 Paga la meccanica a noi. Compra l'elettronica separatamente. Investimento totale: ~€8.000-10.000 per una macchina finita. Contro €30.000-50.000 di un equivalente industriale entry-level.
@@ -175,6 +175,6 @@ E le prove sono: una piastra fresata H7, quattro molle gialle che non oscillano,
 
 - **DECISIONE:** Break-even dello stampo = 1.578 pezzi (calcolo: €15.000 ÷ €9,50). Dal pezzo 1.579 in poi ogni ciclo genera €9,50 di profitto netto (stampo già ammortizzato). **LOGICA:** La soglia è considerata raggiungibile con un singolo ordine pilota da distributore o ~3 mesi di produzione continua.
 
-- **FATTO:** BOM della V32 = ~€4.800. Asset recuperato dichiarato = €11.749. ROI dichiarato anno 1 = 322%. BEP = 61 ore di lavoro fatturate.
+- **FATTO:** BOM della V32 = ~€4.800. Valore equivalente a nuovo = €11.749. ROI dichiarato anno 1 = 322%. BEP = 61 ore di lavoro fatturate.
 
 - **FATTO:** Prezzo di acquisto V32 completa per il cliente (meccanica da Matteo + elettronica separata) = €8.000-10.000, contro €30.000-50.000 di un equivalente industriale entry-level. ROI stimato per il cliente = meno di 6 mesi.

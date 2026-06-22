@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_10  Milestone](#epauto10-milestone)\n    - [Dashboard v5.0 - Zustand  TanStack Query  navigazione guid](#dashboard-v50---zustand-tanstack-query-navigazione-guid)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del mappa, cera il buio](#atto-i-prima-del-mappa-cera-il-buio)\n  - [ATTO II  Zustand, TanStack, e una navigazione che finalmente guida](#atto-ii-zustand-tanstack-e-una-navigazione-che-finalmente-guida)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_10  Milestone](#epauto10-milestone)\n    - [Dashboard v5.0 - Zustand  TanStack Query  navigazione guid](#dashboard-v50---zustand-tanstack-query-navigazione-guid)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del mappa, cera il buio](#atto-i-prima-del-mappa-cera-il-buio)\n  - [ATTO II  Zustand, TanStack, e una navigazione che finalmente guida](#atto-ii-zustand-tanstack-e-una-navigazione-che-finalmente-guida)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Non avevo bisogno di più dati. Avevo bisogno che i dati sapessero dove stavano.\"*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La Dashboard EVA/GENESIS raggiunge la versione **v5.0** in data **27 maggio 2026**, con migrazione completa a **Zustand** per la gestione dello stato globale e integrazione **TanStack Query** per il fetching con cache intelligente.\n\n- **FATTO:** L'ecosistema GENESIS al momento della milestone risulta alla versione **v1.3**, con un completamento dichiarato dell'**78%**; include dashboard v7.0, Story Agent e sistema RAG alla versione 4.\n\n- **FATTO:** Il modulo **V32** (CNC epoxy-granite) è al **65%** di avanzamento, fermo sulla **Config G** (rinforzi strutturali); il collo di bottiglia identificato è la catena dipendente **V32 → VULCAN**, che blocca l'avanzamento di MIMS.\n\n- **FATTO:** Il modulo **MIMS** (connettori modulari) è bloccato al **36%** in attesa che la catena V32-VULCAN venga definita; non può avanzare finché questa dipendenza non è risolta.\n\n- **FATTO:** Il progetto **Vita Natura / EVA** (centro estetico) è al **40%**: sito attivo, prenotazioni funzionanti, EVA in **fase pilota** — non ancora operativa a pieno regime.\n\n- **DECISIONE:** La navigazione guidata della v5.0 è progettata per rendere esplicite le **dipendenze tra moduli** (es. V32→VULCAN→MIMS) direttamente nell'interfaccia, sostituendo la consapevolezza implicita dell'utente con tracciabilità nel grafo di sistema. **LOGICA:** ridurre il carico cognitivo di coordinamento su un sistema con almeno 26 moduli attivi e 3 macchine in costruzione simultanea."
     }
   ],
-  "word_count": 953,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:28.427297"
+  "word_count": 1176,
+  "updated_at": "2026-06-12T16:05:27.252468",
+  "built_at": "2026-06-22T14:22:22.906710"
 }

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_21  Milestone](#epauto21-milestone)\n    - [START_LOGIN.bat v1.1 - auto-avvio ecosistema  Windows Termi](#startloginbat-v11---auto-avvio-ecosistema-windows-termi)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema del Primo Minuto](#atto-i-il-problema-del-primo-minuto)\n  - [ATTO II  START_LOGIN.bat v1.1](#atto-ii-startloginbat-v11)\n  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_21  Milestone](#epauto21-milestone)\n    - [START_LOGIN.bat v1.1 - auto-avvio ecosistema  Windows Termi](#startloginbat-v11---auto-avvio-ecosistema-windows-termi)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema del Primo Minuto](#atto-i-il-problema-del-primo-minuto)\n  - [ATTO II  START_LOGIN.bat v1.1](#atto-ii-startloginbat-v11)\n  - [ATTO III  Cosa Si Sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Un sistema ben costruito non ti chiede di essere pronto. Ti prepara lui.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** `START_LOGIN.bat v1.1` è stato messo in produzione il 28 maggio 2026 e si avvia automaticamente al login di Windows, aprendo Windows Terminal con il profilo Claude-TI (contesto TITANIUM_OS precaricato).\n\n- **DECISIONE:** La v1.1 ha introdotto un timeout di avvio rispetto alla v1.0 per risolvere un problema di timing (crash silenzioso del terminale quando si apriva prima della completa inizializzazione del desktop). **LOGICA:** Due righe aggiuntive hanno reso il processo stabile.\n\n- **FATTO:** Al momento della milestone (28 mag 2026), GENESIS risulta al 78% di completamento con dashboard v7.0 + Story Agent attivi e RAG alla quarta versione.\n\n- **FATTO:** V32 risulta al 65% di completamento, in Config G, con rinforzi strutturali quasi completati.\n\n- **FATTO:** La catena di dipendenze attiva è: MIMS → VULCAN (VULCAN aspetta MIMS, MIMS aspetta la catena).\n\n- **OBIETTIVO:** Il principio progettuale trasversale a TITANIUM_OS (V32, GENESIS, EVA, START_LOGIN) è la riduzione dell'attrito operativo, non per comodità ma per aumentare la frequenza d'uso e quindi la velocità di crescita del sistema."
     }
   ],
-  "word_count": 935,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:29.458144"
+  "word_count": 1114,
+  "updated_at": "2026-06-12T16:07:04.208809",
+  "built_at": "2026-06-22T14:22:26.556213"
 }

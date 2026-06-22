@@ -1,20 +1,38 @@
-# requirements-rag.txt | TITANIUM_OS / MENTE_RAG | v1.0 | 2026-06-11
-# Stack RAG verificato funzionante su DESKTOP-IFACE2R (GTX 1070, CUDA).
+# requirements-rag.txt | TITANIUM_OS / MENTE_RAG | v2.0 | 2026-06-22
+# Stack RAG verificato funzionante su DESKTOP-IFACE2R (GTX 1070, CUDA cu124).
 # Era installato a mano e NON documentato: su una macchina nuova
 # `pip install -r requirements.txt` non ricostruiva il sistema (lezione
 # pagata nella migrazione Getac -> fisso del 02/06/2026).
 #
-# Installazione:
+# Installazione (l'--extra-index-url qui sotto porta i wheel CUDA giusti):
 #   pip install -r requirements-rag.txt
-# NB torch con CUDA su Windows richiede l'index dedicato, es.:
-#   pip install torch --index-url https://download.pytorch.org/whl/cu124
 #
-# Versioni = quelle installate e verificate (pip list 11/06/2026).
-# Aggiornale solo dopo aver ri-verificato: rag-rebuild + query GPU OK.
+# Versioni = quelle installate e verificate (22/06/2026: rag-rebuild + query GPU OK,
+# 32664 chunk, count stabile da processo nuovo, /api/rag/search live).
+# Aggiornale solo dopo aver ri-verificato: rebuild pulito + query GPU.
+#
+# ⚠ DUE TRAPPOLE STORICHE (NON rimetterle):
+#   1) torch==2.12.0 SENZA +cu124 = build CPU -> GPU persa, embedding 8x piu lento.
+#      L'ha installata `pip install llamafactory` (21/06, declassando 2.6.0+cu124).
+#      torch DEVE venire dall'index cu124 e avere il suffisso +cu124.
+#   2) chromadb==1.5.9 (e tutto il ramo 1.x Rust) ha un bug del compactor:
+#      "Failed to apply logs to the hnsw segment writer" -> a ~32k vettori il
+#      count resta inchiodato (es. 469/32664) e la query crasha. La 0.5.23
+#      (ultima pre-Rust, hnswlib, persistenza sincrona) e' stabile. NON salire a 1.x.
+#      NB: 0.5.23 vorrebbe tokenizers<=0.20.3/hf-hub vecchio (per il SUO embedder
+#      ONNX, che non usiamo): i pin sotto tengono su le versioni che servono a
+#      transformers/sentence-transformers.
 
-torch==2.12.0
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+torchaudio==2.6.0+cu124
 transformers==5.6.0
 sentence-transformers==5.5.1
-chromadb==1.5.9
+huggingface-hub>=1.5.0,<2.0
+tokenizers>=0.22.0,<=0.23.0
+chromadb==0.5.23
+chroma-hnswlib==0.7.6
 scikit-learn==1.9.0
 numpy==2.4.6

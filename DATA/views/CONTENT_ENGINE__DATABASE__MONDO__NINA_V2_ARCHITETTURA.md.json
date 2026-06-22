@@ -1,0 +1,50 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/MONDO/NINA_V2_ARCHITETTURA.md",
+  "title": "NINA v2 — Architettura (la costituzione)",
+  "meta": {},
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [NINA v2  Architettura (la costituzione)](#nina-v2-architettura-la-costituzione)\n  - [I 10 principi di Nina v2](#i-10-principi-di-nina-v2)\n  - [LEFFETTO WOW  non è il cattivo (Matteo, 14/06)](#leffetto-wow-non-è-il-cattivo-matteo-1406)\n  - [Cosa cambia in pratica (dal canone v1)](#cosa-cambia-in-pratica-dal-canone-v1)\n  - [IL MODELLO NARRATIVO  il libro è il viaggio sulla mappa (Matteo, 14/06)](#il-modello-narrativo-il-libro-è-il-viaggio-sulla-mappa-matteo-1406)\n  - [Stagioni o filone unico? E infinito (Matteo, 14/06)](#stagioni-o-filone-unico-e-infinito-matteo-1406)\n  - [LE MATERIE  il sapere concreto che la scuola non dà](#le-materie-il-sapere-concreto-che-la-scuola-non-dà)\n  - [Innesti da NotebookLM / Genius Loci (16/06)  additivi, rifiniscono il modello](#innesti-da-notebooklm-genius-loci-1606-additivi-rifiniscono-il-modello)\n  - [Cosa NON cambia](#cosa-non-cambia)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "NINA v2 — Architettura (la costituzione)",
+      "content": "*Versione: 2.0 | 2026-06-14 | Ri-fondazione. Estende BIBBIA_DEL_MONDO.md, non la sostituisce.*\n*Decisa con Matteo: non ripartire da 0 (si tiene il canone), ma rifondare la STRUTTURA.*\n\n> **Il principio che cambia tutto (Matteo, 14/06):** Nina **non invecchia nel racconto**.\n> Se crescesse, ci chiuderemmo la porta: domani non potremmo più inserire un argomento\n> più *indietro*/base. Serve poter **spiegare tutto** e **viaggiare da un argomento\n> all'altro** in qualsiasi ordine. Quindi Nina non è una serie lineare: è una **mappa di\n> argomenti navigabile**, infinitamente estensibile."
+    },
+    {
+      "level": 2,
+      "title": "Cosa cambia in pratica (dal canone v1)",
+      "content": "- L'\"arco IA a 7 Regioni\" resta, ma diventa **UNA materia** dentro una mappa più grande, non\n  l'ossatura unica. Le Regioni ⟡ sono i cluster-argomento della materia Tech.\n- L'`asse_nina` (concetto/regione/pietra/giro/richiama) È già la struttura-grafo giusta:\n  va **generalizzato** a più materie (verticali), non solo tech+finanza.\n- Ogni episodio aggiunge: **micro-recap prerequisiti** (1-2 righe) + blocco **SCENE/key-image**\n  (per l'animazione). I 3 strati e i FATTI restano.\n- La **Mappa** (dashboard/Obsidian) diventa l'interfaccia primaria: si naviga lì, non si \"scorre\" una lista."
+    },
+    {
+      "level": 2,
+      "title": "IL MODELLO NARRATIVO — \"il libro è il viaggio sulla mappa\" (Matteo, 14/06)",
+      "content": "Come si tiene insieme una mappa navigabile **e** un filone unico \"come un libro\":\n\n- **Nina è una pedina che cammina la Mappa.** Ogni **casella** = un argomento (un nodo del grafo).\n- **Cambia casella → cambia discorso.** Arrivare a una nuova casella = nuovo argomento = nuovo episodio.\n- **Torna su una casella → approfondisce.** Ri-visitare = scendere di livello (giro 2, 3… della spirale).\n- **La mappa è non-lineare e ri-percorribile; il libro è lineare nei PASSI di Nina.** Stessa cosa,\n  due viste: l'indice del libro è l'ordine in cui Nina ha camminato, ma la mappa esiste a parte e\n  si può ri-camminare in qualunque ordine. → filo continuo SENZA perdere la libertà di percorso.\n- **Il collante tra caselle = l'open loop.** La domanda a fine episodio è *letteralmente il passo\n  successivo del sentiero*: tira Nina alla casella dopo. (Già nel canone — qui prende senso fisico.)\n\n**Conseguenze operative:**\n- **La Mappa (dashboard/Obsidian) è il MONDO, il set.** Si anima Nina che si muove lì; il posto in\n  cui arriva \"si apre\" nell'episodio. La mappa non è un menu: è la geografia del racconto.\n- **Episodio = una VISITA:** \"Nina arriva alla casella X\" oppure \"Nina ci torna e va più a fondo\".\n  Autosufficiente (micro-recap dei prerequisiti) ma incatenato dal passo (open loop ← → casella dopo).\n- **Profilo/CV = la mappa che si colora.** Ogni casella \"completata\" riempie il profilo di Nina —\n  come il salvataggio di un gioco da tavolo, gemello del CV reale del papà (vedi principio 9)."
+    },
+    {
+      "level": 2,
+      "title": "Stagioni o filone unico? E \"infinito\" (Matteo, 14/06)",
+      "content": "- **Filone unico, NON stagioni.** Continuità epica (sì, come One Piece: una storia sola, lunga) —\n  MA **navigabile per casella**: a differenza di One Piece non devi vederla in ordine, entri da\n  qualsiasi punto (principio 6). Le \"stagioni\" diventano le **Materie/Regioni** della mappa\n  (cluster di argomenti), non cancelli temporali.\n- **L'età NON è un asse.** La gestisce la **profondità** (i giri della spirale), non delle stagioni\n  per fascia. Nina resta evergreen.\n- **È ipoteticamente infinito → non si \"scrivono tutti gli episodi\".** Sarebbe l'approccio sbagliato.\n  Si costruisce il **MOTORE** che li genera e li fa crescere: watcher + ricerca + SELF_IMPROVE\n  **propongono** caselle nuove nel tempo, l'umano **approva** (specie il personale/valori). Il\n  curriculum di vita non si *scrive* una volta: si **coltiva** (regole 2 e 11). Cresce per sempre."
+    },
+    {
+      "level": 2,
+      "title": "LE MATERIE — il sapere concreto che la scuola non dà",
+      "content": "*Mappa aperta ed estensibile. Tono: semplice, concreto, che apre la mente e spinge a\nsperimentare/cercare/capire. Ogni materia = un cluster di caselle, ogni casella a più giri.*\n\n- **Mestiere / Materia** — meccanica, precisione, fare bene a mano (la radice ⟡0; il mondo di Matteo).\n- **Programmazione / Sistemi** — come pensa una macchina, automazione, l'arco IA (materia Tech esistente).\n- **Soldi** — finanza personale, tasse, valore, far lavorare i soldi (verticale ₣ esistente, da ampliare).\n- **Scienza / Chimica** — come funzionano le cose; **sicurezza** (\"cose da non mischiare\") come pilastro.\n- **Relazioni & crescere** — famiglia, rispetto, corpo, diventare grandi. **Area di VALORI: contenuti e\n  linea li decide il GENITORE (Matteo).** Tono: rispetto, semplicità, adatto all'età. *(L'autore-sistema\n  scrive con rispetto e non etichetta nessuno; le scelte di valore sono del padre.)*\n- **[aperte]** — qualunque cosa serva per la vita; la mappa si estende senza rompere nulla."
+    },
+    {
+      "level": 2,
+      "title": "Innesti da NotebookLM / Genius Loci (16/06) — additivi, rifiniscono il modello",
+      "content": "*Distillati dai manifesti vecchi (vedi `NINA_V2_REVIEW_NOTEBOOKLM.md`). Non cambiano la struttura, la migliorano.*\n- **Triade dell'Ingaggio** — un episodio regge se ha: **narrazione forte + sfida calibrata (Flow) + feedback continuo**. Diventa una checklist di qualità accanto ai FATTI e ai 3 strati.\n- **Etica dell'errore** — Nina sbaglia e il sistema **impara** (è il DNA del progetto: night_audit, SELF_IMPROVE). Casella esplicita: il fallimento è analisi riflessiva, non vergogna (growth mindset).\n- **Ruoli pedagogici delle guide** — le costanti (principio 7) acquistano funzioni pedagogiche tipizzate: il **Socratico** (incalza con domande, non dà risposte = il cuore WOW), il **regolatore emotivo** (mette pause quando serve). Non nuovi personaggi: modi delle guide esistenti.\n- **Materie da minare** — il curriculum edtech (Genius Loci) è una **miniera di caselle**: cittadinanza digitale, media literacy (\"dietro lo schermo\"), pensiero critico/bias, emozioni, consenso/limiti, sicurezza dati. Argomenti pronti, ognuno a più giri. **NON** la sua struttura settimanale lineare (contraddice il principio 2).\n- **Layer-gioco \"Real Life RPG\"** — la mappa di Nina È un gioco: arrivare a una casella = una **missione**, completarla = **level-up** (XP, skill sbloccata, nodo successivo dell'albero). È il dettaglio operativo del principio 9 (CV-che-si-genera): la mappa che si colora È il salvataggio. Dà massa al \"ti genera\".\n- **Lente delle 3 Leggi (vero · utile · bello)** — prima di scrivere una casella, validarla su 3 assi: regge/è vero · serve davvero · è bello/ingaggia. Eredità del Giudizio di THEMIS (il vecchio \"board NEXUS\"), usata come **filtro qualità** (non come personaggio).\n- *Bivio fuori-canone: \"Nina-per-le-scuole\" = possibile prodotto edtech separato (stesso motore). Parcheggiato.*"
+    },
+    {
+      "level": 2,
+      "title": "Cosa NON cambia",
+      "content": "- Il canone narrativo (Bibbia: mondo, personaggi, Entropia, regole), l'ancoraggio al progetto\n  reale, \"niente bozze\" (qualità), 1 concetto reale = 1 avventura, open loop a fine episodio.\n\n---\n*Prossimo passo operativo (da decidere insieme): generalizzare lo schema dati a \"materie\"\naperte + definire il formato episodio v2 (con micro-recap + scene) su UN argomento come stampo.*"
+    }
+  ],
+  "word_count": 1926,
+  "updated_at": "2026-06-17T00:29:40.837282",
+  "built_at": "2026-06-22T10:43:23.133971"
+}

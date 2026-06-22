@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [La modularità  il voto che decide i quartieri](#la-modularità-il-voto-che-decide-i-quartieri)\n    - [Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_COMMUNITY  come fa lalgoritmo a sapere se ha diviso bene?](#approfondimento-lv2-di-epseedgraphifyl1community-come-fa-lalgoritmo-a-sapere-se-ha-diviso-bene)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [COSA MISURA (semplice, poi preciso)](#cosa-misura-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [La modularità  il voto che decide i quartieri](#la-modularità-il-voto-che-decide-i-quartieri)\n    - [Approfondimento LV2 di EP_SEED_GRAPHIFY_L1_COMMUNITY  come fa lalgoritmo a sapere se ha diviso bene?](#approfondimento-lv2-di-epseedgraphifyl1community-come-fa-lalgoritmo-a-sapere-se-ha-diviso-bene)\n  - [DA DOVE VIENE (un livello più giù)](#da-dove-viene-un-livello-più-giù)\n  - [LA DOMANDA](#la-domanda)\n  - [COSA MISURA (semplice, poi preciso)](#cosa-misura-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO](#il-filo)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO",
       "content": "- **Sale a:** [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] → [[EP_SEED_GRAPHIFY]].\n- **Aggancio Nina:** \"parlano tanto dentro e poco fuori\" è la regola del buon gruppo, spiegabile a un\n  bambino con i banchi di scuola. La modularità è il voto del maestro.\n\n> Approfondimento (LV2). Si può scendere ancora: sotto qui ci starebbe la formula esatta di Q (LV3)."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La modularità Q è la metrica numerica usata per valutare la qualità di una divisione in community su grafi; confronta gli archi interni ai gruppi con quelli attesi per caso a parità di grado dei nodi.\n\n- **FATTO:** L'algoritmo Louvain/Leiden massimizza Q in modo greedy (quasi-lineare), spostando nodi finché nessuno spostamento migliora ulteriormente il valore.\n\n- **PRECISIONE:** Q presenta un limite di risoluzione: sotto una certa scala tende a fondere comunità piccole reali; è regolabile tramite un parametro di \"risoluzione\".\n\n- **FATTO:** Un valore di Q basso indica assenza di struttura reale nel grafo (nodi mescolati), segnale che non esistono community genuine da rilevare.\n\n- **FATTO:** Nel contesto del progetto GRAPHIFY, la massimizzazione greedy di Q su 6.000 nodi suddivisi in 696 gruppi è stata eseguita in 13 secondi (riferimento al \"seme\")."
     }
   ],
-  "word_count": 516,
-  "updated_at": "2026-06-11T02:08:07.513487",
-  "built_at": "2026-06-11T13:57:35.368715"
+  "word_count": 661,
+  "updated_at": "2026-06-12T16:01:23.433770",
+  "built_at": "2026-06-22T14:22:07.088337"
 }

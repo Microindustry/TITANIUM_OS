@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E12](#titaniumos-s2e12)\n  - [La Macchina che Mente](#la-macchina-che-mente)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL SISTEMA CHE DICE DI STARE BENE](#atto-i-il-sistema-che-dice-di-stare-bene)\n  - [ATTO II  LA SESSIONE CHE CAMBIA MACCHINA](#atto-ii-la-sessione-che-cambia-macchina)\n  - [ATTO III  P2: LA STORIA DENTRO LA STORIA](#atto-iii-p2-la-storia-dentro-la-storia)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E12](#titaniumos-s2e12)\n  - [La Macchina che Mente](#la-macchina-che-mente)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL SISTEMA CHE DICE DI STARE BENE](#atto-i-il-sistema-che-dice-di-stare-bene)\n  - [ATTO II  LA SESSIONE CHE CAMBIA MACCHINA](#atto-ii-la-sessione-che-cambia-macchina)\n  - [ATTO III  P2: LA STORIA DENTRO LA STORIA](#atto-iii-p2-la-storia-dentro-la-storia)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E12 |\n| **Titolo** | La Macchina che Mente |\n| **Data registrazione** | 2026-06-06 |\n| **Sessione GENESIS** | #31 → #32 |\n| **Progetti coinvolti** | GENESIS, V32 |\n| **Milestone chiave** | Audit AUTOMAZ reale · Leva locale Ollama/Qwen · Snapshot cambio macchina |\n| **Completamento V32** | 65% |\n| **Completamento GENESIS** | 70% |\n| **Co-author AI** | Claude Opus 4.8 |\n| **Tag narrativi** | `audit` `resilienza` `snapshot` `local-ai` `verità-vs-cosmesi` |\n| **Prossima ancora** | Sessione #32 — P1a stato reale live, P2 AVVENTURA, Ollama warm |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'audit della sessione #31 ha rilevato che TI_NightPush usciva con codice **EXIT 255** a causa di `update_github_profile.py` che chiamava la GitHub CLI (`gh`) con un path non trovato. Fix manuale ha prodotto **EXIT=0**.\n\n- **FATTO:** watchdog.py è classificato come **loop persistente** (AtLogon, non termina mai), non come one-shot schedulato; il campo LastRun di Task Scheduler non si aggiorna per i loop persistenti, rendendo necessaria una distinzione esplicita nella vista AUTOMAZ.\n\n- **DECISIONE:** La sessione #31 è stata chiusa con uno snapshot unico su `main` contenente tre punti in volo simultanei: **P4a** (chat RAG con ChromaDB + Flask), **P4b** (Ollama/Qwen locale, `model_ready: true`), **P1b** (cartella clinica notturna automatica). **LOGICA:** Garantire ripresa coerente su nuovo PC fisico alla sessione #32.\n\n- **FATTO:** P4b (leva locale) usa **Ollama con Qwen** su hardware Matteo: nessuna API key, nessuna latenza di rete, nessun costo per token.\n\n- **OBIETTIVO:** Il commit di riavvio sessione #32 è marcato esplicitamente come **\"ancora di ripresa #31→#32\"** per consentire continuità di stato su cambio fisico di macchina.\n\n- **FATTO:** Nella sessione #32 è stato avviato il binario narrativo **P2-AVVENTURA**, con bibbia di mondo e episodio pilota *\"La Bambina e la Giuntura\"* (EP_AV_00), generato dallo `story_agent` come dimostrazione di capacità cognitiva di GENESIS."
     }
   ],
-  "word_count": 1221,
-  "updated_at": "2026-06-07T02:09:40.466454",
-  "built_at": "2026-06-11T14:00:25.915517"
+  "word_count": 1438,
+  "updated_at": "2026-06-12T15:58:19.152204",
+  "built_at": "2026-06-22T14:21:52.937104"
 }

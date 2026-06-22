@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_19  Milestone](#epauto19-milestone)\n    - [api_server.py - endpoint /api/media /api/photos /api/pdfs /a](#apiserverpy---endpoint-apimedia-apiphotos-apipdfs-a)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del server, cera il caos dei file](#atto-i-prima-del-server-cera-il-caos-dei-file)\n  - [ATTO II  api_server.py: quattro endpoint, una spina dorsale](#atto-ii-apiserverpy-quattro-endpoint-una-spina-dorsale)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_19  Milestone](#epauto19-milestone)\n    - [api_server.py - endpoint /api/media /api/photos /api/pdfs /a](#apiserverpy---endpoint-apimedia-apiphotos-apipdfs-a)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del server, cera il caos dei file](#atto-i-prima-del-server-cera-il-caos-dei-file)\n  - [ATTO II  api_server.py: quattro endpoint, una spina dorsale](#atto-ii-apiserverpy-quattro-endpoint-una-spina-dorsale)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Un sistema è vivo quando le"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** `api_server.py` implementa quattro endpoint REST: `/api/media`, `/api/photos`, `/api/pdfs`, `/api/programs`. **LOGICA:** Centralizza l'accesso ai file di TITANIUM_OS per tutti i componenti interni (GENESIS, Story Agent, RAG v4.0), eliminando percorsi hardcoded che si rompevano al cambio di cartella.\n\n- **FATTO:** Il framework scelto per `api_server.py` è Python/FastAPI. **LOGICA:** Scelta per semplicità e leggibilità, principio esplicitato: \"i sistemi complessi sopravvivono solo se le fondamenta sono leggibili.\"\n\n- **FATTO:** Al 28 maggio 2026, la V32 (Config G — rinforzi) è al 65% di completamento. **LOGICA:** Dato rilevato direttamente da Matteo durante la sessione; le fotografie di questa fase devono essere accessibili via `/api/photos` allo Story Agent.\n\n- **FATTO:** MIMS (connettori modulari) è fermo al 30% in attesa della stabilizzazione della catena V32-VULCAN. **LOGICA:** Il blocco è deliberato: MIMS si appoggerà all'infrastruttura dati di `api_server.py` quando la dipendenza a monte sarà risolta.\n\n- **FATTO:** VITA_NATURA e il pilota EVA sono entrambi al 40% di avanzamento alla data dell'episodio. **LOGICA:** Anche questi sotto-progetti producono media, documenti e dati di prenotazione destinati a fluire nel sistema tramite gli endpoint appena creati."
     }
   ],
-  "word_count": 954,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:29.282128"
+  "word_count": 1151,
+  "updated_at": "2026-06-12T16:06:48.591302",
+  "built_at": "2026-06-22T14:22:25.908378"
 }

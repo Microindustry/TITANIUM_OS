@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E14](#titaniumos-s2e14)\n  - [La Macchina che Lavora nel Buio](#la-macchina-che-lavora-nel-buio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  EXIT CODE 255](#atto-i-exit-code-255)\n  - [ATTO II  IL CUORE CHE BATTE DA SOLO](#atto-ii-il-cuore-che-batte-da-solo)\n  - [ATTO III  P2: UNA BAMBINA E UNA GIUNTURA](#atto-iii-p2-una-bambina-e-una-giuntura)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E14](#titaniumos-s2e14)\n  - [La Macchina che Lavora nel Buio](#la-macchina-che-lavora-nel-buio)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  EXIT CODE 255](#atto-i-exit-code-255)\n  - [ATTO II  IL CUORE CHE BATTE DA SOLO](#atto-ii-il-cuore-che-batte-da-solo)\n  - [ATTO III  P2: UNA BAMBINA E UNA GIUNTURA](#atto-iii-p2-una-bambina-e-una-giuntura)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E14 |\n| **Titolo** | La Macchina che Lavora nel Buio |\n| **Data evento** | 2026-06-05 |\n| **Sessione** | #32 |\n| **Durata stimata** | 28 min |\n| **Progetti attivi** | GENESIS · V32 · P2_Adventure |\n| **Milestone** | P1a ✅ · P2 🚀 launched |\n| **V32 completion** | 65% |\n| **GENESIS completion** | 70% |\n| **Bug risolto** | TI_NightPush EXIT 255 → gh path dinamico |\n| **Sistema verificato** | watchdog · api_server :5001 · mente_watcher |\n| **Modello locale** | Ollama/Qwen · model_ready=true |\n| **Nuovo asset** | EP_AV_00 \"La Bambina e la Giuntura\" · story_state.json |\n| **Target capannone** | 15 luglio 2030 |\n| **Tono** | autonomia · resilienza · silenzio produttivo |\n| **Tag SEO** | watchdog · exit255 · ollama · genesis · automazione · narrativa generativa |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** `TI_NightPush` è il task notturno che sincronizza lo stato di GENESIS su GitHub tramite commit automatico. **LOGICA:** Funge da firma digitale giornaliera dello stato di avanzamento del progetto.\n\n- **DECISIONE:** Il path di `gh` (GitHub CLI) viene risolto dinamicamente a runtime invece di essere hardcoded. **LOGICA:** Il contesto di esecuzione notturna (fuori da shell interattiva) non carica le variabili d'ambiente e il PATH come il contesto utente manuale, causava EXIT CODE 255 (command not found).\n\n- **FATTO:** `watchdog.py` è configurato come loop persistente avviato tramite task AtLogon di Windows (prima del caricamento della GUI). **LOGICA:** Il ciclo batte ogni 90 secondi; un LastRun vecchio nel task scheduler indica corretto funzionamento persistente, non un'anomalia.\n\n- **FATTO:** L'API server di GENESIS risponde sulla porta **5001**. La supervisione dei processi critici è affidata al componente `mente_watcher`.\n\n- **FATTO:** Il modello AI locale usato in GENESIS è **Ollama/Qwen**, con stato `model_ready=true`, utilizzato anche per generazione narrativa nel sotto-progetto `P2_adventure`."
     }
   ],
-  "word_count": 1445,
-  "updated_at": "2026-06-07T02:08:46.535669",
-  "built_at": "2026-06-11T14:00:26.516565"
+  "word_count": 1616,
+  "updated_at": "2026-06-12T15:59:19.853981",
+  "built_at": "2026-06-22T14:22:01.601723"
 }

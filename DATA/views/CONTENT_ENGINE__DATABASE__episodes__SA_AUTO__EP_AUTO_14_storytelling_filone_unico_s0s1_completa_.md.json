@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_14  Milestone](#epauto14-milestone)\n    - [Storytelling FILONE_UNICO - S0S1 completa, mappa ricorsioni](#storytelling-filoneunico---s0s1-completa-mappa-ricorsioni)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Il Filo Unico](#il-filo-unico)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del filo](#atto-i-prima-del-filo)\n  - [ATTO II  S0 più S1, la mappa delle ricorsioni](#atto-ii-s0-più-s1-la-mappa-delle-ricorsioni)\n  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_14  Milestone](#epauto14-milestone)\n    - [Storytelling FILONE_UNICO - S0S1 completa, mappa ricorsioni](#storytelling-filoneunico---s0s1-completa-mappa-ricorsioni)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Il Filo Unico](#il-filo-unico)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del filo](#atto-i-prima-del-filo)\n  - [ATTO II  S0 più S1, la mappa delle ricorsioni](#atto-ii-s0-più-s1-la-mappa-delle-ricorsioni)\n  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Non stavo costruendo cinque cose. Stavo costruendo una cosa sola — e oggi ho trovato le parole per dirmelo.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La V32 (CNC epoxy-granite) ha i rinforzi della Config G al 65% di completamento alla data del 28 maggio 2026. **LOGICA:** Identificato come collo di bottiglia critico dell'intero sistema: il completamento di Config G sblocca in sequenza MIMS, poi VULCAN.\n\n- **FATTO:** GENESIS risulta al 78% di completamento alla data del 28 maggio 2026, con dashboard v7.0, agenti, RAG v4.0 e Story Agent attivi. **LOGICA:** Il sistema non poteva essere addestrato con contesto coerente prima della stesura del documento S0+S1 come filone unico.\n\n- **FATTO:** EVA/Vita Natura (centro estetico) risulta al 40% di completamento alla data del 28 maggio 2026. **LOGICA:** Identificata come prima applicazione commerciale di EVA, agente di GENESIS, in attesa di un contesto sistemico definito.\n\n- **DECISIONE:** Redazione del documento S0+S1 come \"FILONE_UNICO\" — narrativa strutturata in sequenza che descrive origine (S0) e struttura operativa (S1) di TITANIUM_OS. **LOGICA:** Adottato come documento di riferimento del sistema per dare contesto coerente al training di GENESIS e alla gestione delle priorità operative.\n\n- **FATTO:** La dipendenza ricorsiva identificata è: V32 Config G → MIMS → VULCAN → prototipazione componenti per GENESIS → ottimizzazione dell'intero sistema. **LOGICA:** I cinque sotto-progetti (V32, MIMS, VULCAN, GENESIS, EVA/Vita Natura) sono ridefiniti come un sistema unico con cinque manifestazioni, non come progetti indipendenti."
     }
   ],
-  "word_count": 948,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:28.802211"
+  "word_count": 1171,
+  "updated_at": "2026-06-12T16:06:01.096689",
+  "built_at": "2026-06-22T14:22:24.198118"
 }

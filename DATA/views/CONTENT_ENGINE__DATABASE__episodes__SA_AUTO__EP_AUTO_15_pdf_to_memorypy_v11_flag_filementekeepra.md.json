@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_15  Milestone](#epauto15-milestone)\n    - [pdf_to_memory.py v1.1 - flag --file/--mente/--keep/--rag (28](#pdftomemorypy-v11---flag---file--mente--keep--rag-28)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema della Memoria Morta](#atto-i-il-problema-della-memoria-morta)\n  - [ATTO II  Quattro Flag, Una Decisione](#atto-ii-quattro-flag-una-decisione)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_15  Milestone](#epauto15-milestone)\n    - [pdf_to_memory.py v1.1 - flag --file/--mente/--keep/--rag (28](#pdftomemorypy-v11---flag---file--mente--keep--rag-28)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema della Memoria Morta](#atto-i-il-problema-della-memoria-morta)\n  - [ATTO II  Quattro Flag, Una Decisione](#atto-ii-quattro-flag-una-decisione)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "ATTO III — Cosa Si Sblocca Adesso",
       "content": "GENESIS è all'78% e questa milestone sposta degli equilibri precisi.\n\nIl RAG v4.0 aveva bisogno di un ingresso controllato per funzionare bene. Adesso ce l'ha. Lo Story Agent — l'agente che costruisce narrative di progetto, che tiene traccia dell'evoluzione nel tempo — può finalmente ricevere documentazione strutturata invece di testo grezzo. La MatteoSection della dashboard, dove tengo il CV aggiornato e le capabilities di Claude integrate nel sistema, può aggiornarsi in modo programmatico quando c'è qualcosa di nuovo da memorizzare.\n\nPer Vita Natura significa che EVA smette di essere un pilota generico e diventa un assistente che conosce davvero i protocolli del centro. Non simula conoscenza. La ha, nel senso tecnico del termine.\n\nPer la V32 e per tutto il ciclo fisico — la documentazione tecnica della Config G, i parametri di rinforzo, le specifiche di tolleranza — entra nel sistema in modo permanente. Quando arriverà il momento di costruire la MIMS, GENESIS avrà già in memoria la logica meccanica che collega la fresatrice alla pressa.\n\nUn sistema che costruisce macchine deve ricordare come"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** `pdf_to_memory.py` v1.1 rilasciata il 28 maggio 2026, evoluzione dalla v1.0 (che aveva path hardcoded). Introduce 4 flag distinti: `--file`, `--mente`, `--keep`, `--rag`.\n\n- **DECISIONE:** Il flag `--mente` indirizza il documento nella memoria strutturata di GENESIS (non solo nel RAG come chunk indicizzato). **LOGICA:** distinzione tra archiviazione recuperabile e conoscenza integrata nel sistema.\n\n- **DECISIONE:** Il flag `--keep` gestisce la persistenza a lungo termine vs contestuale. **LOGICA:** prima del v1.1 non esisteva granularità — tutto restava o tutto spariva al reset.\n\n- **FATTO:** Il flag `--rag` forza l'indicizzazione nel retrieval aumentato senza passare dalla memoria strutturata; tempo dichiarato di disponibilità per ricerca semantica: 30 secondi.\n\n- **FATTO:** Test effettuato sulla documentazione EVA (Vita Natura): manuale operativo caricato con `--mente --keep`, schede trattamenti con `--rag`, protocolli di prenotazione con `--mente`.\n\n- **FATTO:** Al momento della milestone, GENESIS risulta al 78% e V32 (CNC tre assi, Config G con rinforzi) al 65%."
     }
   ],
-  "word_count": 938,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:28.896104"
+  "word_count": 1099,
+  "updated_at": "2026-06-12T16:06:08.089235",
+  "built_at": "2026-06-22T14:22:24.540801"
 }

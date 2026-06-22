@@ -1,0 +1,292 @@
+{
+  "data": "2026-06-22",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Rotazione chiavi .env — blocco sicurezza aperto da red-team #38",
+      "cosa": "Creare una checklist operativa esplicita (markdown, non codice) che guidi Matteo passo-passo nella rotazione manuale delle chiavi .env, con i servizi coinvolti, l'ordine di rotazione, e un campo 'data completamento' da compilare. Aggiungere un controllo notturno passivo che verifica se il file .env ha un hash diverso dall'ultimo commit (segnale di avvenuta rotazione) e scrive nel log un WARNING finché il blocco non viene chiuso.",
+      "perche": "Due critiche sev=alta convergono: 'Chiavi .env da ruotare (red-team #38)' compare ancora nei blockers attivi dopo il commit 43e74471, e la rotazione non risulta in nessun commit degli ultimi 7 giorni. Il rischio non diminuisce da solo.",
+      "come": [
+        "1. Creare docs/security/rotate-keys-checklist.md con la lista dei servizi (API keys presenti in .env), l'ordine consigliato di rotazione, e una riga '## Completato il: ___'.",
+        "2. Aggiungere nello script di health-check notturno uno step che confronta sha256(.env) con il valore annotato al momento dell'apertura del blocker: se uguale, emette WARNING 'CHIAVI NON RUOTATE — blocker aperto da N giorni'.",
+        "3. Matteo esegue la rotazione manuale seguendo la checklist e chiude il blocker aggiornando il campo data."
+      ],
+      "rischio": "Basso: la checklist è solo documentazione; il controllo hash è read-only. Nessuna chiave viene toccata dagli agenti.",
+      "autonomia": "sicuro",
+      "fonte": "Segnali critiche_audit_aperte area=SISTEMA sev=alta (x2)"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RICERCA",
+      "titolo": "research_agent: exponential backoff + graceful crash su 429 Semantic Scholar",
+      "cosa": "Aggiungere al research_agent una strategia di retry con backoff esponenziale (es. tentativi: 1s, 4s, 16s, poi skip) per le chiamate a Semantic Scholar, e un try/except globale nel main loop che logga il traceback in modo strutturato (JSON) senza far crashare il processo. Il crash non gestito attuale silenzia il resto della pipeline notturna.",
+      "perche": "Critica sev=alta: '429 ripetuti da almeno due notti consecutive' (21/06 e 22/06) + traceback non gestito in night_research.log sia il 20/06 che il 21/06. OpenAlex restituisce 0 risultati per le stesse query. Il research_agent è di fatto non operativo da 2 notti.",
+      "come": [
+        "1. In research_agent.py, wrappare la chiamata semantic_scholar con tentativi=3, delay=[1,4,16], su HTTPError 429.",
+        "2. Aggiungere un try/except Exception globale nel main() che scrive in log un dizionario JSON con timestamp, query, errore, traceback — poi continua con la fonte successiva invece di uscire.",
+        "3. Aggiungere un test locale minimale (pytest) che mocka una risposta 429 e verifica che l'agente non sollevi eccezione non catturata.",
+        "4. Verificare se Semantic Scholar richiede API key per evitare rate-limit: se sì, aggiungere campo opzionale in .env."
+      ],
+      "rischio": "Basso: refactor difensivo, nessuna logica di ricerca modificata. Il test è locale.",
+      "autonomia": "sicuro",
+      "fonte": "Segnali critiche_audit_aperte area=RICERCA sev=alta (x3: 429 ripetuti, crash 20/06, crash 21/06)"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-22",
+    "milestone": "Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8' è aperto senza data di risoluzione. Si tratta di una decisione di design (non un task tecnico) che blocca a valle un intero step (V8). Decisioni binarie non p"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Stanotte OpenAlex ha restituito zero risultati per la query CNC/mandrino: \"2026-06-22 03:38:31 [research_agent] INFO openalex -> 0 risultati\" (22/06/2026). Semantic Scholar ha restituito anch'esso \"semantic_scholar -> 0 risultati\" (22/06/20"
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS' è presente nei blockers attivi e il pillar V32 è al 65%. La ricerca notturna ha tentato proprio query su 'CNC spindle ER20 runout thermal accuracy' (22/06/202"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il research_agent è andato in crash stanotte con traceback non gestito. I log mostrano: \"2026-06-22 03:38:33 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query="
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto nei blockers di stanotte, nonostante il commit 43e74471 abbia aggiunto la denylist su /api/file. La rotazione delle chiavi è un'azione manuale che spetta a Matteo e non risu"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola aperta include '#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian' con il punto 'Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE' ancora da completare (confermato anche in next_step). Il commit decc485e del 21/06 s"
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm)' è prerequisito dichiarato per V8, e il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito per la fresatura stampi MIMS. Entrambi sono decisioni/acquisti fisici che nessun"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Le chiavi .env sono segnalate come 'da ruotare' dal red-team #38 e compaiono ancora nei blockers attuali. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi stesse non risulta nei commits degli ultimi 7 gi"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il todo 'link Desktop sito Maria (serve URL da Matteo)' è rimasto aperto da sessione #38 e compare ancora nel next_step corrente. È un'informazione che blocca un agente in attesa di input umano: ogni notte che passa senza quell'URL è una no"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il research_agent colpisce Semantic Scholar senza backoff adeguato e riceve 429 ripetuti da almeno due notti consecutive. Il 21/06: \"2026-06-21 03:38:26 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: ...linear+guide+"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Oltre ai 429, nei log del 21/06 è presente un crash non gestito: night_research.log riporta \"Traceback (most recent call last):\" (data 2026-06-21) e night_push.log del 20/06 riporta \"⚠ night_research.log: Traceback (most recent call last):\""
+      },
+      {
+        "area": "GENESIS",
+        "sev": "bassa",
+        "finding": "Il commit e3694655 (21/06) elimina la regola 11 di CLAUDE.md 'su richiesta esplicita di Matteo', pochi giorni dopo che il commit 6861abc9 l'aveva introdotta come nodo AUTOMIGLIORAMENTO ('il sistema propone, l'umano approva'). La regola era "
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 188,
+      "rag_chunks": 29113,
+      "n_commits_7d": 61
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)",
+      "(#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)",
+      "(#fatto-12-1806)",
+      "(#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)",
+      "(#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli)",
+      "(#piano-prossima-sessione-pulita-in-ordine-integrando)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)",
+      "(#epav0304-canonici-parcheggio-tolto-arco-nina-88-07)",
+      "(#canon-0-ter-nina-ha-il-suo-os-visione-1006-a-bibbia)",
+      "(#verticale-finanza-attivata-lasse-di-lato)",
+      "(#fix-verifiche-rientro-matteo)",
+      "(#focus-prossima-sessione-matteo-fable-5-selfimprove)",
+      "(#sessione-36-10062026-storie-risanate-4-semi-tecnici)",
+      "(#storie-diagnosi-completa-del-sistema-oltre-al-content-gap)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-e7b"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[Exclusive] $250 off AI Engineer tix til Monday",
+        "url": "https://www.latent.space/p/exclusive-250-off-ai-engineer-tix"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Sean Lynch",
+        "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Temporary Cloudflare Accounts for AI agents",
+        "url": "https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc1",
+        "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc1 adds migrations and nested transactions",
+        "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "KCNyu/clawock ★2 — Multi-agent LLM analysis on a real HK + US stock portfolio: a bull-vs-bear debat",
+        "url": "https://github.com/KCNyu/clawock"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "XAIN2011/mco ★1 — Manage cloud resources efficiently with MCO, a Python tool offering built-in sup",
+        "url": "https://github.com/XAIN2011/mco"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Ricocoswig/ralph-aios ★0 — Orchestrate AI agents through story-driven workflows that enable autonomous deve",
+        "url": "https://github.com/Ricocoswig/ralph-aios"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "mibrahiim786/ghost-ops ★0 — Automate GitHub repo monitoring, issue triage, and agent prompt updates on macOS",
+        "url": "https://github.com/mibrahiim786/ghost-ops"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "fkenmar/atlas ★0 — Fast Rust repo map for AI coding agents: token-budgeted signatures, imports, dif",
+        "url": "https://github.com/fkenmar/atlas"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "mikey143-kun/agentchattr ★1 — Facilitate real-time chat and task coordination between AI coding agents and hum",
+        "url": "https://github.com/mikey143-kun/agentchattr"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "CortexPrism/cortex ★74 — CortexPrism — open-source AI agent operating system",
+        "url": "https://github.com/CortexPrism/cortex"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "cyanheads/medical-codes-mcp-server ★1 — Decode, search, validate, and crosswalk US medical codes — ICD-10-CM, ICD-10-PCS",
+        "url": "https://github.com/cyanheads/medical-codes-mcp-server"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "KCNyu/clawock ★2 — Multi-agent LLM analysis on a real HK + US stock portfolio: a bull-vs-bear debat",
+        "url": "https://github.com/KCNyu/clawock"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Ricocoswig/ralph-aios ★0 — Orchestrate AI agents through story-driven workflows that enable autonomous deve",
+        "url": "https://github.com/Ricocoswig/ralph-aios"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Tommyvr7/meta-ads-analyzer ★0 — Analyze Meta Ads campaigns with expert-level diagnostics, live data access, and ",
+        "url": "https://github.com/Tommyvr7/meta-ads-analyzer"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "tupe12334/tools-view ★1 — Analyze Claude skill relationships and emit a graph JSON + HTML viewer",
+        "url": "https://github.com/tupe12334/tools-view"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "lebgdu44/claude-gym ★0 — Encourage regular movement during long coding sessions with a pixel-art companio",
+        "url": "https://github.com/lebgdu44/claude-gym"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "XBlueSky/vatt-ghern ★2 — Daily tech-news zine for engineers — Claude-authored prose, bespoke HTML, CJK ty",
+        "url": "https://github.com/XBlueSky/vatt-ghern"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "heba-ramdan/harness ★1 — Define and control AI agents in markdown with full prompt transparency, persiste",
+        "url": "https://github.com/heba-ramdan/harness"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Outqme711/clawrelay ★0 — Provide a desktop client that manages multiple Claude Code projects with real-ti",
+        "url": "https://github.com/Outqme711/clawrelay"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "PewDiePie’s FREE Odysseus AI (Full Review & Setup)",
+        "url": "https://www.youtube.com/watch?v=_7BHqZayPOc"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Midjourney Built What?!?",
+        "url": "https://www.youtube.com/shorts/Qy25rSEXpPQ"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: Fable Banned, New Open-Source Leader, Midjourney Shocker",
+        "url": "https://www.youtube.com/watch?v=Db260rUuKJg"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding",
+        "url": "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Self-Driving Lab — Joseph Krause, Radical AI",
+        "url": "https://www.latent.space/p/radical-ai"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Midjourney Medical: scan your organs like you step on a scale",
+        "url": "https://www.latent.space/p/ainews-midjourney-medical-scan-your"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "The Professor of Outputmaxxing — Anjney Midha, AMP",
+        "url": "https://www.latent.space/p/anj"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM > GPT? GLM-5.2 passes vibe check; Z.ai forecasts Open Fable by December",
+        "url": "https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe"
+      }
+    ],
+    "n_news": 30
+  }
+}

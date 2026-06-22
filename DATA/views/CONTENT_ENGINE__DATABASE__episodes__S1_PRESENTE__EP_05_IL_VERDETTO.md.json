@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_05  IL VERDETTO](#ep05-il-verdetto)\n    - [15 luglio 2030. Hai 35 anni. Sei libero.](#15-luglio-2030-hai-35-anni-sei-libero)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LALBA DEL CAPANNONE](#atto-i-lalba-del-capannone)\n  - [ATTO II  LA MAPPA PERCORSA](#atto-ii-la-mappa-percorsa)\n  - [ATTO III  IL CAST NELLEPILOGO](#atto-iii-il-cast-nellepilogo)\n  - [ATTO IV  COSA NON È CAMBIATO](#atto-iv-cosa-non-è-cambiato)\n  - [CHIUSURA  LA REGOLA CHE CAMBIA TUTTO](#chiusura-la-regola-che-cambia-tutto)\n  - [NOTE DI PRODUZIONE](#note-di-produzione)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_05  IL VERDETTO](#ep05-il-verdetto)\n    - [15 luglio 2030. Hai 35 anni. Sei libero.](#15-luglio-2030-hai-35-anni-sei-libero)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LALBA DEL CAPANNONE](#atto-i-lalba-del-capannone)\n  - [ATTO II  LA MAPPA PERCORSA](#atto-ii-la-mappa-percorsa)\n  - [ATTO III  IL CAST NELLEPILOGO](#atto-iii-il-cast-nellepilogo)\n  - [ATTO IV  COSA NON È CAMBIATO](#atto-iv-cosa-non-è-cambiato)\n  - [CHIUSURA  LA REGOLA CHE CAMBIA TUTTO](#chiusura-la-regola-che-cambia-tutto)\n  - [NOTE DI PRODUZIONE](#note-di-produzione)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -21,7 +21,7 @@
     {
       "level": 2,
       "title": "ATTO II — LA MAPPA PERCORSA",
-      "content": "*[AVA mostra la timeline 2026-2030: ogni milestone come checkpoint.]*\n\n**Febbraio 2026 — La taverna.**\nDodici metri quadri. 9 piastre d'acciaio. Un PLC recuperato. Gap finanziario: €2.250 per completare la V32.\n\n**Luglio 2026 — Il primo pezzo pagato.**\nPrecision Lab. Il primo cliente conto terzi. La V32 ha fresato alluminio 7075, IT7, 0.019mm. Il cliente ha chiesto il prezzo per un secondo lotto.\n\n**Dicembre 2026 — Break-even.**\n61 ore di lavorazione conto terzi. Da quel momento, ogni euro è profitto. Il cash flow inizia il ciclo amplificante.\n\n**2027 — MIMS entra nel marketplace.**\nTiles 190x190 in PA-GF30. Giunti Quick-Twist. Prima vendita B2B: un'officina nel Veneto ordina 20 kit banco. Margine 79%. EVA supera €1.000/mese automatici.\n\n**2028 — Il laboratorio.**\n300 m². Non il capannone — il passo prima. Ma la pressa MIMS a 4 colonne lavora a pieno regime. Il team: Marco per spedizioni e QC, Sara designer per il marketplace. Non assunti — cresciuti con te.\n\n**2029 — Il deposito.**\nIl deposito per il capannone viene versato. V32 Mk2 in progettazione. Hub&Spoke: tre officine partner che producono MIMS su licenza in zone diverse d'Italia.\n\n**15 luglio 2030 — Il capannone.**\n\n---"
+      "content": "*[AVA mostra la timeline 2026-2030: ogni milestone come checkpoint.]*\n\n**Febbraio 2026 — La taverna.**\nDodici metri quadri. 9 piastre d'acciaio. Un PLC industriale Siemens S7-314C. Gap finanziario: €2.250 per completare la V32.\n\n**Luglio 2026 — Il primo pezzo pagato.**\nPrecision Lab. Il primo cliente conto terzi. La V32 ha fresato alluminio 7075, IT7, 0.019mm. Il cliente ha chiesto il prezzo per un secondo lotto.\n\n**Dicembre 2026 — Break-even.**\n61 ore di lavorazione conto terzi. Da quel momento, ogni euro è profitto. Il cash flow inizia il ciclo amplificante.\n\n**2027 — MIMS entra nel marketplace.**\nTiles 190x190 in PA-GF30. Giunti Quick-Twist. Prima vendita B2B: un'officina nel Veneto ordina 20 kit banco. Margine 79%. EVA supera €1.000/mese automatici.\n\n**2028 — Il laboratorio.**\n300 m². Non il capannone — il passo prima. Ma la pressa MIMS a 4 colonne lavora a pieno regime. Il team: Marco per spedizioni e QC, Sara designer per il marketplace. Non assunti — cresciuti con te.\n\n**2029 — Il deposito.**\nIl deposito per il capannone viene versato. V32 Mk2 in progettazione. Hub&Spoke: tre officine partner che producono MIMS su licenza in zone diverse d'Italia.\n\n**15 luglio 2030 — Il capannone.**\n\n---"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "NOTE DI PRODUZIONE",
       "content": "| Campo | Dettaglio |\n|-------|-----------|\n| Stagione 1 | EP_00 → EP_05 (6 episodi) |\n| Arco narrativo | Origine → Taverna → V32 → MIMS → EVA → Verdetto |\n| Personaggio centrale | Matteo Benenati |\n| Antagonista | La dipendenza. Gli orari fissi. Il lavoro che non scala. |\n| Risoluzione | Libertà industriale come risultato di sistema, non di fortuna |\n| Tono generale | Tecnico + personale. Zero motivational speech. Dati reali. |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il sensore IFM VSE150 registra vibrazioni massime durante il ciclo di lavorazione della V32 pari a **0.003 mm/s RMS**, validando l'efficacia del basamento in epoxy-granite come smorzatore.\n\n- **FATTO:** La Titanium V32 completa **12 stampi per giunti MIMS Heavy** in un ciclo notturno non presidiato con un consumo energetico di **4.2 kWh** e zero interventi manuali.\n\n- **FATTO:** La prima lavorazione conto terzi documentata (Precision Lab, luglio 2026) ha fresato alluminio 7075 raggiungendo tolleranza **IT7 / 0.019 mm**; il cliente ha richiesto un secondo lotto.\n\n- **DECISIONE:** Il break-even della V32 è fissato a **61 ore di lavorazione conto terzi** (dicembre 2026). **LOGICA:** Superata quella soglia, ogni ora fatturata è profitto netto e innesca il ciclo amplificante del cash flow.\n\n- **FATTO:** EVA raggiunge **€4.200/mese di revenue automatica** con **340 business client** nel programma SaaS (stato proiettato al 2030), avendo superato la soglia di €1.000/mese già nel 2027.\n\n- **FATTO:** Il marketplace MIMS opera con un margine dichiarato del **79%** sui kit banco (tiles PA-GF30 + giunti Quick-Twist); il modello Hub&Spoke prevede **revenue sharing al 10%** per designer/officine terze che producono o adattano il sistema su licenza."
     }
   ],
-  "word_count": 1137,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.786534"
+  "word_count": 1348,
+  "updated_at": "2026-06-22T12:48:39.553980",
+  "built_at": "2026-06-22T14:21:45.505821"
 }

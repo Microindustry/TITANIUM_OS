@@ -8,6 +8,19 @@ status: ready
 durata_min: 13
 tags: avventura, educativo, nina, themis, mappa, sistema, verita, cartamodello, viaggio, nina-v2
 ---
+<!-- TOC -->
+
+- [EP_N2_04  La Mappa Viva](#epn204-la-mappa-viva)
+    - [Una mappa che dice sempre la verità su dovè ogni cosa. E si disegna da sola, mentre il mondo cambia.](#una-mappa-che-dice-sempre-la-verità-su-dovè-ogni-cosa-e-si-disegna-da-sola-mentre-il-mondo-cambia)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LA MAPPA CHE NON SA MENTIRE](#atto-i-la-mappa-che-non-sa-mentire)
+  - [ATTO II  SEMBRARE A POSTO  ESSERE A POSTO](#atto-ii-sembrare-a-posto-essere-a-posto)
+  - [ATTO III  TU SEI UNA PEDINA, E PUOI ANDARE OVUNQUE](#atto-iii-tu-sei-una-pedina-e-puoi-andare-ovunque)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_04 — La Mappa Viva
 ### "Una mappa che dice sempre la verità su dov'è ogni cosa. E si disegna da sola, mentre il mondo cambia."

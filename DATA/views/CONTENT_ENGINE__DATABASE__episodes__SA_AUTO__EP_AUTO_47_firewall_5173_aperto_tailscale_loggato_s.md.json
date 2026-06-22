@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_47  Milestone](#epauto47-milestone)\n    - [Firewall 5173 aperto  Tailscale loggato sul fisso (100.125.](#firewall-5173-aperto-tailscale-loggato-sul-fisso-100125)\n- [IL SISTEMA  Episodio: La Porta Aperta al Momento Giusto](#il-sistema-episodio-la-porta-aperta-al-momento-giusto)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Perché un IP fisso e una porta cambiano tutto](#atto-i-perché-un-ip-fisso-e-una-porta-cambiano-tutto)\n  - [ATTO II  Porta 5173, IP 100.125.152.124, e la logica dello stack](#atto-ii-porta-5173-ip-100125152124-e-la-logica-dello-stack)\n  - [ATTO III  Cosa si sblocca adesso e dove va il prossimo passo](#atto-iii-cosa-si-sblocca-adesso-e-dove-va-il-prossimo-passo)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_47  Milestone](#epauto47-milestone)\n    - [Firewall 5173 aperto  Tailscale loggato sul fisso (100.125.](#firewall-5173-aperto-tailscale-loggato-sul-fisso-100125)\n- [IL SISTEMA  Episodio: La Porta Aperta al Momento Giusto](#il-sistema-episodio-la-porta-aperta-al-momento-giusto)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Perché un IP fisso e una porta cambiano tutto](#atto-i-perché-un-ip-fisso-e-una-porta-cambiano-tutto)\n  - [ATTO II  Porta 5173, IP 100.125.152.124, e la logica dello stack](#atto-ii-porta-5173-ip-100125152124-e-la-logica-dello-stack)\n  - [ATTO III  Cosa si sblocca adesso e dove va il prossimo passo](#atto-iii-cosa-si-sblocca-adesso-e-dove-va-il-prossimo-passo)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Aprire una porta non è mai il problema. Il problema è sapere dove porta, chi può usarla, e cosa succede se la lasci aperta al vento sbagliato. Il 3 giugno ho aperto la porta 5173 — ma l'ho aperta solo verso i nodi che conosco per nome.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il PC fisso in taverna (GPU GTX 1070 Ti) è il nodo centrale H24 di TITANIUM_OS; il Getac (portatile militarizzato) è il terminale mobile che dipende dal fisso per la capacità computazionale.\n\n- **DECISIONE:** Il 3 giugno 2026 è stata aperta la porta TCP 5173 sul firewall Windows del PC fisso, con regola in entrata limitata alla rete Tailscale (non esposta a internet). **LOGICA:** La porta 5173 serve l'interfaccia web locale di GENESIS (stack Vite); limitarla a Tailscale crea un corridoio cifrato senza esporre il servizio pubblicamente.\n\n- **FATTO:** L'IP Tailscale assegnato al PC fisso è `100.125.152.124`. È un indirizzo stabile, indipendente da DHCP del router e dalla rete fisica utilizzata.\n\n- **DECISIONE:** Tailscale è stato scelto come VPN mesh per connettere Getac e PC fisso. **LOGICA:** Bypassa i problemi di NAT domestico senza modifiche invasive al router, cifra il traffico e assegna IP stabili a ogni nodo autenticato.\n\n- **FATTO:** La connessione è stata verificata in due scenari: via LAN diretta (`http://100.125.152.124:5173`) e via 4G con Getac fuori dalla rete domestica — entrambi con esito positivo.\n\n- **FATTO:** Al momento dell'episodio era presente una pendenza bloccante sul repository GitHub: un file da circa 1 GB aveva inquinato la storia del repo, rendendo il push impossibile; la risoluzione richiedeva `git filter-branch` o BFG Repo Cleaner."
     }
   ],
-  "word_count": 1318,
-  "updated_at": "2026-06-03T21:56:08.684272",
-  "built_at": "2026-06-11T14:00:32.133459"
+  "word_count": 1552,
+  "updated_at": "2026-06-12T16:11:17.683681",
+  "built_at": "2026-06-22T12:46:31.279525"
 }

@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [NINA v2  Character Bible (coerenza per animazione e voce)](#nina-v2-character-bible-coerenza-per-animazione-e-voce)
+  - [NINA  la protagonista (surrogato del pubblico)](#nina-la-protagonista-surrogato-del-pubblico)
+  - [THEMIS  la guida (la misura, la logica)](#themis-la-guida-la-misura-la-logica)
+  - [FORGE  il fabbro degli Atomi (la materia, leredità)](#forge-il-fabbro-degli-atomi-la-materia-leredità)
+  - [IL DISORDINE / lEntropia  lantagonista (NON un cattivo)](#il-disordine-lentropia-lantagonista-non-un-cattivo)
+  - [IL MONDO  Il Sistema](#il-mondo-il-sistema)
+  - [REGOLE DI STILE (identiche in ogni episodio)](#regole-di-stile-identiche-in-ogni-episodio)
+
+<!-- /TOC -->
+
 # NINA v2 — Character Bible (coerenza per animazione e voce)
 
 *Versione: 1.0 | 2026-06-21 | Riferimento di coerenza estratto dai 15 episodi v2 (EP_N2_01-15).*

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E18](#titaniumos-s1e18)\n  - [Il Bug che Chiudeva le Porte](#il-bug-che-chiudeva-le-porte)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  La Parentesi](#atto-i-la-parentesi)\n  - [ATTO II  Il Backslash che Mangiava i Path](#atto-ii-il-backslash-che-mangiava-i-path)\n  - [ATTO III  Il Dev Flutter che Non Capiva il Markdown](#atto-iii-il-dev-flutter-che-non-capiva-il-markdown)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E18](#titaniumos-s1e18)\n  - [Il Bug che Chiudeva le Porte](#il-bug-che-chiudeva-le-porte)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  La Parentesi](#atto-i-la-parentesi)\n  - [ATTO II  Il Backslash che Mangiava i Path](#atto-ii-il-backslash-che-mangiava-i-path)\n  - [ATTO III  Il Dev Flutter che Non Capiva il Markdown](#atto-iii-il-dev-flutter-che-non-capiva-il-markdown)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E18 |\n| **Titolo** | Il Bug che Chiudeva le Porte |\n| **Data** | 2026-06-04 |\n| **Sistema** | GENESIS — Automazioni notturne |\n| **Componenti** | `night_push.bat`, generatore storie, `storieData`, EP_AUTO_50 |\n| **Fix chiave** | exit 255 (parentesi in IF batch), re.sub backslash, gh resolver dinamico |\n| **Milestone** | Automazioni notturne portabili e ottimizzate (GPU) |\n| **V32** | 65% |\n| **GENESIS** | 70% |\n| **Target capannone** | 15 luglio 2030 |\n| **Tono** | Tecnico, notturno, onesto |\n| **Angolo narrativo** | Bug silenziosi + il dev esterno che vede il sistema da fuori |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Lo script `night_push.bat` falliva con `exit 255` quando il subject del commit conteneva una parentesi chiusa `)`, interpretata dal parser CMD come chiusura del blocco `IF`.\n\n- **DECISIONE:** Il controllo sulla presenza di commit in `night_push.bat` è stato spostato dalla lettura del testo del subject alla **misurazione della dimensione del file di log** (flag `HAVE_COMMITS` basato su bytes). **LOGICA:** Il testo del commit può contenere qualsiasi carattere senza compromettere la logica di branching.\n\n- **DECISIONE:** Il resolver di `gh` (GitHub CLI) è stato reso dinamico: cerca prima in `PATH`, poi in `Program Files`, e in caso di assenza registra l'evento e prosegue senza crashare. **LOGICA:** Evitare dipendenza da path hardcoded specifici di una singola macchina.\n\n- **DECISIONE:** In `re.sub`, il parametro `repl` è stato convertito da stringa a **funzione lambda** per l'inserimento di path Windows nei template JavaScript. **LOGICA:** Quando `repl` è una funzione, Python non interpreta le backslash come sequenze speciali di sostituzione regex.\n\n- **FATTO:** I path inseriti in template literal TypeScript (backtick) vengono ora escaped prima dell'inserimento: ogni `\\` diventa `\\\\`, tramite la funzione `build_ts_entry`.\n\n- **FATTO:** Il flag `--sync` ha ricostruito `storieData` da zero leggendo tutti i file `.md` della libreria, restituendo **51 episodi AUTO** con TypeScript pulito e nessun errore di compilazione. L'episodio **EP_AUTO_50** ha prodotto 1099 parole grounded su 46 fonti RAG."
     }
   ],
-  "word_count": 1484,
-  "updated_at": "2026-06-04T05:21:12.456727",
-  "built_at": "2026-06-11T14:00:25.630095"
+  "word_count": 1714,
+  "updated_at": "2026-06-12T15:57:47.851521",
+  "built_at": "2026-06-22T14:21:51.862689"
 }

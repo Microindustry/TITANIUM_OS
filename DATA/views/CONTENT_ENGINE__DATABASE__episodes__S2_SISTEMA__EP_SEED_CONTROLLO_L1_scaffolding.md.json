@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Il carico va sullo schermo, non nella testa](#il-carico-va-sullo-schermo-non-nella-testa)\n    - [Approfondimento LV1 di EP_SEED_CONTROLLO  non ricordare: guardare](#approfondimento-lv1-di-epseedcontrollo-non-ricordare-guardare)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Il carico va sullo schermo, non nella testa](#il-carico-va-sullo-schermo-non-nella-testa)\n    - [Approfondimento LV1 di EP_SEED_CONTROLLO  non ricordare: guardare](#approfondimento-lv1-di-epseedcontrollo-non-ricordare-guardare)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_CONTROLLO]].\n- **Fratelli LV1:** [[EP_SEED_CONTROLLO_L1_STATOLIVE]] (lo stato dev'essere vero), [[EP_SEED_CONTROLLO_L1_CEDIBILE]] (e leggibile da altri).\n- **Aggancio Nina:** \"il pannello con le sagome\" — ed è letteralmente l'**OS che tiene tutto** di cui Nina ha\n  bisogno (lei si perde come me): il sistema che ricorda al posto suo.\n\n> Approfondimento (LV1). Nessun limite di profondità."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Centro di Controllo di TITANIUM_OS nasce con l'obiettivo esplicito di esternalizzare lo stato dei nodi del progetto su uno schermo, eliminando il pedaggio mentale di ricaricare in memoria lo stato di ogni componente ad ogni accesso.\n\n- **FATTO:** Matteo identifica circa 20 nodi attivi nel sistema che, senza uno strumento di visualizzazione, devono essere tenuti contemporaneamente in memoria di lavoro.\n\n- **DECISIONE:** Il modello cognitivo adottato è lo **scaffolding cognitivo**: lo stato del sistema risiede nello strumento (stabile, non dimentica), non nella testa dell'operatore (fragile, soggetta a stanchezza). **LOGICA:** La memoria di lavoro è considerata una risorsa scarsa e costosa, ancora più critica in presenza di pattern ADHD; esternalizzare lo stato riduce il sovraccarico e l'ansia associata.\n\n- **OBIETTIVO:** Il Centro di Controllo deve funzionare anche nelle condizioni peggiori dell'operatore (turno di notte, pochissimo sonno), essendo robusto dove la memoria umana non lo è.\n\n- **FATTO:** L'episodio è classificato come approfondimento LV1 di `EP_SEED_CONTROLLO`, con episodi fratelli `EP_SEED_CONTROLLO_L1_STATOLIVE` (lo stato deve essere veritiero) e `EP_SEED_CONTROLLO_L1_CEDIBILE` (lo stato deve essere leggibile da altri operatori)."
     }
   ],
-  "word_count": 462,
-  "updated_at": "2026-06-11T02:08:06.768121",
-  "built_at": "2026-06-11T13:57:33.963053"
+  "word_count": 650,
+  "updated_at": "2026-06-12T16:00:37.140711",
+  "built_at": "2026-06-22T14:22:04.493824"
 }

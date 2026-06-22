@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Se è acceso, non se dovrebbe  lo stato live](#se-è-acceso-non-se-dovrebbe-lo-stato-live)\n    - [Approfondimento LV1 di EP_SEED_CONTROLLO  stato vero, non promesse](#approfondimento-lv1-di-epseedcontrollo-stato-vero-non-promesse)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Se è acceso, non se dovrebbe  lo stato live](#se-è-acceso-non-se-dovrebbe-lo-stato-live)\n    - [Approfondimento LV1 di EP_SEED_CONTROLLO  stato vero, non promesse](#approfondimento-lv1-di-epseedcontrollo-stato-vero-non-promesse)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_CONTROLLO]] (il posto unico da cui governo).\n- **Fratelli LV1:** [[EP_SEED_CONTROLLO_L1_SCAFFOLDING]] (perché togliermi carico), [[EP_SEED_CONTROLLO_L1_CEDIBILE]] (perché in italiano semplice).\n- **Aggancio Nina:** \"la spia collegata vs l'adesivo\" — una metafora pulita per insegnare la differenza tra\n  *dire* una cosa e *verificarla*.\n\n> Approfondimento (LV1). Profondità libera."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il Centro di Controllo di TITANIUM_OS distingue tra \"stato dichiarato\" e \"stato live\": il badge di ogni nodo è collegato a un watchdog che verifica attivamente (processo risponde? porta aperta? ultimo ciclo andato a buon fine?), non a un testo fisso scritto una volta.\n\n- **DECISIONE:** Verde su un badge = verificato in tempo reale dal watchdog. **LOGICA:** Uno stato falso è considerato peggiore di nessuno stato — fa credere che tutto funzioni e ritarda la scoperta del problema.\n\n- **PRINCIPIO:** Se uno stato non è misurabile in tempo reale, non viene scritto verde. **LOGICA:** Anti-teatro: nessun nodo viene dichiarato attivo se non è verificabile adesso.\n\n- **FATTO:** Una vista live ha individuato un conflitto tra due server nella rete di TITANIUM_OS (episodio di riferimento: EP_SEED_RETE_L1_BUGSTATO), citato come esempio concreto dell'utilità del monitoraggio in tempo reale rispetto allo stato dichiarato."
     }
   ],
-  "word_count": 458,
-  "updated_at": "2026-06-11T02:08:06.861848",
-  "built_at": "2026-06-11T13:57:34.606850"
+  "word_count": 608,
+  "updated_at": "2026-06-12T16:00:43.574287",
+  "built_at": "2026-06-22T14:22:04.837383"
 }

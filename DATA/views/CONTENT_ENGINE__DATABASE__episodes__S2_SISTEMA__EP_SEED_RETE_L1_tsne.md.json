@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Da 5000 numeri a una galassia  il t-SNE](#da-5000-numeri-a-una-galassia-il-t-sne)\n    - [Approfondimento LV1 di EP_SEED_RETE  vedere con gli occhi una cosa che vive in 384 dimensioni](#approfondimento-lv1-di-epseedrete-vedere-con-gli-occhi-una-cosa-che-vive-in-384-dimensioni)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Da 5000 numeri a una galassia  il t-SNE](#da-5000-numeri-a-una-galassia-il-t-sne)\n    - [Approfondimento LV1 di EP_SEED_RETE  vedere con gli occhi una cosa che vive in 384 dimensioni](#approfondimento-lv1-di-epseedrete-vedere-con-gli-occhi-una-cosa-che-vive-in-384-dimensioni)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_RETE]] (la galassia 3D del sistema).\n- **Fratelli LV1:** [[EP_SEED_RETE_L1_TOGGLE]] (le due sorgenti), [[EP_SEED_RETE_L1_BUGSTATO]] (il bug di stato).\n- **Aggancio Nina:** \"fare la foto di una cosa che non si può vedere tutta intera\" — una metafora pronta\n  per spiegare a un bambino cos'è un *embedding* senza dire la parola.\n\n> Approfondimento (LV1). Profondità libera: sotto può stare un LV2 su PCA/UMAP vs t-SNE, se servirà."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Ogni documento nel RAG di GENESIS è rappresentato come un vettore di ~384 numeri che ne cattura il significato semantico (embedding).\n\n- **FATTO:** La visualizzazione della RETE usa t-SNE per ridurre i vettori a 384 dimensioni in 3 dimensioni, renderizzati via Three.js in una galassia interattiva ruotabile.\n\n- **PRECISIONE:** Il t-SNE non conserva le distanze metriche esatte tra punti, ma conserva la struttura di **vicinato**: i punti simili nello spazio ad alta dimensione restano raggruppati nello spazio 3D ridotto.\n\n- **FATTO:** Nella visualizzazione, grappoli densi indicano aree tematiche con molti documenti; punti isolati indicano note orfane; spazi vuoti indicano argomenti non coperti dalla base di conoscenza."
     }
   ],
-  "word_count": 541,
-  "updated_at": "2026-06-11T02:08:07.905168",
-  "built_at": "2026-06-11T13:57:35.274988"
+  "word_count": 660,
+  "updated_at": "2026-06-12T16:01:45.621903",
+  "built_at": "2026-06-22T14:22:08.362156"
 }

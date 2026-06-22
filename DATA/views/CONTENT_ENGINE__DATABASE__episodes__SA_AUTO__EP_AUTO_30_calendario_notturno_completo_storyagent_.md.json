@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_30  Milestone](#epauto30-milestone)\n    - [Calendario notturno completo - StoryAgent 02:07  DeepFreeze](#calendario-notturno-completo---storyagent-0207-deepfreeze)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [La Notte Che Lavora](#la-notte-che-lavora)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del Buio](#atto-i-prima-del-buio)\n  - [ATTO II  Quello Che È Successo Stanotte](#atto-ii-quello-che-è-successo-stanotte)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_30  Milestone](#epauto30-milestone)\n    - [Calendario notturno completo - StoryAgent 02:07  DeepFreeze](#calendario-notturno-completo---storyagent-0207-deepfreeze)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [La Notte Che Lavora](#la-notte-che-lavora)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del Buio](#atto-i-prima-del-buio)\n  - [ATTO II  Quello Che È Successo Stanotte](#atto-ii-quello-che-è-successo-stanotte)\n  - [ATTO III  Cosa Si Sblocca Adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"L'officina vera non è dove tieni gli attrezzi. È quello che continua a lavorare anche quando hai spento la luce.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il calendario notturno di TITANIUM_OS esegue 5 agenti in sequenza: StoryAgent alle 02:07, DeepFreeze alle 03:00, NightResearch alle 03:37, NightPush alle 04:07, DailyBrief alle 07:30. **LOGICA:** Coprono l'intera finestra notturna senza intervento umano.\n\n- **FATTO:** La prima esecuzione completa del calendario notturno è avvenuta nella notte tra il 28 e il 29 maggio 2026. **LOGICA:** Questa data è il milestone verificato di riferimento per l'automazione notturna di GENESIS.\n\n- **DECISIONE:** DeepFreeze (03:00) esegue uno snapshot completo di tutti i progetti attivi — V32, MIMS, GENESIS, VULCAN, Vita Natura, blocco Identity (CV e capability doc). **LOGICA:** Fornisce un punto di ritorno preciso e una memoria permanente dello stato dell'ecosistema ogni notte.\n\n- **FATTO:** V32 (CNC epoxy-granite 3 assi) è al 65% di completamento al 29 maggio 2026; in corso i rinforzi della configurazione G, nervature del telaio posteriore per assorbimento vibrazioni in lavorazione alluminio a piena velocità. **LOGICA:** V32 è prerequisito per VULCAN, che produce i componenti meccanici dei connettori MIMS.\n\n- **DECISIONE:** NightPush (04:07) aggiorna la dashboard GENESIS v7.0 e propaga dati a MIMS (percorso V32-VULCAN) e a EVA (Vita Natura). **LOGICA:** Garantisce il riallineamento automatico dell'intero ecosistema prima dell'inizio della giornata operativa."
     }
   ],
-  "word_count": 932,
-  "updated_at": "2026-06-02T16:38:09.091001",
-  "built_at": "2026-06-11T14:00:30.499936"
+  "word_count": 1148,
+  "updated_at": "2026-06-12T16:08:31.543803",
+  "built_at": "2026-06-22T14:22:29.554355"
 }

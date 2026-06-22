@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Perché MENTE si estrae a mano  lestrattore ibrido](#perché-mente-si-estrae-a-mano-lestrattore-ibrido)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutto il sapere si dà in pasto a una macchina](#approfondimento-lv1-di-epseedgraphify-non-tutto-il-sapere-si-dà-in-pasto-a-una-macchina)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [LA SCELTA IBRIDA (semplice, poi preciso)](#la-scelta-ibrida-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Perché MENTE si estrae a mano  lestrattore ibrido](#perché-mente-si-estrae-a-mano-lestrattore-ibrido)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutto il sapere si dà in pasto a una macchina](#approfondimento-lv1-di-epseedgraphify-non-tutto-il-sapere-si-dà-in-pasto-a-una-macchina)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [LA SCELTA IBRIDA (semplice, poi preciso)](#la-scelta-ibrida-semplice-poi-preciso)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (il grafo del repo).\n- **Tocca il RAG:** MENTE è anche la fonte del RAG ([[project_storie_n_livelli]] · l'arco ⟡4) — qui si\n  decide *come* quella stessa fonte diventa grafo.\n- **Aggancio Nina:** è la lezione \"non tutto si dà in pasto alla macchina\" — un concetto da papà che in\n  Nina diventa una scelta del personaggio (cosa fidare alla Mente piccola e cosa tenere in casa).\n\n> Episodio di **approfondimento (LV1)**. Profondità libera: sotto può nascere un LV2 sull'estrattore vero."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **DECISIONE:** L'estrazione del grafo da `MENTE/` (documenti sensibili) è ibrida: codice → grafo automatico; documenti MENTE → estrazione manuale e curata. **LOGICA:** Il modello 7B locale è considerato debole sui documenti sfumati e crea collegamenti falsi; i documenti sensibili non possono uscire verso modelli cloud.\n\n- **FATTO:** Il grafo del codice (repo) viene costruito automaticamente dal motore Graphify in 13 secondi.\n\n- **FATTO:** I documenti in `MENTE/` contengono materiale classificato come IP sensibile: brevetti, ricette MIMS, decisioni d'officina. Questi non vengono processati dal modello 7B locale né inviati a modelli cloud.\n\n- **OBIETTIVO:** Il criterio di qualità del grafo MENTE è esplicito: preferire meno nodi corretti a tanti nodi inventati — un grafo con collegamenti falsi su materiale IP è considerato peggiore del niente.\n\n- **DECISIONE:** Il modello utilizzato per l'estrazione automatica del codice è un 7B in esecuzione locale su GPU, non un modello cloud."
     }
   ],
-  "word_count": 543,
-  "updated_at": "2026-06-10T18:54:46.313269",
-  "built_at": "2026-06-11T13:57:35.964708"
+  "word_count": 697,
+  "updated_at": "2026-06-12T16:01:05.184952",
+  "built_at": "2026-06-22T14:22:06.117062"
 }

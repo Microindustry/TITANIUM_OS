@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [I 696 quartieri  la community detection](#i-696-quartieri-la-community-detection)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si divide da solo in temi](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-divide-da-solo-in-temi)\n  - [DA DOVE VIENE QUESTO APPROFONDIMENTO](#da-dove-viene-questo-approfondimento)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA PER IL SISTEMA](#perché-conta-per-il-sistema)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [I 696 quartieri  la community detection](#i-696-quartieri-la-community-detection)\n    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si divide da solo in temi](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-divide-da-solo-in-temi)\n  - [DA DOVE VIENE QUESTO APPROFONDIMENTO](#da-dove-viene-questo-approfondimento)\n  - [LA DOMANDA](#la-domanda)\n  - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)\n  - [PERCHÉ CONTA PER IL SISTEMA](#perché-conta-per-il-sistema)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** `EP_SEED_GRAPHIFY` (la mappa intera, il salto RAG→Wiki).\n- **Si lega in avanti (Nina):** è il \"vero dietro\" dei **quartieri** in `EP_AV_04 — La Grande Mappa`\n  (i gruppi che si formano da soli, raccontati a un bambino). Questo LV1 è la fonte tecnica\n  dettagliata su cui quella fiaba poggia.\n- **Prossimi LV1 possibili sotto Graphify:** i *god-node* (i nodi-dio / centralità) · `query/path/explain`\n  (come si interroga il grafo) · l'estrattore **ibrido** da `MENTE/` (sensibilità dei documenti).\n\n> Questo è un episodio di **approfondimento (LV1)**: vive *sotto* il suo principale. Il sistema STORIE\n> ora regge questa profondità — un episodio può avere figli, e i figli figli, all'infinito."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il grafo di TITANIUM_OS (episodio EP_SEED_GRAPHIFY) conta **5.966 nodi**, **6.317 archi** e **696 community**, prodotti dall'analisi di **515 file** in **13,2 secondi**.\n\n- **FATTO:** Le 696 community su 5.966 nodi producono una media di **~8-9 nodi per quartiere**, definita nell'episodio come granularità da \"sottosistema/tema\".\n\n- **DECISIONE:** L'algoritmo scelto per la community detection appartiene alla **famiglia Louvain/Leiden**, con criterio di ottimizzazione sulla **modularità** (massimizzare archi interni, minimizzare archi esterni). **LOGICA:** Complessità quasi-lineare → 6.000 nodi risolti in secondi anziché ore.\n\n- **OBIETTIVO:** Le community vengono usate per **restringere le query RAG** a un solo quartiere tematico (es. \"quartiere RAG\" vs \"quartiere notturne\"), riducendo i token e ottenendo risposte strutturali invece di lettura integrale del repo.\n\n- **FATTO:** I nodi posizionati *tra* due community (connessioni poche ma strategiche) vengono identificati come **punti fragili/ponte** — la community detection li fa emergere senza tagging manuale."
     }
   ],
-  "word_count": 672,
-  "updated_at": "2026-06-10T18:51:00.484121",
-  "built_at": "2026-06-11T13:57:35.754018"
+  "word_count": 833,
+  "updated_at": "2026-06-12T16:00:51.352115",
+  "built_at": "2026-06-22T14:22:05.475704"
 }

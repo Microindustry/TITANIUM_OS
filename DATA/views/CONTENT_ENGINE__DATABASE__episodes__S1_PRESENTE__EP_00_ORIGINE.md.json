@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_00  ORIGINE](#ep00-origine)\n    - [Quindici anni per capire una cosa sola](#quindici-anni-per-capire-una-cosa-sola)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL CURRICULUM CHE NON MANDA NESSUNO](#atto-i-il-curriculum-che-non-manda-nessuno)\n  - [ATTO II  LA CONNESSIONE](#atto-ii-la-connessione)\n  - [ATTO III  LA SCINTILLA](#atto-iii-la-scintilla)\n  - [ATTO IV  LA DOMANDA GIUSTA](#atto-iv-la-domanda-giusta)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_00  ORIGINE](#ep00-origine)\n    - [Quindici anni per capire una cosa sola](#quindici-anni-per-capire-una-cosa-sola)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL CURRICULUM CHE NON MANDA NESSUNO](#atto-i-il-curriculum-che-non-manda-nessuno)\n  - [ATTO II  LA CONNESSIONE](#atto-ii-la-connessione)\n  - [ATTO III  LA SCINTILLA](#atto-iii-la-scintilla)\n  - [ATTO IV  LA DOMANDA GIUSTA](#atto-iv-la-domanda-giusta)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -26,7 +26,7 @@
     {
       "level": 2,
       "title": "ATTO III — LA SCINTILLA",
-      "content": "C'è un momento preciso.\n\nNon è cinematografico. Non è una mattina di sole con musica orchestrale. È una sera di merda, probabilmente, dopo un turno che non valeva la tua attenzione.\n\nIl momento è quando smetti di chiederti \"cosa farò quando sarò grande\" e inizi a chiederti \"cosa sto già costruendo con quello che so fare\".\n\nLa risposta era nella dispensa.\n\nNove piastre d'acciaio rettificato, 15mm di spessore. Un PLC Siemens S7-314C recuperato — uno strumento da produzione industriale reale, non un Arduino. Un HMI da 2.800 euro. Guide lineari. Servomotori. Sensori IFM. Tutto lì.\n\nNon comprato per un progetto. Accumulato perché **riconosci il valore di una cosa quando la tieni in mano**.\n\n---"
+      "content": "C'è un momento preciso.\n\nNon è cinematografico. Non è una mattina di sole con musica orchestrale. È una sera di merda, probabilmente, dopo un turno che non valeva la tua attenzione.\n\nIl momento è quando smetti di chiederti \"cosa farò quando sarò grande\" e inizi a chiederti \"cosa sto già costruendo con quello che so fare\".\n\nLa risposta era nella dispensa.\n\nNove piastre d'acciaio rettificato, 15mm di spessore. Un PLC Siemens S7-314C industriale — uno strumento da produzione industriale reale, non un Arduino. Un HMI da 2.800 euro. Guide lineari. Servomotori. Sensori IFM. Tutto lì.\n\nNon comprato per un progetto. Accumulato perché **riconosci il valore di una cosa quando la tieni in mano**.\n\n---"
     },
     {
       "level": 2,
@@ -36,10 +36,15 @@
     {
       "level": 2,
       "title": "CHIUSURA",
-      "content": "*[Mani che appoggiano il calibro sul banco. Sullo sfondo, la struttura in acciaio 40x40 saldata TIG del basamento.]*\n\nQuesto non è un video su come costruire una CNC.\n\nÈ un video su come leggere la propria storia al contrario — dall'oggi verso il passato — e capire che non ci sono esperienze sprecate. Ci sono solo connessioni che non hai ancora tracciato.\n\nIl percorso inizia in una taverna.\nCon quindici anni di esperienza industriale, 9 piastre d'acciaio, e una visione abbastanza chiara da tagliare l'aria come un utensile in metallo duro.\n\n> **\"Non costruiamo prodotti. Costruiamo libertà.\"**\n> — Prima riga di ogni versione del documento. Dalla V1 alla V6.\n\n---\n\n---\n\n> *Ponte → EP_01:*\n> La risposta era nella dispensa. Nove piastre d'acciaio. Un PLC recuperato. Dodici metri quadri con le piastrelle da cucina sul pavimento.\n> Non il laboratorio ideale. Il laboratorio giusto.\n\n*Continua in EP_01 — La Taverna*"
+      "content": "*[Mani che appoggiano il calibro sul banco. Sullo sfondo, la struttura in acciaio 40x40 saldata TIG del basamento.]*\n\nQuesto non è un video su come costruire una CNC.\n\nÈ un video su come leggere la propria storia al contrario — dall'oggi verso il passato — e capire che non ci sono esperienze sprecate. Ci sono solo connessioni che non hai ancora tracciato.\n\nIl percorso inizia in una taverna.\nCon quindici anni di esperienza industriale, 9 piastre d'acciaio, e una visione abbastanza chiara da tagliare l'aria come un utensile in metallo duro.\n\n> **\"Non costruiamo prodotti. Costruiamo libertà.\"**\n> — Prima riga di ogni versione del documento. Dalla V1 alla V6.\n\n---\n\n---\n\n> *Ponte → EP_01:*\n> La risposta era nella dispensa. Nove piastre d'acciaio. Un PLC industriale Siemens S7-314C. Dodici metri quadri con le piastrelle da cucina sul pavimento.\n> Non il laboratorio ideale. Il laboratorio giusto.\n\n*Continua in EP_01 — La Taverna*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La V32 (CNC epoxy-granite) ha un basamento strutturale realizzato con profili in acciaio 40x40 saldati TIG.\n\n- **FATTO:** Il progetto V32 è stato avviato con materiali già in possesso: 9 piastre d'acciaio rettificato da 15mm di spessore, un PLC Siemens S7-314C, un HMI del valore dichiarato di 2.800 euro, guide lineari, servomotori e sensori IFM.\n\n- **FATTO:** Il PLC utilizzato per la V32 è un Siemens S7-314C, definito nel testo come strumento da produzione industriale reale.\n\n- **FATTO:** La precisione di riferimento dichiarata da Matteo per la saldatura TIG su scarichi racing MotoGP era 0,1 mm di tolleranza; l'errore oltre tale soglia comportava lo scarto del pezzo.\n\n- **OBIETTIVO:** Il protocollo di verifica componenti della V32 prevede documentazione con foto e calibro per ogni componente, derivato dall'esperienza in controllo qualità (procedure SPC e test distruttivi).\n\n- **FATTO:** Il laboratorio di costruzione della V32 è uno spazio di circa 12 m² con pavimento piastrellato (definito \"taverna\" nel progetto)."
     }
   ],
-  "word_count": 862,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:23.265572"
+  "word_count": 1038,
+  "updated_at": "2026-06-22T12:48:39.553980",
+  "built_at": "2026-06-22T14:21:43.678059"
 }

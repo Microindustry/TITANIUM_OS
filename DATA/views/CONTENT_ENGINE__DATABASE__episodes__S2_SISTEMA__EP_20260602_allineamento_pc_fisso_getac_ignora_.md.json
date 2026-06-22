@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E21](#titaniumos-s1e21)\n  - [Il Dev Flutter Che Non Capiva Perché](#il-dev-flutter-che-non-capiva-perché)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL TRASLOCO](#atto-i-il-trasloco)\n  - [ATTO II  LE CINQUE DOMANDE](#atto-ii-le-cinque-domande)\n  - [ATTO III  COSA RESTA](#atto-iii-cosa-resta)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E21](#titaniumos-s1e21)\n  - [Il Dev Flutter Che Non Capiva Perché](#il-dev-flutter-che-non-capiva-perché)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL TRASLOCO](#atto-i-il-trasloco)\n  - [ATTO II  LE CINQUE DOMANDE](#atto-ii-le-cinque-domande)\n  - [ATTO III  COSA RESTA](#atto-iii-cosa-resta)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E21 |\n| **Data** | 2026-06-02 |\n| **Sessione** | #21 |\n| **Titolo** | Il Dev Flutter Che Non Capiva Perché |\n| **Tag narrativo** | migrazione, sistema cognitivo, spiegazione esterna, identità progetto |\n| **Progetti coinvolti** | GENESIS, V32 (indiretto) |\n| **GENESIS** | 70% |\n| **V32** | 65% |\n| **Milestone attivo** | Automazioni notturne portabili e ottimizzate GPU |\n| **Evento tecnico chiave** | Migrazione PC fisso — .git 978MB → 72MB |\n| **Evento narrativo chiave** | Dev Flutter: \"lo state facendo in modo inusuale ma figo\" |\n| **Co-autore sessione** | Claude Opus 4.8 |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La repository git di GENESIS pesava **978 MB** a causa del file `model.safetensors` (pesi di un modello locale) finito per errore nella history e trascinato per mesi. Dopo la pulizia, `.git` è sceso a **72 MB**.\n\n- **DECISIONE:** GENESIS è stato migrato dal Getac (rugged laptop) al PC fisso come macchina principale. **LOGICA:** Il Getac non disponeva della GPU e del disco adeguati alle esigenze crescenti di GENESIS.\n\n- **FATTO:** `START_LOGIN.bat v2.0` è stato riscritto con percorsi fissi per l'utente `teo`, eliminando la dipendenza da `tools\\` portable. Python, Node, pnpm e Claude vengono ora risolti tramite path system-wide.\n\n- **FATTO:** Lo `STATE.json` è stato aggiornato con: macchina principale registrata, milestone migrazione, sessione **#21** (data 2026-06-02).\n\n- **OBIETTIVO:** Milestone attivo post-migrazione include: automazioni notturne portabili, ottimizzate GPU, `_ti_paths.bat` come resolver centrale, registrar UAC per i privilegi, finetune CUDA per il modello locale sulla scheda dedicata.\n\n- **PRECISIONE:** Stato avanzamento stimato a mano da Matteo: **V32 al 65%**, **GENESIS al 70%**."
     }
   ],
-  "word_count": 1192,
-  "updated_at": "2026-06-04T05:23:06.180417",
-  "built_at": "2026-06-11T14:00:25.332805"
+  "word_count": 1369,
+  "updated_at": "2026-06-12T15:57:18.090608",
+  "built_at": "2026-06-22T14:21:50.791726"
 }

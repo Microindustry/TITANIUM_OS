@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E08](#titaniumos-s2e08)\n  - [Il Grafo Respira](#il-grafo-respira)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LA COSA CHE ERA ROTTA](#atto-i-la-cosa-che-era-rotta)\n  - [ATTO II  LA MACCHINA CHE NON DIMENTICA](#atto-ii-la-macchina-che-non-dimentica)\n  - [ATTO III  LOCCHIO CHE GUARDA FUORI](#atto-iii-locchio-che-guarda-fuori)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI](#metadati)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S2E08](#titaniumos-s2e08)\n  - [Il Grafo Respira](#il-grafo-respira)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  LA COSA CHE ERA ROTTA](#atto-i-la-cosa-che-era-rotta)\n  - [ATTO II  LA MACCHINA CHE NON DIMENTICA](#atto-ii-la-macchina-che-non-dimentica)\n  - [ATTO III  LOCCHIO CHE GUARDA FUORI](#atto-iii-locchio-che-guarda-fuori)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI](#metadati)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "METADATI",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S2E08 |\n| **Titolo** | Il Grafo Respira |\n| **Data** | 2026-06-07 |\n| **Sessione** | #34 |\n| **Progetto focus** | GENESIS |\n| **Milestone** | RAG → Wiki (Graphify in produzione) |\n| **Nodi grafo** | 5.966 |\n| **Latenza query** | 340ms (locale) |\n| **CLAUDE.md** | v4.1.0 |\n| **AI News Watcher** | v1 keyless — scaffold completo |\n| **V32** | 65% |\n| **GENESIS** | 70% |\n| **Debiti aperti** | 2 (segnalati, non risolti) |\n| **Target capannone** | 15 luglio 2030 |\n| **Tag narrativi** | `grafo` `memoria` `bussola` `wiki` `watcher` `leggibilità` |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il grafo del repository GENESIS (TITANIUM_OS, codice + docs) mappato con Graphify conta **5.966 nodi**, con query locale in **340ms**, senza API key esterne né server remoti.\n\n- **DECISIONE:** Integrazione di Graphify nella sorgente GENESIS tramite toggle — **ChromaDB o grafo graph-based selezionabili nella stessa chiamata**, trasparente all'utente. **LOGICA:** permettere al sistema di scegliere il layer di retrieval appropriato per tipo di domanda.\n\n- **DECISIONE:** `CLAUDE_CODE.bat` modificato per leggere all'avvio **prima DA_FARE_FATTO.md (bussola), poi STATE, poi RIAVVIO**. **LOGICA:** eliminare i ~10 minuti di riorientamento a inizio sessione causati dal mancato caricamento della bussola.\n\n- **FATTO:** La bussola DA_FARE_FATTO.md è ora collegata alla cartella CRITICHE (cartella clinica del progetto). I debiti tecnici aperti in bussola sono visibili nel sistema di allerta; nel commit di verifica di questa sessione risultano **2 debiti segnalati** (non risolti).\n\n- **FATTO:** `CLAUDE.md` aggiornato alla versione **4.1.0**, con struttura piatta su `C:\\Users\\teo\\TITANIUM_OS` e nome macchina fissa registrato come **teo**.\n\n- **FATTO:** L'arco macro di GENESIS è esteso a 6 stadi: **Loop → Automazione → LLM → RAG → Wiki → Agenti**. La freccia verso Wiki (componente RETE/grafo) è passata da \"rotta\" (errore 500 da conflitto di porta su `api_server`) a **solida** dopo fix chirurgico in questa sessione."
     }
   ],
-  "word_count": 1221,
-  "updated_at": "2026-06-08T02:07:58.651232",
-  "built_at": "2026-06-11T14:00:26.135875"
+  "word_count": 1437,
+  "updated_at": "2026-06-12T15:58:41.643352",
+  "built_at": "2026-06-22T14:21:53.710700"
 }

@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_12  Milestone](#epauto12-milestone)\n    - [Dashboard v5.1 - CommandBar CtrlK  storieData v2.0 (10 ep](#dashboard-v51---commandbar-ctrlk-storiedata-v20-10-ep)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del comando](#atto-i-prima-del-comando)\n  - [ATTO II  Il momento del comando](#atto-ii-il-momento-del-comando)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_12  Milestone](#epauto12-milestone)\n    - [Dashboard v5.1 - CommandBar CtrlK  storieData v2.0 (10 ep](#dashboard-v51---commandbar-ctrlk-storiedata-v20-10-ep)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del comando](#atto-i-prima-del-comando)\n  - [ATTO II  Il momento del comando](#atto-ii-il-momento-del-comando)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Non costruire il sistema per mostrarlo. Costruiscilo per usarlo — e scoprirai che sono due cose completamente diverse.\"*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La CommandBar Ctrl+K della Dashboard v5.1 risponde in **180 millisecondi**. Implementata in 3 sessioni consecutive con Claude, con attenzione al rischio di regressione sull'ecosistema esistente.\n\n- **FATTO:** Al 27 maggio 2026, lo stato di avanzamento dei progetti è: **V32 al 65%**, **Vita Natura/EVA al 40%** (pilot prenotazioni), **MIMS fermo** in attesa della catena V32, **VULCAN bloccato** da MIMS, **IDENTITY a metà**.\n\n- **DECISIONE:** Riscrittura di storieData alla **v2.0** con struttura a **10 episodi ricchi** e metadati granulari. **LOGICA:** La documentazione degli episodi funge da memoria operativa contestuale, non da semplice changelog.\n\n- **FATTO:** Risolto un **proxy fix** (27 maggio 2026) che causava dati orfani e perdita di richieste nel routing frontend/backend della dashboard. Il bug si manifestava solo in certi contesti.\n\n- **OBIETTIVO:** La sequenza di dipendenze fisiche dichiarata è: **completamento V32 → sblocco MIMS → sblocco catena di produzione → sblocco VULCAN**. La prossima attività concreta è il codice G per i rinforzi V32 (Config G).\n\n- **FATTO:** L'ecosistema GENESIS in uso al momento della milestone è identificato come **v1.3**, con **agenti multipli** e **RAG v4.0** attivo."
     }
   ],
-  "word_count": 920,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:28.614753"
+  "word_count": 1112,
+  "updated_at": "2026-06-12T16:05:42.948362",
+  "built_at": "2026-06-22T14:22:23.549805"
 }

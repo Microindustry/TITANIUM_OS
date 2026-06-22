@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_03  Milestone](#epauto03-milestone)\n    - [Basamento traliccio saldato TIG](#basamento-traliccio-saldato-tig)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del metallo](#atto-i-prima-del-metallo)\n  - [ATTO II  TIG su traliccio](#atto-ii-tig-su-traliccio)\n  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_03  Milestone](#epauto03-milestone)\n    - [Basamento traliccio saldato TIG](#basamento-traliccio-saldato-tig)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del metallo](#atto-i-prima-del-metallo)\n  - [ATTO II  TIG su traliccio](#atto-ii-tig-su-traliccio)\n  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*Il lavoro vero comincia quando smetti di progettare e inizi a misurare qualcosa che esiste.*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il basamento della V32 è un traliccio saldato TIG; la scelta del TIG rispetto al MIG è motivata da maggiore controllo sul cordone, minore distorsione termica e migliore prevedibilità strutturale, a scapito della velocità di deposito.\n\n- **PRECISIONE:** L'errore di squadratura del basamento saldato artigianalmente risulta inferiore a 1 mm su una struttura con lato superiore a 800 mm, ottenuto senza posizionatore motorizzato né dima professionale.\n\n- **DECISIONE:** La sequenza di saldatura è stata pianificata esplicitamente per minimizzare le distorsioni: i giunti sono stati alternati e la geometria intermedia verificata con squadra di precisione ogni 3-4 passate.\n\n- **FATTO:** Al momento del milestone EP_AUTO_03, la V32 è alla Config G (con rinforzi) e risulta completata al 65%; il completamento del basamento segna il passaggio dalla fase progettuale alla fase di assemblaggio.\n\n- **OBIETTIVO:** Il prossimo step sulla V32 è la lavorazione delle superfici di appoggio e il montaggio delle guide lineari; i componenti sono già disponibili.\n\n- **FATTO:** GENESIS (stack AI) ha la dashboard alla versione 7, agenti attivi e RAG alla quarta iterazione al momento di questo episodio."
     }
   ],
-  "word_count": 890,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:27.770988"
+  "word_count": 1079,
+  "updated_at": "2026-06-12T16:04:21.011604",
+  "built_at": "2026-06-22T14:22:20.603168"
 }

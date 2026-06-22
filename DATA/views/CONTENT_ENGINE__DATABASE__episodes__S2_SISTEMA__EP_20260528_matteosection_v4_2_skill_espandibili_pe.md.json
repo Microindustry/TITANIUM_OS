@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E09](#titaniumos-s1e09)\n  - [La Macchina che Ricorda](#la-macchina-che-ricorda)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)\n  - [ATTO II  RAG v4.0: Quando la Ricerca Smette di Essere Casuale](#atto-ii-rag-v40-quando-la-ricerca-smette-di-essere-casuale)\n  - [ATTO III  Il Manuale. E Cosa Significa Scriverlo.](#atto-iii-il-manuale-e-cosa-significa-scriverlo)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  S1E09](#titaniumos-s1e09)\n  - [La Macchina che Ricorda](#la-macchina-che-ricorda)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema che Nessuno Nomina](#atto-i-il-problema-che-nessuno-nomina)\n  - [ATTO II  RAG v4.0: Quando la Ricerca Smette di Essere Casuale](#atto-ii-rag-v40-quando-la-ricerca-smette-di-essere-casuale)\n  - [ATTO III  Il Manuale. E Cosa Significa Scriverlo.](#atto-iii-il-manuale-e-cosa-significa-scriverlo)\n  - [CHIUSURA](#chiusura)\n  - [REEL_HOOK](#reelhook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **Episodio** | S1E09 |\n| **Titolo** | La Macchina che Ricorda |\n| **Data registrazione** | 2026-05-28 |\n| **STATE** | v2.5.0 |\n| **Sessione** | #8 |\n| **Commit principale** | `5a9d2d7` + multipli 28/05 |\n| **Focus narrativo** | GENESIS — memoria, continuità, auto-documentazione |\n| **Progetto fisico** | V32 — Config G (in attesa) |\n| **Milestone prossimo** | Gusset 200mm colonna Z sinistra |\n| **RAG chunks** | 150 |\n| **Agenti definiti** | 8 (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) |\n| **Tag** | `#GENESIS` `#RAG` `#automazione` `#continuità` `#V32` `#artigianato_cognitivo` |\n| **Target capannone** | 15 luglio 2030 |\n| **Giorni rimanenti** | ~1509 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il file `RIAVVIO_SESSIONE.txt` generato il 2026-05-29 10:31 riporta: STATE v2.5.0, RAG con 150 chunk, sessione numero 8.\n\n- **DECISIONE:** RAG v4.0 adotta un approccio ibrido composto da BM25 (TF-IDF) per ricerca keyword esatta, embedding semantico per ricerca per significato, RRF (Reciprocal Rank Fusion) per fusione dei risultati e CrossEncoder reranker per riordino finale. **LOGICA:** RAG v3 semantico puro aveva un punto cieco sulla precisione lessicale (numeri di commit, sigle, nomi esatti); l'ibrido risolve entrambe le modalità di ricerca.\n\n- **FATTO:** Il sistema GENESIS include 8 agenti validatori in `NODES/AGENTS/`: TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA, ciascuno con dominio specializzato (es. FORGE=meccanica, LEX=vincoli normativi, AQUA=idraulica, THEMIS=coerenza logica).\n\n- **DECISIONE:** Il hook automatico su comando `/stop` salva lo stato di sessione in `MENTE/SESSIONI/` come prompt già formattato per il riavvio successivo. **LOGICA:** Rende la continuità di contesto infrastruttura automatica, non dipendente dalla memoria dell'utente.\n\n- **FATTO:** Il `MANUALE_SISTEMA.md v1.0` distingue esplicitamente tra due comandi RAG: `rag-update` (aggiornamento incrementale) e `rag-rebuild` (ricostruzione completa)."
     }
   ],
-  "word_count": 1376,
-  "updated_at": "2026-06-02T16:38:09.061182",
-  "built_at": "2026-06-11T14:00:24.433482"
+  "word_count": 1567,
+  "updated_at": "2026-06-12T15:55:46.550066",
+  "built_at": "2026-06-22T14:21:47.342510"
 }

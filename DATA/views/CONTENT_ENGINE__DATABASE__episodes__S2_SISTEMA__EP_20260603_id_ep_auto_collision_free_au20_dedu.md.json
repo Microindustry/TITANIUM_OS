@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 20](#titaniumos-episodio-20)\n  - [Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown](#il-dev-flutter-che-non-capiva-perché-scriviamo-tutto-in-markdown)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema con i Path Hardcodati](#atto-i-il-problema-con-i-path-hardcodati)\n  - [ATTO II  Chiudere il Loop](#atto-ii-chiudere-il-loop)\n  - [ATTO III  Il Dev Flutter e le Cinque Domande](#atto-iii-il-dev-flutter-e-le-cinque-domande)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [TITANIUM_OS  Episodio 20](#titaniumos-episodio-20)\n  - [Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown](#il-dev-flutter-che-non-capiva-perché-scriviamo-tutto-in-markdown)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Il Problema con i Path Hardcodati](#atto-i-il-problema-con-i-path-hardcodati)\n  - [ATTO II  Chiudere il Loop](#atto-ii-chiudere-il-loop)\n  - [ATTO III  Il Dev Flutter e le Cinque Domande](#atto-iii-il-dev-flutter-e-le-cinque-domande)\n  - [CHIUSURA](#chiusura)\n  - [REEL HOOK](#reel-hook)\n  - [METADATI EPISODIO](#metadati-episodio)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 2,
@@ -47,9 +47,14 @@
       "level": 2,
       "title": "METADATI EPISODIO",
       "content": "| Campo | Valore |\n|---|---|\n| **ID** | EP_AUTO_20 |\n| **Data registrazione** | 2026-06-03 |\n| **Sessioni coperte** | #19, #20 (con traccia #18) |\n| **Pilastro principale** | GENESIS |\n| **Pilastri secondari** | V32 (contesto), TITANIUM_OS infra |\n| **Milestone** | Automazioni notturne portabili + LLM locale live |\n| **Avanzamento V32** | 65% |\n| **Avanzamento GENESIS** | 70% |\n| **RAG chunk** | 6518 |\n| **Modello LLM locale** | TinyLlama + LoRA `titanium_llm_v1` |\n| **Commit nel periodo** | 19 (2026-06-02 / 2026-06-03) |\n| **Angolo narrativo** | Dev Flutter + architettura spiegata a un estraneo |\n| **Tag** | `automazioni-notturne` `llm-locale` `rag-grounded` `portabilità` `architettura` |\n| **Co-author** | Claude Opus 4.8 |\n| **Target capannone** | 15 luglio 2030 |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il file `_ti_paths.bat` risolve a runtime le variabili `TI_ROOT`, `PYTHON`, `GH`, `ENV_FILE` e `MENTE_DIR`, eliminando i path hardcodati su `C:\\Users\\benen` (Getac). **LOGICA:** Consente al sistema di girare su macchine diverse senza modifiche ai singoli script.\n\n- **DECISIONE:** Il watchdog (`register_watchdog.ps1`) è registrato nel Task Scheduler con trigger `AtLogon`, `RunLevel Highest`, nessun limite di tempo, modalità `pythonw-safe`. **LOGICA:** Garantisce il ripristino automatico di tutte le automazioni dopo qualsiasi riavvio, senza intervento manuale.\n\n- **FATTO:** Il RAG conta 6518 chunk al 3 giugno 2026, con un incremento di +21 chunk in 24 ore rispetto al 2 giugno (da 6497). Il nodo di inferenza locale usa TinyLlama con pesi LoRA da `MODELS/titanium_llm_v1`.\n\n- **FATTO:** Il PC fisso è raggiungibile via Tailscale all'IP `100.125.152.124` e ospita RAG + CUDA + indice completamente operativo.\n\n- **DECISIONE:** `night_topics.py` genera i topic di ricerca notturna leggendo lo STATE del sistema (pilastri attivi, blocker, priorità), non con selezione casuale. **LOGICA:** La ricerca notturna risulta contestuale al milestone corrente — es. se V32 è bloccato sul raffreddamento mandrino, quella notte si cerca solo su quello.\n\n- **FATTO:** La generazione degli episodi usa `retrieve_context()` per iniettare fatti dal RAG nel prompt prima della scrittura, con gestione del filo narrativo tra episodi. Gli ID episodi sono collision-free tramite `_next_auto_index()` con deduplicazione per slug."
     }
   ],
-  "word_count": 1486,
-  "updated_at": "2026-06-04T05:22:17.540315",
-  "built_at": "2026-06-11T14:00:25.442637"
+  "word_count": 1715,
+  "updated_at": "2026-06-12T15:57:27.944179",
+  "built_at": "2026-06-22T14:21:51.146686"
 }

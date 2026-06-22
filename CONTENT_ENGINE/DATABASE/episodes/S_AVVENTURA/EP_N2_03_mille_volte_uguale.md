@@ -8,6 +8,19 @@ status: ready
 durata_min: 13
 tags: avventura, educativo, nina, themis, forge, materia, ripetibilita, deriva, entropia, disordine, nina-v2
 ---
+<!-- TOC -->
+
+- [EP_N2_03  Mille Volte Uguale](#epn203-mille-volte-uguale)
+    - [Il nemico non grida. Sposta le cose di un soffio alla volta, finché non te ne accorgi più.](#il-nemico-non-grida-sposta-le-cose-di-un-soffio-alla-volta-finché-non-te-ne-accorgi-più)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LA MISURA CHE SCAPPA](#atto-i-la-misura-che-scappa)
+  - [ATTO II  IL NEMICO CHE NON SI VEDE](#atto-ii-il-nemico-che-non-si-vede)
+  - [ATTO III  IL TRUCCO DI FORGE: IL RIFERIMENTO CHE NON SI MUOVE](#atto-iii-il-trucco-di-forge-il-riferimento-che-non-si-muove)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_03 — Mille Volte Uguale
 ### "Il nemico non grida. Sposta le cose di un soffio alla volta, finché non te ne accorgi più."

@@ -7,6 +7,7 @@
   - [IL MODELLO NARRATIVO  il libro è il viaggio sulla mappa (Matteo, 14/06)](#il-modello-narrativo-il-libro-è-il-viaggio-sulla-mappa-matteo-1406)
   - [Stagioni o filone unico? E infinito (Matteo, 14/06)](#stagioni-o-filone-unico-e-infinito-matteo-1406)
   - [LE MATERIE  il sapere concreto che la scuola non dà](#le-materie-il-sapere-concreto-che-la-scuola-non-dà)
+  - [Innesti da NotebookLM / Genius Loci (16/06)  additivi, rifiniscono il modello](#innesti-da-notebooklm-genius-loci-1606-additivi-rifiniscono-il-modello)
   - [Cosa NON cambia](#cosa-non-cambia)
 
 <!-- /TOC -->

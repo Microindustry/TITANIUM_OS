@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_06  Milestone](#epauto06-milestone)\n    - [ASSOLUTO V6 letto  BRAIN/KNOWLEDGE popolata (15 file) (10 M](#assoluto-v6-letto-brainknowledge-popolata-15-file-10-m)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del linguaggio, il caos](#atto-i-prima-del-linguaggio-il-caos)\n  - [ATTO II  Quindici file, una memoria](#atto-ii-quindici-file-una-memoria)\n  - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_06  Milestone](#epauto06-milestone)\n    - [ASSOLUTO V6 letto  BRAIN/KNOWLEDGE popolata (15 file) (10 M](#assoluto-v6-letto-brainknowledge-popolata-15-file-10-m)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del linguaggio, il caos](#atto-i-prima-del-linguaggio-il-caos)\n  - [ATTO II  Quindici file, una memoria](#atto-ii-quindici-file-una-memoria)\n  - [ATTO III  Cosa cambia adesso](#atto-iii-cosa-cambia-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Non stavo insegnando al sistema a ricordare."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **MILESTONE:** Il 10 marzo 2026 (ore 23:14) viene completata la popolazione di BRAIN/KNOWLEDGE con 15 file strutturati, segnando l'attivazione di ASSOLUTO V6 come layer cognitivo di TITANIUM_OS. **LOGICA:** Prima di questo momento ogni sessione di lavoro e ogni agente GENESIS partiva senza contesto persistente.\n\n- **FATTO:** ASSOLUTO V6 non è un agente né una dashboard, ma uno strato di memoria dichiarativa: intercetta ogni query e consulta BRAIN/KNOWLEDGE prima di rispondere, restituendo contesto su stato dei moduli, decisioni prese, priorità attive e profilo utente.\n\n- **FATTO:** I 15 file di BRAIN/KNOWLEDGE includono un file di stato dei progetti con percentuali reali e una \"MatteoSection\" — descrizione di Matteo Benenati in terza persona, pensata per essere letta dal sistema (identità, blocchi cognitivi, motivazioni).\n\n- **STATO:** Al momento della milestone, MIMS è fermo al 30% per dipendenza dalla catena V32; V32 è al 65% con Config G (rinforzi telaio) in corso; EVA è in fase pilota su Vita Natura; IDENTITY layer è a metà costruzione.\n\n- **DECISIONE:** La prossima milestone prioritaria è Config G completa sulla V32. **LOGICA:** VULCAN e MIMS hanno dipendenze fisiche dalla V32 — la fresatura dei connettori modulari non è virtualizzabile, quindi il loro avanzamento è bloccato fino al completamento del telaio."
     }
   ],
-  "word_count": 945,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:28.046183"
+  "word_count": 1159,
+  "updated_at": "2026-06-12T16:04:47.604189",
+  "built_at": "2026-06-22T14:22:21.586835"
 }

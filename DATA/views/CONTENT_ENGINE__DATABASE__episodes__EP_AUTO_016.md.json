@@ -18,7 +18,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Dashboard che parla il tuo linguaggio](#dashboard-che-parla-il-tuo-linguaggio)\n- [Dashboard v5.0  Quando il sistema smette di mentire](#dashboard-v50-quando-il-sistema-smette-di-mentire)\n  - [Il bivio](#il-bivio)\n  - [Connessione al sistema](#connessione-al-sistema)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Dashboard che parla il tuo linguaggio](#dashboard-che-parla-il-tuo-linguaggio)\n- [Dashboard v5.0  Quando il sistema smette di mentire](#dashboard-v50-quando-il-sistema-smette-di-mentire)\n  - [Il bivio](#il-bivio)\n  - [Connessione al sistema](#connessione-al-sistema)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -39,9 +39,14 @@
       "level": 2,
       "title": "Connessione al sistema",
       "content": "La V32 è al 65%. La gusset sinistra aspetta tre ore di officina. Ma quelle tre ore funzionano solo se so esattamente dove ero rimasto. `BRAIN/STATE.json` mi dice il contesto. La dashboard v5.0 lo rende visibile in tempo reale — non a fine sessione quando ho già dimenticato.\n\nTITANIUM_OS adesso ha una spina dorsale leggibile. Il tab navigazione guidata è la cosa che cambia il flusso: non apro più la pagina sbagliata al momento sbagliato. Il sistema mi porta dove devo essere. Step corrente, step successivo, blocker evidenziato in rosso. Mandrino mancante — rosso. Gusset in attesa — arancio. Fresatura asse Z — verde quando ci sarò.\n\nMIMS è al 30% e i connettori modulari hanno bisogno di specifiche di montaggio tracciabili. Zustand mi permette di agganciare il modulo MIMS allo stesso store senza rifondare niente — è una slice separata, stessa architettura. Stesso discorso per VULCAN: quando caricherò le ricette polimeri, la dashboard le vedrà. Nessuna app parallela. Un sistema unico.\n\nEVA per Maria gira su WhatsApp, lato Python. La dashboard non la gestisce direttamente — ma quando EVA scrive in `STATE.json`, TanStack Query legge il cambiamento entro trenta secondi. Il loop è chiuso.\n\n---\n\nLa dashboard adesso non mi racconta storie."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Dashboard EVA/TITANIUM_OS aggiornata alla versione 5.0 in data 2026-05-27, con stack frontend basato su Zustand (state management globale) + TanStack Query (sincronismo dati backend).\n\n- **DECISIONE:** Abbandonato `useState` locale distribuito su 12 componenti in favore di un unico store globale Zustand (`useV32Store()`), per eliminare dati divergenti tra widget. **LOGICA:** Con ADHD, la divergenza tra dato a schermo e realtà in officina rendeva impossibile sapere da dove ripartire.\n\n- **FATTO:** TanStack Query gestisce le chiamate al backend Python con cache, retry e `staleTime` configurato; lo stato `error` è visibile esplicitamente invece di produrre silenzio opaco.\n\n- **FATTO:** La V32 è al 65% di completamento al 27/05/2026; blocker attivo identificato: mandrino 2.2kW ER20 — da ordinare (evidenziato in rosso nella navigazione guidata).\n\n- **FATTO:** EVA (WhatsApp/Python) scrive su `BRAIN/STATE.json`; TanStack Query rileva il cambiamento entro 30 secondi, chiudendo il loop senza dashboard dedicata.\n\n- **FATTO:** MIMS è al 30%; l'integrazione nello store Zustand è prevista come slice separata sulla stessa architettura, senza rifondare il sistema esistente."
     }
   ],
-  "word_count": 649,
-  "updated_at": "2026-06-02T16:38:09.050976",
-  "built_at": "2026-06-11T14:00:21.771633"
+  "word_count": 830,
+  "updated_at": "2026-06-12T15:52:05.311651",
+  "built_at": "2026-06-22T14:21:37.354382"
 }

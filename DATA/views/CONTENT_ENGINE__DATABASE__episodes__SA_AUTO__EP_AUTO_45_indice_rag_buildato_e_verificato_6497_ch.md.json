@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_45  Milestone](#epauto45-milestone)\n    - [Indice RAG buildato e verificato: 6497 chunk da 145 file MEN](#indice-rag-buildato-e-verificato-6497-chunk-da-145-file-men)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del numero, cera il caos](#atto-i-prima-del-numero-cera-il-caos)\n  - [ATTO II  6.497 chunk, 32 megabyte, una query](#atto-ii-6497-chunk-32-megabyte-una-query)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_45  Milestone](#epauto45-milestone)\n    - [Indice RAG buildato e verificato: 6497 chunk da 145 file MEN](#indice-rag-buildato-e-verificato-6497-chunk-da-145-file-men)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima del numero, cera il caos](#atto-i-prima-del-numero-cera-il-caos)\n  - [ATTO II  6.497 chunk, 32 megabyte, una query](#atto-ii-6497-chunk-32-megabyte-una-query)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -37,9 +37,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*6.497 non è un traguardo. È una misura. E finalmente è una misura che il sistema può leggere da solo, verificare da solo, usare. Quando una macchina sa dove sta, smette di affidarsi alla tua memoria per funzionare. È questo il punto.*"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'indice RAG v4 di MENTE è stato costruito a partire da 145 file Markdown, producendo 6.497 chunk e 6.497 vettori embedding a 384 dimensioni ciascuno. Il database ChromaDB risultante (`chroma.sqlite3`) pesa 32 megabyte.\n\n- **DECISIONE:** Il chunking è configurato con `CHUNK_SIZE=512` caratteri e `STRIDE=200`, corrispondente a un overlap del ~61% tra chunk contigui. **LOGICA:** L'overlap garantisce che ogni concetto rilevante compaia in almeno due chunk contigui, evitando la perdita di contesto ai bordi del taglio. Parametro documentato in `2026-05-28_audit_sistema_rag_v4.md`.\n\n- **FATTO:** La struttura interna di ChromaDB mostra: 6.497 righe in `embeddings`, 6.497 in `embedding_fulltext_search`, 25.988 record in `embedding_metadata` (4 metadati per chunk: file sorgente, posizione, timestamp, testo grezzo), 338 voci in `embeddings_queue`.\n\n- **DECISIONE:** Il nome corretto della collection ChromaDB è `\"mente\"` (non `\"mente_knowledge\"`). **LOGICA:** Il bug sul nome stringa causava il fallimento della verifica dello stato RAG ad ogni riavvio di `generate_restart_prompt.py`, rendendo lo stato del sistema \"non verificabile\".\n\n- **FATTO:** L'indice include anche 818+ estrazioni da documenti non-Markdown (contratti, specifiche tecniche, immagini processate dallo scanner), indicizzati insieme ai file Markdown di MENTE.\n\n- **FATTO:** La GPU utilizzata per il RAG è una GTX 1070 con 8GB VRAM; la precondizione operativa è `torch.cuda.is_available()` → `True`, verificata nell'episodio precedente al presente milestone."
     }
   ],
-  "word_count": 1313,
-  "updated_at": "2026-06-03T21:54:30.843952",
-  "built_at": "2026-06-11T14:00:31.929220"
+  "word_count": 1541,
+  "updated_at": "2026-06-12T16:10:58.981967",
+  "built_at": "2026-06-22T14:22:34.587802"
 }

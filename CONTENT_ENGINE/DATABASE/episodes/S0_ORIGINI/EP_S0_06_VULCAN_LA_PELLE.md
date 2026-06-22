@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [EP_S0_06  VULCAN, LA PELLE](#eps006-vulcan-la-pelle)
+    - [Lo scheletro lo tiene MIMS. La pelle la fa VULCAN. E la lamiera sparisce.](#lo-scheletro-lo-tiene-mims-la-pelle-la-fa-vulcan-e-la-lamiera-sparisce)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL PROBLEMA DELLA LAMIERA](#atto-i-il-problema-della-lamiera)
+  - [ATTO II  LIDEA VULCAN](#atto-ii-lidea-vulcan)
+  - [ATTO III  SCHELETRO E PELLE](#atto-iii-scheletro-e-pelle)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # EP_S0_06 — VULCAN, LA PELLE
 ### "Lo scheletro lo tiene MIMS. La pelle la fa VULCAN. E la lamiera sparisce."
 

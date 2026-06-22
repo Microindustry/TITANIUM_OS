@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_S2_01  IL CERVELLO IBRIDO](#eps201-il-cervello-ibrido)\n    - [Un archivio diventa un organismo](#un-archivio-diventa-un-organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA CHE NON VEDEVI](#atto-i-il-problema-che-non-vedevi)\n  - [ATTO II  I TRE SISTEMI](#atto-ii-i-tre-sistemi)\n  - [ATTO III  IL MANIFEST](#atto-iii-il-manifest)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_S2_01  IL CERVELLO IBRIDO](#eps201-il-cervello-ibrido)\n    - [Un archivio diventa un organismo](#un-archivio-diventa-un-organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL PROBLEMA CHE NON VEDEVI](#atto-i-il-problema-che-non-vedevi)\n  - [ATTO II  I TRE SISTEMI](#atto-ii-i-tre-sistemi)\n  - [ATTO III  IL MANIFEST](#atto-iii-il-manifest)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -32,9 +32,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Dopo il deploy RAG v4.0, la prima query di test: \"decisione corpo unico maggio 2026 motivazioni strutturali\".\n\nRisultato: chunk esatti. Sessione 27 maggio, V8_DELTA.md, note tecniche su rigidità Z. Cinque risultati. Tutti pertinenti. Ordinati per rilevanza reale, non per vicinanza vettoriale.\n\nIl knowledge base non è più un archivio che risponde a parole. È un sistema che risponde a intenzioni.\n\nLa differenza la vedi quando stai costruendo qualcosa di complesso e non riesci a ricordare perché hai preso una decisione di tre settimane fa. Cerchi. E il sistema te lo ricorda — non approssimativamente. Esattamente.\n\n> *Non costruire una memoria. Costruisci un sistema che ricorda al posto tuo.*\n> *La differenza è che il sistema non dimentica tra una sessione e l'altra.*\n\n---\n\n**reel_hook:** \"Ho avuto 2376 pezzi di conoscenza nel mio sistema RAG. Funzionava. Non abbastanza. Il problema: cerchi 'Ø18 h30' e il sistema trova chunk su diametri e altezze generici perché l'AI capisce il concetto ma non il codice tecnico esatto. Soluzione: due sistemi in parallelo. Uno semantico (capisce il significato), uno BM25 (trova keyword esatte). Li fondi con RRF. Poi aggiungi un reranker CrossEncoder che riordina i 15 risultati per rilevanza reale. Risultato: la stessa query trova esattamente quello che cerchi. Non una cosa simile. Quello. Se costruisci un sistema con dati tecnici, questo è il modo. Il resto è approssimazione.\"\n\n---\n\n| Campo | Dettaglio |\n|-------|-----------|\n| Stagione | S2 — Il Sistema che Impara |\n| Episodio | 01 |\n| Arco | L'archivio che diventa organismo |\n| Tecnologie | ChromaDB, TF-IDF BM25, CrossEncoder, RRF, manifest incrementale |\n| Connessione S2 | Introduce il tema dell'auto-diagnosi — il sistema che trova i propri errori |"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** Il knowledge base TITANIUM_OS al 28 maggio 2026 contiene **2376 chunk** indicizzati in ChromaDB.\n\n- **FATTO:** Il rebuild completo dell'indice RAG (versioni precedenti alla v4.0) richiedeva **>2 minuti** di timeout; con l'introduzione del manifest incrementale (`rag_manifest.json`) il tempo scende a **<20 secondi**.\n\n- **DECISIONE:** Adozione di architettura **RAG v4.0 con hybrid retrieval** (ChromaDB semantico + BM25 + CrossEncoder reranker), deploy in data **28 maggio 2026**. **LOGICA:** Il solo modello semantico (`paraphrase-multilingual-MiniLM-L12-v2`, vettori 384-dimensionali) era impreciso su codici tecnici esatti (es. \"Ø18 h30\", \"Config G\"); BM25 copre le keyword esatte, il CrossEncoder riordina i candidati per rilevanza contestuale reale.\n\n- **FATTO:** La fusione dei risultati dei tre sistemi avviene tramite **RRF (Reciprocal Rank Fusion) con parametro k=60**; vengono selezionati **top-15 candidati** prima del reranking.\n\n- **DECISIONE:** Introduzione del file `rag_manifest.json` per aggiornamento incrementale dell'indice. **LOGICA:** Con 2376 chunk il rebuild era lento ma fattibile; proiettando la crescita a ~10.000 chunk (sessioni future, documenti V8, Research Agent) il rebuild totale sarebbe diventato impraticabile."
     }
   ],
-  "word_count": 913,
-  "updated_at": "2026-06-02T16:38:09.071096",
-  "built_at": "2026-06-11T14:00:26.719663"
+  "word_count": 1096,
+  "updated_at": "2026-06-12T15:59:39.125954",
+  "built_at": "2026-06-22T14:22:02.234109"
 }

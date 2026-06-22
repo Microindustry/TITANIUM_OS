@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AV_00  La Bambina e la Giuntura](#epav00-la-bambina-e-la-giuntura)\n    - [Dove il metallo e il codice si tengono per mano](#dove-il-metallo-e-il-codice-si-tengono-per-mano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL MONDO CHE NESSUNO VEDE](#atto-i-il-mondo-che-nessuno-vede)\n  - [ATTO II  IL DISORDINE](#atto-ii-il-disordine)\n  - [ATTO III  IL GRANDE LOOP](#atto-iii-il-grande-loop)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AV_00  La Bambina e la Giuntura](#epav00-la-bambina-e-la-giuntura)\n    - [Dove il metallo e il codice si tengono per mano](#dove-il-metallo-e-il-codice-si-tengono-per-mano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL MONDO CHE NESSUNO VEDE](#atto-i-il-mondo-che-nessuno-vede)\n  - [ATTO II  IL DISORDINE](#atto-ii-il-disordine)\n  - [ATTO III  IL GRANDE LOOP](#atto-iii-il-grande-loop)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -32,9 +32,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Lo schermo, in cantina, lampeggiava ancora quando Nina riaprì gli occhi. Erano passati\nsolo due minuti, forse. Ma adesso guardava la sua sveglia smontata in modo diverso.\n\nLa rimontò. Funzionava. E — senza pensarci troppo — su un foglietto disegnò *come*\nl'aveva rimontata.\n\nUn gesto. Tre cose.\n\n> Ma quella notte, prima di dormire, le rimase una domanda in testa. THEMIS aveva detto\n> che un gesto fatto bene va ripetuto. *E se un gesto giusto si potesse insegnare a una\n> macchina, perché lo ripetesse da sola — per sempre, anche mentre dormi?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito il Grande Loop? Provalo tu: la prossima volta che aggiusti o costruisci\nqualcosa, lascia una traccia di come hai fatto. Hai appena fatto girare il tuo primo\nLoop.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietre nuove:** `⟡1` il Grande Loop (un gesto, tre frutti) · `⟡E` l'Entropia/il Disordine *(forza ricorrente, fuori dalla sequenza dell'arco)*\n**Pietre richiamate:** nessuna (è il primo episodio)\n**Key-image:** un anello che gira con tre frutti (il Loop) · ruggine che si sgretola (l'Entropia)\n**3 strati:** bambino = smonta/rimonta la sveglia · curioso = \"tenere a bada il disordine\" ·\nesperto/papà = la traccia scritta è ciò che rende un gesto *ripetibile* (la base dell'automazione)"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio EP_AV_00 è classificato come \"Pilota Avventura (binario educativo)\" con durata stimata 8-10 minuti, destinato a bambini e curiosi di ogni età.\n\n- **OBIETTIVO:** Il concetto centrale insegnato è il **Grande Loop**: un gesto fatto bene produce tre frutti — aggiusti (la cosa migliora), impari (acquisisci competenza), lasci una traccia (il prossimo riparte da dove sei arrivato tu).\n\n- **FATTO:** Il Grande Loop è dichiarato in canone come derivato da EP_S0_00 con il principio \"un'azione, tre frutti\", tracciando continuità esplicita tra l'arco educativo e quello tecnico del progetto TITANIUM_OS.\n\n- **FATTO:** L'Entropia (\"il Disordine\") è introdotta come forza ricorrente fuori dalla sequenza dell'arco principale — classificata con pietra `⟡E` — e definita concettualmente come tendenza naturale al degrado che si contrasta costruendo sistemi che si reggono da soli.\n\n- **DECISIONE:** Le \"Pietre nuove\" rilasciate in questo episodio sono `⟡1` (il Grande Loop) e `⟡E` (l'Entropia); nessuna pietra viene richiamata, confermando la funzione di episodio-zero senza prerequisiti narrativi. **LOGICA:** stabilisce la base concettuale minima per tutti gli episodi successivi del ramo AV."
     }
   ],
-  "word_count": 954,
-  "updated_at": "2026-06-09T12:35:53.624994",
-  "built_at": "2026-06-11T14:00:27.199462"
+  "word_count": 1139,
+  "updated_at": "2026-06-12T16:02:23.679858",
+  "built_at": "2026-06-22T14:22:10.681426"
 }

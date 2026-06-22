@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_26  Milestone](#epauto26-milestone)\n    - [RAG v4.0 - hybrid BM25semanticoCrossEncoderincrementale (](#rag-v40---hybrid-bm25semanticocrossencoderincrementale)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di capire, si cercava a caso](#atto-i-prima-di-capire-si-cercava-a-caso)\n  - [ATTO II  Ibrido, reranking, e la memoria che cresce](#atto-ii-ibrido-reranking-e-la-memoria-che-cresce)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_26  Milestone](#epauto26-milestone)\n    - [RAG v4.0 - hybrid BM25semanticoCrossEncoderincrementale (](#rag-v40---hybrid-bm25semanticocrossencoderincrementale)\n- [Il Sistema  Episodio 23](#il-sistema-episodio-23)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima di capire, si cercava a caso](#atto-i-prima-di-capire-si-cercava-a-caso)\n  - [ATTO II  Ibrido, reranking, e la memoria che cresce](#atto-ii-ibrido-reranking-e-la-memoria-che-cresce)\n  - [ATTO III  Cosa si sblocca adesso](#atto-iii-cosa-si-sblocca-adesso)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*La differenza tra un archivio e una memoria è che la memoria sa cosa cercare quando non glielo dici tu.*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **MILESTONE:** RAG v4.0 chiuso e testato il **28 maggio 2026** come componente del progetto GENESIS (stack AI di TITANIUM_OS).\n\n- **FATTO:** L'architettura RAG v4.0 è **ibrida BM25 + semantico**: BM25 gestisce la ricerca per parole chiave/termini esatti, la ricerca semantica gestisce la prossimità concettuale; i due sistemi operano in parallelo prima del reranking.\n\n- **DECISIONE:** Aggiunto un **CrossEncoder** come fase di reranking post-retrieval. **Logica:** valuta i documenti candidati in coppia con la domanda specifica (non in isolamento), producendo una lista ordinata per rilevanza reale anziché per prossimità vettoriale astratta; computazionalmente più pesante ma più preciso.\n\n- **DECISIONE:** Il sistema adotta un'indicizzazione **incrementale**. **Logica:** i nuovi documenti (note, log, documenti tecnici) vengono integrati senza ricostruzione completa dell'indice, rendendo il contenuto disponibile immediatamente dopo l'aggiunta.\n\n- **FATTO:** La base di conoscenza di GENESIS contiene parametri di lavoro della V32, disegni concettuali dei MIMS, procedure di VULCAN, log di EVA e note su Vita Natura; con RAG v4.0 questa base è interrogabile in tempo reale dagli agenti (Story Agent, report di avanzamento, pilot EVA)."
     }
   ],
-  "word_count": 954,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:30.125026"
+  "word_count": 1141,
+  "updated_at": "2026-06-12T16:07:47.876932",
+  "built_at": "2026-06-22T14:22:28.221223"
 }

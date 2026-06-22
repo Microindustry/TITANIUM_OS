@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_PILOTA_00  IL MONDO](#eppilota00-il-mondo)\n    - [Acciaio e codice: come funziona tutto questo](#acciaio-e-codice-come-funziona-tutto-questo)\n- [IL SISTEMA  Episodio Pilota](#il-sistema-episodio-pilota)\n    - [Organismo](#organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  DA DOVE VENGO](#atto-i-da-dove-vengo)\n  - [ATTO II  COSA STO COSTRUENDO](#atto-ii-cosa-sto-costruendo)\n  - [ATTO III  LA CREW NELLA MACCHINA](#atto-iii-la-crew-nella-macchina)\n  - [ATTO IV  COME GIRA TUTTO](#atto-iv-come-gira-tutto)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_PILOTA_00  IL MONDO](#eppilota00-il-mondo)\n    - [Acciaio e codice: come funziona tutto questo](#acciaio-e-codice-come-funziona-tutto-questo)\n- [IL SISTEMA  Episodio Pilota](#il-sistema-episodio-pilota)\n    - [Organismo](#organismo)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  DA DOVE VENGO](#atto-i-da-dove-vengo)\n  - [ATTO II  COSA STO COSTRUENDO](#atto-ii-cosa-sto-costruendo)\n  - [ATTO III  LA CREW NELLA MACCHINA](#atto-iii-la-crew-nella-macchina)\n  - [ATTO IV  COME GIRA TUTTO](#atto-iv-come-gira-tutto)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "Quindici luglio duemilatrenta. Capannone proprio. Non in affitto, non in coabitazione — mio. Questo è l'obiettivo. Non lo chiamo traguardo perché la parola suona come la fine di qualcosa. È l'inizio di una scala produttiva che da una taverna di dodici metri quadri non puoi raggiungere.\n\nMa la data non è l'obiettivo vero. L'obiettivo vero è la sovranità. Controllo sui mezzi di produzione, sul software, sulla conoscenza, sul tempo. Non dipendere da un employer per vendere le tue mani. Non dipendere da un fornitore per la macchina con cui lavori, perché quella macchina l'hai costruita tu e ne conosci ogni bullone.\n\nIl Sistema è la risposta a quindici anni di lavoro per strutture di altri. Adesso la struttura la costruisco io. Pezzo per pezzo, episodio per episodio, agente per agente.\n\nSono Matteo Benenati. Questo è Il Sistema."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** V32 è una fresatrice CNC a tre assi costruita da zero, con un peso di 128 kg (corpo unico) e una tolleranza di lavoro di ±0,019 mm (19 millesimi). **LOGICA:** Il nome deriva dalla versione 3.2 del progetto (terza iterazione design, seconda revisione strutturale).\n\n- **FATTO:** L'avanzamento del progetto V32 è al 65% al momento dell'episodio. **LOGICA:** Non è un acquisto ma una costruzione diretta, motivata dalla necessità di conoscenza piena dei vincoli strutturali interni.\n\n- **FATTO:** GENESIS (stack AI/automazioni) ha uno sviluppo al 70% al momento dell'episodio. **LOGICA:** È il sistema cognitivo centrale dell'ecosistema TITANIUM_OS, include RAG e agenti Python con ruoli distinti.\n\n- **FATTO:** MIMS usa una geometria proprietaria a 29,9 mm con tre livelli di mercato: Junior/Light (hobby), Mid/Pro (industria leggera), Heavy (carichi strutturali). **LOGICA:** La strategia di ingresso è definita internamente \"Cavallo di Troia\": acquisire base installata dal basso, poi scalare verso l'industria.\n\n- **DECISIONE:** Il perimetro geometrico del connettore MIMS è identificato come proprietà intellettuale da proteggere formalmente. **LOGICA:** È considerato la differenza tra un prodotto e un asset strategico.\n\n- **FATTO:** EVA è l'agente Python dedicato alle automazioni WhatsApp di Vita Natura (prenotazioni, conferme, follow-up clienti). **LOGICA:** Il centro estetico funge da caso reale di validazione del sistema GENESIS su clienti e metriche concrete."
     }
   ],
-  "word_count": 1492,
-  "updated_at": "2026-06-04T15:26:32.620963",
-  "built_at": "2026-06-11T14:00:22.754681"
+  "word_count": 1723,
+  "updated_at": "2026-06-12T15:53:21.358099",
+  "built_at": "2026-06-22T14:21:40.556189"
 }

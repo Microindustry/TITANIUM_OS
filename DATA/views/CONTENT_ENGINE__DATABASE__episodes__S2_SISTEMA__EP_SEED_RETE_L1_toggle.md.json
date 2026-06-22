@@ -17,7 +17,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Due verità dello stesso mondo  il toggle a due sorgenti](#due-verità-dello-stesso-mondo-il-toggle-a-due-sorgenti)\n    - [Approfondimento LV1 di EP_SEED_RETE  la stessa galassia, due modi di guardarla](#approfondimento-lv1-di-epseedrete-la-stessa-galassia-due-modi-di-guardarla)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [IL TRUCCO: STESSA FORMA, MOTORE INVARIATO](#il-trucco-stessa-forma-motore-invariato)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Due verità dello stesso mondo  il toggle a due sorgenti](#due-verità-dello-stesso-mondo-il-toggle-a-due-sorgenti)\n    - [Approfondimento LV1 di EP_SEED_RETE  la stessa galassia, due modi di guardarla](#approfondimento-lv1-di-epseedrete-la-stessa-galassia-due-modi-di-guardarla)\n  - [DA DOVE VIENE](#da-dove-viene)\n  - [LA DOMANDA](#la-domanda)\n  - [IL TRUCCO: STESSA FORMA, MOTORE INVARIATO](#il-trucco-stessa-forma-motore-invariato)\n  - [PERCHÉ CONTA](#perché-conta)\n  - [IL FILO CON GLI ALTRI LIVELLI](#il-filo-con-gli-altri-livelli)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -48,9 +48,14 @@
       "level": 2,
       "title": "IL FILO CON GLI ALTRI LIVELLI",
       "content": "- **Sale al principale:** [[EP_SEED_RETE]] (la RETE riparata).\n- **Fratelli LV1:** [[EP_SEED_RETE_L1_TSNE]] (come si disegna), [[EP_SEED_RETE_L1_BUGSTATO]] (perché si era rotta).\n- **Lega altrove:** la sorgente \"Sistema\" è il grafo di [[EP_SEED_GRAPHIFY]] — qui lo si *guarda* in 3D.\n- **Aggancio Nina:** \"lo stesso attacco, due punte\" — metafora pronta per spiegare un'**interfaccia** (un\n  patto sulla forma) a chi non programma.\n\n> Approfondimento (LV1). Nessun tetto di profondità."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **DECISIONE:** Creato endpoint `/api/graph/graphify` con lo stesso contratto dati dell'endpoint RAG (campi identici: nodi, archi, posizioni). **LOGICA:** Permettere al motore di visualizzazione 3D di restare invariato indipendentemente dalla sorgente attiva.\n\n- **FATTO:** Il sistema RETE espone un toggle a due sorgenti: **Conoscenza (RAG)** (grafo dei documenti) e **Sistema (Graphify)** (grafo della struttura del sistema). Entrambe alimentano lo stesso motore 3D.\n\n- **DECISIONE:** Il motore 3D di visualizzazione è disaccoppiato dalle sorgenti dati: non conosce quale sorgente sta disegnando, riceve solo dati conformi al contratto. **LOGICA:** Un'interfaccia, due implementazioni — evita duplicazione di codice e bug.\n\n- **OBIETTIVO:** La visualizzazione affiancata delle due sorgenti nella stessa galassia 3D serve come strumento diagnostico: verificare se \"quello che il sistema sa\" e \"come il sistema è fatto\" combaciano.\n\n- **FATTO:** L'architettura a contratto dati condiviso è estensibile: aggiungere una terza sorgente richiede solo che rispetti il contratto in uscita, senza modificare il motore."
     }
   ],
-  "word_count": 482,
-  "updated_at": "2026-06-11T02:08:07.811446",
-  "built_at": "2026-06-11T13:57:33.678827"
+  "word_count": 644,
+  "updated_at": "2026-06-12T16:01:39.727479",
+  "built_at": "2026-06-22T14:22:08.050109"
 }

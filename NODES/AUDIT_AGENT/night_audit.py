@@ -215,6 +215,17 @@ def collect_signals() -> dict:
                         "data": d.strftime("%Y-%m-%d") if d else "sconosciuta",
                     })
 
+    # Canon guard (regola scalabile): conta le formulazioni vietate
+    # "componente recuperato/usato/EUR 0" per V32/VULCAN ancora nel canone.
+    canon_violations = 0
+    try:
+        from AUTOMATIONS.core.canon_guard import scan as _canon_scan
+        for _f in EPISODES.rglob("*.md"):
+            try: canon_violations += len(_canon_scan(_f.read_text(encoding="utf-8")))
+            except Exception: pass
+    except Exception:
+        pass
+
     return {
         "date": TODAY,
         "git_head": _git("rev-parse", "--short", "HEAD"),
@@ -228,6 +239,7 @@ def collect_signals() -> dict:
         "rag_chunks": rag_chunks,
         "log_issues": log_issues,
         "bussola_open": bussola_open,
+        "canon_violations": canon_violations,
     }
 
 
@@ -319,6 +331,12 @@ def critiche_via_regole(signals: dict) -> list[dict]:
         out.append({"area": "SISTEMA", "severity": "media",
                     "finding": "Nessun commit negli ultimi 7 giorni: il sistema non avanza.",
                     "azione": "Verificare che story_agent e la catena notturna producano output."})
+    if signals.get("canon_violations", 0) > 0:
+        out.append({"area": "CANONE", "severity": "media",
+                    "finding": f"{signals['canon_violations']} formulazioni vietate "
+                               f"'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.",
+                    "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply "
+                              "(o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova)."})
     for pil, pct in (signals["pillars"] or {}).items():
         if isinstance(pct, (int, float)) and pct and pct < 35:
             out.append({"area": pil, "severity": "bassa",

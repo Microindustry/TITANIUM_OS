@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [EP_AUTO_22  Milestone](#epauto22-milestone)\n    - [Dashboard Tela v4.1 - MatteoSection: skill tree, interessi,](#dashboard-tela-v41---matteosection-skill-tree-interessi)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Disegnare se stessi](#disegnare-se-stessi)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima dello specchio](#atto-i-prima-dello-specchio)\n  - [ATTO II  Tela v4.1, MatteoSection](#atto-ii-tela-v41-matteosection)\n  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [EP_AUTO_22  Milestone](#epauto22-milestone)\n    - [Dashboard Tela v4.1 - MatteoSection: skill tree, interessi,](#dashboard-tela-v41---matteosection-skill-tree-interessi)\n- [IL SISTEMA  Episodio 23](#il-sistema-episodio-23)\n  - [Disegnare se stessi](#disegnare-se-stessi)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  Prima dello specchio](#atto-i-prima-dello-specchio)\n  - [ATTO II  Tela v4.1, MatteoSection](#atto-ii-tela-v41-matteosection)\n  - [ATTO III  Cosa si sblocca](#atto-iii-cosa-si-sblocca)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
     },
     {
       "level": 3,
@@ -42,9 +42,14 @@
       "level": 2,
       "title": "CHIUSURA",
       "content": "*\"Costruire una macchina è semplice: sai cosa deve fare. Costruire il sistema che la governa è più difficile: devi decidere cosa vuoi tu.\"*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** La MatteoSection di Tela v4.1 era ferma al 45% prima del 28 maggio 2026, quando è stata portata a uno stato funzionale.\n\n- **FATTO:** Al momento dell'episodio, V32 è al 65% con i rinforzi della Config G, GENESIS è a quasi l'80%, MIMS è in attesa di completamento della catena.\n\n- **DECISIONE:** La MatteoSection è strutturata in quattro blocchi: skill tree (con CNC al centro e rami verso programmazione, automazione, ML, gestione processi), interessi, principi operativi, visione 2030. **LOGICA:** Fornire a GENESIS un contesto identitario solido per calibrare le risposte degli agenti senza ambiguità.\n\n- **OBIETTIVO:** Entro il 2030 — V32 completata e operativa, MIMS in produzione, GENESIS in autonomia supervisionata, VITA NATURA/EVA come modello replicabile.\n\n- **FATTO:** GENESIS è già integrato con lo Story Agent al momento della milestone (28 maggio 2026)."
     }
   ],
-  "word_count": 932,
-  "updated_at": "2026-06-02T16:38:09.081227",
-  "built_at": "2026-06-11T14:00:29.551873"
+  "word_count": 1077,
+  "updated_at": "2026-06-12T16:07:11.503739",
+  "built_at": "2026-06-22T14:22:26.885029"
 }

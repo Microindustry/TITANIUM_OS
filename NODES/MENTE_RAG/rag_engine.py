@@ -35,6 +35,15 @@ COLLECTION     = "mente"
 EMBED_MODEL    = "paraphrase-multilingual-MiniLM-L12-v2"
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"   # multilingue (100+ lingue, IT) — ms-marco era solo EN su contenuto italiano (upgrade 14/06, testato: discrimina IT)
 
+# DEVICE: GPU se disponibile (ottimizzazione 22/06). La embedding-function di ChromaDB
+# e il CrossEncoder default-ano su CPU -> rebuild 5-8x piu lenti e query piu lente.
+# Forzare "cuda" sulla GTX 1070 accelera embedding (indicizzazione) e rerank (query).
+try:
+    import torch as _torch
+    DEVICE = "cuda" if _torch.cuda.is_available() else "cpu"
+except Exception:
+    DEVICE = "cpu"
+
 CHUNK_SIZE     = 512    # chars (~100 token) — ottimale per Q&A tecnico
 CHUNK_STRIDE   = 200    # 61% overlap — bilancia contesto e precisione
 CHUNK_VER      = f"v{CHUNK_SIZE}s{CHUNK_STRIDE}"
@@ -59,7 +68,7 @@ def _is_excluded(path: Path) -> bool:
 # ── CHROMA ────────────────────────────────────────────────────────────────────
 
 def _get_collection(reset: bool = False):
-    embed_fn = SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
+    embed_fn = SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL, device=DEVICE)
     client   = chromadb.PersistentClient(path=str(CHROMA_DIR))
     col = client.get_or_create_collection(
         name=COLLECTION,
@@ -211,7 +220,7 @@ def _get_ce():
     if _ce is None:
         try:
             from sentence_transformers import CrossEncoder
-            _ce = CrossEncoder(RERANKER_MODEL)
+            _ce = CrossEncoder(RERANKER_MODEL, device=DEVICE)
         except Exception:
             _ce = False
     return _ce if _ce is not False else None
