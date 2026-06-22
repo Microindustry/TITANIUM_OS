@@ -17,6 +17,7 @@ tags: avventura, educativo, nina, themis, nina-v2, guardiano, dorme, sistema
   - [ATTO II  Il Giro di Notte](#atto-ii-il-giro-di-notte)
   - [ATTO III  Cosa Rimane al Mattino](#atto-iii-cosa-rimane-al-mattino)
   - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
 
 <!-- /TOC -->
 

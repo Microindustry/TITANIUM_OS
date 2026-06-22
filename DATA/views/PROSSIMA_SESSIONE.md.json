@@ -11,7 +11,7 @@
     {
       "level": 1,
       "title": "PROSSIMA SESSIONE — Piano (lista da seguire punto per punto)",
-      "content": "*Consolidato sessione #20-21 · 04/06/2026 · **casa UNICA del PIANO** (09/06: il Desktop è ora\nsolo mirror della bussola; la vecchia copia Desktop è in `DOCS/_archivio_piano_desktop_20260609.txt`).*\n\n> Regola d'oro: **completare e far FUNZIONARE l'ecosistema prima dei soldi.**\n> Additivo, reversibile, committato. **Non perdere episodi/contenuti.** Ibrido (locale+Claude, RETE+RAG).\n> Generazione episodi: **decide Claude il metodo e lo consegna funzionante** (basta che funzioni).\n> **NON FERMARTI finché non si esaurisce il limite dell'abbonamento di Matteo:** avanza in continuo senza aspettare input ad ogni passo; il grosso su modelli economici, Opus solo per le decisioni. Mai lasciare il sistema fermo."
+      "content": "*Consolidato sessione #20-21 · 04/06/2026 · **casa UNICA del PIANO** (09/06: il Desktop è ora\nsolo mirror della bussola; la vecchia copia Desktop è in `DOCS/_archivio_piano_desktop_20260609.txt`).*\n\n> ## ▶ SESSIONE #42 (prossima) — ULTRACODE · \"PUNTO 0 raggiunto, Nina parte\"\n> **Stato abilitante (fatto in #41):** il RAG gira **integrato** (GPU, semantico==bm25, self-heal\n> automatico); i generatori contenuti sono **grounded sul RAG** (story_agent, content_pipeline,\n> **nina_agent** a 2 stadi); canone VULCAN/MIMS bonificato; vault Obsidian riconnesso + [[_CANONE]].\n> Da qui il RAG è solo **integrabile · scalabile · evolutivo**.\n>\n> **L'ULTIMO LAVORO su Nina (Matteo): renderla DEFINITIVA.** Oggi è troppo frammentata (EP_AV_*\n> vecchi + EP_N2_* v2 + semi), a volte \"si perde\" e diverge dalle STORIE (anch'esse da verificare).\n> Deve diventare un **filone UNICO, discorsivo dall'inizio alla fine**, sapendo che è **evolutivo e\n> integrabile**. **Regola: UNA SOLA VERITÀ sul RAG.** Lo **stile è deciso** (delegato a Claude):\n> vedi `MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md` (+ il piano in 6 passi lì dentro). Poi: **animazione + voce**.\n> Questo è il **Punto 0**: da qui Nina (e noi) partiamo.\n\n> Regola d'oro: **completare e far FUNZIONARE l'ecosistema prima dei soldi.**\n> Additivo, reversibile, committato. **Non perdere episodi/contenuti.** Ibrido (locale+Claude, RETE+RAG).\n> Generazione episodi: **decide Claude il metodo e lo consegna funzionante** (basta che funzioni).\n> **NON FERMARTI finché non si esaurisce il limite dell'abbonamento di Matteo:** avanza in continuo senza aspettare input ad ogni passo; il grosso su modelli economici, Opus solo per le decisioni. Mai lasciare il sistema fermo."
     },
     {
       "level": 2,
@@ -79,7 +79,7 @@
       "content": "Matteo dice: **\"parti dal punto N\"**. Default consigliato: **0 (autonomia) → 1 (dati vivi) → 3 (non perdere + leggibilità) → 2 (avventura)**. Su modelli economici (non bruciare Opus)."
     }
   ],
-  "word_count": 1825,
-  "updated_at": "2026-06-09T13:05:58.928623",
-  "built_at": "2026-06-22T15:55:18.216583"
+  "word_count": 1963,
+  "updated_at": "2026-06-22T15:55:46.391371",
+  "built_at": "2026-06-23T00:24:20.905009"
 }

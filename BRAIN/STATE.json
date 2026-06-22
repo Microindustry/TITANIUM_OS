@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-22T16:24:15.825979",
-  "active_milestone": "Sessione #41 (22/06): PUNTO 0 — il RAG gira INTEGRATO e si auto-cura. Watchdog riabilitato. RAG self-heal: fix radice orfani in rag_engine.py (semantico==bm25 da solo) + gate rebuild_rag_clean ora rileva la divergenza (non solo count=0). Canone VULCAN/CNC corretto su tutti i doc (telaio VULCAN=2 cilindri-guida, il 60x60 e' la CNC; croce sperimentale). Generatori contenuti GROUNDED sul RAG: story_agent v1.2 + content_pipeline. GENERATORE NINA a 2 stadi (NODES/NINA_AGENT/nina_agent.py): Architetto(haiku, RAG)+Scrittore(sonnet, bible viva) -> EP_N2_16 di prova, output in _PROPOSTI. Obsidian riconnesso (650 note) + MOC _CANONE. START_LOGIN incrementale (no piu' rebuild 3min/login).",
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt",
-  "next_step": "PROSSIMA SESSIONE = ULTRACODE: rendere NINA DEFINITIVA — filone UNICO discorsivo inizio->fine, evolutivo+integrabile, UNA SOLA VERITA' sul RAG (canone=EP_N2 v2, vecchi EP_AV_*->archivio; ordinare il cammino con open loop concatenati; audit STORIE). Stile DECISO in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md ('diario animato del sistema vero'). Poi: animazione + voce. Vedi banner in PROSSIMA_SESSIONE.md.",
-  "session_count": 82,
+  "last_update": "2026-06-23T01:34:29.096885",
+  "active_milestone": "Sessione #42 (23/06) BLACKOUT: andata via la luce -> ChromaDB corrotto (HNSW). Diagnosi+cura completa. RECOVERY RAG a 2 LIVELLI (rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard): L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD; copre corruzione+divergenza; agganciato al self-heal notturno. BUG RADICE crash: api_server hidden = stdout/stderr invalidi -> torch nativo crasha; fix redirect su logfile + guardie devnull/stdout. RESET FISICO chroma_db (--rebuild-hard): su chromadb 0.5.23 il reset-per-id non azzera le label hnswlib -> KeyError np.uint64; solo lo spostamento fisico (HNSW da 0) pulisce. GPU rimessa (rag_device.txt=cuda). research_agent v1.2 (backoff 429 + guardia globale). OBSIDIAN: 108 titoli corretti (additivo, no rename, 967 wikilink intatti) + intersect rigenerato (vault 2881 + storie 950 + ponti + wiki). RAG verificato 32974 chunk, 6/6 query ok.",
+  "last_action": "Modifica a EP_20260621_inventario_notturno.md",
+  "next_step": "ULTRACODE: rendere NINA DEFINITIVA — filone UNICO discorsivo inizio->fine, UNA SOLA VERITA' sul RAG (canone=EP_N2 v2, vecchi EP_AV_*->archivio; ordinare il cammino con open loop concatenati; audit STORIE). Stile DECISO in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Poi animazione+voce. Aperti: UPS hardware (cura power-loss), API key Semantic Scholar, chunking per heading.",
+  "session_count": 85,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -19,7 +19,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-22T16:06:39.311015"
+      "last_activity": "2026-06-23T01:30:16.004921"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -77,7 +77,12 @@
       "Canone VULCAN/CNC corretto su tutti i doc (22/06): telaio VULCAN = i 2 cilindri fanno da guida (NON il tubolare 60x60, quello e' la CNC); croce centraggio sperimentale. SCHEDA §1/§3/§6 + BUILD_REALE + VULCAN_MANIFESTO riallineati e reindicizzati",
       "Generatori contenuti GROUNDED sul RAG (22/06): story_agent v1.2 (retrieve_context via /api/rag/search + regola canone nel system prompt) + content_pipeline; allineati al pattern di milestone_to_episode (chiude il loop regola 7)",
       "GENERATORE NINA a 2 stadi (22/06): NODES/NINA_AGENT/nina_agent.py — Architetto(haiku, grounding RAG)+Scrittore(sonnet, Character Bible viva), formato EP_N2_*, output in S_AVVENTURA/_PROPOSTI (il sistema propone, l'umano approva) + riga NINA_SEED; test EP_N2_16 'Il Guardiano che Non Dorme' qualita' definitiva",
-      "Obsidian valorizzato + sistema verificato (22/06): setup_obsidian (650 note, 13 indici, ponti cross-mondo) + MOC curato MENTE/_CANONE.md (la verita' unica); START_LOGIN rebuild->incrementale; sistema tutto-attaccato verificato (API+watchdog+RAG ok)"
+      "Obsidian valorizzato + sistema verificato (22/06): setup_obsidian (650 note, 13 indici, ponti cross-mondo) + MOC curato MENTE/_CANONE.md (la verita' unica); START_LOGIN rebuild->incrementale; sistema tutto-attaccato verificato (API+watchdog+RAG ok)",
+      "BLACKOUT recovery RAG a 2 livelli (23/06): rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard; L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD; copre corruzione (probe) E divergenza (stats); agganciato al self-heal notturno night_research.bat (sostituisce rebuild_rag_clean). Commit d1863576",
+      "Fix bug radice crash post-blackout (23/06): api_server hidden ha stdout/stderr handle OS invalidi -> torch nativo crasha (reset su /api/rag/search); redirect su logfile in restart_api/rebuild_rag_clean/rag_recover/rag_update_exclusive + guardia devnull in api_server.py + guardia stdout in rag_engine.py",
+      "RESET FISICO chroma_db (23/06, commit 04c3f71a): su chromadb 0.5.23 il reset-per-id NON azzera lo spazio-label hnswlib -> label fantasma > count -> KeyError np.uint64 su alcune query; --rebuild-hard + reset_chroma_dir() spostano la cartella fisica (HNSW da 0). RAG verificato 32974 chunk, 6/6 query ok",
+      "GPU rimessa + research_agent v1.2 (23/06): rag_device.txt=cuda (init CUDA non satura piu' il commit, query ~5x); research_agent backoff esponenziale 429/503 + API-key opzionale + guardia globale (log JSON, niente catena abortita), testato live",
+      "OBSIDIAN titoli + intersect (23/06, MENTE d9b044a): 108 titoli normalizzati (H1+frontmatter title da source/notebook) ADDITIVO senza rename (967 wikilink intatti, no clobber heading corpo); fix_titoli_vault.py; intersect rigenerato vault(2881)+storie(950,0 isolati)+ponti+wiki(651 note)"
     ],
     "next": "PROSSIMA SESSIONE ULTRACODE: rendere NINA DEFINITIVA (filone unico discorsivo, evolutivo, UNA SOLA VERITA' sul RAG; canone=EP_N2 v2, archiviare EP_AV_* vecchi, ordinare il cammino, audit STORIE) -> poi animazione+voce. Stile deciso in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Aperti: divergenza RAG 0,2% (auto-fix notturno @03:37), via connettori MIMS (SCHEDA §5), martinetto Vevor+mandrino ER20",
     "target_capannone": "2030-07-15"
@@ -91,12 +96,14 @@
     "ip_lan": "192.168.0.112",
     "ip_tailscale": "100.125.152.124"
   },
-  "focus_today": "PUNTO 0 raggiunto: RAG integrato+self-healing, generatori grounded, generatore Nina pronto, canone bonificato, Obsidian valorizzato. Prossimo (ULTRACODE): Nina DEFINITIVA (filone unico, una sola verita') + animazione/voce. Integra, non rifare.",
+  "focus_today": "BLACKOUT riassorbito: RAG recovery a 2 livelli (rag_recover, --rebuild-hard reset fisico), bug hidden-handle fixato, GPU rimessa (cuda), research_agent resiliente, 108 titoli Obsidian corretti + intersect rigenerato. RAG sano (32974 chunk, 6/6 query ok). Prossimo (ULTRACODE): Nina DEFINITIVA + animazione/voce. Integra, non rifare.",
   "blockers": [
+    "UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20",
     "Chiavi .env da ruotare (red-team #38) — le ruota Matteo",
-    "Divergenza RAG residua 0,2% (semantico vs bm25) — auto-fix notturno @03:37 (rebuild_rag_clean gate migliorato, GPU esclusiva)",
+    "API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna",
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
-    "Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2"
+    "Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2",
+    "Martinetto Vevor 3 stadi da montare (prerequisito fisico VULCAN)"
   ],
   "ideas_inbox": 0,
   "nodes": {

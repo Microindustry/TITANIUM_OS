@@ -1,58 +1,52 @@
-=== RIAVVIO SESSIONE #42 — 22/06/2026 (ULTRACODE) ===
-Ultima sessione: #41 — 2026-06-22
+=== RIAVVIO SESSIONE #43 — 23/06/2026 (ULTRACODE) ===
+Ultima sessione: #42 — 2026-06-23 (nata da un BLACKOUT, riassorbito del tutto)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-PUNTO 0 RAGGIUNTO: il RAG gira INTEGRATO e si auto-cura, i generatori di contenuti
-sono grounded sul RAG, ed esiste il GENERATORE NINA a 2 stadi. Da qui Nina parte
-(e noi con lei): l'ultimo lavoro e' renderla DEFINITIVA, poi animazione e voce.
+Il RAG e' sano, robusto e si auto-cura meglio di prima. Il blackout di stanotte ha
+corrotto ChromaDB: diagnosi completa + cura + irrobustimento. Obsidian ripulito
+(titoli + intersect). Da qui si riparte con NINA DEFINITIVA (l'ultimo lavoro su Nina).
 
-━━━ FATTO IN SESSIONE #41 ━━━
-• RAG self-heal alla RADICE: purge orfani nell'incrementale (semantico==bm25 da solo)
-  + gate rebuild_rag_clean ora rileva la DIVERGENZA (non solo count=0). Watchdog riabilitato.
-• Canone VULCAN/CNC corretto ovunque: telaio VULCAN = i 2 cilindri fanno da guida; il
-  tubolare 60x60 e' la CNC; croce centraggio sperimentale. SCHEDA+BUILD_REALE+MANIFESTO.
-• Generatori GROUNDED sul RAG: story_agent v1.2 + content_pipeline (regola 7).
-• GENERATORE NINA: NODES/NINA_AGENT/nina_agent.py — Architetto(haiku,RAG)+Scrittore(sonnet,bible).
-  Test EP_N2_16 'Il Guardiano che Non Dorme' (in S_AVVENTURA/_PROPOSTI, qualita' definitiva).
-• Obsidian riconnesso (650 note) + MOC MENTE/_CANONE.md (la verita' unica).
-• START_LOGIN: rebuild completo -> incrementale (login veloce). Sistema verificato: tutto attaccato.
-
-━━━ VISIONE NINA ZERO (confermata 22/06 — leggi NINA_STILE_E_PIANO.md per intero) ━━━
-Nina NON e' un cartone: e' un FILM ISTRUTTORIO percorribile/sbloccabile che TI GENERA il CV.
-Meccanismo: sblocchi episodio -> sblocchi COMPETENZA -> si colora il CV (stesso engine del pilastro HR) -> pronto al lavoro.
-• "Nina dal Giorno 0" = casella nuova nella sidebar: Nina arriva al sistema com'e' OGGI (tutto nel RAG) e lo cammina.
-• Gli episodi SONO il cibo del RAG: Nina vive su quello che il progetto gia' produce (no doppio lavoro).
-• Nina Zero MIGLIORA l'ecosistema: per grounddare ogni episodio scova allineamenti e FALLE -> chiudi -> canone migliore (regola 5).
-• Scope ILLIMITATO (competenze vere, visive): Vita pratica (soldi/valore/730/TARI), Meccanica, Elettrico (corso elettricista), IA/sistemi, [aperte].
-• Guide = maestri di bottega per materia: FORGE(meccanica) · THEMIS(misura/metodo) · TESLA(elettrico/CNC) · VESTA(Vita&Casa, NUOVA) · NEXUS/EVA/AVA.
-• La Mappa e' una vera mappa di punti-storia che si riscrive (zoom indietro + 1 pezzo) = geografia del film = salvataggio = CV.
-Generazione SUPERVISIONATA col nina_agent (NON notturna cieca): prima progetta l'arco di allineamento, poi genera e valida.
+━━━ FATTO IN SESSIONE #42 ━━━
+• RECOVERY RAG a 2 livelli (rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard):
+  L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD.
+  Copre corruzione (probe) E divergenza (stats). Agganciato al self-heal notturno night_research.bat.
+• BUG RADICE crash: api_server hidden = stdout/stderr handle OS invalidi -> torch nativo crasha.
+  Fix: redirect su logfile (handle validi) + guardie devnull (api_server) e stdout (rag_engine).
+• RESET FISICO chroma_db (--rebuild-hard): su chromadb 0.5.23 il reset-per-id NON azzera le label
+  hnswlib -> label fantasma > count -> KeyError np.uint64. Solo lo spostamento fisico (HNSW da 0) pulisce.
+• GPU rimessa (rag_device.txt=cuda, gitignored): init CUDA non satura piu' il commit. Query ~5x.
+• research_agent v1.2: backoff esponenziale 429/503 + API-key opzionale + guardia globale.
+• OBSIDIAN: 108 titoli corretti (additivo, no rename, 967 wikilink intatti) + intersect rigenerato
+  (vault 2881 + storie 950 + ponti cross-mondo + wiki 651 note).
+• Verifica end-to-end: RAG 32974 chunk, semantico==bm25, 6/6 query ok, vectors/RETE ok.
+• Commit: d1863576 + 04c3f71a (TITANIUM_OS) + d9b044a (MENTE, 630 file).
 
 ━━━ PROSSIMO LAVORO — L'ULTIMO SU NINA: renderla DEFINITIVA (in ordine) ━━━
-Stile DECISO e piano in 6 passi: MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md (leggilo per primo).
+Stile DECISO e piano: MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md (leggilo per primo).
 Regola: UNA SOLA VERITA' sul RAG. Additivo, evolutivo, integrabile.
-PRIMI PASSI ULTRACODE: 1) casella "Nina dal Giorno 0" in sidebar · 2) PROGETTARE l'arco di allineamento
-(competenze dal Giorno 0 derivate dal RAG reale) · 3) report falle nina_gaps.json · 4) generare supervisionato.
 1. Canone unico = EP_N2 (v2). Spostare i vecchi EP_AV_* in S_AVVENTURA/_ARCHIVIO (NON cancellare).
 2. Ordinare il CAMMINO (il "libro"): open loop concatenati casella N -> N+1, riempire i buchi.
 3. Una sola verita': ri-verificare ogni episodio col grounding (nina_agent/RAG), allineare i FATTI,
-   coerenza Pietre ⟡ (c'era incoerenza ⟡2 Entropia vs Automazione).
+   coerenza Pietre.
 4. Continuita' esplicita in ogni episodio (Dove siamo + open loop).
 5. Audit STORIE (binario tecnico): verificare il grounding, correggere dove inventano.
-6. Predisporre ANIMAZIONE + VOCE (il blocco SCENE/key-image c'e' gia').
-Stile = "il diario animato del sistema vero", massima integrazione all'ecosistema.
+6. Predisporre ANIMAZIONE + VOCE.
+Casella "Nina dal Giorno 0" in sidebar + arco di allineamento competenze dal RAG reale.
 
 ━━━ BLOCKERS ━━━
-⚠ Divergenza RAG residua 0,2% (semantico vs bm25) — si auto-allinea stanotte @03:37
-  (TI_NightResearch -> rebuild_rag_clean elevato, gate migliorato, GPU esclusiva). Verificare a inizio sessione.
+⚠ UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg).
+  E' la cura ALLA RADICE: il software recupera dopo, l'UPS evita il danno. Accanto a Vevor+ER20.
 ⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
+⚠ API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 notturni.
 ⚠ Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2.
 ⚠ Martinetto Vevor 3 stadi da montare + mandrino 2.2kW ER20 da ordinare (prerequisiti fisici VULCAN).
 
 ━━━ NOTE ━━━
-• RAG sano = semantico == bm25. Un solo processo GPU alla volta (GTX 1070 8GB): CLI rebuild con
-  l'API su -> CUDA OOM. Per un rebuild manuale: SERVICES/rebuild_rag_clean.ps1 (ferma l'API).
-• Generatore Nina: output in _PROPOSTI -> rivedere -> spostare in S_AVVENTURA + riga NINA_SEED in build_episodes_json.py.
-• Verita' unica per pilastro: MENTE/_CANONE.md.
+• RAG sano = semantico == bm25. Un solo processo GPU alla volta (GTX 1070 8GB).
+• Dopo modifiche MASSIVE a MENTE (intersect/titoli): SERVICES/rag_update_exclusive.ps1 (rebuild HARD
+  esclusivo). NON incrementale (lascia label fantasma su 0.5.23). Per pochi file: incrementale notturno ok.
+• Dopo un blackout: SERVICES/rag_recover.ps1 (recupera in secondi con L1, o L2 hard).
+• Generatore Nina: output in _PROPOSTI -> rivedere -> spostare in S_AVVENTURA + riga NINA_SEED.
+• Verita' unica per pilastro: MENTE/_CANONE.md. Upgrade RAG futuro: chunking per heading.
 
-Generato: 22/06/2026 — fine sessione #41
+Generato: 23/06/2026 — fine sessione #42

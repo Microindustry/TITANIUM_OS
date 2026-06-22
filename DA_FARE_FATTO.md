@@ -1,6 +1,9 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 41  22/06/2026  Watchdog ON  RAG self-heal  canone VULCAN/CNC corretto](#sessione-41-22062026-watchdog-on-rag-self-heal-canone-vulcancnc-corretto)
+    - [Processo CONTENUTI  automazioni  grounding RAG alla fonte](#processo-contenuti-automazioni-grounding-rag-alla-fonte)
+    - [Chiusura 41  Obsidian valorizzato, sistema verificato, Punto 0 predisposto](#chiusura-41-obsidian-valorizzato-sistema-verificato-punto-0-predisposto)
   - [Sessione 40  22/06/2026  RAG SBLOCCATO (GPU ripristinata  ChromaDB stabile)](#sessione-40-22062026-rag-sbloccato-gpu-ripristinata-chromadb-stabile)
   - [Sessione 39  20/06/2026  fix night_audit  ECOSISTEMA vault Obsidian](#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)
   - [Sessione 38  12-18/06/2026  NotebookLM  pitch/CV/pilastri (con DEBITO da integrare)](#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)
@@ -54,6 +57,33 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect
+
+*Sessione nata da un blackout ("è andata via la luce e ti sei spento"). Niente perso (tutto nel repo). Diagnosi + cura + irrobustimento.*
+
+- [✓] **Recovery RAG a 2 livelli** (`SERVICES/rag_recover.ps1` + flag `rag_engine.py --probe/--drop-hnsw/--rebuild-hard`):
+      L0 sonda · L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed) · L2 rebuild HARD.
+      Copre corruzione (probe) E divergenza (stats). **Agganciato al self-heal notturno** `night_research.bat` (sostituisce rebuild_rag_clean).
+- [✓] **Bug radice crash stanotte**: `api_server` hidden = stdout/stderr handle OS invalidi → torch nativo crasha (reset su /api/rag/search).
+      Fix: redirect su logfile (handle validi) in `restart_api`/`rebuild_rag_clean`/`rag_recover` + guardia devnull in `api_server.py` + guardia stdout in `rag_engine.py`.
+- [✓] **RESET FISICO chroma_db** (`--rebuild-hard` + `reset_chroma_dir()`): su chromadb 0.5.23 il reset-per-id NON azzera le label hnswlib →
+      label fantasma > count → `KeyError np.uint64` su alcune query. Solo spostare la cartella fisica (HNSW da 0) pulisce. L2 e rag_update_exclusive lo usano.
+- [✓] **GPU rimessa** (`rag_device.txt`=cuda, gitignored): l'init CUDA non ha più saturato il commit (44 GB liberi). Query/rebuild ~5x.
+- [✓] **research_agent v1.2**: backoff esponenziale 429/503, API-key opzionale (`SEMANTIC_SCHOLAR_API_KEY`), rete difensiva + guardia globale (log JSON, niente catena abortita). Testato live.
+- [✓] **Obsidian — 108 titoli corretti** (`fix_titoli_vault.py`): H1 in testa + frontmatter `title:` derivati da `source`/`notebook`.
+      ADDITIVO: zero rename (967 wikilink intatti), no clobber heading di corpo, canon preservato.
+- [✓] **Intersect rigenerato** sui titoli puliti: vault_intersect (2881 legami) + storie_intersect (950, 0 isolati) + setup_obsidian (ponti cross-mondo) + wiki_index (651 note).
+- [✓] **Verifica end-to-end**: RAG 32974 chunk, semantico==bm25, 6/6 query ok, vectors/RETE ok. Watchdog Running, api su GPU.
+- [✓] Commit: `d1863576` (recovery+research_agent) · `04c3f71a` (titoli+hard reset) · MENTE `d9b044a` (630 file).
+- [💡] **Ricerca best-practice** (fatta): ChromaDB non è crash-durable (limite noto); la nostra architettura corpus-come-fonte è giusta.
+- [ ] **UPS hardware** (~50-80€): la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni) → cura alla radice. Blocker hardware accanto a martinetto Vevor + mandrino ER20.
+- [ ] **API key Semantic Scholar** gratuita in `.env` → azzera i 429 della ricerca notturna.
+- [ ] **Chunking per heading** (#/##/###) invece di 512-char fisso → retrieval più preciso (richiede rebuild). Upgrade RAG post-Nina.
+- [ ] **Backup snapshot chroma_db** in `_VAULT/BACKUPS` (tar via deep_freeze) + test restore.
+- [ ] Cartelle `chroma_db_*` (corrotte/parziali/reset) cancellabili quando tranquillo (gitignored).
 
 ---
 

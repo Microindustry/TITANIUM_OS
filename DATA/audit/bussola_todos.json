@@ -6,6 +6,24 @@
     "sessione": ""
   },
   {
+    "id": "BUS-ccc56b03",
+    "stato": "da_fare",
+    "testo": "(#sessione-41-22062026-watchdog-on-rag-self-heal-canone-vulcancnc-corretto)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-3528f2c1",
+    "stato": "da_fare",
+    "testo": "(#processo-contenuti-automazioni-grounding-rag-alla-fonte)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-45545b9a",
+    "stato": "da_fare",
+    "testo": "(#chiusura-41-obsidian-valorizzato-sistema-verificato-punto-0-predisposto)",
+    "sessione": ""
+  },
+  {
     "id": "BUS-3f27b201",
     "stato": "da_fare",
     "testo": "(#sessione-40-22062026-rag-sbloccato-gpu-ripristinata-chromadb-stabile)",
@@ -208,6 +226,96 @@
     "stato": "da_fare",
     "testo": "(#idee-note)",
     "sessione": ""
+  },
+  {
+    "id": "BUS-ab3f0204",
+    "stato": "fatto",
+    "testo": "**Recovery RAG a 2 livelli** (`SERVICES/rag_recover.ps1` + flag `rag_engine.py --probe/--drop-hnsw/--rebuild-hard`):",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-2d3852fc",
+    "stato": "fatto",
+    "testo": "**Bug radice crash stanotte**: `api_server` hidden = stdout/stderr handle OS invalidi → torch nativo crasha (reset su /api/rag/search).",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-76a2264f",
+    "stato": "fatto",
+    "testo": "**RESET FISICO chroma_db** (`--rebuild-hard` + `reset_chroma_dir()`): su chromadb 0.5.23 il reset-per-id NON azzera le label hnswlib →",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-6fb393cc",
+    "stato": "fatto",
+    "testo": "**GPU rimessa** (`rag_device.txt`=cuda, gitignored): l'init CUDA non ha più saturato il commit (44 GB liberi). Query/rebuild ~5x.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-f3343094",
+    "stato": "fatto",
+    "testo": "**research_agent v1.2**: backoff esponenziale 429/503, API-key opzionale (`SEMANTIC_SCHOLAR_API_KEY`), rete difensiva + guardia globale (log JSON, niente catena abortita). Testato live.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-2cd8891b",
+    "stato": "fatto",
+    "testo": "**Obsidian — 108 titoli corretti** (`fix_titoli_vault.py`): H1 in testa + frontmatter `title:` derivati da `source`/`notebook`.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-f1e24123",
+    "stato": "fatto",
+    "testo": "**Intersect rigenerato** sui titoli puliti: vault_intersect (2881 legami) + storie_intersect (950, 0 isolati) + setup_obsidian (ponti cross-mondo) + wiki_index (651 note).",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-eb65832e",
+    "stato": "fatto",
+    "testo": "**Verifica end-to-end**: RAG 32974 chunk, semantico==bm25, 6/6 query ok, vectors/RETE ok. Watchdog Running, api su GPU.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-fb67cbfa",
+    "stato": "fatto",
+    "testo": "Commit: `d1863576` (recovery+research_agent) · `04c3f71a` (titoli+hard reset) · MENTE `d9b044a` (630 file).",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-ad60e269",
+    "stato": "idea",
+    "testo": "**Ricerca best-practice** (fatta): ChromaDB non è crash-durable (limite noto); la nostra architettura corpus-come-fonte è giusta.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-eb9e6222",
+    "stato": "da_fare",
+    "testo": "**UPS hardware** (~50-80€): la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni) → cura alla radice. Blocker hardware accanto a martinetto Vevor + mandrino ER20.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-8567bc3d",
+    "stato": "da_fare",
+    "testo": "**API key Semantic Scholar** gratuita in `.env` → azzera i 429 della ricerca notturna.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-97a0dc6d",
+    "stato": "da_fare",
+    "testo": "**Chunking per heading** (#/##/###) invece di 512-char fisso → retrieval più preciso (richiede rebuild). Upgrade RAG post-Nina.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-33fa84da",
+    "stato": "da_fare",
+    "testo": "**Backup snapshot chroma_db** in `_VAULT/BACKUPS` (tar via deep_freeze) + test restore.",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
+  },
+  {
+    "id": "BUS-82305083",
+    "stato": "da_fare",
+    "testo": "Cartelle `chroma_db_*` (corrotte/parziali/reset) cancellabili quando tranquillo (gitignored).",
+    "sessione": "Sessione #42 · 23/06/2026 — BLACKOUT: RAG recovery 2-livelli + Obsidian titoli/intersect"
   },
   {
     "id": "BUS-b6faec01",
