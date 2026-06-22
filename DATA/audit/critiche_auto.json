@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-fbd54f3019",
+    "date": "2026-06-22",
+    "git": "932fe7e9",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8' è aperto senza data di risoluzione. Si tratta di una decisione di design (non un task tecnico) che blocca a valle un intero step (V8). Decisioni binarie non prese accumulano dipendenze bloccate silenziosamente.",
+    "azione": "Formalizzare la decisione v.A/v.B in un documento di una pagina con i criteri (costo, rigidità, complessità fresatura) e chiuderla nella prossima sessione. Non serve prototipare: serve decidere e registrare il razionale.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-22"
+  },
+  {
+    "id": "AUD-9787476b2c",
+    "date": "2026-06-22",
+    "git": "932fe7e9",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Stanotte OpenAlex ha restituito zero risultati per la query CNC/mandrino: \"2026-06-22 03:38:31 [research_agent] INFO openalex -> 0 risultati\" (22/06/2026). Semantic Scholar ha restituito anch'esso \"semantic_scholar -> 0 risultati\" (22/06/2026) prima del 429. La notte di ricerca su V32 (spindle ER20, runout, thermal accuracy) ha prodotto zero input utili, su un topic che è blocker hardware attivo.",
+    "azione": "Rivedere le query strings per OpenAlex/Semantic Scholar su questo topic: 'CNC spindle ER20 runout thermal accuracy' è troppo specifico e composto. Spezzare in query più semplici ('ER20 collet runout', 'spindle thermal error CNC') e aggiungere almeno una sorgente alternativa (es. CrossRef o arxiv) come fallback per il dominio ingegneristico.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-22"
+  },
+  {
+    "id": "AUD-74a2dc9f29",
+    "date": "2026-06-22",
+    "git": "932fe7e9",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS' è presente nei blockers attivi e il pillar V32 è al 65%. La ricerca notturna ha tentato proprio query su 'CNC spindle ER20 runout thermal accuracy' (22/06/2026) — il sistema sta cercando dati tecnici su un componente non ancora ordinato. Finché il mandrino non è ordinato, né la ricerca né il progresso V32 possono chiudersi.",
+    "azione": "Definire un termine concreto per l'ordine del mandrino (fornitore, budget, data). Senza questo, V32 rimane bloccato a livello hardware e la ricerca notturna continuerà a girare a vuoto sullo stesso topic.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-22"
+  },
+  {
+    "id": "AUD-71c2ae2e8b",
+    "date": "2026-06-22",
+    "git": "932fe7e9",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Il research_agent è andato in crash stanotte con traceback non gestito. I log mostrano: \"2026-06-22 03:38:33 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&\" seguito da \"Traceback (most recent call last):\" (22/06/2026) — il 429 di Semantic Scholar non è intercettato con retry/backoff, causa eccezione non gestita e termina il processo. Il giorno prima il night_push.log registrava già \"⚠ night_research.log: Traceback (most recent call last):\" (21/06/2026): il pattern si ripete da almeno due notti consecutive.",
+    "azione": "Aggiungere nel research_agent un handler esplicito per HTTPError 429 con exponential backoff (es. tentativi 3x con wait 60/120/240s) e un fallback graceful che logga 'sorgente non disponibile, skip' invece di propagare l'eccezione. Verificare che il processo non termini su eccezione non catturata.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-22"
+  },
+  {
+    "id": "AUD-6ed7c6c248",
+    "date": "2026-06-22",
+    "git": "932fe7e9",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto nei blockers di stanotte, nonostante il commit 43e74471 abbia aggiunto la denylist su /api/file. La rotazione delle chiavi è un'azione manuale che spetta a Matteo e non risulta completata: le chiavi esposte durante il red-team #38 rimangono attive. Non è un'ipotesi: è esplicitamente elencato come blocker non risolto.",
+    "azione": "Matteo ruota le chiavi .env prima della prossima sessione con agenti attivi. Priorità: questa è l'unica azione di sicurezza bloccata su una persona fisica, non su codice.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-22"
+  },
+  {
+    "id": "AUD-27ee9c028f",
+    "date": "2026-06-22",
+    "git": "932fe7e9",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La bussola aperta include '#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian' con il punto 'Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE' ancora da completare (confermato anche in next_step). Il commit decc485e del 21/06 segnala 'punto 7 fatto — riordino _DA_ORDINARE + Obsidian Mari/VULCAN/MIMS' ma il todo rimane aperto in bussola: c'è disallineamento tra stato reale e stato registrato. Se il riordino non è completato, il RAG continua a lavorare su materiale non categorizzato in _DA_ORDINARE, abbassando la qualità dei chunk indicizzati (29.113 chunk totali).",
+    "azione": "Verificare a inizio sessione se decc485e ha effettivamente completato il riordino Obsidian o solo avviato: allineare la bussola al reale. Se incompleto, eseguire il riordino prima di qualsiasi nuova ingestione in RAG.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-22"
+  },
+  {
     "id": "AUD-fe9cac2154",
     "date": "2026-06-21",
     "git": "eca4bb17",
@@ -832,8 +904,10 @@
     "finding": "night_push.log: rilevato crash/eccezione nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-17"
+    "status": "resolved",
+    "last_seen": "2026-06-17",
+    "resolved_on": "2026-06-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-dd28c36b33",
