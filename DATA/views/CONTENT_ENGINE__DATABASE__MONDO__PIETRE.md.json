@@ -6,12 +6,12 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)\n- [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)\n  - [0  LA MATERIA  (6 episodi)](#0-la-materia-6-episodi)\n  - [1  LA TRACCIA  (4 episodi)](#1-la-traccia-4-episodi)\n  - [2  LOFFICINA CHE GIRA SOLA  (8 episodi)](#2-lofficina-che-gira-sola-8-episodi)\n  - [3  LA MENTE CHE PARLA  (5 episodi)](#3-la-mente-che-parla-5-episodi)\n  - [4  LA BIBLIOTECA DELLE FONTI  (4 episodi)](#4-la-biblioteca-delle-fonti-4-episodi)\n  - [5  LA GRANDE MAPPA  (17 episodi)](#5-la-grande-mappa-17-episodi)\n  - [6  LESERCITO SILENZIOSO  (5 episodi)](#6-lesercito-silenzioso-5-episodi)\n  - [7  IL DIRETTORE  (8 episodi)](#7-il-direttore-8-episodi)\n- [Verticale: Finanza personale](#verticale-finanza-personale)\n  - [1  IL VALORE  (2 episodi)](#1-il-valore-2-episodi)\n  - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)\n  - [3  IL CUSCINETTO  (0 episodi)](#3-il-cuscinetto-0-episodi)\n  - [4  FAR LAVORARE I SOLDI  (0 episodi)](#4-far-lavorare-i-soldi-0-episodi)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)\n- [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)\n  - [0  LA MATERIA  (4 episodi)](#0-la-materia-4-episodi)\n  - [1  LA TRACCIA  (2 episodi)](#1-la-traccia-2-episodi)\n  - [2  LOFFICINA CHE GIRA SOLA  (7 episodi)](#2-lofficina-che-gira-sola-7-episodi)\n  - [3  LA MENTE CHE PARLA  (3 episodi)](#3-la-mente-che-parla-3-episodi)\n  - [4  LA BIBLIOTECA DELLE FONTI  (3 episodi)](#4-la-biblioteca-delle-fonti-3-episodi)\n  - [5  LA GRANDE MAPPA  (16 episodi)](#5-la-grande-mappa-16-episodi)\n  - [6  LESERCITO SILENZIOSO  (3 episodi)](#6-lesercito-silenzioso-3-episodi)\n  - [7  IL DIRETTORE  (7 episodi)](#7-il-direttore-7-episodi)\n- [Verticale: Finanza personale](#verticale-finanza-personale)\n  - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)\n  - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)\n  - [3  IL CUSCINETTO  (0 episodi)](#3-il-cuscinetto-0-episodi)\n  - [4  FAR LAVORARE I SOLDI  (0 episodi)](#4-far-lavorare-i-soldi-0-episodi)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
       "title": "PIETRE — l'indice dei concetti (concetto → episodio)",
-      "content": "*Generato da `generate_pietre_index.py` il 2026-06-20 — VISTA dell'`asse_nina`*\n*in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*\n\n> Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e\n> **Finanza** (₣, l'asse \"di lato\"). Sotto ciascuna Pietra gli episodi che la **fondano**\n> o **approfondiscono**, per *giro di spirale*. `fonte` = tecnico · `adattato` = episodio Nina."
+      "content": "*Generato da `generate_pietre_index.py` il 2026-06-23 — VISTA dell'`asse_nina`*\n*in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*\n\n> Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e\n> **Finanza** (₣, l'asse \"di lato\"). Sotto ciascuna Pietra gli episodi che la **fondano**\n> o **approfondiscono**, per *giro di spirale*. `fonte` = tecnico · `adattato` = episodio Nina."
     },
     {
       "level": 1,
@@ -20,8 +20,8 @@
     },
     {
       "level": 2,
-      "title": "₣1 · IL VALORE  (2 episodi)",
-      "content": "| giro | episodio | concetto | stato | richiama |\n|:--:|---|---|:--:|---|\n| 1 | `EP_AV_FIN_01` Il Valore — cosa sono davvero i soldi | cosa sono i soldi: lavoro e fiducia, scambiabili | adattato | — |\n| 1 | `EP_N2_15` Il Valore | il valore: i soldi sono lavoro conservato + fiducia condivisa | adattato | — |"
+      "title": "₣1 · IL VALORE  (1 episodi)",
+      "content": "| giro | episodio | concetto | stato | richiama |\n|:--:|---|---|:--:|---|\n| 1 | `EP_N2_15` Il Valore | il valore: i soldi sono lavoro conservato + fiducia condivisa | adattato | — |"
     },
     {
       "level": 2,
@@ -39,7 +39,7 @@
       "content": "*(ancora nessun episodio — Pietra da posare)*\n\n---\n\n**Regola dei prerequisiti (spirale macro):** un episodio non può usare una Pietra non\nancora posata. `richiama` elenca le Pietre già note che riattiva (ripetizione spaziata).\n⟡0 (la materia) è la radice dell'arco Tech; la richiamano tutte."
     }
   ],
-  "word_count": 1313,
-  "updated_at": "2026-06-20T19:30:18.887343",
-  "built_at": "2026-06-23T00:24:37.797138"
+  "word_count": 1139,
+  "updated_at": "2026-06-23T10:14:21.850325",
+  "built_at": "2026-06-23T10:14:21.865923"
 }

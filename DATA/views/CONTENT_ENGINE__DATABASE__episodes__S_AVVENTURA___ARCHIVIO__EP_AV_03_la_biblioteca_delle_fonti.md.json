@@ -1,0 +1,59 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/EP_AV_03_la_biblioteca_delle_fonti.md",
+  "title": "La Biblioteca delle Fonti",
+  "meta": {
+    "id": "EP_AV_03",
+    "title": "La Biblioteca delle Fonti",
+    "sottotitolo": "Dare alla Mente i fogli veri — e obbligarla a dire da dove ha preso ogni risposta",
+    "stagione": "AV",
+    "data_evento": "2026-06-10",
+    "status": "ready",
+    "durata_min": "8",
+    "tags": "avventura, educativo, bambini, nina, themis, rag, ricerca, fonti, memoria"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_AV_03  La Biblioteca delle Fonti](#epav03-la-biblioteca-delle-fonti)\n    - [Dare alla Mente i fogli veri  e obbligarla a dire da dove ha preso ogni risposta](#dare-alla-mente-i-fogli-veri-e-obbligarla-a-dire-da-dove-ha-preso-ogni-risposta)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL CASSETTO DEI MILLE FOGLI](#atto-i-il-cassetto-dei-mille-fogli)\n  - [ATTO II  CERCARE PER SIGNIFICATO, NON PER PAROLA](#atto-ii-cercare-per-significato-non-per-parola)\n  - [ATTO III  I TRE FOGLI E IL DITO CHE INDICA](#atto-iii-i-tre-fogli-e-il-dito-che-indica)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Dare alla Mente i fogli veri — e obbligarla a dire da dove ha preso ogni risposta\"",
+      "content": "**Formato:** Avventura (binario educativo) | Durata stimata: 8-10 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** il RAG — *la Mente non inventa più: cerca nei fogli veri, prende i pezzi giusti e dice da dove vengono*\n**Canone:** BIBBIA_DEL_MONDO.md · MAPPA_AVVENTURA.md (Regione 4) · PERCORSO_EVOLUTIVO.md §4 (la spirale del RAG) · concetto reale da EP_T05 \"Il Sistema Pensa\" + EP_AUTO_26 \"RAG v4.0\"\n**Arco:** tappa 4 di 7 (la storia dell'IA) — richiama l'LLM di EP_AV_02\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Nina si era svegliata con la domanda ancora in mano, come quando ti addormenti\nstringendo qualcosa e la mattina è lì.\n\n*Se potessi dare alla Mente i fogli veri — i miei, quelli del Sistema — e obbligarla a\nrispondere solo guardando quelli…*\n\nCorse alla Giuntura. THEMIS stava misurando un pezzo, come sempre.\n\n«THEMIS. La Mente inventa perché risponde a memoria, vero? E se invece la costringessimo\na *leggere* prima di parlare?»\n\nTHEMIS posò il calibro. Non capitava spesso che lo posasse. «Hai appena descritto la\nstanza più importante del Sistema. Vieni.»\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — IL CASSETTO DEI MILLE FOGLI",
+      "content": "La portò in una stanza che Nina non aveva mai visto: piena, dal pavimento al soffitto, di\n**fogli**. Ogni cosa mai fatta nel Sistema era scritta lì. Ogni misura, ogni errore, ogni\nsera in officina. Migliaia e migliaia di fogli.\n\n«Questa è la **Biblioteca**» disse THEMIS. «Qui non c'è niente di inventato. Solo cose\nsuccesse davvero.»\n\nNina provò a cercare un foglio: quello di quando avevano aggiustato il motore. Cominciò a\nguardarli uno per uno. Dopo cento fogli aveva mal di testa e non l'aveva trovato.\n\n«Lento, eh?» disse THEMIS. «A uno a uno non si finisce mai. Questo è il primo problema\ndella Biblioteca: *avere tutto* non serve, se non sai **trovare**.»\n\n> *(Strato fondo, per il papà fabbro: cercare a una a una è tempo lineare — mille fogli,\n> mille controlli. Non scala. Da qui in poi è tutta una corsa a non guardarli tutti.)*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — CERCARE PER SIGNIFICATO, NON PER PAROLA",
+      "content": "«Prova così» disse THEMIS. «Non cercare la *parola*. Cerca il *senso*.»\n\nNina chiuse gli occhi e pensò a cosa voleva davvero: *quella volta che la macchina\ntremava e l'abbiamo sistemata.* Quando li riaprì, un foglio si era illuminato. Ma sul\nfoglio non c'era scritto \"motore\". C'era scritto **«vibrazione»**.\n\n«Ma… io non ho detto \"vibrazione\"» disse Nina.\n\n«No. Hai detto \"tremava\". Parole diverse — *stesso senso*. La Biblioteca brava non cerca\nle lettere uguali: cerca le cose che **vogliono dire la stessa cosa**. È come un amico che\ncapisce *cosa intendi* anche se sbagli la parola.»\n\nNina spalancò gli occhi. «Quindi capisce il significato.»\n\n«Lo avvicina. Mette vicini i fogli che parlano della stessa cosa, anche con parole\ndiverse. I grandi la chiamano **ricerca per significato**.» THEMIS fece una pausa. «Ma da\nsola non basta. A volte la parola *esatta* conta — un nome, una misura, un codice preciso.\nAllora la Biblioteca usa **tutte e due le mani**: una cerca il senso, l'altra cerca la\nparola esatta. Poi mette insieme i risultati e tiene i migliori.»\n\n> *(Strato fondo: la mano-significato è la ricerca semantica; la mano-parola è quella per\n> termine esatto — il nostro RAG le fonde tutte e due, e un terzo passo riordina i pochi\n> fogli rimasti tenendo davvero i più pertinenti.)*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — I TRE FOGLI E IL DITO CHE INDICA",
+      "content": "«Ora arriva la parte che cercavi» disse THEMIS. E fece entrare la **Mente** — quella\ndell'altra volta, quella che sapeva parlare benissimo ma a volte inventava con la faccia\nsicura `⟡3`.\n\n«Mente» disse THEMIS, severa, «oggi non rispondi a memoria. Prima la Biblioteca ti dà i\n**tre fogli giusti**. Tu rispondi *solo* guardando quelli. E ogni volta dici **da quale\nfoglio** hai preso la risposta. Se non c'è scritto sui fogli, dici: *non lo so*.»\n\nNina trattenne il fiato. Rifece la domanda di prima — quella delle campane d'argento:\n«Mente, chi ha costruito il ponte della Giuntura?»\n\nLa Mente, stavolta, non si lanciò. Aspettò i tre fogli. Li lesse. Poi disse, più piano ma\npiù sicura: «Sui fogli non c'è scritto chi l'ha costruito. *Non lo so.* Ma il foglio\nnumero due dice quando è stato riparato l'ultima volta — se ti serve, è lì.»\n\nNina si voltò verso THEMIS, e aveva gli occhi lucidi senza sapere perché. «Non si è\ninventata niente.»\n\n«Non *poteva*» disse THEMIS. «Le abbiamo tolto il permesso di indovinare. Adesso ha i\nfogli veri davanti, e per ogni risposta deve **puntare il dito** su quale foglio l'ha\ndetto. Questo — il dare i fogli veri *più* l'obbligo di citare la fonte — è la cosa che\nvolevi ieri sera. I grandi le danno un nome strano: lo chiamano **RAG**.»\n\n«RAG» ripeté Nina, assaporandolo.\n\n«Recupera i fogli giusti, *poi* parla. E mostra sempre da dove. Una Mente che parla bene\nti incanta. Una Mente che parla bene **e ti fa vedere il foglio** — quella ti puoi\nfidare.»\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Quella sera Nina tornò nella Biblioteca da sola. Prese un foglio nuovo, e scrisse la cosa\nche aveva imparato quel giorno in officina. La mise nel cassetto con le altre.\n\nPoi capì una cosa che la fece sorridere: ogni foglio che aggiungeva oggi, domani la Mente\npoteva *trovarlo*. La Biblioteca non era una stanza ferma. **Cresceva.** E più cresceva,\nmeno la Mente poteva inventare.\n\nUna risposta vera non è quella che suona meglio. È quella che ti sa dire **da dove viene**.\n\n> Ma quella notte, guardando le migliaia di fogli, Nina notò una cosa nuova. Alcuni fogli\n> *si parlavano tra loro*: quello del motore richiamava quello della vibrazione, che\n> richiamava quello della misura sbagliata di tre mesi prima. Fili invisibili da un foglio\n> all'altro.\n>\n> *E se i fili fossero migliaia? Se potessi vederli tutti insieme — non i fogli, ma come\n> sono legati? Che faccia avrebbe la Biblioteca, vista così?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito la Biblioteca delle Fonti? Provalo tu: la prossima volta che qualcuno ti dice\nuna cosa sicurissima, chiedi \"da dove lo sai?\". Se sa puntare il dito su un foglio vero,\nè RAG. Se non sa, sta solo indovinando con la faccia sicura.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡4` il **RAG / la Biblioteca delle Fonti** (arco, tappa 4): *prima recupera i fogli veri, poi la Mente risponde guardando solo quelli e dicendo da dove viene ogni risposta. Senza fonti è solo immaginazione.*\n**Pietre richiamate:** l'**LLM** `⟡3 → EP_AV_02` (la Mente che inventava → ora vincolata ai fogli) · il **Grande Loop** `⟡1` (ogni foglio aggiunto oggi è ritrovabile domani — la Biblioteca cresce e insegna).\n**Key-image:** la stanza dei mille fogli (Atomi+Bit insieme) · le **due mani** della ricerca (una per il senso, una per la parola esatta) · la Mente che **punta il dito** sul foglio-fonte invece di parlare a vuoto.\n**3 strati:** bambino = l'amico bugiardo a cui dai i fogli veri e che ora deve mostrare da dove · curioso = \"questo si chiama RAG: recupero + risposta con le fonti; cercare per *significato* non per parola\" · esperto/papà = MENTE RAG reale: ricerca semantica (ChromaDB) **+** keyword (BM25) fuse insieme, reranker che riordina i top, risposta citata; ~6.5k chunk indicizzati, e cresce in modo incrementale.\n**Aggancio reale:** EP_T05 \"Il Sistema Pensa\" · EP_T04 \"SINAPSI\" · EP_AUTO_26 \"RAG v4.0\" (BM25+semantico+CrossEncoder, RRF) · il nodo MENTE_RAG su GPU.\n**Open loop → Regione 5 (la Wiki / il grafo):** i fogli si parlano tra loro; vedere non i fogli ma **i fili che li legano** — la Grande Mappa."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio EP_AV_03 è la tappa 4 di 7 dell'arco narrativo \"storia dell'IA\" nel progetto TITANIUM_OS, ambientato nella Regione 4 della mappa avventura.\n\n- **FATTO:** Il RAG (Retrieval-Augmented Generation) è descritto nel canone TITANIUM_OS come un sistema a due componenti obbligatorie: (1) recupero dei fogli/documenti pertinenti dalla Biblioteca, (2) obbligo per la Mente di citare la fonte (il foglio specifico) per ogni risposta fornita.\n\n- **DECISIONE:** La ricerca nella Biblioteca usa **due modalità combinate**: ricerca per significato (semantica) e ricerca per parola esatta (termine/codice preciso), con un terzo passo di riordino per tenere solo i risultati più pertinenti. **LOGICA:** la sola ricerca semantica non basta quando contano nomi, misure o codici esatti.\n\n- **FATTO:** Il vincolo operativo imposto alla Mente nel RAG è: rispondere *solo* guardando i fogli forniti (tipicamente tre), e dichiarare \"non lo so\" se l'informazione non è presente nei fogli — togliendo il permesso di indovinare o rispondere a memoria.\n\n- **FATTO:** Questo episodio si collega canonicamente a EP_T05 \"Il Sistema Pensa\" e a EP_AUTO_26 \"RAG v4.0\", che rappresentano la versione tecnica reale del concetto narrativo esposto qui."
+    }
+  ],
+  "word_count": 1602,
+  "updated_at": "2026-06-12T16:02:56.202422",
+  "built_at": "2026-06-23T10:26:13.865642"
+}

@@ -84,7 +84,12 @@
   - [✓] **BUG: il watcher combatteva il rebuild** — il 1° tentativo era fallito (watcher.py vedeva i 287 file Obsidian → incrementale gigante, 52k delete label-fantasma, crash mid-write, search 500). FIX: `rag_update_exclusive.ps1`+`rag_recover.ps1` ora fermano ANCHE watcher.py (e lo riavviano). Commit `7c371655`.
 - [✓] **Dashboard riavviata** (5173 era giù): `pnpm dev` → HTTP 200, API 200. Sito di nuovo raggiungibile.
 - [✓] **Obsidian sistemato**: archiviati esclusi dai tool del vault (ecosystem_bridge/wiki_index/fix_titoli/setup_obsidian), 13 archiviati resi inerti, INDICE_CAMMINO/PRODUZIONE intessuti. Commit repo `e358b2ee` · MENTE `76682e7`.
-- [✓] **Grafo "a zone" → ECOSISTEMA** (`496e96d9`): `vault_intersect` ora premia i ponti cross-dominio (era muri stesso-dominio) + ≥2 ponti garantiti/nota → **44% legami cross-dominio** (era a zone), 3 isolate. MENTE `ba0bb05`.
+- [✓] **Grafo "a zone" → ECOSISTEMA** (`496e96d9`+`4683b91d`): `vault_intersect` premia i ponti cross-dominio (≥4 garantiti/nota) → **48% legami cross-dominio**; `ecosystem_bridge` **3136 ponti cross-mondo** (era 1984). Blocchi nav esclusi dall'indice RAG (tunare il grafo non sporca il RAG). Matteo: «ora è un ecosistema». MENTE `bd10bfe`.
+- [✓] **Push fatto**: TITANIUM_OS su GitHub (`fb7f71cb`→`4683b91d`). MENTE = local-only (no remote, by design).
+
+### → PROSSIMA SESSIONE #44 — si riparte da qui
+- [⏸] **ANIMATIC EP_N2_01 — IN PAUSA** (Matteo: «attendi con animazione»). NON ripartire con l'animatic finché non lo dice. Bivio formato già pronto in `PRODUZIONE_NINA.md` (storyboard deck Express / video+TTS / solo illustrazioni).
+- [ ] **C'è ancora lavoro su Nina** (Matteo) — **da definire a inizio sessione #44**: chiedergli cosa.
 - [✓] **Step 4/6 — Continuità esplicita**: verificata in tutti i 15 EP_N2 («Dove siamo» + Open loop presenti, catena integra).
 - [✓] **Step 5/6 — Audit STORIE** (framing canone): `canon_guard` scan su **177 episodi → 0 violazioni**
       "recuperato/EUR0". Grounding-deep dei dev-log → gira di notte via `night_audit` (Sonnet, automazione esistente).

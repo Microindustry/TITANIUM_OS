@@ -1,52 +1,48 @@
-=== RIAVVIO SESSIONE #43 — 23/06/2026 (ULTRACODE) ===
-Ultima sessione: #42 — 2026-06-23 (nata da un BLACKOUT, riassorbito del tutto)
+=== RIAVVIO SESSIONE #44 — 23/06/2026 ===
+Ultima sessione: #43 — 2026-06-23 (ULTRACODE — NINA DEFINITIVA + fix RAG/Obsidian)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il RAG e' sano, robusto e si auto-cura meglio di prima. Il blackout di stanotte ha
-corrotto ChromaDB: diagnosi completa + cura + irrobustimento. Obsidian ripulito
-(titoli + intersect). Da qui si riparte con NINA DEFINITIVA (l'ultimo lavoro su Nina).
+Nina e' DEFINITIVA (arco 6/6): canone unico = serie EP_N2, vecchi EP_AV archiviati,
+il "libro" (INDICE_CAMMINO) e il kit di produzione (PRODUZIONE_NINA) ci sono. Il RAG
+e' pulito (una sola verita': esclude _ARCHIVIO/_PROPOSTI) e il grafo Obsidian e' un
+ecosistema, non piu' "a zone". L'animatic del pilota e' IN PAUSA per scelta di Matteo:
+da qui si riparte con "ancora lavoro su Nina" — da definire con lui.
 
-━━━ FATTO IN SESSIONE #42 ━━━
-• RECOVERY RAG a 2 livelli (rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard):
-  L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD.
-  Copre corruzione (probe) E divergenza (stats). Agganciato al self-heal notturno night_research.bat.
-• BUG RADICE crash: api_server hidden = stdout/stderr handle OS invalidi -> torch nativo crasha.
-  Fix: redirect su logfile (handle validi) + guardie devnull (api_server) e stdout (rag_engine).
-• RESET FISICO chroma_db (--rebuild-hard): su chromadb 0.5.23 il reset-per-id NON azzera le label
-  hnswlib -> label fantasma > count -> KeyError np.uint64. Solo lo spostamento fisico (HNSW da 0) pulisce.
-• GPU rimessa (rag_device.txt=cuda, gitignored): init CUDA non satura piu' il commit. Query ~5x.
-• research_agent v1.2: backoff esponenziale 429/503 + API-key opzionale + guardia globale.
-• OBSIDIAN: 108 titoli corretti (additivo, no rename, 967 wikilink intatti) + intersect rigenerato
-  (vault 2881 + storie 950 + ponti cross-mondo + wiki 651 note).
-• Verifica end-to-end: RAG 32974 chunk, semantico==bm25, 6/6 query ok, vectors/RETE ok.
-• Commit: d1863576 + 04c3f71a (TITANIUM_OS) + d9b044a (MENTE, 630 file).
+━━━ FATTO IN SESSIONE #43 ━━━
+• NINA DEFINITIVA (6/6): (1) canone EP_N2, 13 EP_AV -> S_AVVENTURA/_ARCHIVIO (additivo, repo+MENTE),
+  mappa ripuntata, episodes.json 176 ep + intersect/evoluzione, build TS verde.
+  (2) INDICE_CAMMINO.md (l'ordine in cui Nina cammina, caselle 1->15; catena open-loop gia' integra;
+  Pietre in ordine pedagogico, non numerico; 2 open-loop soft resi espliciti).
+  (3) Una sola verita' sul RAG: rag_engine esclude _ARCHIVIO/_PROPOSTI; PIETRE.md rigenerato EP_N2-only.
+  (4) Continuita' «Dove siamo»+open loop in tutti i 15. (5) canon_guard 177 ep -> 0 violazioni.
+  (6) PRODUZIONE_NINA.md (pilota EP_N2_01, animatic dalle 5 key-image, regia voce dalla bible).
+• FIX RAG: il watcher.py combatteva i rebuild (dopo i 287 file Obsidian -> 52k delete label-fantasma
+  + crash mid-write -> search 500). rag_update_exclusive/rag_recover ora fermano ANCHE watcher.py.
+  Reflux RAG rifatto pulito e VERIFICATO (INDICE_CAMMINO indicizzato, 0 da _ARCHIVIO, EP_N2 risponde).
+• DASHBOARD riavviata (era giu' il front-end 5173) -> HTTP 200.
+• OBSIDIAN da "zone" a ECOSISTEMA: vault_intersect premia i ponti cross-dominio (48% legami cross,
+  CROSS_RESERVE=4) + ecosystem_bridge 3136 ponti cross-mondo (era 1984). Blocchi nav (Collegati+
+  Ecosistema) ora esclusi dall'indice RAG -> tunare il grafo non sporca piu' il RAG.
+• Commit repo: fb7f71cb -> 4683b91d (PUSHATI su GitHub). MENTE: commit locali (no remote, by design).
 
-━━━ PROSSIMO LAVORO — L'ULTIMO SU NINA: renderla DEFINITIVA (in ordine) ━━━
-Stile DECISO e piano: MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md (leggilo per primo).
-Regola: UNA SOLA VERITA' sul RAG. Additivo, evolutivo, integrabile.
-1. Canone unico = EP_N2 (v2). Spostare i vecchi EP_AV_* in S_AVVENTURA/_ARCHIVIO (NON cancellare).
-2. Ordinare il CAMMINO (il "libro"): open loop concatenati casella N -> N+1, riempire i buchi.
-3. Una sola verita': ri-verificare ogni episodio col grounding (nina_agent/RAG), allineare i FATTI,
-   coerenza Pietre.
-4. Continuita' esplicita in ogni episodio (Dove siamo + open loop).
-5. Audit STORIE (binario tecnico): verificare il grounding, correggere dove inventano.
-6. Predisporre ANIMAZIONE + VOCE.
-Casella "Nina dal Giorno 0" in sidebar + arco di allineamento competenze dal RAG reale.
+━━━ PROSSIMO LAVORO ━━━
+• ANIMATIC IN PAUSA (Matteo: "attendi con animazione"). NON ripartire con l'animatic finche' non lo dice.
+• "C'e' ancora lavoro su Nina" (Matteo) — DA DEFINIRE a inizio sessione #44. Chiedere cosa.
+• Quando si torna all'animatic: PASSO 1 = pilota EP_N2_01 dalle 5 key-image (vedi PRODUZIONE_NINA.md;
+  bivio formato gia' pronto: storyboard deck Express / video+TTS / solo illustrazioni).
 
 ━━━ BLOCKERS ━━━
-⚠ UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg).
-  E' la cura ALLA RADICE: il software recupera dopo, l'UPS evita il danno. Accanto a Vevor+ER20.
+⚠ UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
 ⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
-⚠ API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 notturni.
+⚠ API key Semantic Scholar gratuita in .env — azzera i 429 notturni.
 ⚠ Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2.
 ⚠ Martinetto Vevor 3 stadi da montare + mandrino 2.2kW ER20 da ordinare (prerequisiti fisici VULCAN).
 
 ━━━ NOTE ━━━
-• RAG sano = semantico == bm25. Un solo processo GPU alla volta (GTX 1070 8GB).
-• Dopo modifiche MASSIVE a MENTE (intersect/titoli): SERVICES/rag_update_exclusive.ps1 (rebuild HARD
-  esclusivo). NON incrementale (lascia label fantasma su 0.5.23). Per pochi file: incrementale notturno ok.
-• Dopo un blackout: SERVICES/rag_recover.ps1 (recupera in secondi con L1, o L2 hard).
-• Generatore Nina: output in _PROPOSTI -> rivedere -> spostare in S_AVVENTURA + riga NINA_SEED.
-• Verita' unica per pilastro: MENTE/_CANONE.md. Upgrade RAG futuro: chunking per heading.
+• Dopo modifiche MASSIVE a MENTE: SERVICES/rag_update_exclusive.ps1 (ora ferma anche il watcher).
+• Dopo un blackout: SERVICES/rag_recover.ps1 (L1 drop-hnsw / L2 rebuild-hard).
+• Tunare il grafo Obsidian: CONTENT_ENGINE/scripts/vault_intersect.py (CROSS_RESERVE) +
+  ecosystem_bridge.py (--max). Non serve rebuild RAG (i blocchi nav sono esclusi dall'indice).
+• Canone Nina = serie EP_N2. Gli EP_AV stanno in _ARCHIVIO (origine, non cancellati).
 
-Generato: 23/06/2026 — fine sessione #42
+Generato: 23/06/2026 — fine sessione #43

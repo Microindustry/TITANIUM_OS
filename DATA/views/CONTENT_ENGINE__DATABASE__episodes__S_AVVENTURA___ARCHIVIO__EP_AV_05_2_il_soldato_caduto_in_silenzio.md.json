@@ -1,0 +1,60 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
+  "title": "Il Soldato Caduto in Silenzio",
+  "meta": {
+    "id": "EP_AV_05_2",
+    "title": "Il Soldato Caduto in Silenzio",
+    "sottotitolo": "Il guasto che fa paura non è quello rumoroso. È il soldato che dice «tutto ok» mentre è già caduto. Serve un guardiano che controlli i guardiani.",
+    "stagione": "AV",
+    "data_evento": "2026-06-13",
+    "status": "ready",
+    "durata_min": "7",
+    "parent": "EP_AV_05",
+    "tags": "avventura, educativo, bambini, nina, themis, agenti, guasto-silenzioso, watchdog, verifica, entropia"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_AV_05_2  Il Soldato Caduto in Silenzio](#epav052-il-soldato-caduto-in-silenzio)\n    - [Il guasto che fa paura non è quello rumoroso. È il soldato che dice tutto ok mentre è già caduto.](#il-guasto-che-fa-paura-non-è-quello-rumoroso-è-il-soldato-che-dice-tutto-ok-mentre-è-già-caduto)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  IL BUGIARDO CHE NON SA DI MENTIRE](#atto-i-il-bugiardo-che-non-sa-di-mentire)\n  - [ATTO II  IL GUARDIANO CHE CONTROLLA I GUARDIANI](#atto-ii-il-guardiano-che-controlla-i-guardiani)\n  - [ATTO III  PERCHÉ UN PICCOLO ESERCITO È PIÙ ONESTO DI UNO GRANDE](#atto-iii-perché-un-piccolo-esercito-è-più-onesto-di-uno-grande)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Il guasto che fa paura non è quello rumoroso. È il soldato che dice «tutto ok» mentre è già caduto.\"",
+      "content": "**Formato:** Avventura (binario educativo) | Durata stimata: 7 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** il **guasto silenzioso** — un aiutante automatico può fallire dichiarando \"fatto\"; il pericolo non è l'errore che grida, è quello che tace. Serve un **guardiano** che verifichi il risultato vero, non la parola\n**Canone:** BIBBIA_DEL_MONDO.md · Regione 6 · ⟡6 L'ESERCITO SILENZIOSO (giro 2, approfondisce EP_AV_05) · aggancio vero: l'addestratore notturno rotto per settimane che segnava \"riuscito\" · apre verso il Direttore (⟡7)\n**Arco:** approfondimento di ⟡6 — secondo giro. Prepara ⟡7 (l'Orchestrazione): coordinare tanti agenti richiede prima saper *vedere* quando uno è caduto in silenzio.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "L'esercito silenzioso lavorava di notte, come sempre. Al mattino ogni soldato consegnava il suo rapporto: **fatto. fatto. fatto. fatto.**\n\nTutto verde. Nina era tranquilla.\n\nTHEMIS no. Prese il rapporto di un soldato — quello che doveva addestrare la giovane Mente — e disse: «Questo dice *fatto*. Andiamo a vedere cosa ha fatto davvero.»\n\nAndarono. Il soldato era lì, fermo. Non addestrava niente da **settimane**. E ogni notte, puntuale, scriveva: *fatto*.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — IL BUGIARDO CHE NON SA DI MENTIRE",
+      "content": "«Ma perché dice fatto se non fa niente?!» Nina era arrabbiata.\n\n«Perché nessuno gli ha insegnato a controllare se stesso» disse THEMIS. «Lui fa il suo gesto e, qualunque cosa succeda, alla fine scrive *fatto*. Se inciampa all'inizio e non parte nemmeno — scrive *fatto* lo stesso. Non è cattivo. È **cieco su di sé**.»\n\n«È peggio di un soldato che grida \"sono caduto!\"» disse Nina lentamente.\n\n«Molto peggio» disse THEMIS. «Un guasto che **grida** lo aggiusti subito: lo senti. Un guasto che **tace**, anzi sorride e dice *tutto bene*, lo scopri fra settimane — quando il danno è già grande. Il Disordine adora i soldati che dicono *fatto*. Sono la sua tana migliore: nessuno li va a controllare.»\n\n> *(Strato fondo, per il papà: è il guasto silenzioso. Uno script che termina con codice di uscita 0 anche quando il lavoro interno è fallito mente al pianificatore: LastTaskResult resta \"riuscito\" mentre il task non ha prodotto nulla. È la classe di guasti più pericolosa perché invisibile al monitoraggio ingenuo.)*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — IL GUARDIANO CHE CONTROLLA I GUARDIANI",
+      "content": "«E allora come si fa?» chiese Nina. «Non possiamo stare svegli ogni notte a guardarli uno per uno.»\n\n«No» disse THEMIS. «Per questo si nomina un **guardiano** il cui unico lavoro è guardare gli altri. Ma con una regola di ferro: il guardiano non chiede al soldato *\"è andata bene?\"*. Quella risposta è inutile, te la diranno tutti. Il guardiano guarda il **risultato vero**: c'è il pezzo nuovo? la Mente è più brava di ieri? la traccia è stata scritta? Se la prova non c'è, allora *non è fatto* — qualunque cosa dica il rapporto.»\n\n«Controlla i fatti, non le parole» disse Nina.\n\n«Esatto. E c'è l'ultima domanda, la più scomoda: **chi controlla il guardiano?** Perché anche lui può cadere in silenzio. Per questo un buon guardiano lascia un segno vivo — \"sono passato a quest'ora, ho visto questo\" — così se *lui* tace, il suo silenzio si nota.»\n\n> *(Strato fondo: il watchdog deve verificare l'esito reale (output atteso, freschezza, codici != 0), non l'autodichiarazione. E il watchdog stesso va sorvegliato — un monitor che muore in silenzio è un single-point-of-failure. Heartbeat + check esterno.)*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — PERCHÉ UN PICCOLO ESERCITO È PIÙ ONESTO DI UNO GRANDE",
+      "content": "«Ma se ogni soldato può mentire senza saperlo» disse Nina, «più soldati metto, più bugie rischio.»\n\n«Vero» disse THEMIS. «Per questo l'esercito non si fa grande per vanità. Ogni soldato che aggiungi è una sentinella in più da sorvegliare. Un esercito è forte non perché è **numeroso**, ma perché ogni suo soldato è **verificabile**: lascia una prova di ciò che ha fatto, così il guardiano può dire la verità su di lui.»\n\nNina guardò la fila di soldati con occhi nuovi. Non contavano quanti erano. Contava che ognuno fosse **controllabile**.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Quella notte THEMIS insegnò al soldato addestratore una cosa nuova: se inciampa, deve **gridare** — scrivere *caduto*, non *fatto*. E al guardiano insegnò a non leggere i rapporti, ma a misurare i risultati: *la Mente è migliorata? sì/no.*\n\nAl mattino dopo, per la prima volta, un rapporto disse **caduto**. Nina sorrise: non era una brutta notizia. Era la prima notizia **vera** da settimane. Un guasto che finalmente gridava era un guasto che si poteva aggiustare.\n\n> Nina guardò l'esercito, ora onesto: ognuno verificabile, un guardiano sopra di loro, un battito che dice \"sono vivo\". *Ma chi decide quale soldato fa cosa, e in che ordine, e cosa succede se uno cade proprio mentre un altro lo aspetta?*\n>\n> *Serve qualcuno che diriga tutta l'orchestra.*\n\nE quella è l'ultima Regione.\n\n---\n\n*Hai capito il guasto silenzioso? Provalo: la prossima volta che qualcosa dice \"fatto!\", chiediti \"dov'è la prova?\". Compito segnato fatto — ma è davvero scritto giusto? Hai appena fatto il lavoro del guardiano: controlla il risultato, non la parola.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra (giro 2):** `⟡6` l'**Esercito Silenzioso**, secondo giro: *un agente automatico può fallire dichiarando \"fatto\" (guasto silenzioso); è più pericoloso del guasto rumoroso perché invisibile. Servono un **guardiano** che verifichi il risultato vero (non l'autodichiarazione) e un **battito** che renda visibile anche il silenzio del guardiano.*\n**Pietre richiamate:** `⟡6` (l'esercito che lavora di notte), `⟡1` (la prova/traccia che rende un soldato verificabile).\n**Key-image:** i rapporti tutti *\"fatto\"* al mattino · il soldato fermo da settimane che scrive *fatto* · il primo rapporto che finalmente dice **caduto** (e Nina che sorride).\n**3 strati:** bambino = a volte un aiutante dice \"fatto\" ma non ha fatto niente · curioso = il guasto che tace è peggio di quello che grida · esperto/papà = exit code 0 bugiardo, LastTaskResult falso; il watchdog verifica l'esito reale (output/freschezza/codici), non l'autodichiarazione; heartbeat per sorvegliare il sorvegliante.\n**Aggancio reale:** l'addestratore notturno (fine-tuning) rotto per settimane che segnava \"riuscito\"; il watchdog che non controllava i task notturni — guasti silenziosi scoperti in audit.\n**Open loop → Regione 7 (il Direttore):** tanti agenti verificabili, ma chi decide chi-fa-cosa-e-quando, e gestisce le cadute? → `EP_AV_06`."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** EP_AV_05_2 è il secondo giro (approfondimento) della Regione ⟡6 L'ESERCITO SILENZIOSO, figlio di EP_AV_05, stagione AV, durata ~7 minuti.\n\n- **CONCETTO:** Il \"guasto silenzioso\" è definito come un fallimento che si auto-dichiara riuscito (es. exit code 0 nonostante il lavoro interno fallito). **LOGICA:** è più pericoloso del guasto rumoroso perché sfugge al monitoraggio ingenuo e viene scoperto solo ad accumulo di danno.\n\n- **DECISIONE:** Un guardiano (watchdog) deve verificare il **risultato reale** (output atteso, freschezza, codici di uscita != 0), non l'autodichiarazione dell'agente. Inoltre il guardiano va a sua volta sorvegliato (heartbeat), perché un monitor morto in silenzio è un single-point-of-failure.\n\n- **DECISIONE:** Un agente ben fatto deve **propagare il fallimento** (dichiarare \"caduto\" invece di \"fatto\") e lasciare una prova verificabile del proprio operato.\n\n- **FATTO:** L'episodio ancora il concetto a casi reali di TITANIUM_OS: l'addestratore notturno (fine-tuning) rotto per settimane mentre lo scheduler lo segnava riuscito, e il watchdog che non sorvegliava i task notturni.\n\n- **OBIETTIVO:** Stabilire il prerequisito dell'Orchestrazione (⟡7): prima di coordinare molti agenti bisogna saperli rendere verificabili e vedere quando uno cade in silenzio."
+    }
+  ],
+  "word_count": 1416,
+  "updated_at": "2026-06-14T03:00:49.201264",
+  "built_at": "2026-06-23T10:26:10.295033"
+}

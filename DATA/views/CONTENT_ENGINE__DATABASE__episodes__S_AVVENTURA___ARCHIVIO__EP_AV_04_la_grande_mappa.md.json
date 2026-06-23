@@ -1,0 +1,59 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/EP_AV_04_la_grande_mappa.md",
+  "title": "La Grande Mappa",
+  "meta": {
+    "id": "EP_AV_04",
+    "title": "La Grande Mappa",
+    "sottotitolo": "Non basta avere tutti i fogli — serve vedere i fili che li legano",
+    "stagione": "AV",
+    "data_evento": "2026-06-10",
+    "status": "ready",
+    "durata_min": "8",
+    "tags": "avventura, educativo, bambini, nina, themis, grafo, wiki, conoscenza, rete, graphify"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [EP_AV_04  La Grande Mappa](#epav04-la-grande-mappa)\n    - [Non basta avere tutti i fogli  serve vedere i fili che li legano](#non-basta-avere-tutti-i-fogli-serve-vedere-i-fili-che-li-legano)\n  - [COLD OPEN](#cold-open)\n  - [ATTO I  I FILI INVISIBILI](#atto-i-i-fili-invisibili)\n  - [ATTO II  I QUARTIERI CHE NESSUNO HA DISEGNATO](#atto-ii-i-quartieri-che-nessuno-ha-disegnato)\n  - [ATTO III  LE STELLE CHE TENGONO TUTTO](#atto-iii-le-stelle-che-tengono-tutto)\n  - [CHIUSURA](#chiusura)\n  - [FATTI (per il RAG)](#fatti-per-il-rag)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 3,
+      "title": "\"Non basta avere tutti i fogli — serve vedere i fili che li legano\"",
+      "content": "**Formato:** Avventura (binario educativo) | Durata stimata: 8-10 min\n**Per chi:** bambini e curiosi di ogni età | **Insegna:** il grafo della conoscenza / la Wiki — *il sapere non è una pila di fogli, è una rete di legami; vedere i legami fa emergere quartieri e stelle*\n**Canone:** BIBBIA_DEL_MONDO.md · MAPPA_AVVENTURA.md (Regione 5) · semi tecnici reali EP_SEED_GRAPHIFY (Graphify) + EP_SEED_RETE (la vista RETE 3D)\n**Arco:** tappa 5 di 7 (la storia dell'IA) — richiama il RAG di EP_AV_03\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "COLD OPEN",
+      "content": "Nina non aveva chiuso occhio. Tutta la notte aveva pensato ai **fili**.\n\nNella Biblioteca `⟡4` aveva visto che i fogli si parlavano: il motore con la vibrazione,\nla vibrazione con la misura sbagliata di tre mesi prima. Ma i fili li immaginava soltanto.\nNon li *vedeva*.\n\nAll'alba era già alla Giuntura. «THEMIS. La Biblioteca ha tutto. Ma è una pila. Io voglio\nvedere come sono **legate** le cose. Esiste?»\n\nTHEMIS la guardò a lungo. «Esiste. È la cosa che separa *avere* il sapere dal *capirlo*.\nTieniti forte: saliamo in alto.»\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO I — I FILI INVISIBILI",
+      "content": "THEMIS la portò sul punto più alto del Sistema. Da lassù, di colpo, Nina **li vide**.\n\nNon i fogli. I **fili**. Ogni foglio della Biblioteca era un puntino di luce. E da ogni\npuntino partivano fili sottili verso gli altri puntini che parlavano della stessa cosa.\nMigliaia di puntini. Decine di migliaia di fili. Tutto il Sistema, sospeso nell'aria, fatto\ndi luce e di legami.\n\nNina rimase senza fiato. «È… vivo.»\n\n«È la **Grande Mappa**» disse THEMIS. «Stessa roba della Biblioteca — gli stessi fogli. Ma\nguardata da un'altra parte. Là sotto era una pila. Qui è una **rete**. Un puntino vale poco\nda solo. Vale per *chi tocca*.»\n\n«Chi l'ha disegnata?» chiese Nina.\n\n«Nessuno. Si è disegnata da sola, in un battito di ciglia, seguendo i fili che già c'erano.\nNessuno ha tirato una riga a mano.»\n\n> *(Strato fondo, per il papà fabbro: è un **grafo** — nodi e archi. Il nostro, costruito da\n> Graphify sul progetto vero, ha trovato da solo migliaia di nodi e migliaia di archi in\n> pochi secondi, tutto in casa, senza spedire niente fuori.)*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO II — I QUARTIERI CHE NESSUNO HA DISEGNATO",
+      "content": "Guardando meglio, Nina notò una cosa strana. I puntini non erano sparsi a caso. Si\n**raggruppavano**. Qui un grumo fitto di luci tutte legate tra loro; là un altro grumo;\npiù in là un altro ancora. Come **quartieri** di una città.\n\n«Chi ha messo i puntini nei quartieri?» chiese.\n\n«Di nuovo: nessuno» disse THEMIS. «I quartieri sono *emersi*. Quando tante cose si tengono\nper mano tra loro più che col resto, fanno un gruppo da sole. La Mappa li ha solo\n*notati*. Guarda — quello è il quartiere dell'officina, quello è il quartiere delle Menti,\nquello è il quartiere delle automazioni notturne. Nessuno li ha decisi. C'erano già,\nnascosti nella pila. Si vedevano solo da quassù.»\n\nNina cominciò a camminare con gli occhi tra i quartieri. E capì una cosa che la fece\nsorridere: per girare il Sistema non doveva più leggere mille fogli. Le bastava guardare la\nMappa e *seguire i fili*.\n\n> *(Strato fondo: i quartieri sono **community** — il grafo le rileva da solo dalla densità\n> dei legami. Sul progetto reale ne sono emerse centinaia. È sapere che nessuno ha\n> classificato a mano: è venuto fuori dalla struttura.)*\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "ATTO III — LE STELLE CHE TENGONO TUTTO",
+      "content": "Poi Nina alzò gli occhi e vide che alcuni puntini non erano puntini. Erano **stelle**.\nGrandi, luminose, con centinaia di fili che partivano da loro verso tutto il resto.\n\n«Quelle cosa sono?»\n\n«Quelle» disse THEMIS, e per la prima volta la sua voce aveva qualcosa di simile al\nrispetto, «sono i **nodi-dio**. I punti che tengono insieme tutto il resto. Togli un\nfoglio qualunque e non succede niente. Togli una di quelle stelle, e mezza Mappa si\nspegne. Sono le idee da cui dipende ogni altra cosa.»\n\nNina guardò la stella più grande di tutte. Da lì partivano fili verso i quartieri,\nverso le Menti, verso la Biblioteca, verso l'officina.\n\n«Quella…» disse piano, «…è il Grande Loop. Vero?»\n\nTHEMIS non rispose subito. Poi: «Te l'avevo detto, il primo giorno alla Giuntura. Tutto\npoggia su una cosa sola `⟡1`. Tu allora mi hai creduto. **Adesso lo vedi.**»\n\nNina rimase a guardare le stelle e i fili e i quartieri, tutto il Sistema in una sola\nocchiata. Non aveva imparato un fatto nuovo. Aveva imparato a **vedere** quello che già\nsapeva — tutto insieme, e per come era legato.\n\n«THEMIS» disse. «La Biblioteca ti dice *cosa*. La Mappa ti dice *come si tiene*.»\n\n«Hai trovato la frase giusta. Di nuovo.»\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "CHIUSURA",
+      "content": "Quella sera Nina non aggiunse un foglio. Aggiunse un **filo**: collegò due cose che, prima,\nnella sua testa stavano lontane. E vide la Mappa, in piccolo, cambiare forma per tenerne\nconto.\n\nCapì che il sapere non è una pila che cresce verso l'alto. È una **rete** che cresce verso\ni lati: ogni cosa nuova vale di più se la leghi a quelle che hai già. Una mente piena di\nfogli scollegati sa tante cose. Una mente con la Mappa **capisce**.\n\n> Ma mentre scendeva, Nina sentì un rumore nel buio del Sistema. Tante piccole cose che si\n> muovevano da sole — non la Mente grande, non la Biblioteca. Piccole entità che, mentre lei\n> dormiva, **facevano** ciascuna il suo lavoro: una controllava, una scriveva, una sistemava.\n>\n> *Chi sono? Chi gli ha detto di muoversi di notte? E se sono in tanti… chi decide chi fa\n> cosa?*\n\nE quella, è la prossima avventura.\n\n---\n\n*Hai capito la Grande Mappa? Provalo tu: prendi tre cose che hai imparato questa settimana e\ndisegna un filo tra quelle che si parlano. Hai appena fatto un grafo. Più fili tiri, più la\ntua testa diventa una Mappa invece che una pila.*\n\n---\n\n<!-- DIDATTICA (vedi PERCORSO_EVOLUTIVO.md) -->\n**Pietra nuova:** `⟡5` la **Wiki / il grafo della conoscenza** (arco, tappa 5): *gli stessi fogli, guardati come rete di legami; emergono da soli i quartieri (gruppi) e le stelle (i nodi da cui dipende tutto). Avere ≠ capire.*\n**Pietre richiamate:** il **RAG** `⟡4 → EP_AV_03` (la pila di fogli → ora vista come rete) · il **Grande Loop** `⟡1` (la stella più grande, da cui tutto dipende — ora *si vede*, non si crede soltanto).\n**Key-image:** il Sistema visto dall'alto come **cielo di puntini e fili** · i **quartieri** che si raggruppano da soli (community) · le **stelle / nodi-dio** con centinaia di fili (il Loop = la stella centrale).\n**3 strati:** bambino = la città di luci dove le cose legate stanno vicine · curioso = \"questo si chiama grafo della conoscenza; i gruppi si chiamano community, i nodi centrali sono i nodi-dio\" · esperto/papà = il grafo reale del progetto (Graphify: migliaia di nodi/archi in secondi, community detection, 100% locale, niente token spesi) + la vista RETE 3D navigabile.\n**Aggancio reale:** EP_SEED_GRAPHIFY (knowledge graph del repo, MIT, in casa) · EP_SEED_RETE (la RETE 3D, toggle Conoscenza/Sistema) · il salto RAG→Wiki.\n**Open loop → Regione 6 (gli Agenti):** le piccole entità che lavorano da sole nella notte — chi sono, e chi decide chi fa cosa."
+    },
+    {
+      "level": 2,
+      "title": "FATTI (per il RAG)",
+      "content": "- **FATTO:** L'episodio EP_AV_04 appartiene alla stagione AV, è la tappa 5 di 7 dell'arco narrativo \"la storia dell'IA\", e richiama il RAG introdotto in EP_AV_03.\n\n- **FATTO:** Il componente tecnico di riferimento è **Graphify** (seed EP_SEED_GRAPHIFY), che costruisce un grafo della conoscenza del progetto in locale (senza inviare dati all'esterno), rilevando automaticamente migliaia di nodi e migliaia di archi in pochi secondi.\n\n- **FATTO:** Graphify rileva automaticamente le **community** (quartieri) dal grafo, identificandole tramite densità dei legami, senza classificazione manuale. Sul progetto reale ne sono emerse centinaia.\n\n- **FATTO:** Il grafo prevede l'identificazione di **nodi ad alto grado** (\"nodi-dio\" / stelle), ovvero nodi con centinaia di archi in uscita verso il resto della rete, la cui rimozione comporta la perdita di connettività di ampie porzioni del grafo.\n\n- **OBIETTIVO:** La vista **RETE 3D** (seed EP_SEED_RETE) è la rappresentazione visuale del grafo della conoscenza del progetto TITANIUM_OS, distinta dalla Biblioteca (RAG classico) per il fatto di mostrare i legami tra i nodi anziché i documenti come lista."
+    }
+  ],
+  "word_count": 1494,
+  "updated_at": "2026-06-12T16:03:06.043002",
+  "built_at": "2026-06-23T10:26:13.435699"
+}

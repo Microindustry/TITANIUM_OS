@@ -6,12 +6,17 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)\n  - [2026-06-22  2 commit](#2026-06-22-2-commit)\n  - [2026-06-21  9 commit](#2026-06-21-9-commit)\n  - [2026-06-20  3 commit](#2026-06-20-3-commit)\n  - [2026-06-20  5 commit](#2026-06-20-5-commit)\n  - [2026-06-18  7 commit](#2026-06-18-7-commit)\n  - [2026-06-17  14 commit](#2026-06-17-14-commit)\n  - [2026-06-16  9 commit](#2026-06-16-9-commit)\n  - [2026-06-15  12 commit](#2026-06-15-12-commit)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)\n  - [2026-06-23  8 commit](#2026-06-23-8-commit)\n  - [2026-06-22  2 commit](#2026-06-22-2-commit)\n  - [2026-06-21  9 commit](#2026-06-21-9-commit)\n  - [2026-06-20  3 commit](#2026-06-20-3-commit)\n  - [2026-06-20  5 commit](#2026-06-20-5-commit)\n  - [2026-06-18  7 commit](#2026-06-18-7-commit)\n  - [2026-06-17  14 commit](#2026-06-17-14-commit)\n  - [2026-06-16  9 commit](#2026-06-16-9-commit)\n  - [2026-06-15  12 commit](#2026-06-15-12-commit)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
       "title": "Inventario — cosa abbiamo costruito (notte per notte)",
       "content": "> Generato da `AUTOMATIONS/core/inventario_notturno.py` a ogni catena notturna.\n> Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.\n\n<!-- INVENTARIO:INSERT -->"
+    },
+    {
+      "level": 2,
+      "title": "2026-06-23 · 8 commit",
+      "content": "- `a114aba8` auto: night_audit - cartella clinica 23/06/2026\n- `40cf1b0b` auto: story_agent - episodi generati 23/06/2026\n- `e14f2075` chore(salva): sessione #42 — blackout RAG recovery 2-livelli + Obsidian titoli/intersect\n- `04c3f71a` feat(rag): reset fisico chroma_db + fix titoli vault Obsidian\n- `d1863576` fix(rag): recovery 2-livelli post-blackout + research_agent resiliente + GPU\n- `78358d57` chore(salva): visione NINA ZERO confermata — film istruttorio che genera il CV\n- `ad9d663a` chore(salva): sessione #41 — PUNTO 0, RAG integrato+self-healing, generatore Nina grounded\n- `d9489e76` chore(salva): sessione #40 — RAG sbloccato+ottimizzato GPU, MIMS/VULCAN, canone veritiero, ASSOLUTO V9\n\n_episodi: 191 · critiche aperte: 25 (68 risolte) · RAG: 33167 chunk_"
     },
     {
       "level": 2,
@@ -54,7 +59,7 @@
       "content": "- `b3916fb5` docs(pitch/ic01): 1-pager investor formale (problema/soluzione/mercato/team/ask)\n- `ff4cec37` fix(audit/n03): cartella clinica auto-pulente — auto-close + reopen\n- `0eb22df1` feat(critiche+pct): allinea critiche 15/06 + agente pct_sync (fonte unica STATE)\n- `d123d62b` canon(nina v2): Character Bible — coerenza look/voce/modi per animazione e voce\n- `36ad2b7a` content(nina v2): +10 episodi arco IA (06-15) lunghi e stratificati, integrati\n- `037f948d` auto: night_audit - cartella clinica 15/06/2026\n- `370cc1c9` auto: story_agent - episodi generati 15/06/2026\n- `c827c62d` content(nina v2): i 5 episodi d'apertura del viaggio (ancorati a La Materia)\n- `2221e7e9` canon(nina): filone unico navigabile (non stagioni) + infinito si coltiva + le Materie\n- `3537e805` canon(nina): CV-che-si-genera = progetto HR (stesso engine) + l'effetto WOW\n- `5c28b46e` canon(nina): modello narrativo - il libro e' il viaggio sulla mappa\n- `47602ac7` canon(nina): architettura v2 — Nina evergreen + mappa navigabile (non racconto lineare)\n\n_episodi: 174 · critiche aperte: 36 (31 risolte) · RAG: 3873 chunk_"
     }
   ],
-  "word_count": 952,
-  "updated_at": "2026-06-22T04:07:02.458069",
-  "built_at": "2026-06-23T00:24:19.240691"
+  "word_count": 1069,
+  "updated_at": "2026-06-23T04:07:02.123380",
+  "built_at": "2026-06-23T10:26:34.275613"
 }
