@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, llm, mente, linguaggio, materia, nina-
   - [ATTO III  COME SI PARLA A UNA MENTE CHE PARLA](#atto-iii-come-si-parla-a-una-mente-che-parla)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -138,3 +140,26 @@ E quella è la casella più importante di tutte: quando la Mente inventa.
 - **POTENZA E LIMITE:** per indovinare bene ha appreso strutture profonde del linguaggio (utile per riassumere/tradurre/spiegare/ideare); ma ottimizza la **verosimiglianza** ("suona bene"), non la verità fattuale. Quasi sempre coincidono, non sempre.
 - **PROMPTING:** poiché continua il testo dato, l'inizio/contesto/precisione della richiesta determina la qualità della risposta (la precisione fatta di parole).
 - **OBIETTIVO:** preparare il concetto critico dell'allucinazione (⟡3 g2) e il bisogno di fonti (RAG, ⟡4).
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_08_quando_la_mente_inventa|Quando la Mente Inventa]] — *tema: llm, materia, nina-v2*
+- [[MOM_01_LA_PRIMA_AUTOMAZIONE|La Prima Automazione]] — *posa la Pietra ⟡2 che questo richiama*
+- [[EP_N2_05_prima_la_mano_poi_la_macchina|Prima la Mano, Poi la Macchina]] — *posa la Pietra ⟡2 che questo richiama*
+- [[EP_S2_01_IL_CERVELLO_IBRIDO|Il Cervello Ibrido]] — *stessa Regione ⟡3 (LA MENTE CHE PARLA)*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *tema: materia, nina-v2, themis*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, casella, materia*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, casella, materia*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, fabbro, casella*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina, educativo*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

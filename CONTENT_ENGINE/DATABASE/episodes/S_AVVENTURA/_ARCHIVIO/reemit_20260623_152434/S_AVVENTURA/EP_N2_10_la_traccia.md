@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, forge, traccia, grande-loop, memoria, 
   - [ATTO III  UNA TRACCIA PER CHI NON SEI ANCORA](#atto-iii-una-traccia-per-chi-non-sei-ancora)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -138,3 +140,26 @@ E quella è una delle caselle più belle del viaggio: la Grande Mappa.
 - **REGOLA:** "non ricordare, documenta": il Disordine mangia ciò che non lascia segno; documentare trasforma conoscenza tacita (single-point-of-failure) in sapere riusabile e trasmissibile.
 - **REQUISITO:** una traccia vale solo se **vera e ritrovabile** (ben riposta dove la Biblioteca la trova). Chiude il cerchio gesto→traccia→Biblioteca→Mente con gli occhi.
 - **OBIETTIVO:** aprire al collegamento tra tracce (il grafo/wiki, ⟡5): il sapere come rete di fili.
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_FILONE_00_la_materia|La Materia — il telaio, la scelta, il controllo]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_05_prima_la_mano_poi_la_macchina|Prima la Mano, Poi la Macchina]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_03_mille_volte_uguale|Mille Volte Uguale]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_06_l_officina_che_gira_sola|L'Officina che Gira Sola]] — *tema: forge, materia, nina-v2*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, disordine, forge*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina*
+- [[fatti_dalle_storie|FATTI dal dominio V32 — riflusso dalle STORIE]] — *fatto*
+- [[_SINTESI_EVOLUZIONE_IDEE|Porta il progetto alla pari — sintesi delle nuove (vecchie) info]] — *nina*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+<!-- ECOSISTEMA:end -->

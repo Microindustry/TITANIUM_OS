@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, rag, fonti, biblioteca, ricerca, mater
   - [ATTO III  LA MENTE CON GLI OCCHI](#atto-iii-la-mente-con-gli-occhi)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -134,3 +136,24 @@ E quella è una casella che sembra piccola ma tiene su tutto: la Traccia.
 - **RICERCA IBRIDA:** ricerca semantica ("profumo"/significato, embedding) + ricerca per parola esatta (keyword/BM25, salva termini e numeri precisi), usate insieme (fusione) perché ognuna copre il buco dell'altra; poi un reranker (il "giudice") riordina e tiene i migliori. Recupero veloce + verifica accurata.
 - **PRINCIPIO:** la verità si "va a prendere alla fonte", non si ricorda; una Mente diventa affidabile quando poggia su tracce vere ("le ho dato gli occhi").
 - **OBIETTIVO:** aprire verso chi/come si creano e si tengono le tracce (la Traccia / il Grande Loop, ⟡1).
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_S2_01_IL_CERVELLO_IBRIDO|Il Cervello Ibrido]] — *posa la Pietra ⟡3 che questo richiama*
+- [[EP_N2_07_la_mente_che_parla|La Mente che Parla]] — *posa la Pietra ⟡3 che questo richiama*
+- [[EP_N2_08_quando_la_mente_inventa|Quando la Mente Inventa]] — *tema: fonti, materia, nina-v2*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *tema: materia, nina-v2, themis*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, casella*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, casella*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, casella*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

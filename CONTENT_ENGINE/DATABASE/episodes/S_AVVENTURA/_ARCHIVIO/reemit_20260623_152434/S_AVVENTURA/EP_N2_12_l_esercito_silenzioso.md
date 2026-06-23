@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, agenti, automazione, notte, materia, n
   - [ATTO III  TANTE MANI, UNA REGOLA](#atto-iii-tante-mani-una-regola)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -130,3 +132,26 @@ E quella è la casella più scomoda dell'esercito: il soldato caduto in silenzio
 - **PATTO:** sono fedeli ma senza giudizio sul contesto; vanno controllati nell'esito e devono lasciare una **traccia** (log) per essere verificabili anche dopo. L'autonomia è potente quanto è rischioso il non-controllo.
 - **VALORE:** regalano tempo (fanno di notte ciò che mangerebbe il giorno), liberando attenzione per ciò che conta.
 - **OBIETTIVO:** aprire al guasto silenzioso e al guardiano (⟡6 giro 2).
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_13_il_soldato_caduto_in_silenzio|Il Soldato Caduto in Silenzio]] — *tema: agenti, materia, nina-v2*
+- [[MOM_01_LA_PRIMA_AUTOMAZIONE|La Prima Automazione]] — *posa la Pietra ⟡2 che questo richiama*
+- [[EP_N2_05_prima_la_mano_poi_la_macchina|Prima la Mano, Poi la Macchina]] — *posa la Pietra ⟡2 che questo richiama*
+- [[EP_S0_00_IL_SOCIO|Il Socio]] — *posa la Pietra ⟡1 che questo richiama*
+- [[EP_N2_10_la_traccia|La Traccia]] — *posa la Pietra ⟡1 che questo richiama*
+- [[EP_N2_14_il_direttore|Il Direttore]] — *tema: agenti, materia, nina-v2*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, potere, casella*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, casella*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina, sola*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, casella*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

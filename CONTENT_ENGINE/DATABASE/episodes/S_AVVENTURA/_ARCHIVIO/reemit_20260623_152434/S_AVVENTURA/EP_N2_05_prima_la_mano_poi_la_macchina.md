@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, forge, automazione, materia, ponte, er
   - [ATTO III  LEREDITÀ: GLI STRUMENTI, NON LE RISPOSTE](#atto-iii-leredità-gli-strumenti-non-le-risposte)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -142,3 +144,26 @@ E lì, alla casella dopo, comincia **L'Officina che Gira Sola**. Ma quella è un
 - **CONCETTO:** L'automazione come "megafono": rende enorme ciò che le insegni, nel bene e nel male. La mano esperta non viene sostituita ma moltiplicata; solo chi sa riconoscere il giusto può insegnarlo a una macchina e verificarlo.
 - **CUORE/EREDITÀ:** il sapere si tramanda come **strumento, non come risposta** (il calibro consumato di FORGE): si dà il *modo* di arrivare a sapere, non le soluzioni. Catena di mani che insegnano alla mano (e ora alle macchine) successiva.
 - **OBIETTIVO:** chiudere l'arco di apertura (Materia) e aprire l'intera mappa (automazione → IA → ...), confermando il modello del viaggio infinito navigabile.
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_06_l_officina_che_gira_sola|L'Officina che Gira Sola]] — *tema: forge, materia, nina-v2*
+- [[EP_FILONE_00_la_materia|La Materia — il telaio, la scelta, il controllo]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_03_mille_volte_uguale|Mille Volte Uguale]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_10_la_traccia|La Traccia]] — *tema: forge, materia, nina-v2*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, materia*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, mano, forge*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, materia*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina, educativo*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

@@ -1,0 +1,175 @@
+---
+id: EP_N2_06
+title: L'Officina che Gira Sola
+sottotitolo: Nina insegna alla macchina il suo primo gesto — e scopre la magia e il pericolo di una cosa che si ripete da sola mentre tu dormi.
+stagione: AV
+data_evento: 2026-06-16
+status: ready
+durata_min: 16
+tags: avventura, educativo, nina, themis, forge, automazione, loop, materia, nina-v2
+---
+<!-- TOC -->
+
+- [EP_N2_06  LOfficina che Gira Sola](#epn206-lofficina-che-gira-sola)
+    - [Una cosa che si ripete da sola è magia se lhai capita, ed è disastro se non lhai capita. La differenza sei tu.](#una-cosa-che-si-ripete-da-sola-è-magia-se-lhai-capita-ed-è-disastro-se-non-lhai-capita-la-differenza-sei-tu)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL PRIMO INCANTESIMO CHE SI RIPETE DA SOLO](#atto-i-il-primo-incantesimo-che-si-ripete-da-solo)
+  - [ATTO II  LA MANO LIBERATA (LA VERA MAGIA)](#atto-ii-la-mano-liberata-la-vera-magia)
+  - [ATTO III  IL PATTO: SOLO CIÒ CHE SAI CONTROLLARE](#atto-iii-il-patto-solo-ciò-che-sai-controllare)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
+
+<!-- /TOC -->
+
+
+# EP_N2_06 — L'Officina che Gira Sola
+### "Una cosa che si ripete da sola è magia se l'hai capita, ed è disastro se non l'hai capita. La differenza sei tu."
+
+**Formato:** Avventura (Nina v2) · ~16 min
+**Per chi:** chiunque abbia mai pensato "che noia rifare sempre la stessa cosa"
+**Insegna:** cos'è davvero l'**automazione** — un gesto che, una volta capito e fatto bene, lo affidi a qualcosa che lo ripete senza stancarsi. La magia (ti libera le mani) e il patto (puoi automatizzare solo ciò che sai controllare).
+**Materia:** L'Officina che Gira Sola (⟡2) · **Casella 6 del viaggio**
+**Posto nella Mappa:** la prima terra dopo il ponte. Qui le cose iniziano a muoversi da sole.
+
+---
+
+> **Dove siamo:** la mano di Nina ormai *sa* (caselle 1-3: gesto, misura, ripetizione). Ha visto la mappa viva (4) e ha imparato la regola di ferro: prima la mano, poi la macchina (5). Oggi fa il passo: insegna il suo primo gesto a qualcosa che non dorme.
+
+---
+
+## COLD OPEN
+
+La macchina dell'angolo aspettava.
+
+Nina le girò intorno tre volte. Non era spaventosa: era solo… paziente. Un braccio, una pinza, una piccola memoria dove si poteva scrivere un gesto. THEMIS le aveva detto: *«Le insegni una volta. Poi lei lo rifà finché vuoi.»*
+
+«E se le insegno male?» chiese Nina.
+
+«Allora lo rifà male finché vuoi» disse THEMIS. «Per questo oggi non le insegni un gesto nuovo. Le insegni un gesto che **già sai fare bene a mano**. Il più semplice che conosci.»
+
+Nina ci pensò. Il gesto che sapeva meglio di tutti, ormai, era uno solo: prendere un pezzo, misurarlo col riferimento, e metterlo nella scatola dei "giusti" o in quella degli "scartati".
+
+«Quello» disse. «Le insegno a separare i giusti dagli storti.»
+
+THEMIS sorrise. «Ottima scelta. È un gesto che capisci fino in fondo. Solo quelli si possono insegnare.»
+
+---
+
+## ATTO I — IL PRIMO INCANTESIMO CHE SI RIPETE DA SOLO
+
+Insegnare alla macchina fu più lento di quanto Nina pensasse. Doveva spezzare il suo gesto in **passi piccolissimi**, ognuno chiaro: *prendi il pezzo. Misuralo. Se entra nel riferimento, scatola A. Se non entra, scatola B.* Ogni passo che dava per scontato, la macchina non lo sapeva. Doveva dirle tutto, nell'ordine giusto, senza saltare niente.
+
+«È come spiegare a qualcuno che non ha mai visto nulla» disse Nina, sudata.
+
+«Esatto» disse THEMIS. «E qui scopri una cosa: per insegnare un gesto a una macchina, devi capirlo **meglio di come lo fai tu**. Tu lo fai "a sentimento". Lei ti costringe a dire ogni passo. Spesso è insegnando che capisci davvero.»
+
+Poi Nina premette il pulsante. E la macchina cominciò.
+
+Prendi — misura — scatola A. Prendi — misura — scatola B. Prendi — misura — scatola A. Senza fretta, senza stancarsi, senza distrarsi. Faceva il *suo* gesto, quello che Nina le aveva regalato, all'infinito.
+
+Nina rimase a guardare a bocca aperta. Era come vedere una parte di sé staccarsi e continuare a lavorare da sola.
+
+> *(Esempio per tutti — il test della sarta: la macchina da cucire è esattamente questo. Tu sai fare il punto a mano. Glielo "insegni" impostando ago, filo, lunghezza del punto — spezzi il tuo gesto in regole. Poi lei cuce mille punti uguali mentre tu pensi al resto. Non ha imparato a cucire: ha imparato il TUO punto, e lo ripete.)*
+
+---
+
+## ATTO II — LA MANO LIBERATA (LA VERA MAGIA)
+
+«Adesso guarda cosa hai guadagnato» disse THEMIS.
+
+Mentre la macchina separava i pezzi da sola, le mani di Nina erano **libere**. Poteva fare altro. Poteva imparare un gesto nuovo. Poteva persino riposare.
+
+«Questa è la magia vera dell'officina che gira sola» disse THEMIS. «Non è che lavora *al posto tuo*. È che lavora *insieme a te*, sulla parte noiosa e ripetitiva, e libera la tua testa e le tue mani per la parte che conta — quella che richiede di capire, decidere, inventare. Il Disordine ti vuole intrappolato a rifare sempre la stessa cosa a mano, stanco, finché sbagli. L'automazione fatta bene ti **ridà il tempo**.»
+
+Nina capì che non era una macchina contro di lei. Era una macchina che le toglieva di dosso il peso ripetitivo, e le lasciava la parte bella: la curiosità, le domande nuove.
+
+«Quindi più cose noiose insegno alla macchina…»
+
+«…più tempo hai per le cose belle e difficili. Sì. È questo il senso. Non automatizzi per fare di più della stessa roba. Automatizzi per **salire di un piano**: a fare cose che prima non avevi tempo di fare.»
+
+> *(Strato fondo — per il grande: l'automazione non è "sostituire l'uomo", è togliere il toil ripetitivo per liberare attenzione su ciò che richiede giudizio. Il valore non è "fare più pezzi": è spostare la persona dal lavoro a basso valore a quello ad alto valore. Una buona automazione è una leva sul tempo, non una catena di montaggio in più.)*
+
+---
+
+## ATTO III — IL PATTO: SOLO CIÒ CHE SAI CONTROLLARE
+
+Poi successe una cosa. Un pezzo storto finì nella scatola A, quella dei giusti.
+
+Nina lo notò. «Ha sbagliato!»
+
+THEMIS scosse la testa. «No. *Ha fatto esattamente quello che le hai insegnato.* Probabilmente il tuo riferimento si era spostato di un soffio — ti ricordi la deriva? — e lei, fedele, ha continuato a usarlo. La macchina non si accorge che il riferimento è sbagliato. Non capisce. Esegue.»
+
+Questo era il patto, e THEMIS volle che Nina lo capisse bene:
+
+«Una macchina che gira sola va **sorvegliata da chi sa**. Non lasciata sola per sempre. Tu, ogni tanto, devi tornare e **controllare il risultato vero**: aprire la scatola A e verificare che dentro ci siano davvero solo pezzi giusti. Perché lei è fedele, non sveglia. Ti dà fiducia cieca, e la fiducia cieca va controllata.»
+
+«Quindi automatizzo solo le cose che so controllare» disse Nina.
+
+«Esatto. La regola completa è questa: **automatizza solo un gesto che (1) sai fare bene a mano e (2) sai controllare se è andato bene.** Se non sai verificare il risultato, non stai liberando tempo — stai costruendo una fabbrica di errori veloci di cui non ti accorgi.»
+
+---
+
+## CHIUSURA
+
+Quella sera la macchina dell'angolo ronzava piano, separando pezzi, mentre Nina — mani libere — imparava a sistemare il riferimento e a passare ogni tanto a controllare la scatola A. Aveva un aiutante. Non un padrone, non uno schiavo: un **aiutante fedele e un po' cieco**, che faceva la parte noiosa mentre lei teneva gli occhi sulla parte importante.
+
+Sulla mappa viva si accese una casella nuova — la prima dell'**Officina che Gira Sola**. E Nina sentì che il mondo si era allargato: ora poteva insegnare *qualsiasi* gesto noioso che padroneggiava.
+
+> Nina guardò la macchina ripetere il suo gesto, instancabile. *Le ho insegnato a fare. Ma le ho dovuto dire ogni singolo passo, sennò non capiva niente.* E pensò: e se una macchina, un giorno, potesse capire da sola cosa intendo — anche se non le spiego ogni passo? Se potesse… **parlare**?
+>
+> *Esiste una macchina a cui puoi solo dire cosa vuoi, a parole, e ti capisce?*
+
+E quella è una terra strana e nuova della mappa: la Mente che Parla.
+
+---
+
+*Provalo tu: scegli una cosa noiosa che fai sempre (apparecchiare, preparare lo zaino, una ricetta). Scrivila come una lista di passi piccolissimi, nell'ordine esatto, senza saltarne nessuno — come la insegneresti a un robot. Ti accorgerai di quanti passi davi per scontati. Hai appena fatto il lavoro più difficile dell'automazione: capire un gesto fino in fondo.*
+
+---
+
+<!-- SCENE / KEY-IMAGE (per l'animazione) -->
+1. **La macchina paziente** nell'angolo: braccio, pinza, una piccola memoria.
+2. **Nina che spezza il gesto in passi** — frecce e cartellini, "prendi → misura → scatola A/B".
+3. **La macchina che parte** e ripete sola: prendi-misura-scatola, all'infinito, instancabile.
+4. **Le mani libere di Nina** mentre la macchina lavora — lei può fare altro, respirare.
+5. **Il pezzo storto nella scatola A**: la macchina fedele che ripete anche l'errore del riferimento spostato.
+
+<!-- DIDATTICA -->
+**Pietra:** `⟡2` L'Officina che Gira Sola (giro 1). *Automazione = affidare a qualcosa di instancabile un gesto che padroneggi, spezzato in passi chiari. Magia: libera tempo/attenzione per le cose che contano. Patto: automatizza solo ciò che sai fare e sai controllare; la macchina è fedele ma cieca, va sorvegliata da chi sa.*
+**Pietre richiamate:** `⟡0` (il gesto fatto bene, la misura, il riferimento — prerequisiti per insegnare alla macchina).
+**3 strati:** bambino = la macchina-aiutante che ripete il tuo gesto e libera le mani · curioso = per insegnare devi capire meglio di come fai; la macchina è fedele non sveglia, va controllata · grande = automazione = leva sul tempo (toil→alto valore), non "più pezzi"; automatizzare un gesto non verificabile = fabbrica di errori veloci.
+**Cuore:** la curiosità (insegnando capisci di più) · fai bene le cose vere (automatizzi solo ciò che padroneggi e verifichi) · gli strumenti del papà che si moltiplicano.
+**Aggancio reale:** il primo nodo di automazione del sistema; il principio "controlla il risultato vero, non fidarti cieco" (anticipa il watchdog/⟡6).
+**Open loop → Casella 7 (la Mente che Parla):** e se una macchina capisse a parole cosa vuoi, senza spiegarle ogni passo? → `EP_N2_07`.
+
+## FATTI (per il RAG)
+- **FATTO:** EP_N2_06, casella 6 (apre l'automazione, ⟡2) del viaggio Nina v2, ~16 min.
+- **CONCETTO:** L'automazione è affidare a un esecutore instancabile un gesto padroneggiato, spezzato in passi espliciti. Insegnare costringe a capire il gesto meglio di come lo si esegue "a sentimento".
+- **VALORE:** L'automazione è una **leva sul tempo**: toglie il lavoro ripetitivo a basso valore e libera attenzione per il lavoro ad alto valore (giudizio, invenzione). Non serve a "fare più della stessa cosa".
+- **PATTO/LIMITE:** si automatizza solo ciò che si sa (1) fare bene a mano e (2) verificare nel risultato. La macchina è **fedele ma cieca**: ripete anche l'errore (es. riferimento derivato) senza accorgersene; va sorvegliata da chi sa controllare l'esito.
+- **OBIETTIVO:** dall'esecutore fedele aprire al concetto di una macchina che "capisce a parole" (LLM, ⟡3).
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_05_prima_la_mano_poi_la_macchina|Prima la Mano, Poi la Macchina]] — *tema: forge, materia, nina-v2*
+- [[EP_FILONE_00_la_materia|La Materia — il telaio, la scelta, il controllo]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_03_mille_volte_uguale|Mille Volte Uguale]] — *tema: forge, materia, nina-v2*
+- [[EP_N2_10_la_traccia|La Traccia]] — *tema: forge, materia, nina-v2*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina, sola*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, mano*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

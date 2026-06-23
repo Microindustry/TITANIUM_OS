@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, agenti, guasto-silenzioso, guardiano, 
   - [ATTO III  UN ESERCITO ONESTO È PIÙ FORTE DI UNO GRANDE](#atto-iii-un-esercito-onesto-è-più-forte-di-uno-grande)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -139,3 +141,26 @@ E quella è l'ultima grande casella dell'arco: il Direttore.
 - **PRINCIPIO RICORRENTE:** i fatti, non le parole (= sembrare≠essere, verità verificata≠dichiarata, "da dove lo sai?"): lo stesso principio in più mondi (nodo-ponte).
 - **CASO REALE:** fine-tuning notturno rotto per settimane con esito segnato "riuscito"; watchdog che non sorvegliava i task.
 - **OBIETTIVO:** aprire all'orchestrazione (⟡7): coordinare molti agenti onesti.
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_12_l_esercito_silenzioso|L'Esercito Silenzioso]] — *tema: agenti, materia, nina-v2*
+- [[EP_S0_00_IL_SOCIO|Il Socio]] — *posa la Pietra ⟡1 che questo richiama*
+- [[EP_N2_10_la_traccia|La Traccia]] — *posa la Pietra ⟡1 che questo richiama*
+- [[EP_N2_14_il_direttore|Il Direttore]] — *tema: agenti, materia, nina-v2*
+- [[MOM_03_L_ESERCITO|L'Esercito]] — *stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *tema: materia, nina-v2, themis*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, casella, materia*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, casella, materia*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, casella*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina, educativo*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

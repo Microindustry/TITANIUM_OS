@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, finanza, valore, soldi, lavoro, fiduci
   - [ATTO III  GLI STESSI STRUMENTI, IN UNA TERRA NUOVA](#atto-iii-gli-stessi-strumenti-in-una-terra-nuova)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -138,3 +140,26 @@ E quelle sono le caselle dopo, in questa terra nuova. Ma tu, ormai, sai come cam
 - **RISCHI (Disordine):** inflazione (troppa moneta → ogni unità vale meno) e valore fittizio (promesse/asset scollegati dal lavoro reale → bolle/schemi). Difesa: "da dove viene questo valore?" = il grounding del RAG applicato ai soldi (poggia su lavoro/beni reali, non sull'eloquenza).
 - **META:** gli strumenti dell'arco (fai bene il vero, la traccia, i fatti non le parole, la costanza) si trasferiscono alla finanza: i nodi-ponte collegano materie lontane (la mappa si cammina "con gli stessi piedi").
 - **OBIETTIVO:** aprire la verticale Finanza (₣2 spendere meno di quanto entra, ₣3 il cuscinetto, ₣4 far lavorare i soldi) e mostrare l'estensibilità infinita della mappa.
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_05_prima_la_mano_poi_la_macchina|Prima la Mano, Poi la Macchina]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_03_mille_volte_uguale|Mille Volte Uguale]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_06_l_officina_che_gira_sola|L'Officina che Gira Sola]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_10_la_traccia|La Traccia]] — *tema: materia, nina-v2, themis*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[fatti_dalle_storie|FATTI dal dominio FINANZA — riflusso dalle STORIE]] — *soldi, finanza, fiducia*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, materia*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, materia*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, disordine*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

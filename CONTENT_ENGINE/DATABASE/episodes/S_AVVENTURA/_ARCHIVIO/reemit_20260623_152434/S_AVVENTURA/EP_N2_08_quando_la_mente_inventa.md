@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, llm, allucinazione, fonti, verita, mat
   - [ATTO III  LA DOMANDA CHE TI RENDE PIÙ FORTE DI QUALSIASI MENTE](#atto-iii-la-domanda-che-ti-rende-più-forte-di-qualsiasi-mente)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -147,3 +149,26 @@ E quella biblioteca è la casella dopo.
 - **CASO REALE:** auditor notturno di questo sistema che allucinò un "doppio crash" da una riga di log vecchia/fuori finestra; corretto imponendo citazione di riga+data.
 - **PRINCIPIO DI VITA:** "da dove lo sai?" come strumento critico universale (macchine e persone).
 - **OBIETTIVO:** motivare il RAG (⟡4): dare alla Mente le fonti vere giuste da leggere prima di parlare.
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_N2_07_la_mente_che_parla|La Mente che Parla]] — *tema: llm, materia, nina-v2*
+- [[EP_N2_09_la_biblioteca_delle_fonti|La Biblioteca delle Fonti]] — *tema: fonti, materia, nina-v2*
+- [[EP_S2_01_IL_CERVELLO_IBRIDO|Il Cervello Ibrido]] — *stessa Regione ⟡3 (LA MENTE CHE PARLA)*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_04_la_mappa_viva|La Mappa Viva]] — *tema: nina-v2, themis, verita*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, vero*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->

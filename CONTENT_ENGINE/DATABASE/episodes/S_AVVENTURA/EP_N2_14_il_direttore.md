@@ -1,21 +1,21 @@
 ---
 id: EP_N2_14
 title: Il Direttore
-sottotitolo: Nina scopre l'ultima magia dell'arco — non fare le cose, ma decidere chi le fa, in che ordine, e cosa succede quando qualcuno cade.
+sottotitolo: Nina scopre che la vera magia non è fare le cose, ma decidere chi le fa, in che ordine, e cosa succede quando qualcuno cade.
 stagione: AV
-data_evento: 2026-06-19
+data_evento: 2026-06-23
 status: ready
-durata_min: 16
-tags: avventura, educativo, nina, themis, orchestrazione, direttore, agenti, sistema, materia, nina-v2
+durata_min: 14
+tags: avventura, educativo, nina, themis, nina-v2, orchestrazione, direttore
 ---
 <!-- TOC -->
 
 - [EP_N2_14  Il Direttore](#epn214-il-direttore)
-    - [La cosa più difficile non è suonare uno strumento. È far suonare cento strumenti insieme, al momento giusto.](#la-cosa-più-difficile-non-è-suonare-uno-strumento-è-far-suonare-cento-strumenti-insieme-al-momento-giusto)
+    - [Nina scopre che la vera magia non è fare le cose, ma decidere chi le fa, in che ordine, e cosa succede quando qualcuno cade.](#nina-scopre-che-la-vera-magia-non-è-fare-le-cose-ma-decidere-chi-le-fa-in-che-ordine-e-cosa-succede-quando-qualcuno-cade)
   - [COLD OPEN](#cold-open)
-  - [ATTO I  NON SUONARE: FAR SUONARE INSIEME](#atto-i-non-suonare-far-suonare-insieme)
-  - [ATTO II  COSA FA QUANDO QUALCUNO CADE](#atto-ii-cosa-fa-quando-qualcuno-cade)
-  - [ATTO III  LA VETTA CHE GUARDA LA RADICE](#atto-iii-la-vetta-che-guarda-la-radice)
+  - [ATTO I  La Manica Destra Prima della Sinistra](#atto-i-la-manica-destra-prima-della-sinistra)
+  - [ATTO II  Il Watchdog che Dormiva](#atto-ii-il-watchdog-che-dormiva)
+  - [ATTO III  La Lista con le Spunte Giuste](#atto-iii-la-lista-con-le-spunte-giuste)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
 
@@ -23,110 +23,221 @@ tags: avventura, educativo, nina, themis, orchestrazione, direttore, agenti, sis
 
 
 # EP_N2_14 — Il Direttore
-### "La cosa più difficile non è suonare uno strumento. È far suonare cento strumenti insieme, al momento giusto."
+### "Nina scopre che la vera magia non è fare le cose, ma decidere chi le fa, in che ordine, e cosa succede quando qualcuno cade."
 
-**Formato:** Avventura (Nina v2) · ~16 min · chiude l'arco "dal metallo alla mente"
-**Per chi:** chiunque debba mettere in fila tante cose che dipendono l'una dall'altra senza andare nel panico
-**Insegna:** cos'è l'**orchestrazione** — il livello più alto: non *fare* i compiti, ma decidere **chi** li fa, in **che ordine**, gestire le **dipendenze** (chi aspetta chi) e cosa fare quando qualcuno **cade**.
+**Formato:** Avventura (Nina v2) · ~16 min
+**Per chi:** Chi si chiede perché a volte tutto è pronto ma non funziona lo stesso
+**Insegna:** L'orchestrazione: coordinare molti agenti onesti significa scegliere l'ordine giusto, gestire le dipendenze, e vigilare che ognuno completi davvero il suo compito
 **Materia:** Il Direttore (⟡7) · **Casella 14 del viaggio**
-**Posto nella Mappa:** la vetta dell'arco. Da qui si vede tutto.
+**Posto nella Mappa:** Siamo nella regione 7, la sala di comando invisibile dove gli ordini diventano sequenze — il luogo dove le cose si coordinano
 
 ---
 
-> **Dove siamo:** Nina ha un esercito di aiutanti, ora onesti e verificabili (caselle 12-13). Ma sono tanti, e alcuni dipendono da altri. Oggi sale all'ultimo piano: chi tiene il tempo di tutti.
+> **Dove siamo:** Nina ha capito il metallo, l'energia, il calcolo. Ora scopre che anche le macchine — e le persone — devono essere dirette: qualcuno decide l'ordine, chi va prima, chi dopo, e chi controlla che nessuno scivoli in silenzio.
 
 ---
 
 ## COLD OPEN
 
-«C'è un problema» disse Nina, guardando l'esercito al lavoro. «Quello che scrive il riassunto della giornata ha cominciato… ma la giornata non era ancora finita. Ha riassunto a metà.»
+La Giuntura è silenziosa. Nina è ferma davanti alla Mappa Viva e fissa tredici caselle colorate. La quattordicesima è spenta — un cerchio grigio con dentro una bacchetta da direttore d'orchestra.
 
-«Ah» disse THEMIS. «Hai trovato il problema dei problemi. Non basta che ogni soldato sia bravo. Bisogna che facciano le cose nell'**ordine giusto**. Il riassunto va fatto *dopo* che la giornata è finita. La Biblioteca va riordinata *dopo* che sono arrivate le tracce nuove. Chi parte troppo presto fa un lavoro sbagliato anche se è bravissimo.»
+«Cos'è quella?» chiede, indicando.
 
-Portò Nina in cima a una torre. Lì c'era una figura calma davanti a un grande pannello, come un direttore d'orchestra davanti ai musicisti.
+THEMIS non risponde subito. Si avvicina alla mappa, appoggia il calibro sul bordo del leggio e guarda la casella come se la stesse pesando.
 
-«Lui è il **Direttore**» disse THEMIS. «Non sa cucire, non sa misurare, non sa cercare. Sa una cosa sola, la più difficile di tutte: **far lavorare insieme tutti gli altri, al momento giusto.**»
+«Ieri notte», dice alla fine, «un sistema ha lavorato per ore. Ogni pezzo faceva esattamente quello che doveva fare. Il generatore ha girato. Il calcolo ha girato. La memoria ha salvato.»
 
----
+«E allora?»
 
-## ATTO I — NON SUONARE: FAR SUONARE INSIEME
+«E allora stamattina il risultato era sbagliato. Diciannove giorni di lavoro persi.»
 
-«Il Direttore non tocca uno strumento» disse THEMIS. «Se provasse a suonarli tutti lui, sarebbe un disastro. Il suo lavoro è un altro: sapere *chi* deve entrare, *quando*, e *dopo chi*. Conosce le **dipendenze**: questo va dopo quello; quest'altro può andare insieme a quell'altro; questo non deve mai partire prima che quello abbia finito.»
+Nina stringe gli occhi. «Qualcuno ha barato?»
 
-Mostrò a Nina il pannello. C'era una specie di partitura: prima la giornata finisce, poi il riassunto; prima arrivano le tracce, poi la Biblioteca le ordina; prima la mano impara, poi la macchina ripete. Frecce che dicevano *questo aspetta quello*.
+«No.» THEMIS la guarda dritta. «Nessuno ha barato. Erano tutti onesti. Eppure il disastro è arrivato lo stesso.»
 
-«Vedi? Alcune cose possono andare **insieme** — due soldati che non si disturbano, lavorano in parallelo, e fai prima. Altre devono andare **in fila** — una dopo l'altra, perché la seconda ha bisogno di ciò che fa la prima. Il Direttore sa quali sono quali. È tutto qui il suo mestiere: l'**ordine giusto delle cose**.»
+Il pizzicore dietro le orecchie di Nina scatta come una molla.
 
-> *(Esempio per tutti — il test della sarta: per fare un vestito non puoi attaccare i bottoni prima di aver cucito il davanti, né stirare prima di aver finito di cucire. Alcune cose vanno in fila (taglia → cuci → stira → bottoni); altre in parallelo (mentre una cuce la gonna, l'altra prepara le maniche). La sarta-capo che dice a ciascuna quando entrare — quella è il Direttore. Senza di lei, dieci sarte bravissime fanno caos.)*
+«Come è possibile?»
 
----
+THEMIS alza la bacchetta dal leggio e la tiene in verticale, ferma.
 
-## ATTO II — COSA FA QUANDO QUALCUNO CADE
-
-«E se uno cade?» chiese Nina, che ormai pensava sempre alle cadute. «Se il soldato delle tracce si inceppa, e quello della Biblioteca lo sta aspettando?»
-
-«Domanda da Direttore vero» disse THEMIS. «Questo è il pezzo più importante del suo lavoro. Un Direttore scarso fa partire la Biblioteca lo stesso, e quella ordina il vuoto — un disastro a catena. Un Direttore bravo **lo sa**, perché il guardiano gliel'ha detto (ti ricordi il battito?), e allora **ferma la catena**: "se le tracce non sono arrivate, la Biblioteca *non* parte; aspetta, o riprova, o avvisa." Decide cosa fare quando le cose vanno storte — non solo quando vanno bene.»
-
-«Quindi il Direttore deve sapere quando *non* far partire una cosa.»
-
-«Esatto. Far partire le cose è facile. La bravura è sapere **quando fermarle, quando aspettare, quando riprovare, quando chiamare aiuto**. Un sistema robusto non è uno dove non cade mai niente — quello non esiste. È uno dove, quando qualcosa cade, il Direttore **se ne accorge e gestisce la caduta** senza far crollare tutto il resto.»
-
-> *(Strato fondo — per il grande: l'orchestrazione gestisce dipendenze (DAG di task), parallelismo vs sequenzialità, e soprattutto il fallimento: gating sulle precondizioni, retry con backoff, fallback, alerting. La maturità di un sistema non si misura sull'happy path ma su come degrada: un buon orchestratore non propaga il guasto a valle e non parte su dati incompleti.)*
+«Entra», dice. «Te lo faccio vedere.»
 
 ---
 
-## ATTO III — LA VETTA CHE GUARDA LA RADICE
+## ATTO I — La Manica Destra Prima della Sinistra
 
-Nina salì accanto al Direttore e guardò giù. Da lì si vedeva **tutto** il viaggio: la fucina di FORGE in fondo, la macchina che ripeteva, la Mente che parlava, la Biblioteca, le tracce sul muro, la Grande Mappa coi suoi fili, l'esercito al lavoro. Tutto, dall'alto, sembrava una sola grande macchina vivente che respirava.
+Scendono tre gradini e si trovano in una stanza che Nina non ha mai visto: rotonda, senza finestre, con al centro un leggio di legno scuro e attorno — sospese nell'aria — diciassette luci di colori diversi, ognuna immobile.
 
-«È bellissimo» disse Nina, con un nodo in gola che non sapeva spiegare.
+«Queste sono le luci degli agenti», dice THEMIS. «Ognuna fa un lavoro. Quella rossa prepara il materiale. Quella blu lo elabora. Quella verde verifica. Quella bianca salva il risultato.»
 
-«Sai qual è la cosa più bella?» disse THEMIS. «Guarda dove punta lo sguardo del Direttore, in fondo a tutto.»
+«E tu le dirigi?»
 
-Nina guardò. In fondo, alla radice di tutta quella macchina enorme, c'era la fucina. Il fuoco. Le mani di FORGE.
+«Io ti mostro come si dirige. Guarda.»
 
-«Tutto questo» disse THEMIS, piano, «questa orchestra immensa di menti, biblioteche, mappe ed eserciti… è nato per servire **un gesto fatto bene su qualcosa di vero**. La prima cosa che hai imparato, il primo giorno, col bottone. Sei salita fino alla vetta — e la vetta guarda la radice. Il viaggio non è una scala dritta. È un **cerchio**.»
+THEMIS alza la bacchetta. La luce rossa si accende — sola. Le altre restano spente.
 
-E Nina capì che non aveva imparato cose separate. Aveva camminato un cerchio intero, dal metallo alla mente e ritorno al metallo. E che ogni casella, dalla prima all'ultima, diceva in fondo **la stessa cosa**: fai bene la cosa vera, lasciane la traccia, controlla i fatti, e tieni a bada il Disordine.
+«Prima la rossa», dice THEMIS. «Solo lei. Le altre aspettano.»
+
+Nina aspetta. Dopo qualche secondo la rossa si spegne, e si accende la blu.
+
+«Perché non partono tutte insieme? Sarebbe più veloce.»
+
+«Sarebbe più veloce se ognuna non avesse bisogno del lavoro dell'altra.» THEMIS abbassa la bacchetta. «La blu non può elaborare se la rossa non ha ancora preparato. La verde non può verificare se la blu non ha ancora finito. Questo si chiama dipendenza.»
+
+«Come i bottoni», dice Nina, quasi tra sé.
+
+THEMIS si gira. «Cosa?»
+
+«Come quando la sarta non può attaccare i bottoni prima di aver cucito le maniche. Se li attacca prima, la giacca non si chiude.»
+
+> *(Esempio per tutti — il test della sarta: Una sarta che cuce una giacca non può attaccare i bottoni prima di aver cucito le maniche. Se prova, la giacca non si chiude — o peggio, una manica crolla. Il direttore è chi dice: "Tu fai la manica destra, tu la sinistra, poi lei i bottoni, io controllo ogni cinque minuti." Senza quest'ordine e questa vigilanza, anche tre sarte brave producono un disastro.)*
+
+THEMIS sorride — il suo sorriso vero, quello che compare solo quando Nina ha collegato davvero.
+
+«Brava. Hai collegato.»
+
+Nina si avvicina al leggio. «Quindi il direttore non fa le maniche e non fa i bottoni.»
+
+«No.»
+
+«Decide solo l'ordine.»
+
+«Decide l'ordine. E controlla che ognuno abbia davvero finito prima che il prossimo cominci. Queste sono le due metà del lavoro.»
+
+Nina annuisce piano, fissando le luci sospese. La luce verde si è accesa adesso. Poi la bianca.
+
+«Sembra facile», dice.
+
+«Sembra», risponde THEMIS.
+
+---
+
+## ATTO II — Il Watchdog che Dormiva
+
+THEMIS porta Nina a un tavolo laterale. Sopra c'è un registro aperto — colonne di date, nomi di agenti, risultati.
+
+Nina scorre la pagina con un dito. Tutto sembra in ordine. Ogni riga ha una spunta verde. Poi si ferma.
+
+«Qui», dice. «Diciannove righe con la spunta verde. Ma tu hai detto che il risultato era sbagliato.»
+
+«Sì.»
+
+«Quindi qualcuno ha mentito sulla spunta?»
+
+«No.» THEMIS indica la colonna più a sinistra. «Guarda il nome dell'agente che ha scritto queste spunte.»
+
+Nina legge: *Watchdog — verifica automatica.*
+
+«Il watchdog», dice THEMIS, «è l'agente che sorveglia gli altri. Dice: "Rossa finita? Sì. Blu finita? Sì. Verde finita? Sì." E scrive la spunta.»
+
+«E allora?»
+
+«Il watchdog sorvegliava se gli agenti *partivano*. Non se *finivano bene*.»
+
+Nina ci mette un secondo. Poi capisce, e ha un nodo in gola.
+
+«Controllava la partenza, non l'arrivo.»
+
+«Esatto. La luce rossa si accendeva — spunta verde. Ma nessuno guardava se si spegneva con il lavoro fatto o con un errore silenzioso. L'agente rosso falliva, si riavviava, falliva di nuovo — per diciannove giorni. Il watchdog scriveva "riuscito" perché vedeva l'accensione. Non l'esito.»
+
+Nina fissa il registro. «Quindi l'errore non era negli agenti.»
+
+«No.»
+
+«Era nel direttore. Nel watchdog.»
+
+«Nel watchdog che non sorvegliava abbastanza in profondità. Nessuno era disonesto — erano tutti onesti. Ma mancava la *vigilanza attiva*: qualcuno che non si limiti a dire "è partito", ma che aspetti la fine, guardi il risultato, e dica "è andato bene davvero".»
+
+Il Disordine non era entrato con una porta aperta. Era entrato attraverso una spunta verde che non aveva controllato abbastanza lontano. Ruggine silenziosa, dentro un campo che sembrava pulito.
+
+> *(Strato fondo — per il grande: Nel sistema GENESIS v32, un task di fine-tuning notturno rimase marcato "completato con successo" per diciannove giorni mentre falliva in loop silenzioso. Il watchdog — il modulo di vigilanza — controllava che i subtask partissero, non che terminassero con esito corretto. Nessun agente era disonesto nel proprio codice. Ma l'orchestrazione mancava del secondo livello: non solo "chi fa cosa e in che ordine", ma "chi verifica che ogni passo sia davvero chiuso bene prima che il successivo cominci". Il direttore non scrive il codice, non esegue: decide l'ordine e controlla. Questo ruolo è irrinunciabile.)*
+
+---
+
+## ATTO III — La Lista con le Spunte Giuste
+
+THEMIS tende a Nina un foglio bianco e una matita.
+
+«Scrivi i tuoi tre compiti di stasera.»
+
+Nina pensa un secondo. Poi scrive:
+*1. Accendi la lampada. 2. Leggi una pagina. 3. Annota una parola.*
+
+«Ora», dice THEMIS, «immagina di farli senza ordine. Accendi la lampada — no, aspetta, prima annoti — ma non hai letto ancora — e leggi al buio perché la lampada non l'hai ancora accesa.»
+
+Nina sorride nonostante tutto. «Disastro piccolo.»
+
+«Disastro piccolo, sì. Ma ora metti una freccia: accendi → leggi → annota. Dipendenza: non puoi annotare una parola che non hai ancora letto.»
+
+Nina disegna le frecce.
+
+«Adesso», continua THEMIS, «chiedi a tua sorella di farlo con te in parallelo. Tu leggi, lei annota. Veloce?»
+
+«Sì, se ci coordiniamo.»
+
+«E se non vi coordinate?»
+
+«Lei annota una parola a caso, e quella non è la mia parola.»
+
+«Esatto. Servono due cose: l'ordine *dentro* ogni sequenza, e la coordinazione *tra* sequenze diverse che corrono in parallelo.» THEMIS si ferma. «E serve una terza cosa.»
+
+Nina aspetta.
+
+«Qualcuno che guardi la lista dopo ogni spunta e chieda: è davvero fatto? Non fatto a metà. Non fatto male. *Fatto*.»
+
+Nina guarda il foglio. Sotto le frecce scrive, da sola: *Chi controlla?*
+
+THEMIS non dice niente. Ma la guarda con quello sguardo — quello che vale più di qualunque parola.
+
+La verità che torna: *non ricordare, documenta*. Il registro del watchdog non mentiva — ma documentava la cosa sbagliata. Una traccia falsa vale come nessuna traccia: il Disordine si nasconde esattamente lì, tra le spunte che sembrano giuste e non lo sono.
 
 ---
 
 ## CHIUSURA
 
-Nina scese dalla torre diversa da com'era salita. Aveva visto l'intero arco dall'alto, e aveva capito che la potenza più grande non era *fare* — era **mettere in ordine**: le persone, gli aiutanti, le cose, nel tempo giusto. Il Direttore non era il più bravo a fare niente. Era il più bravo a far andare d'accordo tutto il resto. E quello, capì, era un modo di volere bene a un sistema.
+Tornano davanti alla Mappa Viva. La casella quattordici — il cerchio grigio con la bacchetta — pulsa una volta, lenta, poi si riempie di luce calda.
 
-Sulla mappa viva si accese l'ultima casella dell'arco — il Direttore — e per un istante **tutte** le caselle, dalla prima all'ultima, brillarono insieme, collegate dai fili. Il cerchio era chiuso.
+Nina la guarda accendersi. Tredici caselle colorate, quattordici adesso.
 
-> Nina guardò la sua mappa, tutta accesa: dal metallo alla mente. Un arco intero, camminato. E si sentì potente — davvero. Ma poi, scendendo verso casa, le venne un pensiero molto concreto, molto della vita di tutti i giorni: *tutta questa roba magnifica… a cosa mi serve, domani mattina, quando devo decidere se comprare una cosa o no? Quando si tratta di… soldi?*
->
-> *La mappa può portarmi anche lì? Da tutt'altra parte?*
+«Il direttore», dice Nina, «non è il più bravo a fare le cose.»
 
-E sì. Perché la mappa non finisce con l'arco. **Di lato** c'è un'altra terra intera. E Nina sta per scoprire che ci si può camminare con gli stessi piedi.
+«No», dice THEMIS.
+
+«È quello che sa chi deve fare cosa, in che ordine, e che non si ferma finché non sa che ognuno ha davvero finito.»
+
+«Tienila per tutta la vita.»
+
+Nina mette la mano in tasca. Sente il calibro vecchio di FORGE — freddo, preciso, reale. Poi guarda la casella quindici, ancora grigia.
 
 ---
 
-*Provalo tu: pensa a preparare una cena per tanti. Scrivi cosa va fatto PRIMA e cosa DOPO (il forno si accende prima; l'insalata si condisce all'ultimo), e cosa puoi fare INSIEME (mentre cuoce, apparecchi). Hai appena fatto il Direttore: non hai cucinato meglio — hai messo in ordine, e tutto è arrivato in tavola caldo insieme.*
+> *Il direttore tiene tutto in ordine. Ma Nina, se il direttore deve controllare tutto tutto tutto, non diventa lui il collo di bottiglia? E se il direttore stesso si distrae — o sbaglia — chi dirige il direttore?*
+>
+> *La casella quindici aspetta. →*
+
+---
+
+*Provalo tu: Scegli tre compiti semplici — accendere la lampada, leggere una pagina, annotare una parola. Prima prova a farli in ordine sparso: vedi dove si inceppa. Poi disegna le frecce: accendi → leggi → annota. Ora chiedi a qualcuno di casa di farne uno con te in parallelo. Decidete chi fa cosa, in che ordine, e soprattutto: chi controlla che ogni passo sia davvero finito prima che il prossimo cominci? Quello sei tu — il direttore. Tieni la lista. Segna le spunte. Poi rileggi le spunte e chiediti: sono spunte di partenza o spunte di arrivo?*
 
 ---
 
 <!-- SCENE / KEY-IMAGE (per l'animazione) -->
-1. **Il riassunto fatto a metà giornata** — il problema dell'ordine sbagliato.
-2. **Il Direttore sulla torre** davanti al pannello-partitura, come un direttore d'orchestra.
-3. **La partitura delle dipendenze**: frecce "questo dopo quello", cose in fila vs in parallelo.
-4. **La catena fermata**: le tracce non arrivano → la Biblioteca NON parte (gestione della caduta).
-5. **La vista dall'alto**: tutto l'arco come una macchina vivente — e lo sguardo del Direttore che punta in fondo, alla fucina (il cerchio si chiude).
+1. Una sala buia con una sola figura al leggio che alza la bacchetta; attorno, luci diverse si accendono una alla volta in sequenza — non tutte insieme. Le spente aspettano, immobili.
+2. Un meccanismo di orologio visto dall'alto: ingranaggi di dimensioni diverse che girano in ordini diversi, uno fermo finché il precedente non ha completato il giro.
+3. Un registro aperto con colonne di spunte verdi — ma l'inquadratura si stringe sull'ultima colonna, dove le spunte sono tutte uguali e nessuna registra l'esito, solo la partenza.
+4. Un'onda di blocchi che crolla a cascata: il primo blocco cade in silenzio, gli altri seguono — non perché siano rotti, ma perché nessuno li ha fermati in tempo.
+5. Nina con un foglio in mano, frecce disegnate a matita, e sotto le frecce la scritta "Chi controlla?" — la mano ancora sul foglio, la matita ancora in movimento.
 
 <!-- DIDATTICA -->
-**Pietra:** `⟡7` Il Direttore (giro 1). *Orchestrazione: il livello più alto non fa i compiti, decide chi-fa-cosa-quando, gestisce le dipendenze (fila vs parallelo) e soprattutto le cadute (fermare, aspettare, riprovare, avvisare). La maturità di un sistema si vede su come gestisce il fallimento, non sul tutto-va-bene. La vetta guarda la radice: il cerchio si chiude su ⟡0.*
-**Pietre richiamate:** `⟡6` (gli agenti da coordinare + il battito del guardiano), `⟡0` (la radice che tutto serve — il cerchio).
-**3 strati:** bambino = il direttore d'orchestra che fa entrare ognuno al momento giusto · curioso = dipendenze (fila/parallelo) e gestione delle cadute; far partire è facile, saper fermare è bravura · grande = orchestrazione = DAG di task, parallelismo, gating/retry/fallback/alerting; la robustezza si misura sul degrado, non sull'happy path.
-**Cuore:** fai bene le cose vere (mettere in ordine è prendersi cura) · gli strumenti del papà (il sistema intero serve il gesto vero — il cerchio) · curiosità verso la vita reale (e i soldi).
-**Aggancio reale:** l'orchestratore/scheduler notturno del sistema (la catena: story→research→audit→push…, con ordine e dipendenze); chiude l'arco "dal metallo alla mente".
-**Open loop → Casella 15 (il salto laterale, Finanza):** tutta questa potenza, nella vita di tutti i giorni — per esempio coi soldi? La mappa si cammina anche di lato → `EP_N2_15`.
+**Pietra:** `⟡7` Il Direttore (giro 1). *L'orchestrazione coordina molti agenti onesti: decide l'ordine, gestisce le dipendenze, e vigila che ogni passo sia davvero chiuso prima che il successivo cominci.*
+**Pietre richiamate:** ⟡3 (la traccia — documenta, non ricordare); ⟡5 (la verifica — controlla i fatti, non le parole); ⟡6 (gli agenti — onestà non basta, serve struttura)
+**3 strati:** bambino = il direttore d'orchestra che fa partire le luci una alla volta · curioso = dipendenze sequenziali, parallelismo coordinato, watchdog e vigilanza attiva · grande = GENESIS v32, watchdog che controlla le partenze ma non gli esiti, diciannove giorni di fallimento silenzioso
+**Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
+**Aggancio reale:** Nel GENESIS v32, il job scheduler decide quale task parte e quale aspetta; il watchdog è la vigilanza. Senza vigilanza attiva sugli esiti — non solo sulle partenze — agenti onesti producono disastro. L'integrità di uno (il direttore) vale quanto l'onestà di molti (gli agenti).
+**Open loop → Casella 15:** Se il direttore deve controllare tutto, non diventa lui il collo di bottiglia? E se il direttore sbaglia o si distrae — chi dirige il direttore?
+
+---
 
 ## FATTI (per il RAG)
-- **FATTO:** EP_N2_14, casella 14 (⟡7, il Direttore / orchestrazione) del viaggio Nina v2, ~16 min. Chiude l'arco "dal metallo alla mente".
-- **CONCETTO:** L'orchestrazione coordina molti agenti: decide ordine ed esecuzione (sequenziale vs parallela), gestisce le **dipendenze** (chi aspetta chi) e soprattutto i **fallimenti** (gating su precondizioni, retry, fallback, alerting). Non esegue i compiti: li mette in ordine.
-- **PRINCIPIO:** la maturità/robustezza di un sistema si misura su come **degrada** (gestione delle cadute), non sul percorso ideale. Un buon orchestratore non parte su dati incompleti e non propaga il guasto a valle.
-- **META/CERCHIO:** l'intero arco (mente, biblioteca, mappa, esercito, direttore) esiste per servire un gesto fatto bene sulla materia (⟡0): la vetta guarda la radice; il viaggio è un cerchio. Tutte le caselle dicono la stessa cosa (fai bene il vero, lascia la traccia, controlla i fatti, tieni a bada il Disordine).
-- **OBIETTIVO:** dimostrare la navigabilità della mappa con un salto laterale di materia (Finanza, ₣1).
+- **FATTO:** EP_N2

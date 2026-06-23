@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, mappa, sistema, verita, cartamodello, 
   - [ATTO III  TU SEI UNA PEDINA, E PUOI ANDARE OVUNQUE](#atto-iii-tu-sei-una-pedina-e-puoi-andare-ovunque)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -132,3 +134,24 @@ E quella è la casella che apre tutto il resto del viaggio.
 - **PRINCIPIO:** "Sembrare a posto" ≠ "essere a posto": il Disordine si nasconde in ciò che sembra ok; la difesa è verificare l'esito reale, non fidarsi dell'apparenza/del cartellino.
 - **META:** introdotto il modello narrativo: il mondo È una mappa (grafo), Nina è una pedina che cammina di casella in casella in qualsiasi ordine; il "libro" è la sua strada, la mappa resta ri-percorribile. Le caselle imparate "si colorano" (profilo che cresce).
 - **OBIETTIVO:** chiudere la base-Materia e aprire il ponte verso l'automazione (insegnare alla macchina un gesto già padroneggiato), casella 5.
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_FILONE_00_la_materia|La Materia — il telaio, la scelta, il controllo]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_N2_01_la_bambina_che_chiedeva_perche|La Bambina che Chiedeva Perché]] — *posa la Pietra ⟡0 che questo richiama*
+- [[EP_SEED_GRAPHIFY_grafo_del_repo|Graphify — il repo che si disegna da solo]] — *stessa Regione ⟡5 (LA GRANDE MAPPA)*
+- [[EP_SEED_RETE_grafo_due_sorgenti|La RETE — vedere il sistema in 3D]] — *stessa Regione ⟡5 (LA GRANDE MAPPA)*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, mappa, casella*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, mappa, verità*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *mappa, nina, verità*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, casella, mondo*
+- [[v32_la_mappa_vivente|V32_La_Mappa_Vivente]] — *mappa*
+- [[V32_MAPPA_VIVENTE|V32 MAPPA VIVENTE]] — *mappa*
+- [[vita_natura_mappa|Vita Natura — la mappa di Maria]] — *mappa*
+- [[INDEX|SINAPSI — INDEX MASTER]] — *mappa*
+<!-- ECOSISTEMA:end -->

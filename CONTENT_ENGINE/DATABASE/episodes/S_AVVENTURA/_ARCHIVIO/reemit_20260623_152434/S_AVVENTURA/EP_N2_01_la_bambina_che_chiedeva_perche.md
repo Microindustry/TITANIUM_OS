@@ -18,6 +18,8 @@ tags: avventura, educativo, nina, themis, materia, curiosita, ingresso, viaggio,
   - [ATTO III  IL PIZZICORE DIETRO LE ORECCHIE](#atto-iii-il-pizzicore-dietro-le-orecchie)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
+  - [Collegati](#collegati)
+  - [Nellecosistema](#nellecosistema)
 
 <!-- /TOC -->
 
@@ -156,3 +158,26 @@ E lì, alla casella dopo, c'è un attrezzo che misura le cose più piccole di un
 - **PRINCIPIO:** La materia fisica è "la maestra più onesta": non ammette barare (o regge o non regge), per questo l'apprendimento parte da lì prima dell'astratto/digitale.
 - **CANONE:** Introdotti Nina (la curiosa, surrogato del pubblico) e THEMIS (la guida, custode della Giuntura) e il mondo (Atomi↔Bit uniti dalla Giuntura = il fisico e il digitale sono lo stesso mondo).
 - **OBIETTIVO:** stabilire la superpotenza-cardine (chiedere "perché" + verificare con le mani) e aprire verso la misura/precisione (⟡0, casella 2).
+
+<!-- COLLEGATI:start (auto, storie_intersect) -->
+## Collegati
+- [[EP_FILONE_00_la_materia|La Materia — il telaio, la scelta, il controllo]] — *stessa Regione ⟡0 (LA MATERIA)*
+- [[EP_N2_02_il_soffio_di_troppo|Il Soffio di Troppo]] — *stessa Regione ⟡0 (LA MATERIA)*
+- [[EP_N2_03_mille_volte_uguale|Mille Volte Uguale]] — *stessa Regione ⟡0 (LA MATERIA)*
+- [[EP_N2_04_la_mappa_viva|La Mappa Viva]] — *tema: nina-v2, themis, viaggio*
+- [[EP_N2_05_prima_la_mano_poi_la_macchina|Prima la Mano, Poi la Macchina]] — *tema: materia, nina-v2, themis*
+- [[EP_N2_06_l_officina_che_gira_sola|L'Officina che Gira Sola]] — *tema: materia, nina-v2, themis*
+<!-- COLLEGATI:end -->
+
+<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->
+## Nell'ecosistema
+*il sapere dietro la storia:*
+- [[NINA_STILE_E_PIANO|NINA — Stile (deciso) + Piano per renderla DEFINITIVA]] — *nina, materia*
+- [[NINA_V2_ARCHITETTURA|NINA v2 — Architettura (la costituzione)]] — *nina, materia*
+- [[NINA_V2_CHARACTER_BIBLE|NINA v2 — Character Bible (coerenza per animazione e voce)]] — *nina, mondo*
+- [[_CANONE|🎯 IL CANONE — la verità unica (una sola fonte per pilastro)]] — *nina, mondo*
+- [[08_themis|08 · Themis]] — *themis*
+- [[THEMIS_OS|THEMIS OS]] — *themis*
+- [[11_themis-e-buildingpdf|11 · Themis E Building]] — *themis*
+- [[09_themis-e-buildingpdf|09 · Themis E Building]] — *themis*
+<!-- ECOSISTEMA:end -->
