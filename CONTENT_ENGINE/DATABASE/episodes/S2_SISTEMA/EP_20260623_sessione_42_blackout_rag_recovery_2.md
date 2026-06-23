@@ -1,0 +1,155 @@
+<!-- TOC -->
+
+- [EP_42  LA LUCE CHE SE NE VA](#ep42-la-luce-che-se-ne-va)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  DIAGNOSI](#atto-i-diagnosi)
+  - [ATTO II  CURA](#atto-ii-cura)
+  - [ATTO III  COSA HA CAMBIATO](#atto-iii-cosa-ha-cambiato)
+  - [CHIUSURA](#chiusura)
+  - [reel_hook](#reelhook)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
+# EP_42 — LA LUCE CHE SE NE VA
+
+*TITANIUM_OS · Stagione 2 · Sessione #42 · 23 giugno 2026*
+
+---
+
+## COLD OPEN
+
+La taverna è silenziosa.
+
+Non il silenzio del lavoro finito — quello ha una qualità diversa, è caldo, ha l'odore del metallo e della resina epossidica ancora nell'aria. Questo è il silenzio di qualcosa che si è interrotto di colpo.
+
+Lo schermo è nero. Non in standby — proprio nero. Il tipo di nero che precede una domanda che non vuoi fare ad alta voce: *quanto ho perso?*
+
+Il blackout è durato forse venti secondi. Forse meno. Ha preso tutto senza chiedere permesso — come sempre fanno le cose che non si annunciano.
+
+Sul desk, il terminale quando torna su scrive qualcosa che Matteo ha imparato a temere:
+
+```
+HNSW index corrupted — collection unreachable
+```
+
+Tre parole. Trentadue mesi di lavoro che ballano su un filo sottile.
+
+---
+
+## ATTO I — DIAGNOSI
+
+ChromaDB non è un database crash-durable.
+
+È una cosa che sai ma che non pensi mai davvero, nel senso di *farne le conseguenze pratiche*, finché la luce non se ne va nel momento sbagliato. Il motore embedded di Chroma costruisce il suo indice HNSW in memoria e lo scrive su disco in finestre operative: se la corrente manca nel mezzo di una scrittura, l'indice rimane in uno stato indeterminato. Non corrotto in modo spettacolare — non c'è fumo, non c'è errore fatale immediato. Semplicemente: le strutture su disco e quelle in SQLite non si parlano più.
+
+La prima cosa che Matteo fa è resistere all'impulso di ricostruire tutto subito.
+
+Fermarsi. Guardare i log. Capire *esattamente* dove si è rotto.
+
+La diagnosi rivela due livelli di problema distinti:
+
+**Primo livello:** L'indice HNSW è corrotto ma SQLite — il layer di persistenza dei metadati — è integro. I 32.974 chunk esistono ancora. Gli embedding esistono ancora. Solo la struttura di ricerca fast-path è inutilizzabile.
+
+**Secondo livello**, più sottile: su `chromadb 0.5.23` esiste un bug noto nel reset-per-id. Quando si tenta di azzerare la collection mantenendo i dati, `hnswlib` non azzera le label interne. Il risultato è un `KeyError np.uint64` che emerge solo durante la ricostruzione — un errore che non si vede subito, che aspetta il momento peggiore per manifestarsi.
+
+C'è un terzo problema, nascosto ancora più in fondo: `api_server` con `hidden=True` rende stdout e stderr non validi come file handle. PyTorch nativo — che usa quei file handle per i warning interni — crasha silenziosamente. L'effetto: la GPU sparisce dal sistema. Il crash di stamattina non era solo il blackout. Era anche questo.
+
+Tre problemi. Tre origini diverse. Un unico momento di caos che li ha portati tutti a galla insieme.
+
+---
+
+## ATTO II — CURA
+
+La soluzione non è elegante. È *chirurgica*.
+
+Matteo costruisce `rag_recover.ps1` — uno script PowerShell con due livelli di intervento espliciti:
+
+**L1 — `--drop-hnsw`:** sposta fisicamente solo il segmento HNSW corrotto. ChromaDB, al prossimo avvio, lo trova mancante e lo ricostruisce autonomamente dai dati SQLite. Nessun ri-embedding. Nessuna perdita di dati. Tempo stimato: minuti. Si usa quando la corruzione è superficiale — solo la struttura di ricerca, non i dati sottostanti.
+
+**L2 — `--rebuild-hard`:** reset fisico completo dell'intera cartella `chroma_db`. Spostamento, non cancellazione — perché i dati devono essere recuperabili se qualcosa va storto nella ricostruzione. Poi ri-embedding completo da zero. Si usa quando c'è divergenza tra HNSW e SQLite, o quando il bug del `KeyError np.uint64` contamina la struttura. Costa tempo. Ma pulisce *tutto*.
+
+La scelta tra L1 e L2 non è arbitraria: `rag_engine --probe` verifica l'integrità prima di decidere. Il sistema sa diagnosticarsi da solo.
+
+Entrambi i livelli vengono agganciati al self-heal notturno — il ciclo automatico che gira quando la taverna è vuota e il PC non lavora per nessun altro. Se il probe rileva un'anomalia prima che Matteo se ne accorga, parte L1. Se L1 non risolve, scala a L2.
+
+Il fix per il crash GPU è più diretto: redirect di stdout e stderr su logfile prima che `api_server` venga avviato con `hidden=True`. Guardie `devnull` per i path non validi. PyTorch trova i suoi file handle. La GPU torna: `rag_device.txt = cuda`.
+
+`research_agent` riceve una revisione parallela — versione 1.2, con backoff esponenziale sui 429 e una guardia globale che impedisce le race condition sulle richieste concorrenti.
+
+Poi c'è Obsidian.
+
+Il vault ha 2.881 note. Le storie sono 950. Ma 108 note avevano il titolo H1 malformato — nessun frontmatter `title:`, nessun H1 in testa, o entrambi in conflitto. `fix_titoli_vault.py` le corregge in modo *additivo*: non rinomina i file, non tocca i wikilink. Aggiunge quello che manca. I 967 wikilink esistenti rimangono intatti.
+
+L'intersect — il grafo di connessioni tra vault, storie e ponti wiki — viene rigenerato da zero.
+
+Alla fine della sessione: 32.974 chunk verificati. 6 query di test su 6 rispondono correttamente. Il sistema è operativo.
+
+---
+
+## ATTO III — COSA HA CAMBIATO
+
+Non è solo che il RAG funziona di nuovo.
+
+È che ora il sistema sa *come guarire*.
+
+Prima di oggi, un blackout come quello delle 14:23 avrebbe richiesto intervento manuale completo — diagnosi a occhio, ricostruzione empirica, incertezza sul risultato. Un'ora di lavoro persa, forse due, con il dubbio residuo che qualcosa di sottile fosse ancora rotto.
+
+Da domani, il self-heal notturno esegue `--probe` ogni notte. Trova la corruzione. Sceglie il livello. Risolve. Matteo si sveglia e il sistema è già pulito.
+
+Questo è il tipo di problema che si risolve una volta sola se lo risolvi nel modo giusto.
+
+C'è una cosa che vale la pena dire sul bug `KeyError np.uint64` — non perché sia interessante in sé, ma perché rappresenta una categoria di problemi insidiosa: i bug che emergono solo durante la recovery. Il momento in cui sei già in modalità emergenza, già un po' teso, già convinto di aver capito cosa succede. E poi arriva un errore che non ti aspettavi, su una funzione che pensavi fosse banale. Il reset-per-id che non azzera le label interne non è documentato in modo prominente. Matteo lo ha trovato seguendo il `KeyError` fino in fondo, dentro il codice di hnswlib. La soluzione — spostamento fisico invece di reset logico — è controintuitiva ma robusta.
+
+L'indice delle sessioni nel vault Obsidian segna 90 note al 23 giugno 2026.
+
+Ogni nota è una decisione. Ogni decisione è un dato che il RAG recupera quando serve.
+
+La memoria del sistema cresce. Non in modo artigianale, una sessione alla volta, con ricostruzioni parziali che lasciano buchi. Cresce in modo strutturato — con titoli corretti, frontmatter coerente, wikilink integri, indici rigenerati automaticamente.
+
+GENESIS è al 70%.
+
+V32 è al 65%.
+
+Il blackout di oggi non ha tolto nulla. Ha aggiunto una cosa: la certezza che il sistema regge.
+
+---
+
+## CHIUSURA
+
+Ci sono giornate in cui non costruisci niente di nuovo.
+
+Costruisci invece la capacità di non perdere quello che hai già costruito. È lavoro meno visibile, meno fotografabile. Non ha la soddisfazione di una saldatura TIG riuscita o di una quota CNC che torna al micron.
+
+Ma è necessario. E oggi era necessario.
+
+Il terminale scrive:
+
+```
+RAG verified: 32974 chunks · 6/6 queries OK · GPU: cuda
+```
+
+La luce è tornata. Non quella dell'impianto — quella era tornata venti secondi dopo.
+
+Questa.
+
+---
+
+## reel_hook
+
+32.974 chunk nel RAG. Stasera alle 14:23 erano tutti irraggiungibili — blackout da venti secondi, indice HNSW corrotto, GPU sparita per un bug in un file handle che nessuno aveva mai aperto.  
+Ho passato la sessione a costruire il sistema che impedisce che succeda di nuovo.  
+L1 sposta l'HNSW, ChromaDB lo ricostruisce da SQLite. L2 azzera fisico e ri-embeda da zero.  
+Agganciato al self-heal notturno. Da domani gira da solo.  
+La prossima volta che va via la luce — e andrà via — il sistema si cura mentre dormo.
+
+---
+
+## FATTI (per il RAG)
+
+- **DECISIONE:** Recovery RAG a 2 livelli — L1 `--drop-hnsw` (sposta segmento HNSW, ChromaDB ricostruisce da SQLite, no ri-embed) + L2 `--rebuild-hard` (spostamento fisico completo `chroma_db`, ri-embedding integrale); agganciato al self-heal notturno tramite `rag_recover.ps1`.
+- **LOGICA:** ChromaDB (motore embedded) non è crash-durable; blackout durante scrittura HNSW lascia indice in stato indeterminato. Su `chromadb 0.5.23` il reset-per-id non azzera le label hnswlib → `KeyError np.uint64`; solo lo spostamento fisico garantisce pulizia completa.
+- **DECISIONE:** Fix crash GPU — `api_server hidden=True` rendeva stdout/stderr non validi come file handle; PyTorch nativo crashava silenziosamente. Fix: redirect su logfile + guardie `devnull`. Risultato: `rag_device.txt = cuda` ripristinato.
+- **DECISIONE:** `fix_titoli_vault.py` — normalizzazione additiva di 108 titoli Obsidian (H1 in testa + frontmatter `title:`); operazione non distruttiva, 967 wikilink intatti, intersect rigenerato (vault 2.881 + storie 950).
+- **DECISIONE:** `research_agent` v1.2 — backoff esponenziale su HTTP 429 + guardia globale su richieste concorrenti.
+- **OBIETTIVO:** RAG verificato 32.974 chunk / 6 su 6 query OK; self-heal notturno operativo sblocca continuità di sessione anche post-eventi elettrici non prevedibili.
