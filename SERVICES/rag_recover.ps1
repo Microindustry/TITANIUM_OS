@@ -61,6 +61,18 @@ function Stop-RagHolders {
     Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'api_server\.py' } | ForEach-Object {
         try { Stop-Process -Id $_.ProcessId -Force -ErrorAction Stop } catch {}
     }
+    # COMMIT-LEAK (#44): una load RAG su HNSW corrotto puo' RISERVARE decine di GB di
+    # commit (l'header corrotto chiede una linklist gigante). Resta riservato anche dopo,
+    # e satura il commit di Windows -> OpenBLAS/numpy "Memory allocation failed" su
+    # QUALUNQUE processo successivo, incluso il recovery stesso (probe/rebuild). Va quindi
+    # ucciso PRIMA di sondare. I python legittimi (api/watcher) sono gia' fermati sopra:
+    # un python rimasto con commit patologico (>15 GB) e' il leak.
+    Get-CimInstance Win32_Process -Filter "Name='python.exe' OR Name='pythonw.exe'" | Where-Object {
+        $_.PageFileUsage -gt 15728640  # KB -> 15 GB di commit riservato
+    } | ForEach-Object {
+        Write-Host ("  commit-leak: killo PID {0} ({1} GB committati)" -f $_.ProcessId, [math]::Round($_.PageFileUsage/1MB,1)) -ForegroundColor Yellow
+        try { Stop-Process -Id $_.ProcessId -Force -ErrorAction Stop } catch {}
+    }
     Start-Sleep -Seconds 2
 }
 
