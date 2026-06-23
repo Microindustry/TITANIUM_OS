@@ -19,6 +19,20 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-06-23 · 8 commit
+- `a114aba8` auto: night_audit - cartella clinica 23/06/2026
+- `40cf1b0b` auto: story_agent - episodi generati 23/06/2026
+- `e14f2075` chore(salva): sessione #42 — blackout RAG recovery 2-livelli + Obsidian titoli/intersect
+- `04c3f71a` feat(rag): reset fisico chroma_db + fix titoli vault Obsidian
+- `d1863576` fix(rag): recovery 2-livelli post-blackout + research_agent resiliente + GPU
+- `78358d57` chore(salva): visione NINA ZERO confermata — film istruttorio che genera il CV
+- `ad9d663a` chore(salva): sessione #41 — PUNTO 0, RAG integrato+self-healing, generatore Nina grounded
+- `d9489e76` chore(salva): sessione #40 — RAG sbloccato+ottimizzato GPU, MIMS/VULCAN, canone veritiero, ASSOLUTO V9
+
+_episodi: 191 · critiche aperte: 25 (68 risolte) · RAG: 33167 chunk_
+
+
+
 ## 2026-06-22 · 2 commit
 - `84463a59` auto: night_audit - cartella clinica 22/06/2026
 - `932fe7e9` auto: story_agent - episodi generati 22/06/2026
