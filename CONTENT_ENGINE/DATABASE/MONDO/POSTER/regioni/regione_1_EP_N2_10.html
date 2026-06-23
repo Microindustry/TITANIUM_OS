@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#05070d}
+.card{position:relative;width:1080px;height:1350px;overflow:hidden;
+  background:radial-gradient(120% 60% at 50% 32%, #34d3991f 0%, #0b1020 50%, #05070d 100%);
+  font-family:'Space Mono',monospace;color:#eef2fb}
+.frame{position:absolute;inset:40px;border:1px solid #34d39940;border-radius:6px}
+.brand{position:absolute;top:78px;left:0;right:0;text-align:center;font-size:19px;
+  letter-spacing:9px;color:#8595b4}
+.gemwrap{position:absolute;top:200px;left:0;right:0;display:flex;justify-content:center}
+.region{position:absolute;top:600px;left:0;right:0;text-align:center;font-size:30px;
+  font-weight:700;letter-spacing:12px;color:#34d399}
+.pietra{position:absolute;top:648px;left:0;right:0;text-align:center;font-size:15px;
+  letter-spacing:6px;color:#7f8db0}
+.title{position:absolute;top:760px;left:90px;right:90px;text-align:center;
+  font-family:'Playfair Display',serif;font-weight:700;font-size:72px;line-height:1.02;color:#f6f8ff}
+.tag{position:absolute;top:1010px;left:110px;right:110px;text-align:center;
+  font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:30px;
+  line-height:1.42;color:#aeb9d4}
+.foot{position:absolute;bottom:78px;left:90px;right:90px;display:flex;justify-content:space-between;
+  font-size:16px;letter-spacing:2px;color:#7f8db0}
+.foot .nina{color:#34d399}
+</style></head><body>
+<div class="card">
+  <div class="frame"></div>
+  <div class="brand">TITANIUM&nbsp;OS · L'AVVENTURA DI NINA</div>
+  <div class="gemwrap">
+    <svg width="340" height="380" viewBox="0 0 340 380">
+      <defs>
+        <radialGradient id="g" cx="50%" cy="42%" r="60%">
+          <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#a7f3d0"/><stop offset="100%" stop-color="#34d399"/>
+        </linearGradient>
+      </defs>
+      <circle cx="170" cy="170" r="180" fill="url(#g)"/>
+      <!-- gemma sfaccettata -->
+      <g stroke="#a7f3d0" stroke-width="2" stroke-opacity="0.6" fill="url(#face)">
+        <polygon points="170,40 290,150 170,330 50,150" fill-opacity="0.22"/>
+        <polygon points="170,40 290,150 170,150" fill-opacity="0.40"/>
+        <polygon points="170,40 50,150 170,150" fill-opacity="0.30"/>
+        <polygon points="50,150 170,150 170,330" fill-opacity="0.18"/>
+        <polygon points="290,150 170,150 170,330" fill-opacity="0.28"/>
+      </g>
+      <text x="170" y="200" text-anchor="middle" font-family="Playfair Display,serif"
+        font-size="120" font-weight="700" fill="#a7f3d0">1</text>
+    </svg>
+  </div>
+  <div class="region">LA TRACCIA</div>
+  <div class="pietra">PIETRA ⟡1 · CASELLA MADRE</div>
+  <div class="title">Il Grande Loop: quando il gesto rimane</div>
+  <div class="tag">«Un gesto fatto bene, se lasci la traccia, continua a dare frutti per sempre»</div>
+  <div class="foot"><span>EP_N2_10</span><span class="nina">NINA</span><span>il mondo · regione 1/7</span></div>
+</div></body></html>
