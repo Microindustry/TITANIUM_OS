@@ -167,15 +167,24 @@ Progetta lo scheletro. Rispondi SOLO con questo JSON (valori in italiano, concre
   "aggancio_reale": "il nodo reale del sistema GENESIS/V32/MIMS che questo concetto rispecchia",
   "fatti_rag": ["3-5 FATTI atomici, grounded, che il RAG recupera secco (con numeri/decisioni se presenti)"]
 }}"""
-    msg = client.messages.create(
-        model=MODEL_ARCH, max_tokens=1500, system=ARCH_SYSTEM,
-        messages=[{"role": "user", "content": user}],
-    )
-    txt = msg.content[0].text
-    m = re.search(r"\{.*\}", txt, re.DOTALL)
-    if not m:
-        raise ValueError("stadio 1: nessun JSON nello scheletro")
-    return json.loads(m.group(0))
+    # Retry: ogni tanto haiku non restituisce JSON valido (o lo tronca). Riprova alcune
+    # volte invece di abortire — cosi' un singolo intoppo non ferma un intero batch/notte.
+    last_err = None
+    for attempt in range(3):
+        try:
+            msg = client.messages.create(
+                model=MODEL_ARCH, max_tokens=1500, system=ARCH_SYSTEM,
+                messages=[{"role": "user", "content": user}],
+            )
+            txt = msg.content[0].text
+            m = re.search(r"\{.*\}", txt, re.DOTALL)
+            if not m:
+                raise ValueError("nessun JSON nello scheletro")
+            return json.loads(m.group(0))
+        except (ValueError, json.JSONDecodeError) as e:
+            last_err = e
+            logger.warning("stadio 1 tentativo %d/3 fallito (%s) — riprovo", attempt + 1, e)
+    raise ValueError(f"stadio 1: scheletro non valido dopo 3 tentativi ({last_err})")
 
 
 # ── STADIO 2 — SCRITTORE ──────────────────────────────────────────────────────
@@ -415,17 +424,26 @@ def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool 
     body = stage2_writer(client, concept, skel, canon, rag_context, ep_id, meta)
 
     # Il blocco FATTI (per il RAG) e' il terzo requisito del canone (serve a
-    # build_episodes_json + riflusso). Se lo Scrittore lo omette o lo fonde nella
-    # DIDATTICA, lo ricostruiamo deterministico dallo scheletro grounded (stadio 1).
+    # build_episodes_json + riflusso). Lo Scrittore spesso lo omette o lascia SOLO
+    # l'intestazione: garantiamo SEMPRE i fatti grounded dello scheletro (stadio 1).
+    # Cosi' la densita' di FATTI non dipende dai capricci del writer (>=4 fatti reali).
+    fatti = [str(f).strip() for f in (skel.get("fatti_rag") or []) if str(f).strip()]
+    header_fatto = (f"- **FATTO:** {ep_id}, casella {meta.get('casella','?')} "
+                    f"({concept[:60]}) del viaggio Nina v2, regione {meta.get('regione','?')} "
+                    f"({REGIONI_NINA.get(meta.get('regione'), '?')}).")
     if "## FATTI" not in body:
-        fatti = skel.get("fatti_rag") or []
-        blocco = [f"## FATTI (per il RAG)",
-                  f"- **FATTO:** {ep_id}, casella {meta.get('casella','?')} "
-                  f"({concept[:60]}) del viaggio Nina v2, regione {meta.get('regione','?')} "
-                  f"({REGIONI_NINA.get(meta.get('regione'), '?')})."]
-        blocco += [f"- {f}" for f in fatti[:5]]
+        blocco = ["## FATTI (per il RAG)", header_fatto] + [f"- {f}" for f in fatti[:5]]
         body = body.rstrip() + "\n\n" + "\n".join(blocco) + "\n"
-        logger.info("FATTI: blocco ricostruito dallo scheletro (writer l'aveva omesso)")
+        logger.info("FATTI: blocco creato dallo scheletro (writer l'aveva omesso)")
+    else:
+        # blocco presente: se e' scarno (< 4 bullet) lo arricchiamo coi fatti grounded mancanti
+        fatti_sec = body[body.find("## FATTI"):]
+        n_bullet = len(re.findall(r"^\s*-\s", fatti_sec, flags=re.M))
+        if n_bullet < 4 and fatti:
+            mancanti = [f for f in fatti if f[:30].lower() not in fatti_sec.lower()]
+            if mancanti:
+                body = body.rstrip() + "\n" + "\n".join(f"- {f}" for f in mancanti[:5]) + "\n"
+                logger.info("FATTI: blocco scarno (%d) -> aggiunti %d fatti grounded", n_bullet, len(mancanti[:5]))
 
     # validazione minima del formato (non blocca: e' una proposta da rivedere)
     for sec in ("## COLD OPEN", "## ATTO I", "## CHIUSURA", "## FATTI"):

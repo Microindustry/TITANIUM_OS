@@ -83,7 +83,26 @@ def archive_current(ep_id: str, ts: str) -> int:
     return moved
 
 
-def rebuild_episodes() -> None:
+EPISODES_JSON = TI_ROOT / "DASHBOARD" / "src" / "data" / "episodes.json"
+
+
+def purge_reemitted(ids: list[str]) -> None:
+    """build_episodes_json e' additivo (dedup per id, NON aggiorna le voci esistenti):
+    dopo un re-emit i .md cambiano ma il json terrebbe il vecchio. Quindi togliamo le
+    voci ri-emesse cosi' il rebuild le re-importa fresche dal disco."""
+    try:
+        d = json.loads(EPISODES_JSON.read_text(encoding="utf-8"))
+        keep = [e for e in d if str(e.get("id", "")) not in set(ids)]
+        if len(keep) != len(d):
+            EPISODES_JSON.write_text(json.dumps(keep, ensure_ascii=False, indent=2), encoding="utf-8")
+            logger.info("episodes.json: purgate %d voci ri-emesse (re-import dal disco)", len(d) - len(keep))
+    except Exception as e:
+        logger.warning("purge episodes.json fallito: %s", e)
+
+
+def rebuild_episodes(ids: list[str] | None = None) -> None:
+    if ids:
+        purge_reemitted(ids)
     try:
         r = subprocess.run([PY, str(BUILD_JSON)], cwd=str(TI_ROOT), capture_output=True, text=True, timeout=180)
         logger.info("episodes.json rebuild rc=%s", r.returncode)
@@ -126,7 +145,11 @@ def run(only: set[int] | None = None, dry_run: bool = False, do_rag: bool = Fals
                 "casella": e["num"], "richiama": e["richiama"]}
         moved = archive_current(e["id"], ts)
         logger.info("[%s] archiviati %d file -> regenero (grounded)...", e["id"], moved)
-        out = agent.generate(e["concetto"], meta, rag_query=e["concetto"], auto=True, require_grounding=True)
+        try:
+            out = agent.generate(e["concetto"], meta, rag_query=e["concetto"], auto=True, require_grounding=True)
+        except Exception as ex:
+            out = None
+            logger.warning("[%s] errore in generazione (%s) — proseguo col prossimo", e["id"], ex)
         if out:
             ok += 1
             logger.info("[%s] RE-EMESSO: %s", e["id"], out.name)
@@ -134,7 +157,7 @@ def run(only: set[int] | None = None, dry_run: bool = False, do_rag: bool = Fals
             skipped += 1
             logger.warning("[%s] SALTATO (grounding insufficiente o errore) — la versione vecchia resta in _ARCHIVIO", e["id"])
 
-    rebuild_episodes()
+    rebuild_episodes([e["id"] for e in eps])
     if do_rag:
         rag_incremental()
     else:

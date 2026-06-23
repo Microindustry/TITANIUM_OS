@@ -171,14 +171,19 @@ def run(count: int = 1, dry_run: bool = False, do_rag: bool = False) -> int:
             generated += 1
             continue
 
-        out = agent.generate(seed["concetto"], meta, rag_query=seed["concetto"], auto=True)
+        try:
+            out = agent.generate(seed["concetto"], meta, rag_query=seed["concetto"], auto=True)
+        except Exception as ex:
+            out = None
+            logger.warning("generazione in errore per %s (%s)", seed["seed_file"], ex)
         if out:
             generated += 1
             done.append(seed["seed_file"])
             logger.info("GENERATO+PROMOSSO: %s", out.name)
         else:
-            logger.error("generazione fallita per %s (ANTHROPIC_API_KEY?)", seed["seed_file"])
-            break
+            # non blocca il giro: segna il seme come tentato e passa al prossimo
+            logger.error("generazione fallita/saltata per %s — proseguo", seed["seed_file"])
+            done.append(seed["seed_file"])
 
     # persisti cursore (mai in dry-run: non deve sporcare la rotazione)
     if not dry_run:
