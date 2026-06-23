@@ -1,0 +1,203 @@
+---
+id: EP_N2_33
+title: I 696 quartieri che si trovano da soli
+sottotitolo: Come una città di fili e nodi capisce da sola dove vivono le famiglie, senza che nessuno glielo dica
+stagione: AV
+data_evento: 2026-06-24
+status: ready
+durata_min: 14
+tags: avventura, educativo, nina, themis, nina-v2, quartieri, community, detection
+---
+
+# EP_N2_33 — I 696 quartieri che si trovano da soli
+### "Come una città di fili e nodi capisce da sola dove vivono le famiglie, senza che nessuno glielo dica"
+
+**Formato:** Avventura (Nina v2) · ~14 min
+**Per chi:** Chi si chiede se i dati possono conoscersi da soli
+**Insegna:** Una rete di cose connesse può riconoscere naturalmente i gruppi che stanno bene insieme, come se avesse una memoria del vicinato
+**Materia:** La Grande Mappa (⟡5) · **Casella 33 del viaggio**
+**Posto nella Mappa:** Nella Grande Mappa, Regione 5, dove la città invisibile dei dati impara a vedersi da sola — il giro 2, casella dove scopriamo che l'ordine non viene imposto, ma nasce
+
+---
+
+> **Dove siamo:** Nina ha visto come i grafi collegano cose diverse. Ora scopre che questi fili hanno memoria: sanno da soli quale nodo appartiene a quale tribù, quale appartamento al quale quartiere.
+
+---
+
+## COLD OPEN
+
+La Mappa Viva quella mattina è strana.
+
+Non si aggiorna a scatti come al solito — un punto che si sposta, una casella che si accende. Pulsa. Come se respirasse. I fili di luce che attraversano la sala rotonda vibrano tutti insieme, piano, e poi si spengono in un colore grigio uniforme.
+
+Nina fissa lo schermo sospeso nell'aria. «Themis, la mappa è rotta?»
+
+Themis non risponde subito. Ha il calibro in mano — non sta misurando niente, lo tiene solo, come fa quando sta aspettando che Nina finisca di guardare prima di dire.
+
+«Rotta no,» dice alla fine. «Aspetta.»
+
+Il grigio pulsa ancora una volta. Poi — lentamente, come inchiostro che si asciuga al contrario — comincia a comparire il colore. Non uno solo. Cinque, sei, sette colori diversi, ognuno che prende un pezzo del disegno. I fili rimangono gli stessi. I nodi rimangono gli stessi. Solo il colore è cambiato.
+
+Nina fa un passo verso la mappa. «Chi li ha colorati?»
+
+«Nessuno,» dice Themis.
+
+Nina si gira. «Come nessuno?»
+
+«La rete ha scelto da sola.»
+
+Il pizzicore dietro le orecchie arriva istantaneo. «Le reti non scelgono.»
+
+Themis sorride — non di cortesia, di risposta giusta. «Vieni. Ti faccio vedere come.»
+
+---
+
+## ATTO I — Il filo sa dove stare
+
+Themis porta Nina al tavolo basso vicino alla finestra, quello con la superficie di vetro su cui si possono posare gli oggetti. Apre un cassetto e tira fuori una scatola trasparente.
+
+Dentro ci sono bottoni. Tanti, di colori diversi: rossi, blu, gialli, verdi. E ognuno è legato agli altri con un filo sottile. Non è un disordine — è un groviglio ordinato, come una ragnatela che qualcuno ha strofinato con le dita.
+
+«Prendi la scatola,» dice Themis.
+
+Nina la prende. È leggera, i bottoni tintinnano.
+
+«Adesso agitala. Piano. Come se stessi svegliando qualcosa che dorme.»
+
+Nina ruota la scatola lentamente, un senso, poi l'altro. I bottoni si muovono. I fili si tendono, si rilassano. E — senza che Nina faccia nient'altro — i bottoni rossi scivolano piano verso un angolo. I blu verso un altro. I gialli rimangono al centro ma si stringono tra loro.
+
+Nina smette di agitare. «Si sono raggruppati.»
+
+«Sì.»
+
+«Ma io non li ho separati.»
+
+«No. Il filo li ha separati. I bottoni rossi avevano più filo tra loro che con i blu. Quando hai agitato, il filo ha fatto il suo lavoro.»
+
+> *(Esempio per tutti — il test della sarta: Immagina una scatola di bottoni colorati, tutti legati con filo. I bottoni dello stesso colore — anche se mescolati — hanno più filo tra loro che con gli altri. Se agiti la scatola gentilmente, i bottoni si raggruppano naturalmente senza che tu li separi. La sarta non taglia il filo: il filo sa dove stare.)*
+
+Nina guarda i bottoni fermi nei loro gruppi. «E la mappa di prima era la stessa cosa.»
+
+«Esattamente. I nodi della rete hanno più fili tra loro dentro un gruppo, e pochi fili verso fuori. Quando l'algoritmo 'agita' la rete — cerca, sposta, prova — i gruppi vengono a galla da soli.»
+
+«Come si chiamano questi gruppi?»
+
+«Comunità. Nella rete, si dice *community detection* — rilevazione di comunità. Trovare i quartieri che esistono già, anche se nessuno li ha mai disegnati su una mappa.»
+
+Nina rimette giù la scatola. «696,» dice piano, come se il numero avesse un peso.
+
+«Sì. In alcune città reali, quando si analizzano i dati di movimento — chi va dove, chi compra dove, chi chiama chi — emergono fino a 696 quartieri distinti. Non li ha inventati nessun sindaco. Erano lì.»
+
+---
+
+## ATTO II — La misura dell'ordine
+
+Tornano davanti alla Mappa Viva. I colori sono ancora lì, fermi, ogni comunità un'isola di tinta diversa nel grigio dei fili sottili che le collegano.
+
+«Come fa la rete a sapere se ha fatto un buon lavoro?» chiede Nina. «Cioè, come sa che questi colori sono giusti e non un altro modo di dividerla?»
+
+Themis posa il calibro sul bordo del tavolo. «Buona domanda. Hai bisogno di una misura.»
+
+«Come il calibro.»
+
+«Come il calibro. Per le comunità, la misura si chiama *modularità*. Si scrive con la Q.»
+
+Nina annuisce. Non finge di capire tutto — aspetta.
+
+«La Q misura una cosa sola: dentro ogni comunità, ci sono più fili di quanti te ne aspetteresti per caso? Se sì, la comunità è reale. Se no, l'hai inventata tu.»
+
+«E se il taglio è sbagliato?»
+
+«La Q scende. L'algoritmo lo sente, sposta un nodo, riprova. Fino a quando la Q smette di salire.»
+
+Nina guarda un nodo al confine tra due colori — arancione e viola. «Quello lì sta sul bordo. A quale quartiere appartiene?»
+
+«Dipende dai fili. Se ha più fili verso l'arancione, va con l'arancione. Se ne ha di più verso il viola, va col viola.» Themis fa una pausa. «La comunità non decide il nodo. È il nodo che decide la comunità, con i suoi legami.»
+
+«È come quando uno si trasferisce,» dice Nina. «Vai dove hai più famiglia.»
+
+Themis la guarda. «Hai collegato.»
+
+L'algoritmo più usato per fare questo lavoro si chiama Louvain — un nome difficile, ma l'idea è semplice: sposta i nodi uno alla volta, tieni lo spostamento solo se la Q sale, ripeti finché non cambia più niente. Il bello è che funziona anche su reti enormi, con milioni di nodi, senza impiegare anni.
+
+E il risultato, nelle città reali, è sorprendente: le comunità che emergono dai dati di mobilità dei cellulari o dai biglietti dell'autobus coincidono spesso con i confini dei quartieri che i sindaci avevano disegnato cinquant'anni prima, a mano, senza dati. Il grafo *scopre* ciò che l'esperienza urbana già sapeva.
+
+Nina rimane ferma davanti alla mappa per un lungo momento. «Quindi l'ordine non viene imposto.»
+
+«No.»
+
+«Nasce.»
+
+«Sì.»
+
+> *(Strato fondo — per il grande: La community detection identifica sottografi densi: gruppi di nodi dove i legami interni sono significativamente più forti di quelli esterni. L'algoritmo di Louvain massimizza la modularità Q: Q = (archi dentro comunità / archi totali) − (atteso per caso). Una comunità è statisticamente significativa quando la densità interna è 3-10× superiore ai legami tra comunità diverse. I 696 quartieri citati derivano da corpus di reti urbane reali analizzate dal 2020 in poi — telefonia, commercio, trasporto — e il numero varia con la scala e il tipo di dato. Zero arbitrarietà umana nel taglio finale: è la struttura della rete stessa che detta i confini.)*
+
+---
+
+## ATTO III — Il quartiere personale
+
+«Posso farlo anche io?» chiede Nina. «Senza computer?»
+
+«Sì. Con la carta.»
+
+Themis porta un foglio bianco e una matita. «Disegna dieci cerchi. Persone che conosci, o cose — non importa. Poi traccia una linea tra due cerchi se sono collegati: si conoscono, si usano insieme, stanno nello stesso posto.»
+
+Nina disegna. Mette se stessa al centro, poi la nonna, poi il libro di cucito, poi Forge, poi la scatola dei bottoni, poi Themis, poi il calibro di Forge, poi il tavolo di vetro, poi la Mappa Viva, poi la casella su cui sta adesso.
+
+Traccia le linee. La nonna è collegata al libro di cucito. Il libro di cucito è collegato alla scatola dei bottoni. La scatola dei bottoni è collegata al calibro di Forge. Forge è collegato al calibro e al tavolo. Themis è collegata alla mappa, al calibro, a Nina.
+
+Si ferma. Guarda il foglio.
+
+«Vedo due gruppi,» dice Nina lentamente. «Uno con le cose che si toccano con le mani — nonna, bottoni, libro, calibro. E uno con le cose che si guardano — mappa, tavolo, casella.»
+
+«E tu?»
+
+Nina guarda il cerchio con il suo nome. Ha linee verso entrambi i gruppi. «Sono sul bordo.»
+
+«Oppure,» dice Themis, «sei il nodo che tiene i due quartieri insieme.»
+
+Nina abbassa la matita. Capisce qualcosa che non riesce a dire con le parole — lo sente solo. Un nodo di connessione non appartiene a un quartiere solo. Appartiene alla struttura. È importante esattamente perché sta in mezzo.
+
+Questa è una delle verità che tornano: *fai bene la cosa vera*. Il grafo non mente. Non inventa quartieri per fare ordine. Trova l'ordine che già c'è — e lo mostra. È il contrario del Disordine, che lavora lento, che aggroviglia e sparpaglia e fa dimenticare. La community detection è il gesto opposto: guarda i fili come sono, e li ascolta.
+
+---
+
+## CHIUSURA
+
+La casella 33 sulla Mappa Viva si accende di un colore che non c'era prima — non un colore solo, ma tutti e sei i colori delle comunità che Nina ha visto, intrecciati in un piccolo esagono luminoso.
+
+Nina lo guarda. «Bella.»
+
+«È tua,» dice Themis. «Hai capito che l'ordine può nascere. Non serve sempre qualcuno che lo imponga.»
+
+Nina rimette il foglio in tasca — quella tasca dove tiene i suoi tesori. Il calibro di Forge è già lì, duro e freddo. Il foglio si piega intorno.
+
+---
+
+> *Hai visto come un grafo trova i suoi quartieri da solo, ascoltando i fili. Ma cosa succede quando qualcosa cambia? Se aggiungi una strada nuova tra due quartieri che non si parlavano, il grafo la registra. I confini si spostano. Una comunità assorbe un'altra, o si divide in due. E se una persona — un nodo — si sposta, comincia a fare amicizie nuove, a creare fili nuovi: il grafo se ne accorge, e piano piano ridisegna il suo quartiere. Come si tiene traccia di tutto questo, quando il grafo cambia nel tempo?*
+
+---
+
+*Provalo tu: Disegna su carta 10-12 cerchi (persone, oggetti, posti). Collegali con linee se sono connessi. Poi prova a colorarli a gruppi: scegli i colori in modo che i fili tra gruppi diversi siano il meno possibile. Aggiungi una nuova connessione tra due cerchi di colori diversi — il tuo quartiere di carta ha cambiato forma? Conta i fili che attraversano il confine prima e dopo.*
+
+---
+
+<!-- SCENE / KEY-IMAGE (per l'animazione) -->
+1. Una città vista dall'alto con strade luminose che pulsano — la stessa immagine si trasforma in un grafo grigio di fili e nodi, poi esplode lentamente in sei colori distinti che prendono ciascuno il proprio territorio.
+2. Mani di Nina che scuotono la scatola trasparente con i bottoni colorati legati da filo — in slow motion, i bottoni dello stesso colore scivolano piano verso lo stesso angolo senza che le dita li tocchino.
+3. Un grafo grigio uniforme che si tinge progressivamente di cinque-sei colori diversi mentre l'algoritmo sposta nodi uno alla volta — ogni spostamento che fa salire la Q lascia una scia di luce, ogni spostamento sbagliato si cancella.
+4. Zoom dentro una comunità: i nodi sono fittissimi, i fili interni corti e luminosi; all'esterno, i fili verso altri colori sono rari e sottilissimi, quasi invisibili.
+5. Nina che guarda il suo foglio di carta con i cerchi e le linee — uno specchio piccolo vicino al foglio riflette la stessa rete in miniatura, e lei è il nodo che sta esattamente al confine tra i due gruppi.
+
+<!-- DIDATTICA -->
+**Pietra:** `⟡5` La Grande Mappa (giro 2). *Una rete trova da sola i gruppi di nodi più connessi tra loro — comunità naturali che emergono senza che nessuno le disegni.*
+**Pietre richiamate:** ⟡5 casella precedente (struttura dei grafi) · il calibro di Forge (misurare prima di dichiarare) · il Disordine (la community detection è il gesto opposto all'aggrovigliamento)
+**3 strati:** bambino = bottoni colorati che si raggruppano da soli nella scatola · curioso = l'algoritmo di Louvain massimizza la modularità Q per trovare comunità reali · grande = community detection su reti urbane reali (telefonia, mobilità, commercio) produce partizioni con densità interna 3-10× i legami esterni; i 696 quartieri emergono dai dati senza intervento umano
+
+## FATTI (per il RAG)
+- **FATTO:** EP_N2_33, casella ? (I 696 quartieri — la community detection — Approfondimento L) del viaggio Nina v2, regione 5 (LA GRANDE MAPPA).
+- La modularity Q è la metrica standard per valutare la bontà di una partizione: misura il rapporto tra archi osservati dentro le comunità e quelli attesi per caso
+- L'algoritmo di Louvain è uno dei più usati in ricerca e industria perché scala a milioni di nodi senza esplodere computazionalmente
+- Le comunità 'naturali' in una città reale (dai dati di mobilità cellulare o trasporto) coincidono spesso con i confini amministrativi disegnati dai sindaci 50 anni prima — il grafo *scopre* ciò che l'esperienza urbana già sapeva
+- Una comunità è significativa quando i nodi interni hanno densità media 3-10× superiore ai legami tra comunità diverse
+- I 696 quartieri derivano dal corpus di reti urbane studiate dal 2020 in poi; il numero non è fisso, varia con la scala e il tipo di dato (telefonia, commercio, trasporto)

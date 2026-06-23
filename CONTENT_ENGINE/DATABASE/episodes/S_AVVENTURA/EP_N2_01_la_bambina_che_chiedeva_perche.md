@@ -11,7 +11,7 @@ tags: avventura, educativo, nina, themis, nina-v2, materia, curiosita, ingresso,
 <!-- TOC -->
 
 - [EP_N2_01  La Bambina che Chiedeva Perché](#epn201-la-bambina-che-chiedeva-perché)
-    - [C'era una bambina che faceva una domanda di troppo.](#cera-una-bambina-che-faceva-una-domanda-di-troppo)
+    - [Cera una bambina che faceva una domanda di troppo. Un giorno trovò una porta che nessuno vedeva  e di là imparò la prima cosa vera: fatto bene non vuol dire bello, vuol dire che regge quando lo tiri.](#cera-una-bambina-che-faceva-una-domanda-di-troppo-un-giorno-trovò-una-porta-che-nessuno-vedeva-e-di-là-imparò-la-prima-cosa-vera-fatto-bene-non-vuol-dire-bello-vuol-dire-che-regge-quando-lo-tiri)
   - [COLD OPEN](#cold-open)
   - [ATTO I  La Porta e il Ponte](#atto-i-la-porta-e-il-ponte)
   - [ATTO II  Il Bottone che Regge e il Bottone che No](#atto-ii-il-bottone-che-regge-e-il-bottone-che-no)
