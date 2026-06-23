@@ -78,6 +78,30 @@ TITANIUM (brand / umbrella / identità)
 
 ---
 
+## I 15 Nodi operativi (NODES/)
+
+*La mappa concettuale sopra dice i **layer**; qui i **nodi reali** su disco (agg. 2026-06-24, sess.#44). Diverse voci "(futuro)" del 2025 sono ora vive: `agent_loop`→**SELF_IMPROVE**, `LLM Matteo`→**LOCAL_LLM**.*
+
+| Cluster | Nodo | Cosa fa |
+|---------|------|---------|
+| **Conoscenza** | `MENTE_RAG` | RAG v4.0 ibrido (BM25+semantico+CrossEncoder), GPU |
+| | `MENTE_SCANNER` | estrazione doc da PDF/DOCX → MENTE |
+| | `MENTE_WATCHER` | watch fs → trigger RAG incrementale |
+| | `RESEARCH_AGENT` | trova paper/tesi dal web → ingesta in MENTE |
+| **Agenti** | `NEXUS` | swarm orchestrator multi-agente |
+| | `AGENTS` | registry agenti + validator |
+| **Contenuti** | `STORY_AGENT` | episodi dev-log da git log |
+| | `NINA_AGENT` | avventure educative "Nina" grounded sul RAG (2 stadi) — 50 ep |
+| | `AI_NEWS_WATCHER` | scouting keyless creator/repo AI (tier 48h) |
+| **Auto-cura** | `AUDIT_AGENT` | self-audit notturno → cartella clinica |
+| | `SELF_IMPROVE` | auto-miglioramento (regola 11): segnali interni+esterni → proposte |
+| | `PCT_SYNC` | coerenza % pilastri ← STATE.json (fonte unica) |
+| **Interfaccia** | `COMPUTER_USE` | ARGUS v2, computer use ibrido a 3 livelli |
+| | `LOCAL_LLM` | inferenza LLM locale (Ollama) |
+| | `EVA` | assistente WhatsApp (Vita Natura) · pilot |
+
+---
+
 ## Livelli di visibilità
 
 | Livello | Icona | Cosa contiene | Chi lo vede |

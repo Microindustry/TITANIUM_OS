@@ -253,23 +253,34 @@ TITANIUM_OS/
 ├── BRAIN/
 │   ├── STATE.json              ← fonte unica di verità
 │   ├── KNOWLEDGE/              ← documenti tecnici interni
+│   ├── ECOSYSTEM_MANIFEST.md   ← la mappa viva dei nodi
 │   └── RULES.md                ← regole operative sistema
 ├── MCP/
 │   └── titanium_mcp_server.py  ← 7 tool esposti a Claude Code
-├── NODES/
+├── NODES/                       ← 15 nodi operativi
 │   ├── MENTE_RAG/              ← RAG v4.0 ibrido BM25+semantico+CrossEncoder
+│   ├── MENTE_SCANNER/          ← estrazione doc da PDF/DOCX → MENTE
+│   ├── MENTE_WATCHER/          ← watch fs → trigger RAG incrementale
+│   ├── RESEARCH_AGENT/         ← trova paper/tesi dal web → ingesta in MENTE
 │   ├── NEXUS/                  ← swarm orchestrator multi-agente
-│   ├── AGENTS/                 ← agents_db.json + validator_agent.py
-│   ├── STORY_AGENT/            ← generazione episodi da git log
-│   ├── COMPUTER_USE/           ← ARGUS v2 + ScreenAgent
-│   ├── RESEARCH_AGENT/         ← 13 sorgenti scientifiche
-│   ├── MENTE_SCANNER/          ← estrazione doc da PDF/DOCX
-│   └── MENTE_WATCHER/          ← watch fs → trigger RAG update
+│   ├── AGENTS/                 ← registry agenti + validator
+│   ├── STORY_AGENT/            ← episodi dev-log da git log
+│   ├── NINA_AGENT/             ← avventure educative "Nina" grounded sul RAG (2 stadi)
+│   ├── AI_NEWS_WATCHER/        ← scouting keyless creator/repo AI (tier 48h)
+│   ├── AUDIT_AGENT/            ← self-audit notturno → cartella clinica
+│   ├── SELF_IMPROVE/           ← auto-miglioramento: segnali interni+esterni → proposte
+│   ├── PCT_SYNC/               ← coerenza % pilastri ← STATE.json (fonte unica)
+│   ├── COMPUTER_USE/           ← ARGUS v2 (computer use ibrido a 3 livelli)
+│   ├── LOCAL_LLM/              ← inferenza LLM locale (Ollama)
+│   └── EVA/                    ← assistente WhatsApp (Vita Natura) · pilot
 ├── AUTOMATIONS/
-│   └── core/                   ← daily_brief · night_push · deep_freeze
+│   └── core/                   ← ~30 moduli: daily_brief · night · content · canon_guard
+├── CORE/                       ← utility condivise (log · watchdog)
+├── SERVICES/                   ← script di servizio (rag_recover · update esclusivo)
 ├── DASHBOARD/                  ← React 19 + Vite (porta 5173)
-├── CONTENT_ENGINE/             ← 36+ episodi · dataset .jsonl
-├── DATA/                       ← output JSON · logs · brief · views
+├── CONTENT_ENGINE/             ← episodi dev-log + 50 avventure Nina · dataset .jsonl
+├── DATA/                       ← output JSON · brief · views
+├── _VAULT/                     ← segreti, chiavi, backup (fuori da git)
 └── api_server.py               ← Flask porta 5001
 ```
 
@@ -310,4 +321,4 @@ TITANIUM_OS è lo scaffolding cognitivo di chi costruisce macchine fisiche e sis
 
 ---
 
-*Versione: 7.0.0 | Aggiornato: 2026-05-31 | Macchina: Getac*
+*Versione: 7.1.0 | Aggiornato: 2026-06-24 | Macchina: DESKTOP-IFACE2R (fisso, 24/7)*
