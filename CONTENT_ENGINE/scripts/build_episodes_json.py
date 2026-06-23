@@ -60,15 +60,8 @@ NINA_SEED = {
     "EP_SEED_WATCHER":   ("stare informati senza farlo a mano", 2, 2, ["⟡1"], "fonte"),
     "EP_SEED_GRAPHIFY":  ("la mappa della conoscenza", 5, 1, ["⟡4"], "fonte"),
     "EP_SEED_RETE":      ("vedere il sistema come una mappa", 5, 2, ["⟡4"], "fonte"),
-    # gli episodi di Nina (adattati)
-    "EP_AV_M0": ("la Materia: il gesto sul metallo, la radice di tutto", 0, 1, [], "adattato"),
-    "EP_AV_00": ("il Grande Loop", 1, 1, [], "adattato"),
-    "EP_AV_01": ("l'Automazione", 2, 1, ["⟡1"], "adattato"),
-    "EP_AV_02": ("l'LLM, la mente che parla", 3, 1, ["⟡1"], "adattato"),
-    "EP_AV_03": ("il RAG, la biblioteca delle fonti", 4, 1, ["⟡3"], "adattato"),
-    "EP_AV_04": ("la Wiki, la grande mappa", 5, 1, ["⟡4"], "adattato"),
-    "EP_AV_05": ("gli Agenti, l'esercito silenzioso", 6, 1, ["⟡2", "⟡4"], "adattato"),
-    "EP_AV_06": ("l'Orchestrazione, il direttore", 7, 1, ["⟡5", "⟡6"], "adattato"),
+    # NB: i vecchi EP_AV_* sono ARCHIVIATI (S_AVVENTURA/_ARCHIVIO, sess.#43): canone unico = EP_N2.
+    # I loro concetti sono coperti dalla serie EP_N2 qui sotto (una sola verita').
     # Nina v2 — l'apertura del viaggio (ancorata a La Materia), formato v2
     "EP_N2_01": ("il gesto fatto bene sulla materia vera", 0, 1, [], "adattato"),
     "EP_N2_02": ("la precisione e' una relazione (il soffio di troppo)", 0, 2, [], "adattato"),
@@ -100,7 +93,7 @@ NINA_SEED = {
 }
 # verticale finanza: id -> (concetto, regione, giro, richiama, stato)
 FINANZA_SEED = {
-    "EP_AV_FIN_01": ("cosa sono i soldi: lavoro e fiducia, scambiabili", 1, 1, [], "adattato"),
+    # EP_AV_FIN_01 archiviato (sess.#43): canone = EP_N2_15.
     "EP_N2_15": ("il valore: i soldi sono lavoro conservato + fiducia condivisa", 1, 1, [], "adattato"),
 }
 
