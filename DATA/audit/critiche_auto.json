@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-c322691a4c",
+    "date": "2026-06-23",
+    "git": "40cf1b0b",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "HuggingFace Hub è interrogato senza token: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" (night_research.log, 2026-06-22). In una notte dove ChromaDB è già crashato e Semantic Scholar è in 429, il terzo punto di fallimento non autenticato aumenta il rischio che le routine notturne completino parzialmente senza che il log segnali un errore bloccante esplicito.",
+    "azione": "Aggiungere HF_TOKEN in .env (token gratuito su huggingface.co). Contestualmente verificare che il red-team #38 sulle chiavi .env da ruotare includa anche HF_TOKEN e SEMANTIC_SCHOLAR_API_KEY nel prossimo ciclo di rotazione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-23"
+  },
+  {
+    "id": "AUD-b35b0846ad",
+    "date": "2026-06-23",
+    "git": "40cf1b0b",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna del 22/06 ha prodotto zero risultati utili su Semantic Scholar per la query 'linear guide rail preload stiffness': \"2026-06-22 03:38:27 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=linear+guide+rail+preload+stiffness+preci\" e subito dopo \"2026-06-22 03:38:27 [research_agent] INFO semantic_scholar -> 0 risultati\" (research_agent.log, 2026-06-22). Il backoff 429 è in place ma non risolve: senza API key autenticata il rate limit è strutturalmente insufficiente per le query notturne batch.",
+    "azione": "Registrare e inserire SEMANTIC_SCHOLAR_API_KEY in .env oggi — è gratuita e sblocca un rate limit di 100 req/s autenticato vs 1 req/s anonimo. Verificare che research_agent carichi la variabile e aggiungerla alla lista di controllo del self-heal.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-23"
+  },
+  {
+    "id": "AUD-ae3d0637f0",
+    "date": "2026-06-23",
+    "git": "40cf1b0b",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "night_push.log del 22/06 riporta: \"⚠ night_research.log: Traceback (most recent call last):\" (night_push.log, 2026-06-22). Il push notturno ha rilevato il traceback nel log e lo ha segnalato, ma non è chiaro se il job di ricerca sia stato abortito o abbia proseguito in stato degradato. Il milestone attivo conferma un crash, ma non ci sono dati su quanti topic di ricerca siano stati saltati quella notte.",
+    "azione": "Aggiungere al night_research script un exit code non-zero in caso di eccezione non gestita, e fare in modo che night_push.log registri il conteggio di topic completati vs falliti. Questo rende il danno misurabile invece di invisibile.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-23"
+  },
+  {
+    "id": "AUD-7e0d0da35d",
+    "date": "2026-06-23",
+    "git": "40cf1b0b",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "ChromaDB ha crashato durante la ricerca notturna del 22/06 con errore esplicito: \"chromadb.errors.InternalError: Error executing plan: Error sending backfill request to compactor: Error constructing hnsw segment reader: Error creating hnsw segment reader: Error loading hnsw index\" (night_research.log, 2026-06-22). Il recovery a 2 livelli è stato costruito, ma il trigger del guasto — un blackout senza UPS — rimane attivo. La corruzione HNSW è già avvenuta 3 volte in 2 giorni per la stessa causa. Il self-heal notturno copre il sintomo, non la radice.",
+    "azione": "Acquistare e installare UPS hardware (50-80€) accanto a Vevor+ER20 prima della prossima sessione notturna. Fino ad allora, valutare shutdown controllato della macchina alle 06:00 prima dei tagli di rete noti, oppure aggiungere al self-heal un checkpoint pre-spegnimento che forzi flush SQLite e sposti HNSW in sicurezza.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-23"
+  },
+  {
+    "id": "AUD-49bd443cde",
+    "date": "2026-06-23",
+    "git": "40cf1b0b",
+    "area": "MIMS",
+    "severity": "media",
+    "finding": "Il blocker 'Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5)' blocca BEP/B2, e il 'Martinetto Vevor 3 stadi da montare' è prerequisito fisico VULCAN. Entrambi sono aperti da più sessioni (la sessione #38 del 18/06 già listava debito MIMS/VULCAN). Con V32 al 65% e MIMS al 30%, MIMS è il pilastro più arretrato e la decisione tecnica sui connettori è il singolo nodo che blocca il calcolo economico.",
+    "azione": "Prima della prossima sessione hardware: decidere via A vs via B su SCHEDA §5 — è una scelta, non una ricerca. Documentare la decisione in VULCAN e sbloccare BEP/B2. Il Martinetto Vevor va montato fisicamente: schedulare mezz'ora dedicata, non lasciarlo come 'quando capita'.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-23"
+  },
+  {
+    "id": "AUD-3e5091d70c",
+    "date": "2026-06-23",
+    "git": "40cf1b0b",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il next_step dichiara NINA DEFINITIVA come priorità assoluta (filone unico, canone EP_N2 v2, audit STORIE, stile in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md). La bussola_open mostra però che questo lavoro di consolidamento è aperto almeno dalla sessione #37 (11/06) — oltre 12 giorni — con voci come '#epav0304-canonici-parcheggio-tolto' e '#canon-0-ter-nina-ha-il-suo-os' ancora pendenti. Il rischio non è che venga dimenticato, ma che ogni sessione aggiunga nuovi episodi (191 generati) su un canone ancora non chiuso, aumentando il debito di audit invece di azzerarlo.",
+    "azione": "Nella prossima sessione dedicare il primo blocco (60-90 min) esclusivamente alla chiusura del canone: spostare EP_AV_* in archivio, confermare EP_N2 v2 come unica verità, scrivere NINA_STILE_E_PIANO.md. Solo dopo riaprire la generazione di nuovi episodi. Bloccare story_agent finché l'audit STORIE non è completato, altrimenti il generatore continua a lavorare su fondamenta instabili.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-23"
+  },
+  {
     "id": "AUD-fbd54f3019",
     "date": "2026-06-22",
     "git": "932fe7e9",
@@ -252,8 +324,10 @@
     "finding": "night_push.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-80dfddf5cc",
@@ -264,8 +338,10 @@
     "finding": "night_research.log: rilevato crash/eccezione nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-d7ecb9b386",
@@ -780,8 +856,10 @@
     "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c97403be34",
@@ -792,8 +870,10 @@
     "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-77abb05083",
@@ -816,8 +896,10 @@
     "finding": "research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -828,8 +910,10 @@
     "finding": "night_push.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-2ed0757892",
@@ -840,8 +924,10 @@
     "finding": "research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-28f6d2e10b",
@@ -852,8 +938,10 @@
     "finding": "night_research.log: rilevato ricerca a vuoto nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-14717de2a5",
@@ -864,8 +952,10 @@
     "finding": "night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-18"
+    "status": "resolved",
+    "last_seen": "2026-06-18",
+    "resolved_on": "2026-06-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-100c8670cd",
