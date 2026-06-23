@@ -822,12 +822,12 @@
     },
     "DA_FARE_FATTO.md": {
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
-      "updated_at": "2026-06-23T03:52:02.204487",
+      "updated_at": "2026-06-23T16:25:23.883024",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
       "title": "PERCORSO EVOLUTIVO — come imparano i lettori di Nina",
-      "updated_at": "2026-06-09T12:36:12.133652",
+      "updated_at": "2026-06-23T10:17:23.285778",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__PERCORSO_EVOLUTIVO.md"
     },
     "NODES/graphify-out/GRAPH_REPORT.md": {
@@ -857,7 +857,7 @@
     },
     "CONTENT_ENGINE/DATABASE/MONDO/MAPPA_AVVENTURA.md": {
       "title": "MAPPA DELL'AVVENTURA — bozza multi-livello (il mondo dove Nina si muove)",
-      "updated_at": "2026-06-09T12:36:17.030310",
+      "updated_at": "2026-06-23T10:17:19.552856",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__MAPPA_AVVENTURA.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260609_vista_procedimenti_consultabile_da_.md": {
@@ -1042,7 +1042,7 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_06_l_officina_che_gira_sola.md": {
       "title": "L'Officina che Gira Sola",
-      "updated_at": "2026-06-15T03:25:03.538518",
+      "updated_at": "2026-06-23T15:35:49.369133",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_06_l_officina_che_gira_sola.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_08_quando_la_mente_inventa.md": {
@@ -1057,7 +1057,7 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_11_la_grande_mappa.md": {
       "title": "La Grande Mappa",
-      "updated_at": "2026-06-15T03:25:04.029677",
+      "updated_at": "2026-06-23T15:43:12.566285",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_11_la_grande_mappa.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_13_il_soldato_caduto_in_silenzio.md": {
@@ -1082,22 +1082,22 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_14_il_direttore.md": {
       "title": "Il Direttore",
-      "updated_at": "2026-06-15T03:25:04.843884",
+      "updated_at": "2026-06-23T16:12:07.555240",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_14_il_direttore.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_01_la_bambina_che_chiedeva_perche.md": {
       "title": "La Bambina che Chiedeva Perché",
-      "updated_at": "2026-06-15T03:39:32.159214",
+      "updated_at": "2026-06-23T23:19:08.574507",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_01_la_bambina_che_chiedeva_perche.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_02_il_soffio_di_troppo.md": {
       "title": "Il Soffio di Troppo",
-      "updated_at": "2026-06-15T03:39:32.327219",
+      "updated_at": "2026-06-23T16:11:02.173220",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_02_il_soffio_di_troppo.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_03_mille_volte_uguale.md": {
       "title": "Mille Volte Uguale",
-      "updated_at": "2026-06-15T03:39:32.496295",
+      "updated_at": "2026-06-23T15:30:21.016816",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_03_mille_volte_uguale.md"
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_04_la_mappa_viva.md": {
@@ -1107,7 +1107,7 @@
     },
     "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_05_prima_la_mano_poi_la_macchina.md": {
       "title": "Prima la Mano, Poi la Macchina",
-      "updated_at": "2026-06-15T03:39:32.832162",
+      "updated_at": "2026-06-23T10:09:32.417880",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_05_prima_la_mano_poi_la_macchina.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/NINA_V2_ARCHITETTURA.md": {
@@ -1324,8 +1324,188 @@
       "title": "TITANIUM_OS — Episodio 42",
       "updated_at": "2026-06-23T02:09:31.797517",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260622_visione_nina_zero_confermata_film_i.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_16_il_guardiano_che_non_dorme.md": {
+      "title": "Il Guardiano che Non Dorme",
+      "updated_at": "2026-06-23T11:25:39.972330",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_16_il_guardiano_che_non_dorme.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152158/S_AVVENTURA/EP_N2_09_la_biblioteca_delle_fonti.md": {
+      "title": "La Biblioteca delle Fonti",
+      "updated_at": "2026-06-23T15:21:58.507819",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152158__S_AVVENTURA__EP_N2_09_la_biblioteca_delle_fonti.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_09_la_bibliotecaria_della_mente.md": {
+      "title": "La Bibliotecaria della Mente",
+      "updated_at": "2026-06-23T15:23:57.112460",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_09_la_bibliotecaria_della_mente.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_01_la_bambina_che_chiedeva_perche.md": {
+      "title": "La Bambina che Chiedeva Perché",
+      "updated_at": "2026-06-23T15:24:35.363504",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_01_la_bambina_che_chiedeva_perche.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_01_il_bottone_che_regge.md": {
+      "title": "Il Bottone che Regge",
+      "updated_at": "2026-06-23T16:09:15.853821",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_01_il_bottone_che_regge.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_02_il_soffio_di_troppo.md": {
+      "title": "Il Soffio di Troppo",
+      "updated_at": "2026-06-23T15:26:30.065967",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_02_il_soffio_di_troppo.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_03_mille_volte_uguale.md": {
+      "title": "Mille Volte Uguale",
+      "updated_at": "2026-06-23T15:28:31.835812",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_03_mille_volte_uguale.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_04_la_mappa_viva.md": {
+      "title": "La Mappa Viva",
+      "updated_at": "2026-06-23T15:30:21.773393",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_04_la_mappa_viva.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_04_la_mappa_che_non_mente.md": {
+      "title": "La Mappa che Non Mente",
+      "updated_at": "2026-06-23T15:32:09.914052",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_04_la_mappa_che_non_mente.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_05_prima_la_mano_poi_la_macchina.md": {
+      "title": "Prima la Mano, Poi la Macchina",
+      "updated_at": "2026-06-23T15:32:10.672871",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_05_prima_la_mano_poi_la_macchina.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_05_le_mani_prima_dei_rulli.md": {
+      "title": "Le Mani Prima dei Rulli",
+      "updated_at": "2026-06-23T15:34:01.729159",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_05_le_mani_prima_dei_rulli.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_06_l_officina_che_gira_sola.md": {
+      "title": "L'Officina che Gira Sola",
+      "updated_at": "2026-06-23T15:34:02.490899",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_06_l_officina_che_gira_sola.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_07_la_mente_che_parla.md": {
+      "title": "La Mente che Parla",
+      "updated_at": "2026-06-23T15:35:50.129283",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_07_la_mente_che_parla.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_07_il_sussurratore_di_parole.md": {
+      "title": "Il Sussurratore di Parole",
+      "updated_at": "2026-06-23T15:37:41.805988",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_07_il_sussurratore_di_parole.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_08_quando_la_mente_inventa.md": {
+      "title": "Quando la Mente Inventa",
+      "updated_at": "2026-06-23T15:37:42.571927",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_08_quando_la_mente_inventa.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_08_la_lampada_che_sussurra.md": {
+      "title": "La Lampada che Sussurra",
+      "updated_at": "2026-06-23T15:39:32.417656",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_08_la_lampada_che_sussurra.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_10_la_traccia.md": {
+      "title": "La Traccia",
+      "updated_at": "2026-06-23T15:39:33.166761",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_10_la_traccia.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md": {
+      "title": "Il Grande Loop: quando il gesto rimane",
+      "updated_at": "2026-06-23T16:11:02.973388",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_11_la_grande_mappa.md": {
+      "title": "La Grande Mappa",
+      "updated_at": "2026-06-23T15:41:14.740430",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_11_la_grande_mappa.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_12_l_esercito_silenzioso.md": {
+      "title": "L'Esercito Silenzioso",
+      "updated_at": "2026-06-23T15:43:13.322024",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_12_l_esercito_silenzioso.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_12_la_squadra_notturna.md": {
+      "title": "La Squadra Notturna",
+      "updated_at": "2026-06-23T15:45:21.896794",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_12_la_squadra_notturna.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_13_il_soldato_caduto_in_silenzio.md": {
+      "title": "Il Soldato Caduto in Silenzio",
+      "updated_at": "2026-06-23T15:45:22.658496",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_13_il_soldato_caduto_in_silenzio.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_13_il_battito_del_guardiano.md": {
+      "title": "Il Battito del Guardiano",
+      "updated_at": "2026-06-23T16:11:12.019025",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_13_il_battito_del_guardiano.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_14_il_direttore.md": {
+      "title": "Il Direttore",
+      "updated_at": "2026-06-23T15:47:15.938647",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_14_il_direttore.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_152434/S_AVVENTURA/EP_N2_15_il_valore.md": {
+      "title": "Il Valore",
+      "updated_at": "2026-06-23T15:49:02.885187",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_152434__S_AVVENTURA__EP_N2_15_il_valore.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_15_il_gettone_della_sarta.md": {
+      "title": "Il Gettone della Sarta",
+      "updated_at": "2026-06-23T15:55:00.036541",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_15_il_gettone_della_sarta.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_155229/S_AVVENTURA/EP_N2_16_il_guardiano_che_non_dorme.md": {
+      "title": "Il Guardiano che Non Dorme",
+      "updated_at": "2026-06-23T11:25:39.972330",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_155229__S_AVVENTURA__EP_N2_16_il_guardiano_che_non_dorme.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_16_lo_specchio_del_giudice.md": {
+      "title": "Lo Specchio del Giudice",
+      "updated_at": "2026-06-23T15:56:45.162228",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_16_lo_specchio_del_giudice.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_160725/S_AVVENTURA/EP_N2_01_il_bottone_che_regge.md": {
+      "title": "Il Bottone che Regge",
+      "updated_at": "2026-06-23T16:07:25.504356",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_160725__S_AVVENTURA__EP_N2_01_il_bottone_che_regge.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_160725/S_AVVENTURA/EP_N2_02_il_soffio_di_troppo.md": {
+      "title": "Il Soffio di Troppo",
+      "updated_at": "2026-06-23T16:09:16.642167",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_160725__S_AVVENTURA__EP_N2_02_il_soffio_di_troppo.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_160725/S_AVVENTURA/EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md": {
+      "title": "Il Grande Loop: quando il gesto rimane",
+      "updated_at": "2026-06-23T16:11:02.973388",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_160725__S_AVVENTURA__EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_160725/S_AVVENTURA/EP_N2_13_il_battito_del_guardiano.md": {
+      "title": "Il Battito del Guardiano",
+      "updated_at": "2026-06-23T16:11:12.019025",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_160725__S_AVVENTURA__EP_N2_13_il_battito_del_guardiano.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/_ARCHIVIO/reemit_20260623_160725/S_AVVENTURA/EP_N2_14_il_direttore.md": {
+      "title": "Il Direttore",
+      "updated_at": "2026-06-23T16:12:07.555240",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA___ARCHIVIO__reemit_20260623_160725__S_AVVENTURA__EP_N2_14_il_direttore.md"
+    },
+    "DASHBOARD/src/data/nina_dal_giorno_0.md": {
+      "title": "Nina — dal Giorno 0",
+      "updated_at": "2026-06-23T16:20:37.151284",
+      "endpoint": "/api/view/DASHBOARD__src__data__nina_dal_giorno_0.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/PRODUZIONE_NINA.md": {
+      "title": "Produzione Nina — il primo passo (animazione + voce)",
+      "updated_at": "2026-06-23T16:27:28.489336",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__PRODUZIONE_NINA.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/INDICE_CAMMINO.md": {
+      "title": "Indice del Cammino — il \"libro\" di Nina (ordine canonico)",
+      "updated_at": "2026-06-23T16:27:31.079728",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__INDICE_CAMMINO.md"
     }
   },
-  "last_built": "2026-06-23T11:06:34.895349",
-  "total": 265
+  "last_built": "2026-06-23T23:19:08.584562",
+  "total": 301
 }

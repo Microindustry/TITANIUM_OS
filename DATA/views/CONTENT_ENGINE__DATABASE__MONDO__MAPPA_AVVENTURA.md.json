@@ -11,7 +11,7 @@
     {
       "level": 1,
       "title": "MAPPA DELL'AVVENTURA — bozza multi-livello (il mondo dove Nina si muove)",
-      "content": "*Versione: 0.1 BOZZA | 2026-06-07 | Canon del binario AVVENTURA · si appoggia a\n[BIBBIA_DEL_MONDO.md](BIBBIA_DEL_MONDO.md) (chi/dove) e [PERCORSO_EVOLUTIVO.md](PERCORSO_EVOLUTIVO.md) (come si impara).*\n\n> Cos'è: la **mappa navigabile** del mondo, a livelli (come la MAPPA della dashboard).\n> Nina si muove tra **regioni** = le tappe della storia dell'IA, ognuna ancorata a un\n> pezzo reale del progetto e già piena di materiale (episodi tecnici esistenti = i \"semi\").\n> È una BOZZA: serve a vederla insieme. Più sotto si scende, più dettaglio.\n> Legenda episodi Nina: ✅ scritto · ✍️ da scrivere (materiale pronto) · 💤 più avanti."
+      "content": "*Versione: 0.1 BOZZA | 2026-06-07 | Canon del binario AVVENTURA · si appoggia a\n[BIBBIA_DEL_MONDO.md](BIBBIA_DEL_MONDO.md) (chi/dove) e [PERCORSO_EVOLUTIVO.md](PERCORSO_EVOLUTIVO.md) (come si impara).*\n\n> ⚠️ **Ordine/ID episodi → fonte di verità: [[INDICE_CAMMINO]]** (sess.#43). Il canone è la\n> serie **EP_N2** (caselle 1→15); i vecchi `EP_AV_*` citati qui sotto sono **archiviati**\n> (`S_AVVENTURA/_ARCHIVIO`, origine storica). Questo file resta come bozza-mappa delle Regioni:\n> per l'ordine reale del cammino e gli ID validi, vedi l'Indice del Cammino.\n\n> Cos'è: la **mappa navigabile** del mondo, a livelli (come la MAPPA della dashboard).\n> Nina si muove tra **regioni** = le tappe della storia dell'IA, ognuna ancorata a un\n> pezzo reale del progetto e già piena di materiale (episodi tecnici esistenti = i \"semi\").\n> È una BOZZA: serve a vederla insieme. Più sotto si scende, più dettaglio.\n> Legenda episodi Nina: ✅ scritto · ✍️ da scrivere (materiale pronto) · 💤 più avanti."
     },
     {
       "level": 2,
@@ -74,7 +74,7 @@
       "content": "- Questa bozza è già **strutturata ad albero** (Mondo → 7 Regioni → episodi/semi → strati):\n  pronta a diventare i dati di una vista MAPPA navigabile dell'Avventura (riuso del drill-down N-livelli).\n- **Materiale pronto** per scrivere subito `EP_AV_01` (Automazione, ⟡2) e impostare la Regione 5\n  (Wiki/grafo) — è quella con più semi (25).\n- Da popolare man mano: indice `PIETRE.md` + key-image (descritte, finché l'animazione è spenta)."
     }
   ],
-  "word_count": 1420,
-  "updated_at": "2026-06-09T12:36:17.030310",
-  "built_at": "2026-06-23T10:08:24.841253"
+  "word_count": 1473,
+  "updated_at": "2026-06-23T10:17:19.552856",
+  "built_at": "2026-06-23T16:27:30.709637"
 }
