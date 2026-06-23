@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Space+Mono:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#05070d}
+.poster{position:relative;width:1123px;height:1587px;overflow:hidden;
+  background:radial-gradient(130% 80% at 50% 50%, #131c33 0%, #0a0f1f 55%, #05070d 100%);
+  font-family:'Space Mono',monospace;color:#eef2fb}
+.frame{position:absolute;inset:34px;border:1px solid rgba(148,163,184,0.22);border-radius:5px}
+.head{position:absolute;top:62px;left:0;right:0;text-align:center}
+.head .brand{font-size:16px;letter-spacing:8px;color:#8595b4}
+.head .title{font-family:'Playfair Display',serif;font-weight:700;font-size:60px;color:#f6f8ff;margin-top:14px}
+.head .sub{font-size:15px;letter-spacing:4px;color:#7f8db0;margin-top:12px}
+.foot{position:absolute;bottom:64px;left:80px;right:80px;display:flex;justify-content:space-between;
+  font-size:15px;letter-spacing:3px;color:#7f8db0}
+.foot .nina{color:#ec4899}
+.lbl{font-family:'Space Mono',monospace;font-weight:700;font-size:21px}
+.lblsub{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:3px;fill:#8595b4}
+</style></head><body>
+<div class="poster">
+  <div class="frame"></div>
+  <div class="head">
+    <div class="brand">TITANIUM&nbsp;OS · L'AVVENTURA DI NINA</div>
+    <div class="title">La Mappa di Nina</div>
+    <div class="sub">IL MONDO IN 8 PIETRE · DAL METALLO ALLA MENTE</div>
+  </div>
+
+  <svg width="1123" height="1587" viewBox="0 0 1123 1587" style="position:absolute;top:0;left:0">
+    <defs>
+      <linearGradient id="path" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#f4b65a"/><stop offset="50%" stop-color="#38bdf8"/>
+        <stop offset="100%" stop-color="#fbbf24"/>
+      </linearGradient>
+    </defs>
+
+    <!-- il cammino: serpentina ⟡0(basso) -> ⟡7(alto) -->
+    <path d="M 561,1390 C 380,1340 360,1300 360,1235
+             C 360,1150 760,1150 760,1075
+             C 760,995 360,995 360,915
+             C 360,835 760,835 760,755
+             C 760,675 360,675 360,595
+             C 360,515 760,515 760,440
+             C 760,375 561,360 561,300"
+      fill="none" stroke="url(#path)" stroke-width="4" stroke-dasharray="2 12"
+      stroke-linecap="round" opacity="0.7"/>
+
+    <!-- GEMME (generate sotto via JS-free: ognuna disegnata a mano) -->
+    <!-- ⟡0 LA MATERIA -->
+    <g transform="translate(561,1390)"><circle r="90" fill="#f4b65a" opacity="0.10"/>
+      <polygon points="0,-46 40,0 0,58 -40,0" fill="#f4b65a" fill-opacity="0.30" stroke="#ffe6ad" stroke-width="2"/>
+      <text y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="42" font-weight="700" fill="#ffe6ad">0</text></g>
+    <text x="561" y="1500" text-anchor="middle" class="lbl" fill="#f4b65a">LA MATERIA</text>
+
+    <!-- ⟡1 LA TRACCIA -->
+    <g transform="translate(360,1235)"><circle r="80" fill="#34d399" opacity="0.10"/>
+      <polygon points="0,-42 36,0 0,52 -36,0" fill="#34d399" fill-opacity="0.30" stroke="#a7f3d0" stroke-width="2"/>
+      <text y="13" text-anchor="middle" font-family="Playfair Display,serif" font-size="38" font-weight="700" fill="#a7f3d0">1</text></g>
+    <text x="360" y="1145" text-anchor="middle" class="lbl" fill="#34d399">LA TRACCIA</text>
+
+    <!-- ⟡2 L'OFFICINA -->
+    <g transform="translate(760,1075)"><circle r="80" fill="#fb923c" opacity="0.10"/>
+      <polygon points="0,-42 36,0 0,52 -36,0" fill="#fb923c" fill-opacity="0.30" stroke="#fed7aa" stroke-width="2"/>
+      <text y="13" text-anchor="middle" font-family="Playfair Display,serif" font-size="38" font-weight="700" fill="#fed7aa">2</text></g>
+    <text x="760" y="985" text-anchor="middle" class="lbl" fill="#fb923c">L'OFFICINA</text>
+
+    <!-- ⟡3 LA MENTE -->
+    <g transform="translate(360,915)"><circle r="80" fill="#a78bfa" opacity="0.10"/>
+      <polygon points="0,-42 36,0 0,52 -36,0" fill="#a78bfa" fill-opacity="0.30" stroke="#ddd6fe" stroke-width="2"/>
+      <text y="13" text-anchor="middle" font-family="Playfair Display,serif" font-size="38" font-weight="700" fill="#ddd6fe">3</text></g>
+    <text x="360" y="825" text-anchor="middle" class="lbl" fill="#a78bfa">LA MENTE</text>
+
+    <!-- ⟡4 LA BIBLIOTECA -->
+    <g transform="translate(760,755)"><circle r="80" fill="#38bdf8" opacity="0.10"/>
+      <polygon points="0,-42 36,0 0,52 -36,0" fill="#38bdf8" fill-opacity="0.30" stroke="#bae6fd" stroke-width="2"/>
+      <text y="13" text-anchor="middle" font-family="Playfair Display,serif" font-size="38" font-weight="700" fill="#bae6fd">4</text></g>
+    <text x="760" y="665" text-anchor="middle" class="lbl" fill="#38bdf8">LA BIBLIOTECA</text>
+
+    <!-- ⟡5 LA GRANDE MAPPA -->
+    <g transform="translate(360,595)"><circle r="80" fill="#818cf8" opacity="0.10"/>
+      <polygon points="0,-42 36,0 0,52 -36,0" fill="#818cf8" fill-opacity="0.30" stroke="#c7d2fe" stroke-width="2"/>
+      <text y="13" text-anchor="middle" font-family="Playfair Display,serif" font-size="38" font-weight="700" fill="#c7d2fe">5</text></g>
+    <text x="360" y="505" text-anchor="middle" class="lbl" fill="#818cf8">LA GRANDE MAPPA</text>
+
+    <!-- ⟡6 L'ESERCITO -->
+    <g transform="translate(760,440)"><circle r="80" fill="#fb7185" opacity="0.10"/>
+      <polygon points="0,-42 36,0 0,52 -36,0" fill="#fb7185" fill-opacity="0.30" stroke="#fecdd3" stroke-width="2"/>
+      <text y="13" text-anchor="middle" font-family="Playfair Display,serif" font-size="38" font-weight="700" fill="#fecdd3">6</text></g>
+    <text x="760" y="350" text-anchor="middle" class="lbl" fill="#fb7185">L'ESERCITO</text>
+
+    <!-- ⟡7 IL DIRETTORE (vertice del cammino) -->
+    <g transform="translate(561,300)"><circle r="90" fill="#fbbf24" opacity="0.12"/>
+      <polygon points="0,-46 40,0 0,58 -40,0" fill="#fbbf24" fill-opacity="0.32" stroke="#fde68a" stroke-width="2"/>
+      <text y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="42" font-weight="700" fill="#fde68a">7</text></g>
+    <text x="561" y="420" text-anchor="middle" class="lbl" fill="#fbbf24">IL DIRETTORE</text>
+  </svg>
+
+  <div class="foot"><span>50 episodi · 31 caselle</span><span class="nina">NINA</span><span>⟡0 → ⟡7 · il cammino</span></div>
+</div></body></html>
