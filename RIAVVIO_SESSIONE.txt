@@ -1,48 +1,48 @@
-=== RIAVVIO SESSIONE #44 — 23/06/2026 ===
-Ultima sessione: #43 — 2026-06-23 (ULTRACODE — NINA DEFINITIVA + fix RAG/Obsidian)
+=== RIAVVIO SESSIONE #45 — 24/06/2026 ===
+Ultima sessione: #44 — 2026-06-24 (Nina copre la mappa · RAG resuscitato · vetrina riallineata)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Nina e' DEFINITIVA (arco 6/6): canone unico = serie EP_N2, vecchi EP_AV archiviati,
-il "libro" (INDICE_CAMMINO) e il kit di produzione (PRODUZIONE_NINA) ci sono. Il RAG
-e' pulito (una sola verita': esclude _ARCHIVIO/_PROPOSTI) e il grafo Obsidian e' un
-ecosistema, non piu' "a zone". L'animatic del pilota e' IN PAUSA per scelta di Matteo:
-da qui si riparte con "ancora lavoro su Nina" — da definire con lui.
+Nina ora COPRE LA MAPPA: 50 episodi EP_N2 nel canone (era 16). Il driver
+nina_map_cover.py ha trasformato i 31 concetti distinti della mappa (Graphify,
+RETE, t-SNE, orchestratore, watcher, centro di controllo...) in 31 episodi Nina
+grounded, in ampiezza ⟡0→⟡7. Build TS verde. Il RAG era CRASHATO (HNSW + commit-leak
+56GB) ed e' stato resuscitato. La vetrina pubblica (README GitHub) e' di nuovo
+allineata: 15 nodi reali, non 8. Restano scelte STRUTTURALI da decidere con Matteo
+(non fatte di notte apposta).
 
-━━━ FATTO IN SESSIONE #43 ━━━
-• NINA DEFINITIVA (6/6): (1) canone EP_N2, 13 EP_AV -> S_AVVENTURA/_ARCHIVIO (additivo, repo+MENTE),
-  mappa ripuntata, episodes.json 176 ep + intersect/evoluzione, build TS verde.
-  (2) INDICE_CAMMINO.md (l'ordine in cui Nina cammina, caselle 1->15; catena open-loop gia' integra;
-  Pietre in ordine pedagogico, non numerico; 2 open-loop soft resi espliciti).
-  (3) Una sola verita' sul RAG: rag_engine esclude _ARCHIVIO/_PROPOSTI; PIETRE.md rigenerato EP_N2-only.
-  (4) Continuita' «Dove siamo»+open loop in tutti i 15. (5) canon_guard 177 ep -> 0 violazioni.
-  (6) PRODUZIONE_NINA.md (pilota EP_N2_01, animatic dalle 5 key-image, regia voce dalla bible).
-• FIX RAG: il watcher.py combatteva i rebuild (dopo i 287 file Obsidian -> 52k delete label-fantasma
-  + crash mid-write -> search 500). rag_update_exclusive/rag_recover ora fermano ANCHE watcher.py.
-  Reflux RAG rifatto pulito e VERIFICATO (INDICE_CAMMINO indicizzato, 0 da _ARCHIVIO, EP_N2 risponde).
-• DASHBOARD riavviata (era giu' il front-end 5173) -> HTTP 200.
-• OBSIDIAN da "zone" a ECOSISTEMA: vault_intersect premia i ponti cross-dominio (48% legami cross,
-  CROSS_RESERVE=4) + ecosystem_bridge 3136 ponti cross-mondo (era 1984). Blocchi nav (Collegati+
-  Ecosistema) ora esclusi dall'indice RAG -> tunare il grafo non sporca piu' il RAG.
-• Commit repo: fb7f71cb -> 4683b91d (PUSHATI su GitHub). MENTE: commit locali (no remote, by design).
+━━━ FATTO IN SESSIONE #44 ━━━
+• NINA MAPPA: nina_map_cover.py (NODES/NINA_AGENT) -> 31 concetti fonte -> 50 EP_N2,
+  auto-canone+MENTE, ripartibile (cursore DATA/nina_map_cover.json). +3 dal loop nativo.
+• RAG RESUSCITATO: liberato commit-leak (63,9->7,8 GB, kill python patologico) +
+  rag_engine --drop-hnsw (ricostruito da sqlite, no ri-embed). API su, search ok.
+• RINFORZO rag_recover (b488df17): killa commit-leak >15GB PRIMA di sondare.
+• chromadb-ops VALUTATO e RIFIUTATO (richiede chromadb 1.x, rompe pin 0.5.23).
+• Menu Storie a 3 voci top-level (19749906). EP_N2_01 riscritto = vero inizio
+  (apertura da racconto + open-loop verso la misura).
+• Storie/proxy: /api/nina/* ora inoltrato a Flask (64b09b10) + lettore archiviati.
+• Simone Rizzo nel watcher (tier1 YT) — resolver @handle->channel_id da fixare (404).
+• Poster pilota EP_N2_01 (Claude Design): CONTENT_ENGINE/DATABASE/MONDO/POSTER/ (HTML+PNG).
+• VETRINA: README.md + ECOSYSTEM_MANIFEST ai 15 nodi reali (06126ee3). Audit struttura:
+  cartelle sane, l'organismo e' cresciuto (8->15 nodi), era la MAPPA indietro.
 
-━━━ PROSSIMO LAVORO ━━━
-• ANIMATIC IN PAUSA (Matteo: "attendi con animazione"). NON ripartire con l'animatic finche' non lo dice.
-• "C'e' ancora lavoro su Nina" (Matteo) — DA DEFINIRE a inizio sessione #44. Chiedere cosa.
-• Quando si torna all'animatic: PASSO 1 = pilota EP_N2_01 dalle 5 key-image (vedi PRODUZIONE_NINA.md;
-  bivio formato gia' pronto: storyboard deck Express / video+TTS / solo illustrazioni).
+━━━ PROSSIMO LAVORO (da decidere con Matteo, NON di notte) ━━━
+• gitignore di DATA/views/ (298 file auto-generati tracciati) + logs/ -> commit leggibili.
+• AUTOMATIONS/core: ~30 script in cartella piatta -> indice per funzione (NO move fisico).
+• Pulire INBOX/ (brief vecchi -> ARCHIVE).
+• Irrobustire il resolver YouTube del watcher (per pescare i video di Simone Rizzo).
+• [RAG] candidato: implementare WAL->HNSW commit contro 0.5.23 (piu' chirurgico di drop-hnsw).
+• [Nina] mappa coperta -> naturale: animatic pilota EP_N2_01 (era in pausa) OPPURE
+  aprire verticali nuovi (FORGE saldatura TIG, MIMS/VULCAN) con lo stesso driver.
 
 ━━━ BLOCKERS ━━━
 ⚠ UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
 ⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
-⚠ API key Semantic Scholar gratuita in .env — azzera i 429 notturni.
-⚠ Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5) — sblocca BEP/B2.
-⚠ Martinetto Vevor 3 stadi da montare + mandrino 2.2kW ER20 da ordinare (prerequisiti fisici VULCAN).
+⚠ Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici VULCAN).
 
 ━━━ NOTE ━━━
-• Dopo modifiche MASSIVE a MENTE: SERVICES/rag_update_exclusive.ps1 (ora ferma anche il watcher).
-• Dopo un blackout: SERVICES/rag_recover.ps1 (L1 drop-hnsw / L2 rebuild-hard).
-• Tunare il grafo Obsidian: CONTENT_ENGINE/scripts/vault_intersect.py (CROSS_RESERVE) +
-  ecosystem_bridge.py (--max). Non serve rebuild RAG (i blocchi nav sono esclusi dall'indice).
-• Canone Nina = serie EP_N2. Gli EP_AV stanno in _ARCHIVIO (origine, non cancellati).
+• build_episodes_json.py e' ADDITIVE-ONLY: per riscrivere un episodio, rimuovi l'id
+  da episodes.json poi rebuild.
+• Dopo blackout/HNSW corrotto: SERVICES/rag_recover.ps1 (ora libera anche il commit-leak).
+• Canone Nina = serie EP_N2 (01->50). Gli EP_AV stanno in _ARCHIVIO (origine).
 
-Generato: 23/06/2026 — fine sessione #43
+Generato: 24/06/2026 — fine sessione #44

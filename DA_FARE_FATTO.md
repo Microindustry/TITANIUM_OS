@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 43  23/06/2026 (ULTRACODE)  NINA DEFINITIVA (canone unico EP_N2)](#sessione-43-23062026-ultracode-nina-definitiva-canone-unico-epn2)
+    - [PROSSIMA SESSIONE 44  si riparte da qui](#prossima-sessione-44-si-riparte-da-qui)
   - [Sessione 42  23/06/2026  BLACKOUT: RAG recovery 2-livelli  Obsidian titoli/intersect](#sessione-42-23062026-blackout-rag-recovery-2-livelli-obsidian-titoliintersect)
   - [Sessione 41  22/06/2026  Watchdog ON  RAG self-heal  canone VULCAN/CNC corretto](#sessione-41-22062026-watchdog-on-rag-self-heal-canone-vulcancnc-corretto)
     - [Processo CONTENUTI  automazioni  grounding RAG alla fonte](#processo-contenuti-automazioni-grounding-rag-alla-fonte)
@@ -58,6 +60,24 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata
+
+*Sessione lunga e operativa. Si è partiti da "dove eravamo" (Nina), si è finiti con la struttura pubblica rimessa in ordine. Tutto additivo.*
+
+- [✓] **Storie/Dashboard — RAG Nina archiviati visibili + leggibili.** Falla vera: il proxy Vite non inoltrava `/api/nina/*` a Flask (→ HTML invece di JSON, "archivio non raggiungibile"). Fix proxy + id archivio non più troncato a "EP_A". Righe archiviate ora espandibili (lettore lazy via `/api/file`). Commit `64b09b10`,`2b7d8c00`.
+- [✓] **EP_N2_01 riscritto = vero inizio** ("C'era una bambina che faceva una domanda di troppo" → la porta → la Giuntura → Themis → il bottone che regge). Open-loop corretto verso la misura (EP_N2_02). Build additivo: scoperto che `build_episodes_json.py` è additive-only (per riscrivere: rimuovi l'id da episodes.json poi rebuild).
+- [✓] **Menu Storie a 3 voci a LIVELLO PRINCIPALE** (richiesta Matteo): `STORIE · SISTEMA` · `NINA · DAL GIORNO 0` · `NINA · ARCHIVIO` (prima annidate). Commit `19749906`.
+- [✓] **RAG RESUSCITATO** (era crashato, non "server vecchio"): corruzione HNSW da power-loss **+** commit-leak ~56 GB (Windows saturo, nemmeno PowerShell partiva). Liberato il commit (63,9→7,8 GB) → `--drop-hnsw` (ricostruito da sqlite, no ri-embed) → API su. RAG search ok.
+- [✓] **Auto-audit + 2 rinforzi**: `rag_recover` ora killa il commit-leak (>15GB) PRIMA di sondare (commit `b488df17`); valutato e **RIFIUTATO** `chromadb-ops` (richiede chromadb 1.x, rompe il nostro pin 0.5.23) — disciplina: integrare solo ciò che passa compatibilità+sicurezza+additività.
+- [✓] **Simone Rizzo nel watcher** (tier 1 YT) — era solo un handle github sbagliato. NB: il resolver `@handle→channel_id` dà id morti (404) → da irrobustire.
+- [✓] **NINA COPRE LA MAPPA — 50 episodi EP_N2.** Driver `nina_map_cover.py`: 31 concetti DISTINTI della mappa (Graphify, RETE, t-SNE, orchestratore, watcher…) → 31 nuovi episodi grounded auto-canone (+3 dal loop nativo). ⟡0→⟡7 in ampiezza. Build verde. Commit copertura nel blocco episodi.
+- [✓] **Poster pilota EP_N2_01** (Claude Design): title-card A3 HTML/SVG → PNG (headless Chrome). La porta + la Giuntura. *(no AI-image gen in ambiente: design grafico, non scena dipinta.)*
+- [✓] **Audit struttura + vetrina riallineata**: l'albero su `README.md` pubblico (github.com/Microindustry) mostrava 8 nodi su 15 reali → aggiornato a 15 (+ CORE/SERVICES/_VAULT) + `ECOSYSTEM_MANIFEST` tabella nodi. Commit `06126ee3`. Struttura cartelle sana (niente deriva di posizioni); cresciuta, era la MAPPA indietro.
+- [ ] **Da decidere con Matteo (svegli, non di notte):** gitignore di `DATA/views/` (298 file auto-gen tracciati) + `logs/`; raggruppare/indicizzare `AUTOMATIONS/core` (~30 script piatti); pulire `INBOX/` (brief vecchi); irrobustire il resolver YouTube del watcher.
+- [💡] Candidato RAG: implementare NOI il recupero **WAL→HNSW commit** contro 0.5.23 (più chirurgico di `--drop-hnsw`).
 
 ---
 
