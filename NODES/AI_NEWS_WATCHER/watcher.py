@@ -92,6 +92,9 @@ DEFAULT_SOURCES = [
     # --- YouTube (RSS nativo; @handle risolto a channel_id) ---
     {"name": "Fireship",              "kind": "youtube", "handle": "@Fireship", "tier": 2},
     {"name": "Matt Wolfe",            "kind": "youtube", "handle": "@mreflow",  "tier": 2},
+    # Simone Rizzo — divulgatore AI IT (CEO Inferentia, docente UniBo); è il
+    # riferimento di STILE dei reel del progetto: tracciarne le novità tier 1.
+    {"name": "Simone Rizzo",          "kind": "youtube", "handle": "@simone_rizzo98", "tier": 1},
 ]
 
 
