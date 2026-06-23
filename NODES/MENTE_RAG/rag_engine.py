@@ -95,9 +95,18 @@ SUPPORTED_EXT  = {".md", ".txt", ".py", ".json"}
 # il digest notturno la sintetizza separatamente. Path relativi a MENTE_DIR.
 EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),)
 
+# Cartelle di staging/archivio episodi: NON sono canone (una sola verità sul RAG).
+# _ARCHIVIO = versioni vecchie tenute come origine (es. i vecchi EP_AV, sess.#43);
+# _PROPOSTI = proposte del generatore Nina da validare. Indicizzarle creerebbe
+# duplicati/divergenze in retrieval. Stessa convenzione di build_episodes_json (part "_*").
+EXCLUDE_DIR_NAMES = {"_ARCHIVIO", "_PROPOSTI"}
+
 
 def _is_excluded(path: Path) -> bool:
-    """True se il file vive in una cartella esclusa dal canone (es. RICERCA web)."""
+    """True se il file vive in una cartella esclusa dal canone (RICERCA web, o staging/archivio episodi)."""
+    rel_parts = path.relative_to(MENTE_DIR).parts
+    if any(part in EXCLUDE_DIR_NAMES for part in rel_parts[:-1]):
+        return True
     rel = str(path.relative_to(MENTE_DIR))
     return any(rel == d or rel.startswith(d + os.sep) for d in EXCLUDE_REL_DIRS)
 

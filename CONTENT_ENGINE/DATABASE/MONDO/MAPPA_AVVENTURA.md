@@ -22,6 +22,11 @@
 *Versione: 0.1 BOZZA | 2026-06-07 | Canon del binario AVVENTURA · si appoggia a
 [BIBBIA_DEL_MONDO.md](BIBBIA_DEL_MONDO.md) (chi/dove) e [PERCORSO_EVOLUTIVO.md](PERCORSO_EVOLUTIVO.md) (come si impara).*
 
+> ⚠️ **Ordine/ID episodi → fonte di verità: [[INDICE_CAMMINO]]** (sess.#43). Il canone è la
+> serie **EP_N2** (caselle 1→15); i vecchi `EP_AV_*` citati qui sotto sono **archiviati**
+> (`S_AVVENTURA/_ARCHIVIO`, origine storica). Questo file resta come bozza-mappa delle Regioni:
+> per l'ordine reale del cammino e gli ID validi, vedi l'Indice del Cammino.
+
 > Cos'è: la **mappa navigabile** del mondo, a livelli (come la MAPPA della dashboard).
 > Nina si muove tra **regioni** = le tappe della storia dell'IA, ognuna ancorata a un
 > pezzo reale del progetto e già piena di materiale (episodi tecnici esistenti = i "semi").

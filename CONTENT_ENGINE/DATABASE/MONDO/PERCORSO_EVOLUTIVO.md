@@ -16,6 +16,10 @@
 
 *Versione: 1.0 | 2026-06-07 | Canon del binario AVVENTURA · complementare a BIBBIA_DEL_MONDO.md*
 
+> ⚠️ **Ordine/ID episodi → fonte di verità: [[INDICE_CAMMINO]]** (sess.#43). Canone = serie **EP_N2**;
+> i vecchi `EP_AV_*` qui citati sono **archiviati** (`S_AVVENTURA/_ARCHIVIO`). Qui restano i *principi*
+> e la *spirale* (validi); per ID e ordine reale del cammino vedi l'Indice del Cammino.
+
 > Richiesta di Matteo (07/06): "è un libro tecnico per bambini, ma come in matematica
 > non parti dalle equazioni: prima esempi semplici, e più avanti torni sullo stesso
 > tema più in profondità, con piccoli numerini di rimando all'esempio da ripassare —
