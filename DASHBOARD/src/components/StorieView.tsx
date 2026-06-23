@@ -343,8 +343,6 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   const ninaEpisodes = statusFiltered(
     EPISODES.filter(ep => ep.stagione === NINA_STAGIONE && isTopLevel(ep))
   ).sort((a, b) => ninaNum(a) - ninaNum(b));
-  // "pronti e finiti": solo gli episodi ready (per Nina dal giorno 0)
-  const ninaReady = ninaEpisodes.filter(ep => ep.status === "ready");
 
   // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
   const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);
@@ -406,9 +404,9 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
         {/* Introduzione di cosa trovi sotto — cambia col mondo scelto */}
         <p className="text-xs text-slate-500 leading-relaxed ml-7 mt-3 max-w-3xl">
           {mode === "nina" ? (
-            <>Due cose: <strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa
-            sappiamo fare, i personaggi, le zone, come nasce l'avventura) — e <strong style={{ color: NINA_COLOR }}>RAG
-            Nina</strong>, tutti gli episodi che il sistema genera e indicizza da solo.</>
+            <>Due cose distinte: <strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa
+            sappiamo fare, i personaggi, le zone, come nasce l'avventura) <strong style={{ color: NINA_COLOR }}>+ gli episodi nuovi e definitivi</strong> —
+            e <strong style={{ color: NINA_COLOR }}>RAG Nina</strong>, <strong style={{ color: NINA_COLOR }}>solo gli archiviati</strong>: l'origine da cui il sistema rigenera e indicizza da solo.</>
           ) : (
             <>Le storie del <strong className="text-slate-300">sistema</strong>: il dev-log di TITANIUM_OS, in ordine.
             Si <strong className="text-emerald-400">autoalimentano</strong> — ogni milestone verificato genera un episodio.
@@ -523,54 +521,36 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
                 {foundationLines.map((line, i) => renderMdLine(line, i))}
               </div>
 
-              {/* gli episodi pronti e finiti, in ordine dall'inizio */}
+              {/* gli episodi nuovi e definitivi (il cammino EP_N2), in ordine dall'inizio */}
               <div className="flex items-center gap-2 mb-2 mt-5">
                 <BookOpen size={13} style={{ color: NINA_COLOR }} />
                 <h4 className="text-xs font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
-                  Gli episodi — pronti e finiti, dall'inizio
+                  Gli episodi — nuovi e definitivi, dall'inizio
                 </h4>
                 <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full" style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}>
-                  {ninaReady.length}
+                  {ninaEpisodes.length}
                 </span>
               </div>
-              {ninaReady.length === 0 ? (
-                <p className="text-xs text-slate-600 italic px-2 py-4 text-center">Nessun episodio pronto con questo filtro.</p>
+              {ninaEpisodes.length === 0 ? (
+                <p className="text-xs text-slate-600 italic px-2 py-4 text-center">Nessun episodio con questo filtro.</p>
               ) : (
                 <div className="space-y-2">
-                  {ninaReady.map(ep => <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />)}
+                  {ninaEpisodes.map(ep => <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />)}
                 </div>
               )}
             </div>
 
-            {/* (2) RAG NINA — TUTTI gli episodi, anche quelli archiviati */}
+            {/* (2) RAG NINA — SOLO gli archiviati: l'origine (EP_AV) + le versioni precedenti */}
             <div ref={ragRef} className="scroll-mt-4 mt-7">
               <NinaRagPanel canonLocal={ninaEpisodes.length} />
 
               <div className="flex items-center gap-2 mb-2 mt-1">
                 <Bot size={14} style={{ color: NINA_COLOR }} />
                 <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
-                  RAG Nina — tutti gli episodi
+                  RAG Nina — solo gli archiviati
                 </h3>
-                <span className="text-[10px] font-mono text-slate-500">il canone + l'archivio (origine e versioni)</span>
-                <span
-                  className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full"
-                  style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}
-                >
-                  {ninaEpisodes.length} ep
-                </span>
+                <span className="text-[10px] font-mono text-slate-500">l'origine (EP_AV) e le versioni precedenti — la sorgente da cui il nodo rigenera</span>
               </div>
-
-              {ninaEpisodes.length === 0 ? (
-                <p className="text-xs text-slate-600 italic px-2 py-6 text-center">
-                  Nessun episodio Nina con questo filtro.
-                </p>
-              ) : (
-                <div className="space-y-2">
-                  {ninaEpisodes.map(ep => (
-                    <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />
-                  ))}
-                </div>
-              )}
 
               {/* gli archiviati: l'origine (EP_AV) + le versioni precedenti */}
               <NinaArchived />

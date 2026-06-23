@@ -1,7 +1,21 @@
+<!-- TOC -->
+
+- [Nina  dal Giorno 0](#nina-dal-giorno-0)
+  - [1  Cosa sappiamo fare (e come lo sappiamo)](#1-cosa-sappiamo-fare-e-come-lo-sappiamo)
+  - [2  Il mondo (dove succede)](#2-il-mondo-dove-succede)
+  - [3  I personaggi (nomi, ruoli, voce)](#3-i-personaggi-nomi-ruoli-voce)
+  - [4  Le zone / le materie (la mappa, non una linea)](#4-le-zone-le-materie-la-mappa-non-una-linea)
+  - [5  Come si crea lavventura (il metodo  il motore)](#5-come-si-crea-lavventura-il-metodo-il-motore)
+  - [Le costanti (tengono tutto insieme, anche saltando)](#le-costanti-tengono-tutto-insieme-anche-saltando)
+  - [La stella polare  il CV che si genera](#la-stella-polare-il-cv-che-si-genera)
+
+<!-- /TOC -->
+
 # Nina — dal Giorno 0
 
-> Il punto di partenza. Non gli episodi (quelli stanno in **RAG Nina**), ma il **fondamento**:
-> cosa sappiamo fare e come lo sappiamo, e come da qui nasce l'avventura di Nina.
+> Il punto di partenza: il **fondamento** — cosa sappiamo fare e come lo sappiamo, e come da qui
+> nasce l'avventura di Nina. Qui sotto trovi anche **gli episodi nuovi e definitivi** (il cammino EP_N2).
+> Gli episodi **archiviati** (l'origine EP_AV + le versioni precedenti) stanno invece in **RAG Nina**.
 > Rifatto dal vero, una sola verità.
 
 **In una riga:** Nina è il diario animato di un sistema che gira davvero — raccontato da un padre-artigiano a sua figlia, una casella alla volta, dove ogni cosa è vera e si tiene in piedi.
