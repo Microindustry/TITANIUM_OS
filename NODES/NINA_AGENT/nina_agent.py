@@ -62,6 +62,8 @@ NINA_STATE  = TI_ROOT / "DATA" / "nina_state.json"
 
 MODEL_ARCH   = "claude-haiku-4-5-20251001"   # stadio 1: struttura, economico
 MODEL_WRITER = "claude-sonnet-4-6"           # stadio 2: prosa, qualita'
+# Grounding obbligatorio: minimo di righe-fatto dal RAG sotto cui NON si genera (dal vero o niente)
+MIN_GROUNDING_LINES = 2
 
 REGIONI_NINA = {
     0: "LA MATERIA", 1: "LA TRACCIA", 2: "L'OFFICINA CHE GIRA SOLA",
@@ -376,7 +378,8 @@ def save_canon(ep_id: str, frontmatter: str, body: str, skel: dict, meta: dict) 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
-def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool = True) -> Path | None:
+def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool = True,
+             require_grounding: bool = True) -> Path | None:
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
         logger.error("ANTHROPIC_API_KEY assente — impossibile generare")
@@ -390,8 +393,18 @@ def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool 
     meta["concept_slug"] = concept
 
     rag_context = retrieve_context(rag_query or concept)
-    logger.info("Grounding: %d righe di fonti (%s)",
-                len(rag_context.splitlines()) if rag_context else 0, (rag_query or concept)[:50])
+    n_fonti = len(rag_context.splitlines()) if rag_context else 0
+    logger.info("Grounding: %d righe di fonti (%s)", n_fonti, (rag_query or concept)[:50])
+
+    # GROUNDING OBBLIGATORIO (canone sess.#44: "tutti i nuovi episodi fatti dal vero").
+    # Senza fatti reali dal RAG NON si genera: meglio nessun episodio che uno inventato.
+    # (il RAG dev'essere su: API localhost:5001 o motore diretto. Disattivabile solo
+    # esplicitamente con require_grounding=False, non in automatico.)
+    if require_grounding and n_fonti < MIN_GROUNDING_LINES:
+        logger.error("GROUNDING INSUFFICIENTE (%d/%d fonti) per %s — NON genero (dal vero o niente). "
+                     "Verifica che il RAG sia su (API :5001) e che il concetto trovi fatti.",
+                     n_fonti, MIN_GROUNDING_LINES, ep_id)
+        return None
 
     logger.info("Stadio 1 — Architetto (%s)...", MODEL_ARCH)
     skel = stage1_architect(client, concept, rag_context, meta)
@@ -440,6 +453,8 @@ if __name__ == "__main__":
     p.add_argument("--richiama", help="Pietre richiamate, es. '⟡3,⟡0'")
     p.add_argument("--proposta", action="store_true",
                    help="Legacy: salva in _PROPOSTI come bozza da validare (default = auto-promozione nel canone)")
+    p.add_argument("--no-grounding", action="store_true",
+                   help="Disattiva il grounding obbligatorio (sconsigliato: rischia episodi inventati)")
     args = p.parse_args()
 
     meta = {
@@ -450,7 +465,7 @@ if __name__ == "__main__":
         "richiama": [r.strip() for r in args.richiama.split(",")] if args.richiama else [],
     }
     out = generate(args.concept, {k: v for k, v in meta.items() if v is not None},
-                   rag_query=args.rag, auto=not args.proposta)
+                   rag_query=args.rag, auto=not args.proposta, require_grounding=not args.no_grounding)
     if out:
         print(f"\nOK -> {out}")
         if args.proposta:
