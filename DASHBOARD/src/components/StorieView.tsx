@@ -5,9 +5,17 @@
 
 import { useState } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
-import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2 } from "lucide-react";
-import { useContentFiles } from "../hooks/useSystemQuery";
+import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
+import { useContentFiles, useNinaStatus } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
+
+// Le storie di Nina vivono nella stagione AV (canone EP_N2). Tutto il resto = sistema.
+const NINA_STAGIONE = "AV";
+const NINA_COLOR = "#ec4899";
+const ninaNum = (e: Episode) => {
+  const m = e.id.match(/EP_N2_(\d+)/);
+  return m ? parseInt(m[1], 10) : 999;
+};
 
 const STATUS_CONFIG: Record<EpisodeStatus, { label: string; color: string; dot: string }> = {
   ready:   { label: "PRONTO",  color: "text-emerald-400", dot: "bg-emerald-400" },
@@ -163,12 +171,74 @@ function EpisodeCard({
   );
 }
 
+// ── Pannello RAG NINA — il nodo che genera in automatico ──────────────────────
+// "vede gli episodi archiviati e continua a generarli, alimentando il RAG di Nina"
+// (canone sess.#44: tutto automatico, nessun intervento). Stato live da /api/nina/status,
+// con fallback ai conteggi locali se l'API è spenta.
+function NinaRagPanel({ canonLocal }: { canonLocal: number }) {
+  const { data, isError } = useNinaStatus();
+  const canon = data?.canon_count ?? canonLocal;
+  const semi = data?.seed_archive_count;
+  const last = data?.last_generated;
+  const offline = isError || !data;
+
+  return (
+    <div
+      className="rounded-xl border p-4 mb-4"
+      style={{ borderColor: NINA_COLOR + "44", background: NINA_COLOR + "0a" }}
+    >
+      <div className="flex items-center gap-2 mb-2">
+        <Bot size={15} style={{ color: NINA_COLOR }} />
+        <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>RAG Nina</h3>
+        <span
+          className="text-[9px] font-mono px-2 py-0.5 rounded-full flex items-center gap-1"
+          style={{ background: NINA_COLOR + "1f", color: NINA_COLOR }}
+          title="Genera e promuove da solo, senza approvazione"
+        >
+          <Sparkles size={9} /> AUTOMATICO
+        </span>
+        {offline && <span className="ml-auto text-[9px] font-mono text-slate-600">API offline · conteggi locali</span>}
+      </div>
+      <p className="text-xs text-slate-400 leading-relaxed mb-3">
+        Il nodo legge gli episodi <strong className="text-slate-300">archiviati</strong> (l'origine del mondo)
+        e <strong className="text-slate-300">continua a generarne di nuovi</strong> da solo, ancorandoli al sapere
+        reale del sistema → così alimenta il RAG di Nina. Niente bozze, niente approvazione: gli episodi nascono definitivi.
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <span className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-slate-800/60 text-slate-300 flex items-center gap-1.5">
+          <BookOpen size={11} style={{ color: NINA_COLOR }} /> {canon} episodi nel canone
+        </span>
+        {typeof semi === "number" && (
+          <span className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-slate-800/60 text-slate-300 flex items-center gap-1.5">
+            <Archive size={11} className="text-amber-400" /> {semi} semi archiviati
+          </span>
+        )}
+        {typeof data?.generated_total === "number" && data.generated_total > 0 && (
+          <span className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-slate-800/60 text-slate-300 flex items-center gap-1.5">
+            <Cpu size={11} className="text-cyan-400" /> {data.generated_total} auto-generati
+          </span>
+        )}
+      </div>
+      {last && (
+        <p className="text-[10px] font-mono text-slate-500 mt-3">
+          ultimo generato: <span style={{ color: NINA_COLOR }}>{last.id}</span> · {last.title}
+          {last.at && <span className="text-slate-600"> · {last.at.slice(0, 10)}</span>}
+        </p>
+      )}
+    </div>
+  );
+}
+
 export function StorieView({ initialStagione = null }: { initialStagione?: string | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
 
   const [filterStatus, setFilterStatus] = useState<EpisodeStatus | null>(null);
+
+  // STORIE = due mondi: il SISTEMA (il dev-log) e NINA (l'avventura educativa).
+  // Si arriva su AV -> apre direttamente Nina.
+  const [mode, setMode] = useState<"sistema" | "nina">(initialStagione === NINA_STAGIONE ? "nina" : "sistema");
 
   // Stagioni aperte: tutte tranne quelle "rumorose"; se si arriva su una stagione, apri solo quella
   const [openSeasons, setOpenSeasons] = useState<Set<string>>(() => {
@@ -197,8 +267,10 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   // Solo i principali (LV0) compaiono nell'elenco di stagione: i figli vivono annidati
   const isTopLevel = (ep: Episode) => !ep.parent_id;
 
-  // Sezioni per stagione (ordine canonico), solo quelle con episodi
+  // Sezioni per stagione (ordine canonico), solo quelle con episodi.
+  // SISTEMA = tutte le stagioni TRANNE AV (Nina ha il suo mondo a parte).
   const sections = Object.entries(STAGIONI)
+    .filter(([key]) => key !== NINA_STAGIONE)
     .sort((a, b) => a[1].order - b[1].order)
     .map(([key, s]) => ({
       key,
@@ -208,8 +280,17 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
     }))
     .filter(g => g.total > 0);
 
-  const totalMin = EPISODES.reduce((s, e) => s + e.durata_min, 0);
-  const readyCount = EPISODES.filter(e => e.status === "ready").length;
+  // NINA = il cammino EP_N2 dal giorno 0, in ordine di casella (numero EP_N2).
+  const ninaEpisodes = statusFiltered(
+    EPISODES.filter(ep => ep.stagione === NINA_STAGIONE && isTopLevel(ep))
+  ).sort((a, b) => ninaNum(a) - ninaNum(b));
+
+  // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
+  const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);
+  const totalMin = (mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE) : sistemaEps)
+    .reduce((s, e) => s + e.durata_min, 0);
+  const modeEps = mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE) : sistemaEps;
+  const readyCount = modeEps.filter(e => e.status === "ready").length;
 
   return (
     <div className="flex flex-col h-full bg-[#020617] overflow-hidden" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
@@ -217,17 +298,38 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
       {/* ── Header ── */}
       <div className="shrink-0 px-6 pt-5 pb-4 border-b border-slate-800/60">
         <div className="flex items-center gap-3 mb-1">
-          <Mic size={18} className="text-amber-400" />
+          {mode === "nina"
+            ? <Sparkles size={18} style={{ color: NINA_COLOR }} />
+            : <Mic size={18} className="text-emerald-400" />}
           <h2 className="text-base font-bold text-slate-100 tracking-widest uppercase">Storie</h2>
           <span className="text-xs font-mono text-slate-500 ml-auto">
-            {EPISODES.length} ep · {Math.round(totalMin / 60)}h {totalMin % 60}m
+            {modeEps.length} ep · {Math.round(totalMin / 60)}h {totalMin % 60}m
             {liveCount > 0 && <span className="text-emerald-500 ml-2">· {liveCount} su disco</span>}
           </span>
         </div>
-        <div className="flex items-center gap-3 ml-7">
-          <p className="text-xs text-slate-500">
-            Podcast · LLM dataset · {readyCount} pronti su {EPISODES.length}
-          </p>
+
+        {/* Selettore SISTEMA | NINA — i due mondi delle storie */}
+        <div className="flex items-center gap-2 ml-7 mt-2">
+          {([
+            ["sistema", "Sistema", "#34d399", Mic],
+            ["nina", "Nina", NINA_COLOR, Sparkles],
+          ] as const).map(([m, label, col, Ico]) => {
+            const active = mode === m;
+            return (
+              <button
+                key={m}
+                onClick={() => setMode(m)}
+                className="text-xs px-3.5 py-1.5 rounded-lg border transition-all flex items-center gap-1.5 font-semibold"
+                style={{
+                  borderColor: active ? col : "#1e293b",
+                  background: active ? col + "1f" : "transparent",
+                  color: active ? col : "#64748b",
+                }}
+              >
+                <Ico size={12} /> {label}
+              </button>
+            );
+          })}
           <button onClick={() => setAll(!allOpen)} className="ml-auto text-[9px] font-mono text-slate-500/70 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
             {allOpen ? <Minimize2 size={9} /> : <Maximize2 size={9} />}
             {allOpen ? "chiudi tutto" : "apri tutto"}
@@ -239,6 +341,19 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
             <ArrowLeft size={9} /> canvas
           </button>
         </div>
+
+        {/* Introduzione di cosa trovi sotto — cambia col mondo scelto */}
+        <p className="text-xs text-slate-500 leading-relaxed ml-7 mt-3 max-w-3xl">
+          {mode === "nina" ? (
+            <>Il mondo di <strong className="text-slate-300">Nina</strong> dal giorno 0: l'avventura educativa che
+            spiega la tecnologia. Il nodo <strong style={{ color: NINA_COLOR }}>RAG Nina</strong> genera nuovi
+            episodi da solo, partendo dagli archiviati — definitivi, senza approvazione.</>
+          ) : (
+            <>Le storie del <strong className="text-slate-300">sistema</strong>: il dev-log di TITANIUM_OS, in ordine.
+            Si <strong className="text-emerald-400">autoalimentano</strong> — ogni milestone verificato genera un episodio.
+            · {readyCount} pronti su {modeEps.length}</>
+          )}
+        </p>
 
         {/* Status filter pills */}
         <div className="flex flex-wrap gap-2 mt-4">
@@ -264,9 +379,9 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
         </div>
       </div>
 
-      {/* ── Stagioni a fisarmonica ── */}
+      {/* ── Corpo: SISTEMA (stagioni a fisarmonica) · NINA (dal giorno 0 + RAG Nina) ── */}
       <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4 space-y-3">
-        {sections.map(g => {
+        {mode === "sistema" && sections.map(g => {
           const isOpen = openSeasons.has(g.key);
           const shown = g.episodes.length;
           return (
@@ -314,17 +429,52 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           );
         })}
 
-        {/* Prossimi episodi */}
-        <div className="mt-2 rounded-xl border border-dashed border-slate-700/40 px-4 py-5 text-center space-y-1">
-          <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5">
-            <BookOpen size={10} /> In pipeline
-          </p>
-          <p className="text-xs text-slate-600 font-mono">S2: Asse Y · Primo Pezzo H7 · Mandrino Day</p>
-          <p className="text-xs text-slate-700 font-mono">ST: Il Brevetto · EP_T08</p>
-          <p className="text-[10px] text-slate-700 font-mono mt-2">
-            AUTO: generati da STATE.json su ogni milestone verificato
-          </p>
-        </div>
+        {/* Prossimi episodi (solo SISTEMA) */}
+        {mode === "sistema" && (
+          <div className="mt-2 rounded-xl border border-dashed border-slate-700/40 px-4 py-5 text-center space-y-1">
+            <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5">
+              <BookOpen size={10} /> In pipeline
+            </p>
+            <p className="text-xs text-slate-600 font-mono">S2: Asse Y · Primo Pezzo H7 · Mandrino Day</p>
+            <p className="text-xs text-slate-700 font-mono">ST: Il Brevetto · EP_T08</p>
+            <p className="text-[10px] text-slate-700 font-mono mt-2">
+              AUTO: generati da STATE.json su ogni milestone verificato
+            </p>
+          </div>
+        )}
+
+        {/* ── NINA: il nodo RAG Nina + il cammino dal giorno 0 ── */}
+        {mode === "nina" && (
+          <>
+            <NinaRagPanel canonLocal={ninaEpisodes.length} />
+
+            <div className="flex items-center gap-2 mb-2 mt-1">
+              <BookOpen size={14} style={{ color: NINA_COLOR }} />
+              <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
+                Nina dal giorno 0
+              </h3>
+              <span className="text-[10px] font-mono text-slate-500">il cammino, casella per casella</span>
+              <span
+                className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full"
+                style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}
+              >
+                {ninaEpisodes.length} ep
+              </span>
+            </div>
+
+            {ninaEpisodes.length === 0 ? (
+              <p className="text-xs text-slate-600 italic px-2 py-6 text-center">
+                Nessun episodio Nina con questo filtro.
+              </p>
+            ) : (
+              <div className="space-y-2">
+                {ninaEpisodes.map(ep => (
+                  <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

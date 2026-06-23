@@ -177,6 +177,33 @@ export function useDigest() {
   });
 }
 
+// Stato del nodo RAG Nina (generazione automatica) — alimenta il pannello RAG Nina
+export interface NinaStatus {
+  ok: boolean;
+  canon_count: number;
+  seed_archive_count: number;
+  generated_total: number;
+  last_generated?: { id: string; title: string; at: string } | null;
+  last_loop?: string | null;
+  seeds?: string[];
+  auto: boolean;
+}
+
+export function useNinaStatus() {
+  return useQuery<NinaStatus>({
+    queryKey: ["nina-status"],
+    queryFn: async () => {
+      const res = await fetch("/api/nina/status", { signal: AbortSignal.timeout(6000) });
+      if (!res.ok) throw new Error(`API ${res.status}`);
+      return res.json();
+    },
+    staleTime: 30_000,
+    gcTime: 5 * 60_000,
+    retry: 1,                 // Flask potrebbe essere spento — il pannello degrada da solo
+    refetchOnWindowFocus: false,
+  });
+}
+
 // Legge un file specifico (per MdManager, drill-down)
 export function useFile(filePath: string | null) {
   return useQuery({
