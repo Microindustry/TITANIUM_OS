@@ -308,8 +308,8 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </button>
                 {/* NINA DAL GIORNO 0 — il cammino EP_N2 in ordine */}
                 <button
-                  onClick={() => navigateTo("avventura", "cammino")}
-                  title="Nina dal giorno 0 — il cammino EP_N2, casella per casella"
+                  onClick={() => navigateTo("avventura", "fondamenta")}
+                  title="Nina dal giorno 0 — il fondamento: cosa sappiamo, personaggi, zone, come si crea l'avventura"
                   className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
                     ${view === "avventura" && focusTarget !== "rag"
                       ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"

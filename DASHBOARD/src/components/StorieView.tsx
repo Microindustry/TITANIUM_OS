@@ -5,6 +5,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
+import ninaFoundationMd from "../data/nina_dal_giorno_0.md?raw";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
 import { useContentFiles, useNinaStatus } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
@@ -240,15 +241,20 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   // Si arriva su AV -> apre direttamente Nina.
   const [mode, setMode] = useState<"sistema" | "nina">(initialStagione === NINA_STAGIONE ? "nina" : "sistema");
 
-  // Deep-link dalle voci di sidebar: "cammino" scrolla agli episodi, "rag" resta sul pannello
+  // Deep-link dalle voci di sidebar: "fondamenta" -> il documento del giorno 0,
+  // "rag" -> l'elenco di tutti gli episodi/storie di Nina.
   const focusTarget = useUIStore(s => s.focusTarget);
-  const camminoRef = useRef<HTMLDivElement>(null);
+  const fondamentaRef = useRef<HTMLDivElement>(null);
+  const ragRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (mode === "nina" && focusTarget === "cammino") {
-      const t = setTimeout(() => camminoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
-      return () => clearTimeout(t);
-    }
+    if (mode !== "nina") return;
+    const ref = focusTarget === "rag" ? ragRef : focusTarget === "fondamenta" ? fondamentaRef : null;
+    if (!ref) return;
+    const t = setTimeout(() => ref.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+    return () => clearTimeout(t);
   }, [mode, focusTarget]);
+
+  const foundationLines = ninaFoundationMd.split("\n");
 
   // Stagioni aperte: tutte tranne quelle "rumorose"; se si arriva su una stagione, apri solo quella
   const [openSeasons, setOpenSeasons] = useState<Set<string>>(() => {
@@ -355,9 +361,9 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
         {/* Introduzione di cosa trovi sotto — cambia col mondo scelto */}
         <p className="text-xs text-slate-500 leading-relaxed ml-7 mt-3 max-w-3xl">
           {mode === "nina" ? (
-            <>Il mondo di <strong className="text-slate-300">Nina</strong> dal giorno 0: l'avventura educativa che
-            spiega la tecnologia. Il nodo <strong style={{ color: NINA_COLOR }}>RAG Nina</strong> genera nuovi
-            episodi da solo, partendo dagli archiviati — definitivi, senza approvazione.</>
+            <>Due cose: <strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa
+            sappiamo fare, i personaggi, le zone, come nasce l'avventura) — e <strong style={{ color: NINA_COLOR }}>RAG
+            Nina</strong>, tutti gli episodi che il sistema genera e indicizza da solo.</>
           ) : (
             <>Le storie del <strong className="text-slate-300">sistema</strong>: il dev-log di TITANIUM_OS, in ordine.
             Si <strong className="text-emerald-400">autoalimentano</strong> — ogni milestone verificato genera un episodio.
@@ -453,36 +459,55 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           </div>
         )}
 
-        {/* ── NINA: il nodo RAG Nina + il cammino dal giorno 0 ── */}
+        {/* ── NINA: (1) il fondamento dal giorno 0 · (2) RAG Nina = tutti gli episodi ── */}
         {mode === "nina" && (
           <>
-            <NinaRagPanel canonLocal={ninaEpisodes.length} />
-
-            <div ref={camminoRef} className="flex items-center gap-2 mb-2 mt-1 scroll-mt-4">
-              <BookOpen size={14} style={{ color: NINA_COLOR }} />
-              <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
-                Nina dal giorno 0
-              </h3>
-              <span className="text-[10px] font-mono text-slate-500">il cammino, casella per casella</span>
-              <span
-                className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full"
-                style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}
+            {/* (1) NINA DAL GIORNO 0 — il documento fondativo (rifatto dal vero) */}
+            <div ref={fondamentaRef} className="scroll-mt-4">
+              <div className="flex items-center gap-2 mb-2 mt-1">
+                <Sparkles size={14} style={{ color: NINA_COLOR }} />
+                <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
+                  Nina dal giorno 0
+                </h3>
+                <span className="text-[10px] font-mono text-slate-500">il fondamento — cosa sappiamo, chi, dove, come</span>
+              </div>
+              <div
+                className="rounded-xl border px-5 py-4 overflow-hidden"
+                style={{ borderColor: NINA_COLOR + "33", background: NINA_COLOR + "08" }}
               >
-                {ninaEpisodes.length} ep
-              </span>
+                {foundationLines.map((line, i) => renderMdLine(line, i))}
+              </div>
             </div>
 
-            {ninaEpisodes.length === 0 ? (
-              <p className="text-xs text-slate-600 italic px-2 py-6 text-center">
-                Nessun episodio Nina con questo filtro.
-              </p>
-            ) : (
-              <div className="space-y-2">
-                {ninaEpisodes.map(ep => (
-                  <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />
-                ))}
+            {/* (2) RAG NINA — tutti gli episodi e le storie (come Storie di Sistema) */}
+            <div ref={ragRef} className="scroll-mt-4 mt-7">
+              <NinaRagPanel canonLocal={ninaEpisodes.length} />
+
+              <div className="flex items-center gap-2 mb-2 mt-1">
+                <Bot size={14} style={{ color: NINA_COLOR }} />
+                <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
+                  RAG Nina — tutti gli episodi
+                </h3>
+                <span
+                  className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full"
+                  style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}
+                >
+                  {ninaEpisodes.length} ep
+                </span>
               </div>
-            )}
+
+              {ninaEpisodes.length === 0 ? (
+                <p className="text-xs text-slate-600 italic px-2 py-6 text-center">
+                  Nessun episodio Nina con questo filtro.
+                </p>
+              ) : (
+                <div className="space-y-2">
+                  {ninaEpisodes.map(ep => (
+                    <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />
+                  ))}
+                </div>
+              )}
+            </div>
           </>
         )}
       </div>
