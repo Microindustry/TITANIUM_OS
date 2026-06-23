@@ -140,7 +140,7 @@ E quella è una terra strana e nuova della mappa: la Mente che Parla.
 **3 strati:** bambino = la macchina-aiutante che ripete il tuo gesto e libera le mani · curioso = per insegnare devi capire meglio di come fai; la macchina è fedele non sveglia, va controllata · grande = automazione = leva sul tempo (toil→alto valore), non "più pezzi"; automatizzare un gesto non verificabile = fabbrica di errori veloci.
 **Cuore:** la curiosità (insegnando capisci di più) · fai bene le cose vere (automatizzi solo ciò che padroneggi e verifichi) · gli strumenti del papà che si moltiplicano.
 **Aggancio reale:** il primo nodo di automazione del sistema; il principio "controlla il risultato vero, non fidarti cieco" (anticipa il watchdog/⟡6).
-**Open loop → Casella 7+ (la Mente che Parla):** e se una macchina capisse a parole cosa vuoi, senza spiegarle ogni passo? → la Mente che Parla.
+**Open loop → Casella 7 (la Mente che Parla):** e se una macchina capisse a parole cosa vuoi, senza spiegarle ogni passo? → `EP_N2_07`.
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_06, casella 6 (apre l'automazione, ⟡2) del viaggio Nina v2, ~16 min.

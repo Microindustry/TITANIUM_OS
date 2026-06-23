@@ -134,7 +134,7 @@ E lì, alla casella dopo, comincia **L'Officina che Gira Sola**. Ma quella è un
 **3 strati:** bambino = la macchina che non si stanca, ma ripete anche gli errori · curioso = la macchina è un megafono: amplifica il giusto e lo storto; prima la mano deve sapere · grande = "non automatizzare un gesto non padroneggiato"; l'automazione scala il processo (errori inclusi); competenza manuale prima, automazione dopo.
 **Cuore:** papà ti ha lasciato gli strumenti, non le risposte (il calibro di FORGE = l'esperienza che si tramanda) · fai bene le cose vere · la curiosità verso il passo dopo.
 **Aggancio reale:** il principio cardine della V32/officina ("prima la mano, poi la macchina"); l'eredità del sapere artigiano; il ponte verso GENESIS/automazione (l'arco IA).
-**Open loop → la prossima terra (⟡2→⟡3...):** se una macchina ripete un gesto delle mani, può ripetere un gesto della mente? → l'Officina che Gira Sola, e tutto il resto della mappa.
+**Open loop → Casella 6 (l'Officina che Gira Sola):** se la mano *sa* un gesto, puoi insegnarlo a qualcosa che non si stanca mai? → `EP_N2_06`.
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_05, casella 5 (chiude l'apertura) del viaggio Nina v2, materia L'Officina che Gira Sola (⟡2, il ponte), ~14 min.
