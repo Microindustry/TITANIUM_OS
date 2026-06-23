@@ -65,8 +65,8 @@ def _world(path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--min-sim", type=float, default=0.05)
-    ap.add_argument("--max", type=int, default=5, help="max ponti cross-mondo per nota")
+    ap.add_argument("--min-sim", type=float, default=0.04)
+    ap.add_argument("--max", type=int, default=8, help="max ponti cross-mondo per nota")
     args = ap.parse_args()
     if not MENTE.exists():
         print(f"[ecosystem_bridge] MENTE assente: {MENTE}"); return 1

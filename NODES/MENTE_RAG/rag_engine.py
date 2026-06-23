@@ -145,10 +145,12 @@ def _read_file(path: Path) -> str:
 # Sono NAVIGAZIONE, non sapere: indicizzarli crea centinaia di chunk-lista quasi identici
 # che diluiscono il segnale. Si tolgono prima del chunking (efficienza RAG su vault).
 _COLLEGATI_BLK = re.compile(r"<!--\s*COLLEGATI:start.*?COLLEGATI:end\s*-->", re.DOTALL)
+_ECOSISTEMA_BLK = re.compile(r"<!--\s*ECOSISTEMA:start.*?ECOSISTEMA:end\s*-->", re.DOTALL)
 _AUTO_COMMENT  = re.compile(r"^<!--\s*AUTO-GENERATO.*?-->\s*$", re.MULTILINE)
 
 def _clean_for_index(text: str) -> str:
     text = _COLLEGATI_BLK.sub("", text)
+    text = _ECOSISTEMA_BLK.sub("", text)   # ponti cross-mondo: navigazione, non sapere (#43)
     text = _AUTO_COMMENT.sub("", text)
     return text
 

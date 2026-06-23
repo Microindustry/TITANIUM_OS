@@ -37,8 +37,8 @@ SIG = 30          # quanti termini compongono la "firma" di una nota
 # ECOSISTEMA non ZONE (#43): prima un bonus allo stesso-dominio costruiva muri attorno
 # a V32/MIMS/GENESIS/... -> il grafo veniva "a zone". Ora si premiano i PONTI cross-dominio
 # e se ne garantiscono alcuni per nota (principio Giuntura: ogni nota esce dal suo cluster).
-CROSS_BONUS   = 1.12   # un legame verso un ALTRO dominio pesa un filo di piu' (ponte > muro)
-CROSS_RESERVE = 2      # min. legami cross-dominio garantiti per nota (se esistono sopra soglia)
+CROSS_BONUS   = 1.15   # un legame verso un ALTRO dominio pesa un filo di piu' (ponte > muro)
+CROSS_RESERVE = 4      # min. legami cross-dominio garantiti per nota (se esistono sopra soglia)
 
 # cartelle/note da NON toccare
 SKIP_DIRS = {"STORIE", ".obsidian", ".git", "_allegati"}
@@ -95,8 +95,8 @@ def term_freq(path: Path, text: str) -> collections.Counter:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--min-sim", type=float, default=0.05, help="soglia cosine per creare un legame")
-    ap.add_argument("--max", type=int, default=8, help="max legami per nota")
+    ap.add_argument("--min-sim", type=float, default=0.045, help="soglia cosine per creare un legame")
+    ap.add_argument("--max", type=int, default=10, help="max legami per nota")
     args = ap.parse_args()
 
     if not MENTE.exists():
