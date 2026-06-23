@@ -337,7 +337,7 @@ function NinaArchived() {
   );
 }
 
-export function StorieView({ initialStagione = null }: { initialStagione?: string | null } = {}) {
+export function StorieView({ initialStagione = null, ninaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
@@ -346,7 +346,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
 
   // STORIE = due mondi: il SISTEMA (il dev-log) e NINA (l'avventura educativa).
   // Si arriva su AV -> apre direttamente Nina.
-  const [mode, setMode] = useState<"sistema" | "nina">(initialStagione === NINA_STAGIONE ? "nina" : "sistema");
+  const [mode, setMode] = useState<"sistema" | "nina">(ninaView || initialStagione === NINA_STAGIONE ? "nina" : "sistema");
 
   // Deep-link dalle voci di sidebar: "fondamenta" -> il documento del giorno 0,
   // "rag" -> l'elenco di tutti gli episodi/storie di Nina.
@@ -428,7 +428,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   // Due PAGINE Nina isolate (non due sezioni nella stessa): il bottone preme l'una o l'altra.
   //   "rag"      -> RAG Nina = solo gli archiviati
   //   "giorno0"  -> Nina dal giorno 0 = fondamento + tutti gli episodi nella miglior versione
-  const ninaPage: "rag" | "giorno0" = focusTarget === "rag" ? "rag" : "giorno0";
+  const ninaPage: "rag" | "giorno0" = ninaView ?? (focusTarget === "rag" ? "rag" : "giorno0");
 
   // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
   const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);

@@ -84,7 +84,9 @@ const NAV_ITEMS: NavItem[] = [
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
-  { id: "storie",      label: "STORIE",     icon: Mic,           color: "text-rose-400",   group: "system"  },
+  { id: "storie",        label: "STORIE · SISTEMA",   icon: Mic,      color: "text-rose-400",   group: "system"  },
+  { id: "nina-giorno0",  label: "NINA · DAL GIORNO 0", icon: Sparkles, color: "text-pink-400",   group: "system"  },
+  { id: "nina-archivio", label: "NINA · ARCHIVIO",     icon: Bot,      color: "text-pink-400",   group: "system"  },
   { id: "mappa",       label: "MAPPA NINA",  icon: Map,         color: "text-pink-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
@@ -122,8 +124,6 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
   pillars: Record<string, any>;
   online: boolean;
 }) {
-  const navigateTo = useUIStore(s => s.navigateTo);
-  const focusTarget = useUIStore(s => s.focusTarget);
   const pillarItems = NAV_ITEMS.filter(n => n.group === "pillars");
   const systemItems = NAV_ITEMS.filter(n => n.group === "system");
 
@@ -273,53 +273,6 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                     <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">{lbl}</span>
                   </button>
                 ))}
-              </>
-            )}
-            {/* Sotto-voci di STORIE: i due mondi (Sistema verde · Nina rosa) */}
-            {item.id === "storie" && !collapsed && (
-              <>
-                {/* STORIE DI SISTEMA — il dev-log che si autoalimenta */}
-                <button
-                  onClick={() => onNavigate("storie")}
-                  title="Le storie del sistema — il dev-log di TITANIUM_OS, in ordine"
-                  className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                    ${view === "storie"
-                      ? "bg-emerald-950/40 text-emerald-300 border border-emerald-500/30"
-                      : "text-slate-600 hover:text-emerald-300 hover:bg-emerald-950/20 border border-transparent"}`}
-                >
-                  <Mic size={11} className="flex-shrink-0 text-emerald-400" />
-                  <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                    Storie di Sistema
-                  </span>
-                </button>
-                {/* RAG NINA — il nodo che genera da solo dagli archiviati */}
-                <button
-                  onClick={() => navigateTo("avventura", "rag")}
-                  title="RAG Nina — genera nuovi episodi da solo, alimenta il RAG"
-                  className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                    ${view === "avventura" && focusTarget === "rag"
-                      ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
-                      : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
-                >
-                  <Bot size={11} className="flex-shrink-0 text-pink-400" />
-                  <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                    RAG Nina
-                  </span>
-                </button>
-                {/* NINA DAL GIORNO 0 — il cammino EP_N2 in ordine */}
-                <button
-                  onClick={() => navigateTo("avventura", "fondamenta")}
-                  title="Nina dal giorno 0 — il fondamento: cosa sappiamo, personaggi, zone, come si crea l'avventura"
-                  className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                    ${view === "avventura" && focusTarget !== "rag"
-                      ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
-                      : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
-                >
-                  <Sparkles size={11} className="flex-shrink-0 text-pink-400" />
-                  <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                    Nina dal giorno 0
-                  </span>
-                </button>
               </>
             )}
             {/* Sotto-voce: Mappa-Gioco — annidata sotto MAPPA NINA */}
@@ -550,6 +503,8 @@ function AppInner() {
             {view === "avventura-mappa" && <AvventuraMapView />}
             {view === "storie"      && <StorieView />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
+            {view === "nina-giorno0"  && <StorieView ninaView="giorno0" />}
+            {view === "nina-archivio" && <StorieView ninaView="rag" />}
             {view === "pitch"       && <PitchView />}
             {view === "pitch-nina"    && <PitchProgettoView progetto="nina" />}
             {view === "pitch-mims"    && <PitchProgettoView progetto="mims" />}
