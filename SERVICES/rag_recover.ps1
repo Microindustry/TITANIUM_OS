@@ -51,6 +51,10 @@ function Stop-RagHolders {
     Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'watchdog\.py' } | ForEach-Object {
         try { Stop-Process -Id $_.ProcessId -Force -ErrorAction Stop } catch {}
     }
+    # watcher.py: reagisce alle modifiche MENTE con incrementali -> combatte il recovery (#43)
+    Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'watcher\.py' } | ForEach-Object {
+        try { Stop-Process -Id $_.ProcessId -Force -ErrorAction Stop } catch {}
+    }
     Get-NetTCPConnection -LocalPort 5001 -State Listen -ErrorAction SilentlyContinue | ForEach-Object {
         try { Stop-Process -Id $_.OwningProcess -Force -ErrorAction Stop } catch {}
     }
@@ -71,6 +75,9 @@ function Start-Api {
 function Finish($msg, $color) {
     Start-Api
     try { Start-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop } catch {}
+    # riavvia il watcher MENTE stoppato per l'accesso esclusivo (#43)
+    $PYW = $PY -replace 'python\.exe$','pythonw.exe'; if (-not (Test-Path $PYW)) { $PYW = $PY }
+    Start-Process -FilePath $PYW -ArgumentList "$TI\AUTOMATIONS\core\watcher.py" -WorkingDirectory $TI -WindowStyle Hidden
     Write-Host "`n$msg" -ForegroundColor $color
 }
 
