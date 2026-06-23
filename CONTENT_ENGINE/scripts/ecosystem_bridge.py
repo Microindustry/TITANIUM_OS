@@ -19,7 +19,7 @@ MENTE = Path(os.environ.get("MENTE_DIR", r"C:\Users\teo\MICROINDUSTRY\MENTE"))
 _E_START = "<!-- ECOSISTEMA:start (auto, ecosystem_bridge) -->"
 _E_END   = "<!-- ECOSISTEMA:end -->"
 SIG = 30
-SKIP_DIRS  = {".obsidian", ".git", "_allegati"}
+SKIP_DIRS  = {".obsidian", ".git", "_allegati", "_ARCHIVIO", "_PROPOSTI"}  # _ARCHIVIO/_PROPOSTI: non canone (sess.#43)
 SKIP_STEMS = {"HOME", "README", "_EVOLUZIONE", "PIETRE", "_SMISTAMENTO"}
 
 STOP = set("""

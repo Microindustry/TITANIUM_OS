@@ -20,7 +20,7 @@ if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout
     except Exception: pass
 
 MENTE = Path(os.environ.get("MENTE_DIR", r"C:\Users\teo\MICROINDUSTRY\MENTE"))
-SKIP_DIRS = {".obsidian", ".git", "_allegati"}
+SKIP_DIRS = {".obsidian", ".git", "_allegati", "_ARCHIVIO", "_PROPOSTI"}  # _ARCHIVIO/_PROPOSTI: non canone (sess.#43)
 SKIP_REL = {os.path.join("KNOWLEDGE", "RESEARCH")}   # paper web: titoli loro, fuori dal RAG
 SKIP_STEMS = {"HOME", "README"}
 

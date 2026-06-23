@@ -12,7 +12,7 @@ if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 MENTE = Path("C:/Users/teo/MICROINDUSTRY/MENTE")
-SKIP = {".git", ".obsidian", "graphify-out"}
+SKIP = {".git", ".obsidian", "graphify-out", "_ARCHIVIO", "_PROPOSTI"}  # _ARCHIVIO/_PROPOSTI: non canone (sess.#43)
 AUTO = "<!-- AUTO-GENERATO da genera_wiki_index.py — rigenerato, non editare a mano -->"
 
 # descrizione umana per dominio (cosa c'e' dentro)

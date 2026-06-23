@@ -21,6 +21,8 @@ STORIE_DST = MENTE / "STORIE"
 
 _C_START = "<!-- COLLEGATI:start (auto, storie_intersect) -->"
 _C_END = "<!-- COLLEGATI:end -->"
+# staging/archivio: non canone (sess.#43) — non si sincronizzano né si intessono nel vault
+_SKIP_PARTS = {"_ARCHIVIO", "_PROPOSTI"}
 _ID_RX = re.compile(r"^#\s+(EP_\S+)", re.MULTILINE)
 
 if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout.encoding.lower() != "utf-8":
@@ -35,6 +37,8 @@ def sync_episodes() -> int:
     n = 0
     for src in EPISODES_SRC.rglob("*.md"):
         rel = src.relative_to(EPISODES_SRC)            # es. S2_SISTEMA/EP_xxx.md
+        if any(part in _SKIP_PARTS for part in rel.parts[:-1]):
+            continue                                   # archiviati/proposti: non canone
         dst = STORIE_DST / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         # copia solo se diverso (mtime/size) — evita scritture inutili
@@ -66,7 +70,8 @@ def inject_collegati() -> int:
                 return eid
         return None
 
-    files = list(STORIE_DST.rglob("*.md")) if STORIE_DST.exists() else []
+    files = [f for f in (STORIE_DST.rglob("*.md") if STORIE_DST.exists() else [])
+             if not any(part in _SKIP_PARTS for part in f.relative_to(STORIE_DST).parts[:-1])]
     file_txt = {}      # cache contenuti
     file_id = {}       # f -> id episodio
     id2stem = {}       # id -> stem (per i wikilink)
