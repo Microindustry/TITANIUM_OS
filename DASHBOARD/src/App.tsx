@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays,
+  FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -122,6 +122,8 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
   pillars: Record<string, any>;
   online: boolean;
 }) {
+  const navigateTo = useUIStore(s => s.navigateTo);
+  const focusTarget = useUIStore(s => s.focusTarget);
   const pillarItems = NAV_ITEMS.filter(n => n.group === "pillars");
   const systemItems = NAV_ITEMS.filter(n => n.group === "system");
 
@@ -273,20 +275,49 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 ))}
               </>
             )}
-            {/* Sotto-voci di STORIE: NINA (episodi) + Mappa dell'Avventura (rosa, binario educativo) */}
+            {/* Sotto-voci di STORIE: i due mondi (Sistema verde · Nina rosa) */}
             {item.id === "storie" && !collapsed && (
               <>
+                {/* STORIE DI SISTEMA — il dev-log che si autoalimenta */}
                 <button
-                  onClick={() => onNavigate("avventura")}
-                  title="Nina — gli episodi dell'Avventura (stagione AV)"
+                  onClick={() => onNavigate("storie")}
+                  title="Le storie del sistema — il dev-log di TITANIUM_OS, in ordine"
                   className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                    ${view === "avventura"
+                    ${view === "storie"
+                      ? "bg-emerald-950/40 text-emerald-300 border border-emerald-500/30"
+                      : "text-slate-600 hover:text-emerald-300 hover:bg-emerald-950/20 border border-transparent"}`}
+                >
+                  <Mic size={11} className="flex-shrink-0 text-emerald-400" />
+                  <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                    Storie di Sistema
+                  </span>
+                </button>
+                {/* RAG NINA — il nodo che genera da solo dagli archiviati */}
+                <button
+                  onClick={() => navigateTo("avventura", "rag")}
+                  title="RAG Nina — genera nuovi episodi da solo, alimenta il RAG"
+                  className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                    ${view === "avventura" && focusTarget === "rag"
+                      ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
+                      : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
+                >
+                  <Bot size={11} className="flex-shrink-0 text-pink-400" />
+                  <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                    RAG Nina
+                  </span>
+                </button>
+                {/* NINA DAL GIORNO 0 — il cammino EP_N2 in ordine */}
+                <button
+                  onClick={() => navigateTo("avventura", "cammino")}
+                  title="Nina dal giorno 0 — il cammino EP_N2, casella per casella"
+                  className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                    ${view === "avventura" && focusTarget !== "rag"
                       ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
                       : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
                 >
                   <Sparkles size={11} className="flex-shrink-0 text-pink-400" />
                   <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                    Nina
+                    Nina dal giorno 0
                   </span>
                 </button>
               </>

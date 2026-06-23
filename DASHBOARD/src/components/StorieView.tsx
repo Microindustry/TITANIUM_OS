@@ -3,7 +3,7 @@
 // versione: 3.0 / data: 2026-06-07
 // v3.0: stagioni a fisarmonica (divisione chiara), titoli leggibili, flood AUTO chiuso di default
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
 import { useContentFiles, useNinaStatus } from "../hooks/useSystemQuery";
@@ -240,6 +240,16 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   // Si arriva su AV -> apre direttamente Nina.
   const [mode, setMode] = useState<"sistema" | "nina">(initialStagione === NINA_STAGIONE ? "nina" : "sistema");
 
+  // Deep-link dalle voci di sidebar: "cammino" scrolla agli episodi, "rag" resta sul pannello
+  const focusTarget = useUIStore(s => s.focusTarget);
+  const camminoRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (mode === "nina" && focusTarget === "cammino") {
+      const t = setTimeout(() => camminoRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+      return () => clearTimeout(t);
+    }
+  }, [mode, focusTarget]);
+
   // Stagioni aperte: tutte tranne quelle "rumorose"; se si arriva su una stagione, apri solo quella
   const [openSeasons, setOpenSeasons] = useState<Set<string>>(() => {
     if (initialStagione) return new Set([initialStagione]);
@@ -448,7 +458,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           <>
             <NinaRagPanel canonLocal={ninaEpisodes.length} />
 
-            <div className="flex items-center gap-2 mb-2 mt-1">
+            <div ref={camminoRef} className="flex items-center gap-2 mb-2 mt-1 scroll-mt-4">
               <BookOpen size={14} style={{ color: NINA_COLOR }} />
               <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
                 Nina dal giorno 0
