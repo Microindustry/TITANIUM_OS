@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
 import ninaFoundationMd from "../data/nina_dal_giorno_0.md?raw";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
-import { useContentFiles, useNinaStatus, useNinaArchived } from "../hooks/useSystemQuery";
+import { useContentFiles, useNinaStatus, useNinaArchived, useFile } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
 
 // Le storie di Nina vivono nella stagione AV (canone EP_N2). Tutto il resto = sistema.
@@ -227,6 +227,54 @@ function NinaRagPanel({ canonLocal }: { canonLocal: number }) {
   );
 }
 
+// Riga di un archiviato — espandibile per LEGGERLO: al click carica il contenuto del
+// file (lazy, via /api/file) e lo rende come gli altri episodi. Sola lettura.
+function ArchivedRow({ it, tone }: { it: { id: string; title: string; file: string; path: string }; tone: string }) {
+  const [open, setOpen] = useState(false);
+  const { data, isLoading, isError } = useFile(open ? it.path : null);
+  // pulizia per il lettore: normalizza CRLF, togli frontmatter YAML, blocco TOC e H1
+  // (gli .md d'archivio sono \r\n e hanno un TOC in testa — altrimenti renderebbe grezzo).
+  const body = (() => {
+    let raw: string = (data?.content ?? "").replace(/\r\n/g, "\n");
+    raw = raw.replace(/^---\n[\s\S]*?\n---\n?/, "");
+    const out: string[] = [];
+    let inToc = false;
+    for (const l of raw.split("\n")) {
+      const t = l.trim();
+      if (t === "<!-- TOC -->") { inToc = true; continue; }
+      if (t === "<!-- /TOC -->") { inToc = false; continue; }
+      if (inToc) continue;
+      if (l.startsWith("# ")) continue;
+      out.push(l);
+    }
+    while (out.length && out[0].trim() === "") out.shift();
+    return out.join("\n");
+  })();
+
+  return (
+    <div className="rounded-md bg-slate-900/40 border border-slate-800/60 overflow-hidden">
+      <button onClick={() => setOpen(v => !v)} className="w-full flex items-center gap-2 px-3 py-1.5 text-left">
+        <span className="text-[9px] font-mono px-1.5 py-0.5 rounded shrink-0" style={{ background: tone + "1f", color: tone }}>{it.id}</span>
+        <span className="text-xs text-slate-300 truncate flex-1">{it.title}</span>
+        {open ? <ChevronDown size={12} className="text-slate-500 shrink-0" /> : <ChevronRight size={12} className="text-slate-500 shrink-0" />}
+      </button>
+      {open && (
+        <div className="px-3 pb-3 border-t border-slate-800/60">
+          {isLoading ? (
+            <p className="text-[11px] text-slate-500 italic py-3">carico…</p>
+          ) : isError || !body.trim() ? (
+            <p className="text-[11px] text-slate-500 italic py-3">contenuto non disponibile</p>
+          ) : (
+            <div className="rounded-lg bg-slate-950/60 px-4 py-3 mt-2 overflow-hidden">
+              {body.split("\n").map((line, i) => renderMdLine(line, i))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Episodi Nina ARCHIVIATI (origine EP_AV + versioni precedenti) ─────────────
 // "RAG Nina = tutti gli episodi, anche quelli archiviati". Sola lettura, raggruppati.
 function NinaArchived() {
@@ -257,16 +305,13 @@ function NinaArchived() {
     );
   }
 
-  const Group = ({ label, items, tone }: { label: string; items: { id: string; title: string; file: string }[]; tone: string }) => (
+  const Group = ({ label, items, tone }: { label: string; items: { id: string; title: string; file: string; path: string }[]; tone: string }) => (
     items.length ? (
       <div className="mt-2">
         <p className="text-[10px] font-mono uppercase tracking-widest mb-1.5" style={{ color: tone }}>{label} · {items.length}</p>
         <div className="space-y-1">
           {items.map((it, i) => (
-            <div key={it.file + i} className="flex items-center gap-2 rounded-md bg-slate-900/40 border border-slate-800/60 px-3 py-1.5">
-              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ background: tone + "1f", color: tone }}>{it.id}</span>
-              <span className="text-xs text-slate-300 truncate">{it.title}</span>
-            </div>
+            <ArchivedRow key={it.file + i} it={it} tone={tone} />
           ))}
         </div>
       </div>
