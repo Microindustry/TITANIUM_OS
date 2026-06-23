@@ -149,6 +149,36 @@ def nina_status():
         "auto": True,  # niente gate: il sistema genera e promuove da solo
     })
 
+@app.get("/api/nina/archived")
+def nina_archived():
+    """Tutti gli episodi Nina ARCHIVIATI (per 'RAG Nina = tutti, anche quelli archiviati'):
+    le ORIGINI (EP_AV, il mondo prima del canone EP_N2) e le VERSIONI PRECEDENTI (reemit).
+    Sola lettura; il contenuto si apre via /api/file."""
+    arch = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes" / "S_AVVENTURA" / "_ARCHIVIO"
+    out = []
+    if arch.exists():
+        for p in sorted(arch.rglob("*.md")):
+            rel = p.relative_to(ROOT).as_posix()
+            categoria = "versione" if "reemit_" in rel else "origine"
+            title = p.stem
+            try:
+                head = p.read_text(encoding="utf-8", errors="ignore")[:600]
+                m = re.search(r"^title:\s*(.+)$", head, flags=re.M)
+                if m:
+                    title = m.group(1).strip()
+            except Exception:
+                pass
+            mid = re.search(r"(EP_[A-Z0-9_]+?)(?:_\d{8}_\d{6})?", p.stem)
+            out.append({
+                "id": mid.group(1) if mid else p.stem,
+                "title": title, "categoria": categoria,
+                "file": p.name, "path": str(p),
+            })
+    origine = [e for e in out if e["categoria"] == "origine"]
+    versioni = [e for e in out if e["categoria"] == "versione"]
+    return jsonify({"ok": True, "total": len(out),
+                    "origine": origine, "versioni": versioni})
+
 @app.patch("/api/state")
 def patch_state():
     """Aggiorna campi specifici di STATE.json (merge superficiale)."""

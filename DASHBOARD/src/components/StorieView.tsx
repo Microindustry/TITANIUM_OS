@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
 import ninaFoundationMd from "../data/nina_dal_giorno_0.md?raw";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
-import { useContentFiles, useNinaStatus } from "../hooks/useSystemQuery";
+import { useContentFiles, useNinaStatus, useNinaArchived } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
 
 // Le storie di Nina vivono nella stagione AV (canone EP_N2). Tutto il resto = sistema.
@@ -24,9 +24,6 @@ const STATUS_CONFIG: Record<EpisodeStatus, { label: string; color: string; dot: 
   source:  { label: "SOURCE",  color: "text-blue-400",    dot: "bg-blue-400" },
   pending: { label: "IN CODA", color: "text-slate-500",   dot: "bg-slate-500" },
 };
-
-// Stagioni "rumorose" chiuse di default (il loro volume annega le altre)
-const COLLAPSED_BY_DEFAULT = new Set(["AUTO"]);
 
 // ── Markdown line renderer ──────────────────────────────────────────────────
 function renderMdLine(line: string, idx: number) {
@@ -230,6 +227,51 @@ function NinaRagPanel({ canonLocal }: { canonLocal: number }) {
   );
 }
 
+// ── Episodi Nina ARCHIVIATI (origine EP_AV + versioni precedenti) ─────────────
+// "RAG Nina = tutti gli episodi, anche quelli archiviati". Sola lettura, raggruppati.
+function NinaArchived() {
+  const { data } = useNinaArchived();
+  const [open, setOpen] = useState(false);
+  const origine = data?.origine ?? [];
+  const versioni = data?.versioni ?? [];
+  const tot = origine.length + versioni.length;
+  if (!tot) return null;
+
+  const Group = ({ label, items, tone }: { label: string; items: { id: string; title: string; file: string }[]; tone: string }) => (
+    items.length ? (
+      <div className="mt-2">
+        <p className="text-[10px] font-mono uppercase tracking-widest mb-1.5" style={{ color: tone }}>{label} · {items.length}</p>
+        <div className="space-y-1">
+          {items.map((it, i) => (
+            <div key={it.file + i} className="flex items-center gap-2 rounded-md bg-slate-900/40 border border-slate-800/60 px-3 py-1.5">
+              <span className="text-[9px] font-mono px-1.5 py-0.5 rounded" style={{ background: tone + "1f", color: tone }}>{it.id}</span>
+              <span className="text-xs text-slate-300 truncate">{it.title}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ) : null
+  );
+
+  return (
+    <div className="mt-4 rounded-xl border border-slate-800/70 bg-slate-900/30">
+      <button onClick={() => setOpen(v => !v)} className="w-full flex items-center gap-2 px-4 py-2.5 text-left">
+        <Archive size={13} className="text-amber-400" />
+        <span className="text-xs font-bold tracking-wider uppercase text-amber-300">Archiviati</span>
+        <span className="text-[10px] font-mono text-slate-500">l'origine (EP_AV) + le versioni precedenti</span>
+        <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full bg-amber-400/10 text-amber-400">{tot}</span>
+        {open ? <ChevronDown size={14} className="text-slate-500" /> : <ChevronRight size={14} className="text-slate-500" />}
+      </button>
+      {open && (
+        <div className="px-4 pb-3">
+          <Group label="Origine — il mondo prima del canone" items={origine} tone="#f59e0b" />
+          <Group label="Versioni precedenti (re-emit)" items={versioni} tone="#64748b" />
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function StorieView({ initialStagione = null }: { initialStagione?: string | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
@@ -256,10 +298,11 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
 
   const foundationLines = ninaFoundationMd.split("\n");
 
-  // Stagioni aperte: tutte tranne quelle "rumorose"; se si arriva su una stagione, apri solo quella
+  // Storie di Sistema: si visualizzano TUTTE le stagioni aperte di default (anche AUTO e
+  // le bozze) — niente episodi nascosti. Se si arriva su una stagione precisa, apri solo quella.
   const [openSeasons, setOpenSeasons] = useState<Set<string>>(() => {
     if (initialStagione) return new Set([initialStagione]);
-    return new Set(Object.keys(STAGIONI).filter(k => !COLLAPSED_BY_DEFAULT.has(k)));
+    return new Set(Object.keys(STAGIONI));
   });
 
   const toggleSeason = (key: string) =>
@@ -300,6 +343,8 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
   const ninaEpisodes = statusFiltered(
     EPISODES.filter(ep => ep.stagione === NINA_STAGIONE && isTopLevel(ep))
   ).sort((a, b) => ninaNum(a) - ninaNum(b));
+  // "pronti e finiti": solo gli episodi ready (per Nina dal giorno 0)
+  const ninaReady = ninaEpisodes.filter(ep => ep.status === "ready");
 
   // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
   const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);
@@ -462,7 +507,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
         {/* ── NINA: (1) il fondamento dal giorno 0 · (2) RAG Nina = tutti gli episodi ── */}
         {mode === "nina" && (
           <>
-            {/* (1) NINA DAL GIORNO 0 — il documento fondativo (rifatto dal vero) */}
+            {/* (1) NINA DAL GIORNO 0 — il fondamento + gli episodi pronti, in ordine dall'inizio */}
             <div ref={fondamentaRef} className="scroll-mt-4">
               <div className="flex items-center gap-2 mb-2 mt-1">
                 <Sparkles size={14} style={{ color: NINA_COLOR }} />
@@ -477,9 +522,27 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
               >
                 {foundationLines.map((line, i) => renderMdLine(line, i))}
               </div>
+
+              {/* gli episodi pronti e finiti, in ordine dall'inizio */}
+              <div className="flex items-center gap-2 mb-2 mt-5">
+                <BookOpen size={13} style={{ color: NINA_COLOR }} />
+                <h4 className="text-xs font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
+                  Gli episodi — pronti e finiti, dall'inizio
+                </h4>
+                <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full" style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}>
+                  {ninaReady.length}
+                </span>
+              </div>
+              {ninaReady.length === 0 ? (
+                <p className="text-xs text-slate-600 italic px-2 py-4 text-center">Nessun episodio pronto con questo filtro.</p>
+              ) : (
+                <div className="space-y-2">
+                  {ninaReady.map(ep => <EpisodeCard key={ep.id} ep={ep} color={NINA_COLOR} childrenOf={childrenOf} />)}
+                </div>
+              )}
             </div>
 
-            {/* (2) RAG NINA — tutti gli episodi e le storie (come Storie di Sistema) */}
+            {/* (2) RAG NINA — TUTTI gli episodi, anche quelli archiviati */}
             <div ref={ragRef} className="scroll-mt-4 mt-7">
               <NinaRagPanel canonLocal={ninaEpisodes.length} />
 
@@ -488,6 +551,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
                 <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
                   RAG Nina — tutti gli episodi
                 </h3>
+                <span className="text-[10px] font-mono text-slate-500">il canone + l'archivio (origine e versioni)</span>
                 <span
                   className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full"
                   style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}
@@ -507,6 +571,9 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
                   ))}
                 </div>
               )}
+
+              {/* gli archiviati: l'origine (EP_AV) + le versioni precedenti */}
+              <NinaArchived />
             </div>
           </>
         )}

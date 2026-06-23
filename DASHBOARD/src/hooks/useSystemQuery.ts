@@ -204,6 +204,23 @@ export function useNinaStatus() {
   });
 }
 
+// Episodi Nina ARCHIVIATI (origine EP_AV + versioni precedenti) per RAG Nina
+export interface NinaArchivedItem { id: string; title: string; categoria: string; file: string; path: string; }
+export function useNinaArchived() {
+  return useQuery<{ ok: boolean; total: number; origine: NinaArchivedItem[]; versioni: NinaArchivedItem[] }>({
+    queryKey: ["nina-archived"],
+    queryFn: async () => {
+      const res = await fetch("/api/nina/archived", { signal: AbortSignal.timeout(6000) });
+      if (!res.ok) throw new Error(`API ${res.status}`);
+      return res.json();
+    },
+    staleTime: 60_000,
+    gcTime: 5 * 60_000,
+    retry: 1,
+    refetchOnWindowFocus: false,
+  });
+}
+
 // Legge un file specifico (per MdManager, drill-down)
 export function useFile(filePath: string | null) {
   return useQuery({
