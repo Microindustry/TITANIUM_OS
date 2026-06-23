@@ -168,7 +168,7 @@ def nina_archived():
                     title = m.group(1).strip()
             except Exception:
                 pass
-            mid = re.search(r"(EP_[A-Z0-9_]+?)(?:_\d{8}_\d{6})?", p.stem)
+            mid = re.match(r"(EP_[A-Z0-9]+_(?:FIN_\d+|M\d+|\d+))", p.stem)
             out.append({
                 "id": mid.group(1) if mid else p.stem,
                 "title": title, "categoria": categoria,

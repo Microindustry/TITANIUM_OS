@@ -230,12 +230,32 @@ function NinaRagPanel({ canonLocal }: { canonLocal: number }) {
 // ── Episodi Nina ARCHIVIATI (origine EP_AV + versioni precedenti) ─────────────
 // "RAG Nina = tutti gli episodi, anche quelli archiviati". Sola lettura, raggruppati.
 function NinaArchived() {
-  const { data } = useNinaArchived();
-  const [open, setOpen] = useState(false);
+  const { data, isError, isLoading } = useNinaArchived();
+  const [open, setOpen] = useState(true);
   const origine = data?.origine ?? [];
   const versioni = data?.versioni ?? [];
   const tot = origine.length + versioni.length;
-  if (!tot) return null;
+
+  // Vuoto = l'API non sta servendo l'archivio (i file ci sono su disco). Non spariamo
+  // un pannello vuoto: diciamo cosa fare, cosi' la pagina RAG Nina non resta muta.
+  if (!tot) {
+    return (
+      <div className="mt-4 rounded-xl border border-amber-500/30 bg-amber-950/10 px-4 py-3">
+        <div className="flex items-center gap-2">
+          <Archive size={13} className="text-amber-400" />
+          <span className="text-xs font-bold tracking-wider uppercase text-amber-300">Archiviati</span>
+          <span className="ml-auto text-[10px] font-mono text-amber-400/70">{isLoading ? "carico…" : "0 caricati"}</span>
+        </div>
+        {!isLoading && (
+          <p className="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            {isError ? "Archivio non raggiungibile dall'API" : "L'API non sta servendo l'archivio"} — i file ci sono
+            su disco (origine EP_AV + versioni re-emit), ma il server è vecchio (route assente).
+            Riavvia l'API con <code className="text-amber-300">SERVICES\restart_api.ps1</code>, poi ricarica: appariranno tutti.
+          </p>
+        )}
+      </div>
+    );
+  }
 
   const Group = ({ label, items, tone }: { label: string; items: { id: string; title: string; file: string }[]; tone: string }) => (
     items.length ? (
@@ -296,7 +316,23 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
     return () => clearTimeout(t);
   }, [mode, focusTarget]);
 
-  const foundationLines = ninaFoundationMd.split("\n");
+  // Il fondamento: togliamo TOC e il titolo H1 (lo da' gia' l'intestazione di sezione),
+  // cosi' non resta un "nome grande" che fa sembrare giorno 0 un singolo episodio.
+  const foundationLines = (() => {
+    const out: string[] = [];
+    let inToc = false;
+    for (const l of ninaFoundationMd.split("\n")) {
+      const t = l.trim();
+      if (t === "<!-- TOC -->") { inToc = true; continue; }
+      if (t === "<!-- /TOC -->") { inToc = false; continue; }
+      if (inToc) continue;
+      if (l.startsWith("# ")) continue;
+      out.push(l);
+    }
+    // niente righe vuote in testa
+    while (out.length && out[0].trim() === "") out.shift();
+    return out;
+  })();
 
   // Storie di Sistema: si visualizzano TUTTE le stagioni aperte di default (anche AUTO e
   // le bozze) — niente episodi nascosti. Se si arriva su una stagione precisa, apri solo quella.
@@ -344,6 +380,11 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
     EPISODES.filter(ep => ep.stagione === NINA_STAGIONE && isTopLevel(ep))
   ).sort((a, b) => ninaNum(a) - ninaNum(b));
 
+  // Due PAGINE Nina isolate (non due sezioni nella stessa): il bottone preme l'una o l'altra.
+  //   "rag"      -> RAG Nina = solo gli archiviati
+  //   "giorno0"  -> Nina dal giorno 0 = fondamento + tutti gli episodi nella miglior versione
+  const ninaPage: "rag" | "giorno0" = focusTarget === "rag" ? "rag" : "giorno0";
+
   // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
   const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);
   const totalMin = (mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE) : sistemaEps)
@@ -367,9 +408,10 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           </span>
         </div>
 
-        {/* Selettore SISTEMA | NINA — i due mondi delle storie */}
+        {/* Selettore SISTEMA | NINA — nascosto nelle pagine Nina (isolamento totale:
+            le pagine Nina si raggiungono solo dai bottoni in sidebar) */}
         <div className="flex items-center gap-2 ml-7 mt-2">
-          {([
+          {mode !== "nina" && ([
             ["sistema", "Sistema", "#34d399", Mic],
             ["nina", "Nina", NINA_COLOR, Sparkles],
           ] as const).map(([m, label, col, Ico]) => {
@@ -404,9 +446,13 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
         {/* Introduzione di cosa trovi sotto — cambia col mondo scelto */}
         <p className="text-xs text-slate-500 leading-relaxed ml-7 mt-3 max-w-3xl">
           {mode === "nina" ? (
-            <>Due cose distinte: <strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa
-            sappiamo fare, i personaggi, le zone, come nasce l'avventura) <strong style={{ color: NINA_COLOR }}>+ gli episodi nuovi e definitivi</strong> —
-            e <strong style={{ color: NINA_COLOR }}>RAG Nina</strong>, <strong style={{ color: NINA_COLOR }}>solo gli archiviati</strong>: l'origine da cui il sistema rigenera e indicizza da solo.</>
+            ninaPage === "rag" ? (
+              <><strong style={{ color: NINA_COLOR }}>RAG Nina</strong> — <strong style={{ color: NINA_COLOR }}>solo gli archiviati</strong>:
+              l'origine (EP_AV) e le versioni precedenti, la sorgente da cui il nodo rigenera e indicizza da solo.</>
+            ) : (
+              <><strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa sappiamo fare, i personaggi,
+              le zone, come nasce l'avventura) <strong style={{ color: NINA_COLOR }}>+ tutti gli episodi nella loro miglior versione</strong>, dall'inizio.</>
+            )
           ) : (
             <>Le storie del <strong className="text-slate-300">sistema</strong>: il dev-log di TITANIUM_OS, in ordine.
             Si <strong className="text-emerald-400">autoalimentano</strong> — ogni milestone verificato genera un episodio.
@@ -502,17 +548,16 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
           </div>
         )}
 
-        {/* ── NINA: (1) il fondamento dal giorno 0 · (2) RAG Nina = tutti gli episodi ── */}
-        {mode === "nina" && (
-          <>
-            {/* (1) NINA DAL GIORNO 0 — il fondamento + gli episodi pronti, in ordine dall'inizio */}
+        {/* ── NINA: due PAGINE isolate — premi un bottone, vedi UNA pagina ── */}
+        {/* PAGINA 1 — NINA DAL GIORNO 0: il fondamento + tutti gli episodi nella miglior versione */}
+        {mode === "nina" && ninaPage === "giorno0" && (
             <div ref={fondamentaRef} className="scroll-mt-4">
               <div className="flex items-center gap-2 mb-2 mt-1">
                 <Sparkles size={14} style={{ color: NINA_COLOR }} />
                 <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
                   Nina dal giorno 0
                 </h3>
-                <span className="text-[10px] font-mono text-slate-500">il fondamento — cosa sappiamo, chi, dove, come</span>
+                <span className="text-[10px] font-mono text-slate-500">il fondamento + tutti gli episodi nella loro miglior versione</span>
               </div>
               <div
                 className="rounded-xl border px-5 py-4 overflow-hidden"
@@ -525,7 +570,7 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
               <div className="flex items-center gap-2 mb-2 mt-5">
                 <BookOpen size={13} style={{ color: NINA_COLOR }} />
                 <h4 className="text-xs font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
-                  Gli episodi — nuovi e definitivi, dall'inizio
+                  Tutti gli episodi — nella loro miglior versione, dall'inizio
                 </h4>
                 <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full" style={{ background: NINA_COLOR + "1a", color: NINA_COLOR }}>
                   {ninaEpisodes.length}
@@ -539,9 +584,11 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
                 </div>
               )}
             </div>
+        )}
 
-            {/* (2) RAG NINA — SOLO gli archiviati: l'origine (EP_AV) + le versioni precedenti */}
-            <div ref={ragRef} className="scroll-mt-4 mt-7">
+        {/* PAGINA 2 — RAG NINA: solo gli archiviati (origine EP_AV + versioni precedenti) */}
+        {mode === "nina" && ninaPage === "rag" && (
+            <div ref={ragRef} className="scroll-mt-4">
               <NinaRagPanel canonLocal={ninaEpisodes.length} />
 
               <div className="flex items-center gap-2 mb-2 mt-1">
@@ -555,7 +602,6 @@ export function StorieView({ initialStagione = null }: { initialStagione?: strin
               {/* gli archiviati: l'origine (EP_AV) + le versioni precedenti */}
               <NinaArchived />
             </div>
-          </>
         )}
       </div>
     </div>

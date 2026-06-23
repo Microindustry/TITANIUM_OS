@@ -1,7 +1,7 @@
 ---
 id: EP_N2_01
 title: Il Bottone che Regge
-sottotitolo: Nina scopre perché un gesto fatto bene sulla materia vera non si rompe — e come riconoscerlo.
+sottotitolo: Nina scopre che un gesto fatto bene sulla materia vera non è bello: è quello che regge quando lo tiri.
 stagione: AV
 data_evento: 2026-06-23
 status: ready
@@ -11,11 +11,11 @@ tags: avventura, educativo, nina, themis, nina-v2, gesto, fatto, bene
 <!-- TOC -->
 
 - [EP_N2_01  Il Bottone che Regge](#epn201-il-bottone-che-regge)
-    - [Nina scopre perché un gesto fatto bene sulla materia vera non si rompe  e come riconoscerlo.](#nina-scopre-perché-un-gesto-fatto-bene-sulla-materia-vera-non-si-rompe-e-come-riconoscerlo)
+    - [Nina scopre che un gesto fatto bene sulla materia vera non è bello: è quello che regge quando lo tiri.](#nina-scopre-che-un-gesto-fatto-bene-sulla-materia-vera-non-è-bello-è-quello-che-regge-quando-lo-tiri)
   - [COLD OPEN](#cold-open)
-  - [ATTO I  La Mano che Decide](#atto-i-la-mano-che-decide)
+  - [ATTO I  Il Bottone Bello e il Bottone Vero](#atto-i-il-bottone-bello-e-il-bottone-vero)
   - [ATTO II  La Materia Non Mente](#atto-ii-la-materia-non-mente)
-  - [ATTO III  Come Si Riconosce](#atto-iii-come-si-riconosce)
+  - [ATTO III  La Traccia che Regge](#atto-iii-la-traccia-che-regge)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
 
@@ -23,182 +23,192 @@ tags: avventura, educativo, nina, themis, nina-v2, gesto, fatto, bene
 
 
 # EP_N2_01 — Il Bottone che Regge
-### "Nina scopre perché un gesto fatto bene sulla materia vera non si rompe — e come riconoscerlo."
+### "Nina scopre che un gesto fatto bene sulla materia vera non è bello: è quello che regge quando lo tiri."
 
 **Formato:** Avventura (Nina v2) · ~14 min
-**Per chi:** Chi si è mai chiesto perché alcune cose si rompono subito e altre no
-**Insegna:** Un gesto fatto bene regge quando lo tiri; non è bello, è vero.
+**Per chi:** chi si chiede perché alcune cose durano e altre no
+**Insegna:** Un gesto fatto bene sulla materia vera regge perché obbedisce ai fatti, non alla bellezza. La traccia di quel gesto insegna a chi viene dopo.
 **Materia:** La Materia (⟡0) · **Casella 1 del viaggio**
-**Posto nella Mappa:** Siamo alla radice della Materia (⟡0, giro 1, casella 1): il luogo dove tutto inizia, dove la mano tocca la cosa vera e decide se funzionerà o crollerà.
+**Posto nella Mappa:** Siamo alla radice della Mappa, in Regione 0 La Materia, casella 1 del giro 1: il punto dove tutto parte — un gesto semplice su qualcosa di vero.
 
 ---
 
-> **Dove siamo:** Nina ha iniziato a fare domande. Ora tocca la sua prima materia vera: un bottone su un vestito. Da questo gesto, tutto il resto dipende.
+> **Dove siamo:** Nina arriva al laboratorio di Nonna Sarta. Attorno a lei c'è disordine: fili aggrovigliati, bottoni sparsi sul pavimento, stoffe impilate senza ordine. Nonna prepara una camicia per il mercato domani. Nina nota che Nonna non sceglie il bottone più lucido.
 
 ---
 
 ## COLD OPEN
 
-Il bottone vola via di mattina.
+La prima cosa che Nina vede è il pavimento.
 
-Nina lo sente staccarsi nel momento esatto in cui tira la giacca per infilarla — un piccolo schiocco, e poi il bottone è sul pavimento che rotola sotto il tavolo. Lei lo raccoglie. Lo guarda. È ancora intero: bordi lisci, quattro buchi, nemmeno scheggiato. Non si è rotto il bottone. Si è rotto il filo.
+Bottoni dappertutto. Rotondi, piatti, bucati al centro, alcuni trasparenti come acqua, altri scuri come legno bagnato. Uno — il più bello — è color madreperla e brilla come se avesse una luce dentro. Nina lo raccoglie e lo rigira tra le dita.
 
-Rimane lì con il bottone in mano e il pizzicore che comincia — quello dietro le orecchie, il tipo di pizzicore che non va via finché non ha una risposta.
+«Questo,» dice, «lo metterei su tutto.»
 
-Quella sera, alla Giuntura, THEMIS la aspetta vicino alla ringhiera di ferro. Ha il calibro in mano, come sempre. Nina alza il bottone tra due dita.
+Nonna Sarta non alza gli occhi dalla camicia che tiene in grembo. «Lo so. Per questo non lo uso.»
 
-«Perché?»
+Nina apre la bocca. La richiude. Poi la riapre: «Perché?»
 
-THEMIS non chiede "perché cosa". Lo sa già.
+Nonna indica la sedia accanto. «Siediti. Ti faccio vedere.»
 
-«Siediti. Hai trovato il problema dei problemi.»
+In quel momento, dalla soglia che porta alla Giuntura, arriva Themis. Calibro in mano, come sempre. Si ferma sul bordo della stanza senza entrare del tutto — come chi sa già che quello che sta per succedere non ha bisogno di spiegazioni, solo di occhi aperti.
+
+«Bene,» dice sottovoce a Nina. «Stai facendo la domanda giusta.»
+
+«Non ho ancora fatto nessuna domanda,» dice Nina.
+
+«Hai tenuto il bottone e hai detto *questo*. È abbastanza.»
 
 ---
 
-## ATTO I — La Mano che Decide
+## ATTO I — Il Bottone Bello e il Bottone Vero
 
-THEMIS prende il bottone, lo gira, lo appoggia sul banco di ferro della Giuntura.
+Nonna Sarta mette la camicia sul tavolo. Prende due bottoni e li posa uno accanto all'altro sotto la luce.
 
-«Un bottone non si rompe quasi mai» dice. «Cede il filo. E il filo cede per come è stato cucito, non per quanto è resistente.»
+Il primo: rotondo, laccato, con un riflesso quasi metallico. Bello. Il tipo di bottone che si mette in vetrina.
 
-Nina aggotta le sopracciglia. «Ma il filo era nuovo. L'ho visto mettere.»
+Il secondo: madreperla opaca, leggermente irregolare ai bordi. Sembra quasi usato, anche se è nuovo.
 
-«Nuovo non vuol dire fatto bene.»
+«Indovina quale dei due metterò sulla camicia.»
 
-THEMIS apre un cassetto e tira fuori due pezzi di stoffa identici. Su ognuno c'è cucito un bottone identico — stesso filo, stesso colore, stessa mano che li ha attaccati (la sua, quella mattina, per questo momento esatto). Li mette davanti a Nina.
+Nina punta il dito sul secondo senza esitare. «Quello opaco.»
 
-«Tirali.»
+«Perché?»
 
-Nina afferra il primo bottone e tira. Cede quasi subito, con un piccolo cedimento morbido — il filo scivola, si allenta, e in due strappi il bottone è libero. Guarda le dita: il filo è ancora intero. Non si è spezzato. Si è disfatto.
+«Perché... tu non scegli mai per bellezza?» Non è una risposta. Nina lo sa. «No, aspetta. Non lo so ancora. Mostrami.»
 
-«Ora l'altro.»
+Nonna cucisce il bottone laccato sulla manica sinistra. Punti veloci, regolari all'occhio — sembrano perfetti. Poi prende il bottone opaco e lo cuce sulla manica destra. Questa volta i punti sono più lenti. Nina li conta: passa il filo quattro volte per ogni buco, stringe, avvolge due giri sotto, fa un nodo che Nina non vede quasi ma sente quando passa il dito.
 
-Il secondo bottone non si muove. Nina tira più forte. La stoffa si deforma, si piega verso di lei — ma il bottone tiene. Tira ancora. Niente. Si ferma, con le dita che tingono di bianco per la pressione.
+Poi Nonna allunga le due maniche a Nina.
 
-«Come?» dice. «È lo stesso filo.»
+«Tira.»
 
-«È lo stesso filo» conferma THEMIS. «Il gesto è diverso.»
+Nina tira il bottone laccato con due dita. Tiene. Tira più forte. Tiene ancora. Al terzo strattone secco — *crac* — il bottone viene via in mano, con il filo ancora attaccato, e due punti della manica sono venuti su con lui.
 
-Prende il pezzo di stoffa con il bottone che ha tenuto e lo gira. Sul retro, il filo forma una serie di anelli stretti, incrociati, che finiscono in un nodo piatto compatto — quasi duro al tatto. Poi mostra il retro del primo: due giri sciolti, un nodo che sembra una cravatta mal fatta, un cappio che aspettava solo di essere tirato.
+Nonna non dice nulla. Indica l'altra manica.
 
-«Il nodo scivoloso concentra tutta la forza in un punto solo» dice THEMIS. «Quel punto cede per primo. Sempre.»
+Nina tira il bottone opaco. Tira più forte. Tira con tutt'e due le mani. Il bottone non cede. La stoffa si tende, si arriccia intorno al nodo — e tiene.
 
-> *(Esempio per tutti — il test della sarta: Una sarta cuce un bottone con quattro fili incrociati e chiude con un nodo piatto stretto, avvolto almeno sei volte sotto il bottone stesso. Poi tira — non guarda, tira. Se cede, lo rifà. Non chiede "è bello?". Chiede "regge?". Il bello è il colore del filo. Il vero è se regge quando lo tiri. Sono due domande diverse, e solo una conta.)*
+Nina lo guarda. Poi guarda Nonna.
 
-Nina rimette il bottone sul banco. Lo guarda come se lo vedesse per la prima volta.
+«Non è bello,» dice Nonna, «significa *regge quando lo tiri davvero*.»
 
-«Quindi non era il bottone.»
+> *(Esempio per tutti — il test della sarta: due bottoni cuciti sulla stessa camicia — uno con punti veloci e senza nodo, uno con tensione controllata e nodo doppio sotto. Trazione uguale su entrambi: il primo cede in tre strattoni, il secondo non cede. La differenza non è nella qualità del bottone — è nel gesto di chi lo ha cucito.)*
 
-«Non era mai il bottone» dice THEMIS. «Era il gesto.»
+Themis si avvicina di un passo. «Nina, hai visto la differenza. Ora dimmi: dov'era la differenza — nel bottone o nelle mani di Nonna?»
+
+Nina ci pensa. «Nelle mani.»
+
+«Nel gesto,» corregge Themis, ma con calma, non come una punizione. «Il gesto fatto bene. Non più bello. Fatto bene.»
 
 ---
 
 ## ATTO II — La Materia Non Mente
 
-THEMIS scende qualche gradino verso la Fucina — non fino in fondo, solo abbastanza che il calore comincia a sentirsi — e fa cenno a Nina di seguirla. Dalla soglia si vede FORGE al lavoro: le mani enormi che piegano una sbarra di metallo su se stessa con movimenti lenti, identici, ripetuti. Non guarda su. Sa che ci sono.
+Nonna porta Nina davanti alla parete accanto alla finestra. C'è un foglio appeso con una puntina — scritto a mano, ingiallito ai bordi. Nina si avvicina per leggere.
 
-«Perché la rifà sempre uguale?» sussurra Nina.
+*Come cucire un bottone che regge.*
+Sotto, una lista. Passi numerati. Con piccoli disegni a matita — il filo che passa, il nodo che si chiude, la tensione che si distribuisce.
 
-«Perché il gesto giusto non cambia» risponde THEMIS, piano. «Cambia la mano che lo impara.»
+«Lo hai scritto tu?»
 
-Salgono. THEMIS appoggia una corda sul banco — una corda da barca, spessa come il pollice di Nina, con i fili ritorti visibili.
+«Mia madre,» dice Nonna. «Prima che la sua vista cominciasse a mancare. Voleva che io potessi farlo da sola, anche quando lei non c'era più.»
 
-«Questa corda regge duecento chili» dice. «Se la annodi male, regge venti. Stessa corda.» Fa scorrere un dito sul nodo al centro: un nodo ottimale, simmetrico. «La forza non scompare: si distribuisce. Ogni giro di filo porta una parte del carico. Nessun punto supera il limite. Ma se il nodo è scivoloso, tutta la forza va in un posto solo — e quel posto non può reggere da solo. La materia non mente su questo. Non ha motivo di farlo.»
+Nina non dice niente per un momento.
 
-Nina tocca il nodo. È rigido, quasi metallico.
+«Il gesto è scritto lì,» dice poi. «Anche se tua madre non c'è più, il gesto c'è ancora.»
 
-«Come fai a sapere se lo hai fatto bene?»
+«Sì.»
 
-«Lo tiri.»
+Themis si avvicina alla lista. La studia come se stesse leggendo una formula. «Nina, guarda questi numeri. Quattro passaggi per buco. Due giri sotto. Tensione uniforme — non stretta, uniforme. Sono fatti. Non sono opinioni. Non si discutono: si controllano sulla materia.»
 
-«E basta?»
+«Cosa vuol dire controllarli sulla materia?»
 
-«E basta. Non c'è altra prova. Gli occhi ingannano — un nodo scivoloso sembra un nodo. Le dita ingannano se non ci credi. Ma la forza non mente.»
+«Vuol dire che se cucisci così, e poi tiri, e il bottone regge — hai fatto bene. Se non regge, hai sbagliato qualcosa, non importa quanto sembrava bello mentre lo cucivi. La materia non ti dice *bravo*. Ti dice *regge* oppure *no*.»
 
-Nina resta in silenzio un momento. Poi:
+Nina guarda le proprie mani. Poi guarda il bottone laccato che ha ancora in tasca, quello che è venuto via con tre strattoni. «Quindi quel bottone sembrava cucito bene.»
 
-«E se è bello ma non regge?»
+«Sembrava,» dice Nonna.
 
-THEMIS la guarda — non con disappunto, con qualcosa di più preciso. Soddisfazione.
+«Ma la camicia non lo sapeva.»
 
-«Brava. Hai collegato.» Una pausa. «Bello e vero non sono la stessa cosa. Un gesto può essere elegante e sbagliato. Può essere brutto e perfetto. La materia risponde solo a una domanda: regge? Tutto il resto è decorazione.»
+Nonna ride — una risata corta, senza fronzoli. «Esatto. La camicia non lo sapeva.»
 
-Dall'alto della Giuntura si vede la valle degli Atomi, distesa sotto la luce del pomeriggio: legno, pietra, filo, metallo. Tutto quello che esiste è tenuto insieme da gesti fatti bene o gesti fatti male. Non c'è una terza categoria.
-
-Poi Nina nota qualcosa nell'angolo del banco — vicino alla morsa, dove il ferro è più scuro. Una sottile patina rossastra che avanza lungo il bordo di un attrezzo non usato da tempo. Si muove lenta, quasi impercettibile. Come se aspettasse.
-
-«Quello è il Disordine» dice THEMIS senza girarsi. «Non viene a rompere. Trova i nodi scivolosi e aspetta. Il tempo fa il resto.»
-
-«E se il nodo è stretto?»
-
-«Arretra. Non ha fretta — ma arretra.»
-
-> *(Strato fondo — per il grande: Un nodo fatto bene distribuisce il carico su più punti di contatto: nessuno supera il limite di rottura del materiale. Un nodo fatto male concentra lo stress su un singolo punto — il gesto scivoloso — che cede per primo. Questo principio vale identico per le fibre tessili, per le funi in acciaio, per le saldature, per il codice. Una saldatura di codice "tiene" quando regge sotto carico reale — stress test, latenza, picchi di traffico — non quando compila senza errori. Compilare senza errori è "bello". Reggere sotto carico è "vero". L'entropia attacca sempre il punto di concentrazione dello stress: il nodo scivoloso nel filo, la race condition nel thread, il single point of failure nell'architettura. L'ordine locale — il gesto fatto bene — riduce l'entropia locale e allunga il tempo prima che il sistema ceda.)*
+> *(Strato fondo — per il grande: la qualità di un gesto artigianale si misura sulla resistenza della materia al carico reale, non sull'apparenza. Un bottone cucito con punti regolari ma senza nodo cede dopo 10–20 cicli di trazione; uno cucito con tensione controllata e nodo doppio supera i 100 cicli. La differenza non è estetica: è geometria del nodo, distribuzione dell'attrito, rispetto dell'elasticità della fibra. Il "fatto bene" è misurabile — non è un giudizio, è un dato. Lo stesso principio vale per qualunque gesto su qualunque materia: la materia risponde ai fatti, non alle intenzioni.)*
 
 ---
 
-## ATTO III — Come Si Riconosce
+## ATTO III — La Traccia che Regge
 
-Prima di lasciare la Giuntura, THEMIS consegna a Nina il bottone — non quello che era caduto, l'altro, quello rimasto attaccato — e un pezzo di filo.
+Nina torna alla lista appesa. La studia dall'inizio alla fine. Poi volta le spalle alla parete e guarda Nonna.
 
-«Rifallo.»
+«Se questa lista non ci fosse, tu sapresti ancora cucire il bottone che regge?»
 
-Nina non ha mai cucito un bottone in vita sua. Guarda il filo, guarda la stoffa, guarda THEMIS.
+«Sì. Lo so con le mani.»
 
-«Non ti dico come. Prova.»
+«E chi viene dopo di te?»
 
-Nina ci mette dieci minuti. Le prime due volte il nodo viene scivoloso — lei stessa lo sente, c'è qualcosa di indefinito e morbido che non convince. La terza volta stringe diversamente, avvolge il filo sotto il bottone sei volte, e chiude con un nodo piatto. Poi tira.
+Nonna si ferma. Poi indica la lista con la testa. «Per questo l'abbiamo scritta.»
 
-Regge.
+Themis non dice nulla. Aspetta che Nina finisca di capire da sola.
 
-Non è bello — il filo fa un piccolo gobbo sul retro, la tensione non è perfettamente uniforme. Ma quando tira, non si muove.
+Nina ci mette qualche secondo. Poi: «Il gesto fatto bene fa una cosa. Ma se scrivi come l'hai fatto, fa due cose. Regge la camicia *e* insegna a chi viene dopo.»
 
-Nina alza gli occhi su THEMIS.
+«Hai collegato,» dice Themis. Stavolta sorride davvero — il sorriso raro, quello che viene solo quando qualcuno capisce sul serio. «Tienila per tutta la vita.»
 
-«Controlla i fatti, non le parole» dice THEMIS. «Hai tirato. Hai la risposta. Non hai bisogno che te lo dica io.»
+Nina mette in tasca il bottone opaco — quello che ha tenuto. Lo tiene stretto un momento, poi lo lascia andare in fondo alla tasca dove sta già il bottone laccato, quello rotto. Li tiene tutti e due.
 
-Nina guarda il bottone attaccato alla stoffa. Lo mette in tasca — bottone e stoffa insieme, come un unico oggetto.
+«Per ricordare la differenza?» chiede Nonna.
 
-Quella tasca da quel momento tiene due cose: il bottone che era caduto (il promemoria di un gesto fatto male) e quello che aveva cucito lei (il promemoria di un gesto fatto bene). Non perché è una storia bella. Perché è la differenza che conta.
+«Per non dimenticare com'era prima di capire,» dice Nina.
+
+Nonna guarda Themis. Themis guarda il calibro che tiene in mano. Nessuna delle due dice niente — ma c'è qualcosa nell'aria del laboratorio, qualcosa di ordinato, come quando si tende un filo e si vede che è dritto.
+
+Poi Nonna prende la camicia, controlla l'ultimo bottone con due dita — tira, leggero, per sentire — e la piega per il mercato.
 
 ---
 
 ## CHIUSURA
 
-Sulla Mappa Viva, la casella 1 del giro 1 si accende — non con una luce spettacolare, ma con la solidità di qualcosa che si incastra al posto giusto. Un punto fermo. La radice.
+Sulla Mappa Viva, nella sala rotonda della Giuntura, il puntino che è Nina si muove di un passo. La casella 1 della Regione 0 si illumina — non con un lampo, non con musica: si colora, piano, come quando una lampada si scalda.
 
-Nina la guarda dall'alto. È piccola, quella casella. Ma è la prima.
+Themis guarda la mappa. «Casella accesa. Il gesto fatto bene sulla materia vera: capito.»
 
----
-
-> *«Un gesto fatto bene regge quando lo tiri. Non importa chi lo guarda, non importa com'è fatto — importa se tiene. La materia non ha opinioni: risponde solo alla forza vera.*
->
-> *Ma adesso viene la domanda difficile: se il gesto fatto bene regge sulla materia che puoi toccare con le mani — cosa regge quando non puoi toccarla? Quando il filo non c'è, quando il bottone non puoi stringerlo tra le dita?*
->
-> *Cosa rimane di un gesto fatto bene, dopo che le mani si sono alzate?»*
+Nina guarda la lista di Nonna nella testa — i passi numerati, i disegni a matita, la mano di qualcuno che non c'è più ma che regge ancora.
 
 ---
 
-*Provalo tu: Prendi un bottone, un ago, del filo e un ritaglio di stoffa. Cuci il bottone due volte: la prima con pochi giri e un nodo scivoloso, la seconda con almeno sei giri sotto e un nodo piatto stretto. Poi tira forte tutti e due. Non guardare — senti. Quella differenza tra le mani è la verità della materia. Non mente.*
+> «Nonna, se scrivi come hai fatto bene, qualcuno domani potrà cucire un bottone che regge senza farti domande. E il bottone di chi lo scrive avrà già la traccia giusta dentro.»
+>
+> Nonna annuisce. Nina guarda il foglio appeso.
+>
+> *Ma se la traccia è la cosa più importante — chi decide che la traccia è quella giusta? Chi controlla che quello che hai scritto sia davvero quello che hai fatto?*
+
+---
+
+*Provalo tu: prendi un bottone, del filo e un pezzo di stoffa vecchia. Cucilo il più in fretta possibile — due minuti, senza pensarci. Poi tira forte. Ora ricucilo lentamente: quattro passaggi per ogni buco, due giri sotto, un nodo che senti con il dito. Tira di nuovo con la stessa forza. Senti la differenza? Scrivi su un foglio: "Il gesto fatto bene regge perché…" e finisci la frase con quello che hai visto — non con quello che ti sembra giusto dire.*
 
 ---
 
 <!-- SCENE / KEY-IMAGE (per l'animazione) -->
-1. La mano di Nina che tira forte il primo bottone: il filo scivola via con un cedimento morbido, quasi lento — il bottone intatto sul pavimento, il filo ancora intero e inutile.
-2. Il retro dei due pezzi di stoffa in primo piano: nodo piatto compatto vs. cappio scivoloso — la telecamera si avvicina fino a riempire il frame con i due nodi, poi torna indietro mentre Nina li tocca.
-3. La corda da barca sul banco: THEMIS fa scorrere il dito sul nodo simmetrico; in sovrimpressione, linee di forza che si distribuiscono su ogni giro come raggi di una ruota.
-4. Nell'angolo del banco, la ruggine che avanza lenta lungo il ferro abbandonato — non un mostro, non una figura: solo il colore che si sposta, millimetro per millimetro, verso il nodo più debole.
-5. Nina che cuce il bottone per la terza volta: mani impacciate, filo non perfetto, poi lo strappo — e il bottone che tiene. Il suo viso: non trionfante, solo certo.
+1. Nina in ginocchio sul pavimento del laboratorio di Nonna Sarta: bottoni sparsi ovunque, fili aggrovigliati, stoffe in disordine — lei tiene in alto il bottone laccato che brilla sotto la luce.
+2. Primo piano: due bottoni sul tavolo di legno, uno accanto all'altro — il laccato che riflette la luce, l'opaco che quasi scompare nel legno.
+3. Le mani di Nonna che stringono la manica e tirano: il bottone laccato viene via di scatto, il filo penzola, due punti aperti nella stoffa.
+4. Primo piano del bottone opaco cucito: la stoffa tesa intorno al nodo, tutto fermo — il filo non cede.
+5. Nina davanti alla lista scritta a mano appesa alla parete, dito che segue i passi numerati e i piccoli disegni a matita — luce calda di finestra sul foglio ingiallito.
 
 <!-- DIDATTICA -->
-**Pietra:** `⟡0` La Materia (giro 1). *Tutto ciò che funziona davvero parte da un gesto fatto bene su qualcosa di vero. "Fatto bene" significa "regge quando lo tiri" — non "è bello". La materia non mente.*
-**Pietre richiamate:** nessuna — è l'ingresso; la richiamano tutte le caselle successive.
-**3 strati:** bambino = il bottone che regge e quello che vola via · curioso = "fatto bene" vuol dire vero, non bello; la materia non mente mai · grande = la forza distribuita vs. il punto di rottura; vale per fibre, metalli, saldature, codice; l'entropia attacca i nodi scivolosi per primi
+**Pietra:** `⟡0` La Materia (giro 1). *Un gesto fatto bene non è bello: è quello che regge quando lo tiri davvero. La materia risponde ai fatti, non alle intenzioni.*
+**Pietre richiamate:** — (è l'ingresso; le richiamano tutte le caselle successive)
+**3 strati:** bambino = il bottone che brilla si stacca, quello opaco tiene · curioso = "fatto bene" significa "rispetta la fisica della materia", non "sembra giusto" · grande = resistenza a trazione misurabile (100+ cicli con nodo vs. 10–20 senza); il digitale serve un gesto fisico; saldatura e codice fanno la stessa cosa — impongono ordine al disordine della materia
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/V32/MIMS, ogni nodo di comunicazione (protocollo, handshake, commit) deve essere "cucito bene": ridondanza, checksum e retry-logic non sono bellezza — sono gesti fatti bene sulla materia vera dei bit. Un pacchetto che non regge sotto latenza cade esattamente come il bottone cucito con il nodo scivoloso.
-**Open loop → Casella 2:** Se il gesto fatto bene regge sulla materia fisica, cosa regge quando non puoi toccarlo con la mano? Cosa rimane di un gesto, dopo che le mani si sono alzate? (→ La Traccia: il gesto più potente è quello che lascia segno.)
+**Aggancio reale:** nel sistema GENESIS/V32 ogni comando deve "reggere alla trazione": resistere ai carichi previsti senza cedere. Un algoritmo bello ma instabile è il bottone laccato. Un algoritmo semplice che regge sotto carico reale è il gesto fatto bene. La documentazione del "come" (la Traccia) nutre la Biblioteca e insegna a chiunque venga dopo.
+**Open loop → Casella 2:** *Se la traccia è la cosa più importante — chi controlla che quello che hai scritto sia davvero quello che hai fatto?*
+
+---
 
 ## FATTI (per il RAG)
-- **FATTO:** EP_N2_01, casella 1 (il gesto fatto bene sulla materia vera) del viaggio Nina v2. Radice di ⟡0, richiamata da tutte le caselle successive.
-- Un nodo di corda non regge se la tensione è concentrata in un punto solo; distribuita su almeno tre giri di avvolgimento, la resistenza effettiva può raddoppiare — principio della meccanica delle funi (attrito capstano).
-- Un bottone cucito con quattro
+- **FATTO:** EP_N2_01, casella 1 (il gesto fatto bene sulla materia vera) del viaggio Nina v2 — radice della Mappa, Regione 0 La Materia, giro 1.
+- **FATTO:** Un bottone cucito con tensione uniforme e nodo doppio sotto regge oltre 100 cicli di trazione; uno cucito senza nodo cede in 10–20 cicli — la differenza è nel gesto, non nel bottone.
+- **FATTO:** "Fatto bene" non è sinonimo di "bello": è il gesto che rispetta le proprietà fisiche della materia (attrito, elasticità della fibra, geometria del nodo). È misurabile, non è un'opinione.
+- **FATTO:** La traccia scritta di un gesto (il "come" documentato, lista di Nonna) insegna a chi viene dopo e diventa parte della Biblioteca; "non ricordare, documenta" è la regola che parte da questa

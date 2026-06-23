@@ -240,6 +240,7 @@ export default defineConfig({
       '/api/llm': 'http://localhost:5001',
       '/api/sanitizer': 'http://localhost:5001',
       '/api/rag': 'http://localhost:5001',
+      '/api/nina': 'http://localhost:5001',
       '/api/daily-brief': 'http://localhost:5001',
       '/api/agents': 'http://localhost:5001',
       '/api/screen': 'http://localhost:5001',

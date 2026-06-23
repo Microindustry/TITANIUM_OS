@@ -13,9 +13,9 @@ tags: avventura, educativo, nina, themis, nina-v2, precisione, relazione, soffio
 - [EP_N2_02  Il Soffio di Troppo](#epn202-il-soffio-di-troppo)
     - [La precisione non è essere pignoli. È un patto tra te, la cosa, e ciò che la cosa deve toccare.](#la-precisione-non-è-essere-pignoli-è-un-patto-tra-te-la-cosa-e-ciò-che-la-cosa-deve-toccare)
   - [COLD OPEN](#cold-open)
-  - [ATTO I  Il Patto](#atto-i-il-patto)
-  - [ATTO II  Il Soffio](#atto-ii-il-soffio)
-  - [ATTO III  Il Patto Regge](#atto-iii-il-patto-regge)
+  - [ATTO I  Quanto è giusto?](#atto-i-quanto-è-giusto)
+  - [ATTO II  Il soffio che rompe](#atto-ii-il-soffio-che-rompe)
+  - [ATTO III  Il patto](#atto-iii-il-patto)
   - [CHIUSURA](#chiusura)
   - [FATTI (per il RAG)](#fatti-per-il-rag)
 
@@ -26,186 +26,206 @@ tags: avventura, educativo, nina, themis, nina-v2, precisione, relazione, soffio
 ### "La precisione non è essere pignoli. È un patto tra te, la cosa, e ciò che la cosa deve toccare."
 
 **Formato:** Avventura (Nina v2) · ~13 min
-**Per chi:** chiunque abbia mai detto "vabbè, è quasi giusto" — e poi ha visto che non reggeva
-**Insegna:** La precisione è una relazione: il "giusto" non esiste in astratto, esiste solo rispetto a cosa deve accadere dopo.
+**Per chi:** chiunque abbia mai detto "vabbè, è quasi giusto"
+**Insegna:** La precisione è una relazione: il "giusto" non esiste in astratto, ma si misura sempre rispetto a cosa deve succedere dopo.
 **Materia:** La Materia (⟡0) · **Casella 2 del viaggio**
-**Posto nella Mappa:** Fucina della regione 0, giro 2 — dove i pezzi incominciano a toccarsi e il margine di errore diventa visibile.
+**Posto nella Mappa:** Fucina Sottomarina di Materia (regione 0, giro 2) — il laboratorio dove gli artigiani affinano i pezzi perché calzino perfetti.
 
 ---
 
-> **Dove siamo:** Nina ha imparato che "fatto bene regge quando lo tiri". Ora scende più in fondo nella fucina, dove non basta che una cosa regga da sola — deve toccare un'altra cosa nel modo esatto. Il soffio di troppo cambia tutto.
+> **Dove siamo:** Nina ha imparato che "fatto bene regge quando lo tiri". Ora scopre che "fatto bene" non significa perfetto: significa *misurato su quello che deve stare insieme*.
 
 ---
 
 ## COLD OPEN
 
-La scala verso la fucina è di pietra grigia, consumata al centro da anni di passi. Nina la conta: quattordici gradini, e poi il caldo arriva in faccia come aprire un forno.
+La scala scende nel caldo.
 
-FORGE è già al banco. Non alza la testa. Davanti a lui, sul piano di lavoro, ci sono due pezzi di legno — uno con un foro rotondo nel mezzo, l'altro con una spina cilindrica che deve entrarci. Li tiene uno per mano, li avvicina, si ferma a un millimetro.
+Nina non l'aveva notata prima — è nascosta dietro la libreria di THEMIS, una lastra di ferro inclinata che puzza di legno bruciato e olio. Ogni gradino vibra sotto i piedi come se ci fosse qualcosa di vivo lì sotto.
 
-Nina guarda. Non succede niente. La spina non entra.
+«Dove porta?» chiede Nina.
 
-«Perché non la spingi?» chiede.
+«Nella Fucina.» THEMIS non si volta. Scende davanti a lei, il calibro stretto in mano, i passi uguali. «FORGE sta accoppiando due pezzi. Ho pensato che volessi vedere.»
 
-FORGE alza gli occhi. Li abbassa di nuovo sui due pezzi. Poi prende la spina, la posa sul banco, e con l'indice sfila uno strato sottilissimo di legno dal bordo — un ricciolo, meno di mezzo millimetro. Lo lascia cadere sul pavimento.
+«Accoppiare cosa?»
 
-Riprova. Questa volta la spina entra. Non con forza: scivola dentro con un suono sordo, quasi un sospiro.
+«Due cose che devono stare insieme.»
 
-Nina lo fissa. «Era quel ricciolo di legno che non la faceva passare?»
+Nina apre la bocca per chiedere ancora, ma già sente il calore — un muro morbido, come aprire il forno di nonna. In fondo alla scala c'è una luce arancione che pulsa.
 
-FORGE annuisce, lento.
+La Fucina è enorme e silenziosa. Al centro, sotto una lampada che pende bassa, FORGE ha davanti a sé due blocchi di legno chiaro. Non fa niente. Li guarda.
 
-«Ma era quasi invisibile.»
+Nina si avvicina. I due blocchi sembrano identici. Uno ha una sporgenza, l'altro un incavo. Un incastro.
 
-THEMIS arriva dalla porta laterale, il calibro in mano come sempre. «Quasi invisibile. Quasi giusto. Quasi non è giusto.»
+«Devono entrare uno nell'altro?» chiede lei.
 
-Nina sente il pizzicore dietro le orecchie. «Ma come fai a sapere quanto è troppo? Come fai a sapere dove fermarti?»
+FORGE alza gli occhi. Non risponde. Prende il pezzo con la sporgenza e lo avvicina all'incavo — piano, con una mano sola, come se stesse posando un uovo. La sporgenza entra per metà, si ferma.
 
-THEMIS la guarda. «Bella domanda. Vieni.»
+Poi FORGE soffia. Un soffio leggero, quasi niente, sul bordo dell'incastro.
 
----
+Il pezzo scivola dentro fino in fondo. Combacia.
 
-## ATTO I — Il Patto
+Nina rimane ferma. «Un soffio?»
 
-THEMIS mette i due pezzi sul banco di fianco a Nina.
-
-«Questo foro» dice, indicando il pezzo con il buco, «è fatto per tenere una spina che deve girare dentro. Non deve stringere. Non deve ballare. Deve girare.»
-
-Nina guarda il foro. Sembra solo un cerchio.
-
-«Se la spina è troppo grossa, non entra. Se è troppo piccola, balla da tutte le parti e non serve a niente. Il giusto sta in mezzo — ma non è un punto esatto. È un intervallo.»
-
-«Un intervallo?»
-
-«Come le note.» THEMIS tende la mano. «Se canti un La, non devi essere perfetta sul 440 hertz. Puoi stare tra 438 e 442 e l'orecchio sente comunque un La. Fuori da quell'intervallo, diventa un'altra nota. O rumore.»
-
-Nina annuisce. «Quindi c'è uno spazio ammesso.»
-
-«Bravo. Quello spazio si chiama tolleranza.»
-
-La parola rimane nell'aria, densa come il fumo della fucina.
-
-«E qui viene la cosa importante» continua THEMIS. «La tolleranza non è la stessa per tutti i pezzi. Dipende da cosa deve fare il pezzo. Quella spina deve girare — allora le si dà un po' di spazio. Se invece dovesse tenere fermo qualcosa senza muoversi mai, la tolleranza sarebbe molto più stretta. Il giusto cambia a seconda di cosa deve accadere dopo che i due pezzi si toccano.»
-
-Nina prende la spina in mano. La rigira. «Quindi non è il pezzo che è preciso. È il pezzo preciso rispetto all'altro.»
-
-THEMIS non risponde subito. La guarda con quell'espressione che Nina ha già imparato: non è sorpresa, è soddisfazione.
-
-«Hai capito prima che finissi.»
-
-> *(Esempio per tutti — il test della sarta: Una sarta cuce un bottone. Se il filo è troppo stretto, quando tiri il bottone strappa il tessuto. Se è troppo largo, il bottone cade al primo movimento. Il "giusto" non sta nel filo da solo: sta nel patto tra il tessuto, il bottone, e la mano che lo userà. Quello stesso filo, su un tessuto più spesso o su un cappotto invernale, avrebbe una tolleranza diversa. La precisione non è una proprietà del filo. È la relazione tra tutte e tre le cose.)*
+«La mano deve sapere prima», dice FORGE. E non aggiunge nient'altro.
 
 ---
 
-## ATTO II — Il Soffio
+## ATTO I — Quanto è "giusto"?
 
-FORGE ha smesso di lavorare. Si è appoggiato all'incudine e ascolta, le braccia conserte, gli occhi piccoli nel calore.
+THEMIS aspetta che Nina si sieda su un sgabello basso, poi parla.
 
-THEMIS prende un foglio di carta sottile dal banco e lo appoggia sul piano. Ci mette sopra un pezzo di legno piatto, piccolo, leggero.
+«Hai visto cosa ha fatto FORGE?»
 
-«Soffia sul foglio. Piano.»
+«Ha soffiato e il pezzo è entrato.»
 
-Nina si avvicina e soffia, delicata. Il foglio si muove di un millimetro. Il pezzo di legno sopra non si sposta.
+«Sì. Ma perché funzionava un soffio e non di più?»
 
-«Ancora. Più forte.»
+Nina guarda i due blocchi incastrati. Belli, fermi, precisi. «Perché erano… giusti?»
 
-Nina soffia più forte. Il foglio scappa via. Il pezzo di legno resta sul banco un mezzo secondo, poi cade.
+«Giusti rispetto a cosa?»
 
-«Hai visto?» dice THEMIS. «C'è un intervallo di forza in cui il foglio si muove ma il legno no. Esci da quell'intervallo — troppo poco: niente si muove. Troppo: tutto vola via insieme. Quell'intervallo è la tolleranza del tuo soffio.»
+Il pizzicore dietro le orecchie. Nina lo riconosce subito — è la domanda che non si è ancora fatta. *Giusti rispetto a cosa.*
 
-Nina fissa il pezzo caduto. «Quindi ogni cosa ha il suo soffio limite.»
+«Rispetto… all'incastro?»
 
-«Ogni sistema, sì. E il soffio giusto non è un numero: è un intervallo. Dentro l'intervallo, funziona. Fuori, no.»
+«Rispetto all'uso», dice THEMIS. «FORGE sta costruendo un mobile da soggiorno. I due pezzi devono entrare e uscire quando vuoi — scorrere. Se l'incastro fosse più stretto di mezzo millimetro, si incepperebbe. Se fosse più largo di mezzo millimetro, ballerebbe.»
 
-Nina rimette il foglio, rimette il pezzo. Soffia ancora, questa volta cercando il confine: quanto basta per muovere il foglio senza far cadere il legno. Ci prova tre volte. La terza volta riesce.
+«Mezzo millimetro», ripete Nina. È meno dello spessore di un'unghia.
 
-«L'ho trovato» dice, piano.
+«Esatto. Quello è il patto.»
 
-«Hai trovato l'intervallo con le mani» dice THEMIS. «Ora lo sai nella mano, non solo in testa. Questo è il primo passo.»
+Nina guarda le mani di FORGE — grandi come badili, eppure avevano sentito quel mezzo millimetro senza nessuno strumento. Solo le dita, poi il soffio.
 
-FORGE si stacca dall'incudine. Si avvicina al banco, prende la spina di legno, e la mostra a Nina. Al collo porta un calibro consumato, le cifre quasi illeggibili. Lo stacca, lo apre, misura la spina. Poi misura il foro.
+THEMIS posa sul banco un'altra cosa: ago, filo, due pezzi di stoffa. Una seta sottile e un lembo di lana grezza.
 
-Legge i numeri sottovoce, come se parlasse solo con il legno.
+> *(Esempio per tutti — il test della sarta: Una sarta cuce un bottone. Se il filo è troppo stretto, si strappa; se è troppo lasco, il bottone cade. Non esiste "il filo perfetto" — esiste solo "il filo giusto per questo bottone, su questo tessuto, con questo uso". Nina deve scegliere: il bottone deve reggere una giacca da cerimonia o uno zaino da montagna? La risposta cambia tutto.)*
 
-Poi guarda Nina e dice, con la voce che ha: «La mano deve sapere prima.»
+«Prendi l'ago», dice THEMIS.
 
-Rimette il calibro al collo.
+Nina lo prende. C'è già un filo infilato.
 
-Nina lo guarda. «Cosa vuol dire che la mano deve sapere prima?»
+«Immagina di cucire un bottone su quella seta. Tira il filo quanto ti sembra giusto.»
 
-THEMIS risponde per lui, perché sa che FORGE non aggiungerà altro. «Vuol dire che se aspetti di capire l'errore dopo — quando il pezzo è già rotto, quando il bottone è già caduto — hai già perso il materiale, il tempo, forse il pezzo accanto. La mano che misura prima capisce l'intervallo prima di tagliare. Poi taglia.»
+Nina fa un nodo, lo tira. Piano, quasi in punta di dita.
 
-> *(Strato fondo — per il grande: In meccanica, la tolleranza dimensionale non è arbitraria. Lo standard ISO 286 definisce classi di accoppiamento — H7, g6, e molte altre — basate sulla funzione richiesta: libero, scorrevole, forzato. Un accoppiamento tipico spina-foro a 20 mm: la spina può essere al massimo 20,025 mm, il foro al minimo 20,000 mm. Quello 0,025 mm è l'intero margine tra "entra" e "scassa il pezzo". Un pezzo "preciso" misurato da solo non dice nulla: la precisione ha senso solo rispetto all'accoppiamento. Il controllo qualità in produzione non chiede "è perfetto?" — chiede "rientra nell'intervallo di tolleranza per questo specifico accoppiamento?")*
+«Bene. Ora immagina di cucire lo stesso bottone su quella lana — uno zaino che devi portare su per un sentiero. Tira il filo quanto ti sembra giusto.»
+
+Nina stringe molto di più. Quasi due volte tanto.
+
+«Hai usato le stesse mani», dice THEMIS. «Lo stesso filo. Lo stesso bottone. Eppure hai fatto due cose diverse.»
+
+«Perché il tessuto è diverso. E lo zaino pesa.»
+
+«Hai trovato il problema dei problemi.» THEMIS la guarda con quegli occhi attenti. «La precisione non è nel filo. È nella relazione tra il filo, il tessuto, e quello che deve reggere.»
 
 ---
 
-## ATTO III — Il Patto Regge
+## ATTO II — Il soffio che rompe
 
-Nina è ancora al banco. Prende di nuovo i due pezzi: la spina, il foro.
+FORGE ha rimesso i due blocchi sul banco. Ora ne prende un terzo — stavolta i due pezzi devono stare *fissi*, uniti per sempre, come un'asse portante.
 
-«Quindi» dice, pensando ad alta voce, «quando FORGE ha tolto quel ricciolo di legno, non lo faceva perché è pignolo. Lo faceva perché la spina doveva girare, e con quel ricciolo in più non girava.»
+«Stesso incastro», dice THEMIS a Nina. «Ma guarda la differenza.»
 
-«Esatto» dice THEMIS. «Non era questione di essere precisi per il gusto di esserlo. Era questione di rispettare il patto.»
+FORGE avvicina i pezzi. Questa volta non soffia. Preme — con tutto il peso del palmo — e i pezzi entrano con resistenza, lenti. Quando sono dentro, non si muovono. Non di un millimetro.
 
-«Il patto tra la spina e il foro.»
+«Perché non ha soffiato?» chiede Nina.
 
-«E la funzione che devono fare insieme. Togli la funzione, togli il senso alla misura.»
+«Perché non deve scorrere. Deve portare peso. L'incastro è fatto più stretto — di quanto, secondo te?»
 
-Nina mette la spina nel foro. Gira. Gira bene, senza ballare, senza stringere.
+Nina guarda. «Un po'. Meno di mezzo millimetro?»
 
-«E se qualcuno avesse detto: vabbè, è quasi giusto?»
+«Quattro decimi.» THEMIS indica il calibro. «FORGE sa a occhio. Tu devi imparare prima con lo strumento.»
 
-THEMIS non risponde. È FORGE che risponde, con un gesto: prende un'altra spina dal cassetto — visibilmente più grossa di un soffio — e la appoggia sul bordo del foro. Non entra. Spinge. Il legno intorno al foro si scheggia, un rumore secco e definitivo.
+Nina prende il calibro — quello vecchio, consumato, che FORGE le ha messo in mano senza dire niente. Lo apre, lo chiude. Sente il gioco metallico tra le ganasce.
 
-Il pezzo è rotto.
+«E se l'incastro fisso fosse fatto con lo stesso gioco di quello scorrevole?»
 
-Nina lo guarda. Non dice niente per qualche secondo.
+«Cedi sotto carico», dice THEMIS.
 
-«Il soffio di troppo» dice alla fine.
+«E se fosse ancora più stretto?»
 
-«Il soffio di troppo» conferma THEMIS.
+«Non entra. O entra e spacca il legno.»
 
-Nina tiene la spina buona in mano. Pensa al bottone di EP_N2_01, quello che reggeva perché era fatto bene. Adesso capisce un livello più in fondo: fatto bene non vuol dire perfetto nel vuoto. Vuol dire dentro l'intervallo giusto per quello che deve fare, rispetto a ciò che deve toccare.
+Nina sta ferma un momento. *Un soffio di troppo* — quella frase di prima. Non era una metafora. Era esattamente questo: la differenza tra "combacia" e "si rompe" è una questione di gradi. Non di sì o no.
 
-La precisione è un patto. Si stringe in due.
+> *(Strato fondo — per il grande: In artigianato di precisione, la "tolleranza" non è un numero fisso: è la differenza massima accettabile tra il valore nominale e il valore reale, calcolata in funzione dello stress che il pezzo dovrà sopportare in servizio. Un accoppiamento scorrevole per mobili tollera ±0,5 mm; un accoppiamento stretto per assi portanti tollera ±0,1 mm. Nessuno dei due è "preciso in assoluto". La precisione è la relazione tra geometria, materiale, uso e conseguenza del fallimento. In sartoria, la tensione del filo si misura in grammi di forza: un bottone su seta richiede 50–100 g; uno su lana grezza 200–300 g. Lo stesso valore numerico può essere preciso in un contesto e sbagliato in un altro.)*
+
+Nina mette giù il calibro sul banco. Lo guarda. Poi guarda FORGE, che sta già scegliendo un altro pezzo — calmo, come sempre, come se sapesse già tutto quello che deve fare.
+
+«Come fa a sapere qual è la tolleranza giusta?» chiede Nina a THEMIS.
+
+«Conosce il pezzo. Conosce l'uso. Conosce il materiale. E conosce la conseguenza se sbaglia.»
+
+«La conseguenza se sbaglia.»
+
+«Quella è la domanda che devi farti sempre. Non: sono abbastanza preciso? Ma: cosa succede se non lo sono abbastanza?»
+
+---
+
+## ATTO III — Il patto
+
+Nina ha in mano i due blocchi scorrevoli. Li apre e chiude piano. Scorrono lisci, senza resistenza, senza gioco. Come un cassetto ben fatto.
+
+«È come il bottone», dice. «Il filo stretto sulla seta si strappa. Il filo lasco sullo zaino — il bottone cade. Non c'è un filo giusto in assoluto.»
+
+«Brava. Hai collegato.»
+
+«Ma allora…» Nina si ferma. «Quando qualcuno dice che ha fatto una cosa "precisa" — non sta dicendo niente, se non dice rispetto a cosa.»
+
+THEMIS sorride — quello vero, non per gentilezza. «Controlla i fatti, non le parole. "Preciso" da solo è una parola vuota. "Preciso per scorrere in un mobile da soggiorno" è un'informazione. "Preciso per portare il peso di un solaio" è un'altra informazione ancora.»
+
+Nina annuisce. Il calibro nella tasca pesa poco, ma lo sente.
+
+«Questo è il patto», dice THEMIS. «Tra te, il pezzo, e quello che il pezzo deve fare. La precisione non è una qualità assoluta. È una relazione. E come tutte le relazioni, cambia a seconda di chi c'è dall'altra parte.»
+
+FORGE, senza alzare gli occhi, mette un terzo blocco sul banco. Nina lo guarda — ha già capito che dovrà scegliere che tipo di incastro serve. Prima di toccare lo strumento, deve sapere cosa deve reggere.
+
+*Prima la mano. E prima ancora, la testa.*
 
 ---
 
 ## CHIUSURA
 
-Nella Mappa Viva, la casella 2 si accende — una luce calda, color rame, che si aggiunge al punto già colorato dalla prima casella. Il puntino di Nina è ancora nella regione della Materia, ma ha fatto un passo più in fondo.
+Sulla Mappa Viva, la casella 2 si accende — un quadrato caldo, arancione come la luce della Fucina. La pedina di Nina si sposta di un passo.
 
-THEMIS la guarda dalla porta. «Tienila per tutta la vita: il giusto non è un punto. È un intervallo. E l'intervallo dipende da cosa viene dopo.»
+THEMIS la guarda dal basso della scala. «Tienila per tutta la vita», dice. «Ogni volta che qualcuno ti dice che qualcosa è "preciso", chiedi: preciso per fare cosa?»
 
-Nina annuisce. Poi si ferma.
+Nina annuisce. Poi guarda il calibro in tasca — il bordo consumato, il metallo tiepido.
 
 ---
 
-> «Ma allora — se il "giusto" cambia a seconda di cosa tocca, come fa Nina a sapere qual è l'intervallo giusto *prima* di avere il pezzo accanto?
-> Chi gliel'ha detto? Chi ha deciso che la tolleranza è ±0,025 millimetri e non ±1?»
+> *La precisione è un patto. "Giusto" non basta: bisogna sapere giusto per chi, giusto per quanto peso, giusto per quante volte. FORGE lo sa con le mani. Nina lo sta imparando con la testa.*
 >
-> *La risposta è nella prossima casella — dove qualcuno ha già scritto le regole, e Nina deve imparare a leggerle.*
+> *Ma se la precisione cambia a seconda di quello che il pezzo deve fare — come fa Nina a sapere **quale** precisione scegliere prima ancora di iniziare a costruire? Deve imparare qualcosa prima: che ogni problema ha un'unità di misura nascosta, e chi non la trova, misura la cosa sbagliata.*
+>
+> *→ Casella 3: la MISURA — ogni domanda ha un'unità di misura nascosta.*
 
 ---
 
-*Provalo tu: Prendi un foglio di carta e una moneta. Metti la moneta sul tavolo, coperta dal foglio. Soffia sul foglio: devi spostare il foglio senza far cadere la moneta, poi devi spostare foglio e moneta insieme. Trova i due livelli di soffio. Tra il primo e il secondo c'è un intervallo — prova a misurarlo soffiando sempre più forte, un gradino alla volta. Quell'intervallo è la tolleranza del tuo soffio. Cambia se la moneta è più pesante. Cambia se il tavolo è liscio o ruvido. Cambia a seconda di cosa viene dopo.*
+*Provalo tu: Prendi una matita e disegna una linea dritta su carta normale. Poi prova la stessa linea su carta bagnata, su cartone, su un vetro appannato. Il tuo gesto è uguale ogni volta. Eppure il risultato cambia. La tua mano non è diventata meno precisa — è il patto tra mano, strumento e superficie che è diverso. Con quale superficie la linea è più "precisa" per quello che volevi fare? La risposta dipende da cosa volevi fare.*
 
 ---
 
 <!-- SCENE / KEY-IMAGE (per l'animazione) -->
-1. Nina in fondo alla scala di pietra, il calore della fucina che le arriva in faccia, FORGE immobile al banco con i due pezzi di legno — uno con il foro, uno con la spina.
-2. Le mani di FORGE che sfila un ricciolo sottilissimo di legno dal bordo della spina; il ricciolo che cade sul pavimento di pietra come una virgola.
-3. THEMIS con il foglio di carta sul banco e il pezzo di legno sopra: Nina che soffia, il foglio che scappa, il legno che cade — tre momenti in sequenza come fotogrammi.
-4. Il calibro consumato al collo di FORGE: le dita grandi che lo aprono e misurano la spina con una precisione che contrasta con le mani enormi e segnate.
-5. La spina grossa appoggiata al foro — la spinta, il legno che si scheggia con un rumore secco — e Nina che guarda il pezzo rotto senza dire niente.
+1. Nina scende la scala di ferro verso la Fucina: ogni gradino vibra, la luce arancione cresce dal basso, caldo visibile come aria mossa.
+2. FORGE soffia sul bordo dell'incastro — un soffio leggero, quasi niente — e il pezzo di legno scivola dentro fino in fondo. Nina a bocca aperta.
+3. Nina tira il filo sull'ago: piano sulla seta sottile, forte sulla lana grezza. Le due mani sono uguali; la tensione è diversa.
+4. I due blocchi per l'asse portante entrano con resistenza sotto il palmo di FORGE — nessun soffio, nessuna leggerezza. Peso e lentezza.
+5. Dall'alto: i due blocchi scorrevoli incastrati perfettamente, come un puzzle che respira — un millimetro di gioco esatto, visibile come luce tra i bordi.
 
 <!-- DIDATTICA -->
-**Pietra:** `⟡0` La Materia (giro 2). *La precisione è una relazione: il "giusto" non esiste da solo, esiste nell'intervallo definito dalla funzione dell'accoppiamento.*
-**Pietre richiamate:** ⟡0 giro 1 (fatto bene = regge — qui si approfondisce: quanto bene, e rispetto a cosa).
-**3 strati:** bambino = la spina che entra o scassa, il soffio che sposta il foglio senza far cadere il legno · curioso = la tolleranza come intervallo relazionale, non come perfezione astratta · grande = ISO 286, classi di accoppiamento H7/g6, il controllo qualità come verifica di appartenenza all'intervallo
-**Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte (FORGE dà il calibro; la risposta la trova la mano)
-**Aggancio reale:** In ogni sistema di processo, ogni azione ha un intervallo di tolleranza — non un valore puntuale. Fuori dall'intervallo, il sistema non converge. Misurare significa verificare l'appartenenza all'intervallo, non la perfezione assoluta.
-**Open loop → Casella 3:** Se il "giusto" cambia a seconda dell'accoppiamento, qualcuno deve aver scritto le regole prima. Chi ha deciso gli intervalli, e come li ha trovati?
+**Pietra:** `⟡0` La Materia (giro 2). *La precisione non è una qualità assoluta: è la relazione tra geometria, materiale, uso e conseguenza del fallimento. "Giusto" esiste solo rispetto a cosa deve succedere dopo.*
+**Pietre richiamate:** `⟡0` giro 1 — "fatto bene = regge quando lo tiri" (EP_N2_01).
+**3 strati:** bambino = FORGE soffia sul legno e il pezzo entra, Nina tira il filo sulla seta e sulla lana · curioso = la tolleranza non è un numero fisso ma un intervallo definito dall'uso · grande = accoppiamento scorrevole ±0,5 mm vs. stretto ±0,1 mm; tensione del filo 50–100 g su seta, 200–300 g su lana grezza; la precisione è la relazione tra geometria, materiale, uso e conseguenza del fallimento.
+**Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti (il calibro di FORGE), non le risposte.
+**Aggancio reale:** Un sensore di temperatura per monitorare una stanza tollera ±1 °C; lo stesso sensore in un'incubatrice neonatale deve tollerare ±0,1 °C. Il "soffio di troppo" è il drifting dei parametri oltre la tolleranza di servizio: il sistema non è rotto, ma non è più adatto al patto stipulato.
+**Open loop → Casella 3:** Se la precisione cambia a seconda di quello che il pezzo deve fare
 
 ## FATTI (per il RAG)
-- **FATTO:** EP_N2_02, casella 2 (la precisione è una relazione) del viaggio Nina v2
+- **FATTO:** EP_N2_02, casella 2 (la precisione e' una relazione (il soffio di troppo)) del viaggio Nina v2, regione 0 (LA MATERIA).
+- La tolleranza in falegnameria moderna è misurata in frazioni di millimetro (0,1–0,5 mm) a seconda che l'accoppiamento sia 'libero', 'di transizione' o 'stretto'.
+- In sartoria, la tensione del filo si misura in grammi di forza: un bottone su seta richiede 50–100 g; uno su lana grezza 200–300 g.
+- Un pezzo 'fatto bene' per un uso può essere 'fatto male' per un altro: lo stesso assemblaggio può reggere il peso di una finestra ma non la vibrazione di un motore.
+- La precisione non è perfezione: è l'intervallo accettabile entro il quale il pezzo rimane funzionale per il suo proposito specifico.
+- Il 'soffio di troppo' nella giuntura è la differenza che trasforma 'combacia' in 'si blocca' o in 'cede': è sempre una questione di gradi, non di sì/no.

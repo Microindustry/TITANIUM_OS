@@ -5,6 +5,18 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, produzione, animazione, voce, storyboard, animatic, pilota
 ---
+<!-- TOC -->
+
+- [Produzione Nina  il primo passo (animazione  voce)](#produzione-nina-il-primo-passo-animazione-voce)
+  - [Ordine di produzione  lordine del cammino](#ordine-di-produzione-lordine-del-cammino)
+  - [PASSO 1  lANIMATIC del pilota (EP_N2_01)](#passo-1-lanimatic-del-pilota-epn201)
+  - [PASSO 2  il VOICE-TEST (regia voce dalla Character Bible)](#passo-2-il-voice-test-regia-voce-dalla-character-bible)
+  - [Tono visivo (costante di serie, da Character Bible)](#tono-visivo-costante-di-serie-da-character-bible)
+  - [Pipeline (come si scala dopo il pilota)](#pipeline-come-si-scala-dopo-il-pilota)
+  - [Aperti / da decidere con Matteo](#aperti-da-decidere-con-matteo)
+
+<!-- /TOC -->
+
 
 # Produzione Nina — il primo passo (animazione + voce)
 
