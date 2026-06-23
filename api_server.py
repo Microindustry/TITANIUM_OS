@@ -126,6 +126,29 @@ def get_state():
     """Legge BRAIN/STATE.json live."""
     return jsonify(read_json(STATE_FILE))
 
+@app.get("/api/nina/status")
+def nina_status():
+    """Stato del nodo RAG Nina (canone sess.#44: generazione automatica).
+    Conta gli EP_N2 nel canone, i semi archiviati (EP_AV in _ARCHIVIO) e riporta
+    l'ultimo generato dal loop (DATA/nina_state.json). Alimenta il pannello RAG Nina."""
+    av_dir   = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes" / "S_AVVENTURA"
+    archivio = av_dir / "_ARCHIVIO"
+    canon = sorted(p.name for p in av_dir.glob("EP_N2_*.md")) if av_dir.exists() else []
+    semi  = sorted(p.name for p in archivio.glob("EP_AV_*.md")) if archivio.exists() else []
+    st = read_json(ROOT / "DATA" / "nina_state.json")
+    if "error" in st:
+        st = {}
+    return jsonify({
+        "ok": True,
+        "canon_count": len(canon),
+        "seed_archive_count": len(semi),
+        "generated_total": st.get("generated_total", 0),
+        "last_generated": st.get("last_generated"),
+        "last_loop": st.get("last_loop"),
+        "seeds": semi,
+        "auto": True,  # niente gate: il sistema genera e promuove da solo
+    })
+
 @app.patch("/api/state")
 def patch_state():
     """Aggiorna campi specifici di STATE.json (merge superficiale)."""

@@ -97,6 +97,37 @@ FINANZA_SEED = {
     "EP_N2_15": ("il valore: i soldi sono lavoro conservato + fiducia condivisa", 1, 1, [], "adattato"),
 }
 
+# ── SEED AUTO (auto-generati da nina_agent) ───────────────────────────────────
+# Gli episodi Nina generati in automatico registrano qui il loro asse_nina, così
+# compaiono anche sulla Mappa SENZA editare questo sorgente a ogni generazione
+# (regola sess.#44: tutto automatico, niente intervento). Formato JSON:
+#   { "EP_N2_16": ["concetto", regione, giro, ["⟡3"], "adattato"], ... }
+NINA_SEED_AUTO_JSON = Path(__file__).resolve().parent / "nina_seed_auto.json"
+
+
+def _load_seed_auto() -> dict:
+    """Fonde nina_seed_auto.json in NINA_SEED (le liste JSON -> tuple). Idempotente,
+    best-effort: un file assente o malformato non rompe il build."""
+    if not NINA_SEED_AUTO_JSON.exists():
+        return {}
+    try:
+        raw = json.loads(NINA_SEED_AUTO_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    merged = {}
+    for eid, row in (raw or {}).items():
+        try:
+            concetto, reg, giro, richiama, stato = row
+            merged[eid] = (concetto, int(reg), int(giro), list(richiama), stato)
+        except Exception:
+            continue
+    return merged
+
+
+# le seed auto NON sovrascrivono le esplicite (la mappatura a mano ha la precedenza)
+for _eid, _row in _load_seed_auto().items():
+    NINA_SEED.setdefault(_eid, _row)
+
 
 def _parse_frontmatter(raw: str) -> dict:
     """Estrae i campi 'key: value' (stile YAML leggero) dalla testa del file."""

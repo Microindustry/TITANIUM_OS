@@ -51,9 +51,14 @@ TI_ROOT  = _ROOT
 MENTE    = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 AV_CE       = TI_ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes" / "S_AVVENTURA"
 AV_PROPOSTI = AV_CE / "_PROPOSTI"
+AV_ARCHIVIO = AV_CE / "_ARCHIVIO"
 AV_MENTE    = MENTE / "STORIE" / "S_AVVENTURA"
 BIBLE    = MENTE / "KNOWLEDGE" / "NINA_V2_CHARACTER_BIBLE.md"
 ARCH     = MENTE / "KNOWLEDGE" / "NINA_V2_ARCHITETTURA.md"
+# Registro asse_nina degli auto-generati (letto da build_episodes_json -> compaiono sulla Mappa)
+SEED_AUTO   = TI_ROOT / "CONTENT_ENGINE" / "scripts" / "nina_seed_auto.json"
+# Stato del nodo (per /api/nina/status e il pannello RAG Nina)
+NINA_STATE  = TI_ROOT / "DATA" / "nina_state.json"
 
 MODEL_ARCH   = "claude-haiku-4-5-20251001"   # stadio 1: struttura, economico
 MODEL_WRITER = "claude-sonnet-4-6"           # stadio 2: prosa, qualita'
@@ -261,7 +266,7 @@ Lunghezza: 1100-1600 parole nei 3 atti. Prosa densa, dialoghi voiceabili, ZERO r
 
 # ── ASSEMBLAGGIO + SALVATAGGIO ────────────────────────────────────────────────
 
-def build_frontmatter(ep_id: str, skel: dict, meta: dict) -> str:
+def build_frontmatter(ep_id: str, skel: dict, meta: dict, status: str = "ready") -> str:
     title = skel.get("title", ep_id)
     sub   = skel.get("sottotitolo", "").replace('"', "'")
     base_tags = ["avventura", "educativo", "nina", "themis", "nina-v2"]
@@ -274,11 +279,44 @@ def build_frontmatter(ep_id: str, skel: dict, meta: dict) -> str:
         f"sottotitolo: {sub}\n"
         f"stagione: AV\n"
         f"data_evento: {datetime.now().strftime('%Y-%m-%d')}\n"
-        f"status: proposto_da_validare\n"
+        f"status: {status}\n"
         f"durata_min: 14\n"
         f"tags: {tags}\n"
         f"---\n\n"
     )
+
+
+def register_seed_auto(ep_id: str, skel: dict, meta: dict) -> None:
+    """Registra l'asse_nina dell'episodio in nina_seed_auto.json, così
+    build_episodes_json lo arricchisce e l'episodio compare anche sulla Mappa —
+    senza editare il sorgente (canone sess.#44: tutto automatico)."""
+    try:
+        data = json.loads(SEED_AUTO.read_text(encoding="utf-8")) if SEED_AUTO.exists() else {}
+    except Exception:
+        data = {}
+    concetto = (skel.get("insegna") or skel.get("title") or ep_id)[:70]
+    data[ep_id] = [concetto, int(meta.get("regione", 0)), int(meta.get("giro", 1)),
+                   list(meta.get("richiama") or []), "adattato"]
+    SEED_AUTO.parent.mkdir(parents=True, exist_ok=True)
+    SEED_AUTO.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    logger.info("seed-auto registrato: %s (regione %s, giro %s)", ep_id, meta.get("regione"), meta.get("giro"))
+
+
+def update_state(ep_id: str, title: str) -> None:
+    """Aggiorna DATA/nina_state.json (ultimo generato + conteggi) per /api/nina/status."""
+    try:
+        st = json.loads(NINA_STATE.read_text(encoding="utf-8")) if NINA_STATE.exists() else {}
+    except Exception:
+        st = {}
+    canon = len(list(AV_CE.glob("EP_N2_*.md"))) if AV_CE.exists() else 0
+    semi  = len(list(AV_ARCHIVIO.glob("EP_AV_*.md"))) if AV_ARCHIVIO.exists() else 0
+    st.update({
+        "last_generated": {"id": ep_id, "title": title, "at": datetime.now().isoformat(timespec="seconds")},
+        "canon_count": canon, "seed_archive_count": semi,
+        "generated_total": int(st.get("generated_total", 0)) + 1,
+    })
+    NINA_STATE.parent.mkdir(parents=True, exist_ok=True)
+    NINA_STATE.write_text(json.dumps(st, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def save_proposal(ep_id: str, frontmatter: str, body: str, skel: dict, meta: dict) -> Path:
@@ -304,9 +342,41 @@ def save_proposal(ep_id: str, frontmatter: str, body: str, skel: dict, meta: dic
     return out
 
 
+def save_canon(ep_id: str, frontmatter: str, body: str, skel: dict, meta: dict) -> Path:
+    """AUTO-PROMOZIONE (canone sess.#44: tutto automatico, niente _PROPOSTI):
+    scrive l'episodio DEFINITIVO sia nel canone (S_AVVENTURA/, per la dashboard via
+    build_episodes_json) sia in MENTE/STORIE/S_AVVENTURA/ (per il RAG di Nina), registra
+    l'asse_nina in nina_seed_auto.json e aggiorna lo stato. Nessuna approvazione umana."""
+    try:
+        from AUTOMATIONS.core.canon_guard import clean as _canon_clean
+        body = _canon_clean(body)
+    except Exception:
+        pass
+    slug = re.sub(r"[^a-z0-9]+", "_", skel.get("title", ep_id).lower()).strip("_")[:40]
+    fname = f"{ep_id}_{slug}.md"
+    text = frontmatter + body.strip() + "\n"
+
+    AV_CE.mkdir(parents=True, exist_ok=True)
+    out = AV_CE / fname
+    out.write_text(text, encoding="utf-8")
+    logger.info("CANONE: %s", out.relative_to(TI_ROOT))
+
+    # mirror in MENTE -> il RAG di Nina lo indicizza (RAG legge MENTE, non CONTENT_ENGINE)
+    try:
+        AV_MENTE.mkdir(parents=True, exist_ok=True)
+        (AV_MENTE / fname).write_text(text, encoding="utf-8")
+        logger.info("MENTE (RAG): STORIE/S_AVVENTURA/%s", fname)
+    except Exception as e:
+        logger.warning("mirror MENTE fallito (%s) — il RAG non vedra' subito %s", e, ep_id)
+
+    register_seed_auto(ep_id, skel, meta)
+    update_state(ep_id, skel.get("title", ep_id))
+    return out
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
-def generate(concept: str, meta: dict, rag_query: str | None = None) -> Path | None:
+def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool = True) -> Path | None:
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
         logger.error("ANTHROPIC_API_KEY assente — impossibile generare")
@@ -349,7 +419,12 @@ def generate(concept: str, meta: dict, rag_query: str | None = None) -> Path | N
         if sec not in body:
             logger.warning("formato: sezione mancante '%s' (rivedere a mano)", sec)
 
-    frontmatter = build_frontmatter(ep_id, skel, meta)
+    if auto:
+        # AUTO-PROMOZIONE: episodio definitivo, nel canone + MENTE (RAG), niente gate
+        frontmatter = build_frontmatter(ep_id, skel, meta, status="ready")
+        return save_canon(ep_id, frontmatter, body, skel, meta)
+    # modalita' legacy: proposta da validare (solo se richiesta esplicitamente)
+    frontmatter = build_frontmatter(ep_id, skel, meta, status="proposto_da_validare")
     return save_proposal(ep_id, frontmatter, body, skel, meta)
 
 
@@ -363,6 +438,8 @@ if __name__ == "__main__":
     p.add_argument("--giro", type=int, default=1, help="Giro della spirale (profondita')")
     p.add_argument("--casella", help="Numero casella nel viaggio")
     p.add_argument("--richiama", help="Pietre richiamate, es. '⟡3,⟡0'")
+    p.add_argument("--proposta", action="store_true",
+                   help="Legacy: salva in _PROPOSTI come bozza da validare (default = auto-promozione nel canone)")
     args = p.parse_args()
 
     meta = {
@@ -372,9 +449,14 @@ if __name__ == "__main__":
         "casella": args.casella,
         "richiama": [r.strip() for r in args.richiama.split(",")] if args.richiama else [],
     }
-    out = generate(args.concept, {k: v for k, v in meta.items() if v is not None}, rag_query=args.rag)
+    out = generate(args.concept, {k: v for k, v in meta.items() if v is not None},
+                   rag_query=args.rag, auto=not args.proposta)
     if out:
         print(f"\nOK -> {out}")
-        print("Rivedi, poi sposta da _PROPOSTI/ a S_AVVENTURA/ e aggiungi la riga NINA_SEED.")
+        if args.proposta:
+            print("Modalita' proposta: rivedi, poi sposta da _PROPOSTI/ a S_AVVENTURA/.")
+        else:
+            print("Auto-promosso nel canone + MENTE. Esegui rebuild episodes.json + rag-update")
+            print("(oppure usa il loop nina_rag_loop.py che li fa in automatico).")
     else:
         sys.exit(1)

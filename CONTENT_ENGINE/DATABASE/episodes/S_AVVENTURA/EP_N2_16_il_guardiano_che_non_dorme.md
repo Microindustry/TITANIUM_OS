@@ -4,7 +4,7 @@ title: Il Guardiano che Non Dorme
 sottotitolo: Come un sistema impara a ripararsi da solo, di notte, mentre tutti dormono
 stagione: AV
 data_evento: 2026-06-22
-status: proposto_da_validare
+status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, guardiano, dorme, sistema
 ---

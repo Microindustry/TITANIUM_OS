@@ -42,6 +42,12 @@ if exist "%TOPICS%" (
     "%PYTHON%" NODES\RESEARCH_AGENT\research_agent.py "AI agent LLM automation 2025" --domain GENESIS --rag --max 5 >> "%LOG%" 2>&1
 )
 
+:: RAG NINA: il nodo "vede gli archiviati e continua a generarli" (canone sess.#44,
+:: tutto automatico). Genera 1 episodio EP_N2 auto-promosso (canone + MENTE), che il
+:: rag-update qui sotto indicizza nello stesso passaggio (niente processo GPU in piu').
+echo [night_research] RAG Nina: genera dal prossimo seme archiviato >> "%LOG%"
+"%PYTHON%" NODES\NINA_AGENT\nina_rag_loop.py --count 1 >> "%LOG%" 2>&1
+
 :: RIFLUSSO: i FATTI degli episodi (generati da story_agent alle 02:07) tornano in
 :: MENTE/<dominio>/ — la conoscenza INTERNA del progetto entra nel RAG. Chiude il loop
 :: (regola 7). Va PRIMA del rag-update, cosi episodi + paper si indicizzano in un colpo.
