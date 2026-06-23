@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-23T10:21:29.152164",
+  "last_update": "2026-06-23T10:51:32.455294",
   "active_milestone": "Sessione #43 (23/06, ULTRACODE) NINA DEFINITIVA — arco 6/6 completo. (1) Canone unico = serie EP_N2: i 13 vecchi EP_AV in S_AVVENTURA/_ARCHIVIO (repo+MENTE, additivo non cancellati); mappa avventuraMapData ripuntata agli EP_N2; episodes.json purgato (176 ep) + intersect (879 legami,0 isolati)+evoluzione; build TS verde. (2) INDICE_CAMMINO.md (il 'libro': caselle 1->15) — la catena open-loop era gia' concatenata 1->15 (Pietre in ordine pedagogico, non numerico); 2 open-loop soft resi espliciti. (3) UNA SOLA VERITA' SUL RAG: la falla era che rag_engine indicizza MENTE ma non escludeva _ARCHIVIO/_PROPOSTI -> avrebbe re-indicizzato gli EP_AV archiviati; fix _is_excluded(EXCLUDE_DIR_NAMES); PIETRE.md rigenerato EP_N2-only; ⟡2=Automazione coerente. (4) Continuita' «Dove siamo»+open loop in tutti i 15. (5) canon_guard scan 177 ep -> 0 violazioni framing. (6) PRODUZIONE_NINA.md: pilota EP_N2_01, animatic dalle 5 key-image, regia voce dalla Character Bible. Commit fb7f71cb->d95b3a0b (repo) + MENTE.",
-  "next_step": "AZIONE ADMIN MATTEO: reflux RAG -> 'powershell -ExecutionPolicy Bypass -File SERVICES\\rag_update_exclusive.ps1' (auto-UAC; rebuild HARD esclusivo: toglie i chunk EP_AV archiviati + indicizza INDICE_CAMMINO/PRODUZIONE_NINA). Poi push (terminale reale/salva). PROSSIMO LAVORO: PASSO 1 produzione = animatic del pilota EP_N2_01 (5 key-image) + voice-test (vedi PRODUZIONE_NINA.md). Aperti: UPS hardware, API key Semantic Scholar, chunking per heading.",
+  "next_step": "REFLUX RAG FATTO (rebuild HARD esclusivo ok: INDICE_CAMMINO indicizzato, 0 da _ARCHIVIO, EP_N2 risponde). FIX: rag_update_exclusive/rag_recover ora fermano ANCHE watcher.py (combatteva il rebuild dopo i 287 file Obsidian). Dashboard riavviata (5173 ok). Grafo Obsidian: da 'zone' a ecosistema (vault_intersect premia cross-dominio: 44% legami cross). RESTA: push (terminale reale/salva). PROSSIMO LAVORO: PASSO 1 produzione Nina = animatic pilota EP_N2_01 (5 key-image) + voice-test (PRODUZIONE_NINA.md). Aperti: UPS hardware, API key Semantic Scholar, chunking per heading.",
   "session_count": 86,
   "pillars": {
     "V32": {
@@ -113,5 +113,6 @@
     "API_SERVER": "pronto — python api_server.py (localhost:5001)",
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
-  }
+  },
+  "last_action": "Modifica a DA_FARE_FATTO.md"
 }

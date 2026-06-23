@@ -79,8 +79,12 @@
       escludeva `_ARCHIVIO`/`_PROPOSTI` → avrebbe re-indicizzato gli EP_AV archiviati + le proposte. Fix in
       `rag_engine._is_excluded` (EXCLUDE_DIR_NAMES). PIETRE.md rigenerato (EP_N2-only). Pietre ⟡2=Automazione
       coerente ovunque (l'incoerenza era nei vecchi EP_AV, risolta). FATTI EP_N2 grounded (RAG stack, ±0,019). Commit `c1c67c02`.
-  - [ ] **⚠ REFLUX RAG = azione TUA (admin):** `! powershell -ExecutionPolicy Bypass -File SERVICES\rag_update_exclusive.ps1`
-        (auto-UAC; rebuild HARD esclusivo → toglie i chunk EP_AV archiviati, aggiunge INDICE_CAMMINO/PRODUZIONE). Non eseguibile da shell non-admin (API elevata).
+  - [✓] **REFLUX RAG fatto** (23/06): rebuild HARD esclusivo riuscito (reset fisico 10:46, API su 10:49).
+        Verificato: `INDICE_CAMMINO` indicizzato (3 hit), query "la bambina e la giuntura" → canone `EP_N2_10`, **0 risultati da `_ARCHIVIO`**.
+  - [✓] **BUG: il watcher combatteva il rebuild** — il 1° tentativo era fallito (watcher.py vedeva i 287 file Obsidian → incrementale gigante, 52k delete label-fantasma, crash mid-write, search 500). FIX: `rag_update_exclusive.ps1`+`rag_recover.ps1` ora fermano ANCHE watcher.py (e lo riavviano). Commit `7c371655`.
+- [✓] **Dashboard riavviata** (5173 era giù): `pnpm dev` → HTTP 200, API 200. Sito di nuovo raggiungibile.
+- [✓] **Obsidian sistemato**: archiviati esclusi dai tool del vault (ecosystem_bridge/wiki_index/fix_titoli/setup_obsidian), 13 archiviati resi inerti, INDICE_CAMMINO/PRODUZIONE intessuti. Commit repo `e358b2ee` · MENTE `76682e7`.
+- [✓] **Grafo "a zone" → ECOSISTEMA** (`496e96d9`): `vault_intersect` ora premia i ponti cross-dominio (era muri stesso-dominio) + ≥2 ponti garantiti/nota → **44% legami cross-dominio** (era a zone), 3 isolate. MENTE `ba0bb05`.
 - [✓] **Step 4/6 — Continuità esplicita**: verificata in tutti i 15 EP_N2 («Dove siamo» + Open loop presenti, catena integra).
 - [✓] **Step 5/6 — Audit STORIE** (framing canone): `canon_guard` scan su **177 episodi → 0 violazioni**
       "recuperato/EUR0". Grounding-deep dei dev-log → gira di notte via `night_audit` (Sonnet, automazione esistente).
