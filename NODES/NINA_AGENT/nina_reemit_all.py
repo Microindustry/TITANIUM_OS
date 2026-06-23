@@ -68,15 +68,19 @@ def canon_list() -> list[dict]:
     return out
 
 
-def archive_current(ep_id: str, ts: str) -> int:
-    """Sposta la versione attuale dell'episodio (canone + MENTE) in _ARCHIVIO/reemit_<ts>/.
-    Additivo: l'originale resta come origine, escluso dal RAG. Ritorna quanti file mossi."""
+def archive_old_versions(ep_id: str, keep_name: str, ts: str) -> int:
+    """Archivia le VECCHIE versioni di un episodio (canone + MENTE) DOPO che la nuova e'
+    stata scritta: sposta tutti i file dell'id TRANNE 'keep_name' (la nuova) in
+    _ARCHIVIO/reemit_<ts>/. Cosi' un fallimento di generazione non perde mai il canone
+    (si archivia solo a successo avvenuto). Additivo, escluso dal RAG. Ritorna quanti mossi."""
     moved = 0
     for base in (AV_CE, AV_MENTE):
         if not base.exists():
             continue
+        dest_dir = AV_ARCH / f"reemit_{ts}" / base.name
         for f in base.glob(f"{ep_id}_*.md"):
-            dest_dir = AV_ARCH / f"reemit_{ts}" / base.name
+            if f.name == keep_name:
+                continue  # la nuova versione resta nel canone
             dest_dir.mkdir(parents=True, exist_ok=True)
             shutil.move(str(f), str(dest_dir / f.name))
             moved += 1
@@ -143,19 +147,21 @@ def run(only: set[int] | None = None, dry_run: bool = False, do_rag: bool = Fals
     for e in eps:
         meta = {"id": e["id"], "regione": e["regione"], "giro": e["giro"],
                 "casella": e["num"], "richiama": e["richiama"]}
-        moved = archive_current(e["id"], ts)
-        logger.info("[%s] archiviati %d file -> regenero (grounded)...", e["id"], moved)
+        # GENERA PRIMA (non tocchiamo il canone finche' non c'e' la nuova versione)
+        logger.info("[%s] regenero (grounded)...", e["id"])
         try:
             out = agent.generate(e["concetto"], meta, rag_query=e["concetto"], auto=True, require_grounding=True)
         except Exception as ex:
             out = None
             logger.warning("[%s] errore in generazione (%s) — proseguo col prossimo", e["id"], ex)
         if out:
+            # SOLO ORA archivia le vecchie versioni (tutte tranne quella appena scritta)
+            moved = archive_old_versions(e["id"], out.name, ts)
             ok += 1
-            logger.info("[%s] RE-EMESSO: %s", e["id"], out.name)
+            logger.info("[%s] RE-EMESSO: %s (archiviate %d vecchie)", e["id"], out.name, moved)
         else:
             skipped += 1
-            logger.warning("[%s] SALTATO (grounding insufficiente o errore) — la versione vecchia resta in _ARCHIVIO", e["id"])
+            logger.warning("[%s] SALTATO (grounding insufficiente o errore) — la versione ATTUALE resta nel canone", e["id"])
 
     rebuild_episodes([e["id"] for e in eps])
     if do_rag:

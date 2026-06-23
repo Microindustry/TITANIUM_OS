@@ -21,11 +21,28 @@ import sys
 import io
 import re
 import json
+import time
 import logging
 import urllib.request
 import urllib.parse
 from datetime import datetime
 from pathlib import Path
+
+
+def _retry(fn, attempts: int = 4, base: float = 2.0, what: str = "chiamata"):
+    """Esegue fn() ritentando su qualunque errore (API 500/overload, JSON invalido) con
+    backoff esponenziale. Dopo l'ultimo tentativo rilancia. Robustezza batch/notturna."""
+    last = None
+    for i in range(attempts):
+        try:
+            return fn()
+        except Exception as e:  # noqa: BLE001 — vogliamo ritentare anche su errori API
+            last = e
+            logging.getLogger("nina_agent").warning(
+                "%s tentativo %d/%d fallito (%s) — riprovo", what, i + 1, attempts, str(e)[:120])
+            if i < attempts - 1:
+                time.sleep(base * (2 ** i))
+    raise last if last else RuntimeError(f"{what}: fallito")
 
 if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
@@ -167,24 +184,20 @@ Progetta lo scheletro. Rispondi SOLO con questo JSON (valori in italiano, concre
   "aggancio_reale": "il nodo reale del sistema GENESIS/V32/MIMS che questo concetto rispecchia",
   "fatti_rag": ["3-5 FATTI atomici, grounded, che il RAG recupera secco (con numeri/decisioni se presenti)"]
 }}"""
-    # Retry: ogni tanto haiku non restituisce JSON valido (o lo tronca). Riprova alcune
-    # volte invece di abortire — cosi' un singolo intoppo non ferma un intero batch/notte.
-    last_err = None
-    for attempt in range(3):
-        try:
-            msg = client.messages.create(
-                model=MODEL_ARCH, max_tokens=1500, system=ARCH_SYSTEM,
-                messages=[{"role": "user", "content": user}],
-            )
-            txt = msg.content[0].text
-            m = re.search(r"\{.*\}", txt, re.DOTALL)
-            if not m:
-                raise ValueError("nessun JSON nello scheletro")
-            return json.loads(m.group(0))
-        except (ValueError, json.JSONDecodeError) as e:
-            last_err = e
-            logger.warning("stadio 1 tentativo %d/3 fallito (%s) — riprovo", attempt + 1, e)
-    raise ValueError(f"stadio 1: scheletro non valido dopo 3 tentativi ({last_err})")
+    # Retry con backoff: haiku ogni tanto non restituisce JSON valido (o lo tronca), e
+    # l'API puo' dare 500/overload transitori. Riprova invece di abortire — cosi' un
+    # singolo intoppo non ferma un intero batch/notte.
+    def _call():
+        msg = client.messages.create(
+            model=MODEL_ARCH, max_tokens=1500, system=ARCH_SYSTEM,
+            messages=[{"role": "user", "content": user}],
+        )
+        txt = msg.content[0].text
+        m = re.search(r"\{.*\}", txt, re.DOTALL)
+        if not m:
+            raise ValueError("nessun JSON nello scheletro")
+        return json.loads(m.group(0))
+    return _retry(_call, what="stadio 1 (architetto)")
 
 
 # ── STADIO 2 — SCRITTORE ──────────────────────────────────────────────────────
@@ -268,11 +281,13 @@ FORMATO OBBLIGATORIO (identico agli EP_N2_*):
 
 Lunghezza: 1100-1600 parole nei 3 atti. Prosa densa, dialoghi voiceabili, ZERO retorica."""
 
-    msg = client.messages.create(
-        model=MODEL_WRITER, max_tokens=4000, system=system,
-        messages=[{"role": "user", "content": user}],
-    )
-    return msg.content[0].text
+    def _call():
+        msg = client.messages.create(
+            model=MODEL_WRITER, max_tokens=4000, system=system,
+            messages=[{"role": "user", "content": user}],
+        )
+        return msg.content[0].text
+    return _retry(_call, what="stadio 2 (scrittore)")
 
 
 # ── ASSEMBLAGGIO + SALVATAGGIO ────────────────────────────────────────────────
