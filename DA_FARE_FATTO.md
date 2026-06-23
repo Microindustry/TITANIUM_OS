@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 42  23/06/2026  BLACKOUT: RAG recovery 2-livelli  Obsidian titoli/intersect](#sessione-42-23062026-blackout-rag-recovery-2-livelli-obsidian-titoliintersect)
   - [Sessione 41  22/06/2026  Watchdog ON  RAG self-heal  canone VULCAN/CNC corretto](#sessione-41-22062026-watchdog-on-rag-self-heal-canone-vulcancnc-corretto)
     - [Processo CONTENUTI  automazioni  grounding RAG alla fonte](#processo-contenuti-automazioni-grounding-rag-alla-fonte)
     - [Chiusura 41  Obsidian valorizzato, sistema verificato, Punto 0 predisposto](#chiusura-41-obsidian-valorizzato-sistema-verificato-punto-0-predisposto)
@@ -57,6 +58,37 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)
+
+*L'ultimo lavoro su Nina: filone unico, UNA SOLA VERITÀ sul RAG. Piano in `MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md` (6 step). Additivo, evolutivo, integrabile.*
+
+- [✓] **Step 1/6 — Canone unico = EP_N2.** I 13 vecchi `EP_AV_*` spostati in `S_AVVENTURA/_ARCHIVIO`
+      (additivo, NON cancellati: restano come origine) sia nel repo `CONTENT_ENGINE` sia nel vault `MENTE`.
+  - [✓] `avventuraMapData.ts`: le 7 Regioni ora puntano agli `EP_N2` (10/06/07/09/11/12/14), stato → `scritto`.
+  - [✓] `episodes.json`: purgate 13 voci EP_AV → rebuild (176 ep) + `storie_intersect` (879 legami, 0 isolati) + `storie_evoluzione`. Zero link strutturali residui verso EP_AV (solo prosa storica nei dev-log, lasciata).
+  - [✓] `build_episodes_json.py` NINA_SEED/FINANZA_SEED ripuliti dai seed morti. Potati 13 view json fantasma + view_index. **Build TS verde.**
+  - [✓] Commit isolato: repo `fb7f71cb` · MENTE `1cdedbd`.
+- [✓] **Step 2/6 — Ordinare il CAMMINO** (il "libro"): la catena open-loop era **già concatenata 1→15**
+      (numerazione EP_N2 = ordine caselle = ordine racconto; Pietre ⟡ in ordine pedagogico non numerico).
+      Creato `MONDO/INDICE_CAMMINO.md` (l'ordine in cui Nina ha camminato) + mirror MENTE. Resi espliciti i
+      2 open-loop soft (5→`EP_N2_06`, 6→`EP_N2_07`) + refresh content 05/06 in episodes.json. Commit repo `37fe55f0` · MENTE `7afa2a9`.
+- [✓] **Step 3/6 — Una sola verità sul RAG**: trovata la falla vera → il RAG indicizza MENTE ma **non**
+      escludeva `_ARCHIVIO`/`_PROPOSTI` → avrebbe re-indicizzato gli EP_AV archiviati + le proposte. Fix in
+      `rag_engine._is_excluded` (EXCLUDE_DIR_NAMES). PIETRE.md rigenerato (EP_N2-only). Pietre ⟡2=Automazione
+      coerente ovunque (l'incoerenza era nei vecchi EP_AV, risolta). FATTI EP_N2 grounded (RAG stack, ±0,019). Commit `c1c67c02`.
+  - [ ] **⚠ REFLUX RAG = azione TUA (admin):** `! powershell -ExecutionPolicy Bypass -File SERVICES\rag_update_exclusive.ps1`
+        (auto-UAC; rebuild HARD esclusivo → toglie i chunk EP_AV archiviati, aggiunge INDICE_CAMMINO/PRODUZIONE). Non eseguibile da shell non-admin (API elevata).
+- [✓] **Step 4/6 — Continuità esplicita**: verificata in tutti i 15 EP_N2 («Dove siamo» + Open loop presenti, catena integra).
+- [✓] **Step 5/6 — Audit STORIE** (framing canone): `canon_guard` scan su **177 episodi → 0 violazioni**
+      "recuperato/EUR0". Grounding-deep dei dev-log → gira di notte via `night_audit` (Sonnet, automazione esistente).
+- [✓] **Step 6/6 — Predisporre ANIMAZIONE + VOCE**: `MONDO/PRODUZIONE_NINA.md` (pilota `EP_N2_01`, animatic
+      dalle 5 key-image canoniche, regia voce dalla Character Bible, pipeline una-casella-alla-volta) + mirror MENTE. Commit repo `d95b3a0b` · MENTE `0ff6a17`.
+
+**→ ARCO NINA DEFINITIVA COMPLETO (6/6).** Commit repo sessione: `fb7f71cb`→`d95b3a0b`. Resta solo il reflux RAG (admin, sopra).
+**Push:** commit locali; il push va fatto dal terminale reale / via `salva` (memoria: push bloccato in sandbox).
 
 ---
 
