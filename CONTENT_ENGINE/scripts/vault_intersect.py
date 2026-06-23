@@ -34,7 +34,11 @@ _C_START = "<!-- COLLEGATI:start (auto, vault_intersect) -->"
 _C_END = "<!-- COLLEGATI:end -->"
 
 SIG = 30          # quanti termini compongono la "firma" di una nota
-DOMAIN_BONUS = 1.15   # legame stesso-dominio pesa un filo di piu' (cluster, non muro)
+# ECOSISTEMA non ZONE (#43): prima un bonus allo stesso-dominio costruiva muri attorno
+# a V32/MIMS/GENESIS/... -> il grafo veniva "a zone". Ora si premiano i PONTI cross-dominio
+# e se ne garantiscono alcuni per nota (principio Giuntura: ogni nota esce dal suo cluster).
+CROSS_BONUS   = 1.12   # un legame verso un ALTRO dominio pesa un filo di piu' (ponte > muro)
+CROSS_RESERVE = 2      # min. legami cross-dominio garantiti per nota (se esistono sopra soglia)
 
 # cartelle/note da NON toccare
 SKIP_DIRS = {"STORIE", ".obsidian", ".git", "_allegati"}
@@ -91,7 +95,7 @@ def term_freq(path: Path, text: str) -> collections.Counter:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--min-sim", type=float, default=0.06, help="soglia cosine per creare un legame")
+    ap.add_argument("--min-sim", type=float, default=0.05, help="soglia cosine per creare un legame")
     ap.add_argument("--max", type=int, default=8, help="max legami per nota")
     args = ap.parse_args()
 
@@ -143,21 +147,30 @@ def main():
 
     total = 0
     connesse = 0
+    cross_total = 0
     for i, n in enumerate(notes):
         sims = collections.defaultdict(float)
         for w, ww in n["sig"].items():
             for j, wj in postings[w]:
                 if j != i:
                     sims[j] += ww * wj
-        # bonus lieve se stesso dominio (cluster tematico, ma i cross restano)
+        # premia i ponti cross-dominio + riserva qualche slot ai migliori legami verso
+        # ALTRI domini, così ogni nota esce dal suo cluster (ecosistema, non zone).
         scored = []
         for j, s in sims.items():
-            if notes[j]["domain"] == n["domain"]:
-                s *= DOMAIN_BONUS
+            cross = notes[j]["domain"] != n["domain"]
+            s *= (CROSS_BONUS if cross else 1.0)
             if s >= args.min_sim:
-                scored.append((s, j))
+                scored.append((s, cross, j))
         scored.sort(key=lambda x: -x[0])
-        top = scored[:args.max]
+        cross_first = [t for t in scored if t[1]][:CROSS_RESERVE]   # i migliori ponti, garantiti
+        chosen = list(cross_first)
+        for t in scored:
+            if len(chosen) >= args.max:
+                break
+            if t not in chosen:
+                chosen.append(t)
+        top = [(s, j) for s, _c, j in sorted(chosen[:args.max], key=lambda x: -x[0])]
 
         righe = []
         for s, j in top:
@@ -168,6 +181,7 @@ def main():
             righe.append(f"- [[{o['stem']}|{o['title']}]] — *tema: {tema}*")
         if top:
             connesse += 1
+        cross_total += sum(1 for _s, j in top if notes[j]["domain"] != n["domain"])
         blocco = _C_START + "\n## Collegati\n" + ("\n".join(righe) if righe else "_nessun legame_") + "\n" + _C_END
 
         txt = n["txt"]
@@ -179,8 +193,9 @@ def main():
             n["path"].write_text(new, encoding="utf-8")
         total += len(top)
 
-    print(f"VAULT INTERSECT v2: {N} note di sapere · {total} legami · "
-          f"{connesse} connesse · {N - connesse} isolate (soglia {args.min_sim})")
+    pct = (100 * cross_total / total) if total else 0
+    print(f"VAULT INTERSECT v2: {N} note di sapere · {total} legami "
+          f"({cross_total} cross-dominio = {pct:.0f}%) · {connesse} connesse · {N - connesse} isolate (soglia {args.min_sim})")
     return 0
 
 
