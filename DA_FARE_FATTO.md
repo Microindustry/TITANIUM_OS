@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 44  24/06/2026  Nina copre la mappa (50 ep)  RAG resuscitato  vetrina riallineata](#sessione-44-24062026-nina-copre-la-mappa-50-ep-rag-resuscitato-vetrina-riallineata)
   - [Sessione 43  23/06/2026 (ULTRACODE)  NINA DEFINITIVA (canone unico EP_N2)](#sessione-43-23062026-ultracode-nina-definitiva-canone-unico-epn2)
     - [PROSSIMA SESSIONE 44  si riparte da qui](#prossima-sessione-44-si-riparte-da-qui)
   - [Sessione 42  23/06/2026  BLACKOUT: RAG recovery 2-livelli  Obsidian titoli/intersect](#sessione-42-23062026-blackout-rag-recovery-2-livelli-obsidian-titoliintersect)
@@ -76,7 +77,10 @@
 - [✓] **NINA COPRE LA MAPPA — 50 episodi EP_N2.** Driver `nina_map_cover.py`: 31 concetti DISTINTI della mappa (Graphify, RETE, t-SNE, orchestratore, watcher…) → 31 nuovi episodi grounded auto-canone (+3 dal loop nativo). ⟡0→⟡7 in ampiezza. Build verde. Commit copertura nel blocco episodi.
 - [✓] **Poster pilota EP_N2_01** (Claude Design): title-card A3 HTML/SVG → PNG (headless Chrome). La porta + la Giuntura. *(no AI-image gen in ambiente: design grafico, non scena dipinta.)*
 - [✓] **Audit struttura + vetrina riallineata**: l'albero su `README.md` pubblico (github.com/Microindustry) mostrava 8 nodi su 15 reali → aggiornato a 15 (+ CORE/SERVICES/_VAULT) + `ECOSYSTEM_MANIFEST` tabella nodi. Commit `06126ee3`. Struttura cartelle sana (niente deriva di posizioni); cresciuta, era la MAPPA indietro.
-- [ ] **Da decidere con Matteo (svegli, non di notte):** gitignore di `DATA/views/` (298 file auto-gen tracciati) + `logs/`; raggruppare/indicizzare `AUTOMATIONS/core` (~30 script piatti); pulire `INBOX/` (brief vecchi); irrobustire il resolver YouTube del watcher.
+- [✓] **(mattino 24/06) STORIE: "nina rag e nina 0 sembrano uguali"** (Matteo) → reso inequivocabile: giorno 0 = "i 50 DEFINITIVI", RAG Nina = "l'ARCHIVIO (non gli episodi)", versioni re-emit marcate "SUPERATE (stessi titoli)". Si rimandano a vicenda. Commit `9ecbc03a`.
+- [✓] **(mattino) Stabilità sistema**: API morta di notte → riavviata; watchdog confermato attivo (guarda l'API); ripuliti 3 istanze api_server → 1.
+- [✓] **(mattino) Resolver YouTube watcher FIXATO** (weakness #3): regex robusto (canonical/externalId, niente fallback cieco) + RSS con UA browser (lo UA watcher dava 404). Verificato: 15 video reali di Simone Rizzo → **il sistema ora pesca le sue novità** (temi: GLM 5.2/modelli cinesi open-source, big tech in perdita sull'AI, AI predittiva). Commit `fa4b0997`.
+- [ ] **Da decidere con Matteo (svegli, non di notte):** gitignore di `DATA/views/` (298 file auto-gen tracciati) + `logs/`; raggruppare/indicizzare `AUTOMATIONS/core` (~30 script piatti); pulire `INBOX/` (brief vecchi); **doppio watchdog** (2 istanze) da ridurre a 1.
 - [💡] Candidato RAG: implementare NOI il recupero **WAL→HNSW commit** contro 0.5.23 (più chirurgico di `--drop-hnsw`).
 
 ---
