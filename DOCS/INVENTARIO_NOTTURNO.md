@@ -20,6 +20,52 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-06-24 · 40 commit
+- `e642fa8e` auto: night_audit - cartella clinica 24/06/2026
+- `61fe20c5` auto: story_agent - episodi generati 24/06/2026
+- `643cca74` content(nina): 4 script reel stile Simone Rizzo — l'AI spiegata come a un bambino (sess.#44)
+- `9ec8f55d` docs(nina): catalogo poster del mondo (pilota + 8 regioni + mappa-mondo) (sess.#44)
+- `dfbb2712` docs(nina): rigenerato PIETRE.md — 50 EP_N2 indicizzati per Pietra (sess.#44)
+- `d9ce8dbd` design(nina): poster MAPPA-MONDO — il cammino ⟡0→⟡7 in una tavola (sess.#44)
+- `b3092194` docs(nina): verifica qualità batch copertura-mappa — 31 ep OK, 0 violazioni (sess.#44)
+- `41e6a548` design(nina): collana 8 card-Regione (Pietre ⟡0→⟡7) — il mondo come gioco (sess.#44)
+- `3edcf2c6` chore: changelog auto + archivio reemit EP_N2 (origine, additivo) (sess.#44)
+- `ea14c83a` fix(nina): robustezza generatore — _retry backoff su API/JSON (battle-tested batch #44)
+- `e798d7ef` chore(data): sweep view mirrors + stati auto-generati (sess.#44)
+- `18bc9808` chore(salva): chiusura sessione #44 — bussola + STATE + RIAVVIO
+- `773da908` design(nina): poster pilota EP_N2_01 "La Bambina che Chiedeva Perche" (sess.#44)
+- `ca919d9f` content(nina): copertura mappa — 31 concetti distinti → 50 episodi EP_N2 (sess.#44)
+- `06126ee3` docs(map): vetrina pubblica + manifest ai 15 nodi reali (sess.#44)
+- `f30c3582` feat(watcher+nina): traccia Simone Rizzo (tier 1 YT) + driver copertura-mappa (sess.#44)
+- `b488df17` fix(rag-recover): uccidi il commit-leak (>15GB) PRIMA di sondare (auto-hardening sess.#44)
+- `19749906` feat(dashboard): 3 voci Storie a livello principale (Sistema · Nina archivio · Nina dal giorno 0)
+- `2b7d8c00` feat(nina): EP_N2_01 riscritto come vero inizio + lettore archiviati (sess.#44)
+- `64b09b10` fix(storie): RAG Nina archiviati visibili — proxy /api/nina + id archivio (sess.#44)
+- `36bf46ed` feat(storie): separa RAG Nina (solo archiviati) da Nina dal giorno 0 (nuovi e definitivi) (sess.#44)
+- `dc5d47c9` feat(storie): Sistema mostra tutto (anche bozze/AUTO), RAG Nina include gli archiviati, giorno 0 col cammino (sess.#44)
+- `e53e570b` content(nina): 16 episodi RI-EMESSI dal vero (grounding obbligatorio) + originali archiviati (sess.#44)
+- `e2df5674` fix(nina): robustezza generatore — retry architetto, no-crash batch/loop, FATTI sempre densi (sess.#44)
+- `699fe12f` feat(nina): grounding OBBLIGATORIO + re-emit di tutti gli episodi (sess.#44)
+- `5db8402d` feat(nina): 'Nina dal giorno 0' rifatta = documento fondativo dal vero; RAG Nina = tutti gli episodi (sess.#44)
+- `f5bcc563` feat(storie): voci sidebar — Storie di Sistema · RAG Nina · Nina dal giorno 0 (sess.#44)
+- `9bb1c399` feat(storie): selettore Sistema|Nina + pannello RAG Nina + Nina dal giorno 0 (sess.#44)
+- `4b66e31e` feat(nina): generazione AUTOMATICA definitiva — niente _PROPOSTI, loop RAG dai semi archiviati (sess.#44)
+- `46b05c51` chore(salva): chiusura sessione #43 — Nina definitiva, RAG pulito, grafo ecosistema; animatic in pausa
+- `4683b91d` feat(obsidian): più ponti — meno zone (sess.#43)
+- `608b965d` chore(salva): reflux RAG fatto + dashboard su + grafo ecosistema (sess.#43)
+- `496e96d9` feat(obsidian): ecosistema non zone — vault_intersect premia i ponti cross-dominio (sess.#43)
+- `7c371655` fix(rag): l'accesso esclusivo ferma ANCHE watcher.py (sess.#43)
+- `e358b2ee` fix(obsidian): escludi _ARCHIVIO/_PROPOSTI dai tool del vault (sess.#43)
+- `9cd6e5ba` chore(salva): bussola + STATE — arco NINA DEFINITIVA 6/6 (sess.#43)
+- `d95b3a0b` feat(nina): kit di produzione animazione+voce (sess.#43, step 6/6)
+- `c1c67c02` fix(rag): escludi _ARCHIVIO/_PROPOSTI dall'indice — una sola verità (sess.#43, step 3/6)
+- `37fe55f0` feat(nina): indice-cammino canonico + open-loop espliciti (sess.#43, step 2/6)
+- `fb7f71cb` feat(nina): canone unico EP_N2 — archiviati i vecchi EP_AV (sess.#43, step 1/6)
+
+_episodi: 248 · critiche aperte: 31 (68 risolte) · RAG: 34158 chunk_
+
+
+
 ## 2026-06-23 · 8 commit
 - `a114aba8` auto: night_audit - cartella clinica 23/06/2026
 - `40cf1b0b` auto: story_agent - episodi generati 23/06/2026
