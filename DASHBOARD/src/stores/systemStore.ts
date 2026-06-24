@@ -44,6 +44,15 @@ export const useUIStore = create<UIState>()(
     {
       name: "titanium_ui_v3",
       partialize: (s) => ({ view: s.view, sidebarCollapsed: s.sidebarCollapsed, theme: s.theme }),
+      // Deep-link via hash: localhost:5173/#critiche apre direttamente quella view
+      // (sovrascrive la view persistita). Serve per screenshottare/condividere una
+      // view precisa headless (dash_shot) senza dipendere dal localStorage. Guardato:
+      // solo token plausibili, no-op fuori dal browser.
+      onRehydrateStorage: () => (state) => {
+        if (typeof window === "undefined" || !state) return;
+        const h = window.location.hash.replace(/^#/, "").trim();
+        if (h && /^[a-z0-9-]+$/.test(h)) state.setView(h as ViewMode);
+      },
     }
   )
 );

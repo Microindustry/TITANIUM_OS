@@ -124,8 +124,18 @@ def parse_bussola() -> list[dict]:
     Deterministico (niente LLM): la bussola e' la fonte, qui la rendiamo struttura."""
     if not BUSSOLA.exists():
         return []
-    todos, sessione = [], ""
+    todos, sessione, in_toc = [], "", False
     for raw in BUSSOLA.read_text(encoding="utf-8", errors="replace").splitlines():
+        # Salta il blocco indice (<!-- TOC --> ... <!-- /TOC -->): sono link
+        # markdown '- [titolo](#ancora)' che il regex scambierebbe per todo
+        # (glyph=titolo, testo='(#ancora)') gonfiando il conteggio "da fare".
+        low = raw.strip().lower()
+        if low.startswith("<!-- toc"):
+            in_toc = True; continue
+        if low.startswith("<!-- /toc"):
+            in_toc = False; continue
+        if in_toc:
+            continue
         ms = _BUSSOLA_SESS.match(raw)
         if ms:
             sessione = ms.group(1).strip()
@@ -137,6 +147,9 @@ def parse_bussola() -> list[dict]:
         testo = m.group(2).strip()
         # salta le righe di legenda (es. "[✓] fatto · [◐] in corso ...")
         if not testo or testo.lower().startswith(("fatto", "in corso", "da fare", "non fatto", "idea")):
+            continue
+        # guardia anti-TOC residua: link-ancora '(#...)' sfuggiti al blocco -> non sono todo
+        if testo.startswith("(#"):
             continue
         stato = _BUSSOLA_STATO.get(glyph, "da_fare")
         todos.append({
