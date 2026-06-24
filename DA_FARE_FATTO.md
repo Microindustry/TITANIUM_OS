@@ -94,9 +94,21 @@ heading + backup snapshot chroma_db in _VAULT/BACKUPS".** Fatto, additivo, stack
   (vault_intersect): ponte doc→chunk complementare al semantico. Flag `--linkgraph` / `--no-graph`. Linkgraph
   rigenerato a fine `build_index` (nightly) + gitignored (derivato). **Testato end-to-end su CPU** (zero contesa
   GPU con l'API): nessun crash, espansione conferma +8 candidati dai link, top-5 invariato/migliorabile.
-- [ ] **Migrazione totale del corpus al nuovo chunking** → rebuild **deliberato a GPU libera (API giù)**:
-  `python NODES/MENTE_RAG/rag_engine.py --rebuild` (oppure `--rebuild-hard`). Da fare quando Matteo può.
-- [◐] Commit + push del lavoro RAG (engine v4.1+v4.2 + night job + gitignore).
+- [✓] **Migrazione totale ESEGUITA** (rebuild CPU ~15 min, zero contesa GPU): nuovo chunking
+  heading-aware applicato a tutto + `_ARCHIVIO` escluso + **divergenza riallineata** nei DATI
+  (semantico 24344 ≈ bm25 24343; era 30602≠34151). Chunk 30602→24344 (archivio fuori + heading
+  meno ridondante). Linkgraph 478 note/5329 archi.
+- [✗→auto] **HNSW da rigenerare**: `--rebuild` (reset-per-id, l'unico API-up-safe) ha lasciato
+  label-fantasma (KeyError np.uint64 su alcune query) — il noto limite chromadb 0.5.23 che
+  `--rebuild-hard`/`--drop-hnsw` cura, ma serve l'accesso esclusivo (API giù = elevazione).
+  **I DATI sono corretti**, manca solo rigenerare lo spazio-label HNSW dagli embedding in sqlite.
+  → Cura: `SERVICES\rag_recover.ps1` (auto-eleva, L1 drop-hnsw = no ri-embed, riavvia API).
+  Gira **già da solo a inizio night_research stanotte** → auto-heal garantito.
+- [✓] **`_DA_ORDINARE` → `_ARCHIVIO`** (richiesta Matteo "sistema le cose al suo posto"): era
+  archivio NotebookLM **già smistato** il 20/06 (canone V6 superato) ma **indicizzato per errore**
+  nel canone (usciva top-4 nelle ricerche MIMS/V32). Rinominato → rientra in EXCLUDE_DIR_NAMES,
+  fuori dal RAG, resta in Obsidian consultabile. Wikilink-safe. Commit MENTE `b5cb18f` (107 rename).
+- [◐] Commit + push del lavoro RAG (engine v4.1+v4.2 + night job + gitignore + doc esclusione).
 
 > **Fonti ricerca**: [RAG Chunking 2026 Playbook](https://www.digitalapplied.com/blog/rag-chunking-strategies-2026-retrieval-quality-playbook) ·
 > [Anthropic Contextual Retrieval](https://medium.com/aiguys/the-state-of-rag-2026-from-vibe-checking-to-reasoning-cee536ae3f02) ·

@@ -133,8 +133,11 @@ SUPPORTED_EXT  = {".md", ".txt", ".py", ".json"}
 # il digest notturno la sintetizza separatamente. Path relativi a MENTE_DIR.
 EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),)
 
-# Cartelle di staging/archivio episodi: NON sono canone (una sola verità sul RAG).
-# _ARCHIVIO = versioni vecchie tenute come origine (es. i vecchi EP_AV, sess.#43);
+# Cartelle di staging/archivio: NON sono canone (una sola verità sul RAG). Match a
+# QUALSIASI livello del path.
+# _ARCHIVIO = versioni vecchie/superate tenute come origine: i vecchi EP_AV (sess.#43)
+#   e l'archivio fonti NotebookLM ex-_DA_ORDINARE (rinominato 24/06: canone V6 superato,
+#   numeri parziali — vedi MENTE/_ARCHIVIO/_SMISTAMENTO.md). Restano in Obsidian, fuori canone.
 # _PROPOSTI = proposte del generatore Nina da validare. Indicizzarle creerebbe
 # duplicati/divergenze in retrieval. Stessa convenzione di build_episodes_json (part "_*").
 EXCLUDE_DIR_NAMES = {"_ARCHIVIO", "_PROPOSTI"}
