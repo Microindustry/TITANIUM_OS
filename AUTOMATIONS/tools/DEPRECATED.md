@@ -28,25 +28,26 @@ Tutti **superati** dai due registrar portabili sopra. **NB (24/06, sess.#45):** 
 più hardcoded `benen` — de-hardcodati in place (root da `$PSScriptRoot`/`%~dp0`, utente da
 `$env:USERNAME`/`%USERNAME%`, PC da `%COMPUTERNAME%`), quindi ora **girerebbero** su qualsiasi
 macchina. Restano comunque **ridondanti** con `register_night_tasks.ps1` (la fonte unica): tenerli
-crea il rischio di registrare task in conflitto. Raccomandazione invariata: **rimuovere quando deciso**.
+crea il rischio di registrare task in conflitto.
 
-| Script | Stato | Superato da | Raccomandazione |
-|--------|-------|-------------|-----------------|
-| `set_tasks_hl.ps1` | de-hardcodato #45, portabile | `register_night_tasks.ps1` | **Rimuovere** (ridondante) |
-| `SETUP_ADMIN_COMPLETE.ps1` | de-hardcodato #45, portabile | `register_night_tasks.ps1` + `register_watchdog.ps1` | **Rimuovere** (ridondante) |
-| `fix_tasks_admin.ps1` | de-hardcodato #45, portabile | `register_night_tasks.ps1` (TI_FineTune) | **Rimuovere** (ridondante) |
-| `optimize_windows_admin.bat` | de-hardcodato #45, portabile | `register_night_tasks.ps1` + SETUP_ADMIN.bat | **Rimuovere** (ridondante) |
-| `FIX_ADMIN_TASKS.bat` | de-hardcodato #45, portabile | `register_night_tasks.ps1` | **Rimuovere** (ridondante) |
-| `../../START_GETAC.bat` (root) | Launcher Getac (benen) | `START_LOGIN.bat` (fisso) | Rimuovere o archiviare se il Getac non si usa più |
+**✅ RIMOSSI #45 (24/06):** i 5 registrar legacy sono stati eliminati con `git rm`
+(restano recuperabili dalla history). La fonte unica per i task notturni è ora
+`register_night_tasks.ps1` (+ `register_watchdog.ps1`). Tabella storica:
 
-### Come rimuoverli (quando decidi)
+| Script | Stato | Superato da |
+|--------|-------|-------------|
+| `set_tasks_hl.ps1` | 🗑️ rimosso #45 | `register_night_tasks.ps1` |
+| `SETUP_ADMIN_COMPLETE.ps1` | 🗑️ rimosso #45 | `register_night_tasks.ps1` + `register_watchdog.ps1` |
+| `fix_tasks_admin.ps1` | 🗑️ rimosso #45 | `register_night_tasks.ps1` (TI_FineTune) |
+| `optimize_windows_admin.bat` | 🗑️ rimosso #45 | `register_night_tasks.ps1` + SETUP_ADMIN.bat |
+| `FIX_ADMIN_TASKS.bat` | 🗑️ rimosso #45 | `register_night_tasks.ps1` |
+| `../../START_GETAC.bat` (root) | ancora presente | `START_LOGIN.bat` (fisso) — rimuovere/archiviare se il Getac non si usa più |
+
+### Recuperarli (se mai servissero)
 
 ```powershell
-# dalla cartella tools\ — git rm così resta nella history e si può recuperare
-git rm set_tasks_hl.ps1 SETUP_ADMIN_COMPLETE.ps1 fix_tasks_admin.ps1 `
-       optimize_windows_admin.bat FIX_ADMIN_TASKS.bat
-git rm ..\..\START_GETAC.bat   # opzionale, solo se molli il Getac
-git commit -m "chore(tools): rimuovo registrar legacy hardcoded benen (superati dai portabili)"
+# sono nella git history: ripristina un file da prima della rimozione (#45, commit precedente a HEAD)
+git checkout <commit>~1 -- AUTOMATIONS/tools/set_tasks_hl.ps1
 ```
 
 ## ✅ Avvio ecosistema al login — RISOLTO (nessun gap)
