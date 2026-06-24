@@ -2,7 +2,7 @@
 # Guarda MICROINDUSTRY\MENTE\ in background (path dinamico via Path.home())
 # Quando un file cambia -> POST /api/scan + rag-rebuild automatico
 # Output: DATA/mente_digest.json aggiornato + ChromaDB aggiornato
-# Avvio: incluso in START_GETAC.bat / Task Scheduler
+# Avvio: incluso in START_LOGIN.bat (auto al login) / Task Scheduler
 
 import os
 import sys

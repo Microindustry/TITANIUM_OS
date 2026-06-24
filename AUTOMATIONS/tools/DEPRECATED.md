@@ -41,7 +41,7 @@ crea il rischio di registrare task in conflitto.
 | `fix_tasks_admin.ps1` | 🗑️ rimosso #45 | `register_night_tasks.ps1` (TI_FineTune) |
 | `optimize_windows_admin.bat` | 🗑️ rimosso #45 | `register_night_tasks.ps1` + SETUP_ADMIN.bat |
 | `FIX_ADMIN_TASKS.bat` | 🗑️ rimosso #45 | `register_night_tasks.ps1` |
-| `../../START_GETAC.bat` (root) | ancora presente | `START_LOGIN.bat` (fisso) — rimuovere/archiviare se il Getac non si usa più |
+| `../../START_GETAC.bat` (root) | 🗑️ rimosso #45 | `START_LOGIN.bat` (fisso, auto al login via `shell:startup\TITANIUM_OS.lnk`) |
 
 ### Recuperarli (se mai servissero)
 
