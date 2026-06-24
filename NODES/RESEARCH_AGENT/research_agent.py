@@ -1,8 +1,12 @@
-# research_agent.py | TITANIUM_OS / NODES / RESEARCH_AGENT | v1.2 | 2026-06-23
+# research_agent.py | TITANIUM_OS / NODES / RESEARCH_AGENT | v1.3 | 2026-06-24
 # Trova paper, tesi, libri tecnici dal web e li ingesta in MENTE/ → RAG
 # v1.2: resilienza (#42) — backoff esponenziale sui 429/503 (Semantic Scholar
 #       rate-limita di notte -> 0 risultati), API-key opzionale, guardia globale
 #       che logga JSON e continua invece di abortire l'intera catena notturna.
+# v1.3: query broadening (#44) — su 0 risultati riprova UNA volta con la query
+#       allargata ai 2 termini chiave; summary JSON per-sorgente (sources_ok/
+#       empty) che rende misurabile l'esito notturno. Chiude le critiche RICERCA
+#       'query troppo specifica -> 0 risultati' e 'danno non misurabile'.
 
 import os
 import re
@@ -512,6 +516,29 @@ def slug(text: str) -> str:
     return re.sub(r'[\s-]+', '_', s)[:60]
 
 
+_STOPWORDS = {
+    "the", "and", "for", "with", "from", "una", "che", "per", "con", "del",
+    "della", "high", "based", "using", "study", "analysis", "review",
+}
+
+
+def broaden_query(query: str) -> str:
+    """Riduce una query lunga/composta ai 2 termini tecnici piu' lunghi.
+    Le sorgenti (OpenAlex/Semantic Scholar) tornano 0 risultati su stringhe
+    troppo specifiche tipo 'CNC spindle ER20 runout thermal accuracy': non e'
+    assenza di letteratura, e' la query troppo stretta. Riprovare con
+    'spindle thermal' / 'runout accuracy' pesca. Torna '' se non c'e' nulla da
+    allargare (gia' <=2 parole significative). (#44, critiche AUD-9787476b2c/7878e7be05)"""
+    words = [w for w in re.findall(r"[a-zA-Zàèéìòù0-9]+", query)
+             if len(w) > 3 and w.lower() not in _STOPWORDS]
+    if len(words) <= 2:
+        return ""
+    top = sorted(words, key=len, reverse=True)[:2]
+    # mantieni l'ordine originale per leggibilita'
+    broad = " ".join(w for w in words if w in top)
+    return broad if broad.lower() != query.strip().lower() else ""
+
+
 def relevance_score(result: dict, query: str) -> float:
     """Frazione di keyword (>3 char) della query presenti in titolo+abstract.
     Gate anti garbage-in: openalex/semantic_scholar a volte restituiscono paper
@@ -648,25 +675,49 @@ def main():
     logger.info("query: '%s' | dominio: '%s' | sorgenti: %s | max %d",
                 args.query, args.domain or "generale", ", ".join(selected), args.max)
 
-    all_results = []
-    for src in selected:
-        logger.info("Ricerca su %s...", src)
-        # Rete difensiva: una sorgente che esplode (bug, timeout, HTML cambiato)
-        # NON deve abortire le altre ne' la catena notturna. Logga JSON e continua.
-        try:
-            results = SOURCES[src](args.query, args.max)
-        except Exception as ex:
-            logger.error(json.dumps({
-                "event": "source_crash", "source": src, "query": args.query,
-                "error": str(ex), "traceback": traceback.format_exc(),
-            }, ensure_ascii=False))
-            results = []
-        logger.info("%s -> %d risultati", src, len(results))
-        all_results.extend(results)
-        time.sleep(1)
+    def _search_pass(q: str) -> tuple[list[dict], dict[str, int]]:
+        """Interroga tutte le sorgenti per la query q. Torna (risultati, tally
+        per-sorgente). Rete difensiva: una sorgente che esplode NON abortisce le
+        altre ne' la catena notturna — logga JSON e continua."""
+        out, tally = [], {}
+        for src in selected:
+            logger.info("Ricerca su %s...", src)
+            try:
+                results = SOURCES[src](q, args.max)
+            except Exception as ex:
+                logger.error(json.dumps({
+                    "event": "source_crash", "source": src, "query": q,
+                    "error": str(ex), "traceback": traceback.format_exc(),
+                }, ensure_ascii=False))
+                results = []
+            logger.info("%s -> %d risultati", src, len(results))
+            tally[src] = len(results)
+            out.extend(results)
+            time.sleep(1)
+        return out, tally
+
+    all_results, tally = _search_pass(args.query)
+
+    # Query broadening: se zero risultati su una query specifica, riprova UNA
+    # volta con la versione allargata (2 termini chiave) prima di arrendersi.
+    if not all_results:
+        broad = broaden_query(args.query)
+        if broad:
+            logger.info("query broadened: '%s' -> '%s' (0 risultati sulla query stretta)",
+                        args.query, broad)
+            all_results, tally = _search_pass(broad)
+
+    # Summary diagnostico: rende MISURABILE l'esito notturno (sorgenti ok vs
+    # vuote) invece di una sequenza di '0 risultati' indistinguibili. (#44)
+    ok = sum(1 for n in tally.values() if n > 0)
+    logger.info(json.dumps({
+        "event": "search_summary", "query": args.query,
+        "sources_ok": ok, "sources_empty": len(tally) - ok,
+        "results_raw": len(all_results), "tally": tally,
+    }, ensure_ascii=False))
 
     if not all_results:
-        logger.warning("Nessun risultato trovato.")
+        logger.warning("Nessun risultato trovato (anche dopo broadening).")
         return
 
     seen = set()
