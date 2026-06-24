@@ -180,6 +180,11 @@ export function CriticheSection() {
   const done    = leaves.filter(l => l.status === "done").length;
   const pct     = leaves.length ? Math.round((done / leaves.length) * 100) : 0;
   const autoOpen = autoFindings.filter(f => (f.status || "open").toLowerCase() === "open").length;
+  // Scomposizione onesta del "da fare": 3 fonti distinte confluiscono in questa vista
+  // (canone manuale scritto a mano + auto-audit notturno + bussola). Mostrarle separate
+  // evita il numero unico opaco che confondeva (es. "33" = solo il canone manuale).
+  const canonOpen   = useMemo(() => getAllLeaves(CRITICHE_ROOT).filter(l => l.status === "active").length, []);
+  const bussolaOpen = bussola.filter(t => t.stato === "da_fare" || t.stato === "in_corso").length;
 
   const drillIn = (node: SkillNode) => { setStack(s => [...s, node]); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goBack  = () => setStack(s => s.length > 1 ? s.slice(0, -1) : s);
@@ -206,8 +211,23 @@ export function CriticheSection() {
               )}
             </div>
             <div className="flex items-end gap-1.5">
-              <span className="text-3xl font-black text-rose-300 tabular-nums">{active}</span>
-              <span className="text-slate-600 font-mono mb-0.5 text-sm">da fare</span>
+              <span className="text-3xl font-black text-rose-300 tabular-nums">{canonOpen + autoOpen + bussolaOpen}</span>
+              <span className="text-slate-600 font-mono mb-0.5 text-sm">da fare (3 fonti)</span>
+            </div>
+            {/* scomposizione per fonte — il totale mescola 3 liste diverse */}
+            <div className="flex items-center gap-2 mt-1.5 flex-wrap">
+              {[
+                { v: canonOpen,   l: "canone",  c: "text-rose-300/80",  t: "criticheData.ts — critiche scritte a mano" },
+                { v: autoOpen,    l: "audit",   c: "text-cyan-300/80",  t: "auto-audit notturno (night_audit) — cartella clinica viva" },
+                { v: bussolaOpen, l: "bussola", c: "text-pink-300/80",  t: "DA_FARE_FATTO.md — la scaletta condivisa" },
+              ].map(s => (
+                <span key={s.l} title={s.t}
+                      className="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded
+                                 bg-black/30 border border-white/5 font-mono text-[9px]">
+                  <span className={`font-bold tabular-nums ${s.c}`}>{s.v}</span>
+                  <span className="text-slate-500 uppercase tracking-wide">{s.l}</span>
+                </span>
+              ))}
             </div>
           </div>
           <div className="flex gap-4">
