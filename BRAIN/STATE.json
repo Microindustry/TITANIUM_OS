@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-24T16:01:59.647645",
+  "last_update": "2026-06-24T21:03:12.881202",
   "active_milestone": "Sessione #44 (24/06): NINA COPRE LA MAPPA — 50 episodi EP_N2. Driver nina_map_cover.py genera un episodio Nina per ogni concetto DISTINTO della mappa senza versione (31 fonte: Graphify/RETE/t-SNE/orchestratore/watcher/controllo) -> copertura in ampiezza ⟡0→⟡7, auto-canone grounded sul RAG. +3 dal loop nativo. RAG RESUSCITATO (corruzione HNSW + commit-leak 56GB liberato, --drop-hnsw). Menu Storie a 3 voci top-level. EP_N2_01 riscritto come vero inizio. Poster pilota (Claude Design). 2 rinforzi (rag_recover anti-commit-leak; chromadb-ops valutato e rifiutato). Vetrina pubblica README + ECOSYSTEM_MANIFEST riallineati ai 15 nodi reali (erano 8).",
   "next_step": "DA DECIDERE CON MATTEO (svegli): gitignore DATA/views(298 auto-gen)+logs; raggruppare/indicizzare AUTOMATIONS/core(~30 script piatti); pulire INBOX; irrobustire resolver YouTube watcher. Candidato RAG: implementare WAL→HNSW commit contro 0.5.23. Nina: 50 ep nel canone, mappa coperta -> prossimo naturale = animatic pilota EP_N2_01 (era in pausa) o verticali nuovi (FORGE saldatura, MIMS).",
-  "session_count": 91,
+  "session_count": 92,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-24T15:48:41.288912"
+      "last_activity": "2026-06-24T16:41:01.980686"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -121,5 +121,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Aggiornamento BRAIN/CLAUDE.md (CLAUDE.md)"
+  "last_action": "Lavoro su documento ASSOLUTO (EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md)"
 }

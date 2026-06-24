@@ -2,10 +2,12 @@
 # Setup completo sistema: auto-login + task RL Highest + ottimizzazioni Windows
 # Lanciato automaticamente con UAC elevation da Claude Code
 
-$LOG = "C:\Users\benen\TITANIUM_OS\TITANIUM_OS\DATA\logs\admin_setup.log"
-$TI  = "C:\Users\benen\TITANIUM_OS\TITANIUM_OS"
-$PY  = "C:\Users\benen\tools\python311\python.exe"
-$USER = "benen"
+# v2.1 (24/06): de-hardcodato - root da $PSScriptRoot, utente da $env:USERNAME
+$TI  = (Resolve-Path "$PSScriptRoot\..\..").Path
+$PY  = (Get-Command python -ErrorAction SilentlyContinue).Source
+if (-not $PY) { $PY = "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" }
+$USER = $env:USERNAME
+$LOG = "$TI\DATA\logs\admin_setup.log"
 
 function Log($msg, $color="White") {
     $ts = Get-Date -Format "HH:mm:ss"
@@ -18,21 +20,21 @@ New-Item -ItemType Directory -Path (Split-Path $LOG) -Force | Out-Null
 Log "=== TITANIUM_OS ADMIN SETUP ===" "Cyan"
 Log "Avviato: $(Get-Date)"
 
-# ─── 1. AUTO-LOGIN ─────────────────────────────────────────────────────────
+# --- 1. AUTO-LOGIN ---------------------------------------------------------
 Log ""
 Log "[1/5] CONFIGURAZIONE AUTO-LOGIN" "Cyan"
 
 $winlogon = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
 
 # Leggi password dal vault (se presente), altrimenti prompt
-$vaultEnv = "C:\Users\benen\TITANIUM_OS\_VAULT\KEYS\titanium_os.env"
+$vaultEnv = "$TI\_VAULT\KEYS\titanium_os.env"
 $winPass = ""
 if (Test-Path $vaultEnv) {
     $winPass = (Get-Content $vaultEnv | Where-Object { $_ -match "^WIN_PASSWORD=" }) -replace "^WIN_PASSWORD=",""
 }
 
 if (-not $winPass) {
-    $cred = $Host.UI.PromptForCredential("Auto-Login Setup", "Inserisci password Windows di benen:", $USER, "")
+    $cred = $Host.UI.PromptForCredential("Auto-Login Setup", "Inserisci password Windows di ${USER}:", $USER, "")
     if ($cred) { $winPass = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($cred.Password)) }
 }
 
@@ -41,15 +43,15 @@ if ($winPass) {
     Set-ItemProperty $winlogon "DefaultUserName"  $USER   -Type String
     Set-ItemProperty $winlogon "DefaultPassword"  $winPass -Type String
     Set-ItemProperty $winlogon "DefaultDomainName" $env:COMPUTERNAME -Type String
-    # Rimuovi DefaultPassword in chiaro dopo 30 sec usando LSA (più sicuro)
+    # Rimuovi DefaultPassword in chiaro dopo 30 sec usando LSA (piu sicuro)
     Log "Auto-login configurato per utente: $USER" "Green"
 } else {
     Log "Auto-login saltato (password non fornita)" "Yellow"
 }
 
-# ─── 2. TASK CON RUNLEVEL HIGHEST ──────────────────────────────────────────
+# --- 2. TASK CON RUNLEVEL HIGHEST ------------------------------------------
 Log ""
-Log "[2/5] TASK SCHEDULER — RunLevel Highest + batteria:OFF + wake:ON" "Cyan"
+Log "[2/5] TASK SCHEDULER - RunLevel Highest + batteria:OFF + wake:ON" "Cyan"
 
 $tasks = @(
     @{ name="TI_StoryAgent";    tr="$TI\NODES\STORY_AGENT\run_story_agent.bat";         sc="DAILY";  st="02:07" },
@@ -99,10 +101,10 @@ $old = @("\TITANIUM_OS\TITANIUM_NightPush","\TITANIUM_OS\TITANIUM_NightResearch"
          "\TITANIUM_OS\TITANIUM_DailyBrief","\TITANIUM_OS\TITANIUM_DeepFreeze",
          "\TITANIUM_OS\TITANIUM_Watchdog","TITANIUM_OS_StoryAgent","TITANIUM_StartEcosystem")
 foreach ($o in $old) {
-    schtasks /delete /tn $o /f 2>$null && Log "  eliminato: $o" "DarkGray"
+    schtasks /delete /tn $o /f 2>$null; if ($?) { Log "  eliminato: $o" "DarkGray" }
 }
 
-# ─── 3. OTTIMIZZAZIONI WINDOWS ─────────────────────────────────────────────
+# --- 3. OTTIMIZZAZIONI WINDOWS ---------------------------------------------
 Log ""
 Log "[3/5] OTTIMIZZAZIONI WINDOWS" "Cyan"
 
@@ -122,11 +124,11 @@ Log "  Coperchio chiuso su AC: niente" "Green"
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 0 /f | Out-Null
 Log "  Fast Startup: disabilitato" "Green"
 
-# Priorità di sfondo = normale (non rallentare processi notturni)
+# Priorita di sfondo = normale (non rallentare processi notturni)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v Win32PrioritySeparation /t REG_DWORD /d 24 /f | Out-Null
-Log "  Priorità background: bilanciata" "Green"
+Log "  Priorita background: bilanciata" "Green"
 
-# ─── 4. LOGGING CENTRALIZZATO ──────────────────────────────────────────────
+# --- 4. LOGGING CENTRALIZZATO ----------------------------------------------
 Log ""
 Log "[4/5] STRUTTURA LOG" "Cyan"
 
@@ -148,7 +150,7 @@ foreach ($lf in $logFiles) {
 }
 Log "  Log files inizializzati" "Green"
 
-# ─── 5. WATCHDOG COME SERVIZIO ─────────────────────────────────────────────
+# --- 5. WATCHDOG COME SERVIZIO ---------------------------------------------
 Log ""
 Log "[5/5] WATCHDOG" "Cyan"
 

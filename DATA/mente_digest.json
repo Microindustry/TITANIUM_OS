@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-24T06:26:19.231378",
+  "scanned_at": "2026-06-24T16:01:03.081735",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 767,
+  "total_files": 766,
   "files_read": 5,
-  "files_skipped": 762,
+  "files_skipped": 761,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.2,
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
@@ -162,14 +162,14 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 8.9,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 8.9,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
@@ -191,20 +191,6 @@
       "path": ".git\\objects\\pack\\pack-284c502b8dc98fc54d30b1bd4763e86f9d64eaf5.idx",
       "type": "idx",
       "size_kb": 99.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-284c502b8dc98fc54d30b1bd4763e86f9d64eaf5.pack",
-      "type": "pack",
-      "size_kb": 13026.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-284c502b8dc98fc54d30b1bd4763e86f9d64eaf5.rev",
-      "type": "rev",
-      "size_kb": 14.1,
       "readable": false,
       "extracts": {}
     },
@@ -251,16 +237,23 @@
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-d106ecf14ebe6dd161aed1ba080d808ee9090df5.pack",
-      "type": "pack",
-      "size_kb": 6413.8,
+      "path": ".git\\objects\\pack\\pack-d7b0a7f94062a665126c5659c3cabf6c86bed62d.idx",
+      "type": "idx",
+      "size_kb": 160.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-d106ecf14ebe6dd161aed1ba080d808ee9090df5.rev",
+      "path": ".git\\objects\\pack\\pack-d7b0a7f94062a665126c5659c3cabf6c86bed62d.pack",
+      "type": "pack",
+      "size_kb": 13663.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-d7b0a7f94062a665126c5659c3cabf6c86bed62d.rev",
       "type": "rev",
-      "size_kb": 8.8,
+      "size_kb": 22.9,
       "readable": false,
       "extracts": {}
     },
@@ -323,7 +316,7 @@
     {
       "path": ".obsidian\\workspace.json",
       "type": "json",
-      "size_kb": 7.2,
+      "size_kb": 6.9,
       "readable": false,
       "extracts": {}
     },
@@ -1259,7 +1252,7 @@
     {
       "path": "ASSOLUTO\\V8_DELTA.md",
       "type": "md",
-      "size_kb": 5.8,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
@@ -3115,7 +3108,7 @@
     {
       "path": "MIMS\\SCHEDA_PRODOTTO_MIMS_VULCAN.md",
       "type": "md",
-      "size_kb": 8.2,
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },

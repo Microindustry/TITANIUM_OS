@@ -1,6 +1,8 @@
-# set_tasks_hl.ps1 | TITANIUM_OS | v1.0 | 2026-05-29
-$TI  = "C:\Users\benen\TITANIUM_OS\TITANIUM_OS"
-$PY  = "C:\Users\benen\tools\python311\python.exe"
+# set_tasks_hl.ps1 | TITANIUM_OS | v1.1 | 2026-06-24
+# v1.1: de-hardcodato (no C:\Users\benen) - root da $PSScriptRoot, utente da $env:USERNAME
+$TI  = (Resolve-Path "$PSScriptRoot\..\..").Path
+$PY  = (Get-Command python -ErrorAction SilentlyContinue).Source
+if (-not $PY) { $PY = "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe" }
 $LOG = "$TI\DATA\logs\task_hl.log"
 "[$(Get-Date -F HH:mm:ss)] START" | Set-Content $LOG
 
@@ -11,7 +13,7 @@ $s = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
     -ExecutionTimeLimit (New-TimeSpan -Hours 10)
 
-$p = New-ScheduledTaskPrincipal -UserId "benen" -LogonType Interactive -RunLevel Highest
+$p = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive -RunLevel Highest
 
 $defs = @(
   @{n="TI_StoryAgent";    exe="$TI\NODES\STORY_AGENT\run_story_agent.bat"; arg=$null;                                  trigger=(New-ScheduledTaskTrigger -Daily -At "02:07")},
@@ -20,8 +22,8 @@ $defs = @(
   @{n="TI_DailyBrief";    exe=$PY;                                         arg="$TI\AUTOMATIONS\core\daily_brief.py";  trigger=(New-ScheduledTaskTrigger -Daily -At "07:30")},
   @{n="TI_DeepFreeze";    exe=$PY;                                         arg="$TI\AUTOMATIONS\core\deep_freeze.py";  trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "03:00")},
   @{n="TI_FineTune";      exe="$TI\AUTOMATIONS\core\night_finetune.bat";   arg=$null;                                  trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "01:00")},
-  @{n="TI_Watchdog";      exe=$PY;                                         arg="$TI\SERVICES\watchdog.py";             trigger=(New-ScheduledTaskTrigger -AtLogOn -User "benen")},
-  @{n="TI_StartEcosystem";exe="cmd.exe";                                   arg="/c `"$TI\START_LOGIN.bat`"";           trigger=(New-ScheduledTaskTrigger -AtLogOn -User "benen")}
+  @{n="TI_Watchdog";      exe=$PY;                                         arg="$TI\SERVICES\watchdog.py";             trigger=(New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME)},
+  @{n="TI_StartEcosystem";exe="cmd.exe";                                   arg="/c `"$TI\START_LOGIN.bat`"";           trigger=(New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME)}
 )
 
 foreach ($d in $defs) {

@@ -1,6 +1,8 @@
-# fix_tasks_admin.ps1 | TITANIUM_OS | v1.0 | 2026-05-29
+# fix_tasks_admin.ps1 | TITANIUM_OS | v1.1 | 2026-06-24
 # Rimuove restrizioni batteria e abilita WakeToRun su tutti i task TITANIUM
 # ESEGUIRE COME AMMINISTRATORE
+# v1.1: de-hardcodato (no C:\Users\benen) - root da $PSScriptRoot
+$TI = (Resolve-Path "$PSScriptRoot\..\..").Path
 
 $taskPaths = @(
     @{path="\TITANIUM_OS\"; name="TITANIUM_NightPush"},
@@ -22,7 +24,7 @@ foreach ($t in $taskPaths) {
             -StartWhenAvailable `
             -ExecutionTimeLimit (New-TimeSpan -Hours 6)
         Set-ScheduledTask -TaskPath $t.path -TaskName $t.name -Settings $settings | Out-Null
-        Write-Host "  [$($t.name)] OK — batteria:OFF  wake:ON" -ForegroundColor Green
+        Write-Host "  [$($t.name)] OK - batteria:OFF  wake:ON" -ForegroundColor Green
     } catch {
         Write-Host "  [$($t.name)] ERRORE: $_" -ForegroundColor Red
     }
@@ -31,7 +33,7 @@ foreach ($t in $taskPaths) {
 # Registra task fine-tuning settimanale (domenica 01:00)
 Write-Host "`n[ Fine-Tuning ] Registro task domenica 01:00..." -ForegroundColor Cyan
 try {
-    $action   = New-ScheduledTaskAction -Execute "C:\Users\benen\TITANIUM_OS\TITANIUM_OS\AUTOMATIONS\core\night_finetune.bat"
+    $action   = New-ScheduledTaskAction -Execute "$TI\AUTOMATIONS\core\night_finetune.bat"
     $trigger  = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "01:00"
     $settings2 = New-ScheduledTaskSettingsSet `
         -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries `
@@ -41,7 +43,7 @@ try {
         -TaskName "TITANIUM_FineTune" -TaskPath "\TITANIUM_OS\" `
         -Action $action -Trigger $trigger -Settings $settings2 `
         -RunLevel Highest -Force | Out-Null
-    Write-Host "  [TITANIUM_FineTune] OK — domenica 01:00" -ForegroundColor Green
+    Write-Host "  [TITANIUM_FineTune] OK - domenica 01:00" -ForegroundColor Green
 } catch {
     Write-Host "  [TITANIUM_FineTune] ERRORE: $_" -ForegroundColor Red
 }

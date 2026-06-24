@@ -22,18 +22,21 @@ la mappa e la raccomandazione.
 | `register_watchdog.ps1` | Registra `TI_Watchdog` (AtLogon, RunLevel Highest) | Portabile, supervisiona api_server + mente_watcher |
 | `../../SETUP_ADMIN.bat` (root) | 24/7 (no standby) + RDP + OpenSSH | **Pulito, machine-agnostic — tenere.** Non è hardcoded benen |
 
-## ⚠️ LEGACY (hardcoded `benen` / `DESKTOP-DIUB4EJ` — rotti su questa macchina `teo`)
+## ⚠️ LEGACY (ridondanti — superati dai registrar portabili)
 
-Tutti **superati** dai due registrar portabili sopra. Falliscono o registrano task
-verso path inesistenti (`C:\Users\benen\...`) se eseguiti sul fisso.
+Tutti **superati** dai due registrar portabili sopra. **NB (24/06, sess.#45):** non sono
+più hardcoded `benen` — de-hardcodati in place (root da `$PSScriptRoot`/`%~dp0`, utente da
+`$env:USERNAME`/`%USERNAME%`, PC da `%COMPUTERNAME%`), quindi ora **girerebbero** su qualsiasi
+macchina. Restano comunque **ridondanti** con `register_night_tasks.ps1` (la fonte unica): tenerli
+crea il rischio di registrare task in conflitto. Raccomandazione invariata: **rimuovere quando deciso**.
 
-| Script | Hardcoding | Superato da | Raccomandazione |
-|--------|-----------|-------------|-----------------|
-| `set_tasks_hl.ps1` | `C:\Users\benen`, UserId "benen" | `register_night_tasks.ps1` | **Rimuovere** |
-| `SETUP_ADMIN_COMPLETE.ps1` | `C:\Users\benen`, `$USER="benen"`, prompt password | `register_night_tasks.ps1` + `register_watchdog.ps1` | **Rimuovere** |
-| `fix_tasks_admin.ps1` | `C:\Users\benen\...\night_finetune.bat` | `register_night_tasks.ps1` (TI_FineTune) | **Rimuovere** |
-| `optimize_windows_admin.bat` | `DESKTOP-DIUB4EJ\benen`, `C:\Users\benen` | `register_night_tasks.ps1` + SETUP_ADMIN.bat | **Rimuovere** |
-| `FIX_ADMIN_TASKS.bat` | `/ru "benen"`, `C:\Users\benen` | `register_night_tasks.ps1` | **Rimuovere** |
+| Script | Stato | Superato da | Raccomandazione |
+|--------|-------|-------------|-----------------|
+| `set_tasks_hl.ps1` | de-hardcodato #45, portabile | `register_night_tasks.ps1` | **Rimuovere** (ridondante) |
+| `SETUP_ADMIN_COMPLETE.ps1` | de-hardcodato #45, portabile | `register_night_tasks.ps1` + `register_watchdog.ps1` | **Rimuovere** (ridondante) |
+| `fix_tasks_admin.ps1` | de-hardcodato #45, portabile | `register_night_tasks.ps1` (TI_FineTune) | **Rimuovere** (ridondante) |
+| `optimize_windows_admin.bat` | de-hardcodato #45, portabile | `register_night_tasks.ps1` + SETUP_ADMIN.bat | **Rimuovere** (ridondante) |
+| `FIX_ADMIN_TASKS.bat` | de-hardcodato #45, portabile | `register_night_tasks.ps1` | **Rimuovere** (ridondante) |
 | `../../START_GETAC.bat` (root) | Launcher Getac (benen) | `START_LOGIN.bat` (fisso) | Rimuovere o archiviare se il Getac non si usa più |
 
 ### Come rimuoverli (quando decidi)

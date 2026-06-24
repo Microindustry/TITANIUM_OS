@@ -587,11 +587,13 @@
 - [✓] **CLAUDE.md AGGIORNATO** (07/06) — v4.1.0: header + FILESYSTEM (struttura PIATTA
       `C:\Users\teo\TITANIUM_OS`) + tabella + `SETUP MACCHINA` con path REALI verificati
       (Python AppData, Node/gh Program Files, TI_ROOT/PYTHONPATH/MENTE_DIR). Getac→fisso, benen→teo.
-- [ ] **Path hardcoded `C:\Users\benen`** ⚠ (viola regola "MAI hardcode") in 6 file:
+- [✓] **Path hardcoded `C:\Users\benen`** ⚠ (viola regola "MAI hardcode") in 6 file:
       `AUTOMATIONS/tools/{FIX_ADMIN_TASKS.bat, fix_tasks_admin.ps1, optimize_windows_admin.bat,
-      SETUP_ADMIN_COMPLETE.ps1, set_tasks_hl.ps1}` + `migrate_to_new_pc.ps1`. De-hardcodare
-      via `_ti_paths.bat`. NB: le notturne girano comunque (TI_NightAudit @03:52 OK) → i task
-      attivi usano già il resolver portabile; questi script tools/ sono legacy.
+      SETUP_ADMIN_COMPLETE.ps1, set_tasks_hl.ps1}` + `migrate_to_new_pc.ps1`.
+      **FATTO #45 (24/06):** i 5 file tools de-hardcodati in place — root da `$PSScriptRoot`/`%~dp0`
+      (auto-fixa anche il path annidato Getac), utente da `$env:USERNAME`/`%USERNAME%`, PC da
+      `%COMPUTERNAME%`. `migrate_to_new_pc.ps1` era già portabile (param + `$env:USERPROFILE`).
+      Bonus: ASCII-normalizzati + fix bug `&&` pre-esistente (PS 5.1). Zero hardcode `benen` veri nel repo.
 
 ### [◐] GRAPHIFY — livello WIKI dell'arco macro (RAG→Wiki)
 - [✓] **GRAPHIFY IN PRODUZIONE** (07/06). Installato isolato (uv tool, MIT, gratis) +

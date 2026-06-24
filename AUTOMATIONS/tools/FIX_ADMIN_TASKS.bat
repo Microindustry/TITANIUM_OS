@@ -1,20 +1,22 @@
 @echo off
 :: FIX_ADMIN_TASKS.bat | TITANIUM_OS | v1.0 | 2026-05-29
-:: Self-elevating — chiede UAC automaticamente, poi sistema i task vecchi
-:: ESEGUI DOPPIO CLICK — accetta UAC — fatto.
+:: Self-elevating - chiede UAC automaticamente, poi sistema i task vecchi
+:: ESEGUI DOPPIO CLICK - accetta UAC - fatto.
 
 :: Controlla se siamo admin
 net session >nul 2>&1
 if %errorlevel% == 0 goto :ISADMIN
 
-:: Non admin — rilancia con UAC
+:: Non admin - rilancia con UAC
 echo Richiesta privilegi amministratore...
 powershell -Command "Start-Process '%~f0' -Verb RunAs"
 exit /b
 
 :ISADMIN
+:: root del repo derivata dalla posizione dello script (AUTOMATIONS\tools\ -> ..\..) - no hardcode benen
+for %%I in ("%~dp0..\..") do set "TI=%%~fI"
 echo.
-echo  TITANIUM_OS — Fix Task Scheduler (Admin)
+echo  TITANIUM_OS - Fix Task Scheduler (Admin)
 echo  ==========================================
 
 :: Rimuovi vecchi task \TITANIUM_OS\ (che non possiamo modificare senza admin)
@@ -45,9 +47,9 @@ powershell -NonInteractive -Command ^
 echo.
 echo [3/3] Registrazione TI_StartEcosystem (avvio al login)...
 schtasks /create /f /tn "TI_StartEcosystem" ^
-    /ru "benen" /rl HIGHEST ^
+    /ru "%USERNAME%" /rl HIGHEST ^
     /sc ONLOGON ^
-    /tr "cmd.exe /c \"C:\Users\benen\TITANIUM_OS\TITANIUM_OS\START_LOGIN.bat\"" ^
+    /tr "cmd.exe /c \"%TI%\START_LOGIN.bat\"" ^
     /delay 0000:30 2>nul && echo   OK || echo   Gia' esistente
 
 echo.
