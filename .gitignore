@@ -54,3 +54,8 @@ DATA/.sync_pct.hash
 DATA/.inventario_last.txt
 # pct_sync: report rigenerato a ogni run (runtime, non sorgente)
 DATA/audit/pct_sync.json
+# Viste markdown: cache rigenerabile da AUTOMATIONS/core/md_view_pipeline.py
+# (340 file .md.json + indice riscritti a ogni sweep -> churn che sporca ogni diff).
+# Restano su disco (la dashboard li serve via /api/file); fuori da git. (critica AUD-28de0ccc64)
+DATA/views/
+DATA/view_index.json
