@@ -1,5 +1,65 @@
 [
   {
+    "id": "BUS-cf520070",
+    "stato": "fatto",
+    "testo": "**Auto-audit notturno: 31 → 9** (burn-down via `/loop` autonomo, fermato quando solo i",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-3da308c2",
+    "stato": "fatto",
+    "testo": "**Decisione MIMS connettori = Via B** (compressione VULCAN, processo proprietario B2) —",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-6279009c",
+    "stato": "fatto",
+    "testo": "**Canone manuale: 33 → 25** (sweep `criticheData.ts`, 8 critiche fatte/superate chiuse).",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-288e396e",
+    "stato": "fatto",
+    "testo": "**Header CRITICHE onesto**: niente più \"33\" opaco → totale a 3 fonti + chip (canone/audit/bussola).",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-b02c6091",
+    "stato": "fatto",
+    "testo": "**Bussola groomata: 41 → 20** (20 todo già fatti/superati chiusi, glifo `[ ]`→`[✓]`). `e65bdbd0`.",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-fda75832",
+    "stato": "fatto",
+    "testo": "**De-hardcode `benen`**: 5 registrar legacy `AUTOMATIONS/tools/` resi portabili in place",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-ed4ff211",
+    "stato": "fatto",
+    "testo": "**Rimossi i 5 registrar legacy ridondanti** (`git rm`, recuperabili) — fonte unica",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-56aff678",
+    "stato": "da_fare",
+    "testo": "`AZIONI_MATTEO.md`: UPS + mandrino ER20 (1 checkout, cura radice HNSW + sblocca MIMS) · chiavi .env",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-2ecb7df5",
+    "stato": "da_fare",
+    "testo": "Enhancement RAG non fatti: chunking per heading, backup snapshot chroma_db (`_VAULT/BACKUPS`).",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
+    "id": "BUS-453fb96b",
+    "stato": "da_fare",
+    "testo": "Contenuto Nina: verticale finanza ₣2 \"spendere meno di quanto entra\" (open loop pronto).",
+    "sessione": "Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo"
+  },
+  {
     "id": "BUS-c3237265",
     "stato": "fatto",
     "testo": "**Storie/Dashboard — RAG Nina archiviati visibili + leggibili.** Falla vera: il proxy Vite non inoltrava `/api/nina/*` a Flask (→ HTML invece di JSON, \"archivio non raggiungibile\"). Fix proxy + id archivio non più troncato a \"EP_A\". Righe archiviate ora espandibili (lettore lazy via `/api/file`). Commit `64b09b10`,`2b7d8c00`.",

@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-24T16:01:03.081735",
+  "scanned_at": "2026-06-24T21:11:43.912138",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 766,
+  "total_files": 770,
   "files_read": 5,
-  "files_skipped": 761,
+  "files_skipped": 765,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -162,14 +162,42 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 9.2,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 9.2,
+      "size_kb": 9.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d0\\5bf7532da47fb40af6e4c961389abeb4eef35a",
+      "type": "unknown",
+      "size_kb": 8.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d2\\d78dc1c3ceb527af7e1304885f702faf76969f",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d4\\6513f160b858b12c711496623bcbb9ce731e06",
+      "type": "unknown",
+      "size_kb": 0.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\f8\\8a8e0b29b13463f877c7b2f5a69ecb364e79e0",
+      "type": "unknown",
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },

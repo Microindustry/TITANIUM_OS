@@ -1,48 +1,44 @@
-=== RIAVVIO SESSIONE #45 — 24/06/2026 ===
-Ultima sessione: #44 — 2026-06-24 (Nina copre la mappa · RAG resuscitato · vetrina riallineata)
+=== RIAVVIO SESSIONE #46 — 24/06/2026 ===
+Ultima sessione: #45 — 2026-06-24 (CRITICHE azzerate 3 fonti · de-hardcode benen · loop autonomo)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Nina ora COPRE LA MAPPA: 50 episodi EP_N2 nel canone (era 16). Il driver
-nina_map_cover.py ha trasformato i 31 concetti distinti della mappa (Graphify,
-RETE, t-SNE, orchestratore, watcher, centro di controllo...) in 31 episodi Nina
-grounded, in ampiezza ⟡0→⟡7. Build TS verde. Il RAG era CRASHATO (HNSW + commit-leak
-56GB) ed e' stato resuscitato. La vetrina pubblica (README GitHub) e' di nuovo
-allineata: 15 nodi reali, non 8. Restano scelte STRUTTURALI da decidere con Matteo
-(non fatte di notte apposta).
+La barra laterale CRITICHE è stata risolta end-to-end sulle 3 fonti che la alimentano:
+auto-audit 31→9, canone manuale 33→25, bussola 41→20. Le voci residue sono REALI e per
+lo più SOLO-MATTEO (hardware/chiavi/contenuti) → raccolte in AZIONI_MATTEO.md. Header del
+sidebar reso onesto (totale 3 fonti + chip, niente più "33" opaco). Decisa la Via B per i
+connettori MIMS (sblocca BEP/B2). De-hardcodati e poi rimossi i 5 registrar legacy con benen.
+Build TS verde, tutto pushato.
 
-━━━ FATTO IN SESSIONE #44 ━━━
-• NINA MAPPA: nina_map_cover.py (NODES/NINA_AGENT) -> 31 concetti fonte -> 50 EP_N2,
-  auto-canone+MENTE, ripartibile (cursore DATA/nina_map_cover.json). +3 dal loop nativo.
-• RAG RESUSCITATO: liberato commit-leak (63,9->7,8 GB, kill python patologico) +
-  rag_engine --drop-hnsw (ricostruito da sqlite, no ri-embed). API su, search ok.
-• RINFORZO rag_recover (b488df17): killa commit-leak >15GB PRIMA di sondare.
-• chromadb-ops VALUTATO e RIFIUTATO (richiede chromadb 1.x, rompe pin 0.5.23).
-• Menu Storie a 3 voci top-level (19749906). EP_N2_01 riscritto = vero inizio
-  (apertura da racconto + open-loop verso la misura).
-• Storie/proxy: /api/nina/* ora inoltrato a Flask (64b09b10) + lettore archiviati.
-• Simone Rizzo nel watcher (tier1 YT) — resolver @handle->channel_id da fixare (404).
-• Poster pilota EP_N2_01 (Claude Design): CONTENT_ENGINE/DATABASE/MONDO/POSTER/ (HTML+PNG).
-• VETRINA: README.md + ECOSYSTEM_MANIFEST ai 15 nodi reali (06126ee3). Audit struttura:
-  cartelle sane, l'organismo e' cresciuto (8->15 nodi), era la MAPPA indietro.
+━━━ FATTO IN SESSIONE #45 ━━━
+• AUTO-AUDIT 31→9 (burn-down via /loop autonomo, fermato sui blocchi-Matteo):
+  gitignore DATA/views (340 file churn), research_agent v1.3 (query-broadening+summary),
+  warning HF silenziato, gate self-improve documentato; stale chiuse (RAG risorto #40-44,
+  night_audit, Nina definitiva, Obsidian). Commit 2bdbbf3e→3919e0fa.
+• MIMS connettori = Via B (compressione VULCAN, processo proprietario B2) a canone SCHEDA §5
+  + STATE. Silent block → v.B Ø18mm (V8_DELTA). Commit e338ce6d, MENTE d46513f.
+• CANONE MANUALE 33→25 (sweep criticheData.ts: 8 critiche fatte/superate). Header onesto
+  (3 fonti + chip) + fix bug 42 todo-fantasma TOC + deep-link #view per dash_shot. 566da4b9.
+• BUSSOLA 41→20 (groom: 20 todo già fatti/superati, glifo [ ]→[✓]). e65bdbd0.
+• DE-HARDCODE benen: 5 registrar legacy resi portabili ($PSScriptRoot/%~dp0+env, ASCII-norm,
+  fix && PS5.1) 1397b0ee → poi RIMOSSI (git rm, ridondanti con register_night_tasks.ps1) 1a5570dc.
 
-━━━ PROSSIMO LAVORO (da decidere con Matteo, NON di notte) ━━━
-• gitignore di DATA/views/ (298 file auto-generati tracciati) + logs/ -> commit leggibili.
-• AUTOMATIONS/core: ~30 script in cartella piatta -> indice per funzione (NO move fisico).
-• Pulire INBOX/ (brief vecchi -> ARCHIVE).
-• Irrobustire il resolver YouTube del watcher (per pescare i video di Simone Rizzo).
-• [RAG] candidato: implementare WAL->HNSW commit contro 0.5.23 (piu' chirurgico di drop-hnsw).
-• [Nina] mappa coperta -> naturale: animatic pilota EP_N2_01 (era in pausa) OPPURE
-  aprire verticali nuovi (FORGE saldatura TIG, MIMS/VULCAN) con lo stesso driver.
+━━━ PROSSIMO LAVORO (da AZIONI_MATTEO.md + bussola) ━━━
+• [Matteo] UPS + mandrino ER20 in 1 checkout (cura radice corruzione HNSW + sblocca MIMS).
+• [Matteo] Chiavi .env: Semantic Scholar (gratuita, azzera i 429) + rotazione red-team #38. URL sito Maria.
+• [io] Enhancement RAG: chunking per heading + backup snapshot chroma_db in _VAULT/BACKUPS.
+• [io] Contenuto Nina: verticale finanza ₣2 "spendere meno di quanto entra" (open loop pronto).
+• [opzionale] START_GETAC.bat: rimuovere/archiviare se il Getac non si usa più (DEPRECATED.md).
 
 ━━━ BLOCKERS ━━━
 ⚠ UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
 ⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
-⚠ Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici VULCAN).
+⚠ Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici MIMS/VULCAN).
 
 ━━━ NOTE ━━━
-• build_episodes_json.py e' ADDITIVE-ONLY: per riscrivere un episodio, rimuovi l'id
-  da episodes.json poi rebuild.
-• Dopo blackout/HNSW corrotto: SERVICES/rag_recover.ps1 (ora libera anche il commit-leak).
-• Canone Nina = serie EP_N2 (01->50). Gli EP_AV stanno in _ARCHIVIO (origine).
+• La barra CRITICHE somma 3 fonti: criticheData.ts (canone manuale) + critiche_auto.json
+  (auto-audit notturno) + bussola_todos.json (DA_FARE_FATTO.md). L'header ora le mostra separate.
+• dash_shot può puntare una vista precisa: localhost:5173/#<view> (es. #critiche) — deep-link in systemStore.
+• I 5 registrar legacy rimossi sono recuperabili da git history (git checkout <commit>~1 -- <file>).
+• Canone Nina = serie EP_N2. build_episodes_json.py è ADDITIVE-ONLY (per riscrivere: rimuovi l'id poi rebuild).
 
-Generato: 24/06/2026 — fine sessione #44
+Generato: 24/06/2026 — fine sessione #45

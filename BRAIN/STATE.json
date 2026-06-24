@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-24T21:03:32.825375",
-  "active_milestone": "Sessione #44 (24/06): NINA COPRE LA MAPPA — 50 episodi EP_N2. Driver nina_map_cover.py genera un episodio Nina per ogni concetto DISTINTO della mappa senza versione (31 fonte: Graphify/RETE/t-SNE/orchestratore/watcher/controllo) -> copertura in ampiezza ⟡0→⟡7, auto-canone grounded sul RAG. +3 dal loop nativo. RAG RESUSCITATO (corruzione HNSW + commit-leak 56GB liberato, --drop-hnsw). Menu Storie a 3 voci top-level. EP_N2_01 riscritto come vero inizio. Poster pilota (Claude Design). 2 rinforzi (rag_recover anti-commit-leak; chromadb-ops valutato e rifiutato). Vetrina pubblica README + ECOSYSTEM_MANIFEST riallineati ai 15 nodi reali (erano 8).",
-  "next_step": "DA DECIDERE CON MATTEO (svegli): gitignore DATA/views(298 auto-gen)+logs; raggruppare/indicizzare AUTOMATIONS/core(~30 script piatti); pulire INBOX; irrobustire resolver YouTube watcher. Candidato RAG: implementare WAL→HNSW commit contro 0.5.23. Nina: 50 ep nel canone, mappa coperta -> prossimo naturale = animatic pilota EP_N2_01 (era in pausa) o verticali nuovi (FORGE saldatura, MIMS).",
+  "last_update": "2026-06-24T21:27:01.371563",
+  "active_milestone": "Sessione #45 (24/06): CRITICHE AZZERATE sulle 3 fonti del sidebar. Auto-audit 31->9 (burn-down via /loop autonomo: gitignore DATA/views, research_agent v1.3 query-broadening+summary, warning HF silenziato, gate self-improve documentato; stale chiuse). Canone manuale 33->25 (sweep). Bussola 41->20 (groom + bug 42 todo-fantasma TOC fixato). Header CRITICHE onesto (totale 3 fonti + chip, niente piu' '33' opaco) + deep-link #view per dash_shot. DECISIONE MIMS connettori = Via B (compressione VULCAN, processo proprietario B2) a canone. Silent block -> v.B Ø18mm. DE-HARDCODE benen: 5 registrar legacy resi portabili poi RIMOSSI (ridondanti con register_night_tasks.ps1). Build TS verde, tutto pushato.",
+  "next_step": "AZIONI_MATTEO.md (solo Matteo): UPS + mandrino ER20 in 1 checkout (cura radice HNSW + sblocca MIMS); chiavi .env (Semantic Scholar gratuita + rotazione red-team #38); URL sito Maria. Poi: enhancement RAG (chunking per heading, backup snapshot chroma_db in _VAULT/BACKUPS); contenuto Nina verticale finanza ₣2 'spendere meno di quanto entra' (open loop pronto).",
   "session_count": 92,
   "pillars": {
     "V32": {
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-24T16:41:01.980686"
+      "last_activity": "2026-06-24T21:22:09.006942"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -81,7 +81,11 @@
       "Fix bug radice crash post-blackout (23/06): api_server hidden ha stdout/stderr handle OS invalidi -> torch nativo crasha (reset su /api/rag/search); redirect su logfile in restart_api/rebuild_rag_clean/rag_recover/rag_update_exclusive + guardia devnull in api_server.py + guardia stdout in rag_engine.py",
       "RESET FISICO chroma_db (23/06, commit 04c3f71a): su chromadb 0.5.23 il reset-per-id NON azzera lo spazio-label hnswlib -> label fantasma > count -> KeyError np.uint64 su alcune query; --rebuild-hard + reset_chroma_dir() spostano la cartella fisica (HNSW da 0). RAG verificato 32974 chunk, 6/6 query ok",
       "GPU rimessa + research_agent v1.2 (23/06): rag_device.txt=cuda (init CUDA non satura piu' il commit, query ~5x); research_agent backoff esponenziale 429/503 + API-key opzionale + guardia globale (log JSON, niente catena abortita), testato live",
-      "OBSIDIAN titoli + intersect (23/06, MENTE d9b044a): 108 titoli normalizzati (H1+frontmatter title da source/notebook) ADDITIVO senza rename (967 wikilink intatti, no clobber heading corpo); fix_titoli_vault.py; intersect rigenerato vault(2881)+storie(950,0 isolati)+ponti+wiki(651 note)"
+      "OBSIDIAN titoli + intersect (23/06, MENTE d9b044a): 108 titoli normalizzati (H1+frontmatter title da source/notebook) ADDITIVO senza rename (967 wikilink intatti, no clobber heading corpo); fix_titoli_vault.py; intersect rigenerato vault(2881)+storie(950,0 isolati)+ponti+wiki(651 note)",
+      "CRITICHE sidebar azzerate sulle 3 fonti (24/06 sess.#45): auto-audit 31->9, canone manuale 33->25, bussola 41->20. Burn-down auto-audit via /loop autonomo (fermato sui blocchi-Matteo). 18+ critiche chiuse con note tracciabili. Build TS verde, pushato",
+      "Header CRITICHE onesto + bug-fix (24/06): da '33' opaco a totale-3-fonti + chip per-fonte (canone/audit/bussola); fixato bug 42 'todo-fantasma' (ancore-TOC parse-ate come todo, bussola 81->39 reali); deep-link #view in systemStore per screenshottare qualsiasi vista headless (dash_shot)",
+      "MIMS connettori = Via B DECISO (24/06): compressione VULCAN (processo proprietario per B2, capitale basso, dentro il moat-Formula) a canone SCHEDA §5 + STATE. Silent block V8 -> v.B Ø18mm (reversibile). Sblocca BEP/B2",
+      "De-hardcode benen completo (24/06): 5 registrar legacy AUTOMATIONS/tools resi portabili in place ($PSScriptRoot/%~dp0 + env, ASCII-norm, fix bug && PS5.1) poi RIMOSSI (git rm, recuperabili) perche' ridondanti con register_night_tasks.ps1. Zero hardcode benen veri nel repo"
     ],
     "next": "PROSSIMA SESSIONE ULTRACODE: rendere NINA DEFINITIVA (filone unico discorsivo, evolutivo, UNA SOLA VERITA' sul RAG; canone=EP_N2 v2, archiviare EP_AV_* vecchi, ordinare il cammino, audit STORIE) -> poi animazione+voce. Stile deciso in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Aperti: divergenza RAG 0,2% (auto-fix notturno @03:37), via connettori MIMS (SCHEDA §5), martinetto Vevor+mandrino ER20",
     "target_capannone": "2030-07-15"
@@ -121,5 +125,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a EP_20260608_night_audit_cartella_clinica_08_06_.md"
+  "last_action": "Modifica a 98a0a013173876d035b45c8b43bd5dcc6ab1f35226b521dc6c82a49dfb33cba8.json"
 }

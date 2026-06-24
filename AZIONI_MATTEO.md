@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [AZIONI  SOLO MATTEO (non delegabili al sistema)](#azioni-solo-matteo-non-delegabili-al-sistema)
+  - [1 DECISIONE STRATEGICA  sblocca MIMS (BEP  brevetto B2)](#1-decisione-strategica-sblocca-mims-bep-brevetto-b2)
+  - [HARDWARE  ordinare / montare](#hardware-ordinare-montare)
+  - [CHIAVI .env  5 min ciascuna](#chiavi-env-5-min-ciascuna)
+  - [DATO PUNTUALE](#dato-puntuale)
+    - [Già chiuse stanotte dal sistema (sess.45, non più tue)](#già-chiuse-stanotte-dal-sistema-sess45-non-più-tue)
+
+<!-- /TOC -->
+
 # AZIONI — SOLO MATTEO (non delegabili al sistema)
 
 *Generato sess.#45 · 2026-06-24 · dalle critiche aperte che un loop autonomo NON può chiudere

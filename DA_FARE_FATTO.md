@@ -64,6 +64,38 @@
 
 ---
 
+## Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo
+
+**Obiettivo: "risolvere ciò che c'è nella barra laterale CRITICHE".** Fatto end-to-end
+sulle 3 fonti che alimentano il sidebar (canone manuale + auto-audit + bussola).
+
+- [✓] **Auto-audit notturno: 31 → 9** (burn-down via `/loop` autonomo, fermato quando solo i
+  blocchi-Matteo restavano). Software: gitignore `DATA/views` (340 file churn), `research_agent`
+  v1.3 (query-broadening + summary), warning HF silenziato, gate self-improve documentato. Stale
+  chiuse (RAG risorto #40-44, night_audit, Nina definitiva, Obsidian). Commit `2bdbbf3e`→`3919e0fa`.
+- [✓] **Decisione MIMS connettori = Via B** (compressione VULCAN, processo proprietario B2) —
+  SCHEDA §5 a canone + STATE. Silent block → v.B Ø18mm (V8_DELTA). Commit `e338ce6d`, MENTE `d46513f`.
+- [✓] **Canone manuale: 33 → 25** (sweep `criticheData.ts`, 8 critiche fatte/superate chiuse).
+- [✓] **Header CRITICHE onesto**: niente più "33" opaco → totale a 3 fonti + chip (canone/audit/bussola).
+  Bug fixato: 42 "todo-fantasma" (ancore-TOC) gonfiavano la bussola. Deep-link `#view` per dash_shot. `566da4b9`.
+- [✓] **Bussola groomata: 41 → 20** (20 todo già fatti/superati chiusi, glifo `[ ]`→`[✓]`). `e65bdbd0`.
+- [✓] **De-hardcode `benen`**: 5 registrar legacy `AUTOMATIONS/tools/` resi portabili in place
+  (`$PSScriptRoot`/`%~dp0` + env), ASCII-normalizzati, fix bug `&&` (PS 5.1). `migrate` era già ok.
+  Zero hardcode veri nel repo. `1397b0ee`.
+- [✓] **Rimossi i 5 registrar legacy ridondanti** (`git rm`, recuperabili) — fonte unica
+  `register_night_tasks.ps1`. Verificato: nessun chiamante attivo. `1a5570dc`.
+
+**Stato CRITICHE a fine sessione: 25 canone · 9 audit · 20 bussola.** Tutto pushato, build TS verde.
+Le voci residue sono reali e per lo più SOLO-MATTEO → `AZIONI_MATTEO.md` (hardware/chiavi/finanza Nina).
+
+**PROSSIMA SESSIONE — si riparte da qui:**
+- [ ] `AZIONI_MATTEO.md`: UPS + mandrino ER20 (1 checkout, cura radice HNSW + sblocca MIMS) · chiavi .env
+  (Semantic Scholar + rotazione red-team) · URL sito Maria. Quando ne fai una, dimmelo e la chiudo.
+- [ ] Enhancement RAG non fatti: chunking per heading, backup snapshot chroma_db (`_VAULT/BACKUPS`).
+- [ ] Contenuto Nina: verticale finanza ₣2 "spendere meno di quanto entra" (open loop pronto).
+
+---
+
 ## Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata
 
 *Sessione lunga e operativa. Si è partiti da "dove eravamo" (Nina), si è finiti con la struttura pubblica rimessa in ordine. Tutto additivo.*
