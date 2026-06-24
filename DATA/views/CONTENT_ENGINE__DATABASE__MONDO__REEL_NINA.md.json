@@ -1,0 +1,51 @@
+{
+  "path": "CONTENT_ENGINE/DATABASE/MONDO/REEL_NINA.md",
+  "title": "Script reel — spiegare l'AI come a un bambino (stile Simone Rizzo)",
+  "meta": {
+    "id": "REEL_NINA",
+    "title": "Script reel — spiegare l'AI come a un bambino (stile Simone Rizzo)",
+    "stagione": "AV",
+    "status": "ready",
+    "tags": "nina, nina-v2, reel, contenuto, social, simone-rizzo, divulgazione"
+  },
+  "sections": [
+    {
+      "level": 0,
+      "title": "intro",
+      "content": "<!-- TOC -->\n\n- [Reel Nina  spiego lAI a un bambino](#reel-nina-spiego-lai-a-un-bambino)\n  - [REEL 1  Fatto bene non vuol dire bello (da EP_N2_01)](#reel-1-fatto-bene-non-vuol-dire-bello-da-epn201)\n  - [REEL 2  La community detection con una scatola di bottoni (da EP_N2_33)](#reel-2-la-community-detection-con-una-scatola-di-bottoni-da-epn233)\n  - [REEL 3  t-SNE vs UMAP: due fotocamere (da EP_N2_43)](#reel-3-t-sne-vs-umap-due-fotocamere-da-epn243)\n  - [REEL 4  Il semaforo che mente (da EP_N2_50)](#reel-4-il-semaforo-che-mente-da-epn250)\n  - [Come usarli](#come-usarli)\n\n<!-- /TOC -->"
+    },
+    {
+      "level": 1,
+      "title": "Reel Nina — \"spiego l'AI a un bambino\"",
+      "content": "*Script pronti da girare. Pubblico: **adulti/genitori/curiosi** (non bambini). Angolo:\ni concetti AI più ostici spiegati con la metafora che Nina usa per un bambino — se\nfunziona per un bambino, hai capito davvero. Stile [[reel]] (Simone Rizzo): dato/claim\nconcreto · il problema · la metafora che lo risolve · open loop. ~60-80 parole, 30-45s.*\n\n> NB: ogni reel rimanda all'episodio Nina vero ([[PIETRE]]). Niente claim non groundati.\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL 1 — \"Fatto bene non vuol dire bello\" (da EP_N2_01)",
+      "content": "**[HOOK]** Due bottoni cuciti sulla stessa camicia. Identici all'occhio. Tira: uno tiene, l'altro viene via al primo strappo.\n**[PROBLEMA]** La differenza non si vede. Si *sente* — nel momento in cui devono fare il loro lavoro.\n**[CONCETTO]** È la prima legge del Mestiere, e vale identica per il codice: \"fatto bene\" non significa elegante. Significa che **regge quando lo metti sotto carico vero**. Un algoritmo bello ma instabile è il bottone laccato.\n**[OPEN LOOP]** E la differenza tra \"regge\" e \"non regge\"… si può misurare? (→ la precisione)\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL 2 — La community detection con una scatola di bottoni (da EP_N2_33)",
+      "content": "**[HOOK]** Come spieghi la *community detection* a un bambino di 8 anni? Con una scatola di bottoni legati da fili.\n**[PROBLEMA]** Una rete di migliaia di nodi: come fa a sapere, da sola, quali stanno insieme? Nessuno glielo dice.\n**[CONCETTO]** Agiti la scatola, piano. I bottoni con **più filo tra loro** si raggruppano da soli. Non li separi tu — lo fa il filo. Quella è la modularità: l'ordine non viene imposto, *nasce* dalle connessioni.\n**[OPEN LOOP]** Graphify l'ha fatto su 515 file → 696 \"quartieri\" da solo. Il prossimo: chi tiene insieme un quartiere?\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL 3 — t-SNE vs UMAP: due fotocamere (da EP_N2_43)",
+      "content": "**[HOOK]** Due fotocamere spiegano t-SNE e UMAP meglio di qualsiasi paper.\n**[PROBLEMA]** Hai migliaia di punti in 100 dimensioni. Devi vederli in 2. Cosa sacrifichi?\n**[CONCETTO]** Obiettivo lungo, da vicino: dettagli perfetti dei vicini, ma perdi l'insieme → **t-SNE** (struttura locale). Grandangolo, dall'alto: non vedi la singola perla, ma vedi *come stanno i gruppi* → **UMAP** (struttura globale). Stessa scatola, due verità.\n**[OPEN LOOP]** Quale scegli dipende da cosa devi vedere. E se la foto fosse… rotta?\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "REEL 4 — Il semaforo che mente (da EP_N2_50)",
+      "content": "**[HOOK]** Il pezzo più pericoloso di un sistema non è quello rotto. È quello che **dice** di funzionare e non funziona.\n**[PROBLEMA]** Un agente segna \"verde\", \"fatto\", \"ok\" — ma il lavoro vero non è successo. Il semaforo mente.\n**[CONCETTO]** Per questo non ti fidi di cosa un sistema *dice* di sé: misuri cosa *fa*. La verità sta nell'effetto reale, non nello stato dichiarato. (È perché Nina ha un guardiano che controlla i guardiani.)\n**[OPEN LOOP]** Chi controlla che il controllore non menta a sua volta?\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "Come usarli",
+      "content": "- Girare in prima persona, oggetti veri in mano (bottoni, fili, fotocamera) = molto più forte del talking-head.\n- Caption: il nome del concetto AI vero (\"community detection\", \"t-SNE/UMAP\") → SEO + il pubblico tecnico si aggancia.\n- Chiusura fissa: \"Storia completa per tuo figlio (e per te): Nina, EP_N2_xx.\""
+    }
+  ],
+  "word_count": 642,
+  "updated_at": "2026-06-24T15:35:47.507957",
+  "built_at": "2026-06-24T15:35:47.523580"
+}

@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, nodi, stelle, tengono
 ---
+<!-- TOC -->
+
+- [EP_N2_34  Le stelle che reggono il filo](#epn234-le-stelle-che-reggono-il-filo)
+    - [perché alcuni nodi sono invisibili ma tengono tutto in piedi](#perché-alcuni-nodi-sono-invisibili-ma-tengono-tutto-in-piedi)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il maglione che si sgretola](#atto-i-il-maglione-che-si-sgretola)
+  - [ATTO II  Betweenness: il peso dei cammini](#atto-ii-betweenness-il-peso-dei-cammini)
+  - [ATTO III  Quello spegne mezzo sistema](#atto-iii-quello-spegne-mezzo-sistema)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_34 — Le stelle che reggono il filo
 ### "perché alcuni nodi sono invisibili ma tengono tutto in piedi"

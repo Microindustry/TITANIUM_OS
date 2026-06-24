@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, modularità, voto, decide
 ---
+<!-- TOC -->
+
+- [EP_N2_39  Il Voto dei Quartieri](#epn239-il-voto-dei-quartieri)
+    - [Come fa Nina a sapere se ha diviso bene i suoi amici in gruppi?](#come-fa-nina-a-sapere-se-ha-diviso-bene-i-suoi-amici-in-gruppi)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Peso dei Fili](#atto-i-il-peso-dei-fili)
+  - [ATTO II  Il Termometro della Divisione](#atto-ii-il-termometro-della-divisione)
+  - [ATTO III  Il Voto Che Guida](#atto-iii-il-voto-che-guida)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_39 — Il Voto dei Quartieri
 ### "Come fa Nina a sapere se ha diviso bene i suoi amici in gruppi?"

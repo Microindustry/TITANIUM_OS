@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, acceso, dovrebbe, stato
 ---
+<!-- TOC -->
+
+- [EP_N2_50  Il semaforo che mente](#epn250-il-semaforo-che-mente)
+    - [Quando il quadro promette ma lo stato dice la verità adesso](#quando-il-quadro-promette-ma-lo-stato-dice-la-verità-adesso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il cartello e la lavagna](#atto-i-il-cartello-e-la-lavagna)
+  - [ATTO II  La spia che non sa](#atto-ii-la-spia-che-non-sa)
+  - [ATTO III  Fotografia, non promessa](#atto-iii-fotografia-non-promessa)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_50 — Il semaforo che mente
 ### "Quando il quadro promette ma lo stato dice la verità adesso"

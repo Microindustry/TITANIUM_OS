@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Socio, chiamava, Socio
 ---
+<!-- TOC -->
+
+- [EP_N2_21  Il Nome Che Cambia](#epn221-il-nome-che-cambia)
+    - [Quando qualcosa cresce, il suo nome racconta una storia nuova](#quando-qualcosa-cresce-il-suo-nome-racconta-una-storia-nuova)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Porta con Due Targhe](#atto-i-la-porta-con-due-targhe)
+  - [ATTO II  Quattro Anni, Centocinquanta Gradini](#atto-ii-quattro-anni-centocinquanta-gradini)
+  - [ATTO III  La Traccia Dentro il Nome](#atto-iii-la-traccia-dentro-il-nome)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_21 — Il Nome Che Cambia
 ### "Quando qualcosa cresce, il suo nome racconta una storia nuova"

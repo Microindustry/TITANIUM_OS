@@ -1,0 +1,277 @@
+{
+  "data": "2026-06-24",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA/RAG",
+      "titolo": "UPS software o WAL mode per eliminare corruzione HNSW ricorrente",
+      "cosa": "Configurare ChromaDB in modalità WAL (Write-Ahead Logging) e aggiungere un pre-flight check nel processo notturno che verifica l'integrità HNSW prima di ogni operazione di scrittura. Se il check fallisce, il job esegue automaticamente --drop-hnsw + rebuild prima di procedere, loggando l'evento con severity CRITICAL.",
+      "perche": "Segnale critico esplicito: 'corruzione HNSW da power-loss ricorrente 3 volte in 2gg' (audit SISTEMA sev:alta). ChromaDB ha crashato con 'Error creating hnsw segment reader' bloccando la ricerca notturna del 22/06. Il fix software attuale (--drop-hnsw manual) non è una cura alla radice ma il WAL mode + pre-flight automatico lo rende self-healing senza intervento hardware.",
+      "come": [
+        "1. Aprire la config ChromaDB e aggiungere: chroma_db_impl='duckdb+parquet' con WAL abilitato (se versione lo supporta) oppure impostare CHROMA_SERVER_AUTHN_PROVIDER e persistent_client con sqlite WAL pragma.",
+        "2. Creare script check_hnsw_integrity.py: tenta una query di prova sul collection principale, cattura InternalError, se fallisce esegue subprocess drop+rebuild e scrive entry in night_audit.log.",
+        "3. Inserire check_hnsw_integrity.py come primo step nel pipeline notturno (prima di night_research.py).",
+        "4. Documentare in SISTEMA/README_RAG.md il pattern di recovery automatico."
+      ],
+      "rischio": "Rebuild HNSW richiede tempo (stimato 5-15 min su 34k chunks): il job notturno potrebbe allungarsi. Rischio basso se si mette timeout e alert.",
+      "autonomia": "approvazione",
+      "fonte": "audit SISTEMA sev:alta — ChromaDB crash log 2026-06-22, blocker esplicito sessione #42"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-24",
+    "milestone": "Sessione #44 (24/06): NINA COPRE LA MAPPA — 50 episodi EP_N2. Driver nina_map_cover.py genera un episodio Nina per ogni concetto DISTINTO della mappa senza versione (31 fonte: Graphify/RETE/t-SNE/orchestratore/watcher/controllo) -> copertura in ampiezza ⟡0→⟡7, auto-canone grounded sul RAG. +3 dal lo",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "Il processo notturno ha generato un traceback non gestito. Il log del 2026-06-23 riporta: '⚠ night_research.log: Traceback (most recent call last):'. L'estratto non mostra la causa né se il processo è terminato parzialmente o completamente,"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La decisione su connettori MIMS (via A iniezione vs via B compressione VULCAN, SCHEDA §5) è listata come blocker da almeno 2 sessioni e blocca BEP/B2, ma non ha una data di risoluzione né un owner di analisi. Con MIMS al 30% di pillar e il "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Corruzione HNSW da power-loss ricorrente 3 volte in 2 giorni senza rimedio hardware. Il blocker esplicito lo conferma: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg): è la cura alla radice'. Il fix software (--drop-hnsw, ra"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "HuggingFace Hub viene interrogato senza token, generando rate-limit silenzioso. Il log del 2026-06-23 mostra: 'Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster do"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "~30 script piatti in AUTOMATIONS/core e 298 file auto-generati in DATA/views non sono in .gitignore: ogni commit notturno auto porta dentro repo materiale non versionabile o ridondante. Il next_step lo segnala esplicitamente ('gitignore DAT"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna su Semantic Scholar è bloccata da rate-limit non autenticato. Il log del 2026-06-23 mostra: '2026-06-23 00:35:07 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/grap"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "HuggingFace Hub è interrogato senza token: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" (night_research.log, 2026-06-22). In una notte dove Chrom"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 22/06 ha prodotto zero risultati utili su Semantic Scholar per la query 'linear guide rail preload stiffness': \"2026-06-22 03:38:27 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.s"
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "night_push.log del 22/06 riporta: \"⚠ night_research.log: Traceback (most recent call last):\" (night_push.log, 2026-06-22). Il push notturno ha rilevato il traceback nel log e lo ha segnalato, ma non è chiaro se il job di ricerca sia stato a"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "ChromaDB ha crashato durante la ricerca notturna del 22/06 con errore esplicito: \"chromadb.errors.InternalError: Error executing plan: Error sending backfill request to compactor: Error constructing hnsw segment reader: Error creating hnsw "
+      },
+      {
+        "area": "MIMS",
+        "sev": "media",
+        "finding": "Il blocker 'Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5)' blocca BEP/B2, e il 'Martinetto Vevor 3 stadi da montare' è prerequisito fisico VULCAN. Entrambi sono aperti da più sessioni (la sessione #38 del 18/06 g"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il next_step dichiara NINA DEFINITIVA come priorità assoluta (filone unico, canone EP_N2 v2, audit STORIE, stile in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md). La bussola_open mostra però che questo lavoro di consolidamento è aperto almeno dall"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 248,
+      "rag_chunks": 34158,
+      "n_commits_7d": 81
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "(#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)",
+      "(#sessione-43-23062026-ultracode-nina-definitiva-canone-unico-epn2)",
+      "(#prossima-sessione-44-si-riparte-da-qui)",
+      "(#sessione-42-23062026-blackout-rag-recovery-2-livelli-obsidian-titoliintersect)",
+      "(#sessione-41-22062026-watchdog-on-rag-self-heal-canone-vulcancnc-corretto)",
+      "(#processo-contenuti-automazioni-grounding-rag-alla-fonte)",
+      "(#chiusura-41-obsidian-valorizzato-sistema-verificato-punto-0-predisposto)",
+      "(#sessione-40-22062026-rag-sbloccato-gpu-ripristinata-chromadb-stabile)",
+      "(#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian)",
+      "(#sessione-38-12-18062026-notebooklm-pitchcvpilastri-con-debito-da-integrare)",
+      "(#fatto-12-1806)",
+      "(#debito-fatto-a-metà-acerbo-da-integrare-non-rifare)",
+      "(#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli)",
+      "(#piano-prossima-sessione-pulita-in-ordine-integrando)",
+      "(#sessione-37-11062026-arco-nina-completo-canon-os-verticale-finanza)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-e7b"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[Exclusive] $250 off AI Engineer tix til Monday",
+        "url": "https://www.latent.space/p/exclusive-250-off-ai-engineer-tix"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Sean Lynch",
+        "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Temporary Cloudflare Accounts for AI agents",
+        "url": "https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc1",
+        "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc1 adds migrations and nested transactions",
+        "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "KCNyu/clawock ★2 — Multi-agent LLM analysis on a real HK + US stock portfolio: a bull-vs-bear debat",
+        "url": "https://github.com/KCNyu/clawock"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "XAIN2011/mco ★1 — Manage cloud resources efficiently with MCO, a Python tool offering built-in sup",
+        "url": "https://github.com/XAIN2011/mco"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Ricocoswig/ralph-aios ★0 — Orchestrate AI agents through story-driven workflows that enable autonomous deve",
+        "url": "https://github.com/Ricocoswig/ralph-aios"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "mibrahiim786/ghost-ops ★0 — Automate GitHub repo monitoring, issue triage, and agent prompt updates on macOS",
+        "url": "https://github.com/mibrahiim786/ghost-ops"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "fkenmar/atlas ★0 — Fast Rust repo map for AI coding agents: token-budgeted signatures, imports, dif",
+        "url": "https://github.com/fkenmar/atlas"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "mikey143-kun/agentchattr ★1 — Facilitate real-time chat and task coordination between AI coding agents and hum",
+        "url": "https://github.com/mikey143-kun/agentchattr"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "CortexPrism/cortex ★74 — CortexPrism — open-source AI agent operating system",
+        "url": "https://github.com/CortexPrism/cortex"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "cyanheads/medical-codes-mcp-server ★1 — Decode, search, validate, and crosswalk US medical codes — ICD-10-CM, ICD-10-PCS",
+        "url": "https://github.com/cyanheads/medical-codes-mcp-server"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "KCNyu/clawock ★2 — Multi-agent LLM analysis on a real HK + US stock portfolio: a bull-vs-bear debat",
+        "url": "https://github.com/KCNyu/clawock"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Ricocoswig/ralph-aios ★0 — Orchestrate AI agents through story-driven workflows that enable autonomous deve",
+        "url": "https://github.com/Ricocoswig/ralph-aios"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Tommyvr7/meta-ads-analyzer ★0 — Analyze Meta Ads campaigns with expert-level diagnostics, live data access, and ",
+        "url": "https://github.com/Tommyvr7/meta-ads-analyzer"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "tupe12334/tools-view ★1 — Analyze Claude skill relationships and emit a graph JSON + HTML viewer",
+        "url": "https://github.com/tupe12334/tools-view"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "lebgdu44/claude-gym ★0 — Encourage regular movement during long coding sessions with a pixel-art companio",
+        "url": "https://github.com/lebgdu44/claude-gym"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "XBlueSky/vatt-ghern ★2 — Daily tech-news zine for engineers — Claude-authored prose, bespoke HTML, CJK ty",
+        "url": "https://github.com/XBlueSky/vatt-ghern"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "heba-ramdan/harness ★1 — Define and control AI agents in markdown with full prompt transparency, persiste",
+        "url": "https://github.com/heba-ramdan/harness"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Outqme711/clawrelay ★0 — Provide a desktop client that manages multiple Claude Code projects with real-ti",
+        "url": "https://github.com/Outqme711/clawrelay"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "PewDiePie’s FREE Odysseus AI (Full Review & Setup)",
+        "url": "https://www.youtube.com/watch?v=_7BHqZayPOc"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Midjourney Built What?!?",
+        "url": "https://www.youtube.com/shorts/Qy25rSEXpPQ"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: Fable Banned, New Open-Source Leader, Midjourney Shocker",
+        "url": "https://www.youtube.com/watch?v=Db260rUuKJg"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding",
+        "url": "https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Self-Driving Lab — Joseph Krause, Radical AI",
+        "url": "https://www.latent.space/p/radical-ai"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Midjourney Medical: scan your organs like you step on a scale",
+        "url": "https://www.latent.space/p/ainews-midjourney-medical-scan-your"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "The Professor of Outputmaxxing — Anjney Midha, AMP",
+        "url": "https://www.latent.space/p/anj"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] GLM > GPT? GLM-5.2 passes vibe check; Z.ai forecasts Open Fable by December",
+        "url": "https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, NeuroMap, prima, volta
 ---
+<!-- TOC -->
+
+- [EP_N2_32  Il Giorno che il Labirinto si Vide nello Specchio](#epn232-il-giorno-che-il-labirinto-si-vide-nello-specchio)
+    - [Quando Nina scopre che guardare dallalto cambia tutto quello che conosci](#quando-nina-scopre-che-guardare-dallalto-cambia-tutto-quello-che-conosci)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Scala](#atto-i-la-scala)
+  - [ATTO II  Il Grafo](#atto-ii-il-grafo)
+  - [ATTO III  La Mappa che Diventa Specchio](#atto-iii-la-mappa-che-diventa-specchio)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_32 — Il Giorno che il Labirinto si Vide nello Specchio
 ### "Quando Nina scopre che guardare dall'alto cambia tutto quello che conosci"

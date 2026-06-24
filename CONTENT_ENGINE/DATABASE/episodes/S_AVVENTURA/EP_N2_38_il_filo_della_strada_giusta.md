@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, cammini, come, trova
 ---
+<!-- TOC -->
+
+- [EP_N2_38  Il Filo della Strada Giusta](#epn238-il-filo-della-strada-giusta)
+    - [Come il grafo sa sempre qual è il cammino più breve tra due punti  senza provare tutte le vie](#come-il-grafo-sa-sempre-qual-è-il-cammino-più-breve-tra-due-punti-senza-provare-tutte-le-vie)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LOnda che si Allarga](#atto-i-londa-che-si-allarga)
+  - [ATTO II  Il Nome del Metodo](#atto-ii-il-nome-del-metodo)
+  - [ATTO III  La Strada nel Sistema](#atto-iii-la-strada-nel-sistema)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_38 — Il Filo della Strada Giusta
 ### "Come il grafo sa sempre qual è il cammino più breve tra due punti — senza provare tutte le vie"

@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Perché, MENTE, estrae
 ---
+<!-- TOC -->
+
+- [EP_N2_35  Il Custode dei Segreti](#epn235-il-custode-dei-segreti)
+    - [Perché alcune mappe non si disegnano da sole  il mestiere di chi sceglie cosa raccontare](#perché-alcune-mappe-non-si-disegnano-da-sole-il-mestiere-di-chi-sceglie-cosa-raccontare)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Forbice non Decide](#atto-i-la-forbice-non-decide)
+  - [ATTO II  Il Grafo che Pesa](#atto-ii-il-grafo-che-pesa)
+  - [ATTO III  La Cassaforte con Due Chiavi](#atto-iii-la-cassaforte-con-due-chiavi)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_35 — Il Custode dei Segreti
 ### "Perché alcune mappe non si disegnano da sole — il mestiere di chi sceglie cosa raccontare"

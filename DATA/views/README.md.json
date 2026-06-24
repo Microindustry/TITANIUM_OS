@@ -86,7 +86,7 @@
     {
       "level": 2,
       "title": "Struttura repo",
-      "content": "```\nTITANIUM_OS/\n├── BRAIN/\n│   ├── STATE.json              ← fonte unica di verità\n│   ├── KNOWLEDGE/              ← documenti tecnici interni\n│   └── RULES.md                ← regole operative sistema\n├── MCP/\n│   └── titanium_mcp_server.py  ← 7 tool esposti a Claude Code\n├── NODES/\n│   ├── MENTE_RAG/              ← RAG v4.0 ibrido BM25+semantico+CrossEncoder\n│   ├── NEXUS/                  ← swarm orchestrator multi-agente\n│   ├── AGENTS/                 ← agents_db.json + validator_agent.py\n│   ├── STORY_AGENT/            ← generazione episodi da git log\n│   ├── COMPUTER_USE/           ← ARGUS v2 + ScreenAgent\n│   ├── RESEARCH_AGENT/         ← 13 sorgenti scientifiche\n│   ├── MENTE_SCANNER/          ← estrazione doc da PDF/DOCX\n│   └── MENTE_WATCHER/          ← watch fs → trigger RAG update\n├── AUTOMATIONS/\n│   └── core/                   ← daily_brief · night_push · deep_freeze\n├── DASHBOARD/                  ← React 19 + Vite (porta 5173)\n├── CONTENT_ENGINE/             ← 36+ episodi · dataset .jsonl\n├── DATA/                       ← output JSON · logs · brief · views\n└── api_server.py               ← Flask porta 5001\n```\n\n---"
+      "content": "```\nTITANIUM_OS/\n├── BRAIN/\n│   ├── STATE.json              ← fonte unica di verità\n│   ├── KNOWLEDGE/              ← documenti tecnici interni\n│   ├── ECOSYSTEM_MANIFEST.md   ← la mappa viva dei nodi\n│   └── RULES.md                ← regole operative sistema\n├── MCP/\n│   └── titanium_mcp_server.py  ← 7 tool esposti a Claude Code\n├── NODES/                       ← 15 nodi operativi\n│   ├── MENTE_RAG/              ← RAG v4.0 ibrido BM25+semantico+CrossEncoder\n│   ├── MENTE_SCANNER/          ← estrazione doc da PDF/DOCX → MENTE\n│   ├── MENTE_WATCHER/          ← watch fs → trigger RAG incrementale\n│   ├── RESEARCH_AGENT/         ← trova paper/tesi dal web → ingesta in MENTE\n│   ├── NEXUS/                  ← swarm orchestrator multi-agente\n│   ├── AGENTS/                 ← registry agenti + validator\n│   ├── STORY_AGENT/            ← episodi dev-log da git log\n│   ├── NINA_AGENT/             ← avventure educative \"Nina\" grounded sul RAG (2 stadi)\n│   ├── AI_NEWS_WATCHER/        ← scouting keyless creator/repo AI (tier 48h)\n│   ├── AUDIT_AGENT/            ← self-audit notturno → cartella clinica\n│   ├── SELF_IMPROVE/           ← auto-miglioramento: segnali interni+esterni → proposte\n│   ├── PCT_SYNC/               ← coerenza % pilastri ← STATE.json (fonte unica)\n│   ├── COMPUTER_USE/           ← ARGUS v2 (computer use ibrido a 3 livelli)\n│   ├── LOCAL_LLM/              ← inferenza LLM locale (Ollama)\n│   └── EVA/                    ← assistente WhatsApp (Vita Natura) · pilot\n├── AUTOMATIONS/\n│   └── core/                   ← ~30 moduli: daily_brief · night · content · canon_guard\n├── CORE/                       ← utility condivise (log · watchdog)\n├── SERVICES/                   ← script di servizio (rag_recover · update esclusivo)\n├── DASHBOARD/                  ← React 19 + Vite (porta 5173)\n├── CONTENT_ENGINE/             ← episodi dev-log + 50 avventure Nina · dataset .jsonl\n├── DATA/                       ← output JSON · brief · views\n├── _VAULT/                     ← segreti, chiavi, backup (fuori da git)\n└── api_server.py               ← Flask porta 5001\n```\n\n---"
     },
     {
       "level": 2,
@@ -101,10 +101,10 @@
     {
       "level": 2,
       "title": "Chi costruisce questo",
-      "content": "Nessuna laurea in informatica. 15 anni di industria pesante: TIG/MIG titanio scarichi MotoGP @ SCProject, robot ESSEGI, presse DATWLER, QC LU.VE.\n\nTITANIUM_OS è lo scaffolding cognitivo di chi costruisce macchine fisiche e sistemi digitali allo stesso tempo. È anche la dimostrazione che chiunque — con abbastanza ostinazione — può costruire il proprio sistema operativo personale.\n\n---\n\n*Versione: 7.0.0 | Aggiornato: 2026-05-31 | Macchina: Getac*"
+      "content": "Nessuna laurea in informatica. 15 anni di industria pesante: TIG/MIG titanio scarichi MotoGP @ SCProject, robot ESSEGI, presse DATWLER, QC LU.VE.\n\nTITANIUM_OS è lo scaffolding cognitivo di chi costruisce macchine fisiche e sistemi digitali allo stesso tempo. È anche la dimostrazione che chiunque — con abbastanza ostinazione — può costruire il proprio sistema operativo personale.\n\n---\n\n*Versione: 7.1.0 | Aggiornato: 2026-06-24 | Macchina: DESKTOP-IFACE2R (fisso, 24/7)*"
     }
   ],
-  "word_count": 1345,
-  "updated_at": "2026-06-02T16:38:18.454387",
-  "built_at": "2026-06-23T16:28:02.076332"
+  "word_count": 1443,
+  "updated_at": "2026-06-24T00:45:08.116376",
+  "built_at": "2026-06-24T15:35:45.850999"
 }

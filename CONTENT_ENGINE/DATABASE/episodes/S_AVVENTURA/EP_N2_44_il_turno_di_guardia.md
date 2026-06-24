@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Esercito, Otto, esperti
 ---
+<!-- TOC -->
+
+- [EP_N2_44  Il Turno di Guardia](#epn244-il-turno-di-guardia)
+    - [Otto occhi che non dormono, perché il silenzio sia onesto](#otto-occhi-che-non-dormono-perché-il-silenzio-sia-onesto)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Le Otto Lanterne](#atto-i-le-otto-lanterne)
+  - [ATTO II  Il Punto Storto](#atto-ii-il-punto-storto)
+  - [ATTO III  Il Soldato che Parla](#atto-iii-il-soldato-che-parla)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_44 — Il Turno di Guardia
 ### "Otto occhi che non dormono, perché il silenzio sia onesto"

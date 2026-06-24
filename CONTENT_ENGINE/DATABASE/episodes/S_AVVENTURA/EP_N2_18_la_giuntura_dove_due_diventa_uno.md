@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, EP_AV_00_la_bambina_e_la_giuntura
 ---
+<!-- TOC -->
+
+- [EP_N2_18  La Giuntura  Dove Due Diventa Uno](#epn218-la-giuntura-dove-due-diventa-uno)
+    - [Nina scopre come le cose si connettono senza perdere se stesse](#nina-scopre-come-le-cose-si-connettono-senza-perdere-se-stesse)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Filo Che Abbraccia](#atto-i-il-filo-che-abbraccia)
+  - [ATTO II  I Tre Modi in Cui Due Cose Si Parlano](#atto-ii-i-tre-modi-in-cui-due-cose-si-parlano)
+  - [ATTO III  La Giuntura Intelligente](#atto-iii-la-giuntura-intelligente)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_18 — La Giuntura — Dove Due Diventa Uno
 ### "Nina scopre come le cose si connettono senza perdere se stesse"

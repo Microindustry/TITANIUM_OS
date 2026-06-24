@@ -6,7 +6,7 @@
     {
       "level": 0,
       "title": "intro",
-      "content": "<!-- TOC -->\n\n- [ECOSYSTEM MANIFEST  TITANIUM](#ecosystem-manifest-titanium)\n  - [Identità](#identità)\n  - [Gerarchia Layer](#gerarchia-layer)\n  - [Livelli di visibilità](#livelli-di-visibilità)\n  - [Principio fondante](#principio-fondante)\n  - [Origine](#origine)\n  - [Visualizzazione target](#visualizzazione-target)\n\n<!-- /TOC -->"
+      "content": "<!-- TOC -->\n\n- [ECOSYSTEM MANIFEST  TITANIUM](#ecosystem-manifest-titanium)\n  - [Identità](#identità)\n  - [Gerarchia Layer](#gerarchia-layer)\n  - [I 15 Nodi operativi (NODES/)](#i-15-nodi-operativi-nodes)\n  - [Livelli di visibilità](#livelli-di-visibilità)\n  - [Principio fondante](#principio-fondante)\n  - [Origine](#origine)\n  - [Visualizzazione target](#visualizzazione-target)\n\n<!-- /TOC -->"
     },
     {
       "level": 1,
@@ -17,6 +17,11 @@
       "level": 2,
       "title": "Gerarchia Layer",
       "content": "```\nTITANIUM (brand / umbrella / identità)\n│\n├── GENESIS OS (cervello vivo)\n│   ├── STATE.json — stato corrente, milestones, focus, blockers\n│   ├── BRAIN/KNOWLEDGE/ — 15 file di contesto per LLM\n│   ├── watcher / state_updater — sistema nervoso autonomo\n│   └── agent_loop (futuro) — decisioni autonome\n│\n├── ECOSYSTEM (rete / API / connessioni)\n│   ├── api_server.py — endpoints REST\n│   ├── n8n_bridge.json — orchestrazione workflow\n│   └── MCP servers — filesystem, github, fetch, sqlite\n│\n├── DASHBOARD (interfaccia visiva)\n│   ├── NeuroMapView — mappa SVG drill-down immersiva\n│   ├── NeuroOSLayout — vista mappa con dot grid + pulse\n│   ├── CanvasLayout — canvas draggabile\n│   ├── SINAPSI (LayersView) — database layer per progetto\n│   ├── StorieView — episodi podcast + LLM dataset\n│   └── EcosystemView (futuro) — la rete a nodi infinita\n│\n├── CONTENT ENGINE (storytelling / narrazione / brand)\n│   ├── milestone_to_episode.py — STATE.json → episodio podcast\n│   ├── episodes_to_dataset.py — episodi → training JSONL\n│   ├── episode_to_audio.py — TTS Kokoro offline\n│   ├── DATABASE/episodes/ — .md con frontmatter LLM-ready\n│   └── reel_hook — script 60-80 parole per IG/YT\n│\n├── PRODOTTI FISICI\n│   ├── V32 — fresatrice CNC 3 assi (178kg, ±0.019mm)\n│   ├── MIMS — connettori modulari fisici\n│   ├── VULCAN — pressa 20t + ricette polimeri + brevetto\n│   └── FIT PARK 4.0 — area fitness con tornello MIMS\n│\n├── PRODOTTI DIGITALI\n│   ├── EVA — AI assistant WhatsApp per Vita Natura\n│   └── LLM Matteo (futuro) — modello fine-tuned sulla narrazione\n│\n└── IDENTITÀ PUBBLICA\n    ├── GitHub Microindustry — repo + profilo README\n    ├── CV Navigabile — layer espandibili, proof-of-work reali\n    ├── Podcast — episodi audio da Content Engine\n    ├── Social — reel IG/YT, LinkedIn, contenuto tecnico\n    └── MATTEO map — mappa SVG standalone navigabile\n```\n\n---"
+    },
+    {
+      "level": 2,
+      "title": "I 15 Nodi operativi (NODES/)",
+      "content": "*La mappa concettuale sopra dice i **layer**; qui i **nodi reali** su disco (agg. 2026-06-24, sess.#44). Diverse voci \"(futuro)\" del 2025 sono ora vive: `agent_loop`→**SELF_IMPROVE**, `LLM Matteo`→**LOCAL_LLM**.*\n\n| Cluster | Nodo | Cosa fa |\n|---------|------|---------|\n| **Conoscenza** | `MENTE_RAG` | RAG v4.0 ibrido (BM25+semantico+CrossEncoder), GPU |\n| | `MENTE_SCANNER` | estrazione doc da PDF/DOCX → MENTE |\n| | `MENTE_WATCHER` | watch fs → trigger RAG incrementale |\n| | `RESEARCH_AGENT` | trova paper/tesi dal web → ingesta in MENTE |\n| **Agenti** | `NEXUS` | swarm orchestrator multi-agente |\n| | `AGENTS` | registry agenti + validator |\n| **Contenuti** | `STORY_AGENT` | episodi dev-log da git log |\n| | `NINA_AGENT` | avventure educative \"Nina\" grounded sul RAG (2 stadi) — 50 ep |\n| | `AI_NEWS_WATCHER` | scouting keyless creator/repo AI (tier 48h) |\n| **Auto-cura** | `AUDIT_AGENT` | self-audit notturno → cartella clinica |\n| | `SELF_IMPROVE` | auto-miglioramento (regola 11): segnali interni+esterni → proposte |\n| | `PCT_SYNC` | coerenza % pilastri ← STATE.json (fonte unica) |\n| **Interfaccia** | `COMPUTER_USE` | ARGUS v2, computer use ibrido a 3 livelli |\n| | `LOCAL_LLM` | inferenza LLM locale (Ollama) |\n| | `EVA` | assistente WhatsApp (Vita Natura) · pilot |\n\n---"
     },
     {
       "level": 2,
@@ -39,7 +44,7 @@
       "content": "La dashboard deve mostrare questa rete come **nodi vivi connessi**:\n- Centro: MATTEO\n- Primo anello: layer (PRIVATO / PUBBLICO)\n- Ogni nodo si espande in sotto-nodi\n- Colori per tipo (fisico/digitale/narrazione/sistema)\n- Connessioni animate tra nodi correlati\n- Pulse sui nodi attivi (focus_today)\n- Glow sui nodi con blocker\n- Drill infinito: ogni nodo è un sotto-ecosistema\n\nRiferimento visivo: @alexandra.kassis — rete di agenti con particelle colorate.\nTecnica: SVG + force-directed layout o radial tree, React, dati da STATE.json via API."
     }
   ],
-  "word_count": 503,
-  "updated_at": "2026-06-02T16:38:09.030992",
-  "built_at": "2026-06-23T16:27:35.870676"
+  "word_count": 668,
+  "updated_at": "2026-06-24T15:35:46.248040",
+  "built_at": "2026-06-24T15:35:46.248040"
 }

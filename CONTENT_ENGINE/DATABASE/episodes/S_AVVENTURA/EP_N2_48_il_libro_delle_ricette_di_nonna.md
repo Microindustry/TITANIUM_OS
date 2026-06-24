@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, sistema, spiegato, sistema
 ---
+<!-- TOC -->
+
+- [EP_N2_48  Il Libro delle Ricette di Nonna](#epn248-il-libro-delle-ricette-di-nonna)
+    - [Quando spieghi come fai una cosa, non è più solo tua  diventa un regalo che funziona per sempre](#quando-spieghi-come-fai-una-cosa-non-è-più-solo-tua-diventa-un-regalo-che-funziona-per-sempre)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Differenza fra un Segreto e uno Strumento](#atto-i-la-differenza-fra-un-segreto-e-uno-strumento)
+  - [ATTO II  Il Disordine che Nessuno Vede](#atto-ii-il-disordine-che-nessuno-vede)
+  - [ATTO III  La Catena delle Mani](#atto-iii-la-catena-delle-mani)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_48 — Il Libro delle Ricette di Nonna
 ### "Quando spieghi come fai una cosa, non è più solo tua — diventa un regalo che funziona per sempre"

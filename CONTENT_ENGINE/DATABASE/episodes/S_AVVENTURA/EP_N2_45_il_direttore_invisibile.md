@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Orchestratore, secondi, fonti
 ---
+<!-- TOC -->
+
+- [EP_N2_45  Il Direttore Invisibile](#epn245-il-direttore-invisibile)
+    - [Come un sistema impara a organizzarsi da solo, senza aspettare aiuto](#come-un-sistema-impara-a-organizzarsi-da-solo-senza-aspettare-aiuto)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Sistema che si Guarda allo Specchio](#atto-i-il-sistema-che-si-guarda-allo-specchio)
+  - [ATTO II  Tre Mani che non si Guardano](#atto-ii-tre-mani-che-non-si-guardano)
+  - [ATTO III  Il Direttore che Non Vedi](#atto-iii-il-direttore-che-non-vedi)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_45 — Il Direttore Invisibile
 ### "Come un sistema impara a organizzarsi da solo, senza aspettare aiuto"

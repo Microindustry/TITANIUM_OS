@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Guardare, senza, chiavi
 ---
+<!-- TOC -->
+
+- [EP_N2_25  Le finestre sempre aperte](#epn225-le-finestre-sempre-aperte)
+    - [Come Nina scopre che le informazioni viaggiano senza biglietto  e lei può vederle passare](#come-nina-scopre-che-le-informazioni-viaggiano-senza-biglietto-e-lei-può-vederle-passare)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Le strade che non chiedono nome](#atto-i-le-strade-che-non-chiedono-nome)
+  - [ATTO II  I canali che non dormono](#atto-ii-i-canali-che-non-dormono)
+  - [ATTO III  Guardare non è lo stesso che possedere](#atto-iii-guardare-non-è-lo-stesso-che-possedere)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_25 — Le finestre sempre aperte
 ### "Come Nina scopre che le informazioni viaggiano senza biglietto — e lei può vederle passare"

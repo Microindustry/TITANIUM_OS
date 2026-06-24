@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Sistema, Pensa, CommandBar
 ---
+<!-- TOC -->
+
+- [EP_N2_28  Il Diario che Pensa](#epn228-il-diario-che-pensa)
+    - [Quando un foglio di carta smette di stare fermo e inizia a ricordare da solo](#quando-un-foglio-di-carta-smette-di-stare-fermo-e-inizia-a-ricordare-da-solo)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Filo con i Nodi](#atto-i-il-filo-con-i-nodi)
+  - [ATTO II  La Rottura](#atto-ii-la-rottura)
+  - [ATTO III  La Traccia che Difende](#atto-iii-la-traccia-che-difende)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_28 — Il Diario che Pensa
 ### "Quando un foglio di carta smette di stare fermo e inizia a ricordare da solo"

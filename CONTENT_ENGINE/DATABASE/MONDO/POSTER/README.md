@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [Poster  il mondo di Nina (materiali visivi)](#poster-il-mondo-di-nina-materiali-visivi)
+  - [Assets](#assets)
+  - [Come rigenerare](#come-rigenerare)
+  - [Palette Regioni (coerenza)](#palette-regioni-coerenza)
+  - [Da abbinare al gioco](#da-abbinare-al-gioco)
+
+<!-- /TOC -->
+
 # Poster — il mondo di Nina (materiali visivi)
 
 *Grafica del mondo di Nina. Tutto è **design HTML/SVG reso in PNG via headless Chrome**

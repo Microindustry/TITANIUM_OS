@@ -6,6 +6,24 @@
     "sessione": ""
   },
   {
+    "id": "BUS-d22b2a00",
+    "stato": "da_fare",
+    "testo": "(#sessione-43-23062026-ultracode-nina-definitiva-canone-unico-epn2)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-a7a693a7",
+    "stato": "da_fare",
+    "testo": "(#prossima-sessione-44-si-riparte-da-qui)",
+    "sessione": ""
+  },
+  {
+    "id": "BUS-8eb18426",
+    "stato": "da_fare",
+    "testo": "(#sessione-42-23062026-blackout-rag-recovery-2-livelli-obsidian-titoliintersect)",
+    "sessione": ""
+  },
+  {
     "id": "BUS-ccc56b03",
     "stato": "da_fare",
     "testo": "(#sessione-41-22062026-watchdog-on-rag-self-heal-canone-vulcancnc-corretto)",
@@ -226,6 +244,180 @@
     "stato": "da_fare",
     "testo": "(#idee-note)",
     "sessione": ""
+  },
+  {
+    "id": "BUS-c3237265",
+    "stato": "fatto",
+    "testo": "**Storie/Dashboard — RAG Nina archiviati visibili + leggibili.** Falla vera: il proxy Vite non inoltrava `/api/nina/*` a Flask (→ HTML invece di JSON, \"archivio non raggiungibile\"). Fix proxy + id archivio non più troncato a \"EP_A\". Righe archiviate ora espandibili (lettore lazy via `/api/file`). Commit `64b09b10`,`2b7d8c00`.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-668a5d47",
+    "stato": "fatto",
+    "testo": "**EP_N2_01 riscritto = vero inizio** (\"C'era una bambina che faceva una domanda di troppo\" → la porta → la Giuntura → Themis → il bottone che regge). Open-loop corretto verso la misura (EP_N2_02). Build additivo: scoperto che `build_episodes_json.py` è additive-only (per riscrivere: rimuovi l'id da episodes.json poi rebuild).",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-7e91273d",
+    "stato": "fatto",
+    "testo": "**Menu Storie a 3 voci a LIVELLO PRINCIPALE** (richiesta Matteo): `STORIE · SISTEMA` · `NINA · DAL GIORNO 0` · `NINA · ARCHIVIO` (prima annidate). Commit `19749906`.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-dbca99fb",
+    "stato": "fatto",
+    "testo": "**RAG RESUSCITATO** (era crashato, non \"server vecchio\"): corruzione HNSW da power-loss **+** commit-leak ~56 GB (Windows saturo, nemmeno PowerShell partiva). Liberato il commit (63,9→7,8 GB) → `--drop-hnsw` (ricostruito da sqlite, no ri-embed) → API su. RAG search ok.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-a04b143f",
+    "stato": "fatto",
+    "testo": "**Auto-audit + 2 rinforzi**: `rag_recover` ora killa il commit-leak (>15GB) PRIMA di sondare (commit `b488df17`); valutato e **RIFIUTATO** `chromadb-ops` (richiede chromadb 1.x, rompe il nostro pin 0.5.23) — disciplina: integrare solo ciò che passa compatibilità+sicurezza+additività.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-e855f5d3",
+    "stato": "fatto",
+    "testo": "**Simone Rizzo nel watcher** (tier 1 YT) — era solo un handle github sbagliato. NB: il resolver `@handle→channel_id` dà id morti (404) → da irrobustire.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-a6860766",
+    "stato": "fatto",
+    "testo": "**NINA COPRE LA MAPPA — 50 episodi EP_N2.** Driver `nina_map_cover.py`: 31 concetti DISTINTI della mappa (Graphify, RETE, t-SNE, orchestratore, watcher…) → 31 nuovi episodi grounded auto-canone (+3 dal loop nativo). ⟡0→⟡7 in ampiezza. Build verde. Commit copertura nel blocco episodi.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-9c25d25f",
+    "stato": "fatto",
+    "testo": "**Poster pilota EP_N2_01** (Claude Design): title-card A3 HTML/SVG → PNG (headless Chrome). La porta + la Giuntura. *(no AI-image gen in ambiente: design grafico, non scena dipinta.)*",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-a4551c7e",
+    "stato": "fatto",
+    "testo": "**Audit struttura + vetrina riallineata**: l'albero su `README.md` pubblico (github.com/Microindustry) mostrava 8 nodi su 15 reali → aggiornato a 15 (+ CORE/SERVICES/_VAULT) + `ECOSYSTEM_MANIFEST` tabella nodi. Commit `06126ee3`. Struttura cartelle sana (niente deriva di posizioni); cresciuta, era la MAPPA indietro.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-b87a3629",
+    "stato": "da_fare",
+    "testo": "**Da decidere con Matteo (svegli, non di notte):** gitignore di `DATA/views/` (298 file auto-gen tracciati) + `logs/`; raggruppare/indicizzare `AUTOMATIONS/core` (~30 script piatti); pulire `INBOX/` (brief vecchi); irrobustire il resolver YouTube del watcher.",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-26e6ca34",
+    "stato": "idea",
+    "testo": "Candidato RAG: implementare NOI il recupero **WAL→HNSW commit** contro 0.5.23 (più chirurgico di `--drop-hnsw`).",
+    "sessione": "Sessione #44 · 24/06/2026 — Nina copre la mappa (50 ep) · RAG resuscitato · vetrina riallineata"
+  },
+  {
+    "id": "BUS-6cef55ff",
+    "stato": "fatto",
+    "testo": "**Step 1/6 — Canone unico = EP_N2.** I 13 vecchi `EP_AV_*` spostati in `S_AVVENTURA/_ARCHIVIO`",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-0b0a0454",
+    "stato": "fatto",
+    "testo": "`avventuraMapData.ts`: le 7 Regioni ora puntano agli `EP_N2` (10/06/07/09/11/12/14), stato → `scritto`.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-3b5ec615",
+    "stato": "fatto",
+    "testo": "`episodes.json`: purgate 13 voci EP_AV → rebuild (176 ep) + `storie_intersect` (879 legami, 0 isolati) + `storie_evoluzione`. Zero link strutturali residui verso EP_AV (solo prosa storica nei dev-log, lasciata).",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-ec275a84",
+    "stato": "fatto",
+    "testo": "`build_episodes_json.py` NINA_SEED/FINANZA_SEED ripuliti dai seed morti. Potati 13 view json fantasma + view_index. **Build TS verde.**",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-9c37b21a",
+    "stato": "fatto",
+    "testo": "Commit isolato: repo `fb7f71cb` · MENTE `1cdedbd`.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-707a9465",
+    "stato": "fatto",
+    "testo": "**Step 2/6 — Ordinare il CAMMINO** (il \"libro\"): la catena open-loop era **già concatenata 1→15**",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-79ef3148",
+    "stato": "fatto",
+    "testo": "**Step 3/6 — Una sola verità sul RAG**: trovata la falla vera → il RAG indicizza MENTE ma **non**",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-1577c9cc",
+    "stato": "fatto",
+    "testo": "**REFLUX RAG fatto** (23/06): rebuild HARD esclusivo riuscito (reset fisico 10:46, API su 10:49).",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-59203c00",
+    "stato": "fatto",
+    "testo": "**BUG: il watcher combatteva il rebuild** — il 1° tentativo era fallito (watcher.py vedeva i 287 file Obsidian → incrementale gigante, 52k delete label-fantasma, crash mid-write, search 500). FIX: `rag_update_exclusive.ps1`+`rag_recover.ps1` ora fermano ANCHE watcher.py (e lo riavviano). Commit `7c371655`.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-3afe709a",
+    "stato": "fatto",
+    "testo": "**Dashboard riavviata** (5173 era giù): `pnpm dev` → HTTP 200, API 200. Sito di nuovo raggiungibile.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-10352beb",
+    "stato": "fatto",
+    "testo": "**Obsidian sistemato**: archiviati esclusi dai tool del vault (ecosystem_bridge/wiki_index/fix_titoli/setup_obsidian), 13 archiviati resi inerti, INDICE_CAMMINO/PRODUZIONE intessuti. Commit repo `e358b2ee` · MENTE `76682e7`.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-a0bffe04",
+    "stato": "fatto",
+    "testo": "**Grafo \"a zone\" → ECOSISTEMA** (`496e96d9`+`4683b91d`): `vault_intersect` premia i ponti cross-dominio (≥4 garantiti/nota) → **48% legami cross-dominio**; `ecosystem_bridge` **3136 ponti cross-mondo** (era 1984). Blocchi nav esclusi dall'indice RAG (tunare il grafo non sporca il RAG). Matteo: «ora è un ecosistema». MENTE `bd10bfe`.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-d600de15",
+    "stato": "fatto",
+    "testo": "**Push fatto**: TITANIUM_OS su GitHub (`fb7f71cb`→`4683b91d`). MENTE = local-only (no remote, by design).",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-27fd7a30",
+    "stato": "da_fare",
+    "testo": "**ANIMATIC EP_N2_01 — IN PAUSA** (Matteo: «attendi con animazione»). NON ripartire con l'animatic finché non lo dice. Bivio formato già pronto in `PRODUZIONE_NINA.md` (storyboard deck Express / video+TTS / solo illustrazioni).",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-57f02b46",
+    "stato": "da_fare",
+    "testo": "**C'è ancora lavoro su Nina** (Matteo) — **da definire a inizio sessione #44**: chiedergli cosa.",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-c4cd1174",
+    "stato": "fatto",
+    "testo": "**Step 4/6 — Continuità esplicita**: verificata in tutti i 15 EP_N2 («Dove siamo» + Open loop presenti, catena integra).",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-262cc83d",
+    "stato": "fatto",
+    "testo": "**Step 5/6 — Audit STORIE** (framing canone): `canon_guard` scan su **177 episodi → 0 violazioni**",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
+  },
+  {
+    "id": "BUS-9ba2b0f1",
+    "stato": "fatto",
+    "testo": "**Step 6/6 — Predisporre ANIMAZIONE + VOCE**: `MONDO/PRODUZIONE_NINA.md` (pilota `EP_N2_01`, animatic",
+    "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
   },
   {
     "id": "BUS-ab3f0204",

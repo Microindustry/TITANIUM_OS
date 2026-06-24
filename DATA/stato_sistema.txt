@@ -1,28 +1,28 @@
 ====================================================
  STATO TITANIUM_OS — file fisico (auto-aggiornato)
- Tuesday 23 June 2026, 04:07
+ Wednesday 24 June 2026, 04:07
 ====================================================
 
 >>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
 
 — Task notturni —
-  ✓ TI_StoryAgent      OK   (ultima: 23/06 02:07)
-  ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 23/06 03:37)
-  ✓ TI_NightAudit      OK   (ultima: 23/06 03:52)
-  ✓ TI_NightPush       OK   (ultima: 23/06 04:07)
-  ✓ TI_DailyBrief      OK   (ultima: 22/06 07:30)
-  ✓ TI_Watchdog        OK   (ultima: 23/06 03:41)
+  ✓ TI_StoryAgent      OK   (ultima: 24/06 02:07)
+  ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 24/06 03:37)
+  ✓ TI_NightAudit      OK   (ultima: 24/06 03:52)
+  ✓ TI_NightPush       OK   (ultima: 24/06 04:07)
+  ✓ TI_DailyBrief      OK   (ultima: 23/06 07:30)
+  ✓ TI_Watchdog        OK   (ultima: 24/06 03:40)
 
 — Servizi —
   · API Server (5001): attivo
   · MENTE Watcher: attivo
 
 — ⚠ GUASTI dai log (ultime 36h) —
-  ⚠ night_research.log: Traceback (most recent call last):
-  ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 20/06 03:37)
+  ⚠ night_push.log: ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 23/06 03:37)
   ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):
   ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 20/06 03:37)
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (mos
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.l
@@ -30,8 +30,6 @@
 — note (rumore atteso, non urgente) —
   · night_research.log: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to 
   · night_research.log: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to 
-  · night_push.log: · night_research.log: 2026-06-22 03:38:39 [research_agent      ] WARNING  [semantic_schola
-  · night_push.log: · night_research.log: 2026-06-22 03:38:45 [research_agent      ] WARNING  [semantic_schola
 
 Questo file si riscrive da solo (catena notturna + watchdog).
 Se vedi ⚠, apri DATA/logs/ del task indicato.

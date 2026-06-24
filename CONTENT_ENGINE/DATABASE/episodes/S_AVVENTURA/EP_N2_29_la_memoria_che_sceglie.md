@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, SINAPSI, database, come
 ---
+<!-- TOC -->
+
+- [EP_N2_29  La Memoria che Sceglie](#epn229-la-memoria-che-sceglie)
+    - [Come le connessioni che usi diventano chi sei](#come-le-connessioni-che-usi-diventano-chi-sei)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Filo Che Si Rinforza](#atto-i-il-filo-che-si-rinforza)
+  - [ATTO II  La Mappa che Cambia](#atto-ii-la-mappa-che-cambia)
+  - [ATTO III  Chi Sei È Dove Cammini](#atto-iii-chi-sei-è-dove-cammini)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_29 — La Memoria che Sceglie
 ### "Come le connessioni che usi diventano chi sei"

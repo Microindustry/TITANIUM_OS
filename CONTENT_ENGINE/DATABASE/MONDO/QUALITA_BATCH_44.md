@@ -5,6 +5,15 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, qualita, verifica, batch, copertura-mappa, audit
 ---
+<!-- TOC -->
+
+- [Verifica qualità  batch copertura-mappa (sess.44, 24/06/2026)](#verifica-qualità-batch-copertura-mappa-sess44-24062026)
+  - [Metodo](#metodo)
+  - [Esito: QUALITÀ REALE, nessuna riscrittura necessaria](#esito-qualità-reale-nessuna-riscrittura-necessaria)
+  - [Note / aperti (minori, per Matteo)](#note-aperti-minori-per-matteo)
+
+<!-- /TOC -->
+
 
 # Verifica qualità — batch copertura-mappa (sess.#44, 24/06/2026)
 

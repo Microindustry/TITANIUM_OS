@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, News, Watcher, restare
 ---
+<!-- TOC -->
+
+- [EP_N2_23  Il Guardiano che Non Dorme](#epn223-il-guardiano-che-non-dorme)
+    - [Come stare al passo con lIA senza regalare le tue chiavi a nessuno](#come-stare-al-passo-con-lia-senza-regalare-le-tue-chiavi-a-nessuno)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Lista Appesa alla Porta](#atto-i-la-lista-appesa-alla-porta)
+  - [ATTO II  Trenta Lampadine, Nessuna Chiave](#atto-ii-trenta-lampadine-nessuna-chiave)
+  - [ATTO III  Il Quaderno dellOsservatore](#atto-iii-il-quaderno-dellosservatore)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_23 — Il Guardiano che Non Dorme
 ### "Come stare al passo con l'IA senza regalare le tue chiavi a nessuno"

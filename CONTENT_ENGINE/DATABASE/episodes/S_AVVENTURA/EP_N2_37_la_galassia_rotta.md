@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, RETE, vedere, sistema
 ---
+<!-- TOC -->
+
+- [EP_N2_37  La Galassia Rotta](#epn237-la-galassia-rotta)
+    - [Quando due guide perdono il passo e la mappa smette di brillare](#quando-due-guide-perdono-il-passo-e-la-mappa-smette-di-brillare)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Le Due Guide che Hanno Perso il Passo](#atto-i-le-due-guide-che-hanno-perso-il-passo)
+  - [ATTO II  LIndice Vecchio e il Fantasma](#atto-ii-lindice-vecchio-e-il-fantasma)
+  - [ATTO III  Quando la Galassia Ritrova Forma](#atto-iii-quando-la-galassia-ritrova-forma)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_37 — La Galassia Rotta
 ### "Quando due guide perdono il passo e la mappa smette di brillare"

@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Prima, Automazione, sistema
 ---
+<!-- TOC -->
+
+- [EP_N2_22  La Macchina che Impara a Cucire](#epn222-la-macchina-che-impara-a-cucire)
+    - [Quando le regole diventano azioni, e le azioni si ripetono da sole](#quando-le-regole-diventano-azioni-e-le-azioni-si-ripetono-da-sole)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Ricetta Sul Muro](#atto-i-la-ricetta-sul-muro)
+  - [ATTO II  Due Passate, Una Ricetta](#atto-ii-due-passate-una-ricetta)
+  - [ATTO III  Scrivi Una Volta, Esegui Sempre Giusto](#atto-iii-scrivi-una-volta-esegui-sempre-giusto)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_22 — La Macchina che Impara a Cucire
 ### "Quando le regole diventano azioni, e le azioni si ripetono da sole"

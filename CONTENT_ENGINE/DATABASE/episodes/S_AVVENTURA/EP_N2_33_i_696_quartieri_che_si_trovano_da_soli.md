@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, quartieri, community, detection
 ---
+<!-- TOC -->
+
+- [EP_N2_33  I 696 quartieri che si trovano da soli](#epn233-i-696-quartieri-che-si-trovano-da-soli)
+    - [Come una città di fili e nodi capisce da sola dove vivono le famiglie, senza che nessuno glielo dica](#come-una-città-di-fili-e-nodi-capisce-da-sola-dove-vivono-le-famiglie-senza-che-nessuno-glielo-dica)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il filo sa dove stare](#atto-i-il-filo-sa-dove-stare)
+  - [ATTO II  La misura dellordine](#atto-ii-la-misura-dellordine)
+  - [ATTO III  Il quartiere personale](#atto-iii-il-quartiere-personale)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_33 — I 696 quartieri che si trovano da soli
 ### "Come una città di fili e nodi capisce da sola dove vivono le famiglie, senza che nessuno glielo dica"

@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Tela, dashboard, mostra
 ---
+<!-- TOC -->
+
+- [EP_N2_47  La Tela  Chi guarda il quadro?](#epn247-la-tela-chi-guarda-il-quadro)
+    - [Una dashboard non è uno specchio dei dati. È uno specchio di chi la guarda.](#una-dashboard-non-è-uno-specchio-dei-dati-è-uno-specchio-di-chi-la-guarda)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La stessa stoffa, tre occhi diversi](#atto-i-la-stessa-stoffa-tre-occhi-diversi)
+  - [ATTO II  La Tela e il Direttore](#atto-ii-la-tela-e-il-direttore)
+  - [ATTO III  Lo specchio che non sai di tenere](#atto-iii-lo-specchio-che-non-sai-di-tenere)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_47 — La Tela — Chi guarda il quadro?
 ### "Una dashboard non è uno specchio dei dati. È uno specchio di chi la guarda."

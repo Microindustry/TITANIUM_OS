@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, frutti, Grande, Loop
 ---
+<!-- TOC -->
+
+- [EP_N2_17  La Traccia](#epn217-la-traccia)
+    - [Un gesto soffiato via nel vento è morto. Un gesto inciso nel fango è vivo per sempre.](#un-gesto-soffiato-via-nel-vento-è-morto-un-gesto-inciso-nel-fango-è-vivo-per-sempre)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Gesto e il Segno](#atto-i-il-gesto-e-il-segno)
+  - [ATTO II  Chi Non Cè Ancora](#atto-ii-chi-non-cè-ancora)
+  - [ATTO III  La Traccia che Insegna da Sola](#atto-iii-la-traccia-che-insegna-da-sola)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_17 — La Traccia
 ### "Un gesto soffiato via nel vento è morto. Un gesto inciso nel fango è vivo per sempre."

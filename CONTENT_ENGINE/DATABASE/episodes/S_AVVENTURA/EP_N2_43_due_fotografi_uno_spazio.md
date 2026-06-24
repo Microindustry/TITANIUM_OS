@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, contro, UMAP, modi
 ---
+<!-- TOC -->
+
+- [EP_N2_43  Due fotografi, uno spazio](#epn243-due-fotografi-uno-spazio)
+    - [Quando Nina scopre che non esiste una sola foto giusta  e come scegliere quale obiettivo usare](#quando-nina-scopre-che-non-esiste-una-sola-foto-giusta-e-come-scegliere-quale-obiettivo-usare)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Due obiettivi, una sola realtà](#atto-i-due-obiettivi-una-sola-realtà)
+  - [ATTO II  Quando usi una, quando usi laltra](#atto-ii-quando-usi-una-quando-usi-laltra)
+  - [ATTO III  Quale fotocamera per quale foresta](#atto-iii-quale-fotocamera-per-quale-foresta)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_43 — Due fotografi, uno spazio
 ### "Quando Nina scopre che non esiste una sola foto giusta — e come scegliere quale obiettivo usare"

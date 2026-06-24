@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, gate, rilevanza, tenere
 ---
+<!-- TOC -->
+
+- [EP_N2_24  Il Filtro del Mugnaio](#epn224-il-filtro-del-mugnaio)
+    - [97 chicchi grezzi, ma solo 3 contano davvero. Come Nina impara a sentire il segnale nel rumore](#97-chicchi-grezzi-ma-solo-3-contano-davvero-come-nina-impara-a-sentire-il-segnale-nel-rumore)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Sacco e il Vaglio](#atto-i-il-sacco-e-il-vaglio)
+  - [ATTO II  Due Vagli, Due Compromessi](#atto-ii-due-vagli-due-compromessi)
+  - [ATTO III  Il Gate è la Domanda](#atto-iii-il-gate-è-la-domanda)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_24 — Il Filtro del Mugnaio
 ### "97 chicchi grezzi, ma solo 3 contano davvero. Come Nina impara a sentire il segnale nel rumore"

@@ -5,6 +5,17 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, reel, contenuto, social, simone-rizzo, divulgazione
 ---
+<!-- TOC -->
+
+- [Reel Nina  spiego lAI a un bambino](#reel-nina-spiego-lai-a-un-bambino)
+  - [REEL 1  Fatto bene non vuol dire bello (da EP_N2_01)](#reel-1-fatto-bene-non-vuol-dire-bello-da-epn201)
+  - [REEL 2  La community detection con una scatola di bottoni (da EP_N2_33)](#reel-2-la-community-detection-con-una-scatola-di-bottoni-da-epn233)
+  - [REEL 3  t-SNE vs UMAP: due fotocamere (da EP_N2_43)](#reel-3-t-sne-vs-umap-due-fotocamere-da-epn243)
+  - [REEL 4  Il semaforo che mente (da EP_N2_50)](#reel-4-il-semaforo-che-mente-da-epn250)
+  - [Come usarli](#come-usarli)
+
+<!-- /TOC -->
+
 
 # Reel Nina — "spiego l'AI a un bambino"
 

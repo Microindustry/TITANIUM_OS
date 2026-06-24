@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, gesto, giusto, insegnato
 ---
+<!-- TOC -->
+
+- [EP_N2_19  La mano che insegna alla notte](#epn219-la-mano-che-insegna-alla-notte)
+    - [Un gesto giusto, ripetuto mille volte mentre dormi  la macchina non capisce, amplifica](#un-gesto-giusto-ripetuto-mille-volte-mentre-dormi-la-macchina-non-capisce-amplifica)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LO SPECCHIO CHE NON DIMENTICA](#atto-i-lo-specchio-che-non-dimentica)
+  - [ATTO II  LA NOTTE NELLOFFICINA](#atto-ii-la-notte-nellofficina)
+  - [ATTO III  IL MOMENTO DELLA MANO](#atto-iii-il-momento-della-mano)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_19 — La mano che insegna alla notte
 ### "Un gesto giusto, ripetuto mille volte mentre dormi — la macchina non capisce, amplifica"

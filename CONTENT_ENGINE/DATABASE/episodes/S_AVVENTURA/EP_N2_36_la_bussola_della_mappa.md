@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Interrogare, mappa, file
 ---
+<!-- TOC -->
+
+- [EP_N2_36  La Bussola della Mappa](#epn236-la-bussola-della-mappa)
+    - [Come chiedere come gira? senza farsi rileggere tutto il libro](#come-chiedere-come-gira-senza-farsi-rileggere-tutto-il-libro)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Registro della Sarta](#atto-i-il-registro-della-sarta)
+  - [ATTO II  Zero Token Sprecati](#atto-ii-zero-token-sprecati)
+  - [ATTO III  La Domanda Giusta](#atto-iii-la-domanda-giusta)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_36 — La Bussola della Mappa
 ### "Come chiedere 'come gira?' senza farsi rileggere tutto il libro"

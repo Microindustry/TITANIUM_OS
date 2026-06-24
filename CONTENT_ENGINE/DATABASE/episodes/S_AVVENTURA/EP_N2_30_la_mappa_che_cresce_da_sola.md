@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Graphify, repo, disegna
 ---
+<!-- TOC -->
+
+- [EP_N2_30  La Mappa che Cresce da Sola](#epn230-la-mappa-che-cresce-da-sola)
+    - [Come 515 file sparsi diventano una mappa di 5966 connessioni in 13 secondi, senza aiuto umano](#come-515-file-sparsi-diventano-una-mappa-di-5966-connessioni-in-13-secondi-senza-aiuto-umano)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Tavolo Magnetico](#atto-i-il-tavolo-magnetico)
+  - [ATTO II  Tredici Secondi](#atto-ii-tredici-secondi)
+  - [ATTO III  La Mappa Impara](#atto-iii-la-mappa-impara)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_30 — La Mappa che Cresce da Sola
 ### "Come 515 file sparsi diventano una mappa di 5966 connessioni in 13 secondi, senza aiuto umano"

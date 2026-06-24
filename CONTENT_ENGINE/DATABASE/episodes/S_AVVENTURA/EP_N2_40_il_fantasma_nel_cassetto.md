@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, codice, stato, Approfondimento
 ---
+<!-- TOC -->
+
+- [EP_N2_40  Il fantasma nel cassetto](#epn240-il-fantasma-nel-cassetto)
+    - [Quando due persone aprono lo stesso cassetto allo stesso tempo, il caos arriva](#quando-due-persone-aprono-lo-stesso-cassetto-allo-stesso-tempo-il-caos-arriva)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Due chiavi per la stessa porta](#atto-i-due-chiavi-per-la-stessa-porta)
+  - [ATTO II  Lindice che mente](#atto-ii-lindice-che-mente)
+  - [ATTO III  Chi decide chi entra](#atto-iii-chi-decide-chi-entra)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_40 — Il fantasma nel cassetto
 ### "Quando due persone aprono lo stesso cassetto allo stesso tempo, il caos arriva"

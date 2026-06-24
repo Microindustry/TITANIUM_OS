@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, carico, sullo, schermo
 ---
+<!-- TOC -->
+
+- [EP_N2_49  La scatola magica dei compiti](#epn249-la-scatola-magica-dei-compiti)
+    - [Quando la testa è piena, lo schermo diventa il tuo aiutante fedele](#quando-la-testa-è-piena-lo-schermo-diventa-il-tuo-aiutante-fedele)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Lufficio volante](#atto-i-lufficio-volante)
+  - [ATTO II  Dove vive il carico](#atto-ii-dove-vive-il-carico)
+  - [ATTO III  La scatola che non dimentica](#atto-iii-la-scatola-che-non-dimentica)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_49 — La scatola magica dei compiti
 ### "Quando la testa è piena, lo schermo diventa il tuo aiutante fedele"

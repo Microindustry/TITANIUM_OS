@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, verità, dello, stesso
 ---
+<!-- TOC -->
+
+- [EP_N2_41  Lo specchio nascosto](#epn241-lo-specchio-nascosto)
+    - [Come il tuo diario e il tuo corpo raccontano la stessa storia, ma con parole diverse](#come-il-tuo-diario-e-il-tuo-corpo-raccontano-la-stessa-storia-ma-con-parole-diverse)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La lingua del cosa e la lingua del come](#atto-i-la-lingua-del-cosa-e-la-lingua-del-come)
+  - [ATTO II  Lo switch della lampada](#atto-ii-lo-switch-della-lampada)
+  - [ATTO III  Quando i due specchi dicono la stessa cosa](#atto-iii-quando-i-due-specchi-dicono-la-stessa-cosa)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_41 — Lo specchio nascosto
 ### "Come il tuo diario e il tuo corpo raccontano la stessa storia, ma con parole diverse"

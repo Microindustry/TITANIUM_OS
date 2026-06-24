@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [EP_S2_09  IL GIORNO CHE IL RAG HA MANGIATO 56 GIGABYTE](#eps209-il-giorno-che-il-rag-ha-mangiato-56-gigabyte)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  IL COMMIT-LEAK CHE NESSUNO AVEVA VISTO](#atto-i-il-commit-leak-che-nessuno-aveva-visto)
+  - [ATTO II  NINA COPRE LA MAPPA](#atto-ii-nina-copre-la-mappa)
+  - [ATTO III  TRE VOCI, UN SISTEMA CHE SI LEGGE](#atto-iii-tre-voci-un-sistema-che-si-legge)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # EP_S2_09 — IL GIORNO CHE IL RAG HA MANGIATO 56 GIGABYTE
 
 *Sessione #44 · 23 giugno 2026 · GENESIS 70%*

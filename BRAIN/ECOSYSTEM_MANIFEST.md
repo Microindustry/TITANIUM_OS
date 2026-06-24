@@ -3,6 +3,7 @@
 - [ECOSYSTEM MANIFEST  TITANIUM](#ecosystem-manifest-titanium)
   - [Identità](#identità)
   - [Gerarchia Layer](#gerarchia-layer)
+  - [I 15 Nodi operativi (NODES/)](#i-15-nodi-operativi-nodes)
   - [Livelli di visibilità](#livelli-di-visibilità)
   - [Principio fondante](#principio-fondante)
   - [Origine](#origine)

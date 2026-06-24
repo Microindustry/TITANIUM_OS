@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, 5000, numeri, galassia
 ---
+<!-- TOC -->
+
+- [EP_N2_42  La stanza dei segreti numerici](#epn242-la-stanza-dei-segreti-numerici)
+    - [Come trasformare un archivio gigante in una mappa che gli occhi possono leggere](#come-trasformare-un-archivio-gigante-in-una-mappa-che-gli-occhi-possono-leggere)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La sarta con cinquemila stoffe](#atto-i-la-sarta-con-cinquemila-stoffe)
+  - [ATTO II  Come si piega lo spazio senza strapparlo](#atto-ii-come-si-piega-lo-spazio-senza-strapparlo)
+  - [ATTO III  Aprire gli occhi sullarchitettura](#atto-iii-aprire-gli-occhi-sullarchitettura)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_42 — La stanza dei segreti numerici
 ### "Come trasformare un archivio gigante in una mappa che gli occhi possono leggere"

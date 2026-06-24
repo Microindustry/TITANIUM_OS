@@ -447,7 +447,7 @@
     },
     "BRAIN/ECOSYSTEM_MANIFEST.md": {
       "title": "ECOSYSTEM MANIFEST — TITANIUM",
-      "updated_at": "2026-06-02T16:38:09.030992",
+      "updated_at": "2026-06-24T15:35:46.248040",
       "endpoint": "/api/view/BRAIN__ECOSYSTEM_MANIFEST.md"
     },
     "BRAIN/KNOWLEDGE/economics/pricing-strategy.md": {
@@ -607,7 +607,7 @@
     },
     "README.md": {
       "title": "TITANIUM_OS",
-      "updated_at": "2026-06-02T16:38:18.454387",
+      "updated_at": "2026-06-24T00:45:08.116376",
       "endpoint": "/api/view/README.md"
     },
     "BRAIN/github_profile_readme.md": {
@@ -822,7 +822,7 @@
     },
     "DA_FARE_FATTO.md": {
       "title": "DA FARE / COSA HO FATTO — la BUSSOLA viva di TITANIUM_OS",
-      "updated_at": "2026-06-23T16:25:23.883024",
+      "updated_at": "2026-06-24T03:52:02.092447",
       "endpoint": "/api/view/DA_FARE_FATTO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/PERCORSO_EVOLUTIVO.md": {
@@ -1122,7 +1122,7 @@
     },
     "DOCS/INVENTARIO_NOTTURNO.md": {
       "title": "Inventario — cosa abbiamo costruito (notte per notte)",
-      "updated_at": "2026-06-23T04:07:02.123380",
+      "updated_at": "2026-06-24T04:07:02.135609",
       "endpoint": "/api/view/DOCS__INVENTARIO_NOTTURNO.md"
     },
     "CONTENT_ENGINE/DATABASE/MONDO/NINA_V2_CHARACTER_BIBLE.md": {
@@ -1504,8 +1504,203 @@
       "title": "Indice del Cammino — il \"libro\" di Nina (ordine canonico)",
       "updated_at": "2026-06-23T16:27:31.079728",
       "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__INDICE_CAMMINO.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260623_traccia_simone_rizzo_tier_1_yt_driv.md": {
+      "title": "EP_S2_09 — IL GIORNO CHE IL RAG HA MANGIATO 56 GIGABYTE",
+      "updated_at": "2026-06-24T03:52:33.370399",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260623_traccia_simone_rizzo_tier_1_yt_driv.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S2_SISTEMA/EP_20260624_content_nina_4_script_reel_stile_si.md": {
+      "title": "TITANIUM_OS — Episodio 44",
+      "updated_at": "2026-06-24T03:52:33.747216",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S2_SISTEMA__EP_20260624_content_nina_4_script_reel_stile_si.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_17_la_traccia.md": {
+      "title": "La Traccia",
+      "updated_at": "2026-06-24T03:53:09.163894",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_17_la_traccia.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_18_la_giuntura_dove_due_diventa_uno.md": {
+      "title": "La Giuntura — Dove Due Diventa Uno",
+      "updated_at": "2026-06-24T03:53:09.546432",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_18_la_giuntura_dove_due_diventa_uno.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_19_la_mano_che_insegna_alla_notte.md": {
+      "title": "La mano che insegna alla notte",
+      "updated_at": "2026-06-24T03:53:09.928984",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_19_la_mano_che_insegna_alla_notte.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_20_il_corpo_che_non_trema.md": {
+      "title": "Il Corpo che Non Trema",
+      "updated_at": "2026-06-24T03:53:10.312098",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_20_il_corpo_che_non_trema.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_21_il_nome_che_cambia.md": {
+      "title": "Il Nome Che Cambia",
+      "updated_at": "2026-06-24T03:53:10.682434",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_21_il_nome_che_cambia.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_22_la_macchina_che_impara_a_cucire.md": {
+      "title": "La Macchina che Impara a Cucire",
+      "updated_at": "2026-06-24T03:53:11.077310",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_22_la_macchina_che_impara_a_cucire.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_23_il_guardiano_che_non_dorme.md": {
+      "title": "Il Guardiano che Non Dorme",
+      "updated_at": "2026-06-24T03:53:11.458416",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_23_il_guardiano_che_non_dorme.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_24_il_filtro_del_mugnaio.md": {
+      "title": "Il Filtro del Mugnaio",
+      "updated_at": "2026-06-24T03:53:11.839368",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_24_il_filtro_del_mugnaio.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_25_le_finestre_sempre_aperte.md": {
+      "title": "Le finestre sempre aperte",
+      "updated_at": "2026-06-24T03:53:12.215316",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_25_le_finestre_sempre_aperte.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_26_la_ruota_dei_guardiani.md": {
+      "title": "La ruota dei guardiani",
+      "updated_at": "2026-06-24T03:53:12.594438",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_26_la_ruota_dei_guardiani.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_27_la_memoria_che_respira.md": {
+      "title": "La Memoria che Respira",
+      "updated_at": "2026-06-24T03:53:12.979883",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_27_la_memoria_che_respira.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_28_il_diario_che_pensa.md": {
+      "title": "Il Diario che Pensa",
+      "updated_at": "2026-06-24T03:53:13.360441",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_28_il_diario_che_pensa.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_29_la_memoria_che_sceglie.md": {
+      "title": "La Memoria che Sceglie",
+      "updated_at": "2026-06-24T03:53:13.748375",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_29_la_memoria_che_sceglie.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_30_la_mappa_che_cresce_da_sola.md": {
+      "title": "La Mappa che Cresce da Sola",
+      "updated_at": "2026-06-24T03:53:14.122152",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_30_la_mappa_che_cresce_da_sola.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_31_il_cruscotto_che_non_dorme.md": {
+      "title": "Il Cruscotto che Non Dorme",
+      "updated_at": "2026-06-24T03:53:14.501593",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_31_il_cruscotto_che_non_dorme.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_32_il_giorno_che_il_labirinto_si_vide_nello.md": {
+      "title": "Il Giorno che il Labirinto si Vide nello Specchio",
+      "updated_at": "2026-06-24T03:53:14.886987",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_32_il_giorno_che_il_labirinto_si_vide_nello.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_33_i_696_quartieri_che_si_trovano_da_soli.md": {
+      "title": "I 696 quartieri che si trovano da soli",
+      "updated_at": "2026-06-24T03:53:15.620492",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_33_i_696_quartieri_che_si_trovano_da_soli.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_34_le_stelle_che_reggono_il_filo.md": {
+      "title": "Le stelle che reggono il filo",
+      "updated_at": "2026-06-24T03:53:15.996528",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_34_le_stelle_che_reggono_il_filo.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_35_il_custode_dei_segreti.md": {
+      "title": "Il Custode dei Segreti",
+      "updated_at": "2026-06-24T03:53:16.377712",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_35_il_custode_dei_segreti.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_36_la_bussola_della_mappa.md": {
+      "title": "La Bussola della Mappa",
+      "updated_at": "2026-06-24T03:53:16.766648",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_36_la_bussola_della_mappa.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_37_la_galassia_rotta.md": {
+      "title": "La Galassia Rotta",
+      "updated_at": "2026-06-24T03:53:17.139683",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_37_la_galassia_rotta.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_38_il_filo_della_strada_giusta.md": {
+      "title": "Il Filo della Strada Giusta",
+      "updated_at": "2026-06-24T03:53:17.534796",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_38_il_filo_della_strada_giusta.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_39_il_voto_dei_quartieri.md": {
+      "title": "Il Voto dei Quartieri",
+      "updated_at": "2026-06-24T03:53:17.913264",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_39_il_voto_dei_quartieri.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_40_il_fantasma_nel_cassetto.md": {
+      "title": "Il fantasma nel cassetto",
+      "updated_at": "2026-06-24T03:53:18.294771",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_40_il_fantasma_nel_cassetto.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_41_lo_specchio_nascosto_quando_due_persone_.md": {
+      "title": "Lo specchio nascosto — quando due persone vedono la stessa cosa diversamente",
+      "updated_at": "2026-06-24T03:53:18.675787",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_41_lo_specchio_nascosto_quando_due_persone_.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_42_la_stanza_dei_segreti_numerici.md": {
+      "title": "La stanza dei segreti numerici",
+      "updated_at": "2026-06-24T03:53:19.048589",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_42_la_stanza_dei_segreti_numerici.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_43_due_fotografi_uno_spazio.md": {
+      "title": "Due fotografi, uno spazio",
+      "updated_at": "2026-06-24T03:53:19.426174",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_43_due_fotografi_uno_spazio.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_44_il_turno_di_guardia.md": {
+      "title": "Il Turno di Guardia",
+      "updated_at": "2026-06-24T03:53:19.819890",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_44_il_turno_di_guardia.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_45_il_direttore_invisibile.md": {
+      "title": "Il Direttore Invisibile",
+      "updated_at": "2026-06-24T03:53:20.201510",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_45_il_direttore_invisibile.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_46_la_stanza_della_visione.md": {
+      "title": "La Stanza della Visione",
+      "updated_at": "2026-06-24T03:53:20.583067",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_46_la_stanza_della_visione.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_47_la_tela_chi_guarda_il_quadro.md": {
+      "title": "La Tela — Chi guarda il quadro?",
+      "updated_at": "2026-06-24T03:53:20.970992",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_47_la_tela_chi_guarda_il_quadro.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_48_il_libro_delle_ricette_di_nonna.md": {
+      "title": "Il Libro delle Ricette di Nonna",
+      "updated_at": "2026-06-24T03:53:21.349006",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_48_il_libro_delle_ricette_di_nonna.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_49_la_scatola_magica_dei_compiti.md": {
+      "title": "La scatola magica dei compiti",
+      "updated_at": "2026-06-24T03:53:21.736973",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_49_la_scatola_magica_dei_compiti.md"
+    },
+    "CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_50_il_semaforo_che_mente.md": {
+      "title": "Il semaforo che mente",
+      "updated_at": "2026-06-24T03:53:22.124189",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__episodes__S_AVVENTURA__EP_N2_50_il_semaforo_che_mente.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/QUALITA_BATCH_44.md": {
+      "title": "Verifica qualità — batch copertura-mappa (31 episodi auto-generati)",
+      "updated_at": "2026-06-24T15:35:46.650501",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__QUALITA_BATCH_44.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/POSTER/README.md": {
+      "title": "Poster — il mondo di Nina (materiali visivi)",
+      "updated_at": "2026-06-24T15:35:47.087979",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__POSTER__README.md"
+    },
+    "CONTENT_ENGINE/DATABASE/MONDO/REEL_NINA.md": {
+      "title": "Script reel — spiegare l'AI come a un bambino (stile Simone Rizzo)",
+      "updated_at": "2026-06-24T15:35:47.507957",
+      "endpoint": "/api/view/CONTENT_ENGINE__DATABASE__MONDO__REEL_NINA.md"
     }
   },
-  "last_built": "2026-06-23T23:19:08.584562",
-  "total": 301
+  "last_built": "2026-06-24T15:35:47.523580",
+  "total": 340
 }

@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Materia, telaio, scelta
 ---
+<!-- TOC -->
+
+- [EP_N2_20  Il Corpo che Non Trema](#epn220-il-corpo-che-non-trema)
+    - [Perché Nina scopre che un telaio è come uno scheletro: ogni osso conta, e niente è accidentale.](#perché-nina-scopre-che-un-telaio-è-come-uno-scheletro-ogni-osso-conta-e-niente-è-accidentale)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Ogni Osso Conta](#atto-i-ogni-osso-conta)
+  - [ATTO II  La Risonanza è il Vero Nemico](#atto-ii-la-risonanza-è-il-vero-nemico)
+  - [ATTO III  La Promessa della Materia](#atto-iii-la-promessa-della-materia)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_20 — Il Corpo che Non Trema
 ### "Perché Nina scopre che un telaio è come uno scheletro: ogni osso conta, e niente è accidentale."

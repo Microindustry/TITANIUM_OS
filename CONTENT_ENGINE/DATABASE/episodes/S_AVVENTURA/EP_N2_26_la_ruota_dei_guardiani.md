@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, guardare, spesso, tier
 ---
+<!-- TOC -->
+
+- [EP_N2_26  La ruota dei guardiani](#epn226-la-ruota-dei-guardiani)
+    - [Non puoi stare ovunque. Impara a ruotare lo sguardo dove conta davvero](#non-puoi-stare-ovunque-impara-a-ruotare-lo-sguardo-dove-conta-davvero)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Cinque settori, una ruota](#atto-i-cinque-settori-una-ruota)
+  - [ATTO II  Il nome del problema: starvation](#atto-ii-il-nome-del-problema-starvation)
+  - [ATTO III  Il quaderno dei turni](#atto-iii-il-quaderno-dei-turni)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_26 — La ruota dei guardiani
 ### "Non puoi stare ovunque. Impara a ruotare lo sguardo dove conta davvero"

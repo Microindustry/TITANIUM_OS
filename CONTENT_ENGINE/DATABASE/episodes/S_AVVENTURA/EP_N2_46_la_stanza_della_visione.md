@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Centro, Controllo, posto
 ---
+<!-- TOC -->
+
+- [EP_N2_46  La Stanza della Visione](#epn246-la-stanza-della-visione)
+    - [Un solo posto dove tutto si vede: cosa fanno gli strumenti, come si accendono, se stanno funzionando davvero](#un-solo-posto-dove-tutto-si-vede-cosa-fanno-gli-strumenti-come-si-accendono-se-stanno-funzionando-davvero)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il problema dei cento schermi](#atto-i-il-problema-dei-cento-schermi)
+  - [ATTO II  La Tavola di Vetro](#atto-ii-la-tavola-di-vetro)
+  - [ATTO III  Come si governa davvero](#atto-iii-come-si-governa-davvero)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_46 — La Stanza della Visione
 ### "Un solo posto dove tutto si vede: cosa fanno gli strumenti, come si accendono, se stanno funzionando davvero"

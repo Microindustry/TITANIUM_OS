@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Cervello, Ibrido, archivio
 ---
+<!-- TOC -->
+
+- [EP_N2_27  La Memoria che Respira](#epn227-la-memoria-che-respira)
+    - [Come un archivio morto diventa vivo quando impara a parlare con se stesso](#come-un-archivio-morto-diventa-vivo-quando-impara-a-parlare-con-se-stesso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  Il Cassettone della Sarta](#atto-i-il-cassettone-della-sarta)
+  - [ATTO II  La Ragnatela che Respira](#atto-ii-la-ragnatela-che-respira)
+  - [ATTO III  Prima la Domanda, Poi la Vita](#atto-iii-prima-la-domanda-poi-la-vita)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_27 — La Memoria che Respira
 ### "Come un archivio morto diventa vivo quando impara a parlare con se stesso"

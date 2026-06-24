@@ -8,6 +8,19 @@ status: ready
 durata_min: 14
 tags: avventura, educativo, nina, themis, nina-v2, Dashboard, Quando, caos
 ---
+<!-- TOC -->
+
+- [EP_N2_31  Il Cruscotto che Non Dorme](#epn231-il-cruscotto-che-non-dorme)
+    - [Quando tutto ha bisogno di uno sguardo sempre acceso](#quando-tutto-ha-bisogno-di-uno-sguardo-sempre-acceso)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  La Sarta con il Quaderno](#atto-i-la-sarta-con-il-quaderno)
+  - [ATTO II  Il Custode che Non Dorme](#atto-ii-il-custode-che-non-dorme)
+  - [ATTO III  La Casella del Custode](#atto-iii-la-casella-del-custode)
+  - [CHIUSURA](#chiusura)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 
 # EP_N2_31 — Il Cruscotto che Non Dorme
 ### "Quando tutto ha bisogno di uno sguardo sempre acceso"
