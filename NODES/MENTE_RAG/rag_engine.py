@@ -1,7 +1,9 @@
-# rag_engine.py | TITANIUM_OS / NODES / MENTE_RAG | v4.0 | 2026-05-28
+# rag_engine.py | TITANIUM_OS / NODES / MENTE_RAG | v4.1 | 2026-06-24
 # RAG ibrido: ChromaDB semantico + TF-IDF BM25 keyword + CrossEncoder reranker
 # Rebuild incrementale via manifest (mtime+size) — solo file nuovi/modificati
 # Pattern: Hybrid RRF + two-stage retrieval (2024-2025 state-of-art)
+# v4.1: chunking heading-aware sui .md (confini semantici + breadcrumb) + snapshot
+#       chroma_db in _VAULT/BACKUPS (recovery istantaneo senza ri-embedding)
 
 import os, sys, re, json, pickle, logging, hashlib
 from datetime import datetime
@@ -94,8 +96,33 @@ DEVICE = _resolve_device()
 
 CHUNK_SIZE     = 512    # chars (~100 token) — ottimale per Q&A tecnico
 CHUNK_STRIDE   = 200    # 61% overlap — bilancia contesto e precisione
+# CHUNK_VER governa l'invalidazione del manifest (cambiarlo = full re-embed di TUTTO
+# al prossimo --incremental). NON lo tocchiamo per il passaggio a heading-aware:
+# un re-embed di 32k chunk vuole la GPU libera, ma la notte l'API è su (24/7) -> OOM
+# 8GB, proprio il guasto da blackout che vogliamo evitare. La geometria del chunk è
+# invariata, quindi il nuovo algoritmo entra in modo ADDITIVO: ogni .md adotta lo
+# split heading-aware quando viene ri-processato (cambio mtime). Per migrare TUTTO il
+# corpus in un colpo, rebuild DELIBERATO a GPU libera (API giù): --rebuild / --rebuild-hard.
 CHUNK_VER      = f"v{CHUNK_SIZE}s{CHUNK_STRIDE}"
+CHUNK_ALGO     = "heading-aware-md (v4.1)"   # doc: split sui titoli .md + breadcrumb
 TOP_K          = 5
+
+# SNAPSHOT: copia known-good di chroma_db in _VAULT/BACKUPS (fuori git). Il recovery
+# a 2 livelli ricostruisce sempre dal corpus, ma uno snapshot permette un restore
+# ISTANTANEO senza ri-embeddare 32k chunk. La notte ne scatta uno dopo l'incrementale.
+ROOT           = Path(os.environ.get("TI_ROOT", str(_HERE.parents[1])))
+SNAPSHOT_DIR   = ROOT / "_VAULT" / "BACKUPS" / "rag_snapshots"
+SNAPSHOT_KEEP  = 3      # rotazione: tieni gli ultimi N snapshot
+
+# WIKILINK-AWARE EXPANSION (GraphRAG-lite, v4.2) — l'edge dei vault Obsidian (SOTA 2026):
+# se un chunk recuperato vive in una nota che linka [[B]], aggiungiamo candidati da B
+# PRIMA del reranker, che fa da filtro (link irrilevante → scartato dal CrossEncoder).
+# Il grafo si costruisce da puro walk+regex (NIENTE GPU): disaccoppiato dall'embedding,
+# si rigenera live e a fine build_index. Risoluzione: target = stem del filename (.md).
+LINKGRAPH_PATH = _HERE / "rag_linkgraph.json"
+GRAPH_EXPAND_FROM = 3   # espandi dai primi N risultati RRF
+GRAPH_EXPAND_MAX  = 8   # max candidati aggiunti dai link (poi il reranker decide)
+_WIKILINK = re.compile(r"\[\[([^\]\|#]+)")   # cattura il target fino a | o # o ]]
 FETCH_K        = TOP_K * 3   # candidati pre-rerank
 RRF_K          = 60
 SUPPORTED_EXT  = {".md", ".txt", ".py", ".json"}
@@ -172,6 +199,8 @@ def _is_nav_file(path: Path) -> bool:
     return path.name in _NAV_FILES or path.name.startswith("_INDEX")
 
 def _chunk(text: str, sid: str) -> list[dict]:
+    """Finestra scorrevole cieca alla struttura (fallback per .py/.json/.txt e per
+    i markdown senza heading)."""
     chunks, start, idx = [], 0, 0
     while start < len(text):
         content = text[start:start + CHUNK_SIZE].strip()
@@ -180,6 +209,65 @@ def _chunk(text: str, sid: str) -> list[dict]:
             idx += 1
         start += CHUNK_STRIDE
     return chunks
+
+
+_H_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
+
+def _chunk_md_by_heading(text: str, sid: str) -> list[dict]:
+    """Chunking heading-aware per Markdown (v4.1).
+
+    Spezza il documento sulle intestazioni (#..######) — confini SEMANTICI veri,
+    non offset ciechi — e antepone a ogni chunk il *breadcrumb* delle heading
+    (es. "[V32 > Rinforzi colonne]"). Vantaggi:
+      • un chunk non taglia più a metà una frase tra due sezioni diverse;
+      • il breadcrumb dà contesto al modello E aggiunge keyword cercabili (il titolo
+        di sezione finisce nel testo indicizzato → trovabile da semantico e BM25).
+    Sezioni più lunghe di CHUNK_SIZE → finestra scorrevole INTERNA alla sezione
+    (overlap dentro la sezione, mai tra sezioni). Documenti senza heading →
+    fallback alla finestra cieca _chunk (identico comportamento precedente)."""
+    sections: list[tuple[str, str]] = []   # (breadcrumb, body)
+    stack: list[tuple[int, str]] = []      # (livello_heading, titolo)
+    buf: list[str] = []
+
+    def flush():
+        body = "\n".join(buf).strip()
+        if body:
+            crumb = " > ".join(t for _, t in stack)
+            sections.append((crumb, body))
+        buf.clear()
+
+    for ln in text.split("\n"):
+        m = _H_RE.match(ln)
+        if m:
+            flush()  # chiudi la sezione sotto la heading precedente
+            level, title = len(m.group(1)), m.group(2).strip()
+            stack = [(lv, t) for lv, t in stack if lv < level]
+            stack.append((level, title))
+        else:
+            buf.append(ln)
+    flush()
+
+    if not sections:                       # nessuna heading → vecchio comportamento
+        return _chunk(text, sid)
+
+    chunks, idx = [], 0
+    for crumb, body in sections:
+        prefix = f"[{crumb}]\n" if crumb else ""
+        starts = range(0, len(body), CHUNK_STRIDE) if len(body) > CHUNK_SIZE else [0]
+        for start in starts:
+            seg = body[start:start + CHUNK_SIZE].strip()
+            content = (prefix + seg).strip()
+            if len(content) > 40:
+                chunks.append({"id": f"{sid}__c{idx}", "text": content})
+                idx += 1
+    return chunks
+
+
+def _chunk_dispatch(text: str, sid: str, suffix: str) -> list[dict]:
+    """Markdown → heading-aware; tutto il resto (.py/.json/.txt) → finestra cieca."""
+    if suffix == ".md":
+        return _chunk_md_by_heading(text, sid)
+    return _chunk(text, sid)
 
 def _sid(rel: str) -> str:
     # base leggibile dal path + hash del path ORIGINALE: due file che si normalizzano
@@ -359,7 +447,7 @@ def build_index(force: bool = False) -> int:
 
         # Ri-chunking (pulizia vault: via blocchi Collegati + commenti auto)
         text   = _clean_for_index(_read_file(path))
-        chunks = _chunk(text, _sid(rel)) if text else []
+        chunks = _chunk_dispatch(text, _sid(rel), path.suffix.lower()) if text else []
         cids   = []
         for c in chunks:
             batch_docs.append(c["text"])
@@ -414,17 +502,109 @@ def build_index(force: bool = False) -> int:
 
     logger.info("Fit TF-IDF BM25 su %d chunk...", len(corpus))
     _fit_tfidf(corpus)
-    logger.info("Completo — semantico + BM25 + reranker pronti.")
+    # Linkgraph aggiornato nello stesso passaggio (cheap, no GPU): tiene il grafo
+    # wikilink allineato al vault per la graph-expansion in query.
+    try:
+        build_linkgraph()
+    except Exception as e:
+        logger.warning("build_linkgraph saltato: %s", e)
+    logger.info("Completo — semantico + BM25 + reranker + linkgraph pronti.")
     return total
+
+# ── WIKILINK GRAPH (GraphRAG-lite) ─────────────────────────────────────────────
+
+def build_linkgraph() -> dict:
+    """Costruisce il grafo dei [[wikilink]] del vault — puro walk+regex, NIENTE GPU.
+    Risoluzione Obsidian: il target di [[stem|alias]] è lo STEM del filename .md.
+
+    Parsiamo TUTTI i link, inclusi quelli dei blocchi auto 'Collegati' (vault_intersect):
+    NON sono ridondanti col semantico. vault_intersect li calcola con TF-IDF sull'INTERO
+    documento, mentre il retrieval lavora sui CHUNK: un link A→B fa da ponte verso i chunk
+    di B che il retrieval chunk-level ha mancato (recall complementare doc→chunk). Il cap
+    GRAPH_EXPAND_MAX e il reranker a valle proteggono la precisione. Scrive
+    rag_linkgraph.json. Disaccoppiato dall'embedding: si rigenera quando si vuole."""
+    md_files = [
+        p for p in MENTE_DIR.rglob("*.md")
+        if p.is_file() and not _is_excluded(p) and not _is_nav_file(p)
+    ]
+    # stem(lower) → relpath (con os.sep, coerente con _sid usato nell'indice)
+    stem2rel: dict[str, str] = {}
+    for p in md_files:
+        stem2rel[p.stem.lower()] = str(p.relative_to(MENTE_DIR))
+
+    by_source: dict[str, list[str]] = {}
+    edges = 0
+    for p in md_files:
+        rel  = str(p.relative_to(MENTE_DIR))
+        text = _read_file(p)   # grezzo: include i [[wikilink]] dei blocchi Collegati
+        targets = set()
+        for raw in _WIKILINK.findall(text):
+            tgt = stem2rel.get(raw.strip().lower())
+            if tgt and tgt != rel:
+                targets.add(tgt)
+        if targets:
+            by_source[rel] = sorted(targets)
+            edges += len(targets)
+
+    graph = {"built": datetime.now().isoformat(), "edges": edges, "by_source": by_source}
+    try:
+        LINKGRAPH_PATH.write_text(json.dumps(graph, ensure_ascii=False), encoding="utf-8")
+    except Exception as e:
+        logger.warning("linkgraph non salvato: %s", e)
+    logger.info("Linkgraph: %d note con link, %d archi (vault completo, risolti)", len(by_source), edges)
+    return graph
+
+def _load_linkgraph() -> dict:
+    if not LINKGRAPH_PATH.exists():
+        return {}
+    try:
+        return json.loads(LINKGRAPH_PATH.read_text(encoding="utf-8")).get("by_source", {})
+    except Exception:
+        return {}
+
+def _graph_expand(col, cands: list[dict], id_map: dict) -> list[dict]:
+    """Aggiunge candidati dalle note linkate dai primi GRAPH_EXPAND_FROM risultati.
+    Tira il primo chunk (__c0) di ogni nota linkata non già presente, cap a
+    GRAPH_EXPAND_MAX. Il reranker a valle filtra i link irrilevanti."""
+    lg = _load_linkgraph()
+    if not lg or not cands:
+        return []
+    seen_src = {c["source"] for c in cands}
+    linked: list[str] = []
+    for c in cands[:GRAPH_EXPAND_FROM]:
+        for tgt in lg.get(c["source"], []):
+            if tgt not in seen_src and tgt not in linked:
+                linked.append(tgt)
+    if not linked:
+        return []
+    want_ids = [f"{_sid(rel)}__c0" for rel in linked[: GRAPH_EXPAND_MAX * 2]]
+    try:
+        got = col.get(ids=want_ids, include=["documents", "metadatas"])
+    except Exception:
+        return []
+    added: list[dict] = []
+    for cid, doc, m in zip(got.get("ids", []), got.get("documents", []), got.get("metadatas", [])):
+        if cid in id_map or not doc:
+            continue
+        src = m.get("source", "?")
+        id_map[cid] = {"text": doc, "source": src}
+        added.append({"chunk_id": cid, "text": doc, "source": src, "rrf": 0.0, "_graph": True})
+        if len(added) >= GRAPH_EXPAND_MAX:
+            break
+    if added:
+        logger.debug("graph-expand: +%d candidati da %d note linkate", len(added), len(linked))
+    return added
+
 
 # ── SEARCH ────────────────────────────────────────────────────────────────────
 
 def search(
-    query:        str,
-    top_k:        int  = TOP_K,
-    rebuild:      bool = False,
-    use_hybrid:   bool = True,
-    use_reranker: bool = True,
+    query:            str,
+    top_k:            int  = TOP_K,
+    rebuild:          bool = False,
+    use_hybrid:       bool = True,
+    use_reranker:     bool = True,
+    use_graph_expand: bool = True,
 ) -> list[dict]:
     if rebuild:
         build_index(force=True)
@@ -469,6 +649,11 @@ def search(
         if cid in id_map
     ]
 
+    # 4b — Graph-expansion (GraphRAG-lite): aggiunge candidati dalle note linkate
+    # dai top risultati. Il reranker a valle filtra: i link irrilevanti non passano.
+    if use_graph_expand:
+        cands += _graph_expand(col, cands, id_map)
+
     # 5 — CrossEncoder rerank
     final = _rerank(query, cands, top_k) if use_reranker else cands[:top_k]
 
@@ -503,14 +688,17 @@ def get_index_stats() -> dict:
     except Exception:
         bm25_n = 0
     m = _load_manifest()
+    lg = _load_linkgraph()
     return {
         "chunks":        chunks,
         "bm25_chunks":   bm25_n,
         "files_indexed": len(m.get("files", {})),
-        "chunk_config":  f"size={CHUNK_SIZE} stride={CHUNK_STRIDE}",
+        "chunk_config":  f"size={CHUNK_SIZE} stride={CHUNK_STRIDE} [{CHUNK_VER}] | {CHUNK_ALGO}",
+        "snapshots":     len(_list_snapshots()),
+        "linkgraph_notes": len(lg),
         "model":         EMBED_MODEL,
         "reranker":      RERANKER_MODEL,
-        "engine":        "ChromaDB + TF-IDF RRF + CrossEncoder (v4.0)",
+        "engine":        "ChromaDB + TF-IDF RRF + CrossEncoder + GraphRAG-lite (v4.2)",
     }
 
 # ── RECOVERY a 2 LIVELLI (post-crash/blackout) ─────────────────────────────────
@@ -576,6 +764,57 @@ def reset_chroma_dir() -> str:
     return bak.name
 
 
+# ── SNAPSHOT / RESTORE (_VAULT/BACKUPS) ────────────────────────────────────────
+# Il recovery L1/L2 sopra ricostruisce SEMPRE dal corpus, ma L2 ri-embedda 32k
+# chunk (minuti, serve la GPU). Uno snapshot della cartella chroma_db permette un
+# restore ISTANTANEO (copia di file) di un indice noto-buono. Vive in _VAULT/BACKUPS
+# (fuori dal git, regola 8). La notte ne scatta uno dopo l'incrementale riuscito.
+
+def _list_snapshots() -> list[Path]:
+    if not SNAPSHOT_DIR.exists():
+        return []
+    return sorted(
+        p for p in SNAPSHOT_DIR.glob("chroma_db_*")
+        if p.is_dir() and not p.name.endswith(".tmp")
+    )
+
+def snapshot_chroma(keep: int = SNAPSHOT_KEEP) -> str:
+    """Copia chroma_db in _VAULT/BACKUPS/rag_snapshots/chroma_db_<ts> (atomico via
+    .tmp+rename). Ruota tenendo gli ultimi `keep`. Ritorna il path, o '' se non
+    c'è nulla da salvare. Da chiamare a indice SANO (es. dopo l'incrementale)."""
+    import shutil
+    if not (CHROMA_DIR / "chroma.sqlite3").exists():
+        return ""
+    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    dst = SNAPSHOT_DIR / f"chroma_db_{datetime.now():%Y%m%d_%H%M%S}"
+    tmp = dst.with_name(dst.name + ".tmp")
+    if tmp.exists():
+        shutil.rmtree(tmp, ignore_errors=True)
+    shutil.copytree(CHROMA_DIR, tmp)
+    tmp.rename(dst)
+    for old in (_list_snapshots()[:-keep] if keep > 0 else []):
+        shutil.rmtree(old, ignore_errors=True)
+        logger.info("Snapshot ruotato via: %s", old.name)
+    logger.info("Snapshot chroma_db -> %s (tengo ultimi %d)", dst.name, keep)
+    return str(dst)
+
+def restore_latest_snapshot() -> str:
+    """RESTORE ISTANTANEO: rimpiazza chroma_db con l'ultimo snapshot (la cartella
+    corrente viene messa da parte, additivo). Ritorna il nome dello snapshot usato,
+    o '' se non ce ne sono. Alternativa veloce a L2 quando l'indice è corrotto ma
+    esiste un backup recente noto-buono."""
+    import shutil
+    snaps = _list_snapshots()
+    if not snaps:
+        return ""
+    src = snaps[-1]
+    if CHROMA_DIR.exists():
+        CHROMA_DIR.rename(CHROMA_DIR.with_name(f"chroma_db_prerestore_{datetime.now():%Y%m%d_%H%M%S}"))
+    shutil.copytree(src, CHROMA_DIR)
+    logger.info("Restore snapshot %s -> chroma_db", src.name)
+    return src.name
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -590,22 +829,35 @@ if __name__ == "__main__":
     p.add_argument("--top",          type=int, default=TOP_K)
     p.add_argument("--no-reranker",  action="store_true", help="Disabilita CrossEncoder")
     p.add_argument("--no-hybrid",    action="store_true", help="Solo ricerca semantica")
+    p.add_argument("--no-graph",     action="store_true", help="Disabilita la graph-expansion wikilink")
+    p.add_argument("--linkgraph",    action="store_true", help="(Ri)costruisci SOLO il grafo wikilink rag_linkgraph.json (no GPU)")
     p.add_argument("--probe",        action="store_true", help="Query minima di salute (exit!=0 se l'indice crasha) — per orchestratore")
     p.add_argument("--drop-hnsw",    action="store_true", help="Recovery L1: sposta il segmento HNSW corrotto (Chroma lo ricostruisce da sqlite, no ri-embed)")
     p.add_argument("--rebuild-hard", action="store_true", help="Rebuild con RESET FISICO della cartella chroma_db (HNSW rinumera da 0: cura 'KeyError np.uint64' post delete massivi)")
+    p.add_argument("--snapshot",     action="store_true", help="Copia known-good di chroma_db in _VAULT/BACKUPS (rotazione ultimi 3)")
+    p.add_argument("--restore-snapshot", action="store_true", help="Restore istantaneo dall'ultimo snapshot in _VAULT/BACKUPS (no ri-embed)")
     args = p.parse_args()
 
     if args.probe:
         # Pensato per girare in subprocess: un HNSW corrotto fa SIGSEGV qui ->
         # exit-code != 0 visibile all'orchestratore. Se sano stampa PROBE_OK.
         try:
-            r = search("probe", top_k=1, use_hybrid=False, use_reranker=False)
+            r = search("probe", top_k=1, use_hybrid=False, use_reranker=False, use_graph_expand=False)
             print(f"PROBE_OK results={len(r)}")
         except Exception as e:
             print(f"PROBE_FAIL {e}")
             sys.exit(2)
+    elif args.linkgraph:
+        g = build_linkgraph()
+        print(json.dumps({"notes": len(g.get("by_source", {})), "edges": g.get("edges", 0)}, ensure_ascii=False))
     elif args.drop_hnsw:
         print(json.dumps({"hnsw_dirs_moved": drop_hnsw_index()}, ensure_ascii=False))
+    elif args.snapshot:
+        path = snapshot_chroma()
+        print(json.dumps({"snapshot": path or "(niente da salvare)", "totale": len(_list_snapshots())}, ensure_ascii=False))
+    elif args.restore_snapshot:
+        name = restore_latest_snapshot()
+        print(json.dumps({"restored": name or "(nessuno snapshot)"}, ensure_ascii=False))
     elif args.rebuild_hard:
         bak = reset_chroma_dir()
         print(f"reset fisico chroma_db: {bak or '(vuoto)'}")
@@ -625,6 +877,7 @@ if __name__ == "__main__":
             top_k=args.top,
             use_hybrid=not args.no_hybrid,
             use_reranker=not args.no_reranker,
+            use_graph_expand=not args.no_graph,
         )
         if not results:
             print(f"Nessun risultato per: '{args.query}'")

@@ -64,6 +64,48 @@
 
 ---
 
+## Sessione #46 · 24/06/2026 — RAG enhancement: chunking heading-aware + snapshot _VAULT
+
+**Obiettivo (primo punto io-eseguibile della bussola): "enhancement RAG — chunking per
+heading + backup snapshot chroma_db in _VAULT/BACKUPS".** Fatto, additivo, stack vincolato intatto.
+
+- [✓] **Chunking heading-aware sui `.md`** (`rag_engine.py` v4.1): `_chunk_md_by_heading` spezza
+  sui titoli `#..######` (confini semantici veri, non offset ciechi) e antepone a ogni chunk il
+  *breadcrumb* delle heading (es. `[V32 > Rinforzi colonne]`) → contesto + keyword cercabili
+  (il titolo finisce nel testo indicizzato, trovabile da semantico **e** BM25). Sezioni lunghe →
+  finestra scorrevole **interna** alla sezione. Dispatch per estensione: `.py/.json/.txt` restano
+  a finestra cieca (`_chunk`). Documenti senza heading → fallback identico al comportamento v4.0.
+- [✓] **Snapshot chroma_db in `_VAULT/BACKUPS/rag_snapshots`** (fuori git, regola 8): `snapshot_chroma()`
+  copia atomica (`.tmp`+rename) con rotazione ultimi 3 + `restore_latest_snapshot()` per restore
+  **istantaneo** (no ri-embed) post-blackout. CLI: `--snapshot` / `--restore-snapshot`. Agganciato a
+  `night_research.bat` dopo l'incrementale (indice riallineato → known-good). **Testato live sotto lock
+  API**: 230 MB (169 sqlite + 57 HNSW), 0.1s, gitignored.
+- [✓] **Scelta di sicurezza: NIENTE re-embed forzato.** Non ho bumpato `CHUNK_VER` (geometria invariata):
+  un full re-embed di 32k chunk vuole la GPU libera, ma la notte l'API è su (24/7) → OOM 8GB, proprio il
+  guasto da blackout. Il nuovo algoritmo entra **additivo** (ogni `.md` lo adotta al ri-processo per mtime).
+- [✓] **Ricerca SOTA 2026 (RAG + Obsidian)** prima di committare: la v4.1 (heading + breadcrumb) risulta
+  allineata allo stato dell'arte (heading-split = raccomandazione #1; breadcrumb = versione deterministica/
+  economica del *Contextual Retrieval* di Anthropic, che invece costa 1 LLM-call/chunk → troppo per 32k locali).
+  L'edge Obsidian mancante: **wikilink-aware expansion**. Fonti in fondo al blocco.
+- [✓] **v4.2 — GraphRAG-lite wikilink-expansion** (`rag_engine.py`): `build_linkgraph()` costruisce
+  `rag_linkgraph.json` (puro walk+regex, **no GPU**, 584 note / 7470 archi del vault risolti stem→relpath);
+  `search()` espande dai top-3 risultati tirando il 1º chunk delle note `[[linkate]]` (cap +8) **prima** del
+  reranker, che gata i link irrilevanti (può solo aiutare, mai degradare). Incluso il grafo `## Collegati`
+  (vault_intersect): ponte doc→chunk complementare al semantico. Flag `--linkgraph` / `--no-graph`. Linkgraph
+  rigenerato a fine `build_index` (nightly) + gitignored (derivato). **Testato end-to-end su CPU** (zero contesa
+  GPU con l'API): nessun crash, espansione conferma +8 candidati dai link, top-5 invariato/migliorabile.
+- [ ] **Migrazione totale del corpus al nuovo chunking** → rebuild **deliberato a GPU libera (API giù)**:
+  `python NODES/MENTE_RAG/rag_engine.py --rebuild` (oppure `--rebuild-hard`). Da fare quando Matteo può.
+- [◐] Commit + push del lavoro RAG (engine v4.1+v4.2 + night job + gitignore).
+
+> **Fonti ricerca**: [RAG Chunking 2026 Playbook](https://www.digitalapplied.com/blog/rag-chunking-strategies-2026-retrieval-quality-playbook) ·
+> [Anthropic Contextual Retrieval](https://medium.com/aiguys/the-state-of-rag-2026-from-vibe-checking-to-reasoning-cee536ae3f02) ·
+> [ObsidianRAG (GitHub)](https://github.com/Vasallo94/ObsidianRAG) ·
+> [Karpathy's Obsidian Wiki + RAG](https://medium.com/@zaferdace/karpathys-obsidian-wiki-broke-at-100-articles-rag-fixed-it-b7d530f5eb70) ·
+> [Obsidian retrieval API](https://laurentcazanove.com/blog/obsidian-rag-api)
+
+---
+
 ## Sessione #45 · 24/06/2026 — CRITICHE azzerate (3 fonti) · de-hardcode benen · loop autonomo
 
 **Obiettivo: "risolvere ciò che c'è nella barra laterale CRITICHE".** Fatto end-to-end

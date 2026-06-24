@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-24T21:32:44.295122",
+  "last_update": "2026-06-24T21:52:05.067930",
   "active_milestone": "Sessione #45 (24/06): CRITICHE AZZERATE sulle 3 fonti del sidebar. Auto-audit 31->9 (burn-down via /loop autonomo: gitignore DATA/views, research_agent v1.3 query-broadening+summary, warning HF silenziato, gate self-improve documentato; stale chiuse). Canone manuale 33->25 (sweep). Bussola 41->20 (groom + bug 42 todo-fantasma TOC fixato). Header CRITICHE onesto (totale 3 fonti + chip, niente piu' '33' opaco) + deep-link #view per dash_shot. DECISIONE MIMS connettori = Via B (compressione VULCAN, processo proprietario B2) a canone. Silent block -> v.B Ø18mm. DE-HARDCODE benen: 5 registrar legacy resi portabili poi RIMOSSI (ridondanti con register_night_tasks.ps1). Build TS verde, tutto pushato.",
   "next_step": "AZIONI_MATTEO.md (solo Matteo): UPS + mandrino ER20 in 1 checkout (cura radice HNSW + sblocca MIMS); chiavi .env (Semantic Scholar gratuita + rotazione red-team #38); URL sito Maria. Poi: enhancement RAG (chunking per heading, backup snapshot chroma_db in _VAULT/BACKUPS); contenuto Nina verticale finanza ₣2 'spendere meno di quanto entra' (open loop pronto).",
   "session_count": 92,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-24T21:30:08.948194"
+      "last_activity": "2026-06-24T21:39:26.127416"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -117,7 +117,7 @@
   },
   "ideas_inbox": 0,
   "nodes": {
-    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | ~32800 chunk (559 file) | SELF-HEAL orfani nell'incrementale (semantico==bm25 si mantiene da solo) + gate rebuild_rag_clean rileva divergenza | chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 | embedder+reranker DEVICE=cuda | reranker bge-reranker-v2-m3 | NB: un solo processo GPU alla volta (8GB), CLI rebuild con API su -> OOM",
+    "MENTE_RAG": "ATTIVO su GPU — python NODES/MENTE_RAG/rag_engine.py 'query' | v4.2 (SOTA 2026): chunking HEADING-AWARE sui .md (split sui titoli + breadcrumb [sez>sottosez], additivo: entra al ri-processo per mtime, geometria invariata = no re-embed forzato) + GraphRAG-lite WIKILINK-EXPANSION (rag_linkgraph.json, 584 note/7470 archi del vault; espande dai top-3 con i [[link]], cap +8, reranker gata; --no-graph/--linkgraph) | SNAPSHOT known-good in _VAULT/BACKUPS/rag_snapshots (--snapshot/--restore-snapshot, rotazione 3, scattato a fine night_research) | ~32800 chunk (559 file) | SELF-HEAL orfani nell'incrementale + gate rebuild_rag_clean rileva divergenza | chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 | embedder+reranker DEVICE=cuda | reranker bge-reranker-v2-m3 | NB: un solo processo GPU alla volta (8GB), CLI rebuild con API su -> OOM (migrazione totale chunking = --rebuild a GPU libera; query di test forza RAG_DEVICE=cpu per non contendere la GPU all'API)",
     "MENTE_SCANNER": "pronto — python NODES/MENTE_SCANNER/scanner.py",
     "WATCHER": "pronto — python AUTOMATIONS/core/watcher.py",
     "N8N": "ATTIVO — n8n start (binario globale 2.25.6, localhost:5678), account owner locale self-hosted; avvio-al-login via START_LOGIN.bat",
@@ -125,5 +125,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Sessione #45 salvata (2): rimosso START_GETAC.bat (Getac morto) -> START_LOGIN auto-login resta la fonte unica"
+  "last_action": "Modifica a DA_FARE_FATTO.md"
 }

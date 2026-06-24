@@ -18,6 +18,7 @@ NODES/MENTE_RAG/rag_corpus.jsonl
 NODES/MENTE_RAG/rag_manifest.json
 NODES/MENTE_RAG/rag_manifest_*.json
 NODES/MENTE_RAG/rag_tfidf.pkl
+NODES/MENTE_RAG/rag_linkgraph.json
 NODES/MENTE_RAG/mente_index.json
 # device override machine-local (cpu/cuda) — come .env, non versionare
 NODES/MENTE_RAG/rag_device.txt
