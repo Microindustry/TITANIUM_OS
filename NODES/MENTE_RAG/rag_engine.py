@@ -35,6 +35,17 @@ except ImportError:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [rag_engine] %(levelname)s %(message)s")
     logger = logging.getLogger("rag_engine")
 
+# HF Hub: i modelli (embedder+reranker) sono in cache locale -> il rebuild non
+# ha bisogno della rete. Senza HF_TOKEN huggingface_hub logga a ogni load
+# "unauthenticated requests to the HF Hub..." che finiva in night_research.log e
+# faceva rigenerare la critica AUD-3d358b577a/c322691a4c. Il warning e' innocuo
+# qui (cache), quindi lo zittiamo alla fonte. Se Matteo aggiunge HF_TOKEN in .env
+# viene usato comunque (download piu' rapidi); resta opt-in HF_HUB_OFFLINE=1. (#44)
+os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
+for _hf in ("huggingface_hub", "huggingface_hub.utils._http"):
+    logging.getLogger(_hf).setLevel(logging.ERROR)
+
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 import numpy as np
