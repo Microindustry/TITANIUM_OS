@@ -84,6 +84,8 @@ sulle 3 fonti che alimentano il sidebar (canone manuale + auto-audit + bussola).
   Zero hardcode veri nel repo. `1397b0ee`.
 - [✓] **Rimossi i 5 registrar legacy ridondanti** (`git rm`, recuperabili) — fonte unica
   `register_night_tasks.ps1`. Verificato: nessun chiamante attivo. `1a5570dc`.
+- [✓] **Rimosso `START_GETAC.bat`** (launcher del vecchio Getac, morto sul fisso) — superato da
+  `START_LOGIN.bat` che parte da solo al login (`shell:startup\TITANIUM_OS.lnk`). `de5a514d`.
 
 **Stato CRITICHE a fine sessione: 25 canone · 9 audit · 20 bussola.** Tutto pushato, build TS verde.
 Le voci residue sono reali e per lo più SOLO-MATTEO → `AZIONI_MATTEO.md` (hardware/chiavi/finanza Nina).

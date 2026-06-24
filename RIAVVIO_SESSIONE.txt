@@ -21,6 +21,8 @@ Build TS verde, tutto pushato.
 • BUSSOLA 41→20 (groom: 20 todo già fatti/superati, glifo [ ]→[✓]). e65bdbd0.
 • DE-HARDCODE benen: 5 registrar legacy resi portabili ($PSScriptRoot/%~dp0+env, ASCII-norm,
   fix && PS5.1) 1397b0ee → poi RIMOSSI (git rm, ridondanti con register_night_tasks.ps1) 1a5570dc.
+• RIMOSSO START_GETAC.bat (launcher Getac morto sul fisso) — superato da START_LOGIN.bat
+  che parte da solo al login (shell:startup\TITANIUM_OS.lnk). de5a514d.
 
 ━━━ PROSSIMO LAVORO (da AZIONI_MATTEO.md + bussola) ━━━
 • [Matteo] UPS + mandrino ER20 in 1 checkout (cura radice corruzione HNSW + sblocca MIMS).
