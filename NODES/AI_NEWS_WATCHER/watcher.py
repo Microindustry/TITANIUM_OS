@@ -271,9 +271,19 @@ def _resolve_youtube_channel_id(handle: str) -> str | None:
     }
     try:
         r = requests.get(url, headers=yt_headers, cookies={"CONSENT": "YES+1", "SOCS": "CAI"}, timeout=20)
-        m = re.search(r'"channelId":"(UC[0-9A-Za-z_-]{22})"', r.text) or \
-            re.search(r'(UC[0-9A-Za-z_-]{22})', r.text)
-        return m.group(1) if m else None
+        text = r.text
+        # SOLO pattern che danno l'id del canale STESSO, in ordine di affidabilita'.
+        # Il vecchio fallback bare (UC...) agguantava un id qualsiasi in pagina (canale
+        # consigliato/tracking) -> channelId morto -> RSS 404. Niente piu' fallback cieco.
+        for pat in (r'rel="canonical"\s+href="https://www\.youtube\.com/channel/(UC[0-9A-Za-z_-]{22})"',
+                    r'"externalId":"(UC[0-9A-Za-z_-]{22})"',
+                    r'<meta\s+itemprop="(?:identifier|channelId)"\s+content="(UC[0-9A-Za-z_-]{22})"',
+                    r'"channelId":"(UC[0-9A-Za-z_-]{22})"'):
+            m = re.search(pat, text)
+            if m:
+                return m.group(1)
+        logger.warning("[youtube] resolve %s: channelId non trovato (consent o markup cambiato)", handle)
+        return None
     except Exception as ex:
         logger.warning("[youtube] resolve %s: %s", handle, ex)
         return None
@@ -285,7 +295,16 @@ def fetch_youtube(src: dict) -> list[dict]:
         return []
     src["channel_id"] = cid  # cache nel sorgente
     feed = f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"
-    return fetch_site(feed)
+    # YouTube serve l'RSS SOLO con UA browser pieno: lo UA del watcher -> 404.
+    try:
+        r = requests.get(feed, headers={"User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/120 Safari/537.36"}, timeout=20)
+        r.raise_for_status()
+        return _parse_feed(r.text)[:15]
+    except Exception as ex:
+        logger.warning("[youtube] feed %s: %s", cid, ex)
+        return []
 
 
 # ── PASSATA ─────────────────────────────────────────────────────────────────
