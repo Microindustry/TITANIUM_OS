@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-df041cf237",
+    "date": "2026-06-24",
+    "git": "61fe20c5",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "Il processo notturno ha generato un traceback non gestito. Il log del 2026-06-23 riporta: '⚠ night_research.log: Traceback (most recent call last):'. L'estratto non mostra la causa né se il processo è terminato parzialmente o completamente, ma un crash nel research_agent è coerente con i 429 precedenti (stessa data, stessa sessione notturna). Il traceback indica che l'eccezione non è stata catturata a livello di entry-point.",
+    "azione": "Aprire night_research.log del 2026-06-23 e leggere le righe successive al Traceback per identificare l'eccezione esatta. Aggiungere un try/except globale nell'entry-point del research agent che logga l'errore completo e termina con exit-code non-zero, così i log futuri sono diagnosticabili senza aprire il file raw.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-24"
+  },
+  {
+    "id": "AUD-4cc527ac79",
+    "date": "2026-06-24",
+    "git": "61fe20c5",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La decisione su connettori MIMS (via A iniezione vs via B compressione VULCAN, SCHEDA §5) è listata come blocker da almeno 2 sessioni e blocca BEP/B2, ma non ha una data di risoluzione né un owner di analisi. Con MIMS al 30% di pillar e il mandrino ER20 già in lista ordini, la decisione tecnica sui connettori è il vero collo di bottiglia che precede qualsiasi test fisico: ordinare il mandrino senza avere il processo di giunzione definito rischia di avere attrezzatura ferma.",
+    "azione": "Dedicare i primi 20 minuti della prossima sessione a una decisione esplicita: Matteo sceglie via A o via B basandosi sui vincoli di SCHEDA §5 (costo stampo, pressione disponibile con Vevor 3 stadi, volume batch). La decisione va scritta in MIMS/SCHEDA con data e rationale, anche se provvisoria, così sblocca BEP/B2 e orienta l'uso del martinetto Vevor una volta montato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-24"
+  },
+  {
+    "id": "AUD-4bf52d5827",
+    "date": "2026-06-24",
+    "git": "61fe20c5",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Corruzione HNSW da power-loss ricorrente 3 volte in 2 giorni senza rimedio hardware. Il blocker esplicito lo conferma: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg): è la cura alla radice'. Il fix software (--drop-hnsw, rag_recover anti-commit-leak) è un cerotto che verrà ri-applicato ogni blackout. Senza UPS il RAG è strutturalmente fragile e ogni corruzione costa sessioni di recovery.",
+    "azione": "Ordinare UPS (~50-80€) nella stessa sessione in cui si ordina il mandrino ER20: sono entrambi su Amazon/analoghe, un solo checkout. Finché non arriva, valutare se il WAL→HNSW commit candidato (già in next_step) riduca la finestra di perdita dati per i blackout intermedi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-24"
+  },
+  {
+    "id": "AUD-3d358b577a",
+    "date": "2026-06-24",
+    "git": "61fe20c5",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "HuggingFace Hub viene interrogato senza token, generando rate-limit silenzioso. Il log del 2026-06-23 mostra: 'Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.' Questo è un secondo collo di bottiglia della ricerca notturna, indipendente da Semantic Scholar: le sessioni notturne operano con due sorgenti degradate simultaneamente.",
+    "azione": "Aggiungere HF_TOKEN in .env (token gratuito da huggingface.co/settings/tokens, scope read). Nella stessa rotazione chiavi in cui Matteo gestisce il red-team #38, aggiungere questo come terza voce alla lista.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-24"
+  },
+  {
+    "id": "AUD-28de0ccc64",
+    "date": "2026-06-24",
+    "git": "61fe20c5",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "~30 script piatti in AUTOMATIONS/core e 298 file auto-generati in DATA/views non sono in .gitignore: ogni commit notturno auto porta dentro repo materiale non versionabile o ridondante. Il next_step lo segnala esplicitamente ('gitignore DATA/views(298 auto-gen)+logs; raggruppare/indicizzare AUTOMATIONS/core(~30 script piatti)'). Con 81 commit in 7 giorni e commit automatici ogni notte, il repo accumula rumore che rallenta git status, clone e diff.",
+    "azione": "Aprire .gitignore e aggiungere DATA/views/, i pattern di log e gli output auto-generati. Per AUTOMATIONS/core: creare un README-indice con nome, scopo e dipendenze di ciascuno script prima di raggruppare, così la fase di raggruppamento non perde contesto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-24"
+  },
+  {
+    "id": "AUD-0722e6a2fa",
+    "date": "2026-06-24",
+    "git": "61fe20c5",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna su Semantic Scholar è bloccata da rate-limit non autenticato. Il log del 2026-06-23 mostra: '2026-06-23 00:35:07 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&' seguito da '2026-06-23 00:35:07 [research_agent] INFO semantic_scholar -> 0 risultati'. La query CNC+spindle+ER20 — direttamente rilevante per V32 — ha prodotto zero risultati a causa del 429, non per assenza di letteratura. Il blocker lo conferma: 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna'.",
+    "azione": "Matteo registra la chiave gratuita su semanticscholar.org/product/api e la inserisce in .env come SEMANTIC_SCHOLAR_API_KEY. Operazione da 5 minuti, sblocca tutte le ricerche notturne V32/MIMS da subito.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-24"
+  },
+  {
     "id": "AUD-c322691a4c",
     "date": "2026-06-23",
     "git": "40cf1b0b",
