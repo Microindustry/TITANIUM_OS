@@ -2,7 +2,7 @@
 
 - [AUTOMATIONS/tools  script legacy vs attuali](#automationstools-script-legacy-vs-attuali)
   - [ATTUALI (portabili  tenere)](#attuali-portabili-tenere)
-  - [LEGACY (hardcoded benen / DESKTOP-DIUB4EJ  rotti su questa macchina teo)](#legacy-hardcoded-benen-desktop-diub4ej-rotti-su-questa-macchina-teo)
+  - [LEGACY (ridondanti  superati dai registrar portabili)](#legacy-ridondanti-superati-dai-registrar-portabili)
     - [Come rimuoverli (quando decidi)](#come-rimuoverli-quando-decidi)
   - [Avvio ecosistema al login  RISOLTO (nessun gap)](#avvio-ecosistema-al-login-risolto-nessun-gap)
 
