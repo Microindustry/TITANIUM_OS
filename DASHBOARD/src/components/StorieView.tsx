@@ -329,8 +329,8 @@ function NinaArchived() {
       </button>
       {open && (
         <div className="px-4 pb-3">
-          <Group label="Origine — il mondo prima del canone" items={origine} tone="#f59e0b" />
-          <Group label="Versioni precedenti (re-emit)" items={versioni} tone="#64748b" />
+          <Group label="Origine — il mondo prima del canone (EP_AV)" items={origine} tone="#f59e0b" />
+          <Group label="Versioni SUPERATE (stessi titoli, vecchie versioni — NON i 50 definitivi)" items={versioni} tone="#64748b" />
         </div>
       )}
     </div>
@@ -600,9 +600,9 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
               <div className="flex items-center gap-2 mb-2 mt-1">
                 <Sparkles size={14} style={{ color: NINA_COLOR }} />
                 <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
-                  Nina dal giorno 0
+                  Nina dal giorno 0 — i {ninaEpisodes.length} episodi DEFINITIVI
                 </h3>
-                <span className="text-[10px] font-mono text-slate-500">il fondamento + tutti gli episodi nella loro miglior versione</span>
+                <span className="text-[10px] font-mono text-slate-500">il fondamento + il canone EP_N2 nella miglior versione · (l'archivio/sorgente è in «RAG Nina»)</span>
               </div>
               <div
                 className="rounded-xl border px-5 py-4 overflow-hidden"
@@ -639,9 +639,9 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
               <div className="flex items-center gap-2 mb-2 mt-1">
                 <Bot size={14} style={{ color: NINA_COLOR }} />
                 <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
-                  RAG Nina — solo gli archiviati
+                  RAG Nina — l'ARCHIVIO (non gli episodi)
                 </h3>
-                <span className="text-[10px] font-mono text-slate-500">l'origine (EP_AV) e le versioni precedenti — la sorgente da cui il nodo rigenera</span>
+                <span className="text-[10px] font-mono text-slate-500">la sorgente da cui il nodo rigenera · gli episodi definitivi sono in «Nina dal giorno 0»</span>
               </div>
 
               {/* gli archiviati: l'origine (EP_AV) + le versioni precedenti */}
