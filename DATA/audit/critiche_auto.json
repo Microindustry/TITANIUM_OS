@@ -8,8 +8,10 @@
     "finding": "Il processo notturno ha generato un traceback non gestito. Il log del 2026-06-23 riporta: '⚠ night_research.log: Traceback (most recent call last):'. L'estratto non mostra la causa né se il processo è terminato parzialmente o completamente, ma un crash nel research_agent è coerente con i 429 precedenti (stessa data, stessa sessione notturna). Il traceback indica che l'eccezione non è stata catturata a livello di entry-point.",
     "azione": "Aprire night_research.log del 2026-06-23 e leggere le righe successive al Traceback per identificare l'eccezione esatta. Aggiungere un try/except globale nell'entry-point del research agent che logga l'errore completo e termina con exit-code non-zero, così i log futuri sono diagnosticabili senza aprire il file raw.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-24"
+    "status": "resolved",
+    "last_seen": "2026-06-24",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: stale: guardia globale try/except + exit-code gia' in research_agent v1.2 (#42); il log auditato era pre-fix"
   },
   {
     "id": "AUD-4cc527ac79",
@@ -44,8 +46,10 @@
     "finding": "HuggingFace Hub viene interrogato senza token, generando rate-limit silenzioso. Il log del 2026-06-23 mostra: 'Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.' Questo è un secondo collo di bottiglia della ricerca notturna, indipendente da Semantic Scholar: le sessioni notturne operano con due sorgenti degradate simultaneamente.",
     "azione": "Aggiungere HF_TOKEN in .env (token gratuito da huggingface.co/settings/tokens, scope read). Nella stessa rotazione chiavi in cui Matteo gestisce il red-team #38, aggiungere questo come terza voce alla lista.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-24"
+    "status": "resolved",
+    "last_seen": "2026-06-24",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: warning HF Hub silenziato alla fonte in rag_engine (473a06d0); modelli in cache locale, non bloccante. HF_TOKEN resta opt-in"
   },
   {
     "id": "AUD-28de0ccc64",
@@ -56,8 +60,10 @@
     "finding": "~30 script piatti in AUTOMATIONS/core e 298 file auto-generati in DATA/views non sono in .gitignore: ogni commit notturno auto porta dentro repo materiale non versionabile o ridondante. Il next_step lo segnala esplicitamente ('gitignore DATA/views(298 auto-gen)+logs; raggruppare/indicizzare AUTOMATIONS/core(~30 script piatti)'). Con 81 commit in 7 giorni e commit automatici ogni notte, il repo accumula rumore che rallenta git status, clone e diff.",
     "azione": "Aprire .gitignore e aggiungere DATA/views/, i pattern di log e gli output auto-generati. Per AUTOMATIONS/core: creare un README-indice con nome, scopo e dipendenze di ciascuno script prima di raggruppare, così la fase di raggruppamento non perde contesto.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-24"
+    "status": "resolved",
+    "last_seen": "2026-06-24",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: gitignore DATA/views (340 file auto-gen) fatto (2bdbbf3e); indice AUTOMATIONS/core resta task separato"
   },
   {
     "id": "AUD-0722e6a2fa",
@@ -80,8 +86,10 @@
     "finding": "HuggingFace Hub è interrogato senza token: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" (night_research.log, 2026-06-22). In una notte dove ChromaDB è già crashato e Semantic Scholar è in 429, il terzo punto di fallimento non autenticato aumenta il rischio che le routine notturne completino parzialmente senza che il log segnali un errore bloccante esplicito.",
     "azione": "Aggiungere HF_TOKEN in .env (token gratuito su huggingface.co). Contestualmente verificare che il red-team #38 sulle chiavi .env da ruotare includa anche HF_TOKEN e SEMANTIC_SCHOLAR_API_KEY nel prossimo ciclo di rotazione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-23"
+    "status": "resolved",
+    "last_seen": "2026-06-23",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: warning HF Hub silenziato alla fonte in rag_engine (473a06d0)"
   },
   {
     "id": "AUD-b35b0846ad",
@@ -104,8 +112,10 @@
     "finding": "night_push.log del 22/06 riporta: \"⚠ night_research.log: Traceback (most recent call last):\" (night_push.log, 2026-06-22). Il push notturno ha rilevato il traceback nel log e lo ha segnalato, ma non è chiaro se il job di ricerca sia stato abortito o abbia proseguito in stato degradato. Il milestone attivo conferma un crash, ma non ci sono dati su quanti topic di ricerca siano stati saltati quella notte.",
     "azione": "Aggiungere al night_research script un exit code non-zero in caso di eccezione non gestita, e fare in modo che night_push.log registri il conteggio di topic completati vs falliti. Questo rende il danno misurabile invece di invisibile.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-23"
+    "status": "resolved",
+    "last_seen": "2026-06-23",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: summary diagnostico per-sorgente (sources_ok/empty) + exit-code guardia globale (research_agent v1.3/v1.2 c638edbf)"
   },
   {
     "id": "AUD-7e0d0da35d",
@@ -140,8 +150,10 @@
     "finding": "Il next_step dichiara NINA DEFINITIVA come priorità assoluta (filone unico, canone EP_N2 v2, audit STORIE, stile in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md). La bussola_open mostra però che questo lavoro di consolidamento è aperto almeno dalla sessione #37 (11/06) — oltre 12 giorni — con voci come '#epav0304-canonici-parcheggio-tolto' e '#canon-0-ter-nina-ha-il-suo-os' ancora pendenti. Il rischio non è che venga dimenticato, ma che ogni sessione aggiunga nuovi episodi (191 generati) su un canone ancora non chiuso, aumentando il debito di audit invece di azzerarlo.",
     "azione": "Nella prossima sessione dedicare il primo blocco (60-90 min) esclusivamente alla chiusura del canone: spostare EP_AV_* in archivio, confermare EP_N2 v2 come unica verità, scrivere NINA_STILE_E_PIANO.md. Solo dopo riaprire la generazione di nuovi episodi. Bloccare story_agent finché l'audit STORIE non è completato, altrimenti il generatore continua a lavorare su fondamenta instabili.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-23"
+    "status": "resolved",
+    "last_seen": "2026-06-23",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: Nina DEFINITIVA fatta: #43 (canone unico EP_N2, EP_AV archiviati, audit STORIE 0 violazioni su 177 ep) + #44 (50 ep mappa coperta)"
   },
   {
     "id": "AUD-fbd54f3019",
@@ -152,8 +164,10 @@
     "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8' è aperto senza data di risoluzione. Si tratta di una decisione di design (non un task tecnico) che blocca a valle un intero step (V8). Decisioni binarie non prese accumulano dipendenze bloccate silenziosamente.",
     "azione": "Formalizzare la decisione v.A/v.B in un documento di una pagina con i criteri (costo, rigidità, complessità fresatura) e chiuderla nella prossima sessione. Non serve prototipare: serve decidere e registrare il razionale.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-22"
+    "status": "resolved",
+    "last_seen": "2026-06-22",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: decisione silent block chiusa: v.B Ø18mm provvisorio reversibile (V8_DELTA §2, 24/06); durometro resta dettaglio materiale"
   },
   {
     "id": "AUD-9787476b2c",
@@ -164,8 +178,10 @@
     "finding": "Stanotte OpenAlex ha restituito zero risultati per la query CNC/mandrino: \"2026-06-22 03:38:31 [research_agent] INFO openalex -> 0 risultati\" (22/06/2026). Semantic Scholar ha restituito anch'esso \"semantic_scholar -> 0 risultati\" (22/06/2026) prima del 429. La notte di ricerca su V32 (spindle ER20, runout, thermal accuracy) ha prodotto zero input utili, su un topic che è blocker hardware attivo.",
     "azione": "Rivedere le query strings per OpenAlex/Semantic Scholar su questo topic: 'CNC spindle ER20 runout thermal accuracy' è troppo specifico e composto. Spezzare in query più semplici ('ER20 collet runout', 'spindle thermal error CNC') e aggiungere almeno una sorgente alternativa (es. CrossRef o arxiv) come fallback per il dominio ingegneristico.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-22"
+    "status": "resolved",
+    "last_seen": "2026-06-22",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: query broadening su 0 risultati implementato in research_agent v1.3 (c638edbf)"
   },
   {
     "id": "AUD-74a2dc9f29",
@@ -188,8 +204,10 @@
     "finding": "Il research_agent è andato in crash stanotte con traceback non gestito. I log mostrano: \"2026-06-22 03:38:33 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&\" seguito da \"Traceback (most recent call last):\" (22/06/2026) — il 429 di Semantic Scholar non è intercettato con retry/backoff, causa eccezione non gestita e termina il processo. Il giorno prima il night_push.log registrava già \"⚠ night_research.log: Traceback (most recent call last):\" (21/06/2026): il pattern si ripete da almeno due notti consecutive.",
     "azione": "Aggiungere nel research_agent un handler esplicito per HTTPError 429 con exponential backoff (es. tentativi 3x con wait 60/120/240s) e un fallback graceful che logga 'sorgente non disponibile, skip' invece di propagare l'eccezione. Verificare che il processo non termini su eccezione non catturata.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-22"
+    "status": "resolved",
+    "last_seen": "2026-06-22",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: stale: backoff esponenziale 429/503 gia' in research_agent v1.2 (#42); log pre-fix"
   },
   {
     "id": "AUD-6ed7c6c248",
@@ -212,8 +230,10 @@
     "finding": "La bussola aperta include '#sessione-39-20062026-fix-nightaudit-ecosistema-vault-obsidian' con il punto 'Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE' ancora da completare (confermato anche in next_step). Il commit decc485e del 21/06 segnala 'punto 7 fatto — riordino _DA_ORDINARE + Obsidian Mari/VULCAN/MIMS' ma il todo rimane aperto in bussola: c'è disallineamento tra stato reale e stato registrato. Se il riordino non è completato, il RAG continua a lavorare su materiale non categorizzato in _DA_ORDINARE, abbassando la qualità dei chunk indicizzati (29.113 chunk totali).",
     "azione": "Verificare a inizio sessione se decc485e ha effettivamente completato il riordino Obsidian o solo avviato: allineare la bussola al reale. Se incompleto, eseguire il riordino prima di qualsiasi nuova ingestione in RAG.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-22"
+    "status": "resolved",
+    "last_seen": "2026-06-22",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: riordino _DA_ORDINARE + Obsidian Mari/VULCAN/MIMS fatto in #39 (MENTE 604b5d2)"
   },
   {
     "id": "AUD-fe9cac2154",
@@ -224,8 +244,10 @@
     "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm)' è prerequisito dichiarato per V8, e il blocker 'Mandrino 2.2kW ER20 da ordinare' è prerequisito per la fresatura stampi MIMS. Entrambi sono decisioni/acquisti fisici che nessun agente può sbloccare. Nel frattempo V32 è al 65% e MIMS al 30%: i due pilastri hardware più indietro dipendono da azioni che non hanno una data assegnata nei dati disponibili.",
     "azione": "Assegnare una scadenza esplicita nella bussola per ciascuna delle due decisioni fisiche (silent blocks e ordine mandrino). Anche solo fissare 'decido entro sessione #40' trasforma un blocker flottante in un task tracciabile dagli agenti notturni.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-21"
+    "status": "resolved",
+    "last_seen": "2026-06-21",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: silent block deciso v.B (V8_DELTA); mandrino ER20 resta blocker fisico -> spostato in AZIONI_MATTEO.md"
   },
   {
     "id": "AUD-a3277f3bed",
@@ -260,8 +282,10 @@
     "finding": "Il research_agent colpisce Semantic Scholar senza backoff adeguato e riceve 429 ripetuti da almeno due notti consecutive. Il 21/06: \"2026-06-21 03:38:26 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: ...linear+guide+rail+preload+stiffness+preci\" e \"2026-06-21 03:38:40 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: ...machine+tool+frame+structural+rigidity+gu\", entrambe seguite da \"INFO semantic_scholar -> 0 risultati\". Lo stesso pattern appare nel night_push.log del 20/06: \"2026-06-20 03:39:07 [research_agent] WARNING [semantic_scholar] 429 Client Error\". La ricerca notturna su V32 (rigidità strutturale, guide lineari) produce zero risultati utili ogni notte per rate-limit, sprecando il ciclo autonomo.",
     "azione": "Aggiungere exponential backoff con jitter (es. retry dopo 60s, 120s, 240s) prima di ogni chiamata Semantic Scholar, e loggare esplicitamente 'skip query — rate limit raggiunto' invece di registrare 0 risultati come se la query fosse vuota. Valutare cache locale delle query già eseguite per non rifare la stessa richiesta nelle notti successive.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-21"
+    "status": "resolved",
+    "last_seen": "2026-06-21",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: backoff 429/503 in research_agent v1.2 (#42) + query broadening v1.3 (c638edbf); cache locale e' enhancement non bloccante"
   },
   {
     "id": "AUD-528953a15c",
@@ -272,8 +296,10 @@
     "finding": "Oltre ai 429, nei log del 21/06 è presente un crash non gestito: night_research.log riporta \"Traceback (most recent call last):\" (data 2026-06-21) e night_push.log del 20/06 riporta \"⚠ night_research.log: Traceback (most recent call last):\". Il traceback completo non è nell'estratto, ma il pattern si ripete su due notti: il research_agent termina in eccezione dopo il rate-limit, il che significa che le query successive alla prima fallita non vengono mai eseguite.",
     "azione": "Wrappare il corpo principale del research_agent in try/except generico con logging del traceback completo su file dedicato (research_errors.log) e continuazione sul task successivo. Il crash non deve bloccare l'intera sessione notturna di ricerca.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-21"
+    "status": "resolved",
+    "last_seen": "2026-06-21",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: stale: guardia globale + rete difensiva per-sorgente gia' in research_agent v1.2 (#42)"
   },
   {
     "id": "AUD-0ea25aca3c",
@@ -284,8 +310,10 @@
     "finding": "Il commit e3694655 (21/06) elimina la regola 11 di CLAUDE.md 'su richiesta esplicita di Matteo', pochi giorni dopo che il commit 6861abc9 l'aveva introdotta come nodo AUTOMIGLIORAMENTO ('il sistema propone, l'umano approva'). La regola era il gate formale tra proposte autonome e azioni eseguite. Rimuoverla senza un sostituto documentato lascia il comportamento del sistema in uno stato implicito: non è chiaro dai dati se esista ora un meccanismo equivalente o se le proposte di auto-miglioramento vadano in produzione senza approvazione.",
     "azione": "Documentare esplicitamente in CLAUDE.md (o in STATE) quale meccanismo sostituisce la regola 11: se l'approvazione umana è ancora richiesta per le modifiche self-improve, scriverlo in modo verificabile dagli agenti notturni.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-21"
+    "status": "resolved",
+    "last_seen": "2026-06-21",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: meccanismo propose-only documentato: header self_improve + campo STATE.self_improve verificabile (a2f8b419)"
   },
   {
     "id": "AUD-efbddfa464",
@@ -320,8 +348,10 @@
     "finding": "Il blocker 'night_audit Unterminated string ricorrente (parse LLM non difensivo)' è presente sia nei next_step che nei blockers da almeno la sessione #38. Non c'è ancora un commit di fix. Un parser non difensivo su output LLM significa che ogni notte il night_audit può fallire silenziosamente o produrre dati corrotti, invalidando la cartella clinica stessa.",
     "azione": "Wrappare il parse JSON del night_audit in try/except con fallback a parsing difensivo (es. json_repair o estrazione regex del blocco JSON). Il fix è isolato e stimabile in <1h.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: night_audit parse difensivo v1.3 chiude 'Unterminated string' (commit 01c3cffc, 20/06)"
   },
   {
     "id": "AUD-7878e7be05",
@@ -332,8 +362,10 @@
     "finding": "Due query distinte hanno restituito zero risultati: '2026-06-20 03:38:52 [research_agent] INFO openalex -> 0 risultati' e '2026-06-20 03:38:29 [research_agent] INFO semantic_scholar -> 0 risultati' (quest'ultima su epoxy granite polymer concrete vibration). Non è chiaro se il problema sia la query troppo specifica o l'indice della sorgente. Zero risultati ripetuti su query tecniche core (V32, mandrino ER20) significa che la pipeline notturna non alimenta il RAG su argomenti critici per il progetto.",
     "azione": "Implementare query broadening automatico: se risultati=0, ritentare con termini ridotti (es. 'epoxy granite CNC' invece della stringa lunga). Loggare esplicitamente 'query broadened' per tracciare il fenomeno.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: query broadening implementato in research_agent v1.3 (c638edbf)"
   },
   {
     "id": "AUD-236654eafa",
@@ -344,8 +376,10 @@
     "finding": "Il blocker 'Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8' è aperto senza data di risoluzione. V32 è al 65% e il pilastro è il più avanzato, ma un prerequisito architetturale non deciso blocca V8. Ogni sessione tecnica futura su V32 che tocca V8 partirà da una base non definita.",
     "azione": "Fissare in agenda una micro-decisione (15 minuti): Matteo sceglie v.A o v.B, il criterio viene scritto in una nota Obsidian e il blocker viene chiuso. Non serve prototipare: serve solo una scelta documentata.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: silent block deciso v.B Ø18mm provvisorio (V8_DELTA §2, 24/06)"
   },
   {
     "id": "AUD-1de48fd287",
@@ -356,8 +390,10 @@
     "finding": "Il research_agent è andato in crash stanotte: '2026-06-20 03:38:54 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&' e il traceback è confermato anche in night_push.log ('⚠ night_research.log: Traceback (most recent call last):', 2026-06-20). Il rate-limit 429 di Semantic Scholar non è gestito: l'agente non fa retry con backoff né fallback su altra sorgente, termina in eccezione. Ogni notte che tocca queste query la pipeline si spezza.",
     "azione": "Aggiungere exponential backoff (es. 60s, 120s, 240s) sul 429 di Semantic Scholar e un fallback su OpenAlex per le stesse query. Loggare il 429 come WARNING ma non lanciare eccezione non catturata.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: stale: backoff 429/503 gia' in research_agent v1.2 (#42)"
   },
   {
     "id": "AUD-ef3fdc440e",
