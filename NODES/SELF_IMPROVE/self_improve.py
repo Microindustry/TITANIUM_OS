@@ -1,5 +1,5 @@
-# self_improve.py | TITANIUM_OS / NODES / SELF_IMPROVE | v1.0 | 2026-06-14
-# Il nodo dell'AUTOMIGLIORAMENTO (regola 11). Ogni notte, da solo:
+# self_improve.py | TITANIUM_OS / NODES / SELF_IMPROVE | v1.1 | 2026-06-24
+# Il nodo dell'AUTOMIGLIORAMENTO. Ogni notte, da solo:
 #  - legge i segnali INTERNI (critiche del night_audit, gap delle storie, salute task,
 #    stato RAG, todo aperti della bussola) e quelli ESTERNI (i segnali dell'AI News
 #    Watcher: aggiornamenti del campo AI da integrare);
@@ -7,7 +7,10 @@
 #  - le scrive come PROPOSTE (mai modifiche) in DATA/self_improve/ + un digest leggibile
 #    in MENTE/KNOWLEDGE/AUTOMIGLIORAMENTO.md (vault Obsidian + RAG + brief).
 #
-# GUARDRAIL (non negoziabili, la regola che rende il loop fidabile):
+# GUARDRAIL (invariante permanente — il gate "il sistema propone, l'umano approva".
+# Era la regola 11 di CLAUDE.md, tolta dal testo il 20/06 su richiesta di Matteo:
+# il PRINCIPIO sta qui nel codice, non come slogan. STATE.self_improve lo dichiara
+# in forma verificabile dagli agenti notturni):
 #  - SOLO PROPOSTE. Non modifica codice, non fa commit, non merge, non cancella.
 #  - Mai toccare sicurezza/chiavi/permessi/impostazioni di sistema.
 #  - Ogni proposta marcata: "sicuro" (piccola, reversibile) | "approvazione" (serve umano).
