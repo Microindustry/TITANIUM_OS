@@ -113,7 +113,7 @@
 
 ### → PROSSIMA SESSIONE #44 — si riparte da qui
 - [⏸] **ANIMATIC EP_N2_01 — IN PAUSA** (Matteo: «attendi con animazione»). NON ripartire con l'animatic finché non lo dice. Bivio formato già pronto in `PRODUZIONE_NINA.md` (storyboard deck Express / video+TTS / solo illustrazioni).
-- [ ] **C'è ancora lavoro su Nina** (Matteo) — **da definire a inizio sessione #44**: chiedergli cosa.
+- [✓] **C'è ancora lavoro su Nina** (Matteo) — **da definire a inizio sessione #44**: chiedergli cosa.
 - [✓] **Step 4/6 — Continuità esplicita**: verificata in tutti i 15 EP_N2 («Dove siamo» + Open loop presenti, catena integra).
 - [✓] **Step 5/6 — Audit STORIE** (framing canone): `canon_guard` scan su **177 episodi → 0 violazioni**
       "recuperato/EUR0". Grounding-deep dei dev-log → gira di notte via `night_audit` (Sonnet, automazione esistente).
@@ -217,7 +217,7 @@
       (~3 min/login) → **`--incremental`** (secondi, self-heal mantiene l'allineamento). (b) Migliorato
       il **gate di `rebuild_rag_clean.ps1`**: ora rileva anche la **divergenza semantico≠bm25** (non
       solo count=0) → le notturne self-healano la divergenza da sole ("una sola verità").
-- [⚠] **Divergenza RAG residua 0,2%** (semantico≈32817 vs bm25≈32882): nata da incrementali in
+- [✓] **Divergenza RAG residua 0,2%** (semantico≈32817 vs bm25≈32882): nata da incrementali in
       conflitto + **GPU OOM** (API tiene la GPU, un 2° rebuild CLI va in out-of-memory su GTX 1070 8GB).
       Funzionalmente innocua (search 0.98); **auto-riallineata stanotte** da `TI_NightResearch` @03:37
       (rebuild_rag_clean elevato = GPU esclusiva, niente UAC). Lezione: un solo processo GPU alla volta.
@@ -251,7 +251,7 @@
 - [✓] **Blindatura `requirements-rag.txt` v2.0**: pin corretti (`torch==2.6.0+cu124` con
       `--extra-index-url` cu124, `chromadb==0.5.23`) + le DUE trappole documentate nel file
       così un futuro `pip install -r` non rirompe (né torch CPU, né chromadb 1.x).
-- [⚠] **TI_Watchdog era DISABILITATO** da 2 giorni (la `finally` del vecchio `rag_clean_rebuild`
+- [✓] **TI_Watchdog era DISABILITATO** da 2 giorni (la `finally` del vecchio `rag_clean_rebuild`
       del 20/06 non l'aveva riabilitato): niente self-healing. API rialzata a mano (PID nuovo,
       0.5.23). **Riabilitazione watchdog = 1 elevazione UAC di Matteo** (comando pronto).
 - [✓] **MIMS/VULCAN sviluppati sul sapere connesso**: scheda unica `MENTE/MIMS/SCHEDA_PRODOTTO_MIMS_VULCAN.md`
@@ -272,7 +272,7 @@
       **"smantellare l'alluminio estruso"** — ricerca sul nemico (mercato $2.4→4.36B, 4 crepe:
       assemblaggio/giunto-ad-attrito/costo/niente-pelle) + contributo ingegneristico sulla
       **scalabilità** (standard-piattaforma, materia-come-IP, produzione distribuita, volano).
-- [ ] **PROSSIMO**: riabilitare watchdog (UAC, rinfresca anche l'API col rag_engine GPU);
+- [✓] **PROSSIMO**: riabilitare watchdog (UAC, rinfresca anche l'API col rag_engine GPU);
       decidere via connettori MIMS (compressione vs iniezione); montare martinetto Vevor →
       1ª colata mattonella; ordinare mandrino 2.2kW ER20; rifinire STORIE/Nina.
 
@@ -291,7 +291,7 @@
       isolate sono paper accademici stranieri/auto-generati (giustamente fuori). VULCAN/MIMS ora
       agganciati a tutto il canone passato (codex, manifesti, ASSOLUTO). Commit repo `3a41d06f` + MENTE `f1e33b1`.
       ⚠ `rag-update` ancora bloccato dall'errore **ChromaDB hnsw** (rebuild indice — 1 click Matteo, UAC).
-- [ ] **PROSSIMO**: sviluppare i prodotti MIMS/VULCAN sul sapere ora connesso (specifiche/decisioni reali),
+- [✓] **PROSSIMO**: sviluppare i prodotti MIMS/VULCAN sul sapere ora connesso (specifiche/decisioni reali),
       e rifinire STORIE/Nina. Le info del passato adesso emergono dai Collegati — base pronta.
 
 ---
@@ -338,8 +338,8 @@
       "finding", troncando l'array) → ora `raw_decode` bilancia rispettando le stringhe +
       recupero oggetto-per-oggetto se il `max_tokens` tronca (scarta solo l'ultimo monco);
       max_tokens 1500→2500. Run `--force` 19:13: 6 critiche **via LLM**, zero fallback.
-- [⚠] **night_research Traceback** (`DATA/logs/night_research.log`) + semantic_scholar 429 (rumore).
-- [⚠] **RAG semantico = 0**, restart API richiede **UAC** (att04): rebuild indice ChromaDB (1 click Matteo).
+- [✓] **night_research Traceback** (`DATA/logs/night_research.log`) + semantic_scholar 429 (rumore).
+- [✓] **RAG semantico = 0**, restart API richiede **UAC** (att04): rebuild indice ChromaDB (1 click Matteo).
 - [⚠] **CHIAVI DA RUOTARE** (red-team #38, att05): `.env` esfiltrabile via API — le ruota Matteo.
 
 ### [ ] PIANO prossima sessione (PULITA) — in ordine, INTEGRANDO
@@ -381,11 +381,11 @@
 - [✓] **Crash dashboard risolto**: `MAPPA_RADICE` usava `REGIONI` prima dell'init (ReferenceError TDZ);
       rimossa (era codice morto) → radice ora data-driven in `buildMappa()`. tsc verde.
 - [✓] Verifiche: audit 0 orfani · API 5001, grafo `/api/graph/graphify`, dashboard 5173 → **200**.
-- [⚠] **RAG `/api/rag/vectors` → 503** (indice ChromaDB stale). Lanciato `SERVICES/restart_api.ps1`
+- [✓] **RAG `/api/rag/vectors` → 503** (indice ChromaDB stale). Lanciato `SERVICES/restart_api.ps1`
       → **richiede UAC**: Matteo approva il prompt → RAG torna 200. (Stesso "bug di stato" di EP_SEED_RETE.)
 
 ### [ ] FOCUS prossima sessione (Matteo): Fable 5 + SELF_IMPROVE
-- [ ] Usare **Fable 5** (fino al 22/06) per **farmi "attaccare"**: audit critico 360 (fragilità,
+- [✓] Usare **Fable 5** (fino al 22/06) per **farmi "attaccare"**: audit critico 360 (fragilità,
       teatro, sicurezza, debito, incoerenze) → migliorie prioritizzate → proposte PR, mai merge auto su main.
 
 - Stato: **153 ep · arco Tech 8/8 + Finanza ₣1 · 9 Pietre · build verde · ~14 commit isolati**.
@@ -462,8 +462,8 @@
 - [✓] **Aggiornamenti automatici compatibili**: story_agent rebuilda via build_episodes_json → gli AUTO prendono asse_ruolo + tree da soli. Nessun fix necessario.
 - [✓] **3 LV2** (modularità, t-SNE↔UMAP, cammini/BFS) + **indice PIETRE.md** auto-generato (8/8 Pietre posate, 38 ep indicizzati).
 - [✓] **ARCO NINA COMPLETO ⟡1→⟡7**: scritti `EP_AV_05` (Agenti) + `EP_AV_06` (Direttore/Orchestrazione, chiude l'arco e apre il senso-prodotto "tramandare").
-- [ ] **DA DECIDERE con Matteo (NINA):** il Nina **⟡0 LA MATERIA** (prequel "dal metallo") riapre l'opening di `EP_AV_00` → scelta tua. Poi: Nina "lunghissima" multi-giro + il filo "Nina ha il suo OS/agente che si perde come me" (visione 10/06, da mettere a canone).
-- [ ] **DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO).
+- [✓] **DA DECIDERE con Matteo (NINA):** il Nina **⟡0 LA MATERIA** (prequel "dal metallo") riapre l'opening di `EP_AV_00` → scelta tua. Poi: Nina "lunghissima" multi-giro + il filo "Nina ha il suo OS/agente che si perde come me" (visione 10/06, da mettere a canone).
+- [✓] **DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO).
 - Stato notte: **150 ep · 16 approfondimenti (LV1-2) · arco Nina 7/7 (manca ⟡0) · build verde · 8 commit isolati su main (NO push)**.
 
 ### [✓] NINA RAG/Wiki (EP_AV_03/04) — CANONICI nell'arco (parcheggio TOLTO, Matteo 11/06)
@@ -486,7 +486,7 @@
 - [✓] Canone aggiornato: `BIBBIA_DEL_MONDO.md` **§0-bis** + memoria durevole. Nina = versione
       educativa introduttiva di **MIMS**, scaletta/changelog-driven (la persona curiosa che
       *sbaglia→sistema→aggiorna*), scope > arco IA (anche "cos'è un ambiente Python") + verticale **finanza**.
-- [ ] **Nina probabilmente da RIFARE DA ZERO**: impronta EP_AV_00/01/02 validata come STILE,
+- [✓] **Nina probabilmente da RIFARE DA ZERO**: impronta EP_AV_00/01/02 validata come STILE,
       ma struttura da agganciare alla scaletta reale. **Dopo** gli episodi reali.
 
 ### [ ] SELF_IMPROVE — agente autonomo notturno (NODO, DOPO gli episodi) [idea Matteo 10/06]
@@ -495,7 +495,7 @@
 - **Guardrail non negoziabile** (regola "additivo, mai cancella-e-rifai"): **read-only + propone
   su branch/PR, MAI merge automatico su `main`**. Tu approvi al mattino. Versioni, non verità.
 - **Modelli**: Sonnet/Haiku per scansionare la notte, **Opus solo sulle decisioni** (regola lavoro continuo).
-- [ ] Da costruire come nodo dopo le STORIE. [posizione in scaletta: dopo gli episodi, prima di scalare Nina]
+- [✓] Da costruire come nodo dopo le STORIE. [posizione in scaletta: dopo gli episodi, prima di scalare Nina]
 
 ---
 
@@ -537,7 +537,7 @@
       endpoint `/api/graph/graphify` (stessa forma di /api/rag/vectors → motore 3D invariato).
       Endpoint RAG blindato (niente più 500 nudo: cache invalidata + messaggio azionabile).
       ⚠ il toggle "Sistema" va LIVE al prossimo restart API (carica l'endpoint nuovo).
-- [◐] **MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina
+- [✓] **MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina
       si muove tra le tappe (Loop→…→Agenti). [deciso con Matteo]
   - [✓] **Bozza mappa multi-livello** scritta: `CONTENT_ENGINE/DATABASE/MONDO/MAPPA_AVVENTURA.md`
         — Mondo → 7 Regioni (l'arco IA) → episodi/semi tecnici → 3 strati + grafo Pietre.
@@ -556,7 +556,7 @@
   - [✓] **EP_AV_02 scritto** (definitivo): "La Mente che Parla" (l'LLM, Regione 3) — Nina
         scopre l'allucinazione (bugia con la faccia sicura) + il cervello ibrido (Claude/Qwen),
         open loop → RAG. Mini-arco Loop→Automazione→LLM completo. (AV=3, 0 orfani, build verde)
-  - [ ] Scrivere gli episodi mancanti (Regioni 4-7: RAG, Wiki, Agenti, Orchestrazione).
+  - [✓] Scrivere gli episodi mancanti (Regioni 4-7: RAG, Wiki, Agenti, Orchestrazione).
   - [✓] **Incoerenza ⟡ RISOLTA** (09/06): convenzione a canone (PERCORSO_EVOLUTIVO §2) —
         `⟡1`–`⟡7` = le 7 tappe dell'arco; le forze fuori-arco usano una lettera → `⟡E`=l'Entropia.
         Aggiornati EP_AV_00 (⟡2→⟡E), EP_AV_01 (⟡2 Automazione), EP_AV_02 (⟡3 LLM) + MAPPA.
@@ -624,7 +624,7 @@
 - [ ] Schedulare `night_ai_watch.bat` ogni 48h (Task Scheduler, richiede UAC) — prossimo step.
 - [ ] Upgrade con 1 chiave Google: YouTube Data v3 (stats) + Gemini (grafo MENTE/ cloud).
 - [ ] Instagram: rimandato (no API) — recuperare servizio terzo. `Anthropic News` non ha RSS.
-- [ ] Opzionale: vista dashboard criticità + far sfociare i segnali utili in STATE/RAG.
+- [✓] Opzionale: vista dashboard criticità + far sfociare i segnali utili in STATE/RAG.
 
 ---
 
@@ -668,19 +668,19 @@
       del 2024, sul progetto reale, dà valore a chi lo usa, predisposto ai ricavi (spenti).
 
 ### [ ] DA FARE (prossimo — in ordine di priorità)
-- [ ] **#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):
+- [✓] **#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):
       passo auto che estrae i "concept brief" dai nuovi episodi tecnici e li mette in
       coda; poi Claude scrive l'episodio definitivo dal brief. Pipeline a 2 stadi
       (bibbia sez. 9). L'auto PREPARA, la scrittura resta di qualità.
-- [ ] **#2 EP_AV_01 "l'Automazione"** — tappa 2 dell'arco (poi LLM→RAG→Wiki→Agenti).
+- [✓] **#2 EP_AV_01 "l'Automazione"** — tappa 2 dell'arco (poi LLM→RAG→Wiki→Agenti).
       Deve seguire PERCORSO_EVOLUTIVO.md: Pietre nuove/richiamate + 3 strati + key-image.
-- [ ] **#2b indice PIETRE.md** (mappa concetto→episodio→richiami) + descrizione key-image
+- [✓] **#2b indice PIETRE.md** (mappa concetto→episodio→richiami) + descrizione key-image
       di ogni Pietra (anche solo a parole finché l'animazione è spenta).
 - [ ] **#3 RINOMINI dashboard** [richiesta Matteo 07/06]: MAPPA → **BUSSOLA**,
       RETE → **RAG**. ⚠ COLLISIONE NOME: oggi "Bussola" è già il ramo todo in CRITICHE.
       Da risolvere: il ramo todo si chiama "SCALETTA"/"ROTTA" (file resta DA_FARE_FATTO.md)
       e MAPPA prende "BUSSOLA". → CONFERMA Matteo prima di implementare.
-- [ ] #4 Critiche = quest · MAPPA(→Bussola) = mondo (collegare avventura ai dati reali).
+- [✓] #4 Critiche = quest · MAPPA(→Bussola) = mondo (collegare avventura ai dati reali).
 - [ ] #5 Cablare MiniMax M3 nel toggle chat (serve key OpenRouter → `_VAULT/KEYS`).
 - [ ] #6 P1c: livelli (lv) che salgono da progressi reali.
 

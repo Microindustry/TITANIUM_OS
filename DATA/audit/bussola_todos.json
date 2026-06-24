@@ -169,7 +169,7 @@
   },
   {
     "id": "BUS-57f02b46",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**C'è ancora lavoro su Nina** (Matteo) — **da definire a inizio sessione #44**: chiedergli cosa.",
     "sessione": "Sessione #43 · 23/06/2026 (ULTRACODE) — NINA DEFINITIVA (canone unico EP_N2)"
   },
@@ -373,7 +373,7 @@
   },
   {
     "id": "BUS-863f9e3d",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**Divergenza RAG residua 0,2%** (semantico≈32817 vs bm25≈32882): nata da incrementali in",
     "sessione": "Sessione #41 · 22/06/2026 — Watchdog ON · RAG self-heal · canone VULCAN/CNC corretto"
   },
@@ -421,7 +421,7 @@
   },
   {
     "id": "BUS-9fa59319",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**TI_Watchdog era DISABILITATO** da 2 giorni (la `finally` del vecchio `rag_clean_rebuild`",
     "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
   },
@@ -457,7 +457,7 @@
   },
   {
     "id": "BUS-fa71d79c",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**PROSSIMO**: riabilitare watchdog (UAC, rinfresca anche l'API col rag_engine GPU);",
     "sessione": "Sessione #40 · 22/06/2026 — RAG SBLOCCATO (GPU ripristinata + ChromaDB stabile)"
   },
@@ -481,7 +481,7 @@
   },
   {
     "id": "BUS-bafd811b",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**PROSSIMO**: sviluppare i prodotti MIMS/VULCAN sul sapere ora connesso (specifiche/decisioni reali),",
     "sessione": "Sessione #39 · 20/06/2026 — fix night_audit + ECOSISTEMA vault Obsidian"
   },
@@ -565,13 +565,13 @@
   },
   {
     "id": "BUS-9094103e",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**night_research Traceback** (`DATA/logs/night_research.log`) + semantic_scholar 429 (rumore).",
     "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
   },
   {
     "id": "BUS-f7be5e36",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**RAG semantico = 0**, restart API richiede **UAC** (att04): rebuild indice ChromaDB (1 click Matteo).",
     "sessione": "Sessione #38 · 12-18/06/2026 — NotebookLM + pitch/CV/pilastri (con DEBITO da integrare)"
   },
@@ -631,13 +631,13 @@
   },
   {
     "id": "BUS-a0c2868f",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**RAG `/api/rag/vectors` → 503** (indice ChromaDB stale). Lanciato `SERVICES/restart_api.ps1`",
     "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
   },
   {
     "id": "BUS-a5d5fe75",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "Usare **Fable 5** (fino al 22/06) per **farmi \"attaccare\"**: audit critico 360 (fragilità,",
     "sessione": "Sessione #37 · 11/06/2026 — arco Nina completo + canon OS + verticale Finanza"
   },
@@ -805,13 +805,13 @@
   },
   {
     "id": "BUS-a42997c7",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**DA DECIDERE con Matteo (NINA):** il Nina **⟡0 LA MATERIA** (prequel \"dal metallo\") riapre l'opening di `EP_AV_00` → scelta tua. Poi: Nina \"lunghissima\" multi-giro + il filo \"Nina ha il suo OS/agente che si perde come me\" (visione 10/06, da mettere a canone).",
     "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
   },
   {
     "id": "BUS-3d652f1c",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**DA DECIDERE:** scalare asse_nina ai 129 (ora 38, solo concetti) · viste 2 assi in dashboard (timeline RUOLO).",
     "sessione": "Sessione #36 · 10/06/2026 — STORIE risanate + 4 semi tecnici"
   },
@@ -847,13 +847,13 @@
   },
   {
     "id": "BUS-0eeeeeba",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**Nina probabilmente da RIFARE DA ZERO**: impronta EP_AV_00/01/02 validata come STILE,",
     "sessione": "Sessione #35 · 10/06/2026"
   },
   {
     "id": "BUS-66db2250",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "Da costruire come nodo dopo le STORIE. [posizione in scaletta: dopo gli episodi, prima di scalare Nina]",
     "sessione": "Sessione #35 · 10/06/2026"
   },
@@ -913,7 +913,7 @@
   },
   {
     "id": "BUS-b838eabb",
-    "stato": "in_corso",
+    "stato": "fatto",
     "testo": "**MAPPA → base Avventura**: riusare il drill-down a N-livelli come mondo dove Nina",
     "sessione": "Sessione #34 · 07/06/2026"
   },
@@ -949,7 +949,7 @@
   },
   {
     "id": "BUS-72ed3b6f",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "Scrivere gli episodi mancanti (Regioni 4-7: RAG, Wiki, Agenti, Orchestrazione).",
     "sessione": "Sessione #34 · 07/06/2026"
   },
@@ -1075,7 +1075,7 @@
   },
   {
     "id": "BUS-0d86bef1",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "Opzionale: vista dashboard criticità + far sfociare i segnali utili in STATE/RAG.",
     "sessione": "Sessione #34 · 07/06/2026"
   },
@@ -1171,19 +1171,19 @@
   },
   {
     "id": "BUS-9e344c9b",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**#1 AUTOMATIZZARE LE STORIE DI NINA** (candidato primo punto prossima sessione):",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
     "id": "BUS-fdaaad93",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**#2 EP_AV_01 \"l'Automazione\"** — tappa 2 dell'arco (poi LLM→RAG→Wiki→Agenti).",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
   {
     "id": "BUS-2cbaa742",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**#2b indice PIETRE.md** (mappa concetto→episodio→richiami) + descrizione key-image",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
@@ -1195,7 +1195,7 @@
   },
   {
     "id": "BUS-3a0a39a4",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "#4 Critiche = quest · MAPPA(→Bussola) = mondo (collegare avventura ai dati reali).",
     "sessione": "Sessione #32-33 · 06-07/06/2026"
   },
