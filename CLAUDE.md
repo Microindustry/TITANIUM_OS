@@ -36,6 +36,8 @@ Matteo Benenati — artigiano industriale + system builder.
 1. Leggi DA_FARE_FATTO.md       → la BUSSOLA: cosa è fatto / cosa resta (scaletta viva)
 2. Leggi RIAVVIO_SESSIONE.txt   → di cosa stavamo parlando l'ultima sessione
 3. Leggi BRAIN/STATE.json       → milestone attivo + pilastri + blockers
+3b. Triage notturno (5 sec)     → DATA/audit/system_health.json `log_issues`: se la notte
+    ha lasciato crash/rate-limit, max 3 righe di nota PRIMA di aprire altro (non ignorare gli agenti)
 4. Enunci in <10 sec: dove eravamo + prossimo step — zero domande
 5. Lavora — aggiorna DA_FARE_FATTO.md STRADA FACENDO (non solo a fine)
 6. Fine sessione → aggiorna DA_FARE_FATTO.md + STATE.json + RIAVVIO + commit + push

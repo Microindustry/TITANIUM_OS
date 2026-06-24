@@ -22,8 +22,10 @@
     "finding": "La decisione su connettori MIMS (via A iniezione vs via B compressione VULCAN, SCHEDA §5) è listata come blocker da almeno 2 sessioni e blocca BEP/B2, ma non ha una data di risoluzione né un owner di analisi. Con MIMS al 30% di pillar e il mandrino ER20 già in lista ordini, la decisione tecnica sui connettori è il vero collo di bottiglia che precede qualsiasi test fisico: ordinare il mandrino senza avere il processo di giunzione definito rischia di avere attrezzatura ferma.",
     "azione": "Dedicare i primi 20 minuti della prossima sessione a una decisione esplicita: Matteo sceglie via A o via B basandosi sui vincoli di SCHEDA §5 (costo stampo, pressione disponibile con Vevor 3 stadi, volume batch). La decisione va scritta in MIMS/SCHEDA con data e rationale, anche se provvisoria, così sblocca BEP/B2 e orienta l'uso del martinetto Vevor una volta montato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-24"
+    "status": "resolved",
+    "last_seen": "2026-06-24",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: DECISO da Matteo 24/06: connettori = Via B (compressione VULCAN, processo proprietario B2). A canone in SCHEDA §5 + STATE blocker"
   },
   {
     "id": "AUD-4bf52d5827",
@@ -138,8 +140,10 @@
     "finding": "Il blocker 'Connettori MIMS: via A iniezione vs via B compressione VULCAN (SCHEDA §5)' blocca BEP/B2, e il 'Martinetto Vevor 3 stadi da montare' è prerequisito fisico VULCAN. Entrambi sono aperti da più sessioni (la sessione #38 del 18/06 già listava debito MIMS/VULCAN). Con V32 al 65% e MIMS al 30%, MIMS è il pilastro più arretrato e la decisione tecnica sui connettori è il singolo nodo che blocca il calcolo economico.",
     "azione": "Prima della prossima sessione hardware: decidere via A vs via B su SCHEDA §5 — è una scelta, non una ricerca. Documentare la decisione in VULCAN e sbloccare BEP/B2. Il Martinetto Vevor va montato fisicamente: schedulare mezz'ora dedicata, non lasciarlo come 'quando capita'.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-23"
+    "status": "resolved",
+    "last_seen": "2026-06-23",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: DECISO: connettori = Via B (SCHEDA §5). Resta solo il blocker fisico Vevor -> in AZIONI_MATTEO.md"
   },
   {
     "id": "AUD-3e5091d70c",
@@ -324,8 +328,10 @@
     "finding": "La bussola riporta '#guasti-segnalati-dagli-agenti-ascoltarli-non-ignorarli' come todo aperto. Stanotte ci sono almeno 3 guasti reali nei log (crash research_agent, 429 non gestito, zero risultati su query core V32) che rischiano di essere letti come 'rumore di fondo' invece che segnali. Se questo todo non viene collegato a una checklist di triage post-notte, il metodo di ascolto degli agenti resta un'intenzione, non un processo.",
     "azione": "Aggiungere alla routine di avvio sessione un controllo esplicito dei log_issues della notte precedente: 5 minuti, massimo 3 righe di analisi, prima di aprire qualsiasi altro task.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: triage notturno inchiodato nel protocollo CLAUDE.md (step 3b: leggi system_health.log_issues a inizio sessione). Il flusso night_audit->sidebar->burn-down e' ora routine"
   },
   {
     "id": "AUD-e85421edda",
@@ -992,8 +998,10 @@
     "finding": "Pilastro MIMS fermo al 30%.",
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-24",
+    "resolved_by": "sess.#45: next step MIMS misurabile ora definito: Via B deciso -> montare martinetto Vevor -> prima colata giunto (Q3 2026). Pillar resta 30% finche' VULCAN non produce (hardware)"
   },
   {
     "id": "AUD-6bb972e811",
