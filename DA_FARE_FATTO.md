@@ -100,8 +100,14 @@ definire lo stile narrativo, poi propagare.**
 - [✓] **v7 — testo arricchito** (richiesta Matteo): intro a 2 frasi, punti illustrati più pieni,
   sigilli più evocativi su tutte le slide 2-8; box testo allargato + font ribilanciati (no overflow,
   slide 8 con CTA verificata a piena risoluzione). PNG 1-8 rigenerati. ATTUALE = `carosello.html`.
-- [ ] **Prossimo (per Matteo)**: rivedere le 8 slide → se ok, export Adobe Express (readiness skill prima).
-  Eventuale ritocco onda (ampiezza/intensità) o scelta finale v5 sfumata vs v4 intreccio.
+- [✗] **v8 fumetto/vignette** (caselle di testo): provata su slide 2 → **scartata** ("no per nulla").
+- [✓] **v9 — preambolo RIVISTO a 12 slide** che SPIEGA il progetto: +Cos'è, +Perché esiste,
+  +Come funziona (1→3 strati), +Da dove nasce (progetto vero→Nina). Fluido, illustrazioni dedicate.
+- [✓] **v10 — esteso a 17 slide** (linguaggio semplice/ricco): +Per chi è, +I 4 simboli
+  (Atomo/Bit/Giuntura/Pietra), +Cosa imparerai (8 tappe), +Si ripassa (spirale), +La promessa.
+  **PROMOSSA a `carosello.html`**; 17 PNG singole `slides/slide_1..17.png`. Versioni v1→v10 in `_VERSIONI/`.
+- [◐] **In attesa**: Matteo manda un FILE da leggere/riflettere → se serve cambiare, si cambia ORA
+  (prima di bloccare le 17). Poi: export Adobe Express (readiness skill).
 
 ---
 

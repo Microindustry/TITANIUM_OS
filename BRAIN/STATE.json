@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-25T23:24:49.894018",
-  "active_milestone": "Sessione #49 (25/06): PRE_01 preambolo Nina — stile \"buonanotte\" (lead+intro+parole illustrate+seal, densita snella per Instagram) + FLUSSO continuo di sfondo (onda calcolata su x globale (n-1)*1080+x -> continua tra slide). Esplorate v1-v6 (sistema versioni additivo in _VERSIONI/ + tool _render_pair.py); Matteo ha scelto v5 onda SFUMATA (blur, meno netta). v6 propaga flusso+stile su 8 slide; v7 ARRICCHITO con piu testo (intro 2 frasi, punti piu pieni, sigilli evocativi), box allargato senza overflow. PNG 1-8 rigenerati. Integrato in RAG+Obsidian (nota MENTE/SESSIONI, rag --incremental, retrieval 0.99).",
-  "next_step": "PROSSIMA: Matteo rivede le 8 slide di PRE_01 -> se ok export Adobe Express (export_html_to_express, readiness skill prima). Aperti: ritocco onda (ampiezza/intensita) o scelta v5 vs v4 intreccio; poi altri caroselli del preambolo (Themis, Nina) e rifare EP_N2_01 a questo livello.",
+  "last_update": "2026-06-25T23:45:51.104944",
+  "active_milestone": "Sessione #49 (25/06): PRE_01 preambolo Nina come CAROSELLO che SPIEGA il progetto. Iterato v1->v10: stile buonanotte + FLUSSO sfumato continuo (onda su x globale). Scartato v8 vignette/fumetto. v10 ATTUALE = 17 slide, linguaggio semplice/ricco: Cover, Cos-e, Perche, Per-chi-e, Il Patto, Nina, Themis, Atomi<->Bit, I 4 simboli, La Giuntura, Le 8 Pietre, Cosa imparerai, Come funziona, Si ripassa, Da dove nasce, La promessa, Si parte. 17 PNG singole slides/slide_1..17. Versioni in _VERSIONI/. Integrato in RAG+Obsidian.",
+  "next_step": "Matteo manda un FILE da leggere/riflettere -> se serve cambiare il preambolo si fa ORA (prima di bloccarlo). Poi export Adobe Express (export_html_to_express, readiness skill). Aperti: scelta onda v5 sfumata (attuale) vs v4 intreccio; altri caroselli; EP_N2_01 a questo livello.",
   "session_count": 97,
   "pillars": {
     "V32": {
@@ -128,5 +128,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "PRE_01 v7 — testo arricchito su 8 slide (intro 2 frasi + punti + sigilli)"
+  "last_action": "Modifica a rag_linkgraph.json"
 }
