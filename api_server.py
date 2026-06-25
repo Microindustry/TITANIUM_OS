@@ -1310,13 +1310,40 @@ def rag_vectors():
         except Exception:
             pass
 
+        # Grado (hub): quante connessioni semantiche ha ogni doc -> i nodi-pilastro
+        # della memoria (uso 2 di Konik). Indici allineati a doc_ids/points.
+        degree = [0] * len(doc_ids)
+        for l in links:
+            degree[l["source"]] += 1
+            degree[l["target"]] += 1
+
+        import time as _time
+        now = _time.time()
+
+        def _age_days(src_norm: str) -> int:
+            # freschezza: giorni dall'ultima modifica del file sorgente in MENTE.
+            # -1 se non leggibile (il frontend lo tratta come "neutro").
+            try:
+                return int((now - (MENTE_DIR / src_norm).stat().st_mtime) // 86400)
+            except Exception:
+                return -1
+
+        def _tier(stem: str) -> str:
+            # Memoria a 2 livelli (Hermes): lo strato "core" del vault = indici/MOC
+            # (la navigazione sempre-caricata, _CANONE/HOME/_*) vs il dettaglio long-term.
+            s = stem.lower()
+            if s.startswith("_") or s in ("home", "readme", "moc"):
+                return "core"
+            return "vault"
+
         points = []
         n_orphans = 0
         for i, doc_id in enumerate(doc_ids):
             src_norm = doc_id.replace("\\", "/")
             folder = _folder(src_norm)
             label  = src_norm.split("/")[-1]
-            is_orphan = src_norm in orphan_keys or label.rsplit(".", 1)[0] in orphan_keys
+            stem   = label.rsplit(".", 1)[0]
+            is_orphan = src_norm in orphan_keys or stem in orphan_keys
             if is_orphan:
                 n_orphans += 1
             points.append({
@@ -1325,6 +1352,9 @@ def rag_vectors():
                 "folder":      folder,
                 "chunk_count": doc_chunks[i],
                 "orphan":      is_orphan,
+                "degree":      degree[i],
+                "age_days":    _age_days(src_norm),
+                "tier":        _tier(stem),
                 "x":           round(float(coords_3d[i, 0]), 4),
                 "y":           round(float(coords_3d[i, 1]), 4),
                 "z":           round(float(coords_3d[i, 2]), 4),

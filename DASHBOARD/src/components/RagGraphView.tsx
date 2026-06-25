@@ -11,6 +11,27 @@ interface VecPoint {
   id: string; label: string; folder: string;
   chunk_count: number; x: number; y: number; z: number;
   orphan?: boolean;   // orfano di RETE: 0 legami nel grafo del vault (tesi Konik)
+  degree?: number;    // connessioni semantiche -> hub (uso 2 Konik)
+  age_days?: number;  // giorni dall'ultima modifica -> freschezza (mappa viva)
+  tier?: "core" | "vault";  // memoria a 2 livelli (Hermes): core sempre-caricato vs vault
+}
+
+// freschezza 0..1 (1=appena toccato, 0=stantio); -1/assente -> neutro 0.5
+function freshness(age?: number): number {
+  if (age == null || age < 0) return 0.5;
+  return Math.max(0, Math.min(1, 1 - Math.max(0, age - 7) / 113));  // <=7gg pieno, >=120gg spento
+}
+const HUB_MIN = 5, HUB_MAX = 14;
+function hubScore(deg?: number): number {
+  if (!deg || deg < HUB_MIN) return 0;
+  return Math.min(1, (deg - HUB_MIN) / (HUB_MAX - HUB_MIN));
+}
+function ageLabel(d: number): string {
+  if (d <= 0) return "oggi";
+  if (d === 1) return "ieri";
+  if (d < 30) return `${d} gg fa`;
+  if (d < 365) return `${Math.round(d / 30)} mesi fa`;
+  return `${Math.round(d / 365)} anni fa`;
 }
 interface VecLink {
   source: number; target: number; weight: number;
@@ -92,19 +113,26 @@ function ThreeScene({
       scene.add(grid);
 
       // build point cloud
-      const pos: number[] = [], col: number[] = [], sz: number[] = [], orph: number[] = [];
+      const pos: number[] = [], col: number[] = [], sz: number[] = [];
+      const orph: number[] = [], hub: number[] = [], age: number[] = [], core: number[] = [];
       for (const p of points) {
         pos.push(p.x * SCALE, p.y * SCALE, p.z * SCALE);
         const [r, g, b] = hex3(folderColor(p.folder));
         col.push(r, g, b);
         sz.push(Math.max(0.12, Math.sqrt(p.chunk_count) * 0.1));
         orph.push(p.orphan ? 1 : 0);
+        hub.push(hubScore(p.degree));
+        age.push(freshness(p.age_days));
+        core.push(p.tier === "core" ? 1 : 0);
       }
       const geo = new THREE.BufferGeometry();
       geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
       geo.setAttribute("color",    new THREE.Float32BufferAttribute(col, 3));
       geo.setAttribute("size",     new THREE.Float32BufferAttribute(sz, 1));
       geo.setAttribute("orphan",   new THREE.Float32BufferAttribute(orph, 1));
+      geo.setAttribute("hub",      new THREE.Float32BufferAttribute(hub, 1));
+      geo.setAttribute("age",      new THREE.Float32BufferAttribute(age, 1));
+      geo.setAttribute("core",     new THREE.Float32BufferAttribute(core, 1));
 
       const mat = new THREE.ShaderMaterial({
         uniforms: { opacity: { value: 0.9 }, uTime: { value: 0 } },
@@ -112,19 +140,23 @@ function ThreeScene({
           attribute float size;
           attribute vec3 color;
           attribute float orphan;
+          attribute float hub;
+          attribute float age;
+          attribute float core;
           varying vec3 vColor;
-          varying float vOrphan;
+          varying float vOrphan, vHub, vAge, vCore;
+          uniform float uTime;
           void main() {
-            vColor = color;
-            vOrphan = orphan;
+            vColor = color; vOrphan = orphan; vHub = hub; vAge = age; vCore = core;
             vec4 mv = modelViewMatrix * vec4(position, 1.0);
-            float s = size * (orphan > 0.5 ? 1.8 : 1.0);   // orfani piu' grossi = saltano all'occhio
+            float breathe = age > 0.75 ? (1.0 + 0.06 * sin(uTime * 2.5)) : 1.0;  // i freschissimi respirano
+            float s = size * (1.0 + hub * 0.9) * (orphan > 0.5 ? 1.8 : 1.0) * breathe;  // hub piu' grandi
             gl_PointSize = s * (280.0 / -mv.z);
             gl_Position  = projectionMatrix * mv;
           }`,
         fragmentShader: `
           varying vec3 vColor;
-          varying float vOrphan;
+          varying float vOrphan, vHub, vAge, vCore;
           uniform float opacity;
           uniform float uTime;
           void main() {
@@ -139,7 +171,24 @@ function ThreeScene({
               gl_FragColor = vec4(red, a * opacity);
               return;
             }
-            gl_FragColor = vec4(vColor, (1.0 - d * 0.4) * opacity);
+            // FRESCHEZZA: stantio si spegne, fresco brilla + tinta calda (mappa viva)
+            float bright = mix(0.32, 1.0, vAge);
+            vec3  warm   = mix(vColor, vColor * vec3(1.25, 1.05, 0.7), clamp(vAge - 0.5, 0.0, 0.5) * 1.4);
+            vec3  outc   = warm * bright;
+            float a      = (1.0 - d * 0.4) * opacity;
+            // HUB: alone morbido nel colore del nodo = pilastro della memoria
+            if (vHub > 0.0) {
+              float halo = smoothstep(0.5, 0.7, d) * (1.0 - smoothstep(0.9, 1.0, d));
+              a    = max(a, halo * 0.5 * vHub);
+              outc = mix(outc, outc * 1.4 + 0.08, halo * vHub);
+            }
+            // CORE (Hermes): anello bianco sottile = strato sempre-caricato del vault
+            if (vCore > 0.5) {
+              float wr = smoothstep(0.30, 0.40, d) * (1.0 - smoothstep(0.50, 0.60, d));
+              outc = mix(outc, vec3(0.95), wr * 0.9);
+              a    = max(a, wr * 0.8 * opacity);
+            }
+            gl_FragColor = vec4(outc, a);
           }`,
         transparent: true,
         depthWrite: false,
@@ -374,6 +423,22 @@ export function RagGraphView() {
               {orphanCount} orfani{orphanOnly ? " ✓" : ""}
             </button>
           )}
+          {source === "rag" && (
+            <div className="mt-2 pt-2 border-t border-slate-800/60 space-y-1">
+              <div className="text-[7px] font-mono text-slate-700 uppercase tracking-widest">mappa viva</div>
+              {([
+                ["luminoso = fresco · spento = stantio", "#fbbf24"],
+                ["grande + alone = hub (pilastro)", "#94a3b8"],
+                ["anello bianco = core (Hermes)", "#e2e8f0"],
+                ["anello rosso = orfano", "#ef4444"],
+              ] as const).map(([txt, c]) => (
+                <div key={txt} className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: c }} />
+                  <span className="text-[7px] font-mono text-slate-600 leading-tight">{txt}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="relative">
@@ -455,7 +520,13 @@ export function RagGraphView() {
             style={{ left: hovered.x + 14, top: hovered.y - 8 }}>
             <div className="text-[9px] font-bold font-mono text-slate-200">{hovered.p.label}</div>
             <div className="text-[8px] font-mono" style={{ color: folderColor(hovered.p.folder) }}>{hovered.p.folder}</div>
-            <div className="text-[7px] font-mono text-slate-600">{hovered.p.chunk_count} chunk</div>
+            <div className="text-[7px] font-mono text-slate-600">
+              {hovered.p.chunk_count} chunk
+              {hovered.p.degree != null && ` · ${hovered.p.degree} legami`}
+              {hovered.p.age_days != null && hovered.p.age_days >= 0 && ` · ${ageLabel(hovered.p.age_days)}`}
+            </div>
+            {hubScore(hovered.p.degree) > 0 && <div className="text-[7px] font-mono text-amber-300">◉ hub · pilastro</div>}
+            {hovered.p.tier === "core" && <div className="text-[7px] font-mono text-slate-200">○ core · sempre-caricato (Hermes)</div>}
             {hovered.p.orphan && <div className="text-[7px] font-mono font-bold text-red-400">⚠ orfano · 0 legami nel grafo</div>}
           </div>
         )}
@@ -468,7 +539,17 @@ export function RagGraphView() {
               <div>
                 <div className="text-[10px] font-bold font-mono text-slate-200 break-all">{selected.label}</div>
                 <div className="text-[8px] font-mono mt-0.5" style={{ color: folderColor(selected.folder) }}>{selected.folder}</div>
-                {selected.orphan && <div className="text-[8px] font-mono font-bold text-red-400 mt-0.5">⚠ orfano di RETE · 0 legami</div>}
+                <div className="flex flex-wrap gap-1 mt-1">
+                  {selected.age_days != null && selected.age_days >= 0 && (
+                    <span className="text-[7px] font-mono px-1 rounded"
+                      style={{ background: "#1e293b", color: freshness(selected.age_days) > 0.6 ? "#fbbf24" : "#64748b" }}>
+                      {ageLabel(selected.age_days)}
+                    </span>
+                  )}
+                  {hubScore(selected.degree) > 0 && <span className="text-[7px] font-mono px-1 rounded bg-slate-800 text-amber-300">◉ hub · {selected.degree} legami</span>}
+                  {selected.tier === "core" && <span className="text-[7px] font-mono px-1 rounded bg-slate-800 text-slate-200">○ core (Hermes)</span>}
+                  {selected.orphan && <span className="text-[7px] font-mono px-1 rounded bg-red-950 text-red-400 font-bold">⚠ orfano</span>}
+                </div>
               </div>
               <button onClick={() => setSelected(null)} className="text-slate-600 hover:text-slate-400 ml-2"><X size={10} /></button>
             </div>
