@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-25T21:43:02.600541",
-  "active_milestone": "Sessione #48 (25/06): Integrazione Adobe Express provata (export_html_to_express, account auth). EP_N2_01 esportato come carosello 8 slide in Express (font->Adobe Fonts kit zhv2kry). Organizzazione POSTER/CAROSELLI/ (una cartella per carosello: carosello.html+caption.txt+README.md+slides/). BIBBIA_VISIVA_CAROSELLI.md + BRIEF_ILLUSTRATORE_PERSONAGGI.md. Simboli del mondo (Atomi/Bit/Giuntura/Pietra) bloccati definitivi. Preambolo PRE_01 'Il Mondo di Nina' costruito ricco/atmosferico (8 slide illustrate con glow, filo-ponte, PNG in slides/). Stile: blueprint-anime alla Geronimo Stilton, no foto reali, personaggi via illustratore (slot). Lezione: caroselli belli/illustrati, MAI wireframe.",
-  "next_step": "PROSSIMA SESSIONE #49: lavorare sulla slide 2 di PRE_01 aggiungendo piu testo per DEFINIRE LO STILE (densita narrativa / parole illustrate / ritmo buonanotte), poi propagare alle altre slide. Aperti: esportare PRE_01 in Express; rifare EP_N2_01 al livello ricco; altri caroselli preambolo; commissionare arte personaggi (brief pronto).",
-  "session_count": 96,
+  "last_update": "2026-06-25T22:05:06.761944",
+  "active_milestone": "Sessione #49 (25/06): PRE_01 preambolo Nina — stile \"buonanotte\" (lead+intro+parole illustrate+seal, densita snella per Instagram) + FLUSSO continuo di sfondo (onda calcolata su x globale (n-1)*1080+x -> continua tra slide). Esplorate v1-v6 (sistema versioni additivo in _VERSIONI/ + tool _render_pair.py); Matteo ha scelto v5 onda SFUMATA (blur, meno netta). v6 propaga flusso+stile su tutte le 8 slide, PNG rigenerati. Integrato in RAG+Obsidian (nota MENTE/SESSIONI, rag --incremental, retrieval 0.99).",
+  "next_step": "PROSSIMA: Matteo rivede le 8 slide di PRE_01 -> se ok export Adobe Express (export_html_to_express, readiness skill prima). Aperti: ritocco onda (ampiezza/intensita) o scelta v5 vs v4 intreccio; poi altri caroselli del preambolo (Themis, Nina) e rifare EP_N2_01 a questo livello.",
+  "session_count": 97,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-25T21:42:59.627108"
+      "last_activity": "2026-06-25T21:43:14.622681"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -128,5 +128,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a night_audit.py"
+  "last_action": "PRE_01 v6 propagato (flusso sfumato + stile buonanotte 8 slide) + integrazione RAG/Obsidian"
 }

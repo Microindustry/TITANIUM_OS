@@ -67,6 +67,39 @@
 
 ---
 
+## Sessione #49 · 25/06/2026 — PRE_01: stile buonanotte (slide 2) + flusso d'onda continuo tra le slide
+
+**Punto di partenza #49 (dalla bussola #48): lavorare sulla slide 2 di PRE_01, più testo per
+definire lo stile narrativo, poi propagare.**
+
+- [✓] **Slide 2 "Il Patto" ridefinita** — densità da racconto della buonanotte: apertura calda +
+  le **tre orecchie come parole illustrate** (☾ oro *il bambino* · ? rosa *il curioso* · ◇ ciano
+  *il grande*, dual coding) + sigillo *"Questo è il patto."* Classi CSS riutilizzabili
+  (`.s2 .intro .trio .role .mk .seal`) per propagare.
+- [✓] **Densità decisa (Matteo)**: per il **preambolo** questa quantità va bene letta da Instagram;
+  gli **episodi** veri saranno più lunghi/ricchi. → [[feedback-densita-caroselli-vs-episodi]]
+- [✓] **FLUSSO continuo di sfondo** (richiesta Matteo): onda sinusoidale calcolata sulla posizione
+  *globale* `(n-1)*1080 + x` → **continua per costruzione** tra slide (esce a destra della N, rientra
+  alla stessa altezza a sinistra della N+1). Corrente oro in basso con luci (beads ogni 300px globali)
+  + corrente ciano tenue dietro le scene. Sostituisce il `.filo` dritto sulle slide col flusso.
+- [✓] **Slide 3 "Nina" rifatta** in stile ricco coerente (intro + 2 ruoli illustrati + seal) per
+  **studiare la giuntura grafica** 2↔3; render affiancato verificato (seam del flusso allineato).
+- [✓] **Sistema versioni additivo** `PRE_01/_VERSIONI/` (v1 originale → v6 completo, ognuna con
+  `anteprima_slide2-3.png` + INDEX.md) + tool riusabile `_render_pair.py` (N slide affiancate;
+  screenshot Chrome → path ASSOLUTO obbligatorio, gotcha noto).
+- [✓] **Alternative proposte**: v3 onda oro · v4 intreccio Atomi↔Bit (Giuntura ⟡ agli incroci) ·
+  **v5 onda SFUMATA scelta da Matteo** (alone soffuso blur, meno netta).
+- [✓] **v6 PROPAGATO**: flusso sfumato continuo su **tutte le 8 slide** + stile buonanotte su 2-8
+  (slide 4 Themis, 5 Atomi↔Bit, 6 Giuntura, 7 Mappa, 8 Materia). PNG `slide_1..8.png` rigenerati,
+  glifi ◆✦⟡→ verificati a piena risoluzione.
+- [✓] **Integrato in RAG + Obsidian**: nota `MENTE/SESSIONI/2026-06-25_caroselli-preambolo-flusso-stile.md`
+  (wikilink a [[NINA_STILE_E_PIANO]] ecc.) → `rag --incremental` (+add:1, linkgraph 484 note/5611 archi,
+  semantico=bm25=24673), retrieval verificato score 0.99.
+- [ ] **Prossimo (per Matteo)**: rivedere le 8 slide → se ok, export Adobe Express (readiness skill prima).
+  Eventuale ritocco onda (ampiezza/intensità) o scelta finale v5 vs v4.
+
+---
+
 ## Sessione #48 · 25/06/2026 — Adobe Express + caroselli di Nina (porta → carosello, preambolo)
 
 **Punto di partenza #48 (dalla bussola #47): capire come è stata generata l'immagine della PORTA
