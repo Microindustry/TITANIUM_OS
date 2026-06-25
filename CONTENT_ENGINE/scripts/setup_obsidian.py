@@ -190,6 +190,14 @@ def run_ecosystem_bridge():
     subprocess.run([sys.executable, str(script)], check=False)
 
 
+def run_vault_intersect():
+    """Interseca il sapere NON-storie (KNOWLEDGE/V32/MIMS/...) e rinfresca gli orfani di
+    RETE (DATA/audit/vault_orphans.json) che night_audit legge. Senza questo, il segnale
+    orfani scadrebbe (gate <48h). Tesi Konik: il grafo come diagnosi CONTINUA del vault."""
+    script = ROOT / "CONTENT_ENGINE" / "scripts" / "vault_intersect.py"
+    subprocess.run([sys.executable, str(script)], check=False)
+
+
 def main() -> int:
     print("=" * 56)
     print(" SETUP OBSIDIAN — un vault con TUTTO (sapere + storie)")
@@ -206,6 +214,8 @@ def main() -> int:
         print("  Mappa _EVOLUZIONE.md generata (spirali + atti del filone)")
     run_ecosystem_bridge()
     print("  Ponti cross-mondo (episodio↔sapere) iniettati → ecosistema unito")
+    run_vault_intersect()
+    print("  Sapere non-storie intersecato + orfani di RETE rinfrescati (vault_orphans.json)")
     gen_index()
     print(f"\n  Vault pronto: {MENTE}")
     print("  Apri in Obsidian (launcher Desktop) -> HOME.md -> graph view.")

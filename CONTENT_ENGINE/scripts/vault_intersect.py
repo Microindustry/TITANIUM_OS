@@ -1,4 +1,4 @@
-# vault_intersect.py | TITANIUM_OS / CONTENT_ENGINE | v2.0 | 2026-06-20
+# vault_intersect.py | TITANIUM_OS / CONTENT_ENGINE | v2.1 | 2026-06-25
 # Interseca il RESTO del vault (KNOWLEDGE, GENESIS, V32, MIMS, VULCAN, FINANZA, ...) come
 # storie_intersect fa per gli episodi: da note isolate a RETE. Inietta i wikilink
 # `## Collegati` -> il grafo di Obsidian connette anche il sapere.
@@ -10,6 +10,10 @@
 #   Bonus lieve stesso-dominio (cluster) senza bloccare i legami cross-dominio (l'ecosistema).
 # v1.0: keyword solo da nome-file+titolo+tag (troppo povero -> molte note isolate).
 #
+# v2.1: emette DATA/audit/vault_orphans.json — le note senza alcun legame (orfani di RETE).
+#   Tesi Konik ("graph view = diagnostico, non gingillo"): un orfano ai bordi del grafo
+#   = sapere scollegato o indice/MOC stantio. night_audit lo legge come canon_violations.
+#
 # Esclude STORIE/ (le fa setup_obsidian/storie_intersect), gli indici _* e i servizi.
 # Idempotente (blocco fra marker, stessi di v1 -> sovrascrive i legami vecchi).
 # Uso: python CONTENT_ENGINE/scripts/vault_intersect.py [--min-sim 0.06] [--max 8]
@@ -17,9 +21,11 @@
 import os
 import re
 import sys
+import json
 import math
 import argparse
 import collections
+from datetime import datetime
 from pathlib import Path
 
 if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout.encoding.lower() != "utf-8":
@@ -29,6 +35,8 @@ if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout
         pass
 
 MENTE = Path(os.environ.get("MENTE_DIR", r"C:\Users\teo\MICROINDUSTRY\MENTE"))
+TI_ROOT = Path(__file__).resolve().parents[2]
+ORPHANS_F = TI_ROOT / "DATA" / "audit" / "vault_orphans.json"
 
 _C_START = "<!-- COLLEGATI:start (auto, vault_intersect) -->"
 _C_END = "<!-- COLLEGATI:end -->"
@@ -148,6 +156,7 @@ def main():
     total = 0
     connesse = 0
     cross_total = 0
+    orfani = []
     for i, n in enumerate(notes):
         sims = collections.defaultdict(float)
         for w, ww in n["sig"].items():
@@ -181,6 +190,9 @@ def main():
             righe.append(f"- [[{o['stem']}|{o['title']}]] — *tema: {tema}*")
         if top:
             connesse += 1
+        else:
+            orfani.append({"stem": n["stem"], "title": n["title"], "domain": n["domain"],
+                           "rel": n["path"].relative_to(MENTE).as_posix()})
         cross_total += sum(1 for _s, j in top if notes[j]["domain"] != n["domain"])
         blocco = _C_START + "\n## Collegati\n" + ("\n".join(righe) if righe else "_nessun legame_") + "\n" + _C_END
 
@@ -192,6 +204,20 @@ def main():
         if new != txt:
             n["path"].write_text(new, encoding="utf-8")
         total += len(top)
+
+    # Orfani di RETE (Konik): artefatto per la cartella clinica (night_audit lo legge come
+    # canon_violations). Solo additivo: i legami sopra non cambiano.
+    try:
+        ORPHANS_F.parent.mkdir(parents=True, exist_ok=True)
+        ORPHANS_F.write_text(json.dumps({
+            "generated": datetime.now().isoformat(timespec="seconds"),
+            "soglia": args.min_sim,
+            "n_note": N,
+            "n_orfani": len(orfani),
+            "orfani": sorted(orfani, key=lambda o: (o["domain"], o["stem"])),
+        }, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception as e:
+        print(f"[vault_intersect] avviso: vault_orphans.json non scritto ({e})")
 
     pct = (100 * cross_total / total) if total else 0
     print(f"VAULT INTERSECT v2: {N} note di sapere · {total} legami "

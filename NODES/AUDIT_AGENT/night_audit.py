@@ -1,4 +1,7 @@
-# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.3 | 2026-06-20
+# night_audit.py | TITANIUM_OS / NODES / AUDIT_AGENT | v1.4 | 2026-06-25
+# v1.4: segnale ORFANI DI RETE (tesi Konik: graph view = diagnostico). Legge
+#       DATA/audit/vault_orphans.json (prodotto da vault_intersect): note MENTE
+#       senza legami nel grafo = sapere scollegato / indice stantio -> critica "RETE".
 # v1.3: parse LLM DIFENSIVO (fix blocker "Unterminated string"). Via il regex greedy
 #       \[.*\] che si fermava all'ultimo ']' (anche dentro una stringa "finding") e
 #       troncava l'array -> ora raw_decode bilancia le parentesi rispettando le
@@ -51,6 +54,7 @@ EPISODES  = TI_ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
 AUDIT_DIR = TI_ROOT / "DATA" / "audit"
 CRITICHE  = AUDIT_DIR / "critiche_auto.json"
 HEALTH    = AUDIT_DIR / "system_health.json"
+VAULT_ORPHANS = AUDIT_DIR / "vault_orphans.json"      # note MENTE senza legami (da vault_intersect)
 BUSSOLA       = TI_ROOT / "DA_FARE_FATTO.md"           # la scaletta viva (da fare/fatto)
 BUSSOLA_TODOS = AUDIT_DIR / "bussola_todos.json"       # estratto strutturato per la dashboard (CRITICHE)
 
@@ -239,6 +243,21 @@ def collect_signals() -> dict:
     except Exception:
         pass
 
+    # Orfani di RETE (tesi Konik): note MENTE senza legami nel grafo del vault.
+    # Prodotto da vault_intersect; conta solo se l'artefatto e' fresco (<48h).
+    vault_orphans = 0
+    vault_orphans_top = []
+    vo = _read_json(VAULT_ORPHANS, {})
+    if vo:
+        try:
+            fresh = (datetime.now() - datetime.fromisoformat(vo.get("generated", ""))) < timedelta(hours=48)
+        except ValueError:
+            fresh = False
+        if fresh:
+            vault_orphans = vo.get("n_orfani", 0)
+            vault_orphans_top = [{"stem": o.get("stem"), "domain": o.get("domain")}
+                                 for o in vo.get("orfani", [])[:8]]
+
     return {
         "date": TODAY,
         "git_head": _git("rev-parse", "--short", "HEAD"),
@@ -253,6 +272,8 @@ def collect_signals() -> dict:
         "log_issues": log_issues,
         "bussola_open": bussola_open,
         "canon_violations": canon_violations,
+        "vault_orphans": vault_orphans,
+        "vault_orphans_top": vault_orphans_top,
     }
 
 
@@ -265,7 +286,7 @@ Regole: niente lodi, niente fuffa. Ogni critica = un rischio o un'inefficienza R
 EVIDENZE: ogni log_issue include la riga esatta ("riga") e la sua data. Cita SOLO ciò che la riga mostra davvero: vietato dire "confermato dai log" o inventare conseguenze (push fallito, commit incompleto) non presenti nell'estratto. Se non hai la riga, il guasto non esiste. Nel finding riporta l'estratto tra virgolette con la data.
 Considera anche "bussola_open" (la scaletta da-fare di Matteo): se un todo aperto e' a rischio di essere dimenticato, e' bloccante per altro, o sbloccherebbe valore, emetti UNA critica area "ROADMAP" che lo evidenzi (max 1-2). Non ripetere pari pari il todo: di' perche' conta ORA.
 Rispondi SOLO con un array JSON, niente testo attorno. Schema per elemento:
-{"area":"RAG|RICERCA|NOTTURNE|V32|MIMS|GENESIS|SISTEMA|ROADMAP","severity":"alta|media|bassa","finding":"cosa non va, dai dati","azione":"il prossimo passo concreto"}"""
+{"area":"RAG|RICERCA|NOTTURNE|RETE|V32|MIMS|GENESIS|SISTEMA|ROADMAP","severity":"alta|media|bassa","finding":"cosa non va, dai dati","azione":"il prossimo passo concreto"}"""
 
 
 def _parse_critiche_json(txt: str) -> list[dict] | None:
@@ -350,6 +371,15 @@ def critiche_via_regole(signals: dict) -> list[dict]:
                                f"'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.",
                     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply "
                               "(o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova)."})
+    if signals.get("vault_orphans", 0) > 5:
+        n = signals["vault_orphans"]
+        es = ", ".join(f"{o['stem']} ({o['domain']})" for o in signals.get("vault_orphans_top", [])[:3])
+        out.append({"area": "RETE",
+                    "severity": "media" if n > 15 else "bassa",
+                    "finding": f"{n} note MENTE isolate nel grafo (0 legami): sapere scollegato "
+                               f"o indice/MOC stantio" + (f" — es. {es}." if es else "."),
+                    "azione": "Aggiornare _CANONE.md/indici o aggiungere wikilink, poi rilanciare "
+                              "CONTENT_ENGINE/scripts/vault_intersect.py."})
     for pil, pct in (signals["pillars"] or {}).items():
         if isinstance(pct, (int, float)) and pct and pct < 35:
             out.append({"area": pil, "severity": "bassa",
@@ -422,6 +452,7 @@ def write_health(signals: dict, stats: dict):
         "n_commits_7d": signals["n_commits_7d"],
         "pillars": signals["pillars"],
         "log_issues": signals["log_issues"],
+        "vault_orphans": signals.get("vault_orphans", 0),
         "critiche": stats,
         "verdict": "ATTENZIONE" if signals["log_issues"] else "OK",
     }
