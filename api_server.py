@@ -1296,16 +1296,35 @@ def rag_vectors():
             parts = src.replace("\\", "/").split("/")
             return parts[0] + "/" if parts else src
 
+        # Orfani di RETE (tesi Konik): i doc MENTE senza legami nel grafo del vault
+        # (da vault_intersect -> DATA/audit/vault_orphans.json). src_norm e' MENTE-relativo
+        # posix = identico al campo "rel" degli orfani -> match diretto (stem = fallback).
+        orphan_keys = set()
+        try:
+            of = ROOT / "DATA" / "audit" / "vault_orphans.json"
+            if of.exists():
+                vo = json.loads(of.read_text(encoding="utf-8"))
+                for o in vo.get("orfani", []):
+                    if o.get("rel"):  orphan_keys.add(o["rel"])
+                    if o.get("stem"): orphan_keys.add(o["stem"])
+        except Exception:
+            pass
+
         points = []
+        n_orphans = 0
         for i, doc_id in enumerate(doc_ids):
             src_norm = doc_id.replace("\\", "/")
             folder = _folder(src_norm)
             label  = src_norm.split("/")[-1]
+            is_orphan = src_norm in orphan_keys or label.rsplit(".", 1)[0] in orphan_keys
+            if is_orphan:
+                n_orphans += 1
             points.append({
                 "id":          src_norm,
                 "label":       label,
                 "folder":      folder,
                 "chunk_count": doc_chunks[i],
+                "orphan":      is_orphan,
                 "x":           round(float(coords_3d[i, 0]), 4),
                 "y":           round(float(coords_3d[i, 1]), 4),
                 "z":           round(float(coords_3d[i, 2]), 4),
@@ -1315,6 +1334,7 @@ def rag_vectors():
             "ok":          True,
             "chunk_count": total_chunks,
             "doc_count":   len(points),
+            "n_orphans":   n_orphans,
             "points":      points,
             "links":       links,
         }

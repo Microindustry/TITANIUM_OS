@@ -10,12 +10,14 @@ import { Search, X, RefreshCw } from "lucide-react";
 interface VecPoint {
   id: string; label: string; folder: string;
   chunk_count: number; x: number; y: number; z: number;
+  orphan?: boolean;   // orfano di RETE: 0 legami nel grafo del vault (tesi Konik)
 }
 interface VecLink {
   source: number; target: number; weight: number;
 }
 interface VecData {
   ok: boolean; chunk_count: number; doc_count: number;
+  n_orphans?: number;
   points: VecPoint[]; links?: VecLink[];
 }
 
@@ -90,36 +92,53 @@ function ThreeScene({
       scene.add(grid);
 
       // build point cloud
-      const pos: number[] = [], col: number[] = [], sz: number[] = [];
+      const pos: number[] = [], col: number[] = [], sz: number[] = [], orph: number[] = [];
       for (const p of points) {
         pos.push(p.x * SCALE, p.y * SCALE, p.z * SCALE);
         const [r, g, b] = hex3(folderColor(p.folder));
         col.push(r, g, b);
         sz.push(Math.max(0.12, Math.sqrt(p.chunk_count) * 0.1));
+        orph.push(p.orphan ? 1 : 0);
       }
       const geo = new THREE.BufferGeometry();
       geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
       geo.setAttribute("color",    new THREE.Float32BufferAttribute(col, 3));
       geo.setAttribute("size",     new THREE.Float32BufferAttribute(sz, 1));
+      geo.setAttribute("orphan",   new THREE.Float32BufferAttribute(orph, 1));
 
       const mat = new THREE.ShaderMaterial({
-        uniforms: { opacity: { value: 0.9 } },
+        uniforms: { opacity: { value: 0.9 }, uTime: { value: 0 } },
         vertexShader: `
           attribute float size;
           attribute vec3 color;
+          attribute float orphan;
           varying vec3 vColor;
+          varying float vOrphan;
           void main() {
             vColor = color;
+            vOrphan = orphan;
             vec4 mv = modelViewMatrix * vec4(position, 1.0);
-            gl_PointSize = size * (280.0 / -mv.z);
+            float s = size * (orphan > 0.5 ? 1.8 : 1.0);   // orfani piu' grossi = saltano all'occhio
+            gl_PointSize = s * (280.0 / -mv.z);
             gl_Position  = projectionMatrix * mv;
           }`,
         fragmentShader: `
           varying vec3 vColor;
+          varying float vOrphan;
           uniform float opacity;
+          uniform float uTime;
           void main() {
             float d = length(gl_PointCoord - 0.5) * 2.0;
             if (d > 1.0) discard;
+            if (vOrphan > 0.5) {
+              // anello di ALLARME rosso pulsante: orfano = ai bordi del grafo (Konik)
+              float pulse = 0.5 + 0.5 * sin(uTime * 3.0);
+              float ring  = smoothstep(0.55, 0.72, d) * (1.0 - smoothstep(0.86, 1.0, d));
+              vec3  red   = vec3(1.0, 0.18, 0.18);
+              float a     = max((1.0 - d * 0.4) * 0.30, ring * (0.55 + 0.45 * pulse));
+              gl_FragColor = vec4(red, a * opacity);
+              return;
+            }
             gl_FragColor = vec4(vColor, (1.0 - d * 0.4) * opacity);
           }`,
         transparent: true,
@@ -169,6 +188,7 @@ function ThreeScene({
       const loop = () => {
         raf = requestAnimationFrame(loop);
         controls.update();
+        mat.uniforms.uTime.value = performance.now() / 1000;   // pulse anello orfani
         renderer.render(scene, camera);
       };
       loop();
@@ -246,6 +266,7 @@ export function RagGraphView() {
   const [hovered, setHovered]   = useState<{ p: VecPoint; x: number; y: number } | null>(null);
   const [query, setQuery]       = useState("");
   const [folderFilter, setFolderFilter] = useState<string | null>(null);
+  const [orphanOnly, setOrphanOnly] = useState(false);   // filtro "solo orfani" (audit alla Konik)
   // Sorgente del grafo: conoscenza (RAG, embedding) oppure sistema (Graphify, relazioni reali)
   const [source, setSource]     = useState<"rag" | "graphify">("rag");
 
@@ -264,7 +285,7 @@ export function RagGraphView() {
     finally { setLoading(false); }
   }, [source]);
 
-  useEffect(() => { setFolderFilter(null); setSelected(null); load(); }, [load]);
+  useEffect(() => { setFolderFilter(null); setSelected(null); setOrphanOnly(false); load(); }, [load]);
 
   // punti filtrati + archi RIMAPPATI sugli indici visibili (gli archi del
   // backend usano indici sull'array pieno: senza remap il filtro li romperebbe).
@@ -273,6 +294,7 @@ export function RagGraphView() {
     const q = query.toLowerCase();
     const keep = (p: VecPoint) =>
       (!folderFilter || p.folder === folderFilter) &&
+      (!orphanOnly || !!p.orphan) &&
       (!q || p.label.toLowerCase().includes(q) || p.folder.toLowerCase().includes(q));
     const remap = new Map<number, number>();
     const vis: VecPoint[] = [];
@@ -283,10 +305,13 @@ export function RagGraphView() {
       if (a !== undefined && b !== undefined) vlinks.push({ source: a, target: b, weight: l.weight });
     }
     return { visible: vis, visibleLinks: vlinks };
-  }, [data, folderFilter, query]);
+  }, [data, folderFilter, query, orphanOnly]);
 
   const allFolders = useMemo(() =>
     data ? Array.from(new Set(data.points.map(p => p.folder))).sort() : [], [data]);
+
+  const orphanCount = useMemo(() =>
+    data ? data.points.filter(p => p.orphan).length : 0, [data]);
 
   const onHover = useCallback((p: VecPoint | null, x: number, y: number) => {
     setHovered(p ? { p, x, y } : null);
@@ -336,6 +361,19 @@ export function RagGraphView() {
               ? <>384-dim → t-SNE 3D<br />archi = similarità coseno reale</>
               : <>Graphify (AST + Leiden)<br />archi = relazioni reali nel codice</>}
           </div>
+          {orphanCount > 0 && (
+            <button onClick={() => setOrphanOnly(o => !o)}
+              title="Note senza legami nel grafo del vault (sapere scollegato / indice stantio)"
+              className="w-full mt-2 flex items-center gap-1.5 px-2 py-1.5 rounded text-[8px] font-mono font-bold uppercase tracking-wider border transition-all"
+              style={{
+                borderColor: orphanOnly ? "#ef4444" : "#7f1d1d",
+                background:  orphanOnly ? "#ef444422" : "transparent",
+                color:       orphanOnly ? "#fca5a5" : "#b91c1c",
+              }}>
+              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 animate-pulse" style={{ background: "#ef4444" }} />
+              {orphanCount} orfani{orphanOnly ? " ✓" : ""}
+            </button>
+          )}
         </div>
 
         <div className="relative">
@@ -418,6 +456,7 @@ export function RagGraphView() {
             <div className="text-[9px] font-bold font-mono text-slate-200">{hovered.p.label}</div>
             <div className="text-[8px] font-mono" style={{ color: folderColor(hovered.p.folder) }}>{hovered.p.folder}</div>
             <div className="text-[7px] font-mono text-slate-600">{hovered.p.chunk_count} chunk</div>
+            {hovered.p.orphan && <div className="text-[7px] font-mono font-bold text-red-400">⚠ orfano · 0 legami nel grafo</div>}
           </div>
         )}
 
@@ -429,6 +468,7 @@ export function RagGraphView() {
               <div>
                 <div className="text-[10px] font-bold font-mono text-slate-200 break-all">{selected.label}</div>
                 <div className="text-[8px] font-mono mt-0.5" style={{ color: folderColor(selected.folder) }}>{selected.folder}</div>
+                {selected.orphan && <div className="text-[8px] font-mono font-bold text-red-400 mt-0.5">⚠ orfano di RETE · 0 legami</div>}
               </div>
               <button onClick={() => setSelected(null)} className="text-slate-600 hover:text-slate-400 ml-2"><X size={10} /></button>
             </div>
