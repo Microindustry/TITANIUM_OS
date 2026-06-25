@@ -1,57 +1,53 @@
-=== RIAVVIO SESSIONE #47 — 25/06/2026 ===
-Ultima sessione: #46 — 24-25/06/2026 (RAG v4.2 · _ARCHIVIO fuori canone · HNSW guarito · Nina auto)
+=== RIAVVIO SESSIONE #48 — 25/06/2026 ===
+Ultima sessione: #47 — 25/06/2026 (filone visivo RETE: Konik + Hermes/Obsidian memory)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Sessione #46 chiusa con il RAG portato allo stato dell'arte 2026 e PROVATO end-to-end sulla
-generazione Nina. Tre upgrade additivi (chunking heading-aware, snapshot _VAULT, GraphRAG-lite
-wikilink). Sistemato _DA_ORDINARE -> _ARCHIVIO (archivio V6 superato che inquinava il canone).
-Indice guarito (rag_recover via UAC), API su, query sane, canone V7 in cima. Generato EP_N2_51
-come prova. Deciso: Nina = auto-promozione senza revisione umana.
+Sessione #47 partita da 2 link di Matteo (Eleanor Konik sulla graph view di Obsidian; post
+Hermes-agent "Obsidian come memoria long-term"). Tesi comune: il grafo e' uno STRUMENTO
+DIAGNOSTICO, non un gingillo. Da li' 5 commit additivi che hanno reso la RETE un cruscotto
+della memoria: orfani come salute, freschezza/hub/memoria-a-2-livelli, transizioni morbide.
+Tutto verde (tsc -b + py_compile), tutto committato e pushato.
 
->>> PROSSIMA SESSIONE #47 SI PARTE DA: ANALIZZARE UN LINK (Matteo lo fornira' a inizio sessione). <<<
+>>> PROSSIMA SESSIONE #48 SI PARTE DA: capire COME e' stata generata l'immagine della PORTA
+    dopo il consiglio di Claude Design -> valutare l'integrazione (DesignSync / Adobe MCP). <<<
 
-━━━ FATTO IN SESSIONE #46 ━━━
-• RAG v4.2 (rag_engine.py), allineato al SOTA 2026 (ricerca fatta prima di committare):
-  - Chunking HEADING-AWARE sui .md: split sui titoli (#..######) = confini semantici, +breadcrumb
-    [sez>sottosez] (contesto + keyword cercabili). .py/.json/.txt e .md senza heading -> fallback.
-    Geometria invariata = NESSUN re-embed forzato (no OOM notturno); entra additivo per mtime.
-  - SNAPSHOT chroma_db in _VAULT/BACKUPS/rag_snapshots (rotazione 3, --snapshot/--restore-snapshot,
-    agganciato a night_research dopo l'incrementale). Testato live sotto lock API: 230MB, 0.1s.
-  - GraphRAG-lite WIKILINK-EXPANSION: build_linkgraph() (no GPU) -> rag_linkgraph.json; search()
-    espande dai top-3 i [[link]] (cap +8) PRIMA del reranker che gata. Incluso grafo Collegati
-    (ponte doc->chunk). Flag --linkgraph / --no-graph. Commit 79908408.
-• _DA_ORDINARE -> _ARCHIVIO (richiesta "sistema le cose al suo posto"): archivio NotebookLM gia'
-  smistato il 20/06 (canone V6 superato) ma INDICIZZATO PER ERRORE nel RAG canonico (top-4 nelle
-  ricerche MIMS/V32). Rinominato -> rientra in EXCLUDE_DIR_NAMES, fuori dal RAG, resta in Obsidian.
-  Wikilink-safe. Commit MENTE b5cb18f (107 rename chirurgici). Commit doc TITANIUM_OS a0f6a9b9.
-• Migrazione corpus eseguita (rebuild) + HNSW RIGENERATO via SERVICES\rag_recover.ps1 (UAC Matteo):
-  era label-fantasma KeyError np.uint64 dal reset-per-id (limite chromadb 0.5.23). Indice sano, API
-  su, query senza crash, _ARCHIVIO escluso (0 risultati), canone V7 in cima (SCHEDA_PRODOTTO_MIMS).
-• PROVA end-to-end: generato EP_N2_51 "Il Sussurratore che Indovina" grounded sul RAG guarito
-  (18 fonti) -> richiama EP_N2_06 + Mappa regione 3. La catena RAG->Nina funziona davvero.
-• DECISIONE Matteo: Nina = AUTO-PROMOZIONE, niente revisione umana (era gia' default sess.#44;
-  corretto commento stale nina_agent.py). Garanzie = grounding + canon_guard + reversibilita'.
-  Codice/sicurezza (SELF_IMPROVE) resta a cancello umano. Commit 9e3bde3a + memoria salvata.
+━━━ FATTO IN SESSIONE #47 ━━━
+• Catturati 2 link in MENTE/SESSIONI/: 2026-06-25_graph-view-konik.md (graph view = audit:
+  orfani/hub/densita') + 2026-06-25_hermes-obsidian-memory.md (memoria a 2 livelli core/vault
+  = la stessa architettura di TITANIUM_OS, validata da fuori).
+• [38bd6fc0] Segnale ORFANI DI RETE nella cartella clinica: vault_intersect v2.1 emette
+  DATA/audit/vault_orphans.json (note MENTE a 0 legami); night_audit v1.4 lo legge (gate <48h),
+  critica area RETE se >5, scrive vault_orphans in system_health.json; setup_obsidian lancia
+  vault_intersect nella catena notturna (segnale vivo). Prova: 393 note, 2 orfani veri.
+• [b3675b3c] Orfani colorati nella RETE 3D: /api/rag/vectors segna orphan (match src_norm==rel);
+  anello rosso pulsante + badge hover/panel + filtro "solo orfani".
+• [91fb8672] RETE viva: freschezza (mtime -> respiro+calore, stantio si spegne) + hub/god-node
+  (degree -> dimensione+alone) + memoria a 2 livelli Hermes (anello bianco sui nodi core _*/HOME)
+  + legenda. Backend +degree +age_days +tier per punto (solo sorgente RAG).
+• [98fd7109] Transizioni morbide: tolto il key che rimontava la scena WebGL a ogni filtro (reset
+  camera); scena/camera/controls creati UNA volta, rebuild() ricostruisce solo la nuvola con
+  fade-in (dispose del vecchio, no leak). Shader estratti a modulo.
 
 ━━━ PROSSIMO LAVORO ━━━
-• [#47] ANALIZZARE IL LINK che Matteo fornira' (punto di partenza).
-• [io] Migrazione totale chunking: rebuild deliberato a GPU libera (API giu') per riapplicare
-  heading-aware a tutto il corpus in un colpo. Off-by-one 24344/24343 si auto-allinea (self-heal).
-• [Matteo] AZIONI_MATTEO.md: UPS + mandrino ER20 (1 checkout); chiavi .env (Semantic Scholar +
-  rotazione red-team #38); URL sito Maria.
-• [io] Contenuto Nina verticale finanza F2 "spendere meno di quanto entra" (open loop pronto).
+• [#48] IMMAGINE DELLA PORTA: ricostruire come e' stata generata dopo il consiglio di Claude
+  Design; decidere se/come integrare DesignSync / Adobe MCP nel flusso.
+• [io] Aperti RETE: transizioni a morph di posizione (non solo fade); esporre i god-node hub
+  anche sulla sorgente Graphify (Sistema).
+• [io] Migrazione totale chunking: rebuild deliberato a GPU libera (API giu').
+• [io] Contenuto Nina verticale finanza F2 "spendere meno di quanto entra".
+• [Matteo] AZIONI_MATTEO.md: UPS + mandrino ER20; chiavi .env (Semantic Scholar + rotazione
+  red-team #38); URL sito Maria.
 
 ━━━ BLOCKERS ━━━
-- Non sono admin: i task elevati (rag_recover, night) li avvio non parte -> serve l'UAC di Matteo,
-  oppure girano da soli sul loro trigger notturno.
+- Non sono admin: i task elevati (rag_recover, night) li avvio non parte -> serve l'UAC di Matteo.
 - UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
 - Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici MIMS/VULCAN).
 
 ━━━ NOTE ━━━
-• RAG v4.2: chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 (NON cpu). Un solo processo GPU alla volta
-  (8GB): per le query di test forzare RAG_DEVICE=cpu se l'API e' su (evita OOM/contesa).
-• Nina genera in AUTOMATICO in canone (auto=True). Niente _PROPOSTI (legacy). Se un episodio non va,
-  si rigenera (rimuovi id da episodes.json + rebuild — additivo).
-• Snapshot RAG known-good in _VAULT/BACKUPS/rag_snapshots (rotazione 3) per restore istantaneo.
+• RETE viva: i nuovi campi (orphan/degree/age_days/tier) li serve solo /api/rag/vectors
+  (sorgente Conoscenza); Graphify (Sistema) degrada a neutro, nessun crash.
+• vault_orphans.json si rinfresca ogni notte via setup_obsidian->vault_intersect (gate <48h
+  in night_audit): se la notte non gira, il segnale orfani scade ma non crasha.
+• RAG invariato: chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124. Un solo processo GPU alla volta.
 
-Generato: 25/06/2026 — fine sessione #46
+Generato: 25/06/2026 — fine sessione #47

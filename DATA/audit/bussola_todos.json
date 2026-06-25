@@ -1,5 +1,41 @@
 [
   {
+    "id": "BUS-89abddab",
+    "stato": "fatto",
+    "testo": "**Cattura fonti** in `MENTE/SESSIONI/`: `2026-06-25_graph-view-konik.md` (graph view = audit;",
+    "sessione": "Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)"
+  },
+  {
+    "id": "BUS-8edd796e",
+    "stato": "fatto",
+    "testo": "**Segnale ORFANI DI RETE nella cartella clinica** (commit `38bd6fc0`): `vault_intersect` v2.1",
+    "sessione": "Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)"
+  },
+  {
+    "id": "BUS-99d4eab8",
+    "stato": "fatto",
+    "testo": "**Orfani colorati nella RETE 3D** (commit `b3675b3c`): `/api/rag/vectors` segna `orphan` per",
+    "sessione": "Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)"
+  },
+  {
+    "id": "BUS-b89026ad",
+    "stato": "fatto",
+    "testo": "**RETE viva** (commit `91fb8672`): freschezza (mtime → respiro+calore, stantio si spegne) +",
+    "sessione": "Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)"
+  },
+  {
+    "id": "BUS-ec2d641f",
+    "stato": "fatto",
+    "testo": "**Transizioni morbide** (commit `98fd7109`): tolto il `key` che rimontava la scena WebGL a ogni",
+    "sessione": "Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)"
+  },
+  {
+    "id": "BUS-4ac0bd78",
+    "stato": "fatto",
+    "testo": "**Verifiche**: `tsc -b` verde · `py_compile` su tutti i .py toccati · `audit_episodes` 0 orfani.",
+    "sessione": "Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)"
+  },
+  {
     "id": "BUS-b48b3015",
     "stato": "fatto",
     "testo": "**Chunking heading-aware sui `.md`** (`rag_engine.py` v4.1): `_chunk_md_by_heading` spezza",

@@ -1,7 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
-  - [Sessione 46  24/06/2026  RAG enhancement: chunking heading-aware  snapshot _VAULT](#sessione-46-24062026-rag-enhancement-chunking-heading-aware-snapshot-vault)
+  - [Sessione 47  25/06/2026  Filone visivo RETE: orfanisalute, RETE viva, transizioni morbide (Konik  Hermes)](#sessione-47-25062026-filone-visivo-rete-orfanisalute-rete-viva-transizioni-morbide-konik-hermes)
+  - [Sessione 46  24-25/06/2026  RAG v4.2 (heading-aware  snapshot  GraphRAG-lite)  _ARCHIVIO fuori canone  Nina auto](#sessione-46-24-25062026-rag-v42-heading-aware-snapshot-graphrag-lite-archivio-fuori-canone-nina-auto)
   - [Sessione 45  24/06/2026  CRITICHE azzerate (3 fonti)  de-hardcode benen  loop autonomo](#sessione-45-24062026-critiche-azzerate-3-fonti-de-hardcode-benen-loop-autonomo)
   - [Sessione 44  24/06/2026  Nina copre la mappa (50 ep)  RAG resuscitato  vetrina riallineata](#sessione-44-24062026-nina-copre-la-mappa-50-ep-rag-resuscitato-vetrina-riallineata)
   - [Sessione 43  23/06/2026 (ULTRACODE)  NINA DEFINITIVA (canone unico EP_N2)](#sessione-43-23062026-ultracode-nina-definitiva-canone-unico-epn2)
@@ -63,6 +64,37 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)
+
+**Punto di partenza: analizzare 2 link forniti da Matteo** (Eleanor Konik sulla graph view di
+Obsidian; post Hermes-agent "Obsidian come memoria long-term"). Tesi comune: il grafo è uno
+**strumento diagnostico**, non un gingillo. Da lì, 5 commit additivi sulla RETE/cartella clinica.
+
+- [✓] **Cattura fonti** in `MENTE/SESSIONI/`: `2026-06-25_graph-view-konik.md` (graph view = audit;
+  orfani/hub/densità) + `2026-06-25_hermes-obsidian-memory.md` (memoria a 2 livelli: core sempre-
+  caricato vs vault lungo — è la stessa architettura di TITANIUM_OS, validata da fuori).
+- [✓] **Segnale ORFANI DI RETE nella cartella clinica** (commit `38bd6fc0`): `vault_intersect` v2.1
+  emette `DATA/audit/vault_orphans.json` (note MENTE a 0 legami); `night_audit` v1.4 lo legge
+  (gate freschezza <48h), emette critica area **RETE** se orfani >5, scrive `vault_orphans` in
+  `system_health.json`; `setup_obsidian` lancia `vault_intersect` nella catena notturna (segnale
+  vivo). Prova reale: 393 note, **2 orfani veri** (paper KNOWLEDGE fuori tema).
+- [✓] **Orfani colorati nella RETE 3D** (commit `b3675b3c`): `/api/rag/vectors` segna `orphan` per
+  punto (match `src_norm==rel`); anello rosso pulsante + badge + filtro "solo orfani".
+- [✓] **RETE viva** (commit `91fb8672`): freschezza (mtime → respiro+calore, stantio si spegne) +
+  hub/god-node (degree → dimensione+alone) + memoria a 2 livelli Hermes (anello bianco sui nodi
+  core `_*`/HOME) + legenda. Backend `+degree +age_days +tier` per punto.
+- [✓] **Transizioni morbide** (commit `98fd7109`): tolto il `key` che rimontava la scena WebGL a ogni
+  filtro (reset camera = taglio secco); scena/camera/controls creati **una volta**, `rebuild()`
+  ricostruisce solo la nuvola con fade-in (dispose del vecchio, no leak). Shader estratti a modulo.
+- [✓] **Verifiche**: `tsc -b` verde · `py_compile` su tutti i .py toccati · `audit_episodes` 0 orfani.
+
+**[ ] DA FARE (prossima sessione #48 — primo punto):** capire **come è stata generata l'immagine
+della porta** dopo il consiglio di Claude Design → valutare l'integrazione (DesignSync / Adobe MCP).
+**[ ] Aperti che restano:** transizioni a morph di posizione (non solo fade); god-node hub esposti
+anche su Graphify; migrazione totale chunking a GPU libera; Nina verticale finanza F2.
 
 ---
 
