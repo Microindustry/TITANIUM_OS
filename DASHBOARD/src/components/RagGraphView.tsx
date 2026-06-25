@@ -66,6 +66,116 @@ function hex3(hex: string): [number, number, number] {
 
 const SCALE = 8;
 
+// ── shader dei punti (estratti a modulo: una sola sorgente, riusati a ogni rebuild) ──
+const POINT_VERTEX = `
+  attribute float size;
+  attribute vec3 color;
+  attribute float orphan;
+  attribute float hub;
+  attribute float age;
+  attribute float core;
+  varying vec3 vColor;
+  varying float vOrphan, vHub, vAge, vCore;
+  uniform float uTime;
+  void main() {
+    vColor = color; vOrphan = orphan; vHub = hub; vAge = age; vCore = core;
+    vec4 mv = modelViewMatrix * vec4(position, 1.0);
+    float breathe = age > 0.75 ? (1.0 + 0.06 * sin(uTime * 2.5)) : 1.0;  // i freschissimi respirano
+    float s = size * (1.0 + hub * 0.9) * (orphan > 0.5 ? 1.8 : 1.0) * breathe;  // hub piu' grandi
+    gl_PointSize = s * (280.0 / -mv.z);
+    gl_Position  = projectionMatrix * mv;
+  }`;
+const POINT_FRAGMENT = `
+  varying vec3 vColor;
+  varying float vOrphan, vHub, vAge, vCore;
+  uniform float opacity;
+  uniform float uTime;
+  void main() {
+    float d = length(gl_PointCoord - 0.5) * 2.0;
+    if (d > 1.0) discard;
+    if (vOrphan > 0.5) {
+      // anello di ALLARME rosso pulsante: orfano = ai bordi del grafo (Konik)
+      float pulse = 0.5 + 0.5 * sin(uTime * 3.0);
+      float ring  = smoothstep(0.55, 0.72, d) * (1.0 - smoothstep(0.86, 1.0, d));
+      vec3  red   = vec3(1.0, 0.18, 0.18);
+      float a     = max((1.0 - d * 0.4) * 0.30, ring * (0.55 + 0.45 * pulse));
+      gl_FragColor = vec4(red, a * opacity);
+      return;
+    }
+    // FRESCHEZZA: stantio si spegne, fresco brilla + tinta calda (mappa viva)
+    float bright = mix(0.32, 1.0, vAge);
+    vec3  warm   = mix(vColor, vColor * vec3(1.25, 1.05, 0.7), clamp(vAge - 0.5, 0.0, 0.5) * 1.4);
+    vec3  outc   = warm * bright;
+    float a      = (1.0 - d * 0.4) * opacity;
+    // HUB: alone morbido nel colore del nodo = pilastro della memoria
+    if (vHub > 0.0) {
+      float halo = smoothstep(0.5, 0.7, d) * (1.0 - smoothstep(0.9, 1.0, d));
+      a    = max(a, halo * 0.5 * vHub);
+      outc = mix(outc, outc * 1.4 + 0.08, halo * vHub);
+    }
+    // CORE (Hermes): anello bianco sottile = strato sempre-caricato del vault
+    if (vCore > 0.5) {
+      float wr = smoothstep(0.30, 0.40, d) * (1.0 - smoothstep(0.50, 0.60, d));
+      outc = mix(outc, vec3(0.95), wr * 0.9);
+      a    = max(a, wr * 0.8 * opacity);
+    }
+    gl_FragColor = vec4(outc, a);
+  }`;
+
+// nuvola di punti dai dati (materiale con opacity=0 -> il loop la fa salire = fade-in)
+function buildCloud(points: VecPoint[]): THREE.Points {
+  const pos: number[] = [], col: number[] = [], sz: number[] = [];
+  const orph: number[] = [], hub: number[] = [], age: number[] = [], core: number[] = [];
+  for (const p of points) {
+    pos.push(p.x * SCALE, p.y * SCALE, p.z * SCALE);
+    const [r, g, b] = hex3(folderColor(p.folder));
+    col.push(r, g, b);
+    sz.push(Math.max(0.12, Math.sqrt(p.chunk_count) * 0.1));
+    orph.push(p.orphan ? 1 : 0);
+    hub.push(hubScore(p.degree));
+    age.push(freshness(p.age_days));
+    core.push(p.tier === "core" ? 1 : 0);
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+  geo.setAttribute("color",    new THREE.Float32BufferAttribute(col, 3));
+  geo.setAttribute("size",     new THREE.Float32BufferAttribute(sz, 1));
+  geo.setAttribute("orphan",   new THREE.Float32BufferAttribute(orph, 1));
+  geo.setAttribute("hub",      new THREE.Float32BufferAttribute(hub, 1));
+  geo.setAttribute("age",      new THREE.Float32BufferAttribute(age, 1));
+  geo.setAttribute("core",     new THREE.Float32BufferAttribute(core, 1));
+  const mat = new THREE.ShaderMaterial({
+    uniforms: { opacity: { value: 0 }, uTime: { value: 0 } },
+    vertexShader: POINT_VERTEX,
+    fragmentShader: POINT_FRAGMENT,
+    transparent: true,
+    depthWrite: false,
+  });
+  return new THREE.Points(geo, mat);
+}
+
+// archi semantici (similarita' coseno reale dal RAG); null se non ce ne sono
+function buildLines(points: VecPoint[], links: VecLink[]): THREE.LineSegments | null {
+  if (!links.length) return null;
+  const lpos: number[] = [], lcol: number[] = [];
+  for (const l of links) {
+    const a = points[l.source], b = points[l.target];
+    if (!a || !b) continue;
+    lpos.push(a.x * SCALE, a.y * SCALE, a.z * SCALE,
+              b.x * SCALE, b.y * SCALE, b.z * SCALE);
+    const t = Math.min(1, Math.max(0.3, (l.weight - 0.5) / 0.5));
+    lcol.push(0.22 * t, 0.74 * t, 0.97 * t, 0.22 * t, 0.74 * t, 0.97 * t);
+  }
+  if (!lpos.length) return null;
+  const lgeo = new THREE.BufferGeometry();
+  lgeo.setAttribute("position", new THREE.Float32BufferAttribute(lpos, 3));
+  lgeo.setAttribute("color",    new THREE.Float32BufferAttribute(lcol, 3));
+  const lmat = new THREE.LineBasicMaterial({
+    vertexColors: true, transparent: true, opacity: 0.3, depthWrite: false,
+  });
+  return new THREE.LineSegments(lgeo, lmat);
+}
+
 // ── componente Three.js incapsulato ───────────────────────────
 function ThreeScene({
   points,
@@ -83,19 +193,39 @@ function ThreeScene({
     renderer: THREE.WebGLRenderer;
     camera: THREE.PerspectiveCamera;
     controls: OrbitControls;
-    pts: THREE.Points;
+    scene: THREE.Scene;
+    cloud?: THREE.Points;
+    lines?: THREE.LineSegments;
+    fadeStart: number;
     raf: number;
     onResize: () => void;
   } | null>(null);
 
+  // (ri)costruisce SOLO la nuvola + archi quando i dati cambiano, lasciando intatti
+  // scena/camera/controls -> niente reset di vista al filtro, e fade-in morbido.
+  const rebuild = useCallback(() => {
+    const s = stateRef.current;
+    if (!s) return;
+    if (s.cloud) { s.scene.remove(s.cloud); s.cloud.geometry.dispose(); (s.cloud.material as THREE.Material).dispose(); s.cloud = undefined; }
+    if (s.lines) { s.scene.remove(s.lines); s.lines.geometry.dispose(); (s.lines.material as THREE.Material).dispose(); s.lines = undefined; }
+    if (!points.length) return;
+    const cloud = buildCloud(points);
+    s.scene.add(cloud); s.cloud = cloud;
+    const lines = buildLines(points, links);
+    if (lines) { s.scene.add(lines); s.lines = lines; }
+    s.fadeStart = performance.now();
+  }, [points, links]);
+  const rebuildRef = useRef(rebuild);
+  rebuildRef.current = rebuild;
+
+  // INIT una volta sola: renderer/camera/scene/controls/loop persistono per tutta la vita
+  // del componente (prima invece il `key` rimontava tutto a ogni filtro = taglio secco).
   useEffect(() => {
     const el = mountRef.current;
-    if (!el || points.length === 0) return;
+    if (!el) return;
 
-    // init dopo layout
     const raf0 = requestAnimationFrame(() => {
-      const W = el.clientWidth  || 800;
-      const H = el.clientHeight || 600;
+      const W = el.clientWidth || 800, H = el.clientHeight || 600;
 
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setPixelRatio(window.devicePixelRatio);
@@ -111,112 +241,6 @@ function ThreeScene({
       const grid = new THREE.GridHelper(SCALE * 2, 20, 0x1e293b, 0x0f172a);
       grid.position.y = -SCALE;
       scene.add(grid);
-
-      // build point cloud
-      const pos: number[] = [], col: number[] = [], sz: number[] = [];
-      const orph: number[] = [], hub: number[] = [], age: number[] = [], core: number[] = [];
-      for (const p of points) {
-        pos.push(p.x * SCALE, p.y * SCALE, p.z * SCALE);
-        const [r, g, b] = hex3(folderColor(p.folder));
-        col.push(r, g, b);
-        sz.push(Math.max(0.12, Math.sqrt(p.chunk_count) * 0.1));
-        orph.push(p.orphan ? 1 : 0);
-        hub.push(hubScore(p.degree));
-        age.push(freshness(p.age_days));
-        core.push(p.tier === "core" ? 1 : 0);
-      }
-      const geo = new THREE.BufferGeometry();
-      geo.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
-      geo.setAttribute("color",    new THREE.Float32BufferAttribute(col, 3));
-      geo.setAttribute("size",     new THREE.Float32BufferAttribute(sz, 1));
-      geo.setAttribute("orphan",   new THREE.Float32BufferAttribute(orph, 1));
-      geo.setAttribute("hub",      new THREE.Float32BufferAttribute(hub, 1));
-      geo.setAttribute("age",      new THREE.Float32BufferAttribute(age, 1));
-      geo.setAttribute("core",     new THREE.Float32BufferAttribute(core, 1));
-
-      const mat = new THREE.ShaderMaterial({
-        uniforms: { opacity: { value: 0.9 }, uTime: { value: 0 } },
-        vertexShader: `
-          attribute float size;
-          attribute vec3 color;
-          attribute float orphan;
-          attribute float hub;
-          attribute float age;
-          attribute float core;
-          varying vec3 vColor;
-          varying float vOrphan, vHub, vAge, vCore;
-          uniform float uTime;
-          void main() {
-            vColor = color; vOrphan = orphan; vHub = hub; vAge = age; vCore = core;
-            vec4 mv = modelViewMatrix * vec4(position, 1.0);
-            float breathe = age > 0.75 ? (1.0 + 0.06 * sin(uTime * 2.5)) : 1.0;  // i freschissimi respirano
-            float s = size * (1.0 + hub * 0.9) * (orphan > 0.5 ? 1.8 : 1.0) * breathe;  // hub piu' grandi
-            gl_PointSize = s * (280.0 / -mv.z);
-            gl_Position  = projectionMatrix * mv;
-          }`,
-        fragmentShader: `
-          varying vec3 vColor;
-          varying float vOrphan, vHub, vAge, vCore;
-          uniform float opacity;
-          uniform float uTime;
-          void main() {
-            float d = length(gl_PointCoord - 0.5) * 2.0;
-            if (d > 1.0) discard;
-            if (vOrphan > 0.5) {
-              // anello di ALLARME rosso pulsante: orfano = ai bordi del grafo (Konik)
-              float pulse = 0.5 + 0.5 * sin(uTime * 3.0);
-              float ring  = smoothstep(0.55, 0.72, d) * (1.0 - smoothstep(0.86, 1.0, d));
-              vec3  red   = vec3(1.0, 0.18, 0.18);
-              float a     = max((1.0 - d * 0.4) * 0.30, ring * (0.55 + 0.45 * pulse));
-              gl_FragColor = vec4(red, a * opacity);
-              return;
-            }
-            // FRESCHEZZA: stantio si spegne, fresco brilla + tinta calda (mappa viva)
-            float bright = mix(0.32, 1.0, vAge);
-            vec3  warm   = mix(vColor, vColor * vec3(1.25, 1.05, 0.7), clamp(vAge - 0.5, 0.0, 0.5) * 1.4);
-            vec3  outc   = warm * bright;
-            float a      = (1.0 - d * 0.4) * opacity;
-            // HUB: alone morbido nel colore del nodo = pilastro della memoria
-            if (vHub > 0.0) {
-              float halo = smoothstep(0.5, 0.7, d) * (1.0 - smoothstep(0.9, 1.0, d));
-              a    = max(a, halo * 0.5 * vHub);
-              outc = mix(outc, outc * 1.4 + 0.08, halo * vHub);
-            }
-            // CORE (Hermes): anello bianco sottile = strato sempre-caricato del vault
-            if (vCore > 0.5) {
-              float wr = smoothstep(0.30, 0.40, d) * (1.0 - smoothstep(0.50, 0.60, d));
-              outc = mix(outc, vec3(0.95), wr * 0.9);
-              a    = max(a, wr * 0.8 * opacity);
-            }
-            gl_FragColor = vec4(outc, a);
-          }`,
-        transparent: true,
-        depthWrite: false,
-      });
-
-      const pts = new THREE.Points(geo, mat);
-      scene.add(pts);
-
-      // ── archi semantici: similarita' embedding REALE dal RAG (P4a) ──
-      // intensita' della linea = peso coseno; sky-blue per il tema RAG/ciano.
-      if (links.length) {
-        const lpos: number[] = [], lcol: number[] = [];
-        for (const l of links) {
-          const a = points[l.source], b = points[l.target];
-          if (!a || !b) continue;
-          lpos.push(a.x * SCALE, a.y * SCALE, a.z * SCALE,
-                    b.x * SCALE, b.y * SCALE, b.z * SCALE);
-          const t = Math.min(1, Math.max(0.3, (l.weight - 0.5) / 0.5));
-          lcol.push(0.22 * t, 0.74 * t, 0.97 * t, 0.22 * t, 0.74 * t, 0.97 * t);
-        }
-        const lgeo = new THREE.BufferGeometry();
-        lgeo.setAttribute("position", new THREE.Float32BufferAttribute(lpos, 3));
-        lgeo.setAttribute("color",    new THREE.Float32BufferAttribute(lcol, 3));
-        const lmat = new THREE.LineBasicMaterial({
-          vertexColors: true, transparent: true, opacity: 0.3, depthWrite: false,
-        });
-        scene.add(new THREE.LineSegments(lgeo, lmat));
-      }
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping  = true;
@@ -237,12 +261,19 @@ function ThreeScene({
       const loop = () => {
         raf = requestAnimationFrame(loop);
         controls.update();
-        mat.uniforms.uTime.value = performance.now() / 1000;   // pulse anello orfani
+        const s = stateRef.current;
+        if (s?.cloud) {
+          const m = s.cloud.material as THREE.ShaderMaterial;
+          m.uniforms.uTime.value = performance.now() / 1000;            // respiro/pulse
+          const k = Math.min(1, (performance.now() - s.fadeStart) / 350);
+          m.uniforms.opacity.value = 0.9 * k;                           // fade-in morbido
+        }
         renderer.render(scene, camera);
       };
-      loop();
 
-      stateRef.current = { renderer, camera, controls, pts, raf, onResize };
+      stateRef.current = { renderer, camera, controls, scene, fadeStart: performance.now(), raf, onResize };
+      rebuildRef.current();   // prima costruzione dati (scena ora pronta)
+      loop();
     });
 
     return () => {
@@ -250,13 +281,18 @@ function ThreeScene({
       const s = stateRef.current;
       if (!s) return;
       cancelAnimationFrame(s.raf);
+      s.cloud?.geometry.dispose();
+      s.lines?.geometry.dispose();
       s.controls.dispose();
       window.removeEventListener("resize", s.onResize);
       s.renderer.dispose();
       if (el.contains(s.renderer.domElement)) el.removeChild(s.renderer.domElement);
       stateRef.current = null;
     };
-  }, [points, links]);
+  }, []);   // <- una volta sola
+
+  // dati cambiati (filtro/ricerca/sorgente) -> ricostruisci solo la nuvola, vista intatta
+  useEffect(() => { rebuildRef.current(); }, [points, links]);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     const s = stateRef.current;
@@ -269,7 +305,8 @@ function ThreeScene({
     const ray = new THREE.Raycaster();
     ray.params.Points = { threshold: 0.4 };
     ray.setFromCamera(mouse, s.camera);
-    const hits = ray.intersectObject(s.pts);
+    if (!s.cloud) { onHover(null, 0, 0); return; }
+    const hits = ray.intersectObject(s.cloud);
     if (hits.length > 0 && hits[0].index != null && hits[0].index < points.length) {
       onHover(points[hits[0].index], e.clientX - rect.left, e.clientY - rect.top);
     } else {
@@ -288,7 +325,8 @@ function ThreeScene({
     const ray = new THREE.Raycaster();
     ray.params.Points = { threshold: 0.4 };
     ray.setFromCamera(mouse, s.camera);
-    const hits = ray.intersectObject(s.pts);
+    if (!s.cloud) { onClick(null); return; }
+    const hits = ray.intersectObject(s.cloud);
     if (hits.length > 0 && hits[0].index != null && hits[0].index < points.length) {
       onClick(points[hits[0].index]);
     } else {
@@ -506,7 +544,6 @@ export function RagGraphView() {
         {/* 3D scene — sempre montata, visibile solo quando ha dati */}
         {!loading && !error && visible.length > 0 && (
           <ThreeScene
-            key={`${folderFilter}-${query}`}
             points={visible}
             links={visibleLinks}
             onHover={onHover}
