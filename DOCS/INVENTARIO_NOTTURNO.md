@@ -21,6 +21,37 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-06-25 · 25 commit
+- `a9038cea` auto: night_audit - cartella clinica 25/06/2026
+- `be6a6e3c` auto: story_agent - episodi generati 25/06/2026
+- `a0f6a9b9` chore(rag): escludi _ARCHIVIO (ex _DA_ORDINARE) dal canone + esito migrazione v4.2
+- `79908408` feat(rag): v4.2 — chunking heading-aware + snapshot _VAULT + GraphRAG-lite wikilink
+- `fef28ba5` chore(salva): record START_GETAC rimosso — bussola/STATE/RIAVVIO allineati
+- `de5a514d` chore(root): rimuovo START_GETAC.bat (launcher Getac morto, superato da START_LOGIN.bat)
+- `0b04416b` chore(salva): chiusura sessione #45 — CRITICHE azzerate (3 fonti) + de-hardcode/rimozione benen
+- `1a5570dc` chore(tools): rimuovo i 5 registrar legacy ridondanti (superati dai portabili)
+- `1397b0ee` fix(tools): de-hardcoda C:\Users\benen nei 5 registrar legacy (portabili)
+- `d7d6312f` chore(salva): coda changelog/state hook (sess.#44)
+- `50040096` chore(salva): chiusura sessione #44 — verifiche verdi (50 ep Nina, build TS ok)
+- `e65bdbd0` chore(bussola): groom — 20 todo gia' fatti/superati chiusi (41->21 aperti)
+- `566da4b9` sweep+header: 8 critiche manuali chiuse + header CRITICHE per-fonte
+- `8200ab07` fix(dash): deep-link hash per view + bug 42 todo-fantasma nella bussola
+- `e338ce6d` feat(MIMS): connettori = Via B deciso + triage notturno nel protocollo
+- `3919e0fa` chore(critiche): chiuse 18 critiche risolte/stale/decise — sidebar 31->13
+- `a2f8b419` docs(self-improve): documenta il gate propose-only (sostituisce ex-regola 11)
+- `473a06d0` chore(rag): zittisci warning HF Hub non-autenticato (rumore log notturno)
+- `c638edbf` feat(research): query broadening su 0 risultati + summary diagnostico (v1.3)
+- `2bdbbf3e` chore(repo): gitignore DATA/views cache (340 file auto-gen) — diff puliti
+- `143da749` chore(salva): coda churn views (sess.#44)
+- `725481cd` chore(salva): chiusura sessione #44 — sweep auto (TOC/links/views/state notturni)
+- `34843828` chore(bussola): aggiornato #44 col lavoro del mattino (view fix, stabilità, watcher YT)
+- `fa4b0997` fix(watcher): resolver YouTube robusto + RSS con UA browser — Simone Rizzo si pesca (sess.#44)
+- `9ecbc03a` fix(storie): RAG Nina vs Nina dal giorno 0 inequivocabili (sess.#44)
+
+_episodi: 249 · critiche aperte: 14 (91 risolte) · RAG: 24574 chunk_
+
+
+
 ## 2026-06-24 · 40 commit
 - `e642fa8e` auto: night_audit - cartella clinica 24/06/2026
 - `61fe20c5` auto: story_agent - episodi generati 24/06/2026
