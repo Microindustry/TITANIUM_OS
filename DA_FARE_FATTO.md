@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 49  25/06/2026  PRE_01: stile buonanotte (slide 2)  flusso donda continuo tra le slide](#sessione-49-25062026-pre01-stile-buonanotte-slide-2-flusso-donda-continuo-tra-le-slide)
+  - [Sessione 48  25/06/2026  Adobe Express  caroselli di Nina (porta  carosello, preambolo)](#sessione-48-25062026-adobe-express-caroselli-di-nina-porta-carosello-preambolo)
   - [Sessione 47  25/06/2026  Filone visivo RETE: orfanisalute, RETE viva, transizioni morbide (Konik  Hermes)](#sessione-47-25062026-filone-visivo-rete-orfanisalute-rete-viva-transizioni-morbide-konik-hermes)
   - [Sessione 46  24-25/06/2026  RAG v4.2 (heading-aware  snapshot  GraphRAG-lite)  _ARCHIVIO fuori canone  Nina auto](#sessione-46-24-25062026-rag-v42-heading-aware-snapshot-graphrag-lite-archivio-fuori-canone-nina-auto)
   - [Sessione 45  24/06/2026  CRITICHE azzerate (3 fonti)  de-hardcode benen  loop autonomo](#sessione-45-24062026-critiche-azzerate-3-fonti-de-hardcode-benen-loop-autonomo)
@@ -95,8 +97,11 @@ definire lo stile narrativo, poi propagare.**
 - [✓] **Integrato in RAG + Obsidian**: nota `MENTE/SESSIONI/2026-06-25_caroselli-preambolo-flusso-stile.md`
   (wikilink a [[NINA_STILE_E_PIANO]] ecc.) → `rag --incremental` (+add:1, linkgraph 484 note/5611 archi,
   semantico=bm25=24673), retrieval verificato score 0.99.
+- [✓] **v7 — testo arricchito** (richiesta Matteo): intro a 2 frasi, punti illustrati più pieni,
+  sigilli più evocativi su tutte le slide 2-8; box testo allargato + font ribilanciati (no overflow,
+  slide 8 con CTA verificata a piena risoluzione). PNG 1-8 rigenerati. ATTUALE = `carosello.html`.
 - [ ] **Prossimo (per Matteo)**: rivedere le 8 slide → se ok, export Adobe Express (readiness skill prima).
-  Eventuale ritocco onda (ampiezza/intensità) o scelta finale v5 vs v4.
+  Eventuale ritocco onda (ampiezza/intensità) o scelta finale v5 sfumata vs v4 intreccio.
 
 ---
 

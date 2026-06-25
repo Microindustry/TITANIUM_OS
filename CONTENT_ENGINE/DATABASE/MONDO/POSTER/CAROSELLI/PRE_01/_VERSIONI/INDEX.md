@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [PRE_01  Versioni del carosello Il Mondo di Nina](#pre01-versioni-del-carosello-il-mondo-di-nina)
+  - [Il concetto di flusso continuo](#il-concetto-di-flusso-continuo)
+  - [Densità testo (decisa 25/06, Matteo)](#densità-testo-decisa-2506-matteo)
+  - [Prossimo](#prossimo)
+
+<!-- /TOC -->
+
 # PRE_01 — Versioni del carosello "Il Mondo di Nina"
 
 *Archivio additivo: ogni stato di design è salvato qui, niente si sovrascrive.*
@@ -8,8 +17,11 @@
 |----------|-------|------------------|-------|
 | **v1_originale-magra** | Lo stato di partenza (sess #48): slide 2 con lead + 1 paragrafo | nessuno (filo dritto in basso) | archiviata |
 | **v2_buonanotte-no-flusso** | Stile "buonanotte" ricco: apertura calda + 3 orecchie come parole illustrate + sigillo | nessuno (filo dritto) | archiviata |
-| **v3_flusso-onda-oro** | v2 + onda d'oro continua in basso con luci che scorrono | onda sinusoidale oro (1 filo) | candidata |
-| **v4_intreccio-atomi-bit** | v2 + due fili intrecciati oro(Atomi)↔ciano(Bit), Giuntura ⟡ agli incroci | doppio filo intrecciato (significativo) | candidata |
+| **v3_flusso-onda-oro** | v2 + onda d'oro continua in basso con luci che scorrono | onda sinusoidale oro (1 filo) | superata |
+| **v4_intreccio-atomi-bit** | v2 + due fili intrecciati oro(Atomi)↔ciano(Bit), Giuntura ⟡ agli incroci | doppio filo intrecciato (significativo) | alternativa viva |
+| **v5_flusso-onda-sfumata** | v3 ma onda **sfumata** (alone soffuso/blur, meno netta) | onda morbida diffusa | ← direzione scelta |
+| **v6_propagato-completo** | flusso sfumato + stile buonanotte su **tutte le 8 slide** | onda sfumata su 1-8 | superata da v7 |
+| **v7_arricchito-testo** | v6 con **più testo** (intro 2 frasi, punti più pieni, sigilli più evocativi) | onda sfumata su 1-8 | **ATTUALE** (= `carosello.html`) |
 
 ## Il concetto di "flusso continuo"
 L'onda è calcolata sulla **posizione globale** `x_glob = (n-1)·1080 + x_locale`: essendo una
