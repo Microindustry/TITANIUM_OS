@@ -67,6 +67,37 @@
 
 ---
 
+## Sessione #48 · 25/06/2026 — Adobe Express + caroselli di Nina (porta → carosello, preambolo)
+
+**Punto di partenza #48 (dalla bussola #47): capire come è stata generata l'immagine della PORTA
+→ valutare integrazione DesignSync / Adobe MCP.** Scoperta: il poster `EP_N2_01_poster.html` era già
+import-ready per Express (meta `hz:`). Da lì un filone intero sui caroselli social di Nina.
+
+- [✓] **Capito la PORTA**: è design HTML+SVG (glow door + ponte Atomi|Bit) reso in PNG via Chrome
+  headless — NON AI-immagine. Già strutturato per Adobe (tag `hz:` / `data-canvas-*`).
+- [✓] **Integrazione Adobe provata** (account `auth`): `export_html_to_express` live. **EP_N2_01
+  esportato come carosello 8 slide** in Adobe Express (font migrati a Adobe Fonts kit `zhv2kry`:
+  Playfair Display + Space Mono + Source Sans 3 al posto di Inter).
+- [✓] **Organizzazione**: `POSTER/CAROSELLI/<EP_ID>/` — una cartella per carosello (carosello.html +
+  caption.txt + README.md + slides/). README convenzione in `CAROSELLI/README.md`.
+- [✓] **Bibbia visiva** `MONDO/BIBBIA_VISIVA_CAROSELLI.md` + **brief illustratore**
+  `MONDO/BRIEF_ILLUSTRATORE_PERSONAGGI.md` (pronto da inviare).
+- [✓] **Stile deciso**: ibrido blueprint-anime **alla Geronimo Stilton** (parole illustrate, personaggi
+  ricorrenti, mappe), racconto della buonanotte, 15-20 slide, **niente foto reali** (solo
+  immagini/schemi generati), filo-ponte come flusso continuo.
+- [✓] **Simboli del mondo DEFINITIVI** (Atomi dado · Bit nodi · Giuntura rombo · Pietra ⟡N).
+- [✓] **Personaggi → via ILLUSTRATORE** (slot-placeholder). Il v0.1 SVG fatto a mano era
+  stickman, sotto standard. Matteo ha passato un avatar di riferimento (`teacher-avatar.png`).
+- [✓] **Preambolo PRE_01 "Il Mondo di Nina"** costruito: 8 slide illustrate ricche/atmosferiche
+  (porta, luna buonanotte, calibro, ponte, mappa 8 Pietre), PNG in `slides/`. Lezione appresa:
+  caroselli **belli e illustrati, MAI wireframe/slot vuoti** (memoria salvata).
+- [ ] **PROSSIMA SESSIONE #49**: lavorare sulla **slide 2 di PRE_01** aggiungendo **più testo** per
+  **definire lo stile** (densità narrativa / parole illustrate / ritmo buonanotte). Poi propagare.
+- [ ] Aperti: esportare PRE_01 in Express; rifare EP_N2_01 al livello ricco del preambolo; altri
+  caroselli preambolo; commissionare arte personaggi (brief pronto).
+
+---
+
 ## Sessione #47 · 25/06/2026 — Filone visivo RETE: orfani→salute, RETE viva, transizioni morbide (Konik + Hermes)
 
 **Punto di partenza: analizzare 2 link forniti da Matteo** (Eleanor Konik sulla graph view di

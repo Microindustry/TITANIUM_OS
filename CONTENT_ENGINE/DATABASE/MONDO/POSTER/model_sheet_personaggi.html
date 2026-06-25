@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Nina · Model Sheet personaggi</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1080" />
+<meta name="hz:canvas-height" content="1350" />
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#05070d; }
+body { display:flex; justify-content:center; padding:40px 0; }
+.slide {
+  position:relative; width:1080px; height:1350px; overflow:hidden;
+  background: radial-gradient(120% 75% at 50% 34%, #1a2440 0%, #0c1122 46%, #05070d 100%);
+  font-family:"source-sans-3", sans-serif; color:#eef2fb;
+}
+.frame { position:absolute; inset:30px; border:1px solid rgba(148,163,184,0.22); border-radius:4px; }
+/* blueprint grid sottile */
+.grid { position:absolute; inset:30px; opacity:0.16;
+  background-image: linear-gradient(#5fc7f3 1px, transparent 1px), linear-gradient(90deg,#5fc7f3 1px, transparent 1px);
+  background-size: 54px 54px; }
+.toplabel { position:absolute; top:62px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:17px; letter-spacing:6px; color:#8595b4; text-transform:uppercase; }
+.kicker { position:absolute; top:96px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:14px; letter-spacing:5px; color:#f4b65a; }
+.chars { position:absolute; top:170px; left:60px; right:60px; height:720px; display:flex; gap:40px; }
+.card { flex:1; position:relative; border:1px solid rgba(148,163,184,0.2); border-radius:8px; padding:24px; display:flex; flex-direction:column; align-items:center; }
+.card .fig { height:430px; display:flex; align-items:center; justify-content:center; }
+.cname { font-family:"playfair-display",serif; font-weight:700; font-size:46px; color:#f6f8ff; margin-top:6px; }
+.crole { font-family:"space-mono",monospace; font-size:15px; letter-spacing:3px; margin-top:8px; text-transform:uppercase; }
+.nina .crole { color:#ec4899; }
+.themis .crole { color:#9fb0d0; }
+.cdesc { font-size:21px; line-height:1.4; color:#b6c0d8; text-align:center; margin-top:16px; padding:0 6px; }
+.symwrap { display:flex; align-items:center; gap:10px; margin-top:16px;
+  font-family:"space-mono",monospace; font-size:13px; letter-spacing:2px; color:#7f8db0; }
+/* fascia simboli del mondo */
+.world { position:absolute; left:60px; right:60px; bottom:120px; }
+.world .h { font-family:"space-mono",monospace; font-size:14px; letter-spacing:5px; color:#f4b65a; text-align:center; margin-bottom:22px; }
+.symrow { display:flex; justify-content:space-between; padding:0 20px; }
+.sym { text-align:center; }
+.sym .lab { font-family:"space-mono",monospace; font-size:13px; letter-spacing:2px; color:#8595b4; margin-top:12px; text-transform:uppercase; }
+.footer { position:absolute; left:60px; right:60px; bottom:64px; display:flex; justify-content:space-between;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#7f8db0; }
+.footer .nina { color:#ec4899; }
+.footer .dot { color:#f4b65a; }
+</style>
+</head>
+<body>
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div>
+  <div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">I PERSONAGGI · MODEL SHEET v0.1</div>
+
+  <div class="chars">
+    <!-- ===== NINA ===== -->
+    <div class="card nina">
+      <div class="fig">
+        <svg width="300" height="420" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg">
+          <!-- simbolo perché fluttuante -->
+          <text x="232" y="78" font-family="playfair-display, serif" font-style="italic" font-weight="700" font-size="60" fill="#f4b65a">?</text>
+          <g fill="none" stroke="#5fc7f3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <!-- capelli -->
+            <path d="M96,118 Q92,52 150,48 Q208,52 204,118" fill="#0e1830"/>
+            <path d="M150,48 Q150,30 162,30" stroke="#9adcff"/>
+            <!-- ciuffi -->
+            <path d="M98,116 Q86,138 96,160" stroke="#9adcff"/>
+            <path d="M202,116 Q214,138 204,160" stroke="#9adcff"/>
+            <!-- viso -->
+            <path d="M104,108 Q104,168 150,176 Q196,168 196,108" fill="#0a1126"/>
+            <!-- occhi grandi -->
+            <circle cx="128" cy="120" r="12" fill="#0a1126" stroke="#9adcff"/>
+            <circle cx="172" cy="120" r="12" fill="#0a1126" stroke="#9adcff"/>
+            <circle cx="130" cy="118" r="4.5" fill="#9adcff" stroke="none"/>
+            <circle cx="174" cy="118" r="4.5" fill="#9adcff" stroke="none"/>
+            <!-- guance -->
+            <circle cx="116" cy="142" r="6" fill="#ec4899" stroke="none" opacity="0.55"/>
+            <circle cx="184" cy="142" r="6" fill="#ec4899" stroke="none" opacity="0.55"/>
+            <!-- sorriso -->
+            <path d="M138,150 Q150,160 162,150" stroke="#f4b65a"/>
+            <!-- corpo: vestitino a campana -->
+            <path d="M150,176 L150,196" />
+            <path d="M118,300 Q150,212 182,300 Z" fill="#0e1830" stroke="#5fc7f3"/>
+            <path d="M132,250 Q150,258 168,250" stroke="#9adcff"/>
+            <!-- bottone (richiamo episodio) -->
+            <circle cx="150" cy="244" r="6" fill="none" stroke="#f4b65a"/>
+            <!-- braccia -->
+            <path d="M138,214 Q108,240 110,276" />
+            <path d="M162,214 Q196,232 206,210" />
+            <!-- manina che indica la porta -->
+            <circle cx="208" cy="206" r="6" fill="#0a1126" stroke="#9adcff"/>
+            <!-- gambe -->
+            <path d="M138,300 L132,360" />
+            <path d="M162,300 L168,360" />
+            <path d="M120,360 L138,360" /><path d="M150,360 L172,360" />
+          </g>
+        </svg>
+      </div>
+      <div class="cname">Nina</div>
+      <div class="crole">la curiosa · ⟡ il perché</div>
+      <div class="cdesc">La bambina che chiede una domanda di troppo. La sua superpotenza: chiedere <i>perché</i> e andare a vederlo con le mani.</div>
+      <div class="symwrap">SIMBOLO →
+        <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="#ec4899" stroke-width="2"/><text x="20" y="29" text-anchor="middle" font-family="playfair-display,serif" font-style="italic" font-weight="700" font-size="24" fill="#f4b65a">?</text></svg>
+      </div>
+    </div>
+
+    <!-- ===== THEMIS ===== -->
+    <div class="card themis">
+      <div class="fig">
+        <svg width="300" height="420" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#aebdda" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <!-- chignon -->
+            <circle cx="150" cy="44" r="16" fill="#0e1830"/>
+            <!-- capelli raccolti -->
+            <path d="M108,104 Q104,56 150,54 Q196,56 192,104" fill="#0e1830"/>
+            <!-- viso asciutto -->
+            <path d="M112,98 Q112,150 150,158 Q188,150 188,98" fill="#0a1126"/>
+            <!-- occhi attenti, stretti -->
+            <path d="M126,114 Q134,108 144,114" stroke="#cfe0ff"/>
+            <path d="M156,114 Q166,108 174,114" stroke="#cfe0ff"/>
+            <circle cx="135" cy="116" r="2.6" fill="#cfe0ff" stroke="none"/>
+            <circle cx="165" cy="116" r="2.6" fill="#cfe0ff" stroke="none"/>
+            <!-- mezzo sorriso -->
+            <path d="M140,138 Q150,144 160,138" stroke="#f4b65a"/>
+            <!-- collo + corpo asciutto, grembiule officina -->
+            <path d="M150,158 L150,176"/>
+            <path d="M120,176 L180,176 L188,360 L112,360 Z" fill="#0e1830" stroke="#aebdda"/>
+            <path d="M120,176 Q150,200 180,176" stroke="#9fb0d0"/>
+            <line x1="150" y1="196" x2="150" y2="340" stroke="#5d6f8c"/>
+            <!-- tasca attrezzi -->
+            <rect x="128" y="250" width="44" height="34" rx="3" stroke="#5d6f8c"/>
+            <!-- braccia -->
+            <path d="M124,192 Q98,232 104,272"/>
+            <path d="M176,192 Q204,224 214,256"/>
+            <!-- IL CALIBRO in mano (simbolo della misura) -->
+            <g stroke="#f4b65a" stroke-width="3">
+              <line x1="96" y1="276" x2="150" y2="276"/>
+              <line x1="96" y1="266" x2="96" y2="292"/>
+              <line x1="150" y1="266" x2="150" y2="286"/>
+              <line x1="120" y1="276" x2="120" y2="296"/>
+            </g>
+            <!-- gambe -->
+            <path d="M132,360 L128,396"/><path d="M168,360 L172,396"/>
+          </g>
+        </svg>
+      </div>
+      <div class="cname">Themis</div>
+      <div class="crole">la custode · ⟡ la misura</div>
+      <div class="cdesc">Asciutta, occhi attenti, niente fronzoli. Custodisce la Giuntura e insegna la prima verità: <i>fatto bene = regge.</i></div>
+      <div class="symwrap">SIMBOLO →
+        <svg width="48" height="40" viewBox="0 0 48 40"><g stroke="#f4b65a" stroke-width="2.4" fill="none"><line x1="8" y1="20" x2="40" y2="20"/><line x1="8" y1="12" x2="8" y2="30"/><line x1="40" y1="12" x2="40" y2="28"/><line x1="22" y1="20" x2="22" y2="32"/></g></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SIMBOLI DEL MONDO ===== -->
+  <div class="world">
+    <div class="h">I SEGNI DEL MONDO</div>
+    <div class="symrow">
+      <div class="sym">
+        <svg width="80" height="80" viewBox="0 0 80 80"><polygon points="40,12 66,27 66,53 40,68 14,53 14,27" fill="none" stroke="#7c8cab" stroke-width="2.6"/><circle cx="40" cy="40" r="11" fill="none" stroke="#7c8cab" stroke-width="2.6"/></svg>
+        <div class="lab">Atomi</div>
+      </div>
+      <div class="sym">
+        <svg width="80" height="80" viewBox="0 0 80 80"><g stroke="#5fc7f3" stroke-width="2"><line x1="20" y1="24" x2="56" y2="20"/><line x1="56" y1="20" x2="44" y2="52"/><line x1="44" y1="52" x2="20" y2="24"/><line x1="56" y1="20" x2="62" y2="50"/></g><g fill="#9adcff"><circle cx="20" cy="24" r="5"/><circle cx="56" cy="20" r="5"/><circle cx="44" cy="52" r="6"/><circle cx="62" cy="50" r="4"/></g></svg>
+        <div class="lab">Bit</div>
+      </div>
+      <div class="sym">
+        <svg width="80" height="80" viewBox="0 0 80 80"><path d="M40,10 L66,40 L40,70 L14,40 Z" fill="none" stroke="#aebdda" stroke-width="2"/><path d="M40,10 L40,70 M14,40 L66,40" stroke="#9fb0d0" stroke-width="1.4" opacity="0.5"/></svg>
+        <div class="lab">La Giuntura</div>
+      </div>
+      <div class="sym">
+        <svg width="80" height="80" viewBox="0 0 80 80"><path d="M40,12 L62,40 L40,68 L18,40 Z" fill="none" stroke="#f4b65a" stroke-width="2.6"/><text x="40" y="48" text-anchor="middle" font-family="space-mono,monospace" font-size="22" fill="#f4b65a">0</text></svg>
+        <div class="lab">Pietra ⟡N</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Bibbia Visiva</span><span class="nina">NINA</span><span>model sheet v0.1</span></div>
+</div>
+</body>
+</html>

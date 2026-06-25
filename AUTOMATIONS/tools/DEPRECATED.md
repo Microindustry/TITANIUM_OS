@@ -3,7 +3,7 @@
 - [AUTOMATIONS/tools  script legacy vs attuali](#automationstools-script-legacy-vs-attuali)
   - [ATTUALI (portabili  tenere)](#attuali-portabili-tenere)
   - [LEGACY (ridondanti  superati dai registrar portabili)](#legacy-ridondanti-superati-dai-registrar-portabili)
-    - [Come rimuoverli (quando decidi)](#come-rimuoverli-quando-decidi)
+    - [Recuperarli (se mai servissero)](#recuperarli-se-mai-servissero)
   - [Avvio ecosistema al login  RISOLTO (nessun gap)](#avvio-ecosistema-al-login-risolto-nessun-gap)
 
 <!-- /TOC -->

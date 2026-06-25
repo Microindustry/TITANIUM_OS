@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Nina · PRE_01 — Il Mondo di Nina</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1080" />
+<meta name="hz:canvas-height" content="1350" />
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#05070d; }
+body { display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+.slide { position:relative; width:1080px; height:1350px; overflow:hidden;
+  background: radial-gradient(120% 75% at 50% 34%, #1a2440 0%, #0c1122 46%, #05070d 100%);
+  font-family:"source-sans-3",sans-serif; color:#eef2fb; }
+.grid { position:absolute; inset:30px; opacity:0.04;
+  background-image: linear-gradient(#5fc7f3 1px, transparent 1px), linear-gradient(90deg,#5fc7f3 1px, transparent 1px);
+  background-size:54px 54px; }
+.frame { position:absolute; inset:30px; border:1px solid rgba(148,163,184,0.22); border-radius:4px; }
+.toplabel { position:absolute; top:60px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:17px; letter-spacing:6px; color:#8595b4; text-transform:uppercase; }
+.kicker { position:absolute; top:150px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:16px; letter-spacing:6px; color:#f4b65a; text-transform:uppercase; }
+.scene { position:absolute; top:230px; left:0; right:0; height:380px; display:flex; align-items:center; justify-content:center; }
+.body2 { position:absolute; left:96px; right:96px; top:660px; bottom:220px;
+  display:flex; flex-direction:column; justify-content:center; gap:30px; text-align:center; }
+.lead { font-family:"playfair-display",serif; font-weight:700; font-size:60px; line-height:1.05; color:#f6f8ff; letter-spacing:-0.5px; }
+.lead .accent { color:#f4b65a; font-style:italic; } .lead .pink { color:#ec4899; font-style:italic; }
+.para { font-size:32px; line-height:1.5; color:#c3cce0; }
+.para .hi { color:#f6f8ff; font-weight:600; } .para .g { color:#f4b65a; font-weight:600; }
+.cta { font-family:"space-mono",monospace; font-size:22px; letter-spacing:3px; color:#f4b65a; text-transform:uppercase; }
+.label { font-family:"space-mono",monospace; font-size:16px; letter-spacing:3px; text-transform:uppercase; margin-top:10px; text-align:center; }
+.filo { position:absolute; left:0; right:0; top:1150px; height:2px; background:linear-gradient(90deg, rgba(244,182,90,0) 0%, rgba(244,182,90,0.55) 12%, rgba(244,182,90,0.55) 88%, rgba(244,182,90,0) 100%); }
+.bead { position:absolute; top:1142px; width:18px; height:18px; }
+.footer { position:absolute; left:60px; right:60px; bottom:60px; display:flex; align-items:center; justify-content:space-between;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#7f8db0; }
+.footer .dot { color:#f4b65a; } .footer .nina { color:#ec4899; }
+</style>
+</head>
+<body>
+
+<!-- ===== gradienti condivisi (glow) ===== -->
+<svg width="0" height="0" style="position:absolute">
+<defs>
+  <radialGradient id="gGold" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffe6ad" stop-opacity="0.85"/><stop offset="42%" stop-color="#f4b65a" stop-opacity="0.32"/><stop offset="100%" stop-color="#f4b65a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gCyan" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#9adcff" stop-opacity="0.6"/><stop offset="100%" stop-color="#5fc7f3" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gPink" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ec4899" stop-opacity="0.55"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gDoor" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff4dc"/><stop offset="55%" stop-color="#ffcf85"/><stop offset="100%" stop-color="#eda24a"/></linearGradient>
+  <linearGradient id="brg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6b7da0" stop-opacity="0"/><stop offset="100%" stop-color="#9fb0d0" stop-opacity="0.5"/></linearGradient>
+</defs>
+</svg>
+
+<!-- ===== 1 · COPERTINA ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div style="position:absolute;top:96px;left:0;right:0;text-align:center;font-family:'space-mono',monospace;font-size:14px;letter-spacing:5px;color:#ec4899">IL MONDO DI NINA · PREAMBOLO</div>
+  <svg style="position:absolute;top:200px;left:0;right:0;height:660px;width:100%" viewBox="0 0 1080 660" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="540" cy="285" r="400" fill="url(#gGold)"/>
+    <g stroke="#5d6f8c" stroke-width="2.4" fill="none" opacity="0.5">
+      <polygon points="120,225 166,199 212,225 212,277 166,303 120,277"/><circle cx="166" cy="251" r="16"/>
+      <circle cx="215" cy="430" r="40"/><circle cx="215" cy="430" r="16"/><rect x="100" y="520" width="115" height="28" rx="6"/>
+    </g>
+    <text x="120" y="150" font-family="space-mono, monospace" font-size="19" letter-spacing="5" fill="#7c8cab" opacity="0.85">ATOMI</text>
+    <g stroke="#5fc7f3" stroke-width="1.6" opacity="0.5">
+      <line x1="880" y1="225" x2="958" y2="275"/><line x1="958" y1="275" x2="908" y2="350"/><line x1="908" y1="350" x2="975" y2="400"/>
+      <line x1="880" y1="225" x2="840" y2="310"/><line x1="840" y1="310" x2="908" y2="350"/><line x1="840" y1="470" x2="908" y2="350"/>
+    </g>
+    <g fill="#9adcff"><circle cx="880" cy="225" r="7"/><circle cx="958" cy="275" r="5"/><circle cx="908" cy="350" r="8"/><circle cx="840" cy="310" r="5"/><circle cx="975" cy="400" r="6"/><circle cx="840" cy="470" r="5"/></g>
+    <text x="960" y="150" font-family="space-mono, monospace" font-size="19" letter-spacing="5" fill="#6fb7dd" opacity="0.9" text-anchor="end">BIT</text>
+    <polygon points="540,270 350,620 730,620" fill="url(#brg)" opacity="0.6"/>
+    <g stroke="#aebdda" stroke-width="2" opacity="0.4"><line x1="540" y1="270" x2="350" y2="620"/><line x1="540" y1="270" x2="730" y2="620"/><line x1="452" y1="430" x2="628" y2="430"/><line x1="412" y1="510" x2="668" y2="510"/></g>
+    <g>
+      <path d="M476,270 Q476,128 540,128 Q604,128 604,270 L604,430 L476,430 Z" fill="#0a0f1d" stroke="#f4b65a" stroke-width="3"/>
+      <path d="M540,128 Q604,128 604,270 L604,430 L540,430 Z" fill="url(#gDoor)" opacity="0.92"/>
+      <line x1="540" y1="138" x2="540" y2="426" stroke="#fff4dc" stroke-width="2" opacity="0.8"/><circle cx="578" cy="286" r="5" fill="#7a5a24"/>
+    </g>
+  </svg>
+  <div style="position:absolute;left:80px;right:80px;top:920px;text-align:center">
+    <div style="font-family:'playfair-display',serif;font-weight:700;font-size:84px;line-height:0.98;color:#f6f8ff;letter-spacing:-0.5px">L'Avventura<br/>di <span style="color:#ec4899;font-style:italic">Nina</span></div>
+    <div style="font-family:'playfair-display',serif;font-style:italic;font-weight:700;font-size:30px;line-height:1.42;color:#aeb9d4;margin-top:30px;padding:0 20px">Una storia da costruire —<br/>una domanda alla volta, pezzo per pezzo.</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:60px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>scorri →</span></div>
+</div>
+
+<!-- ===== 2 · IL PATTO ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Il Patto</div>
+  <div class="scene">
+    <svg viewBox="0 0 600 380" width="600" height="380">
+      <circle cx="300" cy="160" r="180" fill="url(#gGold)"/>
+      <!-- luna -->
+      <circle cx="300" cy="150" r="82" fill="#ffcf85"/>
+      <circle cx="338" cy="132" r="74" fill="#0c1122"/>
+      <g fill="#fff4dc"><circle cx="160" cy="90" r="3"/><circle cx="455" cy="120" r="3.5"/><circle cx="420" cy="60" r="2.5"/><circle cx="190" cy="200" r="2.5"/></g>
+      <!-- 3 archi: le tre orecchie -->
+      <g fill="none" stroke-width="3.4" opacity="0.9">
+        <path d="M120,320 Q300,235 480,320" stroke="#f4b65a"/>
+        <path d="M155,348 Q300,278 445,348" stroke="#5fc7f3"/>
+        <path d="M190,372 Q300,318 410,372" stroke="#ec4899"/>
+      </g>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">Si legge <span class="accent">ad alta voce.</span></div>
+    <div class="para">Come una storia della buonanotte. Tre orecchie ascoltano: il <span class="g">bambino</span> sente la scena, il <span class="g">curioso</span> il perché, il <span class="g">grande</span> la cosa che si può misurare.</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:200px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>2 / 8</span></div>
+</div>
+
+<!-- ===== 3 · NINA ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Chi è · Nina</div>
+  <div class="scene">
+    <svg viewBox="0 0 600 380" width="600" height="380">
+      <circle cx="300" cy="190" r="180" fill="url(#gPink)"/>
+      <circle cx="300" cy="190" r="150" fill="url(#gGold)"/>
+      <!-- porticina -->
+      <path d="M225,330 Q225,90 300,90 Q375,90 375,330 Z" fill="#0a0f1d" stroke="#f4b65a" stroke-width="3"/>
+      <path d="M300,90 Q375,90 375,330 L300,330 Z" fill="url(#gDoor)" opacity="0.9"/>
+      <line x1="300" y1="100" x2="300" y2="326" stroke="#fff4dc" stroke-width="2" opacity="0.7"/>
+      <!-- ? grande della curiosità -->
+      <text x="430" y="170" text-anchor="middle" font-family="playfair-display,serif" font-style="italic" font-weight="700" font-size="150" fill="#ec4899">?</text>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">La bambina che chiede <span class="pink">perché.</span></div>
+    <div class="para">Una domanda di troppo, sempre. È la sua <span class="g">superpotenza</span>: chiedere perché — e andare a vederlo con le mani.</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:340px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>3 / 8</span></div>
+</div>
+
+<!-- ===== 4 · THEMIS ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Chi è · Themis</div>
+  <div class="scene">
+    <svg viewBox="0 0 600 380" width="600" height="380">
+      <circle cx="300" cy="190" r="175" fill="url(#gGold)"/>
+      <!-- giuntura dietro -->
+      <path d="M300,70 L390,190 L300,310 L210,190 Z" fill="none" stroke="#aebdda" stroke-width="2" opacity="0.45"/>
+      <path d="M300,70 L300,310 M210,190 L390,190" stroke="#9fb0d0" stroke-width="1.4" opacity="0.3"/>
+      <!-- calibro grande oro -->
+      <g stroke="#f4b65a" stroke-width="6" fill="none" stroke-linecap="round">
+        <line x1="170" y1="190" x2="430" y2="190"/>
+        <line x1="170" y1="146" x2="170" y2="240"/>
+        <line x1="430" y1="146" x2="430" y2="226"/>
+        <line x1="328" y1="190" x2="328" y2="256"/>
+      </g>
+      <g fill="#f4b65a" font-family="space-mono,monospace" font-size="15" opacity="0.7"><text x="200" y="135">|·|·|·|·|</text></g>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">La custode della <span class="accent">Giuntura.</span></div>
+    <div class="para">Asciutta, occhi attenti, il <span class="g">calibro</span> in mano. Insegna la prima verità: <span class="hi">fatto bene = regge quando lo tiri.</span></div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:480px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>4 / 8</span></div>
+</div>
+
+<!-- ===== 5 · ATOMI ↔ BIT ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Il Mondo · Atomi ↔ Bit</div>
+  <div class="scene">
+    <svg viewBox="0 0 600 380" width="600" height="380">
+      <circle cx="150" cy="190" r="130" fill="url(#gGold)" opacity="0.7"/>
+      <circle cx="450" cy="190" r="130" fill="url(#gCyan)"/>
+      <!-- ponticello tra i due -->
+      <path d="M210,190 H390" stroke="#f4b65a" stroke-width="2" opacity="0.5" stroke-dasharray="2 8"/>
+      <!-- atomi -->
+      <g transform="translate(110,150)"><polygon points="40,12 66,27 66,53 40,68 14,53 14,27" fill="none" stroke="#7c8cab" stroke-width="3"/><circle cx="40" cy="40" r="12" fill="none" stroke="#7c8cab" stroke-width="3"/></g>
+      <!-- bit -->
+      <g transform="translate(410,150)"><g stroke="#5fc7f3" stroke-width="2.4"><line x1="20" y1="24" x2="56" y2="20"/><line x1="56" y1="20" x2="44" y2="52"/><line x1="44" y1="52" x2="20" y2="24"/><line x1="56" y1="20" x2="62" y2="50"/></g><g fill="#9adcff"><circle cx="20" cy="24" r="6"/><circle cx="56" cy="20" r="6"/><circle cx="44" cy="52" r="7"/><circle cx="62" cy="50" r="5"/></g></g>
+      <text x="150" y="290" text-anchor="middle" font-family="space-mono,monospace" font-size="18" letter-spacing="3" fill="#9fb0d0">ATOMI</text>
+      <text x="450" y="290" text-anchor="middle" font-family="space-mono,monospace" font-size="18" letter-spacing="3" fill="#6fb7dd">BIT</text>
+      <text x="300" y="198" text-anchor="middle" font-family="space-mono,monospace" font-size="34" fill="#f4b65a">↔</text>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">Due mondi? <span class="accent">No.</span></div>
+    <div class="para">La roba che <span class="hi">si tocca</span> e la roba che <span class="hi">si accende</span> sono lo stesso mondo, visto da due lati.</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:620px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>5 / 8</span></div>
+</div>
+
+<!-- ===== 6 · LA GIUNTURA ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Il Ponte · La Giuntura</div>
+  <div class="scene">
+    <svg viewBox="0 0 600 380" width="600" height="380">
+      <circle cx="300" cy="180" r="185" fill="url(#gGold)"/>
+      <polygon points="300,40 170,340 430,340" fill="url(#brg)" opacity="0.55"/>
+      <g stroke="#aebdda" stroke-width="2" opacity="0.5">
+        <line x1="300" y1="40" x2="170" y2="340"/><line x1="300" y1="40" x2="430" y2="340"/>
+        <line x1="246" y1="165" x2="354" y2="165"/><line x1="222" y1="220" x2="378" y2="220"/><line x1="196" y1="285" x2="404" y2="285"/>
+      </g>
+      <g transform="translate(80,150)" opacity="0.8"><polygon points="30,9 50,20 50,40 30,51 10,40 10,20" fill="none" stroke="#7c8cab" stroke-width="2.4"/></g>
+      <g transform="translate(470,150)" opacity="0.8" fill="#9adcff"><circle cx="20" cy="14" r="5"/><circle cx="46" cy="22" r="5"/><circle cx="30" cy="44" r="5"/></g>
+      <path d="M300,150 L340,190 L300,230 L260,190 Z" fill="none" stroke="#f4b65a" stroke-width="2.4"/><circle cx="300" cy="190" r="6" fill="#f4b65a"/>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">Il ponte che li <span class="accent">tiene insieme.</span></div>
+    <div class="para">Una saldatura ben fatta e una riga di codice ben scritta fanno la <span class="g">stessa cosa</span>: prendono il disordine e lo rendono solido.</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:760px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>6 / 8</span></div>
+</div>
+
+<!-- ===== 7 · LA MAPPA ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Il Cammino · Le 8 Pietre</div>
+  <div class="scene">
+    <svg viewBox="0 0 920 380" width="920" height="380" xmlns="http://www.w3.org/2000/svg">
+      <path d="M70,170 H850" stroke="#f4b65a" stroke-width="2" opacity="0.4" stroke-dasharray="2 9"/>
+      <g font-family="space-mono, monospace" font-size="22" text-anchor="middle">
+        <g><circle cx="70" cy="170" r="40" fill="#f4b65a" opacity="0.14"/><path d="M70,142 L96,170 L70,198 L44,170 Z" fill="none" stroke="#f4b65a" stroke-width="2.6"/><text x="70" y="178" fill="#f4b65a">0</text></g>
+        <g><circle cx="181" cy="170" r="34" fill="#34d399" opacity="0.12"/><path d="M181,144 L205,170 L181,196 L157,170 Z" fill="none" stroke="#34d399" stroke-width="2.4"/><text x="181" y="178" fill="#34d399">1</text></g>
+        <g><circle cx="292" cy="170" r="34" fill="#fb923c" opacity="0.12"/><path d="M292,144 L316,170 L292,196 L268,170 Z" fill="none" stroke="#fb923c" stroke-width="2.4"/><text x="292" y="178" fill="#fb923c">2</text></g>
+        <g><circle cx="403" cy="170" r="34" fill="#a78bfa" opacity="0.12"/><path d="M403,144 L427,170 L403,196 L379,170 Z" fill="none" stroke="#a78bfa" stroke-width="2.4"/><text x="403" y="178" fill="#a78bfa">3</text></g>
+        <g><circle cx="514" cy="170" r="34" fill="#38bdf8" opacity="0.12"/><path d="M514,144 L538,170 L514,196 L490,170 Z" fill="none" stroke="#38bdf8" stroke-width="2.4"/><text x="514" y="178" fill="#38bdf8">4</text></g>
+        <g><circle cx="625" cy="170" r="34" fill="#818cf8" opacity="0.12"/><path d="M625,144 L649,170 L625,196 L601,170 Z" fill="none" stroke="#818cf8" stroke-width="2.4"/><text x="625" y="178" fill="#818cf8">5</text></g>
+        <g><circle cx="736" cy="170" r="34" fill="#fb7185" opacity="0.12"/><path d="M736,144 L760,170 L736,196 L712,170 Z" fill="none" stroke="#fb7185" stroke-width="2.4"/><text x="736" y="178" fill="#fb7185">6</text></g>
+        <g><circle cx="850" cy="170" r="38" fill="#fbbf24" opacity="0.13"/><path d="M850,142 L876,170 L850,198 L824,170 Z" fill="none" stroke="#fbbf24" stroke-width="2.6"/><text x="850" y="178" fill="#fbbf24">7</text></g>
+      </g>
+      <text x="70" y="240" text-anchor="middle" font-family="space-mono,monospace" font-size="16" fill="#8595b4">Materia</text>
+      <text x="850" y="240" text-anchor="middle" font-family="space-mono,monospace" font-size="16" fill="#8595b4">Mente</text>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">Otto <span class="accent">Pietre.</span> Un cammino.</div>
+    <div class="para">Dal <span class="g">metallo</span> alla <span class="hi">mente</span>. Una casella alla volta — ogni episodio è un passo del viaggio.</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:880px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Preambolo</span><span class="nina">NINA</span><span>7 / 8</span></div>
+</div>
+
+<!-- ===== 8 · SI PARTE ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Prima Pietra · ⟡0 La Materia</div>
+  <div class="scene">
+    <svg viewBox="0 0 600 380" width="600" height="380">
+      <circle cx="300" cy="190" r="185" fill="url(#gGold)"/>
+      <!-- porta socchiusa, luce che esce -->
+      <path d="M230,330 Q230,80 300,80 Q370,80 370,330 Z" fill="#0a0f1d" stroke="#f4b65a" stroke-width="3"/>
+      <path d="M300,80 Q370,80 370,330 L300,330 Z" fill="url(#gDoor)" opacity="0.95"/>
+      <line x1="300" y1="92" x2="300" y2="326" stroke="#fff4dc" stroke-width="2.4" opacity="0.85"/>
+      <!-- raggi -->
+      <g stroke="#ffe6ad" stroke-width="2" opacity="0.4"><line x1="370" y1="150" x2="470" y2="120"/><line x1="370" y1="210" x2="480" y2="210"/><line x1="370" y1="270" x2="470" y2="300"/></g>
+      <!-- pietra ⟡0 -->
+      <g transform="translate(258,300)"><path d="M42,0 L70,34 L42,68 L14,34 Z" fill="#0a0f1d" stroke="#f4b65a" stroke-width="2.6"/><text x="42" y="44" text-anchor="middle" font-family="space-mono,monospace" font-size="24" fill="#f4b65a">0</text></g>
+    </svg>
+  </div>
+  <div class="body2">
+    <div class="lead">La porta è <span class="accent">aperta.</span></div>
+    <div class="para">Si parte dalla roba che pesa, dove non si può barare: o regge, o non regge. <span class="hi">La materia non mente.</span></div>
+    <div class="cta">Episodio 1 · La Bambina che Chiedeva Perché →</div>
+  </div>
+  <div class="filo"></div><svg class="bead" style="left:1002px"><circle cx="9" cy="9" r="7" fill="#f4b65a"/></svg>
+  <div class="footer"><span><span class="dot">⟡0</span>&nbsp;La Materia</span><span class="nina">NINA</span><span>8 / 8</span></div>
+</div>
+
+</body>
+</html>

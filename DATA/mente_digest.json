@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-25T20:27:20.435159",
+  "scanned_at": "2026-06-25T20:35:21.793022",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 780,
+  "total_files": 782,
   "files_read": 5,
-  "files_skipped": 775,
+  "files_skipped": 777,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.5,
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 89.6,
+      "size_kb": 95.6,
       "readable": false,
       "extracts": {}
     },
@@ -162,42 +162,49 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 10.0,
+      "size_kb": 10.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 10.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\7d\\ecbc56ef78c20002c9cc5cfb4eae0e40802830",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b5\\cb18ffbf12fc6ce85b849c8db019a846b526e1",
-      "type": "unknown",
-      "size_kb": 0.8,
+      "size_kb": 10.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\info\\packs",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 175.3,
+      "size_kb": 194.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-0d2323f36b5fb83e3459b3f32e09252ce3ef8670.idx",
+      "type": "idx",
+      "size_kb": 20.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-0d2323f36b5fb83e3459b3f32e09252ce3ef8670.pack",
+      "type": "pack",
+      "size_kb": 6265.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-0d2323f36b5fb83e3459b3f32e09252ce3ef8670.rev",
+      "type": "rev",
+      "size_kb": 2.8,
       "readable": false,
       "extracts": {}
     },
@@ -358,7 +365,7 @@
     {
       "path": ".obsidian\\workspace.json",
       "type": "json",
-      "size_kb": 7.3,
+      "size_kb": 7.2,
       "readable": false,
       "extracts": {}
     },
@@ -3326,6 +3333,13 @@
       "path": "SESSIONI\\2026-06-25_graph-view-konik.md",
       "type": "md",
       "size_kb": 3.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-06-25_hermes-obsidian-memory.md",
+      "type": "md",
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },

@@ -1,53 +1,49 @@
-=== RIAVVIO SESSIONE #48 — 25/06/2026 ===
-Ultima sessione: #47 — 25/06/2026 (filone visivo RETE: Konik + Hermes/Obsidian memory)
+=== RIAVVIO SESSIONE #49 — 25/06/2026 ===
+Ultima sessione: #48 — 25/06/2026 (Adobe Express + caroselli di Nina)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Sessione #47 partita da 2 link di Matteo (Eleanor Konik sulla graph view di Obsidian; post
-Hermes-agent "Obsidian come memoria long-term"). Tesi comune: il grafo e' uno STRUMENTO
-DIAGNOSTICO, non un gingillo. Da li' 5 commit additivi che hanno reso la RETE un cruscotto
-della memoria: orfani come salute, freschezza/hub/memoria-a-2-livelli, transizioni morbide.
-Tutto verde (tsc -b + py_compile), tutto committato e pushato.
+Sessione #48 partita dal punto #47 (capire come fu generata l'immagine della PORTA ->
+valutare DesignSync/Adobe MCP). Scoperta: il poster era gia' import-ready per Express.
+Da li' un filone intero: integrazione Adobe provata, EP_N2_01 esportato come CAROSELLO
+8 slide in Adobe Express, e impostato tutto il sistema dei caroselli social di Nina.
 
->>> PROSSIMA SESSIONE #48 SI PARTE DA: capire COME e' stata generata l'immagine della PORTA
-    dopo il consiglio di Claude Design -> valutare l'integrazione (DesignSync / Adobe MCP). <<<
+>>> PROSSIMA SESSIONE #49 SI PARTE DA: lavorare sulla SLIDE 2 di PRE_01, aggiungendo
+    PIU' TESTO per DEFINIRE LO STILE (densita' narrativa / parole illustrate / ritmo
+    buonanotte). Poi propagare lo stile alle altre slide. <<<
 
-━━━ FATTO IN SESSIONE #47 ━━━
-• Catturati 2 link in MENTE/SESSIONI/: 2026-06-25_graph-view-konik.md (graph view = audit:
-  orfani/hub/densita') + 2026-06-25_hermes-obsidian-memory.md (memoria a 2 livelli core/vault
-  = la stessa architettura di TITANIUM_OS, validata da fuori).
-• [38bd6fc0] Segnale ORFANI DI RETE nella cartella clinica: vault_intersect v2.1 emette
-  DATA/audit/vault_orphans.json (note MENTE a 0 legami); night_audit v1.4 lo legge (gate <48h),
-  critica area RETE se >5, scrive vault_orphans in system_health.json; setup_obsidian lancia
-  vault_intersect nella catena notturna (segnale vivo). Prova: 393 note, 2 orfani veri.
-• [b3675b3c] Orfani colorati nella RETE 3D: /api/rag/vectors segna orphan (match src_norm==rel);
-  anello rosso pulsante + badge hover/panel + filtro "solo orfani".
-• [91fb8672] RETE viva: freschezza (mtime -> respiro+calore, stantio si spegne) + hub/god-node
-  (degree -> dimensione+alone) + memoria a 2 livelli Hermes (anello bianco sui nodi core _*/HOME)
-  + legenda. Backend +degree +age_days +tier per punto (solo sorgente RAG).
-• [98fd7109] Transizioni morbide: tolto il key che rimontava la scena WebGL a ogni filtro (reset
-  camera); scena/camera/controls creati UNA volta, rebuild() ricostruisce solo la nuvola con
-  fade-in (dispose del vecchio, no leak). Shader estratti a modulo.
+━━━ FATTO IN SESSIONE #48 ━━━
+• Capito la PORTA: design HTML+SVG (glow door + ponte Atomi|Bit) reso PNG via Chrome
+  headless, NON AI-immagine; gia' strutturato per Adobe (meta hz:/data-canvas-*).
+• Integrazione Adobe provata (account auth): export_html_to_express LIVE. EP_N2_01
+  esportato come carosello 8 slide in Express. Font migrati ad Adobe Fonts (kit zhv2kry:
+  Playfair Display + Space Mono + Source Sans 3 al posto di Inter).
+• Organizzazione: POSTER/CAROSELLI/<EP_ID>/ — una cartella per carosello (carosello.html
+  + caption.txt + README.md + slides/). Convenzione in CAROSELLI/README.md.
+• Canone: MONDO/BIBBIA_VISIVA_CAROSELLI.md + MONDO/BRIEF_ILLUSTRATORE_PERSONAGGI.md (pronto da inviare).
+• Stile deciso: ibrido blueprint-anime ALLA GERONIMO STILTON (parole illustrate, personaggi
+  ricorrenti, mappe), racconto della buonanotte, 15-20 slide, NIENTE foto reali (solo
+  immagini/schemi generati), filo-ponte come flusso continuo che attraversa le slide.
+• Simboli del mondo DEFINITIVI (Atomi dado, Bit nodi, Giuntura rombo, Pietra ⟡N).
+• Personaggi -> via ILLUSTRATORE (slot-placeholder). v0.1 SVG a mano era stickman, sotto
+  standard. Matteo ha passato avatar di riferimento (Desktop/teacher-avatar.png).
+• Preambolo PRE_01 "Il Mondo di Nina": 8 slide illustrate ricche/atmosferiche (porta, luna
+  buonanotte, calibro, ponte, mappa 8 Pietre), PNG in slides/. Lezione: caroselli BELLI e
+  illustrati, MAI wireframe/slot vuoti (memoria salvata).
 
 ━━━ PROSSIMO LAVORO ━━━
-• [#48] IMMAGINE DELLA PORTA: ricostruire come e' stata generata dopo il consiglio di Claude
-  Design; decidere se/come integrare DesignSync / Adobe MCP nel flusso.
-• [io] Aperti RETE: transizioni a morph di posizione (non solo fade); esporre i god-node hub
-  anche sulla sorgente Graphify (Sistema).
-• [io] Migrazione totale chunking: rebuild deliberato a GPU libera (API giu').
-• [io] Contenuto Nina verticale finanza F2 "spendere meno di quanto entra".
-• [Matteo] AZIONI_MATTEO.md: UPS + mandrino ER20; chiavi .env (Semantic Scholar + rotazione
-  red-team #38); URL sito Maria.
-
-━━━ BLOCKERS ━━━
-- Non sono admin: i task elevati (rag_recover, night) li avvio non parte -> serve l'UAC di Matteo.
-- UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
-- Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici MIMS/VULCAN).
+• [#49] SLIDE 2 di PRE_01: piu' testo, definire lo stile narrativo (densita'/parole illustrate/buonanotte).
+• [io] Propagare lo stile definito alle altre slide del preambolo.
+• [io] Esportare PRE_01 in Adobe Express; rifare EP_N2_01 al livello ricco del preambolo.
+• [io] Altri caroselli del preambolo (Nina, Themis, ecc.).
+• [Matteo] Commissionare arte personaggi all'illustratore (brief pronto in MONDO/).
 
 ━━━ NOTE ━━━
-• RETE viva: i nuovi campi (orphan/degree/age_days/tier) li serve solo /api/rag/vectors
-  (sorgente Conoscenza); Graphify (Sistema) degrada a neutro, nessun crash.
-• vault_orphans.json si rinfresca ogni notte via setup_obsidian->vault_intersect (gate <48h
-  in night_audit): se la notte non gira, il segnale orfani scade ma non crasha.
-• RAG invariato: chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124. Un solo processo GPU alla volta.
+• Adobe MCP: account 'auth'. export_html_to_express vuole HTML self-contained con meta hz:
+  + font Adobe Fonts (find_fonts -> get_fontkit_embed_url). Readiness skill PRIMA di ogni export.
+• Render caroselli: Chrome headless cattura solo il viewport -> per le 8 slide rendere una
+  STRISCIA 1080x11200 e tagliarla con Python/PIL in slides/slide_N.png.
+• Path Chrome: C:/Program Files/Google/Chrome/Application/chrome.exe. Screenshot ABSOLUTO
+  (path relativo = Accesso negato). Profilo --user-data-dir in Temp.
+• Verifiche #48 verdi: 0 orfani episodi, build 214->214, tsc -b EXIT 0.
 
-Generato: 25/06/2026 — fine sessione #47
+Generato: 25/06/2026 — fine sessione #48
