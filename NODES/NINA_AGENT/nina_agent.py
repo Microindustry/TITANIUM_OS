@@ -1,4 +1,4 @@
-# nina_agent.py | TITANIUM_OS / NODES / NINA_AGENT | v1.0 | 2026-06-22
+# nina_agent.py | TITANIUM_OS / NODES / NINA_AGENT | v1.1 | 2026-06-25
 # Generatore Nina v2 GROUNDED a 2 stadi: 1 concetto reale -> 1 avventura.
 #   Stadio 1 — ARCHITETTO (haiku): interroga il RAG (MENTE) e progetta lo scheletro
 #              dell'episodio (analogia "test della sarta", strato-fondo reale, open
@@ -6,10 +6,13 @@
 #   Stadio 2 — SCRITTORE (sonnet): scrive l'avventura completa nella voce di
 #              Nina/THEMIS/FORGE, formato canonico identico agli EP_N2_*, dalla
 #              Character Bible VIVA (letta da MENTE, cosi' resta in sync).
-# Output in S_AVVENTURA/_PROPOSTI/ con status 'proposto_da_validare' (canone Nina v2:
-# "il sistema PROPONE, l'umano APPROVA" — gli episodi definitivi li valida Matteo;
-# i temi di VALORI/relazioni li decide il genitore). Stampa la riga NINA_SEED da
-# aggiungere a build_episodes_json.py quando l'episodio viene promosso.
+# Output: AUTO-PROMOZIONE in canone (default auto=True, canone sess.#44: "tutto
+# automatico, NIENTE revisione umana"). save_canon scrive l'episodio DEFINITIVO con
+# status 'ready' sia nel canone (S_AVVENTURA/, dashboard) sia in MENTE (RAG), e
+# registra da solo l'asse_nina. Le garanzie che sostituiscono il cancello: grounding
+# RAG obbligatorio + canon_guard alla fonte + reversibilita' (e' una versione, si
+# rigenera). MODALITA' LEGACY con cancello _PROPOSTI ('proposto_da_validare' + riga
+# NINA_SEED da promuovere a mano) solo se si chiede esplicitamente auto=False.
 #
 # Uso:
 #   python nina_agent.py --concept "l'allucinazione: quando la mente inventa" \
