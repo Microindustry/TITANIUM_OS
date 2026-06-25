@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-eb98bda27f",
+    "date": "2026-06-25",
+    "git": "be6a6e3c",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "HNSW corrotto 3 volte in 2 giorni per power-loss: la bussola aperta segnala «la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni)» e il todo HNSW da rigenerare è ancora aperto. Il commit RAG v4.2 con snapshot è stato pushato (79908408), ma senza UPS il prossimo blackout riporta il sistema al punto di partenza: il backup non previene la corruzione, la subisce e poi ripristina.",
+    "azione": "Ordinare UPS nel prossimo checkout insieme a Vevor+ER20 (unico ordine, già pianificato). Fino all'arrivo: eseguire il --rebuild HNSW ora che l'indice è pulito post-v4.2, verificare che il backup snapshot sia integro con un test-restore su chroma_db_test.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-25"
+  },
+  {
+    "id": "AUD-cf85ebc2ce",
+    "date": "2026-06-25",
+    "git": "be6a6e3c",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Traceback non attribuito in night_push.log: il log del 2026-06-24 riporta \"⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):\" — un crash reale nelle notturne, ma l'estratto non mostra né il tipo di eccezione né lo stack completo. Non è possibile sapere cosa sia caduto (il push? il research agent? entrambi?) né se si sia ripreso.",
+    "azione": "Aprire night_push.log e night_research.log del 24/06, leggere le righe successive al Traceback per identificare exception type e modulo. Aggiungere al job notturno un catch-all che scriva su un file separato errors.log con timestamp + stack completo, così il prossimo audit ha la riga intera.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-25"
+  },
+  {
+    "id": "AUD-a9c15ed10f",
+    "date": "2026-06-25",
+    "git": "be6a6e3c",
+    "area": "MIMS",
+    "severity": "media",
+    "finding": "MIMS fermo a pillar 30% con due prerequisiti fisici non ancora ordinati/montati: il martinetto Vevor 3 stadi (prerequisito VULCAN) non è montato e il mandrino ER20 non è ordinato. La decisione Via B è presa (e338ce6d), la scheda §5 è a canone, ma senza la prima colata giunto nessun dato reale entra nel processo. Il BEP Via B non può essere ricalcolato su dati stimati.",
+    "azione": "Includere mandrino ER20 nel prossimo ordine hardware (stesso checkout UPS+Vevor). Fissare una data fisica per il montaggio martinetto: senza scadenza il prerequisito resta indefinitamente «prossimo step».",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-25"
+  },
+  {
+    "id": "AUD-9dd4f51376",
+    "date": "2026-06-25",
+    "git": "be6a6e3c",
+    "area": "ROADMAP",
+    "severity": "bassa",
+    "finding": "Il todo «Schedulare night_ai_watch.bat ogni 48h (Task Scheduler, richiede UAC)» è aperto e non ha dipendenze bloccanti, ma ogni notte senza di esso è una notte in cui il watchdog AI gira solo se qualcuno lo ha avviato manualmente. Con 99 commit in 7 giorni e job notturni critici (push, research, audit), un watchdog non schedulato è un punto di silenzio silenzioso.",
+    "azione": "Dedicare 10 minuti alla prossima sessione sveglia per creare il Task Scheduler con UAC: è un'operazione una-tantum che rende affidabili tutte le notturne già costruite.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-25"
+  },
+  {
+    "id": "AUD-530000b5f9",
+    "date": "2026-06-25",
+    "git": "be6a6e3c",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Rate-limit HF Hub ancora attivo: il log del 2026-06-24 riporta \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Il commit 473a06d0 ha silenziato il warning nel log, ma non ha eliminato il limite — lo ha reso invisibile. Il problema sottostante (throttling sui download HF) persiste non monitorato.",
+    "azione": "Aggiungere HF_TOKEN al .env (token gratuito, basta registrazione HF). Distinguere nel codice il silenzio del warning dalla risoluzione del rate-limit: loggare comunque un contatore di richieste throttled in errors.log, così il silenzio non maschera degradi futuri.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-25"
+  },
+  {
+    "id": "AUD-16d73874ce",
+    "date": "2026-06-25",
+    "git": "be6a6e3c",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Chiavi .env ruotabili da settimane, rischio reale non chiuso: la bussola aperta riporta «CHIAVI DA RUOTARE (red-team #38, att05): .env esfiltrabile via API — le ruota Matteo» e compare anche nei blockers attivi. Il red-team è la sessione #38, siamo alla #45: 7 sessioni di esposizione confermata e documentata senza azione.",
+    "azione": "Rotazione chiavi .env nella prossima sessione sveglia, prima di qualsiasi altra feature. Aggiungere alla API che serve i file un check esplicito della denylist anche sui path relativi (non solo assoluti) per chiudere il vettore di esfiltrazione indipendentemente dalla rotazione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-25"
+  },
+  {
     "id": "AUD-df041cf237",
     "date": "2026-06-24",
     "git": "61fe20c5",
@@ -342,8 +414,10 @@
     "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto e compare nella bussola come debito segnalato dagli agenti. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi è azione manuale di Matteo non ancora eseguita. Chiavi non ruotate dopo un red-team equivale a esposizione nota e accettata.",
     "azione": "Matteo ruota le chiavi .env prima della prossima sessione attiva. È un'azione di 10 minuti che chiude un rischio di sicurezza esplicito già identificato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-20"
+    "status": "resolved",
+    "last_seen": "2026-06-20",
+    "resolved_on": "2026-06-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-b395e1d6a6",

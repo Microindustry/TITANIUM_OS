@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-06-24T03:52:41",
-  "date": "2026-06-24",
-  "git_head": "61fe20c5",
-  "rag_chunks": 34158,
-  "n_episodes": 248,
-  "n_commits_7d": 81,
+  "last_audit": "2026-06-25T03:52:36",
+  "date": "2026-06-25",
+  "git_head": "be6a6e3c",
+  "rag_chunks": 24574,
+  "n_episodes": 249,
+  "n_commits_7d": 99,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -17,38 +17,20 @@
       "log": "night_research.log",
       "tipo": "rate-limit sorgente",
       "riga": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.",
-      "data": "2026-06-23"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-06-23 00:34:44 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-06-23"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-06-23 00:35:07 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
-      "data": "2026-06-23"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-06-23 00:35:07 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-06-23"
+      "data": "2026-06-24"
     },
     {
       "log": "night_push.log",
       "tipo": "crash/eccezione",
-      "riga": "⚠ night_research.log: Traceback (most recent call last):",
-      "data": "2026-06-23"
+      "riga": "⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):",
+      "data": "2026-06-24"
     }
   ],
   "critiche": {
     "added": 6,
-    "auto_closed": 0,
-    "total": 99,
-    "open": 31
+    "auto_closed": 1,
+    "total": 105,
+    "open": 14
   },
   "verdict": "ATTENZIONE"
 }
