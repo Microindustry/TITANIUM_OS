@@ -1,0 +1,278 @@
+{
+  "data": "2026-06-25",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "UPS hardware: acquisto e installazione come cura radice HNSW",
+      "cosa": "Acquistare un UPS da ~50-80€ (es. APC BE600M2 o equivalente) e collegare il PC che ospita ChromaDB/HNSW prima di qualsiasi altro intervento software sul RAG.",
+      "perche": "Segnale diretto: corruzione HNSW da power-loss ricorrente 3 volte in 2 giorni (critiche_audit_aperte sev=alta x2, todo_bussola 'UPS hardware ~50-80€'). Il commit RAG v4.2 con snapshot è già pushato ma non risolve la causa: un micro-blackout corrompe l'indice a monte di qualsiasi fix software.",
+      "come": [
+        "1. Matteo: checkout APC BE600M2 o simile su Amazon/Unieuro (~60€, 600VA, 2 prese protette).",
+        "2. Collegare PC host ChromaDB alla presa UPS, non alla presa di rete diretta.",
+        "3. Verificare che il software UPS (PowerChute o cyberpower) invii shutdown graceful al SO dopo 2 min su batteria.",
+        "4. Eseguire test simulato (stacca spina UPS): ChromaDB deve chiudersi cleanly prima del cut.",
+        "5. Solo dopo: eseguire `--rebuild` HNSW pulito e validare con query smoke-test."
+      ],
+      "rischio": "Nessun rischio software. Rischio residuo: UPS non copre blackout prolungati, ma risolve il 95% dei micro-cut.",
+      "autonomia": "approvazione",
+      "fonte": "segnale interno: critiche_audit_aperte[area=RAG,sev=alta] + todo_bussola 'UPS hardware (~50-80€)'"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-25",
+    "milestone": "Sessione #45 (24/06): CRITICHE AZZERATE sulle 3 fonti del sidebar. Auto-audit 31->9 (burn-down via /loop autonomo: gitignore DATA/views, research_agent v1.3 query-broadening+summary, warning HF silenziato, gate self-improve documentato; stale chiuse). Canone manuale 33->25 (sweep). Bussola 41->20 (g",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "HNSW corrotto 3 volte in 2 giorni per power-loss: la bussola aperta segnala «la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni)» e il todo HNSW da rigenerare è ancora aperto. Il commit RAG v4.2 con snapshot è stato pushato "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Traceback non attribuito in night_push.log: il log del 2026-06-24 riporta \"⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):\" — un crash reale nelle notturne, ma l'estratto non mostra né il tipo di eccezione né lo s"
+      },
+      {
+        "area": "MIMS",
+        "sev": "media",
+        "finding": "MIMS fermo a pillar 30% con due prerequisiti fisici non ancora ordinati/montati: il martinetto Vevor 3 stadi (prerequisito VULCAN) non è montato e il mandrino ER20 non è ordinato. La decisione Via B è presa (e338ce6d), la scheda §5 è a cano"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "bassa",
+        "finding": "Il todo «Schedulare night_ai_watch.bat ogni 48h (Task Scheduler, richiede UAC)» è aperto e non ha dipendenze bloccanti, ma ogni notte senza di esso è una notte in cui il watchdog AI gira solo se qualcuno lo ha avviato manualmente. Con 99 co"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Rate-limit HF Hub ancora attivo: il log del 2026-06-24 riporta \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Il commit 473a06d0 ha silenziato il w"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Chiavi .env ruotabili da settimane, rischio reale non chiuso: la bussola aperta riporta «CHIAVI DA RUOTARE (red-team #38, att05): .env esfiltrabile via API — le ruota Matteo» e compare anche nei blockers attivi. Il red-team è la sessione #3"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Corruzione HNSW da power-loss ricorrente 3 volte in 2 giorni senza rimedio hardware. Il blocker esplicito lo conferma: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg): è la cura alla radice'. Il fix software (--drop-hnsw, ra"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna su Semantic Scholar è bloccata da rate-limit non autenticato. Il log del 2026-06-23 mostra: '2026-06-23 00:35:07 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/grap"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 22/06 ha prodotto zero risultati utili su Semantic Scholar per la query 'linear guide rail preload stiffness': \"2026-06-22 03:38:27 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.s"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "ChromaDB ha crashato durante la ricerca notturna del 22/06 con errore esplicito: \"chromadb.errors.InternalError: Error executing plan: Error sending backfill request to compactor: Error constructing hnsw segment reader: Error creating hnsw "
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS' è presente nei blockers attivi e il pillar V32 è al 65%. La ricerca notturna ha tentato proprio query su 'CNC spindle ER20 runout thermal accuracy' (22/06/202"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto nei blockers di stanotte, nonostante il commit 43e74471 abbia aggiunto la denylist su /api/file. La rotazione delle chiavi è un'azione manuale che spetta a Matteo e non risu"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 249,
+      "rag_chunks": 24574,
+      "n_commits_7d": 99
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**HNSW da rigenerare**: `--rebuild` (reset-per-id, l'unico API-up-safe) ha lasciato",
+      "Commit + push del lavoro RAG (engine v4.1+v4.2 + night job + gitignore + doc esclusione).",
+      "`AZIONI_MATTEO.md`: UPS + mandrino ER20 (1 checkout, cura radice HNSW + sblocca MIMS) · chiavi .env",
+      "Enhancement RAG non fatti: chunking per heading, backup snapshot chroma_db (`_VAULT/BACKUPS`).",
+      "Contenuto Nina: verticale finanza ₣2 \"spendere meno di quanto entra\" (open loop pronto).",
+      "**Da decidere con Matteo (svegli, non di notte):** gitignore di `DATA/views/` (298 file auto-gen tracciati) + `logs/`; raggruppare/indicizzare `AUTOMATIONS/core` (~30 script piatti); pulire `INBOX/` (brief vecchi); **doppio watchdog** (2 istanze) da ridurre a 1.",
+      "**ANIMATIC EP_N2_01 — IN PAUSA** (Matteo: «attendi con animazione»). NON ripartire con l'animatic finché non lo dice. Bivio formato già pronto in `PRODUZIONE_NINA.md` (storyboard deck Express / video+TTS / solo illustrazioni).",
+      "**UPS hardware** (~50-80€): la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni) → cura alla radice. Blocker hardware accanto a martinetto Vevor + mandrino ER20.",
+      "**API key Semantic Scholar** gratuita in `.env` → azzera i 429 della ricerca notturna.",
+      "**Chunking per heading** (#/##/###) invece di 512-char fisso → retrieval più preciso (richiede rebuild). Upgrade RAG post-Nina.",
+      "**Backup snapshot chroma_db** in `_VAULT/BACKUPS` (tar via deep_freeze) + test restore.",
+      "Cartelle `chroma_db_*` (corrotte/parziali/reset) cancellabili quando tranquillo (gitignored).",
+      "**V9 = materia di studio** (Matteo): ASSOLUTO V9 va implementata con MIMS *dopo*",
+      "**NON aggiunto alle notturne unattended** (di proposito): la generazione Nina resta on-demand",
+      "**CHIAVI DA RUOTARE** (red-team #38, att05): `.env` esfiltrabile via API — le ruota Matteo."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Craziest Vibe Coded Project I've Ever Seen",
+        "url": "https://www.youtube.com/shorts/A0eELMMR_pY"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Codex Can Now \"Copy\" Your Tasks",
+        "url": "https://www.youtube.com/shorts/qv-KPydJhXs"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Red-Teaming after Mythos — Zico Kolter & Matt Fredrikson, Gray Swan",
+        "url": "https://www.latent.space/p/gray-swan"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] SpaceX is already a $28B/yr Neocloud",
+        "url": "https://www.latent.space/p/ainews-spacex-is-already-a-28byr"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Porting the Moebius 0.2B image inpainting model to run in the browser with Claude Code",
+        "url": "https://simonwillison.net/2026/Jun/22/porting-moebius/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Prompt Injection as Role Confusion",
+        "url": "https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "OPFS + Pyodide test harness",
+        "url": "https://simonwillison.net/2026/Jun/23/opfs-pyodide/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette 1.0a35",
+        "url": "https://simonwillison.net/2026/Jun/23/datasette/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "autonomic-ai-dev/agent-brain ★0 — Local context & memory engine for IDE agents — route the right skills from thous",
+        "url": "https://github.com/autonomic-ai-dev/agent-brain"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "yunsii/wezdeck ★4 — A flight deck for your AI agents — multi-agent terminal platform built on WezTer",
+        "url": "https://github.com/yunsii/wezdeck"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "glyphs-ai/glyph ★0 — Glyph is a workbench for composing the forms intelligence takes today — and disc",
+        "url": "https://github.com/glyphs-ai/glyph"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "bolyra/bolyra ★0 — Mutual ZKP authentication for humans and AI agents",
+        "url": "https://github.com/bolyra/bolyra"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "RudAns/OblivionisAgent ★1 —  给本地 Claude Code CLI 的连线式桌面控制台（不同群聊指向不同的本地Claude会话，功能间不污染上下文）：连线编排Claude会话/路由/人格",
+        "url": "https://github.com/RudAns/OblivionisAgent"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "itzikiusa/otto_os ★0 — Agentic development environment for macOS: Claude Code / Codex sessions, multi-a",
+        "url": "https://github.com/itzikiusa/otto_os"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "kazi-org/kazi ★2 — A reconciliation controller for software goals: declare a goal as machine-checka",
+        "url": "https://github.com/kazi-org/kazi"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "Scottcjn/Rustchain ★449 — DePIN for Vintage Hardware — Proof-of-Antiquity blockchain where old machines ou",
+        "url": "https://github.com/Scottcjn/Rustchain"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "RudAns/OblivionisAgent ★1 —  给本地 Claude Code CLI 的连线式桌面控制台（不同群聊指向不同的本地Claude会话，功能间不污染上下文）：连线编排Claude会话/路由/人格",
+        "url": "https://github.com/RudAns/OblivionisAgent"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Sharpened-turbulence945/prismatic-claude-statusline ★0 — Customize your Claude Code status line with truecolor gradients, context bars, a",
+        "url": "https://github.com/Sharpened-turbulence945/prismatic-claude-statusline"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "itzikiusa/otto_os ★0 — Agentic development environment for macOS: Claude Code / Codex sessions, multi-a",
+        "url": "https://github.com/itzikiusa/otto_os"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "alejandr6360/coding-agent-handoff ★0 — Transform chat conversations into structured markdown briefs for your coding age",
+        "url": "https://github.com/alejandr6360/coding-agent-handoff"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "kazi-org/kazi ★2 — A reconciliation controller for software goals: declare a goal as machine-checka",
+        "url": "https://github.com/kazi-org/kazi"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "vp461876/claude-brief ★0 — Track active Claude Code sessions with a live, per-session summary displayed in ",
+        "url": "https://github.com/vp461876/claude-brief"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "Xza2792/ui-ux-audit-skill ★0 — Audit web and mobile UI code with AI to detect layout failures, responsiveness e",
+        "url": "https://github.com/Xza2792/ui-ux-audit-skill"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "angadsinghd628/screen-flow-ai-agent ★0 — Capture screen regions, perform OCR, and chat with a multimodal AI model through",
+        "url": "https://github.com/angadsinghd628/screen-flow-ai-agent"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-e7b"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[Exclusive] $250 off AI Engineer tix til Monday",
+        "url": "https://www.latent.space/p/exclusive-250-off-ai-engineer-tix"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Sean Lynch",
+        "url": "https://simonwillison.net/2026/Jun/19/sean-lynch/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Temporary Cloudflare Accounts for AI agents",
+        "url": "https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc1",
+        "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc1 adds migrations and nested transactions",
+        "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}

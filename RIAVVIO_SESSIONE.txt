@@ -1,46 +1,57 @@
-=== RIAVVIO SESSIONE #46 — 24/06/2026 ===
-Ultima sessione: #45 — 2026-06-24 (CRITICHE azzerate 3 fonti · de-hardcode benen · loop autonomo)
+=== RIAVVIO SESSIONE #47 — 25/06/2026 ===
+Ultima sessione: #46 — 24-25/06/2026 (RAG v4.2 · _ARCHIVIO fuori canone · HNSW guarito · Nina auto)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-La barra laterale CRITICHE è stata risolta end-to-end sulle 3 fonti che la alimentano:
-auto-audit 31→9, canone manuale 33→25, bussola 41→20. Le voci residue sono REALI e per
-lo più SOLO-MATTEO (hardware/chiavi/contenuti) → raccolte in AZIONI_MATTEO.md. Header del
-sidebar reso onesto (totale 3 fonti + chip, niente più "33" opaco). Decisa la Via B per i
-connettori MIMS (sblocca BEP/B2). De-hardcodati e poi rimossi i 5 registrar legacy con benen.
-Build TS verde, tutto pushato.
+Sessione #46 chiusa con il RAG portato allo stato dell'arte 2026 e PROVATO end-to-end sulla
+generazione Nina. Tre upgrade additivi (chunking heading-aware, snapshot _VAULT, GraphRAG-lite
+wikilink). Sistemato _DA_ORDINARE -> _ARCHIVIO (archivio V6 superato che inquinava il canone).
+Indice guarito (rag_recover via UAC), API su, query sane, canone V7 in cima. Generato EP_N2_51
+come prova. Deciso: Nina = auto-promozione senza revisione umana.
 
-━━━ FATTO IN SESSIONE #45 ━━━
-• AUTO-AUDIT 31→9 (burn-down via /loop autonomo, fermato sui blocchi-Matteo):
-  gitignore DATA/views (340 file churn), research_agent v1.3 (query-broadening+summary),
-  warning HF silenziato, gate self-improve documentato; stale chiuse (RAG risorto #40-44,
-  night_audit, Nina definitiva, Obsidian). Commit 2bdbbf3e→3919e0fa.
-• MIMS connettori = Via B (compressione VULCAN, processo proprietario B2) a canone SCHEDA §5
-  + STATE. Silent block → v.B Ø18mm (V8_DELTA). Commit e338ce6d, MENTE d46513f.
-• CANONE MANUALE 33→25 (sweep criticheData.ts: 8 critiche fatte/superate). Header onesto
-  (3 fonti + chip) + fix bug 42 todo-fantasma TOC + deep-link #view per dash_shot. 566da4b9.
-• BUSSOLA 41→20 (groom: 20 todo già fatti/superati, glifo [ ]→[✓]). e65bdbd0.
-• DE-HARDCODE benen: 5 registrar legacy resi portabili ($PSScriptRoot/%~dp0+env, ASCII-norm,
-  fix && PS5.1) 1397b0ee → poi RIMOSSI (git rm, ridondanti con register_night_tasks.ps1) 1a5570dc.
-• RIMOSSO START_GETAC.bat (launcher Getac morto sul fisso) — superato da START_LOGIN.bat
-  che parte da solo al login (shell:startup\TITANIUM_OS.lnk). de5a514d.
+>>> PROSSIMA SESSIONE #47 SI PARTE DA: ANALIZZARE UN LINK (Matteo lo fornira' a inizio sessione). <<<
 
-━━━ PROSSIMO LAVORO (da AZIONI_MATTEO.md + bussola) ━━━
-• [Matteo] UPS + mandrino ER20 in 1 checkout (cura radice corruzione HNSW + sblocca MIMS).
-• [Matteo] Chiavi .env: Semantic Scholar (gratuita, azzera i 429) + rotazione red-team #38. URL sito Maria.
-• [io] Enhancement RAG: chunking per heading + backup snapshot chroma_db in _VAULT/BACKUPS.
-• [io] Contenuto Nina: verticale finanza ₣2 "spendere meno di quanto entra" (open loop pronto).
-• [opzionale] START_GETAC.bat: rimuovere/archiviare se il Getac non si usa più (DEPRECATED.md).
+━━━ FATTO IN SESSIONE #46 ━━━
+• RAG v4.2 (rag_engine.py), allineato al SOTA 2026 (ricerca fatta prima di committare):
+  - Chunking HEADING-AWARE sui .md: split sui titoli (#..######) = confini semantici, +breadcrumb
+    [sez>sottosez] (contesto + keyword cercabili). .py/.json/.txt e .md senza heading -> fallback.
+    Geometria invariata = NESSUN re-embed forzato (no OOM notturno); entra additivo per mtime.
+  - SNAPSHOT chroma_db in _VAULT/BACKUPS/rag_snapshots (rotazione 3, --snapshot/--restore-snapshot,
+    agganciato a night_research dopo l'incrementale). Testato live sotto lock API: 230MB, 0.1s.
+  - GraphRAG-lite WIKILINK-EXPANSION: build_linkgraph() (no GPU) -> rag_linkgraph.json; search()
+    espande dai top-3 i [[link]] (cap +8) PRIMA del reranker che gata. Incluso grafo Collegati
+    (ponte doc->chunk). Flag --linkgraph / --no-graph. Commit 79908408.
+• _DA_ORDINARE -> _ARCHIVIO (richiesta "sistema le cose al suo posto"): archivio NotebookLM gia'
+  smistato il 20/06 (canone V6 superato) ma INDICIZZATO PER ERRORE nel RAG canonico (top-4 nelle
+  ricerche MIMS/V32). Rinominato -> rientra in EXCLUDE_DIR_NAMES, fuori dal RAG, resta in Obsidian.
+  Wikilink-safe. Commit MENTE b5cb18f (107 rename chirurgici). Commit doc TITANIUM_OS a0f6a9b9.
+• Migrazione corpus eseguita (rebuild) + HNSW RIGENERATO via SERVICES\rag_recover.ps1 (UAC Matteo):
+  era label-fantasma KeyError np.uint64 dal reset-per-id (limite chromadb 0.5.23). Indice sano, API
+  su, query senza crash, _ARCHIVIO escluso (0 risultati), canone V7 in cima (SCHEDA_PRODOTTO_MIMS).
+• PROVA end-to-end: generato EP_N2_51 "Il Sussurratore che Indovina" grounded sul RAG guarito
+  (18 fonti) -> richiama EP_N2_06 + Mappa regione 3. La catena RAG->Nina funziona davvero.
+• DECISIONE Matteo: Nina = AUTO-PROMOZIONE, niente revisione umana (era gia' default sess.#44;
+  corretto commento stale nina_agent.py). Garanzie = grounding + canon_guard + reversibilita'.
+  Codice/sicurezza (SELF_IMPROVE) resta a cancello umano. Commit 9e3bde3a + memoria salvata.
+
+━━━ PROSSIMO LAVORO ━━━
+• [#47] ANALIZZARE IL LINK che Matteo fornira' (punto di partenza).
+• [io] Migrazione totale chunking: rebuild deliberato a GPU libera (API giu') per riapplicare
+  heading-aware a tutto il corpus in un colpo. Off-by-one 24344/24343 si auto-allinea (self-heal).
+• [Matteo] AZIONI_MATTEO.md: UPS + mandrino ER20 (1 checkout); chiavi .env (Semantic Scholar +
+  rotazione red-team #38); URL sito Maria.
+• [io] Contenuto Nina verticale finanza F2 "spendere meno di quanto entra" (open loop pronto).
 
 ━━━ BLOCKERS ━━━
-⚠ UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
-⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo.
-⚠ Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici MIMS/VULCAN).
+- Non sono admin: i task elevati (rag_recover, night) li avvio non parte -> serve l'UAC di Matteo,
+  oppure girano da soli sul loro trigger notturno.
+- UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente: cura alla radice.
+- Mandrino 2.2kW ER20 + martinetto Vevor da montare (prerequisiti fisici MIMS/VULCAN).
 
 ━━━ NOTE ━━━
-• La barra CRITICHE somma 3 fonti: criticheData.ts (canone manuale) + critiche_auto.json
-  (auto-audit notturno) + bussola_todos.json (DA_FARE_FATTO.md). L'header ora le mostra separate.
-• dash_shot può puntare una vista precisa: localhost:5173/#<view> (es. #critiche) — deep-link in systemStore.
-• I 5 registrar legacy rimossi sono recuperabili da git history (git checkout <commit>~1 -- <file>).
-• Canone Nina = serie EP_N2. build_episodes_json.py è ADDITIVE-ONLY (per riscrivere: rimuovi l'id poi rebuild).
+• RAG v4.2: chromadb 0.5.23 (NON 1.x) + torch 2.6.0+cu124 (NON cpu). Un solo processo GPU alla volta
+  (8GB): per le query di test forzare RAG_DEVICE=cpu se l'API e' su (evita OOM/contesa).
+• Nina genera in AUTOMATICO in canone (auto=True). Niente _PROPOSTI (legacy). Se un episodio non va,
+  si rigenera (rimuovi id da episodes.json + rebuild — additivo).
+• Snapshot RAG known-good in _VAULT/BACKUPS/rag_snapshots (rotazione 3) per restore istantaneo.
 
-Generato: 24/06/2026 — fine sessione #45
+Generato: 25/06/2026 — fine sessione #46

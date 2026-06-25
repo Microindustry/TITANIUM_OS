@@ -1,5 +1,83 @@
 [
   {
+    "id": "BUS-b48b3015",
+    "stato": "fatto",
+    "testo": "**Chunking heading-aware sui `.md`** (`rag_engine.py` v4.1): `_chunk_md_by_heading` spezza",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-8f5800da",
+    "stato": "fatto",
+    "testo": "**Snapshot chroma_db in `_VAULT/BACKUPS/rag_snapshots`** (fuori git, regola 8): `snapshot_chroma()`",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-443ab95f",
+    "stato": "fatto",
+    "testo": "**Scelta di sicurezza: NIENTE re-embed forzato.** Non ho bumpato `CHUNK_VER` (geometria invariata):",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-25256260",
+    "stato": "fatto",
+    "testo": "**Ricerca SOTA 2026 (RAG + Obsidian)** prima di committare: la v4.1 (heading + breadcrumb) risulta",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-90613e72",
+    "stato": "fatto",
+    "testo": "**v4.2 — GraphRAG-lite wikilink-expansion** (`rag_engine.py`): `build_linkgraph()` costruisce",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-3a650fa0",
+    "stato": "fatto",
+    "testo": "**Migrazione totale ESEGUITA** (rebuild CPU ~15 min, zero contesa GPU): nuovo chunking",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-203f2c14",
+    "stato": "fatto",
+    "testo": "**HNSW RIGENERATO** (era label-fantasma KeyError np.uint64 dal reset-per-id, limite chromadb",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-edeeedb2",
+    "stato": "fatto",
+    "testo": "**`_DA_ORDINARE` → `_ARCHIVIO`** (richiesta Matteo \"sistema le cose al suo posto\"): era",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-e3bd7839",
+    "stato": "fatto",
+    "testo": "**PROVA end-to-end** (non un grafico): generato `EP_N2_51 \"Il Sussurratore che Indovina\"`",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-bc9c4c76",
+    "stato": "fatto",
+    "testo": "**DECISIONE Matteo: Nina = AUTO-PROMOZIONE, niente revisione umana** (confermato 25/06). Era",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-b8449c8e",
+    "stato": "fatto",
+    "testo": "**Commit + push** TITANIUM_OS: `79908408` (v4.2) · `a0f6a9b9` (esclusione `_ARCHIVIO`) ·",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-1de2f559",
+    "stato": "da_fare",
+    "testo": "**PROSSIMA SESSIONE #47 — si parte da: ANALIZZARE UN LINK** (Matteo lo fornirà a inizio sessione).",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
+    "id": "BUS-fc9fd0c7",
+    "stato": "da_fare",
+    "testo": "Migrazione totale chunking: si completa coi rebuild deliberati a GPU libera; off-by-one",
+    "sessione": "Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto"
+  },
+  {
     "id": "BUS-cf520070",
     "stato": "fatto",
     "testo": "**Auto-audit notturno: 31 → 9** (burn-down via `/loop` autonomo, fermato quando solo i",

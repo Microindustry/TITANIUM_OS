@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-24T21:11:43.912138",
+  "scanned_at": "2026-06-25T18:32:44.540507",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 770,
+  "total_files": 779,
   "files_read": 5,
-  "files_skipped": 765,
+  "files_skipped": 774,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.4,
+      "size_kb": 0.5,
       "readable": false,
       "extracts": {}
     },
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 90.0,
+      "size_kb": 89.6,
       "readable": false,
       "extracts": {}
     },
@@ -162,42 +162,28 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 9.4,
+      "size_kb": 10.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 9.4,
+      "size_kb": 10.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\d0\\5bf7532da47fb40af6e4c961389abeb4eef35a",
-      "type": "unknown",
-      "size_kb": 8.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d2\\d78dc1c3ceb527af7e1304885f702faf76969f",
+      "path": ".git\\objects\\7d\\ecbc56ef78c20002c9cc5cfb4eae0e40802830",
       "type": "unknown",
       "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\d4\\6513f160b858b12c711496623bcbb9ce731e06",
+      "path": ".git\\objects\\b5\\cb18ffbf12fc6ce85b849c8db019a846b526e1",
       "type": "unknown",
-      "size_kb": 0.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f8\\8a8e0b29b13463f877c7b2f5a69ecb364e79e0",
-      "type": "unknown",
-      "size_kb": 0.3,
+      "size_kb": 0.8,
       "readable": false,
       "extracts": {}
     },
@@ -211,7 +197,28 @@
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 160.8,
+      "size_kb": 175.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.idx",
+      "type": "idx",
+      "size_kb": 15.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.pack",
+      "type": "pack",
+      "size_kb": 4808.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.rev",
+      "type": "rev",
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -300,6 +307,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\ORIG_HEAD",
+      "type": "unknown",
+      "size_kb": 0.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\refs\\heads\\master",
       "type": "unknown",
       "size_kb": 0.0,
@@ -344,7 +358,7 @@
     {
       "path": ".obsidian\\workspace.json",
       "type": "json",
-      "size_kb": 6.9,
+      "size_kb": 7.5,
       "readable": false,
       "extracts": {}
     },
@@ -356,758 +370,765 @@
       "extracts": {}
     },
     {
-      "path": "_CANONE.md",
+      "path": "2026-06-24.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 0.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\_INDEX__DA_ORDINARE.md",
+      "path": "_ARCHIVIO\\_INDEX__ARCHIVIO.md",
       "type": "md",
       "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\_SINTESI_EVOLUZIONE_IDEE.md",
+      "path": "_ARCHIVIO\\_SINTESI_EVOLUZIONE_IDEE.md",
       "type": "md",
       "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\_SMISTAMENTO.md",
+      "path": "_ARCHIVIO\\_SMISTAMENTO.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\01_assoluto-v4-genesis-editiondocx.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\01_assoluto-v4-genesis-editiondocx.md",
       "type": "md",
       "size_kb": 43.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\02_assoluto-v5-genesis-infinitadocx.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\02_assoluto-v5-genesis-infinitadocx.md",
       "type": "md",
       "size_kb": 45.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\03_assoluto-v6pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\03_assoluto-v6pdf.md",
       "type": "md",
       "size_kb": 62.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\assoluto-v5-genesis-dellecosistema-industriale-titanium-vent\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\01_fase-1-v3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\01_fase-1-v3pdf.md",
       "type": "md",
       "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\02_fase-2-v3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\02_fase-2-v3pdf.md",
       "type": "md",
       "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\03_fase-2-parte-b-v3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\03_fase-2-parte-b-v3pdf.md",
       "type": "md",
       "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\04_fase-3-v3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\04_fase-3-v3pdf.md",
       "type": "md",
       "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\05_fase-4-v3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\05_fase-4-v3pdf.md",
       "type": "md",
       "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\06_fase-5-v3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\06_fase-5-v3pdf.md",
       "type": "md",
       "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\07_il-codex-di-prodottopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\07_il-codex-di-prodottopdf.md",
       "type": "md",
       "size_kb": 28.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\08_il-master-manifestopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\08_il-master-manifestopdf.md",
       "type": "md",
       "size_kb": 7.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\09_volume-2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\09_volume-2pdf.md",
       "type": "md",
       "size_kb": 18.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\10_volume-3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\10_volume-3pdf.md",
       "type": "md",
       "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\11_volume-1pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\11_volume-1pdf.md",
       "type": "md",
       "size_kb": 13.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\12_figure-professionalipdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\12_figure-professionalipdf.md",
       "type": "md",
       "size_kb": 26.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\13_il-manifesto-di-comandopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\13_il-manifesto-di-comandopdf.md",
       "type": "md",
       "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\stress-test-e-strategia-sovrana-di-produzione\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\01_la-scienza-finanziaria-lasimmetria-di-valorepdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\01_la-scienza-finanziaria-lasimmetria-di-valorepdf.md",
       "type": "md",
       "size_kb": 30.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\02_fase-1-v2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\02_fase-1-v2pdf.md",
       "type": "md",
       "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\03_fase-1pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\03_fase-1pdf.md",
       "type": "md",
       "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\04_fase-2-parte-b-v2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\04_fase-2-parte-b-v2pdf.md",
       "type": "md",
       "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\05_fase-2-parte-bpdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\05_fase-2-parte-bpdf.md",
       "type": "md",
       "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\06_fase-2-v2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\06_fase-2-v2pdf.md",
       "type": "md",
       "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\07_fase-2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\07_fase-2pdf.md",
       "type": "md",
       "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\08_fase-3-v2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\08_fase-3-v2pdf.md",
       "type": "md",
       "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\09_fase-3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\09_fase-3pdf.md",
       "type": "md",
       "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\10_fase-4-v2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\10_fase-4-v2pdf.md",
       "type": "md",
       "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\11_fase-4pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\11_fase-4pdf.md",
       "type": "md",
       "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\12_fase-5-v2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\12_fase-5-v2pdf.md",
       "type": "md",
       "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\13_fase-5pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\13_fase-5pdf.md",
       "type": "md",
       "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\14_il-codex-di-prodottopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\14_il-codex-di-prodottopdf.md",
       "type": "md",
       "size_kb": 28.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\15_il-master-manifestotxt.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\15_il-master-manifestotxt.md",
       "type": "md",
       "size_kb": 8.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\16_volume-2pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\16_volume-2pdf.md",
       "type": "md",
       "size_kb": 18.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\17_volume-3pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\17_volume-3pdf.md",
       "type": "md",
       "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\18_volume-1pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\18_volume-1pdf.md",
       "type": "md",
       "size_kb": 13.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\19_figure-professionalipdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\19_figure-professionalipdf.md",
       "type": "md",
       "size_kb": 26.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\20_il-manifesto-di-comandopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\20_il-manifesto-di-comandopdf.md",
       "type": "md",
       "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\01_5-media-storytelling-e-feedbackpdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\01_5-media-storytelling-e-feedbackpdf.md",
       "type": "md",
       "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\02_assoluto-v5-genesis-infinitadocx.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\02_assoluto-v5-genesis-infinitadocx.md",
       "type": "md",
       "size_kb": 45.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\03_assoluto-v6-completopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\03_assoluto-v6-completopdf.md",
       "type": "md",
       "size_kb": 268.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\04_analisi-video-youtube-contenuto-e-contestopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\04_analisi-video-youtube-contenuto-e-contestopdf.md",
       "type": "md",
       "size_kb": 31.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\05_i-protagonistipdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\05_i-protagonistipdf.md",
       "type": "md",
       "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\06_lex-digitalispdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\06_lex-digitalispdf.md",
       "type": "md",
       "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\07_titanium-architecture-protocolpdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\07_titanium-architecture-protocolpdf.md",
       "type": "md",
       "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\08_gemini-attive-090226pdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\08_gemini-attive-090226pdf.md",
       "type": "md",
       "size_kb": 8.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\09_istruzioni-per-notbookpdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\09_istruzioni-per-notbookpdf.md",
       "type": "md",
       "size_kb": 14.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\10_ramipdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\10_ramipdf.md",
       "type": "md",
       "size_kb": 118.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\11_themis-e-buildingpdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\11_themis-e-buildingpdf.md",
       "type": "md",
       "size_kb": 6.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\12_tot-apppdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\12_tot-apppdf.md",
       "type": "md",
       "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\13_tott-apppdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\13_tott-apppdf.md",
       "type": "md",
       "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-os-protocollo-operativo-e-architettura-di-matteo-be\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\v32-e-mims-lecosistema-della-libertà-industriale\\01_assoluto-v6-completopdf.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\v32-e-mims-lecosistema-della-libertà-industriale\\01_assoluto-v6-completopdf.md",
       "type": "md",
       "size_kb": 268.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\CANONE_ARCHIVIO\\v32-e-mims-lecosistema-della-libertà-industriale\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\v32-e-mims-lecosistema-della-libertà-industriale\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\nexus-protocollo-di-validazione-e-produzione-strategica-ai\\01_asset-figurepdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\nexus-protocollo-di-validazione-e-produzione-strategica-ai\\01_asset-figurepdf.md",
       "type": "md",
       "size_kb": 6.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\nexus-protocollo-di-validazione-e-produzione-strategica-ai\\02_regole-agentipdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\nexus-protocollo-di-validazione-e-produzione-strategica-ai\\02_regole-agentipdf.md",
       "type": "md",
       "size_kb": 10.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\nexus-protocollo-di-validazione-e-produzione-strategica-ai\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\GENESIS\\nexus-protocollo-di-validazione-e-produzione-strategica-ai\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\01_i-protagonistipdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\01_i-protagonistipdf.md",
       "type": "md",
       "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\02_lex-digitalispdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\02_lex-digitalispdf.md",
       "type": "md",
       "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\03_progetti-albero-di-competenze-per-sviluppopdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\03_progetti-albero-di-competenze-per-sviluppopdf.md",
       "type": "md",
       "size_kb": 11.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\04_ava.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\04_ava.md",
       "type": "md",
       "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\05_istruzioni-per-notbookpdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\05_istruzioni-per-notbookpdf.md",
       "type": "md",
       "size_kb": 14.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\06_per-visualizazione-videopdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\06_per-visualizazione-videopdf.md",
       "type": "md",
       "size_kb": 5.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\07_prompt-esatto-nel-tuo-generatorepdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\07_prompt-esatto-nel-tuo-generatorepdf.md",
       "type": "md",
       "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\08_themis.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\08_themis.md",
       "type": "md",
       "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\09_themis-e-buildingpdf.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\09_themis-e-buildingpdf.md",
       "type": "md",
       "size_kb": 6.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\GENESIS\\progetti-albero-di-competenze-roadmap-per-lo-sviluppo-integr\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\MIMS\\codex-di-prodotto-mims-architettura-e-strategia\\01_il-codex-di-prodotto-locking-bòltpdf.md",
+      "path": "_ARCHIVIO\\MIMS\\codex-di-prodotto-mims-architettura-e-strategia\\01_il-codex-di-prodotto-locking-bòltpdf.md",
       "type": "md",
       "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\MIMS\\codex-di-prodotto-mims-architettura-e-strategia\\02_il-codex-di-prodotto-mipdf.md",
+      "path": "_ARCHIVIO\\MIMS\\codex-di-prodotto-mims-architettura-e-strategia\\02_il-codex-di-prodotto-mipdf.md",
       "type": "md",
       "size_kb": 27.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\MIMS\\codex-di-prodotto-mims-architettura-e-strategia\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\MIMS\\codex-di-prodotto-mims-architettura-e-strategia\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\NINA\\genius-loci-ai-larchitettura-delledutainment-cognitivo-per-l\\01_ares-1pdf.md",
+      "path": "_ARCHIVIO\\NINA\\genius-loci-ai-larchitettura-delledutainment-cognitivo-per-l\\01_ares-1pdf.md",
       "type": "md",
       "size_kb": 30.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\NINA\\genius-loci-ai-larchitettura-delledutainment-cognitivo-per-l\\02_ares-1pdf.md",
+      "path": "_ARCHIVIO\\NINA\\genius-loci-ai-larchitettura-delledutainment-cognitivo-per-l\\02_ares-1pdf.md",
       "type": "md",
       "size_kb": 30.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\NINA\\genius-loci-ai-larchitettura-delledutainment-cognitivo-per-l\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\NINA\\genius-loci-ai-larchitettura-delledutainment-cognitivo-per-l\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\01_123-riasasunto-con-impostazionipdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\01_123-riasasunto-con-impostazionipdf.md",
       "type": "md",
       "size_kb": 15.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\02_volume-di-guerra-definitivo-master-planpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\02_volume-di-guerra-definitivo-master-planpdf.md",
       "type": "md",
       "size_kb": 8.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\03_riasasunto-con-gaiant-killer-file-aggiornatopdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\03_riasasunto-con-gaiant-killer-file-aggiornatopdf.md",
       "type": "md",
       "size_kb": 7.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-il-manifesto-tecnico-del-giant-killer\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\01_13-16-v3pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\01_13-16-v3pdf.md",
       "type": "md",
       "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\02_1-4-v3pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\02_1-4-v3pdf.md",
       "type": "md",
       "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\03_26-11-25-cncpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\03_26-11-25-cncpdf.md",
       "type": "md",
       "size_kb": 19.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\04_5-8-v3pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\04_5-8-v3pdf.md",
       "type": "md",
       "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\05_9-12-v3pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\05_9-12-v3pdf.md",
       "type": "md",
       "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\06_blocco-master-cncpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\06_blocco-master-cncpdf.md",
       "type": "md",
       "size_kb": 190.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\07_cnc-vmc-build-sezione1-complete-professionalpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\07_cnc-vmc-build-sezione1-complete-professionalpdf.md",
       "type": "md",
       "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\08_componibilepdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\08_componibilepdf.md",
       "type": "md",
       "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\09_creazione-di-dime-in-alluminio-o-legno-per-progetti-ostici-c.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\09_creazione-di-dime-in-alluminio-o-legno-per-progetti-ostici-c.md",
       "type": "md",
       "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\10_file-ultimo-molle-verdi-pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\10_file-ultimo-molle-verdi-pdf.md",
       "type": "md",
       "size_kb": 17.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\11_fusione-pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\11_fusione-pdf.md",
       "type": "md",
       "size_kb": 5.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\12_guide-pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\12_guide-pdf.md",
       "type": "md",
       "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\13_manuale-di-ingegneria-organizzativa-nexus-operativo.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\13_manuale-di-ingegneria-organizzativa-nexus-operativo.md",
       "type": "md",
       "size_kb": 6.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\14_master-v2pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\14_master-v2pdf.md",
       "type": "md",
       "size_kb": 201.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\15_prodottopdfpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\15_prodottopdfpdf.md",
       "type": "md",
       "size_kb": 7.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\16_titanpdfpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\16_titanpdfpdf.md",
       "type": "md",
       "size_kb": 13.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\17_untitledpdfpdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\17_untitledpdfpdf.md",
       "type": "md",
       "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\18_v1-gemini-pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\18_v1-gemini-pdf.md",
       "type": "md",
       "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\19_volume-1.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\19_volume-1.md",
       "type": "md",
       "size_kb": 13.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\20_volume-2.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\20_volume-2.md",
       "type": "md",
       "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\21_volume-3.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\21_volume-3.md",
       "type": "md",
       "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\22_asset-figurepdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\22_asset-figurepdf.md",
       "type": "md",
       "size_kb": 6.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\23_figure-professionalipdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\23_figure-professionalipdf.md",
       "type": "md",
       "size_kb": 26.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\24_produzione-economica-idea-vecchia-pdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\24_produzione-economica-idea-vecchia-pdf.md",
       "type": "md",
       "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\25_regole-agentipdf.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\25_regole-agentipdf.md",
       "type": "md",
       "size_kb": 10.1,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": "_DA_ORDINARE\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\_NOTEBOOK.md",
+      "path": "_ARCHIVIO\\V32\\titanium-v32-white-paper-ibrido-di-micro-manifattura\\_NOTEBOOK.md",
       "type": "md",
       "size_kb": 1.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "_CANONE.md",
+      "type": "md",
+      "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
@@ -1273,7 +1294,7 @@
     {
       "path": "ASSOLUTO\\V7_X_v8.md",
       "type": "md",
-      "size_kb": 67.4,
+      "size_kb": 67.6,
       "readable": false,
       "extracts": {}
     },
@@ -1301,7 +1322,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\assoluto_v5_genesis_infinita.md",
       "type": "md",
-      "size_kb": 40.5,
+      "size_kb": 40.6,
       "readable": false,
       "extracts": {}
     },
@@ -1315,7 +1336,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\atto_i_ii_assoluto_v6.md",
       "type": "md",
-      "size_kb": 31.7,
+      "size_kb": 31.8,
       "readable": false,
       "extracts": {}
     },
@@ -1392,7 +1413,7 @@
     {
       "path": "CV\\CV.md",
       "type": "md",
-      "size_kb": 6.1,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
@@ -1436,7 +1457,7 @@
     {
       "path": "FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore.md",
       "type": "md",
-      "size_kb": 30.3,
+      "size_kb": 30.4,
       "readable": false,
       "extracts": {}
     },
@@ -1471,7 +1492,7 @@
     {
       "path": "GENESIS\\genesis_architettura.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -1659,7 +1680,7 @@
     {
       "path": "KNOWLEDGE\\AUTOMIGLIORAMENTO.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
@@ -1701,7 +1722,7 @@
     {
       "path": "KNOWLEDGE\\MEDIA\\123_riasasunto_con_impostazioni.md",
       "type": "md",
-      "size_kb": 14.4,
+      "size_kb": 14.6,
       "readable": false,
       "extracts": {}
     },
@@ -1722,7 +1743,7 @@
     {
       "path": "KNOWLEDGE\\MEDIA\\riasasunto_con_gaiant_killer_file_aggiornato.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.4,
       "readable": false,
       "extracts": {}
     },
@@ -1750,7 +1771,7 @@
     {
       "path": "KNOWLEDGE\\NINA_V2_ARCHITETTURA.md",
       "type": "md",
-      "size_kb": 11.9,
+      "size_kb": 11.8,
       "readable": false,
       "extracts": {}
     },
@@ -1771,14 +1792,14 @@
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\i_protagonisti.md",
       "type": "md",
-      "size_kb": 4.5,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\rami.md",
       "type": "md",
-      "size_kb": 86.6,
+      "size_kb": 86.7,
       "readable": false,
       "extracts": {}
     },
@@ -1806,21 +1827,21 @@
     {
       "path": "KNOWLEDGE\\PROMPTS\\istruzioni_ia.md",
       "type": "md",
-      "size_kb": 34.4,
+      "size_kb": 34.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md",
       "type": "md",
-      "size_kb": 34.4,
+      "size_kb": 34.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\PROMPTS\\istruzioni_per_notbook.md",
       "type": "md",
-      "size_kb": 17.2,
+      "size_kb": 17.1,
       "readable": false,
       "extracts": {}
     },
@@ -1855,7 +1876,7 @@
     {
       "path": "KNOWLEDGE\\REPOS\\MCP_servers_reference.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
@@ -1981,7 +2002,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\autobnb_rag_enhancing_multi_agent_incident_response_with_ret.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
@@ -1995,14 +2016,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\beyond_automation_unveiling_the_potential_of_agentic_intelli.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\bio_ai_agent_a_multi_agent_artificial_intelligence_system_fo.md",
       "type": "md",
-      "size_kb": 4.6,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
@@ -2016,7 +2037,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\caging_the_agents_a_zero_trust_security_architecture_for_aut.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
@@ -2030,7 +2051,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\computer_use_agent_survey_2025.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
@@ -2086,7 +2107,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\finetune_llm_local_cpu_2025.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
@@ -2100,7 +2121,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\from_llm_reasoning_to_autonomous_ai_agents_a_comprehensive_r.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
@@ -2177,7 +2198,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\multiagent_orchestration_2025.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
@@ -2275,7 +2296,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\mims\\cost_effective_manufacturing_of_damage_tolerant_integral_arm.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
@@ -2296,7 +2317,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\a_kinematic_errors_prediction_and_accuracy_improvement_metho.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -2338,7 +2359,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analysis_of_factors_affecting_the_straightness_of_assembled_.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
@@ -2366,7 +2387,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\contact_properties_research_for_linear_sliding_guide_rail_wi.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
@@ -2408,7 +2429,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\feed_drive_condition_monitoring_using_modal_parameters.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
@@ -2478,7 +2499,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\research_on_the_error_averaging_effect_in_a_rolling_guide_pa.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
@@ -2499,7 +2520,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\static_and_dynamic_performance_improvement_of_conventional_c.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
@@ -2520,7 +2541,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\study_of_stiffness_of_linear_guide_pairs_by_experiment_and_f.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
@@ -2583,14 +2604,14 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\PROTAGONISTI.md",
       "type": "md",
-      "size_kb": 4.5,
+      "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\SCIENZA_FINANZIARIA.md",
       "type": "md",
-      "size_kb": 30.4,
+      "size_kb": 30.3,
       "readable": false,
       "extracts": {}
     },
@@ -2611,7 +2632,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\FILOSOFIA\\MANIFESTO_CODEX.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.4,
       "readable": false,
       "extracts": {}
     },
@@ -2653,7 +2674,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\GENESIS\\ARCHITETTURA_PROTOCOL.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
@@ -2681,7 +2702,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MEDIA\\MEDIA_STORYTELLING.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
@@ -2758,14 +2779,14 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\SISTEMA\\ISTRUZIONI_NOTEBOOK.md",
       "type": "md",
-      "size_kb": 17.1,
+      "size_kb": 17.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\SISTEMA\\RIASSUNTO_IMPOSTAZIONI.md",
       "type": "md",
-      "size_kb": 14.3,
+      "size_kb": 14.4,
       "readable": false,
       "extracts": {}
     },
@@ -2779,7 +2800,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\V32\\RAMI_TECNICI.md",
       "type": "md",
-      "size_kb": 119.2,
+      "size_kb": 119.3,
       "readable": false,
       "extracts": {}
     },
@@ -2793,14 +2814,14 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\V32\\V32_MAPPA_VIVENTE.md",
       "type": "md",
-      "size_kb": 16.9,
+      "size_kb": 17.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\DATABASE\\DB_ECONOMIA.md",
       "type": "md",
-      "size_kb": 6.2,
+      "size_kb": 6.1,
       "readable": false,
       "extracts": {}
     },
@@ -2835,7 +2856,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\INDEX.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
@@ -2884,7 +2905,7 @@
     {
       "path": "KNOWLEDGE\\VISIONE\\il_master_manifesto.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
@@ -2905,7 +2926,7 @@
     {
       "path": "KNOWLEDGE\\VISIONE\\volume_di_guerra_definitivo_master_plan.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 8.0,
       "readable": false,
       "extracts": {}
     },
@@ -2919,7 +2940,7 @@
     {
       "path": "MIMS\\brevetto_B2_bozza.md",
       "type": "md",
-      "size_kb": 10.6,
+      "size_kb": 10.5,
       "readable": false,
       "extracts": {}
     },
@@ -2933,14 +2954,14 @@
     {
       "path": "MIMS\\DESIGN\\base_a2_corpo_01_4_disegno.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 2.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\base_gancio_1_corpo_07_disegno.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -3017,7 +3038,7 @@
     {
       "path": "MIMS\\DESIGN\\solo_fori_2_corpo_02_disegno.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -3052,14 +3073,14 @@
     {
       "path": "MIMS\\PROTOCOLLO\\istruzioni_progetto_modulare.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\linea_strutturale_industriale.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
@@ -3073,7 +3094,7 @@
     {
       "path": "MIMS\\PROTOCOLLO\\manifesto_scalabilita_definitivo.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
@@ -3101,14 +3122,14 @@
     {
       "path": "MIMS\\PROTOCOLLO\\mims_dal_magazzino_infinito_ai_kit.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\scalabilita_modulo_50x50.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -3129,14 +3150,14 @@
     {
       "path": "MIMS\\PROTOCOLLO\\visione_industriale_modulare.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\SCHEDA_PRODOTTO_MIMS_VULCAN.md",
       "type": "md",
-      "size_kb": 8.5,
+      "size_kb": 8.6,
       "readable": false,
       "extracts": {}
     },
@@ -3144,6 +3165,27 @@
       "path": "README.md",
       "type": "md",
       "size_kb": 0.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "Senza nome 1.canvas",
+      "type": "canvas",
+      "size_kb": 0.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "Senza nome.base",
+      "type": "base",
+      "size_kb": 0.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "Senza nome.canvas",
+      "type": "canvas",
+      "size_kb": 0.0,
       "readable": false,
       "extracts": {}
     },
@@ -3164,7 +3206,7 @@
     {
       "path": "SESSIONI\\2026-05-28_flusso_coscienza.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -3213,7 +3255,7 @@
     {
       "path": "SESSIONI\\2026-05-29_s10_Config_G_-_Rinforzi_colonne_Z+U.md",
       "type": "md",
-      "size_kb": 7.0,
+      "size_kb": 6.9,
       "readable": false,
       "extracts": {}
     },
@@ -3227,7 +3269,7 @@
     {
       "path": "SESSIONI\\2026-05-29_s11_Config_G_-_Rinforzi_colonne_Z+U_2327.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 6.8,
       "readable": false,
       "extracts": {}
     },
@@ -3283,14 +3325,14 @@
     {
       "path": "SESSIONI\\_INDEX_SESSIONI.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\_TEMPLATE.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
@@ -3325,7 +3367,7 @@
     {
       "path": "SESSIONI\\STORIE\\ARCHIVIO_ORIGINALI\\ep_01_la_taverna.md",
       "type": "md",
-      "size_kb": 6.6,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
@@ -3367,7 +3409,7 @@
     {
       "path": "SESSIONI\\STORIE\\ARCHIVIO_ORIGINALI\\ep_s0_01_l_organismo.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
@@ -3395,21 +3437,21 @@
     {
       "path": "SESSIONI\\STORIE\\S0_ORIGINI\\EP_S0_01_L_ORGANISMO.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
@@ -3430,14 +3472,14 @@
     {
       "path": "SESSIONI\\STORIE\\S1_PRESENTE\\EP_02_IL_REATTORE.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S1_PRESENTE\\EP_03_IL_PARADOSSO.md",
       "type": "md",
-      "size_kb": 7.0,
+      "size_kb": 6.9,
       "readable": false,
       "extracts": {}
     },
@@ -3458,28 +3500,28 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260319_fix_typescript_errors_unused_imports.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 8.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260322_docs_ecosystem_manifest_documento_fon.md",
       "type": "md",
-      "size_kb": 10.1,
+      "size_kb": 10.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md",
       "type": "md",
-      "size_kb": 10.3,
+      "size_kb": 10.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260527_auto_episodi_generati_da_state_json_202.md",
       "type": "md",
-      "size_kb": 8.2,
+      "size_kb": 8.1,
       "readable": false,
       "extracts": {}
     },
@@ -3493,7 +3535,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260529_auto_avvio_completo_al_login_start_.md",
       "type": "md",
-      "size_kb": 6.8,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
@@ -3521,14 +3563,14 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 9.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.1,
       "readable": false,
       "extracts": {}
     },
@@ -3556,7 +3598,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
@@ -3570,7 +3612,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -3584,28 +3626,28 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
       "type": "md",
-      "size_kb": 5.8,
+      "size_kb": 5.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md",
       "type": "md",
-      "size_kb": 8.1,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
@@ -3619,14 +3661,14 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
       "type": "md",
-      "size_kb": 8.8,
+      "size_kb": 8.7,
       "readable": false,
       "extracts": {}
     },
@@ -3647,7 +3689,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
@@ -3703,7 +3745,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260615_vista_cv_vera_non_solo_il_rename.md",
       "type": "md",
-      "size_kb": 10.4,
+      "size_kb": 10.3,
       "readable": false,
       "extracts": {}
     },
@@ -3745,14 +3787,14 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260620_inventario_notturno.md",
       "type": "md",
-      "size_kb": 8.7,
+      "size_kb": 8.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.2,
       "readable": false,
       "extracts": {}
     },
@@ -3766,7 +3808,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
       "type": "md",
-      "size_kb": 8.2,
+      "size_kb": 8.3,
       "readable": false,
       "extracts": {}
     },
@@ -3780,7 +3822,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260623_sessione_42_blackout_rag_recovery_2.md",
       "type": "md",
-      "size_kb": 10.2,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
@@ -3795,6 +3837,13 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260624_content_nina_4_script_reel_stile_si.md",
       "type": "md",
       "size_kb": 10.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260624_escludi_archivio_ex_da_ordinare_dal.md",
+      "type": "md",
+      "size_kb": 10.2,
       "readable": false,
       "extracts": {}
     },
@@ -3815,21 +3864,21 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
       "type": "md",
-      "size_kb": 6.7,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
@@ -3843,7 +3892,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
       "type": "md",
-      "size_kb": 6.8,
+      "size_kb": 6.9,
       "readable": false,
       "extracts": {}
     },
@@ -3857,7 +3906,7 @@
     {
       "path": "STORIE\\_INDEX_STORIE.md",
       "type": "md",
-      "size_kb": 17.5,
+      "size_kb": 17.6,
       "readable": false,
       "extracts": {}
     },
@@ -3871,28 +3920,28 @@
     {
       "path": "STORIE\\EP_AUTO_003.md",
       "type": "md",
-      "size_kb": 5.0,
+      "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\EP_AUTO_005.md",
       "type": "md",
-      "size_kb": 5.3,
+      "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\EP_AUTO_006.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\EP_AUTO_008.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
@@ -3913,7 +3962,7 @@
     {
       "path": "STORIE\\EP_AUTO_012.md",
       "type": "md",
-      "size_kb": 6.4,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
@@ -3927,14 +3976,14 @@
     {
       "path": "STORIE\\EP_AUTO_014.md",
       "type": "md",
-      "size_kb": 6.8,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\EP_AUTO_015.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
@@ -3955,7 +4004,7 @@
     {
       "path": "STORIE\\EP_AUTO_018.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
@@ -3969,7 +4018,7 @@
     {
       "path": "STORIE\\INDICE_CAMMINO.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
@@ -3990,7 +4039,7 @@
     {
       "path": "STORIE\\MOMENTI\\MOM_03_L_ESERCITO.md",
       "type": "md",
-      "size_kb": 5.8,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
@@ -4025,14 +4074,14 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_PILOTA_00_il_mondo.md",
       "type": "md",
-      "size_kb": 12.1,
+      "size_kb": 12.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -4046,28 +4095,28 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 9.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
       "type": "md",
-      "size_kb": 9.8,
+      "size_kb": 9.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_04_IL_LEGO_D_ACCIAIO.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_05_IL_CONSIGLIO.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
@@ -4081,7 +4130,7 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_07_IL_CAVALLO_DI_TROIA.md",
       "type": "md",
-      "size_kb": 5.8,
+      "size_kb": 5.6,
       "readable": false,
       "extracts": {}
     },
@@ -4095,14 +4144,14 @@
     {
       "path": "STORIE\\S1_PRESENTE\\EP_01_LA_TAVERNA.md",
       "type": "md",
-      "size_kb": 8.6,
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S1_PRESENTE\\EP_02_IL_REATTORE.md",
       "type": "md",
-      "size_kb": 10.4,
+      "size_kb": 10.5,
       "readable": false,
       "extracts": {}
     },
@@ -4151,14 +4200,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260527_auto_episodi_generati_da_state_json_202.md",
       "type": "md",
-      "size_kb": 11.5,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260528_matteosection_v4_2_skill_espandibili_pe.md",
       "type": "md",
-      "size_kb": 12.2,
+      "size_kb": 12.1,
       "readable": false,
       "extracts": {}
     },
@@ -4186,35 +4235,35 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
       "type": "md",
-      "size_kb": 12.2,
+      "size_kb": 12.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
       "type": "md",
-      "size_kb": 11.9,
+      "size_kb": 11.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
       "type": "md",
-      "size_kb": 12.5,
+      "size_kb": 12.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
       "type": "md",
-      "size_kb": 11.3,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
@@ -4228,7 +4277,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
       "type": "md",
-      "size_kb": 13.0,
+      "size_kb": 12.7,
       "readable": false,
       "extracts": {}
     },
@@ -4242,35 +4291,35 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
       "type": "md",
-      "size_kb": 12.9,
+      "size_kb": 12.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
       "type": "md",
-      "size_kb": 11.7,
+      "size_kb": 11.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
       "type": "md",
-      "size_kb": 12.9,
+      "size_kb": 12.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
       "type": "md",
-      "size_kb": 11.7,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
       "type": "md",
-      "size_kb": 9.3,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
@@ -4284,49 +4333,49 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
       "type": "md",
-      "size_kb": 11.2,
+      "size_kb": 11.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
       "type": "md",
-      "size_kb": 10.8,
+      "size_kb": 10.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_feat_storie_backfill_fatti_da_i_fat.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 9.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
       "type": "md",
-      "size_kb": 10.5,
+      "size_kb": 10.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260612_feat_sapere_mente_versionata_auto_c.md",
       "type": "md",
-      "size_kb": 9.3,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
@@ -4340,7 +4389,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260614_asse_evoluzione_episodi_organizzati.md",
       "type": "md",
-      "size_kb": 11.0,
+      "size_kb": 10.9,
       "readable": false,
       "extracts": {}
     },
@@ -4361,7 +4410,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260614_reranker_multilingue_bge_reranker_v.md",
       "type": "md",
-      "size_kb": 9.8,
+      "size_kb": 9.7,
       "readable": false,
       "extracts": {}
     },
@@ -4410,7 +4459,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260618_i_pilastri_come_spiegazione_a_livel.md",
       "type": "md",
-      "size_kb": 10.9,
+      "size_kb": 10.8,
       "readable": false,
       "extracts": {}
     },
@@ -4438,35 +4487,42 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
       "type": "md",
-      "size_kb": 9.0,
+      "size_kb": 8.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260622_visione_nina_zero_confermata_film_i.md",
       "type": "md",
-      "size_kb": 10.6,
+      "size_kb": 10.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260623_sessione_42_blackout_rag_recovery_2.md",
       "type": "md",
-      "size_kb": 10.6,
+      "size_kb": 10.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260623_traccia_simone_rizzo_tier_1_yt_driv.md",
       "type": "md",
-      "size_kb": 8.5,
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260624_content_nina_4_script_reel_stile_si.md",
       "type": "md",
-      "size_kb": 10.4,
+      "size_kb": 10.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "STORIE\\S2_SISTEMA\\EP_20260624_escludi_archivio_ex_da_ordinare_dal.md",
+      "type": "md",
+      "size_kb": 10.9,
       "readable": false,
       "extracts": {}
     },
@@ -4480,14 +4536,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_S2_00_IL_DISTACCO.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
       "type": "md",
-      "size_kb": 9.3,
+      "size_kb": 8.9,
       "readable": false,
       "extracts": {}
     },
@@ -4501,7 +4557,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.3,
       "readable": false,
       "extracts": {}
     },
@@ -4529,7 +4585,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_cedibile.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
@@ -4606,14 +4662,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_RETE_L1_bugstato.md",
       "type": "md",
-      "size_kb": 5.4,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_RETE_L1_toggle.md",
       "type": "md",
-      "size_kb": 5.3,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
@@ -4760,21 +4816,21 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_01_il_bottone_che_regge.md",
       "type": "md",
-      "size_kb": 14.1,
+      "size_kb": 14.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
       "type": "md",
-      "size_kb": 14.5,
+      "size_kb": 14.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
@@ -4788,7 +4844,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_04_la_mappa_che_non_mente.md",
       "type": "md",
-      "size_kb": 16.3,
+      "size_kb": 16.2,
       "readable": false,
       "extracts": {}
     },
@@ -4809,7 +4865,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_07_il_sussurratore_di_parole.md",
       "type": "md",
-      "size_kb": 16.0,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
@@ -4858,7 +4914,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
       "type": "md",
-      "size_kb": 14.8,
+      "size_kb": 14.7,
       "readable": false,
       "extracts": {}
     },
@@ -4879,273 +4935,280 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_17_la_traccia.md",
       "type": "md",
-      "size_kb": 14.8,
+      "size_kb": 15.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_18_la_giuntura_dove_due_diventa_uno.md",
       "type": "md",
-      "size_kb": 15.2,
+      "size_kb": 15.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_19_la_mano_che_insegna_alla_notte.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_20_il_corpo_che_non_trema.md",
       "type": "md",
-      "size_kb": 15.2,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_21_il_nome_che_cambia.md",
       "type": "md",
-      "size_kb": 14.8,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_22_la_macchina_che_impara_a_cucire.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_23_il_guardiano_che_non_dorme.md",
       "type": "md",
-      "size_kb": 15.4,
+      "size_kb": 16.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_24_il_filtro_del_mugnaio.md",
       "type": "md",
-      "size_kb": 14.9,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_25_le_finestre_sempre_aperte.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 16.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_26_la_ruota_dei_guardiani.md",
       "type": "md",
-      "size_kb": 14.9,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_27_la_memoria_che_respira.md",
       "type": "md",
-      "size_kb": 15.4,
+      "size_kb": 16.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_28_il_diario_che_pensa.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_29_la_memoria_che_sceglie.md",
       "type": "md",
-      "size_kb": 14.8,
+      "size_kb": 15.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_30_la_mappa_che_cresce_da_sola.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 15.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_31_il_cruscotto_che_non_dorme.md",
       "type": "md",
-      "size_kb": 14.0,
+      "size_kb": 14.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_32_il_giorno_che_il_labirinto_si_vide_nello.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 15.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_33_i_696_quartieri_che_si_trovano_da_soli.md",
       "type": "md",
-      "size_kb": 15.3,
+      "size_kb": 16.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_34_le_stelle_che_reggono_il_filo.md",
       "type": "md",
-      "size_kb": 15.2,
+      "size_kb": 15.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_35_il_custode_dei_segreti.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_36_la_bussola_della_mappa.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 15.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_37_la_galassia_rotta.md",
       "type": "md",
-      "size_kb": 15.1,
+      "size_kb": 15.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_38_il_filo_della_strada_giusta.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_39_il_voto_dei_quartieri.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 15.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_40_il_fantasma_nel_cassetto.md",
       "type": "md",
-      "size_kb": 15.3,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_41_lo_specchio_nascosto_quando_due_persone_.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 15.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_42_la_stanza_dei_segreti_numerici.md",
       "type": "md",
-      "size_kb": 15.1,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_43_due_fotografi_uno_spazio.md",
       "type": "md",
-      "size_kb": 14.9,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_44_il_turno_di_guardia.md",
       "type": "md",
-      "size_kb": 15.2,
+      "size_kb": 15.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_45_il_direttore_invisibile.md",
       "type": "md",
-      "size_kb": 14.8,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_46_la_stanza_della_visione.md",
       "type": "md",
-      "size_kb": 14.4,
+      "size_kb": 15.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_47_la_tela_chi_guarda_il_quadro.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_48_il_libro_delle_ricette_di_nonna.md",
       "type": "md",
-      "size_kb": 14.9,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_49_la_scatola_magica_dei_compiti.md",
       "type": "md",
-      "size_kb": 14.3,
+      "size_kb": 14.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_50_il_semaforo_che_mente.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 15.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "STORIE\\S_AVVENTURA\\EP_N2_51_il_sussurratore_che_indovina.md",
+      "type": "md",
+      "size_kb": 13.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
       "type": "md",
-      "size_kb": 8.9,
+      "size_kb": 8.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
       "type": "md",
-      "size_kb": 9.0,
+      "size_kb": 8.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
       "type": "md",
-      "size_kb": 8.9,
+      "size_kb": 9.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
       "type": "md",
-      "size_kb": 8.7,
+      "size_kb": 9.0,
       "readable": false,
       "extracts": {}
     },
@@ -5166,7 +5229,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -5187,7 +5250,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -5208,7 +5271,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -5264,14 +5327,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 8.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
       "type": "md",
-      "size_kb": 8.6,
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },
@@ -5285,21 +5348,21 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
       "type": "md",
-      "size_kb": 10.3,
+      "size_kb": 10.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
       "type": "md",
-      "size_kb": 9.9,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
@@ -5320,14 +5383,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
       "type": "md",
-      "size_kb": 9.0,
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
@@ -5341,7 +5404,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
       "type": "md",
-      "size_kb": 9.2,
+      "size_kb": 9.0,
       "readable": false,
       "extracts": {}
     },
@@ -5376,21 +5439,21 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_37_migrazione_pc_fisso_desktopiface2r_compl.md",
       "type": "md",
-      "size_kb": 11.4,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_38_git_history_pulita_modelsafetensors_rimo.md",
       "type": "md",
-      "size_kb": 10.9,
+      "size_kb": 10.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_39_push_main_tag_v300_su_github_sbloccato_e.md",
       "type": "md",
-      "size_kb": 11.5,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
@@ -5411,14 +5474,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_42_memory_getac_importata_su_pc_fisso.md",
       "type": "md",
-      "size_kb": 10.8,
+      "size_kb": 10.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
       "type": "md",
-      "size_kb": 11.6,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
@@ -5432,14 +5495,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
       "type": "md",
-      "size_kb": 12.0,
+      "size_kb": 12.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_46_sicurezza_token_github_ruotato_auth_git_.md",
       "type": "md",
-      "size_kb": 11.3,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
@@ -5460,14 +5523,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
       "type": "md",
-      "size_kb": 11.7,
+      "size_kb": 11.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_50_automazioni_notturne_portabili__ti_paths.md",
       "type": "md",
-      "size_kb": 11.8,
+      "size_kb": 11.7,
       "readable": false,
       "extracts": {}
     },
@@ -5509,7 +5572,7 @@
     {
       "path": "V32\\NOTE_OFFICINA\\v32_analisi_tecnica_reale.md",
       "type": "md",
-      "size_kb": 12.5,
+      "size_kb": 12.6,
       "readable": false,
       "extracts": {}
     },
@@ -5565,7 +5628,7 @@
     {
       "path": "VITA_NATURA\\CENTRO\\manuale_espansione_servizi_opera.md",
       "type": "md",
-      "size_kb": 4.8,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
@@ -5579,7 +5642,7 @@
     {
       "path": "VITA_NATURA\\CENTRO\\sopralluogo_planimetria_vitanatura.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },

@@ -1,16 +1,16 @@
 ====================================================
  STATO TITANIUM_OS — file fisico (auto-aggiornato)
- Wednesday 24 June 2026, 04:07
+ Thursday 25 June 2026, 04:07
 ====================================================
 
 >>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
 
 — Task notturni —
-  ✓ TI_StoryAgent      OK   (ultima: 24/06 02:07)
-  ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 24/06 03:37)
-  ✓ TI_NightAudit      OK   (ultima: 24/06 03:52)
-  ✓ TI_NightPush       OK   (ultima: 24/06 04:07)
-  ✓ TI_DailyBrief      OK   (ultima: 23/06 07:30)
+  ✓ TI_StoryAgent      OK   (ultima: 25/06 02:07)
+  ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 25/06 03:37)
+  ✓ TI_NightAudit      OK   (ultima: 25/06 03:52)
+  ✓ TI_NightPush       OK   (ultima: 25/06 04:07)
+  ✓ TI_DailyBrief      OK   (ultima: 24/06 07:30)
   ✓ TI_Watchdog        OK   (ultima: 24/06 03:40)
 
 — Servizi —
@@ -18,12 +18,12 @@
   · MENTE Watcher: attivo
 
 — ⚠ GUASTI dai log (ultime 36h) —
-  ⚠ night_push.log: ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 23/06 03:37)
-  ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):
-  ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 20/06 03:37)
+  ⚠ night_push.log: ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 24/06 03:37)
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_NightResearch   FALLITO (codice 1)   (ultima: 23/06 03:37)
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (mos
   ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.l
 

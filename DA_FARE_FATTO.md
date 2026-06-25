@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 46  24/06/2026  RAG enhancement: chunking heading-aware  snapshot _VAULT](#sessione-46-24062026-rag-enhancement-chunking-heading-aware-snapshot-vault)
+  - [Sessione 45  24/06/2026  CRITICHE azzerate (3 fonti)  de-hardcode benen  loop autonomo](#sessione-45-24062026-critiche-azzerate-3-fonti-de-hardcode-benen-loop-autonomo)
   - [Sessione 44  24/06/2026  Nina copre la mappa (50 ep)  RAG resuscitato  vetrina riallineata](#sessione-44-24062026-nina-copre-la-mappa-50-ep-rag-resuscitato-vetrina-riallineata)
   - [Sessione 43  23/06/2026 (ULTRACODE)  NINA DEFINITIVA (canone unico EP_N2)](#sessione-43-23062026-ultracode-nina-definitiva-canone-unico-epn2)
     - [PROSSIMA SESSIONE 44  si riparte da qui](#prossima-sessione-44-si-riparte-da-qui)
@@ -64,7 +66,7 @@
 
 ---
 
-## Sessione #46 · 24/06/2026 — RAG enhancement: chunking heading-aware + snapshot _VAULT
+## Sessione #46 · 24-25/06/2026 — RAG v4.2 (heading-aware + snapshot + GraphRAG-lite) · _ARCHIVIO fuori canone · Nina auto
 
 **Obiettivo (primo punto io-eseguibile della bussola): "enhancement RAG — chunking per
 heading + backup snapshot chroma_db in _VAULT/BACKUPS".** Fatto, additivo, stack vincolato intatto.
@@ -98,17 +100,26 @@ heading + backup snapshot chroma_db in _VAULT/BACKUPS".** Fatto, additivo, stack
   heading-aware applicato a tutto + `_ARCHIVIO` escluso + **divergenza riallineata** nei DATI
   (semantico 24344 ≈ bm25 24343; era 30602≠34151). Chunk 30602→24344 (archivio fuori + heading
   meno ridondante). Linkgraph 478 note/5329 archi.
-- [✗→auto] **HNSW da rigenerare**: `--rebuild` (reset-per-id, l'unico API-up-safe) ha lasciato
-  label-fantasma (KeyError np.uint64 su alcune query) — il noto limite chromadb 0.5.23 che
-  `--rebuild-hard`/`--drop-hnsw` cura, ma serve l'accesso esclusivo (API giù = elevazione).
-  **I DATI sono corretti**, manca solo rigenerare lo spazio-label HNSW dagli embedding in sqlite.
-  → Cura: `SERVICES\rag_recover.ps1` (auto-eleva, L1 drop-hnsw = no ri-embed, riavvia API).
-  Gira **già da solo a inizio night_research stanotte** → auto-heal garantito.
+- [✓] **HNSW RIGENERATO** (era label-fantasma KeyError np.uint64 dal reset-per-id, limite chromadb
+  0.5.23): curato via `SERVICES\rag_recover.ps1` (UAC approvato da Matteo). Indice **sano**, API su,
+  query senza crash, `_ARCHIVIO` escluso (0 nei risultati), **canone V7 in cima** (SCHEDA_PRODOTTO_MIMS
+  non più il codex V6). Nota: non sono admin → i task elevati non li avvio io, serve l'UAC di Matteo.
 - [✓] **`_DA_ORDINARE` → `_ARCHIVIO`** (richiesta Matteo "sistema le cose al suo posto"): era
   archivio NotebookLM **già smistato** il 20/06 (canone V6 superato) ma **indicizzato per errore**
   nel canone (usciva top-4 nelle ricerche MIMS/V32). Rinominato → rientra in EXCLUDE_DIR_NAMES,
   fuori dal RAG, resta in Obsidian consultabile. Wikilink-safe. Commit MENTE `b5cb18f` (107 rename).
-- [◐] Commit + push del lavoro RAG (engine v4.1+v4.2 + night job + gitignore + doc esclusione).
+- [✓] **PROVA end-to-end** (non un grafico): generato `EP_N2_51 "Il Sussurratore che Indovina"`
+  grounded sul RAG guarito (18 fonti) → richiama `EP_N2_06` + si colloca nella Mappa (regione 3, giro 2).
+  La catena RAG→retrieve_context→Architetto(haiku)→Scrittore(sonnet)→canone funziona davvero.
+- [✓] **DECISIONE Matteo: Nina = AUTO-PROMOZIONE, niente revisione umana** (confermato 25/06). Era
+  già il default (`auto=True`, sess.#44); corretto il commento stale di `nina_agent.py` che diceva
+  ancora "_PROPOSTI/tu approvi". Garanzie al posto del cancello: grounding + canon_guard + reversibilità.
+  Codice/sicurezza (SELF_IMPROVE) resta invece a cancello umano. Memoria salvata.
+- [✓] **Commit + push** TITANIUM_OS: `79908408` (v4.2) · `a0f6a9b9` (esclusione `_ARCHIVIO`) ·
+  `9e3bde3a` (doc nina auto-promozione). MENTE: `b5cb18f` (rename).
+- [ ] **PROSSIMA SESSIONE #47 — si parte da: ANALIZZARE UN LINK** (Matteo lo fornirà a inizio sessione).
+- [ ] Migrazione totale chunking: si completa coi rebuild deliberati a GPU libera; off-by-one
+  24344/24343 si auto-allinea al prossimo incrementale (self-heal orfani).
 
 > **Fonti ricerca**: [RAG Chunking 2026 Playbook](https://www.digitalapplied.com/blog/rag-chunking-strategies-2026-retrieval-quality-playbook) ·
 > [Anthropic Contextual Retrieval](https://medium.com/aiguys/the-state-of-rag-2026-from-vibe-checking-to-reasoning-cee536ae3f02) ·

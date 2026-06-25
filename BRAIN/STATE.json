@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-24T22:23:38.826722",
-  "active_milestone": "Sessione #45 (24/06): CRITICHE AZZERATE sulle 3 fonti del sidebar. Auto-audit 31->9 (burn-down via /loop autonomo: gitignore DATA/views, research_agent v1.3 query-broadening+summary, warning HF silenziato, gate self-improve documentato; stale chiuse). Canone manuale 33->25 (sweep). Bussola 41->20 (groom + bug 42 todo-fantasma TOC fixato). Header CRITICHE onesto (totale 3 fonti + chip, niente piu' '33' opaco) + deep-link #view per dash_shot. DECISIONE MIMS connettori = Via B (compressione VULCAN, processo proprietario B2) a canone. Silent block -> v.B Ø18mm. DE-HARDCODE benen: 5 registrar legacy resi portabili poi RIMOSSI (ridondanti con register_night_tasks.ps1). Build TS verde, tutto pushato.",
-  "next_step": "AZIONI_MATTEO.md (solo Matteo): UPS + mandrino ER20 in 1 checkout (cura radice HNSW + sblocca MIMS); chiavi .env (Semantic Scholar gratuita + rotazione red-team #38); URL sito Maria. Poi: enhancement RAG (chunking per heading, backup snapshot chroma_db in _VAULT/BACKUPS); contenuto Nina verticale finanza ₣2 'spendere meno di quanto entra' (open loop pronto).",
+  "last_update": "2026-06-25T18:41:21.619636",
+  "active_milestone": "Sessione #46 (24-25/06): RAG v4.2 SOTA-2026. (1) Chunking HEADING-AWARE sui .md (split sui titoli + breadcrumb [sez>sottosez], additivo per mtime, geometria invariata = no re-embed forzato). (2) SNAPSHOT chroma_db in _VAULT/BACKUPS (rotazione 3, --snapshot/--restore-snapshot, agganciato a night_research; testato live 230MB/0.1s). (3) GraphRAG-lite WIKILINK-EXPANSION: rag_linkgraph.json (no GPU), espande dai top-3 i [[link]] (cap +8) prima del reranker che gata. Ricerca SOTA fatta prima (breadcrumb = Contextual Retrieval economico). _DA_ORDINARE->_ARCHIVIO: archivio NotebookLM V6 superato era indicizzato per errore nel canone, rinominato in EXCLUDE_DIR_NAMES, fuori dal RAG, resta in Obsidian (MENTE b5cb18f, 107 rename). Migrazione corpus + HNSW rigenerato via rag_recover.ps1 (UAC Matteo): indice sano, API su, query OK, _ARCHIVIO escluso, canone V7 in cima. PROVA: EP_N2_51 grounded+connesso. DECISIONE: Nina = auto-promozione senza revisione umana (commento allineato 9e3bde3a). Commit 79908408+a0f6a9b9+9e3bde3a. Build TS verde, tutto pushato.",
+  "next_step": "PROSSIMA SESSIONE #47: si parte da ANALIZZARE UN LINK (Matteo lo fornira' a inizio sessione). Aperti: migrazione totale chunking si completa coi rebuild deliberati a GPU libera (off-by-one 24344/24343 si auto-allinea); AZIONI_MATTEO.md (UPS+ER20, chiavi .env, URL sito Maria); contenuto Nina verticale finanza F2.",
   "session_count": 92,
   "pillars": {
     "V32": {
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-24T21:39:26.127416"
+      "last_activity": "2026-06-25T18:40:24.696367"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -85,7 +85,8 @@
       "CRITICHE sidebar azzerate sulle 3 fonti (24/06 sess.#45): auto-audit 31->9, canone manuale 33->25, bussola 41->20. Burn-down auto-audit via /loop autonomo (fermato sui blocchi-Matteo). 18+ critiche chiuse con note tracciabili. Build TS verde, pushato",
       "Header CRITICHE onesto + bug-fix (24/06): da '33' opaco a totale-3-fonti + chip per-fonte (canone/audit/bussola); fixato bug 42 'todo-fantasma' (ancore-TOC parse-ate come todo, bussola 81->39 reali); deep-link #view in systemStore per screenshottare qualsiasi vista headless (dash_shot)",
       "MIMS connettori = Via B DECISO (24/06): compressione VULCAN (processo proprietario per B2, capitale basso, dentro il moat-Formula) a canone SCHEDA §5 + STATE. Silent block V8 -> v.B Ø18mm (reversibile). Sblocca BEP/B2",
-      "De-hardcode benen completo (24/06): 5 registrar legacy AUTOMATIONS/tools resi portabili in place ($PSScriptRoot/%~dp0 + env, ASCII-norm, fix bug && PS5.1) poi RIMOSSI (git rm, recuperabili) perche' ridondanti con register_night_tasks.ps1. Zero hardcode benen veri nel repo"
+      "De-hardcode benen completo (24/06): 5 registrar legacy AUTOMATIONS/tools resi portabili in place ($PSScriptRoot/%~dp0 + env, ASCII-norm, fix bug && PS5.1) poi RIMOSSI (git rm, recuperabili) perche' ridondanti con register_night_tasks.ps1. Zero hardcode benen veri nel repo",
+      "RAG v4.2 SOTA-2026 (24-25/06): chunking heading-aware (.md, +breadcrumb) + snapshot chroma_db in _VAULT/BACKUPS (rotazione 3) + GraphRAG-lite wikilink-expansion (rag_linkgraph.json, espande [[link]] dai top-3 cap+8, reranker gata). _DA_ORDINARE->_ARCHIVIO fuori dal canone (V6 superato non inquina piu'). HNSW rigenerato via rag_recover (UAC). Prova: EP_N2_51 grounded+connesso. Nina=auto-promozione decisa. Build verde, pushato (79908408+a0f6a9b9+9e3bde3a)"
     ],
     "next": "PROSSIMA SESSIONE ULTRACODE: rendere NINA DEFINITIVA (filone unico discorsivo, evolutivo, UNA SOLA VERITA' sul RAG; canone=EP_N2 v2, archiviare EP_AV_* vecchi, ordinare il cammino, audit STORIE) -> poi animazione+voce. Stile deciso in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Aperti: divergenza RAG 0,2% (auto-fix notturno @03:37), via connettori MIMS (SCHEDA §5), martinetto Vevor+mandrino ER20",
     "target_capannone": "2030-07-15"
@@ -125,5 +126,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a DA_FARE_FATTO.md"
+  "last_action": "Modifica a night_audit.py"
 }
