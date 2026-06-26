@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-25T23:45:51.104944",
+  "last_update": "2026-06-26T17:16:39.436958",
   "active_milestone": "Sessione #49 (25/06): PRE_01 preambolo Nina come CAROSELLO che SPIEGA il progetto. Iterato v1->v10: stile buonanotte + FLUSSO sfumato continuo (onda su x globale). Scartato v8 vignette/fumetto. v10 ATTUALE = 17 slide, linguaggio semplice/ricco: Cover, Cos-e, Perche, Per-chi-e, Il Patto, Nina, Themis, Atomi<->Bit, I 4 simboli, La Giuntura, Le 8 Pietre, Cosa imparerai, Come funziona, Si ripassa, Da dove nasce, La promessa, Si parte. 17 PNG singole slides/slide_1..17. Versioni in _VERSIONI/. Integrato in RAG+Obsidian.",
   "next_step": "Matteo manda un FILE da leggere/riflettere -> se serve cambiare il preambolo si fa ORA (prima di bloccarlo). Poi export Adobe Express (export_html_to_express, readiness skill). Aperti: scelta onda v5 sfumata (attuale) vs v4 intreccio; altri caroselli; EP_N2_01 a questo livello.",
   "session_count": 97,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-25T21:43:14.622681"
+      "last_activity": "2026-06-26T07:30:01.938598"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -88,7 +88,8 @@
       "De-hardcode benen completo (24/06): 5 registrar legacy AUTOMATIONS/tools resi portabili in place ($PSScriptRoot/%~dp0 + env, ASCII-norm, fix bug && PS5.1) poi RIMOSSI (git rm, recuperabili) perche' ridondanti con register_night_tasks.ps1. Zero hardcode benen veri nel repo",
       "RAG v4.2 SOTA-2026 (24-25/06): chunking heading-aware (.md, +breadcrumb) + snapshot chroma_db in _VAULT/BACKUPS (rotazione 3) + GraphRAG-lite wikilink-expansion (rag_linkgraph.json, espande [[link]] dai top-3 cap+8, reranker gata). _DA_ORDINARE->_ARCHIVIO fuori dal canone (V6 superato non inquina piu'). HNSW rigenerato via rag_recover (UAC). Prova: EP_N2_51 grounded+connesso. Nina=auto-promozione decisa. Build verde, pushato (79908408+a0f6a9b9+9e3bde3a)",
       "RETE visiva da 2 link (Konik+Hermes) (25/06 sess#47): (1) orfani di RETE nella cartella clinica (vault_intersect v2.1->vault_orphans.json, night_audit v1.4 critica RETE, setup_obsidian lo lancia di notte; 393 note/2 orfani veri); (2) orfani colorati nella RETE 3D (anello rosso+filtro); (3) RETE viva: freschezza mtime + hub degree + memoria 2 livelli Hermes (core/vault) + legenda (/api/rag/vectors +orphan+degree+age_days+tier); (4) transizioni morbide (scena WebGL persistente + fade-in, no remount al filtro). Commit 38bd6fc0+b3675b3c+91fb8672+98fd7109. tsc -b + py_compile verdi",
-      "Adobe Express + caroselli Nina (25/06 sess#48): export_html_to_express provato (account auth) -> EP_N2_01 carosello 8 slide in Express (font Adobe kit zhv2kry). Org POSTER/CAROSELLI/<EP_ID>/ (carosello.html+caption.txt+README.md+slides/). BIBBIA_VISIVA_CAROSELLI.md + BRIEF_ILLUSTRATORE_PERSONAGGI.md. Simboli mondo definitivi. Preambolo PRE_01 'Il Mondo di Nina' 8 slide illustrate ricche (porta/luna/calibro/ponte/mappa Pietre, filo-ponte, PNG pronti). Stile blueprint-anime alla Geronimo Stilton, no foto reali, personaggi via illustratore. tsc -b verde, 0 orfani episodi"
+      "Adobe Express + caroselli Nina (25/06 sess#48): export_html_to_express provato (account auth) -> EP_N2_01 carosello 8 slide in Express (font Adobe kit zhv2kry). Org POSTER/CAROSELLI/<EP_ID>/ (carosello.html+caption.txt+README.md+slides/). BIBBIA_VISIVA_CAROSELLI.md + BRIEF_ILLUSTRATORE_PERSONAGGI.md. Simboli mondo definitivi. Preambolo PRE_01 'Il Mondo di Nina' 8 slide illustrate ricche (porta/luna/calibro/ponte/mappa Pietre, filo-ponte, PNG pronti). Stile blueprint-anime alla Geronimo Stilton, no foto reali, personaggi via illustratore. tsc -b verde, 0 orfani episodi",
+      "PRE_01 preambolo Nina -> CAROSELLO a 17 slide che SPIEGA il progetto (25/06 sess#49): iterato v1->v10 (stile buonanotte + flusso sfumato continuo su x globale; scartata v8 vignette). v10 = Cover/Cos-e/Perche/Per-chi-e/Patto/Nina/Themis/Atomi-Bit/4-simboli/Giuntura/8-Pietre/Cosa-imparerai/Come-funziona/Si-ripassa/Da-dove-nasce/Promessa/Si-parte. 17 PNG singole; versioni in _VERSIONI/+INDEX; tool _render_pair.py; integrato RAG+Obsidian. Verifiche: 0 orfani, build 215, tsc EXIT 0"
     ],
     "next": "PROSSIMA SESSIONE ULTRACODE: rendere NINA DEFINITIVA (filone unico discorsivo, evolutivo, UNA SOLA VERITA' sul RAG; canone=EP_N2 v2, archiviare EP_AV_* vecchi, ordinare il cammino, audit STORIE) -> poi animazione+voce. Stile deciso in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Aperti: divergenza RAG 0,2% (auto-fix notturno @03:37), via connettori MIMS (SCHEDA §5), martinetto Vevor+mandrino ER20",
     "target_capannone": "2030-07-15"
@@ -128,5 +129,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a rag_linkgraph.json"
+  "last_action": "Sviluppo automazioni core (EP_SEED_WATCHER_L1_keyless.md)"
 }

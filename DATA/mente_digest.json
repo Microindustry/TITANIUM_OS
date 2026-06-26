@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-06-25T20:35:21.793022",
+  "scanned_at": "2026-06-26T17:15:22.149142",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 782,
+  "total_files": 788,
   "files_read": 5,
-  "files_skipped": 777,
+  "files_skipped": 783,
   "global_summary": {
     "total_decisions": 57,
     "total_specs": 53,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.3,
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 95.6,
+      "size_kb": 95.7,
       "readable": false,
       "extracts": {}
     },
@@ -162,28 +162,56 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 10.2,
+      "size_kb": 10.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 10.2,
+      "size_kb": 10.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\a2\\8e5a4734dc1cface3795e6c06cae68c7b89e0b",
+      "type": "unknown",
+      "size_kb": 0.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\ab\\a15427d455ced3e0c1578f613bbffddd7fb905",
+      "type": "unknown",
+      "size_kb": 0.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d6\\092682a01efe0d2fe65d9fbe66eed879ab3a5b",
+      "type": "unknown",
+      "size_kb": 3.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\f3\\8756767bf241dd9028d4c67691ae516db2ef4f",
+      "type": "unknown",
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\info\\packs",
       "type": "unknown",
-      "size_kb": 0.2,
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 194.3,
+      "size_kb": 194.4,
       "readable": false,
       "extracts": {}
     },
@@ -195,20 +223,6 @@
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-0d2323f36b5fb83e3459b3f32e09252ce3ef8670.pack",
-      "type": "pack",
-      "size_kb": 6265.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-0d2323f36b5fb83e3459b3f32e09252ce3ef8670.rev",
-      "type": "rev",
-      "size_kb": 2.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
       "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.idx",
       "type": "idx",
       "size_kb": 15.5,
@@ -216,23 +230,30 @@
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.pack",
-      "type": "pack",
-      "size_kb": 4808.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.rev",
-      "type": "rev",
-      "size_kb": 2.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
       "path": ".git\\objects\\pack\\pack-284c502b8dc98fc54d30b1bd4763e86f9d64eaf5.idx",
       "type": "idx",
       "size_kb": 99.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-37c821cc4e5f36d9bf340a9e78f63403a3d03bd2.idx",
+      "type": "idx",
+      "size_kb": 34.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-37c821cc4e5f36d9bf340a9e78f63403a3d03bd2.pack",
+      "type": "pack",
+      "size_kb": 6679.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-37c821cc4e5f36d9bf340a9e78f63403a3d03bd2.rev",
+      "type": "rev",
+      "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
@@ -575,7 +596,7 @@
     {
       "path": "_ARCHIVIO\\CANONE_ARCHIVIO\\titanium-codex-il-master-manifesto-strategico\\07_fase-2pdf.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
@@ -1471,7 +1492,7 @@
     {
       "path": "FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md",
       "type": "md",
-      "size_kb": 30.3,
+      "size_kb": 30.4,
       "readable": false,
       "extracts": {}
     },
@@ -1520,7 +1541,7 @@
     {
       "path": "KNOWLEDGE\\AI_NEWS_RECENTI.md",
       "type": "md",
-      "size_kb": 8.7,
+      "size_kb": 7.2,
       "readable": false,
       "extracts": {}
     },
@@ -1687,7 +1708,7 @@
     {
       "path": "KNOWLEDGE\\AUTOMIGLIORAMENTO.md",
       "type": "md",
-      "size_kb": 1.8,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
@@ -1778,7 +1799,7 @@
     {
       "path": "KNOWLEDGE\\NINA_V2_ARCHITETTURA.md",
       "type": "md",
-      "size_kb": 11.8,
+      "size_kb": 11.9,
       "readable": false,
       "extracts": {}
     },
@@ -1799,7 +1820,7 @@
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\i_protagonisti.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
@@ -1827,7 +1848,7 @@
     {
       "path": "KNOWLEDGE\\PROMPTS\\istruzioni.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
@@ -1855,14 +1876,14 @@
     {
       "path": "KNOWLEDGE\\PROMPTS\\per_visualizazione_video.md",
       "type": "md",
-      "size_kb": 5.2,
+      "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\PROMPTS\\prompt_esatto_nel_tuo_generatore.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -2212,7 +2233,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\parameter_efficient_fine_tuning_of_large_scale_pre_trained_l.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -2870,7 +2891,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\LABORATORIO\\IDEE_NON_SVILUPPATE.md",
       "type": "md",
-      "size_kb": 14.4,
+      "size_kb": 14.3,
       "readable": false,
       "extracts": {}
     },
@@ -3325,35 +3346,42 @@
     {
       "path": "SESSIONI\\2026-06-05_lavoro_autonomo.md",
       "type": "md",
-      "size_kb": 5.7,
+      "size_kb": 5.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-06-25_caroselli-preambolo-flusso-stile.md",
+      "type": "md",
+      "size_kb": 5.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-25_graph-view-konik.md",
       "type": "md",
-      "size_kb": 3.0,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-25_hermes-obsidian-memory.md",
       "type": "md",
-      "size_kb": 2.6,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\_INDEX_SESSIONI.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 8.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\_TEMPLATE.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -3563,7 +3591,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
       "type": "md",
-      "size_kb": 7.2,
+      "size_kb": 7.3,
       "readable": false,
       "extracts": {}
     },
@@ -3598,7 +3626,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
@@ -3654,21 +3682,21 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
       "type": "md",
-      "size_kb": 8.1,
+      "size_kb": 8.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.9,
       "readable": false,
       "extracts": {}
     },
@@ -3682,14 +3710,14 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
       "type": "md",
-      "size_kb": 7.6,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
       "type": "md",
-      "size_kb": 8.7,
+      "size_kb": 8.9,
       "readable": false,
       "extracts": {}
     },
@@ -3710,7 +3738,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.8,
       "readable": false,
       "extracts": {}
     },
@@ -3759,7 +3787,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260615_content_nina_v2_i_5_episodi_d_apert.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 10.1,
       "readable": false,
       "extracts": {}
     },
@@ -3815,7 +3843,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
       "type": "md",
-      "size_kb": 8.2,
+      "size_kb": 8.4,
       "readable": false,
       "extracts": {}
     },
@@ -3843,14 +3871,14 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260623_sessione_42_blackout_rag_recovery_2.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260623_traccia_simone_rizzo_tier_1_yt_driv.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },
@@ -3865,6 +3893,13 @@
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260624_escludi_archivio_ex_da_ordinare_dal.md",
       "type": "md",
       "size_kb": 10.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260625_pre_01_v10_preambolo_a_17_slide_che.md",
+      "type": "md",
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
@@ -3892,7 +3927,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
@@ -3920,14 +3955,14 @@
     {
       "path": "STORIE\\_EVOLUZIONE.md",
       "type": "md",
-      "size_kb": 21.1,
+      "size_kb": 21.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\_INDEX_STORIE.md",
       "type": "md",
-      "size_kb": 17.6,
+      "size_kb": 17.8,
       "readable": false,
       "extracts": {}
     },
@@ -3955,7 +3990,7 @@
     {
       "path": "STORIE\\EP_AUTO_006.md",
       "type": "md",
-      "size_kb": 6.6,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
@@ -4039,14 +4074,14 @@
     {
       "path": "STORIE\\INDICE_CAMMINO.md",
       "type": "md",
-      "size_kb": 6.2,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
       "type": "md",
-      "size_kb": 4.9,
+      "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
@@ -4081,7 +4116,7 @@
     {
       "path": "STORIE\\PRODUZIONE_NINA.md",
       "type": "md",
-      "size_kb": 6.4,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
@@ -4305,7 +4340,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260604_episodi_su_episodes_json_bulletproo.md",
       "type": "md",
-      "size_kb": 13.2,
+      "size_kb": 13.1,
       "readable": false,
       "extracts": {}
     },
@@ -4319,7 +4354,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
       "type": "md",
-      "size_kb": 11.5,
+      "size_kb": 11.6,
       "readable": false,
       "extracts": {}
     },
@@ -4333,14 +4368,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
       "type": "md",
-      "size_kb": 11.4,
+      "size_kb": 11.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
       "type": "md",
-      "size_kb": 9.2,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -4354,21 +4389,21 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
       "type": "md",
-      "size_kb": 11.1,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
       "type": "md",
-      "size_kb": 10.6,
+      "size_kb": 10.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
@@ -4382,14 +4417,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
       "type": "md",
-      "size_kb": 8.3,
+      "size_kb": 8.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
       "type": "md",
-      "size_kb": 10.4,
+      "size_kb": 10.6,
       "readable": false,
       "extracts": {}
     },
@@ -4438,7 +4473,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260615_content_nina_v2_i_5_episodi_d_apert.md",
       "type": "md",
-      "size_kb": 10.9,
+      "size_kb": 11.0,
       "readable": false,
       "extracts": {}
     },
@@ -4494,7 +4529,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
@@ -4508,7 +4543,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
       "type": "md",
-      "size_kb": 8.7,
+      "size_kb": 8.8,
       "readable": false,
       "extracts": {}
     },
@@ -4522,7 +4557,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260623_sessione_42_blackout_rag_recovery_2.md",
       "type": "md",
-      "size_kb": 10.3,
+      "size_kb": 10.5,
       "readable": false,
       "extracts": {}
     },
@@ -4536,14 +4571,21 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260624_content_nina_4_script_reel_stile_si.md",
       "type": "md",
-      "size_kb": 10.8,
+      "size_kb": 10.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260624_escludi_archivio_ex_da_ordinare_dal.md",
       "type": "md",
-      "size_kb": 10.9,
+      "size_kb": 11.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "STORIE\\S2_SISTEMA\\EP_20260625_pre_01_v10_preambolo_a_17_slide_che.md",
+      "type": "md",
+      "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
@@ -4641,7 +4683,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_godnode.md",
       "type": "md",
-      "size_kb": 4.7,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
@@ -4837,14 +4879,14 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_01_il_bottone_che_regge.md",
       "type": "md",
-      "size_kb": 14.0,
+      "size_kb": 14.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
       "type": "md",
-      "size_kb": 14.4,
+      "size_kb": 14.5,
       "readable": false,
       "extracts": {}
     },
@@ -4858,14 +4900,14 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
       "type": "md",
-      "size_kb": 15.9,
+      "size_kb": 16.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_04_la_mappa_che_non_mente.md",
       "type": "md",
-      "size_kb": 16.2,
+      "size_kb": 16.3,
       "readable": false,
       "extracts": {}
     },
@@ -4879,35 +4921,35 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_07_il_sussurratore_di_parole.md",
       "type": "md",
-      "size_kb": 15.9,
+      "size_kb": 16.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_08_la_lampada_che_sussurra.md",
       "type": "md",
-      "size_kb": 15.6,
+      "size_kb": 15.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_09_la_bibliotecaria_della_mente.md",
       "type": "md",
-      "size_kb": 15.1,
+      "size_kb": 15.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
       "type": "md",
-      "size_kb": 14.8,
+      "size_kb": 14.9,
       "readable": false,
       "extracts": {}
     },
@@ -4928,14 +4970,14 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 14.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 14.9,
       "readable": false,
       "extracts": {}
     },
@@ -4949,28 +4991,28 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_16_lo_specchio_del_giudice.md",
       "type": "md",
-      "size_kb": 15.7,
+      "size_kb": 15.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_17_la_traccia.md",
       "type": "md",
-      "size_kb": 15.3,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_18_la_giuntura_dove_due_diventa_uno.md",
       "type": "md",
-      "size_kb": 15.8,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_19_la_mano_che_insegna_alla_notte.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.7,
       "readable": false,
       "extracts": {}
     },
@@ -4984,7 +5026,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_21_il_nome_che_cambia.md",
       "type": "md",
-      "size_kb": 15.4,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
@@ -5005,21 +5047,21 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_24_il_filtro_del_mugnaio.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_25_le_finestre_sempre_aperte.md",
       "type": "md",
-      "size_kb": 16.1,
+      "size_kb": 16.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_26_la_ruota_dei_guardiani.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
@@ -5033,7 +5075,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_28_il_diario_che_pensa.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
@@ -5054,21 +5096,21 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_31_il_cruscotto_che_non_dorme.md",
       "type": "md",
-      "size_kb": 14.4,
+      "size_kb": 14.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_32_il_giorno_che_il_labirinto_si_vide_nello.md",
       "type": "md",
-      "size_kb": 15.2,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_33_i_696_quartieri_che_si_trovano_da_soli.md",
       "type": "md",
-      "size_kb": 16.0,
+      "size_kb": 16.1,
       "readable": false,
       "extracts": {}
     },
@@ -5110,7 +5152,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_39_il_voto_dei_quartieri.md",
       "type": "md",
-      "size_kb": 15.2,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
@@ -5152,7 +5194,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_45_il_direttore_invisibile.md",
       "type": "md",
-      "size_kb": 15.4,
+      "size_kb": 15.5,
       "readable": false,
       "extracts": {}
     },
@@ -5194,7 +5236,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_51_il_sussurratore_che_indovina.md",
       "type": "md",
-      "size_kb": 13.5,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
@@ -5383,7 +5425,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -5495,7 +5537,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_42_memory_getac_importata_su_pc_fisso.md",
       "type": "md",
-      "size_kb": 10.7,
+      "size_kb": 10.8,
       "readable": false,
       "extracts": {}
     },
@@ -5586,7 +5628,7 @@
     {
       "path": "V32\\fatti_dalle_storie.md",
       "type": "md",
-      "size_kb": 77.4,
+      "size_kb": 77.5,
       "readable": false,
       "extracts": {}
     },

@@ -1969,6 +1969,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_S2_00_IL_DISTACCO",
         "title": "Il Distacco",
         "tipo": "tema",
@@ -1989,12 +1995,6 @@
       {
         "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
         "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -14941,6 +14941,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis, volte"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -14961,12 +14967,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15343,6 +15343,12 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_51",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, parla"
+      },
+      {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
         "tipo": "prerequisito",
@@ -15393,12 +15399,6 @@
       {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15467,6 +15467,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_N2_35",
         "title": "Il Custode dei Segreti",
         "tipo": "tema",
@@ -15499,12 +15505,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_09",
-        "title": "La Bibliotecaria della Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -17627,6 +17627,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -17647,12 +17653,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20213,6 +20213,12 @@
         "title": "IL GIORNO CHE IL RAG HA MANGIATO 56 GIGABYTE",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260625",
+        "title": "TITANIUM OS — Episodio 49",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -20220,6 +20226,10 @@
       "precede": {
         "id": "EP_S2_09",
         "title": "IL GIORNO CHE IL RAG HA MANGIATO 56 GIGABYTE"
+      },
+      "segue": {
+        "id": "EP_20260625",
+        "title": "TITANIUM OS — Episodio 49"
       }
     }
   },
@@ -20261,6 +20271,108 @@
         "giro_spirale": 2,
         "richiama": [],
         "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, parla"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_27",
+        "title": "La Memoria che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_08",
+        "title": "La Lampada che Sussurra",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis, volte"
+      },
+      {
+        "id": "EP_N2_35",
+        "title": "Il Custode dei Segreti",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_20260625",
+    "title": "TITANIUM OS — Episodio 49",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-25",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS — Episodio 49 \"Il Mondo Spiegato in Diciassette Pagine\" Data di registrazione: 25 giugno 2026 COLD OPEN Ore 23:47. Lo schermo mostra una griglia di rettangoli bianchi — diciassette, esatti",
+    "content": "# TITANIUM_OS — Episodio 49\n## \"Il Mondo Spiegato in Diciassette Pagine\"\n\n*Data di registrazione: 25 giugno 2026*\n\n---\n\n## COLD OPEN\n\nOre 23:47. Lo schermo mostra una griglia di rettangoli bianchi — diciassette, esatti. Non sono documenti. Non sono slide nel senso in cui li intende PowerPoint. Sono pagine. Come le pagine di un libro per bambini che qualcuno ha deciso di scrivere per adulti che non hanno tempo di essere bambini.\n\nMatteo guarda il PNG numero uno: *Cover*. Poi il diciassettesimo: *Si parte.*\n\nDodici ore fa era la versione otto. Poi la nove. Poi la dieci.\n\nQualcuno in un'altra vita chiamerebbe questo *iterazione*. Lui lo chiama semplicemente: trovare le parole giuste.\n\n---\n\n## ATTO I — Il problema che nessuno vede\n\nGENESIS ha settanta punti percentuale. V32 sessantacinque. Il capannone è al 2030.\n\nQuesti numeri non significano nulla a chi non sa cosa sia V32. O GENESIS. O perché un artigiano che salda titanio per la MotoGP stia costruendo un sistema cognitivo in una taverna di dodici metri quadri.\n\nIl problema non è tecnico. Il problema è narrativo.\n\n**Nina** è il progetto educativo che vive dentro GENESIS — il lato pubblico, la voce che spiega. Ma una voce senza preambolo è rumore. E il preambolo, fino a stamattina, non esisteva in forma che si potesse mostrare a qualcuno che non ha letto tutti gli altri novantacinque documenti nell'indice delle sessioni.\n\nPRE_01 nasce da questa frattura: da un lato un sistema che funziona, dall'altro nessun modo semplice di dire *cosa è* a chi arriva da fuori.\n\nIl carosello Instagram — 1080×1350 pixel per slide, formato verticale, pensato per scorrere con il pollice — è il ponte. Non il progetto. Il ponte verso il progetto.\n\n---\n\n## ATTO II — Dieci versioni per trovare una cosa\n\nLa sessione #49 inizia con la v1 già esistente: magra, essenziale, funzionante. Funzionante come funziona una bozza — tiene il posto, non occupa lo spazio.\n\nIl percorso è documentato in `PRE_01/_VERSIONI/` con logica additiva: nulla viene cancellato, tutto viene stratificato. È la stessa filosofia del vault Obsidian — il sistema impara anche dagli scarti.\n\n- **v1**: struttura base, 8 slide\n- **v2**: stile *buonanotte* — il termine che Matteo usa per indicare un'estetica notturna, soffusa, che non stressa l'occhio — ancora senza il flusso visivo continuo\n- **v3**: primo tentativo di flusso — un'onda d'oro, un solo filo che attraversa le slide\n- **v4 / v5**: la direzione si definisce — alone soffuso, meno netto, propagazione parziale\n- **v6**: propagazione completa del flusso su tutta la sequenza\n- **v7**: testo arricchito sulle 8 slide originali — ogni punto illustrato più pieno, i sigilli più evocativi\n- **v8**: tentativo con vignette, stile fumetto — scartata. Non per motivo estetico ma per motivo di coerenza: Nina non è un personaggio da fumetto, è un sistema che insegna. Il fumetto comunicava la persona sbagliata.\n- **v9**: il preambolo si espande a **12 slide** e acquisisce struttura narrativa — *Cos'è / Perché / Come funziona*\n- **v10**: 17 slide, versione corrente\n\nLa v10 ha un'architettura precisa. Non è una lista di feature. È una sequenza:\n\n> Cover → Cos'è → Perché → Per chi è → Il Patto → Nina → Themis → Atomi↔Bit → I 4 simboli → La Giuntura → Le 8 Pietre → Cosa imparerai → Come funziona → Si ripassa → Da dove nasce → La promessa → Si parte\n\nOgni titolo è una promessa di lettura. *Il Patto* e *La promessa* non sono titoli da manuale tecnico — sono titoli da testo che sa di avere un lettore davanti.\n\nIl flusso visivo — l'onda su X globale, lo sfumato continuo che attraversa le slide — non è decorazione. È la firma che dice: *queste diciassette pagine sono una cosa sola, non diciassette cose separate.*\n\n---\n\n## ATTO III — Il problema collaterale: Adobe e gli orfani\n\nLa sessione #49 non è solo PRE_01.\n\nParallelamente, Matteo testa l'integrazione con Adobe Express per l'export — `export_html_to_express`, autenticazione account — e si ferma. L'integrazione non è bloccante, ma il flusso non è abbastanza fluido da giustificare il tempo. Viene segnalata, documentata, accantonata. Non è un fallimento, è una priorità che si abbassa da sola.\n\nNell'altra metà della sessione — la #46 e #47 che si chiudono nelle stesse ore — RAG raggiunge la versione 4.2. Il grafo 3D del vault inizia a mostrare qualcosa che non ci si aspettava: **gli orfani di RETE**. Note MENTE senza legami, nodi isolati nel grafo Obsidian, visibili ora come punti colorati distinti nella visualizzazione WebGL.\n\nKonik — il nome interno per questo sistema di diagnostica — trasforma il grafo da gingillo estetico a strumento clinico. Se una nota non ha legami, è visibile. Se è visibile, si può decidere cosa farne.\n\nHermes gestisce la memoria a due livelli: freschezza dei documenti + struttura hub. Ogni codifica visiva nel grafo corrisponde a una informazione utile, non a una scelta di stile.\n\nNel mezzo, un dettaglio che vale la pena registrare: un commento nel codice Nina diceva ancora la regola vecchia — `_PROPOSTI` / `proposto_da_validare`. La regola reale è AUTO-PROMOZIONE. Il commit `docs(nina): allinea l'header alla regola reale` dura forse trenta secondi. Ma allinea il codice alla realtà. Questo tipo di pulizia — piccolo, invisibile, necessario — è esattamente il lavoro che non appare nei portfolio.\n\n---\n\n## CHIUSURA\n\nC'è un momento in ogni progetto in cui smetti di costruire *per te* e inizi a costruire *per chi non sa nulla*.\n\nNon è un momento retorico. È un momento tecnico. Richiede di rimettere mano a cose che funzionano già, e rifarlo con occhi diversi — gli occhi di qualcuno che arriva da zero.\n\nPRE_01 v10 non è la prima slide di un corso. È la risposta alla domanda che nessuno ha ancora fatto ad alta voce: *ma di cosa stai parlando, esattamente?*\n\nDiciassette slide. Un flusso continuo. Un linguaggio semplice che non tradisce la complessità di quello che descrive.\n\nMatteo chiude la sessione #49 con il `story_state.json` aggiornato e l'inventario notturno in esecuzione automatica. Domani il lavoro riprende dallo stesso punto. Il sistema sa dov'è.\n\n---\n\n## reel_hook\n\n17 slide per spiegare un progetto che ha 95 note nel vault e 5 anni di orizzonte.\n\nNon puoi mandare il vault a qualcuno che non sa cosa sia Obsidian.\n\nQuindi costruisci un preambolo. Lo iteraggi 10 volte. Scarti il fumetto alla v8 perché comunica la persona sbagliata.\n\nE alla v10 hai qualcosa che un estraneo può leggere sul telefono e capire.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE**: PRE_01 v10 — preambolo Nina fissato a 17 slide con sequenza narrativa Cover→Si parte; versioni archiviate additivamente in `PRE_01/_VERSIONI/`\n- **LOGICA**: le versioni precedenti (v1-v9) non avevano struttura narrativa completa né flusso visivo continuo; la v8 stile fumetto scartata perché incoerente con il carattere del sistema Nina\n- **DECISIONE**: flusso visivo = onda sfumata su X globale (alone soffuso, propagazione completa) — scelta confermata da Matteo alla v5 come direzione definitiva\n- **LOGICA**: il flusso continuo tra slide segnala che le 17 pagine sono una sequenza unica, non 17 contenuti separati; funzionale alla lettura su mobile (formato 1080×1350)\n- **DECISIONE**: integrazione Adobe Express (`export_html_to_express`) accantonata — flusso non abbastanza fluido da giustificare il tempo nella sessione corrente\n- **OBIETTIVO**: PRE_01 v10 sblocca la pubblicabilità del progetto Nina su canali social; prossimo passo = validazione del carosello su pubblico reale e allineamento con NINA_STILE_E_PIANO\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | #49 |\n| **Data** | 2026-06-25 |\n| **Progetto principale** | GENESIS / Nina |\n| **Componenti citati** | PRE_01 v10, RAG v4.2, Konik, Hermes, Adobe Express |\n| **Versioni iterate** | v1 → v10 (10 iterazioni, 1 scartata: v8) |\n| **Formato output** | 17 PNG 1080×1350 px |\n| **Sessioni chiuse** | #46, #47, #49 |\n| **Tag** | nina, caroselli, social, instagram, preambolo, RAG, grafo, orfani |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260624",
+        "title": "TITANIUM OS — Episodio 44",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260624",
+        "title": "TITANIUM OS — Episodio 44"
       }
     }
   }
