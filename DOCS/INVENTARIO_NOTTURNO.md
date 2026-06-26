@@ -22,6 +22,25 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-06-26 · 13 commit
+- `838a5349` auto: night_audit - cartella clinica 26/06/2026
+- `4f0c7699` auto: story_agent - episodi generati 26/06/2026
+- `bde13b8e` feat(nina): PRE_01 v10 — preambolo a 17 slide che spiega il progetto
+- `d25bc91d` feat(nina): PRE_01 v7 — testo arricchito su 8 slide
+- `92fcd9f1` feat(nina): PRE_01 — stile buonanotte + flusso sfumato continuo su 8 slide
+- `0be8e667` feat(nina): Adobe Express + caroselli — porta→carosello, preambolo PRE_01
+- `72f34e69` chore(salva): chiusura sessione #47 — filone visivo RETE (Konik + Hermes)
+- `98fd7109` feat(rete): transizioni morbide — scena persistente + fade-in al filtro
+- `91fb8672` feat(rete): RETE viva — freschezza + hub + memoria a 2 livelli (Konik+Hermes)
+- `b3675b3c` feat(rete): colora gli orfani di RETE nel grafo 3D (Konik fase 2)
+- `38bd6fc0` feat(audit): segnale orfani di RETE nella cartella clinica (tesi Konik)
+- `a0a01fbf` chore(salva): chiusura sessione #46 — RAG v4.2 + _ARCHIVIO fuori canone + Nina auto
+- `9e3bde3a` docs(nina): allinea l'header alla regola reale — AUTO-PROMOZIONE, niente revisione
+
+_episodi: 251 · critiche aperte: 18 (93 risolte) · RAG: 24762 chunk_
+
+
+
 ## 2026-06-25 · 25 commit
 - `a9038cea` auto: night_audit - cartella clinica 25/06/2026
 - `be6a6e3c` auto: story_agent - episodi generati 25/06/2026
