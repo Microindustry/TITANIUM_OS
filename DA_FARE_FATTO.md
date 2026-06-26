@@ -117,8 +117,15 @@ definire lo stile narrativo, poi propagare.**
   Organismo/Libro-IA, Mappa Viva, doppio fondo, **test della sarta**, sotto-i-piedi (RAG/GPU vero),
   ancoraggio, motore infinito, cresce-da-sé, niente bozze, scalabilità, Provalo tu, **Nina↔HR**
   (cosa sai fare), eredità, Episodio 1. 16 PNG singole + README + caption. `CAROSELLI/PRE_02/`.
-- [ ] **Prossimo**: revisione Matteo PRE_02 → eventuale PRE_03 (mondo/personaggi: Themis/Forge/Entropia)
-  → export Adobe Express della serie (readiness skill). Aperti: onda v5 vs v4.
+- [✓] **Direzione (Matteo, 26/06)**: la serie può avere **più caroselli a seconda del contesto**.
+  PRE_03 lo vuole **con più testo**. **MA prima dei caroselli nuovi si fanno i PERSONAGGI.**
+- [ ] **PROSSIMA SESSIONE — VERIFICA "il punto 3": la LINEA che collega le immagini** (il flusso/onda
+  di sfondo) sia **in pari / allineata** su TUTTE le slide e tra i caroselli (le giunture combacino,
+  esce a dx ed entra a sx alla stessa altezza). Poi decidere l'onda: **v5 sfumata vs v4 intreccio**.
+- [ ] **Poi — I PERSONAGGI** (prima di PRE_03): definirli/crearli. Base `MONDO/BRIEF_ILLUSTRATORE_PERSONAGGI.md`
+  + `NINA_V2_CHARACTER_BIBLE`. Cast: Nina, Themis, Forge + antagonisti (Entropia, Palude dell'Allucinazione).
+  Riferimento avatar: Desktop/teacher-avatar.png.
+- [ ] **Poi — PRE_03** (mondo/personaggi, **più testo**) → export Adobe Express della serie (readiness skill).
 
 ---
 

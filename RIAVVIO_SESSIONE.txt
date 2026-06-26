@@ -1,40 +1,43 @@
 === RIAVVIO SESSIONE #50 — 26/06/2026 ===
-Ultima sessione: #49 — 25-26/06/2026 (PRE_01: preambolo Nina come carosello che spiega il progetto)
+Ultima sessione: #49 — 25-26/06/2026 (Nina: serie preambolo a caroselli — PRE_01 + PRE_02)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il preambolo PRE_01 "Il Mondo di Nina" e' diventato un CAROSELLO a 17 slide che SPIEGA
-il progetto, in linguaggio semplice, tutto fluido (corrente sfumata continua sotto le slide).
-Iterato a lungo con Matteo: v1->v10. ATTUALE = v10 (17 slide).
+Il preambolo di Nina e' diventato una SERIE di caroselli (15-17 slide l'uno, stesso stile +
+flusso continuo): PRE_01 = overview del mondo (17 slide), PRE_02 = "Come funziona Nina"
+(16 slide, integra la VISIONE Libro-IA). La serie puo' crescere a seconda del contesto.
 
->>> PROSSIMA SESSIONE #50 SI PARTE DA: Matteo manda un FILE da leggere/riflettere
-    ("che mi sia d'ispirazione, l'ho apprezzato ma non so se davvero utile"). Lo leggo,
-    dico cosa nelle 17 slide va allineato e applico le modifiche ORA (prima di bloccarle).
-    Poi: export Adobe Express (export_html_to_express, readiness skill prima). <<<
+>>> PROSSIMA SESSIONE #50 — IN ORDINE:
+  1) VERIFICA "il punto 3": la LINEA che collega le immagini (il flusso/onda di sfondo)
+     sia IN PARI / allineata su TUTTE le slide e tra i caroselli (le giunture combacino).
+     Poi decidere l'onda: v5 SFUMATA (attuale) vs v4 INTRECCIO.
+  2) Fare i PERSONAGGI (prima di PRE_03): Nina, Themis, Forge + antagonisti (Entropia,
+     Palude dell'Allucinazione). Base: MONDO/BRIEF_ILLUSTRATORE_PERSONAGGI.md +
+     NINA_V2_CHARACTER_BIBLE. Avatar riferimento: Desktop/teacher-avatar.png.
+  3) PRE_03 (mondo/personaggi) CON PIU' TESTO -> export Adobe Express della serie. <<<
 
 ━━━ FATTO IN SESSIONE #49 ━━━
-• PRE_01 da 8 -> 17 slide. Stile "buonanotte" (lead+intro+parole illustrate+seal) +
-  FLUSSO sfumato continuo di sfondo (onda calcolata su x globale (n-1)*1080+x: continua
-  per costruzione tra una slide e l'altra, come una corrente unica).
-• Iterazioni: v2 buonanotte, v3 onda oro, v4 intreccio Atomi<->Bit, v5 onda SFUMATA (scelta),
-  v6 propagata 8 slide, v7 testo arricchito, v8 vignette/fumetto (SCARTATA), v9 12 slide
-  (spiega il progetto), v10 17 slide (linguaggio semplice).
-• Arco 17: Cover, Cos'e, Perche, Per chi e, Il Patto, Nina, Themis, Atomi<->Bit, I 4 simboli,
-  La Giuntura, Le 8 Pietre, Cosa imparerai, Come funziona, Si ripassa, Da dove nasce,
-  La promessa, Si parte.
-• Tutte le versioni salvate in PRE_01/_VERSIONI/ (additivo) + INDEX.md. 17 PNG singole in slides/.
-• Tool nuovo: PRE_01/_render_pair.py (N slide affiancate per studiare le giunture; screenshot
-  Chrome -> path ASSOLUTO obbligatorio).
-• Integrato in RAG + Obsidian: nota MENTE/SESSIONI/2026-06-25_caroselli-preambolo-flusso-stile.md.
+• PRE_01: preambolo iterato v1->v11 (stile buonanotte + flusso sfumato continuo su x globale).
+  Scartata v8 vignette. v11 = 17 slide allineate alla VISIONE (Mappa Viva, i tre fondi
+  fiaba/bottega/vero, libro che cresce, diario-eredita'). 17 PNG singole.
+• Letto il file-visione di Matteo (Desktop/RISPIEGAMI...md) -> salvato come CANONE:
+  MENTE/KNOWLEDGE/NINA_VISIONE_ORGANISMO_NARRATIVO.md (RAG+Obsidian).
+• PRE_02 "Come funziona Nina" creato: 16 slide che integrano tutta la visione in lingua
+  semplice (Organismo, Mappa Viva, doppio fondo, test della sarta, sotto-i-piedi RAG/GPU vero,
+  ancoraggio, motore infinito, cresce-da-se, scalabilita, Provalo tu, Nina<->HR, eredita,
+  Episodio 1). 16 PNG singole + README + caption.
+• Tool PRE_*/_render_pair.py (N slide affiancate per studiare le giunture; screenshot Chrome
+  -> path ASSOLUTO obbligatorio). Tutte le versioni PRE_01 in PRE_01/_VERSIONI/ + INDEX.
+• CAROSELLI/README.md: aggiunta sezione "serie preambolo" (PRE_01 + PRE_02).
 
-━━━ PROSSIMO LAVORO ━━━
-• [#50] Leggere il FILE di Matteo -> riflettere -> cambiare le 17 slide ORA se serve.
-• [io] Export PRE_01 in Adobe Express (readiness skill prima).
-• [io] Altri caroselli del preambolo / rifare EP_N2_01 a questo livello.
-• [aperto] Scelta onda: v5 sfumata (attuale) vs v4 intreccio.
+━━━ DECISIONI/NOTE ━━━
+• Struttura: NON un mega-carosello -> SERIE di preamboli 15-17 slide, "uno aiuta l'altro".
+• Nina <-> HR = stessa idea (lo stesso motore dei CV fotografa le competenze del bambino) -> incluso soft.
+• Densita': preambolo/social snello per IG; episodi veri piu' lunghi. PRE_03 lo vuole con piu' testo.
+• HR/commerciale "hard" resta nel deck strategico, non nel preambolo bimbi.
+• Render: Chrome headless, screenshot path ASSOLUTO; body row no-gap per affiancare e vedere le giunture.
 
-━━━ NOTE ━━━
-• Densita' testo: preambolo/social SNELLO per Instagram; episodi veri piu' lunghi/ricchi.
-• Render caroselli: Chrome headless, screenshot path ASSOLUTO; body row no-gap per affiancare.
-• Verifiche #49 verdi: 0 orfani episodi, build 215->215, tsc -b EXIT 0.
+━━━ VERIFICHE #49 (verdi) ━━━
+• audit_episodes: 0 orfani (216 .md su disco vs 215 in json: delta minore, non bloccante).
+• build_episodes_json: 215 episodi. • tsc -b: EXIT 0.
 
 Generato: 26/06/2026 — fine sessione #49
