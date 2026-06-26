@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-26T17:16:39.436958",
+  "last_update": "2026-06-26T17:24:40.541499",
   "active_milestone": "Sessione #49 (25/06): PRE_01 preambolo Nina come CAROSELLO che SPIEGA il progetto. Iterato v1->v10: stile buonanotte + FLUSSO sfumato continuo (onda su x globale). Scartato v8 vignette/fumetto. v10 ATTUALE = 17 slide, linguaggio semplice/ricco: Cover, Cos-e, Perche, Per-chi-e, Il Patto, Nina, Themis, Atomi<->Bit, I 4 simboli, La Giuntura, Le 8 Pietre, Cosa imparerai, Come funziona, Si ripassa, Da dove nasce, La promessa, Si parte. 17 PNG singole slides/slide_1..17. Versioni in _VERSIONI/. Integrato in RAG+Obsidian.",
   "next_step": "Matteo manda un FILE da leggere/riflettere -> se serve cambiare il preambolo si fa ORA (prima di bloccarlo). Poi export Adobe Express (export_html_to_express, readiness skill). Aperti: scelta onda v5 sfumata (attuale) vs v4 intreccio; altri caroselli; EP_N2_01 a questo livello.",
   "session_count": 97,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-26T07:30:01.938598"
+      "last_activity": "2026-06-26T17:17:43.653331"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -129,5 +129,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Sviluppo automazioni core (EP_SEED_WATCHER_L1_keyless.md)"
+  "last_action": "Modifica a rag_linkgraph.json"
 }

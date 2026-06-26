@@ -106,8 +106,13 @@ definire lo stile narrativo, poi propagare.**
 - [✓] **v10 — esteso a 17 slide** (linguaggio semplice/ricco): +Per chi è, +I 4 simboli
   (Atomo/Bit/Giuntura/Pietra), +Cosa imparerai (8 tappe), +Si ripassa (spirale), +La promessa.
   **PROMOSSA a `carosello.html`**; 17 PNG singole `slides/slide_1..17.png`. Versioni v1→v10 in `_VERSIONI/`.
-- [◐] **In attesa**: Matteo manda un FILE da leggere/riflettere → se serve cambiare, si cambia ORA
-  (prima di bloccare le 17). Poi: export Adobe Express (readiness skill).
+- [✓] **Letto il file-visione** (`Desktop/RISPIEGAMI LA TUA VISIONE…md`) → salvato come canone in
+  `MENTE/KNOWLEDGE/NINA_VISIONE_ORGANISMO_NARRATIVO.md` (RAG+Obsidian).
+- [✓] **v11 — preambolo allineato alla VISIONE**: slide 11→**Mappa Viva** (non-lineare, cresce),
+  13→**I tre fondi** (fiaba/bottega/vero = test della sarta), 14→**Un libro vivo** (cresce da solo),
+  3→**diario-eredità**. HR/commerciale lasciato FUORI (→ deck strategico). PNG 3/11/13/14 rifatti.
+- [ ] **Prossimo**: ok di Matteo sulle 4 slide riviste → export Adobe Express (readiness skill).
+  Aperti: onda v5 sfumata vs v4 intreccio; altri caroselli; EP_N2_01 a questo livello.
 
 ---
 
