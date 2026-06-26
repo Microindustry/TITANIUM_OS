@@ -111,8 +111,14 @@ definire lo stile narrativo, poi propagare.**
 - [✓] **v11 — preambolo allineato alla VISIONE**: slide 11→**Mappa Viva** (non-lineare, cresce),
   13→**I tre fondi** (fiaba/bottega/vero = test della sarta), 14→**Un libro vivo** (cresce da solo),
   3→**diario-eredità**. HR/commerciale lasciato FUORI (→ deck strategico). PNG 3/11/13/14 rifatti.
-- [ ] **Prossimo**: ok di Matteo sulle 4 slide riviste → export Adobe Express (readiness skill).
-  Aperti: onda v5 sfumata vs v4 intreccio; altri caroselli; EP_N2_01 a questo livello.
+- [✓] **Scelta struttura (Matteo)**: NON un mega-carosello da 20 → **serie di preamboli** da 15-17
+  slide, uno aiuta l'altro ("ecosistema insieme, gestisci tu"). Nina↔HR = stessa idea (incluso soft).
+- [✓] **PRE_02 "Come funziona Nina" creato** (16 slide): integra tutta la visione in lingua semplice —
+  Organismo/Libro-IA, Mappa Viva, doppio fondo, **test della sarta**, sotto-i-piedi (RAG/GPU vero),
+  ancoraggio, motore infinito, cresce-da-sé, niente bozze, scalabilità, Provalo tu, **Nina↔HR**
+  (cosa sai fare), eredità, Episodio 1. 16 PNG singole + README + caption. `CAROSELLI/PRE_02/`.
+- [ ] **Prossimo**: revisione Matteo PRE_02 → eventuale PRE_03 (mondo/personaggi: Themis/Forge/Entropia)
+  → export Adobe Express della serie (readiness skill). Aperti: onda v5 vs v4.
 
 ---
 

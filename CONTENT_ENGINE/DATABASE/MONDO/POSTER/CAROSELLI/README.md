@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [CAROSELLI  i contenuti social di Nina (uno per episodio)](#caroselli-i-contenuti-social-di-nina-uno-per-episodio)
+  - [Struttura (una cartella per carosello)](#struttura-una-cartella-per-carosello)
+  - [Regole](#regole)
+  - [Formato standard](#formato-standard)
+  - [Pipeline (un episodio  un carosello)](#pipeline-un-episodio-un-carosello)
+  - [Indice caroselli](#indice-caroselli)
+
+<!-- /TOC -->
+
 # CAROSELLI — i contenuti social di Nina (uno per episodio)
 
 Ogni carosello vive nella **sua cartella**, con tutti i file divisi. Convenzione fissa
@@ -34,7 +45,15 @@ EP_N2_xx.md  →  carosello.html (8 slide)  →  export_html_to_express  →  Ex
                        ↑ caption.txt (descrizione)
 ```
 
-## Indice caroselli
+## Serie PREAMBOLO (più caroselli che introducono il mondo, prima degli episodi)
+La serie `PRE_*` non è legata a un singolo episodio: introduce Nina su più caroselli
+(15-17 slide l'uno), uno aiuta l'altro. Stile "buonanotte" + flusso sfumato continuo.
+| PRE | Titolo | Cosa fa | Slide | Stato |
+|-----|--------|---------|-------|-------|
+| PRE_01 | Il Mondo di Nina | overview del mondo (cos'è, personaggi, simboli, cammino) | 17 | HTML+PNG, allineato visione |
+| PRE_02 | Come funziona Nina | dettaglio meccanismo (Libro-IA, Mappa Viva, doppio fondo, motore, Nina↔HR, eredità) | 16 | HTML+PNG |
+
+## Indice caroselli (episodi)
 | EP | Titolo | Pietra | Stato |
 |----|--------|--------|-------|
 | EP_N2_01 | La Bambina che Chiedeva Perché | ⟡0 Materia | ✅ Express |
