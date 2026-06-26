@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-b72d80e4b5",
+    "date": "2026-06-26",
+    "git": "4f0c7699",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il file che Matteo deve mandare per eventuale revisione di PRE_01 è il gate che blocca sia l'export in Adobe Express sia la riscrittura di EP_N2_01 al livello ricco del preambolo. La bussola lo marca come 'In attesa' senza scadenza. Se il file non arriva prima della prossima sessione, l'intera pipeline di pubblicazione Nina rimane ferma su decisioni non prese.",
+    "azione": "Matteo invia il file all'inizio della sessione #49 (o conferma esplicitamente che PRE_01 v10 è definitivo senza revisioni). Solo dopo: export Adobe Express, poi EP_N2_01 riscritto. Sblocca due deliverable in sequenza.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-26"
+  },
+  {
+    "id": "AUD-7a9b1b88b1",
+    "date": "2026-06-26",
+    "git": "4f0c7699",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Le chiavi .env sono ancora da ruotare (red-team #38, aperto nella bussola). Il rischio di esfiltrazione via API è documentato. Ogni giorno di ritardo estende la finestra di esposizione.",
+    "azione": "Matteo esegue la rotazione in autonomia alla prossima sessione mattutina (non delegabile all'AI). Aggiornare .env, invalidare le chiavi vecchie sui rispettivi portali, verificare che nessun processo in produzione usi ancora le vecchie.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-26"
+  },
+  {
+    "id": "AUD-4bb6cdb5b4",
+    "date": "2026-06-26",
+    "git": "4f0c7699",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "Il chunking heading-aware (#/##/###) è ancora non implementato (bussola aperta: 'Enhancement RAG non fatti: chunking per heading'). Con 24.762 chunk su chunking fisso a 512 char, i retrieval su documenti strutturati (MIMS, GENESIS, Nina) restituiscono frammenti che tagliano a metà sezioni semantiche, abbassando la precisione del contesto.",
+    "azione": "Schedulare il rebuild RAG con chunking heading-aware a GPU libera (già identificato come prerequisito nella bussola). Eseguire prima del lancio di EP_N2_01 al livello ricco del preambolo, perché la qualità del retrieval condiziona direttamente la generazione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-26"
+  },
+  {
+    "id": "AUD-2641ddd7fc",
+    "date": "2026-06-26",
+    "git": "4f0c7699",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Crash confermato in log: \"⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):\" (2026-06-25). Il traceback è nel log della ricerca notturna, ma il prefisso ripetuto anomalo su night_push.log indica che il crash ha contaminato anche il logger stesso. L'automazione notturna è instabile.",
+    "azione": "Aprire night_research.log del 25/06, leggere il traceback completo, identificare modulo e riga. Fixare o aggiungere try/except che isoli il crash senza propagarlo al logger. Verificare che night_push.log non stia redirigendo stderr in modo errato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-26"
+  },
+  {
+    "id": "AUD-1a03cf3f3c",
+    "date": "2026-06-26",
+    "git": "4f0c7699",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "SEMANTIC_SCHOLAR_API_KEY mancante in .env: i 429 della ricerca notturna sono ricorrenti e bloccano il research_agent ogni notte. Il blocker è identificato, la chiave è gratuita, ma è ancora aperta nella bussola senza data di chiusura.",
+    "azione": "Matteo registra la chiave gratuita su Semantic Scholar API portal (5 minuti) e la inserisce in .env. Zero costo, elimina il degrado notturno immediato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-26"
+  },
+  {
+    "id": "AUD-15e5734f03",
+    "date": "2026-06-26",
+    "git": "4f0c7699",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "UPS assente: la corruzione HNSW da power-loss è ricorrente (citata 3 volte in 2 giorni nei blockers). Senza UPS ogni blackout azzera il lavoro notturno e forza un recovery manuale. Il backup snapshot chroma_db in _VAULT/BACKUPS è ancora aperto nella bussola e non risulta fatto.",
+    "azione": "Ordinare UPS (~50-80€) contestualmente al mandrino ER20 (stesso checkout fisico). Nel frattempo implementare il backup snapshot chroma_db via deep_freeze come misura ponte: riduce il danno da ogni corruzione fino all'arrivo dell'hardware.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-26"
+  },
+  {
     "id": "AUD-eb98bda27f",
     "date": "2026-06-25",
     "git": "be6a6e3c",
@@ -334,8 +406,10 @@
     "finding": "Le chiavi .env sono segnalate come 'da ruotare' dal red-team #38 e compaiono ancora nei blockers attuali. Il commit 43e74471 ha aggiunto la denylist su /api/file, ma la rotazione delle chiavi stesse non risulta nei commits degli ultimi 7 giorni. Finché le chiavi vecchie (potenzialmente esposte durante il red-team) restano attive, la denylist è difesa parziale.",
     "azione": "Matteo ruota fisicamente le chiavi .env (azione umana, non delegabile agli agenti) e aggiorna i segreti nei servizi dipendenti. Verificare che nessun log/commit precedente contenga valori in chiaro prima di considerare il blocker chiuso.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-21"
+    "status": "resolved",
+    "last_seen": "2026-06-21",
+    "resolved_on": "2026-06-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-961a04366a",
@@ -346,8 +420,10 @@
     "finding": "Il todo 'link Desktop sito Maria (serve URL da Matteo)' è rimasto aperto da sessione #38 e compare ancora nel next_step corrente. È un'informazione che blocca un agente in attesa di input umano: ogni notte che passa senza quell'URL è una notte in cui l'agente non può completare il collegamento. Non è un lavoro lungo, è un dato puntuale che rischia di scivolare indefinitamente tra le sessioni.",
     "azione": "Fornire l'URL del sito Maria all'inizio della prossima sessione (30 secondi di lavoro) così l'agente può chiudere il task autonomamente nella stessa sessione senza aprire un quarto blocker umano in coda.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-21"
+    "status": "resolved",
+    "last_seen": "2026-06-21",
+    "resolved_on": "2026-06-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7f955e27a3",
