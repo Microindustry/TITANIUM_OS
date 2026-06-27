@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-27T17:39:19.390270",
+  "last_update": "2026-06-27T17:43:03.463891",
   "active_milestone": "Sessione #50 (26-27/06): NINA ha un VOLTO definitivo (3D). Bloccato nina_DEFINITIVA (=nina_genio_1): mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro. REGOLA: ogni futura Nina deve avere QUESTO viso (slide_2=riferimento vincente); NO bionda, NO logo. Pipeline avatar DECISA: 3D via Gamma (stylePreset 3D, flux-2-klein). Versione VITA=giacca denim. Scene riusabili Nina/_SCENE (studio, ponte). Slide montate (ritratto in cornice + figura intera nella scena). PRE_03 carosello 'I Personaggi' SOLO NINA col volto vero, 6 slide. Canone in MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md. Altri personaggi per ora = simboli/Pietre.",
   "next_step": "PROSSIMA SESSIONE #51: (1) decidere se serve un episodio 'Personaggi' dedicato o se Nina si presenta DENTRO l'episodio 4; (2) controllare PRE_01/PRE_02, rifinire PRE_03, poi PRE_04; (3) ricontrollare EP_1 effettivo; (4) Nina versioni officina/tech; (5) rag-update per indicizzare il canone Nina.",
   "session_count": 99,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-27T07:30:01.910991"
+      "last_activity": "2026-06-27T17:40:18.117115"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -132,5 +132,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a EP_N2_45_il_direttore_invisibile.md"
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt"
 }

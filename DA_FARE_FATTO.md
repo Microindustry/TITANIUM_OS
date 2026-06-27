@@ -89,11 +89,15 @@ personaggi. → Deviati sui PERSONAGGI: dare a Nina un volto vero.**
 - [✓] **Canone + RAG/Obsidian predisposti**: `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` + memoria `project_nina_avatar`.
 - [💡] **Altri personaggi** (Themis/Forge/antagonisti): per ora **solo simboli/sticker/Pietre** già caratteristici;
   il volto vero si scopre più avanti con gli episodi.
+- [✓] **Bozze avatar ripulite** (Matteo, per chiarezza): tenuta solo la Nina definitiva + i deliverable
+  (134M→41M); varianti rimosse da disco ma **recuperabili dal commit `0b836e97`**.
 
 ### PROSSIMA SESSIONE #51 — si riparte da qui (in ordine)
 - [ ] **Episodio Personaggi: serve davvero?** Decidere se PRE_03 dedicato resta, o se Nina si presenta
   **dentro l'episodio 4**. (Dubbio di Matteo — vedi tu, ma Nina va presentata cmq.)
-- [ ] **Controllare PRE_01 e PRE_02** (giunture/flusso), **rifinire PRE_03**, poi avanti col **PRE_04**.
+- [ ] **PRE_03 redesign** (Matteo): **meno immagini, più TESTO ben disposto** + solo poche immagini "wow"
+  (l'episodio non dev'essere image-heavy). Tenere lo stile slide_2 (figura intera) per le poche immagini forti.
+- [ ] **Controllare PRE_01 e PRE_02** (giunture/flusso), poi avanti col **PRE_04**.
 - [ ] **Ricontrollare EP_1 effettivo** (il primo episodio vero) + dettagli superiori.
 - [ ] **Nina versioni officina / tech** (stesso volto, cambia outfit).
 - [ ] **rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).

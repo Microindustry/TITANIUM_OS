@@ -44,7 +44,7 @@
 | v9_marcata-ballet | lineamenti marcati/netti, fronte scoperta, coda ballet | superata (base mix) |
 | **v10_DEFINITIVA** | **NINA UFFICIALE — scelta da Matteo** (`nina_genio_1`): mora, brava ragazza di buona famiglia + piccolo genio curioso; coda alta, giacca teal/rosa, lentiggini, occhi castano scuro. File: `nina_DEFINITIVA.png`. Slide-personaggio montata: `slide_personaggio.html/.png` (ritratto incorniciato sul fondo del mondo) | **DEFINITIVA ✅** |
 
-*Esplorazioni tenute (additivo): `_VARIANTI_v9/`, `_VARIANTI_chiara/` (bionde, scartate), `_VARIANTI_genio/`, `_VARIANTI_mix/`.*
+*Bozze avatar RIMOSSE da disco 27/06 (Matteo, per non confondersi) — recuperabili dal commit git `0b836e97`. Tenuti solo: definitiva + deliverable (nina_DEFINITIVA/VITA/ritratto, `_SCENE`, slide, `_VERSIONI` v10-12).*
 *Logo MIMS-Ponte in `MONDO/LOGHI/mims_ponte_badge.svg` — bocciato, NON usato (tenuto).*
 ### Versioni-outfit (stesso volto/identità, cambia solo l'abito)
 - **VITA (mondo) — `v11_vita-denim`**: giacca **denim** a bottoni, pelle calda, sguardo sfrontato. File `nina_VITA.png` + slide `slide_personaggio.html/.png`. **ATTUALE per la serie Personaggi.** (Studi colore scartati in `_STUDI_GIACCA/`: senape/terracotta/bordeaux.)
