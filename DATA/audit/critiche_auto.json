@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-d2ea65641f",
+    "date": "2026-06-27",
+    "git": "f01d9c24",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "L'UPS è nei blockers da almeno 2 giorni con corruzione HNSW documentata 3 volte. Con 24.882 chunk RAG e chroma_db già resettata fisicamente in passato (commit 04c3f71a), ogni blackout non coperto da UPS è un potenziale reset dell'intero indice vettoriale. Il costo di un rebuild (tempo GPU + verifica qualità) supera di gran lunga il costo hardware (~50-80€) dell'UPS.",
+    "azione": "Ordinare l'UPS nella stessa sessione in cui si ordina il mandrino ER20: sono entrambi su AZIONI_MATTEO.md, un solo checkout. Finché non arriva, abilitare il backup snapshot chroma_db in _VAULT/BACKUPS (già in bussola_open) come mitigazione notturna immediata.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-27"
+  },
+  {
+    "id": "AUD-b3a13a13ec",
+    "date": "2026-06-27",
+    "git": "f01d9c24",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "In bussola_open convivono almeno 4 voci che puntano alla prossima sessione su PRE_01/PRE_02/PRE_03 (verifica linea/flusso, personaggi, PRE_03, export Adobe Express), più una voce 'slide 2 di PRE_01' che sembra di una sessione precedente (#49) e rischia di essere persa nel rumore. Il next_step del sistema elenca già 3 sotto-task ordinati, ma la voce bussola sulla slide 2 non è allineata con esso: potrebbe essere un duplicato già risolto in v11, oppure un task distinto che cadrà tra le maglie.",
+    "azione": "A inizio della prossima sessione, confrontare esplicitamente la voce 'slide 2 di PRE_01 — più testo' con lo stato attuale di PRE_01 v11: se già incorporata chiuderla in bussola, altrimenti aggiungerla come sotto-punto esplicito del 'punto 3' per non perderla durante la verifica del flusso.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-27"
+  },
+  {
+    "id": "AUD-6512ba69e0",
+    "date": "2026-06-27",
+    "git": "f01d9c24",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Le chiavi .env sono marcate da ruotare dal red-team #38 e compaiono sia nei blockers sia in bussola_open. Ogni notte che passa con le chiavi vecchie è una finestra di esposizione attiva su un sistema che gira script automatici non presidiati. Non è un rischio teorico: il red-team lo ha già classificato.",
+    "azione": "Matteo ruota le chiavi nella prima sessione utile (azione già assegnata, va solo eseguita). Non delegabile agli agenti notturni per ovvi motivi di sicurezza.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-27"
+  },
+  {
+    "id": "AUD-3e2dbfd427",
+    "date": "2026-06-27",
+    "git": "f01d9c24",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "I 2 orfani del vault ('human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE) non hanno link in entrata né in uscita. Con 24.882 chunk totali e vault_intersect che premia i ponti cross-dominio (commit 496e96d9), nodi isolati non contribuiscono al grafo e abbassano la qualità del retrieval cross-dominio senza segnale visibile all'utente.",
+    "azione": "Aprire i due file e decidere in 5 minuti: se il contenuto è rilevante, aggiungere almeno un wikilink a un nodo esistente; se non lo è, spostarli in _ARCHIVIO. Nodi KNOWLEDGE disconnessi in un RAG che vive di ponti sono peso morto.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-27"
+  },
+  {
+    "id": "AUD-339b8d24c3",
+    "date": "2026-06-27",
+    "git": "f01d9c24",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il log del 2026-06-26 mostra un crash non risolto nella pipeline notturna: \"⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last\". Il prefisso ripetuto tre volte su night_push.log prima del Traceback su night_research.log indica un ciclo di retry o un'eco anomala del logger stesso, oltre all'eccezione vera e propria. Non è un warning silenzioso: è un crash con stack trace che ha interrotto l'agente di ricerca notturna.",
+    "azione": "Aprire night_research.log del 2026-06-26, leggere le righe dopo 'Traceback' per identificare la causa radice (probabile 429 Semantic Scholar o eccezione non gestita post-broadening). Correggere il punto di crash e, separatamente, indagare perché night_push.log si auto-cita tre volte: potrebbe essere un logger che scrive sul proprio file di input.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-27"
+  },
+  {
+    "id": "AUD-178b7935be",
+    "date": "2026-06-27",
+    "git": "f01d9c24",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La API key Semantic Scholar è assente o non configurata (SEMANTIC_SCHOLAR_API_KEY nel .env): il blocker è esplicito. Il crash su night_research.log del 2026-06-26 coincide con questa lacuna: senza chiave, i 429 sono garantiti e il query broadening introdotto in v1.3 (commit c638edbf) non ha superfici valide su cui operare, rendendo la ricerca notturna sostanzialmente inerte.",
+    "azione": "Richiedere la chiave gratuita Semantic Scholar (form sul sito, approvazione in genere < 24h) e aggiungerla al .env prima della prossima notturna. Verificare poi nei log che i 429 spariscano.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-06-27"
+  },
+  {
     "id": "AUD-b72d80e4b5",
     "date": "2026-06-26",
     "git": "4f0c7699",
@@ -340,8 +412,10 @@
     "finding": "Il blocker 'Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS' è presente nei blockers attivi e il pillar V32 è al 65%. La ricerca notturna ha tentato proprio query su 'CNC spindle ER20 runout thermal accuracy' (22/06/2026) — il sistema sta cercando dati tecnici su un componente non ancora ordinato. Finché il mandrino non è ordinato, né la ricerca né il progresso V32 possono chiudersi.",
     "azione": "Definire un termine concreto per l'ordine del mandrino (fornitore, budget, data). Senza questo, V32 rimane bloccato a livello hardware e la ricerca notturna continuerà a girare a vuoto sullo stesso topic.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-22"
+    "status": "resolved",
+    "last_seen": "2026-06-22",
+    "resolved_on": "2026-06-27",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-71c2ae2e8b",
@@ -366,8 +440,10 @@
     "finding": "Il blocker 'Chiavi .env da ruotare (red-team #38)' è ancora aperto nei blockers di stanotte, nonostante il commit 43e74471 abbia aggiunto la denylist su /api/file. La rotazione delle chiavi è un'azione manuale che spetta a Matteo e non risulta completata: le chiavi esposte durante il red-team #38 rimangono attive. Non è un'ipotesi: è esplicitamente elencato come blocker non risolto.",
     "azione": "Matteo ruota le chiavi .env prima della prossima sessione con agenti attivi. Priorità: questa è l'unica azione di sicurezza bloccata su una persona fisica, non su codice.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-22"
+    "status": "resolved",
+    "last_seen": "2026-06-22",
+    "resolved_on": "2026-06-27",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-27ee9c028f",
