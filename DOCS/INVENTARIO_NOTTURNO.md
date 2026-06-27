@@ -23,6 +23,18 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-06-27 · 6 commit
+- `02b96f8e` auto: night_audit - cartella clinica 27/06/2026
+- `f01d9c24` auto: story_agent - episodi generati 27/06/2026
+- `0b8e74e7` chore(salva): chiusura sessione #49 — serie preambolo Nina (PRE_01+PRE_02), RIAVVIO #50
+- `60757da2` feat(nina): PRE_02 "Come funziona Nina" — 2° carosello del preambolo (16 slide)
+- `45147d5c` feat(nina): PRE_01 v11 — preambolo allineato alla visione (Mappa Viva, tre fondi, libro vivo, diario)
+- `c55cbd20` chore(salva): chiusura sessione #49 — PRE_01 preambolo a 17 slide (v10) + RIAVVIO #50
+
+_episodi: 252 · critiche aperte: 22 (95 risolte) · RAG: 24882 chunk_
+
+
+
 ## 2026-06-26 · 13 commit
 - `838a5349` auto: night_audit - cartella clinica 26/06/2026
 - `4f0c7699` auto: story_agent - episodi generati 26/06/2026
