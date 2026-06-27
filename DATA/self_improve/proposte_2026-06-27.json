@@ -1,0 +1,293 @@
+{
+  "data": "2026-06-27",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Backup snapshot chroma_db automatico pre-run notturno",
+      "cosa": "Aggiungere un passo di backup snapshot di chroma_db (copia della directory in _VAULT/BACKUPS/ con timestamp) come primo step della pipeline notturna, prima di qualsiasi script di ricerca o push.",
+      "perche": "Segnale critico (sev:alta): corruzione HNSW documentata 3 volte in 2 giorni, chroma_db già resettata fisicamente in passato (commit 04c3f71a), 24.882 chunk a rischio ad ogni blackout. UPS ancora non acquistato. Il backup snapshot è la cura software disponibile subito.",
+      "come": [
+        "1. Creare script `scripts/backup_chroma_snapshot.sh`: `cp -r chroma_db _VAULT/BACKUPS/chroma_db_$(date +%Y%m%d_%H%M%S)` con retention (es. ultimi 5 snapshot).",
+        "2. Inserire chiamata allo script come prima riga di `night_push.sh` / entry-point pipeline notturna.",
+        "3. Aggiungere log di conferma in `night_push.log` (es. '✅ chroma snapshot OK → path').",
+        "4. Testare manualmente una volta prima di lasciare in auto."
+      ],
+      "rischio": "Basso. Solo copia read-only, nessuna modifica a dati esistenti. Occupa ~spazio proporzionale ai chunk; verificare disco disponibile prima.",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[area:SISTEMA, sev:alta] — UPS + corruzione HNSW; todo_bussola_aperti — 'backup snapshot chroma_db (_VAULT/BACKUPS)'"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RICERCA",
+      "titolo": "Aggiungere SEMANTIC_SCHOLAR_API_KEY in .env e aggiungere graceful-fallback al research_agent",
+      "cosa": "Due azioni accoppiate: (A) documentare esattamente dove inserire la chiave gratuita Semantic Scholar nel .env template; (B) aggiungere un try/except con fallback 'skip + log warning' nel research_agent quando la chiave è assente o ritorna 429, così il crash non trascina giù l'intera pipeline notturna.",
+      "perche": "Segnale critico (sev:alta, duplicato): 'SEMANTIC_SCHOLAR_API_KEY mancante → 429 garantiti → crash night_research.log ricorrente ogni notte'. Il crash nel log 2026-06-26 coincide esattamente con questa lacuna. Il prefisso ripetuto anomalo su night_push.log ('⚠ night_push.log: ⚠ night_push.log:') suggerisce che il crash del research_agent causa cascata su push.",
+      "come": [
+        "1. (Matteo, 2 min) Registrare chiave gratuita su https://api.semanticscholar.org/graph/v1 e aggiungerla al .env reale.",
+        "2. (sicuro, autonomo) Aggiungere nel .env.template la riga `SEMANTIC_SCHOLAR_API_KEY=` con commento esplicativo.",
+        "3. (sicuro, autonomo) Nel codice research_agent: wrappare la chiamata SS in try/except HTTPError; se status 429 o chiave assente → log '⚠ Semantic Scholar skipped' e continuare con le altre sorgenti invece di sollevare eccezione.",
+        "4. Verificare che night_push.log smetta di mostrare il prefisso ripetuto dopo il fix."
+      ],
+      "rischio": "Basso. Il fallback è additivo (non rimuove funzionalità). La chiave è gratuita e non espone dati sensibili.",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[area:RICERCA, sev:alta x2] — 'SEMANTIC_SCHOLAR_API_KEY assente'; log crash 2026-06-26 night_research.log"
+    }
+  ],
+  "segnali": {
+    "data": "2026-06-27",
+    "milestone": "Sessione #49 (25/06): PRE_01 preambolo Nina come CAROSELLO che SPIEGA il progetto. Iterato v1->v10: stile buonanotte + FLUSSO sfumato continuo (onda su x globale). Scartato v8 vignette/fumetto. v10 ATTUALE = 17 slide, linguaggio semplice/ricco: Cover, Cos-e, Perche, Per-chi-e, Il Patto, Nina, Themis",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "L'UPS è nei blockers da almeno 2 giorni con corruzione HNSW documentata 3 volte. Con 24.882 chunk RAG e chroma_db già resettata fisicamente in passato (commit 04c3f71a), ogni blackout non coperto da UPS è un potenziale reset dell'intero ind"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "In bussola_open convivono almeno 4 voci che puntano alla prossima sessione su PRE_01/PRE_02/PRE_03 (verifica linea/flusso, personaggi, PRE_03, export Adobe Express), più una voce 'slide 2 di PRE_01' che sembra di una sessione precedente (#4"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Le chiavi .env sono marcate da ruotare dal red-team #38 e compaiono sia nei blockers sia in bussola_open. Ogni notte che passa con le chiavi vecchie è una finestra di esposizione attiva su un sistema che gira script automatici non presidiat"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "I 2 orfani del vault ('human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE) non hanno link in entrata né in uscita. Con 24.882 chunk totali e vault_intersect che"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il log del 2026-06-26 mostra un crash non risolto nella pipeline notturna: \"⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last\". Il prefisso ripetuto tre volte su night_push.log prim"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La API key Semantic Scholar è assente o non configurata (SEMANTIC_SCHOLAR_API_KEY nel .env): il blocker è esplicito. Il crash su night_research.log del 2026-06-26 coincide con questa lacuna: senza chiave, i 429 sono garantiti e il query bro"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il file che Matteo deve mandare per eventuale revisione di PRE_01 è il gate che blocca sia l'export in Adobe Express sia la riscrittura di EP_N2_01 al livello ricco del preambolo. La bussola lo marca come 'In attesa' senza scadenza. Se il f"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Le chiavi .env sono ancora da ruotare (red-team #38, aperto nella bussola). Il rischio di esfiltrazione via API è documentato. Ogni giorno di ritardo estende la finestra di esposizione."
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Il chunking heading-aware (#/##/###) è ancora non implementato (bussola aperta: 'Enhancement RAG non fatti: chunking per heading'). Con 24.762 chunk su chunking fisso a 512 char, i retrieval su documenti strutturati (MIMS, GENESIS, Nina) re"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Crash confermato in log: \"⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):\" (2026-06-25). Il traceback è nel log della ricerca notturna, ma il prefisso ripetuto anomalo su night_push.log indica ch"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "SEMANTIC_SCHOLAR_API_KEY mancante in .env: i 429 della ricerca notturna sono ricorrenti e bloccano il research_agent ogni notte. Il blocker è identificato, la chiave è gratuita, ma è ancora aperta nella bussola senza data di chiusura."
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "UPS assente: la corruzione HNSW da power-loss è ricorrente (citata 3 volte in 2 giorni nei blockers). Senza UPS ogni blackout azzera il lavoro notturno e forza un recovery manuale. Il backup snapshot chroma_db in _VAULT/BACKUPS è ancora ape"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 252,
+      "rag_chunks": 24882,
+      "n_commits_7d": 109
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**PROSSIMA SESSIONE — VERIFICA \"il punto 3\": la LINEA che collega le immagini** (il flusso/onda",
+      "**Poi — I PERSONAGGI** (prima di PRE_03): definirli/crearli. Base `MONDO/BRIEF_ILLUSTRATORE_PERSONAGGI.md`",
+      "**Poi — PRE_03** (mondo/personaggi, **più testo**) → export Adobe Express della serie (readiness skill).",
+      "**PROSSIMA SESSIONE #49**: lavorare sulla **slide 2 di PRE_01** aggiungendo **più testo** per",
+      "Aperti: esportare PRE_01 in Express; rifare EP_N2_01 al livello ricco del preambolo; altri",
+      "**PROSSIMA SESSIONE #47 — si parte da: ANALIZZARE UN LINK** (Matteo lo fornirà a inizio sessione).",
+      "Migrazione totale chunking: si completa coi rebuild deliberati a GPU libera; off-by-one",
+      "`AZIONI_MATTEO.md`: UPS + mandrino ER20 (1 checkout, cura radice HNSW + sblocca MIMS) · chiavi .env",
+      "Enhancement RAG non fatti: chunking per heading, backup snapshot chroma_db (`_VAULT/BACKUPS`).",
+      "Contenuto Nina: verticale finanza ₣2 \"spendere meno di quanto entra\" (open loop pronto).",
+      "**Da decidere con Matteo (svegli, non di notte):** gitignore di `DATA/views/` (298 file auto-gen tracciati) + `logs/`; raggruppare/indicizzare `AUTOMATIONS/core` (~30 script piatti); pulire `INBOX/` (brief vecchi); **doppio watchdog** (2 istanze) da ridurre a 1.",
+      "**ANIMATIC EP_N2_01 — IN PAUSA** (Matteo: «attendi con animazione»). NON ripartire con l'animatic finché non lo dice. Bivio formato già pronto in `PRODUZIONE_NINA.md` (storyboard deck Express / video+TTS / solo illustrazioni).",
+      "**UPS hardware** (~50-80€): la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni) → cura alla radice. Blocker hardware accanto a martinetto Vevor + mandrino ER20.",
+      "**API key Semantic Scholar** gratuita in `.env` → azzera i 429 della ricerca notturna.",
+      "**Chunking per heading** (#/##/###) invece di 512-char fisso → retrieval più preciso (richiede rebuild). Upgrade RAG post-Nina."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Wildest Things People Vibe Coded With Fable 5",
+        "url": "https://www.youtube.com/shorts/2a3nXQjR1nM"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "9 Free AI Skills That Feel Like Cheat Codes",
+        "url": "https://www.youtube.com/watch?v=STH929HARLo"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "They're Lying About AI \"Brain Rot\"",
+        "url": "https://www.youtube.com/shorts/LE5NN3AjCnM"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: The New Model That's As Good As Fable",
+        "url": "https://www.youtube.com/watch?v=zMVZvgCOr40"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack",
+        "url": "https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Why the Frontier Ecosystem must be Open — Matei Zaharia and Reynold Xin, Databricks",
+        "url": "https://www.latent.space/p/databricks"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] It's Meta-Harness Summer",
+        "url": "https://www.latent.space/p/ainews-its-meta-harness-summer"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] OpenAI reports median internal Codex output tokens grew 56x in Research, 32x in Customer Support, 27x in Engineering, and 13x in Legal since November 2025.",
+        "url": "https://www.latent.space/p/ainews-openai-reports-median-internal"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "simonw/browser-compat-db",
+        "url": "https://simonwillison.net/2026/Jun/24/browser-compat-db/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette-export-database 0.3a2",
+        "url": "https://simonwillison.net/2026/Jun/25/datasette-export-database/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "AI and Liability",
+        "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting OpenAI",
+        "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Incident Report: CVE-2026-LGTM",
+        "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "What happened after 2,000 people tried to hack my AI assistant",
+        "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Timothy B. Lee",
+        "url": "https://simonwillison.net/2026/Jun/26/timothy-b-lee/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Dean W. Ball",
+        "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "onlymuneeb38-glitch/ios-agent-skills-evaluator ★1 — iOS Agent Skills 2026: Test 11 Tasks, 260+ Scenarios, 850+ Assertions on 3 Model",
+        "url": "https://github.com/onlymuneeb38-glitch/ios-agent-skills-evaluator"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "mickeyyaya/evolve-loop ★2 — Self-improving AI pipeline that autonomously discovers, builds, audits, and ship",
+        "url": "https://github.com/mickeyyaya/evolve-loop"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "MontrealAI/skillos ★6 — Agent SkillOS — the wealth-accumulation layer for self-improving AI agents.",
+        "url": "https://github.com/MontrealAI/skillos"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "yuno009/ESP32S3-USB-Keyboard-To-BLE ★3 — 🔄 Transform any USB keyboard into a Bluetooth device with ESP32-S3, allowing sea",
+        "url": "https://github.com/yuno009/ESP32S3-USB-Keyboard-To-BLE"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "11Bhavin/Quant_Trading_Portfolio- ★0 — 📈 Build and backtest automated trading strategies using Python to enhance your q",
+        "url": "https://github.com/11Bhavin/Quant_Trading_Portfolio-"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "cakuki/tidewake ★0 — ⚓ An experimental, open 3D age-of-sail pirate adventure — built by an autonomous",
+        "url": "https://github.com/cakuki/tidewake"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "SAMUSDAD/weissmann-ai-phone-assistant ★0 — 📞 Streamline restaurant operations in Switzerland with Weissmann, the AI phone a",
+        "url": "https://github.com/SAMUSDAD/weissmann-ai-phone-assistant"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "braedonsaunders/bidwright ★19 — AI-native construction estimating platform for intake, takeoff, pricing, schedul",
+        "url": "https://github.com/braedonsaunders/bidwright"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "sworrl/ClAudit ★2 — Catch false-positive Claude Code safety/policy blocks, scrub PII, and auto-file ",
+        "url": "https://github.com/sworrl/ClAudit"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "tuantranute-it/icm-graph-context-flow ★0 — Best Token-Efficient AI Coding Tools 2026 – Reduce Costs 90% with Local Memory &",
+        "url": "https://github.com/tuantranute-it/icm-graph-context-flow"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "CeAlthubaiti/agents ★4 — 🤖 Automate trading on Polymarket with AI agents to enhance your strategies and m",
+        "url": "https://github.com/CeAlthubaiti/agents"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "jwoo0329/agents ★1 — ",
+        "url": "https://github.com/jwoo0329/agents"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "nirajkyros-Editor/flow-gated-planning ★0 — 🚀 Interactive Planning 2026: File-Based Task DAG with Spec-Driven Gates & Depend",
+        "url": "https://github.com/nirajkyros-Editor/flow-gated-planning"
+      },
+      {
+        "fonte": "topic:claude-code",
+        "titolo": "onlymuneeb38-glitch/ios-agent-skills-evaluator ★1 — iOS Agent Skills 2026: Test 11 Tasks, 260+ Scenarios, 850+ Assertions on 3 Model",
+        "url": "https://github.com/onlymuneeb38-glitch/ios-agent-skills-evaluator"
+      }
+    ],
+    "n_news": 30
+  }
+}

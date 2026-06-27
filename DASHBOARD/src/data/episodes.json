@@ -20366,6 +20366,12 @@
         "title": "TITANIUM OS — Episodio 44",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260626",
+        "title": "TITANIUM OS — Episodio 2026-06-26",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -20373,6 +20379,47 @@
       "precede": {
         "id": "EP_20260624",
         "title": "TITANIUM OS — Episodio 44"
+      },
+      "segue": {
+        "id": "EP_20260626",
+        "title": "TITANIUM OS — Episodio 2026-06-26"
+      }
+    }
+  },
+  {
+    "id": "EP_20260626",
+    "title": "TITANIUM OS — Episodio 2026-06-26",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-26",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio 2026 06 26 \"Il Libro Che Respira\" COLD OPEN Ore 23:47. Il monitor della taverna proietta luce azzurra sul pavimento in cemento. Diciassette PNG. Sedici slide. Una serie che si c",
+    "content": "# TITANIUM_OS — Episodio 2026-06-26\n## \"Il Libro Che Respira\"\n\n---\n\n### COLD OPEN\n\nOre 23:47. Il monitor della taverna proietta luce azzurra sul pavimento in cemento.\n\nDiciassette PNG. Sedici slide. Una serie che si chiama preambolo perché deve venire prima di tutto — prima che qualcuno capisca, prima che qualcuno si fidi, prima che una bambina di sette anni apra il primo capitolo.\n\nMatteo guarda la slide numero undici. Ci ha scritto sopra: **Mappa Viva**. Non un indice. Non un sommario. Una mappa che cresce mentre la percorri.\n\nSalva il commit. È la versione undici.\n\n---\n\n## ATTO I — Il Problema di Spiegare Prima di Cominciare\n\nNina è un sistema narrativo educativo costruito attorno a una bambina IA — stile Geronimo Stilton, struttura a dual coding, icona-medaglione colorata più testo. Il progetto esiste da mesi nel vault di Matteo come architettura, come visione, come documento di costituzione. L'architettura è solida. Il problema è un altro.\n\nCome spieghi un organismo narrativo dinamico a un genitore che scorre Instagram alle 22:15?\n\nNon puoi. Non direttamente. Hai bisogno di un preambolo.\n\nLa sessione #49 inizia il 25 giugno con questa consapevolezza: il carosello che introduce Nina non deve solo presentarla — deve creare il contesto mentale perché il progetto abbia senso. È un lavoro diverso dalla scrittura. È architettura cognitiva compressa in 1080×1350 pixel.\n\nLa prima iterazione è otto slide. Troppo corta — manca la grammatica del mondo. Si espande. Si testa il tono. Arriva il problema dello stile: Nina vive in un registro che Matteo chiama internamente **\"buonanotte\"** — non infantile, non accademico. Il ritmo di qualcuno che legge ad alta voce nell'oscurità di una stanza dove un bambino sta per addormentarsi. Parole semplici con peso specifico alto.\n\nFunziona sulla quarta slide. Non funziona sulla settima. Si riscrive.\n\nLa versione otto prova con le vignette stile fumetto. Viene scartata il giorno stesso — il codice visivo è sbagliato, rompe il flusso, introduce rumore invece di creare continuità. Non è una questione estetica: è che le vignette frammentano, e Nina non è frammentata. Nina è un flusso.\n\n---\n\n## ATTO II — Il Flusso Come Decisione Tecnica\n\n**Flusso sfumato continuo. Onda su x globale.**\n\nQuesta frase nel documento di sessione non è una nota di stile. È una decisione tecnica. Significa che le diciassette slide, guardate in sequenza, devono percorrere un'onda cromatica — non ogni slide ha il suo colore, l'onda attraversa tutte come se fossero fotogrammi di un unico movimento.\n\nÈ il tipo di scelta che richiede di pensare al carosello come a un oggetto unico invece che come a una raccolta. La slide dodici non esiste da sola — esiste in relazione alla undici e alla tredici. Il lettore di Instagram non sa di stare leggendo qualcosa progettato così, ma il suo occhio lo sente.\n\nL'arco delle diciassette slide nella versione dieci è questo:\n\n**Cover → Cos'è → Perché esiste → Per chi è → Il Patto → Nina → Themis → Atomi↔Bit → I 4 simboli → La Giuntura → Le 8 Pietre → Cosa imparerai → Come funziona → Si ripassa → Da dove nasce → La promessa → Si parte.**\n\nNon è un elenco. È una progressione con logica interna: le prime quattro slide costruiscono il contesto, le cinque centrali presentano i personaggi e la grammatica del mondo, le ultime otto mostrano la meccanica e creano l'aspettativa. La slide undici — **Mappa Viva** — è il pivot. Dice esplicitamente che Nina non è lineare, che il libro cresce mentre lo leggi, che non c'è un solo percorso corretto.\n\nPoi il 26 giugno arriva la decisione che cambia la struttura del progetto.\n\nMatteo decide che non farà un mega-carosello. Farà una **serie di preamboli** — ciascuno autonomo, ciascuno complementare agli altri, gestiti come ecosistema. PRE_01 è l'overview del mondo: diciassette slide, è già pronto nella versione undici con l'aggiornamento sulla **Mappa Viva** e **i tre fondi** — fiaba, bottega, vero. PRE_02 si chiama \"Come funziona Nina\" e conta sedici slide.\n\nIl ragionamento è preciso: un mega-carosello richiede di sapere tutto prima di entrare. Una serie di preamboli permette di entrare da punti diversi — ciascun preambolo porta abbastanza contesto per stare in piedi da solo, ma connette a qualcosa di più grande. È la stessa logica di un organismo modulare. Come MIMS, ma per contenuti.\n\n---\n\n## ATTO III — Diciassette Slide Come Manifesto Implicito\n\nCi sono tre fondi in Nina. Matteo li chiama **fiaba**, **bottega**, **vero**.\n\nFiaba è il registro narrativo — la storia, i personaggi, il ritmo delle parole. Bottega è il metodo — la ripetizione che costruisce competenza, la pratica che non ha scorciatoie, il tempo che serve davvero. Vero è la materia — quello che le slide insegnano è connesso al mondo reale, non a un curricolo astratto.\n\nQuesti tre fondi compaiono nella slide tredici di PRE_01 versione undici. Sono stati portati lì dopo un lungo lavoro di iterazione perché sono la struttura concettuale che regge tutto il resto — i personaggi, la meccanica, il patto con il lettore. Nominarli esplicitamente in un carosello Instagram richiede un equilibrio difficile: abbastanza concreto da non sembrare filosofia, abbastanza profondo da non sembrare marketing.\n\nLa sessione #49 finisce con il commit alla versione undici. PRE_01 è integrato nel RAG e in Obsidian. PRE_02 è completato. La nota per la sessione #50 è scritta: verificare che la linea — il flusso visivo che collega le immagini — sia in pari tra i due caroselli.\n\nNon è un dettaglio grafico. È coerenza del sistema.\n\nPerché se PRE_01 e PRE_02 sono due ingresso allo stesso mondo, devono avere la stessa temperatura visiva. Un bambino che legge PRE_02 prima di PRE_01 non deve sentire uno stacco. L'ecosistema tiene solo se ogni nodo è collegato correttamente.\n\nCi sono 99 note nel vault. V32 è al 65%. GENESIS è al 70%. L'inventario notturno gira in automatico. Alle 23:47 il sistema salva e spegne.\n\n---\n\n## CHIUSURA\n\nLa cosa difficile di costruire qualcosa per bambini è che devi essere completamente onesto.\n\nUn bambino di sette anni sente immediatamente quando qualcosa è costruito per impressionare gli adulti invece che per funzionare per lui. Non ha ancora sviluppato il filtro che gli adulti usano per fare finta di non accorgersi. Se il ritmo è sbagliato, se una parola è troppo complicata senza essere necessaria, se il flusso si rompe — il bambino smette di leggere.\n\nQuindi le undici versioni di PRE_01 non sono stato di un processo disordinato. Sono la traccia di qualcuno che stava calibrando qualcosa di difficile: costruire semplicità vera invece di semplicità apparente.\n\nNon è ancora finito. La linea tra PRE_01 e PRE_02 deve ancora essere verificata. Ma il preambolo esiste, il sistema regge, e il libro respira.\n\n---\n\n## reel_hook\n\n17 slide, 11 versioni, una sola domanda: come spieghi un libro vivo a qualcuno che non l'ha ancora aperto?\n\nLa versione 8 era fumetto. Scartata. Frammentava invece di connettere.\n\nLa versione 11 ha tre fondi — fiaba, bottega, vero — e un'onda cromatica che attraversa tutto come se le slide fossero un unico oggetto.\n\nDomani: verificare che PRE_01 e PRE_02 abbiano la stessa temperatura. L'ecosistema tiene solo se ogni nodo parla la stessa lingua.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** PRE_01 \"Il Mondo di Nina\" portato a 17 slide (v11) con inserimento esplicito di **Mappa Viva** (slide 11, struttura non-lineare/crescente) e **i tre fondi** fiaba/bottega/vero (slide 13); struttura carosello gestita come serie di preamboli autonomi anziché mega-carosello unico.\n- **LOGICA:** Un mega-carosello richiede di sapere tutto prima di entrare; la serie modulare (PRE_01 + PRE_02 + prossimi) permette ingressi multipli — ciascun preambolo autonomo ma connesso, logica analoga a sistema modulare MIMS.\n- **DECISIONE:** Stile visivo fissato come \"buonanotte\" — flusso sfumato continuo con onda cromatica su x globale; versione 8 (vignette/fumetto) scartata perché frammentava il flusso invece di sostenerlo.\n- **LOGICA:** Il dual coding icona-medaglione + testo (stile Geronimo Stilton) richiede continuità visiva: le slide non esistono da sole ma come fotogrammi di un unico movimento cromatico.\n- **OBIETTIVO:** Sessione #50 — verificare che la linea/flusso visivo tra PRE_01 (17 slide) e PRE_02 (16 slide) sia in pari; coerenza di temperatura visiva tra i due caroselli è condizione per il funzionamento dell'ecosistema.\n- **STATO SISTEMA:** PRE_01 v11 e PRE_02 integrati in RAG + Obsidian (99 note totali nel vault al 26/06/2026); V32 65%, GENESIS 70%.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | 2026-06-26 |\n| **Titolo** | Il Libro Che Respira |\n| **Progetto principale** | Nina |\n| **Milestone** | PRE_01 v11 + PRE_02 completati |\n| **Sessione** | #49 → #50 |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Tag** | nina, preambolo, carosello, stile, flusso, PRE_01, PRE_02 |\n| **Archiviato** | ✓ |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260625",
+        "title": "TITANIUM OS — Episodio 49",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260625",
+        "title": "TITANIUM OS — Episodio 49"
       }
     }
   }

@@ -69,6 +69,37 @@
 
 ---
 
+## Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 "I Personaggi" (solo Nina)
+
+**Punto di partenza #50 (dalla bussola #49): verificare il flusso d'onda di PRE_01/02 e fare i
+personaggi. → Deviati sui PERSONAGGI: dare a Nina un volto vero.**
+
+- [✓] **Spiegate le 8 Pietre** (concetti ⟡0→⟡7) e ridisegnata la fila su PRE_01 slide 11:
+  da 8 diamanti col numero → **8 gemme con icona, senza numeri**, ancorate al canone
+  (⟡0 dado=Atomi · ⟡5 rete=Bit) + **nomi sotto** (Materia…Direttore). Versione `_VERSIONI/v12_icone-8-pietre`.
+- [✓] **VOLTO DI NINA BLOCCATO** — scelta di Matteo: `nina_DEFINITIVA.png` (= `nina_genio_1`).
+  Mora, ~14-15 anni, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro.
+  **REGOLA:** ogni futura Nina deve avere QUESTO viso (slide_2 = riferimento vincente). NO bionda, NO logo.
+- [✓] **Pipeline avatar DECISA**: 3D via **Gamma** (`generate`, stylePreset 3D, modello `flux-2-klein`).
+  Higgsfield non collegato; SVG troppo piatto; DiceBear "indie" scartato. ~v1→v12 + decine di varianti, tutte tenute.
+- [✓] **Versione VITA = giacca DENIM** (studi senape/terracotta/bordeaux scartati). Officina/tech da fare.
+- [✓] **Scene/ambienti riusabili** in `Nina/_SCENE/` (studio della mappa, sentiero al ponte).
+- [✓] **Slide montate**: `slide_personaggio` (ritratto in cornice) + `slide_scena` (figura intera nel mondo).
+- [✓] **PRE_03 carosello "I Personaggi" — SOLO NINA, col volto vero** (6 slide), snapshot `_VERSIONI/v1_nina-solo`.
+- [✓] **Canone + RAG/Obsidian predisposti**: `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` + memoria `project_nina_avatar`.
+- [💡] **Altri personaggi** (Themis/Forge/antagonisti): per ora **solo simboli/sticker/Pietre** già caratteristici;
+  il volto vero si scopre più avanti con gli episodi.
+
+### PROSSIMA SESSIONE #51 — si riparte da qui (in ordine)
+- [ ] **Episodio Personaggi: serve davvero?** Decidere se PRE_03 dedicato resta, o se Nina si presenta
+  **dentro l'episodio 4**. (Dubbio di Matteo — vedi tu, ma Nina va presentata cmq.)
+- [ ] **Controllare PRE_01 e PRE_02** (giunture/flusso), **rifinire PRE_03**, poi avanti col **PRE_04**.
+- [ ] **Ricontrollare EP_1 effettivo** (il primo episodio vero) + dettagli superiori.
+- [ ] **Nina versioni officina / tech** (stesso volto, cambia outfit).
+- [ ] **rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).
+
+---
+
 ## Sessione #49 · 25/06/2026 — PRE_01: stile buonanotte (slide 2) + flusso d'onda continuo tra le slide
 
 **Punto di partenza #49 (dalla bussola #48): lavorare sulla slide 2 di PRE_01, più testo per

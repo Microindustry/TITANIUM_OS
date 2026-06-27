@@ -25,7 +25,8 @@
 | **v8_fumetto-vignette** | tentativo layout a **vignette/caselle** (stile fumetto) su slide 2 | onda sfumata | **scartata** (Matteo: "no per nulla") |
 | **v9_progetto-12slide** | preambolo **rivisto a 12 slide** che spiega il progetto (Cos'è/Perché/Come funziona/Da dove nasce) | onda sfumata su 1-12 | superata da v10 |
 | **v10_progetto-17slide** | v9 esteso a **17 slide**, linguaggio semplice (+Per chi è, I 4 simboli, Cosa imparerai, Si ripassa, La promessa) | onda sfumata su 1-17 | superata da v11 |
-| **v11_visione-allineata** | v10 allineata alla **VISIONE** (RISPIEGAMI…md): slide 11→Mappa Viva (non-lineare/cresce), 13→I tre fondi (fiaba/bottega/vero), 14→Un libro vivo (cresce da solo), 3→diario-eredità. HR/commerciale lasciato FUORI (deck strategico) | onda sfumata su 1-17 | **ATTUALE** (= `carosello.html`) |
+| **v11_visione-allineata** | v10 allineata alla **VISIONE** (RISPIEGAMI…md): slide 11→Mappa Viva (non-lineare/cresce), 13→I tre fondi (fiaba/bottega/vero), 14→Un libro vivo (cresce da solo), 3→diario-eredità. HR/commerciale lasciato FUORI (deck strategico) | onda sfumata su 1-17 | superata da v12 |
+| **v12_icone-8-pietre** | slide 11 (Mappa Viva): gli 8 diamanti vuoti col numero → **8 gemme ⟡ con icona, niente numero**, ancorate al canone (⟡0 dado=Atomi · ⟡1 anello=Grande Loop · ⟡5 rete=Bit · gear/voce/libro/sciame/bacchetta). Dentro la cartella anche `slide_11.html`+`.png` (la singola slide da aprire) | onda sfumata su 1-17 | **ATTUALE** (= `carosello.html`) |
 
 ## Il concetto di "flusso continuo"
 L'onda è calcolata sulla **posizione globale** `x_glob = (n-1)·1080 + x_locale`: essendo una

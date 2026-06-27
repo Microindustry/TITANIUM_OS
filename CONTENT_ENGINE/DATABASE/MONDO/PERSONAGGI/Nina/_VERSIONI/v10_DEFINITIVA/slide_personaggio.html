@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Nina · Personaggio</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1080" />
+<meta name="hz:canvas-height" content="1350" />
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#05070d; }
+body { display:flex; justify-content:center; padding:0; }
+.slide { position:relative; width:1080px; height:1350px; overflow:hidden;
+  background: radial-gradient(120% 75% at 50% 38%, #16321f 0%, #0c1a16 46%, #05070d 100%);
+  font-family:"source-sans-3",sans-serif; color:#eef2fb; }
+.grid { position:absolute; inset:30px; opacity:0.04;
+  background-image: linear-gradient(#4fd6a0 1px, transparent 1px), linear-gradient(90deg,#4fd6a0 1px, transparent 1px);
+  background-size:54px 54px; }
+.frame { position:absolute; inset:30px; border:1px solid rgba(148,163,184,0.22); border-radius:4px; }
+.toplabel { position:absolute; top:58px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:17px; letter-spacing:6px; color:#8595b4; text-transform:uppercase; }
+.kicker { position:absolute; top:108px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:16px; letter-spacing:6px; color:#34d399; text-transform:uppercase; }
+
+/* ritratto */
+.halo { position:absolute; top:120px; left:50%; transform:translateX(-50%);
+  width:680px; height:680px; border-radius:50%;
+  background: radial-gradient(circle at 50% 45%, rgba(95,240,176,0.35) 0%, rgba(52,211,153,0.10) 50%, rgba(52,211,153,0) 72%); }
+.portrait { position:absolute; top:170px; left:50%; transform:translateX(-50%);
+  width:556px; height:695px; border-radius:30px; overflow:hidden;
+  border:3px solid rgba(95,199,243,0.55);
+  box-shadow: 0 0 0 10px rgba(12,26,22,0.6), 0 24px 60px rgba(0,0,0,0.55), inset 0 0 60px rgba(0,0,0,0.25); }
+.portrait img { width:100%; height:100%; object-fit:cover; object-position:50% 28%; }
+.pgold { position:absolute; top:170px; left:50%; transform:translateX(-50%);
+  width:556px; height:695px; border-radius:30px; pointer-events:none;
+  box-shadow: inset 0 0 0 1px rgba(244,182,90,0.45); }
+
+/* simbolo */
+.sym { position:absolute; top:150px; left:118px; width:74px; height:74px; border-radius:50%;
+  background:#0c1a16; border:2.5px solid #ec4899; display:flex; align-items:center; justify-content:center;
+  font-family:"playfair-display",serif; font-weight:800; font-size:42px; color:#ec4899;
+  box-shadow:0 0 24px rgba(236,72,153,0.35); }
+
+/* testo */
+.name { position:absolute; top:900px; left:0; right:0; text-align:center;
+  font-family:"playfair-display",serif; font-weight:800; font-size:104px; color:#f6f8ff; letter-spacing:1px; line-height:1; }
+.role { position:absolute; top:1018px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:20px; letter-spacing:5px; color:#ec4899; text-transform:uppercase; }
+.super { position:absolute; top:1078px; left:150px; right:150px; text-align:center;
+  font-size:29px; line-height:1.5; color:#c3cce0; }
+.super .hi { color:#f6f8ff; font-weight:600; } .super .pk { color:#ec4899; font-weight:700; }
+.tags { position:absolute; top:1206px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:3px; color:#34d399; }
+.footer { position:absolute; left:60px; right:60px; bottom:58px; display:flex; align-items:center; justify-content:space-between;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#7f8db0; }
+.footer .dot { color:#34d399; } .footer .nina { color:#ec4899; }
+</style>
+</head>
+<body>
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">I Personaggi · 01</div>
+
+  <div class="halo"></div>
+  <div class="portrait"><img src="nina_ritratto.png" alt="Nina"></div>
+  <div class="pgold"></div>
+  <div class="sym">?</div>
+
+  <div class="name">Nina</div>
+  <div class="role">La ragazza che chiede perché</div>
+  <div class="super">Brava ragazza di buona famiglia… e <span class="pk">piccolo genio curioso</span>: chiede «perché?» e poi <span class="hi">va a vedere davvero</span>. Apre porte che gli altri non vedono.</div>
+  <div class="tags">⟡ curiosità · ◆ metodo · ✦ coraggio</div>
+
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>01 / 04</span></div>
+</div>
+</body>
+</html>

@@ -1,43 +1,36 @@
-=== RIAVVIO SESSIONE #50 — 26/06/2026 ===
-Ultima sessione: #49 — 25-26/06/2026 (Nina: serie preambolo a caroselli — PRE_01 + PRE_02)
+=== RIAVVIO SESSIONE #51 — 27/06/2026 ===
+Ultima sessione: #50 — 26-27/06/2026 (NINA: volto definitivo 3D + PRE_03 "I Personaggi" solo Nina)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il preambolo di Nina e' diventato una SERIE di caroselli (15-17 slide l'uno, stesso stile +
-flusso continuo): PRE_01 = overview del mondo (17 slide), PRE_02 = "Come funziona Nina"
-(16 slide, integra la VISIONE Libro-IA). La serie puo' crescere a seconda del contesto.
+Nina ha finalmente un VOLTO DEFINITIVO (3D Pixar). E' bloccato: file nina_DEFINITIVA.png
+(= nina_genio_1) — mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro.
+REGOLA FERMA (Matteo): ogni futura immagine di Nina deve avere QUESTO viso (slide_2 = il
+riferimento vincente). NO bionda, NO logo sulla giacca. Versione "vita" = giacca DENIM.
 
->>> PROSSIMA SESSIONE #50 — IN ORDINE:
-  1) VERIFICA "il punto 3": la LINEA che collega le immagini (il flusso/onda di sfondo)
-     sia IN PARI / allineata su TUTTE le slide e tra i caroselli (le giunture combacino).
-     Poi decidere l'onda: v5 SFUMATA (attuale) vs v4 INTRECCIO.
-  2) Fare i PERSONAGGI (prima di PRE_03): Nina, Themis, Forge + antagonisti (Entropia,
-     Palude dell'Allucinazione). Base: MONDO/BRIEF_ILLUSTRATORE_PERSONAGGI.md +
-     NINA_V2_CHARACTER_BIBLE. Avatar riferimento: Desktop/teacher-avatar.png.
-  3) PRE_03 (mondo/personaggi) CON PIU' TESTO -> export Adobe Express della serie. <<<
+>>> PROSSIMA SESSIONE #51 — IN ORDINE:
+  1) EPISODIO PERSONAGGI: serve un episodio dedicato (PRE_03) o Nina si presenta DENTRO
+     l'episodio 4? Dubbio di Matteo — decidi tu, ma Nina va presentata comunque.
+  2) Controllare PRE_01 e PRE_02 (giunture/flusso), rifinire PRE_03, poi avanti col PRE_04.
+  3) Ricontrollare EP_1 effettivo (primo episodio vero) + dettagli superiori.
+  4) Nina versioni OFFICINA e TECH (stesso volto, cambia solo l'outfit).
+  5) rag-update per indicizzare il canone Nina (o lascia all'incrementale notturno). <<<
 
-━━━ FATTO IN SESSIONE #49 ━━━
-• PRE_01: preambolo iterato v1->v11 (stile buonanotte + flusso sfumato continuo su x globale).
-  Scartata v8 vignette. v11 = 17 slide allineate alla VISIONE (Mappa Viva, i tre fondi
-  fiaba/bottega/vero, libro che cresce, diario-eredita'). 17 PNG singole.
-• Letto il file-visione di Matteo (Desktop/RISPIEGAMI...md) -> salvato come CANONE:
-  MENTE/KNOWLEDGE/NINA_VISIONE_ORGANISMO_NARRATIVO.md (RAG+Obsidian).
-• PRE_02 "Come funziona Nina" creato: 16 slide che integrano tutta la visione in lingua
-  semplice (Organismo, Mappa Viva, doppio fondo, test della sarta, sotto-i-piedi RAG/GPU vero,
-  ancoraggio, motore infinito, cresce-da-se, scalabilita, Provalo tu, Nina<->HR, eredita,
-  Episodio 1). 16 PNG singole + README + caption.
-• Tool PRE_*/_render_pair.py (N slide affiancate per studiare le giunture; screenshot Chrome
-  -> path ASSOLUTO obbligatorio). Tutte le versioni PRE_01 in PRE_01/_VERSIONI/ + INDEX.
-• CAROSELLI/README.md: aggiunta sezione "serie preambolo" (PRE_01 + PRE_02).
+━━━ FATTO IN SESSIONE #50 ━━━
+• PRE_01 slide 11 (le 8 Pietre): da 8 diamanti col numero -> 8 GEMME con ICONA, niente numeri
+  (⟡0 dado=Atomi, ⟡5 rete=Bit, gear/voce/libro/sciame/bacchetta) + nomi sotto. v12_icone-8-pietre.
+• VOLTO NINA BLOCCATO: tante iterazioni (v1 SVG -> v12; varianti chiare/bionde scartate; genio/mix)
+  -> scelta = nina_genio_1 = nina_DEFINITIVA.png.
+• Pipeline avatar DECISA: 3D via Gamma (generate, stylePreset "3D", modello flux-2-klein). Higgsfield
+  NON collegato in ambiente; SVG troppo piatto; DiceBear "indie" scartato.
+• Versione VITA = giacca DENIM (studi senape/terracotta/bordeaux scartati). Officina/tech da fare.
+• Scene riusabili in Nina/_SCENE: studio della mappa (slide_2 vincente) + sentiero al ponte.
+• Slide montate: slide_personaggio (ritratto in cornice) + slide_scena (figura intera nel mondo).
+• PRE_03 carosello "I Personaggi" — SOLO NINA col volto vero (6 slide). Snapshot _VERSIONI/v1_nina-solo.
+• Canone + RAG/Obsidian predisposti: MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md + memoria project_nina_avatar.
 
 ━━━ DECISIONI/NOTE ━━━
-• Struttura: NON un mega-carosello -> SERIE di preamboli 15-17 slide, "uno aiuta l'altro".
-• Nina <-> HR = stessa idea (lo stesso motore dei CV fotografa le competenze del bambino) -> incluso soft.
-• Densita': preambolo/social snello per IG; episodi veri piu' lunghi. PRE_03 lo vuole con piu' testo.
-• HR/commerciale "hard" resta nel deck strategico, non nel preambolo bimbi.
-• Render: Chrome headless, screenshot path ASSOLUTO; body row no-gap per affiancare e vedere le giunture.
+• Altri personaggi (Themis/Forge/antagonisti): per ORA solo simboli/sticker/Pietre gia' caratteristici;
+  il volto vero (3D) si scopre piu' avanti con i nuovi episodi.
+• Tutto additivo: nessuna variante cancellata (_VARIANTI_*, _STUDI_GIACCA, _SCENE, _VERSIONI).
 
-━━━ VERIFICHE #49 (verdi) ━━━
-• audit_episodes: 0 orfani (216 .md su disco vs 215 in json: delta minore, non bloccante).
-• build_episodes_json: 215 episodi. • tsc -b: EXIT 0.
-
-Generato: 26/06/2026 — fine sessione #49
+━━━ Generato: 27/06/2026 — fine sessione #50 ━━━

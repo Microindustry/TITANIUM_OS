@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Nina · Personaggio</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1080" />
+<meta name="hz:canvas-height" content="1350" />
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#05070d; }
+body { display:flex; justify-content:center; padding:0; }
+.slide { position:relative; width:1080px; height:1350px; overflow:hidden;
+  background: radial-gradient(120% 75% at 50% 40%, #16321f 0%, #0c1a16 46%, #05070d 100%);
+  font-family:"source-sans-3",sans-serif; color:#eef2fb; }
+.grid { position:absolute; inset:30px; opacity:0.04;
+  background-image: linear-gradient(#4fd6a0 1px, transparent 1px), linear-gradient(90deg,#4fd6a0 1px, transparent 1px);
+  background-size:54px 54px; }
+.frame { position:absolute; inset:30px; border:1px solid rgba(148,163,184,0.22); border-radius:4px; }
+.toplabel { position:absolute; top:60px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:17px; letter-spacing:6px; color:#8595b4; text-transform:uppercase; }
+.kicker { position:absolute; top:150px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:16px; letter-spacing:6px; color:#34d399; text-transform:uppercase; }
+.name { position:absolute; bottom:300px; left:0; right:0; text-align:center;
+  font-family:"playfair-display",serif; font-weight:800; font-size:96px; color:#f6f8ff; letter-spacing:1px; }
+.role { position:absolute; bottom:248px; left:0; right:0; text-align:center;
+  font-family:"space-mono",monospace; font-size:20px; letter-spacing:5px; color:#ec4899; text-transform:uppercase; }
+.super { position:absolute; bottom:150px; left:140px; right:140px; text-align:center;
+  font-size:30px; line-height:1.5; color:#c3cce0; }
+.super .hi { color:#f6f8ff; font-weight:600; } .super .pk { color:#ec4899; font-weight:700; }
+.footer { position:absolute; left:60px; right:60px; bottom:60px; display:flex; align-items:center; justify-content:space-between;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#7f8db0; }
+.footer .dot { color:#34d399; } .footer .nina { color:#ec4899; }
+</style>
+</head>
+<body>
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">I Personaggi · 01</div>
+
+  <!-- ===== NINA — illustrazione vettoriale (v2: lineamenti rifiniti, hint latino) ===== -->
+  <svg style="position:absolute; top:205px; left:50%; transform:translateX(-50%); width:620px; height:770px;"
+       viewBox="0 0 620 770" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="halo" cx="50%" cy="40%" r="55%">
+        <stop offset="0%" stop-color="#5ff0b0" stop-opacity="0.42"/>
+        <stop offset="55%" stop-color="#34d399" stop-opacity="0.10"/>
+        <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e8b98c"/><stop offset="55%" stop-color="#dca673"/><stop offset="100%" stop-color="#c98f5d"/>
+      </linearGradient>
+      <linearGradient id="skinArm" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e6b488"/><stop offset="100%" stop-color="#c98f5d"/>
+      </linearGradient>
+      <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#3a261a"/><stop offset="55%" stop-color="#241710"/><stop offset="100%" stop-color="#160d08"/>
+      </linearGradient>
+      <linearGradient id="hairHi" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#7d5638" stop-opacity="0.85"/><stop offset="100%" stop-color="#7d5638" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#d7e6e0"/>
+      </linearGradient>
+      <linearGradient id="coatShade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#9fc4b7" stop-opacity="0.55"/><stop offset="100%" stop-color="#9fc4b7" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2bd4a0"/><stop offset="100%" stop-color="#16a878"/>
+      </linearGradient>
+      <radialGradient id="iris" cx="50%" cy="35%" r="65%">
+        <stop offset="0%" stop-color="#5a3b22"/><stop offset="70%" stop-color="#3a2414"/><stop offset="100%" stop-color="#1f130a"/>
+      </radialGradient>
+      <radialGradient id="cheek" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#e0707f" stop-opacity="0.5"/><stop offset="100%" stop-color="#e0707f" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="lips" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#c66" /><stop offset="100%" stop-color="#b35a63"/>
+      </linearGradient>
+    </defs>
+
+    <!-- alone -->
+    <ellipse cx="310" cy="300" rx="300" ry="330" fill="url(#halo)"/>
+
+    <!-- ===== BRACCIO ALZATO (mano con indice che punta in su) ===== -->
+    <g>
+      <!-- manica camice -->
+      <path d="M392,438 C436,420 452,360 452,300 C452,250 446,214 446,214 L486,214
+               C486,214 492,266 488,318 C482,396 452,440 430,468 Z" fill="url(#coat)"/>
+      <path d="M452,260 C452,330 444,402 430,468 L416,452 C440,398 452,330 452,260 Z" fill="url(#coatShade)"/>
+      <!-- polso + mano -->
+      <circle cx="466" cy="206" r="25" fill="url(#skinArm)"/>
+      <!-- dita chiuse (nocche) -->
+      <g fill="url(#skinArm)">
+        <circle cx="452" cy="196" r="10"/><circle cx="468" cy="190" r="10"/><circle cx="482" cy="196" r="9"/>
+      </g>
+      <!-- pollice -->
+      <path d="M444,210 q-12,-6 -10,-18 q2,-8 12,-2 Z" fill="url(#skinArm)"/>
+      <!-- indice che punta in su -->
+      <path d="M460,194 C458,150 462,126 470,126 C478,126 480,152 476,196 Z" fill="url(#skinArm)"/>
+      <ellipse cx="473" cy="128" rx="8" ry="7" fill="#ecc09a"/>
+    </g>
+
+    <!-- ===== CORPO / CAMICE ===== -->
+    <g>
+      <path d="M180,478 C180,436 232,408 310,408 C388,408 440,436 440,478 L470,728 L150,728 Z" fill="url(#coat)"/>
+      <path d="M310,408 C388,408 440,436 440,478 L470,728 L360,728 L330,478 Z" fill="url(#coatShade)"/>
+      <!-- maglia verde (scollo a V) -->
+      <path d="M262,414 L310,524 L358,414 C342,406 326,404 310,404 C294,404 278,406 262,414 Z" fill="url(#shirt)"/>
+      <path d="M310,408 L300,728 M310,408 L320,728" stroke="#bcd6cb" stroke-width="3" fill="none" opacity="0.8"/>
+      <!-- sciarpina rosa (accento Nina) -->
+      <path d="M270,416 C292,444 328,444 350,416 C350,436 332,454 310,454 C288,454 270,436 270,416 Z" fill="#ec4899"/>
+      <path d="M343,426 L370,474 L350,480 L330,442 Z" fill="#d63384"/>
+    </g>
+
+    <!-- ===== COLLO ===== -->
+    <path d="M288,344 L288,398 C288,414 332,414 332,398 L332,344 Z" fill="url(#skin)"/>
+    <path d="M288,366 C302,382 318,382 332,366 L332,344 L288,344 Z" fill="#b9824f" opacity="0.5"/>
+
+    <!-- ===== CAPELLI (dietro, a caschetto lungo) ===== -->
+    <path d="M192,252 C192,140 418,140 418,252 L428,452 C428,418 402,414 398,446
+             C392,372 378,352 378,352 L232,352 C232,352 218,372 212,446
+             C208,414 182,418 182,452 Z" fill="url(#hair)"/>
+
+    <!-- ===== TESTA (ovale rifinito, mento più affusolato) ===== -->
+    <g>
+      <path d="M305,138 C242,138 202,184 202,244 C202,300 232,346 270,366
+               C285,374 295,378 305,378 C315,378 325,374 340,366
+               C378,346 408,300 408,244 C408,184 368,138 305,138 Z" fill="url(#skin)"/>
+      <!-- orecchie -->
+      <circle cx="200" cy="256" r="17" fill="url(#skin)"/><circle cx="410" cy="256" r="17" fill="url(#skin)"/>
+      <!-- guance (blush leggero) -->
+      <ellipse cx="250" cy="296" rx="26" ry="15" fill="url(#cheek)"/>
+      <ellipse cx="360" cy="296" rx="26" ry="15" fill="url(#cheek)"/>
+
+      <!-- sopracciglia sottili e arcuate -->
+      <path d="M232,226 Q262,214 290,224" stroke="#2a1a10" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M320,224 Q348,214 378,226" stroke="#2a1a10" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+      <!-- occhi a mandorla -->
+      <g>
+        <!-- sinistro -->
+        <path d="M232,256 C246,238 282,238 294,254 C282,270 246,272 232,256 Z" fill="#fbf7f2"/>
+        <circle cx="266" cy="256" r="15" fill="url(#iris)"/>
+        <circle cx="266" cy="256" r="6.5" fill="#140c06"/>
+        <circle cx="271" cy="250" r="4.5" fill="#ffffff"/>
+        <path d="M232,256 C246,238 282,238 294,254" stroke="#241008" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+        <path d="M232,256 l-9,-3 M236,250 l-7,-5" stroke="#241008" stroke-width="3" stroke-linecap="round"/>
+        <!-- destro -->
+        <path d="M316,254 C328,238 364,238 378,256 C364,272 328,270 316,254 Z" fill="#fbf7f2"/>
+        <circle cx="344" cy="256" r="15" fill="url(#iris)"/>
+        <circle cx="344" cy="256" r="6.5" fill="#140c06"/>
+        <circle cx="349" cy="250" r="4.5" fill="#ffffff"/>
+        <path d="M316,254 C328,238 364,238 378,256" stroke="#241008" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+        <path d="M378,256 l9,-3 M374,250 l7,-5" stroke="#241008" stroke-width="3" stroke-linecap="round"/>
+      </g>
+
+      <!-- naso piccolo e rifinito -->
+      <path d="M302,266 C300,286 296,296 305,302 C312,300 314,296 313,290" stroke="#b9824f" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+      <!-- labbra definite (sorriso morbido) -->
+      <path d="M283,320 Q294,312 305,316 Q316,312 327,320 Q316,332 305,333 Q294,332 283,320 Z" fill="url(#lips)"/>
+      <path d="M289,321 Q305,327 321,321" stroke="#8f4750" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M294,328 Q305,332 316,328" stroke="#e79aa0" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    </g>
+
+    <!-- ===== CAPELLI (davanti: riga laterale, ciuffo morbido, ciocche che incorniciano) ===== -->
+    <g>
+      <path d="M192,266 C182,150 252,124 305,124 C372,124 430,156 418,266
+               C414,212 392,198 392,198 C396,232 388,250 380,256
+               C384,212 360,184 360,184 C362,214 350,230 340,236
+               C338,196 300,184 300,184
+               C292,196 268,206 250,236
+               C246,206 236,196 230,196 C236,170 222,206 220,250
+               C212,212 200,214 192,266 Z" fill="url(#hair)"/>
+      <!-- ciocche laterali lunghe -->
+      <path d="M198,250 C188,320 196,392 214,446 C204,392 206,316 220,262 Z" fill="url(#hair)"/>
+      <path d="M412,250 C422,320 414,392 396,446 C406,392 404,316 390,262 Z" fill="url(#hair)"/>
+      <!-- riflesso morbido -->
+      <path d="M226,186 C258,160 296,154 312,158 C272,170 244,196 230,232 Z" fill="url(#hairHi)"/>
+      <!-- molletta rosa discreta -->
+      <g transform="translate(372,206)">
+        <path d="M0,0 L22,-9 L18,7 Z" fill="#ec4899"/><path d="M0,0 L22,12 L26,-4 Z" fill="#d63384"/>
+        <circle cx="5" cy="1" r="5" fill="#ffd1e3"/>
+      </g>
+    </g>
+
+    <!-- ===== SIMBOLO: il "?" (la curiosità che apre porte) ===== -->
+    <g transform="translate(150,150)">
+      <circle cx="0" cy="0" r="32" fill="#0c1a16" stroke="#ec4899" stroke-width="2.5"/>
+      <text x="0" y="15" text-anchor="middle" font-family="playfair-display,serif" font-size="48" font-weight="800" fill="#ec4899">?</text>
+    </g>
+  </svg>
+
+  <div class="name">Nina</div>
+  <div class="role">La bambina che chiede perché</div>
+  <div class="super">La sua superpotenza: <span class="pk">chiedere «perché?»</span> e poi <span class="hi">andare a vedere davvero</span>. Apre porte che gli altri non vedono.</div>
+
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>01 / 04</span></div>
+</div>
+</body>
+</html>
