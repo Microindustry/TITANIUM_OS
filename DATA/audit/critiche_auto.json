@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-eca50c7692",
+    "date": "2026-07-02",
+    "git": "14c6f2e1",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "La bussola_open riporta due voci di manutenzione RAG ancora aperte: chunking per heading e backup snapshot chroma_db in `_VAULT/BACKUPS`. Con 24.892 chunk e una storia di corruzioni HNSW, l'assenza di snapshot automatico significa che ogni power-loss precedente ha distrutto dati senza recovery possibile.",
+    "azione": "Prima di aggiungere nuovi chunk (es. canone Nina), implementare uno snapshot schedulato di chroma_db verso `_VAULT/BACKUPS`. Il chunking per heading può seguire nei rebuild a GPU libera già pianificati.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-02"
+  },
+  {
+    "id": "AUD-e769986bfe",
+    "date": "2026-07-02",
+    "git": "14c6f2e1",
+    "area": "MIMS",
+    "severity": "alta",
+    "finding": "La decisione connettori Via B (VULCAN) è presa dal 24/06 ma il prossimo step fisico — montare il martinetto Vevor 3 stadi — è ancora bloccato. Senza quella colata di prova, BEP e tooling Via B non hanno dati reali da inserire nella bozza B2. Il pilastro MIMS è al 30%.",
+    "azione": "Fissare una data fisica (non una sessione AI) per il montaggio Vevor. Poi: prima colata giunto → dati reali → aggiornare SCHEDA §5 con economia/BEP effettivi e inserire il claim di processo nella bozza B2.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-02"
+  },
+  {
+    "id": "AUD-b20e2c5e5e",
+    "date": "2026-07-02",
+    "git": "14c6f2e1",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La bussola_open contiene almeno 4 voci duplicate quasi identiche (PRE_01/PRE_02 check, EP_1 ricontrollo, Nina versioni officina/tech, rag-update canone Nina) provenienti da sessioni diverse mai chiuse. Questo non è un backlog ordinato: è rumore che maschera la priorità reale della sessione #51 e rischia di farla partire senza un obiettivo netto.",
+    "azione": "Aprire bussola_open a inizio #51 e fare una passata di deduplicazione: collassare i duplicati in voci singole, poi ordinare per dipendenza (es. rag-update canone Nina sblocca la coerenza di tutto il pipeline GENESIS). Tempo: 10 minuti, valore: ogni sessione successiva parte con una lista leggibile.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-02"
+  },
+  {
+    "id": "AUD-a47c9437f8",
+    "date": "2026-07-02",
+    "git": "14c6f2e1",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Le chiavi .env non sono state ruotate (blocker red-team #38, ancora aperto). La SEMANTIC_SCHOLAR_API_KEY gratuita mancante genera 429 ricorrenti nella ricerca notturna. Due falle di sicurezza/operatività sullo stesso file di configurazione, nessuna risolta.",
+    "azione": "Matteo apre .env in apertura sessione: (1) ruota le chiavi segnalate in #38, (2) inserisce SEMANTIC_SCHOLAR_API_KEY gratuita. Tempo stimato: 15 minuti, sblocca la ricerca notturna e chiude il debito di sicurezza.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-02"
+  },
+  {
+    "id": "AUD-963a70611b",
+    "date": "2026-07-02",
+    "git": "14c6f2e1",
+    "area": "GENESIS",
+    "severity": "bassa",
+    "finding": "Il canone Nina è stato fissato (MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md, sessione #50) ma il rag-update per indicizzarlo è ancora marcato come 'o lascia all'incrementale notturno'. Con 252 episodi già generati e pipeline avatar attiva, lo story_agent notturno può continuare a produrre varianti Nina senza leggere il vincolo mora/lentiggini/no-bionda.",
+    "azione": "Eseguire rag-update esplicito su NINA_DESIGN_DEFINITIVO.md nella prossima sessione prima di generare nuovi episodi o versioni outfit (officina/tech). Non delegare all'incrementale notturno per un documento che è una regola vincolante.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-02"
+  },
+  {
+    "id": "AUD-23c0b2240f",
+    "date": "2026-07-02",
+    "git": "14c6f2e1",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il blocker UPS hardware (~50-80€) è documentato come causa di 3 corruzioni HNSW in 2 giorni. Nessun log_issue stanotte, ma il pattern è attivo: ogni power-loss può azzerare lo stato di chroma_db. È il rischio infrastrutturale più alto e costa meno di un'ora di lavoro.",
+    "azione": "Ordinare UPS (50-80€) nella stessa sessione in cui si ordina il mandrino ER20: un solo checkout, due blocker chiusi. Posizionarlo fisicamente accanto a Vevor+ER20 come da nota.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-02"
+  },
+  {
     "id": "AUD-d2ea65641f",
     "date": "2026-06-27",
     "git": "f01d9c24",
@@ -8,8 +80,10 @@
     "finding": "L'UPS è nei blockers da almeno 2 giorni con corruzione HNSW documentata 3 volte. Con 24.882 chunk RAG e chroma_db già resettata fisicamente in passato (commit 04c3f71a), ogni blackout non coperto da UPS è un potenziale reset dell'intero indice vettoriale. Il costo di un rebuild (tempo GPU + verifica qualità) supera di gran lunga il costo hardware (~50-80€) dell'UPS.",
     "azione": "Ordinare l'UPS nella stessa sessione in cui si ordina il mandrino ER20: sono entrambi su AZIONI_MATTEO.md, un solo checkout. Finché non arriva, abilitare il backup snapshot chroma_db in _VAULT/BACKUPS (già in bussola_open) come mitigazione notturna immediata.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-27"
+    "status": "resolved",
+    "last_seen": "2026-06-27",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-b3a13a13ec",
@@ -20,8 +94,10 @@
     "finding": "In bussola_open convivono almeno 4 voci che puntano alla prossima sessione su PRE_01/PRE_02/PRE_03 (verifica linea/flusso, personaggi, PRE_03, export Adobe Express), più una voce 'slide 2 di PRE_01' che sembra di una sessione precedente (#49) e rischia di essere persa nel rumore. Il next_step del sistema elenca già 3 sotto-task ordinati, ma la voce bussola sulla slide 2 non è allineata con esso: potrebbe essere un duplicato già risolto in v11, oppure un task distinto che cadrà tra le maglie.",
     "azione": "A inizio della prossima sessione, confrontare esplicitamente la voce 'slide 2 di PRE_01 — più testo' con lo stato attuale di PRE_01 v11: se già incorporata chiuderla in bussola, altrimenti aggiungerla come sotto-punto esplicito del 'punto 3' per non perderla durante la verifica del flusso.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-27"
+    "status": "resolved",
+    "last_seen": "2026-06-27",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6512ba69e0",
@@ -32,8 +108,10 @@
     "finding": "Le chiavi .env sono marcate da ruotare dal red-team #38 e compaiono sia nei blockers sia in bussola_open. Ogni notte che passa con le chiavi vecchie è una finestra di esposizione attiva su un sistema che gira script automatici non presidiati. Non è un rischio teorico: il red-team lo ha già classificato.",
     "azione": "Matteo ruota le chiavi nella prima sessione utile (azione già assegnata, va solo eseguita). Non delegabile agli agenti notturni per ovvi motivi di sicurezza.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-27"
+    "status": "resolved",
+    "last_seen": "2026-06-27",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-3e2dbfd427",
@@ -44,8 +122,10 @@
     "finding": "I 2 orfani del vault ('human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE) non hanno link in entrata né in uscita. Con 24.882 chunk totali e vault_intersect che premia i ponti cross-dominio (commit 496e96d9), nodi isolati non contribuiscono al grafo e abbassano la qualità del retrieval cross-dominio senza segnale visibile all'utente.",
     "azione": "Aprire i due file e decidere in 5 minuti: se il contenuto è rilevante, aggiungere almeno un wikilink a un nodo esistente; se non lo è, spostarli in _ARCHIVIO. Nodi KNOWLEDGE disconnessi in un RAG che vive di ponti sono peso morto.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-27"
+    "status": "resolved",
+    "last_seen": "2026-06-27",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-339b8d24c3",
@@ -56,8 +136,10 @@
     "finding": "Il log del 2026-06-26 mostra un crash non risolto nella pipeline notturna: \"⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last\". Il prefisso ripetuto tre volte su night_push.log prima del Traceback su night_research.log indica un ciclo di retry o un'eco anomala del logger stesso, oltre all'eccezione vera e propria. Non è un warning silenzioso: è un crash con stack trace che ha interrotto l'agente di ricerca notturna.",
     "azione": "Aprire night_research.log del 2026-06-26, leggere le righe dopo 'Traceback' per identificare la causa radice (probabile 429 Semantic Scholar o eccezione non gestita post-broadening). Correggere il punto di crash e, separatamente, indagare perché night_push.log si auto-cita tre volte: potrebbe essere un logger che scrive sul proprio file di input.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-27"
+    "status": "resolved",
+    "last_seen": "2026-06-27",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-178b7935be",
@@ -68,8 +150,10 @@
     "finding": "La API key Semantic Scholar è assente o non configurata (SEMANTIC_SCHOLAR_API_KEY nel .env): il blocker è esplicito. Il crash su night_research.log del 2026-06-26 coincide con questa lacuna: senza chiave, i 429 sono garantiti e il query broadening introdotto in v1.3 (commit c638edbf) non ha superfici valide su cui operare, rendendo la ricerca notturna sostanzialmente inerte.",
     "azione": "Richiedere la chiave gratuita Semantic Scholar (form sul sito, approvazione in genere < 24h) e aggiungerla al .env prima della prossima notturna. Verificare poi nei log che i 429 spariscano.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-27"
+    "status": "resolved",
+    "last_seen": "2026-06-27",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-b72d80e4b5",
@@ -80,8 +164,10 @@
     "finding": "Il file che Matteo deve mandare per eventuale revisione di PRE_01 è il gate che blocca sia l'export in Adobe Express sia la riscrittura di EP_N2_01 al livello ricco del preambolo. La bussola lo marca come 'In attesa' senza scadenza. Se il file non arriva prima della prossima sessione, l'intera pipeline di pubblicazione Nina rimane ferma su decisioni non prese.",
     "azione": "Matteo invia il file all'inizio della sessione #49 (o conferma esplicitamente che PRE_01 v10 è definitivo senza revisioni). Solo dopo: export Adobe Express, poi EP_N2_01 riscritto. Sblocca due deliverable in sequenza.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-26"
+    "status": "resolved",
+    "last_seen": "2026-06-26",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7a9b1b88b1",
@@ -92,8 +178,10 @@
     "finding": "Le chiavi .env sono ancora da ruotare (red-team #38, aperto nella bussola). Il rischio di esfiltrazione via API è documentato. Ogni giorno di ritardo estende la finestra di esposizione.",
     "azione": "Matteo esegue la rotazione in autonomia alla prossima sessione mattutina (non delegabile all'AI). Aggiornare .env, invalidare le chiavi vecchie sui rispettivi portali, verificare che nessun processo in produzione usi ancora le vecchie.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-26"
+    "status": "resolved",
+    "last_seen": "2026-06-26",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-4bb6cdb5b4",
@@ -104,8 +192,10 @@
     "finding": "Il chunking heading-aware (#/##/###) è ancora non implementato (bussola aperta: 'Enhancement RAG non fatti: chunking per heading'). Con 24.762 chunk su chunking fisso a 512 char, i retrieval su documenti strutturati (MIMS, GENESIS, Nina) restituiscono frammenti che tagliano a metà sezioni semantiche, abbassando la precisione del contesto.",
     "azione": "Schedulare il rebuild RAG con chunking heading-aware a GPU libera (già identificato come prerequisito nella bussola). Eseguire prima del lancio di EP_N2_01 al livello ricco del preambolo, perché la qualità del retrieval condiziona direttamente la generazione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-26"
+    "status": "resolved",
+    "last_seen": "2026-06-26",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-2641ddd7fc",
@@ -116,8 +206,10 @@
     "finding": "Crash confermato in log: \"⚠ night_push.log: ⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):\" (2026-06-25). Il traceback è nel log della ricerca notturna, ma il prefisso ripetuto anomalo su night_push.log indica che il crash ha contaminato anche il logger stesso. L'automazione notturna è instabile.",
     "azione": "Aprire night_research.log del 25/06, leggere il traceback completo, identificare modulo e riga. Fixare o aggiungere try/except che isoli il crash senza propagarlo al logger. Verificare che night_push.log non stia redirigendo stderr in modo errato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-26"
+    "status": "resolved",
+    "last_seen": "2026-06-26",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-1a03cf3f3c",
@@ -128,8 +220,10 @@
     "finding": "SEMANTIC_SCHOLAR_API_KEY mancante in .env: i 429 della ricerca notturna sono ricorrenti e bloccano il research_agent ogni notte. Il blocker è identificato, la chiave è gratuita, ma è ancora aperta nella bussola senza data di chiusura.",
     "azione": "Matteo registra la chiave gratuita su Semantic Scholar API portal (5 minuti) e la inserisce in .env. Zero costo, elimina il degrado notturno immediato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-26"
+    "status": "resolved",
+    "last_seen": "2026-06-26",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-15e5734f03",
@@ -140,8 +234,10 @@
     "finding": "UPS assente: la corruzione HNSW da power-loss è ricorrente (citata 3 volte in 2 giorni nei blockers). Senza UPS ogni blackout azzera il lavoro notturno e forza un recovery manuale. Il backup snapshot chroma_db in _VAULT/BACKUPS è ancora aperto nella bussola e non risulta fatto.",
     "azione": "Ordinare UPS (~50-80€) contestualmente al mandrino ER20 (stesso checkout fisico). Nel frattempo implementare il backup snapshot chroma_db via deep_freeze come misura ponte: riduce il danno da ogni corruzione fino all'arrivo dell'hardware.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-26"
+    "status": "resolved",
+    "last_seen": "2026-06-26",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-eb98bda27f",
@@ -152,8 +248,10 @@
     "finding": "HNSW corrotto 3 volte in 2 giorni per power-loss: la bussola aperta segnala «la corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni)» e il todo HNSW da rigenerare è ancora aperto. Il commit RAG v4.2 con snapshot è stato pushato (79908408), ma senza UPS il prossimo blackout riporta il sistema al punto di partenza: il backup non previene la corruzione, la subisce e poi ripristina.",
     "azione": "Ordinare UPS nel prossimo checkout insieme a Vevor+ER20 (unico ordine, già pianificato). Fino all'arrivo: eseguire il --rebuild HNSW ora che l'indice è pulito post-v4.2, verificare che il backup snapshot sia integro con un test-restore su chroma_db_test.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-25"
+    "status": "resolved",
+    "last_seen": "2026-06-25",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-cf85ebc2ce",
@@ -164,8 +262,10 @@
     "finding": "Traceback non attribuito in night_push.log: il log del 2026-06-24 riporta \"⚠ night_push.log: ⚠ night_research.log: Traceback (most recent call last):\" — un crash reale nelle notturne, ma l'estratto non mostra né il tipo di eccezione né lo stack completo. Non è possibile sapere cosa sia caduto (il push? il research agent? entrambi?) né se si sia ripreso.",
     "azione": "Aprire night_push.log e night_research.log del 24/06, leggere le righe successive al Traceback per identificare exception type e modulo. Aggiungere al job notturno un catch-all che scriva su un file separato errors.log con timestamp + stack completo, così il prossimo audit ha la riga intera.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-25"
+    "status": "resolved",
+    "last_seen": "2026-06-25",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a9c15ed10f",
@@ -176,8 +276,10 @@
     "finding": "MIMS fermo a pillar 30% con due prerequisiti fisici non ancora ordinati/montati: il martinetto Vevor 3 stadi (prerequisito VULCAN) non è montato e il mandrino ER20 non è ordinato. La decisione Via B è presa (e338ce6d), la scheda §5 è a canone, ma senza la prima colata giunto nessun dato reale entra nel processo. Il BEP Via B non può essere ricalcolato su dati stimati.",
     "azione": "Includere mandrino ER20 nel prossimo ordine hardware (stesso checkout UPS+Vevor). Fissare una data fisica per il montaggio martinetto: senza scadenza il prerequisito resta indefinitamente «prossimo step».",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-25"
+    "status": "resolved",
+    "last_seen": "2026-06-25",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-9dd4f51376",
@@ -188,8 +290,10 @@
     "finding": "Il todo «Schedulare night_ai_watch.bat ogni 48h (Task Scheduler, richiede UAC)» è aperto e non ha dipendenze bloccanti, ma ogni notte senza di esso è una notte in cui il watchdog AI gira solo se qualcuno lo ha avviato manualmente. Con 99 commit in 7 giorni e job notturni critici (push, research, audit), un watchdog non schedulato è un punto di silenzio silenzioso.",
     "azione": "Dedicare 10 minuti alla prossima sessione sveglia per creare il Task Scheduler con UAC: è un'operazione una-tantum che rende affidabili tutte le notturne già costruite.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-25"
+    "status": "resolved",
+    "last_seen": "2026-06-25",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-530000b5f9",
@@ -200,8 +304,10 @@
     "finding": "Rate-limit HF Hub ancora attivo: il log del 2026-06-24 riporta \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Il commit 473a06d0 ha silenziato il warning nel log, ma non ha eliminato il limite — lo ha reso invisibile. Il problema sottostante (throttling sui download HF) persiste non monitorato.",
     "azione": "Aggiungere HF_TOKEN al .env (token gratuito, basta registrazione HF). Distinguere nel codice il silenzio del warning dalla risoluzione del rate-limit: loggare comunque un contatore di richieste throttled in errors.log, così il silenzio non maschera degradi futuri.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-25"
+    "status": "resolved",
+    "last_seen": "2026-06-25",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-16d73874ce",
@@ -212,8 +318,10 @@
     "finding": "Chiavi .env ruotabili da settimane, rischio reale non chiuso: la bussola aperta riporta «CHIAVI DA RUOTARE (red-team #38, att05): .env esfiltrabile via API — le ruota Matteo» e compare anche nei blockers attivi. Il red-team è la sessione #38, siamo alla #45: 7 sessioni di esposizione confermata e documentata senza azione.",
     "azione": "Rotazione chiavi .env nella prossima sessione sveglia, prima di qualsiasi altra feature. Aggiungere alla API che serve i file un check esplicito della denylist anche sui path relativi (non solo assoluti) per chiudere il vettore di esfiltrazione indipendentemente dalla rotazione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-25"
+    "status": "resolved",
+    "last_seen": "2026-06-25",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-df041cf237",
@@ -252,8 +360,10 @@
     "finding": "Corruzione HNSW da power-loss ricorrente 3 volte in 2 giorni senza rimedio hardware. Il blocker esplicito lo conferma: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg): è la cura alla radice'. Il fix software (--drop-hnsw, rag_recover anti-commit-leak) è un cerotto che verrà ri-applicato ogni blackout. Senza UPS il RAG è strutturalmente fragile e ogni corruzione costa sessioni di recovery.",
     "azione": "Ordinare UPS (~50-80€) nella stessa sessione in cui si ordina il mandrino ER20: sono entrambi su Amazon/analoghe, un solo checkout. Finché non arriva, valutare se il WAL→HNSW commit candidato (già in next_step) riduca la finestra di perdita dati per i blackout intermedi.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-24"
+    "status": "resolved",
+    "last_seen": "2026-06-24",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-3d358b577a",
@@ -292,8 +402,10 @@
     "finding": "La ricerca notturna su Semantic Scholar è bloccata da rate-limit non autenticato. Il log del 2026-06-23 mostra: '2026-06-23 00:35:07 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&' seguito da '2026-06-23 00:35:07 [research_agent] INFO semantic_scholar -> 0 risultati'. La query CNC+spindle+ER20 — direttamente rilevante per V32 — ha prodotto zero risultati a causa del 429, non per assenza di letteratura. Il blocker lo conferma: 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna'.",
     "azione": "Matteo registra la chiave gratuita su semanticscholar.org/product/api e la inserisce in .env come SEMANTIC_SCHOLAR_API_KEY. Operazione da 5 minuti, sblocca tutte le ricerche notturne V32/MIMS da subito.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-24"
+    "status": "resolved",
+    "last_seen": "2026-06-24",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c322691a4c",
@@ -318,8 +430,10 @@
     "finding": "La ricerca notturna del 22/06 ha prodotto zero risultati utili su Semantic Scholar per la query 'linear guide rail preload stiffness': \"2026-06-22 03:38:27 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=linear+guide+rail+preload+stiffness+preci\" e subito dopo \"2026-06-22 03:38:27 [research_agent] INFO semantic_scholar -> 0 risultati\" (research_agent.log, 2026-06-22). Il backoff 429 è in place ma non risolve: senza API key autenticata il rate limit è strutturalmente insufficiente per le query notturne batch.",
     "azione": "Registrare e inserire SEMANTIC_SCHOLAR_API_KEY in .env oggi — è gratuita e sblocca un rate limit di 100 req/s autenticato vs 1 req/s anonimo. Verificare che research_agent carichi la variabile e aggiungerla alla lista di controllo del self-heal.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-23"
+    "status": "resolved",
+    "last_seen": "2026-06-23",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ae3d0637f0",
@@ -344,8 +458,10 @@
     "finding": "ChromaDB ha crashato durante la ricerca notturna del 22/06 con errore esplicito: \"chromadb.errors.InternalError: Error executing plan: Error sending backfill request to compactor: Error constructing hnsw segment reader: Error creating hnsw segment reader: Error loading hnsw index\" (night_research.log, 2026-06-22). Il recovery a 2 livelli è stato costruito, ma il trigger del guasto — un blackout senza UPS — rimane attivo. La corruzione HNSW è già avvenuta 3 volte in 2 giorni per la stessa causa. Il self-heal notturno copre il sintomo, non la radice.",
     "azione": "Acquistare e installare UPS hardware (50-80€) accanto a Vevor+ER20 prima della prossima sessione notturna. Fino ad allora, valutare shutdown controllato della macchina alle 06:00 prima dei tagli di rete noti, oppure aggiungere al self-heal un checkpoint pre-spegnimento che forzi flush SQLite e sposti HNSW in sicurezza.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-06-23"
+    "status": "resolved",
+    "last_seen": "2026-06-23",
+    "resolved_on": "2026-07-02",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-49bd443cde",
