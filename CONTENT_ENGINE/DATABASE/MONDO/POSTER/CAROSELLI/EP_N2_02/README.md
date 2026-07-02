@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [Carosello  EP_N2_02  Il Soffio di Troppo](#carosello-epn202-il-soffio-di-troppo)
+  - [File](#file)
+  - [Arco (16 slide)](#arco-16-slide)
+  - [Rigenerare / esportare](#rigenerare-esportare)
+
+<!-- /TOC -->
+
 # Carosello — EP_N2_02 · Il Soffio di Troppo
 
 **Episodio fonte:** `CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_02_il_soffio_di_troppo.md`

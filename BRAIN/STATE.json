@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-02T15:49:01.048497",
+  "last_update": "2026-07-02T16:02:24.013860",
   "active_milestone": "Sessione #51 (27/06-02/07): PREAMBOLO NINA CHIUSO (PRE_01 cos'e + PRE_02 come funziona + PRE_03 v5 scheda-personaggi 17 slide: Nina/Themis/Forge/Entropia, glifi distinti, foto Nina base64 inline). DECISO: Nina si presenta VIVA dentro l'EP_1 reale (non episodio dedicato); preambolo=anagrafica, episodi=storia. EP_N2_01 'La Bambina che Chiedeva Perche' e EP_N2_02 'Il Soffio di Troppo' RIFATTI al nuovo standard: 16 slide blueprint SVG narrativo, volto Nina definitivo, zero foto, stesso flusso. Generatori riusabili _build_ep.py + _render_all.py per episodio. Niente PRE_04 (eviterebbe ripetizione).",
   "next_step": "PROSSIMA SESSIONE #52: (1) EP_N2_03 'la MISURA' al nuovo standard (16 slide blueprint, _build_ep.py+_render_all.py, README+caption, snapshot _VERSIONI); (2) export Express degli episodi pronti (html_export_readiness_skill -> export_html_to_express); (3) controllare PRE_01/PRE_02 giunture; (4) Nina versioni officina/tech (stesso volto); (5) rag-update canone Nina.",
   "session_count": 101,
@@ -136,5 +136,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a chroma.sqlite3"
+  "last_action": "Modifica a DA_FARE_FATTO.md"
 }

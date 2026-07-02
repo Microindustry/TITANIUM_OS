@@ -7,14 +7,21 @@ Volto Nina definitivo bloccato (mora, coda alta, lentiggini, giacca denim = vers
 slide_2 = riferimento vincente; NO bionda, NO logo). Stile episodi: 16 slide BLUEPRINT SVG
 narrativo (scene disegnate, zero foto, stesso sfondo/flusso di tutti i caroselli).
 
->>> PROSSIMA SESSIONE #52 — IN ORDINE:
-  1) EP_N2_03 "la MISURA" al nuovo standard (16 slide blueprint; generatore _build_ep.py +
-     _render_all.py per episodio + README + caption + snapshot in _VERSIONI). Arco: dopo
-     Atomi&Bit (EP_01) e precisione=relazione (EP_02), EP_03 introduce la MISURA come atto.
+>>> PROSSIMA SESSIONE #52 — APRIRE CON FABLE 5 (default gia' impostato). IN ORDINE:
+  0) *** ATTACCO ESERCITO DI SPECIALISTI *** — piano gia' scritto e ingegnerizzato in
+     DOCS/ATTACCO_20260702/_PIANO.md. Lancia i 7 agenti in PARALLELO (general-purpose,
+     model=fable), ognuno scrive un report NN_<dominio>.md, poi sintesi in _SINTESI.md ->
+     migliori azioni in bussola. Domini: design/sicurezza/scrittura/software/news-IA/
+     gestionale/integrita-RAG. Regole: additivo, propose-only, cita file:riga, repo pubblico.
+     Deciso da Matteo: si fa su FABLE, non su Opus (Opus solo coordina).
+  1) EP_N2_03 "la MISURA" al nuovo standard (16 slide blueprint; _build_ep.py + _render_all.py).
   2) Export Express degli episodi pronti (html_export_readiness_skill -> export_html_to_express).
-  3) Controllare PRE_01 / PRE_02 (giunture/flusso).
-  4) Nina versioni OFFICINA e TECH (stesso volto, cambia solo l'outfit).
-  5) rag-update per indicizzare il canone Nina (o lascia all'incrementale notturno). <<<
+  3) Controllare PRE_01 / PRE_02 (giunture/flusso). 4) Nina officina/tech (stesso volto).
+  5) rag-update canone Nina (NB: full rebuild lanciato il 02/07 in finestra UAC — verifica --stats).
+
+FATTO IL 02/07 (infra, pre-attacco FASE 0): dashboard riavviata (5173); ecosistema+Obsidian
+aggiornati (595 note/3230 ponti/2 isolate); indice Pietre (9/82); 0 orfani; _CANONE.md ok,
+0 violazioni framing; RAG full rebuild lanciato (rag_update_exclusive.ps1, finestra elevata). <<<
 
 ━━━ FATTO IN SESSIONE #51 ━━━
 • PREAMBOLO CHIUSO: PRE_01 (cos'e) + PRE_02 (come funziona) + PRE_03 v5 (scheda personaggi,
