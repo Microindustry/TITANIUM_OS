@@ -60,3 +60,6 @@ DATA/audit/pct_sync.json
 # Restano su disco (la dashboard li serve via /api/file); fuori da git. (critica AUD-28de0ccc64)
 DATA/views/
 DATA/view_index.json
+
+# preferenze locali di macchina (modello, ecc.) — non pubblicare
+.claude/settings.local.json
