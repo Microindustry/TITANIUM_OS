@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-02  2 commit](#2026-07-02-2-commit)
   - [2026-06-27  6 commit](#2026-06-27-6-commit)
   - [2026-06-26  13 commit](#2026-06-26-13-commit)
   - [2026-06-25  25 commit](#2026-06-25-25-commit)
@@ -23,6 +24,14 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-02 · 2 commit
+- `730d6f69` chore(salva): pulizia bozze avatar (tieni solo Nina definitiva + deliverable) + PRE_03 redesign (meno immagini/più testo) in bussola
+- `0b836e97` chore(salva): chiusura #50 — Nina volto DEFINITIVO (3D Gamma) + versione vita denim + PRE_03 'I Personaggi' (solo Nina, volto vero) + 8 Pietre con icone (PRE_01 s11)
+
+_episodi: 252 · critiche aperte: 22 (95 risolte) · RAG: 24882 chunk_
+
+
 
 ## 2026-06-27 · 6 commit
 - `02b96f8e` auto: night_audit - cartella clinica 27/06/2026
