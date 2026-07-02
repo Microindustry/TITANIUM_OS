@@ -1,6 +1,9 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 51  27/06/2026  PRE_03 redesign (meno immagini / più testo)  decisione episodio personaggi](#sessione-51-27062026-pre03-redesign-meno-immagini-più-testo-decisione-episodio-personaggi)
+  - [Sessione 50  26-27/06/2026  Nina ha un VOLTO definitivo (3D)  PRE_03 I Personaggi (solo Nina)](#sessione-50-26-27062026-nina-ha-un-volto-definitivo-3d-pre03-i-personaggi-solo-nina)
+    - [PROSSIMA SESSIONE 51  si riparte da qui (in ordine)](#prossima-sessione-51-si-riparte-da-qui-in-ordine)
   - [Sessione 49  25/06/2026  PRE_01: stile buonanotte (slide 2)  flusso donda continuo tra le slide](#sessione-49-25062026-pre01-stile-buonanotte-slide-2-flusso-donda-continuo-tra-le-slide)
   - [Sessione 48  25/06/2026  Adobe Express  caroselli di Nina (porta  carosello, preambolo)](#sessione-48-25062026-adobe-express-caroselli-di-nina-porta-carosello-preambolo)
   - [Sessione 47  25/06/2026  Filone visivo RETE: orfanisalute, RETE viva, transizioni morbide (Konik  Hermes)](#sessione-47-25062026-filone-visivo-rete-orfanisalute-rete-viva-transizioni-morbide-konik-hermes)
@@ -66,6 +69,62 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi
+
+**Punto di partenza #51 (dalla bussola #50): (1) decidere se serve un episodio "Personaggi"
+dedicato o se Nina si presenta dentro l'EP_4; (2) PRE_03 redesign meno image-heavy.**
+
+- [✓] **DECISO — dove si presenta Nina**: PRE_03 resta la **scheda-personaggi del preambolo**
+  (riferimento statico "chi è chi"); **Nina si presenta viva DENTRO l'EP_1 reale** (in azione),
+  non in un episodio narrativo dedicato. Così niente doppione: preambolo = anagrafica, episodi = storia.
+- [✗] **PRE_03 redesign v2 (verde + carta d'identità)** — scartato da Matteo: "il verde sotto non mi piace,
+  niente carta". Resta agli atti in `_VERSIONI/v2_redesign-testo`.
+- [✗] **PRE_03 v3 (fondale-foto continuo)** — superato: Matteo vuole lo **stesso sfondo degli altri
+  episodi** (non la foto a tutto schermo). Resta agli atti in `_VERSIONI/v3_continuo-studio`.
+- [✗] **PRE_03 v4** — scartata: **ripeteva concetti di PRE_01** (8 Pietre = PRE_01 s11, Atomi&Bit,
+  Mappa, metodo, "chiede perché") + glifi ripetuti + foto Nina non visibile aprendo il file (path img/
+  rotto fuori dalla cartella). Resta in `_VERSIONI/v4_stile-episodi-17slide`.
+- [✓] **PRE_03 v5 — SCHEDA DEI PERSONAGGI (character bible), 17 slide** — corretto su feedback Matteo
+  ("stai ripetendo, sforzati di più, spiega di più, non ripetere"). PRE_03 ora **va in profondità sui
+  personaggi** invece di ri-spiegare i concetti già in PRE_01:
+  - **Letto PRE_01 per evitare sovrapposizioni**: PRE_01 copre già Cos'è/papà/Atomi&Bit/4 simboli/Giuntura/
+    Mappa/8 tappe e *introduce* Nina(s6) e Themis(s7). PRE_03 NON li ripete.
+  - Arco: 1 Cover · **2 Nina (FOTO)** · 3 Nina carattere · 4 Nina luci&ombre · 5 Nina aspetto ·
+    6 Nina arco di crescita · 7 Il cast · 8 Themis chi è · 9 Themis cosa fa · 10 **Forge** chi è ·
+    11 **Forge** cosa fa · 12 Themis+Forge insieme · 13 **l'Entropia** chi è · 14 l'Entropia come la incontri ·
+    15 Il duello (ordine vs disordine) · 16 Altri volti · 17 Si parte.
+  - **Forge e l'Entropia sono NUOVI** (assenti in PRE_01). **Themis allineato al canone PRE_01**
+    (custode della misura/Giuntura, non "esegue codice").
+  - **Glifi tutti distinti** (scintilla/2-facce/volto/gradini/bilancia/righello/incudine/martello/
+    frammenti/scudo/orizzonte/sentiero…). **Foto Nina in base64 inline** → carosello self-contained,
+    si vede ovunque + export Express ok.
+  - Generatore aggiornato `_build_pre03.py` v2.0. Snapshot `_VERSIONI/v5_personaggi-profondi`.
+- [✓] **PREAMBOLO COMPLETO** (deciso con Matteo): PRE_01 (cos'è) + PRE_02 (come funziona) + PRE_03 (chi c'è)
+  = onboarding chiuso. **Niente PRE_04** (ricadrebbe in ripetizione). → si parte con gli **EPISODI UFFICIALI**.
+- [✓] **EP_N2_01 "La Bambina che Chiedeva Perché" — carosello al NUOVO STANDARD** (era a 8 slide del 25/06,
+  pre-volto-definitivo). Rifatto a **16 slide narrative**, taglio **BLUEPRINT SVG narrativo** (scelta Matteo:
+  scene della storia disegnate in blueprint-anime, zero foto, stesso sfondo/flusso degli altri caroselli):
+  - Arco fedele al testo: cover · pizzicore (cold open) · la porticina · il ponte · la Giuntura (Atomi↔Bit) ·
+    Themis · «perché?» · i due bottoni · «tira» (regge/cede) · il gesto/nodo · "regge quando lo tiri" ·
+    test della sarta (strato grande, 100+ vs 10-20) · il pizzicore=superpotenza · la materia non mente ·
+    chiusura (bottone nel buio) · open loop → la misura/EP_02 + "provalo tu".
+  - **3 strati rispettati** (bottoni=bambino, sarta=grande, pizzicore=cuore). 16 scene SVG tutte distinte.
+  - Generatore `EP_N2_01/_build_ep.py` (riusabile per i prossimi episodi) + `_render_all.py`.
+    Vecchio salvato in `_VERSIONI/v1_8slide_2506`; nuovo in `_VERSIONI/v2_blueprint-16slide`.
+- [✓] **EP_N2_02 "Il Soffio di Troppo" — carosello (16 slide, blueprint SVG narrativo)**. Stesso impianto di
+  EP_01 (generatore `EP_N2_02/_build_ep.py` + `_render_all.py`, README + caption). Arco fedele: la Fucina ·
+  il soffio di Forge · «giusto rispetto a cosa?» · mezzo mm = il patto · test della sarta (seta/lana) ·
+  la precisione è relazione · l'incastro fisso · preme non soffia · gradi non sì/no · la tolleranza
+  (±0,5 vs ±0,1; 50-100g/200-300g) · «cosa succede se sbaglio?» · il patto · prima la testa · casella 2 ·
+  open loop → la MISURA (EP_03). 16 scene SVG distinte. Snapshot `_VERSIONI/v1_blueprint-16slide`.
+- [ ] **PROSSIMO**: EP_N2_03 (la MISURA) · poi export Express degli episodi pronti (html_export_readiness_skill → export_html_to_express).
+- [ ] **Controllare PRE_01 / PRE_02** (giunture/flusso) e poi avanti col **PRE_04**.
+- [ ] **Ricontrollare EP_1 effettivo** (primo episodio vero) + far presentare Nina lì dentro.
+- [ ] **Nina versioni OFFICINA e TECH** (stesso volto, cambia l'outfit).
+- [ ] **rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).
 
 ---
 

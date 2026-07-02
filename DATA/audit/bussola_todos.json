@@ -1,5 +1,179 @@
 [
   {
+    "id": "BUS-f9ca96a7",
+    "stato": "fatto",
+    "testo": "**DECISO — dove si presenta Nina**: PRE_03 resta la **scheda-personaggi del preambolo**",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-26939ee7",
+    "stato": "non_fatto",
+    "testo": "**PRE_03 redesign v2 (verde + carta d'identità)** — scartato da Matteo: \"il verde sotto non mi piace,",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-885a98f5",
+    "stato": "non_fatto",
+    "testo": "**PRE_03 v3 (fondale-foto continuo)** — superato: Matteo vuole lo **stesso sfondo degli altri",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-95cef6d2",
+    "stato": "non_fatto",
+    "testo": "**PRE_03 v4** — scartata: **ripeteva concetti di PRE_01** (8 Pietre = PRE_01 s11, Atomi&Bit,",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-0136dd15",
+    "stato": "fatto",
+    "testo": "**PRE_03 v5 — SCHEDA DEI PERSONAGGI (character bible), 17 slide** — corretto su feedback Matteo",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-a355d922",
+    "stato": "fatto",
+    "testo": "**PREAMBOLO COMPLETO** (deciso con Matteo): PRE_01 (cos'è) + PRE_02 (come funziona) + PRE_03 (chi c'è)",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-1a6f495a",
+    "stato": "fatto",
+    "testo": "**EP_N2_01 \"La Bambina che Chiedeva Perché\" — carosello al NUOVO STANDARD** (era a 8 slide del 25/06,",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-e7b5950f",
+    "stato": "fatto",
+    "testo": "**EP_N2_02 \"Il Soffio di Troppo\" — carosello (16 slide, blueprint SVG narrativo)**. Stesso impianto di",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-5af685ee",
+    "stato": "da_fare",
+    "testo": "**PROSSIMO**: EP_N2_03 (la MISURA) · poi export Express degli episodi pronti (html_export_readiness_skill → export_html_to_express).",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-2a5edc20",
+    "stato": "da_fare",
+    "testo": "**Controllare PRE_01 / PRE_02** (giunture/flusso) e poi avanti col **PRE_04**.",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-3f0008c6",
+    "stato": "da_fare",
+    "testo": "**Ricontrollare EP_1 effettivo** (primo episodio vero) + far presentare Nina lì dentro.",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-276c6dbf",
+    "stato": "da_fare",
+    "testo": "**Nina versioni OFFICINA e TECH** (stesso volto, cambia l'outfit).",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-06cd93c4",
+    "stato": "da_fare",
+    "testo": "**rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).",
+    "sessione": "Sessione #51 · 27/06/2026 — PRE_03 redesign (meno immagini / più testo) + decisione episodio personaggi"
+  },
+  {
+    "id": "BUS-43d78e40",
+    "stato": "fatto",
+    "testo": "**Spiegate le 8 Pietre** (concetti ⟡0→⟡7) e ridisegnata la fila su PRE_01 slide 11:",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-614e44f4",
+    "stato": "fatto",
+    "testo": "**VOLTO DI NINA BLOCCATO** — scelta di Matteo: `nina_DEFINITIVA.png` (= `nina_genio_1`).",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-a06b5c33",
+    "stato": "fatto",
+    "testo": "**Pipeline avatar DECISA**: 3D via **Gamma** (`generate`, stylePreset 3D, modello `flux-2-klein`).",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-2977789e",
+    "stato": "fatto",
+    "testo": "**Versione VITA = giacca DENIM** (studi senape/terracotta/bordeaux scartati). Officina/tech da fare.",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-50c13219",
+    "stato": "fatto",
+    "testo": "**Scene/ambienti riusabili** in `Nina/_SCENE/` (studio della mappa, sentiero al ponte).",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-3cbc4251",
+    "stato": "fatto",
+    "testo": "**Slide montate**: `slide_personaggio` (ritratto in cornice) + `slide_scena` (figura intera nel mondo).",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-025ddf4d",
+    "stato": "fatto",
+    "testo": "**PRE_03 carosello \"I Personaggi\" — SOLO NINA, col volto vero** (6 slide), snapshot `_VERSIONI/v1_nina-solo`.",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-7a911f13",
+    "stato": "fatto",
+    "testo": "**Canone + RAG/Obsidian predisposti**: `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` + memoria `project_nina_avatar`.",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-79b54a76",
+    "stato": "idea",
+    "testo": "**Altri personaggi** (Themis/Forge/antagonisti): per ora **solo simboli/sticker/Pietre** già caratteristici;",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-2dc8c039",
+    "stato": "fatto",
+    "testo": "**Bozze avatar ripulite** (Matteo, per chiarezza): tenuta solo la Nina definitiva + i deliverable",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-9aeb0a97",
+    "stato": "da_fare",
+    "testo": "**Episodio Personaggi: serve davvero?** Decidere se PRE_03 dedicato resta, o se Nina si presenta",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-0768030e",
+    "stato": "da_fare",
+    "testo": "**PRE_03 redesign** (Matteo): **meno immagini, più TESTO ben disposto** + solo poche immagini \"wow\"",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-81ddd660",
+    "stato": "da_fare",
+    "testo": "**Controllare PRE_01 e PRE_02** (giunture/flusso), poi avanti col **PRE_04**.",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-832f860a",
+    "stato": "da_fare",
+    "testo": "**Ricontrollare EP_1 effettivo** (il primo episodio vero) + dettagli superiori.",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-77d305cc",
+    "stato": "da_fare",
+    "testo": "**Nina versioni officina / tech** (stesso volto, cambia outfit).",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
+    "id": "BUS-06cd93c4",
+    "stato": "da_fare",
+    "testo": "**rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).",
+    "sessione": "Sessione #50 · 26-27/06/2026 — Nina ha un VOLTO definitivo (3D) + PRE_03 \"I Personaggi\" (solo Nina)"
+  },
+  {
     "id": "BUS-1b56e59a",
     "stato": "fatto",
     "testo": "**Slide 2 \"Il Patto\" ridefinita** — densità da racconto della buonanotte: apertura calda +",

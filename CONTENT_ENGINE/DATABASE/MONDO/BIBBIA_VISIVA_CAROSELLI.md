@@ -1,3 +1,19 @@
+<!-- TOC -->
+
+- [Bibbia Visiva  i Caroselli di Nina](#bibbia-visiva-i-caroselli-di-nina)
+  - [1. Anima](#1-anima)
+  - [2. Stile grafico](#2-stile-grafico)
+  - [3. Marchio fisso (template intoccabile)](#3-marchio-fisso-template-intoccabile)
+  - [4. Sistema identità  avatar  simbolo](#4-sistema-identità-avatar-simbolo)
+  - [5. Formato](#5-formato)
+  - [6. Architettura dei contenuti](#6-architettura-dei-contenuti)
+    - [A) PREAMBOLO  serie di presentazione (PRIMA degli episodi)](#a-preambolo-serie-di-presentazione-prima-degli-episodi)
+    - [B) EPISODI  un episodio  un carosello](#b-episodi-un-episodio-un-carosello)
+  - [7. Produzione (onesto)](#7-produzione-onesto)
+  - [8. Decisioni operative (sess48, 25/06/2026)](#8-decisioni-operative-sess48-25062026)
+
+<!-- /TOC -->
+
 # Bibbia Visiva — i Caroselli di Nina
 
 *Lo standard visivo e narrativo di TUTTI i caroselli social di Nina. — sess.#48, 25/06/2026.*

@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [Carosello  EP_N2_01  La Bambina che Chiedeva Perché](#carosello-epn201-la-bambina-che-chiedeva-perché)
+  - [File in questa cartella](#file-in-questa-cartella)
+  - [Le 8 slide](#le-8-slide)
+  - [Link Adobe Express](#link-adobe-express)
+  - [Come rigenerare / esportare](#come-rigenerare-esportare)
+
+<!-- /TOC -->
+
 # Carosello — EP_N2_01 · La Bambina che Chiedeva Perché
 
 **Episodio fonte:** `CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_01_la_bambina_che_chiedeva_perche.md`

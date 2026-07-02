@@ -1,39 +1,45 @@
-=== RIAVVIO SESSIONE #51 — 27/06/2026 ===
-Ultima sessione: #50 — 26-27/06/2026 (NINA: volto definitivo 3D + PRE_03 "I Personaggi" solo Nina)
+=== RIAVVIO SESSIONE #52 — 02/07/2026 ===
+Ultima sessione: #51 — 27/06→02/07/2026 (PREAMBOLO NINA CHIUSO + EP_N2_01/02 al nuovo standard)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Nina ha finalmente un VOLTO DEFINITIVO (3D Pixar). E' bloccato: file nina_DEFINITIVA.png
-(= nina_genio_1) — mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro.
-REGOLA FERMA (Matteo): ogni futura immagine di Nina deve avere QUESTO viso (slide_2 = il
-riferimento vincente). NO bionda, NO logo sulla giacca. Versione "vita" = giacca DENIM.
+Il MONDO DI NINA ha il preambolo COMPLETO e i primi 2 episodi rifatti al nuovo standard.
+Volto Nina definitivo bloccato (mora, coda alta, lentiggini, giacca denim = versione "vita";
+slide_2 = riferimento vincente; NO bionda, NO logo). Stile episodi: 16 slide BLUEPRINT SVG
+narrativo (scene disegnate, zero foto, stesso sfondo/flusso di tutti i caroselli).
 
->>> PROSSIMA SESSIONE #51 — IN ORDINE:
-  1) EPISODIO PERSONAGGI: serve un episodio dedicato (PRE_03) o Nina si presenta DENTRO
-     l'episodio 4? Dubbio di Matteo — decidi tu, ma Nina va presentata comunque.
-  2) PRE_03 REDESIGN (Matteo): meno immagini, PIU' TESTO ben disposto + solo poche immagini "wow"
-     (non image-heavy; per le poche immagini forti usare lo stile slide_2 a figura intera).
-     Poi controllare PRE_01 e PRE_02 (giunture/flusso) e avanti col PRE_04.
-  3) Ricontrollare EP_1 effettivo (primo episodio vero) + dettagli superiori.
+>>> PROSSIMA SESSIONE #52 — IN ORDINE:
+  1) EP_N2_03 "la MISURA" al nuovo standard (16 slide blueprint; generatore _build_ep.py +
+     _render_all.py per episodio + README + caption + snapshot in _VERSIONI). Arco: dopo
+     Atomi&Bit (EP_01) e precisione=relazione (EP_02), EP_03 introduce la MISURA come atto.
+  2) Export Express degli episodi pronti (html_export_readiness_skill -> export_html_to_express).
+  3) Controllare PRE_01 / PRE_02 (giunture/flusso).
   4) Nina versioni OFFICINA e TECH (stesso volto, cambia solo l'outfit).
   5) rag-update per indicizzare il canone Nina (o lascia all'incrementale notturno). <<<
 
-━━━ FATTO IN SESSIONE #50 ━━━
-• PRE_01 slide 11 (le 8 Pietre): da 8 diamanti col numero -> 8 GEMME con ICONA, niente numeri
-  (⟡0 dado=Atomi, ⟡5 rete=Bit, gear/voce/libro/sciame/bacchetta) + nomi sotto. v12_icone-8-pietre.
-• VOLTO NINA BLOCCATO: tante iterazioni (v1 SVG -> v12; varianti chiare/bionde scartate; genio/mix)
-  -> scelta = nina_genio_1 = nina_DEFINITIVA.png.
-• Pipeline avatar DECISA: 3D via Gamma (generate, stylePreset "3D", modello flux-2-klein). Higgsfield
-  NON collegato in ambiente; SVG troppo piatto; DiceBear "indie" scartato.
-• Versione VITA = giacca DENIM (studi senape/terracotta/bordeaux scartati). Officina/tech da fare.
-• Scene riusabili in Nina/_SCENE: studio della mappa (slide_2 vincente) + sentiero al ponte.
-• Slide montate: slide_personaggio (ritratto in cornice) + slide_scena (figura intera nel mondo).
-• PRE_03 carosello "I Personaggi" — SOLO NINA col volto vero (6 slide). Snapshot _VERSIONI/v1_nina-solo.
-• Canone + RAG/Obsidian predisposti: MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md + memoria project_nina_avatar.
+━━━ FATTO IN SESSIONE #51 ━━━
+• PREAMBOLO CHIUSO: PRE_01 (cos'e) + PRE_02 (come funziona) + PRE_03 v5 (scheda personaggi,
+  17 slide). Niente PRE_04 (eviterebbe ripetizione) -> si parte con gli EPISODI ufficiali.
+• PRE_03 v5 SCHEDA DEI PERSONAGGI (character bible): rifatta dopo scarti v2/v3/v4. NON ripete
+  PRE_01; va in profondita su Nina(foto/carattere/luci-ombre/aspetto/arco) + Themis(custode
+  della misura, allineato al canone) + Forge(NUOVO) + l'Entropia(NUOVO) + cast. Glifi tutti
+  distinti, foto Nina base64 inline (carosello self-contained, export Express ok).
+  Generatore _build_pre03.py v2.0. Snapshot _VERSIONI/v5_personaggi-profondi.
+• DECISO: Nina si presenta VIVA in azione dentro l'EP_1 reale (non un episodio dedicato).
+  Preambolo = anagrafica; episodi = storia.
+• EP_N2_01 "La Bambina che Chiedeva Perche": da 8 slide (pre-volto) a 16 slide blueprint SVG
+  narrativo. 3 strati (bottoni=bambino, sarta=grande, pizzicore=cuore). Generatore riusabile
+  _build_ep.py + _render_all.py. Snapshot v1_8slide_2506 + v2_blueprint-16slide.
+• EP_N2_02 "Il Soffio di Troppo": 16 slide blueprint SVG. La Fucina/Forge, mezzo mm = il patto,
+  test della sarta, precisione = relazione, tolleranza a gradi. Snapshot v1_blueprint-16slide.
 
-━━━ DECISIONI/NOTE ━━━
-• Altri personaggi (Themis/Forge/antagonisti): per ORA solo simboli/sticker/Pietre gia' caratteristici;
-  il volto vero (3D) si scopre piu' avanti con i nuovi episodi.
-• BOZZE AVATAR RIPULITE (Matteo, per non confondersi): tenuta solo la Nina definitiva + i deliverable
-  (Nina/: 134M->41M). Le varianti rimosse sono recuperabili dal commit git 0b836e97.
+━━━ VERIFICHE (fine #51) ━━━
+• audit_episodes.py -> 218 episodi, 0 orfani.
+• build_episodes_json.py -> 218 id unici, 16 relazioni padre-figlio, 2 assi.
+• DASHBOARD npx tsc -b -> EXIT 0 (build verde).
 
-━━━ Generato: 27/06/2026 — fine sessione #50 ━━━
+━━━ BLOCKERS APERTI ━━━
+• UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente (cura alla radice).
+• Mandrino 2.2kW ER20 + martinetto Vevor 3 stadi da montare (prerequisiti fisici MIMS/VULCAN).
+• Connettori MIMS = Via B (compressione VULCAN) — ricalcolare economia/BEP + bozza B2.
+
+━━━ Generato: 02/07/2026 — fine sessione #51 ━━━

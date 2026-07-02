@@ -20413,6 +20413,12 @@
         "title": "TITANIUM OS — Episodio 49",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260627",
+        "title": "TITANIUM OS — Episodio 27 Giugno 2026",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -20420,6 +20426,94 @@
       "precede": {
         "id": "EP_20260625",
         "title": "TITANIUM OS — Episodio 49"
+      },
+      "segue": {
+        "id": "EP_20260627",
+        "title": "TITANIUM OS — Episodio 27 Giugno 2026"
+      }
+    }
+  },
+  {
+    "id": "EP_20260627",
+    "title": "TITANIUM OS — Episodio 27 Giugno 2026",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-06-27",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio 27 Giugno 2026 \"IL VOLTO CHE NON CAMBIA\" COLD OPEN Mezzanotte passata. Lo schermo della taverna illumina la parete grigia. Sul monitor, una ragazza mora con lentiggini e coda al",
+    "content": "# TITANIUM_OS — Episodio 27 Giugno 2026\n\n## \"IL VOLTO CHE NON CAMBIA\"\n\n---\n\n**COLD OPEN**\n\nMezzanotte passata. Lo schermo della taverna illumina la parete grigia. Sul monitor, una ragazza mora con lentiggini e coda alta guarda dritto nell'obiettivo — sguardo fermo, giacca denim, qualcosa di colombiano e qualcosa di sud Italia nel viso. Matteo non aggiusta niente. Non sposta la curva dei capelli, non ritocca la luce, non prova un'altra versione. Salva. Chiude il file. Scrive: *nina_DEFINITIVA*.\n\nÈ la prima volta da mesi che una decisione si chiude senza riaprirsi.\n\n---\n\n## ATTO I — IL PROBLEMA DEI VOLTI\n\nCostruire una macchina ha una logica semplice: le tolleranze esistono, il materiale si comporta secondo le sue proprietà, il pezzo o entra o non entra. Non esistono \"versioni\" del foro M8. Esiste la quota.\n\nI personaggi sono diversi. O meglio — sembrano diversi, finché non capisci che il problema è esattamente lo stesso.\n\nNina esiste da mesi nel sistema GENESIS come concetto: voce, comportamento, logica di risposta, posizionamento. È il personaggio del centro estetico di Maria, il volto pubblico di EVA, la narratrice che guida le clienti attraverso i contenuti. Sul piano cognitivo è definita con precisione chirurgica. Sul piano visivo — fino al 26 giugno — era una nebbia di iterazioni.\n\nBionda, mora, capelli mossi, capelli lisci, sguardo dolce, sguardo professionale. Ogni sessione produceva una Nina diversa. Ogni Nina diversa erodeva qualcosa: la coerenza del brand, la fiducia nel sistema, il tempo. Un personaggio senza volto fisso è come un componente senza tolleranza: funziona finché non devi assemblarlo con qualcosa d'altro.\n\nIl problema tecnico era anche un problema di pipeline. Generare immagini coerenti con AI richiede un processo ripetibile, non una sessione di brainstorming visivo. Senza un riferimento bloccato, ogni prompt era un nuovo esperimento. Ogni esperimento aveva il 30% di probabilità di produrre qualcosa di usabile. Il 70% finiva in bozze che occupavano spazio nel repo e nel cervello.\n\n---\n\n## ATTO II — LA SESSIONE #50\n\nLa sessione inizia il 26 giugno, chiude il 27. Numero simbolico: cinquanta sessioni di lavoro su GENESIS documentate nel sistema. Non sono episodi mediatici — sono unità di lavoro reale, ognuna con un commit, ognuna tracciata nella cartella clinica.\n\nIn questa sessione succedono tre cose distinte che convergono nello stesso risultato.\n\n**Prima cosa:** viene bloccato il volto. Il parametro tecnico è questo — Gamma, `stylePreset:\"3D\"`, modello `flux-2-klein`, e un set di caratteristiche fisiche che non si negoziano più: mora, mix colombiana e sud italiano, coda alta, lentiggini, sguardo che non chiede permesso. Il file si chiama `nina_genio_1`. Diventa `nina_DEFINITIVA`. La slide 2 del carosello diventa il riferimento di canone. Da questo momento, qualsiasi futuro asset di Nina — outfit diverso, scena diversa, formato diverso — parte da quel viso. Non da un'idea di quel viso. Da quella specifica immagine, come punto zero della pipeline.\n\nLa versione \"vita\" — Nina nel mondo reale, fuori dallo studio — ha la giacca denim a bottoni. Scartate le versioni senape, terracotta, bordeaux. Scartate nel senso letterale: le bozze vengono eliminate dal repo. Non archiviate. Eliminate. Perché tenere bozze in un sistema cognitivo ha un costo reale: ogni file è una possibile fonte di confusione nel RAG, una direzione aperta che il sistema potrebbe recuperare e reintrodurre come opzione valida.\n\n**Seconda cosa:** viene costruito PRE_03, il carosello *\"I Personaggi\"*. Sei slide. Solo Nina, col volto vero. Gli altri personaggi del mondo — Themis, Forge, gli antagonisti Entropia e Palude — restano per ora simboli, Pietre, icone. La decisione è esplicita: il personaggio con volto 3D completo si introduce uno alla volta. Nina è prima perché è il personaggio operativo, quello che compare già nei contenuti di EVA. Gli altri aspettano.\n\nQuesta non è una scorciatoia. È una strategia di sequenziamento: ogni personaggio che riceve un volto diventa un vincolo permanente nel sistema. Meglio avere un personaggio solido che tre nebulosi.\n\n**Terza cosa, meno visibile ma più importante:** PRE_03 viene redesignato rispetto alla versione precedente. Meno immagini, più testo. Non perché le immagini siano meno efficaci — ma perché un carosello con troppe immagini generate a AI, prima che il personaggio sia riconoscibile, rischia di sembrare una gallery di stock visivo. Il testo ancora il personaggio alla sua voce, alla sua logica. Le immagini mostrano il volto. Il testo spiega perché quel volto conta.\n\n---\n\n## ATTO III — COSA SIGNIFICA BLOCCARE UN CANONE\n\nNell'artigianato fisico, il canone esiste come disegno tecnico. Quando Matteo setta il V32 in taverna — 178 kg di macchina CNC in corpo unico di Epoxy Granite, tre assi, tolleranza IT6-IT7 — ogni modifica successiva deve fare i conti con la geometria di partenza. Non puoi decidere a metà lavorazione che lo spindle dovrebbe essere due centimetri più in basso. La decisione è nella struttura, e la struttura è già colata.\n\nIl canone di Nina funziona allo stesso modo. Non è un moodboard — è una specifica. Il file `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` è il disegno tecnico del personaggio. Ogni futuro asset che devia da quel volto è tecnicamente non conforme, esattamente come un foro fuori tolleranza.\n\nQuesto ha un effetto secondario che vale la pena nominare: abbassa il costo cognitivo di ogni sessione futura. Prima della sessione #50, ogni volta che si generava un'immagine di Nina bisognava valutare se fosse \"abbastanza Nina\". Adesso no. O corrisponde al riferimento, o è da rifare. Il giudizio è oggettivo. Il tempo si risparmia.\n\nC'è una geometria comune in tutto quello che Matteo costruisce — macchine, sistemi cognitivi, personaggi. Il principio è identico: ridurre i gradi di libertà non necessari finché rimane solo la libertà che serve. Il V32 ha tre assi perché tre assi bastano per quello che deve fare. Nina ha un volto perché quel volto basta per quello che deve comunicare. Le bozze si eliminano perché le bozze sono gradi di libertà non necessari.\n\nGENESIS è al 70%. V32 è al 65%. La data sul muro è luglio 2030, capannone.\n\n---\n\n**CHIUSURA**\n\nIl commit delle 00:xx recita: *chiusura #50*. Non \"completamento\", non \"rilascio\". Chiusura.\n\nIn un sistema che lavora per aperture e chiusure — issue aperte, issue chiuse, bozze, definitivi — la parola conta. Una sessione chiusa significa che quello che c'era da decidere è stato deciso. Non che tutto è perfetto. Che le decisioni aperte sono state azzerata.\n\nNina ha un volto. Ha un outfit. Ha un file di canone nel RAG. La prossima sessione che la riguarda non deve più chiedersi che faccia ha.\n\nÈ una piccola cosa. È anche l'unico modo in cui i sistemi complessi avanzano: una decisione irrevocabile alla volta, finché la nebbia si riduce e resta solo la struttura.\n\n---\n\n## reel_hook\n\nIl personaggio che usi per il brand ha 12 versioni diverse salvate nel tuo sistema.  \nOgni versione è una domanda aperta che il tuo cervello deve ririspondere ogni volta che la apri.  \nLa sessione #50 ha eliminato le bozze e bloccato un canone in un file di specifica — come un disegno tecnico, non un moodboard.  \nAdesso Nina ha un volto. Il sistema non lo discute più.  \nCos'hai lasciato aperto che potresti semplicemente chiudere?\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Bloccato volto definitivo di Nina — mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo diretto — generato con Gamma `stylePreset:\"3D\"` modello `flux-2-klein`, file `nina_genio_1` / `nina_DEFINITIVA`, slide_2 come riferimento di canone irrevocabile.\n- **LOGICA:** Iterazioni visive senza riferimento fisso producevano incoerenza del personaggio e costo cognitivo elevato ad ogni sessione; il canone funziona come tolleranza di disegno tecnico — o corrisponde o è non conforme.\n- **DECISIONE:** Versione \"vita\" = giacca denim a bottoni; versioni senape/terracotta/bordeaux scartate e **eliminate** (non archiviate) dal repo per ridurre entropia nel RAG.\n- **DECISIONE:** PRE_03 carosello *\"I Personaggi\"* = 6 slide, solo Nina col volto vero, redesign verso meno immagini/più testo; altri personaggi (Themis, Forge, Entropia, Palude) restano simboli/Pietre fino a introduzione sequenziale.\n- **LOGICA:** Introdurre personaggi con volto 3D uno alla volta — ogni volto bloccato è un vincolo permanente; meglio un personaggio solido che tre nebulosi.\n- **OBIETTIVO:** Canone Nina stabilizzato in `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` — future sessioni di generazione asset partono dal riferimento, non da valutazione soggettiva; riduzione stimata del tempo di iterazione visiva per sessioni future.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | EP_20260627 |\n| **Data** | 27 giugno 2026 |\n| **Progetto principale** | GENESIS / EVA |\n| **Milestone** | Sessione #50 — Nina volto DEFINITIVO |\n| **Personaggi** | Nina (bloccata), Themis/Forge/Entropia/Palude (simboli) |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **File canone** | MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md |\n| **Pipeline avatar** | Gamma · stylePreset:3D · flux-2-klein |\n| **Prossimo passo** | Introduzione sequenziale altri personaggi |\n| **Target capannone** | 15 luglio 2030 |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260626",
+        "title": "TITANIUM OS — Episodio 2026-06-26",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260702",
+        "title": "TITANIUM OS — S2E15",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260626",
+        "title": "TITANIUM OS — Episodio 2026-06-26"
+      },
+      "segue": {
+        "id": "EP_20260702",
+        "title": "TITANIUM OS — S2E15"
+      }
+    }
+  },
+  {
+    "id": "EP_20260702",
+    "title": "TITANIUM OS — S2E15",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-02",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 6,
+    "preview": "TITANIUM_OS — S2E15 \"Nina ha un Volto\" — 2026 07 02 · commit: auto: inventario notturno COLD OPEN È mezzanotte passata e lo schermo mostra un volto. Non un wireframe. Non un placeholder. Un volto vero",
+    "content": "# TITANIUM_OS — S2E15\n\n## \"Nina ha un Volto\"\n\n*— 2026-07-02 · commit: auto: inventario notturno*\n\n---\n\n## COLD OPEN\n\nÈ mezzanotte passata e lo schermo mostra un volto.\n\nNon un wireframe. Non un placeholder. Un volto vero — mora, mix colombiana e sud Italia, coda alta, lentiggini sparse sul naso, uno sguardo che non chiede permesso. Matteo non ha disegnato niente. Ha preso decisioni. Tante, precise, alcune sbagliate e poi corrette. Alla fine è rimasto questo viso sullo schermo — e non ce n'è un altro uguale nel progetto.\n\nIl log in basso scorre da solo:\n\n```\n[auto] inventario notturno — completato\n[auto] night_audit — 2026-07-02 — OK\n[auto] story_agent — in coda\n```\n\nIl sistema lavora. Lui guarda il volto.\n\n---\n\n## ATTO I — Il Problema dei Volti Generici\n\nCostruire un personaggio AI è più difficile di costruire una macchina.\n\nCon V32, Matteo ha un telaio da 178 kg, quote in disegno, tolleranze IT6-IT7. Ogni decisione è verificabile con un calibro. Con Nina — il personaggio che porta la voce di TITANIUM_OS verso l'esterno — le variabili erano diverse: estetica, identità, coerenza visiva tra sessioni. E i modelli di immagine non sono il CNC: danno output diversi ogni volta che respiri.\n\nIl problema era reale. Sessione dopo sessione, Nina usciva diversa. Bionda, poi bruna, poi con il logo stampato sulla maglietta come un gadget aziendale. Ogni variazione era tecnicamente accettabile, nessuna era *Nina*. Un personaggio senza volto fisso non esiste — è solo un'idea che cambia forma.\n\nLa soluzione non è arrivata con un prompt migliore. È arrivata con una decisione di canone.\n\n**Sessione #50, 26-27 giugno 2026**: Matteo blocca `nina_DEFINITIVA`. Un file Markdown in `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` che non è una descrizione generica — è una specifica tecnica. Mora. Mix colombiana e sud Italia. Coda alta. Lentiggini. Sguardo sicuro. Pipeline: 3D via Gamma con stylePreset 3D, flux-2-klein. Versione vita: giacca denim. Slide_2 come riferimento vincente. NO bionda, NO logo.\n\nIl canone è inderogabile. Come le tolleranze sul mandrino.\n\n---\n\n## ATTO II — Come si Fissa un Viso\n\nLa parola tecnica è *ancoraggio*.\n\nIn ingegneria, ancorare significa dare un riferimento che non si sposta. Il tastatore di misura su V32 si ancora al pezzo prima di rilevare — senza quel punto fisso, qualsiasi misura è rumore. Con Nina il problema era identico: senza un ancoraggio visivo preciso, ogni generazione era rumore estetico.\n\nLa soluzione è stata `nina_genio_1`: l'immagine di riferimento che ora vive come slide_2 nel carosello. Non un concept, non uno sketch. Un file prodotto, scelto tra diverse iterazioni, promosso a standard. Da quel momento, ogni futura Nina viene confrontata con quella slide. Se non regge il confronto, non è Nina.\n\nIl carosello PRE_03 — *I Personaggi* — diventa il primo output concreto di questa decisione. Sei slide. Solo Nina, col volto vero. Gli altri personaggi del cast — VULCAN, il sistema, il capannone — restano simboli e pietre per ora. Non è pigrizia: è sequenza. Prima si fissa il protagonista, poi si popola il mondo.\n\nLe scene riutilizzabili (`Nina/_SCENE`: studio, ponte) completano l'infrastruttura. Non si ridisegna ogni volta la stanza — si mette Nina nella stanza già costruita. Stessa logica dei fixture su V32: il pezzo cambia, il riferimento resta.\n\n---\n\n## ATTO III — L'Inventario che Lavora da Solo\n\nMentre Matteo guarda il volto di Nina, il sistema conta.\n\n`inventario_notturno.py` è uno script che gira ogni notte senza essere chiamato. Legge lo stato del progetto — V32 al 65%, GENESIS al 70% — e scrive un log. Non decide niente. Non suggerisce. Conta e archivia. Sembra poco.\n\nIn realtà è la cosa più difficile che Matteo ha costruito in questo ciclo: un sistema che *sa* dove si trova senza che gli venga chiesto.\n\nIl commit di stanotte — `auto: inventario notturno` — non è una feature nuova. È la conferma che la feature funziona. Il log esiste, è corretto, è datato 2026-07-02. Significa che qualcosa di fragile è diventato stabile. Non spettacolare. Stabile.\n\nV32 è al 65%. GENESIS al 70%. Nina ha un volto. Il sistema sa contare.\n\nSono tre fatti diversi che descrivono la stessa cosa: il progetto ha una forma. Non è finito — mancano quattro anni al capannone, luglio 2030 — ma ha una forma. I pezzi si riconoscono. Il volto si riconosce.\n\nQuesto è quello che succede quando un inventario notturno funziona davvero: non ti dice dove devi andare. Ti dice dove sei.\n\n---\n\n## CHIUSURA\n\nIl volto di Nina rimarrà sullo schermo ancora qualche minuto.\n\nPoi Matteo chiuderà la sessione, il sistema scriverà il log, e domani il commit sarà già nel RAG — un fatto atomico tra migliaia di altri fatti atomici che tengono in piedi questa cosa impossibile che si costruisce in una taverna da 12 m² e in una cartella di Markdown e in una pressa che non ha ancora un nome definitivo per le sue guide.\n\nNina ha un volto. Il sistema conta. V32 è al 65%.\n\nSi va avanti.\n\n---\n\n## reel_hook\n\nIl modello di immagine dava Nina diversa ogni volta — bionda, brunetta, col logo, senza.\nHo scritto un file Markdown. Ora è una specifica tecnica inderogabile.\nSe non regge il confronto con slide_2, non è Nina.\nStesso metodo del calibro su IT6. Prossimo step: gli altri personaggi.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Bloccato canone visivo Nina in `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` — mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro; pipeline 3D via Gamma (stylePreset 3D, flux-2-klein); slide_2 come riferimento vincolante.\n- **LOGICA:** Senza ancoraggio visivo fisso, ogni generazione produceva output incoerenti (bionda/logo/varianti non controllate); il canone funziona come tolleranza di progetto — o corrisponde o è scarto.\n- **DECISIONE:** Pipeline immagine: versione vita = giacca denim; scene riutilizzabili in `Nina/_SCENE` (studio, ponte); altri personaggi restano simboli/pietre fino a definizione futura.\n- **DECISIONE:** PRE_03 carosello *I Personaggi* = 6 slide, solo Nina col volto vero (nina_DEFINITIVA = nina_genio_1).\n- **STATO:** V32 65% / GENESIS 70% al 2026-07-02; `inventario_notturno.py` operativo e autonomo.\n- **OBIETTIVO:** Ogni futura generazione Nina viene validata contro slide_2; prossimo step = definizione altri personaggi del cast.\n\n---\n\n| campo | valore |\n|---|---|\n| **episodio** | S2E15 |\n| **data** | 2026-07-02 |\n| **commit** | auto: inventario notturno |\n| **focus narrativo** | Nina — canone visivo definitivo |\n| **stato V32** | 65% |\n| **stato GENESIS** | 70% |\n| **tag narrativo** | identità / canone / sistema / personaggio |\n| **milestone** | Sessione #50 — Nina ha un volto |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260627",
+        "title": "TITANIUM OS — Episodio 27 Giugno 2026",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260627",
+        "title": "TITANIUM OS — Episodio 27 Giugno 2026"
       }
     }
   }

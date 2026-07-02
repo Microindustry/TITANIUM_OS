@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Nina · PRE_03 — I Personaggi</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1080" />
+<meta name="hz:canvas-height" content="1350" />
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#05070d; }
+body { display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+.slide { position:relative; width:1080px; height:1350px; overflow:hidden;
+  background:#05070d; font-family:"source-sans-3",sans-serif; color:#eef2fb; }
+.framelt { position:absolute; inset:26px; border:1px solid rgba(255,255,255,0.18); border-radius:4px; z-index:5; }
+.toplabel { position:absolute; top:56px; left:0; right:0; text-align:center; z-index:5;
+  font-family:"space-mono",monospace; font-size:17px; letter-spacing:6px; color:#cdd7ea; text-transform:uppercase; }
+.kicker { position:absolute; top:104px; left:0; right:0; text-align:center; z-index:5;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:6px; color:#5fe6b0; text-transform:uppercase; }
+.footer { position:absolute; left:58px; right:58px; bottom:56px; z-index:5; display:flex; align-items:center; justify-content:space-between;
+  font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#aeb9d2; }
+.footer .dot { color:#5fe6b0; } .footer .nina { color:#ff7ab6; }
+
+/* ===== fondale CONTINUO: lo studio della slide 2 prosegue da una slide all'altra ===== */
+.scene { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.vtop { position:absolute; top:0; left:0; right:0; height:300px; z-index:2; background:linear-gradient(180deg, rgba(5,7,13,0.82), rgba(5,7,13,0)); }
+.vbot { position:absolute; bottom:0; left:0; right:0; height:760px; z-index:2;
+  background:linear-gradient(0deg, rgba(4,8,7,0.97) 0%, rgba(4,8,7,0.92) 26%, rgba(4,8,7,0.55) 60%, rgba(4,8,7,0) 100%); }
+.vside { position:absolute; inset:0; z-index:2;
+  background:linear-gradient(90deg, rgba(4,8,7,0.45) 0%, rgba(4,8,7,0) 22%, rgba(4,8,7,0) 78%, rgba(4,8,7,0.45) 100%); }
+
+.bigtitle { position:absolute; left:0; right:0; text-align:center; z-index:4;
+  font-family:"playfair-display",serif; font-weight:800; color:#f8faff; line-height:0.98; text-shadow:0 6px 30px rgba(0,0,0,0.6); }
+.role { position:absolute; left:0; right:0; text-align:center; z-index:4;
+  font-family:"space-mono",monospace; font-size:20px; letter-spacing:5px; color:#ff7ab6; text-transform:uppercase; }
+.lead { position:absolute; left:110px; right:110px; text-align:center; z-index:4; font-size:31px; line-height:1.5; color:#e6ecf6; text-shadow:0 2px 14px rgba(0,0,0,0.7); }
+.lead .hi { color:#fff; font-weight:600; } .lead .pk { color:#ff7ab6; font-weight:700; } .lead .gd { color:#ffd98a; font-weight:600; }
+
+/* ===== blocco INFO ecosistema (testo sopra il fondale, niente sfondo verde) ===== */
+.ititle { position:absolute; left:90px; right:90px; z-index:4; font-family:"playfair-display",serif;
+  font-weight:800; font-size:62px; line-height:1.02; color:#f8faff; text-shadow:0 4px 24px rgba(0,0,0,0.7); }
+.ititle .ac { color:#ffd98a; font-style:italic; } .ititle .pk { color:#ff7ab6; }
+.isub { position:absolute; left:90px; right:90px; z-index:4; font-size:28px; line-height:1.45; color:#cfd8e8; text-shadow:0 2px 12px rgba(0,0,0,0.75); }
+.isub .hi { color:#fff; font-weight:600; }
+.ilist { position:absolute; left:90px; right:90px; z-index:4; display:flex; flex-direction:column; gap:24px; }
+.irow { display:flex; gap:22px; align-items:flex-start; }
+.imk { flex:0 0 auto; width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-family:"space-mono",monospace; font-weight:700; font-size:26px; border:2px solid currentColor; background:rgba(6,14,11,0.55); }
+.itxt { flex:1; font-size:29px; line-height:1.34; color:#dde5f2; text-shadow:0 2px 12px rgba(0,0,0,0.7); padding-top:4px; }
+.itxt b { color:#fff; } .itxt .mono { font-family:"space-mono",monospace; letter-spacing:2px; }
+.gold { color:#ffd98a; } .pink { color:#ff7ab6; } .cyan { color:#7fd4ff; } .mint { color:#5fe6b0; }
+
+/* riga del metodo (chiede -> guarda -> costruisce -> aggiorna) */
+.flowm { position:absolute; left:80px; right:80px; z-index:4; display:flex; align-items:center; justify-content:space-between; }
+.step { text-align:center; flex:1; }
+.step .n { font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#5fe6b0; }
+.step .w { display:block; margin-top:8px; font-family:"playfair-display",serif; font-weight:700; font-size:30px; color:#f6f8ff; }
+.arrow { color:#ffd98a; font-size:30px; padding:0 4px; opacity:0.8; }
+</style>
+</head>
+<body>
+
+<!-- ===== 1 · COPERTINA (sentiero al ponte) ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <img class="scene" src="img/scena_ponte.png" style="object-position:50% 40%">
+  <div class="vtop"></div><div class="vbot"></div><div class="vside"></div><div class="framelt"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Preambolo · I Personaggi</div>
+  <div class="bigtitle" style="top:150px; font-size:96px">I&nbsp;Personaggi</div>
+  <div class="role" style="top:300px">Il Mondo di Nina</div>
+  <div class="lead" style="bottom:150px">Ogni avventura ha le sue <span class="pk">facce</span>. Si comincia da <span class="hi">lei</span>.</div>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>1 / 6</span></div>
+</div>
+
+<!-- ===== 2 · NINA — l'eroina (studio, figura intera) ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <img class="scene" src="img/scena_studio.png" style="object-position:50% 42%">
+  <div class="vtop"></div><div class="vbot"></div><div class="framelt"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">L'eroina</div>
+  <div class="bigtitle" style="bottom:300px; font-size:118px">Nina</div>
+  <div class="role" style="bottom:250px">La ragazza che chiede perché</div>
+  <div class="lead" style="bottom:140px">Brava ragazza… e <span class="pk">piccolo genio curioso</span>. Vive in mezzo a mappe, libri e domande.</div>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>2 / 6</span></div>
+</div>
+
+<!-- ===== 3 · LA SUPERPOTENZA + IL METODO (continuo dello studio) ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <img class="scene" src="img/scena_studio.png" style="object-position:50% 42%">
+  <div class="vtop"></div><div class="vbot" style="height:900px"></div><div class="framelt"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">La sua superpotenza</div>
+  <div class="ititle" style="top:560px; text-align:center; font-size:74px">Chiede «<span class="ac">perché?</span>»</div>
+  <div class="isub" style="top:700px; text-align:center">…e poi <span class="hi">va a vedere davvero</span>. Non si ferma alla prima risposta: apre la porta e guarda dentro.</div>
+  <div class="flowm" style="top:900px">
+    <div class="step"><span class="n">01</span><span class="w">Chiede</span></div><span class="arrow">→</span>
+    <div class="step"><span class="n">02</span><span class="w">Guarda</span></div><span class="arrow">→</span>
+    <div class="step"><span class="n">03</span><span class="w">Costruisce</span></div><span class="arrow">→</span>
+    <div class="step"><span class="n">04</span><span class="w">Aggiorna</span></div>
+  </div>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>3 / 6</span></div>
+</div>
+
+<!-- ===== 4 · IL SUO MONDO (continuo: panoramica sulla mappa) ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <img class="scene" src="img/scena_studio.png" style="object-position:8% 45%">
+  <div class="vtop"></div><div class="vbot" style="height:960px"></div><div class="framelt"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Il suo mondo</div>
+  <div class="ititle" style="top:470px">La Mappa è il suo <span class="ac">OS</span></div>
+  <div class="ilist" style="top:600px">
+    <div class="irow"><div class="imk gold">⟡</div><div class="itxt"><b>Atomi &amp; Bit</b> — due mondi che si intrecciano: la <span class="gold">materia</span> e l'<span class="cyan">informazione</span>.</div></div>
+    <div class="irow"><div class="imk pink">8</div><div class="itxt"><b>Le 8 Pietre</b> — il cammino dei concetti, da <span class="pk">Materia</span> a <span class="pk">Direttore</span>.</div></div>
+    <div class="irow"><div class="imk mint">?</div><div class="itxt">Si <b>perde</b>, e si costruisce gli <b>strumenti</b> per ritrovarsi: la Mappa la guida di Pietra in Pietra.</div></div>
+  </div>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>4 / 6</span></div>
+</div>
+
+<!-- ===== 5 · I COMPAGNI (continuo: panoramica sul banco di lavoro) ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <img class="scene" src="img/scena_studio.png" style="object-position:92% 50%">
+  <div class="vtop"></div><div class="vbot" style="height:980px"></div><div class="framelt"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Non è sola</div>
+  <div class="ititle" style="top:450px">I compagni di <span class="ac">viaggio</span></div>
+  <div class="ilist" style="top:580px">
+    <div class="irow"><div class="imk cyan">Θ</div><div class="itxt"><b class="cyan">THEMIS</b> — la mente logica: esegue, ragiona, tiene il filo.</div></div>
+    <div class="irow"><div class="imk gold">⚒</div><div class="itxt"><b class="gold">FORGE</b> — l'officina: dà forma alla materia, costruisce gli strumenti.</div></div>
+    <div class="irow"><div class="imk pink">✕</div><div class="itxt"><b class="pink">L'ENTROPIA</b> — il disordine: ciò che vogliono battere, avventura dopo avventura.</div></div>
+  </div>
+  <div class="isub" style="bottom:150px; text-align:center; font-size:25px; color:#aeb9d2">I loro volti si scoprono <span class="hi">lungo le avventure</span>.</div>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>5 / 6</span></div>
+</div>
+
+<!-- ===== 6 · CHIUSURA (ritorno sul sentiero) ===== -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <img class="scene" src="img/scena_ponte.png" style="object-position:50% 30%">
+  <div class="vtop"></div><div class="vbot"></div><div class="vside"></div><div class="framelt"></div>
+  <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
+  <div class="kicker">Si parte</div>
+  <div class="bigtitle" style="bottom:330px; font-size:64px">Il viaggio <span style="color:#ffd98a;font-style:italic">comincia</span></div>
+  <div class="lead" style="bottom:212px">Una sola Nina, riconoscibile in ogni avventura. Stesso volto — cambia solo dove la porta la curiosità.</div>
+  <div class="role" style="bottom:150px">Episodio 1 · in arrivo</div>
+  <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>6 / 6</span></div>
+</div>
+
+</body>
+</html>

@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [Brief illustratore  i personaggi di Nina](#brief-illustratore-i-personaggi-di-nina)
+  - [Cosa serve](#cosa-serve)
+    - [Stile richiesto](#stile-richiesto)
+    - [Palette (usare questi codici)](#palette-usare-questi-codici)
+    - [Personaggi](#personaggi)
+    - [Pose/espressioni minime (per il preambolo  EP_N2_01)](#poseespressioni-minime-per-il-preambolo-epn201)
+    - [Consegna](#consegna)
+  - [Dove si innestano](#dove-si-innestano)
+
+<!-- /TOC -->
+
 # Brief illustratore — i personaggi di Nina
 
 *Commissione arte personaggi per i caroselli di Nina (TITANIUM_OS · L'Avventura). — sess#48, 25/06/2026.*

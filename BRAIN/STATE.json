@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-06-27T17:43:03.463891",
-  "active_milestone": "Sessione #50 (26-27/06): NINA ha un VOLTO definitivo (3D). Bloccato nina_DEFINITIVA (=nina_genio_1): mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro. REGOLA: ogni futura Nina deve avere QUESTO viso (slide_2=riferimento vincente); NO bionda, NO logo. Pipeline avatar DECISA: 3D via Gamma (stylePreset 3D, flux-2-klein). Versione VITA=giacca denim. Scene riusabili Nina/_SCENE (studio, ponte). Slide montate (ritratto in cornice + figura intera nella scena). PRE_03 carosello 'I Personaggi' SOLO NINA col volto vero, 6 slide. Canone in MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md. Altri personaggi per ora = simboli/Pietre.",
-  "next_step": "PROSSIMA SESSIONE #51: (1) decidere se serve un episodio 'Personaggi' dedicato o se Nina si presenta DENTRO l'episodio 4; (2) controllare PRE_01/PRE_02, rifinire PRE_03, poi PRE_04; (3) ricontrollare EP_1 effettivo; (4) Nina versioni officina/tech; (5) rag-update per indicizzare il canone Nina.",
-  "session_count": 99,
+  "last_update": "2026-07-02T15:49:01.048497",
+  "active_milestone": "Sessione #51 (27/06-02/07): PREAMBOLO NINA CHIUSO (PRE_01 cos'e + PRE_02 come funziona + PRE_03 v5 scheda-personaggi 17 slide: Nina/Themis/Forge/Entropia, glifi distinti, foto Nina base64 inline). DECISO: Nina si presenta VIVA dentro l'EP_1 reale (non episodio dedicato); preambolo=anagrafica, episodi=storia. EP_N2_01 'La Bambina che Chiedeva Perche' e EP_N2_02 'Il Soffio di Troppo' RIFATTI al nuovo standard: 16 slide blueprint SVG narrativo, volto Nina definitivo, zero foto, stesso flusso. Generatori riusabili _build_ep.py + _render_all.py per episodio. Niente PRE_04 (eviterebbe ripetizione).",
+  "next_step": "PROSSIMA SESSIONE #52: (1) EP_N2_03 'la MISURA' al nuovo standard (16 slide blueprint, _build_ep.py+_render_all.py, README+caption, snapshot _VERSIONI); (2) export Express degli episodi pronti (html_export_readiness_skill -> export_html_to_express); (3) controllare PRE_01/PRE_02 giunture; (4) Nina versioni officina/tech (stesso volto); (5) rag-update canone Nina.",
+  "session_count": 101,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-06-27T17:40:18.117115"
+      "last_activity": "2026-07-02T15:48:00.182826"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -92,9 +92,13 @@
       "PRE_01 preambolo Nina -> CAROSELLO a 17 slide che SPIEGA il progetto (25/06 sess#49): iterato v1->v10 (stile buonanotte + flusso sfumato continuo su x globale; scartata v8 vignette). v10 = Cover/Cos-e/Perche/Per-chi-e/Patto/Nina/Themis/Atomi-Bit/4-simboli/Giuntura/8-Pietre/Cosa-imparerai/Come-funziona/Si-ripassa/Da-dove-nasce/Promessa/Si-parte. 17 PNG singole; versioni in _VERSIONI/+INDEX; tool _render_pair.py; integrato RAG+Obsidian. Verifiche: 0 orfani, build 215, tsc EXIT 0",
       "PRE_02 \"Come funziona Nina\" — 2o carosello del preambolo (16 slide, 26/06 sess#49): integra la visione Libro-IA in lingua semplice (Organismo, Mappa Viva, doppio fondo, test della sarta, sotto-i-piedi RAG/GPU vero, ancoraggio, motore infinito, cresce-da-se, scalabilita, Provalo tu, Nina<->HR, eredita, Episodio 1). 16 PNG singole + README + caption. Serie preambolo: PRE_01 overview + PRE_02 come funziona, stesso flusso continuo",
       "Sessione #50 (26-27/06): VOLTO DI NINA BLOCCATO (nina_DEFINITIVA=nina_genio_1) — mora, mix colombiana+sud Italia, coda alta, lentiggini; pipeline avatar 3D via Gamma flux-2-klein; versione VITA=giacca denim; scene riusabili (studio/ponte); slide-personaggio + slide-scena; PRE_03 carosello 'I Personaggi' SOLO NINA col volto vero (6 slide); canone in MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md + memoria project_nina_avatar. Decisione: altri personaggi per ora solo simboli/Pietre. REGOLA: ogni futura Nina = quel viso",
-      "Sessione #50: PRE_01 slide 11 (le 8 Pietre) ridisegnata — da 8 diamanti col numero a 8 gemme con ICONA senza numeri (⟡0 dado=Atomi, ⟡5 rete=Bit) + nomi sotto (Materia..Direttore); versione _VERSIONI/v12_icone-8-pietre"
+      "Sessione #50: PRE_01 slide 11 (le 8 Pietre) ridisegnata — da 8 diamanti col numero a 8 gemme con ICONA senza numeri (⟡0 dado=Atomi, ⟡5 rete=Bit) + nomi sotto (Materia..Direttore); versione _VERSIONI/v12_icone-8-pietre",
+      "Sessione #51: PREAMBOLO NINA CHIUSO — PRE_03 v5 'scheda dei personaggi' (character bible, 17 slide) rifatta dopo scarti v2/v3/v4: NON ripete PRE_01, va in profondita su Nina(foto/carattere/luci-ombre/aspetto/arco)+Themis(custode misura, allineato canone)+Forge(NUOVO)+Entropia(NUOVO)+cast; glifi tutti distinti, foto Nina base64 inline (self-contained, export Express ok); generatore _build_pre03.py v2.0, snapshot v5_personaggi-profondi. Niente PRE_04 (02/07)",
+      "Sessione #51: DECISO dove si presenta Nina — PRE_03 = scheda-personaggi statica del preambolo; Nina si presenta VIVA in azione dentro l'EP_1 reale, non in un episodio narrativo dedicato (preambolo=anagrafica, episodi=storia) (02/07)",
+      "Sessione #51: EP_N2_01 'La Bambina che Chiedeva Perche' rifatto al NUOVO STANDARD — da 8 slide (pre-volto) a 16 slide blueprint SVG narrativo (scene disegnate, zero foto, stesso sfondo/flusso), 3 strati rispettati (bottoni=bambino, sarta=grande, pizzicore=cuore), generatore riusabile _build_ep.py+_render_all.py; snapshot v1_8slide_2506 + v2_blueprint-16slide (02/07)",
+      "Sessione #51: EP_N2_02 'Il Soffio di Troppo' al nuovo standard (16 slide blueprint SVG narrativo) — la Fucina/Forge, mezzo mm=il patto, test della sarta, precisione=relazione, tolleranza gradi non si/no; stesso impianto di EP_01 (generatore+README+caption); snapshot v1_blueprint-16slide (02/07)"
     ],
-    "next": "PROSSIMA SESSIONE ULTRACODE: rendere NINA DEFINITIVA (filone unico discorsivo, evolutivo, UNA SOLA VERITA' sul RAG; canone=EP_N2 v2, archiviare EP_AV_* vecchi, ordinare il cammino, audit STORIE) -> poi animazione+voce. Stile deciso in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Aperti: divergenza RAG 0,2% (auto-fix notturno @03:37), via connettori MIMS (SCHEDA §5), martinetto Vevor+mandrino ER20",
+    "next": "PROSSIMA SESSIONE #52: EP_N2_03 'la MISURA' (16 slide blueprint) + export Express episodi pronti; poi controllo PRE_01/PRE_02, Nina officina/tech, rag-update canone. Aperti: connettori MIMS Via B (SCHEDA §5), martinetto Vevor+mandrino ER20, UPS hardware.",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -132,5 +136,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt"
+  "last_action": "Modifica a chroma.sqlite3"
 }

@@ -1,1692 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-06-27T03:52:27.049541",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
-      "snapshot": "BACKUPS\\20260627_035227\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:27.615901",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md",
-      "snapshot": "BACKUPS\\20260627_035227\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:28.202883",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
-      "snapshot": "BACKUPS\\20260627_035228\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:28.765623",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
-      "snapshot": "BACKUPS\\20260627_035228\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:29.343612",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
-      "snapshot": "BACKUPS\\20260627_035229\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:29.956050",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
-      "snapshot": "BACKUPS\\20260627_035229\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:30.538471",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
-      "snapshot": "BACKUPS\\20260627_035230\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:31.107186",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260602_allineamento_pc_fisso_getac_ignora_.md",
-      "snapshot": "BACKUPS\\20260627_035231\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260602_allineamento_pc_fisso_getac_ignora_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:31.695424",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
-      "snapshot": "BACKUPS\\20260627_035231\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:32.265437",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_episodi_su_episodes_json_bulletproo.md",
-      "snapshot": "BACKUPS\\20260627_035232\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_episodi_su_episodes_json_bulletproo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:32.843556",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
-      "snapshot": "BACKUPS\\20260627_035232\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:33.410808",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
-      "snapshot": "BACKUPS\\20260627_035233\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:33.984381",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
-      "snapshot": "BACKUPS\\20260627_035233\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:34.556489",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
-      "snapshot": "BACKUPS\\20260627_035234\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:35.134456",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
-      "snapshot": "BACKUPS\\20260627_035235\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:35.713057",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md",
-      "snapshot": "BACKUPS\\20260627_035235\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:36.287963",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
-      "snapshot": "BACKUPS\\20260627_035236\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:36.866446",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
-      "snapshot": "BACKUPS\\20260627_035236\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:37.442640",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
-      "snapshot": "BACKUPS\\20260627_035237\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:38.015424",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_feat_storie_backfill_fatti_da_i_fat.md",
-      "snapshot": "BACKUPS\\20260627_035238\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_feat_storie_backfill_fatti_da_i_fat.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:38.605135",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
-      "snapshot": "BACKUPS\\20260627_035238\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:39.171490",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
-      "snapshot": "BACKUPS\\20260627_035239\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:39.745588",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260612_feat_sapere_mente_versionata_auto_c.md",
-      "snapshot": "BACKUPS\\20260627_035239\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260612_feat_sapere_mente_versionata_auto_c.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:40.326675",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260613_sid_univoco_hash_del_path_setup_obs.md",
-      "snapshot": "BACKUPS\\20260627_035240\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260613_sid_univoco_hash_del_path_setup_obs.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:40.949484",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_asse_evoluzione_episodi_organizzati.md",
-      "snapshot": "BACKUPS\\20260627_035240\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_asse_evoluzione_episodi_organizzati.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:41.528140",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_llamafactory_cli_train_exit_b_1_su_.md",
-      "snapshot": "BACKUPS\\20260627_035241\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_llamafactory_cli_train_exit_b_1_su_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:42.111653",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_rebuild_robusto_all_api_su_svuota_p.md",
-      "snapshot": "BACKUPS\\20260627_035242\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_rebuild_robusto_all_api_su_svuota_p.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:42.678935",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_reranker_multilingue_bge_reranker_v.md",
-      "snapshot": "BACKUPS\\20260627_035242\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_reranker_multilingue_bge_reranker_v.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:43.256630",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_content_nina_v2_i_5_episodi_d_apert.md",
-      "snapshot": "BACKUPS\\20260627_035243\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_content_nina_v2_i_5_episodi_d_apert.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:43.825842",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_vista_cv_vera_non_solo_il_rename.md",
-      "snapshot": "BACKUPS\\20260627_035243\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_vista_cv_vera_non_solo_il_rename.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:44.407029",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260616_cv_di_nina_come_vista_separata_mapp.md",
-      "snapshot": "BACKUPS\\20260627_035244\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260616_cv_di_nina_come_vista_separata_mapp.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:44.972943",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_polish_mappa_gioco_layout_pieno_mic.md",
-      "snapshot": "BACKUPS\\20260627_035244\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_polish_mappa_gioco_layout_pieno_mic.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:45.556461",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_un_pitch_per_progetto_la_spiegazion.md",
-      "snapshot": "BACKUPS\\20260627_035245\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_un_pitch_per_progetto_la_spiegazion.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:46.124894",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_bussola_38_state_allineati_ai_fix_p.md",
-      "snapshot": "BACKUPS\\20260627_035246\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_bussola_38_state_allineati_ai_fix_p.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:46.702476",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_i_pilastri_come_spiegazione_a_livel.md",
-      "snapshot": "BACKUPS\\20260627_035246\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_i_pilastri_come_spiegazione_a_livel.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:47.280441",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_inventario_notturno.md",
-      "snapshot": "BACKUPS\\20260627_035247\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_inventario_notturno.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:47.859563",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
-      "snapshot": "BACKUPS\\20260627_035247\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:48.424237",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_story_agent_episodi_generati_20_06_.md",
-      "snapshot": "BACKUPS\\20260627_035248\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_story_agent_episodi_generati_20_06_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:49.015710",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
-      "snapshot": "BACKUPS\\20260627_035249\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:49.579664",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260622_visione_nina_zero_confermata_film_i.md",
-      "snapshot": "BACKUPS\\20260627_035249\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260622_visione_nina_zero_confermata_film_i.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:50.140581",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260623_sessione_42_blackout_rag_recovery_2.md",
-      "snapshot": "BACKUPS\\20260627_035250\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260623_sessione_42_blackout_rag_recovery_2.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:50.721033",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260623_traccia_simone_rizzo_tier_1_yt_driv.md",
-      "snapshot": "BACKUPS\\20260627_035250\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260623_traccia_simone_rizzo_tier_1_yt_driv.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:51.290443",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260624_content_nina_4_script_reel_stile_si.md",
-      "snapshot": "BACKUPS\\20260627_035251\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260624_content_nina_4_script_reel_stile_si.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:51.861600",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260624_escludi_archivio_ex_da_ordinare_dal.md",
-      "snapshot": "BACKUPS\\20260627_035251\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260624_escludi_archivio_ex_da_ordinare_dal.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:52.441122",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260625_pre_01_v10_preambolo_a_17_slide_che.md",
-      "snapshot": "BACKUPS\\20260627_035252\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260625_pre_01_v10_preambolo_a_17_slide_che.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:53.013246",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260626_chiusura_sessione_49_serie_preambol.md",
-      "snapshot": "BACKUPS\\20260627_035253\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260626_chiusura_sessione_49_serie_preambol.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:53.597208",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_event_scheduled.md",
-      "snapshot": "BACKUPS\\20260627_035253\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_event_scheduled.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:54.167899",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_00_IL_DISTACCO.md",
-      "snapshot": "BACKUPS\\20260627_035254\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_00_IL_DISTACCO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:54.722673",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
-      "snapshot": "BACKUPS\\20260627_035254\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:55.312871",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
-      "snapshot": "BACKUPS\\20260627_035255\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:55.879258",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
-      "snapshot": "BACKUPS\\20260627_035255\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:56.442792",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md",
-      "snapshot": "BACKUPS\\20260627_035256\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:57.020861",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
-      "snapshot": "BACKUPS\\20260627_035257\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:57.600482",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_anti_sovraccarico.md",
-      "snapshot": "BACKUPS\\20260627_035257\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_anti_sovraccarico.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:58.171869",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_cedibile.md",
-      "snapshot": "BACKUPS\\20260627_035258\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_cedibile.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:58.739527",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_scaffolding.md",
-      "snapshot": "BACKUPS\\20260627_035258\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_scaffolding.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:59.317519",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_statolive.md",
-      "snapshot": "BACKUPS\\20260627_035259\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_statolive.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:52:59.881398",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_grafo_del_repo.md",
-      "snapshot": "BACKUPS\\20260627_035259\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_grafo_del_repo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:00.444514",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_community.md",
-      "snapshot": "BACKUPS\\20260627_035300\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_community.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:01.033205",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_godnode.md",
-      "snapshot": "BACKUPS\\20260627_035301\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_godnode.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:01.616188",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_mente.md",
-      "snapshot": "BACKUPS\\20260627_035301\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_mente.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:02.187202",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_query.md",
-      "snapshot": "BACKUPS\\20260627_035302\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L1_query.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:02.757176",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L2_cammini.md",
-      "snapshot": "BACKUPS\\20260627_035302\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L2_cammini.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:03.335223",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L2_modularita.md",
-      "snapshot": "BACKUPS\\20260627_035303\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L2_modularita.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:03.898229",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_grafo_due_sorgenti.md",
-      "snapshot": "BACKUPS\\20260627_035303\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_grafo_due_sorgenti.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:04.476878",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L1_bugstato.md",
-      "snapshot": "BACKUPS\\20260627_035304\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L1_bugstato.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:05.037281",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L1_toggle.md",
-      "snapshot": "BACKUPS\\20260627_035305\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L1_toggle.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:05.617856",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L1_tsne.md",
-      "snapshot": "BACKUPS\\20260627_035305\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L1_tsne.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:06.171906",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L2_umap.md",
-      "snapshot": "BACKUPS\\20260627_035306\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_RETE_L2_umap.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:06.753475",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_keyless.md",
-      "snapshot": "BACKUPS\\20260627_035306\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_keyless.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:07.315232",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_L1_gate.md",
-      "snapshot": "BACKUPS\\20260627_035307\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_L1_gate.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:07.884271",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_L1_keyless.md",
-      "snapshot": "BACKUPS\\20260627_035307\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_L1_keyless.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:08.447781",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_L1_tier.md",
-      "snapshot": "BACKUPS\\20260627_035308\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_SEED_WATCHER_L1_tier.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:09.007209",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
-      "snapshot": "BACKUPS\\20260627_035309\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:09.604614",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
-      "snapshot": "BACKUPS\\20260627_035309\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:10.171414",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
-      "snapshot": "BACKUPS\\20260627_035310\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:10.730254",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
-      "snapshot": "BACKUPS\\20260627_035310\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:11.308243",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
-      "snapshot": "BACKUPS\\20260627_035311\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:11.881933",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "snapshot": "BACKUPS\\20260627_035311\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:12.449251",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
-      "snapshot": "BACKUPS\\20260627_035312\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:13.033861",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
-      "snapshot": "BACKUPS\\20260627_035313\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:13.606474",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md",
-      "snapshot": "BACKUPS\\20260627_035313\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:14.187129",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md",
-      "snapshot": "BACKUPS\\20260627_035314\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:14.763548",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md",
-      "snapshot": "BACKUPS\\20260627_035314\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:15.325722",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_11_sinapsimente_migrazione_41_doc_storie_as.md",
-      "snapshot": "BACKUPS\\20260627_035315\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_11_sinapsimente_migrazione_41_doc_storie_as.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:15.904209",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md",
-      "snapshot": "BACKUPS\\20260627_035315\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:16.482049",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md",
-      "snapshot": "BACKUPS\\20260627_035316\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:17.045196",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_14_storytelling_filone_unico_s0s1_completa_.md",
-      "snapshot": "BACKUPS\\20260627_035317\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_14_storytelling_filone_unico_s0s1_completa_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:17.618705",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_15_pdf_to_memorypy_v11_flag_filementekeepra.md",
-      "snapshot": "BACKUPS\\20260627_035317\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_15_pdf_to_memorypy_v11_flag_filementekeepra.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:18.209772",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_16_v7_x_v8md_estrazione_completa_33pp_pdf_i.md",
-      "snapshot": "BACKUPS\\20260627_035318\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_16_v7_x_v8md_estrazione_completa_33pp_pdf_i.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:18.775471",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_17_v8_deltamd_correzioni_strutturali_foto_v.md",
-      "snapshot": "BACKUPS\\20260627_035318\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_17_v8_deltamd_correzioni_strutturali_foto_v.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:19.347551",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_18_foto_v32_organizzate_7_foto_rinominate_i.md",
-      "snapshot": "BACKUPS\\20260627_035319\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_18_foto_v32_organizzate_7_foto_rinominate_i.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:19.922031",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md",
-      "snapshot": "BACKUPS\\20260627_035319\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:20.504848",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
-      "snapshot": "BACKUPS\\20260627_035320\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:21.078175",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
-      "snapshot": "BACKUPS\\20260627_035321\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:21.641967",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
-      "snapshot": "BACKUPS\\20260627_035321\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:22.215351",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md",
-      "snapshot": "BACKUPS\\20260627_035322\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:22.798418",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
-      "snapshot": "BACKUPS\\20260627_035322\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:23.382043",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
-      "snapshot": "BACKUPS\\20260627_035323\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:23.948595",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
-      "snapshot": "BACKUPS\\20260627_035323\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:24.525372",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md",
-      "snapshot": "BACKUPS\\20260627_035324\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:25.097814",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
-      "snapshot": "BACKUPS\\20260627_035325\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:25.659639",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
-      "snapshot": "BACKUPS\\20260627_035325\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:26.234119",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
-      "snapshot": "BACKUPS\\20260627_035326\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:26.816211",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
-      "snapshot": "BACKUPS\\20260627_035326\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:27.381141",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
-      "snapshot": "BACKUPS\\20260627_035327\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:27.957357",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
-      "snapshot": "BACKUPS\\20260627_035327\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:28.526450",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
-      "snapshot": "BACKUPS\\20260627_035328\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:29.097468",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
-      "snapshot": "BACKUPS\\20260627_035329\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:29.660786",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_36_skilltreedata_v30_subcategorie_n_livelli.md",
-      "snapshot": "BACKUPS\\20260627_035329\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_36_skilltreedata_v30_subcategorie_n_livelli.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:30.237658",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_37_migrazione_pc_fisso_desktopiface2r_compl.md",
-      "snapshot": "BACKUPS\\20260627_035330\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_37_migrazione_pc_fisso_desktopiface2r_compl.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:30.812068",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_38_git_history_pulita_modelsafetensors_rimo.md",
-      "snapshot": "BACKUPS\\20260627_035330\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_38_git_history_pulita_modelsafetensors_rimo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:31.379615",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_39_push_main_tag_v300_su_github_sbloccato_e.md",
-      "snapshot": "BACKUPS\\20260627_035331\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_39_push_main_tag_v300_su_github_sbloccato_e.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:31.959052",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_40_tool_installati_python_311_nodejs_gh_cli.md",
-      "snapshot": "BACKUPS\\20260627_035331\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_40_tool_installati_python_311_nodejs_gh_cli.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:32.514368",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_41_microindustry_omniparser_weights_migrati.md",
-      "snapshot": "BACKUPS\\20260627_035332\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_41_microindustry_omniparser_weights_migrati.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:33.097495",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_42_memory_getac_importata_su_pc_fisso.md",
-      "snapshot": "BACKUPS\\20260627_035333\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_42_memory_getac_importata_su_pc_fisso.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:33.662510",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
-      "snapshot": "BACKUPS\\20260627_035333\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:34.234324",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_44_cuda_operativa_su_gtx_1070_8gb_torchcuda.md",
-      "snapshot": "BACKUPS\\20260627_035334\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_44_cuda_operativa_su_gtx_1070_8gb_torchcuda.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:34.804249",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
-      "snapshot": "BACKUPS\\20260627_035334\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:35.366615",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_46_sicurezza_token_github_ruotato_auth_git_.md",
-      "snapshot": "BACKUPS\\20260627_035335\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_46_sicurezza_token_github_ruotato_auth_git_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:35.935218",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_47_firewall_5173_aperto_tailscale_loggato_s.md",
-      "snapshot": "BACKUPS\\20260627_035335\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_47_firewall_5173_aperto_tailscale_loggato_s.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:36.513819",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_48_n8n_selfhosted_attivo_account_locale_no_.md",
-      "snapshot": "BACKUPS\\20260627_035336\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_48_n8n_selfhosted_attivo_account_locale_no_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:37.083371",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
-      "snapshot": "BACKUPS\\20260627_035337\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:37.664903",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_50_automazioni_notturne_portabili__ti_paths.md",
-      "snapshot": "BACKUPS\\20260627_035337\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_50_automazioni_notturne_portabili__ti_paths.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:38.226374",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
-      "snapshot": "BACKUPS\\20260627_035338\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:38.806415",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
-      "snapshot": "BACKUPS\\20260627_035338\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:39.375451",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
-      "snapshot": "BACKUPS\\20260627_035339\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:39.944009",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_04_la_mappa_che_non_mente.md",
-      "snapshot": "BACKUPS\\20260627_035339\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_04_la_mappa_che_non_mente.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:40.520487",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_05_le_mani_prima_dei_rulli.md",
-      "snapshot": "BACKUPS\\20260627_035340\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_05_le_mani_prima_dei_rulli.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:41.088423",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
-      "snapshot": "BACKUPS\\20260627_035341\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:41.661472",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_07_il_sussurratore_di_parole.md",
-      "snapshot": "BACKUPS\\20260627_035341\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_07_il_sussurratore_di_parole.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:42.225534",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_08_la_lampada_che_sussurra.md",
-      "snapshot": "BACKUPS\\20260627_035342\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_08_la_lampada_che_sussurra.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:42.805185",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_09_la_bibliotecaria_della_mente.md",
-      "snapshot": "BACKUPS\\20260627_035342\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_09_la_bibliotecaria_della_mente.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:43.365892",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
-      "snapshot": "BACKUPS\\20260627_035343\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:43.948973",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
-      "snapshot": "BACKUPS\\20260627_035343\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:44.506382",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_12_la_squadra_notturna.md",
-      "snapshot": "BACKUPS\\20260627_035344\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_12_la_squadra_notturna.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:45.074439",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
-      "snapshot": "BACKUPS\\20260627_035345\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:45.646694",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
-      "snapshot": "BACKUPS\\20260627_035345\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:46.203009",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_15_il_gettone_della_sarta.md",
-      "snapshot": "BACKUPS\\20260627_035346\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_15_il_gettone_della_sarta.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:46.778564",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_16_lo_specchio_del_giudice.md",
-      "snapshot": "BACKUPS\\20260627_035346\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_16_lo_specchio_del_giudice.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:47.340948",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_17_la_traccia.md",
-      "snapshot": "BACKUPS\\20260627_035347\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_17_la_traccia.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:47.936556",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_18_la_giuntura_dove_due_diventa_uno.md",
-      "snapshot": "BACKUPS\\20260627_035347\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_18_la_giuntura_dove_due_diventa_uno.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:48.508082",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_19_la_mano_che_insegna_alla_notte.md",
-      "snapshot": "BACKUPS\\20260627_035348\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_19_la_mano_che_insegna_alla_notte.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:49.069522",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_20_il_corpo_che_non_trema.md",
-      "snapshot": "BACKUPS\\20260627_035349\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_20_il_corpo_che_non_trema.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:49.654206",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_21_il_nome_che_cambia.md",
-      "snapshot": "BACKUPS\\20260627_035349\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_21_il_nome_che_cambia.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:50.203155",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_22_la_macchina_che_impara_a_cucire.md",
-      "snapshot": "BACKUPS\\20260627_035350\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_22_la_macchina_che_impara_a_cucire.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:50.779792",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_23_il_guardiano_che_non_dorme.md",
-      "snapshot": "BACKUPS\\20260627_035350\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_23_il_guardiano_che_non_dorme.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:51.345019",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_24_il_filtro_del_mugnaio.md",
-      "snapshot": "BACKUPS\\20260627_035351\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_24_il_filtro_del_mugnaio.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:51.920647",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_25_le_finestre_sempre_aperte.md",
-      "snapshot": "BACKUPS\\20260627_035351\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_25_le_finestre_sempre_aperte.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:52.493442",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_26_la_ruota_dei_guardiani.md",
-      "snapshot": "BACKUPS\\20260627_035352\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_26_la_ruota_dei_guardiani.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:53.061939",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_27_la_memoria_che_respira.md",
-      "snapshot": "BACKUPS\\20260627_035353\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_27_la_memoria_che_respira.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:53.624940",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_28_il_diario_che_pensa.md",
-      "snapshot": "BACKUPS\\20260627_035353\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_28_il_diario_che_pensa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:54.195986",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_29_la_memoria_che_sceglie.md",
-      "snapshot": "BACKUPS\\20260627_035354\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_29_la_memoria_che_sceglie.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:54.766007",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_30_la_mappa_che_cresce_da_sola.md",
-      "snapshot": "BACKUPS\\20260627_035354\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_30_la_mappa_che_cresce_da_sola.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:55.335214",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_31_il_cruscotto_che_non_dorme.md",
-      "snapshot": "BACKUPS\\20260627_035355\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_31_il_cruscotto_che_non_dorme.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:55.906761",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_32_il_giorno_che_il_labirinto_si_vide_nello.md",
-      "snapshot": "BACKUPS\\20260627_035355\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_32_il_giorno_che_il_labirinto_si_vide_nello.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:56.479208",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_33_i_696_quartieri_che_si_trovano_da_soli.md",
-      "snapshot": "BACKUPS\\20260627_035356\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_33_i_696_quartieri_che_si_trovano_da_soli.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:57.043763",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_34_le_stelle_che_reggono_il_filo.md",
-      "snapshot": "BACKUPS\\20260627_035357\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_34_le_stelle_che_reggono_il_filo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:57.618170",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_35_il_custode_dei_segreti.md",
-      "snapshot": "BACKUPS\\20260627_035357\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_35_il_custode_dei_segreti.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:58.211000",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_36_la_bussola_della_mappa.md",
-      "snapshot": "BACKUPS\\20260627_035358\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_36_la_bussola_della_mappa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:58.783294",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_37_la_galassia_rotta.md",
-      "snapshot": "BACKUPS\\20260627_035358\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_37_la_galassia_rotta.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:59.345636",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_38_il_filo_della_strada_giusta.md",
-      "snapshot": "BACKUPS\\20260627_035359\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_38_il_filo_della_strada_giusta.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:53:59.924281",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_39_il_voto_dei_quartieri.md",
-      "snapshot": "BACKUPS\\20260627_035359\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_39_il_voto_dei_quartieri.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:00.496175",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_40_il_fantasma_nel_cassetto.md",
-      "snapshot": "BACKUPS\\20260627_035400\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_40_il_fantasma_nel_cassetto.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:01.069784",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_41_lo_specchio_nascosto_quando_due_persone_.md",
-      "snapshot": "BACKUPS\\20260627_035401\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_41_lo_specchio_nascosto_quando_due_persone_.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:01.628686",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_42_la_stanza_dei_segreti_numerici.md",
-      "snapshot": "BACKUPS\\20260627_035401\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_42_la_stanza_dei_segreti_numerici.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:02.202777",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_43_due_fotografi_uno_spazio.md",
-      "snapshot": "BACKUPS\\20260627_035402\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_43_due_fotografi_uno_spazio.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:02.779546",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_44_il_turno_di_guardia.md",
-      "snapshot": "BACKUPS\\20260627_035402\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_44_il_turno_di_guardia.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:03.332894",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_45_il_direttore_invisibile.md",
-      "snapshot": "BACKUPS\\20260627_035403\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_45_il_direttore_invisibile.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:03.910856",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_46_la_stanza_della_visione.md",
-      "snapshot": "BACKUPS\\20260627_035403\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_46_la_stanza_della_visione.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:04.482154",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_47_la_tela_chi_guarda_il_quadro.md",
-      "snapshot": "BACKUPS\\20260627_035404\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_47_la_tela_chi_guarda_il_quadro.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:05.036555",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_48_il_libro_delle_ricette_di_nonna.md",
-      "snapshot": "BACKUPS\\20260627_035405\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_48_il_libro_delle_ricette_di_nonna.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:05.615063",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_49_la_scatola_magica_dei_compiti.md",
-      "snapshot": "BACKUPS\\20260627_035405\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_49_la_scatola_magica_dei_compiti.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:06.175138",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_50_il_semaforo_che_mente.md",
-      "snapshot": "BACKUPS\\20260627_035406\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_50_il_semaforo_che_mente.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:06.740569",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_51_il_sussurratore_che_indovina.md",
-      "snapshot": "BACKUPS\\20260627_035406\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_51_il_sussurratore_che_indovina.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:07.306093",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_2_il_segno_che_resta.md",
-      "snapshot": "BACKUPS\\20260627_035407\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_2_il_segno_che_resta.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:07.865537",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_la_bambina_e_la_giuntura.md",
-      "snapshot": "BACKUPS\\20260627_035407\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_la_bambina_e_la_giuntura.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:08.444611",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_01_l_automazione.md",
-      "snapshot": "BACKUPS\\20260627_035408\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_01_l_automazione.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:09.014209",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_2_quando_la_mente_inventa.md",
-      "snapshot": "BACKUPS\\20260627_035409\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_2_quando_la_mente_inventa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:09.585230",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_la_mente_che_parla.md",
-      "snapshot": "BACKUPS\\20260627_035409\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_la_mente_che_parla.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:10.156092",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_03_la_biblioteca_delle_fonti.md",
-      "snapshot": "BACKUPS\\20260627_035410\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_03_la_biblioteca_delle_fonti.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:10.726670",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_04_la_grande_mappa.md",
-      "snapshot": "BACKUPS\\20260627_035410\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_04_la_grande_mappa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:11.304638",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
-      "snapshot": "BACKUPS\\20260627_035411\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:11.867085",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_l_esercito_silenzioso.md",
-      "snapshot": "BACKUPS\\20260627_035411\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_l_esercito_silenzioso.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:12.454162",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_06_il_direttore.md",
-      "snapshot": "BACKUPS\\20260627_035412\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_06_il_direttore.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:13.024860",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_FIN_01_il_valore.md",
-      "snapshot": "BACKUPS\\20260627_035413\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_FIN_01_il_valore.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:13.587245",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_2_mille_volte_uguale.md",
-      "snapshot": "BACKUPS\\20260627_035413\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_2_mille_volte_uguale.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:14.155762",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_la_materia.md",
-      "snapshot": "BACKUPS\\20260627_035414\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_la_materia.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:14.723103",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152158\\S_AVVENTURA\\EP_N2_09_la_biblioteca_delle_fonti.md",
-      "snapshot": "BACKUPS\\20260627_035414\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152158\\S_AVVENTURA\\EP_N2_09_la_biblioteca_delle_fonti.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:15.304446",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
-      "snapshot": "BACKUPS\\20260627_035415\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:15.884527",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
-      "snapshot": "BACKUPS\\20260627_035415\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:16.456229",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
-      "snapshot": "BACKUPS\\20260627_035416\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:17.041446",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_04_la_mappa_viva.md",
-      "snapshot": "BACKUPS\\20260627_035417\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_04_la_mappa_viva.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:17.620445",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_05_prima_la_mano_poi_la_macchina.md",
-      "snapshot": "BACKUPS\\20260627_035417\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_05_prima_la_mano_poi_la_macchina.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:18.243348",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
-      "snapshot": "BACKUPS\\20260627_035418\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:18.824342",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_07_la_mente_che_parla.md",
-      "snapshot": "BACKUPS\\20260627_035418\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_07_la_mente_che_parla.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:19.400920",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_08_quando_la_mente_inventa.md",
-      "snapshot": "BACKUPS\\20260627_035419\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_08_quando_la_mente_inventa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:19.984001",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_10_la_traccia.md",
-      "snapshot": "BACKUPS\\20260627_035419\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_10_la_traccia.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:20.559570",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
-      "snapshot": "BACKUPS\\20260627_035420\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:21.137864",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_12_l_esercito_silenzioso.md",
-      "snapshot": "BACKUPS\\20260627_035421\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_12_l_esercito_silenzioso.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:21.716384",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_13_il_soldato_caduto_in_silenzio.md",
-      "snapshot": "BACKUPS\\20260627_035421\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_13_il_soldato_caduto_in_silenzio.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:22.296731",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
-      "snapshot": "BACKUPS\\20260627_035422\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:22.873176",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_15_il_valore.md",
-      "snapshot": "BACKUPS\\20260627_035422\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_15_il_valore.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:23.444617",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_155229\\S_AVVENTURA\\EP_N2_16_il_guardiano_che_non_dorme.md",
-      "snapshot": "BACKUPS\\20260627_035423\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_155229\\S_AVVENTURA\\EP_N2_16_il_guardiano_che_non_dorme.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:24.015327",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_01_il_bottone_che_regge.md",
-      "snapshot": "BACKUPS\\20260627_035424\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_01_il_bottone_che_regge.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:24.593108",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
-      "snapshot": "BACKUPS\\20260627_035424\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:25.182211",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
-      "snapshot": "BACKUPS\\20260627_035425\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:25.749144",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
-      "snapshot": "BACKUPS\\20260627_035425\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T03:54:26.327652",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
-      "snapshot": "BACKUPS\\20260627_035426\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:07:01.398972",
-      "file": "AUTOMATIONS\\core\\inventario_notturno.py",
-      "snapshot": "BACKUPS\\20260627_040701\\AUTOMATIONS\\core\\inventario_notturno.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:07:01.999567",
-      "file": "DOCS\\INVENTARIO_NOTTURNO.md",
-      "snapshot": "BACKUPS\\20260627_040701\\DOCS\\INVENTARIO_NOTTURNO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:07:03.701211",
-      "file": "AUTOMATIONS\\core\\update_github_profile.py",
-      "snapshot": "BACKUPS\\20260627_040703\\AUTOMATIONS\\core\\update_github_profile.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:07:05.734475",
-      "file": "CONTENT_ENGINE\\scripts\\episodes_to_dataset.py",
-      "snapshot": "BACKUPS\\20260627_040705\\CONTENT_ENGINE\\scripts\\episodes_to_dataset.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:10:17.623448",
-      "file": "AUTOMATIONS\\core\\stato_fisico.py",
-      "snapshot": "BACKUPS\\20260627_041017\\AUTOMATIONS\\core\\stato_fisico.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:30:02.124727",
-      "file": "NODES\\SELF_IMPROVE\\self_improve.py",
-      "snapshot": "BACKUPS\\20260627_043002\\NODES\\SELF_IMPROVE\\self_improve.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:30:57.012570",
-      "file": "NODES\\MENTE_SCANNER\\scanner.py",
-      "snapshot": "BACKUPS\\20260627_043057\\NODES\\MENTE_SCANNER\\scanner.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:06.860879",
-      "file": "NODES\\MENTE_RAG\\rag_engine.py",
-      "snapshot": "BACKUPS\\20260627_043106\\NODES\\MENTE_RAG\\rag_engine.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:07.435089",
-      "file": "NODES\\MENTE_RAG\\rag_device.txt",
-      "snapshot": "BACKUPS\\20260627_043107\\NODES\\MENTE_RAG\\rag_device.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:08.940155",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_043108\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:21.101646",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_043121\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:24.435163",
-      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "snapshot": "BACKUPS\\20260627_043124\\NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:42.690377",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_043142\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:31:45.957723",
-      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "snapshot": "BACKUPS\\20260627_043145\\NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:32:00.508755",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_043200\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T04:32:03.694491",
-      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "snapshot": "BACKUPS\\20260627_043203\\NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T07:30:01.910991",
-      "file": "AUTOMATIONS\\core\\daily_brief.py",
-      "snapshot": "BACKUPS\\20260627_073001\\AUTOMATIONS\\core\\daily_brief.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:35.975965",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\carosello.html",
-      "snapshot": "BACKUPS\\20260627_171835\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\carosello.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:36.933874",
-      "file": ".claude\\skills\\dataset\\SKILL.md",
-      "snapshot": "BACKUPS\\20260627_171836\\.claude\\skills\\dataset\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:37.506882",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\scheda_nina.md",
-      "snapshot": "BACKUPS\\20260627_171837\\CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\scheda_nina.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:38.124781",
-      "file": ".claude\\skills\\salva\\SKILL.md",
-      "snapshot": "BACKUPS\\20260627_171838\\.claude\\skills\\salva\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:38.663457",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\slide_personaggio.html",
-      "snapshot": "BACKUPS\\20260627_171838\\CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\slide_personaggio.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:39.237329",
-      "file": ".claude\\skills\\reel\\SKILL.md",
-      "snapshot": "BACKUPS\\20260627_171839\\.claude\\skills\\reel\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:39.773605",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\nina.html",
-      "snapshot": "BACKUPS\\20260627_171839\\CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\nina.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:40.352716",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\INDEX.md",
-      "snapshot": "BACKUPS\\20260627_171840\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\INDEX.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:40.930290",
-      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
-      "snapshot": "BACKUPS\\20260627_171840\\.claude\\skills\\genera-episodio\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:18:41.479263",
-      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
-      "snapshot": "BACKUPS\\20260627_171841\\.claude\\skills\\aggiorna-stato\\SKILL.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:19:22.516799",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\_SCENE\\_sheet.html",
-      "snapshot": "BACKUPS\\20260627_171922\\CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\_SCENE\\_sheet.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:21:10.079874",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\_VERSIONI\\v12_vita-scena\\slide_scena.html",
-      "snapshot": "BACKUPS\\20260627_172110\\CONTENT_ENGINE\\DATABASE\\MONDO\\PERSONAGGI\\Nina\\_VERSIONI\\v12_vita-scena\\slide_scena.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:25:09.188479",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t1.html",
-      "snapshot": "BACKUPS\\20260627_172509\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t1.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:25:10.862462",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t2.html",
-      "snapshot": "BACKUPS\\20260627_172510\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t2.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:25:12.469226",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t3.html",
-      "snapshot": "BACKUPS\\20260627_172512\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t3.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:25:13.771132",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t4.html",
-      "snapshot": "BACKUPS\\20260627_172513\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t4.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:25:14.935887",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t5.html",
-      "snapshot": "BACKUPS\\20260627_172514\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t5.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:25:16.172145",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t6.html",
-      "snapshot": "BACKUPS\\20260627_172516\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_t6.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:26:06.791100",
-      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v1_nina-solo\\carosello.html",
-      "snapshot": "BACKUPS\\20260627_172606\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v1_nina-solo\\carosello.html",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:33:33.120032",
-      "file": "NODES\\MENTE_SCANNER\\scanner.py",
-      "snapshot": "BACKUPS\\20260627_173333\\NODES\\MENTE_SCANNER\\scanner.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:33:43.523110",
-      "file": "NODES\\MENTE_RAG\\rag_engine.py",
-      "snapshot": "BACKUPS\\20260627_173343\\NODES\\MENTE_RAG\\rag_engine.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:33:44.218631",
-      "file": "NODES\\MENTE_RAG\\rag_device.txt",
-      "snapshot": "BACKUPS\\20260627_173344\\NODES\\MENTE_RAG\\rag_device.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:33:45.875523",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_173345\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:33:59.029070",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_173359\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:34:02.486109",
-      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "snapshot": "BACKUPS\\20260627_173402\\NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:34:20.603273",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_173420\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:34:23.999775",
-      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "snapshot": "BACKUPS\\20260627_173423\\NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:34:39.323578",
-      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
-      "snapshot": "BACKUPS\\20260627_173439\\NODES\\MENTE_RAG\\rag_manifest.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:34:42.649307",
-      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "snapshot": "BACKUPS\\20260627_173442\\NODES\\MENTE_RAG\\rag_linkgraph.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:35:21.206135",
-      "file": "DA_FARE_FATTO.md",
-      "snapshot": "BACKUPS\\20260627_173521\\DA_FARE_FATTO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:36:46.048339",
-      "file": "RIAVVIO_SESSIONE.txt",
-      "snapshot": "BACKUPS\\20260627_173646\\RIAVVIO_SESSIONE.txt",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:36:59.187212",
-      "file": "CONTENT_ENGINE\\scripts\\audit_episodes.py",
-      "snapshot": "BACKUPS\\20260627_173659\\CONTENT_ENGINE\\scripts\\audit_episodes.py",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:01.064176",
-      "file": "DASHBOARD\\src\\data\\episodes.json",
-      "snapshot": "BACKUPS\\20260627_173701\\DASHBOARD\\src\\data\\episodes.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:01.931978",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_002.md",
-      "snapshot": "BACKUPS\\20260627_173701\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_002.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:02.920836",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_003.md",
-      "snapshot": "BACKUPS\\20260627_173702\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_003.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:03.778205",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_005.md",
-      "snapshot": "BACKUPS\\20260627_173703\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_005.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:04.678726",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_006.md",
-      "snapshot": "BACKUPS\\20260627_173704\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_006.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:05.554430",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_008.md",
-      "snapshot": "BACKUPS\\20260627_173705\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_008.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:06.494441",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_010.md",
-      "snapshot": "BACKUPS\\20260627_173706\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_010.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:07.491805",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_011.md",
-      "snapshot": "BACKUPS\\20260627_173707\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_011.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:08.407994",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_012.md",
-      "snapshot": "BACKUPS\\20260627_173708\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_012.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:09.268781",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
-      "snapshot": "BACKUPS\\20260627_173709\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:10.092066",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
-      "snapshot": "BACKUPS\\20260627_173710\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:11.133212",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_015.md",
-      "snapshot": "BACKUPS\\20260627_173711\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_015.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:13.117396",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_016.md",
-      "snapshot": "BACKUPS\\20260627_173713\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_016.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:16.260599",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_017.md",
-      "snapshot": "BACKUPS\\20260627_173716\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_017.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:18.939448",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_018.md",
-      "snapshot": "BACKUPS\\20260627_173718\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_018.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:20.816736",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_019.md",
-      "snapshot": "BACKUPS\\20260627_173720\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_019.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:22.684082",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
-      "snapshot": "BACKUPS\\20260627_173722\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:24.493318",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
-      "snapshot": "BACKUPS\\20260627_173724\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:25.648283",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
-      "snapshot": "BACKUPS\\20260627_173725\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:26.634520",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_04_IL_DOCUMENTO_MASTER.md",
-      "snapshot": "BACKUPS\\20260627_173726\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_04_IL_DOCUMENTO_MASTER.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:27.619956",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_05_CONFIG_A_G.md",
-      "snapshot": "BACKUPS\\20260627_173727\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_05_CONFIG_A_G.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:28.521755",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_FILONE_00_la_materia.md",
-      "snapshot": "BACKUPS\\20260627_173728\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_FILONE_00_la_materia.md",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-06-27T17:37:29.435766",
-      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_PILOTA_00_il_mondo.md",
-      "snapshot": "BACKUPS\\20260627_173729\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_PILOTA_00_il_mondo.md",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-06-27T17:37:30.369676",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
       "snapshot": "BACKUPS\\20260627_173730\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
@@ -2999,6 +1313,1692 @@
       "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
       "snapshot": "BACKUPS\\20260627_174032\\NODES\\MENTE_RAG\\rag_linkgraph.json",
       "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:44:18.367567",
+      "file": ".claude\\settings.json",
+      "snapshot": "BACKUPS\\20260627_174418\\.claude\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:44:21.467513",
+      "file": "CLAUDE.md",
+      "snapshot": "BACKUPS\\20260627_174421\\CLAUDE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:19.960857",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_render_pair.py",
+      "snapshot": "BACKUPS\\20260627_174719\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_render_pair.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:34.876004",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
+      "snapshot": "BACKUPS\\20260627_174734\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:36.422917",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
+      "snapshot": "BACKUPS\\20260627_174736\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:37.187899",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
+      "snapshot": "BACKUPS\\20260627_174737\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:37.924736",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
+      "snapshot": "BACKUPS\\20260627_174737\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:38.725130",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_01_il_bottone_che_regge.md",
+      "snapshot": "BACKUPS\\20260627_174738\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_160725\\S_AVVENTURA\\EP_N2_01_il_bottone_che_regge.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:39.442413",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_155229\\S_AVVENTURA\\EP_N2_16_il_guardiano_che_non_dorme.md",
+      "snapshot": "BACKUPS\\20260627_174739\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_155229\\S_AVVENTURA\\EP_N2_16_il_guardiano_che_non_dorme.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:40.178758",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_15_il_valore.md",
+      "snapshot": "BACKUPS\\20260627_174740\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_15_il_valore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:40.906461",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
+      "snapshot": "BACKUPS\\20260627_174740\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:41.633649",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_13_il_soldato_caduto_in_silenzio.md",
+      "snapshot": "BACKUPS\\20260627_174741\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_13_il_soldato_caduto_in_silenzio.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:42.367384",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_12_l_esercito_silenzioso.md",
+      "snapshot": "BACKUPS\\20260627_174742\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_12_l_esercito_silenzioso.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:43.093733",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
+      "snapshot": "BACKUPS\\20260627_174743\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:43.819399",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_10_la_traccia.md",
+      "snapshot": "BACKUPS\\20260627_174743\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_10_la_traccia.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:44.549996",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_08_quando_la_mente_inventa.md",
+      "snapshot": "BACKUPS\\20260627_174744\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_08_quando_la_mente_inventa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:45.282425",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_07_la_mente_che_parla.md",
+      "snapshot": "BACKUPS\\20260627_174745\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_07_la_mente_che_parla.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:46.008624",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
+      "snapshot": "BACKUPS\\20260627_174746\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:46.806594",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_05_prima_la_mano_poi_la_macchina.md",
+      "snapshot": "BACKUPS\\20260627_174746\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_05_prima_la_mano_poi_la_macchina.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:47.541990",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_04_la_mappa_viva.md",
+      "snapshot": "BACKUPS\\20260627_174747\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_04_la_mappa_viva.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:48.276064",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
+      "snapshot": "BACKUPS\\20260627_174748\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_03_mille_volte_uguale.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:49.001755",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
+      "snapshot": "BACKUPS\\20260627_174749\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_02_il_soffio_di_troppo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:49.738260",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
+      "snapshot": "BACKUPS\\20260627_174749\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152434\\S_AVVENTURA\\EP_N2_01_la_bambina_che_chiedeva_perche.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:50.546375",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152158\\S_AVVENTURA\\EP_N2_09_la_biblioteca_delle_fonti.md",
+      "snapshot": "BACKUPS\\20260627_174750\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\reemit_20260623_152158\\S_AVVENTURA\\EP_N2_09_la_biblioteca_delle_fonti.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:51.276843",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_la_materia.md",
+      "snapshot": "BACKUPS\\20260627_174751\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_la_materia.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:52.013457",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_2_mille_volte_uguale.md",
+      "snapshot": "BACKUPS\\20260627_174752\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_2_mille_volte_uguale.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:52.732912",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_FIN_01_il_valore.md",
+      "snapshot": "BACKUPS\\20260627_174752\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_FIN_01_il_valore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:53.465715",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_06_il_direttore.md",
+      "snapshot": "BACKUPS\\20260627_174753\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_06_il_direttore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:54.183520",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_l_esercito_silenzioso.md",
+      "snapshot": "BACKUPS\\20260627_174754\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_l_esercito_silenzioso.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:54.912426",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
+      "snapshot": "BACKUPS\\20260627_174754\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:55.803858",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_04_la_grande_mappa.md",
+      "snapshot": "BACKUPS\\20260627_174755\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_04_la_grande_mappa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:56.520587",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_03_la_biblioteca_delle_fonti.md",
+      "snapshot": "BACKUPS\\20260627_174756\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_03_la_biblioteca_delle_fonti.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:57.317702",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_la_mente_che_parla.md",
+      "snapshot": "BACKUPS\\20260627_174757\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_la_mente_che_parla.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:58.143393",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_2_quando_la_mente_inventa.md",
+      "snapshot": "BACKUPS\\20260627_174758\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_2_quando_la_mente_inventa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:58.857271",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_01_l_automazione.md",
+      "snapshot": "BACKUPS\\20260627_174758\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_01_l_automazione.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:47:59.568663",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_la_bambina_e_la_giuntura.md",
+      "snapshot": "BACKUPS\\20260627_174759\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_la_bambina_e_la_giuntura.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:00.291202",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_2_il_segno_che_resta.md",
+      "snapshot": "BACKUPS\\20260627_174800\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_2_il_segno_che_resta.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:01.010804",
+      "file": "CONTENT_ENGINE\\scripts\\backfill_fatti.py",
+      "snapshot": "BACKUPS\\20260627_174801\\CONTENT_ENGINE\\scripts\\backfill_fatti.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:01.661663",
+      "file": "CONTENT_ENGINE\\DATABASE\\PROCESSED_MILESTONES.json",
+      "snapshot": "BACKUPS\\20260627_174801\\CONTENT_ENGINE\\DATABASE\\PROCESSED_MILESTONES.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:02.313892",
+      "file": "CONTENT_ENGINE\\DATABASE\\STORIE_STRUTTURA_2ASSI.md",
+      "snapshot": "BACKUPS\\20260627_174802\\CONTENT_ENGINE\\DATABASE\\STORIE_STRUTTURA_2ASSI.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:03.063430",
+      "file": "CONTENT_ENGINE\\DATABASE\\INDEX.md",
+      "snapshot": "BACKUPS\\20260627_174803\\CONTENT_ENGINE\\DATABASE\\INDEX.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:03.751976",
+      "file": "CONTENT_ENGINE\\scripts\\chiavetta_ingest.py",
+      "snapshot": "BACKUPS\\20260627_174803\\CONTENT_ENGINE\\scripts\\chiavetta_ingest.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:04.412126",
+      "file": "CONTENT_ENGINE\\DATABASE\\story_arc.json",
+      "snapshot": "BACKUPS\\20260627_174804\\CONTENT_ENGINE\\DATABASE\\story_arc.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:05.062221",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_DEL_MONDO.md",
+      "snapshot": "BACKUPS\\20260627_174805\\CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_DEL_MONDO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:05.748799",
+      "file": "CONTENT_ENGINE\\DATABASE\\training\\dataset_info.json",
+      "snapshot": "BACKUPS\\20260627_174805\\CONTENT_ENGINE\\DATABASE\\training\\dataset_info.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:06.408088",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
+      "snapshot": "BACKUPS\\20260627_174806\\CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:07.099862",
+      "file": "CONTENT_ENGINE\\scripts\\ecosystem_bridge.py",
+      "snapshot": "BACKUPS\\20260627_174807\\CONTENT_ENGINE\\scripts\\ecosystem_bridge.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:07.743152",
+      "file": "CONTENT_ENGINE\\DATABASE\\training\\train_config.yaml",
+      "snapshot": "BACKUPS\\20260627_174807\\CONTENT_ENGINE\\DATABASE\\training\\train_config.yaml",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:08.406301",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\BRIEF_ILLUSTRATORE_PERSONAGGI.md",
+      "snapshot": "BACKUPS\\20260627_174808\\CONTENT_ENGINE\\DATABASE\\MONDO\\BRIEF_ILLUSTRATORE_PERSONAGGI.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:09.094151",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\INDICE_CAMMINO.md",
+      "snapshot": "BACKUPS\\20260627_174809\\CONTENT_ENGINE\\DATABASE\\MONDO\\INDICE_CAMMINO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:09.775136",
+      "file": "CONTENT_ENGINE\\scripts\\enrich_recap_episodes.py",
+      "snapshot": "BACKUPS\\20260627_174809\\CONTENT_ENGINE\\scripts\\enrich_recap_episodes.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:10.510564",
+      "file": "CONTENT_ENGINE\\scripts\\episodes_to_dataset.py",
+      "snapshot": "BACKUPS\\20260627_174810\\CONTENT_ENGINE\\scripts\\episodes_to_dataset.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:11.232691",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\MAPPA_AVVENTURA.md",
+      "snapshot": "BACKUPS\\20260627_174811\\CONTENT_ENGINE\\DATABASE\\MONDO\\MAPPA_AVVENTURA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:11.904665",
+      "file": "CONTENT_ENGINE\\scripts\\episode_to_audio.py",
+      "snapshot": "BACKUPS\\20260627_174811\\CONTENT_ENGINE\\scripts\\episode_to_audio.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:12.568948",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\NINA_V2_ARCHITETTURA.md",
+      "snapshot": "BACKUPS\\20260627_174812\\CONTENT_ENGINE\\DATABASE\\MONDO\\NINA_V2_ARCHITETTURA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:13.251188",
+      "file": "CONTENT_ENGINE\\scripts\\fatti_reflux.py",
+      "snapshot": "BACKUPS\\20260627_174813\\CONTENT_ENGINE\\scripts\\fatti_reflux.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:13.898436",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\NINA_V2_CHARACTER_BIBLE.md",
+      "snapshot": "BACKUPS\\20260627_174813\\CONTENT_ENGINE\\DATABASE\\MONDO\\NINA_V2_CHARACTER_BIBLE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:14.577925",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\NINA_V2_REVIEW_NOTEBOOKLM.md",
+      "snapshot": "BACKUPS\\20260627_174814\\CONTENT_ENGINE\\DATABASE\\MONDO\\NINA_V2_REVIEW_NOTEBOOKLM.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:15.272405",
+      "file": "CONTENT_ENGINE\\scripts\\fix_titoli_vault.py",
+      "snapshot": "BACKUPS\\20260627_174815\\CONTENT_ENGINE\\scripts\\fix_titoli_vault.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:15.918611",
+      "file": "CONTENT_ENGINE\\scripts\\generate_pietre_index.py",
+      "snapshot": "BACKUPS\\20260627_174815\\CONTENT_ENGINE\\scripts\\generate_pietre_index.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:16.566726",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PERCORSO_EVOLUTIVO.md",
+      "snapshot": "BACKUPS\\20260627_174816\\CONTENT_ENGINE\\DATABASE\\MONDO\\PERCORSO_EVOLUTIVO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:17.238170",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PIETRE.md",
+      "snapshot": "BACKUPS\\20260627_174817\\CONTENT_ENGINE\\DATABASE\\MONDO\\PIETRE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:17.929263",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\REEL_NINA.md",
+      "snapshot": "BACKUPS\\20260627_174817\\CONTENT_ENGINE\\DATABASE\\MONDO\\REEL_NINA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:18.606864",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\QUALITA_BATCH_44.md",
+      "snapshot": "BACKUPS\\20260627_174818\\CONTENT_ENGINE\\DATABASE\\MONDO\\QUALITA_BATCH_44.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:19.285863",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PRODUZIONE_NINA.md",
+      "snapshot": "BACKUPS\\20260627_174819\\CONTENT_ENGINE\\DATABASE\\MONDO\\PRODUZIONE_NINA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:19.990627",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\EP_N2_01_poster.html",
+      "snapshot": "BACKUPS\\20260627_174819\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\EP_N2_01_poster.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:20.668591",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\mappa_mondo.html",
+      "snapshot": "BACKUPS\\20260627_174820\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\mappa_mondo.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:21.327051",
+      "file": "CONTENT_ENGINE\\scripts\\genera_intro.py",
+      "snapshot": "BACKUPS\\20260627_174821\\CONTENT_ENGINE\\scripts\\genera_intro.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:21.965765",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\README.md",
+      "snapshot": "BACKUPS\\20260627_174821\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:22.657369",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v9_progetto-12slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174822\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v9_progetto-12slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:23.478428",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\_render_pair.py",
+      "snapshot": "BACKUPS\\20260627_174823\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\_render_pair.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:24.146437",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v8_fumetto-vignette\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174824\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v8_fumetto-vignette\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:24.848433",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v7_arricchito-testo\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174824\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v7_arricchito-testo\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:25.831829",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\README.md",
+      "snapshot": "BACKUPS\\20260627_174825\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:26.526140",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\pre 2.html",
+      "snapshot": "BACKUPS\\20260627_174826\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\pre 2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:27.217053",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\caption.txt",
+      "snapshot": "BACKUPS\\20260627_174827\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\caption.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:27.906056",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_7_EP_N2_14.html",
+      "snapshot": "BACKUPS\\20260627_174827\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_7_EP_N2_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:28.618503",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_6_EP_N2_12.html",
+      "snapshot": "BACKUPS\\20260627_174828\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_6_EP_N2_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:29.303605",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_5_EP_N2_11.html",
+      "snapshot": "BACKUPS\\20260627_174829\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_5_EP_N2_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:29.999513",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_4_EP_N2_09.html",
+      "snapshot": "BACKUPS\\20260627_174829\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_4_EP_N2_09.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:30.688786",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_3_EP_N2_07.html",
+      "snapshot": "BACKUPS\\20260627_174830\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_3_EP_N2_07.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:31.378089",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_2_EP_N2_06.html",
+      "snapshot": "BACKUPS\\20260627_174831\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_2_EP_N2_06.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:32.159978",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_1_EP_N2_10.html",
+      "snapshot": "BACKUPS\\20260627_174832\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_1_EP_N2_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:32.846451",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_0_EP_N2_01.html",
+      "snapshot": "BACKUPS\\20260627_174832\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\regioni\\regione_0_EP_N2_01.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:33.509402",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\README.md",
+      "snapshot": "BACKUPS\\20260627_174833\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:34.199823",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v10_progetto-17slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174834\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v10_progetto-17slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:34.895135",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\model_sheet_personaggi.html",
+      "snapshot": "BACKUPS\\20260627_174834\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\model_sheet_personaggi.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:35.633006",
+      "file": "CONTENT_ENGINE\\scripts\\notebooklm_capture.py",
+      "snapshot": "BACKUPS\\20260627_174835\\CONTENT_ENGINE\\scripts\\notebooklm_capture.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:36.297851",
+      "file": "CONTENT_ENGINE\\scripts\\nina_region_posters.py",
+      "snapshot": "BACKUPS\\20260627_174836\\CONTENT_ENGINE\\scripts\\nina_region_posters.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:36.952973",
+      "file": "CONTENT_ENGINE\\scripts\\milestone_to_episode.py",
+      "snapshot": "BACKUPS\\20260627_174836\\CONTENT_ENGINE\\scripts\\milestone_to_episode.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:37.596292",
+      "file": "CONTENT_ENGINE\\scripts\\genera_wiki_index.py",
+      "snapshot": "BACKUPS\\20260627_174837\\CONTENT_ENGINE\\scripts\\genera_wiki_index.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:38.243427",
+      "file": "CONTENT_ENGINE\\scripts\\setup_obsidian.py",
+      "snapshot": "BACKUPS\\20260627_174838\\CONTENT_ENGINE\\scripts\\setup_obsidian.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:38.885579",
+      "file": "CONTENT_ENGINE\\scripts\\riordina_mente.py",
+      "snapshot": "BACKUPS\\20260627_174838\\CONTENT_ENGINE\\scripts\\riordina_mente.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:39.530862",
+      "file": "CONTENT_ENGINE\\scripts\\remap_pilot_2assi.py",
+      "snapshot": "BACKUPS\\20260627_174839\\CONTENT_ENGINE\\scripts\\remap_pilot_2assi.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:40.178597",
+      "file": "CONTENT_ENGINE\\scripts\\state_watcher.py",
+      "snapshot": "BACKUPS\\20260627_174840\\CONTENT_ENGINE\\scripts\\state_watcher.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:40.822914",
+      "file": "CONTENT_ENGINE\\scripts\\storie_evoluzione.py",
+      "snapshot": "BACKUPS\\20260627_174840\\CONTENT_ENGINE\\scripts\\storie_evoluzione.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:41.719841",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\README.md",
+      "snapshot": "BACKUPS\\20260627_174841\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:42.476255",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\caption.txt",
+      "snapshot": "BACKUPS\\20260627_174842\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\caption.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:43.145991",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v6_propagato-completo\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174843\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v6_propagato-completo\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:43.831178",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v2_buonanotte-no-flusso\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174843\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v2_buonanotte-no-flusso\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:44.611554",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v1_originale-magra\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174844\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v1_originale-magra\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:45.312036",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v11_visione-allineata\\per 1.html",
+      "snapshot": "BACKUPS\\20260627_174845\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v11_visione-allineata\\per 1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:45.998969",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v4_intreccio-atomi-bit\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174845\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v4_intreccio-atomi-bit\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:46.709219",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v5_flusso-onda-sfumata\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174846\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v5_flusso-onda-sfumata\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:47.413478",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\caption.txt",
+      "snapshot": "BACKUPS\\20260627_174847\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\caption.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:48.446247",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174848\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:49.284287",
+      "file": "CONTENT_ENGINE\\scripts\\storie_intersect.py",
+      "snapshot": "BACKUPS\\20260627_174849\\CONTENT_ENGINE\\scripts\\storie_intersect.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:49.937497",
+      "file": "CONTENT_ENGINE\\scripts\\storie_gap.py",
+      "snapshot": "BACKUPS\\20260627_174849\\CONTENT_ENGINE\\scripts\\storie_gap.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:50.586570",
+      "file": "CONTENT_ENGINE\\scripts\\storie_lint.py",
+      "snapshot": "BACKUPS\\20260627_174850\\CONTENT_ENGINE\\scripts\\storie_lint.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:51.251962",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\README.md",
+      "snapshot": "BACKUPS\\20260627_174851\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:51.962196",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v3_flusso-onda-oro\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174851\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v3_flusso-onda-oro\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:52.907005",
+      "file": "CONTENT_ENGINE\\scripts\\sync_storie.py",
+      "snapshot": "BACKUPS\\20260627_174852\\CONTENT_ENGINE\\scripts\\sync_storie.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:53.559621",
+      "file": "CONTENT_ENGINE\\scripts\\vault_intersect.py",
+      "snapshot": "BACKUPS\\20260627_174853\\CONTENT_ENGINE\\scripts\\vault_intersect.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:54.211874",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
+      "snapshot": "BACKUPS\\20260627_174854\\CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:54.899472",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\BRIEF_ILLUSTRATORE_PERSONAGGI.md",
+      "snapshot": "BACKUPS\\20260627_174854\\CONTENT_ENGINE\\DATABASE\\MONDO\\BRIEF_ILLUSTRATORE_PERSONAGGI.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:55.582773",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\README.md",
+      "snapshot": "BACKUPS\\20260627_174855\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:56.269625",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\README.md",
+      "snapshot": "BACKUPS\\20260627_174856\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:56.968299",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\README.md",
+      "snapshot": "BACKUPS\\20260627_174856\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:48:57.674380",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\README.md",
+      "snapshot": "BACKUPS\\20260627_174857\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:07.161751",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260627_174907\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:08.794337",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_174908\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:10.795172",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_174910\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:12.351382",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_174912\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:13.786733",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_174913\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:15.191027",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260627_174915\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:49:35.708010",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v2_redesign-testo\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_174935\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v2_redesign-testo\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:51:13.776539",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v2_redesign-testo\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_175113\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v2_redesign-testo\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:51:33.639356",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v1_nina-solo\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_175133\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v1_nina-solo\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:51:45.083967",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\caption.txt",
+      "snapshot": "BACKUPS\\20260627_175145\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\caption.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:55:40.294604",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260627_175540\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:55:41.444093",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_175541\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:55:42.723654",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_175542\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:55:43.866720",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_175543\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:55:44.911680",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_175544\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\slides\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:56:45.404046",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260627_175645\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:56:47.373652",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_175647\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:56:48.892493",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_175648\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:56:50.461721",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_175650\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:56:52.046590",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_175652\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:56:53.633200",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260627_175653\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:57:32.930089",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v3_continuo-studio\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_175732\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v3_continuo-studio\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T17:58:19.330107",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v3_continuo-studio\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_175819\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v3_continuo-studio\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:47.929823",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_180447\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:49.046412",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260627_180449\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:50.034857",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_180450\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:50.900197",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_180450\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:52.354110",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_180452\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:53.585634",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_180453\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:54.948107",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260627_180454\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:56.134086",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260627_180456\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:57.356385",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260627_180457\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:58.541123",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260627_180458\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:04:59.877427",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260627_180459\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:01.246853",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260627_180501\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:02.534417",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_12.html",
+      "snapshot": "BACKUPS\\20260627_180502\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:03.751449",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_13.html",
+      "snapshot": "BACKUPS\\20260627_180503\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_13.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:05.064753",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260627_180505\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:06.355982",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260627_180506\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:07.635267",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260627_180507\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:08.897434",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_17.html",
+      "snapshot": "BACKUPS\\20260627_180508\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_17.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:56.232422",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_180556\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:05:56.951025",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\_build_pre03.py",
+      "snapshot": "BACKUPS\\20260627_180556\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\_build_pre03.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:08:34.213783",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_180834\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:11:01.396751",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v12_icone-8-pietre\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_181101\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\_VERSIONI\\v12_icone-8-pietre\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:13:29.458988",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\_build_pre03.py",
+      "snapshot": "BACKUPS\\20260627_181329\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\_build_pre03.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:13:30.140312",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_181330\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v4_stile-episodi-17slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:28.736706",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_182128\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:29.921707",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260627_182129\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:30.639489",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_182130\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:32.203038",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_182132\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:33.530648",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_182133\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:34.776513",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_182134\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:35.963329",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260627_182135\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:37.177573",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260627_182137\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:38.444722",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260627_182138\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:39.656199",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260627_182139\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:40.903154",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260627_182140\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:42.171527",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260627_182142\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:43.477703",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_12.html",
+      "snapshot": "BACKUPS\\20260627_182143\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:44.696122",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_13.html",
+      "snapshot": "BACKUPS\\20260627_182144\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_13.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:45.913204",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260627_182145\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:47.145471",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260627_182147\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:48.319808",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260627_182148\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:21:49.527182",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_17.html",
+      "snapshot": "BACKUPS\\20260627_182149\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_tmp_17.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:22:24.484199",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v5_personaggi-profondi\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_182224\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v5_personaggi-profondi\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:22:25.200391",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v5_personaggi-profondi\\_build_pre03.py",
+      "snapshot": "BACKUPS\\20260627_182225\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v5_personaggi-profondi\\_build_pre03.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:23:08.319633",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v5_personaggi-profondi\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_182308\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\_VERSIONI\\v5_personaggi-profondi\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:23:30.140797",
+      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
+      "snapshot": "BACKUPS\\20260627_182330\\.claude\\skills\\aggiorna-stato\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:23:30.764247",
+      "file": ".claude\\skills\\salva\\SKILL.md",
+      "snapshot": "BACKUPS\\20260627_182330\\.claude\\skills\\salva\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:23:31.348003",
+      "file": ".claude\\skills\\reel\\SKILL.md",
+      "snapshot": "BACKUPS\\20260627_182331\\.claude\\skills\\reel\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:23:31.913128",
+      "file": ".claude\\skills\\dataset\\SKILL.md",
+      "snapshot": "BACKUPS\\20260627_182331\\.claude\\skills\\dataset\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:23:32.503798",
+      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
+      "snapshot": "BACKUPS\\20260627_182332\\.claude\\skills\\genera-episodio\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:28:33.818895",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v1_8slide_2506\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_182833\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v1_8slide_2506\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:03.413593",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_render_all.py",
+      "snapshot": "BACKUPS\\20260627_183103\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_render_all.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:04.608194",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_183104\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:05.652939",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_183105\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:06.627778",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_183106\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:07.766974",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_183107\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:08.531856",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_183108\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:09.837398",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260627_183109\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:11.130812",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260627_183111\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:12.769557",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260627_183112\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:14.320129",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260627_183114\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:15.595677",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260627_183115\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:16.814637",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260627_183116\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:18.015547",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_12.html",
+      "snapshot": "BACKUPS\\20260627_183118\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:19.256899",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_13.html",
+      "snapshot": "BACKUPS\\20260627_183119\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_13.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:20.508664",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260627_183120\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:21.734780",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260627_183121\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:31:22.983024",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260627_183122\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:32:06.801243",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v2_blueprint-16slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_183206\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v2_blueprint-16slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:32:07.520153",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v2_blueprint-16slide\\_build_ep.py",
+      "snapshot": "BACKUPS\\20260627_183207\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v2_blueprint-16slide\\_build_ep.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:33:30.250079",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v2_blueprint-16slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_183330\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_VERSIONI\\v2_blueprint-16slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:37:54.891404",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_render_all.py",
+      "snapshot": "BACKUPS\\20260627_183754\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_render_all.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:37:56.078153",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_183756\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:37:57.090899",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260627_183757\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:37:58.052914",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260627_183758\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:37:59.169017",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260627_183759\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:00.032551",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260627_183800\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:01.250676",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260627_183801\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:02.466371",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260627_183802\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:03.762192",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260627_183803\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:04.970559",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260627_183804\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:06.156127",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260627_183806\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:07.335774",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260627_183807\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:08.536057",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_12.html",
+      "snapshot": "BACKUPS\\20260627_183808\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:09.784741",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_13.html",
+      "snapshot": "BACKUPS\\20260627_183809\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_13.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:10.988374",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260627_183810\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:12.156896",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260627_183812\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:13.352296",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260627_183813\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:55.850771",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_VERSIONI\\v1_blueprint-16slide\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_183855\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_VERSIONI\\v1_blueprint-16slide\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:38:56.543975",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_VERSIONI\\v1_blueprint-16slide\\_build_ep.py",
+      "snapshot": "BACKUPS\\20260627_183856\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\_VERSIONI\\v1_blueprint-16slide\\_build_ep.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:39:57.700792",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_183957\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:42:35.658844",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\pre 01.html",
+      "snapshot": "BACKUPS\\20260627_184235\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\pre 01.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:42:53.256479",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "snapshot": "BACKUPS\\20260627_184253\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:43:22.151378",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\pre 03.html",
+      "snapshot": "BACKUPS\\20260627_184322\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\pre 03.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:43:40.829167",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\ep 1.html",
+      "snapshot": "BACKUPS\\20260627_184340\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\ep 1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-06-27T18:43:58.444735",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\ep 2.html",
+      "snapshot": "BACKUPS\\20260627_184358\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\ep 2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:42:53.617799",
+      "file": "DASHBOARD\\package.json",
+      "snapshot": "BACKUPS\\20260702_154253\\DASHBOARD\\package.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:42:56.153953",
+      "file": "DASHBOARD\\pnpm-workspace.yaml",
+      "snapshot": "BACKUPS\\20260702_154256\\DASHBOARD\\pnpm-workspace.yaml",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:15.271417",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260702_154315\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:19.142271",
+      "file": "AUTOMATIONS\\core\\deep_freeze.py",
+      "snapshot": "BACKUPS\\20260702_154319\\AUTOMATIONS\\core\\deep_freeze.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:20.032599",
+      "file": "AUTOMATIONS\\core\\daily_brief.py",
+      "snapshot": "BACKUPS\\20260702_154320\\AUTOMATIONS\\core\\daily_brief.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:27.712638",
+      "file": "AUTOMATIONS\\core\\inventario_notturno.py",
+      "snapshot": "BACKUPS\\20260702_154327\\AUTOMATIONS\\core\\inventario_notturno.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:29.026675",
+      "file": "NODES\\AI_NEWS_WATCHER\\watcher.py",
+      "snapshot": "BACKUPS\\20260702_154329\\NODES\\AI_NEWS_WATCHER\\watcher.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:29.832090",
+      "file": "NODES\\SELF_IMPROVE\\self_improve.py",
+      "snapshot": "BACKUPS\\20260702_154329\\NODES\\SELF_IMPROVE\\self_improve.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:30.580744",
+      "file": "NODES\\STORY_AGENT\\story_agent.py",
+      "snapshot": "BACKUPS\\20260702_154330\\NODES\\STORY_AGENT\\story_agent.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:31.370977",
+      "file": "NODES\\AUDIT_AGENT\\night_audit.py",
+      "snapshot": "BACKUPS\\20260702_154331\\NODES\\AUDIT_AGENT\\night_audit.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:32.139273",
+      "file": "DA_FARE_FATTO.md",
+      "snapshot": "BACKUPS\\20260702_154332\\DA_FARE_FATTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:32.928300",
+      "file": "DOCS\\INVENTARIO_NOTTURNO.md",
+      "snapshot": "BACKUPS\\20260702_154332\\DOCS\\INVENTARIO_NOTTURNO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:33.825099",
+      "file": ".claude\\settings.json",
+      "snapshot": "BACKUPS\\20260702_154333\\.claude\\settings.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:34.811669",
+      "file": ".claude\\skills\\dataset\\SKILL.md",
+      "snapshot": "BACKUPS\\20260702_154334\\.claude\\skills\\dataset\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:35.897784",
+      "file": ".claude\\skills\\salva\\SKILL.md",
+      "snapshot": "BACKUPS\\20260702_154335\\.claude\\skills\\salva\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:37.180307",
+      "file": ".claude\\skills\\aggiorna-stato\\SKILL.md",
+      "snapshot": "BACKUPS\\20260702_154337\\.claude\\skills\\aggiorna-stato\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:38.208961",
+      "file": ".claude\\skills\\reel\\SKILL.md",
+      "snapshot": "BACKUPS\\20260702_154338\\.claude\\skills\\reel\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:38.976123",
+      "file": ".claude\\skills\\genera-episodio\\SKILL.md",
+      "snapshot": "BACKUPS\\20260702_154338\\.claude\\skills\\genera-episodio\\SKILL.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:39.907301",
+      "file": "CLAUDE.md",
+      "snapshot": "BACKUPS\\20260702_154339\\CLAUDE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:41.256855",
+      "file": "DOCS\\INVENTARIO_NOTTURNO.md",
+      "snapshot": "BACKUPS\\20260702_154341\\DOCS\\INVENTARIO_NOTTURNO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:42.519307",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_002.md",
+      "snapshot": "BACKUPS\\20260702_154342\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_002.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:43.930372",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_003.md",
+      "snapshot": "BACKUPS\\20260702_154343\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_003.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:43:44.777361",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_005.md",
+      "snapshot": "BACKUPS\\20260702_154344\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_005.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:45:33.999781",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260702_inventario_notturno.md",
+      "snapshot": "BACKUPS\\20260702_154533\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260702_inventario_notturno.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:45:46.284191",
+      "file": "NODES\\MENTE_SCANNER\\scanner.py",
+      "snapshot": "BACKUPS\\20260702_154546\\NODES\\MENTE_SCANNER\\scanner.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:46:14.827217",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260702_154614\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:46:18.428518",
+      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "snapshot": "BACKUPS\\20260702_154618\\NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:46:38.451413",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260702_154638\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:46:42.000379",
+      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "snapshot": "BACKUPS\\20260702_154642\\NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:03.241347",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260627_pulizia_bozze_avatar_tieni_solo_nin.md",
+      "snapshot": "BACKUPS\\20260702_154703\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260627_pulizia_bozze_avatar_tieni_solo_nin.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:03.938696",
+      "file": "NODES\\STORY_AGENT\\story_state.json",
+      "snapshot": "BACKUPS\\20260702_154703\\NODES\\STORY_AGENT\\story_state.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:04.595224",
+      "file": "CONTENT_ENGINE\\scripts\\nina_seed_auto.json",
+      "snapshot": "BACKUPS\\20260702_154704\\CONTENT_ENGINE\\scripts\\nina_seed_auto.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:05.194999",
+      "file": "DASHBOARD\\src\\data\\episodes.json",
+      "snapshot": "BACKUPS\\20260702_154705\\DASHBOARD\\src\\data\\episodes.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:05.801508",
+      "file": "CONTENT_ENGINE\\scripts\\ecosystem_bridge.py",
+      "snapshot": "BACKUPS\\20260702_154705\\CONTENT_ENGINE\\scripts\\ecosystem_bridge.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:08.832927",
+      "file": "CONTENT_ENGINE\\scripts\\vault_intersect.py",
+      "snapshot": "BACKUPS\\20260702_154708\\CONTENT_ENGINE\\scripts\\vault_intersect.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:10.580984",
+      "file": "CONTENT_ENGINE\\scripts\\genera_wiki_index.py",
+      "snapshot": "BACKUPS\\20260702_154710\\CONTENT_ENGINE\\scripts\\genera_wiki_index.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:46.814348",
+      "file": "CONTENT_ENGINE\\scripts\\audit_episodes.py",
+      "snapshot": "BACKUPS\\20260702_154746\\CONTENT_ENGINE\\scripts\\audit_episodes.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:53.194842",
+      "file": "CONTENT_ENGINE\\scripts\\build_episodes_json.py",
+      "snapshot": "BACKUPS\\20260702_154753\\CONTENT_ENGINE\\scripts\\build_episodes_json.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:54.166679",
+      "file": "DASHBOARD\\src\\data\\episodes.json",
+      "snapshot": "BACKUPS\\20260702_154754\\DASHBOARD\\src\\data\\episodes.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:56.457189",
+      "file": "DASHBOARD\\tsconfig.json",
+      "snapshot": "BACKUPS\\20260702_154756\\DASHBOARD\\tsconfig.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:57.804324",
+      "file": "DASHBOARD\\tsconfig.app.json",
+      "snapshot": "BACKUPS\\20260702_154757\\DASHBOARD\\tsconfig.app.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:47:58.586295",
+      "file": "DASHBOARD\\tsconfig.node.json",
+      "snapshot": "BACKUPS\\20260702_154758\\DASHBOARD\\tsconfig.node.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-02T15:49:02.284891",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
+      "snapshot": "BACKUPS\\20260702_154902\\CONTENT_ENGINE\\DATABASE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
+      "type": "snapshot"
     }
   ]
-}
+}                          

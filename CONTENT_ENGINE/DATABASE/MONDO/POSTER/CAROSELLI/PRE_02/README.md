@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [PRE_02  Come funziona Nina (carosello del preambolo, 16 slide)](#pre02-come-funziona-nina-carosello-del-preambolo-16-slide)
+  - [Arco (16 slide)](#arco-16-slide)
+  - [Rigenerare](#rigenerare)
+
+<!-- /TOC -->
+
 # PRE_02 — "Come funziona Nina" (carosello del preambolo, 16 slide)
 
 Secondo carosello della **serie preambolo** di Nina. Mentre [PRE_01](../PRE_01/) è

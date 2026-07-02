@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [Carosello  PRE_01  Il Mondo di Nina (preambolo)](#carosello-pre01-il-mondo-di-nina-preambolo)
+  - [File](#file)
+  - [Le 8 slide](#le-8-slide)
+  - [Stile](#stile)
+  - [Rigenerare](#rigenerare)
+
+<!-- /TOC -->
+
 # Carosello — PRE_01 · Il Mondo di Nina (preambolo)
 
 **Tipo:** Preambolo / presentazione (PRIMA degli episodi). Introduce il mondo.

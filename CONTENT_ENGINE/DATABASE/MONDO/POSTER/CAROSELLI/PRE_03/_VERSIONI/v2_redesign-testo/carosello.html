@@ -14,7 +14,7 @@ body { display:flex; flex-direction:column; align-items:center; gap:40px; paddin
 .slide { position:relative; width:1080px; height:1350px; overflow:hidden;
   background: radial-gradient(120% 75% at 50% 38%, #16321f 0%, #0c1a16 46%, #05070d 100%);
   font-family:"source-sans-3",sans-serif; color:#eef2fb; }
-.grid { position:absolute; inset:30px; opacity:0.04;
+.grid { position:absolute; inset:30px; opacity:0.045;
   background-image: linear-gradient(#4fd6a0 1px, transparent 1px), linear-gradient(90deg,#4fd6a0 1px, transparent 1px);
   background-size:54px 54px; }
 .frame { position:absolute; inset:30px; border:1px solid rgba(148,163,184,0.22); border-radius:4px; }
@@ -30,36 +30,51 @@ body { display:flex; flex-direction:column; align-items:center; gap:40px; paddin
   background:rgba(12,26,22,0.72); border:2.5px solid #ec4899; display:flex; align-items:center; justify-content:center;
   font-family:"playfair-display",serif; font-weight:800; font-size:40px; color:#ec4899; box-shadow:0 0 24px rgba(236,72,153,0.4); }
 
-/* full-bleed scene */
+/* full-bleed scene (immagini WOW, figura intera) */
 .scene { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .vtop { position:absolute; top:0; left:0; right:0; height:320px; background:linear-gradient(180deg, rgba(5,7,13,0.78), rgba(5,7,13,0)); }
-.vbot { position:absolute; bottom:0; left:0; right:0; height:600px;
-  background:linear-gradient(0deg, rgba(5,9,8,0.95) 0%, rgba(5,9,8,0.80) 28%, rgba(5,9,8,0) 100%); }
+.vbot { position:absolute; bottom:0; left:0; right:0; height:640px;
+  background:linear-gradient(0deg, rgba(5,9,8,0.96) 0%, rgba(5,9,8,0.82) 30%, rgba(5,9,8,0) 100%); }
 
 .bigtitle { position:absolute; left:0; right:0; text-align:center;
   font-family:"playfair-display",serif; font-weight:800; color:#f8faff; line-height:0.98; text-shadow:0 6px 30px rgba(0,0,0,0.55); }
 .role { position:absolute; left:0; right:0; text-align:center;
   font-family:"space-mono",monospace; font-size:20px; letter-spacing:5px; color:#ff7ab6; text-transform:uppercase; }
-.lead { position:absolute; left:120px; right:120px; text-align:center; font-size:30px; line-height:1.5; color:#dfe6f2; text-shadow:0 2px 12px rgba(0,0,0,0.55); }
+.lead { position:absolute; left:120px; right:120px; text-align:center; font-size:31px; line-height:1.5; color:#dfe6f2; text-shadow:0 2px 12px rgba(0,0,0,0.55); }
 .lead .hi { color:#fff; font-weight:600; } .lead .pk { color:#ff7ab6; font-weight:700; } .lead .gd { color:#ffd98a; font-weight:600; }
 
-/* layout ritratto + testo */
-.pcard { position:absolute; border-radius:26px; overflow:hidden;
-  border:3px solid rgba(95,199,243,0.5); box-shadow:0 0 0 8px rgba(12,26,22,0.55), 0 20px 50px rgba(0,0,0,0.5); }
-.pcard img { width:100%; height:100%; object-fit:cover; object-position:50% 22%; }
+/* ===== slide di TESTO (poche immagini: qui la parola è la protagonista) ===== */
+.eyebrow { position:absolute; left:96px; right:96px; font-family:"space-mono",monospace;
+  font-size:18px; letter-spacing:5px; color:#5fe6b0; text-transform:uppercase; }
+.quote { position:absolute; left:80px; right:80px; font-family:"playfair-display",serif; font-weight:800;
+  color:#f8faff; line-height:1.0; text-shadow:0 6px 30px rgba(0,0,0,0.4); }
+.quote .ac { color:#ffd98a; font-style:italic; }
+.quote .pk { color:#ff7ab6; }
+.para { position:absolute; left:96px; right:96px; font-size:33px; line-height:1.55; color:#cdd7e6; }
+.para .hi { color:#fff; font-weight:600; } .para .pk { color:#ff7ab6; font-weight:700; } .para .gd { color:#ffd98a; font-weight:600; }
+.rule { position:absolute; height:3px; width:120px; border-radius:2px;
+  background:linear-gradient(90deg,#ff7ab6,#ffd98a); }
+
+/* carta d'identità (testo ben disposto, nessuna foto) */
+.idrow { display:flex; gap:22px; align-items:flex-start; }
+.idtag { flex:0 0 240px; font-family:"space-mono",monospace; font-size:18px; letter-spacing:3px;
+  color:#7fe9c0; text-transform:uppercase; padding-top:6px; }
+.idval { flex:1; font-size:32px; line-height:1.32; color:#e8eefb; }
+.idval b { color:#fff; } .idval .pk { color:#ff7ab6; font-weight:700; }
+.idbox { position:absolute; left:80px; right:80px; padding:42px 46px;
+  background:rgba(8,18,15,0.55); border:1px solid rgba(127,233,192,0.22); border-radius:22px;
+  box-shadow:0 18px 50px rgba(0,0,0,0.45); display:flex; flex-direction:column; gap:30px; }
+
+/* il segno (vettoriale, niente foto) */
 .halo { position:absolute; border-radius:50%;
   background:radial-gradient(circle at 50% 45%, rgba(95,240,176,0.30), rgba(52,211,153,0) 70%); }
-.h2 { position:absolute; left:96px; right:96px; font-family:"playfair-display",serif; font-weight:700; font-size:54px; color:#f6f8ff; line-height:1.05; }
+.h2 { position:absolute; left:96px; right:96px; font-family:"playfair-display",serif; font-weight:700; font-size:56px; color:#f6f8ff; line-height:1.05; }
 .h2 .ac { color:#ffd98a; font-style:italic; }
-.body { position:absolute; left:96px; right:96px; font-size:29px; line-height:1.5; color:#c8d2e6; }
-.body .hi { color:#fff; font-weight:600; } .body .pk { color:#ff7ab6; font-weight:700; }
-.li { display:flex; gap:16px; align-items:flex-start; margin-top:18px; font-size:26px; color:#c8d2e6; line-height:1.35; }
-.li b { color:#f6f8ff; } .dotm { flex:0 0 auto; width:14px; height:14px; border-radius:50%; margin-top:9px; }
 </style>
 </head>
 <body>
 
-<!-- ===== 1 · COPERTINA ===== -->
+<!-- ===== 1 · COPERTINA (WOW · figura intera sul sentiero) ===== -->
 <div class="slide" data-canvas-width="1080" data-canvas-height="1350">
   <img class="scene" src="img/scena_ponte.png" style="object-position:50% 40%">
   <div class="vtop"></div><div class="vbot"></div><div class="framelt"></div>
@@ -71,71 +86,71 @@ body { display:flex; flex-direction:column; align-items:center; gap:40px; paddin
   <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>1 / 6</span></div>
 </div>
 
-<!-- ===== 2 · NINA — chi è ===== -->
+<!-- ===== 2 · NINA — l'eroina (WOW · figura intera nello studio) ===== -->
 <div class="slide" data-canvas-width="1080" data-canvas-height="1350">
   <img class="scene" src="img/scena_studio.png" style="object-position:50% 42%">
   <div class="vtop"></div><div class="vbot"></div><div class="framelt"></div>
   <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
-  <div class="kicker">Chi è</div>
-  <div class="sym">?</div>
+  <div class="kicker">L'eroina</div>
   <div class="bigtitle" style="bottom:300px; font-size:118px">Nina</div>
   <div class="role" style="bottom:250px">La ragazza che chiede perché</div>
   <div class="lead" style="bottom:140px">Brava ragazza… e <span class="pk">piccolo genio curioso</span>. Vive in mezzo a mappe, libri e domande.</div>
   <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>2 / 6</span></div>
 </div>
 
-<!-- ===== 3 · LA SUPERPOTENZA ===== -->
+<!-- ===== 3 · LA SUPERPOTENZA (TESTO · nessuna foto) ===== -->
 <div class="slide" data-canvas-width="1080" data-canvas-height="1350">
   <div class="grid"></div><div class="frame"></div>
   <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
   <div class="kicker">La superpotenza</div>
-  <div class="halo" style="top:210px; left:50%; transform:translateX(-50%); width:560px; height:560px"></div>
-  <div class="pcard" style="top:230px; left:330px; width:420px; height:520px"><img src="img/ritratto.png"></div>
-  <div class="h2" style="top:800px; text-align:center">Chiede «<span class="ac">perché?</span>»</div>
-  <div class="body" style="top:900px; text-align:center">…e poi <span class="hi">va a vedere davvero</span>. Non si accontenta della prima risposta: apre la porta e guarda dentro.</div>
+  <div class="eyebrow" style="top:300px">UNA SOLA DOMANDA, MILLE PORTE</div>
+  <div class="quote" style="top:350px; font-size:118px">Chiede<br>«<span class="ac">perché?</span>»</div>
+  <div class="rule" style="top:690px; left:96px"></div>
+  <div class="para" style="top:760px">…e poi <span class="hi">va a vedere davvero</span>. Non si ferma alla prima risposta:</div>
+  <div class="para" style="top:880px"><span class="pk">apre la porta</span> e guarda cosa c'è dentro. È così che la curiosità diventa <span class="gd">conoscenza</span>.</div>
   <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>3 / 6</span></div>
 </div>
 
-<!-- ===== 4 · IL SIMBOLO ===== -->
+<!-- ===== 4 · IL SUO SEGNO (vettoriale · nessuna foto) ===== -->
 <div class="slide" data-canvas-width="1080" data-canvas-height="1350">
   <div class="grid"></div><div class="frame"></div>
   <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
   <div class="kicker">Il suo segno</div>
-  <div class="halo" style="top:250px; left:50%; transform:translateX(-50%); width:560px; height:520px"></div>
-  <svg style="position:absolute; top:250px; left:50%; transform:translateX(-50%); width:420px; height:480px" viewBox="0 0 420 480">
-    <circle cx="210" cy="200" r="150" fill="none" stroke="#ec4899" stroke-width="3" opacity="0.55"/>
-    <text x="210" y="262" text-anchor="middle" font-family="playfair-display,serif" font-weight="800" font-size="220" fill="#ec4899">?</text>
+  <div class="halo" style="top:230px; left:50%; transform:translateX(-50%); width:580px; height:540px"></div>
+  <svg style="position:absolute; top:240px; left:50%; transform:translateX(-50%); width:440px; height:500px" viewBox="0 0 440 500">
+    <circle cx="220" cy="210" r="158" fill="none" stroke="#ec4899" stroke-width="3" opacity="0.55"/>
+    <text x="220" y="278" text-anchor="middle" font-family="playfair-display,serif" font-weight="800" font-size="230" fill="#ec4899">?</text>
     <!-- porticina -->
     <g stroke="#ffd98a" stroke-width="4" fill="none">
-      <path d="M150,420 L150,340 Q210,300 270,340 L270,420"/>
-      <line x1="138" y1="420" x2="282" y2="420"/>
-      <circle cx="252" cy="382" r="5" fill="#ffd98a"/>
+      <path d="M156,440 L156,356 Q220,314 284,356 L284,440"/>
+      <line x1="144" y1="440" x2="296" y2="440"/>
+      <circle cx="264" cy="400" r="5" fill="#ffd98a"/>
     </g>
   </svg>
-  <div class="h2" style="top:780px; text-align:center">Il «<span class="ac">?</span>» e la porticina</div>
-  <div class="body" style="top:880px; text-align:center">La <span class="pk">curiosità</span> che apre porte dove gli altri vedono solo un muro.</div>
+  <div class="h2" style="top:810px; text-align:center">Il «<span class="ac">?</span>» e la porticina</div>
+  <div class="para" style="top:920px; text-align:center">La <span class="pk">curiosità</span> che apre porte dove gli altri vedono solo un muro.</div>
   <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>4 / 6</span></div>
 </div>
 
-<!-- ===== 5 · COME LA RICONOSCI ===== -->
+<!-- ===== 5 · COME LA RICONOSCI (TESTO · carta d'identità, nessuna foto) ===== -->
 <div class="slide" data-canvas-width="1080" data-canvas-height="1350">
   <div class="grid"></div><div class="frame"></div>
   <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
   <div class="kicker">Come la riconosci</div>
-  <div class="pcard" style="top:200px; left:96px; width:380px; height:470px"><img src="img/vita.png" style="object-position:50% 18%"></div>
-  <div style="position:absolute; top:210px; left:520px; right:90px">
-    <div class="li"><span class="dotm" style="background:#5fc7f3"></span><span><b>Coda alta</b> lunghissima, da ballerina</span></div>
-    <div class="li"><span class="dotm" style="background:#7aa2ff"></span><span><b>Giacca di jeans</b> a bottoni, con tocchi rosa</span></div>
-    <div class="li"><span class="dotm" style="background:#ffd98a"></span><span><b>Lentiggini</b> e occhi castano scuro</span></div>
-    <div class="li"><span class="dotm" style="background:#ec4899"></span><span>Sguardo <b>sicuro</b>, un filo sfrontato</span></div>
+  <div class="bigtitle" style="top:180px; font-size:64px; font-family:'playfair-display',serif">Carta d'identità</div>
+  <div class="idbox" style="top:300px">
+    <div class="idrow"><div class="idtag">⟡ Capelli</div><div class="idval"><b>Coda alta</b> lunghissima, da ballerina — mora, mix colombiana e Sud Italia</div></div>
+    <div class="idrow"><div class="idtag">⟡ Divisa</div><div class="idval"><b>Giacca di jeans</b> a bottoni, con tocchi <span class="pk">rosa</span></div></div>
+    <div class="idrow"><div class="idtag">⟡ Volto</div><div class="idval"><b>Lentiggini</b> e occhi castano scuro</div></div>
+    <div class="idrow"><div class="idtag">⟡ Sguardo</div><div class="idval"><b>Sicuro</b>, un filo sfrontato</div></div>
   </div>
-  <div class="body" style="top:740px; text-align:center; left:96px; right:96px">Una sola, riconoscibile in ogni avventura: stesso volto, cambia solo… dove la porta la curiosità.</div>
+  <div class="para" style="bottom:170px; text-align:center">Una sola, riconoscibile in ogni avventura: <span class="hi">stesso volto</span>, cambia solo dove la porta la curiosità.</div>
   <div class="footer"><span><span class="dot">⟡</span>&nbsp;Personaggi</span><span class="nina">NINA</span><span>5 / 6</span></div>
 </div>
 
-<!-- ===== 6 · IL SUO POSTO + CHIUSURA ===== -->
+<!-- ===== 6 · IL SUO POSTO + CHIUSURA (WOW · ritorno sul sentiero) ===== -->
 <div class="slide" data-canvas-width="1080" data-canvas-height="1350">
-  <img class="scene" src="img/scena_ponte.png" style="object-position:50% 36%">
+  <img class="scene" src="img/scena_ponte.png" style="object-position:50% 30%">
   <div class="vtop"></div><div class="vbot"></div><div class="framelt"></div>
   <div class="toplabel">Titanium&nbsp;OS · L'Avventura</div>
   <div class="kicker">Il suo posto nel mondo</div>

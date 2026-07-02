@@ -5,7 +5,8 @@
   - [Regole](#regole)
   - [Formato standard](#formato-standard)
   - [Pipeline (un episodio  un carosello)](#pipeline-un-episodio-un-carosello)
-  - [Indice caroselli](#indice-caroselli)
+  - [Serie PREAMBOLO (più caroselli che introducono il mondo, prima degli episodi)](#serie-preambolo-più-caroselli-che-introducono-il-mondo-prima-degli-episodi)
+  - [Indice caroselli (episodi)](#indice-caroselli-episodi)
 
 <!-- /TOC -->
 
