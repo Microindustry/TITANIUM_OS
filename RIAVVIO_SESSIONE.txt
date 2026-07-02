@@ -17,11 +17,13 @@ narrativo (scene disegnate, zero foto, stesso sfondo/flusso di tutti i caroselli
   1) EP_N2_03 "la MISURA" al nuovo standard (16 slide blueprint; _build_ep.py + _render_all.py).
   2) Export Express degli episodi pronti (html_export_readiness_skill -> export_html_to_express).
   3) Controllare PRE_01 / PRE_02 (giunture/flusso). 4) Nina officina/tech (stesso volto).
-  5) rag-update canone Nina (NB: full rebuild lanciato il 02/07 in finestra UAC — verifica --stats).
+  5) rag-update canone Nina — GIA' FATTO 02/07 (full rebuild-hard verificato, vedi sotto).
 
-FATTO IL 02/07 (infra, pre-attacco FASE 0): dashboard riavviata (5173); ecosistema+Obsidian
-aggiornati (595 note/3230 ponti/2 isolate); indice Pietre (9/82); 0 orfani; _CANONE.md ok,
-0 violazioni framing; RAG full rebuild lanciato (rag_update_exclusive.ps1, finestra elevata). <<<
+FATTO IL 02/07 (infra, pre-attacco FASE 0 — tutto verificato): dashboard riavviata (5173);
+ecosistema+Obsidian aggiornati (595 note/3230 ponti/2 isolate); indice Pietre (9/82); 0 orfani;
+_CANONE.md ok, 0 violazioni framing; RAG full rebuild-hard COMPLETO E VERIFICATO
+(25049 semantico==bm25, HNSW pulito, heading-aware v4.1; query end-to-end: EP_N2_02 top hit
+= storie->RAG->Nina confermato). Default modello -> Fable 5 (.claude/settings.local.json). <<<
 
 ━━━ FATTO IN SESSIONE #51 ━━━
 • PREAMBOLO CHIUSO: PRE_01 (cos'e) + PRE_02 (come funziona) + PRE_03 v5 (scheda personaggi,

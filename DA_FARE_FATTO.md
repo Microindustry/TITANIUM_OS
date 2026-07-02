@@ -80,8 +80,9 @@
 - [✓] **Infra refresh (FASE 0 pre-attacco)**: dashboard riavviata (5173 su); ecosistema+Obsidian
   aggiornati (**595 note · 3230 ponti · 2 isolate**); indice Pietre (9/82); 0 orfani episodi;
   `_CANONE.md` presente, 0 violazioni di framing.
-- [◐] **RAG full rebuild** lanciato (`rag_update_exclusive.ps1`, finestra UAC elevata) — verificare
-  `--stats` (semantico==bm25) a inizio prossima sessione.
+- [✓] **RAG full rebuild** (`rag_update_exclusive.ps1`, post-Obsidian) **COMPLETO E VERIFICATO**:
+  25049 semantico==bm25 (HNSW pulito, heading-aware v4.1); query end-to-end conferma
+  **storie→RAG→Nina** (EP_N2_02 top hit, score 0.55). API riavviata (5001).
 - [ ] **🎯 ATTACCO ESERCITO (su FABLE)**: piano completo + 7 missioni ingegnerizzate in
   `DOCS/ATTACCO_20260702/_PIANO.md`. Lanciare 7 agenti paralleli (general-purpose, model=fable):
   design · sicurezza · scrittura · software · news-IA · gestionale · integrità-RAG. Report additivi

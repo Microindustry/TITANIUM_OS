@@ -1,5 +1,29 @@
 [
   {
+    "id": "BUS-f90f9b91",
+    "stato": "fatto",
+    "testo": "**Salva #51** completo (bussola/STATE/RIAVVIO, 0 orfani, tsc verde, pushato).",
+    "sessione": "Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)"
+  },
+  {
+    "id": "BUS-14450c19",
+    "stato": "fatto",
+    "testo": "**Infra refresh (FASE 0 pre-attacco)**: dashboard riavviata (5173 su); ecosistema+Obsidian",
+    "sessione": "Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)"
+  },
+  {
+    "id": "BUS-38f66a63",
+    "stato": "fatto",
+    "testo": "**RAG full rebuild** (`rag_update_exclusive.ps1`, post-Obsidian) **COMPLETO E VERIFICATO**:",
+    "sessione": "Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)"
+  },
+  {
+    "id": "BUS-a69e22e2",
+    "stato": "da_fare",
+    "testo": "**🎯 ATTACCO ESERCITO (su FABLE)**: piano completo + 7 missioni ingegnerizzate in",
+    "sessione": "Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)"
+  },
+  {
     "id": "BUS-f9ca96a7",
     "stato": "fatto",
     "testo": "**DECISO — dove si presenta Nina**: PRE_03 resta la **scheda-personaggi del preambolo**",
