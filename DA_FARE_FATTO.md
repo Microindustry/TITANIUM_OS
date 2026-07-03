@@ -112,6 +112,23 @@ snapshot git del vault PRIMA di toccare: `6037a45`).*
   **441 file / 22038 chunk** → `--snapshot` known-good n.3 in `_VAULT/BACKUPS/rag_snapshots/`.
   Watchdog ha rialzato l'API su indice sano. ⚠ bm25 22315 vs semantico 22038 (Δ277): lo riallinea
   il self-heal notturno — se domattina diverge ancora, guardarci.
+- [✓] **GUASTO 7 (trovato da Matteo: "gli episodi autogenerati si sono fermati") — NOTTURNA MORTA DAL 23/06,
+  Nina ferma a EP_N2_51 (25/06)**. Diagnosi con riproduzione controllata: in `rag_recover.ps1` (introdotto
+  il 23/06) `Start-Api` usava `Start-Process -RedirectStandardOutput` → CreateProcess con EREDITÀ HANDLE →
+  l'API appena avviata ereditava lo stdout del bat (= `night_research.log`, aperto senza share-write) e lo
+  teneva **lockato per sempre** → ogni `>> LOG` dopo il recovery falliva → **tutti gli step saltati in
+  silenzio** (topics, ricerca, Nina, riflusso FATTI, rag-update, snapshot, mente_version), exit 1. story_agent
+  (task separato, 02:07) non c'entrava: lui generava regolare. **Fix (commit 36c85bf3):** cmd INTERMEDIO senza
+  inheritance (redirect fatto dal figlio) in `rag_recover.ps1` + stessa mina disinnescata in `restart_api.ps1`,
+  `rebuild_rag_clean.ps1`, `rag_update_exclusive.ps1`; `night_research.bat` v2.2 logga il recovery su
+  `rag_recover.log` separato (cintura). **Verificato con test elevato**: `[test] before → after → done` ✓,
+  log scrivibile dopo ✓, API health 200 ✓. Extra: il test L2 ha riallineato il RAG (22313==22313, Δ277 sparita).
+  → Da stanotte Nina riprende (EP_N2_52) + tornano ricerca/riflusso. Domattina: controllare in fondo a
+  `night_research.log` la riga `done` + un nuovo EP_N2 in S_AVVENTURA.
+- [✓] Grafo "più scarico"/nodi soli (Matteo): `Senza nome.base` (file Bases accidentale) + daily vuota
+  archiviati; gli `EP_AV_*`/altri puntini = leftover in `_ARCHIVIO` annidati → nascosti dal filtro; config
+  grafo scritta A OBSIDIAN CHIUSO (filtro `-path:_ARCHIVIO`, allegati sciolti OFF, hideUnresolved ON,
+  forze coese linkDistance 345→200) e app riaperta con la config nuova.
 - [ ] TOP 10 **#3** (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild) = prossimo della catena verità.
 - [ ] TOP 10 **#9**: `INDICE_CAMMINO` ora è UNA copia sola (repo→vault) ma i 9/15 titoli sbagliati restano → rigenerarlo da `episodes.json`.
 
