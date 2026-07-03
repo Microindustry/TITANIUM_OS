@@ -69,9 +69,12 @@ Write-Host "== 5) riavvio api_server ==" -ForegroundColor Cyan
 # redirect su logfile = handle OS validi (Hidden lascia stdout/stderr invalidi e il
 # codice nativo torch ci crasha sopra su /api/rag/search). (#42 blackout)
 $logDir = Join-Path $TI "logs"; if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
-Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden `
-    -RedirectStandardOutput (Join-Path $logDir "api_server.log") `
-    -RedirectStandardError  (Join-Path $logDir "api_server.err.log")
+# (#53) niente -RedirectStandard*: forza CreateProcess con eredita' handle e il figlio
+# si porta dietro lo stdout del chiamante (log lockato per sempre se lo script gira
+# dentro un bat con >>). Il redirect lo fa un cmd intermedio: handle tutti suoi.
+$apiOut = Join-Path $logDir "api_server.log"; $apiErr = Join-Path $logDir "api_server.err.log"
+Start-Process -FilePath "cmd.exe" -WorkingDirectory $TI -WindowStyle Hidden `
+    -ArgumentList ("/c `"`"$PY`" api_server.py >> `"$apiOut`" 2>>`"$apiErr`"`"")
 
 Write-Host "== 6) riavvio watchdog ==" -ForegroundColor Cyan
 try { Start-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop; Write-Host "  TI_Watchdog riavviato" } catch { Write-Host "  (non ho potuto riavviare il watchdog: $_)" }

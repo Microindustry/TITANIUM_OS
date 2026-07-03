@@ -45,9 +45,12 @@ $c = [regex]::Match($stats, '"chunks":\s*(\d+)'); $b = [regex]::Match($stats, '"
 Write-Host ("  semantico={0} bm25={1}" -f $c.Groups[1].Value, $b.Groups[1].Value)
 
 Write-Host "== 4) riavvio api (logfile = handle validi) + watchdog + watcher ==" -ForegroundColor Cyan
-Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden `
-    -RedirectStandardOutput (Join-Path $logDir "api_server.log") `
-    -RedirectStandardError  (Join-Path $logDir "api_server.err.log")
+# (#53) niente -RedirectStandard*: forza CreateProcess con eredita' handle e il figlio
+# si porta dietro lo stdout del chiamante (log lockato per sempre se lo script gira
+# dentro un bat con >>). Il redirect lo fa un cmd intermedio: handle tutti suoi.
+$apiOut = Join-Path $logDir "api_server.log"; $apiErr = Join-Path $logDir "api_server.err.log"
+Start-Process -FilePath "cmd.exe" -WorkingDirectory $TI -WindowStyle Hidden `
+    -ArgumentList ("/c `"`"$PY`" api_server.py >> `"$apiOut`" 2>>`"$apiErr`"`"")
 try { Start-ScheduledTask -TaskName "TI_Watchdog" -ErrorAction Stop } catch {}
 $PYW = $PY -replace 'python\.exe$','pythonw.exe'; if (-not (Test-Path $PYW)) { $PYW = $PY }
 Start-Process -FilePath $PYW -ArgumentList "$TI\AUTOMATIONS\core\watcher.py" -WorkingDirectory $TI -WindowStyle Hidden

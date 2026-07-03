@@ -43,8 +43,12 @@ Start-Sleep -Milliseconds 1000
 $logDir = Join-Path $TI "logs"
 if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
 $apiLog = Join-Path $logDir "api_server.log"
-Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden `
-    -RedirectStandardOutput $apiLog -RedirectStandardError (Join-Path $logDir "api_server.err.log")
+# (#53) niente -RedirectStandard*: forza CreateProcess con eredita' handle e il figlio
+# si porta dietro lo stdout del chiamante (log lockato per sempre se lo script gira
+# dentro un bat con >>). Il redirect lo fa un cmd intermedio: handle tutti suoi.
+$apiErr = Join-Path $logDir "api_server.err.log"
+Start-Process -FilePath "cmd.exe" -WorkingDirectory $TI -WindowStyle Hidden `
+    -ArgumentList ("/c `"`"$PY`" api_server.py >> `"$apiLog`" 2>>`"$apiErr`"`"")
 Start-Sleep -Seconds 3
 
 # 3) Verifica /api/health

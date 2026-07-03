@@ -23,8 +23,12 @@ if not defined PYTHON (
 ::     Chroma lo ricostruisce da sqlite (no ri-embed, secondi); L2 rebuild da corpus.
 ::   - DIVERGENZA (semantico!=bm25, incrementale interrotto): L2 riallinea.
 :: Se il RAG e' gia' sano E allineato non fa nulla. (sostituisce rebuild_rag_clean, #42)
-echo [night_research] self-heal RAG a 2 livelli (corruzione + divergenza) >> "%LOG%"
-powershell -NoProfile -ExecutionPolicy Bypass -File "%TI_ROOT%\SERVICES\rag_recover.ps1" >> "%LOG%" 2>&1
+:: v2.2 (#53): il recovery logga su file SUO. Cintura oltre al fix in rag_recover.ps1:
+:: se mai un figlio ereditasse di nuovo un handle di log, si locka rag_recover.log
+:: (che powershell riapre a ogni run), NON questo log — e il bat continua comunque.
+echo [night_research] self-heal RAG a 2 livelli (dettaglio in rag_recover.log) >> "%LOG%"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%TI_ROOT%\SERVICES\rag_recover.ps1" >> "%TI_ROOT%\DATA\logs\rag_recover.log" 2>&1
+echo [night_research] self-heal concluso (errorlevel %ERRORLEVEL%) >> "%LOG%"
 
 :: topic GUIDATI da STATE + RAG (night_topics.py scrive DATA\night_topics.txt)
 "%PYTHON%" AUTOMATIONS\core\night_topics.py >> "%LOG%" 2>&1

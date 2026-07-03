@@ -77,11 +77,17 @@ function Stop-RagHolders {
 }
 
 function Start-Api {
-    # NB: redirect su logfile = handle OS validi. -WindowStyle Hidden lascia
-    # stdout/stderr invalidi e il codice nativo (torch) ci crasha sopra. (#42)
-    Start-Process -FilePath $PY -ArgumentList "api_server.py" -WorkingDirectory $TI -WindowStyle Hidden `
-        -RedirectStandardOutput (Join-Path $logDir "api_server.log") `
-        -RedirectStandardError  (Join-Path $logDir "api_server.err.log")
+    # NB: l'api ha bisogno di stdout/stderr VALIDI (torch crasha su handle invalidi, #42),
+    # ma MAI -RedirectStandardOutput qui (#53): quel flag forza CreateProcess con EREDITA'
+    # DEGLI HANDLE, e l'api si portava dietro anche lo stdout del chiamante — cioe' il LOG
+    # della notturna, aperto da cmd senza share-write. Risultato: log lockato per sempre,
+    # ogni `>> LOG` del bat dopo il recovery falliva e TUTTI gli step (topics, Nina,
+    # riflusso, rag-update) venivano saltati in silenzio dal 23/06. Il redirect lo fa un
+    # cmd INTERMEDIO (ShellExecute: zero eredita'; handle del log tutti suoi).
+    $out = Join-Path $logDir "api_server.log"
+    $err = Join-Path $logDir "api_server.err.log"
+    Start-Process -FilePath "cmd.exe" -WorkingDirectory $TI -WindowStyle Hidden `
+        -ArgumentList ("/c `"`"$PY`" api_server.py >> `"$out`" 2>>`"$err`"`"")
 }
 
 function Finish($msg, $color) {
