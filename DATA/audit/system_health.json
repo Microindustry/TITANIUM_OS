@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-02T15:44:35",
-  "date": "2026-07-02",
-  "git_head": "14c6f2e1",
-  "rag_chunks": 24892,
-  "n_episodes": 252,
-  "n_commits_7d": 23,
+  "last_audit": "2026-07-03T03:52:33",
+  "date": "2026-07-03",
+  "git_head": "d4faf548",
+  "rag_chunks": 25120,
+  "n_episodes": 255,
+  "n_commits_7d": 19,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -13,12 +13,12 @@
     "IDENTITY": 50
   },
   "log_issues": [],
-  "vault_orphans": 0,
+  "vault_orphans": 2,
   "critiche": {
     "added": 6,
-    "auto_closed": 22,
-    "total": 123,
-    "open": 6
+    "auto_closed": 0,
+    "total": 129,
+    "open": 12
   },
   "verdict": "OK"
 }

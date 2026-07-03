@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-c3c737729b",
+    "date": "2026-07-03",
+    "git": "d4faf548",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Le chiavi .env sono flaggate per rotazione (red-team #38) e il blocker è ancora aperto. Con 7 agenti Fable in arrivo in sessione #52 che toccheranno API esterne in parallelo, una chiave compromessa in quella finestra espone a uso non autorizzato durante il momento di massima attività API del progetto.",
+    "azione": "Ruotare le chiavi .env PRIMA di lanciare l'Attacco Esercito in sessione #52 — il rischio non è teorico durante un multi-agent burst.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-03"
+  },
+  {
+    "id": "AUD-707cdc1a10",
+    "date": "2026-07-03",
+    "git": "d4faf548",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La bussola_open contiene almeno 5 voci distinte su PRE_01/PRE_02/PRE_03/PRE_04 e Nina versioni outfit, distribuite su sessioni diverse e non consolidate. Il next_step di sessione #52 cita al punto (3) 'PRE_01/02' senza chiarire se è revisione giunture, export Express, o entrambi. Il rischio concreto: in sessione si perde tempo a riorientarsi su quale sotto-task del preambolo è effettivamente aperto, invece di produrre.",
+    "azione": "All'apertura di #52, prima dell'Attacco Esercito, scrivere in RIAVVIO una riga sola per il preambolo: 'PRE_01/02: solo controllo giunture. PRE_03: già chiuso. PRE_04: sospeso.' — chiude l'ambiguità in 3 minuti.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-03"
+  },
+  {
+    "id": "AUD-59519341d9",
+    "date": "2026-07-03",
+    "git": "d4faf548",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Il blocker 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna' è ancora aperto. Con 25.120 chunk e cicli notturni attivi, ogni run di ricerca che colpisce il rate-limit restituisce dati incompleti senza errore visibile nei log (log_issues=[]): il sistema lavora ma con fonti amputate silenziosamente.",
+    "azione": "Matteo inserisce SEMANTIC_SCHOLAR_API_KEY in .env nella prossima apertura di sessione, prima di lanciare qualsiasi agente — costa 2 minuti e sblocca la qualità delle fonti notturne.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-03"
+  },
+  {
+    "id": "AUD-58589376b3",
+    "date": "2026-07-03",
+    "git": "d4faf548",
+    "area": "RAG",
+    "severity": "bassa",
+    "finding": "Due nodi orfani rilevati nell'inventario notturno: 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE. Non sono collegati ad alcun nodo attivo del vault. Con 25.120 chunk totali sono rumore minimo ora, ma segnalano che il processo di ingestione non ha un filtro di rilevanza attivo: se il pattern scala, il RAG accumula contesto irrilevante che degrada la precisione delle query.",
+    "azione": "Archiviare o eliminare i due orfani nel prossimo ciclo di manutenzione; valutare se l'ingestione notturna ha un filtro dominio attivo o ingerisce tutto il vault indiscriminatamente.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-03"
+  },
+  {
+    "id": "AUD-48ab2eed5f",
+    "date": "2026-07-03",
+    "git": "d4faf548",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "L'UPS hardware è listato come blocker esplicito con causa tecnica documentata: corruzione indice HNSW per power-loss, 3 volte in 2 giorni. Nessun log_issue stanotte (log_issues=[]), ma il pattern ricorrente rende il prossimo guasto statisticamente imminente. Ogni corruzione forza un RAG rebuild su 25.120 chunk: tempo macchina perso e rischio di sessione compromessa.",
+    "azione": "Ordinare UPS (50-80€) insieme al mandrino ER20 nella stessa spedizione per azzerare le spese di consegna — il guasto è a quando, non se.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-03"
+  },
+  {
+    "id": "AUD-3012e75131",
+    "date": "2026-07-03",
+    "git": "d4faf548",
+    "area": "V32",
+    "severity": "bassa",
+    "finding": "Il pillar V32 è al 65% e il blocco fisico immediato (martinetto Vevor da montare → prima colata giunto) dipende da un acquisto ancora aperto (mandrino 2.2kW ER20). I due prerequisiti fisici — mandrino e montaggio Vevor — sono in serie: senza mandrino non si fresano gli stampi MIMS, senza martinetto non si esegue la prima colata VULCAN. Il percorso critico è bloccato su un ordine.",
+    "azione": "Inserire l'ordine mandrino ER20 nella stessa transazione dell'UPS: entrambi sono acquisti sotto 150€ che sbloccano percorsi fisici critici e aspettano solo l'azione di Matteo.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-03"
+  },
+  {
     "id": "AUD-eca50c7692",
     "date": "2026-07-02",
     "git": "14c6f2e1",
