@@ -106,7 +106,12 @@ snapshot git del vault PRIMA di toccare: `6037a45`).*
   **500/501 note di sapere connesse**. Verifica finale: **link rotti veri 46→0 · orfani veri 14→1**
   (resta solo la daily `2026-06-24.md`). Filtro grafo `-path:_ARCHIVIO`: da mettere A MANO nella barra
   filtro del graph view (Obsidian aperto sovrascrive `graph.json` — l'ho impostato ma l'app l'ha ripristinato).
-- [◐] RAG `--incremental` lanciato a fine sessione (molti file toccati) — verificare `--stats` al termine.
+- [✓] RAG riallineato — con INCIDENTE risolto: il primo `--incremental` è morto in segfault (HNSW
+  corrotto dai delete massivi dell'archiviazione, pattern noto). Recovery: kill API elevata (UAC,
+  teneva il lock su chroma_db) → `--drop-hnsw` (L1, no ri-embed) → `--incremental` OK → `PROBE_OK` →
+  **441 file / 22038 chunk** → `--snapshot` known-good n.3 in `_VAULT/BACKUPS/rag_snapshots/`.
+  Watchdog ha rialzato l'API su indice sano. ⚠ bm25 22315 vs semantico 22038 (Δ277): lo riallinea
+  il self-heal notturno — se domattina diverge ancora, guardarci.
 - [ ] TOP 10 **#3** (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild) = prossimo della catena verità.
 - [ ] TOP 10 **#9**: `INDICE_CAMMINO` ora è UNA copia sola (repo→vault) ma i 9/15 titoli sbagliati restano → rigenerarlo da `episodes.json`.
 
