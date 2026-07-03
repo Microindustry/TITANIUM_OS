@@ -25,6 +25,20 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-03 · 8 commit
+- `993c5da5` auto: night_audit - cartella clinica 03/07/2026
+- `d4faf548` auto: story_agent - episodi generati 03/07/2026
+- `8b1bbba8` chore(salva): chiusura sessione — RAG rebuild verificato + STATE/bussola/RIAVVIO allineati per sessione Fable
+- `4b9559a0` chore: PIANO D'ATTACCO esercito (da eseguire su Fable) + infra refresh (dashboard/Obsidian/Pietre) + default Fable
+- `436be627` chore: gitignore .claude/settings.local.json (preferenze locali di macchina)
+- `b454d39d` chore(salva): chiusura #51 — preambolo Nina CHIUSO (PRE_03 v5 personaggi) + EP_N2_01/02 al nuovo standard (16 slide blueprint SVG)
+- `e5040098` auto: story_agent - episodi generati 02/07/2026
+- `679cf214` auto: night_audit - cartella clinica 02/07/2026
+
+_episodi: 255 · critiche aperte: 12 (117 risolte) · RAG: 25120 chunk_
+
+
+
 ## 2026-07-02 · 2 commit
 - `730d6f69` chore(salva): pulizia bozze avatar (tieni solo Nina definitiva + deliverable) + PRE_03 redesign (meno immagini/più testo) in bussola
 - `0b836e97` chore(salva): chiusura #50 — Nina volto DEFINITIVO (3D Gamma) + versione vita denim + PRE_03 'I Personaggi' (solo Nina, volto vero) + 8 Pietre con icone (PRE_01 s11)
