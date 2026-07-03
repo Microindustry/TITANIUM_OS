@@ -1,7 +1,10 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
-  - [Sessione 52  02/07/2026  ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)](#sessione-52-02072026-attacco-esercito-su-fable-7-specialisti-in-parallelo)
+  - [Sessione 53  03/07/2026  OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)](#sessione-53-03072026-obsidian-ecosistema-vero-vault-coeso-non-solo-senza-orfani)
+  - [Sessione 52  02-03/07/2026  ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)](#sessione-52-02-03072026-attacco-esercito-su-fable-7-specialisti-in-parallelo)
+    - [TOP 10 dallATTACCO  DA ESEGUIRE a ondate (additivo, propose-only)](#top-10-dallattacco-da-eseguire-a-ondate-additivo-propose-only)
+    - [BACKLOG COMPLETO  TUTTI i finding dei 7 report (oltre alle TOP 10 sopra)](#backlog-completo-tutti-i-finding-dei-7-report-oltre-alle-top-10-sopra)
   - [Sessione 52-prep  02/07/2026  infra refresh  PIANO DATTACCO congelato (da eseguire su FABLE)](#sessione-52-prep-02072026-infra-refresh-piano-dattacco-congelato-da-eseguire-su-fable)
   - [Sessione 51  27/06/2026  PRE_03 redesign (meno immagini / più testo)  decisione episodio personaggi](#sessione-51-27062026-pre03-redesign-meno-immagini-più-testo-decisione-episodio-personaggi)
   - [Sessione 50  26-27/06/2026  Nina ha un VOLTO definitivo (3D)  PRE_03 I Personaggi (solo Nina)](#sessione-50-26-27062026-nina-ha-un-volto-definitivo-3d-pre03-i-personaggi-solo-nina)
@@ -74,6 +77,41 @@
 
 ---
 
+## Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)
+
+*Richiesta Matteo: il vault deve risultare anche ESTETICAMENTE interconnesso — oltre agli orfani,
+c'erano cose che non funzionavano. Diagnosi completa → 6 guasti trovati e chiusi (tutto additivo,
+snapshot git del vault PRIMA di toccare: `6037a45`).*
+
+- [✓] **GUASTO 1 — albero doppione `SESSIONI/STORIE/`**: 72 copie STANTIE (senza FATTI/TOC/Collegati)
+  + 10 originali duplicavano `STORIE/` → 82 nodi doppi nel grafo, wikilink ambigui. → `git mv` in
+  `_ARCHIVIO/SESSIONI_STORIE_20260703/` (nulla cancellato). Stem duplicati: **81 → 6** (i 6 restanti = benigni).
+- [✓] **GUASTO 2 — 4 hub `EP_SEED_*` "fantasma"** (30 wikilink rotti): i figli L1/L2 linkavano
+  `[[EP_SEED_GRAPHIFY]]` ma la nota si chiama `EP_SEED_GRAPHIFY_grafo_del_repo` → riscritti alla FONTE
+  repo (`DATABASE/episodes/S2_SISTEMA/`) come `[[nome_vero|EP_SEED_X]]`. Idem CONTROLLO/RETE/WATCHER.
+- [✓] **GUASTO 3 — la bibbia del MONDO non era nel vault**: `[[BIBBIA_DEL_MONDO]]`/`[[MAPPA_AVVENTURA]]`/
+  `[[PIETRE]]` in `_CANONE` erano nodi fantasma (i file vivono in `CONTENT_ENGINE/DATABASE/MONDO/`).
+  → `setup_obsidian.py` v1.1: nuovo `sync_mondo()` → `MENTE/KNOWLEDGE/MONDO/` (13 file, vault_intersect
+  li intesse); 4 copie manuali stantie (INDICE_CAMMINO, NINA_V2_*, PRODUZIONE_NINA) → `_ARCHIVIO`.
+- [✓] **GUASTO 4 — link alla memoria di Claude = nodi fantasma**: creati 7 stub curati in
+  `KNOWLEDGE/MEMORIA_CLAUDE/` (project_mims_ip/core/market, feedback_no_recuperato, loop_autonomo,
+  project_investor_pitch, project_storie_n_livelli) + normalizzati i link kebab→underscore in 3 note.
+- [✓] **GUASTO 5 = TOP 10 #2 — canone V32 stantio/vietato**: le 2 note puntate da `_CANONE.md:13`
+  bonificate con `canon_guard.clean` (PAIRS estesi con le varianti "Euro X,XXX" → 0 residui "recuperato")
+  + banner **⚠ SUPERSEDED (maggio 2026): corpo unico** in testa (entra nei primi chunk RAG);
+  `_CANONE` ripuntato ("storia tecnica" + verità attuale esplicita) + range Nina aggiornato **EP_N2_01…51**
+  + fantasma `[[link]]` fixato. Anche `[[reel]]`→`/reel` in REEL_NINA (fonte+vault).
+- [✓] **GUASTO 6 — grafo Obsidian**: catena completa rilanciata (storie_intersect 1109 legami/218 ep ·
+  ecosystem_bridge 2821 ponti cross-mondo · vault_intersect 4766 legami, 52% cross-dominio) →
+  **500/501 note di sapere connesse**. Verifica finale: **link rotti veri 46→0 · orfani veri 14→1**
+  (resta solo la daily `2026-06-24.md`). Filtro grafo `-path:_ARCHIVIO`: da mettere A MANO nella barra
+  filtro del graph view (Obsidian aperto sovrascrive `graph.json` — l'ho impostato ma l'app l'ha ripristinato).
+- [◐] RAG `--incremental` lanciato a fine sessione (molti file toccati) — verificare `--stats` al termine.
+- [ ] TOP 10 **#3** (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild) = prossimo della catena verità.
+- [ ] TOP 10 **#9**: `INDICE_CAMMINO` ora è UNA copia sola (repo→vault) ma i 9/15 titoli sbagliati restano → rigenerarlo da `episodes.json`.
+
+---
+
 ## Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)
 
 > ### ▶ SI RIPARTE DA QUI — PROSSIMA SESSIONE #53 (aprire con FABLE 5)
@@ -114,7 +152,8 @@
 - [ ] **1 · MOSSA 1 "checkout che sblocca tutto"** (06): 1 ordine = martinetto Vevor 20t + mandrino
   2.2kW ER20 (~180€) + UPS (~50-80€). Chiude 3 blocker fermi da ~4 mesi + innesca 5 output
   (colata VULCAN → BEP Via B → stampo tile → fine corruzioni HNSW → reel prima colata). *Miglior €/leva.*
-- [ ] **2 · RAG P0 — `_CANONE.md:13` punta alla verità V32 VECCHIA e vietata** (07): indica i doc
+- [✓] **2 · RAG P0 — `_CANONE.md:13` punta alla verità V32 VECCHIA e vietata** (07) — **FATTO in #53**
+  (banner SUPERSEDED + PAIRS estesi + bonifica 0 residui + _CANONE ripuntato): indica i doc
   "V32 su molle + recuperato/Euro 0" (superati: corpo unico mag 2026); Nina/story groundano sul falso.
   `canon_guard.clean` non li matcha ("Euro"≠"EUR" nei PAIRS). Fix: ripuntare canone + estendere PAIRS.
 - [ ] **3 · RAG P0 — 55 file di versioni superate dentro il canone** (07): `ASSOLUTO/VERSIONI`(13) +

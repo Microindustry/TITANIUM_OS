@@ -13,7 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Il carico va sullo schermo, non nella testa](#il-carico-va-sullo-schermo-non-nella-testa)
-    - [Approfondimento LV1 di EP_SEED_CONTROLLO  non ricordare: guardare](#approfondimento-lv1-di-epseedcontrollo-non-ricordare-guardare)
+    - [Approfondimento LV1 di EP_SEED_CONTROLLO_anti_sovraccaricoEP_SEED_CONTROLLO  non ricordare: guardare](#approfondimento-lv1-di-epseedcontrolloantisovraccaricoepseedcontrollo-non-ricordare-guardare)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 5
 
 
 # Il carico va sullo schermo, non nella testa
-### Approfondimento LV1 di [[EP_SEED_CONTROLLO]] · "non ricordare: guardare"
+### Approfondimento LV1 di [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]] · "non ricordare: guardare"
 
 ## DA DOVE VIENE
 
@@ -58,7 +58,7 @@ ricostruisci.
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_CONTROLLO]].
+- **Sale al principale:** [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]].
 - **Fratelli LV1:** [[EP_SEED_CONTROLLO_L1_STATOLIVE]] (lo stato dev'essere vero), [[EP_SEED_CONTROLLO_L1_CEDIBILE]] (e leggibile da altri).
 - **Aggancio Nina:** "il pannello con le sagome" — ed è letteralmente l'**OS che tiene tutto** di cui Nina ha
   bisogno (lei si perde come me): il sistema che ricorda al posto suo.

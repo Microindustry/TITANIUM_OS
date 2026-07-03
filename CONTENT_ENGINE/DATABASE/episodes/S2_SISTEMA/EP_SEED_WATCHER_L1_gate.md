@@ -13,7 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Il gate di rilevanza  tenere il segnale, buttare il rumore](#il-gate-di-rilevanza-tenere-il-segnale-buttare-il-rumore)
-    - [Approfondimento LV1 di EP_SEED_WATCHER  raccogliere è facile, scegliere è il lavoro](#approfondimento-lv1-di-epseedwatcher-raccogliere-è-facile-scegliere-è-il-lavoro)
+    - [Approfondimento LV1 di EP_SEED_WATCHER_keylessEP_SEED_WATCHER  raccogliere è facile, scegliere è il lavoro](#approfondimento-lv1-di-epseedwatcherkeylessepseedwatcher-raccogliere-è-facile-scegliere-è-il-lavoro)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 5
 
 
 # Il gate di rilevanza — tenere il segnale, buttare il rumore
-### Approfondimento LV1 di [[EP_SEED_WATCHER]] · "raccogliere è facile, scegliere è il lavoro"
+### Approfondimento LV1 di [[EP_SEED_WATCHER_keyless|EP_SEED_WATCHER]] · "raccogliere è facile, scegliere è il lavoro"
 
 ## DA DOVE VIENE
 
@@ -56,7 +56,7 @@ e veri** che tanti e a caso — la regola "niente teatro" applicata ai dati in i
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_WATCHER]].
+- **Sale al principale:** [[EP_SEED_WATCHER_keyless|EP_SEED_WATCHER]].
 - **Fratelli LV1:** [[EP_SEED_WATCHER_L1_KEYLESS]], [[EP_SEED_WATCHER_L1_TIER]].
 - **Aggancio Nina:** "il calibro passa/non passa" — una soglia è un concetto perfetto per i bambini: una
   porta che fa entrare solo le cose abbastanza importanti.

@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [I nodi-dio  le stelle che tengono il grafo](#i-nodi-dio-le-stelle-che-tengono-il-grafo)
-    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutti i nodi pesano uguale](#approfondimento-lv1-di-epseedgraphify-non-tutti-i-nodi-pesano-uguale)
+    - [Approfondimento LV1 di EP_SEED_GRAPHIFY_grafo_del_repoEP_SEED_GRAPHIFY  non tutti i nodi pesano uguale](#approfondimento-lv1-di-epseedgraphifygrafodelrepoepseedgraphify-non-tutti-i-nodi-pesano-uguale)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME SI TROVANO (semplice, poi preciso)](#come-si-trovano-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # I nodi-dio — le stelle che tengono il grafo
-### Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · "non tutti i nodi pesano uguale"
+### Approfondimento LV1 di [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] · "non tutti i nodi pesano uguale"
 
 ## DA DOVE VIENE
 
@@ -61,7 +61,7 @@ ovunque.
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (la mappa intera).
+- **Sale al principale:** [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] (la mappa intera).
 - **Fratello LV1:** [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] (i quartieri) — community = *gruppi*, nodi-dio =
   *i pochi che li tengono insieme*. Due facce della stessa mappa.
 - **Aggancio Nina:** è il "vero dietro" delle **stelle** in `EP_AV_04 — La Grande Mappa` (la stella più

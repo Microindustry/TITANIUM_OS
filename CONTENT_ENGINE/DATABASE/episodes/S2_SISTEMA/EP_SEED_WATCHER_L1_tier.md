@@ -13,7 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Chi guardare più spesso  il tier a rotazione 48h](#chi-guardare-più-spesso-il-tier-a-rotazione-48h)
-    - [Approfondimento LV1 di EP_SEED_WATCHER  non tutti meritano la stessa attenzione, ogni giorno](#approfondimento-lv1-di-epseedwatcher-non-tutti-meritano-la-stessa-attenzione-ogni-giorno)
+    - [Approfondimento LV1 di EP_SEED_WATCHER_keylessEP_SEED_WATCHER  non tutti meritano la stessa attenzione, ogni giorno](#approfondimento-lv1-di-epseedwatcherkeylessepseedwatcher-non-tutti-meritano-la-stessa-attenzione-ogni-giorno)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 5
 
 
 # Chi guardare più spesso — il tier a rotazione 48h
-### Approfondimento LV1 di [[EP_SEED_WATCHER]] · "non tutti meritano la stessa attenzione, ogni giorno"
+### Approfondimento LV1 di [[EP_SEED_WATCHER_keyless|EP_SEED_WATCHER]] · "non tutti meritano la stessa attenzione, ogni giorno"
 
 ## DA DOVE VIENE
 
@@ -56,7 +56,7 @@ ridondanza: se ho già visto una fonte di recente, non la rivedo subito. Risulta
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_WATCHER]].
+- **Sale al principale:** [[EP_SEED_WATCHER_keyless|EP_SEED_WATCHER]].
 - **Fratelli LV1:** [[EP_SEED_WATCHER_L1_KEYLESS]] (da dove guarda), [[EP_SEED_WATCHER_L1_GATE]] (cosa tiene).
 - **Aggancio Nina:** "i clienti grossi spesso, i piccoli a turno" — una lezione di **priorità e
   attenzione** semplicissima da animare.

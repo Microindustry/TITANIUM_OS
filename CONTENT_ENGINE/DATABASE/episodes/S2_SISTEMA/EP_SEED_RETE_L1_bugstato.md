@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Non era un bug di codice, era un bug di stato](#non-era-un-bug-di-codice-era-un-bug-di-stato)
-    - [Approfondimento LV1 di EP_SEED_RETE  il codice era giusto, il mondo intorno no](#approfondimento-lv1-di-epseedrete-il-codice-era-giusto-il-mondo-intorno-no)
+    - [Approfondimento LV1 di EP_SEED_RETE_grafo_due_sorgentiEP_SEED_RETE  il codice era giusto, il mondo intorno no](#approfondimento-lv1-di-epseedretegrafoduesorgentiepseedrete-il-codice-era-giusto-il-mondo-intorno-no)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [I DUE GUASTI DI STATO](#i-due-guasti-di-stato)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # Non era un bug di codice, era un bug di stato
-### Approfondimento LV1 di [[EP_SEED_RETE]] · "il codice era giusto, il mondo intorno no"
+### Approfondimento LV1 di [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]] · "il codice era giusto, il mondo intorno no"
 
 ## DA DOVE VIENE
 
@@ -60,12 +60,12 @@ La cura non è stata toccare il codice: **restart pulito** (uccide il doppione) 
 1. **Cambia dove guardi.** Davanti a un guasto, prima chiediti: *è il codice o è lo stato?* (processi vivi,
    porte, cache, indici, variabili d'ambiente). Metà delle ore perse sono qui.
 2. **Lo stato è invisibile.** Non sta nei file: sta in cosa è *acceso adesso*. Per questo serve una vista
-   dello stato (lega il Centro di Controllo, [[EP_SEED_CONTROLLO]]).
+   dello stato (lega il Centro di Controllo, [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]]).
 3. **Una vista di sé** te lo fa vedere: il sistema ha trovato il bug solo quando ha avuto uno specchio.
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_RETE]] (la galassia riparata).
+- **Sale al principale:** [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]] (la galassia riparata).
 - **Fratelli LV1:** [[EP_SEED_RETE_L1_TSNE]], [[EP_SEED_RETE_L1_TOGGLE]].
 - **Aggancio Nina:** "la macchina è giusta ma la situazione no" — un concetto potente per un bambino:
   l'errore non è sempre *nella cosa*, a volte è in *come è messa*. Candidato fonte per un'avventura di Nina.

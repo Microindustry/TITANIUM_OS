@@ -1,4 +1,4 @@
-# setup_obsidian.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.0 | 2026-06-13
+# setup_obsidian.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.1 | 2026-07-03
 # SETUP del vault Obsidian: porta DENTRO MENTE (il vault) anche le STORIE/episodi che
 # vivono nel repo, cosi Obsidian mostra TUTTO il sapere in un posto solo (conoscenza +
 # racconto + evoluzione). Poi rigenera HOME + indici. Un comando = vault pronto.
@@ -16,8 +16,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 EPISODES_SRC = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
 EPISODES_JSON = ROOT / "DASHBOARD" / "src" / "data" / "episodes.json"
+MONDO_SRC = ROOT / "CONTENT_ENGINE" / "DATABASE" / "MONDO"
 MENTE = Path("C:/Users/teo/MICROINDUSTRY/MENTE")
 STORIE_DST = MENTE / "STORIE"
+MONDO_DST = MENTE / "KNOWLEDGE" / "MONDO"
 
 _C_START = "<!-- COLLEGATI:start (auto, storie_intersect) -->"
 _C_END = "<!-- COLLEGATI:end -->"
@@ -42,6 +44,25 @@ def sync_episodes() -> int:
         dst = STORIE_DST / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         # copia solo se diverso (mtime/size) — evita scritture inutili
+        if dst.exists() and dst.stat().st_size == src.stat().st_size \
+           and int(dst.stat().st_mtime) == int(src.stat().st_mtime):
+            continue
+        shutil.copy2(src, dst)
+        n += 1
+    return n
+
+
+def sync_mondo() -> int:
+    """v1.1: porta nel vault anche la bibbia del MONDO (BIBBIA_DEL_MONDO, MAPPA_AVVENTURA,
+    PIETRE, NINA_V2_*, ...) — prima [[BIBBIA_DEL_MONDO]] e [[MAPPA_AVVENTURA]] in _CANONE
+    erano wikilink fantasma. Solo i .md di primo livello (LOGHI/POSTER/PERSONAGGI restano
+    nel repo). Destinazione KNOWLEDGE/MONDO: cosi' vault_intersect li intesse nella rete."""
+    if not MONDO_SRC.exists():
+        return 0
+    n = 0
+    for src in sorted(MONDO_SRC.glob("*.md")):
+        dst = MONDO_DST / src.name
+        dst.parent.mkdir(parents=True, exist_ok=True)
         if dst.exists() and dst.stat().st_size == src.stat().st_size \
            and int(dst.stat().st_mtime) == int(src.stat().st_mtime):
             continue
@@ -208,6 +229,8 @@ def main() -> int:
     n = sync_episodes()
     tot = len(list(STORIE_DST.rglob("*.md"))) if STORIE_DST.exists() else 0
     print(f"  STORIE importate nel vault: {n} aggiornate · {tot} episodi totali in MENTE/STORIE/")
+    nm = sync_mondo()
+    print(f"  MONDO (bibbia/mappa/pietre) sincronizzato: {nm} aggiornate in MENTE/KNOWLEDGE/MONDO/")
     nc, id2stem = inject_collegati()
     print(f"  Intersezioni (wikilink Collegati) iniettate in {nc} note → il grafo connette gli episodi")
     if gen_evoluzione_moc(id2stem):

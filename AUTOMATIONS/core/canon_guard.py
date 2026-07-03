@@ -46,6 +46,14 @@ PAIRS = [
     ("Cilindri riciclati", "Cilindri come guide lineari"),
     ("cilindro recuperato", "cilindro (guida lineare)"),
     ("Omron E5CC (recuperato)", "Omron E5CC"),
+    # --- varianti "Euro X,XXX" nelle note puntate dal CANONE (attacco #52, 07 P0.1) ---
+    ("Valore recuperato Euro 9,499", "Valore equivalente a nuovo Euro 9,499"),
+    ("6.1 Componenti Recuperati (Euro 0 costo)",
+     "6.1 Componenti industriali selezionati (Euro 0 spesa aggiuntiva)"),
+    ("TOTALE RECUPERATO 9,499", "VALORE EQUIVALENTE A NUOVO 9,499"),
+    ("Euro 9,499 di Valore Recuperato a Costo Zero",
+     "Euro 9,499 di valore equivalente a nuovo (zero spesa aggiuntiva)"),
+    ("81% recuperato", "81% valore equivalente a nuovo"),
 ]
 
 # Detection: parole-hardware/economia vicino a "recuperat/di recupero/seconda mano".

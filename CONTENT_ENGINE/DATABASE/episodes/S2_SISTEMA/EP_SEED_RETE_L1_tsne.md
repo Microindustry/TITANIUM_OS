@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Da 5000 numeri a una galassia  il t-SNE](#da-5000-numeri-a-una-galassia-il-t-sne)
-    - [Approfondimento LV1 di EP_SEED_RETE  vedere con gli occhi una cosa che vive in 384 dimensioni](#approfondimento-lv1-di-epseedrete-vedere-con-gli-occhi-una-cosa-che-vive-in-384-dimensioni)
+    - [Approfondimento LV1 di EP_SEED_RETE_grafo_due_sorgentiEP_SEED_RETE  vedere con gli occhi una cosa che vive in 384 dimensioni](#approfondimento-lv1-di-epseedretegrafoduesorgentiepseedrete-vedere-con-gli-occhi-una-cosa-che-vive-in-384-dimensioni)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # Da 5000 numeri a una galassia — il t-SNE
-### Approfondimento LV1 di [[EP_SEED_RETE]] · "vedere con gli occhi una cosa che vive in 384 dimensioni"
+### Approfondimento LV1 di [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]] · "vedere con gli occhi una cosa che vive in 384 dimensioni"
 
 ## DA DOVE VIENE
 
@@ -61,7 +61,7 @@ per cui non leggi i numeri sugli assi: contano le **vicinanze**, non le coordina
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_RETE]] (la galassia 3D del sistema).
+- **Sale al principale:** [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]] (la galassia 3D del sistema).
 - **Fratelli LV1:** [[EP_SEED_RETE_L1_TOGGLE]] (le due sorgenti), [[EP_SEED_RETE_L1_BUGSTATO]] (il bug di stato).
 - **Aggancio Nina:** "fare la foto di una cosa che non si può vedere tutta intera" — una metafora pronta
   per spiegare a un bambino cos'è un *embedding* senza dire la parola.

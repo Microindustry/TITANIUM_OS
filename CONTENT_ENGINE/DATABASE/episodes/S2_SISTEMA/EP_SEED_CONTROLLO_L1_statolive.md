@@ -13,7 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Se è acceso, non se dovrebbe  lo stato live](#se-è-acceso-non-se-dovrebbe-lo-stato-live)
-    - [Approfondimento LV1 di EP_SEED_CONTROLLO  stato vero, non promesse](#approfondimento-lv1-di-epseedcontrollo-stato-vero-non-promesse)
+    - [Approfondimento LV1 di EP_SEED_CONTROLLO_anti_sovraccaricoEP_SEED_CONTROLLO  stato vero, non promesse](#approfondimento-lv1-di-epseedcontrolloantisovraccaricoepseedcontrollo-stato-vero-non-promesse)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 5
 
 
 # Se è acceso, non se dovrebbe — lo stato live
-### Approfondimento LV1 di [[EP_SEED_CONTROLLO]] · "stato vero, non promesse"
+### Approfondimento LV1 di [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]] · "stato vero, non promesse"
 
 ## DA DOVE VIENE
 
@@ -58,7 +58,7 @@ dichiarata "attiva" che non lo è. Se non posso misurarlo, non lo scrivo verde.
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_CONTROLLO]] (il posto unico da cui governo).
+- **Sale al principale:** [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]] (il posto unico da cui governo).
 - **Fratelli LV1:** [[EP_SEED_CONTROLLO_L1_SCAFFOLDING]] (perché togliermi carico), [[EP_SEED_CONTROLLO_L1_CEDIBILE]] (perché in italiano semplice).
 - **Aggancio Nina:** "la spia collegata vs l'adesivo" — una metafora pulita per insegnare la differenza tra
   *dire* una cosa e *verificarla*.

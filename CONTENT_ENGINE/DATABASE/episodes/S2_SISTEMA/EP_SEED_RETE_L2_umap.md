@@ -64,7 +64,7 @@ Nessuna delle due è "la verità": sono due compromessi diversi sullo stesso sac
 
 ## IL FILO
 
-- **Sale a:** [[EP_SEED_RETE_L1_TSNE]] → [[EP_SEED_RETE]].
+- **Sale a:** [[EP_SEED_RETE_L1_TSNE]] → [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]].
 - **Aggancio Nina:** "il ritratto e la foto aerea" — due modi di guardare la stessa cosa, perfetti per
   insegnare a un bambino che *ogni mappa sceglie cosa mostrare e cosa perdere*.
 

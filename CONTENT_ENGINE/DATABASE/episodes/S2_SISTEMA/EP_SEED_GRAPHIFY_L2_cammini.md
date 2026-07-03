@@ -59,7 +59,7 @@ ferma appena si arriva.
 
 ## IL FILO
 
-- **Sale a:** [[EP_SEED_GRAPHIFY_L1_QUERY]] → [[EP_SEED_GRAPHIFY]].
+- **Sale a:** [[EP_SEED_GRAPHIFY_L1_QUERY]] → [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]].
 - **Aggancio Nina:** "allargarsi a cerchi finché tocchi la meta" è un gioco da spiegare a un bambino (la
   caccia al tesoro in cui controlli prima le stanze vicine). È la BFS, senza la parola.
 

@@ -13,7 +13,7 @@ durata_min: 5
 <!-- TOC -->
 
 - [Un sistema spiegato è un sistema cedibile](#un-sistema-spiegato-è-un-sistema-cedibile)
-    - [Approfondimento LV1 di EP_SEED_CONTROLLO  in italiano, non in gergo](#approfondimento-lv1-di-epseedcontrollo-in-italiano-non-in-gergo)
+    - [Approfondimento LV1 di EP_SEED_CONTROLLO_anti_sovraccaricoEP_SEED_CONTROLLO  in italiano, non in gergo](#approfondimento-lv1-di-epseedcontrolloantisovraccaricoepseedcontrollo-in-italiano-non-in-gergo)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 5
 
 
 # Un sistema spiegato è un sistema cedibile
-### Approfondimento LV1 di [[EP_SEED_CONTROLLO]] · "in italiano, non in gergo"
+### Approfondimento LV1 di [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]] · "in italiano, non in gergo"
 
 ## DA DOVE VIENE
 
@@ -59,7 +59,7 @@ delegabile, ereditabile**.
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_CONTROLLO]].
+- **Sale al principale:** [[EP_SEED_CONTROLLO_anti_sovraccarico|EP_SEED_CONTROLLO]].
 - **Fratelli LV1:** [[EP_SEED_CONTROLLO_L1_STATOLIVE]], [[EP_SEED_CONTROLLO_L1_SCAFFOLDING]].
 - **Aggancio Nina:** è il **ponte diretto** al senso di Nina — spiegare semplice ciò che sembra magia. Il
   Centro di Controllo fa per gli adulti quello che Nina fa per i bambini.

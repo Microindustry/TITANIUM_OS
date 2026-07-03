@@ -60,7 +60,7 @@ fondere gruppetti veri; per quello a volte si gira con una "risoluzione" regolab
 
 ## IL FILO
 
-- **Sale a:** [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] → [[EP_SEED_GRAPHIFY]].
+- **Sale a:** [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] → [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]].
 - **Aggancio Nina:** "parlano tanto dentro e poco fuori" è la regola del buon gruppo, spiegabile a un
   bambino con i banchi di scuola. La modularità è il voto del maestro.
 

@@ -21,7 +21,7 @@ tags: nina, nina-v2, reel, contenuto, social, simone-rizzo, divulgazione
 
 *Script pronti da girare. Pubblico: **adulti/genitori/curiosi** (non bambini). Angolo:
 i concetti AI più ostici spiegati con la metafora che Nina usa per un bambino — se
-funziona per un bambino, hai capito davvero. Stile [[reel]] (Simone Rizzo): dato/claim
+funziona per un bambino, hai capito davvero. Stile `/reel` (skill, alla Simone Rizzo): dato/claim
 concreto · il problema · la metafora che lo risolve · open loop. ~60-80 parole, 30-45s.*
 
 > NB: ogni reel rimanda all'episodio Nina vero ([[PIETRE]]). Niente claim non groundati.

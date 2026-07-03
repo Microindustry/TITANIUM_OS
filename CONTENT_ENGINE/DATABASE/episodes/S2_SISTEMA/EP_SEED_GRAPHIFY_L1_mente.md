@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Perché MENTE si estrae a mano  lestrattore ibrido](#perché-mente-si-estrae-a-mano-lestrattore-ibrido)
-    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  non tutto il sapere si dà in pasto a una macchina](#approfondimento-lv1-di-epseedgraphify-non-tutto-il-sapere-si-dà-in-pasto-a-una-macchina)
+    - [Approfondimento LV1 di EP_SEED_GRAPHIFY_grafo_del_repoEP_SEED_GRAPHIFY  non tutto il sapere si dà in pasto a una macchina](#approfondimento-lv1-di-epseedgraphifygrafodelrepoepseedgraphify-non-tutto-il-sapere-si-dà-in-pasto-a-una-macchina)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [LA SCELTA IBRIDA (semplice, poi preciso)](#la-scelta-ibrida-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # Perché MENTE si estrae a mano — l'estrattore ibrido
-### Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · "non tutto il sapere si dà in pasto a una macchina"
+### Approfondimento LV1 di [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] · "non tutto il sapere si dà in pasto a una macchina"
 
 ## DA DOVE VIENE
 
@@ -62,7 +62,7 @@ contano, non a pioggia. Meglio meno nodi giusti che tanti nodi inventati su mate
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (il grafo del repo).
+- **Sale al principale:** [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] (il grafo del repo).
 - **Tocca il RAG:** MENTE è anche la fonte del RAG ([[project_storie_n_livelli]] · l'arco ⟡4) — qui si
   decide *come* quella stessa fonte diventa grafo.
 - **Aggancio Nina:** è la lezione "non tutto si dà in pasto alla macchina" — un concetto da papà che in

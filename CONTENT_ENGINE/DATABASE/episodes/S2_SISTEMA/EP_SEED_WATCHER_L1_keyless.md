@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Guardare senza chiavi  gh, RSS, YouTube](#guardare-senza-chiavi-gh-rss-youtube)
-    - [Approfondimento LV1 di EP_SEED_WATCHER  informarsi è un diritto, non un abbonamento](#approfondimento-lv1-di-epseedwatcher-informarsi-è-un-diritto-non-un-abbonamento)
+    - [Approfondimento LV1 di EP_SEED_WATCHER_keylessEP_SEED_WATCHER  informarsi è un diritto, non un abbonamento](#approfondimento-lv1-di-epseedwatcherkeylessepseedwatcher-informarsi-è-un-diritto-non-un-abbonamento)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [LE QUATTRO SORGENTI (e perché niente chiavi)](#le-quattro-sorgenti-e-perché-niente-chiavi)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # Guardare senza chiavi — gh, RSS, YouTube
-### Approfondimento LV1 di [[EP_SEED_WATCHER]] · "informarsi è un diritto, non un abbonamento"
+### Approfondimento LV1 di [[EP_SEED_WATCHER_keyless|EP_SEED_WATCHER]] · "informarsi è un diritto, non un abbonamento"
 
 ## DA DOVE VIENE
 
@@ -62,7 +62,7 @@ Tutto roba **pubblica e stabile**. Primo giro a freddo: **67 + 30 segnali reali*
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_WATCHER]] (il radar che gira di notte).
+- **Sale al principale:** [[EP_SEED_WATCHER_keyless|EP_SEED_WATCHER]] (il radar che gira di notte).
 - **Fratelli LV1:** [[EP_SEED_WATCHER_L1_TIER]] (chi guardare di più), [[EP_SEED_WATCHER_L1_GATE]] (filtrare il rumore).
 - **Aggancio Nina:** "le edicole già aperte" — metafora pronta per spiegare a un bambino la differenza tra
   un dato *pubblico* (RSS) e uno *chiuso* (dietro chiave).

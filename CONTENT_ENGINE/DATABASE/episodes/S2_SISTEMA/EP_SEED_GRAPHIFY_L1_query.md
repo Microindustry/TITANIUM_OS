@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Interrogare la mappa, non i file  query, path, explain](#interrogare-la-mappa-non-i-file-query-path-explain)
-    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si interroga, non si rilegge](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-interroga-non-si-rilegge)
+    - [Approfondimento LV1 di EP_SEED_GRAPHIFY_grafo_del_repoEP_SEED_GRAPHIFY  il grafo si interroga, non si rilegge](#approfondimento-lv1-di-epseedgraphifygrafodelrepoepseedgraphify-il-grafo-si-interroga-non-si-rilegge)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [I TRE MODI DI CHIEDERE](#i-tre-modi-di-chiedere)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # Interrogare la mappa, non i file — query, path, explain
-### Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · "il grafo si interroga, non si rilegge"
+### Approfondimento LV1 di [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] · "il grafo si interroga, non si rilegge"
 
 ## DA DOVE VIENE
 
@@ -59,7 +59,7 @@ precisa perché è strutturale, non "ho letto e ho riassunto".
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_GRAPHIFY]] (perché esiste la mappa).
+- **Sale al principale:** [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] (perché esiste la mappa).
 - **Usa gli altri LV1:** `query` ti porta nei [[EP_SEED_GRAPHIFY_L1_COMMUNITY]] (quartieri), `path`
   passa spesso dai [[EP_SEED_GRAPHIFY_L1_GODNODE]] (i nodi-dio sono i crocevia).
 - **Aggancio Nina:** è il "come si usa" della Grande Mappa — Nina non legge tutti i fogli, *chiede alla

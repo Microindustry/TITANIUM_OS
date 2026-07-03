@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [Due verità dello stesso mondo  il toggle a due sorgenti](#due-verità-dello-stesso-mondo-il-toggle-a-due-sorgenti)
-    - [Approfondimento LV1 di EP_SEED_RETE  la stessa galassia, due modi di guardarla](#approfondimento-lv1-di-epseedrete-la-stessa-galassia-due-modi-di-guardarla)
+    - [Approfondimento LV1 di EP_SEED_RETE_grafo_due_sorgentiEP_SEED_RETE  la stessa galassia, due modi di guardarla](#approfondimento-lv1-di-epseedretegrafoduesorgentiepseedrete-la-stessa-galassia-due-modi-di-guardarla)
   - [DA DOVE VIENE](#da-dove-viene)
   - [LA DOMANDA](#la-domanda)
   - [IL TRUCCO: STESSA FORMA, MOTORE INVARIATO](#il-trucco-stessa-forma-motore-invariato)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # Due verità dello stesso mondo — il toggle a due sorgenti
-### Approfondimento LV1 di [[EP_SEED_RETE]] · "la stessa galassia, due modi di guardarla"
+### Approfondimento LV1 di [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]] · "la stessa galassia, due modi di guardarla"
 
 ## DA DOVE VIENE
 
@@ -60,9 +60,9 @@ disaccoppiamento fatto bene.
 
 ## IL FILO CON GLI ALTRI LIVELLI
 
-- **Sale al principale:** [[EP_SEED_RETE]] (la RETE riparata).
+- **Sale al principale:** [[EP_SEED_RETE_grafo_due_sorgenti|EP_SEED_RETE]] (la RETE riparata).
 - **Fratelli LV1:** [[EP_SEED_RETE_L1_TSNE]] (come si disegna), [[EP_SEED_RETE_L1_BUGSTATO]] (perché si era rotta).
-- **Lega altrove:** la sorgente "Sistema" è il grafo di [[EP_SEED_GRAPHIFY]] — qui lo si *guarda* in 3D.
+- **Lega altrove:** la sorgente "Sistema" è il grafo di [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] — qui lo si *guarda* in 3D.
 - **Aggancio Nina:** "lo stesso attacco, due punte" — metafora pronta per spiegare un'**interfaccia** (un
   patto sulla forma) a chi non programma.
 

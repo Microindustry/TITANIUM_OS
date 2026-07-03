@@ -13,7 +13,7 @@ durata_min: 6
 <!-- TOC -->
 
 - [I 696 quartieri  la community detection](#i-696-quartieri-la-community-detection)
-    - [Approfondimento LV1 di EP_SEED_GRAPHIFY  il grafo si divide da solo in temi](#approfondimento-lv1-di-epseedgraphify-il-grafo-si-divide-da-solo-in-temi)
+    - [Approfondimento LV1 di EP_SEED_GRAPHIFY_grafo_del_repoEP_SEED_GRAPHIFY  il grafo si divide da solo in temi](#approfondimento-lv1-di-epseedgraphifygrafodelrepoepseedgraphify-il-grafo-si-divide-da-solo-in-temi)
   - [DA DOVE VIENE QUESTO APPROFONDIMENTO](#da-dove-viene-questo-approfondimento)
   - [LA DOMANDA](#la-domanda)
   - [COME FUNZIONA (semplice, poi preciso)](#come-funziona-semplice-poi-preciso)
@@ -25,7 +25,7 @@ durata_min: 6
 
 
 # I 696 quartieri — la community detection
-### Approfondimento LV1 di [[EP_SEED_GRAPHIFY]] · "il grafo si divide da solo in temi"
+### Approfondimento LV1 di [[EP_SEED_GRAPHIFY_grafo_del_repo|EP_SEED_GRAPHIFY]] · "il grafo si divide da solo in temi"
 
 ## DA DOVE VIENE QUESTO APPROFONDIMENTO
 
