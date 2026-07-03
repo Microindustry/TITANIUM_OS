@@ -1,3 +1,20 @@
+<!-- TOC -->
+
+- [PIANO DATTACCO  esercito di specialisti (da eseguire su FABLE 5)](#piano-dattacco-esercito-di-specialisti-da-eseguire-su-fable-5)
+  - [Come si lancia (allavvio della sessione Fable)](#come-si-lancia-allavvio-della-sessione-fable)
+  - [FASE 0  pre-attacco (già fatta il 02/07, ri-verifica)](#fase-0-pre-attacco-già-fatta-il-0207-ri-verifica)
+  - [LESERCITO  7 attacchi specifici (missioni già ingegnerizzate)](#lesercito-7-attacchi-specifici-missioni-già-ingegnerizzate)
+    - [01  DESIGN   01_design.md](#01-design-01designmd)
+    - [02  SICUREZZA (difensiva, repo proprio)   02_sicurezza.md](#02-sicurezza-difensiva-repo-proprio-02sicurezzamd)
+    - [03  SCRITTURA / NARRATIVA   03_scrittura.md](#03-scrittura-narrativa-03scritturamd)
+    - [04  SOFTWARE / ARCHITETTURA   04_software.md](#04-software-architettura-04softwaremd)
+    - [05  NEWS IA   05_news_ia.md](#05-news-ia-05newsiamd)
+    - [06  GESTIONALE / BUSINESS   06_gestionale.md](#06-gestionale-business-06gestionalemd)
+    - [07  INTEGRITÀ RAG / CONOSCENZA (attacco aggiunto)   07_integrita_rag.md](#07-integrità-rag-conoscenza-attacco-aggiunto-07integritaragmd)
+  - [Dopo lattacco](#dopo-lattacco)
+
+<!-- /TOC -->
+
 # PIANO D'ATTACCO — esercito di specialisti (da eseguire su FABLE 5)
 
 > **Deciso da Matteo (02/07/2026):** questo attacco NON si esegue su Opus.

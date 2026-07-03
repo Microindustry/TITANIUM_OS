@@ -1,0 +1,309 @@
+{
+  "data": "2026-07-03",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Snapshot automatico chroma_db prima di ogni ciclo notturno",
+      "cosa": "Aggiungere uno script bash/python che, prima di ogni run notturno, esegua `cp -r chroma_db _VAULT/BACKUPS/chroma_$(date +%Y%m%d_%H%M%S)` con retention a 3 snapshot. Nessuna modifica al codice RAG esistente.",
+      "perche": "Segnale duplice ad alta severità: 3 corruzioni HNSW in 2 giorni per power-loss (UPS mancante) + 25.120 chunk senza backup snapshot. L'UPS richiede acquisto fisico; lo snapshot è eseguibile oggi senza hardware.",
+      "come": [
+        "1. Creare `scripts/backup_chroma.sh` con cp -r + naming timestamp",
+        "2. Aggiungere logica retention (elimina snapshot > 3)",
+        "3. Inserire chiamata allo script come prima riga del job notturno esistente",
+        "4. Testare su copia locale con chroma vuoto"
+      ],
+      "rischio": "Nessuno: operazione read-only sul db attivo, scrive solo in BACKUPS",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte: RAG sev=media (chunking/backup) + SISTEMA sev=alta (UPS/HNSW corruption x3)"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RICERCA",
+      "titolo": "Rate-limit Semantic Scholar: aggiungere retry con backoff esponenziale + log dedicato",
+      "cosa": "Wrappare le chiamate a Semantic Scholar API con tentativi (max 3) e backoff esponenziale (2s, 8s, 32s). Se tutti falliscono, scrivere il chunk fallito in `_VAULT/LOGS/semantic_scholar_429.log` invece di restituire dati parziali. Non richiede la chiave API: mitiga i 429 anche con tier gratuito.",
+      "perche": "Segnale sev=alta: SEMANTIC_SCHOLAR_API_KEY gratuita assente genera 429 ricorrenti nella ricerca notturna con 25.120 chunk e cicli attivi. Il blocker chiave è aperto; questo fix opera indipendentemente dalla risoluzione del blocker.",
+      "come": [
+        "1. Identificare il modulo che chiama Semantic Scholar (probabilmente in GENESIS/research o similar)",
+        "2. Aggiungere decorator/wrapper `with_retry(max=3, backoff_base=2)`",
+        "3. Su fallimento finale: log riga in semantic_scholar_429.log con timestamp + query",
+        "4. Test con chiave vuota in ambiente locale"
+      ],
+      "rischio": "Basso: il retry allunga il tempo di run notturno al massimo di ~40s per chunk fallito; il log può crescere, aggiungere rotazione settimanale",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte: RICERCA sev=alta (429 ricorrenti, blocker aperto)"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "ROADMAP",
+      "titolo": "Consolidamento bussola_open: singolo file canonico con stato PRE_01/02/03/04",
+      "cosa": "Creare `_VAULT/ROADMAP/bussola_canonica.md` con tabella unica: colonne (ID, titolo, stato: aperto/chiuso/sospeso, sessione origine, next_step). Migrare le 9+ voci duplicate da bussola_open esistente. Nessuna voce eliminata: solo consolidate.",
+      "perche": "Due segnali convergenti sev=media: bussola_open ha 5+ voci su PRE_01/02/03/04 non consolidate + 4 voci quasi-identiche da sessioni diverse. Il todo_bussola_aperti mostra letteralmente 'Controllare PRE_01 / PRE_02' scritto due volte identicamente.",
+      "come": [
+        "1. Estrarre tutte le voci PRE_xx da bussola_open (grep/manual scan)",
+        "2. Creare tabella markdown con stato per ciascuna",
+        "3. Aggiungere sezione 'DECISIONI CHIUSE' per voci già risolte (es. PRE_03 scheda-personaggi è chiusa)",
+        "4. Proporre a Matteo: sostituire la bussola_open con questo file in sessione #52"
+      ],
+      "rischio": "Nessun dato perso: è operazione documentale. Rischio solo se Matteo non conferma la mappatura stato aperto/chiuso",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte: ROADMAP sev=media x2 (voci duplicate non consolidate)"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-03",
+    "milestone": "Sessione #51 (27/06-02/07): PREAMBOLO NINA CHIUSO (PRE_01 cos'e + PRE_02 come funziona + PRE_03 v5 scheda-personaggi 17 slide: Nina/Themis/Forge/Entropia, glifi distinti, foto Nina base64 inline). DECISO: Nina si presenta VIVA dentro l'EP_1 reale (non episodio dedicato); preambolo=anagrafica, episod",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Le chiavi .env sono flaggate per rotazione (red-team #38) e il blocker è ancora aperto. Con 7 agenti Fable in arrivo in sessione #52 che toccheranno API esterne in parallelo, una chiave compromessa in quella finestra espone a uso non autori"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola_open contiene almeno 5 voci distinte su PRE_01/PRE_02/PRE_03/PRE_04 e Nina versioni outfit, distribuite su sessioni diverse e non consolidate. Il next_step di sessione #52 cita al punto (3) 'PRE_01/02' senza chiarire se è revisio"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il blocker 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna' è ancora aperto. Con 25.120 chunk e cicli notturni attivi, ogni run di ricerca che colpisce il rate-limit restituisce da"
+      },
+      {
+        "area": "RAG",
+        "sev": "bassa",
+        "finding": "Due nodi orfani rilevati nell'inventario notturno: 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE. Non sono collegati ad alcun nodo attivo del vault. Con 2"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "L'UPS hardware è listato come blocker esplicito con causa tecnica documentata: corruzione indice HNSW per power-loss, 3 volte in 2 giorni. Nessun log_issue stanotte (log_issues=[]), ma il pattern ricorrente rende il prossimo guasto statisti"
+      },
+      {
+        "area": "V32",
+        "sev": "bassa",
+        "finding": "Il pillar V32 è al 65% e il blocco fisico immediato (martinetto Vevor da montare → prima colata giunto) dipende da un acquisto ancora aperto (mandrino 2.2kW ER20). I due prerequisiti fisici — mandrino e montaggio Vevor — sono in serie: senz"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "La bussola_open riporta due voci di manutenzione RAG ancora aperte: chunking per heading e backup snapshot chroma_db in `_VAULT/BACKUPS`. Con 24.892 chunk e una storia di corruzioni HNSW, l'assenza di snapshot automatico significa che ogni "
+      },
+      {
+        "area": "MIMS",
+        "sev": "alta",
+        "finding": "La decisione connettori Via B (VULCAN) è presa dal 24/06 ma il prossimo step fisico — montare il martinetto Vevor 3 stadi — è ancora bloccato. Senza quella colata di prova, BEP e tooling Via B non hanno dati reali da inserire nella bozza B2"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola_open contiene almeno 4 voci duplicate quasi identiche (PRE_01/PRE_02 check, EP_1 ricontrollo, Nina versioni officina/tech, rag-update canone Nina) provenienti da sessioni diverse mai chiuse. Questo non è un backlog ordinato: è ru"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Le chiavi .env non sono state ruotate (blocker red-team #38, ancora aperto). La SEMANTIC_SCHOLAR_API_KEY gratuita mancante genera 429 ricorrenti nella ricerca notturna. Due falle di sicurezza/operatività sullo stesso file di configurazione,"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "bassa",
+        "finding": "Il canone Nina è stato fissato (MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md, sessione #50) ma il rag-update per indicizzarlo è ancora marcato come 'o lascia all'incrementale notturno'. Con 252 episodi già generati e pipeline avatar attiva, lo"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il blocker UPS hardware (~50-80€) è documentato come causa di 3 corruzioni HNSW in 2 giorni. Nessun log_issue stanotte, ma il pattern è attivo: ogni power-loss può azzerare lo stato di chroma_db. È il rischio infrastrutturale più alto e cos"
+      }
+    ],
+    "salute": {
+      "verdict": "OK",
+      "n_episodes": 255,
+      "rag_chunks": 25120,
+      "n_commits_7d": 19
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**🎯 ATTACCO ESERCITO LANCIATO** (sessione Fable 5, come deciso): 7 agenti general-purpose",
+      "Prima ondata (~16:00) fermata dal **limite sessione** (reset 19:20): solo il 02 è sopravvissuto",
+      "**🎯 ATTACCO ESERCITO (su FABLE)** — *lanciato in sessione #52 (vedi blocco sopra)*: piano completo + 7 missioni ingegnerizzate in",
+      "**PROSSIMO**: EP_N2_03 (la MISURA) · poi export Express degli episodi pronti (html_export_readiness_skill → export_html_to_express).",
+      "**Controllare PRE_01 / PRE_02** (giunture/flusso) e poi avanti col **PRE_04**.",
+      "**Ricontrollare EP_1 effettivo** (primo episodio vero) + far presentare Nina lì dentro.",
+      "**Nina versioni OFFICINA e TECH** (stesso volto, cambia l'outfit).",
+      "**rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).",
+      "**Episodio Personaggi: serve davvero?** Decidere se PRE_03 dedicato resta, o se Nina si presenta",
+      "**PRE_03 redesign** (Matteo): **meno immagini, più TESTO ben disposto** + solo poche immagini \"wow\"",
+      "**Controllare PRE_01 e PRE_02** (giunture/flusso), poi avanti col **PRE_04**.",
+      "**Ricontrollare EP_1 effettivo** (il primo episodio vero) + dettagli superiori.",
+      "**Nina versioni officina / tech** (stesso volto, cambia outfit).",
+      "**rag-update** per indicizzare il canone Nina (o lascia all'incrementale notturno).",
+      "**PROSSIMA SESSIONE — VERIFICA \"il punto 3\": la LINEA che collega le immagini** (il flusso/onda"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Salvatore Sanfilippo rivoluziona l’AI ed io sono gasato (DS4 spiegato)",
+        "url": "https://www.youtube.com/watch?v=ff2iPMjPu1s"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Emma AI il modello 100% italiano fatta per gli italiani é un disastro totale.",
+        "url": "https://www.youtube.com/shorts/j8O7Rwdt9Ac"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "CrankGPT é un dispositivo con Intelligenza Artificiale che funziona senza elettricità senza batterie",
+        "url": "https://www.youtube.com/shorts/ZnCQ8Hrdc2A"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "OpenAI ha appena presentato GPT-5.6... ma il Governo lo ha già bloccato",
+        "url": "https://www.youtube.com/watch?v=PQs-k4HVXX0"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "GPT 5.6 Sol terra e Luna, questa è la nuova famiglia di modelli annunciata da OpenAI #openai",
+        "url": "https://www.youtube.com/shorts/fCF3PDL2fgQ"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Il 2 agosto entra in vigore l’AI act!",
+        "url": "https://www.youtube.com/shorts/Eeu59TTIHaU"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "GLM 5.2 gira in locale quantizzandolo ad 1bit! #intelligenzaartificiale #aiagent",
+        "url": "https://www.youtube.com/shorts/4zKwQ7OXkGI"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Il nuovo progetto DwarfStar di Salvatore SanFilippo ti permette di far girare modelli di frontiera",
+        "url": "https://www.youtube.com/shorts/kT0bNRpANGE"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Generate The BEST Animations With AI",
+        "url": "https://www.youtube.com/shorts/sNzsGC2zf6c"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Don't Fall For This AI Trap",
+        "url": "https://www.youtube.com/shorts/BF7ohr7OJcE"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "WTF is China building now 😂",
+        "url": "https://www.youtube.com/shorts/VUh3HDSsS5g"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "OpenAI's Valuation Is Not As Big As It Seems",
+        "url": "https://www.youtube.com/shorts/Qt0oRFQm_3U"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "GLM-5.2: The Complete Guide to the Best Open-Source Model",
+        "url": "https://www.youtube.com/watch?v=XbHeJL45USQ"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The forgotten developer who saved JavaScript...",
+        "url": "https://www.youtube.com/watch?v=JfPWbttemYE"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Anthropic is starting to panic…",
+        "url": "https://www.youtube.com/watch?v=0pgCBV8CTZY"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Anthropic begged the world to stop AI… then shipped this",
+        "url": "https://www.youtube.com/watch?v=1PBRhm5ZnjU"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "One man just liberated Fable... and now it’s illegal",
+        "url": "https://www.youtube.com/watch?v=ey_GaPdC9zk"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "I read every major CS paper of the last 100 years...",
+        "url": "https://www.youtube.com/watch?v=ML3q7Ok4hJg"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The most trusted code on Earth is being rewritten in Rust",
+        "url": "https://www.youtube.com/watch?v=Sntj4HmuykI"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Midjourney has a new side quest... death",
+        "url": "https://www.youtube.com/watch?v=a2i9h2ip-nY"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Who really invented the internet...?",
+        "url": "https://www.youtube.com/watch?v=7B0ydm64cV8"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Coolest Diffusion Research Isn't in LLMs — Evan Feinberg & Sergey Edunov, Genesis Molecular AI",
+        "url": "https://www.latent.space/p/the-coolest-diffusion-research-isnt"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "How Cursor deploys AI inside the enterprise",
+        "url": "https://www.latent.space/p/cursor-forward-deployed-engineers"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Autoresearch: The feedback loop behind self-improving agents",
+        "url": "https://www.latent.space/p/autoresearch-introspection"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "AIEWF Daily Dispatch: Autoresearch and the tension between AI and human agency",
+        "url": "https://www.latent.space/p/aiewf-daily-dispatch-agency"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-900"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Skill engineering and the case against one-shot AI design",
+        "url": "https://www.latent.space/p/skill-engineering-design"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "The website of the future may assemble itself for every visitor",
+        "url": "https://www.latent.space/p/the-website-of-the-future"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Vercel's Andrew Qu on why agents are a new kind of software",
+        "url": "https://www.latent.space/p/vercel-agents-new-software"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Have your agent record video demos of its work with shot-scraper video",
+        "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}

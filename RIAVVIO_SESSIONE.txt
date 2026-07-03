@@ -1,54 +1,59 @@
-=== RIAVVIO SESSIONE #52 — 02/07/2026 ===
-Ultima sessione: #51 — 27/06→02/07/2026 (PREAMBOLO NINA CHIUSO + EP_N2_01/02 al nuovo standard)
+=== RIAVVIO SESSIONE #53 — 03/07/2026 ===
+Ultima sessione: #52 — 02-03/07/2026 (ATTACCO ESERCITO su Fable COMPLETO + sintesi + backlog in bussola)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il MONDO DI NINA ha il preambolo COMPLETO e i primi 2 episodi rifatti al nuovo standard.
-Volto Nina definitivo bloccato (mora, coda alta, lentiggini, giacca denim = versione "vita";
-slide_2 = riferimento vincente; NO bionda, NO logo). Stile episodi: 16 slide BLUEPRINT SVG
-narrativo (scene disegnate, zero foto, stesso sfondo/flusso di tutti i caroselli).
+L'ATTACCO ESERCITO e' CHIUSO: 7/7 specialisti rientrati su Fable (design, sicurezza, scrittura,
+software, news-IA, gestionale, integrita-RAG), report additivi/propose-only con file:riga in
+DOCS/ATTACCO_20260702/. Sintesi coordinata in _SINTESI.md (TOP 10 per leva). TUTTE le azioni
+(TOP 10 + backlog completo per dominio, ~49 voci) sono in DA_FARE_FATTO.md come [ ] DA FARE.
+Nulla del codice-proposta e' stato committato (gate SELF_IMPROVE propose-only).
 
->>> PROSSIMA SESSIONE #52 — APRIRE CON FABLE 5 (default gia' impostato). IN ORDINE:
-  0) *** ATTACCO ESERCITO DI SPECIALISTI *** — piano gia' scritto e ingegnerizzato in
-     DOCS/ATTACCO_20260702/_PIANO.md. Lancia i 7 agenti in PARALLELO (general-purpose,
-     model=fable), ognuno scrive un report NN_<dominio>.md, poi sintesi in _SINTESI.md ->
-     migliori azioni in bussola. Domini: design/sicurezza/scrittura/software/news-IA/
-     gestionale/integrita-RAG. Regole: additivo, propose-only, cita file:riga, repo pubblico.
-     Deciso da Matteo: si fa su FABLE, non su Opus (Opus solo coordina).
-  1) EP_N2_03 "la MISURA" al nuovo standard (16 slide blueprint; _build_ep.py + _render_all.py).
-  2) Export Express degli episodi pronti (html_export_readiness_skill -> export_html_to_express).
-  3) Controllare PRE_01 / PRE_02 (giunture/flusso). 4) Nina officina/tech (stesso volto).
-  5) rag-update canone Nina — GIA' FATTO 02/07 (full rebuild-hard verificato, vedi sotto).
+FILO ROSSO dei 7 report: il sistema GIRA, ma in 3 punti la FONTE DI VERITA' e' STANTIA
+(1: _CANONE.md:13 punta ai doc V32 vecchi/vietati "molle+recuperato" su cui Nina grounda;
+2: INDICE_CAMMINO 9/15 titoli sbagliati; 3: pitch pubblico 3 errori fattuali) e 1 solo ordine
+hardware (Vevor+ER20+UPS ~250-350EUR) sblocca l'intera catena economica + le corruzioni HNSW.
 
-FATTO IL 02/07 (infra, pre-attacco FASE 0 — tutto verificato): dashboard riavviata (5173);
-ecosistema+Obsidian aggiornati (595 note/3230 ponti/2 isolate); indice Pietre (9/82); 0 orfani;
-_CANONE.md ok, 0 violazioni framing; RAG full rebuild-hard COMPLETO E VERIFICATO
-(25049 semantico==bm25, HNSW pulito, heading-aware v4.1; query end-to-end: EP_N2_02 top hit
-= storie->RAG->Nina confermato). Default modello -> Fable 5 (.claude/settings.local.json). <<<
+>>> PROSSIMA SESSIONE #53 — APRIRE CON FABLE 5. IN ORDINE:
+  1) *** OBSIDIAN + ECOSISTEMA VERO (richiesta esplicita Matteo) *** — rivedere il vault
+     MICROINDUSTRY/MENTE e renderlo un VERO ecosistema: note collegate davvero, ponti/wikilink
+     sani, VERITA' UNICA (_CANONE.md), zero orfani, MOC curati. Strumenti pronti: setup_obsidian,
+     vault_intersect (v2.1 -> vault_orphans.json), storie_intersect, rag_linkgraph.json.
+     Si aggancia direttamente ai punti TOP 10 #2/#3 (canone RAG stantio) + #9 (indice storie)
+     + 07 P1 (canone non-enforced): stesso filo = mettere in ordine la CONOSCENZA/verita.
+  2) POI la prima ondata dell'attacco per leva: TOP 10 #1 (checkout hardware: Vevor+ER20+UPS)
+     -> #2/#3 (ripuntare _CANONE.md + escludere i 55 file di versioni superate dal RAG).
+  3) A seguire il backlog completo per dominio in DA_FARE_FATTO.md (design/sicurezza/scrittura/
+     software/news-IA/gestionale/integrita-RAG), a ondate, sempre additivo/propose-only.
 
-━━━ FATTO IN SESSIONE #51 ━━━
-• PREAMBOLO CHIUSO: PRE_01 (cos'e) + PRE_02 (come funziona) + PRE_03 v5 (scheda personaggi,
-  17 slide). Niente PRE_04 (eviterebbe ripetizione) -> si parte con gli EPISODI ufficiali.
-• PRE_03 v5 SCHEDA DEI PERSONAGGI (character bible): rifatta dopo scarti v2/v3/v4. NON ripete
-  PRE_01; va in profondita su Nina(foto/carattere/luci-ombre/aspetto/arco) + Themis(custode
-  della misura, allineato al canone) + Forge(NUOVO) + l'Entropia(NUOVO) + cast. Glifi tutti
-  distinti, foto Nina base64 inline (carosello self-contained, export Express ok).
-  Generatore _build_pre03.py v2.0. Snapshot _VERSIONI/v5_personaggi-profondi.
-• DECISO: Nina si presenta VIVA in azione dentro l'EP_1 reale (non un episodio dedicato).
-  Preambolo = anagrafica; episodi = storia.
-• EP_N2_01 "La Bambina che Chiedeva Perche": da 8 slide (pre-volto) a 16 slide blueprint SVG
-  narrativo. 3 strati (bottoni=bambino, sarta=grande, pizzicore=cuore). Generatore riusabile
-  _build_ep.py + _render_all.py. Snapshot v1_8slide_2506 + v2_blueprint-16slide.
-• EP_N2_02 "Il Soffio di Troppo": 16 slide blueprint SVG. La Fucina/Forge, mezzo mm = il patto,
-  test della sarta, precisione = relazione, tolleranza a gradi. Snapshot v1_blueprint-16slide.
+━━━ FATTO IN SESSIONE #52 (03/07) ━━━
+- ATTACCO ESERCITO lanciato su Fable: 7 agenti general-purpose model=fable in parallelo.
+  (Prima ondata ~16:00 fermata dal limite sessione; ripresa dopo reset, 7/7 completati.)
+- 7 report in DOCS/ATTACCO_20260702/: 01_design, 02_sicurezza, 03_scrittura, 04_software,
+  05_news_ia, 06_gestionale, 07_integrita_rag. Additivo, propose-only, file:riga.
+- _SINTESI.md scritta: quadro per dominio + TOP 10 azioni per leva + seconda fascia + note metodo.
+- DA_FARE_FATTO.md: TOP 10 + BACKLOG COMPLETO per dominio portati come [ ] DA FARE (nulla scartato,
+  su richiesta "TUTTO non le prime 10"). Puntatore "SI RIPARTE DA QUI #53" in cima.
+- STATE.json + RIAVVIO aggiornati. Chiusura via skill salva.
 
-━━━ VERIFICHE (fine #51) ━━━
-• audit_episodes.py -> 218 episodi, 0 orfani.
-• build_episodes_json.py -> 218 id unici, 16 relazioni padre-figlio, 2 assi.
-• DASHBOARD npx tsc -b -> EXIT 0 (build verde).
+━━━ TOP 10 AZIONI (per leva — dettaglio+backlog in DA_FARE_FATTO.md / _SINTESI.md) ━━━
+  1 MOSSA1 checkout hardware (Vevor+ER20+UPS ~250-350EUR) = 3 blocker + 5 output (incl. fine HNSW)
+  2 RAG P0: _CANONE.md:13 punta a V32-vecchio/vietato -> ripuntare + estendere canon_guard PAIRS
+  3 RAG P0: 55 file versioni superate dentro il canone -> estendere exclusions (1 rebuild, GPU libera)
+  4 SICUREZZA EVA: bind 127.0.0.1 + auth /inbox + APP_SECRET obbligatorio (PII clienti Vita Natura)
+  5 SICUREZZA IP: spostare VULCAN_MANIFESTO.md fuori dal repo pubblico -> MENTE/MIMS
+  6 RAG commit-leak: guardia lock+failure-latch in api_server (383/1085/1164)
+  7 Igiene .env root: verificare/ruotare sk-ant, git rm file 'perfetta' tracciato
+  8 WATCHER: Anthropic feed morto -> RSS keyless + filtro stelle GitHub + verifica schedulazione
+  9 STORIE: rigenerare INDICE_CAMMINO da episodes.json + catena EP_02->03 + EP_N2_03 "la Misura"
+ 10 DESIGN quick-win CSS (nl-fadeUp/reduced-motion/contrasto) + template canonico caroselli
+
+━━━ VERIFICHE (fine #52) ━━━
+(vedi output skill salva a fondo sessione: audit_episodes 0 orfani, build_episodes_json, tsc -b verde)
 
 ━━━ BLOCKERS APERTI ━━━
-• UPS hardware (~50-80€) — corruzione HNSW da power-loss ricorrente (cura alla radice).
-• Mandrino 2.2kW ER20 + martinetto Vevor 3 stadi da montare (prerequisiti fisici MIMS/VULCAN).
-• Connettori MIMS = Via B (compressione VULCAN) — ricalcolare economia/BEP + bozza B2.
+- UPS hardware (~50-80EUR) — corruzione HNSW da power-loss ricorrente (cura alla radice). = TOP 10 #1
+- Mandrino 2.2kW ER20 + martinetto Vevor 3 stadi da montare (prerequisiti fisici MIMS/VULCAN). = TOP 10 #1
+- Chiavi .env da ruotare (sk-ant in root, red-team) — le ruota Matteo. = TOP 10 #7
+- Connettori MIMS = Via B (compressione VULCAN) — ricalcolare economia/BEP + bozza B2 (dopo prima colata).
 
-━━━ Generato: 02/07/2026 — fine sessione #51 ━━━
+━━━ Generato: 03/07/2026 — fine sessione #52 (skill salva) ━━━

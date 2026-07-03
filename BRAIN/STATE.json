@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-02T16:08:01.758552",
-  "active_milestone": "Sessione #51 (27/06-02/07): PREAMBOLO NINA CHIUSO (PRE_01 cos'e + PRE_02 come funziona + PRE_03 v5 scheda-personaggi 17 slide: Nina/Themis/Forge/Entropia, glifi distinti, foto Nina base64 inline). DECISO: Nina si presenta VIVA dentro l'EP_1 reale (non episodio dedicato); preambolo=anagrafica, episodi=storia. EP_N2_01 'La Bambina che Chiedeva Perche' e EP_N2_02 'Il Soffio di Troppo' RIFATTI al nuovo standard: 16 slide blueprint SVG narrativo, volto Nina definitivo, zero foto, stesso flusso. Generatori riusabili _build_ep.py + _render_all.py per episodio. Niente PRE_04 (eviterebbe ripetizione).",
-  "next_step": "PROSSIMA SESSIONE #52 (APRIRE CON FABLE 5): (0) *** ATTACCO ESERCITO *** — lancia i 7 specialisti in parallelo (general-purpose, model=fable), piano in DOCS/ATTACCO_20260702/_PIANO.md, report additivi propose-only -> sintesi -> bussola; (1) EP_N2_03 'la MISURA'; (2) export Express; (3) PRE_01/02; (4) Nina officina/tech.",
-  "session_count": 101,
+  "last_update": "2026-07-03T15:26:12.175156",
+  "active_milestone": "Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO — 7/7 specialisti rientrati (01 design, 02 sicurezza, 03 scrittura, 04 software, 05 news-IA, 06 gestionale, 07 integrita-RAG) in DOCS/ATTACCO_20260702/NN_*.md, additivo/propose-only con file:riga. Sintesi coordinata in _SINTESI.md (TOP 10 per leva). TUTTE le azioni (TOP 10 + backlog completo per dominio, ~49 voci) portate in DA_FARE_FATTO.md come [ ] DA FARE. Filo rosso: il sistema gira ma in 3 punti la fonte di verita e stantia (canone RAG _CANONE.md:13 punta a V32-su-molle/recuperato vietato; INDICE_CAMMINO 9/15 titoli sbagliati; pitch 3 errori) e 1 ordine hardware (Vevor+ER20+UPS ~250-350EUR) sblocca l'intera catena economica + le corruzioni HNSW. Niente committato del codice-proposta (gate SELF_IMPROVE).",
+  "next_step": "PROSSIMA SESSIONE #53 (APRIRE CON FABLE 5): (1) REVISIONARE OBSIDIAN e rendere l'ecosistema MENTE un VERO ecosistema (note/ponti/wikilink sani, verita unica _CANONE.md, zero orfani, MOC) via setup_obsidian + vault_intersect + storie_intersect + rag_linkgraph; si aggancia a TOP 10 #2/#3 (canone RAG stantio) e #9 (indice storie) e 07 P1. (2) POI prima ondata attacco per leva: TOP 10 #1 checkout hardware -> #2/#3 canone RAG. Tutte le azioni in DA_FARE_FATTO.md.",
+  "session_count": 103,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-02T15:48:00.182826"
+      "last_activity": "2026-07-03T15:10:23.420405"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -97,9 +97,10 @@
       "Sessione #51: DECISO dove si presenta Nina — PRE_03 = scheda-personaggi statica del preambolo; Nina si presenta VIVA in azione dentro l'EP_1 reale, non in un episodio narrativo dedicato (preambolo=anagrafica, episodi=storia) (02/07)",
       "Sessione #51: EP_N2_01 'La Bambina che Chiedeva Perche' rifatto al NUOVO STANDARD — da 8 slide (pre-volto) a 16 slide blueprint SVG narrativo (scene disegnate, zero foto, stesso sfondo/flusso), 3 strati rispettati (bottoni=bambino, sarta=grande, pizzicore=cuore), generatore riusabile _build_ep.py+_render_all.py; snapshot v1_8slide_2506 + v2_blueprint-16slide (02/07)",
       "Sessione #51: EP_N2_02 'Il Soffio di Troppo' al nuovo standard (16 slide blueprint SVG narrativo) — la Fucina/Forge, mezzo mm=il patto, test della sarta, precisione=relazione, tolleranza gradi non si/no; stesso impianto di EP_01 (generatore+README+caption); snapshot v1_blueprint-16slide (02/07)",
-      "Sessione #52-prep (02/07): infra refresh + RAG rebuild VERIFICATO. Default modello -> Fable 5 (.claude/settings.local.json, gitignored, repo pubblico). Dashboard riavviata (5173); Obsidian/ecosistema 595 note/3230 ponti/2 isolate; Pietre 9/82; 0 orfani; _CANONE.md ok 0 violazioni. RAG full rebuild-hard (post-Obsidian) allineato 25049 semantico==bm25 (HNSW pulito, heading-aware v4.1); query end-to-end conferma storie->RAG->Nina (EP_N2_02 top hit). PIANO D'ATTACCO esercito 7 domini (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG) ingegnerizzato e congelato in DOCS/ATTACCO_20260702/_PIANO.md, propose-only/additivo, da eseguire su Fable."
+      "Sessione #52-prep (02/07): infra refresh + RAG rebuild VERIFICATO. Default modello -> Fable 5 (.claude/settings.local.json, gitignored, repo pubblico). Dashboard riavviata (5173); Obsidian/ecosistema 595 note/3230 ponti/2 isolate; Pietre 9/82; 0 orfani; _CANONE.md ok 0 violazioni. RAG full rebuild-hard (post-Obsidian) allineato 25049 semantico==bm25 (HNSW pulito, heading-aware v4.1); query end-to-end conferma storie->RAG->Nina (EP_N2_02 top hit). PIANO D'ATTACCO esercito 7 domini (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG) ingegnerizzato e congelato in DOCS/ATTACCO_20260702/_PIANO.md, propose-only/additivo, da eseguire su Fable.",
+      "Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO E SINTETIZZATO — 7 agenti general-purpose model=fable in parallelo (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG), ognuno un report additivo propose-only con file:riga in DOCS/ATTACCO_20260702/. Coordinatore Fable ha scritto _SINTESI.md (quadro per dominio + TOP 10 per leva) e portato TUTTE le azioni (TOP 10 + backlog completo per dominio) in DA_FARE_FATTO.md come [ ] DA FARE. Finding chiave: (P0) _CANONE.md:13 punta alla verita V32 vecchia/vietata (molle+recuperato) su cui Nina grounda; (P0) 55 file versioni superate dentro il canone RAG; EVA eva_server.py:162 bind 0.0.0.0+/inbox PII senza auth; commit-leak RAG senza guardia in api_server; Anthropic News watcher morto da 25gg; FINANCE/ vuota+BEP Via B non calcolabile; MOSSA1 checkout hardware = massima leva. Zero modifiche applicate al codice (gate propose-only)."
     ],
-    "next": "PROSSIMA SESSIONE FABLE: lancia l'ATTACCO ESERCITO (DOCS/ATTACCO_20260702/_PIANO.md, 7 agenti paralleli), poi EP_N2_03 'la Misura' + export Express. RAG gia' ribuildato/verificato.",
+    "next": "PROSSIMA SESSIONE FABLE #53: revisionare Obsidian -> ecosistema MENTE vero (verita unica/ponti/zero orfani), poi eseguire la prima ondata dell'attacco (checkout hardware + canone RAG). Backlog completo in DA_FARE_FATTO.md.",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -137,5 +138,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a DA_FARE_FATTO.md"
+  "last_action": "Modifica a episodes.json"
 }

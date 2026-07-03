@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 52  02/07/2026  ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)](#sessione-52-02072026-attacco-esercito-su-fable-7-specialisti-in-parallelo)
+  - [Sessione 52-prep  02/07/2026  infra refresh  PIANO DATTACCO congelato (da eseguire su FABLE)](#sessione-52-prep-02072026-infra-refresh-piano-dattacco-congelato-da-eseguire-su-fable)
   - [Sessione 51  27/06/2026  PRE_03 redesign (meno immagini / più testo)  decisione episodio personaggi](#sessione-51-27062026-pre03-redesign-meno-immagini-più-testo-decisione-episodio-personaggi)
   - [Sessione 50  26-27/06/2026  Nina ha un VOLTO definitivo (3D)  PRE_03 I Personaggi (solo Nina)](#sessione-50-26-27062026-nina-ha-un-volto-definitivo-3d-pre03-i-personaggi-solo-nina)
     - [PROSSIMA SESSIONE 51  si riparte da qui (in ordine)](#prossima-sessione-51-si-riparte-da-qui-in-ordine)
@@ -72,6 +74,135 @@
 
 ---
 
+## Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)
+
+> ### ▶ SI RIPARTE DA QUI — PROSSIMA SESSIONE #53 (aprire con FABLE 5)
+> **1) OBSIDIAN + ECOSISTEMA VERO (richiesta esplicita Matteo):** rivedere il vault
+> `MICROINDUSTRY/MENTE` e rendere l'ecosistema un **VERO ecosistema** — note collegate davvero,
+> ponti/wikilink sani, **verità unica** (`_CANONE.md`), zero orfani, MOC curati. Strumenti già
+> pronti: `setup_obsidian`, `vault_intersect` (v2.1 → `vault_orphans.json`), `storie_intersect`,
+> `rag_linkgraph.json`. Si aggancia direttamente ai punti **TOP 10 #2/#3** (canone RAG stantio) e
+> **#9** (indice storie) e **07 P1** (canon non-enforced): stesso filo = *la fonte di verità*.
+> **2) POI** la prima ondata dell'attacco per leva: TOP 10 #1 (checkout hardware) → #2/#3 (canone RAG).
+>
+> **DOVE SIAMO ORA:** attacco esercito CHIUSO (7/7 report + `_SINTESI.md` + TOP 10 e backlog completo
+> in bussola, tutto propose-only, nulla committato del codice-proposta). Prossimo lavoro = mettere in
+> ordine la CONOSCENZA (Obsidian/canone) prima di eseguire le patch.
+
+- [✓] **🎯 ATTACCO ESERCITO — COMPLETO** (sessione Fable 5, come deciso): 7 agenti general-purpose
+  model=fable in parallelo — 01 design · 02 sicurezza · 03 scrittura · 04 software · 05 news-IA ·
+  06 gestionale · 07 integrità-RAG. **7/7 rientrati**, ognuno con `DOCS/ATTACCO_20260702/NN_<dominio>.md`
+  (additivo, propose-only, file:riga). Sintesi coordinata in `_SINTESI.md` (TOP 10 per leva); **tutte**
+  le azioni (TOP 10 + backlog completo per dominio) portate qui in bussola come `[ ] DA FARE` (sotto).
+- [✓] **02 SICUREZZA rientrato** → `DOCS/ATTACCO_20260702/02_sicurezza.md`: nessun segreto reale
+  nel repo/history, `api_server.py` già hardenato; findings: EVA `eva_server.py:162` bind 0.0.0.0 +
+  `/inbox` (139) senza auth (🟠), firma Meta fail-open se APP_SECRET vuoto (🟠, :88),
+  VULCAN_MANIFESTO.md nel repo pubblico da spostare in MENTE (🟡), sanitizer non agganciato a pre-commit (🟡).
+- [◐] Prima ondata (~16:00) fermata dal **limite sessione** (reset 19:20): solo il 02 è sopravvissuto
+  (ripreso, completato 19:36); gli altri 6 **rilanciati da zero** dopo il reset (contesto perso
+  trascurabile: erano a 46-459 token ciascuno).
+- [✓] Triage notturno pulito (`system_health.json`: log_issues vuoto, verdetto OK, 6 critiche aperte gestite).
+- [✓] FASE 0 ri-verificata da RIAVVIO (RAG rebuild-hard 25049 semantico==bm25, dashboard 5173 su) — non rifatta.
+- [✓] **7/7 REPORT RIENTRATI** (03/07, su Fable): 01 design · 02 sicurezza · 03 scrittura · 04 software ·
+  05 news-IA · 06 gestionale · 07 integrità-RAG in `DOCS/ATTACCO_20260702/NN_*.md`. Ancorati a
+  grafo locale + RAG (0 token) per contenere il consumo.
+- [✓] **SINTESI coordinata** → `DOCS/ATTACCO_20260702/_SINTESI.md` (quadro per dominio + TOP 10 per leva
+  + seconda fascia). **Filo rosso:** il sistema gira, ma in 3 punti la *fonte di verità è stantia*
+  (canone RAG, indice storie, pitch) e 1 ordine hardware sblocca l'intera catena economica.
+
+### 🎯 TOP 10 dall'ATTACCO — DA ESEGUIRE a ondate (additivo, propose-only)
+- [ ] **1 · MOSSA 1 "checkout che sblocca tutto"** (06): 1 ordine = martinetto Vevor 20t + mandrino
+  2.2kW ER20 (~180€) + UPS (~50-80€). Chiude 3 blocker fermi da ~4 mesi + innesca 5 output
+  (colata VULCAN → BEP Via B → stampo tile → fine corruzioni HNSW → reel prima colata). *Miglior €/leva.*
+- [ ] **2 · RAG P0 — `_CANONE.md:13` punta alla verità V32 VECCHIA e vietata** (07): indica i doc
+  "V32 su molle + recuperato/Euro 0" (superati: corpo unico mag 2026); Nina/story groundano sul falso.
+  `canon_guard.clean` non li matcha ("Euro"≠"EUR" nei PAIRS). Fix: ripuntare canone + estendere PAIRS.
+- [ ] **3 · RAG P0 — 55 file di versioni superate dentro il canone** (07): `ASSOLUTO/VERSIONI`(13) +
+  `SINAPSI/ARCHIVIO`(32) + `ARCHIVE_V6`(10) indicizzati (exclusions `rag_engine.py:134,143` non li coprono)
+  → competono col reale in retrieval. Fix: estendere exclusions. *Un rebuild solo, GPU libera, no martello.*
+- [ ] **4 · SICUREZZA EVA** (02 F1+F2): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti
+  Vita Natura senza auth (leggibile da LAN/Tailscale); `valid_signature`(:88) fail-open se secret vuoto.
+  Fix: bind 127.0.0.1 + X-API-Key + `EVA_APP_SECRET` obbligatorio in LIVE.
+- [ ] **5 · SICUREZZA IP** (02 F3): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,
+  `fit-park-specs.md`) dal repo PUBBLICO a `MICROINDUSTRY/MENTE/MIMS/` (dichiara il moat/target Shore/
+  strategia brevetto). Resta in git history → decidere con Matteo se ripulire (`git filter-repo`).
+- [ ] **6 · RAG commit-leak senza guardia** (04 #1): `api_server.py:383,1085,1164` importano `rag_engine`
+  per-request nel try → se il primo load fallisce, ogni richiesta riserva GB di commit (MemoryError).
+  Fix additivo: lock + failure-latch cooldown 300s. *Cura alla radice il commit-leak.*
+- [ ] **7 · Igiene `.env` in root** (04 #2): contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo
+  pubblico); il gho_ è quasi certo il vecchio revocato, **la sk-ant va verificata/ruotata** e il file
+  → `_VAULT/KEYS/`. Bonus: file vuoto `perfetta` è TRACCIATO nel repo pubblico → `git rm`.
+- [ ] **8 · WATCHER riparato** (05 P1-P3): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1
+  morta da 25gg silenziosamente**. Fix: feed RSS keyless (Alan Turing) + WARNING su feed vuoto;
+  `stars:>=20` sui topic GitHub (spam SEO ★0-2); verificare da terminale le 5 notti saltate (`schtasks`).
+  +watchlist 12 sorgenti keyless pronte (OpenAI/HuggingFace/HN filtrato).
+- [ ] **9 · STORIE indice+catena + EP_N2_03 "la Misura"** (03 #1+#2): `INDICE_CAMMINO.md:29` ha 9/15 titoli
+  sbagliati → generarlo da `episodes.json` (come `generate_pietre_index.py`); 2 micro-edit per riagganciare
+  open-loop EP_02→03; **EP_N2_03 = carosello 16 slide** su "Mille Volte Uguale" (già misura-centrico), non
+  episodio nuovo. *Era già il primo punto contenuti della bussola.*
+- [ ] **10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11): `index.css` → keyframe `nl-fadeUp`
+  orfano (4 view non animano), `prefers-reduced-motion` assente (dashboard 24/7), contrasto slate-600/700
+  sotto WCAG (~1.6-2.4:1), focus-visible esteso. **PRIMA di EP_N2_03:** `CAROSELLI/_TEMPLATE/` (drift
+  copia-incolla già misurabile `.lead` 60→62→66px).
+
+### BACKLOG COMPLETO — TUTTI i finding dei 7 report (oltre alle TOP 10 sopra)
+*Nulla scartato: ogni finding è tracciato qui come `[ ]`. Dettaglio e patch in `DOCS/ATTACCO_20260702/NN_*.md` + `_SINTESI.md`.*
+
+**01 · DESIGN (oltre a #10)**
+- [ ] P4 · CSS invalido che dà falsa sicurezza: `index.css:91` `attr()` in font-size (scartato dai browser) + `:95` `min-font-size` inesistente (no-op) → rimuovere + floor `svg text{font-size:10px}` o `fontSize 7→9` in `MappaView.tsx:296`.
+- [ ] P5 · Quattro "neri" diversi per il fondo (#050a14/#020617/#0a0612/#0a0a0f) → `var(--shell-bg)` sui 3 `bg-[#020617]` (`StorieView.tsx:441`, `ControlloView.tsx:153`, `ProcedimentiView.tsx:69`); rompono anche il tema light.
+- [ ] P7/F13 · Naming caroselli non canonico (`ep 1.html`, `pre 01.html` con spazi) vs regola del loro README → `git mv` a `carosello.html` + fix riferimenti in `_build_ep.py`/`_render_all.py`/README.
+- [ ] P9 · Tema light "tappa 2" mai fatta: solo la cornice ha i token, le card interne restano dark hardcoded → completare `--surface-1/2`+`--text-1/2/3`+`--line-1`, migrare da `UIComponents.tsx`; intanto nascondere il toggle (`App.tsx:421`).
+- [ ] P10 · Zero `aria-*` in tutta l'app → CommandBar `role=dialog/combobox/listbox`+focus trap, `aria-current` sidebar, `role=progressbar` sulle barre, `aria-label` sui bottoni icona-only.
+- [ ] P12 · Scala tipografica di sistema mancante (239 `text-[7px]/[8px]` curati a valle con `!important`) → `--text-2xs/xs/sm` in `@theme`; floor come safety-net legacy; rimuovere `@font-face 'JetBrains'` morto (`index.css:79`).
+- [ ] F8 · `PageKicker` + consolidamento card (3 raggi / 3 opacità / 2 scale bordo per deriva) → header di pagina unico + "card nuove usano `Card`/`StatBlock`".
+- [ ] F14 · Peso repo pubblico: `PRE_03/` = 49 MB → policy PNG q85/≤700KB, `_sheet.png` fuori repo, valutare `git lfs`/esclusione `slides/` PRIMA dell'episodio 10.
+- [ ] F15 · Densità scene PRE (nota direzione artistica) → regola bibbia visiva: "scena ≥40% dell'altezza + almeno 1 elemento dominante".
+
+**02 · SICUREZZA (oltre a #4, #5)**
+- [ ] F4 · Sanitizer non agganciato → pre-commit hook con `AUTOMATIONS/core/sanitizer.py` o `gitleaks` (blocca il commit su match).
+- [ ] Dep · `pip-audit` nello sweep notturno per allerta CVE sulle dipendenze installate.
+
+**03 · SCRITTURA (oltre a #9)**
+- [ ] Doppioni dal batch auto (03 #3): EP_N2_51≈EP_N2_08 (stessa Pietra ⟡3, collide "Casella 7" con EP_N2_07), EP_N2_17≈EP_N2_10 (⟡1 senza vero gradino); "guardiano" usato su 2 Pietre diverse → diluisce il dual coding.
+- [ ] EP 16-19 e 51 **fuori** dal controllo qualità di `QUALITA_BATCH_44` (copre solo 20→50) → estendere il QC a tutto l'arco.
+
+**04 · SOFTWARE (oltre a #6, #7)**
+- [ ] NEXUS codice morto ma "active": `nexus.py` irraggiungibile (`mcpServers` vuoto, `titanium_mcp_server.py:326`) mentre `genesisData.ts:134,274` lo dice "active/done" → archiviare + allineare i data file.
+- [ ] Detriti disco: 2.24 GB `chroma_db_*` + 1.1 GB `BACKUPS` (gitignored) → pulizia.
+- [ ] `ecosystemTree.ts:14` hardcoda `_u='benen'` (path sbagliati in dashboard) → derivare come gli altri script.
+- [ ] 4 agenti notturni senza retry LLM → `max_retries=4` nel client (fix 1 riga).
+- [ ] Un solo file di test in tutto il repo → suite di smoke-test sui nodi critici.
+- [ ] `NodeTile` duplicato in 4 componenti → converge con 01 P8 (`nlevel/NLevelExplorer.tsx`).
+
+**05 · NEWS-IA (oltre a #8)**
+- [ ] F4 · Query topic GitHub malformata: `sort:updated` dentro `q` invece di `&sort=updated` → ordinamento "updated" non funziona (churn casuale). Fix: `q=topic:{t}+created:>{cutoff}&sort=updated&order=desc`.
+- [ ] F5 · Dedup criticità assente (`watcher.py:339`) + eviction casuale (`last_seen` da `set`, ordine non deterministico → item vecchio rientra come "nuovo").
+- [ ] F7 · 17/30+ sorgenti implementate → mancano blocchi interi keyless (Wes Roth, AI Explained, Lex, Dwarkesh, 3Blue1Brown, italiani Guadagno/Gaito) — watchlist pronta nel report 05.
+- [ ] F8 · Cap `fresh[:8]` silenzioso: segnali contati ma non salvati → loggare "salvati X/Y".
+- [ ] F9 · Cosmetici: doppio `import os` (`watcher.py:7,10`), header versione da aggiornare.
+- [ ] Integrazione #2 · Upgrade local LLM → Qwen3.5-9B Q4_K_M via Ollama (sta nella 1070, alza triage/graphify).
+- [ ] Integrazione #3 · RAG BGE-M3 embedder unificato (dense+sparse+ColBERT) al posto di MiniLM+BM25 sklearn — DOPO che il RAG è a posto.
+- [ ] Integrazione #4 · Vista NEWS in dashboard + ciclo di vita criticità ("utile"/"scarta" → feedback che alimenta la rotazione vera).
+- [ ] Integrazione #5 · Agente schedulato settimanale "cosa integriamo?" (legge `AI_NEWS_RECENTI.md`+profilo → proposta in `MENTE/SESSIONI/`).
+
+**06 · GESTIONALE (oltre a #1)**
+- [ ] Mossa 2 · FINANCE/ vuota → scheletro `FINANCE/ANALISI/BEP_ROI/bep_via_b.md` parametrico (celle T_B/C_B/P/ciclo/cavità) che si riempie alla prima colata e ricade su pitch+SCHEDA+RAG+dashboard.
+- [ ] Mossa 3 · Pre-validazione MIMS a capitale zero: landing "kit beta lista d'attesa" (Starter ~€49) + 2-3 CAD template a €9 → willingness-to-pay + primo ricavo digitale 2026.
+- [ ] Fix coerenza pitch pubblico (P1-P6): molle→corpo unico (`PITCH_V32.md:25`), "100% recupero"→specifica tecnica (`ASSOLUTO_V7.md:236,916`), due tabelle revenue divergenti (`:801` vs `:1152`), unit economics MIMS pre-Via B (banner "in ricalcolo"), timeline scaduta (`:869,877`), ROI 322% senza formula dichiarata (lordo 329%/netto 229%).
+- [ ] Decisione esplicita: **Nina NON si monetizza prima che MIMS venda** (evita il terzo fronte aperto); valore attuale = prova engine 1→N + funnel + asset evergreen.
+- [ ] Modello capannone mancante → foglio 3 scenari affitto (200/400/600 mq Magentino) + regola trigger (es. "cassa ≥ 12 mesi affitto+fissi") per rendere il target 2030 falsificabile.
+- [ ] Revenue 2026 riallineate al reale: €0-3.000 (V32 operativa da Q1 2027), non 7.900-18.600 — anche nel pitch.
+- [ ] D1-D9 dati mancanti da procurare (non inventare): C_B costo compressione, tempo ciclo/cavità, T_B stampo giunto, preventivo Vevor, prezzo Via B confermato, fatture €2.250 in `FINANCE/SPESE/`, TAM/SAM/SOM bottom-up, affitto capannone, ore Lab vendibili anno 1.
+
+**07 · INTEGRITÀ-RAG (oltre a #2, #3)**
+- [ ] P1 · Doppio `EP_N2_01` attivo in `S_AVVENTURA` (entrambi nel RAG) → check id-collision + rimozione del duplicato.
+- [ ] `_CANONE.md:31` dice "serie = EP_N2_01…15" ma è a EP_N2_38+ → aggiornare + rigenerare da `episodes.json`.
+- [ ] Nessun codice legge `_CANONE.md` né dà priorità al canone nel retrieval → **canon-pin nel RRF** (i doc canonici pesano di più).
+- [ ] Persistenza delle fonti di grounding (tracciabilità: ogni affermazione di Nina/story risale a una nota).
+
+---
+
 ## Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)
 
 **Deciso da Matteo:** default modello → **Fable 5** all'avvio (`.claude/settings.local.json`, gitignored perché repo pubblico). L'attacco pesante si fa nella **nuova sessione su Fable**, non su Opus.
@@ -83,7 +214,7 @@
 - [✓] **RAG full rebuild** (`rag_update_exclusive.ps1`, post-Obsidian) **COMPLETO E VERIFICATO**:
   25049 semantico==bm25 (HNSW pulito, heading-aware v4.1); query end-to-end conferma
   **storie→RAG→Nina** (EP_N2_02 top hit, score 0.55). API riavviata (5001).
-- [ ] **🎯 ATTACCO ESERCITO (su FABLE)**: piano completo + 7 missioni ingegnerizzate in
+- [◐] **🎯 ATTACCO ESERCITO (su FABLE)** — *lanciato in sessione #52 (vedi blocco sopra)*: piano completo + 7 missioni ingegnerizzate in
   `DOCS/ATTACCO_20260702/_PIANO.md`. Lanciare 7 agenti paralleli (general-purpose, model=fable):
   design · sicurezza · scrittura · software · news-IA · gestionale · integrità-RAG. Report additivi
   propose-only → sintesi → migliori azioni in bussola. **Primo punto della prossima sessione.**

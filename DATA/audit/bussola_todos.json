@@ -1,5 +1,341 @@
 [
   {
+    "id": "BUS-391e30b6",
+    "stato": "fatto",
+    "testo": "**🎯 ATTACCO ESERCITO — COMPLETO** (sessione Fable 5, come deciso): 7 agenti general-purpose",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-e18dc1d5",
+    "stato": "fatto",
+    "testo": "**02 SICUREZZA rientrato** → `DOCS/ATTACCO_20260702/02_sicurezza.md`: nessun segreto reale",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-ae6ec3a5",
+    "stato": "in_corso",
+    "testo": "Prima ondata (~16:00) fermata dal **limite sessione** (reset 19:20): solo il 02 è sopravvissuto",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-aae91af7",
+    "stato": "fatto",
+    "testo": "Triage notturno pulito (`system_health.json`: log_issues vuoto, verdetto OK, 6 critiche aperte gestite).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-7d744aee",
+    "stato": "fatto",
+    "testo": "FASE 0 ri-verificata da RIAVVIO (RAG rebuild-hard 25049 semantico==bm25, dashboard 5173 su) — non rifatta.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-d1190f1a",
+    "stato": "fatto",
+    "testo": "**7/7 REPORT RIENTRATI** (03/07, su Fable): 01 design · 02 sicurezza · 03 scrittura · 04 software ·",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-0880c39a",
+    "stato": "fatto",
+    "testo": "**SINTESI coordinata** → `DOCS/ATTACCO_20260702/_SINTESI.md` (quadro per dominio + TOP 10 per leva",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-79bb7f17",
+    "stato": "da_fare",
+    "testo": "**1 · MOSSA 1 \"checkout che sblocca tutto\"** (06): 1 ordine = martinetto Vevor 20t + mandrino",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-efaba677",
+    "stato": "da_fare",
+    "testo": "**2 · RAG P0 — `_CANONE.md:13` punta alla verità V32 VECCHIA e vietata** (07): indica i doc",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-8839bc48",
+    "stato": "da_fare",
+    "testo": "**3 · RAG P0 — 55 file di versioni superate dentro il canone** (07): `ASSOLUTO/VERSIONI`(13) +",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-7e1bdd11",
+    "stato": "da_fare",
+    "testo": "**4 · SICUREZZA EVA** (02 F1+F2): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-d7d63e7f",
+    "stato": "da_fare",
+    "testo": "**5 · SICUREZZA IP** (02 F3): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-c1a3cc8d",
+    "stato": "da_fare",
+    "testo": "**6 · RAG commit-leak senza guardia** (04 #1): `api_server.py:383,1085,1164` importano `rag_engine`",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-86287339",
+    "stato": "da_fare",
+    "testo": "**7 · Igiene `.env` in root** (04 #2): contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-350fe2db",
+    "stato": "da_fare",
+    "testo": "**8 · WATCHER riparato** (05 P1-P3): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-047692e3",
+    "stato": "da_fare",
+    "testo": "**9 · STORIE indice+catena + EP_N2_03 \"la Misura\"** (03 #1+#2): `INDICE_CAMMINO.md:29` ha 9/15 titoli",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-10d5ddfd",
+    "stato": "da_fare",
+    "testo": "**10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11): `index.css` → keyframe `nl-fadeUp`",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-b1e596b4",
+    "stato": "da_fare",
+    "testo": "P4 · CSS invalido che dà falsa sicurezza: `index.css:91` `attr()` in font-size (scartato dai browser) + `:95` `min-font-size` inesistente (no-op) → rimuovere + floor `svg text{font-size:10px}` o `fontSize 7→9` in `MappaView.tsx:296`.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-64cc0648",
+    "stato": "da_fare",
+    "testo": "P5 · Quattro \"neri\" diversi per il fondo (#050a14/#020617/#0a0612/#0a0a0f) → `var(--shell-bg)` sui 3 `bg-[#020617]` (`StorieView.tsx:441`, `ControlloView.tsx:153`, `ProcedimentiView.tsx:69`); rompono anche il tema light.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-61f51f02",
+    "stato": "da_fare",
+    "testo": "P7/F13 · Naming caroselli non canonico (`ep 1.html`, `pre 01.html` con spazi) vs regola del loro README → `git mv` a `carosello.html` + fix riferimenti in `_build_ep.py`/`_render_all.py`/README.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-a3a040bd",
+    "stato": "da_fare",
+    "testo": "P9 · Tema light \"tappa 2\" mai fatta: solo la cornice ha i token, le card interne restano dark hardcoded → completare `--surface-1/2`+`--text-1/2/3`+`--line-1`, migrare da `UIComponents.tsx`; intanto nascondere il toggle (`App.tsx:421`).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-5737fabd",
+    "stato": "da_fare",
+    "testo": "P10 · Zero `aria-*` in tutta l'app → CommandBar `role=dialog/combobox/listbox`+focus trap, `aria-current` sidebar, `role=progressbar` sulle barre, `aria-label` sui bottoni icona-only.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-4668fb61",
+    "stato": "da_fare",
+    "testo": "P12 · Scala tipografica di sistema mancante (239 `text-[7px]/[8px]` curati a valle con `!important`) → `--text-2xs/xs/sm` in `@theme`; floor come safety-net legacy; rimuovere `@font-face 'JetBrains'` morto (`index.css:79`).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-38bab9d5",
+    "stato": "da_fare",
+    "testo": "F8 · `PageKicker` + consolidamento card (3 raggi / 3 opacità / 2 scale bordo per deriva) → header di pagina unico + \"card nuove usano `Card`/`StatBlock`\".",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-e556b805",
+    "stato": "da_fare",
+    "testo": "F14 · Peso repo pubblico: `PRE_03/` = 49 MB → policy PNG q85/≤700KB, `_sheet.png` fuori repo, valutare `git lfs`/esclusione `slides/` PRIMA dell'episodio 10.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-e7d6da7d",
+    "stato": "da_fare",
+    "testo": "F15 · Densità scene PRE (nota direzione artistica) → regola bibbia visiva: \"scena ≥40% dell'altezza + almeno 1 elemento dominante\".",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-32c414f3",
+    "stato": "da_fare",
+    "testo": "F4 · Sanitizer non agganciato → pre-commit hook con `AUTOMATIONS/core/sanitizer.py` o `gitleaks` (blocca il commit su match).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-6118414e",
+    "stato": "da_fare",
+    "testo": "Dep · `pip-audit` nello sweep notturno per allerta CVE sulle dipendenze installate.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-0139e546",
+    "stato": "da_fare",
+    "testo": "Doppioni dal batch auto (03 #3): EP_N2_51≈EP_N2_08 (stessa Pietra ⟡3, collide \"Casella 7\" con EP_N2_07), EP_N2_17≈EP_N2_10 (⟡1 senza vero gradino); \"guardiano\" usato su 2 Pietre diverse → diluisce il dual coding.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-4ca5712b",
+    "stato": "da_fare",
+    "testo": "EP 16-19 e 51 **fuori** dal controllo qualità di `QUALITA_BATCH_44` (copre solo 20→50) → estendere il QC a tutto l'arco.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-a90b9137",
+    "stato": "da_fare",
+    "testo": "NEXUS codice morto ma \"active\": `nexus.py` irraggiungibile (`mcpServers` vuoto, `titanium_mcp_server.py:326`) mentre `genesisData.ts:134,274` lo dice \"active/done\" → archiviare + allineare i data file.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-c2a87e7f",
+    "stato": "da_fare",
+    "testo": "Detriti disco: 2.24 GB `chroma_db_*` + 1.1 GB `BACKUPS` (gitignored) → pulizia.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-835ee64a",
+    "stato": "da_fare",
+    "testo": "`ecosystemTree.ts:14` hardcoda `_u='benen'` (path sbagliati in dashboard) → derivare come gli altri script.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-5147c33b",
+    "stato": "da_fare",
+    "testo": "4 agenti notturni senza retry LLM → `max_retries=4` nel client (fix 1 riga).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-0a7413f0",
+    "stato": "da_fare",
+    "testo": "Un solo file di test in tutto il repo → suite di smoke-test sui nodi critici.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-e29fbac5",
+    "stato": "da_fare",
+    "testo": "`NodeTile` duplicato in 4 componenti → converge con 01 P8 (`nlevel/NLevelExplorer.tsx`).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-8dec27b4",
+    "stato": "da_fare",
+    "testo": "F4 · Query topic GitHub malformata: `sort:updated` dentro `q` invece di `&sort=updated` → ordinamento \"updated\" non funziona (churn casuale). Fix: `q=topic:{t}+created:>{cutoff}&sort=updated&order=desc`.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-4fe2b1e2",
+    "stato": "da_fare",
+    "testo": "F5 · Dedup criticità assente (`watcher.py:339`) + eviction casuale (`last_seen` da `set`, ordine non deterministico → item vecchio rientra come \"nuovo\").",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-452869a8",
+    "stato": "da_fare",
+    "testo": "F7 · 17/30+ sorgenti implementate → mancano blocchi interi keyless (Wes Roth, AI Explained, Lex, Dwarkesh, 3Blue1Brown, italiani Guadagno/Gaito) — watchlist pronta nel report 05.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-6550e866",
+    "stato": "da_fare",
+    "testo": "F8 · Cap `fresh[:8]` silenzioso: segnali contati ma non salvati → loggare \"salvati X/Y\".",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-fe4f13f6",
+    "stato": "da_fare",
+    "testo": "F9 · Cosmetici: doppio `import os` (`watcher.py:7,10`), header versione da aggiornare.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-4087be72",
+    "stato": "da_fare",
+    "testo": "Integrazione #2 · Upgrade local LLM → Qwen3.5-9B Q4_K_M via Ollama (sta nella 1070, alza triage/graphify).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-48476e2c",
+    "stato": "da_fare",
+    "testo": "Integrazione #3 · RAG BGE-M3 embedder unificato (dense+sparse+ColBERT) al posto di MiniLM+BM25 sklearn — DOPO che il RAG è a posto.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-08affd1d",
+    "stato": "da_fare",
+    "testo": "Integrazione #4 · Vista NEWS in dashboard + ciclo di vita criticità (\"utile\"/\"scarta\" → feedback che alimenta la rotazione vera).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-89d4e1c6",
+    "stato": "da_fare",
+    "testo": "Integrazione #5 · Agente schedulato settimanale \"cosa integriamo?\" (legge `AI_NEWS_RECENTI.md`+profilo → proposta in `MENTE/SESSIONI/`).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-ef6af08b",
+    "stato": "da_fare",
+    "testo": "Mossa 2 · FINANCE/ vuota → scheletro `FINANCE/ANALISI/BEP_ROI/bep_via_b.md` parametrico (celle T_B/C_B/P/ciclo/cavità) che si riempie alla prima colata e ricade su pitch+SCHEDA+RAG+dashboard.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-be9febd2",
+    "stato": "da_fare",
+    "testo": "Mossa 3 · Pre-validazione MIMS a capitale zero: landing \"kit beta lista d'attesa\" (Starter ~€49) + 2-3 CAD template a €9 → willingness-to-pay + primo ricavo digitale 2026.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-ba45bd8e",
+    "stato": "da_fare",
+    "testo": "Fix coerenza pitch pubblico (P1-P6): molle→corpo unico (`PITCH_V32.md:25`), \"100% recupero\"→specifica tecnica (`ASSOLUTO_V7.md:236,916`), due tabelle revenue divergenti (`:801` vs `:1152`), unit economics MIMS pre-Via B (banner \"in ricalcolo\"), timeline scaduta (`:869,877`), ROI 322% senza formula dichiarata (lordo 329%/netto 229%).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-bcca5e34",
+    "stato": "da_fare",
+    "testo": "Decisione esplicita: **Nina NON si monetizza prima che MIMS venda** (evita il terzo fronte aperto); valore attuale = prova engine 1→N + funnel + asset evergreen.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-cca01fe9",
+    "stato": "da_fare",
+    "testo": "Modello capannone mancante → foglio 3 scenari affitto (200/400/600 mq Magentino) + regola trigger (es. \"cassa ≥ 12 mesi affitto+fissi\") per rendere il target 2030 falsificabile.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-8b408006",
+    "stato": "da_fare",
+    "testo": "Revenue 2026 riallineate al reale: €0-3.000 (V32 operativa da Q1 2027), non 7.900-18.600 — anche nel pitch.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-99d95753",
+    "stato": "da_fare",
+    "testo": "D1-D9 dati mancanti da procurare (non inventare): C_B costo compressione, tempo ciclo/cavità, T_B stampo giunto, preventivo Vevor, prezzo Via B confermato, fatture €2.250 in `FINANCE/SPESE/`, TAM/SAM/SOM bottom-up, affitto capannone, ore Lab vendibili anno 1.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-8a47f88c",
+    "stato": "da_fare",
+    "testo": "P1 · Doppio `EP_N2_01` attivo in `S_AVVENTURA` (entrambi nel RAG) → check id-collision + rimozione del duplicato.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-0a8a6588",
+    "stato": "da_fare",
+    "testo": "`_CANONE.md:31` dice \"serie = EP_N2_01…15\" ma è a EP_N2_38+ → aggiornare + rigenerare da `episodes.json`.",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-3e14aa95",
+    "stato": "da_fare",
+    "testo": "Nessun codice legge `_CANONE.md` né dà priorità al canone nel retrieval → **canon-pin nel RRF** (i doc canonici pesano di più).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
+    "id": "BUS-6cc5ac91",
+    "stato": "da_fare",
+    "testo": "Persistenza delle fonti di grounding (tracciabilità: ogni affermazione di Nina/story risale a una nota).",
+    "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
+  },
+  {
     "id": "BUS-f90f9b91",
     "stato": "fatto",
     "testo": "**Salva #51** completo (bussola/STATE/RIAVVIO, 0 orfani, tsc verde, pushato).",
@@ -18,9 +354,9 @@
     "sessione": "Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)"
   },
   {
-    "id": "BUS-a69e22e2",
-    "stato": "da_fare",
-    "testo": "**🎯 ATTACCO ESERCITO (su FABLE)**: piano completo + 7 missioni ingegnerizzate in",
+    "id": "BUS-ff2b7b0a",
+    "stato": "in_corso",
+    "testo": "**🎯 ATTACCO ESERCITO (su FABLE)** — *lanciato in sessione #52 (vedi blocco sopra)*: piano completo + 7 missioni ingegnerizzate in",
     "sessione": "Sessione #52-prep · 02/07/2026 — infra refresh + PIANO D'ATTACCO congelato (da eseguire su FABLE)"
   },
   {
