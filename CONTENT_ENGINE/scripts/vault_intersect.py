@@ -49,7 +49,9 @@ CROSS_BONUS   = 1.15   # un legame verso un ALTRO dominio pesa un filo di piu' (
 CROSS_RESERVE = 4      # min. legami cross-dominio garantiti per nota (se esistono sopra soglia)
 
 # cartelle/note da NON toccare
-SKIP_DIRS = {"STORIE", ".obsidian", ".git", "_allegati"}
+# (#53, attacco 07 P3): + _ARCHIVIO/_PROPOSTI — gli archivi non si intessono né contano
+# come orfani di RETE (night_audit li leggeva come canon_violations = rumore).
+SKIP_DIRS = {"STORIE", ".obsidian", ".git", "_allegati", "_ARCHIVIO", "_PROPOSTI"}
 SKIP_STEMS = {"HOME", "README", "_EVOLUZIONE"}
 
 STOP = set("""

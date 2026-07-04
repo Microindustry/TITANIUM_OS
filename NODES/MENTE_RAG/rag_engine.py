@@ -131,7 +131,10 @@ SUPPORTED_EXT  = {".md", ".txt", ".py", ".json"}
 # NON entra nel RAG canonico — eviterebbe il garbage-in (paper irrilevanti che
 # diluiscono il segnale delle decisioni V32/MIMS). Resta su file, consultabile;
 # il digest notturno la sintetizza separatamente. Path relativi a MENTE_DIR.
-EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),)
+# + ASSOLUTO/VERSIONI (#53, attacco 07 P0.2): storico v3→v6, _CANONE.md lo definisce
+#   "storico" non verità — in RRF competeva alla pari con V9/reale.
+EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),
+                    os.path.join("ASSOLUTO", "VERSIONI"))
 
 # Cartelle di staging/archivio: NON sono canone (una sola verità sul RAG). Match a
 # QUALSIASI livello del path.
@@ -140,7 +143,11 @@ EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),)
 #   numeri parziali — vedi MENTE/_ARCHIVIO/_SMISTAMENTO.md). Restano in Obsidian, fuori canone.
 # _PROPOSTI = proposte del generatore Nina da validare. Indicizzarle creerebbe
 # duplicati/divergenze in retrieval. Stessa convenzione di build_episodes_json (part "_*").
-EXCLUDE_DIR_NAMES = {"_ARCHIVIO", "_PROPOSTI"}
+# ARCHIVIO / ARCHIVE_V6 (#53, attacco 07 P0.2): le cartelle-archivio SENZA underscore
+# (KNOWLEDGE/SINAPSI/ARCHIVIO 32 file incl. copie vecchie delle note canone V32,
+# KNOWLEDGE/ASSOLUTO/ARCHIVE_V6 10 file) erano dentro il canone e servivano
+# la verità vecchia in competizione con quella reale.
+EXCLUDE_DIR_NAMES = {"_ARCHIVIO", "_PROPOSTI", "ARCHIVIO", "ARCHIVE_V6"}
 
 
 def _is_excluded(path: Path) -> bool:
