@@ -2,6 +2,7 @@
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
   - [Sessione 53  03/07/2026  OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)](#sessione-53-03072026-obsidian-ecosistema-vero-vault-coeso-non-solo-senza-orfani)
+    - [ONDATA 2 (04/07)  TOP 10 SOFTWARE COMPLETATA (resta solo 1  ordine hardware di Matteo)](#ondata-2-0407-top-10-software-completata-resta-solo-1-ordine-hardware-di-matteo)
   - [Sessione 52  02-03/07/2026  ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)](#sessione-52-02-03072026-attacco-esercito-su-fable-7-specialisti-in-parallelo)
     - [TOP 10 dallATTACCO  DA ESEGUIRE a ondate (additivo, propose-only)](#top-10-dallattacco-da-eseguire-a-ondate-additivo-propose-only)
     - [BACKLOG COMPLETO  TUTTI i finding dei 7 report (oltre alle TOP 10 sopra)](#backlog-completo-tutti-i-finding-dei-7-report-oltre-alle-top-10-sopra)
@@ -74,6 +75,91 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)
+
+*Decisione Matteo (04/07): la priorità NON è il social — prima si sistema il SISTEMA: file nelle
+cartelle giuste, ecosistema che FUNZIONA da solo, critiche vive, notturne complete. VULCAN/MIMS
+fermi fisicamente: l'ecosistema deve essere pronto a RICEVERE quando riparte. Modo di lavoro:
+Matteo decide → io implemento SEMPRE nel posto giusto (codice→repo, sapere→MENTE+RAG,
+segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi nel mentre.*
+
+### DECISO 04/07 — SOCIAL: ricerca fatta, stack SCELTO, si parcheggia (si riprende a casa in ordine)
+- [✓] **Ricerca librerie/pubblicazione completata** (web, 7 fonti): motore = **Postiz self-hosted**
+  (open source AGPL, ~31k stelle, sviluppo vivissimo; API pubblica `POST /public/v1/posts` con tipo
+  `draft` = gate di approvazione nativo: io spingo bozze via codice, Matteo approva nel calendario).
+  Pubblicazione via **Graph API ufficiale Meta** (sospensioni <0.5%/anno vs 15-30% delle librerie
+  non ufficiali → instagrapi SCARTATO; aggregatori a pagamento tipo Ayrshare $149-599/mese SCARTATI).
+  Per il proprio account basta l'app Meta in development mode → **niente App Review**.
+- [✓] **Vincolo formato trovato**: API Instagram = max **10 slide per carosello** (nostro standard = 16)
+  → modello a 2 strati: **social-cut ≤10 slide + slide CTA/QR** che porta alla **versione completa
+  16 slide sul sito pubblico**. Coincide con la regola densità social/episodi. I prossimi episodi
+  nascono già in questo formato doppio.
+- [✓] **PRECISAZIONE Matteo (04/07)**: ripartendo per il formato 10, **NON si elimina niente** —
+  si creano NUOVE VERSIONI (snapshot in `_VERSIONI/` come sempre) e semplicemente **PIÙ episodi PRE**
+  da ≤10 slide ciascuno (il preambolo 17/16/17 slide si SPEZZA in più caroselli, non si comprime);
+  le versioni 16-17 slide restano vive come versione completa per il sito.
+- [✓] **Architettura ponte slide→completo**: sito statico generato da `episodes.json` su **GitHub
+  Pages in un repo separato** (`nina`) — doppio uso: casa pubblica degli episodi (QR/link in bio)
+  E hosting degli URL pubblici che l'API Meta richiede per le immagini. Repo separato perché i PNG
+  pesano (67.7 MB vivi oggi, ~9 MB/episodio) e non devono gonfiare TITANIUM_OS (cfr. 01 F14).
+- [ ] Prerequisiti GATED MATTEO (quando si riprende): **mail di progetto** dedicata → pagina FB +
+  IG Business/Creator → app Meta developer (credenziali in `_VAULT`); **Docker Desktop** (assente
+  sul fisso, richiesto da Postiz — valutare carico su 16GB RAM prima di installare).
+- [ ] Costruzione sistema social (DOPO le ondate A-C): Postiz su questa macchina → sito statico →
+  variante social-cut nel `_TEMPLATE` → coda `DATA/social_queue/` → primo post di prova (PRE_01).
+
+### ONDATA A — CASA IN ORDINE (ogni file nella cartella giusta)
+- [✓] **Inventario + smistamento FATTO (04/07)** — mappa completa vecchio→nuovo in
+  `DOCS/SMISTAMENTO_20260704.md` (ogni riga reversibile). In sintesi: 🔴 4 file credenziali in
+  chiaro → `_VAULT/ACCOUNTS/CHIAVETTA/` (gitignore verificato con check-ignore) · sapere → MENTE
+  (MARI_DOC Vita Natura, pedana→OFFICINA, visione Libro-IA→SESSIONI) · 28 .shapr+26 PDF gancio →
+  `CAD/GANCIO_50/` · storia → `MICROINDUSTRY/_ARCHIVIO/CHIAVETTA_20260704/` (SINAPSI pre-TITANIUM,
+  LA MIA MENTE, STAGIONE_0_ORIGINI, repo vecchio 227MB, bundle migrazione 2GB, AI_Dashboard, sito
+  vita natura, gio) · `tmp_kill_api.ps1` promosso a `AUTOMATIONS/core/kill_api.ps1` · INBOX brief →
+  `DOCS/_archivio_inbox_20260704/` (writer fanno mkdir ✓). Desktop pulito: restano solo shortcut +
+  2 mirror auto. NON toccato: `Downloads/` 1.8GB installer ri-scaricabili (decide Matteo).
+  RAG: il sapere nuovo in MENTE entra con l'incrementale notturno (no rebuild manuale a GPU occupata).
+- [ ] **Detriti disco** (04 P3): 2.24 GB `chroma_db_*` + 1.1 GB `BACKUPS/` → pulizia CON regola di
+  retention scritta (non one-shot), collegata alla notturna (vedi ondata C).
+- [ ] Decisioni "da svegli" rimaste dal 23/06: gitignore `DATA/views/` + `logs/`; **doppio watchdog**
+  → 1 istanza; raggruppare `AUTOMATIONS/core` (~30 script piatti).
+
+### ONDATA B — ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)
+- [ ] **🔴 Nina loop NON genera** (trovato stamattina): `last_loop` gira (04/07 03:42) ma
+  `last_generated` fermo a EP_N2_50 del 24/06 — story_agent/night_audit committano regolari, quindi
+  è rotto SOLO il ramo `nina_rag_loop`; sospetto: guardia anti-gemelli che salta tutti i semi del
+  giro 2. → Diagnosi + fix + 1 episodio di prova dal loop sano (= uno dei "1-2 episodi" concessi).
+- [ ] **CRITICHE dash aggiornate + AUTOMATICHE** (richiesta Matteo 04/07): oggi 2 fonti su 3 sono
+  notturne (`bussola_todos.json` 364 voci + `critiche_auto.json`, rigenerate 03:52 ✓) ma la fonte
+  manuale è `DASHBOARD/src/data/criticheData.ts` **statica**: si aggiorna a mano e serve il rebuild
+  per vederla. → (1) sweep di verità sulle voci stantie; (2) migrarla a JSON in `DATA/` servito da
+  `/api` (live come le altre 2); (3) riconciliazione notturna in `night_audit` (auto-close con
+  evidenza, riaperture); (4) verificare che anche `bussolaTodos.ts` non sia un mirror baked stale.
+- [ ] **TOP10 #3** — 55 file di versioni superate fuori dal canone RAG (estendere exclusions +
+  1 rebuild a GPU libera). Catena verità, era il prossimo.
+- [ ] **TOP10 #9 resto** — `INDICE_CAMMINO` rigenerato da `episodes.json` (9/15 titoli sbagliati).
+- [ ] **Canone enforced** (07 P1): doppio `EP_N2_01` attivo, `_CANONE.md` che nessun codice legge →
+  check id-collision + canon-pin nel RRF (i doc canonici pesano di più nel retrieval).
+
+### ONDATA C — NOTTURNE DA IMPLEMENTARE (il sistema si mantiene da solo)
+- [ ] **Sentinella "organi vivi"** (lezione del guasto 7: la notturna era morta 11 giorni in
+  silenzio): il watchdog/night_audit deve controllare gli **output**, non solo i processi — es.
+  "nessun EP_N2 nuovo da N giorni", "riflusso FATTI fermo", "snapshot RAG vecchio" → critica
+  automatica in cartella clinica. Un organo che tace non è sano, è silenzioso.
+- [ ] **Retention automatica** in coda notturna: `chroma_db_*` orfane, `BACKUPS/` oltre rotazione,
+  `DATA/logs/` oltre N giorni (regola scritta, non pulizia una-tantum).
+- [ ] **pip-audit** nello sweep notturno (02 Dep) — allerta CVE sulle dipendenze.
+- [ ] **QC batch esteso** (03 F8): `QUALITA_BATCH_44` copre solo EP 20→50 → estendere a tutto l'arco
+  a ogni giro notturno (gli EP nuovi del loop entrano nel QC da subito).
+- [ ] **Graphify refresh** notturno (04 Q3: grafo del repo stale) — rigenerare a fine catena.
+- [ ] **Critiche-riconciliazione** notturna = punto (3) dell'ondata B, vive qui a regime.
+
+*Ordine di esecuzione: A → B → C, poi social. Il backlog per dominio della #52 resta sotto,
+niente cancellato: queste ondate lo RIORDINANO verso l'obiettivo, le voci già elencate lì
+(pitch/FINANCE/design/news-IA) si pescano da lì quando la loro ondata arriva.*
 
 ---
 
