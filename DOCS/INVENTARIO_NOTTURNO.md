@@ -26,6 +26,20 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-04 · 8 commit
+- `7bd29e89` auto: night_audit - cartella clinica 04/07/2026
+- `e62983eb` auto: story_agent - episodi generati 04/07/2026
+- `8ca84ab8` chore(#53): bussola — guasto 7 (notturna/Nina) diagnosticato+fixato+verificato, guasto grafo chiuso
+- `36c85bf3` fix(#53): notturna morta dal 23/06 — Start-Process -RedirectStandardOutput ereditava l'handle del log del bat (lock eterno, tutti gli step post-recovery saltati: topics/Nina/riflusso). Fix: cmd intermedio senza inheritance in 4 script SERVICES + log separato rag_recover.log. Riprodotto e verificato con test elevato
+- `65f6c606` chore(#53): bussola — RAG incidente HNSW risolto (drop-hnsw + incremental + snapshot)
+- `688becca` chore(#53): episodes.json collegati ricalcolati (storie_intersect 1109 legami) + vault_orphans rinfrescato
+- `3fadcca4` feat(#53): ecosistema Obsidian vero — sync MONDO nel vault, fix wikilink EP_SEED alla fonte, canon_guard PAIRS 'Euro X,XXX' (07 P0.1), bussola #53
+- `a194760b` chore(salva): chiusura #52 — ATTACCO ESERCITO completo (7/7 report + _SINTESI) + TOP 10 e backlog completo in bussola; prossima sessione #53 = Obsidian/ecosistema vero su Fable 5
+
+_episodi: 257 · critiche aperte: 18 (117 risolte) · RAG: 17520 chunk_
+
+
+
 ## 2026-07-03 · 8 commit
 - `993c5da5` auto: night_audit - cartella clinica 03/07/2026
 - `d4faf548` auto: story_agent - episodi generati 03/07/2026
