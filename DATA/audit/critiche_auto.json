@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-f92be476fb",
+    "date": "2026-07-04",
+    "git": "e62983eb",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Semantic Scholar continua a sparare 429 senza API key autenticata: '2026-07-04 03:39:12 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s' e '2026-07-04 03:39:35 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu', con conseguente '2026-07-04 03:39:35 [research_agent] INFO semantic_scholar -> 0 risultati'. La query su rigidità strutturale dei frame macchina utensile — direttamente pertinente V32 — è andata a vuoto. Il blocker è già censito (.env manca SEMANTIC_SCHOLAR_API_KEY) ma non ancora risolto.",
+    "azione": "Registrare la API key gratuita Semantic Scholar, inserirla in .env come SEMANTIC_SCHOLAR_API_KEY, rilanciare manualmente la query 'machine tool frame structural rigidity' per verificare che i risultati arrivino prima della prossima notturna.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-04"
+  },
+  {
+    "id": "AUD-b2eb09f7e2",
+    "date": "2026-07-04",
+    "git": "e62983eb",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "La corruzione HNSW da power-loss è accaduta 3 volte in 2 giorni (censita nei blockers) e il fix a radice — UPS ~50-80€ — non è ancora ordinato. Il commit '65f6c606 chore(#53): bussola — RAG incidente HNSW risolto (drop-hnsw + incremental + snapshot)' mostra che ogni evento consuma una sessione intera di recovery. Con 17520 chunk RAG, un quarto evento durante una rebuild pesante (i 55 file versioni superate da purgare, TOP 10 #3) rischia di corrompere l'indice a metà operazione.",
+    "azione": "Includere l'UPS nell'ordine hardware già pianificato (Vevor + ER20 + UPS) e non eseguire la rebuild RAG dei 55 file fino a quando il dispositivo non è installato e testato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-04"
+  },
+  {
+    "id": "AUD-61d076f6d4",
+    "date": "2026-07-04",
+    "git": "e62983eb",
+    "area": "MIMS",
+    "severity": "media",
+    "finding": "La decisione connettori Via B (VULCAN, processo proprietario) è marcata [DECISO 24/06] nei blockers ma il passo successivo — 'SCHEDA §5 a canone + ricalcolare economia/BEP sul tooling Via B + rivendicare il processo nella bozza B2' — non risulta completato né appare tra i commit degli ultimi 7 giorni. Con il canone RAG ancora stantio su V32, c'è il rischio concreto che future query RAG su MIMS restituiscano il vecchio schema connettori, contraddicendo la decisione presa e generando incoerenza nei documenti B2.",
+    "azione": "Aggiornare SCHEDA §5 con la decisione Via B e portarla a canone prima della prossima rebuild RAG; abbinare il passo alla sessione di pulizia _CANONE.md così i due aggiornamenti entrano nello stesso rebuild.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-04"
+  },
+  {
+    "id": "AUD-4e460fa9b8",
+    "date": "2026-07-04",
+    "git": "e62983eb",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Due security issue resteranno aperte a tempo indeterminato se non agganciate a una sessione dedicata: (A) bussola_open item #4 — 'eva_server.py:162 bind 0.0.0.0 + /inbox(:139) con PII clienti'; (B) item #6 — 'api_server.py:383,1085,1164 importano rag_engine' (RAG commit-leak senza guardia). Entrambi espongono dati reali (PII clienti, contenuto RAG) su interfacce di rete. Non sono bloccati da hardware né da altri prerequisiti: sono fermi solo perché la sessione #53 è partita dall'ecosistema Obsidian.",
+    "azione": "Dedicare un blocco sessione (anche 60 minuti) esclusivamente ai due fix: cambiare il bind di eva_server.py da 0.0.0.0 a 127.0.0.1, aggiungere autenticazione su /inbox, e inserire il guard sul rag_engine import in api_server.py. Non dipendono da hardware né da RAG rebuild.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-04"
+  },
+  {
+    "id": "AUD-05eb6147e4",
+    "date": "2026-07-04",
+    "git": "e62983eb",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "Il canone RAG contiene ancora 55 file di versioni superate (bussola_open TOP 10 #3: 'ASSOLUTO/VERSIONI(13) + …') e la fonte di verità _CANONE.md:13 punta ancora a V32-su-molle/recuperato vietato (censito nel milestone attivo come 'filo rosso'). Finché questi file restano indicizzati, ogni query RAG può restituire informazioni archiviate come valide, inquinando le risposte degli specialisti AI e vanificando il lavoro dell'ATTACCO ESERCITO.",
+    "azione": "Dopo l'installazione UPS: eseguire la purga dei 55 file (estendere exclusions + rebuild incrementale), poi aggiornare _CANONE.md:13 con il riferimento V32 corretto. Fare i due passi in sequenza nella stessa sessione per chiudere il ciclo in un solo rebuild.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-04"
+  },
+  {
+    "id": "AUD-05d28875d4",
+    "date": "2026-07-04",
+    "git": "e62983eb",
+    "area": "ROADMAP",
+    "severity": "alta",
+    "finding": "L'ordine hardware (martinetto Vevor 20t + mandrino ER20 2.2kW + UPS) è il gate che sblocca in parallelo tre catene distinte: (1) prima colata giunto VULCAN → validazione Via B → economia/BEP MIMS; (2) protezione HNSW → rebuild RAG sicura dei 55 file; (3) fresatura stampi MIMS. Ogni sessione che passa senza l'ordine effettuato è una sessione in cui queste tre catene restano congelate. Il bussola_open item '1 · MOSSA 1 checkout che sblocca tutto' è aperto da almeno una settimana.",
+    "azione": "Aprire la sessione #53 (o la prossima disponibile prima delle 16:00) con l'ordine hardware come primo atto — 10 minuti su un sito di e-commerce — prima di qualsiasi altra attività Obsidian o RAG.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-04"
+  },
+  {
     "id": "AUD-c3c737729b",
     "date": "2026-07-03",
     "git": "d4faf548",
