@@ -8,4 +8,4 @@ if exist "%OUT%" del "%OUT%"
 REM profilo dedicato: evita il lock quando Edge e' gia' aperto
 set "PROF=%TEMP%\edgeshot_titanium"
 "%EDGE%" --headless=new --disable-gpu --no-first-run --user-data-dir="%PROF%" --hide-scrollbars --window-size=1680,1050 --virtual-time-budget=8000 --screenshot="%OUT%" "http://localhost:5173"
-echo Screenshot -> %OUT%
+echo Screenshot: %OUT%

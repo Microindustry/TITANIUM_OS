@@ -17,8 +17,11 @@
   --color-slate-950: #0a0a0f;
   --color-slate-900: #111118;
   --color-slate-800: #1c1c28;
-  --color-slate-700: #2a2a3a;
-  --color-slate-600: #3d3d52;
+  /* (#53, attacco 01 F3): slate-600/700 erano ridefiniti PIÙ SCURI del default Tailwind
+     e usati come TESTO → contrasto 1.6-2.4:1 su #050a14 (WCAG chiede 4.5:1).
+     Alzati: 700 ~3.1:1 (solo decorativo/bordi), 600 ~4.6:1 (leggibile). */
+  --color-slate-700: #4e4e66;
+  --color-slate-600: #70708c;
   --color-slate-500: #5a5a72;
   --color-slate-400: #8888a0;
   --color-slate-300: #b0b0c4;
@@ -87,16 +90,19 @@
 [class*="text-[8px]"]  { font-size: 11px !important; }
 [class*="text-[9px]"]  { font-size: 12px !important; }
 [class*="text-[10px]"] { font-size: 13px !important; }
-/* SVG text nodes (mappa) */
-svg text { font-size: max(10px, attr(font-size)); }
+/* (#53, attacco 01 F4): rimosse 2 regole INVALIDE che davano falsa sicurezza:
+   `svg text { font-size: max(10px, attr(font-size)) }` — attr() in font-size non esiste
+   in nessun browser (dichiarazione scartata, i 7px SVG restavano 7px);
+   `* { min-font-size: 0 }` — proprietà inesistente, no-op totale. */
 
 /* ─── BASE BODY ─────────────────────────────────────────── */
 html, body { font-size: 13px; }
-* { min-font-size: 0; } /* reset browser enforcements */
 
 /* ─── FOCUS VISIBILE ────────────────────────────────────── */
-button:focus-visible, input:focus-visible {
-  outline: 1px solid #00d47e;
+/* (#53, attacco 01 F6): esteso a link/select/textarea/tabindex (prima solo button/input)
+   e outline 2px — 1px a 13px di font era sotto soglia visiva. */
+:is(button, input, select, textarea, a, [tabindex]):focus-visible {
+  outline: 2px solid #00d47e;
   outline-offset: 1px;
 }
 
@@ -178,4 +184,25 @@ button:focus-visible, input:focus-visible {
 @keyframes scan-line {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100%); }
+}
+
+/* ─── ENTRATA VIEW (#53, attacco 01 F1) ────────────────────
+   Prima viveva SOLO in NeuroOSLayout (view legacy, lazy): StorieView/ControlloView/
+   ProcedimentiView/AvventuraMapView la usavano ma animavano solo se la legacy era
+   stata montata almeno una volta. Qui è globale: comportamento coerente sempre. */
+@keyframes nl-fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── ACCESSIBILITÀ: reduced motion (#53, attacco 01 F2) ───
+   ~15 animazioni infinite (pulse/scan/ring) su un dashboard 24/7: chi imposta
+   "riduci movimento" nel sistema operativo le spegne tutte, in un colpo. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
