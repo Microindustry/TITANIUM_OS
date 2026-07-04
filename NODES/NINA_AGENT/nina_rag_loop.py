@@ -1,4 +1,4 @@
-# nina_rag_loop.py | TITANIUM_OS / NODES / NINA_AGENT | v1.0 | 2026-06-24
+# nina_rag_loop.py | TITANIUM_OS / NODES / NINA_AGENT | v1.1 | 2026-07-04
 # RAG NINA — il loop che "vede gli episodi archiviati e continua a generarli".
 # Canone sess.#44: TUTTO AUTOMATICO, nessun intervento umano.
 #   1. legge i semi = gli EP_AV in S_AVVENTURA/_ARCHIVIO (l'origine del mondo di Nina);
@@ -166,13 +166,15 @@ def run(count: int = 1, dry_run: bool = False, do_rag: bool = False) -> int:
 
     generated = 0
     for _ in range(max(1, count)):
-        seed = next_seed(seeds, done)
-        if not seed:
-            break
+        # (v1.1) reset PRIMA di pescare: col vecchio ordine, a giro completo next_seed
+        # tornava None per sempre e il reset non veniva mai raggiunto -> loop morto a fine giro
         if len(done) >= len(seeds):  # giro completo -> si riparte piu' profondi
             done = []
             giro_base += 1
             logger.info("Giro dei semi completo -> nuovo giro spirale %s", giro_base)
+        seed = next_seed(seeds, done)
+        if not seed:
+            break
 
         meta = {"regione": seed["regione"], "giro": giro_base,
                 "casella": "?", "richiama": [], "concept_slug": seed["concetto"]}
@@ -200,6 +202,10 @@ def run(count: int = 1, dry_run: bool = False, do_rag: bool = False) -> int:
 
     # persisti cursore (mai in dry-run: non deve sporcare la rotazione)
     if not dry_run:
+        # (v1.1) RICARICA lo stato: agent.generate ha scritto last_generated/canon_count/
+        # generated_total durante il giro — salvare la copia pre-run li clobberava
+        # (lost-update: lo stato mostrava l'episodio vecchio anche a generazione riuscita)
+        st = _load_state()
         st["seeds_done"] = done
         st["giro_corrente"] = giro_base
         st["last_loop"] = datetime.now().isoformat(timespec="seconds")

@@ -128,10 +128,15 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   → 1 istanza; raggruppare `AUTOMATIONS/core` (~30 script piatti).
 
 ### ONDATA B — ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)
-- [ ] **🔴 Nina loop NON genera** (trovato stamattina): `last_loop` gira (04/07 03:42) ma
-  `last_generated` fermo a EP_N2_50 del 24/06 — story_agent/night_audit committano regolari, quindi
-  è rotto SOLO il ramo `nina_rag_loop`; sospetto: guardia anti-gemelli che salta tutti i semi del
-  giro 2. → Diagnosi + fix + 1 episodio di prova dal loop sano (= uno dei "1-2 episodi" concessi).
+- [✓] **Nina loop — diagnosi vera (04/07 sera): NON era fermo** — stanotte 03:42 ha generato
+  EP_N2_52 "Il Sussurratore" (codice PRE-guardia → gemello regione 3, archiviato oggi in ondata 2:
+  tutto coerente). Il falso allarme veniva da un **bug reale trovato e fixato**: (1) **lost-update
+  stato** — `run()` salvava la copia pre-generazione e clobberava `last_generated`/contatori scritti
+  da `nina_agent` (per questo lo stato diceva EP_N2_50); (2) **deadlock fine-giro** (latente, a ~3
+  notti dall'innesco): a `done` pieno `next_seed` tornava None per sempre e il reset-giro non veniva
+  MAI raggiunto → reset spostato PRIMA della pesca. `nina_rag_loop.py` v1.1, py_compile OK, dry-run
+  --count 3 verificato: prossimi ⟡4 biblioteca / ⟡5 mappa / ⟡6 soldato (nuovi, guardia attiva).
+  Stanotte il loop genera da solo l'episodio di prova (⟡4).
 - [ ] **CRITICHE dash aggiornate + AUTOMATICHE** (richiesta Matteo 04/07): oggi 2 fonti su 3 sono
   notturne (`bussola_todos.json` 364 voci + `critiche_auto.json`, rigenerate 03:52 ✓) ma la fonte
   manuale è `DASHBOARD/src/data/criticheData.ts` **statica**: si aggiorna a mano e serve il rebuild
