@@ -87,7 +87,13 @@ def send_whatsapp(to: str, text: str) -> dict:
 
 def valid_signature(raw: bytes) -> bool:
     if not APP_SECRET:
-        return True  # nessun secret configurato: non blocco (utile in pilot/dry-run)
+        # (#53, attacco 02 F2): fail-open SOLO in dry-run (pilot locale). In LIVE il
+        # secret e' OBBLIGATORIO: senza, un POST di rete farebbe processare messaggi
+        # finti a eva_brain e partire risposte WhatsApp reali. Fail-closed.
+        if DRY_RUN:
+            return True
+        logger.error("EVA_APP_SECRET mancante in modalita' LIVE — webhook rifiutato (fail-closed)")
+        return False
     sig = request.headers.get("X-Hub-Signature-256", "")
     if not sig.startswith("sha256="):
         return False
@@ -139,6 +145,13 @@ def receive():
 @app.get("/inbox")
 def inbox():
     # Handoff verso l'operatore (ultimi N, opz. solo i nuovi). Per pannello/n8n.
+    # (#53, attacco 02 F1): gli handoff contengono PII dei clienti (numero WhatsApp,
+    # messaggi). Da localhost passa libero (pannello same-host); da remoto serve
+    # X-API-Key == EVA_API_KEY (fallback TI_API_KEY) — fail-closed come api_server.
+    if request.remote_addr not in ("127.0.0.1", "::1"):
+        key = os.environ.get("EVA_API_KEY", "") or os.environ.get("TI_API_KEY", "")
+        if not key or request.headers.get("X-API-Key", "") != key:
+            return jsonify({"error": "non autorizzato"}), 403
     limit = request.args.get("limit", default=50, type=int)
     only_new = request.args.get("nuovi", default="0") in ("1", "true", "yes")
     recs = eva_inbox.read_handoffs(limit=limit, status="nuovo" if only_new else None)
@@ -157,6 +170,10 @@ def health():
 
 if __name__ == "__main__":
     port = int(os.environ.get("EVA_PORT", "5055"))
+    # (#53, attacco 02 F1): default 127.0.0.1 — PII clienti non raggiungibile da
+    # LAN/Tailscale. Quando Meta dovra' raggiungere il webhook: tunnel con TLS
+    # (Cloudflare Tunnel/ngrok) verso localhost, oppure EVA_BIND esplicito.
+    bind = os.environ.get("EVA_BIND", "127.0.0.1")
     mode = "DRY-RUN (nessun invio reale)" if DRY_RUN else "LIVE"
-    logger.info("EVA webhook su :%d — %s", port, mode)
-    app.run(host="0.0.0.0", port=port)
+    logger.info("EVA webhook su %s:%d — %s", bind, port, mode)
+    app.run(host=bind, port=port)

@@ -85,7 +85,17 @@ DEFAULT_SOURCES = [
     {"name": "topic:claude-code",     "kind": "github_topic", "handle": "claude-code", "tier": 1},
     {"name": "topic:ai-agents",       "kind": "github_topic", "handle": "ai-agents",   "tier": 2},
     # --- Siti / blog (RSS/Atom pubblici) ---
-    {"name": "Anthropic News",        "kind": "site", "handle": "https://www.anthropic.com/news", "tier": 1},
+    # (#53, attacco 05 F1): anthropic.com/news è una pagina HTML, NON un feed — la fonte
+    # n.1 era morta dal giorno 1 (25 giorni, zero segnali, zero errori). Feed comunitari
+    # mantenuti (Alan Turing Institute), keyless, verificati vivi il 04/07/2026.
+    {"name": "Anthropic News",        "kind": "site", "handle": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-news.xml", "tier": 1},
+    {"name": "Anthropic Research",    "kind": "site", "handle": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/anthropic-research.xml", "tier": 1},
+    {"name": "Claude Blog",           "kind": "site", "handle": "https://raw.githubusercontent.com/alan-turing-institute/ai-rss-feeds/refs/heads/main/feeds/claude-blog.xml", "tier": 2},
+    # (#53, attacco 05 P4): buchi di copertura 2026 — tutte keyless, verificate vive.
+    {"name": "OpenAI News",           "kind": "site", "handle": "https://openai.com/news/rss.xml", "tier": 1},
+    {"name": "Hugging Face Blog",     "kind": "site", "handle": "https://huggingface.co/blog/feed.xml", "tier": 1},
+    {"name": "HN (Claude/RAG/local)", "kind": "site", "handle": "https://hnrss.org/newest?q=Claude+OR+RAG+OR+%22local+LLM%22&points=100", "tier": 1},
+    {"name": "MarkTechPost",          "kind": "site", "handle": "https://www.marktechpost.com/feed/", "tier": 2},
     {"name": "Simon Willison",        "kind": "site", "handle": "https://simonwillison.net/atom/everything/", "tier": 2},
     {"name": "LangChain Blog",        "kind": "site", "handle": "https://blog.langchain.dev/rss/", "tier": 2},
     {"name": "Latent Space",          "kind": "site", "handle": "https://www.latent.space/feed", "tier": 2},
@@ -202,12 +212,11 @@ def fetch_github_user(handle: str) -> list[dict]:
 
 
 def fetch_github_topic(topic: str) -> list[dict]:
-    """Repo aggiornati di recente su un topic (proxy di 'trending' senza API dedicata)."""
-    data = gh_json(f"search/repositories?q=topic:{topic}&sort:updated&per_page=15"
-                   .replace("&sort:updated", "+sort:updated"))
-    # endpoint corretto: search/repositories?q=topic:X sort:updated
-    if not data:
-        data = gh_json(f"search/repositories?q=topic:{topic}%20sort:updated&per_page=15")
+    """Repo aggiornati di recente su un topic (proxy di 'trending' senza API dedicata).
+    (#53, attacco 05 F3+F4): stars:>=20 taglia lo spam SEO (★0-2 era ~60% del rumore
+    nelle criticità) e `&sort=updated` è il PARAMETRO vero (prima finiva DENTRO la
+    query `q=` → ordinamento mai applicato)."""
+    data = gh_json(f"search/repositories?q=topic:{topic}+stars:%3E=20&sort=updated&order=desc&per_page=15")
     items = []
     for r in (data or {}).get("items", [])[:15]:
         stars = r.get("stargazers_count", 0)
@@ -252,7 +261,12 @@ def fetch_site(url: str) -> list[dict]:
     try:
         r = requests.get(url, headers=HEADERS, timeout=20)
         r.raise_for_status()
-        return _parse_feed(r.text)[:15]
+        items = _parse_feed(r.text)[:15]
+        if not items:
+            # (#53, attacco 05 F1): HTTP 200 ma zero item = pagina HTML o feed rotto.
+            # Prima falliva in silenzio ("cooldown" apparente) — mai più fonti morte invisibili.
+            logger.warning("[site] %s: HTTP 200 ma feed vuoto/non-XML — sorgente da verificare", url)
+        return items
     except Exception as ex:
         logger.warning("[site] %s: %s", url, ex)
         return []
