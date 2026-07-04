@@ -178,30 +178,30 @@ snapshot git del vault PRIMA di toccare: `6037a45`).*
   (banner SUPERSEDED + PAIRS estesi + bonifica 0 residui + _CANONE ripuntato): indica i doc
   "V32 su molle + recuperato/Euro 0" (superati: corpo unico mag 2026); Nina/story groundano sul falso.
   `canon_guard.clean` non li matcha ("Euro"≠"EUR" nei PAIRS). Fix: ripuntare canone + estendere PAIRS.
-- [ ] **3 · RAG P0 — 55 file di versioni superate dentro il canone** (07): `ASSOLUTO/VERSIONI`(13) +
+- [✓] **3 · RAG P0 — 55 file di versioni superate dentro il canone** (07) — **FATTO in #53** (exclusions + rebuild-hard 441→388 file, PROBE_OK, snapshot): `ASSOLUTO/VERSIONI`(13) +
   `SINAPSI/ARCHIVIO`(32) + `ARCHIVE_V6`(10) indicizzati (exclusions `rag_engine.py:134,143` non li coprono)
   → competono col reale in retrieval. Fix: estendere exclusions. *Un rebuild solo, GPU libera, no martello.*
-- [ ] **4 · SICUREZZA EVA** (02 F1+F2): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti
+- [✓] **4 · SICUREZZA EVA** (02 F1+F2) — **FATTO in #53** (bind 127.0.0.1 + X-API-Key su /inbox + APP_SECRET fail-closed in LIVE, commit 7f0dd59b): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti
   Vita Natura senza auth (leggibile da LAN/Tailscale); `valid_signature`(:88) fail-open se secret vuoto.
   Fix: bind 127.0.0.1 + X-API-Key + `EVA_APP_SECRET` obbligatorio in LIVE.
-- [ ] **5 · SICUREZZA IP** (02 F3): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,
+- [✓] **5 · SICUREZZA IP** (02 F3) — **FATTO in #53** (VULCAN_MANIFESTO + mims protocol + fit-park → MENTE, git rm dal repo pubblico + 'perfetta'; history: filter-repo da decidere con Matteo): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,
   `fit-park-specs.md`) dal repo PUBBLICO a `MICROINDUSTRY/MENTE/MIMS/` (dichiara il moat/target Shore/
   strategia brevetto). Resta in git history → decidere con Matteo se ripulire (`git filter-repo`).
-- [ ] **6 · RAG commit-leak senza guardia** (04 #1): `api_server.py:383,1085,1164` importano `rag_engine`
+- [✓] **6 · RAG commit-leak senza guardia** (04 #1) — **FATTO in #53** (lock + failure-latch 300s sui 3 punti, attivo dal prossimo restart API, commit 72619583): `api_server.py:383,1085,1164` importano `rag_engine`
   per-request nel try → se il primo load fallisce, ogni richiesta riserva GB di commit (MemoryError).
   Fix additivo: lock + failure-latch cooldown 300s. *Cura alla radice il commit-leak.*
 - [ ] **7 · Igiene `.env` in root** (04 #2): contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo
   pubblico); il gho_ è quasi certo il vecchio revocato, **la sk-ant va verificata/ruotata** e il file
   → `_VAULT/KEYS/`. Bonus: file vuoto `perfetta` è TRACCIATO nel repo pubblico → `git rm`.
-- [ ] **8 · WATCHER riparato** (05 P1-P3): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1
+- [✓] **8 · WATCHER riparato** (05 P1-P3) — **FATTO in #53** (feed Alan Turing + 4 fonti nuove verificate, WARNING feed vuoto, stars>=20 + sort=updated vero; testato: 7 sorgenti, 100 segnali; schedulazione OK — le 5 notti saltate = PC spento 28/06-01/07): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1
   morta da 25gg silenziosamente**. Fix: feed RSS keyless (Alan Turing) + WARNING su feed vuoto;
   `stars:>=20` sui topic GitHub (spam SEO ★0-2); verificare da terminale le 5 notti saltate (`schtasks`).
   +watchlist 12 sorgenti keyless pronte (OpenAI/HuggingFace/HN filtrato).
-- [ ] **9 · STORIE indice+catena + EP_N2_03 "la Misura"** (03 #1+#2): `INDICE_CAMMINO.md:29` ha 9/15 titoli
+- [◐] **9 · STORIE indice+catena + EP_N2_03 "la Misura"** (03 #1+#2) — indice FATTO in #53 (generate_indice_cammino.py: VISTA di episodes.json, 52 caselle, mai più titoli scaduti); RESTANO catena EP_02→03 + carosello EP_N2_03: `INDICE_CAMMINO.md:29` ha 9/15 titoli
   sbagliati → generarlo da `episodes.json` (come `generate_pietre_index.py`); 2 micro-edit per riagganciare
   open-loop EP_02→03; **EP_N2_03 = carosello 16 slide** su "Mille Volte Uguale" (già misura-centrico), non
   episodio nuovo. *Era già il primo punto contenuti della bussola.*
-- [ ] **10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11): `index.css` → keyframe `nl-fadeUp`
+- [◐] **10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11) — CSS FATTO in #53 (nl-fadeUp globale, reduced-motion, contrasto WCAG con screenshot, focus-visible, 2 regole invalide rimosse, +fix bug dash_shot.bat); RESTA il template canonico caroselli: `index.css` → keyframe `nl-fadeUp`
   orfano (4 view non animano), `prefers-reduced-motion` assente (dashboard 24/7), contrasto slate-600/700
   sotto WCAG (~1.6-2.4:1), focus-visible esteso. **PRIMA di EP_N2_03:** `CAROSELLI/_TEMPLATE/` (drift
   copia-incolla già misurabile `.lead` 60→62→66px).
