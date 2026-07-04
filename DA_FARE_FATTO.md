@@ -79,6 +79,24 @@
 
 ## Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)
 
+### ONDATA 2 (04/07) — TOP 10 SOFTWARE COMPLETATA (resta solo #1 = ordine hardware di Matteo)
+- [✓] **#7 igiene chiavi (fatta da me, su richiesta)**: scan cieco = zero sk-ant in qualunque .env;
+  gho_ in root = vecchio token, **verificato 401 revocato** e rimosso; .env riscritto con la regola in testa.
+- [✓] **#9 completato — catena open-loop 2→3** (03 F2): 2 micro-edit a `EP_N2_03` ("Dove siamo" ora
+  aggancia il patto della misura; Pietre richiamate riallineate al canone vero) + rebuild episodes.json.
+- [✓] **GENERATORE NINA — doppioni da semi gemelli** (03 F3, aggravato stanotte): EP_N2_51 E il nuovo
+  EP_N2_52 erano entrambi la lezione di EP_N2_08 (⟡3 giro 2) perché i semi `EP_AV_02`/`EP_AV_02_2`
+  condividono la regione → **archiviati entrambi** (repo+vault) e **guardia anti-gemelli** in
+  `nina_rag_loop.next_seed` (1 rigenerazione per regione per giro; dry-run: prossimi semi = ⟡4
+  biblioteca, ⟡5 mappa, ⟡6 soldato — contenuto NUOVO). Canone = **EP_N2_01…50**, `_CANONE` aggiornato.
+- [✓] **#10 completato — template caroselli** (01 F12+F13): `CAROSELLI/_TEMPLATE/` con `tokens.css`
+  (fonte di verità: lead 66px, scene 210px, palette blueprint-anime) + `carosello_base.html`
+  (3 slide-modello, self-contained per Express); file vivi rinominati al canone `carosello.html`
+  (gli script se lo aspettavano già); regola nel README: si copia il TEMPLATE, mai l'episodio prima.
+- [ ] **EP_N2_03 "la Misura" — carosello 16 slide** (03 F2 punto 3): ora c'è il template, va PRODOTTO
+  (salda la promessa della slide 16 di EP_N2_02). Prossimo lavoro contenuti.
+- [ ] Backlog per dominio in bussola (sotto, ~35 voci residue) — a ondate.
+
 *Richiesta Matteo: il vault deve risultare anche ESTETICAMENTE interconnesso — oltre agli orfani,
 c'erano cose che non funzionavano. Diagnosi completa → 6 guasti trovati e chiusi (tutto additivo,
 snapshot git del vault PRIMA di toccare: `6037a45`).*
@@ -190,18 +208,18 @@ snapshot git del vault PRIMA di toccare: `6037a45`).*
 - [✓] **6 · RAG commit-leak senza guardia** (04 #1) — **FATTO in #53** (lock + failure-latch 300s sui 3 punti, attivo dal prossimo restart API, commit 72619583): `api_server.py:383,1085,1164` importano `rag_engine`
   per-request nel try → se il primo load fallisce, ogni richiesta riserva GB di commit (MemoryError).
   Fix additivo: lock + failure-latch cooldown 300s. *Cura alla radice il commit-leak.*
-- [ ] **7 · Igiene `.env` in root** (04 #2): contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo
+- [✓] **7 · Igiene `.env` in root** (04 #2) — **FATTO in #53 ondata 2**: nessuna sk-ant presente (scan cieco su tutti i .env: zero match), il gho_ era il VECCHIO token — verificato **401 revocato** contro api.github.com — e rimosso; .env riscritto (solo path + regola "chiavi solo in _VAULT/KEYS" in testa). Niente da ruotare.: contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo
   pubblico); il gho_ è quasi certo il vecchio revocato, **la sk-ant va verificata/ruotata** e il file
   → `_VAULT/KEYS/`. Bonus: file vuoto `perfetta` è TRACCIATO nel repo pubblico → `git rm`.
 - [✓] **8 · WATCHER riparato** (05 P1-P3) — **FATTO in #53** (feed Alan Turing + 4 fonti nuove verificate, WARNING feed vuoto, stars>=20 + sort=updated vero; testato: 7 sorgenti, 100 segnali; schedulazione OK — le 5 notti saltate = PC spento 28/06-01/07): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1
   morta da 25gg silenziosamente**. Fix: feed RSS keyless (Alan Turing) + WARNING su feed vuoto;
   `stars:>=20` sui topic GitHub (spam SEO ★0-2); verificare da terminale le 5 notti saltate (`schtasks`).
   +watchlist 12 sorgenti keyless pronte (OpenAI/HuggingFace/HN filtrato).
-- [◐] **9 · STORIE indice+catena + EP_N2_03 "la Misura"** (03 #1+#2) — indice FATTO in #53 (generate_indice_cammino.py: VISTA di episodes.json, 52 caselle, mai più titoli scaduti); RESTANO catena EP_02→03 + carosello EP_N2_03: `INDICE_CAMMINO.md:29` ha 9/15 titoli
+- [✓] **9 · STORIE indice+catena** (03 #1+#2) — indice FATTO in #53 (generate_indice_cammino.py: VISTA di episodes.json, 52 caselle, mai più titoli scaduti); RESTANO catena EP_02→03 + carosello EP_N2_03: `INDICE_CAMMINO.md:29` ha 9/15 titoli
   sbagliati → generarlo da `episodes.json` (come `generate_pietre_index.py`); 2 micro-edit per riagganciare
   open-loop EP_02→03; **EP_N2_03 = carosello 16 slide** su "Mille Volte Uguale" (già misura-centrico), non
   episodio nuovo. *Era già il primo punto contenuti della bussola.*
-- [◐] **10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11) — CSS FATTO in #53 (nl-fadeUp globale, reduced-motion, contrasto WCAG con screenshot, focus-visible, 2 regole invalide rimosse, +fix bug dash_shot.bat); RESTA il template canonico caroselli: `index.css` → keyframe `nl-fadeUp`
+- [✓] **10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11) — CSS FATTO in #53 (nl-fadeUp globale, reduced-motion, contrasto WCAG con screenshot, focus-visible, 2 regole invalide rimosse, +fix bug dash_shot.bat); RESTA il template canonico caroselli: `index.css` → keyframe `nl-fadeUp`
   orfano (4 view non animano), `prefers-reduced-motion` assente (dashboard 24/7), contrasto slate-600/700
   sotto WCAG (~1.6-2.4:1), focus-visible esteso. **PRIMA di EP_N2_03:** `CAROSELLI/_TEMPLATE/` (drift
   copia-incolla già misurabile `.lead` 60→62→66px).
