@@ -33,7 +33,7 @@ tags: avventura, educativo, nina, themis, nina-v2, ripetibilita, mille, volte
 
 ---
 
-> **Dove siamo:** Nina ha imparato a riconoscere i motivi e gli ordini. Ora scopre che mantenere quell'ordine non è un evento — è un mestiere che si ripete.
+> **Dove siamo:** Nina ha imparato che la precisione è un patto ("giusto rispetto a cosa?"). Ora scopre l'attrezzo che rende il patto controllabile — la **misura** — e il nemico che lo insidia: la deriva.
 
 ---
 
@@ -208,7 +208,7 @@ Nina la sente arrivare — il pizzicore dietro le orecchie.
 
 <!-- DIDATTICA -->
 **Pietra:** `⟡0` La Materia (giro 3). *La ripetibilità è il mestiere: una cosa giusta una volta è fortuna, mille volte uguale è metodo. Il nemico è la deriva — spostamento piccolo e costante — si tiene a bada con un riferimento fermo e il ricontrollo periodico.*
-**Pietre richiamate:** ⟡0 casella 1 (riconoscere l'ordine) · ⟡0 casella 2 (misurare)
+**Pietre richiamate:** ⟡0 casella 1 (fatto bene = regge quando lo tiri) · ⟡0 casella 2 (la precisione è una relazione; *quanto* è "il giusto" si misura)
 **3 strati:** bambino = il quaderno di musica che va storto da solo, senza che nessuno abbia sbagliato in grande · curioso = la deriva sistematica e il riferimento zero come metodo per tenerla a bada · grande = in metrologia ogni misura valida deve essere ripetibile (stesso metodo, stesso strumento, stesse condizioni); la deriva sistematica accumula deviazione totale = spostamento × N ripetizioni; la calibrazione è il confronto periodico con uno zero fisso esterno
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
 **Aggancio reale:** nel sistema GENESIS/V32/MIMS la ripetibilità è il controllo di qualità

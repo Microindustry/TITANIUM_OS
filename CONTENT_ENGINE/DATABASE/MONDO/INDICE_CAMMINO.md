@@ -5,16 +5,6 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 ---
-<!-- TOC -->
-
-- [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
-  - [Come leggere la tabella](#come-leggere-la-tabella)
-  - [Il cammino (caselle 1  52)](#il-cammino-caselle-1-52)
-  - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
-  - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
-
-<!-- /TOC -->
-
 
 # Indice del Cammino — il "libro" di Nina
 
@@ -34,7 +24,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 52)
+## Il cammino (caselle 1 → 50)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -88,8 +78,6 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 48 | `EP_N2_48` | Il Libro delle Ricette di Nonna | ⟡7 (giro 2) | Un sistema che resta nella tua testa è solo una magia; uno scritto in |
 | 49 | `EP_N2_49` | La scatola magica dei compiti | ⟡7 (giro 2) | Scrivere le cose su carta o schermo libera la testa da fare quello che |
 | 50 | `EP_N2_50` | Il semaforo che mente | ⟡7 (giro 2) | La differenza tra quello che un sistema *dice di fare* e quello che *s |
-| 51 | `EP_N2_51` | Il Sussurratore che Indovina | ⟡3 (giro 2) | Una macchina che indovina bene la parola dopo non sta pensando come te |
-| 52 | `EP_N2_52` | Il Sussurratore che Indovina (e a Volte Mente) | ⟡3 (giro 2) | Le parole ordinate e sicure non garantiscono la verità: anche chi parl |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

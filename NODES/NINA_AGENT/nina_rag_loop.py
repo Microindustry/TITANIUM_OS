@@ -110,11 +110,24 @@ def _save_state(st: dict) -> None:
 
 def next_seed(seeds: list[dict], done: list[str]) -> dict | None:
     """Prossimo seme non ancora ri-generato; quando il giro e' finito, ricomincia
-    (giro piu' profondo) — 'continua a generarli'."""
+    (giro piu' profondo) — 'continua a generarli'.
+    (#53, attacco 03 F3): i semi GEMELLI (EP_AV_X e EP_AV_X_2 condividono la regione)
+    producevano due quasi-doppioni della stessa lezione per giro (EP_N2_51 e 52 =
+    entrambi la lezione di EP_N2_08 → archiviati). Regola spirale: UNA rigenerazione
+    per regione per giro — il gemello viene consumato senza generare (torna eleggibile
+    al giro successivo, quando la spirale riparte piu' profonda)."""
+    regioni_done = {s["regione"] for s in seeds if s["seed_file"] in done}
     for s in seeds:
-        if s["seed_file"] not in done:
-            return s
-    return seeds[0] if seeds else None
+        if s["seed_file"] in done:
+            continue
+        if s["regione"] in regioni_done:
+            logger.info("seme gemello saltato: %s (regione %s gia' rigenerata in questo giro)",
+                        s["seed_file"], s["regione"])
+            done.append(s["seed_file"])   # consumato senza doppione
+            regioni_done.add(s["regione"])
+            continue
+        return s
+    return None
 
 
 def rebuild_episodes() -> bool:
