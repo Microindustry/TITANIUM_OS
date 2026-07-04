@@ -55,6 +55,35 @@ CORS(app, origins=[
 
 _screen_jobs: dict = {}  # job_id → {status, task, result, thread}
 
+# ── RAG GUARD (#53, attacco 04 P2 — cura alla radice del "commit leak") ────────
+# Il load dei modelli RAG (torch+chroma) e' costoso e, se fallisce (es. HNSW corrotto
+# post-blackout), OGNI retry per-request riserva GB di commit Windows finche' il sistema
+# satura (MemoryError su qualunque processo). Regole: UN solo load alla volta (lock),
+# e dopo un fallimento si entra in COOLDOWN 300s — niente martello dalla dashboard.
+_rag_lock = threading.Lock()
+_rag_state: dict = {"fn": None, "failed_at": 0.0}
+_RAG_COOLDOWN_S = 300
+
+
+def _get_rag_search():
+    """Ritorna rag_engine.search caricandolo UNA volta (lock + failure-latch)."""
+    import time as _time
+    with _rag_lock:
+        if _rag_state["fn"]:
+            return _rag_state["fn"]
+        wait = _RAG_COOLDOWN_S - (_time.time() - _rag_state["failed_at"])
+        if wait > 0:
+            raise RuntimeError(f"RAG in cooldown dopo un load fallito — riprova tra {int(wait)}s "
+                               "(protezione commit-leak; se persiste: SERVICES/rag_recover.ps1)")
+        try:
+            sys.path.insert(0, str(ROOT))
+            from NODES.MENTE_RAG.rag_engine import search as _fn
+            _rag_state["fn"] = _fn
+            return _fn
+        except BaseException:
+            _rag_state["failed_at"] = _time.time()
+            raise
+
 # ── AUTH: localhost passa libero (la dashboard è same-host); le chiamate REMOTE
 # (LAN/Tailscale) richiedono X-API-Key == TI_API_KEY. CORS difende il browser,
 # non un curl diretto da un device della tailnet: questo sì. Fail-closed da remoto.
@@ -379,8 +408,7 @@ def rag_search():
     if not q:
         return jsonify({"ok": False, "error": "param q mancante"}), 400
     try:
-        sys.path.insert(0, str(ROOT))
-        from NODES.MENTE_RAG.rag_engine import search as rag_search_fn
+        rag_search_fn = _get_rag_search()   # lock + failure-latch (#53): niente commit-leak
         results = rag_search_fn(q, top_k=top_k)
         return jsonify({"ok": True, "query": q, "total": len(results), "results": results})
     except Exception as e:
@@ -1081,8 +1109,7 @@ def agents_ask():
         rag_context, sources = "", []
         if use_rag:
             try:
-                sys.path.insert(0, str(ROOT))
-                from NODES.MENTE_RAG.rag_engine import search as rag_search_fn
+                rag_search_fn = _get_rag_search()   # lock + failure-latch (#53)
                 seen_src = set()
                 for h in rag_search_fn(question, top_k=5):
                     src = h.get("source", "?")
@@ -1160,8 +1187,7 @@ def rag_chat():
     # 1 — Retrieval reale dal RAG (CANONE MENTE + ricerca), con fonti
     rag_context, sources = "", []
     try:
-        sys.path.insert(0, str(ROOT))
-        from NODES.MENTE_RAG.rag_engine import search as rag_search_fn
+        rag_search_fn = _get_rag_search()   # lock + failure-latch (#53)
         seen = set()
         for h in rag_search_fn(question, top_k=top_k):
             src = h.get("source", "?")
