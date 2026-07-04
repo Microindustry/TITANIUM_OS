@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Nina · EP_N2_XX — TITOLO EPISODIO</title>
+<meta name="hz:slide-selector" content=".slide" />
+<meta name="hz:canvas-width" content="1080" />
+<meta name="hz:canvas-height" content="1350" />
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<!-- ═══════════════════════════════════════════════════════════════════════
+  TEMPLATE CANONICO CAROSELLI (#53) — copia QUESTO file, mai l'episodio prima.
+  CSS = standard EP_N2_02 (valori spiegati in _TEMPLATE/tokens.css).
+  Resta self-contained: niente <link> a css locali (requisito import Express).
+  Le onde SVG di sfondo (.flow) le genera _build_ep.py — qui c'e' il segnaposto.
+  REGOLA SERIE: ogni slide = scena illustrata; MAI slot tratteggiati vuoti.
+═══════════════════════════════════════════════════════════════════════ -->
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#05070d; }
+body { display:flex; flex-direction:column; align-items:center; gap:40px; padding:40px 0; }
+.slide { position:relative; width:1080px; height:1350px; overflow:hidden;
+  background: radial-gradient(120% 75% at 50% 34%, #1a2440 0%, #0c1122 46%, #05070d 100%);
+  font-family:"source-sans-3",sans-serif; color:#eef2fb; }
+.grid { position:absolute; inset:30px; opacity:0.04; background-image: linear-gradient(#5fc7f3 1px, transparent 1px), linear-gradient(90deg,#5fc7f3 1px, transparent 1px); background-size:54px 54px; }
+.frame { position:absolute; inset:30px; border:1px solid rgba(148,163,184,0.22); border-radius:4px; }
+.flow { position:absolute; inset:0; width:1080px; height:1350px; pointer-events:none; }
+.toplabel { position:absolute; top:60px; left:0; right:0; text-align:center; font-family:"space-mono",monospace; font-size:17px; letter-spacing:6px; color:#8595b4; text-transform:uppercase; }
+.kicker { position:absolute; top:150px; left:0; right:0; text-align:center; font-family:"space-mono",monospace; font-size:16px; letter-spacing:6px; color:#f4b65a; text-transform:uppercase; }
+.scene { position:absolute; top:210px; left:0; right:0; height:380px; display:flex; align-items:center; justify-content:center; }
+.body2 { position:absolute; left:96px; right:96px; top:640px; bottom:176px; display:flex; flex-direction:column; justify-content:flex-start; gap:26px; text-align:center; }
+.lead { font-family:"playfair-display",serif; font-weight:700; font-size:66px; line-height:1.04; color:#f6f8ff; letter-spacing:-0.5px; }
+.lead .accent { color:#f4b65a; font-style:italic; } .lead .pink { color:#ec4899; font-style:italic; } .lead .cyan { color:#5fc7f3; font-style:italic; }
+.intro { font-size:31px; line-height:1.5; color:#c3cce0; }
+.intro .soft { color:#eef2fb; font-weight:600; } .intro .g { color:#f4b65a; font-weight:600; } .intro .cyan { color:#5fc7f3; font-weight:600; }
+.seal { font-family:"playfair-display",serif; font-style:italic; font-weight:700; font-size:31px; line-height:1.32; color:#f4b65a; margin-top:6px; }
+.cta { font-family:"space-mono",monospace; font-size:20px; line-height:1.45; letter-spacing:1px; color:#5fc7f3; border:1px solid rgba(95,199,243,0.3); border-radius:14px; padding:18px 22px; }
+.footer { position:absolute; left:60px; right:60px; bottom:60px; display:flex; align-items:center; justify-content:space-between; font-family:"space-mono",monospace; font-size:15px; letter-spacing:2px; color:#7f8db0; }
+.footer .dot { color:#f4b65a; } .footer .nina { color:#ec4899; }
+</style>
+</head>
+<body>
+
+<!-- ── SLIDE 1 · APERTURA (hook) ─────────────────────────────────────── -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <!-- .flow: onde SVG di sfondo generate da _build_ep.py (tema ciano, opacity ~0.10) -->
+  <div class="toplabel">NINA · L'AVVENTURA — EP XX</div>
+  <div class="kicker">⟡N · NOME PIETRA</div>
+  <div class="scene">
+    <!-- SCENA ILLUSTRATA: svg/emoji-composizione/illustrazione del momento chiave.
+         Riferimento vincente: EP_N2_01 slide_2 (buonanotte) — atmosfera, non schema. -->
+  </div>
+  <div class="body2">
+    <div class="lead">La domanda che <span class="accent">apre</span> l'episodio</div>
+    <div class="intro">Una-due frasi che portano il lettore <span class="soft">dentro la scena</span> — concrete, coi piedi nell'officina.</div>
+  </div>
+  <div class="footer"><span>TITANIUM_OS</span><span class="dot">⟡N · giro G</span><span class="nina">nina</span></div>
+</div>
+
+<!-- ── SLIDE 2..N-1 · CONTENUTO (una idea per slide) ─────────────────── -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">NINA · L'AVVENTURA — EP XX</div>
+  <div class="kicker">IL CONCETTO DI QUESTA SLIDE</div>
+  <div class="scene"><!-- scena illustrata coerente col passo della storia --></div>
+  <div class="body2">
+    <div class="lead">Una sola <span class="cyan">idea</span> per slide</div>
+    <div class="intro">Sviluppo in 2-3 righe. Grassetti <span class="g">dorati</span> per i termini che pesano, <span class="cyan">ciano</span> per la tecnica.</div>
+    <div class="seal">"La frase-sigillo che resta addosso."</div>
+  </div>
+  <div class="footer"><span>TITANIUM_OS</span><span class="dot">⟡N · giro G</span><span class="nina">nina</span></div>
+</div>
+
+<!-- ── SLIDE FINALE · CHIUSURA + OPEN LOOP ───────────────────────────── -->
+<div class="slide" data-canvas-width="1080" data-canvas-height="1350">
+  <div class="grid"></div><div class="frame"></div>
+  <div class="toplabel">NINA · L'AVVENTURA — EP XX</div>
+  <div class="kicker">DOVE PORTA IL PROSSIMO PASSO</div>
+  <div class="scene"><!-- scena di passaggio: la porta verso la casella dopo --></div>
+  <div class="body2">
+    <div class="lead">L'<span class="pink">open loop</span> verso la prossima casella</div>
+    <div class="seal">"La domanda finale — che è letteralmente il primo passo dell'episodio dopo."</div>
+    <div class="cta">SEGUI IL CAMMINO · EP successivo: TITOLO → salva il carosello</div>
+  </div>
+  <div class="footer"><span>TITANIUM_OS</span><span class="dot">⟡N · giro G</span><span class="nina">nina</span></div>
+</div>
+
+</body>
+</html>

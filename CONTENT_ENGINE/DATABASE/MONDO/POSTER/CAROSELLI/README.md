@@ -29,6 +29,10 @@ CAROSELLI/
 - **Un episodio = una cartella `<EP_ID>/`.** Mai file di caroselli diversi mischiati.
 - **Nomi file canonici e identici in ogni cartella**: `carosello.html`, `caption.txt`,
   `README.md`, `slides/`. Così uno script può ciclare su tutte le cartelle.
+  *(riallineato #53: i file vivi erano `ep 1.html`/`pre 01.html` — rinominati al canone)*
+- **Nuovo episodio = copia `_TEMPLATE/carosello_base.html`, MAI l'episodio precedente**
+  (#53, attacco 01 F12: il copia-incolla tra episodi aveva già prodotto drift misurabile,
+  `.lead` 60→62→66px). Valori canonici spiegati in `_TEMPLATE/tokens.css`.
 - **Additivo**: si aggiunge una cartella, non si tocca quelle esistenti.
 - **Sorgente = HTML**: la verità è l'HTML nel repo (versionato, rigenerabile). Express e i
   PNG sono derivati. L'HTML nasce già Adobe-Fonts-ready (kit Typekit) e import-ready (`hz:`

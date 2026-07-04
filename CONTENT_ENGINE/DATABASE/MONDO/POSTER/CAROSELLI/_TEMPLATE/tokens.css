@@ -1,0 +1,57 @@
+/* tokens.css | CAROSELLI Nina — FONTE DI VERITÀ dei valori canonici | v1.0 | 2026-07-04
+   (#53, attacco 01 F12): i 5 caroselli erano coerenti solo per copia-incolla, e il drift
+   era già misurabile (.lead 60→62→66px, .scene top 230→222→210px). QUESTO file dice
+   quali valori valgono. NON viene linkato dagli HTML (che restano self-contained per
+   l'import Express): serve a chi scrive/aggiorna il CSS inlinato.
+   Standard = EP_N2_02 (l'ultimo "vincente"). Se un valore cambia: aggiorna QUI + template. */
+
+:root {
+  /* ── CANVAS ─────────────────────────────────────────── */
+  --canvas-w: 1080px;          /* 4:5 Instagram */
+  --canvas-h: 1350px;
+  --pagina-bg: #05070d;        /* fondo pagina fuori-slide */
+  --slide-bg: radial-gradient(120% 75% at 50% 34%, #1a2440 0%, #0c1122 46%, #05070d 100%);
+
+  /* ── PALETTE (blueprint-anime) ──────────────────────── */
+  --ink:        #eef2fb;       /* testo primario */
+  --ink-lead:   #f6f8ff;       /* titoli lead */
+  --ink-body:   #c3cce0;       /* corpo/intro */
+  --ink-dim:    #8595b4;       /* toplabel */
+  --ink-footer: #7f8db0;       /* footer */
+  --oro:        #f4b65a;       /* accento/sigillo/kicker (l'oro della serie) */
+  --nina:       #ec4899;       /* rosa Nina */
+  --tech:       #5fc7f3;       /* ciano tech/blueprint (griglia, flow, CTA) */
+  --frame-line: rgba(148,163,184,0.22);
+  --cta-line:   rgba(95,199,243,0.3);
+
+  /* ── GRIGLIA BLUEPRINT (mai a vista piena: opacity 0.04) ── */
+  --grid-step: 54px;
+  --grid-opacity: 0.04;
+  --grid-inset: 30px;
+
+  /* ── TYPE SCALE (font Typekit kit zhv2kry) ──────────── */
+  /* playfair-display = lead/seal · space-mono = label/kicker/footer/cta · source-sans-3 = corpo */
+  --fs-lead:     66px;   /* STANDARD (EP_N2_02) — non 60, non 62 */
+  --fs-intro:    31px;
+  --fs-seal:     31px;
+  --fs-cta:      20px;
+  --fs-toplabel: 17px;
+  --fs-kicker:   16px;
+  --fs-footer:   15px;
+
+  /* ── LAYOUT SLIDE ───────────────────────────────────── */
+  --toplabel-top: 60px;
+  --kicker-top:   150px;
+  --scene-top:    210px;   /* STANDARD (EP_N2_02) — non 222, non 230 */
+  --scene-h:      380px;
+  --body-top:     640px;
+  --body-side:    96px;
+  --footer-inset: 60px;
+}
+
+/* REGOLE DELLA SERIE (bibbia visiva, feedback Matteo):
+   1. Ogni slide è una SCENA ILLUSTRATA/atmosferica — MAI griglia a vista o slot
+      tratteggiati vuoti (sembra wireframe, uccide la magia).
+   2. Preambolo/social = snello; episodi veri = più ricchi (canali diversi).
+   3. Footer a 3 zone con la Pietra ⟡ · niente foto reali · avatar/simboli.
+   4. Nuovo episodio = COPIA _TEMPLATE/carosello_base.html — mai l'episodio precedente. */
