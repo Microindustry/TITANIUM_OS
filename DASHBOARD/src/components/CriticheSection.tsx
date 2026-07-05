@@ -1,5 +1,8 @@
-// CriticheSection.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
+// CriticheSection.tsx | TITANIUM_OS / DASHBOARD | v1.1 | 2026-07-05
 // Critiche & Miglioramenti — N-livelli per progetto, aggiornabile ogni sessione
+// v1.1 (#54): il canone manuale arriva LIVE da /api/critiche/manuali (fonte:
+// DATA/audit/critiche_manuali.json, editabile senza rebuild); CRITICHE_ROOT
+// baked resta solo come fallback offline.
 
 import { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight, AlertTriangle, CheckCircle2, Clock, Lock, Activity } from "lucide-react";
@@ -149,7 +152,14 @@ export function CriticheSection() {
   // come ramo LIVE accanto al canone manuale di criticheData.ts.
   const [autoFindings, setAutoFindings] = useState<AutoFinding[]>([]);
   const [bussola, setBussola] = useState<BussolaTodo[]>([]);
+  // canone manuale LIVE (#54): fonte DATA/audit/critiche_manuali.json via API;
+  // se l'API è giù resta il fallback baked (CRITICHE_ROOT)
+  const [canone, setCanone] = useState<SkillNode>(CRITICHE_ROOT);
   useEffect(() => {
+    fetch("/api/critiche/manuali")
+      .then(r => r.json())
+      .then(d => { if (d.ok && d.root && Array.isArray(d.root.children)) setCanone(d.root as SkillNode); })
+      .catch(() => { /* offline: fallback baked */ });
     fetch("/api/critiche/auto")
       .then(r => r.json())
       .then(d => { if (d.ok && Array.isArray(d.findings)) setAutoFindings(d.findings); })
@@ -160,13 +170,13 @@ export function CriticheSection() {
       .catch(() => { /* offline: nessun ramo bussola */ });
   }, []);
 
-  // Root = canone manuale + ramo BUSSOLA (la rotta) + ramo auto-audit, in testa
+  // Root = canone manuale (live) + ramo BUSSOLA (la rotta) + ramo auto-audit, in testa
   const root = useMemo<SkillNode>(() => {
     const branches = [buildBussolaBranch(bussola), buildAutoBranch(autoFindings)]
       .filter((b): b is SkillNode => b !== null);
-    if (branches.length === 0) return CRITICHE_ROOT;
-    return { ...CRITICHE_ROOT, children: [...branches, ...(CRITICHE_ROOT.children ?? [])] };
-  }, [autoFindings, bussola]);
+    if (branches.length === 0) return canone;
+    return { ...canone, children: [...branches, ...(canone.children ?? [])] };
+  }, [autoFindings, bussola, canone]);
 
   const [stack, setStack] = useState<SkillNode[]>([CRITICHE_ROOT]);
   // Quando arrivano i findings il root cambia: riallinea solo se sei alla radice
@@ -183,7 +193,7 @@ export function CriticheSection() {
   // Scomposizione onesta del "da fare": 3 fonti distinte confluiscono in questa vista
   // (canone manuale scritto a mano + auto-audit notturno + bussola). Mostrarle separate
   // evita il numero unico opaco che confondeva (es. "33" = solo il canone manuale).
-  const canonOpen   = useMemo(() => getAllLeaves(CRITICHE_ROOT).filter(l => l.status === "active").length, []);
+  const canonOpen   = useMemo(() => getAllLeaves(canone).filter(l => l.status === "active").length, [canone]);
   const bussolaOpen = bussola.filter(t => t.stato === "da_fare" || t.stato === "in_corso").length;
 
   const drillIn = (node: SkillNode) => { setStack(s => [...s, node]); window.scrollTo({ top: 0, behavior: "smooth" }); };
@@ -217,7 +227,7 @@ export function CriticheSection() {
             {/* scomposizione per fonte — il totale mescola 3 liste diverse */}
             <div className="flex items-center gap-2 mt-1.5 flex-wrap">
               {[
-                { v: canonOpen,   l: "canone",  c: "text-rose-300/80",  t: "criticheData.ts — critiche scritte a mano" },
+                { v: canonOpen,   l: "canone",  c: "text-rose-300/80",  t: "critiche_manuali.json — canone manuale (live da /api, editabile senza rebuild)" },
                 { v: autoOpen,    l: "audit",   c: "text-cyan-300/80",  t: "auto-audit notturno (night_audit) — cartella clinica viva" },
                 { v: bussolaOpen, l: "bussola", c: "text-pink-300/80",  t: "DA_FARE_FATTO.md — la scaletta condivisa" },
               ].map(s => (
@@ -278,7 +288,7 @@ export function CriticheSection() {
 
       <div className="text-center py-1">
         <span className="text-[7px] font-mono text-slate-800 uppercase tracking-[0.3em]">
-          Canone: criticheData.ts · Live: night_audit → critiche_auto.json
+          Canone: critiche_manuali.json (live /api) · Audit: night_audit → critiche_auto.json · Bussola: DA_FARE_FATTO.md
         </span>
       </div>
     </div>

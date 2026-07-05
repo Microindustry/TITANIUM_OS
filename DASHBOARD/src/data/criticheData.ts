@@ -1,4 +1,8 @@
-// criticheData.ts | TITANIUM_OS / DASHBOARD | v2.1 | 2026-06-15
+// criticheData.ts | TITANIUM_OS / DASHBOARD | v2.2 | 2026-07-05
+// ⚠ SUPERSEDED (#54): la FONTE VIVA del canone manuale è DATA/audit/critiche_manuali.json
+// (servita da /api/critiche/manuali, editabile senza rebuild — sweep/aggiornamenti vanno LÌ).
+// Questo file resta SOLO come fallback offline della vista CRITICHE (e tiene le classi
+// tailwind nel content-scan). Non aggiungere più critiche qui.
 // Critiche, suggerimenti e miglioramenti per progetto — aggiornabile ogni sessione
 // v2.0 (31/05) — audit Opus 4.8: verifica codice + dati live. tsc --noEmit pulito (exit 0).
 // v2.1 (15/06) — Opus: re-verifica delle 23 attive sul codice attuale + nuova passata "Audit 15/06".

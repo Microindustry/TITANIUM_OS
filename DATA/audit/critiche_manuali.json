@@ -1,0 +1,1255 @@
+{
+  "version": 1,
+  "updated": "2026-07-05",
+  "nota": "Fonte canonica critiche manuali - editabile senza rebuild; la dash la carica da /api/critiche/manuali (fallback baked in src/data)",
+  "root": {
+    "id": "critiche_root",
+    "label": "Critiche & Miglioramenti",
+    "icon": "⚠",
+    "status": "active",
+    "note": "Audit continuo — aggiornato ogni sessione con Opus o Sonnet",
+    "color": "text-rose-400",
+    "border": "border-rose-500/40",
+    "bg": "bg-rose-950/20",
+    "dot": "bg-rose-400",
+    "children": [
+      {
+        "id": "cr_v32",
+        "label": "V32 CNC",
+        "icon": "🔩",
+        "status": "active",
+        "color": "text-amber-400",
+        "border": "border-amber-500/40",
+        "bg": "bg-amber-950/20",
+        "dot": "bg-amber-400",
+        "note": "Criticità fisiche e strategiche della fresatrice",
+        "children": [
+          {
+            "id": "cr_v32_fisico",
+            "label": "Fisico & Build",
+            "icon": "🏗",
+            "status": "active",
+            "color": "text-amber-400",
+            "border": "border-amber-500/40",
+            "bg": "bg-amber-950/20",
+            "dot": "bg-amber-400",
+            "children": [
+              {
+                "id": "v32c01",
+                "label": "Mandrino 2.2kW ER20 non ordinato",
+                "icon": "!",
+                "status": "active",
+                "note": "BLOCKER CRITICO — senza mandrino V32 non funziona, VULCAN non parte, MIMS bloccato. Ordina entro questa settimana.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "v32c02",
+                "label": "Silent blocks v.A vs v.B — DECISO (v.B Ø18mm)",
+                "icon": "✓",
+                "status": "done",
+                "note": "RISOLTO #45 (24/06): deciso v.B — silent block Ø18mm (V8_DELTA §2), scelta reversibile. Geometria già rilevata dalle foto, isolamento dal pavimento complementare all'Epoxy Granite. Resta solo il durometro (dettaglio materiale, non blocca il BOM).",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "v32c03",
+                "label": "Gusset Z destra bloccato su sinistra",
+                "icon": "○",
+                "status": "blocked",
+                "note": "Dipende dal completamento gusset sinistra. Non è un bug ma una dipendenza reale.",
+                "isLeaf": true,
+                "color": "text-slate-500",
+                "border": "border-slate-700/30",
+                "bg": "bg-slate-900/40",
+                "dot": "bg-slate-600"
+              },
+              {
+                "id": "v32c04",
+                "label": "Verifica planarità dopo Config G",
+                "icon": "·",
+                "status": "future",
+                "note": "Dopo rinforzi, ri-misurare basamento con comparatore. Target ±0.1mm.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "v32c05",
+                "label": "Epoxy fill colonne — timing non definito",
+                "icon": "·",
+                "status": "future",
+                "note": "Va fatto dopo saldatura finale, prima di montaggio assi. Mettere in checklist.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              }
+            ]
+          },
+          {
+            "id": "cr_v32_dati",
+            "label": "Dati & Coerenza",
+            "icon": "📐",
+            "status": "active",
+            "color": "text-amber-400",
+            "border": "border-amber-500/40",
+            "bg": "bg-amber-950/20",
+            "dot": "bg-amber-400",
+            "children": [
+              {
+                "id": "v32c06",
+                "label": "pct V32 65% — verificato coerente ovunque",
+                "icon": "✓",
+                "status": "done",
+                "note": "VERIFICATO: STATE=65, MappaView=65, mimsData v32p01=65, PILLARS_DATA=65. V32 è l'unico pilastro coerente. Il problema vero è su GENESIS/IDENTITY → vedi cr_audit.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "v32c07",
+                "label": "BEP 61 ore — aggiornato dopo Config G?",
+                "icon": "·",
+                "status": "future",
+                "note": "Il BEP è calcolato su configurazione precedente. Rivalutare dopo completion.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cr_mims",
+        "label": "MIMS",
+        "icon": "⬡",
+        "status": "future",
+        "color": "text-violet-400",
+        "border": "border-violet-500/40",
+        "bg": "bg-violet-950/20",
+        "dot": "bg-violet-400",
+        "note": "IDEA in sviluppo (non ancora prodotto). Le critiche di mercato sono PREMATURE — qui diventano leve da girare a nostro vantaggio quando consolidiamo. Priorità reale ORA: solo i brevetti.",
+        "children": [
+          {
+            "id": "cr_mims_prodotto",
+            "label": "Prodotto",
+            "icon": "⬡",
+            "status": "active",
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400",
+            "children": [
+              {
+                "id": "mc01",
+                "label": "Eco-Snap: €0.08 (V6) vs €0.30 (V7) — mai risolto",
+                "icon": "!",
+                "status": "active",
+                "note": "Discrepanza +275% non chiarita da sessioni precedenti. Quale è il costo reale? Definire prima del GTM.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "mc02",
+                "label": "Fit Park dati base mancanti",
+                "icon": "!",
+                "status": "active",
+                "note": "Dimensioni, attrezzi, costo kit non definiti. Rimuovere dalla roadmap o completare con dati reali.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "mc03",
+                "label": "MIMS-DMP: δ>0.05 — dato validato o stimato?",
+                "icon": "·",
+                "status": "future",
+                "note": "Se è una stima, non usarlo come claim brevettuale. Serve test fisico con comparatore vibrazioni.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "mc04",
+                "label": "Trade secrets: ricette non documentate in nessun posto sicuro",
+                "icon": "!",
+                "status": "active",
+                "note": "Esistono solo in testa a Matteo. Scrivere in _VAULT con cifratura prima di avanzare.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              }
+            ]
+          },
+          {
+            "id": "cr_mims_business",
+            "label": "Business & GTM — (idea, non ancora)",
+            "icon": "📊",
+            "status": "future",
+            "color": "text-violet-400",
+            "border": "border-violet-500/40",
+            "bg": "bg-violet-950/20",
+            "dot": "bg-violet-400",
+            "note": "Domande di mercato CONGELATE finché l'idea non è consolidata. Non sono falle: sono i punti dove gireremo le critiche dei competitor a nostro vantaggio. Si riattivano quando MIMS passa da idea a progetto.",
+            "children": [
+              {
+                "id": "mc05",
+                "label": "TAM €4.2B — fonte Grand View Research verificata?",
+                "icon": "!",
+                "status": "active",
+                "note": "Citata ma mai linkato il report originale. Verificare che sia il mercato giusto (modular systems, non solo T-slot).",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "mc06",
+                "label": "SOM Y3 €300-450K — assunzioni di base?",
+                "icon": "·",
+                "status": "future",
+                "note": "Non c'è un modello finanziario dietro. Costruire foglio di calcolo: unità × prezzo × canale.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "mc07",
+                "label": "Primo cliente MIMS: chi è?",
+                "icon": "!",
+                "status": "active",
+                "note": "Il piano SEED parla di 10 beta. Identificare nome/profilo dei primi 3 prima di produrre.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "mc08",
+                "label": "Competitor: nessuno Zero-tool modulare verificato?",
+                "icon": "·",
+                "status": "future",
+                "note": "Blue ocean claim forte. Fare una ricerca su Kickstarter/Indiegogo prima di usarlo nel pitch.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              }
+            ]
+          },
+          {
+            "id": "cr_mims_ip",
+            "label": "IP & Protezione",
+            "icon": "🔐",
+            "status": "active",
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400",
+            "children": [
+              {
+                "id": "mc09",
+                "label": "B2 'dopo 100 pezzi venduti' — rischio prior art",
+                "icon": "!",
+                "status": "active",
+                "note": "Se qualcuno brevetta la geometria 29.9mm nel frattempo, perdi tutto. Valutare provisional patent subito (costo ~€300).",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "mc10",
+                "label": "Trade secrets non in _VAULT cifrato",
+                "icon": "!",
+                "status": "active",
+                "note": "TS1-TS4 esistono solo in MENTE/MIMS/ (testo plain). Spostare in _VAULT/KEYS/ con cifratura.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cr_genesis",
+        "label": "GENESIS / Dashboard",
+        "icon": "⬡",
+        "status": "active",
+        "color": "text-cyan-400",
+        "border": "border-cyan-500/40",
+        "bg": "bg-cyan-950/20",
+        "dot": "bg-cyan-400",
+        "note": "Codice, architettura, UX — debito tecnico e miglioramenti",
+        "children": [
+          {
+            "id": "cr_cod",
+            "label": "Codice",
+            "icon": "💻",
+            "status": "active",
+            "color": "text-cyan-400",
+            "border": "border-cyan-500/40",
+            "bg": "bg-cyan-950/20",
+            "dot": "bg-cyan-400",
+            "children": [
+              {
+                "id": "gc01",
+                "label": "NodeTile/NodeLevel triplicato in 3 file",
+                "icon": "!",
+                "status": "active",
+                "note": "CONFERMATA: MatteoSection, MimsSection, GenesisSection hanno NodeTile (~60 righe) + NodeLevel identici, cambia solo il colore accent (amber/cyan). Estrarre in <NodeTile accent=...> condiviso → -180 righe.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "gc02",
+                "label": "Errori TS — verificato: nessuno",
+                "icon": "✓",
+                "status": "done",
+                "note": "VERIFICATO Opus: npx tsc --noEmit --skipLibCheck → exit 0, zero errori. La build TS è pulita. Critica chiusa.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "gc03",
+                "label": "CanvasLayout.tsx > 650 righe — monolite",
+                "icon": "·",
+                "status": "future",
+                "note": "Ogni Room dovrebbe essere un file separato. Refactor quando si aggiunge la prossima sezione.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "gc04",
+                "label": "Dati duplicati: SYSTEM_TREE in MappaView vs genesisData/mimsData",
+                "icon": "!",
+                "status": "active",
+                "note": "Se aggiorni mimsData.ts non si aggiorna MappaView. AGGIORNATA 15/06: per le % dei PILASTRI il problema è risolto dall'agente pct_sync (n04). Resta per i dati non-% (struttura nodi/leaf/desc): fonte unica ancora da fare per il resto dell'albero (au18).",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "gc05",
+                "label": "GENESIS pct: TRE valori diversi nel codice",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus 15/06: STATE era avanzato a 70 ma MappaView e PILLARS_DATA erano fermi a 55. Allineati entrambi a 70 (= STATE, fonte live letta dalle card). RESTA la causa-radice au18: sono const a mano non derivate → il drift tornerà al prossimo avanzamento di STATE.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              }
+            ]
+          },
+          {
+            "id": "cr_ux",
+            "label": "UX / Interfaccia",
+            "icon": "🖥",
+            "status": "active",
+            "color": "text-cyan-400",
+            "border": "border-cyan-500/40",
+            "bg": "bg-cyan-950/20",
+            "dot": "bg-cyan-400",
+            "children": [
+              {
+                "id": "gc06",
+                "label": "Sidebar 11 voci — affollamento cognitivo",
+                "icon": "·",
+                "status": "future",
+                "note": "Per ADHD, meno è meglio. Valutare collasso EVA+IDENTITY in un gruppo, o hide dei meno usati.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "gc07",
+                "label": "CommandBar (Ctrl+K) non discoverable",
+                "icon": "·",
+                "status": "future",
+                "note": "Nessun hint visibile nella UI. Aggiungere tooltip o hint nella sidebar.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "gc08",
+                "label": "MappaView: label si sovrappongono con 6+ nodi",
+                "icon": "!",
+                "status": "active",
+                "note": "Con 6 nodi (GENESIS) i testi si toccano. Aumentare R radiale o ridurre font.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "gc09",
+                "label": "NeuroOSLayout (neuro) e MappaView fanno cose simili",
+                "icon": "·",
+                "status": "future",
+                "note": "Due topologie per lo stesso sistema. Valutare se neuro è ancora necessario o da rimuovere.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              }
+            ]
+          },
+          {
+            "id": "cr_infra",
+            "label": "Infrastruttura",
+            "icon": "🔌",
+            "status": "active",
+            "color": "text-cyan-400",
+            "border": "border-cyan-500/40",
+            "bg": "bg-cyan-950/20",
+            "dot": "bg-cyan-400",
+            "children": [
+              {
+                "id": "gc10",
+                "label": "n8n: 13 workflow non documentati",
+                "icon": "!",
+                "status": "active",
+                "note": "AGGIORNATA 15/06: la contraddizione architetturale è RISOLTA — STATE conferma n8n self-hosted LOCALE (binario globale 2.25.6, localhost:5678, no cloud). Resta il gap doc: i 13 workflow non sono documentati da nessuna parte e AUTOMATIONS_MASTER.md è fermo (vedi au16). Esportare i 13 workflow in un indice.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "gc11",
+                "label": "RAG semantico a ZERO — RISOLTO (#40-44)",
+                "icon": "✓",
+                "status": "done",
+                "note": "RISOLTO #40-44: era doppio guasto (torch finito su cpu da llamafactory + chromadb 1.5.9 compactor rotto). Ripristinato torch 2.6.0+cu124 + chromadb 0.5.23 su GPU; semantico==bm25 (~34k chunk), self-heal orfani nell'incrementale + recovery a 2 livelli post-blackout. Non più 0. Vedi n02/att04 (stesso guasto).",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "gc12",
+                "label": "RIAVVIO_SESSIONE.txt aggiornamento manuale",
+                "icon": "✓",
+                "status": "done",
+                "note": "RISOLTO: la skill salva (chiusura standard dalla #41) scrive RIAVVIO_SESSIONE.txt + STATE + bussola a ogni fine sessione — non è più un passo manuale dimenticabile.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400",
+                "updated": "2026-07-05"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cr_vita",
+        "label": "Vita Natura",
+        "icon": "🌿",
+        "status": "active",
+        "color": "text-violet-400",
+        "border": "border-violet-500/40",
+        "bg": "bg-violet-950/20",
+        "dot": "bg-violet-400",
+        "note": "EVA, sito, centro estetico Maria",
+        "children": [
+          {
+            "id": "vc01",
+            "label": "EVA WhatsApp — piattaforma REALE (#38)",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO #38: EVA è pilot v0.3 reale (NODES/EVA: brain + prenotazione multi-turno + inbox handoff + webhook dry-run + test), non più 'pending'. Il vero bloccante residuo è solo il token WhatsApp Business + agenda — azione di Matteo (in AZIONI_MATTEO.md), non sviluppo.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "vc02",
+            "label": "Sito web Vita Natura: nessun progresso documentato",
+            "icon": "·",
+            "status": "future",
+            "note": "Ogni sessione si menziona ma non si lavora. Decidere: priorità alta o rimuovere dalla roadmap attiva.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "vc03",
+            "label": "CRM prenotazioni — requisiti non scritti",
+            "icon": "·",
+            "status": "future",
+            "note": "Prima di costruire il CRM, scrivere 5 user stories con Maria. Senza requisiti si costruisce due volte.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          }
+        ]
+      },
+      {
+        "id": "cr_identity",
+        "label": "Identity",
+        "icon": "🧭",
+        "status": "future",
+        "color": "text-slate-400",
+        "border": "border-slate-600/30",
+        "bg": "bg-slate-800/20",
+        "dot": "bg-slate-500",
+        "note": "Brand personale, contenuti, pitch",
+        "children": [
+          {
+            "id": "ic01",
+            "label": "Pitch investitori — RISOLTO (#38)",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO #38: creati DOCS/PITCH_{NINA,MIMS,V32,GENESIS,EVA,HR}.md grounded + vista PITCH per-progetto in dashboard. Da rinfrescare i numeri (TAM/BOM, vedi mc05/att08) prima del partner, ma il documento formale c'è.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "ic02",
+            "label": "Content Engine: quanti episodi pubblicati?",
+            "icon": "·",
+            "status": "future",
+            "note": "La pipeline esiste ma non si sa se è stata usata. Contare episodi esistenti e pubblicati.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "ic03",
+            "label": "AVA avatar YouTube: nessuna azione concreta",
+            "icon": "·",
+            "status": "future",
+            "note": "Da sessioni fa. Definire: quando? Cosa serve? O toglierla dalla roadmap attiva.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          }
+        ]
+      },
+      {
+        "id": "cr_sistema",
+        "label": "Sistema (trasversale)",
+        "icon": "⚙",
+        "status": "active",
+        "color": "text-rose-400",
+        "border": "border-rose-500/40",
+        "bg": "bg-rose-950/20",
+        "dot": "bg-rose-400",
+        "note": "Problemi che toccano più pilastri contemporaneamente",
+        "children": [
+          {
+            "id": "sc01",
+            "label": "Catena V32→VULCAN→MIMS — RIDIMENSIONATA",
+            "icon": "✓",
+            "status": "done",
+            "note": "CORRETTA (Matteo 01/06): non è un blocco drammatico. V32 si finirà ed è la FONTE PRIMARIA di reddito (oltre al lavoro). VULCAN ha già struttura + guide, manca solo il martinetto (~€50). A CNC ultimata si attivano gli stampi, che saranno comunque prototipati/prodotti in 3D. Il piano B (stampi 3D) esiste già nel piano.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "sc02",
+            "label": "Nessun KPI misurabile settimana per settimana",
+            "icon": "!",
+            "status": "active",
+            "note": "I % di completamento si aggiornano a mano senza criteri chiari. Definire: cosa significa +5%?",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          },
+          {
+            "id": "sc03",
+            "label": "Backup _VAULT: AES-256 deep_freeze.py — ultimo run?",
+            "icon": "·",
+            "status": "future",
+            "note": "Non c'è traccia dell'ultimo backup. Aggiungere timestamp in STATE.json: last_backup.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "sc04",
+            "label": "Capannone 2030: nessuna milestone intermedia con date",
+            "icon": "·",
+            "status": "future",
+            "note": "L'obiettivo esiste ma non c'è un roadmap con checkpoint annuali. Aggiungere in STATE.json.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "sc05",
+            "label": "ADHD scaffolding: il sistema aiuta o complica?",
+            "icon": "·",
+            "status": "future",
+            "note": "Ogni sessione si aggiungono cose. Fare un audit trimestrale: cosa NON uso? Rimuovere senza pietà.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          }
+        ]
+      },
+      {
+        "id": "cr_pulizia",
+        "label": "Audit Trimestrale — Cosa Rimuovere",
+        "icon": "🧹",
+        "status": "active",
+        "color": "text-amber-400",
+        "border": "border-amber-500/40",
+        "bg": "bg-amber-950/20",
+        "dot": "bg-amber-400",
+        "note": "Regola ADHD: il sistema cresce, va POTATO. Ogni 3 mesi — cosa NON uso? Candidati elencati, MAI cancellati alla cieca (git li conserva). Prossimo audit: 2026-09-01.",
+        "children": [
+          {
+            "id": "pul01",
+            "label": "View 'neuro' (NeuroOSLayout) — duplicato di MappaView",
+            "icon": "·",
+            "status": "future",
+            "note": "Già fuori dalla sidebar (solo via Ctrl+K). Fa la stessa cosa di MappaView. Candidato #1 alla rimozione: meno confusione, una sola mappa. Recuperabile da git se serve.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "pul02",
+            "label": "View 'sinapsi' (LayersView) — legacy",
+            "icon": "·",
+            "status": "future",
+            "note": "Terza topologia dello stesso sistema. Tieni MappaView, valuta di togliere questa. In git resta.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "pul03",
+            "label": "PILLARS_DATA + 8 export no-op in CanvasLayout",
+            "icon": "·",
+            "status": "future",
+            "note": "Dead-code legacy (CellFocusStandalone & co). Si rimuove SOLO insieme a NeuroOSLayout che li importa. Un colpo solo, sicuro.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "pul04",
+            "label": "Sidebar 12 voci → troppe per ADHD",
+            "icon": "·",
+            "status": "future",
+            "note": "Collassare il gruppo 'Sistema' a comparsa: a vista solo i 5 pilastri + HOME. Meno carico cognitivo, più presentabile.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          },
+          {
+            "id": "pul05",
+            "label": "Decidere insieme prima di togliere",
+            "icon": "!",
+            "status": "active",
+            "note": "Questa lista è il PATTO: io segnalo, tu decidi, poi lo facciamo in un commit isolato. Nessuna sorpresa, niente lavoro perso.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          }
+        ]
+      },
+      {
+        "id": "cr_audit",
+        "label": "Audit Opus — Dati live",
+        "icon": "🔬",
+        "status": "active",
+        "color": "text-rose-400",
+        "border": "border-rose-500/40",
+        "bg": "bg-rose-950/20",
+        "dot": "bg-rose-400",
+        "note": "Findings verificati leggendo codice + STATE.json + data files. Ogni voce è riproducibile.",
+        "children": [
+          {
+            "id": "cr_audit_state",
+            "label": "STATE.json marcio",
+            "icon": "💾",
+            "status": "active",
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400",
+            "children": [
+              {
+                "id": "au01",
+                "label": "STATE.blockers = [] vuoto → dashboard mostra 'zero blocker'",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: popolato STATE.blockers con i 2 reali (mandrino 2.2kW ER20, silent blocks v.A/v.B). Persistito tra i cicli del watcher. La dashboard ora mostra i blocker veri.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au02",
+                "label": "session_count = 6 ma sei alla sessione #15",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: STATE.session_count 6→15, allineato a session_context.json. NB strutturale: state_updater.py non incrementa il contatore (va fatto a SessionStart) — fix profondo rimandato per non spendere.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au03",
+                "label": "active_milestone fermo a 'skillTreeData v3.0'",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: STATE.active_milestone aggiornato a 'Audit Opus + handoff sessione self-healing (sessione 15)' + session_context recuperato. La Home ora mostra il milestone reale.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au04",
+                "label": "meta.version '1.0.0' mentre il sistema è v6/v7",
+                "icon": "·",
+                "status": "future",
+                "note": "STATE.meta.version='1.0.0' non significa nulla: App=v6.0, dashboard=v7, RAG=v5. Campo morto. O lo si allinea o si rimuove.",
+                "isLeaf": true,
+                "color": "text-slate-700",
+                "border": "border-slate-800/20",
+                "bg": "bg-slate-900/20",
+                "dot": "bg-slate-800"
+              },
+              {
+                "id": "au05",
+                "label": "MIMS status 'waiting_press' non mappato nella UI",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: PillarGrid ora usa rawStatus.startsWith('waiting') → ogni waiting_* mostra 'IN ATTESA'. tsc pulito.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              }
+            ]
+          },
+          {
+            "id": "cr_audit_pct",
+            "label": "Percentuali divergenti",
+            "icon": "📊",
+            "status": "active",
+            "color": "text-amber-400",
+            "border": "border-amber-500/40",
+            "bg": "bg-amber-950/20",
+            "dot": "bg-amber-400",
+            "children": [
+              {
+                "id": "au06",
+                "label": "GENESIS pct: 10 / 55 / 83 — tre numeri",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus (31/05): unificato a 55. NB 15/06: STATE è poi avanzato a 70 e i due hardcoded erano rimasti a 55 → ri-allineati a 70 (vedi gc05). Conferma che senza fonte unica (au18) il drift è ricorrente.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au07",
+                "label": "IDENTITY pct: 50 vs 35",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: PILLARS_DATA IDENTITY allineato a 50 (= STATE). Ora STATE/MappaView/PILLARS_DATA concordano su 50.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au08",
+                "label": "PILLARS_DATA legacy hardcoded in CanvasLayout",
+                "icon": "!",
+                "status": "active",
+                "note": "PARZIALE: IDENTITY allineato 35→50. MA PILLARS_DATA è ancora importato da NeuroOSLayout (view legacy 'neuro') insieme a 8 export no-op (CellFocusStandalone & co.) → non cancellabile senza refactor di NeuroOSLayout. Vero fix: rimuovere la view 'neuro' (duplicato di MappaView, vedi gc09) e tutto il dead-code collegato.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "au09",
+                "label": "MIMS %: computato (NodeLevel) vs dichiarato (30)",
+                "icon": "!",
+                "status": "active",
+                "note": "MimsSection calcola pct = done/total foglie (può dare es. 22%), MappaView dichiara 30, STATE dice 30. Stesso pilastro, due metodi di calcolo. Decidere: % derivata dalle foglie OPPURE dichiarata, non entrambe.",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "au10",
+                "label": "ROOT_NODE TITANIUM OS pct=60 inventato",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: ROOT_NODE.pct 60→48 = media dei 5 pilastri (65+30+55+40+50)/5. Coerente con STATE. (Futuro: calcolarla a runtime invece che hardcoded.)",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              }
+            ]
+          },
+          {
+            "id": "cr_audit_stale",
+            "label": "Dati tecnici obsoleti",
+            "icon": "🕸",
+            "status": "active",
+            "color": "text-amber-400",
+            "border": "border-amber-500/40",
+            "bg": "bg-amber-950/20",
+            "dot": "bg-amber-400",
+            "children": [
+              {
+                "id": "au11",
+                "label": "MCP: data files dicono 5 tool — realtà 10 (v1.4)",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: letto MCP/titanium_mcp_server.py v1.4 → 10 tool reali (get_state, update_milestone, search_mente, get_daily_brief, list_content_ready, nexus, rag_update, update_session_context, screen_action, save_session). Era sbagliato OVUNQUE (data file dicevano 5, RIAVVIO 7). genesisData + MappaView ora elencano i 10 veri. NB: anche l'header del server stesso citava solo 5 — da aggiornare.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au12",
+                "label": "NEXUS: 'done' in skillTree, 'future' in genesisData",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: verificato NODES/NEXUS/nexus.py esiste + è esposto come tool MCP 'nexus'. genesisData ag05→active e gr05→done. Ora coerente con skillTreeData e RIAVVIO.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au13",
+                "label": "RAG: mancava il layer grafo nei data file",
+                "icon": "✓",
+                "status": "done",
+                "note": "CORRETTA Opus: rag_engine.py è davvero v4.0 (header) — i data file erano giusti sull'engine. Ma esiste rag_graph.py (networkx) non documentato. Aggiunto leaf 'RAG graph-aware' in genesisData + nota in MappaView gi-rag.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au14",
+                "label": "React 18 scritto, React 19 installato",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: genesisData db01 e MappaView gi-dash → React 19 (= package.json ^19.2.4). Ora coerente con skillTreeData sw03.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au15",
+                "label": "EVA: 4 status diversi nello stesso sistema",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Opus: MappaView vn-eva 'building'→'pending' (= gi-eva). Ora EVA è pending/blocked ovunque (WhatsApp Business API setup pending), coerente con genesisData ag02 e skillTree sw11.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              }
+            ]
+          },
+          {
+            "id": "cr_audit_docs",
+            "label": "Documentazione divergente",
+            "icon": "📄",
+            "status": "active",
+            "color": "text-cyan-400",
+            "border": "border-cyan-500/40",
+            "bg": "bg-cyan-950/20",
+            "dot": "bg-cyan-400",
+            "children": [
+              {
+                "id": "au16",
+                "label": "AUTOMATIONS_MASTER.md fermo al 2026-03-16",
+                "icon": "!",
+                "status": "active",
+                "note": "MITIGATA Opus: aggiunta nota di staleness in testa (elenca cosa manca: MCP 10 tool, NEXUS, RAG hybrid+graph, Story Agent, hooks, ARGUS, watchdog) + data 01/06. Rigenerazione completa = TODO (richiede scan nodi attuali, non economico ora).",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              },
+              {
+                "id": "au17",
+                "label": "Scanner: doc diceva 'LA MIA MENTE/' (path morto)",
+                "icon": "✓",
+                "status": "done",
+                "note": "RISOLTO Opus: verificato scanner.py v1.3 → usa il path CORRETTO (MENTE_DIR env o Path.home()/MICROINDUSTRY/MENTE). Era solo la doc AUTOMATIONS_MASTER sbagliata → corretta a 'MICROINDUSTRY/MENTE/ (env MENTE_DIR)'. Il codice era a posto.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au19",
+                "label": "VERSIONS: loop runaway changelog — 2 ROOT CAUSE fixate",
+                "icon": "✓",
+                "status": "done",
+                "note": "RISOLTO Opus (doppio fix + watcher riavviato, verificato 0 archivi/12s): (1) watcher.py IGNORE_DIRS += DATA (le scritture derivate ri-triggeravano changelog) + filtro .tmp/.db-journal. (2) changelog_writer.py archiviava l'overflow oltre 2000 a OGNI evento → 1 file-archivio per modifica. Ora archivia a chunk solo oltre 3000 righe (~1000x meno file). 766 archivi eliminati da disco, dir VERSIONS pulita.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au20",
+                "label": "STORIE: 11 episodi narrativi recuperati nella dashboard",
+                "icon": "✓",
+                "status": "done",
+                "note": "RISOLTO Opus: scritto CONTENT_ENGINE/scripts/sync_storie.py (parser header markdown, ID univoci anti-collisione, idempotente). Recuperati 6 narrativi S2 (EP_S2_00..05) in stagione ST + 5 MOMENTI (MOM_01..05) in nuova stagione MOM. storieData 64→75 episodi. tsc pulito. NB: scoperta collisione ID (disco EP_S2_00=IL DISTACCO vs storieData EP_S2_00=Gusset) → risolta con ID = stem completo.",
+                "isLeaf": true,
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
+              },
+              {
+                "id": "au18",
+                "label": "Fonte unica di verità: nessuna. SYSTEM_TREE duplica i 3 data file",
+                "icon": "!",
+                "status": "active",
+                "note": "MappaView ridefinisce a mano l'intero albero (SYSTEM_TREE) invece di importare genesisData/mimsData/skillTreeData. AGGIORNATA 15/06: la parte più velenosa — il pct dei PILASTRI — è ora auto-sanata dall'agente pct_sync (n04), quel drift non torna più. RESTA la duplicazione strutturale dei nodi non-pct (leaf/label/desc): refactor per cui MappaView dovrebbe consumare i ROOT esistenti. Proposta (regola 11).",
+                "isLeaf": true,
+                "color": "text-rose-400",
+                "border": "border-rose-500/40",
+                "bg": "bg-rose-950/20",
+                "dot": "bg-rose-400"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cr_audit_0615",
+        "label": "Audit 15/06 — Opus",
+        "icon": "🛰",
+        "status": "active",
+        "color": "text-rose-400",
+        "border": "border-rose-500/40",
+        "bg": "bg-rose-950/20",
+        "dot": "bg-rose-400",
+        "note": "Nuove critiche dalla verifica del sistema reale al 15/06 (post NINA v2 + loop autonomo). Ogni voce è verificata o tracciabile.",
+        "children": [
+          {
+            "id": "n01",
+            "label": "Chiavi API esfiltrabili NON ancora ruotate",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO #52-53: token GitHub ruotato via gh keyring (03/06, vecchio gho_ revocato — verificato 401); scan cieco 04/07 = zero sk-ant in qualunque .env; API hardenata con denylist (attacco 02 sicurezza 03/07: nessun segreto reale in repo/history).",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400",
+            "updated": "2026-07-05"
+          },
+          {
+            "id": "n02",
+            "label": "RAG semantico = 0 — RISOLTO (#40-44)",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO #40-44: torch 2.6.0+cu124 + chromadb 0.5.23 su GPU, semantico==bm25 (~34k chunk), self-heal orfani + recovery 2 livelli. La Regola 7 (riflusso MENTE→RAG) è di nuovo integra. Vedi gc11.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "n03",
+            "label": "critiche_auto rifira findings vecchi — RISOLTO (#38)",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO #38: night_audit ha l'auto-close (AUTO_CLOSE_DAYS=4) + dedup per id → una critica non più osservata da 4+ giorni si chiude da sola e riapre se ritorna (67→36 alla prima passata). Verificato #45: le voci a-regole pulite risultano resolved automaticamente.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "n04",
+            "label": "Drift % pilastri (STATE ≠ dashboard) — RISOLTO con agente",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO 15/06: creato NODES/PCT_SYNC/pct_sync.py — agente di coerenza che riallinea V32/MIMS/GENESIS/VITA/IDENTITY + ROOT(media) dalla FONTE UNICA STATE.json verso MappaView SYSTEM_TREE e PILLARS_DATA. Sostituisce solo cifre (non rompe il TS), idempotente, modi check/fix. Agganciato a sync_dashboard.py: gira a ogni fine sessione se STATE è cambiato → il drift % non torna più da solo. (Primo run reale: corretta ROOT 48→51 rimasta indietro dopo GENESIS→70.)",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "n05",
+            "label": "Nina v2 asse_nina/backfill — SUPERATO (#43-44)",
+            "icon": "✓",
+            "status": "done",
+            "note": "SUPERATO #43/#44: Nina è DEFINITIVA — canone unico EP_N2 (50 ep, mappa coperta in ampiezza ⟡0→⟡7), EP_AV archiviati, audit STORIE 0 violazioni. Il dilemma 'scalare asse_nina + ennesimo backfill' è chiuso dal canone nuovo data-driven.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "n06",
+            "label": "Agenti-personaggio: teatro residuo nella vista AGENTI",
+            "icon": "·",
+            "status": "future",
+            "note": "Gli agenti reali (story/research/audit/watcher/self_improve) girano. I 'personaggi' THEMIS/EVA/AVA/ARIA/NEXUS/TESLA/FORGE sono ancora dichiarati ma non operativi. O li si rende reali o si tolgono dalla vista: oggi è teatro che gonfia la percezione di capacità.",
+            "isLeaf": true,
+            "color": "text-slate-700",
+            "border": "border-slate-800/20",
+            "bg": "bg-slate-900/20",
+            "dot": "bg-slate-800"
+          }
+        ]
+      },
+      {
+        "id": "cr_attacco_0617",
+        "label": "Attacco Opus — 17/06",
+        "icon": "⚔",
+        "status": "active",
+        "color": "text-rose-400",
+        "border": "border-rose-500/40",
+        "bg": "bg-rose-950/20",
+        "dot": "bg-rose-400",
+        "note": "Opus interroga il progetto su tutti i fronti. Criticità reali viste in sessione; risolte marcate done. È lo scopo di questa sezione: ricevere l'attacco e segnarlo.",
+        "children": [
+          {
+            "id": "att01",
+            "label": "Verità sparsa: i dati-pilastro vivono in 5+ posti (au18 VIVO)",
+            "icon": "!",
+            "status": "active",
+            "note": "FRONTE DATI. Per cambiare lo stato di EVA ho dovuto editare 5 punti (genesisData ×2, MappaView ×2, + STATE). Finché non c'è UNA fonte, ogni verità si sdoppia e i pilastri ri-obsolescono da soli — è la causa-radice dei 'pilastri che non spiegano'. Fix vero: derivare le viste da una sola sorgente, non da copie.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          },
+          {
+            "id": "att02",
+            "label": "EVA 'pending' mentre la piattaforma esiste — RISOLTO oggi",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO 17/06: la piattaforma EVA è reale (NODES/EVA pilot v0.3: brain + prenotazione multi-turno + inbox handoff + webhook dry-run + test). Stato/desc corretti in genesisData + MappaView + pitch dedicato PITCH_EVA. Manca solo token WhatsApp + agenda.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "att03",
+            "label": "Il build di PRODUZIONE non completa (tsc -b / git push → OOM)",
+            "icon": "!",
+            "status": "active",
+            "note": "FRONTE INFRA. `tsc --noEmit` è falso-verde; il gate vero `tsc -b` va in OOM (malloc 500MB) anche con RAM libera, e pure `git push` a volte. Conseguenza grave: non puoi fare `npm run build` né deployare la dashboard. Da indagare: bitness git, repo bloat (git gc), tetto memoria ambiente.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          },
+          {
+            "id": "att04",
+            "label": "RAG semantico = 0 — RISOLTO (#40-44)",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO #40-44: vettoriale di nuovo vivo (semantico==bm25 ~34k chunk, GPU). Era torch-cpu + chromadb compactor rotto, non gli 'elevati'. Stesso guasto di n02/gc11.",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "att05",
+            "label": "Chiavi API ancora NON ruotate (esposte, dimostrate)",
+            "icon": "!",
+            "status": "active",
+            "note": "FRONTE SICUREZZA. Il fix /api/file è merged e live, ma le chiavi esfiltrate (ANTHROPIC/GITHUB via .env) restano compromesse finché non le RUOTI a mano. Azione tua, non rimandabile.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          },
+          {
+            "id": "att06",
+            "label": "Lavoro UI verificato a vista — RISOLTO 17/06",
+            "icon": "✓",
+            "status": "done",
+            "note": "RISOLTO 17/06: aperta la dashboard nel dev server (vite, porta 5174). VERIFICATI a schermo con ZERO errori console: sidebar pulita (RAG-chat/AGENTI accantonati; sotto-voci PITCH/CV-Nina/GIOCO/INVENTARIO), Mappa-Gioco (zone Lv + strade + monti, renderizza), CV unito (4 domini mano/mente/bio/voce + marcatori personale), pitch per-progetto (fallback corretto senza API). Il lavoro 'alla cieca' regge. Resta da rifinire il LAYOUT della mappa-gioco (zone addensate in basso) e vedere i pitch col markdown renderizzato (serve api_server su).",
+            "isLeaf": true,
+            "color": "text-emerald-400",
+            "border": "border-emerald-500/40",
+            "bg": "bg-emerald-950/20",
+            "dot": "bg-emerald-400"
+          },
+          {
+            "id": "att07",
+            "label": "Pilastri FISICI fermi mentre il digitale sprinta",
+            "icon": "!",
+            "status": "active",
+            "note": "FRONTE STRATEGIA. V32 (reddito vero) bloccato su mandrino ER20 + decisione silent blocks; MIMS al 30%. Decine di commit software, zero sul fronte fisico. Rischio: un sistema digitale bellissimo sopra un'officina ferma. La leva di reddito è lì, non nel codice.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          },
+          {
+            "id": "att08",
+            "label": "asse_nina 59/182 + numeri pitch non verificati",
+            "icon": "!",
+            "status": "active",
+            "note": "FRONTE CONTENUTO. asse_nina su 59/182 episodi (decisione 'scala' aperta → metadato parziale, ennesimo backfill in arrivo). Pitch: TAM €4.2B senza fonte, BOM vs €2250 incoerenti (già marcati provvisori). Da consolidare prima di un partner.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          },
+          {
+            "id": "att09",
+            "label": "critiche_auto: il path a-regole genera rumore basso-segnale",
+            "icon": "!",
+            "status": "active",
+            "note": "FRONTE META. Anche dopo il fix n03 (auto-close), la cartella clinica live mescola findings ricchi (Sonnet) e generici ('rilevato errore nelle ultime esecuzioni', regole). Proposta: usare il path-regole solo come ultima spiaggia e marcarlo a bassa severità.",
+            "isLeaf": true,
+            "color": "text-rose-400",
+            "border": "border-rose-500/40",
+            "bg": "bg-rose-950/20",
+            "dot": "bg-rose-400"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,11 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 54  04/07/2026  PIANO DATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)](#sessione-54-04072026-piano-dattacco-ecosistema-in-ordine-prima-del-social-prima-dei-nuovi-episodi)
+    - [DECISO 04/07  SOCIAL: ricerca fatta, stack SCELTO, si parcheggia (si riprende a casa in ordine)](#deciso-0407-social-ricerca-fatta-stack-scelto-si-parcheggia-si-riprende-a-casa-in-ordine)
+    - [ONDATA A  CASA IN ORDINE (ogni file nella cartella giusta)](#ondata-a-casa-in-ordine-ogni-file-nella-cartella-giusta)
+    - [ONDATA B  ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)](#ondata-b-ecosistema-che-funziona-organi-rotti-o-silenziosi)
+    - [ONDATA C  NOTTURNE DA IMPLEMENTARE (il sistema si mantiene da solo)](#ondata-c-notturne-da-implementare-il-sistema-si-mantiene-da-solo)
   - [Sessione 53  03/07/2026  OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)](#sessione-53-03072026-obsidian-ecosistema-vero-vault-coeso-non-solo-senza-orfani)
     - [ONDATA 2 (04/07)  TOP 10 SOFTWARE COMPLETATA (resta solo 1  ordine hardware di Matteo)](#ondata-2-0407-top-10-software-completata-resta-solo-1-ordine-hardware-di-matteo)
   - [Sessione 52  02-03/07/2026  ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)](#sessione-52-02-03072026-attacco-esercito-su-fable-7-specialisti-in-parallelo)

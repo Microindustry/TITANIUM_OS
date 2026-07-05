@@ -61,6 +61,8 @@ BUSSOLA_TODOS = AUDIT_DIR / "bussola_todos.json"       # estratto strutturato pe
 MODEL     = "claude-sonnet-4-6"   # economico, NO Opus (regola #4)
 TODAY     = datetime.now().strftime("%Y-%m-%d")
 AUTO_CLOSE_DAYS = 4   # una critica non ri-osservata da N giorni -> auto-resolved (riapre se ritorna)
+CANONE_MANUALE  = AUDIT_DIR / "critiche_manuali.json"  # canone manuale vivo (#54, ex criticheData.ts)
+CANONE_STALE_DAYS = 30  # file canone fermo da N giorni -> segnale (organo silenzioso)
 
 # Pattern di guasto cercati nei log della catena notturna
 # NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
@@ -442,6 +444,40 @@ def append_critiche(new: list[dict], signals: dict) -> dict:
             "total": len(merged), "open": sum(1 for c in merged if c.get("status") == "open")}
 
 
+def check_canone_manuale(signals: dict) -> None:
+    """(#54) Riconciliazione canone manuale: conta le critiche attive in
+    critiche_manuali.json e misura la freschezza del file. Se il canone e'
+    fermo da CANONE_STALE_DAYS+ giorni lo segnala come organo silenzioso
+    (lezione guasto 7: cio' che tace non e' sano, va osservato)."""
+    out = {"active": 0, "done": 0, "file_age_days": None, "stale": False}
+    try:
+        if CANONE_MANUALE.exists():
+            d = _read_json(CANONE_MANUALE, {})
+            def _walk(n):
+                if n.get("isLeaf"):
+                    st = n.get("status")
+                    if st == "active":
+                        out["active"] += 1
+                    elif st == "done":
+                        out["done"] += 1
+                for c in n.get("children") or []:
+                    _walk(c)
+            if isinstance(d.get("root"), dict):
+                _walk(d["root"])
+            age = (datetime.now() - datetime.fromtimestamp(CANONE_MANUALE.stat().st_mtime)).days
+            out["file_age_days"] = age
+            if age >= CANONE_STALE_DAYS:
+                out["stale"] = True
+                signals["log_issues"].append({
+                    "log": "critiche_manuali.json", "tipo": "canone critiche stantio",
+                    "riga": f"canone manuale fermo da {age} giorni (>{CANONE_STALE_DAYS}) — "
+                            f"{out['active']} attive da riverificare", "data": TODAY,
+                })
+    except Exception as e:
+        logger.warning("check canone manuale fallito: %s", e)
+    signals["canone_manuale"] = out
+
+
 def write_health(signals: dict, stats: dict):
     health = {
         "last_audit": datetime.now().isoformat(timespec="seconds"),
@@ -453,6 +489,7 @@ def write_health(signals: dict, stats: dict):
         "pillars": signals["pillars"],
         "log_issues": signals["log_issues"],
         "vault_orphans": signals.get("vault_orphans", 0),
+        "canone_manuale": signals.get("canone_manuale", {}),
         "critiche": stats,
         "verdict": "ATTENZIONE" if signals["log_issues"] else "OK",
     }
@@ -483,6 +520,7 @@ def main():
                 signals["n_commits_7d"], signals["n_episodes"],
                 signals["rag_chunks"], len(signals["log_issues"]))
 
+    check_canone_manuale(signals)
     critiche = critiche_via_llm(signals)
     if critiche is None:
         signals["_fonte"] = "auto-audit (regole)"

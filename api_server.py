@@ -759,6 +759,24 @@ def critiche_auto():
         return jsonify({"ok": False, "error": str(e), "findings": []}), 500
 
 
+@app.get("/api/critiche/manuali")
+def critiche_manuali():
+    """Canone manuale delle critiche, LIVE (#54): la fonte e' DATA/audit/
+    critiche_manuali.json (editabile senza rebuild della dash — era baked in
+    criticheData.ts). La vista fa fetch qui con fallback sulla copia baked."""
+    f = ROOT / "DATA" / "audit" / "critiche_manuali.json"
+    if not f.exists():
+        return jsonify({"ok": False, "error": "critiche_manuali.json assente"}), 404
+    try:
+        d = json.loads(f.read_text(encoding="utf-8"))
+        root = d.get("root")
+        if not isinstance(root, dict):
+            return jsonify({"ok": False, "error": "campo root mancante"}), 500
+        return jsonify({"ok": True, "root": root, "updated": d.get("updated")})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
 @app.get("/api/bussola/todos")
 def bussola_todos():
     """Bussola viva (DA_FARE_FATTO.md) -> todo strutturati per la vista CRITICHE.
