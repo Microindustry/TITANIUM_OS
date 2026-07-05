@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-b3118f04d7",
+    "date": "2026-07-05",
+    "git": "e67f2fdb",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "Il canone RAG presenta 1 violazione attiva (canon_violations: 1) e _CANONE.md:13 punta ancora a V32-su-molle/recuperato vietato (dichiarato nel milestone). Nessun codice legge _CANONE.md come fonte di verità (bussola_open: 'Canone enforced (07 P1): doppio EP_N2_01 attivo, _CANONE.md che nessun codice legge'): il file esiste ma non vincola nulla a runtime, quindi le violazioni possono accumularsi silenziosamente.",
+    "azione": "Come parte del blocco TOP10 #2/#3 già pianificato per la sessione #53: correggere _CANONE.md:13 (sostituire il riferimento V32-su-molle con il riferimento corretto) e aggiungere al pipeline notturno il controllo canon_guard che emette errore bloccante — non solo warning — se rileva violazioni, così il contatore diventa un allarme reale.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-05"
+  },
+  {
+    "id": "AUD-a89cbd5324",
+    "date": "2026-07-05",
+    "git": "e67f2fdb",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "La corruzione HNSW da power-loss è ricorrente (3 volte in 2 giorni, dichiarato nei blockers) e il rimedio strutturale — UPS ~50-80€ — è identificato ma non ancora ordinato. Il fix software (drop-hnsw + incremental + snapshot, commit 65f6c606) cura il sintomo post-guasto, non la causa: ogni blackout ricrea il problema e costa una sessione di recovery.",
+    "azione": "Includere l'UPS nell'ordine hardware già pianificato (Vevor + ER20): è il componente a minor costo dell'ordine (~50-80€) e blocca un loop di guasto ricorrente che ha già consumato tempo di sessione misurabile. L'ordine è la singola azione con il rapporto costo/danno evitato più alto nell'intero backlog.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-05"
+  },
+  {
+    "id": "AUD-3f5632325c",
+    "date": "2026-07-05",
+    "git": "e67f2fdb",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Pagefile esaurito durante la generazione notturna: \"2026-07-05 02:07:29 [story_agent] WARNING RAG context non disponibile (Il file di paging è troppo piccolo per essere completato. (os error 1455)) — episodio non grounded\". L'episodio generato stanotte non è grounded sul RAG: il contenuto prodotto è scollegato dalla base di conoscenza, quindi potenzialmente incoerente col canone.",
+    "azione": "Alzare il pagefile di Windows a minimo 16 GB (impostazione manuale in Proprietà di sistema → Avanzate → Prestazioni), verificare RAM libera prima della finestra notturna. Aggiungere una guardia pre-run in story_agent che controlli memoria disponibile e abortisca con errore esplicito anziché produrre episodi non-grounded silenziosi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-05"
+  },
+  {
+    "id": "AUD-3c38959b47",
+    "date": "2026-07-05",
+    "git": "e67f2fdb",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Due note orfane nel vault (vault_orphans: 2): 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambe in dominio KNOWLEDGE. Non sono collegate ad alcun episodio o MOC. In un vault che punta a zero orfani come obiettivo dichiarato (#53 Obsidian), queste note sono detriti che degradano la navigabilità e inquinano i risultati di vault_intersect.",
+    "azione": "Aprire le due note e decidere in 2 minuti ciascuna: collegare al MOC di dominio pertinente con wikilink, oppure eliminare se irrilevanti per il progetto. Non lasciare la decisione al prossimo sweep: il numero basso rende la pulizia banale ora, non lo sarà con 20 orfani.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-05"
+  },
+  {
+    "id": "AUD-28c75559c7",
+    "date": "2026-07-05",
+    "git": "e67f2fdb",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il todo '1 · MOSSA 1 checkout che sblocca tutto (06): 1 ordine = martinetto Vevor 20t + mandrino ER20 2.2kW + UPS' è aperto da almeno 11 giorni (blocker dichiarato dal 24/06) e sblocca in cascata tre catene indipendenti: (a) prima colata giunto MIMS/VULCAN, (b) eliminazione della corruzione HNSW ricorrente, (c) fresatura stampi. Ogni sessione che passa senza l'ordine è una sessione in cui MIMS resta a 30% e il RAG resta esposto a blackout. L'ordine è Matteo-gated e non richiede sessione tecnica: è una azione da 10 minuti fuori dal flusso di lavoro abituale.",
+    "azione": "Matteo apre lo store (Vevor + fornitore mandrino) e completa l'ordine prima della prossima sessione #53, non durante: è l'unico sblocco che non richiede Claude e che nessun commit può sostituire.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-05"
+  },
+  {
+    "id": "AUD-14d10a5f05",
+    "date": "2026-07-05",
+    "git": "e67f2fdb",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Semantic Scholar in throttling strutturale: \"2026-07-05 03:39:24 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"2026-07-05 03:39:57 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=local+large+language+model+fine-tuning+Lo\". Il risultato diretto è \"2026-07-05 03:39:57 [research_agent] INFO semantic_scholar -> 0 risultati\": la sorgente primaria è degradata ogni notte senza API key autenticata. Parallelamente OpenAlex restituisce \"2026-07-05 03:40:02 [research_agent] INFO openalex -> 0 risultati\": la ricerca notturna è di fatto cieca su entrambe le sorgenti principali.",
+    "azione": "Registrare e inserire in .env la SEMANTIC_SCHOLAR_API_KEY gratuita (già identificata come blocker): alza il rate-limit da 1 req/s a 10 req/s senza costi. Per OpenAlex diagnosticare separatamente se il query term 'local+large+language+model+fine-tuning' è troppo specifico o se c'è un filtro data che azzera i risultati.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-05"
+  },
+  {
     "id": "AUD-f92be476fb",
     "date": "2026-07-04",
     "git": "e62983eb",
