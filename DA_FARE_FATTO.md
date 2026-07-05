@@ -142,12 +142,17 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   MAI raggiunto → reset spostato PRIMA della pesca. `nina_rag_loop.py` v1.1, py_compile OK, dry-run
   --count 3 verificato: prossimi ⟡4 biblioteca / ⟡5 mappa / ⟡6 soldato (nuovi, guardia attiva).
   Stanotte il loop genera da solo l'episodio di prova (⟡4).
-- [ ] **CRITICHE dash aggiornate + AUTOMATICHE** (richiesta Matteo 04/07): oggi 2 fonti su 3 sono
-  notturne (`bussola_todos.json` 364 voci + `critiche_auto.json`, rigenerate 03:52 ✓) ma la fonte
-  manuale è `DASHBOARD/src/data/criticheData.ts` **statica**: si aggiorna a mano e serve il rebuild
-  per vederla. → (1) sweep di verità sulle voci stantie; (2) migrarla a JSON in `DATA/` servito da
-  `/api` (live come le altre 2); (3) riconciliazione notturna in `night_audit` (auto-close con
-  evidenza, riaperture); (4) verificare che anche `bussolaTodos.ts` non sia un mirror baked stale.
+- [✓] **CRITICHE dash live + riconciliazione — FATTO (05/07, commit 2b8bfafe)**: canone manuale
+  migrato MECCANICAMENTE (tsc→cjs→dump, 80 foglie, zero trascrizioni a mano) in
+  `DATA/audit/critiche_manuali.json` → nuovo `/api/critiche/manuali` → vista CRITICHE lo carica
+  LIVE (fallback baked se API giù); una critica si aggiorna editando il JSON, **senza rebuild**.
+  `criticheData.ts` SUPERSEDED (solo fallback, banner in testa). Sweep con evidenza: `n01` chiavi
+  ruotate (#52-53) e `gc12` RIAVVIO automatizzato dalla skill salva → done (24 attive/32 risolte).
+  `night_audit.check_canone_manuale()`: attive/done in system_health + segnale se canone fermo
+  30+ giorni (prima sentinella "organi vivi"). `bussolaTodos.ts` verificato: era GIÀ live ✓.
+  Verifiche: py_compile OK, test funzionale OK, tsc -b exit 0. ⚠ endpoint live al prossimo riavvio
+  API: il processo attuale (elevato, 03:38) è sopravvissuto a `/api/restart` che ha risposto ok →
+  conferma sul campo di 04 I5 (processi orfani), resta in backlog.
 - [ ] **TOP10 #3** — 55 file di versioni superate fuori dal canone RAG (estendere exclusions +
   1 rebuild a GPU libera). Catena verità, era il prossimo.
 - [ ] **TOP10 #9 resto** — `INDICE_CAMMINO` rigenerato da `episodes.json` (9/15 titoli sbagliati).
