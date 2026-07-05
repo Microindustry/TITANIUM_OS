@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-04  8 commit](#2026-07-04-8-commit)
   - [2026-07-03  8 commit](#2026-07-03-8-commit)
   - [2026-07-02  2 commit](#2026-07-02-2-commit)
   - [2026-06-27  6 commit](#2026-06-27-6-commit)
@@ -25,6 +26,25 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-05 · 13 commit
+- `3621a09a` auto: night_audit - cartella clinica 05/07/2026
+- `e67f2fdb` auto: story_agent - episodi generati 05/07/2026
+- `d40d4cda` fix(#54): nina_rag_loop v1.1 — lost-update stato + deadlock fine-giro
+- `b977d8a7` feat(#54): ondata A — smistamento Desktop/chiavetta completo + piano d'attacco ecosistema in bussola
+- `34b1508e` chore(#53): bussola ondata 2 — TOP 10 software completata (7/9/10 + guardia gemelli Nina); resta #1 hardware (Matteo) + carosello EP_N2_03 + backlog
+- `ffc62019` feat(#53): TOP10 completato — CAROSELLI/_TEMPLATE (tokens.css fonte di verita' + carosello_base.html standard EP_N2_02) + nomi file canonici carosello.html (F13, gli script gia' se lo aspettavano) + regola nel README
+- `3ce48236` feat(#53): TOP9 completato + fix generatore Nina (attacco 03 F2+F3) — catena open-loop 2->3 riagganciata (EP_N2_03 'Dove siamo' + Pietre richiamate), EP_N2_51/52 archiviati (doppioni lezione EP_N2_08 da semi gemelli EP_AV_02/02_2), guardia anti-gemelli in nina_rag_loop (1 rigenerazione per regione per giro, dry-run verificato), indici rigenerati (50 caselle)
+- `0885e2b4` chore(#53): bussola — TOP 3/4/5/6/8 fatti, 9/10 a meta' (restano contenuti/caroselli); 1/7 in mano a Matteo
+- `c1089ff0` feat(#53): TOP10 CSS — nl-fadeUp globale (4 view animavano 'a fortuna'), prefers-reduced-motion, contrasto slate-600/700 alzato a soglia WCAG (verificato con screenshot), focus-visible esteso 2px, rimosse 2 regole CSS invalide; fix dash_shot.bat (echo -> redirigeva testo nel png)
+- `7f0dd59b` sec(#53): TOP4 — EVA hardening (attacco 02 F1+F2): bind 127.0.0.1 default (EVA_BIND per tunnel), /inbox con X-API-Key fail-closed da remoto (PII clienti), APP_SECRET obbligatorio in LIVE (fail-closed, dry-run invariato)
+- `72619583` feat(#53): TOP6 — guardia RAG in api_server (lock + failure-latch 300s sui 3 punti di import per-request): cura alla radice il commit-leak da load falliti a martello (attacco 04 P2). Attiva dal prossimo restart API (notturna)
+- `7ed248c0` sec(#53): TOP5+TOP7bis — IP fuori dal repo PUBBLICO (VULCAN_MANIFESTO, mims protocol, fit-park-specs -> MENTE, restano in history: valutare filter-repo con Matteo) + rm file vuoto 'perfetta' tracciato
+- `230769d6` feat(#53): TOP3+TOP9 — exclusions RAG (ASSOLUTO/VERSIONI + ARCHIVIO + ARCHIVE_V6, 441->388 file, rebuild-hard verificato) + INDICE_CAMMINO generato da episodes.json (52 caselle, mai piu' titoli scaduti) + vault_intersect skip archivi
+
+_episodi: 259 · critiche aperte: 24 (117 risolte) · RAG: 17141 chunk_
+
+
 
 ## 2026-07-04 · 8 commit
 - `7bd29e89` auto: night_audit - cartella clinica 04/07/2026
