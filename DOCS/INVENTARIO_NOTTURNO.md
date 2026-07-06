@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-05  13 commit](#2026-07-05-13-commit)
   - [2026-07-04  8 commit](#2026-07-04-8-commit)
   - [2026-07-03  8 commit](#2026-07-03-8-commit)
   - [2026-07-02  2 commit](#2026-07-02-2-commit)
@@ -26,6 +27,14 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-06 · 2 commit
+- `6e4c5157` chore(#54): bussola — critiche live fatte (2b8bfafe), Nina v1.1 verificata in produzione (EP_N2_51 stanotte)
+- `2b8bfafe` feat(#54): critiche dash LIVE — canone manuale da criticheData.ts a JSON servito da /api
+
+_episodi: 259 · critiche aperte: 24 (117 risolte) · RAG: 17141 chunk_
+
+
 
 ## 2026-07-05 · 13 commit
 - `3621a09a` auto: night_audit - cartella clinica 05/07/2026
