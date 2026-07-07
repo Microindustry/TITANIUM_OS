@@ -1,6 +1,6 @@
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-04 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-07 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -58,7 +58,7 @@
 | 1 | `EP_S2_01_IL_CERVELLO_IBRIDO` Il Cervello Ibrido | il cervello ibrido: cloud + locale | fonte | ⟡1 |
 | 2 | `EP_N2_08` La Lampada che Sussurra | l'allucinazione della mente: da dove lo sai? | adattato | — |
 
-## ⟡4 · LA BIBLIOTECA DELLE FONTI  (5 episodi)
+## ⟡4 · LA BIBLIOTECA DELLE FONTI  (6 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -66,6 +66,7 @@
 | 1 | `EP_N2_28` Il Diario che Pensa | Un sistema vero non è una scatola chiusa che fa cose: è una traccia vi | adattato | ⟡3 |
 | 1 | `EP_T05` Il Sistema Pensa | il sistema pensa: recupero con fonti | fonte | ⟡3 |
 | 2 | `EP_N2_29` La Memoria che Sceglie | Le sinapsi sono i legami che ricordi — più li usi, più diventano forti | adattato | ⟡3 |
+| 2 | `EP_N2_51` Il Cartellino sulla Stoffa | Ogni idea che la Mente ti dà deve avere un cartellino attaccato che di | adattato | — |
 | 2 | `EP_T04` SINAPSI | SINAPSI: la memoria che collega | fonte | ⟡3 |
 
 ## ⟡5 · LA GRANDE MAPPA  (30 episodi)

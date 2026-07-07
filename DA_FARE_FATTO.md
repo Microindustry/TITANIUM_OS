@@ -177,9 +177,21 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   Verifiche: py_compile OK, test funzionale OK, tsc -b exit 0. ⚠ endpoint live al prossimo riavvio
   API: il processo attuale (elevato, 03:38) è sopravvissuto a `/api/restart` che ha risposto ok →
   conferma sul campo di 04 I5 (processi orfani), resta in backlog.
-- [ ] **TOP10 #3** — 55 file di versioni superate fuori dal canone RAG (estendere exclusions +
-  1 rebuild a GPU libera). Catena verità, era il prossimo.
-- [ ] **TOP10 #9 resto** — `INDICE_CAMMINO` rigenerato da `episodes.json` (9/15 titoli sbagliati).
+- [✓] **TOP10 #3 — CHIUSO (07/07)**: le exclusions erano GIÀ estese in #53 (`rag_engine.py`
+  ARCHIVIO/ARCHIVE_V6/ASSOLUTO+VERSIONI) e il purge già avvenuto via self-heal (verificato:
+  0 chunk d'archivio nel corpus E nel semantico, file 504→396). Mancava il "1 rebuild a GPU
+  libera": fatto con `rag_update_exclusive.ps1` (UAC, finestra 166s). Nel verificare TROVATO
+  E CURATO un guasto nuovo: 535 chunk del corpus mancavano nel semantico (5 file freschi,
+  incrementale del boot sporco 12:52) — il self-heal copre solo il verso orfani, non i
+  mancanti. Il rebuild-hard li ha reintegrati: **semantico==bm25 = 18113==18113**, query di
+  prova "corpo unico V32" → verità giusta, zero archivio nel top-5. ⚠ scoperto anche: dopo
+  rag_update_exclusive il watchdog spawna una 2ª API nel gap (doppio bind 5001, 2ª volta oggi)
+  → guardia single-instance sulla PORTA in `api_server.py` (il 4° e ultimo organo guardato).
+- [✓] **TOP10 #9 resto — GIÀ FATTO il 04/07 + AGGANCIATO (07/07)**: `INDICE_CAMMINO` era già
+  rigenerato da `generate_indice_cammino.py` (tabella 1→50 titoli reali, proposte pulite) ma la
+  bussola era rimasta indietro E il generatore girava solo a mano (stesso destino dell'indice
+  morto). Ora `build_episodes_json.py` step 7 lancia in coda `generate_indice_cammino` +
+  `generate_pietre_index` (best-effort): gli indici-verità seguono OGNI rebuild, testato ok.
 - [ ] **Canone enforced** (07 P1): doppio `EP_N2_01` attivo, `_CANONE.md` che nessun codice legge →
   check id-collision + canon-pin nel RRF (i doc canonici pesano di più nel retrieval).
 

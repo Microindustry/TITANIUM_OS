@@ -1635,6 +1635,18 @@ def api_restart():
 
 # ── MAIN ─────────────────────────────────────────────────────
 if __name__ == "__main__":
+    # Single-instance sulla PORTA (07/07): su Windows due processi possono bindare
+    # entrambi 5001 (SO_REUSEADDR) — successo al boot sporco (launcher legacy) e dopo
+    # rag_update_exclusive (lo script avvia l'api E il watchdog riavviato ne spawna
+    # un'altra nel gap). Se qualcuno serve gia' 5001, questo processo e' un doppione.
+    import socket
+    _probe = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    _probe.settimeout(1.0)
+    _busy = _probe.connect_ex(("127.0.0.1", 5001)) == 0
+    _probe.close()
+    if _busy:
+        logger.info("porta 5001 gia' servita da un'altra istanza — esco (single-instance).")
+        sys.exit(0)
     logger.info("ECOSYSTEM_OS API SERVER v1.3 — porta 5001")
     logger.info("STATE:  %s", STATE_FILE)
     logger.info("DIGEST: %s", DIGEST_FILE)

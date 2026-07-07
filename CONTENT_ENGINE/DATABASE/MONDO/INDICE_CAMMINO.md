@@ -8,7 +8,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-04 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-07 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*
@@ -24,7 +24,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 50)
+## Il cammino (caselle 1 → 51)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -78,6 +78,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 48 | `EP_N2_48` | Il Libro delle Ricette di Nonna | ⟡7 (giro 2) | Un sistema che resta nella tua testa è solo una magia; uno scritto in |
 | 49 | `EP_N2_49` | La scatola magica dei compiti | ⟡7 (giro 2) | Scrivere le cose su carta o schermo libera la testa da fare quello che |
 | 50 | `EP_N2_50` | Il semaforo che mente | ⟡7 (giro 2) | La differenza tra quello che un sistema *dice di fare* e quello che *s |
+| 51 | `EP_N2_51` | Il Cartellino sulla Stoffa | ⟡4 (giro 2) | Ogni idea che la Mente ti dà deve avere un cartellino attaccato che di |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

@@ -431,6 +431,21 @@ def main():
     print(f"gerarchia: {linked} relazioni padre->figlio · {n_appr} episodi di approfondimento (LV1+)")
     print(f"2 assi: asse_ruolo su tutti · asse_nina su {n_nina} episodi (concetti + approfondimenti)")
 
+    # 7) indici-verita' derivati (attacco 03 F1: un documento-verita' che si rigenera
+    #    non deriva). Erano lanciati a mano -> scadevano; ora seguono OGNI rebuild.
+    #    Best-effort: un indice rotto non deve bloccare episodes.json.
+    import subprocess
+    for gen in ("generate_indice_cammino.py", "generate_pietre_index.py"):
+        script = Path(__file__).resolve().parent / gen
+        if not script.exists():
+            continue
+        try:
+            r = subprocess.run([sys.executable, str(script)], capture_output=True,
+                               text=True, timeout=60, encoding="utf-8", errors="replace")
+            print(f"indice derivato {gen}: {'ok' if r.returncode == 0 else 'ERR ' + (r.stderr or '')[-120:]}")
+        except Exception as e:
+            print(f"indice derivato {gen}: ERR {e}")
+
 
 if __name__ == "__main__":
     main()
