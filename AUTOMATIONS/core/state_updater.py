@@ -16,8 +16,10 @@ Chiamato da: watcher.py ad ogni evento rilevante
 
 import json
 import logging
+import os
 import re
 import threading
+import time
 import urllib.request
 from pathlib import Path
 from datetime import datetime
@@ -107,16 +109,25 @@ log = logging.getLogger("state_updater")
 # FUNZIONI
 # ============================================================
 
-def _load_state() -> dict:
-    """Carica STATE.json. Se non esiste o è corrotto, ritorna struttura base."""
+def _load_state() -> dict | None:
+    """Carica STATE.json. None = file PRESENTE ma illeggibile ADESSO (scrittura
+    concorrente): il chiamante DEVE saltare l'aggiornamento, MAI ricreare.
+    (Guasto 07/07 20:40: un decode fallito restituiva il template default e il
+    watcher lo salvava sopra la verita' -> 54 milestone verificate, 107 sessioni,
+    6 blockers e i pct pilastri CANCELLATI. Il template vale SOLO se il file
+    non esiste proprio - prima installazione.)"""
     if STATE_PATH.exists():
-        try:
-            with open(STATE_PATH, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except (json.JSONDecodeError, IOError) as e:
-            log.warning(f"STATE.json corrotto, ricreo: {e}")
+        for _attempt in range(2):
+            try:
+                with open(STATE_PATH, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, IOError) as e:
+                log.warning(f"STATE.json illeggibile (retry): {e}")
+                time.sleep(0.3)
+        log.error("STATE.json illeggibile dopo retry — salto l'update (no clobber)")
+        return None
 
-    # Struttura base se il file non esiste
+    # Struttura base SOLO se il file non esiste (prima installazione)
     return {
         "meta": {"version": "1.0.0"},
         "last_update": datetime.now().isoformat(),
@@ -139,12 +150,16 @@ def _load_state() -> dict:
 
 
 def _save_state(state: dict):
-    """Salva STATE.json."""
+    """Salva STATE.json ATOMICO (tmp + os.replace): nessun lettore concorrente
+    puo' mai vedere il file troncato a meta' scrittura (era la miccia del
+    clobber 07/07: json.dump diretto + lettura concorrente = decode error)."""
     STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    tmp = STATE_PATH.with_suffix(".json.tmp")
     try:
-        with open(STATE_PATH, "w", encoding="utf-8") as f:
+        with open(tmp, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2, ensure_ascii=False)
-    except IOError as e:
+        os.replace(tmp, STATE_PATH)
+    except (IOError, OSError) as e:
         log.error(f"STATE.json write errore: {e}")
 
 
@@ -205,6 +220,8 @@ def update_state_on_change(event_type: str, file_path: str, timestamp: str):
         return
 
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
 
     # Aggiorna timestamp
     state["last_update"] = timestamp
@@ -237,6 +254,8 @@ def set_milestone(milestone_name: str):
     Uso: set_milestone("Config G — Rinforzi colonne Z+U")
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     state["active_milestone"] = milestone_name
     state["last_update"] = datetime.now().isoformat()
     state["last_action"] = f"Milestone impostata: {milestone_name}"
@@ -260,6 +279,8 @@ def set_next_step(next_step: str):
     Uso: set_next_step("Acquistare bulloni M10 per Config G")
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     state["next_step"] = next_step
     state["last_update"] = datetime.now().isoformat()
     _save_state(state)
@@ -272,6 +293,8 @@ def set_focus_today(focus: str):
     Uso: set_focus_today("Saldare gusset colonne Z - 3 ore")
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     state["focus_today"] = focus
     state["last_update"] = datetime.now().isoformat()
     _save_state(state)
@@ -284,6 +307,8 @@ def add_blocker(blocker: str):
     Uso: add_blocker("Manca mandrino 2.2kW — ordinare")
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     blockers = state.get("blockers", [])
     if blocker not in blockers:
         blockers.append(blocker)
@@ -299,6 +324,8 @@ def remove_blocker(blocker: str):
     Uso: remove_blocker("Manca mandrino 2.2kW — ordinare")
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     blockers = state.get("blockers", [])
     if blocker in blockers:
         blockers.remove(blocker)
@@ -316,6 +343,8 @@ def update_pillar_status(pillar: str, status: str, pct: int = None,
                                phase="Config G in esecuzione")
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     pillars = state.get("pillars", {})
 
     if pillar not in pillars:
@@ -341,6 +370,8 @@ def mark_milestone_done(milestone_id: int, name: str):
     Aggiorna la lista verified in STATE.json
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
     milestones = state.get("milestones", {})
     verified = milestones.get("verified", [])
 
@@ -373,6 +404,8 @@ def get_state_summary() -> str:
     Usato da session_orienter.py per il brief di apertura sessione.
     """
     state = _load_state()
+    if state is None:
+        return   # STATE illeggibile ora (scrittura concorrente): niente clobber
 
     lines = [
         "═══════════════════════════════════════",

@@ -149,6 +149,27 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   indice per gruppi (motore eventi/notturne/sessione/conoscenza/contenuti/utility) con regola
   "nuovo script = nuova riga".
 
+### FILONE "VERITÀ SPARSA + PULIZIA DASHBOARD" (07/07 sera, su ordine Matteo)
+- [✓] **NodeKit (critica gc03)**: NodeTile/NodeLevel erano 4 copie identiche-a-tema-diverso
+  (Matteo/Genesis/Mims/Critiche — la critica diceva 3) → struttura UNA volta in
+  `components/skilltree/NodeKit.tsx`, le section tengono solo il TEMA. −256 righe nette.
+  Verifica: tsc EXIT 0 + screenshot PRIMA/DOPO 4 viste pixel-identici. Commit 74053de9.
+- [✓] **🔴 STATE.json CLOBBER trovato E curato alla radice — LA causa delle "percentuali
+  divergenti"**: lo screenshot di verifica mostrava GENESIS 10% (STATE dice 70) → indagine →
+  alle 20:40 `state_updater._load_state()` ha letto STATE a metà scrittura (decode error) e
+  ha risposto col TEMPLATE DEFAULT (pilastri di marzo: GENESIS 10, IDENTITY 20) che il watcher
+  ha SALVATO SOPRA la verità: **68 milestone verificate, 107 sessioni, 6 blockers CANCELLATI**.
+  È il meccanismo che da settimane "resettava" GENESIS/IDENTITY (au08/gc04/cr_audit erano i
+  sintomi; pct_sync curava a valle). FIX: (1) load fail-safe — file presente ma illeggibile =
+  salta l'update, MAI ricreare (retry + guardia sui 9 chiamanti); (2) `_save_state` ATOMICO
+  (tmp + os.replace: nessun lettore vede mai il file troncato — era la miccia); (3) STATE
+  RIPRISTINATO integrale dalla copia in contesto di stamattina (68 milestone/6 blockers/107
+  sessioni/GENESIS 70/IDENTITY 50) + watcher riavviato col modulo nuovo. Prova sul campo:
+  evento file → last_action aggiornato, nulla perso. Home: 65/30/70/40/50 ✓.
+- [ ] Resto filone: SYSTEM_TREE duplicato in MappaView (au18, refactor per consumare i data
+  file), % MIMS computata-vs-dichiarata, doc AUTOMATIONS_MASTER ferma, viste doppie
+  neuro/sinapsi (gated: "decidere insieme prima di togliere").
+
 ### ONDATA B — ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)
 - [✓] **Boot 07/07 sporco dopo interruzione-limite: diagnosi+fix (07/07)** — al login "tante
   finestre" e 2 guasti reali: (1) **doppio API server su 5001** (python elevato 12:52 + pythonw
