@@ -46,6 +46,10 @@ if "%DAY%"=="Saturday" (
     if defined PYTHON "%PYTHON%" "%TI_ROOT%\CONTENT_ENGINE\scripts\episodes_to_dataset.py" >> "%LOG%" 2>&1
 )
 
+:: RETENTION: la regola scritta che tiene pulito il disco (chroma-debris, BACKUPS
+:: vecchi, log >30gg) — vedi retention.py per le regole. Report in DATA/retention_last.json
+if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\retention.py" --apply >> "%LOG%" 2>&1
+
 :: STATO FISICO: riscrive STATO_SISTEMA.txt sul Desktop (verde/allerta) — fine catena,
 :: cosi riflette il risultato di tutta la notte. Risolve la cecita' sui guasti notturni.
 if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\stato_fisico.py" >> "%LOG%" 2>&1

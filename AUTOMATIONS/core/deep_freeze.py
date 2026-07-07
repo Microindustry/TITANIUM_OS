@@ -81,6 +81,11 @@ def _should_exclude(path: Path) -> bool:
     for part in path.parts:
         if part in EXCLUDE_DIRS:
             return True
+        # chroma_db* = indice binario ricostruibile (rag-rebuild) con snapshot
+        # propri in _VAULT/BACKUPS/rag_snapshots: dentro il freeze gonfiava
+        # lo zip a 2 GB (freeze del 05/07 vs 185 MB del 21/06)
+        if part.startswith("chroma_db"):
+            return True
     if path.suffix.lower() in EXCLUDE_EXTENSIONS:
         return True
     return False

@@ -127,12 +127,26 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   `DOCS/_archivio_inbox_20260704/` (writer fanno mkdir ✓). Desktop pulito: restano solo shortcut +
   2 mirror auto. NON toccato: `Downloads/` 1.8GB installer ri-scaricabili (decide Matteo).
   RAG: il sapere nuovo in MENTE entra con l'incrementale notturno (no rebuild manuale a GPU occupata).
-- [ ] **Detriti disco** (04 P3): 2.24 GB `chroma_db_*` + 1.1 GB `BACKUPS/` → pulizia CON regola di
-  retention scritta (non one-shot), collegata alla notturna (vedi ondata C).
+- [✓] **Detriti disco — RETENTION SCRITTA + applicata (07/07)** (04 P3, nel frattempo cresciuti:
+  3.0 GB chroma-debris + 3.06 GB BACKUPS/): nuovo `AUTOMATIONS/core/retention.py` (5 regole
+  documentate: R1 chroma-debris keep-1+7gg · R2 BACKUPS/ts >45gg · R3 FULL_* keep-1 · R4 log
+  >30gg · R5 safety-net rag_snapshots=3; default dry-run, report `DATA/retention_last.json`)
+  agganciato a `night_push.bat` prima di stato_fisico (= voce "retention automatica" ondata C
+  FATTA). Prima applicazione: **2.24 GB liberati** (7 quarantene chroma + 9 log; quella del
+  03/07 da 654 MB cade da sola tra 3 notti per regola). RADICE del BACKUPS gonfio trovata:
+  **deep_freeze zippava le chroma_db** (2035 MB il 05/07 vs 185 del 21/06) → esclusione
+  `chroma_db*` in `deep_freeze.py` + freeze rigenerato pulito, poi rimosso lo zip gonfio.
 - [ ] Decisioni "da svegli" rimaste dal 23/06: gitignore `DATA/views/` + `logs/`; **doppio watchdog**
   → 1 istanza; raggruppare `AUTOMATIONS/core` (~30 script piatti).
 
 ### ONDATA B — ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)
+- [✓] **Boot 07/07 sporco dopo interruzione-limite: diagnosi+fix (07/07)** — al login "tante
+  finestre" e 2 guasti reali: (1) **doppio API server su 5001** (python elevato 12:52 + pythonw
+  del watchdog) → killato il doppione via UAC, resta il 5980 tracciato dal watchdog, health ok;
+  (2) **dashboard 5173 MAI partita al boot**: `pnpm dev --silent` passa `--silent` a Vite e
+  **Vite 7.3.5 lo rifiuta (CACError)** → START_LOGIN.bat v2.1 fixato (`--silent` PRIMA di `dev`),
+  dashboard rialzata a mano (200 su localhost). n8n/API/notturna ok (log_issues vuoto, verdict OK).
+  Conferma sul campo di 04 I5 (processi orfani/elevati) — resta in backlog la cura di fondo.
 - [✓] **Nina loop — diagnosi vera (04/07 sera): NON era fermo** — stanotte 03:42 ha generato
   EP_N2_52 "Il Sussurratore" (codice PRE-guardia → gemello regione 3, archiviato oggi in ondata 2:
   tutto coerente). Il falso allarme veniva da un **bug reale trovato e fixato**: (1) **lost-update
@@ -164,8 +178,9 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   silenzio): il watchdog/night_audit deve controllare gli **output**, non solo i processi — es.
   "nessun EP_N2 nuovo da N giorni", "riflusso FATTI fermo", "snapshot RAG vecchio" → critica
   automatica in cartella clinica. Un organo che tace non è sano, è silenzioso.
-- [ ] **Retention automatica** in coda notturna: `chroma_db_*` orfane, `BACKUPS/` oltre rotazione,
-  `DATA/logs/` oltre N giorni (regola scritta, non pulizia una-tantum).
+- [✓] **Retention automatica** in coda notturna: `chroma_db_*` orfane, `BACKUPS/` oltre rotazione,
+  `DATA/logs/` oltre N giorni (regola scritta, non pulizia una-tantum). → FATTA 07/07 insieme
+  al punto detriti di ondata A: `retention.py` in `night_push.bat` (dettagli sopra, ondata A).
 - [ ] **pip-audit** nello sweep notturno (02 Dep) — allerta CVE sulle dipendenze.
 - [ ] **QC batch esteso** (03 F8): `QUALITA_BATCH_44` copre solo EP 20→50 → estendere a tutto l'arco
   a ogni giro notturno (gli EP nuovi del loop entrano nel QC da subito).
