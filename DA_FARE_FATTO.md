@@ -166,6 +166,18 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   RIPRISTINATO integrale dalla copia in contesto di stamattina (68 milestone/6 blockers/107
   sessioni/GENESIS 70/IDENTITY 50) + watcher riavviato col modulo nuovo. Prova sul campo:
   evento file → last_action aggiornato, nulla perso. Home: 65/30/70/40/50 ✓.
+- [✓] **STATE nello snapshot giornaliero (07/07, richiesta Matteo)**: `state_snapshot.py` →
+  `_VAULT/BACKUPS/state_snapshots/STATE_YYYYMMDD.json`, rotazione 14, VALIDA il JSON prima di
+  copiare (uno snapshot corrotto è peggio di nessuno); in night_push prima della retention.
+  Primo snapshot scattato (68 milestone dentro).
+- [✓] **VISTA CRITICHE ELIMINATA dalla dash → CRITICHE.md (07/07, decisione Matteo: "non si
+  aggiorna, non va")**: nuova cartella clinica come FILE stile bussola in root repo —
+  `AUTOMATIONS/core/critiche_md.py` renderizza le 2 fonti JSON (canone manuale + auto-audit)
+  in `CRITICHE.md` (polso + per-progetto + auto aperte); rigenerato OGNI NOTTE da night_audit
+  e auto-committato da night_push (come l'inventario). La gestisce Claude: per cambiare stato
+  si dice a lui o si edita il JSON. Rimossi: voce sidebar, route, room CanvasLayout,
+  `CriticheSection.tsx` (git rm, recuperabile); i JSON e gli endpoint API restano (fonti vive).
+  tsc EXIT 0, home verificata 65/30/70/40/50.
 - [ ] Resto filone: SYSTEM_TREE duplicato in MappaView (au18, refactor per consumare i data
   file), % MIMS computata-vs-dichiarata, doc AUTOMATIONS_MASTER ferma, viste doppie
   neuro/sinapsi (gated: "decidere insieme prima di togliere").

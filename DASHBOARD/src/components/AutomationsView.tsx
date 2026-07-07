@@ -222,7 +222,7 @@ const AUTOMATIONS: Automation[] = [
     trigger: "Task Scheduler — TI_NightAudit, ogni notte 03:52",
     cosa_fa: "Self-audit notturno evidence-based: legge STATE, git, salute dei log (filtro 36h) e genera CRITICHE strutturate (Sonnet, fallback a regole) in DATA/audit/critiche_auto.json + system_health.json. v1.2 (15/06): cartella clinica AUTO-PULENTE — una critica non più osservata da 4 giorni si auto-chiude (resolved) e riapre da sola se il guasto torna (fix n03).",
     come_potenziare: "Gate qualità che blocchi se il RAG non risponde. Riassunto settimanale delle critiche risolte. Severità calibrata sul ripetersi del guasto.",
-    alimenta: ["CRITICHE (dashboard)"],
+    alimenta: ["CRITICHE.md (cartella clinica file, root repo)"],
   },
   {
     id: 37, priority: "notturna", stato: "scheduled", task: "TI_AiWatch",
@@ -249,7 +249,7 @@ const AUTOMATIONS: Automation[] = [
     trigger: "Hook Stop (fine sessione) + a mano",
     cosa_fa: "Tiene la dashboard allineata senza intervento: rebuild STORIE (episodes.json), refresh CRITICHE (bussola_todos), mirror Desktop e — step 4 (15/06) — PCT-SYNC: riallinea le % dei pilastri (MappaView + PILLARS_DATA + ROOT) alla FONTE UNICA STATE.json via NODES/PCT_SYNC/pct_sync.py. Lavora solo se le sorgenti sono cambiate.",
     come_potenziare: "Estendere la fonte-unica al resto dell'albero (nodi/leaf, non solo %). Check TS post-sync.",
-    alimenta: ["CRITICHE (dashboard)", "STORIE"],
+    alimenta: ["CRITICHE.md (cartella clinica file)", "STORIE"],
   },
   {
     id: 40, priority: "notturna", stato: "scheduled", task: "TI_NightPush",

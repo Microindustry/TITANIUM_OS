@@ -11,8 +11,8 @@ set "LOG=%TI_ROOT%\DATA\logs\night_push.log"
 :: INVENTARIO NOTTURNO: i commit di stanotte -> inventario cumulativo (DOCS),
 :: committato QUI prima del push-check cosi' parte con lo stesso push.
 if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\inventario_notturno.py" >> "%LOG%" 2>&1
-git add DOCS\INVENTARIO_NOTTURNO.md >> "%LOG%" 2>&1
-git diff --cached --quiet -- DOCS\INVENTARIO_NOTTURNO.md || git commit -m "auto: inventario notturno" -- DOCS\INVENTARIO_NOTTURNO.md >> "%LOG%" 2>&1
+git add DOCS\INVENTARIO_NOTTURNO.md CRITICHE.md >> "%LOG%" 2>&1
+git diff --cached --quiet -- DOCS\INVENTARIO_NOTTURNO.md CRITICHE.md || git commit -m "auto: inventario notturno + critiche" -- DOCS\INVENTARIO_NOTTURNO.md CRITICHE.md >> "%LOG%" 2>&1
 
 :: c'e' qualcosa da pushare? Uso un FLAG basato sulla dimensione del file, NON il testo
 :: del commit: i subject con ')' (es. "feat(storie)") chiuderebbero il blocco IF -> errore 255.
@@ -51,6 +51,10 @@ if "%DAY%"=="Saturday" (
 :: GRAPHIFY refresh (04 Q3): grafo del repo rigenerato a fine catena — solo AST,
 :: no LLM, ~1 min. Senza questo il grafo (RETE "Sistema" + query /graphify) deriva.
 if exist "%USERPROFILE%\.local\bin\graphify.exe" "%USERPROFILE%\.local\bin\graphify.exe" update "%TI_ROOT%" >> "%LOG%" 2>&1
+
+:: SNAPSHOT STATE giornaliero (dopo il clobber 07/07: STATE non aveva NESSUNA copia)
+:: -> _VAULT/BACKUPS/state_snapshots, rotazione 14, valida il JSON prima di copiare
+if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\state_snapshot.py" >> "%LOG%" 2>&1
 
 :: RETENTION: la regola scritta che tiene pulito il disco (chroma-debris, BACKUPS
 :: vecchi, log >30gg) — vedi retention.py per le regole. Report in DATA/retention_last.json

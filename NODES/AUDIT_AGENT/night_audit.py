@@ -742,6 +742,13 @@ def main():
 
     stats = append_critiche(critiche, signals)
     write_health(signals, stats)
+    # CRITICHE.md (#54): la cartella clinica come FILE stile bussola — sostituisce
+    # la vista dashboard (eliminata 07/07). Best-effort, si rigenera ogni notte.
+    try:
+        from AUTOMATIONS.core.critiche_md import write as _critiche_md_write
+        _critiche_md_write()
+    except Exception as e:
+        logger.warning("critiche_md saltato: %s", e)
     logger.info("done — critiche +%d, auto-chiuse %d (tot %d, aperte %d) | verdict %s",
                 stats["added"], stats.get("auto_closed", 0), stats["total"], stats["open"],
                 "ATTENZIONE" if signals["log_issues"] else "OK")

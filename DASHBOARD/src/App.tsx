@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, AlertTriangle, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot,
+  FlaskConical, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -90,7 +90,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: "mappa",       label: "MAPPA NINA",  icon: Map,         color: "text-pink-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
-  { id: "critiche",    label: "CRITICHE",   icon: AlertTriangle, color: "text-rose-400",   group: "system", dot: "bg-rose-500" },
 ];
 
 const PILLAR_COLORS: Record<string, { bar: string; text: string }> = {
@@ -471,7 +470,6 @@ function AppInner() {
             {view === "eva"      && <SpiegaPilastroView pilastro="eva" />}
             {view === "identity"  && <CvView />}
             {view === "cv-nina"   && <NinaCvView />}
-            {view === "critiche"  && <CanvasLayout room="critiche" />}
             {/* Sistema */}
             {view === "agenti"      && <AgentsView />}
             {view === "automazioni" && (

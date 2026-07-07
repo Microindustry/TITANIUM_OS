@@ -8,7 +8,7 @@ export type ViewMode = "home" | "v32" | "genesis" | "mims" | "eva" | "identity"
                      | "agenti" | "storie" | "mappa" | "architettura" | "rete" | "grafo-rag" | "cv-nina" | "mappa-gioco"
                      | "pitch-nina" | "pitch-mims" | "pitch-v32" | "pitch-genesis" | "pitch-eva" | "pitch-hr"
                      | "sinapsi" | "canvas" | "neuro" | "automazioni"
-                     | "notturne" | "pitch" | "metodo" | "ragchat" | "critiche" | "avventura" | "nina-archivio" | "nina-giorno0" | "controllo" | "avventura-mappa" | "procedimenti" | "calendario";
+                     | "notturne" | "pitch" | "metodo" | "ragchat" | "avventura" | "nina-archivio" | "nina-giorno0" | "controllo" | "avventura-mappa" | "procedimenti" | "calendario";
 
 export type Theme = "dark" | "light";
 
@@ -44,7 +44,7 @@ export const useUIStore = create<UIState>()(
     {
       name: "titanium_ui_v3",
       partialize: (s) => ({ view: s.view, sidebarCollapsed: s.sidebarCollapsed, theme: s.theme }),
-      // Deep-link via hash: localhost:5173/#critiche apre direttamente quella view
+      // Deep-link via hash: localhost:5173/#controllo apre direttamente quella view
       // (sovrascrive la view persistita). Serve per screenshottare/condividere una
       // view precisa headless (dash_shot) senza dipendere dal localStorage. Guardato:
       // solo token plausibili, no-op fuori dal browser.
