@@ -44,7 +44,13 @@ for /f %%d in ('powershell -NoProfile -Command "(Get-Date).DayOfWeek"') do set D
 if "%DAY%"=="Saturday" (
     echo [night_push] sabato: rigenero dataset episodi... >> "%LOG%"
     if defined PYTHON "%PYTHON%" "%TI_ROOT%\CONTENT_ENGINE\scripts\episodes_to_dataset.py" >> "%LOG%" 2>&1
+    echo [night_push] sabato: pip-audit CVE dipendenze... >> "%LOG%"
+    if defined PYTHON "%PYTHON%" -m pip_audit --progress-spinner off --format json --output "%TI_ROOT%\DATA\audit\pip_audit.json" >> "%LOG%" 2>&1
 )
+
+:: GRAPHIFY refresh (04 Q3): grafo del repo rigenerato a fine catena — solo AST,
+:: no LLM, ~1 min. Senza questo il grafo (RETE "Sistema" + query /graphify) deriva.
+if exist "%USERPROFILE%\.local\bin\graphify.exe" "%USERPROFILE%\.local\bin\graphify.exe" update "%TI_ROOT%" >> "%LOG%" 2>&1
 
 :: RETENTION: la regola scritta che tiene pulito il disco (chroma-debris, BACKUPS
 :: vecchi, log >30gg) — vedi retention.py per le regole. Report in DATA/retention_last.json

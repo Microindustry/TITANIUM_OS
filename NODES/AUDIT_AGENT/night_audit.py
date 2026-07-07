@@ -69,6 +69,19 @@ CANONE_STALE_DAYS = 30  # file canone fermo da N giorni -> segnale (organo silen
 MENTE_DIR = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 CANONE_VAULT_STALE_DAYS = 14  # _CANONE.md fermo da N giorni con la serie che genera ogni notte = deriva
 
+# Organi vivi (#54 ondata C — lezione guasto 7: la notturna morta 11 giorni in silenzio):
+# un organo notturno si giudica dall'OUTPUT, non dal processo. Un organo che tace non e'
+# sano, e' silenzioso. (nome, path, giorni massimi senza scrittura; dir = figlio piu' recente)
+ORGANI_VIVI = [
+    ("nina-loop",           TI_ROOT / "DATA" / "nina_state.json",             3),
+    ("snapshot RAG",        TI_ROOT / "_VAULT" / "BACKUPS" / "rag_snapshots", 3),
+    ("inventario notturno", TI_ROOT / "DOCS" / "INVENTARIO_NOTTURNO.md",      3),
+    ("retention disco",     TI_ROOT / "DATA" / "retention_last.json",         3),
+    ("AI news watcher",     TI_ROOT / "DATA" / "ai_news_watcher_state.json",  4),  # tier 48h
+    ("daily brief",         TI_ROOT / "DATA" / "daily_brief_last.md",         3),
+    ("riflusso FATTI",      MENTE_DIR / "KNOWLEDGE" / "genesis_nodi_fatti.md", 7),
+]
+
 # Pattern di guasto cercati nei log della catena notturna
 # NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
 LOG_FAIL_PATTERNS = [
@@ -449,6 +462,111 @@ def append_critiche(new: list[dict], signals: dict) -> dict:
             "total": len(merged), "open": sum(1 for c in merged if c.get("status") == "open")}
 
 
+# QC strutturale episodi (#54 ondata C, attacco 03 F8): QUALITA_BATCH_44 era una
+# verifica one-off ferma a EP 20->50; questo copre TUTTO l'arco a ogni notte, e gli
+# EP nuovi del loop entrano nel QC da subito. Marker CORE = struttura del template
+# (mancarne uno = episodio rotto -> log_issue). L'open-loop e' un caso a parte:
+# manca DAVVERO su meta' dell'arco (lavoro-contenuti noto, F2) -> metrica contata,
+# niente allarme per notte; il giudizio di merito resta all'LLM dell'audit.
+QC_EP_CORE = [
+    ("cold-open",  re.compile(r"##\s*COLD OPEN", re.I)),
+    ("atti",       re.compile(r"##\s*ATTO I", re.I)),
+    ("chiusura",   re.compile(r"##\s*CHIUSURA", re.I)),
+    ("provalo-tu", re.compile(r"provalo tu", re.I)),
+    ("fatti-rag",  re.compile(r"##\s*FATTI", re.I)),
+]
+QC_EP_OPEN_LOOP = re.compile(r"open loop", re.I)
+QC_EP_MIN_CHARS = 3000
+
+PIP_AUDIT_JSON = AUDIT_DIR / "pip_audit.json"
+
+
+def check_qc_episodi(signals: dict) -> None:
+    """(#54 ondata C, 03 F8) QC strutturale su tutti gli EP_N2 attivi del vault."""
+    storie = MENTE_DIR / "STORIE" / "S_AVVENTURA"
+    out = {"checked": 0, "structure_fail": 0, "open_loop_missing": 0}
+    try:
+        for f in sorted(storie.glob("EP_N2_*.md")):
+            out["checked"] += 1
+            text = f.read_text(encoding="utf-8", errors="replace")
+            missing = [n for n, rx in QC_EP_CORE if not rx.search(text)]
+            if len(text) < QC_EP_MIN_CHARS:
+                missing.append(f"troppo corto ({len(text)} char)")
+            if missing:
+                out["structure_fail"] += 1
+                signals["log_issues"].append({
+                    "log": "QC episodi", "tipo": "episodio strutturalmente rotto",
+                    "riga": f"{f.name}: mancano {', '.join(missing)}",
+                    "data": TODAY,
+                })
+            if not QC_EP_OPEN_LOOP.search(text):
+                out["open_loop_missing"] += 1
+    except OSError as e:
+        logger.warning("QC episodi saltato: %s", e)
+    signals["qc_episodi"] = out
+
+
+def check_pip_audit(signals: dict) -> None:
+    """(#54 ondata C, attacco 02 Dep) CVE sulle dipendenze: legge il report
+    settimanale di pip-audit (sabato, night_push). Segnala solo le vulnerabilita'
+    FIXABILI: lo stack RAG e' pinnato per compatibilita' (torch 2.6+cu124,
+    chromadb 0.5.23) e un allarme non-azionabile e' solo rumore."""
+    out = {"vulns": 0, "fixable": 0, "packages": []}
+    d = _read_json(PIP_AUDIT_JSON, {})
+    for dep in (d.get("dependencies") or []):
+        vulns = dep.get("vulns") or []
+        if not vulns:
+            continue
+        nfix = sum(1 for v in vulns if v.get("fix_versions"))
+        out["vulns"] += len(vulns)
+        out["fixable"] += nfix
+        if nfix:
+            out["packages"].append(f"{dep.get('name')} {dep.get('version')} ({nfix})")
+    if out["fixable"]:
+        signals["log_issues"].append({
+            "log": "pip_audit.json", "tipo": "CVE dipendenze con fix disponibile",
+            "riga": f"{out['fixable']} CVE fixabili in {len(out['packages'])} pacchetti: "
+                    + ", ".join(out["packages"][:6]),
+            "data": TODAY,
+        })
+    signals["pip_audit"] = out
+
+
+def check_organi_vivi(signals: dict) -> None:
+    """(#54 ondata C) Sentinella organi vivi: eta' dell'ultimo OUTPUT di ogni
+    organo notturno (tabella ORGANI_VIVI). Output assente o piu' vecchio della
+    soglia -> log_issue -> critica in cartella clinica."""
+    out = {}
+    now = datetime.now().timestamp()
+    for nome, path, max_days in ORGANI_VIVI:
+        try:
+            if not path.exists():
+                out[nome] = None
+                signals["log_issues"].append({
+                    "log": "organi vivi", "tipo": "organo assente",
+                    "riga": f"{nome}: output mai visto ({path.name} non esiste)",
+                    "data": TODAY,
+                })
+                continue
+            if path.is_dir():
+                mt = max((f.stat().st_mtime for f in path.iterdir()),
+                         default=path.stat().st_mtime)
+            else:
+                mt = path.stat().st_mtime
+            age_days = round((now - mt) / 86400, 1)
+            out[nome] = age_days
+            if age_days > max_days:
+                signals["log_issues"].append({
+                    "log": "organi vivi", "tipo": "organo silenzioso",
+                    "riga": f"{nome}: ultimo output {age_days:g} giorni fa "
+                            f"(soglia {max_days}) — {path.name}",
+                    "data": TODAY,
+                })
+        except OSError as e:
+            logger.warning("organo %s non leggibile: %s", nome, e)
+    signals["organi_vivi"] = out
+
+
 def check_canone_vault(signals: dict) -> None:
     """(#54, attacco 07 P1) Canone ENFORCED, non solo dichiarato. Due sentinelle:
     1. id-collision: due note ATTIVE (fuori _ARCHIVIO/_PROPOSTI) con lo stesso
@@ -577,6 +695,9 @@ def write_health(signals: dict, stats: dict):
         "vault_orphans": signals.get("vault_orphans", 0),
         "canone_manuale": signals.get("canone_manuale", {}),
         "canone_vault": signals.get("canone_vault", {}),
+        "organi_vivi": signals.get("organi_vivi", {}),
+        "pip_audit": signals.get("pip_audit", {}),
+        "qc_episodi": signals.get("qc_episodi", {}),
         "critiche": stats,
         "verdict": "ATTENZIONE" if signals["log_issues"] else "OK",
     }
@@ -609,6 +730,9 @@ def main():
 
     check_canone_manuale(signals)
     check_canone_vault(signals)
+    check_organi_vivi(signals)
+    check_pip_audit(signals)
+    check_qc_episodi(signals)
     critiche = critiche_via_llm(signals)
     if critiche is None:
         signals["_fonte"] = "auto-audit (regole)"

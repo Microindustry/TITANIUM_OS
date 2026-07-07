@@ -202,18 +202,33 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   cartella clinica. Test: 0 collisioni, canone fresco (51==51, EP_N2_51 nuovo di stanotte).
 
 ### ONDATA C — NOTTURNE DA IMPLEMENTARE (il sistema si mantiene da solo)
-- [ ] **Sentinella "organi vivi"** (lezione del guasto 7: la notturna era morta 11 giorni in
-  silenzio): il watchdog/night_audit deve controllare gli **output**, non solo i processi — es.
-  "nessun EP_N2 nuovo da N giorni", "riflusso FATTI fermo", "snapshot RAG vecchio" → critica
-  automatica in cartella clinica. Un organo che tace non è sano, è silenzioso.
+- [✓] **Sentinella "organi vivi" — FATTA (07/07)**: `night_audit.check_organi_vivi()` con tabella
+  dichiarativa ORGANI_VIVI (7 organi: nina-loop, snapshot RAG, inventario, retention, AI watcher,
+  daily brief, riflusso FATTI — path + soglia giorni ciascuno; dir = figlio più recente). Output
+  assente o oltre soglia → log_issue → critica in cartella clinica; età in system_health
+  (`organi_vivi`). Test live: tutti vivi (watcher 2.7gg < soglia 4). Estendere = 1 riga in tabella.
 - [✓] **Retention automatica** in coda notturna: `chroma_db_*` orfane, `BACKUPS/` oltre rotazione,
   `DATA/logs/` oltre N giorni (regola scritta, non pulizia una-tantum). → FATTA 07/07 insieme
   al punto detriti di ondata A: `retention.py` in `night_push.bat` (dettagli sopra, ondata A).
-- [ ] **pip-audit** nello sweep notturno (02 Dep) — allerta CVE sulle dipendenze.
-- [ ] **QC batch esteso** (03 F8): `QUALITA_BATCH_44` copre solo EP 20→50 → estendere a tutto l'arco
-  a ogni giro notturno (gli EP nuovi del loop entrano nel QC da subito).
-- [ ] **Graphify refresh** notturno (04 Q3: grafo del repo stale) — rigenerare a fine catena.
-- [ ] **Critiche-riconciliazione** notturna = punto (3) dell'ondata B, vive qui a regime.
+- [✓] **pip-audit — FATTO (07/07)** (02 Dep): installato + run settimanale (sabato, night_push
+  col dataset) → `DATA/audit/pip_audit.json`; `night_audit.check_pip_audit()` segnala SOLO le
+  CVE **fixabili** (lo stack RAG pinnato non deve fare rumore — e infatti torch/chromadb sono
+  puliti). Prima passata: **42 CVE fixabili in 9 pacchetti** (aiohttp 8, gradio 9, pillow 7,
+  starlette 6, setuptools 5, yt-dlp 4, +3) → diventa critica stanotte. ⚠ upgrade NON fatto di
+  proposito: gradio/starlette/pydantic sono il mondo llamafactory (ha già rotto torch una volta)
+  — va fatto in sessione controllata con test finetune dopo.
+- [✓] **QC batch esteso — FATTO (07/07)** (03 F8): `night_audit.check_qc_episodi()` — QC
+  STRUTTURALE su tutti gli EP_N2 attivi a ogni notte (cold open/atti/chiusura/Provalo tu/FATTI/
+  lunghezza → log_issue se rotto; gli EP nuovi del loop entrano da subito). Prima passata:
+  51 controllati, **0 rotture** (la qualità del batch 44 regge su tutto l'arco). Metrica a parte:
+  **28/51 senza aggancio "Open loop"** (F2 era la punta) — contata in health senza allarme-per-notte,
+  è lavoro-contenuti da saldare episodio per episodio (il giudizio di merito resta al Sonnet).
+- [✓] **Graphify refresh — FATTO (07/07)** (04 Q3): il grafo era fermo al 7 GIUGNO. Rigenerato
+  ora (`graphify update` — solo AST, no LLM: 7338 nodi/7973 archi/675 community, ~1 min) e
+  agganciato a `night_push.bat` a fine catena. La RETE "Sistema" e le query /graphify tornano vive.
+- [✓] **Critiche-riconciliazione** notturna = punto (3) dell'ondata B — già a regime dal 05/07
+  (`check_canone_manuale` in night_audit, commit 2b8bfafe); oggi (07/07) affiancata da
+  `check_canone_vault` + `check_organi_vivi` + `check_pip_audit`: 4 sentinelle a ogni notte.
 
 *Ordine di esecuzione: A → B → C, poi social. Il backlog per dominio della #52 resta sotto,
 niente cancellato: queste ondate lo RIORDINANO verso l'obiettivo, le voci già elencate lì
