@@ -24,8 +24,9 @@ start "" "C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugg
 :: 1. API Server — Flask porta 5001
 start "" "%PYTHONW%" "%TI_ROOT%\api_server.py"
 
-:: 2. Dashboard — Vite porta 5173 (usa pnpm)
-start "" cmd /c "cd /d "%TI_ROOT%\DASHBOARD" && "%PNPM%" dev --silent"
+:: 2. Dashboard — Vite porta 5173 (usa pnpm). v2.1: --silent PRIMA di dev
+::    (dopo, pnpm lo passa a vite; vite 7.x non lo conosce -> CACError e dash giu')
+start "" cmd /c "cd /d "%TI_ROOT%\DASHBOARD" && "%PNPM%" --silent dev"
 
 :: 3. RAG sync incrementale in background (MENTE/ -> ChromaDB). v2.1: era --rebuild
 ::    completo (~3 min GPU a OGNI login) -> ora incrementale con self-heal orfani
