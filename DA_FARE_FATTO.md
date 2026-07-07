@@ -83,6 +83,44 @@
 
 ---
 
+## Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber
+
+*Sessione lunga su Fable. Il piano #54 (ecosistema in ordine) è COMPLETO: ondata A, B e C
+tutte chiuse (dettagli nelle sezioni sotto, aggiornate strada facendo). In più: filone
+"verità sparsa + pulizia dashboard" (prima tranche) e due decisioni Matteo eseguite
+(STATE snapshot giornaliero, vista CRITICHE → CRITICHE.md).*
+
+**FATTO OGGI (sintesi — 10 commit, dettagli nei blocchi sotto):**
+- [✓] Boot sporco curato alla RADICE: legacy `CORE/watchdog.py` respawnava doppioni →
+  single-instance su watchdog/watcher/api (guardia PORTA 5001), START_ECOSYSTEM stub,
+  fix dashboard (vite 7 rifiuta --silent)
+- [✓] Ondata A resto: retention.py (5 regole, 2.24 GB liberati) + deep_freeze senza chroma
+  (2035→216 MB) + gitignore log + indice AUTOMATIONS/core (44 script)
+- [✓] Ondata B resto: TOP10 #3 (rebuild esclusivo 18113==18113 + 535 chunk persi recuperati),
+  #9 (indici cammino/pietre AGGANCIATI al build), canone ENFORCED (canon-pin RRF + sentinelle)
+- [✓] Ondata C tutta: organi vivi, pip-audit (42 CVE fixabili → critica), QC 51 episodi
+  (0 rotture, 28 senza open-loop), graphify notturno
+- [✓] 🔴 STATE.json CLOBBER trovato mentre accadeva e curato (load fail-safe + write atomico);
+  68 milestone/107 sessioni/6 blockers RIPRISTINATI; snapshot giornaliero `state_snapshot.py`
+- [✓] NodeKit: 4 copie NodeTile/NodeLevel → 1 (−256 righe, pixel-identici)
+- [✓] Vista CRITICHE ELIMINATA (decisione Matteo) → `CRITICHE.md` stile bussola, rigenerato
+  ogni notte, gestito da Claude
+
+**DA FARE — si riparte da qui (in ordine):**
+- [ ] **1 · Resto filone verità sparsa**: SYSTEM_TREE duplicato in MappaView (au18, a mente
+  fresca), % MIMS computata-vs-dichiarata, doc AUTOMATIONS_MASTER ferma a marzo
+- [ ] **2 · EP_N2_03 "la Misura" — carosello 16 slide** (salda la promessa della slide 16 di
+  EP_N2_02; il template c'è)
+- [ ] **3 · Sessione CVE**: upgrade dei 9 pacchetti (42 fix) CON test finetune dopo
+  (mondo llamafactory, mai upgrade cieco)
+- [ ] **4 · Decisione Matteo**: viste doppie neuro/sinapsi da togliere? (il fix vero di au08;
+  "decidere insieme prima di togliere")
+- [ ] **5 · Backlog per dominio #52** (~35 voci) — a ondate, come sempre
+- [ ] **GATED MATTEO**: ordine hardware (Vevor+ER20+UPS) · chiave Semantic Scholar ·
+  trade secrets MIMS in _VAULT · prerequisiti social (mail, pagina FB/IG, Docker)
+
+---
+
 ## Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)
 
 *Decisione Matteo (04/07): la priorità NON è il social — prima si sistema il SISTEMA: file nelle

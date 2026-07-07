@@ -1,9 +1,15 @@
 {
-  "generated": "2026-07-03T18:24:25",
+  "generated": "2026-07-07T12:53:32",
   "soglia": 0.045,
-  "n_note": 501,
-  "n_orfani": 1,
+  "n_note": 317,
+  "n_orfani": 2,
   "orfani": [
+    {
+      "stem": "human_centeredness_in_translation",
+      "title": "Human-centeredness in translation",
+      "domain": "KNOWLEDGE",
+      "rel": "KNOWLEDGE/RESEARCH/GENESIS/human_centeredness_in_translation.md"
+    },
     {
       "stem": "quantum_espresso_a_modular_and_open_source_software_project_",
       "title": "QUANTUM ESPRESSO: a modular and open-source software project for quantum simulat",

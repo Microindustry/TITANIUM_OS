@@ -1,59 +1,45 @@
-=== RIAVVIO SESSIONE #53 — 03/07/2026 ===
-Ultima sessione: #52 — 02-03/07/2026 (ATTACCO ESERCITO su Fable COMPLETO + sintesi + backlog in bussola)
+=== RIAVVIO SESSIONE #56 — generato 07/07/2026 (fine sessione #55, skill salva) ===
+Ultima sessione: #55 — 07/07/2026 (Fable 5, giornata intera)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-L'ATTACCO ESERCITO e' CHIUSO: 7/7 specialisti rientrati su Fable (design, sicurezza, scrittura,
-software, news-IA, gestionale, integrita-RAG), report additivi/propose-only con file:riga in
-DOCS/ATTACCO_20260702/. Sintesi coordinata in _SINTESI.md (TOP 10 per leva). TUTTE le azioni
-(TOP 10 + backlog completo per dominio, ~49 voci) sono in DA_FARE_FATTO.md come [ ] DA FARE.
-Nulla del codice-proposta e' stato committato (gate SELF_IMPROVE propose-only).
+IL PIANO #54 "ECOSISTEMA IN ORDINE" E' COMPLETO: ondate A, B, C tutte chiuse.
+Il sistema ora: si pulisce da solo (retention.py, 5 regole), si sorveglia da solo
+(4 sentinelle notturne: organi vivi / canone vault / pip-audit / QC episodi),
+non puo' piu' avere doppioni (single-instance su watchdog+watcher+api, guardia
+porta 5001) e non puo' piu' perdere STATE.json (write atomico + snapshot 14gg).
+Il canone e' ENFORCED nel retrieval (canon-pin RRF). La vista CRITICHE e' stata
+ELIMINATA dalla dash (decisione Matteo): ora e' CRITICHE.md in root, stile
+bussola, rigenerato ogni notte — lo gestisce Claude.
 
-FILO ROSSO dei 7 report: il sistema GIRA, ma in 3 punti la FONTE DI VERITA' e' STANTIA
-(1: _CANONE.md:13 punta ai doc V32 vecchi/vietati "molle+recuperato" su cui Nina grounda;
-2: INDICE_CAMMINO 9/15 titoli sbagliati; 3: pitch pubblico 3 errori fattuali) e 1 solo ordine
-hardware (Vevor+ER20+UPS ~250-350EUR) sblocca l'intera catena economica + le corruzioni HNSW.
+FATTI CHIAVE di #55 (10 commit, cd386b5a → 1e4daf0c):
+- Boot sporco 07/07 = legacy CORE/watchdog.py che respawnava doppioni → curato alla radice
+- STATE.json CLOBBER visto in flagrante alle 20:40 (68 milestone cancellate dal
+  template default di state_updater) → ripristinato TUTTO + fix radice + snapshot giornaliero
+- RAG: rebuild esclusivo 18113==18113, 535 chunk persi recuperati, 0 archivio nel canone
+- pip-audit: 42 CVE fixabili in 9 pacchetti (aiohttp/gradio/pillow/...) → critica in clinica
+- NodeKit: 4 copie NodeTile/NodeLevel → 1 (−256 righe, pixel-identici)
 
->>> PROSSIMA SESSIONE #53 — APRIRE CON FABLE 5. IN ORDINE:
-  1) *** OBSIDIAN + ECOSISTEMA VERO (richiesta esplicita Matteo) *** — rivedere il vault
-     MICROINDUSTRY/MENTE e renderlo un VERO ecosistema: note collegate davvero, ponti/wikilink
-     sani, VERITA' UNICA (_CANONE.md), zero orfani, MOC curati. Strumenti pronti: setup_obsidian,
-     vault_intersect (v2.1 -> vault_orphans.json), storie_intersect, rag_linkgraph.json.
-     Si aggancia direttamente ai punti TOP 10 #2/#3 (canone RAG stantio) + #9 (indice storie)
-     + 07 P1 (canone non-enforced): stesso filo = mettere in ordine la CONOSCENZA/verita.
-  2) POI la prima ondata dell'attacco per leva: TOP 10 #1 (checkout hardware: Vevor+ER20+UPS)
-     -> #2/#3 (ripuntare _CANONE.md + escludere i 55 file di versioni superate dal RAG).
-  3) A seguire il backlog completo per dominio in DA_FARE_FATTO.md (design/sicurezza/scrittura/
-     software/news-IA/gestionale/integrita-RAG), a ondate, sempre additivo/propose-only.
+>>> PROSSIMA SESSIONE #56 — IN ORDINE:
+  1) Resto filone VERITA' SPARSA: SYSTEM_TREE duplicato in MappaView (au18, refactor
+     per consumare i data file — a mente fresca), % MIMS computata-vs-dichiarata,
+     doc AUTOMATIONS_MASTER ferma a marzo.
+  2) EP_N2_03 "la Misura" — carosello 16 slide (salda la promessa di EP_N2_02;
+     il _TEMPLATE c'e').
+  3) Sessione CVE: upgrade dei 9 pacchetti (42 fix) CON test finetune dopo
+     (mondo llamafactory: mai upgrade cieco).
+  4) DECISIONE MATTEO: togliere le viste doppie neuro/sinapsi? (fix vero di au08)
+  5) Backlog per dominio #52 (~35 voci) — a ondate.
 
-━━━ FATTO IN SESSIONE #52 (03/07) ━━━
-- ATTACCO ESERCITO lanciato su Fable: 7 agenti general-purpose model=fable in parallelo.
-  (Prima ondata ~16:00 fermata dal limite sessione; ripresa dopo reset, 7/7 completati.)
-- 7 report in DOCS/ATTACCO_20260702/: 01_design, 02_sicurezza, 03_scrittura, 04_software,
-  05_news_ia, 06_gestionale, 07_integrita_rag. Additivo, propose-only, file:riga.
-- _SINTESI.md scritta: quadro per dominio + TOP 10 azioni per leva + seconda fascia + note metodo.
-- DA_FARE_FATTO.md: TOP 10 + BACKLOG COMPLETO per dominio portati come [ ] DA FARE (nulla scartato,
-  su richiesta "TUTTO non le prime 10"). Puntatore "SI RIPARTE DA QUI #53" in cima.
-- STATE.json + RIAVVIO aggiornati. Chiusura via skill salva.
+━━━ BLOCKERS APERTI (gated Matteo) ━━━
+- Ordine hardware: mandrino ER20 + martinetto Vevor + UPS (~250-350EUR) = IL tappo
+  (6-7 critiche puntano qui; l'UPS cura la corruzione HNSW alla radice)
+- Chiave Semantic Scholar gratuita in .env → azzera i 429 della ricerca notturna (5 min)
+- Trade secrets MIMS non in _VAULT cifrato (critica seria, mezz'ora insieme)
+- Prerequisiti social (quando si riprende): mail progetto, pagina FB+IG, Docker Desktop
 
-━━━ TOP 10 AZIONI (per leva — dettaglio+backlog in DA_FARE_FATTO.md / _SINTESI.md) ━━━
-  1 MOSSA1 checkout hardware (Vevor+ER20+UPS ~250-350EUR) = 3 blocker + 5 output (incl. fine HNSW)
-  2 RAG P0: _CANONE.md:13 punta a V32-vecchio/vietato -> ripuntare + estendere canon_guard PAIRS
-  3 RAG P0: 55 file versioni superate dentro il canone -> estendere exclusions (1 rebuild, GPU libera)
-  4 SICUREZZA EVA: bind 127.0.0.1 + auth /inbox + APP_SECRET obbligatorio (PII clienti Vita Natura)
-  5 SICUREZZA IP: spostare VULCAN_MANIFESTO.md fuori dal repo pubblico -> MENTE/MIMS
-  6 RAG commit-leak: guardia lock+failure-latch in api_server (383/1085/1164)
-  7 Igiene .env root: verificare/ruotare sk-ant, git rm file 'perfetta' tracciato
-  8 WATCHER: Anthropic feed morto -> RSS keyless + filtro stelle GitHub + verifica schedulazione
-  9 STORIE: rigenerare INDICE_CAMMINO da episodes.json + catena EP_02->03 + EP_N2_03 "la Misura"
- 10 DESIGN quick-win CSS (nl-fadeUp/reduced-motion/contrasto) + template canonico caroselli
+━━━ COME LEGGERE LE CRITICHE ORA ━━━
+CRITICHE.md (root repo) — polso + canone per progetto + auto-audit aperte.
+Si rigenera ogni notte (night_audit) e si committa da solo (night_push).
+Per cambiare stato: dirlo a Claude, o editare DATA/audit/critiche_manuali.json.
 
-━━━ VERIFICHE (fine #52) ━━━
-(vedi output skill salva a fondo sessione: audit_episodes 0 orfani, build_episodes_json, tsc -b verde)
-
-━━━ BLOCKERS APERTI ━━━
-- UPS hardware (~50-80EUR) — corruzione HNSW da power-loss ricorrente (cura alla radice). = TOP 10 #1
-- Mandrino 2.2kW ER20 + martinetto Vevor 3 stadi da montare (prerequisiti fisici MIMS/VULCAN). = TOP 10 #1
-- Chiavi .env da ruotare (sk-ant in root, red-team) — le ruota Matteo. = TOP 10 #7
-- Connettori MIMS = Via B (compressione VULCAN) — ricalcolare economia/BEP + bozza B2 (dopo prima colata).
-
-━━━ Generato: 03/07/2026 — fine sessione #52 (skill salva) ━━━
+━━━ Generato: 07/07/2026 — fine sessione #55 (skill salva) ━━━

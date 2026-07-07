@@ -1,3 +1,32 @@
+<!-- TOC -->
+
+- [04  SOFTWARE / ARCHITETTURA  Attacco 20260702](#04-software-architettura-attacco-20260702)
+  - [PRIORITÀ (massimo impatto / minimo rischio, in ordine)](#priorità-massimo-impatto-minimo-rischio-in-ordine)
+    - [P1  .env in root repo con chiavi in chiaro (igiene locale, NON leak pubblico)](#p1-env-in-root-repo-con-chiavi-in-chiaro-igiene-locale-non-leak-pubblico)
+    - [P2  Commit-leak RAG: nessun failure latch su /api/rag/search](#p2-commit-leak-rag-nessun-failure-latch-su-apiragsearch)
+    - [P3  2.24 GB di detriti ChromaDB  1.1 GB BACKUPS su disco](#p3-224-gb-di-detriti-chromadb-11-gb-backups-su-disco)
+    - [P4  NEXUS: codice morto dichiarato active in dashboard](#p4-nexus-codice-morto-dichiarato-active-in-dashboard)
+    - [P5  Username benen hardcoded residuo nella dashboard (dati visualizzati sbagliati)](#p5-username-benen-hardcoded-residuo-nella-dashboard-dati-visualizzati-sbagliati)
+    - [P6  File spazzatura TRACCIATO nel repo pubblico](#p6-file-spazzatura-tracciato-nel-repo-pubblico)
+  - [QUICK-WIN (30 min ciascuno)](#quick-win-30-min-ciascuno)
+    - [Q1  Path MENTE hardcoded C:/Users/teo/... (rompe la regola mai path assoluti)](#q1-path-mente-hardcoded-cusersteo-rompe-la-regola-mai-path-assoluti)
+    - [Q2  Retry LLM assente in 4 agenti notturni (nina ce lha, gli altri no)](#q2-retry-llm-assente-in-4-agenti-notturni-nina-ce-lha-gli-altri-no)
+    - [Q3  Grafo graphify stale](#q3-grafo-graphify-stale)
+    - [Q4  Server Flask di sviluppo in produzione 24/7](#q4-server-flask-di-sviluppo-in-produzione-247)
+    - [Q5  Riferimenti benen cosmetici (bassa priorità, batch unico)](#q5-riferimenti-benen-cosmetici-bassa-priorità-batch-unico)
+    - [Q6  Scanner: doppio path con fallback fantasma](#q6-scanner-doppio-path-con-fallback-fantasma)
+  - [INGEGNERIZZAZIONE (interventi più grossi, da pianificare)](#ingegnerizzazione-interventi-più-grossi-da-pianificare)
+    - [I1  Test: esiste UN solo file di test in tutto il repo](#i1-test-esiste-un-solo-file-di-test-in-tutto-il-repo)
+    - [I2  Modulo condiviso NODES/common/ (retry, client anthropic, env loading)](#i2-modulo-condiviso-nodescommon-retry-client-anthropic-env-loading)
+    - [I3  Dashboard: NodeTile/NodeLevel quadruplicati](#i3-dashboard-nodetilenodelevel-quadruplicati)
+    - [I4  Componenti monstre della dashboard](#i4-componenti-monstre-della-dashboard)
+    - [I5  /api/restart e processi orfani](#i5-apirestart-e-processi-orfani)
+    - [I6  episodes.json da 2.0 MB dentro il bundle sorgente](#i6-episodesjson-da-20-mb-dentro-il-bundle-sorgente)
+    - [I7  RAG: manifest/artefatti multipli senza retention](#i7-rag-manifestartefatti-multipli-senza-retention)
+  - [NOTE POSITIVE (cose fatte bene, da NON toccare)](#note-positive-cose-fatte-bene-da-non-toccare)
+
+<!-- /TOC -->
+
 # 04 · SOFTWARE / ARCHITETTURA — Attacco 20260702
 *Specialista: software/architettura · Modalità: PROPOSE-ONLY, additivo · Data: 2026-07-03*
 *Bersaglio: NODES/**, AUTOMATIONS/**, api_server.py, DASHBOARD (TS). Grafo: graphify-out/ (5966 nodi · 6317 archi, costruito su commit 8f0ea224 → **stale**, HEAD è e1179c2f: proporre `graphify update .`)*

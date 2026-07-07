@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-06  2 commit](#2026-07-06-2-commit)
   - [2026-07-05  13 commit](#2026-07-05-13-commit)
   - [2026-07-04  8 commit](#2026-07-04-8-commit)
   - [2026-07-03  8 commit](#2026-07-03-8-commit)

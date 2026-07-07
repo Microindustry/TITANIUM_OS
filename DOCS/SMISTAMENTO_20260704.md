@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [SMISTAMENTO 2026-07-04  Desktop  chiavetta  cartelle giuste](#smistamento-2026-07-04-desktop-chiavetta-cartelle-giuste)
+  - [Legenda destinazioni (tabella CLAUDE.md)](#legenda-destinazioni-tabella-claudemd)
+  - [A  CREDENZIALI (in chiaro sul Desktop  _VAULT)](#a-credenziali-in-chiaro-sul-desktop-vault)
+  - [B  SAPERE  MENTE](#b-sapere-mente)
+  - [C  CAD](#c-cad)
+  - [D  ARCHIVIO STORICO  MICROINDUSTRY/_ARCHIVIO/CHIAVETTA_20260704/](#d-archivio-storico-microindustryarchiviochiavetta20260704)
+  - [E  REPO](#e-repo)
+  - [F  DESKTOP a fine giro](#f-desktop-a-fine-giro)
+  - [NON toccato (decisione Matteo)](#non-toccato-decisione-matteo)
+
+<!-- /TOC -->
+
 # SMISTAMENTO 2026-07-04 — Desktop + chiavetta → cartelle giuste
 *Ondata A del piano #54 (bussola). Regola: NIENTE delete di contenuto — solo MOVE tracciati.*
 *Questa è la mappa vecchio→nuovo: ogni riga è reversibile (sposti indietro e torna tutto com'era).*

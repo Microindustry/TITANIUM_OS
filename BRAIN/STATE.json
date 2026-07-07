@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-07T21:09:20.089305",
-  "active_milestone": "Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO — 7/7 specialisti rientrati (01 design, 02 sicurezza, 03 scrittura, 04 software, 05 news-IA, 06 gestionale, 07 integrita-RAG) in DOCS/ATTACCO_20260702/NN_*.md, additivo/propose-only con file:riga. Sintesi coordinata in _SINTESI.md (TOP 10 per leva). TUTTE le azioni (TOP 10 + backlog completo per dominio, ~49 voci) portate in DA_FARE_FATTO.md come [ ] DA FARE. Filo rosso: il sistema gira ma in 3 punti la fonte di verita e stantia (canone RAG _CANONE.md:13 punta a V32-su-molle/recuperato vietato; INDICE_CAMMINO 9/15 titoli sbagliati; pitch 3 errori) e 1 ordine hardware (Vevor+ER20+UPS ~250-350EUR) sblocca l'intera catena economica + le corruzioni HNSW.",
-  "next_step": "PROSSIMA SESSIONE #53 (APRIRE CON FABLE 5): (1) REVISIONARE OBSIDIAN e rendere l'ecosistema MENTE un VERO ecosistema (note/ponti/wikilink sani, verita unica _CANONE.md, zero orfani, MOC) via setup_obsidian + vault_intersect + storie_intersect + rag_linkgraph; si aggancia a TOP 10 #2/#3 (canone RAG stantio) e #9 (indice storie) e 07 P1. (2) POI prima ondata attacco per leva: TOP 10 #1 checkout hardware -> #2/#3 canone RAG. Tutte le azioni in DA_FARE_FATTO.md.",
-  "session_count": 107,
+  "last_update": "2026-07-07T21:24:03.604051",
+  "active_milestone": "Sessione #55 (07/07): PIANO #54 COMPLETO — ondate A-B-C tutte chiuse + filone verita' sparsa (1a tranche). Boot sporco curato alla radice (legacy CORE/watchdog respawnava doppioni -> single-instance su watchdog/watcher/api, guardia porta 5001, START_ECOSYSTEM stub, fix vite7 --silent). Retention disco (5 regole, 2.24GB) + deep_freeze senza chroma (2035->216MB). Canone ENFORCED: canon-pin RRF (27 note _CANONE) + rebuild esclusivo 18113==18113 (535 chunk persi recuperati) + indici cammino/pietre agganciati al build. 4 sentinelle notturne nuove (organi vivi, canone vault, pip-audit 42 CVE fixabili, QC 51 episodi). CLOBBER STATE.json trovato in flagrante e curato (load fail-safe + write atomico) — 68 milestone/107 sessioni ripristinate + snapshot giornaliero. NodeKit (4 copie -> 1, -256 righe, pixel-identici). Vista CRITICHE eliminata (decisione Matteo) -> CRITICHE.md notturno.",
+  "next_step": "PROSSIMA SESSIONE #56, in ordine: (1) resto filone verita' sparsa — SYSTEM_TREE duplicato in MappaView (au18), % MIMS computata-vs-dichiarata, doc AUTOMATIONS_MASTER; (2) EP_N2_03 'la Misura' carosello 16 slide; (3) sessione CVE (42 fix, test finetune dopo); (4) decisione Matteo su viste doppie neuro/sinapsi. GATED MATTEO: hardware Vevor+ER20+UPS, chiave Semantic Scholar, trade secrets in _VAULT.",
+  "session_count": 108,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-07T20:40:43.130364"
+      "last_activity": "2026-07-07T21:19:17.533935"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -98,7 +98,13 @@
       "Sessione #51: EP_N2_01 'La Bambina che Chiedeva Perche' rifatto al NUOVO STANDARD — da 8 slide (pre-volto) a 16 slide blueprint SVG narrativo (scene disegnate, zero foto, stesso sfondo/flusso), 3 strati rispettati (bottoni=bambino, sarta=grande, pizzicore=cuore), generatore riusabile _build_ep.py+_render_all.py; snapshot v1_8slide_2506 + v2_blueprint-16slide (02/07)",
       "Sessione #51: EP_N2_02 'Il Soffio di Troppo' al nuovo standard (16 slide blueprint SVG narrativo) — la Fucina/Forge, mezzo mm=il patto, test della sarta, precisione=relazione, tolleranza gradi non si/no; stesso impianto di EP_01 (generatore+README+caption); snapshot v1_blueprint-16slide (02/07)",
       "Sessione #52-prep (02/07): infra refresh + RAG rebuild VERIFICATO. Default modello -> Fable 5 (.claude/settings.local.json, gitignored, repo pubblico). Dashboard riavviata (5173); Obsidian/ecosistema 595 note/3230 ponti/2 isolate; Pietre 9/82; 0 orfani; _CANONE.md ok 0 violazioni. RAG full rebuild-hard (post-Obsidian) allineato 25049 semantico==bm25 (HNSW pulito, heading-aware v4.1); query end-to-end conferma storie->RAG->Nina (EP_N2_02 top hit). PIANO D'ATTACCO esercito 7 domini (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG) ingegnerizzato e congelato in DOCS/ATTACCO_20260702/_PIANO.md, propose-only/additivo, da eseguire su Fable.",
-      "Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO E SINTETIZZATO — 7 agenti general-purpose model=fable in parallelo (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG), ognuno un report additivo propose-only con file:riga in DOCS/ATTACCO_20260702/. Coordinatore Fable ha scritto _SINTESI.md (quadro per dominio + TOP 10 per leva) e portato TUTTE le azioni (TOP 10 + backlog completo per dominio) in DA_FARE_FATTO.md come [ ] DA FARE. Finding chiave: (P0) _CANONE.md:13 punta alla verita V32 vecchia/vietata (molle+recuperato) su cui Nina grounda; (P0) 55 file versioni superate dentro il canone RAG; EVA eva_server.py:162 bind 0.0.0.0+/inbox PII senza auth; commit-leak RAG senza guardia in api_server; Anthropic News watcher morto da 25gg; FINANCE/ vuota+BEP Via B non calcolabile; MOSSA1 checkout hardware = massima leva. Zero modifiche applicate al codice (gate propose-only)."
+      "Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO E SINTETIZZATO — 7 agenti general-purpose model=fable in parallelo (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG), ognuno un report additivo propose-only con file:riga in DOCS/ATTACCO_20260702/. Coordinatore Fable ha scritto _SINTESI.md (quadro per dominio + TOP 10 per leva) e portato TUTTE le azioni (TOP 10 + backlog completo per dominio) in DA_FARE_FATTO.md come [ ] DA FARE. Finding chiave: (P0) _CANONE.md:13 punta alla verita V32 vecchia/vietata (molle+recuperato) su cui Nina grounda; (P0) 55 file versioni superate dentro il canone RAG; EVA eva_server.py:162 bind 0.0.0.0+/inbox PII senza auth; commit-leak RAG senza guardia in api_server; Anthropic News watcher morto da 25gg; FINANCE/ vuota+BEP Via B non calcolabile; MOSSA1 checkout hardware = massima leva. Zero modifiche applicate al codice (gate propose-only).",
+      "Sessione #55 (07/07): boot sporco curato alla RADICE — legacy CORE/watchdog.py (via START_ECOSYSTEM) respawnava doppioni (watcher x2 = snapshot duplicati, api console = doppio bind 5001): killati, CORE/watchdog+START_ECOSYSTEM = stub SUPERSEDED, guardie single-instance in SERVICES/watchdog.py + watcher.py (psutil) + api_server.py (probe PORTA 5001). Fix dashboard al login (vite 7 rifiuta --silent da pnpm). 4 pythonw giusti verificati",
+      "Sessione #55: igiene disco A REGOLA — retention.py (R1 chroma-debris keep-1+7gg, R2 BACKUPS/ts 45gg, R3 FULL keep-1, R4 log 30gg, R5 snapshots=3; dry-run default, report DATA/retention_last.json) in night_push; prima passata 2.24GB. Radice del gonfiore: deep_freeze zippava le chroma_db (2035MB il 05/07 vs 185 il 21/06) -> esclusione + freeze rigenerato 216MB AES verificato",
+      "Sessione #55: canone ENFORCED (07 P1) — canon-pin nel retrieval (set wikilink _CANONE.md, 27 note, cache mtime: bonus RRF in selezione + slot riservato top-k + campo canon in output; reranker resta giudice) + night_audit.check_canone_vault (id-collision note attive + freshness/copertura _CANONE 51==51). Rebuild esclusivo TOP10 #3: semantico==bm25 18113==18113, 535 chunk persi dal boot sporco recuperati, 0 chunk archivio",
+      "Sessione #55: 4 sentinelle notturne — organi vivi (7 output con soglia gg: organo che tace = critica), pip-audit settimanale (42 CVE fixabili in 9 pacchetti, solo fixabili = no rumore da stack pinnato), QC strutturale 51 EP_N2 (0 rotture; 28/51 senza open-loop = metrica), graphify update in coda notturna (grafo era fermo al 7/6: ora 7338 nodi). Indici cammino/pietre agganciati a build_episodes_json (step 7): un documento-verita' che si rigenera non deriva",
+      "Sessione #55: STATE.json CLOBBER trovato in flagrante (20:40) e CURATO — state_updater._load_state su decode error (lettura a meta' scrittura) restituiva il template default e il watcher lo salvava sopra: 68 milestone/107 sessioni/6 blockers cancellati e RIPRISTINATI dalla copia in contesto. Fix: load fail-safe (illeggibile = salta, mai ricreare) + _save_state ATOMICO (tmp+os.replace) + state_snapshot.py giornaliero (_VAULT, rotazione 14, valida prima di copiare). ERA la causa storica delle percentuali divergenti (au08/gc04)",
+      "Sessione #55: pulizia dashboard — NodeKit.tsx (NodeTile/NodeLevel condivisi: erano 4 copie identiche-a-tema-diverso, -256 righe, tsc verde + screenshot prima/dopo pixel-identici, critica gc01 chiusa). Vista CRITICHE ELIMINATA su decisione Matteo ('non si aggiorna') -> CRITICHE.md stile bussola in root (critiche_md.py: polso + canone per progetto + auto-audit aperte), rigenerato ogni notte da night_audit e auto-committato da night_push; fonti = i 2 JSON vivi"
     ],
     "next": "PROSSIMA SESSIONE FABLE #53: revisionare Obsidian -> ecosistema MENTE vero (verita unica/ponti/zero orfani), poi eseguire la prima ondata dell'attacco (checkout hardware + canone RAG). Backlog completo in DA_FARE_FATTO.md.",
     "target_capannone": "2030-07-15"
@@ -112,7 +118,7 @@
     "ip_lan": "192.168.0.112",
     "ip_tailscale": "100.125.152.124"
   },
-  "focus_today": "Nina copre la mappa (50 ep), RAG resuscitato (commit-leak+HNSW), menu 3 voci, poster pilota, vetrina ai 15 nodi. Tutto additivo, commit isolati. Build TS verde.",
+  "focus_today": "Ecosistema in ordine COMPLETO (#54 A-B-C) + verita' sparsa: il sistema ora si pulisce (retention), si sorveglia (4 sentinelle), si difende dai doppioni (single-instance) e non puo' piu' perdere STATE (atomico + snapshot 14gg). CRITICHE = file, gestito da Claude.",
   "blockers": [
     "UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20",
     "Chiavi .env da ruotare (red-team #38) — le ruota Matteo",
@@ -138,5 +144,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a DA_FARE_FATTO.md"
+  "last_action": "Modifica a EP_20260604_risolto_exit_255_subject_con_parent.md"
 }

@@ -1,3 +1,24 @@
+<!-- TOC -->
+
+- [ATTACCO 03  SCRITTURA / NARRATIVA  mondo Nina](#attacco-03-scrittura-narrativa-mondo-nina)
+  - [PRIORITÀ (ordinate)](#priorità-ordinate)
+  - [1  CANONE  una sola verità (violazioni)](#1-canone-una-sola-verità-violazioni)
+    - [F1  INDICE_CAMMINO scaduto (il documento che si dichiara canonico non lo è più)](#f1-indicecammino-scaduto-il-documento-che-si-dichiara-canonico-non-lo-è-più)
+    - [F2  La catena open-loop 23 è rotta nel punto più visibile (i due episodi rifatti)](#f2-la-catena-open-loop-23-è-rotta-nel-punto-più-visibile-i-due-episodi-rifatti)
+    - [F4  7 Pietre o 8 Pietre? I documenti fondativi non conoscono 0](#f4-7-pietre-o-8-pietre-i-documenti-fondativi-non-conoscono-0)
+  - [2  RIPETIZIONI E INCASTRI DEBOLI](#2-ripetizioni-e-incastri-deboli)
+    - [F3  EP_N2_51 è un doppione di EP_N2_08 (e ruba la casella a EP_N2_07)](#f3-epn251-è-un-doppione-di-epn208-e-ruba-la-casella-a-epn207)
+    - [F7  EP_N2_10 vs EP_N2_17: due episodi 1 senza vera differenza di giro](#f7-epn210-vs-epn217-due-episodi-1-senza-vera-differenza-di-giro)
+    - [F5  Guardiano: una parola, due Pietre (àncora dual-coding diluita)](#f5-guardiano-una-parola-due-pietre-àncora-dual-coding-diluita)
+    - [Echi buoni (da NON toccare  anzi, da dichiarare)](#echi-buoni-da-non-toccare-anzi-da-dichiarare)
+    - [F8  Buco di verifica qualità: EP_N2_16-19 e 51](#f8-buco-di-verifica-qualità-epn216-19-e-51)
+  - [3  PREAMBOLO vs EPISODI  CAROSELLI (ritmo e pipeline)](#3-preambolo-vs-episodi-caroselli-ritmo-e-pipeline)
+    - [F6  La pipeline caroselli non rispetta la propria convenzione](#f6-la-pipeline-caroselli-non-rispetta-la-propria-convenzione)
+  - [4  PROSSIMI EPISODI  proposte](#4-prossimi-episodi-proposte)
+  - [TRACCIA DETTAGLIATA  Carosello/episodio EP_N2_03  LA MISURA](#traccia-dettagliata-caroselloepisodio-epn203-la-misura)
+
+<!-- /TOC -->
+
 # ATTACCO 03 · SCRITTURA / NARRATIVA — mondo Nina
 
 *Specialista 03 dell'ATTACCO ESERCITO · 2026-07-03 · PROPOSE-ONLY (nessun file di canone toccato)*

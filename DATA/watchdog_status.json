@@ -1,17 +1,17 @@
 {
-  "checked_at": "2026-07-03T15:26:09.692783",
+  "checked_at": "2026-07-07T21:23:58.156241",
   "services": {
     "api_server": {
       "label": "API Server (5001)",
       "alive": true,
-      "restarts": 0,
-      "pid": 1952
+      "restarts": 1,
+      "pid": 3192
     },
     "mente_watcher": {
       "label": "MENTE Watcher",
       "alive": true,
       "restarts": 0,
-      "pid": 7296
+      "pid": 8388
     }
   }
 }

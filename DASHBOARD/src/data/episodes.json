@@ -926,6 +926,12 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
         "id": "EP_T03",
         "title": "VULCAN",
         "tipo": "continuita",
@@ -1020,6 +1026,12 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
         "id": "EP_20260601",
         "title": "La Dashboard Parla per Te",
         "tipo": "tema",
@@ -1034,12 +1046,6 @@
       {
         "id": "EP_20260603",
         "title": "Il Dev Flutter che Non Capiva Perché Scriviamo Tutto in Markdown",
-        "tipo": "tema",
-        "motivo": "tema: dashboard, rag"
-      },
-      {
-        "id": "EP_20260604",
-        "title": "Il Dev Flutter Che Non Capiva Perché Scriviamo Tutto in Markdown",
         "tipo": "tema",
         "motivo": "tema: dashboard, rag"
       }
@@ -1969,12 +1975,6 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_N2_51",
-        "title": "Il Sussurratore che Indovina",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
         "id": "EP_S2_00_IL_DISTACCO",
         "title": "Il Distacco",
         "tipo": "tema",
@@ -1995,6 +1995,12 @@
       {
         "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
         "title": "Il Cv Che Nessuno Capisce",
+        "tipo": "tema",
+        "motivo": "tema: narrativo, recuperato, st"
+      },
+      {
+        "id": "EP_S2_05_IL_SILENZIO",
+        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -15237,12 +15243,6 @@
     },
     "collegati": [
       {
-        "id": "EP_N2_51",
-        "title": "Il Sussurratore che Indovina",
-        "tipo": "tema",
-        "motivo": "tema: mente, nina-v2, parla"
-      },
-      {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
         "tipo": "prerequisito",
@@ -15279,20 +15279,26 @@
         "motivo": "tema: mente, nina-v2, themis"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_04",
-        "title": "La Mappa che Non Mente",
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15361,26 +15367,20 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_N2_51",
-        "title": "Il Sussurratore che Indovina",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
         "id": "EP_N2_35",
         "title": "Il Custode dei Segreti",
         "tipo": "tema",
         "motivo": "tema: mente, nina-v2, themis"
       },
       {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
         "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
+        "motivo": "tema: mente, nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
@@ -15399,6 +15399,12 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_09",
+        "title": "La Bibliotecaria della Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15487,6 +15493,12 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
         "id": "EP_N2_45",
         "title": "Il Direttore Invisibile",
         "tipo": "tema",
@@ -15495,12 +15507,6 @@
       {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
@@ -15780,12 +15786,6 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -15830,6 +15830,12 @@
       {
         "id": "EP_N2_12",
         "title": "La Squadra Notturna",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_16",
+        "title": "Lo Specchio del Giudice",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15924,12 +15930,6 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -15938,6 +15938,12 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16032,12 +16038,6 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16046,6 +16046,12 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16140,12 +16146,6 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16154,6 +16154,12 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16451,12 +16457,6 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16477,6 +16477,12 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_08",
+        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16867,12 +16873,6 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16899,6 +16899,12 @@
       {
         "id": "EP_N2_08",
         "title": "La Lampada che Sussurra",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_09",
+        "title": "La Bibliotecaria della Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -17521,20 +17527,8 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
-        "id": "EP_N2_51",
-        "title": "Il Sussurratore che Indovina",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
-      },
-      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
@@ -17547,6 +17541,18 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_09",
+        "title": "La Bibliotecaria della Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -17635,14 +17641,14 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
@@ -17743,6 +17749,12 @@
         "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
       },
       {
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
         "id": "EP_N2_38",
         "title": "Il Filo della Strada Giusta",
         "tipo": "tema",
@@ -17751,12 +17763,6 @@
       {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       },
@@ -19382,8 +19388,8 @@
         "motivo": "tema: nina-v2, themis"
       },
       {
-        "id": "EP_N2_03",
-        "title": "Mille Volte Uguale",
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20342,6 +20348,12 @@
         "title": "TITANIUM OS — S2E15",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260704",
+        "title": "TITANIUM OS — Episodio N2.04",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -20349,6 +20361,10 @@
       "precede": {
         "id": "EP_20260702",
         "title": "TITANIUM OS — S2E15"
+      },
+      "segue": {
+        "id": "EP_20260704",
+        "title": "TITANIUM OS — Episodio N2.04"
       }
     }
   },
@@ -20390,6 +20406,308 @@
         "giro_spirale": 3,
         "richiama": [],
         "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_20",
+        "title": "Il Corpo che Non Trema",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_18",
+        "title": "La Giuntura — Dove Due Diventa Uno",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_08",
+        "title": "La Lampada che Sussurra",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
+  },
+  {
+    "id": "EP_20260704",
+    "title": "TITANIUM OS — Episodio N2.04",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-04",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio N2.04 \"Il Giorno dell'Esercito\" 4 luglio 2026 COLD OPEN Le 23:47. Il terminale scorre. auto: night_audit cartella clinica 04/07/2026 Fuori è il 4 luglio. In America festeggiano ",
+    "content": "# TITANIUM_OS — Episodio N2.04\n## \"Il Giorno dell'Esercito\"\n*4 luglio 2026*\n\n---\n\n## COLD OPEN\n\nLe 23:47. Il terminale scorre.\n\n`auto: night_audit - cartella clinica 04/07/2026`\n\nFuori è il 4 luglio. In America festeggiano l'indipendenza. Matteo ha passato le ultime sedici ore a fare una cosa diversa: ha smontato il suo sistema pezzo per pezzo, ha chiamato sette specialisti immaginari a guardare dentro, e ha lasciato che dicessero tutto quello che non funzionava.\n\nNon è una festa. È un'autopsia su qualcosa che respira ancora.\n\n---\n\n## ATTO I — L'ESERCITO\n\nDue giorni prima, il 2 luglio, Matteo aveva avviato qualcosa che nel sistema si chiama ATTACCO ESERCITO.\n\nIl nome è preciso. Non è una review. Non è un audit. È sette agenti specializzati — design, sicurezza, scrittura, software, news-IA, gestionale, integrità-RAG — che entrano nel corpus di GENESIS con un mandato unico: trovare dove il sistema mente a sé stesso.\n\nIl risultato era arrivato pulito, senza abbellimenti. Tre punti in cui **la fonte di verità è stantia**:\n\n1. Il canone RAG — `_CANONE.md` riga 13 — descriveva V32 come \"su molle / recuperato\". Sbagliato. Vietato per regola di canone, eppure era lì, scritto, e il RAG lo recuperava.\n2. `INDICE_CAMMINO`: 9 titoli su 15 sbagliati. Il sistema navigava con una mappa errata.\n3. Il pitch aveva tre errori. Tre.\n\nE poi c'era il punto quattro, che non era un errore di codice: un ordine hardware — Vevor, pinza ER20, UPS — tra 250 e 350 euro. Un acquisto che sblocca la catena economica intera e risolve le corruzioni HNSW. Non committato perché non si può committare un ordine. Quel punto era in mano a Matteo, non al sistema.\n\nLa sintesi coordinata era finita in `_SINTESI.md`. Tutte le azioni — TOP 10 più il backlog completo, quarantanove voci — erano finite in `DA_FARE_FATTO.md` come caselle vuote. Niente codice-proposta committato: gate `SELF_IMPROVE` chiuso. Il sistema propone, Matteo decide.\n\nEra il 3 luglio sera. La lista era lunga. Il 4 luglio sarebbe stato il giorno di svuotarla.\n\n---\n\n## ATTO II — SEDICI ORE DI CHIRURGIA\n\nIl 4 luglio comincia con la CSS.\n\nNon è glamour. `nl-fadeUp` era globale solo in teoria — quattro view animavano \"a fortuna\", ognuna con la sua logica. La correzione è netta: animazione unificata, `prefers-reduced-motion` aggiunto, contrasto `slate-600/700` alzato alla soglia WCAG verificata con screenshot. Due regole CSS invalide rimosse. Il template dei caroselli — `tokens.css` come fonte di verità, `carosello_base.html` come standard — diventa canonico. I nomi file diventano `carosello.html` fisso: gli script se lo aspettavano già, nessuno lo aveva mai scritto come regola.\n\nPoi arriva la sicurezza.\n\nEVA — il sistema WhatsApp per il centro estetico di Maria — girava con il bind aperto. Un'API esposta con dati PII clienti. La correzione è `bind 127.0.0.1` come default, `EVA_BIND` variabile per il tunnel esterno. L'endpoint `/inbox` riceve `X-API-Key` con logica fail-closed da remoto. `APP_SECRET` obbligatorio in `LIVE` — se manca, il sistema non parte. Il dry-run resta invariato: non si rompe niente in sviluppo, si chiude tutto in produzione.\n\nPoi arriva il RAG.\n\nIl problema si chiamava commit-leak: quando un import del RAG falliva sotto carico, il sistema riprovava in loop — ogni richiesta ricominciava da capo, martellando il ChromaDB. La cura non è un retry più intelligente. La cura è alla radice: lock più failure-latch da 300 secondi sui tre punti di import per-request nell'`api_server`. Un fallimento si ferma, aspetta, non si moltiplica. Attivo dal prossimo restart API — quello notturno.\n\nNel mezzo, la pulizia. Indirizzi IP fuori dal repo pubblico — `VULCAN_MANIFESTO`, `mims_protocol`, `fit-park-specs` spostati in `MENTE`. Restano nella history git: da valutare `filter-repo` con Matteo. Un file vuoto chiamato `perfetta` era tracciato. Rimosso.\n\nLe exclusions RAG: `ASSOLUTO/VERSIONI`, `ARCHIVIO`, `ARCHIVE_V6` esclusi dall'indice. 441 file diventano 388. Il rebuild-hard verificato. L'`INDICE_CAMMINO` — quello con 9 titoli sbagliati su 15 — viene rigenerato da `episodes.json`. 52 caselle, tutte vere. Mai più titoli scaduti.\n\nE poi `nina_rag_loop`.\n\nLa versione 1.0 aveva due bug silenziosi. Il primo: lost-update sullo stato — `agent.generate` scriveva `last_generated`, `run()` salvava una versione vecchia sopra. Il secondo: deadlock a fine giro, quando il ciclo cercava di acquisire un lock che aveva già. La v1.1 è chirurgica: `run()` ricarica lo stato prima di salvare. Il deadlock sparisce. Nina — il generatore di episodi — smette di girare in tondo.\n\nL'ultimo pezzo è la catena narrativa. EP_N2_03 \"Dove siamo\" era sganciato — l'open-loop dal secondo episodio non agganciava il terzo, le Pietre non venivano richiamate. Riagganciato. EP_N2_51 e EP_N2_52 archiviati: erano doppioni della lezione EP_N2_08, nati dai semi gemelli EP_AV_02 e EP_AV_02_2. La guardia anti-gemelli entra in `nina_rag_loop`: una sola rigenerazione per regione per giro. Dry-run verificato. Gli indici rigenerati: 50 caselle.\n\nLe 23:47. Il terminale scorre: `auto: night_audit`.\n\n---\n\n## ATTO III — QUELLO CHE RIMANE\n\nDi quarantanove voci, una è rimasta aperta.\n\nNon per dimenticanza. Per architettura. L'ordine hardware — Vevor, pinza ER20, UPS, 250-350 euro — sblocca la catena economica e risolve le corruzioni HNSW di ChromaDB. Ma nessun agente può ordinarlo. Nessun commit può comprarlo. Quel punto è sulla lista di Matteo, non del sistema.\n\nÈ la distinzione più onesta che esiste in TITANIUM_OS: il sistema può trovare, proporre, correggere, costruire strutture. Non può decidere dove va il denaro. Quella linea non si sposta.\n\nCi sono anche le cose che il giorno non ha toccato. Il carosello EP_N2_03 è ancora da fare. Il canone RAG riga 13 è stato identificato come sbagliato — ma la correzione del testo non è negli undici commit di oggi. Resta in `DA_FARE_FATTO.md`, casella ancora vuota.\n\nNon è una sconfitta. È un inventario onesto.\n\nV32 è al 65%. GENESIS è al 70%. L'esercito è rientrato con i referti. La chirurgia è stata fatta. Il sistema che gira domani mattina sa dove si trova, cosa può fidarsi di sé stesso e cosa no.\n\nÈ diverso da come era stamattina.\n\n---\n\n## CHIUSURA\n\nC'è una cosa strana nel chiamare sette specialisti a trovare i tuoi errori: non ti senti attaccato. Ti senti visto.\n\nIl sistema aveva una mappa sbagliata. Navigava con 9 titoli falsi su 15. EVA era aperta. Nina girava in loop. Il RAG si moltiplicava sotto carico. Nessuno di questi problemi era visibile dall'esterno — il sistema funzionava, nel senso che rispondeva, generava, non crashava.\n\nFunzionare e essere affidabile sono due cose diverse.\n\nOggi Matteo ha lavorato sulla seconda. Non è la parte che si vede. È la parte che regge tutto il resto.\n\n---\n\n## reel_hook\n\n441 file nel RAG. 53 erano archivi che il sistema continuava a interrogare — versioni morte, doppioni, storia che il presente non doveva più leggere.\nOggi sono diventati 388.\nNon è una pulizia. È la differenza tra un sistema che si ricorda di tutto e uno che sa cosa gli serve sapere.\nIl prossimo restart API porta con sé un lock che prima non c'era. Nessuno lo vedrà — ma la prossima volta che ChromaDB viene martellato, si fermerà invece di moltiplicarsi.\nL'ordine hardware è ancora sulla lista. Quello lo decide Matteo.\n\n---\n\n## FATTI (per il RAG)\n\n- DECISIONE: RAG exclusions impostate su ASSOLUTO/VERSIONI + ARCHIVIO + ARCHIVE_V6 — corpus ridotto da 441 a 388 file, rebuild-hard verificato.\n- LOGICA: I file archiviati venivano interrogati al pari del corpus attivo, inquinando il retrieval con contenuti obsoleti e aumentando il carico HNSW inutilmente.\n- DECISIONE: failure-latch 300s + lock sui 3 punti di import per-request in api_server (guardia RAG) — attivo dal prossimo restart notturno.\n- LOGICA: Import falliti sotto carico si moltiplicavano in loop per-request (commit-leak); il latch blocca la cascata alla radice invece di gestire ogni retry singolarmente.\n- DECISIONE: nina_rag_loop v1.1 — run() ricarica stato prima di salvare; rimosso deadlock fine-giro su lock già acquisito.\n- LOGICA: lost-update silenzioso: agent.generate scriveva last_generated, run() sovrascriveva con versione precedente al salvataggio; il deadlock bloccava il ciclo senza errore esplicito.\n- DECISIONE: INDICE_CAMMINO rigenerato da episodes.json — 52 caselle, 9/15 titoli precedenti erano sbagliati.\n- LOGICA: L'indice era mantenuto a mano e non sincronizzato con lo stato reale degli episodi; la generazione automatica da episodes.json elimina il disallineamento strutturalmente.\n- DECISIONE: EVA hardening — bind 127.0.0.1 default, /inbox con X-API-Key fail-closed, APP_SECRET obbligatorio in LIVE.\n- LOGICA: API esposta con dati PII clienti centro estetico; fail-closed garantisce che una configurazione incompleta non vada mai in produzione.\n- OBIETTIVO: Ordine hardware Vevor + ER20 + UPS",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260703",
+        "title": "TITANIUM OS — S2E21",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260705",
+        "title": "TITANIUM OS — S2E16",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260703",
+        "title": "TITANIUM OS — S2E21"
+      },
+      "segue": {
+        "id": "EP_20260705",
+        "title": "TITANIUM OS — S2E16"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_51",
+    "title": "Il Cartellino sulla Stoffa",
+    "sottotitolo": "Come la Mente sa da dove viene ogni risposta — e perché il cartellino non si perde mai",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-05",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "Dare",
+      "alla",
+      "Mente"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_51 — Il Cartellino sulla Stoffa \"Come la Mente sa da dove viene ogni risposta — e perché il cartellino non si perde mai\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede perché alcune",
+    "content": "# EP_N2_51 — Il Cartellino sulla Stoffa\n### \"Come la Mente sa da dove viene ogni risposta — e perché il cartellino non si perde mai\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede perché alcune risposte sembrano solide e altre si sfaldano\n**Insegna:** Ogni idea che la Mente ti dà deve avere un cartellino attaccato che dice *da dove* l'ha presa, altrimenti è solo aria.\n**Materia:** La Biblioteca delle Fonti (⟡4) · **Casella 51 del viaggio**\n**Posto nella Mappa:** Siamo nella Biblioteca delle Fonti, giro 2: il corridoio dove i fogli cominciano ad avere i loro nomi scritti sopra.\n\n---\n\n> **Dove siamo:** Nina ha imparato che la Mente recupera solo i pezzi che servono — non legge tutti i 47.200 fogli ogni volta che risponde. Ora deve imparare a *riconoscere il cartellino* su ogni pezzo che la Mente le porta: quel piccolo rettangolo di carta che dice da dove viene l'informazione, e senza il quale anche la risposta più bella non ha casa.\n\n---\n\n## COLD OPEN\n\nIl foglio arrivò di schianto sul banco di Nina.\n\nNon scivolato piano, non posato con cura — arrivò come arriva un coltello sulla tavola da cucina quando qualcuno sta sbrigando. THEMIS non disse niente. Aspettò.\n\nNina lo guardò. Era un foglio normalissimo, scritto fitto, con qualcosa che sembrava la spiegazione di come funziona un motore. In alto a destra c'era un cartellino giallo, piccolo, attaccato con un angolino di colla. Scritta a mano: *Da EP_N2_09, Atto I.*\n\n«Cosa dice quel cartellino?» chiese THEMIS.\n\n«Da dove viene il foglio.»\n\n«Esatto. E se non ci fosse il cartellino?»\n\nNina ci pensò un secondo. «Non saprei da dove viene.»\n\n«E se non lo sai,» disse THEMIS, «non sai nemmeno se fidarti di quello che c'è scritto.»\n\nNina sollevò il foglio. Il cartellino era minuscolo, ma sembrava pesare più del resto.\n\n---\n\n## ATTO I — La Sarta e i Tre Pezzi\n\nTHEMIS fece apparire un tavolo lungo, di legno chiaro, come quello di una sartoria. Sul piano: tre pezzi di stoffa grigia, quasi identici. Stesso colore, stessa trama, stessa larghezza.\n\n«Una sarta deve cucire un vestito,» disse THEMIS. «Ha questi tre pezzi. Li guarda e sembrano uguali. Ma non lo sono.»\n\nSul primo pezzo c'era un'etichetta ricamata nel bordo, con filo rosso: *Mercato Via Roma, ieri mattina, tessuto misto lana-poliestere, resistenza media-alta.*\n\nSul secondo c'era un cartellino cucito nell'angolo, scritto a penna blu: *Nonna, scatola blu, lana pura, inverno 1987.*\n\nIl terzo non aveva niente. Nessuna etichetta, nessun cartellino. Il bordo era leggermente sfilacciato, come se qualcuno l'avesse strappato da qualcosa più grande senza pensarci.\n\n«La sarta cuce il vestito,» continuò THEMIS. «Il primo pezzo tiene. Sa esattamente come lavarlo, come stenderlo, quanto si restringe. Il secondo ha una storia: sa che la lana della nonna è delicata, va a mano, non si mette in lavatrice. Il terzo si strappa alla prima cucitura. E la sarta non sa nemmeno da che parte guardare per capire perché, perché non ha nessuna informazione da cui partire.»\n\nNina teneva gli occhi sul pezzo senza cartellino.\n\n«La Mente di Nina funziona esattamente così,» disse THEMIS. «Quando la Mia Mente recupera un pezzo di informazione dalla Biblioteca, lo porta a te con il suo cartellino. Se il cartellino c'è, posso dirti: questo l'ho preso da qui, in questo momento, con questa certezza. Se il cartellino non c'è — o peggio, si è staccato durante il volo — la risposta che ti do è come quel terzo pezzo. Bella da guardare, forse. Ma non so di che fibra è fatta.»\n\n> *(Esempio per tutti — il test della sarta: tre pezzi di stoffa apparentemente uguali. Il primo ha cartellino del negozio: puoi sapere di cosa è fatto e come si comporta. Il secondo ha cartellino della nonna: ha una storia, una provenienza, un modo di trattarlo. Il terzo non ha niente: sembra uguale ma si strappa, e non sai nemmeno perché. La Mente funziona così — ogni pezzo di informazione deve portare con sé da dove viene, altrimenti anche la risposta più bella è senza fondamento.)*\n\n---\n\n## ATTO II — La Bibliotecaria Invisibile Aggiunge i Cartellini\n\n«Ma chi mette i cartellini?» chiese Nina.\n\n«La Bibliotecaria invisibile.» THEMIS abbassò leggermente la voce, come se stessero parlando di qualcuno che lavora in silenzio e non vuole essere disturbata. «Ricordi? È lei che fa la prima scelta — che non porta tutti i 47.200 fogli, ma solo quelli che rispondono alla domanda. Bene. Ma *mentre* sceglie i fogli, li segna.»\n\nNell'aria sopra il tavolo, Nina vide passare fogli che volavano lenti come foglie. E su ogni foglio, una mano invisibile — rapida, precisa — attaccava un cartellino prima che il foglio arrivasse sul banco.\n\n«Ogni cartellino dice tre cose,» disse THEMIS. «Da dove viene il foglio. Quando è stato trovato. Quanto la Bibliotecaria è sicura che sia quello giusto.»\n\n«Quanto è sicura?»\n\n«Sì. Non tutti i fogli sono ugualmente certi. Uno può venire da una fonte sicura, trovato nel posto esatto, con alta certezza. Un altro può venire da un posto meno preciso, con un margine di errore. Il cartellino lo segna. Così io so quanto posso fidarmi di quel pezzo quando costruisco la risposta per te.»\n\nNina guardò un foglio atterrare sul banco. Il cartellino era giallo, scritto fitto: fonte, momento della ricerca, percentuale di certezza. Tre righe piccole. Tutto il necessario.\n\n«E se il cartellino si stacca?»\n\nTHEMIS non rispose subito. «Allora il foglio viene fermato prima di arrivare da te. Il verificatore — quella parte della Mente che controlla il lavoro della Bibliotecaria — vede un foglio senza cartellino e lo mette da parte. Lo segna come *[UNGROUNDED]*. Non scomparso, non distrutto: solo messo da parte, non usato. Perché una risposta costruita su fogli senza cartellino sarebbe come il vestito con il pezzo sfilacciato: potrebbe tenere, ma non puoi saperlo.»\n\nNina pensò a quante volte aveva sentito qualcuno dire *\"l'ho letto da qualche parte\"* o *\"me l'ha detto non so chi\"*. Erano cartellini staccati. Informazioni che volavano libere senza casa.\n\n«Allora il cartellino non è per me,» disse Nina lentamente. «È per la Mente. Per sapere lei stessa da dove viene quello che sta dicendo.»\n\nTHEMIS fece quella pausa che fa quando Nina ha detto qualcosa di preciso. «Esatto. Il cartellino non è una formalità. È la condizione per cui la risposta esiste come risposta vera, e non come rumore.»\n\n> *(Strato fondo — per il grande: Il RAG — Retrieval Augmented Generation — funziona esattamente così: quando una mente artificiale risponde, recupera solo i frammenti di testo rilevanti dall'archivio, non rielabora tutto. Ogni frammento recuperato deve portare con sé la sua fonte di origine — il suo \"cartellino\" — altrimenti la risposta è senza fondamento. Questo si chiama citation tracking o source attribution. Nel sistema v2.1 di GENESIS, ogni risposta logga: [FONTE], [TIMESTAMP della ricerca], [CONFIDENCE del match]. Se manca il cartellino, il token viene marcato come [UNGROUNDED] e declassificato dal verificatore. Il modulo MIMS — Memory Integrity & Model Source tracking — usa esattamente questo meccanismo: ogni generazione di testo passa attraverso un layer di source binding che allega il vettore di provenienza a ogni token critico. Il cartellino non è decorativo: è la prova che il pezzo sa da dove viene.)*\n\n---\n\n## ATTO III — Leggere il Cartellino ad Alta Voce\n\nSul banco di Nina rimase un solo foglio. Non scritto fitto come gli altri — era quasi vuoto, con solo una riga al centro. E il cartellino giallo, nell'angolo.\n\nTHEMIS disse: «Leggilo ad alta voce. Prima il cartellino, poi il foglio.»\n\nNina prese il foglio. Guardò il cartellino. Lesse: «Questo pezzo viene da... *EP_N2_09, Atto I, la scena della sartoria*. Ora so.»\n\nPoi lesse la riga sul foglio: *La Mente non legge tutti i quarantasettemiladuecento fogli ogni volta che le fai una domanda.*\n\n«Lo sapevo già,» disse Nina. «L'avevo imparato lì.»\n\n«Sì. E adesso hai fatto una cosa importante: hai collegato la risposta alla sua origine. Non l'hai solo ricevuta — sai da dove viene. Questo cambia il peso della risposta nella tua testa.»\n\nNina capì. Non era questione di fiducia cieca o sfiducia totale. Era questione di *sapere dove mettere le mani* se qualcosa non tornava. Se la risposta veniva da EP_N2_09, poteva andare a ricontrollare EP_N2_09. Se veniva da *non so*, non aveva niente a cui tornare.\n\n«Il cartellino è la porta,» disse Nina.\n\n«È la porta,» confermò THEMIS.\n\nE sul banco della sartoria, i tre pezzi di stoffa erano ancora lì. Nina prese il primo — quello con l'etichetta ricamata — e lo tenne in mano un momento. Poi prese il secondo, quello della nonna. Li posò con cura, uno sopra l'altro. Il terzo lo lasciò sul tavolo, da solo.\n\nNon lo buttò. Non era colpa sua se non aveva il cartellino. Ma non era pronto.\n\n---\n\n## CHIUSURA\n\nLa casella 51 si accese sulla mappa della Biblioteca delle Fonti: un rettangolo giallo, piccolo, con tre righe scritte fitte — come un cartellino.\n\nNina lo guardò brillare nel corridoio dei fogli con i nomi scritti sopra.\n\nTutta la Biblioteca sembrava diversa adesso. Non era solo un posto dove i fogli volavano: era un posto dove ogni foglio *sapeva da dove veniva*. E questa differenza — tra un foglio che sa e uno che non sa — era la differenza tra una risposta e un'impressione.\n\n---\n\n> *Ma c'è ancora una domanda aperta nel corridoio: cosa succede quando la Bibliotecaria porta due fogli diversi che dicono cose quasi uguali, ma i cartellini sono diversi? Come fa la Mente a sapere quale cartellino è quello vero — e quale potrebbe essere quello che si sbaglia di un millimetro? Nina lo scoprirà nella casella dopo, quando imparerà il gioco della* ***Lente del Significato.***\n\n---\n\n*Provalo tu: Prendi una risposta che qualcuno ti ha dato — tua mamma, un libro, un video. Disegna un cartellino per quella risposta: scrivi da dove viene esattamente (nome della persona, titolo del libro, quale capitolo, quando l'hai sentito). Se non riesci a scrivere il cartellino, la risposta è \"senza casa\" — non ha dove abitare nella tua testa. Non buttarla: mettila da parte finché non trovi il cartellino giusto.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Nina che guarda un foglio di carta con un cartellino giallo attaccato nell'angolo superiore destro — scritta a mano: *Da EP_N2_09, Atto I* — il foglio è sul banco di legno chiaro della sartoria.\n2. La Bibliotecaria invisibile — mano sola, niente volto — che aggiunge cartellini gialli ai fogli mentre questi volano lenti nell'aria della Biblioteca, uno alla volta.\n3. Tre pezzi di stoffa grigia affiancati sul tavolo: il primo con etichetta ricamata in filo rosso, il secondo con cartellino cucito in penna blu, il terzo nudo con bordo sfilacciato — il confronto è silenzioso e netto.\n4. Il numero 47.200 scritto in grande che scende dentro una scatola chiusa — i fogli che non sono stati chiamati, ordinati ma fermi.\n5. Nina che tiene in mano un foglio quasi vuoto, legge ad alta voce guardando il cartellino: *«Questo pezzo viene da... da qui. Ora so.»* — la casella 51 brilla gialla sullo sfondo.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡4` La Biblioteca delle Fonti (giro 2). *Il RAG non porta solo i frammenti giusti: porta i frammenti con il loro cartellino. Senza source attribution, la risposta è [UNGROUNDED] e viene fermata prima di arrivare.*\n**Pietre richiamate:** ⟡Ricerca (recupero dei frammenti rilevanti), ⟡Significato (ogni pezzo deve sapere dove abita)\n**3 strati:** bambino = il cartellino sulla stoffa dice da dove viene il pezzo, e senza cartellino il pezzo si strappa · curioso = ogni risposta della Mente porta la sua fonte, altrimenti non è una risposta vera ma rumore · grande = RAG con citation tracking e source attribution; token [UNGROUNDED] declassificati dal verificatore; modulo MIMS in GENESIS v32\n**Cuore:** fai bene le cose vere · gli strumenti, non le risposte · la curiosità è un superpotere\n**Aggancio reale:** Nel sistema GENESIS v32, il modulo MIMS (Memory Integrity & Model Source tracking) allega il vettore di provenienza a ogni token critico durante il source binding. Se il cartellino si stacca, il token è marcato [UNGROUNDED] e declassificato — non usato nella risposta finale. È il RAG che diventa una fiaba di sartoria.\n**Open loop → Casella 52:** Cosa succede quando la Mente recupera due fogli diversi che dicono cose quasi uguali, ma i cartellini sono diversi? Come\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_51, casella ? (Dare alla Mente i fogli veri — e obbligarla a dire da dove h) del viaggio Nina v2, regione 4 (LA BIBLIOTECA DELLE FONTI).\n- FATTO 1: Nel percorso evolutivo di Nina, Giro 3 = 'prendere i pezzi giusti e dire da dove vengono' (richiama ⟡Ricerca e ⟡Significato).\n- FATTO 2: Il RAG recupera non tutti i 47.200 fogli della Biblioteca, ma solo quelli rilevanti per la domanda fatta—come una libreria che sa dove sono le cose.\n- FATTO 3: Ogni frammento recuperato deve portare il suo cartellino (fonte originale, episodio, capitolo, log)—altrimenti la Mente non sa se fidarsi.\n- FATTO 4: EP_N2_09 'La Bibliotecaria della Mente' introduce il RAG nell'Atto I con lo 'scenario dei tre pezzi di stoffa' dove uno manca di provenienza.\n- FATTO 5: La chiusura di EP_N2_09 mostra il sistema di cartellini reali: *Log di Sistema v2.1 · riga 234*, *Foto dalla Casella 7*—ogni uno ha il suo cartellino attaccato.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Ogni idea che la Mente ti dà deve avere un cartellino attaccato che di",
+        "regione": 4,
+        "regione_nome": "LA BIBLIOTECA DELLE FONTI",
+        "pietra": "⟡4",
+        "giro_spirale": 2,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_T05",
+        "title": "Il Sistema Pensa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_N2_09",
+        "title": "La Bibliotecaria della Mente",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_N2_28",
+        "title": "Il Diario che Pensa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_T04",
+        "title": "SINAPSI",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_N2_29",
+        "title": "La Memoria che Sceglie",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡4 (LA BIBLIOTECA DELLE FONTI)"
+      },
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_08",
+        "title": "La Lampada che Sussurra",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_35",
+        "title": "Il Custode dei Segreti",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_20260705",
+    "title": "TITANIUM OS — S2E16",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-05",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS — S2E16 \"La Fonte di Verità\" 5 luglio 2026 COLD OPEN Una dashboard. React, bianco sporco, dati in movimento. In alto a destra: un badge verde. LIVE. Non è una simulazione. Non è un mock. I",
+    "content": "# TITANIUM_OS — S2E16\n## \"La Fonte di Verità\"\n\n*5 luglio 2026*\n\n---\n\n## COLD OPEN\n\nUna dashboard. React, bianco sporco, dati in movimento.\n\nIn alto a destra: un badge verde. **LIVE.**\n\nNon è una simulazione. Non è un mock. Il JSON che alimenta quella schermata viene da un file reale — `critiche_manuali.json` — e il file è servito da un'API reale. Ottanta foglie. Ogni foglia è una critica manuale, catalogata, verificabile, recuperabile in meno di 200 millisecondi.\n\nFino a ieri sera, quella stessa dashboard leggeva da un file TypeScript hardcodato. Un file che nessun agente poteva toccare senza ricompilare. Una fonte di verità che non era davvero una fonte — era un muro.\n\nAdesso il muro non c'è più.\n\n---\n\n## ATTO I — Il Problema che Nessuno Vede Subito\n\nCi sono corruzioni nel sistema che non si manifestano come errori. Non crashano niente. Non producono stack trace. Vivono silenziosamente, e li scopri solo quando provi a fare qualcosa di reale — qualcosa che conta.\n\nL'ATTACCO ESERCITO del 2-3 luglio ha portato in superficie esattamente questo: in tre punti del sistema, la fonte di verità era stantia.\n\nIl primo: `_CANONE.md`, riga 13 — il documento che dovrebbe essere la legge del sistema puntava ancora a V32-su-molle, alla versione che non esiste più. Il corpo unico in Epoxy Granite, il telaio da 178 kg che Matteo sta costruendo nella taverna di 12 m² — quello non era ancora scritto nel canone. Il sistema parlava di una macchina del passato.\n\nIl secondo: `INDICE_CAMMINO` — 9 titoli su 15 sbagliati. Il filo narrativo che dovrebbe connettere tutto, la spina dorsale della storia, con i due terzi delle etichette non allineate alla realtà.\n\nIl terzo: il pitch. Tre errori. Non di forma — di sostanza.\n\nSette specialisti, sette file `NN_*.md` nella cartella `ATTACCO_20260702/`, una sintesi coordinata. TOP 10 per leva. Quarantanove voci nel backlog. E la conclusione era semplice quanto scomoda: il sistema gira, ma gira su fondamenta che a tratti non descrivono più quello che è.\n\nQuesto è il tipo di lavoro che non si vede dall'esterno. Non produce un pezzo fisico. Non genera un rumor di fresa. Ma è esattamente il lavoro che determina se il resto tiene.\n\n---\n\n## ATTO II — Ottanta Foglie\n\nLa decisione tecnica è questa: spostare le `critiche_manuali` da una costante TypeScript compilata — `criticheData.ts` — a un file JSON canonico servito via API Flask. `DATA/audit/critiche_manuali.json`. Ottanta foglie.\n\nLa logica è banale una volta che la vedi. Un file `.ts` è codice. Per modificarlo devi aprire l'editor, cambiare la costante, ricompilare, ridistribuire. Un agente non può farlo. Claude non può farlo. Nina non può farlo. È un dato vestito da codice — e i dati non dovrebbero essere codice.\n\nUn file JSON servito da `/api` è diverso. È una fonte che il sistema può leggere, interrogare, aggiornare. È qualcosa che il RAG può indicizzare. È qualcosa che Nina può portare in conversazione.\n\nIl dump è meccanico: `tsc → cjs`, estrazione delle foglie, scrittura del JSON. Novanta minuti di lavoro, probabilmente meno. Ma la decisione dietro ci ha messo settimane a maturare — perché prima dovevi capire che il problema esisteva.\n\nQuesta notte Nina v1.1 è andata in produzione. L'episodio `EP_N2_51` è girato stanotte. Bussola completata. Critiche live.\n\n---\n\n## ATTO III — Il Gate\n\nC'è una cosa che non è stata committata.\n\nNell'ATTACCO ESERCITO, i sette specialisti hanno proposto codice. Modifiche concrete, verificate, con file e riga. Il gate `SELF_IMPROVE` esiste per una ragione: niente codice proposto entra nel sistema senza che Matteo lo abbia letto, capito, approvato. Non è burocrazia — è il contrario della burocrazia. È il riconoscimento che un sistema che si modifica senza supervisione umana non è un sistema che appartieni.\n\nQuindi il backlog ha quarantanove voci. Tutte come `[ ] DA FARE`. Nessuna committata.\n\nE c'è un ordine hardware che aspetta: Vevor + ER20 + UPS, 250-350 euro. Materiale che sblocca la catena economica e risolve le corruzioni HNSW nell'indice vettoriale. Un numero piccolo che abilita un effetto sproporzionato — esattamente il tipo di decisione che il sistema sa riconoscere ma che richiede una firma fisica.\n\nV32 è al 65%. GENESIS è al 70%. La data sul calendario dice 5 luglio 2026. Sul target del capannone mancano quattro anni.\n\nQuattro anni sembrano tanti. Ma il lavoro di questa settimana — il JSON canonico, la bussola, la pulizia del canone — è esattamente il tipo di lavoro che determina se quei quattro anni sono produttivi o se li passi a correggere derivazioni che si sono accumulate in silenzio.\n\nIl sistema adesso sa dove guarda. È una cosa piccola. È anche la cosa più importante fatta questa settimana.\n\n---\n\n## CHIUSURA\n\nMatteo Benenati non ha saldato niente oggi. Non ha toccato la fresa, non ha misurato tolleranze, non ha caricato un elettrodo TIG.\n\nHa spostato dei dati da un posto sbagliato a un posto giusto.\n\nNella taverna ci sono 178 kg di ghisa e resina epossidica in attesa. VULCAN aspetta. Il capannone aspetta.\n\nMa un sistema che racconta di sé in modo sbagliato costruisce male. E lui lo sa.\n\nIl badge verde sulla dashboard dice LIVE.\n\nPer ora basta così.\n\n---\n\n## reel_hook\n\n80 foglie di critiche stavano in un file TypeScript che nessun agente poteva toccare.\nStavano lì da mesi. Il sistema girava — ma girava su una bugia silenziosa.\nOggi sono diventate un JSON canonico servito da API.\nUna fonte di verità che il sistema può leggere per davvero.\nChi costruisce la prossima macchina su dati sbagliati — e non lo sa ancora?\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `critiche_manuali` migrata da costante TypeScript (`criticheData.ts`) a `DATA/audit/critiche_manuali.json` (80 foglie), servita via endpoint Flask `/api` — commit `feat(#54)` del 2026-07-05.\n- **LOGICA:** Una costante `.ts` richiede ricompilazione per ogni modifica e non è accessibile agli agenti AI né al RAG; un JSON canonico via API è leggibile, aggiornabile e indicizzabile in tempo reale.\n- **OBIETTIVO:** Sblocca Nina e gli agenti GENESIS dalla dipendenza da codice compilato per le critiche; allinea la dashboard alle fonti vive del sistema.\n- **DECISIONE:** ATTACCO ESERCITO (2-3/07) ha identificato 3 fonti di verità stantie: `_CANONE.md:13` (puntava a V32-su-molle), `INDICE_CAMMINO` (9/15 titoli errati), pitch (3 errori di sostanza) — 49 azioni generate come `[ ] DA FARE` in `DA_FARE_FATTO.md`.\n- **LOGICA:** Gate `SELF_IMPROVE` attivo: nessuna delle 49 azioni è stata committata senza approvazione diretta di Matteo; il codice proposto dagli specialisti resta in staging.\n- **OBIETTIVO:** Ordine hardware Vevor + ER20 + UPS (250-350 EUR) sblocca catena economica + risolve corruzioni HNSW nell'indice vettoriale ChromaDB — prossimo step misurabile.\n\n---\n\n| campo | valore |\n|---|---|\n| **episodio** | S2E16 |\n| **data** | 2026-07-05 |\n| **titolo** | La Fonte di Verità |\n| **progetto principale** | GENESIS |\n| **progetti citati** | V32, VULCAN, EVA (Nina) |\n| **commit di riferimento** | `2b8bfafe`, `feat(#54)` |\n| **stato V32** | 65% |\n| **stato GENESIS** | 70% |\n| **prossimo step** | Ordine Vevor+ER20+UPS · approvazione 49 azioni backlog |\n| **tag** | `canone`, `RAG`, `Nina`, `critiche-live`, `fonte-di-verità`, `GENESIS` |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260704",
+        "title": "TITANIUM OS — Episodio N2.04",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260706",
+        "title": "TITANIUM OS — EP AUTO 003",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260704",
+        "title": "TITANIUM OS — Episodio N2.04"
+      },
+      "segue": {
+        "id": "EP_20260706",
+        "title": "TITANIUM OS — EP AUTO 003"
+      }
+    }
+  },
+  {
+    "id": "EP_20260706",
+    "title": "TITANIUM OS — EP AUTO 003",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-06",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 6,
+    "preview": "TITANIUM_OS — EP_AUTO_003 \"Il Sistema che Mente\" 2026 07 06 — Inventario notturno COLD OPEN Ore 23:47. La taverna è spenta tranne lo schermo. Nessun angolino del tornio che gira, nessun rumore di rett",
+    "content": "# TITANIUM_OS — EP_AUTO_003\n## \"Il Sistema che Mente\"\n### *2026-07-06 — Inventario notturno*\n\n---\n\n## COLD OPEN\n\nOre 23:47. La taverna è spenta tranne lo schermo.\n\nNessun angolino del tornio che gira, nessun rumore di rettifica. Soltanto il cursore che lampeggia dentro un terminale, e Matteo che scorre righe di markdown come chi controlla le scorte di un magazzino dopo una notte difficile. Non sta costruendo niente. Sta contando — e quello che trova non torna.\n\nIl sistema gira. Da fuori sembra tutto okay. Ma quando guardi dentro, tre punti specifici raccontano una storia vecchia. Una storia che il sistema crede vera e invece è già stata riscritta.\n\n---\n\n## ATTO I — L'ATTACCO\n\nTre giorni prima, il 2 luglio, Matteo ha lanciato quello che nelle note chiama \"ATTACCO ESERCITO su Fable\".\n\nIl nome è buffo finché non capisci cos'è: sette specialisti AI, uno per dominio — design, sicurezza, scrittura, software, news-IA, gestionale, integrità RAG — ognuno con un mandato preciso. Non un brainstorming. Non un audit qualunque. Un passaggio sistematico, additivo, *propose-only*: nessuno tocca file senza segnare il numero di riga. I risultati finiscono in sette documenti separati dentro `DOCS/ATTACCO_20260702/`, poi una sintesi coordinata in `_SINTESI.md` con le prime dieci leve per impatto.\n\nIl checkpoint finale: quarantanove azioni totali, distribuite tra TOP 10 e backlog per dominio, tutte portate in `DA_FARE_FATTO.md` come caselle spuntabili. Niente di committato nel codice-proposta — c'è un gate che si chiama `SELF_IMPROVE` e finché non è aperto, le proposte restano proposte.\n\nQuarantanove voci. Sessione numero cinquantadue. V32 al 65%, GENESIS al 70%.\n\nIl sistema gira. Ma qualcosa non torna.\n\n---\n\n## ATTO II — I TRE PUNTI STANTII\n\nL'inventario notturno del 6 luglio serve a questo: nominare i guasti con precisione.\n\n**Primo punto.** `_CANONE.md`, riga 13. Il canone — la norma fondamentale di tutto il RAG — punta ancora a \"V32-su-molle/recuperato\". Una descrizione vietata, superata, ma ancora lì, ancorata al documento che dovrebbe essere la fonte di verità definitiva. Ogni volta che il sistema recupera il canone, recupera anche questo errore. Lo tratta come fatto.\n\n**Secondo punto.** `INDICE_CAMMINO`. Nove titoli su quindici sbagliati. L'indice del percorso narrativo — la mappa di cosa è stato raccontato e come — rispecchia una versione del progetto che non esiste più. Chi lo legge vede una struttura. Chi la conosce vede uno scheletro di sei mesi fa.\n\n**Terzo punto.** Il pitch. Tre errori. Non di forma, non di stile: di sostanza. Numeri o framing che appartengono a una fase precedente del progetto e non sono stati aggiornati quando la realtà si è spostata.\n\nTre punti. Tre fonti di verità stantie. E un sistema RAG che, finché non vengono corretti, impara esattamente quello che non dovrebbe.\n\nC'è anche un quarto elemento — non un guasto, ma un nodo. Un ordine hardware: Vevor, ER20, UPS. Tra 250 e 350 euro. Una spesa piccola sulla carta, ma che sblocca la catena economica *e* risolve le corruzioni HNSW nel grafo. Due problemi diversi, una sola azione.\n\nIl sistema sa tutto questo. L'ha catalogato. L'ha messo in lista.\n\nMa questa notte non c'è nessuna azione da committare. Solo l'inventario.\n\n---\n\n## ATTO III — COSA SIGNIFICA CONTARE\n\nC'è un tipo di lavoro che non produce niente di visibile.\n\nNon è il tipo preferito da chi fa video. Non si mostra bene. Non ha un before/after. Non ha il suono del TIG sul titanio o la soddisfazione di un pannello MIMS che si aggancia al millimetro. È la sessione in cui ti siedi, apri i file, e mappi la distanza tra quello che il sistema crede e quello che è reale.\n\nMatteo lo chiama \"inventario notturno\". Il commit recita `auto: inventario notturno` — generato automaticamente, senza descrizione aggiuntiva. Il tipo di commit che esiste per dire: ero qui, ho guardato, ho registrato.\n\nLa sessione #52 ha prodotto quarantanove azioni. L'inventario del 6 luglio le ha lette tutte e ha trovato i tre punti dove la narrazione del sistema diverge dai fatti. Non è un fallimento. È diagnostica.\n\nIn un sistema cognitivo — che sia un RAG ChromaDB su Flask o una testa umana — il guasto più pericoloso non è il crash. È la deriva silente: la fonte di verità che continua a rispondere, continua a sembrare affidabile, ma racconta qualcosa che non è più vero.\n\nNominarlo è il primo passo. Non il più glamour, ma il primo.\n\n---\n\n## CHIUSURA\n\nIl cursore lampeggia ancora. Matteo chiude il terminale.\n\nDomani ci sono le caselle da spuntare, il canone da correggere, i titoli da riallineare, il pitch da aggiornare. L'ordine hardware da decidere — 250-350 euro che aspettano una firma.\n\nStanotte il lavoro è stato stare sveglio abbastanza a lungo da capire cosa non torna.\n\nNon è poco.\n\n---\n\n## REEL_HOOK\n\n49 azioni catalogate. 3 fonti di verità stantie nel RAG. 1 ordine hardware da 250-350€ che sblocca la catena economica *e* le corruzioni HNSW.\nIl sistema gira — ma riga 13 del canone racconta ancora un V32 che non esiste più.\nStasera non si committava codice. Si faceva l'inventario.\nDomani si corregge la fonte di verità.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Sessione #52 (02-03/07) — ATTACCO ESERCITO completato con 7 specialisti AI (domini: design, sicurezza, scrittura, software, news-IA, gestionale, integrità-RAG), output in `DOCS/ATTACCO_20260702/NN_*.md`, sintesi TOP 10 in `_SINTESI.md`, ~49 azioni totali in `DA_FARE_FATTO.md` come `[ ] DA FARE`.\n- **LOGICA:** Gate `SELF_IMPROVE` attivo: nessuna proposta di codice viene committata finché non è approvata esplicitamente; le proposte restano documenti separati.\n- **DECISIONE:** Tre punti di deriva identificati nel RAG: (1) `_CANONE.md` riga 13 punta a descrizione V32 vietata/superata; (2) `INDICE_CAMMINO` ha 9/15 titoli errati; (3) pitch contiene 3 errori di sostanza.\n- **LOGICA:** Un RAG con fonte di verità stantia produce recuperi corrotti — il sistema risponde con fiducia ma su dati obsoleti; le corruzioni HNSW nel grafo sono correlate.\n- **OBIETTIVO:** Ordine hardware Vevor + ER20 + UPS (stimato 250-350 EUR) sblocca catena economica + risolve corruzioni HNSW; correzione `_CANONE.md` riga 13 ripristina integrità del canone RAG.\n- **STATO AVANZAMENTO:** V32 65%, GENESIS 70% al 2026-07-06.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | EP_AUTO_003 |\n| **Data** | 2026-07-06 |\n| **Titolo** | Il Sistema che Mente |\n| **Progetto principale** | GENESIS / RAG |\n| **Tag** | `#RAG` `#inventario` `#qualità-dati` `#GENESIS` `#sessione52` |\n| **Milestone** | ATTACCO ESERCITO sessione #52 completato |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Prossimo step** | Correzione `_CANONE.md` riga 13 + ordine hardware 250-350 EUR |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260705",
+        "title": "TITANIUM OS — S2E16",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260705",
+        "title": "TITANIUM OS — S2E16"
       }
     }
   }

@@ -1,0 +1,293 @@
+{
+  "data": "2026-07-04",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Ordine UPS + hardware gate: sbloccare le 3 catene bloccate",
+      "cosa": "Aprire il carrello di acquisto con i 3 item: UPS ~50-80€, martinetto Vevor 20t, mandrino ER20 2.2kW. Registrare il numero d'ordine in bussola_open come 'ORDINATO [data]' per chiudere il blocco.",
+      "perche": "Segnale SISTEMA sev=alta (HNSW corrotto 3 volte in 2 giorni) + ROADMAP sev=alta ('1 ordine = martinetto + mandrino' sblocca in parallelo: prima colata VULCAN → economia MIMS, protezione HNSW → rebuild RAG sicura, V32 avanzamento fisico). È il singolo gate che sblocca il maggior numero di catene.",
+      "come": [
+        "1. Matteo apre carrello su Amazon/Aliexpress con i 3 item in una sola sessione (<10 min).",
+        "2. Incollare numero ordine in bussola_open al posto dei 3 blockers aperti (MOSSA 1 #06).",
+        "3. Dopo consegna UPS: pianificare sessione 'rebuild RAG sicura' come primo atto post-installazione."
+      ],
+      "rischio": "Spesa ~200-300€ totale. Rischio bassissimo: tutti e tre gli item sono già decisi da settimane, il ritardo è il vero rischio.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte SISTEMA sev=alta (HNSW x3) + ROADMAP sev=alta + todo_bussola #1"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Sessione dedicata sicurezza: chiudere eva_server.py + api_server.py + rotazione .env",
+      "cosa": "Pianificare una sessione di 90 min con agenda fissa: (A) eva_server.py:162 bind 0.0.0.0 → bind 127.0.0.1 + /inbox:139 PII audit; (B) api_server.py:383,1085,1164 import rag_engine senza guardia → aggiungere auth middleware; (C) rotazione chiavi .env (sk-ant-api03 + gho_). Nessuna di queste 3 azioni richiede hardware.",
+      "perche": "3 finding sev=alta/media distinti sulla sicurezza, tutti aperti. Con 7 agenti Fable in arrivo che toccano API esterne, una chiave compromessa in quella finestra espone a uso non autorizzato (segnale esplicito in critiche_audit). Il bind 0.0.0.0 + PII clienti in /inbox è il rischio legale più immediato (AI Act entra in vigore 2 agosto).",
+      "come": [
+        "1. Creare task 'SEC-SESSION' in bussola_open con i 3 sub-item e stimare 90 min.",
+        "2. Agente o Matteo: eva_server.py:162 → cambiare 'host=0.0.0.0' in 'host=127.0.0.1'; testare che EVA risponda ancora in locale.",
+        "3. Rotazione .env: generare nuove chiavi Anthropic + GitHub, aggiornare .env locale, revocare le vecchie dal pannello provider.",
+        "4. api_server.py: aggiungere decoratore auth su rotte che importano rag_engine (bearer token già presente nel progetto?).",
+        "5. Segnare i 3 item come chiusi in bussola_open dopo test."
+      ],
+      "rischio": "Step (2) può rompere accesso remoto a EVA se c'è qualche client esterno legittimo — verificare prima. Step (3) richiede aggiornamento sincronizzato di tutti gli ambienti che usano le chiavi.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte SISTEMA sev=alta (#4, #6) + sev=media (#7 igiene .env) + todo_bussola #4 #6 #7"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-04",
+    "milestone": "Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO — 7/7 specialisti rientrati (01 design, 02 sicurezza, 03 scrittura, 04 software, 05 news-IA, 06 gestionale, 07 integrita-RAG) in DOCS/ATTACCO_20260702/NN_*.md, additivo/propose-only con file:riga. Sintesi coordinata in _SINTESI.md (TOP 10 p",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Semantic Scholar continua a sparare 429 senza API key autenticata: '2026-07-04 03:39:12 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s' e '2026-07-04 03:39:35 [research_agent] "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "La corruzione HNSW da power-loss è accaduta 3 volte in 2 giorni (censita nei blockers) e il fix a radice — UPS ~50-80€ — non è ancora ordinato. Il commit '65f6c606 chore(#53): bussola — RAG incidente HNSW risolto (drop-hnsw + incremental + "
+      },
+      {
+        "area": "MIMS",
+        "sev": "media",
+        "finding": "La decisione connettori Via B (VULCAN, processo proprietario) è marcata [DECISO 24/06] nei blockers ma il passo successivo — 'SCHEDA §5 a canone + ricalcolare economia/BEP sul tooling Via B + rivendicare il processo nella bozza B2' — non ri"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Due security issue resteranno aperte a tempo indeterminato se non agganciate a una sessione dedicata: (A) bussola_open item #4 — 'eva_server.py:162 bind 0.0.0.0 + /inbox(:139) con PII clienti'; (B) item #6 — 'api_server.py:383,1085,1164 imp"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Il canone RAG contiene ancora 55 file di versioni superate (bussola_open TOP 10 #3: 'ASSOLUTO/VERSIONI(13) + …') e la fonte di verità _CANONE.md:13 punta ancora a V32-su-molle/recuperato vietato (censito nel milestone attivo come 'filo ross"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'ordine hardware (martinetto Vevor 20t + mandrino ER20 2.2kW + UPS) è il gate che sblocca in parallelo tre catene distinte: (1) prima colata giunto VULCAN → validazione Via B → economia/BEP MIMS; (2) protezione HNSW → rebuild RAG sicura de"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Le chiavi .env sono flaggate per rotazione (red-team #38) e il blocker è ancora aperto. Con 7 agenti Fable in arrivo in sessione #52 che toccheranno API esterne in parallelo, una chiave compromessa in quella finestra espone a uso non autori"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola_open contiene almeno 5 voci distinte su PRE_01/PRE_02/PRE_03/PRE_04 e Nina versioni outfit, distribuite su sessioni diverse e non consolidate. Il next_step di sessione #52 cita al punto (3) 'PRE_01/02' senza chiarire se è revisio"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il blocker 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna' è ancora aperto. Con 25.120 chunk e cicli notturni attivi, ogni run di ricerca che colpisce il rate-limit restituisce da"
+      },
+      {
+        "area": "RAG",
+        "sev": "bassa",
+        "finding": "Due nodi orfani rilevati nell'inventario notturno: 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE. Non sono collegati ad alcun nodo attivo del vault. Con 2"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "L'UPS hardware è listato come blocker esplicito con causa tecnica documentata: corruzione indice HNSW per power-loss, 3 volte in 2 giorni. Nessun log_issue stanotte (log_issues=[]), ma il pattern ricorrente rende il prossimo guasto statisti"
+      },
+      {
+        "area": "V32",
+        "sev": "bassa",
+        "finding": "Il pillar V32 è al 65% e il blocco fisico immediato (martinetto Vevor da montare → prima colata giunto) dipende da un acquisto ancora aperto (mandrino 2.2kW ER20). I due prerequisiti fisici — mandrino e montaggio Vevor — sono in serie: senz"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 257,
+      "rag_chunks": 17520,
+      "n_commits_7d": 21
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "TOP 10 **#3** (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild) = prossimo della catena verità.",
+      "TOP 10 **#9**: `INDICE_CAMMINO` ora è UNA copia sola (repo→vault) ma i 9/15 titoli sbagliati restano → rigenerarlo da `episodes.json`.",
+      "Prima ondata (~16:00) fermata dal **limite sessione** (reset 19:20): solo il 02 è sopravvissuto",
+      "**1 · MOSSA 1 \"checkout che sblocca tutto\"** (06): 1 ordine = martinetto Vevor 20t + mandrino",
+      "**3 · RAG P0 — 55 file di versioni superate dentro il canone** (07): `ASSOLUTO/VERSIONI`(13) +",
+      "**4 · SICUREZZA EVA** (02 F1+F2): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti",
+      "**5 · SICUREZZA IP** (02 F3): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,",
+      "**6 · RAG commit-leak senza guardia** (04 #1): `api_server.py:383,1085,1164` importano `rag_engine`",
+      "**7 · Igiene `.env` in root** (04 #2): contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo",
+      "**8 · WATCHER riparato** (05 P1-P3): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1",
+      "**9 · STORIE indice+catena + EP_N2_03 \"la Misura\"** (03 #1+#2): `INDICE_CAMMINO.md:29` ha 9/15 titoli",
+      "**10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11): `index.css` → keyframe `nl-fadeUp`",
+      "P4 · CSS invalido che dà falsa sicurezza: `index.css:91` `attr()` in font-size (scartato dai browser) + `:95` `min-font-size` inesistente (no-op) → rimuovere + floor `svg text{font-size:10px}` o `fontSize 7→9` in `MappaView.tsx:296`.",
+      "P5 · Quattro \"neri\" diversi per il fondo (#050a14/#020617/#0a0612/#0a0a0f) → `var(--shell-bg)` sui 3 `bg-[#020617]` (`StorieView.tsx:441`, `ControlloView.tsx:153`, `ProcedimentiView.tsx:69`); rompono anche il tema light.",
+      "P7/F13 · Naming caroselli non canonico (`ep 1.html`, `pre 01.html` con spazi) vs regola del loro README → `git mv` a `carosello.html` + fix riferimenti in `_build_ep.py`/`_render_all.py`/README."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Salvatore Sanfilippo rivoluziona l’AI ed io sono gasato (DS4 spiegato)",
+        "url": "https://www.youtube.com/watch?v=ff2iPMjPu1s"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Emma AI il modello 100% italiano fatta per gli italiani é un disastro totale.",
+        "url": "https://www.youtube.com/shorts/j8O7Rwdt9Ac"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "CrankGPT é un dispositivo con Intelligenza Artificiale che funziona senza elettricità senza batterie",
+        "url": "https://www.youtube.com/shorts/ZnCQ8Hrdc2A"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "OpenAI ha appena presentato GPT-5.6... ma il Governo lo ha già bloccato",
+        "url": "https://www.youtube.com/watch?v=PQs-k4HVXX0"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "GPT 5.6 Sol terra e Luna, questa è la nuova famiglia di modelli annunciata da OpenAI #openai",
+        "url": "https://www.youtube.com/shorts/fCF3PDL2fgQ"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Il 2 agosto entra in vigore l’AI act!",
+        "url": "https://www.youtube.com/shorts/Eeu59TTIHaU"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "GLM 5.2 gira in locale quantizzandolo ad 1bit! #intelligenzaartificiale #aiagent",
+        "url": "https://www.youtube.com/shorts/4zKwQ7OXkGI"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Il nuovo progetto DwarfStar di Salvatore SanFilippo ti permette di far girare modelli di frontiera",
+        "url": "https://www.youtube.com/shorts/kT0bNRpANGE"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Generate The BEST Animations With AI",
+        "url": "https://www.youtube.com/shorts/sNzsGC2zf6c"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Don't Fall For This AI Trap",
+        "url": "https://www.youtube.com/shorts/BF7ohr7OJcE"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "WTF is China building now 😂",
+        "url": "https://www.youtube.com/shorts/VUh3HDSsS5g"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "OpenAI's Valuation Is Not As Big As It Seems",
+        "url": "https://www.youtube.com/shorts/Qt0oRFQm_3U"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "GLM-5.2: The Complete Guide to the Best Open-Source Model",
+        "url": "https://www.youtube.com/watch?v=XbHeJL45USQ"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The forgotten developer who saved JavaScript...",
+        "url": "https://www.youtube.com/watch?v=JfPWbttemYE"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Anthropic is starting to panic…",
+        "url": "https://www.youtube.com/watch?v=0pgCBV8CTZY"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Anthropic begged the world to stop AI… then shipped this",
+        "url": "https://www.youtube.com/watch?v=1PBRhm5ZnjU"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "One man just liberated Fable... and now it’s illegal",
+        "url": "https://www.youtube.com/watch?v=ey_GaPdC9zk"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "I read every major CS paper of the last 100 years...",
+        "url": "https://www.youtube.com/watch?v=ML3q7Ok4hJg"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The most trusted code on Earth is being rewritten in Rust",
+        "url": "https://www.youtube.com/watch?v=Sntj4HmuykI"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Midjourney has a new side quest... death",
+        "url": "https://www.youtube.com/watch?v=a2i9h2ip-nY"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Who really invented the internet...?",
+        "url": "https://www.youtube.com/watch?v=7B0ydm64cV8"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Coolest Diffusion Research Isn't in LLMs — Evan Feinberg & Sergey Edunov, Genesis Molecular AI",
+        "url": "https://www.latent.space/p/the-coolest-diffusion-research-isnt"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "How Cursor deploys AI inside the enterprise",
+        "url": "https://www.latent.space/p/cursor-forward-deployed-engineers"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Autoresearch: The feedback loop behind self-improving agents",
+        "url": "https://www.latent.space/p/autoresearch-introspection"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "AIEWF Daily Dispatch: Autoresearch and the tension between AI and human agency",
+        "url": "https://www.latent.space/p/aiewf-daily-dispatch-agency"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-900"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Skill engineering and the case against one-shot AI design",
+        "url": "https://www.latent.space/p/skill-engineering-design"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "The website of the future may assemble itself for every visitor",
+        "url": "https://www.latent.space/p/the-website-of-the-future"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "Vercel's Andrew Qu on why agents are a new kind of software",
+        "url": "https://www.latent.space/p/vercel-agents-new-software"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Have your agent record video demos of its work with shot-scraper video",
+        "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -1,5 +1,341 @@
 [
   {
+    "id": "BUS-be1f8d4e",
+    "stato": "fatto",
+    "testo": "Boot sporco curato alla RADICE: legacy `CORE/watchdog.py` respawnava doppioni →",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-abec61d3",
+    "stato": "fatto",
+    "testo": "Ondata A resto: retention.py (5 regole, 2.24 GB liberati) + deep_freeze senza chroma",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-9823694c",
+    "stato": "fatto",
+    "testo": "Ondata B resto: TOP10 #3 (rebuild esclusivo 18113==18113 + 535 chunk persi recuperati),",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-3bf7124e",
+    "stato": "fatto",
+    "testo": "Ondata C tutta: organi vivi, pip-audit (42 CVE fixabili → critica), QC 51 episodi",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-4463631e",
+    "stato": "fatto",
+    "testo": "🔴 STATE.json CLOBBER trovato mentre accadeva e curato (load fail-safe + write atomico);",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-848b7d7d",
+    "stato": "fatto",
+    "testo": "NodeKit: 4 copie NodeTile/NodeLevel → 1 (−256 righe, pixel-identici)",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-fc11bb0e",
+    "stato": "fatto",
+    "testo": "Vista CRITICHE ELIMINATA (decisione Matteo) → `CRITICHE.md` stile bussola, rigenerato",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-b3ab7d32",
+    "stato": "da_fare",
+    "testo": "**1 · Resto filone verità sparsa**: SYSTEM_TREE duplicato in MappaView (au18, a mente",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-9df548c4",
+    "stato": "da_fare",
+    "testo": "**2 · EP_N2_03 \"la Misura\" — carosello 16 slide** (salda la promessa della slide 16 di",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-694828ee",
+    "stato": "da_fare",
+    "testo": "**3 · Sessione CVE**: upgrade dei 9 pacchetti (42 fix) CON test finetune dopo",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-40940296",
+    "stato": "da_fare",
+    "testo": "**4 · Decisione Matteo**: viste doppie neuro/sinapsi da togliere? (il fix vero di au08;",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-0aa23480",
+    "stato": "da_fare",
+    "testo": "**5 · Backlog per dominio #52** (~35 voci) — a ondate, come sempre",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-4588367b",
+    "stato": "da_fare",
+    "testo": "**GATED MATTEO**: ordine hardware (Vevor+ER20+UPS) · chiave Semantic Scholar ·",
+    "sessione": "Sessione #55 · 07/07/2026 — ONDATE A-B-C CHIUSE + verità sparsa + STATE salvato dal clobber"
+  },
+  {
+    "id": "BUS-8eaf6282",
+    "stato": "fatto",
+    "testo": "**Ricerca librerie/pubblicazione completata** (web, 7 fonti): motore = **Postiz self-hosted**",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-fb0c1d47",
+    "stato": "fatto",
+    "testo": "**Vincolo formato trovato**: API Instagram = max **10 slide per carosello** (nostro standard = 16)",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-70698a71",
+    "stato": "fatto",
+    "testo": "**PRECISAZIONE Matteo (04/07)**: ripartendo per il formato 10, **NON si elimina niente** —",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-99e55196",
+    "stato": "fatto",
+    "testo": "**Architettura ponte slide→completo**: sito statico generato da `episodes.json` su **GitHub",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-9a6a00f6",
+    "stato": "da_fare",
+    "testo": "Prerequisiti GATED MATTEO (quando si riprende): **mail di progetto** dedicata → pagina FB +",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-73b47575",
+    "stato": "da_fare",
+    "testo": "Costruzione sistema social (DOPO le ondate A-C): Postiz su questa macchina → sito statico →",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-348d1b69",
+    "stato": "fatto",
+    "testo": "**Inventario + smistamento FATTO (04/07)** — mappa completa vecchio→nuovo in",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-03cefb40",
+    "stato": "fatto",
+    "testo": "**Detriti disco — RETENTION SCRITTA + applicata (07/07)** (04 P3, nel frattempo cresciuti:",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-be50dfa5",
+    "stato": "fatto",
+    "testo": "Decisioni \"da svegli\" rimaste dal 23/06 — ESEGUITE (07/07): **(1) doppio watchdog RISOLTO",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-56e3337e",
+    "stato": "fatto",
+    "testo": "**NodeKit (critica gc03)**: NodeTile/NodeLevel erano 4 copie identiche-a-tema-diverso",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-8afd91e0",
+    "stato": "fatto",
+    "testo": "**🔴 STATE.json CLOBBER trovato E curato alla radice — LA causa delle \"percentuali",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-9290c791",
+    "stato": "fatto",
+    "testo": "**STATE nello snapshot giornaliero (07/07, richiesta Matteo)**: `state_snapshot.py` →",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-3a6c0f31",
+    "stato": "fatto",
+    "testo": "**VISTA CRITICHE ELIMINATA dalla dash → CRITICHE.md (07/07, decisione Matteo: \"non si",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-3344f870",
+    "stato": "da_fare",
+    "testo": "Resto filone: SYSTEM_TREE duplicato in MappaView (au18, refactor per consumare i data",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-603207bc",
+    "stato": "fatto",
+    "testo": "**Boot 07/07 sporco dopo interruzione-limite: diagnosi+fix (07/07)** — al login \"tante",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-5adaa68e",
+    "stato": "fatto",
+    "testo": "**Nina loop — diagnosi vera (04/07 sera): NON era fermo** — stanotte 03:42 ha generato",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-a1ca8572",
+    "stato": "fatto",
+    "testo": "**CRITICHE dash live + riconciliazione — FATTO (05/07, commit 2b8bfafe)**: canone manuale",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-8105d9b2",
+    "stato": "fatto",
+    "testo": "**TOP10 #3 — CHIUSO (07/07)**: le exclusions erano GIÀ estese in #53 (`rag_engine.py`",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-e8901f4b",
+    "stato": "fatto",
+    "testo": "**TOP10 #9 resto — GIÀ FATTO il 04/07 + AGGANCIATO (07/07)**: `INDICE_CAMMINO` era già",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-9b625c8d",
+    "stato": "fatto",
+    "testo": "**Canone enforced — FATTO (07/07)** (07 P1): il doppio `EP_N2_01` era già in `_ARCHIVIO` ✓;",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-4525bc20",
+    "stato": "fatto",
+    "testo": "**Sentinella \"organi vivi\" — FATTA (07/07)**: `night_audit.check_organi_vivi()` con tabella",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-d3ca57ff",
+    "stato": "fatto",
+    "testo": "**Retention automatica** in coda notturna: `chroma_db_*` orfane, `BACKUPS/` oltre rotazione,",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-182ef1d0",
+    "stato": "fatto",
+    "testo": "**pip-audit — FATTO (07/07)** (02 Dep): installato + run settimanale (sabato, night_push",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-a550d9d2",
+    "stato": "fatto",
+    "testo": "**QC batch esteso — FATTO (07/07)** (03 F8): `night_audit.check_qc_episodi()` — QC",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-bbb6bff4",
+    "stato": "fatto",
+    "testo": "**Graphify refresh — FATTO (07/07)** (04 Q3): il grafo era fermo al 7 GIUGNO. Rigenerato",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-7d94e2e2",
+    "stato": "fatto",
+    "testo": "**Critiche-riconciliazione** notturna = punto (3) dell'ondata B — già a regime dal 05/07",
+    "sessione": "Sessione #54 · 04/07/2026 — PIANO D'ATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)"
+  },
+  {
+    "id": "BUS-ac946a84",
+    "stato": "fatto",
+    "testo": "**#7 igiene chiavi (fatta da me, su richiesta)**: scan cieco = zero sk-ant in qualunque .env;",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-cfce1283",
+    "stato": "fatto",
+    "testo": "**#9 completato — catena open-loop 2→3** (03 F2): 2 micro-edit a `EP_N2_03` (\"Dove siamo\" ora",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-9a52663e",
+    "stato": "fatto",
+    "testo": "**GENERATORE NINA — doppioni da semi gemelli** (03 F3, aggravato stanotte): EP_N2_51 E il nuovo",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-5e4f5442",
+    "stato": "fatto",
+    "testo": "**#10 completato — template caroselli** (01 F12+F13): `CAROSELLI/_TEMPLATE/` con `tokens.css`",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-0b81f236",
+    "stato": "da_fare",
+    "testo": "**EP_N2_03 \"la Misura\" — carosello 16 slide** (03 F2 punto 3): ora c'è il template, va PRODOTTO",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-fa9583e2",
+    "stato": "da_fare",
+    "testo": "Backlog per dominio in bussola (sotto, ~35 voci residue) — a ondate.",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-f8810d7e",
+    "stato": "fatto",
+    "testo": "**GUASTO 1 — albero doppione `SESSIONI/STORIE/`**: 72 copie STANTIE (senza FATTI/TOC/Collegati)",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-bd1a5f20",
+    "stato": "fatto",
+    "testo": "**GUASTO 2 — 4 hub `EP_SEED_*` \"fantasma\"** (30 wikilink rotti): i figli L1/L2 linkavano",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-d41b8081",
+    "stato": "fatto",
+    "testo": "**GUASTO 3 — la bibbia del MONDO non era nel vault**: `[[BIBBIA_DEL_MONDO]]`/`[[MAPPA_AVVENTURA]]`/",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-aa2aac3c",
+    "stato": "fatto",
+    "testo": "**GUASTO 4 — link alla memoria di Claude = nodi fantasma**: creati 7 stub curati in",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-bea45e83",
+    "stato": "fatto",
+    "testo": "**GUASTO 5 = TOP 10 #2 — canone V32 stantio/vietato**: le 2 note puntate da `_CANONE.md:13`",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-46cf6c5b",
+    "stato": "fatto",
+    "testo": "**GUASTO 6 — grafo Obsidian**: catena completa rilanciata (storie_intersect 1109 legami/218 ep ·",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-747fd89a",
+    "stato": "fatto",
+    "testo": "RAG riallineato — con INCIDENTE risolto: il primo `--incremental` è morto in segfault (HNSW",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-e7a1d684",
+    "stato": "fatto",
+    "testo": "**GUASTO 7 (trovato da Matteo: \"gli episodi autogenerati si sono fermati\") — NOTTURNA MORTA DAL 23/06,",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-474c73bc",
+    "stato": "fatto",
+    "testo": "Grafo \"più scarico\"/nodi soli (Matteo): `Senza nome.base` (file Bases accidentale) + daily vuota",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-e09a8483",
+    "stato": "da_fare",
+    "testo": "TOP 10 **#3** (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild) = prossimo della catena verità.",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
+    "id": "BUS-4cde8f55",
+    "stato": "da_fare",
+    "testo": "TOP 10 **#9**: `INDICE_CAMMINO` ora è UNA copia sola (repo→vault) ma i 9/15 titoli sbagliati restano → rigenerarlo da `episodes.json`.",
+    "sessione": "Sessione #53 · 03/07/2026 — OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)"
+  },
+  {
     "id": "BUS-391e30b6",
     "stato": "fatto",
     "testo": "**🎯 ATTACCO ESERCITO — COMPLETO** (sessione Fable 5, come deciso): 7 agenti general-purpose",
@@ -48,57 +384,57 @@
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-efaba677",
-    "stato": "da_fare",
-    "testo": "**2 · RAG P0 — `_CANONE.md:13` punta alla verità V32 VECCHIA e vietata** (07): indica i doc",
+    "id": "BUS-31ecd62d",
+    "stato": "fatto",
+    "testo": "**2 · RAG P0 — `_CANONE.md:13` punta alla verità V32 VECCHIA e vietata** (07) — **FATTO in #53**",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-8839bc48",
-    "stato": "da_fare",
-    "testo": "**3 · RAG P0 — 55 file di versioni superate dentro il canone** (07): `ASSOLUTO/VERSIONI`(13) +",
+    "id": "BUS-a98241d2",
+    "stato": "fatto",
+    "testo": "**3 · RAG P0 — 55 file di versioni superate dentro il canone** (07) — **FATTO in #53** (exclusions + rebuild-hard 441→388 file, PROBE_OK, snapshot): `ASSOLUTO/VERSIONI`(13) +",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-7e1bdd11",
-    "stato": "da_fare",
-    "testo": "**4 · SICUREZZA EVA** (02 F1+F2): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti",
+    "id": "BUS-9a80b7be",
+    "stato": "fatto",
+    "testo": "**4 · SICUREZZA EVA** (02 F1+F2) — **FATTO in #53** (bind 127.0.0.1 + X-API-Key su /inbox + APP_SECRET fail-closed in LIVE, commit 7f0dd59b): `eva_server.py:162` bind 0.0.0.0 + `/inbox`(:139) con PII clienti",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-d7d63e7f",
-    "stato": "da_fare",
-    "testo": "**5 · SICUREZZA IP** (02 F3): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,",
+    "id": "BUS-3b9e9f8e",
+    "stato": "fatto",
+    "testo": "**5 · SICUREZZA IP** (02 F3) — **FATTO in #53** (VULCAN_MANIFESTO + mims protocol + fit-park → MENTE, git rm dal repo pubblico + 'perfetta'; history: filter-repo da decidere con Matteo): spostare `VULCAN_MANIFESTO.md` (+ eventuale mims `protocol.md`,",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-c1a3cc8d",
-    "stato": "da_fare",
-    "testo": "**6 · RAG commit-leak senza guardia** (04 #1): `api_server.py:383,1085,1164` importano `rag_engine`",
+    "id": "BUS-ccd584f3",
+    "stato": "fatto",
+    "testo": "**6 · RAG commit-leak senza guardia** (04 #1) — **FATTO in #53** (lock + failure-latch 300s sui 3 punti, attivo dal prossimo restart API, commit 72619583): `api_server.py:383,1085,1164` importano `rag_engine`",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-86287339",
-    "stato": "da_fare",
-    "testo": "**7 · Igiene `.env` in root** (04 #2): contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo",
+    "id": "BUS-4ffbebf9",
+    "stato": "fatto",
+    "testo": "**7 · Igiene `.env` in root** (04 #2) — **FATTO in #53 ondata 2**: nessuna sk-ant presente (scan cieco su tutti i .env: zero match), il gho_ era il VECCHIO token — verificato **401 revocato** contro api.github.com — e rimosso; .env riscritto (solo path + regola \"chiavi solo in _VAULT/KEYS\" in testa). Niente da ruotare.: contiene `sk-ant-api03-…` + `gho_` (gitignored, NON nel repo",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-350fe2db",
-    "stato": "da_fare",
-    "testo": "**8 · WATCHER riparato** (05 P1-P3): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1",
+    "id": "BUS-19d54aaf",
+    "stato": "fatto",
+    "testo": "**8 · WATCHER riparato** (05 P1-P3) — **FATTO in #53** (feed Alan Turing + 4 fonti nuove verificate, WARNING feed vuoto, stars>=20 + sort=updated vero; testato: 7 sorgenti, 100 segnali; schedulazione OK — le 5 notti saltate = PC spento 28/06-01/07): `watcher.py:88` Anthropic News è HTML non-feed → **fonte n.1",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-047692e3",
-    "stato": "da_fare",
-    "testo": "**9 · STORIE indice+catena + EP_N2_03 \"la Misura\"** (03 #1+#2): `INDICE_CAMMINO.md:29` ha 9/15 titoli",
+    "id": "BUS-12c2dea8",
+    "stato": "fatto",
+    "testo": "**9 · STORIE indice+catena** (03 #1+#2) — indice FATTO in #53 (generate_indice_cammino.py: VISTA di episodes.json, 52 caselle, mai più titoli scaduti); RESTANO catena EP_02→03 + carosello EP_N2_03: `INDICE_CAMMINO.md:29` ha 9/15 titoli",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {
-    "id": "BUS-10d5ddfd",
-    "stato": "da_fare",
-    "testo": "**10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11): `index.css` → keyframe `nl-fadeUp`",
+    "id": "BUS-44713d2f",
+    "stato": "fatto",
+    "testo": "**10 · DESIGN quick-win + template caroselli** (01 P1-P3,P11) — CSS FATTO in #53 (nl-fadeUp globale, reduced-motion, contrasto WCAG con screenshot, focus-visible, 2 regole invalide rimosse, +fix bug dash_shot.bat); RESTA il template canonico caroselli: `index.css` → keyframe `nl-fadeUp`",
     "sessione": "Sessione #52 · 02-03/07/2026 — ATTACCO ESERCITO su FABLE (7 specialisti in parallelo)"
   },
   {

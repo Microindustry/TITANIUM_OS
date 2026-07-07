@@ -1,3 +1,23 @@
+<!-- TOC -->
+
+- [_SINTESI  ATTACCO ESERCITO (7 specialisti)  02-03/07/2026](#sintesi-attacco-esercito-7-specialisti-02-03072026)
+  - [Quadro dinsieme (una riga per dominio)](#quadro-dinsieme-una-riga-per-dominio)
+  - [TOP 10 AZIONI (ordinate per leva)](#top-10-azioni-ordinate-per-leva)
+    - [1. MOSSA 1  Il checkout che sblocca tutto (06 1)  QUICK-WIN (lordine)](#1-mossa-1-il-checkout-che-sblocca-tutto-06-1-quick-win-lordine)
+    - [2. RAG P0  Ripuntare _CANONE.md alla verità V32 VERA (07 P0)  QUICK-WIN](#2-rag-p0-ripuntare-canonemd-alla-verità-v32-vera-07-p0-quick-win)
+    - [3. RAG P0  Escludere dal canone 55 file di versioni superate (07 P0)  QUICK-WIN](#3-rag-p0-escludere-dal-canone-55-file-di-versioni-superate-07-p0-quick-win)
+    - [4. Sicurezza EVA  bind 127.0.0.1  auth /inbox  APP_SECRET obbligatorio in LIVE (02 F1F2)  QUICK-WIN](#4-sicurezza-eva-bind-127001-auth-inbox-appsecret-obbligatorio-in-live-02-f1f2-quick-win)
+    - [5. Sicurezza IP  Spostare VULCAN_MANIFESTO.md ( mims IP) fuori dal repo pubblico (02 F3  06 P2)  QUICK-WIN](#5-sicurezza-ip-spostare-vulcanmanifestomd-mims-ip-fuori-dal-repo-pubblico-02-f3-06-p2-quick-win)
+    - [6. RAG  Guardia anti commit-leak in api_server (04 1)  INGEGNERIZZAZIONE leggera](#6-rag-guardia-anti-commit-leak-in-apiserver-04-1-ingegnerizzazione-leggera)
+    - [7. Software  Igiene .env/segreti in root (04 2)  QUICK-WIN](#7-software-igiene-envsegreti-in-root-04-2-quick-win)
+    - [8. News-IA  Riparare il watcher: Anthropic feed  filtro stelle  schedulazione (05 P1-P3)  QUICK-WIN](#8-news-ia-riparare-il-watcher-anthropic-feed-filtro-stelle-schedulazione-05-p1-p3-quick-win)
+    - [9. Scrittura  Indice/canone storie  EP_N2_03 la Misura (03 12)  QUICK-WIN  contenuto](#9-scrittura-indicecanone-storie-epn203-la-misura-03-12-quick-win-contenuto)
+    - [10. Design  Quick-win CSS  template canonico caroselli PRIMA di EP_N2_03 (01 P1-P3, P11)  QUICK-WIN  INGEGNERIZZAZIONE](#10-design-quick-win-css-template-canonico-caroselli-prima-di-epn203-01-p1-p3-p11-quick-win-ingegnerizzazione)
+  - [Seconda fascia (in bussola come  , dopo la prima ondata)](#seconda-fascia-in-bussola-come-dopo-la-prima-ondata)
+  - [Note di metodo](#note-di-metodo)
+
+<!-- /TOC -->
+
 # _SINTESI — ATTACCO ESERCITO (7 specialisti) · 02-03/07/2026
 
 *Coordinatore: Fable 5. I 7 agenti (design · sicurezza · scrittura · software · news-IA · gestionale · integrità-RAG) hanno girato su Fable, additivo/propose-only, ognuno con `file:riga`. Qui la sintesi: le TOP 10 azioni ordinate per **leva (impatto / rischio)**. Nessuna modifica applicata — questo è il piano; le migliori entrano in `DA_FARE_FATTO.md` come `[ ] DA FARE` e si eseguono a ondate col gate SELF_IMPROVE (propose-only).*

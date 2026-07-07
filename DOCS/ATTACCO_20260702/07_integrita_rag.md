@@ -1,3 +1,20 @@
+<!-- TOC -->
+
+- [07  INTEGRITÀ RAG / CONOSCENZA  mappa dei buchi di incastrabilità](#07-integrità-rag-conoscenza-mappa-dei-buchi-di-incastrabilità)
+  - [VERDETTO IN UNA RIGA](#verdetto-in-una-riga)
+  - [STATO ATTUALE VERIFICATO (il positivo)](#stato-attuale-verificato-il-positivo)
+  - [P0.1  La verità tecnica V32 puntata dal CANONE è QUELLA VECCHIA (molle) e con framing vietato](#p01-la-verità-tecnica-v32-puntata-dal-canone-è-quella-vecchia-molle-e-con-framing-vietato)
+  - [P0.2  55 file di versioni SUPERATE sono dentro il canone RAG](#p02-55-file-di-versioni-superate-sono-dentro-il-canone-rag)
+  - [P1.1  Collisione di ID nel canone attivo: due EP_N2_01](#p11-collisione-di-id-nel-canone-attivo-due-epn201)
+  - [P1.2  _CANONE.md è stantio e nessun codice lo legge: la verità unica non è enforced](#p12-canonemd-è-stantio-e-nessun-codice-lo-legge-la-verità-unica-non-è-enforced)
+  - [P2.1  Laudit notturno è cieco sulle violazioni canone fuori STORIE](#p21-laudit-notturno-è-cieco-sulle-violazioni-canone-fuori-storie)
+  - [P2.2  Tre verità diverse sul numero di episodi](#p22-tre-verità-diverse-sul-numero-di-episodi)
+  - [P2.3  Tracciabilità a metà: le fonti del grounding non sono persistite](#p23-tracciabilità-a-metà-le-fonti-del-grounding-non-sono-persistite)
+  - [P3  Orfani e sinergie tra i mondi](#p3-orfani-e-sinergie-tra-i-mondi)
+  - [PIANO PROPOSTO (ordine di esecuzione)](#piano-proposto-ordine-di-esecuzione)
+
+<!-- /TOC -->
+
 # 07 · INTEGRITÀ RAG / CONOSCENZA — mappa dei buchi di incastrabilità
 *ATTACCO ESERCITO · 2026-07-03 · specialista 07 · propose-only, nessuna modifica applicata*
 
