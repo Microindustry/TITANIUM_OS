@@ -1,12 +1,13 @@
-// MimsSection.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
-// Mappa navigabile N-livelli MIMS — Prodotto / Produzione / Mercato / IP / Roadmap
+﻿// MimsSection.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
+// Mappa navigabile N-livelli MIMS â€” Prodotto / Produzione / Mercato / IP / Roadmap
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, CheckCircle2, Zap, Lock, Circle } from "lucide-react";
+import { ChevronLeft, CheckCircle2, Zap, Lock, Circle } from "lucide-react";
 import { MIMS_ROOT } from "../data/mimsData";
-import { nodeProgress, getAllLeaves, type SkillNode } from "../data/skillTreeData";
+import { getAllLeaves, type SkillNode } from "../data/skillTreeData";
+import { NodeLevel as KitLevel, type NodeKitTheme } from "./skilltree/NodeKit";
 
-// ── STATUS STYLES ─────────────────────────────────────────────────────────────
+// â”€â”€ STATUS STYLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const ST = {
   done:    { tile: "bg-emerald-900/70 border-emerald-500/60 text-emerald-100", glow: "0 0 24px #10b98150", pulse: false, icon: CheckCircle2, dot: "bg-emerald-400" },
   active:  { tile: "bg-amber-900/70   border-amber-400/70   text-amber-100",   glow: "0 0 28px #f59e0b70", pulse: true,  icon: Zap,          dot: "bg-amber-400"   },
@@ -14,109 +15,23 @@ const ST = {
   future:  { tile: "bg-slate-900/30   border-slate-800/20   text-slate-700",   glow: "none",               pulse: false, icon: Lock,         dot: "bg-slate-800"   },
 };
 
-function NodeTile({ node, onClick, size = "md" }: { node: SkillNode; onClick?: () => void; size?: "sm" | "md" | "lg" }) {
-  const [open, setOpen] = useState(false);
-  const st = ST[node.status];
-  const { done, total, active, pct } = nodeProgress(node);
-  const hasChildren = !node.isLeaf && (node.children?.length ?? 0) > 0;
-  const isClickable  = hasChildren && !!onClick;
-  const padding  = size === "lg" ? "p-5" : size === "sm" ? "p-2" : "p-3.5";
-  const iconSize = size === "lg" ? "text-4xl" : size === "sm" ? "text-lg" : "text-2xl";
-  const labelSz  = size === "lg" ? "text-[12px]" : size === "sm" ? "text-[9px]" : "text-[10px]";
+// NodeTile/NodeLevel: struttura condivisa in skilltree/NodeKit (critica gc03,
+// erano 4 copie) â€” qui resta solo il TEMA amber di MIMS.
+const THEME: NodeKitTheme = {
+  st: ST,
+  pulseClass: "bg-amber-400", pulseHex: "#f59e0b",
+  hover: "hover:brightness-115",
+  iconSize: { sm: "text-lg", md: "text-2xl", lg: "text-4xl" },
+  countSuffix: "",
+  activeLabel: "attivi", activeLabelClass: "text-amber-400",
+  directLabel: "Skill dirette",
+  leafGrid: "grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2",
+};
 
-  return (
-    <button
-      onClick={() => { if (isClickable) onClick?.(); else if (node.isLeaf) setOpen(o => !o); }}
-      className={`rounded-xl border text-left transition-all duration-200 w-full ${st.tile} ${padding} ${
-        isClickable || node.isLeaf ? "hover:scale-[1.03] hover:brightness-115 active:scale-[0.97] cursor-pointer" : "cursor-default opacity-40"
-      }`}
-      style={{ boxShadow: st.glow }}
-    >
-      <div className="flex items-start justify-between mb-2">
-        <span className={iconSize}>{node.icon}</span>
-        <div className="flex items-center gap-1.5">
-          {st.pulse && active > 0 && <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" style={{ boxShadow: "0 0 6px #f59e0b" }} />}
-          {isClickable && <ChevronRight size={10} className="text-slate-500 opacity-60" />}
-        </div>
-      </div>
-      <div className={`${labelSz} font-mono font-bold uppercase tracking-wide leading-tight mb-1`}>{node.label}</div>
-      {node.isLeaf && node.note && open && (
-        <p className="text-[8px] text-slate-400 mt-2 pt-2 border-t border-white/5 leading-relaxed">{node.note}</p>
-      )}
-      {!node.isLeaf && total > 0 && (
-        <>
-          <div className="text-[8px] font-mono text-slate-600 mb-1.5">{done}/{total}</div>
-          <div className="h-1 bg-black/30 rounded-full overflow-hidden">
-            <div className={`h-full rounded-full transition-all ${st.dot}`} style={{ width: `${pct}%` }} />
-          </div>
-          <div className="text-[8px] font-mono text-right mt-1 opacity-60">{pct}%</div>
-        </>
-      )}
-      {node.isLeaf && (
-        <div className="flex justify-end mt-1">
-          <div className={`w-1.5 h-1.5 rounded-full ${st.dot}`} style={node.status === "active" ? { boxShadow: "0 0 6px #f59e0b" } : {}} />
-        </div>
-      )}
-    </button>
-  );
-}
+const NodeLevel = (p: { node: SkillNode; onDrillIn: (n: SkillNode) => void }) =>
+  <KitLevel {...p} theme={THEME} />;
 
-function NodeLevel({ node, onDrillIn }: { node: SkillNode; onDrillIn: (n: SkillNode) => void }) {
-  const children = node.children ?? [];
-  const leaves   = children.filter(c => c.isLeaf);
-  const groups   = children.filter(c => !c.isLeaf);
-  const { done, total, active, pct } = nodeProgress(node);
-
-  return (
-    <div className="space-y-4">
-      {/* Header nodo corrente */}
-      <div className={`rounded-2xl border ${node.border} ${node.bg} p-4`}>
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">{node.icon}</span>
-            <div>
-              <div className={`text-[11px] font-mono font-bold uppercase tracking-widest ${node.color}`}>{node.label}</div>
-              {node.note && <div className="text-[9px] text-slate-500 mt-0.5">{node.note}</div>}
-            </div>
-          </div>
-          <div className="text-right">
-            <div className={`text-2xl font-black tabular-nums ${node.color}`}>{pct}%</div>
-            <div className="text-[8px] font-mono text-slate-600">{done}/{total}</div>
-            {active > 0 && <div className="text-[8px] font-mono text-amber-400 mt-0.5">{active} attivi</div>}
-          </div>
-        </div>
-        <div className="h-1.5 bg-slate-900 rounded-full overflow-hidden">
-          <div className={`h-full rounded-full transition-all duration-700 ${node.dot}`} style={{ width: `${pct}%` }} />
-        </div>
-      </div>
-
-      {/* Sotto-categorie */}
-      {groups.length > 0 && (
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-          {groups.map(child => (
-            <NodeTile key={child.id} node={child} size="lg" onClick={() => onDrillIn(child)} />
-          ))}
-        </div>
-      )}
-
-      {/* Foglie dirette */}
-      {leaves.length > 0 && (
-        <>
-          {groups.length > 0 && (
-            <div className="text-[8px] font-mono text-slate-700 uppercase tracking-widest border-t border-slate-800 pt-3">
-              Skill dirette
-            </div>
-          )}
-          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            {leaves.map(child => <NodeTile key={child.id} node={child} size="md" />)}
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-// ── COMPONENTE PRINCIPALE ─────────────────────────────────────────────────────
+// â”€â”€ COMPONENTE PRINCIPALE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function MimsSection() {
   const [stack, setStack] = useState<SkillNode[]>([MIMS_ROOT]);
   const current = stack[stack.length - 1];
@@ -134,15 +49,15 @@ export function MimsSection() {
 
   return (
     <div className="space-y-3">
-      {/* ── STATS GLOBALI ── */}
+      {/* â”€â”€ STATS GLOBALI â”€â”€ */}
       <div className="bg-amber-950/20 border border-amber-500/30 rounded-2xl p-4">
         <div className="flex items-center justify-between mb-2">
           <div>
             <div className="text-[8px] font-mono text-amber-500/70 uppercase tracking-widest mb-1">
-              MIMS — Micro-Industry Modular System
+              MIMS â€” Micro-Industry Modular System
             </div>
             <div className="text-[8px] font-mono text-slate-500 mb-2">
-              DNA 29.9mm H7/g6 · 3 giunti · 7 materiali · Lego per l'industria pesante
+              DNA 29.9mm H7/g6 Â· 3 giunti Â· 7 materiali Â· Lego per l'industria pesante
             </div>
             <div className="flex items-end gap-1.5">
               <span className="text-3xl font-black text-amber-300 tabular-nums">{done}</span>
@@ -170,7 +85,7 @@ export function MimsSection() {
         <div className="text-[8px] font-mono text-amber-500/50 text-right mt-1">{pct}% milestone completati</div>
       </div>
 
-      {/* ── BREADCRUMB ── */}
+      {/* â”€â”€ BREADCRUMB â”€â”€ */}
       {stack.length > 1 && (
         <div className="flex items-center gap-1.5 flex-wrap">
           <button onClick={goBack} className="flex items-center gap-1 text-slate-500 hover:text-slate-300 transition-colors">
@@ -192,12 +107,12 @@ export function MimsSection() {
         </div>
       )}
 
-      {/* ── LIVELLO CORRENTE ── */}
+      {/* â”€â”€ LIVELLO CORRENTE â”€â”€ */}
       <NodeLevel node={current} onDrillIn={drillIn} />
 
       <div className="text-center py-1">
         <span className="text-[7px] font-mono text-slate-800 uppercase tracking-[0.3em]">
-          TAM €4.2B · Blue ocean · Capannone 2030
+          TAM â‚¬4.2B Â· Blue ocean Â· Capannone 2030
         </span>
       </div>
     </div>
