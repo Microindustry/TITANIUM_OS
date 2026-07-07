@@ -15,6 +15,17 @@ Avvio: pythonw CORE/watchdog.py (silenzioso)
 """
 
 import sys
+
+# ── SUPERSEDED (07/07/2026) ──────────────────────────────────
+# Il watchdog ufficiale e' SERVICES/watchdog.py (task TI_Watchdog al login).
+# Questo modulo, avviato da START_ECOSYSTEM.bat, girava IN PARALLELO e
+# respawnava doppioni: watcher.py x2 (snapshot BACKUPS duplicati),
+# mente_watcher x2, api_server con console python.exe (le "finestre" al boot
+# 07/07 + doppio listener 5001). Esce subito; il codice resta per storia.
+if sys.stdout:
+    print("[CORE/watchdog] SUPERSEDED da SERVICES/watchdog.py (TI_Watchdog) — esco.")
+sys.exit(0)
+
 import os
 import time
 import subprocess

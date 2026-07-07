@@ -304,8 +304,34 @@ class TitaniumHandler(FileSystemEventHandler):
 # ============================================================
 # MAIN — avvio observer
 # ============================================================
+def _another_instance() -> bool:
+    """True se un ALTRO processo esegue gia' questo script. Un watcher doppio
+    (visto il 07/07: START_LOGIN + respawn del legacy CORE/watchdog) produce
+    snapshot BACKUPS/ duplicati a ogni evento file."""
+    try:
+        import psutil
+    except ImportError:
+        return False
+    marker = "automations\\core\\watcher.py"
+    me = os.getpid()
+    for p in psutil.process_iter(["pid", "name", "cmdline"]):
+        try:
+            if p.info["pid"] == me or "python" not in (p.info["name"] or "").lower():
+                continue
+            cl = " ".join(p.info["cmdline"] or []).lower().replace("/", "\\")
+            if marker in cl:
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+    return False
+
+
 def main():
     """Avvia il watcher su tutta la cartella TITANIUM_OS."""
+
+    if _another_instance():
+        log.info("Altra istanza di watcher.py gia' attiva — esco (single-instance).")
+        return
 
     log.info("=" * 50)
     log.info("TITANIUM_OS WATCHER — Avvio")

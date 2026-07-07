@@ -136,8 +136,18 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   03/07 da 654 MB cade da sola tra 3 notti per regola). RADICE del BACKUPS gonfio trovata:
   **deep_freeze zippava le chroma_db** (2035 MB il 05/07 vs 185 del 21/06) → esclusione
   `chroma_db*` in `deep_freeze.py` + freeze rigenerato pulito, poi rimosso lo zip gonfio.
-- [ ] Decisioni "da svegli" rimaste dal 23/06: gitignore `DATA/views/` + `logs/`; **doppio watchdog**
-  → 1 istanza; raggruppare `AUTOMATIONS/core` (~30 script piatti).
+- [✓] Decisioni "da svegli" rimaste dal 23/06 — ESEGUITE (07/07): **(1) doppio watchdog RISOLTO
+  alla radice** — il boot sporco era LUI: `CORE/watchdog.py` legacy (via START_ECOSYSTEM) girava
+  in parallelo a `SERVICES/watchdog.py` e respawnava doppioni (watcher ×2 = snapshot BACKUPS
+  duplicati, mente_watcher ×2, api_server console = doppio 5001 + "caselle"). Killati i 3 doppioni;
+  `CORE/watchdog.py` SUPERSEDED (esce subito), `START_ECOSYSTEM.bat` → stub informativo (NON
+  delega, eviterebbe ri-doppioni), guardia single-instance in `SERVICES/watchdog.py` +
+  `watcher.py` (testate live: 2ª istanza esce). Restano ESATTAMENTE 4 pythonw giusti.
+  **(2) gitignore**: `DATA/views/` era già fatto; aggiunti `/logs/` + `/DATA/logs/` e straccati
+  i 2 .txt runtime. **(3) raggruppare core**: raggruppamento LOGICO, non fisico (spostare 44
+  script rompe 10 task schedulati + hook — rischio > beneficio): `AUTOMATIONS/core/README.md`
+  indice per gruppi (motore eventi/notturne/sessione/conoscenza/contenuti/utility) con regola
+  "nuovo script = nuova riga".
 
 ### ONDATA B — ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)
 - [✓] **Boot 07/07 sporco dopo interruzione-limite: diagnosi+fix (07/07)** — al login "tante

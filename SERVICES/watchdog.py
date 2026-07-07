@@ -98,6 +98,30 @@ def _write_status(stats: dict):
     except Exception:
         pass
 
+# ── SINGLE-INSTANCE ──────────────────────────────────────────
+
+def _another_instance() -> bool:
+    """True se un ALTRO processo esegue gia' questo script (decisione 23/06
+    'doppio watchdog -> 1 istanza': lo storico doppione era CORE/watchdog.py
+    via START_ECOSYSTEM, ora SUPERSEDED — questa guardia copre ogni launcher)."""
+    try:
+        import psutil
+    except ImportError:
+        return False
+    marker = "services\\watchdog.py"
+    me = os.getpid()
+    for p in psutil.process_iter(["pid", "name", "cmdline"]):
+        try:
+            if p.info["pid"] == me or "python" not in (p.info["name"] or "").lower():
+                continue
+            cl = " ".join(p.info["cmdline"] or []).lower().replace("/", "\\")
+            if marker in cl:
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+    return False
+
+
 # ── LOOP PRINCIPALE ──────────────────────────────────────────
 
 def run():
@@ -166,4 +190,7 @@ if __name__ == "__main__":
 
     signal.signal(signal.SIGINT,  _stop)
     signal.signal(signal.SIGTERM, _stop)
+    if _another_instance():
+        log.info("Altra istanza di SERVICES/watchdog.py gia' attiva — esco (single-instance).")
+        sys.exit(0)
     run()

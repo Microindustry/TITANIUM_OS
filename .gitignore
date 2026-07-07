@@ -63,3 +63,8 @@ DATA/view_index.json
 
 # preferenze locali di macchina (modello, ecc.) — non pubblicare
 .claude/settings.local.json
+
+# Cartelle log runtime (decisione 23/06, eseguita 07/07): *.log era gia' ignorato,
+# ma dentro finiscono anche .txt di esito (recover/restore) rigenerati a ogni run
+/logs/
+/DATA/logs/
