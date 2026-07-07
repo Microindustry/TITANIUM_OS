@@ -192,8 +192,14 @@ segreti→_VAULT, decisioni→SESSIONI, stato→bussola/STATE). Max 1-2 episodi 
   bussola era rimasta indietro E il generatore girava solo a mano (stesso destino dell'indice
   morto). Ora `build_episodes_json.py` step 7 lancia in coda `generate_indice_cammino` +
   `generate_pietre_index` (best-effort): gli indici-verità seguono OGNI rebuild, testato ok.
-- [ ] **Canone enforced** (07 P1): doppio `EP_N2_01` attivo, `_CANONE.md` che nessun codice legge →
-  check id-collision + canon-pin nel RRF (i doc canonici pesano di più nel retrieval).
+- [✓] **Canone enforced — FATTO (07/07)** (07 P1): il doppio `EP_N2_01` era già in `_ARCHIVIO` ✓;
+  ora il canone È codice: **(a) canon-pin nel retrieval** (`rag_engine.py`): set dei [[wikilink]]
+  di `_CANONE.md` (27 note, cache su mtime) → bonus RRF in selezione (un voto extra di primo
+  rango) + slot riservato nel top-k finale + flag `canon` nell'output; il reranker resta giudice
+  del merito. Testato CPU: EP_N2_20 CANON in top-5 su "V32 corpo unico". **(b) sentinelle**
+  (`night_audit.check_canone_vault`): id-collision tra note attive (il caso EP_N2_01 che nessuno
+  rilevava) + `_CANONE.md` fermo >14gg o serie su disco oltre il massimo dichiarato → critica in
+  cartella clinica. Test: 0 collisioni, canone fresco (51==51, EP_N2_51 nuovo di stanotte).
 
 ### ONDATA C — NOTTURNE DA IMPLEMENTARE (il sistema si mantiene da solo)
 - [ ] **Sentinella "organi vivi"** (lezione del guasto 7: la notturna era morta 11 giorni in

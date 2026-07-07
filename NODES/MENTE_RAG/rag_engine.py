@@ -368,6 +368,44 @@ def _rrf(
         scores[cid] = scores.get(cid, 0.0) + 1.0 / (RRF_K + rank + 1)
     return sorted(scores.items(), key=lambda x: x[1], reverse=True)
 
+# ── CANON-PIN (attacco 07 P1.2) ───────────────────────────────────────────────
+# _CANONE.md era la "verita' unica" solo per il lettore umano: nessun codice lo
+# leggeva, e in RRF le note canoniche competevano alla pari con qualunque nota.
+# Da qui in poi il canone PESA nel retrieval: bonus in selezione (equivale a un
+# voto extra di primo rango) + slot riservato nel top-k finale (v. search()).
+
+CANONE_PATH     = MENTE_DIR / "_CANONE.md"
+CANON_RRF_BONUS = 1.0 / RRF_K
+_canon_cache: dict = {"mtime": None, "stems": frozenset()}
+
+
+def _canon_stems() -> frozenset:
+    """Stems (nome nota senza .md, lowercase) dei [[wikilink]] di _CANONE.md.
+    Cache su mtime: si ricarica da solo quando il canone cambia."""
+    try:
+        mt = CANONE_PATH.stat().st_mtime
+    except OSError:
+        return frozenset()
+    if _canon_cache["mtime"] != mt:
+        stems = set()
+        try:
+            text = CANONE_PATH.read_text(encoding="utf-8", errors="replace")
+            for m in _WIKILINK.finditer(text):
+                stems.add(m.group(1).strip().replace("\\", "/").rsplit("/", 1)[-1].lower())
+        except OSError:
+            return _canon_cache["stems"]
+        _canon_cache["mtime"] = mt
+        _canon_cache["stems"] = frozenset(stems)
+        logger.debug("canon-pin: %d note canoniche da _CANONE.md", len(stems))
+    return _canon_cache["stems"]
+
+
+def _is_canon(source: str) -> bool:
+    stem = source.replace("\\", "/").rsplit("/", 1)[-1]
+    if stem.lower().endswith(".md"):
+        stem = stem[:-3]
+    return stem.lower() in _canon_stems()
+
 # ── CROSSENCODER ──────────────────────────────────────────────────────────────
 
 _ce = None
@@ -652,9 +690,22 @@ def search(
     # 3 — RRF merge
     merged = _rrf(sem, kw)
 
+    # 3b — canon-pin: le note puntate da _CANONE.md pesano di piu' nella SELEZIONE
+    # (un voto extra di primo rango). Il reranker resta giudice del merito.
+    canon = _canon_stems()
+    if canon:
+        merged = sorted(
+            ((cid, score + (CANON_RRF_BONUS
+                            if cid in id_map and _is_canon(id_map[cid]["source"])
+                            else 0.0))
+             for cid, score in merged),
+            key=lambda x: x[1], reverse=True,
+        )
+
     # 4 — Candidati per reranker
     cands = [
-        {"chunk_id": cid, **id_map[cid], "rrf": score}
+        {"chunk_id": cid, **id_map[cid], "rrf": score,
+         "canon": bool(canon) and _is_canon(id_map[cid]["source"])}
         for cid, score in merged[:FETCH_K]
         if cid in id_map
     ]
@@ -667,11 +718,22 @@ def search(
     # 5 — CrossEncoder rerank
     final = _rerank(query, cands, top_k) if use_reranker else cands[:top_k]
 
+    # 5b — slot riservato canone: se tra i candidati c'era almeno una nota canonica
+    # ma il top-k finale non ne contiene nessuna, la migliore entra al posto
+    # dell'ultimo (il canone ha sempre voce quando e' in gara, mai sostituendo il 1o).
+    # NB: flag ricalcolato dalla source (i candidati della graph-expansion non lo portano).
+    if canon and final and not any(_is_canon(c["source"]) for c in final):
+        best = max((c for c in cands if _is_canon(c["source"])),
+                   key=lambda c: c.get("_ce", c["rrf"]), default=None)
+        if best is not None:
+            final = final[:-1] + [best]
+
     return [
         {
             "source":  c["source"],
             "preview": c["text"][:300],
             "score":   round(c.get("_ce", c["rrf"]), 4),
+            "canon":   bool(canon) and _is_canon(c["source"]),
         }
         for c in final
     ]

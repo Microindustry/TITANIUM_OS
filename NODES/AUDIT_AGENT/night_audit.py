@@ -25,6 +25,7 @@
 
 import os
 import re
+import os
 import sys
 import io
 import json
@@ -63,6 +64,10 @@ TODAY     = datetime.now().strftime("%Y-%m-%d")
 AUTO_CLOSE_DAYS = 4   # una critica non ri-osservata da N giorni -> auto-resolved (riapre se ritorna)
 CANONE_MANUALE  = AUDIT_DIR / "critiche_manuali.json"  # canone manuale vivo (#54, ex criticheData.ts)
 CANONE_STALE_DAYS = 30  # file canone fermo da N giorni -> segnale (organo silenzioso)
+
+# Canone del VAULT (#54, attacco 07 P1): la "verita' unica" MENTE/_CANONE.md va sorvegliata
+MENTE_DIR = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
+CANONE_VAULT_STALE_DAYS = 14  # _CANONE.md fermo da N giorni con la serie che genera ogni notte = deriva
 
 # Pattern di guasto cercati nei log della catena notturna
 # NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
@@ -444,6 +449,87 @@ def append_critiche(new: list[dict], signals: dict) -> dict:
             "total": len(merged), "open": sum(1 for c in merged if c.get("status") == "open")}
 
 
+def check_canone_vault(signals: dict) -> None:
+    """(#54, attacco 07 P1) Canone ENFORCED, non solo dichiarato. Due sentinelle:
+    1. id-collision: due note ATTIVE (fuori _ARCHIVIO/_PROPOSTI) con lo stesso
+       EP-id nel vault = due verita' per lo stesso episodio servite dal RAG
+       (successo con EP_N2_01 'bottone' vs 'bambina' — nessuno lo rilevava);
+    2. _CANONE.md: fermo da CANONE_VAULT_STALE_DAYS+ O serie EP_N2 su disco oltre
+       il massimo che il canone dichiara -> la verita' unica sta derivando
+       (la serie si auto-genera ogni notte, il canone no).
+    Ogni rottura -> log_issues (diventa critica in cartella clinica)."""
+    storie = MENTE_DIR / "STORIE"
+    out = {"id_collisions": 0, "canone_age_days": None,
+           "max_ep_disco": None, "max_ep_canone": None}
+    ep_rx = re.compile(r"^(EP_(?:[A-Z0-9]+_)+?\d+)")
+
+    # 1 — collisioni id tra note attive
+    try:
+        seen: dict[str, str] = {}
+        collisions = []
+        if storie.exists():
+            for f in sorted(storie.rglob("EP_*.md")):
+                if any(p.startswith("_") for p in f.relative_to(storie).parts[:-1]):
+                    continue
+                m = ep_rx.match(f.stem)
+                if not m:
+                    continue
+                eid = m.group(1).upper()
+                if eid in seen:
+                    collisions.append(f"{eid} ({seen[eid]} vs {f.name})")
+                else:
+                    seen[eid] = f.name
+        out["id_collisions"] = len(collisions)
+        for c in collisions[:5]:
+            signals["log_issues"].append({
+                "log": "vault STORIE", "tipo": "id-collision canone",
+                "riga": f"due note attive per {c} — due verita' nel RAG",
+                "data": TODAY,
+            })
+    except Exception as e:
+        logger.warning("check id-collision saltato: %s", e)
+
+    # 2 — freshness/copertura _CANONE.md
+    try:
+        canone = MENTE_DIR / "_CANONE.md"
+        if canone.exists():
+            age = (datetime.now() - datetime.fromtimestamp(canone.stat().st_mtime)).days
+            out["canone_age_days"] = age
+            text = canone.read_text(encoding="utf-8", errors="replace")
+            declared = [int(n) for n in re.findall(r"EP_N2_(\d{1,3})", text)]
+            declared += [int(m.group(1)) for m in
+                         re.finditer(r"EP_N2_\d{1,3}\s*(?:…|\.{2,3})\s*(\d{1,3})", text)]
+            out["max_ep_canone"] = max(declared) if declared else None
+            disk = []
+            if storie.exists():
+                for f in storie.rglob("EP_N2_*.md"):
+                    if any(p.startswith("_") for p in f.relative_to(storie).parts[:-1]):
+                        continue
+                    m = re.match(r"EP_N2_(\d{1,3})", f.name)
+                    if m:
+                        disk.append(int(m.group(1)))
+            out["max_ep_disco"] = max(disk) if disk else None
+            if age > CANONE_VAULT_STALE_DAYS:
+                signals["log_issues"].append({
+                    "log": "_CANONE.md", "tipo": "verita' unica stantia",
+                    "riga": f"_CANONE.md fermo da {age} giorni (soglia {CANONE_VAULT_STALE_DAYS}) "
+                            "mentre la serie si auto-genera ogni notte",
+                    "data": TODAY,
+                })
+            if (out["max_ep_disco"] and out["max_ep_canone"]
+                    and out["max_ep_disco"] > out["max_ep_canone"]):
+                signals["log_issues"].append({
+                    "log": "_CANONE.md", "tipo": "serie oltre il canone dichiarato",
+                    "riga": f"su disco EP_N2_{out['max_ep_disco']:02d}, il canone dichiara "
+                            f"EP_N2_{out['max_ep_canone']:02d}: aggiornare _CANONE.md",
+                    "data": TODAY,
+                })
+    except Exception as e:
+        logger.warning("check freshness _CANONE saltato: %s", e)
+
+    signals["canone_vault"] = out
+
+
 def check_canone_manuale(signals: dict) -> None:
     """(#54) Riconciliazione canone manuale: conta le critiche attive in
     critiche_manuali.json e misura la freschezza del file. Se il canone e'
@@ -490,6 +576,7 @@ def write_health(signals: dict, stats: dict):
         "log_issues": signals["log_issues"],
         "vault_orphans": signals.get("vault_orphans", 0),
         "canone_manuale": signals.get("canone_manuale", {}),
+        "canone_vault": signals.get("canone_vault", {}),
         "critiche": stats,
         "verdict": "ATTENZIONE" if signals["log_issues"] else "OK",
     }
@@ -521,6 +608,7 @@ def main():
                 signals["rag_chunks"], len(signals["log_issues"]))
 
     check_canone_manuale(signals)
+    check_canone_vault(signals)
     critiche = critiche_via_llm(signals)
     if critiche is None:
         signals["_fonte"] = "auto-audit (regole)"
