@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  EP_AUTO_003](#titaniumos-epauto003)
+  - [Il Sistema che Mente](#il-sistema-che-mente)
+    - [2026-07-06  Inventario notturno](#2026-07-06-inventario-notturno)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  LATTACCO](#atto-i-lattacco)
+  - [ATTO II  I TRE PUNTI STANTII](#atto-ii-i-tre-punti-stantii)
+  - [ATTO III  COSA SIGNIFICA CONTARE](#atto-iii-cosa-significa-contare)
+  - [CHIUSURA](#chiusura)
+  - [REEL_HOOK](#reelhook)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — EP_AUTO_003
 ## "Il Sistema che Mente"
 ### *2026-07-06 — Inventario notturno*
