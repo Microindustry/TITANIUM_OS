@@ -354,7 +354,7 @@ def critiche_via_llm(signals: dict) -> list[dict] | None:
         logger.warning("anthropic non installato -> fallback a regole")
         return None
     try:
-        client = anthropic.Anthropic(api_key=api_key)
+        client = anthropic.Anthropic(api_key=api_key, max_retries=4)
         resp = client.messages.create(
             model=MODEL, max_tokens=2500, system=SYSTEM_PROMPT,
             messages=[{"role": "user",

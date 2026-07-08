@@ -411,7 +411,7 @@ def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool 
     if not api_key:
         logger.error("ANTHROPIC_API_KEY assente — impossibile generare")
         return None
-    client = anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key, max_retries=4)
 
     ep_id = meta.get("id") or next_episode_id()
     meta.setdefault("regione", 0)

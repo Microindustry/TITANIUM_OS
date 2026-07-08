@@ -265,7 +265,7 @@ def generate_episode(group: dict, sessions: list[str], snapshot: dict) -> str:
     if not api_key:
         return ""
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key, max_retries=4)
 
     commits_text = "\n".join(
         f"- [{c['date']}] {c['subject']}" + (f"\n  {c['body']}" if c['body'] else "")

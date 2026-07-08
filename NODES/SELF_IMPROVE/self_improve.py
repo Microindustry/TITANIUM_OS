@@ -100,7 +100,7 @@ def proposte_via_llm(signals: dict):
         return None
     try:
         import anthropic
-        client = anthropic.Anthropic(api_key=key)
+        client = anthropic.Anthropic(api_key=key, max_retries=4)
         resp = client.messages.create(
             model=MODEL, max_tokens=2000, system=SYSTEM,
             messages=[{"role": "user", "content": "Segnali di stanotte:\n" + json.dumps(signals, ensure_ascii=False, indent=2)}],
