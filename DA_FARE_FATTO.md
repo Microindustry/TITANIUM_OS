@@ -86,6 +86,86 @@
 
 ---
 
+## Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro
+
+*Modo ingegnerizzato (ordine #56). Notte: solo i soliti 429 Semantic Scholar (gated) +
+_CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5 scaletta).*
+
+**DECISIONE FONDANTE (Matteo, "questo messaggio è importante"):**
+- [✓] **HR = PIATTAFORMA A 3 STRATI, non il CV di Matteo**: grafo (verità: competenze
+  personali+professionali con prove reali, multi-persona by design) → mappa a livelli
+  (leggibilità: un grafo grezzo è oneroso da interpretare se non del mestiere) → Nina
+  (guida: spiega il grafo, l'IA, quello che il sistema fa adesso). Loop generativo:
+  ciò che sappiamo lo insegniamo, ciò che non sappiamo lo cerchiamo → "percorso alla
+  scoperta dei perché" → il motore genera guide per OGNI settore. Nina ≠ solo bambini:
+  è lo strato-guida universale (bambino = primo registro). Salvato in memoria Claude
+  (project_hr_piattaforma_tre_strati).
+
+**PUNTO 1 SCALETTA — ANALISI VALORE PER PILASTRO:**
+- [✓] **Doc fonte unica scritto**: `MENTE/SESSIONI/2026-07-08_valore-per-pilastro.md` —
+  frame 3 nature economiche (cassa breve: V32+EVA · prodotto/IP: MIMS+MOTORE ·
+  moltiplicatori: GENESIS-metodo+storie+CV vivo), IL MOTORE al centro, 7 voci pilastro
+  con valore-per-azienda + prodotto + numeri verificati + sezione "cosa NON promettiamo".
+  Leggi fissate: competenza senza prova non entra nel grafo; vincolo anti-piattaforma
+  (schema multi-persona subito, prodotto per 1 persona + 2-3 settori profondi prima).
+- [✓] **RAG aggiornato**: rebuild incrementale +1 file → 18.323 chunk / 404 file, verde.
+- [✓] **Commit MENTE** (git locale): 3546e58 + 64abae3 (appendice messaggio verbatim).
+- [✓] **Card home "Valore" DERIVATA dal doc** (pattern au18): `sync_valore.py` genera
+  `valoreData.json` dal doc MENTE (parser che fallisce ad alta voce se il doc cambia
+  struttura); `ValoreCard` in home dopo i pilastri — 3 strati del motore, LEGGE,
+  messaggio fondante di Matteo (verbatim, espandibile), 3 nature, 7 pilastri
+  espandibili. tsc EXIT 0, commit 8b2ebaa6.
+
+**ORDINE MATTEO (uscendo, 08/07 sera) — PRIORITÀ RIVISTE:**
+> "Non con episodi ma nel sistemare ECOSISTEMA. Episodi li facciamo INSIEME."
+
+**SCALETTA #57+ AGGIORNATA (in ordine di priorità):**
+1. [◐] **ECOSISTEMA IN ORDINE (io, da solo)** — igiene e fix, additivo:
+   a. [✓] mini-fix `_CANONE.md`: serie ora EP_N2_01…52 — scoperto che il loop ha
+      RIUSATO i numeri 51/52 (vecchi "sussurratore" in _ARCHIVIO dal 04/07, nuovi
+      "cartellino sulla stoffa"/"battito del guardiano" del 08/07). Commit MENTE d49983e.
+   b. [✓] sessione CVE — **19 CVE chiuse** (42→23): aiohttp 3.14.1, cryptography 48.0.1,
+      pydantic-settings 2.14.2, python-multipart 0.0.31, setuptools 83.0.0,
+      yt-dlp 2026.7.4. Verificato post-fix: torch 2.6.0+cu124 (CUDA ok) e chromadb
+      0.5.23 INTATTI, RAG incrementale verde, pip-audit ricontato (23 residue).
+   b2. [ ] **cluster major RINVIATO** (23 CVE residue in 3 pacchetti): gradio 5→6 +
+      pillow 11→12 + starlette 0.5→1.x vanno INSIEME (gradio pinna pillow<12) e
+      toccano lo stack finetune (llamafactory). Proposta: isolare llamafactory in
+      venv separato → il Python di sistema si libera dei pin. Da decidere con Matteo.
+   c. [✗] viste doppie neuro/sinapsi — GATED ("decidere insieme prima di togliere"),
+      resta per quando c'è Matteo
+   d. [◐] backlog #52 — ondata igiene serale 08/07 (commit 672a312d + c564e423):
+      · [✓] 04 retry LLM: `max_retries=4` sui 4 agenti notturni (story/self_improve/
+        night_audit/nina_agent) — py_compile verde
+      · [✓] 04 `ecosystemTree.ts`: via hardcode `benen` + layout Getac annidato →
+        notazione `~`, path corretti
+      · [✓] 05 F5 watcher: eviction `last_seen` DETERMINISTICA (era list(set) → id
+        evinti a caso, item vecchi rientravano "nuovi") + dedup criticità per id
+      · [✓] 05 F8/F9 watcher: log "salvati X/Y" sul cap + via doppio `import os`
+        (nota: fix watcher finiti nel commit c564e423 insieme alla dashboard —
+        here-string PS fallita a metà, storia non riscritta per regola additiva)
+      · [✓] 01 P5: `bg-[#020617]` → `var(--shell-bg)` in Controllo/Procedimenti/
+        Storie (i "quattro neri" ora sono token) — tsc EXIT 0
+      · [✓] STANTIE verificate e chiuse (già fixate in #53, il backlog non lo sapeva):
+        01 P4 (CSS invalido — rimosso, commento in index.css:93) · 05 F4 (query
+        GitHub — `&sort=updated` è già parametro, watcher.py:219) · 07 P1 (doppio
+        EP_N2_01 — non esiste più, 52 file uno per numero)
+      · [ ] restano le voci grosse: 01 P7 naming caroselli · P9 tema light tappa 2 ·
+        P10 aria · P12 scala tipografica · 04 NEXUS morto+detriti disco (2.24GB
+        chroma_db_* — deleto solo con ok Matteo) · 05 F7 sorgenti mancanti ·
+        06 gestionale (D1-D9 dati) · 07 canon-pin RRF
+2. [ ] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
+   (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
+   sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
+3. [ ] **HR/CV vivo** (punto 2 vecchia scaletta, ora informato dal motore): vista CV
+   derivata dal grafo competenze, schema multi-persona (mai hardcoded su Matteo),
+   ogni skill → prova reale. Requisiti→design con Matteo prima del codice.
+4. [ ] **Interfacce/"il miglior luogo per il tutto"**: aggiornare le viste alla nuova
+   visione (motore al centro), continuare il declutter delle 3 facce.
+5. [ ] Attivazione PUBBLICAZIONI: passi 1-4 gated Matteo (~1h), poi 5-9 Claude.
+
+---
+
 ## Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)
 
 *Si riparte dal punto 1 della bussola #55: resto del filone verità sparsa. Notte pulita
