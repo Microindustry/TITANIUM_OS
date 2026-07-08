@@ -85,6 +85,9 @@ const GRUPPI: Gruppo[] = [
       { nome: "Mappa dell'Avventura", stato: "on", goto: "avventura-mappa",
         cosa: "Il mondo di Nina a livelli: le 7 Regioni (la storia dell'IA) ancorate al progetto reale.",
         come: "Apri la mappa: scendi nelle Regioni, vedi episodi e concetti." },
+      { nome: "Pubblicazioni", stato: "pronto", goto: "pubblicazioni",
+        cosa: "La terza faccia: come i caroselli (Nina + storie in prima persona) escono verso il mondo. Stack deciso: Postiz + API ufficiale Meta.",
+        come: "Vista 'Pubblicazioni': cosa abbiamo scelto, la pipeline, e la scaletta di attivazione da fare insieme (mail, pagina FB/IG, Docker)." },
     ],
   },
   {

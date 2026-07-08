@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot,
+  FlaskConical, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -60,36 +60,42 @@ const MappaGiocoView     = lazy(() => import("./components/MappaGiocoView").then
 const PitchProgettoView  = lazy(() => import("./components/PitchProgettoView").then(m => ({ default: m.PitchProgettoView })));
 const SpiegaPilastroView = lazy(() => import("./components/SpiegaPilastroView").then(m => ({ default: m.SpiegaPilastroView })));
 const CalendarioView     = lazy(() => import("./components/CalendarioView").then(m => ({ default: m.CalendarioView })));
+const PubblicazioniView  = lazy(() => import("./components/PubblicazioniView").then(m => ({ default: m.PubblicazioniView })));
 
-// ── SIDEBAR CONFIG ────────────────────────────────────────────────────────────
+// ── SIDEBAR CONFIG — 3 FACCE (decisione Matteo 08/07, sess #56) ───────────────
+// TITANIUM = il sistema (pilastri + governo) · NINA = il prodotto educativo ·
+// PUBBLICAZIONI = l'output verso il mondo. Stessi id/view (deep-link intatti),
+// cambia solo il raggruppamento.
 interface NavItem {
   id: ViewMode;
   label: string;
   icon: typeof Home;
   color: string;
-  group: "pillars" | "system";
+  group: "pillars" | "system" | "nina" | "pub";
   dot?: string;        // colore dot status
 }
 
 const NAV_ITEMS: NavItem[] = [
-  // Pilastri
+  // TITANIUM · Pilastri
   { id: "home",     label: "HOME",     icon: Home,          color: "text-slate-300",  group: "pillars", dot: "bg-emerald-500" },
   { id: "v32",      label: "V32",      icon: Box,           color: "text-emerald-400",group: "pillars", dot: "bg-emerald-400" },
   { id: "genesis",  label: "GENESIS",  icon: Cpu,           color: "text-cyan-400",   group: "pillars", dot: "bg-cyan-400"    },
   { id: "mims",     label: "MIMS",     icon: Layers,        color: "text-amber-400",  group: "pillars", dot: "bg-amber-400"   },
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
   { id: "identity", label: "CV",       icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
-  // Sistema
+  // TITANIUM · Sistema
   { id: "controllo",   label: "CONTROLLO",   icon: Gauge,         color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
-  { id: "storie",        label: "STORIE · SISTEMA",   icon: Mic,      color: "text-rose-400",   group: "system"  },
-  { id: "nina-giorno0",  label: "NINA · DAL GIORNO 0", icon: Sparkles, color: "text-pink-400",   group: "system"  },
-  { id: "nina-archivio", label: "NINA · ARCHIVIO",     icon: Bot,      color: "text-pink-400",   group: "system"  },
-  { id: "mappa",       label: "MAPPA NINA",  icon: Map,         color: "text-pink-400",   group: "system"  },
+  { id: "storie",      label: "STORIE · SISTEMA", icon: Mic,      color: "text-rose-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
+  // NINA — il prodotto educativo (l'Archivio è sotto-voce di DAL GIORNO 0)
+  { id: "nina-giorno0",  label: "DAL GIORNO 0", icon: Sparkles, color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
+  { id: "mappa",         label: "MAPPA",        icon: Map,      color: "text-pink-400", group: "nina" },
+  // PUBBLICAZIONI — l'output verso il mondo
+  { id: "pubblicazioni", label: "PUBBLICAZIONI", icon: Send, color: "text-orange-300", group: "pub", dot: "bg-orange-400" },
 ];
 
 const PILLAR_COLORS: Record<string, { bar: string; text: string }> = {
@@ -125,6 +131,8 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
 }) {
   const pillarItems = NAV_ITEMS.filter(n => n.group === "pillars");
   const systemItems = NAV_ITEMS.filter(n => n.group === "system");
+  const ninaItems   = NAV_ITEMS.filter(n => n.group === "nina");
+  const pubItems    = NAV_ITEMS.filter(n => n.group === "pub");
 
   const NavBtn = ({ item }: { item: NavItem }) => {
     const Icon = item.icon;
@@ -202,12 +210,12 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
         )}
       </div>
 
-      {/* Nav */}
+      {/* Nav — 3 FACCE: Titanium (pilastri+sistema) · Nina · Pubblicazioni */}
       <nav className="flex-1 overflow-y-auto p-2 space-y-0.5">
-        {/* Pilastri */}
+        {/* ══ FACCIA 1 · TITANIUM ══ */}
         {!collapsed && (
-          <div className="text-[7px] font-mono text-slate-700 uppercase tracking-[0.3em] px-3 py-2">
-            Pilastri
+          <div className="text-[7px] font-mono text-emerald-600/80 uppercase tracking-[0.3em] px-3 py-2">
+            Titanium · Pilastri
           </div>
         )}
         {pillarItems.map(item => (
@@ -232,12 +240,9 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
           </Fragment>
         ))}
 
-        {/* Separatore */}
-        <div className="my-2 border-t border-slate-800/60" />
-
         {!collapsed && (
-          <div className="text-[7px] font-mono text-slate-700 uppercase tracking-[0.3em] px-3 py-2">
-            Sistema
+          <div className="text-[7px] font-mono text-emerald-600/80 uppercase tracking-[0.3em] px-3 py-2">
+            Titanium · Sistema
           </div>
         )}
         {systemItems.map(item => (
@@ -274,7 +279,36 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 ))}
               </>
             )}
-            {/* Sotto-voce: Mappa-Gioco — annidata sotto MAPPA NINA */}
+          </Fragment>
+        ))}
+
+        {/* ══ FACCIA 2 · NINA — il prodotto educativo ══ */}
+        <div className="my-2 border-t border-slate-800/60" />
+        {!collapsed && (
+          <div className="text-[7px] font-mono text-pink-500/80 uppercase tracking-[0.3em] px-3 py-2">
+            Nina
+          </div>
+        )}
+        {ninaItems.map(item => (
+          <Fragment key={item.id}>
+            <NavBtn item={item} />
+            {/* Sotto-voce: Archivio — la memoria storica (EP_AV origine + versioni superate) */}
+            {item.id === "nina-giorno0" && !collapsed && (
+              <button
+                onClick={() => onNavigate("nina-archivio")}
+                title="Archivio Nina — gli episodi di origine (EP_AV) e le versioni superate: fuori dal canone, consultabili"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "nina-archivio"
+                    ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
+                    : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
+              >
+                <Bot size={11} className="flex-shrink-0 text-pink-400/80" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  Archivio
+                </span>
+              </button>
+            )}
+            {/* Sotto-voce: Mappa-Gioco — annidata sotto MAPPA */}
             {item.id === "mappa" && !collapsed && (
               <button
                 onClick={() => onNavigate("mappa-gioco")}
@@ -292,6 +326,15 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
             )}
           </Fragment>
         ))}
+
+        {/* ══ FACCIA 3 · PUBBLICAZIONI — l'output verso il mondo ══ */}
+        <div className="my-2 border-t border-slate-800/60" />
+        {!collapsed && (
+          <div className="text-[7px] font-mono text-orange-500/80 uppercase tracking-[0.3em] px-3 py-2">
+            Pubblicazioni
+          </div>
+        )}
+        {pubItems.map(item => <NavBtn key={item.id} item={item} />)}
       </nav>
 
       {/* Footer sidebar */}
@@ -515,6 +558,7 @@ function AppInner() {
             {view === "mappa-gioco" && <MappaGiocoView />}
             {view === "rete"     && <InventarioView />}
             {view === "calendario" && <CalendarioView />}
+            {view === "pubblicazioni" && <PubblicazioniView />}
             {view === "ragchat"  && <RagChatView />}
             {/* Legacy — rimossi dalla sidebar ma ancora raggiungibili via CommandBar */}
             {view === "sinapsi"  && <LayersView />}

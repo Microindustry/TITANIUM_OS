@@ -111,10 +111,37 @@
   register_night_tasks.ps1 (task reali) · NODES/ (agenti). Contenuto storico intatto.
   Resta aperto solo il gap 13 workflow n8n (gc10).
 
+**FATTO (pomeriggio) — LE 3 FACCE (decisione Matteo):**
+- [✓] **RIPASSO #32→#56** scritto: `DOCS/RIPASSO_S32-56.md` — l'arco in 5 fasi, il
+  canone operativo (8 regole emerse sul campo), vivo/parcheggiato/superato, il
+  carattere (vittorie = decisione netta; pantani = verità sdoppiata + fretta), numeri.
+- [✓] **SIDEBAR A 3 FACCE**: TITANIUM (Pilastri+Sistema) · NINA (Dal giorno 0 +
+  Archivio sotto-voce + Mappa+Gioco) · PUBBLICAZIONI. Stessi id/view = deep-link
+  intatti. Risposta alla paura "tutto si basa su Nina": Nina è il primo treno,
+  la forza è la pipeline (fonte→storie→binari→formati→coda→pubblicazione).
+- [✓] **Vista PUBBLICAZIONI creata** (`PubblicazioniView`): cosa abbiamo trovato
+  (Postiz+Graph API+vincoli), come costruiremo (pipeline a 6 fasi), in base a cosa
+  (6 criteri), scaletta attivazione 9 passi (1-4 gated Matteo ~1h, 5-9 Claude).
+  In Centro di Controllo come "PRONTO". Nuovo binario deciso: storie di sistema
+  in PRIMA PERSONA (la voce di Matteo) accanto a Nina.
+- [✓] **Ricerca librerie RI-VERIFICATA (08/07, doc ufficiali)**: Postiz vivo
+  (v2.21.6, 31k stelle, MCP server nuovo → Claude può schedulare); IG carosello
+  max 10/JPEG/4:5-1.91:1/8MB; LinkedIn = PDF ≤300pag. Le nostre slide sono GIÀ
+  1080×1350 (4:5) = a norma: serve solo social-cut + PNG→PDF, zero redesign.
+- [✓] Decisione catturata in `MENTE/SESSIONI/2026-07-08_tre-facce-e-pubblicazioni.md`.
+
 **DA FARE:**
 - [✓] **1 · Resto filone verità sparsa**: SYSTEM_TREE (au18) + % MIMS (au09) +
   doc AUTOMATIONS_MASTER (au16) — tutti e tre chiusi
-- [ ] **2 · EP_N2_03 "la Misura"** — prossimo (vedi bussola #55 per il resto)
+- [ ] **2 · Analisi VALORE per pilastro** (richiesta Matteo 08/07): che valore dà a
+  un'azienda e in che prodotto economico si trasforma ognuno — doc MENTE prima,
+  card home derivata poi
+- [ ] **3 · HR/CV vivo** (Matteo: la vista CV oggi è "solo rumore"): derivare dal
+  grafo competenze + prove reali (milestone/episodi). Il progetto HR riprende.
+- [ ] **4 · EP_N2_03 "la Misura"** — nasce già nel formato doppio (social-cut ≤10 + 16 sito)
+- [ ] **5 · Attivazione PUBBLICAZIONI** — scaletta nella vista, passi 1-4 gated
+  (mail progetto, FB/IG Business, app Meta, Docker) poi 5-9 Claude
+- [ ] Resto: sessione CVE · viste doppie neuro/sinapsi · backlog #52
 
 ---
 
