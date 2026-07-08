@@ -1,4 +1,4 @@
-// ControlloView.tsx — Centro di Controllo: cosa hai, cosa fa, come si usa, se e' acceso
+﻿// ControlloView.tsx — Centro di Controllo: cosa hai, cosa fa, come si usa, se e' acceso
 // parte di: TITANIUM_OS / DASHBOARD
 // versione: 1.0 / data: 2026-06-07
 // Scopo: UN posto solo per governare tutti gli strumenti senza tenerli a mente (anti-sovraccarico).
@@ -153,7 +153,7 @@ export function ControlloView() {
   }, {} as Record<string, number>);
 
   return (
-    <div className="h-full overflow-y-auto bg-[#020617]" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
+    <div className="h-full overflow-y-auto bg-[var(--shell-bg)]" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
       <div className="max-w-5xl mx-auto px-6 py-6">
 
         {/* Header */}

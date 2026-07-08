@@ -11,11 +11,13 @@ export interface EcoNode {
   children?: EcoNode[];
 }
 
-const _u = 'benen';
-const R  = `C:/Users/${_u}/TITANIUM_OS/TITANIUM_OS`;
-const M  = `C:/Users/${_u}/MICROINDUSTRY/MENTE`;
-const S  = `C:/Users/${_u}/MICROINDUSTRY/WORKSPACE`;
-const CE = `C:/Users/${_u}/MICROINDUSTRY/CONTENT_ENGINE`;
+// Path DISPLAY-ONLY (etichette in dashboard): notazione ~ per non hardcodare
+// l'utente (era `benen` + layout annidato del Getac — backlog #52, 04). Sul fisso
+// il repo e' PIATTO: ~/TITANIUM_OS.
+const R  = `~/TITANIUM_OS`;
+const M  = `~/MICROINDUSTRY/MENTE`;
+const S  = `~/MICROINDUSTRY/WORKSPACE`;
+const CE = `~/MICROINDUSTRY/CONTENT_ENGINE`;
 
 export const ECOSYSTEM_TREE: EcoNode = {
   id: "root",

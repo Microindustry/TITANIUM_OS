@@ -1,4 +1,4 @@
-// ProcedimentiView.tsx — "come gira il sistema": apertura, profilo, automazioni, risultato
+﻿// ProcedimentiView.tsx — "come gira il sistema": apertura, profilo, automazioni, risultato
 // parte di: TITANIUM_OS / DASHBOARD
 // versione: 1.0 / data: 2026-06-09
 // Consultabile da: stato "API live" (sidebar) -> click. Spiega il procedimento e cosa otteniamo.
@@ -66,7 +66,7 @@ const RISULTATI = [
 export function ProcedimentiView() {
   const sys = useGlobalState();
   return (
-    <div className="h-full overflow-y-auto bg-[#020617]" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
+    <div className="h-full overflow-y-auto bg-[var(--shell-bg)]" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
       <div className="max-w-4xl mx-auto px-6 py-6">
 
         {/* Header */}

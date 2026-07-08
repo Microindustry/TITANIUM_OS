@@ -1,4 +1,4 @@
-// StorieView.tsx — Inventario episodi podcast + LLM training dataset
+﻿// StorieView.tsx — Inventario episodi podcast + LLM training dataset
 // parte di: TITANIUM_OS / DASHBOARD
 // versione: 3.0 / data: 2026-06-07
 // v3.0: stagioni a fisarmonica (divisione chiara), titoli leggibili, flood AUTO chiuso di default
@@ -438,7 +438,7 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
   const readyCount = modeEps.filter(e => e.status === "ready").length;
 
   return (
-    <div className="flex flex-col h-full bg-[#020617] overflow-hidden" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
+    <div className="flex flex-col h-full bg-[var(--shell-bg)] overflow-hidden" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
 
       {/* ── Header ── */}
       <div className="shrink-0 px-6 pt-5 pb-4 border-b border-slate-800/60">

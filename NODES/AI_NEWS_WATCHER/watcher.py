@@ -7,7 +7,6 @@
 import os
 import re
 import sys
-import os
 import json
 import time
 import argparse
@@ -343,16 +342,29 @@ def run_once(force: bool = False, only_kind: str | None = None) -> dict:
             continue
         checked += 1
         items = fetch(src) or []
-        seen = set(src.get("last_seen") or [])
+        seen_list = src.get("last_seen") or []
+        seen = set(seen_list)
         fresh = [it for it in items if it.get("id") and it["id"] not in seen]
-        # aggiorna finestra "viste" (cap 200)
-        src["last_seen"] = ([it["id"] for it in items] + list(seen))[:200]
+        # aggiorna finestra "viste" (cap 200) — ordine DETERMINISTICO: nuovi in testa,
+        # poi la lista precedente (05 F5: prima `list(set)` evinceva id a caso e un
+        # item vecchio poteva rientrare come "nuovo")
+        new_ids = [it["id"] for it in items if it.get("id")]
+        new_ids_set = set(new_ids)
+        src["last_seen"] = (new_ids + [i for i in seen_list if i not in new_ids_set])[:200]
         src["last_check"] = _now_iso()
         if fresh:
             src["signals"] = ([_now_iso()] + (src.get("signals") or []))[:20]
+            # (05 F5) dedup: mai due criticita' con lo stesso id
+            crit_ids = {c.get("id") for c in st["criticita"]}
+            salvati = 0
             for it in fresh[:8]:
+                cid = f"{src['kind']}:{src['handle']}:{it['id']}"[:120]
+                if cid in crit_ids:
+                    continue
+                crit_ids.add(cid)
+                salvati += 1
                 st["criticita"].insert(0, {
-                    "id": f"{src['kind']}:{src['handle']}:{it['id']}"[:120],
+                    "id": cid,
                     "fonte": src["name"],
                     "url": it.get("url", ""),
                     "sintesi": it.get("title", "")[:200],
@@ -362,7 +374,9 @@ def run_once(force: bool = False, only_kind: str | None = None) -> dict:
                     "visto_il": _today(),
                 })
             new_total += len(fresh)
-            logger.info("[%s] %s -> %d nuovi", src["kind"], src["name"], len(fresh))
+            # (05 F8) il cap non e' piu' silenzioso: salvati X su Y trovati
+            logger.info("[%s] %s -> %d nuovi (salvati %d/%d)",
+                        src["kind"], src["name"], len(fresh), salvati, len(fresh))
     st["criticita"] = st["criticita"][:300]
     _apply_rotation(st)
     save_state(st)
