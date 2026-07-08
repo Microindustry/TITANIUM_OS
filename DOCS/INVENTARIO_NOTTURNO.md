@@ -29,6 +29,27 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-08 · 15 commit
+- `389936fb` auto: night_audit - cartella clinica 08/07/2026
+- `2e63de91` auto: story_agent - episodi generati 08/07/2026
+- `97feab3e` chore(salva): chiusura #55 — piano #54 COMPLETO (ondate A-B-C) + verita sparsa + STATE salvato
+- `1e4daf0c` feat(#54): STATE snapshot giornaliero + vista CRITICHE eliminata -> CRITICHE.md
+- `bb9bc59f` chore(#54): critica gc01 (NodeTile 4 copie) chiusa nel canone live
+- `9c840650` fix(#54): STATE.json clobber curato alla radice + STATE ripristinato integrale
+- `74053de9` refactor(#54): NodeKit - NodeTile/NodeLevel condivisi, via 4 copie (critica gc03)
+- `56c3cfb9` feat(#54): ondata C completata - 4 sentinelle notturne + pip-audit + graphify refresh
+- `0b6d10e9` feat(#54): canone ENFORCED - canon-pin nel retrieval + sentinelle night_audit (07 P1)
+- `23c705e9` feat(#54): TOP10 #3 chiuso (rebuild esclusivo) + guardia API + indici-verita' agganciati
+- `ad380b83` fix(#54): doppio watchdog risolto alla radice + gitignore logs + indice core
+- `dc72c8b6` feat(#54): retention.py - regola scritta detriti disco + fix deep_freeze chroma
+- `cd386b5a` fix(boot): dashboard 5173 non partiva - vite 7 rifiuta --silent passato da pnpm
+- `fef982ea` auto: story_agent - episodi generati 07/07/2026
+- `8c6c88b8` auto: night_audit - cartella clinica 07/07/2026
+
+_episodi: 263 · critiche aperte: 24 (129 risolte) · RAG: 18276 chunk_
+
+
+
 ## 2026-07-06 · 2 commit
 - `6e4c5157` chore(#54): bussola — critiche live fatte (2b8bfafe), Nina v1.1 verificata in produzione (EP_N2_51 stanotte)
 - `2b8bfafe` feat(#54): critiche dash LIVE — canone manuale da criticheData.ts a JSON servito da /api
