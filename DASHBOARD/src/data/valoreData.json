@@ -1,0 +1,94 @@
+{
+  "_generato_da": "AUTOMATIONS/tools/sync_valore.py — NON editare a mano",
+  "_fonte_unica": "MENTE/SESSIONI/2026-07-08_valore-per-pilastro.md",
+  "_generato_il": "2026-07-08T20:54:00",
+  "frame": [
+    {
+      "natura": "Vendono ore/servizi ORA",
+      "pilastri": "V32, EVA",
+      "orizzonte": "cassa breve (settimane/mesi)"
+    },
+    {
+      "natura": "Vendono prodotto/IP DOPO",
+      "pilastri": "MIMS, IL MOTORE (Nina+HR)",
+      "orizzonte": "tetto alto, ciclo lungo (anni)"
+    },
+    {
+      "natura": "Moltiplicano il valore degli altri",
+      "pilastri": "GENESIS, Storie di sistema, CV vivo",
+      "orizzonte": "nessun fatturato proprio — e va bene"
+    }
+  ],
+  "motore": {
+    "strati": [
+      {
+        "nome": "IL GRAFO — la verità.",
+        "testo": "Le competenze di una persona (professionali + personali, profilo UNITO — decisione 16/06) agganciate a prove reali: milestone, episodi, commit, foto. Multi-persona by design: Matteo è il primo record, mai l'unico schema."
+      },
+      {
+        "nome": "LA MAPPA A LIVELLI — la leggibilità.",
+        "testo": "Un grafo grezzo è illeggibile per chi non è del mestiere. Il pattern N-livelli (nato proprio dal CV di Matteo, 28/05 — MatteoSection) è l'interfaccia umana del grafo: navigabile casella per casella."
+      },
+      {
+        "nome": "NINA — la guida.",
+        "testo": "Anche una mappa leggibile ha bisogno di chi spiega i *perché*. Nina è l'interprete: spiega il grafo, l'IA, quello che il sistema sta facendo adesso. Ogni episodio sblocca competenze/conoscenze e completa una casella (principio 9: il CV che si genera). Il bambino è il primo registro di Nina, NON il suo perimetro."
+      }
+    ],
+    "legge": "una competenza senza prova NON entra nel grafo. È l'unica differenza tra questo e l'autodichiarazione stile LinkedIn.",
+    "vincolo": "schema multi-persona da subito, ma prodotto per UNA persona (Matteo = demo vivente) e 2-3 settori profondi (CNC, saldatura, IA) PRIMA di qualsiasi apertura ad altri. L'istanza provata viene prima della piattaforma.",
+    "loop": "sappiamo come si fa una CNC → lo insegniamo perché l'abbiamo fatto. NON sappiamo una cosa → la cerchiamo e costruiamo il **percorso alla scoperta dei perché**. Quindi il motore genera guide per QUALSIASI settore: ogni nuovo settore = un nuovo percorso, non nuovo software."
+  },
+  "pilastri": [
+    {
+      "titolo": "V32 — il valore è la capacità, non la macchina",
+      "valore": "prototipi e piccole serie di precisione senza officine esterne, minimi d'ordine, settimane di attesa. Con EUR 2.250 di investimento: ±0.019 mm (IT6-IT7), 178 kg corpo unico.",
+      "prodotto": "ore Precision Lab a EUR 45/h (BEP 61 ore = 1.4 mesi, ROI anno 1: 322%) + gli stampi per MIMS — integrazione verticale: V32 è il mezzo di produzione dell'altro pilastro, non solo conto terzi.",
+      "natura": "cassa breve. Gate attuale: mandrino 2.2kW ER20 da ordinare."
+    },
+    {
+      "titolo": "MIMS — l'unico prodotto fisico scalabile",
+      "valore": "sistema costruttivo modulare che compete con l'alluminio estruso dove quello è sovradimensionato (10+ applicazioni mappate).",
+      "prodotto": "vendita moduli/kit + licensing IP (3 brevetti di cui B2 urgente, 6 trade secrets, moat a 6 strati). Il valore OGGI è l'IP, non il fatturato.",
+      "natura": "tetto alto, ciclo lungo. Gate: pressa (waiting_press)."
+    },
+    {
+      "titolo": "GENESIS — il sistema È il prodotto (ora con un nome)",
+      "valore": "la dimostrazione vivente che una persona sola, con ADHD, gestisce un'operazione multi-pilastro con AI: RAG (~6.500 chunk), automazioni notturne, dashboard, agenti. Ogni PMI artigiana ha lo stesso problema: sapere in testa a una persona, zero sistemi.",
+      "prodotto": "il metodo replicabile (setup + consulenza per artigiani/PMI) + l'asset centrale del pitch col partner software. E ora il \"sistema è il prodotto\" ha una forma concreta: IL MOTORE è il prodotto-piattaforma di GENESIS.",
+      "natura": "moltiplicatore CHE contiene un prodotto (il motore)."
+    },
+    {
+      "titolo": "NINA — lo strato-guida del motore",
+      "valore": "l'unica collana educativa AI in cui ogni concetto corrisponde a un pezzo vero e funzionante del sistema (quando Nina impara il RAG, il RAG esiste, coi numeri veri).",
+      "prodotto": "caroselli → audience → libro/collana → adozione scolastica/editoriale. Nina = primo treno perché ha il ciclo più corto e la pipeline già pronta.",
+      "natura": "prodotto/IP, ciclo medio. NON è \"solo per bambini\": è la voce del motore."
+    },
+    {
+      "titolo": "EVA — il pilota che diventa servizio",
+      "valore": "Vita Natura è il banco prova reale (prenotazioni WhatsApp, front-desk); ogni centro estetico/parrucchiere/studio della zona ha lo stesso identico problema.",
+      "prodotto": "setup + canone mensile per PMI locali. Ricavo ricorrente, ciclo corto.",
+      "natura": "cassa breve (seconda gamba dopo le ore V32)."
+    },
+    {
+      "titolo": "STORIE DI SISTEMA (voce Matteo) — il moltiplicatore trasversale",
+      "valore": "il canale di fiducia per tutto il resto: clienti a V32, credibilità a MIMS, audience a Nina, posizionamento per il pitch. Regola 4 fatta prodotto (1 input → N output).",
+      "prodotto": "audience + inbound. NON genera euro diretti e non deve.",
+      "natura": "moltiplicatore. Nella card home: riga trasversale, non card a sé."
+    },
+    {
+      "titolo": "CV VIVO (di Matteo) — la prima istanza del motore",
+      "valore": "competenze con prove, non con parole — la risposta al \"CV che nessuno capisce\" (EP_S2_04). Alza il prezzo di tutto: tariffa, consulenze, pitch.",
+      "prodotto": "non si vende da solo — è demo pubblica del motore + moltiplicatore.",
+      "natura": ""
+    }
+  ],
+  "non_promesse": [
+    "Il motore NON fa cassa presto: la cassa breve resta V32 ore + EVA.",
+    "MIMS resta gated dalla pressa; il suo valore attuale è l'IP.",
+    "I moltiplicatori (GENESIS-metodo, storie, CV vivo) non si misurano in euro diretti:"
+  ],
+  "messaggio_matteo": {
+    "data": "2026-07-08",
+    "testo": "SI MA IL MIO COME QUELLO DI CHIUNQUE PUO ESSERE INSERITO E AVERE IL PROPRIO GRAFFO DI COMPETENZE PERSONALI E PROFESSIONALI POI È UN PO L'IDEA ANCHE DELLA MAPPA DI NINA OGNI EPISODIO SBLOCCA COMPETENZE CONOSCENZE E COMPLETA UNA CASELLA IN MODO EVOLUTO NOI SAPPIAMO COME SI FA UNA CNC O ANCHE SE NON LO SAPPIAMO LO CERCHIAMO E CREIAMO UN VERO E PROPRIO PERCORSO ALLA SCOPERTA DEI PERCHÉ LA MAPPA A LV COME HR PROGETTO SONO IN SIMBIOSI ecosistema ED È COSÌ CHE NOI POSSIAMO PERMETTERCI DI INSEGNARE QUELLO CHE ABBIAMO FATTO NELLA NOSTRA CON NINA MA POSSIAMO ANCHE RENDERLO E AMPLIARLO IN OGNI SETTORE COME SE FOSSE UNA GUIDA LA MAPPA A LV PERCHÉ UN GRAFO DIVENTA DIFFICILE E/O ONEROSO ANCHE SOLO DA INTERPRETARE SE NON DEL MESTIERE E QUI NINA CI SPIEGA IL GRAFO IA ECC QUELLO CHE STA FACENDO ADESSO QUESTO È IL CONCETTO"
+  }
+}

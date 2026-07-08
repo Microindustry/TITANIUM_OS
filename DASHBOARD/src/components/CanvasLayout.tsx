@@ -10,6 +10,7 @@ import {
 import { useGlobalState } from "../hooks/SystemStateContext";
 import { useUIStore } from "../stores/systemStore";
 import { MatteoSection } from "./MatteoSection";
+import { ValoreCard } from "./ValoreCard";
 import { MimsSection } from "./MimsSection";
 import { GenesisSection } from "./GenesisSection";
 import { ClaudeSection } from "./ClaudeSection";
@@ -590,6 +591,9 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
                 <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
               </div>
               <PillarGrid state={state} onEnter={pushRoom} />
+
+              {/* ── VALORE — derivata dal doc fonte in MENTE (sync_valore.py) ── */}
+              <ValoreCard />
 
               {/* ── SPLIT: sinistra=Identity, destra=navigazione ── */}
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-5 pt-2 border-t border-slate-800/40">
