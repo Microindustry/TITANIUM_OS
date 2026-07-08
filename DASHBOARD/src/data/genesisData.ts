@@ -131,7 +131,7 @@ export const GENESIS_ROOT: SkillNode = {
             leaf("ag02", "EVA — assistente WhatsApp Maria (prenotazioni Vita Natura)", "active", "Pilot v0.3 REALE in NODES/EVA: brain + prenotazione multi-turno + inbox handoff + webhook dry-run + test. Manca solo token WhatsApp + aggancio agenda."),
             leaf("ag03", "AVA — YouTube avatar — script, reel, contenuti", "future"),
             leaf("ag04", "ARIA — Life OS, ADHD scaffolding, scheduling", "future"),
-            leaf("ag05", "NEXUS — orchestratore swarm multi-agente", "active", "Live: NODES/NEXUS/nexus.py + tool MCP 'nexus' — ThreadPoolExecutor parallelo"),
+            leaf("ag05", "NEXUS — orchestratore swarm multi-agente", "future", "Codice scritto (NODES/NEXUS/nexus.py) ma IRRAGGIUNGIBILE: mcpServers vuoto, nessun percorso lo invoca (attacco #52, dominio 04). Riattivare o archiviare — decisione con Matteo."),
             leaf("ag06", "TESLA — hardware IoT, sensori, CNC monitoring", "future"),
             leaf("ag07", "FORGE — officina AI, saldatura, progettazione meccanica", "future"),
           ],
@@ -271,7 +271,7 @@ export const GENESIS_ROOT: SkillNode = {
         {
           id: "gr_next", label: "Prossimo", icon: "📈", status: "future", ...slate,
           children: [
-            leaf("gr05", "NEXUS swarm — live v1.0 (NODES/NEXUS + tool MCP)", "done"),
+            leaf("gr05", "NEXUS swarm — codice v1.0 scritto ma MAI cablato (irraggiungibile)", "future"),
             leaf("gr06", "TESLA — monitoring CNC IoT in tempo reale", "future"),
             leaf("gr07", "FORGE — AI officina: saldatura + progettazione", "future"),
             leaf("gr08", "LLM fine-tuned su episodi TITANIUM_OS", "future"),
