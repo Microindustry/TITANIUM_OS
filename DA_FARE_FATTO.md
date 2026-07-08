@@ -1,9 +1,11 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 55  07/07/2026  ONDATE A-B-C CHIUSE  verità sparsa  STATE salvato dal clobber](#sessione-55-07072026-ondate-a-b-c-chiuse-verità-sparsa-state-salvato-dal-clobber)
   - [Sessione 54  04/07/2026  PIANO DATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)](#sessione-54-04072026-piano-dattacco-ecosistema-in-ordine-prima-del-social-prima-dei-nuovi-episodi)
     - [DECISO 04/07  SOCIAL: ricerca fatta, stack SCELTO, si parcheggia (si riprende a casa in ordine)](#deciso-0407-social-ricerca-fatta-stack-scelto-si-parcheggia-si-riprende-a-casa-in-ordine)
     - [ONDATA A  CASA IN ORDINE (ogni file nella cartella giusta)](#ondata-a-casa-in-ordine-ogni-file-nella-cartella-giusta)
+    - [FILONE VERITÀ SPARSA  PULIZIA DASHBOARD (07/07 sera, su ordine Matteo)](#filone-verità-sparsa-pulizia-dashboard-0707-sera-su-ordine-matteo)
     - [ONDATA B  ECOSISTEMA CHE FUNZIONA (organi rotti o silenziosi)](#ondata-b-ecosistema-che-funziona-organi-rotti-o-silenziosi)
     - [ONDATA C  NOTTURNE DA IMPLEMENTARE (il sistema si mantiene da solo)](#ondata-c-notturne-da-implementare-il-sistema-si-mantiene-da-solo)
   - [Sessione 53  03/07/2026  OBSIDIAN ECOSISTEMA VERO (vault coeso, non solo senza orfani)](#sessione-53-03072026-obsidian-ecosistema-vero-vault-coeso-non-solo-senza-orfani)
@@ -80,6 +82,39 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)
+
+*Si riparte dal punto 1 della bussola #55: resto del filone verità sparsa. Notte pulita
+(solo i soliti 429 Semantic Scholar — fix = chiave gratuita in .env, gated Matteo).*
+
+**FATTO OGGI:**
+- [✓] **au18/gc04 CHIUSO — SYSTEM_TREE derivato, non più copiato**: nuova fonte unica
+  `DASHBOARD/src/data/mappaData.ts` — i rami V32/GENESIS/MIMS della Mappa (vista
+  ARCHITETTURA) sono DERIVATI dagli alberi N-livelli (skillTreeData/genesisData/mimsData)
+  con adapter SkillNode→MapNode; % sotto-nodi COMPUTATE dalle foglie (`nodeProgress`),
+  % pilastri live da STATE (come prima), ROOT = media computata (via il 51 a mano).
+  MappaView v5.1 (−84 righe di dati a mano). VITA_NATURA/IDENTITY vivono solo in
+  mappaData (non hanno ancora un albero sorgente). `pct_sync` v1.1: ritirata la parte
+  MappaView (ora derivata a runtime), resta su CanvasLayout. tsc -b EXIT 0, screenshot
+  ARCHITETTURA verificato, critiche gc04/att01/"fonte unica" aggiornate nel JSON.
+- [✓] **au09 DECISO — % MIMS computata vs dichiarata**: i due numeri misurano cose
+  diverse e restano entrambi ma con NOME esplicito — MimsSection/GenesisSection v1.1
+  mostrano "X% delle voci di questa mappa fatte" (computato dalle foglie) + accanto
+  "pilastro (STATE): Y%" (dichiarato, live via useGlobalState). Mai più due numeri
+  con lo stesso nome.
+- [✓] **au16 CHIUSO — AUTOMATIONS_MASTER.md declassato ad archivio storico** (v1.3):
+  NON si rigenera (mantenerla a mano era la causa del drift); banner in testa punta
+  alle 4 fonti VIVE: core/README.md (indice ~44 script) · vista AUTOMAZIONI (live) ·
+  register_night_tasks.ps1 (task reali) · NODES/ (agenti). Contenuto storico intatto.
+  Resta aperto solo il gap 13 workflow n8n (gc10).
+
+**DA FARE:**
+- [✓] **1 · Resto filone verità sparsa**: SYSTEM_TREE (au18) + % MIMS (au09) +
+  doc AUTOMATIONS_MASTER (au16) — tutti e tre chiusi
+- [ ] **2 · EP_N2_03 "la Misura"** — prossimo (vedi bussola #55 per il resto)
 
 ---
 

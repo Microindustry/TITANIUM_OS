@@ -16,14 +16,25 @@
 <!-- /TOC -->
 
 # AUTOMATIONS MASTER LIST
-**Versione**: 1.2
-**Aggiornato**: 2026-06-01
+**Versione**: 1.3 — **ARCHIVIO STORICO (fotografia marzo 2026)**
+**Aggiornato**: 2026-07-08 (declassato, sess #56 — filone "verità sparsa" au16)
 **Fonte**: Lista consolidata da esplorazione progetto + Protocollo Evolutivo MD-Cloud
 
-> ⚠ NOTA (audit Opus 01/06): questa lista NON include i nodi aggiunti dopo marzo —
+> 🗄 **QUESTO FILE NON È PIÙ LA FONTE.** La lista sotto è la fotografia di marzo 2026
+> e NON si aggiorna più (mantenerla a mano era la causa della doc divergente).
+> **La verità sulle automazioni oggi vive in 4 posti VIVI:**
+> 1. **`AUTOMATIONS/core/README.md`** — indice raggruppato dei ~44 script core
+>    (regola: nuovo script → nuova riga lì; creato 07/07/2026)
+> 2. **Vista AUTOMAZIONI della dashboard** — stato operativo LIVE di ogni pipeline
+>    (badge da `/api/watchdog/status` + `/api/tasks/notturne`)
+> 3. **`AUTOMATIONS/tools/register_night_tasks.ps1`** — i task schedulati reali
+>    (Task Scheduler è la verità su cosa gira di notte)
+> 4. **`NODES/`** — gli agenti (una cartella = un nodo autonomo)
+>
+> ⚠ NOTA (audit Opus 01/06, conservata): la lista sotto non include i nodi post-marzo —
 > MCP server (10 tool), NEXUS swarm, RAG v4.0 hybrid + graph, Story Agent, stop hooks,
-> ARGUS computer-use, watchdog swarm. Da rigenerare. I 13 workflow n8n non sono qui elencati
-> singolarmente (solo il Content Engine).
+> ARGUS computer-use, watchdog swarm. I 13 workflow n8n non sono elencati singolarmente
+> (gap doc ancora aperto, vedi critica n8n).
 
 ---
 

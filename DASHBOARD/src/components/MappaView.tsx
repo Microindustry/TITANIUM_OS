@@ -1,18 +1,11 @@
-// MappaView.tsx | TITANIUM_OS | v5.0 | 2026-05-31
+// MappaView.tsx | TITANIUM_OS | v5.1 | 2026-07-08
 // Cerchi SVG radiali N-livelli — estetica originale, drill controllabile, no force-graph
+// v5.1 (au18): SYSTEM_TREE non vive più qui — deriva da data/mappaData.ts (fonte unica)
 
 import { useState, useRef, useEffect, useMemo } from "react";
 import { ChevronLeft, Activity } from "lucide-react";
 import { EPISODES, type Episode } from "../data/storieData";
-
-// ── TIPI ─────────────────────────────────────────────────────────────────────
-type NodeStatus = "active" | "building" | "pending" | "future";
-
-interface MapNode {
-  id: string; label: string; type: "root" | "pillar" | "node" | "leaf";
-  status: NodeStatus; pillar: string; desc: string; pct?: number;
-  hasChildren?: boolean; children?: MapNode[]; isLeaf?: boolean;
-}
+import { ROOT_NODE, SYSTEM_TREE, type MapNode, type NodeStatus } from "../data/mappaData";
 
 // ── PALETTE ───────────────────────────────────────────────────────────────────
 const PILLAR_HEX: Record<string, string> = {
@@ -30,90 +23,6 @@ function nodeCol(n: MapNode): string {
 const NODE_ICON: Record<string, string> = {
   OS: "⬡", V32: "🔩", MIMS: "⬡", GENESIS: "⬡", VITA_NATURA: "🌿", IDENTITY: "🧭",
 };
-
-// ── DATI SISTEMA ──────────────────────────────────────────────────────────────
-const ROOT_NODE: MapNode = {
-  id: "OS", label: "TITANIUM OS", type: "root", status: "active",
-  pillar: "ROOT", desc: "Sistema operativo cognitivo di Matteo Benenati. V32+MIMS+GENESIS+VITA NATURA+IDENTITY.", pct: 51,
-};
-
-const SYSTEM_TREE: MapNode[] = [
-  {
-    id: "V32", label: "V32 CNC", type: "pillar", status: "active", pillar: "V32",
-    desc: "Fresatrice 3 assi · 178kg corpo unico · ±0.019mm · Config G 65%", pct: 65, hasChildren: true,
-    children: [
-      { id:"v32-struttura", label:"STRUTTURA",   type:"leaf", status:"active",   pillar:"V32", pct:65, desc:"Telaio 40×40×3 S235 · colonne 60×60 · gusset 200mm Config G · diagonali · tiranti M10", isLeaf:true },
-      { id:"v32-assi",      label:"ASSI X/Y/Z",  type:"leaf", status:"building", pillar:"V32", pct:55, desc:"Asse X: guide LM20 + SFU1605 + servo 400W · Y/Z in montaggio · target ±0.019mm IT6-IT7", isLeaf:true },
-      { id:"v32-mandrino",  label:"MANDRINO",    type:"leaf", status:"pending",  pillar:"V32", pct:0,  desc:"2.2kW ER20 — BLOCKER da ordinare. Prerequisito: fresatura stampi MIMS.", isLeaf:true },
-      { id:"v32-elettr",    label:"ELETTRONICA", type:"leaf", status:"building", pillar:"V32", pct:50, desc:"HMI TP900 Comfort · CNC controller · driver stepper · cablaggio pannello", isLeaf:true },
-      { id:"v32-config",    label:"CONFIG G",    type:"leaf", status:"active",   pillar:"V32", pct:65, desc:"Milestone attivo: rinforzi colonne Z+U · epoxy fill · silent blocks v.A/v.B", isLeaf:true },
-    ],
-  },
-  {
-    id: "MIMS", label: "MIMS", type: "pillar", status: "active", pillar: "MIMS",
-    desc: "Micro-Industry Modular System · DNA 29.9mm · 3 giunti · 7 materiali · TAM €4.2B", pct: 30, hasChildren: true,
-    children: [
-      { id:"mims-tile",   label:"DNA TILE",    type:"leaf", status:"active",  pillar:"MIMS", pct:100, desc:"190×190mm · D29.9mm H7/g6 · foro Ø16mm · retrocompatibilità totale · piastrina 40mm", isLeaf:true },
-      { id:"mims-giunti", label:"3 GIUNTI",   type:"leaf", status:"active",  pillar:"MIMS", pct:80,  desc:"Eco-Snap €1.50 · Quick-Twist €4 · Tech-Bolt €7 (42CrMo4 nitrurato)", isLeaf:true },
-      { id:"mims-mat",    label:"7 MATERIALI", type:"leaf", status:"active",  pillar:"MIMS", pct:40,  desc:"STD/HVY/DMP/ECO/FLR/ACS/MET · stesso stampo · DNA invariante", isLeaf:true },
-      { id:"mims-vulcan", label:"VULCAN VCM",  type:"leaf", status:"pending", pillar:"MIMS", pct:15,  desc:"Pressa 4 colonne 15-20t · Edwards RV3 + ROPEX ±0.5°C · VCM 18-step · attende V32", isLeaf:true },
-      { id:"mims-ip",     label:"IP",          type:"leaf", status:"active",  pillar:"MIMS", pct:50,  desc:"B2 URGENTE dopo 100 pezzi · 6 trade secrets · 4 marchi EU", isLeaf:true },
-      { id:"mims-gtm",    label:"GTM",         type:"leaf", status:"active",  pillar:"MIMS", pct:30,  desc:"TAM €4.2B · SAM €180M · SOM Y3 €300-450K · SEED Q2-Q4 2026", isLeaf:true },
-    ],
-  },
-  {
-    id: "GENESIS", label: "GENESIS", type: "pillar", status: "active", pillar: "GENESIS",
-    desc: "OS digitale · API Flask · Dashboard React 19 · RAG v4.0+graph · MCP 10 tool · n8n", pct: 70, hasChildren: true,
-    children: [
-      {
-        id:"gen-infra", label:"INFRA", type:"node", status:"active", pillar:"GENESIS", pct:90,
-        desc:"API Flask 5001 · Dashboard React 5173 · MCP Server 10 tool · n8n 5678 · Git/GitHub",
-        hasChildren:true,
-        children: [
-          { id:"gi-api",  label:"API SERVER", type:"leaf", status:"active", pillar:"GENESIS", desc:"/api/state · /api/rag/* · /api/brief · /api/scan · Flask Python 3.11", isLeaf:true },
-          { id:"gi-dash", label:"DASHBOARD",  type:"leaf", status:"active", pillar:"GENESIS", desc:"React 19 + Vite + TypeScript + Tailwind · TanStack Query · Zustand store", isLeaf:true },
-          { id:"gi-mcp",  label:"MCP SERVER", type:"leaf", status:"active", pillar:"GENESIS", desc:"10 tool v1.4: get_state · update_milestone · search_mente · get_daily_brief · list_content_ready · nexus · rag_update · update_session_context · screen_action · save_session", isLeaf:true },
-          { id:"gi-n8n",  label:"N8N",        type:"leaf", status:"active", pillar:"GENESIS", desc:"13 workflow attivi + 14 pipeline · porta 5678 · orchestratore eventi locali", isLeaf:true },
-        ],
-      },
-      {
-        id:"gen-intel", label:"INTELLIGENZA", type:"node", status:"active", pillar:"GENESIS", pct:70,
-        desc:"RAG v4.0 hybrid BM25+semantic+CrossEncoder · 7 agenti pianificati · Daily Brief",
-        hasChildren:true,
-        children: [
-          { id:"gi-rag",   label:"MENTE RAG",  type:"leaf", status:"active",  pillar:"GENESIS", desc:"v4.0 hybrid: ChromaDB + BM25 + CrossEncoder + RRF k=60 · multilingual 384-dim · chunk 512/200 · + layer grafo rag_graph.py networkx", isLeaf:true },
-          { id:"gi-themis",label:"THEMIS",      type:"leaf", status:"active",  pillar:"GENESIS", desc:"Claude Sonnet · codice + analisi · MCP tools · sessioni continue", isLeaf:true },
-          { id:"gi-eva",   label:"EVA",         type:"leaf", status:"building", pillar:"GENESIS", desc:"Assistente WhatsApp Maria · pilot v0.3 REALE (brain + prenotazione multi-turno + inbox handoff + webhook dry-run) · manca token+agenda", isLeaf:true },
-          { id:"gi-brief", label:"DAILY BRIEF", type:"leaf", status:"active",  pillar:"GENESIS", desc:"Script Python → DATA/daily_brief_last.md · STATE + RAG + meteo", isLeaf:true },
-        ],
-      },
-      { id:"gen-auto",    label:"AUTOMAZIONI", type:"leaf", status:"active",  pillar:"GENESIS", pct:80,  desc:"Stop hooks · MENTE scanner/watcher · Content pipeline · rag-update auto", isLeaf:true },
-      { id:"gen-security",label:"SICUREZZA",   type:"leaf", status:"active",  pillar:"GENESIS", pct:100, desc:"_VAULT/KEYS · AES-256 backup · .gitignore sanitizer · Path.home() ovunque", isLeaf:true },
-      { id:"gen-data",    label:"DATI",         type:"leaf", status:"active",  pillar:"GENESIS", pct:90,  desc:"STATE.json · MENTE/ · rag_vectors_cache · semantic_index.db · daily_brief", isLeaf:true },
-    ],
-  },
-  {
-    id: "VITA_NATURA", label: "VITA NATURA", type: "pillar", status: "active", pillar: "VITA_NATURA",
-    desc: "Centro estetico Maria · Boffalora s/T (MI) · EVA WhatsApp bot · Google integrations", pct: 40, hasChildren: true,
-    children: [
-      { id:"vn-eva",      label:"EVA BOT",  type:"leaf", status:"building",  pillar:"VITA_NATURA", pct:40,  desc:"Pilot v0.3 reale (NODES/EVA) · prenotazione multi-turno + inbox handoff · manca token WhatsApp + agenda · Maria Rule", isLeaf:true },
-      { id:"vn-calendar", label:"CALENDAR", type:"leaf", status:"active",   pillar:"VITA_NATURA", pct:100, desc:"Google Calendar MCP · legge/crea eventi · integrato in Claude Code", isLeaf:true },
-      { id:"vn-gmail",    label:"GMAIL",    type:"leaf", status:"active",   pillar:"VITA_NATURA", pct:100, desc:"Gmail MCP · search, draft, labels · benenatimatteo.mb@gmail.com live", isLeaf:true },
-      { id:"vn-sito",     label:"SITO WEB", type:"leaf", status:"pending",  pillar:"VITA_NATURA", pct:20,  desc:"Sito centro estetico · prenotazioni online · SEO locale · in sviluppo", isLeaf:true },
-    ],
-  },
-  {
-    id: "IDENTITY", label: "IDENTITY", type: "pillar", status: "active", pillar: "IDENTITY",
-    desc: "Brand personale · artigiano digitale + system builder · 15+ anni industria", pct: 50, hasChildren: true,
-    children: [
-      { id:"id-skills",  label:"SKILL TREE", type:"leaf", status:"active",   pillar:"IDENTITY", pct:60, desc:"N-livelli: Fondamenta (done) → V32 (active) → GENESIS → MIMS → Content → ADHD", isLeaf:true },
-      { id:"id-cv",      label:"CV LAYERS",  type:"leaf", status:"active",   pillar:"IDENTITY", pct:80, desc:"SCProject MotoGP → ESSEGI robot → DATWLER presse → LU.VE QC · proof reali", isLeaf:true },
-      { id:"id-github",  label:"GITHUB",     type:"leaf", status:"building", pillar:"IDENTITY", pct:45, desc:"Profilo Microindustry · repo TITANIUM_OS · release history · AI skills", isLeaf:true },
-      { id:"id-content", label:"CONTENT",    type:"leaf", status:"pending",  pillar:"IDENTITY", pct:10, desc:"Podcast + reel + LinkedIn · AVA avatar YouTube · storytelling industriale", isLeaf:true },
-      { id:"id-pitch",   label:"PITCH",      type:"leaf", status:"active",   pillar:"IDENTITY", pct:40, desc:"Partner software Microindustry go-to-market · Matteo = metodo+IP, partner = scala", isLeaf:true },
-    ],
-  },
-];
 
 // ── ALBERO DI NINA — stessa grafica della mappa-sistema, ma dati VERI da asse_nina ──
 // (riusa la stessa logica data-driven di AvventuraMapView: regioni 0-7 + verticale finanza,
@@ -372,7 +281,6 @@ export function MappaView({ systemState, source = "system" }: { systemState?: an
 
   const level      = stack.length;
   const current    = stack[level - 1] ?? null;
-  const centerNode = current ?? rootNode;
 
   // Aggiorna pct dai dati live
   const pillars = systemState?.pillars ?? {};
@@ -381,6 +289,12 @@ export function MappaView({ systemState, source = "system" }: { systemState?: an
     const p = pillars[n.id];
     return p ? { ...n, pct: p.pct_complete ?? n.pct } : n;
   });
+
+  // Radice: pct COMPUTATO live come media dei pilastri (mai dichiarato a mano — au18)
+  const rootPct = children.length
+    ? Math.round(children.reduce((s, n) => s + (n.pct ?? 0), 0) / children.length)
+    : 0;
+  const centerNode = current ?? (source === "nina" ? rootNode : { ...rootNode, pct: rootPct });
 
   // Layout radiale
   const cx = dims.w / 2;

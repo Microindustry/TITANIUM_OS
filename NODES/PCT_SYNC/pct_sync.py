@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
-# pct_sync.py | TITANIUM_OS / NODES / PCT_SYNC | v1.0 | 2026-06-15
+# pct_sync.py | TITANIUM_OS / NODES / PCT_SYNC | v1.1 | 2026-07-08
 # Agente di COERENZA: allinea le percentuali dei pilastri in tutto l'ecosistema
-# alla FONTE UNICA = BRAIN/STATE.json (pillars[X].pct_complete) + ROOT = media.
+# alla FONTE UNICA = BRAIN/STATE.json (pillars[X].pct_complete).
 #
 # PERCHE': il pct di ogni pilastro era scritto a mano in piu' posti (STATE.json,
 # MappaView SYSTEM_TREE, CanvasLayout PILLARS_DATA) e la ROOT come media a mano.
 # A ogni avanzamento di STATE i valori hardcoded restavano indietro -> drift
 # ricorrente (critiche au18 / gc05 / n04, corretto a mano due volte). Questo
 # agente lo ripara da solo: STATE comanda, la dashboard segue.
+#
+# v1.1 (fix radice au18, sess #56): MappaView NON si sincronizza piu' via regex
+# -- SYSTEM_TREE e' derivato a runtime da data/mappaData.ts (struttura dagli
+# alberi N-livelli, % pilastri live da /api/state, ROOT = media computata).
+# Resta da sincronizzare solo CanvasLayout PILLARS_DATA (const a mano).
 #
 # SICURO by-design: sostituisce SOLO cifre dentro pattern ancorati e gia'
 # esistenti (mai struttura) -> non puo' rompere il TypeScript. Idempotente.
@@ -25,7 +30,6 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[2]
 STATE = BASE / "BRAIN" / "STATE.json"
-MAPPA = BASE / "DASHBOARD" / "src" / "components" / "MappaView.tsx"
 CANVAS = BASE / "DASHBOARD" / "src" / "components" / "CanvasLayout.tsx"
 REPORT = BASE / "DATA" / "audit" / "pct_sync.json"
 
@@ -43,37 +47,6 @@ def truth():
            for k, v in st.get("pillars", {}).items() if k in PILLARS_LABEL}
     root = int(round(sum(pil.values()) / len(pil))) if pil else 0
     return pil, root
-
-
-def sync_mappa(text, pil, root):
-    """Riallinea i 5 nodi-pilastro (type:"pillar" + hasChildren) e la ROOT
-    (type:"root") in MappaView. Ritorna (nuovo_testo, lista_diff)."""
-    diffs = []
-    out = []
-    cur = None
-    for line in text.splitlines(keepends=True):
-        # ROOT_NODE: la riga con pillar:"ROOT" porta il pct = media dei pilastri
-        # (type:"root" e pct stanno su righe diverse, quindi ancoro su pillar:"ROOT")
-        if 'pillar: "ROOT"' in line and 'pct:' in line:
-            m = re.search(r'(pct:\s*)(\d+)', line)
-            if m and int(m.group(2)) != root:
-                diffs.append(("MappaView/ROOT", int(m.group(2)), root))
-                line = line[:m.start(2)] + str(root) + line[m.end(2):]
-            out.append(line)
-            continue
-        # apertura di un nodo-pilastro: memorizzo la chiave
-        if 'type: "pillar"' in line:
-            pm = re.search(r'pillar:\s*"([^"]+)"', line)
-            cur = pm.group(1) if pm else None
-        # riga di riepilogo del pilastro: e' l'unica con hasChildren + pct
-        if cur in pil and "hasChildren: true" in line:
-            m = re.search(r'(pct:\s*)(\d+)', line)
-            if m and int(m.group(2)) != pil[cur]:
-                diffs.append((f"MappaView/{cur}", int(m.group(2)), pil[cur]))
-                line = line[:m.start(2)] + str(pil[cur]) + line[m.end(2):]
-            cur = None
-        out.append(line)
-    return "".join(out), diffs
 
 
 def sync_canvas(text, pil):
@@ -100,21 +73,12 @@ def main():
     quiet = "--quiet" in sys.argv
 
     pil, root = truth()
-    diffs = []
-
-    mt = MAPPA.read_text(encoding="utf-8")
-    mt2, d1 = sync_mappa(mt, pil, root)
-    diffs += d1
 
     ct = CANVAS.read_text(encoding="utf-8")
-    ct2, d2 = sync_canvas(ct, pil)
-    diffs += d2
+    ct2, diffs = sync_canvas(ct, pil)
 
-    if fix:
-        if d1:
-            MAPPA.write_text(mt2, encoding="utf-8")
-        if d2:
-            CANVAS.write_text(ct2, encoding="utf-8")
+    if fix and diffs:
+        CANVAS.write_text(ct2, encoding="utf-8")
 
     rep = {
         "ts": datetime.datetime.now().isoformat(timespec="seconds"),

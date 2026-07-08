@@ -364,14 +364,14 @@
               {
                 "id": "gc04",
                 "label": "Dati duplicati: SYSTEM_TREE in MappaView vs genesisData/mimsData",
-                "icon": "!",
-                "status": "active",
-                "note": "Se aggiorni mimsData.ts non si aggiorna MappaView. AGGIORNATA 15/06: per le % dei PILASTRI il problema è risolto dall'agente pct_sync (n04). Resta per i dati non-% (struttura nodi/leaf/desc): fonte unica ancora da fare per il resto dell'albero (au18).",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Fable 08/07 (sess #56, au18): SYSTEM_TREE non è più una copia a mano — data/mappaData.ts lo DERIVA dagli alberi N-livelli (skillTreeData v32 / GENESIS_ROOT / MIMS_ROOT) con adapter SkillNode→MapNode; % sotto-nodi computate dalle foglie (nodeProgress), % pilastri live da STATE, ROOT = media computata. pct_sync v1.1 ritirato da MappaView (resta su CanvasLayout). VITA_NATURA/IDENTITY vivono solo in mappaData (nessun albero sorgente ancora).",
                 "isLeaf": true,
-                "color": "text-rose-400",
-                "border": "border-rose-500/40",
-                "bg": "bg-rose-950/20",
-                "dot": "bg-rose-400"
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
               },
               {
                 "id": "gc05",
@@ -874,14 +874,14 @@
               {
                 "id": "au09",
                 "label": "MIMS %: computato (NodeLevel) vs dichiarato (30)",
-                "icon": "!",
-                "status": "active",
-                "note": "MimsSection calcola pct = done/total foglie (può dare es. 22%), MappaView dichiara 30, STATE dice 30. Stesso pilastro, due metodi di calcolo. Decidere: % derivata dalle foglie OPPURE dichiarata, non entrambe.",
+                "icon": "✓",
+                "status": "done",
+                "note": "DECISO+FIXATO Fable 08/07 (sess #56): i due numeri misurano cose diverse e restano ENTRAMBI, ma con nome esplicito e mai lo stesso — MimsSection/GenesisSection v1.1 ora mostrano 'X% delle voci di questa mappa fatte' (computato dalle foglie) e accanto 'pilastro (STATE): Y%' (dichiarato, live via useGlobalState). In MappaView il 30 a mano non esiste più (au18: derivato).",
                 "isLeaf": true,
-                "color": "text-rose-400",
-                "border": "border-rose-500/40",
-                "bg": "bg-rose-950/20",
-                "dot": "bg-rose-400"
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
               },
               {
                 "id": "au10",
@@ -982,14 +982,14 @@
               {
                 "id": "au16",
                 "label": "AUTOMATIONS_MASTER.md fermo al 2026-03-16",
-                "icon": "!",
-                "status": "active",
-                "note": "MITIGATA Opus: aggiunta nota di staleness in testa (elenca cosa manca: MCP 10 tool, NEXUS, RAG hybrid+graph, Story Agent, hooks, ARGUS, watchdog) + data 01/06. Rigenerazione completa = TODO (richiede scan nodi attuali, non economico ora).",
+                "icon": "✓",
+                "status": "done",
+                "note": "CHIUSA Fable 08/07 (sess #56): NON si rigenera — mantenere a mano una master-list era la causa della doc divergente. Il file è DECLASSATO ad archivio storico (v1.3) con banner che punta alle 4 fonti VIVE: AUTOMATIONS/core/README.md (indice ~44 script, creato 07/07), vista AUTOMAZIONI (stato live da /api/watchdog+/api/tasks), register_night_tasks.ps1 (task schedulati reali), NODES/ (agenti). Resta aperto solo il gap 13 workflow n8n (gc10).",
                 "isLeaf": true,
-                "color": "text-rose-400",
-                "border": "border-rose-500/40",
-                "bg": "bg-rose-950/20",
-                "dot": "bg-rose-400"
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
               },
               {
                 "id": "au17",
@@ -1030,14 +1030,14 @@
               {
                 "id": "au18",
                 "label": "Fonte unica di verità: nessuna. SYSTEM_TREE duplica i 3 data file",
-                "icon": "!",
-                "status": "active",
-                "note": "MappaView ridefinisce a mano l'intero albero (SYSTEM_TREE) invece di importare genesisData/mimsData/skillTreeData. AGGIORNATA 15/06: la parte più velenosa — il pct dei PILASTRI — è ora auto-sanata dall'agente pct_sync (n04), quel drift non torna più. RESTA la duplicazione strutturale dei nodi non-pct (leaf/label/desc): refactor per cui MappaView dovrebbe consumare i ROOT esistenti. Proposta (regola 11).",
+                "icon": "✓",
+                "status": "done",
+                "note": "FIXATO Fable 08/07 (sess #56, = au18/gc04): MappaView v5.1 ora CONSUMA i ROOT esistenti — data/mappaData.ts deriva V32/GENESIS/MIMS da skillTreeData/genesisData/mimsData (adapter SkillNode→MapNode, % computate da nodeProgress, pilastri live da STATE, ROOT=media). La duplicazione strutturale non esiste più; pct_sync v1.1 ritirato da MappaView.",
                 "isLeaf": true,
-                "color": "text-rose-400",
-                "border": "border-rose-500/40",
-                "bg": "bg-rose-950/20",
-                "dot": "bg-rose-400"
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400"
               }
             ]
           }
@@ -1145,7 +1145,7 @@
             "label": "Verità sparsa: i dati-pilastro vivono in 5+ posti (au18 VIVO)",
             "icon": "!",
             "status": "active",
-            "note": "FRONTE DATI. Per cambiare lo stato di EVA ho dovuto editare 5 punti (genesisData ×2, MappaView ×2, + STATE). Finché non c'è UNA fonte, ogni verità si sdoppia e i pilastri ri-obsolescono da soli — è la causa-radice dei 'pilastri che non spiegano'. Fix vero: derivare le viste da una sola sorgente, non da copie.",
+            "note": "FRONTE DATI. Per cambiare lo stato di EVA ho dovuto editare 5 punti (genesisData ×2, MappaView ×2, + STATE). Finché non c'è UNA fonte, ogni verità si sdoppia e i pilastri ri-obsolescono da soli. AVANZATA 08/07 (sess #56): MappaView ×2 ELIMINATO — SYSTEM_TREE ora derivato da mappaData.ts (adapter dagli alberi N-livelli, % computate/live). Resta: genesisData ×2 (stato EVA in due leaf) e CanvasLayout PILLARS_DATA (coperto da pct_sync v1.1).",
             "isLeaf": true,
             "color": "text-rose-400",
             "border": "border-rose-500/40",

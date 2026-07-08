@@ -1,11 +1,13 @@
-﻿// MimsSection.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
+﻿// MimsSection.tsx | TITANIUM_OS / DASHBOARD | v1.1 | 2026-07-08
 // Mappa navigabile N-livelli MIMS â€” Prodotto / Produzione / Mercato / IP / Roadmap
+// v1.1: % con NOME esplicito â€” "voci mappa" (computata dalle foglie) vs "pilastro" (STATE)
 
 import { useState } from "react";
 import { ChevronLeft, CheckCircle2, Zap, Lock, Circle } from "lucide-react";
 import { MIMS_ROOT } from "../data/mimsData";
 import { getAllLeaves, type SkillNode } from "../data/skillTreeData";
 import { NodeLevel as KitLevel, type NodeKitTheme } from "./skilltree/NodeKit";
+import { useGlobalState } from "../hooks/SystemStateContext";
 
 // â”€â”€ STATUS STYLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const ST = {
@@ -35,6 +37,7 @@ const NodeLevel = (p: { node: SkillNode; onDrillIn: (n: SkillNode) => void }) =>
 export function MimsSection() {
   const [stack, setStack] = useState<SkillNode[]>([MIMS_ROOT]);
   const current = stack[stack.length - 1];
+  const statePct = useGlobalState().pct("MIMS"); // % pilastro dichiarata (STATE, fonte unica)
 
   const leaves  = getAllLeaves(MIMS_ROOT);
   const done    = leaves.filter(l => l.status === "done").length;
@@ -82,7 +85,10 @@ export function MimsSection() {
           <div className="h-full bg-gradient-to-r from-amber-700 to-amber-400 rounded-full transition-all duration-1000"
                style={{ width: `${pct}%` }} />
         </div>
-        <div className="text-[8px] font-mono text-amber-500/50 text-right mt-1">{pct}% milestone completati</div>
+        <div className="flex justify-between mt-1">
+          <span className="text-[8px] font-mono text-slate-600">pilastro (STATE): {statePct}%</span>
+          <span className="text-[8px] font-mono text-amber-500/50">{pct}% delle voci di questa mappa fatte</span>
+        </div>
       </div>
 
       {/* â”€â”€ BREADCRUMB â”€â”€ */}

@@ -1,11 +1,13 @@
-﻿// GenesisSection.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-05-31
+﻿// GenesisSection.tsx | TITANIUM_OS / DASHBOARD | v1.1 | 2026-07-08
 // Mappa navigabile N-livelli GENESIS â€” Infrastruttura / Intelligenza / Automazioni / Sicurezza / Dati / Roadmap
+// v1.1: % con NOME esplicito â€” "voci mappa" (computata dalle foglie) vs "pilastro" (STATE)
 
 import { useState } from "react";
 import { ChevronLeft, CheckCircle2, Zap, Lock, Circle } from "lucide-react";
 import { GENESIS_ROOT } from "../data/genesisData";
 import { getAllLeaves, type SkillNode } from "../data/skillTreeData";
 import { NodeLevel as KitLevel, type NodeKitTheme } from "./skilltree/NodeKit";
+import { useGlobalState } from "../hooks/SystemStateContext";
 
 const ST = {
   done:    { tile: "bg-emerald-900/70 border-emerald-500/60 text-emerald-100", glow: "0 0 24px #10b98150", pulse: false, icon: CheckCircle2, dot: "bg-emerald-400" },
@@ -33,6 +35,7 @@ const NodeLevel = (p: { node: SkillNode; onDrillIn: (n: SkillNode) => void }) =>
 export function GenesisSection() {
   const [stack, setStack] = useState<SkillNode[]>([GENESIS_ROOT]);
   const current = stack[stack.length - 1];
+  const statePct = useGlobalState().pct("GENESIS"); // % pilastro dichiarata (STATE, fonte unica)
 
   const leaves  = getAllLeaves(GENESIS_ROOT);
   const done    = leaves.filter(l => l.status === "done").length;
@@ -80,7 +83,10 @@ export function GenesisSection() {
           <div className="h-full bg-gradient-to-r from-cyan-700 to-cyan-400 rounded-full transition-all duration-1000"
                style={{ width: `${pct}%` }} />
         </div>
-        <div className="text-[8px] font-mono text-cyan-500/50 text-right mt-1">{pct}% nodi completati</div>
+        <div className="flex justify-between mt-1">
+          <span className="text-[8px] font-mono text-slate-600">pilastro (STATE): {statePct}%</span>
+          <span className="text-[8px] font-mono text-cyan-500/50">{pct}% delle voci di questa mappa fatte</span>
+        </div>
       </div>
 
       {/* â”€â”€ BREADCRUMB â”€â”€ */}
