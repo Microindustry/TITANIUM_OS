@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [AUTOMATIONS/core  indice raggruppato](#automationscore-indice-raggruppato)
+  - [Motore eventi (girano da soli, trigger  modifica file)](#motore-eventi-girano-da-soli-trigger-modifica-file)
+  - [Notturne (Task Scheduler  launcher e coda)](#notturne-task-scheduler-launcher-e-coda)
+  - [Sessione Claude (inizio / fine / hook Stop)](#sessione-claude-inizio-fine-hook-stop)
+  - [Conoscenza / indici / canone](#conoscenza-indici-canone)
+  - [Contenuti / distribuzione](#contenuti-distribuzione)
+  - [Manutenzione / utility](#manutenzione-utility)
+
+<!-- /TOC -->
+
 # AUTOMATIONS/core — indice raggruppato
 
 *Creato 07/07/2026 (decisione 23/06 "raggruppare core"). Il raggruppamento è LOGICO,

@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 56  08/07/2026  VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)](#sessione-56-08072026-verità-sparsa-la-mappa-deriva-non-copia-punto-1-chiuso)
   - [Sessione 55  07/07/2026  ONDATE A-B-C CHIUSE  verità sparsa  STATE salvato dal clobber](#sessione-55-07072026-ondate-a-b-c-chiuse-verità-sparsa-state-salvato-dal-clobber)
   - [Sessione 54  04/07/2026  PIANO DATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)](#sessione-54-04072026-piano-dattacco-ecosistema-in-ordine-prima-del-social-prima-dei-nuovi-episodi)
     - [DECISO 04/07  SOCIAL: ricerca fatta, stack SCELTO, si parcheggia (si riprende a casa in ordine)](#deciso-0407-social-ricerca-fatta-stack-scelto-si-parcheggia-si-riprende-a-casa-in-ordine)
@@ -130,18 +131,23 @@
   1080×1350 (4:5) = a norma: serve solo social-cut + PNG→PDF, zero redesign.
 - [✓] Decisione catturata in `MENTE/SESSIONI/2026-07-08_tre-facce-e-pubblicazioni.md`.
 
-**DA FARE:**
-- [✓] **1 · Resto filone verità sparsa**: SYSTEM_TREE (au18) + % MIMS (au09) +
-  doc AUTOMATIONS_MASTER (au16) — tutti e tre chiusi
-- [ ] **2 · Analisi VALORE per pilastro** (richiesta Matteo 08/07): che valore dà a
-  un'azienda e in che prodotto economico si trasforma ognuno — doc MENTE prima,
-  card home derivata poi
-- [ ] **3 · HR/CV vivo** (Matteo: la vista CV oggi è "solo rumore"): derivare dal
+**DA FARE — PROSSIMA SESSIONE #57 in MODO INGEGNERIZZATO (ordine Matteo, chiusura #56):**
+*Metodo per ogni punto: (1) requisiti espliciti → (2) design breve PRIMA del codice →
+(3) implementazione additiva a commit isolati → (4) verifica misurabile (numeri/
+screenshot/test) → (5) riga in bussola strada facendo. Punto per punto, niente salti.*
+- [ ] **1 · Analisi VALORE per pilastro** (richiesta Matteo 08/07): che valore dà a
+  un'azienda e in che prodotto economico si trasforma ognuno (V32→ore lab+stampi ·
+  MIMS→prodotto+IP · GENESIS→il sistema È il prodotto · NINA→educativo · EVA→PMI ·
+  HR→CV vivo) — doc in MENTE prima (RAG), card home DERIVATA poi (fonte unica)
+- [ ] **2 · HR/CV vivo** (Matteo: la vista CV oggi è "solo rumore"): derivare dal
   grafo competenze + prove reali (milestone/episodi). Il progetto HR riprende.
+- [ ] **3 · Attivazione PUBBLICAZIONI** — scaletta nella vista (passi 1-4 gated ~1h:
+  mail progetto, FB/IG Business, app Meta, Docker — poi 5-9 li costruisce Claude)
 - [ ] **4 · EP_N2_03 "la Misura"** — nasce già nel formato doppio (social-cut ≤10 + 16 sito)
-- [ ] **5 · Attivazione PUBBLICAZIONI** — scaletta nella vista, passi 1-4 gated
-  (mail progetto, FB/IG Business, app Meta, Docker) poi 5-9 Claude
-- [ ] Resto: sessione CVE · viste doppie neuro/sinapsi · backlog #52
+- [ ] **5 · Resto igiene**: sessione CVE (42 fix + test finetune) · viste doppie
+  neuro/sinapsi (la linea di Matteo è chiara: meno viste, più verità) · backlog #52
+- [✓] ~~1 (mattina) · Resto filone verità sparsa~~: SYSTEM_TREE (au18) + % MIMS (au09) +
+  doc AUTOMATIONS_MASTER (au16) — tutti e tre chiusi
 
 ---
 

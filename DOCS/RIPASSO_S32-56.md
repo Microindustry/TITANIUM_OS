@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [RIPASSO  Sessioni 3256 (06/06  08/07/2026)](#ripasso-sessioni-3256-0606-08072026)
+  - [1  LARCO IN UNA PAGINA](#1-larco-in-una-pagina)
+  - [2  LE DECISIONI CHE ANCORA GOVERNANO (il canone operativo)](#2-le-decisioni-che-ancora-governano-il-canone-operativo)
+  - [3  COSA È VIVO  PARCHEGGIATO  SUPERATO](#3-cosa-è-vivo-parcheggiato-superato)
+  - [4  IL CARATTERE  dove abbiamo osato, dove ci siamo impantanati](#4-il-carattere-dove-abbiamo-osato-dove-ci-siamo-impantanati)
+  - [5  I NUMERI DEL MESE (misurabile, regola 6)](#5-i-numeri-del-mese-misurabile-regola-6)
+  - [6  I FILI APERTI (da qui si riparte)](#6-i-fili-aperti-da-qui-si-riparte)
+
+<!-- /TOC -->
+
 # RIPASSO — Sessioni #32→#56 (06/06 → 08/07/2026)
 *Scritto da Claude (Fable 5) su richiesta di Matteo, sessione #56 — 08/07/2026.*
 *Scopo: rivedere un mese di lavoro PRIMA di ridisegnare l'ecosistema a 3 facce.*

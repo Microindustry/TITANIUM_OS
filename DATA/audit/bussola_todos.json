@@ -1,5 +1,89 @@
 [
   {
+    "id": "BUS-bb0209b8",
+    "stato": "fatto",
+    "testo": "**au18/gc04 CHIUSO — SYSTEM_TREE derivato, non più copiato**: nuova fonte unica",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-49d32d9e",
+    "stato": "fatto",
+    "testo": "**au09 DECISO — % MIMS computata vs dichiarata**: i due numeri misurano cose",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-9324f6c3",
+    "stato": "fatto",
+    "testo": "**au16 CHIUSO — AUTOMATIONS_MASTER.md declassato ad archivio storico** (v1.3):",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-acf818af",
+    "stato": "fatto",
+    "testo": "**RIPASSO #32→#56** scritto: `DOCS/RIPASSO_S32-56.md` — l'arco in 5 fasi, il",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-7a5f13a1",
+    "stato": "fatto",
+    "testo": "**SIDEBAR A 3 FACCE**: TITANIUM (Pilastri+Sistema) · NINA (Dal giorno 0 +",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-30ace8a4",
+    "stato": "fatto",
+    "testo": "**Vista PUBBLICAZIONI creata** (`PubblicazioniView`): cosa abbiamo trovato",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-bf9aaaa9",
+    "stato": "fatto",
+    "testo": "**Ricerca librerie RI-VERIFICATA (08/07, doc ufficiali)**: Postiz vivo",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-03031492",
+    "stato": "fatto",
+    "testo": "Decisione catturata in `MENTE/SESSIONI/2026-07-08_tre-facce-e-pubblicazioni.md`.",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-2180fd84",
+    "stato": "da_fare",
+    "testo": "**1 · Analisi VALORE per pilastro** (richiesta Matteo 08/07): che valore dà a",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-1d56c7f3",
+    "stato": "da_fare",
+    "testo": "**2 · HR/CV vivo** (Matteo: la vista CV oggi è \"solo rumore\"): derivare dal",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-8564052b",
+    "stato": "da_fare",
+    "testo": "**3 · Attivazione PUBBLICAZIONI** — scaletta nella vista (passi 1-4 gated ~1h:",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-a149ff63",
+    "stato": "da_fare",
+    "testo": "**4 · EP_N2_03 \"la Misura\"** — nasce già nel formato doppio (social-cut ≤10 + 16 sito)",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-7790c267",
+    "stato": "da_fare",
+    "testo": "**5 · Resto igiene**: sessione CVE (42 fix + test finetune) · viste doppie",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
+    "id": "BUS-6666b6fd",
+    "stato": "fatto",
+    "testo": "~~1 (mattina) · Resto filone verità sparsa~~: SYSTEM_TREE (au18) + % MIMS (au09) +",
+    "sessione": "Sessione #56 · 08/07/2026 — VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)"
+  },
+  {
     "id": "BUS-be1f8d4e",
     "stato": "fatto",
     "testo": "Boot sporco curato alla RADICE: legacy `CORE/watchdog.py` respawnava doppioni →",

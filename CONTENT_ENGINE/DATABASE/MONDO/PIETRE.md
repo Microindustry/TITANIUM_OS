@@ -1,6 +1,6 @@
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-07 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-08 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -104,7 +104,7 @@
 | 4 | `EP_N2_43` Due fotografi, uno spazio | t-SNE e UMAP sono due macchine fotografiche diverse che guardano lo st | adattato | ⟡4 |
 | 4 | `EP_SEED_RETE_L2_UMAP` t-SNE contro UMAP — due modi di fare la foto | vedere il sistema come una mappa | fonte | ⟡4 |
 
-## ⟡6 · L'ESERCITO SILENZIOSO  (5 episodi)
+## ⟡6 · L'ESERCITO SILENZIOSO  (6 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -112,6 +112,7 @@
 | 1 | `EP_N2_44` Il Turno di Guardia | Un sistema affidabile non nasconde i suoi errori: li vede, li dice, li | adattato | ⟡2 ⟡4 |
 | 1 | `MOM_03_L_ESERCITO` L'Esercito | l'esercito: tante entità che fanno | fonte | ⟡2 ⟡4 |
 | 2 | `EP_N2_13` Il Battito del Guardiano | il guasto silenzioso e il guardiano | adattato | ⟡1 |
+| 2 | `EP_N2_52` Il Battito del Guardiano | Un guasto che non fa rumore è più pericoloso di uno che grida; i veri  | adattato | — |
 | 3 | `EP_N2_16` Lo Specchio del Giudice | Un sistema intelligente può guardarsi dentro, trovare i propri errori  | adattato | ⟡1 |
 
 ## ⟡7 · IL DIRETTORE  (13 episodi)

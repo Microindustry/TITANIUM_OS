@@ -1,0 +1,283 @@
+{
+  "data": "2026-07-08",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA/SICUREZZA",
+      "titolo": "Sessione CVE: upgrade 9 pacchetti, 42 vulnerabilità fixabili",
+      "cosa": "Eseguire pip upgrade mirato sui 9 pacchetti con CVE fix disponibili (aiohttp, cryptography, gradio, pillow, pydantic-settings, python-multipart + altri 3). Dopo upgrade: run test suite + test finetune come da todo bussola #3.",
+      "perche": "pip_audit.json 2026-07-08 conferma 42 CVE con fix già disponibili. cryptography e aiohttp sono dipendenze critiche per l'intero stack GENESIS. Ogni sessione che salta accumula esposizione reale, non teorica (segnale audit sev=alta + bussola_open #3 esplicito).",
+      "come": "1. Branch dedicato 'fix/cve-2026-07-08'. 2. pip install --upgrade aiohttp cryptography gradio pillow pydantic-settings python-multipart [+ rimanenti 3 da audit]. 3. pip-audit --fix --dry-run per verifica. 4. Run test suite completa. 5. Run test finetune. 6. Se verde: PR per approvazione Matteo. 7. Aggiornare pip_audit.json post-merge.",
+      "rischio": "Gradio e aiohttp hanno salti di versione non banali: possibile breaking change su API interne GENESIS. Test finetune obbligatori prima del merge. Reversibile via branch.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[0] sev=alta + todo_bussola_aperti[2]"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RAG/GENESIS",
+      "titolo": "Fix canon_violation attiva: correggere _CANONE.md:13 + allineare max_ep a EP_N2_52",
+      "cosa": "Due operazioni distinte ma atomiche: (A) rimuovere/correggere il puntatore riga 13 di _CANONE.md che punta a 'V32-su-molle/recuperato vietato'; (B) aggiornare il canone dichiarando max_ep=52 (da 51). Poi trigger rebuild RAG con exclusions già attive.",
+      "perche": "Segnale RAG sev=alta: canon_violation attiva fa sì che ogni rebuild RAG indicizzi materiale esplicitamente vietato. Il disallineamento max_ep_disco=52 vs max_ep_canone=51 è confermato da _CANONE.md 2026-07-08. Con snapshot RAG=0.0 stanotte il sistema è già esposto: il prossimo rebuild partirebbe da una base corrotta.",
+      "come": "1. Aprire _CANONE.md, localizzare riga 13 e il campo max_ep. 2. Correggere il path vietato (commentare + nota del motivo). 3. Aggiornare max_ep_canone=52. 4. Commit 'fix: canon_violation riga 13 + max_ep 51→52'. 5. Avviare rebuild RAG in locale con --dry-run exclusions check. 6. Verificare che il chunk count non includa materiale dal path rimosso. 7. Aggiornare bussola: depennare duplicato TOP10 #3 (voci 5 e 16).",
+      "rischio": "Basso: è una modifica documentale + rebuild. Il rebuild è già un'operazione consolidata. Unico rischio: se altri file puntano al path rimosso, generano warning — ma non bloccano.",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[9] sev=alta (canon_violation) + critiche_audit_aperte[1] (max_ep disallineato) + critiche_audit_aperte[6] (duplicato bussola)"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-08",
+    "milestone": "Sessione #55 (07/07): PIANO #54 COMPLETO — ondate A-B-C tutte chiuse + filone verita' sparsa (1a tranche). Boot sporco curato alla radice (legacy CORE/watchdog respawnava doppioni -> single-instance su watchdog/watcher/api, guardia porta 5001, START_ECOSYSTEM stub, fix vite7 --silent). Retention dis",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "42 CVE con fix disponibile confermati da pip_audit.json 2026-07-08: \"42 CVE fixabili in 9 pacchetti: aiohttp 3.14.0 (8), cryptography 48.0.0 (1), gradio 5.50.0 (9), pillow 11.3.0 (7), pydantic-settings 2.14.1 (1), python-multipart 0.0.30 (1"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Disallineamento canone episodi confermato da _CANONE.md 2026-07-08: \"su disco EP_N2_52, il canone dichiara EP_N2_51: aggiornare _CANONE.md\". Il campo canone_vault riporta max_ep_disco=52 vs max_ep_canone=51. Con 28/52 episodi a open_loop_mi"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna è cieca su Semantic Scholar: due sessioni di 429 consecutive con fallback a zero risultati. Log research_agent.log 2026-07-08: \"2026-07-08 03:38:33 [...] HTTP 429 — attendo 1s\" → \"2026-07-08 03:38:56 [...] semantic_schol"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Cinque organi vitali su sette sono fermi o quasi: nina-loop=0.0, snapshot RAG=0.0, AI news watcher=0.0, riflusso FATTI=0.1. L'inventario notturno, la retention disco e il daily brief girano parzialmente (0.6). Con snapshot RAG=0.0, ogni pow"
+      },
+      {
+        "area": "V32",
+        "sev": "alta",
+        "finding": "La corruzione HNSW da power-loss è ricorrente (3 volte in 2gg, dichiarato nei blockers) e lo snapshot RAG è a zero stanotte: il sistema è esposto a perdita del RAG ad ogni interruzione di corrente. L'UPS (~50-80€) è il rimedio hardware dich"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il todo 'Sessione CVE' (bussola_open #3) è l'unico item che sblocca valore di sicurezza immediato senza dipendenze esterne: i 42 fix esistono già, non serve hardware né chiavi Matteo. Ogni sessione che lo salta accumula esposizione su crypt"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "In bussola_open: 'TOP10 #3 — 55 file di versioni superate fuori dal canone RAG (estendere exclusions + 1 rebuild)' compare DUE volte nella lista (voci 5 e 16), segnale che è rimasto sospeso tra due sessioni. Con 17.141 chunk nel RAG e già 1"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Il blocker 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna' è presente da almeno due sessioni senza essere risolto. Gli errori 429 significano che la pipeline di ricerca notturna g"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "In bussola_open: 'Detriti disco (04 P3): 2.24 GB chroma_db_* + 1.1 GB BACKUPS/ → pulizia CON regola di [retention]'. Sono 3.34 GB di artefatti senza policy di rotazione automatica. Su una macchina che fa rebuild RAG ricorrenti, lo spazio di"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "1 canon_violation attiva segnalata dai dati di stanotte. Il milestone #52 identifica la causa: '_CANONE.md:13 punta a V32-su-molle/recuperato vietato'. Finché quella riga non viene corretta, ogni rebuild RAG indicizza materiale esplicitamen"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "L'UPS è listato come blocker esplicito: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg): è la cura alla radice'. Senza UPS ogni micro-blackout può richiedere drop-hnsw + rebuild (operazione che ha già impegnato una sessione "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "bassa",
+        "finding": "In bussola_open: 'CSS invalido che dà falsa sicurezza: index.css:91 attr() in font-size (scartato dai browser) + :95 min-font-size inesistente (no-op)'. Queste regole non producono errori visibili né bloccano, ma i test visivi automatici (d"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 263,
+      "rag_chunks": 18276,
+      "n_commits_7d": 50
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**1 · Resto filone verità sparsa**: SYSTEM_TREE duplicato in MappaView (au18, a mente",
+      "**2 · EP_N2_03 \"la Misura\" — carosello 16 slide** (salda la promessa della slide 16 di",
+      "**3 · Sessione CVE**: upgrade dei 9 pacchetti (42 fix) CON test finetune dopo",
+      "**4 · Decisione Matteo**: viste doppie neuro/sinapsi da togliere? (il fix vero di au08;",
+      "**5 · Backlog per dominio #52** (~35 voci) — a ondate, come sempre",
+      "**GATED MATTEO**: ordine hardware (Vevor+ER20+UPS) · chiave Semantic Scholar ·",
+      "Prerequisiti GATED MATTEO (quando si riprende): **mail di progetto** dedicata → pagina FB +",
+      "Costruzione sistema social (DOPO le ondate A-C): Postiz su questa macchina → sito statico →",
+      "Resto filone: SYSTEM_TREE duplicato in MappaView (au18, refactor per consumare i data",
+      "**EP_N2_03 \"la Misura\" — carosello 16 slide** (03 F2 punto 3): ora c'è il template, va PRODOTTO",
+      "Backlog per dominio in bussola (sotto, ~35 voci residue) — a ondate.",
+      "TOP 10 **#3** (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild) = prossimo della catena verità.",
+      "TOP 10 **#9**: `INDICE_CAMMINO` ora è UNA copia sola (repo→vault) ma i 9/15 titoli sbagliati restano → rigenerarlo da `episodes.json`.",
+      "Prima ondata (~16:00) fermata dal **limite sessione** (reset 19:20): solo il 02 è sopravvissuto",
+      "**1 · MOSSA 1 \"checkout che sblocca tutto\"** (06): 1 ordine = martinetto Vevor 20t + mandrino"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Design System Prompt",
+        "url": "https://github.com/Trystan-SA/claude-design-system-prompt"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Road to Elm 1.0",
+        "url": "https://elm-lang.org/news/faster-builds"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Pruning RAG context down to what the answer actually needs",
+        "url": "https://www.kapa.ai/blog/how-we-prune-rag-context"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "GLM 5.2 and the coming AI margin collapse",
+        "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Local, CPU-Friendly, High-Quality TTS (Text-to-Speech) with Kokoro",
+        "url": "https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro/"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "🤗 Kernels: Major Updates",
+        "url": "https://huggingface.co/blog/revamped-kernels"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "PRX Part 4: Our Data Strategy",
+        "url": "https://huggingface.co/blog/Photoroom/prx-part4-data"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
+        "url": "https://huggingface.co/blog/lerobot-release-v060"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Run AI workloads on any cloud, store on Hugging Face: zero-egress storage with SkyPilot",
+        "url": "https://huggingface.co/blog/skypilot-hf-storage"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Hugging Face Models on Foundry Managed Compute",
+        "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "From Hugging Face to Amazon SageMaker Studio in one click",
+        "url": "https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Meta-Harness R&D: Enterprise-Grade Self-Improvement for Long-Horizon AI Workflows",
+        "url": "https://openai.com/deployco/news/meta-harness-enterprise-self-improvement-long-horizon-ai-workflows"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Designing Organisations That Can Keep Up With AI",
+        "url": "https://openai.com/deployco/news/designing-organisations-that-can-keep-up-with-ai"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "MUFG aims to become AI-native with OpenAI",
+        "url": "https://openai.com/index/mufg"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Australian Payments Plus moves faster with ChatGPT and Codex",
+        "url": "https://openai.com/index/australian-payments-plus"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "DeepSeek cambia ancora tutto: ecco DSpark",
+        "url": "https://www.youtube.com/watch?v=-tjdRPUDDs4"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Nuovo modello ibrido per finanziare le startup soprattutto AI si chiama SeedStrapping te lo spiego",
+        "url": "https://www.youtube.com/shorts/ncZBz_ur6b0"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Fable 5 é uscito ed in meno di 24 ore lo hanno hackerato traimite Jailbreaking 🤯 ti spiego la",
+        "url": "https://www.youtube.com/shorts/3PejVr_yEJo"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Sakana AI rilascia Fugu il loro nuovo modello AI che batte Mythos e Fable 5!",
+        "url": "https://www.youtube.com/shorts/Lil1UpL3BU4"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Nuovo modello AI OCR open-source sviluppato da baidu perfetto per scansionare i documenti aziendali",
+        "url": "https://www.youtube.com/shorts/CaWMtFn3vw0"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Tutti parlano di Loop Engineering... ma nessuno te lo spiega così",
+        "url": "https://www.youtube.com/watch?v=BSUHmVcaO1g"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: Fable's Back But This New Model is Better?",
+        "url": "https://www.youtube.com/watch?v=NVP_paJarG4"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Benchmark No One Asked For!",
+        "url": "https://www.youtube.com/shorts/hUH4HD6Ah9c"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "I Automated Shorts With Fable",
+        "url": "https://www.youtube.com/shorts/1CAy_mB6E-g"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "How to \"Vibe Direct\" Short Films",
+        "url": "https://www.youtube.com/shorts/mCu3mVcvpLE"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "This AI Can Edit Videos For You",
+        "url": "https://www.youtube.com/shorts/bxdsBsbtoSg"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "AIEWF Daily Dispatch: The great loops debate and the state of AI engineering",
+        "url": "https://www.latent.space/p/aiewf-daily-dispatch-locomotives"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] The Field Guide to Fable",
+        "url": "https://www.latent.space/p/ainews-the-field-guide-to-fable"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+        "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "sqlite-utils 4.0rc3",
+        "url": "https://simonwillison.net/2026/Jul/6/sqlite-utils/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}
