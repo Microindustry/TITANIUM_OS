@@ -53,7 +53,8 @@ export function ValoreView() {
               Il messaggio fondante — Matteo, {valore.messaggio_matteo.data}
             </span>
           </div>
-          <p className="text-[12px] text-emerald-100/80 leading-relaxed font-mono whitespace-pre-wrap">
+          {/* (#57 gerarchia) il messaggio È il punto focale della vista: corpo grande */}
+          <p className="text-[14px] md:text-[15px] text-emerald-100/90 leading-relaxed font-mono whitespace-pre-wrap">
             "{valore.messaggio_matteo.testo}"
           </p>
           <p className="text-[10px] text-emerald-400/60 mt-3 italic">

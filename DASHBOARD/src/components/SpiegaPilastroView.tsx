@@ -98,27 +98,26 @@ export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
       <div className="max-w-4xl mx-auto px-6 py-8 space-y-5">
 
+        {/* (#57 gerarchia) HERO: la FRASE-ESSENZA è il punto focale — grande, con
+            il glow dell'accent; nome+icona scendono a riga di contesto */}
         <motion.div
-          className="flex items-center gap-3"
+          className="relative rounded-2xl border p-6 overflow-hidden"
+          style={{ borderColor: p.accent + "33", background: `linear-gradient(135deg, ${p.accent}0f, rgba(15,23,42,0.5))` }}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-3xl">{p.icona}</span>
-          <div>
-            <div className="text-[10px] font-mono uppercase tracking-[0.3em]" style={{ color: p.accent }}>Pilastro · spiegazione</div>
-            <h1 className="text-2xl font-black text-white">{p.nome}</h1>
+          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+               style={{ background: `radial-gradient(circle, ${p.accent}1a, transparent 70%)` }} />
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="text-xl">{p.icona}</span>
+            <span className="text-[10px] font-mono font-bold uppercase tracking-[0.3em]" style={{ color: p.accent }}>{p.nome}</span>
+            <div className="h-px flex-1" style={{ background: `linear-gradient(to right, ${p.accent}44, transparent)` }} />
           </div>
+          <p className="text-xl md:text-2xl font-bold text-white leading-snug max-w-3xl">
+            {p.frase}
+          </p>
         </motion.div>
-
-        <motion.p
-          className="text-[15px] text-slate-200 leading-relaxed"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.08 }}
-        >
-          {p.frase}
-        </motion.p>
 
         {/* la QUALITÀ — sempre visibile, qualunque tab (unificazione #57) */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.1 }}>
