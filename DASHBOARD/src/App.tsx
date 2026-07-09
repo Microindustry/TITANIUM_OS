@@ -63,6 +63,7 @@ const SpiegaPilastroView = lazy(() => import("./components/SpiegaPilastroView").
 const CalendarioView     = lazy(() => import("./components/CalendarioView").then(m => ({ default: m.CalendarioView })));
 const PubblicazioniView  = lazy(() => import("./components/PubblicazioniView").then(m => ({ default: m.PubblicazioniView })));
 const ValoreView         = lazy(() => import("./components/ValoreView").then(m => ({ default: m.ValoreView })));
+const MappaAlberoView    = lazy(() => import("./components/MappaAlberoView").then(m => ({ default: m.MappaAlberoView })));
 
 // ── SIDEBAR CONFIG — 3 FACCE (decisione Matteo 08/07, sess #56) ───────────────
 // TITANIUM = il sistema (pilastri + governo) · NINA = il prodotto educativo ·
@@ -537,7 +538,10 @@ function AppInner() {
             {view === "pitch-eva"     && <PitchProgettoView progetto="eva" />}
             {view === "pitch-hr"      && <PitchProgettoView progetto="hr" />}
             {view === "metodo"      && <MetodoView />}
-            {view === "mappa"    && <MappaView source="nina" systemState={sys.state as any} />}
+            {/* (#57) MAPPA = l'albero derivato (integra le 3 mappe, non le distrugge):
+                la geo radiale resta su mappa-geo, gioco/avventura sui loro deep-link */}
+            {view === "mappa"     && <MappaAlberoView />}
+            {view === "mappa-geo" && <MappaView source="nina" systemState={sys.state as any} />}
             {view === "mappa-gioco" && <MappaGiocoView />}
             {view === "rete"     && <InventarioView />}
             {view === "calendario" && <CalendarioView />}

@@ -16,10 +16,13 @@ const NINA_FIN: Record<number, string> = {
 const GIRO: Record<number, string> = { 1: "#34d399", 2: "#22d3ee", 3: "#a78bfa" };
 const giroColor = (g: number) => GIRO[Math.min(Math.max(g, 1), 3)] ?? "#34d399";
 
-type NinaSkill = { concetto: string; giro: number; scritto: boolean };
-type NinaDominio = { icon: string; nome: string; chiave: string; skills: NinaSkill[] };
+// (#57) esportati: la MAPPA-albero usa LO STESSO adapter — un grafo, due lenti
+// (qui abilità, là luoghi). Principio 9 reso codice.
+export type NinaSkill = { concetto: string; giro: number; scritto: boolean };
+export type NinaDominio = { icon: string; nome: string; chiave: string; skills: NinaSkill[] };
+export { giroColor };
 
-function buildNinaCV(): { domini: NinaDominio[]; scritti: number; totali: number } {
+export function buildNinaCV(): { domini: NinaDominio[]; scritti: number; totali: number } {
   const domini: NinaDominio[] = [];
   let scritti = 0;
   let totali = 0;
