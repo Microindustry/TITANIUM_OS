@@ -273,6 +273,16 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   ⚠ VERIFICA DOMATTINA: la 2ª tacca deve comparire da sola (catena 04:07).
   Status page pubblica (Cachet) = idea per PUBBLICAZIONI quando GENESIS è prodotto.
   LEZIONE DI METODO (in memoria): prima di rifare una UI, ricognizione repo top.
+- [✓] **LA MAPPA COME ALBERO** (1a88e6f6, "fai tutte" su proposta discussa):
+  MappaAlberoView derivata da buildNinaCV (STESSO adapter del CV di Nina — un
+  grafo, due lenti: là abilità, qui luoghi; principio 9 in codice): regioni
+  espandibili con % che si colora, caselle col colore del giro, PROSSIMA
+  MISSIONE evidenziata (layer-gioco v1). INTEGRA le 3 mappe senza distruggerle:
+  MAPPA→albero, geo radiale→mappa-geo, gioco/avventura→deep-link. Geografia
+  illustrata → prodotto (caroselli/sito). Si aggiorna col loop notturno.
+  XP/level-up veri: da progettare insieme dopo i primi episodi col formato nuovo.
+- [✓] Sidebar: Archivio Nina tolto (8b53df9f, dati+vista intatti) · titoletto
+  HR tolto (8bd97156, ridondante — Matteo).
 - [✓] **METODO v2.0** (df99934b, segnalazione Matteo "è da aggiornare"): era fermo
   al 03/06 — numeri ri-verificati (RAG 404 doc/18.556 frammenti/4 motori, stack
   130py/48tsx/363md da git ls-files), step 4 "Riordina e incrocia" (reranker+
