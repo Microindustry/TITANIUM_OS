@@ -90,9 +90,14 @@ export function CvView() {
         <header className="space-y-3">
           <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-slate-500">CV · figura professionale</div>
           <h1 className="text-3xl font-black text-white">Matteo Benenati</h1>
-          <p className="text-[15px] text-slate-300 leading-relaxed max-w-2xl">
-            Artigiano industriale + system builder. <span className="text-white font-semibold">15+ anni</span> ai vertici
-            della manifattura italiana — la mano che salda il titanio e la mente che costruisce il sistema.
+          {/* (#57 gerarchia) la frase-identità è il focale del CV */}
+          <p className="text-xl md:text-2xl font-bold text-white leading-snug max-w-3xl">
+            La mano che salda il titanio<span className="text-slate-500">,</span> la
+            mente che costruisce il sistema<span className="text-emerald-400">.</span>
+          </p>
+          <p className="text-[13px] text-slate-400 leading-relaxed max-w-2xl">
+            Artigiano industriale + system builder — <span className="text-slate-200 font-semibold">15+ anni</span> ai
+            vertici della manifattura italiana.
           </p>
           <div className="flex flex-wrap gap-2">
             {["SCProject", "ESSEGI", "DATWLER", "LU.VE", "TITANIUM_OS"].map(c => (

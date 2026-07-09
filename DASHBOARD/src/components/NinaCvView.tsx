@@ -52,16 +52,19 @@ export function NinaCvView() {
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
       <div className="max-w-4xl mx-auto px-6 py-8 space-y-4">
 
-        <div className="flex items-center justify-between gap-2">
+        {/* (#57 gerarchia) HERO: il focale è la mappa che si colora — la % grande */}
+        <div className="relative rounded-2xl border border-pink-500/25 bg-gradient-to-br from-pink-500/[0.07] to-slate-900/60 p-6 overflow-hidden flex items-center justify-between gap-3 flex-wrap">
+          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+               style={{ background: "radial-gradient(circle, rgba(236,72,153,0.10), transparent 70%)" }} />
           <div>
-            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-pink-400/80 flex items-center gap-1.5">
+            <div className="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-pink-400 flex items-center gap-1.5 mb-2">
               <Sparkles size={11} className="text-pink-400" /> CV di Nina · albero delle abilità
             </div>
-            <h1 className="text-2xl font-black text-white mt-1">Le abilità di Nina</h1>
+            <h1 className="text-xl md:text-2xl font-bold text-white leading-snug">La mappa che si colora</h1>
           </div>
-          <div className="text-right">
-            <div className="text-2xl font-black text-pink-300 tabular-nums">{pct}%</div>
-            <div className="text-[10px] font-mono text-slate-500">{cv.scritti}/{cv.totali} caselle</div>
+          <div className="text-right relative">
+            <div className="text-4xl md:text-5xl font-black text-pink-300 tabular-nums leading-none">{pct}%</div>
+            <div className="text-[11px] font-mono text-slate-400 mt-1">{cv.scritti}/{cv.totali} caselle colorate</div>
           </div>
         </div>
 

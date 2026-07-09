@@ -442,14 +442,22 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
 
       {/* ── Header ── */}
       <div className="shrink-0 px-6 pt-5 pb-4 border-b border-slate-800/60">
-        <div className="flex items-center gap-3 mb-1">
+        {/* (#57 gerarchia) il focale è la MOLE narrativa: quanti episodi esistono */}
+        <div className="flex items-center gap-2 mb-1.5">
           {mode === "nina"
-            ? <Sparkles size={18} style={{ color: NINA_COLOR }} />
-            : <Mic size={18} className="text-emerald-400" />}
-          <h2 className="text-base font-bold text-slate-100 tracking-widest uppercase">Storie</h2>
-          <span className="text-xs font-mono text-slate-500 ml-auto">
-            {modeEps.length} ep · {Math.round(totalMin / 60)}h {totalMin % 60}m
-            {liveCount > 0 && <span className="text-emerald-500 ml-2">· {liveCount} su disco</span>}
+            ? <Sparkles size={12} style={{ color: NINA_COLOR }} />
+            : <Mic size={12} className="text-emerald-400" />}
+          <span className="text-[10px] font-mono font-bold uppercase tracking-[0.3em]"
+                style={{ color: mode === "nina" ? NINA_COLOR : "#34d399" }}>Storie</span>
+          <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
+        </div>
+        <div className="flex items-baseline gap-2.5 flex-wrap mb-1">
+          <span className="text-3xl font-black tabular-nums leading-none"
+                style={{ color: mode === "nina" ? NINA_COLOR : "#6ee7b7" }}>{modeEps.length}</span>
+          <span className="text-base font-bold text-slate-300">episodi</span>
+          <span className="text-[11px] font-mono text-slate-500">
+            · {Math.round(totalMin / 60)}h {totalMin % 60}m di racconto
+            {liveCount > 0 && <span className="text-emerald-500 ml-1.5">· {liveCount} su disco</span>}
           </span>
         </div>
 

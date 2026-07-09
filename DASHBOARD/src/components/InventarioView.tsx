@@ -26,12 +26,18 @@ export function InventarioView() {
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
       <div className="max-w-4xl mx-auto px-6 py-8 space-y-6">
 
-        <div>
-          <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-cyan-400/70 flex items-center gap-2 mb-1">
-            <Archive size={11} className="text-cyan-400" />
-            Inventario & Conoscenza
+        {/* (#57 gerarchia) HERO: la promessa dell'inventario come focale */}
+        <div className="relative rounded-2xl border border-cyan-500/25 bg-gradient-to-br from-cyan-500/[0.07] to-slate-900/60 p-6 overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+               style={{ background: "radial-gradient(circle, rgba(34,211,238,0.10), transparent 70%)" }} />
+          <div className="flex items-center gap-2 mb-3">
+            <Archive size={13} className="text-cyan-400" />
+            <span className="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-[0.3em]">Inventario & Conoscenza</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/30 to-transparent" />
           </div>
-          <h1 className="text-2xl font-black text-white">Cosa abbiamo costruito</h1>
+          <p className="text-xl md:text-2xl font-bold text-white leading-snug max-w-3xl">
+            Cosa abbiamo costruito — notte per notte, scritto dal sistema stesso.
+          </p>
         </div>
 
         {/* ── IL GRAFO VERO È OBSIDIAN ── */}

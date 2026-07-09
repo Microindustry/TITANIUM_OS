@@ -60,17 +60,28 @@ export function CalendarioView() {
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
       <div className="max-w-3xl mx-auto px-6 py-8 space-y-5">
 
-        <div className="flex items-center gap-3">
-          <CalendarDays size={22} className="text-indigo-300" />
-          <div>
-            <div className="text-[10px] font-mono uppercase tracking-[0.3em] text-indigo-300/80">Calendario · diario di bordo</div>
-            <h1 className="text-2xl font-black text-white">Cosa abbiamo fatto, giorno per giorno</h1>
+        {/* (#57 gerarchia) HERO: il lavoro documentato in cifre — giorni e commit */}
+        <div className="relative rounded-2xl border border-indigo-500/25 bg-gradient-to-br from-indigo-500/[0.07] to-slate-900/60 p-6 overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+               style={{ background: "radial-gradient(circle, rgba(129,140,248,0.10), transparent 70%)" }} />
+          <div className="flex items-center gap-2 mb-3">
+            <CalendarDays size={13} className="text-indigo-300" />
+            <span className="text-[10px] font-mono font-bold text-indigo-300 uppercase tracking-[0.3em]">Calendario · diario di bordo</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-indigo-500/30 to-transparent" />
           </div>
+          {giorni ? (
+            <div className="flex items-baseline gap-3 flex-wrap">
+              <span className="text-4xl md:text-5xl font-black tabular-nums text-indigo-200 leading-none">{giorni.length}</span>
+              <span className="text-lg font-bold text-slate-300">giorni di lavoro documentati</span>
+              <span className="text-[12px] font-mono text-slate-500">· {totCommit} commit reali</span>
+            </div>
+          ) : (
+            <p className="text-xl md:text-2xl font-bold text-white leading-snug">Cosa abbiamo fatto, giorno per giorno</p>
+          )}
+          <p className="text-[12px] text-slate-400 mt-2.5">
+            Dai commit reali della catena notturna · il più recente in alto — nessun diario a mano, solo verità dal repo.
+          </p>
         </div>
-        <p className="text-[12px] text-slate-500">
-          Dai commit reali della catena notturna · il più recente in alto
-          {giorni && <span className="text-slate-600"> · {giorni.length} giorni, {totCommit} commit</span>}
-        </p>
 
         {err && (
           <p className="text-[13px] text-slate-500">
