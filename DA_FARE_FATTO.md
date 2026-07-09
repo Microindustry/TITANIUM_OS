@@ -285,6 +285,13 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   HR tolto (8bd97156, ridondante — Matteo) · Mappa-Gioco tolta (6c8ef9af:
   "serpentone non va bene, 3 triangoli-montagne" — superata dall'albero,
   vista resta deep-link).
+- [✓] **IL GIOCO — cartella + vista** (ordine Matteo "la cartella col come, lo stile,
+  cosa fare — poi passo passo come pubblicazioni"): MENTE/KNOWLEDGE/MONDO/GIOCO/
+  _DOSSIER.md (fonte unica, nel RAG, commit MENTE be8f45c) + GiocoView in sidebar
+  NINA (decf372b): meccaniche v1 (mondo/missione/livelli/salvataggio = GIÀ VIVI;
+  XP e Pietre-achievement = DA VALIDARE), regole stile (blueprint-anime, mai
+  triangoli), scaletta 8 passi gated CLAUDE/INSIEME/FUTURO.
+  **PROSSIMO PASSO = il 2: validare le meccaniche insieme (15 min).**
 - [💡] **MAPPA ILLUSTRATA DEL MONDO = asset del PRODOTTO** (decisione da #57):
   quando si fanno i caroselli col formato nuovo, il "poster del mondo" si
   disegna con la qualità blueprint-anime (pipeline Adobe Express/Gamma come
