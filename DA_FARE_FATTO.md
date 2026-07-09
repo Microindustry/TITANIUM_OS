@@ -216,6 +216,20 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   aria-label/aria-current sulla sidebar. Verificato: P1/P2/P3/P6 già chiusi in #53.
   Restano (grossi, da pianificare): P8 dedup N-livelli 4 copie · P9 tappa 2 light
   vera · P10 CommandBar dialog+focus trap · F8 PageKicker/consolidamento card.
+- [✓] **CANTIERI GROSSI eseguiti** (ordine Matteo "fino al limite"):
+  · P10 CommandBar (feaf263b): role=dialog+aria-modal, combobox con
+    aria-activedescendant, listbox/option aria-selected, focus trap su Tab
+  · P8 dedup N-livelli: VERIFICATO GIÀ CHIUSO il 07/07 (gc03 — NodeKit unico in
+    skilltree/, Matteo/Genesis/Mims migrate a theme, CriticheSection assorbita;
+    4ª voce backlog stantia trovata in #57)
+  · F8 PageKicker (3e3adb34): componente canonico in UIComponents v2.1 (il kicker
+    era reinventato con 3 tracking diversi) + migrati header Automazioni/Notturne;
+    le altre view migrano quando si toccano
+  · screenshot verifica DATA/dash_shot_DOPO_cantieri.png — home integra, tsc EXIT 0
+- [✗] **P9 tema light tappa 2 NON fatto — motivo**: sweep visivo su decine di card
+  hardcoded dark, da fare con Matteo davanti (screenshot per vista, rischio
+  regressioni estetiche in autonomia); il toggle intanto è nascosto (P9 mitigato).
+  Consolidamento card (3 raggi/3 opacità) idem: sweep da pianificare insieme.
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
