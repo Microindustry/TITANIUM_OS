@@ -52,6 +52,16 @@ const PILASTRI: Record<string, Pilastro> = {
     ],
     catena: "GENESIS orchestra tutto: V32, MIMS, EVA, Nina, il CV girano qui sopra.",
   },
+  hr: {
+    nome: "HR — il motore sulla persona", icona: "🧭", accent: "#94a3b8",
+    frase: "Non un curriculum: una piattaforma. Chiunque può essere inserito e avere il proprio grafo di competenze personali e professionali — con prove.",
+    livelli: [
+      { lv: 1, titolo: "Il grafo — la verità", testo: "Competenze professionali + personali di una persona, agganciate a prove reali (milestone, episodi, commit, foto) e alla tassonomia europea ESCO dove esiste. LEGGE: una competenza senza prova NON entra. Multi-persona by design: Matteo è il primo record, mai l'unico schema." },
+      { lv: 2, titolo: "La mappa a livelli — la leggibilità", testo: "Un grafo grezzo è oneroso da interpretare se non sei del mestiere. Il pattern N-livelli (nato proprio dal CV di Matteo) è l'interfaccia umana del grafo: navigabile casella per casella, la mappa che si colora." },
+      { lv: 3, titolo: "Nina — la guida", testo: "Anche una mappa leggibile ha bisogno di chi spiega i perché: Nina è l'interprete del grafo. E il loop generativo: ciò che non sappiamo lo cerchiamo e diventa un percorso alla scoperta dei perché — ogni settore può diventare una guida." },
+    ],
+    catena: "HR fotografa nell'adulto ciò che Nina costruisce nel bambino: un solo grafo, due prodotti. Prima istanza: il CV vivo di Matteo (sotto-voce CV).",
+  },
   nina: {
     nome: "NINA", icona: "🌸", accent: "#ec4899",
     frase: "La guida del motore: una bambina che impara il sistema vero — e insegnandolo lo mette alla prova. Il primo treno verso il mondo.",

@@ -16,6 +16,7 @@ const MAP: Record<string, { prefix: string; pitch: ViewMode }> = {
   eva:      { prefix: "EVA",      pitch: "pitch-eva" },
   nina:     { prefix: "NINA",     pitch: "pitch-nina" },
   identity: { prefix: "CV VIVO",  pitch: "pitch-hr" },
+  hr:       { prefix: "CV VIVO",  pitch: "pitch-hr" },
 };
 
 const NATURA_COLORS = { cassa: "#34d399", molt: "#22d3ee", ip: "#fbbf24" };

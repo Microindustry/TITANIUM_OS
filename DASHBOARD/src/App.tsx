@@ -83,9 +83,8 @@ const NAV_ITEMS: NavItem[] = [
   { id: "genesis",  label: "GENESIS",  icon: Cpu,           color: "text-cyan-400",   group: "pillars", dot: "bg-cyan-400"    },
   { id: "mims",     label: "MIMS",     icon: Layers,        color: "text-amber-400",  group: "pillars", dot: "bg-amber-400"   },
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
-  // HR — il motore sulla persona: CV vivo di Matteo + profilo di Nina (cartella dedicata, #57)
-  { id: "identity", label: "CV",       icon: Network,       color: "text-slate-300",  group: "hr", dot: "bg-slate-400"   },
-  { id: "cv-nina",  label: "CV NINA",  icon: Sparkles,      color: "text-pink-400",   group: "hr", dot: "bg-pink-400"    },
+  // HR — il motore sulla persona: voce NAVIGABILE (pagina pilastro); CV e CV NINA sotto-voci annidate
+  { id: "hr",       label: "HR",       icon: Network,       color: "text-slate-300",  group: "hr", dot: "bg-slate-400"   },
   // TITANIUM · Sistema — PITCH eliminato dalla barra (#57): vive DENTRO ogni pilastro (tab);
   // la vista "pitch" (Modalità Presentazione) resta raggiungibile dal bottone in home
   { id: "controllo",   label: "CONTROLLO",   icon: Gauge,         color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
@@ -226,13 +225,33 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
         )}
         {pillarItems.map(item => <NavBtn key={item.id} item={item} />)}
 
-        {/* ══ HR — il motore sulla persona (cartella dedicata, ordine Matteo #57) ══ */}
+        {/* ══ HR — il motore sulla persona: voce navigabile + CV/CV NINA annidate (#57) ══ */}
         {!collapsed && (
           <div className="text-[7px] font-mono text-slate-400/80 uppercase tracking-[0.3em] px-3 py-2">
             HR · Il motore sulla persona
           </div>
         )}
-        {hrItems.map(item => <NavBtn key={item.id} item={item} />)}
+        {hrItems.map(item => (
+          <Fragment key={item.id}>
+            <NavBtn item={item} />
+            {!collapsed && ([
+              ["identity", "CV", "text-slate-400", "slate"],
+              ["cv-nina", "CV Nina", "text-pink-400", "pink"],
+            ] as const).map(([vm, lbl, iconCol, tone]) => (
+              <button key={vm} onClick={() => onNavigate(vm as ViewMode)}
+                title={vm === "identity" ? "Il CV vivo di Matteo — prima istanza del motore" : "Il CV di Nina — l'albero che si riempie dagli episodi"}
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === vm
+                    ? (tone === "pink" ? "bg-pink-950/40 text-pink-300 border border-pink-500/30" : "bg-slate-800/60 text-slate-200 border border-slate-600/40")
+                    : (tone === "pink" ? "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent" : "text-slate-600 hover:text-slate-300 hover:bg-slate-800/40 border border-transparent")}`}>
+                {vm === "identity"
+                  ? <Network size={11} className={`flex-shrink-0 ${iconCol}`} />
+                  : <Sparkles size={11} className={`flex-shrink-0 ${iconCol}`} />}
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">{lbl}</span>
+              </button>
+            ))}
+          </Fragment>
+        ))}
 
         {!collapsed && (
           <div className="text-[7px] font-mono text-emerald-600/80 uppercase tracking-[0.3em] px-3 py-2">
@@ -493,6 +512,7 @@ function AppInner() {
             {view === "mims"     && <SpiegaPilastroView pilastro="mims" />}
             {view === "eva"      && <SpiegaPilastroView pilastro="eva" />}
             {view === "nina-pilastro" && <SpiegaPilastroView pilastro="nina" />}
+            {view === "hr"       && <SpiegaPilastroView pilastro="hr" />}
             {view === "identity"  && <CvView />}
             {view === "cv-nina"   && <NinaCvView />}
             {/* Sistema */}
