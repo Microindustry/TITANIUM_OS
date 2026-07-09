@@ -175,6 +175,21 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
 - [💡] Proposte strutturali (decidere insieme): nina_agent aggiorna _CANONE da solo
   alla promozione (uccide il drift quotidiano) · pip-audit anche post-upgrade ·
   prefissi ⚠ duplicati nel report STATO_SISTEMA (bug cosmetico del generatore).
+**SERA/NOTTE 09/07 (ordine Matteo: unificare pilastri+pitch+qualità, ricerca da fonti):**
+- [✓] **UNIFICAZIONE pilastri↔pitch↔valore** (bc84de54): `PilastroEconomiaCard` —
+  la "QUALITÀ" di ogni pilastro (valore per chi lo usa + prodotto economico + natura,
+  derivata da valoreData) dentro OGNI pagina pilastro (v32/mims/genesis/eva/CV),
+  con bottoni Pitch e Quadro VALORE a un click. tsc EXIT 0.
+- [✓] **RICERCA DA FONTI** (ordine: "Reddit/GitHub/tesi/studi") →
+  `MENTE/KNOWLEDGE/RICERCA_GRAFO_COMPETENZE.md` (RAG 18.556, commit db4e8e4):
+  · **ESCO** (tassonomia UE, 14k competenze, IT, API keyless) TESTATA LIVE: la
+    saldatura TIG di Matteo è già nel grafo europeo con URI stabile
+  · **Open Badges 3.0 / W3C VC**: il campo `evidence` = la nostra LEGGE (competenza
+    senza prova non entra) È GIÀ standard mondiale; Europass compatibile
+  · prior art GitHub (SkillTreeOSS, NSA skills-service, MakerSkillTree stampabile
+    → idea per Nina bambini): nessuno ha grafo+mappa+guida narrativa = wedge regge
+  · **schema dati v0** proposto (persona multi-record, esco_uri, prove[], casella)
+  · pacchetti: NON servono oggi (API keyless, JSON puro) — meno superficie, meno CVE
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
