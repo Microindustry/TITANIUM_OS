@@ -205,6 +205,9 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   (via la sotto-voce annidata) — tra Pilastri e Sistema.
 - [✓] **PITCH eliminato dalla barra**: unificato nei tab dei pilastri; viste pitch-*
   e Modalità Presentazione (bottone home) INTATTE (niente cancellato, deep-link ok).
+- [✓] **HR NAVIGABILE** (5bcac07a, correzione Matteo): HR voce piena con pagina
+  pilastro — i 3 strati del motore come livelli Lv1-3 (grafo+LEGGE+ESCO / mappa /
+  Nina guida), tab Pitch, card valore; CV e CV Nina sotto-voci piccole annidate.
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
