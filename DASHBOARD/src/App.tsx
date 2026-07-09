@@ -64,6 +64,7 @@ const CalendarioView     = lazy(() => import("./components/CalendarioView").then
 const PubblicazioniView  = lazy(() => import("./components/PubblicazioniView").then(m => ({ default: m.PubblicazioniView })));
 const ValoreView         = lazy(() => import("./components/ValoreView").then(m => ({ default: m.ValoreView })));
 const MappaAlberoView    = lazy(() => import("./components/MappaAlberoView").then(m => ({ default: m.MappaAlberoView })));
+const GiocoView          = lazy(() => import("./components/GiocoView").then(m => ({ default: m.GiocoView })));
 
 // ── SIDEBAR CONFIG — 3 FACCE (decisione Matteo 08/07, sess #56) ───────────────
 // TITANIUM = il sistema (pilastri + governo) · NINA = il prodotto educativo ·
@@ -99,6 +100,7 @@ const NAV_ITEMS: NavItem[] = [
   // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
   { id: "nina-pilastro", label: "NINA",         icon: Bot,      color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
   { id: "nina-giorno0",  label: "DAL GIORNO 0", icon: Sparkles, color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
+  { id: "gioco",         label: "GIOCO",        icon: Bot,      color: "text-pink-400", group: "nina" },
   { id: "mappa",         label: "MAPPA",        icon: Map,      color: "text-pink-400", group: "nina" },
   // PUBBLICAZIONI — l'output verso il mondo
   { id: "pubblicazioni", label: "PUBBLICAZIONI", icon: Send, color: "text-orange-300", group: "pub", dot: "bg-orange-400" },
@@ -530,6 +532,7 @@ function AppInner() {
                 la geo radiale resta su mappa-geo, gioco/avventura sui loro deep-link */}
             {view === "mappa"     && <MappaAlberoView />}
             {view === "mappa-geo" && <MappaView source="nina" systemState={sys.state as any} />}
+            {view === "gioco"     && <GiocoView />}
             {view === "mappa-gioco" && <MappaGiocoView />}
             {view === "rete"     && <InventarioView />}
             {view === "calendario" && <CalendarioView />}
