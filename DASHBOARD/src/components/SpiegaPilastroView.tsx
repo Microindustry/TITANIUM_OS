@@ -7,10 +7,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, Presentation } from "lucide-react";
 import { useGlobalState } from "../hooks/SystemStateContext";
 import { V32Room, GenesisRoom, MimsRoom, EvaRoom } from "./CanvasLayout";
 import { PilastroEconomiaCard } from "./PilastroEconomiaCard";
+import { PitchProgettoBody } from "./PitchProgettoView";
 
 type Livello = { lv: number; titolo: string; testo: string };
 type Pilastro = { nome: string; icona: string; accent: string; frase: string; livelli: Livello[]; catena: string };
@@ -70,6 +71,8 @@ export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
   const Room = ROOMS[pilastro];
   const [aperti, setAperti] = useState<number[]>([1, 2, 3]);
   const toggle = (lv: number) => setAperti(a => a.includes(lv) ? a.filter(x => x !== lv) : [...a, lv]);
+  // unificazione #57: SPIEGAZIONE e PITCH sono tab della STESSA pagina (il valore resta sempre visibile)
+  const [tab, setTab] = useState<"spiega" | "pitch">("spiega");
 
   return (
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
@@ -97,6 +100,31 @@ export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
           {p.frase}
         </motion.p>
 
+        {/* la QUALITÀ — sempre visibile, qualunque tab (unificazione #57) */}
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.1 }}>
+          <PilastroEconomiaCard pilastro={pilastro} />
+        </motion.div>
+
+        {/* TAB: spiegazione | pitch — una pagina sola per pilastro */}
+        <div className="flex items-center gap-2">
+          {([["spiega", "Spiegazione", BookOpen], ["pitch", "Pitch", Presentation]] as const).map(([id, label, Icon]) => (
+            <button key={id} onClick={() => setTab(id)}
+              className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 border text-[11px] font-bold uppercase tracking-wide transition-all
+                ${tab === id ? "text-slate-100" : "border-slate-800 bg-slate-900/40 text-slate-500 hover:text-slate-300"}`}
+              style={tab === id ? { borderColor: p.accent + "66", background: p.accent + "14", color: p.accent } : undefined}>
+              <Icon size={11} /> {label}
+            </button>
+          ))}
+        </div>
+
+        {tab === "pitch" && (
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25 }}
+                      className="rounded-2xl border border-slate-800 bg-slate-900/30 p-5">
+            <PitchProgettoBody progetto={pilastro} />
+          </motion.div>
+        )}
+
+        {tab === "spiega" && (<>
         {/* livelli — apri e spiega, dal più semplice al più profondo (entrata a cascata) */}
         <div className="space-y-2.5">
           {p.livelli.map((l, i) => {
@@ -156,17 +184,7 @@ export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
           <p className="text-[13px] text-slate-300 leading-relaxed">{p.catena}</p>
         </motion.div>
 
-        {/* UNIFICAZIONE pilastro↔pitch↔valore (ordine Matteo #57): la "qualità" —
-            il prodotto economico che genera per gli altri, con pitch a un click */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.18 + p.livelli.length * 0.07 }}
-        >
-          <PilastroEconomiaCard pilastro={pilastro} />
-        </motion.div>
-
-        <p className="text-[10px] text-slate-600 italic">Spiegazione + valore in un posto solo: apri i livelli e raccontala a voce; il pitch che VENDE è il bottone qui sopra.</p>
+        <p className="text-[10px] text-slate-600 italic">Spiegazione, pitch e valore in un posto solo: apri i livelli e raccontala a voce; il pitch che VENDE è il tab qui sopra.</p>
 
         {/* DENTRO IL PILASTRO — il contenuto ricco originale (dati, percorso, blockers): reintegrato, non perso */}
         {Room && (
@@ -183,6 +201,7 @@ export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
             <Room state={state} />
           </motion.div>
         )}
+        </>)}
 
       </div>
     </div>

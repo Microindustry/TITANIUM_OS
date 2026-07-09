@@ -64,7 +64,9 @@ function Markdown({ src, accent }: { src: string; accent: string }) {
   return <div>{blocks}</div>;
 }
 
-export function PitchProgettoView({ progetto }: { progetto: string }) {
+// Corpo del pitch SENZA il contenitore pagina — riusabile dentro altre viste
+// (unificazione #57: la pagina pilastro lo incorpora come tab "Pitch").
+export function PitchProgettoBody({ progetto }: { progetto: string }) {
   const meta = PITCH[progetto] ?? FALLBACK;
   const [md, setMd] = useState<string | null>(null);
   const [err, setErr] = useState(false);
@@ -79,20 +81,28 @@ export function PitchProgettoView({ progetto }: { progetto: string }) {
   }, [meta.file]);
 
   return (
+    <>
+      <div className="text-[10px] font-mono uppercase tracking-[0.3em] mb-4 flex items-center gap-2" style={{ color: meta.accent }}>
+        <Presentation size={11} /> Pitch per progetto · {meta.title}
+      </div>
+      {md ? (
+        <Markdown src={md} accent={meta.accent} />
+      ) : err ? (
+        <p className="text-[13px] text-slate-500 leading-relaxed">
+          Pitch non disponibile via API (serve l'API attiva). Apri <span className="font-mono text-slate-300">DOCS/{meta.file}</span>.
+        </p>
+      ) : (
+        <p className="text-[12px] text-slate-600 font-mono animate-pulse">caricamento pitch…</p>
+      )}
+    </>
+  );
+}
+
+export function PitchProgettoView({ progetto }: { progetto: string }) {
+  return (
     <div className="h-full overflow-y-auto" style={{ background: "var(--shell-bg)" }}>
       <div className="max-w-3xl mx-auto px-6 py-8">
-        <div className="text-[10px] font-mono uppercase tracking-[0.3em] mb-4 flex items-center gap-2" style={{ color: meta.accent }}>
-          <Presentation size={11} /> Pitch per progetto · {meta.title}
-        </div>
-        {md ? (
-          <Markdown src={md} accent={meta.accent} />
-        ) : err ? (
-          <p className="text-[13px] text-slate-500 leading-relaxed">
-            Pitch non disponibile via API (serve l'API attiva). Apri <span className="font-mono text-slate-300">DOCS/{meta.file}</span>.
-          </p>
-        ) : (
-          <p className="text-[12px] text-slate-600 font-mono animate-pulse">caricamento pitch…</p>
-        )}
+        <PitchProgettoBody progetto={progetto} />
       </div>
     </div>
   );
