@@ -198,6 +198,13 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   sempre visibile sopra i tab. Una pagina per pilastro: spiega, vende, mostra il
   valore. tsc EXIT 0. Restano fuori tab: CV (card+link, struttura diversa) e NINA
   (non ha pagina pilastro — vive in DAL GIORNO 0).
+**GIORNO 09/07 (rientro 3) — "Nina uguale, CV sotto HR, via PITCH" (6b95c2dd):**
+- [✓] **Pilastro NINA**: pagina identica agli altri (card valore + tab Spiegazione|
+  Pitch, contenuti grounded sul canone), in cima alla faccia NINA in sidebar.
+- [✓] **Cartella HR in sidebar** ("il motore sulla persona"): CV + CV NINA voci piene
+  (via la sotto-voce annidata) — tra Pilastri e Sistema.
+- [✓] **PITCH eliminato dalla barra**: unificato nei tab dei pilastri; viste pitch-*
+  e Modalità Presentazione (bottone home) INTATTE (niente cancellato, deep-link ok).
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
