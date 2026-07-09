@@ -30,6 +30,23 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-09 · 11 commit
+- `b9115332` auto: night_audit - cartella clinica 09/07/2026
+- `9281b0cf` auto: story_agent - episodi generati 09/07/2026
+- `ee4eca65` chore(#57): RIAVVIO — nota serale (fatto + priorita riviste) per la prossima apertura
+- `ac36d59f` fix(#57): genesisData — NEXUS allineato alla verita (codice mai cablato, non active/done)
+- `f2496df8` chore(#57): bussola — priorita riviste (ecosistema da solo, episodi con Matteo) + ondata igiene chiusa
+- `c564e423` chore(#57): dashboard igiene — via hardcode benen/layout Getac + neri unificati (01 P5, 04)
+- `672a312d` fix(#57): max_retries=4 sui client Anthropic dei 4 agenti notturni (backlog #52, 04)
+- `8b2ebaa6` feat(#57): card home VALORE derivata — IL MOTORE (grafo->mappa LV->Nina) + messaggio fondante
+- `63fe95d3` chore(salva): chiusura #56 — verita sparsa CHIUSA + LE 3 FACCE + vista PUBBLICAZIONI; #57 in modo ingegnerizzato
+- `a3b35704` feat(#56): LE 3 FACCE — sidebar TITANIUM/NINA/PUBBLICAZIONI + ripasso #32-56 + vista Pubblicazioni
+- `b7f25f66` feat(#56): verita sparsa punto 1 CHIUSO — Mappa deriva (au18) + % con nome (au09) + MASTER declassato (au16)
+
+_episodi: 265 · critiche aperte: 24 (135 risolte) · RAG: 18511 chunk_
+
+
+
 ## 2026-07-08 · 15 commit
 - `389936fb` auto: night_audit - cartella clinica 08/07/2026
 - `2e63de91` auto: story_agent - episodi generati 08/07/2026
