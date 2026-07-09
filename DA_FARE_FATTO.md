@@ -244,6 +244,14 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   PITCH (già gerarchico + atto economico). tsc verde su ogni commit.
   Restano (viste complesse/da valutare insieme): STORIE, MAPPA, CALENDARIO,
   INVENTARIO, METODO, CV/CV Nina (header già decente), DAL GIORNO 0.
+- [✓] **GERARCHIA COMPLETATA — tutte le viste** (681cb7ff): CALENDARIO (N giorni
+  documentati in cifra grande) · INVENTARIO (promessa hero) · STORIE+DAL GIORNO 0
+  (mole narrativa: N episodi + ore, colore segue il mode) · CV (frase-identità
+  xl/2xl) · CV NINA (% mappa che si colora in 4xl/5xl). ESCLUSE con motivo:
+  METODO e PITCH (già a livello hero dal design originale), MAPPA (full-canvas,
+  un hero coprirebbe la visualizzazione). **La revisione grafica di #57 è CHIUSA**:
+  16 viste col pattern focale, identità intatta, zero regressioni (tsc verde
+  su ogni commit). Da fare insieme: regola palette scritta + lingua icone.
 - [✗] **P9 tema light tappa 2 NON fatto — motivo**: sweep visivo su decine di card
   hardcoded dark, da fare con Matteo davanti (screenshot per vista, rischio
   regressioni estetiche in autonomia); il toggle intanto è nascosto (P9 mitigato).
