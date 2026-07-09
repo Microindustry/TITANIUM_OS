@@ -79,9 +79,19 @@
 }
 
 /* ─── TYPOGRAPHY ───────────────────────────────────────── */
-@font-face {
-  font-family: 'JetBrains';
-  src: local('JetBrains Mono'), local('Fira Code'), local('Consolas');
+/* (#57 P12): rimosso @font-face 'JetBrains' MORTO (mai referenziato da nessuna
+   classe — il mono arriva dallo stack di Tailwind). Al suo posto: la SCALA
+   TIPOGRAFICA di sistema che mancava. Le 239 occorrenze text-[7/8/9px] legacy
+   restano curate dal floor sotto; il CODICE NUOVO usa questi token:
+     font-size: var(--text-2xs)  → micro-label (kicker, mono uppercase)
+     font-size: var(--text-xs)   → label secondaria / metadati
+     font-size: var(--text-sm)   → corpo testo card
+     font-size: var(--text-base) → corpo principale */
+:root {
+  --text-2xs:  10px;
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 13px;
 }
 
 /* ─── LEGGIBILITÀ GLOBALE — override font troppo piccoli ── */

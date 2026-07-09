@@ -573,7 +573,10 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
                   <div>
                     <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest">Milestone</div>
-                    <div className="text-[11px] font-bold text-white">{state?.active_milestone ?? "—"}</div>
+                    {/* (#57 restyle) clamp: il milestone è una frase lunga — 2 righe max, il resto al title */}
+                    <div className="text-[11px] font-bold text-white max-w-md line-clamp-2" title={state?.active_milestone ?? ""}>
+                      {state?.active_milestone ?? "—"}
+                    </div>
                   </div>
                 </div>
                 {(state?.blockers ?? []).length > 0 && (

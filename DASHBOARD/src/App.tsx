@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, Sun, Moon, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send, Landmark,
+  FlaskConical, Moon, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send, Landmark,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -153,6 +153,8 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
       <button
         onClick={() => onNavigate(item.id)}
         title={item.label}
+        aria-label={item.label}
+        aria-current={isActive ? "page" : undefined}
         className={`group relative w-full flex items-center gap-3 rounded-xl transition-all duration-200
           ${collapsed ? "justify-center px-0 py-3" : "px-3 py-2.5"}
           ${isActive
@@ -423,11 +425,13 @@ function AppInner() {
   const collapsed = useUIStore(s => s.sidebarCollapsed);
   const toggleSidebar = useUIStore(s => s.toggleSidebar);
   const theme = useUIStore(s => s.theme);
-  const toggleTheme = useUIStore(s => s.toggleTheme);
+  // const toggleTheme = useUIStore(s => s.toggleTheme); // (#57 P9) riattivare col light completo
   const [cmdOpen, setCmdOpen] = useState(false);
 
-  // Applica il tema al root (CSS [data-theme] -> token shell)
-  useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
+  // (#57 P9) tema FORZATO dark: la "tappa 2" del light non è mai stata fatta (card
+  // interne hardcoded dark) — mostrare il toggle esponeva un tema rotto. Infra
+  // tema intatta: quando il light sarà completo, ripristinare `theme` qui e il bottone.
+  useEffect(() => { document.documentElement.dataset.theme = "dark"; }, [theme]);
 
   const navigate = useCallback((v: ViewMode) => setView(v), [setView]);
   const pillars = sys.state?.pillars ?? {};
@@ -460,11 +464,11 @@ function AppInner() {
           <span className="text-[8px] font-mono text-slate-500">{milestone?.slice(0, 40)}</span>
         </div>
         <div className="flex items-center gap-3">
-          <button onClick={toggleTheme}
-            title={theme === "dark" ? "Tema chiaro" : "Tema scuro"}
+          {/* (#57 P9) toggle tema NASCOSTO finché il light non è completo — codice sotto intatto:
+          <button onClick={toggleTheme} title={theme === "dark" ? "Tema chiaro" : "Tema scuro"}
             className="flex items-center text-slate-500 hover:text-amber-400 transition-colors">
             {theme === "dark" ? <Sun size={11} /> : <Moon size={11} />}
-          </button>
+          </button> */}
           <Clock />
           <button onClick={() => setCmdOpen(true)}
             className="flex items-center gap-1 text-[8px] font-mono text-slate-600 hover:text-slate-300
