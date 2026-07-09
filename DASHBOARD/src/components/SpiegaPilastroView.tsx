@@ -52,6 +52,16 @@ const PILASTRI: Record<string, Pilastro> = {
     ],
     catena: "GENESIS orchestra tutto: V32, MIMS, EVA, Nina, il CV girano qui sopra.",
   },
+  nina: {
+    nome: "NINA", icona: "🌸", accent: "#ec4899",
+    frase: "La guida del motore: una bambina che impara il sistema vero — e insegnandolo lo mette alla prova. Il primo treno verso il mondo.",
+    livelli: [
+      { lv: 1, titolo: "Cos'è", testo: "Una collana educativa dove ogni concetto corrisponde a un pezzo vero e funzionante del sistema: quando Nina impara il RAG, il RAG esiste, coi numeri veri. Non favola astratta: fiaba ancorata a un sistema che gira." },
+      { lv: 2, titolo: "Come funziona", testo: "Episodi generati grounded sul RAG (canone EP_N2, guardia anti-gemelli), pipeline caroselli, mappa a caselle: ogni episodio sblocca una competenza e colora una casella — il principio 9, il CV che si genera." },
+      { lv: 3, titolo: "Come scala", testo: "È lo strato-guida del MOTORE: il bambino è il primo registro, non il perimetro. Ciò che non sappiamo lo cerchiamo e diventa un percorso alla scoperta dei perché — ogni settore può diventare una guida. Formato doppio (completo 16 sito + social ≤10) verso la pubblicazione." },
+    ],
+    catena: "NINA è la voce del motore: spiega il grafo che HR fotografa nell'adulto. La stessa mappa colora il profilo della bambina e il CV del papà.",
+  },
   eva: {
     nome: "EVA · Vita Natura", icona: "🌿", accent: "#a78bfa",
     frase: "L'assistente AI del centro estetico di Maria — il ponte che porta cashflow mentre il resto matura.",

@@ -9,7 +9,7 @@ export type ViewMode = "home" | "v32" | "genesis" | "mims" | "eva" | "identity"
                      | "pitch-nina" | "pitch-mims" | "pitch-v32" | "pitch-genesis" | "pitch-eva" | "pitch-hr"
                      | "sinapsi" | "canvas" | "neuro" | "automazioni"
                      | "notturne" | "pitch" | "metodo" | "ragchat" | "avventura" | "nina-archivio" | "nina-giorno0" | "controllo" | "avventura-mappa" | "procedimenti" | "calendario"
-                     | "pubblicazioni" | "valore";
+                     | "pubblicazioni" | "valore" | "nina-pilastro";
 
 export type Theme = "dark" | "light";
 

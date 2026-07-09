@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send, Landmark,
+  FlaskConical, Sun, Moon, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send, Landmark,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -72,7 +72,7 @@ interface NavItem {
   label: string;
   icon: typeof Home;
   color: string;
-  group: "pillars" | "system" | "nina" | "pub";
+  group: "pillars" | "hr" | "system" | "nina" | "pub";
   dot?: string;        // colore dot status
 }
 
@@ -83,17 +83,20 @@ const NAV_ITEMS: NavItem[] = [
   { id: "genesis",  label: "GENESIS",  icon: Cpu,           color: "text-cyan-400",   group: "pillars", dot: "bg-cyan-400"    },
   { id: "mims",     label: "MIMS",     icon: Layers,        color: "text-amber-400",  group: "pillars", dot: "bg-amber-400"   },
   { id: "eva",      label: "EVA",      icon: MessageSquare, color: "text-violet-400", group: "pillars", dot: "bg-violet-400"  },
-  { id: "identity", label: "CV",       icon: Network,       color: "text-slate-400",  group: "pillars", dot: "bg-slate-400"   },
-  // TITANIUM · Sistema
+  // HR — il motore sulla persona: CV vivo di Matteo + profilo di Nina (cartella dedicata, #57)
+  { id: "identity", label: "CV",       icon: Network,       color: "text-slate-300",  group: "hr", dot: "bg-slate-400"   },
+  { id: "cv-nina",  label: "CV NINA",  icon: Sparkles,      color: "text-pink-400",   group: "hr", dot: "bg-pink-400"    },
+  // TITANIUM · Sistema — PITCH eliminato dalla barra (#57): vive DENTRO ogni pilastro (tab);
+  // la vista "pitch" (Modalità Presentazione) resta raggiungibile dal bottone in home
   { id: "controllo",   label: "CONTROLLO",   icon: Gauge,         color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
-  { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "valore",      label: "VALORE",      icon: Landmark,      color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE · SISTEMA", icon: Mic,      color: "text-rose-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
-  // NINA — il prodotto educativo (l'Archivio è sotto-voce di DAL GIORNO 0)
+  // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
+  { id: "nina-pilastro", label: "NINA",         icon: Bot,      color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
   { id: "nina-giorno0",  label: "DAL GIORNO 0", icon: Sparkles, color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
   { id: "mappa",         label: "MAPPA",        icon: Map,      color: "text-pink-400", group: "nina" },
   // PUBBLICAZIONI — l'output verso il mondo
@@ -132,6 +135,7 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
   online: boolean;
 }) {
   const pillarItems = NAV_ITEMS.filter(n => n.group === "pillars");
+  const hrItems     = NAV_ITEMS.filter(n => n.group === "hr");
   const systemItems = NAV_ITEMS.filter(n => n.group === "system");
   const ninaItems   = NAV_ITEMS.filter(n => n.group === "nina");
   const pubItems    = NAV_ITEMS.filter(n => n.group === "pub");
@@ -220,27 +224,15 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
             Titanium · Pilastri
           </div>
         )}
-        {pillarItems.map(item => (
-          <Fragment key={item.id}>
-            <NavBtn item={item} />
-            {/* Sotto-voce: CV Nina — annidata sotto CV (identity), rosa */}
-            {item.id === "identity" && !collapsed && (
-              <button
-                onClick={() => onNavigate("cv-nina")}
-                title="Il CV di Nina — l'albero delle abilità che si riempie dagli episodi"
-                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                  ${view === "cv-nina"
-                    ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
-                    : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
-              >
-                <Sparkles size={11} className="flex-shrink-0 text-pink-400" />
-                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                  CV Nina
-                </span>
-              </button>
-            )}
-          </Fragment>
-        ))}
+        {pillarItems.map(item => <NavBtn key={item.id} item={item} />)}
+
+        {/* ══ HR — il motore sulla persona (cartella dedicata, ordine Matteo #57) ══ */}
+        {!collapsed && (
+          <div className="text-[7px] font-mono text-slate-400/80 uppercase tracking-[0.3em] px-3 py-2">
+            HR · Il motore sulla persona
+          </div>
+        )}
+        {hrItems.map(item => <NavBtn key={item.id} item={item} />)}
 
         {!collapsed && (
           <div className="text-[7px] font-mono text-emerald-600/80 uppercase tracking-[0.3em] px-3 py-2">
@@ -266,21 +258,8 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </span>
               </button>
             )}
-            {/* Sotto-voci di PITCH: un pitch per progetto (la spiegazione vera, non i pilastri obsoleti) */}
-            {item.id === "pitch" && !collapsed && (
-              <>
-                {([["pitch-nina", "Nina"], ["pitch-mims", "MIMS"], ["pitch-v32", "V32"], ["pitch-genesis", "GENESIS"], ["pitch-eva", "EVA"], ["pitch-hr", "HR"]] as const).map(([vm, lbl]) => (
-                  <button key={vm} onClick={() => onNavigate(vm)}
-                    title={`Pitch ${lbl} — la spiegazione reale e attuale del progetto`}
-                    className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1
-                      ${view === vm
-                        ? "bg-emerald-950/40 text-emerald-300 border border-emerald-500/30"
-                        : "text-slate-600 hover:text-emerald-300 hover:bg-emerald-950/20 border border-transparent"}`}>
-                    <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">{lbl}</span>
-                  </button>
-                ))}
-              </>
-            )}
+            {/* (#57) le sotto-voci PITCH sono state UNIFICATE dentro i pilastri (tab Pitch
+                in ogni pagina pilastro); le viste pitch-* restano per i deep-link */}
           </Fragment>
         ))}
 
@@ -513,6 +492,7 @@ function AppInner() {
             {view === "genesis"  && <SpiegaPilastroView pilastro="genesis" />}
             {view === "mims"     && <SpiegaPilastroView pilastro="mims" />}
             {view === "eva"      && <SpiegaPilastroView pilastro="eva" />}
+            {view === "nina-pilastro" && <SpiegaPilastroView pilastro="nina" />}
             {view === "identity"  && <CvView />}
             {view === "cv-nina"   && <NinaCvView />}
             {/* Sistema */}
