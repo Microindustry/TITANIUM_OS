@@ -829,38 +829,42 @@ export function AutomationsView() {
     { id: "content_engine",label: "CONTENT ENGINE",  count: ce.length,      color: "text-cyan-400"    },
   ];
 
+  // (#57 gerarchia) i numeri LIVE che il vecchio header nascondeva nelle card
+  const viveOra = Object.values(procsLive).filter(s => s.alive).length;
+  const schedAttive = Object.values(tasksLive).filter(t => t.active).length;
+  const apiLive = Object.keys(procsLive).length > 0 || Object.keys(tasksLive).length > 0;
+
   return (
     <div className="space-y-4">
-      {/* Stats header */}
-      <div className="grid grid-cols-4 gap-2">
-        {[
-          { label: "Attive",        value: attive.length,  color: "text-emerald-400", border: "border-emerald-500/30" },
-          { label: "Alta priorità", value: daFare.filter(a => a.priority === "alta").length,  color: "text-rose-400",   border: "border-rose-500/30"   },
-          { label: "Da fare tot.",  value: daFare.length,  color: "text-amber-400",  border: "border-amber-500/30" },
-          { label: "Content Engine",value: ce.length,      color: "text-cyan-400",   border: "border-cyan-500/30"  },
-        ].map(s => (
-          <div key={s.label} className={`bg-slate-900 border ${s.border} rounded-xl p-3 text-center`}>
-            <div className={`text-xl font-black font-mono ${s.color}`}>{s.value}</div>
-            <div className="text-[8px] font-mono text-slate-500 uppercase tracking-widest mt-0.5">{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Striscia VERITÀ — stato operativo reale (P1a audit 06/06). I badge sopra
-          contano per "priorità"/categoria; questi contano per "gira davvero o no". */}
-      <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-3">
-        <div className="text-[8px] font-mono text-slate-500 uppercase tracking-widest mb-2">
-          Stato operativo reale — verificato contro processi · Task Scheduler · watcher.py
+      {/* ══ HERO (#57): quante girano ADESSO — dal vivo, non da catalogo ══ */}
+      <div className="relative rounded-2xl border border-amber-500/25 bg-gradient-to-br from-amber-500/[0.07] to-slate-900/60 p-6 overflow-hidden">
+        <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+             style={{ background: "radial-gradient(circle, rgba(251,191,36,0.10), transparent 70%)" }} />
+        <div className="flex items-center gap-2 mb-3">
+          <Zap size={13} className="text-amber-400" />
+          <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-[0.3em]">Automazioni · stato vivo</span>
+          <div className="h-px flex-1 bg-gradient-to-r from-amber-500/30 to-transparent" />
+          <span className="flex items-center gap-1.5 text-[10px] font-mono">
+            <span className={`w-1.5 h-1.5 rounded-full ${apiLive ? "bg-emerald-500 animate-pulse" : "bg-slate-700"}`} />
+            <span className={apiLive ? "text-emerald-500/80" : "text-slate-600"}>{apiLive ? "dati live" : "API giù — catalogo statico"}</span>
+          </span>
         </div>
-        <div className="flex flex-wrap gap-1.5">
+        {apiLive ? (
+          <div className="flex items-baseline gap-3 flex-wrap">
+            <span className="text-4xl md:text-5xl font-black tabular-nums text-amber-200 leading-none">{viveOra}</span>
+            <span className="text-lg font-bold text-slate-300">processi vivi adesso</span>
+            <span className="text-[12px] font-mono text-slate-500">· {schedAttive} task schedulati attivi · aggiornato ogni 30s</span>
+          </div>
+        ) : (
+          <p className="text-xl md:text-2xl font-bold text-white leading-snug">Il sistema che lavora mentre non guardi.</p>
+        )}
+        {/* stato operativo reale (P1a) — riga secondaria, dentro il hero */}
+        <div className="flex flex-wrap gap-1.5 mt-4">
           {statoCounts.map(({ s, n }) => {
             const c = STATO_CONFIG[s];
             return (
-              <span
-                key={s}
-                title={c.help}
-                className={`inline-flex items-center gap-1.5 text-[9px] font-mono px-2 py-1 rounded border ${c.border} ${c.bg} ${c.color}`}
-              >
+              <span key={s} title={c.help}
+                className={`inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-1 rounded border ${c.border} ${c.bg} ${c.color}`}>
                 <span className="font-black tabular-nums">{n}</span>
                 {c.label}
               </span>
