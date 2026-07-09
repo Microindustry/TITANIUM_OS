@@ -226,6 +226,16 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
     era reinventato con 3 tracking diversi) + migrati header Automazioni/Notturne;
     le altre view migrano quando si toccano
   · screenshot verifica DATA/dash_shot_DOPO_cantieri.png — home integra, tsc EXIT 0
+- [✓] **PASSAGGIO DI GERARCHIA home+pitch** (a06dac70 + 45dd8604, mandato creativo):
+  · HOME: hero "ADESSO" = punto focale unico (next_step in xl/2xl con glow emerald,
+    milestone declassata a sottotitolo, blockers chip nel hero, brand row snella) —
+    l'ancora anti-dispersione; screenshot DATA/dash_shot_HOME_gerarchia.png
+  · PITCH: era già gerarchico (registro investor) ma fermo al 01/06 — aggiunto
+    l'atto economico mancante "Cosa vende, e quando": 3 nature da valoreData +
+    IL MOTORE con la LEGGE come gancio di credibilità (fonte unica anche nel pitch)
+  · resta della revisione grafica (da fare insieme): regola palette scritta
+    (5 accent+neutro+allarme), lingua icone unica (emoji vs lucide), punto focale
+    per le altre viste
 - [✗] **P9 tema light tappa 2 NON fatto — motivo**: sweep visivo su decine di card
   hardcoded dark, da fare con Matteo davanti (screenshot per vista, rischio
   regressioni estetiche in autonomia); il toggle intanto è nascosto (P9 mitigato).
