@@ -252,6 +252,11 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   un hero coprirebbe la visualizzazione). **La revisione grafica di #57 è CHIUSA**:
   16 viste col pattern focale, identità intatta, zero regressioni (tsc verde
   su ogni commit). Da fare insieme: regola palette scritta + lingua icone.
+- [✓] **METODO v2.0** (df99934b, segnalazione Matteo "è da aggiornare"): era fermo
+  al 03/06 — numeri ri-verificati (RAG 404 doc/18.556 frammenti/4 motori, stack
+  130py/48tsx/363md da git ls-files), step 4 "Riordina e incrocia" (reranker+
+  linkgraph), nuove sezioni IL MOTORE (grafo→mappa→Nina + legge + fonte unica)
+  e "La notte" (la catena notturna che si mantiene da sola).
 - [✗] **P9 tema light tappa 2 NON fatto — motivo**: sweep visivo su decine di card
   hardcoded dark, da fare con Matteo davanti (screenshot per vista, rischio
   regressioni estetiche in autonomia); il toggle intanto è nascosto (P9 mitigato).
