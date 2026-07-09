@@ -292,6 +292,16 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   XP e Pietre-achievement = DA VALIDARE), regole stile (blueprint-anime, mai
   triangoli), scaletta 8 passi gated CLAUDE/INSIEME/FUTURO.
   **PROSSIMO PASSO = il 2: validare le meccaniche insieme (15 min).**
+- [✓] **TRE IDEE MATTEO catturate** (MENTE 83a1224, RAG 18.594):
+  · **MIMS dentro Nina** (DECISIONE canone): il mondo si costruisce coi criteri
+    MIMS — concetti (modulabile/aggancio rapido/riusabile) MAI specifiche (IP),
+    comparsa organica non spot; Nina avrà il SUO sistema modulare.
+  · **Pietre = RADICI, non confini** (da validare): 8 in orizzontale (memorabili),
+    espansione in VERTICALE col pattern N-livelli sui contenuti; cammino non
+    lineare, i rami crescono anche in base alle pubblicazioni.
+  · **Pubblicazione v0 a COSTO ZERO** (spunto accolto): cartella PRONTI_DA_
+    PUBBLICARE + foglio istruzioni per post, Matteo pubblica a mano (30 sec/post);
+    upgrade path cartella→IFTTT (c'è anche via MCP)→Postiz. Si parte senza gate.
 - [💡] **MAPPA ILLUSTRATA DEL MONDO = asset del PRODOTTO** (decisione da #57):
   quando si fanno i caroselli col formato nuovo, il "poster del mondo" si
   disegna con la qualità blueprint-anime (pipeline Adobe Express/Gamma come
