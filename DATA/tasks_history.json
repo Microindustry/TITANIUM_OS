@@ -1,0 +1,57 @@
+[
+ {
+  "date": "2026-07-09",
+  "results": {
+   "TI_AiWatch": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 03:25"
+   },
+   "TI_DailyBrief": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 07:30"
+   },
+   "TI_DeepFreeze": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-05 03:00"
+   },
+   "TI_FineTune": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-05 01:00"
+   },
+   "TI_NightAudit": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 03:52"
+   },
+   "TI_NightPush": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 04:07"
+   },
+   "TI_NightResearch": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 03:37"
+   },
+   "TI_SelfImprove": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 04:30"
+   },
+   "TI_StoryAgent": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-09 02:07"
+   },
+   "TI_Watchdog": {
+    "ok": true,
+    "label": "in esecuzione",
+    "last_run": "2026-07-09 03:38"
+   }
+  }
+ }
+]

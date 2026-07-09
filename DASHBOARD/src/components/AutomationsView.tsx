@@ -470,7 +470,10 @@ const SEZIONI: Array<{ stato: Stato; titolo: string; sotto: string }> = [
   { stato: "dormiente",   titolo: "Dormienti",    sotto: "esistono su disco ma nessun trigger le chiama — debito dichiarato, non nascosto" },
 ];
 
-function MacchinaCard({ a, live }: { a: Automation; live?: TaskLive }) {
+// tacca heartbeat: una notte = un quadratino (verde ok / rosso fail) — pattern Uptime Kuma
+type Tick = { date: string; ok: boolean; label: string };
+
+function MacchinaCard({ a, live, ticks }: { a: Automation; live?: TaskLive; ticks?: Tick[] }) {
   const [open, setOpen] = useState(false);
   const dot = live ? (live.active ? "bg-emerald-400 animate-pulse" : "bg-rose-400") : "bg-slate-600";
   return (
@@ -492,6 +495,15 @@ function MacchinaCard({ a, live }: { a: Automation; live?: TaskLive }) {
         )}
         <ChevronDown size={12} className={`flex-shrink-0 text-slate-600 transition-transform ${open ? "rotate-180" : ""}`} />
       </div>
+      {ticks && ticks.length > 0 && (
+        <div className="flex items-center gap-[3px] mt-2.5 ml-4">
+          {ticks.map(t => (
+            <span key={t.date} title={`${t.date} — ${t.label || (t.ok ? "ok" : "fallito")}`}
+              className={`w-2 h-3.5 rounded-[2px] ${t.ok ? "bg-emerald-500/70" : "bg-rose-500/80"}`} />
+          ))}
+          <span className="text-[8px] font-mono text-slate-700 ml-1.5">{ticks.length} notti</span>
+        </div>
+      )}
       {open && (
         <div className="mt-3 pt-3 border-t border-white/5 space-y-2.5">
           <p className="text-[12px] text-slate-400 leading-relaxed">{a.cosa_fa}</p>
@@ -520,11 +532,32 @@ function MacchinaCard({ a, live }: { a: Automation; live?: TaskLive }) {
   );
 }
 
+// storico heartbeat condiviso (DATA/tasks_history.json, scritto ogni notte dalla catena)
+type HistEntry = { date: string; results: Record<string, { ok: boolean; label: string }> };
+
+function useTasksHistory(): Record<string, Tick[]> {
+  const [hist, setHist] = useState<HistEntry[]>([]);
+  useEffect(() => {
+    fetch("/api/file?path=DATA/tasks_history.json", { signal: AbortSignal.timeout(20000) })
+      .then(r => r.json())
+      .then(d => { if (d.ok && d.content) setHist(JSON.parse(d.content)); })
+      .catch(() => {});
+  }, []);
+  const byTask: Record<string, Tick[]> = {};
+  for (const day of hist.slice(-14)) {
+    for (const [name, r] of Object.entries(day.results || {})) {
+      (byTask[name] ??= []).push({ date: day.date, ok: r.ok, label: r.label });
+    }
+  }
+  return byTask;
+}
+
 export function AutomationsView() {
   // Stato LIVE: task schedulati (/api/tasks/notturne) + processi persistenti
   // (/api/watchdog/status). I badge sulle card non sono cosmetici.
   const [tasksLive, setTasksLive] = useState<Record<string, TaskLive>>({});
   const [procsLive, setProcsLive] = useState<Record<string, { alive: boolean; pid?: number }>>({});
+  const heartbeat = useTasksHistory();
 
   useEffect(() => {
     let alive = true;
@@ -610,7 +643,10 @@ export function AutomationsView() {
               <span className="text-[10px] font-mono text-slate-700 ml-auto">×{items.length}</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              {items.map(a => <MacchinaCard key={a.id} a={a} live={liveOf(a)} />)}
+              {items.map(a => (
+                <MacchinaCard key={a.id} a={a} live={liveOf(a)}
+                  ticks={a.task ? heartbeat[a.task] : undefined} />
+              ))}
             </div>
           </section>
         );
@@ -622,6 +658,7 @@ export function AutomationsView() {
 // ── NOTTURNE — la sezione "La notte" come vista standalone (sotto-voce sidebar) ──
 export function NotturneView() {
   const [tasksLive, setTasksLive] = useState<Record<string, TaskLive>>({});
+  const heartbeat = useTasksHistory();
   useEffect(() => {
     let alive = true;
     const load = () => {
@@ -650,7 +687,10 @@ export function NotturneView() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {items.map(a => <MacchinaCard key={a.id} a={a} live={liveOf(a)} />)}
+        {items.map(a => (
+          <MacchinaCard key={a.id} a={a} live={liveOf(a)}
+            ticks={a.task ? heartbeat[a.task] : undefined} />
+        ))}
       </div>
     </div>
   );

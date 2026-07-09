@@ -60,6 +60,10 @@ if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\state_snapshot.py" >> "
 :: vecchi, log >30gg) — vedi retention.py per le regole. Report in DATA/retention_last.json
 if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\retention.py" --apply >> "%LOG%" 2>&1
 
+:: HEARTBEAT (#57, pattern Uptime Kuma): appende l'esito dei task TI_* a
+:: DATA/tasks_history.json (30 giorni) — alimenta le tacche nella sala macchine.
+if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\tasks_history.py" >> "%LOG%" 2>&1
+
 :: STATO FISICO: riscrive STATO_SISTEMA.txt sul Desktop (verde/allerta) — fine catena,
 :: cosi riflette il risultato di tutta la notte. Risolve la cecita' sui guasti notturni.
 if defined PYTHON "%PYTHON%" "%TI_ROOT%\AUTOMATIONS\core\stato_fisico.py" >> "%LOG%" 2>&1
