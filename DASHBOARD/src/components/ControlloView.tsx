@@ -156,20 +156,30 @@ export function ControlloView() {
     <div className="h-full overflow-y-auto bg-[var(--shell-bg)]" style={{ animation: "nl-fadeUp 0.3s ease both" }}>
       <div className="max-w-5xl mx-auto px-6 py-6">
 
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-1">
-          <Gauge size={20} className="text-emerald-400" />
-          <h2 className="text-lg font-bold text-slate-100 tracking-wide">Centro di Controllo</h2>
-          <span className="ml-auto flex items-center gap-1.5 text-[9px] font-mono">
-            <span className={`w-1.5 h-1.5 rounded-full ${sys.isOnline ? "bg-emerald-500 animate-pulse" : "bg-slate-700"}`} />
-            <span className={sys.isOnline ? "text-emerald-500/80" : "text-slate-600"}>
-              {sys.isOnline ? "sistema live" : "offline"}
+        {/* (#57 gerarchia) HERO: la salute a colpo d'occhio — quanti strumenti girano ORA */}
+        <div className="relative rounded-2xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/[0.07] to-slate-900/60 p-6 mb-5 overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+               style={{ background: "radial-gradient(circle, rgba(52,211,153,0.10), transparent 70%)" }} />
+          <div className="flex items-center gap-2 mb-3">
+            <Gauge size={13} className="text-emerald-400" />
+            <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-[0.3em]">Centro di Controllo</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-emerald-500/30 to-transparent" />
+            <span className="flex items-center gap-1.5 text-[10px] font-mono">
+              <span className={`w-1.5 h-1.5 rounded-full ${sys.isOnline ? "bg-emerald-500 animate-pulse" : "bg-slate-700"}`} />
+              <span className={sys.isOnline ? "text-emerald-500/80" : "text-slate-600"}>
+                {sys.isOnline ? "sistema live" : "offline"}
+              </span>
             </span>
-          </span>
+          </div>
+          <div className="flex items-baseline gap-3 flex-wrap">
+            <span className="text-4xl md:text-5xl font-black tabular-nums text-emerald-300 leading-none">{counts["on"] ?? 0}</span>
+            <span className="text-lg font-bold text-slate-300">strumenti accesi adesso</span>
+            <span className="text-[12px] font-mono text-slate-500">su {GRUPPI.flatMap(g => g.tools).length} totali</span>
+          </div>
+          <p className="text-[13px] text-slate-400 mt-2.5 max-w-2xl">
+            Tutto quello che hai, in un posto solo. Cosa fa · come si usa · se è acceso. Niente da tenere a mente.
+          </p>
         </div>
-        <p className="text-xs text-slate-500 mb-5 ml-8">
-          Tutto quello che hai, in un posto solo. Cosa fa · come si usa · se è acceso. Niente da tenere a mente.
-        </p>
 
         {/* Legenda stati */}
         <div className="flex flex-wrap gap-3 mb-6 ml-8">
