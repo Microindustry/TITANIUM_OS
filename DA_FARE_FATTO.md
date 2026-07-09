@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 57  08/07/2026  IL MOTORE: HR piattaforma a 3 strati  doc VALORE per pilastro](#sessione-57-08072026-il-motore-hr-piattaforma-a-3-strati-doc-valore-per-pilastro)
   - [Sessione 56  08/07/2026  VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)](#sessione-56-08072026-verità-sparsa-la-mappa-deriva-non-copia-punto-1-chiuso)
   - [Sessione 55  07/07/2026  ONDATE A-B-C CHIUSE  verità sparsa  STATE salvato dal clobber](#sessione-55-07072026-ondate-a-b-c-chiuse-verità-sparsa-state-salvato-dal-clobber)
   - [Sessione 54  04/07/2026  PIANO DATTACCO: ECOSISTEMA IN ORDINE (prima del social, prima dei nuovi episodi)](#sessione-54-04072026-piano-dattacco-ecosistema-in-ordine-prima-del-social-prima-dei-nuovi-episodi)
@@ -154,14 +155,35 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
         P10 aria · P12 scala tipografica · 04 NEXUS morto+detriti disco (2.24GB
         chroma_db_* — deleto solo con ok Matteo) · 05 F7 sorgenti mancanti ·
         06 gestionale (D1-D9 dati) · 07 canon-pin RRF
-2. [ ] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
+**MATTINA 09/07 (rientro Matteo) — dashboard su + valutazione notte + interfacce:**
+- [✓] Dashboard avviata (5173; API 5001 era già su, non toccata). **Notte valutata
+  8/10**: tutto girato (EP_N2_53 "il direttore invisibile" · night_push HA PUSHATO
+  i 7 commit di ieri · RAG 18.5k · self_improve 3 proposte). I 2 allarmi grossi
+  erano STANTII: "42 CVE" (pip_audit è settimanale by design → RIGENERATO ora:
+  23 reali) e "watchdog FALLITO 267014" (task IN ESECUZIONE, verificato schtasks;
+  il codice era di una run terminata il 07/07). Canone → 53 (commit MENTE ff6a64c).
+  Delle 3 proposte self_improve: CVE già fatta ieri (meglio: lui avrebbe upgradato
+  gradio alla cieca), canone-53 fatta, scheda UPS = dentro il blocker hardware.
+- [✓] **VISTA VALORE — il "miglior luogo" della lezione** (a994e8b2): pagina completa
+  derivata da valoreData.json (messaggio fondante verbatim, 3 strati, legge, loop,
+  vincolo, 3 nature, 7 pilastri, non-promesse) — sidebar TITANIUM/Sistema dopo
+  PITCH + bottone "Quadro completo" dalla card home. tsc EXIT 0.
+- [✓] **STAMPO EPISODIO DOPPIO** (MENTE/KNOWLEDGE/FORMATO_EPISODIO_DOPPIO.md, RAG
+  18.532 chunk, commit 3d873b3): completo 16 + social-cut ≤10, frontmatter del
+  motore (casella/competenza/PROVA/guida/voce), processo 6 passi, variante
+  voce-Matteo per le storie di sistema. **DA VALIDARE INSIEME** prima di EP_N2_03.
+- [💡] Proposte strutturali (decidere insieme): nina_agent aggiorna _CANONE da solo
+  alla promozione (uccide il drift quotidiano) · pip-audit anche post-upgrade ·
+  prefissi ⚠ duplicati nel report STATO_SISTEMA (bug cosmetico del generatore).
+2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
+   → lo STAMPO è pronto: si parte validandolo insieme (5 minuti), poi si scrive.
 3. [ ] **HR/CV vivo** (punto 2 vecchia scaletta, ora informato dal motore): vista CV
    derivata dal grafo competenze, schema multi-persona (mai hardcoded su Matteo),
    ogni skill → prova reale. Requisiti→design con Matteo prima del codice.
-4. [ ] **Interfacce/"il miglior luogo per il tutto"**: aggiornare le viste alla nuova
-   visione (motore al centro), continuare il declutter delle 3 facce.
+4. [◐] **Interfacce/"il miglior luogo per il tutto"**: vista VALORE fatta (il luogo
+   della lezione); restano: motore dentro le viste NINA/CV, declutter 3 facce.
 5. [ ] Attivazione PUBBLICAZIONI: passi 1-4 gated Matteo (~1h), poi 5-9 Claude.
 
 ---
