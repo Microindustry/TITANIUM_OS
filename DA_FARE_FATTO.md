@@ -208,6 +208,14 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
 - [✓] **HR NAVIGABILE** (5bcac07a, correzione Matteo): HR voce piena con pagina
   pilastro — i 3 strati del motore come livelli Lv1-3 (grafo+LEGGE+ESCO / mappa /
   Nina guida), tab Pitch, card valore; CV e CV Nina sotto-voci piccole annidate.
+- [✓] **RESTYLE DASH** (f4eaa0f6, mandato pieno "do tutto in mano a te"): screenshot
+  PRIMA/DOPO in DATA/ (regola additiva rispettata). Fatto: chip milestone home
+  clampato 2 righe (via lo sbrodolamento) · P9 toggle light NASCOSTO + dark forzato
+  (tema rotto non più esposto; codice intatto per la tappa 2) · P12 scala
+  tipografica --text-2xs/xs/sm/base + @font-face JetBrains morto rimosso · P10
+  aria-label/aria-current sulla sidebar. Verificato: P1/P2/P3/P6 già chiusi in #53.
+  Restano (grossi, da pianificare): P8 dedup N-livelli 4 copie · P9 tappa 2 light
+  vera · P10 CommandBar dialog+focus trap · F8 PageKicker/consolidamento card.
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
