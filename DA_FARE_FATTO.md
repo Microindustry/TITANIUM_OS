@@ -282,7 +282,14 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   illustrata → prodotto (caroselli/sito). Si aggiorna col loop notturno.
   XP/level-up veri: da progettare insieme dopo i primi episodi col formato nuovo.
 - [✓] Sidebar: Archivio Nina tolto (8b53df9f, dati+vista intatti) · titoletto
-  HR tolto (8bd97156, ridondante — Matteo).
+  HR tolto (8bd97156, ridondante — Matteo) · Mappa-Gioco tolta (6c8ef9af:
+  "serpentone non va bene, 3 triangoli-montagne" — superata dall'albero,
+  vista resta deep-link).
+- [💡] **MAPPA ILLUSTRATA DEL MONDO = asset del PRODOTTO** (decisione da #57):
+  quando si fanno i caroselli col formato nuovo, il "poster del mondo" si
+  disegna con la qualità blueprint-anime (pipeline Adobe Express/Gamma come
+  per l'avatar) — slide "dove siamo nella mappa" negli episodi + poster per
+  il sito. MAI più geografie a triangoli in dash.
 - [✓] **METODO v2.0** (df99934b, segnalazione Matteo "è da aggiornare"): era fermo
   al 03/06 — numeri ri-verificati (RAG 404 doc/18.556 frammenti/4 motori, stack
   130py/48tsx/363md da git ls-files), step 4 "Riordina e incrocia" (reranker+
