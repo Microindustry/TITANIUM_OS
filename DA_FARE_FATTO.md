@@ -252,6 +252,11 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   un hero coprirebbe la visualizzazione). **La revisione grafica di #57 è CHIUSA**:
   16 viste col pattern focale, identità intatta, zero regressioni (tsc verde
   su ogni commit). Da fare insieme: regola palette scritta + lingua icone.
+- [✓] **AUTOMAZIONI hero LIVE** (12252361, segnalazione Matteo "interfaccia
+  scadente"): la vista fetchava watchdog+Task Scheduler ma il header mostrava
+  scatoline per "priorità" — ora il focale è VIVO: N processi vivi in 4xl/5xl +
+  task schedulati attivi + refresh 30s + fallback onesto se l'API è giù;
+  striscia verità P1a dentro il hero come riga secondaria.
 - [✓] **METODO v2.0** (df99934b, segnalazione Matteo "è da aggiornare"): era fermo
   al 03/06 — numeri ri-verificati (RAG 404 doc/18.556 frammenti/4 motori, stack
   130py/48tsx/363md da git ls-files), step 4 "Riordina e incrocia" (reranker+
