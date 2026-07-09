@@ -263,13 +263,16 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   MacchinaCard con dot live + esito + prossima esecuzione, NotturneView ricreata
   (hero indigo). Dati censimento P1a conservati. 921→662 righe, tsc verde.
   La vecchia versione vive in git (≤12252361), niente perso.
-- [💡] **HEARTBEAT BAR sulla sala macchine** (dalla ricognizione GitHub post-rifacimento,
-  richiesta Matteo): Uptime Kuma (84k ⭐) usa tacche verdi/rosse per le ultime N run —
-  da adottare per la catena notturna. Serve storico: DATA/tasks_history.json
-  (1 riga/notte dalla catena) → API → tacche in MacchinaCard. ~1h + verifica
-  mattina dopo. Dead-man switch già coperto (organi-vivi). Status page pubblica
-  (Cachet) = idea per la faccia PUBBLICAZIONI quando GENESIS sarà prodotto.
-  LEZIONE DI METODO: prima di rifare un'interfaccia, ricognizione sui repo top.
+- [✓] **HEARTBEAT BAR COSTRUITA** (9a3f0144, ordine "installa se utile" → deciso:
+  Kuma NON installato, duplicava watchdog+organi-vivi e serviva Docker; adottato
+  il pattern in casa, zero dipendenze): tasks_history.py appende ogni notte
+  l'esito dei task TI_* a DATA/tasks_history.json (30gg, hook in night_push.bat
+  prima di stato_fisico; API giù = esce zitto, la tacca mancante È il segnale);
+  MacchinaCard mostra tacche verdi/rosse ultime 14 notti (tooltip con esito)
+  in AUTOMAZIONI e NOTTURNE. Prima run manuale: 10/10 ok, storico partito.
+  ⚠ VERIFICA DOMATTINA: la 2ª tacca deve comparire da sola (catena 04:07).
+  Status page pubblica (Cachet) = idea per PUBBLICAZIONI quando GENESIS è prodotto.
+  LEZIONE DI METODO (in memoria): prima di rifare una UI, ricognizione repo top.
 - [✓] **METODO v2.0** (df99934b, segnalazione Matteo "è da aggiornare"): era fermo
   al 03/06 — numeri ri-verificati (RAG 404 doc/18.556 frammenti/4 motori, stack
   130py/48tsx/363md da git ls-files), step 4 "Riordina e incrocia" (reranker+
