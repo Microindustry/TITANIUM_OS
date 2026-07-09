@@ -209,8 +209,20 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
       className="cmd-overlay fixed inset-0 z-50 flex items-start justify-center pt-[15vh]"
       style={{ background: "rgba(10,10,15,0.85)", backdropFilter: "blur(4px)" }}
       onMouseDown={e => { if (e.target === e.currentTarget) onClose(); }}
+      // (#57 P10) focus trap: la palette è un dialog modale — Tab non deve uscire.
+      // I soli focusabili utili sono gli input: Tab li cicla, tutto il resto è
+      // governato da frecce/Enter (pattern combobox).
+      onKeyDown={e => {
+        if (e.key === "Tab") {
+          e.preventDefault();
+          const inEdit = document.activeElement === editRef.current;
+          (inEdit ? inputRef : (editMode ? editRef : inputRef)).current?.focus();
+        }
+      }}
+      role="presentation"
     >
       <div className="cmd-panel w-full max-w-[560px] mx-4 rounded-xl overflow-hidden"
+        role="dialog" aria-modal="true" aria-label="Barra comandi — cerca, naviga, esegui"
         style={{ border: "1px solid rgba(255,255,255,0.08)", background: "#111118", boxShadow: "0 24px 64px rgba(0,0,0,0.6)" }}
       >
         {/* Search input */}
@@ -222,6 +234,8 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
             onChange={e => setQuery(e.target.value)}
             onKeyDown={handleKey}
             placeholder="Cerca comando, naviga, esegui..."
+            role="combobox" aria-expanded="true" aria-controls="cmdbar-list"
+            aria-autocomplete="list" aria-activedescendant={flat[sel] ? `cmd-${flat[sel].id}` : undefined}
             className="flex-1 bg-transparent text-slate-200 text-sm font-mono placeholder-slate-600 outline-none"
           />
           <kbd className="text-[9px] font-mono text-slate-600 border border-slate-800 rounded px-1.5 py-0.5">ESC</kbd>
@@ -258,7 +272,7 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
         )}
 
         {/* Risultati */}
-        <div className="max-h-[360px] overflow-y-auto scrollbar-thin py-1">
+        <div className="max-h-[360px] overflow-y-auto scrollbar-thin py-1" id="cmdbar-list" role="listbox" aria-label="Comandi">
           {groups.length === 0 && (
             <div className="px-4 py-8 text-center text-[11px] font-mono text-slate-600">
               Nessun comando trovato
@@ -279,6 +293,8 @@ export function CommandBar({ open, onClose, onNavigate }: Props) {
                 return (
                   <button
                     key={cmd.id}
+                    id={`cmd-${cmd.id}`}
+                    role="option" aria-selected={isSel}
                     onClick={() => cmd.action()}
                     onMouseEnter={() => setSel(idx)}
                     className={`w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors ${
