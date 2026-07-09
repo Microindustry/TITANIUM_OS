@@ -6,6 +6,7 @@
 import { useState, type ReactNode } from "react";
 import { SKILLS_INDUSTRIA, SKILLS_DIGITAL, INTERESSI, PRINCIPI, COMPETENZE_UNITE, type Skill, type Interesse, type Livello } from "../data/matteoData";
 import { Wrench, Cpu, Compass, Quote, ChevronDown, Mail, Layers } from "lucide-react";
+import { PilastroEconomiaCard } from "./PilastroEconomiaCard";
 
 const LIV: Record<Livello, { label: string; color: string }> = {
   "maestria":         { label: "maestria",    color: "#34d399" },
@@ -103,6 +104,9 @@ export function CvView() {
           </div>
           <p className="text-[10px] text-slate-600 italic">Base viva — verrà ingegnerizzata col lavoro su Nina (il CV che si genera).</p>
         </header>
+
+        {/* UNIFICAZIONE (#57): il CV vivo come prima istanza del MOTORE — valore + pitch */}
+        <PilastroEconomiaCard pilastro="identity" />
 
         {/* ── PROFILO UNITO: professionali + personali per dominio ── */}
         <section className="space-y-3">

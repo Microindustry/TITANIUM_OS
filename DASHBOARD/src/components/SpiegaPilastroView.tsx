@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { useGlobalState } from "../hooks/SystemStateContext";
 import { V32Room, GenesisRoom, MimsRoom, EvaRoom } from "./CanvasLayout";
+import { PilastroEconomiaCard } from "./PilastroEconomiaCard";
 
 type Livello = { lv: number; titolo: string; testo: string };
 type Pilastro = { nome: string; icona: string; accent: string; frase: string; livelli: Livello[]; catena: string };
@@ -155,7 +156,17 @@ export function SpiegaPilastroView({ pilastro }: { pilastro: string }) {
           <p className="text-[13px] text-slate-300 leading-relaxed">{p.catena}</p>
         </motion.div>
 
-        <p className="text-[10px] text-slate-600 italic">Spiegazione (non pitch): apri i livelli e raccontala a voce. Il pitch dedicato è sotto PITCH nella barra.</p>
+        {/* UNIFICAZIONE pilastro↔pitch↔valore (ordine Matteo #57): la "qualità" —
+            il prodotto economico che genera per gli altri, con pitch a un click */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.18 + p.livelli.length * 0.07 }}
+        >
+          <PilastroEconomiaCard pilastro={pilastro} />
+        </motion.div>
+
+        <p className="text-[10px] text-slate-600 italic">Spiegazione + valore in un posto solo: apri i livelli e raccontala a voce; il pitch che VENDE è il bottone qui sopra.</p>
 
         {/* DENTRO IL PILASTRO — il contenuto ricco originale (dati, percorso, blockers): reintegrato, non perso */}
         {Room && (
