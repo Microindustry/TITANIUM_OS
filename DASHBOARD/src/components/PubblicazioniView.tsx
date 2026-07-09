@@ -100,18 +100,23 @@ export function PubblicazioniView() {
     <div className="h-full overflow-y-auto">
       <div className="max-w-4xl mx-auto px-5 py-5 space-y-6">
 
-        {/* ── Intestazione ── */}
-        <div className="rounded-2xl border border-orange-500/25 bg-orange-950/10 p-4">
-          <div className="flex items-center gap-2 mb-1.5">
+        {/* ── (#57 gerarchia) HERO: la regola di pubblicazione È il focale ── */}
+        <div className="relative rounded-2xl border border-orange-500/25 bg-gradient-to-br from-orange-500/[0.07] to-slate-900/60 p-6 overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+               style={{ background: "radial-gradient(circle, rgba(251,146,60,0.10), transparent 70%)" }} />
+          <div className="flex items-center gap-2 mb-3">
             <Send size={13} className="text-orange-300" />
-            <span className="text-[11px] font-black font-mono uppercase tracking-widest text-orange-200">Pubblicazioni — la terza faccia</span>
+            <span className="text-[10px] font-mono font-bold text-orange-300 uppercase tracking-[0.3em]">Pubblicazioni — la terza faccia</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-orange-500/30 to-transparent" />
           </div>
-          <p className="text-[9px] font-mono text-slate-400 leading-relaxed">
+          <p className="text-xl md:text-2xl font-bold text-white leading-snug max-w-3xl">
+            Il sistema prepara e propone, <span className="text-orange-300">Matteo approva</span>,
+            il canale ufficiale pubblica.
+          </p>
+          <p className="text-[12px] text-slate-400 leading-relaxed mt-3 max-w-3xl">
             Tutto l'output verso il mondo, di qualunque binario: caroselli di Nina, storie di sistema
-            in prima persona, reel, pitch. La regola: <span className="text-orange-300">il sistema prepara e propone,
-            Matteo approva, il canale ufficiale pubblica</span>. Ricerca fatta in sessione #54 (04/07),
-            vincoli ri-verificati sui documenti ufficiali Meta l'08/07. Stack DECISO — qui sotto cosa,
-            come e in che ordine si accende.
+            in prima persona, reel, pitch. Ricerca #54 (04/07), vincoli ri-verificati sui documenti
+            ufficiali Meta l'08/07. Stack DECISO — qui sotto cosa, come e in che ordine si accende.
           </p>
         </div>
 
