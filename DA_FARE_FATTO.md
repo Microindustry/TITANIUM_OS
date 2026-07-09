@@ -190,6 +190,14 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
     → idea per Nina bambini): nessuno ha grafo+mappa+guida narrativa = wedge regge
   · **schema dati v0** proposto (persona multi-record, esco_uri, prove[], casella)
   · pacchetti: NON servono oggi (API keyless, JSON puro) — meno superficie, meno CVE
+**GIORNO 09/07 (rientro 2) — "validiamo, aggiorna la dash unificando":**
+- [✓] **STAMPO EPISODI VALIDATO da Matteo** → è il formato canonico dei nuovi episodi
+  (doc aggiornato, commit MENTE 7127c1e, RAG mod ok). Primo uso: EP_N2_03 insieme.
+- [✓] **PAGINA PILASTRO UNIFICATA** (69681b45): tab Spiegazione|Pitch nella stessa
+  pagina (PitchProgettoBody estratto, deep-link pitch-* intatti) + card economia
+  sempre visibile sopra i tab. Una pagina per pilastro: spiega, vende, mostra il
+  valore. tsc EXIT 0. Restano fuori tab: CV (card+link, struttura diversa) e NINA
+  (non ha pagina pilastro — vive in DAL GIORNO 0).
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
