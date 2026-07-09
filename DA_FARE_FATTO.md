@@ -257,6 +257,12 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   scatoline per "priorità" — ora il focale è VIVO: N processi vivi in 4xl/5xl +
   task schedulati attivi + refresh 30s + fallback onesto se l'API è giù;
   striscia verità P1a dentro il hero come riga secondaria.
+- [✓] **AUTOMAZIONI v2.0 RIFATTA** (f74e206f, ordine Matteo "rifalla completamente"):
+  via tab-per-priorità-di-marzo e diagramma statico → 5 sezioni per COME GIRANO
+  (Sempre vive / Su evento / La notte / A comando / Dormienti=debito dichiarato),
+  MacchinaCard con dot live + esito + prossima esecuzione, NotturneView ricreata
+  (hero indigo). Dati censimento P1a conservati. 921→662 righe, tsc verde.
+  La vecchia versione vive in git (≤12252361), niente perso.
 - [✓] **METODO v2.0** (df99934b, segnalazione Matteo "è da aggiornare"): era fermo
   al 03/06 — numeri ri-verificati (RAG 404 doc/18.556 frammenti/4 motori, stack
   130py/48tsx/363md da git ls-files), step 4 "Riordina e incrocia" (reranker+
