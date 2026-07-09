@@ -542,22 +542,18 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
           {/* ── HOME ── */}
           {currentRoom === "home" && (
             <>
+              {/* (#57 gerarchia) riga brand SNELLA: il titolo non è più il protagonista */}
               <div className="flex items-center gap-3 flex-wrap">
                 <div>
-                  <h1 className="text-3xl font-black text-white tracking-tight leading-none">
+                  <h1 className="text-lg font-black text-white tracking-tight leading-none">
                     TITANIUM<span className="text-emerald-400">_</span>OS
                   </h1>
-                  <p className="text-xs text-slate-300 mt-2 max-w-xl leading-relaxed">
-                    Il sistema operativo personale di un artigiano industriale.
-                    <span className="text-emerald-400 font-semibold"> CNC di precisione</span>,
-                    <span className="text-amber-400 font-semibold"> materiali modulari brevettabili</span>,
-                    <span className="text-cyan-400 font-semibold"> automazione AI</span> — costruiti da zero.
-                  </p>
-                  <p className="text-[9px] text-slate-600 font-mono mt-1.5">
+                  <p className="text-[9px] text-slate-600 font-mono mt-1">
                     {new Date().toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" })}
                     {" · "}{online
                       ? <span className="text-emerald-400">live</span>
                       : <span className="text-slate-600">offline</span>}
+                    {" · "}CNC di precisione · materiali modulari · automazione AI
                   </p>
                 </div>
                 <button onClick={() => navigateTo("pitch" as any)}
@@ -569,26 +565,35 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
                     <div className="text-[11px] font-bold text-emerald-300">Presentazione</div>
                   </div>
                 </button>
-                <div className="flex items-center gap-2 bg-slate-900/60 border border-slate-800 rounded-xl px-3 py-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
-                  <div>
-                    <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest">Milestone</div>
-                    {/* (#57 restyle) clamp: il milestone è una frase lunga — 2 righe max, il resto al title */}
-                    <div className="text-[11px] font-bold text-white max-w-md line-clamp-2" title={state?.active_milestone ?? ""}>
-                      {state?.active_milestone ?? "—"}
-                    </div>
-                  </div>
-                </div>
-                {(state?.blockers ?? []).length > 0 && (
-                  <div className="flex items-center gap-2 bg-rose-950/40 border border-rose-500/30 rounded-xl px-3 py-2">
-                    <AlertTriangle size={11} className="text-rose-400 flex-shrink-0" />
-                    <div>
-                      <div className="text-[8px] font-mono text-rose-400/60 uppercase tracking-widest">Blockers</div>
-                      <div className="text-[11px] font-bold text-rose-300">{state?.blockers?.length ?? 0}</div>
-                    </div>
-                  </div>
-                )}
               </div>
+
+              {/* ══ HERO "ADESSO" — IL punto focale della home (#57 gerarchia) ══
+                  Un solo sguardo = dove siamo e cosa si fa ora. Tipografia GRANDE
+                  (non 11px): è l'ancora anti-dispersione, tutto il resto è sotto. */}
+              <div className="relative rounded-2xl border border-emerald-500/25 bg-gradient-to-br from-emerald-500/[0.07] via-slate-900/60 to-slate-900/60 p-6 overflow-hidden">
+                <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+                     style={{ background: "radial-gradient(circle, rgba(52,211,153,0.10), transparent 70%)" }} />
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-[0.3em]">Adesso</span>
+                  <div className="h-px flex-1 bg-gradient-to-r from-emerald-500/30 to-transparent" />
+                  {(state?.blockers ?? []).length > 0 && (
+                    <span className="flex items-center gap-1.5 text-[10px] font-mono font-bold text-rose-300 bg-rose-950/40 border border-rose-500/30 rounded-lg px-2 py-1">
+                      <AlertTriangle size={10} className="text-rose-400" /> {state?.blockers?.length} blocker
+                    </span>
+                  )}
+                </div>
+                <p className="text-xl md:text-2xl font-bold text-white leading-snug max-w-3xl line-clamp-3"
+                   title={state?.next_step ?? ""}>
+                  {state?.next_step ?? state?.active_milestone ?? "—"}
+                </p>
+                <p className="text-[11px] text-slate-500 leading-relaxed mt-3 max-w-3xl line-clamp-2"
+                   title={state?.active_milestone ?? ""}>
+                  <span className="font-mono uppercase tracking-widest text-slate-600">milestone · </span>
+                  {state?.active_milestone ?? "—"}
+                </p>
+              </div>
+
               <div className="flex items-center gap-3 pt-1">
                 <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-slate-500">I 5 pilastri</span>
                 <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
