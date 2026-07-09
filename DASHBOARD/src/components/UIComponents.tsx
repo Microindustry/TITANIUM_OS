@@ -1,5 +1,19 @@
-// UIComponents.tsx | ECOSYSTEM_OS | v2.0 | 2026-03-09
-import type { ReactNode } from "react";
+// UIComponents.tsx | ECOSYSTEM_OS | v2.1 | 2026-07-09
+import type { ReactNode, ElementType } from "react";
+
+// === PAGE KICKER (#57 F8) ===
+// Il "kicker" di pagina (label mono uppercase in testa a ogni view) era reinventato
+// ovunque con tracking diversi (0.1/0.2/0.3em — deriva, non scelta). QUESTO è il
+// canonico: le view nuove usano PageKicker, le esistenti migrano quando si toccano.
+export const PageKicker = ({ icon: Icon, color = "text-slate-500", children, sub }: {
+  icon?: ElementType; color?: string; children: ReactNode; sub?: ReactNode;
+}) => (
+  <div className="text-[10px] font-mono uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
+    {Icon && <Icon size={10} className={color} />}
+    <span className={color}>{children}</span>
+    {sub && <span className="text-slate-700 normal-case tracking-normal">— {sub}</span>}
+  </div>
+);
 
 // === CARD ===
 interface CardProps {

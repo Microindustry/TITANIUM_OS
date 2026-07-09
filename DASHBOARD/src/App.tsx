@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
+import { PageKicker } from "./components/UIComponents";
 import { CommandBar } from "./components/CommandBar";
 
 const queryClient = new QueryClient({
@@ -524,11 +525,7 @@ function AppInner() {
             {view === "automazioni" && (
               <div className="h-full overflow-y-auto">
                 <div className="max-w-5xl mx-auto px-5 py-5">
-                  <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <FlaskConical size={10} className="text-amber-400" />
-                    <span className="text-amber-400/70">Automazioni</span>
-                    <span className="text-slate-700">— pipeline live del sistema</span>
-                  </div>
+                  <PageKicker icon={FlaskConical} color="text-amber-400/70" sub="pipeline live del sistema">Automazioni</PageKicker>
                   <AutomationsView />
                 </div>
               </div>
@@ -536,11 +533,7 @@ function AppInner() {
             {view === "notturne"    && (
               <div className="h-full overflow-y-auto">
                 <div className="max-w-5xl mx-auto px-5 py-5">
-                  <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-4 flex items-center gap-2">
-                    <Moon size={10} className="text-sky-400" />
-                    <span className="text-sky-400/70">Automazioni notturne</span>
-                    <span className="text-slate-700">— schedulate su Task Scheduler</span>
-                  </div>
+                  <PageKicker icon={Moon} color="text-sky-400/70" sub="schedulate su Task Scheduler">Automazioni notturne</PageKicker>
                   <NotturneView />
                 </div>
               </div>
