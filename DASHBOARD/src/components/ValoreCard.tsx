@@ -5,7 +5,8 @@
 // Non scrivere contenuti qui dentro: si cambia il doc, si rilancia sync_valore.py.
 
 import { useState } from "react";
-import { ChevronDown, Quote, Network, Map, Sparkles, Euro } from "lucide-react";
+import { ChevronDown, Quote, Network, Map, Sparkles, Euro, ArrowRight } from "lucide-react";
+import { useUIStore } from "../stores/systemStore";
 import valore from "../data/valoreData.json";
 
 const STRATO_ICONS = [Network, Map, Sparkles];
@@ -47,6 +48,7 @@ function PilastroRow({ p }: { p: (typeof valore.pilastri)[number] }) {
 
 export function ValoreCard() {
   const [msgOpen, setMsgOpen] = useState(false);
+  const navigateTo = useUIStore(s => s.navigateTo);
   return (
     <div className="bg-slate-900/60 border border-slate-700/30 rounded-2xl p-4 space-y-4">
       {/* header */}
@@ -56,6 +58,12 @@ export function ValoreCard() {
           Valore — cosa vende ognuno · deciso 08/07/2026
         </span>
         <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
+        <button onClick={() => navigateTo("valore")}
+          className="flex items-center gap-1.5 rounded-lg px-2.5 py-1 border border-emerald-500/30
+                     bg-emerald-500/10 hover:bg-emerald-500/20 transition-all">
+          <span className="text-[9px] font-bold text-emerald-300 uppercase tracking-wide">Quadro completo</span>
+          <ArrowRight size={10} className="text-emerald-400" />
+        </button>
       </div>
 
       {/* IL MOTORE — la lezione */}

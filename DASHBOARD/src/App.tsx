@@ -27,7 +27,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home, Box, Cpu, Layers, MessageSquare, Mic,
   Network, Activity, ChevronLeft, ChevronRight, Zap, Terminal,
-  FlaskConical, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send,
+  FlaskConical, Sun, Moon, Presentation, BookOpen, Sparkles, Gauge, Map, Archive, CalendarDays, Bot, Send, Landmark,
 } from "lucide-react";
 import { useGlobalState } from "./hooks/SystemStateContext";
 import { useUIStore, type ViewMode } from "./stores/systemStore";
@@ -61,6 +61,7 @@ const PitchProgettoView  = lazy(() => import("./components/PitchProgettoView").t
 const SpiegaPilastroView = lazy(() => import("./components/SpiegaPilastroView").then(m => ({ default: m.SpiegaPilastroView })));
 const CalendarioView     = lazy(() => import("./components/CalendarioView").then(m => ({ default: m.CalendarioView })));
 const PubblicazioniView  = lazy(() => import("./components/PubblicazioniView").then(m => ({ default: m.PubblicazioniView })));
+const ValoreView         = lazy(() => import("./components/ValoreView").then(m => ({ default: m.ValoreView })));
 
 // ── SIDEBAR CONFIG — 3 FACCE (decisione Matteo 08/07, sess #56) ───────────────
 // TITANIUM = il sistema (pilastri + governo) · NINA = il prodotto educativo ·
@@ -86,6 +87,7 @@ const NAV_ITEMS: NavItem[] = [
   // TITANIUM · Sistema
   { id: "controllo",   label: "CONTROLLO",   icon: Gauge,         color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "pitch",       label: "PITCH",       icon: Presentation,  color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
+  { id: "valore",      label: "VALORE",      icon: Landmark,      color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE · SISTEMA", icon: Mic,      color: "text-rose-400",   group: "system"  },
@@ -547,6 +549,7 @@ function AppInner() {
             {view === "nina-giorno0"  && <StorieView ninaView="giorno0" />}
             {view === "nina-archivio" && <StorieView ninaView="rag" />}
             {view === "pitch"       && <PitchView />}
+            {view === "valore"      && <ValoreView />}
             {view === "pitch-nina"    && <PitchProgettoView progetto="nina" />}
             {view === "pitch-mims"    && <PitchProgettoView progetto="mims" />}
             {view === "pitch-v32"     && <PitchProgettoView progetto="v32" />}
