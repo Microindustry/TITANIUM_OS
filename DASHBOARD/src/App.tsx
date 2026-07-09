@@ -295,22 +295,10 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
             {/* (#57, Matteo) Archivio TOLTO dalla barra: "a lv di visuale inutile, basta
                 tenere i dati" — i dati restano (MENTE/_ARCHIVIO + episodes.json), la vista
                 nina-archivio resta raggiungibile da CommandBar/deep-link. Reversibile. */}
-            {/* Sotto-voce: Mappa-Gioco — annidata sotto MAPPA */}
-            {item.id === "mappa" && !collapsed && (
-              <button
-                onClick={() => onNavigate("mappa-gioco")}
-                title="Mappa-gioco 2D — zone, livelli, entri nei luoghi (stile Skyrim)"
-                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                  ${view === "mappa-gioco"
-                    ? "bg-pink-950/40 text-pink-300 border border-pink-500/30"
-                    : "text-slate-600 hover:text-pink-300 hover:bg-pink-950/20 border border-transparent"}`}
-              >
-                <Map size={11} className="flex-shrink-0 text-pink-400/80" />
-                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                  Gioco
-                </span>
-              </button>
-            )}
+            {/* (#57, Matteo) Mappa-Gioco TOLTA dalla barra ("il serpentone non va bene
+                come percorso"): superata dall'albero (missioni per regione). La vista
+                mappa-gioco resta deep-link; il mondo ILLUSTRATO degno si fa nel
+                prodotto (caroselli/sito), non con 3 triangoli in dash. */}
           </Fragment>
         ))}
 
