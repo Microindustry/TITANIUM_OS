@@ -3,6 +3,7 @@
 // Additiva: non tocca nessun'altra view. Legge i pct live da STATE.
 
 import { useGlobalState } from "../hooks/SystemStateContext";
+import valore from "../data/valoreData.json";
 
 const ACCENT = {
   v32:     "#34d399",
@@ -137,6 +138,37 @@ export function PitchView() {
             Investimento V32: <span className="text-slate-200">€2.250</span>. Ogni milestone fisico genera
             automaticamente un episodio, un reel, un dato di training — <span className="text-white">1 input → N output.</span>
             Il lavoro in officina alimenta il sistema digitale, che rende l'officina più capace. Il loop è il prodotto.
+          </p>
+        </section>
+
+        {/* ── ACT 3b — L'ECONOMIA (#57): 3 nature + IL MOTORE — derivato da valoreData ── */}
+        <section className="space-y-5">
+          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">L'economia · niente promesse gonfiate</div>
+          <h2 className="text-2xl font-black text-white">Cosa vende, e quando</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {valore.frame.map((f, i) => {
+              const col = [ACCENT.v32, ACCENT.mims, ACCENT.genesis][i] ?? "#94a3b8";
+              return (
+                <div key={f.natura} className="rounded-2xl border border-slate-800 bg-slate-900/50 p-5"
+                     style={{ borderTopColor: col, borderTopWidth: 2 }}>
+                  <div className="text-[10px] font-mono font-bold uppercase tracking-widest mb-2" style={{ color: col }}>
+                    {f.natura}
+                  </div>
+                  <div className="text-base font-black text-white leading-tight">{f.pilastri}</div>
+                  <div className="text-[12px] text-slate-500 mt-1.5">{f.orizzonte}</div>
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-[15px] text-slate-300 leading-relaxed pt-2">
+            E il pezzo che nessuno ha: <span className="text-white font-semibold">il MOTORE</span> —
+            un grafo di competenze con <span className="text-emerald-400 font-semibold">prove reali</span>,
+            una mappa a livelli che lo rende leggibile a chiunque,
+            e <span className="text-pink-400 font-semibold">Nina</span> che lo spiega.
+            Un solo motore: il CV vivo nell'adulto, il percorso educativo nel bambino, una guida per ogni settore.
+          </p>
+          <p className="text-[13px] text-slate-400 leading-relaxed italic border-l-2 border-emerald-500/40 pl-4">
+            La regola che lo rende credibile: {valore.motore.legge}
           </p>
         </section>
 
