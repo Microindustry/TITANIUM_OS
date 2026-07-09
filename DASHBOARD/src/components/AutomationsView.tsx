@@ -1,8 +1,8 @@
-// AutomationsView.tsx | TITANIUM_OS DASHBOARD | v1.0 | 2026-03-11
+﻿// AutomationsView.tsx | TITANIUM_OS DASHBOARD | v1.0 | 2026-03-11
 // Mappa visuale di tutte le automazioni — note IT + ramificazioni + potenziamento
 
 import { useState, useEffect } from "react";
-import { Zap, ArrowRight, ChevronDown, ChevronUp, Rocket, GitBranch, Moon, RefreshCw } from "lucide-react";
+import { Zap, ChevronDown } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
 // DATI AUTOMAZIONI
@@ -455,332 +455,74 @@ const STATO_CONFIG: Record<Stato, { label: string; color: string; border: string
   dormiente:   { label: "DORMIENTE",    color: "text-slate-400",   border: "border-slate-600/50",   bg: "bg-slate-800/40",   help: "il file ESISTE su disco ma non è cablato a nessun trigger" },
 };
 
-const PRIORITY_CONFIG: Record<Priority, { label: string; color: string; bg: string; border: string; dot: string }> = {
-  attiva:   { label: "ATTIVA",     color: "text-emerald-400", bg: "bg-emerald-900/20", border: "border-emerald-500/40", dot: "bg-emerald-500" },
-  notturna: { label: "🌙 NOTTURNA", color: "text-indigo-300",  bg: "bg-indigo-900/20",  border: "border-indigo-500/40",  dot: "bg-indigo-400"  },
-  alta:   { label: "🔧 ALTA",  color: "text-rose-400",    bg: "bg-rose-900/20",    border: "border-rose-500/40",    dot: "bg-rose-500"    },
-  media:  { label: "🟡 MEDIA", color: "text-amber-400",   bg: "bg-amber-900/20",   border: "border-amber-500/40",   dot: "bg-amber-500"   },
-  bassa:  { label: "🟢 BASSA", color: "text-slate-400",   bg: "bg-slate-800",      border: "border-slate-700",      dot: "bg-slate-500"   },
-  ce:     { label: "⚡ CE",    color: "text-cyan-400",    bg: "bg-cyan-900/20",    border: "border-cyan-500/40",    dot: "bg-cyan-500"    },
-};
+// ─────────────────────────────────────────────────────────────
+// SALA MACCHINE (v2.0 · #57) — riscritta completamente su ordine Matteo.
+// Organizzata per COME GIRANO DAVVERO (verità operativa P1a), non per la
+// priorità di pianificazione di marzo. La vecchia versione (tab per priorità
+// + diagramma architettura) vive nella storia git, commit <= 12252361.
+// ─────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────────────────────
-// COMPONENTE CARD SINGOLA AUTOMAZIONE
-// ─────────────────────────────────────────────────────────────
-function AutoCard({ a, live }: { a: Automation; live?: TaskLive }) {
+const SEZIONI: Array<{ stato: Stato; titolo: string; sotto: string }> = [
+  { stato: "persistente", titolo: "Sempre vive",  sotto: "processi 24/7, supervisionati dal watchdog" },
+  { stato: "event",       titolo: "Su evento",    sotto: "scattano quando un file cambia — le chiama il watcher" },
+  { stato: "scheduled",   titolo: "La notte",     sotto: "Task Scheduler TI_* — la catena notturna" },
+  { stato: "on-demand",   titolo: "A comando",    sotto: "partono a mano, via API o CLI" },
+  { stato: "dormiente",   titolo: "Dormienti",    sotto: "esistono su disco ma nessun trigger le chiama — debito dichiarato, non nascosto" },
+];
+
+function MacchinaCard({ a, live }: { a: Automation; live?: TaskLive }) {
   const [open, setOpen] = useState(false);
-  const cfg = PRIORITY_CONFIG[a.priority];
-
+  const dot = live ? (live.active ? "bg-emerald-400 animate-pulse" : "bg-rose-400") : "bg-slate-600";
   return (
-    <div className={`rounded-xl border ${cfg.border} ${cfg.bg} overflow-hidden`}>
-      {/* Header */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-white/5 transition-colors"
-      >
-        <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${cfg.dot}`} />
-        <span className="text-xs font-mono font-bold text-white flex-1">{a.nome}</span>
-
-        {/* Badge stato LIVE da Task Scheduler */}
+    <button onClick={() => setOpen(o => !o)}
+      className="w-full text-left rounded-xl border border-slate-800 bg-slate-900/40 hover:border-slate-700 transition-all p-3.5">
+      <div className="flex items-center gap-2.5">
+        <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dot}`} />
+        <div className="flex-1 min-w-0">
+          <div className="text-[13px] font-bold text-slate-100 truncate">{a.nome}</div>
+          <div className="text-[10px] font-mono text-slate-600 truncate">{a.file}</div>
+        </div>
         {live && (
-          <span
-            title={`Stato: ${live.state} · prossima: ${live.next_run || "—"} · ultimo esito: ${live.last_result_label}`}
-            className={`flex items-center gap-1 text-[8px] font-mono px-2 py-0.5 rounded border flex-shrink-0 ${
-              live.active
-                ? "border-emerald-500/40 text-emerald-400 bg-emerald-900/20"
-                : "border-slate-600/40 text-slate-400 bg-slate-800/40"
-            }`}
-          >
-            <span className={`w-1.5 h-1.5 rounded-full ${live.active ? "bg-emerald-400 animate-pulse" : "bg-slate-500"}`} />
-            {live.active ? "ATTIVO" : live.state || "?"}
-          </span>
+          <div className="text-right flex-shrink-0">
+            <div className={`text-[10px] font-mono font-bold ${live.active ? "text-emerald-400" : "text-rose-400"}`}>
+              {live.last_result_label || live.state}
+            </div>
+            {live.next_run && <div className="text-[9px] font-mono text-slate-600">prossima: {live.next_run}</div>}
+          </div>
         )}
-
-        {/* Badge STATO operativo reale (verità P1a) */}
-        <span
-          title={STATO_CONFIG[a.stato].help}
-          className={`text-[8px] font-mono px-2 py-0.5 rounded border flex-shrink-0 ${STATO_CONFIG[a.stato].border} ${STATO_CONFIG[a.stato].color} ${STATO_CONFIG[a.stato].bg}`}
-        >
-          {STATO_CONFIG[a.stato].label}
-        </span>
-
-        <span className={`text-[8px] font-mono px-2 py-0.5 rounded border ${cfg.border} ${cfg.color} flex-shrink-0`}>
-          {cfg.label}
-        </span>
-        {open ? <ChevronUp size={11} className="text-slate-500 flex-shrink-0" /> : <ChevronDown size={11} className="text-slate-500 flex-shrink-0" />}
-      </button>
-
-      {/* Corpo espandibile */}
+        <ChevronDown size={12} className={`flex-shrink-0 text-slate-600 transition-transform ${open ? "rotate-180" : ""}`} />
+      </div>
       {open && (
-        <div className="px-4 pb-4 space-y-3 border-t border-slate-800">
-          {/* Stato live da Task Scheduler */}
-          {live && (
-            <div className="flex flex-wrap gap-x-6 gap-y-1 pt-3 text-[10px] font-mono">
-              <span className="text-slate-500">stato: <span className={live.active ? "text-emerald-400" : "text-slate-300"}>{live.state}</span></span>
-              <span className="text-slate-500">prossima: <span className="text-sky-300">{live.next_run || "—"}</span></span>
-              <span className="text-slate-500">ultima: <span className="text-slate-300">{live.last_run || "mai"}</span></span>
-              <span className="text-slate-500">esito: <span className="text-slate-300">{live.last_result_label}</span></span>
-            </div>
+        <div className="mt-3 pt-3 border-t border-white/5 space-y-2.5">
+          <p className="text-[12px] text-slate-400 leading-relaxed">{a.cosa_fa}</p>
+          <p className="text-[11px] text-slate-500 leading-relaxed">
+            <span className="font-bold uppercase text-[9px] tracking-widest text-slate-600">Trigger · </span>{a.trigger}
+          </p>
+          {live?.last_run && (
+            <p className="text-[11px] font-mono text-slate-500">ultima esecuzione: {live.last_run}</p>
           )}
-
-          {/* File + trigger */}
-          <div className="flex gap-4 pt-3">
-            <div className="flex-1">
-              <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1">File</div>
-              <div className="text-[10px] font-mono text-slate-400">{a.file}</div>
+          {(a.dipende_da?.length || a.alimenta?.length) ? (
+            <div className="flex flex-wrap gap-1.5">
+              {a.dipende_da?.map(d => (
+                <span key={d} className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-800/60 text-slate-500">← {d}</span>
+              ))}
+              {a.alimenta?.map(d => (
+                <span key={d} className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-emerald-900/30 text-emerald-500/80">→ {d}</span>
+              ))}
             </div>
-            <div className="flex-1">
-              <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1">Trigger</div>
-              <div className="text-[10px] font-mono text-slate-400">{a.trigger}</div>
-            </div>
-          </div>
-
-          {/* Cosa fa */}
-          <div>
-            <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1 flex items-center gap-1">
-              <Zap size={8} /> Cosa fa
-            </div>
-            <p className="text-[11px] text-slate-300 leading-relaxed">{a.cosa_fa}</p>
-          </div>
-
-          {/* Come potenziare */}
-          <div className={`rounded-lg border border-slate-700 bg-slate-900/60 p-3`}>
-            <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1 flex items-center gap-1">
-              <Rocket size={8} className="text-amber-400" />
-              <span className="text-amber-400">Come potenziare</span>
-            </div>
-            <p className="text-[11px] text-amber-200/80 leading-relaxed">{a.come_potenziare}</p>
-          </div>
-
-          {/* Dipendenze */}
-          {(a.dipende_da || a.alimenta) && (
-            <div className="flex gap-4">
-              {a.dipende_da && (
-                <div className="flex-1">
-                  <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1">Dipende da</div>
-                  <div className="flex flex-wrap gap-1">
-                    {a.dipende_da.map(d => (
-                      <span key={d} className="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-400">{d}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-              {a.alimenta && (
-                <div className="flex-1">
-                  <div className="text-[8px] font-mono text-slate-600 uppercase tracking-widest mb-1 flex items-center gap-1">
-                    <ArrowRight size={8} /> Alimenta
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {a.alimenta.map(d => (
-                      <span key={d} className="text-[9px] font-mono px-2 py-0.5 rounded bg-emerald-900/30 border border-emerald-500/30 text-emerald-400">{d}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
+          ) : null}
+          <p className="text-[11px] text-slate-600 leading-relaxed italic">
+            <span className="font-bold uppercase text-[9px] tracking-widest not-italic">Potenziare · </span>{a.come_potenziare}
+          </p>
         </div>
       )}
-    </div>
+    </button>
   );
 }
-
-// ─────────────────────────────────────────────────────────────
-// ARCHITETTURA FLOW VISUALE
-// ─────────────────────────────────────────────────────────────
-function ArchitetturaDiagram() {
-  return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
-      <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest mb-4">
-        Flusso ramificazioni — architettura live
-      </div>
-
-      {/* Layer 1: Trigger primario */}
-      <div className="flex items-center gap-3">
-        <div className="bg-emerald-900/40 border border-emerald-500/50 rounded-lg px-3 py-2 text-[10px] font-mono text-emerald-400 font-bold">
-          WATCHER.PY
-        </div>
-        <ArrowRight size={12} className="text-slate-600 flex-shrink-0" />
-        <div className="flex gap-2 flex-wrap">
-          {["BACKUP.PY", "CHANGELOG.PY", "STATE_UPDATER.PY"].map(n => (
-            <div key={n} className="bg-slate-800 border border-slate-700 rounded px-2 py-1 text-[9px] font-mono text-slate-300">{n}</div>
-          ))}
-        </div>
-      </div>
-
-      {/* Layer 2: State → n8n */}
-      <div className="ml-8 flex items-center gap-3">
-        <div className="w-px h-4 bg-slate-700 ml-2" />
-        <div className="text-[9px] font-mono text-slate-600">milestone trigger</div>
-      </div>
-      <div className="flex items-center gap-3 ml-4">
-        <div className="bg-indigo-900/40 border border-indigo-500/50 rounded-lg px-3 py-2 text-[10px] font-mono text-indigo-400 font-bold">
-          STATE_UPDATER.PY
-        </div>
-        <ArrowRight size={12} className="text-slate-600 flex-shrink-0" />
-        <div className="bg-cyan-900/40 border border-cyan-500/50 rounded-lg px-3 py-2 text-[10px] font-mono text-cyan-400 font-bold">
-          N8N WEBHOOK
-        </div>
-        <ArrowRight size={12} className="text-slate-600 flex-shrink-0" />
-        <div className="bg-cyan-900/20 border border-cyan-500/30 rounded-lg px-3 py-2 text-[10px] font-mono text-cyan-300">
-          CLAUDE CLI
-        </div>
-        <ArrowRight size={12} className="text-slate-600 flex-shrink-0" />
-        <div className="bg-amber-900/20 border border-amber-500/30 rounded-lg px-3 py-2 text-[10px] font-mono text-amber-300">
-          STORYTELLING .MD
-        </div>
-      </div>
-
-      {/* Layer 3: Content output */}
-      <div className="ml-4 flex items-center gap-3">
-        <div className="w-px h-4 bg-slate-700 ml-2" />
-        <div className="text-[9px] font-mono text-slate-600">content pipeline</div>
-      </div>
-      <div className="flex gap-2 flex-wrap ml-4">
-        {[
-          { label: "AUDIO .MP3", color: "text-purple-400 border-purple-500/30 bg-purple-900/20" },
-          { label: "VIDEO .MP4", color: "text-pink-400 border-pink-500/30 bg-pink-900/20" },
-          { label: "LINKEDIN POST", color: "text-blue-400 border-blue-500/30 bg-blue-900/20" },
-          { label: "TELEGRAM", color: "text-sky-400 border-sky-500/30 bg-sky-900/20" },
-        ].map(o => (
-          <div key={o.label} className={`border rounded px-2 py-1 text-[9px] font-mono ${o.color}`}>{o.label}</div>
-        ))}
-      </div>
-
-      {/* Legenda */}
-      <div className="flex gap-4 pt-2 border-t border-slate-800 mt-2">
-        {[
-          { dot: "bg-emerald-500", label: "Attiva" },
-          { dot: "bg-indigo-500",  label: "Bridge n8n" },
-          { dot: "bg-cyan-500",    label: "Content Engine" },
-          { dot: "bg-amber-500",   label: "Output" },
-        ].map(l => (
-          <div key={l.label} className="flex items-center gap-1.5">
-            <div className={`w-1.5 h-1.5 rounded-full ${l.dot}`} />
-            <span className="text-[9px] font-mono text-slate-500">{l.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────
-// VISTA DEDICATA — AUTOMAZIONI NOTTURNE (sidebar → Notturne)
-// Verifica al volo: quali sono, cosa fanno, quando girano, se attive
-// ─────────────────────────────────────────────────────────────
-export function NotturneView() {
-  const notturne = AUTOMATIONS.filter(a => a.priority === "notturna");
-  const [live, setLive]   = useState<Record<string, TaskLive>>({});
-  const [apiOk, setApiOk] = useState<boolean | null>(null);   // null = caricamento
-  const [updated, setUpdated] = useState<string>("");
-
-  useEffect(() => {
-    let alive = true;
-    const load = () => {
-      fetch("/api/tasks/notturne", { signal: AbortSignal.timeout(20000) })
-        .then(r => r.json())
-        .then(d => {
-          if (!alive) return;
-          if (d.ok) { setLive(d.tasks || {}); setApiOk(true); setUpdated(new Date().toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit", second: "2-digit" })); }
-          else setApiOk(false);
-        })
-        .catch(() => { if (alive) setApiOk(false); });
-    };
-    load();
-    const id = setInterval(load, 30_000);   // refresh ogni 30s
-    return () => { alive = false; clearInterval(id); };
-  }, []);
-
-  const liveOf = (a: Automation) => (a.task ? live[a.task] : undefined);
-  const activeCount = notturne.filter(a => liveOf(a)?.active).length;
-
-  return (
-    <div className="space-y-3">
-      {/* Header stato */}
-      <div className="bg-indigo-950/20 border border-indigo-500/30 rounded-2xl p-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-[8px] font-mono text-indigo-300/70 uppercase tracking-widest mb-1 flex items-center gap-1.5">
-              <Moon size={9} className="text-sky-400" />
-              Automazioni notturne — Task Scheduler (utente teo)
-            </div>
-            <div className="text-[8px] font-mono text-slate-500 mb-2">
-              {apiOk === false
-                ? "API offline — avvia api_server.py per lo stato live · orari sotto"
-                : "Stato live da Task Scheduler · refresh ogni 30s · click per dettaglio"}
-            </div>
-            <div className="flex items-end gap-1.5">
-              <span className="text-3xl font-black text-sky-300 tabular-nums">
-                {apiOk ? activeCount : notturne.length}
-              </span>
-              <span className="text-slate-600 font-mono mb-0.5 text-sm">
-                {apiOk ? `attivi su ${notturne.length}` : "task schedulati"}
-              </span>
-            </div>
-          </div>
-          <div className="text-right">
-            {apiOk === null && (
-              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-slate-600/40 bg-slate-800/40">
-                <RefreshCw size={10} className="text-slate-400 animate-spin" />
-                <span className="text-[9px] font-mono text-slate-400 uppercase tracking-wider">Lettura…</span>
-              </div>
-            )}
-            {apiOk === true && (
-              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-emerald-500/40 bg-emerald-900/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-wider">Live</span>
-              </div>
-            )}
-            {apiOk === false && (
-              <div className="inline-flex items-center gap-1.5 px-2 py-1 rounded border border-amber-500/40 bg-amber-900/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                <span className="text-[9px] font-mono text-amber-400 uppercase tracking-wider">Offline</span>
-              </div>
-            )}
-            {updated && apiOk && (
-              <div className="text-[7px] font-mono text-slate-600 mt-1">agg. {updated}</div>
-            )}
-          </div>
-        </div>
-
-        {/* Orari a colpo d'occhio */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mt-3 pt-3 border-t border-indigo-500/20">
-          {[
-            { t: "02:07", n: "StoryAgent" }, { t: "03:37", n: "Research" },
-            { t: "04:07", n: "Push" },       { t: "07:30", n: "Daily Brief" },
-            { t: "dom 03:00", n: "DeepFreeze" }, { t: "dom 01:00", n: "FineTune (GPU)" },
-          ].map(s => (
-            <div key={s.n} className="flex items-center gap-1.5 text-[9px] font-mono">
-              <span className="text-sky-300 tabular-nums w-14">{s.t}</span>
-              <span className="text-slate-500">{s.n}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Cards con stato live per ciascun task */}
-      {notturne.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
-
-      <div className="text-center py-1">
-        <span className="text-[7px] font-mono text-slate-800 uppercase tracking-[0.3em]">
-          register_night_tasks.ps1 · path portabili via _ti_paths.bat
-        </span>
-      </div>
-    </div>
-  );
-}
-
-// ─────────────────────────────────────────────────────────────
-// COMPONENTE PRINCIPALE
-// ─────────────────────────────────────────────────────────────
-type Tab = "architettura" | "attive" | "da_fare" | "content_engine";
 
 export function AutomationsView() {
-  const [tab, setTab] = useState<Tab>("architettura");
-
   // Stato LIVE: task schedulati (/api/tasks/notturne) + processi persistenti
-  // (/api/watchdog/status). Così il badge "ATTIVO" sulle card non è cosmetico.
+  // (/api/watchdog/status). I badge sulle card non sono cosmetici.
   const [tasksLive, setTasksLive] = useState<Record<string, TaskLive>>({});
   const [procsLive, setProcsLive] = useState<Record<string, { alive: boolean; pid?: number }>>({});
 
@@ -799,7 +541,6 @@ export function AutomationsView() {
     return () => { alive = false; clearInterval(id); };
   }, []);
 
-  // Deriva un TaskLive uniforme per qualsiasi card (processo persistente o task).
   const liveOf = (a: Automation): TaskLive | undefined => {
     if (a.proc && procsLive[a.proc]) {
       const s = procsLive[a.proc];
@@ -813,36 +554,20 @@ export function AutomationsView() {
     return undefined;
   };
 
-  const attive   = AUTOMATIONS.filter(a => a.priority === "attiva");
-  const notturne = AUTOMATIONS.filter(a => a.priority === "notturna");
-  const daFare   = AUTOMATIONS.filter(a => ["alta", "media", "bassa"].includes(a.priority));
-  const ce       = AUTOMATIONS.filter(a => a.priority === "ce");
-
-  // Conteggio per STATO REALE (verità P1a — i numeri che la vecchia view nascondeva)
-  const statoCounts = (["persistente", "event", "scheduled", "on-demand", "dormiente"] as Stato[])
-    .map(s => ({ s, n: AUTOMATIONS.filter(a => a.stato === s).length }));
-
-  const TABS: Array<{ id: Tab; label: string; count: number; color: string }> = [
-    { id: "architettura",  label: "ARCHITETTURA",   count: 0,         color: "text-slate-400" },
-    { id: "attive",        label: "ATTIVE",          count: attive.length + notturne.length,  color: "text-emerald-400" },
-    { id: "da_fare",       label: "DA FARE",         count: daFare.length,  color: "text-amber-400"   },
-    { id: "content_engine",label: "CONTENT ENGINE",  count: ce.length,      color: "text-cyan-400"    },
-  ];
-
-  // (#57 gerarchia) i numeri LIVE che il vecchio header nascondeva nelle card
   const viveOra = Object.values(procsLive).filter(s => s.alive).length;
   const schedAttive = Object.values(tasksLive).filter(t => t.active).length;
   const apiLive = Object.keys(procsLive).length > 0 || Object.keys(tasksLive).length > 0;
+  const statoCounts = SEZIONI.map(({ stato }) => ({ s: stato, n: AUTOMATIONS.filter(a => a.stato === stato).length }));
 
   return (
-    <div className="space-y-4">
-      {/* ══ HERO (#57): quante girano ADESSO — dal vivo, non da catalogo ══ */}
+    <div className="space-y-6">
+      {/* ══ HERO: quante girano ADESSO — dal vivo, non da catalogo ══ */}
       <div className="relative rounded-2xl border border-amber-500/25 bg-gradient-to-br from-amber-500/[0.07] to-slate-900/60 p-6 overflow-hidden">
         <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
              style={{ background: "radial-gradient(circle, rgba(251,191,36,0.10), transparent 70%)" }} />
         <div className="flex items-center gap-2 mb-3">
           <Zap size={13} className="text-amber-400" />
-          <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-[0.3em]">Automazioni · stato vivo</span>
+          <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-[0.3em]">Automazioni · la sala macchine</span>
           <div className="h-px flex-1 bg-gradient-to-r from-amber-500/30 to-transparent" />
           <span className="flex items-center gap-1.5 text-[10px] font-mono">
             <span className={`w-1.5 h-1.5 rounded-full ${apiLive ? "bg-emerald-500 animate-pulse" : "bg-slate-700"}`} />
@@ -858,7 +583,6 @@ export function AutomationsView() {
         ) : (
           <p className="text-xl md:text-2xl font-bold text-white leading-snug">Il sistema che lavora mentre non guardi.</p>
         )}
-        {/* stato operativo reale (P1a) — riga secondaria, dentro il hero */}
         <div className="flex flex-wrap gap-1.5 mt-4">
           {statoCounts.map(({ s, n }) => {
             const c = STATO_CONFIG[s];
@@ -873,101 +597,61 @@ export function AutomationsView() {
         </div>
       </div>
 
-      {/* Tab bar */}
-      <div className="flex gap-1 border-b border-slate-800 pb-0">
-        {TABS.map(t => (
-          <button
-            key={t.id}
-            onClick={() => setTab(t.id)}
-            className={`px-3 py-2 text-[9px] font-mono font-bold uppercase tracking-widest transition-colors border-b-2 -mb-px ${
-              tab === t.id
-                ? `${t.color} border-current`
-                : "text-slate-600 border-transparent hover:text-slate-400"
-            }`}
-          >
-            {t.label}{t.count > 0 && <span className="ml-1 opacity-60">({t.count})</span>}
-          </button>
-        ))}
+      {/* ══ LE SEZIONI — per come girano, in ordine di vitalità ══ */}
+      {SEZIONI.map(({ stato, titolo, sotto }) => {
+        const items = AUTOMATIONS.filter(a => a.stato === stato);
+        if (!items.length) return null;
+        const c = STATO_CONFIG[stato];
+        return (
+          <section key={stato}>
+            <div className="flex items-baseline gap-2.5 mb-2.5">
+              <span className={`text-[13px] font-black uppercase tracking-wide ${c.color}`}>{titolo}</span>
+              <span className="text-[10px] font-mono text-slate-600">{sotto}</span>
+              <span className="text-[10px] font-mono text-slate-700 ml-auto">×{items.length}</span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {items.map(a => <MacchinaCard key={a.id} a={a} live={liveOf(a)} />)}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  );
+}
+
+// ── NOTTURNE — la sezione "La notte" come vista standalone (sotto-voce sidebar) ──
+export function NotturneView() {
+  const [tasksLive, setTasksLive] = useState<Record<string, TaskLive>>({});
+  useEffect(() => {
+    let alive = true;
+    const load = () => {
+      fetch("/api/tasks/notturne", { signal: AbortSignal.timeout(20000) })
+        .then(r => r.json()).then(d => { if (alive && d.ok) setTasksLive(d.tasks || {}); })
+        .catch(() => {});
+    };
+    load();
+    const id = setInterval(load, 30_000);
+    return () => { alive = false; clearInterval(id); };
+  }, []);
+  const items = AUTOMATIONS.filter(a => a.stato === "scheduled");
+  const liveOf = (a: Automation) => (a.task ? tasksLive[a.task] : undefined);
+  const attivi = Object.values(tasksLive).filter(t => t.active).length;
+  return (
+    <div className="space-y-4">
+      <div className="relative rounded-2xl border border-indigo-500/25 bg-gradient-to-br from-indigo-500/[0.07] to-slate-900/60 p-6 overflow-hidden">
+        <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
+             style={{ background: "radial-gradient(circle, rgba(129,140,248,0.10), transparent 70%)" }} />
+        <div className="flex items-baseline gap-3 flex-wrap">
+          <span className="text-4xl md:text-5xl font-black tabular-nums text-indigo-200 leading-none">
+            {attivi || items.length}
+          </span>
+          <span className="text-lg font-bold text-slate-300">task nella catena notturna</span>
+          <span className="text-[12px] font-mono text-slate-500">· la mattina è già tutto committato e pushato</span>
+        </div>
       </div>
-
-      {/* Contenuto tab */}
-      {tab === "architettura" && (
-        <div className="space-y-4">
-          <ArchitetturaDiagram />
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-4">
-            <div className="text-[9px] font-mono text-slate-500 uppercase tracking-widest mb-3 flex items-center gap-1.5">
-              <GitBranch size={9} /> Regole architettura
-            </div>
-            <div className="space-y-2">
-              {[
-                "watcher.py è il trigger primario — tutto parte da lì",
-                "state_updater.py è il bridge verso n8n — gestisce il confine interno/esterno",
-                "n8n gestisce tutto ciò che è esterno: API terze parti, distribuzione, scheduling cloud",
-                "CONTENT_ENGINE è separato da TITANIUM_OS — sorgente dati vs produzione contenuti",
-                "n8n_bridge.json è l'unico file da toccare per cambiare URL webhook — mai hardcodare",
-                "Ogni automazione è non-bloccante (thread separato) — il sistema non si ferma mai per un webhook fallito",
-              ].map((r, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <div className="w-1 h-1 rounded-full bg-slate-600 mt-1.5 flex-shrink-0" />
-                  <span className="text-[11px] text-slate-400">{r}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {tab === "attive" && (
-        <div className="space-y-2">
-          {attive.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
-
-          {/* Sottocartella Notturne — stessa cartella ATTIVE, piccola scritta, colore indigo */}
-          {notturne.length > 0 && (
-            <>
-              <div className="text-[9px] font-mono text-indigo-300 uppercase tracking-widest border-t border-slate-800 pt-3 mt-1 flex items-center gap-1.5">
-                🌙 Notturne — schedulate (Task Scheduler) ({notturne.length})
-              </div>
-              {notturne.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
-            </>
-          )}
-        </div>
-      )}
-
-      {tab === "da_fare" && (
-        <div className="space-y-4">
-          {(["alta", "media", "bassa"] as Priority[]).map(p => {
-            const items = daFare.filter(a => a.priority === p);
-            if (!items.length) return null;
-            return (
-              <div key={p}>
-                <div className={`text-[9px] font-mono uppercase tracking-widest mb-2 ${PRIORITY_CONFIG[p].color}`}>
-                  — Priorità {PRIORITY_CONFIG[p].label} ({items.length})
-                </div>
-                <div className="space-y-2">
-                  {items.map(a => <AutoCard key={a.id} a={a} live={liveOf(a)} />)}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
-
-      {tab === "content_engine" && (
-        <div className="space-y-2">
-          <div className="bg-cyan-900/10 border border-cyan-500/20 rounded-xl p-3 mb-3">
-            <div className="text-[9px] font-mono text-cyan-400 uppercase tracking-widest mb-1">Pipeline</div>
-            <div className="flex items-center gap-1.5 flex-wrap">
-              {ce.map((a, i) => (
-                <div key={a.id} className="flex items-center gap-1.5">
-                  <span className="text-[9px] font-mono text-cyan-300">{a.nome.split(": ")[1] || a.nome}</span>
-                  {i < ce.length - 1 && <ArrowRight size={9} className="text-slate-600" />}
-                </div>
-              ))}
-            </div>
-          </div>
-          {ce.map(a => <AutoCard key={a.id} a={a} />)}
-        </div>
-      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {items.map(a => <MacchinaCard key={a.id} a={a} live={liveOf(a)} />)}
+      </div>
     </div>
   );
 }
