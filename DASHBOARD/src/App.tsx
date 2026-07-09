@@ -228,12 +228,8 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
         )}
         {pillarItems.map(item => <NavBtn key={item.id} item={item} />)}
 
-        {/* ══ HR — il motore sulla persona: voce navigabile + CV/CV NINA annidate (#57) ══ */}
-        {!collapsed && (
-          <div className="text-[7px] font-mono text-slate-400/80 uppercase tracking-[0.3em] px-3 py-2">
-            HR · Il motore sulla persona
-          </div>
-        )}
+        {/* ══ HR — voce navigabile + CV/CV NINA annidate; senza titoletto di sezione
+            (correzione Matteo 09/07: ridondante — HR parla da sé, in coda ai pilastri) ══ */}
         {hrItems.map(item => (
           <Fragment key={item.id}>
             <NavBtn item={item} />
