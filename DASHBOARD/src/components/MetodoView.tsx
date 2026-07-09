@@ -1,8 +1,8 @@
-// MetodoView.tsx | TITANIUM_OS / DASHBOARD | v1.0 | 2026-06-03
+// MetodoView.tsx | TITANIUM_OS / DASHBOARD | v2.0 | 2026-07-09
 // Vista METODO — "chi siamo, cosa, come". Nata dalle domande di un dev esterno
-// (sessione 02/06/2026): la spiegazione più chiara mai data del perché il sistema
-// è inusuale — markdown come fonte + vettori, non un database classico.
-// Additiva: non tocca nessun'altra view. Numeri verificati dal repo il 03/06/2026.
+// (sessione 02/06/2026); v2.0 (#57): numeri ri-verificati dal repo, RAG v4.2,
+// + le sezioni nate a luglio: IL MOTORE (grafo→mappa→Nina), fonte unica,
+// il sistema che si mantiene da solo (notturne).
 
 import { type ReactNode } from "react";
 
@@ -100,14 +100,14 @@ export function MetodoView() {
           <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">Come ricorda</div>
           <h2 className="text-2xl font-black text-white">Cercare per significato, non per parola</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-1">
-            <Stat value="146" label="documenti" color={ACCENT.themis} />
-            <Stat value="6.518" label="frammenti" color={ACCENT.themis} />
+            <Stat value="404" label="documenti" color={ACCENT.themis} />
+            <Stat value="18.556" label="frammenti" color={ACCENT.themis} />
             <Stat value="384" label="numeri / frammento" color={ACCENT.themis} />
-            <Stat value="3" label="livelli memoria" color={ACCENT.themis} />
+            <Stat value="4" label="motori di ricerca" color={ACCENT.themis} />
           </div>
           <div className="space-y-4">
             <Step n="1" color={ACCENT.themis} title="Spezza">
-              I documenti vengono divisi in migliaia di piccoli frammenti.
+              I documenti vengono divisi in migliaia di piccoli frammenti (rispettando i titoli, non a caso).
             </Step>
             <Step n="2" color={ACCENT.themis} title="Traduce in significato">
               Ogni frammento diventa un vettore — una sequenza di numeri che ne cattura il <em>senso</em>, non solo le parole.
@@ -116,12 +116,16 @@ export function MetodoView() {
               Quando fai una domanda, anche lei diventa un vettore: il sistema trova i frammenti
               più vicini di significato. Così ricorda anche se cerchi con parole diverse.
             </Step>
+            <Step n="4" color={ACCENT.themis} title="Riordina e incrocia">
+              Un secondo modello rilegge i migliori candidati e li riordina; il grafo dei
+              collegamenti tra le note (5.000+ ponti) porta a galla anche i vicini di contesto.
+            </Step>
           </div>
         </section>
 
         {/* ── IL LOOP ──────────────────────────────────────────────── */}
         <section className="space-y-5">
-          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">Il motore</div>
+          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">La leva</div>
           <h2 className="text-2xl font-black text-white">Un input, tanti output</h2>
           <p className="text-[15px] text-slate-300 leading-relaxed">
             La regola è la leva: <span className="text-white font-semibold">cattura mentre costruisci</span>.
@@ -149,14 +153,45 @@ export function MetodoView() {
           </p>
         </section>
 
+        {/* ── IL MOTORE (#57) — la lezione di luglio ───────────────── */}
+        <section className="space-y-5">
+          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">Il motore · deciso 08/07/2026</div>
+          <h2 className="text-2xl font-black text-white">Grafo → mappa → guida</h2>
+          <p className="text-[15px] text-slate-300 leading-relaxed">
+            La scoperta più importante del sistema su se stesso: la conoscenza vale solo se ha
+            <span className="text-white font-semibold"> tre strati insieme</span>.
+            Un <span className="text-slate-200 font-semibold">grafo</span> di competenze con prove reali (la verità),
+            una <span className="text-slate-200 font-semibold">mappa a livelli</span> che lo rende leggibile a chi
+            non è del mestiere, e <span className="text-pink-400 font-semibold">Nina</span> — la guida che spiega i perché.
+          </p>
+          <p className="text-[14px] text-slate-400 leading-relaxed border-l-2 border-emerald-500/40 pl-4 italic">
+            La legge che tiene tutto onesto: una competenza senza prova non entra nel grafo.
+            E la regola gemella sull'interfaccia: <span className="text-slate-200">ogni vista DERIVA dai
+            dati, mai li copia</span> — una sola fonte di verità, il resto si rigenera.
+          </p>
+        </section>
+
+        {/* ── SI MANTIENE DA SOLO (#57) ────────────────────────────── */}
+        <section className="space-y-5">
+          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">La notte</div>
+          <h2 className="text-2xl font-black text-white">Il sistema si mantiene da solo</h2>
+          <p className="text-[15px] text-slate-300 leading-relaxed">
+            Mentre Matteo dorme, la catena notturna gira: la ricerca porta fonti nuove, un agente
+            scrive l'episodio di Nina e lo controlla contro il canone, l'audit compila la cartella
+            clinica del sistema (con le sue critiche, non i suoi complimenti), l'auto-miglioramento
+            <span className="text-white font-semibold"> propone</span> — e l'umano approva.
+            La mattina il lavoro è già committato e pushato.
+          </p>
+        </section>
+
         {/* ── LO STACK ─────────────────────────────────────────────── */}
         <section className="space-y-5">
           <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">Sotto il cofano</div>
           <h2 className="text-2xl font-black text-white">Due linguaggi, una memoria versionata</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-1">
-            <Stat value="70" label="file Python · backend" color={ACCENT.stack} />
-            <Stat value="46" label="file React · interfaccia" color={ACCENT.stack} />
-            <Stat value="132" label="documenti Markdown" color={ACCENT.stack} />
+            <Stat value="130" label="file Python · backend" color={ACCENT.stack} />
+            <Stat value="48" label="file React · interfaccia" color={ACCENT.stack} />
+            <Stat value="363" label="documenti Markdown" color={ACCENT.stack} />
             <Stat value="100%" label="su Git" color={ACCENT.stack} />
           </div>
           <p className="text-[14px] text-slate-400 leading-relaxed">
