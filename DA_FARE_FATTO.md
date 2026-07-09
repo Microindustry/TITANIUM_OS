@@ -236,6 +236,14 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   · resta della revisione grafica (da fare insieme): regola palette scritta
     (5 accent+neutro+allarme), lingua icone unica (emoji vs lucide), punto focale
     per le altre viste
+- [✓] **GERARCHIA ESTESA ALLE ALTRE VISTE** (316167b8 + 7d9de679 + 50b28fd9):
+  il pattern hero (focale grande + glow accent + contesto declassato) ora copre
+  11 viste — home (ADESSO) · 6 pagine pilastro (frase-essenza xl/2xl) · VALORE
+  (messaggio fondante a corpo 14-15px) · CONTROLLO (N strumenti accesi in 4xl/5xl)
+  · PUBBLICAZIONI (la regola "sistema propone, Matteo approva" da 9px a hero) ·
+  PITCH (già gerarchico + atto economico). tsc verde su ogni commit.
+  Restano (viste complesse/da valutare insieme): STORIE, MAPPA, CALENDARIO,
+  INVENTARIO, METODO, CV/CV Nina (header già decente), DAL GIORNO 0.
 - [✗] **P9 tema light tappa 2 NON fatto — motivo**: sweep visivo su decine di card
   hardcoded dark, da fare con Matteo davanti (screenshot per vista, rischio
   regressioni estetiche in autonomia); il toggle intanto è nascosto (P9 mitigato).
