@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-08T03:52:43",
-  "date": "2026-07-08",
-  "git_head": "2e63de91",
-  "rag_chunks": 18276,
-  "n_episodes": 263,
-  "n_commits_7d": 50,
+  "last_audit": "2026-07-09T03:52:38",
+  "date": "2026-07-09",
+  "git_head": "9281b0cf",
+  "rag_chunks": 18511,
+  "n_episodes": 265,
+  "n_commits_7d": 62,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,74 +14,56 @@
   },
   "log_issues": [
     {
-      "log": "night_research.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-08 03:40:02 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s",
-      "data": "2026-07-08"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-08 03:40:23 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
-      "data": "2026-07-08"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-08 03:40:23 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-08"
-    },
-    {
       "log": "research_agent.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-08 03:38:33 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-08"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-08 03:38:56 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-07-08"
+      "riga": "2026-07-09 03:39:13 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-09"
     },
     {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-07-08 03:38:56 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-08"
+      "riga": "2026-07-09 03:39:24 [research_agent      ] INFO     openalex -> 0 risultati",
+      "data": "2026-07-09"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-07-09 03:39:32 [research_agent      ] INFO     [02] [semantic_scholar] Design and Implementation of Thermal Error Compensation Method for CNC Machine T — Ying Gao, Xiaojun Xia, Yinrui Guo 2024",
+      "data": "2026-07-09"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
-      "riga": "su disco EP_N2_52, il canone dichiara EP_N2_51: aggiornare _CANONE.md",
-      "data": "2026-07-08"
+      "riga": "su disco EP_N2_53, il canone dichiara EP_N2_52: aggiornare _CANONE.md",
+      "data": "2026-07-09"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
       "riga": "42 CVE fixabili in 9 pacchetti: aiohttp 3.14.0 (8), cryptography 48.0.0 (1), gradio 5.50.0 (9), pillow 11.3.0 (7), pydantic-settings 2.14.1 (1), python-multipart 0.0.30 (1)",
-      "data": "2026-07-08"
+      "data": "2026-07-09"
     }
   ],
-  "vault_orphans": 2,
+  "vault_orphans": 1,
   "canone_manuale": {
-    "active": 23,
-    "done": 33,
+    "active": 19,
+    "done": 37,
     "file_age_days": 0,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
     "canone_age_days": 0,
-    "max_ep_disco": 52,
-    "max_ep_canone": 51
+    "max_ep_disco": 53,
+    "max_ep_canone": 52
   },
   "organi_vivi": {
     "nina-loop": 0.0,
     "snapshot RAG": 0.0,
-    "inventario notturno": 0.6,
-    "retention disco": 0.6,
+    "inventario notturno": 1.0,
+    "retention disco": 1.0,
     "AI news watcher": 0.0,
-    "daily brief": 0.6,
+    "daily brief": 0.8,
     "riflusso FATTI": 0.1
   },
   "pip_audit": {
@@ -100,14 +82,14 @@
     ]
   },
   "qc_episodi": {
-    "checked": 52,
+    "checked": 53,
     "structure_fail": 0,
-    "open_loop_missing": 28
+    "open_loop_missing": 29
   },
   "critiche": {
     "added": 6,
     "auto_closed": 6,
-    "total": 153,
+    "total": 159,
     "open": 24
   },
   "verdict": "ATTENZIONE"

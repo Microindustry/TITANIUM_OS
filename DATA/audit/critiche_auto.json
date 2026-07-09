@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-7718dff2e1",
+    "date": "2026-07-09",
+    "git": "9281b0cf",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Tre organi notturni su sei sono fermi (score 0.0): nina-loop, snapshot RAG, AI news watcher. Il riflusso FATTI è quasi assente (0.1). Il sistema genera episodi (commit 2026-07-09 \"story_agent - episodi generati\") ma senza nina-loop attivo la pipeline è cieca: produce contenuto senza retroalimentazione dal corpus. Lo snapshot RAG a zero significa che la protezione contro corruzione HNSW da power-loss — già occorsa 3 volte in 2 giorni per mancanza UPS — non ha un backup notturno fresco.",
+    "azione": "Verificare perché nina-loop e snapshot RAG risultano 0.0 stanotte (log di avvio, eventuale eccezione silenziosa). Priorità snapshot RAG: finché l'UPS non è installato è l'unica rete di sicurezza contro la corruzione HNSW ricorrente.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-09"
+  },
+  {
+    "id": "AUD-76c0635efa",
+    "date": "2026-07-09",
+    "git": "9281b0cf",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "42 CVE fixabili su 9 pacchetti restano in produzione. Il log del 2026-07-09 riporta: \"42 CVE fixabili in 9 pacchetti: aiohttp 3.14.0 (8), cryptography 48.0.0 (1), gradio 5.50.0 (9), pillow 11.3.0 (7), pydantic-settings 2.14.1 (1), python-multipart 0.0.30 (1)\". Cryptography e python-multipart esposti su un sistema che tratta PII clienti (EVA hardening fatto in #53 ma le librerie sotto restano vulnerabili). La sessione CVE è aperta in bussola da almeno due cicli senza esecuzione.",
+    "azione": "Sessione CVE dedicata: upgrade dei 9 pacchetti in ambiente isolato, poi test finetune + smoke test notturno prima di riportare in produzione. Bloccare il deploy di nuove feature finché cryptography e starlette non sono aggiornati.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-09"
+  },
+  {
+    "id": "AUD-45689b0073",
+    "date": "2026-07-09",
+    "git": "9281b0cf",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Il canone dichiara max_ep_canone=52 ma su disco esiste EP_N2_53. Il log del 2026-07-09 riporta: \"su disco EP_N2_53, il canone dichiara EP_N2_52: aggiornare _CANONE.md\". Sono presenti 3 canon_violations totali. Un episodio fuori canone non viene indicizzato correttamente dal retrieval e può essere escluso o duplicato nelle prossime generazioni, rompendo la catena narrativa (EP_N2_03 dipende dalla continuità della serie).",
+    "azione": "Aprire _CANONE.md, registrare EP_N2_53 con i metadati corretti, rieseguire il rebuild incrementale degli indici. Verificare se le altre 2 canon_violations riguardano la stessa serie o domini diversi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-09"
+  },
+  {
+    "id": "AUD-439969251d",
+    "date": "2026-07-09",
+    "git": "9281b0cf",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Il research_agent ha colpito il rate-limit anonimo di Semantic Scholar stanotte: \"2026-07-09 03:39:13 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\". Subito dopo OpenAlex ha restituito zero risultati: \"2026-07-09 03:39:24 [research_agent] INFO openalex -> 0 risultati\". La chiave SEMANTIC_SCHOLAR_API_KEY è listata come blocker gated-Matteo da sessioni precedenti: finché non è inserita in .env il research_agent lavora senza quota garantita ogni notte.",
+    "azione": "Matteo inserisce la chiave gratuita Semantic Scholar in .env (azione ~5 minuti, già richiesta). Sblocca le ricerche notturne senza tocere il codice.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-09"
+  },
+  {
+    "id": "AUD-416f1b4463",
+    "date": "2026-07-09",
+    "git": "9281b0cf",
+    "area": "ROADMAP",
+    "severity": "alta",
+    "finding": "L'UPS (~50-80€) è il blocker hardware più urgente del sistema ma resta in lista gated-Matteo senza data. La corruzione HNSW è già avvenuta 3 volte in 2 giorni e lo snapshot RAG notturno è a 0.0 stanotte: ogni black-out azzera ore di rebuild. Tutto il valore della pipeline (episodi, RAG, nina-loop) è appeso a un componente da 60€ non ancora ordinato. Il martinetto Vevor e il mandrino ER20 bloccano MIMS fisico, ma l'UPS blocca l'intero stack software ogni notte.",
+    "azione": "Matteo ordina UPS prima della sessione #57, separando questo acquisto dall'ordine Vevor+ER20 se necessario per velocità. È l'azione con il rapporto impatto/costo più alto dell'intero sistema.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-09"
+  },
+  {
+    "id": "AUD-1619fb17ff",
+    "date": "2026-07-09",
+    "git": "9281b0cf",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "29 episodi su 53 (55%) mancano di open_loop (qc_episodi: open_loop_missing=29). La decisione di sessione #56 punta esplicitamente sulla pipeline come forza narrativa e su Nina come primo treno pubblico. Episodi senza open_loop non alimentano il riflusso FATTI (già a 0.1) e non creano aggancio tra puntate, svuotando proprio il vantaggio competitivo dichiarato della pipeline.",
+    "azione": "Prima di produrre EP_N2_03, passare il batch dei 29 episodi carenti attraverso uno script di patch open_loop (già il generatore lo gestisce per i nuovi: retroattivo sui vecchi). Misurare il riflusso FATTI dopo il fix.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-09"
+  },
+  {
     "id": "AUD-f8a2e96ef7",
     "date": "2026-07-08",
     "git": "2e63de91",
@@ -224,8 +296,10 @@
     "finding": "Semantic Scholar continua a sparare 429 senza API key autenticata: '2026-07-04 03:39:12 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s' e '2026-07-04 03:39:35 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu', con conseguente '2026-07-04 03:39:35 [research_agent] INFO semantic_scholar -> 0 risultati'. La query su rigidità strutturale dei frame macchina utensile — direttamente pertinente V32 — è andata a vuoto. Il blocker è già censito (.env manca SEMANTIC_SCHOLAR_API_KEY) ma non ancora risolto.",
     "azione": "Registrare la API key gratuita Semantic Scholar, inserirla in .env come SEMANTIC_SCHOLAR_API_KEY, rilanciare manualmente la query 'machine tool frame structural rigidity' per verificare che i risultati arrivino prima della prossima notturna.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-04"
+    "status": "resolved",
+    "last_seen": "2026-07-04",
+    "resolved_on": "2026-07-09",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-b2eb09f7e2",
@@ -236,8 +310,10 @@
     "finding": "La corruzione HNSW da power-loss è accaduta 3 volte in 2 giorni (censita nei blockers) e il fix a radice — UPS ~50-80€ — non è ancora ordinato. Il commit '65f6c606 chore(#53): bussola — RAG incidente HNSW risolto (drop-hnsw + incremental + snapshot)' mostra che ogni evento consuma una sessione intera di recovery. Con 17520 chunk RAG, un quarto evento durante una rebuild pesante (i 55 file versioni superate da purgare, TOP 10 #3) rischia di corrompere l'indice a metà operazione.",
     "azione": "Includere l'UPS nell'ordine hardware già pianificato (Vevor + ER20 + UPS) e non eseguire la rebuild RAG dei 55 file fino a quando il dispositivo non è installato e testato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-04"
+    "status": "resolved",
+    "last_seen": "2026-07-04",
+    "resolved_on": "2026-07-09",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-61d076f6d4",
@@ -248,8 +324,10 @@
     "finding": "La decisione connettori Via B (VULCAN, processo proprietario) è marcata [DECISO 24/06] nei blockers ma il passo successivo — 'SCHEDA §5 a canone + ricalcolare economia/BEP sul tooling Via B + rivendicare il processo nella bozza B2' — non risulta completato né appare tra i commit degli ultimi 7 giorni. Con il canone RAG ancora stantio su V32, c'è il rischio concreto che future query RAG su MIMS restituiscano il vecchio schema connettori, contraddicendo la decisione presa e generando incoerenza nei documenti B2.",
     "azione": "Aggiornare SCHEDA §5 con la decisione Via B e portarla a canone prima della prossima rebuild RAG; abbinare il passo alla sessione di pulizia _CANONE.md così i due aggiornamenti entrano nello stesso rebuild.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-04"
+    "status": "resolved",
+    "last_seen": "2026-07-04",
+    "resolved_on": "2026-07-09",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-4e460fa9b8",
@@ -260,8 +338,10 @@
     "finding": "Due security issue resteranno aperte a tempo indeterminato se non agganciate a una sessione dedicata: (A) bussola_open item #4 — 'eva_server.py:162 bind 0.0.0.0 + /inbox(:139) con PII clienti'; (B) item #6 — 'api_server.py:383,1085,1164 importano rag_engine' (RAG commit-leak senza guardia). Entrambi espongono dati reali (PII clienti, contenuto RAG) su interfacce di rete. Non sono bloccati da hardware né da altri prerequisiti: sono fermi solo perché la sessione #53 è partita dall'ecosistema Obsidian.",
     "azione": "Dedicare un blocco sessione (anche 60 minuti) esclusivamente ai due fix: cambiare il bind di eva_server.py da 0.0.0.0 a 127.0.0.1, aggiungere autenticazione su /inbox, e inserire il guard sul rag_engine import in api_server.py. Non dipendono da hardware né da RAG rebuild.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-04"
+    "status": "resolved",
+    "last_seen": "2026-07-04",
+    "resolved_on": "2026-07-09",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-05eb6147e4",
@@ -272,8 +352,10 @@
     "finding": "Il canone RAG contiene ancora 55 file di versioni superate (bussola_open TOP 10 #3: 'ASSOLUTO/VERSIONI(13) + …') e la fonte di verità _CANONE.md:13 punta ancora a V32-su-molle/recuperato vietato (censito nel milestone attivo come 'filo rosso'). Finché questi file restano indicizzati, ogni query RAG può restituire informazioni archiviate come valide, inquinando le risposte degli specialisti AI e vanificando il lavoro dell'ATTACCO ESERCITO.",
     "azione": "Dopo l'installazione UPS: eseguire la purga dei 55 file (estendere exclusions + rebuild incrementale), poi aggiornare _CANONE.md:13 con il riferimento V32 corretto. Fare i due passi in sequenza nella stessa sessione per chiudere il ciclo in un solo rebuild.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-04"
+    "status": "resolved",
+    "last_seen": "2026-07-04",
+    "resolved_on": "2026-07-09",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-05d28875d4",
@@ -284,8 +366,10 @@
     "finding": "L'ordine hardware (martinetto Vevor 20t + mandrino ER20 2.2kW + UPS) è il gate che sblocca in parallelo tre catene distinte: (1) prima colata giunto VULCAN → validazione Via B → economia/BEP MIMS; (2) protezione HNSW → rebuild RAG sicura dei 55 file; (3) fresatura stampi MIMS. Ogni sessione che passa senza l'ordine effettuato è una sessione in cui queste tre catene restano congelate. Il bussola_open item '1 · MOSSA 1 checkout che sblocca tutto' è aperto da almeno una settimana.",
     "azione": "Aprire la sessione #53 (o la prossima disponibile prima delle 16:00) con l'ordine hardware come primo atto — 10 minuti su un sito di e-commerce — prima di qualsiasi altra attività Obsidian o RAG.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-04"
+    "status": "resolved",
+    "last_seen": "2026-07-04",
+    "resolved_on": "2026-07-09",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c3c737729b",
