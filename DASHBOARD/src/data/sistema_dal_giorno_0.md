@@ -37,9 +37,9 @@
 - **4 · Bussola + STATE.json + git** — la cronologia verificabile (chi ha fatto cosa, quando).
 - **5 · FOTO/** — il visivo per i caroselli.
 
-## Il terreno di sviluppo (deciso 14/07 — quanti e quali)
+## Il terreno di sviluppo (deciso 14/07, scalato lo stesso giorno — quanti e quali)
 
-**9 capitoli → 11 caroselli → 176 slide complete + ~104 social.** Due capitoli si sdoppiano: la Macchina (4a *la scelta* — il canale usato e l'occhio del professionista · 4b *il corpo unico* — 178 kg, ±0.019 mm) e la Notte (6a *l'esercito* · 6b *i guasti veri*). Cameo di Nina nei capitoli 1, 4a e 9 — la sua domanda apre o chiude, mai narra. Ritmo: **un carosello per ciclo completo** (stampo → grounding → build → QC → Express → qui), sequenziale, il successivo parte solo a QC verde. Il breakdown operativo con fonti, scene e frontmatter motore per capitolo vive in `MENTE/STORIE/SG_GIORNO0/_PIANO_PRODUZIONE.md` (indicizzato nel RAG). Dopo il 9 la stagione 1 è chiusa: i capitoli nuovi nascono dai milestone come `EP_SG_10+`.
+**Stagione 1: 9 capitoli portanti + 59 approfondimenti = 68 caroselli** (≈1.088 slide complete + ≈650 social). Ogni capitolo è un contenitore a N livelli — il portante apre e promette, gli approfondimenti scavano: il Socio 4 · l'Organismo 7 · la Verifica 4 · la Macchina 12 · la Mente 10 · la Notte 12 · le Storie 8 · il Campo di Battaglia 6 · la Stella Polare 5. Ogni titolo è ancorato a un pezzo di grezzo reale (157 episodi di sistema: la saga delle Config, il giorno che il RAG ha mangiato 56 GB, le 10 notti di log muto, la campagna 42→0 CVE…). Cameo di Nina nei portanti 1, 4 e 9 — la sua domanda apre o chiude, mai narra. **E il binario non si chiude**: ogni milestone verificato diventa un candidato `EP_SG` nel capitolo giusto; gli archi nuovi (Mandrino Day, Primo Pezzo H7) entrano come `EP_SG_10+`. Ritmo: 1-2 caroselli per ciclo completo (stampo → grounding → build → QC → Express → qui), a regime anche in notte autonoma. Il breakdown completo — titoli di lavoro, fonti, scene, frontmatter motore — vive in `MENTE/STORIE/SG_GIORNO0/_PIANO_PRODUZIONE.md` (indicizzato nel RAG).
 
 ## Regole di produzione
 

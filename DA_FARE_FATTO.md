@@ -111,15 +111,21 @@
 - [✓] **Predisposizione verificata**: caroselli (cartella per ID, doppio taglio, QC, template),
   stampo validato, Obsidian (vault rigenerato #57, la cartella EP_SG entrerà con setup/intersect),
   RAG (18k chunk, MENTE indicizzata, incrementale verde oggi). Numerazione: EP_SG_NN → CAROSELLI/EP_SG_NN/.
-- [✓] **Sidebar divisa come Nina** (ordine Matteo): «DAL GIORNO 0» annidato sotto STORIE ·
-  SISTEMA (pattern Notturne/CV), genitore = archivio stagioni, sotto-voce = storia definitiva.
-- [✓] **TERRENO DI SVILUPPO deciso e scritto**: `MENTE/STORIE/SG_GIORNO0/_PIANO_PRODUZIONE.md`
-  (commit MENTE a09488a, RAG aggiornato) — 9 capitoli → **11 caroselli** (Macchina e Notte si
-  sdoppiano: 04a scelta/canale usato + 04b corpo unico · 06a esercito + 06b guasti veri) →
-  176 slide complete + ~104 social; per capitolo: fonti grounding, scene chiave, cameo Nina
-  (1, 4a, 9), frontmatter motore (casella CV vivo + competenza + prova); cadenza 1 carosello
-  per ciclo completo, sequenziale, QC verde prima del successivo; stato vivo nel doc.
-  Sintesi in vetrina (sezione «Il terreno di sviluppo»).
+- [✗] ~~«DAL GIORNO 0» come sotto-voce annidata~~ — corretta da Matteo: non sottocartella,
+  serve una FACCIA propria. Rifatta (sotto).
+- [✓] **Sidebar: sezione SISTEMA in rosso, gemella di NINA** (ordine Matteo): header «Sistema»
+  (rose) tra Titanium·Sistema e Nina, con dentro **EPISODI** (archivio a stagioni, id storie)
+  + **DAL GIORNO 0** (storia definitiva). Stesso pattern delle facce Nina/Pubblicazioni.
+- [✗] ~~terreno da 11 caroselli~~ — corretto da Matteo: "troppo pochi, hai 226 episodi".
+- [✓] **TERRENO DI SVILUPPO v2 — STAGIONE 1 = 68 CAROSELLI**: `MENTE/STORIE/SG_GIORNO0/
+  _PIANO_PRODUZIONE.md` (commit MENTE a29542b, RAG aggiornato) — 9 capitoli portanti +
+  59 approfondimenti N-livelli (EP_SG_NN + figli EP_SG_NN_XX, parent/children già supportati
+  dalla vista): Socio 4 · Organismo 7 · Verifica 4 · Macchina 12 · Mente 10 · Notte 12 ·
+  Storie 8 · Campo di Battaglia 6 · Stella Polare 5 → ≈1.088 slide complete + ≈650 social.
+  Ogni titolo ancorato al grezzo reale (157 ep: saga Config, RAG 56GB, 10 notti log muto,
+  42→0 CVE…); doppioni del grezzo consolidati; binario APERTO (ogni milestone → candidato
+  EP_SG; archi nuovi = EP_SG_10+; a regime produzione in notte autonoma). Frontmatter motore
+  per capitolo (casella CV vivo), cameo Nina (portanti 1/4/9), contatori di stato per capitolo.
 - [ ] PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.
 - [ ] Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).
 

@@ -75,7 +75,7 @@ interface NavItem {
   label: string;
   icon: typeof Home;
   color: string;
-  group: "pillars" | "hr" | "system" | "nina" | "pub";
+  group: "pillars" | "hr" | "system" | "storie" | "nina" | "pub";
   dot?: string;        // colore dot status
 }
 
@@ -94,7 +94,9 @@ const NAV_ITEMS: NavItem[] = [
   { id: "valore",      label: "VALORE",      icon: Landmark,      color: "text-emerald-300", group: "system", dot: "bg-emerald-400" },
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
-  { id: "storie",      label: "STORIE · SISTEMA", icon: Mic,      color: "text-rose-400",   group: "system"  },
+  // ── SISTEMA (le storie, voce Matteo) — faccia propria come Nina (#58, ordine Matteo) ──
+  { id: "storie",          label: "EPISODI",      icon: Mic,      color: "text-rose-400",   group: "storie", dot: "bg-rose-400" },
+  { id: "sistema-giorno0", label: "DAL GIORNO 0", icon: BookOpen, color: "text-rose-400",   group: "storie", dot: "bg-rose-400" },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
   // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
@@ -140,6 +142,7 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
   const pillarItems = NAV_ITEMS.filter(n => n.group === "pillars");
   const hrItems     = NAV_ITEMS.filter(n => n.group === "hr");
   const systemItems = NAV_ITEMS.filter(n => n.group === "system");
+  const storieItems = NAV_ITEMS.filter(n => n.group === "storie");
   const ninaItems   = NAV_ITEMS.filter(n => n.group === "nina");
   const pubItems    = NAV_ITEMS.filter(n => n.group === "pub");
 
@@ -279,27 +282,19 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 </span>
               </button>
             )}
-            {/* Sotto-voci STORIE — la divisione come per Nina (#58): il genitore apre
-                l'ARCHIVIO a stagioni (il grezzo), la sotto-voce la storia DEFINITIVA */}
-            {item.id === "storie" && !collapsed && (
-              <button
-                onClick={() => onNavigate("sistema-giorno0")}
-                title="La storia definitiva del sistema — piano EP_SG + episodi publish-ready"
-                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
-                  ${view === "sistema-giorno0"
-                    ? "bg-rose-950/40 text-rose-300 border border-rose-500/30"
-                    : "text-slate-600 hover:text-rose-300 hover:bg-rose-950/20 border border-transparent"}`}
-              >
-                <BookOpen size={11} className="flex-shrink-0 text-rose-400" />
-                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
-                  Dal giorno 0
-                </span>
-              </button>
-            )}
             {/* (#57) le sotto-voci PITCH sono state UNIFICATE dentro i pilastri (tab Pitch
                 in ogni pagina pilastro); le viste pitch-* restano per i deep-link */}
           </Fragment>
         ))}
+
+        {/* ══ SISTEMA — le storie di sistema (voce Matteo), faccia propria come Nina (#58) ══ */}
+        <div className="my-2 border-t border-slate-800/60" />
+        {!collapsed && (
+          <div className="text-[7px] font-mono text-rose-500/80 uppercase tracking-[0.3em] px-3 py-2">
+            Sistema
+          </div>
+        )}
+        {storieItems.map(item => <NavBtn key={item.id} item={item} />)}
 
         {/* ══ FACCIA 2 · NINA — il prodotto educativo ══ */}
         <div className="my-2 border-t border-slate-800/60" />
