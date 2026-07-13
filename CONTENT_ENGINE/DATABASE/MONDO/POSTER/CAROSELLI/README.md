@@ -46,19 +46,24 @@ CAROSELLI/
 
 ## Pipeline (un episodio → un carosello)
 ```
-EP_N2_xx.md  →  carosello.html (8 slide)  →  export_html_to_express  →  Express + PNG
+EP_N2_xx.md  →  carosello.html (16 slide complete)  →  export_html_to_express  →  Express + PNG
                        ↑ caption.txt (descrizione)
 ```
+**Formato DOPPIO (canone dal 09/07, validato Matteo):** ogni episodio nasce in 2 tagli —
+**completo 16 slide** (sito/archivio) + **social-cut ≤10 slide** (vincolo IG carousel API).
+Stampo: `MENTE/KNOWLEDGE/FORMATO_EPISODIO_DOPPIO.md`.
 
 ## Serie PREAMBOLO (più caroselli che introducono il mondo, prima degli episodi)
 La serie `PRE_*` non è legata a un singolo episodio: introduce Nina su più caroselli
 (15-17 slide l'uno), uno aiuta l'altro. Stile "buonanotte" + flusso sfumato continuo.
 | PRE | Titolo | Cosa fa | Slide | Stato |
 |-----|--------|---------|-------|-------|
-| PRE_01 | Il Mondo di Nina | overview del mondo (cos'è, personaggi, simboli, cammino) | 17 | HTML+PNG, allineato visione |
+| PRE_01 | Il Mondo di Nina | overview del mondo (cos'è, personaggi, simboli, cammino) | 17 | **DA RIFARE DA 0** per la pubblicazione (ordine Matteo 13/07: caratteristiche publish-ready, social-cut ≤10) — la v17 resta in `_VERSIONI/` |
 | PRE_02 | Come funziona Nina | dettaglio meccanismo (Libro-IA, Mappa Viva, doppio fondo, motore, Nina↔HR, eredità) | 16 | HTML+PNG |
+| PRE_03 | I Personaggi | scheda del cast (Nina col volto vero, Themis, Forge, Entropia) | 17 | HTML+PNG (v5 personaggi-profondi) |
 
 ## Indice caroselli (episodi)
 | EP | Titolo | Pietra | Stato |
 |----|--------|--------|-------|
-| EP_N2_01 | La Bambina che Chiedeva Perché | ⟡0 Materia | ✅ Express |
+| EP_N2_01 | La Bambina che Chiedeva Perché | ⟡0 Materia | HTML v2 16 slide · su Express c'è la v1 8-slide (da ri-esportare) |
+| EP_N2_02 | Il Soffio di Troppo | ⟡0 Materia | HTML 16 slide + PNG (mai esportato in Express) |
