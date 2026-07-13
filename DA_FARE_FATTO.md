@@ -129,10 +129,12 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
       pydantic-settings 2.14.2, python-multipart 0.0.31, setuptools 83.0.0,
       yt-dlp 2026.7.4. Verificato post-fix: torch 2.6.0+cu124 (CUDA ok) e chromadb
       0.5.23 INTATTI, RAG incrementale verde, pip-audit ricontato (23 residue).
-   b2. [ ] **cluster major RINVIATO** (23 CVE residue in 3 pacchetti): gradio 5→6 +
-      pillow 11→12 + starlette 0.5→1.x vanno INSIEME (gradio pinna pillow<12) e
-      toccano lo stack finetune (llamafactory). Proposta: isolare llamafactory in
-      venv separato → il Python di sistema si libera dei pin. Da decidere con Matteo.
+   b2. [✓] **cluster major CHIUSO 13/07** (ok Matteo, commit 803cd619): llamafactory
+      isolato in `~/.venvs/llamafactory` (torch 2.6.0+cu124 CUDA ok, pip check pulito,
+      CLI verde; trappola torch-cpu rifatta anche nel venv e curata), night_finetune
+      v3.0 ripuntato con guardia doppia; sistema: via gradio+llamafactory, pillow
+      12.3 / starlette 1.3.1 / fastapi 0.139 → **pip-audit 0 CVE su 194 pacchetti**
+      (era 42→23→0). Warning tokenizers = pre-esistente e voluto, non toccato.
    c. [✗] viste doppie neuro/sinapsi — GATED ("decidere insieme prima di togliere"),
       resta per quando c'è Matteo
    d. [◐] backlog #52 — ondata igiene serale 08/07 (commit 672a312d + c564e423):
@@ -155,6 +157,10 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
         P10 aria · P12 scala tipografica · 04 NEXUS morto+detriti disco (2.24GB
         chroma_db_* — deleto solo con ok Matteo) · 05 F7 sorgenti mancanti ·
         06 gestionale (D1-D9 dati) · 07 canon-pin RRF
+        → aggiornamento 13/07: P7 ✓ · F7 ✓ · detriti ✓ (ok Matteo: -5GB, via
+        chroma_db_reset_0707 + hnsw_corrupt_0907; tenuto hnsw_corrupt di oggi,
+        regola keep-7gg) · restano: P9/P10-aria/P12 · NEXUS morto · gestionale ·
+        canon-pin RRF
 **MATTINA 09/07 (rientro Matteo) — dashboard su + valutazione notte + interfacce:**
 - [✓] Dashboard avviata (5173; API 5001 era già su, non toccata). **Notte valutata
   8/10**: tutto girato (EP_N2_53 "il direttore invisibile" · night_push HA PUSHATO
