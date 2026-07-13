@@ -316,6 +316,26 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   hardcoded dark, da fare con Matteo davanti (screenshot per vista, rischio
   regressioni estetiche in autonomia); il toggle intanto è nascosto (P9 mitigato).
   Consolidamento card (3 raggi/3 opacità) idem: sweep da pianificare insieme.
+**MATTINA 13/07 (rientro dopo 3 giorni macchina spenta) — triage + 2 fix ecosistema:**
+- [✓] Notti 10-12/07: macchina SPENTA (zero guasti, semplicemente non è girato nulla);
+  al boot 09:17 la catena ha recuperato tutto da sola (EP_N2_53 "il direttore
+  invisibile", push dei 7 commit, brief, retention, nina-loop). L'allarme "4 organi
+  silenziosi 4.2gg" era STANTIO: audit girato alle 09:21 in mezzo alla catena.
+- [✓] **AI news watcher diagnosticabile** (16609c5b): il run al boot è morto in 7s
+  senza scrivere NULLA (crash duro, sospetta tempesta di boot — non riproducibile) →
+  exit code nel bat + marker "avvio passata (pid)" come prima riga del logger: la
+  prossima morte silenziosa lascia una diagnosi. Passata manuale verde: 26 sorgenti,
+  83 segnali. (Noti a parte: feed Anthropic/langchain vuoti = backlog 05 F7.)
+- [✓] **RAG curato alla radice + self-heal INVERSO v4.3** (f26d3184): il boot-storm
+  ha PERSO 733 scritture (GENESIS/FINANZA fatti_dalle_storie: manifest 1124+20 chunk,
+  Chroma fermo a 403+8) E corrotto l'HNSW (PROBE_FAIL "not enough memory" con 10GB
+  RAM liberi = header corrotto). Cura: L1 drop-hnsw → incrementale col self-heal
+  inverso nuovo (file con vettori mancanti in Chroma si ri-processano DA SOLI a ogni
+  incrementale — prima esisteva solo il purge nella direzione opposta) →
+  **18702==18702**, GENESIS 1124/1124, query API live verde (top hit = il file
+  recuperato), snapshot known-good fresco (quello delle 09:27 fotografava lo stato
+  corrotto). Senza la cura, stanotte rag_recover avrebbe sparato un L2 rebuild-hard
+  completo (martello) — ora l'incrementale ricuce chirurgico.
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
