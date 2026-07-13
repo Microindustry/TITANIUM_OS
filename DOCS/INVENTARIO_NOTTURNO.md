@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-09  11 commit](#2026-07-09-11-commit)
   - [2026-07-08  15 commit](#2026-07-08-15-commit)
   - [2026-07-06  2 commit](#2026-07-06-2-commit)
   - [2026-07-05  13 commit](#2026-07-05-13-commit)
@@ -29,6 +30,54 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-13 · 42 commit
+- `5d7f62cf` ﻿chore(#57): bussola — MIMS-in-Nina + Pietre-radici + pubblicazione v0 registrate
+- `f169639e` ﻿chore(#57): bussola — cartella+vista GIOCO registrate (prossimo: validare meccaniche insieme)
+- `decf372b` ﻿feat(#57): vista GIOCO — il dossier Real Life RPG in dash (modello pubblicazioni)
+- `9f14c7b9` ﻿chore(#57): bussola — serpentone/triangoli pensionati; mappa illustrata = asset prodotto
+- `6c8ef9af` ﻿style(#57): sidebar — via Mappa-Gioco dalla barra (serpentone superato dall albero)
+- `925c19f3` ﻿chore(#57): bussola — mappa-albero + pulizie sidebar registrate
+- `1a88e6f6` ﻿feat(#57): LA MAPPA come ALBERO — integra le 3 mappe, un grafo due lenti
+- `8b53df9f` ﻿style(#57): sidebar — Archivio Nina via dalla barra (dati e vista intatti)
+- `8bd97156` ﻿style(#57): sidebar — via il titoletto "HR - Il motore sulla persona" (ridondante)
+- `f2d68b6e` ﻿chore(#57): bussola — heartbeat bar costruita (verifica domattina: 2a tacca)
+- `9a3f0144` ﻿feat(#57): HEARTBEAT BAR sala macchine — pattern Uptime Kuma costruito in casa
+- `2f2ee025` ﻿chore(#57): bussola — ricognizione GitHub post-rifacimento: heartbeat bar (Kuma) in coda + lezione di metodo
+- `d4493363` ﻿chore(#57): bussola — AUTOMAZIONI v2.0 rifatta registrata
+- `f74e206f` ﻿feat(#57): AUTOMAZIONI v2.0 — RIFATTA completamente: la sala macchine
+- `d5f4a533` ﻿chore(#57): bussola — AUTOMAZIONI hero live registrato
+- `12252361` ﻿style(#57): AUTOMAZIONI gerarchia — hero LIVE: N processi vivi adesso
+- `67430fc4` ﻿chore(#57): bussola — METODO v2.0 registrato
+- `df99934b` ﻿feat(#57): METODO v2.0 — numeri veri + IL MOTORE + la notte + step Riordina
+- `7d0a439c` ﻿chore(#57): bussola — revisione grafica CHIUSA: gerarchia su tutte le viste
+- `681cb7ff` ﻿style(#57): gerarchia sulle viste rimaste — CALENDARIO, INVENTARIO, STORIE, CV, CV NINA
+- `13c171be` ﻿chore(#57): bussola — gerarchia estesa a 11 viste (pattern hero)
+- `50b28fd9` ﻿style(#57): PUBBLICAZIONI gerarchia — la regola di pubblicazione come hero
+- `7d9de679` ﻿style(#57): CONTROLLO gerarchia — hero salute: N strumenti accesi adesso in grande
+- `316167b8` ﻿style(#57): gerarchia su 7 viste — hero frase-essenza nei 6 pilastri + messaggio grande in VALORE
+- `8bd9acc4` ﻿chore(#57): bussola — passaggio gerarchia home+pitch registrato
+- `45dd8604` ﻿feat(#57): PITCH atto economico — Cosa vende e quando (3 nature) + IL MOTORE
+- `a06dac70` ﻿style(#57): HOME gerarchia — hero ADESSO come punto focale unico
+- `55783403` ﻿chore(#57): bussola — cantieri grossi: P10 fatto, P8 era gia chiuso, F8 fondato; P9 motivato non-fatto
+- `3e3adb34` ﻿feat(#57): PageKicker canonico in UIComponents (F8) + prime 2 migrazioni
+- `feaf263b` ﻿feat(#57): CommandBar accessibile — dialog + combobox/listbox + focus trap (P10)
+- `3271782a` ﻿chore(#57): bussola — restyle dash registrato (P9/P10/P12 + milestone clamp)
+- `f4eaa0f6` ﻿style(#57): restyle dash — milestone clampato, toggle light nascosto (P9), scala tipografica (P12), aria sidebar (P10)
+- `0183a764` ﻿chore(#57): bussola — HR navigabile con CV/CV Nina annidate
+- `5bcac07a` ﻿feat(#57): HR voce NAVIGABILE con pagina pilastro — CV e CV Nina sotto-voci annidate
+- `01ecd872` ﻿chore(#57): bussola — Nina pilastro + cartella HR + pitch unificato nei pilastri
+- `6b95c2dd` ﻿feat(#57): sidebar unificata TOTALE — pilastro NINA + cartella HR + via PITCH dalla barra
+- `8ac29ab5` ﻿chore(#57): bussola — stampo VALIDATO + pagina pilastro unificata (tab Spiegazione|Pitch)
+- `69681b45` ﻿feat(#57): pagina pilastro UNIFICATA — tab Spiegazione|Pitch + valore sempre visibile
+- `6100acf9` ﻿chore(#57): bussola — notte 09/07: unificazione pilastri-pitch-valore + ricerca grafo competenze da fonti
+- `bc84de54` ﻿feat(#57): UNIFICAZIONE pilastri-pitch-valore — card economia in ogni pilastro
+- `54baeb5f` ﻿chore(#57): bussola — mattina 09/07: notte valutata (allarmi stantii spenti), vista VALORE, stampo episodi
+- `a994e8b2` ﻿feat(#57): vista VALORE — il luogo unico della lezione (motore + nature + pilastri)
+
+_episodi: 265 · critiche aperte: 24 (135 risolte) · RAG: 18511 chunk_
+
+
 
 ## 2026-07-09 · 11 commit
 - `b9115332` auto: night_audit - cartella clinica 09/07/2026
