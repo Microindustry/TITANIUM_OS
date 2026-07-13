@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
 import ninaFoundationMd from "../data/nina_dal_giorno_0.md?raw";
 import sistemaFoundationMd from "../data/sistema_dal_giorno_0.md?raw";
+import sistemaGuidaMd from "../data/sistema_linea_guida.md?raw";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
 import { useContentFiles, useNinaStatus, useNinaArchived, useFile } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
@@ -338,7 +339,7 @@ function NinaArchived() {
   );
 }
 
-export function StorieView({ initialStagione = null, ninaView = null, sistemaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | null; sistemaView?: "giorno0" | null } = {}) {
+export function StorieView({ initialStagione = null, ninaView = null, sistemaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | null; sistemaView?: "giorno0" | "guida" | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
@@ -381,6 +382,7 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
   };
   const foundationLines = stripFoundation(ninaFoundationMd);
   const sistemaFoundationLines = stripFoundation(sistemaFoundationMd);
+  const sistemaGuidaLines = stripFoundation(sistemaGuidaMd);
 
   // Storie di Sistema: si visualizzano TUTTE le stagioni aperte di default (anche AUTO e
   // le bozze) — niente episodi nascosti. Se si arriva su una stagione precisa, apri solo quella.
@@ -523,6 +525,9 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
               <><strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa sappiamo fare, i personaggi,
               le zone, come nasce l'avventura) <strong style={{ color: NINA_COLOR }}>+ tutti gli episodi nella loro miglior versione</strong>, dall'inizio.</>
             )
+          ) : sistemaView === "guida" ? (
+            <><strong className="text-rose-400">Linea guida provvisoria</strong> — tutti i dati del terreno di sviluppo EP_SG
+            fissati in un posto (regole, stagione 1, interazioni con Nina, cadenza). Fonte canonica in MENTE, indicizzata nel RAG.</>
           ) : sistemaView === "giorno0" ? (
             <><strong className="text-emerald-400">Il Sistema dal giorno 0</strong> — la storia definitiva, raccontata da capo:
             qui c'è <strong className="text-emerald-400">il piano</strong> (la tesi, i 3 atti, le fonti) e sotto entrano
@@ -608,6 +613,22 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
             </div>
           );
         })}
+
+        {/* ── SISTEMA LINEA GUIDA (provvisoria) — il terreno di sviluppo EP_SG, fissato ── */}
+        {mode === "sistema" && sistemaView === "guida" && (
+          <div className="scroll-mt-4">
+            <div className="flex items-center gap-2 mb-2 mt-1">
+              <BookOpen size={14} className="text-rose-400" />
+              <h3 className="text-sm font-bold tracking-wider uppercase text-rose-400">
+                Linea guida provvisoria — storie di sistema
+              </h3>
+              <span className="text-[10px] font-mono text-slate-500">fonte canonica: MENTE/STORIE/SG_GIORNO0 + PONTE_SG_NINA · questa è la copia di consultazione</span>
+            </div>
+            <div className="rounded-xl border px-5 py-4 overflow-hidden border-rose-400/20 bg-rose-400/5">
+              {sistemaGuidaLines.map((line, i) => renderMdLine(line, i))}
+            </div>
+          </div>
+        )}
 
         {/* ── SISTEMA DAL GIORNO 0 — pagina isolata (gemella di «Nina dal giorno 0»):
             il fondamento + tutti gli episodi in un'unica timeline cronologica ── */}

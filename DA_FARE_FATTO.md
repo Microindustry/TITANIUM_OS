@@ -102,6 +102,16 @@
   Battaglia→Stella Polare), gerarchia fonti (canone → RAG → 157 grezzi che si riscrivono
   non si copiano → bussola/STATE/git → FOTO), regole (grounding, canon_guard, QC, formato
   doppio, un episodio alla volta solo se definitivo). Vista filtra solo id `EP_SG_`.
+- [✓] **LINEA GUIDA (provvisoria) = 3ª voce della sezione SISTEMA** (sotto DAL GIORNO 0):
+  pagina con TUTTI i dati del terreno fissati (regole, stagione 1 con i 68 titoli, interazioni
+  Nina, frontmatter, cadenza, stato) — specchio di consultazione; fonte canonica in MENTE.
+- [✓] **PONTE SG↔NINA scritto sui DUE lati** (`MENTE/KNOWLEDGE/MONDO/PONTE_SG_NINA.md`,
+  commit MENTE 2d76516, RAG ok): il ponte è LA DOMANDA di Nina (mai narrazione); cameo 1-2
+  slide, volto definitivo, frasi-firma; 3 cameo stagione 1 decisi col testo di lavoro
+  (SG_01 apre «un computer può essere un socio?» · SG_04 chiude «perché non l'hai comprata
+  fatta?» · SG_09 chiude stagione «cosa costruiamo dopo?»); ritorno lato Nina (le domande
+  diventano semi EP_N2, la prova cita SG — stesso fatto mai numeri diversi, uno racconta
+  l'altro rimanda); 4 guardie QC di coerenza.
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

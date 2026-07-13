@@ -97,6 +97,7 @@ const NAV_ITEMS: NavItem[] = [
   // ── SISTEMA (le storie, voce Matteo) — faccia propria come Nina (#58, ordine Matteo) ──
   { id: "storie",          label: "EPISODI",      icon: Mic,      color: "text-rose-400",   group: "storie", dot: "bg-rose-400" },
   { id: "sistema-giorno0", label: "DAL GIORNO 0", icon: BookOpen, color: "text-rose-400",   group: "storie", dot: "bg-rose-400" },
+  { id: "sistema-guida",   label: "LINEA GUIDA",  icon: Map,      color: "text-rose-400",   group: "storie", dot: "bg-rose-400" },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
   // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
@@ -529,6 +530,7 @@ function AppInner() {
             {view === "avventura-mappa" && <AvventuraMapView />}
             {view === "storie"      && <StorieView />}
             {view === "sistema-giorno0" && <StorieView sistemaView="giorno0" />}
+            {view === "sistema-guida"   && <StorieView sistemaView="guida" />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "nina-giorno0"  && <StorieView ninaView="giorno0" />}
             {view === "nina-archivio" && <StorieView ninaView="rag" />}
