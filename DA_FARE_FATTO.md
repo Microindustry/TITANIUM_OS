@@ -382,6 +382,10 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   preambolo). La v17-slide resta in _VERSIONI. Registrato anche nel README caroselli.
 - [ ] **In parallelo: le STORIE DI SISTEMA in voce Matteo** (binario prima persona
   deciso in #56) — si sistemano/scrivono insieme a PRE_01.
+  → **AGGIORNATO 13/07 (ordine Matteo, "le gestirai tu al 100x100")**: le storie di
+  sistema le gestisce CLAUDE al 100% — dalla grafica a tutto (testi, caroselli,
+  doppio taglio, QC). Garanzie: grounding RAG + canon_guard + QC caroselli +
+  additivo/reversibile. Registrato in FORMATO_EPISODIO_DOPPIO + GUIDA_CAROSELLI §6.
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.

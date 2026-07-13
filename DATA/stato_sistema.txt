@@ -1,25 +1,24 @@
 ====================================================
  STATO TITANIUM_OS — file fisico (auto-aggiornato)
- Wednesday 08 July 2026, 04:07
+ Monday 13 July 2026, 09:21
 ====================================================
 
 >>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
 
 — Task notturni —
-  ✓ TI_StoryAgent      OK   (ultima: 08/07 02:07)
-  ✓ TI_NightResearch   OK   (ultima: 08/07 03:37)
-  ✓ TI_NightAudit      OK   (ultima: 08/07 03:52)
-  ✓ TI_NightPush       OK   (ultima: 08/07 04:07)
-  ✓ TI_DailyBrief      OK   (ultima: 07/07 12:50)
-  ✓ TI_Watchdog        OK   (ultima: 08/07 03:37)
+  ✓ TI_StoryAgent      OK   (ultima: 13/07 09:20)
+  ✓ TI_NightResearch   OK   (ultima: 13/07 09:20)
+  ✓ TI_NightAudit      OK   (ultima: 13/07 09:20)
+  ✓ TI_NightPush       OK   (ultima: 13/07 09:20)
+  ✓ TI_DailyBrief      OK   (ultima: 13/07 09:20)
+  ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 13/07 09:17)
 
 — Servizi —
   · API Server (5001): attivo
   · MENTE Watcher: attivo
 
 — ⚠ GUASTI dai log (ultime 36h) —
-  ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 07/07 12:45)
-  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima
 
 Questo file si riscrive da solo (catena notturna + watchdog).
 Se vedi ⚠, apri DATA/logs/ del task indicato.

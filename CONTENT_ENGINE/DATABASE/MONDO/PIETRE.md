@@ -1,6 +1,26 @@
+<!-- TOC -->
+
+- [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
+- [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
+  - [0  LA MATERIA  (6 episodi)](#0-la-materia-6-episodi)
+  - [1  LA TRACCIA  (4 episodi)](#1-la-traccia-4-episodi)
+  - [2  LOFFICINA CHE GIRA SOLA  (13 episodi)](#2-lofficina-che-gira-sola-13-episodi)
+  - [3  LA MENTE CHE PARLA  (4 episodi)](#3-la-mente-che-parla-4-episodi)
+  - [4  LA BIBLIOTECA DELLE FONTI  (6 episodi)](#4-la-biblioteca-delle-fonti-6-episodi)
+  - [5  LA GRANDE MAPPA  (30 episodi)](#5-la-grande-mappa-30-episodi)
+  - [6  LESERCITO SILENZIOSO  (6 episodi)](#6-lesercito-silenzioso-6-episodi)
+  - [7  IL DIRETTORE  (14 episodi)](#7-il-direttore-14-episodi)
+- [Verticale: Finanza personale](#verticale-finanza-personale)
+  - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)
+  - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)
+  - [3  IL CUSCINETTO  (0 episodi)](#3-il-cuscinetto-0-episodi)
+  - [4  FAR LAVORARE I SOLDI  (0 episodi)](#4-far-lavorare-i-soldi-0-episodi)
+
+<!-- /TOC -->
+
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-08 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-13 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -115,7 +135,7 @@
 | 2 | `EP_N2_52` Il Battito del Guardiano | Un guasto che non fa rumore è più pericoloso di uno che grida; i veri  | adattato | — |
 | 3 | `EP_N2_16` Lo Specchio del Giudice | Un sistema intelligente può guardarsi dentro, trovare i propri errori  | adattato | ⟡1 |
 
-## ⟡7 · IL DIRETTORE  (13 episodi)
+## ⟡7 · IL DIRETTORE  (14 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -128,6 +148,7 @@
 | 2 | `EP_N2_48` Il Libro delle Ricette di Nonna | Un sistema che resta nella tua testa è solo una magia; uno scritto in  | adattato | — |
 | 2 | `EP_N2_49` La scatola magica dei compiti | Scrivere le cose su carta o schermo libera la testa da fare quello che | adattato | — |
 | 2 | `EP_N2_50` Il semaforo che mente | La differenza tra quello che un sistema *dice di fare* e quello che *s | adattato | — |
+| 2 | `EP_N2_53` Il Direttore Invisibile | Un gruppo funziona solo se c'è qualcuno (o qualcosa) che coordina chi  | adattato | — |
 | 2 | `EP_S2_03_LA_TELA` La Tela | la Tela: il calendario notturno | fonte | ⟡6 |
 | 2 | `EP_SEED_CONTROLLO_L1_CEDIBILE` Un sistema spiegato è un sistema cedibile | un posto solo per governare il disordine | fonte | — |
 | 2 | `EP_SEED_CONTROLLO_L1_SCAFFOLDING` Il carico va sullo schermo, non nella testa | un posto solo per governare il disordine | fonte | — |

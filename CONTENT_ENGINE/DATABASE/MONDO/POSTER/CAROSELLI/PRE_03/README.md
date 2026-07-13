@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [Carosello  PRE_03  I Personaggi (la scheda del cast)](#carosello-pre03-i-personaggi-la-scheda-del-cast)
+  - [File in questa cartella](#file-in-questa-cartella)
+  - [Le 17 slide](#le-17-slide)
+  - [Come rigenerare / esportare](#come-rigenerare-esportare)
+
+<!-- /TOC -->
+
 # Carosello — PRE_03 · I Personaggi (la scheda del cast)
 
 **Fonte:** serie PREAMBOLO (non legato a un episodio) — character bible del Mondo di Nina.

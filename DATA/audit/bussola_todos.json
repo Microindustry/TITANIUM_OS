@@ -1,5 +1,263 @@
 [
   {
+    "id": "BUS-2cb9e951",
+    "stato": "fatto",
+    "testo": "**HR = PIATTAFORMA A 3 STRATI, non il CV di Matteo**: grafo (verità: competenze",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-6e2c24ad",
+    "stato": "fatto",
+    "testo": "**Doc fonte unica scritto**: `MENTE/SESSIONI/2026-07-08_valore-per-pilastro.md` —",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-47f67d47",
+    "stato": "fatto",
+    "testo": "**RAG aggiornato**: rebuild incrementale +1 file → 18.323 chunk / 404 file, verde.",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-df3654a8",
+    "stato": "fatto",
+    "testo": "**Commit MENTE** (git locale): 3546e58 + 64abae3 (appendice messaggio verbatim).",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-aecde897",
+    "stato": "fatto",
+    "testo": "**Card home \"Valore\" DERIVATA dal doc** (pattern au18): `sync_valore.py` genera",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-f7714d96",
+    "stato": "fatto",
+    "testo": "Dashboard avviata (5173; API 5001 era già su, non toccata). **Notte valutata",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-eede694d",
+    "stato": "fatto",
+    "testo": "**VISTA VALORE — il \"miglior luogo\" della lezione** (a994e8b2): pagina completa",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-0a56bbd9",
+    "stato": "fatto",
+    "testo": "**STAMPO EPISODIO DOPPIO** (MENTE/KNOWLEDGE/FORMATO_EPISODIO_DOPPIO.md, RAG",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-eb3ac5ef",
+    "stato": "idea",
+    "testo": "Proposte strutturali (decidere insieme): nina_agent aggiorna _CANONE da solo",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-53f6ddc0",
+    "stato": "fatto",
+    "testo": "**UNIFICAZIONE pilastri↔pitch↔valore** (bc84de54): `PilastroEconomiaCard` —",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-04fedbd3",
+    "stato": "fatto",
+    "testo": "**RICERCA DA FONTI** (ordine: \"Reddit/GitHub/tesi/studi\") →",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-1f488fe6",
+    "stato": "fatto",
+    "testo": "**STAMPO EPISODI VALIDATO da Matteo** → è il formato canonico dei nuovi episodi",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-80d8efa1",
+    "stato": "fatto",
+    "testo": "**PAGINA PILASTRO UNIFICATA** (69681b45): tab Spiegazione|Pitch nella stessa",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-d18f7f6c",
+    "stato": "fatto",
+    "testo": "**Pilastro NINA**: pagina identica agli altri (card valore + tab Spiegazione|",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-83b0a62e",
+    "stato": "fatto",
+    "testo": "**Cartella HR in sidebar** (\"il motore sulla persona\"): CV + CV NINA voci piene",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-91af08f2",
+    "stato": "fatto",
+    "testo": "**PITCH eliminato dalla barra**: unificato nei tab dei pilastri; viste pitch-*",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-b74d321a",
+    "stato": "fatto",
+    "testo": "**HR NAVIGABILE** (5bcac07a, correzione Matteo): HR voce piena con pagina",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-026845fb",
+    "stato": "fatto",
+    "testo": "**RESTYLE DASH** (f4eaa0f6, mandato pieno \"do tutto in mano a te\"): screenshot",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-33f0aa38",
+    "stato": "fatto",
+    "testo": "**CANTIERI GROSSI eseguiti** (ordine Matteo \"fino al limite\"):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-9f5d90b1",
+    "stato": "fatto",
+    "testo": "**PASSAGGIO DI GERARCHIA home+pitch** (a06dac70 + 45dd8604, mandato creativo):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-7a0ce349",
+    "stato": "fatto",
+    "testo": "**GERARCHIA ESTESA ALLE ALTRE VISTE** (316167b8 + 7d9de679 + 50b28fd9):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-79e001d0",
+    "stato": "fatto",
+    "testo": "**GERARCHIA COMPLETATA — tutte le viste** (681cb7ff): CALENDARIO (N giorni",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-63a073db",
+    "stato": "fatto",
+    "testo": "**AUTOMAZIONI hero LIVE** (12252361, segnalazione Matteo \"interfaccia",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-7010e963",
+    "stato": "fatto",
+    "testo": "**AUTOMAZIONI v2.0 RIFATTA** (f74e206f, ordine Matteo \"rifalla completamente\"):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-83cf41ea",
+    "stato": "fatto",
+    "testo": "**HEARTBEAT BAR COSTRUITA** (9a3f0144, ordine \"installa se utile\" → deciso:",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-c11ea146",
+    "stato": "fatto",
+    "testo": "**LA MAPPA COME ALBERO** (1a88e6f6, \"fai tutte\" su proposta discussa):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-70a340d0",
+    "stato": "fatto",
+    "testo": "Sidebar: Archivio Nina tolto (8b53df9f, dati+vista intatti) · titoletto",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-815339e9",
+    "stato": "fatto",
+    "testo": "**IL GIOCO — cartella + vista** (ordine Matteo \"la cartella col come, lo stile,",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-a51fde1b",
+    "stato": "fatto",
+    "testo": "**TRE IDEE MATTEO catturate** (MENTE 83a1224, RAG 18.594):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-6732c1e2",
+    "stato": "idea",
+    "testo": "**MAPPA ILLUSTRATA DEL MONDO = asset del PRODOTTO** (decisione da #57):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-d6bcb569",
+    "stato": "fatto",
+    "testo": "**METODO v2.0** (df99934b, segnalazione Matteo \"è da aggiornare\"): era fermo",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-dc6e80c2",
+    "stato": "non_fatto",
+    "testo": "**P9 tema light tappa 2 NON fatto — motivo**: sweep visivo su decine di card",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-4c9ad9fa",
+    "stato": "fatto",
+    "testo": "Notti 10-12/07: macchina SPENTA (zero guasti, semplicemente non è girato nulla);",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-7fec8c68",
+    "stato": "fatto",
+    "testo": "**AI news watcher diagnosticabile** (16609c5b): il run al boot è morto in 7s",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-3110a526",
+    "stato": "fatto",
+    "testo": "**RAG curato alla radice + self-heal INVERSO v4.3** (f26d3184): il boot-storm",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-13d0add1",
+    "stato": "fatto",
+    "testo": "**P7/F6 caroselli CHIUSI** (80e2a198): il naming era già a canone da #53 — chiusi",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-8e3de8b5",
+    "stato": "fatto",
+    "testo": "**F7 watcher CHIUSO — watcher v1.2** (f48c5405): scoperto il bug zombie (il merge",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-5da8dfcd",
+    "stato": "fatto",
+    "testo": "**GUIDA_CAROSELLI — le regole in un posto solo** (MENTE d25a2c51... → fa8cc43):",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-b7ec446c",
+    "stato": "fatto",
+    "testo": "**REGOLE AUTOMATICHE — caroselli_qc.py + sentinella** (0ef58dd4): file canonici,",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-8bd8d256",
+    "stato": "fatto",
+    "testo": "**OBSIDIAN AL MEGLIO**: setup_obsidian rigenerato — 561 note (324 sapere + 237",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-2679d2d9",
+    "stato": "fatto",
+    "testo": "**RAG ferito e RIcurato (lezione ribadita)**: il MIO incrementale dopo la",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-d84c0162",
+    "stato": "da_fare",
+    "testo": "**Il prossimo carosello NON è EP_N2_03: è PRE_01 RIFATTO DA 0** — riscritto con",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
+    "id": "BUS-1232ab67",
+    "stato": "da_fare",
+    "testo": "**In parallelo: le STORIE DI SISTEMA in voce Matteo** (binario prima persona",
+    "sessione": "Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro"
+  },
+  {
     "id": "BUS-bb0209b8",
     "stato": "fatto",
     "testo": "**au18/gc04 CHIUSO — SYSTEM_TREE derivato, non più copiato**: nuova fonte unica",

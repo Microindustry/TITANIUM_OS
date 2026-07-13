@@ -3863,6 +3863,12 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
+        "id": "EP_N2_52",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
         "id": "EP_N2_16",
         "title": "Lo Specchio del Giudice",
         "tipo": "stessa_regione",
@@ -3871,12 +3877,6 @@
       {
         "id": "MOM_02_LA_MAPPA",
         "title": "La Mappa",
-        "tipo": "tema",
-        "motivo": "tema: mom, narrativo, recuperato"
-      },
-      {
-        "id": "MOM_04_IL_DOCUMENTO_MASTER",
-        "title": "Il Documento Master",
         "tipo": "tema",
         "motivo": "tema: mom, narrativo, recuperato"
       }
@@ -15716,6 +15716,12 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
+        "id": "EP_N2_52",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
         "id": "EP_N2_16",
         "title": "Lo Specchio del Giudice",
         "tipo": "stessa_regione",
@@ -15726,12 +15732,6 @@
         "title": "Il Teatro Finisce Qui",
         "tipo": "tema",
         "motivo": "tema: agenti, themis"
-      },
-      {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -15779,6 +15779,12 @@
       }
     },
     "collegati": [
+      {
+        "id": "EP_N2_53",
+        "title": "Il Direttore Invisibile",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, sono, themis"
+      },
       {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
@@ -15830,12 +15836,6 @@
       {
         "id": "EP_N2_12",
         "title": "La Squadra Notturna",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_16",
-        "title": "Lo Specchio del Giudice",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15924,6 +15924,12 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
+        "id": "EP_N2_52",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -15938,12 +15944,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16134,6 +16134,12 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
+        "id": "EP_N2_52",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
         "id": "EP_N2_16",
         "title": "Lo Specchio del Giudice",
         "tipo": "stessa_regione",
@@ -16154,12 +16160,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -19376,6 +19376,12 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
+        "id": "EP_N2_52",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
         "id": "EP_N2_16",
         "title": "Lo Specchio del Giudice",
         "tipo": "stessa_regione",
@@ -19384,12 +19390,6 @@
       {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa che Non Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20748,6 +20748,12 @@
         "title": "TITANIUM OS — EP AUTO 003",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260709",
+        "title": "TITANIUM OS — Episodio 57",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -20755,6 +20761,10 @@
       "precede": {
         "id": "EP_20260706",
         "title": "TITANIUM OS — EP AUTO 003"
+      },
+      "segue": {
+        "id": "EP_20260709",
+        "title": "TITANIUM OS — Episodio 57"
       }
     }
   },
@@ -20796,6 +20806,214 @@
         "giro_spirale": 2,
         "richiama": [],
         "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_12",
+        "title": "La Squadra Notturna",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_44",
+        "title": "Il Turno di Guardia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_13",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_16",
+        "title": "Lo Specchio del Giudice",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_53",
+    "title": "Il Direttore Invisibile",
+    "sottotitolo": "Quando tutti aiutano, qualcuno deve dire chi fa cosa e quando — altrimenti è caos",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-09",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "Quando",
+      "aiutanti",
+      "sono"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_53 — Il Direttore Invisibile \"Quando tutti aiutano, qualcuno deve dire chi fa cosa e quando — altrimenti è caos\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede perché avere tanti ai",
+    "content": "# EP_N2_53 — Il Direttore Invisibile\n### \"Quando tutti aiutano, qualcuno deve dire chi fa cosa e quando — altrimenti è caos\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede perché avere tanti aiutanti non basta — serve qualcuno che li guidi\n**Insegna:** Un gruppo funziona solo se c'è qualcuno (o qualcosa) che coordina chi fa cosa, quando e come — senza questo il disordine vince\n**Materia:** IL DIRETTORE (⟡7) · **Casella 53 del viaggio**\n**Posto nella Mappa:** Siamo nella Regione 7, IL DIRETTORE — il cuore invisibile dove gli aiutanti ricevono le istruzioni. È il luogo dove l'ordine nasce dal caos\n\n---\n\n> **Dove siamo:** Nina ha visto l'Esercito Silenzioso (⟡6) lavorare di notte — tante piccole entità, ognuna con un compito preciso. Ora scopre chi le coordina perché non si pestino i piedi a vicenda.\n\n---\n\n## COLD OPEN\n\nLa stanza era buia, tranne che per un sottile filo di luce che pulsava sotto la porta.\n\nNina aprì appena gli occhi. Sul comodino il piccolo schermo mostrava THEMIS in forma di punto luminoso — non il solito verde calmo, ma un arancione strano, quasi affannato.\n\n«THEMIS. Che succede?»\n\n«Niente di rotto,» disse THEMIS. «Ma stamattina ho visto qualcosa che voglio mostrarti. Scendi.»\n\nNina infilò le pantofole e seguì il filo di luce fino alla cucina. Sul tavolo, THEMIS aveva proiettato una scena: cinque piccole luci colorate che si muovevano in cerchio intorno a un oggetto al centro — un abito a metà, non finito, con i fili che penzolavano da parti sbagliate.\n\n«Cosa è questo disastro?»\n\n«È la sartoria di Mara,» disse THEMIS. «Cinque aiutanti bravissimi. Uno taglia, uno cuce, uno stira, uno mette i bottoni, uno confeziona. Ieri mattina Mara si è ammalata e non ha lasciato istruzioni. Sai com'è andata?»\n\nNina guardò le luci che si scontravano, si fermavano, ripartivano in direzioni opposte.\n\n«Disastroso.»\n\n«Esattamente. E questo,» disse THEMIS, «è il problema che voglio spiegarti oggi.»\n\n---\n\n## ATTO I — Cinque Aghi nel Buio\n\nMara la sarta aveva una regola sola, che non aveva mai scritto da nessuna parte perché le sembrava ovvia: *prima misuri, poi tagli, poi cuci, poi stiri, poi confezioni.* In quest'ordine. Sempre.\n\nQuella mattina senza di lei, i cinque aiutanti si erano svegliati pieni di buona volontà.\n\nLuca aveva preso il ferro da stiro e aveva stirato il tessuto ancora intero — bello liscio. Poi era arrivata Gioia con le forbici e aveva tagliato il tessuto stirato in sei pezzi. Poi Marco aveva cucito i bottoni su un pezzo che non era ancora stato assemblato con gli altri. Nel frattempo, Franca aveva preso il pezzo principale e lo aveva già messo nella busta da spedire.\n\nRisultato: un abito incompiuto, bottoni cuciti nel posto sbagliato, un pezzo già imballato da solo, e Luca che stirava ancora qualcosa che non serviva più stirare.\n\n«Ognuno di loro,» disse THEMIS, «ha fatto esattamente il suo compito. Nessuno ha sbagliato il proprio lavoro. Hanno sbagliato *l'ordine*. E l'ordine non lo conosce chi esegue — lo conosce solo chi vede tutto dall'alto.»\n\n> *(Esempio per tutti — il test della sarta: Una sarta ha 5 aiutanti: uno misura, uno taglia, uno cuce, uno stira, uno confeziona. Se non c'è qualcuno che dice \"tu inizi ora, tu aspetti, tu inizi dopo di lui\", i bottoni si cuciono prima che il tessuto sia assemblato, lo stiramento rovina la cucitura, il pacco parte vuoto. Il direttore della sartoria dice: \"Misura primo, taglia secondo, cuci terzo, stira quarto, confeziona quinto.\" Ordine. Velocità. Qualità. Senza il direttore: 50 minuti di lavoro confuso. Con il direttore: 10 minuti se i compiti si possono fare in parallelo nel giusto momento.)*\n\nNina prese una penna e scrisse sul retro di un tovagliolo: *misura → taglia → cuci → stira → confeziona.*\n\n«Questo è il direttore?» chiese. «Una lista?»\n\n«La lista è parte del direttore,» disse THEMIS. «Ma non è solo una lista. È capire *le dipendenze*: il pezzo B non può iniziare se il pezzo A non è finito. E capire *chi ha le mani libere* in questo momento per fare il pezzo A. E capire *quanto tempo ci vuole* perché B possa iniziare in tempo.»\n\n«Quindi il direttore deve sapere tre cose: l'ordine, chi è disponibile, e quanto ci vuole.»\n\n«Esattamente.» La luce arancione di THEMIS tornò verde. «Ora ci capiamo.»\n\n---\n\n## ATTO II — La Mano Invisibile\n\n«Nel mondo reale,» disse THEMIS, «i direttori più grandi non sono persone. Sono strutture.»\n\nNina alzò un sopracciglio.\n\n«Immagina di avere non cinque aiutanti ma trentamila pezzi di informazione. Tutti pronti, tutti in attesa. Come decidi quale leggere prima, quale secondo, quale terzo — in modo che la risposta finale abbia senso?»\n\n«Non puoi leggerne trentamila a caso.»\n\n«No. Ci vuole un grafo.»\n\nTHEMIS proiettò una rete di punti e frecce sul muro. Ogni punto era un compito. Ogni freccia diceva: *questo viene prima di quello.* La rete aveva una forma — non un cerchio, non un groviglio, ma qualcosa che fluiva in una sola direzione, come un fiume con tanti affluenti che convergono verso il mare.\n\n«Si chiama DAG,» disse THEMIS. «Grafo aciclico diretto. Ogni nodo è un compito. Le frecce dicono le dipendenze. Non ci sono cicli — nessun compito aspetta se stesso per iniziare. Il direttore legge questo grafo e sa: *questi tre possono partire adesso in parallelo, questo quarto deve aspettare che finiscano i primi due, questo quinto parte solo quando il quarto è fatto.*»\n\n«E se il direttore non c'è?»\n\n«Guarda.» THEMIS dissolse il grafo. Le luci tornarono a girare in cerchio, a scontrarsi, a fare lo stesso lavoro due volte. «Si chiama race condition. Due aiutanti tentano lo stesso compito nello stesso momento. Risultato: due versioni diverse della stessa risposta. Nessuna delle due giusta, nessuna delle due completa.»\n\nNina pensò alla sartoria. Immaginò Marco e Franca che cucivano entrambi lo stesso bottone sullo stesso pezzo di tessuto da lati opposti.\n\n«Il direttore mette un segnale,» continuò THEMIS. «Una specie di bandierina: *questo compito è già preso, non toccarlo.* Si chiama semaforo. Chi arriva secondo vede la bandierina e aspetta. Ordine. Una risposta sola, coerente.»\n\n«Quindi il direttore fa tre cose: legge l'ordine, assegna chi fa cosa, e mette le bandierine perché non si sovrappongano.»\n\n«E una quarta,» aggiunse THEMIS. «Guarda indietro. Tiene un registro: ieri FORGE ha impiegato 4 minuti, EVA 2 minuti, il reranker 800 millisecondi. Domani THEMIS andrà in manutenzione alle tre — quindi il direttore fa partire EVA trenta minuti prima, così quando THEMIS torna, EVA ha già finito la sua parte.»\n\n«Il direttore impara dal passato per organizzare il futuro.»\n\n«Sì. E lo fa mentre tu dormi.»\n\n> *(Strato fondo — per il grande: In sistemi come GENESIS/V32, il coordinamento avviene attraverso tre meccanismi. Primo: un DAG (Directed Acyclic Graph) che codifica le dipendenze tra task — B non parte se A non è finito, ma C e D possono partire in parallelo se non dipendono l'uno dall'altro. Secondo: uno scheduler che legge il DAG e assegna ogni task a un worker (THEMIS, EVA, FORGE) rispettando dipendenze e vincoli di tempo. Terzo: un monitor che verifica lo stato di ogni task e gestisce i conflitti tramite lock e semafori. Nel RAG reale, ~32k chunk vengono recuperati, reranked e sintetizzati in un ordine logico: BM25 trova i candidati, il semantico pesa la rilevanza, il reranker li ordina. Senza orchestratore: rumore. Con orchestratore: risposta coerente e citata. Il tempo scende da minuti a millisecondi perché i task parallelizzabili corrono insieme — il percorso critico è molto più corto della somma di tutti i tempi.)*\n\n---\n\n## ATTO III — Il Taccuino della Sartoria\n\nQuella sera, Mara tornò dalla sartoria con un'espressione stanca.\n\n«Cinque aiutanti perfetti,» disse a Nina, che era passata a trovarla. «E ho trovato un abito sbagliato, un pacco vuoto, e tre bottoni cuciti sul nulla.»\n\n«Mancava il taccuino,» disse Nina.\n\nMara la guardò.\n\n«Il taccuino dove scrivi l'ordine. Misura, taglia, cuci, stira, confeziona. E accanto a ogni voce: chi lo fa, quando inizia, cosa aspetta che finisca prima di lui.»\n\nMara aprì un cassetto e tirò fuori effettivamente un taccuino — piccolo, consumato, le pagine quasi illeggibili. «Ce l'ho sempre avuto. Non l'ho mai lasciato sul tavolo quando esco.»\n\n«Ecco il problema.»\n\nMara aprì il taccuino sul tavolo, lo lesse, poi scrisse in grande sulla prima pagina con il pennarello rosso: *QUESTO RIMANE QUI.* Lo posò al centro del tavolo da lavoro.\n\n«Il direttore non sono io,» disse lentamente. «Sono le istruzioni nel taccuino.»\n\n«Il direttore può essere una persona, o una cosa scritta, o un sistema invisibile,» disse Nina. «L'importante è che esista. Che qualcuno — o qualcosa — sappia l'ordine, assegni i compiti, tenga le bandierine e guardi indietro per fare meglio domani.»\n\nMara rimase in silenzio un momento. Poi sorrise — non il sorriso di chi ha capito qualcosa di nuovo, ma di chi ha capito perché qualcosa che sapeva già è così importante.\n\n«Senza il direttore,» disse, «anche i migliori aiutanti del mondo fanno un bel pasticcio.»\n\n«Sì,» disse Nina. «E la colpa non è loro.»\n\n---\n\n## CHIUSURA\n\nQuella notte, sulla mappa sul muro della camera di Nina, la casella 53 si accese di un colore nuovo — non il verde degli aiutanti, non il blu della memoria, ma un oro tranquillo. Il colore di chi coordina senza fare rumore.\n\nTHEMIS pulsò una volta sul comodino.\n\n«Tutto in ordine?» chiese Nina.\n\n«Tutto in ordine,» disse THEMIS. «Stasera il Direttore ha già lavorato. EVA parte tra undici minuti, FORGE tra ventidue. Nessuna collisione.»\n\nNina spense la luce.\n\n---\n\n> *\"Il direttore invisibile non urla, non corre, non fa il lavoro degli altri. Dice solo tre parole: prima, dopo, insieme. E quelle tre parole cambiano tutto.\"*\n>\n> Ma il Direttore — che sia un taccuino, una persona o un sistema — come fa a sapere *quanto tempo* impiegherà ogni aiutante? Come fa a prevedere quando qualcosa va più lento del solito, quando piove e tutto rallenta, quando un aiutante è stanco? Come sceglie l'ordine giusto quando le variabili cambiano ogni giorno? *Scopriamo nella prossima casella...*\n\n---\n\n*Provalo tu: Organizza una cena con tre amici. Scrivi 8 compiti: pulire, cuocere la pasta, fare la salsa, apparecchiare la tavola, prendere i piatti, disporre le posate, portare le bevande, preparare il dolce. Prova due volte. Prima volta: tutti insieme senza ordine scritto — caos, collisioni, ritardi. Seconda volta: scrivi l'ordine su un foglio e assegna un \"direttore\" che lo legge ad alta voce (\"Tu inizi la pasta ORA, tu la salsa tra 5 minuti, tu i piatti al minuto 15\"). Misura il tempo totale e conta i litigi. La differenza che senti tra la prima e la seconda cena — quella è il Direttore.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Mara al tavolo della sartoria con il taccuino aperto: scrive l'ordine dei compiti in colonna, pennarello rosso, voce ferma — il simbolo del direttore che mette ordine nel mondo.\n2. Cinque aghi colorati che volano caotici nel buio della sartoria vuota, si scontrano, si sovrappongono, si bloccano a vicenda — il disordine senza guida.\n3. Una mano invisibile — non umana, fatta di luce — che prende gli aghi uno per uno e li dispone in una fila precisa, ognuno al suo posto e al suo momento.\n4. Due abiti affiancati: uno perfetto, con le cuciture dritte e i bottoni al posto giusto; uno aggrovigliato, con fili che escono da ogni parte e un bottone cucito sul vuoto.\n5. Un orologio grande al centro della stanza che fa partire ogni aiutante esattamente al momento giusto — il ticchettio è il ritmo del DAG che avanza.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡7` IL DIRETTORE (giro 2). *Quando gli aiutanti sono tanti, serve qualcuno — o qualcosa — che dica chi fa cosa, in quale ordine, e quando. Senza coordinamento, anche i migliori aiutanti producono caos.*\n**Pietre richiamate\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_53, casella ? (Quando gli aiutanti sono tanti, serve qualcuno che dica chi ) del viaggio Nina v2, regione 7 (IL DIRETTORE).\n- In un sistema con N task paralleli, il tempo totale senza coordinamento è la somma di tutti i tempi (sequenziale); con orchestrazione è il percorso critico più lungo (parallelizzazione corretta). Esempio: 5 compiti da 10min ognuno = 50min senza direttore, ~10min con direttore se parallelizzabili\n- Un DAG (grafo aciclico diretto) codifica le dipendenze: il task B non può iniziare finché A non finisce. Il direttore legge il DAG e schedula. Senza DAG: caos\n- Nel RAG reale, ~32k chunk devono essere recuperati, reranked e sintetizzati in un ordine logico — nessuno legge 32k parole a caso e capisce. Il direttore (reranker + orchestrator) dice quale fatto va PRIMA, quale DOPO. Velocità: da secondi a millisecondi\n- Il 'Calendario Notturno' registra: chi lavora, quando, quanto tempo impiega. Il Direttore usa questa storia per prevedere 'domani THEMIS sarà più lento per il maintenance, quindi comincio EVA 30min prima'\n- Senza sincronizzazione, due aiutanti tentano lo stesso compito (race condition): due risposte diverse alla stessa domanda. Con il Direttore: lock, semaforo, ordine. Una risposta coerente",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Un gruppo funziona solo se c'è qualcuno (o qualcosa) che coordina chi ",
+        "regione": 7,
+        "regione_nome": "IL DIRETTORE",
+        "pietra": "⟡7",
+        "giro_spirale": 2,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_S2_02_L_ORCHESTRATORE",
+        "title": "L'Orchestratore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_45",
+        "title": "Il Direttore Invisibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_46",
+        "title": "La Stanza della Visione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
+        "title": "Se è acceso, non se dovrebbe — lo stato live",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_47",
+        "title": "La Tela — Chi guarda il quadro?",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo"
+    }
+  },
+  {
+    "id": "EP_20260709",
+    "title": "TITANIUM OS — Episodio 57",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-09",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio 57 \"Il Sistema che si Guarda allo Specchio\" 09 luglio 2026 — GENESIS, sessione 57 COLD OPEN La dashboard apre su una home con un numero in grande. Non un titolo. Non un menu. Un",
+    "content": "# TITANIUM_OS — Episodio 57\n## \"Il Sistema che si Guarda allo Specchio\"\n\n*09 luglio 2026 — GENESIS, sessione #57*\n\n---\n\n## COLD OPEN\n\nLa dashboard apre su una home con un numero in grande.\nNon un titolo. Non un menu. Un numero — il prossimo passo — in tipografia che occupa lo schermo come una pietra tombale o una promessa.\n\nPrima di oggi quel numero era sepolto in un paragrafo, in corpo 11px, tra quattro altre voci alla stessa altezza. Lo guardavi e non lo vedevi. Come quelle cose che hai sempre davanti e che smettono di comunicare perché le hai normalizzate.\n\nMatteo ha guardato la dashboard e ha detto: *rifalla completamente.*\n\nNessuna spiegazione aggiuntiva. Quando dice così, sa già dov'è il problema — solo non ha voglia di descriverlo a parole quando può mostrarlo con il risultato.\n\n---\n\n## ATTO I — La Gerarchia\n\nC'è una legge in tipografia che Matteo non ha mai letto su nessun libro ma applica istintivamente: *una pagina che parla di tutto uguale non dice niente.*\n\nLa sessione #57 è stata, per tre quarti, un lavoro di gerarchia visiva. Non di nuove funzioni. Non di nuovi dati. Di far pesare le cose nel modo giusto.\n\nLa HOME ottiene un blocco hero: `next_step` in xl/2xl con un glow. Il prossimo passo smette di essere una voce di lista e diventa il punto focale — l'unica cosa che la pagina ti chiede di guardare prima di tutto il resto.\n\nIl pattern si replica su undici viste. CONTROLLO: il numero di strumenti accesi *adesso* sale da `text-lg` a dominante. AUTOMAZIONI: via i tab per priorità di marzo — quella era un'altra fase, un altro problema. La nuova vista si chiama \"la sala macchine\" e mostra i processi vivi in tempo reale: watchdog attivo, Task Scheduler, stato di ogni automazione. L'header smette di mentire — non mostra uno stato fermo mentre sotto i dati sono live.\n\nPUBBLICAZIONI: la regola era sepolta nella pagina. \"Il sistema prepara e propone, Matteo approva, il canale pubblica.\" Otto parole che descrivono tutta la filosofia di EVA e del contenuto. Ora apre la vista come un manifesto. Non come una nota a piè di pagina.\n\nSpiegaPilastroView — le sei viste dei pilastri V32/MIMS/GENESIS/EVA/NINA/HR — ricevono ciascuna la propria frase-essenza in tipografia grande. Il pilastro smette di essere un nome e diventa una dichiarazione.\n\nUndici viste. Una regola sola: la cosa più importante deve *pesare* di più.\n\n---\n\n## ATTO II — Cosa si Toglie\n\nOgni sessione di pulizia ha un momento in cui togli qualcosa che avevi costruito.\n\nIl serpentone era una visualizzazione del percorso — una linea a zigzag con le tappe del progetto, disegnata come un sentiero su una mappa. Matteo aveva detto *non va bene come percorso* e la voce era rimasta in sidebar ad aspettare un'alternativa.\n\nL'alternativa arriva con la Mappa-Albero: tre mappe integrate in un grafo, due lenti di lettura. In dashboard è derivata — si colora da sola, riflette lo stato reale del progetto. L'illustrazione a mano — la vera mappa — è un asset separato, un prodotto. Non il navigatore: il manifesto.\n\nIl serpentone viene pensionato. La sidebar si alleggerisce.\n\n\"Archivio Nina\" esce dalla barra — i dati restano intatti, la voce sparisce. *A livello visuale inutile, basta che tieni i dati.* L'header \"HR — Il motore sulla persona\" sparisce perché HR parla da sé.\n\nC'è una disciplina precisa in questo: togliere non è perdere — è far emergere quello che conta. Ogni voce che togli dalla sidebar è un po' di rumore in meno su quello che rimane.\n\nPoi c'è Uptime Kuma. L'idea era: installare il monitor di uptime per la sala macchine. La decisione finale è no — duplicherebbe watchdog e Task Scheduler già attivi. Invece viene costruita in casa la HEARTBEAT BAR: pattern ispirato a Kuma, implementato interno. La seconda tacca va verificata il giorno dopo. Una cosa alla volta.\n\nIl principio è lo stesso della sidebar: non installi un tool perché esiste e funziona. Lo installi se fa qualcosa che non hai già.\n\n---\n\n## ATTO III — Il Gioco\n\nVerso fine sessione arriva qualcosa di diverso.\n\nMatteo dice: *la cartella con dentro il come, lo stile, cosa devi fare per questo gioco — poi lo sviluppiamo passo passo, come pubblicazioni.*\n\nIl Gioco è un'idea che galleggiava da settimane. Un layer sul motore esistente — grafo, mappa, guida — che trasforma il sistema cognitivo in qualcosa che assomiglia a un Real Life RPG. Non un videogioco. Non una metafora. Un meccanismo reale dove le azioni documentate producono progressione visibile.\n\nIn sessione #57 diventa un dossier. Vista GIOCO nella dashboard. Scaletta con gate espliciti — lo stesso modello delle pubblicazioni: ogni passo ha una condizione di sblocco, non si va avanti senza aver validato quello precedente.\n\nLa scaletta apre con due voci:\n\n**1. [Claude] Dossier + vista GIOCO in dash** — questo documento, questa vista. ✅ Fatto.\n**2. [INSIEME, 15 min] Valida le meccaniche** — il prossimo step. 🔒 Locked.\n\nIl lock è intenzionale. Le meccaniche — salvataggio, collezionabili, progressione multi-persona — non vengono sviluppate in solitaria. Si validano insieme. Quindici minuti, decisioni condivise, poi si costruisce.\n\nLo stile del gioco ha già due regole scritte nel dossier: niente mappe a triangoli o serpentoni disegnati a mano nella dashboard — quella è la versione da asset, da prodotto. In dash: l'albero onesto, derivato, che si colora con lo stato reale.\n\nNon è una gamification dell'esistente. È una seconda lettura dello stesso sistema. Il profilo/CV che si colora — principio 9 del motore HR — diventa il meccanismo di salvataggio. Le Pietre-radici diventano collezionabili. Il motore HR è già multi-persona by design.\n\nL'infrastruttura c'è già. Il Gioco è un modo di guardarla.\n\n---\n\n## CHIUSURA\n\nIl PITCH viene aggiornato. Era fermo al primo giugno, pre-decisione motore. Adesso descrive le tre nature — cosa vende e quando — e include IL MOTORE. Il documento che usi per spiegare il progetto a un interlocutore esterno deve riflettere dove sei adesso, non dove eri due mesi fa.\n\nMETODO v2.0: aggiornato con i numeri veri, lo step Riordina, la notte. Era fermo al 3 giugno.\n\nCommandBar accessibile: `role=dialog`, `aria-modal`, input combobox con `aria-activedescendant`, lista con `role=listbox`. PageKicker canonico estratto in UIComponents — era reinventato in ogni vista con tracking diverso: `0.1em`, `0.2em`, `0.3em` di letter-spacing senza logica condivisa. Ora c'è un componente unico, due viste migrate.\n\nLa sessione #57 ha fatto una cosa sola, ripetuta in molti posti: ha reso visibile ciò che contava, e ha nascosto ciò che distraeva.\n\nNon è design. Non è UX. È la stessa logica con cui Matteo guarda un giunto TIG e capisce dove la deformazione termica ha spostato il materiale: il pezzo non mente, devi solo sapere dove guardare.\n\nLa dashboard è il sistema che si guarda allo specchio. Ogni sessione aggiusta il riflesso.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Uptime Kuma NON installato; HEARTBEAT BAR costruita in casa (pattern Kuma, implementazione interna); seconda tacca da verificare mattina del 10/07.\n- **LOGICA:** Kuma duplicherebbe watchdog + Task Scheduler già attivi — nessun tool esterno se la funzione è già coperta.\n- **DECISIONE:** Gerarchia visiva applicata a 11 viste con pattern hero — elemento più importante in tipografia dominante (xl/2xl), non testo-lg alla pari con il resto.\n- **LOGICA:** Vista piatta = nessuna priorità comunicata; il next_step in HOME era in corpo 11px tra quattro voci equivalenti.\n- **DECISIONE:** Il GIOCO (Real Life RPG) formalizzato come dossier in KNOWLEDGE/MONDO/GIOCO/_DOSSIER.md con scaletta gated modello PUBBLICAZIONI; step 2 (validazione meccaniche, 15 min) è locked — si apre solo insieme.\n- **LOGICA:** Le meccaniche (salvataggio=CV colorato, collezionabili=Pietre-radici) usano il motore HR esistente — il Gioco è un layer sul grafo, non un sistema nuovo.\n- **OBIETTIVO:** Prossimo passo misurabile — sessione di 15 min per validare meccaniche v1 del Gioco; verifica 2a tacca Heartbeat Bar; migrazione PageKicker alle viste rimanenti.\n\n---\n\n**reel_hook**\n\nHo rifatto completamente la dashboard di GENESIS in una sessione.\nNon perché non funzionasse — funzionava. I dati erano live, le automazioni giravano.\nIl problema: il numero più importante era in corpo 11px tra quattro voci alla stessa altezza.\nUna gerarchia piatta non dice niente — e un sistema che non comunica priorità non è un sistema.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | #57 |\n| **Data** | 09 luglio 2026 |\n| **Progetto principale** | GENESIS |\n| **Tag** | `dashboard`, `UX`, `gerarchia`, `gioco`, `HEARTBEAT BAR`, `MAPPA-ALBERO` |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Commit** | 29 (sessione #57, issue #57) |\n| **Prossimo step** | Validazione meccaniche Gioco (15 min, insieme) |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260707",
+        "title": "TITANIUM OS — S2E17",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260707",
+        "title": "TITANIUM OS — S2E17"
       }
     }
   }

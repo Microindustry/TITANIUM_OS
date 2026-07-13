@@ -1,66 +1,54 @@
-━━━ AGGIORNAMENTO 08/07 SERA (sessione #57 in corso, Claude solo) ━━━
-FATTO: doc VALORE per pilastro in MENTE (fonte unica) + card home VALORE derivata
-(sync_valore.py) con IL MOTORE (grafo→mappa LV→Nina, decisione fondante Matteo) +
-messaggio verbatim · CVE 42→23 (19 chiuse, pin torch/chromadb intatti, RAG verde) ·
-_CANONE serie 01…52 · ondata igiene backlog (retry LLM notturni, watcher F5/F8/F9,
-benen/neri dashboard, NEXUS allineato a verità). Commit 8b2ebaa6→ac36d59f.
-PRIORITÀ RIVISTE (ordine Matteo uscendo): 1) ECOSISTEMA (Claude solo) ·
-2) EPISODI INSIEME (nuova visione motore + formato pubblicazione) · 3) HR/CV vivo
-(multi-persona) · 4) interfacce/miglior luogo · 5) pubblicazioni. Bussola aggiornata.
-PUSH non fatto (sandbox): al prossimo terminale reale o col prossimo salva.
-
-=== RIAVVIO SESSIONE #57 — generato 08/07/2026 (fine sessione #56, skill salva) ===
-Ultima sessione: #56 — 08/07/2026 (Fable 5, giornata intera)
-
-━━━ ORDINE DI MATTEO PER QUESTA SESSIONE ━━━
-PROCEDI IN MODO INGEGNERIZZATO. Per ogni punto:
-(1) requisiti espliciti → (2) design breve PRIMA del codice → (3) implementazione
-additiva a commit isolati → (4) verifica misurabile (numeri/screenshot/test) →
-(5) bussola aggiornata strada facendo. Punto per punto, niente salti.
+=== RIAVVIO SESSIONE #58 — generato 13/07/2026 (fine sessione #57, skill salva) ===
+Ultima sessione: #57 — 13/07/2026 (Fable 5, giornata intera; 10-12/07 macchina spenta)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-L'ECOSISTEMA HA 3 FACCE (decisione Matteo #56): TITANIUM (il sistema) · NINA
-(il prodotto educativo) · PUBBLICAZIONI (l'output verso il mondo). La sidebar
-le riflette. Nina = il primo treno, la forza è la PIPELINE
-(fonte→storie→binari→formati→coda→pubblicazione). Nuovo binario deciso:
-storie di sistema in PRIMA PERSONA (la voce di Matteo).
-Il filone "verità sparsa" è CHIUSO (au18+au09+au16 stamattina).
+IL CAMPO DI BATTAGLIA È PRONTO. Le regole caroselli sono in UN posto
+(MENTE/KNOWLEDGE/MONDO/GUIDA_CAROSELLI.md), si verificano DA SOLE
+(caroselli_qc.py + sentinella notturna), Obsidian è al meglio (561 note,
+3012 ponti, HOME+12 indici), il RAG è sano e serve la verità al primo colpo
+(query "regole carosello" → GUIDA 0.95 + _CANONE). Sistema a 0 CVE su 194
+pacchetti; llamafactory vive nel SUO venv (~/.venvs/llamafactory).
 
-FATTI CHIAVE di #56 (commit b7f25f66 → a3b35704 + salva):
-- au18: SYSTEM_TREE derivato da data/mappaData.ts (adapter dagli alberi N-livelli,
-  % computate, ROOT=media) — la Mappa non copia più, pct_sync v1.1
-- au09: % con NOME esplicito (voci mappa computate vs pilastro STATE) su Mims/Genesis
-- au16: AUTOMATIONS_MASTER declassato ad archivio storico → 4 fonti vive
-- RIPASSO #32→#56 scritto: DOCS/RIPASSO_S32-56.md (5 fasi, canone operativo 8 regole,
-  carattere, numeri) — LEGGERLO se serve contesto storico
-- Vista PUBBLICAZIONI: trovato/pipeline/criteri + SCALETTA ATTIVAZIONE 9 passi;
-  vincoli ri-verificati sui doc Meta: IG max 10 slide (JPEG 4:5-1.91:1 8MB),
-  LinkedIn = PDF; le nostre slide sono GIÀ 1080×1350 = a norma; Postiz ha MCP server
-- Decisione in MENTE/SESSIONI/2026-07-08_tre-facce-e-pubblicazioni.md (RAG la sa)
+━━━ ROTTA CONTENUTI (ordine Matteo 13/07) ━━━
+1) PRE_01 RIFATTO DA 0 publish-ready (INSIEME) — non EP_N2_03: doppio taglio
+   (completo + social ≤10), si spezza in più caroselli se serve.
+2) STORIE DI SISTEMA voce Matteo in parallelo — GESTIONE CLAUDE AL 100%
+   (grafica, testi, caroselli, QC, tutto; garanzie: grounding RAG +
+   canon_guard + caroselli_qc + additivo). Stampo: FORMATO_EPISODIO_DOPPIO.
+3) EP_N2_03 "la Misura" DOPO il preambolo.
 
->>> PROSSIMA SESSIONE #57 — IN ORDINE (ingegnerizzato):
-  1) ANALISI VALORE PER PILASTRO: che valore dà a un'azienda e in che prodotto
-     economico si trasforma ognuno (V32→ore lab+stampi · MIMS→prodotto+IP ·
-     GENESIS→il sistema È il prodotto · NINA→educativo · EVA→PMI · HR→CV vivo).
-     Doc in MENTE prima (RAG), card home DERIVATA poi (fonte unica, come au18).
-  2) HR/CV VIVO: la vista CV attuale è "solo rumore" (Matteo) — derivare dal
-     grafo competenze + prove reali (milestone/episodi).
-  3) ATTIVAZIONE PUBBLICAZIONI: scaletta nella vista — passi 1-4 gated Matteo
-     (~1h: mail progetto, pagina FB+IG Business, app Meta dev, Docker Desktop),
-     poi 5-9 Claude (Postiz, repo nina/GitHub Pages, social-cut, coda, primo post).
-  4) EP_N2_03 "la Misura" — nasce già doppio (social-cut ≤10 + completo 16 sito).
-  5) Igiene: sessione CVE (42 fix + test finetune) · viste doppie neuro/sinapsi ·
-     backlog #52 (~35 voci).
+━━━ FATTI CHIAVE di #57-13/07 (commit 16609c5b → 0213e8d1 + salva) ━━━
+- Triage rientro: notti 10-12 = macchina spenta (zero guasti), boot-recovery ok
+- AI watcher v1.2: morte silenziosa ora diagnosticabile (exit code + marker pid);
+  bug ZOMBIE curato (RETIRED_HANDLES: handle sostituiti → Tier3, mai più fetch
+  a vuoto); watchlist P4 completa (+r/LocalLLaMA +6 YouTube, 26 sorgenti)
+- RAG v4.3 self-heal INVERSO: file con vettori mancanti in Chroma si
+  ri-processano da soli (733 chunk persi recuperati). 2 corruzioni HNSW curate
+  (L1 mattina + L2 pomeriggio con 1 UAC: 18004==18004, snapshot fresco).
+  ⚠ LEZIONE (in memoria): dopo modifiche MASSIVE a MENTE mai incrementale a
+  mano → rag_update_exclusive / rag_recover elevato
+- Venv llamafactory + pulizia sistema: via gradio+llamafactory, pillow 12.3 /
+  starlette 1.3.1 / fastapi 0.139 → pip-audit 0 CVE (era 42→23→0);
+  night_finetune v3.0 punta al venv (torch 2.6.0+cu124 CUDA ok, CLI verde)
+- Detriti -5GB (chroma_db_reset 07/07 + hnsw_corrupt 09/07; ok Matteo)
+- Caroselli: P7/F6/F7 attacco CHIUSI (naming 100%, README EP_N2_01 a 16 slide,
+  PRE_03 scheda+caption creati, indice completo, formato doppio in pipeline)
+- GUIDA_CAROSELLI + QC automatico + sentinella + _CANONE sezione nuova
+- Obsidian rigenerato (setup+intersect+wiki), MENTE commit fa8cc43+916d3ec
 
-━━━ BLOCKERS APERTI (gated Matteo) ━━━
-- Ordine hardware: mandrino ER20 + martinetto Vevor + UPS (~250-350EUR) = IL tappo
-- Chiave Semantic Scholar gratuita in .env → azzera i 429 notturni (5 min)
-- Trade secrets MIMS non in _VAULT cifrato (mezz'ora insieme)
-- Prerequisiti pubblicazioni: mail progetto, pagina FB+IG, app Meta, Docker Desktop
+━━━ PRIMA COSA DOMATTINA ━━━
+- Leggere DATA/logs/finetune.log: prova del fuoco del venv (TI_FineTune notturno)
+- Cartella clinica: la sentinella caroselli debutta stanotte
+
+━━━ BLOCKERS APERTI (gated Matteo, ~1h) ━━━
+- Ordine hardware: UPS (~50-80€, LA cura delle corruzioni HNSW — ridimostrato
+  oggi 2 volte) + mandrino ER20 + martinetto Vevor = IL tappo
+- Chiave Semantic Scholar gratuita in .env (5 min) → azzera i 429 notturni
+- Prerequisiti pubblicazioni: mail progetto, pagina FB+IG, app Meta, Docker
+- Trade secrets MIMS in _VAULT cifrato (mezz'ora insieme)
 
 ━━━ COME LEGGERE LE CRITICHE ━━━
-CRITICHE.md (root repo) — rigenerato ogni notte, gestito da Claude.
-Per cambiare stato: dirlo a Claude o editare DATA/audit/critiche_manuali.json.
-Oggi chiuse: gc04, au09, au16, "fonte unica" (+ att01 avanzata).
+CRITICHE.md (root repo) — rigenerato ogni notte. Per cambiare stato: dirlo a
+Claude o editare DATA/audit/critiche_manuali.json.
 
-━━━ Generato: 08/07/2026 — fine sessione #56 (skill salva) ━━━
+━━━ Generato: 13/07/2026 — fine sessione #57 (skill salva) ━━━
