@@ -87,6 +87,22 @@
 
 ---
 
+## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)
+
+*Rotta contenuti #57: PRE_01 insieme + storie di sistema Claude 100%. Primo pezzo: la vetrina.*
+
+- [✓] **«DAL GIORNO 0» lato SISTEMA in sidebar** (sotto STORIE · SISTEMA, come Nina):
+  nuova pagina isolata = **fondamento del sistema** (`sistema_dal_giorno_0.md`: giorno 0,
+  pilastri coi numeri master, metodo, come nascono le storie — voce Matteo, solo canone)
+  + **tutti i 157 episodi in un'unica timeline cronologica** (data_evento, separatori
+  d'anno, ogni card col colore della sua stagione) dal primo «Il Socio» (2024) a oggi.
+  Additivo: la vista a stagioni resta identica. Build verde, screenshot prima/dopo
+  (`DATA/dash_shot_storie_stagioni.png` + `dash_shot_sistema_giorno0.png`).
+- [ ] PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.
+- [ ] Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).
+
+---
+
 ## Sessione #57 · 08/07/2026 — IL MOTORE: HR piattaforma a 3 strati + doc VALORE per pilastro
 
 *Modo ingegnerizzato (ordine #56). Notte: solo i soliti 429 Semantic Scholar (gated) +

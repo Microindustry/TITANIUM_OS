@@ -95,6 +95,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE · SISTEMA", icon: Mic,      color: "text-rose-400",   group: "system"  },
+  { id: "sistema-giorno0", label: "DAL GIORNO 0", icon: Mic,      color: "text-rose-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
   // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
@@ -516,6 +517,7 @@ function AppInner() {
             {view === "procedimenti" && <ProcedimentiView />}
             {view === "avventura-mappa" && <AvventuraMapView />}
             {view === "storie"      && <StorieView />}
+            {view === "sistema-giorno0" && <StorieView sistemaView="giorno0" />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "nina-giorno0"  && <StorieView ninaView="giorno0" />}
             {view === "nina-archivio" && <StorieView ninaView="rag" />}

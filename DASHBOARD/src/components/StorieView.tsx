@@ -6,6 +6,7 @@
 import { useState, useRef, useEffect } from "react";
 import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/storieData";
 import ninaFoundationMd from "../data/nina_dal_giorno_0.md?raw";
+import sistemaFoundationMd from "../data/sistema_dal_giorno_0.md?raw";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
 import { useContentFiles, useNinaStatus, useNinaArchived, useFile } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
@@ -337,7 +338,7 @@ function NinaArchived() {
   );
 }
 
-export function StorieView({ initialStagione = null, ninaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | null } = {}) {
+export function StorieView({ initialStagione = null, ninaView = null, sistemaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | null; sistemaView?: "giorno0" | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
@@ -363,10 +364,10 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
 
   // Il fondamento: togliamo TOC e il titolo H1 (lo da' gia' l'intestazione di sezione),
   // cosi' non resta un "nome grande" che fa sembrare giorno 0 un singolo episodio.
-  const foundationLines = (() => {
+  const stripFoundation = (md: string) => {
     const out: string[] = [];
     let inToc = false;
-    for (const l of ninaFoundationMd.split("\n")) {
+    for (const l of md.split("\n")) {
       const t = l.trim();
       if (t === "<!-- TOC -->") { inToc = true; continue; }
       if (t === "<!-- /TOC -->") { inToc = false; continue; }
@@ -377,7 +378,9 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
     // niente righe vuote in testa
     while (out.length && out[0].trim() === "") out.shift();
     return out;
-  })();
+  };
+  const foundationLines = stripFoundation(ninaFoundationMd);
+  const sistemaFoundationLines = stripFoundation(sistemaFoundationMd);
 
   // Storie di Sistema: si visualizzano TUTTE le stagioni aperte di default (anche AUTO e
   // le bozze) — niente episodi nascosti. Se si arriva su una stagione precisa, apri solo quella.
@@ -430,6 +433,14 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
   //   "giorno0"  -> Nina dal giorno 0 = fondamento + tutti gli episodi nella miglior versione
   const ninaPage: "rag" | "giorno0" = ninaView ?? (focusTarget === "rag" ? "rag" : "giorno0");
 
+  // Pagina SISTEMA "dal giorno 0" (gemella di quella di Nina): il fondamento del sistema
+  // + TUTTI gli episodi in un'unica timeline cronologica (data_evento), dal giorno 0 a oggi.
+  // Ogni card tiene il colore della sua stagione: la provenienza resta leggibile.
+  const sistemaGiorno0Eps = statusFiltered(
+    EPISODES.filter(ep => ep.stagione !== NINA_STAGIONE && isTopLevel(ep))
+  ).sort((a, b) => (a.data_evento || "9999").localeCompare(b.data_evento || "9999"));
+  const seasonColor = (ep: Episode) => STAGIONI[ep.stagione]?.color ?? "#34d399";
+
   // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
   const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);
   const totalMin = (mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE) : sistemaEps)
@@ -464,7 +475,7 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
         {/* Selettore SISTEMA | NINA — nascosto nelle pagine Nina (isolamento totale:
             le pagine Nina si raggiungono solo dai bottoni in sidebar) */}
         <div className="flex items-center gap-2 ml-7 mt-2">
-          {mode !== "nina" && ([
+          {mode !== "nina" && !sistemaView && ([
             ["sistema", "Sistema", "#34d399", Mic],
             ["nina", "Nina", NINA_COLOR, Sparkles],
           ] as const).map(([m, label, col, Ico]) => {
@@ -484,11 +495,13 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
               </button>
             );
           })}
-          <button onClick={() => setAll(!allOpen)} className="ml-auto text-[9px] font-mono text-slate-500/70 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
-            {allOpen ? <Minimize2 size={9} /> : <Maximize2 size={9} />}
-            {allOpen ? "chiudi tutto" : "apri tutto"}
-          </button>
-          <button onClick={() => navigateTo("sinapsi", "content")} className="text-[9px] font-mono text-indigo-400/60 hover:text-indigo-400 uppercase tracking-wider flex items-center gap-1">
+          {!sistemaView && (
+            <button onClick={() => setAll(!allOpen)} className="ml-auto text-[9px] font-mono text-slate-500/70 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
+              {allOpen ? <Minimize2 size={9} /> : <Maximize2 size={9} />}
+              {allOpen ? "chiudi tutto" : "apri tutto"}
+            </button>
+          )}
+          <button onClick={() => navigateTo("sinapsi", "content")} className={`${sistemaView ? "ml-auto " : ""}text-[9px] font-mono text-indigo-400/60 hover:text-indigo-400 uppercase tracking-wider flex items-center gap-1`}>
             <Layers size={9} /> content engine
           </button>
           <button onClick={() => navigateTo("canvas")} className="text-[9px] font-mono text-slate-500/60 hover:text-slate-300 uppercase tracking-wider flex items-center gap-1">
@@ -506,6 +519,10 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
               <><strong style={{ color: NINA_COLOR }}>Nina dal giorno 0</strong> — il fondamento (cosa sappiamo fare, i personaggi,
               le zone, come nasce l'avventura) <strong style={{ color: NINA_COLOR }}>+ tutti gli episodi nella loro miglior versione</strong>, dall'inizio.</>
             )
+          ) : sistemaView === "giorno0" ? (
+            <><strong className="text-emerald-400">Il Sistema dal giorno 0</strong> — il fondamento (da dove parte tutto, i pilastri,
+            il metodo) <strong className="text-emerald-400">+ tutti gli episodi in ordine di tempo</strong>, dal primo «Socio» a oggi.
+            Ogni episodio tiene il colore della sua stagione.</>
           ) : (
             <>Le storie del <strong className="text-slate-300">sistema</strong>: il dev-log di TITANIUM_OS, in ordine.
             Si <strong className="text-emerald-400">autoalimentano</strong> — ogni milestone verificato genera un episodio.
@@ -539,7 +556,7 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
 
       {/* ── Corpo: SISTEMA (stagioni a fisarmonica) · NINA (dal giorno 0 + RAG Nina) ── */}
       <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4 space-y-3">
-        {mode === "sistema" && sections.map(g => {
+        {mode === "sistema" && !sistemaView && sections.map(g => {
           const isOpen = openSeasons.has(g.key);
           const shown = g.episodes.length;
           return (
@@ -587,8 +604,57 @@ export function StorieView({ initialStagione = null, ninaView = null }: { initia
           );
         })}
 
-        {/* Prossimi episodi (solo SISTEMA) */}
-        {mode === "sistema" && (
+        {/* ── SISTEMA DAL GIORNO 0 — pagina isolata (gemella di «Nina dal giorno 0»):
+            il fondamento + tutti gli episodi in un'unica timeline cronologica ── */}
+        {mode === "sistema" && sistemaView === "giorno0" && (
+          <div className="scroll-mt-4">
+            <div className="flex items-center gap-2 mb-2 mt-1">
+              <Mic size={14} className="text-emerald-400" />
+              <h3 className="text-sm font-bold tracking-wider uppercase text-emerald-400">
+                Il Sistema dal giorno 0 — {sistemaGiorno0Eps.length} episodi in ordine di tempo
+              </h3>
+              <span className="text-[10px] font-mono text-slate-500">il fondamento + il dev-log come una storia unica · (le stagioni restano in «Storie · Sistema»)</span>
+            </div>
+            <div className="rounded-xl border px-5 py-4 overflow-hidden border-emerald-400/20 bg-emerald-400/5">
+              {sistemaFoundationLines.map((line, i) => renderMdLine(line, i))}
+            </div>
+
+            {/* la timeline: tutti gli episodi, dal primo all'ultimo, con separatori d'anno */}
+            <div className="flex items-center gap-2 mb-2 mt-5">
+              <BookOpen size={13} className="text-emerald-400" />
+              <h4 className="text-xs font-bold tracking-wider uppercase text-emerald-400">
+                Tutti gli episodi — dal giorno 0 a oggi
+              </h4>
+              <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full bg-emerald-400/10 text-emerald-400">
+                {sistemaGiorno0Eps.length}
+              </span>
+            </div>
+            {sistemaGiorno0Eps.length === 0 ? (
+              <p className="text-xs text-slate-600 italic px-2 py-4 text-center">Nessun episodio con questo filtro.</p>
+            ) : (
+              <div className="space-y-2">
+                {sistemaGiorno0Eps.map((ep, i) => {
+                  const year = (ep.data_evento || "").slice(0, 4);
+                  const prevYear = i > 0 ? (sistemaGiorno0Eps[i - 1].data_evento || "").slice(0, 4) : null;
+                  return (
+                    <div key={ep.id}>
+                      {year && year !== prevYear && (
+                        <div className="flex items-center gap-3 pt-3 pb-1">
+                          <span className="text-xs font-mono font-bold text-slate-400 tabular-nums">{year}</span>
+                          <div className="h-px flex-1 bg-gradient-to-r from-slate-700/60 to-transparent" />
+                        </div>
+                      )}
+                      <EpisodeCard ep={ep} color={seasonColor(ep)} childrenOf={childrenOf} />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Prossimi episodi (solo SISTEMA a stagioni) */}
+        {mode === "sistema" && !sistemaView && (
           <div className="mt-2 rounded-xl border border-dashed border-slate-700/40 px-4 py-5 text-center space-y-1">
             <p className="text-[10px] text-slate-600 font-mono uppercase tracking-widest mb-2 flex items-center justify-center gap-1.5">
               <BookOpen size={10} /> In pipeline
