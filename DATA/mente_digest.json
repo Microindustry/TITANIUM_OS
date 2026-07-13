@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-13T11:07:49.886732",
+  "scanned_at": "2026-07-14T01:25:30.772048",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 875,
+  "total_files": 882,
   "files_read": 13,
-  "files_skipped": 862,
+  "files_skipped": 869,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 107.3,
+      "size_kb": 107.7,
       "readable": false,
       "extracts": {}
     },
@@ -162,28 +162,28 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 18.0,
+      "size_kb": 21.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 18.0,
+      "size_kb": 21.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\info\\packs",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 326.5,
+      "size_kb": 337.2,
       "readable": false,
       "extracts": {}
     },
@@ -377,6 +377,27 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\pack\\pack-ebd0697f8a01ad5809e2b55d90659c2924d7d822.idx",
+      "type": "idx",
+      "size_kb": 11.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-ebd0697f8a01ad5809e2b55d90659c2924d7d822.pack",
+      "type": "pack",
+      "size_kb": 3156.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-ebd0697f8a01ad5809e2b55d90659c2924d7d822.rev",
+      "type": "rev",
+      "size_kb": 1.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\pack\\pack-ff493eb0b378f2757350af401db642656575db0a.idx",
       "type": "idx",
       "size_kb": 13.1,
@@ -435,7 +456,7 @@
     {
       "path": ".obsidian\\workspace.json",
       "type": "json",
-      "size_kb": 6.4,
+      "size_kb": 6.7,
       "readable": false,
       "extracts": {}
     },
@@ -1821,7 +1842,7 @@
     {
       "path": "_CANONE.md",
       "type": "md",
-      "size_kb": 6.1,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
@@ -1987,7 +2008,7 @@
     {
       "path": "ASSOLUTO\\V7_X_v8.md",
       "type": "md",
-      "size_kb": 67.7,
+      "size_kb": 67.6,
       "readable": false,
       "extracts": {}
     },
@@ -2036,7 +2057,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\atto_iii_assoluto_v6.md",
       "type": "md",
-      "size_kb": 41.1,
+      "size_kb": 41.2,
       "readable": false,
       "extracts": {}
     },
@@ -2057,7 +2078,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\atto_v_assoluto_v6.md",
       "type": "md",
-      "size_kb": 28.4,
+      "size_kb": 28.5,
       "readable": false,
       "extracts": {}
     },
@@ -2143,7 +2164,7 @@
     {
       "path": "FINANZA\\fatti_dalle_storie.md",
       "type": "md",
-      "size_kb": 5.7,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
@@ -2199,7 +2220,7 @@
     {
       "path": "KNOWLEDGE\\_INDEX_KNOWLEDGE.md",
       "type": "md",
-      "size_kb": 17.8,
+      "size_kb": 17.9,
       "readable": false,
       "extracts": {}
     },
@@ -2227,7 +2248,7 @@
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_III_V32.md",
       "type": "md",
-      "size_kb": 41.1,
+      "size_kb": 41.2,
       "readable": false,
       "extracts": {}
     },
@@ -2248,7 +2269,7 @@
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_V_MATERIALI.md",
       "type": "md",
-      "size_kb": 28.2,
+      "size_kb": 28.3,
       "readable": false,
       "extracts": {}
     },
@@ -2380,7 +2401,7 @@
     {
       "path": "KNOWLEDGE\\BOZZE\\nuovo_documento_di_testo.md",
       "type": "md",
-      "size_kb": 2.7,
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
@@ -2401,14 +2422,14 @@
     {
       "path": "KNOWLEDGE\\FONTI_UTILI.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\FORMATO_EPISODIO_DOPPIO.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.9,
       "readable": false,
       "extracts": {}
     },
@@ -2436,7 +2457,7 @@
     {
       "path": "KNOWLEDGE\\MEDIA\\analisi_video_youtube_contenuto_e_contesto.md",
       "type": "md",
-      "size_kb": 31.1,
+      "size_kb": 31.0,
       "readable": false,
       "extracts": {}
     },
@@ -2457,7 +2478,7 @@
     {
       "path": "KNOWLEDGE\\MEMORIA_CLAUDE\\loop_autonomo.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
@@ -2506,7 +2527,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\BIBBIA_DEL_MONDO.md",
       "type": "md",
-      "size_kb": 20.4,
+      "size_kb": 20.3,
       "readable": false,
       "extracts": {}
     },
@@ -2520,7 +2541,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\BRIEF_ILLUSTRATORE_PERSONAGGI.md",
       "type": "md",
-      "size_kb": 4.8,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
@@ -2534,7 +2555,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\GUIDA_CAROSELLI.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 9.7,
       "readable": false,
       "extracts": {}
     },
@@ -2542,6 +2563,13 @@
       "path": "KNOWLEDGE\\MONDO\\INDICE_CAMMINO.md",
       "type": "md",
       "size_kb": 11.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\MONDO\\LINEA_GUIDA_NINA.md",
+      "type": "md",
+      "size_kb": 13.5,
       "readable": false,
       "extracts": {}
     },
@@ -2581,9 +2609,23 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\MONDO\\PIANO_PRODUZIONE_NINA.md",
+      "type": "md",
+      "size_kb": 7.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\MONDO\\PIETRE.md",
       "type": "md",
       "size_kb": 14.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "KNOWLEDGE\\MONDO\\PONTE_SG_NINA.md",
+      "type": "md",
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
@@ -2597,35 +2639,35 @@
     {
       "path": "KNOWLEDGE\\MONDO\\QUALITA_BATCH_44.md",
       "type": "md",
-      "size_kb": 4.8,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\REEL_NINA.md",
       "type": "md",
-      "size_kb": 6.1,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\NINA_DAL_GIORNO_0.md",
       "type": "md",
-      "size_kb": 9.3,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\NINA_DESIGN_DEFINITIVO.md",
       "type": "md",
-      "size_kb": 4.7,
+      "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\NINA_STILE_E_PIANO.md",
       "type": "md",
-      "size_kb": 13.4,
+      "size_kb": 13.3,
       "readable": false,
       "extracts": {}
     },
@@ -2646,7 +2688,7 @@
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\i_protagonisti.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -2800,7 +2842,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_cloudedge_collaborative_architecture_for_multimodal_llm_ba.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
@@ -3059,7 +3101,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\parameter_efficient_fine_tuning_of_large_scale_pre_trained_l.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
@@ -3094,7 +3136,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\scipy_10_fundamental_algorithms_for_scientific_computing_in_.md",
       "type": "md",
-      "size_kb": 1.6,
+      "size_kb": 1.7,
       "readable": false,
       "extracts": {}
     },
@@ -3297,7 +3339,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\feed_drive_condition_monitoring_using_modal_parameters.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
@@ -3311,7 +3353,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\load_distribution_analysis_and_contact_stiffness_prediction_.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
@@ -3339,7 +3381,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\modeling_of_cnc_machine_tool_line_rail_assembly_accuracy_and.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
@@ -3640,7 +3682,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MIMS\\TOT_APP.md",
       "type": "md",
-      "size_kb": 0.5,
+      "size_kb": 0.6,
       "readable": false,
       "extracts": {}
     },
@@ -3766,7 +3808,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\LABORATORIO\\RAGIONAMENTO_CLAUDE.md",
       "type": "md",
-      "size_kb": 8.0,
+      "size_kb": 7.9,
       "readable": false,
       "extracts": {}
     },
@@ -3962,7 +4004,7 @@
     {
       "path": "MIMS\\MIMS_FIT_PARK_SPECS.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
@@ -3990,7 +4032,7 @@
     {
       "path": "MIMS\\PROTOCOLLO\\linea_strutturale_industriale.md",
       "type": "md",
-      "size_kb": 2.8,
+      "size_kb": 2.9,
       "readable": false,
       "extracts": {}
     },
@@ -4032,7 +4074,7 @@
     {
       "path": "MIMS\\PROTOCOLLO\\mims_dal_magazzino_infinito_ai_kit.md",
       "type": "md",
-      "size_kb": 5.5,
+      "size_kb": 5.4,
       "readable": false,
       "extracts": {}
     },
@@ -4291,7 +4333,7 @@
     {
       "path": "SESSIONI\\2026-07-09_mims-in-nina_pietre_pubblicazione-v0.md",
       "type": "md",
-      "size_kb": 5.4,
+      "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
@@ -4389,7 +4431,7 @@
     {
       "path": "STORIE\\_INDEX_STORIE.md",
       "type": "md",
-      "size_kb": 18.8,
+      "size_kb": 18.9,
       "readable": false,
       "extracts": {}
     },
@@ -4487,21 +4529,21 @@
     {
       "path": "STORIE\\EP_AUTO_018.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\EP_AUTO_019.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 6.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
@@ -4788,7 +4830,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
@@ -4809,14 +4851,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
       "type": "md",
-      "size_kb": 11.0,
+      "size_kb": 10.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
@@ -5019,14 +5061,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260702_chiusura_sessione_rag_rebuild_verif.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260702_inventario_notturno.md",
       "type": "md",
-      "size_kb": 8.5,
+      "size_kb": 8.4,
       "readable": false,
       "extracts": {}
     },
@@ -5194,7 +5236,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_GRAPHIFY_L2_cammini.md",
       "type": "md",
-      "size_kb": 4.6,
+      "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
@@ -5432,7 +5474,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_07_il_sussurratore_di_parole.md",
       "type": "md",
-      "size_kb": 16.2,
+      "size_kb": 16.1,
       "readable": false,
       "extracts": {}
     },
@@ -5530,7 +5572,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_21_il_nome_che_cambia.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
@@ -5551,14 +5593,14 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_24_il_filtro_del_mugnaio.md",
       "type": "md",
-      "size_kb": 15.6,
+      "size_kb": 15.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_25_le_finestre_sempre_aperte.md",
       "type": "md",
-      "size_kb": 16.4,
+      "size_kb": 16.3,
       "readable": false,
       "extracts": {}
     },
@@ -5621,7 +5663,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_34_le_stelle_che_reggono_il_filo.md",
       "type": "md",
-      "size_kb": 16.0,
+      "size_kb": 15.9,
       "readable": false,
       "extracts": {}
     },
@@ -5656,7 +5698,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_39_il_voto_dei_quartieri.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
@@ -5684,7 +5726,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_43_due_fotografi_uno_spazio.md",
       "type": "md",
-      "size_kb": 15.7,
+      "size_kb": 15.6,
       "readable": false,
       "extracts": {}
     },
@@ -5719,14 +5761,14 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_48_il_libro_delle_ricette_di_nonna.md",
       "type": "md",
-      "size_kb": 15.8,
+      "size_kb": 15.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_49_la_scatola_magica_dei_compiti.md",
       "type": "md",
-      "size_kb": 15.0,
+      "size_kb": 14.9,
       "readable": false,
       "extracts": {}
     },
@@ -5824,7 +5866,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
@@ -5999,7 +6041,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
       "type": "md",
-      "size_kb": 9.2,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
@@ -6062,7 +6104,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
       "type": "md",
-      "size_kb": 11.3,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
@@ -6104,7 +6146,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
       "type": "md",
-      "size_kb": 11.9,
+      "size_kb": 11.8,
       "readable": false,
       "extracts": {}
     },
@@ -6116,9 +6158,16 @@
       "extracts": {}
     },
     {
+      "path": "STORIE\\SG_GIORNO0\\_PIANO_PRODUZIONE.md",
+      "type": "md",
+      "size_kb": 16.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "STORIE\\STORIE_INDEX.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
@@ -6139,7 +6188,7 @@
     {
       "path": "V32\\BOM\\lista_cnc_120226.md",
       "type": "md",
-      "size_kb": 2.3,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
@@ -6153,7 +6202,7 @@
     {
       "path": "V32\\NOTE_OFFICINA\\v32_analisi_tecnica_reale.md",
       "type": "md",
-      "size_kb": 12.9,
+      "size_kb": 12.8,
       "readable": false,
       "extracts": {}
     },
@@ -6202,7 +6251,7 @@
     {
       "path": "VITA_NATURA\\CENTRO\\listino_tecnico_kit_prezzi_opera.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
@@ -6237,7 +6286,7 @@
     {
       "path": "VITA_NATURA\\fatti_dalle_storie.md",
       "type": "md",
-      "size_kb": 11.1,
+      "size_kb": 11.0,
       "readable": false,
       "extracts": {}
     },

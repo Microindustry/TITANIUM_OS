@@ -1,54 +1,45 @@
-=== RIAVVIO SESSIONE #58 — generato 13/07/2026 (fine sessione #57, skill salva) ===
-Ultima sessione: #57 — 13/07/2026 (Fable 5, giornata intera; 10-12/07 macchina spenta)
+=== RIAVVIO SESSIONE #59 — generato 14/07/2026 ~02:30 (fine sessione #58, skill salva) ===
+Ultima sessione: #58 — 14/07/2026 (Fable 5, notte)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-IL CAMPO DI BATTAGLIA È PRONTO. Le regole caroselli sono in UN posto
-(MENTE/KNOWLEDGE/MONDO/GUIDA_CAROSELLI.md), si verificano DA SOLE
-(caroselli_qc.py + sentinella notturna), Obsidian è al meglio (561 note,
-3012 ponti, HOME+12 indici), il RAG è sano e serve la verità al primo colpo
-(query "regole carosello" → GUIDA 0.95 + _CANONE). Sistema a 0 CVE su 194
-pacchetti; llamafactory vive nel SUO venv (~/.venvs/llamafactory).
+L'ECOSISTEMA CONTENUTI È PIANIFICATO PORTA A PORTA (~165 caroselli).
+Due binari pareggiati in sidebar (SISTEMA rosso ↔ NINA rosa, ognuno con
+EPISODI/GIORNO 0/LINEA GUIDA), vetrine giorno-0 VUOTE finché non c'è
+publish-ready. Linee guida complete nei due lati (MENTE canonico + specchi
+dashboard, tutto nel RAG e in Obsidian coi connettori).
 
-━━━ ROTTA CONTENUTI (ordine Matteo 13/07) ━━━
-1) PRE_01 RIFATTO DA 0 publish-ready (INSIEME) — non EP_N2_03: doppio taglio
-   (completo + social ≤10), si spezza in più caroselli se serve.
-2) STORIE DI SISTEMA voce Matteo in parallelo — GESTIONE CLAUDE AL 100%
-   (grafica, testi, caroselli, QC, tutto; garanzie: grounding RAG +
-   canon_guard + caroselli_qc + additivo). Stampo: FORMATO_EPISODIO_DOPPIO.
-3) EP_N2_03 "la Misura" DOPO il preambolo.
+━━━ IL CANONE NUOVO di #58 (tutto committato MENTE+repo) ━━━
+- GUIDA_CAROSELLI §2-bis: COPERTINA = poster (safe-zone crop 1:1 y135-1215,
+  prova miniatura 200px, un punto focale, titolo=gancio, griglia=collezione)
+- PONTE_SG_NINA: cameo Nina in SG_01/04/09 (1-2 slide, frasi-firma), semi di
+  ritorno, preamboli che si presentano a vicenda, 4 guardie QC
+- Provenienza componenti: "comprati su canale usato", MAI prezzi per-pezzo,
+  acquisti futuri = nuovo (stampo + memoria; canon_guard già compatibile)
+- LINEA_GUIDA_NINA v2 (documento operativo, 12 guardie QC) + PIANO_PRODUZIONE_NINA
+- Piani: SG = PRE_SG 4 + S1 68 caroselli (9 cap N-livelli) + stagioni S2-S6;
+  Nina = PRE 4 (PRE_03 è a 17 slide, fuori limite) + cammino 53 + stagioni N1-N5
+- REGOLA: titoli adattivi = linea guida, non regola (si integrano coi caroselli fatti)
+- COLLI DI BOTTIGLIA con soluzione (sezione nel piano SG): n°1 = RITMO → binario
+  notturno bozze (da costruire); render_queue batch; Express solo publish-ready;
+  SVG components; QC copertina eseguibile; prerequisiti Meta = collo esterno
 
-━━━ FATTI CHIAVE di #57-13/07 (commit 16609c5b → 0213e8d1 + salva) ━━━
-- Triage rientro: notti 10-12 = macchina spenta (zero guasti), boot-recovery ok
-- AI watcher v1.2: morte silenziosa ora diagnosticabile (exit code + marker pid);
-  bug ZOMBIE curato (RETIRED_HANDLES: handle sostituiti → Tier3, mai più fetch
-  a vuoto); watchlist P4 completa (+r/LocalLLaMA +6 YouTube, 26 sorgenti)
-- RAG v4.3 self-heal INVERSO: file con vettori mancanti in Chroma si
-  ri-processano da soli (733 chunk persi recuperati). 2 corruzioni HNSW curate
-  (L1 mattina + L2 pomeriggio con 1 UAC: 18004==18004, snapshot fresco).
-  ⚠ LEZIONE (in memoria): dopo modifiche MASSIVE a MENTE mai incrementale a
-  mano → rag_update_exclusive / rag_recover elevato
-- Venv llamafactory + pulizia sistema: via gradio+llamafactory, pillow 12.3 /
-  starlette 1.3.1 / fastapi 0.139 → pip-audit 0 CVE (era 42→23→0);
-  night_finetune v3.0 punta al venv (torch 2.6.0+cu124 CUDA ok, CLI verde)
-- Detriti -5GB (chroma_db_reset 07/07 + hnsw_corrupt 09/07; ok Matteo)
-- Caroselli: P7/F6/F7 attacco CHIUSI (naming 100%, README EP_N2_01 a 16 slide,
-  PRE_03 scheda+caption creati, indice completo, formato doppio in pipeline)
-- GUIDA_CAROSELLI + QC automatico + sentinella + _CANONE sezione nuova
-- Obsidian rigenerato (setup+intersect+wiki), MENTE commit fa8cc43+916d3ec
-
-━━━ PRIMA COSA DOMATTINA ━━━
-- Leggere DATA/logs/finetune.log: prova del fuoco del venv (TI_FineTune notturno)
-- Cartella clinica: la sentinella caroselli debutta stanotte
+━━━ DOMATTINA (input Matteo dal lavoro → GESTIONE AUTONOMA) ━━━
+1. Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli
+2. Colli piccoli: QC copertina in caroselli_qc + render_queue.py + _TEMPLATE/components/
+   (SVG canonici Nina/THEMIS/⟡ — PRIMA di ogni carosello nuovo)
+3. PRODURRE serie PRE_SG_01-04 (Claude 100%: doppio taglio, copertina §2-bis, QC verde)
+4. Design binario notturno bozze-caroselli (collo n°1)
+5. NON toccare PRE_01 Nina da solo — è INSIEME (punto 1 della rotta condivisa)
 
 ━━━ BLOCKERS APERTI (gated Matteo, ~1h) ━━━
-- Ordine hardware: UPS (~50-80€, LA cura delle corruzioni HNSW — ridimostrato
-  oggi 2 volte) + mandrino ER20 + martinetto Vevor = IL tappo
-- Chiave Semantic Scholar gratuita in .env (5 min) → azzera i 429 notturni
-- Prerequisiti pubblicazioni: mail progetto, pagina FB+IG, app Meta, Docker
+- Hardware: UPS (cura HNSW) + mandrino ER20 + martinetto Vevor = IL tappo
+- Prerequisiti pubblicazioni: mail progetto, pagina FB+IG, app Meta, Docker/Postiz
+  (= il collo esterno della pipeline caroselli)
+- Chiave Semantic Scholar (5 min) → azzera i 429 notturni
 - Trade secrets MIMS in _VAULT cifrato (mezz'ora insieme)
 
 ━━━ COME LEGGERE LE CRITICHE ━━━
-CRITICHE.md (root repo) — rigenerato ogni notte. Per cambiare stato: dirlo a
-Claude o editare DATA/audit/critiche_manuali.json.
+CRITICHE.md (root repo) — rigenerato ogni notte. Stato: dirlo a Claude o
+editare DATA/audit/critiche_manuali.json.
 
-━━━ Generato: 13/07/2026 — fine sessione #57 (skill salva) ━━━
+━━━ Generato: 14/07/2026 — fine sessione #58 (skill salva) ━━━

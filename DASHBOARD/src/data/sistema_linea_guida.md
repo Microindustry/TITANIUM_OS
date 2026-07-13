@@ -74,6 +74,12 @@ La slide 1 è **il poster**, non la prima pagina: nel feed decide l'apertura, ne
 - **S5 · «Il mondo reale»** — EVA a regime da Vita Natura: clienti veri, numeri veri. *Materiale parziale: pilot v0.3 vivo.*
 - **S6 · «Il Motore»** — la piattaforma HR a 3 strati, il CV vivo, il percorso dei perché — si racconta mentre si costruisce.
 
+## Colli di bottiglia (attacco 14/07 — con soluzione)
+
+*⚠ I titoli dei caroselli successivi si adattano a come vengono i precedenti — linea guida, non regola.*
+
+**1. Il ritmo** (collo n°1): a mano = mesi → binario notturno per le BOZZE (la notte genera, il QC filtra, il giorno promuove) — da costruire, priorità 1 · **2. Render manuale** → runner batch `render_queue` — da fare, piccolo · **3. Express 1-alla-volta** → deciso: Express solo per i publish-ready in coda; IG = JPEG via Postiz · **4. Prerequisiti Meta/Postiz** (~1h, gated Matteo) — il collo esterno · **5. SVG personaggi non a libreria** (rischio drift) → `_TEMPLATE/components/` prima di PRE_01 · **6. QC copertina** → check eseguibile in caroselli_qc — piccolo · **7. Token** → lavoro pesante in notturna, input corti bastano · **8. UPS** (HNSW) — in blockers.
+
 ## Ordine, cadenza, scala
 
 - Si parte da **EP_SG_01** (dopo PRE_01, che resta INSIEME). Dentro un capitolo: prima il portante, poi i figli. Tra capitoli: sequenziale 1→9, ma un milestone fresco può chiamare il suo figlio in anticipo.

@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-13T11:10:00.501440",
-  "active_milestone": "Sessione #57 (13/07): CAMPO DI BATTAGLIA pronto per PRE_01+storie. Rientro dopo 3 gg macchina spenta: catena notturna recuperata da sola al boot. Fix: watcher diagnosticabile (exit code+marker) + watcher v1.2 (zombie pensionati, +7 sorgenti P4) + RAG self-heal INVERSO v4.3 (scritture perse si ricuciono da sole) + 2 cure HNSW (L1 mattina, L2 pomeriggio 18004==18004 con 1 UAC) + detriti -5GB + venv llamafactory (finetune v3.0, torch cu124 CUDA ok) -> sistema 0 CVE su 194 pacchetti (era 42). CAMPO: GUIDA_CAROSELLI (fonte unica: gerarchia fonti, riconciliazioni bibbia, doppio taglio social.html) + caroselli_qc.py con sentinella notturna (5 cartelle 0 falle) + Obsidian rigenerato (561 note, 3012 ponti, HOME+12 indici) + _CANONE sezione CAROSELLI/PUBBLICAZIONE. Query API: top hit GUIDA_CAROSELLI 0.95. DECISIONI: prossimo carosello = PRE_01 RIFATTO DA 0 publish-ready (non EP_N2_03); storie di sistema voce Matteo = gestione Claude 100% (grafica-testi-caroselli-QC).",
-  "next_step": "PRE_01 rifatto DA 0 publish-ready (INSIEME) + storie di sistema voce Matteo (Claude 100%) in parallelo; poi EP_N2_03 doppio. GATED Matteo (~1h): ordine hardware UPS+ER20+Vevor (IL tappo), chiave Semantic Scholar, prerequisiti pubblicazioni (mail/FB-IG/app Meta/Docker), trade secrets in _VAULT. Domattina: leggere finetune.log (prova del fuoco venv llamafactory).",
-  "session_count": 116,
+  "last_update": "2026-07-14T01:27:06.479242",
+  "active_milestone": "Sessione #58 (14/07): LINEE GUIDA COMPLETE per i due binari - ecosistema pianificato porta a porta (~165 caroselli). Sidebar: faccia SISTEMA (EPISODI/GIORNO0/LINEA GUIDA) pareggiata con NINA (+LINEA GUIDA). Vetrine giorno-0 vuote fino al publish-ready (lezione: piano prima di compilare). Canone nuovo: GUIDA 2-bis copertina-poster (safe-zone/miniatura/collezione), PONTE_SG_NINA (cameo 1-4-9 + preamboli che si presentano a vicenda), provenienza componenti (canale usato, mai prezzi per-pezzo), LINEA_GUIDA_NINA v2 (12 guardie QC), piani produzione: SG S1 68 + stagioni S2-S6, Nina PRE 4 + cammino 53 + stagioni N1-N5. Regola: titoli adattivi = linea guida non regola. Colli di bottiglia attaccati con soluzione (n.1 = binario notturno bozze). Obsidian rigenerato coi connettori.",
+  "next_step": "DOMATTINA su input Matteo (gestione autonoma): triage notturno + colli piccoli (QC copertina, render_queue, _TEMPLATE/components SVG) + PRODURRE serie PRE_SG_01-04 (Claude 100%) + design binario notturno bozze. PRE_01 Nina resta INSIEME. Gated Matteo: hardware UPS+ER20+Vevor, prerequisiti Meta (~1h), Semantic Scholar key.",
+  "session_count": 117,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-13T11:07:47.122613"
+      "last_activity": "2026-07-14T01:27:06.479242"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -107,7 +107,8 @@
       "Sessione #55: pulizia dashboard — NodeKit.tsx (NodeTile/NodeLevel condivisi: erano 4 copie identiche-a-tema-diverso, -256 righe, tsc verde + screenshot prima/dopo pixel-identici, critica gc01 chiusa). Vista CRITICHE ELIMINATA su decisione Matteo ('non si aggiorna') -> CRITICHE.md stile bussola in root (critiche_md.py: polso + canone per progetto + auto-audit aperte), rigenerato ogni notte da night_audit e auto-committato da night_push; fonti = i 2 JSON vivi",
       "Verita' sparsa CHIUSA (08/07 sess#56): SYSTEM_TREE derivato da mappaData.ts (adapter SkillNode->MapNode, % computate nodeProgress, ROOT=media, -84 righe a mano, pct_sync v1.1 ritirato da MappaView) + % MIMS/GENESIS con nome esplicito (voci mappa vs pilastro STATE) + AUTOMATIONS_MASTER v1.3 archivio storico con 4 fonti vive",
       "LE 3 FACCE (08/07 sess#56, decisione Matteo): sidebar TITANIUM/NINA/PUBBLICAZIONI (deep-link intatti, Archivio sotto-voce), RIPASSO_S32-56.md (5 fasi+canone operativo+carattere), PubblicazioniView (trovato/pipeline/criteri/scaletta 9 passi), vincoli ri-verificati doc Meta (10 slide max, LinkedIn PDF, slide 1080x1350 gia' a norma, Postiz MCP), binario nuovo 'voce Matteo', tsc verde + screenshot",
-      "Sessione #57 (13/07): igiene profonda + campo di battaglia — RAG v4.3 self-heal inverso + 2 recovery HNSW (18004==18004, snapshot fresco), watcher v1.2 (RETIRED_HANDLES + watchlist completa, 26 sorgenti), finetune v3.0 su venv dedicato (sistema 0 CVE su 194), caroselli a convenzione completa (P7/F6/F7 attacco chiusi), GUIDA_CAROSELLI+QC automatico+sentinella, Obsidian 561 note/3012 ponti, -5GB detriti. Rotta: PRE_01 da 0 + storie voce Matteo gestione Claude 100%. tsc verde, 0 orfani"
+      "Sessione #57 (13/07): igiene profonda + campo di battaglia — RAG v4.3 self-heal inverso + 2 recovery HNSW (18004==18004, snapshot fresco), watcher v1.2 (RETIRED_HANDLES + watchlist completa, 26 sorgenti), finetune v3.0 su venv dedicato (sistema 0 CVE su 194), caroselli a convenzione completa (P7/F6/F7 attacco chiusi), GUIDA_CAROSELLI+QC automatico+sentinella, Obsidian 561 note/3012 ponti, -5GB detriti. Rotta: PRE_01 da 0 + storie voce Matteo gestione Claude 100%. tsc verde, 0 orfani",
+      "Ecosistema contenuti pianificato porta a porta: linee guida due binari + piani produzione (~165 caroselli) + PONTE SG-Nina + standard copertina + colli di bottiglia con soluzione; sidebar SISTEMA pareggiata con NINA; build verde, RAG e Obsidian aggiornati (14/07/2026)"
     ],
     "next": "PROSSIMA SESSIONE FABLE #53: revisionare Obsidian -> ecosistema MENTE vero (verita unica/ponti/zero orfani), poi eseguire la prima ondata dell'attacco (checkout hardware + canone RAG). Backlog completo in DA_FARE_FATTO.md.",
     "target_capannone": "2030-07-15"
@@ -147,5 +148,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a carosello.html"
+  "last_action": "Modifica a acl_manager.py"
 }

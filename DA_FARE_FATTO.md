@@ -154,6 +154,27 @@
   delle stagioni) PRIMA di EP_SG_01. PONTE aggiornato: **i preamboli si presentano a vicenda**
   (1 slide ciascuno, due porte una famiglia). Linee guida + specchi dashboard aggiornati.
   Totale ecosistema pianificato: PRE 8 + Nina 53 + SG S1 68 + S2 ~35 ≈ **165 caroselli**.
+- [✓] **STAGIONI NINA N1-N5 fissate** (come SG): N1 Cammino (PRONTA, 57) · N2 Nuove Pietre ·
+  N3 Fucina di FORGE (saldatura, gated grafo HR) · N4 Mondo Animato (gated video/AVA) ·
+  N5 Il Libro (gated N1). + REGOLA scritta nei piani: **titoli adattivi = linea guida, non
+  regola** (si integrano a seconda di come vengono i caroselli).
+- [✓] **COLLI DI BOTTIGLIA — attacco con soluzione** (sezione nel piano SG + specchio):
+  1° il RITMO → binario notturno bozze caroselli (DA COSTRUIRE, priorità 1) · render batch
+  `render_queue` (piccolo) · Express solo per publish-ready in coda (DECISO) · prerequisiti
+  Meta ~1h (gated Matteo, collo esterno) · libreria SVG `_TEMPLATE/components/` prima di
+  PRE_01 (anti-drift) · QC copertina eseguibile (piccolo) · token → notturna+input corti ·
+  UPS (blockers).
+- [✓] **Obsidian rigenerato coi connettori**: setup+bridge+intersect — i nuovi piani/guide
+  sono nel vault e collegati (328 note sapere, 2.970 legami, 41% cross-dominio, 2 isolate).
+
+**═══ DOMATTINA (input Matteo dal lavoro → gestione autonoma Claude) ═══**
+- [ ] Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli
+- [ ] Colli piccoli: QC copertina eseguibile in caroselli_qc + `render_queue.py` batch +
+  `_TEMPLATE/components/` (SVG canonici Nina/THEMIS/simboli ⟡ — prima di ogni carosello nuovo)
+- [ ] **Produrre la serie PRE_SG_01-04** (gestione Claude 100%, regole complete: doppio taglio,
+  copertina §2-bis, QC verde, cartelle CAROSELLI/PRE_SG_NN/)
+- [ ] Progettare il binario notturno bozze-caroselli (collo n°1) — design, poi costruzione
+- [ ] NON toccare PRE_01 Nina da solo (è INSIEME) — resta il punto 1 della rotta condivisa
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

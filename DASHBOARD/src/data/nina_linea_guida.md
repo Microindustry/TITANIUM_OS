@@ -49,6 +49,16 @@ Nina **DÀ la domanda** (cameo 1-2 slide nei portanti SG 1·4·9, frasi-firma, m
 - **Interazioni segnate**: i cameo si producono coi portanti SG; i semi atterrano nel cammino (SG_01 → ⟡3 la Mente che parla · SG_04 → ⟡0 la Materia/misura · SG_09 → ₣1 il Valore/chiusura d'arco).
 - **Cadenza**: PRE_01 insieme → PRE_02-04 anche autonome → cammino in ordine di casella, 1-2 per ciclo, parallelo con SG ammesso; a regime anche in notte autonoma.
 
+## Le stagioni di Nina — la pipeline (14/07)
+
+*⚠ I titoli dei caroselli successivi si adattano a come vengono i precedenti — linea guida, non regola.*
+
+- **N1 «Il Cammino»** — PRONTA: PRE (4) + 53 caselle = 57 caroselli (testi esistenti).
+- **N2 «Le Nuove Pietre»** — caselle proposte + verticale Finanza ₣. *Materiale parziale.*
+- **N3 «La Fucina di FORGE»** — la saldatura vera come materia (il grafo di Matteo → curriculum Nina). *Gated: grafo HR (si alimenta con S6 di SG).*
+- **N4 «Il Mondo Animato»** — l'animazione (bibbia già pronta per questo). *Gated: pipeline video/AVA.*
+- **N5 «Il Libro»** — il libro del cammino, i ⟡ diventano numeri di pagina. *Gated: N1 completa.*
+
 ## Guardie QC (le falle, tutte in un posto)
 
 slide oltre limite · wireframe/slot vuoti · non self-contained · canvas ≠ 1080×1350 · copertina fuori safe-zone o illeggibile a miniatura · frontmatter incompleto / prova non verificabile · grounding debole non segnalato · Pietra non posata usata / Pietra muta >5 ep · doppione di lezione (guardia gemelli) · ponte violato (cameo >2 slide, Nina narratrice in SG, lessico fantastico a Matteo, numeri diversi tra binari) · canone numeri (mai «recuperato»; «canale usato», mai prezzi per-pezzo) · personaggi (Nina che invecchia, villain con faccia, magia senza funzione, moralismo).

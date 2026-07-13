@@ -18,7 +18,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-13 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-14 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*

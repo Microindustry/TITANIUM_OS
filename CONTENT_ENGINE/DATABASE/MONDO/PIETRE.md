@@ -20,7 +20,7 @@
 
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-13 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-14 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e

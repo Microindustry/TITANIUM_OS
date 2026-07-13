@@ -1,5 +1,173 @@
 [
   {
+    "id": "BUS-9024accc",
+    "stato": "fatto",
+    "testo": "**«DAL GIORNO 0» lato SISTEMA in sidebar** (sotto STORIE · SISTEMA, come Nina):",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-5ce90408",
+    "stato": "non_fatto",
+    "testo": "~~timeline dei 157 episodi dentro giorno0~~ — corretta da Matteo: il grezzo NON è la",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-c4a6febd",
+    "stato": "fatto",
+    "testo": "**Pagina = SOLO il piano della storia** (`sistema_dal_giorno_0.md` riscritto): tesi",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-9e37c7ba",
+    "stato": "fatto",
+    "testo": "**LINEA GUIDA (provvisoria) = 3ª voce della sezione SISTEMA** (sotto DAL GIORNO 0):",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-baa30c44",
+    "stato": "fatto",
+    "testo": "**PONTE SG↔NINA scritto sui DUE lati** (`MENTE/KNOWLEDGE/MONDO/PONTE_SG_NINA.md`,",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-fae48fee",
+    "stato": "fatto",
+    "testo": "**STANDARD COPERTINA (slide 1) fissato** (domanda Matteo: \"è stata pensata per il feed?\"",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-92ed233a",
+    "stato": "da_fare",
+    "testo": "Proposta gated: check copertina eseguibile in caroselli_qc (safe-zone + font minima) —",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-fb67cb03",
+    "stato": "fatto",
+    "testo": "**PAREGGIO NINA↔SISTEMA — l'ecosistema** (ordine Matteo): LINEA GUIDA anche per Nina —",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-2795dff9",
+    "stato": "fatto",
+    "testo": "**LINEA GUIDA NINA PERFEZIONATA — v2** (ordine Matteo: \"progetto grande, linee guida",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-23eea8ee",
+    "stato": "fatto",
+    "testo": "**STAGIONI 2-6 FISSATE nella linea guida** (MENTE 9a24f38, RAG ok): S2 «La Sala",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-1e726dad",
+    "stato": "fatto",
+    "testo": "**TERRENO NINA + SERIE PRE PER ENTRAMBI I BINARI** (ordine Matteo; MENTE 6b9e003, RAG ok):",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-e49aa089",
+    "stato": "fatto",
+    "testo": "**STAGIONI NINA N1-N5 fissate** (come SG): N1 Cammino (PRONTA, 57) · N2 Nuove Pietre ·",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-13adb95a",
+    "stato": "fatto",
+    "testo": "**COLLI DI BOTTIGLIA — attacco con soluzione** (sezione nel piano SG + specchio):",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-b130055b",
+    "stato": "fatto",
+    "testo": "**Obsidian rigenerato coi connettori**: setup+bridge+intersect — i nuovi piani/guide",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-acf7dea8",
+    "stato": "da_fare",
+    "testo": "Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-b2719088",
+    "stato": "da_fare",
+    "testo": "Colli piccoli: QC copertina eseguibile in caroselli_qc + `render_queue.py` batch +",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-f6ba7926",
+    "stato": "da_fare",
+    "testo": "**Produrre la serie PRE_SG_01-04** (gestione Claude 100%, regole complete: doppio taglio,",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-4e827a5c",
+    "stato": "da_fare",
+    "testo": "Progettare il binario notturno bozze-caroselli (collo n°1) — design, poi costruzione",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-be40bd65",
+    "stato": "da_fare",
+    "testo": "NON toccare PRE_01 Nina da solo (è INSIEME) — resta il punto 1 della rotta condivisa",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-439fbc97",
+    "stato": "in_corso",
+    "testo": "**Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-920aaa4d",
+    "stato": "fatto",
+    "testo": "**Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-fae2cbfa",
+    "stato": "fatto",
+    "testo": "**Predisposizione verificata**: caroselli (cartella per ID, doppio taglio, QC, template),",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-bf4281db",
+    "stato": "non_fatto",
+    "testo": "~~«DAL GIORNO 0» come sotto-voce annidata~~ — corretta da Matteo: non sottocartella,",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-09a7403a",
+    "stato": "fatto",
+    "testo": "**Sidebar: sezione SISTEMA in rosso, gemella di NINA** (ordine Matteo): header «Sistema»",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-bd7e39db",
+    "stato": "non_fatto",
+    "testo": "~~terreno da 11 caroselli~~ — corretto da Matteo: \"troppo pochi, hai 226 episodi\".",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-f8a17a9e",
+    "stato": "fatto",
+    "testo": "**TERRENO DI SVILUPPO v2 — STAGIONE 1 = 68 CAROSELLI**: `MENTE/STORIE/SG_GIORNO0/",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-9f94c7e4",
+    "stato": "da_fare",
+    "testo": "PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-97208cf5",
+    "stato": "da_fare",
+    "testo": "Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
     "id": "BUS-2cb9e951",
     "stato": "fatto",
     "testo": "**HR = PIATTAFORMA A 3 STRATI, non il CV di Matteo**: grafo (verità: competenze",
