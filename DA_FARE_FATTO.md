@@ -112,6 +112,14 @@
   fatta?» · SG_09 chiude stagione «cosa costruiamo dopo?»); ritorno lato Nina (le domande
   diventano semi EP_N2, la prova cita SG — stesso fatto mai numeri diversi, uno racconta
   l'altro rimanda); 4 guardie QC di coerenza.
+- [✓] **STANDARD COPERTINA (slide 1) fissato** (domanda Matteo: "è stata pensata per il feed?"
+  — verifica onesta: era canone de-facto, NON scritto): GUIDA_CAROSELLI §2-bis (MENTE 3dfef6f)
+  — la slide 1 è il POSTER: safe-zone crop 1:1 (y 135–1215), prova della miniatura ~200px,
+  un solo punto focale, titolo=gancio mai riassunto, griglia=collezione (layout fisso per
+  serie + palette capitolo + n° episodio nel kicker), copertina UNICA per i due tagli.
+  Vale per Nina E per EP_SG. Specchio in LINEA GUIDA dashboard.
+- [ ] Proposta gated: check copertina eseguibile in caroselli_qc (safe-zone + font minima) —
+  quando si tocca il QC, non ora.
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

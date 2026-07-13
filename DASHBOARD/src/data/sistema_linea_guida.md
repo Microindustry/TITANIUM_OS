@@ -52,6 +52,10 @@
 - **Il ritorno lato Nina:** le domande dei cameo diventano semi EP_N2; quando germogliano, l'episodio Nina cita la prova REALE già raccontata in SG (stesso fatto, mai numeri diversi). Rimando incrociato leggero: uno racconta, l'altro rimanda — mai doppio racconto.
 - **Guardie QC:** cameo >2 slide = falla · Nina narratrice in SG = falla · lessico fantastico in bocca a Matteo = falla · stesso fatto con numeri diversi nei due binari = falla di canone.
 
+## La copertina (slide 1) — lo standard feed/griglia (fissato 14/07)
+
+La slide 1 è **il poster**, non la prima pagina: nel feed decide l'apertura, nel profilo compone la griglia. Regole (canone in GUIDA_CAROSELLI §2-bis): **safe-zone** — titolo e segno focale dentro il crop centrale 1:1 (banda y 135–1215 su 1080×1350), il marchio può uscire, il messaggio no · **prova della miniatura** — leggibile a ~200px, titolo max 2 righe, o è falla · **un solo punto focale** (l'immagine-simbolo dell'episodio) · **titolo = gancio** (domanda/tensione), mai riassunto · **la griglia è una collezione** — stesso layout per serie, palette del capitolo, numero episodio nel kicker · **una sola copertina per i due tagli** (completo e social).
+
 ## Frontmatter motore (casella CV del capitolo — i figli specializzano)
 
 - CAP 1 Metodo · lavorare con l'IA — CAP 2 Visione · architettura — CAP 3 QC · misura — CAP 4 Meccanica · progettazione + procurement — CAP 5 Software · knowledge engineering — CAP 6 Automazione · orchestrazione + debug — CAP 7 Comunicazione · content engineering — CAP 8 Sicurezza · hardening — CAP 9 Strategia · direzione
