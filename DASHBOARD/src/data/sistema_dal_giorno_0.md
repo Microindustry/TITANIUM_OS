@@ -37,6 +37,10 @@
 - **4 · Bussola + STATE.json + git** — la cronologia verificabile (chi ha fatto cosa, quando).
 - **5 · FOTO/** — il visivo per i caroselli.
 
+## Il terreno di sviluppo (deciso 14/07 — quanti e quali)
+
+**9 capitoli → 11 caroselli → 176 slide complete + ~104 social.** Due capitoli si sdoppiano: la Macchina (4a *la scelta* — il canale usato e l'occhio del professionista · 4b *il corpo unico* — 178 kg, ±0.019 mm) e la Notte (6a *l'esercito* · 6b *i guasti veri*). Cameo di Nina nei capitoli 1, 4a e 9 — la sua domanda apre o chiude, mai narra. Ritmo: **un carosello per ciclo completo** (stampo → grounding → build → QC → Express → qui), sequenziale, il successivo parte solo a QC verde. Il breakdown operativo con fonti, scene e frontmatter motore per capitolo vive in `MENTE/STORIE/SG_GIORNO0/_PIANO_PRODUZIONE.md` (indicizzato nel RAG). Dopo il 9 la stagione 1 è chiusa: i capitoli nuovi nascono dai milestone come `EP_SG_10+`.
+
 ## Regole di produzione
 
 Voce di Matteo in prima persona · ogni fatto con fonte · canon_guard sui numeri · caroselli_qc su ogni uscita · formato doppio (episodio completo 16 + taglio social ≤10 slide) · un episodio alla volta: entra in questa pagina **solo quando è definitivo**.

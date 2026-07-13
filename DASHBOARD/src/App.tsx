@@ -95,7 +95,6 @@ const NAV_ITEMS: NavItem[] = [
   { id: "metodo",      label: "METODO",      icon: BookOpen,      color: "text-cyan-300",   group: "system" },
   { id: "automazioni", label: "AUTOMAZIONI", icon: FlaskConical,  color: "text-amber-400",  group: "system", dot: "bg-amber-400"   },
   { id: "storie",      label: "STORIE · SISTEMA", icon: Mic,      color: "text-rose-400",   group: "system"  },
-  { id: "sistema-giorno0", label: "DAL GIORNO 0", icon: Mic,      color: "text-rose-400",   group: "system"  },
   { id: "rete",        label: "INVENTARIO", icon: Archive,       color: "text-cyan-400",   group: "system"  },
   { id: "calendario",  label: "CALENDARIO", icon: CalendarDays,  color: "text-indigo-300", group: "system", dot: "bg-indigo-400" },
   // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
@@ -277,6 +276,23 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
                 <Moon size={11} className="flex-shrink-0 text-sky-400" />
                 <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
                   Notturne
+                </span>
+              </button>
+            )}
+            {/* Sotto-voci STORIE — la divisione come per Nina (#58): il genitore apre
+                l'ARCHIVIO a stagioni (il grezzo), la sotto-voce la storia DEFINITIVA */}
+            {item.id === "storie" && !collapsed && (
+              <button
+                onClick={() => onNavigate("sistema-giorno0")}
+                title="La storia definitiva del sistema — piano EP_SG + episodi publish-ready"
+                className={`group relative w-full flex items-center gap-2 rounded-lg transition-all duration-200 pl-9 pr-3 py-1.5
+                  ${view === "sistema-giorno0"
+                    ? "bg-rose-950/40 text-rose-300 border border-rose-500/30"
+                    : "text-slate-600 hover:text-rose-300 hover:bg-rose-950/20 border border-transparent"}`}
+              >
+                <BookOpen size={11} className="flex-shrink-0 text-rose-400" />
+                <span className="text-[9px] font-semibold font-mono uppercase tracking-wider flex-1 text-left">
+                  Dal giorno 0
                 </span>
               </button>
             )}

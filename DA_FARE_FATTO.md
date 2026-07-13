@@ -111,6 +111,15 @@
 - [✓] **Predisposizione verificata**: caroselli (cartella per ID, doppio taglio, QC, template),
   stampo validato, Obsidian (vault rigenerato #57, la cartella EP_SG entrerà con setup/intersect),
   RAG (18k chunk, MENTE indicizzata, incrementale verde oggi). Numerazione: EP_SG_NN → CAROSELLI/EP_SG_NN/.
+- [✓] **Sidebar divisa come Nina** (ordine Matteo): «DAL GIORNO 0» annidato sotto STORIE ·
+  SISTEMA (pattern Notturne/CV), genitore = archivio stagioni, sotto-voce = storia definitiva.
+- [✓] **TERRENO DI SVILUPPO deciso e scritto**: `MENTE/STORIE/SG_GIORNO0/_PIANO_PRODUZIONE.md`
+  (commit MENTE a09488a, RAG aggiornato) — 9 capitoli → **11 caroselli** (Macchina e Notte si
+  sdoppiano: 04a scelta/canale usato + 04b corpo unico · 06a esercito + 06b guasti veri) →
+  176 slide complete + ~104 social; per capitolo: fonti grounding, scene chiave, cameo Nina
+  (1, 4a, 9), frontmatter motore (casella CV vivo + competenza + prova); cadenza 1 carosello
+  per ciclo completo, sequenziale, QC verde prima del successivo; stato vivo nel doc.
+  Sintesi in vetrina (sezione «Il terreno di sviluppo»).
 - [ ] PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.
 - [ ] Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).
 
