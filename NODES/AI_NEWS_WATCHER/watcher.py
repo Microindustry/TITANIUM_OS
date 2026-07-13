@@ -1,4 +1,7 @@
-# watcher.py | TITANIUM_OS / NODES / AI_NEWS_WATCHER | v1.0 | 2026-06-07
+# watcher.py | TITANIUM_OS / NODES / AI_NEWS_WATCHER | v1.2 | 2026-07-13
+# v1.2: RETIRED_HANDLES (gli handle corretti nei DEFAULT non lasciano piu' zombie nello
+#       state: il vecchio handle va in Tier3 con nota) + watchlist P4 completata
+#       (r/LocalLLaMA + 6 YouTube dal brief) + marker avvio nel log (diagnosi crash boot)
 # Monitor AI-news a tier (48h/settimanale/sospesi) — keyless.
 # Sorgenti v1: GitHub (via gh CLI, gia' autenticato), YouTube (RSS nativo), siti (RSS/Atom).
 # Instagram: rimandato (no API pubblica). YouTube-stats/Gemini: upgrade quando ci sara' la chiave.
@@ -96,15 +99,35 @@ DEFAULT_SOURCES = [
     {"name": "HN (Claude/RAG/local)", "kind": "site", "handle": "https://hnrss.org/newest?q=Claude+OR+RAG+OR+%22local+LLM%22&points=100", "tier": 1},
     {"name": "MarkTechPost",          "kind": "site", "handle": "https://www.marktechpost.com/feed/", "tier": 2},
     {"name": "Simon Willison",        "kind": "site", "handle": "https://simonwillison.net/atom/everything/", "tier": 2},
-    {"name": "LangChain Blog",        "kind": "site", "handle": "https://blog.langchain.dev/rss/", "tier": 2},
+    # LangChain Blog: blog.langchain.dev/rss e' morto (200 non-XML) e blog.langchain.com
+    # risponde 403 keyless (Cloudflare) — le release restano coperte dal github langchain-ai.
     {"name": "Latent Space",          "kind": "site", "handle": "https://www.latent.space/feed", "tier": 2},
+    # (#57, attacco 05 F7/P4): buchi di copertura residui del brief — keyless, r/LocalLLaMA
+    # verificato vivo 13/07 (Atom, UA browser gia' in HEADERS); @handle YouTube: il resolver
+    # logga se non trova il channelId, quindi un handle sbagliato non muore in silenzio.
+    {"name": "r/LocalLLaMA",          "kind": "site", "handle": "https://www.reddit.com/r/LocalLLaMA/.rss", "tier": 2},
     # --- YouTube (RSS nativo; @handle risolto a channel_id) ---
     {"name": "Fireship",              "kind": "youtube", "handle": "@Fireship", "tier": 2},
     {"name": "Matt Wolfe",            "kind": "youtube", "handle": "@mreflow",  "tier": 2},
     # Simone Rizzo — divulgatore AI IT (CEO Inferentia, docente UniBo); è il
     # riferimento di STILE dei reel del progetto: tracciarne le novità tier 1.
     {"name": "Simone Rizzo",          "kind": "youtube", "handle": "@simone_rizzo98", "tier": 1},
+    {"name": "Wes Roth",              "kind": "youtube", "handle": "@WesRoth", "tier": 2},
+    {"name": "AI Explained",          "kind": "youtube", "handle": "@aiexplained-official", "tier": 2},
+    {"name": "David Ondrej",          "kind": "youtube", "handle": "@DavidOndrej", "tier": 2},
+    {"name": "Dwarkesh Patel",        "kind": "youtube", "handle": "@DwarkeshPatel", "tier": 2},
+    {"name": "3Blue1Brown",           "kind": "youtube", "handle": "@3blue1brown", "tier": 2},
+    {"name": "Antonio Guadagno",      "kind": "youtube", "handle": "@AntonioGuadagno", "tier": 2},
 ]
+
+# Handle SOSTITUITI nei DEFAULT (morti/cambiati): il merge di load_state non tocca le
+# sorgenti esistenti nello state, quindi il vecchio handle resterebbe uno ZOMBIE che
+# batte a vuoto ogni notte. Qui lo mandiamo in pensione: Tier3 (sospeso) + nota.
+# Non si cancella nulla: storia e segnali della sorgente restano nello state.
+RETIRED_HANDLES = {
+    ("site", "https://www.anthropic.com/news"):   "pagina HTML, mai stato un feed — sostituito dai feed ATI (#53)",
+    ("site", "https://blog.langchain.dev/rss/"):  "feed morto (200 non-XML); release coperte dal github langchain-ai (#57)",
+}
 
 
 # ── STATO ───────────────────────────────────────────────────────────────────
@@ -135,6 +158,13 @@ def load_state() -> dict:
         if key not in by_handle:
             st["sources"].append({**d, "added": _now_iso(), "last_check": None,
                                   "last_seen": [], "signals": []})
+    # pensiona gli handle sostituiti (v1.2): Tier3 = mai piu' fetchati, storia intatta
+    for s in st["sources"]:
+        note = RETIRED_HANDLES.get((s.get("kind"), s.get("handle")))
+        if note and s.get("tier") != 3:
+            s["tier"] = 3
+            s["retired"] = note
+            logger.info("Sorgente pensionata (Tier3): %s — %s", s.get("name"), note)
     return st
 
 
