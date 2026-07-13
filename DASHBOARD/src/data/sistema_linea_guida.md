@@ -13,6 +13,10 @@
 - Il grezzo si **riscrive, non si copia**; i doppioni del grezzo si consolidano in 1.
 - Un carosello alla volta: stampo → grounding → build → QC → Express → vetrina. QC verde prima del successivo.
 
+## La serie PRE_SG — il preambolo del binario (4 caroselli, prima della stagione 1)
+
+Spiegare cosa è e come funziona non sta in un carosello solo: **PRE_SG_01 Chi parla** (Matteo, 15 anni di industria, la taverna, l'ADHD detto onesto) · **PRE_SG_02 Cos'è il Sistema** (i 5 pilastri, l'organismo, il loop) · **PRE_SG_03 Il patto del racconto** (milestone→episodio, doppio taglio, tutto vero con fonti, la gestione AI dichiarata: Claude produce, il QC controlla) · **PRE_SG_04 La mappa delle stagioni** (S1→S6, dove seguire + **presenta Nina**: i preamboli si presentano a vicenda, 1 slide). Si producono PRIMA di EP_SG_01 — sono la porta del binario.
+
 ## Stagione 1 — 9 capitoli → 68 caroselli (9 portanti + 59 approfondimenti)
 
 **≈1.088 slide complete + ≈650 social.** Titoli di lavoro ancorati al grezzo reale (157 episodi di sistema).

@@ -145,6 +145,15 @@
   S5 «Il mondo reale» (EVA, pilot v0.3 vivo) · S6 «Il Motore» (HR 3 strati, si racconta
   mentre si costruisce). Regola: senza prova non entra — l'arco è pronto, i contenuti
   arrivano dal lavoro. ~100 caroselli coperti da materiale già esistente (S1+S2).
+- [✓] **TERRENO NINA + SERIE PRE PER ENTRAMBI I BINARI** (ordine Matteo; MENTE 6b9e003, RAG ok):
+  `PIANO_PRODUZIONE_NINA.md` — serie PRE di 4 (PRE_01 Mondo RIFATTO DA 0 INSIEME · PRE_02
+  Come funziona · PRE_03 Personaggi 17→16 · PRE_04 Tutto è vero NUOVO) + cammino 53 caselle →
+  53 caroselli doppi (testi già esistenti, ordine da INDICE_CAMMINO) = **57 caroselli Nina**;
+  interazioni segnate (semi cameo → ⟡3/⟡0/₣1). Serie **PRE_SG_01-04** nel piano sistema
+  (Chi parla · Cos'è il Sistema · Il patto del racconto con gestione AI dichiarata · La mappa
+  delle stagioni) PRIMA di EP_SG_01. PONTE aggiornato: **i preamboli si presentano a vicenda**
+  (1 slide ciascuno, due porte una famiglia). Linee guida + specchi dashboard aggiornati.
+  Totale ecosistema pianificato: PRE 8 + Nina 53 + SG S1 68 + S2 ~35 ≈ **165 caroselli**.
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

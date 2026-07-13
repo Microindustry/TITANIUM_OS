@@ -42,9 +42,12 @@ Ogni episodio nasce **doppio** (16 + ≤10; il social-cut è il gancio, non un r
 
 Nina **DÀ la domanda** (cameo 1-2 slide nei portanti SG 1·4·9, frasi-firma, mai narratrice) e **RICEVE i semi e le prove** (le domande diventano caselle EP_N2; la prova cita il carosello SG — stesso fatto, mai numeri diversi; uno racconta, l'altro rimanda). Pareggio persone: Nina in SG solo domanda · Matteo in EP_N2 solo Costruttore-papà. Mai le due voci nella stessa slide.
 
-## Il riparti-da-0
+## Il terreno di sviluppo (fissato 14/07 — `PIANO_PRODUZIONE_NINA.md` in MENTE)
 
-**PRE_01 da 0 publish-ready, INSIEME** (doppio taglio, si spezza se >10, copertina §2-bis) · **EP_N2_03 «la Misura»** dopo il preambolo · i 52 esistenti a standard solo quando toccati (additivo) · ordine del cammino: INDICE_CAMMINO.
+- **La serie PRE — 4 caroselli** (spiegare non sta in uno solo): PRE_01 *Il Mondo di Nina* (**da rifare da 0, INSIEME** — primo della rotta) · PRE_02 *Come funziona Nina* (caselle, Pietre, 3 strati — a standard quando toccato) · PRE_03 *I Personaggi* (17→16 quando toccato) · PRE_04 *Tutto è vero* (**nuovo** — il patto di verità + presenta il binario di Matteo: i preamboli si presentano a vicenda, 1 slide ciascuno).
+- **Il cammino — 53 caselle → 53 caroselli doppi**: i testi esistono già (canone EP_N2, ordine da INDICE_CAMMINO); la produzione è portarli a carosello publish-ready. Prossimo dopo il preambolo: EP_N2_03 «Mille Volte Uguale» (la Misura), primo nato con lo stampo doppio. **Totale Nina: 57 caroselli** (≈912 slide complete + ≈570 social).
+- **Interazioni segnate**: i cameo si producono coi portanti SG; i semi atterrano nel cammino (SG_01 → ⟡3 la Mente che parla · SG_04 → ⟡0 la Materia/misura · SG_09 → ₣1 il Valore/chiusura d'arco).
+- **Cadenza**: PRE_01 insieme → PRE_02-04 anche autonome → cammino in ordine di casella, 1-2 per ciclo, parallelo con SG ammesso; a regime anche in notte autonoma.
 
 ## Guardie QC (le falle, tutte in un posto)
 
