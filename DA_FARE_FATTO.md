@@ -354,6 +354,27 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   Wes Roth, AI Explained, David Ondrej, Dwarkesh, 3Blue1Brown, Antonio Guadagno
   (tutti risolti). Run live: 7 sorgenti nuove, 90 segnali. arXiv cs.CL NON aggiunto
   (per il report va DOPO il gate di rilevanza, se no affoga il digest).
+**POMERIGGIO 13/07 — CAMPO DI BATTAGLIA (ordine Matteo: "prepara bene prima delle cose nuove"):**
+- [✓] **GUIDA_CAROSELLI — le regole in un posto solo** (MENTE d25a2c51... → fa8cc43):
+  gerarchia fonti (Bibbia=anima · tokens.css=valori · stampo doppio=contenuti · README=
+  struttura · GUIDA=procedura), 3 riconciliazioni Bibbia (10-slide API, no slot vuoti,
+  volto Nina canone), **convenzione doppio taglio su disco DECISA** (social.html
+  derivato dallo stesso generatore, slides/ + slides_social/), procedura 7 passi.
+  Registrata anche in _CANONE (nuova sezione CAROSELLI/PUBBLICAZIONE).
+- [✓] **REGOLE AUTOMATICHE — caroselli_qc.py + sentinella** (0ef58dd4): file canonici,
+  canvas 1080×1350, limiti slide (completo/social ≤10 IG), anti-wireframe,
+  self-contained; JSON in DATA/audit + check_caroselli in night_audit. Prima
+  passata: 5 cartelle, 0 falle.
+- [✓] **OBSIDIAN AL MEGLIO**: setup_obsidian rigenerato — 561 note (324 sapere + 237
+  storie), 3012 ponti cross-mondo, HOME + 12 indici, 2 sole isolate (paper research
+  fuori tema, legittime); GUIDA nel grafo con 10 Collegati; _CANONE aggiornato.
+  MENTE commit fa8cc43 (234 file).
+- [✓] **RAG ferito e RIcurato (lezione ribadita)**: il MIO incrementale dopo la
+  rigenerazione massiva (234 file) ha ri-corrotto l'HNSW — la regola esisteva già
+  (massive → rag_update_exclusive/--rebuild, MAI incrementale): violata 2 volte oggi,
+  ora in memoria. Cura: rag_recover elevato (1 UAC di Matteo) → **L2 rebuild
+  18004==18004** → PROBE_OK da processo fresco → snapshot known-good rifatto →
+  query API end-to-end: top hit = GUIDA_CAROSELLI (0.95) + _CANONE. Verità in catena.
 **ORDINE MATTEO 13/07 — ROTTA CONTENUTI CORRETTA:**
 - [ ] **Il prossimo carosello NON è EP_N2_03: è PRE_01 RIFATTO DA 0** — riscritto con
   le caratteristiche necessarie alla PUBBLICAZIONE (publish-ready: social-cut ≤10
