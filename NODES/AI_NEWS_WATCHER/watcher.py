@@ -416,6 +416,9 @@ def _safe_dt(s):
 
 
 def main():
+    # marker subito sul file di log: se manca, il processo e' morto prima di Python
+    # (crash duro/OOM al boot, non un errore del watcher — vedi run silenzioso 13/07)
+    logger.info("avvio passata (pid %d)", os.getpid())
     ap = argparse.ArgumentParser(description="AI News Watcher (tier, keyless)")
     ap.add_argument("--force", action="store_true", help="ignora la frequenza dei tier")
     ap.add_argument("--kind", choices=list(FETCHERS), help="limita a un tipo di sorgente")

@@ -16,5 +16,6 @@ if not defined PYTHON (
 
 :: passata che rispetta la frequenza dei tier (no --force: solo le sorgenti "due")
 "%PYTHON%" NODES\AI_NEWS_WATCHER\watcher.py >> "%LOG%" 2>&1
+echo [ai_watch] exit %ERRORLEVEL% >> "%LOG%"
 
 echo [ai_watch] done %DATE% %TIME% >> "%LOG%"
