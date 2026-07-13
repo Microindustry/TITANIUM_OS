@@ -506,6 +506,27 @@ def check_qc_episodi(signals: dict) -> None:
     signals["qc_episodi"] = out
 
 
+def check_caroselli(signals: dict) -> None:
+    """(#57, 13/07) Sentinella regole caroselli: esegue il QC condiviso
+    (CONTENT_ENGINE/scripts/caroselli_qc.py = stessa logica del check manuale,
+    GUIDA_CAROSELLI.md §5) — file canonici, canvas 1080x1350, slide entro i
+    limiti (completo/social IG), anti-wireframe, self-contained."""
+    out = {"checked": 0, "issues": 0}
+    try:
+        sys.path.insert(0, str(TI_ROOT / "CONTENT_ENGINE" / "scripts"))
+        from caroselli_qc import run_qc
+        rep = run_qc()
+        out = {"checked": rep.get("checked", 0), "issues": len(rep.get("issues", []))}
+        for msg in rep.get("issues", []):
+            signals["log_issues"].append({
+                "log": "QC caroselli", "tipo": "regola caroselli violata",
+                "riga": msg, "data": TODAY,
+            })
+    except Exception as e:
+        logger.warning("QC caroselli saltato: %s", e)
+    signals["qc_caroselli"] = out
+
+
 def check_pip_audit(signals: dict) -> None:
     """(#54 ondata C, attacco 02 Dep) CVE sulle dipendenze: legge il report
     settimanale di pip-audit (sabato, night_push). Segnala solo le vulnerabilita'
@@ -733,6 +754,7 @@ def main():
     check_organi_vivi(signals)
     check_pip_audit(signals)
     check_qc_episodi(signals)
+    check_caroselli(signals)
     critiche = critiche_via_llm(signals)
     if critiche is None:
         signals["_fonte"] = "auto-audit (regole)"

@@ -19,11 +19,16 @@ Ogni carosello vive nella **sua cartella**, con tutti i file divisi. Convenzione
 ```
 CAROSELLI/
   <EP_ID>/                 es. EP_N2_01, EP_N2_02, …
-    carosello.html         sorgente HTML+SVG (Adobe-Fonts-ready, import-ready per Express)
-    caption.txt            descrizione/caption pronta da postare
+    carosello.html         taglio COMPLETO (16 slide) — sorgente HTML+SVG (Express-ready)
+    social.html            taglio SOCIAL (≤10 slide) — derivato dallo STESSO generatore
+    caption.txt            descrizione/caption pronta da postare (del social-cut)
     README.md              scheda: episodio fonte, le slide, link Express, stato
-    slides/                export PNG delle slide (1080×1350)
+    slides/                export PNG del completo (1080×1350)
+    slides_social/         export JPEG del social-cut (pronti per IG, ≤8MB)
 ```
+**La procedura completa e le regole publish-ready sono in
+`MENTE/KNOWLEDGE/MONDO/GUIDA_CAROSELLI.md` (fonte unica operativa, 13/07) — QC
+automatico: `python CONTENT_ENGINE/scripts/caroselli_qc.py`.**
 
 ## Regole
 - **Un episodio = una cartella `<EP_ID>/`.** Mai file di caroselli diversi mischiati.
