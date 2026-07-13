@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-09T03:52:38",
-  "date": "2026-07-09",
-  "git_head": "9281b0cf",
-  "rag_chunks": 18511,
+  "last_audit": "2026-07-13T09:21:03",
+  "date": "2026-07-13",
+  "git_head": "d07209ff",
+  "rag_chunks": 18594,
   "n_episodes": 265,
-  "n_commits_7d": 62,
+  "n_commits_7d": 71,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,71 +14,65 @@
   },
   "log_issues": [
     {
-      "log": "research_agent.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-09 03:39:13 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-09"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "nina-loop: ultimo output 4.2 giorni fa (soglia 3) — nina_state.json",
+      "data": "2026-07-13"
     },
     {
-      "log": "research_agent.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-09 03:39:24 [research_agent      ] INFO     openalex -> 0 risultati",
-      "data": "2026-07-09"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "snapshot RAG: ultimo output 4.2 giorni fa (soglia 3) — rag_snapshots",
+      "data": "2026-07-13"
     },
     {
-      "log": "research_agent.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-09 03:39:32 [research_agent      ] INFO     [02] [semantic_scholar] Design and Implementation of Thermal Error Compensation Method for CNC Machine T — Ying Gao, Xiaojun Xia, Yinrui Guo 2024",
-      "data": "2026-07-09"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "retention disco: ultimo output 4.2 giorni fa (soglia 3) — retention_last.json",
+      "data": "2026-07-13"
     },
     {
-      "log": "_CANONE.md",
-      "tipo": "serie oltre il canone dichiarato",
-      "riga": "su disco EP_N2_53, il canone dichiara EP_N2_52: aggiornare _CANONE.md",
-      "data": "2026-07-09"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "AI news watcher: ultimo output 4.2 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-07-13"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
-      "riga": "42 CVE fixabili in 9 pacchetti: aiohttp 3.14.0 (8), cryptography 48.0.0 (1), gradio 5.50.0 (9), pillow 11.3.0 (7), pydantic-settings 2.14.1 (1), python-multipart 0.0.30 (1)",
-      "data": "2026-07-09"
+      "riga": "22 CVE fixabili in 3 pacchetti: gradio 5.50.0 (9), pillow 11.3.0 (7), starlette 0.52.1 (6)",
+      "data": "2026-07-13"
     }
   ],
-  "vault_orphans": 1,
+  "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 0,
+    "file_age_days": 4,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 0,
+    "canone_age_days": 4,
     "max_ep_disco": 53,
-    "max_ep_canone": 52
+    "max_ep_canone": 53
   },
   "organi_vivi": {
-    "nina-loop": 0.0,
-    "snapshot RAG": 0.0,
-    "inventario notturno": 1.0,
-    "retention disco": 1.0,
-    "AI news watcher": 0.0,
-    "daily brief": 0.8,
-    "riflusso FATTI": 0.1
+    "nina-loop": 4.2,
+    "snapshot RAG": 4.2,
+    "inventario notturno": 0.0,
+    "retention disco": 4.2,
+    "AI news watcher": 4.2,
+    "daily brief": 0.0,
+    "riflusso FATTI": 4.3
   },
   "pip_audit": {
-    "vulns": 43,
-    "fixable": 42,
+    "vulns": 23,
+    "fixable": 22,
     "packages": [
-      "aiohttp 3.14.0 (8)",
-      "cryptography 48.0.0 (1)",
       "gradio 5.50.0 (9)",
       "pillow 11.3.0 (7)",
-      "pydantic-settings 2.14.1 (1)",
-      "python-multipart 0.0.30 (1)",
-      "setuptools 65.5.0 (5)",
-      "starlette 0.52.1 (6)",
-      "yt-dlp 2026.3.17 (4)"
+      "starlette 0.52.1 (6)"
     ]
   },
   "qc_episodi": {
@@ -88,9 +82,9 @@
   },
   "critiche": {
     "added": 6,
-    "auto_closed": 6,
-    "total": 159,
-    "open": 24
+    "auto_closed": 18,
+    "total": 165,
+    "open": 12
   },
   "verdict": "ATTENZIONE"
 }
