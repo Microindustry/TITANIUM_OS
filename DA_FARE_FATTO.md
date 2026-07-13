@@ -103,6 +103,14 @@
   non si copiano → bussola/STATE/git → FOTO), regole (grounding, canon_guard, QC, formato
   doppio, un episodio alla volta solo se definitivo). Vista filtra solo id `EP_SG_`.
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
+- [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
+  usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta
+  vietato. Scritta nello stampo FORMATO_EPISODIO_DOPPIO (MENTE commit 9ea0cf1) + piano EP_SG +
+  memoria. Verificato: canon_guard già compatibile (non flagga «canale usato»); il vecchio
+  framing «recuperato €0» vive solo in ASSOLUTO/VERSIONI che è GIÀ escluso dal RAG (#53).
+- [✓] **Predisposizione verificata**: caroselli (cartella per ID, doppio taglio, QC, template),
+  stampo validato, Obsidian (vault rigenerato #57, la cartella EP_SG entrerà con setup/intersect),
+  RAG (18k chunk, MENTE indicizzata, incrementale verde oggi). Numerazione: EP_SG_NN → CAROSELLI/EP_SG_NN/.
 - [ ] PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.
 - [ ] Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).
 

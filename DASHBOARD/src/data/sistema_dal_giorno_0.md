@@ -17,7 +17,7 @@
 
 ## Atto II · Il Corpo e la Mente (2026 — il come)
 
-- **4 · La Macchina** — V32: 178 kg di corpo unico, ±0.019 mm, EUR 2.250 — perché costruire invece di comprare. *Fonti: MENTE/V32 via RAG, stagione S2, Config A→G.*
+- **4 · La Macchina** — V32: 178 kg di corpo unico, ±0.019 mm — perché costruire invece di comprare. I componenti: **comprati su canale usato**, da chi sa valutare l'attrezzatura industriale — mai prezzi per-pezzo; ciò che arriva d'ora in poi è materiale nuovo e si racconta nuovo. *Fonti: MENTE/V32 via RAG, stagione S2, Config A→G.*
 - **5 · La Mente** — non ricordare, documenta: MENTE + RAG, il compounding del sapere. *Fonti: pipeline conoscenza, numeri RAG reali.*
 - **6 · La Notte** — il sistema lavora mentre dormo: notturne, agenti, sentinelle — e i guasti veri, raccontati senza trucco. *Fonti: bussola #39-57, night_audit, momenti MOM.*
 
@@ -39,4 +39,8 @@
 
 ## Regole di produzione
 
-Voce di Matteo in prima persona · ogni fatto con fonte · canon_guard sui numeri · caroselli_qc su ogni uscita · formato doppio (episodio completo + taglio social ≤10 slide) · un episodio alla volta: entra in questa pagina **solo quando è definitivo**.
+Voce di Matteo in prima persona · ogni fatto con fonte · canon_guard sui numeri · caroselli_qc su ogni uscita · formato doppio (episodio completo 16 + taglio social ≤10 slide) · un episodio alla volta: entra in questa pagina **solo quando è definitivo**.
+
+- **Provenienza componenti (regola 14/07):** "comprati su canale usato" — mai "recuperati", mai prezzi per-pezzo; gli acquisti futuri si raccontano come materiale nuovo.
+- **Numerazione già predisposta:** capitolo = `EP_SG_NN` → cartella `CAROSELLI/EP_SG_NN/` (carosello.html 16 + social.html ≤10 + caption + slides/); se un capitolo non sta nel social-cut si spezza in più caroselli (`EP_SG_NNb`), come la serie PRE.
+- **Nina si interpella:** le storie di sistema sono voce Matteo, ma Nina può affacciarsi come domanda che apre o chiude un capitolo — il ponte tra i due binari, mai la narratrice.
