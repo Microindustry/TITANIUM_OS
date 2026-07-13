@@ -92,12 +92,17 @@
 *Rotta contenuti #57: PRE_01 insieme + storie di sistema Claude 100%. Primo pezzo: la vetrina.*
 
 - [✓] **«DAL GIORNO 0» lato SISTEMA in sidebar** (sotto STORIE · SISTEMA, come Nina):
-  nuova pagina isolata = **fondamento del sistema** (`sistema_dal_giorno_0.md`: giorno 0,
-  pilastri coi numeri master, metodo, come nascono le storie — voce Matteo, solo canone)
-  + **tutti i 157 episodi in un'unica timeline cronologica** (data_evento, separatori
-  d'anno, ogni card col colore della sua stagione) dal primo «Il Socio» (2024) a oggi.
-  Additivo: la vista a stagioni resta identica. Build verde, screenshot prima/dopo
-  (`DATA/dash_shot_storie_stagioni.png` + `dash_shot_sistema_giorno0.png`).
+  nuova pagina isolata, additiva — la vista a stagioni resta identica. Build verde,
+  screenshot prima/dopo (`DATA/dash_shot_storie_stagioni.png` + `dash_shot_sistema_giorno0.png`).
+- [✗] ~~timeline dei 157 episodi dentro giorno0~~ — corretta da Matteo: il grezzo NON è la
+  storia; la pagina deve stare vuota finché il piano non ha l'ok. Rimossa (commit successivo).
+- [✓] **Pagina = SOLO il piano della storia** (`sistema_dal_giorno_0.md` riscritto): tesi
+  (artigiano+socio AI → sistema che si gestisce/ripara/racconta da solo), 3 atti / 9 capitoli
+  `EP_SG_01…09` (Socio→Organismo→Verifica · Macchina→Mente→Notte · Storie→Campo di
+  Battaglia→Stella Polare), gerarchia fonti (canone → RAG → 157 grezzi che si riscrivono
+  non si copiano → bussola/STATE/git → FOTO), regole (grounding, canon_guard, QC, formato
+  doppio, un episodio alla volta solo se definitivo). Vista filtra solo id `EP_SG_`.
+- [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [ ] PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.
 - [ ] Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).
 

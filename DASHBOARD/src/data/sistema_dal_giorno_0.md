@@ -1,46 +1,42 @@
-# Il Sistema — dal Giorno 0
+# Il Sistema — dal Giorno 0 (il piano della storia)
 
-> Il punto di partenza: il **fondamento** — da dove viene tutto, cosa sto costruendo e come il
-> sistema racconta se stesso. Qui sotto trovi **tutti gli episodi del sistema in ordine di tempo**,
-> dal giorno 0 a oggi: il dev-log come una storia unica, non stagioni separate.
+> Questa pagina è la **storia definitiva del sistema**, raccontata da capo. Adesso contiene
+> **solo il piano**: cosa raccontiamo, come, e da dove vengono i fatti. Gli episodi definitivi
+> (`EP_SG_NN`) entrano qui **uno alla volta**, solo quando sono publish-ready.
+> I 157 episodi esistenti restano in «Storie · Sistema»: sono il materiale grezzo, non la storia.
 
-**In una riga:** quindici anni di industria, dodici metri quadri di taverna, un sistema che gira davvero — e che scrive da solo la propria storia, un milestone alla volta.
-
----
-
-## 1 · Il giorno 0 (da dove parte tutto)
-
-Il giorno 0 non è una data di calendario: è il momento in cui ho smesso di tenere tutto in testa e ho iniziato a costruire la struttura fuori. Quindici anni di industria — TIG su titanio per la MotoGP, robot industriali, presse, controllo qualità — mi avevano dato i fondamentali. Ma per costruire qualcosa di mio, da solo, serviva un'impalcatura: ho l'ADHD, il mio cervello non gestisce la dispersione, e la struttura interna non è affidabile per default. Così la struttura l'ho scritta in software. Si chiama TITANIUM_OS. Il primo episodio della storia («Il Socio») racconta esattamente questo: un'AI che entra in taverna come attrezzo e ne esce come socio di lavoro.
+**La tesi:** come un artigiano con quindici anni di industria e l'ADHD ha costruito, insieme a un socio AI, un sistema che si gestisce, si ripara e **si racconta da solo**. Non un devlog, non un tutorial: una storia — metallo e codice sono lo stesso mestiere, e la struttura esterna è libertà.
 
 ---
 
-## 2 · I pilastri (concreti, con i numeri)
+## Atto I · La Scintilla (2024-2025 — il perché)
 
-- **V32** — fresatrice CNC 3 assi progettata e costruita da zero. 178 kg di corpo unico, precisione RSS ±0.019 mm (IT6-IT7), investimento EUR 2.250. BEP: 61 ore di lavoro. È il cuore produttivo.
-- **MIMS** — sistema di connettori modulari a geometria proprietaria. La strategia è entrare dal basso e scalare; il perimetro geometrico è proprietà intellettuale da proteggere.
-- **VULCAN** — pressa per polimeri a 4 colonne: lo strumento di produzione di MIMS.
-- **GENESIS** — il sistema operativo cognitivo: RAG sulla MENTE, agenti notturni, automazioni, dashboard. È quello che tiene tutto insieme (~70%).
-- **Vita Natura** — il centro estetico di Maria, gestito con automazioni AI: la prova che il sistema funziona su un caso reale con clienti reali.
+- **1 · Il Socio** — giorno 0: un'AI entra in taverna come attrezzo, ne esce come socio. *Fonti: EP_S0_00 (grezzo), sessioni MENTE, canone.*
+- **2 · L'Organismo** — tre progetti separati (fresa, connettori, automazioni) diventano un corpo solo, con un nome. *Fonti: EP_S0_01, stagione S1, pilastri STATE.*
+- **3 · La Verifica** — 13/02/2026: prima foto, primo calibro — il sistema diventa reale. *Fonti: EP_S0_02, FOTO/, DATI MASTER.*
 
----
+## Atto II · Il Corpo e la Mente (2026 — il come)
 
-## 3 · Il metodo (le regole che tengono in piedi)
+- **4 · La Macchina** — V32: 178 kg di corpo unico, ±0.019 mm, EUR 2.250 — perché costruire invece di comprare. *Fonti: MENTE/V32 via RAG, stagione S2, Config A→G.*
+- **5 · La Mente** — non ricordare, documenta: MENTE + RAG, il compounding del sapere. *Fonti: pipeline conoscenza, numeri RAG reali.*
+- **6 · La Notte** — il sistema lavora mentre dormo: notturne, agenti, sentinelle — e i guasti veri, raccontati senza trucco. *Fonti: bussola #39-57, night_audit, momenti MOM.*
 
-- **Niente è finito — ogni cosa è una versione.** Una versione funzionante oggi vale più di una perfetta mai.
-- **Identifica → Automatizza → Scala.** Tre volte a mano = script. Ogni giorno = nodo.
-- **Cattura mentre costruisci.** Ogni decisione finisce in MENTE; il RAG la restituisce domani. Non ricordare: documenta.
-- **Leva cognitiva: 1 input → N output.** Un milestone diventa episodio + reel + post + chunk RAG.
-- **Output misurabile prima di tutto.** Se non si misura (mm, ore, euro, chunk, commit), non esiste.
-- **Tutto si connette.** Officina → codice → contenuto → RAG → officina. Il loop è intenzionale.
+## Atto III · L'Organismo che si racconta (oggi — dove va)
 
----
-
-## 4 · Come nascono queste storie (il motore)
-
-Le storie del sistema **si autoalimentano**: ogni milestone verificato in STATE.json genera un episodio; le sessioni di lavoro diventano racconto. La voce è la mia — la gestione è di Claude al 100% (testi, grafica, caroselli, QC), con tre garanzie: ogni fatto è **ancorato al RAG** (niente inventato), il **canone** fa da guardiano (dati master verificati, mai numeri a caso), e ogni uscita passa un **controllo qualità automatico**. Formato doppio: la versione completa (l'episodio vero, lungo) e il taglio social (snello, per il canale).
+- **7 · Le Storie** — il motore dei contenuti: milestone → episodio, il formato doppio, Nina. *Fonti: GUIDA_CAROSELLI, STORIE.*
+- **8 · Il Campo di Battaglia** — il sistema si difende da solo: 0 CVE su 194 pacchetti, self-heal, QC automatico. *Fonti: bussola #57, pip_audit.*
+- **9 · La Stella Polare** — 15/07/2030: il capannone, la sovranità. *Fonti: DATI MASTER, doc valore-per-pilastro.*
 
 ---
 
-## La stella polare
+## Da dove vengono i fatti (gerarchia, mai invertita)
 
-Quindici luglio duemilatrenta: capannone proprio. Non è un obiettivo lavorativo — è un obiettivo di **sovranità**: controllo sui mezzi di produzione, sul software, sulla conoscenza, sul tempo. Il Sistema è la risposta a quindici anni di lavoro per strutture di altri. Adesso la struttura la costruisco io — pezzo per pezzo, episodio per episodio.
+- **1 · Il canone** — DATI MASTER (CLAUDE.md) + _CANONE: ogni numero viene solo da qui.
+- **2 · MENTE / RAG** — sessioni e decisioni datate: il grounding di ogni fatto ed evento.
+- **3 · I 157 episodi esistenti** (S0/S1/ST/S2/MOM/AUTO) — materiale grezzo e cronologia: **si riscrive dal vero, non si copia**. Restano in «Storie · Sistema».
+- **4 · Bussola + STATE.json + git** — la cronologia verificabile (chi ha fatto cosa, quando).
+- **5 · FOTO/** — il visivo per i caroselli.
+
+## Regole di produzione
+
+Voce di Matteo in prima persona · ogni fatto con fonte · canon_guard sui numeri · caroselli_qc su ogni uscita · formato doppio (episodio completo + taglio social ≤10 slide) · un episodio alla volta: entra in questa pagina **solo quando è definitivo**.

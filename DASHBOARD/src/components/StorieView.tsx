@@ -433,19 +433,23 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
   //   "giorno0"  -> Nina dal giorno 0 = fondamento + tutti gli episodi nella miglior versione
   const ninaPage: "rag" | "giorno0" = ninaView ?? (focusTarget === "rag" ? "rag" : "giorno0");
 
-  // Pagina SISTEMA "dal giorno 0" (gemella di quella di Nina): il fondamento del sistema
-  // + TUTTI gli episodi in un'unica timeline cronologica (data_evento), dal giorno 0 a oggi.
-  // Ogni card tiene il colore della sua stagione: la provenienza resta leggibile.
+  // Pagina SISTEMA "dal giorno 0" (gemella di quella di Nina): il PIANO della storia
+  // + SOLO gli episodi definitivi (EP_SG_NN), uno alla volta quando sono publish-ready.
+  // Il materiale grezzo (le stagioni S0/S1/ST/S2/MOM/AUTO) resta in «Storie · Sistema»:
+  // si riscrive dal vero, non si copia.
+  const sgNum = (e: Episode) => {
+    const m = e.id.match(/EP_SG_(\d+)/);
+    return m ? parseInt(m[1], 10) : 999;
+  };
   const sistemaGiorno0Eps = statusFiltered(
-    EPISODES.filter(ep => ep.stagione !== NINA_STAGIONE && isTopLevel(ep))
-  ).sort((a, b) => (a.data_evento || "9999").localeCompare(b.data_evento || "9999"));
-  const seasonColor = (ep: Episode) => STAGIONI[ep.stagione]?.color ?? "#34d399";
+    EPISODES.filter(ep => ep.id.startsWith("EP_SG_") && isTopLevel(ep))
+  ).sort((a, b) => sgNum(a) - sgNum(b));
 
   // Conteggi (per-mondo, così l'header dice la verità del mondo che stai guardando)
   const sistemaEps = EPISODES.filter(e => e.stagione !== NINA_STAGIONE);
-  const totalMin = (mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE) : sistemaEps)
-    .reduce((s, e) => s + e.durata_min, 0);
-  const modeEps = mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE) : sistemaEps;
+  const modeEps = mode === "nina" ? EPISODES.filter(e => e.stagione === NINA_STAGIONE)
+    : sistemaView ? sistemaGiorno0Eps : sistemaEps;
+  const totalMin = modeEps.reduce((s, e) => s + e.durata_min, 0);
   const readyCount = modeEps.filter(e => e.status === "ready").length;
 
   return (
@@ -520,9 +524,10 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
               le zone, come nasce l'avventura) <strong style={{ color: NINA_COLOR }}>+ tutti gli episodi nella loro miglior versione</strong>, dall'inizio.</>
             )
           ) : sistemaView === "giorno0" ? (
-            <><strong className="text-emerald-400">Il Sistema dal giorno 0</strong> — il fondamento (da dove parte tutto, i pilastri,
-            il metodo) <strong className="text-emerald-400">+ tutti gli episodi in ordine di tempo</strong>, dal primo «Socio» a oggi.
-            Ogni episodio tiene il colore della sua stagione.</>
+            <><strong className="text-emerald-400">Il Sistema dal giorno 0</strong> — la storia definitiva, raccontata da capo:
+            qui c'è <strong className="text-emerald-400">il piano</strong> (la tesi, i 3 atti, le fonti) e sotto entrano
+            <strong className="text-emerald-400"> solo gli episodi definitivi</strong> (EP_SG), uno alla volta.
+            Il materiale grezzo resta in «Storie · Sistema».</>
           ) : (
             <>Le storie del <strong className="text-slate-300">sistema</strong>: il dev-log di TITANIUM_OS, in ordine.
             Si <strong className="text-emerald-400">autoalimentano</strong> — ogni milestone verificato genera un episodio.
@@ -611,43 +616,36 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
             <div className="flex items-center gap-2 mb-2 mt-1">
               <Mic size={14} className="text-emerald-400" />
               <h3 className="text-sm font-bold tracking-wider uppercase text-emerald-400">
-                Il Sistema dal giorno 0 — {sistemaGiorno0Eps.length} episodi in ordine di tempo
+                Il Sistema dal giorno 0 — il piano della storia
               </h3>
-              <span className="text-[10px] font-mono text-slate-500">il fondamento + il dev-log come una storia unica · (le stagioni restano in «Storie · Sistema»)</span>
+              <span className="text-[10px] font-mono text-slate-500">la storia definitiva si compila un episodio alla volta · il grezzo resta in «Storie · Sistema»</span>
             </div>
             <div className="rounded-xl border px-5 py-4 overflow-hidden border-emerald-400/20 bg-emerald-400/5">
               {sistemaFoundationLines.map((line, i) => renderMdLine(line, i))}
             </div>
 
-            {/* la timeline: tutti gli episodi, dal primo all'ultimo, con separatori d'anno */}
+            {/* gli episodi DEFINITIVI (EP_SG_NN): entrano uno alla volta, solo publish-ready */}
             <div className="flex items-center gap-2 mb-2 mt-5">
               <BookOpen size={13} className="text-emerald-400" />
               <h4 className="text-xs font-bold tracking-wider uppercase text-emerald-400">
-                Tutti gli episodi — dal giorno 0 a oggi
+                Gli episodi definitivi — uno alla volta
               </h4>
               <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full bg-emerald-400/10 text-emerald-400">
                 {sistemaGiorno0Eps.length}
               </span>
             </div>
             {sistemaGiorno0Eps.length === 0 ? (
-              <p className="text-xs text-slate-600 italic px-2 py-4 text-center">Nessun episodio con questo filtro.</p>
+              <div className="rounded-xl border border-dashed border-slate-700/40 px-4 py-6 text-center space-y-1">
+                <p className="text-xs text-slate-500">
+                  Ancora nessun episodio definitivo: si parte quando il piano qui sopra ha l'ok.
+                </p>
+                <p className="text-[10px] font-mono text-slate-600">
+                  i 9 capitoli entrano qui come EP_SG_01…09 · il materiale grezzo resta in «Storie · Sistema»
+                </p>
+              </div>
             ) : (
               <div className="space-y-2">
-                {sistemaGiorno0Eps.map((ep, i) => {
-                  const year = (ep.data_evento || "").slice(0, 4);
-                  const prevYear = i > 0 ? (sistemaGiorno0Eps[i - 1].data_evento || "").slice(0, 4) : null;
-                  return (
-                    <div key={ep.id}>
-                      {year && year !== prevYear && (
-                        <div className="flex items-center gap-3 pt-3 pb-1">
-                          <span className="text-xs font-mono font-bold text-slate-400 tabular-nums">{year}</span>
-                          <div className="h-px flex-1 bg-gradient-to-r from-slate-700/60 to-transparent" />
-                        </div>
-                      )}
-                      <EpisodeCard ep={ep} color={seasonColor(ep)} childrenOf={childrenOf} />
-                    </div>
-                  );
-                })}
+                {sistemaGiorno0Eps.map(ep => <EpisodeCard key={ep.id} ep={ep} color="#34d399" childrenOf={childrenOf} />)}
               </div>
             )}
           </div>
