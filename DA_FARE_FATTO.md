@@ -139,6 +139,12 @@
   §2-bis) · la produzione (doppio, autonomia con garanzie, FATTI che rifluiscono nel RAG) ·
   il ponte pareggiato · il riparti-da-0 · **12 guardie QC consolidate in un posto**.
   Specchio in dashboard aggiornato.
+- [✓] **STAGIONI 2-6 FISSATE nella linea guida** (MENTE 9a24f38, RAG ok): S2 «La Sala
+  Macchine» PRONTA col grezzo residuo (~30-40 caroselli, può correre in parallelo alla S1) ·
+  S3 «La Macchina lavora» (gate: mandrino) · S4 «La Fabbrica» (gate: pressa; mai segreti) ·
+  S5 «Il mondo reale» (EVA, pilot v0.3 vivo) · S6 «Il Motore» (HR 3 strati, si racconta
+  mentre si costruisce). Regola: senza prova non entra — l'arco è pronto, i contenuti
+  arrivano dal lavoro. ~100 caroselli coperti da materiale già esistente (S1+S2).
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

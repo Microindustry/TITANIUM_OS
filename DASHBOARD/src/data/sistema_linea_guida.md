@@ -60,6 +60,16 @@ La slide 1 è **il poster**, non la prima pagina: nel feed decide l'apertura, ne
 
 - CAP 1 Metodo · lavorare con l'IA — CAP 2 Visione · architettura — CAP 3 QC · misura — CAP 4 Meccanica · progettazione + procurement — CAP 5 Software · knowledge engineering — CAP 6 Automazione · orchestrazione + debug — CAP 7 Comunicazione · content engineering — CAP 8 Sicurezza · hardening — CAP 9 Strategia · direzione
 
+## Le stagioni 2-6 — la pipeline fissata (14/07)
+
+*Regola: senza prova non entra — una stagione parte quando il lavoro reale la produce.*
+
+- **S2 · «La Sala Macchine»** — PRONTA col materiale esistente (~30-40 caroselli): il grezzo non consumato dalla S1 — le sessioni epiche una per una (l'attacco dei 7 specialisti, la verità sparsa, le 3 facce, le decisioni architetturali), il dietro-le-quinte a quota più tecnica. Può correre in parallelo alla S1.
+- **S3 · «La Macchina lavora»** — mandrino → primi trucioli → primo pezzo H7 → le prime 61 ore (il BEP vissuto). *Gated: ordine hardware.*
+- **S4 · «La Fabbrica»** — VULCAN → stampi → i primi MIMS → il Cavallo di Troia sul mercato. *Gated: pressa. Mai ricette/segreti.*
+- **S5 · «Il mondo reale»** — EVA a regime da Vita Natura: clienti veri, numeri veri. *Materiale parziale: pilot v0.3 vivo.*
+- **S6 · «Il Motore»** — la piattaforma HR a 3 strati, il CV vivo, il percorso dei perché — si racconta mentre si costruisce.
+
 ## Ordine, cadenza, scala
 
 - Si parte da **EP_SG_01** (dopo PRE_01, che resta INSIEME). Dentro un capitolo: prima il portante, poi i figli. Tra capitoli: sequenziale 1→9, ma un milestone fresco può chiamare il suo figlio in anticipo.
