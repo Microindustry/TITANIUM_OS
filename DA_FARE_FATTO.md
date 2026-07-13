@@ -120,6 +120,14 @@
   Vale per Nina E per EP_SG. Specchio in LINEA GUIDA dashboard.
 - [ ] Proposta gated: check copertina eseguibile in caroselli_qc (safe-zone + font minima) —
   quando si tocca il QC, non ora.
+- [✓] **PAREGGIO NINA↔SISTEMA — l'ecosistema** (ordine Matteo): LINEA GUIDA anche per Nina —
+  voce in sidebar (sezione NINA, dopo DAL GIORNO 0) + `MENTE/KNOWLEDGE/MONDO/LINEA_GUIDA_NINA.md`
+  (commit a77f36f, RAG ok): ordina le fonti (bibbie→guida→stampo→ponte→indice), fissa il
+  riparti-da-0 (PRE_01 INSIEME col doppio taglio e copertine §2-bis, si spezza se >10;
+  EP_N2_03 dopo; i 52 esistenti additivi), e le interazioni col sistema SPECULARI al ponte
+  (Nina DÀ la domanda / RICEVE semi e prove; pareggio persone: Nina in SG solo domanda,
+  Matteo in EP_N2 solo Costruttore-papà; guardie QC comuni). Le due sezioni sidebar ora
+  sono simmetriche: SISTEMA (EPISODI·GIORNO0·GUIDA) ↔ NINA (NINA·GIORNO0·GUIDA·GIOCO·MAPPA).
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

@@ -103,6 +103,7 @@ const NAV_ITEMS: NavItem[] = [
   // NINA — il prodotto educativo (pagina pilastro in cima; l'Archivio è sotto-voce di DAL GIORNO 0)
   { id: "nina-pilastro", label: "NINA",         icon: Bot,      color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
   { id: "nina-giorno0",  label: "DAL GIORNO 0", icon: Sparkles, color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
+  { id: "nina-guida",    label: "LINEA GUIDA",  icon: Map,      color: "text-pink-400", group: "nina", dot: "bg-pink-400" },
   { id: "gioco",         label: "GIOCO",        icon: Bot,      color: "text-pink-400", group: "nina" },
   { id: "mappa",         label: "MAPPA",        icon: Map,      color: "text-pink-400", group: "nina" },
   // PUBBLICAZIONI — l'output verso il mondo
@@ -533,6 +534,7 @@ function AppInner() {
             {view === "sistema-guida"   && <StorieView sistemaView="guida" />}
             {view === "avventura"   && <StorieView initialStagione="AV" />}
             {view === "nina-giorno0"  && <StorieView ninaView="giorno0" />}
+            {view === "nina-guida"    && <StorieView ninaView="guida" />}
             {view === "nina-archivio" && <StorieView ninaView="rag" />}
             {view === "pitch"       && <PitchView />}
             {view === "valore"      && <ValoreView />}

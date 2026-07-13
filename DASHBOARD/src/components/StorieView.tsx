@@ -8,6 +8,7 @@ import { EPISODES, STAGIONI, type Episode, type EpisodeStatus } from "../data/st
 import ninaFoundationMd from "../data/nina_dal_giorno_0.md?raw";
 import sistemaFoundationMd from "../data/sistema_dal_giorno_0.md?raw";
 import sistemaGuidaMd from "../data/sistema_linea_guida.md?raw";
+import ninaGuidaMd from "../data/nina_linea_guida.md?raw";
 import { Mic, Clock, ChevronDown, ChevronRight, ArrowLeft, Layers, BookOpen, Maximize2, Minimize2, Sparkles, Archive, Bot, Cpu } from "lucide-react";
 import { useContentFiles, useNinaStatus, useNinaArchived, useFile } from "../hooks/useSystemQuery";
 import { useUIStore } from "../stores/systemStore";
@@ -339,7 +340,7 @@ function NinaArchived() {
   );
 }
 
-export function StorieView({ initialStagione = null, ninaView = null, sistemaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | null; sistemaView?: "giorno0" | "guida" | null } = {}) {
+export function StorieView({ initialStagione = null, ninaView = null, sistemaView = null }: { initialStagione?: string | null; ninaView?: "rag" | "giorno0" | "guida" | null; sistemaView?: "giorno0" | "guida" | null } = {}) {
   const navigateTo = useUIStore(s => s.navigateTo);
   const { data: liveContent } = useContentFiles();
   const liveCount = liveContent?.total ?? 0;
@@ -383,6 +384,7 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
   const foundationLines = stripFoundation(ninaFoundationMd);
   const sistemaFoundationLines = stripFoundation(sistemaFoundationMd);
   const sistemaGuidaLines = stripFoundation(sistemaGuidaMd);
+  const ninaGuidaLines = stripFoundation(ninaGuidaMd);
 
   // Storie di Sistema: si visualizzano TUTTE le stagioni aperte di default (anche AUTO e
   // le bozze) — niente episodi nascosti. Se si arriva su una stagione precisa, apri solo quella.
@@ -433,7 +435,7 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
   // Due PAGINE Nina isolate (non due sezioni nella stessa): il bottone preme l'una o l'altra.
   //   "rag"      -> RAG Nina = solo gli archiviati
   //   "giorno0"  -> Nina dal giorno 0 = fondamento + tutti gli episodi nella miglior versione
-  const ninaPage: "rag" | "giorno0" = ninaView ?? (focusTarget === "rag" ? "rag" : "giorno0");
+  const ninaPage: "rag" | "giorno0" | "guida" = ninaView ?? (focusTarget === "rag" ? "rag" : "giorno0");
 
   // Pagina SISTEMA "dal giorno 0" (gemella di quella di Nina): il PIANO della storia
   // + SOLO gli episodi definitivi (EP_SG_NN), uno alla volta quando sono publish-ready.
@@ -518,7 +520,10 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
         {/* Introduzione di cosa trovi sotto — cambia col mondo scelto */}
         <p className="text-xs text-slate-500 leading-relaxed ml-7 mt-3 max-w-3xl">
           {mode === "nina" ? (
-            ninaPage === "rag" ? (
+            ninaPage === "guida" ? (
+              <><strong style={{ color: NINA_COLOR }}>Linea guida provvisoria</strong> — il binario di Nina fissato in un posto:
+              il riparti-da-0 (PRE_01, doppio taglio, copertina §2-bis) e le interazioni col sistema, pareggiate col binario EP_SG.</>
+            ) : ninaPage === "rag" ? (
               <><strong style={{ color: NINA_COLOR }}>RAG Nina</strong> — <strong style={{ color: NINA_COLOR }}>solo gli archiviati</strong>:
               l'origine (EP_AV) e le versioni precedenti, la sorgente da cui il nodo rigenera e indicizza da solo.</>
             ) : (
@@ -722,6 +727,25 @@ export function StorieView({ initialStagione = null, ninaView = null, sistemaVie
                 </div>
               )}
             </div>
+        )}
+
+        {/* PAGINA 3 — LINEA GUIDA NINA (provvisoria): il binario fissato, pareggiato con EP_SG */}
+        {mode === "nina" && ninaPage === "guida" && (
+          <div className="scroll-mt-4">
+            <div className="flex items-center gap-2 mb-2 mt-1">
+              <BookOpen size={14} style={{ color: NINA_COLOR }} />
+              <h3 className="text-sm font-bold tracking-wider uppercase" style={{ color: NINA_COLOR }}>
+                Linea guida provvisoria — Nina
+              </h3>
+              <span className="text-[10px] font-mono text-slate-500">fonte canonica: MENTE/KNOWLEDGE/MONDO (LINEA_GUIDA_NINA + PONTE_SG_NINA) · questa è la copia di consultazione</span>
+            </div>
+            <div
+              className="rounded-xl border px-5 py-4 overflow-hidden"
+              style={{ borderColor: NINA_COLOR + "33", background: NINA_COLOR + "08" }}
+            >
+              {ninaGuidaLines.map((line, i) => renderMdLine(line, i))}
+            </div>
+          </div>
         )}
 
         {/* PAGINA 2 — RAG NINA: solo gli archiviati (origine EP_AV + versioni precedenti) */}
