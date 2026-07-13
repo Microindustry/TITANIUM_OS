@@ -336,6 +336,25 @@ _CANONE dichiara EP_N2_51 ma su disco c'è EP_N2_52 (mini-fix) + 42 CVE (punto 5
   recuperato), snapshot known-good fresco (quello delle 09:27 fotografava lo stato
   corrotto). Senza la cura, stanotte rag_recover avrebbe sparato un L2 rebuild-hard
   completo (martello) — ora l'incrementale ricuce chirurgico.
+- [✓] **P7/F6 caroselli CHIUSI** (80e2a198): il naming era già a canone da #53 — chiusi
+  i buchi residui: via l'ultimo `per 1.html` (v11), README EP_N2_01 aggiornato a 16
+  slide (e onesto: su Express c'è ancora la v1 8-slide), PRE_03 aveva la cartella ma
+  NON README/caption → creati (scheda 17 slide + caption cast), indice radice registra
+  EP_N2_02 e PRE_03, formato DOPPIO in pipeline.
+- [✓] **F7 watcher CHIUSO — watcher v1.2** (f48c5405): scoperto il bug zombie (il merge
+  per-handle non aggiorna le sorgenti esistenti: gli handle corretti in #53 avevano
+  lasciato i morti nello state a battere a vuoto ogni notte) → RETIRED_HANDLES li
+  pensiona in Tier3 con nota, storia intatta. Watchlist P4 completata: r/LocalLLaMA +
+  Wes Roth, AI Explained, David Ondrej, Dwarkesh, 3Blue1Brown, Antonio Guadagno
+  (tutti risolti). Run live: 7 sorgenti nuove, 90 segnali. arXiv cs.CL NON aggiunto
+  (per il report va DOPO il gate di rilevanza, se no affoga il digest).
+**ORDINE MATTEO 13/07 — ROTTA CONTENUTI CORRETTA:**
+- [ ] **Il prossimo carosello NON è EP_N2_03: è PRE_01 RIFATTO DA 0** — riscritto con
+  le caratteristiche necessarie alla PUBBLICAZIONE (publish-ready: social-cut ≤10
+  slide a norma IG + versione completa; stampo FORMATO_EPISODIO_DOPPIO adattato al
+  preambolo). La v17-slide resta in _VERSIONI. Registrato anche nel README caroselli.
+- [ ] **In parallelo: le STORIE DI SISTEMA in voce Matteo** (binario prima persona
+  deciso in #56) — si sistemano/scrivono insieme a PRE_01.
 2. [◐] **EPISODI (INSIEME a Matteo, non da solo)**: rifatti con la nuova visione
    (motore/3 strati) + caratteristiche pubblicazione (social-cut ≤10 slide + completo
    sito); quelli di sistema in prima persona (voce Matteo). EP_N2_03 "la Misura" doppio.
