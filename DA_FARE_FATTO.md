@@ -128,6 +128,17 @@
   (Nina DÀ la domanda / RICEVE semi e prove; pareggio persone: Nina in SG solo domanda,
   Matteo in EP_N2 solo Costruttore-papà; guardie QC comuni). Le due sezioni sidebar ora
   sono simmetriche: SISTEMA (EPISODI·GIORNO0·GUIDA) ↔ NINA (NINA·GIORNO0·GUIDA·GIOCO·MAPPA).
+- [✓] **LINEA GUIDA NINA PERFEZIONATA — v2** (ordine Matteo: "progetto grande, linee guida
+  importanti"; MENTE ca7adf3, RAG ok): da indice-di-fonti a DOCUMENTO OPERATIVO — cos'è Nina
+  e i 3 strati (bambino=primo registro, non tetto) · il mondo in 10 righe · i personaggi coi
+  NIENTE assoluti (no villain con faccia, no magia senza funzione, no invecchiamento, no
+  moralismo, no foto tranne il volto di Nina) · la struttura fissa dell'episodio (recap→cold
+  open→3 atti→open loop→SCENE→DIDATTICA→FATTI + test della sarta + provalo-tu + verità
+  ricorrenti) · la didattica (spirale, ripetizione spaziata progettata, dual coding, Pietre
+  ⟡1-7/⟡E col grafo dei prerequisiti) · il visivo (ricchi, marchio, ponte-nastro, copertina
+  §2-bis) · la produzione (doppio, autonomia con garanzie, FATTI che rifluiscono nel RAG) ·
+  il ponte pareggiato · il riparti-da-0 · **12 guardie QC consolidate in un posto**.
+  Specchio in dashboard aggiornato.
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta
