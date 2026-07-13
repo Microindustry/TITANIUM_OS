@@ -1,9 +1,11 @@
-# rag_engine.py | TITANIUM_OS / NODES / MENTE_RAG | v4.1 | 2026-06-24
+# rag_engine.py | TITANIUM_OS / NODES / MENTE_RAG | v4.3 | 2026-07-13
 # RAG ibrido: ChromaDB semantico + TF-IDF BM25 keyword + CrossEncoder reranker
 # Rebuild incrementale via manifest (mtime+size) — solo file nuovi/modificati
 # Pattern: Hybrid RRF + two-stage retrieval (2024-2025 state-of-art)
 # v4.1: chunking heading-aware sui .md (confini semantici + breadcrumb) + snapshot
 #       chroma_db in _VAULT/BACKUPS (recovery istantaneo senza ri-embedding)
+# v4.3: self-heal INVERSO nell'incrementale — file con vettori mancanti in ChromaDB
+#       (scritture perse da indicizzatori concorrenti al boot) vengono ri-processati
 
 import os, sys, re, json, pickle, logging, hashlib
 from datetime import datetime
@@ -447,6 +449,28 @@ def build_index(force: bool = False) -> int:
 
     corpus     = {} if force else _load_corpus()
     prev_files = manifest.get("files", {})
+
+    # Self-heal INVERSO (v4.3): il purge orfani sotto copre live-corpus, ma non il caso
+    # opposto — chunk nel manifest/corpus che in ChromaDB non ci sono (scritture perse:
+    # due indicizzatori concorrenti al boot, run interrotta tra upsert e save). Un file
+    # con vettori mancanti viene tolto dal manifest -> il loop qui sotto lo ri-processa
+    # in QUESTA run (mai cancellare dati buoni: gli id sono deterministici, il re-upsert
+    # sovrascrive; eventuali code vecchie le pulisce il purge orfani a valle).
+    if not force:
+        try:
+            live_now = set(collection.get(include=[]).get("ids", []))
+            stale_rels = [rel for rel, e in prev_files.items()
+                          if any(cid not in live_now for cid in e.get("chunk_ids", []))]
+            for rel in stale_rels:
+                for cid in prev_files[rel].get("chunk_ids", []):
+                    corpus.pop(cid, None)
+                prev_files.pop(rel)
+            if stale_rels:
+                logger.info("Self-heal inverso: %d file con vettori mancanti in ChromaDB -> ri-processo: %s",
+                            len(stale_rels), ", ".join(stale_rels[:5]))
+        except Exception as e:
+            logger.warning("Self-heal inverso saltato: %s", e)
+
     new_files: dict = {}
     all_paths  = sorted(
         p for p in MENTE_DIR.rglob("*")
