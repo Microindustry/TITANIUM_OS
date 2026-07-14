@@ -1,5 +1,7 @@
 @echo off
-:: CLAUDE_CODE.bat - Lancia Claude Code in TITANIUM_OS | v3.1 | 2026-06-09
+:: CLAUDE_CODE.bat - Lancia Claude Code in TITANIUM_OS | v3.2 | 2026-07-15
+:: Il collegamento Desktop usa TI_ROOT\claude.ico (icona stabile, non il path versionato
+:: di claude.exe che cambia a ogni update) + hotkey Ctrl+Alt+T.
 :: Doppio click: apre Claude nella cartella giusta e avvia una sessione NUOVA che riprende
 :: lo stato leggendo i file di handoff (DA_FARE_FATTO.md + RIAVVIO_SESSIONE.txt + STATE.json).
 :: Niente --continue: contesto pulito ogni volta, la continuita' passa dai file (by design).

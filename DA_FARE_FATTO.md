@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 59  15/07/2026  ripresa (LinkedIn PRE_SG_01  bozze notturne  PRE_01 Nina)](#sessione-59-15072026-ripresa-linkedin-presg01-bozze-notturne-pre01-nina)
   - [Sessione 58  14/07/2026  STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)](#sessione-58-14072026-storie-di-sistema-dal-giorno-0-gemella-di-nina-in-sidebar)
   - [Sessione 57  08/07/2026  IL MOTORE: HR piattaforma a 3 strati  doc VALORE per pilastro](#sessione-57-08072026-il-motore-hr-piattaforma-a-3-strati-doc-valore-per-pilastro)
   - [Sessione 56  08/07/2026  VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)](#sessione-56-08072026-verità-sparsa-la-mappa-deriva-non-copia-punto-1-chiuso)
@@ -87,6 +88,23 @@
   Qui sta la scaletta operativa, non tutto il piano.
 
 ---
+
+## Sessione #59 · 15/07/2026 — ripresa (LinkedIn PRE_SG_01 · bozze notturne · PRE_01 Nina)
+
+*Apertura: triage notturno pulito (solo 429 Semantic Scholar, blocker chiave noto).*
+
+- [✓] **Collegamento Desktop «Claude Code [TI]» ottimizzato**: l'icona puntava a
+  `claude-code\2.1.165\claude.exe` che NON esiste più (installate 2.1.170/2.1.181 —
+  si rompeva a ogni update). Estratta icona 256px in `TITANIUM_OS\claude.ico` (stabile,
+  versionata) + collegamento ripuntato lì. Bonus: hotkey **Ctrl+Alt+T** per lanciare
+  Claude da tastiera. Il bat era già dinamico (`_resolve_claude.bat`), non toccato.
+- [ ] **RISULTATI TEST LINKEDIN PRE_SG_01** (reazioni/reach) → tararsi sopra (gated Matteo)
+- [ ] **REVISIONE BOZZE NOTTURNE**: EP_SG_01_01 in _BOZZE (verificare slide «C'era anche
+  lei, all'inizio» sul canone) → promuovere o correggere
+- [ ] ⚠️ **Bozza 01_02 «La Taverna» NON risulta arrivata**: report bozze fermo al 14/07
+  con solo EP_SG_01_01 — verificare log `DATA/logs/night_caroselli.log` e task @04:15
+- [ ] **PRE_01 NINA INSIEME** — rifatto da 0, ≤10, copertina §2-bis (punto condiviso rotta)
+- [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
 ## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)
 
