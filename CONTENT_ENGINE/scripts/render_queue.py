@@ -13,6 +13,7 @@ import re
 import sys
 import subprocess
 import tempfile
+import time
 from pathlib import Path
 
 from PIL import Image
@@ -65,11 +66,28 @@ def _render_html(html_path: Path, outdir: Path, as_jpeg: bool) -> list[Path]:
                         "--virtual-time-budget=8000", f"--screenshot={png}",
                         "file:///" + str(tmp).replace("\\", "/")], check=False,
                        capture_output=True)
-        tmp.unlink(missing_ok=True)
+        # Chrome può tenere il tmp/png per qualche istante (WinError 32): retry tollerante
+        for attempt in range(5):
+            try:
+                tmp.unlink(missing_ok=True)
+                break
+            except PermissionError:
+                time.sleep(0.5)
         if not png.exists():
             print(f"    ERRORE render slide {n} di {html_path.parent.name}/{html_path.name}")
             continue
-        img = Image.open(png).crop((0, 0, 1080, 1350))
+        img = None
+        for attempt in range(5):
+            try:
+                img = Image.open(png)
+                img.load()
+                break
+            except (PermissionError, OSError):
+                time.sleep(0.5)
+        if img is None:
+            print(f"    ERRORE lettura slide {n} di {html_path.parent.name}/{html_path.name}")
+            continue
+        img = img.crop((0, 0, 1080, 1350))
         if as_jpeg:
             jpg = outdir / f"slide_{n}.jpg"
             q = 92
