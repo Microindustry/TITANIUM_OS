@@ -9,7 +9,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 - [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
   - [Come leggere la tabella](#come-leggere-la-tabella)
-  - [Il cammino (caselle 1  53)](#il-cammino-caselle-1-53)
+  - [Il cammino (caselle 1  54)](#il-cammino-caselle-1-54)
   - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
   - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
 
@@ -34,7 +34,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 53)
+## Il cammino (caselle 1 → 54)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -91,6 +91,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 51 | `EP_N2_51` | Il Cartellino sulla Stoffa | ⟡4 (giro 2) | Ogni idea che la Mente ti dà deve avere un cartellino attaccato che di |
 | 52 | `EP_N2_52` | Il Battito del Guardiano | ⟡6 (giro 2) | Un guasto che non fa rumore è più pericoloso di uno che grida; i veri |
 | 53 | `EP_N2_53` | Il Direttore Invisibile | ⟡7 (giro 2) | Un gruppo funziona solo se c'è qualcuno (o qualcosa) che coordina chi |
+| 54 | `EP_N2_54` | Il Dito che Insegna | ⟡1 (giro 3) | Una traccia è un gesto che rimane e continua a insegnare anche quando |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

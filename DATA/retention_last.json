@@ -1,46 +1,27 @@
 {
-  "ran_at": "2026-07-13T09:21:13.303756",
+  "ran_at": "2026-07-14T04:07:30.438690",
   "mode": "apply",
-  "actions": 6,
-  "freed_mb": 852.0,
+  "actions": 3,
+  "freed_mb": 0.0,
   "by_rule": {
-    "R1-chroma-debris": 2,
-    "R4-logs": 4
+    "R4-logs": 3
   },
   "items": [
     {
-      "rule": "R1-chroma-debris",
-      "path": "NODES\\MENTE_RAG\\chroma_db_reset_20260704_183438",
-      "mb": 197.3,
-      "removed": true
-    },
-    {
-      "rule": "R1-chroma-debris",
-      "path": "NODES\\MENTE_RAG\\chroma_db_reset_20260703_185735",
-      "mb": 654.7,
-      "removed": true
-    },
-    {
       "rule": "R4-logs",
-      "path": "DATA\\logs\\backfill_run.log",
+      "path": "DATA\\logs\\rag_rebuild_clean.log",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R4-logs",
-      "path": "DATA\\logs\\graphify_mente.log",
+      "path": "DATA\\logs\\rag_rebuild_final.log",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R4-logs",
-      "path": "DATA\\logs\\rag_fix_attempt.log",
-      "mb": 0.0,
-      "removed": true
-    },
-    {
-      "rule": "R4-logs",
-      "path": "DATA\\logs\\rag_rebuild_reorg.log",
+      "path": "DATA\\logs\\rag_rebuild_fixed.log",
       "mb": 0.0,
       "removed": true
     }

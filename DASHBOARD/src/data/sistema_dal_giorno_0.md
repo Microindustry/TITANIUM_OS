@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [Il Sistema  dal Giorno 0 (il piano della storia)](#il-sistema-dal-giorno-0-il-piano-della-storia)
+  - [Atto I  La Scintilla (2024-2025  il perché)](#atto-i-la-scintilla-2024-2025-il-perché)
+  - [Atto II  Il Corpo e la Mente (2026  il come)](#atto-ii-il-corpo-e-la-mente-2026-il-come)
+  - [Atto III  LOrganismo che si racconta (oggi  dove va)](#atto-iii-lorganismo-che-si-racconta-oggi-dove-va)
+  - [Da dove vengono i fatti (gerarchia, mai invertita)](#da-dove-vengono-i-fatti-gerarchia-mai-invertita)
+  - [Il terreno di sviluppo (deciso 14/07, scalato lo stesso giorno  quanti e quali)](#il-terreno-di-sviluppo-deciso-1407-scalato-lo-stesso-giorno-quanti-e-quali)
+  - [Regole di produzione](#regole-di-produzione)
+
+<!-- /TOC -->
+
 # Il Sistema — dal Giorno 0 (il piano della storia)
 
 > Questa pagina è la **storia definitiva del sistema**, raccontata da capo. Adesso contiene

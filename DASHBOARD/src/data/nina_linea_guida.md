@@ -1,3 +1,21 @@
+<!-- TOC -->
+
+- [Linea guida  Nina (il progetto grande)](#linea-guida-nina-il-progetto-grande)
+  - [Le fonti (chi comanda su cosa)](#le-fonti-chi-comanda-su-cosa)
+  - [Il mondo in breve](#il-mondo-in-breve)
+  - [I personaggi (regole che non si sgarrano)](#i-personaggi-regole-che-non-si-sgarrano)
+  - [La struttura di ogni episodio (identica, sempre)](#la-struttura-di-ogni-episodio-identica-sempre)
+  - [La didattica (4 principi  Pietre)](#la-didattica-4-principi-pietre)
+  - [Il visivo](#il-visivo)
+  - [Formato e produzione](#formato-e-produzione)
+  - [Le interazioni col sistema (pareggiate  lecosistema)](#le-interazioni-col-sistema-pareggiate-lecosistema)
+  - [Il terreno di sviluppo (fissato 14/07  PIANO_PRODUZIONE_NINA.md in MENTE)](#il-terreno-di-sviluppo-fissato-1407-pianoproduzioneninamd-in-mente)
+  - [Le stagioni di Nina  la pipeline (14/07)](#le-stagioni-di-nina-la-pipeline-1407)
+  - [Guardie QC (le falle, tutte in un posto)](#guardie-qc-le-falle-tutte-in-un-posto)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # Linea guida — Nina (il progetto grande)
 
 > IL documento operativo del binario Nina: ordina le fonti e porta in linea le regole vitali —

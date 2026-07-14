@@ -53,5 +53,60 @@
     "last_run": "2026-07-09 03:38"
    }
   }
+ },
+ {
+  "date": "2026-07-14",
+  "results": {
+   "TI_AiWatch": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-14 03:25"
+   },
+   "TI_DailyBrief": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-13 09:20"
+   },
+   "TI_DeepFreeze": {
+    "ok": false,
+    "label": "errore generico",
+    "last_run": "2026-07-13 09:20"
+   },
+   "TI_FineTune": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-13 09:20"
+   },
+   "TI_NightAudit": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-14 03:52"
+   },
+   "TI_NightPush": {
+    "ok": true,
+    "label": "in esecuzione",
+    "last_run": "2026-07-14 04:07"
+   },
+   "TI_NightResearch": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-14 03:37"
+   },
+   "TI_SelfImprove": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-13 09:20"
+   },
+   "TI_StoryAgent": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-14 02:07"
+   },
+   "TI_Watchdog": {
+    "ok": true,
+    "label": "in esecuzione",
+    "last_run": "2026-07-14 03:40"
+   }
+  }
  }
 ]

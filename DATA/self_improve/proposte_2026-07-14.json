@@ -1,0 +1,294 @@
+{
+  "data": "2026-07-14",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Riavvio e supervisione permanente dei 5 organi fermi (nina-loop, snapshot RAG, AI news watcher, retention disco, +1)",
+      "cosa": "Diagnosticare il motivo esatto per cui 5 organi automatici su 7 sono a uptime 0.0 da 4+ giorni. Il fix dell'exit-code del 13/07 (16609c5b) non ha tenuto per AI news watcher: serve un watchdog di processo che rilevi uscite silenziose e rilanci con logging strutturato, non solo correggere il codice di uscita.",
+      "perche": "Segnale critico duplice: 'nina-loop: ultimo output 4.2 giorni fa', 'snapshot RAG: 4.2 giorni fa', 'AI news watcher: morte silenziosa al boot 13/07, torna a 0.0 il 14/07'. Il fix 16609c5b non ha risolto la causa radice.",
+      "come": [
+        "1. Leggere i log di avvio di ciascun organo fermo e identificare exit-code e stack trace reali.",
+        "2. Creare un script watchdog minimale (cron ogni 15min) che verifica il timestamp dell'ultimo output di ciascun organo vs soglia configurabile e logga un WARNING strutturato se superata.",
+        "3. Per AI news watcher specificamente: isolare se il problema è import error, API key mancante o crash silenzioso; aggiungere try/except con log su file dedicato prima di proporre merge.",
+        "4. Testare localmente su ramo feature/watchdog-organs prima di qualsiasi deploy.",
+        "5. Portare proposta a Matteo con findings del punto 1 prima di toccare i processi in produzione."
+      ],
+      "rischio": "Senza watchdog, ogni notte le analisi girano cieche e il RAG non viene aggiornato. Rischio di accumulare debito silenzioso che invalida le decisioni di prodotto.",
+      "autonomia": "approvazione",
+      "fonte": "segnale interno: critiche_audit_aperte SISTEMA sev=alta, uptime 0.0 su 5/7 organi + finding fix 16609c5b non tenuto"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "V32",
+      "titolo": "Bloccare la procedura di spegnimento notturno finché UPS non è installato — checklist anti-corruzione HNSW",
+      "cosa": "Fino all'acquisto dell'UPS (~50-80€, blocker esplicito), aggiungere una procedura di shutdown ordinato del servizio HNSW prima di ogni spegnimento del nodo V32, documentata come checklist obbligatoria. In parallelo, proporre uno script di shutdown-safe che ferma il servizio, flushes l'indice e conferma l'integrità prima di permettere lo spegnimento.",
+      "perche": "Segnale critico: 'corruzione HNSW da power-loss ricorrente (3 volte in 2gg)', 'log 13/07 mostra servizio locale irraggiungibile nella notte', '18594 chunk nel RAG — ogni rebuild HNSW costa ore'. Il rischio è concreto e già materializzato tre volte.",
+      "come": [
+        "1. (sicuro, oggi) Documentare in un file SHUTDOWN_CHECKLIST.md i passi manuali: stop servizio HNSW → verifica flush → conferma integrità index → spegnimento OK.",
+        "2. (sicuro, oggi) Aprire un reminder prioritario nella bussola: 'ACQUISTO UPS entro 24h — blocker hardware confermato 3 corruzioni'.",
+        "3. (approvazione) Scrivere script shutdown_safe.sh che esegue i passi del punto 1 in automatico con exit-code non-zero se il flush fallisce.",
+        "4. Non toccare la configurazione del servizio HNSW senza approvazione."
+      ],
+      "rischio": "Senza questa misura ogni notte rischia un'altra corruzione. Rebuilding 18594+ chunk richiede ore di downtime e invalida la continuità narrativa del RAG.",
+      "autonomia": "sicuro",
+      "fonte": "segnale interno: critiche_audit_aperte V32 sev=media + ROADMAP sev=alta 'corruzione HNSW 3 volte in 2gg, 18594 chunk'"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-14",
+    "milestone": "Sessione #58 (14/07): LINEE GUIDA COMPLETE per i due binari - ecosistema pianificato porta a porta (~165 caroselli). Sidebar: faccia SISTEMA (EPISODI/GIORNO0/LINEA GUIDA) pareggiata con NINA (+LINEA GUIDA). Vetrine giorno-0 vuote fino al publish-ready (lezione: piano prima di compilare). Canone nuov",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Il QC episodi segnala open_loop_missing su 29 dei 54 episodi controllati (54%). La metrica è strutturata (structure_fail=0) ma più della metà degli episodi non ha il gancio narrativo richiesto. Con la produzione PRE_SG_01-04 pianificata per"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Tre analisi richieste direttamente da Matteo (VALORE per pilastro, HR/CV vivo, Attivazione PUBBLICAZIONI) sono aperte in bussola da almeno una sessione e non compaiono nel next_step di stanotte. Con ~165 caroselli pianificati e la macchina "
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker UPS (~50-80€) è esplicitamente collegato a «corruzione HNSW da power-loss ricorrente (3 volte in 2gg)» e il log del 13/07 mostra già un servizio locale irraggiungibile nella notte. Ogni notte senza UPS è una notte a rischio di co"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 14/07 è sostanzialmente cieca: Semantic Scholar ha sparato 429 su entrambe le query principali («2026-07-14 03:44:05 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429» "
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "Il canone vault dichiara max_ep_canone=53 ma su disco esiste EP_N2_54, confermato dalla riga «su disco EP_N2_54, il canone dichiara EP_N2_53: aggiornare _CANONE.md» (2026-07-14). Con 4 canon_violations attive e il canone che già scivola di "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi core risultano a uptime 0.0 stanotte: nina-loop, snapshot RAG e AI news watcher. Quest'ultimo aveva già avuto una morte silenziosa al boot il 13/07 (fix 16609c5b). Il fatto che torni a 0.0 il 14/07 indica che il fix dell'exit-cod"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "5 organi automatici su 7 sono fermi da 4+ giorni: \"nina-loop: ultimo output 4.2 giorni fa (soglia 3) — nina_state.json\" (2026-07-13), \"snapshot RAG: ultimo output 4.2 giorni fa (soglia 3) — rag_snapshots\" (2026-07-13), \"retention disco: ult"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'ordine hardware UPS è il prerequisito bloccante non eseguito con il rischio più alto di perdita dati: la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni (blocker esplicito) e il RAG conta 18594 chunk. Ogni rebuild HNSW po"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "22 CVE fixabili sono presenti nelle dipendenze Python: \"22 CVE fixabili in 3 pacchetti: gradio 5.50.0 (9), pillow 11.3.0 (7), starlette 0.52.1 (6)\" (2026-07-13). Gradio e Starlette espongono superfici HTTP; Pillow elabora immagini nei fluss"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Il bussola_open riporta 'TOP 10 #3 (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild)' come prossimo della catena verità, e 'TOP 10 #9: INDICE_CAMMINO ora è UNA copia sola ma i 9/15 titoli sbagliati restano → rigenerarlo"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "3 canon_violations attive non hanno finding associato nei log_issues: il dato è presente (canon_violations=3) ma nessuna riga di log specifica quale regola è violata o su quale file. Con canone_manuale a 19 item attivi e 4 giorni di età, le"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "29 episodi su 53 (55%) mancano del campo open_loop nei metadati (qc_episodi: open_loop_missing=29, checked=53). L'open_loop è il gancio narrativo che collega un episodio al successivo e alimenta il RAG con continuità. Con 265 episodi totali"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 269,
+      "rag_chunks": 19151,
+      "n_commits_7d": 97
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "Proposta gated: check copertina eseguibile in caroselli_qc (safe-zone + font minima) —",
+      "Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli",
+      "Colli piccoli: QC copertina eseguibile in caroselli_qc + `render_queue.py` batch +",
+      "**Produrre la serie PRE_SG_01-04** (gestione Claude 100%, regole complete: doppio taglio,",
+      "Progettare il binario notturno bozze-caroselli (collo n°1) — design, poi costruzione",
+      "NON toccare PRE_01 Nina da solo (è INSIEME) — resta il punto 1 della rotta condivisa",
+      "**Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».",
+      "PRE_01 rifatto da 0 publish-ready (INSIEME) — doppio taglio, resta il punto 1.",
+      "Storie di sistema voce Matteo: produzione episodi Claude 100% (grounding+canon_guard+QC).",
+      "**Il prossimo carosello NON è EP_N2_03: è PRE_01 RIFATTO DA 0** — riscritto con",
+      "**In parallelo: le STORIE DI SISTEMA in voce Matteo** (binario prima persona",
+      "**1 · Analisi VALORE per pilastro** (richiesta Matteo 08/07): che valore dà a",
+      "**2 · HR/CV vivo** (Matteo: la vista CV oggi è \"solo rumore\"): derivare dal",
+      "**3 · Attivazione PUBBLICAZIONI** — scaletta nella vista (passi 1-4 gated ~1h:",
+      "**4 · EP_N2_03 \"la Misura\"** — nasce già nel formato doppio (social-cut ≤10 + 16 sito)"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "The subset sum puzzle",
+        "url": "https://www.youtube.com/shorts/4h5BEALuh44"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "Escher's most mind-bending piece",
+        "url": "https://www.youtube.com/shorts/Y7ImxZ_YhJk"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "Covering 10 points, a surprisingly tricky puzzle.",
+        "url": "https://www.youtube.com/shorts/QLu_ZsRc_G0"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "Tie random ends: How many loops?",
+        "url": "https://www.youtube.com/shorts/ZHXt0-_gSj4"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "Reinventing Entropy | Compression is Intelligence Part 1",
+        "url": "https://www.youtube.com/watch?v=l6DKRf-fAAM"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "What's the perfect encoding? How do you know?",
+        "url": "https://www.youtube.com/shorts/7L_eTem1SQ4"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "Measuring the entropy of English",
+        "url": "https://www.youtube.com/shorts/-7etvZSBxlk"
+      },
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "100 random chords, how many intersections?",
+        "url": "https://www.youtube.com/shorts/wGffBCfrAsE"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Mathematicians will become art curators - Grant Sanderson",
+        "url": "https://www.youtube.com/shorts/Cn12N7Vm32A"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Botox Makes You Worse at Reading Emotions - Grant Sanderson",
+        "url": "https://www.youtube.com/shorts/Gr5cOV3mOGs"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Britain turned its biggest weakness into the source of its power - Sarah Paine",
+        "url": "https://www.youtube.com/shorts/ymxAcpVIclA"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "How Geography Shapes Empire - Sarah Paine",
+        "url": "https://www.youtube.com/shorts/RrHeqF5wy_E"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "The Dutch-American who saw America's blind spot clearly - Sarah Paine",
+        "url": "https://www.youtube.com/shorts/vSBbXutmRg8"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "The Real Effects of the Six Day War - Sarah Paine",
+        "url": "https://www.youtube.com/shorts/WQIdiMbpBVI"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "General relativity from first principles – Adam Brown",
+        "url": "https://www.youtube.com/watch?v=QbdbAhaJoCQ"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "China's Belt and Road Problem - Sarah Paine",
+        "url": "https://www.youtube.com/shorts/IO80MYGbJac"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Hermes Agent is good but, it has one problem...",
+        "url": "https://www.youtube.com/shorts/L0HEWTP1-L4"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Obsidian Just 10x’d Everyone’s Hermes Agent",
+        "url": "https://www.youtube.com/watch?v=Q0HTefP9DFU"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "He spent $7k of his own money to make GLM-5.2 better - 0xSero",
+        "url": "https://www.youtube.com/watch?v=ImPESBftwr8"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "GPT 5.6 banned, Fable banned… it’s actually over.",
+        "url": "https://www.youtube.com/watch?v=IloXWEYXen8"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Hermes Agent just reached Fable level… Mixture Of Agents",
+        "url": "https://www.youtube.com/watch?v=40ikbH0Ba-g"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Fable 5 is back… here is my plan",
+        "url": "https://www.youtube.com/watch?v=0akM-5lBurA"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Fine-Tune the biggest open-source models (even with a bad PC)",
+        "url": "https://www.youtube.com/watch?v=kxstlfc8Lw4"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "What Top 1% of Agentic Engineers Do Differently",
+        "url": "https://www.youtube.com/watch?v=EWk9PBbKqzc"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "Claude Opus 4.7 - A New Frontier, in Performance … and Drama",
+        "url": "https://www.youtube.com/watch?v=QVJcdfkRpH8"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "GPT 5.5 Arrives, DeepSeek V4 Drops, and the Compute War Intensifies",
+        "url": "https://www.youtube.com/watch?v=jz0rNhfAKo8"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "Two Rival Bets on AGI: Google I/O Highlights",
+        "url": "https://www.youtube.com/watch?v=o_av1b9rs2g"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "New Claude Opus 4.8: 15 Things You May’ve Missed",
+        "url": "https://www.youtube.com/watch?v=aJvP3nXWkwM"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "Claude Fable 5 - Full 319 page Breakdown",
+        "url": "https://www.youtube.com/watch?v=haK1KoQWm18"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "Claude Fable Blocked - 11 Quiet Details on What’s Next",
+        "url": "https://www.youtube.com/watch?v=Qj71N0tBzRo"
+      }
+    ],
+    "n_news": 30
+  }
+}

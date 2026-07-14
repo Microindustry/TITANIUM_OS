@@ -1,3 +1,19 @@
+<!-- TOC -->
+
+- [Linea guida provvisoria  le storie di sistema (EP_SG)](#linea-guida-provvisoria-le-storie-di-sistema-epsg)
+  - [La regola del binario](#la-regola-del-binario)
+  - [La serie PRE_SG  il preambolo del binario (4 caroselli, prima della stagione 1)](#la-serie-presg-il-preambolo-del-binario-4-caroselli-prima-della-stagione-1)
+  - [Stagione 1  9 capitoli  68 caroselli (9 portanti  59 approfondimenti)](#stagione-1-9-capitoli-68-caroselli-9-portanti-59-approfondimenti)
+  - [Le interazioni con Nina (canone del PONTE  vale per i due binari)](#le-interazioni-con-nina-canone-del-ponte-vale-per-i-due-binari)
+  - [La copertina (slide 1)  lo standard feed/griglia (fissato 14/07)](#la-copertina-slide-1-lo-standard-feedgriglia-fissato-1407)
+  - [Frontmatter motore (casella CV del capitolo  i figli specializzano)](#frontmatter-motore-casella-cv-del-capitolo-i-figli-specializzano)
+  - [Le stagioni 2-6  la pipeline fissata (14/07)](#le-stagioni-2-6-la-pipeline-fissata-1407)
+  - [Colli di bottiglia (attacco 14/07  con soluzione)](#colli-di-bottiglia-attacco-1407-con-soluzione)
+  - [Ordine, cadenza, scala](#ordine-cadenza-scala)
+  - [Stato (0/68  si aggiorna nel doc MENTE, mai cancellando)](#stato-068-si-aggiorna-nel-doc-mente-mai-cancellando)
+
+<!-- /TOC -->
+
 # Linea guida provvisoria — le storie di sistema (EP_SG)
 
 > Tutti i dati del terreno di sviluppo, fissati qui perché non si perdano. **Fonte canonica:**
@@ -17,9 +33,9 @@
 
 Spiegare cosa è e come funziona non sta in un carosello solo: **PRE_SG_01 Chi parla** (Matteo, 15 anni di industria, la taverna, l'ADHD detto onesto) · **PRE_SG_02 Cos'è il Sistema** (i 5 pilastri, l'organismo, il loop) · **PRE_SG_03 Il patto del racconto** (milestone→episodio, doppio taglio, tutto vero con fonti, la gestione AI dichiarata: Claude produce, il QC controlla) · **PRE_SG_04 La mappa delle stagioni** (S1→S6, dove seguire + **presenta Nina**: i preamboli si presentano a vicenda, 1 slide). Si producono PRIMA di EP_SG_01 — sono la porta del binario.
 
-## Stagione 1 — 9 capitoli → 68 caroselli (9 portanti + 59 approfondimenti)
+## Stagione 1 — 9 capitoli → 69 caroselli (9 portanti + 60 approfondimenti)
 
-**≈1.088 slide complete + ≈650 social.** Titoli di lavoro ancorati al grezzo reale (157 episodi di sistema).
+**≈1.104 slide complete + ≈660 social.** Titoli di lavoro ancorati al grezzo reale (157 episodi di sistema) e **verificati col title-scan Obsidian** (14/07: titoli = i nodi con le migliori interconnessioni del vault; si ripete a ogni rigenerazione — titoli adattivi).
 
 **CAP 1 · IL SOCIO — 4** *(cameo Nina: apre)*
 - 01_01 Il primo prompt · 01_02 La Taverna · 01_03 Il Distacco
@@ -30,8 +46,8 @@ Spiegare cosa è e come funziona non sta in un carosello solo: **PRE_SG_01 Chi p
 **CAP 3 · LA VERIFICA — 4**
 - 03_01 La prima foto · 03_02 La Formula · 03_03 Il Verdetto
 
-**CAP 4 · LA MACCHINA — 12** *(cameo Nina: chiude)*
-- 04_01 L'occhio (canale usato) · 04_02 La BOM · 04_03 Meno Parti · 04_04 La saga delle Config A→G · 04_05 Il corpo unico (178 kg) · 04_06 Colata Zero (epoxy) · 04_07 Il Gusset · 04_08 ±0.019 · 04_09 Il mandrino che manca · 04_10 La Pelle del Cavallo (VULCAN) · 04_11 Il martinetto (nuovo)
+**CAP 4 · LA MACCHINA — 13** *(cameo Nina: chiude · title-scan: +basamento, 04_07 rinominato)*
+- 04_01 L'occhio (canale usato) · 04_02 La BOM · 04_03 Meno Parti · 04_04 La saga delle Config A→G (il tema più denso del vault) · 04_05 Il corpo unico (178 kg — ponte: EP_N2_20) · 04_06 Colata Zero (epoxy) · 04_07 Config G — rinforzi colonne Z+U · 04_08 ±0.019 · 04_09 Il mandrino che manca · 04_10 La Pelle del Cavallo (VULCAN) · 04_11 Il martinetto (nuovo) · 04_12 Il basamento — traliccio saldato TIG (aggancio Fucina/N3)
 
 **CAP 5 · LA MENTE — 10**
 - 05_01 MENTE nasce · 05_02 Il primo RAG · 05_03 Il giorno che il RAG ha mangiato 56 GB · 05_04 Il Blackout · 05_05 Il cervello ibrido · 05_06 La ricetta v4 · 05_07 Graphify · 05_08 La RETE 3D · 05_09 Obsidian (561 note)

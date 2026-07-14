@@ -3,7 +3,7 @@
 - [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
 - [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
   - [0  LA MATERIA  (6 episodi)](#0-la-materia-6-episodi)
-  - [1  LA TRACCIA  (4 episodi)](#1-la-traccia-4-episodi)
+  - [1  LA TRACCIA  (5 episodi)](#1-la-traccia-5-episodi)
   - [2  LOFFICINA CHE GIRA SOLA  (13 episodi)](#2-lofficina-che-gira-sola-13-episodi)
   - [3  LA MENTE CHE PARLA  (4 episodi)](#3-la-mente-che-parla-4-episodi)
   - [4  LA BIBLIOTECA DELLE FONTI  (6 episodi)](#4-la-biblioteca-delle-fonti-6-episodi)
@@ -42,7 +42,7 @@
 | 2 | `EP_N2_18` La Giuntura — Dove Due Diventa Uno | Una giuntura non unisce cancellando: mantiene identità separate ma le  | adattato | — |
 | 3 | `EP_N2_03` Mille Volte Uguale | la ripetibilita': mille volte uguale, battere la deriva | adattato | — |
 
-## ⟡1 · LA TRACCIA  (4 episodi)
+## ⟡1 · LA TRACCIA  (5 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -50,6 +50,7 @@
 | 1 | `EP_N2_21` Il Nome Che Cambia | Le parole che usiamo per nominare le cose cambiano quando la relazione | adattato | — |
 | 1 | `EP_S0_00` Il Socio | il Socio: un gesto, più frutti | fonte | — |
 | 2 | `EP_N2_17` La Traccia | Un gesto documentato diventa un insegnamento che vive oltre il momento | adattato | — |
+| 3 | `EP_N2_54` Il Dito che Insegna | Una traccia è un gesto che rimane e continua a insegnare anche quando  | adattato | — |
 
 ## ⟡2 · L'OFFICINA CHE GIRA SOLA  (13 episodi)
 
