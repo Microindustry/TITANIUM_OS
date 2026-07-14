@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-14T10:33:02.434201",
-  "active_milestone": "Sessione #58 (14/07): LINEE GUIDA COMPLETE per i due binari - ecosistema pianificato porta a porta (~165 caroselli). Sidebar: faccia SISTEMA (EPISODI/GIORNO0/LINEA GUIDA) pareggiata con NINA (+LINEA GUIDA). Vetrine giorno-0 vuote fino al publish-ready (lezione: piano prima di compilare). Canone nuovo: GUIDA 2-bis copertina-poster (safe-zone/miniatura/collezione), PONTE_SG_NINA (cameo 1-4-9 + preamboli che si presentano a vicenda), provenienza componenti (canale usato, mai prezzi per-pezzo), LINEA_GUIDA_NINA v2 (12 guardie QC), piani produzione: SG S1 68 + stagioni S2-S6, Nina PRE 4 + cammino 53 + stagioni N1-N5. Regola: titoli adattivi = linea guida non regola. Colli di bottiglia attaccati con soluzione (n.1 = binario notturno bozze). Obsidian rigenerato coi connettori.",
-  "next_step": "DOMATTINA su input Matteo (gestione autonoma): triage notturno + colli piccoli (QC copertina, render_queue, _TEMPLATE/components SVG) + PRODURRE serie PRE_SG_01-04 (Claude 100%) + design binario notturno bozze. PRE_01 Nina resta INSIEME. Gated Matteo: hardware UPS+ER20+Vevor, prerequisiti Meta (~1h), Semantic Scholar key.",
+  "last_update": "2026-07-14T23:38:38.767192",
+  "active_milestone": "Sessione #58-bis (14/07 mattina, gestione autonoma): FORMATO riconciliato (UN taglio sempre <=10, extra=carosello in piu, v16 in _VERSIONI) -> SERIE PRE_SG_01-04 PRODOTTA a 4x10 QC verde (de-insider/de-dup dopo feedback Matteo). Title-scan Obsidian applicato (S1=69, +basamento TIG hub 67 link). Colli chiusi: QC copertina eseguibile, render_queue batch (PNG+JPEG IG, retry WinError32), components/, grid_preview (griglia IG dalle copertine). BINARIO NOTTURNO VIVO: night_caroselli + TI_NightCaroselli @04:15, prova del fuoco superata (bozza EP_SG_01_01 QC verde in _BOZZE). Fix handle-lock log bat/python. LinkedIn test: descrizione PRE_SG_01 pronta (linkedin.txt), carica Matteo a mano.",
+  "next_step": "PROSSIMA SESSIONE: 1) risultati test LinkedIn PRE_SG_01 (tararsi sopra) 2) revisione bozza notturna EP_SG_01_01 (verificare C-era-anche-lei sul canone) -> promozione/correzione; stanotte arriva 01_02 3) PRE_01 Nina INSIEME (rifatto da 0, <=10) 4) estendere coda apprendista dopo il rodaggio 3 notti. Gated Matteo: hardware UPS+ER20+Vevor, prerequisiti Meta, chiave Semantic Scholar.",
   "session_count": 119,
   "pillars": {
     "V32": {
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-14T10:29:31.723318"
+      "last_activity": "2026-07-14T23:36:06.179951"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -108,7 +108,8 @@
       "Verita' sparsa CHIUSA (08/07 sess#56): SYSTEM_TREE derivato da mappaData.ts (adapter SkillNode->MapNode, % computate nodeProgress, ROOT=media, -84 righe a mano, pct_sync v1.1 ritirato da MappaView) + % MIMS/GENESIS con nome esplicito (voci mappa vs pilastro STATE) + AUTOMATIONS_MASTER v1.3 archivio storico con 4 fonti vive",
       "LE 3 FACCE (08/07 sess#56, decisione Matteo): sidebar TITANIUM/NINA/PUBBLICAZIONI (deep-link intatti, Archivio sotto-voce), RIPASSO_S32-56.md (5 fasi+canone operativo+carattere), PubblicazioniView (trovato/pipeline/criteri/scaletta 9 passi), vincoli ri-verificati doc Meta (10 slide max, LinkedIn PDF, slide 1080x1350 gia' a norma, Postiz MCP), binario nuovo 'voce Matteo', tsc verde + screenshot",
       "Sessione #57 (13/07): igiene profonda + campo di battaglia — RAG v4.3 self-heal inverso + 2 recovery HNSW (18004==18004, snapshot fresco), watcher v1.2 (RETIRED_HANDLES + watchlist completa, 26 sorgenti), finetune v3.0 su venv dedicato (sistema 0 CVE su 194), caroselli a convenzione completa (P7/F6/F7 attacco chiusi), GUIDA_CAROSELLI+QC automatico+sentinella, Obsidian 561 note/3012 ponti, -5GB detriti. Rotta: PRE_01 da 0 + storie voce Matteo gestione Claude 100%. tsc verde, 0 orfani",
-      "Ecosistema contenuti pianificato porta a porta: linee guida due binari + piani produzione (~165 caroselli) + PONTE SG-Nina + standard copertina + colli di bottiglia con soluzione; sidebar SISTEMA pareggiata con NINA; build verde, RAG e Obsidian aggiornati (14/07/2026)"
+      "Ecosistema contenuti pianificato porta a porta: linee guida due binari + piani produzione (~165 caroselli) + PONTE SG-Nina + standard copertina + colli di bottiglia con soluzione; sidebar SISTEMA pareggiata con NINA; build verde, RAG e Obsidian aggiornati (14/07/2026)",
+      "Binario notturno caroselli VIVO (night_caroselli + TI_NightCaroselli): prova del fuoco end-to-end superata, bozza EP_SG_01_01 QC verde in quarantena; serie PRE_SG_01-04 prodotta a 4x10 (formato riconciliato <=10) con QC 0 falle e griglia IG verificata (14/07/2026)"
     ],
     "next": "PROSSIMA SESSIONE FABLE #53: revisionare Obsidian -> ecosistema MENTE vero (verita unica/ponti/zero orfani), poi eseguire la prima ondata dell'attacco (checkout hardware + canone RAG). Backlog completo in DA_FARE_FATTO.md.",
     "target_capannone": "2030-07-15"
@@ -148,5 +149,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a DA_FARE_FATTO.md"
+  "last_action": "Modifica a EP_00_ORIGINE.md"
 }

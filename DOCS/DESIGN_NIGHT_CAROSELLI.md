@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [DESIGN  night_caroselli: il binario notturno delle bozze (collo n1)](#design-nightcaroselli-il-binario-notturno-delle-bozze-collo-n1)
+  - [Il principio (una riga)](#il-principio-una-riga)
+  - [Requisiti (dai piani  regole Matteo)](#requisiti-dai-piani-regole-matteo)
+  - [Architettura (riusa lesistente, zero pezzi nuovi dove possibile)](#architettura-riusa-lesistente-zero-pezzi-nuovi-dove-possibile)
+  - [Guardie](#guardie)
+  - [Scheduler](#scheduler)
+  - [Costo/valore](#costovalore)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # DESIGN — night_caroselli: il binario notturno delle bozze (collo n°1)
 
 *v1.0 · 14/07/2026 (#58 mattina) — DESIGN ONLY, la costruzione è il passo dopo (gated ok Matteo

@@ -214,8 +214,12 @@ SCANNER dei titoli: correggerli scegliendo quelli con le migliori interconnessio
   10 slide, QC VERDE — in _BOZZE in attesa di revisione diurna. Coda di rodaggio:
   01_02 e 01_03 pending per le prossime 2 notti. Fix trovato: handle-lock log bat↔python
   (stessa famiglia della lezione #53) + retry WinError 32 in render_queue.
+- [◐] **TEST LINKEDIN PRE_SG_01 (Matteo, manuale)**: descrizione scritta →
+  `CAROSELLI/PRE_SG_01/linkedin.txt`; slide in `slides/` (PNG). Matteo carica dal suo
+  profilo personale per vedere cosa genera. **Prossima sessione: leggere i risultati
+  (reazioni/reach) e tararci sopra.**
 - [ ] Revisione diurna bozza EP_SG_01_01 (verificare "C'era anche lei" sul canone) →
-  promozione o correzione
+  promozione o correzione. Stanotte l'apprendista fa 01_02 «La Taverna».
 - [ ] PRE_02/03 Nina da rifare da 0 — DOPO che PRE_01 insieme ha fissato lo standard
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale

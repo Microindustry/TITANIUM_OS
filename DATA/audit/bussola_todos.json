@@ -84,33 +84,69 @@
     "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
   },
   {
-    "id": "BUS-acf7dea8",
-    "stato": "da_fare",
-    "testo": "Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli",
+    "id": "BUS-d1abe543",
+    "stato": "fatto",
+    "testo": "Triage notturno (14/07 mattina): finetune VERDE (la corsa 13/07 9:21 era già sul venv,",
     "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
   },
   {
-    "id": "BUS-b2719088",
-    "stato": "da_fare",
-    "testo": "Colli piccoli: QC copertina eseguibile in caroselli_qc + `render_queue.py` batch +",
+    "id": "BUS-4496ec16",
+    "stato": "fatto",
+    "testo": "**Title-scan Obsidian ESEGUITO** (misura inbound+cross-dominio su tutto il vault):",
     "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
   },
   {
-    "id": "BUS-f6ba7926",
-    "stato": "da_fare",
-    "testo": "**Produrre la serie PRE_SG_01-04** (gestione Claude 100%, regole complete: doppio taglio,",
+    "id": "BUS-ed1a8d6c",
+    "stato": "fatto",
+    "testo": "Colli piccoli CHIUSI: caroselli_qc **v1.1** (standard 16 vero, check copertina §2-bis",
     "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
   },
   {
-    "id": "BUS-4e827a5c",
-    "stato": "da_fare",
-    "testo": "Progettare il binario notturno bozze-caroselli (collo n°1) — design, poi costruzione",
+    "id": "BUS-e1238761",
+    "stato": "fatto",
+    "testo": "**SERIE PRE_SG_01-04 PRODOTTA** (Claude 100%, commit 56d903d7): 4 caroselli doppi",
     "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
   },
   {
-    "id": "BUS-be40bd65",
+    "id": "BUS-4ad77018",
+    "stato": "fatto",
+    "testo": "**Design binario notturno bozze**: `DOCS/DESIGN_NIGHT_CAROSELLI.md` — la notte propone",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-04d27f1f",
+    "stato": "non_fatto",
+    "testo": "~~formato doppio 16+≤10~~ — corretto da Matteo (14/07 mattina, dopo revisione PRE_SG:",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-1080147b",
+    "stato": "fatto",
+    "testo": "**Riconciliazione ≤10 APPLICATA OVUNQUE**: GUIDA §1.0 (canone) + nota su FORMATO_DOPPIO +",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-eb71a392",
+    "stato": "fatto",
+    "testo": "**BINARIO NOTTURNO COSTRUITO E VIVO** (design approvato Matteo → build stesso giorno):",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-4a72ec5b",
+    "stato": "in_corso",
+    "testo": "**TEST LINKEDIN PRE_SG_01 (Matteo, manuale)**: descrizione scritta →",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-bb47c173",
     "stato": "da_fare",
-    "testo": "NON toccare PRE_01 Nina da solo (è INSIEME) — resta il punto 1 della rotta condivisa",
+    "testo": "Revisione diurna bozza EP_SG_01_01 (verificare \"C'era anche lei\" sul canone) →",
+    "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
+  },
+  {
+    "id": "BUS-ee1d9a30",
+    "stato": "da_fare",
+    "testo": "PRE_02/03 Nina da rifare da 0 — DOPO che PRE_01 insieme ha fissato lo standard",
     "sessione": "Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)"
   },
   {

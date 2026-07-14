@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [components/  gli asset canonici riutilizzabili (anti-drift)](#components-gli-asset-canonici-riutilizzabili-anti-drift)
+  - [Contratto](#contratto)
+  - [Asset presenti](#asset-presenti)
+  - [Asset da creare (entrano qui prima del primo uso)](#asset-da-creare-entrano-qui-prima-del-primo-uso)
+  - [Regole di stile (dalla bibbia visiva)](#regole-di-stile-dalla-bibbia-visiva)
+
+<!-- /TOC -->
+
 # components/ — gli asset canonici riutilizzabili (anti-drift)
 
 *Creata 14/07/2026 (#58, collo di bottiglia n°5): i componenti si creano UNA volta e

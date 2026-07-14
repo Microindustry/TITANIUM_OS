@@ -1,53 +1,42 @@
-=== RIAVVIO SESSIONE #59 — generato 14/07/2026 ~02:30 (fine sessione #58, skill salva) ===
-Ultima sessione: #58 — 14/07/2026 (Fable 5, notte)
+=== RIAVVIO SESSIONE #59 — generato 14/07/2026 (fine #58-bis, mattinata autonoma + salva) ===
+Ultima sessione: #58 + #58-bis (13-14/07, Fable 5 — notte di pianificazione + mattina autonoma)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-L'ECOSISTEMA CONTENUTI È PIANIFICATO PORTA A PORTA (~165 caroselli).
-Due binari pareggiati in sidebar (SISTEMA rosso ↔ NINA rosa, ognuno con
-EPISODI/GIORNO 0/LINEA GUIDA), vetrine giorno-0 VUOTE finché non c'è
-publish-ready. Linee guida complete nei due lati (MENTE canonico + specchi
-dashboard, tutto nel RAG e in Obsidian coi connettori).
+L'ECOSISTEMA PRODUCE. Formato riconciliato (UN taglio, sempre ≤10 slide;
+extra = carosello in più; v16 in _VERSIONI). SERIE PRE_SG_01-04 PRODOTTA
+(4×10, QC 0 falle, de-insider dopo feedback Matteo, griglia IG verificata
+con grid_preview). L'APPRENDISTA NOTTURNO È VIVO: night_caroselli +
+TI_NightCaroselli @04:15 — prova del fuoco superata, bozza EP_SG_01_01
+«Il primo prompt» QC verde in _BOZZE (quarantena). Matteo carica
+PRE_SG_01 su LinkedIn a mano (descrizione in CAROSELLI/PRE_SG_01/linkedin.txt).
 
-━━━ IL CANONE NUOVO di #58 (tutto committato MENTE+repo) ━━━
-- GUIDA_CAROSELLI §2-bis: COPERTINA = poster (safe-zone crop 1:1 y135-1215,
-  prova miniatura 200px, un punto focale, titolo=gancio, griglia=collezione)
-- PONTE_SG_NINA: cameo Nina in SG_01/04/09 (1-2 slide, frasi-firma), semi di
-  ritorno, preamboli che si presentano a vicenda, 4 guardie QC
-- Provenienza componenti: "comprati su canale usato", MAI prezzi per-pezzo,
-  acquisti futuri = nuovo (stampo + memoria; canon_guard già compatibile)
-- LINEA_GUIDA_NINA v2 (documento operativo, 12 guardie QC) + PIANO_PRODUZIONE_NINA
-- Piani: SG = PRE_SG 4 + S1 68 caroselli (9 cap N-livelli) + stagioni S2-S6;
-  Nina = PRE 4 (PRE_03 è a 17 slide, fuori limite) + cammino 53 + stagioni N1-N5
-- REGOLA: titoli adattivi = linea guida, non regola (si integrano coi caroselli fatti)
-- COLLI DI BOTTIGLIA con soluzione (sezione nel piano SG): n°1 = RITMO → binario
-  notturno bozze (da costruire); render_queue batch; Express solo publish-ready;
-  SVG components; QC copertina eseguibile; prerequisiti Meta = collo esterno
+━━━ PROSSIMA SESSIONE (in ordine) ━━━
+1. RISULTATI TEST LINKEDIN PRE_SG_01 (reazioni/reach) → tararsi sopra
+2. REVISIONE BOZZE NOTTURNE: EP_SG_01_01 in _BOZZE (verificare la slide
+   «C'era anche lei, all'inizio» sul canone!) → promuovere o correggere;
+   stanotte arriva 01_02 «La Taverna», poi 01_03 «Il Distacco» (rodaggio 3 notti)
+3. PRE_01 NINA INSIEME — rifatto da 0, ≤10, copertina §2-bis (resta il punto
+   condiviso della rotta; PRE_02/03 Nina DOPO che questo fissa lo standard)
+4. Dopo il rodaggio: estendere DATA/caroselli_queue.json dai piani (S1 sistema)
 
-━━━ DOMATTINA (input Matteo: «procedi» → GESTIONE AUTONOMA) ━━━
-CORREZIONI ULTIMO MESSAGGIO (14/07 notte): (a) i PRE sono TUTTI da rifare da 0
-— tenere buoni regole/design/personaggio Nina, il lavoro non si butta
-(esistenti → _VERSIONI); (b) Obsidian = SCANNER dei titoli: correggerli con
-le migliori interconnessioni del grafo → linee guida più precise;
-(c) l'AUTOGENERAZIONE episodi (AUTO) non deve MAI fermarsi.
-1. Triage notturno: finetune.log (prova venv) + debutto sentinella caroselli
-   + verifica autogenerazione AUTO viva
-2. TITLE-SCAN Obsidian: titoli dei due piani corretti col grafo (intersect/ponti)
-3. Colli piccoli: QC copertina in caroselli_qc + render_queue.py + _TEMPLATE/components/
-   (SVG canonici Nina/THEMIS/⟡ — PRIMA di ogni carosello nuovo)
-4. PRODURRE serie PRE_SG_01-04 (Claude 100%: doppio taglio, copertina §2-bis, QC verde)
-5. Design binario notturno bozze-caroselli (collo n°1)
-6. PRE_01 Nina = INSIEME (non da solo); PRE_02/03 Nina da 0 ma DOPO lo standard
-   fissato con PRE_01
+━━━ COME FUNZIONA L'APPRENDISTA (per ricordarselo al volo) ━━━
+Coda: DATA/caroselli_queue.json (pending → bozza_verde/falle/grounding_debole)
+Report mattino: DATA/audit/bozze_caroselli.json · log: DATA/logs/night_caroselli.log
+Bozze: CAROSELLI/_BOZZE/<ID>/ — MAI promozione notturna. Promozione = spostare
+la cartella in CAROSELLI/<ID>/, spuntare il piano, rigenerare _griglia_ig.png
+(grid_preview.py). Grounding debole = stop onesto (servono fonti in MENTE).
 
-━━━ BLOCKERS APERTI (gated Matteo, ~1h) ━━━
-- Hardware: UPS (cura HNSW) + mandrino ER20 + martinetto Vevor = IL tappo
-- Prerequisiti pubblicazioni: mail progetto, pagina FB+IG, app Meta, Docker/Postiz
-  (= il collo esterno della pipeline caroselli)
+━━━ FATTI CHIAVE #58-bis (commit fino a f5b921b5, tutto pushato) ━━━
+- Riconciliazione ≤10 OVUNQUE (GUIDA §1.0 canone; sg_builder/QC/render aggiornati)
+- Title-scan Obsidian: S1=69 (+basamento TIG hub 67 link, 04_07 rinominato)
+- Colli chiusi: QC copertina eseguibile · render_queue (PNG+JPEG, retry WinError32)
+  · components/ · grid_preview (griglia IG) · fix handle-lock log bat↔python
+- PRE_SG 3/4 de-insider e de-duplicati (56GB solo nel 3, niente codici al pubblico)
+
+━━━ BLOCKERS APERTI (gated Matteo) ━━━
+- Hardware: UPS + mandrino ER20 + martinetto Vevor = IL tappo
+- Prerequisiti pubblicazioni: mail progetto, FB+IG, app Meta, Docker/Postiz
+  (il collo esterno: senza, i caroselli pronti restano in magazzino)
 - Chiave Semantic Scholar (5 min) → azzera i 429 notturni
-- Trade secrets MIMS in _VAULT cifrato (mezz'ora insieme)
 
-━━━ COME LEGGERE LE CRITICHE ━━━
-CRITICHE.md (root repo) — rigenerato ogni notte. Stato: dirlo a Claude o
-editare DATA/audit/critiche_manuali.json.
-
-━━━ Generato: 14/07/2026 — fine sessione #58 (skill salva) ━━━
+━━━ Generato: 14/07/2026 — fine sessione #58-bis (skill salva) ━━━
