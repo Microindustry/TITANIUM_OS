@@ -98,6 +98,15 @@
   si rompeva a ogni update). Estratta icona 256px in `TITANIUM_OS\claude.ico` (stabile,
   versionata) + collegamento ripuntato lì. Bonus: hotkey **Ctrl+Alt+T** per lanciare
   Claude da tastiera. Il bat era già dinamico (`_resolve_claude.bat`), non toccato.
+- [✓] **PRIMO FIT ESTERNO — 4 AI concorrenti su PRE_SG_01 + Grok su PRE 1-4** (Matteo,
+  Desktop `PRIMO FIT DALLE CONCORRENTI.txt`): voti 8-8,8/10, confermati design/
+  autenticità/serialità e la rotta "fiducia non vendita"; segnale convergente 5/5 =
+  CONCRETEZZA. Distillato in `MENTE/KNOWLEDGE/MONDO/FIT_ESTERNO_20260715.md` +
+  grezzo in SESSIONI; **6 regole adottate in GUIDA_CAROSELLI §7** (slide-carne,
+  chiusura=perché restare, micro-testi mobile, anti-ripetizione frasi-firma, ADHD
+  con misura, open loop con assaggio); scartati CTA/funnel/foto-volto (gated)/numeri
+  inventati. ⚠️ igiene: memorie AI esterne su Matteo STALE (molle, MacGyverlandia) —
+  mai fonte, il canone è MENTE/RAG.
 - [ ] **RISULTATI TEST LINKEDIN PRE_SG_01** (reazioni/reach) → tararsi sopra (gated Matteo)
 - [ ] **REVISIONE BOZZE NOTTURNE**: EP_SG_01_01 in _BOZZE (verificare slide «C'era anche
   lei, all'inizio» sul canone) → promuovere o correggere
