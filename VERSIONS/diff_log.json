@@ -1,1536 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-07-14T04:22:59.071230",
-      "file": "graphify-out\\cache\\ast\\bb4dbe2eaa00a956ed73ccd44598d8d1e1f26d37af8a958b1cb44046df40bd51.json",
-      "snapshot": "BACKUPS\\20260714_042259\\graphify-out\\cache\\ast\\bb4dbe2eaa00a956ed73ccd44598d8d1e1f26d37af8a958b1cb44046df40bd51.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:00.987031",
-      "file": "graphify-out\\cache\\ast\\1ea7b9754cac15a4ab00c576b1f36c2299e86c2b665afb8869bef2d9f46ad8de.json",
-      "snapshot": "BACKUPS\\20260714_042300\\graphify-out\\cache\\ast\\1ea7b9754cac15a4ab00c576b1f36c2299e86c2b665afb8869bef2d9f46ad8de.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:02.919282",
-      "file": "graphify-out\\cache\\ast\\0f9e5b03ec7b017d5149d09f98da5fa76fc6c587eb1de042da0920ef209bca9c.json",
-      "snapshot": "BACKUPS\\20260714_042302\\graphify-out\\cache\\ast\\0f9e5b03ec7b017d5149d09f98da5fa76fc6c587eb1de042da0920ef209bca9c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:04.840009",
-      "file": "graphify-out\\cache\\ast\\3c2770b80fa104f20c575168b8c898f13ce22eb1c992ba2202d50b2b22cae897.json",
-      "snapshot": "BACKUPS\\20260714_042304\\graphify-out\\cache\\ast\\3c2770b80fa104f20c575168b8c898f13ce22eb1c992ba2202d50b2b22cae897.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:06.769311",
-      "file": "graphify-out\\cache\\ast\\b79cafd5440645f210363419e5e4a2e3252fa891359201f7503bd6ab74bb64e8.json",
-      "snapshot": "BACKUPS\\20260714_042306\\graphify-out\\cache\\ast\\b79cafd5440645f210363419e5e4a2e3252fa891359201f7503bd6ab74bb64e8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:08.676679",
-      "file": "graphify-out\\cache\\ast\\07b4b2107a5f118af592a9301361db386a6747420c0f67f3e4edb50fbc8b791f.json",
-      "snapshot": "BACKUPS\\20260714_042308\\graphify-out\\cache\\ast\\07b4b2107a5f118af592a9301361db386a6747420c0f67f3e4edb50fbc8b791f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:10.599677",
-      "file": "graphify-out\\cache\\ast\\92c3c4eaabac7c207e651bf6409139e9ce6f29afa9fabbf70524c632ba888748.json",
-      "snapshot": "BACKUPS\\20260714_042310\\graphify-out\\cache\\ast\\92c3c4eaabac7c207e651bf6409139e9ce6f29afa9fabbf70524c632ba888748.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:12.556482",
-      "file": "graphify-out\\cache\\ast\\7550e261c1180625a1380888447a174ef347c872512b24da28d74aa5ad8612e6.json",
-      "snapshot": "BACKUPS\\20260714_042312\\graphify-out\\cache\\ast\\7550e261c1180625a1380888447a174ef347c872512b24da28d74aa5ad8612e6.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:14.494521",
-      "file": "graphify-out\\cache\\ast\\2065c6d7f6e0f6c65f49012b94d59e23092658c53aa3cdb039b62292ce3a277b.json",
-      "snapshot": "BACKUPS\\20260714_042314\\graphify-out\\cache\\ast\\2065c6d7f6e0f6c65f49012b94d59e23092658c53aa3cdb039b62292ce3a277b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:16.441884",
-      "file": "graphify-out\\cache\\ast\\ce79e65ad30fe0acb3d0bf3ac3f454d41791cc11ddae99c50bebb2c86c3e1099.json",
-      "snapshot": "BACKUPS\\20260714_042316\\graphify-out\\cache\\ast\\ce79e65ad30fe0acb3d0bf3ac3f454d41791cc11ddae99c50bebb2c86c3e1099.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:18.353187",
-      "file": "graphify-out\\cache\\ast\\3af58f2258180faf311aff7c9b8141ea2af37d808ed3a2b03d2559e0b3aa4dd8.json",
-      "snapshot": "BACKUPS\\20260714_042318\\graphify-out\\cache\\ast\\3af58f2258180faf311aff7c9b8141ea2af37d808ed3a2b03d2559e0b3aa4dd8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:20.278736",
-      "file": "graphify-out\\cache\\ast\\f76fdf2d409f4a312538e7335398221d3cd84cfe1aac4cdea9835ac4d0977f63.json",
-      "snapshot": "BACKUPS\\20260714_042320\\graphify-out\\cache\\ast\\f76fdf2d409f4a312538e7335398221d3cd84cfe1aac4cdea9835ac4d0977f63.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:22.214987",
-      "file": "graphify-out\\cache\\ast\\d1b39c3d7b549592ee7beee6291da4025b83b16c31ce5d30a2014bdb6465aefb.json",
-      "snapshot": "BACKUPS\\20260714_042322\\graphify-out\\cache\\ast\\d1b39c3d7b549592ee7beee6291da4025b83b16c31ce5d30a2014bdb6465aefb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:24.149371",
-      "file": "graphify-out\\cache\\ast\\83be8255471690ec7a88b6f2a303436bdc4f3bad2cf2fc8c58606618d011c8bb.json",
-      "snapshot": "BACKUPS\\20260714_042324\\graphify-out\\cache\\ast\\83be8255471690ec7a88b6f2a303436bdc4f3bad2cf2fc8c58606618d011c8bb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:26.064630",
-      "file": "graphify-out\\cache\\ast\\011fa6508e705b815a5776af939df218e5b35f0761cdf38b558df430497172ad.json",
-      "snapshot": "BACKUPS\\20260714_042326\\graphify-out\\cache\\ast\\011fa6508e705b815a5776af939df218e5b35f0761cdf38b558df430497172ad.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:27.993458",
-      "file": "graphify-out\\cache\\ast\\9ed82d669eac42553569a5d4e47fc63a10ba0805895b74e1256f65a3e1a6b6b8.json",
-      "snapshot": "BACKUPS\\20260714_042327\\graphify-out\\cache\\ast\\9ed82d669eac42553569a5d4e47fc63a10ba0805895b74e1256f65a3e1a6b6b8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:29.932658",
-      "file": "graphify-out\\cache\\ast\\82876e40d53e2aa66ee1eea074e81a3487b866c71c8321aa56ece1b1912a3c23.json",
-      "snapshot": "BACKUPS\\20260714_042329\\graphify-out\\cache\\ast\\82876e40d53e2aa66ee1eea074e81a3487b866c71c8321aa56ece1b1912a3c23.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:31.855018",
-      "file": "graphify-out\\cache\\ast\\ff5b4785023a7b284f1f85a0968dc26f8439e83cb201fa9de76effa7e8d35a3e.json",
-      "snapshot": "BACKUPS\\20260714_042331\\graphify-out\\cache\\ast\\ff5b4785023a7b284f1f85a0968dc26f8439e83cb201fa9de76effa7e8d35a3e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:33.796107",
-      "file": "graphify-out\\cache\\ast\\9837a621468407c9bf5e79e653130f03725fe6ee8a961ebe22bffc7a0307dcb5.json",
-      "snapshot": "BACKUPS\\20260714_042333\\graphify-out\\cache\\ast\\9837a621468407c9bf5e79e653130f03725fe6ee8a961ebe22bffc7a0307dcb5.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:35.703052",
-      "file": "graphify-out\\cache\\ast\\4ed3a31f18f6fd7bb11e87af8bb6d342ef4f775847c3557443ec7326edabbf4f.json",
-      "snapshot": "BACKUPS\\20260714_042335\\graphify-out\\cache\\ast\\4ed3a31f18f6fd7bb11e87af8bb6d342ef4f775847c3557443ec7326edabbf4f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:37.624895",
-      "file": "graphify-out\\cache\\ast\\684a86b1e2307b3d94d11405c76aaddbf1c79b67744ac4c91eeb2c45e2283184.json",
-      "snapshot": "BACKUPS\\20260714_042337\\graphify-out\\cache\\ast\\684a86b1e2307b3d94d11405c76aaddbf1c79b67744ac4c91eeb2c45e2283184.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:39.544534",
-      "file": "graphify-out\\cache\\ast\\cf60bfb18724e040d0b1bf11bd3cb2c56c95f406781215168aaae26d25e03506.json",
-      "snapshot": "BACKUPS\\20260714_042339\\graphify-out\\cache\\ast\\cf60bfb18724e040d0b1bf11bd3cb2c56c95f406781215168aaae26d25e03506.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:41.472917",
-      "file": "graphify-out\\cache\\ast\\ed4517f6a38507ca7703302efb7a4f586a0bcec19151a79e688bae681f8dac8d.json",
-      "snapshot": "BACKUPS\\20260714_042341\\graphify-out\\cache\\ast\\ed4517f6a38507ca7703302efb7a4f586a0bcec19151a79e688bae681f8dac8d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:43.381885",
-      "file": "graphify-out\\cache\\ast\\3501ba6af0550361717a4136d420084e8a65531f934191eeb6867eaad7532785.json",
-      "snapshot": "BACKUPS\\20260714_042343\\graphify-out\\cache\\ast\\3501ba6af0550361717a4136d420084e8a65531f934191eeb6867eaad7532785.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:45.305282",
-      "file": "graphify-out\\cache\\ast\\19dfadc771d5de49ba864725f1724ca4a82933d87eb0f0b358e784acdefd1a63.json",
-      "snapshot": "BACKUPS\\20260714_042345\\graphify-out\\cache\\ast\\19dfadc771d5de49ba864725f1724ca4a82933d87eb0f0b358e784acdefd1a63.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:47.244408",
-      "file": "graphify-out\\cache\\ast\\06d67c7557c0bbb8fb74e9f8c1897c146c8b957c04c44b4e6ffbdf67d3ba44fd.json",
-      "snapshot": "BACKUPS\\20260714_042347\\graphify-out\\cache\\ast\\06d67c7557c0bbb8fb74e9f8c1897c146c8b957c04c44b4e6ffbdf67d3ba44fd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:49.184739",
-      "file": "graphify-out\\cache\\ast\\855de34580bd89b943a37d672545c4965d55efe20ddff4572247b83c807245e7.json",
-      "snapshot": "BACKUPS\\20260714_042349\\graphify-out\\cache\\ast\\855de34580bd89b943a37d672545c4965d55efe20ddff4572247b83c807245e7.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:51.120411",
-      "file": "graphify-out\\cache\\ast\\30ccbf94b19d0e1ddf344202b80cbf17802f779cac4bebb9f0c1ffc644d217de.json",
-      "snapshot": "BACKUPS\\20260714_042351\\graphify-out\\cache\\ast\\30ccbf94b19d0e1ddf344202b80cbf17802f779cac4bebb9f0c1ffc644d217de.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:53.060240",
-      "file": "graphify-out\\cache\\ast\\7ef68068d6724920c7092597b63aa9c6a3071d39aaf93f31a9d9a771f20ec570.json",
-      "snapshot": "BACKUPS\\20260714_042353\\graphify-out\\cache\\ast\\7ef68068d6724920c7092597b63aa9c6a3071d39aaf93f31a9d9a771f20ec570.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:54.998600",
-      "file": "graphify-out\\cache\\ast\\edca0b85d04d9368ab9a9378a03db9cc4a47fa2121e9c05640e1a06a61978e0d.json",
-      "snapshot": "BACKUPS\\20260714_042354\\graphify-out\\cache\\ast\\edca0b85d04d9368ab9a9378a03db9cc4a47fa2121e9c05640e1a06a61978e0d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:56.927024",
-      "file": "graphify-out\\cache\\ast\\088483c02dd2ee67d6e8067734915eff3d738445e381a3a703f16674f69fb75a.json",
-      "snapshot": "BACKUPS\\20260714_042356\\graphify-out\\cache\\ast\\088483c02dd2ee67d6e8067734915eff3d738445e381a3a703f16674f69fb75a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:23:58.867148",
-      "file": "graphify-out\\cache\\ast\\7e139b6d0f4ec1d669d86cc138d902e97a70403e791cdd8dca6fac907c87f44e.json",
-      "snapshot": "BACKUPS\\20260714_042358\\graphify-out\\cache\\ast\\7e139b6d0f4ec1d669d86cc138d902e97a70403e791cdd8dca6fac907c87f44e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:00.802467",
-      "file": "graphify-out\\cache\\ast\\2b5ccdb693e346391eb0046ba83896c3a414b651df6fcb36741e013bfcf8e496.json",
-      "snapshot": "BACKUPS\\20260714_042400\\graphify-out\\cache\\ast\\2b5ccdb693e346391eb0046ba83896c3a414b651df6fcb36741e013bfcf8e496.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:02.749379",
-      "file": "graphify-out\\cache\\ast\\d9a4643b3a3b1807aad69515e2f029c7e1dae75a80a3576b20d997cef3c269ac.json",
-      "snapshot": "BACKUPS\\20260714_042402\\graphify-out\\cache\\ast\\d9a4643b3a3b1807aad69515e2f029c7e1dae75a80a3576b20d997cef3c269ac.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:04.683494",
-      "file": "graphify-out\\cache\\ast\\1c2064f18b39bb6373a408dd64f5f6a1502a4da86757ae4fc3d495c0d4b5e2d2.json",
-      "snapshot": "BACKUPS\\20260714_042404\\graphify-out\\cache\\ast\\1c2064f18b39bb6373a408dd64f5f6a1502a4da86757ae4fc3d495c0d4b5e2d2.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:06.631927",
-      "file": "graphify-out\\cache\\ast\\e051a9a8498c25db17e72db3011048a2171b058737156555ca083ca89e98c9fd.json",
-      "snapshot": "BACKUPS\\20260714_042406\\graphify-out\\cache\\ast\\e051a9a8498c25db17e72db3011048a2171b058737156555ca083ca89e98c9fd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:08.545649",
-      "file": "graphify-out\\cache\\ast\\6411c4de50dfc2efc58bebbcd89b3742fe0351bc85aa54cefe72660f594ed329.json",
-      "snapshot": "BACKUPS\\20260714_042408\\graphify-out\\cache\\ast\\6411c4de50dfc2efc58bebbcd89b3742fe0351bc85aa54cefe72660f594ed329.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:10.482961",
-      "file": "graphify-out\\cache\\ast\\ce364143686bf571bab54cba5b62117a9d5fb558fb23b66138361e121267e2fb.json",
-      "snapshot": "BACKUPS\\20260714_042410\\graphify-out\\cache\\ast\\ce364143686bf571bab54cba5b62117a9d5fb558fb23b66138361e121267e2fb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:12.424243",
-      "file": "graphify-out\\cache\\ast\\0046252a033408098baef05d6174c66d2e37b25f534873b88fa6f7aef0b3bc7d.json",
-      "snapshot": "BACKUPS\\20260714_042412\\graphify-out\\cache\\ast\\0046252a033408098baef05d6174c66d2e37b25f534873b88fa6f7aef0b3bc7d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:14.356673",
-      "file": "graphify-out\\cache\\ast\\5a49f1ebc505e68cbc249f5961f77f58be35b6125a400db9ce3f949a41c12080.json",
-      "snapshot": "BACKUPS\\20260714_042414\\graphify-out\\cache\\ast\\5a49f1ebc505e68cbc249f5961f77f58be35b6125a400db9ce3f949a41c12080.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:16.313174",
-      "file": "graphify-out\\cache\\ast\\f0cd47619bcf6964a681f8949820290fd9880d38c631b89858b0936cca5ad13e.json",
-      "snapshot": "BACKUPS\\20260714_042416\\graphify-out\\cache\\ast\\f0cd47619bcf6964a681f8949820290fd9880d38c631b89858b0936cca5ad13e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:18.232352",
-      "file": "graphify-out\\cache\\ast\\283e568fd778b32d61b34edc2f92a14cf9586cdadb79cdce40b9dbb7708b0486.json",
-      "snapshot": "BACKUPS\\20260714_042418\\graphify-out\\cache\\ast\\283e568fd778b32d61b34edc2f92a14cf9586cdadb79cdce40b9dbb7708b0486.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:20.167457",
-      "file": "graphify-out\\cache\\ast\\ceab1166331af779447c174353aed261873a008d279dfc1ccf97c7a198e5863f.json",
-      "snapshot": "BACKUPS\\20260714_042420\\graphify-out\\cache\\ast\\ceab1166331af779447c174353aed261873a008d279dfc1ccf97c7a198e5863f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:22.092721",
-      "file": "graphify-out\\cache\\ast\\cb237dd86af35cc2def9a59e9560f27b5619acf1ddf1f66fef5ac13589b270be.json",
-      "snapshot": "BACKUPS\\20260714_042422\\graphify-out\\cache\\ast\\cb237dd86af35cc2def9a59e9560f27b5619acf1ddf1f66fef5ac13589b270be.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:24.053266",
-      "file": "graphify-out\\cache\\ast\\5973bac42d23fe5ca10bc4796da41a1bd209ec6cbd73a8da78472a2fe90b0330.json",
-      "snapshot": "BACKUPS\\20260714_042424\\graphify-out\\cache\\ast\\5973bac42d23fe5ca10bc4796da41a1bd209ec6cbd73a8da78472a2fe90b0330.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:25.979703",
-      "file": "graphify-out\\cache\\ast\\7c3012569453d48dbd5f1149700768f3c1af22103da97ef97ca5f01bcad54536.json",
-      "snapshot": "BACKUPS\\20260714_042425\\graphify-out\\cache\\ast\\7c3012569453d48dbd5f1149700768f3c1af22103da97ef97ca5f01bcad54536.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:27.910177",
-      "file": "graphify-out\\cache\\ast\\5aa4ae60db69138c483b3685e61aca2df9dfe8bac0fbf4f1553ad40933fe1f41.json",
-      "snapshot": "BACKUPS\\20260714_042427\\graphify-out\\cache\\ast\\5aa4ae60db69138c483b3685e61aca2df9dfe8bac0fbf4f1553ad40933fe1f41.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:29.843145",
-      "file": "graphify-out\\cache\\ast\\17b07341bff827ffaf17412125709eb59bd8aa4619e2fe31032478b3f49a5c7a.json",
-      "snapshot": "BACKUPS\\20260714_042429\\graphify-out\\cache\\ast\\17b07341bff827ffaf17412125709eb59bd8aa4619e2fe31032478b3f49a5c7a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:31.781688",
-      "file": "graphify-out\\cache\\ast\\6959ee26b9c2009d3ed375f83e42c7681e7b58298eea80f16ed81caaa9bf80c4.json",
-      "snapshot": "BACKUPS\\20260714_042431\\graphify-out\\cache\\ast\\6959ee26b9c2009d3ed375f83e42c7681e7b58298eea80f16ed81caaa9bf80c4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:33.731672",
-      "file": "graphify-out\\cache\\ast\\b277fb554e68f790bda0f7b4345d0283a7adec3a13874a7890320c3bb0d5204a.json",
-      "snapshot": "BACKUPS\\20260714_042433\\graphify-out\\cache\\ast\\b277fb554e68f790bda0f7b4345d0283a7adec3a13874a7890320c3bb0d5204a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:35.633240",
-      "file": "graphify-out\\cache\\ast\\4c78963c0b3ddadad2bebdff3a01e329d10c2ddd65c18be56584a100a49f290b.json",
-      "snapshot": "BACKUPS\\20260714_042435\\graphify-out\\cache\\ast\\4c78963c0b3ddadad2bebdff3a01e329d10c2ddd65c18be56584a100a49f290b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:37.556612",
-      "file": "graphify-out\\cache\\ast\\83b24b2ee8e9f768989b4bae3769ebc68c85bb6e7f2883e3282f39ef178640cf.json",
-      "snapshot": "BACKUPS\\20260714_042437\\graphify-out\\cache\\ast\\83b24b2ee8e9f768989b4bae3769ebc68c85bb6e7f2883e3282f39ef178640cf.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:39.487946",
-      "file": "graphify-out\\cache\\ast\\d0c2b5fa3cd0fedefe3600add8ba3ca20e324074676bde25e0b1f778982ec18b.json",
-      "snapshot": "BACKUPS\\20260714_042439\\graphify-out\\cache\\ast\\d0c2b5fa3cd0fedefe3600add8ba3ca20e324074676bde25e0b1f778982ec18b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:41.455267",
-      "file": "graphify-out\\cache\\ast\\a28a0c0b4218fce87345021a7fc7954c8961c6491277248e2f175be4bf68a852.json",
-      "snapshot": "BACKUPS\\20260714_042441\\graphify-out\\cache\\ast\\a28a0c0b4218fce87345021a7fc7954c8961c6491277248e2f175be4bf68a852.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:43.382971",
-      "file": "graphify-out\\cache\\ast\\1c841dcc2ad361e5b0d56b2863de38e821621675544033724227545c11f233cd.json",
-      "snapshot": "BACKUPS\\20260714_042443\\graphify-out\\cache\\ast\\1c841dcc2ad361e5b0d56b2863de38e821621675544033724227545c11f233cd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:45.311955",
-      "file": "graphify-out\\cache\\ast\\54641c5610978b2150f4da1f43d06b1eac12f38d7c3855c2199246f4e25faa94.json",
-      "snapshot": "BACKUPS\\20260714_042445\\graphify-out\\cache\\ast\\54641c5610978b2150f4da1f43d06b1eac12f38d7c3855c2199246f4e25faa94.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:47.247358",
-      "file": "graphify-out\\cache\\ast\\70e07be8307f082223cbde9488498dcdfd08e0fc01ac17712d0dbfb1d12a5a43.json",
-      "snapshot": "BACKUPS\\20260714_042447\\graphify-out\\cache\\ast\\70e07be8307f082223cbde9488498dcdfd08e0fc01ac17712d0dbfb1d12a5a43.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:49.184859",
-      "file": "graphify-out\\cache\\ast\\89cb290b34db29adde28637c5a802d009ca0dadfc12aaf8fc4527d0875e2c385.json",
-      "snapshot": "BACKUPS\\20260714_042449\\graphify-out\\cache\\ast\\89cb290b34db29adde28637c5a802d009ca0dadfc12aaf8fc4527d0875e2c385.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:51.131313",
-      "file": "graphify-out\\cache\\ast\\27dddbe3cd314bfc1379bd3674507f27e2881eb96172f7ac57102cde42289b1f.json",
-      "snapshot": "BACKUPS\\20260714_042451\\graphify-out\\cache\\ast\\27dddbe3cd314bfc1379bd3674507f27e2881eb96172f7ac57102cde42289b1f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:53.052960",
-      "file": "graphify-out\\cache\\ast\\dc4ee0b2f76fafc186927884a6d6bb1fd1915574212afd3210e35557b95eb491.json",
-      "snapshot": "BACKUPS\\20260714_042453\\graphify-out\\cache\\ast\\dc4ee0b2f76fafc186927884a6d6bb1fd1915574212afd3210e35557b95eb491.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:54.992191",
-      "file": "graphify-out\\cache\\ast\\bbd151c37ec93dbce8b89907b1507b0f930ee55c7a14001f0e6a2b4517fb434a.json",
-      "snapshot": "BACKUPS\\20260714_042454\\graphify-out\\cache\\ast\\bbd151c37ec93dbce8b89907b1507b0f930ee55c7a14001f0e6a2b4517fb434a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:56.925518",
-      "file": "graphify-out\\cache\\ast\\3fc2dad616441f34131f910daaa2c05af3b4e2ea7802f3ffa29dc25ddde97038.json",
-      "snapshot": "BACKUPS\\20260714_042456\\graphify-out\\cache\\ast\\3fc2dad616441f34131f910daaa2c05af3b4e2ea7802f3ffa29dc25ddde97038.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:24:58.860533",
-      "file": "graphify-out\\cache\\ast\\0f117d325b97c362891e499f44be186a3c28a87562d8a9283d7fd4484a510b04.json",
-      "snapshot": "BACKUPS\\20260714_042458\\graphify-out\\cache\\ast\\0f117d325b97c362891e499f44be186a3c28a87562d8a9283d7fd4484a510b04.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:00.780114",
-      "file": "graphify-out\\cache\\ast\\7b149bf741d4990cf5efe88c36c75549a3c6cd894cc7ee934db64f478e7868a0.json",
-      "snapshot": "BACKUPS\\20260714_042500\\graphify-out\\cache\\ast\\7b149bf741d4990cf5efe88c36c75549a3c6cd894cc7ee934db64f478e7868a0.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:02.715533",
-      "file": "graphify-out\\cache\\ast\\e8e1a59e190f084a6360516a4c3bb09831aba113dca4e3cd230e539bd2f67f72.json",
-      "snapshot": "BACKUPS\\20260714_042502\\graphify-out\\cache\\ast\\e8e1a59e190f084a6360516a4c3bb09831aba113dca4e3cd230e539bd2f67f72.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:04.643364",
-      "file": "graphify-out\\cache\\ast\\6bf6f583fb1f6948e40037bf7b7c4fedacb0580f11049eca7af5eebc849e8e7c.json",
-      "snapshot": "BACKUPS\\20260714_042504\\graphify-out\\cache\\ast\\6bf6f583fb1f6948e40037bf7b7c4fedacb0580f11049eca7af5eebc849e8e7c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:06.577086",
-      "file": "graphify-out\\cache\\ast\\18e890b65a25be57507f83d2c097919da7e8fa33a76f2bb92a7e3acc443c4e9b.json",
-      "snapshot": "BACKUPS\\20260714_042506\\graphify-out\\cache\\ast\\18e890b65a25be57507f83d2c097919da7e8fa33a76f2bb92a7e3acc443c4e9b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:08.532851",
-      "file": "graphify-out\\cache\\ast\\c736031aa6ab51646dee9ec01ac3cd7df1a1044179a3f5d65beb937676cb66bb.json",
-      "snapshot": "BACKUPS\\20260714_042508\\graphify-out\\cache\\ast\\c736031aa6ab51646dee9ec01ac3cd7df1a1044179a3f5d65beb937676cb66bb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:10.467856",
-      "file": "graphify-out\\cache\\ast\\049895b9c52919a31c1ad119cbdb83de523c35401c30a54f6d2bcf1ec7c00aea.json",
-      "snapshot": "BACKUPS\\20260714_042510\\graphify-out\\cache\\ast\\049895b9c52919a31c1ad119cbdb83de523c35401c30a54f6d2bcf1ec7c00aea.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:12.396939",
-      "file": "graphify-out\\cache\\ast\\00a45f9c4dbbcd3dc747ef948ab3affa1be5cc48139a81382ab1b394d739e2c8.json",
-      "snapshot": "BACKUPS\\20260714_042512\\graphify-out\\cache\\ast\\00a45f9c4dbbcd3dc747ef948ab3affa1be5cc48139a81382ab1b394d739e2c8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:14.329113",
-      "file": "graphify-out\\cache\\ast\\ee0cbf95c763ab34bbf01c614ff8c60cfeb7beaa3f7b04b04fae6792b993431a.json",
-      "snapshot": "BACKUPS\\20260714_042514\\graphify-out\\cache\\ast\\ee0cbf95c763ab34bbf01c614ff8c60cfeb7beaa3f7b04b04fae6792b993431a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:16.264674",
-      "file": "graphify-out\\cache\\ast\\ccc94043b4e7d10034f660934a6c4110a78cbd453bee7d838cb27b6f31eead90.json",
-      "snapshot": "BACKUPS\\20260714_042516\\graphify-out\\cache\\ast\\ccc94043b4e7d10034f660934a6c4110a78cbd453bee7d838cb27b6f31eead90.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:18.181121",
-      "file": "graphify-out\\cache\\ast\\eaab2f3b51c4dd15b9e7af929f4bf0dda65df7e5795d935982318b4c772ef15f.json",
-      "snapshot": "BACKUPS\\20260714_042518\\graphify-out\\cache\\ast\\eaab2f3b51c4dd15b9e7af929f4bf0dda65df7e5795d935982318b4c772ef15f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:20.111748",
-      "file": "graphify-out\\cache\\ast\\c64b3abbe57641e4ed5c1bd398a3e0bb3ab38e29ec1ae02554da3215ace11103.json",
-      "snapshot": "BACKUPS\\20260714_042520\\graphify-out\\cache\\ast\\c64b3abbe57641e4ed5c1bd398a3e0bb3ab38e29ec1ae02554da3215ace11103.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:22.053637",
-      "file": "graphify-out\\cache\\ast\\eb37eaefa484907a798cb79606db327ded89ca696f7e2d6d46fce25645bbfd41.json",
-      "snapshot": "BACKUPS\\20260714_042522\\graphify-out\\cache\\ast\\eb37eaefa484907a798cb79606db327ded89ca696f7e2d6d46fce25645bbfd41.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:24.004664",
-      "file": "graphify-out\\cache\\ast\\8407087491034df346a1bce21923436857db8bc6c297fd1f1a2fdbd4a0e99da7.json",
-      "snapshot": "BACKUPS\\20260714_042524\\graphify-out\\cache\\ast\\8407087491034df346a1bce21923436857db8bc6c297fd1f1a2fdbd4a0e99da7.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:25.958726",
-      "file": "graphify-out\\cache\\ast\\1677d944ecb2d056cc60876642355a6dc462e7f59387494080df0d2b26fc97e4.json",
-      "snapshot": "BACKUPS\\20260714_042525\\graphify-out\\cache\\ast\\1677d944ecb2d056cc60876642355a6dc462e7f59387494080df0d2b26fc97e4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:27.876504",
-      "file": "graphify-out\\cache\\ast\\380d2958463274a3bf5eb7088ded83b08f655d3b9853b3c3a57e11e1c85eabee.json",
-      "snapshot": "BACKUPS\\20260714_042527\\graphify-out\\cache\\ast\\380d2958463274a3bf5eb7088ded83b08f655d3b9853b3c3a57e11e1c85eabee.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:29.795811",
-      "file": "graphify-out\\cache\\ast\\d1179437d56be1fdbf1bc96f325b5193e72b013f3abba2bce0055db61b616d7c.json",
-      "snapshot": "BACKUPS\\20260714_042529\\graphify-out\\cache\\ast\\d1179437d56be1fdbf1bc96f325b5193e72b013f3abba2bce0055db61b616d7c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:31.738115",
-      "file": "graphify-out\\cache\\ast\\27825f05c345dbabec94476267763f96d6f2f4412bb8046f4af6f7a5b7dd9bca.json",
-      "snapshot": "BACKUPS\\20260714_042531\\graphify-out\\cache\\ast\\27825f05c345dbabec94476267763f96d6f2f4412bb8046f4af6f7a5b7dd9bca.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:33.679753",
-      "file": "graphify-out\\cache\\ast\\74020c584b787c9fb0f3dc96bdf81e3212ba12e73ff90dfe2f5d9f916238fbc4.json",
-      "snapshot": "BACKUPS\\20260714_042533\\graphify-out\\cache\\ast\\74020c584b787c9fb0f3dc96bdf81e3212ba12e73ff90dfe2f5d9f916238fbc4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:35.595023",
-      "file": "graphify-out\\cache\\ast\\7ea66121e20b38d8bbc66798a836b0f68ff3126dd10e5d33fbc27022a910a1a8.json",
-      "snapshot": "BACKUPS\\20260714_042535\\graphify-out\\cache\\ast\\7ea66121e20b38d8bbc66798a836b0f68ff3126dd10e5d33fbc27022a910a1a8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:37.527065",
-      "file": "graphify-out\\cache\\ast\\9aba9957ba26e66a5f964c2a57f74f1de3b733d1fa7066f4e4c3a717f76e3290.json",
-      "snapshot": "BACKUPS\\20260714_042537\\graphify-out\\cache\\ast\\9aba9957ba26e66a5f964c2a57f74f1de3b733d1fa7066f4e4c3a717f76e3290.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:39.465836",
-      "file": "graphify-out\\cache\\ast\\44ec00a6c0ec41a0aff46662dbfdd65dc3bb39c0a15dbe8faaf3c63f94d16e79.json",
-      "snapshot": "BACKUPS\\20260714_042539\\graphify-out\\cache\\ast\\44ec00a6c0ec41a0aff46662dbfdd65dc3bb39c0a15dbe8faaf3c63f94d16e79.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:41.401806",
-      "file": "graphify-out\\cache\\ast\\d2accb533cd8a1aeca659d3481e09bc0b88527e84cf1f354e91381cb65710a0e.json",
-      "snapshot": "BACKUPS\\20260714_042541\\graphify-out\\cache\\ast\\d2accb533cd8a1aeca659d3481e09bc0b88527e84cf1f354e91381cb65710a0e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:43.358333",
-      "file": "graphify-out\\cache\\ast\\853a6829f139f79e5d024322a808943aeb2dd679262e0a6dee949166a3f7a1ff.json",
-      "snapshot": "BACKUPS\\20260714_042543\\graphify-out\\cache\\ast\\853a6829f139f79e5d024322a808943aeb2dd679262e0a6dee949166a3f7a1ff.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:45.272194",
-      "file": "graphify-out\\cache\\ast\\46cd370365786ce349c9e5c9c737fd79fb09261515dac41f2f8b0599240287f0.json",
-      "snapshot": "BACKUPS\\20260714_042545\\graphify-out\\cache\\ast\\46cd370365786ce349c9e5c9c737fd79fb09261515dac41f2f8b0599240287f0.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:47.190889",
-      "file": "graphify-out\\cache\\ast\\75511268897dc9a90e86127c656d45178cc418be290ca262884f1f6bb26e10f3.json",
-      "snapshot": "BACKUPS\\20260714_042547\\graphify-out\\cache\\ast\\75511268897dc9a90e86127c656d45178cc418be290ca262884f1f6bb26e10f3.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:49.118957",
-      "file": "graphify-out\\cache\\ast\\ea53d5ec329b0a3a0899826d352c6229fd30668509caf638f4887ab42584e5e8.json",
-      "snapshot": "BACKUPS\\20260714_042549\\graphify-out\\cache\\ast\\ea53d5ec329b0a3a0899826d352c6229fd30668509caf638f4887ab42584e5e8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:51.045390",
-      "file": "graphify-out\\cache\\ast\\f812803d4b095c8b5d3dffa8f1dee86d9489a43e1266f8507258412a6f2daf0e.json",
-      "snapshot": "BACKUPS\\20260714_042551\\graphify-out\\cache\\ast\\f812803d4b095c8b5d3dffa8f1dee86d9489a43e1266f8507258412a6f2daf0e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:53.022413",
-      "file": "graphify-out\\cache\\ast\\2c9acc6db2187061c71f9a37fa89d1983f7c099429e35dd77cff7ebd9c3c73d8.json",
-      "snapshot": "BACKUPS\\20260714_042553\\graphify-out\\cache\\ast\\2c9acc6db2187061c71f9a37fa89d1983f7c099429e35dd77cff7ebd9c3c73d8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:54.945854",
-      "file": "graphify-out\\cache\\ast\\87e179ab2d07a5be168a229b2b8fd0f5268645b188e9f5a2e91e4de665deb1d0.json",
-      "snapshot": "BACKUPS\\20260714_042554\\graphify-out\\cache\\ast\\87e179ab2d07a5be168a229b2b8fd0f5268645b188e9f5a2e91e4de665deb1d0.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:56.874852",
-      "file": "graphify-out\\cache\\ast\\47f588a19d06d67d9cd261123ce57f2f833d5ab683210326e05e954ac224e62b.json",
-      "snapshot": "BACKUPS\\20260714_042556\\graphify-out\\cache\\ast\\47f588a19d06d67d9cd261123ce57f2f833d5ab683210326e05e954ac224e62b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:25:58.818782",
-      "file": "graphify-out\\cache\\ast\\2ecb8c26212c5af89780f0c7b3c088738a95a9a644db26e4f0e38243297e2b42.json",
-      "snapshot": "BACKUPS\\20260714_042558\\graphify-out\\cache\\ast\\2ecb8c26212c5af89780f0c7b3c088738a95a9a644db26e4f0e38243297e2b42.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:00.774189",
-      "file": "graphify-out\\cache\\ast\\721aafcf26daf635f9722dd3bbc8b9a9f4e08cb73005bdf9ff74c1f2485d0183.json",
-      "snapshot": "BACKUPS\\20260714_042600\\graphify-out\\cache\\ast\\721aafcf26daf635f9722dd3bbc8b9a9f4e08cb73005bdf9ff74c1f2485d0183.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:02.700223",
-      "file": "graphify-out\\cache\\ast\\b7a34431793d97c89aef3b6df2ce77d22999e152850f750b8f3b9adfad19bcc7.json",
-      "snapshot": "BACKUPS\\20260714_042602\\graphify-out\\cache\\ast\\b7a34431793d97c89aef3b6df2ce77d22999e152850f750b8f3b9adfad19bcc7.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:04.642151",
-      "file": "graphify-out\\cache\\ast\\1453ced950dd0b0e009bf2740ec0d4154ab6b66ec9c35cd0a641ad63f3e724ee.json",
-      "snapshot": "BACKUPS\\20260714_042604\\graphify-out\\cache\\ast\\1453ced950dd0b0e009bf2740ec0d4154ab6b66ec9c35cd0a641ad63f3e724ee.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:06.579681",
-      "file": "graphify-out\\cache\\ast\\0361d515c38649c9260dd8363f7b493fa255af03ab0693a82d8bd2ecc61367ce.json",
-      "snapshot": "BACKUPS\\20260714_042606\\graphify-out\\cache\\ast\\0361d515c38649c9260dd8363f7b493fa255af03ab0693a82d8bd2ecc61367ce.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:08.519864",
-      "file": "graphify-out\\cache\\ast\\bf55a98b2d4fcca479014a117a9ae52f97d71aebe7c3b42015ba9788ac7fc5bd.json",
-      "snapshot": "BACKUPS\\20260714_042608\\graphify-out\\cache\\ast\\bf55a98b2d4fcca479014a117a9ae52f97d71aebe7c3b42015ba9788ac7fc5bd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:10.468368",
-      "file": "graphify-out\\cache\\ast\\359289cb6eae37ea8a18f5e3c317038ae23b223e1bb2e637c89482d372988a17.json",
-      "snapshot": "BACKUPS\\20260714_042610\\graphify-out\\cache\\ast\\359289cb6eae37ea8a18f5e3c317038ae23b223e1bb2e637c89482d372988a17.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:12.375381",
-      "file": "graphify-out\\cache\\ast\\5bb6359c405d8e33a8f31c955a07da5da41473b9d617225c0a8c68067bcf7a5d.json",
-      "snapshot": "BACKUPS\\20260714_042612\\graphify-out\\cache\\ast\\5bb6359c405d8e33a8f31c955a07da5da41473b9d617225c0a8c68067bcf7a5d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:14.299784",
-      "file": "graphify-out\\cache\\ast\\5e7de8003bfa2a9aad6aa87dc6559533c547a881c45e41317ef2580dad9d2ed2.json",
-      "snapshot": "BACKUPS\\20260714_042614\\graphify-out\\cache\\ast\\5e7de8003bfa2a9aad6aa87dc6559533c547a881c45e41317ef2580dad9d2ed2.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:16.236545",
-      "file": "graphify-out\\cache\\ast\\ebab6f5bc69cbb555404dca0caf57bd171780f97555015988e2f9a2b58e0554c.json",
-      "snapshot": "BACKUPS\\20260714_042616\\graphify-out\\cache\\ast\\ebab6f5bc69cbb555404dca0caf57bd171780f97555015988e2f9a2b58e0554c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:18.181710",
-      "file": "graphify-out\\cache\\ast\\f7bdd26930581365e2a81aac7262f6d068789c46dc893c882127f5c3950c3e49.json",
-      "snapshot": "BACKUPS\\20260714_042618\\graphify-out\\cache\\ast\\f7bdd26930581365e2a81aac7262f6d068789c46dc893c882127f5c3950c3e49.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:20.179924",
-      "file": "graphify-out\\cache\\ast\\85cf1cef9ef9534c878c8c2cf59f70bd200f307fdf5e9a09489b45190218a17c.json",
-      "snapshot": "BACKUPS\\20260714_042620\\graphify-out\\cache\\ast\\85cf1cef9ef9534c878c8c2cf59f70bd200f307fdf5e9a09489b45190218a17c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:22.130386",
-      "file": "graphify-out\\cache\\ast\\9a32bc7660273279dbe462f058bc76fe3382695586f5cef751fc78442b2c398c.json",
-      "snapshot": "BACKUPS\\20260714_042622\\graphify-out\\cache\\ast\\9a32bc7660273279dbe462f058bc76fe3382695586f5cef751fc78442b2c398c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:24.077373",
-      "file": "graphify-out\\cache\\ast\\407048781a3cd1e4a1e885be86b4e95cb3b7683ea1fc8b2c03910991c2b7840f.json",
-      "snapshot": "BACKUPS\\20260714_042624\\graphify-out\\cache\\ast\\407048781a3cd1e4a1e885be86b4e95cb3b7683ea1fc8b2c03910991c2b7840f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:26.034766",
-      "file": "graphify-out\\cache\\ast\\cec67ac73e1949acc8cab9c3fe3730cc9618553ba2bea8030e110fb36156ba42.json",
-      "snapshot": "BACKUPS\\20260714_042626\\graphify-out\\cache\\ast\\cec67ac73e1949acc8cab9c3fe3730cc9618553ba2bea8030e110fb36156ba42.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:27.987660",
-      "file": "graphify-out\\cache\\ast\\dd737070140067442ee18305e81c1f42bdebaaa40cea4a3bbbf33efc7f22d30e.json",
-      "snapshot": "BACKUPS\\20260714_042627\\graphify-out\\cache\\ast\\dd737070140067442ee18305e81c1f42bdebaaa40cea4a3bbbf33efc7f22d30e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:29.908340",
-      "file": "graphify-out\\cache\\ast\\99da51d9609565f3258175350fcc3b74ed2f8fd3b93184f659b41c746ab450a1.json",
-      "snapshot": "BACKUPS\\20260714_042629\\graphify-out\\cache\\ast\\99da51d9609565f3258175350fcc3b74ed2f8fd3b93184f659b41c746ab450a1.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:31.832008",
-      "file": "graphify-out\\cache\\ast\\b38467e114f306308576936412659cde2dc8c778bc772316e6c5701f84d9897d.json",
-      "snapshot": "BACKUPS\\20260714_042631\\graphify-out\\cache\\ast\\b38467e114f306308576936412659cde2dc8c778bc772316e6c5701f84d9897d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:33.784279",
-      "file": "graphify-out\\cache\\ast\\731abced3a77a7a943cf4eed6be9bbdd07b1eaf19a9a6a46970122b81ddd901d.json",
-      "snapshot": "BACKUPS\\20260714_042633\\graphify-out\\cache\\ast\\731abced3a77a7a943cf4eed6be9bbdd07b1eaf19a9a6a46970122b81ddd901d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:35.720319",
-      "file": "graphify-out\\cache\\ast\\db59e18884144ad47d210927e645ba073f2e1ffc3bdcc7086bee8039f90225f9.json",
-      "snapshot": "BACKUPS\\20260714_042635\\graphify-out\\cache\\ast\\db59e18884144ad47d210927e645ba073f2e1ffc3bdcc7086bee8039f90225f9.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:37.645878",
-      "file": "graphify-out\\cache\\ast\\bfa3e674417911bd316b7d356df0b9b8d5a2e41bb434a4bf5f08480d742e78c6.json",
-      "snapshot": "BACKUPS\\20260714_042637\\graphify-out\\cache\\ast\\bfa3e674417911bd316b7d356df0b9b8d5a2e41bb434a4bf5f08480d742e78c6.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:39.588503",
-      "file": "graphify-out\\cache\\ast\\cccfde9a004c5fda9fe6bc4805265e55a5e27678de0c9fc00523d427bce05a7c.json",
-      "snapshot": "BACKUPS\\20260714_042639\\graphify-out\\cache\\ast\\cccfde9a004c5fda9fe6bc4805265e55a5e27678de0c9fc00523d427bce05a7c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:41.533649",
-      "file": "graphify-out\\cache\\ast\\61190186ea086236bfd967cfbea2fa9d5987865cf5500e8222619c090946a90f.json",
-      "snapshot": "BACKUPS\\20260714_042641\\graphify-out\\cache\\ast\\61190186ea086236bfd967cfbea2fa9d5987865cf5500e8222619c090946a90f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:43.476335",
-      "file": "graphify-out\\cache\\ast\\268e61b97fa31f6f60322d71712f980f7d99c44824b39be29a3121d86275f7f6.json",
-      "snapshot": "BACKUPS\\20260714_042643\\graphify-out\\cache\\ast\\268e61b97fa31f6f60322d71712f980f7d99c44824b39be29a3121d86275f7f6.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:45.421479",
-      "file": "graphify-out\\cache\\ast\\14f551a7e54580f57d26f677590104e7d60d2e5e316035a3b4f9ea04752aaa3d.json",
-      "snapshot": "BACKUPS\\20260714_042645\\graphify-out\\cache\\ast\\14f551a7e54580f57d26f677590104e7d60d2e5e316035a3b4f9ea04752aaa3d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:47.350862",
-      "file": "graphify-out\\cache\\ast\\073f70a6ad11bc8d5150d10d8d1e42ccc3c18a4150719200e86462adf470fb7f.json",
-      "snapshot": "BACKUPS\\20260714_042647\\graphify-out\\cache\\ast\\073f70a6ad11bc8d5150d10d8d1e42ccc3c18a4150719200e86462adf470fb7f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:49.290052",
-      "file": "graphify-out\\cache\\ast\\41e9329e9ff82dc872b3f4d2fa329bfab8c70d7ff243ea97b9f6dbcb3d0559ae.json",
-      "snapshot": "BACKUPS\\20260714_042649\\graphify-out\\cache\\ast\\41e9329e9ff82dc872b3f4d2fa329bfab8c70d7ff243ea97b9f6dbcb3d0559ae.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:51.231032",
-      "file": "graphify-out\\cache\\ast\\0f892bd2252291d1ebe1ecb54179e90b5a5a88f3d7514454e83ef537bffb40b3.json",
-      "snapshot": "BACKUPS\\20260714_042651\\graphify-out\\cache\\ast\\0f892bd2252291d1ebe1ecb54179e90b5a5a88f3d7514454e83ef537bffb40b3.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:53.185797",
-      "file": "graphify-out\\cache\\ast\\952a1a40df37b15dec39bd7d6f0824fae7b2202b1b00717a2ac601c20881cad5.json",
-      "snapshot": "BACKUPS\\20260714_042653\\graphify-out\\cache\\ast\\952a1a40df37b15dec39bd7d6f0824fae7b2202b1b00717a2ac601c20881cad5.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:55.142305",
-      "file": "graphify-out\\cache\\ast\\5c78303e411b3dc3621f33a255eec783059c158f50d8f6f251eabcfb85ccecbc.json",
-      "snapshot": "BACKUPS\\20260714_042655\\graphify-out\\cache\\ast\\5c78303e411b3dc3621f33a255eec783059c158f50d8f6f251eabcfb85ccecbc.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:57.051456",
-      "file": "graphify-out\\cache\\ast\\01429b22f71a56f3e50aef504c507eb0feda7eea598648a9856a0f53b7f653b0.json",
-      "snapshot": "BACKUPS\\20260714_042657\\graphify-out\\cache\\ast\\01429b22f71a56f3e50aef504c507eb0feda7eea598648a9856a0f53b7f653b0.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:26:58.997787",
-      "file": "graphify-out\\cache\\ast\\870c2a8d8540b78a333dc068a7b8f9cc6b1be7808d9de3cd7a2fb365fea8278e.json",
-      "snapshot": "BACKUPS\\20260714_042658\\graphify-out\\cache\\ast\\870c2a8d8540b78a333dc068a7b8f9cc6b1be7808d9de3cd7a2fb365fea8278e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:00.942385",
-      "file": "graphify-out\\cache\\ast\\82aeb3adae87c7dc6d42248d80c4bbaa00198c9ba48a296c2a8087576e53d2bc.json",
-      "snapshot": "BACKUPS\\20260714_042700\\graphify-out\\cache\\ast\\82aeb3adae87c7dc6d42248d80c4bbaa00198c9ba48a296c2a8087576e53d2bc.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:02.899516",
-      "file": "graphify-out\\cache\\ast\\84f87c575626323d7ca6199d0b7a6d23e6f5df883311330abc1471828cb7c742.json",
-      "snapshot": "BACKUPS\\20260714_042702\\graphify-out\\cache\\ast\\84f87c575626323d7ca6199d0b7a6d23e6f5df883311330abc1471828cb7c742.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:04.832269",
-      "file": "graphify-out\\cache\\ast\\0468ab2068ba6ed3783a2741124fc7b81d5f4d2630becb7c6e443ad00d14a148.json",
-      "snapshot": "BACKUPS\\20260714_042704\\graphify-out\\cache\\ast\\0468ab2068ba6ed3783a2741124fc7b81d5f4d2630becb7c6e443ad00d14a148.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:06.774299",
-      "file": "graphify-out\\cache\\ast\\ed4e288eebaa7a8ad9e6461163ffe45651cc66ac9c05e5264582c330109cd9f7.json",
-      "snapshot": "BACKUPS\\20260714_042706\\graphify-out\\cache\\ast\\ed4e288eebaa7a8ad9e6461163ffe45651cc66ac9c05e5264582c330109cd9f7.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:08.712275",
-      "file": "graphify-out\\cache\\ast\\bd48101d41dc4b359d92e1a6014b3cdcaeea02e09de85ed7f32177d29d11bd83.json",
-      "snapshot": "BACKUPS\\20260714_042708\\graphify-out\\cache\\ast\\bd48101d41dc4b359d92e1a6014b3cdcaeea02e09de85ed7f32177d29d11bd83.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:10.648693",
-      "file": "graphify-out\\cache\\ast\\925db14eca8f979115fc8e82690c8b5db32dbe6525fd9bdea2110e5753e9d789.json",
-      "snapshot": "BACKUPS\\20260714_042710\\graphify-out\\cache\\ast\\925db14eca8f979115fc8e82690c8b5db32dbe6525fd9bdea2110e5753e9d789.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:12.621952",
-      "file": "graphify-out\\cache\\ast\\bc02140f608553d2dc1ff09378a6b362505211d8f923cc6267aab3b446b8f99c.json",
-      "snapshot": "BACKUPS\\20260714_042712\\graphify-out\\cache\\ast\\bc02140f608553d2dc1ff09378a6b362505211d8f923cc6267aab3b446b8f99c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:14.545922",
-      "file": "graphify-out\\cache\\ast\\55af5b5436c41344b887a0370698a4e43d9915d9a97554f180ed0ca1a2341c43.json",
-      "snapshot": "BACKUPS\\20260714_042714\\graphify-out\\cache\\ast\\55af5b5436c41344b887a0370698a4e43d9915d9a97554f180ed0ca1a2341c43.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:16.489535",
-      "file": "graphify-out\\cache\\ast\\c562b22583a59991efe77687e184711ddd06876c35244ff2e1c20054c3724ad9.json",
-      "snapshot": "BACKUPS\\20260714_042716\\graphify-out\\cache\\ast\\c562b22583a59991efe77687e184711ddd06876c35244ff2e1c20054c3724ad9.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:18.425313",
-      "file": "graphify-out\\cache\\ast\\21e9936e0836d764f23d6eb86d001828acd2e26b98d1615d881f7dd8b60aeb24.json",
-      "snapshot": "BACKUPS\\20260714_042718\\graphify-out\\cache\\ast\\21e9936e0836d764f23d6eb86d001828acd2e26b98d1615d881f7dd8b60aeb24.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:20.364729",
-      "file": "graphify-out\\cache\\ast\\aa16aa5c0b0f6261a61c6417d0325ea7097f2d06b8a7acf10bd4806fb81408e0.json",
-      "snapshot": "BACKUPS\\20260714_042720\\graphify-out\\cache\\ast\\aa16aa5c0b0f6261a61c6417d0325ea7097f2d06b8a7acf10bd4806fb81408e0.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:22.286279",
-      "file": "graphify-out\\cache\\ast\\b20c01ea53a31b471b28133fb6cc971fd264cdc3f3ee20bcbee988b79db8bbd8.json",
-      "snapshot": "BACKUPS\\20260714_042722\\graphify-out\\cache\\ast\\b20c01ea53a31b471b28133fb6cc971fd264cdc3f3ee20bcbee988b79db8bbd8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:24.229657",
-      "file": "graphify-out\\cache\\ast\\f441462e6e687ea099506ecaaacdfc31d96ccf9eb706f552945b96dd57a67e52.json",
-      "snapshot": "BACKUPS\\20260714_042724\\graphify-out\\cache\\ast\\f441462e6e687ea099506ecaaacdfc31d96ccf9eb706f552945b96dd57a67e52.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:26.167715",
-      "file": "graphify-out\\cache\\ast\\178fdbcf33d0ca9e0021d7a78745ac9e643cb3ddee9d714ebf7d8f9055b9c033.json",
-      "snapshot": "BACKUPS\\20260714_042726\\graphify-out\\cache\\ast\\178fdbcf33d0ca9e0021d7a78745ac9e643cb3ddee9d714ebf7d8f9055b9c033.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:28.109140",
-      "file": "graphify-out\\cache\\ast\\987d049eac74d919ffde8b272e88caaf8e7c8697447b70bd50261a1543aa4bb3.json",
-      "snapshot": "BACKUPS\\20260714_042728\\graphify-out\\cache\\ast\\987d049eac74d919ffde8b272e88caaf8e7c8697447b70bd50261a1543aa4bb3.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:30.045794",
-      "file": "graphify-out\\cache\\ast\\656843446bb4d03edc94ebb0a1f5ab32ff53f6849529fbff732fdcd85e435716.json",
-      "snapshot": "BACKUPS\\20260714_042730\\graphify-out\\cache\\ast\\656843446bb4d03edc94ebb0a1f5ab32ff53f6849529fbff732fdcd85e435716.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:31.962795",
-      "file": "graphify-out\\cache\\ast\\b0639e1d01c9c7c653f79f50b5b945bb5d63801614e049f0a7caa629fdd9bddb.json",
-      "snapshot": "BACKUPS\\20260714_042731\\graphify-out\\cache\\ast\\b0639e1d01c9c7c653f79f50b5b945bb5d63801614e049f0a7caa629fdd9bddb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:33.919859",
-      "file": "graphify-out\\cache\\ast\\723fc72e6e47dd9d61d7233a6d7b3966cdd88c9d45d22d262e04d1426d88014d.json",
-      "snapshot": "BACKUPS\\20260714_042733\\graphify-out\\cache\\ast\\723fc72e6e47dd9d61d7233a6d7b3966cdd88c9d45d22d262e04d1426d88014d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:35.864383",
-      "file": "graphify-out\\cache\\ast\\8158f995b152162aab87ca1eef639593360b85d3e3c84d9fbf7d74918094b937.json",
-      "snapshot": "BACKUPS\\20260714_042735\\graphify-out\\cache\\ast\\8158f995b152162aab87ca1eef639593360b85d3e3c84d9fbf7d74918094b937.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:37.826368",
-      "file": "graphify-out\\cache\\ast\\004fbabea67197e7fb3378351bb17014c058ccf5fc7121d54dd5fe4636b97907.json",
-      "snapshot": "BACKUPS\\20260714_042737\\graphify-out\\cache\\ast\\004fbabea67197e7fb3378351bb17014c058ccf5fc7121d54dd5fe4636b97907.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:39.785724",
-      "file": "graphify-out\\cache\\ast\\2335d9693d11257ce0b8aab55c6b7bf53d0696ce7217d6e9c8d45090faeafef1.json",
-      "snapshot": "BACKUPS\\20260714_042739\\graphify-out\\cache\\ast\\2335d9693d11257ce0b8aab55c6b7bf53d0696ce7217d6e9c8d45090faeafef1.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:41.709510",
-      "file": "graphify-out\\cache\\ast\\4a520b7b2c7bff5505dab7fc049be24a602056fdb9a923b2ec81d08b34805725.json",
-      "snapshot": "BACKUPS\\20260714_042741\\graphify-out\\cache\\ast\\4a520b7b2c7bff5505dab7fc049be24a602056fdb9a923b2ec81d08b34805725.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:43.674176",
-      "file": "graphify-out\\cache\\ast\\6492c2656f3bfefd81b3fe08ff294f13581bd0103751aaa1ab58a1cdd8560e21.json",
-      "snapshot": "BACKUPS\\20260714_042743\\graphify-out\\cache\\ast\\6492c2656f3bfefd81b3fe08ff294f13581bd0103751aaa1ab58a1cdd8560e21.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:45.617997",
-      "file": "graphify-out\\cache\\ast\\e6020b7343cbd027e9394953300cc67e486eb36fe5194c4796e678dcb041394f.json",
-      "snapshot": "BACKUPS\\20260714_042745\\graphify-out\\cache\\ast\\e6020b7343cbd027e9394953300cc67e486eb36fe5194c4796e678dcb041394f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:47.575224",
-      "file": "graphify-out\\cache\\ast\\b9a680a905b988f0cdc096b1b23b8a96e629da989783d93322b6c5678e644486.json",
-      "snapshot": "BACKUPS\\20260714_042747\\graphify-out\\cache\\ast\\b9a680a905b988f0cdc096b1b23b8a96e629da989783d93322b6c5678e644486.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:49.497779",
-      "file": "graphify-out\\cache\\ast\\a9696b77c5f22fc2bc1d49b3a9a728a6e092678c53332be24b8d9f8719e245e7.json",
-      "snapshot": "BACKUPS\\20260714_042749\\graphify-out\\cache\\ast\\a9696b77c5f22fc2bc1d49b3a9a728a6e092678c53332be24b8d9f8719e245e7.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:51.439364",
-      "file": "graphify-out\\cache\\ast\\0d7e25856c2f1f5a816f1974502ee12a4547de40874f33def498040f9f7a5c81.json",
-      "snapshot": "BACKUPS\\20260714_042751\\graphify-out\\cache\\ast\\0d7e25856c2f1f5a816f1974502ee12a4547de40874f33def498040f9f7a5c81.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:53.389119",
-      "file": "graphify-out\\cache\\ast\\fb812788c51186812204bd4315fb1d47636cfb1653e00a651a51497960889846.json",
-      "snapshot": "BACKUPS\\20260714_042753\\graphify-out\\cache\\ast\\fb812788c51186812204bd4315fb1d47636cfb1653e00a651a51497960889846.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:55.336383",
-      "file": "graphify-out\\cache\\ast\\35af712e87d0e79a7a7b9d039b739a19436de581c8b51981a8f17bb9c85bd91f.json",
-      "snapshot": "BACKUPS\\20260714_042755\\graphify-out\\cache\\ast\\35af712e87d0e79a7a7b9d039b739a19436de581c8b51981a8f17bb9c85bd91f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:57.288543",
-      "file": "graphify-out\\cache\\ast\\42127f46a828d8cd912faa65348cce893a06c9aa01477b24535aacbf7c13014a.json",
-      "snapshot": "BACKUPS\\20260714_042757\\graphify-out\\cache\\ast\\42127f46a828d8cd912faa65348cce893a06c9aa01477b24535aacbf7c13014a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:27:59.192820",
-      "file": "graphify-out\\cache\\ast\\7cb5ee280a3805c6e30a4d25e01e1d0e9900a1af6b50cebfae01b332612e55ab.json",
-      "snapshot": "BACKUPS\\20260714_042759\\graphify-out\\cache\\ast\\7cb5ee280a3805c6e30a4d25e01e1d0e9900a1af6b50cebfae01b332612e55ab.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:01.133237",
-      "file": "graphify-out\\cache\\ast\\8b7bc41bad9add9761e2bb06df26f8c51afb39d687ad4282d0f6a2e39a4f590e.json",
-      "snapshot": "BACKUPS\\20260714_042801\\graphify-out\\cache\\ast\\8b7bc41bad9add9761e2bb06df26f8c51afb39d687ad4282d0f6a2e39a4f590e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:03.088604",
-      "file": "graphify-out\\cache\\ast\\f7f3c716a9ac8901a337677d3f43aa09ac05c6b82cbf2d144e10705da7c0087d.json",
-      "snapshot": "BACKUPS\\20260714_042803\\graphify-out\\cache\\ast\\f7f3c716a9ac8901a337677d3f43aa09ac05c6b82cbf2d144e10705da7c0087d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:05.046246",
-      "file": "graphify-out\\cache\\ast\\538714a645d00ec77071be6b142cf53bfeaeb9e39c19ddca3687b0ff881e1559.json",
-      "snapshot": "BACKUPS\\20260714_042805\\graphify-out\\cache\\ast\\538714a645d00ec77071be6b142cf53bfeaeb9e39c19ddca3687b0ff881e1559.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:06.974113",
-      "file": "graphify-out\\cache\\ast\\d737e4afb29ae68681cc305833272786913ed9032ca2ca1d9577d6f42824a04b.json",
-      "snapshot": "BACKUPS\\20260714_042806\\graphify-out\\cache\\ast\\d737e4afb29ae68681cc305833272786913ed9032ca2ca1d9577d6f42824a04b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:08.914589",
-      "file": "graphify-out\\cache\\ast\\2543cf2a106191a16e6d09bb1b11207dc8e9b0148cf44d60cd007ad746183e1c.json",
-      "snapshot": "BACKUPS\\20260714_042808\\graphify-out\\cache\\ast\\2543cf2a106191a16e6d09bb1b11207dc8e9b0148cf44d60cd007ad746183e1c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:10.850210",
-      "file": "graphify-out\\cache\\ast\\5ffd998299312a3c160cadfc10df56814a04a4473beea7fefccf42b5752e81fd.json",
-      "snapshot": "BACKUPS\\20260714_042810\\graphify-out\\cache\\ast\\5ffd998299312a3c160cadfc10df56814a04a4473beea7fefccf42b5752e81fd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:12.806672",
-      "file": "graphify-out\\cache\\ast\\4ab21e895cac3c54b26a2dd5cb1ad58b9020a8e24e232354f37ebcf77bf782a4.json",
-      "snapshot": "BACKUPS\\20260714_042812\\graphify-out\\cache\\ast\\4ab21e895cac3c54b26a2dd5cb1ad58b9020a8e24e232354f37ebcf77bf782a4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:14.765067",
-      "file": "graphify-out\\cache\\ast\\ec07fc597cfd1ef8f40f6202ffd2db7c7cf691feac4ac5943beec8e6c325fa13.json",
-      "snapshot": "BACKUPS\\20260714_042814\\graphify-out\\cache\\ast\\ec07fc597cfd1ef8f40f6202ffd2db7c7cf691feac4ac5943beec8e6c325fa13.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:16.697424",
-      "file": "graphify-out\\cache\\ast\\c57b4ff61cd1ad2a816d1e71f74bbf3aa15093ea103f2d267dc791393bc45f0c.json",
-      "snapshot": "BACKUPS\\20260714_042816\\graphify-out\\cache\\ast\\c57b4ff61cd1ad2a816d1e71f74bbf3aa15093ea103f2d267dc791393bc45f0c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:18.639706",
-      "file": "graphify-out\\cache\\ast\\b7245a835d8b497af279f00f921adc996310ae6b093edecca45d9d9b2c5990be.json",
-      "snapshot": "BACKUPS\\20260714_042818\\graphify-out\\cache\\ast\\b7245a835d8b497af279f00f921adc996310ae6b093edecca45d9d9b2c5990be.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:20.592340",
-      "file": "graphify-out\\cache\\ast\\140a48fa87fb5095b359264b5e2c1b467c6ee98d8207613f02364eaf813600d5.json",
-      "snapshot": "BACKUPS\\20260714_042820\\graphify-out\\cache\\ast\\140a48fa87fb5095b359264b5e2c1b467c6ee98d8207613f02364eaf813600d5.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:22.565244",
-      "file": "graphify-out\\cache\\ast\\6f2d32a339374343548fcf40253c7de42b4b53c7d803257cb1f8c3c50a08693c.json",
-      "snapshot": "BACKUPS\\20260714_042822\\graphify-out\\cache\\ast\\6f2d32a339374343548fcf40253c7de42b4b53c7d803257cb1f8c3c50a08693c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:24.491430",
-      "file": "graphify-out\\cache\\ast\\684b4837c03c044765710505b869061babc0ade93cdc6efc483a7cad37fd41a8.json",
-      "snapshot": "BACKUPS\\20260714_042824\\graphify-out\\cache\\ast\\684b4837c03c044765710505b869061babc0ade93cdc6efc483a7cad37fd41a8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:26.433011",
-      "file": "graphify-out\\cache\\ast\\c09331795957c401a3b8798096cd2de4776630d5178f977b40358240819a2607.json",
-      "snapshot": "BACKUPS\\20260714_042826\\graphify-out\\cache\\ast\\c09331795957c401a3b8798096cd2de4776630d5178f977b40358240819a2607.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:28.381815",
-      "file": "graphify-out\\cache\\ast\\ade38a4cb3b65fa652fe21b17511cd65e6335f560c53f10d3eb3e245e5d60946.json",
-      "snapshot": "BACKUPS\\20260714_042828\\graphify-out\\cache\\ast\\ade38a4cb3b65fa652fe21b17511cd65e6335f560c53f10d3eb3e245e5d60946.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:30.312126",
-      "file": "graphify-out\\cache\\ast\\043b431eb88488f9fb5ad6633917e86f986e91ccea24b2c4e6a022a57de77061.json",
-      "snapshot": "BACKUPS\\20260714_042830\\graphify-out\\cache\\ast\\043b431eb88488f9fb5ad6633917e86f986e91ccea24b2c4e6a022a57de77061.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:32.258875",
-      "file": "graphify-out\\cache\\ast\\2b3ac0e209afd0dfbeda800df660c50c5887530369d586eddfff78777656f16d.json",
-      "snapshot": "BACKUPS\\20260714_042832\\graphify-out\\cache\\ast\\2b3ac0e209afd0dfbeda800df660c50c5887530369d586eddfff78777656f16d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:34.171328",
-      "file": "graphify-out\\cache\\ast\\47e01cb2aaf8d4b30f524bbbf1fe1a19950528b5e0a029f508e8094059b25c6c.json",
-      "snapshot": "BACKUPS\\20260714_042834\\graphify-out\\cache\\ast\\47e01cb2aaf8d4b30f524bbbf1fe1a19950528b5e0a029f508e8094059b25c6c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:36.099411",
-      "file": "graphify-out\\cache\\ast\\2844cce40f3d8a2f8ee3bc1b9db26bbac3086998060d31b53e693e83ba83036b.json",
-      "snapshot": "BACKUPS\\20260714_042836\\graphify-out\\cache\\ast\\2844cce40f3d8a2f8ee3bc1b9db26bbac3086998060d31b53e693e83ba83036b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:38.039566",
-      "file": "graphify-out\\cache\\ast\\e9e5651390b5b77005572a24849e614c498d52b501dcb97cc4789aa3db4f102d.json",
-      "snapshot": "BACKUPS\\20260714_042838\\graphify-out\\cache\\ast\\e9e5651390b5b77005572a24849e614c498d52b501dcb97cc4789aa3db4f102d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:39.984767",
-      "file": "graphify-out\\cache\\ast\\241cd2c0d96e8e7aefae747b5ebea5a0f730fb986e925d1c1c802d79f37b7c2f.json",
-      "snapshot": "BACKUPS\\20260714_042839\\graphify-out\\cache\\ast\\241cd2c0d96e8e7aefae747b5ebea5a0f730fb986e925d1c1c802d79f37b7c2f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:41.946021",
-      "file": "graphify-out\\cache\\ast\\67909ce3bdb81e89c80be4c9cc224965ca47f61c73e7f71a590d2e00a0c9c26d.json",
-      "snapshot": "BACKUPS\\20260714_042841\\graphify-out\\cache\\ast\\67909ce3bdb81e89c80be4c9cc224965ca47f61c73e7f71a590d2e00a0c9c26d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:43.876873",
-      "file": "graphify-out\\cache\\ast\\79663f77fbadbc7580c66591464c55b35a8b6c342cc6e5e01ac35e0be678523b.json",
-      "snapshot": "BACKUPS\\20260714_042843\\graphify-out\\cache\\ast\\79663f77fbadbc7580c66591464c55b35a8b6c342cc6e5e01ac35e0be678523b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:45.820995",
-      "file": "graphify-out\\cache\\ast\\1b58e55763bfda983a2250c564430f88a63c756579563988e6213c8e5fc7890a.json",
-      "snapshot": "BACKUPS\\20260714_042845\\graphify-out\\cache\\ast\\1b58e55763bfda983a2250c564430f88a63c756579563988e6213c8e5fc7890a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:47.764473",
-      "file": "graphify-out\\cache\\ast\\92a953b859c59719ff861d3acefecb652608e2f69c82677c2afc8e170a9685e4.json",
-      "snapshot": "BACKUPS\\20260714_042847\\graphify-out\\cache\\ast\\92a953b859c59719ff861d3acefecb652608e2f69c82677c2afc8e170a9685e4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:49.723176",
-      "file": "graphify-out\\cache\\ast\\d66337d4856a657fda08e5ec766b62de84018c97d6a2ae23f3f027c332299892.json",
-      "snapshot": "BACKUPS\\20260714_042849\\graphify-out\\cache\\ast\\d66337d4856a657fda08e5ec766b62de84018c97d6a2ae23f3f027c332299892.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:51.647064",
-      "file": "graphify-out\\cache\\ast\\1bde6b98c6f23f3401055b08e8950a3e1a252177e30a3d54dcee58d24c59f954.json",
-      "snapshot": "BACKUPS\\20260714_042851\\graphify-out\\cache\\ast\\1bde6b98c6f23f3401055b08e8950a3e1a252177e30a3d54dcee58d24c59f954.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:53.614786",
-      "file": "graphify-out\\cache\\ast\\60fbc53c7667e836bf5dafd1cbc93b523f32e0736a73c7e02a3fff19064b5867.json",
-      "snapshot": "BACKUPS\\20260714_042853\\graphify-out\\cache\\ast\\60fbc53c7667e836bf5dafd1cbc93b523f32e0736a73c7e02a3fff19064b5867.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:55.554792",
-      "file": "graphify-out\\cache\\ast\\d64eac54138c62e96ca8415b3f3eb2a9b57c88db389f6e2a515b288d4b6c069a.json",
-      "snapshot": "BACKUPS\\20260714_042855\\graphify-out\\cache\\ast\\d64eac54138c62e96ca8415b3f3eb2a9b57c88db389f6e2a515b288d4b6c069a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:57.504501",
-      "file": "graphify-out\\cache\\ast\\efec02f251468ce8626a51b9f65bea497a25f11631f3e4297c729a4cd30dd885.json",
-      "snapshot": "BACKUPS\\20260714_042857\\graphify-out\\cache\\ast\\efec02f251468ce8626a51b9f65bea497a25f11631f3e4297c729a4cd30dd885.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:28:59.465929",
-      "file": "graphify-out\\cache\\ast\\6e15b29991291ba9684ad049079b015538c91a761845a5f939be7b6faa6edbbc.json",
-      "snapshot": "BACKUPS\\20260714_042859\\graphify-out\\cache\\ast\\6e15b29991291ba9684ad049079b015538c91a761845a5f939be7b6faa6edbbc.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:01.422514",
-      "file": "graphify-out\\cache\\ast\\ee5be1bf3f6bd421363475c8be12fd8a1087572edafef00a4ab21086c10f3977.json",
-      "snapshot": "BACKUPS\\20260714_042901\\graphify-out\\cache\\ast\\ee5be1bf3f6bd421363475c8be12fd8a1087572edafef00a4ab21086c10f3977.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:03.371824",
-      "file": "graphify-out\\cache\\ast\\e17333504171b26e74a925987cbe224309a6e2cedf1adde6258c4cd7cd97681f.json",
-      "snapshot": "BACKUPS\\20260714_042903\\graphify-out\\cache\\ast\\e17333504171b26e74a925987cbe224309a6e2cedf1adde6258c4cd7cd97681f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:05.310877",
-      "file": "graphify-out\\cache\\ast\\ea2feb9c53df9557f8464f394ffeda93fdf87bf44b7c5333cb38b0f22c178691.json",
-      "snapshot": "BACKUPS\\20260714_042905\\graphify-out\\cache\\ast\\ea2feb9c53df9557f8464f394ffeda93fdf87bf44b7c5333cb38b0f22c178691.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:07.271268",
-      "file": "graphify-out\\cache\\ast\\e525aa6cd7dffcb92e6c5a5052ec4d3fda2c1a1b1eb04f807225a8c5b6ff11c8.json",
-      "snapshot": "BACKUPS\\20260714_042907\\graphify-out\\cache\\ast\\e525aa6cd7dffcb92e6c5a5052ec4d3fda2c1a1b1eb04f807225a8c5b6ff11c8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:09.200193",
-      "file": "graphify-out\\cache\\ast\\82523d3659d9baa7b14f2b783d7a248b12cf2939802525484be166bb3cb31bdc.json",
-      "snapshot": "BACKUPS\\20260714_042909\\graphify-out\\cache\\ast\\82523d3659d9baa7b14f2b783d7a248b12cf2939802525484be166bb3cb31bdc.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:11.143042",
-      "file": "graphify-out\\cache\\ast\\6bb60238c42f58cff45b54fd1ec3cc72e0bc4d8b4b51ac075856be3b301a70bd.json",
-      "snapshot": "BACKUPS\\20260714_042911\\graphify-out\\cache\\ast\\6bb60238c42f58cff45b54fd1ec3cc72e0bc4d8b4b51ac075856be3b301a70bd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:13.098169",
-      "file": "graphify-out\\cache\\ast\\da4d2ffd1128f89aaf24f8064ac6d2102a33dcc0ba3288cb4ee17b9ab4a67efd.json",
-      "snapshot": "BACKUPS\\20260714_042913\\graphify-out\\cache\\ast\\da4d2ffd1128f89aaf24f8064ac6d2102a33dcc0ba3288cb4ee17b9ab4a67efd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:15.049834",
-      "file": "graphify-out\\cache\\ast\\8675399c74651eba3756846140db46d9399862ea99d683788865fc43882b0162.json",
-      "snapshot": "BACKUPS\\20260714_042915\\graphify-out\\cache\\ast\\8675399c74651eba3756846140db46d9399862ea99d683788865fc43882b0162.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:17.004514",
-      "file": "graphify-out\\cache\\ast\\0bce640676d0861a0bdc783aa4514dffbc5e78213a5a89a91d1d1acfd243a746.json",
-      "snapshot": "BACKUPS\\20260714_042917\\graphify-out\\cache\\ast\\0bce640676d0861a0bdc783aa4514dffbc5e78213a5a89a91d1d1acfd243a746.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:18.923992",
-      "file": "graphify-out\\cache\\ast\\a065f6e07aa716941a6b2e1ca923ab5247479eb6f1246bb9a2e7f9766c036255.json",
-      "snapshot": "BACKUPS\\20260714_042918\\graphify-out\\cache\\ast\\a065f6e07aa716941a6b2e1ca923ab5247479eb6f1246bb9a2e7f9766c036255.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:20.869928",
-      "file": "graphify-out\\cache\\ast\\5187929e156124260673b75c8957f30cbef3c21a762bb9213aa345d526c84400.json",
-      "snapshot": "BACKUPS\\20260714_042920\\graphify-out\\cache\\ast\\5187929e156124260673b75c8957f30cbef3c21a762bb9213aa345d526c84400.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:22.853649",
-      "file": "graphify-out\\cache\\ast\\59bafe2a49d99090e4d2dd27428abc475a2adfe195ffae03298dda80514eaaf9.json",
-      "snapshot": "BACKUPS\\20260714_042922\\graphify-out\\cache\\ast\\59bafe2a49d99090e4d2dd27428abc475a2adfe195ffae03298dda80514eaaf9.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:24.814788",
-      "file": "graphify-out\\cache\\ast\\5e5fe3dc130e53b669146eca6c8dbc6461dbc5ca1604a450a2e7499d8d740879.json",
-      "snapshot": "BACKUPS\\20260714_042924\\graphify-out\\cache\\ast\\5e5fe3dc130e53b669146eca6c8dbc6461dbc5ca1604a450a2e7499d8d740879.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:26.789465",
-      "file": "graphify-out\\cache\\ast\\e80a3a42d11628d1a1421ef229d1fa187ed26abf9132b405391b0e7c7b020b79.json",
-      "snapshot": "BACKUPS\\20260714_042926\\graphify-out\\cache\\ast\\e80a3a42d11628d1a1421ef229d1fa187ed26abf9132b405391b0e7c7b020b79.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:28.722733",
-      "file": "graphify-out\\cache\\ast\\f2f493a1c932ec8ab2c2e0ec57a5f8e012b059d54ca9d8f65819a9e5ae7754e4.json",
-      "snapshot": "BACKUPS\\20260714_042928\\graphify-out\\cache\\ast\\f2f493a1c932ec8ab2c2e0ec57a5f8e012b059d54ca9d8f65819a9e5ae7754e4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:30.684366",
-      "file": "graphify-out\\cache\\ast\\9c83946689e348764520144068843bc4cb085baf9962ec8ec41f1fb2150c8fcb.json",
-      "snapshot": "BACKUPS\\20260714_042930\\graphify-out\\cache\\ast\\9c83946689e348764520144068843bc4cb085baf9962ec8ec41f1fb2150c8fcb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:32.638487",
-      "file": "graphify-out\\cache\\ast\\78b6aaf63c2450c0e9fd8f8a289955b6e26c5e5a799a654a7a0b4d49f99fed00.json",
-      "snapshot": "BACKUPS\\20260714_042932\\graphify-out\\cache\\ast\\78b6aaf63c2450c0e9fd8f8a289955b6e26c5e5a799a654a7a0b4d49f99fed00.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:34.600005",
-      "file": "graphify-out\\cache\\ast\\f09953e061ab7e96a4f910c3321ce7c483f79a42c532a5fca6abeda9e415a752.json",
-      "snapshot": "BACKUPS\\20260714_042934\\graphify-out\\cache\\ast\\f09953e061ab7e96a4f910c3321ce7c483f79a42c532a5fca6abeda9e415a752.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:36.528859",
-      "file": "graphify-out\\cache\\ast\\dfeef4d99d0f64db89cdf49905013e97481ab228e25e228d8a1891453c276067.json",
-      "snapshot": "BACKUPS\\20260714_042936\\graphify-out\\cache\\ast\\dfeef4d99d0f64db89cdf49905013e97481ab228e25e228d8a1891453c276067.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:38.477796",
-      "file": "graphify-out\\cache\\ast\\9e4091608b50764009a1c5346c4573892b527f3f6b17adca9816b4adda4461c3.json",
-      "snapshot": "BACKUPS\\20260714_042938\\graphify-out\\cache\\ast\\9e4091608b50764009a1c5346c4573892b527f3f6b17adca9816b4adda4461c3.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:40.431404",
-      "file": "graphify-out\\cache\\ast\\b61000b55764e6a27de7a5c212f6071c726432d29c1ba06a7396a1943f6ff2a1.json",
-      "snapshot": "BACKUPS\\20260714_042940\\graphify-out\\cache\\ast\\b61000b55764e6a27de7a5c212f6071c726432d29c1ba06a7396a1943f6ff2a1.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:42.366124",
-      "file": "graphify-out\\cache\\ast\\6fee0c6e979b13dc6a6a42bc96e6b7d0da730705fe2bfbc006bf0d06351eae6a.json",
-      "snapshot": "BACKUPS\\20260714_042942\\graphify-out\\cache\\ast\\6fee0c6e979b13dc6a6a42bc96e6b7d0da730705fe2bfbc006bf0d06351eae6a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:44.321672",
-      "file": "graphify-out\\cache\\ast\\8a5651fb24e5db6041ecb294225adf9e8004839e3557b145e8d48a39fd26f668.json",
-      "snapshot": "BACKUPS\\20260714_042944\\graphify-out\\cache\\ast\\8a5651fb24e5db6041ecb294225adf9e8004839e3557b145e8d48a39fd26f668.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:46.246845",
-      "file": "graphify-out\\cache\\ast\\de79a6f5a58294b106f0dcd778ff1e39c0fc6335c85448a72284c0a6265944b4.json",
-      "snapshot": "BACKUPS\\20260714_042946\\graphify-out\\cache\\ast\\de79a6f5a58294b106f0dcd778ff1e39c0fc6335c85448a72284c0a6265944b4.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:48.191587",
-      "file": "graphify-out\\cache\\ast\\af29b762351784cb59f030c98adf811ff1914e3269957c77dab8c2e56274f59f.json",
-      "snapshot": "BACKUPS\\20260714_042948\\graphify-out\\cache\\ast\\af29b762351784cb59f030c98adf811ff1914e3269957c77dab8c2e56274f59f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:50.150595",
-      "file": "graphify-out\\cache\\ast\\9ababf4e25c57b503edbcae25b37b3c1eab8c9331975977eb1e21f5220ac05aa.json",
-      "snapshot": "BACKUPS\\20260714_042950\\graphify-out\\cache\\ast\\9ababf4e25c57b503edbcae25b37b3c1eab8c9331975977eb1e21f5220ac05aa.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:52.111511",
-      "file": "graphify-out\\cache\\ast\\917302607980d36184160e88446d800c5a3bafbe0cfbe346d2241dfa70e16b7f.json",
-      "snapshot": "BACKUPS\\20260714_042952\\graphify-out\\cache\\ast\\917302607980d36184160e88446d800c5a3bafbe0cfbe346d2241dfa70e16b7f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:54.068676",
-      "file": "graphify-out\\cache\\ast\\63b73d4fb354abf38cd74020e5feaad356149c3a7a53c21595627490d1bd9908.json",
-      "snapshot": "BACKUPS\\20260714_042954\\graphify-out\\cache\\ast\\63b73d4fb354abf38cd74020e5feaad356149c3a7a53c21595627490d1bd9908.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:56.014452",
-      "file": "graphify-out\\cache\\ast\\85cbdaf95093c5d767fdabba86a2ffb636956956ae13893ade39b46bd01bb7be.json",
-      "snapshot": "BACKUPS\\20260714_042956\\graphify-out\\cache\\ast\\85cbdaf95093c5d767fdabba86a2ffb636956956ae13893ade39b46bd01bb7be.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:57.962607",
-      "file": "graphify-out\\cache\\ast\\3012869207c7cd4f0895df4a647951c4b87eac7133ff63f03be11506c64fe64d.json",
-      "snapshot": "BACKUPS\\20260714_042957\\graphify-out\\cache\\ast\\3012869207c7cd4f0895df4a647951c4b87eac7133ff63f03be11506c64fe64d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:29:59.920101",
-      "file": "graphify-out\\cache\\ast\\4993d532420fbf24bbe2420a2e9081330b6001ebc9e4d55e603dcae0ddda801f.json",
-      "snapshot": "BACKUPS\\20260714_042959\\graphify-out\\cache\\ast\\4993d532420fbf24bbe2420a2e9081330b6001ebc9e4d55e603dcae0ddda801f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:01.920891",
-      "file": "graphify-out\\cache\\ast\\79856cc59152423f3d0df28cc437b38ec712516ca182ab90c530120c92b431aa.json",
-      "snapshot": "BACKUPS\\20260714_043001\\graphify-out\\cache\\ast\\79856cc59152423f3d0df28cc437b38ec712516ca182ab90c530120c92b431aa.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:04.003189",
-      "file": "graphify-out\\cache\\ast\\043c01534d02df8d09f3fc33b86a205a24e3cbaf8e9bc1d564a604bfaf41015b.json",
-      "snapshot": "BACKUPS\\20260714_043004\\graphify-out\\cache\\ast\\043c01534d02df8d09f3fc33b86a205a24e3cbaf8e9bc1d564a604bfaf41015b.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:05.957672",
-      "file": "graphify-out\\cache\\ast\\d69c71763cb0522c3a7d3c2b46ba785f2ab33eebe9ea5393eaf7c961ec408e69.json",
-      "snapshot": "BACKUPS\\20260714_043005\\graphify-out\\cache\\ast\\d69c71763cb0522c3a7d3c2b46ba785f2ab33eebe9ea5393eaf7c961ec408e69.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:07.906989",
-      "file": "graphify-out\\cache\\ast\\244d7a394379248e84e011a20b48869608cc94ff82fb359eadc73864b7ca2b8f.json",
-      "snapshot": "BACKUPS\\20260714_043007\\graphify-out\\cache\\ast\\244d7a394379248e84e011a20b48869608cc94ff82fb359eadc73864b7ca2b8f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:09.886004",
-      "file": "graphify-out\\cache\\ast\\2a0b9f92f1a63a4bb3db9ea704de91cb7db35da8c14572517b60e2a3c2eb8589.json",
-      "snapshot": "BACKUPS\\20260714_043009\\graphify-out\\cache\\ast\\2a0b9f92f1a63a4bb3db9ea704de91cb7db35da8c14572517b60e2a3c2eb8589.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:11.848577",
-      "file": "graphify-out\\cache\\ast\\77c086c799928e62bd2af96247175825da3f65e272479790d3df1ad1c877aa5c.json",
-      "snapshot": "BACKUPS\\20260714_043011\\graphify-out\\cache\\ast\\77c086c799928e62bd2af96247175825da3f65e272479790d3df1ad1c877aa5c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:13.791700",
-      "file": "graphify-out\\cache\\ast\\19014d28118960932d3fa98fafde445d1effd4b246f9d5e60daed4220e3decfb.json",
-      "snapshot": "BACKUPS\\20260714_043013\\graphify-out\\cache\\ast\\19014d28118960932d3fa98fafde445d1effd4b246f9d5e60daed4220e3decfb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:15.747485",
-      "file": "graphify-out\\cache\\ast\\e4a524918feacf6e25db55e22cb8bb694aa83cb31b6afd90ffe4e8c6f47911b7.json",
-      "snapshot": "BACKUPS\\20260714_043015\\graphify-out\\cache\\ast\\e4a524918feacf6e25db55e22cb8bb694aa83cb31b6afd90ffe4e8c6f47911b7.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:17.693711",
-      "file": "graphify-out\\cache\\ast\\ce6a8678a95461543738c0ad98f13b5368eb8ddaa24c7e0b4c8b6471620cb070.json",
-      "snapshot": "BACKUPS\\20260714_043017\\graphify-out\\cache\\ast\\ce6a8678a95461543738c0ad98f13b5368eb8ddaa24c7e0b4c8b6471620cb070.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:19.651579",
-      "file": "graphify-out\\cache\\ast\\d597f0ff5a728037a8541d0af7a2ac80cfef95033b90a9ee9788b2b6dc6b43c3.json",
-      "snapshot": "BACKUPS\\20260714_043019\\graphify-out\\cache\\ast\\d597f0ff5a728037a8541d0af7a2ac80cfef95033b90a9ee9788b2b6dc6b43c3.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:21.587599",
-      "file": "graphify-out\\cache\\ast\\e165d057ca73b664d4083e9fe066ed8c15a9a3730b9a3cba40db9fc5391bfac5.json",
-      "snapshot": "BACKUPS\\20260714_043021\\graphify-out\\cache\\ast\\e165d057ca73b664d4083e9fe066ed8c15a9a3730b9a3cba40db9fc5391bfac5.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:23.535149",
-      "file": "graphify-out\\cache\\ast\\a960b4868778dd7a083a56994ef3116a72263f7789bf84a0163e203aa46eb82d.json",
-      "snapshot": "BACKUPS\\20260714_043023\\graphify-out\\cache\\ast\\a960b4868778dd7a083a56994ef3116a72263f7789bf84a0163e203aa46eb82d.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:25.481843",
-      "file": "graphify-out\\cache\\ast\\1e51b1c7bfb9578b6fe1d7aabff74a5c30eaa93ec4e2dc00550a2bedfeb70f87.json",
-      "snapshot": "BACKUPS\\20260714_043025\\graphify-out\\cache\\ast\\1e51b1c7bfb9578b6fe1d7aabff74a5c30eaa93ec4e2dc00550a2bedfeb70f87.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:27.444688",
-      "file": "graphify-out\\cache\\ast\\fd55d473f00e38ef5ce842a15aabe4ac6623f14b3fde8ced003fc9b1e1fe22f0.json",
-      "snapshot": "BACKUPS\\20260714_043027\\graphify-out\\cache\\ast\\fd55d473f00e38ef5ce842a15aabe4ac6623f14b3fde8ced003fc9b1e1fe22f0.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:29.412149",
-      "file": "graphify-out\\cache\\ast\\ca872f790829da653d612b412ba901d564fb8036b27139ce96b3f61b488aaf15.json",
-      "snapshot": "BACKUPS\\20260714_043029\\graphify-out\\cache\\ast\\ca872f790829da653d612b412ba901d564fb8036b27139ce96b3f61b488aaf15.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:31.342361",
-      "file": "graphify-out\\cache\\ast\\37964fee26e40c5ed1f63044ad9da315c5d442cada140a0dd266b98f46f48374.json",
-      "snapshot": "BACKUPS\\20260714_043031\\graphify-out\\cache\\ast\\37964fee26e40c5ed1f63044ad9da315c5d442cada140a0dd266b98f46f48374.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:33.302617",
-      "file": "graphify-out\\cache\\ast\\c59bd72a9cb67d36b0d4b7174589c32954d946acc44d137cade03d8968914c0a.json",
-      "snapshot": "BACKUPS\\20260714_043033\\graphify-out\\cache\\ast\\c59bd72a9cb67d36b0d4b7174589c32954d946acc44d137cade03d8968914c0a.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:35.265499",
-      "file": "graphify-out\\cache\\ast\\93ac51ca7a62a2a3f16877ae4c2b701317cd12ef3f85651e98dbfadc4913b36f.json",
-      "snapshot": "BACKUPS\\20260714_043035\\graphify-out\\cache\\ast\\93ac51ca7a62a2a3f16877ae4c2b701317cd12ef3f85651e98dbfadc4913b36f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:37.216730",
-      "file": "graphify-out\\cache\\ast\\03079afea5f04144c424506a1adc687eac940d174b390427b01035f63ba440fc.json",
-      "snapshot": "BACKUPS\\20260714_043037\\graphify-out\\cache\\ast\\03079afea5f04144c424506a1adc687eac940d174b390427b01035f63ba440fc.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:39.141455",
-      "file": "graphify-out\\cache\\ast\\eaaf021479a16e1ce121f851d45a0d11b8b2d2e07843c6e532bf899e74a8244f.json",
-      "snapshot": "BACKUPS\\20260714_043039\\graphify-out\\cache\\ast\\eaaf021479a16e1ce121f851d45a0d11b8b2d2e07843c6e532bf899e74a8244f.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:41.081337",
-      "file": "graphify-out\\cache\\ast\\41fcc7cf10184cd888892b0af30bdeabe168e8897b26fcde09179b7bceb1ac88.json",
-      "snapshot": "BACKUPS\\20260714_043041\\graphify-out\\cache\\ast\\41fcc7cf10184cd888892b0af30bdeabe168e8897b26fcde09179b7bceb1ac88.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:43.027234",
-      "file": "graphify-out\\cache\\ast\\2414352dbdc6d11f32b147b28ef12faf3314ac7605887a98da25132b82b759f2.json",
-      "snapshot": "BACKUPS\\20260714_043043\\graphify-out\\cache\\ast\\2414352dbdc6d11f32b147b28ef12faf3314ac7605887a98da25132b82b759f2.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:44.966422",
-      "file": "graphify-out\\cache\\ast\\6d0a5ced13e081587bd748af98633ffe5f953a697007e76d8d82fccda5a7432c.json",
-      "snapshot": "BACKUPS\\20260714_043044\\graphify-out\\cache\\ast\\6d0a5ced13e081587bd748af98633ffe5f953a697007e76d8d82fccda5a7432c.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:46.927926",
-      "file": "graphify-out\\cache\\ast\\f57d4570d2eb6e12c81d45ee1597e5a814e8dc6b985449a0c835e05c49f77c45.json",
-      "snapshot": "BACKUPS\\20260714_043046\\graphify-out\\cache\\ast\\f57d4570d2eb6e12c81d45ee1597e5a814e8dc6b985449a0c835e05c49f77c45.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:49.291048",
-      "file": "graphify-out\\cache\\ast\\e4453d693c700f7e567ef8634d12f2480965029826d89d955cbf50dc9b10fb06.json",
-      "snapshot": "BACKUPS\\20260714_043049\\graphify-out\\cache\\ast\\e4453d693c700f7e567ef8634d12f2480965029826d89d955cbf50dc9b10fb06.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:51.633909",
-      "file": "graphify-out\\cache\\ast\\798ad0d3691274b100494bed0e86939c61e6ff6104bc006eeaed2e89160e6140.json",
-      "snapshot": "BACKUPS\\20260714_043051\\graphify-out\\cache\\ast\\798ad0d3691274b100494bed0e86939c61e6ff6104bc006eeaed2e89160e6140.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:53.743353",
-      "file": "graphify-out\\cache\\ast\\59327dbaf9c5271d9bdc0a588f23958ac3dd2b84a122dfc714124a131f79ae73.json",
-      "snapshot": "BACKUPS\\20260714_043053\\graphify-out\\cache\\ast\\59327dbaf9c5271d9bdc0a588f23958ac3dd2b84a122dfc714124a131f79ae73.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:55.696746",
-      "file": "graphify-out\\cache\\ast\\083ff44db90986cbfed301e7432e75d7ee25e79bbeb592c58dd6c9e50765d5e2.json",
-      "snapshot": "BACKUPS\\20260714_043055\\graphify-out\\cache\\ast\\083ff44db90986cbfed301e7432e75d7ee25e79bbeb592c58dd6c9e50765d5e2.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:57.626311",
-      "file": "graphify-out\\cache\\ast\\4971b0e29498d47a3d04cf84ee71bd6b5d0d7d5e242f0b5a7625d98fc14bca44.json",
-      "snapshot": "BACKUPS\\20260714_043057\\graphify-out\\cache\\ast\\4971b0e29498d47a3d04cf84ee71bd6b5d0d7d5e242f0b5a7625d98fc14bca44.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:30:59.601913",
-      "file": "graphify-out\\cache\\ast\\0e3d47bf38c33ca5371e52ce711d1fd8d01fc4256296fc05bc1327d4cd6cef35.json",
-      "snapshot": "BACKUPS\\20260714_043059\\graphify-out\\cache\\ast\\0e3d47bf38c33ca5371e52ce711d1fd8d01fc4256296fc05bc1327d4cd6cef35.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:01.580294",
-      "file": "graphify-out\\cache\\ast\\f54d756a343a9a6dc329d452ddfc18b9beb66149a0ff4ed4b90c043deb9bfa15.json",
-      "snapshot": "BACKUPS\\20260714_043101\\graphify-out\\cache\\ast\\f54d756a343a9a6dc329d452ddfc18b9beb66149a0ff4ed4b90c043deb9bfa15.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:03.577338",
-      "file": "graphify-out\\cache\\ast\\58a15c66636e47a148b69269fe1447eff4a0fd56623e6abbe5f545f231354995.json",
-      "snapshot": "BACKUPS\\20260714_043103\\graphify-out\\cache\\ast\\58a15c66636e47a148b69269fe1447eff4a0fd56623e6abbe5f545f231354995.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:05.579970",
-      "file": "graphify-out\\cache\\ast\\b4a60d0ac3fde9b79bd91e21c312cbed2721e3c05d955b95899a4a8e2fd39bb8.json",
-      "snapshot": "BACKUPS\\20260714_043105\\graphify-out\\cache\\ast\\b4a60d0ac3fde9b79bd91e21c312cbed2721e3c05d955b95899a4a8e2fd39bb8.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:07.543053",
-      "file": "graphify-out\\cache\\ast\\e01a2c9167ea7092e8b3d21ec2a9cff25e95e78a9d0627239275e6cdb8d218bc.json",
-      "snapshot": "BACKUPS\\20260714_043107\\graphify-out\\cache\\ast\\e01a2c9167ea7092e8b3d21ec2a9cff25e95e78a9d0627239275e6cdb8d218bc.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:09.524698",
-      "file": "graphify-out\\cache\\ast\\fb5d0a7438ad4764ceee091e8c112cc38374e04f665b5df7dd04fef136fc4377.json",
-      "snapshot": "BACKUPS\\20260714_043109\\graphify-out\\cache\\ast\\fb5d0a7438ad4764ceee091e8c112cc38374e04f665b5df7dd04fef136fc4377.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:11.498780",
-      "file": "graphify-out\\cache\\ast\\fa9b81389c6ad072a541a1de65bfe8ce31841770fb42d32481d628e509611fbb.json",
-      "snapshot": "BACKUPS\\20260714_043111\\graphify-out\\cache\\ast\\fa9b81389c6ad072a541a1de65bfe8ce31841770fb42d32481d628e509611fbb.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:31:13.497894",
-      "file": "graphify-out\\cache\\ast\\61acfbc0c3be4aa606f071a2421be2e9d400b9e7220b03d2f8accebb7b45e98e.json",
-      "snapshot": "BACKUPS\\20260714_043113\\graphify-out\\cache\\ast\\61acfbc0c3be4aa606f071a2421be2e9d400b9e7220b03d2f8accebb7b45e98e.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-07-14T04:31:15.489395",
       "file": "graphify-out\\cache\\ast\\1b5db2ede775aa971b7d3811eb162ff6f966b0c8c260e81284ca87c8c0ba7451.json",
       "snapshot": "BACKUPS\\20260714_043115\\graphify-out\\cache\\ast\\1b5db2ede775aa971b7d3811eb162ff6f966b0c8c260e81284ca87c8c0ba7451.json",
@@ -2998,6 +1468,1536 @@
       "timestamp": "2026-07-14T09:39:31.504321",
       "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
       "snapshot": "BACKUPS\\20260714_093931\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_02_LA_VERIFICA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:33.934620",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
+      "snapshot": "BACKUPS\\20260714_093933\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_03_LA_FORMULA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:35.944468",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_00_ORIGINE.md",
+      "snapshot": "BACKUPS\\20260714_093935\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_00_ORIGINE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:37.944155",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_02_IL_REATTORE.md",
+      "snapshot": "BACKUPS\\20260714_093937\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_02_IL_REATTORE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:39.972369",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_05_IL_VERDETTO.md",
+      "snapshot": "BACKUPS\\20260714_093939\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_05_IL_VERDETTO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:41.975445",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
+      "snapshot": "BACKUPS\\20260714_093941\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260621_inventario_notturno.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:44.159278",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
+      "snapshot": "BACKUPS\\20260714_093944\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_ponti_cross_mondo_episodio_sapere_r.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:46.201434",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_story_agent_episodi_generati_20_06_.md",
+      "snapshot": "BACKUPS\\20260714_093946\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_story_agent_episodi_generati_20_06_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:48.254548",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_bussola_38_state_allineati_ai_fix_p.md",
+      "snapshot": "BACKUPS\\20260714_093948\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_bussola_38_state_allineati_ai_fix_p.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:50.286459",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_inventario_notturno.md",
+      "snapshot": "BACKUPS\\20260714_093950\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260620_inventario_notturno.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:52.466260",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_polish_mappa_gioco_layout_pieno_mic.md",
+      "snapshot": "BACKUPS\\20260714_093952\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_polish_mappa_gioco_layout_pieno_mic.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:54.497769",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_i_pilastri_come_spiegazione_a_livel.md",
+      "snapshot": "BACKUPS\\20260714_093954\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260618_i_pilastri_come_spiegazione_a_livel.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:56.545327",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_07_IL_CAVALLO_DI_TROIA.md",
+      "snapshot": "BACKUPS\\20260714_093956\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_07_IL_CAVALLO_DI_TROIA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:39:58.561732",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_06_VULCAN_LA_PELLE.md",
+      "snapshot": "BACKUPS\\20260714_093958\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_06_VULCAN_LA_PELLE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:00.578326",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_05_IL_CONSIGLIO.md",
+      "snapshot": "BACKUPS\\20260714_094000\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_05_IL_CONSIGLIO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:02.594628",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_04_IL_LEGO_D_ACCIAIO.md",
+      "snapshot": "BACKUPS\\20260714_094002\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_04_IL_LEGO_D_ACCIAIO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:04.595380",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_un_pitch_per_progetto_la_spiegazion.md",
+      "snapshot": "BACKUPS\\20260714_094004\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260617_un_pitch_per_progetto_la_spiegazion.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:06.611710",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260616_cv_di_nina_come_vista_separata_mapp.md",
+      "snapshot": "BACKUPS\\20260714_094006\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260616_cv_di_nina_come_vista_separata_mapp.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:08.635410",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_vista_cv_vera_non_solo_il_rename.md",
+      "snapshot": "BACKUPS\\20260714_094008\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_vista_cv_vera_non_solo_il_rename.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:10.676216",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_llamafactory_cli_train_exit_b_1_su_.md",
+      "snapshot": "BACKUPS\\20260714_094010\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_llamafactory_cli_train_exit_b_1_su_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:12.691858",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
+      "snapshot": "BACKUPS\\20260714_094012\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:14.707476",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_reranker_multilingue_bge_reranker_v.md",
+      "snapshot": "BACKUPS\\20260714_094014\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_reranker_multilingue_bge_reranker_v.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:16.738860",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_content_nina_v2_i_5_episodi_d_apert.md",
+      "snapshot": "BACKUPS\\20260714_094016\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260615_content_nina_v2_i_5_episodi_d_apert.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:18.754703",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_rebuild_robusto_all_api_su_svuota_p.md",
+      "snapshot": "BACKUPS\\20260714_094018\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_rebuild_robusto_all_api_su_svuota_p.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:20.780944",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_2_mille_volte_uguale.md",
+      "snapshot": "BACKUPS\\20260714_094020\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_2_mille_volte_uguale.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:22.816864",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
+      "snapshot": "BACKUPS\\20260714_094022\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_2_il_soldato_caduto_in_silenzio.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:24.821487",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_2_quando_la_mente_inventa.md",
+      "snapshot": "BACKUPS\\20260714_094024\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_2_quando_la_mente_inventa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:26.849854",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_2_il_segno_che_resta.md",
+      "snapshot": "BACKUPS\\20260714_094026\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_2_il_segno_che_resta.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:28.863945",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260613_sid_univoco_hash_del_path_setup_obs.md",
+      "snapshot": "BACKUPS\\20260714_094028\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260613_sid_univoco_hash_del_path_setup_obs.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:30.899989",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_asse_evoluzione_episodi_organizzati.md",
+      "snapshot": "BACKUPS\\20260714_094030\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260614_asse_evoluzione_episodi_organizzati.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:32.925185",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_feat_storie_backfill_fatti_da_i_fat.md",
+      "snapshot": "BACKUPS\\20260714_094032\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_feat_storie_backfill_fatti_da_i_fat.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:34.942060",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260612_feat_sapere_mente_versionata_auto_c.md",
+      "snapshot": "BACKUPS\\20260714_094034\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260612_feat_sapere_mente_versionata_auto_c.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:36.975122",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\STORIE_INDEX.md",
+      "snapshot": "BACKUPS\\20260714_094036\\CONTENT_ENGINE\\DATABASE\\episodes\\STORIE_INDEX.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:38.924533",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_50_automazioni_notturne_portabili__ti_paths.md",
+      "snapshot": "BACKUPS\\20260714_094038\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_50_automazioni_notturne_portabili__ti_paths.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:40.942159",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
+      "snapshot": "BACKUPS\\20260714_094040\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:43.109960",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_48_n8n_selfhosted_attivo_account_locale_no_.md",
+      "snapshot": "BACKUPS\\20260714_094043\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_48_n8n_selfhosted_attivo_account_locale_no_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:45.120956",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_47_firewall_5173_aperto_tailscale_loggato_s.md",
+      "snapshot": "BACKUPS\\20260714_094045\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_47_firewall_5173_aperto_tailscale_loggato_s.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:47.142720",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_46_sicurezza_token_github_ruotato_auth_git_.md",
+      "snapshot": "BACKUPS\\20260714_094047\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_46_sicurezza_token_github_ruotato_auth_git_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:49.159552",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
+      "snapshot": "BACKUPS\\20260714_094049\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:51.176161",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_44_cuda_operativa_su_gtx_1070_8gb_torchcuda.md",
+      "snapshot": "BACKUPS\\20260714_094051\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_44_cuda_operativa_su_gtx_1070_8gb_torchcuda.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:53.208694",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
+      "snapshot": "BACKUPS\\20260714_094053\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:55.225314",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_41_microindustry_omniparser_weights_migrati.md",
+      "snapshot": "BACKUPS\\20260714_094055\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_41_microindustry_omniparser_weights_migrati.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:57.240410",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_40_tool_installati_python_311_nodejs_gh_cli.md",
+      "snapshot": "BACKUPS\\20260714_094057\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_40_tool_installati_python_311_nodejs_gh_cli.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:40:59.315106",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_39_push_main_tag_v300_su_github_sbloccato_e.md",
+      "snapshot": "BACKUPS\\20260714_094059\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_39_push_main_tag_v300_su_github_sbloccato_e.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:01.347426",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_38_git_history_pulita_modelsafetensors_rimo.md",
+      "snapshot": "BACKUPS\\20260714_094101\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_38_git_history_pulita_modelsafetensors_rimo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:03.416002",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_37_migrazione_pc_fisso_desktopiface2r_compl.md",
+      "snapshot": "BACKUPS\\20260714_094103\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_37_migrazione_pc_fisso_desktopiface2r_compl.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:05.429917",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_36_skilltreedata_v30_subcategorie_n_livelli.md",
+      "snapshot": "BACKUPS\\20260714_094105\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_36_skilltreedata_v30_subcategorie_n_livelli.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:07.463121",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
+      "snapshot": "BACKUPS\\20260714_094107\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_35_argus_v20_architettura_ibrida_omniparser.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:09.479043",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
+      "snapshot": "BACKUPS\\20260714_094109\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_34_screenagent_v10_screenshot_griglia_punti.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:11.510868",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
+      "snapshot": "BACKUPS\\20260714_094111\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_33_mappa_drilldown_v20_rete_tsne_3d_threejs.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:13.559916",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
+      "snapshot": "BACKUPS\\20260714_094113\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:15.574779",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
+      "snapshot": "BACKUPS\\20260714_094115\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:17.591145",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
+      "snapshot": "BACKUPS\\20260714_094117\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_30_calendario_notturno_completo_storyagent_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:19.623099",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
+      "snapshot": "BACKUPS\\20260714_094119\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_29_story_agent_v10_generazione_episodi_auto.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:21.655139",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
+      "snapshot": "BACKUPS\\20260714_094121\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:23.685324",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md",
+      "snapshot": "BACKUPS\\20260714_094123\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_27_audit_sistema_bottleneck_identificati_e_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:25.703072",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
+      "snapshot": "BACKUPS\\20260714_094125\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:27.719151",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
+      "snapshot": "BACKUPS\\20260714_094127\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_25_claude_capabilities_titaniummd_profilo_c.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:29.735268",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
+      "snapshot": "BACKUPS\\20260714_094129\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:31.767488",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md",
+      "snapshot": "BACKUPS\\20260714_094131\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_23_research_agent_13_sorgenti_arxiv_openale.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:33.785016",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
+      "snapshot": "BACKUPS\\20260714_094133\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_22_dashboard_tela_v41_matteosection_skill_t.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:35.832807",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
+      "snapshot": "BACKUPS\\20260714_094135\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_21_start_loginbat_v11_autoavvio_ecosistema_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:37.847950",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
+      "snapshot": "BACKUPS\\20260714_094137\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_20_ffmpeg_811_sumatrapdf_installati_profilo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:39.859798",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md",
+      "snapshot": "BACKUPS\\20260714_094139\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:41.881421",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_18_foto_v32_organizzate_7_foto_rinominate_i.md",
+      "snapshot": "BACKUPS\\20260714_094141\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_18_foto_v32_organizzate_7_foto_rinominate_i.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:43.918805",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_17_v8_deltamd_correzioni_strutturali_foto_v.md",
+      "snapshot": "BACKUPS\\20260714_094143\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_17_v8_deltamd_correzioni_strutturali_foto_v.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:45.941801",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_16_v7_x_v8md_estrazione_completa_33pp_pdf_i.md",
+      "snapshot": "BACKUPS\\20260714_094145\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_16_v7_x_v8md_estrazione_completa_33pp_pdf_i.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:47.969247",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_15_pdf_to_memorypy_v11_flag_filementekeepra.md",
+      "snapshot": "BACKUPS\\20260714_094147\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_15_pdf_to_memorypy_v11_flag_filementekeepra.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:49.992989",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_14_storytelling_filone_unico_s0s1_completa_.md",
+      "snapshot": "BACKUPS\\20260714_094149\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_14_storytelling_filone_unico_s0s1_completa_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:52.022216",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md",
+      "snapshot": "BACKUPS\\20260714_094152\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_13_assoluto_v7_documento_master_unico_10_at.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:54.203666",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md",
+      "snapshot": "BACKUPS\\20260714_094154\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:56.235563",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_11_sinapsimente_migrazione_41_doc_storie_as.md",
+      "snapshot": "BACKUPS\\20260714_094156\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_11_sinapsimente_migrazione_41_doc_storie_as.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:41:58.246664",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md",
+      "snapshot": "BACKUPS\\20260714_094158\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:00.299795",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md",
+      "snapshot": "BACKUPS\\20260714_094200\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:02.347231",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md",
+      "snapshot": "BACKUPS\\20260714_094202\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_08_content_engine_v2_22_episodi_dualpass_ha.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:04.482876",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
+      "snapshot": "BACKUPS\\20260714_094204\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_07_bom_aggiornato_molle_4xgialle_90n_2_pias.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:06.499424",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
+      "snapshot": "BACKUPS\\20260714_094206\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_06_assoluto_v6_letto_brainknowledge_popolat.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:08.531290",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
+      "snapshot": "BACKUPS\\20260714_094208\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_05_ecosystem_os_dashboard_v10_celle_draggab.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:10.548003",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
+      "snapshot": "BACKUPS\\20260714_094210\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:12.580101",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
+      "snapshot": "BACKUPS\\20260714_094212\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_03_basamento_traliccio_saldato_tig.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:14.596268",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
+      "snapshot": "BACKUPS\\20260714_094214\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_02_hmi_tp900_comfort_acquisito.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:16.612679",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
+      "snapshot": "BACKUPS\\20260714_094216\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_01_8_pezzi_interfaccia_lavorati_bronzine_sc.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:18.613494",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
+      "snapshot": "BACKUPS\\20260714_094218\\CONTENT_ENGINE\\DATABASE\\episodes\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:20.645331",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_la_materia.md",
+      "snapshot": "BACKUPS\\20260714_094220\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_M0_la_materia.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:22.676303",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_FIN_01_il_valore.md",
+      "snapshot": "BACKUPS\\20260714_094222\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_FIN_01_il_valore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:24.707888",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_06_il_direttore.md",
+      "snapshot": "BACKUPS\\20260714_094224\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_06_il_direttore.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:26.723426",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_l_esercito_silenzioso.md",
+      "snapshot": "BACKUPS\\20260714_094226\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_05_l_esercito_silenzioso.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:28.754665",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_04_la_grande_mappa.md",
+      "snapshot": "BACKUPS\\20260714_094228\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_04_la_grande_mappa.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:30.801034",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_03_la_biblioteca_delle_fonti.md",
+      "snapshot": "BACKUPS\\20260714_094230\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_03_la_biblioteca_delle_fonti.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:32.841386",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_la_mente_che_parla.md",
+      "snapshot": "BACKUPS\\20260714_094232\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_02_la_mente_che_parla.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:34.879367",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_01_l_automazione.md",
+      "snapshot": "BACKUPS\\20260714_094234\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_01_l_automazione.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:36.897272",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_la_bambina_e_la_giuntura.md",
+      "snapshot": "BACKUPS\\20260714_094236\\CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\_ARCHIVIO\\EP_AV_00_la_bambina_e_la_giuntura.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:38.914013",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
+      "snapshot": "BACKUPS\\20260714_094238\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:40.957695",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md",
+      "snapshot": "BACKUPS\\20260714_094240\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:43.116704",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
+      "snapshot": "BACKUPS\\20260714_094243\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_03_LA_TELA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:45.147848",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
+      "snapshot": "BACKUPS\\20260714_094245\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_02_L_ORCHESTRATORE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:47.159973",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
+      "snapshot": "BACKUPS\\20260714_094247\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:49.561994",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_00_IL_DISTACCO.md",
+      "snapshot": "BACKUPS\\20260714_094249\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_S2_00_IL_DISTACCO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:51.702960",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_event_scheduled.md",
+      "snapshot": "BACKUPS\\20260714_094251\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_event_scheduled.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:53.734963",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
+      "snapshot": "BACKUPS\\20260714_094253\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260611_setup_app_permessi_allowlist_git_py.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:55.786452",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
+      "snapshot": "BACKUPS\\20260714_094255\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260609_vista_procedimenti_consultabile_da_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:42:57.949013",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
+      "snapshot": "BACKUPS\\20260714_094257\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260608_night_audit_cartella_clinica_08_06_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:00.001715",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md",
+      "snapshot": "BACKUPS\\20260714_094300\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260607_rete_grafo_rag_wiki_integrazione_gr.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:02.037790",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
+      "snapshot": "BACKUPS\\20260714_094302\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_chiusura_lavoro_32_p1a_leva_locale.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:04.204013",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
+      "snapshot": "BACKUPS\\20260714_094304\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:06.246370",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
+      "snapshot": "BACKUPS\\20260714_094306\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260606_31_checkpoint_p1b_audit_agenti_p5_f.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:08.267978",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
+      "snapshot": "BACKUPS\\20260714_094308\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:10.300140",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
+      "snapshot": "BACKUPS\\20260714_094310\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_risolto_exit_255_subject_con_parent.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:12.326839",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_episodi_su_episodes_json_bulletproo.md",
+      "snapshot": "BACKUPS\\20260714_094312\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260604_episodi_su_episodes_json_bulletproo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:14.524362",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
+      "snapshot": "BACKUPS\\20260714_094314\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:16.571968",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260602_allineamento_pc_fisso_getac_ignora_.md",
+      "snapshot": "BACKUPS\\20260714_094316\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260602_allineamento_pc_fisso_getac_ignora_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:18.619972",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
+      "snapshot": "BACKUPS\\20260714_094318\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:20.667213",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
+      "snapshot": "BACKUPS\\20260714_094320\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:23.414090",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
+      "snapshot": "BACKUPS\\20260714_094323\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_merge_remote_tracking_branch_origin.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:26.184714",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
+      "snapshot": "BACKUPS\\20260714_094326\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:29.462763",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
+      "snapshot": "BACKUPS\\20260714_094329\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:32.493076",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md",
+      "snapshot": "BACKUPS\\20260714_094332\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:35.820306",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
+      "snapshot": "BACKUPS\\20260714_094335\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:38.898242",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_auto_avvio_completo_al_login_start_.md",
+      "snapshot": "BACKUPS\\20260714_094338\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260529_auto_avvio_completo_al_login_start_.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:42.203795",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260528_matteosection_v4_2_skill_espandibili_pe.md",
+      "snapshot": "BACKUPS\\20260714_094342\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260528_matteosection_v4_2_skill_espandibili_pe.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:44.733127",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260527_auto_episodi_generati_da_state_json_202.md",
+      "snapshot": "BACKUPS\\20260714_094344\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260527_auto_episodi_generati_da_state_json_202.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:47.360557",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md",
+      "snapshot": "BACKUPS\\20260714_094347\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:50.383254",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260322_docs_ecosystem_manifest_documento_fon.md",
+      "snapshot": "BACKUPS\\20260714_094350\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260322_docs_ecosystem_manifest_documento_fon.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:53.755387",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260319_fix_typescript_errors_unused_imports.md",
+      "snapshot": "BACKUPS\\20260714_094353\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260319_fix_typescript_errors_unused_imports.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:57.096860",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_04_IL_SEGNALE.md",
+      "snapshot": "BACKUPS\\20260714_094357\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_04_IL_SEGNALE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:43:59.767324",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_03_IL_PARADOSSO.md",
+      "snapshot": "BACKUPS\\20260714_094359\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_03_IL_PARADOSSO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:01.849584",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_01_LA_TAVERNA.md",
+      "snapshot": "BACKUPS\\20260714_094401\\CONTENT_ENGINE\\DATABASE\\episodes\\S1_PRESENTE\\EP_01_LA_TAVERNA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:03.903575",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_01_L_ORGANISMO.md",
+      "snapshot": "BACKUPS\\20260714_094403\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_01_L_ORGANISMO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:05.956799",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
+      "snapshot": "BACKUPS\\20260714_094405\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:08.207482",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_PILOTA_00_il_mondo.md",
+      "snapshot": "BACKUPS\\20260714_094408\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_PILOTA_00_il_mondo.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:10.256233",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_05_CONFIG_A_G.md",
+      "snapshot": "BACKUPS\\20260714_094410\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_05_CONFIG_A_G.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:12.294708",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_04_IL_DOCUMENTO_MASTER.md",
+      "snapshot": "BACKUPS\\20260714_094412\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_04_IL_DOCUMENTO_MASTER.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:14.309526",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
+      "snapshot": "BACKUPS\\20260714_094414\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_03_L_ESERCITO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:16.319075",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
+      "snapshot": "BACKUPS\\20260714_094416\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_02_LA_MAPPA.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:18.326701",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
+      "snapshot": "BACKUPS\\20260714_094418\\CONTENT_ENGINE\\DATABASE\\episodes\\MOMENTI\\MOM_01_LA_PRIMA_AUTOMAZIONE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:20.335211",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_019.md",
+      "snapshot": "BACKUPS\\20260714_094420\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_019.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:22.334728",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_018.md",
+      "snapshot": "BACKUPS\\20260714_094422\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_018.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:24.308083",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_017.md",
+      "snapshot": "BACKUPS\\20260714_094424\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_017.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:26.290154",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_016.md",
+      "snapshot": "BACKUPS\\20260714_094426\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_016.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:28.273228",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_015.md",
+      "snapshot": "BACKUPS\\20260714_094428\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_015.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:30.260264",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
+      "snapshot": "BACKUPS\\20260714_094430\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_014.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:32.256331",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
+      "snapshot": "BACKUPS\\20260714_094432\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_013.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:34.212071",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_012.md",
+      "snapshot": "BACKUPS\\20260714_094434\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_012.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:36.190352",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_011.md",
+      "snapshot": "BACKUPS\\20260714_094436\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_011.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:38.153495",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_010.md",
+      "snapshot": "BACKUPS\\20260714_094438\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_010.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:40.149934",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_008.md",
+      "snapshot": "BACKUPS\\20260714_094440\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_008.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:42.128873",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_006.md",
+      "snapshot": "BACKUPS\\20260714_094442\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_006.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:44.090472",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_005.md",
+      "snapshot": "BACKUPS\\20260714_094444\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_005.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:46.072703",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_003.md",
+      "snapshot": "BACKUPS\\20260714_094446\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_003.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:48.037888",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_002.md",
+      "snapshot": "BACKUPS\\20260714_094448\\CONTENT_ENGINE\\DATABASE\\episodes\\EP_AUTO_002.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:50.016262",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
+      "snapshot": "BACKUPS\\20260714_094450\\CONTENT_ENGINE\\DATABASE\\episodes\\S2_SISTEMA\\EP_20260610_consuntivo_notte_autonoma_36b_stori.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:52.151202",
+      "file": "CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_FILONE_00_la_materia.md",
+      "snapshot": "BACKUPS\\20260714_094452\\CONTENT_ENGINE\\DATABASE\\episodes\\S0_ORIGINI\\EP_FILONE_00_la_materia.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:54.170509",
+      "file": "CONTENT_ENGINE\\scripts\\caroselli_qc.py",
+      "snapshot": "BACKUPS\\20260714_094454\\CONTENT_ENGINE\\scripts\\caroselli_qc.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:56.080264",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260714_094456\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:57.948201",
+      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "snapshot": "BACKUPS\\20260714_094457\\NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:44:59.799948",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094459\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:01.785311",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094501\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_02\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:03.727940",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094503\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_01\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:05.676328",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094505\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_02\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:07.661658",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094507\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_03\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:09.631386",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_render_all.py",
+      "snapshot": "BACKUPS\\20260714_094509\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\EP_N2_01\\_render_all.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:11.632437",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_TEMPLATE\\components\\nina_foto.b64.txt",
+      "snapshot": "BACKUPS\\20260714_094511\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_TEMPLATE\\components\\nina_foto.b64.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:13.603149",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\INDICE_CAMMINO.md",
+      "snapshot": "BACKUPS\\20260714_094513\\CONTENT_ENGINE\\DATABASE\\MONDO\\INDICE_CAMMINO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:15.572164",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\PIETRE.md",
+      "snapshot": "BACKUPS\\20260714_094515\\CONTENT_ENGINE\\DATABASE\\MONDO\\PIETRE.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:17.526177",
+      "file": "CONTENT_ENGINE\\scripts\\nina_seed_auto.json",
+      "snapshot": "BACKUPS\\20260714_094517\\CONTENT_ENGINE\\scripts\\nina_seed_auto.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:19.433464",
+      "file": "DASHBOARD\\src\\data\\episodes.json",
+      "snapshot": "BACKUPS\\20260714_094519\\DASHBOARD\\src\\data\\episodes.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:21.418802",
+      "file": "DOCS\\INVENTARIO_NOTTURNO.md",
+      "snapshot": "BACKUPS\\20260714_094521\\DOCS\\INVENTARIO_NOTTURNO.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:23.284813",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_TEMPLATE\\carosello_base.html",
+      "snapshot": "BACKUPS\\20260714_094523\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_TEMPLATE\\carosello_base.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:25.279744",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_01\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094525\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_01\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:45:27.264936",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_01\\social.html",
+      "snapshot": "BACKUPS\\20260714_094527\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_01\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:46:49.040024",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094649\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:46:51.170099",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\social.html",
+      "snapshot": "BACKUPS\\20260714_094651\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:46:53.174790",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094653\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:46:55.165479",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\social.html",
+      "snapshot": "BACKUPS\\20260714_094655\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:46:57.135008",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_094657\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:46:59.114564",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\social.html",
+      "snapshot": "BACKUPS\\20260714_094659\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:04.326203",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_094804\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:07.211851",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260714_094807\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:10.563312",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260714_094810\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:14.225852",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260714_094814\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:17.693923",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260714_094817\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:21.911027",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_12.html",
+      "snapshot": "BACKUPS\\20260714_094821\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:25.609560",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260714_094825\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:29.272511",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_094829\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:32.657421",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260714_094832\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:36.305698",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_094836\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:39.183966",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260714_094839\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:42.791727",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260714_094842\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:45.934646",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260714_094845\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:49.536349",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260714_094849\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:52.917588",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260714_094852\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:56.173116",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260714_094856\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:48:59.684042",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_12.html",
+      "snapshot": "BACKUPS\\20260714_094859\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_12.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:02.776913",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260714_094902\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:05.558818",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260714_094905\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:08.715830",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_094908\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:12.405343",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260714_094912\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:15.596908",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_094915\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:19.217906",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260714_094919\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:22.883764",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260714_094922\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:26.120925",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260714_094926\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:29.287715",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_094929\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:32.430722",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260714_094932\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:35.968829",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260714_094935\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:39.137692",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_13.html",
+      "snapshot": "BACKUPS\\20260714_094939\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_13.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:42.293780",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260714_094942\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:45.083469",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_094945\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:48.612145",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260714_094948\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:51.851988",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260714_094951\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:49:55.494017",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260714_094955\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:50:49.817120",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_095049\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:50:53.526506",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\social.html",
+      "snapshot": "BACKUPS\\20260714_095053\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:50:56.692861",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_095056\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:00.162921",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\social.html",
+      "snapshot": "BACKUPS\\20260714_095100\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:03.417414",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_095103\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:06.534574",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\social.html",
+      "snapshot": "BACKUPS\\20260714_095106\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\social.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:10.879364",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260714_095110\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:15.507528",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260714_095115\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:18.374106",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260714_095118\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:45.134001",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_095145\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:48.031276",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260714_095148\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:51.053687",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260714_095151\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:54.269979",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260714_095154\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:51:57.370692",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260714_095157\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:00.197895",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260714_095200\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:03.495556",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260714_095203\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:05.989939",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_15.html",
+      "snapshot": "BACKUPS\\20260714_095205\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_15.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:08.839209",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_095208\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:11.959710",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260714_095211\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:15.293425",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_095215\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:18.634732",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260714_095218\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_02\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:21.975198",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_2.html",
+      "snapshot": "BACKUPS\\20260714_095221\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_2.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:24.864599",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260714_095224\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:27.626277",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_095227\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:30.444891",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260714_095230\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:33.333236",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260714_095233\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:36.228256",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260714_095236\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:39.129593",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_13.html",
+      "snapshot": "BACKUPS\\20260714_095239\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_13.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:42.265649",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260714_095242\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:45.081349",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_095245\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:48.021532",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260714_095248\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:51.362195",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_095251\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:54.310663",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260714_095254\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_03\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:52:57.441792",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_095257\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:00.638223",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_3.html",
+      "snapshot": "BACKUPS\\20260714_095300\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_3.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:03.370844",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_5.html",
+      "snapshot": "BACKUPS\\20260714_095303\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_5.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:06.619642",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260714_095306\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:09.509512",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260714_095309\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:12.466077",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_11.html",
+      "snapshot": "BACKUPS\\20260714_095312\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_11.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:15.740968",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_14.html",
+      "snapshot": "BACKUPS\\20260714_095315\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_14.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:18.720184",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_16.html",
+      "snapshot": "BACKUPS\\20260714_095318\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_16.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:21.239884",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_1.html",
+      "snapshot": "BACKUPS\\20260714_095321\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_1.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:24.625147",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_4.html",
+      "snapshot": "BACKUPS\\20260714_095324\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_4.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:27.556169",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_6.html",
+      "snapshot": "BACKUPS\\20260714_095327\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_6.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:30.485202",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_8.html",
+      "snapshot": "BACKUPS\\20260714_095330\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_8.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:53:33.489828",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_10.html",
+      "snapshot": "BACKUPS\\20260714_095333\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_10.html",
       "type": "snapshot"
     }
   ]

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-14T09:38:21",
-  "checked": 5,
+  "generated": "2026-07-14T09:53:33",
+  "checked": 9,
   "issues": [],
   "legacy_note": [
     "EP_N2_01/carosello.html: slide 1 senza class=\"cover-title\" (copertina §2-bis: il poster deve dichiararsi)",
@@ -41,6 +41,30 @@
       "slides": 17,
       "slides_social": null,
       "legacy": true
+    },
+    "PRE_SG_01": {
+      "files_ok": true,
+      "slides": 16,
+      "slides_social": 10,
+      "legacy": false
+    },
+    "PRE_SG_02": {
+      "files_ok": true,
+      "slides": 16,
+      "slides_social": 10,
+      "legacy": false
+    },
+    "PRE_SG_03": {
+      "files_ok": true,
+      "slides": 16,
+      "slides_social": 10,
+      "legacy": false
+    },
+    "PRE_SG_04": {
+      "files_ok": true,
+      "slides": 16,
+      "slides_social": 10,
+      "legacy": false
     }
   }
 }
