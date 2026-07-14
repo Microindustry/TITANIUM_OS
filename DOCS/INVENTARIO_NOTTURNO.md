@@ -32,6 +32,39 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-14 · 27 commit
+- `9415b43d` auto: night_audit - cartella clinica 14/07/2026
+- `6d827c11` auto: story_agent - episodi generati 14/07/2026
+- `10ec9742` chore(salva): chiusura #58 - ecosistema contenuti pianificato porta a porta
+- `061ffd7e` docs(#58): terreno Nina + serie PRE per entrambi i binari nelle linee guida
+- `39c4db66` docs(#58): stagioni 2-6 fissate nella LINEA GUIDA sistema
+- `320bc69f` docs(#58): linea guida Nina v2 nello specchio dashboard
+- `fb20cb59` feat(#58): LINEA GUIDA anche per Nina - i due binari pareggiati (ecosistema)
+- `9249a605` docs(#58): standard copertina slide 1 nella LINEA GUIDA
+- `f5b2ef7b` feat(#58): LINEA GUIDA provvisoria (3a voce SISTEMA) + ponte Nina sui due lati
+- `4ebf26af` feat(#58): faccia SISTEMA in sidebar (gemella di Nina) + stagione 1 a 68 caroselli
+- `766aaf03` feat(#58): sidebar storie divisa come Nina + terreno di sviluppo EP_SG
+- `b21dcbca` docs(#58): regola provenienza componenti nel piano EP_SG + numerazione + Nina
+- `8120f865` fix(#58): giorno0 SISTEMA = SOLO il piano della storia (niente grezzo)
+- `5d2d4726` feat(#58): STORIE DI SISTEMA dal giorno 0 — gemella di Nina in sidebar
+- `6f9f82e6` chore(salva): chiusura #57 13/07 - campo di battaglia pronto
+- `0213e8d1` chore(#57): bussola - CAMPO DI BATTAGLIA pronto: GUIDA_CAROSELLI + QC automatico + Obsidian rigenerato + RAG L2 18004==18004 (lezione incrementale-dopo-massive in memoria)
+- `0ef58dd4` feat(#57): QC CAROSELLI automatico - caroselli_qc.py (regole GUIDA §5 eseguibili: canonici/canvas/limiti slide/anti-wireframe/self-contained) + sentinella check_caroselli in night_audit + convenzione social.html nel README. Prima passata: 5 cartelle 0 falle
+- `a557cc3c` chore(#57): bussola - CVE cluster CHIUSO (0 su 194, venv llamafactory) + detriti -5GB; pip_audit.json rigenerato
+- `803cd619` feat(#57): finetune v3.0 - llamafactory isolato nel venv ~/.venvs/llamafactory (torch 2.6.0+cu124 CUDA ok, pip check pulito, CLI verde); il Python di sistema si libera dei pin: via gradio+llamafactory, pillow 12.3 / starlette 1.3.1 / fastapi 0.139
+- `08f8fb17` chore(#57): bussola - P7/F6 caroselli + F7 watcher chiusi; ROTTA CONTENUTI: prossimo = PRE_01 da 0 publish-ready + storie voce Matteo in parallelo (ordine 13/07)
+- `f48c5405` feat(#57): watcher v1.2 (attacco 05 F7) - RETIRED_HANDLES pensiona gli zombie nello state (anthropic vecchio + langchain morto in Tier3, storia intatta) + watchlist P4 completata: r/LocalLLaMA + 6 YouTube dal brief. Verificato live: 7 sorgenti, 90 segnali
+- `80e2a198` chore(#57): caroselli a convenzione COMPLETA (P7/F6 attacco) - via ultimo nome sporco, README EP_N2_01 a 16 slide, scheda+caption PRE_03, indice registra EP_N2_02/PRE_03, formato doppio in pipeline, PRE_01 marcato DA RIFARE per pubblicazione
+- `8a351604` chore(#57): bussola - triage 13/07 + watcher diagnosticabile + RAG self-heal inverso registrati
+- `f26d3184` fix(#57): RAG v4.3 self-heal INVERSO - file con vettori mancanti in ChromaDB (scritture perse da boot-storm) ri-processati in automatico nell incrementale
+- `16609c5b` fix(#57): ai_news_watcher diagnosticabile - exit code nel bat + marker avvio nel logger (morte silenziosa al boot 13/07)
+- `bdf6dec5` auto: story_agent - episodi generati 13/07/2026
+- `705f8dae` auto: night_audit - cartella clinica 13/07/2026
+
+_episodi: 269 · critiche aperte: 12 (159 risolte) · RAG: 19151 chunk_
+
+
+
 ## 2026-07-13 · 42 commit
 - `5d7f62cf` ﻿chore(#57): bussola — MIMS-in-Nina + Pietre-radici + pubblicazione v0 registrate
 - `f169639e` ﻿chore(#57): bussola — cartella+vista GIOCO registrate (prossimo: validare meccaniche insieme)
