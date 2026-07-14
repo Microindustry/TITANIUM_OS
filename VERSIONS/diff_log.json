@@ -1,18 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-07-14T04:32:45.749674",
-      "file": "graphify-out\\cache\\ast\\0b49ae5d86becd4a754c84d8d6d590ecbf03a9deb7c89217d22ebcce29dc44cd.json",
-      "snapshot": "BACKUPS\\20260714_043245\\graphify-out\\cache\\ast\\0b49ae5d86becd4a754c84d8d6d590ecbf03a9deb7c89217d22ebcce29dc44cd.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:32:47.827231",
-      "file": "graphify-out\\cache\\ast\\5112b93af326b6498b178f69c05143901ae378cae13cd6fd88562e6ceef9bb56.json",
-      "snapshot": "BACKUPS\\20260714_043247\\graphify-out\\cache\\ast\\5112b93af326b6498b178f69c05143901ae378cae13cd6fd88562e6ceef9bb56.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-07-14T04:32:49.861967",
       "file": "graphify-out\\cache\\ast\\84188cf643d4f8e869bb351b828c1103529fd28f9537656c45484f736cd09097.json",
       "snapshot": "BACKUPS\\20260714_043249\\graphify-out\\cache\\ast\\84188cf643d4f8e869bb351b828c1103529fd28f9537656c45484f736cd09097.json",
@@ -2998,6 +2986,18 @@
       "timestamp": "2026-07-14T10:07:30.707826",
       "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
       "snapshot": "BACKUPS\\20260714_100730\\NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:07:49.866840",
+      "file": "NODES\\MENTE_RAG\\rag_manifest.json",
+      "snapshot": "BACKUPS\\20260714_100749\\NODES\\MENTE_RAG\\rag_manifest.json",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:07:52.896944",
+      "file": "NODES\\MENTE_RAG\\rag_linkgraph.json",
+      "snapshot": "BACKUPS\\20260714_100752\\NODES\\MENTE_RAG\\rag_linkgraph.json",
       "type": "snapshot"
     }
   ]
