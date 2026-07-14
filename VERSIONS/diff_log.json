@@ -1,42 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-07-14T04:33:55.081214",
-      "file": "graphify-out\\cache\\ast\\c7506896a8255a3485be53c0854b152df399674a6956349589aaef3ed59d1f88.json",
-      "snapshot": "BACKUPS\\20260714_043355\\graphify-out\\cache\\ast\\c7506896a8255a3485be53c0854b152df399674a6956349589aaef3ed59d1f88.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:33:57.022259",
-      "file": "graphify-out\\cache\\ast\\6321007b1595be84c50405321635892d4f4c17ad9e3c8fadfaa6e78f312198a1.json",
-      "snapshot": "BACKUPS\\20260714_043357\\graphify-out\\cache\\ast\\6321007b1595be84c50405321635892d4f4c17ad9e3c8fadfaa6e78f312198a1.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:33:58.962062",
-      "file": "graphify-out\\cache\\ast\\5dc90dc2670b3cbe8aed862e6699412b60c13869eec3ef1307c2e4a3acb479a9.json",
-      "snapshot": "BACKUPS\\20260714_043358\\graphify-out\\cache\\ast\\5dc90dc2670b3cbe8aed862e6699412b60c13869eec3ef1307c2e4a3acb479a9.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:34:00.910180",
-      "file": "graphify-out\\cache\\ast\\9a9a94eb7a6d5fa71f793ebc0d3cf4ae301ac7402445e28fcf5fde3574c42625.json",
-      "snapshot": "BACKUPS\\20260714_043400\\graphify-out\\cache\\ast\\9a9a94eb7a6d5fa71f793ebc0d3cf4ae301ac7402445e28fcf5fde3574c42625.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:34:02.875331",
-      "file": "graphify-out\\cache\\ast\\5c5ad513fefc94239bef9536a1ee181f4effb9c39c96012d65f7cd111813db6e.json",
-      "snapshot": "BACKUPS\\20260714_043402\\graphify-out\\cache\\ast\\5c5ad513fefc94239bef9536a1ee181f4effb9c39c96012d65f7cd111813db6e.json",
-      "type": "snapshot"
-    },
-    {
-      "timestamp": "2026-07-14T04:34:04.798825",
-      "file": "graphify-out\\cache\\ast\\30394060f14f4b17195a7ac5dce53e0df0d15c6855e62bc81efe3742a09fecf2.json",
-      "snapshot": "BACKUPS\\20260714_043404\\graphify-out\\cache\\ast\\30394060f14f4b17195a7ac5dce53e0df0d15c6855e62bc81efe3742a09fecf2.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-07-14T04:34:06.740898",
       "file": "graphify-out\\cache\\ast\\44e51eefb5ff5423cb0a9b2b0c5079f141a086044e6939f34b5b873be918c956.json",
       "snapshot": "BACKUPS\\20260714_043406\\graphify-out\\cache\\ast\\44e51eefb5ff5423cb0a9b2b0c5079f141a086044e6939f34b5b873be918c956.json",
@@ -2998,6 +2962,42 @@
       "timestamp": "2026-07-14T10:23:28.180613",
       "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_9.html",
       "snapshot": "BACKUPS\\20260714_102328\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_9.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:27:12.954780",
+      "file": "NODES\\AUDIT_AGENT\\night_audit.py",
+      "snapshot": "BACKUPS\\20260714_102712\\NODES\\AUDIT_AGENT\\night_audit.py",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:31:50.198499",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\carosello.html",
+      "snapshot": "BACKUPS\\20260714_103150\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\carosello.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:31:53.521884",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\caption.txt",
+      "snapshot": "BACKUPS\\20260714_103153\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\caption.txt",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:31:56.582501",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\README.md",
+      "snapshot": "BACKUPS\\20260714_103156\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\README.md",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:31:59.704446",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\_tmp_7.html",
+      "snapshot": "BACKUPS\\20260714_103159\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\_tmp_7.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T10:32:02.748306",
+      "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\_tmp_9.html",
+      "snapshot": "BACKUPS\\20260714_103202\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01\\_tmp_9.html",
       "type": "snapshot"
     }
   ]

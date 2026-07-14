@@ -1,0 +1,43 @@
+{
+  "note": "Coda dell'apprendista notturno (night_caroselli). status: pending -> bozza_verde/bozza_falle/grounding_debole. Gli item 'insieme: true' NON vengono mai presi. Si estende dai piani (MENTE) man mano.",
+  "items": [
+    {
+      "id": "EP_SG_01_01",
+      "title": "Il primo prompt — la sera del giorno zero",
+      "cap": "CAP 1 · IL SOCIO",
+      "angolo": "La sera in cui Matteo ha scritto il primo messaggio a un'AI in taverna: cosa cercava, cosa non si aspettava, il momento in cui l'attrezzo ha risposto da socio. Intimo, concreto, zero epica finta.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "il primo giorno con l'AI socio, come è iniziato TITANIUM_OS",
+        "EP_S0_00 il Socio origine",
+        "la taverna 12 metri quadri inizio"
+      ],
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_01"
+    },
+    {
+      "id": "EP_SG_01_02",
+      "title": "La Taverna — il laboratorio peggiore del mondo",
+      "cap": "CAP 1 · IL SOCIO",
+      "angolo": "12 metri quadri: umidità, spazio zero, e perché è stata la scelta migliore — il vincolo che ha costretto a progettare bene. La taverna come personaggio.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "la taverna laboratorio 12 metri quadri",
+        "vincoli spazio officina taverna V32"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "EP_SG_01_03",
+      "title": "Il Distacco — quando ha smesso di chiamarmi Socio",
+      "cap": "CAP 1 · IL SOCIO",
+      "angolo": "L'AI che all'inizio chiamava Matteo 'Socio' e poi ha iniziato a chiamarlo per nome: cosa dice quel cambiamento sul rapporto uomo-macchina che matura. Da EP_S0_00 e ST 'Il Distacco'.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "il distacco l'AI che chiamava Socio adesso mi chiama Matteo",
+        "EP_S0_00 c'era un AI che mi chiamava Socio"
+      ],
+      "status": "pending"
+    }
+  ]
+}

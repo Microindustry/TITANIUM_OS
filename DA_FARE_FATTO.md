@@ -204,6 +204,18 @@ SCANNER dei titoli: correggerli scegliendo quelli con le migliori interconnessio
   10; social.html = nota legacy) + render_queue v1.1 (un taglio → slides/ PNG + slides_ig/
   JPEG) + piani/linee guida/specchi/README. **PRE_SG_01-04 rigenerati a 4×10** (v16 archiviate
   in _VERSIONI/v16_doppio, 6 slide extra per serie conservate come materiale) — QC 0 falle.
+- [✓] **BINARIO NOTTURNO COSTRUITO E VIVO** (design approvato Matteo → build stesso giorno):
+  `NODES/CAROSELLI_AGENT/night_caroselli.py` + launcher + task `TI_NightCaroselli` @04:15.
+  La notte: coda → grounding RAG (debole=STOP onesto) → draft Claude sonnet → build
+  sg_builder (scene solo da libreria, canon_guard) → render PNG+JPEG → QC → report
+  `DATA/audit/bozze_caroselli.json`. Tutto in `_BOZZE/` (quarantena): MAI promozione
+  notturna. Guardie: lock, timeout 20', 1 bozza/notte, exit+marker nel log.
+  **Prova del fuoco superata**: EP_SG_01_01 «Il primo prompt» generato end-to-end,
+  10 slide, QC VERDE — in _BOZZE in attesa di revisione diurna. Coda di rodaggio:
+  01_02 e 01_03 pending per le prossime 2 notti. Fix trovato: handle-lock log bat↔python
+  (stessa famiglia della lezione #53) + retry WinError 32 in render_queue.
+- [ ] Revisione diurna bozza EP_SG_01_01 (verificare "C'era anche lei" sul canone) →
+  promozione o correzione
 - [ ] PRE_02/03 Nina da rifare da 0 — DOPO che PRE_01 insieme ha fissato lo standard
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale

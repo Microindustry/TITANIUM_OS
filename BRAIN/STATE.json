@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-14T10:23:31.178655",
+  "last_update": "2026-07-14T10:33:02.434201",
   "active_milestone": "Sessione #58 (14/07): LINEE GUIDA COMPLETE per i due binari - ecosistema pianificato porta a porta (~165 caroselli). Sidebar: faccia SISTEMA (EPISODI/GIORNO0/LINEA GUIDA) pareggiata con NINA (+LINEA GUIDA). Vetrine giorno-0 vuote fino al publish-ready (lezione: piano prima di compilare). Canone nuovo: GUIDA 2-bis copertina-poster (safe-zone/miniatura/collezione), PONTE_SG_NINA (cameo 1-4-9 + preamboli che si presentano a vicenda), provenienza componenti (canale usato, mai prezzi per-pezzo), LINEA_GUIDA_NINA v2 (12 guardie QC), piani produzione: SG S1 68 + stagioni S2-S6, Nina PRE 4 + cammino 53 + stagioni N1-N5. Regola: titoli adattivi = linea guida non regola. Colli di bottiglia attaccati con soluzione (n.1 = binario notturno bozze). Obsidian rigenerato coi connettori.",
   "next_step": "DOMATTINA su input Matteo (gestione autonoma): triage notturno + colli piccoli (QC copertina, render_queue, _TEMPLATE/components SVG) + PRODURRE serie PRE_SG_01-04 (Claude 100%) + design binario notturno bozze. PRE_01 Nina resta INSIEME. Gated Matteo: hardware UPS+ER20+Vevor, prerequisiti Meta (~1h), Semantic Scholar key.",
   "session_count": 119,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-14T07:30:01.888108"
+      "last_activity": "2026-07-14T10:29:31.723318"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -148,5 +148,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a _griglia_ig.png"
+  "last_action": "Modifica a DA_FARE_FATTO.md"
 }
