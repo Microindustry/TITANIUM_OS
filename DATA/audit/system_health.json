@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-13T09:21:03",
-  "date": "2026-07-13",
-  "git_head": "d07209ff",
-  "rag_chunks": 18594,
-  "n_episodes": 265,
-  "n_commits_7d": 71,
+  "last_audit": "2026-07-14T03:52:45",
+  "date": "2026-07-14",
+  "git_head": "6d827c11",
+  "rag_chunks": 19151,
+  "n_episodes": 269,
+  "n_commits_7d": 97,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,76 +14,102 @@
   },
   "log_issues": [
     {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "nina-loop: ultimo output 4.2 giorni fa (soglia 3) — nina_state.json",
+      "log": "night_research.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-07-14 03:44:05 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-07-14 03:44:29 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-07-14 03:44:29 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "timeout di rete",
+      "riga": "2026-07-14 03:44:45 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-07-14 03:42:22 [research_agent      ] WARNING  Nessun risultato sopra la soglia di rilevanza (0.40).",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-07-14 03:42:25 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-07-14 03:42:48 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "timeout di rete",
+      "riga": "2026-07-14 03:43:33 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "data": "2026-07-14"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "errore esplicito",
+      "riga": "[tasks_history] API non raggiungibile (<urlopen error [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione>) � nessuna tacca stanotte",
       "data": "2026-07-13"
     },
     {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "snapshot RAG: ultimo output 4.2 giorni fa (soglia 3) — rag_snapshots",
-      "data": "2026-07-13"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "retention disco: ultimo output 4.2 giorni fa (soglia 3) — retention_last.json",
-      "data": "2026-07-13"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "AI news watcher: ultimo output 4.2 giorni fa (soglia 4) — ai_news_watcher_state.json",
-      "data": "2026-07-13"
-    },
-    {
-      "log": "pip_audit.json",
-      "tipo": "CVE dipendenze con fix disponibile",
-      "riga": "22 CVE fixabili in 3 pacchetti: gradio 5.50.0 (9), pillow 11.3.0 (7), starlette 0.52.1 (6)",
-      "data": "2026-07-13"
+      "log": "_CANONE.md",
+      "tipo": "serie oltre il canone dichiarato",
+      "riga": "su disco EP_N2_54, il canone dichiara EP_N2_53: aggiornare _CANONE.md",
+      "data": "2026-07-14"
     }
   ],
-  "vault_orphans": 0,
+  "vault_orphans": 2,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 4,
+    "file_age_days": 5,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 4,
-    "max_ep_disco": 53,
+    "canone_age_days": 0,
+    "max_ep_disco": 54,
     "max_ep_canone": 53
   },
   "organi_vivi": {
-    "nina-loop": 4.2,
-    "snapshot RAG": 4.2,
-    "inventario notturno": 0.0,
-    "retention disco": 4.2,
-    "AI news watcher": 4.2,
-    "daily brief": 0.0,
-    "riflusso FATTI": 4.3
+    "nina-loop": 0.0,
+    "snapshot RAG": 0.0,
+    "inventario notturno": 0.7,
+    "retention disco": 0.8,
+    "AI news watcher": 0.0,
+    "daily brief": 0.8,
+    "riflusso FATTI": 0.1
   },
   "pip_audit": {
-    "vulns": 23,
-    "fixable": 22,
-    "packages": [
-      "gradio 5.50.0 (9)",
-      "pillow 11.3.0 (7)",
-      "starlette 0.52.1 (6)"
-    ]
+    "vulns": 0,
+    "fixable": 0,
+    "packages": []
   },
   "qc_episodi": {
-    "checked": 53,
+    "checked": 54,
     "structure_fail": 0,
     "open_loop_missing": 29
   },
   "critiche": {
     "added": 6,
-    "auto_closed": 18,
-    "total": 165,
+    "auto_closed": 6,
+    "total": 171,
     "open": 12
   },
   "verdict": "ATTENZIONE"
