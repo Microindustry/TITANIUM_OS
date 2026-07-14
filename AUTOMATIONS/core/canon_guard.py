@@ -1,8 +1,14 @@
-# canon_guard.py | TITANIUM_OS / AUTOMATIONS / core | v1.0 | 2026-06-22
+# canon_guard.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-07-15
 # REGOLA DI CANONE, implementata UNA volta e usata ovunque (scalabile/adattiva).
 # Regola Matteo: i componenti V32/VULCAN NON si descrivono mai come
 # "recuperati / usati / di recupero / EUR 0 di recupero". Sempre specifica
 # tecnica + logica progettuale (es. "PLC industriale Siemens S7-314C").
+#
+# v1.1 — famiglia PERSONE/CANONE NARRATIVO: Nina e' il personaggio del binario
+# educativo (bibbia del mondo), NON una persona reale della famiglia. Presentarla
+# come parente in voce reale = falla (successo in EP_SG_01_01, bozza 14/07:
+# l'apprendista ha scritto una parentela inventata e il QC era cieco).
+# In SG Nina appare SOLO come cameo-domanda nel balloon (PONTE_SG_NINA).
 #
 # - clean(text)  -> applica le correzioni note (auto-fix alla fonte, idempotente)
 # - scan(text)   -> trova formulazioni vietate ANCHE nuove (proximità hardware),
@@ -65,6 +71,15 @@ _BAD = r"recuperat[oi]|di recupero|EUR\s*0.*recuper|tutto recupero|second[ a]\s*
 _LINE_RE = re.compile(rf"^.*(?:{_HW}).*(?:{_BAD}).*$|^.*(?:{_BAD}).*(?:{_HW}).*$",
                       re.IGNORECASE | re.MULTILINE)
 
+# Nina + parentela PERSONALE nella stessa riga = personaggio narrativo spacciato per
+# famiglia vera (nessun auto-fix possibile: va riscritta la slide, quindi solo scan).
+# Solo forme possessive personali: le metafore ("figlia del sistema") e la formula di
+# chiusura Nina ("per tuo figlio") sono legittime e NON devono scattare.
+_PARENTELA = (r"(?:mia|nostra|sua)\s+figli[ao]|figli[ao]\s+(?:mia|nostra|sua)|"
+              r"(?:mia|nostra)\s+bambina|mi[ao]\s+figliolett|primogenit[ao]\s+(?:mia|nostra)")
+_NINA_RE = re.compile(rf"^.*Nina.{{0,60}}(?:{_PARENTELA}).*$|^.*(?:{_PARENTELA}).{{0,60}}Nina.*$",
+                      re.IGNORECASE | re.MULTILINE)
+
 
 def clean(text: str) -> str:
     """Applica le correzioni note. Idempotente: rieseguibile senza danni."""
@@ -77,7 +92,9 @@ def clean(text: str) -> str:
 def scan(text: str) -> list[str]:
     """Ritorna le righe con formulazioni vietate ancora presenti (post-clean)."""
     cleaned = clean(text)
-    return [m.strip() for m in _LINE_RE.findall(cleaned) if m.strip()]
+    hits = [m.strip() for m in _LINE_RE.findall(cleaned) if m.strip()]
+    hits += [f"[persone] {m.strip()}" for m in _NINA_RE.findall(cleaned) if m.strip()]
+    return hits
 
 
 if __name__ == "__main__":

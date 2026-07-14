@@ -108,10 +108,24 @@
   inventati. ⚠️ igiene: memorie AI esterne su Matteo STALE (molle, MacGyverlandia) —
   mai fonte, il canone è MENTE/RAG.
 - [ ] **RISULTATI TEST LINKEDIN PRE_SG_01** (reazioni/reach) → tararsi sopra (gated Matteo)
-- [ ] **REVISIONE BOZZE NOTTURNE**: EP_SG_01_01 in _BOZZE (verificare slide «C'era anche
-  lei, all'inizio» sul canone) → promuovere o correggere
-- [ ] ⚠️ **Bozza 01_02 «La Taverna» NON risulta arrivata**: report bozze fermo al 14/07
-  con solo EP_SG_01_01 — verificare log `DATA/logs/night_caroselli.log` e task @04:15
+- [✓] **REVISIONE EP_SG_01_01 → CORRETTO E PROMOSSO** (15/07): la slide «C'era anche lei»
+  era una **falla di canone confermata** — presentava Nina come parente reale (Nina è il
+  personaggio del binario educativo; il suo cameo-domanda è riservato al portante EP_SG_01,
+  PONTE: mai due cameo nello stesso capitolo). Slide 9 riscritta → «LA POSTA» (se regge
+  solo finché ci penso io, non è un sistema; porta oro, zero invenzioni) + slide 3
+  (etichetta «ADHD dichiarato» via → «Fino alla MotoGP»; resta l'uso concreto in slide 7,
+  GUIDA §7). Il resto della bozza era GIÀ conforme §7 (slide-carne 12m²/15anni/178kg ✓,
+  slide 10 «restano tre puntate» verificata sul piano ✓). Promosso: cartella in CAROSELLI/,
+  piano spuntato (CAP1 1/4, S1 1/69), render+QC verde, griglia IG rigenerata.
+- [✓] **CANON_GUARD v1.1 — famiglia [persone]** (la falla non si ripete): l'apprendista
+  aveva scritto la parentela inventata e il QC era cieco (guard v1.0 = solo "recuperato").
+  Nuova regola scan: Nina + possessivo di parentela = falla; metafore («figlia del
+  sistema») e chiusura Nina («per tuo figlio») NON scattano — testato, 0 falsi positivi
+  su MENTE. night_caroselli la usa già su ogni slide → stanotte 01_02 nasce protetta.
+- [✓] ~~⚠️ Bozza 01_02 «La Taverna» NON risulta arrivata~~ — **falso allarme, verificato
+  15/07 ~01:00**: TI_NightCaroselli non ha ancora avuto il primo run schedulato
+  (NextRunTime = 15/07 04:15, LastRunTime vuoto); EP_SG_01_01 era il run manuale di
+  prova del 14/07 10:32. 01_02 arriva stanotte @04:15, tutto regolare
 - [ ] **PRE_01 NINA INSIEME** — rifatto da 0, ≤10, copertina §2-bis (punto condiviso rotta)
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
