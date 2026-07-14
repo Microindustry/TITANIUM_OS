@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-14T09:36:57.225173",
+  "scanned_at": "2026-07-14T10:07:34.223032",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 1187,
+  "total_files": 1195,
   "files_read": 13,
-  "files_skipped": 1174,
+  "files_skipped": 1182,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -162,14 +162,14 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 22.4,
+      "size_kb": 22.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 22.4,
+      "size_kb": 22.7,
       "readable": false,
       "extracts": {}
     },
@@ -314,6 +314,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\0c\\7d14d633264401103a7b818f9b51bd08368ccd",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\0e\\0620acff450c45454c67f36c492544fab861d6",
       "type": "unknown",
       "size_kb": 6.7,
@@ -331,6 +338,13 @@
       "path": ".git\\objects\\12\\02adba8b114c68beb2502128151560f766df3d",
       "type": "unknown",
       "size_kb": 3.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\12\\12af64d7a65b6d3544174b2716aba48ad9b86d",
+      "type": "unknown",
+      "size_kb": 16.5,
       "readable": false,
       "extracts": {}
     },
@@ -492,6 +506,13 @@
       "path": ".git\\objects\\2c\\cfad2b494d34e9e59122d7bd47208083fce572",
       "type": "unknown",
       "size_kb": 15.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\2c\\e8a543403141e66921eb42efa98e10624f70ca",
+      "type": "unknown",
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
@@ -856,6 +877,13 @@
       "path": ".git\\objects\\56\\6906e72dafbead4fa8b4014041026c429b9081",
       "type": "unknown",
       "size_kb": 16.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\57\\e078bda3e473b8d39f822b889c8459a6f4627a",
+      "type": "unknown",
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },
@@ -1350,6 +1378,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\8b\\e7e15f803daa946bdd6376e2ba15f8450aa1c3",
+      "type": "unknown",
+      "size_kb": 0.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\8c\\b65e6d86e4a3f6afd40c47d9d7b1ae7397d4ce",
       "type": "unknown",
       "size_kb": 6.4,
@@ -1493,6 +1528,13 @@
       "path": ".git\\objects\\9e\\3ac4b9bfada8b9baec611cc996c96809957695",
       "type": "unknown",
       "size_kb": 77.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\9e\\4d174f3e68c88b8b8d330a391250876c0afb40",
+      "type": "unknown",
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
@@ -1770,6 +1812,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\bb\\65ab9c327f4d9a41c73845d3b77a491c9b0eaf",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\bb\\6e2938ab7c71501cd764af797e6a9ab6cbbe2f",
       "type": "unknown",
       "size_kb": 0.3,
@@ -1885,6 +1934,13 @@
       "path": ".git\\objects\\c3\\459b68c3d00f096f7107670d93c09e1523e69d",
       "type": "unknown",
       "size_kb": 6.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\c3\\49d74811d80ad02d45168ab179cb43993f9f30",
+      "type": "unknown",
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
@@ -4515,7 +4571,7 @@
     {
       "path": "KNOWLEDGE\\FORMATO_EPISODIO_DOPPIO.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 7.4,
       "readable": false,
       "extracts": {}
     },
@@ -4641,7 +4697,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\GUIDA_CAROSELLI.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 10.2,
       "readable": false,
       "extracts": {}
     },
@@ -4655,7 +4711,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\LINEA_GUIDA_NINA.md",
       "type": "md",
-      "size_kb": 13.5,
+      "size_kb": 13.6,
       "readable": false,
       "extracts": {}
     },
@@ -4697,7 +4753,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\PIANO_PRODUZIONE_NINA.md",
       "type": "md",
-      "size_kb": 8.6,
+      "size_kb": 8.7,
       "readable": false,
       "extracts": {}
     },
@@ -8295,7 +8351,7 @@
     {
       "path": "STORIE\\SG_GIORNO0\\_PIANO_PRODUZIONE.md",
       "type": "md",
-      "size_kb": 16.8,
+      "size_kb": 16.9,
       "readable": false,
       "extracts": {}
     },

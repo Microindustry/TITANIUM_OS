@@ -115,19 +115,29 @@ def main() -> int:
             continue
         if args and folder.name not in args:
             continue
-        jobs = [(folder / "carosello.html", folder / "slides", False),
-                (folder / "social.html", folder / "slides_social", True)]
-        for html, outdir, jpeg in jobs:
-            if not html.exists():
-                continue
-            if not force and not _stale(html, outdir):
-                skipped += 1
-                continue
-            print(f"  render {folder.name}/{html.name} -> {outdir.name}/")
-            outs = _render_html(html, outdir, jpeg)
-            if not jpeg:
-                _sheet(outs, folder / "_sheet.png")
-            done += 1
+        # v1.1 (riconciliazione 14/07): UN taglio ≤10 — carosello.html produce
+        # slides/ (PNG, sito/PDF) E slides_ig/ (JPEG ≤8MB, pronti per Instagram).
+        html = folder / "carosello.html"
+        if not html.exists():
+            continue
+        outdir = folder / "slides"
+        if not force and not _stale(html, outdir):
+            skipped += 1
+            continue
+        print(f"  render {folder.name}/carosello.html -> slides/ + slides_ig/")
+        outs = _render_html(html, outdir, as_jpeg=False)
+        _sheet(outs, folder / "_sheet.png")
+        igdir = folder / "slides_ig"
+        igdir.mkdir(exist_ok=True)
+        for png in outs:
+            img = Image.open(png).convert("RGB")
+            jpg = igdir / (png.stem + ".jpg")
+            q = 92
+            img.save(jpg, quality=q)
+            while jpg.stat().st_size > MAX_JPEG_BYTES and q > 40:
+                q -= 10
+                img.save(jpg, quality=q)
+        done += 1
     print(f"render_queue: {done} render, {skipped} già aggiornati")
     # chiusura: QC automatico sull'intera cartella
     qc = subprocess.run([sys.executable, str(BASE / "CONTENT_ENGINE/scripts/caroselli_qc.py")])

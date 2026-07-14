@@ -55,7 +55,7 @@
 
 ## Regole di produzione
 
-Voce di Matteo in prima persona · ogni fatto con fonte · canon_guard sui numeri · caroselli_qc su ogni uscita · formato doppio (episodio completo 16 + taglio social ≤10 slide) · un episodio alla volta: entra in questa pagina **solo quando è definitivo**.
+Voce di Matteo in prima persona · ogni fatto con fonte · canon_guard sui numeri · caroselli_qc su ogni uscita · formato ≤10 slide (un taglio; l'extra = carosello in più) · un episodio alla volta: entra in questa pagina **solo quando è definitivo**.
 
 - **Provenienza componenti (regola 14/07):** "comprati su canale usato" — mai "recuperati", mai prezzi per-pezzo; gli acquisti futuri si raccontano come materiale nuovo.
 - **Numerazione già predisposta:** capitolo = `EP_SG_NN` → cartella `CAROSELLI/EP_SG_NN/` (carosello.html 16 + social.html ≤10 + caption + slides/); se un capitolo non sta nel social-cut si spezza in più caroselli (`EP_SG_NNb`), come la serie PRE.

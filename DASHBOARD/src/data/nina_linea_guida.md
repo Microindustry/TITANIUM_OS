@@ -54,7 +54,7 @@ Blueprint-anime (schemi vivi, monoline ciano/oro su fondo scuro) · parole illus
 
 ## Formato e produzione
 
-Ogni episodio nasce **doppio** (16 + ≤10; il social-cut è il gancio, non un riassunto; densità per canale) · frontmatter motore obbligatorio (casella · competenza · prova REALE · guida · pietra · voce nina) · ciclo: stampo → grounding RAG (debole = falla, si segnala mai si inventa) → build da _TEMPLATE (mai dall'episodio precedente) → QC verde → Express → vetrina · **autonomia**: Nina genera in automatico (garanzie: grounding, canon_guard, QC, additività; eccezione PRE_01 = insieme) · i FATTI rifluiscono nel RAG.
+Formato (riconciliazione 14/07): **un taglio, sempre ≤10 slide** (l'extra = carosello in più; densità per canale resta) · frontmatter motore obbligatorio (casella · competenza · prova REALE · guida · pietra · voce nina) · ciclo: stampo → grounding RAG (debole = falla, si segnala mai si inventa) → build da _TEMPLATE (mai dall'episodio precedente) → QC verde → Express → vetrina · **autonomia**: Nina genera in automatico (garanzie: grounding, canon_guard, QC, additività; eccezione PRE_01 = insieme) · i FATTI rifluiscono nel RAG.
 
 ## Le interazioni col sistema (pareggiate — l'ecosistema)
 

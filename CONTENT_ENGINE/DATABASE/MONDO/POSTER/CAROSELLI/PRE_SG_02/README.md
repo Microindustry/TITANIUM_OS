@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [Carosello  PRE_SG_02  Cosè il Sistema (preambolo sistema, 2 di 4)](#carosello-presg02-cosè-il-sistema-preambolo-sistema-2-di-4)
+  - [File](#file)
+  - [Contenuto](#contenuto)
+  - [Fonti (grounding)](#fonti-grounding)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # Carosello · PRE_SG_02 — «Cos'è il Sistema» (preambolo sistema, 2 di 4)
 
 *Creato 14/07/2026 (#58 mattina, gestione Claude 100%).*
@@ -14,4 +24,4 @@ Canone CLAUDE.md (GENESIS STACK, DATI MASTER: 178 kg, ±0.019; 10 REGOLE) + STAT
 Niente numeri MIMS proprietari (repo pubblico: "geometria proprietaria" senza dettaglio).
 
 ## Stato
-- [x] build (16+10, cover-title, marker) · [ ] render · [ ] QC verde · [ ] Express (in coda pubblicazione) · [ ] pubblicato
+- [x] build (10, cover-title, marker) · [ ] render · [ ] QC verde · [ ] Express (in coda pubblicazione) · [ ] pubblicato

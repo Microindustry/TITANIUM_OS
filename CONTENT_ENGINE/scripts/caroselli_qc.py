@@ -25,8 +25,8 @@ BASE      = Path(__file__).resolve().parents[2]          # TITANIUM_OS
 CAROSELLI = BASE / "CONTENT_ENGINE" / "DATABASE" / "MONDO" / "POSTER" / "CAROSELLI"
 OUT_JSON  = BASE / "DATA" / "audit" / "caroselli_qc.json"
 
-MAX_COMPLETO = 16   # standard vero (v1.1: tolta la tolleranza 17 — i PRE si rifanno da 0)
-MAX_SOCIAL   = 10   # limite HARD API Instagram (doc Meta, verificato #56)
+MAX_COMPLETO = 10   # v1.2 (riconciliazione Matteo 14/07, GUIDA §1.0): UN taglio, sempre ≤10.
+MAX_SOCIAL   = 10   # social.html = artefatto del vecchio doppio (se presente: legacy)
 MIN_COVER_FONT = 60 # px — prova della miniatura (§2-bis.2)
 
 # I 5 pre-standard (14/07): tutti nel piano di rifacimento. Anomalie -> legacy_note.
@@ -109,7 +109,9 @@ def run_qc() -> dict:
 
         social = folder / "social.html"
         if social.exists():
-            entry["slides_social"] = _check_html(social, MAX_SOCIAL, sink, ep, "social-cut IG")
+            # vecchio doppio taglio: non più canone (riconciliazione 14/07) — nota, non falla
+            report["legacy_note"].append(f"{ep}: social.html presente (vecchio doppio) — da archiviare in _VERSIONI")
+            entry["slides_social"] = _check_html(social, MAX_SOCIAL, report["legacy_note"], ep, "social-cut legacy")
 
         report["per_id"][ep] = entry
 

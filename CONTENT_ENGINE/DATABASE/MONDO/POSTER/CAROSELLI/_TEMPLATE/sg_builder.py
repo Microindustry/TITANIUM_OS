@@ -165,10 +165,12 @@ def _slide(idx: int, meta: dict, s: dict, total: int) -> str:
 
 
 def build(folder: Path, meta: dict, slides: list[dict]) -> None:
-    """Genera carosello.html (tutte le slide) + social.html (slide con social=True)."""
-    assert len(slides) <= 16, f"completo {len(slides)} > 16"
-    social = [s for s in slides if s.get("social")]
-    assert len(social) <= 10, f"social-cut {len(social)} > 10"
+    """UN SOLO taglio, sempre ≤10 (riconciliazione Matteo 14/07, GUIDA §1.0).
+    Se la lista supera 10, entrano le slide con social=True; le ALTRE restano
+    DATI nel _build_* — materiale per il carosello successivo (mai buttare)."""
+    chosen = [s for s in slides if s.get("social")] if len(slides) > 10 else slides
+    assert len(chosen) <= 10, f"carosello {len(chosen)} > 10 (spezzalo: un carosello in più)"
+    extra = len(slides) - len(chosen)
 
     def doc(subset: list[dict]) -> str:
         total = len(subset)
@@ -189,6 +191,5 @@ def build(folder: Path, meta: dict, slides: list[dict]) -> None:
 </body>
 </html>"""
 
-    (folder / "carosello.html").write_text(doc(slides), encoding="utf-8")
-    (folder / "social.html").write_text(doc(social), encoding="utf-8")
-    print(f"{folder.name}: completo {len(slides)} slide · social {len(social)} slide")
+    (folder / "carosello.html").write_text(doc(chosen), encoding="utf-8")
+    print(f"{folder.name}: {len(chosen)} slide (<=10) · {extra} extra conservate come materiale")

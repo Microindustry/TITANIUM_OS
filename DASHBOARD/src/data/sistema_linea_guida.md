@@ -3,7 +3,7 @@
 - [Linea guida provvisoria  le storie di sistema (EP_SG)](#linea-guida-provvisoria-le-storie-di-sistema-epsg)
   - [La regola del binario](#la-regola-del-binario)
   - [La serie PRE_SG  il preambolo del binario (4 caroselli, prima della stagione 1)](#la-serie-presg-il-preambolo-del-binario-4-caroselli-prima-della-stagione-1)
-  - [Stagione 1  9 capitoli  68 caroselli (9 portanti  59 approfondimenti)](#stagione-1-9-capitoli-68-caroselli-9-portanti-59-approfondimenti)
+  - [Stagione 1  9 capitoli  69 caroselli (9 portanti  60 approfondimenti)](#stagione-1-9-capitoli-69-caroselli-9-portanti-60-approfondimenti)
   - [Le interazioni con Nina (canone del PONTE  vale per i due binari)](#le-interazioni-con-nina-canone-del-ponte-vale-per-i-due-binari)
   - [La copertina (slide 1)  lo standard feed/griglia (fissato 14/07)](#la-copertina-slide-1-lo-standard-feedgriglia-fissato-1407)
   - [Frontmatter motore (casella CV del capitolo  i figli specializzano)](#frontmatter-motore-casella-cv-del-capitolo-i-figli-specializzano)
@@ -23,7 +23,7 @@
 ## La regola del binario
 
 - Voce: **Matteo, prima persona**. Gestione: **Claude al 100%** (grounding RAG + canon_guard + caroselli_qc + additivo).
-- Ogni episodio = **doppio**: completo 16 slide (sito/LinkedIn-PDF) + social-cut ≤10 (Instagram) = 1 carosello.
+- Formato (riconciliazione 14/07): **UN taglio, sempre ≤10 slide** — il materiale extra diventa un carosello in più nella uscita successiva (mai comprimere, mai buttare).
 - **N-livelli**: capitolo portante `EP_SG_NN` (apre e promette) + approfondimenti `EP_SG_NN_XX` (figli annidati).
 - Provenienza componenti: **«comprati su canale usato»** — mai «recuperati», mai prezzi per-pezzo; acquisti futuri = materiale nuovo.
 - Il grezzo si **riscrive, non si copia**; i doppioni del grezzo si consolidano in 1.
@@ -35,7 +35,7 @@ Spiegare cosa è e come funziona non sta in un carosello solo: **PRE_SG_01 Chi p
 
 ## Stagione 1 — 9 capitoli → 69 caroselli (9 portanti + 60 approfondimenti)
 
-**≈1.104 slide complete + ≈660 social.** Titoli di lavoro ancorati al grezzo reale (157 episodi di sistema) e **verificati col title-scan Obsidian** (14/07: titoli = i nodi con le migliori interconnessioni del vault; si ripete a ogni rigenerazione — titoli adattivi).
+Ogni carosello ≤10 slide (l'extra genera caroselli aggiuntivi). Titoli di lavoro ancorati al grezzo reale (157 episodi di sistema) e **verificati col title-scan Obsidian** (14/07: titoli = i nodi con le migliori interconnessioni del vault; si ripete a ogni rigenerazione — titoli adattivi).
 
 **CAP 1 · IL SOCIO — 4** *(cameo Nina: apre)*
 - 01_01 Il primo prompt · 01_02 La Taverna · 01_03 Il Distacco

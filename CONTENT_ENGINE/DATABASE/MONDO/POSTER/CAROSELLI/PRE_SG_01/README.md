@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [Carosello  PRE_SG_01  Chi parla (preambolo sistema, 1 di 4)](#carosello-presg01-chi-parla-preambolo-sistema-1-di-4)
+  - [File](#file)
+  - [Fonti (grounding)](#fonti-grounding)
+  - [Arco (16  social 10)](#arco-16-social-10)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # Carosello · PRE_SG_01 — «Chi parla» (preambolo sistema, 1 di 4)
 
 *Creato 14/07/2026 (#58 mattina, gestione Claude 100% — ordine Matteo). Il PRIMO carosello
@@ -22,6 +32,6 @@ cover gancio → titanio → percorso → [CV mappa] → ADHD → la risposta �
 → open loop PRE_SG_02 → [colophon + porta Nina]. *(Le [quadre] = solo completo.)*
 
 ## Stato
-- [x] build (16+10, QC contract: cover-title 78px, marker render)
+- [x] build (10, QC contract: cover-title 78px, marker render)
 - [ ] render slides/ + slides_social/ (`python CONTENT_ENGINE/scripts/render_queue.py PRE_SG_01`)
 - [ ] QC verde · [ ] export Express (solo in coda pubblicazione) · [ ] pubblicato

@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [Carosello  PRE_SG_04  La mappa delle stagioni (preambolo sistema, 4 di 4)](#carosello-presg04-la-mappa-delle-stagioni-preambolo-sistema-4-di-4)
+  - [File](#file)
+  - [Contenuto](#contenuto)
+  - [Fonti (grounding)](#fonti-grounding)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # Carosello · PRE_SG_04 — «La mappa delle stagioni» (preambolo sistema, 4 di 4)
 
 *Creato 14/07/2026 (#58 mattina, gestione Claude 100%).*
@@ -15,4 +25,4 @@ La mappa S1→S6 · il ritmo ("senza prova non entra") · dove seguire · **la p
 regole cameo). Il gate delle stagioni è dichiarato anche al pubblico (niente calendario finto).
 
 ## Stato
-- [x] build (16+10, cover-title, marker) · [ ] render · [ ] QC verde · [ ] Express (in coda pubblicazione) · [ ] pubblicato
+- [x] build (10, cover-title, marker) · [ ] render · [ ] QC verde · [ ] Express (in coda pubblicazione) · [ ] pubblicato

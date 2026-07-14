@@ -196,6 +196,14 @@ SCANNER dei titoli: correggerli scegliendo quelli con le migliori interconnessio
 - [✓] **Design binario notturno bozze**: `DOCS/DESIGN_NIGHT_CAROSELLI.md` — la notte propone
   (1 bozza/notte in `_BOZZE/`, grounding RAG + stampo + QC), il giorno promuove; AUTO non si
   tocca; PRE_01 Nina escluso dalla coda. **GATED: ok Matteo sul design → poi si costruisce.**
+- [✗] ~~formato doppio 16+≤10~~ — corretto da Matteo (14/07 mattina, dopo revisione PRE_SG:
+  "lavoro incredibile ma le 16 non ci servono"): **UN taglio, sempre ≤10** — l'extra diventa
+  un carosello in più nella uscita successiva, MAI comprimere/buttare.
+- [✓] **Riconciliazione ≤10 APPLICATA OVUNQUE**: GUIDA §1.0 (canone) + nota su FORMATO_DOPPIO +
+  sg_builder v1.1 (sceglie le ≤10, extra restano DATI nei _build) + caroselli_qc v1.2 (limite
+  10; social.html = nota legacy) + render_queue v1.1 (un taglio → slides/ PNG + slides_ig/
+  JPEG) + piani/linee guida/specchi/README. **PRE_SG_01-04 rigenerati a 4×10** (v16 archiviate
+  in _VERSIONI/v16_doppio, 6 slide extra per serie conservate come materiale) — QC 0 falle.
 - [ ] PRE_02/03 Nina da rifare da 0 — DOPO che PRE_01 insieme ha fissato lo standard
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
