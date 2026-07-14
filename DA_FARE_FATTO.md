@@ -173,17 +173,30 @@
 design/personaggio Nina, il lavoro non si butta (esistenti → _VERSIONI); (b) Obsidian =
 SCANNER dei titoli: correggerli scegliendo quelli con le migliori interconnessioni nel grafo
 → linee guida più precise; (c) l'AUTOGENERAZIONE episodi (AUTO) non deve MAI fermarsi.*
-- [ ] Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli +
-  verifica autogenerazione AUTO viva
-- [ ] **Title-scan Obsidian**: passata sui titoli dei due piani col grafo (intersect/ponti) —
-  correggere i titoli con le migliori interconnessioni, aggiornare le linee guida
-- [ ] Colli piccoli: QC copertina eseguibile in caroselli_qc + `render_queue.py` batch +
-  `_TEMPLATE/components/` (SVG canonici Nina/THEMIS/simboli ⟡ — prima di ogni carosello nuovo)
-- [ ] **Produrre la serie PRE_SG_01-04** (gestione Claude 100%, regole complete: doppio taglio,
-  copertina §2-bis, QC verde, cartelle CAROSELLI/PRE_SG_NN/)
-- [ ] Progettare il binario notturno bozze-caroselli (collo n°1) — design, poi costruzione
-- [ ] NON toccare PRE_01 Nina da solo (è INSIEME); PRE_02/03 Nina da rifare da 0 ma DOPO che
-  PRE_01 insieme ha fissato lo standard della serie
+- [✓] Triage notturno (14/07 mattina): finetune VERDE (la corsa 13/07 9:21 era già sul venv,
+  exit 0; schedulazione settimanale domenica) · sentinella caroselli DEBUTTATA (03:52, 5
+  cartelle) · AUTO VIVO (EP_AUTO aggiornati 02:09, research 03:47, watchdog running) ·
+  429 Semantic Scholar = chiave gated (noto)
+- [✓] **Title-scan Obsidian ESEGUITO** (misura inbound+cross-dominio su tutto il vault):
+  +EP_SG_04_12 «Il basamento — traliccio saldato TIG» (hub 67 link, 5 domini — la saldatura
+  di Matteo dentro V32) · 04_07 rinominato «Config G — rinforzi colonne Z+U» (nome del
+  corpus-hub, ~365 link aggregati) · conferme forti (prima foto 69, BOM 60, corpo unico
+  37+30, Organismo 53, FATTI = nodo più trasversale 10 domini) · cammino Nina confermato
+  (EP_N2_04/20/30 hub). S1 sistema: 68→**69 caroselli**. Procedura scritta nei piani:
+  si ripete a ogni rigenerazione vault.
+- [✓] Colli piccoli CHIUSI: caroselli_qc **v1.1** (standard 16 vero, check copertina §2-bis
+  ESEGUIBILE cover-title+font≥60px, legacy_note senza rumore — 0 falle / 7 note) +
+  **render_queue.py** (batch incrementale, PNG completo + JPEG social ≤8MB, QC in coda) +
+  **_TEMPLATE/components/** (contratto anti-drift + volto Nina canonico estratto)
+- [✓] **SERIE PRE_SG_01-04 PRODOTTA** (Claude 100%, commit 56d903d7): 4 caroselli doppi
+  (16+10) — Chi parla · Cos'è il Sistema · Il patto del racconto · La mappa delle stagioni
+  (slide-ponte Nina) — motore condiviso `_TEMPLATE/sg_builder.py` (CSS=tokens, 12 scene
+  monoline, contratti QC), 64 PNG + 40 JPEG renderizzati, **QC verde 0 falle su 9 cartelle**.
+  Express/pubblicazione restano in coda (gated prerequisiti Meta).
+- [✓] **Design binario notturno bozze**: `DOCS/DESIGN_NIGHT_CAROSELLI.md` — la notte propone
+  (1 bozza/notte in `_BOZZE/`, grounding RAG + stampo + QC), il giorno promuove; AUTO non si
+  tocca; PRE_01 Nina escluso dalla coda. **GATED: ok Matteo sul design → poi si costruisce.**
+- [ ] PRE_02/03 Nina da rifare da 0 — DOPO che PRE_01 insieme ha fissato lo standard
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta

@@ -1,12 +1,6 @@
 {
   "events": [
     {
-      "timestamp": "2026-07-14T04:31:15.489395",
-      "file": "graphify-out\\cache\\ast\\1b5db2ede775aa971b7d3811eb162ff6f966b0c8c260e81284ca87c8c0ba7451.json",
-      "snapshot": "BACKUPS\\20260714_043115\\graphify-out\\cache\\ast\\1b5db2ede775aa971b7d3811eb162ff6f966b0c8c260e81284ca87c8c0ba7451.json",
-      "type": "snapshot"
-    },
-    {
       "timestamp": "2026-07-14T04:31:17.450871",
       "file": "graphify-out\\cache\\ast\\e27f3381bc3a14f79d18441bd7b42ba39f2a7058bb298c81e46b412da5eb5a7e.json",
       "snapshot": "BACKUPS\\20260714_043117\\graphify-out\\cache\\ast\\e27f3381bc3a14f79d18441bd7b42ba39f2a7058bb298c81e46b412da5eb5a7e.json",
@@ -2998,6 +2992,12 @@
       "timestamp": "2026-07-14T09:53:33.489828",
       "file": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_10.html",
       "snapshot": "BACKUPS\\20260714_095333\\CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\PRE_SG_04\\_tmp_10.html",
+      "type": "snapshot"
+    },
+    {
+      "timestamp": "2026-07-14T09:55:07.272796",
+      "file": "DASHBOARD\\index.html",
+      "snapshot": "BACKUPS\\20260714_095507\\DASHBOARD\\index.html",
       "type": "snapshot"
     }
   ]
