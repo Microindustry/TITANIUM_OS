@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 58  14/07/2026  STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)](#sessione-58-14072026-storie-di-sistema-dal-giorno-0-gemella-di-nina-in-sidebar)
   - [Sessione 57  08/07/2026  IL MOTORE: HR piattaforma a 3 strati  doc VALORE per pilastro](#sessione-57-08072026-il-motore-hr-piattaforma-a-3-strati-doc-valore-per-pilastro)
   - [Sessione 56  08/07/2026  VERITÀ SPARSA: la Mappa deriva, non copia (punto 1 CHIUSO)](#sessione-56-08072026-verità-sparsa-la-mappa-deriva-non-copia-punto-1-chiuso)
   - [Sessione 55  07/07/2026  ONDATE A-B-C CHIUSE  verità sparsa  STATE salvato dal clobber](#sessione-55-07072026-ondate-a-b-c-chiuse-verità-sparsa-state-salvato-dal-clobber)
@@ -167,14 +168,22 @@
 - [✓] **Obsidian rigenerato coi connettori**: setup+bridge+intersect — i nuovi piani/guide
   sono nel vault e collegati (328 note sapere, 2.970 legami, 41% cross-dominio, 2 isolate).
 
-**═══ DOMATTINA (input Matteo dal lavoro → gestione autonoma Claude) ═══**
-- [ ] Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli
+**═══ DOMATTINA (input Matteo: «procedi» → gestione autonoma Claude) ═══**
+*Correzioni Matteo 14/07 notte: (a) i PRE sono TUTTI da rifare da 0 — tenere buoni regole/
+design/personaggio Nina, il lavoro non si butta (esistenti → _VERSIONI); (b) Obsidian =
+SCANNER dei titoli: correggerli scegliendo quelli con le migliori interconnessioni nel grafo
+→ linee guida più precise; (c) l'AUTOGENERAZIONE episodi (AUTO) non deve MAI fermarsi.*
+- [ ] Triage notturno: finetune.log (prova del fuoco venv) + debutto sentinella caroselli +
+  verifica autogenerazione AUTO viva
+- [ ] **Title-scan Obsidian**: passata sui titoli dei due piani col grafo (intersect/ponti) —
+  correggere i titoli con le migliori interconnessioni, aggiornare le linee guida
 - [ ] Colli piccoli: QC copertina eseguibile in caroselli_qc + `render_queue.py` batch +
   `_TEMPLATE/components/` (SVG canonici Nina/THEMIS/simboli ⟡ — prima di ogni carosello nuovo)
 - [ ] **Produrre la serie PRE_SG_01-04** (gestione Claude 100%, regole complete: doppio taglio,
   copertina §2-bis, QC verde, cartelle CAROSELLI/PRE_SG_NN/)
 - [ ] Progettare il binario notturno bozze-caroselli (collo n°1) — design, poi costruzione
-- [ ] NON toccare PRE_01 Nina da solo (è INSIEME) — resta il punto 1 della rotta condivisa
+- [ ] NON toccare PRE_01 Nina da solo (è INSIEME); PRE_02/03 Nina da rifare da 0 ma DOPO che
+  PRE_01 insieme ha fissato lo standard della serie
 - [◐] **Piano esposto a Matteo** — in attesa di ok/correzioni per compilare EP_SG_01 «Il Socio».
 - [✓] **Regola provenienza componenti raffinata** (ordine Matteo 14/07): «comprati su canale
   usato», MAI prezzi per-pezzo, acquisti futuri = materiale nuovo; «recuperato/gratis» resta
