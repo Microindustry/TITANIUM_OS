@@ -89,6 +89,44 @@
 
 ---
 
+## Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo Nina (serie 4/4)
+
+- [✓] **PRE_03 v6.1 — volto di Nina in copertina GRANDE e libero** (richiesta Matteo
+  apertura #60: «più grande, non racchiusa»): 520×420→920×640, dissolvenza più ampia
+  (fade fino al 94%), abbassato per non coprire il kicker; v6 archiviata in `_VERSIONI/
+  v6_10slide-volto-ovale`. Render+QC verdi. Commit ebe50936.
+- [✓] **1. PRE_04 NINA «Tutto è vero» CREATO — SERIE PRE COMPLETA 4/4** (v1, 10 slide):
+  patto di verità lato Nina, gemello di PRE_SG_03 con gli STESSI fatti (officina 12 m²,
+  quindici anni, telaio in piedi, pressa costruita a mano, dieci notti mute — mai numeri
+  diversi, PONTE guardia 3); la regola di Nina «Mostrami» vale per chi scrive; patto sui
+  numeri §7.7 («non ancora» — zero numeri di progetto); **slide 8 = PONTE** (1 slide,
+  presenta il binario Sistema, «due porte una famiglia»); slide 10 chiude il preambolo
+  e apre EP_N2_01 (open loop con assaggio: bottoni/sarta/pizzicore). Stampo PRE_01 v13,
+  onde fase 31-40, copertina §2-bis (sigillo del patto). QC 12 cartelle 0 falle, griglia
+  IG rigenerata (12 copertine). Piano+linea guida aggiornati in MENTE (PREAMBOLO 4/4
+  FATTO, totale Nina 4/57), RAG fresco (watcher l'aveva già indicizzato). Commit 36d39afb.
+- [✓] **2. EP_SG_01_03 «Il Distacco» REVISIONATO E PROMOSSO — FINE RODAGGIO 3/3**:
+  bozza era già solida (grounding EP_S0_00 + ST «Il Distacco», zero numeri di progetto,
+  no parentele Nina). Correzioni: kicker slide 7 «ADHD E SISTEMA» → «LA MIA TESTA, SU
+  CARTA» (§7.5 mai etichetta — stesso intervento di 01_01; resta l'uso contestuale in
+  slide 10 come nel precedente 01_02), chiusura allineata famiglia («Segui TITANIUM_OS…»),
+  caption riscritta (riga di serie CAP 1 · Ep. 3 + hashtag famiglia, via refuso
+  «#StoreDiSistema»). Verificato «CAP 1 continua» = vero (resta il portante). QC 13
+  cartelle 0 falle, griglia 13 copertine, piano SG spuntato (S1 3/69). Commit 8ec26a52.
+  **L'apprendista notturno è RODATO: 3 bozze → 3 revisioni → 3 promozioni.**
+- [✓] **3. CODA APPRENDISTA ESTESA — CAP 2 · L'ORGANISMO in coda** (6 item pending:
+  02_01 V32 · 02_02 MIMS · 02_03 VULCAN · 02_04 GENESIS · 02_05 Vita Natura · 02_06
+  Il Reattore ≈ 6 notti di lavoro). Angoli con guardie ESPLICITE nella consegna: V32
+  = stato reale al telaio (§7.7), MIMS = mai ricette (trade secret), VULCAN = mai
+  «recuperato» + Vevor da montare, EVA = pilot dry-run non prodotto. I PORTANTI con
+  cameo Nina (SG_01/04/09) restano lavoro di giorno, insieme. Commit 8b7e1f3b.
+- [ ] **4. RISULTATI TEST LINKEDIN PRE_SG_01** → tararsi (gated Matteo)
+- [◐] **5. EP_N2_03 «Mille Volte Uguale» (la Misura)** — primo episodio del cammino con
+  lo stampo nuovo: testo canonico letto (episodes/S_AVVENTURA, ready), SCALETTA a 10
+  proposta a Matteo (regola «piano prima di compilare» — il primo del tipo si approva)
+
+---
+
 ## Sessione #59 · 15/07/2026 — ripresa (LinkedIn PRE_SG_01 · bozze notturne · PRE_01 Nina)
 
 *Apertura: triage notturno pulito (solo 429 Semantic Scholar, blocker chiave noto).*
