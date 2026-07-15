@@ -121,6 +121,13 @@
   «recuperato» + Vevor da montare, EVA = pilot dry-run non prodotto. I PORTANTI con
   cameo Nina (SG_01/04/09) restano lavoro di giorno, insieme. Commit 8b7e1f3b.
 - [ ] **4. RISULTATI TEST LINKEDIN PRE_SG_01** → tararsi (gated Matteo)
+- [✓] **6. «SISTEMA» — EP_N2_01 v3 + EP_N2_02 v2 A STANDARD** (ordine Matteo dopo la
+  lista dei pronti): gli ultimi 2 legacy 16→10 con lo stampo del cammino (§2-bis, onde
+  41-50/51-60, verbatim dai canonici; open loop di EP_02 corretto: puntava a «la MISURA/
+  unità nascosta», il vero EP_03 è la deriva). Caption 02 riallineata famiglia. Vecchi
+  builder+16-slide in _VERSIONI, render stale 11-16 via. **QC: 14 cartelle, 0 falle,
+  0 legacy — TABELLONE PULITO, 14/14 publish-ready.** Regione ⟡0 completa (caselle
+  1-2-3), cammino 3/53, totale Nina 7/57.
 - [✓] **5. EP_N2_03 «Mille Volte Uguale» COMPILATO** (scaletta a 10 approvata da Matteo,
   poi build): primo episodio del cammino a standard nuovo — fa da PRECEDENTE per i 53.
   Fonte verbatim dall'episodio canonico (quaderno di musica, test sarta 0,5mm×100=5cm,

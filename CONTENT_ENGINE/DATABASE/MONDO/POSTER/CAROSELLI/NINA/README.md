@@ -20,8 +20,8 @@
 | `PRE_02/` | Come funziona Nina — preambolo 2/4 | v2, a standard (15/07) |
 | `PRE_03/` | I Personaggi — preambolo 3/4 | v6, a standard (15/07) |
 | `PRE_04/` | Tutto è vero — preambolo 4/4 (patto + slide PONTE) | v1, creato 15/07 #60 — **serie PRE completa 4/4** |
-| `EP_N2_01/` | La Bambina che Chiedeva Perché (⟡0) | legacy 16 slide — a standard quando toccato |
-| `EP_N2_02/` | Il Soffio di Troppo (⟡0) | legacy 16 slide — a standard quando toccato |
+| `EP_N2_01/` | La Bambina che Chiedeva Perché (⟡0 giro 1) | v3, a standard 15/07 #60 (16→10, onde 41-50) |
+| `EP_N2_02/` | Il Soffio di Troppo (⟡0 giro 2) | v2, a standard 15/07 #60 (16→10, onde 51-60) |
 | `EP_N2_03/` | Mille Volte Uguale (⟡0 giro 3) | v1, creato 15/07 #60 — **primo del cammino a standard** (precedente per i 53) |
 
 ## Regole del binario (le fonti canoniche stanno in MENTE)
@@ -29,7 +29,7 @@
 - **Stampo serie**: PRE_01 v13 è lo stampo; le onde di sfondo CONTINUANO tra i
   caroselli (PRE_01=fase 1-10 · PRE_02=11-20 · PRE_03=21-30 · PRE_04=31-40).
   **Il cammino continua l'onda del mondo**: casella N = fase 40+(N-1)×10+1..10
-  (EP_N2_03=61-70; 01/02 prenderanno 41-50/51-60 quando rifatti a standard).
+  (EP_N2_01=41-50 · 02=51-60 · 03=61-70 — tutti a standard dal 15/07 #60).
 - **Volti**: solo il volto definitivo di Nina (base64), sempre LIBERO — mai chiuso
   in cerchi/cornici (regola Matteo 15/07, dissolvenza radiale).
 - **Voce**: narratore del mondo. Nina NON è una persona reale — mai parentele

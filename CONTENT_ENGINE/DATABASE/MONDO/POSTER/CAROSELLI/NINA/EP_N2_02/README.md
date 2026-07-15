@@ -1,38 +1,20 @@
-<!-- TOC -->
+# EP_N2_02 — Il Soffio di Troppo (v2 · a standard, 15/07/2026 #60)
 
-- [Carosello  EP_N2_02  Il Soffio di Troppo](#carosello-epn202-il-soffio-di-troppo)
-  - [File](#file)
-  - [Arco (16 slide)](#arco-16-slide)
-  - [Rigenerare / esportare](#rigenerare-esportare)
-
-<!-- /TOC -->
-
-# Carosello — EP_N2_02 · Il Soffio di Troppo
+*Portato a standard in sessione #60 («sistema», ordine Matteo): 16→10 slide, un taglio,
+copertina §2-bis, stampo serie PRE_01 v13 — stesso impianto di EP_N2_03. Onde in fase
+51-60 (il cammino continua l'onda del mondo). Testi VERBATIM dall'episodio canonico;
+open loop corretto verso il VERO EP_N2_03 (Mille Volte Uguale — la deriva). v1
+(blueprint 16) in `_VERSIONI/` col suo generatore. Builder vivo: `_build_ep_n2_02.py`.*
 
 **Episodio fonte:** `CONTENT_ENGINE/DATABASE/episodes/S_AVVENTURA/EP_N2_02_il_soffio_di_troppo.md`
-**Pietra:** ⟡0 La Materia · Casella 2 (la precisione è una relazione)
-**Formato:** Instagram/LinkedIn · 16 slide · 1080×1350 · blueprint SVG narrativo (no foto)
-**Stile:** famiglia PRE_*/EP_N2_01 — gradiente blu + griglia + flusso continuo gold/cyan; scene SVG per ogni beat.
+**Pietra:** ⟡0 La Materia · Casella 2 — «la precisione è un patto, non un assoluto»
 
-## File
-| File | Cosa |
-|------|------|
-| `carosello.html` | Sorgente self-contained, Adobe-Fonts-ready (kit `zhv2kry`), import-ready (`hz:` meta) |
-| `_build_ep.py` | Generatore (stile+flusso+scene+contenuti). Rigenera con `python _build_ep.py` |
-| `_render_all.py` | Render PNG per-slide + contact sheet `_sheet.png` |
-| `caption.txt` | Caption pronta per il post |
-| `slides/` | PNG delle 16 slide |
-| `_VERSIONI/` | Snapshot versioni |
+## Le 10 slide
+1. Cover (incastro + soffio) · 2. la Fucina, «la mano deve sapere prima» · 3. giusto
+rispetto a cosa? (mezzo mm) · 4. il filo della sarta (seta/lana) · 5. l'incastro fisso
+(quattro decimi, gradi non sì/no) · 6. la conseguenza se sbagli · 7. «preciso» da solo
+è vuoto · 8. Pietra ⟡0 giro 2 (tolleranze, grammi del filo) · 9. provalo tu (la linea
+su tre superfici) · 10. chiusura + open loop → Casella 3 (assaggio: il quaderno storto).
 
-## Arco (16 slide)
-1. Cover · 2. la Fucina (cold open) · 3. il soffio · 4. giusto rispetto a cosa? · 5. mezzo mm = il patto ·
-6. il test della sarta (seta/lana) · 7. la precisione è relazione · 8. l'incastro fisso · 9. preme non soffia ·
-10. gradi non sì/no · 11. la tolleranza (±0,5 vs ±0,1) · 12. cosa succede se sbaglio? · 13. il patto ·
-14. prima la testa · 15. chiusura (casella 2) · 16. open loop → la MISURA (EP_03) + provalo tu.
-
-## Rigenerare / esportare
-```
-python _build_ep.py        # rigenera carosello.html
-python _render_all.py      # render slides/ + _sheet.png
-```
-Export Adobe Express: `html_export_readiness_skill` → `export_html_to_express`.
+## Stato
+- [x] build (10, cover-title, marker) · [x] render · [x] QC verde · [ ] Express · [ ] pubblicato
