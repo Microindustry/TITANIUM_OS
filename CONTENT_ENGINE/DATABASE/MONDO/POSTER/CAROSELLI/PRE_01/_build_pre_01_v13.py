@@ -118,11 +118,13 @@ def build():
     v12 = V12.read_text(encoding="utf-8")
     style = re.search(r"<style>(.*?)</style>", v12, re.S).group(1)
     style += """
-/* v13 — copertina §2-bis + volto */
+/* v13 — copertina §2-bis + volto (v13.1: LIBERO, niente forma geometrica —
+   dissolvenza radiale nel buio, ordine Matteo 15/07) */
 .cover-title { font-size:78px; }
-.ninaface { width:330px; height:330px; border-radius:50%; object-fit:cover;
-  border:4px solid rgba(244,182,90,0.55); box-shadow:0 0 60px rgba(244,182,90,0.25); }
-.scene-face { position:absolute; top:210px; left:0; right:0; height:380px;
+.ninaface { width:520px; height:420px; object-fit:cover; object-position:center 22%;
+  -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 46%, #000 46%, transparent 78%);
+  mask-image: radial-gradient(ellipse 62% 58% at 50% 46%, #000 46%, transparent 78%); }
+.scene-face { position:absolute; top:190px; left:0; right:0; height:420px;
   display:flex; align-items:center; justify-content:center; }
 """
     face = re.search(r'(data:image/\w+;base64,[A-Za-z0-9+/=]+)', PRE_03.read_text(encoding="utf-8")).group(1)
