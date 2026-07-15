@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-d1999cc6a4",
+    "date": "2026-07-15",
+    "git": "199f9569",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "Il canone vault segnala uno scarto reale tra disco e canone dichiarato: 'su disco EP_N2_55, il canone dichiara EP_N2_53: aggiornare _CANONE.md' (2026-07-15). Sono 2 episodi fuori registro. In aggiunta, qc_episodi mostra 30 episodi su 55 con 'open_loop_missing': più della metà degli episodi esistenti manca del gancio narrativo previsto dal formato.",
+    "azione": "Aggiornare _CANONE.md portando max_ep_canone da 53 a 55 (operazione di 2 minuti, evita falsi allarmi futuri). Per open_loop_missing: valutare se è un gap di scrittura o un gap nel QC checker — se il checker non sa dove cercare l'open loop nel formato attuale, la metrica è rumore e va corretta alla fonte.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-15"
+  },
+  {
+    "id": "AUD-9bd479f360",
+    "date": "2026-07-15",
+    "git": "199f9569",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "'PRE_01 Nina INSIEME (rifatto da 0, ≤10)' è segnato come punto condiviso della rotta e appare più volte nella bussola_open, ma è gated sulla disponibilità di Matteo e non ha una scadenza. Nel frattempo PRE_02/03 Nina sono dichiarati esplicitamente bloccati su di esso ('DOPO che PRE_01 insieme ha fissato lo standard'). Se questo todo scivola, blocca l'intero binario Nina.",
+    "azione": "Fissare nella prossima sessione con Matteo una slot dedicata a PRE_01 Nina: è il prerequisito che sblocca PRE_02/03 e allinea lo standard del secondo binario. Senza una data, il binario Nina resta fermo indefinitamente mentre quello SISTEMA avanza.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-15"
+  },
+  {
+    "id": "AUD-6914fa0e62",
+    "date": "2026-07-15",
+    "git": "199f9569",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Semantic Scholar ha bloccato entrambi i research agent per l'intera finestra notturna. Log esatti: '2026-07-15 03:38:35 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s' e '2026-07-15 03:38:58 [research_agent] INFO semantic_scholar -> 0 risultati'; identico pattern in night_research.log alle 03:40. La chiave API gratuita senza autenticazione è il collo di bottiglia dichiarato nei blockers ('SEMANTIC_SCHOLAR_API_KEY — azzera i 429 della ricerca notturna') ed è ancora assente.",
+    "azione": "Matteo deve registrare la API key gratuita su Semantic Scholar e inserirla in .env come SEMANTIC_SCHOLAR_API_KEY. Azione bloccante: finché non è in .env, ogni notte la ricerca accademica produce 0 risultati e consuma slot di retry inutilmente.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-15"
+  },
+  {
+    "id": "AUD-5626d93ecf",
+    "date": "2026-07-15",
+    "git": "199f9569",
+    "area": "ROADMAP",
+    "severity": "alta",
+    "finding": "L'UPS è listato nei blockers come causa diretta di corruzioni HNSW ricorrenti ('corruzione HNSW da power-loss ricorrente, 3 volte in 2gg'). È un blocker hardware da 50-80€ che nessuna sessione software può aggirare: ogni power-loss futuro rischia di invalidare il vettorstore (18.791+ chunk). Il todo è nella lista da acquistare insieme a Vevor+ER20, ma non ha una data.",
+    "azione": "Acquistare UPS prima della prossima sessione hardware (Vevor+ER20): il rischio di perdere il vettorstore è concreto e si è già materializzato 3 volte. È il blocco più economico da togliere rispetto al danno potenziale.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-15"
+  },
+  {
+    "id": "AUD-46c9ded275",
+    "date": "2026-07-15",
+    "git": "199f9569",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Il 'riflusso FATTI' è a 0.1: il meccanismo che dovrebbe riportare nel sistema le informazioni raccolte durante la notte è quasi fermo. Con la ricerca a 0 risultati (429) e il RAG a +0 chunk, il ciclo informativo notturno è interrotto su tutti e tre gli strati: acquisizione, vettorizzazione, riflusso.",
+    "azione": "Identificare il punto di rottura specifico del riflusso FATTI (l'agente non riceve input perché la ricerca è vuota, o il processo di scrittura nel vault è bloccato indipendentemente?). Se dipende dai 429, si risolve con la API key. Se è un problema separato, loggare e isolare.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-15"
+  },
+  {
+    "id": "AUD-375d91e711",
+    "date": "2026-07-15",
+    "git": "199f9569",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi chiave sono piatti a 0.0: 'nina-loop', 'snapshot RAG' e 'AI news watcher'. Non ci sono log_issues che spieghino il motivo, ma il dato di salute è inequivocabile: stanotte questi processi non hanno prodotto output. In parallelo, il RAG mostra '2026-07-15 03:27:02 [rag_engine] INFO Totale: 18791 chunk | +add:0 mod:0 skip:429 -del:0': 429 chunk saltati, zero aggiunti. Il vettorstore non è cresciuto.",
+    "azione": "Verificare i log di nina-loop e AI news watcher per exit code / eccezione silenziosa. Per snapshot RAG, capire se il blocco è a monte (sorgenti tutte a 429) o nel processo di scrittura. Risolvere in sequenza prima di considerare la notte 'produttiva' sul fronte dati.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-15"
+  },
+  {
     "id": "AUD-f960fd5490",
     "date": "2026-07-14",
     "git": "6d827c11",
