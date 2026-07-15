@@ -1,12 +1,12 @@
 <!-- TOC -->
 
-- [CAROSELLI — la linea di produzione (Nina + Sistema)](#caroselli-la-linea-di-produzione-nina-sistema)
+- [CAROSELLI  la linea di produzione (Nina  Sistema)](#caroselli-la-linea-di-produzione-nina-sistema)
   - [Struttura (una cartella per carosello)](#struttura-una-cartella-per-carosello)
   - [Regole](#regole)
   - [Formato standard](#formato-standard)
-  - [Serie PRE — i preamboli (due binari, si presentano a vicenda)](#serie-pre-i-preamboli-due-binari-si-presentano-a-vicenda)
+  - [Serie PRE  i preamboli (due binari, si presentano a vicenda)](#serie-pre-i-preamboli-due-binari-si-presentano-a-vicenda)
   - [Episodi](#episodi)
-  - [L'apprendista notturno (_BOZZE)](#lapprendista-notturno-_bozze)
+  - [Lapprendista notturno (_BOZZE)](#lapprendista-notturno-bozze)
 
 <!-- /TOC -->
 
