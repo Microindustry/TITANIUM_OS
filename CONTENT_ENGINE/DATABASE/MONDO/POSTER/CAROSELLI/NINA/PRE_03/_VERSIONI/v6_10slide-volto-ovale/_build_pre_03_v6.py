@@ -1,7 +1,6 @@
-# _build_pre_03_v6.py | TITANIUM_OS / CONTENT_ENGINE / CAROSELLI | v6.1 | 2026-07-15
+# _build_pre_03_v6.py | TITANIUM_OS / CONTENT_ENGINE / CAROSELLI | v6 | 2026-07-15
 # PRE_03 "I Personaggi" a standard (#59): 17→10 slide, un taglio, copertina §2-bis
 # (volto di Nina LIBERO, dissolvenza — regola Matteo 15/07), stampo serie PRE_01 v13.
-# v6.1 (#60): volto in copertina PIÙ GRANDE e dissolvenza più ampia (Matteo: "non racchiusa").
 # Testi canonici v5 riusati VERBATIM dove giusti. Onde in fase 21-30 del flusso serie.
 import math
 import re
@@ -126,12 +125,12 @@ def slide(idx, kicker, body, scn=""):
 def build():
     style = re.search(r"<style>(.*?)</style>", V12_STYLE_SRC.read_text(encoding="utf-8"), re.S).group(1)
     style += """
-/* v6.1 — copertina §2-bis + volto libero GRANDE (stampo serie = PRE_01 v13.1) */
+/* v6 — copertina §2-bis + volto libero (stampo serie = PRE_01 v13.1) */
 .cover-title { font-size:74px; }
-.ninaface { width:920px; height:640px; object-fit:cover; object-position:center 18%;
-  -webkit-mask-image: radial-gradient(ellipse 58% 55% at 50% 45%, #000 38%, transparent 94%);
-  mask-image: radial-gradient(ellipse 58% 55% at 50% 45%, #000 38%, transparent 94%); }
-.scene-face { position:absolute; top:150px; left:0; right:0; height:620px;
+.ninaface { width:520px; height:420px; object-fit:cover; object-position:center 22%;
+  -webkit-mask-image: radial-gradient(ellipse 62% 58% at 50% 46%, #000 46%, transparent 78%);
+  mask-image: radial-gradient(ellipse 62% 58% at 50% 46%, #000 46%, transparent 78%); }
+.scene-face { position:absolute; top:190px; left:0; right:0; height:420px;
   display:flex; align-items:center; justify-content:center; }
 """
     face = re.search(r'(data:image/\w+;base64,[A-Za-z0-9+/=]+)', V5.read_text(encoding="utf-8")).group(1)
@@ -139,7 +138,7 @@ def build():
 
     slides = []
     slides.append(slide(1, "I PERSONAGGI · PRE 3 / 4", '''
-  <div class="body2" style="top:760px;">
+  <div class="body2" style="top:640px;">
     <div class="lead cover-title">Chi sta con Nina —<br>e chi le rema<br><span class="accent">contro</span>.</div>
   </div>''', face_scene))
 
