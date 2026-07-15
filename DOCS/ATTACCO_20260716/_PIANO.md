@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [ATTACCO 2  COLLI DI BOTTIGLIA nellecosistema (Fable 5)](#attacco-2-colli-di-bottiglia-nellecosistema-fable-5)
+  - [Obiettivo (una riga)](#obiettivo-una-riga)
+  - [P0  PREREQUISITI (si fanno PRIMA di lanciare gli agenti)](#p0-prerequisiti-si-fanno-prima-di-lanciare-gli-agenti)
+  - [LATTACCO  5 agenti Fable in parallelo (propose-only)](#lattacco-5-agenti-fable-in-parallelo-propose-only)
+  - [Gate](#gate)
+
+<!-- /TOC -->
+
 # ATTACCO #2 — COLLI DI BOTTIGLIA nell'ecosistema (Fable 5)
 
 *Impostato 15/07/2026 a fine sessione #60 (ordine Matteo). Si esegue nella sessione #61.

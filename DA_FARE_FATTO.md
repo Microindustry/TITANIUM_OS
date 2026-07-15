@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 60  15/07/2026  PRE_04 chiude il preambolo  tabellone caroselli PULITO 14/14](#sessione-60-15072026-pre04-chiude-il-preambolo-tabellone-caroselli-pulito-1414)
   - [Sessione 59  15/07/2026  ripresa (LinkedIn PRE_SG_01  bozze notturne  PRE_01 Nina)](#sessione-59-15072026-ripresa-linkedin-presg01-bozze-notturne-pre01-nina)
   - [Sessione 58  14/07/2026  STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)](#sessione-58-14072026-storie-di-sistema-dal-giorno-0-gemella-di-nina-in-sidebar)
   - [Sessione 57  08/07/2026  IL MOTORE: HR piattaforma a 3 strati  doc VALORE per pilastro](#sessione-57-08072026-il-motore-hr-piattaforma-a-3-strati-doc-valore-per-pilastro)
@@ -91,16 +92,43 @@
 
 ## Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14
 
-**DA FARE — prossima sessione (#61), in ordine:**
-- [ ] **1. VERIFICA AUTOGENERAZIONE EPISODI → RAG** (prerequisito P0 dell'attacco,
-  ordine Matteo): story_agent/night_research generano ancora? riflusso FATTI vivo?
-  RAG cresce? milestone→episodio funziona? Esito con NUMERI o diagnosi+cura.
-- [ ] **2. PROFILO GITHUB PERSONALE AGGIORNATO** (P0): README profilo allo stato reale
-  (3 facce, serie PRE completa, binario notturno — repo public: niente segreti) + pin
-  5 repo (manuale/BrowserAgent, memoria github_pin_pending)
-- [ ] **3. ATTACCO #2 — COLLI DI BOTTIGLIA (Fable 5)**: 5 agenti propose-only
-  (pipeline contenuti / RAG / notturne / ricognizione GitHub strumenti da integrare /
-  sintesi TOP 10). Piano ingegnerizzato PRONTO: `DOCS/ATTACCO_20260716/_PIANO.md`
+**Sessione #61 (15/07 sera) — P0 fatti, attacco in corso:**
+- [✓] **1. AUTOGENERAZIONE EPISODI → RAG: VIVA, verificata coi numeri** (P0): Nina auto
+  EP_N2_55 stanotte @03:42 (la serie continua) · milestone→episodio @02:08-02:09 (2
+  episodi dalle chiusure) · riflusso FATTI fresco @03:42 su 5 domini MENTE · RAG
+  CRESCE (19.621→19.635 chunk solo oggi, il watcher indicizza live) · apprendista
+  @12:15 (01_03, poi promosso). Triage notturno: solo 429 Semantic Scholar (noto).
+  Nessuna cura necessaria.
+- [✓] **2. PROFILO GITHUB A CANONE — FALLA §7.7 TROVATA E CURATA** (P0): il README
+  del profilo (pubblico!) dichiarava «178 kg … ±0.019 mm» come fatti e veniva
+  RIPUBBLICATO OGNI NOTTE @04:07 da update_github_profile.py (v1.0 del 29/05, mai
+  riallineato al canone). v2.0: stato reale (telaio in piedi), percentuali =
+  metriche di gestione dichiarate, nodi freschi (RAG v4.2 ~19.600 chunk,
+  apprendista, Nina Agent, 3 facce), BEP=calcolo di progetto. ANTICORPO:
+  canon_guard.scan_public in uscita (canone rientra da STATE/episodi raw →
+  niente publish). Pubblicato 22:09, VERIFICATO sul remoto. Commit ab1882f5.
+  ⚠ Resta: pin 5 repo = azione manuale browser (memoria github_pin_pending, gated)
+- [✓] **3. ATTACCO #2 — COLLI DI BOTTIGLIA: COMPLETO E SINTETIZZATO** (4 agenti Fable
+  propose-only, ~20 min): report in `DOCS/ATTACCO_20260716/` (1_PIPELINE · 2_RAG ·
+  3_NOTTURNE · 4_GITHUB) + **_SINTESI.md con TOP 10 per leva e ondate A/B/C**.
+  Quadro in una riga: *la fabbrica produce e ricorda; non consegna e dorme* —
+  14 caroselli pronti 0 pubblicati, notte usata al 3,9%, 4 notti su 10 perse,
+  finetune finto-verde, canon-pin che pesca le molle superate. ZERO modifiche
+  applicate (gate: decide Matteo quale ondata).
+
+**DA FARE — le ondate dell'attacco #2 (gate: ordine di Matteo, dettaglio in _SINTESI.md):**
+- [ ] **ONDATA A** (tutta senza Matteo): fix canon-pin (~5 righe, il grounding pesca
+  verità superate) → coda apprendista con refill dai piani + multi-bozza con tetto
+  (9→~3 mesi) → fonti refill allineate (piano SG 3/69, _CANONE 53→55, rotazione
+  watcher.log) → igiene disco RAG (14,8 GB detriti chroma_db_reset_*)
+- [ ] **ONDATA B**: corsia NINA nell'apprendista (53 testi già canone, stampo
+  EP_N2_03) → PDF LinkedIn batch + export Express dei 14 → dieta RAG (hash manifest
+  + lock build_index + gate no-op)
+- [ ] **ONDATA C**: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
+  04:30-07:30) → replica serale dei task persi (12 notti/31 saltate)
+- [ ] **GATED MATTEO (~1h)**: app Meta (sblocca Postiz = 1 click a post) · pin 5
+  repo profilo · UPS (radice notti perse). Rimandati con trigger: Astro (sito),
+  Uptime Kuma
 - [ ] 4. Risultati LinkedIn PRE_SG_01 → tararsi (gated Matteo)
 - [ ] 5. Revisione bozza notturna EP_SG_02_01 «V32» (arriva stanotte @04:15, prima
   della coda CAP 2) — guardia §7.7 già nell'angolo
