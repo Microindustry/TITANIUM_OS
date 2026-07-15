@@ -16,11 +16,15 @@ grafico vero). Rigenerabile, versionato. — sess.#44, 24/06/2026.*
 
 ## Assets
 
-| File | Cosa | Formato |
-|------|------|---------|
-| `EP_N2_01_poster.html/.png` | Poster del **pilota** — la porta non vista + il ponte della Giuntura (Atomi/Bit) | A3 1123×1587 |
-| `regioni/regione_N_*.png` (×8) | **Collana delle 8 Regioni**: una card per Pietra ⟡0→⟡7, colore-tema + gemma + episodio-madre | Social 1080×1350 |
-| `mappa_mondo.html/.png` | **La mappa-mondo**: le 8 Pietre su un cammino unico ⟡0→⟡7 (dal metallo alla mente) | A3 1123×1587 |
+*Riorganizzata #59 (15/07/2026): tavole sciolte → `TAVOLE/`, produzione → `CAROSELLI/`.*
+
+| Percorso | Cosa | Formato |
+|----------|------|---------|
+| `CAROSELLI/` | **La linea di produzione** (Nina + Sistema): un carosello = una cartella; `_BOZZE/` = quarantena apprendista notturno; `_griglia_ig.png` = anteprima profilo. Vedi `CAROSELLI/README.md` | 1080×1350 |
+| `TAVOLE/EP_N2_01_poster.html/.png` | Poster del **pilota** — la porta non vista + il ponte della Giuntura (Atomi/Bit) | A3 1123×1587 |
+| `TAVOLE/mappa_mondo.html/.png` | **La mappa-mondo**: le 8 Pietre su un cammino unico ⟡0→⟡7 (dal metallo alla mente) | A3 1123×1587 |
+| `TAVOLE/model_sheet_personaggi.html/.png` | **Model sheet del cast** — icone canoniche dei personaggi (fonte per BIBBIA_VISIVA e brief illustratore) | A3 |
+| `regioni/regione_N_*.png` (×8) | **Collana delle 8 Regioni**: una card per Pietra ⟡0→⟡7, colore-tema + gemma + episodio-madre (le scrive `nina_region_posters.py`) | Social 1080×1350 |
 
 ## Come rigenerare
 
@@ -29,7 +33,7 @@ grafico vero). Rigenerabile, versionato. — sess.#44, 24/06/2026.*
 python CONTENT_ENGINE/scripts/nina_region_posters.py
 # il poster pilota e la mappa-mondo sono HTML statici: aprili in Chrome headless
 chrome --headless=new --window-size=1123,1587 --virtual-time-budget=7000 \
-  --screenshot=out.png file:///.../mappa_mondo.html
+  --screenshot=out.png file:///.../TAVOLE/mappa_mondo.html
 ```
 
 NB: i font sono Google Fonts via `@import` (Playfair Display + Space Mono) — servono

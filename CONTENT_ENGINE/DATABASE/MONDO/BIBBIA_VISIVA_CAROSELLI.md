@@ -83,7 +83,7 @@ Vivono in `POSTER/CAROSELLI/<EP_ID>/` (vedi `POSTER/CAROSELLI/README.md`).
 
 ## 8. Decisioni operative (sess#48, 25/06/2026)
 - **Segni del mondo = DEFINITIVI** (Atomi dado · Bit nodi · Giuntura rombo-ponte · Pietra ⟡N).
-  Icone canoniche, riusate identiche in ogni carosello. Fonte: `POSTER/model_sheet_personaggi.html`
+  Icone canoniche, riusate identiche in ogni carosello. Fonte: `POSTER/TAVOLE/model_sheet_personaggi.html`
   (riga "I SEGNI DEL MONDO"). Bloccate, non si ridisegnano.
 - **Personaggi (Nina, Themis) = via ILLUSTRATORE.** NON si disegnano a mano in SVG (il v0.1
   era mascotte-stickman, sotto lo standard Stilton-cartone). Brief in

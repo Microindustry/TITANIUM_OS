@@ -15,7 +15,7 @@
 
 *Commissione arte personaggi per i caroselli di Nina (TITANIUM_OS · L'Avventura). — sess#48, 25/06/2026.*
 *Lo stile del mondo, i colori e i simboli sono GIÀ definiti: vedi `BIBBIA_VISIVA_CAROSELLI.md` e
-`POSTER/model_sheet_personaggi.png`. All'illustratore servono solo i DUE personaggi.*
+`POSTER/TAVOLE/model_sheet_personaggi.png`. All'illustratore servono solo i DUE personaggi.*
 
 ## Cosa serve
 Due personaggi ricorrenti, disegnati come **model sheet** + un set di **pose/espressioni**.

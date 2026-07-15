@@ -173,6 +173,15 @@
   PRE_04. v5 in _VERSIONI, builder `_build_pre_03_v6.py`, QC 0 falle (legacy 6→4:
   restano solo EP_N2_01/02), griglia ok. **Serie PRE Nina: 3/4 a standard — manca
   solo PRE_04 «Tutto è vero» (da creare, gemello di PRE_SG_03 patto del racconto).**
+- [✓] **CARTELLA POSTER RIORGANIZZATA** (ordine Matteo, prima di PRE_04): root pulita
+  (CAROSELLI · TAVOLE · regioni · README) — le 3 tavole sciolte (poster pilota, mappa
+  mondo, model sheet) → `TAVOLE/`; **20 render stale eliminati** (slide 11-17 delle
+  vecchie versioni dentro PRE_01/02/03 — mentivano sul contenuto attuale, rigenerabili);
+  tool superati → `_VERSIONI` (builder v5 de-duplicato, _render_all/_render_pair);
+  riferimenti model_sheet aggiornati in BIBBIA_VISIVA + BRIEF_ILLUSTRATORE (repo E
+  MENTE); README CAROSELLI riscritto al canone attuale (un taglio ≤10, §2-bis, volti
+  liberi, §7.7, serie PRE 2 binari, apprendista/_BOZZE); README POSTER con la nuova
+  mappa. QC 0 falle e griglia OK dopo il riordino (verificato).
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
 ## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)
