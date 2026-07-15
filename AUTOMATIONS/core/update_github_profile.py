@@ -1,6 +1,9 @@
-# update_github_profile.py | TITANIUM_OS / AUTOMATIONS / CORE | v1.0 | 2026-05-29
+# update_github_profile.py | TITANIUM_OS / AUTOMATIONS / CORE | v2.0 | 2026-07-15
 # Aggiorna automaticamente il README del profilo GitHub (Microindustry/Microindustry)
 # Legge STATE.json per milestone e versione aggiornati
+# v2.0 (#61): canone GUIDA §7.7 — MAI numeri di progetto come fatti (178kg/±0,019 tolti:
+# la V32 è AL TELAIO); percentuali dichiarate come metriche di gestione; nodi/stack
+# aggiornati (RAG v4.2, apprendista notturno, Nina, 3 facce).
 
 import os, sys, json, base64, subprocess, logging
 from pathlib import Path
@@ -61,6 +64,8 @@ def build_readme(state):
     v = state.get("meta", {}).get("version", "?")
     genesis_pct = state.get("pillars", {}).get("GENESIS", {}).get("pct_complete", 0)
     v32_pct     = state.get("pillars", {}).get("V32", {}).get("pct_complete", 0)
+    mims_pct    = state.get("pillars", {}).get("MIMS", {}).get("pct_complete", 0)
+    vn_pct      = state.get("pillars", {}).get("VITA_NATURA", {}).get("pct_complete", 0)
     milestone   = state.get("active_milestone", "—")
     next_step   = state.get("next_step", "—")
     session     = state.get("session_count", 0)
@@ -89,7 +94,7 @@ Non vengo dal software. Vengo dall'officina.
 
 Ho saldato scarichi in titanio per le moto del MotoGP da **SCProject**. Ho programmato robot **ESSEGI** per linee di packaging industriale. Ho operato presse **DATWLER** e fatto QC su impianti di refrigerazione **LU.VE**. Ho costruito macchine con le mani per 15 anni prima di scrivere la prima riga di codice seria.
 
-Quando ho iniziato a costruire la mia fresatrice CNC da zero — **178 kg, struttura corpo unico in acciaio saldato TIG, 3 assi, ±0.019 mm** — ho capito che avevo bisogno di un sistema per non perdere il filo. Da lì è nato TITANIUM_OS.
+Quando ho iniziato a costruire la mia fresatrice CNC da zero — progetto **corpo unico** in acciaio saldato TIG, 3 assi; oggi è un **telaio in piedi**, coi componenti scelti uno a uno — ho capito che avevo bisogno di un sistema per non perdere il filo. Da lì è nato TITANIUM_OS. I numeri della macchina li dirà la macchina, quando potrà dimostrarli.
 
 Nessuna laurea. Solo proof-of-work reali.
 
@@ -103,12 +108,15 @@ Nessuna laurea. Solo proof-of-work reali.
 
 ### Stato Live — v{v} | Sessione #{session} | {updated}
 
-| Pilastro | Progresso | Stato |
+*Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
+lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
+
+| Pilastro | Avanzamento gestione | Stato |
 |----------|-----------|-------|
-| **V32 CNC** (fresatrice 3 assi) | `{bars(v32_pct)}` | In costruzione |
+| **V32 CNC** (fresatrice 3 assi) | `{bars(v32_pct)}` | Al telaio — in costruzione |
 | **GENESIS** (ecosistema AI) | `{bars(genesis_pct)}` | Building |
-| **MIMS** (stampo tegole) | `{bars(30)}` | Attende V32 |
-| **VITA NATURA** (centro estetico) | `{bars(40)}` | Attivo |
+| **MIMS** (sistema modulare d'acciaio) | `{bars(mims_pct)}` | Attende la pressa VULCAN |
+| **VITA NATURA** (centro estetico) | `{bars(vn_pct)}` | Attivo |
 
 **Milestone attivo:** {milestone}
 **Prossimo step:** {next_step}
@@ -119,15 +127,16 @@ Nessuna laurea. Solo proof-of-work reali.
 
 | Nodo | Descrizione |
 |------|-------------|
-| `MCP Server` | 5 tool Claude — get_state, search_mente, update_milestone |
-| `MENTE RAG v4.0` | ChromaDB hybrid BM25+semantic+CrossEncoder — 6000+ chunk |
-| `Story Agent` | Genera episodi narrativi dai commit git (02:07 ogni notte) |
-| `Research Agent` | Cerca paper su 13 sorgenti (arXiv, Semantic Scholar, GitHub...) |
-| `Computer Use` | Controllo desktop via Anthropic API — screenshot+click+tastiera |
+| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — ~19.600 chunk, si aggiorna da solo a ogni modifica |
+| `Story Agent` | Milestone verificato → episodio narrativo (02:07 ogni notte) — il lavoro si documenta da solo |
+| `Nina Agent` | Il binario educativo: favole vere generate a 2 stadi con grounding RAG |
+| `Apprendista notturno` | Bozze di caroselli Instagram in quarantena (@04:15) — QC automatico + canon_guard, promozione solo umana di giorno |
+| `Research Agent` | Paper e segnali da 13 sorgenti (arXiv, Semantic Scholar, GitHub...) |
+| `Watchdog + self-heal` | Il sistema si sorveglia e si ripara (RAG recovery a 2 livelli, sentinelle notturne) |
 | `Daily Brief` | Briefing quotidiano 07:30 |
 | `API Server` | Flask localhost:5001 — media, foto, agenti, RAG |
-| `Dashboard v7.0` | React+Vite — sidebar + AgentsView + dot grid |
-| `Personal LLM` | Fine-tuning TinyLlama-1.1B sui miei episodi (domenica notte) |
+| `Dashboard` | React+Vite — 3 facce: TITANIUM (sistema) · NINA (favola vera) · PUBBLICAZIONI |
+| `Personal LLM` | Fine-tuning sui miei episodi (domenica notte) |
 
 ---
 
@@ -154,7 +163,7 @@ LLaMA-Factory · PyAutoGUI · Anthropic Computer Use API
 **Capannone artigianale proprio** — 15 Luglio 2030.
 Non è un obiettivo lavorativo. È un obiettivo di sovranità.
 
-BEP V32: **61 ore = 1.4 mesi** | ROI Anno 1: **322%** | Tariffa: **EUR 45/h**
+Calcoli di progetto (non ancora dimostrati sul campo): BEP V32 **61 ore** | Tariffa target **EUR 45/h**
 
 ---
 
@@ -192,4 +201,17 @@ def update_profile(readme_content):
 if __name__ == "__main__":
     state = load_state()
     readme = build_readme(state)
+    # guardia canone (GUIDA §7.7): il profilo è un CONTENUTO PUBBLICO — niente
+    # numeri di progetto come fatti. Se scatta, NON si pubblica (il template è
+    # fisso ma STATE/episodi ci finiscono dentro raw: la falla può rientrare da lì).
+    try:
+        from canon_guard import scan_public
+        falle = scan_public(readme)
+    except ImportError:
+        falle = []
+    if falle:
+        for f_ in falle:
+            logger.error("canon_guard scan_public: %s", f_)
+        logger.error("PUBBLICAZIONE ANNULLATA: %d falle di canone nel README", len(falle))
+        sys.exit(1)
     update_profile(readme)
