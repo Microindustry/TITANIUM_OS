@@ -23,6 +23,20 @@ from pathlib import Path
 
 BASE      = Path(__file__).resolve().parents[2]          # TITANIUM_OS
 CAROSELLI = BASE / "CONTENT_ENGINE" / "DATABASE" / "MONDO" / "POSTER" / "CAROSELLI"
+
+def _cartelle_caroselli(base):
+    """Cartelle carosello a QUALSIASI profondita' (riordino #59: binari NINA/ e
+    SISTEMA/): e' un carosello ogni cartella che contiene carosello.html, esclusi
+    i rami tecnici (_BOZZE quarantena, _TEMPLATE, _VERSIONI archivi)."""
+    skip = {"_BOZZE", "_TEMPLATE", "_VERSIONI"}
+    out = []
+    for h in base.rglob("carosello.html"):
+        rel = h.relative_to(base)
+        if any(part in skip for part in rel.parts):
+            continue
+        out.append(h.parent)
+    return sorted(out, key=lambda f: f.name)
+
 OUT_JSON  = BASE / "DATA" / "audit" / "caroselli_qc.json"
 
 MAX_COMPLETO = 10   # v1.2 (riconciliazione Matteo 14/07, GUIDA §1.0): UN taglio, sempre ≤10.
@@ -88,9 +102,7 @@ def run_qc() -> dict:
         report["issues"].append(f"cartella CAROSELLI assente: {CAROSELLI}")
         return _save(report)
 
-    for folder in sorted(CAROSELLI.iterdir()):
-        if not folder.is_dir() or folder.name.startswith("_"):
-            continue
+    for folder in _cartelle_caroselli(CAROSELLI):
         ep = folder.name
         legacy = ep in LEGACY_REDO
         sink = report["legacy_note"] if legacy else report["issues"]

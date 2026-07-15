@@ -182,6 +182,21 @@
   MENTE); README CAROSELLI riscritto al canone attuale (un taglio ≤10, §2-bis, volti
   liberi, §7.7, serie PRE 2 binari, apprendista/_BOZZE); README POSTER con la nuova
   mappa. QC 0 falle e griglia OK dopo il riordino (verificato).
+- [✓] **CAROSELLI DIVISA PER BINARIO + SEGNALETICA OVUNQUE** (ordine Matteo «dividi
+  meglio, file che spiegano anche in modo eccessivo»): `CAROSELLI/NINA/` (PRE_01-03 +
+  EP_N2) e `CAROSELLI/SISTEMA/` (PRE_SG + EP_SG) — i 3 script (render_queue, QC,
+  grid_preview) portati a **scoperta ricorsiva** (`_cartelle_caroselli()`: ovunque ci
+  sia carosello.html, esclusi _BOZZE/_TEMPLATE/_VERSIONI) → si possono aggiungere
+  livelli senza toccare codice. **README a ogni livello**: MONDO (mappa generale),
+  POSTER, CAROSELLI (albero+regole), NINA (stato serie+regole binario), SISTEMA
+  (stato+regole voce Matteo), _BOZZE (giro apprendista+promozione passo-passo+storia
+  errori), _TEMPLATE (regola anti-drift), TAVOLE, regioni (cartella generata).
+  GUIDA §3/4/5 in MENTE allineata ai binari; coda apprendista con path nuovi.
+  Verificato: QC 11 cartelle 0 falle, render 0 (nulla da rifare), griglia 11 ok.
+- [✓] **EP_SG_01_03 «Il Distacco» ARRIVATA IN ANTICIPO** (ore 12:16, run partito per
+  errore durante un tentato --dry-run — onestà): QC verde alla nascita, 10 slide,
+  in `_BOZZE` (quarantena). Le guardie v1.1+v1.2 erano attive. **DA REVISIONARE**
+  prima di promuovere; stanotte l'apprendista troverà la coda vuota (tutto regolare).
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
 ## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)

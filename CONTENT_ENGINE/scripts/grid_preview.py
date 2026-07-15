@@ -15,6 +15,20 @@ BASE      = Path(__file__).resolve().parents[2]
 CAROSELLI = BASE / "CONTENT_ENGINE" / "DATABASE" / "MONDO" / "POSTER" / "CAROSELLI"
 OUT       = CAROSELLI / "_griglia_ig.png"
 
+def _cartelle_caroselli(base):
+    """Cartelle carosello a QUALSIASI profondita' (riordino #59: binari NINA/ e
+    SISTEMA/): e' un carosello ogni cartella che contiene carosello.html, esclusi
+    i rami tecnici (_BOZZE quarantena, _TEMPLATE, _VERSIONI archivi)."""
+    skip = {"_BOZZE", "_TEMPLATE", "_VERSIONI"}
+    out = []
+    for h in base.rglob("carosello.html"):
+        rel = h.relative_to(base)
+        if any(part in skip for part in rel.parts):
+            continue
+        out.append(h.parent)
+    return sorted(out, key=lambda f: f.name)
+
+
 THUMB_W, THUMB_H = 360, 480          # 3:4 come la griglia IG attuale
 GAP = 3                              # il filetto tra le celle, come su IG
 COLS = 3
@@ -40,8 +54,7 @@ def crop_3_4(img: Image.Image) -> Image.Image:
 
 def main() -> int:
     ids = sys.argv[1:]
-    folders = [f for f in CAROSELLI.iterdir()
-               if f.is_dir() and not f.name.startswith("_") and cover(f)]
+    folders = [f for f in _cartelle_caroselli(CAROSELLI) if cover(f)]
     if ids:
         folders = [f for f in folders if f.name in ids]
     # feed IG: il più recente in alto a sinistra → ordine inverso di pubblicazione

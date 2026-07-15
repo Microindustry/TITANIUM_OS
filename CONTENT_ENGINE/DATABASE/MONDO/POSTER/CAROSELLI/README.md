@@ -19,7 +19,15 @@ su tutte le cartelle. Impostata sess.#48; riorganizzata sess.#59 (15/07/2026).
 ## Struttura (una cartella per carosello)
 ```
 CAROSELLI/
-  <ID>/                    es. PRE_01, PRE_SG_01, EP_N2_01, EP_SG_01_01, …
+  NINA/                    🌙 il binario educativo (favola vera) → vedi NINA/README.md
+    PRE_01/ PRE_02/ PRE_03/ EP_N2_01/ EP_N2_02/ …
+  SISTEMA/                 🔧 il binario reale, voce Matteo → vedi SISTEMA/README.md
+    PRE_SG_01…04/ EP_SG_01_01/ EP_SG_01_02/ …
+  _BOZZE/                  🌒 quarantena apprendista notturno → vedi _BOZZE/README.md
+  _TEMPLATE/               🧩 base per nuovi caroselli → vedi _TEMPLATE/README.md
+  _griglia_ig.png          anteprima griglia profilo IG (grid_preview.py)
+
+  dentro OGNI cartella carosello (convenzione identica, a ogni profondità):
     carosello.html         sorgente HTML+SVG (la verità; Express-ready, hz: meta)
     caption.txt            caption pronta da postare
     README.md              scheda: fonte, revisioni, stato pubblicazione
@@ -27,10 +35,10 @@ CAROSELLI/
     slides_ig/             render JPEG per feed IG (≤8MB) — derivato
     _build_*.py            builder della versione VIVA (se generato via script)
     _VERSIONI/             archivio additivo: ogni redesign salvato, INDEX.md
-  _TEMPLATE/               base per nuovi caroselli (MAI copiare un episodio!)
-  _BOZZE/                  quarantena dell'apprendista notturno (mai auto-promossa)
-  _griglia_ig.png          anteprima griglia profilo IG (grid_preview.py)
 ```
+*Gli script (render_queue, caroselli_qc, grid_preview) scoprono le cartelle in modo
+RICORSIVO (ovunque ci sia un `carosello.html`, esclusi `_BOZZE/_TEMPLATE/_VERSIONI`) —
+puoi aggiungere sottocartelle di binario senza toccare il codice (riordino #59).*
 **Procedura e regole publish-ready: `MENTE/KNOWLEDGE/MONDO/GUIDA_CAROSELLI.md`
 (fonte unica operativa) — QC: `python CONTENT_ENGINE/scripts/caroselli_qc.py`.**
 

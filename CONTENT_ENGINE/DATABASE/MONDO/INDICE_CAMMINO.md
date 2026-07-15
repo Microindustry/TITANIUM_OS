@@ -5,10 +5,20 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 ---
+<!-- TOC -->
+
+- [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
+  - [Come leggere la tabella](#come-leggere-la-tabella)
+  - [Il cammino (caselle 1  55)](#il-cammino-caselle-1-55)
+  - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
+  - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
+
+<!-- /TOC -->
+
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-14 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-15 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*
@@ -24,7 +34,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 54)
+## Il cammino (caselle 1 → 55)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -82,6 +92,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 52 | `EP_N2_52` | Il Battito del Guardiano | ⟡6 (giro 2) | Un guasto che non fa rumore è più pericoloso di uno che grida; i veri |
 | 53 | `EP_N2_53` | Il Direttore Invisibile | ⟡7 (giro 2) | Un gruppo funziona solo se c'è qualcuno (o qualcosa) che coordina chi |
 | 54 | `EP_N2_54` | Il Dito che Insegna | ⟡1 (giro 3) | Una traccia è un gesto che rimane e continua a insegnare anche quando |
+| 55 | `EP_N2_55` | La Giuntura che Respira | ⟡0 (giro 3) | Le giunture sono i punti dove il disordine ama attaccare, ma il movime |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

@@ -21,6 +21,20 @@ from PIL import Image
 BASE      = Path(__file__).resolve().parents[2]
 CAROSELLI = BASE / "CONTENT_ENGINE" / "DATABASE" / "MONDO" / "POSTER" / "CAROSELLI"
 
+def _cartelle_caroselli(base):
+    """Cartelle carosello a QUALSIASI profondita' (riordino #59: binari NINA/ e
+    SISTEMA/): e' un carosello ogni cartella che contiene carosello.html, esclusi
+    i rami tecnici (_BOZZE quarantena, _TEMPLATE, _VERSIONI archivi)."""
+    skip = {"_BOZZE", "_TEMPLATE", "_VERSIONI"}
+    out = []
+    for h in base.rglob("carosello.html"):
+        rel = h.relative_to(base)
+        if any(part in skip for part in rel.parts):
+            continue
+        out.append(h.parent)
+    return sorted(out, key=lambda f: f.name)
+
+
 BROWSERS = [
     r"C:\Program Files\Google\Chrome\Application\chrome.exe",
     r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
@@ -128,9 +142,7 @@ def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     force = "--force" in sys.argv
     done = skipped = 0
-    for folder in sorted(CAROSELLI.iterdir()):
-        if not folder.is_dir() or folder.name.startswith("_"):
-            continue
+    for folder in _cartelle_caroselli(CAROSELLI):
         if args and folder.name not in args:
             continue
         # v1.1 (riconciliazione 14/07): UN taglio ≤10 — carosello.html produce

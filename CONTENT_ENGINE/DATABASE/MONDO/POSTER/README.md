@@ -20,7 +20,7 @@ grafico vero). Rigenerabile, versionato. — sess.#44, 24/06/2026.*
 
 | Percorso | Cosa | Formato |
 |----------|------|---------|
-| `CAROSELLI/` | **La linea di produzione** (Nina + Sistema): un carosello = una cartella; `_BOZZE/` = quarantena apprendista notturno; `_griglia_ig.png` = anteprima profilo. Vedi `CAROSELLI/README.md` | 1080×1350 |
+| `CAROSELLI/` | **La linea di produzione**, divisa per binario: `NINA/` (favola) e `SISTEMA/` (voce Matteo); `_BOZZE/` = quarantena apprendista notturno; `_griglia_ig.png` = anteprima profilo. Ogni livello ha il suo README | 1080×1350 |
 | `TAVOLE/EP_N2_01_poster.html/.png` | Poster del **pilota** — la porta non vista + il ponte della Giuntura (Atomi/Bit) | A3 1123×1587 |
 | `TAVOLE/mappa_mondo.html/.png` | **La mappa-mondo**: le 8 Pietre su un cammino unico ⟡0→⟡7 (dal metallo alla mente) | A3 1123×1587 |
 | `TAVOLE/model_sheet_personaggi.html/.png` | **Model sheet del cast** — icone canoniche dei personaggi (fonte per BIBBIA_VISIVA e brief illustratore) | A3 |
