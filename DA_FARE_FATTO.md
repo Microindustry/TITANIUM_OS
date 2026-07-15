@@ -121,9 +121,14 @@
   «recuperato» + Vevor da montare, EVA = pilot dry-run non prodotto. I PORTANTI con
   cameo Nina (SG_01/04/09) restano lavoro di giorno, insieme. Commit 8b7e1f3b.
 - [ ] **4. RISULTATI TEST LINKEDIN PRE_SG_01** → tararsi (gated Matteo)
-- [◐] **5. EP_N2_03 «Mille Volte Uguale» (la Misura)** — primo episodio del cammino con
-  lo stampo nuovo: testo canonico letto (episodes/S_AVVENTURA, ready), SCALETTA a 10
-  proposta a Matteo (regola «piano prima di compilare» — il primo del tipo si approva)
+- [✓] **5. EP_N2_03 «Mille Volte Uguale» COMPILATO** (scaletta a 10 approvata da Matteo,
+  poi build): primo episodio del cammino a standard nuovo — fa da PRECEDENTE per i 53.
+  Fonte verbatim dall'episodio canonico (quaderno di musica, test sarta 0,5mm×100=5cm,
+  deriva senza faccia, riferimento+ricontrollo, 20 chiodi di Forge, Pietra ⟡0 giro 3,
+  provalo-tu della linea, open loop → casella 4). CONVENZIONE ONDE nuova: il cammino
+  continua l'onda del mondo (casella N = fase 40+(N-1)×10 → 03=61-70; 01/02 prenderanno
+  41-50/51-60 quando rifatti). QC 14 cartelle 0 falle, griglia 14 copertine. Cammino
+  publish-ready 1/53, totale Nina 5/57.
 
 ---
 
