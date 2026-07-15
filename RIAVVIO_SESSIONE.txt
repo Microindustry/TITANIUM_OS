@@ -1,44 +1,42 @@
-=== RIAVVIO SESSIONE #60 — generato 15/07/2026 (fine #59, skill salva) ===
-Ultima sessione: #59 (15/07, Fable 5 — fit esterno, bozze notturne, serie PRE Nina, riordino)
+=== RIAVVIO SESSIONE #61 — generato 15/07/2026 (fine #60, skill salva) ===
+Ultima sessione: #60 (15/07, Fable 5 — preambolo chiuso, tabellone pulito, attacco #2 impostato)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-GIORNATA PIENA. Fit esterno distillato (4 AI: 8-8,8/10, convergenza=CONCRETEZZA)
-→ 6 regole in GUIDA §7. Apprendista RODATO: 3 bozze generate (01_01 corretta:
-falla Nina-figlia → canon_guard v1.1; 01_02 de-178kg → v1.2 scan_public; 01_03
-in _BOZZE da revisionare). SERIE PRE NINA 3/4 A STANDARD (PRE_01 v13 rifatto
-da 0 insieme + volto LIBERO, PRE_02 v2, PRE_03 v6 — stampo unico, onde 1-30).
-CAROSELLI riorganizzata: binari NINA/ e SISTEMA/, script ricorsivi, README a
-ogni livello. Regola nuova: NUMERI DI PROGETTO ≠ FATTI (V32 è al telaio).
+TABELLONE CAROSELLI PULITO: 14/14 publish-ready, QC 0 falle 0 legacy.
+SERIE PRE NINA COMPLETA 4/4 (PRE_04 «Tutto è vero» creato: patto + slide
+PONTE; PRE_03 v6.1 volto grande). RODAGGIO APPRENDISTA CHIUSO 3/3
+(EP_SG_01_03 promosso, S1 3/69) + coda CAP 2 caricata (6 notti).
+CAMMINO NINA PARTITO: EP_N2_03 compilato (scaletta approvata) + 01/02
+a standard = regione ⟡0 completa, 3/53, totale Nina 7/57. Onda continua 1-70.
 
-━━━ PROSSIMA SESSIONE #60 (in ordine) ━━━
-1. PRE_04 NINA «Tutto è vero» — DA CREARE, chiude la serie 4/4: patto di verità
-   lato Nina (gemello PRE_SG_03), 1 slide presenta il binario Sistema (PONTE),
-   stampo v13, onde fase 31-40, ≤10, copertina §2-bis
-2. REVISIONE EP_SG_01_03 «Il Distacco» in _BOZZE (QC verde) → promozione in
-   CAROSELLI/SISTEMA/ → fine rodaggio 3 bozze
-3. ESTENDERE CODA APPRENDISTA dai piani S1 (stanotte coda vuota, tutto regolare)
+━━━ PROSSIMA SESSIONE #61 (in ordine) ━━━
+1. P0 — VERIFICA AUTOGENERAZIONE EPISODI → RAG (ordine Matteo): story_agent/
+   night_research generano? riflusso FATTI vivo? RAG cresce? Numeri o diagnosi+cura
+2. P0 — PROFILO GITHUB PERSONALE aggiornato: README allo stato reale (repo
+   public: niente segreti) + pin 5 repo (memoria github_pin_pending)
+3. ATTACCO #2 — COLLI DI BOTTIGLIA (Fable 5): piano PRONTO in
+   DOCS/ATTACCO_20260716/_PIANO.md — 5 agenti propose-only (pipeline contenuti /
+   RAG / notturne / RICOGNIZIONE GITHUB strumenti da integrare / sintesi TOP 10)
 4. Risultati LinkedIn PRE_SG_01 → tararsi (gated Matteo)
-5. EP_N2_03 «la Misura» — primo episodio Nina con lo stampo nuovo
+5. Revisione bozza notturna EP_SG_02_01 «V32» (stanotte @04:15, guardia §7.7 in angolo)
 
-━━━ LA MAPPA NUOVA (riordino #59 — non perdersi) ━━━
-POSTER/CAROSELLI/NINA/     ← binario favola (PRE_01-03 + EP_N2) — README dentro
-POSTER/CAROSELLI/SISTEMA/  ← binario voce Matteo (PRE_SG + EP_SG) — README dentro
-POSTER/CAROSELLI/_BOZZE/   ← quarantena apprendista + promozione passo-passo nel README
-POSTER/TAVOLE/ · regioni/  ← tavole singole · card generate
-Script render/QC/griglia = scoperta RICORSIVA (nuovi livelli senza toccare codice).
+━━━ FATTO IN #60 (commit) ━━━
+ebe50936 PRE_03 v6.1 volto grande · 36d39afb PRE_04 serie 4/4 · 8ec26a52
+EP_SG_01_03 promosso · 8b7e1f3b coda CAP2 · 1e668bd0 EP_N2_03 · 96ff973e
+README binario · 802fec69 EP_N2_01/02 a standard · MENTE: 4 commit stato.
 
-━━━ REGOLE NUOVE DI #59 (canone) ━━━
-- GUIDA §7: slide-carne · chiusura=perché restare · micro-testi mobile ·
-  anti-ripetizione · ADHD con misura · open loop con assaggio
-- GUIDA §7.7: numeri di progetto (178kg, ±0,019) e percentuali STATE MAI come
-  fatti pubblici — la V32 è AL TELAIO. Guardia: canon_guard v1.2 scan_public.
-- Volti nei caroselli: LIBERI (dissolvenza), mai chiusi in forme geometriche.
-- Il binario parla ai PARI (colleghi ad alta competenza), non ai curiosi —
-  la chiusura può invitare al dialogo tecnico (cattura in MENTE/SESSIONI 15/07).
+━━━ REGOLE NUOVE DI #60 (canone) ━━━
+- Onde: PRE 1-40, il CAMMINO continua l'onda del mondo (casella N = fase
+  40+(N-1)×10 → 01=41-50, 02=51-60, 03=61-70). In README binario NINA.
+- I portanti SG con cameo Nina (SG_01/04/09) = lavoro di giorno INSIEME,
+  mai in coda all'apprendista.
+- Primo carosello di un tipo nuovo = scaletta esposta e approvata PRIMA
+  di compilare (fatto per EP_N2_03, vale per i prossimi «primi»).
 
 ━━━ BLOCKERS APERTI (gated Matteo) ━━━
 - Hardware: UPS + mandrino ER20 + martinetto Vevor = IL tappo
 - Prerequisiti pubblicazioni: mail progetto, FB+IG, app Meta, Docker/Postiz
+  (il collo n°1 — l'attacco #2 quantifica cosa si sblocca senza Matteo)
 - Chiave Semantic Scholar (5 min) → azzera i 429 notturni
 
-━━━ Generato: 15/07/2026 — fine sessione #59 (skill salva) ━━━
+━━━ Generato: 15/07/2026 — fine sessione #60 (skill salva) ━━━

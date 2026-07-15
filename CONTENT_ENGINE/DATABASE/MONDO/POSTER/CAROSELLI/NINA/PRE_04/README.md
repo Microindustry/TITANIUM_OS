@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [PRE_04  Tutto è vero (v1  creato 15/07/2026, 60)](#pre04-tutto-è-vero-v1-creato-15072026-60)
+  - [Fonti (grounding)](#fonti-grounding)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # PRE_04 — Tutto è vero (v1 · creato 15/07/2026, #60)
 
 *Chiude la serie preambolo Nina (4/4). Il patto di verità lato Nina — gemello di

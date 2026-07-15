@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-15T15:22:14.074222",
+  "scanned_at": "2026-07-15T17:40:14.597866",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 932,
+  "total_files": 959,
   "files_read": 13,
-  "files_skipped": 919,
+  "files_skipped": 946,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -162,14 +162,28 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 25.5,
+      "size_kb": 26.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 25.5,
+      "size_kb": 26.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\1f\\ede978db20321df4f0584fbaae679913c510fb",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\20\\99ad7509434aa21474883dc9b6e7a863787bdf",
+      "type": "unknown",
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
@@ -181,6 +195,41 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\2b\\3d6d60ae6cd7b1185151c1f6a5eb3d769a5ca2",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\2b\\a74b2681cbd36b969032664700693a09d956f3",
+      "type": "unknown",
+      "size_kb": 0.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\2c\\e81483bd1880e1a321240429e15db087ff16dc",
+      "type": "unknown",
+      "size_kb": 14.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\2d\\8847a9735d127c7437a7e4bc9ce1aed2e98da8",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\2e\\701de4f2be80773a4c6ca01eef346dbc59c787",
+      "type": "unknown",
+      "size_kb": 0.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\2e\\eff52ca4c8250fef3dc073401f7f12fe479d6b",
       "type": "unknown",
       "size_kb": 0.7,
@@ -188,9 +237,23 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\2f\\4f604d9b23b6bc11d17c6f597dd9fe53123641",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\31\\9cebc84f16d559f680521d469aad5649a1c0c7",
       "type": "unknown",
       "size_kb": 0.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\3b\\b536acfe9d36ccc5b278d6edb64552231450f4",
+      "type": "unknown",
+      "size_kb": 14.0,
       "readable": false,
       "extracts": {}
     },
@@ -205,6 +268,20 @@
       "path": ".git\\objects\\3f\\546023f6531c67b87f79f7a2344d5e0f5da750",
       "type": "unknown",
       "size_kb": 13.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\3f\\b9e476406cbcae2fff20dee2b47f58b4bd79dd",
+      "type": "unknown",
+      "size_kb": 9.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\3f\\e60faad95ea420e32aca979700e3a0a37b4449",
+      "type": "unknown",
+      "size_kb": 17.0,
       "readable": false,
       "extracts": {}
     },
@@ -230,6 +307,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\4e\\4c510c7d37656a0b494c088e48fb1dd0081826",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\58\\7269f0164f8b6efc0adcdf82ebb07ad02f7267",
       "type": "unknown",
       "size_kb": 0.4,
@@ -238,6 +322,13 @@
     },
     {
       "path": ".git\\objects\\5b\\1d7532c715d7e2cb1b02e9441bfdd3d7f1aec6",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\6a\\560098d4425d1a896fa497251576bc47222f52",
       "type": "unknown",
       "size_kb": 0.7,
       "readable": false,
@@ -293,6 +384,34 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\83\\dcc62730eb9e6a7f5dfe6ec3d3bde9d66ff199",
+      "type": "unknown",
+      "size_kb": 0.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\8d\\d3052b5526cffd675db586bc1611286348902b",
+      "type": "unknown",
+      "size_kb": 0.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\91\\cbf03be04180918b6ce4117d203748e29465e4",
+      "type": "unknown",
+      "size_kb": 14.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\96\\2b99570e71de273bfbb065d4c08d1159b4f91f",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\99\\91466e61b669c5517ecf7fa12ad9ec4aa22920",
       "type": "unknown",
       "size_kb": 12.4,
@@ -307,9 +426,23 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\9c\\3a14da362d5bfaf73f8e2b5b5dbc80c5f389c2",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\9d\\e198d5850156d5e140453d9534b2fc95fc137c",
       "type": "unknown",
       "size_kb": 0.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\a2\\99a1a73acbcd8fedc59427ca0ad2b88bff1c54",
+      "type": "unknown",
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -324,6 +457,13 @@
       "path": ".git\\objects\\bc\\eabd4d9eb0aec1be2028229e997ee8122b29f0",
       "type": "unknown",
       "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\c4\\054b7a6c4de119fb05084dcc80a142ce458e6b",
+      "type": "unknown",
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
@@ -356,9 +496,30 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\cb\\182e5909c6b12cdb63cfc22c81f42fa4473d34",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\cc\\377c6be0903aad2b4a99ee66d1bea8195218c2",
       "type": "unknown",
       "size_kb": 13.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d7\\7be7e9e20c3e63deeeb3923c88bdd1d9ba8a4d",
+      "type": "unknown",
+      "size_kb": 0.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d7\\bd1022ef392e86898db2f358499fe6d973398a",
+      "type": "unknown",
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
@@ -377,6 +538,20 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\eb\\9895fadd5cbf5f01ac067aa8e9dc2aa0a2411f",
+      "type": "unknown",
+      "size_kb": 0.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\f2\\a8b32e8eb55a6c8d52fe062696dd81cd0988b1",
+      "type": "unknown",
+      "size_kb": 0.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\f5\\c643a3c8fcb3d707d24322967f96eb49c12558",
       "type": "unknown",
       "size_kb": 13.4,
@@ -387,6 +562,20 @@
       "path": ".git\\objects\\f7\\652f1121d3731e2d292c640ba6f5be883cee1d",
       "type": "unknown",
       "size_kb": 0.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\f8\\5f3e895067402e8e1cba265909aa929ec89b56",
+      "type": "unknown",
+      "size_kb": 8.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\fb\\ff0e23c3fd9c7cae27b775a9e2b20c9c1894e4",
+      "type": "unknown",
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
@@ -2821,7 +3010,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\LINEA_GUIDA_NINA.md",
       "type": "md",
-      "size_kb": 13.7,
+      "size_kb": 14.7,
       "readable": false,
       "extracts": {}
     },
@@ -2863,7 +3052,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\PIANO_PRODUZIONE_NINA.md",
       "type": "md",
-      "size_kb": 8.7,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
@@ -6510,7 +6699,7 @@
     {
       "path": "STORIE\\SG_GIORNO0\\_PIANO_PRODUZIONE.md",
       "type": "md",
-      "size_kb": 17.1,
+      "size_kb": 17.2,
       "readable": false,
       "extracts": {}
     },

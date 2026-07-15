@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-15T15:24:18.140587",
-  "active_milestone": "Sessione #59 (15/07): FIT ESTERNO distillato (4 AI, 8-8,8/10, convergenza=concretezza) -> 6 regole GUIDA par.7. Bozze notturne: EP_SG_01_01 corretta (falla canone Nina-figlia -> canon_guard v1.1 [persone]) e promossa; EP_SG_01_02 primo run schedulato, de-178kg (ordine Matteo: siamo al telaio -> canon_guard v1.2 scan_public, DATI MASTER precisati) e promossa; EP_SG_01_03 in _BOZZE (QC verde, da revisionare). SERIE PRE NINA 3/4 A STANDARD: PRE_01 rifatto da 0 INSIEME (v13, 10 slide, volto LIBERO), PRE_02 v2 (16->10), PRE_03 v6 (17->10). CAROSELLI riorganizzata: binari NINA/ e SISTEMA/, script a scoperta ricorsiva, README-segnaletica a ogni livello, 20 render stale via, TAVOLE/. Cattura voce Matteo: i pari non i curiosi. Collegamento Desktop fixato (claude.ico + Ctrl+Alt+T).",
-  "next_step": "PROSSIMA (#60): 1) PRE_04 Nina 'Tutto e' vero' (chiude serie 4/4, stampo v13, onde 31-40) 2) revisione EP_SG_01_03 in _BOZZE -> promozione (fine rodaggio) 3) estendere coda apprendista dai piani 4) risultati LinkedIn PRE_SG_01 (gated Matteo) 5) EP_N2_03 la Misura. Gated: hardware UPS+ER20+Vevor, prerequisiti Meta, chiave Semantic Scholar.",
+  "last_update": "2026-07-15T17:48:03.910063",
+  "active_milestone": "Sessione #60 (15/07): TABELLONE CAROSELLI PULITO 14/14 (QC 0 falle, 0 legacy). PRE_04 'Tutto e' vero' creato -> SERIE PRE NINA COMPLETA 4/4 (patto di verita', slide PONTE al binario Sistema, onde 31-40). PRE_03 v6.1 volto grande/libero in copertina (ordine Matteo). EP_SG_01_03 'Il Distacco' revisionato+promosso -> FINE RODAGGIO apprendista 3/3 (S1 3/69); coda estesa: CAP 2 L'ORGANISMO 6 item pending (guardie esplicite negli angoli). EP_N2_03 'Mille Volte Uguale' compilato (scaletta approvata prima) = primo del cammino a standard; poi 'sistema': EP_N2_01 v3 + EP_N2_02 v2 a standard (16->10, open loop 02 corretto). Regione 0 completa a carosello (caselle 1-2-3), cammino 3/53, totale Nina 7/57. Convenzione onde: PRE 1-40, cammino casella N = fase 40+(N-1)*10. ATTACCO #2 colli di bottiglia IMPOSTATO: DOCS/ATTACCO_20260716/_PIANO.md (Fable 5, propose-only, ricognizione GitHub strumenti).",
+  "next_step": "PROSSIMA (#61): 1) P0 verifica AUTOGENERAZIONE episodi->RAG (story_agent/night_research/riflusso FATTI, con numeri) 2) P0 profilo GitHub personale aggiornato (README + pin 5 repo) 3) ATTACCO #2 colli di bottiglia (5 agenti Fable propose-only, piano in DOCS/ATTACCO_20260716) 4) risultati LinkedIn PRE_SG_01 (gated) 5) revisione bozza notturna EP_SG_02_01 V32.",
   "session_count": 127,
   "pillars": {
     "V32": {
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-15T15:20:06.226088"
+      "last_activity": "2026-07-15T16:29:54.595148"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -114,9 +114,13 @@
       "canon_guard v1.1+v1.2: famiglia [persone] (Nina+parentela=falla) + scan_public (numeri di progetto 178kg/0.019 vietati nei contenuti) — agganciati a night_caroselli, 0 falsi positivi su MENTE (15/07/2026)",
       "Binario notturno RODATO: EP_SG_01_01 + 01_02 + 01_03 generati dall'apprendista, revisionati e i primi due promossi (S1 2/69) (15/07/2026)",
       "Serie PRE Nina 3/4 a standard publish-ready: PRE_01 v13 rifatto da 0 insieme (volto libero), PRE_02 v2, PRE_03 v6 — tutti <=10, copertina 2-bis, stampo unico, onde continue 1-30 (15/07/2026)",
-      "CAROSELLI a binari (NINA/SISTEMA) + scoperta ricorsiva negli script + README-segnaletica a ogni livello; QC 11 cartelle 0 falle post-riordino (15/07/2026)"
+      "CAROSELLI a binari (NINA/SISTEMA) + scoperta ricorsiva negli script + README-segnaletica a ogni livello; QC 11 cartelle 0 falle post-riordino (15/07/2026)",
+      "Serie PRE Nina COMPLETA 4/4: PRE_04 'Tutto e' vero' (patto di verita' + slide PONTE, onde 31-40) + PRE_03 v6.1 volto grande in copertina; QC verde (15/07/2026 #60)",
+      "Apprendista notturno RODATO 3/3: EP_SG_01_03 revisionato (kicker par.7.5, caption famiglia) e promosso; coda estesa CAP 2 L'ORGANISMO 6 item con guardie esplicite (15/07/2026 #60)",
+      "Cammino Nina a standard: EP_N2_03 compilato su scaletta approvata (precedente per i 53) + EP_N2_01 v3/EP_N2_02 v2 (16->10, open loop corretto); regione 0 completa, TABELLONE 14/14 QC 0 falle 0 legacy; convenzione onde cammino fase 40+(N-1)*10 (15/07/2026 #60)",
+      "ATTACCO #2 impostato: DOCS/ATTACCO_20260716/_PIANO.md - colli di bottiglia ecosistema, 5 agenti Fable propose-only + ricognizione GitHub strumenti; P0 = verifica autogenerazione episodi->RAG + profilo GitHub (15/07/2026 #60)"
     ],
-    "next": "PROSSIMA SESSIONE FABLE #53: revisionare Obsidian -> ecosistema MENTE vero (verita unica/ponti/zero orfani), poi eseguire la prima ondata dell'attacco (checkout hardware + canone RAG). Backlog completo in DA_FARE_FATTO.md.",
+    "next": "PROSSIMA SESSIONE #61: P0 autogenerazione episodi->RAG + profilo GitHub, poi ATTACCO #2 colli di bottiglia (piano pronto).",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -154,5 +158,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a EP_20260604_risolto_exit_255_subject_con_parent.md"
+  "last_action": "Modifica a EP_SEED_GRAPHIFY_L1_mente.md"
 }

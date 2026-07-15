@@ -89,7 +89,24 @@
 
 ---
 
-## Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo Nina (serie 4/4)
+## Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14
+
+**DA FARE — prossima sessione (#61), in ordine:**
+- [ ] **1. VERIFICA AUTOGENERAZIONE EPISODI → RAG** (prerequisito P0 dell'attacco,
+  ordine Matteo): story_agent/night_research generano ancora? riflusso FATTI vivo?
+  RAG cresce? milestone→episodio funziona? Esito con NUMERI o diagnosi+cura.
+- [ ] **2. PROFILO GITHUB PERSONALE AGGIORNATO** (P0): README profilo allo stato reale
+  (3 facce, serie PRE completa, binario notturno — repo public: niente segreti) + pin
+  5 repo (manuale/BrowserAgent, memoria github_pin_pending)
+- [ ] **3. ATTACCO #2 — COLLI DI BOTTIGLIA (Fable 5)**: 5 agenti propose-only
+  (pipeline contenuti / RAG / notturne / ricognizione GitHub strumenti da integrare /
+  sintesi TOP 10). Piano ingegnerizzato PRONTO: `DOCS/ATTACCO_20260716/_PIANO.md`
+- [ ] 4. Risultati LinkedIn PRE_SG_01 → tararsi (gated Matteo)
+- [ ] 5. Revisione bozza notturna EP_SG_02_01 «V32» (arriva stanotte @04:15, prima
+  della coda CAP 2) — guardia §7.7 già nell'angolo
+
+---
+
 
 - [✓] **PRE_03 v6.1 — volto di Nina in copertina GRANDE e libero** (richiesta Matteo
   apertura #60: «più grande, non racchiusa»): 520×420→920×640, dissolvenza più ampia

@@ -1,25 +1,26 @@
 {
-  "generated": "2026-07-15T12:15:36",
-  "checked": 11,
+  "generated": "2026-07-15T17:19:35",
+  "checked": 14,
   "issues": [],
-  "legacy_note": [
-    "EP_N2_01/carosello.html: 16 slide > limite 10 (completo)",
-    "EP_N2_01/carosello.html: slide 1 senza class=\"cover-title\" (copertina §2-bis: il poster deve dichiararsi)",
-    "EP_N2_02/carosello.html: 16 slide > limite 10 (completo)",
-    "EP_N2_02/carosello.html: slide 1 senza class=\"cover-title\" (copertina §2-bis: il poster deve dichiararsi)"
-  ],
+  "legacy_note": [],
   "per_id": {
     "EP_N2_01": {
       "files_ok": true,
-      "slides": 16,
+      "slides": 10,
       "slides_social": null,
       "legacy": true
     },
     "EP_N2_02": {
       "files_ok": true,
-      "slides": 16,
+      "slides": 10,
       "slides_social": null,
       "legacy": true
+    },
+    "EP_N2_03": {
+      "files_ok": true,
+      "slides": 10,
+      "slides_social": null,
+      "legacy": false
     },
     "EP_SG_01_01": {
       "files_ok": true,
@@ -28,6 +29,12 @@
       "legacy": false
     },
     "EP_SG_01_02": {
+      "files_ok": true,
+      "slides": 10,
+      "slides_social": null,
+      "legacy": false
+    },
+    "EP_SG_01_03": {
       "files_ok": true,
       "slides": 10,
       "slides_social": null,
@@ -50,6 +57,12 @@
       "slides": 10,
       "slides_social": null,
       "legacy": true
+    },
+    "PRE_04": {
+      "files_ok": true,
+      "slides": 10,
+      "slides_social": null,
+      "legacy": false
     },
     "PRE_SG_01": {
       "files_ok": true,
