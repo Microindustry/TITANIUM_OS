@@ -141,7 +141,19 @@
   amici non ha portato da nessuna parte → il binario parla ai COLLEGHI ad alta
   competenza; la chiusura può invitare al dialogo tecnico (chiedere/trovare supporti,
   non vendere). Seme futuro: vicino a EP_SG_09_02 «Il CV che nessuno capisce».
-- [ ] **PRE_01 NINA INSIEME** — rifatto da 0, ≤10, copertina §2-bis (punto condiviso rotta)
+- [✓] **PRE_01 NINA RIFATTO DA 0 — INSIEME, v13** (15/07): scaletta a 10 esposta e
+  APPROVATA da Matteo prima di compilare (regola "piano prima di compilare").
+  UN taglio ≤10, copertina §2-bis («C'è una porta in fondo alla taverna», porta =
+  punto focale), stile buonanotte v12 conservato (style verbatim + onde continue),
+  volto Nina in slide 2, canone v12 dentro (◆✦⟡ quattro segni, Giuntura
+  saldatura↔codice, ⟡0 La Materia); redistribuito: personaggi→PRE_03, metodo→PRE_02,
+  patto→PRE_04. Regole §7 fit dentro (slide-carne 12m², chiusura=perché restare,
+  open loop con assaggio). Builder `_build_pre_01_v13.py`, v12 in _VERSIONI (additivo),
+  QC 0 falle (sparite le 2 note legacy di PRE_01), griglia 11 copertine, linea guida
+  Nina stato ✓. Prossimo Nina: PRE_02 a standard quando toccato, poi EP_N2_03.
+- [✓] **EP_SG_01_02 slide 8** (ordine Matteo «siamo a un telaio, CNC 65%?»): via le
+  percentuali STATE (metriche interne ≠ stato fisico) → «La macchina: al telaio. Il
+  software: già al lavoro.» GUIDA §7.7 estesa alle percentuali di completamento.
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
 ## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)
