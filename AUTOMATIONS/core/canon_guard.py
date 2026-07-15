@@ -1,4 +1,4 @@
-# canon_guard.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-07-15
+# canon_guard.py | TITANIUM_OS / AUTOMATIONS / core | v1.2 | 2026-07-15
 # REGOLA DI CANONE, implementata UNA volta e usata ovunque (scalabile/adattiva).
 # Regola Matteo: i componenti V32/VULCAN NON si descrivono mai come
 # "recuperati / usati / di recupero / EUR 0 di recupero". Sempre specifica
@@ -9,6 +9,12 @@
 # come parente in voce reale = falla (successo in EP_SG_01_01, bozza 14/07:
 # l'apprendista ha scritto una parentela inventata e il QC era cieco).
 # In SG Nina appare SOLO come cameo-domanda nel balloon (PONTE_SG_NINA).
+#
+# v1.2 — scan_public(): numeri di PROGETTO non ancora misurati (massa 178 kg,
+# precisione RSS ±0,019) vietati nei CONTENUTI PUBBLICI come fatti compiuti
+# (ordine Matteo 15/07: "siamo ancora al telaio, eviterei il peso"). Solo per
+# contenuti in uscita (night_caroselli) — NON per i doc interni di MENTE, dove
+# quei numeri sono legittimi come dati di progetto.
 #
 # - clean(text)  -> applica le correzioni note (auto-fix alla fonte, idempotente)
 # - scan(text)   -> trova formulazioni vietate ANCHE nuove (proximità hardware),
@@ -95,6 +101,17 @@ def scan(text: str) -> list[str]:
     hits = [m.strip() for m in _LINE_RE.findall(cleaned) if m.strip()]
     hits += [f"[persone] {m.strip()}" for m in _NINA_RE.findall(cleaned) if m.strip()]
     return hits
+
+
+# Numeri di progetto della V32 non ancora misurati sulla macchina reale (al telaio).
+# Si estende qui quando un numero diventa misurato (si toglie) o ne nasce uno nuovo.
+_PROGETTO_RE = re.compile(r"^.*(?:178\s*kg|±\s*0[.,]019).*$", re.IGNORECASE | re.MULTILINE)
+
+
+def scan_public(text: str) -> list[str]:
+    """SOLO contenuti in uscita: righe con numeri di progetto spacciati per fatti."""
+    return [f"[progetto-non-misurato] {m.strip()}"
+            for m in _PROGETTO_RE.findall(text) if m.strip()]
 
 
 if __name__ == "__main__":

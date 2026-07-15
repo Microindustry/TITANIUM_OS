@@ -126,6 +126,21 @@
   15/07 ~01:00**: TI_NightCaroselli non ha ancora avuto il primo run schedulato
   (NextRunTime = 15/07 04:15, LastRunTime vuoto); EP_SG_01_01 era il run manuale di
   prova del 14/07 10:32. 01_02 arriva stanotte @04:15, tutto regolare
+- [✓] **EP_SG_01_02 «La Taverna» ARRIVATA E PROMOSSA** (15/07): primo run SCHEDULATO
+  dell'apprendista @04:16 — QC verde alla nascita. Revisione Matteo: «buona, ma
+  eviterei il peso — siamo ancora al telaio» → **de-178kg** (slide 2/3/6 + caption:
+  stato reale = telaio in piedi + componentistica scelta). Piano CAP1 2/4, S1 2/69.
+- [✓] **BONIFICA NUMERI DI PROGETTO OVUNQUE** (ordine Matteo 15/07): 178 kg e ±0,019
+  sono PROGETTO non misure (macchina al telaio) → tolti anche da EP_SG_01_01 slide 8,
+  PRE_SG_02 (slide+caption), PRE_SG_04. Canone precisato alla fonte (CLAUDE.md DATI
+  MASTER + GUIDA §7.7). Anticorpo: **canon_guard v1.2 `scan_public`** agganciato a
+  night_caroselli — l'apprendista non può più spacciare numeri di progetto per fatti.
+  Re-render 4 caroselli + QC 0 falle + griglia (11 copertine).
+- [✓] **CATTURA VOCE MATTEO «i pari, non i curiosi»** (`MENTE/SESSIONI/2026-07-15_
+  matteo_pari_non_curiosi.md`, RAG ok): professionalità scambiata per cene con gli
+  amici non ha portato da nessuna parte → il binario parla ai COLLEGHI ad alta
+  competenza; la chiusura può invitare al dialogo tecnico (chiedere/trovare supporti,
+  non vendere). Seme futuro: vicino a EP_SG_09_02 «Il CV che nessuno capisce».
 - [ ] **PRE_01 NINA INSIEME** — rifatto da 0, ≤10, copertina §2-bis (punto condiviso rotta)
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 

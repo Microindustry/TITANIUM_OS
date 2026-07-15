@@ -102,8 +102,11 @@ FINANCE\            ← fatture, BEP, ROI, fornitori
 
 ## DATI MASTER (verificati fisicamente — non inventare)
 - Investimento V32: EUR 2.250
-- Massa V32: 178 kg — **corpo unico** (non più su molle — decisione strutturale maggio 2026)
-- Precisione RSS: ±0.019 mm (IT6-IT7)
+- Massa V32: 178 kg **di progetto** — **corpo unico** (non più su molle — decisione strutturale maggio 2026).
+  ⚠ NON ancora pesata: la macchina è al telaio (Matteo, 15/07/2026). Nei CONTENUTI PUBBLICI
+  non si dichiara il peso come fatto — si dice lo stato reale (telaio + componentistica scelta).
+- Precisione RSS: ±0.019 mm (IT6-IT7) — **calcolo di progetto**, non misura: stessa regola
+  pubblica del peso (canon_guard.scan_public li blocca entrambi nei caroselli)
 - BEP V32: 61 ore = 1.4 mesi | ROI Anno 1: 322%
 - Tariffa Precision Lab: EUR 45/h
 - Target capannone: 15 Luglio 2030

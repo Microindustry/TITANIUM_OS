@@ -169,7 +169,8 @@ def run() -> int:
         for k in ("lead", "intro", "seal", "cta", "kicker"):
             if s.get(k):
                 s[k] = canon_guard.clean(s[k])
-        hits = canon_guard.scan(" ".join(str(s.get(k, "")) for k in ("lead", "intro", "seal")))
+        testo = " ".join(str(s.get(k, "")) for k in ("lead", "intro", "seal"))
+        hits = canon_guard.scan(testo) + canon_guard.scan_public(testo)
         if hits:
             issues.append(f"canon_guard: {hits[0][:90]}")
 
