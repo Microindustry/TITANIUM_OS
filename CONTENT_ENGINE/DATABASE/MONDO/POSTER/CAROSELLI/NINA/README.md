@@ -19,7 +19,7 @@
 | `PRE_01/` | Il Mondo di Nina — preambolo 1/4 | v13, rifatto da 0 (15/07), volto libero |
 | `PRE_02/` | Come funziona Nina — preambolo 2/4 | v2, a standard (15/07) |
 | `PRE_03/` | I Personaggi — preambolo 3/4 | v6, a standard (15/07) |
-| *(PRE_04)* | Tutto è vero — preambolo 4/4 | **DA CREARE** |
+| `PRE_04/` | Tutto è vero — preambolo 4/4 (patto + slide PONTE) | v1, creato 15/07 #60 — **serie PRE completa 4/4** |
 | `EP_N2_01/` | La Bambina che Chiedeva Perché (⟡0) | legacy 16 slide — a standard quando toccato |
 | `EP_N2_02/` | Il Soffio di Troppo (⟡0) | legacy 16 slide — a standard quando toccato |
 
