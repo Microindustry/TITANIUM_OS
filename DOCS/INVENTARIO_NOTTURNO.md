@@ -33,6 +33,27 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-15 · 15 commit
+- `9680b132` auto: night_audit - cartella clinica 15/07/2026
+- `199f9569` auto: story_agent - episodi generati 15/07/2026
+- `1be337bd` fix(#59): EP_SG_01_01 corretto e promosso + canon_guard v1.1 famiglia [persone]
+- `d17dccd7` docs(#59): specchio dashboard linea guida SG - sezione taratura dal primo fit esterno
+- `db0e01a1` docs(#59): bussola - primo fit esterno PRE distillato e adottato (GUIDA par.7 in MENTE)
+- `fa3545af` chore(#59): collegamento Desktop ottimizzato - icona stabile claude.ico + hotkey Ctrl+Alt+T
+- `e6642790` chore(salva): chiusura #58-bis - l'ecosistema produce
+- `f5b921b5` feat(#58): NIGHT_CAROSELLI costruito e schedulato - l'apprendista notturno e' vivo
+- `d01e34c2` fix(#58): PRE_SG_03/04 de-insider e de-duplicati (feedback Matteo) + render_queue hardening
+- `907b1c15` feat(#58): grid_preview.py - anteprima griglia Instagram dalle copertine
+- `b1830bd5` feat(#58): RICONCILIAZIONE <=10 - un taglio solo, ovunque
+- `666455fb` docs(#58-mattina): design night_caroselli (la notte propone, il giorno promuove) + bussola mattinata autonoma + specchio 69 caroselli
+- `56d903d7` feat(#58-mattina): SERIE PRE_SG_01-04 PRODOTTA - il preambolo del binario sistema (Claude 100%)
+- `c0dd5175` feat(#58-mattina): colli piccoli chiusi - caroselli_qc v1.1 (standard 16 vero, check copertina §2-bis eseguibile, legacy_note senza rumore) + render_queue.py batch incrementale con QC in coda + _TEMPLATE/components/ (contratto anti-drift, volto Nina canonico estratto)
+- `eb144889` chore(#58): correzioni notturne Matteo - PRE tutti da 0 (regole/design salvi), title-scan Obsidian, AUTO mai ferma (bussola+RIAVVIO per il 'procedi' di domattina)
+
+_episodi: 272 · critiche aperte: 18 (159 risolte) · RAG: 19603 chunk_
+
+
+
 ## 2026-07-14 · 27 commit
 - `9415b43d` auto: night_audit - cartella clinica 14/07/2026
 - `6d827c11` auto: story_agent - episodi generati 14/07/2026
