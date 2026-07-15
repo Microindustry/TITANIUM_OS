@@ -154,6 +154,17 @@
 - [✓] **EP_SG_01_02 slide 8** (ordine Matteo «siamo a un telaio, CNC 65%?»): via le
   percentuali STATE (metriche interne ≠ stato fisico) → «La macchina: al telaio. Il
   software: già al lavoro.» GUIDA §7.7 estesa alle percentuali di completamento.
+- [✓] **PRE_01 slide 2 — volto Nina LIBERO** (ordine Matteo: «non l'apprezzo chiusa
+  in una forma geometrica»): via cerchio+bordo → dissolvenza radiale nel buio
+  (mask ellittica, v13.1). Regola visiva da ricordare per i prossimi volti.
+- [✓] **PRE_02 «Come funziona Nina» A STANDARD — v2** (15/07, «vai con pre 2»):
+  16→10 un taglio, copertina §2-bis («La favola ha un doppio fondo», i tre cassetti),
+  stesso stampo di PRE_01 v13 + onde che continuano tra i due caroselli (fase globale).
+  Testi canonici verbatim (organismo, mappa viva, tre fondi, test della sarta,
+  ancoraggio, motore, provalo-tu); consolidati 5-6-7→2 e 9-10-11→1. Correzioni canone:
+  «per la figlia»→«per chi chiede perché» + via «32 mila pezzi» (stale). v1 in
+  _VERSIONI, builder `_build_pre_02_v2.py`, QC 0 falle (legacy 10→6), griglia ok.
+  Resta Nina: PRE_03 quando toccato, PRE_04 «Tutto è vero» da creare, poi EP_N2_03.
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
 ## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)
