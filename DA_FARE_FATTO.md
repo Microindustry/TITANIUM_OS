@@ -165,6 +165,14 @@
   «per la figlia»→«per chi chiede perché» + via «32 mila pezzi» (stale). v1 in
   _VERSIONI, builder `_build_pre_02_v2.py`, QC 0 falle (legacy 10→6), griglia ok.
   Resta Nina: PRE_03 quando toccato, PRE_04 «Tutto è vero» da creare, poi EP_N2_03.
+- [✓] **PRE_03 «I Personaggi» A STANDARD — v6** (15/07, «vai con pre 3»): 17→10 un
+  taglio, copertina §2-bis col volto LIBERO (dissolvenza, regola slide-2), onde in
+  fase 21-30 (la serie PRE è un'onda sola). Consolidati: Nina 2+3→1, Themis 8+9→1,
+  Forge 10+11→1, Entropia 13+14+15→1; testi canonici verbatim (scintilla, luci e
+  ombre, misura e martello, il nemico invisibile). Chiusura con rimando+assaggio a
+  PRE_04. v5 in _VERSIONI, builder `_build_pre_03_v6.py`, QC 0 falle (legacy 6→4:
+  restano solo EP_N2_01/02), griglia ok. **Serie PRE Nina: 3/4 a standard — manca
+  solo PRE_04 «Tutto è vero» (da creare, gemello di PRE_SG_03 patto del racconto).**
 - [ ] Dopo rodaggio 3 notti: estendere `DATA/caroselli_queue.json` dai piani (S1 sistema)
 
 ## Sessione #58 · 14/07/2026 — STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)

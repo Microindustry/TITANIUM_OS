@@ -1,51 +1,12 @@
-<!-- TOC -->
+# PRE_03 — I Personaggi (v6 · a standard, 15/07/2026)
 
-- [Carosello  PRE_03  I Personaggi (la scheda del cast)](#carosello-pre03-i-personaggi-la-scheda-del-cast)
-  - [File in questa cartella](#file-in-questa-cartella)
-  - [Le 17 slide](#le-17-slide)
-  - [Come rigenerare / esportare](#come-rigenerare-esportare)
+*Portato a standard in sessione #59: 17→10 slide, un taglio (riconciliazione #58),
+copertina §2-bis col VOLTO di Nina libero (dissolvenza radiale, regola Matteo 15/07 —
+niente forme geometriche), stampo serie PRE_01 v13 con onde in fase 21-30 (la serie
+PRE è un'onda sola). Testi canonici v5 verbatim; consolidati: Nina 2+3→1, Themis
+8+9→1, Forge 10+11→1, Entropia 13+14+15→1, altri volti+chiusura→1 con rimando a
+PRE_04 «Tutto è vero». La slide «come la riconosci» (firma visiva) vive nel volto
+in copertina. v5 e precedenti in `_VERSIONI`. Builder: `_build_pre_03_v6.py`.*
 
-<!-- /TOC -->
-
-# Carosello — PRE_03 · I Personaggi (la scheda del cast)
-
-**Fonte:** serie PREAMBOLO (non legato a un episodio) — character bible del Mondo di Nina.
-Canone personaggi: `MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md` + BIBBIA del mondo.
-**Formato:** Instagram/LinkedIn carosello · 17 slide · 1080×1350 (4:5)
-**Stato:** v5 "personaggi profondi" (02/07/2026) — HTML+PNG. Scarti v2/v3/v4 in `_VERSIONI/`.
-**Regola:** PRE_03 è l'anagrafica statica del cast; Nina si presenta VIVA dentro EP_N2_01
-(preambolo = anagrafica, episodi = storia — decisione sess.#51).
-
-## File in questa cartella
-| File | Cosa |
-|------|------|
-| `carosello.html` | Sorgente — HTML self-contained (foto Nina base64 inline, export Express ok) |
-| `caption.txt` | Descrizione/caption pronta da incollare nel post |
-| `_build_pre03.py` | Generatore v2.0 — rigenera `carosello.html` (glifi SVG + testi) |
-| `_render_all.py` | Render PNG di tutte le slide |
-| `img/` | Foto di Nina (volto definitivo 3D) |
-| `slides/` | Export PNG delle 17 slide (1080×1350) |
-| `_VERSIONI/` | Snapshot: v1 nina-solo · v2 redesign-testo · v3 continuo-studio · v4 stile-episodi · v5 personaggi-profondi |
-
-## Le 17 slide
-1. **Copertina** — I Personaggi del Mondo di Nina
-2. **L'eroina** — Nina, il volto vero (foto definitiva)
-3. **Nina · com'è fatta** — carattere
-4. **Nina · luci e ombre** — pregi e difetti (personaggio vero, non santino)
-5. **Nina · come la riconosci** — aspetto
-6. **Nina · come cresce** — l'arco
-7. **Il cast · non è sola** — panoramica
-8. **Themis · chi è** — il custode della misura
-9. **Themis · cosa fa per Nina**
-10. **Forge · chi è** — il fabbro
-11. **Forge · cosa fa per Nina**
-12. **Insieme · misura e martello** — la coppia complementare
-13. **L'Entropia · l'avversario** — il disordine che disfa
-14. **L'Entropia · come la incontri** — mai un mostro, sempre un effetto
-15. **Il duello · ordine vs disordine**
-16. **Altri volti · il mondo è grande** — il cast futuro (solo simboli, per ora)
-17. **Si parte** — CTA verso gli episodi
-
-## Come rigenerare / esportare
-- **Editare**: modifica `_build_pre03.py` → rigenera `carosello.html` → ri-esporta in Express.
-- **PNG locali**: `_render_all.py` (Chrome headless), output in `slides/`.
+- 10 slide (≤10, un taglio) · voce: narratore Nina · serie PRE 3/4
+- Render: `slides/` (PNG) + `slides_ig/` (JPEG feed) · QC: caroselli_qc (0 falle)
