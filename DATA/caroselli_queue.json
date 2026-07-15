@@ -40,8 +40,87 @@
         "il distacco l'AI che chiamava Socio adesso mi chiama Matteo",
         "EP_S0_00 c'era un AI che mi chiamava Socio"
       ],
-      "status": "bozza_verde",
-      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_01_03"
+      "status": "promosso",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\SISTEMA\\EP_SG_01_03",
+      "note_revisione": "15/07 #60: kicker slide 7 'ADHD E SISTEMA' -> 'LA MIA TESTA, SU CARTA' (GUIDA 7.5) + chiusura stile famiglia + caption riscritta (hashtag famiglia). FINE RODAGGIO 3/3"
+    },
+    {
+      "id": "EP_SG_02_01",
+      "title": "V32 — il cuore che taglia",
+      "cap": "CAP 2 · L'ORGANISMO",
+      "angolo": "La fresatrice CNC che nasce in taverna: perché una macchina utensile è il cuore dell'organismo. STATO REALE OBBLIGATORIO: la V32 è AL TELAIO (telaio d'acciaio in piedi + componentistica scelta) — mai massa/precisione/percentuali di progetto come fatti (GUIDA 7.7).",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "V32 fresatrice CNC pilastro cosa è",
+        "telaio V32 stato costruzione componenti scelti",
+        "perché costruire una CNC invece di comprarla"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "EP_SG_02_02",
+      "title": "MIMS — il LEGO d'acciaio",
+      "cap": "CAP 2 · L'ORGANISMO",
+      "angolo": "Il sistema modulare di profili d'acciaio: l'idea del LEGO industriale e perché è il cavallo di Troia del progetto. Da EP_S0_04 e EP_S0_07. MAI ricette/parametri di processo (trade secret): solo il concetto e la logica di prodotto.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "MIMS sistema modulare cos'è LEGO acciaio",
+        "EP_S0_04 MIMS origine idea",
+        "MIMS cavallo di Troia EP_S0_07"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "EP_SG_02_03",
+      "title": "VULCAN — la pelle",
+      "cap": "CAP 2 · L'ORGANISMO",
+      "angolo": "La piccola pressa costruita a mano (struttura 60x60, i 2 cilindri fanno da guida): il terzo organo, quello che dà forma. Da EP_S0_06 e ST 'VULCAN'. MAI 'recuperato/usato': specifiche e logica progettuale. Stato reale: martinetto Vevor ancora da montare.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "VULCAN pressa costruita telaio cilindri guida",
+        "EP_S0_06 VULCAN origine",
+        "pressa compressione MIMS VULCAN come funziona"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "EP_SG_02_04",
+      "title": "GENESIS — il sistema nervoso",
+      "cap": "CAP 2 · L'ORGANISMO",
+      "angolo": "Il software che tiene insieme tutto: RAG che ricorda, automazioni notturne, il socio AI dentro un'infrastruttura. È l'organo che fa parlare gli altri. Fatti concreti dal vivo del sistema (nodi reali), zero marketing.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "GENESIS stack nodi attivi RAG automazioni",
+        "sistema nervoso software TITANIUM_OS com'è fatto",
+        "MENTE RAG memoria indicizzata decisioni"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "EP_SG_02_05",
+      "title": "Vita Natura — la prova sul mondo reale",
+      "cap": "CAP 2 · L'ORGANISMO",
+      "angolo": "Il centro estetico di Maria come primo cliente vero del sistema (EVA, prenotazioni WhatsApp): l'organismo esce dalla taverna e tocca un'attività reale. Stato reale: EVA è un pilot in dry-run, non un prodotto finito — dirlo.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Vita Natura centro estetico EVA WhatsApp",
+        "EVA pilot dry-run prenotazioni stato",
+        "il sistema applicato a un'attività reale"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "EP_SG_02_06",
+      "title": "Il Reattore — come i pilastri si alimentano a vicenda",
+      "cap": "CAP 2 · L'ORGANISMO",
+      "angolo": "Il loop intenzionale: la macchina produce storie, le storie alimentano la memoria, la memoria migliora il lavoro. V32/MIMS/VULCAN/GENESIS non sono 4 progetti: sono un reattore. Da S1 EP_02 e EP_S0_01. Attenzione anti-ripetizione: frase-firma 'si documenta da solo' max 1 volta.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "i pilastri si alimentano a vicenda loop reattore",
+        "EP_S0_01 organismo tre progetti un corpo",
+        "leva cognitiva un input N output regola"
+      ],
+      "status": "pending"
     }
   ]
 }
