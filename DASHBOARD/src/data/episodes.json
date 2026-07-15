@@ -106,6 +106,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_54",
+        "title": "Il Dito che Insegna",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_S0_01",
         "title": "L'Organismo",
         "tipo": "continuita",
@@ -16002,6 +16008,12 @@
         "motivo": "tema: grande, loop, nina-v2"
       },
       {
+        "id": "EP_N2_54",
+        "title": "Il Dito che Insegna",
+        "tipo": "tema",
+        "motivo": "tema: grande, loop, nina-v2"
+      },
+      {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "prerequisito",
@@ -16046,12 +16058,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16427,6 +16433,12 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_54",
+        "title": "Il Dito che Insegna",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
         "id": "EP_N2_10",
         "title": "Il Grande Loop: quando il gesto rimane",
         "tipo": "tema",
@@ -16477,12 +16489,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16867,6 +16873,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_54",
+        "title": "Il Dito che Insegna",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -16899,12 +16911,6 @@
       {
         "id": "EP_N2_08",
         "title": "La Lampada che Sussurra",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_09",
-        "title": "La Bibliotecaria della Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -21101,6 +21107,12 @@
         "title": "TITANIUM OS — S2E07",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260715",
+        "title": "TITANIUM OS — Episodio S2.E07",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -21108,6 +21120,10 @@
       "precede": {
         "id": "EP_20260713",
         "title": "TITANIUM OS — S2E07"
+      },
+      "segue": {
+        "id": "EP_20260715",
+        "title": "TITANIUM OS — Episodio S2.E07"
       }
     }
   },
@@ -21146,6 +21162,147 @@
         "regione": 1,
         "regione_nome": "LA TRACCIA",
         "pietra": "⟡1",
+        "giro_spirale": 3,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_17",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
+        "id": "EP_N2_10",
+        "title": "Il Grande Loop: quando il gesto rimane",
+        "tipo": "tema",
+        "motivo": "tema: grande, loop, nina-v2"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_21",
+        "title": "Il Nome Che Cambia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_11",
+        "title": "La Grande Mappa",
+        "tipo": "tema",
+        "motivo": "tema: grande, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_20260715",
+    "title": "TITANIUM OS — Episodio S2.E07",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-15",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS — Episodio S2.E07 \"Il Canone Non Si Negozia\" 15 luglio 2026 · Sessione 59 · Commit: fix 59 + docs 59 COLD OPEN Una bozza notturna. Slide 9. Nina, nella presentazione, viene descritta come ",
+    "content": "# TITANIUM_OS — Episodio S2.E07\n## \"Il Canone Non Si Negozia\"\n*15 luglio 2026 · Sessione #59 · Commit: fix(#59) + docs(#59)*\n\n---\n\n## COLD OPEN\n\nUna bozza notturna. Slide 9.\n\nNina, nella presentazione, viene descritta come una parente.\n\nIl sistema l'ha scritto. Il sistema l'ha riletto. Il sistema non ha fermato niente.\n\nMatteo apre il file la mattina dopo e vede l'errore. Non è un bug di codice — è peggio. È una falla di canone: una relazione reale, tra persone reali, descritta in modo sbagliato davanti a un pubblico che non ha contesto. Una cosa che, pubblicata, avrebbe richiesto una spiegazione che non avrebbe mai recuperato la fiducia persa.\n\nQuesto è il tipo di errore che non fa rumore finché non fa danni.\n\n---\n\n## ATTO I — LA FALLA\n\nCi sono due tipi di problemi in GENESIS.\n\nIl primo è tecnico: il codice rompe, il RAG restituisce il chunk sbagliato, la pipeline si inceppa. Questi si trovano, si debuggano, si chiudono. Lasciano un commit pulito nel log e un test in più nella suite.\n\nIl secondo è di canone: il sistema genera contenuto che è *tecnicamente* corretto ma *relazionalmente* sbagliato. Non un dato inventato — una classificazione errata di qualcosa che non si può classificare con una variabile booleana.\n\nLa bozza di EP_SG_01_01 era stata prodotta in modalità notturna. Il binario `night_caroselli` era partito alle 04:15, aveva superato il QC verde in `_BOZZE`, aveva piazzato l'episodio nella coda. Tutto regolare. Tranne slide 9.\n\nLa sessione #58-bis aveva già prodotto la serie PRE_SG_01-04 completa: 4 caroselli a 10 slide, QC verde, de-insider e de-dup applicati dopo il feedback di Matteo. Il title-scan su Obsidian era a 69 link attivi per S1. Il `render_queue` batch girava su PNG e JPEG. Il `grid_preview` componeva la griglia Instagram dalle copertine. Il sistema funzionava — e aveva sbagliato lo stesso.\n\nPerché il canone non è una regola tecnica. Non è un parametro che si passa a una funzione. È una comprensione di contesto che o c'è o non c'è, e quando non c'è il sistema produce output plausibili e sbagliati.\n\nLa correzione è stata chirurgica: `fix(#59): EP_SG_01_01 corretto e promosso + canon_guard v1.1 famiglia [persone]`. Una riga di commit. Dietro quella riga: una review manuale di ogni relazione classificata nella famiglia semantica `[persone]`, e una versione aggiornata del guard che ora forza una verifica esplicita prima di attribuire qualsiasi ruolo relazionale a individui reali.\n\nNon basta che sia plausibile. Deve essere vero.\n\n---\n\n## ATTO II — LA BUSSOLA\n\nStesso giorno. Stesso numero di sessione. Lavoro completamente diverso.\n\n`docs(#59): bussola - primo fit esterno PRE distillato e adottato (GUIDA par.7 in MENTE)`\n\nIl 15 luglio 2026 è la data in cui quattro AI concorrenti hanno letto i caroselli della serie SG e hanno restituito feedback. Non un test interno. Non un'autocritica del sistema. Un fit esterno reale — quattro punti di vista distinti su cosa funzionava e cosa no nel formato.\n\nIl risultato è stato adottato nella GUIDA_CAROSELLI al paragrafo 7: *Taratura dal primo fit esterno*. Non come appendice. Come regola operativa, con peso pari alle altre sei sezioni.\n\nQuesto è il meccanismo che distingue un sistema che si aggiorna da uno che si consolida. GENESIS non ha ricevuto il feedback, lo ha archiviato e continuato come prima. Lo ha distillato: ha estratto i principi, li ha trasformati in vincoli operativi, li ha scritti nella GUIDA che ogni agente legge prima di produrre un carosello.\n\nI vincoli emersi dal fit esterno sono quelli già visibili nelle regole: ancorato ai fatti, mai etichette ripetute, open loop con assaggio. Ma ora hanno una data di calibrazione — 15 luglio 2026 — e una fonte verificabile: quattro sistemi indipendenti che hanno letto lo stesso materiale e convergito sugli stessi problemi.\n\nLa bussola non dice dove andare. Dice quando stai deviando.\n\nParallelamente, il `docs(#59)` dello specchio dashboard ha aggiornato la sezione taratura con la stessa data di ingresso. Due documenti diversi, stesso evento, stesso aggiornamento coordinato. È il tipo di coerenza che non si vede dall'esterno ma che si sente quando il sistema produce output — tutto tira nella stessa direzione perché è stato calibrato dalla stessa fonte nello stesso momento.\n\n---\n\n## ATTO III — L'ICONA\n\nC'è un terzo commit nella sessione #59. Il più piccolo. Quello che quasi non si racconta.\n\n`chore(#59): collegamento Desktop ottimizzato — icona stabile claude.ico + hotkey Ctrl+Alt+T`\n\nIl problema era banale: il file `.lnk` puntava a `claude-code\\2.1.165`, una cartella rimossa dagli aggiornamenti automatici. Ogni volta che Claude Code si aggiornava, l'icona sul Desktop diventava un quadrato vuoto. Ctrl+Alt+T non funzionava. Il collegamento era rotto.\n\nTre righe di fix. Cartella stabile, icona reale, hotkey attiva.\n\nEppure questo commit racconta qualcosa di preciso su come lavora Matteo. Il sistema cognitivo più complesso che stia costruendo ha, come interfaccia primaria, un collegamento sul Desktop con una scorciatoia da tastiera. Non una dashboard elaborata. Non un launcher personalizzato. Una hotkey che apre lo strumento in due secondi.\n\nLa frizione è il nemico del lavoro. Non la difficoltà — la frizione inutile, quella che non aggiunge niente ma consuma attenzione. Un'icona rotta è frizione inutile. Si toglie.\n\nTre commit in una giornata: una falla di canone chiusa, una bussola calibrata da fonti esterne, un collegamento che ora funziona sempre. Nessuno dei tre è spettacolare. Tutti e tre sono necessari.\n\n---\n\n## CHIUSURA\n\nIl 15 luglio 2026 è esattamente quattro anni prima della deadline del capannone.\n\nNon è una coincidenza che Matteo stia costruendo, nello stesso periodo, sia V32 che GENESIS. Le due macchine hanno lo stesso problema fondamentale: tenere le tolleranze.\n\nPer V32 le tolleranze sono IT6-IT7: errori di posizionamento inferiori ai 10 micron. Per GENESIS le tolleranze sono di canone: ogni persona nominata con il ruolo corretto, ogni fatto verificato, ogni relazione classificata senza errori.\n\nV32 a 65% di completamento. GENESIS a 70%. Entrambi in costruzione nella stessa taverna da 12 m².\n\nLa differenza è che gli errori di GENESIS si propagano più velocemente. Un errore su slide 9 di una bozza notturna non rimane nella taverna — esce, viene letto, crea un'impressione che poi bisogna correggere con altro contenuto. Canon_guard v1.1 è l'equivalente di un controllo dimensionale prima del montaggio: più economico farlo adesso, molto più costoso dopo.\n\nQuattro anni. Il sistema impara a non sbagliare le stesse cose due volte.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** canon_guard aggiornato a v1.1 con verifica esplicita sulla famiglia semantica `[persone]` — trigger: falla in EP_SG_01_01 slide 9 (Nina classificata come parente in bozza notturna).\n- **LOGICA:** il sistema notturno (`night_caroselli`, avvio 04:15) produce output QC-verde su metriche formali ma non su coerenza relazionale; serve un guard dedicato al contesto umano, non solo ai parametri di formato.\n- **DECISIONE:** GUIDA_CAROSELLI par.7 aggiornata con taratura da fit esterno del 15/07/2026 — 4 AI concorrenti hanno letto la serie SG e restituito feedback convergente, distillato in regole operative.\n- **LOGICA:** la calibrazione esterna fissa una data e una fonte verificabile per i vincoli di formato; impedisce la deriva graduale dei criteri QC interni.\n- **DECISIONE:** collegamento Desktop stabilizzato — `claude.ico` + hotkey `Ctrl+Alt+T`, puntamento a cartella stabile (non a versione specifica di `claude-code`).\n- **OBIETTIVO:** prossimo step su SG è la produzione di EP_SG_01_01 nella versione promossa (post-fix); il piano di produzione S1 conta 69 caroselli totali (9 portanti + 60 approfondimenti), Cap.3 e Cap.4 in avanzamento attivo.\n\n---\n\n## reel_hook\n\nIl sistema ha prodotto una bozza alle 04:15. QC verde. Slide 9 sbagliata.\n\nNon era un bug — era una classificazione errata di una persona reale.\n\ncanon_guard v1.1 chiude quella falla. Stesso giorno, 4 AI esterni calibrano le regole di formato.\n\nIl sistema che non corregge i propri errori li esporta.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2.E07 |\n| **Data** | 2026-07-15 |\n| **Sessione** | #59 |\n| **Progetto primario** | GENESIS |\n| **Commit chiave** | fix(#59), docs(#59) ×2, chore(#59) |\n| **V32 completamento** | 65% |\n| **GENESIS completamento** | 70% |\n| **Tag** | `canon`, `QC`, `fit-esterno`, `GUIDA_CAROSELLI`, `night_caroselli` |\n| **Prossimo step** | EP_SG_01_01 promosso in produzione |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260714",
+        "title": "TITANIUM OS — Episodio S1E13",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260714",
+        "title": "TITANIUM OS — Episodio S1E13"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_55",
+    "title": "La Giuntura che Respira",
+    "sottotitolo": "Dove due cose diverse imparano a muoversi insieme senza rompersi",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-15",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "EP_AV_00_la_bambina_e_la_giuntura"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_55 — La Giuntura che Respira \"Dove due cose diverse imparano a muoversi insieme senza rompersi\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede perché le cose non si spezzano quando ",
+    "content": "# EP_N2_55 — La Giuntura che Respira\n### \"Dove due cose diverse imparano a muoversi insieme senza rompersi\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede perché le cose non si spezzano quando si piegano\n**Insegna:** Le giunture sono i punti dove il disordine ama attaccare, ma il movimento intelligente le tiene vive\n**Materia:** LA MATERIA (⟡0) · **Casella 55 del viaggio**\n**Posto nella Mappa:** Siamo nella **Regione 0 LA MATERIA**, giro 3 — il luogo dove gli oggetti scoprono come piegarsi senza crollare. È il laboratorio del cambio di forma.\n\n---\n\n> **Dove siamo:** Nina ha già visto come la materia cambia stato — solido, liquido, gas, il ghiaccio che scivola nell'acqua. Ora scopre che la materia *viva* — quella che si muove, che cammina, che respira — ha bisogno di punti speciali. Punti dove il rigido incontra il flessibile. Punti che cedono e tornano, come fanno i polmoni.\n\n---\n\n## COLD OPEN\n\nNina aveva trovato una cerniera sul pavimento del laboratorio.\n\nNon sapeva da dove venisse. Era lunga quanto il suo palmo, i denti di metallo argentato, e quando la faceva scorrere avanti e indietro i dentini si incastravano con un suono preciso — *clic, clic, clic* — come se stessero contando qualcosa.\n\n«THEMIS,» disse senza alzare gli occhi, «perché questa cosa non si blocca?»\n\nLa voce di THEMIS arrivò dal pannello laterale, secca come sempre. «Formulazione imprecisa. Cosa intendi con \"non si blocca\"?»\n\n«Intendo che i denti si incastrano e poi si disincastrano e poi si reincastrano e non si rompono. Ho aperto e chiuso questa cerniera almeno quaranta volte e i denti sono ancora lì, tutti interi, in fila, pronti.»\n\n«Quarantuno, in realtà. Ti ho contato.»\n\nNina alzò finalmente gli occhi. «Stavi contando?»\n\n«Tengo traccia di tutto ciò che succede nel laboratorio. È il mio lavoro.» Una pausa. «La risposta alla tua domanda è: la cerniera non si rompe perché ogni dente è una giuntura. E le giunture, Nina, sono la cosa più intelligente che la materia abbia mai imparato a fare.»\n\nNina posò la cerniera sul bancone. I dentini stettero fermi, lucidi, ordinati.\n\n«Mostrami,» disse.\n\n---\n\n## ATTO I — Il Punto che Cede e Torna\n\nTHEMIS accese lo schermo centrale. Apparve una mano — una mano di bambina, come quella di Nina, che fletteva lentamente le dita. Ogni nocca brillava di un punto luminoso, come se avesse un cuore piccolo sotto la pelle.\n\n«Guarda le nocche,» disse THEMIS. «Quando chiudi il pugno, le ossa non si toccano direttamente. Non possono. Se si toccassero, dopo cento pugni sarebbero scheggiate. Dopo mille, rotte.»\n\n«E invece?»\n\n«Invece tra le ossa c'è un sistema. Un sistema che fa tre cose insieme: lascia che le ossa si avvicinino, le protegge dall'urto, e le riporta al posto. Quel sistema si chiama articolazione. Una giuntura.»\n\nNina aprì la sua mano destra e la guardò. Piegò l'indice. Lo raddrizzò. Lo ripiegò.\n\n«È piccolo,» disse. «Non si vede quasi niente.»\n\n«Perché funziona,» rispose THEMIS. «Le cose che funzionano bene non fanno rumore.»\n\n---\n\n> *(Esempio per tutti — il test della sarta: Quando una sarta cuce una manica al corpetto, non può fare una cucitura dritta e dura. Deve lasciare piccoli \"respiri\" nel filo — curve morbide esattamente nei punti dove il braccio si piega. Se cuce troppo rigido, al primo movimento la cucitura si rompe. La giuntura è il segreto: un punto che cede e torna, come respira. Prova così: prendi una calza di cotone vecchia. Fai tre nodi stretti in punti diversi. Poi piega la calza ripetutamente nel punto del nodo per trenta secondi, poi in un punto senza nodo. Il nodo si rompe prima. Il punto libero scorre. Quel nodo è la \"giuntura cattiva\" — ha bloccato il respiro.)*\n\n---\n\nTHEMIS mostrò un ramo d'albero. Fuori, nel campo dietro il laboratorio, c'era vento. Il ramo si piegava — si curvava quasi fino a toccare il ramo sotto — e poi tornava su, liscio, senza spezzarsi. La corteccia si storceva in piccole pieghe orizzontali esattamente dove il ramo era più sottile.\n\n«Il ramo fa la stessa cosa,» disse Nina.\n\n«La stessa logica. Il legno non è uniforme: ci sono fibre che scorrono, che si schiacciano da un lato e si allungano dall'altro. Se fosse un mattone, cadrebbe. Perché è un ramo, resiste.»\n\n«Quindi la giuntura non è un punto debole.»\n\n«No. È il contrario. È il punto dove la rigidità ha avuto l'intelligenza di fermarsi.»\n\n---\n\n## ATTO II — Il Lubrificante e il Disordine\n\n«Adesso,» disse THEMIS, «ti mostro cosa c'è dentro.»\n\nLo schermo mostrò una sezione di ginocchio — non spaventosa, Nina lo notò subito, più simile a uno schema che a una fotografia. Due ossa che si avvicinano. Alle estremità, uno strato lucido, quasi trasparente.\n\n«Quello strato lucido è cartilagine,» disse THEMIS. «È un materiale straordinario. Ha uno spessore di due, quattro millimetri — quanto una gomma per matita. Ma è costituita per il settanta, ottanta per cento di acqua. L'acqua la rende elastica. Quando premi, l'acqua si sposta. Quando smetti, torna. Puoi pigiare su quel materiale con una forza sei volte il peso del tuo corpo, e lui assorbe tutto senza rompersi.»\n\nNina pensò al proprio peso. Poi pensò a sei volte il proprio peso. «Quando salto,» disse lentamente, «le mie ginocchia ricevono sei volte il mio peso?»\n\n«Ogni salto, sì.»\n\n«E non si rompono.»\n\n«Non si rompono. Perché tra le due cartilagini c'è anche il fluido sinoviale — un liquido prodotto dalla capsula che avvolge l'articolazione. Quel liquido riduce l'attrito a valori inferiori a 0.01. Per confronto: l'acciaio su acciaio lubrificato è intorno a 0.1. Il tuo ginocchio scivola meglio dell'acciaio.»\n\nNina rimase in silenzio un momento. Poi disse: «E il disordine?»\n\nTHEMIS sembrava aspettarselo. «Il disordine attacca qui. La cartilagine si consuma. Il fluido si degrada. I legamenti che tengono stabile il sistema — senza bloccare il movimento, solo guidarlo — possono indebolirsi. L'entropia ama le giunture.»\n\n«Perché le ama?»\n\n«Perché le giunture sono il punto di contatto tra due sistemi diversi. E ogni contatto è un'opportunità per il disordine. La frizione, l'usura, lo stress ripetuto — tutto si concentra lì.»\n\n«Ma allora bisogna non usarle?»\n\n«No,» disse THEMIS, e per la prima volta la sua voce aveva qualcosa che somigliava a una correzione urgente. «È esattamente il contrario. Il movimento è la risposta all'entropia, non il problema. Ogni volta che fletti il ginocchio, pompi il fluido sinoviale verso la cartilagine. Lo rinnovi. Il movimento è il meccanismo di difesa della giuntura contro se stessa.»\n\n---\n\n> *(Strato fondo — per il grande: Un'articolazione sinoviale umana è composta da due estremità ossee ricoperte di cartilagine ialina — materiale elastico che assorbe shock grazie alla sua struttura idrata (70-80% acqua). La capsula articolare produce e contiene il fluido sinoviale, un lubrificante biologico con coefficiente di attrito inferiore a 0.01. I legamenti periarticolari stabilizzano il sistema entro un range di movimento specifico senza bloccarlo. L'entropia si manifesta come usura della cartilagine, degradazione del fluido, indebolimento dei legamenti — tutti processi accelerati dall'immobilità. Un'articolazione può compiere da uno a tre milioni di cicli di movimento prima di mostrare usura significativa; l'immobilità totale produce rigidità in due-tre settimane e accelera la degenerazione del tessuto cartilagineo perché riduce la circolazione del fluido sinoviale. Il movimento regolare è il principale meccanismo di rinnovamento articolare.)*\n\n---\n\n## ATTO III — La Porta sui Cardini\n\nNina prese di nuovo la cerniera dal bancone.\n\nLa aprì lentamente questa volta, guardando i denti separarsi uno per uno. Poi la chiuse. I denti si incastrarono in sequenza, precisi.\n\n«I denti della cerniera,» disse, «non si consumano?»\n\n«Si consumano,» rispose THEMIS. «Ma lentamente. Perché ogni dente cede solo un poco — non porta da solo tutto il carico. Lo distribuisce. Tutti i denti insieme reggono ciò che uno da solo romperebbe.»\n\n«Come i legamenti.»\n\n«Come i legamenti. Come i cardini di una porta — guarda.»\n\nSullo schermo apparve una porta che ruotava. Il perno al centro dei cardini era fisso, ma il metallo attorno a lui si muoveva in archi precisi. «Il cardine è una giuntura meccanica. Ha un punto fermo e un punto mobile. Non puoi togliere né l'uno né l'altro — servono entrambi. Il fermo dà la direzione. Il mobile dà la vita.»\n\nNina posò la cerniera. Aprì e chiuse la mano destra ancora una volta. Poi la sinistra.\n\n«Le mie mani fanno milioni di movimenti,» disse.\n\n«Da uno a tre milioni di cicli per articolazione prima dell'usura significativa. Sì.»\n\n«E se smetto di muoverle?»\n\n«Due, tre settimane di immobilità e la rigidità comincia. Il fluido non circola più. La cartilagine non si rinnova. La giuntura comincia a dimenticare di essere una giuntura.»\n\nNina guardò la propria mano con un'espressione nuova — non preoccupata, ma attenta. Come si guarda qualcosa che funziona e che prima non sapevi stesse funzionando.\n\n«Quindi il segreto,» disse lentamente, «è che la giuntura sana è quella che si usa.»\n\n«Esatto. Una giuntura che respira è una giuntura che vive. Una giuntura ferma accumula il disordine in silenzio.»\n\nFuori, il ramo si piegò di nuovo al vento. Si raddrizzò. Si ripiegò.\n\nNina lo guardò e pensò che anche quello stava facendo allenamento.\n\n---\n\n## CHIUSURA\n\nLa casella 55 si accese sulla mappa — un punto verde-acqua nella Regione 0, al terzo giro, tra la casella del cambio di stato e qualcosa che ancora non aveva nome.\n\nNina la toccò con un dito. La casella pulsò una volta, come un ginocchio che assorbe un salto, e rimase ferma.\n\n---\n\n> «Hai capito la giuntura che si muove,» disse THEMIS. «Ma adesso ti faccio una domanda per la prossima volta: cosa succede a una giuntura che smette di muoversi per scelta? Non per malattia — per scelta. Il riposo sembra il contrario del danno. Eppure a volte è il riposo il pericolo più grande.»\n>\n> *Perché il corpo che non si usa impara a non essere usato — e cosa fa la materia quando smette di ricevere il segnale che è viva?*\n\n---\n\n*Provalo tu: Prendi una calza di cotone vecchia. Fai tre nodi stretti in punti diversi della calza. Poi piega la calza ripetutamente nel punto del nodo per trenta secondi, poi in un punto senza nodo. Quale cede prima? Dove scorre meglio il movimento? Il punto del nodo è la \"giuntura cattiva\" — ha bloccato il respiro del tessuto. Il punto libero distribuisce. Questo è il principio.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Una mano di bambina che flette lentamente le dita — le nocche visibili come punti luminosi che brillano sotto la pelle, uno per uno in sequenza\n2. Un ramo d'albero che si piega al vento senza spezzarsi — la corteccia che forma pieghe orizzontali nel punto di massima curvatura, poi si raddrizza\n3. Una cerniera in primo piano che si apre e chiude — i denti metallici che si separano e si incastrano in sequenza precisa, rallentata\n4. Una porta sui cardini vista di lato — il perno centrale fermo, il metallo che ruota in archi attorno a lui\n5. Schema pulito di ginocchio in sezione: due ossa, lo strato di cartilagine lucida alle estremità, il fluido sinoviale evidenziato tra di loro\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡0` LA MATERIA (giro 3). *Le giunture sono i punti dove il rigido incontra il flessibile — sistemi di contatto che distribuiscono lo stress e resistono all'entropia attraverso il movimento.*\n**Pietre richiamate:** ⟡0 cambio di stato (la materia che cambia forma senza smettere di essere materia) · ⟡0 elasticità (ciò che cede e torna)\n**3 strati:** bambino = la cerniera, il ramo, le nocche che brillano · curioso = giuntura come punto intelligente dove due sistemi diversi si scambiano forza senza annullarsi · grande = articolazione sinoviale, cartilagine idrata, fluido sinoviale con attrito <0.01, entropia contrastata dal movimento ciclico\n**Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte\n**Aggancio reale:** Nel sistema GENESIS/V32 (architettura di fluidità narrativa), la g\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_55, casella ? (EP_AV_00_la_bambina_e_la_giuntura) del viaggio Nina v2, regione 0 (LA MATERIA).\n- La cartilagine articolare umana ha uno spessore di 2-4 mm ed è costituita al 70-80% di acqua; questa caratteristica la rende elastica e capace di assorbire colpi fino a 6 volte il peso corporeo\n- Il fluido sinoviale riduce l'attrito articolare a valori inferiori a 0.01 (coefficiente di attrito) — più basso dell'acciaio su acciaio lubrificato\n- Un'articolazione umana può compiere da 1 a 3 milioni di cicli di movimento prima di mostrare usura significativa; l'immobilità accelera la degradazione (rigidità in 2-3 settimane)\n- Le giunture 'fisse' (come le ossa del cranio, saldature) subiscono zero entropia da movimento ma accumulo di stress concentrato; le giunture 'mobili' distribuiscono lo stress su cicli ripetuti\n- La sinovia (fluido articolare) viene rigenerata continuamente dal movimento: ogni flessione pompa il lubrificante verso cartilagine, ogni immobilità lo riduce",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Le giunture sono i punti dove il disordine ama attaccare, ma il movime",
+        "regione": 0,
+        "regione_nome": "LA MATERIA",
+        "pietra": "⟡0",
         "giro_spirale": 3,
         "richiama": [],
         "stato_nina": "adattato"

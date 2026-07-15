@@ -93,6 +93,17 @@
 
 *Apertura: triage notturno pulito (solo 429 Semantic Scholar, blocker chiave noto).*
 
+**DA FARE — prossima sessione (#60), in ordine:**
+- [ ] **1. PRE_04 NINA «Tutto è vero»** — DA CREARE (chiude la serie PRE 4/4): patto di
+  verità lato Nina, gemello di PRE_SG_03; 1 slide presenta il binario Sistema (le due
+  porte si presentano a vicenda, PONTE); stampo serie v13, onde fase 31-40, ≤10, §2-bis
+- [ ] **2. REVISIONE EP_SG_01_03 «Il Distacco»** in `_BOZZE` (QC verde, arrivata 15/07
+  ore 12:16) → canone+§7 → promozione in `CAROSELLI/SISTEMA/` (fine rodaggio 3 bozze!)
+- [ ] **3. ESTENDERE LA CODA APPRENDISTA** dai piani (rodaggio completato con 01_03):
+  prossimi item S1 sistema in `DATA/caroselli_queue.json` — stanotte la coda è vuota
+- [ ] **4. RISULTATI TEST LINKEDIN PRE_SG_01** (reazioni/reach) → tararsi (gated Matteo)
+- [ ] 5. EP_N2_03 «la Misura» — primo episodio Nina nato con lo stampo nuovo (dopo PRE_04)
+
 - [✓] **Collegamento Desktop «Claude Code [TI]» ottimizzato**: l'icona puntava a
   `claude-code\2.1.165\claude.exe` che NON esiste più (installate 2.1.170/2.1.181 —
   si rompeva a ogni update). Estratta icona 256px in `TITANIUM_OS\claude.ico` (stabile,

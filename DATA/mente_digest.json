@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-14T23:37:48.496075",
+  "scanned_at": "2026-07-15T15:22:14.074222",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 1211,
+  "total_files": 932,
   "files_read": 13,
-  "files_skipped": 1198,
+  "files_skipped": 919,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 108.6,
+      "size_kb": 109.6,
       "readable": false,
       "extracts": {}
     },
@@ -162,2268 +162,245 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 23.3,
+      "size_kb": 25.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 23.3,
+      "size_kb": 25.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\00\\25ca157782af15508fed59bc5ceec07211b866",
-      "type": "unknown",
-      "size_kb": 5.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\00\\75ca219cf7c72cb2dca479d4a8a6b28a515c40",
-      "type": "unknown",
-      "size_kb": 11.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\00\\fe93c8cff4c9706f7513bc08e06a40ac565b38",
-      "type": "unknown",
-      "size_kb": 1.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\03\\1340c9cf24aa0bc720129f52b7bec29c0e7977",
-      "type": "unknown",
-      "size_kb": 1.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\03\\f6a4fd57ddfb3ca39745e3d38c234d7af03471",
-      "type": "unknown",
-      "size_kb": 3.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\04\\46fb60ce6ef4fab4c6a795a2c2ebd04a041dc5",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\05\\dc93cafabaf9772004bde699441664bc9c7381",
-      "type": "unknown",
-      "size_kb": 4.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\06\\7b8464befb601f0e6ab580b5051b00daa85f9d",
-      "type": "unknown",
-      "size_kb": 5.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\06\\91b438815f86c66bf07837cb12180476f370f3",
-      "type": "unknown",
-      "size_kb": 14.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\07\\933b4f630d85d6c4e60aa9fb0a03687ff578ee",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\07\\acf978635a5c644694d24806360e5be29e4e5d",
-      "type": "unknown",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\08\\14b3d46e4c513f2c293cda9f75225e25ec0a6c",
-      "type": "unknown",
-      "size_kb": 8.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\08\\525e3bc13fa5712b924948c858d3bc114db342",
-      "type": "unknown",
-      "size_kb": 15.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\09\\b138f8b56ce01769cbda4e050c19ccb9124d5c",
-      "type": "unknown",
-      "size_kb": 30.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0a\\49fc30317bf4e166c495988eb602b1100502c5",
-      "type": "unknown",
-      "size_kb": 1.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0a\\5734129ad75b9cd717fefbe14a0829aa6f6812",
-      "type": "unknown",
-      "size_kb": 10.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0a\\753baf085f060a993619471fbdff0cc0da4206",
-      "type": "unknown",
-      "size_kb": 14.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0b\\2ef9e2369b1f3f32860edda40771eec1874e91",
-      "type": "unknown",
-      "size_kb": 3.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0b\\31bff44f9b65ae5c89506e33468dd01dd203a7",
-      "type": "unknown",
-      "size_kb": 8.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0b\\5c9b01edfbc3c9c7635103ed4c4962c8242525",
-      "type": "unknown",
-      "size_kb": 5.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0c\\5f41b76cce2b83a1f7e88c02e968c3a62c1aef",
-      "type": "unknown",
-      "size_kb": 5.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0c\\7d14d633264401103a7b818f9b51bd08368ccd",
+      "path": ".git\\objects\\24\\371d1bd75e58f3dec905c27c0b51e40ec957f2",
       "type": "unknown",
       "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\0e\\0620acff450c45454c67f36c492544fab861d6",
-      "type": "unknown",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\0f\\47a035e6221cb394d51884aff4aa04773e0692",
-      "type": "unknown",
-      "size_kb": 0.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\11\\a69a4304ea5ca43ac2fc5e9918e6582af3d9c1",
-      "type": "unknown",
-      "size_kb": 12.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\12\\02adba8b114c68beb2502128151560f766df3d",
-      "type": "unknown",
-      "size_kb": 3.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\12\\12af64d7a65b6d3544174b2716aba48ad9b86d",
-      "type": "unknown",
-      "size_kb": 16.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\14\\a32e94fe2f91d07c2d28d8fba70fdacf39ad03",
-      "type": "unknown",
-      "size_kb": 2.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\14\\dcb9eec9533d2fb82d3f96cd00ba62d70043fc",
-      "type": "unknown",
-      "size_kb": 4.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\16\\bed4b1ae5c9b7bad0d15e4dfcfc2a320ab1922",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\17\\06ac84bdd206d3dcf4350cfbdd15af009089aa",
-      "type": "unknown",
-      "size_kb": 5.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\1c\\ba3b7c21acde46dcaff8557115555098531bb2",
-      "type": "unknown",
-      "size_kb": 0.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\1f\\1b25ce128987b28d43934476a2248abba2c5c5",
+      "path": ".git\\objects\\2e\\eff52ca4c8250fef3dc073401f7f12fe479d6b",
       "type": "unknown",
       "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\21\\1c7d41dd62b191d126372ab21c16ca6be5da55",
-      "type": "unknown",
-      "size_kb": 3.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\21\\ba25346a480639f95546da1291f258b8701890",
-      "type": "unknown",
-      "size_kb": 20.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\22\\5086b5d534cbb7a7a67cd3108ee5dd300f9d34",
-      "type": "unknown",
-      "size_kb": 8.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\22\\85b1c3ee19c2367959a2ed5e7bbb688b0cb4de",
-      "type": "unknown",
-      "size_kb": 7.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\23\\a9d2b0be1abb5865e209fa448cd92ca0e7acf0",
-      "type": "unknown",
-      "size_kb": 2.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\25\\89900f31093405e996e82181e943cb54367075",
-      "type": "unknown",
-      "size_kb": 3.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\26\\19a17f4a36403eaafab5a2af347743e417a73c",
-      "type": "unknown",
-      "size_kb": 15.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\26\\443d0f8b4ebc543a8649d3f3d2c73899907c5a",
+      "path": ".git\\objects\\31\\9cebc84f16d559f680521d469aad5649a1c0c7",
       "type": "unknown",
       "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\26\\d553b010cbc8a7cef8002fc9b5907d6217e490",
+      "path": ".git\\objects\\3d\\26e58fe06da604fcd4fe79670ed3d9c924ce62",
       "type": "unknown",
-      "size_kb": 9.0,
+      "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\27\\2a9ef53cee4d863b12d973634067e91db03f65",
-      "type": "unknown",
-      "size_kb": 6.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\28\\feebf49faa780550a11439f557e4c598a74e2f",
-      "type": "unknown",
-      "size_kb": 6.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2a\\465b4fa5c3e6635bccbdf0b890cd00a925f238",
-      "type": "unknown",
-      "size_kb": 8.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2a\\4a0daca86b7b4492303cf8e3bc9790e6f52cce",
-      "type": "unknown",
-      "size_kb": 3.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2a\\58b8a0d37d34c266f82e35161fefbe2db6d230",
-      "type": "unknown",
-      "size_kb": 9.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2a\\61eee78c053f25590287459d823c8edb2eaac7",
-      "type": "unknown",
-      "size_kb": 9.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2b\\759729512d937f1b29458a77b4859846993ee3",
-      "type": "unknown",
-      "size_kb": 14.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2b\\cc08382e7abdb5c53e37bd6df21718195e3f89",
-      "type": "unknown",
-      "size_kb": 3.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2b\\ff3fc0436dcfa27d5cfce925e9404ab0e09625",
-      "type": "unknown",
-      "size_kb": 6.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2c\\cfad2b494d34e9e59122d7bd47208083fce572",
-      "type": "unknown",
-      "size_kb": 15.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2c\\e8a543403141e66921eb42efa98e10624f70ca",
-      "type": "unknown",
-      "size_kb": 0.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2d\\3fc8c2ac2d209f8ebe7fbe734392288114bb6e",
-      "type": "unknown",
-      "size_kb": 1.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\2e\\3506aa3b7cfd8f76ad287ebb50de2283f77e47",
-      "type": "unknown",
-      "size_kb": 15.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\31\\1992b20111e7666ab402a1db059512efb73113",
-      "type": "unknown",
-      "size_kb": 30.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\31\\cbb4f3530c1ca676becde83752b720954a5eb1",
-      "type": "unknown",
-      "size_kb": 1.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\32\\2cc0dec92b19548f2a7d2b8c940e0a0d1d45dc",
-      "type": "unknown",
-      "size_kb": 8.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\32\\c692b0858d0a67f00dd5b66d81d3f9f4abdb44",
-      "type": "unknown",
-      "size_kb": 12.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\33\\630e3190fe27c17ca0748a0b1638ea77c00e04",
-      "type": "unknown",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\34\\9e3f0e72ebb0ec6365d79000137655d7d9f4f1",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\34\\d8eba1b423bce873f14788d3e7be85664beb08",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\35\\ce9fe0b45cb1dd465bea66c921a57128b6337c",
-      "type": "unknown",
-      "size_kb": 9.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\36\\bf5f7f67fb54616c9062d3d370b3fd19892111",
-      "type": "unknown",
-      "size_kb": 1.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\38\\6a35aa7a1774ce87ec2346fd7565fb770e949d",
-      "type": "unknown",
-      "size_kb": 1.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\39\\335ba0ff9f17447fa1f9b67520224b181a2d4e",
-      "type": "unknown",
-      "size_kb": 15.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\39\\9f971d0797b83354ab1d7d5871ec5e28105079",
-      "type": "unknown",
-      "size_kb": 15.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3a\\9a77e12980546f46855a4dd93f82f358dbae2b",
-      "type": "unknown",
-      "size_kb": 1.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3a\\d4bcc5b721ac17cb723268ff3b030ebee25233",
-      "type": "unknown",
-      "size_kb": 9.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3a\\e430088670ae5d9bc7c381ac1329e45cffd3db",
-      "type": "unknown",
-      "size_kb": 17.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3b\\6f9c05a13536f1d30c61f1b0d845b460163ce0",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3d\\f37f85959b1125c0292ae2c70bab77b2e22f3c",
-      "type": "unknown",
-      "size_kb": 2.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3d\\fbfde4020852444690d33c7be2ceaeff5c8cbf",
-      "type": "unknown",
-      "size_kb": 8.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3e\\3048ada592fa142a3b9e7cf106fd3101383194",
-      "type": "unknown",
-      "size_kb": 2.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3f\\00ce44580606fab0d3d8e13cce0c1de615e4a1",
-      "type": "unknown",
-      "size_kb": 11.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\3f\\ea3542e9870248dc9604a29f791898ef895f19",
-      "type": "unknown",
-      "size_kb": 1.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\42\\2b9f4f07c6d49021db0bcdc1f19767ddb0a9ce",
-      "type": "unknown",
-      "size_kb": 2.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\44\\671dd42da8449d67e2c8da60d38f346f124c88",
-      "type": "unknown",
-      "size_kb": 5.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\45\\e457a5be5796d8c232412bd6f753f898e17cd8",
-      "type": "unknown",
-      "size_kb": 5.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\46\\2c665bcfc384cedabbdc128d24b12269735cb1",
-      "type": "unknown",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\46\\904e2274d83fad6b2144a29268472eb26fb270",
-      "type": "unknown",
-      "size_kb": 15.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\47\\50a990dd65032044d10bc3a1375a4477b4a8ce",
-      "type": "unknown",
-      "size_kb": 15.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\47\\9a701f48da431787b66d40ada805bada1b08b6",
-      "type": "unknown",
-      "size_kb": 8.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\47\\a91836a05058d95fc8e3bdfa978599dcf03dbd",
-      "type": "unknown",
-      "size_kb": 9.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\48\\46f4c03863306cc9832a74e03f99cd2cbdc71a",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\49\\25902bf1d6d7b5990ae1c46cfe9f7b851cffba",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\49\\3466c39feda30fcceebe2e3ee11281af815561",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\49\\8e6ef29ccc5a6551e58f958cbfb8cc5a7c2474",
-      "type": "unknown",
-      "size_kb": 10.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4b\\77eba58ce4cb675a3a0f6ff010a2939afd3037",
-      "type": "unknown",
-      "size_kb": 15.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4b\\add0a7ee666939c90b70509d683edb2f02fa54",
-      "type": "unknown",
-      "size_kb": 14.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4c\\50ea789bea116920439d851bd26d5704e1b9ab",
-      "type": "unknown",
-      "size_kb": 0.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4c\\8aca92e8fe43f2c3ec55598efe84075933b46d",
-      "type": "unknown",
-      "size_kb": 15.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4c\\c3a2160e87d8c43b075c244effed612c3a874c",
-      "type": "unknown",
-      "size_kb": 6.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4d\\0190942a4dfb589dae409582852fb8f5e5556b",
-      "type": "unknown",
-      "size_kb": 11.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4e\\bf38e2de69eaa9861eb01de72aebdfb2f02575",
-      "type": "unknown",
-      "size_kb": 4.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4f\\01478e22f276fa6ec9f5bae6824ae967c91912",
-      "type": "unknown",
-      "size_kb": 8.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\4f\\5e3c4d21af0227a0adf15ff2164dd81ced4120",
-      "type": "unknown",
-      "size_kb": 6.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\50\\a7e4234b74e18380012fafa10ef334866a3a3b",
-      "type": "unknown",
-      "size_kb": 15.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\51\\5cb23ca64f92ff234771d40c1038d83d17083b",
-      "type": "unknown",
-      "size_kb": 14.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\51\\941c263a449b121650a480c45cd099efe02e54",
-      "type": "unknown",
-      "size_kb": 12.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\51\\ce44ed08d70a923ce19d8adf2d32f1a65659e7",
-      "type": "unknown",
-      "size_kb": 30.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\53\\1bb91ac48be16bc8665e53a5282ac8e3d7e45b",
-      "type": "unknown",
-      "size_kb": 4.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\53\\897ed0a194c7b8b4c4846549f8419c1d2b8f4a",
-      "type": "unknown",
-      "size_kb": 15.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\53\\c0dd69ffee45c485f6e9dc8980694e222fdd42",
+      "path": ".git\\objects\\3f\\546023f6531c67b87f79f7a2344d5e0f5da750",
       "type": "unknown",
       "size_kb": 13.6,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\55\\b22eea4efac052f3dfae3cf92770c0145657fb",
+      "path": ".git\\objects\\44\\23052dba3a76609a1e2d6b0ab056c7a0df9170",
       "type": "unknown",
-      "size_kb": 4.4,
+      "size_kb": 12.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\56\\6906e72dafbead4fa8b4014041026c429b9081",
-      "type": "unknown",
-      "size_kb": 16.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\57\\e078bda3e473b8d39f822b889c8459a6f4627a",
-      "type": "unknown",
-      "size_kb": 8.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\59\\a77cc7698958772e461098ee2c7dffb8e77c27",
-      "type": "unknown",
-      "size_kb": 5.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\59\\e1c9ec3ca6780bbe3a584de5fe6ff415a26aa9",
-      "type": "unknown",
-      "size_kb": 5.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\5a\\b81562d450cdd82e5595ec8f2159ba4f7f68fb",
-      "type": "unknown",
-      "size_kb": 6.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\5b\\c5a16aeeb1bbe1872ee24107676cf9d45b5969",
-      "type": "unknown",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\5c\\efa2bdfde04decbfa8df4191114cfa2e94fcd9",
-      "type": "unknown",
-      "size_kb": 5.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\5d\\5b0513ad6acf7bc79134180499b9fc78c0756b",
-      "type": "unknown",
-      "size_kb": 9.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\5f\\285a9bcf79aa0b036e40cadb9d53045a4b598e",
-      "type": "unknown",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\5f\\39ca115ea32ef458ef3f5c05e1ef29159dc609",
-      "type": "unknown",
-      "size_kb": 14.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\60\\365e31269132319090906716b8139feb1fa138",
-      "type": "unknown",
-      "size_kb": 4.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\60\\6d87d69eaf18732b8689241dc7d1f82b5e3ba4",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\61\\4258b244433cc6b8213326a25d27bf90a6f583",
-      "type": "unknown",
-      "size_kb": 4.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\61\\fc2422f66d1396c879cc7475f16802228e206b",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\62\\2604132388d82dfeb90b0441ec201ca7203282",
-      "type": "unknown",
-      "size_kb": 1.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\62\\f797dca96be7f718ef750c7bb0a4ca65322212",
-      "type": "unknown",
-      "size_kb": 6.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\63\\225f66470e5db1125125a015bd188ede99009c",
-      "type": "unknown",
-      "size_kb": 15.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\63\\5e701b21237bb8854f1a479c92bfc01f4f4d9a",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\63\\d05481187faa73825abfc6eb713fb271b66520",
-      "type": "unknown",
-      "size_kb": 8.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\64\\32aa998292e6b842cb7f39cb9048d079511782",
-      "type": "unknown",
-      "size_kb": 39.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\64\\3bc659f6a2789676f6a76d6331b005507325a2",
-      "type": "unknown",
-      "size_kb": 15.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\66\\291b799f7705aa5d2881aadb12ea696b3ad768",
-      "type": "unknown",
-      "size_kb": 0.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\67\\0fe8a58585f4ba6f53cc3d9a533e6341f758af",
-      "type": "unknown",
-      "size_kb": 30.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\67\\437be32afd7ceb9394ff0eb6c44e4c0a2d4e1c",
-      "type": "unknown",
-      "size_kb": 5.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\69\\ab3c899956035c34b8377ebe3faa5e0febbb28",
-      "type": "unknown",
-      "size_kb": 6.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\69\\f5c2624f8a8ef06b345b42286de0032c757792",
-      "type": "unknown",
-      "size_kb": 15.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\6a\\8ccc735619435119a56838985a60f7c08af5e9",
-      "type": "unknown",
-      "size_kb": 15.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\6b\\04e071e758fe03cf29b964b6318fc8427700fa",
-      "type": "unknown",
-      "size_kb": 9.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\6b\\9f8da1b7bb98184838def7a7f383f9ccfe7d21",
-      "type": "unknown",
-      "size_kb": 28.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\6c\\f4feda68dfd1070e256fba0add03f8ad35ecb6",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\6d\\206590dabe928fc6c51bfdb9b48cff41dbda43",
-      "type": "unknown",
-      "size_kb": 15.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\6e\\51473f4b0f0aef2e3dd5a22f32d9c10a990103",
+      "path": ".git\\objects\\44\\cebf57905772a46a441d9a3ba111daf7c93a00",
       "type": "unknown",
       "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\70\\2655de570c4615ad23d525f73757fe730998ac",
+      "path": ".git\\objects\\4b\\03e79ff8dc3aa4926140da236c662a9cfa6c84",
       "type": "unknown",
-      "size_kb": 15.2,
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\70\\584214e759040155ae1c12bd887bc09df98b5c",
+      "path": ".git\\objects\\58\\7269f0164f8b6efc0adcdf82ebb07ad02f7267",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\70\\9a55c7c7f848777517ddf0e8784062e9222f0a",
+      "path": ".git\\objects\\5b\\1d7532c715d7e2cb1b02e9441bfdd3d7f1aec6",
       "type": "unknown",
-      "size_kb": 4.5,
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\71\\3d4991eb8f6265eceacd3811fdc9c48ecf61f5",
+      "path": ".git\\objects\\6a\\d4676de302f55b16a408174fb276bd930e6953",
       "type": "unknown",
-      "size_kb": 15.8,
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\72\\bdfefea68a33eae16e02ec61c60a7c0870d809",
+      "path": ".git\\objects\\73\\662c0f43c09830ec5845474de5d3c0079bc305",
       "type": "unknown",
-      "size_kb": 13.2,
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\73\\b4162c577f9cba27b2aaed47d377be35bd0476",
+      "path": ".git\\objects\\75\\2943e96d0e9629cf6b6630bfd597c26232704d",
       "type": "unknown",
-      "size_kb": 9.0,
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\74\\0a98e1cb27490f8d3184570826fb2b948fb0c1",
+      "path": ".git\\objects\\75\\2aab8175ba77b0221f3c06eba6a2450c18cb80",
       "type": "unknown",
-      "size_kb": 16.1,
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\74\\97cd31d3946a1d392067b249f7df7fd7c3eda3",
+      "path": ".git\\objects\\78\\9a1349ecf9fcb9b1dd7b839ef3775c08613631",
       "type": "unknown",
-      "size_kb": 9.9,
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\75\\0874c532218cdba6fa9cbfa00bf4b9fc6a1468",
+      "path": ".git\\objects\\79\\4f17bbd21d4c049b1beb987334ffd448af6772",
       "type": "unknown",
-      "size_kb": 3.9,
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\76\\6aa0934504220147c697c8b2648a2382aeb520",
+      "path": ".git\\objects\\7b\\d838820e1b3f6ea450ba9740ac091cb1340507",
       "type": "unknown",
-      "size_kb": 5.1,
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\76\\d8ba2b32b85a81bfba7e95ddaf6abc84396814",
+      "path": ".git\\objects\\99\\91466e61b669c5517ecf7fa12ad9ec4aa22920",
       "type": "unknown",
-      "size_kb": 6.3,
+      "size_kb": 12.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\77\\17e367e8b2e33f63ba1dfca58cc252c73e28a9",
+      "path": ".git\\objects\\99\\968c914a3c590d1134ce11044ca18408672d29",
       "type": "unknown",
-      "size_kb": 0.3,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7a\\1305b1a88a8b74b7e198fdeae0c920b897a384",
+      "path": ".git\\objects\\9d\\e198d5850156d5e140453d9534b2fc95fc137c",
       "type": "unknown",
-      "size_kb": 6.9,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7a\\5416b07a835fef127e660f8a0b081c3ecf9b00",
+      "path": ".git\\objects\\ae\\fb3fe6416d9d0482054d93022155adbea94a78",
       "type": "unknown",
-      "size_kb": 5.0,
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7a\\85192b5e7e05cd933b76375cd75c53f8754db2",
+      "path": ".git\\objects\\bc\\eabd4d9eb0aec1be2028229e997ee8122b29f0",
       "type": "unknown",
-      "size_kb": 9.5,
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7b\\6e21f5343adc0f8255ae8428969cb725dcba48",
+      "path": ".git\\objects\\c4\\fb821feafe017f797f5b528d0cd5ebd55fd93e",
       "type": "unknown",
-      "size_kb": 3.4,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7b\\9f300dac30ddc3e3c7800d5eb527fe6fccd3c6",
+      "path": ".git\\objects\\c7\\2d4362511b5243d25c81dab84fdb93ed1e2cda",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7b\\f3889a89405ff42853a23b67f52bb78cc1e03f",
+      "path": ".git\\objects\\c8\\0b8077446affba20ea840278b8e26acafdad3a",
       "type": "unknown",
-      "size_kb": 7.5,
+      "size_kb": 8.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7d\\499c6e2b0a9c840ff201cf7d6ed649d2bca0dd",
+      "path": ".git\\objects\\cb\\0574eef7381ab701a3a43f3db8943a8a9f43fa",
       "type": "unknown",
-      "size_kb": 6.8,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7e\\21f635d2acc281bda4185422fa9474bb7765c2",
+      "path": ".git\\objects\\cc\\377c6be0903aad2b4a99ee66d1bea8195218c2",
       "type": "unknown",
-      "size_kb": 16.7,
+      "size_kb": 13.5,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7e\\46ea7cbdcd98f08c8c3c1055bedd7c9f4c59ae",
+      "path": ".git\\objects\\e9\\96c01b32afe6a5fa7709bc826007656a823448",
       "type": "unknown",
-      "size_kb": 8.3,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7e\\c5d6f68dd050f3baafda4e332149c8da97c28a",
+      "path": ".git\\objects\\ea\\a96a35690a6fc693d5c1e3a930783046105215",
       "type": "unknown",
-      "size_kb": 13.8,
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\7e\\f75e8343c15e3b03e92622793e11b827268e15",
-      "type": "unknown",
-      "size_kb": 6.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\7f\\a771c976feafa6e79ca918cb4d288162ca6326",
-      "type": "unknown",
-      "size_kb": 15.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\81\\ce0d112376d7aef9ec4cb0345312b50b65bd2f",
-      "type": "unknown",
-      "size_kb": 9.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\82\\375afce997422d89cdffe7c5c59d9a6bfd2975",
+      "path": ".git\\objects\\f5\\c643a3c8fcb3d707d24322967f96eb49c12558",
       "type": "unknown",
       "size_kb": 13.4,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\82\\bc53a126975fdc5b04a3259a708a7755c099e8",
+      "path": ".git\\objects\\f7\\652f1121d3731e2d292c640ba6f5be883cee1d",
       "type": "unknown",
-      "size_kb": 9.3,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\83\\0b68bb340f73caa57ad7042e23494a78159a36",
+      "path": ".git\\objects\\info\\commit-graphs\\commit-graph-chain",
       "type": "unknown",
-      "size_kb": 0.4,
+      "size_kb": 0.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\83\\354adf9bb210bbc689920399d2f3506c3c0887",
-      "type": "unknown",
-      "size_kb": 2.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\83\\380d0838debdff2c6734cd2cb01864d66ec7e6",
-      "type": "unknown",
-      "size_kb": 4.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\84\\7d55ad24ad73ced857da653c9ed03d443ae6e8",
-      "type": "unknown",
-      "size_kb": 15.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\85\\c47302858afd75dfcf104b0d065b6f2314c0df",
-      "type": "unknown",
-      "size_kb": 4.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\86\\090aa3ff2c8b876c1d0530396b0e0762953aa8",
-      "type": "unknown",
-      "size_kb": 4.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\86\\6d7c0aa083a64570cc5bcc453927a53272add0",
-      "type": "unknown",
-      "size_kb": 2.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\86\\75771075891ad480baf593abee2ad92fdd5c8c",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\87\\c8f8af46650ce6dd86971a2dac49b47400dc5d",
-      "type": "unknown",
-      "size_kb": 2.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\88\\e98df1296e60425db4fc3b7317755e7d3d8286",
-      "type": "unknown",
-      "size_kb": 10.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\89\\7468b1b0e9ac1a8bafbdf2be2bb58d998734b9",
-      "type": "unknown",
-      "size_kb": 7.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\89\\7d93fd9afa0e01112651f77553649336f82c27",
-      "type": "unknown",
-      "size_kb": 10.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\89\\a29a45289e3eeedfd9eec7670f4dc27e810602",
-      "type": "unknown",
-      "size_kb": 0.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8a\\8612c695dff590f700949a67790e66c4752db0",
-      "type": "unknown",
-      "size_kb": 16.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8a\\bd907fc2a2d78b4dd1458e4e2f9ce9e4ff1a18",
-      "type": "unknown",
-      "size_kb": 15.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8b\\e7e15f803daa946bdd6376e2ba15f8450aa1c3",
-      "type": "unknown",
-      "size_kb": 0.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8c\\b65e6d86e4a3f6afd40c47d9d7b1ae7397d4ce",
-      "type": "unknown",
-      "size_kb": 6.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8e\\0e01ae7fc68f8e6f313718188c325800c0fe81",
-      "type": "unknown",
-      "size_kb": 0.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8e\\4a06e51008c0113117a1f006cd40292498bcc1",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8f\\31056c228eaf4f82f745142b3639388cab9191",
-      "type": "unknown",
-      "size_kb": 35.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\8f\\efda4a19822b7e7d406cba11c7c862c4564c06",
-      "type": "unknown",
-      "size_kb": 8.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\90\\2d3f6e93cb15b6a8865cee6cc3b28ff6896c46",
-      "type": "unknown",
-      "size_kb": 1.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\94\\6645b53d87c1c7eb1c2dc9fb17d1f5c58629fa",
-      "type": "unknown",
-      "size_kb": 0.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\94\\d4afcf099bc9076464672f0c6ec6bb95179233",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\96\\a30a21dfcd21f3d6b20d25cd1768cb8717e077",
-      "type": "unknown",
-      "size_kb": 5.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\97\\3f93ebdba363249382aa444325a8a2987c2eb7",
-      "type": "unknown",
-      "size_kb": 6.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\97\\861bffe4ea013e6a714492e4e40b685617d1cd",
-      "type": "unknown",
+      "path": ".git\\objects\\info\\commit-graphs\\graph-80a767bda3e6ae7450159ad46a4be4d5dabaf94d.graph",
+      "type": "graph",
       "size_kb": 6.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\99\\1abffd9bf8cd8096f3a0696c397b7292763e91",
-      "type": "unknown",
-      "size_kb": 13.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\99\\a604623921a5731d28fd376d05a5c1c6cb0abc",
-      "type": "unknown",
-      "size_kb": 0.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9a\\c3c50a7b3efe7c06e7f226b15e517b4a772ebf",
-      "type": "unknown",
-      "size_kb": 222.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9b\\642a443cab8bd88ca052ccedc0e1fd5d4b3b05",
-      "type": "unknown",
-      "size_kb": 3.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9b\\a308454b6f1a16a7f55d54324cc322cd214a40",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9b\\ce1db8335ea99307c4130aec1cfa91f1f26b97",
-      "type": "unknown",
-      "size_kb": 9.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9c\\62ce25230f451592d297d5868f162ed05752b9",
-      "type": "unknown",
-      "size_kb": 11.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9c\\bd2c295cc373b09bce7f12c4e0ab4ab7b64746",
-      "type": "unknown",
-      "size_kb": 3.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9c\\c572531725f4facf36d48c1164e64b2b2c7505",
-      "type": "unknown",
-      "size_kb": 8.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9c\\fa3fdeedc4a45ebab1ef6303ac811e3ba690d2",
-      "type": "unknown",
-      "size_kb": 0.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9d\\4e68da54c409a149dea896aa8ae8bcc99098ba",
-      "type": "unknown",
-      "size_kb": 8.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9e\\3ac4b9bfada8b9baec611cc996c96809957695",
-      "type": "unknown",
-      "size_kb": 77.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9e\\4d174f3e68c88b8b8d330a391250876c0afb40",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9f\\073e043d4e43d0e44066b34d850ef16959e84c",
-      "type": "unknown",
-      "size_kb": 3.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\9f\\bdfc757897e0c1ea79a8c3d74915235aab9147",
-      "type": "unknown",
-      "size_kb": 8.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a0\\9d85f68f90489f22dac52256e6b0e5f73e5961",
-      "type": "unknown",
-      "size_kb": 4.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a1\\279ccbdb644d88a2f3369f107e33c7c9f4e007",
-      "type": "unknown",
-      "size_kb": 23.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a1\\2d50f811ab7dd6fc695431ec403164e9a54023",
-      "type": "unknown",
-      "size_kb": 8.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a1\\e0498ec230b16c990153eccbc4e2b4cc26e524",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a2\\1c69ff65066aaf03c0be7a0d781f9f82893154",
-      "type": "unknown",
-      "size_kb": 30.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a4\\6bfaf9a62a5ab77e9a065575f3aefdad00eac4",
-      "type": "unknown",
-      "size_kb": 9.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a4\\cd002885e0bfce178070965ea145cc2318bdaf",
-      "type": "unknown",
-      "size_kb": 2.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a5\\6fe79926559e89437b2c6b9f9bc89378737765",
-      "type": "unknown",
-      "size_kb": 10.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a7\\6b04523734b47544787c24f9e91d85a611078d",
-      "type": "unknown",
-      "size_kb": 9.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a7\\98ef7189ae917d36af9ddb799955aa755cd706",
-      "type": "unknown",
-      "size_kb": 2.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a7\\f02fc8245761dc4e56d71a0050e272c7ce9389",
-      "type": "unknown",
-      "size_kb": 2.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a8\\f479c47adfcf50eab19c1041260b59dc838c5c",
-      "type": "unknown",
-      "size_kb": 15.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a9\\32a8dbc4f62075cf81da8028ac3599abe9e0fc",
-      "type": "unknown",
-      "size_kb": 3.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\a9\\fb9f6b5385ab81a4fc2bfbb9a7bcfedc5f999e",
-      "type": "unknown",
-      "size_kb": 9.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ab\\abd0e0665a360b8637ab52d0f4759981503816",
-      "type": "unknown",
-      "size_kb": 11.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ab\\ad24d2d94673eaafdff64fd5259b5fc6f472eb",
-      "type": "unknown",
-      "size_kb": 4.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ab\\ca1d2f4ab915435910e41e8acc37ef98d198ae",
-      "type": "unknown",
-      "size_kb": 6.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ac\\81774deea4d7db46214393d7673ac005f13a12",
-      "type": "unknown",
-      "size_kb": 14.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ad\\3ca26e8823d43380681f7e5cd20ee0524a64b7",
-      "type": "unknown",
-      "size_kb": 16.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ae\\debd8ac26e0c4356871365fc878e2f56a64e36",
-      "type": "unknown",
-      "size_kb": 3.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b0\\f19a19cc9d8e91249f00933daca3df4a0da6ee",
-      "type": "unknown",
-      "size_kb": 6.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b1\\4b7b42d940a280e8ae46e8080bad2e7dc872c6",
-      "type": "unknown",
-      "size_kb": 9.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b1\\9237344344966109a8c6af113b90057a50921f",
-      "type": "unknown",
-      "size_kb": 3.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b1\\e79fe79c9736e55c87fe158e1a475dafd8d5a0",
-      "type": "unknown",
-      "size_kb": 9.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b2\\27e9252037cbe2a0b65192f5b6c41a2a4a6074",
-      "type": "unknown",
-      "size_kb": 9.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b3\\53e3b9bee5f63765cb9d0bc76d9f8501b3469c",
-      "type": "unknown",
-      "size_kb": 18.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b3\\aa693c88a171292a88e868f37fafcaffe6c5dc",
-      "type": "unknown",
-      "size_kb": 9.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b4\\2851a0581f28750e121166862ad6f1421ec7fc",
-      "type": "unknown",
-      "size_kb": 12.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b4\\75373332f8294aadf8590eabff5aa80bf5ea68",
-      "type": "unknown",
-      "size_kb": 10.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b5\\19b6b50935496eee27b5bbbb970845e4b1a647",
-      "type": "unknown",
-      "size_kb": 14.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b5\\e8504bd345f7fa225901b315c40304be522889",
-      "type": "unknown",
-      "size_kb": 5.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b6\\2aa9a2f5574c591ed3f400ff8f1b3daaafc4bc",
-      "type": "unknown",
-      "size_kb": 6.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b6\\557332489e36d889e497d072c9474420a5f3f5",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b6\\a4cbe0430cd38fd1c5bc9888a9384b893087ca",
-      "type": "unknown",
-      "size_kb": 0.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b6\\d6f6d92168a65f80566389cd78c2efef58678d",
-      "type": "unknown",
-      "size_kb": 7.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\b9\\c83df8ccfbbbe5a1d03b85acb55ee19010f888",
-      "type": "unknown",
-      "size_kb": 3.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bb\\3b1eade44f630b9491238ad2c77f633efddf1a",
-      "type": "unknown",
-      "size_kb": 9.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bb\\65ab9c327f4d9a41c73845d3b77a491c9b0eaf",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bb\\6e2938ab7c71501cd764af797e6a9ab6cbbe2f",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bb\\f2103e7d32b75ee0dc5c217cd7fdcb14e9be70",
-      "type": "unknown",
-      "size_kb": 15.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bc\\cb7e47fe56f12b9dabfc34704d4d36403b0c3b",
-      "type": "unknown",
-      "size_kb": 2.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bc\\de0e53867283ab55305e581395f66f67338338",
-      "type": "unknown",
-      "size_kb": 10.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bd\\01259473ea1630e0bca2655e3981308f480d94",
-      "type": "unknown",
-      "size_kb": 4.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\be\\67277a121cd1fcd6b9fc4fec57b313d4c836e7",
-      "type": "unknown",
-      "size_kb": 7.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\be\\82805bd8fe4f19e6dff1f55c5dc1317ab012e1",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bf\\1bfdac9916cc6755a08c25afecac2be82572e2",
-      "type": "unknown",
-      "size_kb": 28.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c0\\808667352d47527247662ec11a3984b31184be",
-      "type": "unknown",
-      "size_kb": 4.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c1\\905c1ec1222450aec4d796b278fc735f2cea73",
-      "type": "unknown",
-      "size_kb": 1.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c1\\ae1cc4805283d2e977e9ede12fc2412534c521",
-      "type": "unknown",
-      "size_kb": 6.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c1\\baac9f640679bfe31d2e1d8c74d5b1665527f1",
-      "type": "unknown",
-      "size_kb": 2.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c2\\14b771cdf07319c62eaa22c4f6704bfa013581",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c2\\70985d53558ddbe7ba4be018190fc6e8e06911",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c2\\e2766bfcd5048156d286f76ba76c26de985523",
-      "type": "unknown",
-      "size_kb": 0.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c3\\034f3b3e1e5077af3d22fa6436032d9370abf7",
-      "type": "unknown",
-      "size_kb": 7.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c3\\459b68c3d00f096f7107670d93c09e1523e69d",
-      "type": "unknown",
-      "size_kb": 6.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c3\\49d74811d80ad02d45168ab179cb43993f9f30",
-      "type": "unknown",
-      "size_kb": 0.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c4\\390dd7d8d661dfee32b8e8ba35f32df0760166",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c4\\9c8c560f5eefec83295318feb1466a890aa018",
-      "type": "unknown",
-      "size_kb": 9.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c6\\2449970a82e69e38258afd2e43dd7a5498871e",
-      "type": "unknown",
-      "size_kb": 4.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\c8\\46bcad2f7238c3906ae639ad218e12e69c38fc",
-      "type": "unknown",
-      "size_kb": 16.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\cb\\c4b5ca33d5a7dee6865986de075f25400c0a0a",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\cc\\9d63c113e1dbefd111d59ac10464f24d026fdd",
-      "type": "unknown",
-      "size_kb": 4.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ce\\c0394e01df8288769700df67af2e733f1b6a50",
-      "type": "unknown",
-      "size_kb": 15.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\cf\\413b109a43949eb91bde06bdd38c18c60af897",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d2\\4c72196a316cc4c2c99febd7c9d7ec7085988c",
-      "type": "unknown",
-      "size_kb": 9.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d2\\89bd5e0b44cab10cd8bd34966307d99b88acdf",
-      "type": "unknown",
-      "size_kb": 3.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d3\\f78346ff8041dd870253387bf384001cef9b61",
-      "type": "unknown",
-      "size_kb": 2.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d5\\7f15079865bb69571591c89ab45d2010420247",
-      "type": "unknown",
-      "size_kb": 7.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d6\\2d9b5421694bd5397a56cedb955b104ab5aec3",
-      "type": "unknown",
-      "size_kb": 11.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d6\\c05eead4146b7627ba1b7ec43334df652cffeb",
-      "type": "unknown",
-      "size_kb": 9.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d6\\d2ef607b4d3a94b50e0e62895f28ad88f54353",
-      "type": "unknown",
-      "size_kb": 9.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d7\\157dc15e410d4c2cd28d44f63e8c9da4ea5d69",
-      "type": "unknown",
-      "size_kb": 22.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d7\\958b216f7c617e42d9aae159b42d2bbaf3ff90",
-      "type": "unknown",
-      "size_kb": 0.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d7\\a837265010ced2fe88bfa16d92dd99531e96b1",
-      "type": "unknown",
-      "size_kb": 3.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d8\\8e8c98e086bd3374d12a33f91b0e6fb48e35a4",
-      "type": "unknown",
-      "size_kb": 10.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\d9\\4e662f165c35410866c888bdfed980e49d2080",
-      "type": "unknown",
-      "size_kb": 0.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\da\\8b871cb3e0bf5aedcc7805fc9bffcfb3eee131",
-      "type": "unknown",
-      "size_kb": 1.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\db\\1e0f884cd46bb1079a93a426e6e488502bfeaa",
-      "type": "unknown",
-      "size_kb": 13.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\dc\\0f6bd1dbe41bf6ba19025db5c2c8a68ddc08b7",
-      "type": "unknown",
-      "size_kb": 1.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\dc\\a99f88439f6fef16615516ab53377724949d43",
-      "type": "unknown",
-      "size_kb": 3.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\de\\2ea5db42aa18e78aa006cb74f11ef2779d8ed0",
-      "type": "unknown",
-      "size_kb": 0.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\de\\3701b83c6bad5c66bdaba09f8a9287530a53f5",
-      "type": "unknown",
-      "size_kb": 9.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e0\\64bbed10a6667f3e3c5f7e6a02fcbc2b810bfb",
-      "type": "unknown",
-      "size_kb": 6.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e0\\f1513cccd27be886156ff4e5fd69c46b1e52bf",
-      "type": "unknown",
-      "size_kb": 2.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e2\\72a58d9294fd18d9f578c515fe80e15090f00f",
-      "type": "unknown",
-      "size_kb": 10.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e2\\8a09ca54dac65fdae724c88ab680e5848ac4e4",
-      "type": "unknown",
-      "size_kb": 35.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e2\\aa5b4584e55fd30feb01d83dff3364c4b13db4",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e3\\fe481a7b10924643eae4ec0e85b6894d46c501",
-      "type": "unknown",
-      "size_kb": 4.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e4\\0d4cc04af386cf3b1efc6035cf6f0c773c692a",
-      "type": "unknown",
-      "size_kb": 4.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e4\\9a987b8fa078fd9a6a4a94b7c75059f2c9034f",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e4\\dda5cc960029c7e461bca544f4b5a44613397c",
-      "type": "unknown",
-      "size_kb": 0.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e5\\54f052e991e0130c4c3a241bb85d02d5f57995",
-      "type": "unknown",
-      "size_kb": 0.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e7\\2dbb7a12c1522a218028ee461fadf23f484b3a",
-      "type": "unknown",
-      "size_kb": 3.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e8\\1c965199e5a1a48c781a360f73f7e8a0d44702",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e8\\29ad87e414607944bcd51dba4f634ecb1da54d",
-      "type": "unknown",
-      "size_kb": 12.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e8\\4b52a622ec3813c34306ebd83be36eb20c16ac",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e8\\74ff8b8280ebc38d7fab6f1e8426d3b8c5697c",
-      "type": "unknown",
-      "size_kb": 4.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ec\\b95d5186aa1bd8e056acb271f04753317d39d0",
-      "type": "unknown",
-      "size_kb": 4.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ec\\bde4311549898d4d4168b7fc599aeaf32a649a",
-      "type": "unknown",
-      "size_kb": 3.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ed\\cca58ed5cbcdabe059e6b4129922a6dc3945ab",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f0\\a3feede07ed0d72c7950ad0bef196851c91875",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f4\\ce5e5a22ad263f4c8b4e93b52f5a4b1e7d8b5d",
-      "type": "unknown",
-      "size_kb": 1.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f5\\0592b915c975665a75230f2a0ba8b5ae34b7bc",
-      "type": "unknown",
-      "size_kb": 0.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f5\\a069964b64d50dbb918d91c38f78070b7cb907",
-      "type": "unknown",
-      "size_kb": 10.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f6\\fd509124fa94685460795caa0ebf3456feffdd",
-      "type": "unknown",
-      "size_kb": 8.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\f7\\467f2e525510d89c73a560e5d5621b65f5df46",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fb\\8faab6554d4bf5223af1d9ede1749f6c31b2f4",
-      "type": "unknown",
-      "size_kb": 3.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fb\\b6d32f406efd441b75cd3cc090650f35a1dff4",
-      "type": "unknown",
-      "size_kb": 7.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fb\\cd029be52dedac2858bd30b7da8fda1a2fdd7e",
-      "type": "unknown",
-      "size_kb": 17.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fc\\b030bb3a7327f3e10b1ab86479494766e687f1",
-      "type": "unknown",
-      "size_kb": 4.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fd\\3ecd5be44b26e9f49966d4218baf0e09c38a5b",
-      "type": "unknown",
-      "size_kb": 0.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fd\\b07b44165c3ab0b87676f8a972e857bc07342c",
-      "type": "unknown",
-      "size_kb": 7.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fd\\e3c70a5d999165c35140ff10565b37b22e1058",
-      "type": "unknown",
-      "size_kb": 4.6,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\fe\\6b904e20601f1a6c0df6bb7c1570aeafa05933",
-      "type": "unknown",
-      "size_kb": 15.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ff\\5ca0de5ebb1050e000f2a880aacdde454528b0",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ff\\8ec36f9870c198bc829eabebad7610e2f05ff0",
-      "type": "unknown",
-      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
@@ -2437,7 +414,7 @@
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 337.2,
+      "size_kb": 357.5,
       "readable": false,
       "extracts": {}
     },
@@ -2582,6 +559,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\pack\\pack-c0904494b5918a186143f7cd20428ae43490c409.idx",
+      "type": "idx",
+      "size_kb": 21.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\pack\\pack-c3679d83a70df1fc1329678bd92ce1205cdc5322.idx",
       "type": "idx",
       "size_kb": 11.4,
@@ -2638,16 +622,23 @@
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-ebd0697f8a01ad5809e2b55d90659c2924d7d822.pack",
-      "type": "pack",
-      "size_kb": 3156.2,
+      "path": ".git\\objects\\pack\\pack-fdbcbef89853108cb2896aaa6fda02cc9d99064b.idx",
+      "type": "idx",
+      "size_kb": 32.0,
       "readable": false,
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-ebd0697f8a01ad5809e2b55d90659c2924d7d822.rev",
+      "path": ".git\\objects\\pack\\pack-fdbcbef89853108cb2896aaa6fda02cc9d99064b.pack",
+      "type": "pack",
+      "size_kb": 4581.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-fdbcbef89853108cb2896aaa6fda02cc9d99064b.rev",
       "type": "rev",
-      "size_kb": 1.6,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
@@ -4332,7 +2323,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\atto_v_assoluto_v6.md",
       "type": "md",
-      "size_kb": 28.5,
+      "size_kb": 28.4,
       "readable": false,
       "extracts": {}
     },
@@ -4381,7 +2372,7 @@
     {
       "path": "CV\\CV.md",
       "type": "md",
-      "size_kb": 6.0,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
@@ -4453,7 +2444,7 @@
     {
       "path": "GENESIS\\fatti_dalle_storie.md",
       "type": "md",
-      "size_kb": 224.0,
+      "size_kb": 227.7,
       "readable": false,
       "extracts": {}
     },
@@ -4648,7 +2639,7 @@
     {
       "path": "KNOWLEDGE\\AUTOMIGLIORAMENTO.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
@@ -4725,7 +2716,7 @@
     {
       "path": "KNOWLEDGE\\MEMORIA_CLAUDE\\feedback_no_recuperato.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
@@ -4800,6 +2791,13 @@
       "extracts": {}
     },
     {
+      "path": "KNOWLEDGE\\MONDO\\FIT_ESTERNO_20260715.md",
+      "type": "md",
+      "size_kb": 6.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "KNOWLEDGE\\MONDO\\GIOCO\\_DOSSIER.md",
       "type": "md",
       "size_kb": 6.5,
@@ -4809,21 +2807,21 @@
     {
       "path": "KNOWLEDGE\\MONDO\\GUIDA_CAROSELLI.md",
       "type": "md",
-      "size_kb": 10.5,
+      "size_kb": 12.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\INDICE_CAMMINO.md",
       "type": "md",
-      "size_kb": 11.1,
+      "size_kb": 11.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\LINEA_GUIDA_NINA.md",
       "type": "md",
-      "size_kb": 13.6,
+      "size_kb": 13.7,
       "readable": false,
       "extracts": {}
     },
@@ -4872,14 +2870,14 @@
     {
       "path": "KNOWLEDGE\\MONDO\\PIETRE.md",
       "type": "md",
-      "size_kb": 13.8,
+      "size_kb": 13.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\PONTE_SG_NINA.md",
       "type": "md",
-      "size_kb": 6.2,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
@@ -4893,7 +2891,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\QUALITA_BATCH_44.md",
       "type": "md",
-      "size_kb": 4.8,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
@@ -4914,7 +2912,7 @@
     {
       "path": "KNOWLEDGE\\NINA_DESIGN_DEFINITIVO.md",
       "type": "md",
-      "size_kb": 4.6,
+      "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
@@ -4942,7 +2940,7 @@
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\i_protagonisti.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -5033,7 +3031,7 @@
     {
       "path": "KNOWLEDGE\\REPOS\\OpenDAN_multi_agent.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
@@ -5089,7 +3087,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\towards_6g_wireless_communication_networks_vision_enabling_t.md",
       "type": "md",
-      "size_kb": 2.5,
+      "size_kb": 2.7,
       "readable": false,
       "extracts": {}
     },
@@ -5180,14 +3178,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\brave_new_world_service_robots_in_the_frontline.md",
       "type": "md",
-      "size_kb": 1.7,
+      "size_kb": 1.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\caging_the_agents_a_zero_trust_security_architecture_for_aut.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 2.3,
       "readable": false,
       "extracts": {}
     },
@@ -5348,14 +3346,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\multiagent_orchestration_2025.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\parameter_efficient_fine_tuning_of_large_scale_pre_trained_l.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
@@ -5418,7 +3416,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\towards_6g_wireless_communication_networks_vision_enabling_t.md",
       "type": "md",
-      "size_kb": 2.5,
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
@@ -5432,7 +3430,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\wizardlm_empowering_large_pre_trained_language_models_to_fol.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
@@ -5495,7 +3493,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\advances_in_connection_techniques_for_raw_bamboo_structuresa.md",
       "type": "md",
-      "size_kb": 2.7,
+      "size_kb": 2.8,
       "readable": false,
       "extracts": {}
     },
@@ -5516,7 +3514,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analisis_momen_rotasi_sambungan_haunched_gusset_plate_balok_.md",
       "type": "md",
-      "size_kb": 2.9,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
@@ -5530,7 +3528,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analyzing_the_effects_of_lubrication_techniques_on_cnc_spind.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
@@ -5544,14 +3542,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\computer_simulations_predict_that_chromosome_movements_and_r.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\concept_and_prototype_of_a_3_component_extruder_for_fusion_d.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -5565,14 +3563,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\data_driven_design_of_epoxygranite_machine_foundations_bayes.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\design_and_analysis_of_epoxy_granite_vertical_machining_cent.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
@@ -5586,7 +3584,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\development_of_a_new_measuring_method_for_spindle_rotation_a.md",
       "type": "md",
-      "size_kb": 0.8,
+      "size_kb": 2.9,
       "readable": false,
       "extracts": {}
     },
@@ -5628,7 +3626,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mathematical_model_and_methodology_of_express_assessment_cri.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
@@ -5656,7 +3654,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\neural_emulation_of_gravity_driven_geohazard_runout.md",
       "type": "md",
-      "size_kb": 2.7,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
@@ -5677,7 +3675,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\novel_procedures_for_sustainable_design_in_structural_rehabi.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
@@ -5719,7 +3717,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\stiffness_analysis_of_parallel_manipulators_with_preloaded_p.md",
       "type": "md",
-      "size_kb": 3.0,
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -5754,7 +3752,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\the_robotic_multiobject_focal_plane_system_of_the_dark_energ.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
@@ -5768,21 +3766,21 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\thermal_model_of_an_omnimagnet_for_performance_assessment_an.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 2.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\variable_stiffness_actuators_review_on_design_and_components.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_and_tribological_properties_of_epoxy_granite_compo.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
@@ -5810,14 +3808,14 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\PROTAGONISTI.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\SCIENZA_FINANZIARIA.md",
       "type": "md",
-      "size_kb": 30.4,
+      "size_kb": 30.5,
       "readable": false,
       "extracts": {}
     },
@@ -5908,7 +3906,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MEDIA\\MEDIA_STORYTELLING.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
@@ -6076,7 +4074,7 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\LABORATORIO\\RAGIONAMENTO_CLAUDE.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.9,
       "readable": false,
       "extracts": {}
     },
@@ -6167,7 +4165,7 @@
     {
       "path": "MIMS\\DESIGN\\base_gancio_1_corpo_07_disegno.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
@@ -6181,14 +4179,14 @@
     {
       "path": "MIMS\\DESIGN\\base_piatta_no_corpo_12_disegno.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\base_piatta_si_2_corpo_02_disegno.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
@@ -6244,7 +4242,7 @@
     {
       "path": "MIMS\\DESIGN\\solo_fori_2_corpo_02_disegno.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
@@ -6272,7 +4270,7 @@
     {
       "path": "MIMS\\MIMS_FIT_PARK_SPECS.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
@@ -6356,7 +4354,7 @@
     {
       "path": "MIMS\\PROTOCOLLO\\spec_modulo_50x30_inserto20_polimeri.md",
       "type": "md",
-      "size_kb": 5.0,
+      "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
@@ -6440,7 +4438,7 @@
     {
       "path": "SESSIONI\\2026-05-28_flusso_coscienza.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
@@ -6573,7 +4571,7 @@
     {
       "path": "SESSIONI\\2026-06-25_graph-view-konik.md",
       "type": "md",
-      "size_kb": 4.6,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
@@ -6606,9 +4604,23 @@
       "extracts": {}
     },
     {
+      "path": "SESSIONI\\2026-07-15_fit_esterno_pre_RAW.md",
+      "type": "md",
+      "size_kb": 30.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "SESSIONI\\2026-07-15_matteo_pari_non_curiosi.md",
+      "type": "md",
+      "size_kb": 1.8,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "SESSIONI\\_INDEX_SESSIONI.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -6650,14 +4662,14 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260704_nina_rag_loop_v1_1_lost_update_stat.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260705_bussola_critiche_live_fatte_2b8bfaf.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
@@ -6671,7 +4683,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260707_chiusura_55_piano_54_completo_ondat.md",
       "type": "md",
-      "size_kb": 9.8,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
@@ -6697,6 +4709,13 @@
       "extracts": {}
     },
     {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260714_chiusura_58_bis_l_ecosistema_produc.md",
+      "type": "md",
+      "size_kb": 10.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260714_chiusura_58_ecosistema_contenuti_pi.md",
       "type": "md",
       "size_kb": 8.4,
@@ -6704,16 +4723,23 @@
       "extracts": {}
     },
     {
+      "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260715_ep_sg_01_01_corretto_e_promosso_can.md",
+      "type": "md",
+      "size_kb": 9.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "STORIE\\_EVOLUZIONE.md",
       "type": "md",
-      "size_kb": 22.4,
+      "size_kb": 22.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\_INDEX_STORIE.md",
       "type": "md",
-      "size_kb": 19.2,
+      "size_kb": 19.4,
       "readable": false,
       "extracts": {}
     },
@@ -6783,7 +4809,7 @@
     {
       "path": "STORIE\\EP_AUTO_014.md",
       "type": "md",
-      "size_kb": 6.6,
+      "size_kb": 6.7,
       "readable": false,
       "extracts": {}
     },
@@ -6811,7 +4837,7 @@
     {
       "path": "STORIE\\EP_AUTO_018.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.4,
       "readable": false,
       "extracts": {}
     },
@@ -6860,7 +4886,7 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_FILONE_00_la_materia.md",
       "type": "md",
-      "size_kb": 7.6,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
@@ -6874,7 +4900,7 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_00_IL_SOCIO.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
@@ -6902,7 +4928,7 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_04_IL_LEGO_D_ACCIAIO.md",
       "type": "md",
-      "size_kb": 7.4,
+      "size_kb": 7.3,
       "readable": false,
       "extracts": {}
     },
@@ -6923,7 +4949,7 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_07_IL_CAVALLO_DI_TROIA.md",
       "type": "md",
-      "size_kb": 5.8,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
@@ -6937,7 +4963,7 @@
     {
       "path": "STORIE\\S1_PRESENTE\\EP_01_LA_TAVERNA.md",
       "type": "md",
-      "size_kb": 8.5,
+      "size_kb": 8.6,
       "readable": false,
       "extracts": {}
     },
@@ -6979,7 +5005,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260322_docs_ecosystem_manifest_documento_fon.md",
       "type": "md",
-      "size_kb": 13.0,
+      "size_kb": 13.1,
       "readable": false,
       "extracts": {}
     },
@@ -7028,14 +5054,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260529_task_scheduler_ottimizzazione_scrip.md",
       "type": "md",
-      "size_kb": 12.1,
+      "size_kb": 12.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260530_dashboard_sempre_attiva_watchdog_v1.md",
       "type": "md",
-      "size_kb": 11.6,
+      "size_kb": 11.9,
       "readable": false,
       "extracts": {}
     },
@@ -7070,7 +5096,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
       "type": "md",
-      "size_kb": 13.0,
+      "size_kb": 12.8,
       "readable": false,
       "extracts": {}
     },
@@ -7154,7 +5180,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },
@@ -7364,7 +5390,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260704_nina_rag_loop_v1_1_lost_update_stat.md",
       "type": "md",
-      "size_kb": 10.5,
+      "size_kb": 10.6,
       "readable": false,
       "extracts": {}
     },
@@ -7392,7 +5418,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260708_riavvio_nota_serale_fatto_priorita.md",
       "type": "md",
-      "size_kb": 10.4,
+      "size_kb": 10.3,
       "readable": false,
       "extracts": {}
     },
@@ -7406,14 +5432,28 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260713_chiusura_57_13_07_campo_di_battagli.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 10.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "STORIE\\S2_SISTEMA\\EP_20260714_chiusura_58_bis_l_ecosistema_produc.md",
+      "type": "md",
+      "size_kb": 10.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260714_chiusura_58_ecosistema_contenuti_pi.md",
       "type": "md",
-      "size_kb": 9.2,
+      "size_kb": 9.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "STORIE\\S2_SISTEMA\\EP_20260715_ep_sg_01_01_corretto_e_promosso_can.md",
+      "type": "md",
+      "size_kb": 10.1,
       "readable": false,
       "extracts": {}
     },
@@ -7462,35 +5502,35 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 10.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_CONTROLLO_anti_sovraccarico.md",
       "type": "md",
-      "size_kb": 5.0,
+      "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_cedibile.md",
       "type": "md",
-      "size_kb": 5.5,
+      "size_kb": 5.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_scaffolding.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_CONTROLLO_L1_statolive.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
@@ -7553,7 +5593,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_RETE_L1_bugstato.md",
       "type": "md",
-      "size_kb": 5.7,
+      "size_kb": 5.6,
       "readable": false,
       "extracts": {}
     },
@@ -7581,7 +5621,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_WATCHER_keyless.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.5,
       "readable": false,
       "extracts": {}
     },
@@ -7791,7 +5831,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
       "type": "md",
-      "size_kb": 14.9,
+      "size_kb": 15.0,
       "readable": false,
       "extracts": {}
     },
@@ -8099,7 +6139,14 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_54_il_dito_che_insegna.md",
       "type": "md",
-      "size_kb": 12.4,
+      "size_kb": 14.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "STORIE\\S_AVVENTURA\\EP_N2_55_la_giuntura_che_respira.md",
+      "type": "md",
+      "size_kb": 13.5,
       "readable": false,
       "extracts": {}
     },
@@ -8169,7 +6216,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_09_ottimizzazione_claude_code_claudeignore_.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.7,
       "readable": false,
       "extracts": {}
     },
@@ -8302,7 +6349,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_28_content_engine_s2_6_episodi_narrativi_5_.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
@@ -8449,21 +6496,21 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_49_vista_metodo_sul_sito_spiegazione_chicos.md",
       "type": "md",
-      "size_kb": 11.9,
+      "size_kb": 11.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_50_automazioni_notturne_portabili__ti_paths.md",
       "type": "md",
-      "size_kb": 11.9,
+      "size_kb": 11.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SG_GIORNO0\\_PIANO_PRODUZIONE.md",
       "type": "md",
-      "size_kb": 16.9,
+      "size_kb": 17.1,
       "readable": false,
       "extracts": {}
     },
@@ -8505,7 +6552,7 @@
     {
       "path": "V32\\NOTE_OFFICINA\\v32_analisi_tecnica_reale.md",
       "type": "md",
-      "size_kb": 12.8,
+      "size_kb": 12.9,
       "readable": false,
       "extracts": {}
     },
@@ -8554,7 +6601,7 @@
     {
       "path": "VITA_NATURA\\CENTRO\\listino_tecnico_kit_prezzi_opera.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },

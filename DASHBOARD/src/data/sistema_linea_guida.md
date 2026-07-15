@@ -6,6 +6,7 @@
   - [Stagione 1  9 capitoli  69 caroselli (9 portanti  60 approfondimenti)](#stagione-1-9-capitoli-69-caroselli-9-portanti-60-approfondimenti)
   - [Le interazioni con Nina (canone del PONTE  vale per i due binari)](#le-interazioni-con-nina-canone-del-ponte-vale-per-i-due-binari)
   - [La copertina (slide 1)  lo standard feed/griglia (fissato 14/07)](#la-copertina-slide-1-lo-standard-feedgriglia-fissato-1407)
+  - [La taratura dal primo fit esterno (15/07  4 AI concorrenti  Grok su PRE 1-4)](#la-taratura-dal-primo-fit-esterno-1507-4-ai-concorrenti-grok-su-pre-1-4)
   - [Frontmatter motore (casella CV del capitolo  i figli specializzano)](#frontmatter-motore-casella-cv-del-capitolo-i-figli-specializzano)
   - [Le stagioni 2-6  la pipeline fissata (14/07)](#le-stagioni-2-6-la-pipeline-fissata-1407)
   - [Colli di bottiglia (attacco 14/07  con soluzione)](#colli-di-bottiglia-attacco-1407-con-soluzione)

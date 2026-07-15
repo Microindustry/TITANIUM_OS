@@ -1,27 +1,21 @@
 {
-  "ran_at": "2026-07-14T04:07:30.438690",
+  "ran_at": "2026-07-15T04:07:46.204480",
   "mode": "apply",
-  "actions": 3,
+  "actions": 2,
   "freed_mb": 0.0,
   "by_rule": {
-    "R4-logs": 3
+    "R4-logs": 2
   },
   "items": [
     {
       "rule": "R4-logs",
-      "path": "DATA\\logs\\rag_rebuild_clean.log",
+      "path": "DATA\\logs\\rag_rebuild_p1b.log",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R4-logs",
-      "path": "DATA\\logs\\rag_rebuild_final.log",
-      "mb": 0.0,
-      "removed": true
-    },
-    {
-      "rule": "R4-logs",
-      "path": "DATA\\logs\\rag_rebuild_fixed.log",
+      "path": "DATA\\logs\\rag_rebuild_punto1.log",
       "mb": 0.0,
       "removed": true
     }
