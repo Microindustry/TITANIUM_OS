@@ -46,6 +46,7 @@ echo Modello: TinyLlama-1.1B ^| Dataset: titanium_os ^| LoRA rank=8 >> "%LOG%"
     --lora_rank 8 ^
     --lora_alpha 16 ^
     --output_dir "%MODELS%\titanium_llm_v1" ^
+    --overwrite_output_dir true ^
     --num_train_epochs 3 ^
     --per_device_train_batch_size 2 ^
     --gradient_accumulation_steps 4 ^
@@ -58,6 +59,14 @@ echo Modello: TinyLlama-1.1B ^| Dataset: titanium_os ^| LoRA rank=8 >> "%LOG%"
 if errorlevel 1 (
     echo [%date% %time%] Fine-tuning FALLITO >> "%LOG%"
     exit /b 1
-) else (
-    echo [%date% %time%] Fine-tuning COMPLETATO - modello in %MODELS%\titanium_llm_v1 >> "%LOG%"
 )
+
+:: Verifica MISURABILE degli step reali (fix "finto-verde" attacco #2 #4): senza
+:: --overwrite_output_dir il trainer riprendeva un checkpoint completo e usciva a
+:: 0 step marcando COMPLETATO in 10-46 s. Ora si legge global_step da trainer_state.
+"%LF_PYTHON%" -c "import json,os,sys; ts=os.path.join(r'%MODELS%\titanium_llm_v1','trainer_state.json'); s=(json.load(open(ts)).get('global_step',0) if os.path.exists(ts) else 0); print('global_step=%%d'%%s); sys.exit(0 if s>0 else 3)" >> "%LOG%" 2>&1
+if errorlevel 1 (
+    echo [%date% %time%] SOSPETTO: 0 step reali ^(finto-verde^) - il training non ha aggiornato l'adapter, controlla il log >> "%LOG%"
+    exit /b 3
+)
+echo [%date% %time%] Fine-tuning COMPLETATO ^(step reali verificati^) - modello in %MODELS%\titanium_llm_v1 >> "%LOG%"

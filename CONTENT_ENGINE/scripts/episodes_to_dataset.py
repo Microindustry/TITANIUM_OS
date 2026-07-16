@@ -115,7 +115,17 @@ def episode_to_samples(episode: dict) -> list[dict]:
 
 
 def main():
-    files = sorted(list(EP_DIR.glob("EP_AUTO_*.md")) + list(EP_DIR.glob("EP_*.md")))
+    # RICORSIVO in tutte le sottocartelle (gli episodi vivono in episodes/<serie>/):
+    # prima un glob non-ricorsivo prendeva solo i ~30 EP alla radice -> dataset
+    # congelato a 30/180 mentre gli episodi sono 272 (attacco #2 #5).
+    # Il Personal LLM e' la VOCE DI MATTEO: si escludono il cammino Nina
+    # (EP_N2_/EP_AV_, narratore in terza persona) e lo staging (_PROPOSTI/_ARCHIVIO).
+    files = sorted(
+        p for p in EP_DIR.rglob("*.md")
+        if p.name.startswith("EP_")
+        and not re.match(r"EP_(N2|AV)_", p.name)
+        and not any(part.startswith("_") for part in p.relative_to(EP_DIR).parts[:-1])
+    )
     if not files:
         logger.warning("Nessun episodio trovato.")
         return
