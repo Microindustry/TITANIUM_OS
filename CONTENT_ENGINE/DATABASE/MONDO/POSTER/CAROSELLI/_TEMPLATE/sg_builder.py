@@ -137,6 +137,33 @@ SCENES = {
         '<rect x="340" y="140" width="100" height="150" rx="8" stroke="#ec4899" stroke-width="4" fill="#0c1122"/>'
         '<circle cx="420" cy="218" r="5" fill="#ec4899"/>'
         '<text x="390" y="106" text-anchor="middle" font-family="playfair-display" font-size="44" fill="#ec4899" font-style="italic">?</text>'),
+    # ── scene NINA (cammino educativo): misura, deriva, ripetizione, il nemico ──
+    # il righello con lo zero fermo: la calibrazione, il riferimento che non si muove
+    "misura": _wrap(
+        '<path d="M120 210 H640" stroke="#5fc7f3" stroke-width="3" stroke-linecap="round"/>'
+        + ''.join(f'<path d="M{140+i*50} 210 v-{20 if i%5==0 else 11}" stroke="#8595b4" stroke-width="3"/>'
+                  for i in range(11))
+        + '<path d="M140 210 v-34" stroke="#f4b65a" stroke-width="4" stroke-linecap="round"/>'
+        + '<circle cx="140" cy="170" r="6" fill="#f4b65a"/>'
+        + '<text x="140" y="250" text-anchor="middle" font-family="space-mono" font-size="16" fill="#f4b65a">ZERO</text>'),
+    # il quaderno che va storto da solo: righe dritte poi note che salgono, orfane
+    "quaderno": _wrap(
+        ''.join(f'<path d="M150 {150+i*22} H610" stroke="#8595b4" stroke-width="2" stroke-opacity="0.45"/>'
+                for i in range(5))
+        + ''.join(f'<circle cx="{190+i*42}" cy="{238 - (0 if i < 4 else (i-3)*13)}" r="7" '
+                  f'fill="{"#eef2fb" if i < 4 else "#ec4899"}"/>' for i in range(10))),
+    # la ripetizione: tanti segni uguali, uno che scivola (la deriva che si accumula)
+    "ripetizione": _wrap(
+        ''.join(f'<path d="M{150+i*48} {170 + i*6} v70" stroke="{"#f4b65a" if i == 9 else "#eef2fb"}" '
+                f'stroke-width="4" stroke-linecap="round" stroke-opacity="{0.9 if i==9 else 0.7}"/>'
+                for i in range(10))
+        + '<path d="M150 260 H620" stroke="#5fc7f3" stroke-width="2" stroke-opacity="0.5"/>'),
+    # il nemico senza faccia: l'Entropia — un'ombra che non grida
+    "ombra": _wrap(
+        '<path d="M300 250 C 280 150, 480 150, 460 250 C 450 300, 310 300, 300 250 Z" '
+        'fill="#0c1122" stroke="#8595b4" stroke-width="3" stroke-opacity="0.8"/>'
+        '<path d="M330 210 q50 -26 100 0" stroke="#8595b4" stroke-width="2.5" stroke-opacity="0.6" fill="none"/>'
+        '<circle cx="380" cy="250" r="120" stroke="#f4b65a" stroke-opacity="0.14" stroke-width="2"/>'),
 }
 
 
@@ -160,7 +187,7 @@ def _slide(idx: int, meta: dict, s: dict, total: int) -> str:
     <div class="{lead_cls}"{lead_style}>{s['lead']}</div>
     {intro}{seal}{cta}
   </div>
-  <div class="footer"><span>TITANIUM_OS</span><span class="dot">{meta['serie']} · {idx} / {total}</span><span class="matteo">matteo</span></div>
+  <div class="footer"><span>TITANIUM_OS</span><span class="dot">{meta['serie']} · {idx} / {total}</span><span class="matteo">{meta.get('voce', 'matteo')}</span></div>
 </div>"""
 
 

@@ -1,0 +1,70 @@
+{
+  "note": "Coda della corsia Nina (night_caroselli_nina). status: pending -> bozza_verde/bozza_falle. Input = testo EP_N2 canonico (niente invenzione). Si rifornisce da nina_queue.ensure_pending.",
+  "items": [
+    {
+      "id": "EP_N2_04",
+      "title": "La Mappa che Non Mente",
+      "casella": 4,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_04_la_mappa_che_non_mente.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_04"
+    },
+    {
+      "id": "EP_N2_05",
+      "title": "Le Mani Prima dei Rulli",
+      "casella": 5,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_05_le_mani_prima_dei_rulli.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_06",
+      "title": "L'Officina che Gira Sola",
+      "casella": 6,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_07",
+      "title": "Il Sussurratore di Parole",
+      "casella": 7,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_07_il_sussurratore_di_parole.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_08",
+      "title": "La Lampada che Sussurra",
+      "casella": 8,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_08_la_lampada_che_sussurra.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_09",
+      "title": "La Bibliotecaria della Mente",
+      "casella": 9,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_09_la_bibliotecaria_della_mente.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_10",
+      "title": "Il Grande Loop: quando il gesto rimane",
+      "casella": 10,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_11",
+      "title": "La Grande Mappa",
+      "casella": 11,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    }
+  ]
+}

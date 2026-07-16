@@ -35,6 +35,8 @@ $defs = @(
   @{n="TI_NightResearch";  exe="$TI\AUTOMATIONS\core\night_research.bat";       arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "03:37")},
   @{n="TI_NightAudit";     exe="$TI\NODES\AUDIT_AGENT\run_night_audit.bat";     arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "03:52")},
   @{n="TI_NightPush";      exe="$TI\AUTOMATIONS\core\night_push.bat";           arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "04:07")},
+  @{n="TI_NightCaroselli"; exe="$TI\AUTOMATIONS\core\night_caroselli.bat";      arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "04:15")},
+  @{n="TI_NightCaroselliNina"; exe="$TI\AUTOMATIONS\core\night_caroselli_nina.bat"; arg=$null;                                 trigger=(New-ScheduledTaskTrigger -Daily -At "04:35")},
   @{n="TI_DailyBrief";     exe=$PY;                                             arg="`"$TI\AUTOMATIONS\core\daily_brief.py`""; trigger=(New-ScheduledTaskTrigger -Daily -At "07:30")},
   @{n="TI_DeepFreeze";     exe=$PY;                                             arg="`"$TI\AUTOMATIONS\core\deep_freeze.py`""; trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "03:00")},
   @{n="TI_FineTune";       exe="$TI\AUTOMATIONS\core\night_finetune.bat";       arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "01:00")}
