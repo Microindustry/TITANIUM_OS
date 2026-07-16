@@ -160,14 +160,22 @@
     `TI_NightCaroselliNina` @04:35. **Prova del fuoco: EP_N2_04 impaginato 10 slide,
     QC verde, stampo Nina atmosferico, canon_guard pulito.** `09fa32a9`.
   - [ ] export Express dei 14 (outward → conferma Matteo: carica sul suo Adobe)
-- [ ] 4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
-  04:30-07:30) → replica serale dei task persi (12 notti/31 saltate)
+- [◐] 4. ONDATA C (#62 16/07):
+  - [✓] **finetune VERO** (`4358f0d4`): dataset da 30→**176 episodi Matteo-voce**
+    (`episodes_to_dataset` ora rglob ricorsivo; esclusi Nina EP_N2/EP_AV + staging) +
+    `night_finetune.bat` `--overwrite_output_dir` (non riprende più il checkpoint completo
+    a 0 step) + verifica misurabile global_step>0 (altrimenti exit 3 SOSPETTO, no più
+    finto-verde). Il training gira nella finestra GPU libera 04:30-07:30.
+  - [✓] **recuperi scaglionati** (`030b0922`): `-RandomDelay` sui 3 task GPU (StoryAgent
+    8m/NightResearch 12m/FineTune 20m) nel registrar → al boot non partono più insieme
+    (trappola MemoryError 8GB). Applica al prossimo `register_night_tasks.ps1` (UAC Matteo).
+  - [ ] replica serale della catena se la notte salta (12/31 saltate) — design aperto
 - [ ] 5. GATED MATTEO (~1h): app Meta (sblocca Postiz = 1 click a post) · pin 5
   repo profilo · UPS (radice notti perse) · risultati LinkedIn PRE_SG_01.
   Rimandati con trigger: Astro (sito), Uptime Kuma
 - [ ] 4. Risultati LinkedIn PRE_SG_01 → tararsi (gated Matteo)
-- [ ] 5. Revisione bozza notturna EP_SG_02_01 «V32» (arriva stanotte @04:15, prima
-  della coda CAP 2) — guardia §7.7 già nell'angolo
+- [✓] Revisione bozza notturna EP_SG_02_01 «V32» — FATTA e promossa (vedi punto 2
+  sopra, S1 4/69)
 
 ---
 
