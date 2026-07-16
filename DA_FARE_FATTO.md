@@ -144,9 +144,14 @@
   bronzine/scalini) verificata grounded su fatti_dalle_storie/atto_vii, no prezzi.
   Promossa in CAROSELLI/SISTEMA/, griglia IG rigenerata, **S1 4/69** (CAP 2 1/7).
   Commit `7a9cb9c9` + MENTE `c7de8b9`.
-- [ ] 3. ONDATA B: corsia NINA nell'apprendista (53 testi già canone, stampo
-  EP_N2_03) → PDF LinkedIn batch + export Express dei 14 → dieta RAG (hash manifest
-  + lock build_index + gate no-op)
+- [◐] 3. ONDATA B (in corso #62 16/07):
+  - [✓] **PDF LinkedIn batch** — `pdf_export.py` (nuovo): un `carosello.pdf` per
+    episodio (post-documento sfogliabile, canale NON-Meta pubblicabile oggi). 15/15
+    creati (10 pagine, 1080×1350, ~1 MB). In checklist promozione. Commit `2c0a2d8c`.
+    ⏳ Matteo sta testando la pubblicazione LinkedIn (PRE_SG_01) → risultati stasera.
+  - [ ] corsia NINA nell'apprendista (53 testi già canone, stampo EP_N2_03)
+  - [ ] export Express dei 14
+  - [ ] dieta RAG (hash manifest + lock build_index + gate no-op)
 - [ ] 4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
   04:30-07:30) → replica serale dei task persi (12 notti/31 saltate)
 - [ ] 5. GATED MATTEO (~1h): app Meta (sblocca Postiz = 1 click a post) · pin 5
