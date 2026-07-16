@@ -378,6 +378,9 @@ def _rrf(
 
 CANONE_PATH     = MENTE_DIR / "_CANONE.md"
 CANON_RRF_BONUS = 1.0 / RRF_K
+# marker che declassa un bullet del canone a STORICO: i suoi [[link]] NON pesano
+# nel retrieval (es. le note V32 "su molle" con banner SUPERSEDED alla riga sotto).
+_SUPERSEDED     = re.compile(r"superseded|snapshot storico", re.I)
 _canon_cache: dict = {"mtime": None, "stems": frozenset()}
 
 
@@ -392,10 +395,15 @@ def _canon_stems() -> frozenset:
         stems = set()
         try:
             text = CANONE_PATH.read_text(encoding="utf-8", errors="replace")
-            for m in _WIKILINK.finditer(text):
-                stems.add(m.group(1).strip().replace("\\", "/").rsplit("/", 1)[-1].lower())
         except OSError:
             return _canon_cache["stems"]
+        # split per bullet (una riga-continuazione indentata resta nel suo bullet):
+        # se il bullet e' marcato SUPERSEDED/storico, i suoi wikilink si saltano.
+        for block in re.split(r"\n(?=[ \t]*[-*] )", text):
+            if _SUPERSEDED.search(block):
+                continue
+            for m in _WIKILINK.finditer(block):
+                stems.add(m.group(1).strip().replace("\\", "/").rsplit("/", 1)[-1].lower())
         _canon_cache["mtime"] = mt
         _canon_cache["stems"] = frozenset(stems)
         logger.debug("canon-pin: %d note canoniche da _CANONE.md", len(stems))
