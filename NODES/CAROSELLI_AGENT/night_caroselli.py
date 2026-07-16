@@ -8,8 +8,9 @@
 #   4. BUILD   : sg_builder (scene SOLO dalla libreria; canon_guard su ogni testo)
 #   5. RENDER  : slides/ PNG + slides_ig/ JPEG (stesse funzioni di render_queue)
 #   6. QC      : checks di caroselli_qc sul risultato -> report bozze_caroselli.json
+#   0. REFILL  : queue_refill rifornisce la coda dai piani (non muore piu' a mano)
 # Guardie: lock single-instance · timeout 20 min · exit-code + marker nel log ·
-#          1 bozza/notte · nessun push · additivo (tutto sotto _BOZZE/).
+#          MAX_BOZZE/notte con TETTO anti-backlog · nessun push · additivo (_BOZZE/).
 
 import json
 import os
@@ -30,6 +31,10 @@ LOCK      = BASE / "DATA" / "night_caroselli.lock"
 MODEL       = "claude-sonnet-4-6"   # economico, NO Opus (regola notturne)
 MAX_MINUTES = 20
 MIN_DOSSIER = 400                    # sotto questa soglia il grounding e' DEBOLE -> stop
+MAX_BOZZE   = 3                      # bozze/notte (era 1: ~5% del timeout 20 min)
+MAX_BACKLOG = 6                      # TETTO: se ci sono gia' N bozze non promosse in
+                                     # attesa, non se ne producono altre (pubblicare
+                                     # e' il collo, non generare — 14 pronti/0 pubblicati)
 
 sys.path.insert(0, str(CAROSELLI / "_TEMPLATE"))
 sys.path.insert(0, str(BASE / "CONTENT_ENGINE" / "scripts"))
@@ -118,18 +123,46 @@ def run() -> int:
         log("ANTHROPIC_API_KEY assente — esco (exit 2)")
         return 2
 
-    # 1 · QUEUE
+    # 0 · REFILL — la coda si rifornisce dai piani (non muore piu' a mano)
+    try:
+        import queue_refill
+        rep = queue_refill.ensure_pending()
+        if rep.get("added"):
+            log(f"refill coda: +{rep['added']} pending dai piani ({', '.join(rep['ids'])})")
+    except Exception as e:  # noqa: BLE001
+        log(f"refill saltato: {e}")
+
     if not QUEUE.exists():
         log("coda assente — niente da fare (exit 0)")
         return 0
-    queue = json.loads(QUEUE.read_text(encoding="utf-8"))
-    item = next((i for i in queue.get("items", [])
-                 if i.get("status") == "pending" and not i.get("insieme")), None)
-    if item is None:
-        log("coda vuota (nessun pending) — esco")
-        return 0
-    log(f"item: {item['id']} — {item['title']}")
 
+    # batch: fino a MAX_BOZZE per notte, con TETTO anti-backlog e timeout
+    made, last_rc = 0, 0
+    while made < MAX_BOZZE and not _timeout():
+        queue = json.loads(QUEUE.read_text(encoding="utf-8"))
+        backlog = sum(1 for i in queue.get("items", [])
+                      if str(i.get("status", "")).startswith("bozza_"))
+        if backlog >= MAX_BACKLOG:
+            log(f"tetto backlog raggiunto ({backlog} bozze non promosse >= {MAX_BACKLOG}) — "
+                "stop: il collo e' la pubblicazione, non la generazione")
+            break
+        item = next((i for i in queue.get("items", [])
+                     if i.get("status") == "pending" and not i.get("insieme")), None)
+        if item is None:
+            log("coda vuota (nessun pending)" if made == 0
+                else f"coda esaurita dopo {made} bozze")
+            break
+        log(f"[bozza {made+1}/{MAX_BOZZE}] item: {item['id']} — {item['title']}")
+        last_rc = _produce(item, queue)
+        made += 1
+
+    log(f"END batch — {made} bozza/e prodotta/e")
+    return last_rc
+
+
+def _produce(item: dict, queue: dict) -> int:
+    """Pipeline completa per UN item: ground -> draft -> build -> render -> QC.
+    Ritorna un exit-code (0 ok / 1 errore / 3 timeout). Scrive coda + report."""
     # 2 · GROUND (una sola accensione del motore RAG, query in serie)
     import rag_engine
     dossier_parts = []

@@ -122,6 +122,47 @@
         "leva cognitiva un input N output regola"
       ],
       "status": "pending"
+    },
+    {
+      "id": "EP_SG_03_01",
+      "title": "La prima foto — il giorno che è uscito dalla carta",
+      "cap": "CAP 3 · LA VERIFICA",
+      "angolo": "La prima foto — il giorno che è uscito dalla carta — capitolo «CAP 3 · LA VERIFICA». Aggancio alle fonti: EP_S0_02, FOTO/. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "La prima foto — il giorno che è uscito dalla carta",
+        "EP_S0_02",
+        "FOTO/"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_03_02",
+      "title": "La Formula — il margine che non dovrebbe esistere",
+      "cap": "CAP 3 · LA VERIFICA",
+      "angolo": "La Formula — il margine che non dovrebbe esistere — capitolo «CAP 3 · LA VERIFICA». Aggancio alle fonti: EP_S0_03, S1 \"Il Paradosso\". Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "La Formula — il margine che non dovrebbe esistere",
+        "EP_S0_03",
+        "S1 \"Il Paradosso\""
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_03_03",
+      "title": "Il Verdetto — i numeri davanti, senza sconti",
+      "cap": "CAP 3 · LA VERIFICA",
+      "angolo": "Il Verdetto — i numeri davanti, senza sconti — capitolo «CAP 3 · LA VERIFICA». Aggancio alle fonti: S1 EP_05. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Il Verdetto — i numeri davanti, senza sconti",
+        "S1 EP_05"
+      ],
+      "status": "pending",
+      "_auto_refill": true
     }
   ]
 }
