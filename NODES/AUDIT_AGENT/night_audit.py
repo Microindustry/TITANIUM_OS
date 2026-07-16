@@ -669,6 +669,35 @@ def check_canone_vault(signals: dict) -> None:
     signals["canone_vault"] = out
 
 
+def check_doppioni_copia(signals: dict) -> None:
+    """(attacco #2 RAG #6) Segnala i file '*_copia'/'... copia' accanto all'originale
+    nel vault: quasi-gemelli che si rubano slot in RRF (2 dei top-k possono essere lo
+    stesso testo). Solo segnale — la decisione (fondere o archiviare) e' di Matteo."""
+    markers = ("_copia", " copia", " - copia", "-copia", "(copia)", "(_copia)")
+    dupes = []
+    try:
+        if MENTE_DIR.exists():
+            for f in MENTE_DIR.rglob("*.md"):
+                if any(p.startswith("_") for p in f.relative_to(MENTE_DIR).parts[:-1]):
+                    continue
+                low = f.stem.lower()
+                for mk in markers:
+                    if low.endswith(mk):
+                        orig = f.stem[: len(f.stem) - len(mk)].rstrip(" _-()")
+                        if orig and f.with_name(orig + ".md").exists():
+                            dupes.append(str(f.relative_to(MENTE_DIR)))
+                        break
+        signals["doppioni_copia"] = len(dupes)
+        for d in dupes[:5]:
+            signals["log_issues"].append({
+                "log": "vault MENTE", "tipo": "doppione _copia",
+                "riga": f"{d} accanto all'originale — si rubano slot RRF (fondere o archiviare)",
+                "data": TODAY,
+            })
+    except Exception as e:
+        logger.warning("check doppioni _copia saltato: %s", e)
+
+
 def check_canone_manuale(signals: dict) -> None:
     """(#54) Riconciliazione canone manuale: conta le critiche attive in
     critiche_manuali.json e misura la freschezza del file. Se il canone e'
@@ -751,6 +780,7 @@ def main():
 
     check_canone_manuale(signals)
     check_canone_vault(signals)
+    check_doppioni_copia(signals)
     check_organi_vivi(signals)
     check_pip_audit(signals)
     check_qc_episodi(signals)
