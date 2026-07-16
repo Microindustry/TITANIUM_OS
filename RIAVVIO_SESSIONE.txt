@@ -1,35 +1,46 @@
-=== RIAVVIO SESSIONE #64 — generato 16/07/2026 (fine #63) ===
-Ultima sessione: #63 (16/07, Opus 4.8 — RISULTATI TEST LINKEDIN + decisione Postiz)
+=== RIAVVIO SESSIONE #65 — generato 17/07/2026 (fine #64, skill salva PRE-RIAVVIO PC) ===
+Ultima sessione: #64 (17/07, Opus 4.8 — MONTAGGIO POSTIZ, interrotto per riavvio Windows)
+
+⚠️ IL PC È STATO RIAVVIATO PER INSTALLARE WSL2 + DOCKER DESKTOP. Si riparte da qui.
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Letto il PRIMO dato pubblico reale (PRE_SG_01 su LinkedIn): pubblico PERFETTO
-(saldatori, metalmeccanica, Milano) → valida il binario SISTEMA «parla ai pari».
-Ma engagement thin (271 impr @ mezzanotte, 2 reazioni, 0 salvataggi). Diagnosi:
-non è il formato (4:5 a norma, era già a immagini) — è orario + hook. Deciso: la
-prossima sessione si MONTA POSTIZ per la pubblicazione LinkedIn automatica (collo n°1).
+Stavamo montando POSTIZ (pubblicazione LinkedIn automatica = collo n°1). Tutto è
+preparato FINO AL BORDO: repo clonato, docker-compose configurato col JWT_SECRET,
+segreti in _VAULT. Matteo ha installato WSL2+Ubuntu e Docker Desktop 4.82, poi ha
+riavviato il PC. Al ritorno resta solo: accendere Docker e fare `docker compose up`.
 
-━━━ PROSSIMA SESSIONE #64 (in ordine) — MONTARE POSTIZ ━━━
-1. Piano completo pronto: DOCS/POSTIZ_SETUP.md (self-host docker-compose, OAuth non
-   password, slides→PDF documento, postiz-agent CLI collegabile a Claude)
-2. PREREQUISITI GATED MATTEO (pre-farli = sessione tutta esecuzione):
-   - Docker Desktop for Windows (NON installato: `docker: command not found`) — WSL2 + riavvio
-   - App LinkedIn Developer (Client ID/Secret, prodotti Sign-In + Share) — approvazione = gate
-   - Segreti Postiz (JWT/LinkedIn secret) → _VAULT, MAI nel repo pubblico
-3. Test reale: slides/ di EP_SG_02_01 → Postiz → PDF documento → pubblica/programma
-4. Integrazione TITANIUM: comando EP_ID → Postiz → LinkedIn (apre il collo n°1)
+━━━ PRIMO STEP POST-RIAVVIO (in ordine) ━━━
+1. Apri **Docker Desktop** → aspetta icona VERDE ("Docker Desktop running")
+2. Verifica: `docker compose version` → deve rispondere una versione
+3. `cd C:\Users\teo\tools\postiz-docker-compose && docker compose up -d`
+   (prima volta: scarica le immagini, alcuni minuti; è pesante — Postiz+Postgres+Redis+Temporal+Elasticsearch)
+4. Apri **http://localhost:4007** → crea utente admin Postiz
+5. **App LinkedIn Developer** (developer.linkedin.com, Pagina microindustry):
+   - prodotti: Sign In OIDC + Share on LinkedIn + Advertising API (⚠ refresh token, gate lento)
+   - Redirect URL: http://localhost:4007/integrations/social/linkedin-page
+   - Client ID/Secret → nelle righe LINKEDIN_* di docker-compose.yaml → `docker compose up -d` (ricarica)
+6. In Postiz: Settings → connetti LinkedIn (OAuth) → **TEST con le slides/ di EP_SG_02_01**
+   (Postiz le impacchetta in PDF documento e pubblica/programma)
+7. Poi: postiz-agent CLI (github.com/gitroomhq/postiz-agent) → comando EP_ID → LinkedIn
 
-━━━ IN SOSPESO DA #63 ━━━
-- ⏰ PRE_SG_01 PROGRAMMATO @08:15 domani (17/07) come PDF documento, titolo
-  "Quindici anni in fabbrica. Poi ho costruito il mio socio" (56 car, <=58) →
-  PRIMO confronto PDF-vs-immagini a ora vera. #64: LEGGERE i risultati (chiedere a Matteo
-  l'export AnalisiSingoloPost) e confrontare col baseline immagini (271 impr/2 reaz/0 salv @ mezzanotte)
-- Migrazione al PROFILO DEDICATO microindustry: "poi carichiamo tutto sul profilo dedicato"
-  (brand account) — allineato al montaggio Postiz (OAuth Pagina microindustry)
-- Mail brand microindustry creata; finire con pass UNICA + 2FA + _VAULT (no Enea.2024 riusata)
-- Bio + firma Microindustry (per LinkedIn Company Page + GitHub org) — offerto, in attesa
+Config completa: DOCS/POSTIZ_SETUP.md · segreti/redirect: _VAULT/ACCOUNTS/postiz.md
+
+━━━ ALTRO FATTO IN #64 ━━━
+- Profilo GitHub v2.1: sintesi umana "Adesso/Prossimo" in cima + dettaglio tecnico a
+  scomparsa (<details>) → leggibile per "quel mondo"; fonte curata BRAIN/profile_public.json
+  (additiva, fallback al dump se manca); ripubblicato live + canon_guard passato
+- Baseline LinkedIn PRE_SG_01 letto: pubblico PERFETTO (saldatori/metalmecc/Milano →
+  valida binario SG "parla ai pari"), engagement thin (2 reaz/0 salv @ mezzanotte) → leva = hook
+
+━━━ IN SOSPESO (non sul percorso Postiz) ━━━
+- ⏰ PRE_SG_01 PROGRAMMATO @08:15 (17/07) come PDF documento, titolo "Quindici anni in
+  fabbrica. Poi ho costruito il mio socio" → leggere risultati e confrontare col baseline immagini
+- Muro Google: verifica Gmail brand microindustry bloccata ("telefono usato troppe volte") →
+  NON serve per LinkedIn/Postiz; riprovare tra 24-48h o altro numero
+- 2FA GitHub: usare authenticator app + SALVARE i recovery codes in _VAULT
 
 ━━━ BLOCKERS APERTI (gated Matteo) ━━━
-- Docker Desktop + app LinkedIn Developer (prerequisiti Postiz)
-- App Meta (~1h) · UPS + mandrino ER20 + martinetto Vevor · Pin 5 repo GitHub · chiave Semantic Scholar
+- App LinkedIn Developer (Advertising API = approvazione lenta) · App Meta (~1h)
+- UPS + mandrino ER20 + martinetto Vevor · Pin 5 repo GitHub · chiave Semantic Scholar
 
-━━━ Generato: 16/07/2026 — fine sessione #63 ━━━
+━━━ Generato: 17/07/2026 — fine sessione #64 (skill salva, pre-riavvio) ━━━

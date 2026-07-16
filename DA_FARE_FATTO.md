@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 63  16/07/2026  RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna  primo dato)](#sessione-63-16072026-risultati-test-linkedin-presg01-prima-consegna-primo-dato)
   - [Sessione 60  15/07/2026  PRE_04 chiude il preambolo  tabellone caroselli PULITO 14/14](#sessione-60-15072026-pre04-chiude-il-preambolo-tabellone-caroselli-pulito-1414)
   - [Sessione 59  15/07/2026  ripresa (LinkedIn PRE_SG_01  bozze notturne  PRE_01 Nina)](#sessione-59-15072026-ripresa-linkedin-presg01-bozze-notturne-pre01-nina)
   - [Sessione 58  14/07/2026  STORIE DI SISTEMA dal giorno 0 (gemella di Nina in sidebar)](#sessione-58-14072026-storie-di-sistema-dal-giorno-0-gemella-di-nina-in-sidebar)
@@ -87,6 +88,30 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)
+
+**Obiettivo: aprire il collo n°1 = PUBBLICAZIONE (LinkedIn automatico, OAuth non password).**
+
+- [◐] **Postiz montato FINO AL BORDO** (piano completo: `DOCS/POSTIZ_SETUP.md`):
+  - [✓] Repo clonato: `C:\Users\teo\tools\postiz-docker-compose\` (fuori dal repo pubblico)
+  - [✓] `docker-compose.yaml` configurato: **JWT_SECRET generato**; campi `LINKEDIN_*` vuoti da riempire
+  - [✓] Config + segreti + redirect URL salvati in `_VAULT/ACCOUNTS/postiz.md` (gitignored, verificato)
+  - [✓] Stack: Postiz + Postgres + Redis + Temporal/Elasticsearch → UI su **http://localhost:4007**
+- [◐] **Prerequisiti Matteo (in corso stanotte)**:
+  - [✓] **WSL2 + Ubuntu installati** (`wsl --install`)
+  - [✓] **Docker Desktop 4.82 installato** (winget) — ⏳ **manca il RIAVVIO** (WSL+Docker lo richiedono)
+  - [ ] **App LinkedIn Developer**: creare su developer.linkedin.com (Pagina microindustry) →
+        prodotti Sign-In OIDC + Share + **Advertising API** (⚠ refresh token, gate lento) →
+        Redirect URL `http://localhost:4007/integrations/social/linkedin-page` → Client ID/Secret nel compose
+- [ ] **RIPRESA POST-RIAVVIO (primo step #65)**: apri **Docker Desktop** → icona verde →
+      `docker compose version` → poi `cd C:\Users\teo\tools\postiz-docker-compose && docker compose up -d`
+      → apri localhost:4007 → crea admin → connetti LinkedIn (OAuth) → **test con `slides/` di EP_SG_02_01**
+- [ ] **Muro Google (NON sul percorso Postiz)**: verifica Gmail brand microindustry bloccata da
+      "telefono usato troppe volte" → non serve per LinkedIn/Postiz; riprovare tra 24-48h o altro numero
+- [◐] **Sicurezza**: 2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in `_VAULT`)
 
 ---
 

@@ -1,3 +1,14 @@
+<!-- TOC -->
+
+- [POSTIZ  piano di montaggio (sessione 64)](#postiz-piano-di-montaggio-sessione-64)
+  - [Cosa risolve](#cosa-risolve)
+  - [Prerequisiti GATED (Matteo  meglio pre-farli, sbloccano la sessione)](#prerequisiti-gated-matteo-meglio-pre-farli-sbloccano-la-sessione)
+  - [Passi sessione (esecuzione)](#passi-sessione-esecuzione)
+  - [Note tecniche](#note-tecniche)
+  - [Fonti](#fonti)
+
+<!-- /TOC -->
+
 # POSTIZ — piano di montaggio (sessione #64)
 
 *Creato 16/07/2026 (#63). Obiettivo: aprire il **collo n°1 = PUBBLICAZIONE**.*
