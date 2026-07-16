@@ -30,8 +30,21 @@ EPISODES_DIR = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
 EPISODES_JSON = ROOT / "DASHBOARD" / "src" / "data" / "episodes.json"
 MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 
-OUT_NAME = "fatti_dalle_storie.md"   # file dedicato per dominio: solo questo nodo lo tocca
+OUT_PREFIX = "fatti_dalle_storie"    # file per dominio+trimestre: fatti_dalle_storie_YYYYQn.md
 MARKER = "<!-- AUTO-GENERATO da fatti_reflux.py — NON editare a mano (rigenerato dagli episodi) -->"
+
+
+def _quarter(date_str: str) -> str:
+    """'YYYY-MM-DD' -> 'YYYYQn'. La rotazione per trimestre e' il cuore del fix #7
+    (attacco #2): i FATTI erano un monolite (1153 chunk) ri-embeddato INTERO a ogni
+    append. Spezzato per trimestre, i trimestri CHIUSI non cambiano mai -> hash
+    stabile -> zero re-embed (la dieta RAG salta il touch senza cambio contenuto);
+    solo il trimestre corrente si re-embedda, e pesa una frazione."""
+    try:
+        y, m, _ = date_str.split("-")
+        return f"{y}Q{(int(m) - 1) // 3 + 1}"
+    except Exception:
+        return "0000Q0"
 
 # Mappa dominio -> parole chiave. Match con WORD-BOUNDARY (non sottostringa: "estetic"
 # matchava "estetico" metaforico nei dev-log, "eva" finiva in parole a caso). Peso:
@@ -116,52 +129,62 @@ def collect() -> dict:
     return buckets
 
 
-def write_domain(domain: str, entries: list) -> Path:
-    """Scrive (rigenera) MENTE/<domain>/fatti_dalle_storie.md. Idempotente."""
+def write_domain(domain: str, entries: list) -> list[Path]:
+    """Scrive (rigenera) MENTE/<domain>/fatti_dalle_storie_<trimestre>.md, uno per
+    trimestre. Idempotente e DETERMINISTICO: nessun timestamp 'today' nel frontmatter,
+    cosi' un run senza nuovi episodi rigenera contenuto IDENTICO (hash stabile)."""
     out_dir = MENTE / domain
     out_dir.mkdir(parents=True, exist_ok=True)
-    fpath = out_dir / OUT_NAME
-    entries = sorted(entries, key=lambda e: e["date"], reverse=True)
-    body = [
-        "---",
-        f'source: "storie (riflusso automatico)"',
-        f'domain: "{domain}"',
-        f'date_ingested: "{datetime.now().strftime("%Y-%m-%d")}"',
-        f"n_episodi: {len(entries)}",
-        "---",
-        "",
-        MARKER,
-        "",
-        f"# FATTI dal dominio {domain} — riflusso dalle STORIE",
-        "",
-        f"Conoscenza interna del progetto estratta dai blocchi `## FATTI (per il RAG)` "
-        f"degli episodi. Riversata qui perche' il RAG la indicizzi (loop di regola 7). "
-        f"Rigenerato dagli episodi: non editare a mano.",
-        "",
-    ]
+    by_q: dict[str, list] = {}
     for e in entries:
-        body.append(f"## {e['title']}  ·  {e['date']}  ·  [{e['id']}]")
-        body.append("")
-        body.append(e["fatti"])
-        body.append("")
-    fpath.write_text("\n".join(body), encoding="utf-8")
-    return fpath
+        by_q.setdefault(_quarter(e["date"]), []).append(e)
+    written = []
+    for q, qentries in sorted(by_q.items()):
+        qentries = sorted(qentries, key=lambda e: e["date"], reverse=True)
+        fpath = out_dir / f"{OUT_PREFIX}_{q}.md"
+        body = [
+            "---",
+            f'source: "storie (riflusso automatico)"',
+            f'domain: "{domain}"',
+            f'quarter: "{q}"',
+            f'date_ingested: "{qentries[0]["date"]}"',   # ultima data del trimestre (deterministica)
+            f"n_episodi: {len(qentries)}",
+            "---",
+            "",
+            MARKER,
+            "",
+            f"# FATTI dal dominio {domain} — riflusso dalle STORIE ({q})",
+            "",
+            f"Conoscenza interna del progetto estratta dai blocchi `## FATTI (per il RAG)` "
+            f"degli episodi. Riversata qui perche' il RAG la indicizzi (loop di regola 7). "
+            f"Rigenerato dagli episodi: non editare a mano.",
+            "",
+        ]
+        for e in qentries:
+            body.append(f"## {e['title']}  ·  {e['date']}  ·  [{e['id']}]")
+            body.append("")
+            body.append(e["fatti"])
+            body.append("")
+        fpath.write_text("\n".join(body), encoding="utf-8")
+        written.append(fpath)
+    return written
 
 
-def _clean_stale(active_domains: set):
-    """Rimuove i fatti_dalle_storie.md auto-generati di domini ora vuoti (es. dopo una
-    rimappatura). Tocca SOLO i file col nostro MARKER: mai le note scritte a mano."""
+def _clean_stale(written: set):
+    """Rimuove i fatti_dalle_storie*.md auto-generati NON piu' scritti in questo run:
+    il MONOLITE legacy `fatti_dalle_storie.md` (migrato ai trimestri), i trimestri di
+    domini ora vuoti, i trimestri svuotati da una rimappatura. Tocca SOLO i file col
+    nostro MARKER: mai le note scritte a mano."""
     removed = []
     if not MENTE.exists():
         return removed
-    for f in MENTE.glob(f"*/{OUT_NAME}"):
-        domain = f.parent.name
-        if domain in active_domains:
+    for f in MENTE.glob(f"*/{OUT_PREFIX}*.md"):
+        if f in written:
             continue
         try:
             if MARKER in f.read_text(encoding="utf-8", errors="replace"):
                 f.unlink()
-                removed.append(domain)
+                removed.append(str(f.relative_to(MENTE)))
         except Exception:
             pass
     return removed
@@ -173,18 +196,20 @@ def main() -> int:
         print("[fatti_reflux] nessun blocco FATTI trovato negli episodi — niente da riversare.")
         return 0
     total = 0
+    written: set = set()
     print("=" * 60)
-    print(" RIFLUSSO FATTI — episodi -> MENTE/ (loop RAG)")
+    print(" RIFLUSSO FATTI — episodi -> MENTE/ (loop RAG, rotazione trimestrale)")
     print("=" * 60)
     for domain in sorted(buckets):
         entries = buckets[domain]
-        fpath = write_domain(domain, entries)
+        paths = write_domain(domain, entries)
+        written.update(paths)
         total += len(entries)
-        rel = fpath.relative_to(MENTE.parent) if MENTE.parent in fpath.parents else fpath
-        print(f"  {domain:12} {len(entries):3} episodi -> {rel}")
-    stale = _clean_stale(set(buckets))
+        qs = ", ".join(p.stem.split("_")[-1] for p in paths)
+        print(f"  {domain:12} {len(entries):3} episodi -> {len(paths)} file ({qs})")
+    stale = _clean_stale(written)
     if stale:
-        print(f"  puliti {len(stale)} file auto-generati ora vuoti: {', '.join(stale)}")
+        print(f"  puliti {len(stale)} file auto-generati stale (incl. monolite legacy): {', '.join(stale)}")
     print(f"\n  totale: {total} blocchi FATTI riversati in {len(buckets)} domini.")
     print("  prossimo: rag-update li indicizza (lo fa la catena notturna, o: "
           "python NODES/MENTE_RAG/rag_engine.py --incremental)")
