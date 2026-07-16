@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-16T09:57:07.240471",
-  "active_milestone": "Sessione #61 (15-16/07): P0 + ATTACCO #2 COMPLETO. P0-1 autogenerazione episodi->RAG VERIFICATA VIVA coi numeri (EP_N2_55 auto, riflusso FATTI 5 domini, RAG 19621->19635 in un giorno, watcher indicizza live). P0-2 profilo GitHub A CANONE: falla par.7.7 trovata (178kg/0,019 ripubblicati OGNI NOTTE dal 29/05) e curata - update_github_profile v2.0 (stato reale, nodi freschi) + anticorpo canon_guard.scan_public in uscita; pubblicato e verificato sul remoto. ATTACCO #2: 4 agenti Fable propose-only -> report in DOCS/ATTACCO_20260716/ + _SINTESI TOP10 a ondate. Quadro: la fabbrica produce e ricorda, non consegna e dorme (14 caroselli pronti 0 pubblicati; notte usata 3,9%; 4 notti/10 perse; finetune finto-verde; canon-pin pesca verita' superate; Postiz confermato; unsloth incompatibile GTX1070). ONDATA A APPROVATA da Matteo (16/07) - esecuzione in #62. Bozza notturna EP_SG_02_01 arrivata verde in _BOZZE.",
-  "next_step": "PROSSIMA (#62): 1) ONDATA A esecuzione (A1 fix canon-pin ~5 righe, A2 refill coda+multi-bozza con tetto, A3 fonti allineate piano-SG/_CANONE/rotazione watcher.log, A4 igiene disco 14,8GB + .obsidian escluso) 2) revisione EP_SG_02_01 in _BOZZE -> promozione (S1 4/69) 3) ondata B 4) ondata C 5) gated Matteo (app Meta, pin repo, UPS).",
-  "session_count": 130,
+  "last_update": "2026-07-16T11:44:04.936799",
+  "active_milestone": "Sessione #62 (16/07): ESECUZIONE ONDATA A/B/C + promozione. ONDATA A completa (A1 canon-pin salta i wikilink SUPERSEDED; A2 coda auto-refill+multi-bozza col tetto; A3 fonti allineate _CANONE 53->56/piano/watcher.log rotante; A4 14,8 GB liberati via retention R6/R7 + .obsidian fuori canone). EP_SG_02_01 «V32» revisionato §7.7 e promosso (S1 4/69). ONDATA B: PDF LinkedIn per episodio (pdf_export, 15/15); dieta RAG (hash-manifest anti re-embed + lock build_index + early-exit no-op); CORSIA NINA apprendista (night_caroselli_nina impagina i testi EP_N2 canonici, no invenzione/no GPU, task @04:35, prova del fuoco EP_N2_04 verde). ONDATA C: finetune vero (dataset 30->176 episodi Matteo-voce + --overwrite_output_dir + verifica step) + RandomDelay sui task GPU. 16 commit repo + 3 MENTE, tutti additivi/verificati.",
+  "next_step": "PROSSIMA (#63): 1) risultati test LinkedIn PRE_SG_01 -> tarare impaginazione PDF; 2) export Express dei 14 (outward, con Matteo); 3) register_night_tasks.ps1 (UAC) per attivare RandomDelay + task caroselli nel registrar; 4) replica serale catena (design); 5) revisione bozze notturne (SG @04:15 + Nina @04:35 producono da stanotte); gated Matteo: app Meta, pin 5 repo, UPS.",
+  "session_count": 132,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-16T09:53:43.272207"
+      "last_activity": "2026-07-16T11:40:09.396757"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -121,9 +121,14 @@
       "ATTACCO #2 impostato: DOCS/ATTACCO_20260716/_PIANO.md - colli di bottiglia ecosistema, 5 agenti Fable propose-only + ricognizione GitHub strumenti; P0 = verifica autogenerazione episodi->RAG + profilo GitHub (15/07/2026 #60)",
       "P0 autogenerazione episodi->RAG verificata VIVA coi numeri: EP_N2_55 auto @03:42, milestone->episodio @02:08, riflusso FATTI 5 domini, RAG +14 chunk/giorno via watcher live (15/07/2026 #61)",
       "Profilo GitHub a canone: falla par.7.7 (178kg/0,019 ripubblicati ogni notte dal 29/05) curata con update_github_profile v2.0 + anticorpo canon_guard.scan_public in uscita; verificato sul remoto (15/07/2026 #61)",
-      "ATTACCO #2 colli di bottiglia COMPLETO: 4 report dominio + _SINTESI TOP10 a ondate in DOCS/ATTACCO_20260716 (propose-only, zero applicato); finding chiave: 14 pronti/0 pubblicati, notte al 3,9%, finetune finto-verde, canon-pin cieco allo storico, 14,8GB detriti; ONDATA A approvata da Matteo (15-16/07/2026 #61)"
+      "ATTACCO #2 colli di bottiglia COMPLETO: 4 report dominio + _SINTESI TOP10 a ondate in DOCS/ATTACCO_20260716 (propose-only, zero applicato); finding chiave: 14 pronti/0 pubblicati, notte al 3,9%, finetune finto-verde, canon-pin cieco allo storico, 14,8GB detriti; ONDATA A approvata da Matteo (15-16/07/2026 #61)",
+      "Sessione #62 (16/07) ONDATA A: A1 canon-pin salta i [[wikilink]] marcati SUPERSEDED/snapshot storico in _CANONE (le 2 note V32 'su molle' non pinnano piu'); A2 queue_refill + night_caroselli multi-bozza (MAX_BOZZE=3) con tetto anti-backlog (MAX_BACKLOG=6); A3 _CANONE range 53->56 + contatore piano SG 2->3 + watcher.log RotatingFileHandler; A4 retention R6/R7 (14,8 GB liberati) + .obsidian in EXCLUDE_DIR_NAMES",
+      "Sessione #62: EP_SG_02_01 «V32 - il cuore che taglia» revisionato (QC verde, §7.7 slide 9 STATO REALE, slide 6 TP900+bronzine/scalini verificata grounded) e PROMOSSO in CAROSELLI/SISTEMA (S1 4/69, apre CAP 2)",
+      "Sessione #62 ONDATA B: pdf_export.py - un carosello.pdf per episodio (post-documento LinkedIn, canale NON-Meta), 15/15 creati; dieta RAG (hash contenuto nel manifest = stop re-embed di massa da touch + lock msvcrt su build_index + early-exit no-op)",
+      "Sessione #62: CORSIA NINA apprendista - night_caroselli_nina.py impagina i testi EP_N2 canonici (no invenzione, no GPU) + nina_queue.py (seed 53) + sg_builder voce parametrica/scene Nina + task TI_NightCaroselliNina @04:35; prova del fuoco EP_N2_04 verde",
+      "Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot"
     ],
-    "next": "PROSSIMA SESSIONE #62: eseguire ONDATA A (canon-pin, coda+multi-bozza, fonti allineate, igiene disco) + revisione EP_SG_02_01.",
+    "next": "PROSSIMA #63: test LinkedIn -> taratura PDF; export Express (con Matteo); register_night_tasks UAC; revisione bozze notturne SG+Nina.",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -161,5 +166,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md"
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt"
 }

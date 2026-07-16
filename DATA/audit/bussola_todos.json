@@ -18,51 +18,93 @@
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-6e701060",
-    "stato": "da_fare",
-    "testo": "**1. ONDATA A — ESECUZIONE** (approvata, commit isolati, additivo; dettagli",
+    "id": "BUS-477cad58",
+    "stato": "fatto",
+    "testo": "**1. ONDATA A — ESECUZIONE** (approvata, commit isolati additivi #62 16/07:",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-8fe5e27e",
-    "stato": "da_fare",
-    "testo": "A1. fix canon-pin (~5 righe: `_canon_stems()` rag_engine.py:384-402 salti i",
+    "id": "BUS-d3bbd7e1",
+    "stato": "fatto",
+    "testo": "A1. fix canon-pin — `_canon_stems()` ora fa split per bullet e salta i",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-a9e7c114",
-    "stato": "da_fare",
-    "testo": "A2. coda apprendista: refill automatico dai piani MENTE + multi-bozza con",
+    "id": "BUS-7dcbbccb",
+    "stato": "fatto",
+    "testo": "A2. coda apprendista: **queue_refill.py** (nuovo) rifornisce dai piani fino",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-79c261ac",
-    "stato": "da_fare",
-    "testo": "A3. fonti refill allineate: contatore piano SG (dice 2/69, sono 3) +",
+    "id": "BUS-d41a0bbf",
+    "stato": "fatto",
+    "testo": "A3. fonti refill allineate: piano SG 2/69→**3/69** (CAP1 3/4, 3 promossi",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-0cb9248c",
-    "stato": "da_fare",
-    "testo": "A4. igiene disco RAG: 14,8 GB `chroma_db_reset_*` morti + manifest CORROTTO",
+    "id": "BUS-e67443e9",
+    "stato": "fatto",
+    "testo": "A4. igiene disco RAG: **14,8 GB liberati** via regola (retention.py R6",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-65418ad5",
-    "stato": "da_fare",
-    "testo": "**2. REVISIONE BOZZA EP_SG_02_01 «V32 — il cuore che taglia»** — arrivata",
+    "id": "BUS-d7f794e3",
+    "stato": "fatto",
+    "testo": "**2. REVISIONE + PROMOZIONE EP_SG_02_01 «V32 — il cuore che taglia»** (#62",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-ffad34c2",
-    "stato": "da_fare",
-    "testo": "3. ONDATA B: corsia NINA nell'apprendista (53 testi già canone, stampo",
+    "id": "BUS-995e4ec3",
+    "stato": "in_corso",
+    "testo": "3. ONDATA B (in corso #62 16/07):",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-6c09f0b3",
+    "id": "BUS-dd40a52c",
+    "stato": "fatto",
+    "testo": "**PDF LinkedIn batch** — `pdf_export.py` (nuovo): un `carosello.pdf` per",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-3f24b157",
+    "stato": "fatto",
+    "testo": "**dieta RAG** (rag_engine.py): #2 hash contenuto nel manifest (touch dei",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-98c6ed4f",
+    "stato": "fatto",
+    "testo": "**corsia NINA nell'apprendista** — `night_caroselli_nina.py` (gemello che",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-9524ef18",
     "stato": "da_fare",
-    "testo": "4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU",
+    "testo": "export Express dei 14 (outward → conferma Matteo: carica sul suo Adobe)",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-ad5874e8",
+    "stato": "in_corso",
+    "testo": "4. ONDATA C (#62 16/07):",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-a77b51e0",
+    "stato": "fatto",
+    "testo": "**finetune VERO** (`4358f0d4`): dataset da 30→**176 episodi Matteo-voce**",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-060b2d97",
+    "stato": "fatto",
+    "testo": "**recuperi scaglionati** (`030b0922`): `-RandomDelay` sui 3 task GPU (StoryAgent",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-374ec6b5",
+    "stato": "da_fare",
+    "testo": "replica serale della catena se la notte salta (12/31 saltate) — design aperto",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
@@ -78,9 +120,9 @@
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-e6a5122c",
-    "stato": "da_fare",
-    "testo": "5. Revisione bozza notturna EP_SG_02_01 «V32» (arriva stanotte @04:15, prima",
+    "id": "BUS-046ceabc",
+    "stato": "fatto",
+    "testo": "Revisione bozza notturna EP_SG_02_01 «V32» — FATTA e promossa (vedi punto 2",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {

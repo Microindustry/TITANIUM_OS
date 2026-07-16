@@ -1,42 +1,40 @@
-=== RIAVVIO SESSIONE #62 — generato 16/07/2026 (fine #61, skill salva) ===
-Ultima sessione: #61 (15-16/07, Fable 5 — P0 verificati, attacco #2 completo, ondata A approvata)
+=== RIAVVIO SESSIONE #63 — generato 16/07/2026 (fine #62, skill salva) ===
+Ultima sessione: #62 (16/07, Opus 4.8 — ESECUZIONE ondate A/B/C + promozione)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-ATTACCO #2 FATTO E APPROVATO. P0-1: autogenerazione episodi→RAG VIVA
-(EP_N2_55 auto, riflusso FATTI, RAG cresce live). P0-2: profilo GitHub
-A CANONE (falla §7.7 curata: 178kg/±0,019 ripubblicati ogni notte dal
-29/05 → v2.0 + guardia scan_public in uscita, verificato sul remoto).
-4 report dominio + _SINTESI TOP10 in DOCS/ATTACCO_20260716/. Quadro:
-«la fabbrica produce e ricorda; non consegna e dorme». Matteo ha
-APPROVATO L'ONDATA A → si esegue in #62. Bozza EP_SG_02_01 verde in _BOZZE.
+Sessione di ESECUZIONE grossa: eseguita e verificata TUTTA l'ONDATA A approvata,
+promosso EP_SG_02_01, e portata avanti B (3/4) e C (2/3). Il filo dell'attacco #2
+«produce e ricorda, non consegna e dorme» si e' mosso su tutti gli assi: il RAG
+ricorda meglio e spreca meno, la notte produce di piu' (2 apprendisti col tetto),
+e per la prima volta ha CONSEGNATO (EP_SG_02_01 in vetrina + 15 PDF LinkedIn pronti).
+16 commit repo + 3 MENTE, tutti additivi/isolati/verificati. Build verde, 0 orfani.
 
-━━━ PROSSIMA SESSIONE #62 (in ordine) ━━━
-1. ONDATA A — esecuzione (commit isolati, additivo; file:riga in _SINTESI + report 2/3):
-   A1 fix canon-pin (~5 righe, rag_engine.py:384-402: salta wikilink storico/
-      SUPERSEDED di _CANONE; test «massa V32»; vale al prossimo restart API)
-   A2 coda apprendista: refill automatico dai piani + multi-bozza con tetto
-      anti-backlog (night_caroselli.py:126-127; 77 s/bozza su 20 min timeout;
-      9→~3 mesi). Portanti con cameo Nina MAI in coda
-   A3 fonti allineate: piano SG 2/69→conta reale · _CANONE range EP_N2 53→55
-      (sentinella ferma da 08/07) · rotazione watcher.log (27 MB, watcher.py:76)
-   A4 igiene disco: 14,8 GB chroma_db_reset_* + manifest CORROTTO (regola in
-      retention.py) · `.obsidian` in EXCLUDE_DIR_NAMES (rag_engine.py:152)
-2. REVISIONE EP_SG_02_01 «V32 — il cuore che taglia» in _BOZZE (verde stanotte)
-   → §7.7 (guardia stato-reale era nell'angolo) → promozione (S1 4/69)
-3. ONDATA B: corsia Nina apprendista · PDF LinkedIn + Express batch dei 14 ·
-   dieta RAG (hash manifest + lock + gate no-op)
-4. ONDATA C: finetune VERO (dataset 272 ep, buco GPU 04:30-07:30) · replica serale
-5. Gated Matteo (~1h): app Meta · pin 5 repo · UPS · risultati LinkedIn PRE_SG_01
+━━━ FATTO IN #62 (commit principali) ━━━
+ONDATA A: 50eb3336 canon-pin · 1fd7eb07 watcher.log rotante · 50c95f2b retention
+  R6/R7 (14,8 GB liberati)+.obsidian · 5384e7e7 coda auto-refill+multi-bozza col tetto
+Promozione: 7a9cb9c9 EP_SG_02_01 «V32» -> SISTEMA (S1 4/69, apre CAP 2)
+ONDATA B: 2c0a2d8c pdf_export (15/15 PDF LinkedIn) · 1ad40e01 dieta RAG (hash+lock+no-op)
+  · 09fa32a9 corsia NINA apprendista (prova del fuoco EP_N2_04 verde)
+ONDATA C: 4358f0d4 finetune vero (dataset 30->176) · 030b0922 RandomDelay task GPU
 
-━━━ FATTO IN #61 (commit) ━━━
-ab1882f5 profilo GitHub v2.0+guardia · 037c4302 attacco: 4 report+_SINTESI ·
-+ chiusura. I report: 1_PIPELINE (14 pronti/0 pubblicati, coda muore 21/07) ·
-2_RAG (canon-pin cieco, re-embed di massa, 14,8GB) · 3_NOTTURNE (notte 3,9%,
-12/31 perse, finetune finto-verde) · 4_GITHUB (Postiz ok, Astro, no unsloth).
+━━━ PROSSIMA SESSIONE #63 (in ordine) ━━━
+1. RISULTATI TEST LINKEDIN (PRE_SG_01, Matteo li da') -> tarare l'impaginazione dei
+   PDF se il viewer LinkedIn taglia il 1080x1350
+2. EXPORT EXPRESS dei 14 (outward: carica sul TUO account Adobe -> con Matteo)
+3. register_night_tasks.ps1 (UAC Matteo): attiva RandomDelay + i task caroselli
+   (TI_NightCaroselli @04:15 + TI_NightCaroselliNina @04:35) nel registrar canonico
+4. REVISIONE bozze notturne: da stanotte SG (@04:15) e NINA (@04:35) producono fino a
+   3 bozze l'uno col tetto -> _BOZZE da revisionare al mattino (Nina: 7 pending EP_N2_05..)
+5. replica serale della catena se la notte salta (12/31 saltate) — DESIGN aperto
 
 ━━━ BLOCKERS APERTI (gated Matteo) ━━━
-- App Meta (~1h) = sblocca la pubblicazione 1-click (il collo n°1)
-- Hardware: UPS (radice notti perse) + mandrino ER20 + martinetto Vevor
-- Pin 5 repo profilo GitHub (manuale browser) · chiave Semantic Scholar (429)
+- App Meta (~1h) = sblocca la pubblicazione 1-click (collo n°1)
+- UPS (radice notti perse, MemoryError da power-loss) + mandrino ER20 + martinetto Vevor
+- Pin 5 repo profilo GitHub (manuale) · chiave Semantic Scholar (429)
 
-━━━ Generato: 16/07/2026 — fine sessione #61 (skill salva) ━━━
+━━━ NOTA STANOTTE ━━━
+Girano DUE apprendisti + finetune ora reale + dieta RAG attiva (processi freschi):
+al mattino attesi bozze SG+Nina in _BOZZE, RAG piu' leggero, e (domenica) finetune
+su 176 episodi invece di 30. Se qualcosa e' finto-verde il log lo dira' (exit 3).
+
+━━━ Generato: 16/07/2026 — fine sessione #62 (skill salva) ━━━

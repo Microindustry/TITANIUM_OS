@@ -5,6 +5,16 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 ---
+<!-- TOC -->
+
+- [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
+  - [Come leggere la tabella](#come-leggere-la-tabella)
+  - [Il cammino (caselle 1  56)](#il-cammino-caselle-1-56)
+  - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
+  - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
+
+<!-- /TOC -->
+
 
 # Indice del Cammino — il "libro" di Nina
 

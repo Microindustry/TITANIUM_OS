@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-16T09:54:59.886558",
+  "scanned_at": "2026-07-16T11:35:52.870898",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 1265,
+  "total_files": 1276,
   "files_read": 13,
-  "files_skipped": 1252,
+  "files_skipped": 1263,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.0,
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
@@ -162,14 +162,14 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 26.8,
+      "size_kb": 27.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 26.8,
+      "size_kb": 27.2,
       "readable": false,
       "extracts": {}
     },
@@ -205,6 +205,13 @@
       "path": ".git\\objects\\02\\dd381af191f4f6d3feae2e149ada19be71a55d",
       "type": "unknown",
       "size_kb": 2.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\03\\a891f2d056204b642a8306bbc4b05cfd189737",
+      "type": "unknown",
+      "size_kb": 17.0,
       "readable": false,
       "extracts": {}
     },
@@ -503,6 +510,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\28\\516388477d1bc9a8c7597db5b9f861bca96ae6",
+      "type": "unknown",
+      "size_kb": 17.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\29\\630d87bae8bb2911901e3f329adf1f3a3cc65d",
       "type": "unknown",
       "size_kb": 4.2,
@@ -608,6 +622,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\30\\79eb0b0eae0ee36e6d60f2930ec4fa73739ab8",
+      "type": "unknown",
+      "size_kb": 0.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\30\\de193ed1bb003c1fc4f1f88fd6435e1bf9ad4e",
       "type": "unknown",
       "size_kb": 13.1,
@@ -618,6 +639,13 @@
       "path": ".git\\objects\\30\\fd0a42d6df03d5c5b1e792b1fa4efb47c49c6f",
       "type": "unknown",
       "size_kb": 2.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\31\\5b8a5b2b92431d310d92c2e692227434dd9080",
+      "type": "unknown",
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
@@ -821,6 +849,13 @@
       "path": ".git\\objects\\45\\0da9b031159f667303d01b0d38948c5f3a9124",
       "type": "unknown",
       "size_kb": 8.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\45\\87ebbbeda00a6f6897fd66613dd591531087e0",
+      "type": "unknown",
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
@@ -1199,6 +1234,13 @@
       "path": ".git\\objects\\67\\09f8c04f91e4ded39c3bba41b7230d5878b41e",
       "type": "unknown",
       "size_kb": 0.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\67\\a31b81b80fb9140958256aeaee5261a0ad906f",
+      "type": "unknown",
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
@@ -1644,6 +1686,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\91\\86951e3b25214c7532365e6063c3c59d1ee682",
+      "type": "unknown",
+      "size_kb": 0.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\91\\cbf03be04180918b6ce4117d203748e29465e4",
       "type": "unknown",
       "size_kb": 14.2,
@@ -2043,6 +2092,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\ba\\a5597f6b4b4b1602733a3a65396bbb1b7ed6f3",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\bb\\076d2a3551ce44079849f1001e3626d215c10c",
       "type": "unknown",
       "size_kb": 2.3,
@@ -2088,6 +2144,13 @@
       "path": ".git\\objects\\bf\\3aefc59791192ebb1a472d7fdd2c8fb1412745",
       "type": "unknown",
       "size_kb": 4.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\bf\\f51f73836e667ce40981555e67076589f5de38",
+      "type": "unknown",
+      "size_kb": 1.0,
       "readable": false,
       "extracts": {}
     },
@@ -2176,6 +2239,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\c7\\de8b9670909c7118083a411ce67d37e580effe",
+      "type": "unknown",
+      "size_kb": 0.4,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\c8\\0b8077446affba20ea840278b8e26acafdad3a",
       "type": "unknown",
       "size_kb": 8.0,
@@ -2249,6 +2319,13 @@
       "path": ".git\\objects\\d0\\d831e33639de52620ea6b9900e5b338d0f3442",
       "type": "unknown",
       "size_kb": 40.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\d1\\5144be09de56a5d62f950d6489d3cebd0004f8",
+      "type": "unknown",
+      "size_kb": 6.4,
       "readable": false,
       "extracts": {}
     },
@@ -4390,7 +4467,7 @@
     {
       "path": "_CANONE.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
@@ -8841,7 +8918,7 @@
     {
       "path": "STORIE\\SG_GIORNO0\\_PIANO_PRODUZIONE.md",
       "type": "md",
-      "size_kb": 17.2,
+      "size_kb": 17.3,
       "readable": false,
       "extracts": {}
     },

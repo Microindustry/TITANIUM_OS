@@ -1,8 +1,30 @@
 {
-  "ran_at": "2026-07-16T04:07:50.653873",
+  "ran_at": "2026-07-16T10:14:00.671921",
   "mode": "apply",
-  "actions": 0,
-  "freed_mb": 0.0,
-  "by_rule": {},
-  "items": []
+  "actions": 3,
+  "freed_mb": 14785.0,
+  "by_rule": {
+    "R6-chroma-reset": 2,
+    "R7-manifest-corr": 1
+  },
+  "items": [
+    {
+      "rule": "R6-chroma-reset",
+      "path": "NODES\\MENTE_RAG\\chroma_db_reset_20260714_033814",
+      "mb": 14491.2,
+      "removed": true
+    },
+    {
+      "rule": "R6-chroma-reset",
+      "path": "NODES\\MENTE_RAG\\chroma_db_reset_20260713_105553",
+      "mb": 290.7,
+      "removed": true
+    },
+    {
+      "rule": "R7-manifest-corr",
+      "path": "NODES\\MENTE_RAG\\rag_manifest_CORROTTO_20260622_171159.json",
+      "mb": 3.1,
+      "removed": true
+    }
+  ]
 }
