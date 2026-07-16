@@ -90,6 +90,43 @@
 
 ---
 
+## Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)
+
+**Punto 1 della bussola (#63): CHIUSO.**
+- [✓] **Formato PDF a norma — niente da ritarare**: verificato MediaBox 518,4×648 pt =
+  esatto **4:5 (1080×1350)**, dentro lo spec documenti LinkedIn. Matteo conferma: in feed
+  la card «si scorreva tutto», nessun taglio. Il timore «il viewer taglia il 1080×1350»
+  era infondato — il formato è corretto.
+- [✓] **Primo dato pubblico letto** (`AnalisiSingoloPost_..._7483279304269877248.xlsx`):
+  271 impressioni · 145 raggiunti · 3 visite profilo · 0 follower · **2 reazioni (0,7%)** ·
+  **0 commenti · 0 salvataggi · 0 diffusioni**.
+- [✓] **TARGETING VALIDA LA TESI SG «parla ai pari»**: LinkedIn ha servito il post
+  ESATTAMENTE al pubblico giusto — Qualifica **Saldatore 14%** (top), Settore **Fabbricazione
+  macchinari industriali 22% + Produzione macchinari 14% + Automazione 6% = 42% metalmecc.**,
+  Località **Milano 34%**, aziende 11-50 dip. 34%. La distribuzione funziona da sola.
+- [◐] **LEVA VERA = engagement, non formato**: il collo è slide-1 (hook) + slide-10
+  (chiusura/save-trigger). 0 salvataggi su un documento = north-star mancata. GUIDA par.7
+  (fit esterno #1) già codifica hook+chiusura; il baseline #63 dà il numero da battere.
+- [ ] **Prossimo**: pubblicare EP_SG_02_01 «V32» (già in vetrina, promosso #62) come 2º test
+  e misurare se hook più concreto (macchina reale) alza salvataggi/commenti vs baseline 0.
+
+**DECISO #63 — PIANO POST + PROSSIMA SESSIONE #64 = MONTARE POSTIZ:**
+- [◐] **Test formato PDF vs immagini**: PRE_SG_01 era caricato a IMMAGINI (271 impr @ mezzanotte).
+  Matteo tiene il contenuto com'è, cancella e **riposta il PDF domani ~7-8** (ora buona) → si legge
+  PDF vs immagini. NB: cambia formato+orario insieme (confuso), ma l'orario era il fix più grosso.
+- [✓] **Ricerca automazione LinkedIn** (git/forum): converge su **POSTIZ** (già stack deciso).
+  Scoperte: (1) i caroselli LinkedIn SONO post-documento PDF dal 2023 → i **documenti rendono più
+  delle immagini** (paginazione 1/N); (2) Postiz prende le nostre `slides/` e le fa **PDF documento**
+  da solo; (3) `postiz-agent` è CLI **collegabile a Claude**. Automazione = **OAuth, non password**
+  (login con password = 2FA/blocco bot/ToS, no).
+- [ ] **#64 MONTARE POSTIZ** — piano completo in `DOCS/POSTIZ_SETUP.md`. Apre il **collo n°1
+  (PUBBLICAZIONE)**. Prerequisiti gated Matteo: **Docker Desktop** (NON installato ora) + **app
+  LinkedIn Developer** (Client ID/Secret, prodotti Sign-In+Share, gate approvazione come app Meta).
+- [ ] **Sicurezza**: mail brand microindustry con **pass unica + 2FA + `_VAULT`** (Enea.2024 riusata =
+  da non riusare; mai password in chat). Segreti Postiz (JWT/LinkedIn secret) → `_VAULT`, mai nel repo pubblico.
+
+---
+
 ## Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14
 
 **Sessione #61 (15/07 sera) — P0 fatti, attacco in corso:**
