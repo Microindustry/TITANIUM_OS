@@ -19,6 +19,7 @@ import sys
 import time
 import json
 import logging
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from datetime import datetime
 from watchdog.observers import Observer
@@ -73,7 +74,10 @@ logging.basicConfig(
     format="%(asctime)s [WATCHER] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
-        logging.FileHandler(LOG_PATH, encoding="utf-8"),
+        # rotazione: cap 5 MB × 3 backup — il watcher.log era arrivato a 27 MB
+        # (FileHandler semplice non ruota mai). Si auto-ruota al primo write.
+        RotatingFileHandler(LOG_PATH, maxBytes=5 * 1024 * 1024,
+                            backupCount=3, encoding="utf-8"),
         logging.StreamHandler(sys.stdout),
     ]
 )
