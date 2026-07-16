@@ -210,8 +210,12 @@ def _clean_for_index(text: str) -> str:
 # File di pura navigazione del vault: indici e mappe auto-generate = solo wikilink.
 # Niente sapere da cercare → fuori dal RAG (il loro contenuto vive già nelle note vere).
 _NAV_FILES = {"HOME.md", "_EVOLUZIONE.md"}
+# Daily-note Obsidian (YYYY-MM-DD.md): diario/navigazione, non sapere — nascono in root
+# e creavano voci a 0 chunk nel manifest (attacco #2 #10). Regola che copre anche le future.
+_DAILY_NOTE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 def _is_nav_file(path: Path) -> bool:
-    return path.name in _NAV_FILES or path.name.startswith("_INDEX")
+    return (path.name in _NAV_FILES or path.name.startswith("_INDEX")
+            or bool(_DAILY_NOTE.match(path.stem)))
 
 def _chunk(text: str, sid: str) -> list[dict]:
     """Finestra scorrevole cieca alla struttura (fallback per .py/.json/.txt e per
