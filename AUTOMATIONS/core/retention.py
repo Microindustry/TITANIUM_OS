@@ -19,6 +19,13 @@ REGOLE (tutte per eta'/rotazione, mai per contenuto):
                      mtime fresco, quindi non vengono mai toccati).
   R5 rag-snapshots   _VAULT/BACKUPS/rag_snapshots/chroma_db_*: tieni le 3 piu' recenti
                      (safety-net: e' la stessa rotazione che fa gia' rag_engine).
+  R6 chroma-reset    NODES/MENTE_RAG/chroma_db_reset_* (quarantena dell'INDICE VECCHIO
+                     spostato da rag_recover --rebuild-hard, spesso corrotto: e' il
+                     motivo del reset): keep 0, elimina se > 1 giorno. La rete vera
+                     e' R5 (snapshot known-good in _VAULT) + l'indice vivo verificato
+                     ogni notte. Nato da 14,8 GB sopravvissuti a R1 (attacco #2 A4:
+                     R1 teneva il piu' recente-per-nome = il reset da 14,5 GB corrotto).
+  R7 manifest-corr   NODES/MENTE_RAG/rag_manifest_CORROTTO_*.json: elimina se > 7 giorni.
   NB deep_freeze     NON toccato qui: ruota da solo (MAX_FREEZE_FILES in deep_freeze.py).
 
 Output: DATA/retention_last.json (letto dal night_audit come segnale organi-vivi).
@@ -37,6 +44,9 @@ ROOT = Path(__file__).resolve().parents[2]
 # --- parametri della regola (giorni / copie da tenere) ---
 CHROMA_DEBRIS_DAYS = 7
 CHROMA_DEBRIS_KEEP = 1
+CHROMA_RESET_DAYS = 1        # quarantena reset: grazia corta (R5 e' la rete vera)
+CHROMA_RESET_KEEP = 0
+MANIFEST_CORROTTO_DAYS = 7
 BACKUPS_TS_DAYS = 45
 BACKUPS_FULL_KEEP = 1
 LOGS_DAYS = 30
@@ -100,9 +110,11 @@ def run(apply: bool) -> dict:
     now = datetime.now()
     actions = []  # (regola, path, MB)
 
-    # R1 — chroma debris: tutte le chroma_db_* TRANNE la viva (chroma_db esatta)
+    # R1 — chroma debris: tutte le chroma_db_* TRANNE la viva (chroma_db esatta) e
+    # TRANNE i reset (li gestisce R6 con grazia piu' corta)
     debris = sorted(
-        [d for d in RAG_DIR.glob("chroma_db_*") if d.is_dir()],
+        [d for d in RAG_DIR.glob("chroma_db_*")
+         if d.is_dir() and not d.name.startswith("chroma_db_reset_")],
         key=lambda d: d.name,
         reverse=True,
     )
@@ -143,6 +155,21 @@ def run(apply: bool) -> dict:
         )
         for d in snaps[RAG_SNAPSHOTS_KEEP:]:
             actions.append(("R5-rag-snapshots", d))
+
+    # R6 — quarantena reset dell'indice vecchio (keep 0, grazia corta)
+    resets = sorted(
+        [d for d in RAG_DIR.glob("chroma_db_reset_*") if d.is_dir()],
+        key=lambda d: d.name,
+        reverse=True,
+    )
+    for d in resets[CHROMA_RESET_KEEP:]:
+        if _entry_age_days(d, now) > CHROMA_RESET_DAYS:
+            actions.append(("R6-chroma-reset", d))
+
+    # R7 — manifest corrotti messi da parte
+    for f in RAG_DIR.glob("rag_manifest_CORROTTO_*.json"):
+        if f.is_file() and _entry_age_days(f, now) > MANIFEST_CORROTTO_DAYS:
+            actions.append(("R7-manifest-corr", f))
 
     # esegui (o simula) e rendiconta
     results = []

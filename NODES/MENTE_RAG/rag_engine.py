@@ -149,7 +149,9 @@ EXCLUDE_REL_DIRS = (os.path.join("KNOWLEDGE", "RESEARCH"),
 # (KNOWLEDGE/SINAPSI/ARCHIVIO 32 file incl. copie vecchie delle note canone V32,
 # KNOWLEDGE/ASSOLUTO/ARCHIVE_V6 10 file) erano dentro il canone e servivano
 # la verità vecchia in competizione con quella reale.
-EXCLUDE_DIR_NAMES = {"_ARCHIVIO", "_PROPOSTI", "ARCHIVIO", "ARCHIVE_V6"}
+# .obsidian = config del vault (workspace/appearance/*.json): non è conoscenza,
+# erano ~53 chunk garbage nel canone (attacco #2, ONDATA A/A4).
+EXCLUDE_DIR_NAMES = {"_ARCHIVIO", "_PROPOSTI", "ARCHIVIO", "ARCHIVE_V6", ".obsidian"}
 
 
 def _is_excluded(path: Path) -> bool:
