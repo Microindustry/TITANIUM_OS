@@ -101,7 +101,8 @@ def retrieve_context(query: str, k: int = 8) -> str:
     if not query:
         return ""
     try:
-        url = "http://localhost:5001/api/rag/search?" + urllib.parse.urlencode({"q": query})
+        url = "http://localhost:5001/api/rag/search?" + urllib.parse.urlencode(
+            {"q": query, "demote": "STORIE"})   # anti-eco (#8): grounda sul FATTI curato
         with urllib.request.urlopen(url, timeout=25) as resp:
             data = json.loads(resp.read().decode("utf-8"))
         res = (data.get("results") or [])[:k]
@@ -114,7 +115,7 @@ def retrieve_context(query: str, k: int = 8) -> str:
         pass
     try:
         from NODES.MENTE_RAG.rag_engine import search
-        res = search(query, top_k=k)
+        res = search(query, top_k=k, demote_dirs=("STORIE",))
         if res:
             return "\n".join(f"- [{r['source']}] {r['preview'].strip()[:260]}" for r in res)
     except Exception as e:

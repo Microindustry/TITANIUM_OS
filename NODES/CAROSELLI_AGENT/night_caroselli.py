@@ -171,7 +171,10 @@ def _produce(item: dict, queue: dict) -> int:
             _save_report(item, "timeout", ["timeout in grounding"])
             return 3
         try:
-            dossier_parts.append(f"### {q}\n" + rag_engine.search_and_format(q, top_k=5))
+            # demote STORIE (attacco #2 #8): il generatore si grounda sul FATTI curato,
+            # non sugli episodi grezzi -> il loop non diventa camera d'eco
+            dossier_parts.append(f"### {q}\n" + rag_engine.search_and_format(
+                q, top_k=5, demote_dirs=("STORIE",)))
         except Exception as e:  # noqa: BLE001
             log(f"RAG errore su '{q}': {e}")
     dossier = "\n\n".join(dossier_parts)

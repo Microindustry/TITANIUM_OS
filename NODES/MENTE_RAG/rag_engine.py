@@ -419,6 +419,17 @@ def _is_canon(source: str) -> bool:
         stem = stem[:-3]
     return stem.lower() in _canon_stems()
 
+# DEMOTE (attacco #2 RAG #8): malus di selezione opt-in per le cartelle "eco" (es.
+# STORIE = 55% dell'indice, episodi grezzi). I generatori (story/nina) lo passano
+# cosi' si grounda sul FATTI curato, non sugli episodi vecchi -> il loop intenzionale
+# non diventa camera d'eco. Simmetrico al bonus canone; il reranker resta giudice.
+DEMOTE_RRF_MALUS = 1.0 / RRF_K
+
+
+def _in_dirs(source: str, dirs) -> bool:
+    parts = source.replace("\\", "/").split("/")
+    return any(d in parts for d in dirs)
+
 # ── CROSSENCODER ──────────────────────────────────────────────────────────────
 
 _ce = None
@@ -749,6 +760,7 @@ def search(
     use_hybrid:       bool = True,
     use_reranker:     bool = True,
     use_graph_expand: bool = True,
+    demote_dirs:      tuple = (),
 ) -> list[dict]:
     if rebuild:
         build_index(force=True)
@@ -786,17 +798,21 @@ def search(
     # 3 — RRF merge
     merged = _rrf(sem, kw)
 
-    # 3b — canon-pin: le note puntate da _CANONE.md pesano di piu' nella SELEZIONE
-    # (un voto extra di primo rango). Il reranker resta giudice del merito.
+    # 3b — aggiustamenti di SELEZIONE (il reranker resta giudice del merito):
+    #   canon-pin: le note di _CANONE.md pesano di piu' (voto extra di primo rango)
+    #   demote:    le cartelle "eco" (demote_dirs, es. STORIE) pesano di meno, cosi'
+    #              i generatori si groundano sul FATTI curato, non su episodi vecchi
     canon = _canon_stems()
-    if canon:
-        merged = sorted(
-            ((cid, score + (CANON_RRF_BONUS
-                            if cid in id_map and _is_canon(id_map[cid]["source"])
-                            else 0.0))
-             for cid, score in merged),
-            key=lambda x: x[1], reverse=True,
-        )
+    if canon or demote_dirs:
+        def _adj(cid: str, score: float) -> float:
+            src = id_map.get(cid, {}).get("source", "")
+            if canon and cid in id_map and _is_canon(src):
+                score += CANON_RRF_BONUS
+            if demote_dirs and _in_dirs(src, demote_dirs):
+                score -= DEMOTE_RRF_MALUS
+            return score
+        merged = sorted(((cid, _adj(cid, score)) for cid, score in merged),
+                        key=lambda x: x[1], reverse=True)
 
     # 4 — Candidati per reranker
     cands = [
@@ -834,8 +850,8 @@ def search(
         for c in final
     ]
 
-def search_and_format(query: str, top_k: int = TOP_K) -> str:
-    results = search(query, top_k)
+def search_and_format(query: str, top_k: int = TOP_K, demote_dirs: tuple = ()) -> str:
+    results = search(query, top_k, demote_dirs=demote_dirs)
     if not results:
         return f"Nessun risultato per: '{query}'"
     lines = [f"## RAG v4 — '{query}'\n"]

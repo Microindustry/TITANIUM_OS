@@ -405,11 +405,14 @@ def rag_search():
     """Ricerca semantica RAG su MENTE/ via ChromaDB."""
     q     = request.args.get("q", "").strip()
     top_k = int(request.args.get("top_k", 5))
+    # demote=STORIE,... (attacco #2 #8): malus di selezione per le cartelle "eco",
+    # cosi' i generatori si groundano sul FATTI curato, non sugli episodi grezzi
+    demote = tuple(d.strip() for d in request.args.get("demote", "").split(",") if d.strip())
     if not q:
         return jsonify({"ok": False, "error": "param q mancante"}), 400
     try:
         rag_search_fn = _get_rag_search()   # lock + failure-latch (#53): niente commit-leak
-        results = rag_search_fn(q, top_k=top_k)
+        results = rag_search_fn(q, top_k=top_k, demote_dirs=demote)
         return jsonify({"ok": True, "query": q, "total": len(results), "results": results})
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
