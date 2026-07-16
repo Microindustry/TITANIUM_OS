@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-15T03:52:40",
-  "date": "2026-07-15",
-  "git_head": "199f9569",
-  "rag_chunks": 19603,
-  "n_episodes": 272,
-  "n_commits_7d": 99,
+  "last_audit": "2026-07-16T03:52:47",
+  "date": "2026-07-16",
+  "git_head": "018ec938",
+  "rag_chunks": 19814,
+  "n_episodes": 274,
+  "n_commits_7d": 110,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -16,63 +16,57 @@
     {
       "log": "night_research.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-15 03:40:02 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-15"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-15 03:40:25 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
-      "data": "2026-07-15"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-15 03:40:25 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-15"
+      "riga": "2026-07-16 03:45:17 [rag_engine          ] INFO     Totale: 19814 chunk | +add:1 mod:5 skip:429 -del:944",
+      "data": "2026-07-16"
     },
     {
       "log": "research_agent.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-15 03:38:35 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-15"
+      "riga": "2026-07-16 03:39:46 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-07-16"
     },
     {
       "log": "research_agent.log",
       "tipo": "errore esplicito",
-      "riga": "2026-07-15 03:38:58 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-07-15"
+      "riga": "2026-07-16 03:39:46 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-07-16"
     },
     {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-07-15 03:38:58 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-15"
+      "riga": "2026-07-16 03:39:46 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-07-16"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "timeout di rete",
+      "riga": "2026-07-16 03:40:31 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "data": "2026-07-16"
     },
     {
       "log": "rag_engine.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-15 03:27:02 [rag_engine          ] INFO     Totale: 18791 chunk | +add:0 mod:0 skip:429 -del:0",
-      "data": "2026-07-15"
+      "riga": "2026-07-16 03:45:17 [rag_engine          ] INFO     Totale: 19814 chunk | +add:1 mod:5 skip:429 -del:944",
+      "data": "2026-07-16"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
-      "riga": "su disco EP_N2_55, il canone dichiara EP_N2_53: aggiornare _CANONE.md",
-      "data": "2026-07-15"
+      "riga": "su disco EP_N2_56, il canone dichiara EP_N2_53: aggiornare _CANONE.md",
+      "data": "2026-07-16"
     }
   ],
   "vault_orphans": 2,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 6,
+    "file_age_days": 7,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
     "canone_age_days": 0,
-    "max_ep_disco": 55,
+    "max_ep_disco": 56,
     "max_ep_canone": 53
   },
   "organi_vivi": {
@@ -90,15 +84,15 @@
     "packages": []
   },
   "qc_episodi": {
-    "checked": 55,
+    "checked": 56,
     "structure_fail": 0,
     "open_loop_missing": 30
   },
   "critiche": {
     "added": 6,
     "auto_closed": 0,
-    "total": 177,
-    "open": 18
+    "total": 183,
+    "open": 24
   },
   "verdict": "ATTENZIONE"
 }

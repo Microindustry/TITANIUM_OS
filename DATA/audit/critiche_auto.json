@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-d8016a5f59",
+    "date": "2026-07-16",
+    "git": "018ec938",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna su Semantic Scholar è bloccata da 429 senza fallback efficace: \"2026-07-16 03:39:46 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu\" e immediatamente dopo \"2026-07-16 03:39:46 [research_agent] INFO semantic_scholar -> 0 risultati\". Il blocker SEMANTIC_SCHOLAR_API_KEY è già censito ma non risolto. In parallelo arxiv è andato in timeout: \"2026-07-16 03:40:31 [research_agent] WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)\". Risultato concreto: il RAG ha ingerito +1 chunk su una notte intera (\"2026-07-16 03:45:17 [rag_engine] INFO Totale: 19814 chunk | +add:1 mod:5 skip:429 -del:944\") — la ricerca su V32 (rigidità strutturale telaio macchina utensile) è stata azzerata.",
+    "azione": "Matteo inserisce SEMANTIC_SCHOLAR_API_KEY in .env prima di sessione #61 (è già in lista blockers, richiede 2 minuti). Per arxiv aumentare il read timeout da 15s a 45s nel client o aggiungere retry con backoff — un timeout da 15s su export.arxiv.org è troppo aggressivo.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-16"
+  },
+  {
+    "id": "AUD-9485fc3ee7",
+    "date": "2026-07-16",
+    "git": "018ec938",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "L'ATTACCO #2 è stato impostato e i 4 report dominio prodotti (commit 037c4302), ma il piano è 'propose-only, zero applicato'. La bussola_open elenca ONDATA C (finetune VERO con checkpoint+dataset 272 episodi) come task autonomo senza Matteo — ma il dataset cresce ogni notte su un canone sfasato (EP_N2_53 vs 56 su disco) e con 30 episodi senza open loop. Avviare il finetune su dati non validati consolida i difetti strutturali nel modello.",
+    "azione": "Prima di avviare ONDATA C, completare la riconciliazione canone (EP_N2_53→56) e passare i 30 episodi open_loop_missing attraverso lo stampo correttivo. Solo dopo il dataset è abbastanza pulito da giustificare il costo GPU del finetune.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-16"
+  },
+  {
+    "id": "AUD-914c836348",
+    "date": "2026-07-16",
+    "git": "018ec938",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi vitali sono completamente spenti (score 0.0): 'nina-loop', 'snapshot RAG', 'AI news watcher'. Il 'riflusso FATTI' è quasi morto (0.1). Non si tratta di degrado: sono fermi. Senza nina-loop e riflusso FATTI, gli episodi generati stanotte non alimentano il RAG con i fatti narrativi — la memoria del sistema si disaccoppia dalla produzione di contenuti.",
+    "azione": "Prima di sessione #61, verificare perché i quattro processi non si sono avviati stanotte: controllare i log di avvio (exit code, bat, marker di avvio come introdotto in fix(#57)). Priorità: riflusso FATTI e nina-loop, che condizionano direttamente la qualità RAG degli episodi successivi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-16"
+  },
+  {
+    "id": "AUD-76281a5ec8",
+    "date": "2026-07-16",
+    "git": "018ec938",
+    "area": "GENESIS",
+    "severity": "alta",
+    "finding": "Il canone vault dichiara EP_N2_53 come episodio massimo ma su disco esiste EP_N2_56: \"su disco EP_N2_56, il canone dichiara EP_N2_53: aggiornare _CANONE.md\" (2026-07-16). Tre episodi esistono fuori canone. Con 4 canon_violations totali e lo story_agent che ha già girato stanotte (commit 018ec938), il rischio è che il prossimo ciclo notturno generi EP_N2_57+ prendendo come base uno stato del canone sfasato di 3 episodi — producendo buchi di continuità non rilevabili dal QC automatico.",
+    "azione": "Aggiornare _CANONE.md portando max_ep_canone da 53 a 56 e verificare che i tre episodi extra (54, 55, 56) abbiano struttura conforme prima che story_agent giri di nuovo stanotte. Operazione da fare in ONDATA A, prima del ciclo notturno.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-16"
+  },
+  {
+    "id": "AUD-71e1cd4049",
+    "date": "2026-07-16",
+    "git": "018ec938",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Su 56 episodi verificati, 30 hanno open_loop_missing (qc_episodi: checked 56, open_loop_missing 30) — oltre il 53% del catalogo manca del gancio narrativo di chiusura. Questo non è un dato nuovo ma il volume è cresciuto: con CAP 2 L'ORGANISMO a 6 item pending in coda apprendista e il cammino Nina appena partito (3/53), ogni nuovo episodio prodotto senza open loop corretto dilata il debito anziché ridurlo.",
+    "azione": "Inserire il controllo open_loop come condizione di promozione nello stampo episodi (non solo QC ex-post): un episodio senza open loop non entra in _CANONE. Per il debito esistente, processare i 30 in batch durante ONDATA B sfruttando lo stampo già a canone.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-16"
+  },
+  {
+    "id": "AUD-553fb91c8e",
+    "date": "2026-07-16",
+    "git": "018ec938",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocker UPS è censito come 'cura alla radice' alla corruzione HNSW ricorrente (3 volte in 2 giorni), ma rimane hardware non ordinato. Nel frattempo il RAG ha perso 944 chunk in una notte sola (\"skip:429 -del:944\" da \"2026-07-16 03:45:17 [rag_engine] INFO Totale: 19814 chunk | +add:1 mod:5 skip:429 -del:944\") — e il self-heal inverso introdotto in fix(#57) non può distinguere tra chunk persi per power-loss e chunk eliminati legittimamente. Ogni power-loss non protetto è un'erosione silenziosa del knowledge base.",
+    "azione": "Ordinare l'UPS (~50-80€, già identificato) contestualmente al mandrino 2.2kW ER20 — un solo ordine. Nel frattempo configurare ChromaDB con WAL (write-ahead log) se non già attivo, per rendere le scritture atomiche indipendentemente dal self-heal.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-16"
+  },
+  {
     "id": "AUD-d1999cc6a4",
     "date": "2026-07-15",
     "git": "199f9569",
