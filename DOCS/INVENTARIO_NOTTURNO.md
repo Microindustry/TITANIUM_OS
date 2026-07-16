@@ -34,6 +34,34 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-16 · 22 commit
+- `a395f3e5` auto: night_audit - cartella clinica 16/07/2026
+- `018ec938` auto: story_agent - episodi generati 16/07/2026
+- `037c4302` ﻿feat(#61): ATTACCO #2 completo - 4 report dominio + _SINTESI TOP10 a ondate (propose-only, zero applicato)
+- `ab1882f5` ﻿feat(#61): profilo GitHub a canone - update_github_profile v2.0 + guardia scan_public
+- `9c3d2f92` ﻿chore(salva): chiusura #60 - preambolo Nina 4/4, tabellone caroselli 14/14 pulito, rodaggio 3/3, cammino partito (3/53), ATTACCO #2 colli di bottiglia impostato
+- `802fec69` ﻿feat(#60): EP_N2_01 v3 + EP_N2_02 v2 a standard - tabellone caroselli PULITO (14/14, 0 falle 0 legacy)
+- `96ff973e` ﻿docs(#60): README binario NINA - riga EP_N2_03 + convenzione onde del cammino
+- `1e668bd0` ﻿feat(#60): EP_N2_03 'Mille Volte Uguale' - primo episodio del cammino a standard nuovo (1/53)
+- `4a5e17c9` ﻿chore(#60): bussola aggiornata strada facendo - punti 1-3 chiusi, scaletta EP_N2_03 in proposta
+- `8b7e1f3b` ﻿feat(#60): coda apprendista estesa - CAP 2 L'ORGANISMO in coda (6 item pending)
+- `8ec26a52` ﻿feat(#60): EP_SG_01_03 'Il Distacco' revisionato e PROMOSSO - fine rodaggio apprendista 3/3
+- `36d39afb` ﻿feat(#60): PRE_04 'Tutto e' vero' - serie preambolo Nina COMPLETA 4/4
+- `ebe50936` ﻿feat(#60): PRE_03 v6.1 - volto Nina in copertina piu' grande e libero (dissolvenza ampia, richiesta Matteo)
+- `58e416e5` chore(salva): chiusura #59 - fit esterno a canone, rodaggio apprendista, PRE Nina 3/4, binari
+- `944c7aa8` feat(#59): CAROSELLI divisa per binario (NINA/SISTEMA) + README a ogni livello
+- `373c7717` chore(#59): riorganizzata POSTER - TAVOLE/, render stale via, README al canone
+- `898f8ebb` feat(#59): PRE_03 I Personaggi a standard (v6) - 17->10, volto libero in copertina
+- `655ec21d` feat(#59): PRE_02 Come funziona Nina a standard (v2) - 16->10, doppio fondo in copertina
+- `67924c20` fix(#59): PRE_01 slide 2 - volto Nina libero (dissolvenza radiale, niente forma geometrica)
+- `330ca6e7` feat(#59): PRE_01 Nina RIFATTO DA 0 (v13, insieme) - 10 slide, copertina 2-bis, regole fit
+- `9d6f6116` fix(#59): EP_SG_01_02 slide 8 - via le percentuali STATE (metriche interne, non stato fisico)
+- `cacb9fad` fix(#59): numeri di progetto fuori dai contenuti pubblici + EP_SG_01_02 promossa
+
+_episodi: 274 · critiche aperte: 24 (159 risolte) · RAG: 19814 chunk_
+
+
+
 ## 2026-07-15 · 15 commit
 - `9680b132` auto: night_audit - cartella clinica 15/07/2026
 - `199f9569` auto: story_agent - episodi generati 15/07/2026
