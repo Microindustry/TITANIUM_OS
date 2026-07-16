@@ -48,6 +48,16 @@ def load_state():
     except:
         return {}
 
+def load_public_summary():
+    """Sintesi umana del milestone per il pubblico (BRAIN/profile_public.json).
+    Se il file manca o è illeggibile → {} → il README torna al dump grezzo di STATE
+    (comportamento v2.0 invariato: additivo, fail-safe)."""
+    f = BASE / "TITANIUM_OS" / "BRAIN" / "profile_public.json"
+    try:
+        return json.loads(f.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
 def get_recent_episodes(n=5):
     ep_dir = BASE / "TITANIUM_OS" / "CONTENT_ENGINE" / "DATABASE" / "episodes"
     eps = sorted(ep_dir.rglob("*.md"), key=lambda f: f.stat().st_mtime, reverse=True)[:n]
@@ -75,6 +85,32 @@ def build_readme(state):
     updated     = datetime.now().strftime("%d %b %Y %H:%M")
 
     bars = lambda pct: ("█" * (pct // 10)) + ("░" * (10 - pct // 10)) + f" {pct}%"
+
+    # --- sintesi umana per "quel mondo" (additiva, con fallback al dump grezzo) ---
+    pub = load_public_summary()
+    adesso   = str(pub.get("adesso", "")).strip()
+    prossimo = str(pub.get("prossimo", "")).strip()
+    milestones_list = chr(10).join(f"- {m}" for m in milestones)
+    if adesso or prossimo:
+        human = "\n\n".join(
+            p for p in (
+                f"**Adesso** — {adesso}" if adesso else "",
+                f"**Prossimo** — {prossimo}" if prossimo else "",
+            ) if p
+        )
+        milestone_section = (
+            human + "\n\n"
+            "<details>\n<summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati "
+            "(per chi vuole i dadi e i bit)</summary>\n\n"
+            f"**Milestone attivo:** {milestone}\n\n"
+            f"**Prossimo step:** {next_step}\n\n"
+            f"**Ultimi 5 milestone verificati:**\n{milestones_list}\n\n"
+            "</details>"
+        )
+        milestones_block = ""  # già dentro il <details>
+    else:
+        milestone_section = f"**Milestone attivo:** {milestone}\n**Prossimo step:** {next_step}"
+        milestones_block = f"### Ultimi 5 milestone verificati\n{milestones_list}"
 
     readme = f"""## Matteo Benenati — Microindustry
 
@@ -118,8 +154,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 | **MIMS** (sistema modulare d'acciaio) | `{bars(mims_pct)}` | Attende la pressa VULCAN |
 | **VITA NATURA** (centro estetico) | `{bars(vn_pct)}` | Attivo |
 
-**Milestone attivo:** {milestone}
-**Prossimo step:** {next_step}
+{milestone_section}
 
 ---
 
@@ -140,8 +175,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 ---
 
-### Ultimi 5 milestone verificati
-{chr(10).join(f"- {m}" for m in milestones)}
+{milestones_block}
 
 ### Episodi recenti
 {chr(10).join(f"- *{e}*" for e in episodes)}
