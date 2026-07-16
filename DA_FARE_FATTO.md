@@ -138,9 +138,12 @@
     reset-quarantena keep0/1g + R7 manifest corrotto >7g; R1 non gestisce più i
     reset — teneva il 14,5 GB corrotto perché "più recente per nome") + `.obsidian`
     in EXCLUDE_DIR_NAMES. Applicato, indice vivo intatto. Commit `50c95f2b`.
-- [ ] **2. REVISIONE BOZZA EP_SG_02_01 «V32 — il cuore che taglia»** — arrivata
-  VERDE stanotte in `_BOZZE` (coda: bozza_verde) → canone §7.7 (angolo aveva la
-  guardia stato-reale) → promozione in CAROSELLI/SISTEMA/ (S1 → 4/69)
+- [✓] **2. REVISIONE + PROMOZIONE EP_SG_02_01 «V32 — il cuore che taglia»** (#62
+  16/07): QC verde, §7.7 rispettata (slide 9 STATO REALE — telaio assemblato,
+  mandrino da ordinare, «nessuna finzione di completamento»); slide 6 (HMI TP900 +
+  bronzine/scalini) verificata grounded su fatti_dalle_storie/atto_vii, no prezzi.
+  Promossa in CAROSELLI/SISTEMA/, griglia IG rigenerata, **S1 4/69** (CAP 2 1/7).
+  Commit `7a9cb9c9` + MENTE `c7de8b9`.
 - [ ] 3. ONDATA B: corsia NINA nell'apprendista (53 testi già canone, stampo
   EP_N2_03) → PDF LinkedIn batch + export Express dei 14 → dieta RAG (hash manifest
   + lock build_index + gate no-op)
