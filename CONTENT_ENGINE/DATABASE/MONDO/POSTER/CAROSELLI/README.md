@@ -82,6 +82,8 @@ ultima slide = perché restare + open loop con assaggio (GUIDA §7).
 | EP_N2_02 | Nina | Il Soffio di Troppo (⟡0) | 16 | legacy formato doppio — a standard ≤10 quando toccato |
 | EP_SG_01_01 | Sistema | Il primo prompt | 10 | bozza notturna 14/07 → corretta (canone) e promossa 15/07 |
 | EP_SG_01_02 | Sistema | La Taverna | 10 | bozza notturna 15/07 → corretta (de-numeri) e promossa 15/07 |
+| EP_SG_01_03 | Sistema | Il Distacco | 10 | bozza notturna 15/07 → corretta (§7.5) e promossa 15/07 (fine rodaggio 3/3) |
+| EP_SG_02_01 | Sistema | V32 — il cuore che taglia | 10 | bozza notturna 16/07 → revisione §7.7 (slide 9 STATO REALE) e promossa 16/07 (apertura CAP 2) |
 
 *Il piano completo dei 69 caroselli S1 sistema: `MENTE/STORIE/SG_GIORNO0/_PIANO_PRODUZIONE.md`.
 Il cammino Nina (57 caroselli): `MENTE/KNOWLEDGE/MONDO/PIANO_PRODUZIONE_NINA.md`.*
