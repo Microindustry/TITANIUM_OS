@@ -93,5 +93,13 @@ Il cammino Nina (57 caroselli): `MENTE/KNOWLEDGE/MONDO/PIANO_PRODUZIONE_NINA.md`
 `night_caroselli` (task `TI_NightCaroselli` @04:15) prende un item `pending` da
 `DATA/caroselli_queue.json`, fa grounding RAG → bozza → render → QC e la lascia in
 `_BOZZE/<ID>/`. **Mai promozione automatica**: la promozione (di giorno, dopo revisione)
-= spostare la cartella qui fuori, spuntare il piano in MENTE, rigenerare `_griglia_ig.png`.
+= spostare la cartella qui fuori, spuntare il piano in MENTE, rigenerare `_griglia_ig.png`,
+generare il PDF LinkedIn (`python CONTENT_ENGINE/scripts/pdf_export.py <ID>`).
 Report del mattino: `DATA/audit/bozze_caroselli.json` · log: `DATA/logs/night_caroselli.log`.
+
+## Il PDF LinkedIn (un documento per episodio)
+
+Ogni cartella ha il suo `carosello.pdf` (una pagina per slide, 1080×1350) generato da
+`pdf_export.py` (batch su tutte le cartelle, o `pdf_export.py <ID>` per una). È il
+formato del post-DOCUMENTO LinkedIn (sfogliabile). Canale NON-Meta: pubblicabile
+subito, si carica a mano dal profilo. Rigenera il PDF quando cambi le slide.
