@@ -20,6 +20,7 @@ NODES/MENTE_RAG/rag_manifest_*.json
 NODES/MENTE_RAG/rag_tfidf.pkl
 NODES/MENTE_RAG/rag_linkgraph.json
 NODES/MENTE_RAG/mente_index.json
+NODES/MENTE_RAG/rag_index.lock
 # device override machine-local (cpu/cuda) — come .env, non versionare
 NODES/MENTE_RAG/rag_device.txt
 # Indice semantico (binario) — rigenerabile da MENTE/, riscritto di continuo dal watcher (churn)

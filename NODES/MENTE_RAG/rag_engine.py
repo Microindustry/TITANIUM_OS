@@ -63,6 +63,7 @@ CHROMA_DIR     = _HERE / "chroma_db"
 MANIFEST_PATH  = _HERE / "rag_manifest.json"
 CORPUS_PATH    = _HERE / "rag_corpus.jsonl"
 TFIDF_PATH     = _HERE / "rag_tfidf.pkl"
+INDEX_LOCK_PATH = _HERE / "rag_index.lock"   # una sola indicizzazione alla volta
 COLLECTION     = "mente"
 EMBED_MODEL    = "paraphrase-multilingual-MiniLM-L12-v2"
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"   # multilingue (100+ lingue, IT) — ms-marco era solo EN su contenuto italiano (upgrade 14/06, testato: discrimina IT)
@@ -443,7 +444,51 @@ def _rerank(query: str, cands: list[dict], top_k: int) -> list[dict]:
 
 # ── INDEX BUILD ───────────────────────────────────────────────────────────────
 
+def _acquire_index_lock():
+    """File-lock esclusivo non-bloccante (attacco #2 #3: due indicizzatori concorrenti
+    si sovrascrivevano manifest/TF-IDF). Ritorna il file-handle se preso, None se un
+    altro processo lo tiene. Fuori Windows: best-effort (nessun lock vero)."""
+    fh = open(INDEX_LOCK_PATH, "w")
+    try:
+        import msvcrt
+    except ImportError:
+        return fh
+    try:
+        msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+        return fh
+    except OSError:
+        fh.close()
+        return None
+
+
+def _release_index_lock(fh) -> None:
+    try:
+        import msvcrt
+        fh.seek(0)
+        msvcrt.locking(fh.fileno(), msvcrt.LK_UNLCK, 1)
+    except Exception:
+        pass
+    finally:
+        fh.close()
+
+
 def build_index(force: bool = False) -> int:
+    """Wrapper con lock: una sola indicizzazione per volta. Il secondo processo esce
+    subito senza toccare l'indice (le run concorrenti perdevano scritture)."""
+    lock = _acquire_index_lock()
+    if lock is None:
+        logger.warning("build_index: un'altra indicizzazione e' gia' in corso — esco")
+        try:
+            return _get_collection().count()
+        except Exception:
+            return -1
+    try:
+        return _build_index(force=force)
+    finally:
+        _release_index_lock(lock)
+
+
+def _build_index(force: bool = False) -> int:
     manifest   = {"chunk_ver": CHUNK_VER, "files": {}} if force else _load_manifest()
     collection = _get_collection(reset=force)
 
@@ -510,13 +555,24 @@ def build_index(force: bool = False) -> int:
         sig  = {"mtime": st.st_mtime, "size": st.st_size}
         prev = prev_files.get(rel)
 
-        # Invariato → salta
+        # Invariato (mtime+size) → salta subito, senza leggere il file (fast path)
         if prev and prev.get("mtime") == sig["mtime"] and prev.get("size") == sig["size"]:
             new_files[rel] = prev
             skipped += 1
             continue
 
-        # Rimuovi chunk precedenti
+        # sig cambiato → leggi+pulisci e confronta l'HASH del testo INDICIZZATO:
+        # auto_linker/vault_intersect riscrivono i blocchi 'Collegati' (cambia mtime)
+        # ma _clean_for_index li scarta → contenuto identico → niente re-embed.
+        text  = _clean_for_index(_read_file(path))
+        chash = hashlib.sha1(text.encode("utf-8")).hexdigest()
+        if prev and prev.get("hash") == chash:
+            # touch senza cambio contenuto: aggiorna solo mtime/size, ZERO re-embed
+            new_files[rel] = {**sig, "hash": chash, "chunk_ids": prev.get("chunk_ids", [])}
+            skipped += 1
+            continue
+
+        # Rimuovi chunk precedenti (contenuto cambiato davvero)
         if prev and prev.get("chunk_ids"):
             try: collection.delete(ids=prev["chunk_ids"])
             except Exception: pass
@@ -527,8 +583,7 @@ def build_index(force: bool = False) -> int:
         else:
             added += 1
 
-        # Ri-chunking (pulizia vault: via blocchi Collegati + commenti auto)
-        text   = _clean_for_index(_read_file(path))
+        # Ri-chunking
         chunks = _chunk_dispatch(text, _sid(rel), path.suffix.lower()) if text else []
         cids   = []
         for c in chunks:
@@ -541,7 +596,7 @@ def build_index(force: bool = False) -> int:
             })
             corpus[c["id"]] = {"text": c["text"], "source": rel}
             cids.append(c["id"])
-        new_files[rel] = {**sig, "chunk_ids": cids}
+        new_files[rel] = {**sig, "hash": chash, "chunk_ids": cids}
 
         if len(batch_docs) >= 200:
             flush()  # flush incrementale
@@ -576,12 +631,19 @@ def build_index(force: bool = False) -> int:
 
     manifest["files"] = new_files
     _save_manifest(manifest)
-    _save_corpus(corpus)
 
     total = collection.count()
     logger.info("Totale: %d chunk | +add:%d mod:%d skip:%d -del:%d",
                 total, added, modified, skipped, removed_chunks)
 
+    # Early-exit no-op: se il corpus non e' cambiato (0 add/mod/del), TF-IDF, linkgraph
+    # e rag_corpus.jsonl sono gia' corretti su disco — saltali (le run a vuoto rifacevano
+    # il fit su ~20k chunk + riscrivevano 13+26 MB per niente, decine di volte al giorno).
+    if added == 0 and modified == 0 and removed_chunks == 0:
+        logger.info("No-op: corpus invariato — salto save corpus/TF-IDF/linkgraph")
+        return total
+
+    _save_corpus(corpus)
     logger.info("Fit TF-IDF BM25 su %d chunk...", len(corpus))
     _fit_tfidf(corpus)
     # Linkgraph aggiornato nello stesso passaggio (cheap, no GPU): tiene il grafo
