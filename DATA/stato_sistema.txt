@@ -1,25 +1,27 @@
 ====================================================
  STATO TITANIUM_OS — file fisico (auto-aggiornato)
- Wednesday 15 July 2026, 04:07
+ Thursday 16 July 2026, 04:07
 ====================================================
 
 >>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
 
 — Task notturni —
-  ✓ TI_StoryAgent      OK   (ultima: 15/07 02:07)
-  ✓ TI_NightResearch   OK   (ultima: 15/07 03:37)
-  ✓ TI_NightAudit      OK   (ultima: 15/07 03:52)
-  ✓ TI_NightPush       OK   (ultima: 15/07 04:07)
-  ✓ TI_DailyBrief      OK   (ultima: 14/07 07:30)
-  ✓ TI_Watchdog        OK   (ultima: 15/07 03:37)
+  ✓ TI_StoryAgent      OK   (ultima: 16/07 02:07)
+  ✓ TI_NightResearch   OK   (ultima: 16/07 03:37)
+  ✓ TI_NightAudit      OK   (ultima: 16/07 03:52)
+  ✓ TI_NightPush       OK   (ultima: 16/07 04:07)
+  ✓ TI_DailyBrief      OK   (ultima: 15/07 07:30)
+  ✓ TI_Watchdog        OK   (ultima: 16/07 03:38)
 
 — Servizi —
   · API Server (5001): attivo
   · MENTE Watcher: attivo
 
 — ⚠ GUASTI dai log (ultime 36h) —
-  ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima: 13/07 09:17)
-  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog     
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima
+
+— note (rumore atteso, non urgente) —
+  · night_research.log: 2026-07-16 03:45:17 [rag_engine          ] INFO     Totale: 19814 chunk | +add:1 mod:5 ski
 
 Questo file si riscrive da solo (catena notturna + watchdog).
 Se vedi ⚠, apri DATA/logs/ del task indicato.

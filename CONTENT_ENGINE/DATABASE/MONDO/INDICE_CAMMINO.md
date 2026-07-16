@@ -8,7 +8,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-15 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-16 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*
@@ -24,7 +24,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 55)
+## Il cammino (caselle 1 → 56)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -83,6 +83,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 53 | `EP_N2_53` | Il Direttore Invisibile | ⟡7 (giro 2) | Un gruppo funziona solo se c'è qualcuno (o qualcosa) che coordina chi |
 | 54 | `EP_N2_54` | Il Dito che Insegna | ⟡1 (giro 3) | Una traccia è un gesto che rimane e continua a insegnare anche quando |
 | 55 | `EP_N2_55` | La Giuntura che Respira | ⟡0 (giro 3) | Le giunture sono i punti dove il disordine ama attaccare, ma il movime |
+| 56 | `EP_N2_56` | La mano che insegna alla notte | ⟡2 (giro 3) | Quando insegni a una macchina il gesto giusto, lei lo ripete perfetto |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

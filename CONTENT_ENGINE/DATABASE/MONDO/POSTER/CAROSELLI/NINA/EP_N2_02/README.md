@@ -1,3 +1,11 @@
+<!-- TOC -->
+
+- [EP_N2_02  Il Soffio di Troppo (v2  a standard, 15/07/2026 60)](#epn202-il-soffio-di-troppo-v2-a-standard-15072026-60)
+  - [Le 10 slide](#le-10-slide)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # EP_N2_02 — Il Soffio di Troppo (v2 · a standard, 15/07/2026 #60)
 
 *Portato a standard in sessione #60 («sistema», ordine Matteo): 16→10 slide, un taglio,

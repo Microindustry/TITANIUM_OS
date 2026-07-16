@@ -1,6 +1,6 @@
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-15 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-16 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -33,7 +33,7 @@
 | 2 | `EP_N2_17` La Traccia | Un gesto documentato diventa un insegnamento che vive oltre il momento | adattato | — |
 | 3 | `EP_N2_54` Il Dito che Insegna | Una traccia è un gesto che rimane e continua a insegnare anche quando  | adattato | — |
 
-## ⟡2 · L'OFFICINA CHE GIRA SOLA  (13 episodi)
+## ⟡2 · L'OFFICINA CHE GIRA SOLA  (14 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -47,6 +47,7 @@
 | 3 | `EP_N2_24` Il Filtro del Mugnaio | Non tutti i segnali che raccogli sono importanti: il vero lavoro è ric | adattato | ⟡1 |
 | 3 | `EP_N2_25` Le finestre sempre aperte | Esistono quattro strade pubbliche (GitHub, RSS, YouTube, CLI) dove le  | adattato | ⟡1 |
 | 3 | `EP_N2_26` La ruota dei guardiani | Non tutti meritano la stessa attenzione ogni giorno: impara a ruotare  | adattato | ⟡1 |
+| 3 | `EP_N2_56` La mano che insegna alla notte | Quando insegni a una macchina il gesto giusto, lei lo ripete perfetto  | adattato | — |
 | 3 | `EP_SEED_WATCHER_L1_GATE` Il gate di rilevanza — tenere il segnale, buttare il rumore | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_KEYLESS` Guardare senza chiavi — gh, RSS, YouTube | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_TIER` Chi guardare più spesso — il tier a rotazione 48h | stare informati senza farlo a mano | fonte | ⟡1 |

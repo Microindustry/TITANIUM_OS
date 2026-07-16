@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [ATTACCO 2  SINTESI (coordinatore Fable 5, 15/07/2026 sera)](#attacco-2-sintesi-coordinatore-fable-5-15072026-sera)
+  - [Il quadro in una riga](#il-quadro-in-una-riga)
+  - [Quadro per dominio](#quadro-per-dominio)
+  - [TOP 10 per leva (impatto / sforzo)](#top-10-per-leva-impatto-sforzo)
+  - [Ordine consigliato (ondate)](#ordine-consigliato-ondate)
+
+<!-- /TOC -->
+
 # ATTACCO #2 — SINTESI (coordinatore Fable 5, 15/07/2026 sera)
 
 *4 report dominio in questa cartella, tutti propose-only con prova e file:riga.

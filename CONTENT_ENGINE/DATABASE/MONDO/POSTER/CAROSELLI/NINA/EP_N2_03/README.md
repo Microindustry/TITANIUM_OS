@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [EP_N2_03  Mille Volte Uguale (v1  creato 15/07/2026, 60)](#epn203-mille-volte-uguale-v1-creato-15072026-60)
+  - [Fonte (grounding  VERBATIM dove possibile)](#fonte-grounding-verbatim-dove-possibile)
+  - [Convenzione onde (nuova, da qui in poi)](#convenzione-onde-nuova-da-qui-in-poi)
+  - [7 (fit esterno)](#7-fit-esterno)
+  - [Stato](#stato)
+
+<!-- /TOC -->
+
 # EP_N2_03 — Mille Volte Uguale (v1 · creato 15/07/2026, #60)
 
 *PRIMO episodio del cammino a standard nuovo (10 slide, stampo serie PRE_01 v13,

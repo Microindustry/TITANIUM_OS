@@ -1,42 +1,42 @@
-=== RIAVVIO SESSIONE #61 — generato 15/07/2026 (fine #60, skill salva) ===
-Ultima sessione: #60 (15/07, Fable 5 — preambolo chiuso, tabellone pulito, attacco #2 impostato)
+=== RIAVVIO SESSIONE #62 — generato 16/07/2026 (fine #61, skill salva) ===
+Ultima sessione: #61 (15-16/07, Fable 5 — P0 verificati, attacco #2 completo, ondata A approvata)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-TABELLONE CAROSELLI PULITO: 14/14 publish-ready, QC 0 falle 0 legacy.
-SERIE PRE NINA COMPLETA 4/4 (PRE_04 «Tutto è vero» creato: patto + slide
-PONTE; PRE_03 v6.1 volto grande). RODAGGIO APPRENDISTA CHIUSO 3/3
-(EP_SG_01_03 promosso, S1 3/69) + coda CAP 2 caricata (6 notti).
-CAMMINO NINA PARTITO: EP_N2_03 compilato (scaletta approvata) + 01/02
-a standard = regione ⟡0 completa, 3/53, totale Nina 7/57. Onda continua 1-70.
+ATTACCO #2 FATTO E APPROVATO. P0-1: autogenerazione episodi→RAG VIVA
+(EP_N2_55 auto, riflusso FATTI, RAG cresce live). P0-2: profilo GitHub
+A CANONE (falla §7.7 curata: 178kg/±0,019 ripubblicati ogni notte dal
+29/05 → v2.0 + guardia scan_public in uscita, verificato sul remoto).
+4 report dominio + _SINTESI TOP10 in DOCS/ATTACCO_20260716/. Quadro:
+«la fabbrica produce e ricorda; non consegna e dorme». Matteo ha
+APPROVATO L'ONDATA A → si esegue in #62. Bozza EP_SG_02_01 verde in _BOZZE.
 
-━━━ PROSSIMA SESSIONE #61 (in ordine) ━━━
-1. P0 — VERIFICA AUTOGENERAZIONE EPISODI → RAG (ordine Matteo): story_agent/
-   night_research generano? riflusso FATTI vivo? RAG cresce? Numeri o diagnosi+cura
-2. P0 — PROFILO GITHUB PERSONALE aggiornato: README allo stato reale (repo
-   public: niente segreti) + pin 5 repo (memoria github_pin_pending)
-3. ATTACCO #2 — COLLI DI BOTTIGLIA (Fable 5): piano PRONTO in
-   DOCS/ATTACCO_20260716/_PIANO.md — 5 agenti propose-only (pipeline contenuti /
-   RAG / notturne / RICOGNIZIONE GITHUB strumenti da integrare / sintesi TOP 10)
-4. Risultati LinkedIn PRE_SG_01 → tararsi (gated Matteo)
-5. Revisione bozza notturna EP_SG_02_01 «V32» (stanotte @04:15, guardia §7.7 in angolo)
+━━━ PROSSIMA SESSIONE #62 (in ordine) ━━━
+1. ONDATA A — esecuzione (commit isolati, additivo; file:riga in _SINTESI + report 2/3):
+   A1 fix canon-pin (~5 righe, rag_engine.py:384-402: salta wikilink storico/
+      SUPERSEDED di _CANONE; test «massa V32»; vale al prossimo restart API)
+   A2 coda apprendista: refill automatico dai piani + multi-bozza con tetto
+      anti-backlog (night_caroselli.py:126-127; 77 s/bozza su 20 min timeout;
+      9→~3 mesi). Portanti con cameo Nina MAI in coda
+   A3 fonti allineate: piano SG 2/69→conta reale · _CANONE range EP_N2 53→55
+      (sentinella ferma da 08/07) · rotazione watcher.log (27 MB, watcher.py:76)
+   A4 igiene disco: 14,8 GB chroma_db_reset_* + manifest CORROTTO (regola in
+      retention.py) · `.obsidian` in EXCLUDE_DIR_NAMES (rag_engine.py:152)
+2. REVISIONE EP_SG_02_01 «V32 — il cuore che taglia» in _BOZZE (verde stanotte)
+   → §7.7 (guardia stato-reale era nell'angolo) → promozione (S1 4/69)
+3. ONDATA B: corsia Nina apprendista · PDF LinkedIn + Express batch dei 14 ·
+   dieta RAG (hash manifest + lock + gate no-op)
+4. ONDATA C: finetune VERO (dataset 272 ep, buco GPU 04:30-07:30) · replica serale
+5. Gated Matteo (~1h): app Meta · pin 5 repo · UPS · risultati LinkedIn PRE_SG_01
 
-━━━ FATTO IN #60 (commit) ━━━
-ebe50936 PRE_03 v6.1 volto grande · 36d39afb PRE_04 serie 4/4 · 8ec26a52
-EP_SG_01_03 promosso · 8b7e1f3b coda CAP2 · 1e668bd0 EP_N2_03 · 96ff973e
-README binario · 802fec69 EP_N2_01/02 a standard · MENTE: 4 commit stato.
-
-━━━ REGOLE NUOVE DI #60 (canone) ━━━
-- Onde: PRE 1-40, il CAMMINO continua l'onda del mondo (casella N = fase
-  40+(N-1)×10 → 01=41-50, 02=51-60, 03=61-70). In README binario NINA.
-- I portanti SG con cameo Nina (SG_01/04/09) = lavoro di giorno INSIEME,
-  mai in coda all'apprendista.
-- Primo carosello di un tipo nuovo = scaletta esposta e approvata PRIMA
-  di compilare (fatto per EP_N2_03, vale per i prossimi «primi»).
+━━━ FATTO IN #61 (commit) ━━━
+ab1882f5 profilo GitHub v2.0+guardia · 037c4302 attacco: 4 report+_SINTESI ·
++ chiusura. I report: 1_PIPELINE (14 pronti/0 pubblicati, coda muore 21/07) ·
+2_RAG (canon-pin cieco, re-embed di massa, 14,8GB) · 3_NOTTURNE (notte 3,9%,
+12/31 perse, finetune finto-verde) · 4_GITHUB (Postiz ok, Astro, no unsloth).
 
 ━━━ BLOCKERS APERTI (gated Matteo) ━━━
-- Hardware: UPS + mandrino ER20 + martinetto Vevor = IL tappo
-- Prerequisiti pubblicazioni: mail progetto, FB+IG, app Meta, Docker/Postiz
-  (il collo n°1 — l'attacco #2 quantifica cosa si sblocca senza Matteo)
-- Chiave Semantic Scholar (5 min) → azzera i 429 notturni
+- App Meta (~1h) = sblocca la pubblicazione 1-click (il collo n°1)
+- Hardware: UPS (radice notti perse) + mandrino ER20 + martinetto Vevor
+- Pin 5 repo profilo GitHub (manuale browser) · chiave Semantic Scholar (429)
 
-━━━ Generato: 15/07/2026 — fine sessione #60 (skill salva) ━━━
+━━━ Generato: 16/07/2026 — fine sessione #61 (skill salva) ━━━

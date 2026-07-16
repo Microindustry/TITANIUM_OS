@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [DOMINIO 2  CONOSCENZA / RAG (attrito nel loop episodiRAGgenerazione)](#dominio-2-conoscenza-rag-attrito-nel-loop-episodiraggenerazione)
+  - [Quadro](#quadro)
+  - [Attriti trovati](#attriti-trovati)
+  - [TOP 3 per leva](#top-3-per-leva)
+
+<!-- /TOC -->
+
 # DOMINIO 2 — CONOSCENZA / RAG (attrito nel loop episodi→RAG→generazione)
 
 *Attacco #2 · 15/07/2026 · agente Fable 5 · **propose-only** (nessun file toccato, nessun rebuild lanciato, 3 query di test via HTTP GET su :5001)*

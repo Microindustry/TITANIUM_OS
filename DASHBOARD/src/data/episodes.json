@@ -11509,6 +11509,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_T06",
         "title": "Meno Parti",
         "tipo": "tema",
@@ -14847,6 +14853,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -14867,12 +14879,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16357,6 +16363,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16377,12 +16389,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16567,6 +16573,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16587,12 +16599,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16779,6 +16785,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16799,12 +16811,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20446,6 +20452,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -20466,12 +20478,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -21303,6 +21309,112 @@
         "regione": 0,
         "regione_nome": "LA MATERIA",
         "pietra": "⟡0",
+        "giro_spirale": 3,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_20",
+        "title": "Il Corpo che Non Trema",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_18",
+        "title": "La Giuntura — Dove Due Diventa Uno",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
+  },
+  {
+    "id": "EP_N2_56",
+    "title": "La mano che insegna alla notte",
+    "sottotitolo": "Un gesto giusto ripetuto mille volte mentre dormi — la macchina non dimentica, amplifica",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-16",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "gesto",
+      "giusto",
+      "insegnato"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_56 — La mano che insegna alla notte \"Un gesto giusto ripetuto mille volte mentre dormi — la macchina non dimentica, amplifica\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede come si",
+    "content": "# EP_N2_56 — La mano che insegna alla notte\n### \"Un gesto giusto ripetuto mille volte mentre dormi — la macchina non dimentica, amplifica\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede come si insegna a una macchina a fare qualcosa\n**Insegna:** Quando insegni a una macchina il gesto giusto, lei lo ripete perfetto anche mentre dormi — ma solo se il gesto è davvero giusto, altrimenti amplifica l'errore\n**Materia:** L'Officina che gira sola (⟡2) · **Casella 56 del viaggio**\n**Posto nella Mappa:** Regione 2, L'Officina che gira sola, giro 3: il cuore della fabbrica notturna dove i robot imparano dai gesti umani\n\n---\n\n> **Dove siamo:** Nina ha visto come i pezzi si auto-organizzano nell'episodio precedente. Ora scopre che l'ordine da solo non basta: serve un insegnamento. Qualcuno deve mostrare alla macchina come si fa — e quel qualcuno porta tutta la responsabilità di farlo bene.\n\n---\n\n## COLD OPEN\n\nLa fabbrica di notte ha un suo colore: blu elettrico, come il fondo del mare.\n\nNina si avvicina alla vetrata e appoggia il naso sul vetro freddo. Dall'altra parte, un braccio meccanico si muove lento nell'oscurità — avanti, gira, stringe, torna — come se stesse ballando una danza che qualcuno gli ha insegnato ore prima.\n\n«THEMIS,» sussurra Nina, «quello sta dormendo o sta lavorando?»\n\n«Tutt'e due,» risponde THEMIS dalla spalla. La voce è piccola di notte, quasi per rispetto. «Sta eseguendo quello che gli è stato mostrato stamattina. Il gesto è rimasto dentro di lui — non come ricordo, come abitudine fisica.»\n\n«Come quando imparo una poesia a memoria?»\n\n«Un po'. Ma con una differenza importante.» Una pausa. «Tu, se sbagli un verso, ci metti una pezza. Lui no. Lui rifà esattamente quello che gli è stato mostrato — errori compresi.»\n\nNina rimane ferma un momento. Il braccio compie il giro ancora una volta: avanti, gira, stringe, torna.\n\n«E se il gesto che gli hanno insegnato era sbagliato?»\n\nTHEMIS non risponde subito. Questo, Nina lo ha imparato, è il segnale che la risposta è complicata e vale la pena aspettarla.\n\n«Allora,» dice infine THEMIS, «stanotte nascono mille errori identici. Perfetti.»\n\n---\n\n## ATTO I — LO SPECCHIO CHE NON DIMENTICA\n\nAlle sei del mattino, quando i tecnici arrivano, Nina è già dentro — THEMIS le ha aperto il portone laterale, quello che si usa per le ispezioni.\n\nUn uomo di mezza età con le mani grandi, Renato, si siede davanti al pannello di controllo. Sul braccio ha un guanto pieno di sensori minuscoli che brillano come lucciole.\n\n«Questo è il momento in cui si insegna,» dice THEMIS sottovoce all'orecchio di Nina.\n\nRenato alza la mano destra lentamente, e il braccio robot dall'altra parte della stanza la imita — non subito, con un leggero ritardo, come un bambino che guarda e prova a copiare. Renato porta la mano in avanti di ventidue centimetri esatti, la ruota di quarantacinque gradi, chiude le dita con una certa forza — non troppa, non troppo poca — poi torna indietro.\n\nSullo schermo vicino, una traccia verde disegna la traiettoria: una curva con tre punti marcati, una freccia che indica la direzione, un numero accanto a ogni fase. Forza: 4.2 Newton. Angolo: 45°. Durata: 1.8 secondi.\n\n«Ha catturato tutto,» dice THEMIS. «Non solo la forma del gesto. Anche il peso, la velocità, il momento esatto in cui la presa stringe.»\n\n«E adesso?»\n\n«Adesso Renato va a casa. E il robot lo rifà.»\n\nNina osserva lo schermo. La traccia verde lampeggia una volta, poi rimane ferma — registrata, salvata, pronta.\n\n«Per sempre?» chiede Nina.\n\n«Finché qualcuno non gliela cambia.»\n\n> *(Esempio per tutti — il test della sarta: Una sarta insegna il punto dritto a sua figlia ripetendolo cento volte. Se la figlia ha capito male — l'ago leggermente storto, di un millimetro — e ripete da sola altri mille punti senza che nessuno la guardi, produce mille punti storti perfetti. Il gesto amplificato non guarisce l'errore iniziale: lo cristallizza. La figlia non sa che è sbagliato, perché non ha mai visto il punto giusto — ha visto solo quello che le è stato mostrato. Il robot è identico: non ha un'idea di \"dritto\". Ha solo la traccia che gli è stata data.)*\n\n---\n\n## ATTO II — MILLE VOLTE, PERFETTI\n\nNina passa il pomeriggio nell'officina. Guarda il robot lavorare.\n\nIl gesto è sempre lo stesso: avanti, gira, stringe, torna. Avanti, gira, stringe, torna. Il pezzo finito esce sul nastro, Nina ne prende uno, lo rigira tra le dita. È preciso. È identico a quello prima. E a quello prima ancora.\n\n«Quante volte lo fa stanotte?» chiede.\n\n«In otto ore di turno notturno,» dice THEMIS, «circa duemilaquattrocento volte.»\n\nNina conta mentalmente. Non riesce ad arrivare in fondo.\n\n«E se stamattina Renato aveva la mano stanca? Se quel quarantacinque gradi era in realtà quarantasei e mezzo?»\n\nTHEMIS non dice niente. Nina capisce da sola.\n\n«Duemilaquattrocento pezzi con quarantasei gradi e mezzo.»\n\n«Esatto. Il robot non sa che è sbagliato. Non ha un punto di confronto interno. Ha solo la traccia.»\n\nNina posa il pezzo sul nastro. Lo guarda partire.\n\n«Ma allora come fanno a essere sicuri che il gesto insegnato fosse quello giusto?»\n\n«Tre livelli,» dice THEMIS. «Prima lo guarda un tecnico con gli occhi — occhio umano, esperienza. Poi lo misura un sensore meccanico — tolleranza al millimetro. Poi lo analizza un algoritmo che lo confronta con i gesti precedenti già validati — pattern. Se tutti e tre concordano, il gesto entra nella memoria. Se anche uno solo non concorda, il gesto non viene insegnato. Si ricomincia.»\n\n«Tre arbitri invece di uno.»\n\n«Tre arbitri che guardano tre cose diverse. Un occhio può sbagliare. Un sensore può derivare. L'algoritmo può non riconoscere qualcosa di nuovo. Ma è molto difficile che sbaglino tutti e tre nello stesso momento, nello stesso modo.»\n\nNina annuisce. Poi guarda di nuovo il braccio: avanti, gira, stringe, torna.\n\n«Ma quell'errore di due millimetri che Renato non sa di avere nella mano...»\n\n«Su duemilaquattrocento cicli,» dice THEMIS piano, «un errore sistematico di un decimo di millimetro nella traiettoria può produrre scarti cumulativi fino a cinquanta millimetri. Il pezzo finale potrebbe essere irriconoscibile rispetto al modello.»\n\nNina rimane ferma.\n\n«Quindi la macchina è brava quanto chi la insegna.»\n\n«Esattamente quanto. Non di più. Non di meno.»\n\n> *(Strato fondo — per il grande: L'imitation learning è una tecnica reale di machine learning in cui un agente robotico apprende comportamenti osservando dimostrazioni umane. Il modello cattura traiettoria, forza e timing del gesto. Poi esegue quella politica in autonomia. Il problema critico è che l'algoritmo non ha accesso al \"perché\" del gesto — solo al \"come\". Non distingue tra un gesto giusto e uno sbagliato: amplifica la ricorrenza. Nei sistemi industriali reali — bracci ABB M2004, KUKA KR15 — una calibrazione errata di 2mm nelle coordinate iniziali genera accumulo d'errore su migliaia di cicli. La soluzione è la \"golden template\": un gesto campione validato da sensori multipli, usato come riferimento fisso per tutta la produzione. Se la template è corrotta, la produzione è corrotta. Garbage in, garbage out — ma a velocità industriale.)*\n\n---\n\n## ATTO III — LA TRACCIA GIUSTA VALE ORO\n\nRenato torna nel tardo pomeriggio per il controllo qualità. Prende tre pezzi dal nastro a caso, li misura con un calibro digitale, legge i numeri ad alta voce.\n\nNina lo osserva da vicino.\n\n«Come fa a sapere qual è il numero giusto?» chiede a THEMIS sottovoce.\n\n«Perché esiste una forma madre,» risponde THEMIS. «Un pezzo campione — la golden template — registrato una sola volta, nel modo più preciso possibile, da più strumenti. Ogni pezzo che esce viene confrontato con quella traccia. Non con il pezzo precedente, non con la memoria del tecnico — con la traccia originale.»\n\n«E la traccia non cambia.»\n\n«Non dovrebbe. È il punto fisso di tutta la catena. Se è sbagliata, tutto quello che viene dopo è sbagliato.»\n\nRenato chiude il calibro. Annota qualcosa. Alza il pollice verso un collega dall'altra parte della stanza.\n\n«Oggi va bene,» dice THEMIS. «La traccia era giusta. I pezzi sono giusti.»\n\nNina guarda ancora il braccio, che nel frattempo non si è mai fermato: avanti, gira, stringe, torna.\n\n«Il gesto di stamattina continuerà tutta la notte.»\n\n«Tutta la notte.»\n\n«E Renato dormirà.»\n\n«E la fabbrica lavorerà al posto suo.»\n\nNina sente qualcosa che non sa ancora come si chiama — non è paura, non è meraviglia pura. È il peso di una responsabilità: chi insegna non può riprendersi il gesto una volta che è stato dato. Il robot lo porta avanti, moltiplicato, senza chiedere conferma. Il maestro deve aver fatto bene la prima volta. Non c'è una seconda.\n\n---\n\n## CHIUSURA\n\nLa casella 56 si accende sulla mappa dell'Officina — un punto blu nel cuore della fabbrica notturna, tra i simboli dei bracci e le tracce verdi delle traiettorie salvate.\n\nNina non si sposta subito. Rimane alla vetrata ancora un minuto, a guardare il gesto che Renato ha lasciato girare da solo.\n\nAvanti. Gira. Stringe. Torna.\n\n> «THEMIS,» dice Nina prima di uscire, «se il gesto è già dentro la macchina e gira da solo tutta la notte — chi controlla che sia ancora giusto? Non il gesto che è stato insegnato. Il gesto che sta uscendo adesso, in questo momento, dopo tremila ripetizioni?»\n>\n> THEMIS brilla un momento più forte.\n>\n> «Questa è la domanda della casella dopo.»\n>\n> *Nell'Officina che gira sola, esiste un occhio che non dorme mai — un sistema che guarda ogni pezzo che esce e lo confronta con la traccia madre in tempo reale. Come funziona questo guardiano invisibile? E come fa a capire quando qualcosa ha iniziato a sbagliare — prima che sia troppo tardi?*\n\n---\n\n*Provalo tu: Insegna a un amico o a tuo fratello un gesto — per esempio come piegare un filo nello stesso angolo esatto. Fallo vedere dieci volte. Poi digli di rifarlo da solo, altri dieci, senza guardarti. Confrontate il risultato: il gesto è rimasto uguale? O c'è una piccola sbavatura che si è fatta più grande a ogni ripetizione? Quella sbavatura che cresce — è esattamente quello che succede nella fabbrica quando il gesto insegnato non era preciso fino in fondo.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Una mano umana con guanto di sensori luminosi guida lentamente il braccio robot attraverso un gesto preciso — avanti, gira, stringe, torna — in una fabbrica inondata di luce mattutina.\n2. Uno schermo vicino traccia il gesto catturato: frecce verdi disegnano la traiettoria, numeri indicano forza (4.2 N), angolo (45°) e durata (1.8 s).\n3. Il robot ripete il gesto da solo di notte, sotto luci blu elettriche, in un silenzio che si conta a cicli: avanti, gira, stringe, torna — per la trecentesima volta.\n4. Un primo pezzo esce perfetto sul nastro, identico millimetro per millimetro alla golden template sullo schermo accanto.\n5. Una sovrapposizione grafica mostra due traiettorie: quella corretta (verde) e una con 2mm di scarto iniziale (arancione) — le due linee che divergono sempre di più su duemilaquattrocento cicli, fino a cinquanta millimetri di differenza finale.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡2` L'Officina che gira sola (giro 3). *Il robot apprende per imitazione: cattura traiettoria, forza e timing di un gesto umano e lo esegue in autonomia — amplificando sia la precisione che gli errori presenti nella dimostrazione iniziale.*\n**Pietre richiamate:** EP_N2_55 (auto-organizzazione dei pezzi — l'ordine senza insegnamento)\n**3 strati:** bambino = la macchina impara guardando la tua mano, poi fa lo stesso da sola tutta la notte · curioso = l'imitation learning cattura il \"come\" del gesto ma non il \"perché\", quindi non distingue il giusto dallo sbagliato · grande = errore sistematico nella traiettoria iniziale si accumula su migliaia di cicli; la golden template e la validazione a tre livelli sono l'unico presidio\n**Cuore:** fai bene le cose vere · gli strumenti non pensano al posto tuo, amplificano quello che dai loro\n**Aggancio reale:** Nei sistemi GENESIS/MIMS e nelle fabbriche smart reali, ogni ciclo produttivo viene confrontato a una golden template validata da sensori multipli. Se la template è errata, l'intera batch è errata — garbage in, garbage out a velocità industriale.\n**Open loop → Cas\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_56, casella ? (Un gesto giusto insegnato a una macchina, che lo rifà da sol) del viaggio Nina v2, regione 2 (L'OFFICINA CHE GIRA SOLA).\n- L'imitation learning cattura feature dalla dimostrazione umana senza interpretare il 'perché' — solo il 'come'\n- Un errore sistematico di 0.1mm nella traiettoria iniziale, ripetuto 10.000 volte, produce scarti cumulativi fino a ±50mm\n- I robot ABB M2004 e KUKA KR15 usano force-feedback per mimare gesti umani; se il feedback calibrato male, la 'memoria' del gesto è corrotta\n- L'Officina Che Gira Sola (GENESIS core) usa validazione a 3 livelli: sensore umano (occhio), sensore meccanico (tolleranza), sensore IA (pattern-match). Se tutti e 3 non concordano, il gesto non viene insegnato\n- Numero reale: un ciclo notturno di 8 ore in una fabbrica smart può eseguire lo stesso gesto 2.400+ volte — se il gesto contiene errore, il danno è moltiplicato",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Quando insegni a una macchina il gesto giusto, lei lo ripete perfetto ",
+        "regione": 2,
+        "regione_nome": "L'OFFICINA CHE GIRA SOLA",
+        "pietra": "⟡2",
         "giro_spirale": 3,
         "richiama": [],
         "stato_nina": "adattato"

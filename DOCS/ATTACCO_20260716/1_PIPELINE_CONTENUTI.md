@@ -1,3 +1,15 @@
+<!-- TOC -->
+
+- [ATTACCO 2  DOMINIO 1  PIPELINE CONTENUTI (bozza  revisione  pubblicazione)](#attacco-2-dominio-1-pipeline-contenuti-bozza-revisione-pubblicazione)
+  - [Quadro (5 righe)](#quadro-5-righe)
+  - [Colli trovati (dal più grave)](#colli-trovati-dal-più-grave)
+  - [Il calcolo dei mesi (165 caroselli, ritmo attuale)](#il-calcolo-dei-mesi-165-caroselli-ritmo-attuale)
+  - [Quante azioni manuali OGGI per portare 1 carosello sui canali](#quante-azioni-manuali-oggi-per-portare-1-carosello-sui-canali)
+  - [Sbloccabile SENZA Matteo vs gated](#sbloccabile-senza-matteo-vs-gated)
+  - [TOP 3 per leva (impatto/sforzo)](#top-3-per-leva-impattosforzo)
+
+<!-- /TOC -->
+
 # ATTACCO #2 · DOMINIO 1 — PIPELINE CONTENUTI (bozza → revisione → pubblicazione)
 
 *15/07/2026 — agente Fable 5, **propose-only**: nessun file esistente toccato, solo questo report.

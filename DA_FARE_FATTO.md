@@ -116,19 +116,32 @@
   finetune finto-verde, canon-pin che pesca le molle superate. ZERO modifiche
   applicate (gate: decide Matteo quale ondata).
 
-**DA FARE — le ondate dell'attacco #2 (gate: ordine di Matteo, dettaglio in _SINTESI.md):**
-- [ ] **ONDATA A** (tutta senza Matteo): fix canon-pin (~5 righe, il grounding pesca
-  verità superate) → coda apprendista con refill dai piani + multi-bozza con tetto
-  (9→~3 mesi) → fonti refill allineate (piano SG 3/69, _CANONE 53→55, rotazione
-  watcher.log) → igiene disco RAG (14,8 GB detriti chroma_db_reset_*)
-- [ ] **ONDATA B**: corsia NINA nell'apprendista (53 testi già canone, stampo
+**DA FARE — prossima sessione (#62), in ordine (ONDATA A APPROVATA da Matteo 16/07):**
+- [ ] **1. ONDATA A — ESECUZIONE** (approvata, commit isolati, additivo; dettagli
+  con file:riga in `DOCS/ATTACCO_20260716/_SINTESI.md` + report 2/3):
+  - [ ] A1. fix canon-pin (~5 righe: `_canon_stems()` rag_engine.py:384-402 salti i
+    wikilink marcati storico/SUPERSEDED in _CANONE.md; test: «massa V32» senza molle
+    al rank 2; vale al prossimo restart API)
+  - [ ] A2. coda apprendista: refill automatico dai piani MENTE + multi-bozza con
+    tetto anti-backlog (night_caroselli.py:126-127 — oggi 1 bozza da 77 s in 20 min;
+    9→~3 mesi). NB: i portanti (cameo Nina) NON entrano in coda
+  - [ ] A3. fonti refill allineate: contatore piano SG (dice 2/69, sono 3) +
+    _CANONE range EP_N2 53→55 (sentinella ferma dall'08/07) + rotazione watcher.log
+    (27 MB, watcher.py:76)
+  - [ ] A4. igiene disco RAG: 14,8 GB `chroma_db_reset_*` morti + manifest CORROTTO
+    (regola in retention.py, non delete a mano) + `.obsidian` in EXCLUDE_DIR_NAMES
+    (rag_engine.py:152, 53 chunk garbage)
+- [ ] **2. REVISIONE BOZZA EP_SG_02_01 «V32 — il cuore che taglia»** — arrivata
+  VERDE stanotte in `_BOZZE` (coda: bozza_verde) → canone §7.7 (angolo aveva la
+  guardia stato-reale) → promozione in CAROSELLI/SISTEMA/ (S1 → 4/69)
+- [ ] 3. ONDATA B: corsia NINA nell'apprendista (53 testi già canone, stampo
   EP_N2_03) → PDF LinkedIn batch + export Express dei 14 → dieta RAG (hash manifest
   + lock build_index + gate no-op)
-- [ ] **ONDATA C**: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
+- [ ] 4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
   04:30-07:30) → replica serale dei task persi (12 notti/31 saltate)
-- [ ] **GATED MATTEO (~1h)**: app Meta (sblocca Postiz = 1 click a post) · pin 5
-  repo profilo · UPS (radice notti perse). Rimandati con trigger: Astro (sito),
-  Uptime Kuma
+- [ ] 5. GATED MATTEO (~1h): app Meta (sblocca Postiz = 1 click a post) · pin 5
+  repo profilo · UPS (radice notti perse) · risultati LinkedIn PRE_SG_01.
+  Rimandati con trigger: Astro (sito), Uptime Kuma
 - [ ] 4. Risultati LinkedIn PRE_SG_01 → tararsi (gated Matteo)
 - [ ] 5. Revisione bozza notturna EP_SG_02_01 «V32» (arriva stanotte @04:15, prima
   della coda CAP 2) — guardia §7.7 già nell'angolo

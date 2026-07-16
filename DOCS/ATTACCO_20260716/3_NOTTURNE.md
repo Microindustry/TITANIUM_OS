@@ -1,3 +1,13 @@
+<!-- TOC -->
+
+- [DOMINIO 3  NOTTURNE / AUTOMAZIONI](#dominio-3-notturne-automazioni)
+  - [Quadro (5 righe)](#quadro-5-righe)
+  - [Timeline notte reale (15/07, timestamp dai log)](#timeline-notte-reale-1507-timestamp-dai-log)
+  - [Colli / sprechi (organo  prova  proposta additiva)](#colli-sprechi-organo-prova-proposta-additiva)
+  - [TOP 3 per leva](#top-3-per-leva)
+
+<!-- /TOC -->
+
 # DOMINIO 3 — NOTTURNE / AUTOMAZIONI
 
 *ATTACCO #2 · 15/07/2026 · propose-only (nessun file modificato, nessun task toccato).

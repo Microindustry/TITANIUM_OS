@@ -1,20 +1,74 @@
 [
   {
-    "id": "BUS-5c12035e",
-    "stato": "da_fare",
-    "testo": "**1. VERIFICA AUTOGENERAZIONE EPISODI → RAG** (prerequisito P0 dell'attacco,",
+    "id": "BUS-fc7d36eb",
+    "stato": "fatto",
+    "testo": "**1. AUTOGENERAZIONE EPISODI → RAG: VIVA, verificata coi numeri** (P0): Nina auto",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-4af22d8a",
-    "stato": "da_fare",
-    "testo": "**2. PROFILO GITHUB PERSONALE AGGIORNATO** (P0): README profilo allo stato reale",
+    "id": "BUS-a6d88a7d",
+    "stato": "fatto",
+    "testo": "**2. PROFILO GITHUB A CANONE — FALLA §7.7 TROVATA E CURATA** (P0): il README",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {
-    "id": "BUS-61a2d15e",
+    "id": "BUS-7553c160",
+    "stato": "fatto",
+    "testo": "**3. ATTACCO #2 — COLLI DI BOTTIGLIA: COMPLETO E SINTETIZZATO** (4 agenti Fable",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-6e701060",
     "stato": "da_fare",
-    "testo": "**3. ATTACCO #2 — COLLI DI BOTTIGLIA (Fable 5)**: 5 agenti propose-only",
+    "testo": "**1. ONDATA A — ESECUZIONE** (approvata, commit isolati, additivo; dettagli",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-8fe5e27e",
+    "stato": "da_fare",
+    "testo": "A1. fix canon-pin (~5 righe: `_canon_stems()` rag_engine.py:384-402 salti i",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-a9e7c114",
+    "stato": "da_fare",
+    "testo": "A2. coda apprendista: refill automatico dai piani MENTE + multi-bozza con",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-79c261ac",
+    "stato": "da_fare",
+    "testo": "A3. fonti refill allineate: contatore piano SG (dice 2/69, sono 3) +",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-0cb9248c",
+    "stato": "da_fare",
+    "testo": "A4. igiene disco RAG: 14,8 GB `chroma_db_reset_*` morti + manifest CORROTTO",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-65418ad5",
+    "stato": "da_fare",
+    "testo": "**2. REVISIONE BOZZA EP_SG_02_01 «V32 — il cuore che taglia»** — arrivata",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-ffad34c2",
+    "stato": "da_fare",
+    "testo": "3. ONDATA B: corsia NINA nell'apprendista (53 testi già canone, stampo",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-6c09f0b3",
+    "stato": "da_fare",
+    "testo": "4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-98551735",
+    "stato": "da_fare",
+    "testo": "5. GATED MATTEO (~1h): app Meta (sblocca Postiz = 1 click a post) · pin 5",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {

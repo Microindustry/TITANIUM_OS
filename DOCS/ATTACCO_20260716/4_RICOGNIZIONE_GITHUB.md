@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [DOMINIO 4  RICOGNIZIONE GITHUB (ATTACCO 2)](#dominio-4-ricognizione-github-attacco-2)
+  - [Metodo](#metodo)
+  - [1. Pubblicazione social self-hosted (collo n1 NOTO)](#1-pubblicazione-social-self-hosted-collo-n1-noto)
+  - [2. Render HTMLPNG batch](#2-render-htmlpng-batch)
+  - [3. Sito statico caroselli/episodi (GitHub Pages)](#3-sito-statico-caroselliepisodi-github-pages)
+  - [4. Scheduling/queue notturno](#4-schedulingqueue-notturno)
+  - [5. Fine-tuning LLM locale su GTX 1070 8GB](#5-fine-tuning-llm-locale-su-gtx-1070-8gb)
+  - [6. Monitoraggio organi vivi](#6-monitoraggio-organi-vivi)
+  - [TOP 3 ADOZIONI PER LEVA](#top-3-adozioni-per-leva)
+
+<!-- /TOC -->
+
 # DOMINIO 4 — RICOGNIZIONE GITHUB (ATTACCO #2)
 
 *15/07/2026 · **propose-only** — nessuna installazione, nessun clone, nessuna modifica.
