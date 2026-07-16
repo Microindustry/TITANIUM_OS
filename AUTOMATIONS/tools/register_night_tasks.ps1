@@ -31,15 +31,18 @@ $settings = New-ScheduledTaskSettingsSet `
 $principal = New-ScheduledTaskPrincipal -UserId $USER -LogonType Interactive -RunLevel Highest
 
 $defs = @(
-  @{n="TI_StoryAgent";     exe="$TI\NODES\STORY_AGENT\run_story_agent.bat";    arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "02:07")},
-  @{n="TI_NightResearch";  exe="$TI\AUTOMATIONS\core\night_research.bat";       arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "03:37")},
+  # RandomDelay sui task GPU-heavy (embeddings/RAG/LoRA): quando la macchina e' stata
+  # spenta e piu' notti recuperano INSIEME al boot (StartWhenAvailable), su 8GB GTX1070
+  # e' la trappola MemoryError nota (attacco #2 collo #3). Il delay casuale li sparge.
+  @{n="TI_StoryAgent";     exe="$TI\NODES\STORY_AGENT\run_story_agent.bat";    arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "02:07" -RandomDelay (New-TimeSpan -Minutes 8))},
+  @{n="TI_NightResearch";  exe="$TI\AUTOMATIONS\core\night_research.bat";       arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "03:37" -RandomDelay (New-TimeSpan -Minutes 12))},
   @{n="TI_NightAudit";     exe="$TI\NODES\AUDIT_AGENT\run_night_audit.bat";     arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "03:52")},
   @{n="TI_NightPush";      exe="$TI\AUTOMATIONS\core\night_push.bat";           arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "04:07")},
   @{n="TI_NightCaroselli"; exe="$TI\AUTOMATIONS\core\night_caroselli.bat";      arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Daily -At "04:15")},
   @{n="TI_NightCaroselliNina"; exe="$TI\AUTOMATIONS\core\night_caroselli_nina.bat"; arg=$null;                                 trigger=(New-ScheduledTaskTrigger -Daily -At "04:35")},
   @{n="TI_DailyBrief";     exe=$PY;                                             arg="`"$TI\AUTOMATIONS\core\daily_brief.py`""; trigger=(New-ScheduledTaskTrigger -Daily -At "07:30")},
   @{n="TI_DeepFreeze";     exe=$PY;                                             arg="`"$TI\AUTOMATIONS\core\deep_freeze.py`""; trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "03:00")},
-  @{n="TI_FineTune";       exe="$TI\AUTOMATIONS\core\night_finetune.bat";       arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "01:00")}
+  @{n="TI_FineTune";       exe="$TI\AUTOMATIONS\core\night_finetune.bat";       arg=$null;                                     trigger=(New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At "01:00" -RandomDelay (New-TimeSpan -Minutes 20))}
 )
 
 foreach ($d in $defs) {
