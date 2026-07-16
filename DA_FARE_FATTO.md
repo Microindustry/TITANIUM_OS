@@ -117,20 +117,27 @@
   applicate (gate: decide Matteo quale ondata).
 
 **DA FARE — prossima sessione (#62), in ordine (ONDATA A APPROVATA da Matteo 16/07):**
-- [ ] **1. ONDATA A — ESECUZIONE** (approvata, commit isolati, additivo; dettagli
-  con file:riga in `DOCS/ATTACCO_20260716/_SINTESI.md` + report 2/3):
-  - [ ] A1. fix canon-pin (~5 righe: `_canon_stems()` rag_engine.py:384-402 salti i
-    wikilink marcati storico/SUPERSEDED in _CANONE.md; test: «massa V32» senza molle
-    al rank 2; vale al prossimo restart API)
-  - [ ] A2. coda apprendista: refill automatico dai piani MENTE + multi-bozza con
-    tetto anti-backlog (night_caroselli.py:126-127 — oggi 1 bozza da 77 s in 20 min;
-    9→~3 mesi). NB: i portanti (cameo Nina) NON entrano in coda
-  - [ ] A3. fonti refill allineate: contatore piano SG (dice 2/69, sono 3) +
-    _CANONE range EP_N2 53→55 (sentinella ferma dall'08/07) + rotazione watcher.log
-    (27 MB, watcher.py:76)
-  - [ ] A4. igiene disco RAG: 14,8 GB `chroma_db_reset_*` morti + manifest CORROTTO
-    (regola in retention.py, non delete a mano) + `.obsidian` in EXCLUDE_DIR_NAMES
-    (rag_engine.py:152, 53 chunk garbage)
+- [✓] **1. ONDATA A — ESECUZIONE** (approvata, commit isolati additivi #62 16/07:
+  A1 `50eb3336` · A3 `1fd7eb07`+MENTE `9186951` · A4 `50c95f2b` · A2 `5384e7e7`;
+  dettagli con file:riga in `DOCS/ATTACCO_20260716/_SINTESI.md` + report 2/3):
+  - [✓] A1. fix canon-pin — `_canon_stems()` ora fa split per bullet e salta i
+    blocchi marcati SUPERSEDED/snapshot storico: i 2 link V32 "su molle"
+    (v32_analisi_tecnica_reale + v32_la_mappa_vivente) NON pinnano più; test su
+    _CANONE reale -2/29 stem storici, 27 canonici intatti. Commit `50eb3336`.
+    Vale al prossimo restart API (cache mtime lo ricarica da solo).
+  - [✓] A2. coda apprendista: **queue_refill.py** (nuovo) rifornisce dai piani fino
+    a 8 pending (eseguito: 5→8, +EP_SG_03_01/02/03) + night_caroselli batch
+    **MAX_BOZZE=3/notte** con **TETTO MAX_BACKLOG=6** (se 6 bozze non promosse in
+    attesa, stop: il collo è la pubblicazione). Portanti-cameo-Nina fuori per
+    costruzione. Test flusso 3/3 verdi. Commit `5384e7e7`.
+  - [✓] A3. fonti refill allineate: piano SG 2/69→**3/69** (CAP1 3/4, 3 promossi
+    verificati su disco) + _CANONE range EP_N2 53→**56** (sentinella sbloccata) +
+    rotazione watcher.log via RotatingFileHandler 5MB×3. Commit main `1fd7eb07`,
+    MENTE `9186951`.
+  - [✓] A4. igiene disco RAG: **14,8 GB liberati** via regola (retention.py R6
+    reset-quarantena keep0/1g + R7 manifest corrotto >7g; R1 non gestisce più i
+    reset — teneva il 14,5 GB corrotto perché "più recente per nome") + `.obsidian`
+    in EXCLUDE_DIR_NAMES. Applicato, indice vivo intatto. Commit `50c95f2b`.
 - [ ] **2. REVISIONE BOZZA EP_SG_02_01 «V32 — il cuore che taglia»** — arrivata
   VERDE stanotte in `_BOZZE` (coda: bozza_verde) → canone §7.7 (angolo aveva la
   guardia stato-reale) → promozione in CAROSELLI/SISTEMA/ (S1 → 4/69)
