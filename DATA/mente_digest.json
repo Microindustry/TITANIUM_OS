@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-16T11:35:52.870898",
+  "scanned_at": "2026-07-16T22:57:21.827735",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 1276,
+  "total_files": 1294,
   "files_read": 13,
-  "files_skipped": 1263,
+  "files_skipped": 1281,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 110.1,
+      "size_kb": 110.4,
       "readable": false,
       "extracts": {}
     },
@@ -162,14 +162,14 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 27.2,
+      "size_kb": 27.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 27.2,
+      "size_kb": 27.5,
       "readable": false,
       "extracts": {}
     },
@@ -258,6 +258,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\07\\a540734998564fc09f89f1494002c7ac7bf8a4",
+      "type": "unknown",
+      "size_kb": 9.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\09\\0a25c94bc65e7d8607fb068d08f17fc2a83a6e",
       "type": "unknown",
       "size_kb": 9.2,
@@ -310,6 +317,13 @@
       "path": ".git\\objects\\0f\\6cdde11d17be4fa968d0d7be7e4d2e60bbebcb",
       "type": "unknown",
       "size_kb": 8.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\11\\0ed48076ee6587fdcdfac50994015c3b9c827b",
+      "type": "unknown",
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -580,6 +594,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\2c\\d35bed6e398f33eaaa5deeddade2fa4fc9bef5",
+      "type": "unknown",
+      "size_kb": 1.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\2c\\e81483bd1880e1a321240429e15db087ff16dc",
       "type": "unknown",
       "size_kb": 14.5,
@@ -783,6 +804,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\3f\\10407607907749d87b10931a87baa365c5633d",
+      "type": "unknown",
+      "size_kb": 9.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\3f\\546023f6531c67b87f79f7a2344d5e0f5da750",
       "type": "unknown",
       "size_kb": 13.6,
@@ -821,6 +849,13 @@
       "path": ".git\\objects\\40\\13f853f6b47efb4cce4e98515dce9711d76e78",
       "type": "unknown",
       "size_kb": 30.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\42\\11aca4319565bfbbb458411baf36ed341c5091",
+      "type": "unknown",
+      "size_kb": 45.7,
       "readable": false,
       "extracts": {}
     },
@@ -989,6 +1024,13 @@
       "path": ".git\\objects\\51\\893d260a215f809dfcd4a46063527bdcc79eac",
       "type": "unknown",
       "size_kb": 10.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\53\\074324b6c31769de925d1dcfd3ddf9384ccfd7",
+      "type": "unknown",
+      "size_kb": 0.4,
       "readable": false,
       "extracts": {}
     },
@@ -1539,6 +1581,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\80\\642a68b8b362d5be41b9a8554b986c67c29540",
+      "type": "unknown",
+      "size_kb": 0.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\80\\c04e593a0a516274909fb71fec54bb9990d840",
       "type": "unknown",
       "size_kb": 0.3,
@@ -1549,6 +1598,13 @@
       "path": ".git\\objects\\82\\31596b923bd3a675cdb38911d1f1084b93317a",
       "type": "unknown",
       "size_kb": 14.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\83\\414a272c76298813a56e548c85ff097b4d88a1",
+      "type": "unknown",
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -1672,6 +1728,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\8e\\8a4f234f08fe19e82abf94fe8bb38d0536c5a8",
+      "type": "unknown",
+      "size_kb": 3.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\90\\b99d842060046d5ff9acbb26d263608ef00b58",
       "type": "unknown",
       "size_kb": 7.3,
@@ -1738,6 +1801,13 @@
       "path": ".git\\objects\\96\\2b99570e71de273bfbb065d4c08d1159b4f91f",
       "type": "unknown",
       "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\96\\43dd63f4a0eb2774d5889f3811361f6ea132f3",
+      "type": "unknown",
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -2288,6 +2358,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\cc\\5c74e2ce2a353068ca0652ca2f3b725faa1f85",
+      "type": "unknown",
+      "size_kb": 4.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\cd\\b97c4128a0770168aed6f192c606b95b6f428d",
       "type": "unknown",
       "size_kb": 5.0,
@@ -2540,6 +2617,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\e7\\55fc7836254d20341271c4f3317af5c7d19a77",
+      "type": "unknown",
+      "size_kb": 0.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\e7\\c85037e4659d2e1763725809f649fd38949312",
       "type": "unknown",
       "size_kb": 5.8,
@@ -2592,6 +2676,13 @@
       "path": ".git\\objects\\eb\\9895fadd5cbf5f01ac067aa8e9dc2aa0a2411f",
       "type": "unknown",
       "size_kb": 0.9,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\ec\\1b45fa0546a77c500ab382cc8071b9dbb73e0b",
+      "type": "unknown",
+      "size_kb": 76.8,
       "readable": false,
       "extracts": {}
     },
@@ -2757,6 +2848,13 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\fd\\7991d1d429c96c0c36253c99d4042db5b41b3f",
+      "type": "unknown",
+      "size_kb": 178.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\fd\\c91012108b6333097cd8fa5a203f53c58c1084",
       "type": "unknown",
       "size_kb": 0.4,
@@ -2767,6 +2865,13 @@
       "path": ".git\\objects\\fe\\bafd2f87c1a33799ad50ea29c48cb162db4cbc",
       "type": "unknown",
       "size_kb": 9.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\ff\\d80da4f35d522e83f55f5beeae5e988fc65ce9",
+      "type": "unknown",
+      "size_kb": 0.7,
       "readable": false,
       "extracts": {}
     },
@@ -3081,7 +3186,7 @@
     {
       "path": ".obsidian\\workspace.json",
       "type": "json",
-      "size_kb": 6.9,
+      "size_kb": 6.8,
       "readable": false,
       "extracts": {}
     },
@@ -4787,7 +4892,7 @@
       "extracts": {}
     },
     {
-      "path": "FINANZA\\fatti_dalle_storie.md",
+      "path": "FINANZA\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
       "size_kb": 3.9,
       "readable": false,
@@ -4822,9 +4927,23 @@
       "extracts": {}
     },
     {
-      "path": "GENESIS\\fatti_dalle_storie.md",
+      "path": "GENESIS\\fatti_dalle_storie_2026Q1.md",
       "type": "md",
-      "size_kb": 230.0,
+      "size_kb": 4.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "GENESIS\\fatti_dalle_storie_2026Q2.md",
+      "type": "md",
+      "size_kb": 180.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "GENESIS\\fatti_dalle_storie_2026Q3.md",
+      "type": "md",
+      "size_kb": 46.1,
       "readable": false,
       "extracts": {}
     },
@@ -6641,7 +6760,7 @@
       "extracts": {}
     },
     {
-      "path": "MIMS\\fatti_dalle_storie.md",
+      "path": "MIMS\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
       "size_kb": 10.0,
       "readable": false,
@@ -8951,9 +9070,16 @@
       "extracts": {}
     },
     {
-      "path": "V32\\fatti_dalle_storie.md",
+      "path": "V32\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 78.7,
+      "size_kb": 77.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": "V32\\fatti_dalle_storie_2026Q3.md",
+      "type": "md",
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
@@ -9042,7 +9168,7 @@
       "extracts": {}
     },
     {
-      "path": "VITA_NATURA\\fatti_dalle_storie.md",
+      "path": "VITA_NATURA\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
       "size_kb": 9.0,
       "readable": false,

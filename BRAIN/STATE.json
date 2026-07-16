@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-16T22:50:39.077174",
-  "active_milestone": "Sessione #62 (16/07): ESECUZIONE ONDATA A/B/C + promozione. ONDATA A completa (A1 canon-pin salta i wikilink SUPERSEDED; A2 coda auto-refill+multi-bozza col tetto; A3 fonti allineate _CANONE 53->56/piano/watcher.log rotante; A4 14,8 GB liberati via retention R6/R7 + .obsidian fuori canone). EP_SG_02_01 «V32» revisionato §7.7 e promosso (S1 4/69). ONDATA B: PDF LinkedIn per episodio (pdf_export, 15/15); dieta RAG (hash-manifest anti re-embed + lock build_index + early-exit no-op); CORSIA NINA apprendista (night_caroselli_nina impagina i testi EP_N2 canonici, no invenzione/no GPU, task @04:35, prova del fuoco EP_N2_04 verde). ONDATA C: finetune vero (dataset 30->176 episodi Matteo-voce + --overwrite_output_dir + verifica step) + RandomDelay sui task GPU. 16 commit repo + 3 MENTE, tutti additivi/verificati.",
-  "next_step": "PROSSIMA (#63): 1) risultati test LinkedIn PRE_SG_01 -> tarare impaginazione PDF; 2) export Express dei 14 (outward, con Matteo); 3) register_night_tasks.ps1 (UAC) per attivare RandomDelay + task caroselli nel registrar; 4) replica serale catena (design); 5) revisione bozze notturne (SG @04:15 + Nina @04:35 producono da stanotte); gated Matteo: app Meta, pin 5 repo, UPS.",
+  "last_update": "2026-07-16T23:05:52.175450",
+  "active_milestone": "Sessione #62 (16/07): ESECUZIONE ONDATA A/B/C + promozione. ONDATA A completa (A1 canon-pin salta i wikilink SUPERSEDED; A2 coda auto-refill+multi-bozza col tetto; A3 fonti allineate _CANONE 53->56/piano/watcher.log rotante; A4 14,8 GB liberati via retention R6/R7 + .obsidian fuori canone). EP_SG_02_01 «V32» revisionato §7.7 e promosso (S1 4/69). ONDATA B: PDF LinkedIn per episodio (pdf_export, 15/15); dieta RAG (hash-manifest anti re-embed + lock build_index + early-exit no-op); CORSIA NINA apprendista (night_caroselli_nina impagina i testi EP_N2 canonici, no invenzione/no GPU, task @04:35, prova del fuoco EP_N2_04 verde). ONDATA C: finetune vero (dataset 30->176 episodi Matteo-voce + --overwrite_output_dir + verifica step) + RandomDelay sui task GPU. 16 commit repo + 3 MENTE, tutti additivi/verificati. | + BACKLOG RAG CHIUSO: #7 riflusso FATTI a rotazione trimestrale (stop re-embed monolite, idempotente), #8 demote STORIE (i 3 generatori groundano sul FATTI curato, no camera d'eco), #6 sentinella doppioni _copia, #10 daily-note fuori indice. L'intero dominio RAG dell'attacco #2 e' coperto.",
+  "next_step": "PROSSIMA (#63): risultati test LinkedIn PRE_SG_01 -> taratura PDF; export Express (con Matteo); register_night_tasks.ps1 (UAC) per RandomDelay+task caroselli; revisione bozze notturne SG@04:15+Nina@04:35; gated: app Meta, pin repo, UPS. Effetti pieni #7/#8 al restart API/incrementale notturna.",
   "session_count": 132,
   "pillars": {
     "V32": {
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-16T22:50:35.436234"
+      "last_activity": "2026-07-16T22:59:03.858004"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -126,7 +126,8 @@
       "Sessione #62: EP_SG_02_01 «V32 - il cuore che taglia» revisionato (QC verde, §7.7 slide 9 STATO REALE, slide 6 TP900+bronzine/scalini verificata grounded) e PROMOSSO in CAROSELLI/SISTEMA (S1 4/69, apre CAP 2)",
       "Sessione #62 ONDATA B: pdf_export.py - un carosello.pdf per episodio (post-documento LinkedIn, canale NON-Meta), 15/15 creati; dieta RAG (hash contenuto nel manifest = stop re-embed di massa da touch + lock msvcrt su build_index + early-exit no-op)",
       "Sessione #62: CORSIA NINA apprendista - night_caroselli_nina.py impagina i testi EP_N2 canonici (no invenzione, no GPU) + nina_queue.py (seed 53) + sg_builder voce parametrica/scene Nina + task TI_NightCaroselliNina @04:35; prova del fuoco EP_N2_04 verde",
-      "Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot"
+      "Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot",
+      "Sessione #62 BACKLOG RAG (attacco #2 dominio 2): #7 fatti_reflux a rotazione trimestrale (fatti_dalle_storie_YYYYQn.md, i trimestri chiusi non cambiano -> zero re-embed, verificato idempotente, 5 monoliti migrati) + #8 demote_dirs opt-in (malus selezione simmetrico al canone, wired night_caroselli/nina_agent/story_agent + /api/rag/search?demote=STORIE) + #6 check_doppioni_copia in night_audit (trova i *_copia accanto all'originale) + #10 daily-note YYYY-MM-DD fuori dall'indice (_is_nav_file). Dominio RAG dell'attacco #2 completo."
     ],
     "next": "PROSSIMA #63: test LinkedIn -> taratura PDF; export Express (con Matteo); register_night_tasks UAC; revisione bozze notturne SG+Nina.",
     "target_capannone": "2030-07-15"
@@ -166,5 +167,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a rag_engine.py"
+  "last_action": "Sviluppo automazioni core (EP_SEED_WATCHER_L1_tier.md)"
 }

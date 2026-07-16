@@ -170,6 +170,14 @@
     8m/NightResearch 12m/FineTune 20m) nel registrar → al boot non partono più insieme
     (trappola MemoryError 8GB). Applica al prossimo `register_night_tasks.ps1` (UAC Matteo).
   - [ ] replica serale della catena se la notte salta (12/31 saltate) — design aperto
+- [✓] **BACKLOG RAG chiuso** (#62 16/07, dominio 2 dell'attacco #2 completo):
+  - [✓] #7 riflusso FATTI a **rotazione trimestrale** (`fatti_reflux`: i trimestri chiusi
+    non cambiano → zero re-embed del monolite; idempotente; 5 monoliti→8 file). `a200f989`
+  - [✓] #8 **demote STORIE** (malus opt-in `demote_dirs`; i 3 generatori groundano sul
+    FATTI curato, no camera d'eco; `/api/rag/search?demote=STORIE`). `b65c08c7`
+  - [✓] #6 **sentinella doppioni `_copia`** in night_audit (trova i 2 reali). `928d1889`
+  - [✓] #10 **daily-note fuori indice** (`_is_nav_file`, regex `YYYY-MM-DD`). `abc8e1f5`
+  - *(#1 A1 · #2/3/4 dieta RAG · #5 A4 · #9 A3 — già fatti. Effetti pieni #7/#8 al restart)*
 - [ ] 5. GATED MATTEO (~1h): app Meta (sblocca Postiz = 1 click a post) · pin 5
   repo profilo · UPS (radice notti perse) · risultati LinkedIn PRE_SG_01.
   Rimandati con trigger: Astro (sito), Uptime Kuma
