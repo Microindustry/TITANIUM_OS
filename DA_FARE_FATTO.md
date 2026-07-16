@@ -154,7 +154,11 @@
     file-lock msvcrt su build_index (no run concorrenti) + #4 early-exit no-op (salta
     fit TF-IDF/linkgraph/save su run a vuoto). Migrazione lazy, nessun rebuild forzato.
     Test verdi. Effettiva alla prossima incrementale notturna (processo fresco). `1ad40e01`.
-  - [ ] corsia NINA nell'apprendista (53 testi già canone, stampo EP_N2_03)
+  - [✓] **corsia NINA nell'apprendista** — `night_caroselli_nina.py` (gemello che
+    NON inventa/NON usa GPU: grounding = testo EP_N2 canonico) + `nina_queue.py`
+    (seed 53, EP_N2_04..) + `sg_builder` voce parametrica + 4 scene Nina + task
+    `TI_NightCaroselliNina` @04:35. **Prova del fuoco: EP_N2_04 impaginato 10 slide,
+    QC verde, stampo Nina atmosferico, canon_guard pulito.** `09fa32a9`.
   - [ ] export Express dei 14 (outward → conferma Matteo: carica sul suo Adobe)
 - [ ] 4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
   04:30-07:30) → replica serale dei task persi (12 notti/31 saltate)
