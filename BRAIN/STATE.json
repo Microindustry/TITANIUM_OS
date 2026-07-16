@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-16T11:44:04.936799",
+  "last_update": "2026-07-16T22:50:39.077174",
   "active_milestone": "Sessione #62 (16/07): ESECUZIONE ONDATA A/B/C + promozione. ONDATA A completa (A1 canon-pin salta i wikilink SUPERSEDED; A2 coda auto-refill+multi-bozza col tetto; A3 fonti allineate _CANONE 53->56/piano/watcher.log rotante; A4 14,8 GB liberati via retention R6/R7 + .obsidian fuori canone). EP_SG_02_01 «V32» revisionato §7.7 e promosso (S1 4/69). ONDATA B: PDF LinkedIn per episodio (pdf_export, 15/15); dieta RAG (hash-manifest anti re-embed + lock build_index + early-exit no-op); CORSIA NINA apprendista (night_caroselli_nina impagina i testi EP_N2 canonici, no invenzione/no GPU, task @04:35, prova del fuoco EP_N2_04 verde). ONDATA C: finetune vero (dataset 30->176 episodi Matteo-voce + --overwrite_output_dir + verifica step) + RandomDelay sui task GPU. 16 commit repo + 3 MENTE, tutti additivi/verificati.",
   "next_step": "PROSSIMA (#63): 1) risultati test LinkedIn PRE_SG_01 -> tarare impaginazione PDF; 2) export Express dei 14 (outward, con Matteo); 3) register_night_tasks.ps1 (UAC) per attivare RandomDelay + task caroselli nel registrar; 4) replica serale catena (design); 5) revisione bozze notturne (SG @04:15 + Nina @04:35 producono da stanotte); gated Matteo: app Meta, pin 5 repo, UPS.",
   "session_count": 132,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-16T11:40:09.396757"
+      "last_activity": "2026-07-16T22:50:35.436234"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -166,5 +166,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt"
+  "last_action": "Modifica a rag_engine.py"
 }

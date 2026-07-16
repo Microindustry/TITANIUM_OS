@@ -7,6 +7,7 @@
   - [Serie PRE  i preamboli (due binari, si presentano a vicenda)](#serie-pre-i-preamboli-due-binari-si-presentano-a-vicenda)
   - [Episodi](#episodi)
   - [Lapprendista notturno (_BOZZE)](#lapprendista-notturno-bozze)
+  - [Il PDF LinkedIn (un documento per episodio)](#il-pdf-linkedin-un-documento-per-episodio)
 
 <!-- /TOC -->
 
