@@ -149,9 +149,13 @@
     episodio (post-documento sfogliabile, canale NON-Meta pubblicabile oggi). 15/15
     creati (10 pagine, 1080×1350, ~1 MB). In checklist promozione. Commit `2c0a2d8c`.
     ⏳ Matteo sta testando la pubblicazione LinkedIn (PRE_SG_01) → risultati stasera.
+  - [✓] **dieta RAG** (rag_engine.py): #2 hash contenuto nel manifest (touch dei
+    blocchi Collegati = ZERO re-embed; uccideva ~75-84% dell'indice 3× in 6gg) + #3
+    file-lock msvcrt su build_index (no run concorrenti) + #4 early-exit no-op (salta
+    fit TF-IDF/linkgraph/save su run a vuoto). Migrazione lazy, nessun rebuild forzato.
+    Test verdi. Effettiva alla prossima incrementale notturna (processo fresco). `1ad40e01`.
   - [ ] corsia NINA nell'apprendista (53 testi già canone, stampo EP_N2_03)
-  - [ ] export Express dei 14
-  - [ ] dieta RAG (hash manifest + lock build_index + gate no-op)
+  - [ ] export Express dei 14 (outward → conferma Matteo: carica sul suo Adobe)
 - [ ] 4. ONDATA C: finetune VERO (checkpoint+dataset 272 episodi, buco GPU
   04:30-07:30) → replica serale dei task persi (12 notti/31 saltate)
 - [ ] 5. GATED MATTEO (~1h): app Meta (sblocca Postiz = 1 click a post) · pin 5
