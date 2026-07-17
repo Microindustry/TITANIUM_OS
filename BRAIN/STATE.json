@@ -2,9 +2,9 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-17T00:22:46.441375",
-  "active_milestone": "Sessione #64 (17/07): MONTAGGIO POSTIZ (collo n.1 = PUBBLICAZIONE). Preparato FINO AL BORDO: repo clonato in C:/Users/teo/tools/postiz-docker-compose, docker-compose.yaml con JWT_SECRET generato + campi LINKEDIN_ vuoti, config/segreti/redirect in _VAULT/ACCOUNTS/postiz.md (gitignored). Stack Postiz+Postgres+Redis+Temporal -> UI localhost:4007. Matteo ha installato WSL2+Ubuntu e Docker Desktop 4.82 (winget) — MANCA IL RIAVVIO. Anche: profilo GitHub v2.1 (sintesi umana Adesso/Prossimo + dettaglio tecnico in <details>, canon-safe, fallback additivo BRAIN/profile_public.json); baseline LinkedIn PRE_SG_01 letto (targeting perfetto, engagement thin).",
-  "next_step": "RIPRESA POST-RIAVVIO: apri Docker Desktop (verde) -> docker compose version -> cd C:/Users/teo/tools/postiz-docker-compose && docker compose up -d -> localhost:4007 crea admin -> app LinkedIn Developer (Client ID/Secret, redirect .../integrations/social/linkedin-page, prodotto Advertising API) -> connetti LinkedIn OAuth + test con slides di EP_SG_02_01.",
+  "last_update": "2026-07-17T02:48:51.914721",
+  "active_milestone": "Sessione #65 (17/07): POSTIZ VIVO. Docker Desktop su, 8 container sani, UI localhost:4007, admin creato. App LinkedIn microindustry-postiz creata+verificata (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose. Prodotti Sign-In OIDC + Share on LinkedIn concessi. Errore redirect_uri RISOLTO (2 redirect accettati). BLOCCO: connessione Pagina richiede scope organization (w/r_organization_social, rw_organization_admin) = Community Management API, richiesta e IN ATTESA di concessione LinkedIn (muro esterno, config nostra verificata corretta). Stack STOPPATO per la notte (libera RAM notturne GPU).",
+  "next_step": "RIPRESA #66 (1 click): app LinkedIn -> Auth -> OAuth 2.0 scopes: quando compaiono i 3 organization -> docker compose start -> Postiz -> aggiungi canale LinkedIn Page -> Autorizza microindustry -> test con slides di EP_SG_02_01. Niente da rifare lato config.",
   "session_count": 135,
   "pillars": {
     "V32": {
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-17T00:15:35.242209"
+      "last_activity": "2026-07-17T02:07:01.902770"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -128,9 +128,10 @@
       "Sessione #62: CORSIA NINA apprendista - night_caroselli_nina.py impagina i testi EP_N2 canonici (no invenzione, no GPU) + nina_queue.py (seed 53) + sg_builder voce parametrica/scene Nina + task TI_NightCaroselliNina @04:35; prova del fuoco EP_N2_04 verde",
       "Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot",
       "Sessione #62 BACKLOG RAG (attacco #2 dominio 2): #7 fatti_reflux a rotazione trimestrale (fatti_dalle_storie_YYYYQn.md, i trimestri chiusi non cambiano -> zero re-embed, verificato idempotente, 5 monoliti migrati) + #8 demote_dirs opt-in (malus selezione simmetrico al canone, wired night_caroselli/nina_agent/story_agent + /api/rag/search?demote=STORIE) + #6 check_doppioni_copia in night_audit (trova i *_copia accanto all'originale) + #10 daily-note YYYY-MM-DD fuori dall'indice (_is_nav_file). Dominio RAG dell'attacco #2 completo.",
-      "Sessione #64 (17/07): Postiz montato fino al bordo (repo tools/postiz-docker-compose, JWT_SECRET generato, config in _VAULT/ACCOUNTS/postiz.md, redirect LinkedIn deciso) + WSL2+Docker Desktop 4.82 installati (manca reboot). + profilo GitHub v2.1: sintesi umana Adesso/Prossimo + dettaglio tecnico a scomparsa (<details>), canon_guard passato, additivo con fallback BRAIN/profile_public.json. + baseline LinkedIn PRE_SG_01 letto: pubblico perfetto (saldatori/metalmecc/Milano valida binario SG \"parla ai pari\"), engagement thin (2 reaz/0 salv) -> leva=hook, formato 4:5 a norma."
+      "Sessione #64 (17/07): Postiz montato fino al bordo (repo tools/postiz-docker-compose, JWT_SECRET generato, config in _VAULT/ACCOUNTS/postiz.md, redirect LinkedIn deciso) + WSL2+Docker Desktop 4.82 installati (manca reboot). + profilo GitHub v2.1: sintesi umana Adesso/Prossimo + dettaglio tecnico a scomparsa (<details>), canon_guard passato, additivo con fallback BRAIN/profile_public.json. + baseline LinkedIn PRE_SG_01 letto: pubblico perfetto (saldatori/metalmecc/Milano valida binario SG \"parla ai pari\"), engagement thin (2 reaz/0 salv) -> leva=hook, formato 4:5 a norma.",
+      "Sessione #65 (17/07): POSTIZ montato e VIVO (Docker Desktop 4.82, 8 container sani, UI localhost:4007, admin creato). App LinkedIn microindustry-postiz creata+VERIFICATA (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose (env confermato nel container), prodotti Sign-In OIDC + Share concessi. Errore redirect_uri RISOLTO (2 redirect accettati, diagnosi da URL reale + provider code). BLOCCO su timbro LinkedIn: pubblicare su Pagina richiede scope organization = Community Management API, richiesta e in attesa concessione (muro esterno, non config). Ripresa in 1 click quando concessa. Stack stoppato per la notte (RAM notturne GPU). Stato in _VAULT/ACCOUNTS/postiz.md."
     ],
-    "next": "RIPRESA #65: Docker verde -> docker compose up -d -> localhost:4007 -> connetti LinkedIn -> test EP_SG_02_01.",
+    "next": "RIPRESA #66: LinkedIn concede Community Management API -> docker compose start -> connetti Pagina microindustry -> test EP_SG_02_01.",
     "target_capannone": "2030-07-15"
   },
   "machine": {
@@ -168,5 +169,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a audit_episodes.py"
+  "last_action": "Modifica a PIETRE.md"
 }

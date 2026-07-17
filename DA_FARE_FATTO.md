@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 64  17/07/2026  MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)](#sessione-64-17072026-montaggio-postiz-in-corso-ripresa-post-riavvio)
   - [Sessione 63  16/07/2026  RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna  primo dato)](#sessione-63-16072026-risultati-test-linkedin-presg01-prima-consegna-primo-dato)
   - [Sessione 60  15/07/2026  PRE_04 chiude il preambolo  tabellone caroselli PULITO 14/14](#sessione-60-15072026-pre04-chiude-il-preambolo-tabellone-caroselli-pulito-1414)
   - [Sessione 59  15/07/2026  ripresa (LinkedIn PRE_SG_01  bozze notturne  PRE_01 Nina)](#sessione-59-15072026-ripresa-linkedin-presg01-bozze-notturne-pre01-nina)
@@ -88,6 +89,35 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)
+
+**Il collo n°1 è montato e funzionante lato nostro. Resta un timbro di LinkedIn.**
+
+- [✓] **Docker acceso e stack Postiz su**: `docker compose up -d` → 8 container sani
+  (postiz + postgres + redis + temporal + elasticsearch + ui). UI raggiungibile **http://localhost:4007** (307 ok).
+- [✓] **Admin Postiz creato**: login `benenatimatteo.mb@gmail.com` (locale, non invia mail). Password → `_VAULT/ACCOUNTS/postiz.md`.
+- [✓] **App LinkedIn Developer creata + VERIFICATA**: "microindustry-postiz" (id 247572507),
+      associata alla Pagina **microindustry** (`linkedin.com/company/136056455`), verificata da admin.
+- [✓] **Credenziali nel compose**: `LINKEDIN_CLIENT_ID=7860p2mzggbiky` + secret → container ricreato, env confermato dentro.
+- [✓] **Prodotti concessi**: Sign In OIDC (openid/profile/email) + Share on LinkedIn (w_member_social).
+- [✓] **Errore "redirect_uri does not match" RISOLTO**: registrati 2 redirect ACCETTATI da LinkedIn
+      (`.../integrations/social/linkedin-page` + `.../linkedin`). Diagnosi fatta leggendo l'URL reale dalla barra + il codice del provider nel container.
+- [✗] **Connessione Pagina NON completata — bloccata su LinkedIn**: Postiz (sia tile "LinkedIn" che "LinkedIn Page")
+      chiede gli scope `organization` (`w_organization_social`, `r_organization_social`, `rw_organization_admin`)
+      che li dà **solo la Community Management API**. Richiesta il 17/07 → **in attesa di concessione LinkedIn**
+      (muro esterno, non config: verificato che il redirect passa e i log backend sono puliti).
+- [✓] **Stack Postiz STOPPATO per la notte** (`docker compose stop`): libera RAM per le notturne GPU
+      (prima notte con Docker installato). Domani `docker compose start` (immagini in cache, ~1 min).
+- [ ] **RIPRESA #66 (1 click quando LinkedIn concede)**: app LinkedIn → Auth → "OAuth 2.0 scopes":
+      quando compaiono i 3 `organization` → `docker compose start` → Postiz → aggiungi canale **"LinkedIn Page"**
+      → Autorizza → seleziona microindustry → **test con `slides/` di EP_SG_02_01**. Niente da rifare lato config.
+- [ ] **Backup**: Advertising API richiesta anch'essa (dà gli stessi scope ma con revisione più lenta).
+- [◐] **postiz-agent CLI** (github.com/gitroomhq/postiz-agent) → dopo la connessione, collega a Claude per pubblicare dai `CAROSELLI/`.
+
+*Stato completo e punto di ripresa dettagliato: `_VAULT/ACCOUNTS/postiz.md` (gitignored).*
 
 ---
 

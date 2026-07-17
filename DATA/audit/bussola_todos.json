@@ -1,5 +1,197 @@
 [
   {
+    "id": "BUS-1c762f53",
+    "stato": "fatto",
+    "testo": "**Docker acceso e stack Postiz su**: `docker compose up -d` → 8 container sani",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-91b7439b",
+    "stato": "fatto",
+    "testo": "**Admin Postiz creato**: login `benenatimatteo.mb@gmail.com` (locale, non invia mail). Password → `_VAULT/ACCOUNTS/postiz.md`.",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-465454db",
+    "stato": "fatto",
+    "testo": "**App LinkedIn Developer creata + VERIFICATA**: \"microindustry-postiz\" (id 247572507),",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-5878851d",
+    "stato": "fatto",
+    "testo": "**Credenziali nel compose**: `LINKEDIN_CLIENT_ID=7860p2mzggbiky` + secret → container ricreato, env confermato dentro.",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-df961139",
+    "stato": "fatto",
+    "testo": "**Prodotti concessi**: Sign In OIDC (openid/profile/email) + Share on LinkedIn (w_member_social).",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-6a95e842",
+    "stato": "fatto",
+    "testo": "**Errore \"redirect_uri does not match\" RISOLTO**: registrati 2 redirect ACCETTATI da LinkedIn",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-6db3b229",
+    "stato": "non_fatto",
+    "testo": "**Connessione Pagina NON completata — bloccata su LinkedIn**: Postiz (sia tile \"LinkedIn\" che \"LinkedIn Page\")",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-6c49746a",
+    "stato": "fatto",
+    "testo": "**Stack Postiz STOPPATO per la notte** (`docker compose stop`): libera RAM per le notturne GPU",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-a4e6597c",
+    "stato": "da_fare",
+    "testo": "**RIPRESA #66 (1 click quando LinkedIn concede)**: app LinkedIn → Auth → \"OAuth 2.0 scopes\":",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-76d8d777",
+    "stato": "da_fare",
+    "testo": "**Backup**: Advertising API richiesta anch'essa (dà gli stessi scope ma con revisione più lenta).",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-b240bbc2",
+    "stato": "in_corso",
+    "testo": "**postiz-agent CLI** (github.com/gitroomhq/postiz-agent) → dopo la connessione, collega a Claude per pubblicare dai `CAROSELLI/`.",
+    "sessione": "Sessione #65 · 17/07/2026 — POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)"
+  },
+  {
+    "id": "BUS-dc4fb5e7",
+    "stato": "in_corso",
+    "testo": "**Postiz montato FINO AL BORDO** (piano completo: `DOCS/POSTIZ_SETUP.md`):",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-bdcaf8c0",
+    "stato": "fatto",
+    "testo": "Repo clonato: `C:\\Users\\teo\\tools\\postiz-docker-compose\\` (fuori dal repo pubblico)",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-2dfb8f4c",
+    "stato": "fatto",
+    "testo": "`docker-compose.yaml` configurato: **JWT_SECRET generato**; campi `LINKEDIN_*` vuoti da riempire",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-f1978d82",
+    "stato": "fatto",
+    "testo": "Config + segreti + redirect URL salvati in `_VAULT/ACCOUNTS/postiz.md` (gitignored, verificato)",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-8f38b697",
+    "stato": "fatto",
+    "testo": "Stack: Postiz + Postgres + Redis + Temporal/Elasticsearch → UI su **http://localhost:4007**",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-88233c8a",
+    "stato": "in_corso",
+    "testo": "**Prerequisiti Matteo (in corso stanotte)**:",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-539853d6",
+    "stato": "fatto",
+    "testo": "**WSL2 + Ubuntu installati** (`wsl --install`)",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-6292c9e5",
+    "stato": "fatto",
+    "testo": "**Docker Desktop 4.82 installato** (winget) — ⏳ **manca il RIAVVIO** (WSL+Docker lo richiedono)",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-904bbc3d",
+    "stato": "da_fare",
+    "testo": "**App LinkedIn Developer**: creare su developer.linkedin.com (Pagina microindustry) →",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-13818a6c",
+    "stato": "da_fare",
+    "testo": "**RIPRESA POST-RIAVVIO (primo step #65)**: apri **Docker Desktop** → icona verde →",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-ee51fa96",
+    "stato": "da_fare",
+    "testo": "**Muro Google (NON sul percorso Postiz)**: verifica Gmail brand microindustry bloccata da",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-f768e37a",
+    "stato": "in_corso",
+    "testo": "**Sicurezza**: 2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in `_VAULT`)",
+    "sessione": "Sessione #64 · 17/07/2026 — MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)"
+  },
+  {
+    "id": "BUS-479a3232",
+    "stato": "fatto",
+    "testo": "**Formato PDF a norma — niente da ritarare**: verificato MediaBox 518,4×648 pt =",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-7e30f8a5",
+    "stato": "fatto",
+    "testo": "**Primo dato pubblico letto** (`AnalisiSingoloPost_..._7483279304269877248.xlsx`):",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-1ce29cd4",
+    "stato": "fatto",
+    "testo": "**TARGETING VALIDA LA TESI SG «parla ai pari»**: LinkedIn ha servito il post",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-db5ad4e6",
+    "stato": "in_corso",
+    "testo": "**LEVA VERA = engagement, non formato**: il collo è slide-1 (hook) + slide-10",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-de96c160",
+    "stato": "da_fare",
+    "testo": "**Prossimo**: pubblicare EP_SG_02_01 «V32» (già in vetrina, promosso #62) come 2º test",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-576caad5",
+    "stato": "in_corso",
+    "testo": "**Test formato PDF vs immagini**: PRE_SG_01 era caricato a IMMAGINI (271 impr @ mezzanotte).",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-8664137b",
+    "stato": "fatto",
+    "testo": "**Ricerca automazione LinkedIn** (git/forum): converge su **POSTIZ** (già stack deciso).",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-0caf1e08",
+    "stato": "da_fare",
+    "testo": "**#64 MONTARE POSTIZ** — piano completo in `DOCS/POSTIZ_SETUP.md`. Apre il **collo n°1",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
+    "id": "BUS-dfc00a3e",
+    "stato": "da_fare",
+    "testo": "**Sicurezza**: mail brand microindustry con **pass unica + 2FA + `_VAULT`** (Enea.2024 riusata =",
+    "sessione": "Sessione #63 · 16/07/2026 — RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna → primo dato)"
+  },
+  {
     "id": "BUS-fc7d36eb",
     "stato": "fatto",
     "testo": "**1. AUTOGENERAZIONE EPISODI → RAG: VIVA, verificata coi numeri** (P0): Nina auto",
@@ -105,6 +297,36 @@
     "id": "BUS-374ec6b5",
     "stato": "da_fare",
     "testo": "replica serale della catena se la notte salta (12/31 saltate) — design aperto",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-8b11229c",
+    "stato": "fatto",
+    "testo": "**BACKLOG RAG chiuso** (#62 16/07, dominio 2 dell'attacco #2 completo):",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-26037b1e",
+    "stato": "fatto",
+    "testo": "#7 riflusso FATTI a **rotazione trimestrale** (`fatti_reflux`: i trimestri chiusi",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-c7a670a0",
+    "stato": "fatto",
+    "testo": "#8 **demote STORIE** (malus opt-in `demote_dirs`; i 3 generatori groundano sul",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-dc765c26",
+    "stato": "fatto",
+    "testo": "#6 **sentinella doppioni `_copia`** in night_audit (trova i 2 reali). `928d1889`",
+    "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
+  },
+  {
+    "id": "BUS-25af7dd2",
+    "stato": "fatto",
+    "testo": "#10 **daily-note fuori indice** (`_is_nav_file`, regex `YYYY-MM-DD`). `abc8e1f5`",
     "sessione": "Sessione #60 · 15/07/2026 — PRE_04 chiude il preambolo · tabellone caroselli PULITO 14/14"
   },
   {

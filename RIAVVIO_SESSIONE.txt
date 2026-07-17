@@ -1,46 +1,49 @@
-=== RIAVVIO SESSIONE #65 — generato 17/07/2026 (fine #64, skill salva PRE-RIAVVIO PC) ===
-Ultima sessione: #64 (17/07, Opus 4.8 — MONTAGGIO POSTIZ, interrotto per riavvio Windows)
-
-⚠️ IL PC È STATO RIAVVIATO PER INSTALLARE WSL2 + DOCKER DESKTOP. Si riparte da qui.
+=== RIAVVIO SESSIONE #66 — generato 17/07/2026 (fine #65, skill salva) ===
+Ultima sessione: #65 (17/07, Opus 4.8 — POSTIZ VIVO, bloccato su timbro LinkedIn)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Stavamo montando POSTIZ (pubblicazione LinkedIn automatica = collo n°1). Tutto è
-preparato FINO AL BORDO: repo clonato, docker-compose configurato col JWT_SECRET,
-segreti in _VAULT. Matteo ha installato WSL2+Ubuntu e Docker Desktop 4.82, poi ha
-riavviato il PC. Al ritorno resta solo: accendere Docker e fare `docker compose up`.
+Il collo n°1 (pubblicazione LinkedIn automatica) è MONTATO e funzionante lato nostro.
+Postiz gira (Docker, 8 container, UI localhost:4007), admin creato, app LinkedIn
+creata+verificata, credenziali nel compose, errore redirect RISOLTO. Resta UN SOLO
+muro, ed è di LinkedIn: per pubblicare su una PAGINA servono gli scope "organization"
+che li dà la Community Management API — richiesta e IN ATTESA di concessione LinkedIn.
+Quando LinkedIn concede, si finisce in 1 click. Config nostra verificata corretta.
 
-━━━ PRIMO STEP POST-RIAVVIO (in ordine) ━━━
-1. Apri **Docker Desktop** → aspetta icona VERDE ("Docker Desktop running")
-2. Verifica: `docker compose version` → deve rispondere una versione
-3. `cd C:\Users\teo\tools\postiz-docker-compose && docker compose up -d`
-   (prima volta: scarica le immagini, alcuni minuti; è pesante — Postiz+Postgres+Redis+Temporal+Elasticsearch)
-4. Apri **http://localhost:4007** → crea utente admin Postiz
-5. **App LinkedIn Developer** (developer.linkedin.com, Pagina microindustry):
-   - prodotti: Sign In OIDC + Share on LinkedIn + Advertising API (⚠ refresh token, gate lento)
-   - Redirect URL: http://localhost:4007/integrations/social/linkedin-page
-   - Client ID/Secret → nelle righe LINKEDIN_* di docker-compose.yaml → `docker compose up -d` (ricarica)
-6. In Postiz: Settings → connetti LinkedIn (OAuth) → **TEST con le slides/ di EP_SG_02_01**
-   (Postiz le impacchetta in PDF documento e pubblica/programma)
-7. Poi: postiz-agent CLI (github.com/gitroomhq/postiz-agent) → comando EP_ID → LinkedIn
+Lo stack Postiz è STOPPATO per la notte (libera RAM per le notturne GPU — prima notte
+con Docker). Domani riparte con `docker compose start` (~1 min, immagini in cache).
 
-Config completa: DOCS/POSTIZ_SETUP.md · segreti/redirect: _VAULT/ACCOUNTS/postiz.md
+━━━ PRIMO STEP #66 (in ordine) ━━━
+1. App LinkedIn (developer.linkedin.com, app "microindustry-postiz" id 247572507) →
+   scheda **Auth** → in fondo "OAuth 2.0 scopes":
+   - Se compaiono w_organization_social + r_organization_social + rw_organization_admin
+     → LinkedIn HA CONCESSO → procedi
+   - Se ancora assenti / "in review" → aspetta ancora (timbro LinkedIn, non nostro)
+2. `cd C:\Users\teo\tools\postiz-docker-compose && docker compose start`
+3. Apri http://localhost:4007 → login admin (benenatimatteo.mb@gmail.com)
+4. Aggiungi canale → **"LinkedIn Page"** (NON "LinkedIn" liscio) → Autorizza → Pagina microindustry
+5. TEST: carica le slides/ di EP_SG_02_01 → Postiz fa il PDF documento → pubblica/programma
+6. Poi: postiz-agent CLI → comando EP_ID → LinkedIn (automazione dai CAROSELLI/)
 
-━━━ ALTRO FATTO IN #64 ━━━
-- Profilo GitHub v2.1: sintesi umana "Adesso/Prossimo" in cima + dettaglio tecnico a
-  scomparsa (<details>) → leggibile per "quel mondo"; fonte curata BRAIN/profile_public.json
-  (additiva, fallback al dump se manca); ripubblicato live + canon_guard passato
-- Baseline LinkedIn PRE_SG_01 letto: pubblico PERFETTO (saldatori/metalmecc/Milano →
-  valida binario SG "parla ai pari"), engagement thin (2 reaz/0 salv @ mezzanotte) → leva = hook
+Stato completo + credenziali + diagnosi: _VAULT/ACCOUNTS/postiz.md (gitignored)
+
+━━━ FATTO IN #65 ━━━
+- Postiz montato e VIVO: Docker Desktop 4.82, 8 container sani, UI localhost:4007
+- Admin Postiz creato (login personale locale)
+- App LinkedIn "microindustry-postiz" creata + VERIFICATA (Pagina microindustry 136056455)
+- Client ID 7860p2mzggbiky + secret nel docker-compose.yaml (env confermato nel container)
+- Prodotti concessi: Sign In OIDC + Share on LinkedIn
+- Errore "redirect_uri does not match" RISOLTO (2 redirect accettati da LinkedIn)
+- Diagnosi del blocco chiusa: serve Community Management API (scope organization) — in attesa LinkedIn
+- Stack stoppato per la notte
 
 ━━━ IN SOSPESO (non sul percorso Postiz) ━━━
-- ⏰ PRE_SG_01 PROGRAMMATO @08:15 (17/07) come PDF documento, titolo "Quindici anni in
-  fabbrica. Poi ho costruito il mio socio" → leggere risultati e confrontare col baseline immagini
-- Muro Google: verifica Gmail brand microindustry bloccata ("telefono usato troppe volte") →
+- Muro Google: Gmail brand microindustry bloccata ("telefono usato troppe volte") →
   NON serve per LinkedIn/Postiz; riprovare tra 24-48h o altro numero
-- 2FA GitHub: usare authenticator app + SALVARE i recovery codes in _VAULT
+- 2FA GitHub: authenticator app + SALVARE i recovery codes in _VAULT
 
-━━━ BLOCKERS APERTI (gated Matteo) ━━━
-- App LinkedIn Developer (Advertising API = approvazione lenta) · App Meta (~1h)
+━━━ BLOCKERS APERTI (gated) ━━━
+- ⏳ LinkedIn: approvazione Community Management API (sblocca la pubblicazione sulla Pagina)
+- Advertising API (backup, revisione più lenta) · App Meta (~1h)
 - UPS + mandrino ER20 + martinetto Vevor · Pin 5 repo GitHub · chiave Semantic Scholar
 
-━━━ Generato: 17/07/2026 — fine sessione #64 (skill salva, pre-riavvio) ━━━
+━━━ Generato: 17/07/2026 — fine sessione #65 (skill salva) ━━━
