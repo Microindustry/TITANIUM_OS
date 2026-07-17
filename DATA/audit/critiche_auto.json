@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-ff6f210826",
+    "date": "2026-07-17",
+    "git": "077ea411",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Su 56 episodi controllati, 30 mancano dell'open-loop (qc_episodi: open_loop_missing=30, ovvero il 54%). L'open-loop è il gancio che trascina il lettore all'episodio successivo: con Postiz quasi operativo e EP_SG_02_01 pronto per il test LinkedIn, pubblicare episodi senza open-loop significa sprecare la distribuzione appena sbloccata.",
+    "azione": "Prima di pubblicare EP_SG_02_01 come secondo test LinkedIn, verificare che quell'episodio specifico abbia l'open-loop. Poi aprire un task batch per aggiungere l'open-loop ai 30 mancanti: è lavoro per l'apprendista notturno, non per Matteo.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-17"
+  },
+  {
+    "id": "AUD-e7aac92587",
+    "date": "2026-07-17",
+    "git": "077ea411",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il rischio di corruzione HNSW da power-loss è ancora aperto e dichiarato ricorrente (3 volte in 2 giorni nei blockers). Nessun log_issue lo registra stanotte, ma l'UPS da 50-80€ non è stato ordinato. Ogni boot senza UPS è un tentativo: con la GPU notturna attiva e lo stack Docker, un'altra caduta di corrente ricostruisce l'indice RAG da zero e blocca la sessione successiva.",
+    "azione": "Ordinare l'UPS oggi insieme al mandrino ER20: sono entrambi acquisti sotto i 100€ che sbloccano rispettivamente GENESIS (continuità RAG) e MIMS (fresatura stampi). Raggrupparli in un unico ordine elimina un'altra sessione di setup.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-17"
+  },
+  {
+    "id": "AUD-ca4e681866",
+    "date": "2026-07-17",
+    "git": "077ea411",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La decisione MIMS Via B (connettori VULCAN, presa il 24/06) non ha ancora prodotto né il ricalcolo BEP sul tooling né la bozza B2 aggiornata, e il prerequisito fisico (martinetto Vevor) è fermo. Il pillar MIMS è al 30%: con V32 al 65% e GENESIS al 70%, MIMS rischia di diventare il collo strutturale del progetto industriale mentre l'attenzione è tutta su Postiz. La prima colata del giunto sblocca dati reali che oggi mancano al business case.",
+    "azione": "Fissare nella bussola una data concreta per il montaggio Vevor (prerequisito zero-cost, martinetto già in casa): anche solo 2 ore dedicate aprono la corsia MIMS e permettono di ricalcolare il BEP su dati veri invece di stime.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-17"
+  },
+  {
+    "id": "AUD-7d7b3cc10d",
+    "date": "2026-07-17",
+    "git": "077ea411",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna è cieca su Semantic Scholar: due query distinte falliscono con 429 e restituiscono zero risultati. Log 2026-07-17: \"2026-07-17 03:38:52 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"2026-07-17 03:39:16 [research_agent] INFO semantic_scholar -> 0 risultati\"; identico pattern su night_research.log alle 03:40. Senza API key autenticata il rate-limit anonimo è 1 req/s condiviso: la sorgente accademica è di fatto spenta ogni notte.",
+    "azione": "Inserire SEMANTIC_SCHOLAR_API_KEY nel .env (chiave gratuita, richiesta in 5 minuti su semanticscholar.org/product/api): è già in lista blockers, va eseguito prima della prossima run notturna per sbloccare entrambi gli agenti.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-17"
+  },
+  {
+    "id": "AUD-5845b5bb27",
+    "date": "2026-07-17",
+    "git": "077ea411",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi vitali registrano health=0.0 (nina-loop, snapshot RAG, AI news watcher) e uno è a 0.1 (riflusso FATTI). Non ci sono log_issues che spieghino le cause stanotte, ma quattro organi su sette non hanno girato: se il pattern si consolida, il sistema produce senza memoria aggiornata e senza segnali dal mercato.",
+    "azione": "Al riavvio #66 verificare i task scheduler dei quattro organi (exit code, log di avvio): identificare se il problema è il boot-storm post-sleep (già visto il 13/07, risolto con RandomDelay) oppure una regressione. Priorità: nina-loop e snapshot RAG perché alimentano la produzione di episodi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-17"
+  },
+  {
+    "id": "AUD-354ae9af15",
+    "date": "2026-07-17",
+    "git": "077ea411",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "Due file _copia sono ancora nell'indice e rubano slot RRF nelle query. Log vault MENTE 2026-07-17: \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)\" e \"KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)\". La sentinella doppioni esiste (commit 928d1889) e li ha rilevati: il ciclo si chiude solo con la rimozione.",
+    "azione": "Aprire i due file, verificare che non contengano delta rispetto all'originale, quindi cancellarli o archiviarli fuori dal vault. Operazione da 5 minuti: eseguire prima del prossimo rebuild indice per non ri-embeddare i duplicati.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-17"
+  },
+  {
     "id": "AUD-d8016a5f59",
     "date": "2026-07-16",
     "git": "018ec938",
