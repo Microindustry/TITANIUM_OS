@@ -35,6 +35,42 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-17 · 30 commit
+- `87df74a2` auto: night_audit - cartella clinica 17/07/2026
+- `077ea411` chore(salva): #65 Postiz vivo (Docker+admin+app LinkedIn verificata) — bloccato su approvazione LinkedIn Community Management API
+- `11526b05` auto: story_agent - episodi generati 17/07/2026
+- `9afa3fb6` chore(salva): #64 montaggio Postiz fino al bordo (pre-riavvio PC) + profilo GitHub v2.1
+- `4eed565f` feat(github-profile): sintesi UMANA del milestone per "quel mondo" + tecnico a scomparsa
+- `75a6009e` docs(postiz): piano montaggio #64 + risultati test LinkedIn #63
+- `6913ce78` chore(salva): backlog RAG chiuso (#6/#7/#8/#10) + stato/bussola/riavvio
+- `abc8e1f5` fix(rag): backlog #10 - daily-note Obsidian fuori dall'indice (convenzione)
+- `928d1889` feat(audit): backlog #6 - sentinella doppioni _copia nel vault
+- `b65c08c7` feat(rag): backlog #8 - demote STORIE nell'eco (i generatori groundano sul FATTI curato)
+- `a200f989` perf(rag): backlog #7 - riflusso FATTI a rotazione trimestrale (stop re-embed monolite)
+- `d4fb54a0` chore(salva): delta #62 - README caroselli riformattato (TOC) + runtime
+- `93d315b1` chore(salva): chiusura #62 - ondate A/B/C eseguite + EP_SG_02_01 promosso
+- `bd796c97` docs(bussola): ONDATA C fatta (finetune vero + recuperi scaglionati); EP_SG_02_01 chiuso
+- `030b0922` fix(notturne): ONDATA C - RandomDelay sui task GPU per scaglionare i recuperi al boot
+- `4358f0d4` fix(finetune): ONDATA C - dataset vivo (30->176 ep) + finetune vero (no piu' finto-verde)
+- `7078c6b0` docs(bussola): ONDATA B - corsia Nina apprendista viva (prova del fuoco EP_N2_04)
+- `09fa32a9` feat(nina): ONDATA B - corsia Nina apprendista (impagina i testi EP_N2 canonici)
+- `9cd30d7a` docs(bussola): ONDATA B - dieta RAG fatta (hash+lock+no-op)
+- `1ad40e01` perf(rag): ONDATA B - dieta RAG (hash manifest + lock build_index + early-exit no-op)
+- `bad506b7` docs(bussola): ONDATA B - PDF LinkedIn batch fatto (15/15), attesa test Matteo
+- `2c0a2d8c` feat(caroselli): ONDATA B - PDF LinkedIn per episodio (pdf_export.py, 15/15)
+- `e7718ed6` docs(bussola): punto 2 chiuso — EP_SG_02_01 revisionato e promosso (S1 4/69)
+- `7a9cb9c9` feat(caroselli): promuove EP_SG_02_01 «V32 — il cuore che taglia» (S1 4/69)
+- `dcd35c52` docs(bussola): ONDATA A chiusa (#62) - A1/A2/A3/A4 verificati e committati
+- `5384e7e7` feat(apprendista): ONDATA A/A2 - coda auto-refill + multi-bozza con tetto anti-backlog
+- `50c95f2b` fix(retention): ONDATA A/A4 - regola per i reset-quarantena RAG + .obsidian fuori canone
+- `1fd7eb07` fix(watcher): ONDATA A/A3 - rotazione watcher.log (era 27 MB, FileHandler non ruota)
+- `50eb3336` fix(rag): ONDATA A/A1 - canon-pin salta i wikilink SUPERSEDED del canone
+- `735b1161` ﻿chore(salva): chiusura #61 - P0 verificati + attacco #2 completo, ONDATA A approvata (esecuzione #62)
+
+_episodi: 276 · critiche aperte: 30 (159 risolte) · RAG: 19956 chunk_
+
+
+
 ## 2026-07-16 · 22 commit
 - `a395f3e5` auto: night_audit - cartella clinica 16/07/2026
 - `018ec938` auto: story_agent - episodi generati 16/07/2026
