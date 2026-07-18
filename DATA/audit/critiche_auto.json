@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-e4f4f0d430",
+    "date": "2026-07-19",
+    "git": "84554825",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "La corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni ed è listata come blocker esplicito. L'UPS da 50-80€ è identificato come cura alla radice ma non è ancora ordinato. Ogni ricostruzione dell'indice consuma tempo GPU notturno e rischia di lasciare vettori mancanti (il self-heal inverso di RAG v4.3 mitiga ma non elimina il rischio).",
+    "azione": "Ordinare l'UPS entro oggi, stesso momento in cui si ordina il mandrino ER20 — sono entrambi acquisti hardware bloccanti con importo definito. Finché non è in funzione, valutare uno shutdown controllato serale prima dello stop GPU invece dello spegnimento secco.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-19"
+  },
+  {
+    "id": "AUD-ac58ea9b49",
+    "date": "2026-07-19",
+    "git": "84554825",
+    "area": "RAG",
+    "severity": "bassa",
+    "finding": "Due orphan nel vault senza nessun link in ingresso: 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE. Consumano chunk RAG e non sono raggiungibili da nessun percorso di retrieval contestuale.",
+    "azione": "Aprire i due file: se non pertinenti al dominio attivo (V32/MIMS/GENESIS/artigianato industriale), spostarli in ARCHIVIO o eliminarli. Se pertinenti, aggiungere almeno un wikilink da un nodo KNOWLEDGE attivo per renderli raggiungibili.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-19"
+  },
+  {
+    "id": "AUD-8f4d6e7724",
+    "date": "2026-07-19",
+    "git": "84554825",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "30 episodi su 56 controllati (53%) mancano di open_loop (qc_episodi: open_loop_missing=30, structure_fail=0). La struttura regge ma l'aggancio narrativo che trascina il lettore all'episodio successivo è assente in oltre metà del catalogo pubblicato — difetto sistematico, non sporadico.",
+    "azione": "Definire la regola open_loop come check obbligatorio nel QC episodi (caroselli_qc.py o equivalente), produrre la lista dei 30 episodi colpevoli e inserire un batch di retrofit nella prossima ondata, prioritizzando i primi episodi di ogni serie (maggiore visibilità).",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-19"
+  },
+  {
+    "id": "AUD-7634ef9e1b",
+    "date": "2026-07-19",
+    "git": "84554825",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "daily brief è piatto a 0.0 — unico organo vitale a zero su tutti i monitorati (nina-loop 1.9, RAG 1.9, watcher 1.9). Non è un rallentamento: è fermo. Nessun log di esecuzione rilevato stanotte.",
+    "azione": "Verificare il task scheduler del daily brief (bat/Task Scheduler Windows): controllare exit code, log di avvio e se il processo viene ucciso prima della scrittura. Stesso approccio usato per ai_news_watcher in fix(#57) — aggiungere marker avvio nel logger e exit code nel bat.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-19"
+  },
+  {
+    "id": "AUD-47f5f3464e",
+    "date": "2026-07-19",
+    "git": "84554825",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Due file _copia attivi nel vault rubano slot RRF alla retrieval: (2026-07-19) \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale\" e (2026-07-19) \"KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'originale\". La sentinella doppioni (backlog #6) li ha rilevati ma non sono stati rimossi: il problema è noto e aperto.",
+    "azione": "Aprire i due file, confrontare con l'originale, scegliere fondere o archiviare, eliminare i _copia. Poi rieseguire build_index incrementale per pulire i chunk duplicati da ChromaDB.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-19"
+  },
+  {
+    "id": "AUD-370fb08f59",
+    "date": "2026-07-19",
+    "git": "84554825",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il todo '2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in _VAULT)' è aperto in bussola insieme alla nota 'Enea.2024 riusata = problema' sulla mail brand microindustry. Con Postiz live e credenziali LinkedIn/OAuth nel compose, la superficie di attacco è cresciuta questa settimana. Il blocker 'Chiavi .env da ruotare (red-team #38)' è già in lista ma la 2FA GitHub non ha ancora una sessione assegnata.",
+    "azione": "Dedicare i primi 15 minuti della sessione #66 (prima di toccare Docker) ad attivare la 2FA GitHub e salvare i recovery codes in _VAULT. Abbinare la rotazione delle chiavi .env nella stessa micro-sessione: sono entrambi task da tastiera, nessun prerequisito hardware.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-19"
+  },
+  {
     "id": "AUD-ff6f210826",
     "date": "2026-07-17",
     "git": "077ea411",
@@ -224,8 +296,10 @@
     "finding": "Il QC episodi segnala open_loop_missing su 29 dei 54 episodi controllati (54%). La metrica è strutturata (structure_fail=0) ma più della metà degli episodi non ha il gancio narrativo richiesto. Con la produzione PRE_SG_01-04 pianificata per stanotte in autonomia Claude 100%, senza un fix alla regola o al template il problema si moltiplica: i nuovi episodi usciranno con lo stesso difetto sistemico.",
     "azione": "Prima di avviare la produzione PRE_SG: verificare se open_loop_missing è un falso positivo (regola QC mal calibrata) o un difetto reale nel template. Se reale, aggiornare _TEMPLATE/components con il blocco open-loop obbligatorio, poi rigenerare i 29 episodi difettosi in batch.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-14"
+    "status": "resolved",
+    "last_seen": "2026-07-14",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ea0d10c1b1",
@@ -236,8 +310,10 @@
     "finding": "Tre analisi richieste direttamente da Matteo (VALORE per pilastro, HR/CV vivo, Attivazione PUBBLICAZIONI) sono aperte in bussola da almeno una sessione e non compaiono nel next_step di stanotte. Con ~165 caroselli pianificati e la macchina produttiva che si avvia, queste analisi sono prerequisiti di allineamento strategico: senza di esse la produzione potrebbe ottimizzare metriche (slide contate, episodi generati) che Matteo non ha ancora validato come prioritarie. Il rischio non è il dimenticarle, ma l'accumulo di materiale da rivedere a valle.",
     "azione": "Nella prima apertura con Matteo: dedicare 20 minuti alla revisione di questi tre punti prima di avviare la produzione PRE_SG. Se Matteo conferma la rotta attuale, chiudere i todo esplicitamente con data; altrimenti riorientare il batch notturno successivo.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-14"
+    "status": "resolved",
+    "last_seen": "2026-07-14",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ad84b45d22",
@@ -248,8 +324,10 @@
     "finding": "Il blocker UPS (~50-80€) è esplicitamente collegato a «corruzione HNSW da power-loss ricorrente (3 volte in 2gg)» e il log del 13/07 mostra già un servizio locale irraggiungibile nella notte. Ogni notte senza UPS è una notte a rischio di corruzione ChromaDB: il self-heal inverso (f26d3184) mitiga ma non elimina il rischio, e ogni rebuild HNSW costa tempo di calcolo e potenziale perdita di vettori non recuperabili. Il pilastro V32 è al 65% con MIMS al 30%: un altro crash sul RAG blocca entrambi.",
     "azione": "Ordinare UPS insieme a Vevor+ER20 nella stessa transazione (sono tutti e tre hardware gated Matteo): trattarli come un unico ordine riduce la frizione decisionale. Nel frattempo eseguire un backup manuale di ChromaDB prima di ogni notte di produzione pesante.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-14"
+    "status": "resolved",
+    "last_seen": "2026-07-14",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-16d8e03b3d",
@@ -260,8 +338,10 @@
     "finding": "La ricerca notturna del 14/07 è sostanzialmente cieca: Semantic Scholar ha sparato 429 su entrambe le query principali («2026-07-14 03:44:05 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429» e «2026-07-14 03:42:25 [research_agent] WARNING [backoff] ... HTTP 429 — attendo 1s»), arxiv è andato in timeout («2026-07-14 03:44:45 [research_agent] WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)»), e il risultato netto è zero paper acquisiti («2026-07-14 03:44:29 [research_agent] INFO semantic_scholar -> 0 risultati»). Il blocker ha una soluzione già identificata (SEMANTIC_SCHOLAR_API_KEY in .env) ma non ancora applicata: ogni notte senza chiave è una notte di ricerca sprecata.",
     "azione": "Matteo inserisce SEMANTIC_SCHOLAR_API_KEY in .env nella prossima apertura (gated, ~5 min). Nel frattempo alzare il read timeout arxiv da 15s a 30s nel codice per assorbire i picchi di latenza senza timeout secco.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-14"
+    "status": "resolved",
+    "last_seen": "2026-07-14",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0a3efe302c",
@@ -272,8 +352,10 @@
     "finding": "Il canone vault dichiara max_ep_canone=53 ma su disco esiste EP_N2_54, confermato dalla riga «su disco EP_N2_54, il canone dichiara EP_N2_53: aggiornare _CANONE.md» (2026-07-14). Con 4 canon_violations attive e il canone che già scivola di un episodio, il retrieval RAG rischia di escludere o misclassificare materiale reale. Il self-heal inverso (fix f26d3184) copre i vettori mancanti ma non corregge l'indice canone: sono due layer distinti.",
     "azione": "Prima della prossima sessione di produzione: aggiornare _CANONE.md portando max_ep_canone a 54, poi rieseguire la sentinella canon-pin per azzerare le 4 violations. Bloccare la pipeline story_agent finché il canone non è allineato al disco.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-14"
+    "status": "resolved",
+    "last_seen": "2026-07-14",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0469632469",
@@ -284,8 +366,10 @@
     "finding": "Tre organi core risultano a uptime 0.0 stanotte: nina-loop, snapshot RAG e AI news watcher. Quest'ultimo aveva già avuto una morte silenziosa al boot il 13/07 (fix 16609c5b). Il fatto che torni a 0.0 il 14/07 indica che il fix dell'exit-code/marker non ha reso il processo resiliente al riavvio, oppure che non è stato riavviato dopo il fix. In parallelo, il log del 13/07 segnala «[tasks_history] API non raggiungibile (<urlopen error [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione>) — nessuna tacca stanotte»: un servizio locale che rifiuta la connessione, non registrato come guasto risolto.",
     "azione": "Verificare al mattino se ai_news_watcher è in esecuzione (task manager / bat exit code). Se morto di nuovo, aggiungere un auto-restart supervisionato (es. wrapper bat con loop o Task Scheduler con restart-on-failure). Per tasks_history investigare quale servizio locale rifiuta la porta e se è legato all'assenza di UPS (crash notturno).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-14"
+    "status": "resolved",
+    "last_seen": "2026-07-14",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-f2138e4960",
@@ -296,8 +380,10 @@
     "finding": "5 organi automatici su 7 sono fermi da 4+ giorni: \"nina-loop: ultimo output 4.2 giorni fa (soglia 3) — nina_state.json\" (2026-07-13), \"snapshot RAG: ultimo output 4.2 giorni fa (soglia 3) — rag_snapshots\" (2026-07-13), \"retention disco: ultimo output 4.2 giorni fa (soglia 3) — retention_last.json\" (2026-07-13), \"AI news watcher: ultimo output 4.2 giorni fa (soglia 4) — ai_news_watcher_state.json\" (2026-07-13). Il blocco è coerente: stessa data di arresto su tutti e quattro, con 71 commit prodotti nel frattempo senza che nessun organo notturno abbia girato. Il sistema di automazione notturna non è affidabile come singolo punto di esecuzione.",
     "azione": "Verificare il processo/scheduler che lancia gli organi notturni: log del cron o del processo padre dalla notte del 09/07. Capire se il crash HNSW da power-loss (3 volte in 2gg, blocker UPS già noto) ha abbattuto anche il demone che li orchestra. Riavviare manualmente i 4 organi e confermare output freschi prima di chiudere la sessione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-13"
+    "status": "resolved",
+    "last_seen": "2026-07-13",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-d2cec3fc5c",
@@ -308,8 +394,10 @@
     "finding": "L'ordine hardware UPS è il prerequisito bloccante non eseguito con il rischio più alto di perdita dati: la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni (blocker esplicito) e il RAG conta 18594 chunk. Ogni rebuild HNSW post-corruzione costa tempo di sessione e degrada la continuità del sistema. Il todo 'MOSSA 1: 1 ordine = martinetto Vevor 20t + mandrino ER20 + UPS' è in bussola_open come GATED MATTEO ma non ha data né conferma di ordine effettuato.",
     "azione": "Sbloccare l'ordine UPS (50-80€, costo irrisorio rispetto al rischio) prima o durante la sessione #57: è una decisione di 5 minuti che protegge tutto il lavoro notturno. Martinetto Vevor e mandrino ER20 possono seguire nello stesso ordine se conviene logisticamente.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-13"
+    "status": "resolved",
+    "last_seen": "2026-07-13",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a71e2dd059",
@@ -320,8 +408,10 @@
     "finding": "22 CVE fixabili sono presenti nelle dipendenze Python: \"22 CVE fixabili in 3 pacchetti: gradio 5.50.0 (9), pillow 11.3.0 (7), starlette 0.52.1 (6)\" (2026-07-13). Gradio e Starlette espongono superfici HTTP; Pillow elabora immagini nei flussi di generazione. Con 9 pacchetti già pianificati per upgrade in bussola_open ('Sessione CVE: upgrade dei 9 pacchetti (42 fix) CON test finetune dopo'), questa sessione è già in ritardo e il numero di CVE è cresciuto.",
     "azione": "Eseguire la sessione CVE già pianificata: pip install --upgrade gradio pillow starlette, poi test finetune come da scaletta. Non farlo in background: il test finetune dopo ogni upgrade è il gating condition già deciso.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-13"
+    "status": "resolved",
+    "last_seen": "2026-07-13",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-628a36b830",
@@ -332,8 +422,10 @@
     "finding": "Il bussola_open riporta 'TOP 10 #3 (55 file versioni superate nel RAG → estendere exclusions + 1 rebuild)' come prossimo della catena verità, e 'TOP 10 #9: INDICE_CAMMINO ora è UNA copia sola ma i 9/15 titoli sbagliati restano → rigenerarlo da episodes.json'. Con 18594 chunk nel RAG e snapshot fermo da 4.2 giorni, file obsoleti e titoli errati nell'indice stanno degradando attivamente la qualità del retrieval su ogni query Nina e ogni audit notturno.",
     "azione": "Eseguire il rebuild RAG con exclusions estese (TOP 10 #3) e rigenerare INDICE_CAMMINO da episodes.json (TOP 10 #9) nella stessa sessione: i due task condividono il contesto RAG e fare uno senza l'altro lascia il problema a metà.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-13"
+    "status": "resolved",
+    "last_seen": "2026-07-13",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-136b559491",
@@ -344,8 +436,10 @@
     "finding": "3 canon_violations attive non hanno finding associato nei log_issues: il dato è presente (canon_violations=3) ma nessuna riga di log specifica quale regola è violata o su quale file. Con canone_manuale a 19 item attivi e 4 giorni di età, le violazioni potrebbero essere accumulate durante i 71 commit della sessione #57 senza essere state intercettate dagli organi notturni fermi.",
     "azione": "Eseguire manualmente il check canonico (lo stesso script che gira la notte) e leggere quali 3 violazioni emergono. Chiuderle prima di aprire nuovi cantieri: una violazione di canone non diagnosticata è un debito che cresce a ogni commit.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-13"
+    "status": "resolved",
+    "last_seen": "2026-07-13",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-11312a6307",
@@ -356,8 +450,10 @@
     "finding": "29 episodi su 53 (55%) mancano del campo open_loop nei metadati (qc_episodi: open_loop_missing=29, checked=53). L'open_loop è il gancio narrativo che collega un episodio al successivo e alimenta il RAG con continuità. Con 265 episodi totali e la pipeline 'storie di sistema in prima persona' dichiarata come nuovo binario, avere oltre metà del campione verificato senza questo campo significa che il RAG restituisce frammenti senza filo, e Nina non può costruire archi narrativi coerenti.",
     "azione": "Identificare quali 29 episodi mancano dell'open_loop (probabilmente quelli pre-template). Decidere se rigenerarli con lo story_agent o aggiungere il campo manualmente per i più recenti. Priorità ai primi episodi di N2 che formano la serie pubblica.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-13"
+    "status": "resolved",
+    "last_seen": "2026-07-13",
+    "resolved_on": "2026-07-19",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7718dff2e1",

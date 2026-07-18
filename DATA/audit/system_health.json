@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-17T03:52:42",
-  "date": "2026-07-17",
-  "git_head": "077ea411",
-  "rag_chunks": 19956,
+  "last_audit": "2026-07-19T00:23:51",
+  "date": "2026-07-19",
+  "git_head": "84554825",
+  "rag_chunks": 19952,
   "n_episodes": 276,
-  "n_commits_7d": 97,
+  "n_commits_7d": 99,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,81 +14,39 @@
   },
   "log_issues": [
     {
-      "log": "night_research.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-17 03:40:00 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-17"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-17 03:40:25 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
-      "data": "2026-07-17"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-17 03:40:25 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-17"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-17 03:38:52 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-17"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-17 03:39:16 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-07-17"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-17 03:39:16 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-17"
-    },
-    {
-      "log": "rag_engine.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-17 03:26:31 [rag_engine          ] INFO     Linkgraph: 429 note con link, 5603 archi (vault completo, risolti)",
-      "data": "2026-07-17"
-    },
-    {
       "log": "vault MENTE",
       "tipo": "doppione _copia",
       "riga": "FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)",
-      "data": "2026-07-17"
+      "data": "2026-07-19"
     },
     {
       "log": "vault MENTE",
       "tipo": "doppione _copia",
       "riga": "KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)",
-      "data": "2026-07-17"
+      "data": "2026-07-19"
     }
   ],
   "vault_orphans": 2,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 8,
+    "file_age_days": 10,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 0,
+    "canone_age_days": 1,
     "max_ep_disco": 56,
     "max_ep_canone": 56
   },
   "organi_vivi": {
-    "nina-loop": 0.0,
-    "snapshot RAG": 0.0,
-    "inventario notturno": 0.7,
-    "retention disco": 0.7,
-    "AI news watcher": 0.0,
-    "daily brief": 0.8,
-    "riflusso FATTI": 0.1
+    "nina-loop": 1.9,
+    "snapshot RAG": 1.9,
+    "inventario notturno": 1.8,
+    "retention disco": 1.8,
+    "AI news watcher": 1.9,
+    "daily brief": 0.0,
+    "riflusso FATTI": 1.9
   },
   "pip_audit": {
     "vulns": 0,
@@ -102,9 +60,9 @@
   },
   "critiche": {
     "added": 6,
-    "auto_closed": 0,
-    "total": 189,
-    "open": 30
+    "auto_closed": 12,
+    "total": 195,
+    "open": 24
   },
   "verdict": "ATTENZIONE"
 }
