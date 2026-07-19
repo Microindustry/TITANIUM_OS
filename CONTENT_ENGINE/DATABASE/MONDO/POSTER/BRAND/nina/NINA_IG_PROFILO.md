@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [Instagram Nina  kit profilo (account SEPARATO da microindustry)](#instagram-nina-kit-profilo-account-separato-da-microindustry)
+  - [Foto profilo](#foto-profilo)
+  - [Handle (da creare  scegli tu  verifica disponibilità)](#handle-da-creare-scegli-tu-verifica-disponibilità)
+  - [Tipo account](#tipo-account)
+  - [Nome (grassetto, max 30)](#nome-grassetto-max-30)
+  - [Categoria](#categoria)
+  - [Biografia (max 150)](#biografia-max-150)
+  - [Link in bio](#link-in-bio)
+  - [Ritmo  scaletta (coda pronta in POSTER/_SOCIAL_QUEUE_NINA/)](#ritmo-scaletta-coda-pronta-in-postersocialqueuenina)
+  - [Nota](#nota)
+
+<!-- /TOC -->
+
 # Instagram Nina — kit profilo (account SEPARATO da microindustry)
 *v1.0 · 2026-07-19 · canon-safe · mondo di Nina (buonanotte che insegna)*
 

@@ -5,6 +5,16 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 ---
+<!-- TOC -->
+
+- [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
+  - [Come leggere la tabella](#come-leggere-la-tabella)
+  - [Il cammino (caselle 1  57)](#il-cammino-caselle-1-57)
+  - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
+  - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
+
+<!-- /TOC -->
+
 
 # Indice del Cammino — il "libro" di Nina
 
@@ -24,7 +34,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 56)
+## Il cammino (caselle 1 → 57)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -84,6 +94,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 54 | `EP_N2_54` | Il Dito che Insegna | ⟡1 (giro 3) | Una traccia è un gesto che rimane e continua a insegnare anche quando |
 | 55 | `EP_N2_55` | La Giuntura che Respira | ⟡0 (giro 3) | Le giunture sono i punti dove il disordine ama attaccare, ma il movime |
 | 56 | `EP_N2_56` | La mano che insegna alla notte | ⟡2 (giro 3) | Quando insegni a una macchina il gesto giusto, lei lo ripete perfetto |
+| 57 | `EP_N2_57` | Il Cartellino sulla Stoffa | ⟡4 (giro 3) | Una risposta è forte solo se sai dire esattamente da dove l'hai presa |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

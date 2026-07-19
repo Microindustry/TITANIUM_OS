@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 66  19/07/2026  LANCIO SOCIAL: identità microindustry  scaletta Meta programmata](#sessione-66-19072026-lancio-social-identità-microindustry-scaletta-meta-programmata)
   - [Sessione 65  17/07/2026  POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)](#sessione-65-17072026-postiz-vivo-bloccato-su-approvazione-linkedin-community-management-api)
   - [Sessione 64  17/07/2026  MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)](#sessione-64-17072026-montaggio-postiz-in-corso-ripresa-post-riavvio)
   - [Sessione 63  16/07/2026  RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna  primo dato)](#sessione-63-16072026-risultati-test-linkedin-presg01-prima-consegna-primo-dato)
@@ -114,6 +115,7 @@ Ripresa: power-loss durante la notte → verificato che le notturne hanno girato
 - [✓] **Coda Nina estesa a 10** (EP_N2_04/05/06 auto-promosse — Nina auto-promuove, canon-clean, 10 slide) → `_SOCIAL_QUEUE_NINA/`, ritmo mer+dom fino 23/08.
 - [ ] **DA APPROVARE (SISTEMA, «solo di giorno»)**: le bozze EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» sono complete + canon-clean → una tua occhiata e le promuovo (estendono Meta a ven14/mar18/ven21 agosto). NON promosse da solo: guardrail voce-Matteo rispettato.
 - [ ] **Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).
+- [✓] **Regola codificata (richiesta Matteo 19/07)**: a ogni inizio sessione, SEMPRE 2 righe su cosa hanno fatto gli agenti notturni → CLAUDE.md protocollo punto 4 + memoria `feedback_2righe_notturne`.
 - [◐] **Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).
 - [ ] Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole.
 

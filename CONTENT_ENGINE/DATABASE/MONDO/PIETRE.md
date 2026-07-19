@@ -1,3 +1,23 @@
+<!-- TOC -->
+
+- [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
+- [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
+  - [0  LA MATERIA  (7 episodi)](#0-la-materia-7-episodi)
+  - [1  LA TRACCIA  (5 episodi)](#1-la-traccia-5-episodi)
+  - [2  LOFFICINA CHE GIRA SOLA  (14 episodi)](#2-lofficina-che-gira-sola-14-episodi)
+  - [3  LA MENTE CHE PARLA  (4 episodi)](#3-la-mente-che-parla-4-episodi)
+  - [4  LA BIBLIOTECA DELLE FONTI  (7 episodi)](#4-la-biblioteca-delle-fonti-7-episodi)
+  - [5  LA GRANDE MAPPA  (30 episodi)](#5-la-grande-mappa-30-episodi)
+  - [6  LESERCITO SILENZIOSO  (6 episodi)](#6-lesercito-silenzioso-6-episodi)
+  - [7  IL DIRETTORE  (14 episodi)](#7-il-direttore-14-episodi)
+- [Verticale: Finanza personale](#verticale-finanza-personale)
+  - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)
+  - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)
+  - [3  IL CUSCINETTO  (0 episodi)](#3-il-cuscinetto-0-episodi)
+  - [4  FAR LAVORARE I SOLDI  (0 episodi)](#4-far-lavorare-i-soldi-0-episodi)
+
+<!-- /TOC -->
+
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
 *Generato da `generate_pietre_index.py` il 2026-07-19 — VISTA dell'`asse_nina`*
@@ -61,7 +81,7 @@
 | 1 | `EP_S2_01_IL_CERVELLO_IBRIDO` Il Cervello Ibrido | il cervello ibrido: cloud + locale | fonte | ⟡1 |
 | 2 | `EP_N2_08` La Lampada che Sussurra | l'allucinazione della mente: da dove lo sai? | adattato | — |
 
-## ⟡4 · LA BIBLIOTECA DELLE FONTI  (6 episodi)
+## ⟡4 · LA BIBLIOTECA DELLE FONTI  (7 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -71,6 +91,7 @@
 | 2 | `EP_N2_29` La Memoria che Sceglie | Le sinapsi sono i legami che ricordi — più li usi, più diventano forti | adattato | ⟡3 |
 | 2 | `EP_N2_51` Il Cartellino sulla Stoffa | Ogni idea che la Mente ti dà deve avere un cartellino attaccato che di | adattato | — |
 | 2 | `EP_T04` SINAPSI | SINAPSI: la memoria che collega | fonte | ⟡3 |
+| 3 | `EP_N2_57` Il Cartellino sulla Stoffa | Una risposta è forte solo se sai dire esattamente da dove l'hai presa  | adattato | — |
 
 ## ⟡5 · LA GRANDE MAPPA  (30 episodi)
 

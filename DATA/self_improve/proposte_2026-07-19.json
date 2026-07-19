@@ -1,0 +1,308 @@
+{
+  "data": "2026-07-19",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Ordinare UPS fisico entro 24h — bloccare la corruzione HNSW ricorrente",
+      "cosa": "Acquistare un UPS da 50-80€ (es. APC Back-UPS 600VA o equivalente) per proteggere il server da power-loss e azzerare il rischio di corruzione dell'indice HNSW.",
+      "perche": "Segnale critico: 'corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni ed è listata come blocker esplicito. L'UPS da 50-80€ è identificato come cura alla radice ma non è ancora ordinato. Ogni ricostruzione consuma tempo GPU notturno.' Con 19.952 chunk e 99 commit in 7 giorni, ogni ricostruzione è un debito reale.",
+      "come": [
+        "1. Matteo apre Amazon/Unieuro oggi e ordina UPS 600VA (budget 50-80€, consegna prioritaria).",
+        "2. Nel frattempo: aggiungere uno script di shutdown graceful su SIGPWR (systemd UPS hook) come misura ponte — sicuro, reversibile.",
+        "3. Dopo montaggio UPS: verificare log di corruzione per 48h e chiudere il blocker in bussola."
+      ],
+      "rischio": "Senza UPS ogni boot è un tentativo. Con UPS il rischio di corruzione scende a quasi zero.",
+      "autonomia": "approvazione",
+      "fonte": "segnale interno: critiche_audit_aperte[SISTEMA, sev=alta] + critiche_audit_aperte[SISTEMA, sev=media] — blocker ricorrente"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Diagnosi e riattivazione daily-brief (health=0.0, organo fermo)",
+      "cosa": "Investigare perché il daily-brief è piatto a 0.0 (unico organo a zero su tutti i monitorati) e ripristinarlo. Parallelamente mappare il pattern dei 4 organi fermi (nina-loop 0.0, snapshot RAG 0.0, AI news watcher 0.0, riflusso FATTI 0.1) per capire se la causa è comune (es. processo padre crashato, cron saltato, dipendenza condivisa).",
+      "perche": "Segnale critico: 'daily brief è piatto a 0.0 — unico organo vitale a zero su tutti i monitorati. Non è un rallentamento: è fermo. Nessun log di esecuzione rilevato stanotte.' + 'Tre organi vitali registrano health=0.0 (nina-loop, snapshot RAG, AI news watcher) e uno è a 0.1 (riflusso FATTI). Quattro organi su sette non hanno girato.'",
+      "come": [
+        "1. [sicuro] Leggere i log di sistema dell'ultima notte per i 4 processi fermi — cercare exit code, OOM killer, cron miss.",
+        "2. [sicuro] Verificare se esiste un processo padre / orchestratore comune tra i 4 organi — se sì, il crash è lì.",
+        "3. [sicuro] Aggiungere un health-check wrapper che scriva un timestamp heartbeat ogni ciclo: se assente per >30min, log_issue automatico.",
+        "4. [approvazione Matteo] Se il cron è il punto di failure, proporre migrazione a systemd timer con restart=on-failure."
+      ],
+      "rischio": "Se non diagnosticato, il pattern si consolida e il sistema opera cieco ogni notte. Diagnosi è read-only, nessun rischio.",
+      "autonomia": "sicuro",
+      "fonte": "segnale interno: critiche_audit_aperte[SISTEMA, sev=alta] — 'daily brief piatto a 0.0' + pattern 4 organi fermi"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RAG",
+      "titolo": "Rimozione immediata dei 2 file _copia che avvelenano l'indice RRF",
+      "cosa": "Eliminare (o spostare in cartella _ARCHIVIO) i due file duplicati attivi nel vault: 'la_scienza_finanziaria_l_asimmetria_di_valore_copia.md' e 'istruzioni_ia_copia.md'. Poi rilanciare un re-index parziale sulle sole cartelle FINANZA e KNOWLEDGE/PROMPTS per liberare gli slot RRF.",
+      "perche": "Segnale duplicato ad alta confidenza: due finding distinti (sev=alta e sev=media) confermano che i file _copia 'rubano slot RRF alla retrieval' e degradano la qualità delle query. Con 19.952 chunk totali ogni slot sprecato su duplicati è retrieval noise sistematico.",
+      "come": [
+        "1. [sicuro] Script read-only: scansione vault per pattern '*_copia.md' — output lista completa (potrebbe esserci un terzo file non ancora rilevato).",
+        "2. [sicuro] Spostare i 2 file noti in _ARCHIVIO/duplicati/ (operazione reversibile con git mv).",
+        "3. [sicuro] Contestualmente: linkare o rimuovere i 2 orphan node ('human_centeredness_in_translation', 'quantum_espresso_*') che consumano chunk RAG senza ingresso.",
+        "4. [approvazione Matteo] Re-index parziale FINANZA + KNOWLEDGE/PROMPTS dopo la pulizia."
+      ],
+      "rischio": "Basso. Operazione git-tracciata, reversibile. Il re-index parziale è locale e non tocca main.",
+      "autonomia": "sicuro",
+      "fonte": "segnale interno: critiche_audit_aperte[RAG, sev=alta] — file _copia attivi + critiche_audit_aperte[RAG, sev=bassa] — orphan node"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-19",
+    "milestone": "Sessione #66 (19/07): LANCIO SOCIAL. Identita microindustry (logo M oro + banner \"COSTRUIRE MODULO A MODULO\"), IG @microindustry.ms passato a Business, Pagina LinkedIn 136056455. Strategia SPLIT: LinkedIn best-first (V32 manuale lun 20/07), Meta (FB+IG) preambolo in ordine 2/sett. Scaletta 8 post Me",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "La corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni ed è listata come blocker esplicito. L'UPS da 50-80€ è identificato come cura alla radice ma non è ancora ordinato. Ogni ricostruzione dell'indice consuma tempo GPU notturno e "
+      },
+      {
+        "area": "RAG",
+        "sev": "bassa",
+        "finding": "Due orphan nel vault senza nessun link in ingresso: 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE. Consumano chunk RAG e non sono raggiungibili da nessun "
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "30 episodi su 56 controllati (53%) mancano di open_loop (qc_episodi: open_loop_missing=30, structure_fail=0). La struttura regge ma l'aggancio narrativo che trascina il lettore all'episodio successivo è assente in oltre metà del catalogo pu"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "daily brief è piatto a 0.0 — unico organo vitale a zero su tutti i monitorati (nina-loop 1.9, RAG 1.9, watcher 1.9). Non è un rallentamento: è fermo. Nessun log di esecuzione rilevato stanotte."
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "Due file _copia attivi nel vault rubano slot RRF alla retrieval: (2026-07-19) \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale\" e (2026-07-19) \"KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'origin"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il todo '2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in _VAULT)' è aperto in bussola insieme alla nota 'Enea.2024 riusata = problema' sulla mail brand microindustry. Con Postiz live e credenziali LinkedIn/OAu"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Su 56 episodi controllati, 30 mancano dell'open-loop (qc_episodi: open_loop_missing=30, ovvero il 54%). L'open-loop è il gancio che trascina il lettore all'episodio successivo: con Postiz quasi operativo e EP_SG_02_01 pronto per il test Lin"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il rischio di corruzione HNSW da power-loss è ancora aperto e dichiarato ricorrente (3 volte in 2 giorni nei blockers). Nessun log_issue lo registra stanotte, ma l'UPS da 50-80€ non è stato ordinato. Ogni boot senza UPS è un tentativo: con "
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La decisione MIMS Via B (connettori VULCAN, presa il 24/06) non ha ancora prodotto né il ricalcolo BEP sul tooling né la bozza B2 aggiornata, e il prerequisito fisico (martinetto Vevor) è fermo. Il pillar MIMS è al 30%: con V32 al 65% e GEN"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna è cieca su Semantic Scholar: due query distinte falliscono con 429 e restituiscono zero risultati. Log 2026-07-17: \"2026-07-17 03:38:52 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/se"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali registrano health=0.0 (nina-loop, snapshot RAG, AI news watcher) e uno è a 0.1 (riflusso FATTI). Non ci sono log_issues che spieghino le cause stanotte, ma quattro organi su sette non hanno girato: se il pattern si consoli"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Due file _copia sono ancora nell'indice e rubano slot RRF nelle query. Log vault MENTE 2026-07-17: \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)\" e \"KNOWLED"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 276,
+      "rag_chunks": 19952,
+      "n_commits_7d": 99
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**DA APPROVARE (SISTEMA, «solo di giorno»)**: le bozze EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» sono complete + canon-clean → una tua occhiata e le promuovo (estendono Meta a ven14/mar18/ven21 agosto). NON promosse da solo: guardrail voce-Matteo rispettato.",
+      "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+      "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+      "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole.",
+      "**RIPRESA #66 (1 click quando LinkedIn concede)**: app LinkedIn → Auth → \"OAuth 2.0 scopes\":",
+      "**Backup**: Advertising API richiesta anch'essa (dà gli stessi scope ma con revisione più lenta).",
+      "**postiz-agent CLI** (github.com/gitroomhq/postiz-agent) → dopo la connessione, collega a Claude per pubblicare dai `CAROSELLI/`.",
+      "**Postiz montato FINO AL BORDO** (piano completo: `DOCS/POSTIZ_SETUP.md`):",
+      "**Prerequisiti Matteo (in corso stanotte)**:",
+      "**App LinkedIn Developer**: creare su developer.linkedin.com (Pagina microindustry) →",
+      "**RIPRESA POST-RIAVVIO (primo step #65)**: apri **Docker Desktop** → icona verde →",
+      "**Muro Google (NON sul percorso Postiz)**: verifica Gmail brand microindustry bloccata da",
+      "**Sicurezza**: 2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in `_VAULT`)",
+      "**LEVA VERA = engagement, non formato**: il collo è slide-1 (hook) + slide-10",
+      "**Prossimo**: pubblicare EP_SG_02_01 «V32» (già in vetrina, promosso #62) come 2º test"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "NVIDIA AI Releases Nemotron 3 Embed: An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
+        "url": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Zyphra Releases ZUNA1.1: An Apache 2.0 EEG Foundation Model With Variable-Length Inputs From 0.5 To 30 Seconds",
+        "url": "https://www.marktechpost.com/2026/07/17/zyphra-releases-zuna1-1-an-apache-2-0-eeg-foundation-model-with-variable-length-inputs-from-0-5-to-30-seconds/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Build an Agentic Event Venue Operator with MongoDB Atlas, Voyage, and LangGraph",
+        "url": "https://www.marktechpost.com/2026/07/17/build-an-agentic-event-venue-operator-with-mongodb-atlas-voyage-and-langgraph/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Sakana AI’s Error Diffusion Trains Dale-Compliant Dual-Stream Networks, Reaching 96.7% MNIST and 61.7% CIFAR-10 Without Backpropagation",
+        "url": "https://www.marktechpost.com/2026/07/17/sakana-ais-error-diffusion-trains-dale-compliant-dual-stream-networks-reaching-96-7-mnist-and-61-7-cifar-10-without-backpropagation/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "How to Build Plasmid Engineering Workbench with Circular Mapping, Restriction Analysis, Virtual Gels, and Primer Design",
+        "url": "https://www.marktechpost.com/2026/07/17/how-to-build-plasmid-engineering-workbench-with-circular-mapping-restriction-analysis-virtual-gels-and-primer-design/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Google Cloud’s Always-On Memory Agent Replaces RAG and Embeddings With Continuous LLM Consolidation on Gemini 3.1 Flash-Lite",
+        "url": "https://www.marktechpost.com/2026/07/18/google-clouds-always-on-memory-agent-replaces-rag-and-embeddings-with-continuous-llm-consolidation-on-gemini-3-1-flash-lite/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "NVIDIA Released DeepStream 9.1: Bringing Agentic AI to Vision AI With 13 Skills and Multi-View 3D Tracking",
+        "url": "https://www.marktechpost.com/2026/07/18/nvidia-released-deepstream-9-1-bringing-agentic-ai-to-vision-ai-with-13-skills-and-multi-view-3d-tracking/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Fine-Tuning Qwen3 with LoRA Using NVIDIA NeMo AutoModel: A Complete Single-GPU Google Colab Workflow Tutorial",
+        "url": "https://www.marktechpost.com/2026/07/18/fine-tuning-qwen3-with-lora-using-nvidia-nemo-automodel-a-complete-single-gpu-google-colab-workflow-tutorial/"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Security incident disclosure — July 2026",
+        "url": "https://huggingface.co/blog/security-incident-july-2026"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Newer Models, Same Advantage",
+        "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers",
+        "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How Cars24 scales conversations and builds faster with OpenAI",
+        "url": "https://openai.com/index/cars24"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Why teens deserve access to safe AI",
+        "url": "https://openai.com/index/why-teens-deserve-access-safe-ai"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "A scorecard for the AI age",
+        "url": "https://openai.com/index/a-scorecard-for-the-ai-age"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Hanno trovato il \"pensiero\" nascosto di Claude",
+        "url": "https://www.youtube.com/watch?v=I04DOIZPQqM"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "OpenAI rilascia GPT 5.6 Sol il suo nuovo modello di punta ecco tutto quello che devi sapere!",
+        "url": "https://www.youtube.com/shorts/YVUsfAkQLl0"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Kimi k3 é il nuovo modello AI Cinese che sta facendo tremare OpenAI e Anthropic raggiunge",
+        "url": "https://www.youtube.com/shorts/T8FflMvswcw"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Meta aggiorna la sua AI Muse Spark alla versione 1.1 é mi ha sorpreso!",
+        "url": "https://www.youtube.com/shorts/o7fZdxZwIv0"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Che computer ci vuole per eseguire Kimi K3 il più potente modello AI OpenSource?",
+        "url": "https://www.youtube.com/shorts/6m7uTD6fU8Y"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "SIA sta per self improving AI ed è un frame work dove puoi far sì che la tua AI o Agente di auto",
+        "url": "https://www.youtube.com/shorts/wOibjZIzKoE"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Which AI Is Better? 🖥️ WEBSITE EDITION",
+        "url": "https://www.youtube.com/shorts/FO5zsDIY6Yc"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: Claude's New Browser, Spotify Gets AI & OpenAI's New Hardware",
+        "url": "https://www.youtube.com/watch?v=ss2LaCKUQmU"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "OpenAI gets sued for stealing, again…",
+        "url": "https://www.youtube.com/watch?v=5D4Zqp9GLSc"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Thinky's Inkling: 975B-A41B multimodal, new best American Apache 2.0 open model (with Inkling-Small, 276B-A12B)",
+        "url": "https://www.latent.space/p/ainews-thinkys-inkling-975b-a41b"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬 The Lab of the Future Should Feel Like a Data Center — Andy Beam & Rafa Gómez-Bombarelli, Lila Sciences",
+        "url": "https://www.latent.space/p/the-lab-of-the-future-should-feel"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing",
+        "url": "https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-830"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Kimi K3, and what we can still learn from the pelican benchmark",
+        "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Firefox in WebAssembly",
+        "url": "https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Spot birds not golf",
+        "url": "https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}

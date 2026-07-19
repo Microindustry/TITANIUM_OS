@@ -112,7 +112,8 @@
         "EVA pilot dry-run prenotazioni stato",
         "il sistema applicato a un'attività reale"
       ],
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_02_05"
     },
     {
       "id": "EP_SG_02_06",
@@ -125,7 +126,8 @@
         "EP_S0_01 organismo tre progetti un corpo",
         "leva cognitiva un input N output regola"
       ],
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_02_06"
     },
     {
       "id": "EP_SG_03_01",
@@ -138,8 +140,9 @@
         "EP_S0_02",
         "FOTO/"
       ],
-      "status": "pending",
-      "_auto_refill": true
+      "status": "bozza_verde",
+      "_auto_refill": true,
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_03_01"
     },
     {
       "id": "EP_SG_03_02",
@@ -164,6 +167,46 @@
       "queries": [
         "Il Verdetto — i numeri davanti, senza sconti",
         "S1 EP_05"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_01",
+      "title": "L'occhio — valutare attrezzatura industriale sul canale usato",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "L'occhio — valutare attrezzatura industriale sul canale usato — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: BOM MENTE/V32. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "L'occhio — valutare attrezzatura industriale sul canale usato",
+        "BOM MENTE/V32"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_02",
+      "title": "La BOM — ogni componente una decisione",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "La BOM — ogni componente una decisione — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: MENTE/V32; hub grafo 60 link. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "La BOM — ogni componente una decisione",
+        "MENTE/V32",
+        "hub grafo 60 link"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_03",
+      "title": "Meno Parti — la filosofia del togliere",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "Meno Parti — la filosofia del togliere — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: ST \"Meno Parti\". Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Meno Parti — la filosofia del togliere",
+        "ST \"Meno Parti\""
       ],
       "status": "pending",
       "_auto_refill": true

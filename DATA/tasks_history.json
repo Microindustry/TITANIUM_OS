@@ -293,5 +293,35 @@
     "last_run": "2026-07-17 03:37"
    }
   }
+ },
+ {
+  "date": "2026-07-19",
+  "results": {
+   "TI_AiWatch": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-19 03:25"
+   },
+   "TI_DailyBrief": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-19 00:22"
+   },
+   "TI_DeepFreeze": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-19 03:00"
+   },
+   "TI_FineTune": {
+    "ok": false,
+    "label": "errore generico",
+    "last_run": "2026-07-19 01:00"
+   },
+   "TI_NightAudit": {
+    "ok": true,
+    "label": "OK",
+    "last_run": "2026-07-19 03:52"
+   }
+  }
  }
 ]

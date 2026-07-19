@@ -38,7 +38,9 @@ Matteo Benenati — artigiano industriale + system builder.
 3. Leggi BRAIN/STATE.json       → milestone attivo + pilastri + blockers
 3b. Triage notturno (5 sec)     → DATA/audit/system_health.json `log_issues`: se la notte
     ha lasciato crash/rate-limit, max 3 righe di nota PRIMA di aprire altro (non ignorare gli agenti)
-4. Enunci in <10 sec: dove eravamo + prossimo step — zero domande
+4. Enunci in <10 sec: dove eravamo + prossimo step + SEMPRE 2 righe su cosa hanno
+   fatto/prodotto gli AGENTI NOTTURNI (generazione EP/caroselli, bozze, audit, retention —
+   da system_health.json + tasks_history.json + code caroselli) — zero domande
 5. Lavora — aggiorna DA_FARE_FATTO.md STRADA FACENDO (non solo a fine)
 6. Fine sessione → aggiorna DA_FARE_FATTO.md + STATE.json + RIAVVIO + commit + push
 ```

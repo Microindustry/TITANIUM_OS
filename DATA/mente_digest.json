@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-19T02:10:54.953428",
+  "scanned_at": "2026-07-19T04:32:56.136664",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 919,
+  "total_files": 917,
   "files_read": 13,
-  "files_skipped": 906,
+  "files_skipped": 904,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 111.0,
+      "size_kb": 111.6,
       "readable": false,
       "extracts": {}
     },
@@ -162,14 +162,14 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 27.6,
+      "size_kb": 27.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 27.6,
+      "size_kb": 27.8,
       "readable": false,
       "extracts": {}
     },
@@ -190,14 +190,14 @@
     {
       "path": ".git\\objects\\info\\packs",
       "type": "unknown",
-      "size_kb": 0.2,
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 379.4,
+      "size_kb": 386.5,
       "readable": false,
       "extracts": {}
     },
@@ -244,6 +244,27 @@
       "extracts": {}
     },
     {
+      "path": ".git\\objects\\pack\\pack-34f2e892b6c0f6ce8841647eb589ae8cb77b1a1c.idx",
+      "type": "idx",
+      "size_kb": 128.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-34f2e892b6c0f6ce8841647eb589ae8cb77b1a1c.pack",
+      "type": "pack",
+      "size_kb": 35785.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-34f2e892b6c0f6ce8841647eb589ae8cb77b1a1c.rev",
+      "type": "rev",
+      "size_kb": 18.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": ".git\\objects\\pack\\pack-37c821cc4e5f36d9bf340a9e78f63403a3d03bd2.idx",
       "type": "idx",
       "size_kb": 34.5,
@@ -279,37 +300,9 @@
       "extracts": {}
     },
     {
-      "path": ".git\\objects\\pack\\pack-420778b6b3ef9bcb71c6ad1def39e5965040a49c.pack",
-      "type": "pack",
-      "size_kb": 34618.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-420778b6b3ef9bcb71c6ad1def39e5965040a49c.rev",
-      "type": "rev",
-      "size_kb": 9.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
       "path": ".git\\objects\\pack\\pack-47683f05c9982d6cf037193125d2fe54264adf5d.idx",
       "type": "idx",
       "size_kb": 22.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-47683f05c9982d6cf037193125d2fe54264adf5d.pack",
-      "type": "pack",
-      "size_kb": 4472.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-47683f05c9982d6cf037193125d2fe54264adf5d.rev",
-      "type": "rev",
-      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
@@ -429,20 +422,6 @@
       "path": ".git\\objects\\pack\\pack-fdbcbef89853108cb2896aaa6fda02cc9d99064b.idx",
       "type": "idx",
       "size_kb": 32.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-fdbcbef89853108cb2896aaa6fda02cc9d99064b.pack",
-      "type": "pack",
-      "size_kb": 4581.9,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\pack\\pack-fdbcbef89853108cb2896aaa6fda02cc9d99064b.rev",
-      "type": "rev",
-      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
@@ -2213,7 +2192,7 @@
     {
       "path": "FINANZA\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 5.8,
+      "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
@@ -2248,21 +2227,21 @@
     {
       "path": "GENESIS\\fatti_dalle_storie_2026Q1.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "GENESIS\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 182.5,
+      "size_kb": 180.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "GENESIS\\fatti_dalle_storie_2026Q3.md",
       "type": "md",
-      "size_kb": 51.2,
+      "size_kb": 52.8,
       "readable": false,
       "extracts": {}
     },
@@ -2290,7 +2269,7 @@
     {
       "path": "KNOWLEDGE\\AI_NEWS_RECENTI.md",
       "type": "md",
-      "size_kb": 8.5,
+      "size_kb": 7.5,
       "readable": false,
       "extracts": {}
     },
@@ -2457,7 +2436,7 @@
     {
       "path": "KNOWLEDGE\\AUTOMIGLIORAMENTO.md",
       "type": "md",
-      "size_kb": 5.0,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
@@ -2933,7 +2912,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_review_of_large_language_models_and_autonomous_agents_in_c.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -3353,14 +3332,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analyzing_the_effects_of_lubrication_techniques_on_cnc_spind.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\behavior_of_granite_epoxy_composite_beams_subjected_to_mecha.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -3374,7 +3353,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\concept_and_prototype_of_a_3_component_extruder_for_fusion_d.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
@@ -3388,21 +3367,21 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\data_driven_design_of_epoxygranite_machine_foundations_bayes.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\design_and_analysis_of_epoxy_granite_vertical_machining_cent.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\design_and_implementation_of_thermal_error_compensation_meth.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
@@ -3416,7 +3395,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\dynamic_reliability_analysis_of_cnc_lathe_spindle_bearing_sy.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
@@ -3444,7 +3423,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\load_distribution_analysis_and_contact_stiffness_prediction_.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
@@ -3465,7 +3444,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mechanical_properties_of_polymer_concrete.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 1.2,
       "readable": false,
       "extracts": {}
     },
@@ -3556,14 +3535,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\structural_investigation_of_steel_reinforced_epoxy_granite_m.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\study_of_stiffness_of_linear_guide_pairs_by_experiment_and_f.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 1.3,
       "readable": false,
       "extracts": {}
     },
@@ -3584,7 +3563,7 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\thermal_error_modeling_of_spindle_and_dynamic_machining_accu.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
@@ -3605,14 +3584,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_and_tribological_properties_of_epoxy_granite_compo.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_damping_analysis_of_lightweight_structures_in_mach.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -4081,7 +4060,7 @@
     {
       "path": "MIMS\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 12.1,
+      "size_kb": 10.0,
       "readable": false,
       "extracts": {}
     },
@@ -4599,7 +4578,7 @@
     {
       "path": "STORIE\\_INDEX_STORIE.md",
       "type": "md",
-      "size_kb": 20.0,
+      "size_kb": 20.1,
       "readable": false,
       "extracts": {}
     },
@@ -6053,6 +6032,13 @@
       "extracts": {}
     },
     {
+      "path": "STORIE\\S_AVVENTURA\\EP_N2_57_il_cartellino_sulla_stoffa.md",
+      "type": "md",
+      "size_kb": 13.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_00_componenti_v32_presenti_foto_13_feb_2026.md",
       "type": "md",
       "size_kb": 9.3,
@@ -6447,14 +6433,14 @@
     {
       "path": "V32\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 79.5,
+      "size_kb": 77.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "V32\\fatti_dalle_storie_2026Q3.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
@@ -6545,7 +6531,7 @@
     {
       "path": "VITA_NATURA\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 11.2,
+      "size_kb": 9.0,
       "readable": false,
       "extracts": {}
     },

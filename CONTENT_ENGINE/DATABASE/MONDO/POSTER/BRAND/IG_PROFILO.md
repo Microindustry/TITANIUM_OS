@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [Instagram microindustry.ms  kit profilo (pronto da incollare)](#instagram-microindustryms-kit-profilo-pronto-da-incollare)
+  - [Foto profilo](#foto-profilo)
+  - [Tipo account](#tipo-account)
+  - [Nome (campo in grassetto, ricercabile  max 30 caratteri)](#nome-campo-in-grassetto-ricercabile-max-30-caratteri)
+  - [Categoria](#categoria)
+  - [Biografia (max 150 caratteri)  versione CHIARA (no sigle)](#biografia-max-150-caratteri-versione-chiara-no-sigle)
+  - [Link in bio](#link-in-bio)
+  - [Contatto (opzionale, mostra il pulsante Email)](#contatto-opzionale-mostra-il-pulsante-email)
+  - [Primo post (split: IG parte in ordine dal preambolo)](#primo-post-split-ig-parte-in-ordine-dal-preambolo)
+
+<!-- /TOC -->
+
 # Instagram @microindustry.ms — kit profilo (pronto da incollare)
 *v1.0 · 2026-07-19 · canon-safe (nessun numero di progetto vietato)*
 
