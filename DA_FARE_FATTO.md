@@ -113,7 +113,7 @@ Ripresa: power-loss durante la notte → verificato che le notturne hanno girato
 **— LAVORO NOTTURNO AUTONOMO (mandato Matteo «buon lavoro») —**
 - [✓] **Controllo gestione ecosistema**: generazione EP VIVA (bozze notturne EP_SG_02_02/03/04 + EP_N2_04/05/06), QC funziona (15 promossi 0 issue; EP_SG_02_04 verde, EP_N2_07 errore). Domanda→risposta: collo n°1 (pubblicazione) sbloccato → nuovo collo = **promozione delle bozze verdi**.
 - [✓] **Coda Nina estesa a 10** (EP_N2_04/05/06 auto-promosse — Nina auto-promuove, canon-clean, 10 slide) → `_SOCIAL_QUEUE_NINA/`, ritmo mer+dom fino 23/08.
-- [ ] **DA APPROVARE (SISTEMA, «solo di giorno»)**: le bozze EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» sono complete + canon-clean → una tua occhiata e le promuovo (estendono Meta a ven14/mar18/ven21 agosto). NON promosse da solo: guardrail voce-Matteo rispettato.
+- [✓] **3 bozze SISTEMA APPROVATE e PROMOSSE** (Matteo 19/07): EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» → spostate in CAROSELLI/SISTEMA/, coda spuntata (status promosso), PDF LinkedIn generati, QC 18 cartelle 0 falle, griglia IG rigenerata, aggiunte a _SOCIAL_QUEUE (Meta ora 11 post, fino ven 21/08).
 - [ ] **Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).
 - [✓] **Regola codificata (richiesta Matteo 19/07)**: a ogni inizio sessione, SEMPRE 2 righe su cosa hanno fatto gli agenti notturni → CLAUDE.md protocollo punto 4 + memoria `feedback_2righe_notturne`.
 - [◐] **Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).

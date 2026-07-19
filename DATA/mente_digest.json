@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-19T04:32:56.136664",
+  "scanned_at": "2026-07-19T13:30:13.228586",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 917,
+  "total_files": 921,
   "files_read": 13,
-  "files_skipped": 904,
+  "files_skipped": 908,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.0,
+      "size_kb": 0.1,
       "readable": false,
       "extracts": {}
     },
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 111.6,
+      "size_kb": 111.4,
       "readable": false,
       "extracts": {}
     },
@@ -162,14 +162,56 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 27.8,
+      "size_kb": 28.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 27.8,
+      "size_kb": 28.1,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\31\\b8aabfab5ed46001258fb3c76d7f924e631e67",
+      "type": "unknown",
+      "size_kb": 0.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\70\\d4ca296b6e259213d629314907a32c0dc9dd4d",
+      "type": "unknown",
+      "size_kb": 1.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\bd\\301a4cfc8c3e0e9088b895b96b4353c742b072",
+      "type": "unknown",
+      "size_kb": 0.7,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\df\\7fed8206e1349660ad999a4f8c78c0aa00abc3",
+      "type": "unknown",
+      "size_kb": 0.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\e2\\b09d8711cd76692d9407fe1607246b4a87f8ed",
+      "type": "unknown",
+      "size_kb": 4.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\ea\\ebed0d893e761b4185cfeb9eaae15175e8ab61",
+      "type": "unknown",
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
@@ -2204,13 +2246,6 @@
       "extracts": {}
     },
     {
-      "path": "FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md",
-      "type": "md",
-      "size_kb": 30.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
       "path": "GENESIS\\_INDEX_GENESIS.md",
       "type": "md",
       "size_kb": 0.5,
@@ -2780,13 +2815,6 @@
       "path": "KNOWLEDGE\\PROMPTS\\istruzioni_ia.md",
       "type": "md",
       "size_kb": 34.4,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": "KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md",
-      "type": "md",
-      "size_kb": 34.3,
       "readable": false,
       "extracts": {}
     },
