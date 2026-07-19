@@ -1,4 +1,4 @@
-# chiavetta_ingest.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.0 | 2026-06-12
+# chiavetta_ingest.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.1 | 2026-07-19
 # Rende ATTIVI i documenti utili della chiavetta/Desktop: li estrae in testo, li mappa
 # per dominio e li scrive in MENTE/<dominio>/da_chiavetta/ -> il RAG li indicizza.
 # Cosi la conoscenza ferma su disco (Vita Natura/EVA, MIMS, ASSOLUTO, MIA MENTE) entra
@@ -35,6 +35,9 @@ EXCLUDE_PATH = re.compile(r"node_modules|[\\/]dist[\\/]|[\\/]\.git[\\/]|[\\/]bui
                           r"site-packages|__pycache__|[\\/]\.next[\\/]|[\\/]\.cache", re.IGNORECASE)
 # nomi-spazzatura: file con nome hash (cache/export di tool), non conoscenza
 JUNK_NAME = re.compile(r"^[0-9a-f]{8,}$|^\d{4,}$", re.IGNORECASE)
+# duplicati di Windows/Explorer ("... - Copia", "... - Copy", con eventuale " (2)"):
+# stessa conoscenza dell'originale -> generano note _copia che rubano slot RRF nel RAG
+COPY_NAME = re.compile(r"-\s*cop(ia|y)(\s*\(\d+\))?$", re.IGNORECASE)
 # file di progetto-codice (config/lock/manifest): non conoscenza, inquinano il RAG
 JUNK_STEM = {"package", "package-lock", "package_lock", "tsconfig", "jsconfig",
              "settings_local", "settings.local", "launch", "readme", "eslintrc",
@@ -114,6 +117,8 @@ def main() -> int:
             continue
         if JUNK_NAME.match(p.stem) or p.stem.lower() in JUNK_STEM:
             continue                       # nome-hash o file di progetto-codice
+        if COPY_NAME.search(p.stem):
+            continue                       # duplicato Windows "- Copia"/"- Copy" (stessa conoscenza dell'originale)
         if SECRET.search(str(p)):
             skipped_secret += 1
             continue
