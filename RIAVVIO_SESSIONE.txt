@@ -1,49 +1,36 @@
-=== RIAVVIO SESSIONE #66 — generato 17/07/2026 (fine #65, skill salva) ===
-Ultima sessione: #65 (17/07, Opus 4.8 — POSTIZ VIVO, bloccato su timbro LinkedIn)
+=== RIAVVIO SESSIONE #67 — generato 19/07/2026 (fine #66, skill salva) ===
+Ultima sessione: #66 (19/07, Opus 4.8 — LANCIO SOCIAL: identità + scaletta programmata)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il collo n°1 (pubblicazione LinkedIn automatica) è MONTATO e funzionante lato nostro.
-Postiz gira (Docker, 8 container, UI localhost:4007), admin creato, app LinkedIn
-creata+verificata, credenziali nel compose, errore redirect RISOLTO. Resta UN SOLO
-muro, ed è di LinkedIn: per pubblicare su una PAGINA servono gli scope "organization"
-che li dà la Community Management API — richiesta e IN ATTESA di concessione LinkedIn.
-Quando LinkedIn concede, si finisce in 1 click. Config nostra verificata corretta.
+Il collo n°1 (PUBBLICAZIONE) è partito. microindustry ha logo + banner + profili
+brandizzati; IG @microindustry.ms è Business. Strategia SPLIT decisa: LinkedIn
+apre best-first (V32, manuale), Meta (FB+IG) fa il preambolo in ordine 2/sett.
+8 post Meta + 10 post Nina sono già impacchettati e pronti da programmare in
+_SOCIAL_QUEUE / _SOCIAL_QUEUE_NINA (JPG rinominate 01-10, descrizione + primo
+commento + data per ognuno). Account Nina preparato (foto dal volto PRE_03, bio, coda).
 
-Lo stack Postiz è STOPPATO per la notte (libera RAM per le notturne GPU — prima notte
-con Docker). Domani riparte con `docker compose start` (~1 min, immagini in cache).
+━━━ PRIMO STEP #67 (Matteo, in ordine) ━━━
+1. Profilo IG microindustry: foto = POSTER/BRAND/logo_microindustry.png, nome/bio/
+   categoria da POSTER/BRAND/IG_PROFILO.md. Banner LinkedIn = banner_linkedin.png.
+2. Creare account IG Nina (@ilmondodinina): foto = POSTER/BRAND/nina/nina_profilo.jpg,
+   kit in POSTER/BRAND/nina/NINA_IG_PROFILO.md.
+3. Programmare i post (Business Suite da PC, serve Pagina FB collegata; o app IG):
+   Meta oggi 10:30 PRE_SG_01 poi mar/ven; Nina mer/dom 21:00. Cartelle in _SOCIAL_QUEUE*.
+4. Lun 20/07 10:00: caricare V32 (EP_SG_02_01) su LinkedIn a mano — PDF già pronto.
 
-━━━ PRIMO STEP #66 (in ordine) ━━━
-1. App LinkedIn (developer.linkedin.com, app "microindustry-postiz" id 247572507) →
-   scheda **Auth** → in fondo "OAuth 2.0 scopes":
-   - Se compaiono w_organization_social + r_organization_social + rw_organization_admin
-     → LinkedIn HA CONCESSO → procedi
-   - Se ancora assenti / "in review" → aspetta ancora (timbro LinkedIn, non nostro)
-2. `cd C:\Users\teo\tools\postiz-docker-compose && docker compose start`
-3. Apri http://localhost:4007 → login admin (benenatimatteo.mb@gmail.com)
-4. Aggiungi canale → **"LinkedIn Page"** (NON "LinkedIn" liscio) → Autorizza → Pagina microindustry
-5. TEST: carica le slides/ di EP_SG_02_01 → Postiz fa il PDF documento → pubblica/programma
-6. Poi: postiz-agent CLI → comando EP_ID → LinkedIn (automazione dai CAROSELLI/)
+━━━ FATTO IN #66 ━━━
+- Identità microindustry: logo M oro + spark ciano, banner «COSTRUIRE, MODULO A MODULO», kit IG (POSTER/BRAND/)
+- Strategia SPLIT (LinkedIn best-first / Meta preambolo in ordine) + cadenza (Meta mar+ven 10, Nina mer+dom 21)
+- Scaletta 8 post Meta + 10 Nina programmata, JPG rinominate 01-10, caption ottimizzate (hook+domanda+hashtag primo commento), tutte canon-clean
+- Account Nina preparato (volto PRE_03 -> foto profilo pulita, bio buonanotte, coda 10)
+- Analisi post LinkedIn: 2° dato (0 engagement, targeting perfetto) -> conferma leva=hook+chiusura
+- Notturno autonomo: controllo ecosistema (EP gen viva, QC ok), coda Nina estesa auto-promuovendo EP_N2_04/05/06
 
-Stato completo + credenziali + diagnosi: _VAULT/ACCOUNTS/postiz.md (gitignored)
+━━━ DA APPROVARE / APERTI ━━━
+- 3 bozze SISTEMA canon-clean da promuovere DI GIORNO: EP_SG_02_02 MIMS · 02_03 VULCAN · 02_04 GENESIS (estendono Meta ago)
+- Bug: EP_N2_07 «Il Sussurratore» = QC errore (corsia Nina notturna)
+- LinkedIn Community Management API: ancora in review (mail attesa) -> poi Postiz automatizza
+- Meta app (~1h) per automatizzare IG/FB
+- Blockers hardware: UPS, mandrino ER20, martinetto Vevor
 
-━━━ FATTO IN #65 ━━━
-- Postiz montato e VIVO: Docker Desktop 4.82, 8 container sani, UI localhost:4007
-- Admin Postiz creato (login personale locale)
-- App LinkedIn "microindustry-postiz" creata + VERIFICATA (Pagina microindustry 136056455)
-- Client ID 7860p2mzggbiky + secret nel docker-compose.yaml (env confermato nel container)
-- Prodotti concessi: Sign In OIDC + Share on LinkedIn
-- Errore "redirect_uri does not match" RISOLTO (2 redirect accettati da LinkedIn)
-- Diagnosi del blocco chiusa: serve Community Management API (scope organization) — in attesa LinkedIn
-- Stack stoppato per la notte
-
-━━━ IN SOSPESO (non sul percorso Postiz) ━━━
-- Muro Google: Gmail brand microindustry bloccata ("telefono usato troppe volte") →
-  NON serve per LinkedIn/Postiz; riprovare tra 24-48h o altro numero
-- 2FA GitHub: authenticator app + SALVARE i recovery codes in _VAULT
-
-━━━ BLOCKERS APERTI (gated) ━━━
-- ⏳ LinkedIn: approvazione Community Management API (sblocca la pubblicazione sulla Pagina)
-- Advertising API (backup, revisione più lenta) · App Meta (~1h)
-- UPS + mandrino ER20 + martinetto Vevor · Pin 5 repo GitHub · chiave Semantic Scholar
-
-━━━ Generato: 17/07/2026 — fine sessione #65 (skill salva) ━━━
+━━━ Generato: 19/07/2026 — fine sessione #66 (skill salva) ━━━

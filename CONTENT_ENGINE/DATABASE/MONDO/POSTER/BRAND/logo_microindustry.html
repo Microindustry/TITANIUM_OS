@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- logo_microindustry.html | TITANIUM_OS / BRAND | v1.0 | 2026-07-19
+     Logo profilo ecosistema (microindustry) — canale LinkedIn Page + IG @microindustry.ms.
+     Square 1080x1080, sicuro nel cerchio. Token dal mondo (BIBBIA_VISIVA_CAROSELLI).
+     Render: chrome --headless --window-size=1080,1080 --screenshot -->
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>microindustry — logo</title>
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { background:#05070d; }
+  .badge { position:relative; width:1080px; height:1080px; overflow:hidden;
+    background: radial-gradient(120% 90% at 50% 42%, #1a2440 0%, #0c1122 48%, #05070d 100%); }
+  .grid { position:absolute; inset:0; opacity:0.045;
+    background-image: linear-gradient(#5fc7f3 1px, transparent 1px), linear-gradient(90deg,#5fc7f3 1px, transparent 1px);
+    background-size:54px 54px; }
+</style>
+</head>
+<body>
+<div class="badge">
+  <div class="grid"></div>
+  <svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="glowMark" cx="50%" cy="44%" r="42%">
+        <stop offset="0%" stop-color="#f4b65a" stop-opacity="0.20"/>
+        <stop offset="55%" stop-color="#5fc7f3" stop-opacity="0.07"/>
+        <stop offset="100%" stop-color="#5fc7f3" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#5fc7f3" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#5fc7f3" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- alone luminoso dietro il marchio -->
+    <rect width="1080" height="1080" fill="url(#glowMark)"/>
+
+    <!-- anello-sigillo (badge), sicuro nel ritaglio tondo -->
+    <circle cx="540" cy="540" r="474" stroke="#8595b4" stroke-opacity="0.28" stroke-width="2"/>
+    <circle cx="540" cy="540" r="462" stroke="#5fc7f3" stroke-opacity="0.10" stroke-width="1"/>
+    <!-- bead-⟡ oro al vertice del sigillo (il filo che avanza) -->
+    <path d="M540 54 l11 12 -11 12 -11 -12 z" fill="#f4b65a"/>
+
+    <!-- ===== MONOGRAMMA M — colonne oro + giuntura/nodo ciano ===== -->
+    <!-- colonne (materia / industria) -->
+    <path d="M400 330 V610" stroke="#f4b65a" stroke-width="34" stroke-linecap="round"/>
+    <path d="M680 330 V610" stroke="#f4b65a" stroke-width="34" stroke-linecap="round"/>
+    <!-- diagonali interne verso la giuntura (tutte oro) -->
+    <path d="M400 336 L540 520" stroke="#f4b65a" stroke-width="26" stroke-linecap="round"/>
+    <path d="M680 336 L540 520" stroke="#f4b65a" stroke-width="26" stroke-linecap="round"/>
+
+    <!-- bulloni sommità colonne -->
+    <circle cx="400" cy="330" r="9" fill="#f4b65a"/>
+    <circle cx="680" cy="330" r="9" fill="#f4b65a"/>
+    <!-- piedi colonne -->
+    <circle cx="400" cy="610" r="7" fill="#8595b4"/>
+    <circle cx="680" cy="610" r="7" fill="#8595b4"/>
+    <path d="M360 632 H720" stroke="#8595b4" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- NODO GIUNTURA (un solo spark ciano dentro la M oro) -->
+    <circle cx="540" cy="520" r="44" fill="url(#nodeGlow)" opacity="0.5"/>
+    <circle cx="540" cy="520" r="42" stroke="#f4b65a" stroke-opacity="0.7" stroke-width="2"/>
+    <circle cx="540" cy="520" r="18" fill="#f4b65a"/>
+    <circle cx="540" cy="520" r="8" fill="#5fc7f3"/>
+    <!-- raggi oro dal nodo -->
+    <path d="M540 456 v-18 M540 584 v18 M476 520 h-18 M604 520 h18" stroke="#f4b65a" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
+
+    <!-- ===== WORDMARK ===== -->
+    <text x="540" y="756" text-anchor="middle"
+          font-family="'space-mono','DejaVu Sans Mono',Consolas,monospace"
+          font-size="60" letter-spacing="6" fill="#e7edf9" font-weight="700">microindustry</text>
+
+    <!-- filo oro + ⟡ bead sotto il wordmark -->
+    <path d="M392 812 H520" stroke="#f4b65a" stroke-width="2" stroke-opacity="0.85"/>
+    <path d="M560 812 H688" stroke="#f4b65a" stroke-width="2" stroke-opacity="0.85"/>
+    <path d="M540 800 l11 12 -11 12 -11 -12 z" fill="#f4b65a"/>
+  </svg>
+</div>
+</body>
+</html>

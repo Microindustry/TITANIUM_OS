@@ -1,27 +1,29 @@
 ====================================================
  STATO TITANIUM_OS — file fisico (auto-aggiornato)
- Thursday 16 July 2026, 04:07
+ Friday 17 July 2026, 04:08
 ====================================================
 
 >>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
 
 — Task notturni —
-  ✓ TI_StoryAgent      OK   (ultima: 16/07 02:07)
-  ✓ TI_NightResearch   OK   (ultima: 16/07 03:37)
-  ✓ TI_NightAudit      OK   (ultima: 16/07 03:52)
-  ✓ TI_NightPush       OK   (ultima: 16/07 04:07)
-  ✓ TI_DailyBrief      OK   (ultima: 15/07 07:30)
-  ✓ TI_Watchdog        OK   (ultima: 16/07 03:38)
+  ✓ TI_StoryAgent      OK   (ultima: 17/07 02:07)
+  ✓ TI_NightResearch   OK   (ultima: 17/07 03:37)
+  ✓ TI_NightAudit      OK   (ultima: 17/07 03:52)
+  ✓ TI_NightPush       OK   (ultima: 17/07 04:07)
+  ✓ TI_DailyBrief      OK   (ultima: 16/07 07:30)
+  ✓ TI_Watchdog        OK   (ultima: 17/07 03:37)
 
 — Servizi —
   · API Server (5001): attivo
   · MENTE Watcher: attivo
 
 — ⚠ GUASTI dai log (ultime 36h) —
-  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice 267014)   (ultima
+  ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ night_push.log: ⚠ TI_Watchdog        FALLITO (codice
 
 — note (rumore atteso, non urgente) —
-  · night_research.log: 2026-07-16 03:45:17 [rag_engine          ] INFO     Totale: 19814 chunk | +add:1 mod:5 ski
+  · night_research.log: 2026-07-17 03:40:08 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.
+  · night_research.log: 2026-07-17 03:40:25 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  
+  · night_research.log: "linkgraph_notes": 429,
 
 Questo file si riscrive da solo (catena notturna + watchdog).
 Se vedi ⚠, apri DATA/logs/ del task indicato.

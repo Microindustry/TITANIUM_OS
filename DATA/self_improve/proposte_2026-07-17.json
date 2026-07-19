@@ -1,0 +1,294 @@
+{
+  "data": "2026-07-17",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Ordine UPS fisico + log_issue formale per rischio HNSW",
+      "cosa": "Aprire un log_issue ufficiale nel vault per il rischio corruzione HNSW e bloccare qualsiasi operazione RAG-write fino a conferma UPS ordinato. Aggiungere checklist in DOCS/SISTEMA_RISCHI.md con: modello UPS consigliato (50-80€, APC BE600M2 o equivalente), link acquisto, data ordine attesa.",
+      "perche": "Segnale audit SISTEMA sev=alta (ricorrente 3 volte in 2 giorni): 'rischio corruzione HNSW da power-loss ancora aperto, UPS non ordinato'. Una notte ha già bruciato 944 chunk (skip:429 -del:944). Ogni boot senza UPS è un lancio di dadi sul RAG.",
+      "come": [
+        "1. Creare `log_issues/ISSUE_UPS_HNSW.md` con: data apertura, sev=alta, causa, impatto misurato (944 chunk persi), cura (UPS), owner=Matteo, status=OPEN",
+        "2. Aggiungere voce in DOCS/SISTEMA_RISCHI.md con modello UPS specifico e link Amazon/Unieuro",
+        "3. Aggiungere WARNING nel README del RAG: 'ATTENZIONE: indicizzazione sconsigliata senza UPS attivo'",
+        "4. (Matteo) Ordinare UPS fisicamente — azione fuori sistema, ma è il vero fix"
+      ],
+      "rischio": "Nessun rischio tecnico. Il log_issue è documentazione pura. Il rischio reale è NON farlo.",
+      "autonomia": "sicuro",
+      "fonte": "segnale interno: critiche_audit_aperte SISTEMA sev=alta + V32 sev=media"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Diagnosi e restart organi vitali spenti (nina-loop, snapshot RAG, AI news watcher, riflusso FATTI)",
+      "cosa": "Ispezionare i log di ciascuno dei 4 organi con health=0.0/0.1, identificare la causa (crash silenzioso? dipendenza mancante? variabile d'ambiente scaduta?), proporre patch minimale per ognuno e documentare in DOCS/ORGANI_VITALI.md.",
+      "perche": "Segnale audit SISTEMA sev=alta (doppio): 'nina-loop, snapshot RAG, AI news watcher a 0.0, riflusso FATTI a 0.1'. Con 4 organi su 7 fermi, il sistema produce episodi senza qualità, il RAG non si aggiorna, le news non entrano. È un degrado silenzioso che si consolida.",
+      "come": [
+        "1. Per ogni organo: `docker logs <container> --tail 100` o leggere log file dedicato",
+        "2. Cercare pattern: OOM, timeout, 429, variabile mancante, file lock",
+        "3. Aprire un log_issue per organo con causa trovata",
+        "4. Proporre (NON eseguire) restart condizionato solo se causa è chiara e reversibile",
+        "5. Aggiornare DOCS/ORGANI_VITALI.md con soglia di allerta: se health<0.3 per >1 ciclo → alert Matteo"
+      ],
+      "rischio": "Diagnostica read-only: zero rischio. Restart va approvato da Matteo caso per caso.",
+      "autonomia": "sicuro",
+      "fonte": "segnale interno: critiche_audit_aperte SISTEMA sev=alta x2 — health 0.0 su nina-loop, snapshot RAG, AI news watcher, riflusso FATTI 0.1"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-17",
+    "milestone": "Sessione #65 (17/07): POSTIZ VIVO. Docker Desktop su, 8 container sani, UI localhost:4007, admin creato. App LinkedIn microindustry-postiz creata+verificata (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose. Prodotti Sign-In OIDC + Share on LinkedIn concessi. Errore redire",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Su 56 episodi controllati, 30 mancano dell'open-loop (qc_episodi: open_loop_missing=30, ovvero il 54%). L'open-loop è il gancio che trascina il lettore all'episodio successivo: con Postiz quasi operativo e EP_SG_02_01 pronto per il test Lin"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il rischio di corruzione HNSW da power-loss è ancora aperto e dichiarato ricorrente (3 volte in 2 giorni nei blockers). Nessun log_issue lo registra stanotte, ma l'UPS da 50-80€ non è stato ordinato. Ogni boot senza UPS è un tentativo: con "
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La decisione MIMS Via B (connettori VULCAN, presa il 24/06) non ha ancora prodotto né il ricalcolo BEP sul tooling né la bozza B2 aggiornata, e il prerequisito fisico (martinetto Vevor) è fermo. Il pillar MIMS è al 30%: con V32 al 65% e GEN"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna è cieca su Semantic Scholar: due query distinte falliscono con 429 e restituiscono zero risultati. Log 2026-07-17: \"2026-07-17 03:38:52 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/se"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali registrano health=0.0 (nina-loop, snapshot RAG, AI news watcher) e uno è a 0.1 (riflusso FATTI). Non ci sono log_issues che spieghino le cause stanotte, ma quattro organi su sette non hanno girato: se il pattern si consoli"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Due file _copia sono ancora nell'indice e rubano slot RRF nelle query. Log vault MENTE 2026-07-17: \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)\" e \"KNOWLED"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna su Semantic Scholar è bloccata da 429 senza fallback efficace: \"2026-07-16 03:39:46 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machi"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "L'ATTACCO #2 è stato impostato e i 4 report dominio prodotti (commit 037c4302), ma il piano è 'propose-only, zero applicato'. La bussola_open elenca ONDATA C (finetune VERO con checkpoint+dataset 272 episodi) come task autonomo senza Matteo"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali sono completamente spenti (score 0.0): 'nina-loop', 'snapshot RAG', 'AI news watcher'. Il 'riflusso FATTI' è quasi morto (0.1). Non si tratta di degrado: sono fermi. Senza nina-loop e riflusso FATTI, gli episodi generati s"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Il canone vault dichiara EP_N2_53 come episodio massimo ma su disco esiste EP_N2_56: \"su disco EP_N2_56, il canone dichiara EP_N2_53: aggiornare _CANONE.md\" (2026-07-16). Tre episodi esistono fuori canone. Con 4 canon_violations totali e lo"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Su 56 episodi verificati, 30 hanno open_loop_missing (qc_episodi: checked 56, open_loop_missing 30) — oltre il 53% del catalogo manca del gancio narrativo di chiusura. Questo non è un dato nuovo ma il volume è cresciuto: con CAP 2 L'ORGANIS"
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il blocker UPS è censito come 'cura alla radice' alla corruzione HNSW ricorrente (3 volte in 2 giorni), ma rimane hardware non ordinato. Nel frattempo il RAG ha perso 944 chunk in una notte sola (\"skip:429 -del:944\" da \"2026-07-16 03:45:17 "
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 276,
+      "rag_chunks": 19956,
+      "n_commits_7d": 97
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**RIPRESA #66 (1 click quando LinkedIn concede)**: app LinkedIn → Auth → \"OAuth 2.0 scopes\":",
+      "**Backup**: Advertising API richiesta anch'essa (dà gli stessi scope ma con revisione più lenta).",
+      "**postiz-agent CLI** (github.com/gitroomhq/postiz-agent) → dopo la connessione, collega a Claude per pubblicare dai `CAROSELLI/`.",
+      "**Postiz montato FINO AL BORDO** (piano completo: `DOCS/POSTIZ_SETUP.md`):",
+      "**Prerequisiti Matteo (in corso stanotte)**:",
+      "**App LinkedIn Developer**: creare su developer.linkedin.com (Pagina microindustry) →",
+      "**RIPRESA POST-RIAVVIO (primo step #65)**: apri **Docker Desktop** → icona verde →",
+      "**Muro Google (NON sul percorso Postiz)**: verifica Gmail brand microindustry bloccata da",
+      "**Sicurezza**: 2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in `_VAULT`)",
+      "**LEVA VERA = engagement, non formato**: il collo è slide-1 (hook) + slide-10",
+      "**Prossimo**: pubblicare EP_SG_02_01 «V32» (già in vetrina, promosso #62) come 2º test",
+      "**Test formato PDF vs immagini**: PRE_SG_01 era caricato a IMMAGINI (271 impr @ mezzanotte).",
+      "**#64 MONTARE POSTIZ** — piano completo in `DOCS/POSTIZ_SETUP.md`. Apre il **collo n°1",
+      "**Sicurezza**: mail brand microindustry con **pass unica + 2FA + `_VAULT`** (Enea.2024 riusata =",
+      "3. ONDATA B (in corso #62 16/07):"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meet Blume: An Open-Source, Zero-Config Documentation Framework That Ships AI-Ready Docs From a Markdown Folder",
+        "url": "https://www.marktechpost.com/2026/07/14/meet-blume-an-open-source-zero-config-documentation-framework-that-ships-ai-ready-docs-from-a-markdown-folder/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "OpenCoreDev Releases Domain SDK 0.2.0: One TypeScript API to Add, Verify, and Remove Customer Domains Across Five Platforms",
+        "url": "https://www.marktechpost.com/2026/07/14/opencoredev-releases-domain-sdk-0-2-0-one-typescript-api-to-add-verify-and-remove-customer-domains-across-five-platforms/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Mistral Vibe for Code vs Claude Code vs Cursor vs Codex: Four Agents Scored on One Scaffold-to-PR Task",
+        "url": "https://www.marktechpost.com/2026/07/14/mistral-vibe-for-code-vs-claude-code-vs-cursor-vs-codex-four-agents-scored-on-one-scaffold-to-pr-task/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "PrismML Releases Bonsai 27B: 1-bit and Ternary Builds of Qwen3.6-27B That Run on Laptops and Phones",
+        "url": "https://www.marktechpost.com/2026/07/14/prismml-releases-bonsai-27b-1-bit-and-ternary-builds-of-qwen3-6-27b-that-run-on-laptops-and-phones/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Google Releases LiteRT.js: A JavaScript Binding of LiteRT That Runs .tflite Models in Browsers via WebGPU",
+        "url": "https://www.marktechpost.com/2026/07/15/google-releases-litert-js-a-javascript-binding-of-litert-that-runs-tflite-models-in-browsers-via-webgpu/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Building a Gin Config Controlled PyTorch Pipeline with Configurable MLP Variants, Cosine Scheduling, and Runtime Parameter Overrides",
+        "url": "https://www.marktechpost.com/2026/07/15/building-a-gin-config-controlled-pytorch-pipeline-with-configurable-mlp-variants-cosine-scheduling-and-runtime-parameter-overrides/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Soofi Consortium Releases Soofi S 30B-A3B: An Open Hybrid Mamba-Transformer MoE Foundation Model For German And English",
+        "url": "https://www.marktechpost.com/2026/07/15/soofi-consortium-releases-soofi-s-30b-a3b-an-open-hybrid-mamba-transformer-moe-foundation-model-for-german-and-english/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Thinking Machines Lab Releases Inkling: A 975B-Parameter Open-Weights Multimodal MoE With 41B Active Parameters And Controllable Thinking Effort",
+        "url": "https://www.marktechpost.com/2026/07/15/thinking-machines-lab-releases-inkling-a-975b-parameter-open-weights-multimodal-moe-with-41b-active-parameters-and-controllable-thinking-effort/"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Introducing Real World VoiceEQ: Measuring the human quality of voice AI",
+        "url": "https://huggingface.co/blog/real-world-voiceeq"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Welcome Inkling by Thinking Machines",
+        "url": "https://huggingface.co/blog/thinkingmachines-inkling"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Model Routing Is Simple. Until It Isn’t.",
+        "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "What building Shippy taught us about building agents",
+        "url": "https://huggingface.co/blog/allenai/shippy-tech-blog"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Getting started with ChatGPT",
+        "url": "https://openai.com/academy/getting-started"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How data science teams use ChatGPT Work",
+        "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How sales teams use ChatGPT Work",
+        "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How to manage AI investments in the agentic era",
+        "url": "https://openai.com/index/managing-ai-investments-in-agentic-era"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "GPT-Red: Unlocking Self-Improvement for Robustness",
+        "url": "https://openai.com/index/unlocking-self-improvement-gpt-red"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "The US is advancing AI safety through state and federal action",
+        "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Risparmiare token per Fable5 convertendo il testo in immagine é un approccio che funziona però",
+        "url": "https://www.youtube.com/shorts/bR9g_Q7kJog"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Il nuovo sistema RAG che non legge mail il testo, si chiama PixelRAG e batte tutte le pipeline text",
+        "url": "https://www.youtube.com/shorts/Ts9bwHWIh3U"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "I cinesi prendono in considerazione di limitare l’accesso ai loro modelli dall’estero.",
+        "url": "https://www.youtube.com/shorts/gLKvkGZdehA"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Build A Custom Browser Extension [SUPER Easy!]",
+        "url": "https://www.youtube.com/shorts/BDWdp_fIOHk"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Try This Awesome AI Video Transition!",
+        "url": "https://www.youtube.com/shorts/KzJkS00Ztd8"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Complete Guide to ChatGPT 5.6 + Prompting Guide",
+        "url": "https://www.youtube.com/watch?v=MDy_b9F7oUc"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The most controversial rewrite in history just shipped...",
+        "url": "https://www.youtube.com/watch?v=CXSvKcLovAk"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Codex usage up >10x in 6 months to 7M users, +1M in the past ~day; did Codex overtake Claude Code??",
+        "url": "https://www.latent.space/p/ainews-codex-usage-up-10x-in-6-months"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "5 Trends That Defined AI Engineering at World’s Fair 2026",
+        "url": "https://www.latent.space/p/aiewf26trends"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-c72"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "datasette 1.0a37",
+        "url": "https://simonwillison.net/2026/Jul/14/datasette/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Quoting Armin Ronacher",
+        "url": "https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}

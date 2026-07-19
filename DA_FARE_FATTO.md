@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 65  17/07/2026  POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)](#sessione-65-17072026-postiz-vivo-bloccato-su-approvazione-linkedin-community-management-api)
   - [Sessione 64  17/07/2026  MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)](#sessione-64-17072026-montaggio-postiz-in-corso-ripresa-post-riavvio)
   - [Sessione 63  16/07/2026  RISULTATI TEST LINKEDIN PRE_SG_01 (prima consegna  primo dato)](#sessione-63-16072026-risultati-test-linkedin-presg01-prima-consegna-primo-dato)
   - [Sessione 60  15/07/2026  PRE_04 chiude il preambolo  tabellone caroselli PULITO 14/14](#sessione-60-15072026-pre04-chiude-il-preambolo-tabellone-caroselli-pulito-1414)
@@ -89,6 +90,32 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata
+
+**Il collo n°1 (PUBBLICAZIONE) parte davvero: profili brandizzati + 8 post in coda.**
+
+Ripresa: power-loss durante la notte → verificato che le notturne hanno girato (audit 00:23, RAG 19.952 chunk, HNSW salvo). Boot con 9 finestre = transitorio, già rientrato (1 sola registrazione autostart). LinkedIn Community Management API: **ancora in review** (Products), si aspetta la mail.
+
+- [✓] **Identità visiva microindustry** in `CONTENT_ENGINE/DATABASE/MONDO/POSTER/BRAND/` (sorgenti .html rigenerabili via chrome headless):
+  - `logo_microindustry.png` 1080×1080 — monogramma **M oro** + spark ciano nel nodo-giuntura, wordmark Space Mono, sicuro nel cerchio. Foto profilo LinkedIn Page + IG.
+  - `banner_linkedin.png` 1128×191 @2× — kicker **«COSTRUIRE, MODULO A MODULO»** (MIMS, tono non-finito); angolo basso-sx libero per il logo tondo.
+  - `IG_PROFILO.md` — kit profilo IG (nome, bio chiara, categoria, link).
+- [✓] **Canali confermati**: IG **@microindustry.ms** (passato a Business), Pagina LinkedIn microindustry (136056455).
+- [✓] **Strategia SPLIT decisa**: LinkedIn = best-first (V32 manuale lun 20/07); Meta (FB+IG) = preambolo in ordine, 2/sett (mar+ven 10:00), lancio dom 19/07 10:30.
+- [✓] **Scaletta 8 post + coda pronta** in `POSTER/_SOCIAL_QUEUE/` (JPG rinominate `slide_01..10` = ordine carosello corretto; ogni cartella con descrizione+primo_commento+_INFO): PRE_SG_01→04 (19-21-24-28/07) + EP_SG_01_01/02/03 (31/07-04-07/08) + EP_SG_02_01 V32 (11/08).
+- [✓] **Regola caption** (leva dal baseline: engagement thin): hook riga1 + **domanda in chiusura** + hashtag nel **primo commento** + posizione Milano. Tutte passate `canon_guard.scan_public` (0 numeri vietati).
+- [✓] Fix refuso EP_SG_01_02 ("Episodio 1"→"Episodio 2") nella descrizione di coda.
+- [✓] **Account IG NINA preparato** (separato, mondo buonanotte): foto profilo dal volto PRE_03 (`BRAND/nina/nina_profilo.jpg`), kit `NINA_IG_PROFILO.md` (handle @ilmondodinina, bio, Education), coda 7 post `POSTER/_SOCIAL_QUEUE_NINA/` (PRE_01→04 + EP_N2_01→03), ritmo mer+dom 21:00 (buonanotte), save-trigger «leggilo stasera ad alta voce». Tutte canon-clean.
+**— LAVORO NOTTURNO AUTONOMO (mandato Matteo «buon lavoro») —**
+- [✓] **Controllo gestione ecosistema**: generazione EP VIVA (bozze notturne EP_SG_02_02/03/04 + EP_N2_04/05/06), QC funziona (15 promossi 0 issue; EP_SG_02_04 verde, EP_N2_07 errore). Domanda→risposta: collo n°1 (pubblicazione) sbloccato → nuovo collo = **promozione delle bozze verdi**.
+- [✓] **Coda Nina estesa a 10** (EP_N2_04/05/06 auto-promosse — Nina auto-promuove, canon-clean, 10 slide) → `_SOCIAL_QUEUE_NINA/`, ritmo mer+dom fino 23/08.
+- [ ] **DA APPROVARE (SISTEMA, «solo di giorno»)**: le bozze EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» sono complete + canon-clean → una tua occhiata e le promuovo (estendono Meta a ven14/mar18/ven21 agosto). NON promosse da solo: guardrail voce-Matteo rispettato.
+- [ ] **Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).
+- [◐] **Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).
+- [ ] Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole.
 
 ---
 

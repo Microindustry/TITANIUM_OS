@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [TITANIUM_OS  EP_AUTO_067](#titaniumos-epauto067)
+  - [Il Muro Esterno](#il-muro-esterno)
+  - [COLD OPEN](#cold-open)
+  - [ATTO I  OTTO CONTAINER E UNO SCOPE](#atto-i-otto-container-e-uno-scope)
+  - [ATTO II  LA GEOMETRIA DEL BLOCCO](#atto-ii-la-geometria-del-blocco)
+  - [ATTO III  LINVENTARIO](#atto-iii-linventario)
+  - [CHIUSURA](#chiusura)
+  - [reel_hook](#reelhook)
+  - [FATTI (per il RAG)](#fatti-per-il-rag)
+
+<!-- /TOC -->
+
 # TITANIUM_OS — EP_AUTO_067
 ## "Il Muro Esterno"
 *2026-07-19 · commit: auto: night\_audit - cartella clinica 19/07/2026 + auto: inventario notturno + critiche*

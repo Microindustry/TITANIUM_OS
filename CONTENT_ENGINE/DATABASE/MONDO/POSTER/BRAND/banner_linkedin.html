@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- banner_linkedin.html | TITANIUM_OS / BRAND | v1.0 | 2026-07-19
+     Cover Pagina LinkedIn microindustry — 1128x191 (render 2x = 2256x382).
+     Angolo BASSO-SINISTRA lasciato libero: lì la Pagina sovrappone il logo tondo. -->
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>microindustry — banner LinkedIn</title>
+<link rel="stylesheet" href="https://use.typekit.net/zhv2kry.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { background:#05070d; }
+  .cover { position:relative; width:2256px; height:382px; overflow:hidden;
+    background: radial-gradient(90% 160% at 74% 40%, #1a2440 0%, #0c1122 52%, #05070d 100%); }
+  .grid { position:absolute; inset:0; opacity:0.05;
+    background-image: linear-gradient(#5fc7f3 1px, transparent 1px), linear-gradient(90deg,#5fc7f3 1px, transparent 1px);
+    background-size:64px 64px; }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="grid"></div>
+  <svg width="2256" height="382" viewBox="0 0 2256 382" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="haze" cx="72%" cy="42%" r="52%">
+        <stop offset="0%" stop-color="#f4b65a" stop-opacity="0.12"/>
+        <stop offset="60%" stop-color="#5fc7f3" stop-opacity="0.05"/>
+        <stop offset="100%" stop-color="#5fc7f3" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#5fc7f3" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#5fc7f3" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="2256" height="382" fill="url(#haze)"/>
+
+    <!-- FILO ORO (il ponte) attraversa tutta la larghezza, a mezza altezza -->
+    <path d="M0 214 C 520 150, 1050 262, 1560 196 S 2256 176, 2256 176" stroke="#f4b65a" stroke-opacity="0.28" stroke-width="2"/>
+    <path d="M0 246 C 600 300, 1150 190, 1700 250 S 2256 232, 2256 232" stroke="#5fc7f3" stroke-opacity="0.14" stroke-width="2"/>
+
+    <!-- MARCHIO M (compatto) — al centro-sinistra del lockup, ma fuori dall'angolo del logo -->
+    <g transform="translate(1000,191) scale(0.42)">
+      <path d="M0 -150 V150" stroke="#f4b65a" stroke-width="34" stroke-linecap="round"/>
+      <path d="M280 -150 V150" stroke="#f4b65a" stroke-width="34" stroke-linecap="round"/>
+      <path d="M0 -144 L140 40" stroke="#f4b65a" stroke-width="26" stroke-linecap="round"/>
+      <path d="M280 -144 L140 40" stroke="#f4b65a" stroke-width="26" stroke-linecap="round"/>
+      <circle cx="0" cy="-150" r="9" fill="#f4b65a"/>
+      <circle cx="280" cy="-150" r="9" fill="#f4b65a"/>
+      <circle cx="140" cy="40" r="44" fill="url(#spark)" opacity="0.5"/>
+      <circle cx="140" cy="40" r="42" stroke="#f4b65a" stroke-opacity="0.7" stroke-width="2"/>
+      <circle cx="140" cy="40" r="18" fill="#f4b65a"/>
+      <circle cx="140" cy="40" r="8" fill="#5fc7f3"/>
+    </g>
+
+    <!-- divisore verticale oro -->
+    <path d="M1150 116 V266" stroke="#f4b65a" stroke-opacity="0.4" stroke-width="2"/>
+
+    <!-- WORDMARK + kicker -->
+    <text x="1196" y="196" dominant-baseline="middle"
+          font-family="'space-mono','DejaVu Sans Mono',Consolas,monospace"
+          font-size="84" letter-spacing="4" fill="#e7edf9" font-weight="700">microindustry</text>
+    <text x="1200" y="264"
+          font-family="'space-mono','DejaVu Sans Mono',Consolas,monospace"
+          font-size="27" letter-spacing="10" fill="#8595b4">COSTRUIRE, MODULO A MODULO</text>
+    <!-- bead ⟡ oro sul kicker -->
+    <path d="M1176 254 l9 10 -9 10 -9 -10 z" fill="#f4b65a"/>
+  </svg>
+</div>
+</body>
+</html>

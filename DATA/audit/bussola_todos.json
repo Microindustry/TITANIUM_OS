@@ -1,5 +1,83 @@
 [
   {
+    "id": "BUS-13146970",
+    "stato": "fatto",
+    "testo": "**Identità visiva microindustry** in `CONTENT_ENGINE/DATABASE/MONDO/POSTER/BRAND/` (sorgenti .html rigenerabili via chrome headless):",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-6a207694",
+    "stato": "fatto",
+    "testo": "**Canali confermati**: IG **@microindustry.ms** (passato a Business), Pagina LinkedIn microindustry (136056455).",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-7d258a74",
+    "stato": "fatto",
+    "testo": "**Strategia SPLIT decisa**: LinkedIn = best-first (V32 manuale lun 20/07); Meta (FB+IG) = preambolo in ordine, 2/sett (mar+ven 10:00), lancio dom 19/07 10:30.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-c067375e",
+    "stato": "fatto",
+    "testo": "**Scaletta 8 post + coda pronta** in `POSTER/_SOCIAL_QUEUE/` (JPG rinominate `slide_01..10` = ordine carosello corretto; ogni cartella con descrizione+primo_commento+_INFO): PRE_SG_01→04 (19-21-24-28/07) + EP_SG_01_01/02/03 (31/07-04-07/08) + EP_SG_02_01 V32 (11/08).",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-10e4de9a",
+    "stato": "fatto",
+    "testo": "**Regola caption** (leva dal baseline: engagement thin): hook riga1 + **domanda in chiusura** + hashtag nel **primo commento** + posizione Milano. Tutte passate `canon_guard.scan_public` (0 numeri vietati).",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-633b1249",
+    "stato": "fatto",
+    "testo": "Fix refuso EP_SG_01_02 (\"Episodio 1\"→\"Episodio 2\") nella descrizione di coda.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-d06cf9a0",
+    "stato": "fatto",
+    "testo": "**Account IG NINA preparato** (separato, mondo buonanotte): foto profilo dal volto PRE_03 (`BRAND/nina/nina_profilo.jpg`), kit `NINA_IG_PROFILO.md` (handle @ilmondodinina, bio, Education), coda 7 post `POSTER/_SOCIAL_QUEUE_NINA/` (PRE_01→04 + EP_N2_01→03), ritmo mer+dom 21:00 (buonanotte), save-trigger «leggilo stasera ad alta voce». Tutte canon-clean.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-d5a20292",
+    "stato": "fatto",
+    "testo": "**Controllo gestione ecosistema**: generazione EP VIVA (bozze notturne EP_SG_02_02/03/04 + EP_N2_04/05/06), QC funziona (15 promossi 0 issue; EP_SG_02_04 verde, EP_N2_07 errore). Domanda→risposta: collo n°1 (pubblicazione) sbloccato → nuovo collo = **promozione delle bozze verdi**.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-7023610d",
+    "stato": "fatto",
+    "testo": "**Coda Nina estesa a 10** (EP_N2_04/05/06 auto-promosse — Nina auto-promuove, canon-clean, 10 slide) → `_SOCIAL_QUEUE_NINA/`, ritmo mer+dom fino 23/08.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-19bbe2be",
+    "stato": "da_fare",
+    "testo": "**DA APPROVARE (SISTEMA, «solo di giorno»)**: le bozze EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» sono complete + canon-clean → una tua occhiata e le promuovo (estendono Meta a ven14/mar18/ven21 agosto). NON promosse da solo: guardrail voce-Matteo rispettato.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-21cc0f3d",
+    "stato": "da_fare",
+    "testo": "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-703e2494",
+    "stato": "in_corso",
+    "testo": "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
+    "id": "BUS-63b8c08b",
+    "stato": "da_fare",
+    "testo": "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole.",
+    "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
+  },
+  {
     "id": "BUS-1c762f53",
     "stato": "fatto",
     "testo": "**Docker acceso e stack Postiz su**: `docker compose up -d` → 8 container sani",

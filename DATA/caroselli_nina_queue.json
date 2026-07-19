@@ -16,7 +16,8 @@
       "casella": 5,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_05_le_mani_prima_dei_rulli.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_05"
     },
     {
       "id": "EP_N2_06",
@@ -24,7 +25,8 @@
       "casella": 6,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_06_l_officina_che_gira_sola.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_06"
     },
     {
       "id": "EP_N2_07",
@@ -63,6 +65,30 @@
       "title": "La Grande Mappa",
       "casella": 11,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_12",
+      "title": "La Squadra Notturna",
+      "casella": 12,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_12_la_squadra_notturna.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_13",
+      "title": "Il Battito del Guardiano",
+      "casella": 13,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_13_il_battito_del_guardiano.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_14",
+      "title": "Il Direttore",
+      "casella": 14,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
       "status": "pending"
     }
