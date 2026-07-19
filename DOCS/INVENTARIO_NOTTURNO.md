@@ -36,6 +36,15 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-07-19 · 3 commit
+- `66b9ae2d` chore(salva): #66 lancio social — identità microindustry + scaletta Meta/Nina programmata
+- `4db9a221` auto: story_agent - episodi generati 19/07/2026
+- `ec6d3edb` auto: night_audit - cartella clinica 19/07/2026
+
+_episodi: 279 · critiche aperte: 24 (171 risolte) · RAG: 19952 chunk_
+
+
+
 ## 2026-07-17 · 30 commit
 - `87df74a2` auto: night_audit - cartella clinica 17/07/2026
 - `077ea411` chore(salva): #65 Postiz vivo (Docker+admin+app LinkedIn verificata) — bloccato su approvazione LinkedIn Community Management API

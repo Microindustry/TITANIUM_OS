@@ -1,3 +1,22 @@
+<!-- TOC -->
+
+- [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
+  - [IL POLSO  19/07/2026 00:23](#il-polso-19072026-0023)
+  - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
+    - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
+    - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
+    - [GENESIS / Dashboard (2 da fare / 12)](#genesis-dashboard-2-da-fare-12)
+    - [Vita Natura (0 da fare / 3)](#vita-natura-0-da-fare-3)
+    - [Identity (0 da fare / 3)](#identity-0-da-fare-3)
+    - [Sistema (trasversale) (1 da fare / 5)](#sistema-trasversale-1-da-fare-5)
+    - [Audit Trimestrale  Cosa Rimuovere (1 da fare / 5)](#audit-trimestrale-cosa-rimuovere-1-da-fare-5)
+    - [Audit Opus  Dati live (1 da fare / 20)](#audit-opus-dati-live-1-da-fare-20)
+    - [Audit 15/06  Opus (0 da fare / 6)](#audit-1506-opus-0-da-fare-6)
+    - [Attacco Opus  17/06 (6 da fare / 9)](#attacco-opus-1706-6-da-fare-9)
+  - [AUTO-AUDIT  aperte (cartella clinica notturna)](#auto-audit-aperte-cartella-clinica-notturna)
+
+<!-- /TOC -->
+
 # CRITICHE — la cartella clinica di TITANIUM_OS
 
 *Vista FILE delle critiche (la vista dashboard è stata eliminata il 07/07/2026 su*
