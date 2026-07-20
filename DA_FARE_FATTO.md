@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 67  20/07/2026  ECOSISTEMA: loop ObsidianRAG semantico  Docling/Ollama accesi](#sessione-67-20072026-ecosistema-loop-obsidianrag-semantico-doclingollama-accesi)
   - [Sessione 66  19/07/2026  LANCIO SOCIAL: identità microindustry  scaletta Meta programmata](#sessione-66-19072026-lancio-social-identità-microindustry-scaletta-meta-programmata)
   - [Sessione 65  17/07/2026  POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)](#sessione-65-17072026-postiz-vivo-bloccato-su-approvazione-linkedin-community-management-api)
   - [Sessione 64  17/07/2026  MONTAGGIO POSTIZ (in corso, ripresa post-riavvio)](#sessione-64-17072026-montaggio-postiz-in-corso-ripresa-post-riavvio)
@@ -91,6 +92,28 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili
+
+**Il collo n°1 (PUBBLICAZIONE) è VIVO: due profili separati, caroselli in coda, la macchina pubblica da sola.**
+
+- [✓] **Pagina FB "Il Mondo di Nina" creata + collegata a @ilmondodinina.ms** (coppia FB+IG in Business Suite) — superato il labirinto multi-account/permessi Meta. Regola scoperta: gestire tutto come **Matteo Mims (benenatimatteo.mb@gmail.com)**, owner con controllo completo; i profili IG (@microindustry.ms, @ilmondodinina.ms) sono utenti limitati (bloccano le impostazioni).
+- [✓] **18/21 post programmati con date certe** (Business Suite pubblica in automatico, anche durante la vacanza):
+  - ⚙️ Sistema **10/11** (PRE_SG_01→V32 + MIMS + VULCAN, fino 18/08) · mar+ven 10:00
+  - 🌙 Nina **8/10** (PRE_01→EP_N2_04, fino 16/08) · mer+dom
+- [✓] **Slide-ponte cross-profilo**: slide 8 di PRE_04 (→@microindustry.ms) e PRE_SG_04 (→@ilmondodinina.ms) rigenerate col nuovo tool riusabile `CAROSELLI/_render_slide.py` (chrome headless, 1 slide). Ricaricate.
+- [✓] **Riorganizzati i sorgenti caroselli**: EP_N2_04/05/06 da `_BOZZE/` → `NINA/` (erano in coda); `_BOZZE/` = solo vere bozze. Cartelle coda verificate pulite (21× 10 slide+txt).
+- [✓] **Handle corretto @ilmondodinina.ms** ovunque (era senza `.ms`) + bio reciproche nei kit + file copia-incolla `_NINA_/_SISTEMA_COPIA_INCOLLA.md` + doc di controllo `_SCALETTA_INTERSECATA.md` (moduli SEPARATI Nina/Sistema).
+- [ ] **DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:
+  - 🌙 Nina `EP_N2_05` (19/08) + `EP_N2_06` (23/08)
+  - ⚙️ Sistema `EP_SG_02_04` GENESIS (21/08)
+  - → con questi **21/21**. Caption pronte nei file copia-incolla.
+- [ ] **Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).
+- [💡] **Outreach IG**: 10 template DM genuini (in chat) usabili da entrambi i profili — riempire i `[...]` veri, 5-10/giorno mirati (no massa = no blocco account).
+
+**⚠ MATTEO VIA AL MARE 7 GIORNI dal 22/07 sera (~rientro 29/07).** I 18 post programmati escono da soli; i 3 restanti al rientro. Blocker n°1 sempre **UPS**.
 
 ---
 

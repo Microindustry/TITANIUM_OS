@@ -1,37 +1,37 @@
-=== RIAVVIO SESSIONE #68 — generato 20/07/2026 (fine #67, skill salva) ===
-Ultima sessione: #67 (20/07, Opus 4.8 — ECOSISTEMA: loop Obsidian↔RAG + Docling/Ollama)
+=== RIAVVIO SESSIONE #68 — generato 21/07/2026 (fine #67b, skill salva) ===
+Ultima sessione: #67b (20-21/07, Opus 4.8 — LANCIO SOCIAL: 18/21 post su 2 profili)
+
+━━━ ⚠ MATTEO È AL MARE 7 GIORNI (dal 22/07 sera, ~rientro 29/07) ━━━
+I 18 post già programmati ESCONO DA SOLI (Business Suite auto-pubblica). Niente da fare
+durante la vacanza. Al rientro: caricare i 3 post rimasti (promemoria Calendar 30/07 10:00).
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il sapere ora si connette PER SIGNIFICATO: i ## Collegati di Obsidian vivono nello
-spazio semantico del RAG (vault_intersect v3) e rientrano nel linkgraph. Gli input
-migliorano alla fonte: Docling (PDF→Markdown strutturato/OCR, venv isolato) è cablato
-nell'ingest con fallback pdfplumber. Ollama (LLM locale) è acceso e già consumato dalla
-chat RAG. BGE-M3 (il salto embedder) è PRONTO al tuo click: un doppio-click e diventa vivo.
+Il collo n°1 PUBBLICAZIONE è VIVO. Pagina FB "Il Mondo di Nina" creata e collegata a
+@ilmondodinina.ms (coppia FB+IG). 18/21 caroselli programmati con date certe su DUE profili
+SEPARATI: Sistema 10/11 (fino VULCAN 18/08), Nina 8/10 (fino 16/08). Restano 3, bloccati
+solo dal tetto 29 giorni di Meta.
 
-━━━ PRIMO STEP #68 (Matteo, in ordine) ━━━
-1. BGE-M3 (1 CLICK TUO): doppio-click SERVICES/rebuild_rag_bge_m3.ps1 → UAC "sì"
-   (~15-20 min, rebuild GPU esclusivo). Snapshot di sicurezza già scattato.
-   Poi Claude ricalibra la soglia vault_intersect per bge-m3 + rigenera Collegati/linkgraph.
-   Rollback se serve: stesso script con -Revert, oppure rag_engine.py --restore-snapshot.
-2. LightRAG: pilota (DOPO bge-m3) — gate di fattibilità/tempo prima di committare.
-3. COLLO N°1 — SOCIAL #67 (aperto da #66, il vero prossimo passo di business):
-   compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post
-   Meta + 10 Nina già in coda (_SOCIAL_QUEUE*), caricare V32 (EP_SG_02_01) su LinkedIn.
-4. UPS (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).
+━━━ PRIMO STEP #68 (al rientro dal mare, promemoria 30/07) ━━━
+Caricare i 3 post rimasti in Business Suite → 21/21. Caption/slide pronte:
+ 🌙 NINA (profilo Il Mondo di Nina, IG):
+   - EP_N2_05 "Le Mani Prima dei Rulli" → mer 19/08 · _SOCIAL_QUEUE_NINA/09_EP_N2_05/
+   - EP_N2_06 "L'Officina che Gira Sola" → dom 23/08 · 10_EP_N2_06/
+ ⚙️ SISTEMA (profilo Microindustry, FB+IG):
+   - EP_SG_02_04 GENESIS → ven 21/08 · _SOCIAL_QUEUE/11_EP_SG_02_04/
+ Caption pronte: POSTER/_NINA_COPIA_INCOLLA.md e _SISTEMA_COPIA_INCOLLA.md.
+ REGOLA: gestire Meta come owner Matteo Mims (benenatimatteo.mb@gmail.com), NON come i profili IG.
 
-━━━ FATTO IN #67 ━━━
-- vault_intersect v3: Collegati nello spazio semantico del RAG (soglia 0.50 + dedup) — push 77f49f61
-- de-hardcode setup_obsidian (MENTE da env) — push 0f9f027a
-- pulizia 6 duplicati Config_G (tenute s8/s10/s11) — commit MENTE 6caa335
-- Docling acceso (venv isolato) cablato in pdf_to_memory + chiavetta_ingest, fallback pdfplumber — push 49bce54f
-- Ollama leva locale ON (già cablata, verificata su GPU)
-- valutazione 24 repo/librerie (Docling+Ollama fatti, BGE-M3 next, LightRAG pilota)
-- BGE-M3 pronto: SERVICES/rebuild_rag_bge_m3.ps1 verificato + snapshot chroma_db_20260720_192437
+━━━ FATTO IN #67b ━━━
+- Pagina FB Nina creata+collegata (coppia FB+IG); labirinto Meta multi-account superato
+- 18/21 post programmati con date certe (2 profili separati, auto-pubblicazione)
+- slide-ponte cross-profilo rigenerate (nuovo tool CAROSELLI/_render_slide.py) e ricaricate
+- sorgenti caroselli riorganizzati (EP_N2_04/05/06 _BOZZE->NINA); handle @ilmondodinina.ms corretto
+- doc _SCALETTA_INTERSECATA.md a moduli separati + file copia-incolla + 10 template DM outreach
 
-━━━ APERTI / BLOCKERS ━━━
-- BGE-M3: 1 click UAC tuo (io non sono admin, 3 watchdog respawnano l'api → corruzione se forzo)
-- Ricalibro soglia vault_intersect per bge-m3 DOPO che l'indice è ricostruito
-- LinkedIn Community Management API: ancora in review (per Postiz automatico)
-- Blockers hardware: UPS, mandrino ER20, martinetto Vevor
+━━━ APERTI / non urgenti ━━━
+- 3 post social al rientro (30/07); rifiniture bio Nina/microindustry; PRE_SG_04 link a mano
+- BGE-M3 embedder: 1 click TUO su SERVICES/rebuild_rag_bge_m3.ps1 (rebuild GPU) + poi ricalibro Collegati
+- LightRAG pilota (dopo bge-m3)
+- Blockers hardware: UPS (blocker n°1, corruzione HNSW), mandrino ER20, martinetto Vevor
 
-━━━ Generato: 20/07/2026 — fine sessione #67 (skill salva) ━━━
+━━━ Generato: 21/07/2026 — fine sessione #67b (skill salva) ━━━

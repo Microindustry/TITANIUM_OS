@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-20T19:30:11.409206",
-  "active_milestone": "Sessione #67 (20/07): ECOSISTEMA. Loop Obsidian<->RAG chiuso (vault_intersect v3: Collegati nello spazio semantico del RAG, soglia 0.50 + dedup quasi-duplicati, fallback TF-IDF). De-hardcode setup_obsidian. Pulizia 6 duplicati Config_G (tenute s8/s10/s11 reali). Docling acceso (venv isolato, ingest PDF->Markdown strutturato/OCR con fallback pdfplumber) cablato in pdf_to_memory+chiavetta_ingest. Ollama leva locale ON (gia' cablata in api_server, girava il servizio). Valutazione 24 repo. BGE-M3 pronto: script one-click SERVICES/rebuild_rag_bge_m3.ps1 + snapshot sicurezza; rebuild GPU dietro UAC (1 click Matteo). LightRAG deferito.",
-  "next_step": "Matteo: doppio-click SERVICES/rebuild_rag_bge_m3.ps1 (UAC, ~15-20min) per attivare BGE-M3 -> poi Claude ricalibra soglia vault_intersect + rigenera Collegati/linkgraph. Poi il COLLO N.1 resta il SOCIAL #67 (profili IG, coda post Meta+Nina, V32 su LinkedIn). LightRAG pilota dopo bge-m3. UPS blocker.",
-  "session_count": 142,
+  "last_update": "2026-07-21T00:33:07.907826",
+  "active_milestone": "Sessione #67b (20-21/07): LANCIO SOCIAL VIVO. Pagina FB 'Il Mondo di Nina' creata+collegata a @ilmondodinina.ms (coppia FB+IG); superato il labirinto Meta Business Manager (gestire come owner Matteo Mims=benenatimatteo.mb, non come i profili IG limitati). 18/21 post programmati con date certe (Business Suite pubblica in automatico): Sistema 10/11 (fino VULCAN 18/08), Nina 8/10 (fino EP_N2_04 16/08). Slide-ponte cross-profilo rigenerate (nuovo tool _render_slide.py). Sorgenti caroselli riorganizzati (EP_N2_04/05/06 _BOZZE->NINA). Restano 3 post bloccati solo dal tetto 29gg Meta, da caricare al rientro (promemoria Calendar 30/07).",
+  "next_step": "MATTEO VIA AL MARE 7gg dal 22/07 sera (~rientro 29/07): i 18 post escono da soli. AL RIENTRO (promemoria 30/07) caricare i 3 rimasti -> 21/21: Nina EP_N2_05 (19/08) + EP_N2_06 (23/08), Sistema GENESIS EP_SG_02_04 (21/08). Caption in _NINA_/_SISTEMA_COPIA_INCOLLA.md. Poi rifiniture bio + BGE-M3 (1 click) restano aperti.",
+  "session_count": 143,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-20T19:19:25.311766"
+      "last_activity": "2026-07-21T00:19:43.066259"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -137,7 +137,11 @@
       "Sessione #67: Docling acceso in venv dedicato ~/.venvs/docling (torch RAG NON toccato) - ingest PDF->Markdown strutturato (heading/tabelle/OCR) cablato in pdf_to_memory (--engine auto|docling|pdfplumber) e chiavetta_ingest, con fallback pdfplumber sempre garantito; verificato 7 heading vs testo piatto. Push 49bce54f",
       "Sessione #67: Ollama leva locale ON - gia' installato (qwen2.5:7b-instruct-q4_K_M) e cablato dal 05/06 (NODES/LOCAL_LLM + api_server chat RAG con fallback Claude); verificato genera IT tecnico 100% GPU. Nessun codice nuovo, girava solo il servizio da attivare",
       "Sessione #67: valutazione 24 repo GitHub (stelle+licenza live) - decisi Docling+Ollama (fatti), BGE-M3 embedder (prossimo, MIT), LightRAG pilota; AGPL/GPL esclusi dal repo pubblico",
-      "Sessione #67: BGE-M3 preparato per lo swap - script one-click SERVICES/rebuild_rag_bge_m3.ps1 (parse OK, edita solo EMBED_MODEL, reranker intatto, --rebuild-hard per dim 384->1024, flag -Revert) + snapshot known-good chroma_db_20260720_192437; rebuild GPU esclusivo dietro UAC (Matteo, non-admin+3 watchdog)"
+      "Sessione #67: BGE-M3 preparato per lo swap - script one-click SERVICES/rebuild_rag_bge_m3.ps1 (parse OK, edita solo EMBED_MODEL, reranker intatto, --rebuild-hard per dim 384->1024, flag -Revert) + snapshot known-good chroma_db_20260720_192437; rebuild GPU esclusivo dietro UAC (Matteo, non-admin+3 watchdog)",
+      "Sessione #67b (20-21/07): Pagina FB 'Il Mondo di Nina' creata e collegata a @ilmondodinina.ms (coppia FB+IG in Business Suite) - superato il labirinto Meta multi-account: si gestisce come owner Matteo Mims (benenatimatteo.mb@gmail.com), non come i profili IG che sono utenti limitati (blocked_ig_user_in_mbs).",
+      "Sessione #67b: 18/21 caroselli programmati con date certe su 2 profili separati (Business Suite auto-pubblica). Sistema 10/11 (PRE_SG_01->V32+MIMS+VULCAN, fino 18/08, mar+ven 10:00); Nina 8/10 (PRE_01->EP_N2_04, fino 16/08, mer+dom). Restano 3 bloccati solo dal tetto 29gg (Nina EP_N2_05/06, Sistema GENESIS) -> promemoria Calendar 30/07.",
+      "Sessione #67b: slide-ponte cross-profilo (slide 8 di PRE_04->@microindustry.ms e PRE_SG_04->@ilmondodinina.ms) rigenerate con nuovo tool riusabile CAROSELLI/_render_slide.py (chrome headless, 1 slide 1080x1350). Verificate a occhio, ricaricate.",
+      "Sessione #67b: riorganizzati i sorgenti caroselli (git mv EP_N2_04/05/06 da _BOZZE/ a NINA/ perche in coda; _BOZZE = solo vere bozze). Handle corretto @ilmondodinina.ms ovunque. Doc di controllo _SCALETTA_INTERSECATA.md a moduli SEPARATI Nina/Sistema + STATO + PONTI. File copia-incolla _NINA_/_SISTEMA_COPIA_INCOLLA.md."
     ],
     "next": "RIPRESA #66: LinkedIn concede Community Management API -> docker compose start -> connetti Pagina microindustry -> test EP_SG_02_01.",
     "target_capannone": "2030-07-15"
@@ -177,5 +181,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a EP_AUTO_014.md"
+  "last_action": "Modifica a EP_N2_04_la_mappa_che_non_mente.md"
 }
