@@ -1,10 +1,10 @@
 {
-  "scanned_at": "2026-07-19T13:30:13.228586",
+  "scanned_at": "2026-07-20T19:13:19.557335",
   "source_dir": "C:\\Users\\teo\\MICROINDUSTRY\\MENTE",
   "output_file": "C:\\Users\\teo\\TITANIUM_OS\\DATA\\mente_digest.json",
-  "total_files": 921,
+  "total_files": 915,
   "files_read": 13,
-  "files_skipped": 908,
+  "files_skipped": 902,
   "global_summary": {
     "total_decisions": 76,
     "total_specs": 127,
@@ -15,7 +15,7 @@
     {
       "path": ".git\\COMMIT_EDITMSG",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.9,
       "readable": false,
       "extracts": {}
     },
@@ -141,7 +141,7 @@
     {
       "path": ".git\\index",
       "type": "unknown",
-      "size_kb": 111.4,
+      "size_kb": 110.7,
       "readable": false,
       "extracts": {}
     },
@@ -162,56 +162,14 @@
     {
       "path": ".git\\logs\\HEAD",
       "type": "unknown",
-      "size_kb": 28.1,
+      "size_kb": 28.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\logs\\refs\\heads\\master",
       "type": "unknown",
-      "size_kb": 28.1,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\31\\b8aabfab5ed46001258fb3c76d7f924e631e67",
-      "type": "unknown",
-      "size_kb": 0.3,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\70\\d4ca296b6e259213d629314907a32c0dc9dd4d",
-      "type": "unknown",
-      "size_kb": 1.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\bd\\301a4cfc8c3e0e9088b895b96b4353c742b072",
-      "type": "unknown",
-      "size_kb": 0.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\df\\7fed8206e1349660ad999a4f8c78c0aa00abc3",
-      "type": "unknown",
-      "size_kb": 0.2,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\e2\\b09d8711cd76692d9407fe1607246b4a87f8ed",
-      "type": "unknown",
-      "size_kb": 4.5,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": ".git\\objects\\ea\\ebed0d893e761b4185cfeb9eaae15175e8ab61",
-      "type": "unknown",
-      "size_kb": 0.3,
+      "size_kb": 28.5,
       "readable": false,
       "extracts": {}
     },
@@ -232,14 +190,14 @@
     {
       "path": ".git\\objects\\info\\packs",
       "type": "unknown",
-      "size_kb": 0.1,
+      "size_kb": 0.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": ".git\\objects\\pack\\multi-pack-index",
       "type": "unknown",
-      "size_kb": 386.5,
+      "size_kb": 407.4,
       "readable": false,
       "extracts": {}
     },
@@ -268,6 +226,27 @@
       "path": ".git\\objects\\pack\\pack-13e7c0c4a54367f1251815d711c459ddf164f907.idx",
       "type": "idx",
       "size_kb": 15.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-1be984ff85ba6740eb873d672ab2d98a41737bd5.idx",
+      "type": "idx",
+      "size_kb": 11.2,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-1be984ff85ba6740eb873d672ab2d98a41737bd5.pack",
+      "type": "pack",
+      "size_kb": 2955.3,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-1be984ff85ba6740eb873d672ab2d98a41737bd5.rev",
+      "type": "rev",
+      "size_kb": 1.5,
       "readable": false,
       "extracts": {}
     },
@@ -380,6 +359,27 @@
       "path": ".git\\objects\\pack\\pack-9955030f46412b08eb21424d20fc87d1d8cb74e7.idx",
       "type": "idx",
       "size_kb": 12.5,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-9fca0c5317a358c4260a1b890687ddc67cbf6942.idx",
+      "type": "idx",
+      "size_kb": 11.6,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-9fca0c5317a358c4260a1b890687ddc67cbf6942.pack",
+      "type": "pack",
+      "size_kb": 3134.0,
+      "readable": false,
+      "extracts": {}
+    },
+    {
+      "path": ".git\\objects\\pack\\pack-9fca0c5317a358c4260a1b890687ddc67cbf6942.rev",
+      "type": "rev",
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
@@ -526,14 +526,14 @@
     {
       "path": ".obsidian\\workspace.json",
       "type": "json",
-      "size_kb": 6.8,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "2026-06-20.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
@@ -1912,7 +1912,7 @@
     {
       "path": "_CANONE.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
@@ -2078,21 +2078,21 @@
     {
       "path": "ASSOLUTO\\V7_X_v8.md",
       "type": "md",
-      "size_kb": 67.6,
+      "size_kb": 67.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "ASSOLUTO\\V8_DELTA.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "ASSOLUTO\\VERSIONI\\assoluto_v3.md",
       "type": "md",
-      "size_kb": 35.8,
+      "size_kb": 35.9,
       "readable": false,
       "extracts": {}
     },
@@ -2106,14 +2106,14 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\assoluto_v5_genesis_infinita.md",
       "type": "md",
-      "size_kb": 40.5,
+      "size_kb": 40.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "ASSOLUTO\\VERSIONI\\assoluto_v6_completo.md",
       "type": "md",
-      "size_kb": 63.0,
+      "size_kb": 63.1,
       "readable": false,
       "extracts": {}
     },
@@ -2141,7 +2141,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\atto_ix_assoluto_v6.md",
       "type": "md",
-      "size_kb": 12.0,
+      "size_kb": 11.9,
       "readable": false,
       "extracts": {}
     },
@@ -2169,7 +2169,7 @@
     {
       "path": "ASSOLUTO\\VERSIONI\\atto_viii_assoluto_v6.md",
       "type": "md",
-      "size_kb": 18.6,
+      "size_kb": 18.5,
       "readable": false,
       "extracts": {}
     },
@@ -2190,7 +2190,7 @@
     {
       "path": "CV\\CLAUDE_CAPABILITIES_TITANIUM.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.2,
       "readable": false,
       "extracts": {}
     },
@@ -2204,7 +2204,7 @@
     {
       "path": "CV\\CV_AI_SKILLS_AGGIUNTA.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -2227,21 +2227,21 @@
     {
       "path": "FINANZA\\_INDEX_FINANZA.md",
       "type": "md",
-      "size_kb": 0.4,
+      "size_kb": 0.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "FINANZA\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore.md",
       "type": "md",
-      "size_kb": 30.5,
+      "size_kb": 30.3,
       "readable": false,
       "extracts": {}
     },
@@ -2255,35 +2255,35 @@
     {
       "path": "GENESIS\\agenti_ai_da_officina_a_codice.md",
       "type": "md",
-      "size_kb": 28.8,
+      "size_kb": 29.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "GENESIS\\fatti_dalle_storie_2026Q1.md",
       "type": "md",
-      "size_kb": 4.7,
+      "size_kb": 6.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "GENESIS\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 180.1,
+      "size_kb": 182.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "GENESIS\\fatti_dalle_storie_2026Q3.md",
       "type": "md",
-      "size_kb": 52.8,
+      "size_kb": 54.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "GENESIS\\genesis_architettura.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
@@ -2304,7 +2304,7 @@
     {
       "path": "KNOWLEDGE\\AI_NEWS_RECENTI.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
@@ -2325,14 +2325,14 @@
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_III_V32.md",
       "type": "md",
-      "size_kb": 41.2,
+      "size_kb": 41.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_IV_MIMS.md",
       "type": "md",
-      "size_kb": 28.9,
+      "size_kb": 28.8,
       "readable": false,
       "extracts": {}
     },
@@ -2346,7 +2346,7 @@
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_V_MATERIALI.md",
       "type": "md",
-      "size_kb": 28.3,
+      "size_kb": 28.2,
       "readable": false,
       "extracts": {}
     },
@@ -2367,14 +2367,14 @@
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_VIII_MERCATO.md",
       "type": "md",
-      "size_kb": 18.3,
+      "size_kb": 18.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ARCHIVE_V6\\V6_ATTO_X_MEDIA.md",
       "type": "md",
-      "size_kb": 16.9,
+      "size_kb": 16.8,
       "readable": false,
       "extracts": {}
     },
@@ -2464,84 +2464,84 @@
     {
       "path": "KNOWLEDGE\\ASSOLUTO\\ASSOLUTO_V9.md",
       "type": "md",
-      "size_kb": 13.3,
+      "size_kb": 12.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\AUTOMIGLIORAMENTO.md",
       "type": "md",
-      "size_kb": 4.5,
+      "size_kb": 6.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\BOZZE\\nuovo_documento_di_testo.md",
       "type": "md",
-      "size_kb": 2.6,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\BOZZE\\v1.md",
       "type": "md",
-      "size_kb": 10.6,
+      "size_kb": 11.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\BOZZE\\v2.md",
       "type": "md",
-      "size_kb": 7.3,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\FONTI_UTILI.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\FORMATO_EPISODIO_DOPPIO.md",
       "type": "md",
-      "size_kb": 7.3,
+      "size_kb": 7.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\genesis_nodi_fatti.md",
       "type": "md",
-      "size_kb": 4.7,
+      "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MEDIA\\123_riasasunto_con_impostazioni.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 14.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MEDIA\\5_media_storytelling_e_feedback.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MEDIA\\analisi_video_youtube_contenuto_e_contesto.md",
       "type": "md",
-      "size_kb": 31.1,
+      "size_kb": 30.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MEDIA\\riasasunto_con_gaiant_killer_file_aggiornato.md",
       "type": "md",
-      "size_kb": 7.1,
+      "size_kb": 7.0,
       "readable": false,
       "extracts": {}
     },
@@ -2555,7 +2555,7 @@
     {
       "path": "KNOWLEDGE\\MEMORIA_CLAUDE\\loop_autonomo.md",
       "type": "md",
-      "size_kb": 2.5,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
@@ -2576,7 +2576,7 @@
     {
       "path": "KNOWLEDGE\\MEMORIA_CLAUDE\\project_mims_ip.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
@@ -2590,98 +2590,98 @@
     {
       "path": "KNOWLEDGE\\MEMORIA_CLAUDE\\project_storie_n_livelli.md",
       "type": "md",
-      "size_kb": 2.5,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MIGLIORIE_DA_INTEGRARE.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\BIBBIA_DEL_MONDO.md",
       "type": "md",
-      "size_kb": 20.3,
+      "size_kb": 20.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\BIBBIA_VISIVA_CAROSELLI.md",
       "type": "md",
-      "size_kb": 8.1,
+      "size_kb": 7.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\BRIEF_ILLUSTRATORE_PERSONAGGI.md",
       "type": "md",
-      "size_kb": 4.8,
+      "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\FIT_ESTERNO_20260715.md",
       "type": "md",
-      "size_kb": 6.4,
+      "size_kb": 5.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\GIOCO\\_DOSSIER.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\GUIDA_CAROSELLI.md",
       "type": "md",
-      "size_kb": 12.8,
+      "size_kb": 12.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\INDICE_CAMMINO.md",
       "type": "md",
-      "size_kb": 11.5,
+      "size_kb": 12.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\LINEA_GUIDA_NINA.md",
       "type": "md",
-      "size_kb": 14.7,
+      "size_kb": 14.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\MAPPA_AVVENTURA.md",
       "type": "md",
-      "size_kb": 12.5,
+      "size_kb": 12.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\NINA_V2_ARCHITETTURA.md",
       "type": "md",
-      "size_kb": 14.9,
+      "size_kb": 14.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\NINA_V2_CHARACTER_BIBLE.md",
       "type": "md",
-      "size_kb": 8.3,
+      "size_kb": 8.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\NINA_V2_REVIEW_NOTEBOOKLM.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.4,
       "readable": false,
       "extracts": {}
     },
@@ -2695,21 +2695,21 @@
     {
       "path": "KNOWLEDGE\\MONDO\\PIANO_PRODUZIONE_NINA.md",
       "type": "md",
-      "size_kb": 9.2,
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\PIETRE.md",
       "type": "md",
-      "size_kb": 14.2,
+      "size_kb": 15.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\MONDO\\PONTE_SG_NINA.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
@@ -2723,7 +2723,7 @@
     {
       "path": "KNOWLEDGE\\MONDO\\QUALITA_BATCH_44.md",
       "type": "md",
-      "size_kb": 4.9,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -2744,21 +2744,21 @@
     {
       "path": "KNOWLEDGE\\NINA_DAL_GIORNO_0.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\NINA_DESIGN_DEFINITIVO.md",
       "type": "md",
-      "size_kb": 4.7,
+      "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\NINA_STILE_E_PIANO.md",
       "type": "md",
-      "size_kb": 13.3,
+      "size_kb": 13.0,
       "readable": false,
       "extracts": {}
     },
@@ -2779,7 +2779,7 @@
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\i_protagonisti.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
@@ -2793,14 +2793,14 @@
     {
       "path": "KNOWLEDGE\\PERSONAGGI\\themis_e_building.md",
       "type": "md",
-      "size_kb": 6.4,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\PROMPTS\\gemini_attive_09_02_26.md",
       "type": "md",
-      "size_kb": 7.3,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
@@ -2814,7 +2814,7 @@
     {
       "path": "KNOWLEDGE\\PROMPTS\\istruzioni_ia.md",
       "type": "md",
-      "size_kb": 34.4,
+      "size_kb": 34.5,
       "readable": false,
       "extracts": {}
     },
@@ -2835,112 +2835,112 @@
     {
       "path": "KNOWLEDGE\\PROMPTS\\prompt_esatto_nel_tuo_generatore.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\REPOS\\bOS_multi_agent_patterns.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\REPOS\\LifeOS_agent_framework.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\REPOS\\MCP_servers_reference.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\REPOS\\OpenDAN_multi_agent.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\REPOS\\PAI_personal_ai_infrastructure.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\REPOS\\simonerizzo_note.md",
       "type": "md",
-      "size_kb": 2.8,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\a_systematic_literature_review_on_the_use_of_artificial_inte.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\characterising_the_agriculture_40_landscapeemerging_trends_c.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 2.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\from_smart_farming_towards_agriculture_50_a_review_on_crop_d.md",
       "type": "md",
-      "size_kb": 2.9,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\harnessing_artificial_intelligence_capabilities_to_improve_c.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\how_technology_is_changing_work_and_organizations.md",
       "type": "md",
-      "size_kb": 1.7,
+      "size_kb": 2.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\ai\\towards_6g_wireless_communication_networks_vision_enabling_t.md",
       "type": "md",
-      "size_kb": 2.7,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_cloudedge_collaborative_architecture_for_multimodal_llm_ba.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_comprehensive_overview_of_large_language_models.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\a_review_of_large_language_models_and_autonomous_agents_in_c.md",
       "type": "md",
-      "size_kb": 1.4,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
@@ -2954,42 +2954,42 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\agentic_data_pipelines_autonomous_elt_orchestration_using_ai.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\agentic_rag_hybrid_2025.md",
       "type": "md",
-      "size_kb": 4.9,
+      "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\ai_powered_educational_agents_opportunities_innovations_and_.md",
       "type": "md",
-      "size_kb": 3.0,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\ar_rag_autoregressive_retrieval_augmentation_for_image_gener.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\autobnb_rag_enhancing_multi_agent_incident_response_with_ret.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\autonomous_agentic_ai_for_clinical_workflow_orchestration_se.md",
       "type": "md",
-      "size_kb": 4.7,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
@@ -3010,56 +3010,56 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\brave_new_world_service_robots_in_the_frontline.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\caging_the_agents_a_zero_trust_security_architecture_for_aut.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\centralised_orchestration_and_strategic_alignment_in_ai_agen.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\computer_use_agent_survey_2025.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\demystifying_instruction_mixing_for_fine_tuning_large_langua.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\differentially_private_fine_tuning_of_language_models.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\domain_adapted_retrieval_augmented_generation_for_technical_.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\e2e_process_automation_leveraging_generative_ai_and_idp_base.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -3073,105 +3073,105 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\federated_sketching_lora_a_flexible_framework_for_heterogene.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\fedshield_llm_a_secure_and_scalable_federated_fine_tuned_lar.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\finetune_llm_local_cpu_2025.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\fl_dplora_an_integrated_and_efficient_privacy_preserving_tra.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\from_llm_reasoning_to_autonomous_ai_agents_a_comprehensive_r.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\human_centeredness_in_translation.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\implementation_of_a_device_failure_query_model_for_the_virtu.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\improving_the_domain_adaptation_of_retrieval_augmented_gener.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\large_language_models_encode_clinical_knowledge.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\learning_analytics_and_ai_politics_pedagogy_and_practices.md",
       "type": "md",
-      "size_kb": 1.7,
+      "size_kb": 2.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\learning_from_failure_integrating_negative_examples_when_fin.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\lightweight_and_direct_document_relevance_optimization_for_g.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\linearization_explains_fine_tuning_in_large_language_models.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\lora_finetuning_of_a_small_3b_llm_for_clinical_information_e.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\minigpt_4_enhancing_vision_language_understanding_with_advan.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
@@ -3185,21 +3185,21 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\parameter_efficient_fine_tuning_of_large_scale_pre_trained_l.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\pfflora_personalized_fourier_lora_fine_tuning_of_federated_l.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\quantum_espresso_a_modular_and_open_source_software_project_.md",
       "type": "md",
-      "size_kb": 1.7,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
@@ -3213,21 +3213,21 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\scalable_retrieval_augmented_generation_for_technical_docume.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\scipy_10_fundamental_algorithms_for_scientific_computing_in_.md",
       "type": "md",
-      "size_kb": 1.7,
+      "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\splitllm_hierarchical_split_learning_for_large_language_mode.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
@@ -3241,35 +3241,35 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\the_atomic_simulation_environmenta_python_library_for_workin.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\towards_6g_wireless_communication_networks_vision_enabling_t.md",
       "type": "md",
-      "size_kb": 2.6,
+      "size_kb": 2.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\versionrag_version_aware_retrieval_augmented_generation_for_.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\GENESIS\\wizardlm_empowering_large_pre_trained_language_models_to_fol.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\mims\\a_review_on_natural_fiber_reinforced_polymer_composite_for_b.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
@@ -3283,14 +3283,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\mims\\joint_optimization_of_radio_and_computational_resources_for_.md",
       "type": "md",
-      "size_kb": 2.8,
+      "size_kb": 1.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\mims\\sustainable_fiberreinforced_composites_a_review.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 2.3,
       "readable": false,
       "extracts": {}
     },
@@ -3304,175 +3304,175 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\a_new_two_stage_degradation_model_for_the_preload_of_linear_.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\a_review_of_vibration_based_structural_health_monitoring_wit.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\advancements_and_applications_of_lightweight_structures_a_co.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\advances_in_connection_techniques_for_raw_bamboo_structuresa.md",
       "type": "md",
-      "size_kb": 2.8,
+      "size_kb": 2.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\an_integrated_method_and_tool_for_telescopic_beams_design_in.md",
       "type": "md",
-      "size_kb": 4.6,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\an_overview_on_economic_machining_of_hardened_steels_by_hard.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analisis_momen_rotasi_sambungan_haunched_gusset_plate_balok_.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analysis_of_factors_affecting_the_straightness_of_assembled_.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\analyzing_the_effects_of_lubrication_techniques_on_cnc_spind.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 4.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\behavior_of_granite_epoxy_composite_beams_subjected_to_mecha.md",
       "type": "md",
-      "size_kb": 1.4,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\computer_simulations_predict_that_chromosome_movements_and_r.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 2.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\concept_and_prototype_of_a_3_component_extruder_for_fusion_d.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\contact_properties_research_for_linear_sliding_guide_rail_wi.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 4.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\data_driven_design_of_epoxygranite_machine_foundations_bayes.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\design_and_analysis_of_epoxy_granite_vertical_machining_cent.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\design_and_implementation_of_thermal_error_compensation_meth.md",
       "type": "md",
-      "size_kb": 1.8,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\development_of_a_new_measuring_method_for_spindle_rotation_a.md",
       "type": "md",
-      "size_kb": 2.8,
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\dynamic_reliability_analysis_of_cnc_lathe_spindle_bearing_sy.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\epoxy_granite_cnc_damping_2024.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\feed_drive_condition_monitoring_using_modal_parameters.md",
       "type": "md",
-      "size_kb": 2.5,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\finite_element_analysis_and_structure_optimization_of_a_gant.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\load_distribution_analysis_and_contact_stiffness_prediction_.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mathematical_model_and_methodology_of_express_assessment_cri.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mathematical_modeling_of_friction_force_in_lm_ball_guides.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\mechanical_properties_of_polymer_concrete.md",
       "type": "md",
-      "size_kb": 1.2,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
@@ -3486,35 +3486,35 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\neural_emulation_of_gravity_driven_geohazard_runout.md",
       "type": "md",
-      "size_kb": 2.7,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\non_contact_measurement_machine_for_freeform_optics.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 2.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\nonlinear_spatial_modelling_and_comparison_of_a_compact_comp.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\novel_procedures_for_sustainable_design_in_structural_rehabi.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\research_on_the_error_averaging_effect_in_a_rolling_guide_pa.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
@@ -3528,14 +3528,14 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\rigid_finite_element_method_in_modeling_composite_steel_poly.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\static_and_dynamic_behavior_of_steel_reinforced_epoxy_granit.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
@@ -3549,49 +3549,49 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\stiffness_analysis_of_parallel_manipulators_with_preloaded_p.md",
       "type": "md",
-      "size_kb": 3.0,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\stiffness_and_lightweight_enhancement_in_biomimetic_design_o.md",
       "type": "md",
-      "size_kb": 5.3,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\structural_investigation_of_steel_reinforced_epoxy_granite_m.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\study_of_stiffness_of_linear_guide_pairs_by_experiment_and_f.md",
       "type": "md",
-      "size_kb": 1.3,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\the_optical_corrector_for_the_dark_energy_spectroscopic_inst.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\the_robotic_multiobject_focal_plane_system_of_the_dark_energ.md",
       "type": "md",
-      "size_kb": 1.8,
+      "size_kb": 2.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\thermal_error_modeling_of_spindle_and_dynamic_machining_accu.md",
       "type": "md",
-      "size_kb": 1.8,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
@@ -3612,42 +3612,42 @@
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_and_tribological_properties_of_epoxy_granite_compo.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RESEARCH\\V32\\vibration_damping_analysis_of_lightweight_structures_in_mach.md",
       "type": "md",
-      "size_kb": 1.4,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\RICERCA_GRAFO_COMPETENZE.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\FIGURE_PROFESSIONALI.md",
       "type": "md",
-      "size_kb": 26.5,
+      "size_kb": 26.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\PROTAGONISTI.md",
       "type": "md",
-      "size_kb": 4.3,
+      "size_kb": 4.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\BUSINESS\\SCIENZA_FINANZIARIA.md",
       "type": "md",
-      "size_kb": 30.5,
+      "size_kb": 30.2,
       "readable": false,
       "extracts": {}
     },
@@ -3661,35 +3661,35 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\FILOSOFIA\\LEX_DIGITALIS.md",
       "type": "md",
-      "size_kb": 5.0,
+      "size_kb": 4.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\FILOSOFIA\\MANIFESTO_CODEX.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\FILOSOFIA\\MANIFESTO_COMANDO.md",
       "type": "md",
-      "size_kb": 8.9,
+      "size_kb": 8.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\FILOSOFIA\\V1_RPG.md",
       "type": "md",
-      "size_kb": 10.6,
+      "size_kb": 10.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\FILOSOFIA\\V2_ORGANISMO.md",
       "type": "md",
-      "size_kb": 7.2,
+      "size_kb": 7.5,
       "readable": false,
       "extracts": {}
     },
@@ -3710,28 +3710,28 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\GENESIS\\ARCHITETTURA_PROTOCOL.md",
       "type": "md",
-      "size_kb": 1.3,
+      "size_kb": 1.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\GENESIS\\GENESIS_MANIFESTO.md",
       "type": "md",
-      "size_kb": 10.7,
+      "size_kb": 10.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\GENESIS\\THEMIS_OS.md",
       "type": "md",
-      "size_kb": 6.4,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MEDIA\\ANALISI_YOUTUBE.md",
       "type": "md",
-      "size_kb": 30.7,
+      "size_kb": 31.3,
       "readable": false,
       "extracts": {}
     },
@@ -3745,56 +3745,56 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MEDIA\\PROMPT_GENERATORE.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MEDIA\\VISUALIZZAZIONE_VIDEO.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MEDIA\\VOLUME_GUERRA.md",
       "type": "md",
-      "size_kb": 7.9,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MIMS\\CODEX_PRODOTTO_V2.md",
       "type": "md",
-      "size_kb": 25.8,
+      "size_kb": 25.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MIMS\\MIMS_MAGAZZINO.md",
       "type": "md",
-      "size_kb": 5.9,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MIMS\\TOT_APP.md",
       "type": "md",
-      "size_kb": 0.7,
+      "size_kb": 1.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\MIMS\\TOTT_APP.md",
       "type": "md",
-      "size_kb": 0.6,
+      "size_kb": 1.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\SISTEMA\\AGENTI_AI.md",
       "type": "md",
-      "size_kb": 28.9,
+      "size_kb": 29.0,
       "readable": false,
       "extracts": {}
     },
@@ -3808,35 +3808,35 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\SISTEMA\\ISTRUZIONI_IA.md",
       "type": "md",
-      "size_kb": 34.4,
+      "size_kb": 34.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\SISTEMA\\ISTRUZIONI_NOTEBOOK.md",
       "type": "md",
-      "size_kb": 17.0,
+      "size_kb": 16.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\SISTEMA\\RIASSUNTO_IMPOSTAZIONI.md",
       "type": "md",
-      "size_kb": 14.6,
+      "size_kb": 14.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\V32\\LISTA_CNC.md",
       "type": "md",
-      "size_kb": 2.3,
+      "size_kb": 2.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\V32\\RAMI_TECNICI.md",
       "type": "md",
-      "size_kb": 119.1,
+      "size_kb": 119.0,
       "readable": false,
       "extracts": {}
     },
@@ -3850,35 +3850,35 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\ARCHIVIO\\V32\\V32_MAPPA_VIVENTE.md",
       "type": "md",
-      "size_kb": 17.0,
+      "size_kb": 16.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\DATABASE\\DB_ECONOMIA.md",
       "type": "md",
-      "size_kb": 6.1,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\DATABASE\\DB_PERSONAGGI.md",
       "type": "md",
-      "size_kb": 6.8,
+      "size_kb": 6.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\DATABASE\\DB_TECNOLOGIA.md",
       "type": "md",
-      "size_kb": 7.5,
+      "size_kb": 7.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\DATABASE\\DB_TIMELINE.md",
       "type": "md",
-      "size_kb": 6.2,
+      "size_kb": 6.1,
       "readable": false,
       "extracts": {}
     },
@@ -3892,14 +3892,14 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\INDEX.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\SINAPSI\\LABORATORIO\\IDEE_NON_SVILUPPATE.md",
       "type": "md",
-      "size_kb": 14.3,
+      "size_kb": 14.1,
       "readable": false,
       "extracts": {}
     },
@@ -3913,56 +3913,56 @@
     {
       "path": "KNOWLEDGE\\SINAPSI\\STATE.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 3.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\il_codex_di_prodotto_v2.md",
       "type": "md",
-      "size_kb": 25.9,
+      "size_kb": 25.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\il_manifesto_di_comando.md",
       "type": "md",
-      "size_kb": 9.0,
+      "size_kb": 8.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\il_manifesto_di_genesis_fabbrica_autonoma.md",
       "type": "md",
-      "size_kb": 10.7,
+      "size_kb": 10.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\il_master_manifesto.md",
       "type": "md",
-      "size_kb": 7.7,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\lex_digitalis.md",
       "type": "md",
-      "size_kb": 5.0,
+      "size_kb": 4.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\master_plan.md",
       "type": "md",
-      "size_kb": 82.5,
+      "size_kb": 82.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "KNOWLEDGE\\VISIONE\\volume_di_guerra_definitivo_master_plan.md",
       "type": "md",
-      "size_kb": 7.9,
+      "size_kb": 7.7,
       "readable": false,
       "extracts": {}
     },
@@ -3976,35 +3976,35 @@
     {
       "path": "MIMS\\brevetto_B2_bozza.md",
       "type": "md",
-      "size_kb": 10.5,
+      "size_kb": 10.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\a_5_full.md",
       "type": "md",
-      "size_kb": 1.8,
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\base_a2_corpo_01_4_disegno.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\base_gancio_1_corpo_07_disegno.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\base_no_forata_1_corpo_12_disegno.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 1.9,
       "readable": false,
       "extracts": {}
     },
@@ -4018,14 +4018,14 @@
     {
       "path": "MIMS\\DESIGN\\base_piatta_si_2_corpo_02_disegno.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\dentro_50x30_2o_x20.md",
       "type": "md",
-      "size_kb": 1.6,
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
@@ -4039,56 +4039,56 @@
     {
       "path": "MIMS\\DESIGN\\innestro_piastr_foro_16_1_corpo_07_disegno.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 1.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\piastra_con_foro_16_e_1_corpo_02_disegno.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 2.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\piastra_forata_lat_no_16_1_corpo_01_disegno.md",
       "type": "md",
-      "size_kb": 1.9,
+      "size_kb": 1.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\piastra_forata_lat_si_16.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 1.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\piastra_forata_lat_si_16_corpo_01_4_disegno.md",
       "type": "md",
-      "size_kb": 2.0,
+      "size_kb": 1.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\solo_fori_2_corpo_02_disegno.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 1.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\DESIGN\\staffa_muro_sottile_3_corpo_06_disegno.md",
       "type": "md",
-      "size_kb": 2.2,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 12.0,
       "readable": false,
       "extracts": {}
     },
@@ -4109,35 +4109,35 @@
     {
       "path": "MIMS\\MIMS_PROTOCOLLO_FILOSOFIA.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\exportfile_from_mindspace.md",
       "type": "md",
-      "size_kb": 1.5,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\istruzioni_progetto_modulare.md",
       "type": "md",
-      "size_kb": 4.0,
+      "size_kb": 3.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\linea_strutturale_industriale.md",
       "type": "md",
-      "size_kb": 3.1,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\manifesto_modulare.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 3.4,
       "readable": false,
       "extracts": {}
     },
@@ -4151,21 +4151,21 @@
     {
       "path": "MIMS\\PROTOCOLLO\\manifesto_scalabilita_riorganizzato.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\margini_progetto_modulare.md",
       "type": "md",
-      "size_kb": 2.3,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\matteo.md",
       "type": "md",
-      "size_kb": 3.7,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
@@ -4179,21 +4179,21 @@
     {
       "path": "MIMS\\PROTOCOLLO\\scalabilita_modulo_50x50.md",
       "type": "md",
-      "size_kb": 3.5,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\spec_modulo_50x30_inserto20_polimeri.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "MIMS\\PROTOCOLLO\\stime_guadagni_moduli.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.2,
       "readable": false,
       "extracts": {}
     },
@@ -4256,21 +4256,21 @@
     {
       "path": "SESSIONI\\2026-05-27_V32-corpo-unico.md",
       "type": "md",
-      "size_kb": 2.4,
+      "size_kb": 2.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-28_audit_sistema_rag_v4.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-28_flusso_coscienza.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
@@ -4289,177 +4289,135 @@
       "extracts": {}
     },
     {
-      "path": "SESSIONI\\2026-05-28_s8_Config_G___Rinforzi_colonne_Z+U.md",
-      "type": "md",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": "SESSIONI\\2026-05-28_s8_Config_G_Rinforzi_colonne_Z+U.md",
-      "type": "md",
-      "size_kb": 6.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": "SESSIONI\\2026-05-28_s8_Config_G_—_Rinforzi_colonne_Z+U.md",
-      "type": "md",
-      "size_kb": 6.7,
-      "readable": false,
-      "extracts": {}
-    },
-    {
       "path": "SESSIONI\\2026-05-28_sessione_utf8bom_fix.md",
       "type": "md",
-      "size_kb": 3.6,
+      "size_kb": 2.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-29_s10_Config_G_-_Rinforzi_colonne_Z+U.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-29_s11_Config_G_-_Rinforzi_colonne_Z+U.md",
       "type": "md",
-      "size_kb": 7.0,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": "SESSIONI\\2026-05-29_s11_Config_G_-_Rinforzi_colonne_Z+U_2327.md",
-      "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-29_s8_Config_G_Rinforzi_colonne_Z+U.md",
       "type": "md",
-      "size_kb": 6.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": "SESSIONI\\2026-05-29_s8_Config_G_Rinforzi_colonne_Z+U_1030.md",
-      "type": "md",
-      "size_kb": 6.8,
-      "readable": false,
-      "extracts": {}
-    },
-    {
-      "path": "SESSIONI\\2026-05-29_s8_Config_G_Rinforzi_colonne_Z+U_1031.md",
-      "type": "md",
-      "size_kb": 6.8,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-30_v2.8.0-release-nexus-rag-graph.md",
       "type": "md",
-      "size_kb": 3.2,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-05-31_s0_.md",
       "type": "md",
-      "size_kb": 5.2,
+      "size_kb": 4.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-02_domande-amico-dev-flutter.md",
       "type": "md",
-      "size_kb": 6.0,
+      "size_kb": 6.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-05_lavoro_autonomo.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 4.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-24_visione_libro_ia_rispiegata.md",
       "type": "md",
-      "size_kb": 7.0,
+      "size_kb": 6.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-25_caroselli-preambolo-flusso-stile.md",
       "type": "md",
-      "size_kb": 6.5,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-25_graph-view-konik.md",
       "type": "md",
-      "size_kb": 4.4,
+      "size_kb": 4.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-06-25_hermes-obsidian-memory.md",
       "type": "md",
-      "size_kb": 4.6,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-07-08_tre-facce-e-pubblicazioni.md",
       "type": "md",
-      "size_kb": 5.4,
+      "size_kb": 5.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-07-08_valore-per-pilastro.md",
       "type": "md",
-      "size_kb": 11.4,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-07-09_mims-in-nina_pietre_pubblicazione-v0.md",
       "type": "md",
-      "size_kb": 5.5,
+      "size_kb": 5.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-07-15_fit_esterno_pre_RAW.md",
       "type": "md",
-      "size_kb": 30.9,
+      "size_kb": 30.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\2026-07-15_matteo_pari_non_curiosi.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\_INDEX_SESSIONI.md",
       "type": "md",
-      "size_kb": 3.9,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "SESSIONI\\_TEMPLATE.md",
       "type": "md",
-      "size_kb": 1.7,
+      "size_kb": 1.6,
       "readable": false,
       "extracts": {}
     },
@@ -4494,7 +4452,7 @@
     {
       "path": "SESSIONI\\STORIE\\S2_SISTEMA\\EP_20260704_nina_rag_loop_v1_1_lost_update_stat.md",
       "type": "md",
-      "size_kb": 9.7,
+      "size_kb": 9.8,
       "readable": false,
       "extracts": {}
     },
@@ -4599,7 +4557,7 @@
     {
       "path": "STORIE\\_EVOLUZIONE.md",
       "type": "md",
-      "size_kb": 23.1,
+      "size_kb": 23.2,
       "readable": false,
       "extracts": {}
     },
@@ -4620,7 +4578,7 @@
     {
       "path": "STORIE\\EP_AUTO_003.md",
       "type": "md",
-      "size_kb": 5.1,
+      "size_kb": 5.0,
       "readable": false,
       "extracts": {}
     },
@@ -4634,14 +4592,14 @@
     {
       "path": "STORIE\\EP_AUTO_006.md",
       "type": "md",
-      "size_kb": 6.6,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\EP_AUTO_008.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.4,
       "readable": false,
       "extracts": {}
     },
@@ -4669,7 +4627,7 @@
     {
       "path": "STORIE\\EP_AUTO_013.md",
       "type": "md",
-      "size_kb": 6.7,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
@@ -4690,7 +4648,7 @@
     {
       "path": "STORIE\\EP_AUTO_016.md",
       "type": "md",
-      "size_kb": 6.9,
+      "size_kb": 6.4,
       "readable": false,
       "extracts": {}
     },
@@ -4725,7 +4683,7 @@
     {
       "path": "STORIE\\MOMENTI\\MOM_02_LA_MAPPA.md",
       "type": "md",
-      "size_kb": 5.5,
+      "size_kb": 5.2,
       "readable": false,
       "extracts": {}
     },
@@ -4746,7 +4704,7 @@
     {
       "path": "STORIE\\MOMENTI\\MOM_05_CONFIG_A_G.md",
       "type": "md",
-      "size_kb": 6.0,
+      "size_kb": 5.8,
       "readable": false,
       "extracts": {}
     },
@@ -4802,7 +4760,7 @@
     {
       "path": "STORIE\\S0_ORIGINI\\EP_S0_05_IL_CONSIGLIO.md",
       "type": "md",
-      "size_kb": 6.7,
+      "size_kb": 6.6,
       "readable": false,
       "extracts": {}
     },
@@ -4872,14 +4830,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260322_docs_ecosystem_manifest_documento_fon.md",
       "type": "md",
-      "size_kb": 13.2,
+      "size_kb": 13.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260325_feat_dashboard_v5_0_zustand_tanstac.md",
       "type": "md",
-      "size_kb": 13.9,
+      "size_kb": 13.8,
       "readable": false,
       "extracts": {}
     },
@@ -4907,14 +4865,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260529_chore_permissions_allow_all_dashboard.md",
       "type": "md",
-      "size_kb": 10.3,
+      "size_kb": 9.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260529_feat_canvaslayout_v6_1_state_v2_6_0.md",
       "type": "md",
-      "size_kb": 11.2,
+      "size_kb": 11.0,
       "readable": false,
       "extracts": {}
     },
@@ -4942,14 +4900,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260531_recupero_11_episodi_narrativi_nella.md",
       "type": "md",
-      "size_kb": 12.7,
+      "size_kb": 12.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260601_session_salvataggio_sessione_16_vis.md",
       "type": "md",
-      "size_kb": 11.3,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
@@ -4963,7 +4921,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260603_id_ep_auto_collision_free_au20_dedu.md",
       "type": "md",
-      "size_kb": 12.8,
+      "size_kb": 13.1,
       "readable": false,
       "extracts": {}
     },
@@ -4984,7 +4942,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260605_chat_rag_vera_in_dashboard_leva_llm.md",
       "type": "md",
-      "size_kb": 11.7,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
@@ -4998,7 +4956,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260606_ancora_di_ripresa_31_32_aggiornata_.md",
       "type": "md",
-      "size_kb": 11.8,
+      "size_kb": 11.5,
       "readable": false,
       "extracts": {}
     },
@@ -5047,7 +5005,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260611_night_audit_evidence_based_stop_fal.md",
       "type": "md",
-      "size_kb": 8.4,
+      "size_kb": 8.5,
       "readable": false,
       "extracts": {}
     },
@@ -5068,7 +5026,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260613_sid_univoco_hash_del_path_setup_obs.md",
       "type": "md",
-      "size_kb": 10.8,
+      "size_kb": 10.5,
       "readable": false,
       "extracts": {}
     },
@@ -5089,7 +5047,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260614_rebuild_robusto_all_api_su_svuota_p.md",
       "type": "md",
-      "size_kb": 9.2,
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
@@ -5257,7 +5215,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260704_nina_rag_loop_v1_1_lost_update_stat.md",
       "type": "md",
-      "size_kb": 10.5,
+      "size_kb": 10.6,
       "readable": false,
       "extracts": {}
     },
@@ -5299,7 +5257,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260713_chiusura_57_13_07_campo_di_battagli.md",
       "type": "md",
-      "size_kb": 10.1,
+      "size_kb": 9.9,
       "readable": false,
       "extracts": {}
     },
@@ -5348,14 +5306,14 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260717_inventario_notturno_critiche.md",
       "type": "md",
-      "size_kb": 8.9,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_20260719_night_audit_cartella_clinica_19_07_.md",
       "type": "md",
-      "size_kb": 8.3,
+      "size_kb": 8.8,
       "readable": false,
       "extracts": {}
     },
@@ -5376,7 +5334,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_S2_01_IL_CERVELLO_IBRIDO.md",
       "type": "md",
-      "size_kb": 9.5,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
@@ -5404,7 +5362,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_S2_05_IL_SILENZIO.md",
       "type": "md",
-      "size_kb": 10.0,
+      "size_kb": 10.1,
       "readable": false,
       "extracts": {}
     },
@@ -5495,7 +5453,7 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_RETE_L1_bugstato.md",
       "type": "md",
-      "size_kb": 5.6,
+      "size_kb": 5.7,
       "readable": false,
       "extracts": {}
     },
@@ -5530,21 +5488,21 @@
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_WATCHER_L1_gate.md",
       "type": "md",
-      "size_kb": 5.9,
+      "size_kb": 5.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_WATCHER_L1_keyless.md",
       "type": "md",
-      "size_kb": 6.4,
+      "size_kb": 6.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\S2_SISTEMA\\EP_SEED_WATCHER_L1_tier.md",
       "type": "md",
-      "size_kb": 5.4,
+      "size_kb": 5.3,
       "readable": false,
       "extracts": {}
     },
@@ -5873,7 +5831,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_30_la_mappa_che_cresce_da_sola.md",
       "type": "md",
-      "size_kb": 15.5,
+      "size_kb": 15.4,
       "readable": false,
       "extracts": {}
     },
@@ -6062,7 +6020,7 @@
     {
       "path": "STORIE\\S_AVVENTURA\\EP_N2_57_il_cartellino_sulla_stoffa.md",
       "type": "md",
-      "size_kb": 13.2,
+      "size_kb": 14.8,
       "readable": false,
       "extracts": {}
     },
@@ -6097,7 +6055,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_04_asse_x_assemblato_guideviteservo.md",
       "type": "md",
-      "size_kb": 9.0,
+      "size_kb": 9.1,
       "readable": false,
       "extracts": {}
     },
@@ -6139,7 +6097,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_10_dashboard_v50_zustand_tanstack_query_nav.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.5,
       "readable": false,
       "extracts": {}
     },
@@ -6153,7 +6111,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_12_dashboard_v51_commandbar_ctrlk_storiedat.md",
       "type": "md",
-      "size_kb": 9.4,
+      "size_kb": 9.3,
       "readable": false,
       "extracts": {}
     },
@@ -6202,7 +6160,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_19_api_serverpy_endpoint_apimedia_apiphotos.md",
       "type": "md",
-      "size_kb": 9.9,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
@@ -6237,7 +6195,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_24_sistema_agenti_validatori_8_agenti_in_ag.md",
       "type": "md",
-      "size_kb": 9.6,
+      "size_kb": 9.4,
       "readable": false,
       "extracts": {}
     },
@@ -6251,7 +6209,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_26_rag_v40_hybrid_bm25semanticocrossencoder.md",
       "type": "md",
-      "size_kb": 9.9,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
@@ -6286,14 +6244,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_31_dashboard_v70_sidebar_verticale_collassa.md",
       "type": "md",
-      "size_kb": 9.9,
+      "size_kb": 9.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_32_logging_centralizzato_corelogpy_34_file_.md",
       "type": "md",
-      "size_kb": 9.1,
+      "size_kb": 9.0,
       "readable": false,
       "extracts": {}
     },
@@ -6342,7 +6300,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_39_push_main_tag_v300_su_github_sbloccato_e.md",
       "type": "md",
-      "size_kb": 11.5,
+      "size_kb": 11.4,
       "readable": false,
       "extracts": {}
     },
@@ -6356,7 +6314,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_41_microindustry_omniparser_weights_migrati.md",
       "type": "md",
-      "size_kb": 11.9,
+      "size_kb": 11.5,
       "readable": false,
       "extracts": {}
     },
@@ -6370,7 +6328,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_43_stack_python_rag_installato_torch_260cu1.md",
       "type": "md",
-      "size_kb": 11.1,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
@@ -6384,14 +6342,14 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_45_indice_rag_buildato_e_verificato_6497_ch.md",
       "type": "md",
-      "size_kb": 12.1,
+      "size_kb": 11.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_46_sicurezza_token_github_ruotato_auth_git_.md",
       "type": "md",
-      "size_kb": 11.4,
+      "size_kb": 11.2,
       "readable": false,
       "extracts": {}
     },
@@ -6405,7 +6363,7 @@
     {
       "path": "STORIE\\SA_AUTO\\EP_AUTO_48_n8n_selfhosted_attivo_account_locale_no_.md",
       "type": "md",
-      "size_kb": 11.7,
+      "size_kb": 11.5,
       "readable": false,
       "extracts": {}
     },
@@ -6433,14 +6391,14 @@
     {
       "path": "STORIE\\STORIE_INDEX.md",
       "type": "md",
-      "size_kb": 6.0,
+      "size_kb": 5.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "user_matteo.md",
       "type": "md",
-      "size_kb": 2.1,
+      "size_kb": 1.7,
       "readable": false,
       "extracts": {}
     },
@@ -6454,42 +6412,42 @@
     {
       "path": "V32\\BOM\\lista_cnc_120226.md",
       "type": "md",
-      "size_kb": 2.3,
+      "size_kb": 2.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "V32\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 77.5,
+      "size_kb": 79.4,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "V32\\fatti_dalle_storie_2026Q3.md",
       "type": "md",
-      "size_kb": 1.6,
+      "size_kb": 3.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "V32\\NOTE_OFFICINA\\v32_analisi_tecnica_reale.md",
       "type": "md",
-      "size_kb": 12.9,
+      "size_kb": 12.7,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "V32\\NOTE_OFFICINA\\v32_la_mappa_vivente.md",
       "type": "md",
-      "size_kb": 17.3,
+      "size_kb": 17.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "V32\\v32_specifiche.md",
       "type": "md",
-      "size_kb": 4.1,
+      "size_kb": 3.5,
       "readable": false,
       "extracts": {}
     },
@@ -6503,28 +6461,28 @@
     {
       "path": "VITA_NATURA\\CENTRO\\audit_totale_100_domande_vitanatura.md",
       "type": "md",
-      "size_kb": 7.8,
+      "size_kb": 7.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VITA_NATURA\\CENTRO\\brand_bible_vitanatura_storytelling.md",
       "type": "md",
-      "size_kb": 4.5,
+      "size_kb": 4.6,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VITA_NATURA\\CENTRO\\kit_completo_vitanatura_team.md",
       "type": "md",
-      "size_kb": 2.7,
+      "size_kb": 2.5,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VITA_NATURA\\CENTRO\\listino_tecnico_kit_prezzi_opera.md",
       "type": "md",
-      "size_kb": 3.8,
+      "size_kb": 3.7,
       "readable": false,
       "extracts": {}
     },
@@ -6538,28 +6496,28 @@
     {
       "path": "VITA_NATURA\\CENTRO\\opera_1.md",
       "type": "md",
-      "size_kb": 32.6,
+      "size_kb": 32.9,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VITA_NATURA\\CENTRO\\sopralluogo_planimetria_vitanatura.md",
       "type": "md",
-      "size_kb": 4.2,
+      "size_kb": 4.3,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VITA_NATURA\\eva_sistema.md",
       "type": "md",
-      "size_kb": 3.3,
+      "size_kb": 3.1,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VITA_NATURA\\fatti_dalle_storie_2026Q2.md",
       "type": "md",
-      "size_kb": 9.0,
+      "size_kb": 11.0,
       "readable": false,
       "extracts": {}
     },
@@ -6795,7 +6753,7 @@
     {
       "path": "VITA_NATURA\\vita_natura_mappa.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.3,
       "readable": false,
       "extracts": {}
     },
@@ -6816,28 +6774,28 @@
     {
       "path": "VULCAN\\BUILD_REALE_20260622.md",
       "type": "md",
-      "size_kb": 6.3,
+      "size_kb": 6.2,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VULCAN\\vulcan_e_mims.md",
       "type": "md",
-      "size_kb": 3.4,
+      "size_kb": 3.0,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VULCAN\\VULCAN_MANIFESTO.md",
       "type": "md",
-      "size_kb": 7.0,
+      "size_kb": 6.8,
       "readable": false,
       "extracts": {}
     },
     {
       "path": "VULCAN\\VULCAN_MANIFESTO_OPERATIVO_20260318.md",
       "type": "md",
-      "size_kb": 6.6,
+      "size_kb": 6.5,
       "readable": false,
       "extracts": {}
     }

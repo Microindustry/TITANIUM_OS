@@ -94,6 +94,28 @@
 
 ---
 
+## Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi
+
+**Il sapere si connette per significato e gli input migliorano alla fonte. BGE-M3 pronto al tuo click.**
+
+Ripresa: **power-loss** durante la sessione precedente → verificato post-blackout con `check_ecosistema.py` (API/n8n/watchdog vivi, RAG `--probe` OK = HNSW salvo), dashboard 5173 rialzata. Nessuna corruzione stavolta — ma è il 3° campanello: **UPS resta il blocker n°1**.
+
+- [✓] **vault_intersect v3**: i `## Collegati` di Obsidian ora nello **spazio semantico del RAG** (stesso modello, CPU) invece del TF-IDF → i link che navighi SONO i vicini semantici del RAG e rientrano nel linkgraph (graph-expansion migliore). Soglia 0.50 (calibrata sui dati) + **collasso quasi-duplicati** + cross-domain senza boost artificiale; fallback TF-IDF automatico. Verifica flagship `vulcan_e_mims` migliore del TF-IDF. Push `77f49f61`.
+- [✓] **De-hardcode** `setup_obsidian.py` (path MENTE da env). Push `0f9f027a`.
+- [✓] **Pulizia 6 duplicati Config_G** (snapshot auto ripetuti, corpo identico): tenute le 3 sessioni reali s8/s10/s11, coerenza vault rigenerata (0 link penzolanti nei file vivi). Commit MENTE `6caa335`.
+- [✓] **Docling acceso** (venv isolato `~/.venvs/docling`, torch NON toccato): ingest PDF→Markdown **strutturato** (heading/tabelle/OCR) cablato in `pdf_to_memory` (`--engine`) + `chiavetta_ingest`, **fallback pdfplumber garantito**. Verificato: 7 heading vs testo piatto. Push `49bce54f`.
+- [✓] **Ollama acceso** (leva locale ON): già installato+cablato (`NODES/LOCAL_LLM` + `api_server` chat RAG con fallback Claude); girava solo il servizio da attivare. Verificato: genera IT tecnico, 100% GPU.
+- [✓] **Valutazione repo/librerie** (scan 24 top per stelle+licenza): decisi Docling+Ollama (fatti), BGE-M3 (prossimo), LightRAG (pilota). AGPL/GPL esclusi dal repo pubblico.
+- [◐] **BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).
+
+**DA FARE — in ordine (ripresa #68):**
+- [ ] **BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.
+- [ ] **LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.
+- [ ] **COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.
+- [ ] **UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).
+
+---
+
 ## Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata
 
 **Il collo n°1 (PUBBLICAZIONE) parte davvero: profili brandizzati + 8 post in coda.**

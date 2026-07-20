@@ -5,20 +5,10 @@ stagione: AV
 status: ready
 tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 ---
-<!-- TOC -->
-
-- [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
-  - [Come leggere la tabella](#come-leggere-la-tabella)
-  - [Il cammino (caselle 1  57)](#il-cammino-caselle-1-57)
-  - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
-  - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
-
-<!-- /TOC -->
-
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-19 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-20 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*

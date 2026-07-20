@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-19T13:50:42.119927",
-  "active_milestone": "Sessione #66 (19/07): LANCIO SOCIAL. Identita microindustry (logo M oro + banner \"COSTRUIRE MODULO A MODULO\"), IG @microindustry.ms passato a Business, Pagina LinkedIn 136056455. Strategia SPLIT: LinkedIn best-first (V32 manuale lun 20/07), Meta (FB+IG) preambolo in ordine 2/sett. Scaletta 8 post Meta + 10 post Nina programmate in _SOCIAL_QUEUE (JPG rinominate 01-10). Account Nina preparato (foto profilo dal volto PRE_03, bio, coda). Notturno autonomo: generazione EP viva, coda Nina estesa a 10, 3 bozze SISTEMA (MIMS/VULCAN/GENESIS) canon-clean da approvare di giorno.",
-  "next_step": "Matteo: compilare profili IG (microindustry + creare account Nina @ilmondodinina), collegare Pagina FB, programmare i post via Business Suite; lun 20/07 caricare V32 su LinkedIn (PDF pronto). Poi approvare le 3 bozze SISTEMA.",
-  "session_count": 141,
+  "last_update": "2026-07-20T19:30:11.409206",
+  "active_milestone": "Sessione #67 (20/07): ECOSISTEMA. Loop Obsidian<->RAG chiuso (vault_intersect v3: Collegati nello spazio semantico del RAG, soglia 0.50 + dedup quasi-duplicati, fallback TF-IDF). De-hardcode setup_obsidian. Pulizia 6 duplicati Config_G (tenute s8/s10/s11 reali). Docling acceso (venv isolato, ingest PDF->Markdown strutturato/OCR con fallback pdfplumber) cablato in pdf_to_memory+chiavetta_ingest. Ollama leva locale ON (gia' cablata in api_server, girava il servizio). Valutazione 24 repo. BGE-M3 pronto: script one-click SERVICES/rebuild_rag_bge_m3.ps1 + snapshot sicurezza; rebuild GPU dietro UAC (1 click Matteo). LightRAG deferito.",
+  "next_step": "Matteo: doppio-click SERVICES/rebuild_rag_bge_m3.ps1 (UAC, ~15-20min) per attivare BGE-M3 -> poi Claude ricalibra soglia vault_intersect + rigenera Collegati/linkgraph. Poi il COLLO N.1 resta il SOCIAL #67 (profili IG, coda post Meta+Nina, V32 su LinkedIn). LightRAG pilota dopo bge-m3. UPS blocker.",
+  "session_count": 142,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-19T13:37:05.052259"
+      "last_activity": "2026-07-20T19:19:25.311766"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -130,7 +130,14 @@
       "Sessione #62 BACKLOG RAG (attacco #2 dominio 2): #7 fatti_reflux a rotazione trimestrale (fatti_dalle_storie_YYYYQn.md, i trimestri chiusi non cambiano -> zero re-embed, verificato idempotente, 5 monoliti migrati) + #8 demote_dirs opt-in (malus selezione simmetrico al canone, wired night_caroselli/nina_agent/story_agent + /api/rag/search?demote=STORIE) + #6 check_doppioni_copia in night_audit (trova i *_copia accanto all'originale) + #10 daily-note YYYY-MM-DD fuori dall'indice (_is_nav_file). Dominio RAG dell'attacco #2 completo.",
       "Sessione #64 (17/07): Postiz montato fino al bordo (repo tools/postiz-docker-compose, JWT_SECRET generato, config in _VAULT/ACCOUNTS/postiz.md, redirect LinkedIn deciso) + WSL2+Docker Desktop 4.82 installati (manca reboot). + profilo GitHub v2.1: sintesi umana Adesso/Prossimo + dettaglio tecnico a scomparsa (<details>), canon_guard passato, additivo con fallback BRAIN/profile_public.json. + baseline LinkedIn PRE_SG_01 letto: pubblico perfetto (saldatori/metalmecc/Milano valida binario SG \"parla ai pari\"), engagement thin (2 reaz/0 salv) -> leva=hook, formato 4:5 a norma.",
       "Sessione #65 (17/07): POSTIZ montato e VIVO (Docker Desktop 4.82, 8 container sani, UI localhost:4007, admin creato). App LinkedIn microindustry-postiz creata+VERIFICATA (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose (env confermato nel container), prodotti Sign-In OIDC + Share concessi. Errore redirect_uri RISOLTO (2 redirect accettati, diagnosi da URL reale + provider code). BLOCCO su timbro LinkedIn: pubblicare su Pagina richiede scope organization = Community Management API, richiesta e in attesa concessione (muro esterno, non config). Ripresa in 1 click quando concessa. Stack stoppato per la notte (RAM notturne GPU). Stato in _VAULT/ACCOUNTS/postiz.md.",
-      "Sessione #66 (19/07): LANCIO SOCIAL - identita visiva microindustry (logo/banner/kit IG in POSTER/BRAND, rigenerabili via chrome headless), IG Business, strategia SPLIT decisa, scaletta 8 post Meta (PRE_SG_01-04 + EP_SG_01_01/02/03 + EP_SG_02_01) programmata in _SOCIAL_QUEUE con JPG rinominate 01-10 (fix ordine carosello), regola caption hook+domanda+hashtag-primo-commento, tutte canon_guard.scan_public clean. Account Nina preparato (volto PRE_03 -> foto profilo, NINA_IG_PROFILO, coda 10 post ritmo buonanotte mer+dom in _SOCIAL_QUEUE_NINA). Notturno: EP gen verificata viva (bozze SISTEMA+Nina, QC ok), coda Nina estesa auto-promuovendo EP_N2_04/05/06."
+      "Sessione #66 (19/07): LANCIO SOCIAL - identita visiva microindustry (logo/banner/kit IG in POSTER/BRAND, rigenerabili via chrome headless), IG Business, strategia SPLIT decisa, scaletta 8 post Meta (PRE_SG_01-04 + EP_SG_01_01/02/03 + EP_SG_02_01) programmata in _SOCIAL_QUEUE con JPG rinominate 01-10 (fix ordine carosello), regola caption hook+domanda+hashtag-primo-commento, tutte canon_guard.scan_public clean. Account Nina preparato (volto PRE_03 -> foto profilo, NINA_IG_PROFILO, coda 10 post ritmo buonanotte mer+dom in _SOCIAL_QUEUE_NINA). Notturno: EP gen verificata viva (bozze SISTEMA+Nina, QC ok), coda Nina estesa auto-promuovendo EP_N2_04/05/06.",
+      "Sessione #67 (20/07): loop Obsidian<->RAG chiuso - vault_intersect v3 calcola i ## Collegati nello spazio embedding del RAG (stesso modello, CPU) invece del TF-IDF; soglia 0.50 calibrata sui dati + collasso quasi-duplicati (>=0.90) + cross-domain senza boost artificiale; fallback TF-IDF automatico; i link rientrano nel rag_linkgraph -> graph-expansion migliore. Push 77f49f61",
+      "Sessione #67: de-hardcode setup_obsidian.py (MENTE da env). Push 0f9f027a",
+      "Sessione #67: rimossi 6 snapshot Config_G duplicati (corpo umano identico, differivano solo nell'header auto); tenute 3 sessioni reali s8/s10/s11; coerenza vault rigenerata (0 link penzolanti nei file vivi, solo _ARCHIVIO congelato). Commit MENTE 6caa335",
+      "Sessione #67: Docling acceso in venv dedicato ~/.venvs/docling (torch RAG NON toccato) - ingest PDF->Markdown strutturato (heading/tabelle/OCR) cablato in pdf_to_memory (--engine auto|docling|pdfplumber) e chiavetta_ingest, con fallback pdfplumber sempre garantito; verificato 7 heading vs testo piatto. Push 49bce54f",
+      "Sessione #67: Ollama leva locale ON - gia' installato (qwen2.5:7b-instruct-q4_K_M) e cablato dal 05/06 (NODES/LOCAL_LLM + api_server chat RAG con fallback Claude); verificato genera IT tecnico 100% GPU. Nessun codice nuovo, girava solo il servizio da attivare",
+      "Sessione #67: valutazione 24 repo GitHub (stelle+licenza live) - decisi Docling+Ollama (fatti), BGE-M3 embedder (prossimo, MIT), LightRAG pilota; AGPL/GPL esclusi dal repo pubblico",
+      "Sessione #67: BGE-M3 preparato per lo swap - script one-click SERVICES/rebuild_rag_bge_m3.ps1 (parse OK, edita solo EMBED_MODEL, reranker intatto, --rebuild-hard per dim 384->1024, flag -Revert) + snapshot known-good chroma_db_20260720_192437; rebuild GPU esclusivo dietro UAC (Matteo, non-admin+3 watchdog)"
     ],
     "next": "RIPRESA #66: LinkedIn concede Community Management API -> docker compose start -> connetti Pagina microindustry -> test EP_SG_02_01.",
     "target_capannone": "2030-07-15"
@@ -170,5 +177,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a slide_01.jpg"
+  "last_action": "Modifica a EP_AUTO_014.md"
 }

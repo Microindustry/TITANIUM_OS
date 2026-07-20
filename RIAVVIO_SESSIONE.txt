@@ -1,36 +1,37 @@
-=== RIAVVIO SESSIONE #67 — generato 19/07/2026 (fine #66, skill salva) ===
-Ultima sessione: #66 (19/07, Opus 4.8 — LANCIO SOCIAL: identità + scaletta programmata)
+=== RIAVVIO SESSIONE #68 — generato 20/07/2026 (fine #67, skill salva) ===
+Ultima sessione: #67 (20/07, Opus 4.8 — ECOSISTEMA: loop Obsidian↔RAG + Docling/Ollama)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il collo n°1 (PUBBLICAZIONE) è partito. microindustry ha logo + banner + profili
-brandizzati; IG @microindustry.ms è Business. Strategia SPLIT decisa: LinkedIn
-apre best-first (V32, manuale), Meta (FB+IG) fa il preambolo in ordine 2/sett.
-8 post Meta + 10 post Nina sono già impacchettati e pronti da programmare in
-_SOCIAL_QUEUE / _SOCIAL_QUEUE_NINA (JPG rinominate 01-10, descrizione + primo
-commento + data per ognuno). Account Nina preparato (foto dal volto PRE_03, bio, coda).
+Il sapere ora si connette PER SIGNIFICATO: i ## Collegati di Obsidian vivono nello
+spazio semantico del RAG (vault_intersect v3) e rientrano nel linkgraph. Gli input
+migliorano alla fonte: Docling (PDF→Markdown strutturato/OCR, venv isolato) è cablato
+nell'ingest con fallback pdfplumber. Ollama (LLM locale) è acceso e già consumato dalla
+chat RAG. BGE-M3 (il salto embedder) è PRONTO al tuo click: un doppio-click e diventa vivo.
 
-━━━ PRIMO STEP #67 (Matteo, in ordine) ━━━
-1. Profilo IG microindustry: foto = POSTER/BRAND/logo_microindustry.png, nome/bio/
-   categoria da POSTER/BRAND/IG_PROFILO.md. Banner LinkedIn = banner_linkedin.png.
-2. Creare account IG Nina (@ilmondodinina): foto = POSTER/BRAND/nina/nina_profilo.jpg,
-   kit in POSTER/BRAND/nina/NINA_IG_PROFILO.md.
-3. Programmare i post (Business Suite da PC, serve Pagina FB collegata; o app IG):
-   Meta oggi 10:30 PRE_SG_01 poi mar/ven; Nina mer/dom 21:00. Cartelle in _SOCIAL_QUEUE*.
-4. Lun 20/07 10:00: caricare V32 (EP_SG_02_01) su LinkedIn a mano — PDF già pronto.
+━━━ PRIMO STEP #68 (Matteo, in ordine) ━━━
+1. BGE-M3 (1 CLICK TUO): doppio-click SERVICES/rebuild_rag_bge_m3.ps1 → UAC "sì"
+   (~15-20 min, rebuild GPU esclusivo). Snapshot di sicurezza già scattato.
+   Poi Claude ricalibra la soglia vault_intersect per bge-m3 + rigenera Collegati/linkgraph.
+   Rollback se serve: stesso script con -Revert, oppure rag_engine.py --restore-snapshot.
+2. LightRAG: pilota (DOPO bge-m3) — gate di fattibilità/tempo prima di committare.
+3. COLLO N°1 — SOCIAL #67 (aperto da #66, il vero prossimo passo di business):
+   compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post
+   Meta + 10 Nina già in coda (_SOCIAL_QUEUE*), caricare V32 (EP_SG_02_01) su LinkedIn.
+4. UPS (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).
 
-━━━ FATTO IN #66 ━━━
-- Identità microindustry: logo M oro + spark ciano, banner «COSTRUIRE, MODULO A MODULO», kit IG (POSTER/BRAND/)
-- Strategia SPLIT (LinkedIn best-first / Meta preambolo in ordine) + cadenza (Meta mar+ven 10, Nina mer+dom 21)
-- Scaletta 8 post Meta + 10 Nina programmata, JPG rinominate 01-10, caption ottimizzate (hook+domanda+hashtag primo commento), tutte canon-clean
-- Account Nina preparato (volto PRE_03 -> foto profilo pulita, bio buonanotte, coda 10)
-- Analisi post LinkedIn: 2° dato (0 engagement, targeting perfetto) -> conferma leva=hook+chiusura
-- Notturno autonomo: controllo ecosistema (EP gen viva, QC ok), coda Nina estesa auto-promuovendo EP_N2_04/05/06
+━━━ FATTO IN #67 ━━━
+- vault_intersect v3: Collegati nello spazio semantico del RAG (soglia 0.50 + dedup) — push 77f49f61
+- de-hardcode setup_obsidian (MENTE da env) — push 0f9f027a
+- pulizia 6 duplicati Config_G (tenute s8/s10/s11) — commit MENTE 6caa335
+- Docling acceso (venv isolato) cablato in pdf_to_memory + chiavetta_ingest, fallback pdfplumber — push 49bce54f
+- Ollama leva locale ON (già cablata, verificata su GPU)
+- valutazione 24 repo/librerie (Docling+Ollama fatti, BGE-M3 next, LightRAG pilota)
+- BGE-M3 pronto: SERVICES/rebuild_rag_bge_m3.ps1 verificato + snapshot chroma_db_20260720_192437
 
-━━━ DA APPROVARE / APERTI ━━━
-- 3 bozze SISTEMA canon-clean da promuovere DI GIORNO: EP_SG_02_02 MIMS · 02_03 VULCAN · 02_04 GENESIS (estendono Meta ago)
-- Bug: EP_N2_07 «Il Sussurratore» = QC errore (corsia Nina notturna)
-- LinkedIn Community Management API: ancora in review (mail attesa) -> poi Postiz automatizza
-- Meta app (~1h) per automatizzare IG/FB
+━━━ APERTI / BLOCKERS ━━━
+- BGE-M3: 1 click UAC tuo (io non sono admin, 3 watchdog respawnano l'api → corruzione se forzo)
+- Ricalibro soglia vault_intersect per bge-m3 DOPO che l'indice è ricostruito
+- LinkedIn Community Management API: ancora in review (per Postiz automatico)
 - Blockers hardware: UPS, mandrino ER20, martinetto Vevor
 
-━━━ Generato: 19/07/2026 — fine sessione #66 (skill salva) ━━━
+━━━ Generato: 20/07/2026 — fine sessione #67 (skill salva) ━━━
