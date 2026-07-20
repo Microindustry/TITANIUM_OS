@@ -57,8 +57,10 @@
 
 | Post che nomina l'altro | Data | Linka | L'altro è vivo per allora? | Link nel testo |
 |--|--|--|--|--|
-| ⚙️ `PRE_SG_04` (già schedulato) | 28/07 | @ilmondodinina.ms | ✅ Nina già creata | ⚠️ da mettere A MANO in Business Suite |
-| 🌙 `PRE_04` (non ancora schedulato) | 02/08 | @microindustry.ms | ✅ microindustry attivo | ✅ già nella descrizione |
+| ⚙️ `PRE_SG_04` (schedulato 28/07) | 28/07 | @ilmondodinina.ms | ✅ Nina creata | ✅ su **slide 8** + caption → CANCELLA e RICARICA in Business Suite |
+| 🌙 `PRE_04` (schedulato 02/08) | 02/08 | @microindustry.ms | ✅ microindustry attivo | ✅ su **slide 8** + caption → CANCELLA e RICARICA in Business Suite |
+
+*Slide-ponte rigenerate 20/07 (sorgente `_build_*.py` → `_render_slide.py`): la #8 di ciascuno ora mostra l'@handle dell'altro profilo. Entrambe erano già in coda → vanno ricaricate.*
 
 **Bio (cross-link reciproco):**
 - `@microindustry.ms` → riga «🌙 e @ilmondodinina.ms» aggiunta al kit (⚠️ da applicare a mano sul profilo)

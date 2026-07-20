@@ -207,7 +207,7 @@ def build():
   <div class="body2 s2">
     <div class="lead">Questo mondo ha<br>un <span class="pink">fratello</span>.</div>
     <div class="intro">Le storie vere di chi il sistema lo costruisce — l'officina, le notti, le decisioni — vivono in un binario tutto loro, raccontate <span class="soft">con la voce di chi le ha vissute</span>. Senza favola: il diario di bordo.</div>
-    <div class="seal">Due porte, una famiglia: Nina e il Sistema.</div>
+    <div class="seal">Due porte, una famiglia · 👉 <span class="pink">@microindustry.ms</span></div>
   </div>''', SCENES[8]))
 
     slides.append(slide(9, "Perché restare", '''
