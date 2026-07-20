@@ -1,4 +1,4 @@
-# setup_obsidian.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.1 | 2026-07-03
+# setup_obsidian.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.2 | 2026-07-20
 # SETUP del vault Obsidian: porta DENTRO MENTE (il vault) anche le STORIE/episodi che
 # vivono nel repo, cosi Obsidian mostra TUTTO il sapere in un posto solo (conoscenza +
 # racconto + evoluzione). Poi rigenera HOME + indici. Un comando = vault pronto.
@@ -7,6 +7,7 @@
 # li': qui se ne tiene una copia navigabile in Obsidian). Idempotente. Wired nella notturna.
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -17,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 EPISODES_SRC = ROOT / "CONTENT_ENGINE" / "DATABASE" / "episodes"
 EPISODES_JSON = ROOT / "DASHBOARD" / "src" / "data" / "episodes.json"
 MONDO_SRC = ROOT / "CONTENT_ENGINE" / "DATABASE" / "MONDO"
-MENTE = Path("C:/Users/teo/MICROINDUSTRY/MENTE")
+MENTE = Path(os.environ.get("MENTE_DIR", r"C:\Users\teo\MICROINDUSTRY\MENTE"))
 STORIE_DST = MENTE / "STORIE"
 MONDO_DST = MENTE / "KNOWLEDGE" / "MONDO"
 
