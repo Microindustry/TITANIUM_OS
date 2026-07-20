@@ -1,4 +1,4 @@
-# pdf_to_memory.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-05-28
+# pdf_to_memory.py | TITANIUM_OS / AUTOMATIONS / core | v1.2 | 2026-07-20
 # Modulo: Conversore PDF → Memoria Ecosystem
 # Parte di: GENESIS / AUTOMATIONS
 # Input:  TITANIUM_OS/PDF_DROP/*.pdf  (drag & drop) | oppure --file <path>
@@ -37,6 +37,17 @@ try:
 except ImportError:
     logger.error("pdfplumber non installato — esegui: pip install pdfplumber")
     sys.exit(1)
+
+# Docling opzionale (venv dedicato ~/.venvs/docling, torch ISOLATO dal RAG): estrazione PDF
+# strutturata (heading/tabelle/OCR). Se manca -> fallback pdfplumber (mai bloccante).
+try:
+    from AUTOMATIONS.core import docling_extract as _docling
+except Exception:
+    _docling = None
+
+# Motore di estrazione: auto (Docling se c'e', poi pdfplumber) | docling | pdfplumber.
+# Override via env PDF_ENGINE o flag --engine.
+ENGINE = os.environ.get("PDF_ENGINE", "auto")
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 ROOT        = Path(__file__).resolve().parents[2]   # TITANIUM_OS/
@@ -117,6 +128,39 @@ def find_similar_key(base_key: str, db: dict) -> str | None:
             return key
     return None
 
+# ── ESTRAZIONE (Docling con fallback pdfplumber) ──────────────────────────────
+def _pdfplumber_fulltext(pdf_path: Path) -> tuple[str, int]:
+    """Estrazione base pdfplumber: testo per pagina + tabelle grezze. (full_text, n_pagine)."""
+    pages_text = []
+    with pdfplumber.open(pdf_path) as pdf:
+        n_pages = len(pdf.pages)
+        for i, page in enumerate(pdf.pages):
+            raw = page.extract_text() or ""
+            tables = page.extract_tables()
+            table_md = ""
+            for table in tables:
+                if table:
+                    rows = [" | ".join(str(c or "") for c in row) for row in table if row]
+                    table_md += "\n\n**[TABELLA]**\n" + "\n".join(rows)
+            pages_text.append(f"## Pagina {i+1}\n\n{raw.strip()}{table_md}")
+    return "\n\n---\n\n".join(pages_text), n_pages
+
+
+def _extract_fulltext(pdf_path: Path, engine: str = None) -> tuple[str, int]:
+    """(markdown, n_pagine). engine: auto|docling|pdfplumber (default = ENGINE globale).
+    Docling da' markdown STRUTTURATO (heading/tabelle/OCR) -> chunk RAG migliori; fallback
+    SEMPRE garantito su pdfplumber (il PDF non resta mai non-processato)."""
+    engine = engine or ENGINE
+    if engine in ("auto", "docling") and _docling is not None and _docling.is_available():
+        res = _docling.extract(pdf_path)
+        if res and res[0].strip():
+            logger.info("Estrazione: Docling (%d pagine)", res[1])
+            return res
+        if engine == "docling":
+            logger.warning("Docling non ha estratto nulla da %s -> fallback pdfplumber", pdf_path.name)
+    return _pdfplumber_fulltext(pdf_path)
+
+
 # ── CORE: PROCESSA UN PDF ─────────────────────────────────────────────────────
 def process_pdf(pdf_path: Path) -> bool:
     """
@@ -133,22 +177,8 @@ def process_pdf(pdf_path: Path) -> bool:
     logger.info("Processo: %s", pdf_path.name)
 
     try:
-        # ── 1. ESTRAZIONE TESTO ───────────────────────────────────────────────
-        pages_text = []
-        with pdfplumber.open(pdf_path) as pdf:
-            n_pages = len(pdf.pages)
-            for i, page in enumerate(pdf.pages):
-                raw = page.extract_text() or ""
-                # Estrae anche tabelle se presenti
-                tables = page.extract_tables()
-                table_md = ""
-                for table in tables:
-                    if table:
-                        rows = [" | ".join(str(c or "") for c in row) for row in table if row]
-                        table_md += "\n\n**[TABELLA]**\n" + "\n".join(rows)
-                pages_text.append(f"## Pagina {i+1}\n\n{raw.strip()}{table_md}")
-
-        full_text = "\n\n---\n\n".join(pages_text)
+        # ── 1. ESTRAZIONE TESTO (Docling con fallback pdfplumber) ─────────────
+        full_text, n_pages = _extract_fulltext(pdf_path)
 
         # PDF scansionato (immagine): testo vuoto
         if not full_text.strip():
@@ -313,20 +343,7 @@ def process_pdf_to_mente(pdf_path: Path, mente_subdir: str, keep: bool = True) -
     out_dir.mkdir(parents=True, exist_ok=True)
 
     try:
-        pages_text = []
-        with pdfplumber.open(pdf_path) as pdf:
-            n_pages = len(pdf.pages)
-            for i, page in enumerate(pdf.pages):
-                raw = page.extract_text() or ""
-                tables = page.extract_tables()
-                table_md = ""
-                for table in tables:
-                    if table:
-                        rows = [" | ".join(str(c or "") for c in row) for row in table if row]
-                        table_md += "\n\n**[TABELLA]**\n" + "\n".join(rows)
-                pages_text.append(f"## Pagina {i+1}\n\n{raw.strip()}{table_md}")
-
-        full_text = "\n\n---\n\n".join(pages_text)
+        full_text, n_pages = _extract_fulltext(pdf_path)
         if not full_text.strip():
             logger.warning("PDF scansionato (nessun testo estraibile): %s", pdf_path.name)
             return False
@@ -391,7 +408,11 @@ if __name__ == "__main__":
     parser.add_argument("--keep",  action="store_true",    help="Non spostare il PDF originale")
     parser.add_argument("--rag",   action="store_true",    help="Esegui rag-rebuild dopo ingestione")
     parser.add_argument("--watch", action="store_true",    help="Modalità watch su PDF_DROP")
+    parser.add_argument("--engine", choices=["auto", "docling", "pdfplumber"], default=None,
+                        help="Motore estrazione (default: auto -> Docling se disponibile)")
     args = parser.parse_args()
+    if args.engine:
+        ENGINE = args.engine
 
     for d in [PDF_DROP, PROCESSED, ERRORS, KNOWLEDGE]:
         d.mkdir(parents=True, exist_ok=True)

@@ -1,4 +1,4 @@
-# chiavetta_ingest.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.1 | 2026-07-19
+# chiavetta_ingest.py | TITANIUM_OS / CONTENT_ENGINE / scripts | v1.2 | 2026-07-20
 # Rende ATTIVI i documenti utili della chiavetta/Desktop: li estrae in testo, li mappa
 # per dominio e li scrive in MENTE/<dominio>/da_chiavetta/ -> il RAG li indicizza.
 # Cosi la conoscenza ferma su disco (Vita Natura/EVA, MIMS, ASSOLUTO, MIA MENTE) entra
@@ -17,6 +17,16 @@ from datetime import datetime
 
 if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+# Docling opzionale (venv dedicato, torch isolato dal RAG): estrazione PDF strutturata/OCR.
+# Se manca -> fallback pdfplumber. ROOT sul path per importare il modulo condiviso.
+_TI_ROOT = Path(__file__).resolve().parents[2]
+if str(_TI_ROOT) not in sys.path:
+    sys.path.insert(0, str(_TI_ROOT))
+try:
+    from AUTOMATIONS.core import docling_extract as _docling
+except Exception:
+    _docling = None
 
 MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 # Inbox per STATO (non per provenienza): i nuovi import atterrano qui, poi
@@ -78,6 +88,11 @@ def extract_text(p: Path) -> str:
         if ext in (".md", ".txt", ".markdown", ".csv", ".json"):
             return p.read_text(encoding="utf-8", errors="replace")
         if ext == ".pdf":
+            # Docling (venv dedicato): markdown strutturato/OCR. Fallback pdfplumber.
+            if _docling is not None and _docling.is_available():
+                res = _docling.extract(p)
+                if res and res[0].strip():
+                    return res[0]
             import pdfplumber
             out = []
             with pdfplumber.open(str(p)) as pdf:
