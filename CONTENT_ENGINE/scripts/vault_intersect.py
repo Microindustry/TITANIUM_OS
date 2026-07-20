@@ -1,7 +1,16 @@
-# vault_intersect.py | TITANIUM_OS / CONTENT_ENGINE | v2.1 | 2026-06-25
+# vault_intersect.py | TITANIUM_OS / CONTENT_ENGINE | v3.0 | 2026-07-20
 # Interseca il RESTO del vault (KNOWLEDGE, GENESIS, V32, MIMS, VULCAN, FINANZA, ...) come
 # storie_intersect fa per gli episodi: da note isolate a RETE. Inietta i wikilink
 # `## Collegati` -> il grafo di Obsidian connette anche il sapere.
+#
+# v3.0: i legami si calcolano nello SPAZIO SEMANTICO DEL RAG. Ogni nota diventa un vettore
+#   con lo STESSO modello del RAG (paraphrase-multilingual-MiniLM-L12-v2, su CPU per non
+#   contendere la GPU all'API); legame = cosine oltre soglia. Cosi' i Collegati che navighi
+#   in Obsidian SONO i vicini semantici del RAG (trova parentele anche senza parole in
+#   comune) e quegli stessi [[link]] rientrano nel linkgraph -> migliorano la graph-expansion
+#   in query: il loop Obsidian<->RAG si chiude. La firma TF-IDF resta SOLO per l'etichetta
+#   "tema". Fallback automatico a TF-IDF (--engine tfidf) se l'embedder non e' disponibile:
+#   il vault non resta mai senza Collegati.
 #
 # v2.0: i legami si calcolano sul CONTENUTO, non solo sul titolo. Ogni nota diventa un
 #   vettore TF-IDF (nome-file/heading/tag pesati di piu', ma si legge tutto il corpo),
@@ -16,7 +25,7 @@
 #
 # Esclude STORIE/ (le fa setup_obsidian/storie_intersect), gli indici _* e i servizi.
 # Idempotente (blocco fra marker, stessi di v1 -> sovrascrive i legami vecchi).
-# Uso: python CONTENT_ENGINE/scripts/vault_intersect.py [--min-sim 0.06] [--max 8]
+# Uso: python CONTENT_ENGINE/scripts/vault_intersect.py [--engine auto|semantic|tfidf] [--min-sim S] [--max 8]
 
 import os
 import re
@@ -103,15 +112,114 @@ def term_freq(path: Path, text: str) -> collections.Counter:
     return tf
 
 
+# STESSO modello del RAG (rag_engine.EMBED_MODEL) -> stesso spazio semantico. Tenere in sync.
+EMBED_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
+# Soglia cosine densa: calibrata sui dati del vault (mediana coppie ~0.34 = rumore;
+# quantile 0.90 ~0.53). 0.50 tiene solo parentele forti. Il TF-IDF (fallback) resta 0.045.
+SEM_MIN_SIM = 0.50
+# Due candidati con cosine >= questa = la stessa cosa (es. note-sessione duplicate): se ne
+# tiene UNO solo, così i quasi-duplicati non inondano i Collegati scacciando i doc veri.
+DEDUP_SIM = 0.90
+
+
+def _load_embedder():
+    """Carica il modello del RAG su CPU. None su QUALSIASI errore (torch assente, modello
+    non scaricato, ...) -> il chiamante ripiega su TF-IDF. CPU forzata: l'API possiede la GPU."""
+    os.environ.setdefault("RAG_DEVICE", "cpu")
+    try:
+        from sentence_transformers import SentenceTransformer
+        return SentenceTransformer(EMBED_MODEL, device="cpu")
+    except Exception as e:
+        print(f"[vault_intersect] embedder RAG non disponibile ({e}) -> TF-IDF")
+        return None
+
+
+def _note_repr(n) -> str:
+    """Testo rappresentativo di una nota per l'embedding: titolo + incipit del corpo
+    (senza blocco Collegati ne' code). Il modello tronca ~128 token: titolo+incipit = tema."""
+    body = _COLLEGATI_RX.sub("", n["txt"])
+    body = _CODE_RX.sub(" ", body)
+    body = re.sub(r"\s+", " ", body).strip()
+    return f"{n['title']}. {body[:1500]}"
+
+
+def _semantic_sims(notes, embedder):
+    """Similarita' coseno nello spazio del RAG. Salva n['vec'] (serve al dedup dei
+    quasi-duplicati) e ritorna list[dict[j->score]]."""
+    import numpy as np
+    texts = [_note_repr(n) for n in notes]
+    emb = embedder.encode(texts, batch_size=64, normalize_embeddings=True,
+                          show_progress_bar=False)
+    emb = np.asarray(emb, dtype="float32")
+    for i, n in enumerate(notes):
+        n["vec"] = emb[i]
+    S = emb @ emb.T
+    sims_all = []
+    for i in range(len(notes)):
+        row = S[i]
+        sims_all.append({j: float(v) for j, v in enumerate(row) if j != i and v > 0})
+    return sims_all
+
+
+def _is_dup(cand_j, chosen_js, notes) -> bool:
+    """True se la nota cand_j e' quasi-identica (cosine >= DEDUP_SIM) a una gia' scelta.
+    Attivo solo in semantic (dove esiste n['vec']); in TF-IDF ritorna sempre False."""
+    v = notes[cand_j].get("vec")
+    if v is None:
+        return False
+    import numpy as np
+    return any(float(np.dot(v, notes[cj]["vec"])) >= DEDUP_SIM for cj in chosen_js)
+
+
+def _tfidf_sims(notes):
+    """Fallback: similarita' TF-IDF sulla firma n['sig']. Ritorna list[dict[j->score]]."""
+    postings = collections.defaultdict(list)
+    for i, n in enumerate(notes):
+        for w, ww in n["sig"].items():
+            postings[w].append((i, ww))
+    sims_all = [collections.defaultdict(float) for _ in notes]
+    for i, n in enumerate(notes):
+        for w, ww in n["sig"].items():
+            for j, wj in postings[w]:
+                if j != i:
+                    sims_all[i][j] += ww * wj
+    return sims_all
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--min-sim", type=float, default=0.045, help="soglia cosine per creare un legame")
+    ap.add_argument("--engine", choices=["auto", "semantic", "tfidf"], default="auto",
+                    help="auto: prova il RAG (semantic), altrimenti TF-IDF")
+    ap.add_argument("--min-sim", type=float, default=None,
+                    help="soglia cosine per un legame (default: semantic 0.33 / tfidf 0.045)")
     ap.add_argument("--max", type=int, default=10, help="max legami per nota")
     args = ap.parse_args()
 
     if not MENTE.exists():
         print(f"[vault_intersect] MENTE assente: {MENTE}")
         return 1
+
+    # Engine: nello spazio semantico del RAG se disponibile, altrimenti TF-IDF (il vault
+    # non resta mai senza Collegati). 'auto'/'semantic' provano a caricare l'embedder.
+    engine = args.engine
+    embedder = None
+    if engine in ("auto", "semantic"):
+        embedder = _load_embedder()
+        if embedder is not None:
+            engine = "semantic"
+        else:
+            if args.engine == "semantic":
+                print("[vault_intersect] semantic richiesto ma embedder assente -> TF-IDF")
+            engine = "tfidf"
+    if args.min_sim is None:
+        args.min_sim = SEM_MIN_SIM if engine == "semantic" else 0.045
+
+    # Il boost cross-dominio (×1.15) + gli slot riservati erano una stampella TF-IDF: nello
+    # spazio DENSO (tutto 0.5-0.6) ribaltano la classifica e seppelliscono i legami
+    # same-domain più forti (es. VULCAN->VULCAN_MANIFESTO). Il modello trova i ponti da solo,
+    # quindi in semantic si neutralizza il pollice sulla bilancia (bonus 1.0, riserva leggera).
+    cross_bonus = 1.0 if engine == "semantic" else CROSS_BONUS
+    cross_reserve = 2 if engine == "semantic" else CROSS_RESERVE
 
     notes = []
     for p in sorted(MENTE.rglob("*.md")):
@@ -144,44 +252,53 @@ def main():
             df[w] += 1
     idf = {w: math.log(1 + N / c) for w, c in df.items()}
 
-    # firma TF-IDF per nota (top SIG termini), L2-normalizzata -> cosine = prodotto scalare
-    postings = collections.defaultdict(list)   # term -> [(idx, weight)]
-    for i, n in enumerate(notes):
+    # firma TF-IDF per nota (top SIG termini): serve SEMPRE per l'etichetta "tema" dei
+    # legami (le parole condivise che spiegano PERCHE' due note si toccano), a prescindere
+    # dall'engine che decide CHI si collega.
+    for n in notes:
         vec = {w: n["tf"][w] * idf.get(w, 0) for w in n["tf"]}
         top = sorted(vec.items(), key=lambda kv: -kv[1])[:SIG]
         norm = math.sqrt(sum(w * w for _, w in top)) or 1.0
-        sig = {w: w_ / norm for w, w_ in top}
-        n["sig"] = sig
-        for w, ww in sig.items():
-            postings[w].append((i, ww))
+        n["sig"] = {w: w_ / norm for w, w_ in top}
+
+    # CHI si collega: engine semantico (embedding del RAG) o TF-IDF (fallback). Il RAG
+    # decide le parentele per SIGNIFICATO; la firma TF-IDF sopra spiega solo il "tema".
+    if engine == "semantic":
+        sims_all = _semantic_sims(notes, embedder)
+    else:
+        sims_all = _tfidf_sims(notes)
 
     total = 0
     connesse = 0
     cross_total = 0
     orfani = []
     for i, n in enumerate(notes):
-        sims = collections.defaultdict(float)
-        for w, ww in n["sig"].items():
-            for j, wj in postings[w]:
-                if j != i:
-                    sims[j] += ww * wj
+        sims = sims_all[i]
         # premia i ponti cross-dominio + riserva qualche slot ai migliori legami verso
         # ALTRI domini, così ogni nota esce dal suo cluster (ecosistema, non zone).
         scored = []
         for j, s in sims.items():
             cross = notes[j]["domain"] != n["domain"]
-            s *= (CROSS_BONUS if cross else 1.0)
+            s *= (cross_bonus if cross else 1.0)
             if s >= args.min_sim:
                 scored.append((s, cross, j))
         scored.sort(key=lambda x: -x[0])
-        cross_first = [t for t in scored if t[1]][:CROSS_RESERVE]   # i migliori ponti, garantiti
-        chosen = list(cross_first)
-        for t in scored:
+        # scelta con collasso dei quasi-duplicati: prima i ponti cross-dominio garantiti,
+        # poi i migliori restanti; mai due volte "la stessa" nota (dedup su n['vec']).
+        chosen, chosen_js = [], []
+        for t in [x for x in scored if x[1]]:          # ponti cross-dominio, i migliori
+            if len(chosen) >= cross_reserve:
+                break
+            if _is_dup(t[2], chosen_js, notes):
+                continue
+            chosen.append(t); chosen_js.append(t[2])
+        for t in scored:                                # riempi coi migliori in assoluto
             if len(chosen) >= args.max:
                 break
-            if t not in chosen:
-                chosen.append(t)
-        top = [(s, j) for s, _c, j in sorted(chosen[:args.max], key=lambda x: -x[0])]
+            if t in chosen or _is_dup(t[2], chosen_js, notes):
+                continue
+            chosen.append(t); chosen_js.append(t[2])
+        top = [(s, j) for s, _c, j in sorted(chosen, key=lambda x: -x[0])]
 
         righe = []
         for s, j in top:
@@ -213,6 +330,7 @@ def main():
         ORPHANS_F.parent.mkdir(parents=True, exist_ok=True)
         ORPHANS_F.write_text(json.dumps({
             "generated": datetime.now().isoformat(timespec="seconds"),
+            "engine": engine,
             "soglia": args.min_sim,
             "n_note": N,
             "n_orfani": len(orfani),
@@ -222,7 +340,7 @@ def main():
         print(f"[vault_intersect] avviso: vault_orphans.json non scritto ({e})")
 
     pct = (100 * cross_total / total) if total else 0
-    print(f"VAULT INTERSECT v2: {N} note di sapere · {total} legami "
+    print(f"VAULT INTERSECT v3 [{engine}]: {N} note di sapere · {total} legami "
           f"({cross_total} cross-dominio = {pct:.0f}%) · {connesse} connesse · {N - connesse} isolate (soglia {args.min_sim})")
     return 0
 

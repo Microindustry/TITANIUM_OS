@@ -1,20 +1,27 @@
 {
-  "generated": "2026-07-19T02:09:56",
-  "soglia": 0.045,
-  "n_note": 336,
-  "n_orfani": 2,
+  "generated": "2026-07-20T14:05:48",
+  "engine": "semantic",
+  "soglia": 0.5,
+  "n_note": 334,
+  "n_orfani": 3,
   "orfani": [
     {
-      "stem": "human_centeredness_in_translation",
-      "title": "Human-centeredness in translation",
+      "stem": "joint_optimization_of_radio_and_computational_resources_for_",
+      "title": "Joint Optimization of Radio and Computational Resources for Multicell Mobile-Edg",
       "domain": "KNOWLEDGE",
-      "rel": "KNOWLEDGE/RESEARCH/GENESIS/human_centeredness_in_translation.md"
+      "rel": "KNOWLEDGE/RESEARCH/mims/joint_optimization_of_radio_and_computational_resources_for_.md"
     },
     {
-      "stem": "quantum_espresso_a_modular_and_open_source_software_project_",
-      "title": "QUANTUM ESPRESSO: a modular and open-source software project for quantum simulat",
+      "stem": "mathematical_model_and_methodology_of_express_assessment_cri",
+      "title": "Mathematical model and methodology of express assessment crisis-deformed state o",
       "domain": "KNOWLEDGE",
-      "rel": "KNOWLEDGE/RESEARCH/GENESIS/quantum_espresso_a_modular_and_open_source_software_project_.md"
+      "rel": "KNOWLEDGE/RESEARCH/V32/mathematical_model_and_methodology_of_express_assessment_cri.md"
+    },
+    {
+      "stem": "2026-06-25_hermes-obsidian-memory",
+      "title": "Sessione 2026-06-25 — Obsidian come memoria long-term di un agente (pattern Herm",
+      "domain": "SESSIONI",
+      "rel": "SESSIONI/2026-06-25_hermes-obsidian-memory.md"
     }
   ]
 }
