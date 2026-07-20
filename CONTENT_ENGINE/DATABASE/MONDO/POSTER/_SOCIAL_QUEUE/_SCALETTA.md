@@ -1,17 +1,16 @@
-# _SOCIAL_QUEUE — coda programmazione Meta (Facebook + Instagram)
-*Generato 2026-07-19. JPG rinominate 01->10 = ordine carosello corretto per il drag-and-drop.*
-*Ogni cartella: slide_01..10.jpg + descrizione.txt + primo_commento.txt + _INFO.txt*
+# _SOCIAL_QUEUE — coda Meta (@microindustry.ms) · mar+ven 10:00
+*Date ORIGINALI. STATO verificato su Business Suite (screenshot 20/07/2026): programmato FINO A V32 (EP_SG_02_01, 11/08); oltre = da programmare.*
 
-| # | Post | Data · ora | Cartella |
-|---|---|---|---|
-| 1 | PRE_SG_01 | dom 19/07/2026 10:30 | `01_PRE_SG_01/` |
-| 2 | PRE_SG_02 | mar 21/07/2026 10:00 | `02_PRE_SG_02/` |
-| 3 | PRE_SG_03 | ven 24/07/2026 10:00 | `03_PRE_SG_03/` |
-| 4 | PRE_SG_04 | mar 28/07/2026 10:00 | `04_PRE_SG_04/` |
-| 5 | EP_SG_01_01 | ven 31/07/2026 10:00 | `05_EP_SG_01_01/` |
-| 6 | EP_SG_01_02 | mar 04/08/2026 10:00 | `06_EP_SG_01_02/` |
-| 7 | EP_SG_01_03 | ven 07/08/2026 10:00 | `07_EP_SG_01_03/` |
-| 8 | EP_SG_02_01 | mar 11/08/2026 10:00 | `08_EP_SG_02_01/` |
-| 09 | EP_SG_02_02 | ven 14/08/2026 10:00 | 09_EP_SG_02_02/ |
-| 10 | EP_SG_02_03 | mar 18/08/2026 10:00 | 10_EP_SG_02_03/ |
-| 11 | EP_SG_02_04 | ven 21/08/2026 10:00 | 11_EP_SG_02_04/ |
+| # | Post | Data · ora | STATO | Cartella |
+|---|---|---|---|---|
+| 1 | PRE_SG_01 | dom 19/07/2026 10:30 | ✅ programmato | `PRE_SG_01` |
+| 2 | PRE_SG_02 | mar 21/07/2026 10:00 | ✅ programmato | `PRE_SG_02` |
+| 3 | PRE_SG_03 | ven 24/07/2026 10:00 | ✅ programmato | `PRE_SG_03` |
+| 4 | PRE_SG_04 | mar 28/07/2026 10:00 | ✅ programmato | `PRE_SG_04` |
+| 5 | EP_SG_01_01 | ven 31/07/2026 10:00 | ✅ programmato | `EP_SG_01_01` |
+| 6 | EP_SG_01_02 | mar 04/08/2026 10:00 | ✅ programmato | `EP_SG_01_02` |
+| 7 | EP_SG_01_03 | ven 07/08/2026 10:00 | ✅ programmato | `EP_SG_01_03` |
+| 8 | EP_SG_02_01 | mar 11/08/2026 10:00 | ✅ programmato | `EP_SG_02_01` |
+| 9 | EP_SG_02_02 | ven 14/08/2026 10:00 | 🔲 da programmare | `EP_SG_02_02` |
+| 10 | EP_SG_02_03 | mar 18/08/2026 10:00 | 🔲 da programmare | `EP_SG_02_03` |
+| 11 | EP_SG_02_04 | ven 21/08/2026 10:00 | 🔲 da programmare | `EP_SG_02_04` |

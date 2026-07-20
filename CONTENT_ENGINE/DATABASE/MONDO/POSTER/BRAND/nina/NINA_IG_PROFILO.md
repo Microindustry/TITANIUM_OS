@@ -20,7 +20,7 @@
 `POSTER/BRAND/nina/nina_profilo.jpg` (volto Nina dalla copertina PRE_03, ritagliato tondo-safe).
 
 ## Handle (da creare — scegli tu + verifica disponibilità)
-1. **@ilmondodinina**  ← consigliato (dice cos'è)
+1. **@ilmondodinina.ms**  ← consigliato (dice cos'è)
 2. @mondodinina
 3. @nina.avventura
 4. @nina.impara
@@ -38,10 +38,11 @@ Il Mondo di Nina
 
 ## Biografia (max 150)
 ```
-🌙 Una favola della buonanotte che, di nascosto, insegna come funziona il mondo.
-Atomi & Bit, tutto vero.
+🌙 Favola della buonanotte che insegna come funziona il mondo.
+Atomi & Bit, tutto vero · @microindustry.ms
 Si impara con le mani ✨🔧
 ```
+*(~126 caratteri. L'@mention è la porta gemella tappabile verso il sistema reale.)*
 
 ## Link in bio
 Cross-link alla porta gemella: **@microindustry.ms**

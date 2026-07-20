@@ -5,7 +5,7 @@
   - [Tipo account](#tipo-account)
   - [Nome (campo in grassetto, ricercabile  max 30 caratteri)](#nome-campo-in-grassetto-ricercabile-max-30-caratteri)
   - [Categoria](#categoria)
-  - [Biografia (max 150 caratteri)  versione CHIARA (no sigle)](#biografia-max-150-caratteri-versione-chiara-no-sigle)
+  - [Biografia (max 150 caratteri)  versione CHIARA (no sigle)  cross-link Nina](#biografia-max-150-caratteri-versione-chiara-no-sigle-cross-link-nina)
   - [Link in bio](#link-in-bio)
   - [Contatto (opzionale, mostra il pulsante Email)](#contatto-opzionale-mostra-il-pulsante-email)
   - [Primo post (split: IG parte in ordine dal preambolo)](#primo-post-split-ig-parte-in-ordine-dal-preambolo)
@@ -31,17 +31,18 @@ microindustry · macchine CNC
 ## Categoria
 **Science, Technology & Engineering**  *(alt: Product/Service)*
 
-## Biografia (max 150 caratteri) — versione CHIARA (no sigle)
+## Biografia (max 150 caratteri) — versione CHIARA (no sigle) + cross-link Nina
 ```
 🔧 Costruisco macchine utensili a mano
-🤖 con un socio AI, ogni giorno
-🚧 15 anni d'officina · un pezzo alla volta
+🤖 con un socio AI · 15 anni d'officina
+🌙 e @ilmondodinina.ms, per i più piccoli
 ```
+*(~114 caratteri. L'@mention di Nina è tappabile: è la "porta gemella".)*
 
 ## Link in bio
 Pagina LinkedIn (cross-link tra i canali):
 `https://www.linkedin.com/company/136056455`
-*(dopo: sito o Linktree con LinkedIn + GitHub + email)*
+*(dopo: Linktree con LinkedIn + GitHub + email + **@ilmondodinina.ms**)*
 
 ## Contatto (opzionale, mostra il pulsante “Email”)
 `benenatimatteo.mb@gmail.com`  *(tua scelta se esporlo)*
