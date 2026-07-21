@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-21  17 commit](#2026-07-21-17-commit)
   - [2026-07-19  3 commit](#2026-07-19-3-commit)
   - [2026-07-17  30 commit](#2026-07-17-30-commit)
   - [2026-07-16  22 commit](#2026-07-16-22-commit)
@@ -36,6 +37,29 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-21 · 17 commit
+- `00570ea4` auto: night_audit - cartella clinica 21/07/2026
+- `976bac8c` auto: story_agent - episodi generati 21/07/2026
+- `ee7bcbad` docs(social): messaggi outreach DM (_MESSAGGI_OUTREACH.md) + riferimento in RIAVVIO
+- `67ca5edf` chore(salva): chiusura #67b — lancio social 18/21, Matteo via 7gg
+- `a09e6e83` chore(caroselli): riorganizza — EP_N2_04/05/06 da _BOZZE a NINA (sono in coda)
+- `6fad3c70` feat(caroselli): slide-ponte con @handle cross-profilo (PRE_04 + PRE_SG_04)
+- `070b8d1c` feat(social): lancio #67 — Pagina Nina + 20 post programmati, STATO tracciato
+- `ba747ef1` chore(salva): chiusura #67 — loop Obsidian↔RAG semantico + Docling/Ollama accesi
+- `49bce54f` feat(ingest): Docling PDF->Markdown strutturato (venv isolato) con fallback pdfplumber
+- `3f24e8f6` chore(audit): aggiorna vault_orphans post-dedup Config_G (3 orfani)
+- `0f9f027a` fix(paths): de-hardcode MENTE in setup_obsidian.py (MENTE_DIR + fallback)
+- `77f49f61` feat(vault): vault_intersect v3 — Collegati Obsidian nello spazio semantico del RAG
+- `8e32e2b4` chore(salva): checkpoint pre-riavvio completo macchina
+- `8667554a` chore: check_ecosistema.py (verifica live post-riavvio) + stato runtime
+- `cb5e1a85` feat(caroselli): promosse 3 bozze SISTEMA (MIMS/VULCAN/GENESIS) + coda Meta a 11
+- `61f61ecb` fix(ingest): chiavetta_ingest ignora i duplicati Windows "- Copia"/"- Copy"
+- `a3e31544` chore(salva): #66b regola 2-righe-notturne + kit IG (TOC) + protocollo CLAUDE.md
+
+_episodi: 286 · critiche aperte: 18 (183 risolte) · RAG: 20383 chunk_
+
+
 
 ## 2026-07-19 · 3 commit
 - `66b9ae2d` chore(salva): #66 lancio social — identità microindustry + scaletta Meta/Nina programmata
