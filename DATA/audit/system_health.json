@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-19T00:23:51",
-  "date": "2026-07-19",
-  "git_head": "84554825",
-  "rag_chunks": 19952,
-  "n_episodes": 276,
-  "n_commits_7d": 99,
+  "last_audit": "2026-07-21T03:52:42",
+  "date": "2026-07-21",
+  "git_head": "976bac8c",
+  "rag_chunks": 20383,
+  "n_episodes": 286,
+  "n_commits_7d": 93,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,39 +14,81 @@
   },
   "log_issues": [
     {
-      "log": "vault MENTE",
-      "tipo": "doppione _copia",
-      "riga": "FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)",
-      "data": "2026-07-19"
+      "log": "night_research.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-07-21 03:40:32 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s",
+      "data": "2026-07-21"
     },
     {
-      "log": "vault MENTE",
-      "tipo": "doppione _copia",
-      "riga": "KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)",
-      "data": "2026-07-19"
+      "log": "night_research.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-07-21 03:40:53 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-07-21 03:40:53 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-07-21 03:39:10 [research_agent      ] INFO     openalex -> 0 risultati",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-07-21 03:39:11 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-07-21 03:39:35 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "timeout di rete",
+      "riga": "2026-07-21 03:39:58 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "story_agent_run.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.",
+      "data": "2026-07-21"
+    },
+    {
+      "log": "_CANONE.md",
+      "tipo": "serie oltre il canone dichiarato",
+      "riga": "su disco EP_N2_58, il canone dichiara EP_N2_56: aggiornare _CANONE.md",
+      "data": "2026-07-21"
     }
   ],
-  "vault_orphans": 2,
+  "vault_orphans": 3,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 10,
+    "file_age_days": 12,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 1,
-    "max_ep_disco": 56,
+    "canone_age_days": 0,
+    "max_ep_disco": 58,
     "max_ep_canone": 56
   },
   "organi_vivi": {
-    "nina-loop": 1.9,
-    "snapshot RAG": 1.9,
-    "inventario notturno": 1.8,
-    "retention disco": 1.8,
-    "AI news watcher": 1.9,
-    "daily brief": 0.0,
-    "riflusso FATTI": 1.9
+    "nina-loop": 0.0,
+    "snapshot RAG": 0.0,
+    "inventario notturno": 2.0,
+    "retention disco": 0.1,
+    "AI news watcher": 0.0,
+    "daily brief": 1.6,
+    "riflusso FATTI": 0.1
   },
   "pip_audit": {
     "vulns": 0,
@@ -54,15 +96,15 @@
     "packages": []
   },
   "qc_episodi": {
-    "checked": 56,
+    "checked": 58,
     "structure_fail": 0,
-    "open_loop_missing": 30
+    "open_loop_missing": 31
   },
   "critiche": {
     "added": 6,
     "auto_closed": 12,
-    "total": 195,
-    "open": 24
+    "total": 201,
+    "open": 18
   },
   "verdict": "ATTENZIONE"
 }
