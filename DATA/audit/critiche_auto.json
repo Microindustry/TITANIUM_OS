@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-ef020f2867",
+    "date": "2026-07-22",
+    "git": "02fd7478",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Il canone dichiarato e il disco sono disallineati: log 22/07 \"su disco EP_N2_59, il canone dichiara EP_N2_56: aggiornare _CANONE.md\". Con 3 episodi non registrati nel canone e canon_violations=4, il tabellone di riferimento non riflette lo stato reale. Questo rischia di far rigenerare episodi già esistenti o saltare la numerazione nelle prossime sessioni di produzione.",
+    "azione": "Al rientro (30/07), prima di qualsiasi produzione Nina: aprire _CANONE.md, aggiornare max_ep da 56 a 59, verificare che EP_N2_57/58/59 abbiano scheda completa. Azzerare le 4 canon_violations rimaste.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-22"
+  },
+  {
+    "id": "AUD-ba7ecc3927",
+    "date": "2026-07-22",
+    "git": "02fd7478",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Nella stessa sessione di ricerca, arxiv ha restituito un timeout di rete: log 03:39:30 \"[arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)\". Il timeout a 15s è troppo stretto per export.arxiv.org nelle ore notturne. Combinato con il 429 su Semantic Scholar, la ricerca notturna del 22/07 ha operato con almeno due sorgenti primarie su tre degradate.",
+    "azione": "Aumentare il read timeout arxiv a 30-45s nel config del research_agent. Aggiungere un contatore di sorgenti-ok per notte nel report mattutino: se < 2 sorgenti attive, emettere un WARNING aggregato anziché log sparsi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-22"
+  },
+  {
+    "id": "AUD-ab6899ae2d",
+    "date": "2026-07-22",
+    "git": "02fd7478",
+    "area": "ROADMAP",
+    "severity": "alta",
+    "finding": "L'UPS (~50-80€) è in lista blockers da almeno 2 sessioni, la corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni, e Matteo parte stasera per 7 giorni lasciando il sistema in autonomia completa. Se si verifica un quarto episodio durante l'assenza, non c'è presidio per il ripristino e i 20.533 chunk RAG sono a rischio. L'acquisto non è rimandabile a dopo il mare: può essere ordinato online oggi in pochi minuti prima della partenza.",
+    "azione": "Ordinare l'UPS online prima di partire stasera (es. Amazon con consegna al rientro 29-30/07). In parallelo: eseguire uno snapshot manuale del chroma_db adesso, così il rollback è disponibile anche senza UPS per i prossimi 7 giorni.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-22"
+  },
+  {
+    "id": "AUD-87be8c89e6",
+    "date": "2026-07-22",
+    "git": "02fd7478",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna del 22/07 è cieca su Semantic Scholar: due query distinte colpiscono il rate-limit anonimo e restituiscono zero risultati. Log 03:39:14: \"[semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu\" → \"semantic_scholar -> 0 risultati\". Log 03:41:51: \"[semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025\" → \"semantic_scholar -> 0 risultati\". La chiave API gratuita è già in lista blockers da sessioni precedenti: il problema è strutturale e si ripete ogni notte.",
+    "azione": "Al rientro (30/07): inserire SEMANTIC_SCHOLAR_API_KEY nel .env — azione già identificata come blocker, richiede solo esecuzione. Verificare poi nei log del 31/07 che i 429 scompaiano e i risultati tornino > 0.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-22"
+  },
+  {
+    "id": "AUD-82fec36b5f",
+    "date": "2026-07-22",
+    "git": "02fd7478",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "story_agent gira senza token HF autenticato: log 22/07 \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Con Matteo assente 7 giorni, il rischio è che HF Hub imponga rate-limit sui download notturni e blocchi la generazione episodi — l'unica pipeline automatica attiva in questo periodo.",
+    "azione": "Aggiungere HF_TOKEN al .env prima della partenza (o delegare al sistema: il token è già disponibile nell'account HF di Matteo). Non richiede codice, solo una riga nel file di configurazione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-22"
+  },
+  {
+    "id": "AUD-7da3f651a4",
+    "date": "2026-07-22",
+    "git": "02fd7478",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi vitali risultano spenti (score 0.0): nina-loop, snapshot RAG, AI news watcher. Con Matteo assente 7 giorni e nessun presidio manuale, un guasto non rilevato su nina-loop o snapshot RAG in questo intervallo non verrà scoperto fino al 29/07. In particolare, lo snapshot RAG a 0.0 lascia il database HNSW senza punto di ripristino — e la corruzione da power-loss è già avvenuta 3 volte in 2 giorni secondo i blockers.",
+    "azione": "Prima della partenza: verificare perché i tre organi hanno score 0.0 (processo crashato, servizio non avviato, o check_ecosistema non li vede). Priorità assoluta sullo snapshot RAG: se l'UPS non è ancora installato, almeno uno snapshot manuale pre-partenza garantisce un punto di rollback per i 7 giorni.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-22"
+  },
+  {
     "id": "AUD-f1fadc59ff",
     "date": "2026-07-21",
     "git": "976bac8c",
@@ -152,8 +224,10 @@
     "finding": "Su 56 episodi controllati, 30 mancano dell'open-loop (qc_episodi: open_loop_missing=30, ovvero il 54%). L'open-loop è il gancio che trascina il lettore all'episodio successivo: con Postiz quasi operativo e EP_SG_02_01 pronto per il test LinkedIn, pubblicare episodi senza open-loop significa sprecare la distribuzione appena sbloccata.",
     "azione": "Prima di pubblicare EP_SG_02_01 come secondo test LinkedIn, verificare che quell'episodio specifico abbia l'open-loop. Poi aprire un task batch per aggiungere l'open-loop ai 30 mancanti: è lavoro per l'apprendista notturno, non per Matteo.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-17"
+    "status": "resolved",
+    "last_seen": "2026-07-17",
+    "resolved_on": "2026-07-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-e7aac92587",
@@ -164,8 +238,10 @@
     "finding": "Il rischio di corruzione HNSW da power-loss è ancora aperto e dichiarato ricorrente (3 volte in 2 giorni nei blockers). Nessun log_issue lo registra stanotte, ma l'UPS da 50-80€ non è stato ordinato. Ogni boot senza UPS è un tentativo: con la GPU notturna attiva e lo stack Docker, un'altra caduta di corrente ricostruisce l'indice RAG da zero e blocca la sessione successiva.",
     "azione": "Ordinare l'UPS oggi insieme al mandrino ER20: sono entrambi acquisti sotto i 100€ che sbloccano rispettivamente GENESIS (continuità RAG) e MIMS (fresatura stampi). Raggrupparli in un unico ordine elimina un'altra sessione di setup.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-17"
+    "status": "resolved",
+    "last_seen": "2026-07-17",
+    "resolved_on": "2026-07-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ca4e681866",
@@ -176,8 +252,10 @@
     "finding": "La decisione MIMS Via B (connettori VULCAN, presa il 24/06) non ha ancora prodotto né il ricalcolo BEP sul tooling né la bozza B2 aggiornata, e il prerequisito fisico (martinetto Vevor) è fermo. Il pillar MIMS è al 30%: con V32 al 65% e GENESIS al 70%, MIMS rischia di diventare il collo strutturale del progetto industriale mentre l'attenzione è tutta su Postiz. La prima colata del giunto sblocca dati reali che oggi mancano al business case.",
     "azione": "Fissare nella bussola una data concreta per il montaggio Vevor (prerequisito zero-cost, martinetto già in casa): anche solo 2 ore dedicate aprono la corsia MIMS e permettono di ricalcolare il BEP su dati veri invece di stime.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-17"
+    "status": "resolved",
+    "last_seen": "2026-07-17",
+    "resolved_on": "2026-07-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7d7b3cc10d",
@@ -188,8 +266,10 @@
     "finding": "La ricerca notturna è cieca su Semantic Scholar: due query distinte falliscono con 429 e restituiscono zero risultati. Log 2026-07-17: \"2026-07-17 03:38:52 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"2026-07-17 03:39:16 [research_agent] INFO semantic_scholar -> 0 risultati\"; identico pattern su night_research.log alle 03:40. Senza API key autenticata il rate-limit anonimo è 1 req/s condiviso: la sorgente accademica è di fatto spenta ogni notte.",
     "azione": "Inserire SEMANTIC_SCHOLAR_API_KEY nel .env (chiave gratuita, richiesta in 5 minuti su semanticscholar.org/product/api): è già in lista blockers, va eseguito prima della prossima run notturna per sbloccare entrambi gli agenti.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-17"
+    "status": "resolved",
+    "last_seen": "2026-07-17",
+    "resolved_on": "2026-07-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-5845b5bb27",
@@ -200,8 +280,10 @@
     "finding": "Tre organi vitali registrano health=0.0 (nina-loop, snapshot RAG, AI news watcher) e uno è a 0.1 (riflusso FATTI). Non ci sono log_issues che spieghino le cause stanotte, ma quattro organi su sette non hanno girato: se il pattern si consolida, il sistema produce senza memoria aggiornata e senza segnali dal mercato.",
     "azione": "Al riavvio #66 verificare i task scheduler dei quattro organi (exit code, log di avvio): identificare se il problema è il boot-storm post-sleep (già visto il 13/07, risolto con RandomDelay) oppure una regressione. Priorità: nina-loop e snapshot RAG perché alimentano la produzione di episodi.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-17"
+    "status": "resolved",
+    "last_seen": "2026-07-17",
+    "resolved_on": "2026-07-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-354ae9af15",
@@ -212,8 +294,10 @@
     "finding": "Due file _copia sono ancora nell'indice e rubano slot RRF nelle query. Log vault MENTE 2026-07-17: \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)\" e \"KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'originale — si rubano slot RRF (fondere o archiviare)\". La sentinella doppioni esiste (commit 928d1889) e li ha rilevati: il ciclo si chiude solo con la rimozione.",
     "azione": "Aprire i due file, verificare che non contengano delta rispetto all'originale, quindi cancellarli o archiviarli fuori dal vault. Operazione da 5 minuti: eseguire prima del prossimo rebuild indice per non ri-embeddare i duplicati.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-17"
+    "status": "resolved",
+    "last_seen": "2026-07-17",
+    "resolved_on": "2026-07-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-d8016a5f59",
