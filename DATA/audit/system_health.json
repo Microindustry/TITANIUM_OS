@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-22T03:52:38",
-  "date": "2026-07-22",
-  "git_head": "02fd7478",
-  "rag_chunks": 20533,
-  "n_episodes": 288,
-  "n_commits_7d": 80,
+  "last_audit": "2026-07-23T03:52:42",
+  "date": "2026-07-23",
+  "git_head": "22177dac",
+  "rag_chunks": 20697,
+  "n_episodes": 290,
+  "n_commits_7d": 60,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -16,75 +16,75 @@
     {
       "log": "night_research.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-22 03:41:28 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:40:49 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s",
+      "data": "2026-07-23"
     },
     {
       "log": "night_research.log",
       "tipo": "errore esplicito",
-      "riga": "2026-07-22 03:41:51 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:41:11 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
+      "data": "2026-07-23"
     },
     {
       "log": "night_research.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-07-22 03:41:51 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:41:11 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-07-23"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "timeout di rete",
+      "riga": "2026-07-23 03:41:27 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "data": "2026-07-23"
     },
     {
       "log": "research_agent.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-22 03:39:14 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:38:52 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-23"
     },
     {
       "log": "research_agent.log",
       "tipo": "errore esplicito",
-      "riga": "2026-07-22 03:39:14 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:39:15 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-07-23"
     },
     {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-07-22 03:39:14 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:39:15 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
+      "data": "2026-07-23"
     },
     {
       "log": "research_agent.log",
       "tipo": "timeout di rete",
-      "riga": "2026-07-22 03:39:30 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
-      "data": "2026-07-22"
+      "riga": "2026-07-23 03:40:00 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "data": "2026-07-23"
     },
     {
       "log": "story_agent_run.log",
       "tipo": "rate-limit sorgente",
       "riga": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.",
-      "data": "2026-07-22"
-    },
-    {
-      "log": "rag_engine.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-21 04:31:57 [rag_engine          ] INFO     Linkgraph: 429 note con link, 5326 archi (vault completo, risolti)",
-      "data": "2026-07-21"
+      "data": "2026-07-23"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
-      "riga": "su disco EP_N2_59, il canone dichiara EP_N2_56: aggiornare _CANONE.md",
-      "data": "2026-07-22"
+      "riga": "su disco EP_N2_60, il canone dichiara EP_N2_56: aggiornare _CANONE.md",
+      "data": "2026-07-23"
     }
   ],
   "vault_orphans": 3,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 13,
+    "file_age_days": 14,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
     "canone_age_days": 0,
-    "max_ep_disco": 59,
+    "max_ep_disco": 60,
     "max_ep_canone": 56
   },
   "organi_vivi": {
@@ -94,7 +94,7 @@
     "retention disco": 1.0,
     "AI news watcher": 0.0,
     "daily brief": 0.8,
-    "riflusso FATTI": 1.1
+    "riflusso FATTI": 2.1
   },
   "pip_audit": {
     "vulns": 0,
@@ -102,15 +102,15 @@
     "packages": []
   },
   "qc_episodi": {
-    "checked": 59,
+    "checked": 60,
     "structure_fail": 0,
     "open_loop_missing": 31
   },
   "critiche": {
     "added": 6,
-    "auto_closed": 6,
-    "total": 207,
-    "open": 18
+    "auto_closed": 0,
+    "total": 213,
+    "open": 24
   },
   "verdict": "ATTENZIONE"
 }

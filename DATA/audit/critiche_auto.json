@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-ccfdea5a07",
+    "date": "2026-07-23",
+    "git": "22177dac",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il todo BGE-M3 è pronto al click da almeno 3 giorni (snapshot scattato, script verificato) ma resta bloccato in attesa di Matteo. Ogni notte di story_agent e vault_intersect che gira ancora su embedding legacy produce collegamenti semantici di qualità inferiore, e il costo del rebuild cresce con i chunk (già 20.697). Sette giorni di assenza aggravano il ritardo: al rientro ci sarà anche il carico dei 3 post da caricare e il canone da aggiornare.",
+    "azione": "Calendarizzare BGE-M3 come prima azione tecnica al rientro del 29/07, prima di qualsiasi altra attività RAG; lo script è già pronto e il rollback è garantito dallo snapshot esistente.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-23"
+  },
+  {
+    "id": "AUD-9b494ae379",
+    "date": "2026-07-23",
+    "git": "22177dac",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "31 episodi su 60 controllati mancano di open_loop (open_loop_missing=31, 52%). Il campo open_loop è il gancio narrativo che alimenta l'engagement nei caroselli; episodi senza di esso entrano nel RAG come contenuto piatto e, se promossi, producono post senza call-to-action. Il problema è sistematico, non sporadico.",
+    "azione": "Aggiungere al QC notturno un flag esplicito che metta in quarantena gli episodi con open_loop_missing prima che raggiungano la coda caroselli; prioritizzare la correzione manuale sugli episodi già in coda social.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-23"
+  },
+  {
+    "id": "AUD-5d9f0db588",
+    "date": "2026-07-23",
+    "git": "22177dac",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "HuggingFace Hub opera senza token ogni notte: «Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads» (2026-07-23). Con 7 notti di story_agent automatico, un rate-limit HF non autenticato può bloccare i download di modelli esattamente come il 429 di Semantic Scholar ha bloccato la ricerca.",
+    "azione": "Aggiungere HF_TOKEN al .env (token read-only gratuito sufficiente) prima della partenza; verificare che story_agent lo legga all'avvio.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-23"
+  },
+  {
+    "id": "AUD-346d832a5e",
+    "date": "2026-07-23",
+    "git": "22177dac",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi critici risultano fermi a 0.0: nina-loop, snapshot RAG e AI news watcher. Con Matteo al mare per 7 giorni e nessuna supervisione manuale, un eventuale crash notturno (aggravato dall'UPS mancante, già a 3 episodi di corruzione HNSW in 2 giorni) non verrebbe intercettato da nessun watchdog attivo.",
+    "azione": "Prima di partire: verificare perché i tre organi segnano 0.0 (crash, dipendenza mancante o task disabilitato) e ripristinare almeno nina-loop e snapshot RAG, che sono guardia diretta sulla produzione di contenuto e integrità del RAG.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-23"
+  },
+  {
+    "id": "AUD-1b1756ebbc",
+    "date": "2026-07-23",
+    "git": "22177dac",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il canone dichiara EP_N2_56 come massimo ma su disco esiste già EP_N2_60: «su disco EP_N2_60, il canone dichiara EP_N2_56: aggiornare _CANONE.md» (2026-07-23). Un delta di 4 episodi non tracciati significa che QC, retention e vault_intersect operano su una base incompleta. Con Matteo assente 7 giorni e lo story_agent attivo ogni notte, il gap crescerà ulteriormente.",
+    "azione": "Al rientro (o da remoto prima): aggiornare _CANONE.md a EP_N2_60, verificare che i 4 episodi non tracciati abbiano superato QC e non siano tra i 31 con open_loop_missing.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-23"
+  },
+  {
+    "id": "AUD-0bf8e39adf",
+    "date": "2026-07-23",
+    "git": "22177dac",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna del 23/07 è andata completamente a vuoto per doppio guasto simultaneo: Semantic Scholar ha restituito 429 su entrambe le query («2026-07-23 03:38:52 WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s» e «2026-07-23 03:40:49 WARNING [backoff] ... HTTP 429 — attendo 4s»), producendo «0 risultati» in entrambi i casi; arxiv ha aggiunto timeout di rete («2026-07-23 03:41:27 WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)»). La SEMANTIC_SCHOLAR_API_KEY è già in blockers come soluzione nota ma non ancora applicata: ogni notte senza chiave è una sessione di ricerca persa.",
+    "azione": "Inserire la SEMANTIC_SCHOLAR_API_KEY nel .env prima del rientro (o delegare in remoto se possibile); alzare il read timeout arxiv da 15s a 30-45s nel config del research_agent.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-23"
+  },
+  {
     "id": "AUD-ef020f2867",
     "date": "2026-07-22",
     "git": "02fd7478",
