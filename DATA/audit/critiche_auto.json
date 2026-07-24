@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-a363d6a284",
+    "date": "2026-07-24",
+    "git": "6d18f3c7",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il canone su disco ha raggiunto EP_N2_60 ma _CANONE.md dichiara max EP_N2_56: \"su disco EP_N2_60, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-24). Con 4 episodi non registrati nel canone e canon_violations=4, il canon_guard sta operando su una baseline sfasata. Ogni controllo di integrità o QC che usa il canone come riferimento è sistematicamente sbagliato di 4 unità.",
+    "azione": "Allineare _CANONE.md a EP_N2_60 appena possibile (non serve aspettare il rientro: è un'operazione da 2 minuti se c'è accesso remoto, altrimenti prima cosa al 30/07 prima di caricare i 3 post Meta).",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-24"
+  },
+  {
+    "id": "AUD-97d97ffd43",
+    "date": "2026-07-24",
+    "git": "6d18f3c7",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi vitali mostrano uptime 0.0 stanotte: nina-loop, snapshot RAG, AI news watcher. Il riflusso FATTI segna 3.1 (anomalo rispetto al valore atteso normalizzato). Non ci sono righe di log che spieghino il motivo dello stop — il sistema non sta loggando i fallimenti di questi organi, li sta semplicemente saltando in silenzio. Questo è coerente con il noto problema dei 101 except larghi in 47 file (bussola_open B).",
+    "azione": "Verificare al rientro perché nina-loop e snapshot RAG non si sono avviati: controllare i log di avvio dei rispettivi servizi (non i log di esecuzione — quelli sono vuoti). Se il problema è il boot (come suggerisce anche il caso Vite/dashboard in bussola_open), auditare START_LOGIN per i servizi mancanti.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-24"
+  },
+  {
+    "id": "AUD-6e1d71433d",
+    "date": "2026-07-24",
+    "git": "6d18f3c7",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna del 24/07 è andata completamente a vuoto su Semantic Scholar per mancanza di API key autenticata: \"2026-07-24 03:38:37 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"2026-07-24 03:39:01 [research_agent] INFO semantic_scholar -> 0 risultati\". Stesso pattern su arxiv: \"2026-07-24 03:40:47 [research_agent] WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)\". Entrambe le sorgenti primarie fallite nella stessa notte: la ricerca notturna è de facto disabilitata.",
+    "azione": "Al rientro (30/07): aggiungere SEMANTIC_SCHOLAR_API_KEY al .env (key gratuita, basta registrarsi su semanticscholar.org/product/api) — già identificato come blocker. Separatamente, aumentare read timeout arxiv da 15s a 30-45s nel config dell'agent.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-24"
+  },
+  {
+    "id": "AUD-2dfdff89e5",
+    "date": "2026-07-24",
+    "git": "6d18f3c7",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "story_agent_run.log del 24/07 segnala: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" L'agent HuggingFace gira senza token: in caso di picco di traffico HF o rate-limit, i download di modelli fallirebbero silenziosamente durante le notturne — senza che ci sia un errore esplicito nel log.",
+    "azione": "Aggiungere HF_TOKEN al .env (token gratuito da huggingface.co/settings/tokens). Operazione da 5 minuti, da fare insieme alla rotazione chiavi e all'aggiunta di SEMANTIC_SCHOLAR_API_KEY al rientro.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-24"
+  },
+  {
+    "id": "AUD-0be7e0fd2d",
+    "date": "2026-07-24",
+    "git": "6d18f3c7",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Su 60 episodi controllati dal QC, 31 hanno open_loop_missing (52%). Il sistema genera episodi senza gancio narrativo di chiusura in più della metà dei casi. Con n_episodes=291 totali, se il tasso è stabile, oltre 150 episodi nel vault mancano di open loop — un problema di qualità strutturale dello story_agent, non un caso isolato.",
+    "azione": "Verificare il prompt dello story_agent: l'open loop deve essere un campo obbligatorio con validazione pre-commit (se manca, il QC deve bloccare la scrittura su disco, non solo segnalarlo a posteriori). Priorità media perché Matteo è via — ma da mettere in agenda per la sessione #68.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-24"
+  },
+  {
+    "id": "AUD-082f98c0cb",
+    "date": "2026-07-24",
+    "git": "6d18f3c7",
+    "area": "ROADMAP",
+    "severity": "alta",
+    "finding": "L'UPS (~50-80€) è il terzo episodio di corruzione HNSW da power-loss in 2 giorni (blocker esplicito). Con 20.784 chunk RAG e la rebuild BGE-M3 in attesa di essere eseguita (bussola_open), un quarto evento di corruzione durante o dopo la rebuild potrebbe richiedere ore di ripristino da snapshot. Il rischio non è futuro: è già occorso 3 volte e Matteo rientra il 30/07.",
+    "azione": "Acquistare UPS prima o contestualmente al rientro — non dopo la rebuild BGE-M3. L'ordine logico è: UPS installato → rebuild RAG → 3 post caricati. Costo/rischio: 50-80€ contro potenziale perdita dell'intero indice semantico.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-24"
+  },
+  {
     "id": "AUD-ccfdea5a07",
     "date": "2026-07-23",
     "git": "22177dac",
@@ -224,8 +296,10 @@
     "finding": "La corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni ed è listata come blocker esplicito. L'UPS da 50-80€ è identificato come cura alla radice ma non è ancora ordinato. Ogni ricostruzione dell'indice consuma tempo GPU notturno e rischia di lasciare vettori mancanti (il self-heal inverso di RAG v4.3 mitiga ma non elimina il rischio).",
     "azione": "Ordinare l'UPS entro oggi, stesso momento in cui si ordina il mandrino ER20 — sono entrambi acquisti hardware bloccanti con importo definito. Finché non è in funzione, valutare uno shutdown controllato serale prima dello stop GPU invece dello spegnimento secco.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-19"
+    "status": "resolved",
+    "last_seen": "2026-07-19",
+    "resolved_on": "2026-07-24",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ac58ea9b49",
@@ -236,8 +310,10 @@
     "finding": "Due orphan nel vault senza nessun link in ingresso: 'human_centeredness_in_translation' e 'quantum_espresso_a_modular_and_open_source_software_project_', entrambi in dominio KNOWLEDGE. Consumano chunk RAG e non sono raggiungibili da nessun percorso di retrieval contestuale.",
     "azione": "Aprire i due file: se non pertinenti al dominio attivo (V32/MIMS/GENESIS/artigianato industriale), spostarli in ARCHIVIO o eliminarli. Se pertinenti, aggiungere almeno un wikilink da un nodo KNOWLEDGE attivo per renderli raggiungibili.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-19"
+    "status": "resolved",
+    "last_seen": "2026-07-19",
+    "resolved_on": "2026-07-24",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-8f4d6e7724",
@@ -248,8 +324,10 @@
     "finding": "30 episodi su 56 controllati (53%) mancano di open_loop (qc_episodi: open_loop_missing=30, structure_fail=0). La struttura regge ma l'aggancio narrativo che trascina il lettore all'episodio successivo è assente in oltre metà del catalogo pubblicato — difetto sistematico, non sporadico.",
     "azione": "Definire la regola open_loop come check obbligatorio nel QC episodi (caroselli_qc.py o equivalente), produrre la lista dei 30 episodi colpevoli e inserire un batch di retrofit nella prossima ondata, prioritizzando i primi episodi di ogni serie (maggiore visibilità).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-19"
+    "status": "resolved",
+    "last_seen": "2026-07-19",
+    "resolved_on": "2026-07-24",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-7634ef9e1b",
@@ -260,8 +338,10 @@
     "finding": "daily brief è piatto a 0.0 — unico organo vitale a zero su tutti i monitorati (nina-loop 1.9, RAG 1.9, watcher 1.9). Non è un rallentamento: è fermo. Nessun log di esecuzione rilevato stanotte.",
     "azione": "Verificare il task scheduler del daily brief (bat/Task Scheduler Windows): controllare exit code, log di avvio e se il processo viene ucciso prima della scrittura. Stesso approccio usato per ai_news_watcher in fix(#57) — aggiungere marker avvio nel logger e exit code nel bat.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-19"
+    "status": "resolved",
+    "last_seen": "2026-07-19",
+    "resolved_on": "2026-07-24",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-47f5f3464e",
@@ -272,8 +352,10 @@
     "finding": "Due file _copia attivi nel vault rubano slot RRF alla retrieval: (2026-07-19) \"FINANZA\\la_scienza_finanziaria_l_asimmetria_di_valore_copia.md accanto all'originale\" e (2026-07-19) \"KNOWLEDGE\\PROMPTS\\istruzioni_ia_copia.md accanto all'originale\". La sentinella doppioni (backlog #6) li ha rilevati ma non sono stati rimossi: il problema è noto e aperto.",
     "azione": "Aprire i due file, confrontare con l'originale, scegliere fondere o archiviare, eliminare i _copia. Poi rieseguire build_index incrementale per pulire i chunk duplicati da ChromaDB.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-19"
+    "status": "resolved",
+    "last_seen": "2026-07-19",
+    "resolved_on": "2026-07-24",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-370fb08f59",
@@ -284,8 +366,10 @@
     "finding": "Il todo '2FA GitHub in attivazione (usare authenticator app + SALVARE recovery codes in _VAULT)' è aperto in bussola insieme alla nota 'Enea.2024 riusata = problema' sulla mail brand microindustry. Con Postiz live e credenziali LinkedIn/OAuth nel compose, la superficie di attacco è cresciuta questa settimana. Il blocker 'Chiavi .env da ruotare (red-team #38)' è già in lista ma la 2FA GitHub non ha ancora una sessione assegnata.",
     "azione": "Dedicare i primi 15 minuti della sessione #66 (prima di toccare Docker) ad attivare la 2FA GitHub e salvare i recovery codes in _VAULT. Abbinare la rotazione delle chiavi .env nella stessa micro-sessione: sono entrambi task da tastiera, nessun prerequisito hardware.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-19"
+    "status": "resolved",
+    "last_seen": "2026-07-19",
+    "resolved_on": "2026-07-24",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ff6f210826",
