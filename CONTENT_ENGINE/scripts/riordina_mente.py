@@ -6,11 +6,12 @@
 #
 # Idempotente: salta i file gia' spostati. READ-ONLY sul resto: tocca solo i da_chiavetta.
 
+import os
 import subprocess
 import sys
 from pathlib import Path
 
-MENTE = Path("C:/Users/teo/MICROINDUSTRY/MENTE")
+MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 
 # ── MAPPATURA per dominio ──────────────────────────────────────────────────────
 # Ogni voce: cartella_sorgente (da_chiavetta) -> regola di smistamento.

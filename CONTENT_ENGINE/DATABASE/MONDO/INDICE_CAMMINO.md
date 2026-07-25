@@ -9,7 +9,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 - [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
   - [Come leggere la tabella](#come-leggere-la-tabella)
-  - [Il cammino (caselle 1  57)](#il-cammino-caselle-1-57)
+  - [Il cammino (caselle 1  61)](#il-cammino-caselle-1-61)
   - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
   - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
 
@@ -18,7 +18,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-20 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-25 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*
@@ -34,7 +34,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 57)
+## Il cammino (caselle 1 → 61)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -95,6 +95,10 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 55 | `EP_N2_55` | La Giuntura che Respira | ⟡0 (giro 3) | Le giunture sono i punti dove il disordine ama attaccare, ma il movime |
 | 56 | `EP_N2_56` | La mano che insegna alla notte | ⟡2 (giro 3) | Quando insegni a una macchina il gesto giusto, lei lo ripete perfetto |
 | 57 | `EP_N2_57` | Il Cartellino sulla Stoffa | ⟡4 (giro 3) | Una risposta è forte solo se sai dire esattamente da dove l'hai presa |
+| 58 | `EP_N2_58` | La Ragnatela dei Saperi | ⟡5 (giro 3) | Un'informazione isolata è come una perla sciolta; collegata alle altre |
+| 59 | `EP_N2_59` | Il Polso che Non Respira | ⟡6 (giro 3) | Il guasto più pericoloso è quello che non grida: è il sistema che dice |
+| 60 | `EP_N2_60` | Il Direttore Invisibile | ⟡7 (giro 3) | La coordinazione è il vero lavoro: senza qualcuno che orchestra il tim |
+| 61 | `EP_N2_61` | Il Dito nel Fango | ⟡1 (giro 4) | Una traccia è un gesto che continua a insegnare nel tempo, dopo che la |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

@@ -1,5 +1,221 @@
 [
   {
+    "id": "BUS-3f4bcf57",
+    "stato": "fatto",
+    "testo": "**Finetune riparato** — `TI_FineTune` falliva (0x1) da giorni: nel venv isolato `~/.venvs/llamafactory` c'era `torchaudio 2.11.0` incompatibile con `torch 2.6.0` (WinError 127). Installato `torchaudio==2.6.0+cu124 --no-deps`. Verificato: catena `torch→torchaudio→llamafactory.data.mm_plugin` importa OK, torch intatto.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-7cac1427",
+    "stato": "fatto",
+    "testo": "**Esplosione backup fermata** — `BACKUPS/` aveva **42.141 cartelle** (il watcher ne crea 1 a ogni salvataggio, ~900/gg); `retention R2` potava per **età (45gg)** = ~40k inode che rallentano ogni scansione. Aggiunto tetto **keep-N=300** in `retention.py` + potatura: **42.036 rimosse, 700 MB liberati, 42k→373**. NB: solo `BACKUPS/` (gitignored, backup auto) — **zero file di progetto toccati** (286 episodi, 157 .py intatti).",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-9ee1ab41",
+    "stato": "fatto",
+    "testo": "**Spam log API silenziato** — `api_server.err.log` era 92% `GET /api/health` ogni 32s: `logging.getLogger(\"werkzeug\").WARNING` prima di `app.run` (attivo al prossimo restart API).",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-4d902aab",
+    "stato": "fatto",
+    "testo": "**`TI_NightCaroselli`** `StartWhenAvailable` False→True (era incoerente con gli altri task).",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-210c5d0b",
+    "stato": "fatto",
+    "testo": "**2 path hardcoded resi portabili** — `riordina_mente.py:13` + `genera_wiki_index.py:14` (`Path(\"C:/Users/teo/...\")` violava REGOLA CODICE) → `MENTE_DIR` env + fallback. Compilano, path invariato.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-e0e43302",
+    "stato": "da_fare",
+    "testo": "**A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-c199ea5f",
+    "stato": "da_fare",
+    "testo": "**B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la \"malattia del sistema silenzioso\" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-75290c64",
+    "stato": "da_fare",
+    "testo": "**C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-41ad994c",
+    "stato": "fatto",
+    "testo": "**Sicurezza repo verificata BUONA**: 0 segreti hardcoded nel codice, `.env`/`_VAULT`/`chroma_db`/`BACKUPS` gitignorati, 0 segreti tracciati.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-fcde3e20",
+    "stato": "fatto",
+    "testo": "**`deep_freeze` verificato SANO** (esclude già chroma, ruota a 8) — sospetto iniziale ritirato.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-226fb713",
+    "stato": "in_corso",
+    "testo": "**Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-b044c178",
+    "stato": "fatto",
+    "testo": "**Fix committati + pushati** (salva 25/07) — le modifiche sono in git, non più solo in working tree.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-4b0a4c5a",
+    "stato": "fatto",
+    "testo": "**VERIFICA A 4 GIORNI (25/07, rientro)**: i fix hanno TENUTO da soli — backup fermi a **353** (keep-N regge), **audit notturno fresco** (system_health 25/07 03:52), catena notturna **verde** (NightAudit/Caroselli/Push 0x0). Il finetune conferma al run settimanale del 26/07.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-ee67c5d8",
+    "stato": "fatto",
+    "testo": "**Vite esposto in rete** (`--host`): dashboard raggiungibile da telefono via Tailscale `100.125.152.124:5173` / LAN `192.168.0.112:5173`.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-f2bc9a92",
+    "stato": "idea",
+    "testo": "Auto-correzioni di metodo: `daily brief 0.0` = il più fresco (non morto); notti saltate 20/07 = PC spento (resta thread \"replica serale\" + blocker UPS).",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-286a54bf",
+    "stato": "idea",
+    "testo": "Aggiunto hook globale Claude Code (`~/.claude/settings.json`, SessionStart) che auto-orienta ogni nuova conversazione sul loop TITANIUM_OS — **verificato: ha funzionato all'apertura di questa sessione**.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-9819bb96",
+    "stato": "da_fare",
+    "testo": "**Gli agenti notturni hanno prodotto durante la vacanza**: nuovi EP_N2_58→61 (S_AVVENTURA) + bozze EP_N2_09/EP_SG_03_02/03/EP_SG_04_01 + proposte self_improve 21-25/07. Da revisionare/promuovere con calma.",
+    "sessione": "Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti"
+  },
+  {
+    "id": "BUS-e60d6313",
+    "stato": "fatto",
+    "testo": "**Pagina FB \"Il Mondo di Nina\" creata + collegata a @ilmondodinina.ms** (coppia FB+IG in Business Suite) — superato il labirinto multi-account/permessi Meta. Regola scoperta: gestire tutto come **Matteo Mims (benenatimatteo.mb@gmail.com)**, owner con controllo completo; i profili IG (@microindustry.ms, @ilmondodinina.ms) sono utenti limitati (bloccano le impostazioni).",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-02e1292a",
+    "stato": "fatto",
+    "testo": "**18/21 post programmati con date certe** (Business Suite pubblica in automatico, anche durante la vacanza):",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-36bed0f5",
+    "stato": "fatto",
+    "testo": "**Slide-ponte cross-profilo**: slide 8 di PRE_04 (→@microindustry.ms) e PRE_SG_04 (→@ilmondodinina.ms) rigenerate col nuovo tool riusabile `CAROSELLI/_render_slide.py` (chrome headless, 1 slide). Ricaricate.",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-c8096737",
+    "stato": "fatto",
+    "testo": "**Riorganizzati i sorgenti caroselli**: EP_N2_04/05/06 da `_BOZZE/` → `NINA/` (erano in coda); `_BOZZE/` = solo vere bozze. Cartelle coda verificate pulite (21× 10 slide+txt).",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-0c198c69",
+    "stato": "fatto",
+    "testo": "**Handle corretto @ilmondodinina.ms** ovunque (era senza `.ms`) + bio reciproche nei kit + file copia-incolla `_NINA_/_SISTEMA_COPIA_INCOLLA.md` + doc di controllo `_SCALETTA_INTERSECATA.md` (moduli SEPARATI Nina/Sistema).",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-b35c1f87",
+    "stato": "da_fare",
+    "testo": "**DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-317f109b",
+    "stato": "da_fare",
+    "testo": "**Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-20728e23",
+    "stato": "idea",
+    "testo": "**Outreach IG**: 10 template DM genuini (in chat) usabili da entrambi i profili — riempire i `[...]` veri, 5-10/giorno mirati (no massa = no blocco account).",
+    "sessione": "Sessione #67b · 20-21/07/2026 — LANCIO SOCIAL: 18/21 post programmati su 2 profili"
+  },
+  {
+    "id": "BUS-6a6b8040",
+    "stato": "fatto",
+    "testo": "**vault_intersect v3**: i `## Collegati` di Obsidian ora nello **spazio semantico del RAG** (stesso modello, CPU) invece del TF-IDF → i link che navighi SONO i vicini semantici del RAG e rientrano nel linkgraph (graph-expansion migliore). Soglia 0.50 (calibrata sui dati) + **collasso quasi-duplicati** + cross-domain senza boost artificiale; fallback TF-IDF automatico. Verifica flagship `vulcan_e_mims` migliore del TF-IDF. Push `77f49f61`.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-29dbec96",
+    "stato": "fatto",
+    "testo": "**De-hardcode** `setup_obsidian.py` (path MENTE da env). Push `0f9f027a`.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-d323bf8f",
+    "stato": "fatto",
+    "testo": "**Pulizia 6 duplicati Config_G** (snapshot auto ripetuti, corpo identico): tenute le 3 sessioni reali s8/s10/s11, coerenza vault rigenerata (0 link penzolanti nei file vivi). Commit MENTE `6caa335`.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-b2845ed1",
+    "stato": "fatto",
+    "testo": "**Docling acceso** (venv isolato `~/.venvs/docling`, torch NON toccato): ingest PDF→Markdown **strutturato** (heading/tabelle/OCR) cablato in `pdf_to_memory` (`--engine`) + `chiavetta_ingest`, **fallback pdfplumber garantito**. Verificato: 7 heading vs testo piatto. Push `49bce54f`.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-a8d826fd",
+    "stato": "fatto",
+    "testo": "**Ollama acceso** (leva locale ON): già installato+cablato (`NODES/LOCAL_LLM` + `api_server` chat RAG con fallback Claude); girava solo il servizio da attivare. Verificato: genera IT tecnico, 100% GPU.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-eef198af",
+    "stato": "fatto",
+    "testo": "**Valutazione repo/librerie** (scan 24 top per stelle+licenza): decisi Docling+Ollama (fatti), BGE-M3 (prossimo), LightRAG (pilota). AGPL/GPL esclusi dal repo pubblico.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-5b17a072",
+    "stato": "in_corso",
+    "testo": "**BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-2ed10fe0",
+    "stato": "da_fare",
+    "testo": "**BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-b3de1b14",
+    "stato": "da_fare",
+    "testo": "**LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-c7239e37",
+    "stato": "da_fare",
+    "testo": "**COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
+    "id": "BUS-157a9799",
+    "stato": "da_fare",
+    "testo": "**UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).",
+    "sessione": "Sessione #67 · 20/07/2026 — ECOSISTEMA: loop Obsidian↔RAG semantico + Docling/Ollama accesi"
+  },
+  {
     "id": "BUS-13146970",
     "stato": "fatto",
     "testo": "**Identità visiva microindustry** in `CONTENT_ENGINE/DATABASE/MONDO/POSTER/BRAND/` (sorgenti .html rigenerabili via chrome headless):",
@@ -54,9 +270,9 @@
     "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
   },
   {
-    "id": "BUS-19bbe2be",
-    "stato": "da_fare",
-    "testo": "**DA APPROVARE (SISTEMA, «solo di giorno»)**: le bozze EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» sono complete + canon-clean → una tua occhiata e le promuovo (estendono Meta a ven14/mar18/ven21 agosto). NON promosse da solo: guardrail voce-Matteo rispettato.",
+    "id": "BUS-ddf5b47d",
+    "stato": "fatto",
+    "testo": "**3 bozze SISTEMA APPROVATE e PROMOSSE** (Matteo 19/07): EP_SG_02_02 «MIMS» / 02_03 «VULCAN» / 02_04 «GENESIS» → spostate in CAROSELLI/SISTEMA/, coda spuntata (status promosso), PDF LinkedIn generati, QC 18 cartelle 0 falle, griglia IG rigenerata, aggiunte a _SOCIAL_QUEUE (Meta ora 11 post, fino ven 21/08).",
     "sessione": "Sessione #66 · 19/07/2026 — LANCIO SOCIAL: identità microindustry + scaletta Meta programmata"
   },
   {

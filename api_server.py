@@ -1653,4 +1653,7 @@ if __name__ == "__main__":
     logger.info("ECOSYSTEM_OS API SERVER v1.3 — porta 5001")
     logger.info("STATE:  %s", STATE_FILE)
     logger.info("DIGEST: %s", DIGEST_FILE)
+    # silenzia l'access-log werkzeug (era il 92% di api_server.err.log: GET /api/health ogni 32s
+    # dal watchdog). Restano warning/errori 4xx-5xx veri.
+    logging.getLogger("werkzeug").setLevel(logging.WARNING)
     app.run(port=5001, debug=False)

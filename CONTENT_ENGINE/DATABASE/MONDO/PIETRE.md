@@ -3,13 +3,13 @@
 - [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
 - [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
   - [0  LA MATERIA  (7 episodi)](#0-la-materia-7-episodi)
-  - [1  LA TRACCIA  (5 episodi)](#1-la-traccia-5-episodi)
+  - [1  LA TRACCIA  (6 episodi)](#1-la-traccia-6-episodi)
   - [2  LOFFICINA CHE GIRA SOLA  (14 episodi)](#2-lofficina-che-gira-sola-14-episodi)
   - [3  LA MENTE CHE PARLA  (4 episodi)](#3-la-mente-che-parla-4-episodi)
   - [4  LA BIBLIOTECA DELLE FONTI  (7 episodi)](#4-la-biblioteca-delle-fonti-7-episodi)
-  - [5  LA GRANDE MAPPA  (30 episodi)](#5-la-grande-mappa-30-episodi)
-  - [6  LESERCITO SILENZIOSO  (6 episodi)](#6-lesercito-silenzioso-6-episodi)
-  - [7  IL DIRETTORE  (14 episodi)](#7-il-direttore-14-episodi)
+  - [5  LA GRANDE MAPPA  (31 episodi)](#5-la-grande-mappa-31-episodi)
+  - [6  LESERCITO SILENZIOSO  (7 episodi)](#6-lesercito-silenzioso-7-episodi)
+  - [7  IL DIRETTORE  (15 episodi)](#7-il-direttore-15-episodi)
 - [Verticale: Finanza personale](#verticale-finanza-personale)
   - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)
   - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)
@@ -20,7 +20,7 @@
 
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-20 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-25 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -43,7 +43,7 @@
 | 3 | `EP_N2_03` Mille Volte Uguale | la ripetibilita': mille volte uguale, battere la deriva | adattato | — |
 | 3 | `EP_N2_55` La Giuntura che Respira | Le giunture sono i punti dove il disordine ama attaccare, ma il movime | adattato | — |
 
-## ⟡1 · LA TRACCIA  (5 episodi)
+## ⟡1 · LA TRACCIA  (6 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -52,6 +52,7 @@
 | 1 | `EP_S0_00` Il Socio | il Socio: un gesto, più frutti | fonte | — |
 | 2 | `EP_N2_17` La Traccia | Un gesto documentato diventa un insegnamento che vive oltre il momento | adattato | — |
 | 3 | `EP_N2_54` Il Dito che Insegna | Una traccia è un gesto che rimane e continua a insegnare anche quando  | adattato | — |
+| 4 | `EP_N2_61` Il Dito nel Fango | Una traccia è un gesto che continua a insegnare nel tempo, dopo che la | adattato | — |
 
 ## ⟡2 · L'OFFICINA CHE GIRA SOLA  (14 episodi)
 
@@ -93,7 +94,7 @@
 | 2 | `EP_T04` SINAPSI | SINAPSI: la memoria che collega | fonte | ⟡3 |
 | 3 | `EP_N2_57` Il Cartellino sulla Stoffa | Una risposta è forte solo se sai dire esattamente da dove l'hai presa  | adattato | — |
 
-## ⟡5 · LA GRANDE MAPPA  (30 episodi)
+## ⟡5 · LA GRANDE MAPPA  (31 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -120,6 +121,7 @@
 | 3 | `EP_N2_40` Il fantasma nel cassetto | Un bug non è sempre nel codice: a volte due cose uguali occupano lo st | adattato | ⟡4 |
 | 3 | `EP_N2_41` Lo specchio nascosto — quando due persone vedono la stessa cosa diversamente | La stessa realtà può essere vista da due angoli: quello che SO (i dati | adattato | ⟡4 |
 | 3 | `EP_N2_42` La stanza dei segreti numerici | I numeri che descrivono le cose possono vivere in spazi così grandi ch | adattato | ⟡4 |
+| 3 | `EP_N2_58` La Ragnatela dei Saperi | Un'informazione isolata è come una perla sciolta; collegata alle altre | adattato | — |
 | 3 | `EP_SEED_GRAPHIFY_L2_CAMMINI` I cammini — come si trova la strada tra due nodi | la mappa della conoscenza | fonte | ⟡4 |
 | 3 | `EP_SEED_GRAPHIFY_L2_MODULARITA` La modularità — il voto che decide i quartieri | la mappa della conoscenza | fonte | ⟡4 |
 | 3 | `EP_SEED_RETE_L1_BUGSTATO` Non era un bug di codice, era un bug di stato | vedere il sistema come una mappa | fonte | ⟡4 |
@@ -128,7 +130,7 @@
 | 4 | `EP_N2_43` Due fotografi, uno spazio | t-SNE e UMAP sono due macchine fotografiche diverse che guardano lo st | adattato | ⟡4 |
 | 4 | `EP_SEED_RETE_L2_UMAP` t-SNE contro UMAP — due modi di fare la foto | vedere il sistema come una mappa | fonte | ⟡4 |
 
-## ⟡6 · L'ESERCITO SILENZIOSO  (6 episodi)
+## ⟡6 · L'ESERCITO SILENZIOSO  (7 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -138,8 +140,9 @@
 | 2 | `EP_N2_13` Il Battito del Guardiano | il guasto silenzioso e il guardiano | adattato | ⟡1 |
 | 2 | `EP_N2_52` Il Battito del Guardiano | Un guasto che non fa rumore è più pericoloso di uno che grida; i veri  | adattato | — |
 | 3 | `EP_N2_16` Lo Specchio del Giudice | Un sistema intelligente può guardarsi dentro, trovare i propri errori  | adattato | ⟡1 |
+| 3 | `EP_N2_59` Il Polso che Non Respira | Il guasto più pericoloso è quello che non grida: è il sistema che dice | adattato | — |
 
-## ⟡7 · IL DIRETTORE  (14 episodi)
+## ⟡7 · IL DIRETTORE  (15 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -157,6 +160,7 @@
 | 2 | `EP_SEED_CONTROLLO_L1_CEDIBILE` Un sistema spiegato è un sistema cedibile | un posto solo per governare il disordine | fonte | — |
 | 2 | `EP_SEED_CONTROLLO_L1_SCAFFOLDING` Il carico va sullo schermo, non nella testa | un posto solo per governare il disordine | fonte | — |
 | 2 | `EP_SEED_CONTROLLO_L1_STATOLIVE` Se è acceso, non se dovrebbe — lo stato live | un posto solo per governare il disordine | fonte | — |
+| 3 | `EP_N2_60` Il Direttore Invisibile | La coordinazione è il vero lavoro: senza qualcuno che orchestra il tim | adattato | — |
 
 ---
 

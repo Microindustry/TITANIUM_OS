@@ -5,20 +5,21 @@
       "name": "api-server",
       "runtimeExecutable": "python",
       "runtimeArgs": ["api_server.py"],
-      "port": 5001
+      "port": 5001,
+      "autoPort": false
     },
     {
       "name": "dashboard",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 5173,
+      "autoPort": false,
       "cwd": "DASHBOARD"
     },
     {
       "name": "mente-watcher",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["NODES/MENTE_WATCHER/mente_watcher.py"],
-      "port": 5001
+      "runtimeArgs": ["NODES/MENTE_WATCHER/mente_watcher.py"]
     }
   ]
 }

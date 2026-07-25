@@ -1,3 +1,12 @@
+<!-- TOC -->
+
+- [_MESSAGGI OUTREACH  DM per far crescere i profili (invio manuale Matteo)](#messaggi-outreach-dm-per-far-crescere-i-profili-invio-manuale-matteo)
+  - [A) 10 messaggi connessione  universali (da entrambi i profili)](#a-10-messaggi-connessione-universali-da-entrambi-i-profili)
+  - [B) Messaggio chiedi un favore   microindustry](#b-messaggio-chiedi-un-favore-microindustry)
+  - [C) Messaggio chiedi un favore   Il Mondo di Nina](#c-messaggio-chiedi-un-favore-il-mondo-di-nina)
+
+<!-- /TOC -->
+
 # _MESSAGGI OUTREACH — DM per far crescere i profili (invio manuale Matteo)
 
 *Generato 21/07/2026. Messaggi da mandare in DM a profili Instagram in target.*

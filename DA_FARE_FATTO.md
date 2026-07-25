@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 68  21/07/2026  ATTACCO ECOSISTEMA (tutto il progetto): 5 fix  3 filoni proposti](#sessione-68-21072026-attacco-ecosistema-tutto-il-progetto-5-fix-3-filoni-proposti)
+  - [Sessione 67b  20-21/07/2026  LANCIO SOCIAL: 18/21 post programmati su 2 profili](#sessione-67b-20-21072026-lancio-social-1821-post-programmati-su-2-profili)
   - [Sessione 67  20/07/2026  ECOSISTEMA: loop ObsidianRAG semantico  Docling/Ollama accesi](#sessione-67-20072026-ecosistema-loop-obsidianrag-semantico-doclingollama-accesi)
   - [Sessione 66  19/07/2026  LANCIO SOCIAL: identità microindustry  scaletta Meta programmata](#sessione-66-19072026-lancio-social-identità-microindustry-scaletta-meta-programmata)
   - [Sessione 65  17/07/2026  POSTIZ VIVO, bloccato su approvazione LinkedIn (Community Management API)](#sessione-65-17072026-postiz-vivo-bloccato-su-approvazione-linkedin-community-management-api)
@@ -92,6 +94,35 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #68 · 21/07/2026 — ATTACCO ECOSISTEMA (tutto il progetto): 5 fix + 3 filoni proposti
+
+**Diagnostica live dell'intero repo (task, processi, log, git, disco, codice), non a memoria. Fix sicuri applicati, strutturali proposti. Report completo: `DOCS/ATTACCO_20260721/_SINTESI.md`.**
+
+**✅ APPLICATO (basso rischio, reversibile — regola 11):**
+- [✓] **Finetune riparato** — `TI_FineTune` falliva (0x1) da giorni: nel venv isolato `~/.venvs/llamafactory` c'era `torchaudio 2.11.0` incompatibile con `torch 2.6.0` (WinError 127). Installato `torchaudio==2.6.0+cu124 --no-deps`. Verificato: catena `torch→torchaudio→llamafactory.data.mm_plugin` importa OK, torch intatto.
+- [✓] **Esplosione backup fermata** — `BACKUPS/` aveva **42.141 cartelle** (il watcher ne crea 1 a ogni salvataggio, ~900/gg); `retention R2` potava per **età (45gg)** = ~40k inode che rallentano ogni scansione. Aggiunto tetto **keep-N=300** in `retention.py` + potatura: **42.036 rimosse, 700 MB liberati, 42k→373**. NB: solo `BACKUPS/` (gitignored, backup auto) — **zero file di progetto toccati** (286 episodi, 157 .py intatti).
+- [✓] **Spam log API silenziato** — `api_server.err.log` era 92% `GET /api/health` ogni 32s: `logging.getLogger("werkzeug").WARNING` prima di `app.run` (attivo al prossimo restart API).
+- [✓] **`TI_NightCaroselli`** `StartWhenAvailable` False→True (era incoerente con gli altri task).
+- [✓] **2 path hardcoded resi portabili** — `riordina_mente.py:13` + `genera_wiki_index.py:14` (`Path("C:/Users/teo/...")` violava REGOLA CODICE) → `MENTE_DIR` env + fallback. Compilano, path invariato.
+
+**🟠 PROPOSTO (strutturale — da decidere insieme):**
+- [ ] **A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).
+- [ ] **B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la "malattia del sistema silenzioso" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).
+- [ ] **C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.
+
+**Note:**
+- [✓] **Sicurezza repo verificata BUONA**: 0 segreti hardcoded nel codice, `.env`/`_VAULT`/`chroma_db`/`BACKUPS` gitignorati, 0 segreti tracciati.
+- [✓] **`deep_freeze` verificato SANO** (esclude già chroma, ruota a 8) — sospetto iniziale ritirato.
+- [◐] **Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.
+- [✓] **Fix committati + pushati** (salva 25/07) — le modifiche sono in git, non più solo in working tree.
+- [✓] **VERIFICA A 4 GIORNI (25/07, rientro)**: i fix hanno TENUTO da soli — backup fermi a **353** (keep-N regge), **audit notturno fresco** (system_health 25/07 03:52), catena notturna **verde** (NightAudit/Caroselli/Push 0x0). Il finetune conferma al run settimanale del 26/07.
+- [✓] **Vite esposto in rete** (`--host`): dashboard raggiungibile da telefono via Tailscale `100.125.152.124:5173` / LAN `192.168.0.112:5173`.
+- [💡] Auto-correzioni di metodo: `daily brief 0.0` = il più fresco (non morto); notti saltate 20/07 = PC spento (resta thread "replica serale" + blocker UPS).
+- [💡] Aggiunto hook globale Claude Code (`~/.claude/settings.json`, SessionStart) che auto-orienta ogni nuova conversazione sul loop TITANIUM_OS — **verificato: ha funzionato all'apertura di questa sessione**.
+- [ ] **Gli agenti notturni hanno prodotto durante la vacanza**: nuovi EP_N2_58→61 (S_AVVENTURA) + bozze EP_N2_09/EP_SG_03_02/03/EP_SG_04_01 + proposte self_improve 21-25/07. Da revisionare/promuovere con calma.
 
 ---
 

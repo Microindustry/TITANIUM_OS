@@ -1,0 +1,294 @@
+{
+  "data": "2026-07-22",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "ROADMAP",
+      "titolo": "UPS fisico: sbloccare il blocker n°1 prima della partenza (o delegare esecuzione)",
+      "cosa": "Acquistare e collegare un UPS da ~50-80€ al sistema prima che Matteo parta stasera. Se non fattibile in tempo, predisporre uno script di shutdown sicuro su power-loss via Windows Event + task scheduler, come misura ponte fino al rientro (30/07).",
+      "perche": "Segnale ROADMAP sev=alta: corruzione HNSW da power-loss avvenuta 3 volte in 2 giorni. Matteo parte stasera per 7 giorni. Un quarto episodio durante l'assenza distrugge il RAG senza possibilità di intervento manuale. È il rischio più alto dell'intero sistema in questo momento.",
+      "come": [
+        "1. Se c'è tempo prima della partenza: acquistare UPS APC Back-UPS 650/850VA (Amazon Prime) e collegare il sistema prima di uscire.",
+        "2. Se non c'è tempo: creare un Task Scheduler Windows che al segnale 'power-loss UPS' (o su evento di sistema ACPI) lanci uno script `safe_shutdown.ps1` che esegue `chroma_db.persist()` + snapshot RAG + commit git + shutdown.",
+        "3. Documentare la procedura in `DOCS/emergency_shutdown.md`.",
+        "4. UPS fisico rimane aperto come TODO prioritario al rientro 30/07."
+      ],
+      "rischio": "Senza UPS né shutdown sicuro, un blackout nei prossimi 7 giorni corrode HNSW per la quarta volta e blocca il sistema fino al rientro. Il rischio di NON agire è superiore a qualsiasi rischio dell'azione.",
+      "autonomia": "approvazione",
+      "fonte": "segnale interno ROADMAP sev=alta: 'corruzione HNSW da power-loss avvenuta 3 volte in 2 giorni', 'Matteo parte stasera per 7 giorni lasciando il sistema in autonomia completa'"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Resurrezione dei 3 organi morti + watchdog di riavvio automatico",
+      "cosa": "nina-loop, snapshot RAG e AI news watcher hanno uptime 0.0. Vanno riavviati prima della partenza e va aggiunto un meccanismo di auto-restart (Windows Task Scheduler o supervisord) che li rilanci automaticamente dopo un riavvio o power-loss.",
+      "perche": "Segnale SISTEMA sev=alta (doppio): 'Tre organi vitali risultano spenti (score 0.0): nina-loop, snapshot RAG, AI news watcher. Con Matteo assente 7 giorni e nessun presidio manuale, un guasto non rilevato in questo intervallo non verrà scoperto fino al rientro.' Con 7 notti autonome davanti, questi 3 servizi sono la spina dorsale del sistema.",
+      "come": [
+        "1. Riavviare manualmente i 3 servizi ora e verificare che i log confermino uptime > 0.",
+        "2. Per ciascuno, creare una Task Scheduler entry con trigger 'At startup' + 'On failure: restart after 1 min, max 3 times'.",
+        "3. Aggiungere un health-check semplice in `night_push.ps1`: se uno dei 3 PIDs non risponde, logga WARNING in `LOGS/vitals_alert.log` (il log viene visto al rientro).",
+        "4. Testare il restart simulando un kill del processo e verificando il riavvio automatico.",
+        "5. Documentare i PID attesi in `DOCS/services_manifest.md`."
+      ],
+      "rischio": "Basso: il Task Scheduler è nativo Windows, reversibile, non tocca codice. Il rischio di falso restart è minore del rischio di 7 giorni di sistema cieco.",
+      "autonomia": "approvazione",
+      "fonte": "segnale interno SISTEMA sev=alta: 'nina-loop, snapshot RAG, AI news watcher uptime 0.0'; 'Con Matteo assente 7 giorni, qualsiasi power-loss o riavvio non presidiato lascia il sistema senza snapshot di recovery'"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-22",
+    "milestone": "Sessione #67b (20-21/07): LANCIO SOCIAL VIVO. Pagina FB 'Il Mondo di Nina' creata+collegata a @ilmondodinina.ms (coppia FB+IG); superato il labirinto Meta Business Manager (gestire come owner Matteo Mims=benenatimatteo.mb, non come i profili IG limitati). 18/21 post programmati con date certe (Busin",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Il canone dichiarato e il disco sono disallineati: log 22/07 \"su disco EP_N2_59, il canone dichiara EP_N2_56: aggiornare _CANONE.md\". Con 3 episodi non registrati nel canone e canon_violations=4, il tabellone di riferimento non riflette lo "
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Nella stessa sessione di ricerca, arxiv ha restituito un timeout di rete: log 03:39:30 \"[arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)\". Il timeout a 15s è troppo stretto per export.arxiv.o"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'UPS (~50-80€) è in lista blockers da almeno 2 sessioni, la corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni, e Matteo parte stasera per 7 giorni lasciando il sistema in autonomia completa. Se si verifica un quarto episodio dur"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 22/07 è cieca su Semantic Scholar: due query distinte colpiscono il rate-limit anonimo e restituiscono zero risultati. Log 03:39:14: \"[semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/grap"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "story_agent gira senza token HF autenticato: log 22/07 \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Con Matteo assente 7 giorni, il rischio è che"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali risultano spenti (score 0.0): nina-loop, snapshot RAG, AI news watcher. Con Matteo assente 7 giorni e nessun presidio manuale, un guasto non rilevato su nina-loop o snapshot RAG in questo intervallo non verrà scoperto fino"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna è cieca su Semantic Scholar: i log del 21/07 mostrano due 429 consecutivi senza recupero — \"2026-07-21 03:39:11 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo "
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "BGE-M3 è pronto al click da almeno 24 ore (snapshot già scattato il 20/07, script verificato) ma resta bloccato perché richiede UAC di Matteo. Non è un todo qualsiasi: ogni notte che passa, vault_intersect e linkgraph operano sul vecchio em"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi schedulati risultano morti (uptime 0.0): nina-loop, snapshot RAG, AI news watcher. Con Matteo assente 7 giorni, qualsiasi power-loss o riavvio non presidiato lascia il sistema senza snapshot di recovery e senza aggiornamento dell"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "story_agent gira non autenticato su HuggingFace Hub: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads\" (2026-07-21). Con 7 notti autonome davanti, un r"
+      },
+      {
+        "area": "V32",
+        "sev": "bassa",
+        "finding": "Il pillar V32 è al 65% ma i due prerequisiti fisici sequenziali (martinetto Vevor da montare → prima colata giunto; mandrino 2.2kW ER20 da ordinare → fresatura stampi MIMS) sono entrambi aperti e non hanno una data. Con Matteo fuori 7 giorn"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "Il canone episodi è sfasato: \"su disco EP_N2_58, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-21). Con 4 canon_violations totali e lo sfasamento a +2 episodi, qualsiasi tool che si basa sul canone per decidere cosa promuover"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 288,
+      "rag_chunks": 20533,
+      "n_commits_7d": 80
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).",
+      "**B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la \"malattia del sistema silenzioso\" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).",
+      "**C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.",
+      "**Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.",
+      "**Modifiche di questa sessione NON ancora committate** — decidere: commit pulito ora, o lasciare che `night_push` le raccolga stanotte.",
+      "**DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:",
+      "**Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).",
+      "**BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).",
+      "**BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.",
+      "**LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.",
+      "**COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.",
+      "**UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).",
+      "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+      "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+      "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Best Local LLMs You Can Run on a Single 24GB GPU in 2026: Qwen, Gemma, Mistral, DeepSeek Compared",
+        "url": "https://www.marktechpost.com/2026/07/19/best-local-llms-you-can-run-on-a-single-24gb-gpu-in-2026-qwen-gemma-mistral-deepseek-compared/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Someone Fine-Tuned OpenBMB’s MiniCPM5-1B on Claude Fable 5 Traces to Ship a 657MB Local Thinking Model",
+        "url": "https://www.marktechpost.com/2026/07/19/someone-fine-tuned-openbmbs-minicpm5-1b-on-claude-fable-5-traces-to-ship-a-657mb-local-thinking-model/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Alibaba’s Tongyi Lab Releases Qwen-Audio-3.0-TTS, a Hosted Text-to-Speech Model in Flash and Plus Tiers Across 16 Languages",
+        "url": "https://www.marktechpost.com/2026/07/20/alibabas-tongyi-lab-releases-qwen-audio-3-0-tts-a-hosted-text-to-speech-model-in-flash-and-plus-tiers-across-16-languages/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "NVIDIA Releases Cosmos 3 Edge: A 4B-Parameter Open World Model That Reasons and Generates Robot Actions On-Device",
+        "url": "https://www.marktechpost.com/2026/07/21/nvidia-releases-cosmos-3-edge-a-4b-parameter-open-world-model-that-reasons-and-generates-robot-actions-on-device/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meta Open-Sources Astryx: An Agent-Ready React Design System With 150+ Accessible Components, Seven Themes, and a CLI",
+        "url": "https://www.marktechpost.com/2026/07/21/meta-open-sources-astryx-an-agent-ready-react-design-system-with-150-accessible-components-seven-themes-and-a-cli/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Validating Distributed LLM Serving Benchmarks with NVIDIA srt-slurm, SLURM Recipes, Parameter Sweeps, and Pareto Analysis",
+        "url": "https://www.marktechpost.com/2026/07/21/validating-distributed-llm-serving-benchmarks-with-nvidia-srt-slurm-slurm-recipes-parameter-sweeps-and-pareto-analysis/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Google Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber: A Cheaper, More Token-Efficient Flash Tier Built for Agentic Workloads",
+        "url": "https://www.marktechpost.com/2026/07/21/google-releases-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-a-cheaper-more-token-efficient-flash-tier-built-for-agentic-workloads/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Poolside Releases Laguna S 2.1, an Open-Weight Agentic Coding Model Punching Above Its Weight Class on SWE-Bench Multilingual",
+        "url": "https://www.marktechpost.com/2026/07/21/poolside-releases-laguna-s-2-1/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "1-Bit LLM in the Browser",
+        "url": "https://huggingface.co/spaces/webml-community/bonsai-webgpu"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+        "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Code: Anatomy of a Misfeature",
+        "url": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
+        "url": "https://ykdojo.github.io/claude-controls-mac/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Code uses Bun written in Rust now",
+        "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Fable produced a counterexample to the Jacobian Conjecture",
+        "url": "https://xcancel.com/__alpoge__/status/2079028340955197566"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Is Not a Compiler",
+        "url": "https://blog.exe.dev/claude-is-not-a-compiler"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Judge approves $1.5B Anthropic settlement for pirated books used to train Claude",
+        "url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Grabette: an open system to record robot-manipulation data",
+        "url": "https://huggingface.co/blog/grabette"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "The State of Simulation for Physical AI: An Overview",
+        "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Safety and alignment in an era of long-horizon models",
+        "url": "https://openai.com/index/safety-alignment-long-horizon-models"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC",
+        "url": "https://openai.com/index/david-velez-robin-vince-join-openai-boards"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+        "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Introducing the ChatGPT for small business program",
+        "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Nuovo Qwen 3.8 raggiunge le performance di Fable 5, ma cosa sta accadendo??",
+        "url": "https://www.youtube.com/shorts/n4YtDQApFj4"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Google Rilascia alpha evolve e adesso possiamo fare ricerche scientifiche in cloud! #google",
+        "url": "https://www.youtube.com/shorts/QrYmDp601fE"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Elon Musk rubava i nostri dati delle nostre repo tramite Grock Build che caricava l’intera",
+        "url": "https://www.youtube.com/shorts/ideh6ex39WQ"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "This ring replaces your keyboard?",
+        "url": "https://www.youtube.com/shorts/Yoz0CeZYO8E"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "This $12 billion startup finally shipped something...",
+        "url": "https://www.youtube.com/watch?v=M51asSwRLxA"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] not much happened today",
+        "url": "https://www.latent.space/p/ainews-not-much-happened-today-173"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "🔬Causal Models Need Causal Data - Xaira’s X-Cell model for Drug Discovery (Bo Wang & Ci Chu, Chief Discovery Officer & Chief AI Scientist)",
+        "url": "https://www.latent.space/p/xaira"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Claude Code uses Bun written in Rust now",
+        "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything"
+      }
+    ],
+    "n_news": 30
+  }
+}

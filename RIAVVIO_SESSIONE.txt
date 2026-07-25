@@ -1,38 +1,39 @@
-=== RIAVVIO SESSIONE #68 — generato 21/07/2026 (fine #67b, skill salva) ===
-Ultima sessione: #67b (20-21/07, Opus 4.8 — LANCIO SOCIAL: 18/21 post su 2 profili)
-
-━━━ ⚠ MATTEO È AL MARE 7 GIORNI (dal 22/07 sera, ~rientro 29/07) ━━━
-I 18 post già programmati ESCONO DA SOLI (Business Suite auto-pubblica). Niente da fare
-durante la vacanza. Al rientro: caricare i 3 post rimasti (promemoria Calendar 30/07 10:00).
+=== RIAVVIO SESSIONE #69 — generato 25/07/2026 (fine #68 ATTACCO ECOSISTEMA, skill salva) ===
+Ultima sessione: #68 (21/07 lavoro, salvato 25/07 al rientro — Opus 4.8)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Il collo n°1 PUBBLICAZIONE è VIVO. Pagina FB "Il Mondo di Nina" creata e collegata a
-@ilmondodinina.ms (coppia FB+IG). 18/21 caroselli programmati con date certe su DUE profili
-SEPARATI: Sistema 10/11 (fino VULCAN 18/08), Nina 8/10 (fino 16/08). Restano 3, bloccati
-solo dal tetto 29 giorni di Meta.
+Sessione #68 = ATTACCO all'ecosistema su TUTTO il progetto (diagnostica live, non a memoria).
+Ecosistema vivo e sano. 5 fix applicati e già verificati a 4 giorni. 3 filoni strutturali PROPOSTI
+(decidi tu). Report completo: DOCS/ATTACCO_20260721/_SINTESI.md.
 
-━━━ PRIMO STEP #68 (al rientro dal mare, promemoria 30/07) ━━━
-Caricare i 3 post rimasti in Business Suite → 21/21. Caption/slide pronte:
- 🌙 NINA (profilo Il Mondo di Nina, IG):
-   - EP_N2_05 "Le Mani Prima dei Rulli" → mer 19/08 · _SOCIAL_QUEUE_NINA/09_EP_N2_05/
-   - EP_N2_06 "L'Officina che Gira Sola" → dom 23/08 · 10_EP_N2_06/
- ⚙️ SISTEMA (profilo Microindustry, FB+IG):
-   - EP_SG_02_04 GENESIS → ven 21/08 · _SOCIAL_QUEUE/11_EP_SG_02_04/
- Caption pronte: POSTER/_NINA_COPIA_INCOLLA.md e _SISTEMA_COPIA_INCOLLA.md.
- REGOLA: gestire Meta come owner Matteo Mims (benenatimatteo.mb@gmail.com), NON come i profili IG.
+━━━ FATTO IN #68 (5 fix applicati) ━━━
+1. Finetune riparato — torchaudio 2.6.0+cu124 nel venv llamafactory (era 2.11 incompatibile, WinError 127)
+2. Esplosione backup fermata — BACKUPS 42.141 cartelle -> 353 (tetto keep-N in retention.py, 700MB liberati).
+   ATTENZIONE: cancellati SOLO backup auto in BACKUPS/ (gitignored) — ZERO file di progetto.
+3. Spam log API silenziato — werkzeug->WARNING in api_server.py (era 92% GET /api/health)
+4. TI_NightCaroselli StartWhenAvailable False->True
+5. 2 path hardcoded (riordina_mente.py, genera_wiki_index.py) resi env-derived (MENTE_DIR)
++ hook globale Claude Code SessionStart (~/.claude/settings.json) = auto-orientamento a ogni nuova sessione
++ Vite esposto --host (dashboard da telefono: Tailscale 100.125.152.124:5173 / LAN 192.168.0.112:5173)
 
-━━━ FATTO IN #67b ━━━
-- Pagina FB Nina creata+collegata (coppia FB+IG); labirinto Meta multi-account superato
-- 18/21 post programmati con date certe (2 profili separati, auto-pubblicazione)
-- slide-ponte cross-profilo rigenerate (nuovo tool CAROSELLI/_render_slide.py) e ricaricate
-- sorgenti caroselli riorganizzati (EP_N2_04/05/06 _BOZZE->NINA); handle @ilmondodinina.ms corretto
-- doc _SCALETTA_INTERSECATA.md a moduli separati + file copia-incolla
-- messaggi outreach salvati: POSTER/_MESSAGGI_OUTREACH.md (10 DM universali + 1 micro + 1 Nina, invio manuale Matteo)
+━━━ VERIFICA A 4 GIORNI (25/07) — i fix hanno TENUTO da soli ━━━
+- backup fermi a 353 (keep-N regge ogni notte) · audit notturno fresco (25/07 03:52) · catena notturna VERDE
+- finetune: TI_FineTune è settimanale, prossimo run 26/07 conferma il fix live
+- build TS verde · 0 orfani episodi
 
-━━━ APERTI / non urgenti ━━━
-- 3 post social al rientro (30/07); rifiniture bio Nina/microindustry; PRE_SG_04 link a mano
-- BGE-M3 embedder: 1 click TUO su SERVICES/rebuild_rag_bge_m3.ps1 (rebuild GPU) + poi ricalibro Collegati
-- LightRAG pilota (dopo bge-m3)
-- Blockers hardware: UPS (blocker n°1, corruzione HNSW), mandrino ER20, martinetto Vevor
+━━━ 3 FILONI PROPOSTI #68 (da decidere) ━━━
+A. Rete di test assente (1 test su 157 .py) — smoke-test sugli organi vitali (state_updater/canon_guard/rag_engine/retention)
+B. 101 except larghi/nudi in 47 file — audit dei soli bare except: (loggare invece di ingoiare)
+C. requirements.txt non pinnato (0 ==) — pinnare lo stack critico (è la classe di bug che ha rotto il finetune)
 
-━━━ Generato: 21/07/2026 — fine sessione #67b (skill salva) ━━━
+━━━ SOCIAL (invariato dal #67b) ━━━
+18/21 post programmati escono da soli. Al rientro (30/07, promemoria Calendar): caricare i 3 rimasti -> 21/21
+(Nina EP_N2_05 19/08 + EP_N2_06 23/08, Sistema GENESIS EP_SG_02_04 21/08). Caption in _NINA_/_SISTEMA_COPIA_INCOLLA.md.
+
+━━━ PRODOTTO DAGLI AGENTI IN VACANZA (da revisionare) ━━━
+Nuovi EP_N2_58->61 (S_AVVENTURA) + bozze EP_N2_09/EP_SG_03_02/03/EP_SG_04_01 + proposte self_improve 21-25/07.
+
+━━━ BLOCKERS ━━━
+UPS (n°1, corruzione HNSW da power-loss) · mandrino ER20 · martinetto Vevor · chiavi .env da ruotare
+
+━━━ Generato: 25/07/2026 — fine #68 (skill salva) ━━━

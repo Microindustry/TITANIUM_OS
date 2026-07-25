@@ -52,7 +52,8 @@
       "casella": 9,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_09_la_bibliotecaria_della_mente.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
-      "status": "pending"
+      "status": "bozza_falle",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_09"
     },
     {
       "id": "EP_N2_10",
@@ -91,6 +92,30 @@
       "title": "Il Direttore",
       "casella": 14,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_14_il_direttore.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_15",
+      "title": "Il Gettone della Sarta",
+      "casella": 15,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_15_il_gettone_della_sarta.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_16",
+      "title": "Lo Specchio del Giudice",
+      "casella": 16,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_16_lo_specchio_del_giudice.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_17",
+      "title": "La Traccia",
+      "casella": 17,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_17_la_traccia.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
       "status": "pending"
     }

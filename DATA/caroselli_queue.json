@@ -155,8 +155,9 @@
         "EP_S0_03",
         "S1 \"Il Paradosso\""
       ],
-      "status": "pending",
-      "_auto_refill": true
+      "status": "bozza_verde",
+      "_auto_refill": true,
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_03_02"
     },
     {
       "id": "EP_SG_03_03",
@@ -168,8 +169,9 @@
         "Il Verdetto — i numeri davanti, senza sconti",
         "S1 EP_05"
       ],
-      "status": "pending",
-      "_auto_refill": true
+      "status": "bozza_falle",
+      "_auto_refill": true,
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_03_03"
     },
     {
       "id": "EP_SG_04_01",
@@ -181,8 +183,9 @@
         "L'occhio — valutare attrezzatura industriale sul canale usato",
         "BOM MENTE/V32"
       ],
-      "status": "pending",
-      "_auto_refill": true
+      "status": "bozza_verde",
+      "_auto_refill": true,
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_SG_04_01"
     },
     {
       "id": "EP_SG_04_02",
@@ -207,6 +210,88 @@
       "queries": [
         "Meno Parti — la filosofia del togliere",
         "ST \"Meno Parti\""
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_04",
+      "title": "La saga delle Config — da A a G, sette modi di sbagliare meglio",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "La saga delle Config — da A a G, sette modi di sbagliare meglio — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: MOM_05; IL tema più denso del vault, ~365 link 6-7 domini. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "La saga delle Config — da A a G, sette modi di sbagliare meglio",
+        "MOM_05",
+        "IL tema più denso del vault"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_05",
+      "title": "Il corpo unico — 178 kg, la decisione anti-molle",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "Il corpo unico — 178 kg, la decisione anti-molle — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: canone maggio 2026; PONTE: cita EP_N2_20 «Il corpo che non trema». Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Il corpo unico — 178 kg, la decisione anti-molle",
+        "canone maggio 2026",
+        "PONTE: cita EP_N2_20 «Il corpo che non trema»"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_06",
+      "title": "Colata Zero — l'epoxy granite",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "Colata Zero — l'epoxy granite — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: EP_S2_01. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Colata Zero — l'epoxy granite",
+        "EP_S2_01"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_07",
+      "title": "Config G — rinforzi colonne Z+U",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "Config G — rinforzi colonne Z+U — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: EP_S2_00; rinominato dal title-scan: è il nome del corpus-hub. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Config G — rinforzi colonne Z+U",
+        "EP_S2_00",
+        "rinominato dal title-scan: è il nome del corpus-hub"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_08",
+      "title": "±0.019 — la precisione non si compra, si difende",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "±0.019 — la precisione non si compra, si difende — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: MOM \"La Materia\", DATI MASTER. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "±0.019 — la precisione non si compra, si difende",
+        "MOM \"La Materia\"",
+        "DATI MASTER"
+      ],
+      "status": "pending",
+      "_auto_refill": true
+    },
+    {
+      "id": "EP_SG_04_09",
+      "title": "Il mandrino che manca — il blocker raccontato onesto",
+      "cap": "CAP 4 · LA MACCHINA",
+      "angolo": "Il mandrino che manca — il blocker raccontato onesto — capitolo «CAP 4 · LA MACCHINA». Aggancio alle fonti: STATE blocker. Attieniti SOLO ai fatti del dossier; stato reale obbligatorio, mai numeri/percentuali di progetto come fatti.",
+      "toplabel": "TITANIUM OS · IL SISTEMA — STAGIONE 1",
+      "queries": [
+        "Il mandrino che manca — il blocker raccontato onesto",
+        "STATE blocker"
       ],
       "status": "pending",
       "_auto_refill": true

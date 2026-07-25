@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-21T00:33:07.907826",
-  "active_milestone": "Sessione #67b (20-21/07): LANCIO SOCIAL VIVO. Pagina FB 'Il Mondo di Nina' creata+collegata a @ilmondodinina.ms (coppia FB+IG); superato il labirinto Meta Business Manager (gestire come owner Matteo Mims=benenatimatteo.mb, non come i profili IG limitati). 18/21 post programmati con date certe (Business Suite pubblica in automatico): Sistema 10/11 (fino VULCAN 18/08), Nina 8/10 (fino EP_N2_04 16/08). Slide-ponte cross-profilo rigenerate (nuovo tool _render_slide.py). Sorgenti caroselli riorganizzati (EP_N2_04/05/06 _BOZZE->NINA). Restano 3 post bloccati solo dal tetto 29gg Meta, da caricare al rientro (promemoria Calendar 30/07).",
-  "next_step": "MATTEO VIA AL MARE 7gg dal 22/07 sera (~rientro 29/07): i 18 post escono da soli. AL RIENTRO (promemoria 30/07) caricare i 3 rimasti -> 21/21: Nina EP_N2_05 (19/08) + EP_N2_06 (23/08), Sistema GENESIS EP_SG_02_04 (21/08). Caption in _NINA_/_SISTEMA_COPIA_INCOLLA.md. Poi rifiniture bio + BGE-M3 (1 click) restano aperti.",
-  "session_count": 143,
+  "last_update": "2026-07-25T15:06:53.472420",
+  "active_milestone": "Sessione #68 (21/07): ATTACCO ECOSISTEMA su TUTTO il progetto. 5 fix applicati e verificati a 4gg (25/07): finetune torchaudio 2.6.0 nel venv isolato (era 2.11 incompatibile, WinError 127); esplosione BACKUPS 42.141->353 con tetto keep-N in retention.py (700MB liberati, solo backup gitignored, zero file di progetto toccati); spam log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable=True; 2 path hardcoded resi env-derived. + hook globale Claude Code SessionStart (auto-orientamento ogni sessione, verificato funziona). Sicurezza repo BUONA (0 segreti hardcoded). Report DOCS/ATTACCO_20260721. I fix hanno TENUTO da soli: backup a 353, audit fresco, catena notturna verde.",
+  "next_step": "Al RIENTRO (30/07, promemoria Calendar) caricare i 3 post rimasti -> 21/21 (Nina EP_N2_05 19/08 + EP_N2_06 23/08, Sistema GENESIS EP_SG_02_04 21/08). Poi decidere i 3 filoni PROPOSTI #68: (A) smoke-test organi vitali, (B) audit bare-except, (C) pin requirements.txt. TI_FineTune conferma il fix torchaudio al run 26/07. Da revisionare: nuovi EP_N2_58-61 + bozze prodotti dagli agenti in vacanza.",
+  "session_count": 149,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-21T00:19:43.066259"
+      "last_activity": "2026-07-25T15:03:47.725171"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -141,7 +141,8 @@
       "Sessione #67b (20-21/07): Pagina FB 'Il Mondo di Nina' creata e collegata a @ilmondodinina.ms (coppia FB+IG in Business Suite) - superato il labirinto Meta multi-account: si gestisce come owner Matteo Mims (benenatimatteo.mb@gmail.com), non come i profili IG che sono utenti limitati (blocked_ig_user_in_mbs).",
       "Sessione #67b: 18/21 caroselli programmati con date certe su 2 profili separati (Business Suite auto-pubblica). Sistema 10/11 (PRE_SG_01->V32+MIMS+VULCAN, fino 18/08, mar+ven 10:00); Nina 8/10 (PRE_01->EP_N2_04, fino 16/08, mer+dom). Restano 3 bloccati solo dal tetto 29gg (Nina EP_N2_05/06, Sistema GENESIS) -> promemoria Calendar 30/07.",
       "Sessione #67b: slide-ponte cross-profilo (slide 8 di PRE_04->@microindustry.ms e PRE_SG_04->@ilmondodinina.ms) rigenerate con nuovo tool riusabile CAROSELLI/_render_slide.py (chrome headless, 1 slide 1080x1350). Verificate a occhio, ricaricate.",
-      "Sessione #67b: riorganizzati i sorgenti caroselli (git mv EP_N2_04/05/06 da _BOZZE/ a NINA/ perche in coda; _BOZZE = solo vere bozze). Handle corretto @ilmondodinina.ms ovunque. Doc di controllo _SCALETTA_INTERSECATA.md a moduli SEPARATI Nina/Sistema + STATO + PONTI. File copia-incolla _NINA_/_SISTEMA_COPIA_INCOLLA.md."
+      "Sessione #67b: riorganizzati i sorgenti caroselli (git mv EP_N2_04/05/06 da _BOZZE/ a NINA/ perche in coda; _BOZZE = solo vere bozze). Handle corretto @ilmondodinina.ms ovunque. Doc di controllo _SCALETTA_INTERSECATA.md a moduli SEPARATI Nina/Sistema + STATO + PONTI. File copia-incolla _NINA_/_SISTEMA_COPIA_INCOLLA.md.",
+      "Sessione #68 (21/07): ATTACCO ECOSISTEMA tutto il progetto — 5 fix applicati/verificati (finetune torchaudio 2.6.0; BACKUPS 42k->353 keep-N in retention.py; log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable; 2 path env-derived) + hook globale SessionStart auto-orientamento; sicurezza repo 0 segreti; report DOCS/ATTACCO_20260721; verifica 25/07 i fix hanno tenuto (backup bounded, audit fresco, nightly verde)."
     ],
     "next": "RIPRESA #66: LinkedIn concede Community Management API -> docker compose start -> connetti Pagina microindustry -> test EP_SG_02_01.",
     "target_capannone": "2030-07-15"
@@ -181,5 +182,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a EP_N2_04_la_mappa_che_non_mente.md"
+  "last_action": "Modifica a night_audit.py"
 }

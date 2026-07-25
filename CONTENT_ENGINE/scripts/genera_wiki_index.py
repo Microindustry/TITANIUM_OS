@@ -4,6 +4,7 @@
 # vault, il graph view nativo connette tutto = "il grafo che e' il nostro wiki".
 # Auto-mantenuto: si rigenera a ogni run (evolutivo). READ-only sui contenuti.
 
+import os
 import sys
 from pathlib import Path
 from datetime import datetime
@@ -11,7 +12,7 @@ from datetime import datetime
 if sys.stdout is not None and getattr(sys.stdout, "encoding", "") and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-MENTE = Path("C:/Users/teo/MICROINDUSTRY/MENTE")
+MENTE = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 SKIP = {".git", ".obsidian", "graphify-out", "_ARCHIVIO", "_PROPOSTI"}  # _ARCHIVIO/_PROPOSTI: non canone (sess.#43)
 AUTO = "<!-- AUTO-GENERATO da genera_wiki_index.py — rigenerato, non editare a mano -->"
 

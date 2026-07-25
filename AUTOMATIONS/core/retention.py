@@ -48,6 +48,10 @@ CHROMA_RESET_DAYS = 1        # quarantena reset: grazia corta (R5 e' la rete ver
 CHROMA_RESET_KEEP = 0
 MANIFEST_CORROTTO_DAYS = 7
 BACKUPS_TS_DAYS = 45
+BACKUPS_TS_KEEP = 300   # tetto a NUMERO: il watcher crea ~1 cartella/evento (centinaia/giorno);
+                        # senza cap la sola regola per eta' (45gg) lascia decine di migliaia di
+                        # cartelle = esplosione inode che rallenta ogni scansione. keep-N e' il
+                        # tetto vero; la storia per-file resta in backup.py (max 30 versioni/file).
 BACKUPS_FULL_KEEP = 1
 LOGS_DAYS = 30
 RAG_SNAPSHOTS_KEEP = 3
@@ -122,12 +126,17 @@ def run(apply: bool) -> dict:
         if _entry_age_days(d, now) > CHROMA_DEBRIS_DAYS:
             actions.append(("R1-chroma-debris", d))
 
-    # R2 — cartelle timestamp del watcher-backup
+    # R2 — cartelle timestamp del watcher-backup: tetto a NUMERO (keep-N) + scadenza per eta'.
     if BACKUPS_DIR.exists():
-        for d in BACKUPS_DIR.iterdir():
-            if d.is_dir() and re.fullmatch(r"\d{8}_\d{6}", d.name):
-                if _entry_age_days(d, now) > BACKUPS_TS_DAYS:
-                    actions.append(("R2-backups-ts", d))
+        ts_dirs = sorted(
+            [d for d in BACKUPS_DIR.iterdir()
+             if d.is_dir() and re.fullmatch(r"\d{8}_\d{6}", d.name)],
+            key=lambda d: d.name,
+            reverse=True,
+        )
+        for i, d in enumerate(ts_dirs):
+            if i >= BACKUPS_TS_KEEP or _entry_age_days(d, now) > BACKUPS_TS_DAYS:
+                actions.append(("R2-backups-ts", d))
 
     # R3 — full backup manuali: tieni il piu' recente
     fulls = sorted(BACKUPS_DIR.glob("FULL_*"), key=lambda d: d.name, reverse=True)

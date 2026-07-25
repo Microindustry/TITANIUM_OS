@@ -1,0 +1,294 @@
+{
+  "data": "2026-07-25",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Acquisto UPS: bloccare la radice della corruzione HNSW",
+      "cosa": "Acquistare un UPS da 50-80€ e collegare il server/NAS prima di eseguire la rebuild BGE-M3 o qualsiasi operazione lunga sul RAG.",
+      "perche": "Segnale critico: 'L'UPS (~50-80€) è il terzo episodio di corruzione HNSW da power-loss in 2 giorni (blocker esplicito)'. Con 20.930 chunk RAG e rebuild BGE-M3 pendente (~15-20 min), un quarto evento durante la rebuild distruggerebbe l'indice senza rollback affidabile.",
+      "come": "1. Matteo acquista UPS (es. APC BE600M2 o Eaton 3S 550) prima del 30/07. 2. Collega il server all'UPS. 3. Solo dopo: esegue rebuild_rag_bge_m3.ps1. Nessun intervento software necessario.",
+      "rischio": "Senza UPS la rebuild BGE-M3 è un gamble: se la corrente salta durante i 15-20 min, l'indice Chroma è corrotto e il rollback richiede ore. Impatto diretto su tutti gli agent che usano RAG.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[11]: 'L'UPS (~50-80€) è il terzo episodio di corruzione HNSW da power-loss in 2 giorni'"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Diagnosi e riavvio dei 3 organi vitali piatti: nina-loop, snapshot RAG, AI news watcher",
+      "cosa": "Creare uno script di diagnostica (read-only) che interroga lo stato dei 3 organi piatti e produce un report con l'ultimo timestamp di esecuzione, exit code e stderr. Non riavvia nulla senza approvazione.",
+      "perche": "Segnale critico duplicato (2 finding con sev=alta): 'Tre organi vitali mostrano uptime 0.0 stanotte: nina-loop, snapshot RAG, AI news watcher. Non ci sono righe di log che spieghino il motivo dello stop'. Con Matteo assente 7 giorni, questi organi silenti bloccano la generazione episodi, la coerenza RAG e l'aggiornamento news.",
+      "come": "1. [sicuro] Creare TOOLS/diagnose_organs.py: legge pid file / log file / systemd status per nina-loop, rag_snapshot, news_watcher — solo lettura, niente restart. 2. [sicuro] Lo script stampa: ultimo avvio, ultimo heartbeat, stderr ultime 20 righe. 3. [approvazione] Matteo al rientro 30/07 legge il report e decide se fare restart manuale o correggere la causa root. 4. [approvazione] Se causa è OOM o crash silenzioso: aggiungere supervisor/watchdog o aumentare logging nei 3 servizi.",
+      "rischio": "Basso per la diagnostica (solo lettura). Medio per il restart: riavviare senza capire la causa può mascherare un bug più profondo (es. dipendenza mancante dopo uno dei 33 commit).",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[1] e [7]: 'nina-loop, snapshot RAG e AI news watcher... uptime 0.0... Non ci sono righe di log che spieghino il motivo dello stop'"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "GENESIS",
+      "titolo": "Allineare _CANONE.md a EP_N2_61 e avviare batch open_loop sugli episodi mancanti",
+      "cosa": "Due azioni distinte: (A) aggiornare _CANONE.md dichiarando EP_N2_61 come massimo episodio registrato; (B) generare un batch di open_loop per i 32 episodi che ne sono privi, usando il template narrativo già in uso.",
+      "perche": "Segnale GENESIS duplicato: 'su disco EP_N2_61, il canone dichiara EP_N2_56: aggiornare _CANONE.md' + 'canon_violations=4' + '32 episodi su 61 mancano di open_loop (52%)'. Con il lancio social Nina appena avviato (18/21 post programmati), la retention della serie è il KPI critico: open_loop mancanti dimezzano il valore narrativo proprio ora che arriva traffico.",
+      "come": "1. [sicuro] Script TOOLS/sync_canone.py: legge i file EP_N2_*.md su disco, trova il massimo, aggiorna il campo max_episode in _CANONE.md — nessuna modifica agli episodi, solo metadata. 2. [sicuro] Script TOOLS/audit_open_loop.py: elenca i 32 episodi senza open_loop in un file CSV con titolo + numero. 3. [approvazione] Matteo approva il template open_loop da usare. 4. [approvazione] Batch di generazione: loop sugli episodi del CSV, appende 2-3 righe di gancio narrativo con LLM locale. Review umana prima di commit.",
+      "rischio": "(A) Rischio quasi zero: aggiorna solo un campo numerico. (B) Rischio medio: la generazione batch può introdurre incoerenze narrative — serve review di almeno un campione prima del commit definitivo.",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[4], [6], [10]: 'EP_N2_61 su disco vs EP_N2_56 nel canone' + 'open_loop_missing=32, pari al 52%'"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-25",
+    "milestone": "Sessione #67b (20-21/07): LANCIO SOCIAL VIVO. Pagina FB 'Il Mondo di Nina' creata+collegata a @ilmondodinina.ms (coppia FB+IG); superato il labirinto Meta Business Manager (gestire come owner Matteo Mims=benenatimatteo.mb, non come i profili IG limitati). 18/21 post programmati con date certe (Busin",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il research_agent è cieco su Semantic Scholar: il log del 25/07 mostra «2026-07-25 03:39:00 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+fram"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali risultano piatti (0.0) stanotte: nina-loop, snapshot RAG e AI news watcher. Il dato è nel campo organi_vivi del report corrente, non in un log con riga datata, quindi non è possibile citare un errore esplicito — ma il patt"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Lo story_agent gira senza token HF autenticato: il log del 25/07 mostra «Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.». Con Matteo assente 7 giorni"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola segnala che requirements.txt non ha nessuna versione pinnata (0 '=='): stessa classe di bug che ha già rotto un finetune in precedenza. Il sistema si auto-modifica ogni notte (33 commit in 7 giorni) con dipendenze fluttuanti. Dur"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Il canone dichiara EP_N2_56 come massimo episodio ma su disco esiste EP_N2_61: il log del 25/07 riporta «su disco EP_N2_61, il canone dichiara EP_N2_56: aggiornare _CANONE.md». Cinque episodi non sono registrati nel canone ufficiale. Con 32"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "32 episodi su 61 mancano di open_loop (qc_episodi.open_loop_missing=32, pari al 52%). L'open_loop è il gancio narrativo che porta il lettore all'episodio successivo: la sua assenza dimezza il valore di retention della serie proprio mentre i"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il canone su disco ha raggiunto EP_N2_60 ma _CANONE.md dichiara max EP_N2_56: \"su disco EP_N2_60, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-24). Con 4 episodi non registrati nel canone e canon_violations=4, il canon_guard"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali mostrano uptime 0.0 stanotte: nina-loop, snapshot RAG, AI news watcher. Il riflusso FATTI segna 3.1 (anomalo rispetto al valore atteso normalizzato). Non ci sono righe di log che spieghino il motivo dello stop — il sistema"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 24/07 è andata completamente a vuoto su Semantic Scholar per mancanza di API key autenticata: \"2026-07-24 03:38:37 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — a"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "story_agent_run.log del 24/07 segnala: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" L'agent HuggingFace gira senza token: in caso di picco di tra"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Su 60 episodi controllati dal QC, 31 hanno open_loop_missing (52%). Il sistema genera episodi senza gancio narrativo di chiusura in più della metà dei casi. Con n_episodes=291 totali, se il tasso è stabile, oltre 150 episodi nel vault manca"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'UPS (~50-80€) è il terzo episodio di corruzione HNSW da power-loss in 2 giorni (blocker esplicito). Con 20.784 chunk RAG e la rebuild BGE-M3 in attesa di essere eseguita (bussola_open), un quarto evento di corruzione durante o dopo la reb"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 293,
+      "rag_chunks": 20930,
+      "n_commits_7d": 33
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).",
+      "**B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la \"malattia del sistema silenzioso\" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).",
+      "**C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.",
+      "**Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.",
+      "**Modifiche di questa sessione NON ancora committate** — decidere: commit pulito ora, o lasciare che `night_push` le raccolga stanotte.",
+      "**DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:",
+      "**Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).",
+      "**BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).",
+      "**BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.",
+      "**LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.",
+      "**COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.",
+      "**UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).",
+      "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+      "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+      "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Cursor Releases Cursor Router: A Request-Level Classifier Delivering Frontier Coding Quality at 30–50% Lower Cost",
+        "url": "https://www.marktechpost.com/2026/07/22/cursor-releases-cursor-router-a-request-level-classifier/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Anthropic Releases Claude Security Plugin for Claude Code in Beta: A Multi-Agent Vulnerability Scanner That Runs in Your Terminal",
+        "url": "https://www.marktechpost.com/2026/07/22/anthropic-releases-claude-security-plugin-for-claude-code-in-beta-a-multi-agent-vulnerability-scanner-that-runs-in-your-terminal/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meet Gigatoken: A Rust BPE Tokenizer that Encodes Text at 24.53 GB/s, up to 989x Faster than HuggingFace Tokenizers",
+        "url": "https://www.marktechpost.com/2026/07/23/meet-gigatoken-a-rust-bpe-tokenizer-that-encodes-text-at-24-53-gb-s-up-to-989x-faster-than-huggingface-tokenizers/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Best Open Speech Recognition (ASR) Models in 2026: WER, Languages, Latency, and License Compared",
+        "url": "https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "You Didn’t Get the AI Model You Paid For",
+        "url": "https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Andrew Ng Just Released OpenWorker: An Open-Source, Local-First Desktop AI Coworker That Returns Finished Deliverables Instead of Chat",
+        "url": "https://www.marktechpost.com/2026/07/23/andrew-ng-just-released-openworker-an-open-source-local-first-desktop-ai-coworker-that-returns-finished-deliverables-instead-of-chat/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "How to Build an End-to-End OCR Pipeline with Baidu’s Unlimited-OCR for High-Resolution Images and Multi-Page PDF Parsing",
+        "url": "https://www.marktechpost.com/2026/07/23/how-to-build-an-end-to-end-ocr-pipeline-with-baidus-unlimited-ocr-for-high-resolution-images-and-multi-page-pdf-parsing/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meet the New Claude Opus 5: Frontier-Class Agentic Coding and Computer Use at Unchanged Opus Pricing",
+        "url": "https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Show HN: ReadKinetic – a free, local-first speed reader for your own books",
+        "url": "https://www.readkinetic.com/app/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Can a MUD evaluate LLMs? A $99 proof of concept",
+        "url": "https://cruciblebench.ai/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Protecting our FLOSS commons from LLMs",
+        "url": "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Petals: Run LLMs at home, BitTorrent-style",
+        "url": "https://petals.dev/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Show HN: Claude-thermos keeps your Claude session warm for you",
+        "url": "https://github.com/izeigerman/claude-thermos"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Cookbook",
+        "url": "https://platform.claude.com/cookbook/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Hetzner is working on LLM Inference",
+        "url": "https://sliplane.io/blog/hetzner-inference"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Opus 5",
+        "url": "https://www.anthropic.com/news/claude-opus-5"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+        "url": "https://huggingface.co/blog/nunchaku-diffusers"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How Codex became a collaborator for OpenAI’s creative team",
+        "url": "https://openai.com/index/codex-collaborator-creative-team"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+        "url": "https://openai.com/index/ntt-data"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Introducing OpenAI Presence",
+        "url": "https://openai.com/index/introducing-openai-presence"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Advancing the next era of national science",
+        "url": "https://openai.com/index/advancing-the-next-era-of-national-science"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How news organizations are using AI to advance their vital missions",
+        "url": "https://openai.com/index/how-news-organizations-are-using-ai"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Building AI infrastructure with the Effingham County community",
+        "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Launching Health in ChatGPT",
+        "url": "https://openai.com/index/health-in-chatgpt"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "La Cina sta umiliando OpenAI ed Anthropic (e non è finita)",
+        "url": "https://www.youtube.com/watch?v=FxJ96zhi-1A"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "É uscito Claude Opus 5 ecco tutto quello che devi sapere !",
+        "url": "https://www.youtube.com/shorts/2chajpmOWZg"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Easiest AI Business Idea 💡💰",
+        "url": "https://www.youtube.com/shorts/kURp6YM6O5Q"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: This New Model Has Big AI Labs Panicking!",
+        "url": "https://www.youtube.com/watch?v=Ww3EYbuHSfo"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Open-weight AI just hit 2.8 trillion parameters…",
+        "url": "https://www.youtube.com/watch?v=YP73B9D20V4"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The most interesting \"hack\" in history...",
+        "url": "https://www.youtube.com/watch?v=KOpTWx1Eou4"
+      }
+    ],
+    "n_news": 30
+  }
+}

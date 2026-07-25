@@ -1,0 +1,312 @@
+{
+  "data": "2026-07-24",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Sincronizzare _CANONE.md da EP_N2_56 a EP_N2_60 e azzerare canon_violations",
+      "cosa": "Aggiornare _CANONE.md dichiarando EP_N2_60 come episodio massimo registrato; aggiungere le 4 entry mancanti (EP_N2_57..60) con metadati minimi (titolo, data, status). Azzerare il contatore canon_violations nel sistema di guardia.",
+      "perche": "Segnale critico duplicato: «su disco EP_N2_60, il canone dichiara EP_N2_56» (2026-07-23 e 2026-07-24). canon_violations=4. QC, retention e vault_intersect operano su un canone stantio: ogni query semantica sugli ultimi 4 episodi è cieca.",
+      "come": [
+        "1. Aprire _CANONE.md, localizzare la riga max_episode.",
+        "2. Aggiornare a EP_N2_60.",
+        "3. Aggiungere stub per EP_N2_57..60 (titolo, data_generazione, status=unreviewed).",
+        "4. Eseguire canon_guard in dry-run per verificare violations=0.",
+        "5. Committare con messaggio 'fix: sync canone EP_N2_56→60, canon_violations→0'."
+      ],
+      "rischio": "Bassissimo — modifica documentale pura. Nessun codice toccato. Reversibile con git revert.",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[0] e [10] — sev alta, area SISTEMA"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Aggiungere token HF_TOKEN e chiave Semantic Scholar all'env notturno per eliminare i 429 silenziosi",
+      "cosa": "Iniettare HF_TOKEN (HuggingFace) e SS_API_KEY (Semantic Scholar) nelle variabili d'ambiente usate dagli agent notturni (story_agent, research_agent). Aggiungere un controllo di pre-volo all'avvio di ciascun agent che verifica la presenza del token e logga WARN esplicito se assente — mai ingoiare silenziosamente.",
+      "perche": "Due segnali distinti ad alta severità: (a) research_agent ha restituito 0 risultati per 2 notti consecutive per HTTP 429 su Semantic Scholar senza API key; (b) story_agent gira senza HF_TOKEN con warning esplicito da 7 notti. Con Matteo al mare 7 giorni e organi a uptime 0.0, il rischio di rate-limit totale è elevato e non rilevato.",
+      "come": [
+        "1. Creare/aggiornare il file .env.secrets (gitignored) con HF_TOKEN=<token> e SS_API_KEY=<key>.",
+        "2. Nel loader di config (es. config.py o dotenv), assicurarsi che entrambe le chiavi siano caricate all'avvio.",
+        "3. In research_agent e story_agent aggiungere controllo all'init: if not os.environ.get('SS_API_KEY'): logger.warning('SS_API_KEY mancante — ricerca degradata').",
+        "4. Testare con una query manuale che ritorni risultati reali.",
+        "5. NON committare valori delle chiavi — solo il pattern di caricamento."
+      ],
+      "rischio": "Basso. Le chiavi non vanno su git. Il pre-volo è additive. Reversibile.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[2],[8],[3] — area RICERCA e SISTEMA, sev alta/media"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Smoke-test minimo sui 4 organi vitali per rilevare uptime 0.0 prima che Matteo torni",
+      "cosa": "Scrivere uno script smoke_test.py con 4-5 asserzioni rapide (<60s totali): (1) canon_guard legge _CANONE.md e non vede violations; (2) rag_engine risponde a una query semantica e BM25 restituisce risultati non vuoti; (3) nina-loop è importabile e state_updater eseguibile in dry-run; (4) snapshot RAG esiste su disco e ha timestamp <48h; (5) AI news watcher restituisce almeno 1 item. Lo script restituisce exit 1 se uno qualsiasi fallisce e scrive un log leggibile.",
+      "perche": "Tre organi a uptime 0.0 (nina-loop, snapshot RAG, AI news watcher) con «nessuna riga di log che spieghi il motivo dello stop» (segnale alta sev). Con 1 solo file di test su 157 .py (bussola_aperta A) il sistema è cieco sulle proprie rotture. Matteo è assente 7 giorni.",
+      "come": [
+        "1. Creare tests/smoke_test.py con i 5 check sopra.",
+        "2. Ogni check è try/except con logging esplicito (niente bare except).",
+        "3. Aggiungere chiamata a smoke_test.py come primo step del cron notturno (prima di story_agent).",
+        "4. Se exit!=0, il cron invia notifica (anche solo scrive un flag SMOKE_FAIL.txt leggibile al mattino).",
+        "5. Eseguire manualmente una volta per validare baseline."
+      ],
+      "rischio": "Nessun rischio operativo — lo script è read-only e dry-run. Non tocca dati.",
+      "autonomia": "sicuro",
+      "fonte": "critiche_audit_aperte[1],[9] — uptime 0.0 su 3 organi; bussola_aperta A (1 solo test su 157 .py)"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-24",
+    "milestone": "Sessione #67b (20-21/07): LANCIO SOCIAL VIVO. Pagina FB 'Il Mondo di Nina' creata+collegata a @ilmondodinina.ms (coppia FB+IG); superato il labirinto Meta Business Manager (gestire come owner Matteo Mims=benenatimatteo.mb, non come i profili IG limitati). 18/21 post programmati con date certe (Busin",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il canone su disco ha raggiunto EP_N2_60 ma _CANONE.md dichiara max EP_N2_56: \"su disco EP_N2_60, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-24). Con 4 episodi non registrati nel canone e canon_violations=4, il canon_guard"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali mostrano uptime 0.0 stanotte: nina-loop, snapshot RAG, AI news watcher. Il riflusso FATTI segna 3.1 (anomalo rispetto al valore atteso normalizzato). Non ci sono righe di log che spieghino il motivo dello stop — il sistema"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 24/07 è andata completamente a vuoto su Semantic Scholar per mancanza di API key autenticata: \"2026-07-24 03:38:37 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — a"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "story_agent_run.log del 24/07 segnala: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" L'agent HuggingFace gira senza token: in caso di picco di tra"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Su 60 episodi controllati dal QC, 31 hanno open_loop_missing (52%). Il sistema genera episodi senza gancio narrativo di chiusura in più della metà dei casi. Con n_episodes=291 totali, se il tasso è stabile, oltre 150 episodi nel vault manca"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'UPS (~50-80€) è il terzo episodio di corruzione HNSW da power-loss in 2 giorni (blocker esplicito). Con 20.784 chunk RAG e la rebuild BGE-M3 in attesa di essere eseguita (bussola_open), un quarto evento di corruzione durante o dopo la reb"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il todo BGE-M3 è pronto al click da almeno 3 giorni (snapshot scattato, script verificato) ma resta bloccato in attesa di Matteo. Ogni notte di story_agent e vault_intersect che gira ancora su embedding legacy produce collegamenti semantici"
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "31 episodi su 60 controllati mancano di open_loop (open_loop_missing=31, 52%). Il campo open_loop è il gancio narrativo che alimenta l'engagement nei caroselli; episodi senza di esso entrano nel RAG come contenuto piatto e, se promossi, pro"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "HuggingFace Hub opera senza token ogni notte: «Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads» (2026-07-23). Con 7 notti di story_agent automatico, un"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi critici risultano fermi a 0.0: nina-loop, snapshot RAG e AI news watcher. Con Matteo al mare per 7 giorni e nessuna supervisione manuale, un eventuale crash notturno (aggravato dall'UPS mancante, già a 3 episodi di corruzione HNS"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Il canone dichiara EP_N2_56 come massimo ma su disco esiste già EP_N2_60: «su disco EP_N2_60, il canone dichiara EP_N2_56: aggiornare _CANONE.md» (2026-07-23). Un delta di 4 episodi non tracciati significa che QC, retention e vault_intersec"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 23/07 è andata completamente a vuoto per doppio guasto simultaneo: Semantic Scholar ha restituito 429 su entrambe le query («2026-07-23 03:38:52 WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 291,
+      "rag_chunks": 20784,
+      "n_commits_7d": 32
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).",
+      "**B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la \"malattia del sistema silenzioso\" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).",
+      "**C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.",
+      "**Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.",
+      "**Modifiche di questa sessione NON ancora committate** — decidere: commit pulito ora, o lasciare che `night_push` le raccolga stanotte.",
+      "**DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:",
+      "**Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).",
+      "**BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).",
+      "**BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.",
+      "**LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.",
+      "**COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.",
+      "**UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).",
+      "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+      "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+      "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "The Artillery Officer Who Solved Einstein's Equations - Adam Brown",
+        "url": "https://www.youtube.com/shorts/r32UPSOMMVQ"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Nuclear Power Is Still Incredibly Inefficient - Adam Brown",
+        "url": "https://www.youtube.com/shorts/mJE5s8RmvRI"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why You'll Never See Anything Enter a Black Hole - Adam Brown",
+        "url": "https://www.youtube.com/shorts/WLEW4i9u8bk"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Ranking AI CEOs",
+        "url": "https://www.youtube.com/shorts/wN1qJPuPI44"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "People are using AI wrong",
+        "url": "https://www.youtube.com/shorts/GCI7pydoc-M"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "The major bottleneck with AI Coding in 2026",
+        "url": "https://www.youtube.com/shorts/GapEWqXgKHk"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "OpenAI internal model JUST went ROGUE",
+        "url": "https://www.youtube.com/watch?v=OSuhUTkM1no"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Benchmarks: AntLing-3.0-flash a hybrid-reasoning MoE model built for production-scale agents.",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4mltt/benchmarks_antling30flash_a_hybridreasoning_moe/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "[audio.cpp] Release 0.4: Higgs Audio v3 TTS 4B (10x real time)+ Fish Audio S2 Pro in C++/GGML, full GGUF loading, Q8 speed and VRAM gains",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4w5cj/audiocpp_release_04_higgs_audio_v3_tts_4b_10x/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Apple M5 isn't making full use of its matmul cores yet",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4iw0n/apple_m5_isnt_making_full_use_of_its_matmul_cores/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "DeepSeek Founder’s 4-hour investor meeting: DeepSeek is prioritizing AGI over user growth and commercialisation",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v49lxp/deepseek_founders_4hour_investor_meeting_deepseek/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "AntLing-3.0-flash is now live on OpenRouter, and free to use through August 3, 2026",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4m5cr/antling30flash_is_now_live_on_openrouter_and_free/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Absurd claim: the distilled model outperforms the originals",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v49zi9/absurd_claim_the_distilled_model_outperforms_the/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "CEO of Hugging face: Heading to San Francisco to have a little chat with that “rogue agent”",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4avga/ceo_of_hugging_face_heading_to_san_francisco_to/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "The LLM distillation process simplified for politicians:",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v4moxy/the_llm_distillation_process_simplified_for/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Best Local LLMs You Can Run on a Single 24GB GPU in 2026: Qwen, Gemma, Mistral, DeepSeek Compared",
+        "url": "https://www.marktechpost.com/2026/07/19/best-local-llms-you-can-run-on-a-single-24gb-gpu-in-2026-qwen-gemma-mistral-deepseek-compared/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Someone Fine-Tuned OpenBMB’s MiniCPM5-1B on Claude Fable 5 Traces to Ship a 657MB Local Thinking Model",
+        "url": "https://www.marktechpost.com/2026/07/19/someone-fine-tuned-openbmbs-minicpm5-1b-on-claude-fable-5-traces-to-ship-a-657mb-local-thinking-model/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Alibaba’s Tongyi Lab Releases Qwen-Audio-3.0-TTS, a Hosted Text-to-Speech Model in Flash and Plus Tiers Across 16 Languages",
+        "url": "https://www.marktechpost.com/2026/07/20/alibabas-tongyi-lab-releases-qwen-audio-3-0-tts-a-hosted-text-to-speech-model-in-flash-and-plus-tiers-across-16-languages/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "NVIDIA Releases Cosmos 3 Edge: A 4B-Parameter Open World Model That Reasons and Generates Robot Actions On-Device",
+        "url": "https://www.marktechpost.com/2026/07/21/nvidia-releases-cosmos-3-edge-a-4b-parameter-open-world-model-that-reasons-and-generates-robot-actions-on-device/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meta Open-Sources Astryx: An Agent-Ready React Design System With 150+ Accessible Components, Seven Themes, and a CLI",
+        "url": "https://www.marktechpost.com/2026/07/21/meta-open-sources-astryx-an-agent-ready-react-design-system-with-150-accessible-components-seven-themes-and-a-cli/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Validating Distributed LLM Serving Benchmarks with NVIDIA srt-slurm, SLURM Recipes, Parameter Sweeps, and Pareto Analysis",
+        "url": "https://www.marktechpost.com/2026/07/21/validating-distributed-llm-serving-benchmarks-with-nvidia-srt-slurm-slurm-recipes-parameter-sweeps-and-pareto-analysis/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Google Releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber: A Cheaper, More Token-Efficient Flash Tier Built for Agentic Workloads",
+        "url": "https://www.marktechpost.com/2026/07/21/google-releases-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber-a-cheaper-more-token-efficient-flash-tier-built-for-agentic-workloads/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Poolside Releases Laguna S 2.1, an Open-Weight Agentic Coding Model Punching Above Its Weight Class on SWE-Bench Multilingual",
+        "url": "https://www.marktechpost.com/2026/07/21/poolside-releases-laguna-s-2-1/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "1-Bit LLM in the Browser",
+        "url": "https://huggingface.co/spaces/webml-community/bonsai-webgpu"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
+        "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Code: Anatomy of a Misfeature",
+        "url": "https://www.olafalders.com/2026/07/17/claude-code-anatomy-of-a-misfeature/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
+        "url": "https://ykdojo.github.io/claude-controls-mac/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Code uses Bun written in Rust now",
+        "url": "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Fable produced a counterexample to the Jacobian Conjecture",
+        "url": "https://xcancel.com/__alpoge__/status/2079028340955197566"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Is Not a Compiler",
+        "url": "https://blog.exe.dev/claude-is-not-a-compiler"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -1,413 +1,1163 @@
 {
-  "ran_at": "2026-07-19T04:07:45.245085",
+  "ran_at": "2026-07-25T04:28:22.995230",
   "mode": "apply",
-  "actions": 67,
-  "freed_mb": 0.0,
+  "actions": 192,
+  "freed_mb": 44.3,
   "by_rule": {
-    "R2-backups-ts": 66,
-    "R4-logs": 1
+    "R2-backups-ts": 190,
+    "R4-logs": 2
   },
   "items": [
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_144414",
+      "path": "BACKUPS\\20260724_021053",
+      "mb": 1.6,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_021033",
+      "mb": 1.6,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020944",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020941",
+      "mb": 1.6,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020923",
+      "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020830",
+      "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020828",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020827",
+      "mb": 2.4,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020826",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020825",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020824",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020823",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020822",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020821",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020820",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020819",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020818",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020817",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020816",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020815",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020814",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020813",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020812",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020811",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020810",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020809",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020808",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020807",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020806",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020805",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020804",
+      "mb": 2.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145328",
+      "path": "BACKUPS\\20260724_020757",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145329",
+      "path": "BACKUPS\\20260724_020756",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145337",
+      "path": "BACKUPS\\20260724_020716",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_020707",
+      "mb": 0.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145338",
+      "path": "BACKUPS\\20260724_020703",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145339",
+      "path": "BACKUPS\\20260724_020701",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145601",
+      "path": "BACKUPS\\20260724_000254",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260724_000253",
+      "mb": 0.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145619",
+      "path": "BACKUPS\\20260724_000252",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_145654",
+      "path": "BACKUPS\\20260724_000250",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153407",
+      "path": "BACKUPS\\20260724_000222",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153408",
+      "path": "BACKUPS\\20260723_073001",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153409",
+      "path": "BACKUPS\\20260723_043303",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153410",
+      "path": "BACKUPS\\20260723_043245",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_043156",
+      "mb": 0.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153411",
+      "path": "BACKUPS\\20260723_043153",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153412",
+      "path": "BACKUPS\\20260723_043137",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153430",
+      "path": "BACKUPS\\20260723_043057",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040833",
+      "mb": 0.4,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040832",
+      "mb": 6.8,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040831",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040830",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040829",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040828",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040827",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040826",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040825",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040824",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040823",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040822",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040821",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040820",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040819",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040818",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040817",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153431",
+      "path": "BACKUPS\\20260723_040816",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040815",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040814",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040813",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040812",
+      "mb": 0.4,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040811",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040810",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040809",
+      "mb": 0.4,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040808",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040807",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040806",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040805",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040804",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153432",
+      "path": "BACKUPS\\20260723_040803",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040802",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040801",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040800",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040759",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040758",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040757",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040756",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040755",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040754",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040752",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040751",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040750",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040749",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040748",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153439",
+      "path": "BACKUPS\\20260723_040747",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153440",
+      "path": "BACKUPS\\20260723_040746",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_153543",
+      "path": "BACKUPS\\20260723_040745",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_154011",
+      "path": "BACKUPS\\20260723_040744",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_154418",
+      "path": "BACKUPS\\20260723_040743",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_160118",
+      "path": "BACKUPS\\20260723_040742",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_160119",
+      "path": "BACKUPS\\20260723_040741",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_160120",
+      "path": "BACKUPS\\20260723_040740",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040739",
+      "mb": 0.4,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_204726",
+      "path": "BACKUPS\\20260723_040738",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040737",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_205652",
+      "path": "BACKUPS\\20260723_040736",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_205943",
+      "path": "BACKUPS\\20260723_040735",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040734",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210002",
+      "path": "BACKUPS\\20260723_040733",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040732",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040731",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210003",
+      "path": "BACKUPS\\20260723_040730",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040729",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210038",
+      "path": "BACKUPS\\20260723_040728",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210732",
+      "path": "BACKUPS\\20260723_040727",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210733",
+      "path": "BACKUPS\\20260723_040726",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210734",
+      "path": "BACKUPS\\20260723_040725",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210735",
+      "path": "BACKUPS\\20260723_040724",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040723",
+      "mb": 1.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040722",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040721",
+      "mb": 0.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040720",
+      "mb": 0.4,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_210736",
+      "path": "BACKUPS\\20260723_040719",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_212038",
+      "path": "BACKUPS\\20260723_040718",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040717",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040716",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040715",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040714",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_212424",
+      "path": "BACKUPS\\20260723_040713",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040712",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040711",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_040710",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_212630",
+      "path": "BACKUPS\\20260723_040709",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_212631",
+      "path": "BACKUPS\\20260723_040704",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_212632",
+      "path": "BACKUPS\\20260723_040701",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_214415",
+      "path": "BACKUPS\\20260723_035242",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_035204",
+      "mb": 1.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_035203",
+      "mb": 0.4,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_214654",
+      "path": "BACKUPS\\20260723_035201",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034525",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_214746",
+      "path": "BACKUPS\\20260723_034453",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034412",
+      "mb": 0.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_214836",
+      "path": "BACKUPS\\20260723_034409",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034359",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034358",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034357",
+      "mb": 2.4,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034356",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034355",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034354",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034353",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034352",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034351",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034350",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034349",
+      "mb": 0.2,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034348",
+      "mb": 0.2,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_214927",
+      "path": "BACKUPS\\20260723_034347",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034346",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034345",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034344",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034343",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034342",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034341",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034340",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034339",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034338",
+      "mb": 0.1,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034337",
+      "mb": 2.3,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034336",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215021",
+      "path": "BACKUPS\\20260723_034240",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215110",
+      "path": "BACKUPS\\20260723_034156",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_034130",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215158",
+      "path": "BACKUPS\\20260723_034128",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215246",
+      "path": "BACKUPS\\20260723_034108",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215339",
+      "path": "BACKUPS\\20260723_033958",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215430",
+      "path": "BACKUPS\\20260723_033805",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215518",
+      "path": "BACKUPS\\20260723_033737",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215608",
+      "path": "BACKUPS\\20260723_032720",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215657",
+      "path": "BACKUPS\\20260723_032702",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_032612",
+      "mb": 0.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215748",
+      "path": "BACKUPS\\20260723_032609",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260603_215837",
+      "path": "BACKUPS\\20260723_032556",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_020701",
+      "path": "BACKUPS\\20260723_032554",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033701",
+      "path": "BACKUPS\\20260723_032513",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033729",
+      "path": "BACKUPS\\20260723_032501",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033749",
+      "path": "BACKUPS\\20260723_021050",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033837",
+      "path": "BACKUPS\\20260723_021033",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_020942",
+      "mb": 0.3,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033847",
+      "path": "BACKUPS\\20260723_020939",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033853",
+      "path": "BACKUPS\\20260723_020924",
       "mb": 0.0,
+      "removed": true
+    },
+    {
+      "rule": "R2-backups-ts",
+      "path": "BACKUPS\\20260723_020830",
+      "mb": 0.1,
       "removed": true
     },
     {
       "rule": "R2-backups-ts",
-      "path": "BACKUPS\\20260604_033940",
+      "path": "BACKUPS\\20260723_020829",
+      "mb": 2.4,
+      "removed": true
+    },
+    {
+      "rule": "R4-logs",
+      "path": "DATA\\logs\\md_view_pipeline.log",
       "mb": 0.0,
       "removed": true
     },
     {
       "rule": "R4-logs",
-      "path": "DATA\\logs\\session_orienter.log",
-      "mb": 0.0,
+      "path": "DATA\\logs\\rebuild_v42.log",
+      "mb": 0.2,
       "removed": true
     }
   ]
