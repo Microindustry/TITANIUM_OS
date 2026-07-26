@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-26  3 commit](#2026-07-26-3-commit)
   - [2026-07-25  2 commit](#2026-07-25-2-commit)
   - [2026-07-24  2 commit](#2026-07-24-2-commit)
   - [2026-07-23  2 commit](#2026-07-23-2-commit)
@@ -41,6 +42,15 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-26 · 3 commit
+- `046f481e` auto: night_audit - cartella clinica 26/07/2026
+- `cd9e353e` auto: story_agent - episodi generati 26/07/2026
+- `228af382` chore(salva): chiusura #68 — ATTACCO ecosistema (5 fix + report) + sweep nightly 21-25/07
+
+_episodi: 295 · critiche aperte: 30 (201 risolte) · RAG: 21090 chunk_
+
+
 
 ## 2026-07-25 · 2 commit
 - `2c647100` auto: night_audit - cartella clinica 25/07/2026
