@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-f4c2380277",
+    "date": "2026-07-26",
+    "git": "cd9e353e",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il filone C (pin requirements.txt) è rimasto aperto da #68 ma ha già una prova di danno reale nel milestone attivo: il bug torchaudio 2.11→2.6.0 ha richiesto un venv isolato e un fix dedicato. Con 33 commit in 7 giorni e il sistema in auto-modifica notturna, la prossima dipendenza non pinnata che rompe un agent potrebbe farlo in vacanza, senza che Matteo se ne accorga fino al 30/07.",
+    "azione": "Eseguire 'pip freeze > requirements.txt' nell'ambiente principale prima del rientro, identificare le 5-10 dipendenze critiche (torch, chromadb, langchain, torchaudio, flask) e fissarle con '=='. Non serve pinnare tutto: bastano i pacchetti che hanno già dimostrato di rompersi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-26"
+  },
+  {
+    "id": "AUD-4b76d14e18",
+    "date": "2026-07-26",
+    "git": "cd9e353e",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "La ricerca notturna del 26/07 è andata a vuoto per rate-limit non autenticato su Semantic Scholar. Log: \"2026-07-26 03:40:20 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s\" e \"2026-07-26 03:40:41 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025\" con esito \"2026-07-26 03:40:41 [research_agent] INFO semantic_scholar -> 0 risultati\". La chiave SEMANTIC_SCHOLAR_API_KEY è già presente in .env ma evidentemente non viene iniettata nell'agent al momento della chiamata: il client sta girando non autenticato.",
+    "azione": "Verificare che research_agent legga SEMANTIC_SCHOLAR_API_KEY da .env e la passi nell'header Authorization della richiesta HTTP. Testare con una chiamata curl autenticata prima del prossimo run notturno.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-26"
+  },
+  {
+    "id": "AUD-27c4abea42",
+    "date": "2026-07-26",
+    "git": "cd9e353e",
+    "area": "GENESIS",
+    "severity": "alta",
+    "finding": "Il canone disco è 6 episodi avanti rispetto al canone dichiarato: log \"2026-07-26: su disco EP_N2_62, il canone dichiara EP_N2_56: aggiornare _CANONE.md\". Quattro canon_violations totali. Gli episodi EP_N2_57-62 esistono su disco ma sono invisibili al sistema di tracciamento: non vengono conteggiati nei controlli QC, non hanno stato (done/active), e possono essere sovrascritti o ignorati dal prossimo ciclo story_agent.",
+    "azione": "Aprire _CANONE.md, registrare EP_N2_57-62 con stato esplicito (bozza/da-revisionare), azzerare le 4 canon_violations. Farlo prima del rientro del 30/07 per non trovare il canone più sfasato.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-26"
+  },
+  {
+    "id": "AUD-1f5ff50aef",
+    "date": "2026-07-26",
+    "git": "cd9e353e",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Tre organi vitali risultano a zero nel run di stanotte: nina-loop=0.0, snapshot RAG=0.0, AI news watcher=0.0. Non ci sono log_issues che spieghino il perché: i processi o non sono partiti o hanno fallito silenziosamente. Con 101 bare-except in 47 file (dato bussola_open), il fallimento silenzioso è la spiegazione più probabile — ma senza smoke-test non è verificabile. Il sistema si auto-modifica (33 commit in 7 giorni) con 1 solo file di test su 157 .py.",
+    "azione": "Prima del prossimo ciclo notturno: controllare i log di avvio dei tre organi a zero per identificare se è un crash silenzioso o un mancato avvio. Questo sblocca anche la decisione tra i filoni A/B/C proposti in #68: il dato di stanotte rende il filone A (smoke-test organi vitali) non più opzionale.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-26"
+  },
+  {
+    "id": "AUD-154eef17da",
+    "date": "2026-07-26",
+    "git": "cd9e353e",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "story_agent gira su HuggingFace Hub non autenticato: \"2026-07-26: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Stesso pattern del problema Semantic Scholar: token disponibile (o facilmente generabile) ma non iniettato. Il rischio concreto è un rate-limit HF in produzione notturna che blocca il download di modelli/tokenizer mid-run.",
+    "azione": "Generare un HF_TOKEN read-only su huggingface.co/settings/tokens, aggiungerlo a .env, verificare che story_agent lo legga via os.environ o huggingface_hub.login() all'avvio.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-26"
+  },
+  {
+    "id": "AUD-05ba0b3d38",
+    "date": "2026-07-26",
+    "git": "cd9e353e",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il mandrino 2.2kW ER20 e il martinetto Vevor sono entrambi non ordinati/non montati, e sono in sequenza dipendente: senza mandrino non si fresa, senza martinetto non si fa la prima colata VULCAN. Il pilastro V32 è al 65% ma il prossimo step fisico è bloccato da due prerequisiti hardware non ancora acquisiti, con la decisione Via B (connettori MIMS) già presa dal 24/06.",
+    "azione": "Ordinare mandrino ER20 e UPS nella stessa sessione di acquisto (l'UPS risolve anche il blocker HNSW): sono acquisti indipendenti che sbloccano due filoni paralleli. Montare il martinetto Vevor è il primo step fisico non dipendente da consegne.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-26"
+  },
+  {
     "id": "AUD-d184fabc76",
     "date": "2026-07-25",
     "git": "d30b7fa2",
@@ -296,8 +368,10 @@
     "finding": "La ricerca notturna è cieca su Semantic Scholar: i log del 21/07 mostrano due 429 consecutivi senza recupero — \"2026-07-21 03:39:11 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"2026-07-21 03:40:32 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s\" — seguiti da zero risultati: \"2026-07-21 03:40:53 [research_agent] INFO semantic_scholar -> 0 risultati\". OpenAlex era già vuota in precedenza: \"2026-07-21 03:39:10 [research_agent] INFO openalex -> 0 risultati\". ArXiv ha aggiunto un timeout: \"2026-07-21 03:39:58 [research_agent] WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)\". Risultato: la notte ha prodotto ricerca nulla su tutte e tre le sorgenti principali. Il blocker è già identificato nel sistema (SEMANTIC_SCHOLAR_API_KEY mancante in .env) ma non è stato applicato.",
     "azione": "Inserire SEMANTIC_SCHOLAR_API_KEY in .env prima del rientro o delegare il passo a un promemoria 30/07 esplicito accanto ai 3 post Meta. È un'operazione da 5 minuti che sblocca l'intera corsia ricerca notturna.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-21"
+    "status": "resolved",
+    "last_seen": "2026-07-21",
+    "resolved_on": "2026-07-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c65ad4c1b3",
@@ -308,8 +382,10 @@
     "finding": "BGE-M3 è pronto al click da almeno 24 ore (snapshot già scattato il 20/07, script verificato) ma resta bloccato perché richiede UAC di Matteo. Non è un todo qualsiasi: ogni notte che passa, vault_intersect e linkgraph operano sul vecchio embedder, e al rientro ci sarà anche il backlog di episodi generati durante l'assenza da riallineare. Più si aspetta, più costosa è la calibrazione post-rebuild.",
     "azione": "Eseguire rebuild_rag_bge_m3.ps1 la sera del 22/07 prima di partire (stima 15-20 min, macchina incustodita), oppure pianificarlo come primo atto tecnico del 30/07 prima di caricare i 3 post Meta — non dopo.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-21"
+    "status": "resolved",
+    "last_seen": "2026-07-21",
+    "resolved_on": "2026-07-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-40a0282c22",
@@ -320,8 +396,10 @@
     "finding": "Tre organi schedulati risultano morti (uptime 0.0): nina-loop, snapshot RAG, AI news watcher. Con Matteo assente 7 giorni, qualsiasi power-loss o riavvio non presidiato lascia il sistema senza snapshot di recovery e senza aggiornamento dell'indice Nina. Il blocker hardware UPS è già noto (\"corruzione HNSW da power-loss ricorrente, 3 volte in 2gg\") ma l'UPS non è ancora installato: durante l'assenza non c'è né protezione hardware né organo di snapshot attivo che limiti il danno.",
     "azione": "Verificare prima della partenza (22/07 sera) perché nina-loop e snapshot RAG hanno uptime 0.0: se i processi sono crashati, riavviarli e controllare i log di errore. L'UPS resta priorità hardware al rientro — nel frattempo uno snapshot manuale di chroma_db prima di partire riduce l'esposizione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-21"
+    "status": "resolved",
+    "last_seen": "2026-07-21",
+    "resolved_on": "2026-07-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-1605e68774",
@@ -332,8 +410,10 @@
     "finding": "story_agent gira non autenticato su HuggingFace Hub: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads\" (2026-07-21). Con 7 notti autonome davanti, un rate-limit HF durante il download di un modello blocca silenziosamente la generazione episodi senza alert esplicito.",
     "azione": "Aggiungere HF_TOKEN alle variabili d'ambiente del servizio story_agent (o in .env). Operazione da 2 minuti; previene interruzioni notturne non presidiate durante l'assenza.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-21"
+    "status": "resolved",
+    "last_seen": "2026-07-21",
+    "resolved_on": "2026-07-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0d95075815",
@@ -344,8 +424,10 @@
     "finding": "Il pillar V32 è al 65% ma i due prerequisiti fisici sequenziali (martinetto Vevor da montare → prima colata giunto; mandrino 2.2kW ER20 da ordinare → fresatura stampi MIMS) sono entrambi aperti e non hanno una data. Con Matteo fuori 7 giorni e MIMS al 30%, il rischio non è l'avanzamento questa settimana ma che al rientro il backlog social assorba tutta l'energia e i prerequisiti fisici slittino ancora.",
     "azione": "Al rientro (30/07), prima di aprire Business Suite per i 3 post, dedicare 15 minuti a ordinare il mandrino ER20 (acquisto online, non richiede presenza fisica) così il lead time parte mentre si completano i post.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-21"
+    "status": "resolved",
+    "last_seen": "2026-07-21",
+    "resolved_on": "2026-07-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-032cc86f69",
@@ -356,8 +438,10 @@
     "finding": "Il canone episodi è sfasato: \"su disco EP_N2_58, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-21). Con 4 canon_violations totali e lo sfasamento a +2 episodi, qualsiasi tool che si basa sul canone per decidere cosa promuovere o scartare opera su una mappa sbagliata. Durante i 7 giorni di assenza lo story_agent continuerà a generare episodi su un canone già stale.",
     "azione": "Aggiornare _CANONE.md portando max_ep_canone da 56 a 58 (o al valore corretto verificato su disco) prima della partenza, così lo story_agent notturno ha un riferimento coerente per tutta la settimana.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-21"
+    "status": "resolved",
+    "last_seen": "2026-07-21",
+    "resolved_on": "2026-07-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-e4f4f0d430",
