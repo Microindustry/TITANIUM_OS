@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-26T03:52:41",
-  "date": "2026-07-26",
-  "git_head": "cd9e353e",
-  "rag_chunks": 21090,
-  "n_episodes": 295,
-  "n_commits_7d": 33,
+  "last_audit": "2026-07-27T03:52:43",
+  "date": "2026-07-27",
+  "git_head": "7bd17589",
+  "rag_chunks": 21245,
+  "n_episodes": 297,
+  "n_commits_7d": 30,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,65 +14,47 @@
   },
   "log_issues": [
     {
-      "log": "night_research.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-26 03:40:20 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s",
-      "data": "2026-07-26"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-26 03:40:41 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
-      "data": "2026-07-26"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-26 03:40:41 [research_agent      ] INFO     semantic_scholar -> 0 risultati",
-      "data": "2026-07-26"
-    },
-    {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-07-26 03:39:10 [research_agent      ] INFO     openalex -> 0 risultati",
-      "data": "2026-07-26"
+      "riga": "2026-07-27 03:39:05 [research_agent      ] WARNING  Nessun risultato sopra la soglia di rilevanza (0.40).",
+      "data": "2026-07-27"
     },
     {
       "log": "research_agent.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-26 03:39:12 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-26"
+      "riga": "2026-07-27 03:39:08 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-27"
     },
     {
       "log": "research_agent.log",
       "tipo": "errore esplicito",
-      "riga": "2026-07-26 03:39:42 [research_agent      ] INFO     [02] [semantic_scholar] Design and Implementation of Thermal Error Compensation Method for CNC Machine T — Ying Gao, Xiaojun Xia, Yinrui Guo 2024",
-      "data": "2026-07-26"
+      "riga": "2026-07-27 03:39:30 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
+      "data": "2026-07-27"
     },
     {
       "log": "story_agent_run.log",
       "tipo": "rate-limit sorgente",
       "riga": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.",
-      "data": "2026-07-26"
+      "data": "2026-07-27"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
-      "riga": "su disco EP_N2_62, il canone dichiara EP_N2_56: aggiornare _CANONE.md",
-      "data": "2026-07-26"
+      "riga": "su disco EP_N2_63, il canone dichiara EP_N2_56: aggiornare _CANONE.md",
+      "data": "2026-07-27"
     }
   ],
   "vault_orphans": 3,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 17,
+    "file_age_days": 18,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 0,
-    "max_ep_disco": 62,
+    "canone_age_days": 1,
+    "max_ep_disco": 63,
     "max_ep_canone": 56
   },
   "organi_vivi": {
@@ -82,7 +64,7 @@
     "retention disco": 1.0,
     "AI news watcher": 0.0,
     "daily brief": 0.8,
-    "riflusso FATTI": 5.1
+    "riflusso FATTI": 6.1
   },
   "pip_audit": {
     "vulns": 0,
@@ -90,14 +72,14 @@
     "packages": []
   },
   "qc_episodi": {
-    "checked": 62,
+    "checked": 63,
     "structure_fail": 0,
     "open_loop_missing": 32
   },
   "critiche": {
     "added": 6,
     "auto_closed": 6,
-    "total": 231,
+    "total": 237,
     "open": 30
   },
   "verdict": "ATTENZIONE"
