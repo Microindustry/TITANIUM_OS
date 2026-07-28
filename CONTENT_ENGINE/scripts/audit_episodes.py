@@ -99,9 +99,13 @@ def collect() -> dict:
         in_json = (
             (m["id"] and m["id"] in id_set)
             or (m["id_from_name"] and m["id_from_name"] in id_set)
-            or (m["title"] and norm(m["title"]) in title_set)
             or (m["fp"] and m["fp"] in fp_set)
         )
+        # NB (28/07): il match per TITOLO e' stato rimosso. story_agent riusa il numero
+        # nell'H1 ("Episodio 69" tre volte) -> episodi diversi con lo stesso titolo
+        # risultavano "in dashboard" pur non essendoci: EP_20260725/26/27 erano persi in
+        # silenzio e il recupero orfani di build_episodes_json si fidava di questo audit.
+        # Ordine corretto dei segnali: id -> id_from_name -> fingerprint del contenuto.
         if not in_json:
             orphans.append(m)
     return {

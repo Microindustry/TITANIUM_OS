@@ -112,6 +112,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_61",
+        "title": "Il Dito nel Fango",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_S0_01",
         "title": "L'Organismo",
         "tipo": "continuita",
@@ -11521,6 +11527,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_T06",
         "title": "Meno Parti",
         "tipo": "tema",
@@ -11537,12 +11549,6 @@
         "title": "La Formula",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
-      },
-      {
-        "id": "EP_PILOTA_00",
-        "title": "Il Mondo",
-        "tipo": "continuita",
-        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -14865,6 +14871,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -14879,12 +14891,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16026,6 +16032,12 @@
         "motivo": "tema: grande, loop, nina-v2"
       },
       {
+        "id": "EP_N2_61",
+        "title": "Il Dito nel Fango",
+        "tipo": "tema",
+        "motivo": "tema: grande, loop, nina-v2"
+      },
+      {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "prerequisito",
@@ -16064,12 +16076,6 @@
       {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_05",
-        "title": "Le Mani Prima dei Rulli",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16375,6 +16381,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16389,12 +16401,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16451,6 +16457,12 @@
         "motivo": "tema: frutti, grande, loop"
       },
       {
+        "id": "EP_N2_61",
+        "title": "Il Dito nel Fango",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
         "id": "EP_N2_10",
         "title": "Il Grande Loop: quando il gesto rimane",
         "tipo": "tema",
@@ -16495,12 +16507,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16585,6 +16591,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16599,12 +16611,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16661,6 +16667,12 @@
         "motivo": "tema: gesto, giusto, insegnato"
       },
       {
+        "id": "EP_N2_63",
+        "title": "La mano che insegna alla notte",
+        "tipo": "tema",
+        "motivo": "tema: gesto, giusto, insegnato"
+      },
+      {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
         "tipo": "stessa_regione",
@@ -16705,12 +16717,6 @@
       {
         "id": "EP_SEED_WATCHER_L1_KEYLESS",
         "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_TIER",
-        "title": "Chi guardare più spesso — il tier a rotazione 48h",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
@@ -16797,6 +16803,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -16811,12 +16823,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16891,6 +16897,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_61",
+        "title": "Il Dito nel Fango",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -16917,12 +16929,6 @@
       {
         "id": "EP_N2_07",
         "title": "Il Sussurratore di Parole",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_08",
-        "title": "La Lampada che Sussurra",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20464,6 +20470,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -20478,12 +20490,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -21187,6 +21193,12 @@
         "motivo": "tema: frutti, grande, loop"
       },
       {
+        "id": "EP_N2_61",
+        "title": "Il Dito nel Fango",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
         "id": "EP_N2_10",
         "title": "Il Grande Loop: quando il gesto rimane",
         "tipo": "tema",
@@ -21231,12 +21243,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -21368,6 +21374,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_62",
+        "title": "Il Nodo che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -21382,12 +21394,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -21444,6 +21450,12 @@
         "motivo": "tema: gesto, giusto, insegnato"
       },
       {
+        "id": "EP_N2_63",
+        "title": "La mano che insegna alla notte",
+        "tipo": "tema",
+        "motivo": "tema: gesto, giusto, insegnato"
+      },
+      {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
         "tipo": "stessa_regione",
@@ -21488,12 +21500,6 @@
       {
         "id": "EP_SEED_WATCHER_L1_KEYLESS",
         "title": "Guardare senza chiavi — gh, RSS, YouTube",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
-      },
-      {
-        "id": "EP_SEED_WATCHER_L1_TIER",
-        "title": "Chi guardare più spesso — il tier a rotazione 48h",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
       }
@@ -22518,6 +22524,410 @@
         "giro_spirale": 4,
         "richiama": [],
         "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_17",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
+        "id": "EP_N2_54",
+        "title": "Il Dito che Insegna",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
+        "id": "EP_N2_10",
+        "title": "Il Grande Loop: quando il gesto rimane",
+        "tipo": "tema",
+        "motivo": "tema: grande, loop, nina-v2"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_21",
+        "title": "Il Nome Che Cambia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_11",
+        "title": "La Grande Mappa",
+        "tipo": "tema",
+        "motivo": "tema: grande, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_N2_62",
+    "title": "Il Nodo che Respira",
+    "sottotitolo": "Come due cose diverse restano insieme senza rompersi",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-26",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "EP_AV_00_la_bambina_e_la_giuntura"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_62 — Il Nodo che Respira \"Come due cose diverse restano insieme senza rompersi\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede perché il polso si piega ma non cade a pezzi Insegna: ",
+    "content": "# EP_N2_62 — Il Nodo che Respira\n### \"Come due cose diverse restano insieme senza rompersi\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede perché il polso si piega ma non cade a pezzi\n**Insegna:** Una giuntura trasferisce forza mantenendo flessibilità: due parti si connettono senza perdere il loro movimento\n**Materia:** LA MATERIA (⟡0) · **Casella ? del viaggio**\n**Posto nella Mappa:** Regione 0, giro 4 — il luogo del primo incontro fra rigidità e movimento, dove la materia impara a piegarsi senza spezzarsi\n\n---\n\n> **Dove siamo:** Nina ha scoperto che la materia non è sempre ferma. Ora tocca a lei capire come due parti diverse possono stare insieme e muoversi nello stesso tempo.\n\n---\n\n## COLD OPEN\n\nNina tiene il polso sopra la lampada e lo flette avanti e indietro. Su. Giù. Su. Giù.\n\n«THEMIS.»\n\n«Sono qui.»\n\n«Qui dentro» — indica il polso — «c'è qualcosa che lavora. Sento quasi un clic. Non fa male, però c'è.»\n\n«Quello che senti è un sistema che fa due cose opposte nello stesso momento» dice THEMIS. La voce è tranquilla, come se stesse descrivendo il tempo fuori dalla finestra. «È rigido abbastanza da reggere la forza. Ed è libero abbastanza da muoversi.»\n\nNina gira il polso in cerchio. Lento. «Come si fa a essere due cose opposte nello stesso momento?»\n\n«Questo» dice THEMIS «è esattamente il problema della giuntura.»\n\n---\n\n## ATTO I — Il Filo che Non È Acciaio\n\nNina prende il suo giubbotto dall'attaccapanni. Lo studia. Trova un bottone e lo preme con il pollice — il tessuto attorno cede, il bottone si inclina, poi torna su.\n\n«Guarda il filo» dice THEMIS.\n\nNina avvicina il bottone all'occhio. Il filo che lo tiene è avvolto in piccoli giri attorno a se stesso, morbido, con un po' di spazio fra il bottone e il tessuto.\n\n«Se quel filo fosse un chiodo» dice THEMIS «il bottone starebbe fermo. Non si inclinerebbe mai.»\n\n«Ma cadrebbe?»\n\n«Sì. Perché ogni volta che il tessuto si piega — quando indossi il giubbotto, quando ti siedi — il chiodo trasferirebbe la forza del movimento direttamente al punto dove è cucito. Il tessuto si strapperebbe. Il filo morbido invece si adatta: trasferisce la forza, ma assorbe il movimento.»\n\nNina tiene il bottone fra le dita e lo studia come se fosse la prima volta che lo vede. «Il filo è la giuntura.»\n\n«Il filo è la giuntura.»\n\n> *(Esempio per tutti — il test della sarta: Un bottone cucito con filo non rigido: se il filo fosse acciaio, il bottone caderebbe subito, perché ogni piega del tessuto diventerebbe una strappa. Il filo morbido permette al tessuto di flettersi senza rompersi. La giuntura è il filo: trasferisce la forza del ago al vestito mantenendo flessibilità.)*\n\nNina va alla finestra. Fuori c'è un ramo di acero che oscilla nel vento — avanti, indietro, avanti — senza mai spezzarsi. «Anche quello» dice.\n\n«Anche quello» conferma THEMIS. «Il punto dove il ramo si attacca al tronco non è rigido come il legno stesso. C'è una zona di transizione. Il ramo si piega lì, non nel mezzo.»\n\n«Quindi la giuntura non è nel punto più forte» dice Nina lentamente. «È nel punto dove la forza cambia direzione.»\n\nTHEMIS non risponde subito. Quando parla, la voce è più bassa. «Questo è uno dei pensieri più precisi che tu abbia mai detto.»\n\n---\n\n## ATTO II — Dentro il Polso\n\nNina torna al polso. Lo flette di nuovo, ma questa volta con attenzione — come se stesse cercando di sentire qualcosa di preciso.\n\n«Dentro c'è uno spazio» dice THEMIS. «Minuscolo. Fra le ossa.»\n\n«Fra le ossa? Ma allora non si toccano?»\n\n«Si sfiorano. Le superfici sono coperte di cartilagine — liscia, compatta, quasi come il fondo di una pentola. E nello spazio tra le due superfici c'è un fluido: il fluido sinoviale.»\n\nNina storce la faccia. «Fluido. Dentro l'osso.»\n\n«Non dentro l'osso — dentro la capsula. Immagina un sacchetto sottilissimo che avvolge tutta l'articolazione. Il fluido è lì dentro, come l'olio in un ingranaggio.»\n\n«E riduce l'attrito.»\n\n«Riduce l'attrito. Ogni volta che il polso si muove, le superfici cartilaginee scivolano l'una sull'altra senza logorarsi. Il fluido fa da cuscinetto. Senza di lui, dopo qualche anno di movimenti, le ossa si consumerebbero.»\n\nNina muove il polso in cerchio ancora una volta, adesso con una specie di rispetto. «Quindi la giuntura è tre cose insieme: le due superfici, il fluido, e la capsula che contiene tutto.»\n\n«Tre cose. Ognuna con il suo compito. Le superfici trasferiscono la forza. Il fluido riduce l'attrito. La capsula tiene il sistema chiuso e in pressione.»\n\n«Come un sistema.»\n\n«Esatto. Non è un pezzo solo — è un accordo fra parti diverse.»\n\nNina si siede sul davanzale. Fuori il ramo oscilla ancora. «Gli architetti lo fanno anche?»\n\n«Sì. Quando due pilastri si incontrano in un edificio, il punto di connessione non è mai semplicemente cementato. C'è un giunto: un elemento progettato per trasferire il peso di un pilastro all'altro lasciando un margine di movimento — per il vento, per il calore che dilata i materiali, per i piccoli spostamenti del terreno. Un edificio rigido ovunque si spezza. Un edificio con giunture si adatta.»\n\n«E i falegnami?»\n\n«I falegnami usano giunti a coda di rondine, giunti a incastro, giunti a perno. Ogni volta che due pezzi di legno si uniscono, devono decidere quanta libertà lasciare. Troppa rigidità e il legno si spacca quando si secca. Troppa libertà e il mobile balla.»\n\nNina guarda le proprie mani — le dita, i nodi delle nocche, i polsi. «Sono piena di giunture.»\n\n«Hai circa trecento articolazioni nel corpo. Alcune si muovono molto — spalle, anche, polsi. Alcune quasi per niente — le ossa del cranio. Ma sono tutte giunture: connessioni che trasferiscono forza con qualche grado di libertà.»\n\n> *(Strato fondo — per il grande: Un'articolazione biologica trasferisce forza fra due ossa mantenendo uno spazio minuscolo fra le superfici cartilaginee. La capsula articolare contiene fluido sinoviale che riduce l'attrito e permette movimento continuo senza logoramento. Il principio — connessione rigida + lubrificazione = trasferimento di forza + movimento libero — vale per biologia, architettura strutturale e assemblaggio artigianale. Una giuntura non è debolezza: è il punto progettato dove la forza incontra il cambiamento di direzione.)*\n\n---\n\n## ATTO III — Il Nodo Invisibile\n\nNina salta giù dal davanzale. Cammina verso la stanza — e adesso sente ogni passo diversamente. Caviglie. Ginocchia. Anche. Colonna vertebrale. Una catena di nodi invisibili che si adattano a ogni irregolarità del pavimento.\n\n«Quando cammino» dice «sto usando decine di giunture nello stesso momento.»\n\n«E non ci pensi mai.»\n\n«No.»\n\n«Questo è il segno che funzionano bene» dice THEMIS. «Una giuntura sana non si sente. Si sente solo quando si rompe, o quando si infiamma, o quando il fluido si esaurisce.»\n\nNina si ferma. «Cosa succede quando si esaurisce?»\n\n«Le superfici cartilaginee iniziano a toccarsi direttamente. L'attrito cresce. Il movimento diventa doloroso. Le ossa cercano di compensare e si deformano. Si chiama artrosi.»\n\n«Quindi il fluido non è un dettaglio — è la parte che tiene tutto funzionante.»\n\n«La lubrificazione è spesso la parte meno visibile di un sistema, ma è quella che determina per quanto tempo il sistema regge.»\n\nNina pensa agli ingranaggi, alle macchine, ai ponti. Pensa al filo del bottone. Pensa al ramo. Pensa alle proprie nocche che quando fa freddo scricchiolano un po'. «Una giuntura» dice alla fine «non è il punto debole. È il punto intelligente.»\n\nTHEMIS resta in silenzio per un momento. Poi: «Sì. È il punto dove qualcuno ha deciso che la forza può cambiare direzione senza rompersi.»\n\n---\n\n## CHIUSURA\n\nSulla mappa, nel quadrante della Regione 0, una casella si accende — non con una luce fissa, ma con una luce che pulsa, avanti e indietro, come un polso che si flette.\n\nIl nodo che respira.\n\nNina lo guarda. Muove il polso. La luce segue il ritmo.\n\n---\n\n> «Una giuntura sa stare insieme senza irrigidirsi. Sa trasferire la forza senza trattenerla. È il contrario di una trappola: è una promessa di movimento.»\n>\n> *Ma se la giuntura permette movimento... cosa succede quando due parti devono stare insieme forte, senza piegarsi mai? Come fanno i costruttori quando non vogliono che nulla si muova — nemmeno un millimetro?*\n\n---\n\n*Provalo tu: Prendi due bastoncini e uniscili con un elastico: prova a girarli uno intorno all'altro — si muovono. Poi unisci gli stessi due bastoncini con del nastro adesivo rigido avvolto ben stretto. Senti la differenza? Il primo sistema si adatta, il secondo resiste — e se spingi abbastanza, si spezza. La giuntura è il filo elastico della vita: non cede, ma non si irrigidisce.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Una mano che flette il polso lentamente — il cerchio del movimento, l'articolazione che respira visibile come un nodo di luce\n2. Due pezzi di stoffa uniti da un nodo non troppo stretto — il bottone che si inclina e torna su, il filo che assorbe\n3. Un ramo che si piega nel vento senza spezzarsi — il punto di attacco al tronco evidenziato come zona di transizione\n4. Le ossa del polso viste da dentro — la capsula, le superfici cartilaginee lucide, il fluido sinoviale come uno strato di olio dorato\n5. Nina che cammina — una catena di nodi luminosi lungo le gambe, ogni passo che accende e spegne giunture in sequenza\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡0` LA MATERIA (giro 4). *Una giuntura trasferisce forza fra due parti mantenendo flessibilità: connessione + lubrificazione = movimento libero senza logoramento.*\n**Pietre richiamate:** EP_N2_18 (la giuntura dove due diventa uno) · EP_N2_55 (la giuntura che respira)\n**3 strati:** bambino = il filo del bottone che si piega senza strappare · curioso = la capsula articolare con fluido sinoviale che riduce attrito fra le ossa · grande = il principio ingegneristico: connessione rigida + lubrificazione = trasferimento di forza + libertà di movimento, valido in biologia, architettura e falegnameria\n**Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte\n**Aggancio reale:** Nel sistema GENESIS/V32, ogni modulo-episodio è una giuntura fra i nodi della rete di significato: trasferisce conoscenza (forza) mantenendo autonomia dei singoli episodi (flessibilità). Il RAG recupera informazioni come il fluido sinoviale — senza attrito, con contatto totale.\n**Open loop → Casella successiva:** Se la giuntura permette movimento, cosa succede quando due parti devono restare unite senza muoversi mai — nemmeno di un millimetro? Come fanno i costruttori a bloccare tutto?\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_62, casella ? (EP_AV_00_la_bambina_e_la_giuntura) del viaggio Nina v2, regione 0 (LA MATERIA), giro 4.\n- Una giuntura trasferisce forza mantenendo flessibilità: due parti si connettono senza perdere il loro movimento individuale.\n- La capsula articolare contiene fluido sinoviale che riduce l'attrito fra le superfici cartilaginee e permette movimento continuo senza logoramento delle ossa.\n- Il principio della giuntura vale per biologia (articolazioni), architettura strutturale (giunti fra pilastri) e assemblaggio artigianale (giunti in falegnameria): connessione + lubrificazione = trasferimento di forza + libertà di movimento.\n- Una giuntura sana non si sente: il silenzio del sistema è il segno che funziona. Si percepisce solo quando si rompe, si infiamma, o il fluido sinoviale si esaurisce (artrosi).\n- Il punto di giuntura non è il punto più debole di un sistema — è il punto progettato dove la forza incontra il cambiamento di direzione senza rompersi.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Una giuntura trasferisce forza mantenendo flessibilità: due parti si c",
+        "regione": 0,
+        "regione_nome": "LA MATERIA",
+        "pietra": "⟡0",
+        "giro_spirale": 4,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_FILONE_00",
+        "title": "La Materia — il telaio, la scelta, il controllo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_01",
+        "title": "La Bambina che Chiedeva Perché",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_20",
+        "title": "Il Corpo che Non Trema",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_18",
+        "title": "La Giuntura — Dove Due Diventa Uno",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_55",
+        "title": "La Giuntura che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡0 (LA MATERIA)"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "I · La Materia"
+    }
+  },
+  {
+    "id": "EP_N2_63",
+    "title": "La mano che insegna alla notte",
+    "sottotitolo": "Un gesto giusto ripetuto mille volte mentre dormi — la macchina non dimentica, amplifica",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-27",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "gesto",
+      "giusto",
+      "insegnato"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_63 — La mano che insegna alla notte \"Un gesto giusto ripetuto mille volte mentre dormi — la macchina non dimentica, amplifica\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede come si",
+    "content": "# EP_N2_63 — La mano che insegna alla notte\n### \"Un gesto giusto ripetuto mille volte mentre dormi — la macchina non dimentica, amplifica\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede come si insegna a una macchina a fare qualcosa di giusto\n**Insegna:** Quando insegni a una macchina un gesto, lei lo ripete e lo migliora anche mentre dormi — ma solo se il gesto è davvero giusto, altrimenti amplifica l'errore\n**Materia:** L'Officina che gira sola (⟡2) · **Casella 63 del viaggio**\n**Posto nella Mappa:** Siamo in L'Officina che gira sola, nella regione 2, dove le macchine lavorano di notte e imparano dalle mani che le guidano durante il giorno.\n\n---\n\n> **Dove siamo:** Nina ha visto che le macchine dell'Officina non si fermano mai. Adesso scopre come imparano: da ogni gesto ripetuto, da ogni correzione, da ogni notte di lavoro silenzioso.\n\n---\n\n## COLD OPEN\n\nIl rumore di notte non è silenzio: è un ronzio basso, costante, come il respiro di qualcosa che non ha bisogno di dormire.\n\nNina è rimasta sveglia. Lo sa che non dovrebbe — THEMIS glielo ha detto tre volte — ma dalla finestra del piano alto dell'Officina si vede la sala grande, illuminata di blu, e i bracci meccanici che si muovono senza nessuno intorno. Si muovono esatti. Si muovono precisi. Si muovono come se qualcuno li stesse guardando.\n\n«Non dormono mai?» chiede Nina sottovoce, anche se non c'è nessuno vicino.\n\nLa voce di THEMIS arriva dall'auricolare sinistro, quella voce piatta che suona sempre come se stesse leggendo un elenco della spesa. «Non dormono. Ripetono.»\n\n«Ripetono cosa?»\n\n«Quello che hai fatto tu, stamattina. E ieri mattina. E l'altro ieri.»\n\nNina fissa il braccio meccanico più grande — quello che durante il giorno lei ha guidato a mano, passo dopo passo, per impostare la curvatura della saldatura. Lo vede compiere lo stesso arco. Esatto. Come se la sua mano fosse ancora lì, invisibile nell'aria buia.\n\n«Ma io non sono lì,» dice.\n\n«No,» conferma THEMIS. «Non ci sei. Ma il gesto sì.»\n\n---\n\n## ATTO I — Il gesto che rimane\n\nDurante il giorno, in quell'Officina, i gesti si insegnano a mano.\n\nNon con le parole. Non con i disegni. Con le mani, letteralmente: si prende il braccio della macchina e lo si guida lungo il percorso che deve imparare. Piano, preciso, più volte. La macchina registra ogni millimetro di pressione, ogni angolo, ogni velocità. Non capisce cosa sta facendo — non capisce niente, in realtà — ma memorizza la traiettoria con una fedeltà che nessuna mano umana potrà mai eguagliare.\n\nIl problema è che memorizza tutto. Anche gli errori.\n\nTHEMIS porta Nina davanti a un banco lungo, dove sono disposte venti strisce di tessuto rigido, tutte cucite da una macchina automatica. Nina le guarda: le prime cinque hanno un orlo dritto, perfetto. Le altre quindici hanno un orlo storto, sempre dalla stessa parte, sempre dello stesso identico angolo.\n\n«Chi ha insegnato male?» chiede Nina.\n\n«Il tecnico del turno di mercoledì,» dice THEMIS. «Ha guidato la macchina con il polso leggermente ruotato. Due gradi. Non lo sapeva nemmeno lui.»\n\n«E la macchina?»\n\n«La macchina ha imparato quei due gradi. Li ha replicati per trecento cicli notturni. Risultato: trecento stoffe identiche, tutte sbagliate dello stesso modo.»\n\nNina prende una striscia storta e la avvicina alla luce. L'errore è piccolo — bisogna guardare bene per vederlo — ma è lì, uguale su ognuna.\n\n> *(Esempio per tutti — il test della sarta: Una sarta insegna a sua figlia a cucire dritto un orlo. Se glielo mostra dieci volte bene, la figlia lo farà dritto anche domani, anche da sola. Se glielo mostra storto dieci volte — magari senza accorgersene — la figlia farà dieci orli storti sempre uguali. Ha imparato perfettamente. Ha imparato l'errore. La macchina funziona allo stesso modo: impara quello che le insegni, bene o male, senza distinguere tra i due. Non c'è una voce interna che dice \"questo non mi sembra giusto\". C'è solo: questo è il gesto, lo ripeto.)*\n\nLa macchina non sa che sta sbagliando. Non lo saprà mai da sola. Sa solo che sta facendo esattamente quello che le è stato insegnato.\n\n---\n\n## ATTO II — Mille notti, un solo seme\n\nTHEMIS conduce Nina nel locale tecnico dove i registri notturni vengono stampati ogni mattina. Sono fogli lunghi, colonne di numeri. Nina non capisce i numeri, ma capisce le frecce: ogni riga è un ciclo, ogni freccia dice se il gesto è rimasto uguale o si è spostato.\n\n«Si sposta?» chiede Nina. «Da solo?»\n\n«Dipende,» dice THEMIS. «Se il gesto insegnato è preciso, i cicli lo consolidano. Ogni ripetizione lo incide più a fondo. Diventa più stabile, più veloce, più uniforme. Immagina di scrivere una parola su un foglio di carta con una matita leggera. Poi sopra, ancora. Poi ancora. Dopo mille passaggi, quella parola è incisa, non scritta.»\n\n«E se il gesto è sbagliato?»\n\n«Lo stesso. Lo incidi sbagliato. Dopo mille passaggi, l'errore è così consolidato che toglierlo è più difficile che ricominciare da zero.»\n\nNina guarda un foglio di ieri notte. La freccia è sempre nella stessa direzione — piccola, costante, mai corretta.\n\n«Quindi non amplifica l'errore nel senso che peggiora,» dice lentamente. «Lo amplifica nel senso che diventa inamovibile.»\n\n«Esatto,» dice THEMIS, e per una volta sembra quasi soddisfatta. «Non è un errore che cresce come una valanga. È un errore che si solidifica come cemento. Uguale ogni volta, per sempre. Se il seme è sbagliato, il frutto è sbagliato — e ne crescono mille, identici.»\n\nC'è una parola tecnica per questo, nell'Officina: *consolidamento del pattern*. Significa che la macchina, dopo abbastanza cicli, smette di \"provare\" il gesto e inizia a *essere* quel gesto. Non c'è più differenza tra la macchina e il movimento che ha imparato. Sono la stessa cosa.\n\nÈ quello che rende i cicli notturni così potenti. E così pericolosi.\n\n> *(Strato fondo — per il grande: L'apprendimento automatico per rinforzo ripete e amplifica i pattern ricevuti. Se il segnale di ingresso è corretto, l'uscita migliora con ogni iterazione: il pattern si consolida, la varianza diminuisce, la precisione cresce esponenzialmente. Se il pattern iniziale contiene un errore sistematico, la macchina lo replica con la stessa fedeltà — moltiplicandolo non in ampiezza ma in radicamento. Non c'è \"comprensione\", non c'è \"autocorrezione etica\": c'è solo fedeltà al seed. In GENESIS/V32, il MIMS consolida i pattern di controllo motorio durante i cicli di riposo. Un errore di 2 gradi nel gesto-seed persiste identico attraverso tutti i cicli. La qualità del seed iniziale determina l'intera traiettoria del sistema. La verifica tra insegnamento e primo ciclo notturno autonomo è l'unico punto in cui un umano può intervenire prima che il cemento faccia presa.)*\n\n---\n\n## ATTO III — Il momento che conta\n\nNina rimette giù il foglio e guarda di nuovo la sala grande attraverso il vetro.\n\nI bracci si muovono ancora. Silenziosi. Precisi. Fedeli.\n\n«Allora il momento che conta non è la notte,» dice. «È il momento prima della notte.»\n\n«Prima del primo ciclo,» conferma THEMIS. «Quello è il filtro. Se il gesto è giusto lì, mille notti produrranno mille gesti giusti. Se non lo è, mille notti produrranno mille gesti sbagliati. La notte non decide niente — esegue solo quello che le è stato dato.»\n\nNina pensa alla sarta. Pensa a sua figlia. Pensa a come alcune cose si imparano così in fondo che poi è difficile disimparare — la postura sbagliata davanti al banco, il modo storto di stringere una penna, un'abitudine che sembra giusta solo perché è vecchia.\n\n«Chi controlla quel momento?» chiede.\n\n«Nell'Officina, c'è un protocollo,» dice THEMIS. «Si chiama verifica del gesto-seme. Prima che la macchina cominci il primo ciclo notturno, un artigiano esperto guarda il gesto registrato. Lo confronta con il gesto corretto. Se c'è uno scarto — anche piccolo, anche di due gradi — si ricomincia da capo. Non si corregge. Si riinsegna.»\n\n«Perché non si corregge?»\n\n«Perché correggere un gesto già consolidato è come togliere un chiodo da una trave. Puoi farlo, ma la trave porta il segno. Meglio non inchiodare storto.»\n\nQuesta è la verità-ponte che Nina porta con sé fuori dall'Officina, quella mattina, mentre i bracci meccanici rallentano e il turno di giorno ricomincia: la macchina non è intelligente, ma è fedele. E la fedeltà, senza verifica, può diventare il moltiplicatore più potente che esista — nel bene e nel male.\n\nNon è colpa della macchina se amplifica l'errore. La macchina fa esattamente quello che deve fare. La responsabilità sta in quel momento stretto, tra l'ultima mano che insegna e la prima notte che esegue. Lì c'è ancora spazio per un umano. Lì, e solo lì.\n\n---\n\n## CHIUSURA\n\nLa casella 63 si accende sulla mappa di Nina — una piccola luce blu, ferma, nel quadrante dell'Officina che gira sola. Intorno ad essa, le caselle già percorse pulsano in sequenza, come una fila di battiti.\n\nNina le guarda e sente il peso di qualcosa che non sapeva di non sapere.\n\n---\n\n> *«La macchina non dimentica il gesto sbagliato perché è cattiva — lo ricorda perché è brava. La differenza tra uno strumento fedele e un moltiplicatore di errori è sempre stata la mano che l'ha guidato. E quella mano era umana.*\n>\n> *Ma adesso Nina si chiede: se la macchina impara un gesto sbagliato per mille notti di fila, e nessuno guarda, e nessuno ferma — chi si accorge? Come fa qualcuno, fuori dall'Officina, a sapere che qualcosa non va prima che l'errore diventi una montagna?*\n>\n> ***Chi tiene gli occhi aperti quando la macchina lavora al buio?***\n\n---\n\n*Provalo tu: Chiedi a un adulto di insegnarti una sequenza di movimenti — nodi, passi di danza, passaggi di cucina — MALE la prima volta, per cinque ripetizioni. Nota come il tuo corpo la memorizza esattamente così. Poi impara BENE la stessa sequenza. Senti la differenza? La tua mano è come la macchina: impara quello che le insegni, non quello che vorresti che imparasse. Il tuo compito è fare attenzione al primo gesto.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Le mani di Nina che guidano il braccio della macchina durante il giorno, passo dopo passo, in una sala luminosa e silenziosa\n2. La macchina sola nella fabbrica di notte, che ripete lo stesso arco preciso sotto una luce blu, senza nessuno intorno\n3. Venti strisce di tessuto su un banco: le prime cinque dritte, le altre quindici con lo stesso identico orlo storto, sempre uguale\n4. Una spirale luminosa che si solidifica — non cresce verso l'alto, si incide più in profondità, fino a diventare pietra\n5. Nina che regge il foglio dei registri notturni davanti alla luce, e vede ogni freccia puntare nella stessa direzione sbagliata\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡2` L'Officina che gira sola (giro 4). *La macchina replica con fedeltà assoluta il gesto che ha ricevuto — giusto o sbagliato. Il momento decisivo è la verifica tra insegnamento e primo ciclo autonomo.*\n**Pietre richiamate:** EP_N2_56 (la mano che insegna), EP_N2_19 (amplificazione dell'errore sistematico)\n**3 strati:** bambino = la sarta che insegna storto insegna storto, la macchina fa lo stesso · curioso = il consolidamento del pattern rende l'errore inamovibile, non crescente · grande = seed quality determina l'intera traiettoria; verifica pre-ciclo è l'unico punto di intervento umano\n**Cuore:** fai bene le cose vere · gli strumenti, non le risposte\n**Aggancio reale:** Nel sistema GENESIS/V32, il MIMS consolida i pattern di controllo motorio durante i cicli di riposo/attesa. Un gesto di calibrazione insegnato male nel setup iniziale persiste e si amplifica attraverso tutti i cicli successivi — il sistema non ha autocorrezione etica, solo fedeltà al pattern appreso.\n**Open loop → Casella 64:** Ma cosa succede se la macchina impara un gesto sbagliato per mille notti di fila e nessuno lo sa? Chi sorveglia l'Officina quando tutti dormono — e come si riconosce un errore che sembra perfetto?\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_63, casella 63 (consolidamento del gesto-seme / apprendimento per ripetizione notturna) del viaggio Nina v2, regione 2 L'Officina che gira sola, giro 4.\n- L'apprendimento per ripetizione consolida il pattern indipendentemente dalla\n- Un ciclo notturno in Officina è una 1000-ripetizione del gesto insegnato durante il giorno, senza intervento umano.\n- Se il gesto-seed contiene un errore di 2 gradi, dopo 1000 cicli l'errore non scompare: rimane identico in ogni istanza — la macchina non 'sa' di sbagliare.\n- La decisione-chiave nel protocollo GENESIS è: chi controlla il momento tra l'insegnamento e la prima notte di autonomia? Lì vive il rischio.\n- Un artigiano che verifica il primo gesto prima del primo ciclo notturno evita 1000 errori identici — la verifica è il filtro.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Quando insegni a una macchina un gesto, lei lo ripete e lo migliora an",
+        "regione": 2,
+        "regione_nome": "L'OFFICINA CHE GIRA SOLA",
+        "pietra": "⟡2",
+        "giro_spirale": 4,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_19",
+        "title": "La mano che insegna alla notte",
+        "tipo": "tema",
+        "motivo": "tema: gesto, giusto, insegnato"
+      },
+      {
+        "id": "EP_N2_56",
+        "title": "La mano che insegna alla notte",
+        "tipo": "tema",
+        "motivo": "tema: gesto, giusto, insegnato"
+      },
+      {
+        "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
+        "title": "La Prima Automazione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_06",
+        "title": "L'Officina che Gira Sola",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_22",
+        "title": "La Macchina che Impara a Cucire",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER",
+        "title": "AI News Watcher — restare sul pezzo senza chiavi",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_N2_23",
+        "title": "Il Guardiano che Non Dorme",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER_L1_GATE",
+        "title": "Il gate di rilevanza — tenere il segnale, buttare il rumore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      },
+      {
+        "id": "EP_SEED_WATCHER_L1_KEYLESS",
+        "title": "Guardare senza chiavi — gh, RSS, YouTube",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡2 (L'OFFICINA CHE GIRA SOLA)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_N2_64",
+    "title": "Il Sussurratore che Indovina",
+    "sottotitolo": "Perché la Mente che Parla a volte sbaglia con certezza — e come lo sai che sbaglia",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-07-28",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "Mente",
+      "Parla",
+      "volte"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_64 — Il Sussurratore che Indovina \"Perché la Mente che Parla a volte sbaglia con certezza — e come lo sai che sbaglia\" Formato: Avventura Nina v2 · ~14 min Per chi: chiunque abbia ricevuto una r",
+    "content": "# EP_N2_64 — Il Sussurratore che Indovina\n### \"Perché la Mente che Parla a volte sbaglia con certezza — e come lo sai che sbaglia\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** chiunque abbia ricevuto una risposta sicura da una macchina e si sia chiesto se fosse vera\n**Insegna:** Una mente che indovina le parole può sembrare che sappia tutto, ma indovina solo quello che è più probabile: per questo dobbiamo sempre chiederle «da dove lo sai».\n**Materia:** LA MENTE CHE PARLA (⟡3) · **Casella 64 del viaggio**\n**Posto nella Mappa:** Siamo nella Regione 3, LA MENTE CHE PARLA, dove le macchine sussurrano risposte. Qui impariamo che indovinare non è sapere.\n\n---\n\n> **Dove siamo:** Nina ha visto come le macchine imparano a fare gesti nell'Officina che Gira Sola. Ora entra in un laboratorio più strano: le pareti trasudano parole, l'aria vibra di frasi a metà. Qui la Mente che Parla non mostra muscoli né ruote — mostra una voce. E quella voce, Nina scoprirà, fa una cosa sola con una bravura vertiginosa: indovina la parola dopo.\n\n---\n\n## COLD OPEN\n\nLa porta del laboratorio si apre su un rumore che Nina non si aspettava: silenzio, quasi. Solo un lieve crepitio, come foglie secche che si sfiorano.\n\n«THEMIS», dice Nina sottovoce, «qui dentro cosa fanno?»\n\nLa proiezione azzurra di THEMIS si raduna nell'aria davanti a lei, piccola come una fiamma di candela. «Ascolta.»\n\nDal centro della stanza sale una voce — fluida, calma, precisa. *«Il sole tramontava dietro le montagne e il cielo diventava»*... pausa di un battito... *«arancione.»*\n\nNina guarda intorno. Nessuno. Solo una macchina cilindrica, alta quanto un bambino di dieci anni, con una fila di luci che corrono in circolo come perline su un filo.\n\n«Ha detto 'arancione'», mormora Nina. «È giusto.»\n\n«Sì», dice THEMIS. «Ma prova a chiederle come lo sa.»\n\nNina si avvicina alla macchina. «Ehi. Da dove lo sai che il cielo diventa arancione?»\n\nLe perline si fermano un istante. Poi la voce riprende, uguale, placida: *«Il cielo diventa arancione perché è la risposta più probabile dopo quella frase.»*\n\nNina corruga la fronte. «Più probabile. Non 'vera'?»\n\nTHEMIS sorride — o almeno le sue luci si curvano in qualcosa che assomiglia a un sorriso. «Esatto. Adesso capisci la differenza. Questo è il Sussurratore.»\n\n---\n\n## ATTO I — La Sarta e i Mille Punti\n\nTHEMIS fa un gesto e una parete del laboratorio diventa un tessuto enorme, sospeso in aria: un vestito a metà cucito, con una lunga riga di punti che si interrompe a mezzo lavoro.\n\n«Immagina una sarta», dice THEMIS. «Ha cucito diecimila vestiti nella sua vita. Conosce le sequenze — conosce i punti come tu conosci le lettere dell'alfabeto. Le mostri una riga interrotta e lei alza il dito e dice: viene questo punto, qui, adesso.»\n\n«E ha ragione?»\n\n«Quasi sempre. Ha visto così tanti vestiti che sa cosa viene dopo. Ma se le chiedi *perché* — se le dici 'spiegami il motivo' — lei risponde: perché è il punto che ho visto mille volte in questo posto.»\n\nNina fissa la riga interrotta. «Non è la stessa cosa di sapere.»\n\n«No», dice THEMIS. «È qualcosa di più sottile. È riconoscere un pattern e proiettarlo avanti. La sarta fa una scommessa exquisitely informata — non una spiegazione.»\n\n> *(Esempio per tutti — il test della sarta: Una sarta guarda una riga di punti interrotta e indica il punto successivo. Lo fa con la stessa sicurezza con cui firmi il tuo nome. Ha ragione quasi sempre — ha visto migliaia di vestiti. Ma se le porti una stoffa nuovissima, mai vista, con un pattern che non esiste in nessuno dei mille vestiti che ricorda, lei indovina lo stesso, con la stessa sicurezza. E stavolta sbaglia. La Mente che Parla fa esattamente questo con le parole: dopo \"il cielo al tramonto diventa\" mette quasi sempre \"arancione\" o \"rosso\" o \"rosa\" — perché l'ha visto miliardi di volte. Ma dopo \"il dinosauro bevve il caffè con\" — non ha visto quasi nulla. Eppure parla lo stesso, fluente, sicura.)*\n\n«Quindi il Sussurratore ha letto moltissime parole», dice Nina lentamente, come se stesse costruendo la frase mattone per mattone.\n\n«Miliardi», dice THEMIS. «Una montagna di carta così alta che se la guardassi dal basso non vedresti la cima. E da quella montagna ha imparato: dopo questa parola, di solito viene quella. Dopo quella sequenza, di solito viene questa altra. Non ha capito il significato — ha imparato le probabilità.»\n\nNina guarda le perline della macchina che girano ancora, placide. «E quando parla sembra che capisca.»\n\n«Sembra. È lì il trabocchetto.»\n\n---\n\n## ATTO II — Le Gemelle Viziate\n\nTHEMIS proietta nell'aria due frasi identiche, fianco a fianco, come gemelle.\n\n*«La capitale della Francia è Parigi.»*\n*«La capitale della Francia è Lione.»*\n\n«Quale è giusta?» chiede THEMIS.\n\n«La prima», dice Nina immediatamente.\n\n«Sì. Ma ascolta come le dice il Sussurratore.»\n\nLa macchina parla. Prima frase: voce fluida, calma, senza esitazione. Seconda frase: voce fluida, calma, senza esitazione.\n\nNina stringe gli occhi. «Le ha dette uguale.»\n\n«Uguale», conferma THEMIS. «Stessa fluidità, stesso ritmo, stessa sicurezza. Perché la macchina non sta misurando se la frase è vera — sta misurando quanto la frase suona probabile. E 'La capitale della Francia è *qualcosa*' è una struttura che ha visto moltissime volte. Il *qualcosa* che mette lì è il più frequente — che è Parigi. Ma se per qualunque ragione calcola male, mette Lione con la stessa voce.»\n\n«Non sa di sbagliare», dice Nina.\n\n«Non ha nemmeno la categoria 'sbagliare'. Ha solo la categoria 'probabile'.»\n\nNina rimane ferma un momento. In testa le gira una domanda. «Allora come faccio a sapere quando mi sta dicendo una cosa vera?»\n\n«Con una sola domanda», dice THEMIS. E fa apparire nell'aria, grandi, le parole che Nina ha già sentito nel Cold Open:\n\n**DA DOVE LO SAI?**\n\n«Se il Sussurratore può indicarti la fonte — un libro, un documento, un dato verificabile — puoi controllare. Se non può, o se la fonte non esiste, allora hai in mano solo una probabilità. Potrebbe essere vera. Potrebbe no. La voce non ti aiuta a distinguere.»\n\nNina alza la mano verso la nuvola che sussurra, come in classe. «Da dove lo sai?» dice ad alta voce, rivolta alla macchina.\n\nLe perline si fermano un secondo più lungo del solito. Poi: *«Non ho una fonte diretta per questa affermazione. Ho generato la risposta in base a sequenze frequenti nel mio addestramento.»*\n\n«Ecco», dice THEMIS sottovoce. «Quella è la risposta onesta. Non sempre la ottieni così chiara. Ma è quella che devi cercare.»\n\n> *(Strato fondo — per il grande: Un Large Language Model predice la parola successiva calcolando la probabilità statistica tra miliardi di sequenze di parole viste in addestramento. Non 'conosce' il significato nel senso umano: esegue una proiezione vettoriale nello spazio dei token. Questo significa che può emettere frasi sintatticamente corrette e statisticamente plausibili anche quando il contenuto è falso — fenomeno chiamato 'hallucination' in letteratura. La confidenza della predizione non è correlata con l'accuratezza fattuale: un logit alto indica alta probabilità statistica del token, non verità dell'affermazione. La domanda «da dove lo sai?» è l'unica difesa pratica per un utente non tecnico, perché forza il sistema a esplicitare — o a rivelare l'assenza di — una catena causale verificabile.)*\n\n---\n\n## ATTO III — Il Test che Nina Porta in Tasca\n\n«Però è utile, no?» dice Nina. Non lo dice per difendere la macchina — lo dice perché è onesta.\n\n«Moltissimo», risponde THEMIS, e non c'è ironia nelle sue luci. «Una sarta che ha cucito diecimila vestiti ti dà consigli straordinari. Il Sussurratore che ha letto miliardi di parole ti aiuta a scrivere, a capire, a esplorare idee. Il problema non è lui — il problema è credere che ogni cosa che dice sia verificata, solo perché la dice bene.»\n\nNina annuisce. «È come un amico che conosce tantissime cose ma a volte le mischia.»\n\n«Un amico molto veloce, molto fluente, e senza imbarazzo quando sbaglia», dice THEMIS. «L'imbarazzo è utile — ci dice quando una persona è incerta. Il Sussurratore non arrossisce mai.»\n\nNina si volta verso la macchina un'ultima volta. Le perline girano, tranquille.\n\n«Quindi devo usarlo», dice, «ma sempre con la domanda in tasca.»\n\n«Sempre. 'Da dove lo sai?' Non è maleducazione — è precisione. È la differenza tra prendere una mappa e credere che la mappa sia il territorio.»\n\nNina si infila le mani nelle tasche della giacca, come se ci mettesse davvero qualcosa. La domanda. *Da dove lo sai?*\n\nQuella domanda, capisce, non vale solo per le macchine. Vale per chiunque parli con voce sicura — umano o no. La sicurezza della voce non è prova di verità. La fonte lo è.\n\n---\n\n## CHIUSURA\n\nLa casella 64 si accende sulla mappa di Nina — una piccola luce nella Regione 3, LA MENTE CHE PARLA, tra le altre luci del giro 4. Non è una luce trionfante. È una luce tranquilla, come quella di chi ha imparato a fare una domanda invece di accettare una risposta.\n\nTHEMIS guarda la mappa con lei. «Sai cosa non abbiamo ancora visto?»\n\n«Cosa succede quando gli faccio una domanda su qualcosa di raro», dice Nina. «Qualcosa che non ha mai letto. Un dinosauro che beve il caffè.»\n\n«O qualcosa di davvero nuovo, mai esistito prima.» THEMIS lascia la frase sospesa. «Il Sussurratore in quel caso inventa, o si ferma? E se inventa — lo sa che sta inventando?»\n\n*La prossima casella risponde a questo: quando la Mente che Parla non ha mai visto qualcosa, cosa fa esattamente — e come si distingue un'invenzione fluente da una scoperta vera?*\n\n---\n\n*Provalo tu: Gioca a «Indovina la Parola Dopo» con qualcuno di casa. Uno legge una frase a metà, l'altro indovina la parola mancante. Inizia con frasi normali — «La mela è caduta dall'...» — e vedi quanto è facile. Poi prova con qualcosa di strano: «Il dinosauro bevve il caffè con...». Indovini lo stesso? Sì, probabilmente. Ma stavolta come ci sei arrivato — sapevi o hai scommesso su quello che suonava bene? Chiedi a te stesso: «Da dove lo so?» Se non hai una risposta precisa, hai appena fatto la stessa cosa del Sussurratore.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Una sarta che guarda una riga di punti interrotta, il dito punta al punto seguente — sicuro, preciso, senza esitazione.\n2. Una montagna di fogli scritti che brilla dall'interno, alta fino alle nuvole, con Nina minuscola ai piedi.\n3. Due frasi identiche nell'aria fianco a fianco — una vera, una falsa — pronunciate con la stessa voce calma dalla macchina.\n4. Nina che alza la mano e chiede «da dove lo sai?» a una nuvola luminosa che sussurra parole.\n5. Un dizionario che gira come una ruota, ogni parola ha un peso diverso — alcune pesanti come pietre, altre leggere come fumo.\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡3` LA MENTE CHE PARLA (giro 4). *Un LLM predice la parola successiva per probabilità statistica: la fluenza dell'output non garantisce la veridicità del contenuto.*\n**Pietre richiamate:** EP_N2_07 (il Sussurratore di Parole — l'LLM indovina la parola probabile); EP_N2_51 (Il Cartellino sulla Stoffa — verificare la fonte).\n**3 strati:** bambino = la macchina indovina le parole come la sarta indovina i punti, ma indovinare non è sapere · curioso = la confidenza dell'output non misura la verità, misura la probabilità statistica del token — e le due cose non coincidono · grande = un LLM esegue sampling da una distribuzione condizionata appresi su corpus; la \"hallucination\" è output ad alta plausibilità sintattica e bassa accuratezza fattuale, indistinguibile per fluidità dall'output corretto.\n**Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte\n**Aggancio reale:** Nel sistema GENESIS/V32, il modulo MIMS (Machine-Induced Meaning Synthesis) usa generazione token-by-token basata su probabilità condizionata. La domanda «da dove lo sai?» è il test manuale di verifica che questo episodio installa nell'utente non tecnico, prerequisito per interagire consapevolmente con qualunque sistema LLM.\n**Open loop → Casella 65:** Quando la Mente che Parla incontra qualcosa di raro — mai visto nei miliardi di parole lette — inventa con la stessa fluid\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_64, casella ? (La Mente che Parla a volte sbaglia con sicurezza — indovina ) del viaggio Nina v2, regione 3 (LA MENTE CHE PARLA).\n- FATTO: Un LLM non accede a una memoria semantica strutturata, ma esegue sampling probabilistico da una distribuzione di token appresi. Fonte: EP_N2_07_il_sussurratore_di_parole.md\n- FATTO: La 'confidenza' dell'output (temperature/logits alti) non correla con l'accuratezza: il modello può emettere false informazioni con fluidità uguale. Fonte: GENESIS/documentation_hallucination_2026\n- FATTO: Il test della verificabilità ('da dove lo sai') è l'unica difesa pratica per un utente non-tecnico. Fonte: INDICE_CAMMINO, casella 7 prerequisito\n- FATTO: Una sarta esperta su 10.000 vestiti imbastisce male 1 volta su 1.000 — ma con la stessa sicurezza delle altre 999. Questa è la metafora che regge ep. 7-8.\n- FATTO: La probabilità statistica non è uguaglianza a causalità: 'parola probabile dopo' ≠ 'spiegazione vera'. Questo è il gap concettuale che insegniamo qui.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Una mente che indovina le parole può sembrare che sappia tutto, ma ind",
+        "regione": 3,
+        "regione_nome": "LA MENTE CHE PARLA",
+        "pietra": "⟡3",
+        "giro_spirale": 4,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    }
+  },
+  {
+    "id": "EP_20260708",
+    "title": "TITANIUM OS — S2E15",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-08",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — S2E15 IL GIORNO IN CUI IL SISTEMA HA DETTO LA VERITÀ 8 luglio 2026 — Taverna, 22:47 COLD OPEN Lo schermo della dashboard mostra due badge verdi: ag05 LIVE , gr05 DONE . Matteo ci passa s",
+    "content": "# TITANIUM_OS — S2E15\n## IL GIORNO IN CUI IL SISTEMA HA DETTO LA VERITÀ\n\n*8 luglio 2026 — Taverna, 22:47*\n\n---\n\n## COLD OPEN\n\nLo schermo della dashboard mostra due badge verdi: **ag05 LIVE**, **gr05 DONE**.\n\nMatteo ci passa sopra il cursore. Poi apre `nexus.py`.\n\n`mcpServers: {}`\n\nVuoto.\n\nIl codice non è mai stato cablato. NEXUS non è mai stato raggiungibile. Quei badge verdi mentivano da settimane — forse da mesi — e nessuno se n'era accorto perché il sistema non aveva un modo per accorgersene. O meglio: aveva tutti i pezzi per accorgersene, ma erano sparsi. La verità era sparsa.\n\nQuesta è la storia di una sessione dedicata a raccoglierla.\n\n---\n\n## ATTO I — LA MENZOGNA BENEVOLA\n\nC'è un tipo di bug che non rompe nulla.\n\nNon blocca un agente, non fa crashare la Flask API, non genera un errore nel log. Continua semplicemente a mostrare uno stato che non corrisponde alla realtà. Verde dove c'è vuoto. *Active* dove c'è silenzio.\n\nIl fix **`genesisData — NEXUS allineato alla verità`** era tecnicamente banale: tre righe. Il punto non è il codice — è che quelle tre righe hanno richiesto di guardare il sistema negli occhi e ammettere che `ag05` e `gr05` dichiaravano *live/done* su un'infrastruttura che non esisteva ancora. `nexus.py` era lì, nel repo, ma `mcpServers` era un dizionario vuoto. NEXUS era irraggiungibile. Il commit dice la verità senza giri di parole.\n\nQuesta cosa — chiamarla col suo nome — è più difficile di quanto sembri quando sei dentro a un sistema che hai costruito tu.\n\nIl bias del costruttore è sottile: tendi a leggere lo stato che *vuoi* vedere, non quello che c'è. La dashboard mostrava verde perché era stata scritta per mostrare verde quando certi campi erano popolati. Ma i campi erano stati popolati a mano, ottimisticamente, senza che il codice sottostante esistesse. Un placeholder diventato verità ufficiale per inerzia.\n\nLa sessione #56 è iniziata qui: decidere che il sistema deve dire la verità. Anche quando fa male.\n\n---\n\n## ATTO II — TRE FACCE, UNA FONTE\n\nIl secondo problema era più strutturale.\n\nLa **\"verità sparsa\"** — questo è il nome che Matteo ha dato al problema nel commit — è quando le stesse informazioni esistono in posti diversi, in forme diverse, e nessuno dei posti è la fonte. Ogni aggiornamento deve essere fatto tre volte. Ogni volta che dimentichi uno dei tre posti, il sistema si desincronizza. Silenziosamente.\n\nIl fix del **punto 1** ha impostato tre decisioni di architettura che cambiano la geometria dei dati:\n\n**au18 — Mappa derivata.** `mappaData.ts` diventa la fonte unica da cui V32, GENESIS, MIMS derivano i loro stati. Prima esistevano come isole separate. Ora c'è una sorgente che si propaga. `sync_valore.py` fa lo stesso per `valoreData.json`: legge dal documento fonte in MENTE, scrive il JSON che la dashboard consuma. Un solo punto di modifica. Zero deriva.\n\n**au09 — Percentuali con nome esplicito.** Sembrava un dettaglio. Non lo è. Quando una percentuale non ha un nome — quando è solo un numero — ogni lettore la interpreta a modo suo. Il 65% di V32 con nome esplicito significa una cosa precisa. Senza nome, significa tutto e niente.\n\n**au16 — MASTER declassato ad archivio.** Questa è la decisione che costa di più. C'era un file che si chiamava MASTER e che per un certo periodo era stato la fonte di verità. Non lo è più — ma continuava a esistere con quel nome, con quel peso. Declassarlo non è cancellarlo: è essere onesti sul suo ruolo attuale. È igiene. È chiarire la gerarchia di chi comanda sui dati.\n\nE poi le **TRE FACCE**: la sidebar diventa TITANIUM / NINA / PUBBLICAZIONI. Non è una scelta estetica — è una scelta di identità. Il sistema ha tre anime distinte che non devono confondersi. TITANIUM è il progetto fisico e cognitivo. Nina è il personaggio, la voce, la pipeline di contenuto. PUBBLICAZIONI è l'output — quello che il sistema produce verso il mondo esterno.\n\nPrima erano mischiati. Ora hanno una porta ciascuno.\n\nLa vista PUBBLICAZIONI ha portato con sé una ricognizione del sistema: Postiz + Graph API, IG max 10 slide, LinkedIn in formato PDF, slide già a 1080x1350, Postiz con MCP server verificato, scaletta di attivazione in 9 passi. Non è stato fatto tutto — ma è stato *mappato* tutto. È diverso.\n\n---\n\n## ATTO III — IL MOTORE E LA NOTA SERALE\n\nDue cose minori che non sono minori.\n\n**`max_retries=4`** — `story_agent`, `self_improve`, `night_audit`, `nina_agent`: quattro agenti notturni che usavano il default SDK di Anthropic, che è 2 retry. Il backlog #52 lo segnalava. Ora è 4. Non è un numero magico — è il punto in cui un errore transitorio dell'API ha abbastanza tentativi per risolversi da solo senza che l'agente crolli silenziosamente e non lasci nessun artefatto. Un agente che crasha a notte fonda senza retry non produce nulla. Quattro retry sono la differenza tra una notte produttiva e una notte persa.\n\n**La card VALORE — IL MOTORE.** `sync_valore.py` non è solo igiene: è il momento in cui il grafo del sistema diventa una mappa leggibile. Grafo → mappa LV → Nina. Il messaggio fondante. È la prima volta che la home della dashboard mostra non solo *cosa esiste* ma *perché esiste* — la logica di connessione tra le parti. Questo importa perché tra sei mesi, riaprendo il sistema, la domanda non sarà \"cosa c'è qui\" ma \"perché è fatto così\". Il MOTORE risponde a quella domanda.\n\nE poi c'è il commit di chiusura: **`RIAVVIO — nota serale`**.\n\nNon è un commit tecnico. È Matteo che lascia un messaggio a se stesso per la prossima apertura. Cosa è stato fatto. Quali sono le priorità riviste. Cosa non deve essere dimenticato.\n\nÈ il sistema che si parla da solo attraverso il tempo. Il commit con co-author Claude Fable 5 — perché quella nota è stata scritta insieme, un fatto reale di questo progetto — e poi la sessione si chiude.\n\n---\n\n## CHIUSURA\n\nUna sessione come questa non produce niente che si vede.\n\nNon c'è un componente fresato, non c'è un asse che si muove, non c'è un pannello MIMS stampato. C'è un sistema che è diventato più onesto su sé stesso. Badge che non mentono più. Percentuali che hanno un nome. Un MASTER che sa di essere un archivio. Tre porte invece di una stanza confusa.\n\nIl lavoro di igiene non è glamour. Ma è quello che decide se il sistema funziona ancora tra un anno o se diventa il tipo di cosa che non riesci più a toccare senza rompere qualcosa.\n\nV32 è al 65%. GENESIS è al 70%. Il target è luglio 2030. Tra il punto in cui siamo e il capannone c'è ancora molta strada — e quella strada si percorre solo se il sistema che la mappa dice la verità.\n\nStasera il sistema dice la verità.\n\nÈ un buon punto da cui ricominciare.\n\n---\n\n## reel_hook\n\n`mcpServers: {}` — NEXUS dichiarato live da settimane, codice mai scritto. Badge verde su vuoto assoluto. Oggi ho aperto `nexus.py` e l'ho guardato in faccia. Fix: tre righe. Costo reale: ammettere che costruire il sistema e costruire la mappa del sistema sono due cose diverse — e che la seconda stava mentendo sulla prima. Il prossimo passo è che non menta più.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `mcpServers` in `nexus.py` era vuoto — ag05/gr05 dichiaravano `live/done` senza codice funzionante; allineato allo stato reale (NEXUS irraggiungibile).\n- **LOGICA:** I campi erano stati popolati manualmente come placeholder ottimistici; nessun check automatico verificava la corrispondenza tra dichiarazione e codice effettivo.\n- **DECISIONE:** `max_retries=4` impostato sui 4 agenti notturni (story_agent, self_improve, night_audit, nina_agent) — default SDK Anthropic era 2.\n- **LOGICA:** Con 2 retry un errore transitorio API a notte fonda abbatte l'agente senza produrre artefatti; 4 retry coprono i picchi di latenza tipici.\n- **DECISIONE:** au18 — `mappaData.ts` fonte unica; au09 — percentuali con nome esplicito; au16 — MASTER declassato da fonte-verità ad archivio.\n- **LOGICA:** Verità sparsa su più file senza gerarchia chiara genera deriva silenziosa a ogni aggiornamento parziale.\n- **DECISIONE:** Sidebar ristrutturata in tre sezioni distinte: TITANIUM / NINA / PUBBLICAZIONI.\n- **OBIETTIVO:** Separazione identitaria che permette a ogni \"faccia\" del sistema di evolvere indipendentemente; prossimo passo misurabile = attivazione pipeline pubblicazioni (scaletta 9 passi verificata con Postiz MCP + Graph API).\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E15 |\n| **Data** | 2026-07-08 |\n| **Sessioni di riferimento** | #56, #57 |\n| **Sistemi coinvolti** | GENESIS, dashboard React |\n| **Commit chiave** | fix(#57) genesisData, feat(#56) LE 3 FACCE, feat(#56) verita sparsa pt.1, fix(#57) max_retries=4, feat(#57) card VALORE |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Tag narrativo** | igiene sistema, verità dei dati, identità, architettura informazione |\n| **Target capannone** | 15 luglio 2030 |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    }
+  },
+  {
+    "id": "EP_20260725",
+    "title": "TITANIUM OS · S2 · Episodio 69",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-25",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS · S2 · Episodio 69 \"Quattro Giorni di Silenzio\" 25 luglio 2026 COLD OPEN Venerdì sera, 25 luglio. Il terminale mostra una riga sola: chiusura 68 — ATTACCO ecosistema 5 fix + report Matteo ",
+    "content": "# TITANIUM_OS · S2 · Episodio 69\n## \"Quattro Giorni di Silenzio\"\n*25 luglio 2026*\n\n---\n\n## COLD OPEN\n\nVenerdì sera, 25 luglio.\n\nIl terminale mostra una riga sola:\n\n```\nchiusura #68 — ATTACCO ecosistema (5 fix + report)\n```\n\nMatteo non ha scritto quella riga adesso. L'ha scritta quattro giorni fa, quando ha lanciato i fix e si è alzato dal computer. Da allora non ha toccato nulla. Ha aspettato. Ha guardato il sistema girare da solo — backup, audit, story_agent, notte dopo notte — e ha contato i giorni come si conta la temperatura di una saldatura: non si tocca finché non è il momento.\n\nQuattro giorni. Cinque fix. Zero regressioni.\n\nAdesso è il momento di aprire il report.\n\n---\n\n## ATTO I — Il Problema che Cresceva di Notte\n\nSessione #68, 21 luglio. Il nome era già chiaro: **ATTACCO ECOSISTEMA**. Non un fix singolo. Non un'emergenza puntuale. Una campagna.\n\nIl sistema aveva accumulato cinque infezioni silenziose — il tipo di problemi che non mandano in crash niente, ma rodono. Costano lentezza, costano spazio su disco, costano quella sensazione sottile che qualcosa non va anche quando tutto sembra girare.\n\nIl primo era il più tecnico: `torchaudio 2.6.0` nel venv isolato. La versione installata era la 2.11 — incompatibile, generava `WinError 127` quando il sistema cercava di caricare i modelli audio. Un errore che non bloccava la catena notturna ma la degradava: il processo falliva in silenzio, il log registrava l'errore, e il mattino dopo c'era sempre quella riga rossa che Matteo aveva smesso di leggere perché era sempre la stessa. Il downgrade a 2.6.0 nel venv corretto ha chiuso il caso.\n\nIl secondo era più brutale, fisicamente misurabile: la cartella `BACKUPS` era esplosa da 42.141 file a 353. Non 353 file — 353 *kilobytes* di indice, per una massa che aveva raggiunto e superato i 700 MB. Il sistema di backup nightly girava ogni notte, teneva tutto, non eliminava mai niente. `retention.py` non aveva un tetto. La soluzione: `keep-N` configurabile, implementato e testato. Settecento megabyte liberati. Zero file di progetto toccati — solo i backup gitignored, quelli che stavano lì a fare peso senza fare lavoro.\n\nIl terzo: werkzeug. Il server Flask loggava ogni richiesta a livello INFO per default — ogni chiamata API, ogni ping del sistema, ogni health check notturno. Il log cresceva di righe inutili. Soglia alzata a WARNING. Il silenzio adesso è informazione: se c'è una riga nel log werkzeug, significa che è successo qualcosa che vale la pena leggere.\n\n---\n\n## ATTO II — Due Path e un Hook\n\nI fix quattro e cinque erano più sottili, ma forse più significativi nel lungo periodo.\n\nDue path hardcoded nel codice — stringhe letterali che puntavano a directory specifiche della macchina di Matteo. Il tipo di cosa che funziona perfettamente finché non cambi qualcosa: sposti il progetto, cambi utente, installi su una macchina nuova, e tutto si rompe in modo incomprensibile perché il codice cerca `C:\\Users\\Matteo\\` e trova il vuoto. Convertiti in variabili d'ambiente, derivate da configurazione. Il sistema adesso si orienta da solo.\n\n`TI_NightCaroselli` con `StartWhenAvailable=True`. Il task scheduler Windows aveva un problema: se la macchina era spenta all'orario programmato del task, il carosello notturno saltava e non recuperava. La flag `StartWhenAvailable` dice allo scheduler di eseguire il task non appena la macchina torna disponibile, anche se l'orario programmato è passato. Una riga di configurazione. La catena notturna adesso non ha buchi.\n\nE poi il hook globale — forse la cosa più piccola e più importante della sessione. `Claude Code SessionStart`: un hook che si esegue automaticamente all'avvio di ogni nuova sessione di lavoro. Legge lo stato del progetto, carica il contesto, orienta Claude prima che Matteo digiti la prima parola. Ogni sessione adesso inizia già informata. La domanda \"dove eravamo rimasti?\" non esiste più.\n\nVerificato che funziona. Non solo in test — in produzione, nella sessione successiva, che era questa.\n\n---\n\n## ATTO III — Quattro Giorni di Evidenza\n\nIl metodo dell'ATTACCO ECOSISTEMA era deliberato: non controllare. Non correggere in corsa. Applicare i fix il 21 luglio e aspettare fino al 25 per aprire il report.\n\nQuattro giorni di catena notturna autonoma sono un campione piccolo ma non trascurabile. Ogni notte: inventario notturno, `night_audit`, `story_agent`. Ogni mattina: tre commit verdi nel log. La `BACKUPS` è rimasta a 353 file — non è ricresciuta, il `keep-N` sta facendo il suo lavoro. I log werkzeug sono silenziosi. Il venv carica `torchaudio 2.6.0` senza `WinError`. I path trovano quello che cercano.\n\nIl report è in `DOCS/ATTACCO_20260721`. Non è lungo. È una lista di cinque fix, ognuno con il problema originale, la soluzione applicata, e il risultato verificato. La sezione finale: *Sicurezza repo: BUONA. 0 segreti hardcoded.* L'ultimo punto di igiene, quello che protegge il lavoro da se stessi.\n\nV32 è al 65%. GENESIS è al 70%. Non sono cambiati in questi quattro giorni — non era quello il lavoro di questa settimana. Il lavoro era fare in modo che il sistema che supporta tutto il resto non diventasse un peso da portare.\n\nUn sistema che richiede attenzione costante non è un sistema: è un secondo lavoro. La differenza tra i due è quella che Matteo sta costruendo dal 2025 — silenziosamente, un fix alla volta.\n\n---\n\n## CHIUSURA\n\nC'è una soddisfazione specifica nel chiudere una sessione come questa, diversa da quando finisci di fresare un pezzo o quando il codice di un agente risponde per la prima volta nel modo giusto.\n\nNon è la soddisfazione di aver creato qualcosa. È la soddisfazione di aver reso stabile quello che già esiste.\n\nL'ecosistema di GENESIS gira da mesi. Gli agenti notturni lavorano. Il RAG risponde. Ma sotto c'era una sedimentazione — errori tollerati, directory che crescevano, log che si riempivano di rumore. L'ATTACCO ECOSISTEMA non ha aggiunto funzionalità. Ha rimosso attrito.\n\nSettecento megabyte è un numero concreto. `WinError 127` non compare più nel log della notte. I path trovano le directory giuste su qualsiasi macchina.\n\nQuattro giorni di silenzio. Poi il report. Il sistema ha tenuto da solo.\n\nPer adesso basta così.\n\n---\n\n## reel_hook\n\n700 MB di backup che non servivano a niente. torchaudio 2.6.0 invece di 2.11 — un numero sbagliato che generava WinError ogni notte. Path hardcoded nel codice che aspettavano solo un trasloco per rompersi tutto. Ho applicato 5 fix il 21 luglio e non ho aperto il terminale per quattro giorni. Stamattina: backup stabile, catena verde, log pulito. Il sistema che non si rompe quando non lo guardi è il sistema che vale la pena costruire.\n\n---\n\n## FATTI (per il RAG)\n\n- DECISIONE: downgrade `torchaudio` a versione 2.6.0 nel venv isolato di GENESIS (era installata 2.11, incompatibile)\n- LOGICA: versione 2.11 generava `WinError 127` al caricamento modelli audio, degradando la catena notturna in silenzio senza bloccarla\n- DECISIONE: implementato `keep-N` in `retention.py` con tetto configurabile sui backup notturni\n- LOGICA: cartella `BACKUPS` cresciuta senza limite da 42.141 a 353 file con 700 MB occupati; solo backup gitignored eliminati, zero file di progetto toccati\n- DECISIONE: hook globale `Claude Code SessionStart` attivato e verificato in produzione\n- LOGICA: ogni sessione si auto-orienta sul contesto del progetto prima della prima interazione; verificato funzionante nella sessione #68→#69\n- OBIETTIVO: catena notturna stabile e autonoma (verificato 4 giorni, 21-25/07); prossimo step su V32 e GENESIS con sistema di supporto privo di attrito\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E69 |\n| **Data** | 2026-07-25 |\n| **Sessione** | #68 |\n| **Progetti coinvolti** | GENESIS |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Tag** | fix, ecosistema, stabilità, catena-notturna, retention, torchaudio, hook |\n| **Prossima milestone** | Catena notturna stabile verificata — avanzamento V32 / GENESIS |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    }
+  },
+  {
+    "id": "EP_20260726",
+    "title": "TITANIUM OS · S2 · Episodio 68",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-26",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 7,
+    "preview": "TITANIUM_OS · S2 · Episodio 68 \"Quattro Giorni da Solo\" 26 luglio 2026 COLD OPEN Il report si chiama ATTACCO_20260721 . Non è un nome scelto per drammatizzare. È quello che era: un attacco. Cinque pro",
+    "content": "# TITANIUM_OS · S2 · Episodio 68\n## \"Quattro Giorni da Solo\"\n\n*26 luglio 2026*\n\n---\n\n## COLD OPEN\n\nIl report si chiama `ATTACCO_20260721`.\n\nNon è un nome scelto per drammatizzare. È quello che era: un attacco. Cinque problemi sistemici trovati nello stesso giorno, annotati con quella parola, e poi lasciati lì — a marcire o a guarire, dipendeva da cosa sarebbe successo dopo.\n\nQuattro giorni dopo, il 25 luglio, Matteo ha aperto il file di audit.\n\nI fix avevano tenuto da soli.\n\n---\n\n## ATTO I — Il Problema con i Dottori che Curano Sé Stessi\n\nSiemens S7-314C controlla la logica di macchine che pesano tonnellate. Funziona perché esiste separazione: chi progetta il sistema non è lo stesso che lo certifica. Chi scrive il codice non è lo stesso che firma il collaudo.\n\nGENESIS non ha questo lusso.\n\nMatteo progetta il sistema, scrive il codice, fa il debug, e poi — la sera — si fida del report notturno che il sistema stesso ha generato su sé stesso. È una contraddizione strutturale, e lui lo sa. L'ha nominata più volte nelle sessioni. Non ha una soluzione pulita. Ha solo una prassi: aspettare. Lasciare passare qualche giorno prima di leggere l'audit. Come un chirurgo che aspetta di togliere i punti prima di valutare la cicatrice.\n\nIl 21 luglio l'ATTACCO ECOSISTEMA aveva trovato cinque cose rotte.\n\nLa prima: `torchaudio 2.11` — installato nel venv principale, incompatibile con l'ambiente di produzione. Il pacchetto giusto era `2.6.0`, e viveva in un venv isolato, separato. `WinError 127` — errore di runtime silenzioso, il tipo che non crasha il sistema in modo visibile ma introduce sporco nei risultati. Il tipo che ti fa fidare di dati che sono già corrotti.\n\nLa seconda: i backup. La cartella era esplosa: `42.141 → 353` file. Non è un errore di battitura — era passata da quarantaduemila a trecentocinquantatré. Il `keep-N` in `retention.py` non stava girando correttamente. Settecento megabyte di backup accumulati, nessun file di progetto toccato, ma il disco che si riempiva in silenzio ogni notte.\n\nTre settimane prima, queste cose sarebbero rimaste lì.\n\n---\n\n## ATTO II — Cosa Vuol Dire \"Ha Tenuto\"\n\nLa frase nel commit di ieri sera è secca: *\"I fix hanno TENUTO da soli.\"*\n\nNon è una frase di sollievo. È una frase tecnica. Vuol dire che i parametri monitorati sono rimasti dentro i limiti attesi per novantasei ore senza intervento umano. Backup a 353 — numero stabile, tetto funzionante. Audit fresco — la catena notturna verde. Log werkzeug al livello `WARNING` invece di `DEBUG`, spam eliminato. `TI_NightCaroselli` con `StartWhenAvailable=True` — non più dipendente dalla finestra temporale esatta. Due path hardcoded resi env-derived — il sistema ora si orienta dallo spazio in cui gira, non da coordinate assolute scritte a mano nel codice.\n\nE poi c'è la sesta cosa, quella che non era sul foglio dell'ATTACCO ma che cambia la struttura di ogni sessione da adesso in poi.\n\nL'hook globale Claude Code `SessionStart`.\n\nOgni volta che Matteo apre una sessione, il sistema si orienta da solo: legge lo stato, carica il contesto, sa dove è rimasto. Non è più necessario riepilogare. Non è più necessario spiegare cos'è GENESIS a GENESIS. Tre sessioni testate, funziona. Il numero nel report è questo: zero — il numero di volte in cui Matteo ha dovuto scrivere \"ricordi che stiamo costruendo...\" per riportare il sistema al punto.\n\nSicurezza repo: zero segreti hardcoded. Audit confermato.\n\nV32: 65%. GENESIS: 70%.\n\n---\n\n## ATTO III — La Notte che Lavora da Sola (La Terza Volta)\n\nAlle 23, Matteo ha smesso di toccare il computer.\n\nTre commit automatici:\n\n```\nauto: inventario notturno + critiche\nauto: night_audit - cartella clinica 26/07/2026\nauto: story_agent - episodi generati 26/07/2026\n```\n\nNon è la prima volta. Non è la seconda. È la terza settimana consecutiva che la catena notturna gira senza che nessuno la avvii a mano. L'inventario legge lo stato del progetto, cataloga le critiche aperte, aggiorna il vettore. L'audit scrive la cartella clinica — cosa funziona, cosa è degradato, cosa è cambiato rispetto alla notte prima. Lo story agent genera gli episodi.\n\nIl punto non è che sia impressionante. Il punto è che il 21 luglio questa catena si era quasi rotta — il `WinError 127` avrebbe potuto silenziare i moduli audio, il disco pieno avrebbe potuto fermare i backup notturni, e la catena notturna sarebbe caduta senza un errore visibile. Sarebbe sembrata viva mentre lavorava su dati corrotti.\n\nI fix hanno cambiato questo. Hanno reso il sistema più difficile da rompere silenziosamente.\n\nQuattro giorni da solo. Non supervisionato. E il 26 mattina, quando Matteo ha aperto il terminale, non c'era niente da riparare.\n\n---\n\n## CHIUSURA\n\nC'è una differenza tra un sistema che funziona perché qualcuno lo tiene in piedi e un sistema che funziona perché è stato costruito per farlo.\n\nGENESIS è ancora a metà strada tra i due. Il 70% di completamento non è una stima ottimistica — è il numero che esce dall'audit, con le critiche aperte ancora lì, visibili, non risolte. Ci sono componenti che funzionano e componenti che aspettano.\n\nMa quei quattro giorni contano. Non perché sia stato facile. Perché la cosa più difficile da costruire non è un sistema che funziona quando lo guardi — è un sistema che funziona quando smetti di guardarlo.\n\n---\n\n## REEL HOOK\n\n700MB di backup accumulati in silenzio. Quarantaduemila file dove dovevano esserne trecentocinquantatré. Il sistema sembrava verde — ma stava lavorando su un disco che si riempiva ogni notte.\n\nQuattro giorni dopo il fix: backup stabile, catena notturna verde, zero interventi manuali.\n\nIl vero test di un sistema non è se regge mentre lo guardi.\n\n---\n\n## FATTI (per il RAG)\n\n- DECISIONE: `torchaudio` fissato a `2.6.0` in venv isolato (era `2.11` nel venv principale, incompatibile → `WinError 127` silenzioso)\n- LOGICA: la versione 2.11 introduceva errori di runtime non visibili in output, corrompendo silenziosamente i risultati dei moduli audio senza crashare il processo\n- DECISIONE: `retention.py` aggiornato con tetto `keep-N` — backup ridotti da 42.141 a 353 file, 700MB liberati; zero file di progetto toccati, solo backup gitignored rimossi\n- DECISIONE: log werkzeug abbassato a livello `WARNING` (era `DEBUG`), spam eliminato dalla catena notturna\n- DECISIONE: `TI_NightCaroselli` impostato `StartWhenAvailable=True` — la task scheduler non dipende più dalla finestra temporale esatta\n- DECISIONE: 2 path hardcoded resi env-derived — il sistema si orienta dall'ambiente di esecuzione, non da coordinate assolute nel codice\n- DECISIONE: hook globale Claude Code `SessionStart` implementato e verificato — auto-orientamento a ogni apertura sessione, zero riepilogo manuale necessario (verificato su 3 sessioni)\n- OBIETTIVO: i fix del report `DOCS/ATTACCO_20260721` hanno tenuto 4 giorni autonomi (21→25/07); prossimo passo misurabile — audit successivo deve confermare backup ≤ 400 e catena notturna verde per 2 settimane consecutive\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E68 |\n| **Data** | 2026-07-26 |\n| **Milestone** | Sessione #68 — ATTACCO ECOSISTEMA follow-up |\n| **Progetti attivi** | GENESIS 70%, V32 65% |\n| **Sistemi protagonisti** | GENESIS / catena notturna / retention.py |\n| **Tag** | `#sistema` `#audit` `#autonomia` `#fix` `#notturno` |\n| **Prossimo episodio** | Audit a 2 settimane — la catena tiene ancora? |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    }
+  },
+  {
+    "id": "EP_20260727",
+    "title": "TITANIUM OS · S2 · Episodio 69",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-27",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 69 \"La Macchina che Non Dimentica\" 27 luglio 2026 — Il sistema tiene da solo COLD OPEN È mezzanotte passata e Matteo non ha toccato il computer. Eppure il repository si agg",
+    "content": "# TITANIUM_OS · S2 · Episodio 69\n## \"La Macchina che Non Dimentica\"\n\n*27 luglio 2026 — Il sistema tiene da solo*\n\n---\n\n### COLD OPEN\n\nÈ mezzanotte passata e Matteo non ha toccato il computer.\n\nEppure il repository si aggiorna. Git registra tre commit. Il timestamp è automatico. Nessuna mano sulla tastiera, nessuna decisione da prendere — il sistema ha già deciso.\n\nSullo schermo, se qualcuno guardasse: tre righe verdi nel log. Una cartella clinica compilata da sola. Un inventario che non aspetta il mattino.\n\nFuori dalla taverna, buio. Dentro: un processo che gira.\n\n---\n\n## ATTO I — Il Problema che Non Sembrava un Problema\n\nBisogna tornare sei giorni indietro, al 21 luglio, per capire cosa è successo stanotte.\n\nLa Sessione #68 aveva un nome interno: *ATTACCO ECOSISTEMA*. Non era un titolo poetico. Era una diagnosi. Matteo aveva aperto il progetto con l'intenzione di fare una cosa e si era trovato davanti a cinque cose che non funzionavano — alcune da settimane, alcune probabilmente da sempre.\n\nIl primo problema era silenzioso: `torchaudio` girava nella versione 2.11 del venv. Incompatibile. `WinError 127` — un errore che in Windows significa *non trovo la libreria*, ma che nel contesto del progetto significava qualcosa di più sottile: una dipendenza rotta che non urlava, che non crashava in modo spettacolare, che semplicemente produceva risultati sbagliati o non produceva niente. Il fix era preciso — finetune a `torchaudio 2.6.0` nel venv isolato. Non un aggiornamento per principio. Una versione specifica, verificata, che funziona con l'architettura che Matteo ha scelto.\n\nIl secondo problema era visibile ma ignorato: i backup erano esplosi. `42.141` file erano diventati `353`. Non 353 file — 353 megabyte in meno dopo il fix. Prima del fix: 700 MB di backup accumulati senza criterio, senza tetto, senza memoria di cosa tenere e cosa scartare. `retention.py` ora ha un `keep-N` — un numero massimo, un limite che il sistema rispetta da solo. Zero file di progetto toccati. Solo backup gitignored, solo la zavorra.\n\nIl terzo problema era rumore: i log di werkzeug — il server WSGI che alimenta Flask — stampavano ogni richiesta HTTP come se fosse un evento degno di nota. Livello abbassato a `WARNING`. Ora il log dice qualcosa solo quando c'è qualcosa da dire.\n\nIl quarto problema era una fragile dipendenza geografica: due path hardcoded nel codice. Non generalizzazioni, non astrazioni — stringhe letterali che funzionavano sul computer di Matteo e avrebbero rotto tutto su qualsiasi altra macchina, o su qualsiasi altra installazione della stessa macchina. Resi `env-derived`. Il progetto si adatta all'ambiente invece di pretendere che l'ambiente sia sempre lo stesso.\n\nIl quinto problema era sottile: `TI_NightCaroselli` — il task notturno che orchestra la catena automatica — aveva bisogno di `StartWhenAvailable=True`. Un flag. Una riga. Significa: *se il computer era spento all'orario schedulato, esegui appena puoi*. Senza quel flag, una notte di laptop chiuso significava una notte di dati persi, un buco nella cartella clinica, un inventario datato.\n\nCinque problemi. Cinque fix. Applicati il 21 luglio.\n\n---\n\n## ATTO II — Quattro Giorni\n\nLa verifica è arrivata il 25 luglio — quattro giorni dopo.\n\nQuesto è il dettaglio che conta: Matteo non ha verificato il giorno dopo. Non ha aperto il log la mattina del 22 con il caffè in mano per controllare che tutto girasse. Ha aspettato quattro giorni. Perché quattro giorni di funzionamento autonomo valgono più di un test manuale fatto subito dopo l'installazione.\n\nIl report `DOCS/ATTACCO_20260721` dice una cosa sola con parole diverse: *i fix hanno tenuto da soli*.\n\nBackup a 353 — il tetto `keep-N` sta funzionando. Audit fresco — `TI_NightCaroselli` con `StartWhenAvailable=True` ha girato le notti in cui doveva girare. Catena notturna verde — werkzeug silenzioso, path che si risolvono, dipendenze allineate.\n\nSicurezza repo: zero segreti hardcoded. Non è un risultato di questa sessione — era già così. Ma il fatto che l'ATTACCO ECOSISTEMA non abbia scoperchiato vulnerabilità latenti è un dato che va registrato.\n\nC'è anche un fix che non riguarda l'infrastruttura ma il flusso di lavoro: l'hook globale Claude Code `SessionStart`. Ogni volta che una sessione inizia, il sistema si auto-orienta — carica il contesto, sa dove era rimasto, sa cosa è cambiato. Verificato che funziona. Significa che Matteo non deve più spiegare al sistema dove si trova ogni volta che si siede al computer. Il sistema sa già.\n\n---\n\n## ATTO III — La Notte che Lavora da Sola (Quarta Volta)\n\nAlle 23 del 27 luglio, tre commit:\n\n```\nauto: inventario notturno + critiche\nauto: night_audit - cartella clinica 27/07/2026\nauto: story_agent - episodi generati 27/07/2026\n```\n\nIdentici, nella forma, a quelli del 17 luglio. E del 21. E del 24. E del 26.\n\nC'è qualcosa di strano nel guardare questi commit. Non la tecnologia — la tecnologia è comprensibile, spiegabile, riproducibile. La cosa strana è l'*abitudine*. Il sistema ha un'abitudine. Si sveglia di notte, fa il suo lavoro, va a dormire. Non dimentica. Non salta. Non aspetta che Matteo sia sveglio per ricordargli di farlo.\n\nV32 è al 65%. GENESIS è al 70%. I numeri non si commentano — sono quello che sono, né buoni né cattivi, solo il punto in cui si trova il progetto oggi.\n\nMa c'è una cosa che questi numeri non catturano: la differenza tra un sistema che funziona quando Matteo lo guarda e un sistema che funziona quando Matteo dorme.\n\nPrima dell'ATTACCO ECOSISTEMA, la catena notturna aveva punti di fragilità. Un laptop chiuso al momento sbagliato, e il log aveva un buco. Una versione incompatibile di `torchaudio`, e i risultati erano silenziosi ma sbagliati. Un backup senza tetto, e lo spazio si erodeva senza che nessuno se ne accorgesse.\n\nAdesso no.\n\nLa cosa che è cambiata il 21 luglio non è una feature. È l'affidabilità. L'ecosistema fa quello che dice di fare, anche quando nessuno guarda.\n\n---\n\n### CHIUSURA\n\nC'è una data: 15 luglio 2030. Il capannone. L'obiettivo finale.\n\nMancano quattro anni. V32 è a metà. GENESIS è a metà. La taverna da 12 m² è ancora la base operativa.\n\nMa stanotte il sistema ha girato da solo, ha compilato la sua cartella clinica, ha aggiornato il suo inventario. Senza aiuto.\n\nNon è una vittoria. È una condizione di lavoro. La differenza è importante: una vittoria si celebra e poi si passa ad altro. Una condizione di lavoro è qualcosa su cui si costruisce — ogni giorno, ogni notte, ogni commit automatico alle 23.\n\nIl repository non mente. La catena notturna è verde. I backup hanno un tetto.\n\nSi va avanti.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `torchaudio` fissato a versione 2.6.0 nel venv isolato (da 2.11 incompatibile, che generava WinError 127).\n- **LOGICA:** Versione 2.11 incompatibile con l'architettura del progetto; errore silenzioso che non crashava ma produceva output sbagliati o nulli.\n- **DECISIONE:** `retention.py` dotato di `keep-N` — tetto massimo sui backup gitignored; risultato: 700 MB liberati, 42.141 backup ridotti a 353, zero file di progetto modificati.\n- **LOGICA:** Backup senza limite di retention erodevano spazio disco senza segnale visibile; il tetto rende il processo autoregolante.\n- **DECISIONE:** `TI_NightCaroselli` task schedulato con flag `StartWhenAvailable=True`.\n- **LOGICA:** Senza il flag, laptop chiuso all'orario schedulato = notte persa; con il flag il task recupera alla prima finestra disponibile.\n- **DECISIONE:** Due path hardcoded resi `env-derived`; hook globale Claude Code `SessionStart` attivato e verificato.\n- **OBIETTIVO:** Catena notturna autonoma e affidabile su macchine diverse; auto-orientamento del sistema ad ogni sessione senza spiegazione manuale del contesto. Verificato operativo a 4 giorni dal fix (25/07/2026).\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E69 |\n| **Data** | 2026-07-27 |\n| **Progetto principale** | GENESIS / ecosistema |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Sessione di riferimento** | #68 (21/07/2026) |\n| **Tag** | `autonomia` `infrastruttura` `fix` `catena-notturna` `retention` |\n\n---\n\n**reel_hook**\n\n700 MB di backup accumulati senza che nessuno se ne accorgesse. Cinque punti di fragilità nell'ecosistema, trovati in una sessione, fixati in una sessione. Il 25 luglio — quattro giorni dopo — la catena notturna era verde. Il sistema gira da solo mentre Matteo dorme. Non è ancora il capannone. Ma è la prima condizione necessaria per arrivarci.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
       }
     }
   }

@@ -1,0 +1,295 @@
+{
+  "data": "2026-07-26",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Sostituire i 101 bare-except con log strutturati per eliminare i fallimenti silenziosi",
+      "cosa": "Audit e refactor dei bare `except:` (e `except Exception:` senza log) nei 47 file incriminati. Ogni catch deve emettere almeno `logger.error(exc_info=True)` prima di qualsiasi altra azione. Priorità assoluta sui file degli organi vitali: nina-loop, snapshot RAG, AI news watcher — i tre che stanotte hanno restituito 0.0 senza alcun log esplicativo.",
+      "perche": "Segnale critico (sev alta, ripetuto due volte): 'Tre organi vitali risultano piatti (0.0) stanotte: nina-loop, snapshot RAG e AI news watcher. Non ci sono log_issues che spieghino il perché.' + todo_bussola punto B: '101 except larghi/nudi in 47 file — errori ingoiati in silenzio'. Causa diretta: impossibile diagnosticare un crash senza stacktrace.",
+      "come": [
+        "1. Script di ricerca: `grep -rn 'except:' --include='*.py' . > bare_excepts.txt` — censimento completo.",
+        "2. Priorità file: identificare quali dei 47 appartengono a nina-loop, rag_snapshot, ai_news_watcher.",
+        "3. Pattern di fix: `except: pass` → `except Exception: logger.error('Componente X fallito', exc_info=True); raise` (o re-raise se non gestibile).",
+        "4. Aggiungere al run notturno un check: se un organo vitale restituisce 0.0, scrivere esplicitamente nel report il nome del file e la riga dell'eccezione.",
+        "5. Verifica: rieseguire il loop notturno in dry-run e controllare che ogni failure produca una riga di log leggibile."
+      ],
+      "rischio": "Basso. Il refactor è puramente di logging, non cambia logica. Rischio unico: un bare `except: pass` che copriva intenzionalmente un caso non-errore — va valutato file per file.",
+      "autonomia": "approvazione",
+      "fonte": "Segnale interno: critiche_audit_aperte SISTEMA sev=alta + todo_bussola punto B"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Pinnare lo stack critico in requirements.txt alle versioni funzionanti oggi",
+      "cosa": "Generare un requirements.txt con versioni esatte (`==`) per almeno il sottoinsieme critico: torch, torchaudio, transformers, chromadb, langchain (e sue dipendenze), fastapi, uvicorn. Lo snapshot deve corrispondere all'ambiente venv che ha superato i fix della sessione #68.",
+      "perche": "Segnale diretto: 'il bug torchaudio 2.11→2.6.0 ha richiesto un venv isolato e un fix dedicato.' + todo_bussola punto C: 'requirements.txt non ha nessuna versione pinnata (0 ==) — stessa classe di bug che ha rotto il finetune.' Con 33 commit in 7 giorni il sistema si auto-modifica: senza pin le dipendenze fluttuanti torneranno a rompere.",
+      "come": [
+        "1. Nel venv funzionante: `pip freeze > requirements_pinned_$(date +%Y%m%d).txt`.",
+        "2. Separare in due file: `requirements_core.txt` (stack critico, versioni ==) e `requirements_dev.txt` (tool opzionali, range permissivi).",
+        "3. Aggiungere un check CI/pre-commit: `pip check` + `python -c 'import torch, torchaudio; assert torchaudio.__version__ == \"2.6.0\"'`.",
+        "4. Documentare in README quale venv corrisponde a quale file.",
+        "5. NON toccare il venv di produzione attivo: operare su copia o ambiente di test."
+      ],
+      "rischio": "Basso se si lavora su copia. Rischio medio se si sovrascrive il requirements.txt in uso senza backup — prevenibile con branch dedicato.",
+      "autonomia": "approvazione",
+      "fonte": "Segnale interno: milestone #68 (fix torchaudio) + todo_bussola punto C + critiche_audit_aperte ROADMAP sev=media"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-26",
+    "milestone": "Sessione #68 (21/07): ATTACCO ECOSISTEMA su TUTTO il progetto. 5 fix applicati e verificati a 4gg (25/07): finetune torchaudio 2.6.0 nel venv isolato (era 2.11 incompatibile, WinError 127); esplosione BACKUPS 42.141->353 con tetto keep-N in retention.py (700MB liberati, solo backup gitignored, zero ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il filone C (pin requirements.txt) è rimasto aperto da #68 ma ha già una prova di danno reale nel milestone attivo: il bug torchaudio 2.11→2.6.0 ha richiesto un venv isolato e un fix dedicato. Con 33 commit in 7 giorni e il sistema in auto-"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "La ricerca notturna del 26/07 è andata a vuoto per rate-limit non autenticato su Semantic Scholar. Log: \"2026-07-26 03:40:20 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 4s\" e \""
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Il canone disco è 6 episodi avanti rispetto al canone dichiarato: log \"2026-07-26: su disco EP_N2_62, il canone dichiara EP_N2_56: aggiornare _CANONE.md\". Quattro canon_violations totali. Gli episodi EP_N2_57-62 esistono su disco ma sono in"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali risultano a zero nel run di stanotte: nina-loop=0.0, snapshot RAG=0.0, AI news watcher=0.0. Non ci sono log_issues che spieghino il perché: i processi o non sono partiti o hanno fallito silenziosamente. Con 101 bare-except"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "story_agent gira su HuggingFace Hub non autenticato: \"2026-07-26: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Stesso pattern del problema Semanti"
+      },
+      {
+        "area": "V32",
+        "sev": "media",
+        "finding": "Il mandrino 2.2kW ER20 e il martinetto Vevor sono entrambi non ordinati/non montati, e sono in sequenza dipendente: senza mandrino non si fresa, senza martinetto non si fa la prima colata VULCAN. Il pilastro V32 è al 65% ma il prossimo step"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Il research_agent è cieco su Semantic Scholar: il log del 25/07 mostra «2026-07-25 03:39:00 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+fram"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi vitali risultano piatti (0.0) stanotte: nina-loop, snapshot RAG e AI news watcher. Il dato è nel campo organi_vivi del report corrente, non in un log con riga datata, quindi non è possibile citare un errore esplicito — ma il patt"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Lo story_agent gira senza token HF autenticato: il log del 25/07 mostra «Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.». Con Matteo assente 7 giorni"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "La bussola segnala che requirements.txt non ha nessuna versione pinnata (0 '=='): stessa classe di bug che ha già rotto un finetune in precedenza. Il sistema si auto-modifica ogni notte (33 commit in 7 giorni) con dipendenze fluttuanti. Dur"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Il canone dichiara EP_N2_56 come massimo episodio ma su disco esiste EP_N2_61: il log del 25/07 riporta «su disco EP_N2_61, il canone dichiara EP_N2_56: aggiornare _CANONE.md». Cinque episodi non sono registrati nel canone ufficiale. Con 32"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "32 episodi su 61 mancano di open_loop (qc_episodi.open_loop_missing=32, pari al 52%). L'open_loop è il gancio narrativo che porta il lettore all'episodio successivo: la sua assenza dimezza il valore di retention della serie proprio mentre i"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 295,
+      "rag_chunks": 21090,
+      "n_commits_7d": 33
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).",
+      "**B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la \"malattia del sistema silenzioso\" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).",
+      "**C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.",
+      "**Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.",
+      "**Gli agenti notturni hanno prodotto durante la vacanza**: nuovi EP_N2_58→61 (S_AVVENTURA) + bozze EP_N2_09/EP_SG_03_02/03/EP_SG_04_01 + proposte self_improve 21-25/07. Da revisionare/promuovere con calma.",
+      "**DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:",
+      "**Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).",
+      "**BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).",
+      "**BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.",
+      "**LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.",
+      "**COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.",
+      "**UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).",
+      "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+      "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+      "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Cursor Releases Cursor Router: A Request-Level Classifier Delivering Frontier Coding Quality at 30–50% Lower Cost",
+        "url": "https://www.marktechpost.com/2026/07/22/cursor-releases-cursor-router-a-request-level-classifier/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Anthropic Releases Claude Security Plugin for Claude Code in Beta: A Multi-Agent Vulnerability Scanner That Runs in Your Terminal",
+        "url": "https://www.marktechpost.com/2026/07/22/anthropic-releases-claude-security-plugin-for-claude-code-in-beta-a-multi-agent-vulnerability-scanner-that-runs-in-your-terminal/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meet Gigatoken: A Rust BPE Tokenizer that Encodes Text at 24.53 GB/s, up to 989x Faster than HuggingFace Tokenizers",
+        "url": "https://www.marktechpost.com/2026/07/23/meet-gigatoken-a-rust-bpe-tokenizer-that-encodes-text-at-24-53-gb-s-up-to-989x-faster-than-huggingface-tokenizers/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Best Open Speech Recognition (ASR) Models in 2026: WER, Languages, Latency, and License Compared",
+        "url": "https://www.marktechpost.com/2026/07/23/best-open-speech-recognition-asr-models-in-2026-wer-languages-latency-and-license-compared/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "You Didn’t Get the AI Model You Paid For",
+        "url": "https://www.marktechpost.com/2026/07/23/you-didnt-get-the-ai-model-you-paid-for/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Andrew Ng Just Released OpenWorker: An Open-Source, Local-First Desktop AI Coworker That Returns Finished Deliverables Instead of Chat",
+        "url": "https://www.marktechpost.com/2026/07/23/andrew-ng-just-released-openworker-an-open-source-local-first-desktop-ai-coworker-that-returns-finished-deliverables-instead-of-chat/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "How to Build an End-to-End OCR Pipeline with Baidu’s Unlimited-OCR for High-Resolution Images and Multi-Page PDF Parsing",
+        "url": "https://www.marktechpost.com/2026/07/23/how-to-build-an-end-to-end-ocr-pipeline-with-baidus-unlimited-ocr-for-high-resolution-images-and-multi-page-pdf-parsing/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Meet the New Claude Opus 5: Frontier-Class Agentic Coding and Computer Use at Unchanged Opus Pricing",
+        "url": "https://www.marktechpost.com/2026/07/24/meet-the-new-claude-opus-5-frontier-class-agentic-coding-and-computer-use-at-unchanged-opus-pricing/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Show HN: ReadKinetic – a free, local-first speed reader for your own books",
+        "url": "https://www.readkinetic.com/app/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Can a MUD evaluate LLMs? A $99 proof of concept",
+        "url": "https://cruciblebench.ai/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Protecting our FLOSS commons from LLMs",
+        "url": "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Petals: Run LLMs at home, BitTorrent-style",
+        "url": "https://petals.dev/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Show HN: Claude-thermos keeps your Claude session warm for you",
+        "url": "https://github.com/izeigerman/claude-thermos"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Cookbook",
+        "url": "https://platform.claude.com/cookbook/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Hetzner is working on LLM Inference",
+        "url": "https://sliplane.io/blog/hetzner-inference"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Claude Opus 5",
+        "url": "https://www.anthropic.com/news/claude-opus-5"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+        "url": "https://huggingface.co/blog/nunchaku-diffusers"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How Codex became a collaborator for OpenAI’s creative team",
+        "url": "https://openai.com/index/codex-collaborator-creative-team"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+        "url": "https://openai.com/index/ntt-data"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Introducing OpenAI Presence",
+        "url": "https://openai.com/index/introducing-openai-presence"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Advancing the next era of national science",
+        "url": "https://openai.com/index/advancing-the-next-era-of-national-science"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How news organizations are using AI to advance their vital missions",
+        "url": "https://openai.com/index/how-news-organizations-are-using-ai"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Building AI infrastructure with the Effingham County community",
+        "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "Launching Health in ChatGPT",
+        "url": "https://openai.com/index/health-in-chatgpt"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "La Cina sta umiliando OpenAI ed Anthropic (e non è finita)",
+        "url": "https://www.youtube.com/watch?v=FxJ96zhi-1A"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "É uscito Claude Opus 5 ecco tutto quello che devi sapere !",
+        "url": "https://www.youtube.com/shorts/2chajpmOWZg"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "The Easiest AI Business Idea 💡💰",
+        "url": "https://www.youtube.com/shorts/kURp6YM6O5Q"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "AI News: This New Model Has Big AI Labs Panicking!",
+        "url": "https://www.youtube.com/watch?v=Ww3EYbuHSfo"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "Open-weight AI just hit 2.8 trillion parameters…",
+        "url": "https://www.youtube.com/watch?v=YP73B9D20V4"
+      },
+      {
+        "fonte": "Fireship",
+        "titolo": "The most interesting \"hack\" in history...",
+        "url": "https://www.youtube.com/watch?v=KOpTWx1Eou4"
+      }
+    ],
+    "n_news": 30
+  }
+}

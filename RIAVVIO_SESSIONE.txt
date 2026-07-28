@@ -1,39 +1,57 @@
-=== RIAVVIO SESSIONE #69 — generato 25/07/2026 (fine #68 ATTACCO ECOSISTEMA, skill salva) ===
-Ultima sessione: #68 (21/07 lavoro, salvato 25/07 al rientro — Opus 4.8)
+=== RIAVVIO SESSIONE #70 — generato 28/07/2026 (fine #69 RECUPERO ARRETRATO, skill salva) ===
+Ultima sessione: #69 (28/07 — Opus 5) — 3 agenti read-only in parallelo, Claude verificatore
+
+━━━ ROTTA GENERALE (ordine Matteo 28/07) ━━━
+1) finire i CAROSELLI  2) settare bene l'ECOSISTEMA  3) partire con MIMS (prossimo progetto)
 
 ━━━ DOVE SIAMO (in 10 sec) ━━━
-Sessione #68 = ATTACCO all'ecosistema su TUTTO il progetto (diagnostica live, non a memoria).
-Ecosistema vivo e sano. 5 fix applicati e già verificati a 4 giorni. 3 filoni strutturali PROPOSTI
-(decidi tu). Report completo: DOCS/ATTACCO_20260721/_SINTESI.md.
+Matteo non revisionava dal 21/07 (7 notti di produzione automatica). Recuperato tutto con 3 agenti
+(episodi/bozze · dashboard · critiche+proposte). 5 fix applicati e verificati. Report #68 in
+DOCS/ATTACCO_20260721/. Dettaglio completo di #69 in DA_FARE_FATTO.md.
 
-━━━ FATTO IN #68 (5 fix applicati) ━━━
-1. Finetune riparato — torchaudio 2.6.0+cu124 nel venv llamafactory (era 2.11 incompatibile, WinError 127)
-2. Esplosione backup fermata — BACKUPS 42.141 cartelle -> 353 (tetto keep-N in retention.py, 700MB liberati).
-   ATTENZIONE: cancellati SOLO backup auto in BACKUPS/ (gitignored) — ZERO file di progetto.
-3. Spam log API silenziato — werkzeug->WARNING in api_server.py (era 92% GET /api/health)
-4. TI_NightCaroselli StartWhenAvailable False->True
-5. 2 path hardcoded (riordina_mente.py, genera_wiki_index.py) resi env-derived (MENTE_DIR)
-+ hook globale Claude Code SessionStart (~/.claude/settings.json) = auto-orientamento a ogni nuova sessione
-+ Vite esposto --host (dashboard da telefono: Tailscale 100.125.152.124:5173 / LAN 192.168.0.112:5173)
+━━━ FATTO E VERIFICATO IN #69 ━━━
+- Corsia caroselli NINA sbloccata dopo 7 notti: la coda aveva EP_N2_04/05/06 come 'bozza_verde'
+  benche' fisicamente promossi -> tetto backlog 6>=6 falso. Backlog reale 6->3, riparte da EP_N2_10.
+- 4 episodi persi recuperati: audit_episodes considerava "presente" un file col titolo gia' nel json,
+  e story_agent riusa "Episodio 69". Rimosso il match-per-titolo -> 252->256 episodi, 0 orfani.
+- Vista RETE (sorgente SISTEMA) riparata: 4 endpoint mancavano dal proxy vite (tornavano index.html).
+- Troncatura episodi Nina risolta: nina_agent max_tokens 4000->8000 (si perdeva l'open-loop).
+- -10 critiche/notte di rumore: legenda organi_vivi (eta' in giorni) nel SYSTEM_PROMPT + warning HF
+  zittito in vault_intersect (era classificato "rate-limit sorgente").
+- Verifiche: 5 file compilano · storie_lint 0 violazioni · tsc -b 0 errori · API 200 · 0 orfani.
 
-━━━ VERIFICA A 4 GIORNI (25/07) — i fix hanno TENUTO da soli ━━━
-- backup fermi a 353 (keep-N regge ogni notte) · audit notturno fresco (25/07 03:52) · catena notturna VERDE
-- finetune: TI_FineTune è settimanale, prossimo run 26/07 conferma il fix live
-- build TS verde · 0 orfani episodi
+━━━ DUE MIEI ERRORI RITIRATI (onesta' di metodo) ━━━
+- La paginazione chromadb NON risolve il 503 di /api/rag/vectors: il segmento HNSW e' incoerente
+  (limit=10 -> 0 embedding, limit>=1000 -> IndexError; i metadati sqlite si leggono).
+  CURA VERA: SERVICES/rag_recover.ps1 L1 --drop-hnsw (ricostruisce da sqlite, no re-embed) = CLICK MATTEO.
+- "101 bare-except in 47 file" (mio numero del #68) era FALSO: 1 solo nel codice proprio.
 
-━━━ 3 FILONI PROPOSTI #68 (da decidere) ━━━
-A. Rete di test assente (1 test su 157 .py) — smoke-test sugli organi vitali (state_updater/canon_guard/rag_engine/retention)
-B. 101 except larghi/nudi in 47 file — audit dei soli bare except: (loggare invece di ingoiare)
-C. requirements.txt non pinnato (0 ==) — pinnare lo stack critico (è la classe di bug che ha rotto il finetune)
+━━━ PRIMO STEP #70 — ATTACCA E CORREGGI (ordine Matteo) ━━━
+1. FERMARE LA CONTAMINAZIONE MIMS (priorita' massima: MIMS e' il prossimo progetto)
+   - nina_agent.py:188: iniettare _CANONE.md nel prompt dell'Architetto + regola "se non c'e'
+     aggancio reale, lascia vuoto" (oggi lo slot va riempito e si inventa)
+   - canon_guard: regola che segnala MIMS/VULCAN descritti come software/AI
+   - correggere i 5 episodi contaminati: EP_N2_57/59/60/63/64 (+ fonti fabbricate nei FATTI di EP_N2_64)
+2. FIX MECCANICI RESIDUI: casella "?" (nina_rag_loop.py:180) · guardia titoli unici (titoli tripli
+   19/56/63 e 45/53/60) · commit del loop Nina (EP_N2_62/63/64 untracked) · sentinella canone su hash
+   non mtime (night_audit.py:635) · euristiche rumorose (_cid sulla prosa LLM = 6 cloni/notte,
+   rate-limit, 0 risultati, QC_EP_OPEN_LOOP, canon_guard su "chunk recuperati")
+   · AZIONI_MATTEO.md:32 (istruzione .env sbagliata: nessuno legge quel file, chiavi = var utente Windows)
+   · _CANONE.md:32 range 01..56 -> 01..64 (edit a mano, nessun generatore; impatto RAG nullo)
+3. IMPLEMENTARE LE NOVITA' IA ingegnerizzandole nel progetto
+4. BOZZE: 6 PRONTE (EP_N2_07/08, EP_SG_02_05/06, EP_SG_03_01/02, EP_SG_04_01) ·
+   EP_N2_09 slide 2 vuota (scena 'biblioteca' non in sg_builder.SCENES) ·
+   EP_SG_03_03 (+-0,019 mm pubblico + open-loop all'indietro)
+5. DASHBOARD minori: CalendarioView.tsx:97 chiavi duplicate · lint 89 · /api/content-files divergente
+   (vite 289 vs Flask 0) · badge "289 su disco" conta _ARCHIVIO · ~2,5k righe dead code + 7 deps inutili
 
-━━━ SOCIAL (invariato dal #67b) ━━━
-18/21 post programmati escono da soli. Al rientro (30/07, promemoria Calendar): caricare i 3 rimasti -> 21/21
-(Nina EP_N2_05 19/08 + EP_N2_06 23/08, Sistema GENESIS EP_SG_02_04 21/08). Caption in _NINA_/_SISTEMA_COPIA_INCOLLA.md.
+━━━ DECISIONI CHE RESTANO A MATTEO ━━━
+Titoli tripli (rititolare o archiviare?) · EP_SG_03_03 il numero esce? · campo "Aggancio reale" si
+tiene? · quale bozza esce prima · rag_recover --drop-hnsw (UAC) · pin requirements.txt (0 == su 36) ·
+chiave Semantic Scholar (81% chiamate a vuoto) · UPS + mandrino ER20 + martinetto Vevor
 
-━━━ PRODOTTO DAGLI AGENTI IN VACANZA (da revisionare) ━━━
-Nuovi EP_N2_58->61 (S_AVVENTURA) + bozze EP_N2_09/EP_SG_03_02/03/EP_SG_04_01 + proposte self_improve 21-25/07.
+━━━ SOCIAL ━━━
+18/21 post escono da soli. I 3 rimasti: promemoria Calendar 30/07 (Nina EP_N2_05 19/08 + EP_N2_06 23/08,
+Sistema GENESIS EP_SG_02_04 21/08). Caption in POSTER/_NINA_/_SISTEMA_COPIA_INCOLLA.md.
 
-━━━ BLOCKERS ━━━
-UPS (n°1, corruzione HNSW da power-loss) · mandrino ER20 · martinetto Vevor · chiavi .env da ruotare
-
-━━━ Generato: 25/07/2026 — fine #68 (skill salva) ━━━
+━━━ Generato: 28/07/2026 — fine #69 (skill salva) ━━━

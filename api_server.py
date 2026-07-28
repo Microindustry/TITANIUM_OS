@@ -1292,7 +1292,13 @@ def rag_vectors():
             if cached.get("chunk_count") == total_chunks and "links" in cached:
                 return jsonify({"ok": True, **cached})
 
-        # Carica tutti gli embedding
+        # Carica tutti gli embedding.
+        # NB (28/07): se questo va in IndexError "list assignment index out of range"
+        # (chromadb 0.5.23, local_persistent_hnsw.get_vectors) il SEGMENTO HNSW e'
+        # incoerente: la lettura vettoriale e' rotta a QUALSIASI dimensione (limit=10
+        # torna 0 embedding, limit>=1000 solleva) mentre i metadati da sqlite si leggono.
+        # Non e' un problema di batch size: la cura e' SERVICES/rag_recover.ps1 L1
+        # (--drop-hnsw: Chroma ricostruisce il segmento da sqlite, nessun re-embed).
         result = col.get(include=["embeddings", "metadatas"], limit=total_chunks)
         embeddings = np.array(result["embeddings"], dtype=np.float32)
         sources    = [m.get("source", "unknown") for m in result["metadatas"]]

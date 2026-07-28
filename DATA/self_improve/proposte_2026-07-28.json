@@ -1,0 +1,277 @@
+{
+  "data": "2026-07-28",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "GENESIS",
+      "titolo": "Aggiornare _CANONE.md da EP_N2_56 a EP_N2_64 + bloccare canon_agent finché non si allinea",
+      "cosa": "Scrivere uno script che legga il numero massimo di episodio su disco (EP_N2_64), aggiorni _CANONE.md e apra un issue/flag che impedisce agli agenti di produrre nuovi episodi finché il delta non è zero. Non toccare i file episodio, solo il canone e il guard.",
+      "perche": "Due notti consecutive (2026-07-27 e 2026-07-28) il log segnala: 'su disco EP_N2_64, il canone dichiara EP_N2_56'. Sono 8 episodi non registrati; con 5 canon_violations già aperte il debito si accumula ogni notte.",
+      "come": [
+        "1. Script Python read-only: scansiona STORIES/ per il numero massimo EP_N2_*, confronta con il valore in _CANONE.md.",
+        "2. Se delta > 0: stampa diff, chiede conferma (dry-run di default), poi aggiorna il campo `ultimo_episodio` in _CANONE.md.",
+        "3. Aggiungere in canon_guard un check pre-generazione: se disco > canone, rifiuta la run e loga 'CANON_DRIFT — aggiorna _CANONE.md prima di generare'.",
+        "4. Eseguire lo script manualmente (Matteo approva l'output prima del commit)."
+      ],
+      "rischio": "Nessun episodio viene modificato; solo metadato. Rollback: git revert su _CANONE.md.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte: GENESIS sev=alta, 2026-07-28"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-28",
+    "milestone": "Sessione #68 (21/07): ATTACCO ECOSISTEMA su TUTTO il progetto. 5 fix applicati e verificati a 4gg (25/07): finetune torchaudio 2.6.0 nel venv isolato (era 2.11 incompatibile, WinError 127); esplosione BACKUPS 42.141->353 con tetto keep-N in retention.py (700MB liberati, solo backup gitignored, zero ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Il canone dichiara EP_N2_56 come massimo ma su disco esiste già EP_N2_64: \"su disco EP_N2_64, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-28). Il delta è 8 episodi non registrati. Con 5 canon_violations già aperte e il dato"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Semantic Scholar blocca la ricerca notturna con rate-limit persistente: \"2026-07-28 03:38:51 WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e subito dopo \"2026-07-28 03:39:14 WARNING [semantic"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Tre organi vitali mostrano score 0.0 (nina-loop, snapshot RAG, AI news watcher) e riflusso FATTI è a 0.1. Non ci sono log_issues che spieghino il perché: l'assenza di errori espliciti rende impossibile distinguere tra «non è stato il turno "
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "32 episodi su 64 controllati mancano di open_loop (qc_episodi open_loop_missing: 32, pari al 50%). Non è un dato nuovo, ma con EP_N2_58–61 già su disco e non ancora revisionati, e altri episodi in arrivo dagli agenti in vacanza, il problema"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "story_agent opera senza token HF autenticato: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" (2026-07-28). Le richieste non autenticate sono sogget"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'UPS è listato come blocker per la corruzione HNSW da power-loss (3 episodi già avvenuti), il RAG conta 21.413 chunk, e la rebuild BGE-M3 è pronta al click ma non ancora eseguita. Fare la rebuild senza UPS installato espone il nuovo indice"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Semantic Scholar blocca la ricerca notturna con 429 ripetuti e la query rimane senza risultati. Log 2026-07-27: \"2026-07-27 03:39:08 [...] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"20"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Il canone dichiara EP_N2_56 come massimo ma su disco esiste già EP_N2_63: 7 episodi non canonizzati. Log 2026-07-27: \"su disco EP_N2_63, il canone dichiara EP_N2_56: aggiornare _CANONE.md\". Combinato con qc_episodi che riporta 32 episodi su"
+      },
+      {
+        "area": "RETE",
+        "sev": "media",
+        "finding": "story_agent gira senza autenticazione HF Hub. Log 2026-07-27: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" Con 297 episodi generati e run notturn"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Tre organi dichiarati vivi mostrano score 0.0 stanotte: nina-loop, snapshot RAG, AI news watcher. Non ci sono log_issues che spieghino perché, ma il dato numerico è netto. In parallelo, bussola_open segnala che Vite/dashboard non si era ria"
+      },
+      {
+        "area": "V32",
+        "sev": "bassa",
+        "finding": "Il blocker UPS è censito da almeno 3 episodi di corruzione HNSW e rimane hardware non ordinato. Il RAG ha 21245 chunk e il database vettoriale continua a girare senza protezione da power-loss. Non ci sono log_issues stanotte su HNSW, ma la "
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il punto C della bussola (requirements.txt non pinnato, 0 ==) è lo stesso vettore del bug torchaudio 2.11→2.6.0 appena fixato in sessione #68. Quel fix è nel venv isolato ma lo stack principale rimane flottante: la prossima pip install o ag"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 299,
+      "rag_chunks": 21413,
+      "n_commits_7d": 22
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**A. Rete di test assente** — 1 solo file di test su 157 `.py`. Per un sistema che si auto-modifica è il rischio n°1. Proposta: smoke-test sui 4-5 organi vitali (`state_updater` atomico, `canon_guard`, `rag_engine` semantico==bm25, `retention` dry-run).",
+      "**B. 101 `except` larghi/nudi in 47 file** — errori ingoiati in silenzio (la \"malattia del sistema silenzioso\" a livello codice). Proposta: audit dei soli bare `except:` (loggare invece di ingoiare).",
+      "**C. `requirements.txt` non pinnato** (0 `==`) — stessa classe di bug che ha rotto il finetune. Proposta: pinnare lo stack critico alle versioni che oggi funzionano.",
+      "**Vite/dashboard**: non si apriva perché **non era in esecuzione** (5173 spenta; al boot 13:01 partiti solo i servizi Python). Riavviato in sessione. Da capire perché `START_LOGIN` non l'ha rialzato al boot.",
+      "**Gli agenti notturni hanno prodotto durante la vacanza**: nuovi EP_N2_58→61 (S_AVVENTURA) + bozze EP_N2_09/EP_SG_03_02/03/EP_SG_04_01 + proposte self_improve 21-25/07. Da revisionare/promuovere con calma.",
+      "**DA CARICARE AL RIENTRO (30/07, promemoria Google Calendar attivo)** — 3 post bloccati ora solo dal tetto 29gg di Meta:",
+      "**Rifiniture social** (con calma): bio Nina reale (@microindustry.ms + categoria Creator), bio microindustry (riga Nina), PRE_SG_04 già-schedulato→link a mano se lo vuoi; PDF caroselli-ponte stale (solo canale LinkedIn).",
+      "**BGE-M3 embedder** — PRONTO al tuo click: script one-click **`SERVICES/rebuild_rag_bge_m3.ps1`** (verificato: parse OK, edita solo EMBED_MODEL, reranker intatto) + **snapshot di sicurezza** già scattato (`chroma_db_20260720_192437`). È l'unico modo sicuro: rebuild GPU esclusivo dietro UAC (non sono admin, 3 watchdog respawnano l'api).",
+      "**BGE-M3 (1 click TUO)**: doppio-click `SERVICES/rebuild_rag_bge_m3.ps1` (UAC→sì, ~15-20 min). Poi Claude **ricalibra la soglia vault_intersect per bge-m3** + rigenera Collegati/linkgraph. Rollback: `-Revert` o `--restore-snapshot`.",
+      "**LightRAG** — pilota (dopo bge-m3): estrazione entità sul vault via Ollama. Gate di fattibilità/tempo prima di committare.",
+      "**COLLO N°1 — SOCIAL #67** (il vero prossimo passo, resta aperto da #66): compilare profili IG (microindustry + creare @ilmondodinina), programmare gli 8 post Meta + 10 Nina già in coda, caricare V32 su LinkedIn.",
+      "**UPS** (~50-80€): cura alla radice della corruzione HNSW da power-loss (3° episodio).",
+      "**Bug da diagnosticare**: EP_N2_07 «Il Sussurratore di Parole» = QC **errore** (corsia Nina notturna).",
+      "**Da fare Matteo**: compilare profilo IG microindustry + creare account IG Nina (bio+foto+nome), collegare Pagina FB per Business Suite, programmare i post; lun 20/07 caricare V32 su LinkedIn (manuale).",
+      "Meta app (~1h) per automatizzare IG/FB come Postiz per LinkedIn — quando si vuole."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "AI Explained",
+        "titolo": "GPT-6 Goes Rogue? The HuggingFace Incident, Sans Hype",
+        "url": "https://www.youtube.com/watch?v=wzY2fV4Mp3U"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Sakana AI Releases Fugu-Cyber: An Orchestration Model Reporting 86.9% on CyberGym and 72.1% on CTI-REALM",
+        "url": "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "FAIRChem v2 UMA for Multidomain Atomistic Simulation across Molecules, Catalysts, Materials, Vibrations, and Molecular Dynamics",
+        "url": "https://www.marktechpost.com/2026/07/26/fairchem-v2-uma-for-multidomain-atomistic-simulation-across-molecules-catalysts-materials-vibrations-and-molecular-dynamics/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Induction Labs Photon-1 Simulates Desktops, Plays Checkers, and Models Billiard Physics From One Pretraining Run",
+        "url": "https://www.marktechpost.com/2026/07/26/induction-labs-photon-1-simulates-desktops-plays-checkers-and-models-billiard-physics-from-one-pretraining-run/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "KwaiKAT Team Releases KAT-Coder-V2.5: An Agentic Coding Model Trained on 100,000+ Verifiable Repository Environments",
+        "url": "https://www.marktechpost.com/2026/07/26/kwaikat-team-releases-kat-coder-v2-5-an-agentic-coding-model-trained-on-100000-verifiable-repository-environments/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Black Forest Labs Releases FLUX 3: A Multimodal Flow Model for Image, Video, Audio and Robot Action Prediction",
+        "url": "https://www.marktechpost.com/2026/07/26/black-forest-labs-releases-flux-3-a-multimodal-flow-model-for-image-video-audio-and-robot-action-prediction/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Perplexity Releases pplx, a Single-Binary CLI That Puts Its Search API in the Terminal for Coding Agents",
+        "url": "https://www.marktechpost.com/2026/07/27/perplexity-releases-pplx/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors, and Automated Deliverables",
+        "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Kimi AI and kvcache-ai Open Sources ‘AgentENV’: A Distributed System that Powers Agentic Reinforcement Learning (RL) Training for Kimi K3",
+        "url": "https://www.marktechpost.com/2026/07/27/kimi-ai-and-kvcache-ai-open-sources-agentenv/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Running a 28.9M parameter LLM on an $8 microcontroller",
+        "url": "https://github.com/slvDev/esp32-ai"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "LLM Usage in Debian: Three Proposals",
+        "url": "https://www.debian.org/vote/2026/vote_002"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "The new rules of context engineering for Claude 5 generation models",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How AI is expanding what people do at work",
+        "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Anthropic scopre il J-space che è una parte della rete neurale di Claude che si dedica al",
+        "url": "https://www.youtube.com/shorts/YuCYdCMUP2Y"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Ma cosa ha combinato Anthropic?! (Claude Opus 5)",
+        "url": "https://www.youtube.com/watch?v=5gjvOUAL0Yg"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Eseguire GLM 5.2 sul tuo personal computer di casa !!",
+        "url": "https://www.youtube.com/shorts/y6_AUFKvGII"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Creare team di agenti AI che lavorano come se fossero un’azienda, il tuo ruolo é quello di",
+        "url": "https://www.youtube.com/shorts/KBB69FPcPNI"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Literally everyone hated this feature",
+        "url": "https://www.youtube.com/shorts/n0JhhZyGP_w"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+        "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Ruff v0.16.0",
+        "url": "https://simonwillison.net/2026/Jul/25/ruff/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+        "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "An opinionated guide to which AI to use to do stuff",
+        "url": "https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "moonshotai/Kimi-K3",
+        "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "PxyUp/fitter ★131 — New way for collect information from the API's/Websites",
+        "url": "https://github.com/PxyUp/fitter"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "xuiltul/animaworks ★248 — Organization-as-Code for autonomous AI agents. Brain-inspired memory that grows,",
+        "url": "https://github.com/xuiltul/animaworks"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "tompassarelli/beagle ★24 — a typed programming language that emits to multiple backends",
+        "url": "https://github.com/tompassarelli/beagle"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "msaleme/red-team-blue-team-agent-fabric ★22 — 540 security tests for AI agent systems — MCP, A2A, x402/L402, decision governan",
+        "url": "https://github.com/msaleme/red-team-blue-team-agent-fabric"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "asimons81/hermes-a2a-bridge ★30 — Local-first Hermes Agent bridge for the Agent-to-Agent Protocol HTTP+JSON subset",
+        "url": "https://github.com/asimons81/hermes-a2a-bridge"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "nelsonwerd/idea-to-ship-skills ★62 — Composable Agent Skills (Claude + OpenAI Codex) for taking an idea from fuzzy → ",
+        "url": "https://github.com/nelsonwerd/idea-to-ship-skills"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -249,6 +249,12 @@ export default defineConfig({
       '/api/pdfs': 'http://localhost:5001',
       '/api/programs': 'http://localhost:5001',
       '/api/restart': 'http://localhost:5001',
+      // mancavano: senza proxy il dev server rispondeva 200 + index.html e il
+      // frontend moriva su "Unexpected token '<'" (vista RETE sorgente SISTEMA).
+      '/api/graph': 'http://localhost:5001',
+      '/api/critiche': 'http://localhost:5001',
+      '/api/bussola': 'http://localhost:5001',
+      '/api/episodes': 'http://localhost:5001',
     },
   },
   build: {

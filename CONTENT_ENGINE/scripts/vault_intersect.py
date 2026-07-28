@@ -126,6 +126,15 @@ def _load_embedder():
     """Carica il modello del RAG su CPU. None su QUALSIASI errore (torch assente, modello
     non scaricato, ...) -> il chiamante ripiega su TF-IDF. CPU forzata: l'API possiede la GPU."""
     os.environ.setdefault("RAG_DEVICE", "cpu")
+    # Zittisce alla fonte il warning HF "unauthenticated requests to the HF Hub",
+    # stesso trattamento di rag_engine.py:48-51. Da QUI (catena story_agent) finiva in
+    # story_agent_run.log e ogni notte veniva classificato "rate-limit sorgente",
+    # rigenerando una critica. Modelli in cache locale -> warning innocuo.
+    import logging as _logging
+    os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+    os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
+    for _hf in ("huggingface_hub", "huggingface_hub.utils._http"):
+        _logging.getLogger(_hf).setLevel(_logging.ERROR)
     try:
         from sentence_transformers import SentenceTransformer
         return SentenceTransformer(EMBED_MODEL, device="cpu")

@@ -287,7 +287,11 @@ Lunghezza: 1100-1600 parole nei 3 atti. Prosa densa, dialoghi voiceabili, ZERO r
 
     def _call():
         msg = client.messages.create(
-            model=MODEL_WRITER, max_tokens=4000, system=system,
+            # 8000: con 4000 l'output veniva troncato a meta' parola (1100-1600 parole nei
+            # 3 atti + header + SCENE + DIDATTICA + FATTI non ci stanno) e si perdeva la
+            # riga "Open loop -> Casella N+1" in meta' della serie (EP_N2_61 finiva con
+            # "**Agg"). Verificato 28/07 su EP_N2_56/58/61/64.
+            model=MODEL_WRITER, max_tokens=8000, system=system,
             messages=[{"role": "user", "content": user}],
         )
         return msg.content[0].text

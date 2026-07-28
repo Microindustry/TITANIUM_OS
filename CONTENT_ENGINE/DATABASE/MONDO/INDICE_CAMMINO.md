@@ -9,7 +9,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 - [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
   - [Come leggere la tabella](#come-leggere-la-tabella)
-  - [Il cammino (caselle 1  61)](#il-cammino-caselle-1-61)
+  - [Il cammino (caselle 1  64)](#il-cammino-caselle-1-64)
   - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
   - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
 
@@ -18,7 +18,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-25 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-07-28 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*
@@ -34,7 +34,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 61)
+## Il cammino (caselle 1 → 64)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -99,6 +99,9 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 59 | `EP_N2_59` | Il Polso che Non Respira | ⟡6 (giro 3) | Il guasto più pericoloso è quello che non grida: è il sistema che dice |
 | 60 | `EP_N2_60` | Il Direttore Invisibile | ⟡7 (giro 3) | La coordinazione è il vero lavoro: senza qualcuno che orchestra il tim |
 | 61 | `EP_N2_61` | Il Dito nel Fango | ⟡1 (giro 4) | Una traccia è un gesto che continua a insegnare nel tempo, dopo che la |
+| 62 | `EP_N2_62` | Il Nodo che Respira | ⟡0 (giro 4) | Una giuntura trasferisce forza mantenendo flessibilità: due parti si c |
+| 63 | `EP_N2_63` | La mano che insegna alla notte | ⟡2 (giro 4) | Quando insegni a una macchina un gesto, lei lo ripete e lo migliora an |
+| 64 | `EP_N2_64` | Il Sussurratore che Indovina | ⟡3 (giro 4) | Una mente che indovina le parole può sembrare che sappia tutto, ma ind |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

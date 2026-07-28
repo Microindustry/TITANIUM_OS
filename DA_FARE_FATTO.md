@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 69  28/07/2026  RECUPERO ARRETRATO: 3 agenti in parallelo, Claude verificatore](#sessione-69-28072026-recupero-arretrato-3-agenti-in-parallelo-claude-verificatore)
   - [Sessione 68  21/07/2026  ATTACCO ECOSISTEMA (tutto il progetto): 5 fix  3 filoni proposti](#sessione-68-21072026-attacco-ecosistema-tutto-il-progetto-5-fix-3-filoni-proposti)
   - [Sessione 67b  20-21/07/2026  LANCIO SOCIAL: 18/21 post programmati su 2 profili](#sessione-67b-20-21072026-lancio-social-1821-post-programmati-su-2-profili)
   - [Sessione 67  20/07/2026  ECOSISTEMA: loop ObsidianRAG semantico  Docling/Ollama accesi](#sessione-67-20072026-ecosistema-loop-obsidianrag-semantico-doclingollama-accesi)
@@ -94,6 +95,53 @@
 - Il PIANO completo (visione, punti P0-P8) vive **solo** in `PROSSIMA_SESSIONE.md`
   (consolidato il 09/06; vecchia copia Desktop archiviata in `DOCS/_archivio_piano_desktop_20260609.txt`).
   Qui sta la scaletta operativa, non tutto il piano.
+
+---
+
+## Sessione #69 · 28/07/2026 — RECUPERO ARRETRATO: 3 agenti in parallelo, Claude verificatore
+
+**Matteo non revisionava dal 21/07 (7 notti). 3 agenti read-only (episodi/bozze · dashboard · critiche+proposte) hanno verificato tutto contro il codice reale; i fix tecnici li ho applicati io, le decisioni editoriali restano a Matteo.**
+
+**✅ FIX APPLICATI E VERIFICATI**
+- [✓] **Corsia caroselli NINA sbloccata dopo 7 notti ferme** (P0). `DATA/caroselli_nina_queue.json`: EP_N2_04/05/06 erano ancora `bozza_verde` benché **fisicamente promossi** in `CAROSELLI/NINA/` (commit a09e6e83) → il conteggio `startswith("bozza_")` dava 6 ≥ `MAX_BACKLOG=6` e ogni notte loggava "tetto backlog raggiunto — stop" con solo 3 bozze reali. Portati a `promosso` → backlog reale **6→3**, la corsia riparte da EP_N2_10.
+- [✓] **4 episodi persi recuperati in dashboard** (P0). `audit_episodes.py:102` considerava "in dashboard" un file se il **titolo** era già nel json; `story_agent` riusa il numero nell'H1 ("Episodio 69" tre volte) → EP_20260725/26/27 (+EP_20260708) risultavano presenti senza esserci, e il recupero orfani di `build_episodes_json` si fidava di quell'audit. Rimosso il match-per-titolo (ordine corretto: id → id_from_name → fingerprint) → **episodi 252→256, orfani 0**.
+- [✓] **Vista RETE riparata (sorgente SISTEMA)**. `vite.config.ts`: mancavano dal proxy `/api/graph`, `/api/critiche`, `/api/bussola`, `/api/episodes` → il dev server rispondeva 200 + `index.html` e il frontend moriva su *"Unexpected token '<'"*. Verificato: i 4 endpoint ora tornano `application/json` (graphify 1,9 MB reali).
+- [✓] **Troncatura episodi Nina risolta alla radice** (P1). `nina_agent.py:290` `max_tokens` 4000→8000: il prompt chiede 1100-1600 parole + header + SCENE + DIDATTICA + FATTI, l'output veniva tagliato a metà parola (EP_N2_61 finiva con `**Agg`) e si perdeva la riga `Open loop → Casella N+1` in metà serie (`open_loop_missing: 32/64`).
+- [✓] **Rumore notturno: 10 critiche/notte in meno.** (a) `night_audit.py` SYSTEM_PROMPT: aggiunta la legenda che `organi_vivi` è **età in giorni** (0.0 = prodotto stanotte = sanissimo) con divieto esplicito di emettere "organo a 0.0 = morto" — l'LLM ci cascava **ogni notte** generando 5 critiche fantasma. (b) `vault_intersect.py:_load_embedder`: zittito alla fonte il warning HF (stesso trattamento di `rag_engine.py:48-51`) che veniva classificato "rate-limit sorgente" e generava 1 log_issue + 5 critiche.
+- [✓] Verifiche: 5 file Python compilano · `storie_lint` **0 violazioni** · `tsc -b` **0 errori** · API `/api/health` 200 · 0 orfani.
+
+**❌ MIO FIX RITIRATO (onestà di metodo)**
+- [✗] Avevo scritto una paginazione di `col.get()` per il 503 di `/api/rag/vectors` credendo fosse un problema di batch size. **NON funziona**: misurato che `limit=10` restituisce **0 embedding** e `limit≥1000` solleva `IndexError` — il **segmento HNSW è incoerente**, la lettura vettoriale è rotta a qualsiasi dimensione (i metadati da sqlite si leggono bene). Ripristinato il codice originale + commento diagnostico. **La cura vera è `SERVICES/rag_recover.ps1` L1 (`--drop-hnsw`): Chroma ricostruisce il segmento da sqlite, nessun re-embed. Richiede il click di Matteo (UAC).**
+- [✗] Correzione di un mio numero del #68: **NON ci sono 101 bare-except in 47 file**. Oggi nel codice proprio c'è **1 solo** `except:` (`update_github_profile.py:48`); il resto erano `except Exception` (stile) e uno in `node_modules`. Il filone B si sgonfia.
+
+**🔴 PROBLEMA DI VERITÀ (il più grave trovato) — MIMS inventato negli episodi**
+- [ ] In **5 episodi su 8 recenti** MIMS è descritto come modulo software/AI: EP_N2_64 «*MIMS (Machine-Induced Meaning Synthesis)*» (acronimo inventato), EP_N2_63 «*consolida i pattern di controllo motorio*», EP_N2_60/59/57 simili. Il canone dice: MIMS = **meccanica** (tile 190×190, croce D29.9 H7/g6, PA-GF30). Causa: `nina_agent.py:188` chiede all'Architetto un `"aggancio_reale"` ai pilastri ma `_CANONE.md` **non è mai iniettato nel prompt** e `retrieve_context()` interroga il RAG solo sul concetto → lo slot va riempito e si inventa. Contribuisce un paper fuori tema in `MENTE/KNOWLEDGE/RESEARCH/mims/`. **Questi file finiscono nel RAG** (`save_canon` li specchia in MENTE) → il falso si autoalimenta.
+- [ ] Stessa classe: **fonti fabbricate nei FATTI** di EP_N2_64 (`Fonte: GENESIS/documentation_hallucination_2026` = path inesistente; «1 sarta su 1.000» = numero inventato).
+
+**🟠 ALTRI REPERTI (fix pronti, non ancora applicati)**
+- [ ] `nina_rag_loop.py:180` hardcoda `"casella": "?"` → `casella ?` in 32 episodi su 64, in contraddizione con l'header dello stesso file.
+- [ ] **Titoli tripli**: "La mano che insegna alla notte" = EP_N2_**19/56/63**; "Il Direttore Invisibile" = **45/53/60**; più 51/57 e 13/52. **NON sono duplicati di contenuto** (similarità <0,13): sono giri di spirale legittimi con titolo riusato — `stage1_architect` non riceve i titoli già usati. Guardia da aggiungere.
+- [ ] EP_N2_62/63/64 **non committati**: il loop Nina non committa mai (i commit `auto: story_agent` toccano solo `S2_SISTEMA/`). Tra due "salva" gli episodi Nina sono a rischio.
+- [ ] `night_caroselli_nina.py:189-191`: draft fallito non marca l'item → ritenta lo stesso nel batch e la notte esce con EXIT 1 anche se poi riesce.
+- [ ] Sentinella canone **neutralizzata**: `night_audit.py:635` misura il `mtime` di `_CANONE.md`, che i blocchi auto (`<!-- COLLEGATI -->`) rinfrescano ogni notte → `stale: false` per sempre. Il contenuto curato è fermo al 16/07. Va misurata sulla porzione fuori dai marker.
+- [ ] Dashboard minori: `CalendarioView.tsx:97` chiavi React duplicate; **lint 89 problemi**; `/api/content-files` divergente (vite 289 vs Flask 0, `CONTENT_ENGINE_DIR` non impostata); badge "289 su disco vs 188 episodi" conta anche `_ARCHIVIO` → sembra un buco di 101 episodi che non esiste; **~2,5k righe di dead code** + 7 dipendenze non usate.
+- [ ] Euristiche rumorose da tarare: `_cid()` = sha1 della **prosa LLM** → non collide mai → 6 critiche nuove/notte per 15 notti (le "30 aperte" sono **8 problemi**, 4 veri); `rate limit` matcha *"higher rate limits"*; `0 risultati` scatta su riga per-sorgente; `QC_EP_OPEN_LOOP` cerca l'etichetta non il gancio (32→23 reali); `canon_guard` prende «chunk **recuperati**» (gergo RAG) come violazione → i 5 `canon_violations` sono **tutti falsi positivi**.
+- [ ] **Istruzione sbagliata da correggere**: `AZIONI_MATTEO.md:32` dice di mettere la chiave in `.env`, ma **nessuno legge `TITANIUM_OS/.env`** (zero `load_dotenv()` nel repo). Le chiavi vivono come **variabili utente Windows**; il loader vero è `_ti_paths.bat` → `_VAULT/KEYS/titanium_os.env` (tutto commentato).
+- [ ] Deriva canone `_CANONE.md:32` (dichiara 01…56, su disco 64): **impatto sul RAG NULLO** — `_canon_stems()` legge solo i `[[wikilink]]`, il range è testo piano. È governance + un allarme fisso in cartella clinica. Fix = **edit a mano** riga 32 e footer (nessun generatore esiste, `setup_obsidian` non lo tocca).
+
+**BOZZE CAROSELLI — 9 verificate: 6 PRONTE · 2 con fix mirato · 1 difetto visibile**
+- [ ] **6 pronte al volo**: EP_N2_07 (BUS-21cc0f3d è **obsoleta**: l'errore QC era transitorio del 17-19/07, la bozza su disco è verde), EP_N2_08, EP_SG_02_05, EP_SG_02_06, EP_SG_03_01, EP_SG_03_02, EP_SG_04_01.
+- [ ] **EP_N2_09** «La Bibliotecaria della Mente»: slide 2 ha `<div class="scene"></div>` **vuota** — la scena `biblioteca` non è tra le 16 di `sg_builder.SCENES` ed è stata rimossa. 1 slide su 10 è nuda. Fix: mappare su `quaderno`/`mappa` e re-render.
+- [ ] **EP_SG_03_03** «Il Verdetto»: (a) `carosello.html:84` «l'analisi RSS ha restituito ±0,019 mm» → numero di progetto in contenuto pubblico (regola 15/07); (b) open-loop **all'indietro** (tira a "La prima foto" = EP_SG_03_01 già prodotto).
+
+**DECISIONI CHE RESTANO A MATTEO (voce/contenuto/denaro)**
+- [ ] Titoli tripli: rititolare i rerun o archiviarli come fatto il 04/07 con 51/52?
+- [ ] EP_SG_03_03: il `±0,019 mm` esce o si riscrive?
+- [ ] Il campo "Aggancio reale" va tenuto? Oggi produce MIMS inventato in 5/8 episodi — meglio vuoto che inventato.
+- [ ] Quale delle 6 bozze pulite esce prima (la corsia SISTEMA è ferma per scelta, non per bug).
+- [ ] `rag_recover --drop-hnsw` per riparare la vista RETE "Conoscenza" (serve il tuo UAC).
+- [ ] Pin `requirements.txt` (0 `==` su 36 righe) · chiave Semantic Scholar (81% delle chiamate a vuoto) · UPS/mandrino/martinetto.
+- [ ] EP_N2_64:78 anglicismo «*exquisitely* informata» in un testo per bambini.
 
 ---
 
@@ -2474,6 +2522,4 @@ Le voci residue sono reali e per lo più SOLO-MATTEO → `AZIONI_MATTEO.md` (har
 
 ### [💡] IDEE / NOTE
 - [💡] La bussola può diventare un input del session_orienter / daily_brief, così
-      anche le automazioni "sanno dove siamo", non solo io.
-- [💡] "Concept brief" come tabella in dashboard: la coda dei concetti-tecnici pronti
-      a diventare avventure di Nina (visibilità del processo).
+      anche le automazioni "sanno do

@@ -2,10 +2,10 @@
 
 - [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
 - [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
-  - [0  LA MATERIA  (7 episodi)](#0-la-materia-7-episodi)
+  - [0  LA MATERIA  (8 episodi)](#0-la-materia-8-episodi)
   - [1  LA TRACCIA  (6 episodi)](#1-la-traccia-6-episodi)
-  - [2  LOFFICINA CHE GIRA SOLA  (14 episodi)](#2-lofficina-che-gira-sola-14-episodi)
-  - [3  LA MENTE CHE PARLA  (4 episodi)](#3-la-mente-che-parla-4-episodi)
+  - [2  LOFFICINA CHE GIRA SOLA  (15 episodi)](#2-lofficina-che-gira-sola-15-episodi)
+  - [3  LA MENTE CHE PARLA  (5 episodi)](#3-la-mente-che-parla-5-episodi)
   - [4  LA BIBLIOTECA DELLE FONTI  (7 episodi)](#4-la-biblioteca-delle-fonti-7-episodi)
   - [5  LA GRANDE MAPPA  (31 episodi)](#5-la-grande-mappa-31-episodi)
   - [6  LESERCITO SILENZIOSO  (7 episodi)](#6-lesercito-silenzioso-7-episodi)
@@ -20,7 +20,7 @@
 
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-25 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-07-28 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -31,7 +31,7 @@
 
 # Verticale: Tech · la Storia dell'IA
 
-## ⟡0 · LA MATERIA  (7 episodi)
+## ⟡0 · LA MATERIA  (8 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -42,6 +42,7 @@
 | 2 | `EP_N2_18` La Giuntura — Dove Due Diventa Uno | Una giuntura non unisce cancellando: mantiene identità separate ma le  | adattato | — |
 | 3 | `EP_N2_03` Mille Volte Uguale | la ripetibilita': mille volte uguale, battere la deriva | adattato | — |
 | 3 | `EP_N2_55` La Giuntura che Respira | Le giunture sono i punti dove il disordine ama attaccare, ma il movime | adattato | — |
+| 4 | `EP_N2_62` Il Nodo che Respira | Una giuntura trasferisce forza mantenendo flessibilità: due parti si c | adattato | — |
 
 ## ⟡1 · LA TRACCIA  (6 episodi)
 
@@ -54,7 +55,7 @@
 | 3 | `EP_N2_54` Il Dito che Insegna | Una traccia è un gesto che rimane e continua a insegnare anche quando  | adattato | — |
 | 4 | `EP_N2_61` Il Dito nel Fango | Una traccia è un gesto che continua a insegnare nel tempo, dopo che la | adattato | — |
 
-## ⟡2 · L'OFFICINA CHE GIRA SOLA  (14 episodi)
+## ⟡2 · L'OFFICINA CHE GIRA SOLA  (15 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -72,8 +73,9 @@
 | 3 | `EP_SEED_WATCHER_L1_GATE` Il gate di rilevanza — tenere il segnale, buttare il rumore | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_KEYLESS` Guardare senza chiavi — gh, RSS, YouTube | stare informati senza farlo a mano | fonte | ⟡1 |
 | 3 | `EP_SEED_WATCHER_L1_TIER` Chi guardare più spesso — il tier a rotazione 48h | stare informati senza farlo a mano | fonte | ⟡1 |
+| 4 | `EP_N2_63` La mano che insegna alla notte | Quando insegni a una macchina un gesto, lei lo ripete e lo migliora an | adattato | — |
 
-## ⟡3 · LA MENTE CHE PARLA  (4 episodi)
+## ⟡3 · LA MENTE CHE PARLA  (5 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -81,6 +83,7 @@
 | 1 | `EP_N2_27` La Memoria che Respira | Un cervello non è solo un magazzino di fatti: è un organismo che conne | adattato | ⟡1 |
 | 1 | `EP_S2_01_IL_CERVELLO_IBRIDO` Il Cervello Ibrido | il cervello ibrido: cloud + locale | fonte | ⟡1 |
 | 2 | `EP_N2_08` La Lampada che Sussurra | l'allucinazione della mente: da dove lo sai? | adattato | — |
+| 4 | `EP_N2_64` Il Sussurratore che Indovina | Una mente che indovina le parole può sembrare che sappia tutto, ma ind | adattato | — |
 
 ## ⟡4 · LA BIBLIOTECA DELLE FONTI  (7 episodi)
 
