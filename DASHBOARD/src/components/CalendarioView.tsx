@@ -94,7 +94,7 @@ export function CalendarioView() {
         <div className="space-y-4">
           {giorni?.map((g, i) => (
             <motion.div
-              key={g.data}
+              key={`${g.data}-${i}`}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: Math.min(i * 0.05, 0.45), ease: [0.22, 1, 0.36, 1] }}

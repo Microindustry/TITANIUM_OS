@@ -152,7 +152,42 @@ def next_episode_id() -> str:
     return f"EP_N2_{mx + 1:02d}"
 
 
+def titoli_usati() -> list[str]:
+    """Titoli EP_N2 gia' esistenti, derivati dal nome file (nessuna lettura di contenuto).
+    Serve all'Architetto per NON reinventare lo stesso titolo: dal giro 4 il loop ricicla
+    gli 11 semi originali e dallo stesso concetto rigenerava titoli identici — "La mano che
+    insegna alla notte" (EP_N2_19/56/63), "Il Direttore Invisibile" (45/53/60), 51/57, 13/52.
+    I CONTENUTI sono diversi (similarita' <0,13): il difetto e' solo il titolo riusato. (#69)"""
+    out: list[str] = []
+    for d in (AV_CE, AV_PROPOSTI):
+        if not d.exists():
+            continue
+        for f in d.glob("EP_N2_*.md"):
+            m = re.match(r"EP_N2_\d+_(.+)", f.stem)
+            if m:
+                out.append(m.group(1).replace("_", " ").strip())
+    return sorted(set(out))
+
+
 # ── STADIO 1 — ARCHITETTO ─────────────────────────────────────────────────────
+
+# I pilastri REALI a canone (_CANONE.md + CLAUDE.md DATI MASTER), iniettati nel prompt
+# dell'Architetto. Senza queste definizioni lo slot "aggancio_reale" veniva riempito a
+# forza e l'LLM INVENTAVA: MIMS descritto come modulo software ("Machine-Induced Meaning
+# Synthesis", "consolida i pattern di controllo motorio"). L'episodio viene poi
+# specchiato in MENTE da save_canon -> reindicizzato dal watcher -> il falso si
+# autoalimentava nel RAG. Trovato in #69 (28/07): 5 episodi su 8 recenti contaminati,
+# ed e' grave perche' MIMS e' il PROSSIMO progetto da sviluppare.
+PILASTRI_CANONE = """PILASTRI REALI DEL SISTEMA — usa SOLO questi, non inventarne funzioni:
+- V32 = macchina CNC in epoxy-granite che Matteo sta costruendo. MECCANICA (telaio, colonne Z,
+  guide, mandrino). Stato reale: al telaio. NON e' software.
+- MIMS = sistema di moduli MECCANICI: tile 190x190 mm, croce D29.9 H7/g6, PA-GF30, 3 giunti,
+  5 tier. E' lo SCHELETRO fisico (i giunti). NON e' un modulo software e NON e' un acronimo
+  di AI: "Machine-Induced Meaning Synthesis" NON esiste, e' un'invenzione da non ripetere.
+- VULCAN = la pressa a 4 colonne + le "mattonelle": elementi PIATTI (plastiche/miscele) che
+  chiudono, rivestono e insonorizzano al posto della lamiera. E' la PELLE. MECCANICA.
+- GENESIS = lo stack AI/software (RAG, agenti notturni, dashboard). L'UNICO pilastro software:
+  se il concetto e' informatico, l'aggancio giusto e' GENESIS, non V32/MIMS/VULCAN."""
 
 ARCH_SYSTEM = """Sei l'ARCHITETTO degli episodi di "Nina" (media educativo di TITANIUM_OS).
 Progetti lo SCHELETRO di UN episodio che insegna UN concetto reale a una bambina curiosa.
@@ -173,6 +208,12 @@ def stage1_architect(client, concept: str, rag_context: str, meta: dict) -> dict
 POSTO NELLA MAPPA: regione {meta.get('regione','?')} {regione_nome} · giro {meta.get('giro','?')} · casella {meta.get('casella','?')}
 
 {fonti}
+{PILASTRI_CANONE}
+
+TITOLI GIA' USATI nella serie — NON riproporli, nemmeno con piccole varianti; se il concetto
+e' una rigenerazione di un giro precedente devi trovare un ANGOLO e un titolo NUOVI:
+{" · ".join(titoli_usati()) or "(nessuno)"}
+
 Progetta lo scheletro. Rispondi SOLO con questo JSON (valori in italiano, concreti):
 {{
   "title": "titolo breve ed evocativo (no nome tecnico)",
@@ -185,7 +226,7 @@ Progetta lo scheletro. Rispondi SOLO con questo JSON (valori in italiano, concre
   "strato_fondo": "il fatto tecnico VERO per il 'grande/papa' (dai FATTI RAG, niente invenzioni)",
   "open_loop": "la domanda finale che tira alla casella successiva",
   "provalo_tu": "un piccolo esperimento reale da fare a casa",
-  "aggancio_reale": "il nodo reale del sistema GENESIS/V32/MIMS che questo concetto rispecchia",
+  "aggancio_reale": "SOLO se esiste un aggancio VERO con un pilastro dell'elenco qui sopra: il nodo reale che questo concetto rispecchia. Se non c'e', metti stringa VUOTA \\"\\" — meglio VUOTO che inventato. VIETATO attribuire funzioni software/AI/algoritmiche a V32, MIMS o VULCAN: sono meccanica.",
   "fatti_rag": ["3-5 FATTI atomici, grounded, che il RAG recupera secco (con numeri/decisioni se presenti)"]
 }}"""
     # Retry con backoff: haiku ogni tanto non restituisce JSON valido (o lo tronca), e

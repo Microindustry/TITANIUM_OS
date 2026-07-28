@@ -86,9 +86,15 @@ ORGANI_VIVI = [
 # NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
 LOG_FAIL_PATTERNS = [
     (r"Traceback|PermissionError|FileNotFoundError", "crash/eccezione"),
-    (r"\b429\b|rate limit|Too Many Requests",        "rate-limit sorgente"),
+    # NB (#69): "rate limit" nudo matcha anche l'informativo HF "Please set a HF_TOKEN to
+    # enable higher rate limits" -> classificato ogni notte come guasto. Serve la forma
+    # verbale o il codice, non il sostantivo generico.
+    (r"\b429\b|Too Many Requests|rate.?limit(?:ed|ing)\b", "rate-limit sorgente"),
     (r"Read timed out|\btimeout\b",                   "timeout di rete"),
-    (r"Nessun risultato|0 risultati|0 documenti",     "ricerca a vuoto"),
+    # NB (#69): "0 risultati" e' una riga INFO PER-SORGENTE ("openalex -> 0 risultati"):
+    # scattava anche in notti con 40+ risultati totali. Il vuoto vero e' l'esito della
+    # notte (nessuna sorgente ok), non una singola sorgente a zero.
+    (r"Nessun risultato|0 documenti|sources_ok[\"']?\s*[:=]\s*0", "ricerca a vuoto"),
     (r"ERR:|\bERROR\b|push fallito",                  "errore esplicito"),
 ]
 # Finestra di rilevanza: una riga di guasto più vecchia di così è storia, non guasto attivo
@@ -476,7 +482,10 @@ QC_EP_CORE = [
     ("provalo-tu", re.compile(r"provalo tu", re.I)),
     ("fatti-rag",  re.compile(r"##\s*FATTI", re.I)),
 ]
-QC_EP_OPEN_LOOP = re.compile(r"open loop", re.I)
+# Cerca il GANCIO, non solo l'etichetta: i generatori nuovi emettono "Open loop -> Casella N",
+# i legacy chiudono con una domanda in avanti senza etichettarla. Con la sola etichetta il
+# conteggio diceva 32/64 mancanti, di cui 9 avevano un open-loop narrativo (#69).
+QC_EP_OPEN_LOOP = re.compile(r"open[-_ ]?loop|prossima casella|prossimo episodio", re.I)
 QC_EP_MIN_CHARS = 3000
 
 PIP_AUDIT_JSON = AUDIT_DIR / "pip_audit.json"

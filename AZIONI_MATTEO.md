@@ -28,8 +28,15 @@ e la chiudo nella cartella clinica.*
 - [ ] **Mandrino 2.2kW ER20** *(AUD-74a2dc9f29)* — prerequisito fresatura stampi MIMS. Identificare fornitore + budget + data.
 - [ ] **Martinetto Vevor 3 stadi 20t** — montarlo al centro della pressa VULCAN → prima colata di validazione. È *il vero passo* che sblocca la prima mattonella (MIMS fermo al 30% "waiting_press", AUD-77abb05083).
 
-## 🔑 CHIAVI .env — ~5 min ciascuna
-- [ ] **SEMANTIC_SCHOLAR_API_KEY** *(AUD-0722e6a2fa / AUD-b35b0846ad)* — gratuita su semanticscholar.org/product/api. Azzera i 429 della ricerca notturna (1 req/s anonimo → 100 req/s). Il codice la legge già se presente (`research_agent._ss_headers`).
+## 🔑 CHIAVI — ~5 min ciascuna
+> ⚠ **CORREZIONE (#69, 28/07): NON metterle in `TITANIUM_OS/.env` — nessuno lo legge.**
+> Verificato: zero `load_dotenv()` nel repo; `.env` contiene solo 5 variabili di path. Il solo
+> loader è `AUTOMATIONS/core/_ti_paths.bat` → `_VAULT/KEYS/titanium_os.env` (oggi tutto
+> commentato, e `eol=#` salta le righe commentate). `ANTHROPIC_API_KEY` funziona perché è una
+> **variabile utente Windows**. Quindi: `setx NOME "valore"` (variabile utente) **oppure**
+> scommentare la riga in `_VAULT/KEYS/titanium_os.env`. Le critiche che dicono ".env" sbagliano.
+
+- [ ] **SEMANTIC_SCHOLAR_API_KEY** *(AUD-0722e6a2fa / AUD-b35b0846ad)* — gratuita su semanticscholar.org/product/api. Azzera i 429 della ricerca notturna (1 req/s anonimo → 100 req/s). Il codice la legge già se presente (`research_agent._ss_headers`). Misurato #69: S2 torna 0 risultati in **158/195 chiamate (81%)**. NB: il backoff esiste già dal #42 — manca solo la chiave.
 - [ ] **Ruotare le chiavi .env del red-team #38** *(AUD-6ed7c6c248 / AUD-a3277f3bed / AUD-e85421edda)* — esposte durante il red-team, ancora attive. Unica azione di sicurezza bloccata su persona fisica.
 - [ ] *(opzionale)* **HF_TOKEN** — download modelli più rapidi. NON bloccante: il warning è già silenziato e i modelli sono in cache.
 

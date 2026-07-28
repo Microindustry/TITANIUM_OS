@@ -176,8 +176,15 @@ def run(count: int = 1, dry_run: bool = False, do_rag: bool = False) -> int:
         if not seed:
             break
 
+        # casella = il numero dell'episodio che stiamo per creare. Era hardcoded "?" e
+        # finiva nel fallback FATTI di nina_agent (":450") come "casella ?" in 32 episodi
+        # su 64, in contraddizione con l'header dello stesso file ("Casella 64 del viaggio").
+        try:
+            _casella = int(re.match(r"EP_N2_(\d+)", agent.next_episode_id()).group(1))
+        except Exception:
+            _casella = "?"
         meta = {"regione": seed["regione"], "giro": giro_base,
-                "casella": "?", "richiama": [], "concept_slug": seed["concetto"]}
+                "casella": _casella, "richiama": [], "concept_slug": seed["concetto"]}
         logger.info("Seme: %s -> regione %s, giro %s | %s",
                     seed["seed_file"], seed["regione"], giro_base, seed["concetto"][:60])
         if dry_run:

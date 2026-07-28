@@ -2522,4 +2522,6 @@ Le voci residue sono reali e per lo più SOLO-MATTEO → `AZIONI_MATTEO.md` (har
 
 ### [💡] IDEE / NOTE
 - [💡] La bussola può diventare un input del session_orienter / daily_brief, così
-      anche le automazioni "sanno do
+      anche le automazioni "sanno dove siamo", non solo io.
+- [💡] "Concept brief" come tabella in dashboard: la coda dei concetti-tecnici pronti
+      a diventare avventure di Nina (visibilità del processo).

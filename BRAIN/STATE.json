@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-07-28T21:46:16.947821",
+  "last_update": "2026-07-28T21:51:59.749706",
   "active_milestone": "Sessione #69 (28/07): RECUPERO ARRETRATO con 3 agenti read-only in parallelo (episodi/bozze, dashboard, critiche+proposte), Claude verificatore. FIX APPLICATI E VERIFICATI: corsia caroselli NINA sbloccata dopo 7 notti ferme (coda con EP_N2_04/05/06 ancora 'bozza_verde' benche' promossi -> tetto backlog 6>=6 falso; backlog reale 6->3); 4 episodi persi recuperati (audit_episodes match-per-titolo rimosso, story_agent riusa 'Episodio 69' -> 252->256 episodi, 0 orfani); vista RETE sorgente SISTEMA riparata (4 endpoint mancavano dal proxy vite -> tornavano index.html); troncatura episodi Nina risolta (nina_agent max_tokens 4000->8000, si perdeva l'open-loop in meta' serie); -10 critiche/notte di rumore (legenda organi_vivi=eta'-in-giorni nel SYSTEM_PROMPT + warning HF zittito in vault_intersect). RITIRATI 2 miei errori: la paginazione chromadb NON risolve il 503 (segmento HNSW incoerente: limit=10 da' 0 embedding -> cura = rag_recover --drop-hnsw, click Matteo) e i '101 bare-except' del #68 erano falsi (1 solo nel codice proprio). TROVATO problema di VERITA': MIMS descritto come software/AI in 5 episodi su 8 recenti (acronimo inventato) mentre e' meccanica - e MIMS e' il PROSSIMO progetto dopo caroselli+ecosistema.",
   "next_step": "ATTACCARE E CORREGGERE (ordine Matteo #69): 1) fermare la contaminazione MIMS alla radice - iniettare _CANONE.md nel prompt dell'Architetto (nina_agent.py:188) con regola 'se non c'e' aggancio reale lascia vuoto' + regola canon_guard che segnala MIMS/VULCAN descritti come software; 2) correggere i 5 episodi gia' contaminati (EP_N2_57/59/60/63/64) e le fonti fabbricate nei FATTI; 3) fix meccanici residui (casella '?' in nina_rag_loop.py:180, guardia titoli unici, commit del loop Nina, sentinella canone su hash non mtime, euristiche rumorose _cid/rate-limit/open-loop/canon_guard); 4) implementare le NOVITA' IA ingegnerizzandole nel progetto; 5) bozze: 6 pronte + EP_N2_09 (slide vuota) + EP_SG_03_03 (numero vietato + open-loop all'indietro). POI: finire i caroselli, settare l'ecosistema, e partire con MIMS (prossimo progetto).",
   "session_count": 154,
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-07-28T16:33:23.722894"
+      "last_activity": "2026-07-28T21:49:07.843370"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -183,5 +183,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a DA_FARE_FATTO.md"
+  "last_action": "Modifica a rag_manifest.json"
 }

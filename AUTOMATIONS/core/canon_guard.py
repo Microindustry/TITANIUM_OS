@@ -86,6 +86,26 @@ _PARENTELA = (r"(?:mia|nostra|sua)\s+figli[ao]|figli[ao]\s+(?:mia|nostra|sua)|"
 _NINA_RE = re.compile(rf"^.*Nina.{{0,60}}(?:{_PARENTELA}).*$|^.*(?:{_PARENTELA}).{{0,60}}Nina.*$",
                       re.IGNORECASE | re.MULTILINE)
 
+# Falsi positivi noti (#69, 28/07): il gergo RAG usa "recuperati" nel senso di RETRIEVAL
+# ("~32k chunk vengono recuperati, reranked") e alcune note CITANO la formula vietata
+# mentre la correggono. Una riga con questi marcatori non e' una violazione di canone:
+# senza questa esclusione i 5 canon_violations segnalati erano TUTTI falsi positivi.
+_RAG_JARGON = re.compile(r"chunk|retriev|\bRAG\b|BM25|rerank|embedding|indicizzat", re.IGNORECASE)
+
+# Pilastri MECCANICI descritti come software/AI. Falla trovata in #69: 5 episodi Nina su 8
+# recenti inventavano un MIMS informatico (es. "il modulo MIMS (Machine-Induced Meaning
+# Synthesis) usa generazione token-by-token", "consolida i pattern di controllo motorio").
+# save_canon specchia l'episodio in MENTE -> il watcher lo reindicizza -> il falso entra nel
+# RAG e si autoalimenta. Grave perche' MIMS e' il prossimo progetto da sviluppare.
+# GENESIS NON e' incluso: e' l'unico pilastro davvero software.
+_MECC = r"MIMS|VULCAN|V32"
+_SW = (r"modulo software|algoritm|inferenz|neural|rete neurale|\bLLM\b|machine[- ]induced|"
+       r"token[- ]by[- ]token|generazione token|consolida i pattern|hash di integrit|"
+       r"heartbeat|DAG Scheduler|clock tick|pattern di controllo motorio")
+_PILASTRI_SW_RE = re.compile(
+    rf"^.*(?:{_MECC})\b.{{0,120}}(?:{_SW}).*$|^.*(?:{_SW}).{{0,120}}(?:{_MECC})\b.*$",
+    re.IGNORECASE | re.MULTILINE)
+
 
 def clean(text: str) -> str:
     """Applica le correzioni note. Idempotente: rieseguibile senza danni."""
@@ -98,8 +118,11 @@ def clean(text: str) -> str:
 def scan(text: str) -> list[str]:
     """Ritorna le righe con formulazioni vietate ancora presenti (post-clean)."""
     cleaned = clean(text)
-    hits = [m.strip() for m in _LINE_RE.findall(cleaned) if m.strip()]
+    hits = [m.strip() for m in _LINE_RE.findall(cleaned)
+            if m.strip() and not _RAG_JARGON.search(m)]
     hits += [f"[persone] {m.strip()}" for m in _NINA_RE.findall(cleaned) if m.strip()]
+    hits += [f"[pilastri-software] {m.strip()}"
+             for m in _PILASTRI_SW_RE.findall(cleaned) if m.strip()]
     return hits
 
 
