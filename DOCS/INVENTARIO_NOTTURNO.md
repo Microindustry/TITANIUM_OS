@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-07-29  4 commit](#2026-07-29-4-commit)
   - [2026-07-28  2 commit](#2026-07-28-2-commit)
   - [2026-07-27  2 commit](#2026-07-27-2-commit)
   - [2026-07-26  3 commit](#2026-07-26-3-commit)
@@ -44,6 +45,16 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-07-29 · 4 commit
+- `a34b4d80` auto: night_audit - cartella clinica 29/07/2026
+- `a913277f` auto: story_agent - episodi generati 29/07/2026
+- `a77256f3` fix(canone+audit): ferma la contaminazione MIMS e tara le euristiche rumorose
+- `029f51f0` chore(salva): chiusura #69 — recupero arretrato multi-agente (5 fix verificati)
+
+_episodi: 300 · critiche aperte: 30 (219 risolte) · RAG: 21518 chunk_
+
+
 
 ## 2026-07-28 · 2 commit
 - `442b996d` auto: night_audit - cartella clinica 28/07/2026
