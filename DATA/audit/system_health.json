@@ -1,9 +1,9 @@
 {
-  "last_audit": "2026-07-29T03:52:54",
-  "date": "2026-07-29",
-  "git_head": "a913277f",
-  "rag_chunks": 21518,
-  "n_episodes": 300,
+  "last_audit": "2026-07-30T03:52:53",
+  "date": "2026-07-30",
+  "git_head": "2e98dfac",
+  "rag_chunks": 21614,
+  "n_episodes": 301,
   "n_commits_7d": 24,
   "pillars": {
     "V32": 65,
@@ -16,37 +16,37 @@
     {
       "log": "night_research.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-29 03:41:01 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-29"
+      "riga": "2026-07-30 03:40:14 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-30"
     },
     {
       "log": "night_research.log",
       "tipo": "errore esplicito",
-      "riga": "2026-07-29 03:41:24 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=local+large+language+model+fine-tuning+Lo",
-      "data": "2026-07-29"
-    },
-    {
-      "log": "night_research.log",
-      "tipo": "crash/eccezione",
-      "riga": "Traceback (most recent call last):",
-      "data": "2026-07-29"
+      "riga": "2026-07-30 03:40:37 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
+      "data": "2026-07-30"
     },
     {
       "log": "research_agent.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-07-29 03:39:42 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-29"
+      "riga": "2026-07-30 03:38:46 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-07-30"
     },
     {
       "log": "research_agent.log",
       "tipo": "errore esplicito",
-      "riga": "2026-07-29 03:40:06 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
-      "data": "2026-07-29"
+      "riga": "2026-07-30 03:39:09 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-07-30"
     },
     {
       "log": "research_agent.log",
-      "tipo": "timeout di rete",
-      "riga": "2026-07-29 03:40:57 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
+      "tipo": "ricerca a vuoto",
+      "riga": "2026-07-30 03:39:12 [research_agent      ] WARNING  Nessun risultato sopra la soglia di rilevanza (0.40).",
+      "data": "2026-07-30"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "crash/eccezione",
+      "riga": "⚠ night_research.log: Traceback (most recent call last):",
       "data": "2026-07-29"
     }
   ],
@@ -54,12 +54,12 @@
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 20,
+    "file_age_days": 21,
     "stale": false
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 0,
+    "canone_age_days": 1,
     "max_ep_disco": 64,
     "max_ep_canone": 64
   },
@@ -70,7 +70,7 @@
     "retention disco": 1.0,
     "AI news watcher": 0.0,
     "daily brief": 0.8,
-    "riflusso FATTI": 1.1
+    "riflusso FATTI": 2.1
   },
   "pip_audit": {
     "vulns": 0,
@@ -85,7 +85,7 @@
   "critiche": {
     "added": 6,
     "auto_closed": 6,
-    "total": 249,
+    "total": 255,
     "open": 30
   },
   "verdict": "ATTENZIONE"

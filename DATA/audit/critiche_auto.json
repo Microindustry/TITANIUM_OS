@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-e2beb7c89c",
+    "date": "2026-07-30",
+    "git": "2e98dfac",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Sei bozze risultano pronte al volo (EP_N2_07/08, EP_SG_02_05/06, EP_SG_03_01/02, EP_SG_04_01) ma la corsia SISTEMA è ferma per scelta e la corsia Nina è bloccata dall'HNSW corrotto. Se rag_recover --drop-hnsw non viene eseguito oggi, il batch di stanotte produrrà altri episodi su RAG vuoto, aggiungendo rumore al backlog invece di smaltirlo. Le 6 bozze pulite rischiano di restare in coda mentre si accumulano nuovi episodi da correggere.",
+    "azione": "Dopo rag_recover --drop-hnsw, decidere quale delle 6 bozze esce prima (EP_SG_02_05 o EP_N2_08 sono le più pulite secondo bussola_open) e sbloccare manualmente la corsia prima della sessione #70, così il batch notturno trova la coda già ridotta.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-30"
+  },
+  {
+    "id": "AUD-e1e98e1a0e",
+    "date": "2026-07-30",
+    "git": "2e98dfac",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Il loop HNSW corrotto non è stato ancora riparato: rag_recover --drop-hnsw richiede UAC di Matteo ed è nei blockers da sessione #69. Fino a quel momento ChromaDB restituisce 0 embedding su qualsiasi query (limit=10 → 0 risultati), il che significa che retrieve_context() nelle notti successive opera su contesto vuoto. Il RAG conta 21.614 chunk ma sono inaccessibili finché l'indice HNSW è incoerente. La corruzione si è ripresentata 3 volte in 2 giorni perché manca l'UPS hardware (~50-80 €).",
+    "azione": "Prima cosa al prossimo accesso: eseguire rag_recover --drop-hnsw (1 click UAC, ricostruzione automatica). Parallelamente ordinare l'UPS da affiancare a Vevor+ER20 per eliminare la causa radice dei power-loss ricorrenti.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-30"
+  },
+  {
+    "id": "AUD-c3f0dd0f1d",
+    "date": "2026-07-30",
+    "git": "2e98dfac",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "24 episodi su 64 mancano dell'open-loop (qc_episodi.open_loop_missing=24), ma la sentinella QC_EP_OPEN_LOOP cerca l'etichetta testuale non il gancio narrativo reale, gonfiando il conteggio di falsi positivi (32→23 reali secondo bussola_open). Contemporaneamente nina_rag_loop.py:180 hardcoda 'casella': '?' in tutti gli episodi generati, producendo la dicitura 'casella ?' in 32 episodi su 64 in contraddizione con l'header dello stesso file. Due bug di qualità strutturale che inquinano ogni batch notturno senza bloccare la pipeline.",
+    "azione": "In nina_rag_loop.py:180 sostituire il literal '?' con la logica di lookup della casella effettiva (già presente nell'header del file). Per QC_EP_OPEN_LOOP: riscrivere il check cercando il collegamento narrativo (es. presenza di wikilink a episodio futuro) invece del tag testuale, e rivalutare i 24 flag aperti per eliminare i falsi positivi.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-30"
+  },
+  {
+    "id": "AUD-8140f28f35",
+    "date": "2026-07-30",
+    "git": "2e98dfac",
+    "area": "GENESIS",
+    "severity": "alta",
+    "finding": "La contaminazione MIMS-come-software/AI è strutturale e si autoalimenta: _CANONE.md non è mai iniettato nel prompt di nina_agent.py:188, retrieve_context() interroga il RAG sul concetto 'MIMS' e trova paper fuori tema in MENTE/KNOWLEDGE/RESEARCH/mims/ (specchiati da save_canon), lo slot 'aggancio_reale' viene riempito con acronimi inventati (EP_N2_64 «Machine-Induced Meaning Synthesis»). 5 episodi su 8 recenti sono contaminati (EP_N2_57/59/60/63/64) e alcune fonti nei FATTI sono path inesistenti (es. «GENESIS/documentation_hallucination_2026»). Il fix a monte (iniettare _CANONE.md + canon_guard) è il next_step #1 della sessione #69 ma non risulta committato in 2e98dfac.",
+    "azione": "Aprire nina_agent.py:188, caricare _CANONE.md come stringa e prependerla al prompt dell'Architetto con regola esplicita 'se MIMS compare come software/AI, lascia aggancio_reale vuoto'. Poi correggere manualmente EP_N2_57/59/60/63/64 e rimuovere i paper fuori tema da MENTE/KNOWLEDGE/RESEARCH/mims/ prima che vengano reindicizzati nel RAG.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-30"
+  },
+  {
+    "id": "AUD-69e4e0ab84",
+    "date": "2026-07-30",
+    "git": "2e98dfac",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "La sentinella canone in night_audit.py:635 misura mtime di _CANONE.md, che i blocchi auto <!-- COLLEGATI --> rinfrescano ogni notte: stale è sempre false anche se il contenuto curato è fermo al 16/07 (canone_manuale.file_age_days=21). La sentinella non segnala mai deriva reale. Problema distinto: il riflusso FATTI ha età 2.1 giorni (organi_vivi), il che significa che i FATTI estratti dagli episodi delle ultime due notti non sono ancora stati riflessi nel vault, lasciando potenzialmente fonti inventate (come quelle di EP_N2_64) non ripulite prima della prossima indicizzazione RAG.",
+    "azione": "In night_audit.py:635 misurare il mtime solo sulla porzione di _CANONE.md esterna ai marker <!-- COLLEGATI --> (es. hash della sezione manuale). Per il riflusso FATTI: verificare perché fact_reflux_agent non ha girato stanotte e forzare manualmente il run prima della prossima sessione notturna.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-30"
+  },
+  {
+    "id": "AUD-1fa8246db5",
+    "date": "2026-07-30",
+    "git": "2e98dfac",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Semantic Scholar 429 ricorrente stanotte su almeno 4 chiamate distinte: «2026-07-30 03:40:14 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s» e «2026-07-30 03:39:09 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu». Senza API key autenticata il rate-limit è 100 req/5 min sul tier pubblico; il blocco produce ricerca a vuoto («2026-07-30 03:39:12 WARNING Nessun risultato sopra la soglia di rilevanza (0.40)») e un traceback la notte precedente («⚠ night_research.log: Traceback (most recent call last)», data 2026-07-29). La API key gratuita è già nei blockers da almeno una sessione ma non è ancora in variabili d'ambiente.",
+    "azione": "Matteo registra la chiave su semanticscholar.org (tier gratuito, ~1 min), la inserisce come variabile utente Windows SEMANTIC_SCHOLAR_API_KEY e verifica che research_agent.py la legga al prossimo avvio notturno. Zero codice da toccare se il loader la espone già.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-07-30"
+  },
+  {
     "id": "AUD-d050d5f613",
     "date": "2026-07-29",
     "git": "a913277f",
@@ -296,8 +368,10 @@
     "finding": "Il research_agent è cieco su Semantic Scholar: il log del 25/07 mostra «2026-07-25 03:39:00 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu» seguito da «2026-07-25 03:39:00 [research_agent] INFO semantic_scholar -> 0 risultati». La ricerca su rigidità strutturale (argomento critico per V32) restituisce zero perché viene bloccata prima ancora di partire. Il blocker 'SEMANTIC_SCHOLAR_API_KEY' è già identificato ma non risolto.",
     "azione": "Matteo aggiunge SEMANTIC_SCHOLAR_API_KEY gratuita nel .env (richiesta su semanticscholar.org/product/api in ~5 min). Senza questo, ogni notte di ricerca V32/GENESIS brucia quota anonima e torna a mani vuote.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-25"
+    "status": "resolved",
+    "last_seen": "2026-07-25",
+    "resolved_on": "2026-07-30",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-819441cf2a",
@@ -308,8 +382,10 @@
     "finding": "Tre organi vitali risultano piatti (0.0) stanotte: nina-loop, snapshot RAG e AI news watcher. Il dato è nel campo organi_vivi del report corrente, non in un log con riga datata, quindi non è possibile citare un errore esplicito — ma il pattern è costante e il sistema è in stato di manutenzione ridotta mentre Matteo è assente 7 giorni. Se snapshot RAG rimane a 0.0, un power-loss (già occorso 3 volte in 2 giorni per assenza UPS) corrompe HNSW senza checkpoint recente da cui recuperare.",
     "azione": "Verificare al rientro (30/07) perché snapshot RAG non gira: controllare il cron/task scheduler e il log del servizio. Nel frattempo l'UPS (~50-80€) resta il presidio fisico immediato da ordinare prima di qualsiasi altra spesa hardware.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-25"
+    "status": "resolved",
+    "last_seen": "2026-07-25",
+    "resolved_on": "2026-07-30",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-266e77d2a8",
@@ -320,8 +396,10 @@
     "finding": "Lo story_agent gira senza token HF autenticato: il log del 25/07 mostra «Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.». Con Matteo assente 7 giorni e il loop notturno che genera episodi ogni notte, un rate-limit HF anonimo può interrompere la generazione senza che nessuno se ne accorga.",
     "azione": "Aggiungere HF_TOKEN al .env (token gratuito su huggingface.co/settings/tokens). Da abbinare alla rotazione delle chiavi .env già schedulata (blocker red-team #38).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-25"
+    "status": "resolved",
+    "last_seen": "2026-07-25",
+    "resolved_on": "2026-07-30",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-1a4ea6e331",
@@ -332,8 +410,10 @@
     "finding": "La bussola segnala che requirements.txt non ha nessuna versione pinnata (0 '=='): stessa classe di bug che ha già rotto un finetune in precedenza. Il sistema si auto-modifica ogni notte (33 commit in 7 giorni) con dipendenze fluttuanti. Durante i 7 giorni di assenza un aggiornamento silenzioso di una libreria può rompere un organo vitale senza che ci sia nessuno a intervenire.",
     "azione": "Prima della prossima sessione di sviluppo: eseguire 'pip freeze > requirements.txt' nell'ambiente attivo e committare. Blocca il rischio di deriva delle dipendenze a costo zero.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-25"
+    "status": "resolved",
+    "last_seen": "2026-07-25",
+    "resolved_on": "2026-07-30",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-19bc106587",
@@ -344,8 +424,10 @@
     "finding": "Il canone dichiara EP_N2_56 come massimo episodio ma su disco esiste EP_N2_61: il log del 25/07 riporta «su disco EP_N2_61, il canone dichiara EP_N2_56: aggiornare _CANONE.md». Cinque episodi non sono registrati nel canone ufficiale. Con 32 episodi su 61 già privi di open_loop (qc_episodi) e 4 canon_violations attive, il delta cresce ogni notte in modo non supervisionato.",
     "azione": "Allineare _CANONE.md a EP_N2_61 al rientro: aggiungere i 5 episodi mancanti con status corretto. Poi eseguire canon_guard per azzerare le 4 violations prima di generare nuovi episodi.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-25"
+    "status": "resolved",
+    "last_seen": "2026-07-25",
+    "resolved_on": "2026-07-30",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-0206f4218d",
@@ -356,8 +438,10 @@
     "finding": "32 episodi su 61 mancano di open_loop (qc_episodi.open_loop_missing=32, pari al 52%). L'open_loop è il gancio narrativo che porta il lettore all'episodio successivo: la sua assenza dimezza il valore di retention della serie proprio mentre i post social stanno per uscire in automatico nei prossimi 7 giorni senza possibilità di intervento.",
     "azione": "Prioritizzare la correzione degli open_loop sugli episodi già programmati per la pubblicazione (EP_N2_04→EP_N2_06, EP_SG_02_04) prima o subito dopo il rientro del 30/07, quando si caricano anche i 3 post rimasti.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-07-25"
+    "status": "resolved",
+    "last_seen": "2026-07-25",
+    "resolved_on": "2026-07-30",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a363d6a284",
