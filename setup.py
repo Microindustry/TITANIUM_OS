@@ -228,7 +228,10 @@ Poi esegui il task specificato.
 
 
 def create_rules_md():
-    """Crea RULES.md con le 10 regole commentate."""
+    """BOOTSTRAP SOLTANTO — usato solo se BRAIN/RULES.md non esiste (macchina nuova).
+    La fonte unica delle regole e' CLAUDE.md; RULES.md si deriva con
+    AUTOMATIONS/tools/sync_regole.py. Questa lista e' ferma alla versione a 10 regole
+    del 02/06 e NON va aggiornata qui: si aggiorna CLAUDE.md e si rilancia il sync."""
     content = """# LE 10 REGOLE DELL'ECOSISTEMA
 *Vincoli operativi — ogni decisione viene filtrata qui*
 
@@ -536,11 +539,18 @@ def main():
         f.write(create_claude_md())
     print("  ✓ BRAIN/CLAUDE.md")
 
-    # RULES.md
+    # RULES.md — NON si sovrascrive piu' (#70, 16/08/2026).
+    # Dal 16/08 RULES.md e' DERIVATO da CLAUDE.md via AUTOMATIONS/tools/sync_regole.py:
+    # questo blocco lo riscriveva con la lista vecchia a 10 regole ed e' la ragione per
+    # cui esistevano due liste divergenti. Qui resta solo il bootstrap su macchina nuova.
     rules_path = TITANIUM_OS_ROOT / "BRAIN" / "RULES.md"
-    with open(rules_path, "w", encoding="utf-8") as f:
-        f.write(create_rules_md())
-    print("  ✓ BRAIN/RULES.md")
+    if rules_path.exists():
+        print("  - BRAIN/RULES.md gia' presente: NON toccato "
+              "(e' derivato — rigeneralo con AUTOMATIONS/tools/sync_regole.py)")
+    else:
+        with open(rules_path, "w", encoding="utf-8") as f:
+            f.write(create_rules_md())
+        print("  ✓ BRAIN/RULES.md (bootstrap — poi passa a sync_regole.py)")
 
     # 3. Crea file DATA
     print("\n[3/4] Creazione file DATA...")

@@ -165,7 +165,7 @@ La casella si illumina sulla mappa — un punto preciso nella Regione 7, con una
 **Pietre richiamate:** ⟡7 giro 2 (EP_N2_53 — il Direttore Invisibile, prima iterazione)
 **3 strati:** bambino = gli aiutanti della sarta devono aspettare il loro turno altrimenti il vestito non esce · curioso = ogni sistema che funziona ha un grafo di dipendenze e un orologio che lo fa avanzare · grande = il DAG (Directed Acyclic Graph) definisce l'ordine immutabile tra i nodi; le race condition nascono senza arbitro temporale; il cycle time è il timing assoluto che elimina il conflitto
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** In GENESIS/V32/MIMS, il DAG Scheduler e il Clock Tick sono il Direttore Invisibile: dicono a ogni microistruzione quando eseguirsi, nell'ordine corretto, senza conflitti. Senza questo, il processore sarebbe la sala dei sarti confusi.
+**Aggancio reale:** In GENESIS le notturne girano a orari fissi con guardie single-instance: un solo processo per volta sulla GPU da 8 GB, altrimenti si pestano i piedi. E' il Direttore Invisibile — senza di lui la notte sarebbe la sala dei sarti confusi.
 **Open loop → Casella successiva:** Cosa succede se il Direttore stesso si sbaglia e manda due segnali in conflitto? C'è qualcosa sotto il ticchettio che garantisce l'ordine anche quando il Direttore fallisce?
 
 ## FATTI (per il RAG)

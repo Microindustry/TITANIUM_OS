@@ -95,6 +95,7 @@ function handleApi(req: IncomingMessage, res: ServerResponse): boolean {
       const keyFiles = [
         path.join(ROOT, 'BRAIN', 'ECOSYSTEM_MANIFEST.md'),
         path.join(ROOT, 'BRAIN', 'RULES.md'),
+        path.join(ROOT, 'BRAIN', 'REGOLE_GRAFICHE.md'),   // #70: palette + lingua icone
         path.join(ROOT, 'AUTOMATIONS', 'AUTOMATIONS_MASTER.md'),
         path.join(ROOT, 'BRAIN', 'github_profile_readme.md'),
       ]

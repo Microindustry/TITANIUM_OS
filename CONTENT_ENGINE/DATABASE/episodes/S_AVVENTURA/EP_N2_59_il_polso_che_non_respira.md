@@ -119,7 +119,7 @@ Ecco la cosa difficile da accettare: lo schermo sembrava perfetto. Diciassette v
 
 Un sistema di monitoraggio passivo legge lo stato. Registra le ultime risposte. Mostra quello che c'era. Ma non sa quello che c'è adesso, se non lo chiede adesso. La differenza tra un verde di ieri e un verde di stamattina non è nel colore — è nell'atto di domandare.
 
-> *(Strato fondo — per il grande: un sistema di monitoraggio passivo che legge solo lo stato non rileva i guasti silenziosi. Il puntino verde non mente: ripete l'ultimo messaggio ricevuto. Se il controllore smette di interrogare il sistema per quarantotto ore, il guasto può avanzare senza essere segnalato. Nel sistema GENESIS/V32/MIMS, un nodo che non riceve heartbeat da 48 ore viene segnalato come «online» finché qualcuno non lo interroga attivamente. Il silenzio non è conferma: è assenza di negazione. Serve sempre uno strato di verifica attiva — ping, query, diagnostica — perché il guardiano che non chiede aggiornamenti non è un guardiano: è una supposizione che indossa un'uniforme.)*
+> *(Strato fondo — per il grande: un sistema di monitoraggio passivo che legge solo lo stato non rileva i guasti silenziosi. Il puntino verde non mente: ripete l'ultimo messaggio ricevuto. Se il controllore smette di interrogare il sistema per quarantotto ore, il guasto può avanzare senza essere segnalato. Nel sistema GENESIS, un nodo che non riceve heartbeat da 48 ore viene segnalato come «online» finché qualcuno non lo interroga attivamente. Il silenzio non è conferma: è assenza di negazione. Serve sempre uno strato di verifica attiva — ping, query, diagnostica — perché il guardiano che non chiede aggiornamenti non è un guardiano: è una supposizione che indossa un'uniforme.)*
 
 ---
 
@@ -185,7 +185,7 @@ Nina mette il taccuino in tasca. Il gradino diciassette è sempre sghembo. Il pu
 **Pietre richiamate:** EP_N2_52 (Il Battito del Guardiano — il puntino verde come eco dell'ultima risposta); EP_N2_04 (La Mappa che Non Mente — le mappe vive che si aggiornano, ma solo se qualcuno chiede)
 **3 strati:** bambino = un soldato che sembra a posto può avere una crepa nascosta: devi andare a guardare · curioso = un puntino verde non dice lo stato attuale, dice l'ultimo stato dichiarato; senza query attiva, è una fotografia · grande = i sistemi di monitoraggio passivo non rilevano guasti silenziosi; serve uno strato di verifica attiva (heartbeat, ping, query) perché il silenzio non è conferma
 **Cuore:** fai bene le cose vere · gli strumenti, non le risposte · la curiosità come atto — bussare è meglio che supporre
-**Aggancio reale:** Nel sistema GENESIS/V32/MIMS un nodo che non riceve heartbeat da 48 ore viene segnalato come «online» finché qualcuno non lo interroga attivamente. L'atto di controllare — ping, query, diagnostica — è l'unico guardiano. Il silenzio non è conferma: è assenza di negazione.
+**Aggancio reale:** Nel sistema GENESIS un nodo che non riceve heartbeat da 48 ore viene segnalato come «online» finché qualcuno non lo interroga attivamente. L'atto di controllare — ping, query, diagnostica — è l'unico guardiano. Il silenzio non è conferma: è assenza di negazione.
 **Open loop → Casella successiva:** Se Nina smette di fare domande a uno dei puntini per tre giorni di fila, come saprà se ha ancora fiducia di quello che vede? E chi controlla i controllori?
 
 ## FATTI (per il RAG)

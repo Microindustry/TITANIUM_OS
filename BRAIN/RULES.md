@@ -1,73 +1,61 @@
-<!-- TOC -->
+<!-- REGOLE:start (derivato da CLAUDE.md — non editare a mano) -->
 
-- [LE 10 REGOLE DELLECOSISTEMA](#le-10-regole-dellecosistema)
-  - [1. Niente è finito](#1-niente-è-finito)
-  - [2. Tutto si connette](#2-tutto-si-connette)
-  - [3. Documenta mentre costruisci](#3-documenta-mentre-costruisci)
-  - [4. Scala organicamente](#4-scala-organicamente)
-  - [5. Automatizza il ripetitivo](#5-automatizza-il-ripetitivo)
-  - [6. Costruisci ciò che usi](#6-costruisci-ciò-che-usi)
-  - [7. Insegna ciò che impari](#7-insegna-ciò-che-impari)
-  - [8. Proteggi il sapere](#8-proteggi-il-sapere)
-  - [9. Reinvesti sempre](#9-reinvesti-sempre)
-  - [10. Libertà sopra profitto](#10-libertà-sopra-profitto)
-  - [REGOLE SISTEMA  PDF_TO_MEMORY](#regole-sistema-pdftomemory)
-    - [Gerarchia output](#gerarchia-output)
-    - [Regole versioning](#regole-versioning)
-    - [Regole classificazione ATTO](#regole-classificazione-atto)
-    - [Flusso drag  drop](#flusso-drag-drop)
-    - [Come avviare](#come-avviare)
+# LE 12 REGOLE DELL'ECOSISTEMA
+*Vincoli operativi — ogni decisione viene filtrata qui.*
 
-<!-- /TOC -->
-
-# LE 10 REGOLE DELL'ECOSISTEMA
-*Vincoli operativi — ogni decisione viene filtrata qui*
+> ⚠ **File DERIVATO.** La fonte unica è `CLAUDE.md` §LE REGOLE.
+> Si rigenera con `python AUTOMATIONS/tools/sync_regole.py`. Non editare a mano:
+> la prossima esecuzione sovrascrive. Per cambiare una regola, si cambia CLAUDE.md.
 
 ---
 
-## 1. Niente è finito
-Ogni progetto è una versione. V32 → Mk1 → Mk2. MIMS → 2.0 → 3.0.
-**Azione**: rilascia versioni funzionanti, migliora iterativamente.
+## 1. Niente è finito — ogni cosa è una versione.
+Non aspettare la perfezione. Una versione funzionante oggi > una versione perfetta mai.
 
-## 2. Tutto si connette
-Ogni skill nutre le altre. Saldatura MotoGP → basamento V32. Python EVA → automazioni MIMS.
-**Azione**: cerca attivamente le connessioni tra skill diverse.
+## 2. Identifica → Automatizza → Scala.
+Se lo fai 3 volte: script. Se lo fai ogni giorno: nodo. Se il nodo produce valore: scala.
 
-## 3. Documenta mentre costruisci
-Il processo È il contenuto. Foto, note, screenshot: sempre in tempo reale.
-**Azione**: camera sempre pronta, note in tempo reale.
+## 3. Cattura mentre costruisci — non ricordare, documenta.
+Ogni decisione tecnica in `MENTE/`. Ogni sessione Claude in `MENTE/SESSIONI/`. Il RAG la recupera domani.
 
-## 4. Scala organicamente
-Non forzare la crescita. Ogni espansione finanziata dal cash flow.
-**Azione**: zero investitori fino a prodotto validato.
+## 4. Leva cognitiva: 1 input → N output.
+Un milestone → episodio + reel + LinkedIn + RAG update. Ogni azione deve produrre più artefatti.
 
-## 5. Automatizza il ripetitivo
-Se fai qualcosa più di 3 volte → scrivi uno script.
-**Azione**: lista settimanale attività ripetitive da automatizzare.
+## 5. Costruisci ciò che usi — meta-ricorsività.
+TITANIUM_OS gestisce la costruzione di TITANIUM_OS. Il sistema si autoalimenta.
 
-## 6. Costruisci ciò che usi
-MIMS nasce da esigenze reali. V32 costruita CON MIMS.
-**Azione**: il primo cliente di ogni prodotto sei tu.
+## 6. Output misurabile prima di tutto.
+Se non posso misurarlo (mm, ore, euro, chunk RAG, commit), non esiste.
 
-## 7. Insegna ciò che impari
-YouTube forza la chiarezza. Effetto Feynman.
-**Azione**: ogni concetto tecnico → video o post.
+## 7. Tutto si connette — nessun silo.
+V32 → episodio → dataset LLM → RAG → Claude più informato su V32. Il loop è intenzionale.
 
-## 8. Proteggi il sapere
-Trade secret su ricette polimero. Brevetti pianificati.
-**Azione**: pubblica il "cosa" e il "perché", MAI il "come esattamente".
+## 8. Proteggi il sapere.
+`_VAULT/` per i segreti. RAG per la conoscenza. Git per il codice. Backup AES-256 per tutto.
 
-## 9. Reinvesti sempre
-60% del margine nel primo anno torna nel sistema.
-**Azione**: budget reinvestimento fisso su ogni entrata.
+## 9. Reinvesti il margine — 60% anno 1.
+BEP V32 = 61 ore. Ogni ora sopra il BEP è reinvestita in strumenti, formazione, scala.
 
-## 10. Libertà sopra profitto
-Il capannone è il goal. I soldi sono il mezzo.
-**Azione**: ogni decisione: "Questo mi avvicina o allontana dal capannone?"
+## 10. Libertà sopra profitto.
+Il capannone entro 2030 non è un obiettivo lavorativo — è un obiettivo di sovranità.
+
+## 11. Il sistema PROPONE, l'umano APPROVA.
+Nessun agente modifica codice, chiavi o canone da solo: scrive una proposta, decide Matteo.
+*Era già legge nel codice* (`SELF_IMPROVE` propose-only, `STATE.self_improve.human_approval_required`,
+gate `[approvazione]`) ma era stata tolta dal testo il 20/06: una regola che comanda il
+sistema e non è scritta nella lista delle regole. Rimessa il 16/08 (#70).
+**Eccezione a canone:** la corsia Nina è AUTO — genera e auto-promuove da sola (#44).
+
+## 12. Insegna ciò che impari.
+Spiegare forza la chiarezza (effetto Feynman): se non sai raccontarlo, non l'hai capito.
+Ogni concetto tecnico diventa un episodio, un carosello, un post.
+*Recuperata da `BRAIN/RULES.md` il 16/08 (#70): era l'unica regola che viveva solo lì.
+È il principio su cui poggia tutto il binario Nina.*
 
 ---
 *Target: 15 Luglio 2030 — Matteo Benenati, 35 anni: LIBERO.*
-
+<!-- derivato il 2026-08-16 da CLAUDE.md -->
+<!-- REGOLE:end -->
 ---
 
 ## REGOLE SISTEMA — PDF_TO_MEMORY

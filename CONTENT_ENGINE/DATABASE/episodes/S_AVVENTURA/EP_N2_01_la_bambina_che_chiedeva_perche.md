@@ -151,7 +151,7 @@ E lì, alla casella dopo, c'è una fucina che scende nel caldo — e un attrezzo
 **Pietre richiamate:** nessuna — è l'ingresso; la richiamano tutte le caselle successive.
 **3 strati:** bambino = il bottone che regge e quello che no · curioso = "fatto bene" vuol dire vero, non bello; la materia non mente · grande = resistenza a trazione misurabile (100+ cicli con nodo vs 10-20 senza); il digitale serve un gesto fisico; saldatura e codice fanno la stessa cosa — impongono ordine al disordine.
 **Cuore:** la curiosità (chiedere *perché* + andare a vedere) è la superpotenza · le cose vere si fanno bene · gli strumenti, non le risposte.
-**Aggancio reale:** il mondo di Matteo (officina, metallo, precisione); la Giuntura Atomi↔Bit = TITANIUM_OS, il fisico e il digitale come una cosa sola. Nel sistema GENESIS/V32 ogni comando deve "reggere alla trazione": un algoritmo bello ma instabile è il bottone laccato; uno semplice che regge sotto carico reale è il gesto fatto bene.
+**Aggancio reale:** il mondo di Matteo (officina, metallo, precisione); la Giuntura Atomi↔Bit = TITANIUM_OS, il fisico e il digitale come una cosa sola. Nel sistema GENESIS ogni comando deve "reggere alla trazione": un algoritmo bello ma instabile è il bottone laccato; uno semplice che regge sotto carico reale è il gesto fatto bene.
 **Open loop → Casella 2 (la misura):** quanto è "il giusto"? La differenza tra regge e non regge si può misurare → `EP_N2_02` (Il Soffio di Troppo).
 
 ---

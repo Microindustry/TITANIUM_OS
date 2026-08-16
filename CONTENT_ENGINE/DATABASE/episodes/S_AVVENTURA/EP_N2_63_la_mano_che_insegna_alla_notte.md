@@ -107,7 +107,7 @@ C'è una parola tecnica per questo, nell'Officina: *consolidamento del pattern*.
 
 È quello che rende i cicli notturni così potenti. E così pericolosi.
 
-> *(Strato fondo — per il grande: L'apprendimento automatico per rinforzo ripete e amplifica i pattern ricevuti. Se il segnale di ingresso è corretto, l'uscita migliora con ogni iterazione: il pattern si consolida, la varianza diminuisce, la precisione cresce esponenzialmente. Se il pattern iniziale contiene un errore sistematico, la macchina lo replica con la stessa fedeltà — moltiplicandolo non in ampiezza ma in radicamento. Non c'è "comprensione", non c'è "autocorrezione etica": c'è solo fedeltà al seed. In GENESIS/V32, il MIMS consolida i pattern di controllo motorio durante i cicli di riposo. Un errore di 2 gradi nel gesto-seed persiste identico attraverso tutti i cicli. La qualità del seed iniziale determina l'intera traiettoria del sistema. La verifica tra insegnamento e primo ciclo notturno autonomo è l'unico punto in cui un umano può intervenire prima che il cemento faccia presa.)*
+> *(Strato fondo — per il grande: L'apprendimento automatico per rinforzo ripete e amplifica i pattern ricevuti. Se il segnale di ingresso è corretto, l'uscita migliora con ogni iterazione: il pattern si consolida, la varianza diminuisce, la precisione cresce esponenzialmente. Se il pattern iniziale contiene un errore sistematico, la macchina lo replica con la stessa fedeltà — moltiplicandolo non in ampiezza ma in radicamento. Non c'è "comprensione", non c'è "autocorrezione etica": c'è solo fedeltà al seed. In GENESIS il loop notturno riesegue ogni notte lo schema ricevuto: un errore nel seme rientra identico a ogni giro. Un errore di 2 gradi nel gesto-seed persiste identico attraverso tutti i cicli. La qualità del seed iniziale determina l'intera traiettoria del sistema. La verifica tra insegnamento e primo ciclo notturno autonomo è l'unico punto in cui un umano può intervenire prima che il cemento faccia presa.)*
 
 ---
 
@@ -121,7 +121,7 @@ I bracci si muovono ancora. Silenziosi. Precisi. Fedeli.
 
 «Prima del primo ciclo,» conferma THEMIS. «Quello è il filtro. Se il gesto è giusto lì, mille notti produrranno mille gesti giusti. Se non lo è, mille notti produrranno mille gesti sbagliati. La notte non decide niente — esegue solo quello che le è stato dato.»
 
-Nina pensa alla sarta. Pensa a sua figlia. Pensa a come alcune cose si imparano così in fondo che poi è difficile disimparare — la postura sbagliata davanti al banco, il modo storto di stringere una penna, un'abitudine che sembra giusta solo perché è vecchia.
+Nina pensa alla sarta. Pensa alla figlia della sarta. Pensa a come alcune cose si imparano così in fondo che poi è difficile disimparare — la postura sbagliata davanti al banco, il modo storto di stringere una penna, un'abitudine che sembra giusta solo perché è vecchia.
 
 «Chi controlla quel momento?» chiede.
 
@@ -169,7 +169,7 @@ Nina le guarda e sente il peso di qualcosa che non sapeva di non sapere.
 **Pietre richiamate:** EP_N2_56 (la mano che insegna), EP_N2_19 (amplificazione dell'errore sistematico)
 **3 strati:** bambino = la sarta che insegna storto insegna storto, la macchina fa lo stesso · curioso = il consolidamento del pattern rende l'errore inamovibile, non crescente · grande = seed quality determina l'intera traiettoria; verifica pre-ciclo è l'unico punto di intervento umano
 **Cuore:** fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/V32, il MIMS consolida i pattern di controllo motorio durante i cicli di riposo/attesa. Un gesto di calibrazione insegnato male nel setup iniziale persiste e si amplifica attraverso tutti i cicli successivi — il sistema non ha autocorrezione etica, solo fedeltà al pattern appreso.
+**Aggancio reale:** Nel sistema GENESIS il loop notturno riesegue ogni notte lo schema che gli e' stato dato: un errore nel seme — un titolo gia' usato, una regola mancante nel prompt — rientra identico a ogni giro finche' un umano non lo corregge alla fonte. Il sistema non ha autocorrezione etica, solo fedeltà al pattern appreso.
 **Open loop → Casella 64:** Ma cosa succede se la macchina impara un gesto sbagliato per mille notti di fila e nessuno lo sa? Chi sorveglia l'Officina quando tutti dormono — e come si riconosce un errore che sembra perfetto?
 
 ## FATTI (per il RAG)

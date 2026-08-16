@@ -98,6 +98,57 @@
 
 ---
 
+## Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata
+
+**Il sistema è rimasto spento dal 30/07 al 15/08 (17 notti): niente si è rotto, ma niente ha prodotto. Oggi è ripartito solo `night_audit`.**
+
+**✅ BLOCCO A — CONTAMINAZIONE MIMS (P0, chiuso)**
+- [✓] **A1 e A2 erano GIÀ FATTI** e il prompt di sessione non lo sapeva: commit `a77256f3` del 28/07 21:52 (coda della #69) ha già iniettato `PILASTRI_CANONE` nell'Architetto (`nina_agent.py:181-190`, con lo slot `aggancio_reale` che può restare **vuoto**) e la famiglia `[pilastri-software]` in `canon_guard.py:101-107`. **Non rifatti** — verificati e basta. La sorgente era chiusa da 19 giorni.
+- [✓] **A3 — bonifica dello storico** (l'unico pezzo davvero aperto). `canon_guard` su 64 EP_N2 vivi → **8 episodi sporchi, 13 righe**: i 5 in lista (57/59/60/63/64) **+ 3 fuori lista** (01/13/52) necessari a chiudere davvero il gate. Nuovo strumento `AUTOMATIONS/tools/fix_pilastri_software.py` (sostituzioni esatte, idempotente, dry-run di default) → **40 sostituzioni in 16 file** (repo **+ specchio MENTE**, che è quello che il RAG rilegge).
+  - MIMS-come-software → l'aggancio corretto è **GENESIS** (unico pilastro software): "il modulo MIMS (Machine-Induced Meaning Synthesis)", "il MIMS consolida i pattern di controllo motorio", "il DAG Scheduler e il Clock Tick", "il modulo MIMS assegna la genealogia".
+  - **Fonte fabbricata rimossa**: `GENESIS/documentation_hallucination_2026` (EP_N2_64) non esiste — 0 file in MENTE. Le altre due citate (`EP_N2_07`, `INDICE_CAMMINO`) esistono davvero e sono rimaste.
+  - **Numeri inventati spacciati per FATTI** tolti: "riduce il rischio di false credenze del **40-60%**" (EP_N2_57, nessuno studio dietro) e "una sarta esperta sbaglia **1 volta su 1.000**" (EP_N2_64).
+  - **Falla `[persone]`**: EP_N2_63 "Nina pensa alla sarta. Pensa a **sua figlia**" → dava una figlia a una bambina. Corretto in "alla figlia della sarta".
+- [✓] **Verifica di chiusura**: `canon_guard` sugli episodi vivi = **0 righe** (l'unico residuo è in `_ARCHIVIO/reemit_20260623/`, snapshot congelato fuori dal canone). Su MENTE viva restano 9 hit `[pilastri-software]`, **tutti falsi positivi verificati a mano** (la regola 7 "V32 → episodio → dataset LLM", e la nota di sessione del 28/07 che *cita* la frase falsa mentre la corregge).
+- [✓] **Test di non-regressione**: stadio 1 (Architetto) rilanciato sui 2 concetti che avevano prodotto l'invenzione → entrambi agganciati a **GENESIS**, 0 violazioni. VERDE.
+- [ ] **Residuo onesto**: lo slot `aggancio_reale` non resta mai vuoto — l'LLM ora inventa *dentro* GENESIS ("il sistema notturno di consolidamento dei pattern motori" non esiste). Il P0 è chiuso (MIMS è salvo), ma la regola "meglio vuoto che inventato" non morde ancora.
+- [ ] **Batch 3 da decidere (Matteo)**: altri **18 episodi** contengono "GENESIS/V32" senza verbo software vicino (canon_guard non li segnala). Vanno ripuliti anche quelli o è co-menzione legittima?
+
+**✅ BLOCCO B — FIX MECCANICI**
+- [✓] B1 casella "?" — **già fatto** il 28/07 (`nina_rag_loop.py:183` deriva il numero).
+- [✓] B2 guardia titoli unici — **già fatta** il 28/07 (`titoli_usati()` passata all'Architetto).
+- [✓] **B3 commit automatico del loop Nina** — **era davvero aperto**: `run_story_agent.bat:30` committa solo `S2_SISTEMA\`, la corsia Nina (`S_AVVENTURA\`) non è mai stata committata da un'automazione (EP_N2_62/63/64 sono entrati nel repo col commit **a mano** di chiusura #69). Aggiunto il commit con pathspec esplicito in `night_research.bat`, subito dopo `nina_rag_loop`.
+- [✓] **B4 sentinella canone su HASH, non su mtime** — `night_audit._content_age_days()`: registro `DATA/audit/content_age.json` hash→data di primo avvistamento. L'età riparte **solo se il testo cambia**; un touch non ringiovanisce più il canone. Bootstrap dall'mtime per non perdere il segnale già maturato (verificato: 18 giorni, stabile).
+- [✓] **B5 euristiche rumorose** — rate-limit / 0 risultati / open-loop / canon_guard erano **già tarate** il 28/07. Sul `_cid` aggiunta la firma stabile `_sig()` (per i finding da log: file + tipo di guasto, non le parole dell'LLM).
+- [✗] **Ritiro un numero del #69**: "`_cid` sulla prosa LLM = **6 cloni/notte**" **non regge sui dati**. Misurato su 261 critiche storiche: a similarità ≥0.80 i cloni sono **0**, a ≥0.50 sono 13 — e ispezionando le coppie, a soglia bassa il raggruppamento **fonde problemi diversi**. I duplicati veri sono ~2-3 in 2 mesi e mezzo. Per questo **non** ho messo il merge fuzzy: nasconderebbe guasti reali per risolvere un problema che non c'è.
+
+**✅ BLOCCO C — SCALA GENESIS**
+- [✓] **C0** `BRAIN/SCALA-GENESIS.md` ricreato (era stato scritto nella #69 ma mai salvato su disco): 00 CATTURA · 01 STATO ATTUALE · scala S0→S8 con "Chiude quando:" · workstream social W1-W3 · PARCHEGGIO / SCARTATO / CHANGELOG.
+- [◐] **C1 (S0)** FounderOS clonato read-only in `ARCHIVE/REFERENCE/founderos` (MIT, `next dev -p 4100`). DDL delle 8 tabelle già estratto — nota: in FounderOS `agents` **non ha** `parent_id`, va aggiunto.
+
+**✅ BLOCCO D — LE REGOLE (recuperato da una conversazione della #57, 8-9/07)**
+
+Matteo si ricordava di una chat su "modifiche alle regole e cose da aggiungere". Il transcript non esiste più su disco (l'archivio Code parte dal 19/07), ma la decisione era tracciata nella bussola e nei commit. Ricostruita e chiusa.
+
+- [✓] **Trovata la verità sparsa: le regole vivevano in 3 posti e DIVERGEVANO.** Non riformulazioni — liste diverse. `CLAUDE.md` aveva *"Leva cognitiva 1→N"* e *"Output misurabile"* che in `BRAIN/RULES.md` non c'erano; `RULES.md` aveva *"Insegna ciò che impari"* che in `CLAUDE.md` non c'era; la numerazione era sfasata, quindi **citare "regola 6" voleva dire due cose diverse** a seconda del file (`RIPASSO_S32-56 §5` scrive "misurabile, regola 6" = vera solo in CLAUDE.md). Aggravante: `vite.config.ts` serve `RULES.md` alla dashboard → **a schermo si vedeva la lista vecchia**, ferma al 02/06.
+- [✓] **FONTE UNICA**: `CLAUDE.md` è il canone; `BRAIN/RULES.md` ora è **DERIVATO** con `AUTOMATIONS/tools/sync_regole.py` (marcatori `REGOLE:start/end`, tocca solo quel blocco: la sezione PDF_TO_MEMORY, che era contenuto unico di quel file, resta intatta). Stesso principio della Mappa in #56 — *deriva, non copia*. Idempotente + `--check` per il gate notturno.
+- [✓] **RADICE del doppione trovata e tappata**: `setup.py:539` **riscriveva** `RULES.md` con la lista a 10 regole a ogni esecuzione. Ora non sovrascrive più se il file esiste (bootstrap solo su macchina nuova) + docstring che dice dove si aggiorna davvero.
+- [✓] **REGOLA 11 RIMESSA NEL TESTO** — *"Il sistema PROPONE, l'umano APPROVA"*. Era stata tolta da CLAUDE.md il 20/06 ma **è sempre rimasta legge nel codice** (`SELF_IMPROVE` propose-only, `STATE.self_improve.human_approval_required`), è citata in `ECOSYSTEM_MANIFEST.md:98` ed è perfino **pubblicata in un episodio**. Una regola che comanda il sistema e non era scritta nella lista delle regole.
+- [✓] **REGOLA 12 RECUPERATA** — *"Insegna ciò che impari"* (effetto Feynman): era l'unica regola che viveva solo in `RULES.md`, ed è il principio su cui poggia tutto il binario Nina.
+- [✓] **Numerazione 1-10 INVARIATA** — scelta voluta: mezzo repo cita "regola N", rinumerare avrebbe rotto ogni citazione. Si aggiunge in coda, non si rimescola.
+- [✓] **Le 2 regole grafiche SCRITTE** (erano `[ ]` "da fare insieme" dalla #57, ripetute due volte in bussola e mai fatte) → `BRAIN/REGOLE_GRAFICHE.md`, servito anche alla dashboard. **Decise sui dati, non a gusto**: contate le occorrenze reali su 68 file `.tsx/.ts`.
+  - **PALETTE**: neutro `slate` (1509 occorrenze/50 file) + 5 accent — `emerald` vivo/fatto (340) · `cyan` sistema/dati (224) · `amber` in corso/attenzione (211) · `indigo` Nina/contenuti (115) · `rose` persone/identità (95) — + allarme `red` (22). Ritirati i doppioni: `zinc`→slate (era un secondo neutro), `green/teal`→emerald, `sky/blue`→cyan, `yellow/orange`→amber, `violet/purple`→indigo, `pink`→rose. **Applicazione additiva**: il nuovo nasce a norma, il vecchio si converte quando si tocca quel file. Nessun repaint da 68 file.
+  - **LINGUA ICONE**: `lucide-react` per l'**interfaccia** (già in 41 file su 68, eredita `currentColor` quindi segue palette e tema da sola), **emoji solo nel contenuto** (episodi, caption, stati bussola `[✓]`, Pietre `⟡` — lì l'emoji è *dato*, viaggia col testo e finisce nel RAG). Le frecce `→` sono tipografia, non icone: **261 delle 523 occorrenze totali** erano quelle. Confine in una riga: *se ci clicchi sopra → lucide; se è una parola che finirebbe uguale in un episodio → emoji*.
+- [ ] **Resta una terza copia**: `DOCS/ASSOLUTO/ASSOLUTO_V7.md:210` ha le sue "10 Regole — Titanium Ventures". È documento strategico storico (ASSOLUTO = "materia di studio, non task" per il RIPASSO), non l'ho toccato. Decidi tu se derivarlo o marcarlo come storico.
+
+**⚠️ TROVATO OGGI — il sistema è muto da 17 giorni**
+- [ ] `nina-loop`, snapshot RAG, retention, inventario notturno, AI news watcher: **ultimo output 17,5 giorni fa** (soglia 3-4). Ultimo commit automatico: **30/07**. Vanno riaccesi e verificati.
+- [ ] RAG a **21.630 chunk** (era ~32.800 il 24/06): da capire se è il rientro dopo un rebuild o una perdita.
+- [ ] API server (`:5001`) **giù**. Il grounding di Nina ha funzionato solo grazie al fallback sul motore diretto.
+- [ ] W1 social: i 3 post rimasti erano bloccati dal tetto 29 giorni — **la finestra è passata**, vanno riprogrammati.
+
+---
+
 ## Sessione #69 · 28/07/2026 — RECUPERO ARRETRATO: 3 agenti in parallelo, Claude verificatore
 
 **Matteo non revisionava dal 21/07 (7 notti). 3 agenti read-only (episodi/bozze · dashboard · critiche+proposte) hanno verificato tutto contro il codice reale; i fix tecnici li ho applicati io, le decisioni editoriali restano a Matteo.**

@@ -69,3 +69,14 @@ DATA/view_index.json
 # ma dentro finiscono anche .txt di esito (recover/restore) rigenerati a ogni run
 /logs/
 /DATA/logs/
+
+# Riferimenti esterni in sola lettura (S0 scala GENESIS, #70): clone di repo altrui
+# tenuti per consultazione. Hanno il loro .git: fuori dal nostro repo, mai committati.
+/ARCHIVE/REFERENCE/
+
+# Database GENESIS (S1/S2, #70): e' DERIVATO — si rigenera con
+#   python CORE/genesis_db.py && python CORE/genesis_seed.py
+# In git sta lo schema (genesis_db.py) e i dati (genesis_seed.py), non il binario.
+/DATA/genesis.db
+/DATA/genesis.db-wal
+/DATA/genesis.db-shm

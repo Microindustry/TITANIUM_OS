@@ -11,7 +11,7 @@
   - [MILESTONE ATTUALE](#milestone-attuale)
   - [GENESIS STACK  nodi attivi](#genesis-stack-nodi-attivi)
   - [PERSONAGGI AI](#personaggi-ai)
-  - [LE 10 REGOLE  TITANIUM_OS OPERATING PRINCIPLES](#le-10-regole-titaniumos-operating-principles)
+  - [LE 12 REGOLE  TITANIUM_OS OPERATING PRINCIPLES](#le-12-regole-titaniumos-operating-principles)
   - [SETUP MACCHINA (fissa DESKTOP-IFACE2R)](#setup-macchina-fissa-desktop-iface2r)
   - [REGOLE CODICE (non negoziabili)](#regole-codice-non-negoziabili)
   - [PIPELINE CONOSCENZA (il loop che si autoalimenta)](#pipeline-conoscenza-il-loop-che-si-autoalimenta)
@@ -158,9 +158,16 @@ Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
 
 ---
 
-## LE 10 REGOLE — TITANIUM_OS OPERATING PRINCIPLES
+## LE 12 REGOLE — TITANIUM_OS OPERATING PRINCIPLES
 
 > *Un sistema che gira da solo vale più di 10 abitudini che dipendono dalla volontà.*
+
+**FONTE UNICA (#70, 16/08/2026).** Questa lista è il canone delle regole. `BRAIN/RULES.md`
+non è più una seconda copia scritta a mano: è **derivato** da qui con
+`python AUTOMATIONS/tools/sync_regole.py`. Stesso principio della Mappa in #56 —
+*deriva, non copia*. Le 8 regole operative di `DOCS/RIPASSO_S32-56.md §2` restano un
+documento storico (come si è lavorato tra la #32 e la #56), non una terza lista.
+La numerazione 1-10 **non cambia mai**: mezzo repo cita "regola N".
 
 1. **Niente è finito — ogni cosa è una versione.**
    Non aspettare la perfezione. Una versione funzionante oggi > una versione perfetta mai.
@@ -191,6 +198,19 @@ Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
 
 10. **Libertà sopra profitto.**
     Il capannone entro 2030 non è un obiettivo lavorativo — è un obiettivo di sovranità.
+
+11. **Il sistema PROPONE, l'umano APPROVA.**
+    Nessun agente modifica codice, chiavi o canone da solo: scrive una proposta, decide Matteo.
+    *Era già legge nel codice* (`SELF_IMPROVE` propose-only, `STATE.self_improve.human_approval_required`,
+    gate `[approvazione]`) ma era stata tolta dal testo il 20/06: una regola che comanda il
+    sistema e non è scritta nella lista delle regole. Rimessa il 16/08 (#70).
+    **Eccezione a canone:** la corsia Nina è AUTO — genera e auto-promuove da sola (#44).
+
+12. **Insegna ciò che impari.**
+    Spiegare forza la chiarezza (effetto Feynman): se non sai raccontarlo, non l'hai capito.
+    Ogni concetto tecnico diventa un episodio, un carosello, un post.
+    *Recuperata da `BRAIN/RULES.md` il 16/08 (#70): era l'unica regola che viveva solo lì.
+    È il principio su cui poggia tutto il binario Nina.*
 
 ---
 

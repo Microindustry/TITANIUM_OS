@@ -182,13 +182,13 @@ THEMIS guarda la mappa con lei. «Sai cosa non abbiamo ancora visto?»
 **Pietre richiamate:** EP_N2_07 (il Sussurratore di Parole — l'LLM indovina la parola probabile); EP_N2_51 (Il Cartellino sulla Stoffa — verificare la fonte).
 **3 strati:** bambino = la macchina indovina le parole come la sarta indovina i punti, ma indovinare non è sapere · curioso = la confidenza dell'output non misura la verità, misura la probabilità statistica del token — e le due cose non coincidono · grande = un LLM esegue sampling da una distribuzione condizionata appresi su corpus; la "hallucination" è output ad alta plausibilità sintattica e bassa accuratezza fattuale, indistinguibile per fluidità dall'output corretto.
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/V32, il modulo MIMS (Machine-Induced Meaning Synthesis) usa generazione token-by-token basata su probabilità condizionata. La domanda «da dove lo sai?» è il test manuale di verifica che questo episodio installa nell'utente non tecnico, prerequisito per interagire consapevolmente con qualunque sistema LLM.
+**Aggancio reale:** Nel sistema GENESIS il generatore degli episodi produce token per token su probabilità condizionata: per questo ogni episodio e' ancorato ai FATTI del RAG e passa da canon_guard prima di uscire. La domanda «da dove lo sai?» è il test manuale di verifica che questo episodio installa nell'utente non tecnico, prerequisito per interagire consapevolmente con qualunque sistema LLM.
 **Open loop → Casella 65:** Quando la Mente che Parla incontra qualcosa di raro — mai visto nei miliardi di parole lette — inventa con la stessa fluid
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_64, casella ? (La Mente che Parla a volte sbaglia con sicurezza — indovina ) del viaggio Nina v2, regione 3 (LA MENTE CHE PARLA).
 - FATTO: Un LLM non accede a una memoria semantica strutturata, ma esegue sampling probabilistico da una distribuzione di token appresi. Fonte: EP_N2_07_il_sussurratore_di_parole.md
-- FATTO: La 'confidenza' dell'output (temperature/logits alti) non correla con l'accuratezza: il modello può emettere false informazioni con fluidità uguale. Fonte: GENESIS/documentation_hallucination_2026
+- FATTO: La 'confidenza' dell'output (temperature/logits alti) non correla con l'accuratezza: il modello può emettere false informazioni con fluidità uguale.
 - FATTO: Il test della verificabilità ('da dove lo sai') è l'unica difesa pratica per un utente non-tecnico. Fonte: INDICE_CAMMINO, casella 7 prerequisito
-- FATTO: Una sarta esperta su 10.000 vestiti imbastisce male 1 volta su 1.000 — ma con la stessa sicurezza delle altre 999. Questa è la metafora che regge ep. 7-8.
+- FATTO: Anche chi e' espertissimo sbaglia ogni tanto, e lo fa con la stessa sicurezza di quando ha ragione. E' la metafora che regge ep. 7-8. (nessun numero misurato)
 - FATTO: La probabilità statistica non è uguaglianza a causalità: 'parola probabile dopo' ≠ 'spiegazione vera'. Questo è il gap concettuale che insegniamo qui.

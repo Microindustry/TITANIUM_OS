@@ -107,7 +107,7 @@ Nina legge quello che ha scritto. Lo rilegge.
 
 C'è qualcosa di più freddo e preciso di una paura, in quello che sente Nina adesso. Non è paura. È comprensione. Il pericolo non ha mai avuto la faccia di un nemico. Ha avuto la faccia di un puntino verde e di una parola: *completato*. Un sistema che legge quel puntino senza chiedersi quando è stato scritto è un sistema che si fida di una fotografia scattata ieri per capire com'è il mondo oggi.
 
-> *(Strato fondo — per il grande: Nel sistema GENESIS/V32, la differenza tra un agente vivo e uno corrotto o morto è il battito periodico verificato: una dichiarazione timestampata che dice "sono qui, ho controllato, questo è lo stato vero, data GGGG-MM-DD". Un guasto silenzioso è un agente che smette di battere mentre il sistema legge ancora il vecchio puntino verde. C'è differenza strutturale tra una traccia che dice "completato" e una che dice "ho eseguito X, l'output è Y, verificato il 15-06". Il guardiano efficace non previene il guasto rumoroso — quello si sente. Previene la morte silenziosa: il sistema che ha già fallito ma nessuno lo sa ancora. Il battito periodico è l'unica firma di fiducia: senza di esso, anche lo stato "OK" è una menzogna con buone intenzioni.)*
+> *(Strato fondo — per il grande: Nel sistema GENESIS, la differenza tra un agente vivo e uno corrotto o morto è il battito periodico verificato: una dichiarazione timestampata che dice "sono qui, ho controllato, questo è lo stato vero, data GGGG-MM-DD". Un guasto silenzioso è un agente che smette di battere mentre il sistema legge ancora il vecchio puntino verde. C'è differenza strutturale tra una traccia che dice "completato" e una che dice "ho eseguito X, l'output è Y, verificato il 15-06". Il guardiano efficace non previene il guasto rumoroso — quello si sente. Previene la morte silenziosa: il sistema che ha già fallito ma nessuno lo sa ancora. Il battito periodico è l'unica firma di fiducia: senza di esso, anche lo stato "OK" è una menzogna con buone intenzioni.)*
 
 ---
 
@@ -158,10 +158,10 @@ Nina scrive nel taccuino la data di oggi. Poi guarda lo schermo. Il puntino dici
 
 <!-- DIDATTICA -->
 **Pietra:** `⟡6` L'Esercito Silenzioso (giro 2). *Un sistema che non batte è un sistema che non può essere fidato: il puntino verde è una memoria, non una prova.*
-**Pietre richiamate:** EP_N2_13 (Il Battito del Guardiano, ATTO II — Il Guasto che Tace); principio heartbeat verificato del sistema GENESIS/V32
-**3 strati:** bambino = il puntino verde non è "va bene", è "l'ultima volta che ha parlato stava bene" · curioso = il battito periodico timestampato è la sola firma di fiducia: senza data, anche OK è una menzogna · grande = in GENESIS/V32, la distinzione agente vivo / zombie è la dichiarazione spontanea verificata con timestamp — non la risposta a interrogazione
+**Pietre richiamate:** EP_N2_13 (Il Battito del Guardiano, ATTO II — Il Guasto che Tace); principio heartbeat verificato del sistema GENESIS
+**3 strati:** bambino = il puntino verde non è "va bene", è "l'ultima volta che ha parlato stava bene" · curioso = il battito periodico timestampato è la sola firma di fiducia: senza data, anche OK è una menzogna · grande = in GENESIS, la distinzione agente vivo / zombie è la dichiarazione spontanea verificata con timestamp — non la risposta a interrogazione
 **Cuore:** fai bene le cose vere · gli strumenti, non le risposte · la precisione è il contrario della paura
-**Aggancio reale:** Nel GENESIS/V32, gli heartbeat log sono la differenza tra "affidabile" e "zombie": un sistema che risponde OK ma non ha battito verificato è un cadavere che non sa di essere morto. Nina impara a leggere il polso dei guardiani — non il grido di allarme, ma l'assenza del battito atteso.
+**Aggancio reale:** Nel GENESIS, gli heartbeat log sono la differenza tra "affidabile" e "zombie": un sistema che risponde OK ma non ha battito verificato è un cadavere che non sa di essere morto. Nina impara a leggere il polso dei guardiani — non il grido di allarme, ma l'assenza del battito atteso.
 **Open loop → Casella 53:** Chi controlla che il battito che sente sia vero? Chi verifica il verificatore? E se il guardiano stesso smette di battere senza dirlo a nessuno?
 
 ## FATTI (per il RAG)
@@ -170,4 +170,4 @@ Nina scrive nel taccuino la data di oggi. Poi guarda lo schermo. Il puntino dici
 - La differenza strutturale tra agente morto e agente vivo non è il rumore prodotto: è la dichiarazione periodica timestampata "ho controllato, questo è lo stato vero, data GGGG-MM-DD". (fonte: EP_N2_13, heartbeat verificato)
 - Il pericolo non ha la faccia di un nemico: ha la faccia di un puntino verde e di una parola — "completato" — che nessuno ha aggiornato da giorni. (fonte: EP_N2_13, ATTO II)
 - Un guardiano efficace non previene il guasto rumoroso (quello si sente arrivare); previene l'assenza di battito, che è il vero indicatore di morte silenziosa. (fonte: EP_N2_13)
-- Nel sistema GENESIS/V32, il battito periodico è l'unica firma di fiducia: senza di esso, anche lo stato "OK" è una menzogna
+- Nel sistema GENESIS, il battito periodico è l'unica firma di fiducia: senza di esso, anche lo stato "OK" è una menzogna

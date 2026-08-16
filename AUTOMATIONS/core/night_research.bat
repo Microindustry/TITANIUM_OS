@@ -52,6 +52,19 @@ if exist "%TOPICS%" (
 echo [night_research] RAG Nina: genera dal prossimo seme archiviato >> "%LOG%"
 "%PYTHON%" NODES\NINA_AGENT\nina_rag_loop.py --count 1 >> "%LOG%" 2>&1
 
+:: COMMIT della corsia NINA (#70). run_story_agent.bat committa solo S2_SISTEMA: gli
+:: episodi di Nina restavano untracked finche' non passava un umano (in #69 EP_N2_62/63/64
+:: sono entrati nel repo solo col commit di chiusura a mano). Stesso schema del gemello:
+:: pathspec ESPLICITO, cosi' non si mette in staging altro che i processi notturni toccano.
+git add CONTENT_ENGINE\DATABASE\episodes\S_AVVENTURA\ DATA\nina_state.json
+git diff --cached --quiet -- CONTENT_ENGINE\DATABASE\episodes\S_AVVENTURA\ DATA\nina_state.json
+if errorlevel 1 (
+    git commit -m "auto: nina_rag_loop - episodi Nina %DATE%" -- CONTENT_ENGINE\DATABASE\episodes\S_AVVENTURA\ DATA\nina_state.json >> "%LOG%" 2>&1
+    echo [night_research] commit corsia Nina fatto >> "%LOG%"
+) else (
+    echo [night_research] nessun episodio Nina nuovo - skip commit >> "%LOG%"
+)
+
 :: RIFLUSSO: i FATTI degli episodi (generati da story_agent alle 02:07) tornano in
 :: MENTE/<dominio>/ — la conoscenza INTERNA del progetto entra nel RAG. Chiude il loop
 :: (regola 7). Va PRIMA del rag-update, cosi episodi + paper si indicizzano in un colpo.

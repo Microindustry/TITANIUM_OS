@@ -68,6 +68,7 @@ CANONE_STALE_DAYS = 30  # file canone fermo da N giorni -> segnale (organo silen
 # Canone del VAULT (#54, attacco 07 P1): la "verita' unica" MENTE/_CANONE.md va sorvegliata
 MENTE_DIR = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
 CANONE_VAULT_STALE_DAYS = 14  # _CANONE.md fermo da N giorni con la serie che genera ogni notte = deriva
+CONTENT_AGE_F = AUDIT_DIR / "content_age.json"  # hash del CONTENUTO -> data di primo avvistamento
 
 # Organi vivi (#54 ondata C — lezione guasto 7: la notturna morta 11 giorni in silenzio):
 # un organo notturno si giudica dall'OUTPUT, non dal processo. Un organo che tace non e'
@@ -427,14 +428,85 @@ def _cid(c: dict) -> str:
     return "AUD-" + hashlib.sha1(base.encode("utf-8")).hexdigest()[:10]
 
 
+# _cid e' l'hash della PROSA dell'LLM: se stanotte riscrive lo stesso guasto con parole
+# diverse nasce una critica NUOVA e la vecchia auto-chiude -> lo stesso problema rientra
+# piu' volte (misurato 16/08: 30 voci duplicate su 261, es. "night_research.log: rilevato
+# timeout di rete" x10). _sig() estrae invece una firma STABILE del problema, indipendente
+# dalle parole: per i finding derivati dai log e' (logfile + tipo di guasto), altrimenti e'
+# lo scheletro lessicale della frase. Non cambia gli id esistenti (nessuna migrazione):
+# serve solo a RICONOSCERE che una critica nuova e' la stessa di una gia' archiviata.
+_SIG_LOG_RX = re.compile(r"([\w.\-]+\.log)\b.{0,60}?rilevat\w*\s+(.+?)\s+nelle ultime esecuzioni",
+                         re.IGNORECASE | re.DOTALL)
+_SIG_STOP = {"della", "delle", "degli", "dello", "nella", "nelle", "sulla", "sulle", "come",
+             "questo", "questa", "quello", "quelli", "sono", "stato", "stata", "essere",
+             "anche", "perche", "quando", "dopo", "prima", "ogni", "piu", "meno", "solo"}
+
+
+def _sig(c: dict) -> str:
+    area = (c.get("area") or "").strip().lower()
+    finding = c.get("finding") or ""
+    m = _SIG_LOG_RX.search(finding)
+    if m:
+        # il TIPO di guasto ridotto alle sue parole portanti: "un timeout di rete" e
+        # "timeout di rete" sono lo stesso guasto, non due
+        tipo = [w for w in re.findall(r"[a-zà-ù]{3,}", m.group(2).lower()) if w not in _SIG_STOP]
+        base = f"{area}|log|{m.group(1).lower()}|" + " ".join(sorted(set(tipo)))
+    else:
+        # scheletro lessicale: niente numeri/date/percorsi/virgolette, parole ordinate
+        words = [w for w in re.findall(r"[a-zà-ù]{4,}", finding.lower()) if w not in _SIG_STOP]
+        base = f"{area}|txt|" + " ".join(sorted(set(words))[:12])
+    return hashlib.sha1(base.encode("utf-8")).hexdigest()[:12]
+
+
+def _content_age_days(path: Path) -> int:
+    """Eta' del CONTENUTO, non del file. L'mtime mente in due modi: un generatore che
+    riscrive il file identico lo fa sembrare fresco, e un salvataggio senza modifiche
+    azzera l'allarme senza che il canone sia stato davvero aggiornato. Qui si tiene un
+    registro hash -> data di primo avvistamento: l'eta' riparte SOLO se il testo cambia.
+    Primo avvistamento (registro vuoto): si parte dall'mtime, cosi' non si perde il
+    segnale gia' maturato. Additivo, fail-safe (in caso di errore torna all'mtime)."""
+    try:
+        h = hashlib.sha1(path.read_bytes()).hexdigest()
+        store = _read_json(CONTENT_AGE_F, {}) or {}
+        key = path.name
+        rec = store.get(key) or {}
+        if rec.get("hash") != h:
+            mtime_day = datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d")
+            # contenuto cambiato -> l'eta' riparte da oggi; bootstrap -> parte dall'mtime
+            first_seen = TODAY if rec else min(TODAY, mtime_day)
+            store[key] = {"hash": h, "first_seen": first_seen, "last_check": TODAY}
+            CONTENT_AGE_F.parent.mkdir(parents=True, exist_ok=True)
+            CONTENT_AGE_F.write_text(json.dumps(store, ensure_ascii=False, indent=2),
+                                     encoding="utf-8")
+            rec = store[key]
+        else:
+            rec["last_check"] = TODAY
+            store[key] = rec
+            CONTENT_AGE_F.write_text(json.dumps(store, ensure_ascii=False, indent=2),
+                                     encoding="utf-8")
+        return (datetime.now() - datetime.strptime(rec["first_seen"], "%Y-%m-%d")).days
+    except Exception as e:
+        logger.warning("content_age fallback su mtime per %s: %s", path.name, e)
+        return (datetime.now() - datetime.fromtimestamp(path.stat().st_mtime)).days
+
+
 def append_critiche(new: list[dict], signals: dict) -> dict:
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     existing = _read_json(CRITICHE, [])
     by_id = {c["id"]: c for c in existing if "id" in c}
+    # indice per FIRMA STABILE: la piu' vecchia voce vince (e' l'originale del problema)
+    by_sig: dict[str, str] = {}
+    for c in sorted(existing, key=lambda x: x.get("date", "")):
+        by_sig.setdefault(_sig(c), c.get("id", ""))
     new_cids = set()
     added = 0
     for c in new:
         cid = _cid(c)
+        # stesso problema gia' archiviato con altre parole? riusa quella voce (no clone)
+        if cid not in by_id:
+            gemello = by_sig.get(_sig(c))
+            if gemello and gemello in by_id:
+                cid = gemello
         new_cids.add(cid)
         if cid in by_id:
             by_id[cid]["last_seen"] = TODAY          # ri-osservata stanotte
@@ -642,7 +714,7 @@ def check_canone_vault(signals: dict) -> None:
     try:
         canone = MENTE_DIR / "_CANONE.md"
         if canone.exists():
-            age = (datetime.now() - datetime.fromtimestamp(canone.stat().st_mtime)).days
+            age = _content_age_days(canone)
             out["canone_age_days"] = age
             text = canone.read_text(encoding="utf-8", errors="replace")
             declared = [int(n) for n in re.findall(r"EP_N2_(\d{1,3})", text)]

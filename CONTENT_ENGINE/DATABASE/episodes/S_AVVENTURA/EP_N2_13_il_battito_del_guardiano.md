@@ -127,7 +127,7 @@ Nina tocca il registro con un dito. Non è rabbia, quella che sente. È qualcosa
 
 «Esatto.» THEMIS non sorride. Non ancora. «Il guasto rumoroso si sente arrivare. Cade, rompe, grida. Sai dov'è. Il guasto silenzioso ti guarda in faccia e dice "fatto". E tu gli credi, perché ieri ti diceva la verità. E il giorno prima anche. E così il danno cresce un giorno alla volta, nascosto sotto la parola "fatto", finché non è troppo grande per essere ignorato — e a quel punto è già tardi per essere economico da riparare.»
 
-> *(Strato fondo — per il grande: Il guasto silenzioso è quando un processo dichiara completamento senza verificare l'output reale. È più pericoloso del guasto rumoroso perché accumula danno invisibile finché non collassa. La difesa è il monitoraggio continuo dell'output — freschezza, correttezza, segnali — e il battito periodico: una dichiarazione verificata che dice "sono ancora qui, ho controllato, questo è lo stato vero, in questa data". Nel sistema GENESIS/V32, è la differenza tra una task che dice "completato" e una che dice "ho eseguito X, l'output è Y, verificato il 15-06". Un agente silenzioso che non batte è un agente corrotto o morto. Un guardiano efficace non previene il guasto: lo rende visibile abbastanza presto da essere curato.)*
+> *(Strato fondo — per il grande: Il guasto silenzioso è quando un processo dichiara completamento senza verificare l'output reale. È più pericoloso del guasto rumoroso perché accumula danno invisibile finché non collassa. La difesa è il monitoraggio continuo dell'output — freschezza, correttezza, segnali — e il battito periodico: una dichiarazione verificata che dice "sono ancora qui, ho controllato, questo è lo stato vero, in questa data". Nel sistema GENESIS, è la differenza tra una task che dice "completato" e una che dice "ho eseguito X, l'output è Y, verificato il 15-06". Un agente silenzioso che non batte è un agente corrotto o morto. Un guardiano efficace non previene il guasto: lo rende visibile abbastanza presto da essere curato.)*
 
 ---
 
@@ -193,7 +193,7 @@ Sulla Mappa Viva, la casella 13 si illumina lentamente — non di un balzo, ma c
 **Pietre richiamate:** ⟡3 (la traccia, documenta non ricordare) · ⟡4 (il calibro di FORGE — la misura non mente)
 **3 strati:** bambino = il soldato in piedi che dorme, e il guardiano che sente il battito · curioso = la differenza tra "dice di stare bene" e "dimostra di stare bene" con data e risultato · grande = monitoraggio dell'output reale vs. autodichiarazione; heartbeat verificato come gold standard nei sistemi fault-tolerant
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel GENESIS V32/MIMS, il sistema di heartbeat e health-check: non bastano i log di esecuzione, serve la verifica dell'output (RAG freshness, codici eseguiti, memoria state). Un agente silenzioso che non batte è un agente corrotto o morto. Il battito è più affidabile della promessa.
+**Aggancio reale:** Nel GENESIS, il sistema di heartbeat e health-check: non bastano i log di esecuzione, serve la verifica dell'output (RAG freshness, codici eseguiti, memoria state). Un agente silenzioso che non batte è un agente corrotto o morto. Il battito è più affidabile della promessa.
 **Open loop → Casella 14:** *Ma se il guardiano stesso diventa silenzioso — se il battito si ferma — chi lo scopre? E come sapremo che non è solo stanco, ma veramente caduto?*
 
 ## FATTI (per il RAG)

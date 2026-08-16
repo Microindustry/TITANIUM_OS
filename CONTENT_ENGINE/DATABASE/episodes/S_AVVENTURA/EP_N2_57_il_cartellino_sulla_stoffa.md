@@ -109,7 +109,7 @@ Questo è il momento in cui capisce qualcosa di più grande. Non basta che una c
 
 Pensa a tutte le volte che ha ripetuto cose senza sapere da dove venivano. Le sembravano solide. Erano nuvole.
 
-> *(Strato fondo — per il grande: Nel recupero per retrieval-augmented generation — RAG — la qualità della risposta dipende dalla tracciabilità della fonte. Il sistema non inventa: recupera da documenti datati, scritti da autori, verificabili. Senza l'indirizzo della fonte, il risultato è allucinazione statistica — un output che suona coerente ma non è ancorato a niente di reale. La mente umana funziona allo stesso modo: una credenza non-sorgentizzata è falsa credenza, anche se suona perfettamente vera. Gli studi su metacognizione ed epistemic vigilance mostrano che chi impara a sorgentizzare le proprie asserzioni riduce il rischio di false credenze del 40-60%. Il cartellino non è burocrazia: è il metadato che rende una risposta ripetibile, controllabile, onesta.)*
+> *(Strato fondo — per il grande: Nel recupero per retrieval-augmented generation — RAG — la qualità della risposta dipende dalla tracciabilità della fonte. Il sistema non inventa: recupera da documenti datati, scritti da autori, verificabili. Senza l'indirizzo della fonte, il risultato è allucinazione statistica — un output che suona coerente ma non è ancorato a niente di reale. La mente umana funziona allo stesso modo: una credenza non-sorgentizzata è falsa credenza, anche se suona perfettamente vera. Chi si abitua a chiedere «da dove lo sai?» impara a separare cio' che ha verificato da cio' che ha solo sentito dire. Il cartellino non è burocrazia: è il metadato che rende una risposta ripetibile, controllabile, onesta.)*
 
 ---
 
@@ -183,7 +183,7 @@ Non è un problema. È il lavoro.
 **Pietre richiamate:** ⟡Ricerca (recuperare i pezzi giusti) · ⟡Significato (capire cosa si tiene e cosa si scarta)
 **3 strati:** bambino = ogni risposta ha bisogno di un cartellino, come la pezza di stoffa della sarta · curioso = il cartellino non crea la verità, crea l'indirizzo per verificarla · grande = senza tracciabilità della fonte, l'output è allucinazione — RAG, metacognizione, epistemic vigilance
 **Cuore:** fai bene le cose vere · gli strumenti, non le risposte · la curiosità è un superpotere
-**Aggancio reale:** Nel sistema GENESIS, il modulo MIMS assegna a ogni asserzione la propria genealogia di documenti e decisioni — autore, timestamp, versione, hash di integrità. Senza metadato, nessun file è attendibile, nessuna risposta è ripetibile, nessuna responsabilità è tracciabile. Il cartellino di Nina è il metadato di TITANIUM_OS.
+**Aggancio reale:** Nel sistema GENESIS, il RAG di MENTE lega ogni chunk alla sua fonte — file, sezione, data — e la risposta cita da dove viene. Senza metadato, nessun file è attendibile, nessuna risposta è ripetibile, nessuna responsabilità è tracciabile. Il cartellino di Nina è il metadato di TITANIUM_OS.
 **Open loop → Casella 58:** Cosa succede quando due cartellini dicono cose diverse sulla stessa domanda? Come si valuta quale fonte pesa di più? → *Il Peso delle Fonti*
 
 ## FATTI (per il RAG)
@@ -191,5 +191,5 @@ Non è un problema. È il lavoro.
 - FATTO 1: Un RAG (Retrieval-Augmented Generation) recupera risposte attendibili solo se può indicare la fonte documentale da cui le ha estratte; senza citazione, l'output è allucinazione statistica.
 - FATTO 2: Nel medioevo, i manoscritti portavano il nome dello scriba e la data al colophon; oggi la tracciabilità è il nuovo colophon: senza di essa, la risposta non è credibile.
 - FATTO 3: Nel viaggio di Nina v2, il giro 3 della Biblioteca (regione 4) insegna il principio fondativo: 'Prendere i pezzi giusti e dire da dove vengono' — che richiama simultaneamente il dominio Ricerca e il dominio Significato.
-- FATTO 4: La mente umana che impara a sorgentizzare le proprie asserzioni riduce il rischio di false credenze del 40-60% (studi su metacognizione e epistemic vigilance).
+- FATTO 4: Chi si abitua a chiedere «da dove lo sai?» separa cio' che ha verificato da cio' che ha solo sentito dire: e' una pratica di metacognizione, non una percentuale misurata.
 - FATTO 5: Nel TITANIUM_OS, il cartellino è metafora del metadato: autore, timestamp, versione, hash di integrità. Senza metadato, nessun file è attendibile.
