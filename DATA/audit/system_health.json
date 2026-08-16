@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-07-30T03:52:53",
-  "date": "2026-07-30",
-  "git_head": "2e98dfac",
-  "rag_chunks": 21614,
+  "last_audit": "2026-08-16T15:00:20",
+  "date": "2026-08-16",
+  "git_head": "b864f679",
+  "rag_chunks": 21630,
   "n_episodes": 301,
-  "n_commits_7d": 24,
+  "n_commits_7d": 0,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,63 +14,75 @@
   },
   "log_issues": [
     {
-      "log": "night_research.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-30 03:40:14 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-30"
+      "log": "critiche_manuali.json",
+      "tipo": "canone critiche stantio",
+      "riga": "canone manuale fermo da 39 giorni (>30) — 19 attive da riverificare",
+      "data": "2026-08-16"
     },
     {
-      "log": "night_research.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-30 03:40:37 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
-      "data": "2026-07-30"
+      "log": "_CANONE.md",
+      "tipo": "verita' unica stantia",
+      "riga": "_CANONE.md fermo da 18 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-08-16"
     },
     {
-      "log": "research_agent.log",
-      "tipo": "rate-limit sorgente",
-      "riga": "2026-07-30 03:38:46 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-07-30"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "nina-loop: ultimo output 17.5 giorni fa (soglia 3) — nina_state.json",
+      "data": "2026-08-16"
     },
     {
-      "log": "research_agent.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-07-30 03:39:09 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-07-30"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "snapshot RAG: ultimo output 17.5 giorni fa (soglia 3) — rag_snapshots",
+      "data": "2026-08-16"
     },
     {
-      "log": "research_agent.log",
-      "tipo": "ricerca a vuoto",
-      "riga": "2026-07-30 03:39:12 [research_agent      ] WARNING  Nessun risultato sopra la soglia di rilevanza (0.40).",
-      "data": "2026-07-30"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "inventario notturno: ultimo output 17.5 giorni fa (soglia 3) — INVENTARIO_NOTTURNO.md",
+      "data": "2026-08-16"
     },
     {
-      "log": "night_push.log",
-      "tipo": "crash/eccezione",
-      "riga": "⚠ night_research.log: Traceback (most recent call last):",
-      "data": "2026-07-29"
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "retention disco: ultimo output 17.5 giorni fa (soglia 3) — retention_last.json",
+      "data": "2026-08-16"
+    },
+    {
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "AI news watcher: ultimo output 17.5 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-08-16"
+    },
+    {
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "riflusso FATTI: ultimo output 19.5 giorni fa (soglia 7) — genesis_nodi_fatti.md",
+      "data": "2026-08-16"
     }
   ],
-  "vault_orphans": 3,
+  "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 21,
-    "stale": false
+    "file_age_days": 39,
+    "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 1,
+    "canone_age_days": 18,
     "max_ep_disco": 64,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 0.0,
-    "snapshot RAG": 0.0,
-    "inventario notturno": 1.0,
-    "retention disco": 1.0,
-    "AI news watcher": 0.0,
-    "daily brief": 0.8,
-    "riflusso FATTI": 2.1
+    "nina-loop": 17.5,
+    "snapshot RAG": 17.5,
+    "inventario notturno": 17.5,
+    "retention disco": 17.5,
+    "AI news watcher": 17.5,
+    "daily brief": 0.0,
+    "riflusso FATTI": 19.5
   },
   "pip_audit": {
     "vulns": 0,
@@ -84,9 +96,9 @@
   },
   "critiche": {
     "added": 6,
-    "auto_closed": 6,
-    "total": 255,
-    "open": 30
+    "auto_closed": 30,
+    "total": 261,
+    "open": 6
   },
   "verdict": "ATTENZIONE"
 }
