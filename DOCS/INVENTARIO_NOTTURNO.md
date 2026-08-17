@@ -47,6 +47,14 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-08-17 · 2 commit
+- `690f5474` fix(canone): regole a fonte unica + bonifica MIMS + scala GENESIS S0-S2
+- `28570b73` auto: night_audit - cartella clinica 16/08/2026
+
+_episodi: 301 · critiche aperte: 6 (255 risolte) · RAG: 21630 chunk_
+
+
+
 ## 2026-07-30 · 2 commit
 - `ebc987f9` auto: night_audit - cartella clinica 30/07/2026
 - `2e98dfac` auto: story_agent - episodi generati 30/07/2026
