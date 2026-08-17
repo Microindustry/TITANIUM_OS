@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-f9d0057022",
+    "date": "2026-08-17",
+    "git": "ac9187a9",
+    "area": "V32",
+    "severity": "media",
+    "finding": "Il blocco hardware UPS (~50-80€) è listato come bloccante con la motivazione che la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni. Ogni corruzione forza un rebuild del RAG (potenzialmente la causa del -11.000 chunk) e blocca ore di lavoro notturno.",
+    "azione": "Ordinare l'UPS nella stessa sessione di acquisto del mandrino 2.2kW ER20: sono entrambi acquisti fisici, si smaltiscono in un'unica azione. Posizionarlo accanto a Vevor+ER20 come da nota blockers.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-17"
+  },
+  {
+    "id": "AUD-e60070a18b",
+    "date": "2026-08-17",
+    "git": "ac9187a9",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Il log_issues riporta (2026-08-17): \"canone manuale fermo da 40 giorni (>30) — 19 attive da riverificare\" e \"_CANONE.md fermo da 19 giorni (soglia 14) mentre la serie si auto-genera ogni notte\". Con 301 episodi totali e 64 vivi, il canone manuale e il _CANONE.md sono la fonte di verità che Nina legge: se entrambi sono stantii, le regole che bloccano le invenzioni non riflettono lo stato reale del sistema.",
+    "azione": "Aprire critiche_manuali.json e riverificare le 19 critiche attive: chiudere quelle già risolte dalla bonifica #70, aggiornare quelle che cambiano stato. Poi aggiornare _CANONE.md (sezione fuori dai marker <!-- COLLEGATI -->) con le regole emerse dalla sessione #70 (fix pilastri, ban source hallucination, regola aggancio_reale).",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-17"
+  },
+  {
+    "id": "AUD-d16f6a07b7",
+    "date": "2026-08-17",
+    "git": "ac9187a9",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "Cinque organi vitali sono fermi da 18-21 giorni, confermati dai log_issues con tipo 'organo silenzioso': \"nina-loop: ultimo output 18.8 giorni fa (soglia 3)\", \"snapshot RAG: ultimo output 18.8 giorni fa (soglia 3)\", \"retention disco: ultimo output 18.8 giorni fa (soglia 3)\", \"AI news watcher: ultimo output 18.8 giorni fa (soglia 4)\", \"riflusso FATTI: ultimo output 20.9 giorni fa (soglia 7)\" (2026-08-17). In parallelo l'API :5001 è giù (7 endpoint su 9 danno 500): il grounding di Nina regge solo sul fallback diretto, un singolo punto di cedimento.",
+    "azione": "Eseguire night_research.bat e verificare che tutti e cinque gli organi producano output stanotte. Contestualmente diagnosticare :5001 (log di avvio, import mancanti, variabili env) e riportarlo online prima della prossima sessione Nina.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-17"
+  },
+  {
+    "id": "AUD-c48b7da799",
+    "date": "2026-08-17",
+    "git": "ac9187a9",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Il RAG conta 21.621 chunk contro i ~32.800 del 24/06: un calo di oltre 11.000 chunk (~34%) senza una causa documentata nei log. Finché non si sa se è un rebuild controllato o una perdita reale, il contesto iniettato a Nina è potenzialmente incompleto e i risultati di retrieve_context() sono inaffidabili.",
+    "azione": "Confrontare il manifest dell'ultimo snapshot RAG (rag_snapshots) con quello del 24/06 per identificare quali sorgenti sono sparite. Se è perdita, rieseguire l'ingestione dalle sorgenti mancanti; se è rebuild atteso, documentarlo nel canone così l'allarme non si ripete.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-17"
+  },
+  {
+    "id": "AUD-26e5d6c358",
+    "date": "2026-08-17",
+    "git": "ac9187a9",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Il gate del canone è ambra: canon_violations = 26 e next_step dichiara esplicitamente \"il gate è ambra fino al batch 3\". Il log_issues (2026-08-17) conferma che canon_guard segnala ancora 22 righe sugli episodi vivi. Finché il batch 3 non viene eseguito, ogni nuova notte di generazione può produrre episodi che escono senza guardia attiva.",
+    "azione": "Portare Matteo alla decisione sul batch 3 (10 sicuri + 4 da giudicare + 2 da rigenerare) nella prossima sessione: preparare un riepilogo sintetico dei 4 episodi 'da giudicare' (03/05/48/56) con motivazione pro/contro correzione, così la decisione è a click e non a memoria.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-17"
+  },
+  {
+    "id": "AUD-1bfe1e5719",
+    "date": "2026-08-17",
+    "git": "ac9187a9",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "La bussola_open segnala che la regola 'meglio vuoto che inventato' per lo slot aggancio_reale non è ancora operativa: l'LLM continua a inventare dentro GENESIS ('il sistema notturno di consolidamento dei pattern motori' non esiste). La bonifica #70 ha chiuso P0 su MIMS, ma lo stesso meccanismo generativo è ancora aperto su GENESIS. Con il sistema che si riaccende stanotte, la prossima generazione ripartirà dallo stesso bug strutturale.",
+    "azione": "Prima di riaccendere nina-loop, iniettare _CANONE.md nel prompt di nina_agent.py e aggiungere la guardia: se retrieve_context() restituisce meno di N chunk rilevanti per aggancio_reale, lo slot rimane vuoto invece di essere completato dall'LLM. È una modifica a nina_agent.py:188, non un task di ricerca.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-17"
+  },
+  {
     "id": "AUD-f129103831",
     "date": "2026-08-16",
     "git": "b864f679",

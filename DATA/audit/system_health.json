@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-08-16T15:00:20",
-  "date": "2026-08-16",
-  "git_head": "b864f679",
-  "rag_chunks": 21630,
+  "last_audit": "2026-08-17T23:47:00",
+  "date": "2026-08-17",
+  "git_head": "ac9187a9",
+  "rag_chunks": 21621,
   "n_episodes": 301,
-  "n_commits_7d": 0,
+  "n_commits_7d": 2,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -16,73 +16,67 @@
     {
       "log": "critiche_manuali.json",
       "tipo": "canone critiche stantio",
-      "riga": "canone manuale fermo da 39 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-08-16"
+      "riga": "canone manuale fermo da 40 giorni (>30) — 19 attive da riverificare",
+      "data": "2026-08-17"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 18 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-08-16"
+      "riga": "_CANONE.md fermo da 19 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-08-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "nina-loop: ultimo output 17.5 giorni fa (soglia 3) — nina_state.json",
-      "data": "2026-08-16"
+      "riga": "nina-loop: ultimo output 18.8 giorni fa (soglia 3) — nina_state.json",
+      "data": "2026-08-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "snapshot RAG: ultimo output 17.5 giorni fa (soglia 3) — rag_snapshots",
-      "data": "2026-08-16"
+      "riga": "snapshot RAG: ultimo output 18.8 giorni fa (soglia 3) — rag_snapshots",
+      "data": "2026-08-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "inventario notturno: ultimo output 17.5 giorni fa (soglia 3) — INVENTARIO_NOTTURNO.md",
-      "data": "2026-08-16"
+      "riga": "retention disco: ultimo output 18.8 giorni fa (soglia 3) — retention_last.json",
+      "data": "2026-08-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "retention disco: ultimo output 17.5 giorni fa (soglia 3) — retention_last.json",
-      "data": "2026-08-16"
+      "riga": "AI news watcher: ultimo output 18.8 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-08-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "AI news watcher: ultimo output 17.5 giorni fa (soglia 4) — ai_news_watcher_state.json",
-      "data": "2026-08-16"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "riflusso FATTI: ultimo output 19.5 giorni fa (soglia 7) — genesis_nodi_fatti.md",
-      "data": "2026-08-16"
+      "riga": "riflusso FATTI: ultimo output 20.9 giorni fa (soglia 7) — genesis_nodi_fatti.md",
+      "data": "2026-08-17"
     }
   ],
   "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 39,
+    "file_age_days": 40,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 18,
+    "canone_age_days": 19,
     "max_ep_disco": 64,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 17.5,
-    "snapshot RAG": 17.5,
-    "inventario notturno": 17.5,
-    "retention disco": 17.5,
-    "AI news watcher": 17.5,
+    "nina-loop": 18.8,
+    "snapshot RAG": 18.8,
+    "inventario notturno": 0.0,
+    "retention disco": 18.8,
+    "AI news watcher": 18.8,
     "daily brief": 0.0,
-    "riflusso FATTI": 19.5
+    "riflusso FATTI": 20.9
   },
   "pip_audit": {
     "vulns": 0,
@@ -96,9 +90,9 @@
   },
   "critiche": {
     "added": 6,
-    "auto_closed": 30,
-    "total": 261,
-    "open": 6
+    "auto_closed": 0,
+    "total": 267,
+    "open": 12
   },
   "verdict": "ATTENZIONE"
 }
