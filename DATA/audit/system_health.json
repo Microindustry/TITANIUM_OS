@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-08-17T23:47:00",
-  "date": "2026-08-17",
-  "git_head": "ac9187a9",
-  "rag_chunks": 21621,
-  "n_episodes": 301,
-  "n_commits_7d": 2,
+  "last_audit": "2026-08-18T06:25:44",
+  "date": "2026-08-18",
+  "git_head": "71118dd4",
+  "rag_chunks": 22014,
+  "n_episodes": 305,
+  "n_commits_7d": 6,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,49 +14,49 @@
   },
   "log_issues": [
     {
+      "log": "research_agent.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-08-17 23:48:19 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-08-17"
+    },
+    {
+      "log": "research_agent.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-08-17 23:48:51 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&",
+      "data": "2026-08-17"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "· night_research.log: 2026-08-17 23:48:13 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:",
+      "data": "2026-08-17"
+    },
+    {
+      "log": "night_push.log",
+      "tipo": "errore esplicito",
+      "riga": "· night_research.log: 2026-08-17 23:48:13 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:",
+      "data": "2026-08-17"
+    },
+    {
       "log": "critiche_manuali.json",
       "tipo": "canone critiche stantio",
       "riga": "canone manuale fermo da 40 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-08-17"
+      "data": "2026-08-18"
     },
     {
       "log": "_CANONE.md",
-      "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 19 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-08-17"
+      "tipo": "serie oltre il canone dichiarato",
+      "riga": "su disco EP_N2_65, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
+      "data": "2026-08-18"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "nina-loop: ultimo output 18.8 giorni fa (soglia 3) — nina_state.json",
-      "data": "2026-08-17"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "snapshot RAG: ultimo output 18.8 giorni fa (soglia 3) — rag_snapshots",
-      "data": "2026-08-17"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "retention disco: ultimo output 18.8 giorni fa (soglia 3) — retention_last.json",
-      "data": "2026-08-17"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "AI news watcher: ultimo output 18.8 giorni fa (soglia 4) — ai_news_watcher_state.json",
-      "data": "2026-08-17"
-    },
-    {
-      "log": "organi vivi",
-      "tipo": "organo silenzioso",
-      "riga": "riflusso FATTI: ultimo output 20.9 giorni fa (soglia 7) — genesis_nodi_fatti.md",
-      "data": "2026-08-17"
+      "riga": "AI news watcher: ultimo output 19.1 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-08-18"
     }
   ],
-  "vault_orphans": 0,
+  "vault_orphans": 3,
   "canone_manuale": {
     "active": 19,
     "done": 37,
@@ -65,18 +65,18 @@
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 19,
-    "max_ep_disco": 64,
+    "canone_age_days": 0,
+    "max_ep_disco": 65,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 18.8,
-    "snapshot RAG": 18.8,
+    "nina-loop": 0.3,
+    "snapshot RAG": 0.3,
     "inventario notturno": 0.0,
-    "retention disco": 18.8,
-    "AI news watcher": 18.8,
-    "daily brief": 0.0,
-    "riflusso FATTI": 20.9
+    "retention disco": 0.3,
+    "AI news watcher": 19.1,
+    "daily brief": 0.3,
+    "riflusso FATTI": 0.3
   },
   "pip_audit": {
     "vulns": 0,
@@ -84,15 +84,15 @@
     "packages": []
   },
   "qc_episodi": {
-    "checked": 64,
+    "checked": 65,
     "structure_fail": 0,
     "open_loop_missing": 24
   },
   "critiche": {
     "added": 6,
     "auto_closed": 0,
-    "total": 267,
-    "open": 12
+    "total": 273,
+    "open": 18
   },
   "verdict": "ATTENZIONE"
 }

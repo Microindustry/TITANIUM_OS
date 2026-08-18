@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-ea64f7a27f",
+    "date": "2026-08-18",
+    "git": "71118dd4",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Il corpus RAG è sceso da ~32.800 chunk (24/06) a 22.014 oggi: un calo di ~10.786 chunk (~33%) senza una causa documentata nei log. next_step ammette 'capire se è rientro post-rebuild o perdita'. Se è perdita reale, ogni retrieve() di Nina lavora su un corpus monco e i falsi agganciamenti a MIMS/GENESIS già corretti in #70 potrebbero riemergere.",
+    "azione": "Confrontare il manifest dell'ultimo snapshot RAG (organo 'snapshot RAG' a 0.3 giorni, quindi generato stanotte) con quello del 24/06: contare i file sorgente indicizzati allora vs ora. Se mancano sorgenti, rieseguire l'ingestione sui file mancanti; se è rebuild atteso, documentarlo nel canone per silenziare l'allarme.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-18"
+  },
+  {
+    "id": "AUD-cf2447d7a9",
+    "date": "2026-08-18",
+    "git": "71118dd4",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il blocker hardware UPS (~50-80€) è l'unica cura alla radice per la corruzione HNSW ricorrente (3 volte in 2 giorni, dichiarata in blockers). Senza UPS, ogni power-loss può azzerare il lavoro di rebuild del RAG appena avviato — incluso il recupero dei 10.786 chunk mancanti. Il costo è basso, il rischio di perdere un altro ciclo di ricostruzione è alto.",
+    "azione": "Ordinare l'UPS nella stessa sessione in cui si ordina il mandrino ER20 (entrambi in blockers, entrambi fisici): accorpare l'acquisto elimina il costo di un secondo ordine e sblocca la stabilità del sistema prima della prossima notte di rebuild pesante.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-18"
+  },
+  {
+    "id": "AUD-80d3e5c7f0",
+    "date": "2026-08-18",
+    "git": "71118dd4",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "API server :5001 giù: il grounding di Nina ha funzionato solo per fallback sul motore diretto. Nessuna riga di log_issues certifica il 500, ma next_step dichiara esplicitamente '7 endpoint su 9 danno 500'. Il dato è nel report di sistema, non nei log estratti — va verificato in diretta.",
+    "azione": "Avviare il server :5001, leggere lo stderr dei 7 endpoint in 500, identificare la causa radice (variabile d'ambiente mancante? dipendenza non installata? CONTENT_ENGINE_DIR non impostata, già segnalata in bussola_open). Ripristinare prima di qualunque altra automazione notturna.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-18"
+  },
+  {
+    "id": "AUD-5372927a0a",
+    "date": "2026-08-18",
+    "git": "71118dd4",
+    "area": "RICERCA",
+    "severity": "alta",
+    "finding": "Semantic Scholar 429 ricorrente: i log mostrano due eventi distinti nella stessa notte. '2026-08-17 23:48:19 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429' e '2026-08-17 23:48:51 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&'. La chiave gratuita è già in .env (blockers: 'SEMANTIC_SCHOLAR_API_KEY — azzera i 429') ma evidentemente non è ancora attiva o non viene letta. Rischio: la ricerca notturna su CNC/mandrino ER20 — pilastro V32 a 65 giorni — continua a girare a vuoto.",
+    "azione": "Verificare che SEMANTIC_SCHOLAR_API_KEY sia impostata come variabile utente Windows (non solo in .env, vedi bussola_open su _ti_paths.bat) e che research_agent.py la legga all'avvio. Dopo il fix, rieseguire manualmente una query CNC per confermare HTTP 200.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-18"
+  },
+  {
+    "id": "AUD-46419a5954",
+    "date": "2026-08-18",
+    "git": "71118dd4",
+    "area": "RAG",
+    "severity": "media",
+    "finding": "canon_guard segnala ancora 26 violazioni (campo canon_violations) e next_step dichiara 'il gate è ambra fino al batch 3'. I 18 episodi con 'GENESIS/V32' senza verbo software vicino (bussola_open: 'Batch 3 da decidere') sono in attesa di decisione di Matteo. Finché il gate resta ambra, ogni nuova generazione notturna di Nina pesca dal RAG episodi parzialmente contaminati e può propagare la stessa classe di errore appena bonificata in #70.",
+    "azione": "Portare Batch 3 a decisione nella prossima sessione: i 10 episodi di correzione sicura non richiedono giudizio e possono partire subito (dry-run già pronto). Sbloccarli porta canon_violations da 26 verso la soglia verde e riattiva il gate prima che Nina generi EP_N2_66+.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-18"
+  },
+  {
+    "id": "AUD-34738558fa",
+    "date": "2026-08-18",
+    "git": "71118dd4",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "AI news watcher silenzioso da 19.1 giorni: log_issues riporta '2026-08-18: AI news watcher: ultimo output 19.1 giorni fa (soglia 4) — ai_news_watcher_state.json'. L'organo è classificato come 'organo silenzioso' nel log_issues, non è un falso allarme. Il watcher era tra i servizi fermi durante i 17 notti di blackout (30/07-15/08) e non si è riacceso automaticamente con il sistema.",
+    "azione": "Verificare che ai_news_watcher sia incluso nel batch di riaccensione di next_step ('RIACCENDERE IL SISTEMA'). Controllare ai_news_watcher_state.json per capire se il processo è crashato o semplicemente non schedulato. Rieseguire manualmente e verificare output prima di affidarsi all'automazione.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-18"
+  },
+  {
     "id": "AUD-f9d0057022",
     "date": "2026-08-17",
     "git": "ac9187a9",
