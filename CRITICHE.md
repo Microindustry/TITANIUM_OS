@@ -1,3 +1,22 @@
+<!-- TOC -->
+
+- [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
+  - [IL POLSO  17/08/2026 23:47](#il-polso-17082026-2347)
+  - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
+    - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
+    - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
+    - [GENESIS / Dashboard (2 da fare / 12)](#genesis-dashboard-2-da-fare-12)
+    - [Vita Natura (0 da fare / 3)](#vita-natura-0-da-fare-3)
+    - [Identity (0 da fare / 3)](#identity-0-da-fare-3)
+    - [Sistema (trasversale) (1 da fare / 5)](#sistema-trasversale-1-da-fare-5)
+    - [Audit Trimestrale  Cosa Rimuovere (1 da fare / 5)](#audit-trimestrale-cosa-rimuovere-1-da-fare-5)
+    - [Audit Opus  Dati live (1 da fare / 20)](#audit-opus-dati-live-1-da-fare-20)
+    - [Audit 15/06  Opus (0 da fare / 6)](#audit-1506-opus-0-da-fare-6)
+    - [Attacco Opus  17/06 (6 da fare / 9)](#attacco-opus-1706-6-da-fare-9)
+  - [AUTO-AUDIT  aperte (cartella clinica notturna)](#auto-audit-aperte-cartella-clinica-notturna)
+
+<!-- /TOC -->
+
 # CRITICHE — la cartella clinica di TITANIUM_OS
 
 *Vista FILE delle critiche (la vista dashboard è stata eliminata il 07/07/2026 su*
@@ -8,10 +27,10 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 16/08/2026 15:00
+## IL POLSO — 17/08/2026 23:47
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
-- **Auto-audit**: 6 aperte / 261 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
+- **Auto-audit**: 12 aperte / 267 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
 - **Bussola**: i to-do vivono in `DA_FARE_FATTO.md` (non duplicati qui)
 
 ---
@@ -167,16 +186,28 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
 
 - [ ] **[alta · GENESIS]** Il canone si autoalimenta con falsi: la bussola del 2026-08-16 documenta che '_CANONE.md non è mai iniettato nel prompt' di nina_agent.py:188, il RAG viene interrogato sul concetto MIMS e restituisce il paper fuori tema in MENTE/KNOWLEDGE/RESEARCH/mims/, l'Architetto inventa 'MIMS (Machine-Induced Meaning Synthesis)' in EP_N2_64, e 'save_canon' specchia il risultato in MENTE — quindi il falso rientra nel RAG la notte stessa. Il log del 2026-08-16 conta 17 canon_violations attive. Con _CANONE.md fermo da 18 giorni (log: '_CANONE.md fermo da 18 giorni (soglia 14) mentre la serie si auto-genera ogni notte') il circolo si chiude senza freni.
   - *azione: Iniettare _CANONE.md nel prompt dell'Architetto (nina_agent.py:188) come step 1 del next_step già deciso. Poi correggere manualmente EP_N2_57/59/60/63/64 rimuovendo l'acronimo inventato e le fonti fabbricate (es. 'GENESIS/documentation_hallucination_2026' citata in bussola per EP_N2_64). Infine rimuovere o isolare il paper fuori tema da MENTE/KNOWLEDGE/RESEARCH/mims/ prima che venga re-indicizzato.*
+- [ ] **[alta · RAG]** Il RAG conta 21.621 chunk contro i ~32.800 del 24/06: un calo di oltre 11.000 chunk (~34%) senza una causa documentata nei log. Finché non si sa se è un rebuild controllato o una perdita reale, il contesto iniettato a Nina è potenzialmente incompleto e i risultati di retrieve_context() sono inaffidabili.
+  - *azione: Confrontare il manifest dell'ultimo snapshot RAG (rag_snapshots) con quello del 24/06 per identificare quali sorgenti sono sparite. Se è perdita, rieseguire l'ingestione dalle sorgenti mancanti; se è rebuild atteso, documentarlo nel canone così l'allarme non si ripete.*
+- [ ] **[alta · RAG]** Il gate del canone è ambra: canon_violations = 26 e next_step dichiara esplicitamente "il gate è ambra fino al batch 3". Il log_issues (2026-08-17) conferma che canon_guard segnala ancora 22 righe sugli episodi vivi. Finché il batch 3 non viene eseguito, ogni nuova notte di generazione può produrre episodi che escono senza guardia attiva.
+  - *azione: Portare Matteo alla decisione sul batch 3 (10 sicuri + 4 da giudicare + 2 da rigenerare) nella prossima sessione: preparare un riepilogo sintetico dei 4 episodi 'da giudicare' (03/05/48/56) con motivazione pro/contro correzione, così la decisione è a click e non a memoria.*
 - [ ] **[alta · RAG]** La corruzione HNSW è ricorrente (3 volte in 2 giorni, segnalata nei blockers) e il suo effetto concreto è già visibile: 'limit=10 dà 0 embedding' — il RAG restituisce zero risultati su query legittime. Con snapshot fermo da 17.5 giorni (log 2026-08-16: 'snapshot RAG: ultimo output 17.5 giorni fa') non esiste checkpoint recente da cui ripristinare; ogni nuova corruzione resets tutto. L'UPS da 50-80€ è l'unica cura alla radice citata nei blockers, ma finché non è installato ogni power-loss rischia di riportare il sistema a zero.
   - *azione: Ordinare e installare l'UPS questa settimana (è già identificato e quotato nei blockers: '~50-80€ accanto a Vevor+ER20'). Nel frattempo eseguire 'rag_recover --drop-hnsw', poi forzare subito uno snapshot RAG manuale per avere un baseline ripristinabile prima della prossima notte automatica.*
+- [ ] **[alta · SISTEMA]** Il log_issues riporta (2026-08-17): "canone manuale fermo da 40 giorni (>30) — 19 attive da riverificare" e "_CANONE.md fermo da 19 giorni (soglia 14) mentre la serie si auto-genera ogni notte". Con 301 episodi totali e 64 vivi, il canone manuale e il _CANONE.md sono la fonte di verità che Nina legge: se entrambi sono stantii, le regole che bloccano le invenzioni non riflettono lo stato reale del sistema.
+  - *azione: Aprire critiche_manuali.json e riverificare le 19 critiche attive: chiudere quelle già risolte dalla bonifica #70, aggiornare quelle che cambiano stato. Poi aggiornare _CANONE.md (sezione fuori dai marker <!-- COLLEGATI -->) con le regole emerse dalla sessione #70 (fix pilastri, ban source hallucination, regola aggancio_reale).*
+- [ ] **[alta · SISTEMA]** Cinque organi vitali sono fermi da 18-21 giorni, confermati dai log_issues con tipo 'organo silenzioso': "nina-loop: ultimo output 18.8 giorni fa (soglia 3)", "snapshot RAG: ultimo output 18.8 giorni fa (soglia 3)", "retention disco: ultimo output 18.8 giorni fa (soglia 3)", "AI news watcher: ultimo output 18.8 giorni fa (soglia 4)", "riflusso FATTI: ultimo output 20.9 giorni fa (soglia 7)" (2026-08-17). In parallelo l'API :5001 è giù (7 endpoint su 9 danno 500): il grounding di Nina regge solo sul fallback diretto, un singolo punto di cedimento.
+  - *azione: Eseguire night_research.bat e verificare che tutti e cinque gli organi producano output stanotte. Contestualmente diagnosticare :5001 (log di avvio, import mancanti, variabili env) e riportarlo online prima della prossima sessione Nina.*
 - [ ] **[alta · SISTEMA]** Zero commit negli ultimi 7 giorni (n_commits_7d: 0, commits_7d: []). La bussola del 2026-08-16 conferma che 'il loop Nina non committa mai (i commit auto: story_agent toccano solo S2_SISTEMA/)' e che EP_N2_62/63/64 non sono committati. Con il sistema che genera episodi ogni notte e l'HNSW che corrompe periodicamente, gli episodi Nina esistono solo su disco senza storia git: una corruzione o un reset li cancella senza recovery.
   - *azione: Aggiungere un commit automatico degli episodi Nina al termine del loop notturno (o come hook post-generazione). Come misura immediata: committare manualmente EP_N2_62/63/64 prima della prossima notte automatica.*
 - [ ] **[alta · SISTEMA]** 6 organi vitali silenziosi da 17-19 giorni: i log del 2026-08-16 riportano esplicitamente 'nina-loop: ultimo output 17.5 giorni fa (soglia 3)', 'snapshot RAG: ultimo output 17.5 giorni fa (soglia 3)', 'inventario notturno: ultimo output 17.5 giorni fa (soglia 3)', 'retention disco: ultimo output 17.5 giorni fa (soglia 3)', 'AI news watcher: ultimo output 17.5 giorni fa (soglia 4)', 'riflusso FATTI: ultimo output 19.5 giorni fa (soglia 7)'. Non è un drift lento: tutti e sei hanno smesso lo stesso giorno (~29 luglio), suggerendo un evento sistemico singolo (probabile corruzone HNSW da power-loss segnalata nei blockers) che ha fermato l'intera pipeline notturna. Nel frattempo il RAG cresce cieco (21630 chunk, nessuno snapshot), Nina gira senza loop, il disco non viene ripulito.
   - *azione: Prima di qualsiasi fix software: eseguire 'rag_recover --drop-hnsw' (UAC Matteo, già schedulato) per riportare ChromaDB in stato coerente. Poi verificare il log del cron/scheduler intorno al 29/07 per identificare il trigger comune. Solo dopo riavviare i 6 organi uno per uno e confermare output nella notte successiva.*
 - [ ] **[media · RICERCA]** Il log del 2026-08-16 segnala nei blockers 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna'. Con AI news watcher silenzioso da 17.5 giorni (log: 'AI news watcher: ultimo output 17.5 giorni fa (soglia 4)') e la bussola che cita '81% delle chiamate a vuoto' per Semantic Scholar, la pipeline di ricerca notturna è di fatto cieca: non raccoglie segnale esterno, non alimenta il riflusso FATTI (fermo da 19.5 giorni), e il RAG non riceve aggiornamenti da fonti esterne.
   - *azione: Richiedere la API key Semantic Scholar gratuita (operazione da 5 minuti sul sito) e inserirla come variabile utente Windows seguendo il loader reale _ti_paths.bat → _VAULT/KEYS/titanium_os.env (non in .env come indica erroneamente AZIONI_MATTEO.md:32, segnalato in bussola).*
+- [ ] **[media · ROADMAP]** La bussola_open segnala che la regola 'meglio vuoto che inventato' per lo slot aggancio_reale non è ancora operativa: l'LLM continua a inventare dentro GENESIS ('il sistema notturno di consolidamento dei pattern motori' non esiste). La bonifica #70 ha chiuso P0 su MIMS, ma lo stesso meccanismo generativo è ancora aperto su GENESIS. Con il sistema che si riaccende stanotte, la prossima generazione ripartirà dallo stesso bug strutturale.
+  - *azione: Prima di riaccendere nina-loop, iniettare _CANONE.md nel prompt di nina_agent.py e aggiungere la guardia: se retrieve_context() restituisce meno di N chunk rilevanti per aggancio_reale, lo slot rimane vuoto invece di essere completato dall'LLM. È una modifica a nina_agent.py:188, non un task di ricerca.*
 - [ ] **[media · ROADMAP]** Il canone manuale è fermo da 39 giorni con 19 critiche attive da riverificare (log 2026-08-16: 'canone manuale fermo da 39 giorni (>30) — 19 attive da riverificare'). Nel frattempo la serie ha prodotto episodi EP_N2_57–64, il problema MIMS è stato scoperto e catalogato, e le euristiche rumorose hanno generato falsi positivi che potrebbero essere tra le 19 attive. Critiche stantie su un sistema cambiato in 39 giorni perdono validità e consumano attenzione su problemi già risolti o mai esistiti.
   - *azione: Dedicare una sessione di 30-45 minuti a riverificare le 19 critiche attive contro lo stato corrente: scartare quelle risolte dai fix del #69, aggiornare quelle cambiate (specialmente quelle su MIMS e sulle euristiche), e ridurre il backlog a un numero gestibile prima di ripartire con le notti automatiche.*
+- [ ] **[media · V32]** Il blocco hardware UPS (~50-80€) è listato come bloccante con la motivazione che la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni. Ogni corruzione forza un rebuild del RAG (potenzialmente la causa del -11.000 chunk) e blocca ore di lavoro notturno.
+  - *azione: Ordinare l'UPS nella stessa sessione di acquisto del mandrino 2.2kW ER20: sono entrambi acquisti fisici, si smaltiscono in un'unica azione. Posizionarlo accanto a Vevor+ER20 come da nota blockers.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-08-16 15:00*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-08-17 23:47*
