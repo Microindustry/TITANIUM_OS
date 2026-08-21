@@ -1,5 +1,77 @@
 [
   {
+    "id": "AUD-f755a8f682",
+    "date": "2026-08-21",
+    "git": "3b780b20",
+    "area": "SISTEMA",
+    "severity": "alta",
+    "finding": "L'API server :5001 è giù: 7 endpoint su 9 restituiscono 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto, ma questo fallback non è garantito a ogni chiamata e maschera il guasto invece di risolverlo. Il dato è confermato sia da next_step sia da bussola_open: «API server (:5001) giù».",
+    "azione": "Avviare il server :5001 e loggare lo stacktrace dei 500; identificare se il problema è una dipendenza mancante post-rebuild (es. variabile d'ambiente, path CONTENT_ENGINE_DIR) e fixare prima della prossima sessione notturna.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-21"
+  },
+  {
+    "id": "AUD-912d12d80e",
+    "date": "2026-08-21",
+    "git": "3b780b20",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Il canone delle critiche manuali è fermo da 43 giorni con 19 critiche attive non riverificate: \"canone manuale fermo da 43 giorni (>30) — 19 attive da riverificare\" (2026-08-21). Nel frattempo il sistema ha subito la bonifica MIMS, la scala GENESIS S0-S2 e il muto di 17 notti: alcune di quelle 19 critiche potrebbero essere già chiuse o cambiate di priorità, altre potrebbero essere diventate più urgenti.",
+    "azione": "Aprire critiche_manuali.json e scorrere le 19 voci attive: chiudere quelle risolte dalla bonifica #70, aggiornare la severità delle restanti, datare la revisione — operazione manuale da fare in questa sessione prima che il file superi i 60 giorni.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-21"
+  },
+  {
+    "id": "AUD-6ace1e654c",
+    "date": "2026-08-21",
+    "git": "3b780b20",
+    "area": "RICERCA",
+    "severity": "media",
+    "finding": "Stanotte research_agent ha colpito il rate-limit di Semantic Scholar due volte consecutive e poi ha ottenuto zero risultati utili, perdendo anche arxiv per timeout: \"2026-08-21 03:38:38 [...] HTTP 429\" → \"2026-08-21 03:39:01 [...] 429 Client Error\" → \"2026-08-21 03:39:04 [...] Nessun risultato sopra la soglia di rilevanza (0.40)\" → \"2026-08-21 03:39:52 [...] Read timed out. (read timeout=15)\". La chiave API gratuita è già in .env secondo i blockers, ma evidentemente non è caricata o non è attiva: il blocker «SEMANTIC_SCHOLAR_API_KEY — azzera i 429» è aperto da più sessioni.",
+    "azione": "Verificare che SEMANTIC_SCHOLAR_API_KEY sia impostata come variabile utente Windows (non solo in .env) e che il loader la legga; testare una chiamata autenticata manuale prima della prossima notte notturna.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-21"
+  },
+  {
+    "id": "AUD-615f1ff848",
+    "date": "2026-08-21",
+    "git": "3b780b20",
+    "area": "RAG",
+    "severity": "alta",
+    "finding": "Il RAG ha perso circa 10.275 chunk rispetto al 24/06 (da ~32.800 a 22.525 stanotte). La causa non è determinata: può essere un rebuild parziale o una perdita reale di conoscenza indicizzata. Finché non si sa perché, il grounding di Nina opera su un corpus dimezzato senza saperlo.",
+    "azione": "Confrontare il manifest del rebuild più recente con l'inventario del 24/06 per stabilire quanti chunk mancano davvero e quali sorgenti sono scomparse; se è perdita reale, rieseguire l'ingestione delle sorgenti mancanti prima del prossimo ciclo Nina.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-21"
+  },
+  {
+    "id": "AUD-3130b48357",
+    "date": "2026-08-21",
+    "git": "3b780b20",
+    "area": "ROADMAP",
+    "severity": "media",
+    "finding": "Il Batch 3 ha il dry-run pronto e 0 bloccati dalla guardia, ma attende la decisione di Matteo da almeno una sessione. I 2 episodi ROTTI (EP_N2_28 e 55 con aggancio troncato a metà parola) peggiorano ogni notte che passa perché vengono riletti dal RAG e potenzialmente usati come contesto da Nina. I 4 episodi «da giudicare» (03/05/48/56) bloccano la chiusura definitiva della bonifica MIMS.",
+    "azione": "Decidere nella prossima sessione di lavoro: approvare i 10 sicuri subito (rischio zero), pronunciarsi sui 4 da giudicare (la meccanica di ripetibilità/calibrazione di V32 non è un'invenzione), e schedulare la rigenerazione dei 2 ROTTI — ogni ulteriore rinvio li mantiene attivi nel RAG.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-21"
+  },
+  {
+    "id": "AUD-23697f39e3",
+    "date": "2026-08-21",
+    "git": "3b780b20",
+    "area": "GENESIS",
+    "severity": "media",
+    "finding": "Il canone dichiara EP_N2_64 come episodio massimo ma su disco esistono EP_N2_65, 66 e 67: \"su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md\" (2026-08-21). Tre episodi prodotti e committati non sono riconosciuti dal canone, il che significa che canon_guard li tratta come esterni e i 26 canon_violations attivi potrebbero includere falsi allarmi generati proprio da questi episodi non registrati.",
+    "azione": "Editare manualmente _CANONE.md riga 32 e il footer per estendere il range a EP_N2_67; verificare poi se il contatore canon_violations scende dai 26 attuali dopo l'aggiornamento.",
+    "fonte": "auto-audit (claude-sonnet-4-6)",
+    "status": "open",
+    "last_seen": "2026-08-21"
+  },
+  {
     "id": "AUD-f322db2fa7",
     "date": "2026-08-20",
     "git": "7c9e2866",
@@ -224,8 +296,10 @@
     "finding": "Il log del 2026-08-16 segnala nei blockers 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna'. Con AI news watcher silenzioso da 17.5 giorni (log: 'AI news watcher: ultimo output 17.5 giorni fa (soglia 4)') e la bussola che cita '81% delle chiamate a vuoto' per Semantic Scholar, la pipeline di ricerca notturna è di fatto cieca: non raccoglie segnale esterno, non alimenta il riflusso FATTI (fermo da 19.5 giorni), e il RAG non riceve aggiornamenti da fonti esterne.",
     "azione": "Richiedere la API key Semantic Scholar gratuita (operazione da 5 minuti sul sito) e inserirla come variabile utente Windows seguendo il loader reale _ti_paths.bat → _VAULT/KEYS/titanium_os.env (non in .env come indica erroneamente AZIONI_MATTEO.md:32, segnalato in bussola).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-16"
+    "status": "resolved",
+    "last_seen": "2026-08-16",
+    "resolved_on": "2026-08-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-df644d321d",
@@ -236,8 +310,10 @@
     "finding": "Zero commit negli ultimi 7 giorni (n_commits_7d: 0, commits_7d: []). La bussola del 2026-08-16 conferma che 'il loop Nina non committa mai (i commit auto: story_agent toccano solo S2_SISTEMA/)' e che EP_N2_62/63/64 non sono committati. Con il sistema che genera episodi ogni notte e l'HNSW che corrompe periodicamente, gli episodi Nina esistono solo su disco senza storia git: una corruzione o un reset li cancella senza recovery.",
     "azione": "Aggiungere un commit automatico degli episodi Nina al termine del loop notturno (o come hook post-generazione). Come misura immediata: committare manualmente EP_N2_62/63/64 prima della prossima notte automatica.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-16"
+    "status": "resolved",
+    "last_seen": "2026-08-16",
+    "resolved_on": "2026-08-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-951a4dbb75",
@@ -248,8 +324,10 @@
     "finding": "6 organi vitali silenziosi da 17-19 giorni: i log del 2026-08-16 riportano esplicitamente 'nina-loop: ultimo output 17.5 giorni fa (soglia 3)', 'snapshot RAG: ultimo output 17.5 giorni fa (soglia 3)', 'inventario notturno: ultimo output 17.5 giorni fa (soglia 3)', 'retention disco: ultimo output 17.5 giorni fa (soglia 3)', 'AI news watcher: ultimo output 17.5 giorni fa (soglia 4)', 'riflusso FATTI: ultimo output 19.5 giorni fa (soglia 7)'. Non è un drift lento: tutti e sei hanno smesso lo stesso giorno (~29 luglio), suggerendo un evento sistemico singolo (probabile corruzone HNSW da power-loss segnalata nei blockers) che ha fermato l'intera pipeline notturna. Nel frattempo il RAG cresce cieco (21630 chunk, nessuno snapshot), Nina gira senza loop, il disco non viene ripulito.",
     "azione": "Prima di qualsiasi fix software: eseguire 'rag_recover --drop-hnsw' (UAC Matteo, già schedulato) per riportare ChromaDB in stato coerente. Poi verificare il log del cron/scheduler intorno al 29/07 per identificare il trigger comune. Solo dopo riavviare i 6 organi uno per uno e confermare output nella notte successiva.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-16"
+    "status": "resolved",
+    "last_seen": "2026-08-16",
+    "resolved_on": "2026-08-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-8c03aa1f0f",
@@ -260,8 +338,10 @@
     "finding": "Il canone manuale è fermo da 39 giorni con 19 critiche attive da riverificare (log 2026-08-16: 'canone manuale fermo da 39 giorni (>30) — 19 attive da riverificare'). Nel frattempo la serie ha prodotto episodi EP_N2_57–64, il problema MIMS è stato scoperto e catalogato, e le euristiche rumorose hanno generato falsi positivi che potrebbero essere tra le 19 attive. Critiche stantie su un sistema cambiato in 39 giorni perdono validità e consumano attenzione su problemi già risolti o mai esistiti.",
     "azione": "Dedicare una sessione di 30-45 minuti a riverificare le 19 critiche attive contro lo stato corrente: scartare quelle risolte dai fix del #69, aggiornare quelle cambiate (specialmente quelle su MIMS e sulle euristiche), e ridurre il backlog a un numero gestibile prima di ripartire con le notti automatiche.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-16"
+    "status": "resolved",
+    "last_seen": "2026-08-16",
+    "resolved_on": "2026-08-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-18646642e7",
@@ -272,8 +352,10 @@
     "finding": "Il canone si autoalimenta con falsi: la bussola del 2026-08-16 documenta che '_CANONE.md non è mai iniettato nel prompt' di nina_agent.py:188, il RAG viene interrogato sul concetto MIMS e restituisce il paper fuori tema in MENTE/KNOWLEDGE/RESEARCH/mims/, l'Architetto inventa 'MIMS (Machine-Induced Meaning Synthesis)' in EP_N2_64, e 'save_canon' specchia il risultato in MENTE — quindi il falso rientra nel RAG la notte stessa. Il log del 2026-08-16 conta 17 canon_violations attive. Con _CANONE.md fermo da 18 giorni (log: '_CANONE.md fermo da 18 giorni (soglia 14) mentre la serie si auto-genera ogni notte') il circolo si chiude senza freni.",
     "azione": "Iniettare _CANONE.md nel prompt dell'Architetto (nina_agent.py:188) come step 1 del next_step già deciso. Poi correggere manualmente EP_N2_57/59/60/63/64 rimuovendo l'acronimo inventato e le fonti fabbricate (es. 'GENESIS/documentation_hallucination_2026' citata in bussola per EP_N2_64). Infine rimuovere o isolare il paper fuori tema da MENTE/KNOWLEDGE/RESEARCH/mims/ prima che venga re-indicizzato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-16"
+    "status": "resolved",
+    "last_seen": "2026-08-16",
+    "resolved_on": "2026-08-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-05ff38fc0f",
@@ -284,8 +366,10 @@
     "finding": "La corruzione HNSW è ricorrente (3 volte in 2 giorni, segnalata nei blockers) e il suo effetto concreto è già visibile: 'limit=10 dà 0 embedding' — il RAG restituisce zero risultati su query legittime. Con snapshot fermo da 17.5 giorni (log 2026-08-16: 'snapshot RAG: ultimo output 17.5 giorni fa') non esiste checkpoint recente da cui ripristinare; ogni nuova corruzione resets tutto. L'UPS da 50-80€ è l'unica cura alla radice citata nei blockers, ma finché non è installato ogni power-loss rischia di riportare il sistema a zero.",
     "azione": "Ordinare e installare l'UPS questa settimana (è già identificato e quotato nei blockers: '~50-80€ accanto a Vevor+ER20'). Nel frattempo eseguire 'rag_recover --drop-hnsw', poi forzare subito uno snapshot RAG manuale per avere un baseline ripristinabile prima della prossima notte automatica.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-16"
+    "status": "resolved",
+    "last_seen": "2026-08-16",
+    "resolved_on": "2026-08-21",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-e2beb7c89c",
