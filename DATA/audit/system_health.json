@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-08-22T11:48:57",
-  "date": "2026-08-22",
-  "git_head": "b6927238",
-  "rag_chunks": 22543,
-  "n_episodes": 311,
-  "n_commits_7d": 17,
+  "last_audit": "2026-08-23T07:55:07",
+  "date": "2026-08-23",
+  "git_head": "fbe9210c",
+  "rag_chunks": 22651,
+  "n_episodes": 312,
+  "n_commits_7d": 20,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,68 +14,85 @@
   },
   "log_issues": [
     {
+      "log": "night_research.log",
+      "tipo": "rate-limit sorgente",
+      "riga": "2026-08-22 11:51:21 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-08-22"
+    },
+    {
+      "log": "night_research.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-08-22 11:51:45 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=autonomous+AI+agent+orchestration+2025&li",
+      "data": "2026-08-22"
+    },
+    {
       "log": "research_agent.log",
       "tipo": "rate-limit sorgente",
-      "riga": "2026-08-21 03:38:38 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
-      "data": "2026-08-21"
+      "riga": "2026-08-22 11:50:05 [research_agent      ] WARNING  [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s",
+      "data": "2026-08-22"
     },
     {
       "log": "research_agent.log",
       "tipo": "errore esplicito",
-      "riga": "2026-08-21 03:39:01 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
-      "data": "2026-08-21"
+      "riga": "2026-08-22 11:50:28 [research_agent      ] WARNING  [semantic_scholar] 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=machine+tool+frame+structural+rigidity+gu",
+      "data": "2026-08-22"
     },
     {
       "log": "research_agent.log",
       "tipo": "ricerca a vuoto",
-      "riga": "2026-08-21 03:39:04 [research_agent      ] WARNING  Nessun risultato sopra la soglia di rilevanza (0.40).",
-      "data": "2026-08-21"
-    },
-    {
-      "log": "research_agent.log",
-      "tipo": "timeout di rete",
-      "riga": "2026-08-21 03:39:52 [research_agent      ] WARNING  [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)",
-      "data": "2026-08-21"
+      "riga": "2026-08-22 11:50:31 [research_agent      ] WARNING  Nessun risultato sopra la soglia di rilevanza (0.40).",
+      "data": "2026-08-22"
     },
     {
       "log": "critiche_manuali.json",
       "tipo": "canone critiche stantio",
-      "riga": "canone manuale fermo da 44 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-08-22"
+      "riga": "canone manuale fermo da 45 giorni (>30) — 19 attive da riverificare",
+      "data": "2026-08-23"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-08-22"
+      "data": "2026-08-23"
+    },
+    {
+      "log": "pip_audit.json",
+      "tipo": "CVE dipendenze con fix disponibile",
+      "riga": "8 CVE fixabili in 4 pacchetti: aiohttp 3.14.1 (3), cryptography 48.0.1 (3), datasets 4.0.0 (1), pip 26.1.2 (1)",
+      "data": "2026-08-23"
     }
   ],
   "vault_orphans": 3,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 44,
+    "file_age_days": 45,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 1,
+    "canone_age_days": 2,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 1.3,
-    "snapshot RAG": 1.3,
-    "inventario notturno": 1.3,
-    "retention disco": 1.3,
-    "AI news watcher": 0.0,
+    "nina-loop": 0.8,
+    "snapshot RAG": 0.8,
+    "inventario notturno": 0.0,
+    "retention disco": 0.8,
+    "AI news watcher": 0.8,
     "daily brief": 0.0,
-    "riflusso FATTI": 1.4
+    "riflusso FATTI": 0.8
   },
   "pip_audit": {
-    "vulns": 0,
-    "fixable": 0,
-    "packages": []
+    "vulns": 8,
+    "fixable": 8,
+    "packages": [
+      "aiohttp 3.14.1 (3)",
+      "cryptography 48.0.1 (3)",
+      "datasets 4.0.0 (1)",
+      "pip 26.1.2 (1)"
+    ]
   },
   "qc_episodi": {
     "checked": 67,
@@ -83,10 +100,10 @@
     "open_loop_missing": 24
   },
   "critiche": {
-    "added": 6,
+    "added": 4,
     "auto_closed": 6,
-    "total": 291,
-    "open": 24
+    "total": 295,
+    "open": 28
   },
   "verdict": "ATTENZIONE"
 }

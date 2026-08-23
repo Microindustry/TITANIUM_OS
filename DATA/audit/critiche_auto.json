@@ -1,5 +1,53 @@
 [
   {
+    "id": "AUD-f3b35dacc7",
+    "date": "2026-08-23",
+    "git": "fbe9210c",
+    "area": "CANONE",
+    "severity": "media",
+    "finding": "26 formulazioni vietate 'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.",
+    "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-08-23"
+  },
+  {
+    "id": "AUD-cca0d6031f",
+    "date": "2026-08-23",
+    "git": "fbe9210c",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "_CANONE.md: rilevato serie oltre il canone dichiarato nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-08-23"
+  },
+  {
+    "id": "AUD-7ad2aa2ef9",
+    "date": "2026-08-23",
+    "git": "fbe9210c",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "pip_audit.json: rilevato CVE dipendenze con fix disponibile nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-08-23"
+  },
+  {
+    "id": "AUD-42b270dc40",
+    "date": "2026-08-23",
+    "git": "fbe9210c",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-08-23"
+  },
+  {
     "id": "AUD-ea9df13d6a",
     "date": "2026-08-22",
     "git": "b6927238",
@@ -224,8 +272,10 @@
     "finding": "Il corpus RAG è sceso da ~32.800 chunk (24/06) a 22.014 oggi: un calo di ~10.786 chunk (~33%) senza una causa documentata nei log. next_step ammette 'capire se è rientro post-rebuild o perdita'. Se è perdita reale, ogni retrieve() di Nina lavora su un corpus monco e i falsi agganciamenti a MIMS/GENESIS già corretti in #70 potrebbero riemergere.",
     "azione": "Confrontare il manifest dell'ultimo snapshot RAG (organo 'snapshot RAG' a 0.3 giorni, quindi generato stanotte) con quello del 24/06: contare i file sorgente indicizzati allora vs ora. Se mancano sorgenti, rieseguire l'ingestione sui file mancanti; se è rebuild atteso, documentarlo nel canone per silenziare l'allarme.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-18"
+    "status": "resolved",
+    "last_seen": "2026-08-18",
+    "resolved_on": "2026-08-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-cf2447d7a9",
@@ -236,8 +286,10 @@
     "finding": "Il blocker hardware UPS (~50-80€) è l'unica cura alla radice per la corruzione HNSW ricorrente (3 volte in 2 giorni, dichiarata in blockers). Senza UPS, ogni power-loss può azzerare il lavoro di rebuild del RAG appena avviato — incluso il recupero dei 10.786 chunk mancanti. Il costo è basso, il rischio di perdere un altro ciclo di ricostruzione è alto.",
     "azione": "Ordinare l'UPS nella stessa sessione in cui si ordina il mandrino ER20 (entrambi in blockers, entrambi fisici): accorpare l'acquisto elimina il costo di un secondo ordine e sblocca la stabilità del sistema prima della prossima notte di rebuild pesante.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-18"
+    "status": "resolved",
+    "last_seen": "2026-08-18",
+    "resolved_on": "2026-08-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-80d3e5c7f0",
@@ -248,8 +300,10 @@
     "finding": "API server :5001 giù: il grounding di Nina ha funzionato solo per fallback sul motore diretto. Nessuna riga di log_issues certifica il 500, ma next_step dichiara esplicitamente '7 endpoint su 9 danno 500'. Il dato è nel report di sistema, non nei log estratti — va verificato in diretta.",
     "azione": "Avviare il server :5001, leggere lo stderr dei 7 endpoint in 500, identificare la causa radice (variabile d'ambiente mancante? dipendenza non installata? CONTENT_ENGINE_DIR non impostata, già segnalata in bussola_open). Ripristinare prima di qualunque altra automazione notturna.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-18"
+    "status": "resolved",
+    "last_seen": "2026-08-18",
+    "resolved_on": "2026-08-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-5372927a0a",
@@ -260,8 +314,10 @@
     "finding": "Semantic Scholar 429 ricorrente: i log mostrano due eventi distinti nella stessa notte. '2026-08-17 23:48:19 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429' e '2026-08-17 23:48:51 [research_agent] WARNING [semantic_scholar] 429 Client Error: for url: https://api.semanticscholar.org/graph/v1/paper/search?query=CNC+spindle+ER20+runout+thermal+accuracy&'. La chiave gratuita è già in .env (blockers: 'SEMANTIC_SCHOLAR_API_KEY — azzera i 429') ma evidentemente non è ancora attiva o non viene letta. Rischio: la ricerca notturna su CNC/mandrino ER20 — pilastro V32 a 65 giorni — continua a girare a vuoto.",
     "azione": "Verificare che SEMANTIC_SCHOLAR_API_KEY sia impostata come variabile utente Windows (non solo in .env, vedi bussola_open su _ti_paths.bat) e che research_agent.py la legga all'avvio. Dopo il fix, rieseguire manualmente una query CNC per confermare HTTP 200.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-18"
+    "status": "resolved",
+    "last_seen": "2026-08-18",
+    "resolved_on": "2026-08-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-46419a5954",
@@ -272,8 +328,10 @@
     "finding": "canon_guard segnala ancora 26 violazioni (campo canon_violations) e next_step dichiara 'il gate è ambra fino al batch 3'. I 18 episodi con 'GENESIS/V32' senza verbo software vicino (bussola_open: 'Batch 3 da decidere') sono in attesa di decisione di Matteo. Finché il gate resta ambra, ogni nuova generazione notturna di Nina pesca dal RAG episodi parzialmente contaminati e può propagare la stessa classe di errore appena bonificata in #70.",
     "azione": "Portare Batch 3 a decisione nella prossima sessione: i 10 episodi di correzione sicura non richiedono giudizio e possono partire subito (dry-run già pronto). Sbloccarli porta canon_violations da 26 verso la soglia verde e riattiva il gate prima che Nina generi EP_N2_66+.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-18"
+    "status": "resolved",
+    "last_seen": "2026-08-18",
+    "resolved_on": "2026-08-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-34738558fa",
@@ -284,8 +342,10 @@
     "finding": "AI news watcher silenzioso da 19.1 giorni: log_issues riporta '2026-08-18: AI news watcher: ultimo output 19.1 giorni fa (soglia 4) — ai_news_watcher_state.json'. L'organo è classificato come 'organo silenzioso' nel log_issues, non è un falso allarme. Il watcher era tra i servizi fermi durante i 17 notti di blackout (30/07-15/08) e non si è riacceso automaticamente con il sistema.",
     "azione": "Verificare che ai_news_watcher sia incluso nel batch di riaccensione di next_step ('RIACCENDERE IL SISTEMA'). Controllare ai_news_watcher_state.json per capire se il processo è crashato o semplicemente non schedulato. Rieseguire manualmente e verificare output prima di affidarsi all'automazione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-18"
+    "status": "resolved",
+    "last_seen": "2026-08-18",
+    "resolved_on": "2026-08-23",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-f9d0057022",
@@ -3628,10 +3688,8 @@
     "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-06-18",
-    "resolved_on": "2026-06-23",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-08-23"
   },
   {
     "id": "AUD-c97403be34",
@@ -3642,10 +3700,8 @@
     "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-06-18",
-    "resolved_on": "2026-06-23",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-08-23"
   },
   {
     "id": "AUD-77abb05083",
@@ -3656,10 +3712,8 @@
     "finding": "Pilastro MIMS fermo al 30%.",
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-06-20",
-    "resolved_on": "2026-06-24",
-    "resolved_by": "sess.#45: next step MIMS misurabile ora definito: Via B deciso -> montare martinetto Vevor -> prima colata giunto (Q3 2026). Pillar resta 30% finche' VULCAN non produce (hardware)"
+    "status": "open",
+    "last_seen": "2026-08-23"
   },
   {
     "id": "AUD-6bb972e811",
@@ -3670,10 +3724,8 @@
     "finding": "research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-06-18",
-    "resolved_on": "2026-06-23",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-08-23"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -3698,10 +3750,8 @@
     "finding": "research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-06-18",
-    "resolved_on": "2026-06-23",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-08-23"
   },
   {
     "id": "AUD-28f6d2e10b",
@@ -3726,10 +3776,8 @@
     "finding": "night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-06-18",
-    "resolved_on": "2026-06-23",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-08-23"
   },
   {
     "id": "AUD-100c8670cd",
