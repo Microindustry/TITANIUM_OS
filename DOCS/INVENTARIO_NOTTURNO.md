@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-08-23  3 commit](#2026-08-23-3-commit)
   - [2026-08-21  5 commit](#2026-08-21-5-commit)
   - [2026-08-20  3 commit](#2026-08-20-3-commit)
   - [2026-08-18  3 commit](#2026-08-18-3-commit)
@@ -50,6 +51,15 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-08-23 · 3 commit
+- `126bcf80` auto: nina_rag_loop - episodi Nina 22/08/2026
+- `41632785` auto: story_agent - episodi generati 22/08/2026
+- `d6220a99` auto: night_audit - cartella clinica 22/08/2026
+
+_episodi: 312 · critiche aperte: 24 (267 risolte) · RAG: 22543 chunk_
+
+
 
 ## 2026-08-21 · 5 commit
 - `31aea1b9` auto: night_audit - cartella clinica 21/08/2026
