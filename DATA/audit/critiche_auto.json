@@ -9,7 +9,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-24"
+    "last_seen": "2026-08-25"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -21,7 +21,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-24"
+    "last_seen": "2026-08-25"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -33,7 +33,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-24"
+    "last_seen": "2026-08-25"
   },
   {
     "id": "AUD-42b270dc40",
@@ -45,7 +45,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-24"
+    "last_seen": "2026-08-25"
   },
   {
     "id": "AUD-ea9df13d6a",
@@ -200,8 +200,10 @@
     "finding": "L'UPS hardware manca e la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni (blockers: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg)'). Ogni interruzione di corrente può di nuovo dimezzare l'indice RAG o corrompere GENESIS_DB — il rischio si ripete ogni notte finché il blocco hardware non è risolto.",
     "azione": "Ordinare UPS (~50-80€) prima della prossima sessione notturna; nel frattempo abilitare checkpoint/WAL su genesis_db.py e uno snapshot HNSW post-run per limitare la perdita massima a una notte.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-20"
+    "status": "resolved",
+    "last_seen": "2026-08-20",
+    "resolved_on": "2026-08-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c8d27bb143",
@@ -212,8 +214,10 @@
     "finding": "API server :5001 giù: 7 endpoint su 9 danno 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto — un secondo guasto concorrente (motore diretto offline) lascerebbe Nina senza RAG. Il dato è confermato da next_step ('API :5001 GIU') e da bussola_open ('API server (:5001) giù. Il grounding di Nina ha funzionato solo grazie al fallback sul motore diretto').",
     "azione": "Avviare :5001 e testare i 9 endpoint uno per uno; isolare i 7 che danno 500 (log Flask), correggere prima quello che serve a retrieve_context(), poi gli altri in ordine di dipendenza.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-20"
+    "status": "resolved",
+    "last_seen": "2026-08-20",
+    "resolved_on": "2026-08-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c7b8b17655",
@@ -224,8 +228,10 @@
     "finding": "Il Batch 3 (18 episodi con EP_N2_28/55 da rigenerare + 4 da giudicare + 10 sicuri) è in attesa di decisione di Matteo, ma canon_guard segnala già 26 violazioni e il gate è dichiarato 'ambra'. Ogni notte che passa, nina-loop può produrre nuovi episodi sopra un canone non ancora bonificato, moltiplicando il debito. I due episodi ROTTI (28 e 55, aggancio troncato a metà parola) non possono aspettare: sono irrecuperabili senza rigenerazione.",
     "azione": "Matteo decide oggi su i 4 episodi dubbi (03/05/48/56); i 10 sicuri e i 2 rotti non dipendono dalla decisione — eseguire subito dry-run→apply su quei 12, poi attendere il verdetto sui 4 prima di chiudere il batch.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-20"
+    "status": "resolved",
+    "last_seen": "2026-08-20",
+    "resolved_on": "2026-08-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a4f064444e",
@@ -236,8 +242,10 @@
     "finding": "La sentinella canone è neutralizzata: log_issues riporta (2026-08-20) 'night_audit.py:635 misura il mtime di _CANONE.md, che i blocchi auto rinfrescano ogni notte → stale: false per sempre. Il contenuto curato è fermo al 16/07.' Il campo canone_age_days=2 in output è quindi un falso negativo strutturale: il canone reale non viene mai dichiarato stantio.",
     "azione": "Modificare night_audit.py:635 per misurare il mtime o l'hash della porzione di _CANONE.md esterna ai marker <!-- COLLEGATI -->; rieseguire la guardia e verificare che rilevi correttamente la data reale dell'ultimo edit manuale (16/07).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-20"
+    "status": "resolved",
+    "last_seen": "2026-08-20",
+    "resolved_on": "2026-08-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6655287cb6",
@@ -248,8 +256,10 @@
     "finding": "I chunk RAG sono scesi da ~32.800 (24/06) a 22.273 stanotte: -10.500 chunk (-32%) senza che nessun rebuild documentato giustifichi la perdita. Se è perdita reale il RAG risponde su un corpus mutilato; se è rebuild incompleto il re-index va completato. La situazione è ambigua e non risolta.",
     "azione": "Confrontare il conteggio dei file sorgente in MENTE con il manifest dell'ultimo rebuild completo; se i sorgenti sono intatti ma i chunk mancano, rilanciare l'indicizzazione completa e verificare che il contatore torni ≥32.800.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-20"
+    "status": "resolved",
+    "last_seen": "2026-08-20",
+    "resolved_on": "2026-08-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-34a65abe03",
@@ -260,8 +270,10 @@
     "finding": "Lo slot aggancio_reale continua a essere riempito con invenzioni LLM dentro GENESIS: bussola_open segnala '\"il sistema notturno di consolidamento dei pattern motori\" non esiste' e che la regola \"meglio vuoto che inventato\" non morde ancora. Il P0 MIMS è chiuso ma il meccanismo generatore del falso è ancora attivo sul pilastro GENESIS.",
     "azione": "Iniettare _CANONE.md (sezione GENESIS) nel prompt di nina_agent.py prima della chiamata che riempie aggancio_reale; aggiungere un check post-generazione che rifiuti lo slot se contiene termini non presenti nel canone e lo lasci vuoto invece di passare il testo inventato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-20"
+    "status": "resolved",
+    "last_seen": "2026-08-20",
+    "resolved_on": "2026-08-25",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-ea64f7a27f",
@@ -3713,7 +3725,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-24"
+    "last_seen": "2026-08-25"
   },
   {
     "id": "AUD-6bb972e811",
