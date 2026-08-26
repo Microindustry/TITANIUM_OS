@@ -1,5 +1,17 @@
 [
   {
+    "id": "AUD-2326599473",
+    "date": "2026-08-26",
+    "git": "eac8338f",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "organi vivi: rilevato organo silenzioso nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/organi vivi e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-08-26"
+  },
+  {
     "id": "AUD-f3b35dacc7",
     "date": "2026-08-23",
     "git": "fbe9210c",
@@ -9,7 +21,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-25"
+    "last_seen": "2026-08-26"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -21,7 +33,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-25"
+    "last_seen": "2026-08-26"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -33,7 +45,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-25"
+    "last_seen": "2026-08-26"
   },
   {
     "id": "AUD-42b270dc40",
@@ -45,7 +57,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-25"
+    "last_seen": "2026-08-26"
   },
   {
     "id": "AUD-ea9df13d6a",
@@ -128,8 +140,10 @@
     "finding": "L'API server :5001 è giù: 7 endpoint su 9 restituiscono 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto, ma questo fallback non è garantito a ogni chiamata e maschera il guasto invece di risolverlo. Il dato è confermato sia da next_step sia da bussola_open: «API server (:5001) giù».",
     "azione": "Avviare il server :5001 e loggare lo stacktrace dei 500; identificare se il problema è una dipendenza mancante post-rebuild (es. variabile d'ambiente, path CONTENT_ENGINE_DIR) e fixare prima della prossima sessione notturna.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-21"
+    "status": "resolved",
+    "last_seen": "2026-08-21",
+    "resolved_on": "2026-08-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-912d12d80e",
@@ -140,8 +154,10 @@
     "finding": "Il canone delle critiche manuali è fermo da 43 giorni con 19 critiche attive non riverificate: \"canone manuale fermo da 43 giorni (>30) — 19 attive da riverificare\" (2026-08-21). Nel frattempo il sistema ha subito la bonifica MIMS, la scala GENESIS S0-S2 e il muto di 17 notti: alcune di quelle 19 critiche potrebbero essere già chiuse o cambiate di priorità, altre potrebbero essere diventate più urgenti.",
     "azione": "Aprire critiche_manuali.json e scorrere le 19 voci attive: chiudere quelle risolte dalla bonifica #70, aggiornare la severità delle restanti, datare la revisione — operazione manuale da fare in questa sessione prima che il file superi i 60 giorni.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-21"
+    "status": "resolved",
+    "last_seen": "2026-08-21",
+    "resolved_on": "2026-08-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6ace1e654c",
@@ -152,8 +168,10 @@
     "finding": "Stanotte research_agent ha colpito il rate-limit di Semantic Scholar due volte consecutive e poi ha ottenuto zero risultati utili, perdendo anche arxiv per timeout: \"2026-08-21 03:38:38 [...] HTTP 429\" → \"2026-08-21 03:39:01 [...] 429 Client Error\" → \"2026-08-21 03:39:04 [...] Nessun risultato sopra la soglia di rilevanza (0.40)\" → \"2026-08-21 03:39:52 [...] Read timed out. (read timeout=15)\". La chiave API gratuita è già in .env secondo i blockers, ma evidentemente non è caricata o non è attiva: il blocker «SEMANTIC_SCHOLAR_API_KEY — azzera i 429» è aperto da più sessioni.",
     "azione": "Verificare che SEMANTIC_SCHOLAR_API_KEY sia impostata come variabile utente Windows (non solo in .env) e che il loader la legga; testare una chiamata autenticata manuale prima della prossima notte notturna.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-21"
+    "status": "resolved",
+    "last_seen": "2026-08-21",
+    "resolved_on": "2026-08-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-615f1ff848",
@@ -164,8 +182,10 @@
     "finding": "Il RAG ha perso circa 10.275 chunk rispetto al 24/06 (da ~32.800 a 22.525 stanotte). La causa non è determinata: può essere un rebuild parziale o una perdita reale di conoscenza indicizzata. Finché non si sa perché, il grounding di Nina opera su un corpus dimezzato senza saperlo.",
     "azione": "Confrontare il manifest del rebuild più recente con l'inventario del 24/06 per stabilire quanti chunk mancano davvero e quali sorgenti sono scomparse; se è perdita reale, rieseguire l'ingestione delle sorgenti mancanti prima del prossimo ciclo Nina.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-21"
+    "status": "resolved",
+    "last_seen": "2026-08-21",
+    "resolved_on": "2026-08-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-3130b48357",
@@ -176,8 +196,10 @@
     "finding": "Il Batch 3 ha il dry-run pronto e 0 bloccati dalla guardia, ma attende la decisione di Matteo da almeno una sessione. I 2 episodi ROTTI (EP_N2_28 e 55 con aggancio troncato a metà parola) peggiorano ogni notte che passa perché vengono riletti dal RAG e potenzialmente usati come contesto da Nina. I 4 episodi «da giudicare» (03/05/48/56) bloccano la chiusura definitiva della bonifica MIMS.",
     "azione": "Decidere nella prossima sessione di lavoro: approvare i 10 sicuri subito (rischio zero), pronunciarsi sui 4 da giudicare (la meccanica di ripetibilità/calibrazione di V32 non è un'invenzione), e schedulare la rigenerazione dei 2 ROTTI — ogni ulteriore rinvio li mantiene attivi nel RAG.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-21"
+    "status": "resolved",
+    "last_seen": "2026-08-21",
+    "resolved_on": "2026-08-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-23697f39e3",
@@ -188,8 +210,10 @@
     "finding": "Il canone dichiara EP_N2_64 come episodio massimo ma su disco esistono EP_N2_65, 66 e 67: \"su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md\" (2026-08-21). Tre episodi prodotti e committati non sono riconosciuti dal canone, il che significa che canon_guard li tratta come esterni e i 26 canon_violations attivi potrebbero includere falsi allarmi generati proprio da questi episodi non registrati.",
     "azione": "Editare manualmente _CANONE.md riga 32 e il footer per estendere il range a EP_N2_67; verificare poi se il contatore canon_violations scende dai 26 attuali dopo l'aggiornamento.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-21"
+    "status": "resolved",
+    "last_seen": "2026-08-21",
+    "resolved_on": "2026-08-26",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-f322db2fa7",
@@ -3725,7 +3749,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-25"
+    "last_seen": "2026-08-26"
   },
   {
     "id": "AUD-6bb972e811",
