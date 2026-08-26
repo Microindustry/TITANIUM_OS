@@ -1,7 +1,7 @@
 <!-- TOC -->
 
 - [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
-  - [IL POLSO  24/08/2026 15:50](#il-polso-24082026-1550)
+  - [IL POLSO  25/08/2026 14:49](#il-polso-25082026-1449)
   - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
     - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
     - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
@@ -27,10 +27,10 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 24/08/2026 15:50
+## IL POLSO — 25/08/2026 14:49
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
-- **Auto-audit**: 28 aperte / 295 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
+- **Auto-audit**: 22 aperte / 295 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
 - **Bussola**: i to-do vivono in `DA_FARE_FATTO.md` (non duplicati qui)
 
 ---
@@ -192,10 +192,6 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Eseguire un conteggio puntuale delle sorgenti indicizzate (file per cartella MENTE) e confrontarlo con lo snapshot del 24/06 per isolare quali directory mancano. Se è un rebuild parziale, completare il reindex; se è perdita, ripristinare da backup prima della prossima notte automatica.*
 - [ ] **[alta · RAG]** Il RAG ha perso circa 10.275 chunk rispetto al 24/06 (da ~32.800 a 22.525 stanotte). La causa non è determinata: può essere un rebuild parziale o una perdita reale di conoscenza indicizzata. Finché non si sa perché, il grounding di Nina opera su un corpus dimezzato senza saperlo.
   - *azione: Confrontare il manifest del rebuild più recente con l'inventario del 24/06 per stabilire quanti chunk mancano davvero e quali sorgenti sono scomparse; se è perdita reale, rieseguire l'ingestione delle sorgenti mancanti prima del prossimo ciclo Nina.*
-- [ ] **[alta · RAG]** La sentinella canone è neutralizzata: log_issues riporta (2026-08-20) 'night_audit.py:635 misura il mtime di _CANONE.md, che i blocchi auto rinfrescano ogni notte → stale: false per sempre. Il contenuto curato è fermo al 16/07.' Il campo canone_age_days=2 in output è quindi un falso negativo strutturale: il canone reale non viene mai dichiarato stantio.
-  - *azione: Modificare night_audit.py:635 per misurare il mtime o l'hash della porzione di _CANONE.md esterna ai marker <!-- COLLEGATI -->; rieseguire la guardia e verificare che rilevi correttamente la data reale dell'ultimo edit manuale (16/07).*
-- [ ] **[alta · RAG]** I chunk RAG sono scesi da ~32.800 (24/06) a 22.273 stanotte: -10.500 chunk (-32%) senza che nessun rebuild documentato giustifichi la perdita. Se è perdita reale il RAG risponde su un corpus mutilato; se è rebuild incompleto il re-index va completato. La situazione è ambigua e non risolta.
-  - *azione: Confrontare il conteggio dei file sorgente in MENTE con il manifest dell'ultimo rebuild completo; se i sorgenti sono intatti ma i chunk mancano, rilanciare l'indicizzazione completa e verificare che il contatore torni ≥32.800.*
 - [ ] **[alta · RICERCA]** Semantic Scholar bloccato da rate-limit non autenticato. Log 2026-08-21: "2026-08-21 03:38:38 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s" e "2026-08-21 03:39:01 WARNING [semantic_scholar] 429 Client Error: for url: ...query=machine+tool+frame+structural+rigidity+gu". La chiave SEMANTIC_SCHOLAR_API_KEY è in .env ma i log indicano che i 429 si ripetono: la chiave non è caricata o non è attiva. Stesso ciclo: arxiv ha dato timeout "2026-08-21 03:39:52 WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)". La notte di ricerca è uscita a mani vuote.
   - *azione: Verificare che SEMANTIC_SCHOLAR_API_KEY sia presente nelle variabili utente Windows (non in .env che nessuno legge) e che il loader _ti_paths.bat la esporti correttamente. Testare la chiave con una chiamata manuale prima della prossima notte. Per arxiv aumentare il timeout da 15s o aggiungere retry esponenziale.*
 - [ ] **[alta · SISTEMA]** API server :5001 giù: dal next_step '7 endpoint su 9 danno 500'. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto, ma il fallback non è una soluzione stabile: qualsiasi componente che dipenda da :5001 senza fallback è cieco.
@@ -204,18 +200,12 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Aprire critiche_manuali.json e riverificare le 19 attive: chiudere quelle risolte, aggiornare quelle cambiate. Contestualmente aggiornare riga 32 e footer di _CANONE.md da EP_N2_64 a EP_N2_67 (edit manuale, nessun generatore automatico esiste).*
 - [ ] **[alta · SISTEMA]** L'API server :5001 è giù: 7 endpoint su 9 restituiscono 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto, ma questo fallback non è garantito a ogni chiamata e maschera il guasto invece di risolverlo. Il dato è confermato sia da next_step sia da bussola_open: «API server (:5001) giù».
   - *azione: Avviare il server :5001 e loggare lo stacktrace dei 500; identificare se il problema è una dipendenza mancante post-rebuild (es. variabile d'ambiente, path CONTENT_ENGINE_DIR) e fixare prima della prossima sessione notturna.*
-- [ ] **[alta · SISTEMA]** L'UPS hardware manca e la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni (blockers: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg)'). Ogni interruzione di corrente può di nuovo dimezzare l'indice RAG o corrompere GENESIS_DB — il rischio si ripete ogni notte finché il blocco hardware non è risolto.
-  - *azione: Ordinare UPS (~50-80€) prima della prossima sessione notturna; nel frattempo abilitare checkpoint/WAL su genesis_db.py e uno snapshot HNSW post-run per limitare la perdita massima a una notte.*
-- [ ] **[alta · SISTEMA]** API server :5001 giù: 7 endpoint su 9 danno 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto — un secondo guasto concorrente (motore diretto offline) lascerebbe Nina senza RAG. Il dato è confermato da next_step ('API :5001 GIU') e da bussola_open ('API server (:5001) giù. Il grounding di Nina ha funzionato solo grazie al fallback sul motore diretto').
-  - *azione: Avviare :5001 e testare i 9 endpoint uno per uno; isolare i 7 che danno 500 (log Flask), correggere prima quello che serve a retrieve_context(), poi gli altri in ordine di dipendenza.*
 - [ ] **[media · CANONE]** 26 formulazioni vietate 'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.
   - *azione: Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).*
 - [ ] **[media · GENESIS]** Lo slot aggancio_reale continua a essere riempito con invenzioni dentro GENESIS: dalla bussola_open "il sistema notturno di consolidamento dei pattern motori non esiste". La bonifica MIMS è chiusa (P0 risolto), ma il meccanismo generativo non è cambiato: _CANONE.md non è mai iniettato nel prompt di nina_agent.py e retrieve_context() interroga solo il RAG sul concetto. Il falso si autogenera a ogni notte e i file speculati finiscono in MENTE, rientrando nel RAG al ciclo successivo.
   - *azione: Aggiungere in nina_agent.py l'iniezione del testo curato di _CANONE.md (sezione pilastri) nel prompt di sistema prima della chiamata LLM. Aggiungere una regola esplicita: se aggancio_reale non trova un fatto verificabile nel contesto iniettato, restituire stringa vuota invece di generare. Questo chiude il loop di autoalimentazione.*
 - [ ] **[media · GENESIS]** Il canone dichiara EP_N2_64 come episodio massimo ma su disco esistono EP_N2_65, 66 e 67: "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md" (2026-08-21). Tre episodi prodotti e committati non sono riconosciuti dal canone, il che significa che canon_guard li tratta come esterni e i 26 canon_violations attivi potrebbero includere falsi allarmi generati proprio da questi episodi non registrati.
   - *azione: Editare manualmente _CANONE.md riga 32 e il footer per estendere il range a EP_N2_67; verificare poi se il contatore canon_violations scende dai 26 attuali dopo l'aggiornamento.*
-- [ ] **[media · GENESIS]** Lo slot aggancio_reale continua a essere riempito con invenzioni LLM dentro GENESIS: bussola_open segnala '"il sistema notturno di consolidamento dei pattern motori" non esiste' e che la regola "meglio vuoto che inventato" non morde ancora. Il P0 MIMS è chiuso ma il meccanismo generatore del falso è ancora attivo sul pilastro GENESIS.
-  - *azione: Iniettare _CANONE.md (sezione GENESIS) nel prompt di nina_agent.py prima della chiamata che riempie aggancio_reale; aggiungere un check post-generazione che rifiuti lo slot se contiene termini non presenti nel canone e lo lasci vuoto invece di passare il testo inventato.*
 - [ ] **[media · NOTTURNE]** _CANONE.md: rilevato serie oltre il canone dichiarato nelle ultime esecuzioni.
   - *azione: Ispezionare DATA/logs/_CANONE.md e correggere la causa.*
 - [ ] **[media · NOTTURNE]** pip_audit.json: rilevato CVE dipendenze con fix disponibile nelle ultime esecuzioni.
@@ -234,12 +224,10 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Matteo deve dare il via al batch 3 nella prossima sessione diurna: separare i 3 gruppi (10 correzione sicura / 4 da giudicare / 2 da rigenerare) e procedere almeno con i 10 sicuri. I 2 ROTTI (EP_N2_28 e 55) vanno rigenerati, non rattoppati: pianificare la rigenerazione nella stessa sessione per non lasciarli in corpus con testo troncato.*
 - [ ] **[media · ROADMAP]** Il Batch 3 ha il dry-run pronto e 0 bloccati dalla guardia, ma attende la decisione di Matteo da almeno una sessione. I 2 episodi ROTTI (EP_N2_28 e 55 con aggancio troncato a metà parola) peggiorano ogni notte che passa perché vengono riletti dal RAG e potenzialmente usati come contesto da Nina. I 4 episodi «da giudicare» (03/05/48/56) bloccano la chiusura definitiva della bonifica MIMS.
   - *azione: Decidere nella prossima sessione di lavoro: approvare i 10 sicuri subito (rischio zero), pronunciarsi sui 4 da giudicare (la meccanica di ripetibilità/calibrazione di V32 non è un'invenzione), e schedulare la rigenerazione dei 2 ROTTI — ogni ulteriore rinvio li mantiene attivi nel RAG.*
-- [ ] **[media · ROADMAP]** Il Batch 3 (18 episodi con EP_N2_28/55 da rigenerare + 4 da giudicare + 10 sicuri) è in attesa di decisione di Matteo, ma canon_guard segnala già 26 violazioni e il gate è dichiarato 'ambra'. Ogni notte che passa, nina-loop può produrre nuovi episodi sopra un canone non ancora bonificato, moltiplicando il debito. I due episodi ROTTI (28 e 55, aggancio troncato a metà parola) non possono aspettare: sono irrecuperabili senza rigenerazione.
-  - *azione: Matteo decide oggi su i 4 episodi dubbi (03/05/48/56); i 10 sicuri e i 2 rotti non dipendono dalla decisione — eseguire subito dry-run→apply su quei 12, poi attendere il verdetto sui 4 prima di chiudere il batch.*
 - [ ] **[media · SISTEMA]** Il canone delle critiche manuali è fermo da 43 giorni con 19 critiche attive non riverificate: "canone manuale fermo da 43 giorni (>30) — 19 attive da riverificare" (2026-08-21). Nel frattempo il sistema ha subito la bonifica MIMS, la scala GENESIS S0-S2 e il muto di 17 notti: alcune di quelle 19 critiche potrebbero essere già chiuse o cambiate di priorità, altre potrebbero essere diventate più urgenti.
   - *azione: Aprire critiche_manuali.json e scorrere le 19 voci attive: chiudere quelle risolte dalla bonifica #70, aggiornare la severità delle restanti, datare la revisione — operazione manuale da fare in questa sessione prima che il file superi i 60 giorni.*
 - [ ] **[bassa · MIMS]** Pilastro MIMS fermo al 30%.
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-08-24 15:50*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-08-25 14:49*
