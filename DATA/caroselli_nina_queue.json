@@ -61,7 +61,8 @@
       "casella": 10,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_10_il_grande_loop_quando_il_gesto_rimane.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_10"
     },
     {
       "id": "EP_N2_11",
@@ -69,7 +70,8 @@
       "casella": 11,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_11_la_grande_mappa.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_11"
     },
     {
       "id": "EP_N2_12",
@@ -77,7 +79,8 @@
       "casella": 12,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_12_la_squadra_notturna.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
-      "status": "pending"
+      "status": "bozza_verde",
+      "bozza": "CONTENT_ENGINE\\DATABASE\\MONDO\\POSTER\\CAROSELLI\\_BOZZE\\EP_N2_12"
     },
     {
       "id": "EP_N2_13",
@@ -116,6 +119,30 @@
       "title": "La Traccia",
       "casella": 17,
       "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_17_la_traccia.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_18",
+      "title": "La Giuntura — Dove Due Diventa Uno",
+      "casella": 2,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_18_la_giuntura_dove_due_diventa_uno.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_19",
+      "title": "La mano che insegna alla notte",
+      "casella": 19,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_19_la_mano_che_insegna_alla_notte.md",
+      "toplabel": "IL MONDO DI NINA · IL CAMMINO",
+      "status": "pending"
+    },
+    {
+      "id": "EP_N2_20",
+      "title": "Il Corpo che Non Trema",
+      "casella": 1,
+      "text_path": "CONTENT_ENGINE\\DATABASE\\episodes\\S_AVVENTURA\\EP_N2_20_il_corpo_che_non_trema.md",
       "toplabel": "IL MONDO DI NINA · IL CAMMINO",
       "status": "pending"
     }

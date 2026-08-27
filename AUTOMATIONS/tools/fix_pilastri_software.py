@@ -92,10 +92,41 @@ PAIRS = [
 
     # ── Pulizia generica del token: il pilastro software e' GENESIS, da solo ──
     ("GENESIS/V32/MIMS", "GENESIS"),
+    # #71: variante non coperta prima — TITANIUM_OS e' il repo/OS, non un pilastro,
+    # e saldato con la barra faceva lo stesso danno (EP_N2_10, EP_N2_44).
+    ("GENESIS/TITANIUM_OS/MIMS", "GENESIS"),
+    ("GENESIS/TITANIUM_OS", "GENESIS"),
     ("GENESIS V32/MIMS", "GENESIS"),
     ("GENESIS/MIMS", "GENESIS"),
     ("GENESIS/V32", "GENESIS"),
 ]
+
+
+# SOSPESI (#71, 27/08) — la regola generica "GENESIS/X -> GENESIS" NON vale qui.
+# Verificati a mano leggendo la frase in contesto, non il nome del file.
+SOSPESI = {
+    # da GIUDICARE: il pilastro giusto NON e' GENESIS, e' quello MECCANICO.
+    # Collassare su GENESIS non ripulisce: sposta il falso da una parte all'altra.
+    "EP_N2_03": "ripetibilita' = controllo qualita' della CNC -> il referente e' V32, non GENESIS",
+    "EP_N2_05": "calibrazione manuale del gesto = fisica -> il referente e' V32, non GENESIS",
+    "EP_N2_46": "3 occorrenze MISTE: 2 sono cruscotto (software, ok) ma 1 dice "
+                "'lo spazio fisico e' di 12 m2' — su GENESIS diventa un errore di categoria",
+    "EP_N2_48": "'Nel sistema GENESIS/V32 di MIMS' -> collassato diventa "
+                "'Nel sistema GENESIS di MIMS': sgrammaticato. Serve riscrittura, non strip",
+    "EP_N2_56": "golden template validata da sensori = ciclo produttivo -> MIMS/VULCAN, "
+                "non GENESIS. In piu' 'e nelle fabbriche smart reali' e' una comparazione gonfiata",
+    # ROTTI, non sporchi: troncati a meta' parola dal bug max_tokens pre-#69.
+    # Vanno RIGENERATI dall'Architetto: rattoppare la frase mozza la lascia mozza.
+    "EP_N2_28": "TRONCATO: 'In GENESIS/V32, M' — rigenerare",
+    "EP_N2_55": "TRONCATO: '...la g' + 'V32 (architettura di fluidita' narrativa)' e' "
+                "un'invenzione anche nel frammento superstite — rigenerare",
+}
+
+
+def sospeso(nome_file: str) -> str:
+    """Ritorna il motivo se l'episodio e' sospeso, stringa vuota altrimenti."""
+    m = re.match(r"(EP_N2_\d+)", nome_file)
+    return SOSPESI.get(m.group(1), "") if m else ""
 
 
 def guardia_pubblicato(nome_file: str, vecchie: list[str]) -> list[str]:
@@ -143,13 +174,26 @@ def main():
     changed_files = 0
     total_hits = 0
     bloccati = 0
+    sospesi_n = 0
+    visti_sospesi = set()
     for root in ROOTS:
         if not root.exists():
             continue
-        for f in root.rglob("EP_N2_*.md"):
+        # anche il RIFLUSSO: fatti_dalle_storie_*.md e' generato DAGLI episodi e finisce
+        # nel RAG. Correggere solo gli episodi lasciava il falso li' dentro (#70).
+        candidati = list(root.rglob("EP_N2_*.md")) + list(root.rglob("fatti_dalle_storie_*.md"))
+        for f in candidati:
             if "_ARCHIVIO" in f.parts:
                 continue
             if not scope_all and f.name not in FLAGGED:
+                continue
+            motivo = sospeso(f.name)
+            if motivo and "--anche-sospesi" not in sys.argv:
+                if f.name not in visti_sospesi:
+                    visti_sospesi.add(f.name)
+                    sospesi_n += 1
+                    print('\n=== ' + f.name + " ===")
+                    print(f"  [~] SOSPESO — {motivo}")
                 continue
             try:
                 txt = f.read_text(encoding="utf-8")
@@ -184,7 +228,8 @@ def main():
     mode = "APPLICATE" if apply else "DRY-RUN (nessuna modifica)"
     scope = "TUTTI gli EP_N2" if scope_all else f"{len(FLAGGED)} file segnalati"
     print(f"\n--- {mode} · scope {scope}: {total_hits} sostituzioni in {changed_files} file"
-          + (f" · {bloccati} BLOCCATI dalla guardia pubblicato" if bloccati else "") + " ---")
+          + (f" · {bloccati} BLOCCATI dalla guardia pubblicato" if bloccati else "")
+          + (f" · {sospesi_n} SOSPESI (giudizio umano / da rigenerare)" if sospesi_n else "") + " ---")
 
 
 if __name__ == "__main__":

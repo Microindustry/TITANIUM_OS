@@ -119,7 +119,7 @@ Nina capisce: una traccia non è una fotografia. È una traduzione. Il gesto div
 
 ---
 
-> *(Strato fondo — per il grande: La traccia è un'informazione fisica incisa nel substrato materiale. Ogni atto lascia un residuo: non solo nel tempo — la memoria — ma nello spazio: forma, segno, impronta. La traccia è il trasferimento di intenzionalità da una mano a un'altra attraverso la materia. Una forma incisa contiene istruzioni implicite. Il fossile è una traccia: il gesto dell'organismo vivo — come si muoveva, dove viveva, cosa mangiava — rimane leggibile nella roccia milioni di anni dopo la morte. In GENESIS/V32/MIMS, ogni ciclo di ottimizzazione lascia un segno nella geometria dello spazio dei pesi — quella traccia non è uno scarto, è l'informazione che insegna al sistema successivo come è stato fatto il lavoro. La traccia è il fondamento della riproducibilità e della trasmissione.)*
+> *(Strato fondo — per il grande: La traccia è un'informazione fisica incisa nel substrato materiale. Ogni atto lascia un residuo: non solo nel tempo — la memoria — ma nello spazio: forma, segno, impronta. La traccia è il trasferimento di intenzionalità da una mano a un'altra attraverso la materia. Una forma incisa contiene istruzioni implicite. Il fossile è una traccia: il gesto dell'organismo vivo — come si muoveva, dove viveva, cosa mangiava — rimane leggibile nella roccia milioni di anni dopo la morte. In GENESIS, ogni ciclo di ottimizzazione lascia un segno nella geometria dello spazio dei pesi — quella traccia non è uno scarto, è l'informazione che insegna al sistema successivo come è stato fatto il lavoro. La traccia è il fondamento della riproducibilità e della trasmissione.)*
 
 ---
 
@@ -177,7 +177,7 @@ Nina guarda l'argilla. L'impronta è ferma. Insegna già.
 **Pietre richiamate:** EP_N2_17 (La Traccia, giro 2) · EP_N2_10 (Il Grande Loop)
 **3 strati:** bambino = l'argilla ricorda la mia mano e insegna a chi viene dopo · curioso = la traccia è un'istruzione fisica incisa nel substrato, non un ricordo mentale · grande = trasferimento di intenzionalità attraverso la materia; fondamento della riproducibilità e della trasmissione nei sistemi complessi
 **Cuore:** fai bene le cose vere · gli strumenti, non le risposte · la curiosità è un superpotere
-**Aggancio reale:** In GENESIS/V32/MIMS, ogni ciclo di ottimizzazione lascia un segno nella geometria dello spazio dei pesi — quella traccia non è uno scarto ma l'informazione che insegna al sistema successivo come è stato fatto il lavoro. La traccia è il fondamento della riproducibilità.
+**Aggancio reale:** In GENESIS, ogni ciclo di ottimizzazione lascia un segno nella geometria dello spazio dei pesi — quella traccia non è uno scarto ma l'informazione che insegna al sistema successivo come è stato fatto il lavoro. La traccia è il fondamento della riproducibilità.
 **Open loop → Casella 55:** Chi legge la traccia? Come fa la traccia a trovare la mano giusta, quella che sa capire il messaggio inciso nella materia?
 
 ## FATTI (per il RAG)

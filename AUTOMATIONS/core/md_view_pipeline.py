@@ -20,9 +20,11 @@ Chiamato da: watcher.py (on_modified) — passivo
 ========================================================
 """
 
+import os
 import re
 import sys
 import json
+import time
 import logging
 import argparse
 from pathlib import Path
@@ -33,7 +35,8 @@ VIEWS_DIR  = ROOT / "DATA" / "views"
 INDEX_PATH = ROOT / "DATA" / "view_index.json"
 LOG_PATH   = ROOT / "DATA" / "logs" / "md_view_pipeline.log"
 
-SKIP_DIRS = {"BACKUPS", "VERSIONS", "__pycache__", ".git", "node_modules", ".venv", "views"}
+# _VAULT escluso: sono credenziali, non devono diventare view servite dall'API
+SKIP_DIRS = {"BACKUPS", "VERSIONS", "__pycache__", ".git", "node_modules", ".venv", "views", "_VAULT"}
 
 LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -46,6 +49,45 @@ logging.basicConfig(
     ]
 )
 log = logging.getLogger("md_view_pipeline")
+
+
+def _atomic_write_json(path: Path, data) -> None:
+    """Scrive JSON in modo ATOMICO: .tmp + os.replace.
+    Un crash a meta' scrittura non lascia piu' un file troncato
+    (radice della corruzione di view_index.json del 20/08/2026)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.flush()
+        os.fsync(f.fileno())
+    for tentativo in range(6):
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            # Windows: il watcher puo' tenere aperto il file un istante
+            if tentativo == 5:
+                raise
+            time.sleep(0.15 * (tentativo + 1))
+
+
+def _load_index() -> dict:
+    """Legge l'indice tollerando un file corrotto: lo mette da parte
+    e riparte da vuoto invece di far cadere tutta la pipeline."""
+    if not INDEX_PATH.exists():
+        return {"views": {}}
+    try:
+        with open(INDEX_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, UnicodeDecodeError) as e:
+        rotto = INDEX_PATH.with_suffix(".json.corrotto")
+        try:
+            os.replace(INDEX_PATH, rotto)
+        except OSError:
+            pass
+        log.warning(f"view_index.json corrotto ({e}) -> spostato in {rotto.name}, indice ricostruito da zero")
+        return {"views": {}}
 
 
 def _parse_frontmatter(lines: list[str]) -> dict:
@@ -144,8 +186,10 @@ def build_view(file_path: Path) -> dict:
     }
 
 
-def deploy_view(file_path: Path):
-    """Genera il .json di una singola view e aggiorna l'indice."""
+def deploy_view(file_path: Path, update_index: bool = True):
+    """Genera il .json di una singola view e aggiorna l'indice.
+    update_index=False: ritorna la entry senza toccare l'indice
+    (usato dal rebuild, che lo scrive UNA volta sola alla fine)."""
     payload = build_view(file_path)
     rel_path = str(file_path.relative_to(ROOT)).replace("\\", "/")
 
@@ -153,20 +197,21 @@ def deploy_view(file_path: Path):
     out_path = VIEWS_DIR / (rel_path.replace("/", "__") + ".json")
     VIEWS_DIR.mkdir(parents=True, exist_ok=True)
 
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
+    _atomic_write_json(out_path, payload)
 
-    _update_index(rel_path, payload["title"], payload["updated_at"])
+    if update_index:
+        _update_index(rel_path, payload["title"], payload["updated_at"])
     log.info(f"View deployata: {rel_path}")
+    return rel_path, {
+        "title": payload["title"],
+        "updated_at": payload["updated_at"],
+        "endpoint": f"/api/view/{rel_path.replace('/', '__')}",
+    }
 
 
 def _update_index(rel_path: str, title: str, updated_at: str):
     """Aggiorna DATA/view_index.json con la entry del file."""
-    if INDEX_PATH.exists():
-        with open(INDEX_PATH, "r", encoding="utf-8") as f:
-            index = json.load(f)
-    else:
-        index = {"views": {}}
+    index = _load_index()
 
     index["views"][rel_path] = {
         "title": title,
@@ -176,19 +221,30 @@ def _update_index(rel_path: str, title: str, updated_at: str):
     index["last_built"] = datetime.now().isoformat()
     index["total"] = len(index["views"])
 
-    INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(INDEX_PATH, "w", encoding="utf-8") as f:
-        json.dump(index, f, indent=2, ensure_ascii=False)
+    _atomic_write_json(INDEX_PATH, index)
 
 
 def rebuild_all():
-    """Ricostruisce tutte le view .md → .json."""
+    """Ricostruisce tutte le view .md → .json.
+    L'indice si costruisce in memoria e si scrive UNA volta sola alla fine:
+    prima veniva riscritto per intero a ogni file (O(n^2) e n finestre di
+    corruzione — e' cosi' che si e' rotto il 20/08/2026)."""
+    index = {"views": {}}
     count = 0
     for f in ROOT.rglob("*.md"):
         skip = any(p in SKIP_DIRS for p in f.relative_to(ROOT).parts)
-        if not skip:
-            deploy_view(f)
-            count += 1
+        if skip:
+            continue
+        try:
+            rel_path, entry = deploy_view(f, update_index=False)
+        except Exception as e:
+            log.warning(f"View saltata ({f}): {e}")
+            continue
+        index["views"][rel_path] = entry
+        count += 1
+    index["last_built"] = datetime.now().isoformat()
+    index["total"] = len(index["views"])
+    _atomic_write_json(INDEX_PATH, index)
     log.info(f"Rebuild completo: {count} view generate. Indice: {INDEX_PATH}")
 
 

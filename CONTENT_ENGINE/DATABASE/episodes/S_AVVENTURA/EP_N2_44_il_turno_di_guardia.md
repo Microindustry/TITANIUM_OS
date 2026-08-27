@@ -207,7 +207,7 @@ Nina tiene il calibro in mano un momento, poi lo rimette in tasca. Una cosa sola
 **Pietre richiamate:** EP_N2_12 (l'Esercito Silenzioso, esistenza) · EP_N2_13 (il soldato caduto in silenzio, comunicazione) · verità-ponte "controlla i fatti, non le parole" · "non ricordare, documenta"
 **3 strati:** bambino = otto lanterne nel buio che non si spengono mai, e ognuna dice la verità · curioso = un sistema multi-agente con loop di feedback continui, dove il silenzio è il vero nemico · grande = legge di Amdahl applicata alla propagazione dell'errore: ogni strato che eredita un errore non comunicato ne moltiplica la complessità di risoluzione di 1,5–3×
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/TITANIUM_OS, i nodi multi-agente (Tesla-Validator, Forge-Monitor, Memory-Custodian) devono generare "battiti" — segnali di stato continui — non per essere potenti, ma per essere controllabili. Il silence è il nemico. La trasparenza sull'errore è il fondamento della fiducia.
+**Aggancio reale:** Nel sistema GENESIS, i nodi multi-agente (Tesla-Validator, Forge-Monitor, Memory-Custodian) devono generare "battiti" — segnali di stato continui — non per essere potenti, ma per essere controllabili. Il silence è il nemico. La trasparenza sull'errore è il fondamento della fiducia.
 **Open loop → Casella 15:** Chi controlla l'ottavo agente? E se uno dei Soldati Fedeli decidesse di tacere senza che nessuno lo veda — come si costruisce un sistema che non può mentire a sé stesso?
 
 ## FATTI (per il RAG)

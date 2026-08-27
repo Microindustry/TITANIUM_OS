@@ -121,7 +121,7 @@ Nina aprì il calibro che teneva in tasca — quello consumato di FORGE — e lo
 
 THEMIS annuì, questa volta senza parole.
 
-> *(Strato fondo — per il grande: Nel sistema GENESIS/V32, l'estrazione del grafo da MENTE/ è volutamente ibrida. Il codice produce grafo automatico tramite parsing sintattico e AST — deterministico, veloce, senza ambiguità. I documenti critici passano invece per validazione manuale: lettura, contestualizzazione, riconoscimento del rischio. Il motivo è tecnico preciso: l'automatico non ha accesso al contesto di rischio, non riconosce gli impatti a cascata, non vede le scelte irrevocabili e i compromessi storici che spiegano perché l'architettura è così. Solo chi legge con consapevolezza riconosce se un nodo è una colonna portante o una decorazione. Senza questa separazione, il grafo perde il suo scopo principale: dire dove NON fare modifiche superficiali.)*
+> *(Strato fondo — per il grande: Nel sistema GENESIS, l'estrazione del grafo da MENTE/ è volutamente ibrida. Il codice produce grafo automatico tramite parsing sintattico e AST — deterministico, veloce, senza ambiguità. I documenti critici passano invece per validazione manuale: lettura, contestualizzazione, riconoscimento del rischio. Il motivo è tecnico preciso: l'automatico non ha accesso al contesto di rischio, non riconosce gli impatti a cascata, non vede le scelte irrevocabili e i compromessi storici che spiegano perché l'architettura è così. Solo chi legge con consapevolezza riconosce se un nodo è una colonna portante o una decorazione. Senza questa separazione, il grafo perde il suo scopo principale: dire dove NON fare modifiche superficiali.)*
 
 ---
 
@@ -179,7 +179,7 @@ Ma la casella 36 era ancora spenta — e aveva una forma strana, quasi doppia.
 <!-- DIDATTICA -->
 **Pietra:** `⟡5` La Grande Mappa (giro 2). *Il grafo di un sistema ha due strati: quello del codice si estrae automatico; quello dei documenti sensibili richiede mano umana che riconosce il contesto di rischio e i nodi critici.*
 **Pietre richiamate:** ⟡5 casella precedente (grafo e memoria del sistema) · ⟡3 FORGE (la mano deve sapere prima) · nodo single-point-of-failure (introdotto in Regione 5, Giro 1)
-**3 strati:** bambino = la sarta che non fa tagliare al buio, il custode che sceglie cosa aprire · curioso = estrazione ibrida: automatica per il codice, manuale per i documenti sensibili perché l'automatico non vede il contesto di rischio · grande = in GENESIS/V32, MENTE/ usa parsing AST per il codice e validazione manuale per i documenti architetturali critici; la separazione protegge i single-point-of-failure da modifiche inconsapevoli
+**3 strati:** bambino = la sarta che non fa tagliare al buio, il custode che sceglie cosa aprire · curioso = estrazione ibrida: automatica per il codice, manuale per i documenti sensibili perché l'automatico non vede il contesto di rischio · grande = in GENESIS, MENTE/ usa parsing AST per il codice e validazione manuale per i documenti architetturali critici; la separazione protegge i single-point-of-failure da modifiche inconsapevoli
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
 **Aggancio reale:** Nel grafo vivo di GENESIS, MENTE/ contiene decisioni architetturali irrevocabili, dipendenze critiche non visibili al parser
 

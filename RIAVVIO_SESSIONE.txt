@@ -1,57 +1,57 @@
-=== RIAVVIO SESSIONE #70 — generato 28/07/2026 (fine #69 RECUPERO ARRETRATO, skill salva) ===
-Ultima sessione: #69 (28/07 — Opus 5) — 3 agenti read-only in parallelo, Claude verificatore
+=== RIAVVIO SESSIONE #72 — 27/08/2026 17:16 ===
+Ultima sessione: #71 - 2026-08-27
 
-━━━ ROTTA GENERALE (ordine Matteo 28/07) ━━━
-1) finire i CAROSELLI  2) settare bene l'ECOSISTEMA  3) partire con MIMS (prossimo progetto)
+━━━ STAVAMO PARLANDO DI ━━━
+Sessione #71 — l'handoff mentiva e l'ho verificato riga per riga. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11. API :5001 non e' giu' (17 endpoint su 18 danno 200). Il RAG e' rientro, non perdita (21.630 -> 22.637, sale). Trovato e riparato il guasto vero: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era troncato a meta' scrittura — la radice era md_view_pipeline che riscriveva l'indice INTERO in modo non atomico a ogni singolo file. Applicato il batch 3 gruppo 1 (10 episodi, gate canone da 22 righe a 8) e chiuso S3 della scala GENESIS (CORE/repos.py, grep SELECT fuori = 0). Poi, su richiesta di Matteo, integrazione ecosistema + versioni + profilo GitHub.
 
-━━━ DOVE SIAMO (in 10 sec) ━━━
-Matteo non revisionava dal 21/07 (7 notti di produzione automatica). Recuperato tutto con 3 agenti
-(episodi/bozze · dashboard · critiche+proposte). 5 fix applicati e verificati. Report #68 in
-DOCS/ATTACCO_20260721/. Dettaglio completo di #69 in DA_FARE_FATTO.md.
+━━━ TOPIC ATTIVI ━━━
+  • view_index.json troncato: scrittura atomica tmp+fsync+os.replace con retry Windows, rebuild che scrive una volta sola (487 view)
+  • canon_guard e genesis_seed --albero non erano eseguibili a mano: UnicodeEncodeError su console cp1252, stdout in utf-8
+  • batch 3 gruppo 1: 10 episodi corretti (aggiunta la variante GENESIS/TITANIUM_OS che il tool non copriva), 7 SOSPESI con motivo scritto
+  • S3 scala GENESIS chiuso: CORE/repos.py, connessione iniettata, TABELLE come whitelist contro l'iniezione sul nome tabella
+  • profilo GitHub pubblicava v1.1.0 (versione dello SCHEMA di STATE) invece di v3.0.0: ora la versione viene dal tag git
+  • generate_restart_prompt: lo staleness detector si spegneva quando non c'erano commit -> handoff di 3 mesi fa spacciato per attuale
+  • _VAULT escluso dalla view pipeline: generava view di CREDENZIALI_BACKUP.md servite dall'API
 
-━━━ FATTO E VERIFICATO IN #69 ━━━
-- Corsia caroselli NINA sbloccata dopo 7 notti: la coda aveva EP_N2_04/05/06 come 'bozza_verde'
-  benche' fisicamente promossi -> tetto backlog 6>=6 falso. Backlog reale 6->3, riparte da EP_N2_10.
-- 4 episodi persi recuperati: audit_episodes considerava "presente" un file col titolo gia' nel json,
-  e story_agent riusa "Episodio 69". Rimosso il match-per-titolo -> 252->256 episodi, 0 orfani.
-- Vista RETE (sorgente SISTEMA) riparata: 4 endpoint mancavano dal proxy vite (tornavano index.html).
-- Troncatura episodi Nina risolta: nina_agent max_tokens 4000->8000 (si perdeva l'open-loop).
-- -10 critiche/notte di rumore: legenda organi_vivi (eta' in giorni) nel SYSTEM_PROMPT + warning HF
-  zittito in vault_intersect (era classificato "rate-limit sorgente").
-- Verifiche: 5 file compilano · storie_lint 0 violazioni · tsc -b 0 errori · API 200 · 0 orfani.
+━━━ THREAD APERTI (da riprendere) ━━━
+  → SOSPESI batch 3 (decide Matteo): 03/05/46/48/56 vogliono 5 riscritture mirate, NON il collasso generico su GENESIS (li' il pilastro giusto e' quello meccanico)
+  → EP_N2_28 e 55 da RIGENERARE: troncati a meta' parola dal bug max_tokens pre-#69
+  → EP_N2_16: due numeri inventati spacciati per FATTI (70% affidabilita', errori da 10% a 2-3%) che la regola generica non vede
+  → S4 della scala GENESIS: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI)
+  → GitHub Release di v3.0.0 mai creata: il tag c'e' ed e' pushato, la Release no. E da v3.0.0 sono passati 646 commit senza un tag nuovo
+  → 7o dipartimento: 9 agenti su 12 sono di contenuto/sistema parcheggiati sotto OFFICINA perche' GENESIS non e' fra i 6
+  → Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili
 
-━━━ DUE MIEI ERRORI RITIRATI (onesta' di metodo) ━━━
-- La paginazione chromadb NON risolve il 503 di /api/rag/vectors: il segmento HNSW e' incoerente
-  (limit=10 -> 0 embedding, limit>=1000 -> IndexError; i metadati sqlite si leggono).
-  CURA VERA: SERVICES/rag_recover.ps1 L1 --drop-hnsw (ricostruisce da sqlite, no re-embed) = CLICK MATTEO.
-- "101 bare-except in 47 file" (mio numero del #68) era FALSO: 1 solo nel codice proprio.
+━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
+  ✓ Matteo: applicare il gruppo 1 del batch 3 e VALUTARE gli altri invece di applicarli alla cieca
+  ✓ Il collasso generico GENESIS/X -> GENESIS non si applica dove il referente e' meccanico: sposterebbe il falso invece di toglierlo
+  ✓ La versione del progetto si deriva dal TAG git, non da un campo copiato a mano (coerente con RELEASES.md: una release = un tag)
+  ✓ Un handoff che non sa deve dirlo: meglio dichiarare il vuoto che riempirlo con contesto vecchio
+  ✓ Release nuova (v3.1.0 minor o v4.0.0 major): non la decide il sistema, la firma Matteo
 
-━━━ PRIMO STEP #70 — ATTACCA E CORREGGI (ordine Matteo) ━━━
-1. FERMARE LA CONTAMINAZIONE MIMS (priorita' massima: MIMS e' il prossimo progetto)
-   - nina_agent.py:188: iniettare _CANONE.md nel prompt dell'Architetto + regola "se non c'e'
-     aggancio reale, lascia vuoto" (oggi lo slot va riempito e si inventa)
-   - canon_guard: regola che segnala MIMS/VULCAN descritti come software/AI
-   - correggere i 5 episodi contaminati: EP_N2_57/59/60/63/64 (+ fonti fabbricate nei FATTI di EP_N2_64)
-2. FIX MECCANICI RESIDUI: casella "?" (nina_rag_loop.py:180) · guardia titoli unici (titoli tripli
-   19/56/63 e 45/53/60) · commit del loop Nina (EP_N2_62/63/64 untracked) · sentinella canone su hash
-   non mtime (night_audit.py:635) · euristiche rumorose (_cid sulla prosa LLM = 6 cloni/notte,
-   rate-limit, 0 risultati, QC_EP_OPEN_LOOP, canon_guard su "chunk recuperati")
-   · AZIONI_MATTEO.md:32 (istruzione .env sbagliata: nessuno legge quel file, chiavi = var utente Windows)
-   · _CANONE.md:32 range 01..56 -> 01..64 (edit a mano, nessun generatore; impatto RAG nullo)
-3. IMPLEMENTARE LE NOVITA' IA ingegnerizzandole nel progetto
-4. BOZZE: 6 PRONTE (EP_N2_07/08, EP_SG_02_05/06, EP_SG_03_01/02, EP_SG_04_01) ·
-   EP_N2_09 slide 2 vuota (scena 'biblioteca' non in sg_builder.SCENES) ·
-   EP_SG_03_03 (+-0,019 mm pubblico + open-loop all'indietro)
-5. DASHBOARD minori: CalendarioView.tsx:97 chiavi duplicate · lint 89 · /api/content-files divergente
-   (vite 289 vs Flask 0) · badge "289 su disco" conta _ARCHIVIO · ~2,5k righe dead code + 7 deps inutili
+━━━ PROSSIMA AZIONE SUGGERITA ━━━
+  Decidere i 5 SOSPESI del batch 3 (proposta: 5 riscritture mirate) e i 2 episodi da rigenerare. Poi S4: organigramma GENESIS in dashboard. In parallelo: creare la GitHub Release di v3.0.0 e decidere il tag nuovo.
 
-━━━ DECISIONI CHE RESTANO A MATTEO ━━━
-Titoli tripli (rititolare o archiviare?) · EP_SG_03_03 il numero esce? · campo "Aggancio reale" si
-tiene? · quale bozza esce prima · rag_recover --drop-hnsw (UAC) · pin requirements.txt (0 == su 36) ·
-chiave Semantic Scholar (81% chiamate a vuoto) · UPS + mandrino ER20 + martinetto Vevor
+━━━ BLOCKERS ━━━
+  ⚠ UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20
+  ⚠ Chiavi .env da ruotare (red-team #38) — le ruota Matteo
+  ⚠ API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna
+  ⚠ Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS
+  ⚠ [DECISO 24/06] Connettori MIMS = Via B (compressione VULCAN, processo proprietario per B2) — SCHEDA §5 a canone. A valle: ricalcolare economia/BEP sul tooling Via B + rivendicare il processo nella bozza B2. Prossimo step fisico MIMS: montare martinetto Vevor -> prima colata giunto
+  ⚠ Martinetto Vevor 3 stadi da montare (prerequisito fisico VULCAN)
 
-━━━ SOCIAL ━━━
-18/21 post escono da soli. I 3 rimasti: promemoria Calendar 30/07 (Nina EP_N2_05 19/08 + EP_N2_06 23/08,
-Sistema GENESIS EP_SG_02_04 21/08). Caption in POSTER/_NINA_/_SISTEMA_COPIA_INCOLLA.md.
+━━━ STATO PILASTRI ━━━
+  V32: 65% — 
+  MIMS: 30% — 
+  GENESIS: 70% — 
+  VITA_NATURA: 40% — 
+  IDENTITY: 50% — 
 
-━━━ Generato: 28/07/2026 — fine #69 (skill salva) ━━━
+━━━ ULTIMI COMMIT ━━━
+d417f838 auto: nina_rag_loop - episodi Nina 26/08/2026
+98dd12c1 auto: night_audit - cartella clinica 26/08/2026
+eac8338f auto: inventario notturno + critiche
+39ff90c3 auto: nina_rag_loop - episodi Nina 25/08/2026
+6669ba83 auto: night_audit - cartella clinica 25/08/2026
+
+Generato: 27/08/2026 17:16

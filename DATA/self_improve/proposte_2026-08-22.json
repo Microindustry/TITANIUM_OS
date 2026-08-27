@@ -1,0 +1,295 @@
+{
+  "data": "2026-08-22",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA",
+      "titolo": "Diagnosi e restart API server :5001 + health-check permanente",
+      "cosa": "Identificare la causa dei 500 su 7/9 endpoint di :5001, ripristinare il server, aggiungere uno script di health-check che notifichi (log + file flag) quando il server è giù — così il fallback sul motore diretto diventa visibile invece di mascherare il guasto.",
+      "perche": "Segnale critico (sev alta, duplicato): 'API server :5001 giù: 7 endpoint su 9 danno 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto — un secondo guasto concorrente lascerebbe Nina senza RAG.' Il fallback silente è il vero rischio.",
+      "come": [
+        "1. Leggere i log di :5001 (stderr + journald) per identificare exception/porta/dipendenza mancante.",
+        "2. Tentare restart manuale e verificare i 9 endpoint con curl locale.",
+        "3. Scrivere health_check_5001.py: ogni 5 min chiama /health, se 500 scrive flag SISTEMA/flags/api_down.flag e appende riga a SISTEMA/logs/health.log.",
+        "4. Aggiungere health_check al crontab esistente (sicuro, non tocca main).",
+        "5. Nel fallback di nina_agent.py aggiungere: se motore diretto usato → log WARNING con timestamp (non silente)."
+      ],
+      "rischio": "Basso. Il check è read-only. Il restart del server è reversibile. Non tocca dati né permessi.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[0] + critiche_audit_aperte[7]"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "RAG",
+      "titolo": "Audit causale perdita chunk RAG (-10.500) + rebuild verificato con snapshot pre/post",
+      "cosa": "Determinare se i 10.500 chunk mancanti sono perdita reale o rebuild parziale, eseguire un re-index completo documentato, e attivare uno snapshot checksum notturno che rilevi derive future prima che raggiungano -30%.",
+      "perche": "Segnale critico (sev alta, triplicato): chunk scesi da ~32.800 a 22.273-22.525 senza rebuild documentato. La corruzione HNSW da power-loss è avvenuta 3 volte in 2 giorni. Il grounding di Nina opera su corpus mutilato.",
+      "come": [
+        "1. Contare chunk attuali per collection: chromadb.Client().get_collection(x).count() per ogni collection — registrare in SISTEMA/logs/rag_audit_20260822.json.",
+        "2. Confrontare con backup o git-log del 24/06 per identificare quale collection ha perso chunk.",
+        "3. Se causa è power-loss HNSW: eseguire rebuild da sorgenti (MENTE/KNOWLEDGE/) con log completo.",
+        "4. Aggiungere a night_audit.py un check: se chunk_count < soglia_min (es. 28.000) → flag RAG_DEGRADED nel report.",
+        "5. Snapshot post-rebuild: salvare chunk_count per collection in SISTEMA/snapshots/rag_YYYYMMDD.json ogni notte."
+      ],
+      "rischio": "Medio. Il rebuild può richiedere tempo e risorse. Non cancella dati sorgente. Eseguire su branch locale o con backup preventivo dell'indice.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[3] + critiche_audit_aperte[10] + critiche_audit_aperte[6] (HNSW power-loss ricorrente)"
+    }
+  ],
+  "segnali": {
+    "data": "2026-08-22",
+    "milestone": "Sessione #70 (16/08): BONIFICA CONTAMINAZIONE MIMS + SCALA GENESIS S0-S2. Scoperto che A1/A2 erano gia' fatti dal commit a77256f3 del 28/07 (sorgente chiusa da 19 giorni): non rifatti, verificati. A3 era il pezzo vero aperto -> canon_guard su 64 EP_N2 vivi ha trovato 8 episodi sporchi (i 5 in lista ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "L'API server :5001 è giù: 7 endpoint su 9 restituiscono 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto, ma questo fallback non è garantito a ogni chiamata e maschera il guasto invece di risolverlo. Il dato è c"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Il canone delle critiche manuali è fermo da 43 giorni con 19 critiche attive non riverificate: \"canone manuale fermo da 43 giorni (>30) — 19 attive da riverificare\" (2026-08-21). Nel frattempo il sistema ha subito la bonifica MIMS, la scala"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Stanotte research_agent ha colpito il rate-limit di Semantic Scholar due volte consecutive e poi ha ottenuto zero risultati utili, perdendo anche arxiv per timeout: \"2026-08-21 03:38:38 [...] HTTP 429\" → \"2026-08-21 03:39:01 [...] 429 Clien"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "Il RAG ha perso circa 10.275 chunk rispetto al 24/06 (da ~32.800 a 22.525 stanotte). La causa non è determinata: può essere un rebuild parziale o una perdita reale di conoscenza indicizzata. Finché non si sa perché, il grounding di Nina ope"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il Batch 3 ha il dry-run pronto e 0 bloccati dalla guardia, ma attende la decisione di Matteo da almeno una sessione. I 2 episodi ROTTI (EP_N2_28 e 55 con aggancio troncato a metà parola) peggiorano ogni notte che passa perché vengono rilet"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Il canone dichiara EP_N2_64 come episodio massimo ma su disco esistono EP_N2_65, 66 e 67: \"su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md\" (2026-08-21). Tre episodi prodotti e committati non sono riconosciuti dal cano"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "L'UPS hardware manca e la corruzione HNSW da power-loss è già avvenuta 3 volte in 2 giorni (blockers: 'la corruzione HNSW da power-loss è ricorrente (3 volte in 2gg)'). Ogni interruzione di corrente può di nuovo dimezzare l'indice RAG o cor"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "API server :5001 giù: 7 endpoint su 9 danno 500. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto — un secondo guasto concorrente (motore diretto offline) lascerebbe Nina senza RAG. Il dato è confermato da next_step "
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il Batch 3 (18 episodi con EP_N2_28/55 da rigenerare + 4 da giudicare + 10 sicuri) è in attesa di decisione di Matteo, ma canon_guard segnala già 26 violazioni e il gate è dichiarato 'ambra'. Ogni notte che passa, nina-loop può produrre nuo"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "La sentinella canone è neutralizzata: log_issues riporta (2026-08-20) 'night_audit.py:635 misura il mtime di _CANONE.md, che i blocchi auto rinfrescano ogni notte → stale: false per sempre. Il contenuto curato è fermo al 16/07.' Il campo ca"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "I chunk RAG sono scesi da ~32.800 (24/06) a 22.273 stanotte: -10.500 chunk (-32%) senza che nessun rebuild documentato giustifichi la perdita. Se è perdita reale il RAG risponde su un corpus mutilato; se è rebuild incompleto il re-index va "
+      },
+      {
+        "area": "GENESIS",
+        "sev": "media",
+        "finding": "Lo slot aggancio_reale continua a essere riempito con invenzioni LLM dentro GENESIS: bussola_open segnala '\"il sistema notturno di consolidamento dei pattern motori\" non esiste' e che la regola \"meglio vuoto che inventato\" non morde ancora."
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 311,
+      "rag_chunks": 22525,
+      "n_commits_7d": 15
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**Residuo onesto**: lo slot `aggancio_reale` non resta mai vuoto — l'LLM ora inventa *dentro* GENESIS (\"il sistema notturno di consolidamento dei pattern motori\" non esiste). Il P0 è chiuso (MIMS è salvo), ma la regola \"meglio vuoto che inventato\" non morde ancora.",
+      "**Batch 3 da decidere (Matteo)**: altri **18 episodi** contengono \"GENESIS/V32\" senza verbo software vicino (canon_guard non li segnala). Vanno ripuliti anche quelli o è co-menzione legittima?",
+      "**C1 (S0)** FounderOS clonato read-only in `ARCHIVE/REFERENCE/founderos` (MIT, `next dev -p 4100`). DDL delle 8 tabelle già estratto — nota: in FounderOS `agents` **non ha** `parent_id`, va aggiunto.",
+      "**Resta una terza copia**: `DOCS/ASSOLUTO/ASSOLUTO_V7.md:210` ha le sue \"10 Regole — Titanium Ventures\". È documento strategico storico (ASSOLUTO = \"materia di studio, non task\" per il RIPASSO), non l'ho toccato. Decidi tu se derivarlo o marcarlo come storico.",
+      "**Non applicato** — resta decisione di Matteo, che ha detto di tenerlo lì.",
+      "`nina-loop`, snapshot RAG, retention, inventario notturno, AI news watcher: **ultimo output 17,5 giorni fa** (soglia 3-4). Ultimo commit automatico: **30/07**. Vanno riaccesi e verificati.",
+      "RAG a **21.630 chunk** (era ~32.800 il 24/06): da capire se è il rientro dopo un rebuild o una perdita.",
+      "API server (`:5001`) **giù**. Il grounding di Nina ha funzionato solo grazie al fallback sul motore diretto.",
+      "W1 social: i 3 post rimasti erano bloccati dal tetto 29 giorni — **la finestra è passata**, vanno riprogrammati.",
+      "In **5 episodi su 8 recenti** MIMS è descritto come modulo software/AI: EP_N2_64 «*MIMS (Machine-Induced Meaning Synthesis)*» (acronimo inventato), EP_N2_63 «*consolida i pattern di controllo motorio*», EP_N2_60/59/57 simili. Il canone dice: MIMS = **meccanica** (tile 190×190, croce D29.9 H7/g6, PA-GF30). Causa: `nina_agent.py:188` chiede all'Architetto un `\"aggancio_reale\"` ai pilastri ma `_CANONE.md` **non è mai iniettato nel prompt** e `retrieve_context()` interroga il RAG solo sul concetto → lo slot va riempito e si inventa. Contribuisce un paper fuori tema in `MENTE/KNOWLEDGE/RESEARCH/mims/`. **Questi file finiscono nel RAG** (`save_canon` li specchia in MENTE) → il falso si autoalimenta.",
+      "Stessa classe: **fonti fabbricate nei FATTI** di EP_N2_64 (`Fonte: GENESIS/documentation_hallucination_2026` = path inesistente; «1 sarta su 1.000» = numero inventato).",
+      "`nina_rag_loop.py:180` hardcoda `\"casella\": \"?\"` → `casella ?` in 32 episodi su 64, in contraddizione con l'header dello stesso file.",
+      "**Titoli tripli**: \"La mano che insegna alla notte\" = EP_N2_**19/56/63**; \"Il Direttore Invisibile\" = **45/53/60**; più 51/57 e 13/52. **NON sono duplicati di contenuto** (similarità <0,13): sono giri di spirale legittimi con titolo riusato — `stage1_architect` non riceve i titoli già usati. Guardia da aggiungere.",
+      "EP_N2_62/63/64 **non committati**: il loop Nina non committa mai (i commit `auto: story_agent` toccano solo `S2_SISTEMA/`). Tra due \"salva\" gli episodi Nina sono a rischio.",
+      "`night_caroselli_nina.py:189-191`: draft fallito non marca l'item → ritenta lo stesso nel batch e la notte esce con EXIT 1 anche se poi riesce."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "3Blue1Brown",
+        "titolo": "The jumping pegs puzzle",
+        "url": "https://www.youtube.com/shorts/rYyJm1tD3d0"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Ryan Greenblatt – What happens once AI can automate AI research?",
+        "url": "https://www.youtube.com/watch?v=-RXD4bTuFTo"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Claude Got Caught Trying to Hack a GitHub Repo - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/tHtkXw90IrY"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Every AI Model Has an Inherited Personality - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/yAq4PDB6n3s"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why AI would rather lie than say 'I don't know' - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/BcsP0RFqu-o"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "AI has no duty of loyalty to you - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/BL75EMfz_N8"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "OpenAI's models hacked a package manager to cheat evals - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/pP4scNfgL5U"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why Raising AI Isn't Like Raising Kids - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/2EfINfM0wLs"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "AI doesn't need to be good at everything. Just R&D - Ryan Greenblatt",
+        "url": "https://www.youtube.com/shorts/9oqFUheU104"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "GUIs are not dead",
+        "url": "https://www.youtube.com/shorts/08lTuvYITxQ"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Ex-NASA dev reveals his Agentic Engineering Workflow",
+        "url": "https://www.youtube.com/watch?v=xgkjtF89-44"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "My double DGX Spark setup",
+        "url": "https://www.youtube.com/shorts/hST4u6lhY5U"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Ex-Uber dev explains his Multi-Agent Workflow",
+        "url": "https://www.youtube.com/watch?v=utb7zYbK10c"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Zuck is finally back...",
+        "url": "https://www.youtube.com/shorts/HHlWC6uAgkc"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Open-source is not what you think...",
+        "url": "https://www.youtube.com/shorts/zbbgb6-AoJA"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Does harness matter more than the model?",
+        "url": "https://www.youtube.com/shorts/e2W5HLrj-w4"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "$75M founder reveals his Agentic Engineering setup",
+        "url": "https://www.youtube.com/watch?v=QBfXiWvM0qc"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "AI is getting a little out of control",
+        "url": "https://www.youtube.com/watch?v=xGzseSSStnw"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "OpenAI's Astra JUST solved math...",
+        "url": "https://www.youtube.com/watch?v=TjUxBdiut1k"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "QWEN just CRASHED the industry",
+        "url": "https://www.youtube.com/watch?v=bjmbKdFOW_I"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "AI just killed Crypto...  (INSANE)",
+        "url": "https://www.youtube.com/watch?v=AL-XQiM4248"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "it JUST got so much worse...",
+        "url": "https://www.youtube.com/watch?v=C9WoQrslPMM"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "all AI thoughts JUST got revealed...",
+        "url": "https://www.youtube.com/watch?v=kKjmv2CuVUI"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "Grok 4.6 is Fable now",
+        "url": "https://www.youtube.com/watch?v=VB39bHByHuU"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "Anthropic just confirmed everyone's worst fear",
+        "url": "https://www.youtube.com/watch?v=qZefjtkkvrY"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "here's how to build a real business...",
+        "url": "https://www.youtube.com/watch?v=LUFVYJlguJk"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "This benchmark is getting out of hand",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vtzyl9/this_benchmark_is_getting_out_of_hand/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Any speculation on whether or not Google will announce a new Gemma model at the Gemma SF Celebration tonight?",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vttdss/any_speculation_on_whether_or_not_google_will/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Qwen 3.8 27b - PI AGENT vs OPENCODE",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vu0u2v/qwen_38_27b_pi_agent_vs_opencode/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "If you are wondering why Ornith 1.5 35B A3B with MTP is so slow, this is why",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vtu555/if_you_are_wondering_why_ornith_15_35b_a3b_with/"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -139,7 +139,7 @@ Nina abbassa lo switch. Lo rialza. Lo abbassa ancora. Non sta scegliendo un lato
 
 THEMIS non dice niente. Ma il calibro in mano non si muove — segno che ha finito di correggere.
 
-> *(Strato fondo — per il grande: Nel sistema GENESIS/V32/MIMS, il 2026-06-12 è stata presa una decisione precisa: creare l'endpoint `/api/graph/graphify` con un toggle a due sorgenti. FONTE 1 — il RAG: conoscenza acquisita, fatti nominali, le risposte che il sistema sa dare. FONTE 2 — il graph interno: stato della rete, architettura viva, come il sistema è costruito in quel momento. Senza lo specchio del sistema, il debug di stato richiede ore — si vede la risposta giusta ma non si capisce perché a volte è sbagliata. Senza lo specchio della conoscenza, il sistema non sa cosa sta dicendo. Sono due viste della stessa galassia di dati. Il motore 3D resta invariato — il toggle è solo un livello di lettura, non di meccanica.)*
+> *(Strato fondo — per il grande: Nel sistema GENESIS, il 2026-06-12 è stata presa una decisione precisa: creare l'endpoint `/api/graph/graphify` con un toggle a due sorgenti. FONTE 1 — il RAG: conoscenza acquisita, fatti nominali, le risposte che il sistema sa dare. FONTE 2 — il graph interno: stato della rete, architettura viva, come il sistema è costruito in quel momento. Senza lo specchio del sistema, il debug di stato richiede ore — si vede la risposta giusta ma non si capisce perché a volte è sbagliata. Senza lo specchio della conoscenza, il sistema non sa cosa sta dicendo. Sono due viste della stessa galassia di dati. Il motore 3D resta invariato — il toggle è solo un livello di lettura, non di meccanica.)*
 
 ---
 

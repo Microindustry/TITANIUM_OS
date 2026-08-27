@@ -70,8 +70,42 @@ def get_recent_episodes(n=5):
                 break
     return titles
 
+def versione_reale() -> str:
+    """La versione del PROGETTO, dal tag git annotato.
+
+    BUG STORICO (trovato #71, 27/08/2026): qui si leggeva state["meta"]["version"],
+    che e' la versione dello SCHEMA di STATE.json (1.1.0), non del progetto. Il
+    profilo pubblico ha pubblicato "v1.1.0" ogni notte mentre i tag dicevano v3.0.0.
+    RELEASES.md e' esplicito: "una release = un tag git annotato". La fonte e' il tag.
+    """
+    try:
+        tag = subprocess.run(["git", "describe", "--tags", "--abbrev=0"],
+                             cwd=str(BASE / "TITANIUM_OS"), capture_output=True,
+                             text=True, timeout=10).stdout.strip()
+        if not tag:
+            return "?"
+        avanti = subprocess.run(["git", "rev-list", "--count", tag + "..HEAD"],
+                                cwd=str(BASE / "TITANIUM_OS"), capture_output=True,
+                                text=True, timeout=10).stdout.strip()
+        return f"{tag} · +{avanti} commit" if avanti and avanti != "0" else tag
+    except Exception:
+        return "?"
+
+
+def rag_chunks() -> str:
+    """Chunk del RAG dalla cartella clinica notturna. Era un numero SCRITTO A MANO
+    nel template (~19.600, fermo dal #61): un dato vivo hardcodato invecchia e basta."""
+    try:
+        h = json.loads((BASE / "TITANIUM_OS" / "DATA" / "audit" /
+                        "system_health.json").read_text(encoding="utf-8"))
+        n = int(h.get("rag_chunks", 0))
+        return f"~{n:,}".replace(",", ".") + " chunk" if n else "chunk"
+    except Exception:
+        return "chunk"
+
+
 def build_readme(state):
-    v = state.get("meta", {}).get("version", "?")
+    v = versione_reale()
     genesis_pct = state.get("pillars", {}).get("GENESIS", {}).get("pct_complete", 0)
     v32_pct     = state.get("pillars", {}).get("V32", {}).get("pct_complete", 0)
     mims_pct    = state.get("pillars", {}).get("MIMS", {}).get("pct_complete", 0)
@@ -83,6 +117,7 @@ def build_readme(state):
     blockers    = state.get("blockers", [])
     episodes    = get_recent_episodes(5)
     updated     = datetime.now().strftime("%d %b %Y %H:%M")
+    rag_n       = rag_chunks()
 
     bars = lambda pct: ("█" * (pct // 10)) + ("░" * (10 - pct // 10)) + f" {pct}%"
 
@@ -142,7 +177,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v{v} | Sessione #{session} | {updated}
+### Stato Live — {v} | Sessione #{session} | {updated}
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -162,7 +197,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 | Nodo | Descrizione |
 |------|-------------|
-| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — ~19.600 chunk, si aggiorna da solo a ogni modifica |
+| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — {rag_n}, si aggiorna da solo a ogni modifica |
 | `Story Agent` | Milestone verificato → episodio narrativo (02:07 ogni notte) — il lavoro si documenta da solo |
 | `Nina Agent` | Il binario educativo: favole vere generate a 2 stadi con grounding RAG |
 | `Apprendista notturno` | Bozze di caroselli Instagram in quarantena (@04:15) — QC automatico + canon_guard, promozione solo umana di giorno |

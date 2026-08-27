@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [DA FARE / COSA HO FATTO  la BUSSOLA viva di TITANIUM_OS](#da-fare-cosa-ho-fatto-la-bussola-viva-di-titaniumos)
+  - [Sessione 71  27/08/2026  IL SISTEMA NON ERA SPENTO  view_index resuscitato](#sessione-71-27082026-il-sistema-non-era-spento-viewindex-resuscitato)
+  - [Sessione 70  16/08/2026  BONIFICA CONTAMINAZIONE MIMS  scala GENESIS posata](#sessione-70-16082026-bonifica-contaminazione-mims-scala-genesis-posata)
   - [Sessione 69  28/07/2026  RECUPERO ARRETRATO: 3 agenti in parallelo, Claude verificatore](#sessione-69-28072026-recupero-arretrato-3-agenti-in-parallelo-claude-verificatore)
   - [Sessione 68  21/07/2026  ATTACCO ECOSISTEMA (tutto il progetto): 5 fix  3 filoni proposti](#sessione-68-21072026-attacco-ecosistema-tutto-il-progetto-5-fix-3-filoni-proposti)
   - [Sessione 67b  20-21/07/2026  LANCIO SOCIAL: 18/21 post programmati su 2 profili](#sessione-67b-20-21072026-lancio-social-1821-post-programmati-su-2-profili)
@@ -98,6 +100,132 @@
 
 ---
 
+## Sessione #71 · 27/08/2026 — IL SISTEMA NON ERA SPENTO + view_index resuscitato
+
+**Il RIAVVIO_SESSIONE.txt (scritto il 16/08) è STANTIO: dice che tutto è fermo. Non è vero.**
+
+**✅ RILETTURA DELLA REALTÀ (fatti, non handoff)**
+- [✓] **Il sistema si è riacceso da solo il 17/08** e ha lavorato **10 notti su 11** (17→26/08):
+  `night_audit`, `inventario notturno`, `nina_rag_loop`, `story_agent` committano ogni notte
+  (unico buco: 19/08). Il "fermo da 17,5 giorni" del next_step vale fino al 16/08, non oggi.
+- [✓] **API :5001 NON è giù**: 17 endpoint su 18 rispondono 200. Il "7 su 9 danno 500" è superato.
+  `md-files` non è rotto, è **lento** (4,0 s: `rglob` su tutta la ROOT) — con timeout 6 s sembrava morto.
+  `sanitizer/report` dà 404 perché il report non esiste (semantico, non un crash).
+- [✓] **RAG: era rientro, non perdita.** 21.630 chunk il 16/08 → **22.637 il 26/08**: cresce.
+  Resta il delta con i ~32.800 del 24/06, ma la curva sale: non c'è emorragia in corso.
+- [✓] **canon_guard sugli episodi vivi = 22 righe** (21 `[pilastri-fusi]` + 1 `[pilastri-software]`),
+  identico al 16/08. Il gate è **ambra e fermo**: il batch 3 non è mai stato applicato.
+
+**✅ TROVATO E RIPARATO (guasti veri, nessuno li aveva visti)**
+- [✓] **`/api/view-index` dava 500 dal 20/08**: `DATA/view_index.json` era **TRONCATO a metà scrittura**
+  (1749 righe, si interrompe dentro `"updated_at":`). Non un bug di rotta: un file corrotto.
+- [✓] **La radice**: `md_view_pipeline._update_index()` riscriveva l'indice **INTERO** in modo
+  **non atomico a ogni singolo file** — su 487 file sono 487 finestre di corruzione, e O(n²).
+  Un'interruzione il 20/08 alle 16:00 ne ha centrata una. Corretto:
+  · `_atomic_write_json()` = tmp + `fsync` + `os.replace` (con **retry**: su Windows il watcher
+    tiene aperto il file un istante e `os.replace` dà WinError 5)
+  · `_load_index()` tollerante: se l'indice è corrotto lo mette da parte e riparte, non si schianta
+  · `rebuild_all()` costruisce l'indice **in memoria** e lo scrive **una volta sola** alla fine.
+- [✓] **Indice ricostruito**: 487 view → **`/api/view-index` = 200**. Il file rotto è conservato
+  in `DATA/view_index.json.corrotto` (non cancellato).
+- [✓] **`canon_guard.py` non era eseguibile a mano**: crashava con `UnicodeEncodeError` sulla console
+  cp1252 alla prima freccia `→`. Il gate del canone non si poteva nemmeno *leggere*. `sys.stdout`
+  riconfigurato in utf-8. Ora gira intero (79 righe su tutto MENTE, 22 sugli episodi vivi).
+- [✓] **Igiene sicurezza**: la view pipeline stava generando view servite dall'API a partire da
+  `_VAULT/ACCOUNTS/CREDENZIALI_BACKUP.md` e `postiz.md`. `_VAULT` aggiunto a `SKIP_DIRS`, le 2 view
+  cancellate, indice ripulito (485). *Nota: nessun leak in git — `_VAULT/` e `DATA/views/` sono
+  già gitignorati, e da remoto l'API richiede `X-API-Key`.*
+
+**✅ BATCH 3 — GRUPPO 1 APPLICATO (su ordine Matteo: "e valuta")**
+- [✓] **Prima ho letto le frasi, non i nomi dei file.** La divisione del 16/08 (10 sicuri / 4 da
+  giudicare / 2 rotti) è **slittata**: dal 16/08 sono nati altri episodi (siamo a EP_N2_67) e
+  la regola generica `GENESIS/X → GENESIS` **non copriva** la variante `GENESIS/TITANIUM_OS`.
+  Composizione vera al 27/08: **10 sicuri · 5 da giudicare · 2 rotti**.
+- [✓] **10 APPLICATI** (16, 19, 35, 38, 41, 53, 54, 62 + **10 e 44** che il tool non vedeva):
+  25 sostituzioni. Qui il software è davvero inventato — training set, BFS/Dijkstra, DAG +
+  scheduler con worker THEMIS/EVA/FORGE, endpoint `/api/graph/graphify`, parsing AST,
+  spazio dei pesi, heartbeat/health-check: l'aggancio giusto è GENESIS e basta.
+- [✓] **Aggiunte 2 coppie mancanti al tool**: `GENESIS/TITANIUM_OS[/MIMS] → GENESIS`.
+  TITANIUM_OS è il repo, non un pilastro: saldato con la barra faceva lo stesso danno.
+- [✓] **Idempotente**: seconda corsa = 0 sostituzioni. Guardia carosello: 0 bloccati.
+- [✓] **GATE: da 22 righe a 8.** Le 8 residue sono *esattamente* i 7 episodi sospesi, nient'altro.
+  (Le altre 4 righe che canon_guard mostra sono in `_ARCHIVIO/`, snapshot congelato fuori canone.)
+
+**⏸ SOSPESI — la mia valutazione, decide Matteo (`--anche-sospesi` per forzare)**
+- [ ] **Il collasso generico su GENESIS è SBAGLIATO per tutti e 5.** Non ripulisce: *sposta* il
+  falso dal pilastro meccanico a quello software.
+  · **EP_N2_03** «la ripetibilità è il controllo di qualità» → è la **CNC**: il referente giusto è **V32**.
+  · **EP_N2_05** «calibrazione manuale del gesto, qualificare il gesto a livello fisico» → **V32**.
+  · **EP_N2_56** «golden template validata da sensori multipli, ogni ciclo produttivo» → **MIMS/VULCAN**.
+    In più «*e nelle fabbriche smart reali*» mette MIMS (30%, waiting_press) accanto a fabbriche
+    che esistono: è la stessa inflazione dei numeri tolti nella #70.
+  · **EP_N2_48** «Nel sistema GENESIS/V32 **di MIMS**» → collassato diventa «Nel sistema GENESIS
+    di MIMS»: sgrammaticato. Il contenuto (cedibilità) è di **metodo**, non di un pilastro.
+  · **EP_N2_46** 2 occorrenze **miste**: il cruscotto/telemetria è software (ok GENESIS), ma
+    «lo spazio fisico è di 12 m²» su GENESIS diventa un errore di categoria.
+  → **Proposta: 5 riscritture mirate** (una frase l'una), non lo strip generico.
+- [ ] **EP_N2_28 e 55 — RIGENERARE, confermato leggendoli.** Troncati a metà parola:
+  `«In GENESIS/V32, M`  ·  `«...(architettura di fluidità narrativa), la g`.
+  Nel 55 anche il frammento superstite è inventato (V32 non è un'architettura narrativa).
+- [ ] **Fuori batch, trovato leggendo**: **EP_N2_16** porta due numeri inventati spacciati per
+  FATTI — «la struttura di validazione vale il **70%** dell'affidabilità», «errori da **10%** a
+  **2-3%**». Stessa famiglia dei due tolti nella #70. La regola generica non li vede.
+- [ ] **Push**: 2 commit automatici del 26/08 non pushati + questi fix.
+
+**✅ S3 SCALA GENESIS — CHIUSO (il gradino è salito)**
+- [✓] **`CORE/repos.py`**: la SQL vive in un posto solo. Riceve una **connessione già aperta**
+  (non apre sessioni, non sa dove sta il `.db`) — così il seed può contare le righe *dentro*
+  la propria transazione, prima del commit. La CTE ricorsiva dell'albero è migrata qui.
+- [✓] **`TABELLE` = whitelist**: SQLite non parametrizza i nomi di tabella, quindi il nome
+  finisce per forza in una f-string; `conteggio()` rifiuta ciò che non è in lista. È l'unico
+  punto del layer dove un identificatore entra nel testo di una query.
+- [✓] **Condizione di chiusura verificata**: `grep -rn "SELECT" --include=*.py CORE/ | grep -v
+  repos.py` → **vuoto**. Le 7 SELECT stanno tutte in `repos.py`.
+- [✓] **Non-regressione**: `--info` (8 tabelle, 6 dip + 12 agenti + 7 tool) e `--albero`
+  girano identici a prima.
+- [✓] **Trovato salendo**: `genesis_seed.py --albero` non era **mai** arrivato in fondo su
+  console Windows — `UnicodeEncodeError` sul box-drawing `└─`. Stessa famiglia del bug di
+  `canon_guard`. Ora l'albero si legge intero.
+- [💡] **Quello che si vede leggendo l'albero**: 9 agenti su 12 sono di CONTENUTO/SISTEMA e
+  stanno parcheggiati sotto **OFFICINA** perché GENESIS non è uno dei 6 dipartimenti.
+  La domanda del 7° dipartimento non è teorica: è scritta nell'organigramma.
+- [ ] **Prossimo gradino: S4** — l'organigramma in DASHBOARD (oggi si vede solo da CLI).
+
+**✅ INTEGRAZIONE ECOSISTEMA + VERSIONI + PROFILO GITHUB (su ordine Matteo)**
+- [✓] **L'HANDOFF NON ERA STALE PER CASO: il generatore è ROTTO.** Ho lanciato
+  `generate_restart_prompt.py` e ha prodotto *«RIAVVIO SESSIONE #21 — ultima sessione #20 del
+  03/06»*. Tre mesi di contesto spacciati per attuali, **in silenzio**. La riga colpevole:
+  `ctx_is_stale = ctx_date != today and bool(today_commits)` → **il rilevatore di staleness si
+  spegneva proprio quando non c'era nulla su cui ripiegare**. Niente commit oggi = "non è stale"
+  = stampa il vecchio senza avvisare. È così che stamattina il protocollo mi ha dato una realtà
+  di 11 giorni fa. Corretto: stale = la data non è oggi, punto; e se non c'è da cosa derivare
+  **lo dichiara** (`[NON LO SO: ...]`) invece di riempire il vuoto. Il numero di sessione, che
+  arrivava sempre da `ctx` (fermo alla #20), quando il contesto è stale ora viene da STATE.
+  *Testato in entrambi i rami: stale → avviso esplicito, fresco → handoff corretto (#72).*
+- [✓] **`DATA/session_context.json` riempito** con il contesto vero della #71 — era fermo al
+  **3 giugno**. È lui la fonte del handoff: senza, il generatore lavora alla cieca.
+- [✓] **IL PROFILO GITHUB PUBBLICAVA LA VERSIONE SBAGLIATA, ogni notte.** Il README pubblico di
+  `Microindustry/Microindustry` diceva **"v1.1.0"**: `update_github_profile.py` leggeva
+  `STATE.json → meta.version`, che è la versione **dello SCHEMA di STATE**, non del progetto.
+  I tag dicono **v3.0.0**. Ora la versione si deriva dal **tag git** (`v3.0.0 · +646 commit`),
+  coerente con RELEASES.md — *«una release = un tag annotato»*.
+- [✓] **Stesso giro, altro dato morto**: `~19.600 chunk` era scritto a mano nel template, fermo
+  dal #61. Ora si legge da `DATA/audit/system_health.json` (che il night_audit riscrive ogni
+  notte): **22.637**. Un dato vivo hardcodato invecchia e basta.
+- [✓] **`BRAIN/profile_public.json` riscritto** — era di luglio (parlava della prima uscita
+  LinkedIn come novità e di Postiz come "prossimo"). Ora racconta dove siamo davvero.
+- [✓] **Guardia verificata**: `canon_guard.scan_public` sul README generato = **0 falle**.
+- [✓] **`VERSIONS/RELEASES.md` allineato al reale**: il tag `v3.0.0` **esiste ed è pushato**
+  (`d2cf770`) — il file diceva ancora "da pubblicare". Ma la **GitHub Release non è mai stata
+  creata**: `gh release list` mostra solo v2.8.0. Metà del rito è saltata. Aggiunta la tabella
+  sessioni #37→#71 e le due opzioni per il tag nuovo.
+- [ ] **DECISIONE MATTEO — la release nuova**: da v3.0.0 (31/05) sono **646 commit e 3 mesi**
+  senza tag. Applicando lo schema: `v3.1.0` se conti i nodi nuovi, `v4.0.0` se conti lo
+  scheletro relazionale di GENESIS + il loop notturno che consegna da solo. Una release è una
+  dichiarazione: la firma chi la fa. Manca anche `gh release create v3.0.0`.
+
+---
+
 ## Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata
 
 **Il sistema è rimasto spento dal 30/07 al 15/08 (17 notti): niente si è rotto, ma niente ha prodotto. Oggi è ripartito solo `night_audit`.**
@@ -140,6 +268,20 @@ Matteo si ricordava di una chat su "modifiche alle regole e cose da aggiungere".
   - **PALETTE**: neutro `slate` (1509 occorrenze/50 file) + 5 accent — `emerald` vivo/fatto (340) · `cyan` sistema/dati (224) · `amber` in corso/attenzione (211) · `indigo` Nina/contenuti (115) · `rose` persone/identità (95) — + allarme `red` (22). Ritirati i doppioni: `zinc`→slate (era un secondo neutro), `green/teal`→emerald, `sky/blue`→cyan, `yellow/orange`→amber, `violet/purple`→indigo, `pink`→rose. **Applicazione additiva**: il nuovo nasce a norma, il vecchio si converte quando si tocca quel file. Nessun repaint da 68 file.
   - **LINGUA ICONE**: `lucide-react` per l'**interfaccia** (già in 41 file su 68, eredita `currentColor` quindi segue palette e tema da sola), **emoji solo nel contenuto** (episodi, caption, stati bussola `[✓]`, Pietre `⟡` — lì l'emoji è *dato*, viaggia col testo e finisce nel RAG). Le frecce `→` sono tipografia, non icone: **261 delle 523 occorrenze totali** erano quelle. Confine in una riga: *se ci clicchi sopra → lucide; se è una parola che finirebbe uguale in un episodio → emoji*.
 - [ ] **Resta una terza copia**: `DOCS/ASSOLUTO/ASSOLUTO_V7.md:210` ha le sue "10 Regole — Titanium Ventures". È documento strategico storico (ASSOLUTO = "materia di studio, non task" per il RIPASSO), non l'ho toccato. Decidi tu se derivarlo o marcarlo come storico.
+
+**🔍 VERIFICA FINALE (ordine Matteo: "verifica tu stesso tutto") — 56 controlli su 57 passati, e il 57° ha scoperchiato un problema vero**
+
+- [✗] **RITIRO: avevo dichiarato A3 CHIUSO. Non lo era.** Il gate era verde perché **il rilevatore era cieco**, non perché la contaminazione fosse finita. `EP_N2_03 · 19 · 41 · 54` dicono la stessa identica falsità con parole che non stavano in `_SW`: *"il training set"*, *"lo spazio dei pesi"*, *"l'endpoint /api/graph/graphify"*, *"la ripetibilità"* attribuiti a `GENESIS/V32/MIMS`. Zero parole riconosciute → zero segnalazioni.
+- [✓] **Curato alla radice, non a vocabolario.** Inseguire le parole è una partita persa: aggiunta a `canon_guard` una regola **strutturale** `[pilastri-fusi]` — la **barra** in `GENESIS/V32` salda il pilastro software con quelli meccanici in un soggetto solo, ed è sempre sbagliata *qualunque verbo segua*. Prima stesura: 48 hit con falsi positivi (`V32 MIMS` con lo spazio è normale elencazione) → stretta alla sola barra + esclusione dell'elenco `V32/GENESIS/MIMS` → **0 falsi positivi su MENTE**, come da requisito.
+- [✓] **Stato vero: `canon_guard` segnala 22 righe, non 0.** Il commit `690f5474` resta valido — quello che contiene è giusto — ma **non chiude il capitolo** come avevo scritto.
+- [✓] **Trovato in più: la falsità era già colata fuori dagli episodi** → `MENTE/V32/fatti_dalle_storie_2026Q3.md`, il file del riflusso FATTI che alimenta il RAG. Lo strumento guardava solo i file `EP_N2_*` e l'avrebbe lasciato lì per sempre: ora copre anche il riflusso.
+- [✗] **Errore operativo mio.** La prova del `.bat` ha fatto **un commit vero** su `main` (`09781239`): il profilo autorun di `cmd` sposta la directory su TITANIUM_OS e il mio harness non aveva il `cd`. Annullato con `git reset HEAD~1` (misto — contenuto del file intatto), non era pushato. Poi rifatto in isolamento: **B3 funziona in entrambi i rami** (committa se c'è un episodio nuovo, salta se non cambia niente, exit 0).
+- [✓] **Batch 3 analizzato riga per riga — NON è un blocco unico** (dry-run: 40 sostituzioni, 31 file, **0 bloccati dalla guardia**, nessuna riga finisce in una slide; 11 in DIDATTICA, 5 in Strato fondo, **0 nella prosa**):
+  - **10 episodi** = correzione sicura (training set, BFS/Dijkstra, DAG, endpoint, spazio dei pesi, parsing AST: concetti puramente informatici)
+  - **4 da giudicare** (`03 · 05 · 48 · 56`): lì V32 **non è un'invenzione** — ripetibilità e calibrazione sono meccanica vera, e `EP_N2_48` *"Nel sistema GENESIS/V32 **di MIMS**"* resterebbe sgrammaticato
+  - **2 rotti, non sporchi** (`EP_N2_28` e `55`): l'`Aggancio reale` è **troncato a metà parola** — residuo del bug `max_tokens` risolto nella #69. Vanno **rigenerati**, non rattoppati: il fix li lascerebbe troncati con una parola in meno
+  - **Conclusione onesta**: lo strumento che ho scritto è *troppo grosso* per questo lavoro. Va bene per togliere una falsità netta, non per decidere quando `V32` accanto a `GENESIS` è sbagliato e quando è corretto.
+- [ ] **Non applicato** — resta decisione di Matteo, che ha detto di tenerlo lì.
 
 **⚠️ TROVATO OGGI — il sistema è muto da 17 giorni**
 - [ ] `nina-loop`, snapshot RAG, retention, inventario notturno, AI news watcher: **ultimo output 17,5 giorni fa** (soglia 3-4). Ultimo commit automatico: **30/07**. Vanno riaccesi e verificati.

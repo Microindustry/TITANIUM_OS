@@ -1,5 +1,203 @@
 [
   {
+    "id": "BUS-4cdc79f3",
+    "stato": "fatto",
+    "testo": "**A1 e A2 erano GIÀ FATTI** e il prompt di sessione non lo sapeva: commit `a77256f3` del 28/07 21:52 (coda della #69) ha già iniettato `PILASTRI_CANONE` nell'Architetto (`nina_agent.py:181-190`, con lo slot `aggancio_reale` che può restare **vuoto**) e la famiglia `[pilastri-software]` in `canon_guard.py:101-107`. **Non rifatti** — verificati e basta. La sorgente era chiusa da 19 giorni.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-b86b353c",
+    "stato": "fatto",
+    "testo": "**A3 — bonifica dello storico** (l'unico pezzo davvero aperto). `canon_guard` su 64 EP_N2 vivi → **8 episodi sporchi, 13 righe**: i 5 in lista (57/59/60/63/64) **+ 3 fuori lista** (01/13/52) necessari a chiudere davvero il gate. Nuovo strumento `AUTOMATIONS/tools/fix_pilastri_software.py` (sostituzioni esatte, idempotente, dry-run di default) → **40 sostituzioni in 16 file** (repo **+ specchio MENTE**, che è quello che il RAG rilegge).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-f06d6c78",
+    "stato": "fatto",
+    "testo": "**Verifica di chiusura**: `canon_guard` sugli episodi vivi = **0 righe** (l'unico residuo è in `_ARCHIVIO/reemit_20260623/`, snapshot congelato fuori dal canone). Su MENTE viva restano 9 hit `[pilastri-software]`, **tutti falsi positivi verificati a mano** (la regola 7 \"V32 → episodio → dataset LLM\", e la nota di sessione del 28/07 che *cita* la frase falsa mentre la corregge).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-91c8f3d0",
+    "stato": "fatto",
+    "testo": "**Test di non-regressione**: stadio 1 (Architetto) rilanciato sui 2 concetti che avevano prodotto l'invenzione → entrambi agganciati a **GENESIS**, 0 violazioni. VERDE.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-ed1a0de6",
+    "stato": "da_fare",
+    "testo": "**Residuo onesto**: lo slot `aggancio_reale` non resta mai vuoto — l'LLM ora inventa *dentro* GENESIS (\"il sistema notturno di consolidamento dei pattern motori\" non esiste). Il P0 è chiuso (MIMS è salvo), ma la regola \"meglio vuoto che inventato\" non morde ancora.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-864d40eb",
+    "stato": "da_fare",
+    "testo": "**Batch 3 da decidere (Matteo)**: altri **18 episodi** contengono \"GENESIS/V32\" senza verbo software vicino (canon_guard non li segnala). Vanno ripuliti anche quelli o è co-menzione legittima?",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-c2e16b21",
+    "stato": "fatto",
+    "testo": "B1 casella \"?\" — **già fatto** il 28/07 (`nina_rag_loop.py:183` deriva il numero).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-d33368ae",
+    "stato": "fatto",
+    "testo": "B2 guardia titoli unici — **già fatta** il 28/07 (`titoli_usati()` passata all'Architetto).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-103c1c21",
+    "stato": "fatto",
+    "testo": "**B3 commit automatico del loop Nina** — **era davvero aperto**: `run_story_agent.bat:30` committa solo `S2_SISTEMA\\`, la corsia Nina (`S_AVVENTURA\\`) non è mai stata committata da un'automazione (EP_N2_62/63/64 sono entrati nel repo col commit **a mano** di chiusura #69). Aggiunto il commit con pathspec esplicito in `night_research.bat`, subito dopo `nina_rag_loop`.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-2cfaecad",
+    "stato": "fatto",
+    "testo": "**B4 sentinella canone su HASH, non su mtime** — `night_audit._content_age_days()`: registro `DATA/audit/content_age.json` hash→data di primo avvistamento. L'età riparte **solo se il testo cambia**; un touch non ringiovanisce più il canone. Bootstrap dall'mtime per non perdere il segnale già maturato (verificato: 18 giorni, stabile).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-d1c0d58e",
+    "stato": "fatto",
+    "testo": "**B5 euristiche rumorose** — rate-limit / 0 risultati / open-loop / canon_guard erano **già tarate** il 28/07. Sul `_cid` aggiunta la firma stabile `_sig()` (per i finding da log: file + tipo di guasto, non le parole dell'LLM).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-c1130b6c",
+    "stato": "non_fatto",
+    "testo": "**Ritiro un numero del #69**: \"`_cid` sulla prosa LLM = **6 cloni/notte**\" **non regge sui dati**. Misurato su 261 critiche storiche: a similarità ≥0.80 i cloni sono **0**, a ≥0.50 sono 13 — e ispezionando le coppie, a soglia bassa il raggruppamento **fonde problemi diversi**. I duplicati veri sono ~2-3 in 2 mesi e mezzo. Per questo **non** ho messo il merge fuzzy: nasconderebbe guasti reali per risolvere un problema che non c'è.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-8b46bd30",
+    "stato": "fatto",
+    "testo": "**C0** `BRAIN/SCALA-GENESIS.md` ricreato (era stato scritto nella #69 ma mai salvato su disco): 00 CATTURA · 01 STATO ATTUALE · scala S0→S8 con \"Chiude quando:\" · workstream social W1-W3 · PARCHEGGIO / SCARTATO / CHANGELOG.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-c6f7cabf",
+    "stato": "in_corso",
+    "testo": "**C1 (S0)** FounderOS clonato read-only in `ARCHIVE/REFERENCE/founderos` (MIT, `next dev -p 4100`). DDL delle 8 tabelle già estratto — nota: in FounderOS `agents` **non ha** `parent_id`, va aggiunto.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-d64a8752",
+    "stato": "fatto",
+    "testo": "**Trovata la verità sparsa: le regole vivevano in 3 posti e DIVERGEVANO.** Non riformulazioni — liste diverse. `CLAUDE.md` aveva *\"Leva cognitiva 1→N\"* e *\"Output misurabile\"* che in `BRAIN/RULES.md` non c'erano; `RULES.md` aveva *\"Insegna ciò che impari\"* che in `CLAUDE.md` non c'era; la numerazione era sfasata, quindi **citare \"regola 6\" voleva dire due cose diverse** a seconda del file (`RIPASSO_S32-56 §5` scrive \"misurabile, regola 6\" = vera solo in CLAUDE.md). Aggravante: `vite.config.ts` serve `RULES.md` alla dashboard → **a schermo si vedeva la lista vecchia**, ferma al 02/06.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-02c211db",
+    "stato": "fatto",
+    "testo": "**FONTE UNICA**: `CLAUDE.md` è il canone; `BRAIN/RULES.md` ora è **DERIVATO** con `AUTOMATIONS/tools/sync_regole.py` (marcatori `REGOLE:start/end`, tocca solo quel blocco: la sezione PDF_TO_MEMORY, che era contenuto unico di quel file, resta intatta). Stesso principio della Mappa in #56 — *deriva, non copia*. Idempotente + `--check` per il gate notturno.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-e0c634ed",
+    "stato": "fatto",
+    "testo": "**RADICE del doppione trovata e tappata**: `setup.py:539` **riscriveva** `RULES.md` con la lista a 10 regole a ogni esecuzione. Ora non sovrascrive più se il file esiste (bootstrap solo su macchina nuova) + docstring che dice dove si aggiorna davvero.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-e5984225",
+    "stato": "fatto",
+    "testo": "**REGOLA 11 RIMESSA NEL TESTO** — *\"Il sistema PROPONE, l'umano APPROVA\"*. Era stata tolta da CLAUDE.md il 20/06 ma **è sempre rimasta legge nel codice** (`SELF_IMPROVE` propose-only, `STATE.self_improve.human_approval_required`), è citata in `ECOSYSTEM_MANIFEST.md:98` ed è perfino **pubblicata in un episodio**. Una regola che comanda il sistema e non era scritta nella lista delle regole.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-4436d7ee",
+    "stato": "fatto",
+    "testo": "**REGOLA 12 RECUPERATA** — *\"Insegna ciò che impari\"* (effetto Feynman): era l'unica regola che viveva solo in `RULES.md`, ed è il principio su cui poggia tutto il binario Nina.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-1a88d79b",
+    "stato": "fatto",
+    "testo": "**Numerazione 1-10 INVARIATA** — scelta voluta: mezzo repo cita \"regola N\", rinumerare avrebbe rotto ogni citazione. Si aggiunge in coda, non si rimescola.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-302c677e",
+    "stato": "fatto",
+    "testo": "**Le 2 regole grafiche SCRITTE** (erano `[ ]` \"da fare insieme\" dalla #57, ripetute due volte in bussola e mai fatte) → `BRAIN/REGOLE_GRAFICHE.md`, servito anche alla dashboard. **Decise sui dati, non a gusto**: contate le occorrenze reali su 68 file `.tsx/.ts`.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-e78eba0a",
+    "stato": "da_fare",
+    "testo": "**Resta una terza copia**: `DOCS/ASSOLUTO/ASSOLUTO_V7.md:210` ha le sue \"10 Regole — Titanium Ventures\". È documento strategico storico (ASSOLUTO = \"materia di studio, non task\" per il RIPASSO), non l'ho toccato. Decidi tu se derivarlo o marcarlo come storico.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-666f8f61",
+    "stato": "non_fatto",
+    "testo": "**RITIRO: avevo dichiarato A3 CHIUSO. Non lo era.** Il gate era verde perché **il rilevatore era cieco**, non perché la contaminazione fosse finita. `EP_N2_03 · 19 · 41 · 54` dicono la stessa identica falsità con parole che non stavano in `_SW`: *\"il training set\"*, *\"lo spazio dei pesi\"*, *\"l'endpoint /api/graph/graphify\"*, *\"la ripetibilità\"* attribuiti a `GENESIS/V32/MIMS`. Zero parole riconosciute → zero segnalazioni.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-42cc8ec5",
+    "stato": "fatto",
+    "testo": "**Curato alla radice, non a vocabolario.** Inseguire le parole è una partita persa: aggiunta a `canon_guard` una regola **strutturale** `[pilastri-fusi]` — la **barra** in `GENESIS/V32` salda il pilastro software con quelli meccanici in un soggetto solo, ed è sempre sbagliata *qualunque verbo segua*. Prima stesura: 48 hit con falsi positivi (`V32 MIMS` con lo spazio è normale elencazione) → stretta alla sola barra + esclusione dell'elenco `V32/GENESIS/MIMS` → **0 falsi positivi su MENTE**, come da requisito.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-8e606fef",
+    "stato": "fatto",
+    "testo": "**Stato vero: `canon_guard` segnala 22 righe, non 0.** Il commit `690f5474` resta valido — quello che contiene è giusto — ma **non chiude il capitolo** come avevo scritto.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-f4f306a7",
+    "stato": "fatto",
+    "testo": "**Trovato in più: la falsità era già colata fuori dagli episodi** → `MENTE/V32/fatti_dalle_storie_2026Q3.md`, il file del riflusso FATTI che alimenta il RAG. Lo strumento guardava solo i file `EP_N2_*` e l'avrebbe lasciato lì per sempre: ora copre anche il riflusso.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-d144ce29",
+    "stato": "non_fatto",
+    "testo": "**Errore operativo mio.** La prova del `.bat` ha fatto **un commit vero** su `main` (`09781239`): il profilo autorun di `cmd` sposta la directory su TITANIUM_OS e il mio harness non aveva il `cd`. Annullato con `git reset HEAD~1` (misto — contenuto del file intatto), non era pushato. Poi rifatto in isolamento: **B3 funziona in entrambi i rami** (committa se c'è un episodio nuovo, salta se non cambia niente, exit 0).",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-ea72ca49",
+    "stato": "fatto",
+    "testo": "**Batch 3 analizzato riga per riga — NON è un blocco unico** (dry-run: 40 sostituzioni, 31 file, **0 bloccati dalla guardia**, nessuna riga finisce in una slide; 11 in DIDATTICA, 5 in Strato fondo, **0 nella prosa**):",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-64c0dab3",
+    "stato": "da_fare",
+    "testo": "**Non applicato** — resta decisione di Matteo, che ha detto di tenerlo lì.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-2b2e4a85",
+    "stato": "da_fare",
+    "testo": "`nina-loop`, snapshot RAG, retention, inventario notturno, AI news watcher: **ultimo output 17,5 giorni fa** (soglia 3-4). Ultimo commit automatico: **30/07**. Vanno riaccesi e verificati.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-ba843ac1",
+    "stato": "da_fare",
+    "testo": "RAG a **21.630 chunk** (era ~32.800 il 24/06): da capire se è il rientro dopo un rebuild o una perdita.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-0b12b33a",
+    "stato": "da_fare",
+    "testo": "API server (`:5001`) **giù**. Il grounding di Nina ha funzionato solo grazie al fallback sul motore diretto.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
+    "id": "BUS-4296b340",
+    "stato": "da_fare",
+    "testo": "W1 social: i 3 post rimasti erano bloccati dal tetto 29 giorni — **la finestra è passata**, vanno riprogrammati.",
+    "sessione": "Sessione #70 · 16/08/2026 — BONIFICA CONTAMINAZIONE MIMS + scala GENESIS posata"
+  },
+  {
     "id": "BUS-30e41594",
     "stato": "fatto",
     "testo": "**Corsia caroselli NINA sbloccata dopo 7 notti ferme** (P0). `DATA/caroselli_nina_queue.json`: EP_N2_04/05/06 erano ancora `bozza_verde` benché **fisicamente promossi** in `CAROSELLI/NINA/` (commit a09e6e83) → il conteggio `startswith(\"bozza_\")` dava 6 ≥ `MAX_BACKLOG=6` e ogni notte loggava \"tetto backlog raggiunto — stop\" con solo 3 bozze reali. Portati a `promosso` → backlog reale **6→3**, la corsia riparte da EP_N2_10.",

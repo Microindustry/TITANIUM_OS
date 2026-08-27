@@ -185,7 +185,7 @@ Nina lo guarda. Muove il polso. La luce segue il ritmo.
 **Pietre richiamate:** EP_N2_18 (la giuntura dove due diventa uno) · EP_N2_55 (la giuntura che respira)
 **3 strati:** bambino = il filo del bottone che si piega senza strappare · curioso = la capsula articolare con fluido sinoviale che riduce attrito fra le ossa · grande = il principio ingegneristico: connessione rigida + lubrificazione = trasferimento di forza + libertà di movimento, valido in biologia, architettura e falegnameria
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/V32, ogni modulo-episodio è una giuntura fra i nodi della rete di significato: trasferisce conoscenza (forza) mantenendo autonomia dei singoli episodi (flessibilità). Il RAG recupera informazioni come il fluido sinoviale — senza attrito, con contatto totale.
+**Aggancio reale:** Nel sistema GENESIS, ogni modulo-episodio è una giuntura fra i nodi della rete di significato: trasferisce conoscenza (forza) mantenendo autonomia dei singoli episodi (flessibilità). Il RAG recupera informazioni come il fluido sinoviale — senza attrito, con contatto totale.
 **Open loop → Casella successiva:** Se la giuntura permette movimento, cosa succede quando due parti devono restare unite senza muoversi mai — nemmeno di un millimetro? Come fanno i costruttori a bloccare tutto?
 
 ## FATTI (per il RAG)

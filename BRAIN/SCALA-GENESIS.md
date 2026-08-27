@@ -1,3 +1,28 @@
+<!-- TOC -->
+
+- [SCALA GENESIS  la rotta a gradini](#scala-genesis-la-rotta-a-gradini)
+  - [00  CATTURA](#00-cattura)
+  - [01  STATO ATTUALE](#01-stato-attuale)
+  - [SCALA](#scala)
+    - [x S0  Ricognizione FounderOS  CHIUSO 16/08](#x-s0-ricognizione-founderos-chiuso-1608)
+    - [x S1  Schema 8 tabelle  CHIUSO 16/08](#x-s1-schema-8-tabelle-chiuso-1608)
+    - [x S2  Migrazione dati  CHIUSO 16/08](#x-s2-migrazione-dati-chiuso-1608)
+    - [x S3  Repository layer  CHIUSO 27/08 (sessione 71)](#x-s3-repository-layer-chiuso-2708-sessione-71)
+    - [S4  Org Chart in DASHBOARD](#s4-org-chart-in-dashboard)
+    - [S5  Connector honesty](#s5-connector-honesty)
+    - [S6  Run  costi USD](#s6-run-costi-usd)
+    - [S7  Skills su schedule](#s7-skills-su-schedule)
+    - [S8  Handoff di sessione](#s8-handoff-di-sessione)
+  - [WORKSTREAM SOCIAL (W1-W3)](#workstream-social-w1-w3)
+    - [W1  Coda programmata](#w1-coda-programmata)
+    - [! W2  Postiz / LinkedIn Pagina](#w2-postiz-linkedin-pagina)
+    - [W3  Bozze da far uscire](#w3-bozze-da-far-uscire)
+  - [PARCHEGGIO](#parcheggio)
+  - [SCARTATO](#scartato)
+  - [CHANGELOG](#changelog)
+
+<!-- /TOC -->
+
 # SCALA GENESIS — la rotta a gradini
 
 *Creato: 2026-08-16 (sessione #70) · Il file era stato scritto nella #69 ma mai salvato su disco: questa è la ricreazione.*
@@ -28,10 +53,10 @@
 
 | | |
 |---|---|
-| **Gradino corrente** | S3 — Repository layer (S0, S1, S2 chiusi) |
+| **Gradino corrente** | S4 — Org Chart in DASHBOARD (S0, S1, S2, S3 chiusi) |
 | **Bloccanti** | nessuno sul software. (Hardware fuori scala: UPS, mandrino ER20, martinetto Vevor) |
-| **Ultima sessione** | #70 — 2026-08-16 · scala ricreata, blocchi A e B chiusi, saliti 3 gradini |
-| **Prossima mossa** | `repos.py`: portare dentro tutte le query, poi `grep SELECT` fuori = 0 |
+| **Ultima sessione** | #71 — 2026-08-27 · S3 chiuso (repos.py), batch 3 gruppo 1 applicato |
+| **Prossima mossa** | S4: l'organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI) |
 | **Decisione aperta** | i 6 dipartimenti non hanno una casa per gli agenti di CONTENUTO/SISTEMA (GENESIS non è nella lista). Oggi stanno sotto OFFICINA. Serve un 7° dipartimento? |
 
 ---
@@ -72,11 +97,22 @@
 
 ---
 
-### `[ ]` S3 — Repository layer
-- [ ] `repos.py`: tutto l'accesso ai dati passa da lì
-- [ ] nessuna SQL sparsa nei nodi
+### `[x]` S3 — Repository layer — **CHIUSO 27/08 (sessione #71)**
+- [x] `CORE/repos.py`: tutte le query stanno lì. Riceve una **connessione già aperta**
+      (quella di `genesis_db.connect`, FK attive + `row_factory=Row`): non apre sessioni e
+      non sa dove sta il `.db`. Serve a poter contare le righe **dentro** la transazione del
+      seed, prima del commit — altrimenti il seed non vedrebbe la propria scrittura.
+- [x] nessuna SQL sparsa: `genesis_db.info()` e `genesis_seed.seed()/albero()` chiamano `repos`.
+      La CTE ricorsiva dell'albero è migrata da `genesis_seed` a `repos.ALBERO_SQL`.
+- [x] `TABELLE` è la **whitelist**: SQLite non può parametrizzare un nome di tabella, quindi
+      finisce per forza in una f-string — `conteggio()` rifiuta ciò che non è in lista.
+      È l'unico punto del layer dove un identificatore entra nel testo della query.
+- [x] **fix trovato salendo**: `genesis_seed.py --albero` non era mai arrivato in fondo su
+      console Windows (`UnicodeEncodeError` sul box-drawing `└─`). `sys.stdout` in utf-8.
 
-> **Chiude quando:** `grep SELECT` fuori da `repos.py` = 0.
+> **Chiude quando:** `grep SELECT` fuori da `repos.py` = 0. ✔ **verificato 27/08**:
+> `grep -rn "SELECT" --include=*.py CORE/ | grep -v repos.py` → vuoto (7 SELECT, tutte in `repos.py`).
+> Regressione: `--info` (8 tabelle, 6+12+7 righe) e `--albero` girano identici a prima.
 
 ---
 

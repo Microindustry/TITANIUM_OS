@@ -185,7 +185,7 @@ Nina aspettava.
 **Pietre richiamate:** ⟡5 giro 1 (nodi e archi), ⟡5 giro 2 (query al grafo — `find_path`)
 **3 strati:** bambino = l'onda che si allarga dal sasso nell'acqua, e il filo della sarta che tocca i vicini in ordine · curioso = BFS visita per livelli, tiene una coda, segna i nodi già visti, ricostruisce il cammino all'indietro · grande = BFS garantisce il cammino minimo in archi su grafi non pesati; su grafi pesati serve Dijkstra con coda prioritaria ordinata per distanza cumulativa
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** nel sistema GENESIS/V32, `find_path(A, B)` esegue BFS o Dijkstra (se gli archi sono pesati per criticità/latenza); trova il percorso più breve di dipendenza tra componenti — «chi chiama chi» nel codice sorgente, senza r
+**Aggancio reale:** nel sistema GENESIS, `find_path(A, B)` esegue BFS o Dijkstra (se gli archi sono pesati per criticità/latenza); trova il percorso più breve di dipendenza tra componenti — «chi chiama chi» nel codice sorgente, senza r
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_38, casella ? (I cammini — come si trova la strada tra due nodi — Approfond) del viaggio Nina v2, regione 5 (LA GRANDE MAPPA).

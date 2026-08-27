@@ -9,7 +9,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 - [Indice del Cammino  il libro di Nina](#indice-del-cammino-il-libro-di-nina)
   - [Come leggere la tabella](#come-leggere-la-tabella)
-  - [Il cammino (caselle 1  64)](#il-cammino-caselle-1-64)
+  - [Il cammino (caselle 1  68)](#il-cammino-caselle-1-68)
   - [I due movimenti sulla Mappa](#i-due-movimenti-sulla-mappa)
   - [Caselle proposte (non ancora nel cammino)](#caselle-proposte-non-ancora-nel-cammino)
 
@@ -18,7 +18,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 
 # Indice del Cammino — il "libro" di Nina
 
-*Generato da `generate_indice_cammino.py` il 2026-07-28 — VISTA di `episodes.json`.*
+*Generato da `generate_indice_cammino.py` il 2026-08-22 — VISTA di `episodes.json`.*
 *Non si edita a mano: si rigenera dopo `build_episodes_json.py` (l'indice a mano era scaduto — attacco #52, 03 F1).*
 *Estende [[NINA_V2_ARCHITETTURA]] (§"il libro è il viaggio sulla mappa") e [[BIBBIA_DEL_MONDO]].*
 *Coerenza personaggi: [[NINA_V2_CHARACTER_BIBLE]]. Pietre: [[PIETRE]].*
@@ -34,7 +34,7 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 - **L'ordine delle Pietre NON è numerico — è voluto.** Il cammino segue la logica *del racconto*
   (pedagogica), non il numero della Pietra. La Mappa resta navigabile per Pietra; il libro segue i passi.
 
-## Il cammino (caselle 1 → 64)
+## Il cammino (caselle 1 → 68)
 
 | # | Episodio | Titolo | Pietra | Il concetto (1 riga) |
 |---|----------|--------|--------|----------------------|
@@ -102,6 +102,10 @@ tags: nina, nina-v2, cammino, indice, mappa, canone, libro, caselle, open-loop
 | 62 | `EP_N2_62` | Il Nodo che Respira | ⟡0 (giro 4) | Una giuntura trasferisce forza mantenendo flessibilità: due parti si c |
 | 63 | `EP_N2_63` | La mano che insegna alla notte | ⟡2 (giro 4) | Quando insegni a una macchina un gesto, lei lo ripete e lo migliora an |
 | 64 | `EP_N2_64` | Il Sussurratore che Indovina | ⟡3 (giro 4) | Una mente che indovina le parole può sembrare che sappia tutto, ma ind |
+| 65 | `EP_N2_65` | Il Puntino che Sussurra | ⟡6 (giro 4) | Il pericolo vero non è il rumore che avverte: è quello che continua a |
+| 66 | `EP_N2_66` | Il Ticchettio che Salva | ⟡7 (giro 4) | Un gruppo di aiutanti funziona solo se qualcuno decide chi fa cosa e q |
+| 67 | `EP_N2_67` | Il Segno che Rimane | ⟡1 (giro 5) | Una traccia è un insegnamento muto: il segno che lasci insegna il gest |
+| 71 | `EP_N2_71` | TITANIUM OS — Stagione 2, Episodio 71 | — |  |
 
 ## I due movimenti sulla Mappa
 - **Avanti:** l'arco unico dal **metallo alla mente** (materia → automazione → IA → orchestrazione).

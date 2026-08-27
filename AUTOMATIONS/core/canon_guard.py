@@ -106,6 +106,25 @@ _PILASTRI_SW_RE = re.compile(
     rf"^.*(?:{_MECC})\b.{{0,120}}(?:{_SW}).*$|^.*(?:{_SW}).{{0,120}}(?:{_MECC})\b.*$",
     re.IGNORECASE | re.MULTILINE)
 
+# REGOLA STRUTTURALE (#70, 16/08): la lista _SW e' una rincorsa infinita — 4 episodi
+# (EP_N2_03/19/41/54) dicevano la stessa falsita' con parole che non c'erano dentro
+# ("training set", "spazio dei pesi", "endpoint", "ripetibilita'") e passavano lisci.
+# La costante non e' il vocabolario, e' la FORMA: "GENESIS/V32", "GENESIS/V32/MIMS",
+# "V32/MIMS" usati come UN SOLO soggetto fondono il pilastro software con quelli
+# meccanici, e a quel punto qualunque verbo informatico ricade anche su V32 e MIMS.
+# Non esiste un caso in cui quel composto sia corretto: se il concetto e' informatico
+# il soggetto e' GENESIS da solo. Zero dipendenza dalle parole che seguono.
+# SOLO la BARRA. "V32 MIMS" con lo spazio e' un'elencazione legittima (titoli, liste,
+# "i pilastri V32, MIMS e GENESIS") e includerla dava 48 falsi positivi su MENTE.
+# E' la barra che salda i nomi in un soggetto solo: "in GENESIS/V32/MIMS il training
+# set...". Verificato: 0 falsi positivi sul canone vivo (requisito di Matteo).
+# Il lookbehind esclude l'ELENCO "V32/GENESIS/MIMS" (nota di ricerca: "relazioni tra
+# concetti V32/GENESIS/MIMS" = tre concetti, non un sistema solo): li' GENESIS non e'
+# il soggetto, e' un elemento in mezzo. Serve a tenere i falsi positivi a ZERO.
+_COMPOSTO_RE = re.compile(
+    r"^.*(?<![/\w])GENESIS/(?:V32|MIMS)(?:/(?:V32|MIMS))?\b.*$",
+    re.IGNORECASE | re.MULTILINE)
+
 
 def clean(text: str) -> str:
     """Applica le correzioni note. Idempotente: rieseguibile senza danni."""
@@ -123,6 +142,10 @@ def scan(text: str) -> list[str]:
     hits += [f"[persone] {m.strip()}" for m in _NINA_RE.findall(cleaned) if m.strip()]
     hits += [f"[pilastri-software] {m.strip()}"
              for m in _PILASTRI_SW_RE.findall(cleaned) if m.strip()]
+    visti = set(hits)
+    hits += [f"[pilastri-fusi] {riga.strip()}"
+             for riga, _ in ((m, m) for m in _COMPOSTO_RE.findall(cleaned))
+             if riga.strip() and f"[pilastri-software] {riga.strip()}" not in visti]
     return hits
 
 
@@ -140,6 +163,11 @@ def scan_public(text: str) -> list[str]:
 if __name__ == "__main__":
     import sys
     from pathlib import Path
+    # console Windows cp1252: senza questo il report cade su una freccia ->
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     target = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(
         r"C:\Users\teo\MICROINDUSTRY\MENTE")
     total = 0

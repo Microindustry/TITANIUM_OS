@@ -1,0 +1,260 @@
+{
+  "data": "2026-07-29",
+  "proposte": [],
+  "segnali": {
+    "data": "2026-07-29",
+    "milestone": "Sessione #69 (28/07): RECUPERO ARRETRATO con 3 agenti read-only in parallelo (episodi/bozze, dashboard, critiche+proposte), Claude verificatore. FIX APPLICATI E VERIFICATI: corsia caroselli NINA sbloccata dopo 7 notti ferme (coda con EP_N2_04/05/06 ancora 'bozza_verde' benche' promossi -> tetto back",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "La sentinella canone in night_audit.py:635 misura mtime di _CANONE.md, che i blocchi auto (<!-- COLLEGATI -->) rinfrescano ogni notte: risultato 'stale: false' permanente anche se il contenuto curato è fermo al 16/07 (canone_manuale.file_ag"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "6 bozze episodi Nina sono pronte al volo (EP_N2_07/08, EP_SG_02_05/06, EP_SG_03_01/02, EP_SG_04_01) ma la corsia è ferma per scelta, non per bug. Nel frattempo EP_N2_62/63/64 non sono mai committati dal loop Nina (i commit auto:story_agent "
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "L'indice HNSW di ChromaDB è corrotto per power-loss ricorrente (3 volte in 2 giorni, documentato nei blockers): limit=10 restituisce 0 embedding, la vista RETE 'Conoscenza' è inutilizzabile. Il blocco richiede un'azione manuale con UAC (rag"
+      },
+      {
+        "area": "MIMS",
+        "sev": "media",
+        "finding": "Il prerequisito fisico MIMS — martinetto Vevor 3 stadi da montare per la prima colata giunto VULCAN — è bloccato insieme all'ordine del mandrino 2.2kW ER20 (prerequisito fresatura stampi). Entrambi sono nei blockers da sessioni precedenti s"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Semantic Scholar blocca la ricerca notturna con 429 ripetuti e l'agent crasha: \"2026-07-29 03:41:01 [...] HTTP 429 — attendo 1s\" e \"2026-07-29 03:41:24 [...] 429 Client Error: for url: ...query=local+large+language+model+fine-tuning+Lo\" e \""
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "La contaminazione MIMS nel RAG si autoalimenta: _CANONE.md non è mai iniettato nel prompt di nina_agent.py:188, retrieve_context() interroga solo il RAG sul concetto, e i paper fuori tema in MENTE/KNOWLEDGE/RESEARCH/mims/ vengono specchiati"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Il canone dichiara EP_N2_56 come massimo ma su disco esiste già EP_N2_64: \"su disco EP_N2_64, il canone dichiara EP_N2_56: aggiornare _CANONE.md\" (2026-07-28). Il delta è 8 episodi non registrati. Con 5 canon_violations già aperte e il dato"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Semantic Scholar blocca la ricerca notturna con rate-limit persistente: \"2026-07-28 03:38:51 WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e subito dopo \"2026-07-28 03:39:14 WARNING [semantic"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "Tre organi vitali mostrano score 0.0 (nina-loop, snapshot RAG, AI news watcher) e riflusso FATTI è a 0.1. Non ci sono log_issues che spieghino il perché: l'assenza di errori espliciti rende impossibile distinguere tra «non è stato il turno "
+      },
+      {
+        "area": "RAG",
+        "sev": "media",
+        "finding": "32 episodi su 64 controllati mancano di open_loop (qc_episodi open_loop_missing: 32, pari al 50%). Non è un dato nuovo, ma con EP_N2_58–61 già su disco e non ancora revisionati, e altri episodi in arrivo dagli agenti in vacanza, il problema"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "story_agent opera senza token HF autenticato: \"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\" (2026-07-28). Le richieste non autenticate sono sogget"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "alta",
+        "finding": "L'UPS è listato come blocker per la corruzione HNSW da power-loss (3 episodi già avvenuti), il RAG conta 21.413 chunk, e la rebuild BGE-M3 è pronta al click ma non ancora eseguita. Fare la rebuild senza UPS installato espone il nuovo indice"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 300,
+      "rag_chunks": 21518,
+      "n_commits_7d": 24
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "In **5 episodi su 8 recenti** MIMS è descritto come modulo software/AI: EP_N2_64 «*MIMS (Machine-Induced Meaning Synthesis)*» (acronimo inventato), EP_N2_63 «*consolida i pattern di controllo motorio*», EP_N2_60/59/57 simili. Il canone dice: MIMS = **meccanica** (tile 190×190, croce D29.9 H7/g6, PA-GF30). Causa: `nina_agent.py:188` chiede all'Architetto un `\"aggancio_reale\"` ai pilastri ma `_CANONE.md` **non è mai iniettato nel prompt** e `retrieve_context()` interroga il RAG solo sul concetto → lo slot va riempito e si inventa. Contribuisce un paper fuori tema in `MENTE/KNOWLEDGE/RESEARCH/mims/`. **Questi file finiscono nel RAG** (`save_canon` li specchia in MENTE) → il falso si autoalimenta.",
+      "Stessa classe: **fonti fabbricate nei FATTI** di EP_N2_64 (`Fonte: GENESIS/documentation_hallucination_2026` = path inesistente; «1 sarta su 1.000» = numero inventato).",
+      "`nina_rag_loop.py:180` hardcoda `\"casella\": \"?\"` → `casella ?` in 32 episodi su 64, in contraddizione con l'header dello stesso file.",
+      "**Titoli tripli**: \"La mano che insegna alla notte\" = EP_N2_**19/56/63**; \"Il Direttore Invisibile\" = **45/53/60**; più 51/57 e 13/52. **NON sono duplicati di contenuto** (similarità <0,13): sono giri di spirale legittimi con titolo riusato — `stage1_architect` non riceve i titoli già usati. Guardia da aggiungere.",
+      "EP_N2_62/63/64 **non committati**: il loop Nina non committa mai (i commit `auto: story_agent` toccano solo `S2_SISTEMA/`). Tra due \"salva\" gli episodi Nina sono a rischio.",
+      "`night_caroselli_nina.py:189-191`: draft fallito non marca l'item → ritenta lo stesso nel batch e la notte esce con EXIT 1 anche se poi riesce.",
+      "Sentinella canone **neutralizzata**: `night_audit.py:635` misura il `mtime` di `_CANONE.md`, che i blocchi auto (`<!-- COLLEGATI -->`) rinfrescano ogni notte → `stale: false` per sempre. Il contenuto curato è fermo al 16/07. Va misurata sulla porzione fuori dai marker.",
+      "Dashboard minori: `CalendarioView.tsx:97` chiavi React duplicate; **lint 89 problemi**; `/api/content-files` divergente (vite 289 vs Flask 0, `CONTENT_ENGINE_DIR` non impostata); badge \"289 su disco vs 188 episodi\" conta anche `_ARCHIVIO` → sembra un buco di 101 episodi che non esiste; **~2,5k righe di dead code** + 7 dipendenze non usate.",
+      "Euristiche rumorose da tarare: `_cid()` = sha1 della **prosa LLM** → non collide mai → 6 critiche nuove/notte per 15 notti (le \"30 aperte\" sono **8 problemi**, 4 veri); `rate limit` matcha *\"higher rate limits\"*; `0 risultati` scatta su riga per-sorgente; `QC_EP_OPEN_LOOP` cerca l'etichetta non il gancio (32→23 reali); `canon_guard` prende «chunk **recuperati**» (gergo RAG) come violazione → i 5 `canon_violations` sono **tutti falsi positivi**.",
+      "**Istruzione sbagliata da correggere**: `AZIONI_MATTEO.md:32` dice di mettere la chiave in `.env`, ma **nessuno legge `TITANIUM_OS/.env`** (zero `load_dotenv()` nel repo). Le chiavi vivono come **variabili utente Windows**; il loader vero è `_ti_paths.bat` → `_VAULT/KEYS/titanium_os.env` (tutto commentato).",
+      "Deriva canone `_CANONE.md:32` (dichiara 01…56, su disco 64): **impatto sul RAG NULLO** — `_canon_stems()` legge solo i `[[wikilink]]`, il range è testo piano. È governance + un allarme fisso in cartella clinica. Fix = **edit a mano** riga 32 e footer (nessun generatore esiste, `setup_obsidian` non lo tocca).",
+      "**6 pronte al volo**: EP_N2_07 (BUS-21cc0f3d è **obsoleta**: l'errore QC era transitorio del 17-19/07, la bozza su disco è verde), EP_N2_08, EP_SG_02_05, EP_SG_02_06, EP_SG_03_01, EP_SG_03_02, EP_SG_04_01.",
+      "**EP_N2_09** «La Bibliotecaria della Mente»: slide 2 ha `<div class=\"scene\"></div>` **vuota** — la scena `biblioteca` non è tra le 16 di `sg_builder.SCENES` ed è stata rimossa. 1 slide su 10 è nuda. Fix: mappare su `quaderno`/`mappa` e re-render.",
+      "**EP_SG_03_03** «Il Verdetto»: (a) `carosello.html:84` «l'analisi RSS ha restituito ±0,019 mm» → numero di progetto in contenuto pubblico (regola 15/07); (b) open-loop **all'indietro** (tira a \"La prima foto\" = EP_SG_03_01 già prodotto).",
+      "Titoli tripli: rititolare i rerun o archiviarli come fatto il 04/07 con 51/52?"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "AI Explained",
+        "titolo": "GPT-6 Goes Rogue? The HuggingFace Incident, Sans Hype",
+        "url": "https://www.youtube.com/watch?v=wzY2fV4Mp3U"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Sakana AI Releases Fugu-Cyber: An Orchestration Model Reporting 86.9% on CyberGym and 72.1% on CTI-REALM",
+        "url": "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "FAIRChem v2 UMA for Multidomain Atomistic Simulation across Molecules, Catalysts, Materials, Vibrations, and Molecular Dynamics",
+        "url": "https://www.marktechpost.com/2026/07/26/fairchem-v2-uma-for-multidomain-atomistic-simulation-across-molecules-catalysts-materials-vibrations-and-molecular-dynamics/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Induction Labs Photon-1 Simulates Desktops, Plays Checkers, and Models Billiard Physics From One Pretraining Run",
+        "url": "https://www.marktechpost.com/2026/07/26/induction-labs-photon-1-simulates-desktops-plays-checkers-and-models-billiard-physics-from-one-pretraining-run/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "KwaiKAT Team Releases KAT-Coder-V2.5: An Agentic Coding Model Trained on 100,000+ Verifiable Repository Environments",
+        "url": "https://www.marktechpost.com/2026/07/26/kwaikat-team-releases-kat-coder-v2-5-an-agentic-coding-model-trained-on-100000-verifiable-repository-environments/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Black Forest Labs Releases FLUX 3: A Multimodal Flow Model for Image, Video, Audio and Robot Action Prediction",
+        "url": "https://www.marktechpost.com/2026/07/26/black-forest-labs-releases-flux-3-a-multimodal-flow-model-for-image-video-audio-and-robot-action-prediction/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Perplexity Releases pplx, a Single-Binary CLI That Puts Its Search API in the Terminal for Coding Agents",
+        "url": "https://www.marktechpost.com/2026/07/27/perplexity-releases-pplx/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors, and Automated Deliverables",
+        "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Kimi AI and kvcache-ai Open Sources ‘AgentENV’: A Distributed System that Powers Agentic Reinforcement Learning (RL) Training for Kimi K3",
+        "url": "https://www.marktechpost.com/2026/07/27/kimi-ai-and-kvcache-ai-open-sources-agentenv/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Running a 28.9M parameter LLM on an $8 microcontroller",
+        "url": "https://github.com/slvDev/esp32-ai"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "LLM Usage in Debian: Three Proposals",
+        "url": "https://www.debian.org/vote/2026/vote_002"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "The new rules of context engineering for Claude 5 generation models",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How AI is expanding what people do at work",
+        "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Anthropic scopre il J-space che è una parte della rete neurale di Claude che si dedica al",
+        "url": "https://www.youtube.com/shorts/YuCYdCMUP2Y"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Ma cosa ha combinato Anthropic?! (Claude Opus 5)",
+        "url": "https://www.youtube.com/watch?v=5gjvOUAL0Yg"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Eseguire GLM 5.2 sul tuo personal computer di casa !!",
+        "url": "https://www.youtube.com/shorts/y6_AUFKvGII"
+      },
+      {
+        "fonte": "Simone Rizzo",
+        "titolo": "Creare team di agenti AI che lavorano come se fossero un’azienda, il tuo ruolo é quello di",
+        "url": "https://www.youtube.com/shorts/KBB69FPcPNI"
+      },
+      {
+        "fonte": "Matt Wolfe",
+        "titolo": "Literally everyone hated this feature",
+        "url": "https://www.youtube.com/shorts/n0JhhZyGP_w"
+      },
+      {
+        "fonte": "Latent Space",
+        "titolo": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+        "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "Ruff v0.16.0",
+        "url": "https://simonwillison.net/2026/Jul/25/ruff/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+        "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "An opinionated guide to which AI to use to do stuff",
+        "url": "https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything"
+      },
+      {
+        "fonte": "Simon Willison",
+        "titolo": "moonshotai/Kimi-K3",
+        "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "PxyUp/fitter ★131 — New way for collect information from the API's/Websites",
+        "url": "https://github.com/PxyUp/fitter"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "xuiltul/animaworks ★248 — Organization-as-Code for autonomous AI agents. Brain-inspired memory that grows,",
+        "url": "https://github.com/xuiltul/animaworks"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "tompassarelli/beagle ★24 — a typed programming language that emits to multiple backends",
+        "url": "https://github.com/tompassarelli/beagle"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "msaleme/red-team-blue-team-agent-fabric ★22 — 540 security tests for AI agent systems — MCP, A2A, x402/L402, decision governan",
+        "url": "https://github.com/msaleme/red-team-blue-team-agent-fabric"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "asimons81/hermes-a2a-bridge ★30 — Local-first Hermes Agent bridge for the Agent-to-Agent Protocol HTTP+JSON subset",
+        "url": "https://github.com/asimons81/hermes-a2a-bridge"
+      },
+      {
+        "fonte": "topic:ai-agents",
+        "titolo": "nelsonwerd/idea-to-ship-skills ★62 — Composable Agent Skills (Claude + OpenAI Codex) for taking an idea from fuzzy → ",
+        "url": "https://github.com/nelsonwerd/idea-to-ship-skills"
+      }
+    ],
+    "n_news": 30
+  }
+}

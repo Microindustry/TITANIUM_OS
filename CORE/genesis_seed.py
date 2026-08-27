@@ -26,6 +26,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from CORE.genesis_db import connect, init  # noqa: E402
+from CORE import repos  # noqa: E402  — S3: la SQL sta li', non qui
 
 NOW = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -123,20 +124,8 @@ ON CONFLICT(id) DO UPDATE SET
   description=excluded.description, probe=excluded.probe
 """
 
-# Query ricorsiva: E' la prova del gradino S2 — l'albero torna dal database.
-ALBERO_SQL = """
-WITH RECURSIVE albero(id, name, tier, department_id, parent_id, livello, via) AS (
-    SELECT id, name, tier, department_id, parent_id, 0, name
-      FROM agents WHERE parent_id IS NULL
-  UNION ALL
-    SELECT a.id, a.name, a.tier, a.department_id, a.parent_id,
-           al.livello + 1, al.via || ' > ' || a.name
-      FROM agents a JOIN albero al ON a.parent_id = al.id
-)
-SELECT al.livello, al.name, al.tier, d.name AS dipartimento, al.via
-  FROM albero al JOIN departments d ON d.id = al.department_id
- ORDER BY d.ord, al.via
-"""
+# La CTE ricorsiva dell'albero e' migrata in CORE/repos.py (gradino S3):
+# qui restava l'unico blocco di SQL fuori dal repository layer.
 
 
 def seed(db_path: str | Path | None = None) -> dict:
@@ -148,16 +137,24 @@ def seed(db_path: str | Path | None = None) -> dict:
         con.executemany(UPSERT_AGENT, [a for a in AGENTS if a[2] is not None])
         con.executemany(UPSERT_TOOL, TOOLS)
         con.commit()
-        return {t: con.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
-                for t in ("departments", "agents", "tools")}
+        # conteggio PRIMA di uscire dal with: repos lavora sulla connessione
+        # aperta, quindi vede le righe appena scritte
+        return {nome: repos.conteggio(con, nome)
+                for nome in ("departments", "agents", "tools")}
 
 
 def albero(db_path: str | Path | None = None) -> list:
     with connect(db_path) as con:
-        return con.execute(ALBERO_SQL).fetchall()
+        return repos.albero(con)
 
 
 if __name__ == "__main__":
+    # l'albero si disegna con i box-drawing: su console Windows cp1252
+    # la stampa cadeva con UnicodeEncodeError alla prima ramificazione
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     if "--albero" not in sys.argv:
         n = seed()
         print(f"seed ok ({NOW}) — dipartimenti {n['departments']} · "

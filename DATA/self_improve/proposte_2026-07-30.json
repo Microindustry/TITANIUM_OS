@@ -1,0 +1,294 @@
+{
+  "data": "2026-07-30",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "RAG",
+      "titolo": "Sblocco HNSW corrotto + protezione da power-loss futuro",
+      "cosa": "Eseguire `rag_recover --drop-hnsw` con UAC per ricostruire l'indice ChromaDB. Aggiungere poi uno script di graceful-shutdown che chiami `collection.persist()` prima dello spegnimento, e un health-check notturno che verifichi `len(results) > 0` su una query sentinel fissa.",
+      "perche": "Critica RAG sev=ALTA x2: 'limit=10 restituisce 0 embedding, la vista RETE Conoscenza è inutilizzabile'. Power-loss documentato 3 volte in 2 giorni. Finché ChromaDB è a zero, tutti gli agenti notturni lavorano senza contesto reale.",
+      "come": [
+        "1. [MATTEO] Aprire terminale con UAC, eseguire: `python -m titanium_rag rag_recover --drop-hnsw`",
+        "2. [MATTEO] Verificare: query sentinel ('MIMS tile 190x190') restituisce >= 5 chunk",
+        "3. [SICURO] Aggiungere `scripts/rag_healthcheck.py`: query fissa, assert len > 0, scrive `rag_status.json`",
+        "4. [SICURO] Aggiungere hook in `night_audit.py`: legge `rag_status.json`, alza sev=CRITICA se zero",
+        "5. [APPROVAZIONE] Valutare wrapper Windows per `atexit` / Task Scheduler che chiama `persist()` prima dello spegnimento"
+      ],
+      "rischio": "Il --drop-hnsw ricostruisce da zero: se i chunk sono corrotti anche a livello parquet, si perde contesto. Prima fare backup di `chroma_db/` folder.",
+      "autonomia": "approvazione",
+      "fonte": "critiche_audit_aperte[1] e [8], segnale 'power-loss ricorrente 3 volte in 2 giorni'"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "GENESIS",
+      "titolo": "Iniettare _CANONE.md in nina_agent.py:188 + isolare paper MIMS fuori tema dal RAG",
+      "cosa": "A) Aggiungere lettura di `_CANONE.md` all'apertura di `nina_agent.py` e iniettarlo come blocco `system` nel prompt all'Architetto (riga 188). B) Spostare/escludere i file in `MENTE/KNOWLEDGE/RESEARCH/mims/` dall'indicizzazione RAG (aggiungere prefisso `_` o entry in `.ragignore`). C) Aggiungere guardia anti-titolo-duplicato in `stage1_architect`: passare lista titoli già usati nel prompt.",
+      "perche": "Critica GENESIS sev=ALTA x2 + primo todo_bussola: 'nina_agent.py:188 chiede aggancio reale ma _CANONE.md non è mai iniettato', 'retrieve_context() trova paper fuori tema e si autoalimenta'. Risultato: MIMS descritto come AI/software in 5 episodi su 8 recenti. Titoli tripli (EP_N2_19/56/63, 45/53/60) perché stage1_architect non riceve i titoli già usati.",
+      "come": [
+        "1. [SICURO] In `nina_agent.py` sopra riga 188: `canone_txt = Path('_CANONE.md').read_text(encoding='utf-8')`, inserirlo nel system prompt come sezione ### CANONE FISICO",
+        "2. [SICURO] Creare `.ragignore` nella root RAG con pattern `MENTE/KNOWLEDGE/RESEARCH/mims/` per escludere quei file dalla prossima reindicizzazione",
+        "3. [SICURO] In `stage1_architect` (o nel chiamante), passare `titoli_gia_usati: list[str]` estratti da metadati episodi esistenti; aggiungere istruzione nel prompt: 'NON riusare questi titoli'",
+        "4. [APPROVAZIONE] Dopo HNSW riparato: reindicizzare escludendo i paper fuori tema e verificare che query 'MIMS' restituisca solo chunk meccanici"
+      ],
+      "rischio": "Basso. Step 1-3 sono modifiche locali e reversibili. Step 4 dipende da HNSW fix (proposta #1).",
+      "autonomia": "approvazione",
+      "fonte": "todo_bussola[0], critiche_audit_aperte[3] e [11], todo_bussola[3] (titoli tripli)"
+    }
+  ],
+  "segnali": {
+    "data": "2026-07-30",
+    "milestone": "Sessione #69 (28/07): RECUPERO ARRETRATO con 3 agenti read-only in parallelo (episodi/bozze, dashboard, critiche+proposte), Claude verificatore. FIX APPLICATI E VERIFICATI: corsia caroselli NINA sbloccata dopo 7 notti ferme (coda con EP_N2_04/05/06 ancora 'bozza_verde' benche' promossi -> tetto back",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Sei bozze risultano pronte al volo (EP_N2_07/08, EP_SG_02_05/06, EP_SG_03_01/02, EP_SG_04_01) ma la corsia SISTEMA è ferma per scelta e la corsia Nina è bloccata dall'HNSW corrotto. Se rag_recover --drop-hnsw non viene eseguito oggi, il bat"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "Il loop HNSW corrotto non è stato ancora riparato: rag_recover --drop-hnsw richiede UAC di Matteo ed è nei blockers da sessione #69. Fino a quel momento ChromaDB restituisce 0 embedding su qualsiasi query (limit=10 → 0 risultati), il che si"
+      },
+      {
+        "area": "NOTTURNE",
+        "sev": "media",
+        "finding": "24 episodi su 64 mancano dell'open-loop (qc_episodi.open_loop_missing=24), ma la sentinella QC_EP_OPEN_LOOP cerca l'etichetta testuale non il gancio narrativo reale, gonfiando il conteggio di falsi positivi (32→23 reali secondo bussola_open"
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "La contaminazione MIMS-come-software/AI è strutturale e si autoalimenta: _CANONE.md non è mai iniettato nel prompt di nina_agent.py:188, retrieve_context() interroga il RAG sul concetto 'MIMS' e trova paper fuori tema in MENTE/KNOWLEDGE/RES"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "La sentinella canone in night_audit.py:635 misura mtime di _CANONE.md, che i blocchi auto <!-- COLLEGATI --> rinfrescano ogni notte: stale è sempre false anche se il contenuto curato è fermo al 16/07 (canone_manuale.file_age_days=21). La se"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Semantic Scholar 429 ricorrente stanotte su almeno 4 chiamate distinte: «2026-07-30 03:40:14 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s» e «2026-07-30 03:39:09 [research_ag"
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "media",
+        "finding": "La sentinella canone in night_audit.py:635 misura mtime di _CANONE.md, che i blocchi auto (<!-- COLLEGATI -->) rinfrescano ogni notte: risultato 'stale: false' permanente anche se il contenuto curato è fermo al 16/07 (canone_manuale.file_ag"
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "6 bozze episodi Nina sono pronte al volo (EP_N2_07/08, EP_SG_02_05/06, EP_SG_03_01/02, EP_SG_04_01) ma la corsia è ferma per scelta, non per bug. Nel frattempo EP_N2_62/63/64 non sono mai committati dal loop Nina (i commit auto:story_agent "
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "L'indice HNSW di ChromaDB è corrotto per power-loss ricorrente (3 volte in 2 giorni, documentato nei blockers): limit=10 restituisce 0 embedding, la vista RETE 'Conoscenza' è inutilizzabile. Il blocco richiede un'azione manuale con UAC (rag"
+      },
+      {
+        "area": "MIMS",
+        "sev": "media",
+        "finding": "Il prerequisito fisico MIMS — martinetto Vevor 3 stadi da montare per la prima colata giunto VULCAN — è bloccato insieme all'ordine del mandrino 2.2kW ER20 (prerequisito fresatura stampi). Entrambi sono nei blockers da sessioni precedenti s"
+      },
+      {
+        "area": "RICERCA",
+        "sev": "alta",
+        "finding": "Semantic Scholar blocca la ricerca notturna con 429 ripetuti e l'agent crasha: \"2026-07-29 03:41:01 [...] HTTP 429 — attendo 1s\" e \"2026-07-29 03:41:24 [...] 429 Client Error: for url: ...query=local+large+language+model+fine-tuning+Lo\" e \""
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "La contaminazione MIMS nel RAG si autoalimenta: _CANONE.md non è mai iniettato nel prompt di nina_agent.py:188, retrieve_context() interroga solo il RAG sul concetto, e i paper fuori tema in MENTE/KNOWLEDGE/RESEARCH/mims/ vengono specchiati"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 301,
+      "rag_chunks": 21614,
+      "n_commits_7d": 24
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "In **5 episodi su 8 recenti** MIMS è descritto come modulo software/AI: EP_N2_64 «*MIMS (Machine-Induced Meaning Synthesis)*» (acronimo inventato), EP_N2_63 «*consolida i pattern di controllo motorio*», EP_N2_60/59/57 simili. Il canone dice: MIMS = **meccanica** (tile 190×190, croce D29.9 H7/g6, PA-GF30). Causa: `nina_agent.py:188` chiede all'Architetto un `\"aggancio_reale\"` ai pilastri ma `_CANONE.md` **non è mai iniettato nel prompt** e `retrieve_context()` interroga il RAG solo sul concetto → lo slot va riempito e si inventa. Contribuisce un paper fuori tema in `MENTE/KNOWLEDGE/RESEARCH/mims/`. **Questi file finiscono nel RAG** (`save_canon` li specchia in MENTE) → il falso si autoalimenta.",
+      "Stessa classe: **fonti fabbricate nei FATTI** di EP_N2_64 (`Fonte: GENESIS/documentation_hallucination_2026` = path inesistente; «1 sarta su 1.000» = numero inventato).",
+      "`nina_rag_loop.py:180` hardcoda `\"casella\": \"?\"` → `casella ?` in 32 episodi su 64, in contraddizione con l'header dello stesso file.",
+      "**Titoli tripli**: \"La mano che insegna alla notte\" = EP_N2_**19/56/63**; \"Il Direttore Invisibile\" = **45/53/60**; più 51/57 e 13/52. **NON sono duplicati di contenuto** (similarità <0,13): sono giri di spirale legittimi con titolo riusato — `stage1_architect` non riceve i titoli già usati. Guardia da aggiungere.",
+      "EP_N2_62/63/64 **non committati**: il loop Nina non committa mai (i commit `auto: story_agent` toccano solo `S2_SISTEMA/`). Tra due \"salva\" gli episodi Nina sono a rischio.",
+      "`night_caroselli_nina.py:189-191`: draft fallito non marca l'item → ritenta lo stesso nel batch e la notte esce con EXIT 1 anche se poi riesce.",
+      "Sentinella canone **neutralizzata**: `night_audit.py:635` misura il `mtime` di `_CANONE.md`, che i blocchi auto (`<!-- COLLEGATI -->`) rinfrescano ogni notte → `stale: false` per sempre. Il contenuto curato è fermo al 16/07. Va misurata sulla porzione fuori dai marker.",
+      "Dashboard minori: `CalendarioView.tsx:97` chiavi React duplicate; **lint 89 problemi**; `/api/content-files` divergente (vite 289 vs Flask 0, `CONTENT_ENGINE_DIR` non impostata); badge \"289 su disco vs 188 episodi\" conta anche `_ARCHIVIO` → sembra un buco di 101 episodi che non esiste; **~2,5k righe di dead code** + 7 dipendenze non usate.",
+      "Euristiche rumorose da tarare: `_cid()` = sha1 della **prosa LLM** → non collide mai → 6 critiche nuove/notte per 15 notti (le \"30 aperte\" sono **8 problemi**, 4 veri); `rate limit` matcha *\"higher rate limits\"*; `0 risultati` scatta su riga per-sorgente; `QC_EP_OPEN_LOOP` cerca l'etichetta non il gancio (32→23 reali); `canon_guard` prende «chunk **recuperati**» (gergo RAG) come violazione → i 5 `canon_violations` sono **tutti falsi positivi**.",
+      "**Istruzione sbagliata da correggere**: `AZIONI_MATTEO.md:32` dice di mettere la chiave in `.env`, ma **nessuno legge `TITANIUM_OS/.env`** (zero `load_dotenv()` nel repo). Le chiavi vivono come **variabili utente Windows**; il loader vero è `_ti_paths.bat` → `_VAULT/KEYS/titanium_os.env` (tutto commentato).",
+      "Deriva canone `_CANONE.md:32` (dichiara 01…56, su disco 64): **impatto sul RAG NULLO** — `_canon_stems()` legge solo i `[[wikilink]]`, il range è testo piano. È governance + un allarme fisso in cartella clinica. Fix = **edit a mano** riga 32 e footer (nessun generatore esiste, `setup_obsidian` non lo tocca).",
+      "**6 pronte al volo**: EP_N2_07 (BUS-21cc0f3d è **obsoleta**: l'errore QC era transitorio del 17-19/07, la bozza su disco è verde), EP_N2_08, EP_SG_02_05, EP_SG_02_06, EP_SG_03_01, EP_SG_03_02, EP_SG_04_01.",
+      "**EP_N2_09** «La Bibliotecaria della Mente»: slide 2 ha `<div class=\"scene\"></div>` **vuota** — la scena `biblioteca` non è tra le 16 di `sg_builder.SCENES` ed è stata rimossa. 1 slide su 10 è nuda. Fix: mappare su `quaderno`/`mappa` e re-render.",
+      "**EP_SG_03_03** «Il Verdetto»: (a) `carosello.html:84` «l'analisi RSS ha restituito ±0,019 mm» → numero di progetto in contenuto pubblico (regola 15/07); (b) open-loop **all'indietro** (tira a \"La prima foto\" = EP_SG_03_01 già prodotto).",
+      "Titoli tripli: rititolare i rerun o archiviarli come fatto il 04/07 con 51/52?"
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why Time Runs Slower Near a Black Hole - Adam Brown",
+        "url": "https://www.youtube.com/shorts/6oZZcWsBDK0"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why Physicists Spent 50 Years Insisting Black Holes Were Impossible - Adam Brown",
+        "url": "https://www.youtube.com/shorts/41BAsYfFM38"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "How We Proved That Black Holes Exist - Adam Brown",
+        "url": "https://www.youtube.com/shorts/5a7KVZQExRc"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Opus 5 - better than Fable?",
+        "url": "https://www.youtube.com/shorts/_t-Hbg-3_CU"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Agentic Engineering, explained by a 10x developer",
+        "url": "https://www.youtube.com/watch?v=FU5_kpTAVDo"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "New Cursor plan…",
+        "url": "https://www.youtube.com/shorts/GR4cCUL51wU"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Anthropic's shady tactics...",
+        "url": "https://www.youtube.com/shorts/nWzWlFAudoQ"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "OpenAI JUST revealed the truth about it's \"Rogue Agent\"",
+        "url": "https://www.youtube.com/watch?v=9lSIHaXT1rU"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "PSA: llama.cpp now loads MTP tensors by default for any draft-mtp arch, even with MTP disabled",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va54em/psa_llamacpp_now_loads_mtp_tensors_by_default_for/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "\"Uncensored\" LLMs are measurably more optimistic than their base models",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9vwev/uncensored_llms_are_measurably_more_optimistic/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Bought a 5090 to escape API fees. Ended up building a mini datacenter. Sound familiar?",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vacf09/bought_a_5090_to_escape_api_fees_ended_up/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "I keep coming back to Qwen... Over and Over. Is there really nothing better under 120B?",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9xsi8/i_keep_coming_back_to_qwen_over_and_over_is_there/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Are you guys not scared of where we're heading? A year ago, GPT-5 was considered one of the best models in the world. Today, we have open-weight models like Qwen3.6-27B that are competitive enough to ",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va7nm7/are_you_guys_not_scared_of_where_were_heading_a/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "First Kimi K3 results on home lab ~ 4t/s",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va0rce/first_kimi_k3_results_on_home_lab_4ts/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Kimi K3 for local use (1.56TB → 594GB) compressed and released by Unsloth",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va6ot2/kimi_k3_for_local_use_156tb_594gb_compressed_and/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "The open-weights carousel never stops.",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va73s6/the_openweights_carousel_never_stops/"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "GPT-6 Goes Rogue? The HuggingFace Incident, Sans Hype",
+        "url": "https://www.youtube.com/watch?v=wzY2fV4Mp3U"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Sakana AI Releases Fugu-Cyber: An Orchestration Model Reporting 86.9% on CyberGym and 72.1% on CTI-REALM",
+        "url": "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "FAIRChem v2 UMA for Multidomain Atomistic Simulation across Molecules, Catalysts, Materials, Vibrations, and Molecular Dynamics",
+        "url": "https://www.marktechpost.com/2026/07/26/fairchem-v2-uma-for-multidomain-atomistic-simulation-across-molecules-catalysts-materials-vibrations-and-molecular-dynamics/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Induction Labs Photon-1 Simulates Desktops, Plays Checkers, and Models Billiard Physics From One Pretraining Run",
+        "url": "https://www.marktechpost.com/2026/07/26/induction-labs-photon-1-simulates-desktops-plays-checkers-and-models-billiard-physics-from-one-pretraining-run/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "KwaiKAT Team Releases KAT-Coder-V2.5: An Agentic Coding Model Trained on 100,000+ Verifiable Repository Environments",
+        "url": "https://www.marktechpost.com/2026/07/26/kwaikat-team-releases-kat-coder-v2-5-an-agentic-coding-model-trained-on-100000-verifiable-repository-environments/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Black Forest Labs Releases FLUX 3: A Multimodal Flow Model for Image, Video, Audio and Robot Action Prediction",
+        "url": "https://www.marktechpost.com/2026/07/26/black-forest-labs-releases-flux-3-a-multimodal-flow-model-for-image-video-audio-and-robot-action-prediction/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Perplexity Releases pplx, a Single-Binary CLI That Puts Its Search API in the Terminal for Coding Agents",
+        "url": "https://www.marktechpost.com/2026/07/27/perplexity-releases-pplx/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors, and Automated Deliverables",
+        "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Kimi AI and kvcache-ai Open Sources ‘AgentENV’: A Distributed System that Powers Agentic Reinforcement Learning (RL) Training for Kimi K3",
+        "url": "https://www.marktechpost.com/2026/07/27/kimi-ai-and-kvcache-ai-open-sources-agentenv/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Running a 28.9M parameter LLM on an $8 microcontroller",
+        "url": "https://github.com/slvDev/esp32-ai"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "LLM Usage in Debian: Three Proposals",
+        "url": "https://www.debian.org/vote/2026/vote_002"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "The new rules of context engineering for Claude 5 generation models",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How AI is expanding what people do at work",
+        "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work"
+      }
+    ],
+    "n_news": 30
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "data": "2026-08-17",
+  "proposte": [
+    {
+      "tipo": "fix-interno",
+      "area": "GENESIS / RAG",
+      "titolo": "Iniettare _CANONE.md nel prompt di nina_agent.py:188 e rimuovere il paper fuori-tema da MENTE/KNOWLEDGE/RESEARCH/mims/",
+      "cosa": "Aggiungere il contenuto di _CANONE.md come sezione fissa nel system-prompt di nina_agent.py (prima della chiamata all'Architetto per aggancio_reale). Contestualmente spostare/escludere dalla pipeline RAG il paper errato in MENTE/KNOWLEDGE/RESEARCH/mims/ che fa tracimare MIMS verso AI.",
+      "perche": "Segnale critico GENESIS sev=alta: 'nina_agent.py:188 chiede aggancio_reale ma _CANONE.md non è mai iniettato nel prompt'; RAG interrogato su MIMS restituisce paper fuori tema → 5 episodi su 8 recenti descrivono MIMS come 'Machine-Induced Meaning Synthesis' o modulo AI. Il falso si autoalimenta perché save_canon specchia in MENTE. Questo è il problema di contaminazione più grave e più a monte.",
+      "come": [
+        "1. In nina_agent.py leggere _CANONE.md a runtime e inserirlo nel system-prompt come blocco '## CANONE FISSO (non sovrascrivibile dal RAG)' prima di qualsiasi retrieve_context().",
+        "2. Aggiungere uno script di test (test_canone_injection.py) che verifica che la stringa 'MIMS = meccanica' compaia nel prompt costruito → eseguibile senza toccare main.",
+        "3. Spostare il paper fuori-tema in ARCHIVE/QUARANTINE/mims_paper_misclassified/ e aggiungere il path a una denylist RAG (file .ragignore o equivalente già usato nel progetto).",
+        "4. Rebuild RAG dopo la rimozione (operazione autonoma, reversibile da git).",
+        "5. Rieseguire canon_guard sui 64 EP_N2 come smoke-test finale."
+      ],
+      "rischio": "Basso. L'iniezione è additive (non rimuove logica esistente). La quarantena del paper è reversibile da git. Il rebuild RAG è già operazione nota.",
+      "autonomia": "approvazione",
+      "fonte": "segnale interno: todo_bussola 'nina_agent.py:188 / _CANONE.md non iniettato'; critica GENESIS sev=alta"
+    },
+    {
+      "tipo": "fix-interno",
+      "area": "SISTEMA / organi vitali",
+      "titolo": "Diagnosi e riaccensione degli 8 organi silenziosi da 17-19 giorni (nina-loop, snapshot RAG, retention, inventario notturno, AI news watcher, API :5001)",
+      "cosa": "Eseguire un health-check sistematico per capire perché 6+ processi notturni sono morti il 30/07 (ultimo commit auto), documentare la causa root e riaccenderli uno alla volta in ordine di dipendenza. Prima di riaccendere: risolvere la corruzione HNSW che causa 'limit=10 → 0 embedding'.",
+      "perche": "Critica SISTEMA sev=alta: '6 organi vitali silenziosi da 17-19 giorni'. Con RAG corrotto (3 crash HNSW in 2 giorni) e snapshot fermo, qualsiasi output notturno è inaffidabile. L'API :5001 giù fa girare Nina solo sul fallback. Nessun commit in 7 giorni è conseguenza diretta del loop silenzioso.",
+      "come": [
+        "1. Ispezionare i log dei processi (cron/systemd/pm2) per trovare l'exit code e il timestamp dell'ultimo crash → documentare in DOCS/incident_20260730.md.",
+        "2. Fix HNSW prioritario: eseguire rebuild pulito dell'indice (backup prima), verificare che limit=10 restituisca risultati su query campione.",
+        "3. Riaccendere in sequenza: (a) snapshot RAG, (b) inventario notturno, (c) nina-loop, (d) retention, (e) AI news watcher, (f) API :5001.",
+        "4. Aggiungere un monitor minimo (script bash o cron separato) che scrive un heartbeat file per ogni organo e invia alert se fermo >4 giorni.",
+        "5. Verificare che EP_N2_62/63/64 vengano committati dopo la riaccensione del loop."
+      ],
+      "rischio": "Medio: il rebuild HNSW è distruttivo se non preceduto da backup. La riaccensione sequenziale limita le interferenze.",
+      "autonomia": "approvazione",
+      "fonte": "critica SISTEMA sev=alta 'organi silenziosi 17-19 giorni'; critica RAG sev=alta 'corruzione HNSW ricorrente, limit=10 → 0 embedding'; todo_bussola 'API :5001 giù'"
+    }
+  ],
+  "segnali": {
+    "data": "2026-08-17",
+    "milestone": "Sessione #70 (16/08): BONIFICA CONTAMINAZIONE MIMS + SCALA GENESIS S0-S2. Scoperto che A1/A2 erano gia' fatti dal commit a77256f3 del 28/07 (sorgente chiusa da 19 giorni): non rifatti, verificati. A3 era il pezzo vero aperto -> canon_guard su 64 EP_N2 vivi ha trovato 8 episodi sporchi (i 5 in lista ",
+    "pillars": {
+      "V32": 65,
+      "MIMS": 30,
+      "GENESIS": 70,
+      "VITA_NATURA": 40,
+      "IDENTITY": 50
+    },
+    "critiche_audit_aperte": [
+      {
+        "area": "RICERCA",
+        "sev": "media",
+        "finding": "Il log del 2026-08-16 segnala nei blockers 'API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna'. Con AI news watcher silenzioso da 17.5 giorni (log: 'AI news watcher: ultimo output 17."
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "Zero commit negli ultimi 7 giorni (n_commits_7d: 0, commits_7d: []). La bussola del 2026-08-16 conferma che 'il loop Nina non committa mai (i commit auto: story_agent toccano solo S2_SISTEMA/)' e che EP_N2_62/63/64 non sono committati. Con "
+      },
+      {
+        "area": "SISTEMA",
+        "sev": "alta",
+        "finding": "6 organi vitali silenziosi da 17-19 giorni: i log del 2026-08-16 riportano esplicitamente 'nina-loop: ultimo output 17.5 giorni fa (soglia 3)', 'snapshot RAG: ultimo output 17.5 giorni fa (soglia 3)', 'inventario notturno: ultimo output 17."
+      },
+      {
+        "area": "ROADMAP",
+        "sev": "media",
+        "finding": "Il canone manuale è fermo da 39 giorni con 19 critiche attive da riverificare (log 2026-08-16: 'canone manuale fermo da 39 giorni (>30) — 19 attive da riverificare'). Nel frattempo la serie ha prodotto episodi EP_N2_57–64, il problema MIMS "
+      },
+      {
+        "area": "GENESIS",
+        "sev": "alta",
+        "finding": "Il canone si autoalimenta con falsi: la bussola del 2026-08-16 documenta che '_CANONE.md non è mai iniettato nel prompt' di nina_agent.py:188, il RAG viene interrogato sul concetto MIMS e restituisce il paper fuori tema in MENTE/KNOWLEDGE/R"
+      },
+      {
+        "area": "RAG",
+        "sev": "alta",
+        "finding": "La corruzione HNSW è ricorrente (3 volte in 2 giorni, segnalata nei blockers) e il suo effetto concreto è già visibile: 'limit=10 dà 0 embedding' — il RAG restituisce zero risultati su query legittime. Con snapshot fermo da 17.5 giorni (log"
+      }
+    ],
+    "salute": {
+      "verdict": "ATTENZIONE",
+      "n_episodes": 301,
+      "rag_chunks": 21630,
+      "n_commits_7d": 0
+    },
+    "gap_storie": {
+      "generato": "2026-06-14T11:29:27",
+      "episodi_totali": 161,
+      "azioni_90gg": 244,
+      "gap_timeline": [],
+      "gap_profondita": []
+    },
+    "todo_bussola_aperti": [
+      "**Residuo onesto**: lo slot `aggancio_reale` non resta mai vuoto — l'LLM ora inventa *dentro* GENESIS (\"il sistema notturno di consolidamento dei pattern motori\" non esiste). Il P0 è chiuso (MIMS è salvo), ma la regola \"meglio vuoto che inventato\" non morde ancora.",
+      "**Batch 3 da decidere (Matteo)**: altri **18 episodi** contengono \"GENESIS/V32\" senza verbo software vicino (canon_guard non li segnala). Vanno ripuliti anche quelli o è co-menzione legittima?",
+      "**C1 (S0)** FounderOS clonato read-only in `ARCHIVE/REFERENCE/founderos` (MIT, `next dev -p 4100`). DDL delle 8 tabelle già estratto — nota: in FounderOS `agents` **non ha** `parent_id`, va aggiunto.",
+      "**Resta una terza copia**: `DOCS/ASSOLUTO/ASSOLUTO_V7.md:210` ha le sue \"10 Regole — Titanium Ventures\". È documento strategico storico (ASSOLUTO = \"materia di studio, non task\" per il RIPASSO), non l'ho toccato. Decidi tu se derivarlo o marcarlo come storico.",
+      "**Non applicato** — resta decisione di Matteo, che ha detto di tenerlo lì.",
+      "`nina-loop`, snapshot RAG, retention, inventario notturno, AI news watcher: **ultimo output 17,5 giorni fa** (soglia 3-4). Ultimo commit automatico: **30/07**. Vanno riaccesi e verificati.",
+      "RAG a **21.630 chunk** (era ~32.800 il 24/06): da capire se è il rientro dopo un rebuild o una perdita.",
+      "API server (`:5001`) **giù**. Il grounding di Nina ha funzionato solo grazie al fallback sul motore diretto.",
+      "W1 social: i 3 post rimasti erano bloccati dal tetto 29 giorni — **la finestra è passata**, vanno riprogrammati.",
+      "In **5 episodi su 8 recenti** MIMS è descritto come modulo software/AI: EP_N2_64 «*MIMS (Machine-Induced Meaning Synthesis)*» (acronimo inventato), EP_N2_63 «*consolida i pattern di controllo motorio*», EP_N2_60/59/57 simili. Il canone dice: MIMS = **meccanica** (tile 190×190, croce D29.9 H7/g6, PA-GF30). Causa: `nina_agent.py:188` chiede all'Architetto un `\"aggancio_reale\"` ai pilastri ma `_CANONE.md` **non è mai iniettato nel prompt** e `retrieve_context()` interroga il RAG solo sul concetto → lo slot va riempito e si inventa. Contribuisce un paper fuori tema in `MENTE/KNOWLEDGE/RESEARCH/mims/`. **Questi file finiscono nel RAG** (`save_canon` li specchia in MENTE) → il falso si autoalimenta.",
+      "Stessa classe: **fonti fabbricate nei FATTI** di EP_N2_64 (`Fonte: GENESIS/documentation_hallucination_2026` = path inesistente; «1 sarta su 1.000» = numero inventato).",
+      "`nina_rag_loop.py:180` hardcoda `\"casella\": \"?\"` → `casella ?` in 32 episodi su 64, in contraddizione con l'header dello stesso file.",
+      "**Titoli tripli**: \"La mano che insegna alla notte\" = EP_N2_**19/56/63**; \"Il Direttore Invisibile\" = **45/53/60**; più 51/57 e 13/52. **NON sono duplicati di contenuto** (similarità <0,13): sono giri di spirale legittimi con titolo riusato — `stage1_architect` non riceve i titoli già usati. Guardia da aggiungere.",
+      "EP_N2_62/63/64 **non committati**: il loop Nina non committa mai (i commit `auto: story_agent` toccano solo `S2_SISTEMA/`). Tra due \"salva\" gli episodi Nina sono a rischio.",
+      "`night_caroselli_nina.py:189-191`: draft fallito non marca l'item → ritenta lo stesso nel batch e la notte esce con EXIT 1 anche se poi riesce."
+    ],
+    "news_ai_da_integrare": [
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why Time Runs Slower Near a Black Hole - Adam Brown",
+        "url": "https://www.youtube.com/shorts/6oZZcWsBDK0"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "Why Physicists Spent 50 Years Insisting Black Holes Were Impossible - Adam Brown",
+        "url": "https://www.youtube.com/shorts/41BAsYfFM38"
+      },
+      {
+        "fonte": "Dwarkesh Patel",
+        "titolo": "How We Proved That Black Holes Exist - Adam Brown",
+        "url": "https://www.youtube.com/shorts/5a7KVZQExRc"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Opus 5 - better than Fable?",
+        "url": "https://www.youtube.com/shorts/_t-Hbg-3_CU"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Agentic Engineering, explained by a 10x developer",
+        "url": "https://www.youtube.com/watch?v=FU5_kpTAVDo"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "New Cursor plan…",
+        "url": "https://www.youtube.com/shorts/GR4cCUL51wU"
+      },
+      {
+        "fonte": "David Ondrej",
+        "titolo": "Anthropic's shady tactics...",
+        "url": "https://www.youtube.com/shorts/nWzWlFAudoQ"
+      },
+      {
+        "fonte": "Wes Roth",
+        "titolo": "OpenAI JUST revealed the truth about it's \"Rogue Agent\"",
+        "url": "https://www.youtube.com/watch?v=9lSIHaXT1rU"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "PSA: llama.cpp now loads MTP tensors by default for any draft-mtp arch, even with MTP disabled",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va54em/psa_llamacpp_now_loads_mtp_tensors_by_default_for/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "\"Uncensored\" LLMs are measurably more optimistic than their base models",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9vwev/uncensored_llms_are_measurably_more_optimistic/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Bought a 5090 to escape API fees. Ended up building a mini datacenter. Sound familiar?",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vacf09/bought_a_5090_to_escape_api_fees_ended_up/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "I keep coming back to Qwen... Over and Over. Is there really nothing better under 120B?",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v9xsi8/i_keep_coming_back_to_qwen_over_and_over_is_there/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Are you guys not scared of where we're heading? A year ago, GPT-5 was considered one of the best models in the world. Today, we have open-weight models like Qwen3.6-27B that are competitive enough to ",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va7nm7/are_you_guys_not_scared_of_where_were_heading_a/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "First Kimi K3 results on home lab ~ 4t/s",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va0rce/first_kimi_k3_results_on_home_lab_4ts/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "Kimi K3 for local use (1.56TB → 594GB) compressed and released by Unsloth",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va6ot2/kimi_k3_for_local_use_156tb_594gb_compressed_and/"
+      },
+      {
+        "fonte": "r/LocalLLaMA",
+        "titolo": "The open-weights carousel never stops.",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1va73s6/the_openweights_carousel_never_stops/"
+      },
+      {
+        "fonte": "AI Explained",
+        "titolo": "GPT-6 Goes Rogue? The HuggingFace Incident, Sans Hype",
+        "url": "https://www.youtube.com/watch?v=wzY2fV4Mp3U"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Sakana AI Releases Fugu-Cyber: An Orchestration Model Reporting 86.9% on CyberGym and 72.1% on CTI-REALM",
+        "url": "https://www.marktechpost.com/2026/07/25/sakana-ai-releases-fugu-cyber-orchestration-model-cybergym-cti-realm/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "FAIRChem v2 UMA for Multidomain Atomistic Simulation across Molecules, Catalysts, Materials, Vibrations, and Molecular Dynamics",
+        "url": "https://www.marktechpost.com/2026/07/26/fairchem-v2-uma-for-multidomain-atomistic-simulation-across-molecules-catalysts-materials-vibrations-and-molecular-dynamics/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Induction Labs Photon-1 Simulates Desktops, Plays Checkers, and Models Billiard Physics From One Pretraining Run",
+        "url": "https://www.marktechpost.com/2026/07/26/induction-labs-photon-1-simulates-desktops-plays-checkers-and-models-billiard-physics-from-one-pretraining-run/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "KwaiKAT Team Releases KAT-Coder-V2.5: An Agentic Coding Model Trained on 100,000+ Verifiable Repository Environments",
+        "url": "https://www.marktechpost.com/2026/07/26/kwaikat-team-releases-kat-coder-v2-5-an-agentic-coding-model-trained-on-100000-verifiable-repository-environments/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Black Forest Labs Releases FLUX 3: A Multimodal Flow Model for Image, Video, Audio and Robot Action Prediction",
+        "url": "https://www.marktechpost.com/2026/07/26/black-forest-labs-releases-flux-3-a-multimodal-flow-model-for-image-video-audio-and-robot-action-prediction/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Perplexity Releases pplx, a Single-Binary CLI That Puts Its Search API in the Terminal for Coding Agents",
+        "url": "https://www.marktechpost.com/2026/07/27/perplexity-releases-pplx/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Designing Skill-Driven Financial Analysis Agents with Claude, Python, MCP Connectors, and Automated Deliverables",
+        "url": "https://www.marktechpost.com/2026/07/27/designing-skill-driven-financial-analysis-agents-with-claude-python-mcp-connectors-and-automated-deliverables/"
+      },
+      {
+        "fonte": "MarkTechPost",
+        "titolo": "Kimi AI and kvcache-ai Open Sources ‘AgentENV’: A Distributed System that Powers Agentic Reinforcement Learning (RL) Training for Kimi K3",
+        "url": "https://www.marktechpost.com/2026/07/27/kimi-ai-and-kvcache-ai-open-sources-agentenv/"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "Running a 28.9M parameter LLM on an $8 microcontroller",
+        "url": "https://github.com/slvDev/esp32-ai"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "LLM Usage in Debian: Three Proposals",
+        "url": "https://www.debian.org/vote/2026/vote_002"
+      },
+      {
+        "fonte": "HN (Claude/RAG/local)",
+        "titolo": "The new rules of context engineering for Claude 5 generation models",
+        "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+      },
+      {
+        "fonte": "Hugging Face Blog",
+        "titolo": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams"
+      },
+      {
+        "fonte": "OpenAI News",
+        "titolo": "How AI is expanding what people do at work",
+        "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work"
+      }
+    ],
+    "n_news": 30
+  }
+}

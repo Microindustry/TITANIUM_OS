@@ -24,7 +24,7 @@
 Tag: `v2.8.0` · GitHub Release pubblicata.
 Stato al momento del tag: ecosistema GENESIS base, RAG ibrido v4.0, MCP, dashboard pre-N-livelli.
 
-### v3.0.0 — *Da pubblicare* (2026-05-31, sessione 15) — **MAJOR**
+### v3.0.0 — *TAGGATA, Release GitHub MANCANTE* (2026-05-31, sessione 15) — **MAJOR**
 GENESIS stack maturo + dashboard N-livelli + sistema di continuità sessione.
 
 **Highlights:**
@@ -35,12 +35,44 @@ GENESIS stack maturo + dashboard N-livelli + sistema di continuità sessione.
 - Audit Opus: criticheData v2.0 (18 findings), 8 incoerenze dati risolte
 - VERSIONS ripulito: 408 archivi changelog disindicizzati da git
 
-**Tag suggerito:**
+**Stato reale verificato il 27/08/2026 (sessione #71):**
+- Tag `v3.0.0` **creato e pushato** su origin (`d2cf770`) — questo file diceva ancora "da pubblicare".
+- **GitHub Release NON creata**: `gh release list` mostra solo v2.8.0. Metà del rito è saltata.
+  La regola di questo file è esplicita — *una release = un tag annotato **+** una GitHub Release*.
+
 ```
-git tag -a v3.0.0 -m "TITANIUM_OS v3.0.0 — GENESIS stack N-livelli + continuità sessione"
-git push origin v3.0.0
 gh release create v3.0.0 --title "TITANIUM_OS v3.0.0" --notes-file VERSIONS/RELEASES.md
 ```
+
+---
+
+### ⚠️ SCOPERTO IL 27/08/2026 — il profilo pubblico mostrava la versione SBAGLIATA
+
+`AUTOMATIONS/core/update_github_profile.py` leggeva `STATE.json → meta.version` per la riga
+"Stato Live". Ma `meta.version` è la versione **dello SCHEMA di STATE.json** (1.1.0), non del
+progetto. Risultato: il README pubblico di `Microindustry/Microindustry` ha pubblicato
+**"v1.1.0"** ogni notte — mentre i tag dicevano v3.0.0.
+
+**Corretto**: la versione ora si deriva dal **tag git** (`git describe --tags --abbrev=0`) più
+i commit di distanza — *`v3.0.0 · +646 commit`*. Coerente con la regola di questo file: la
+fonte della versione è il tag, non un campo copiato a mano.
+
+*(Stesso giro: il numero di chunk del RAG era scritto a mano nel template — `~19.600`, fermo
+dal #61. Ora si legge da `DATA/audit/system_health.json`, che il night_audit riscrive ogni notte.)*
+
+---
+
+### `[ ]` PROSSIMA RELEASE — decisione di Matteo
+
+Da v3.0.0 (31/05, sessione #15) a oggi (27/08, sessione #71) sono passati **646 commit e
+~3 mesi** senza un tag. Applicando lo schema in cima a questo file:
+
+| Se si guarda… | La regola dice | Versione |
+|---|---|---|
+| I nodi nuovi (RAG v4.2, Nina canone, apprendista notturno, self-improve, canon_guard, pipeline social) | *nuovo nodo/feature significativo* → **MINOR** | `v3.1.0` |
+| Lo scheletro relazionale di GENESIS (db a 8 tabelle, organigramma ad albero, repository layer S0→S3) + il loop notturno che consegna da solo | *salto architetturale* → **MAJOR** | `v4.0.0` |
+
+Non la decido io: una release è una dichiarazione, e la firma chi la fa.
 
 ---
 
@@ -51,5 +83,10 @@ gh release create v3.0.0 --title "TITANIUM_OS v3.0.0" --notes-file VERSIONS/RELE
 | ~#13 | Ecosistema base, RAG v4.0 | v2.8.0 |
 | #14 | NEXUS swarm, RAG graph v5, MCP v1.3 | (interna) |
 | #15 | Dashboard N-livelli, audit Opus, handoff self-healing | **v3.0.0** |
+| #37-46 | Arco Nina completo, RAG v4.2 (heading-aware + snapshot + GraphRAG-lite), loop autonomo | (interna) |
+| #52-58 | Attacco esercito su Fable, ecosistema Obsidian, STORIE di sistema, HR a 3 strati | (interna) |
+| #63-67b | Lancio social: identità microindustry, Postiz, 18/21 post programmati su 2 profili | (interna) |
+| #69-70 | Bonifica contaminazione MIMS, regole a fonte unica, scala GENESIS S0-S2 | (interna) |
+| #71 | Scala GENESIS **S3** (repository layer), view_index atomico, batch 3 gruppo 1 | (da taggare) |
 
 > Aggiornare questo file ad ogni nuovo tag. È l'unico indice human-readable delle release.

@@ -118,6 +118,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_67",
+        "title": "Il Segno che Rimane",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_S0_01",
         "title": "L'Organismo",
         "tipo": "continuita",
@@ -1993,6 +1999,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_S2_00_IL_DISTACCO",
         "title": "Il Distacco",
         "tipo": "tema",
@@ -2013,12 +2025,6 @@
       {
         "id": "EP_S2_04_IL_CV_CHE_NESSUNO_CAPISCE",
         "title": "Il Cv Che Nessuno Capisce",
-        "tipo": "tema",
-        "motivo": "tema: narrativo, recuperato, st"
-      },
-      {
-        "id": "EP_S2_05_IL_SILENZIO",
-        "title": "Il Silenzio",
         "tipo": "tema",
         "motivo": "tema: narrativo, recuperato, st"
       }
@@ -15267,6 +15273,12 @@
     },
     "collegati": [
       {
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, parla"
+      },
+      {
         "id": "MOM_01_LA_PRIMA_AUTOMAZIONE",
         "title": "La Prima Automazione",
         "tipo": "prerequisito",
@@ -15317,12 +15329,6 @@
       {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa che Non Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15391,6 +15397,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_N2_35",
         "title": "Il Custode dei Segreti",
         "tipo": "tema",
@@ -15423,12 +15435,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15816,6 +15822,12 @@
         "motivo": "tema: nina-v2, sono, themis"
       },
       {
+        "id": "EP_N2_66",
+        "title": "Il Ticchettio che Salva",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, sono, themis"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -15854,12 +15866,6 @@
       {
         "id": "EP_N2_09",
         "title": "La Bibliotecaria della Mente",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_11",
-        "title": "La Grande Mappa",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -15960,14 +15966,14 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
+        "id": "EP_N2_65",
+        "title": "Il Puntino che Sussurra",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
-        "id": "EP_N2_04",
-        "title": "La Mappa che Non Mente",
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16038,6 +16044,12 @@
         "motivo": "tema: grande, loop, nina-v2"
       },
       {
+        "id": "EP_N2_67",
+        "title": "Il Segno che Rimane",
+        "tipo": "tema",
+        "motivo": "tema: grande, loop, nina-v2"
+      },
+      {
         "id": "EP_FILONE_00",
         "title": "La Materia — il telaio, la scelta, il controllo",
         "tipo": "prerequisito",
@@ -16070,12 +16082,6 @@
       {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_04",
-        "title": "La Mappa che Non Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16176,14 +16182,14 @@
         "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
+        "id": "EP_N2_65",
+        "title": "Il Puntino che Sussurra",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
       },
       {
-        "id": "EP_N2_04",
-        "title": "La Mappa che Non Mente",
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16463,6 +16469,12 @@
         "motivo": "tema: frutti, grande, loop"
       },
       {
+        "id": "EP_N2_67",
+        "title": "Il Segno che Rimane",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
         "id": "EP_N2_10",
         "title": "Il Grande Loop: quando il gesto rimane",
         "tipo": "tema",
@@ -16501,12 +16513,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -16903,6 +16909,12 @@
         "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
       },
       {
+        "id": "EP_N2_67",
+        "title": "Il Segno che Rimane",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -16923,12 +16935,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_07",
-        "title": "Il Sussurratore di Parole",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -17551,6 +17557,12 @@
         "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
       },
       {
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
         "id": "EP_N2_02",
         "title": "Il Soffio di Troppo",
         "tipo": "tema",
@@ -17571,12 +17583,6 @@
       {
         "id": "EP_N2_06",
         "title": "L'Officina che Gira Sola",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_09",
-        "title": "La Bibliotecaria della Mente",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20476,6 +20482,12 @@
         "motivo": "stessa Regione ⟡0 (LA MATERIA)"
       },
       {
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis, volte"
+      },
+      {
         "id": "EP_N2_04",
         "title": "La Mappa che Non Mente",
         "tipo": "tema",
@@ -20484,12 +20496,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20641,10 +20647,10 @@
         "motivo": "tema: mente, nina-v2, themis"
       },
       {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
         "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
+        "motivo": "tema: mente, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -20774,8 +20780,8 @@
         "motivo": "continua da (arco della stagione)"
       },
       {
-        "id": "EP_20260709",
-        "title": "TITANIUM OS — Episodio 57",
+        "id": "EP_20260708",
+        "title": "TITANIUM OS — S2E15",
         "tipo": "continuita",
         "motivo": "porta a (arco della stagione)"
       }
@@ -20787,8 +20793,8 @@
         "title": "TITANIUM OS — EP AUTO 003"
       },
       "segue": {
-        "id": "EP_20260709",
-        "title": "TITANIUM OS — Episodio 57"
+        "id": "EP_20260708",
+        "title": "TITANIUM OS — S2E15"
       }
     }
   },
@@ -20840,6 +20846,12 @@
         "motivo": "tema: guasto, nina-v2, paura"
       },
       {
+        "id": "EP_N2_65",
+        "title": "Il Puntino che Sussurra",
+        "tipo": "tema",
+        "motivo": "tema: guasto, nina-v2, paura"
+      },
+      {
         "id": "MOM_03_L_ESERCITO",
         "title": "L'Esercito",
         "tipo": "stessa_regione",
@@ -20884,12 +20896,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -20946,6 +20952,12 @@
         "motivo": "tema: aiutanti, nina-v2, quando"
       },
       {
+        "id": "EP_N2_66",
+        "title": "Il Ticchettio che Salva",
+        "tipo": "tema",
+        "motivo": "tema: aiutanti, nina-v2, quando"
+      },
+      {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
         "tipo": "stessa_regione",
@@ -20992,12 +21004,6 @@
         "title": "Il carico va sullo schermo, non nella testa",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
     ],
     "evoluzione": {
@@ -21027,8 +21033,8 @@
     },
     "collegati": [
       {
-        "id": "EP_20260707",
-        "title": "TITANIUM OS — S2E17",
+        "id": "EP_20260708",
+        "title": "TITANIUM OS — S2E15",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
       },
@@ -21042,8 +21048,8 @@
     "evoluzione": {
       "fase": "Diario del Sistema",
       "precede": {
-        "id": "EP_20260707",
-        "title": "TITANIUM OS — S2E17"
+        "id": "EP_20260708",
+        "title": "TITANIUM OS — S2E15"
       },
       "segue": {
         "id": "EP_20260713",
@@ -21199,6 +21205,12 @@
         "motivo": "tema: frutti, grande, loop"
       },
       {
+        "id": "EP_N2_67",
+        "title": "Il Segno che Rimane",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
         "id": "EP_N2_10",
         "title": "Il Grande Loop: quando il gesto rimane",
         "tipo": "tema",
@@ -21237,12 +21249,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -21792,10 +21798,10 @@
         "motivo": "tema: mente, nina-v2, themis"
       },
       {
-        "id": "EP_N2_02",
-        "title": "Il Soffio di Troppo",
+        "id": "EP_N2_64",
+        "title": "Il Sussurratore che Indovina",
         "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
+        "motivo": "tema: mente, nina-v2, themis"
       }
     ],
     "evoluzione": {
@@ -22191,6 +22197,12 @@
         "motivo": "tema: guasto, nina-v2, paura"
       },
       {
+        "id": "EP_N2_65",
+        "title": "Il Puntino che Sussurra",
+        "tipo": "tema",
+        "motivo": "tema: guasto, nina-v2, paura"
+      },
+      {
         "id": "MOM_03_L_ESERCITO",
         "title": "L'Esercito",
         "tipo": "stessa_regione",
@@ -22235,12 +22247,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -22344,6 +22350,12 @@
         "motivo": "tema: aiutanti, nina-v2, quando"
       },
       {
+        "id": "EP_N2_66",
+        "title": "Il Ticchettio che Salva",
+        "tipo": "tema",
+        "motivo": "tema: aiutanti, nina-v2, quando"
+      },
+      {
         "id": "EP_S2_02_L_ORCHESTRATORE",
         "title": "L'Orchestratore",
         "tipo": "stessa_regione",
@@ -22388,12 +22400,6 @@
       {
         "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
         "title": "Il carico va sullo schermo, non nella testa",
-        "tipo": "stessa_regione",
-        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
-      },
-      {
-        "id": "EP_SEED_CONTROLLO_L1_STATOLIVE",
-        "title": "Se è acceso, non se dovrebbe — lo stato live",
         "tipo": "stessa_regione",
         "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
       }
@@ -22476,6 +22482,12 @@
         "title": "TITANIUM OS · S2 · Episodio 68b",
         "tipo": "continuita",
         "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260725",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
       }
     ],
     "evoluzione": {
@@ -22483,6 +22495,10 @@
       "precede": {
         "id": "EP_20260723",
         "title": "TITANIUM OS · S2 · Episodio 68b"
+      },
+      "segue": {
+        "id": "EP_20260725",
+        "title": "TITANIUM OS · S2 · Episodio 69"
       }
     }
   },
@@ -22540,6 +22556,12 @@
         "motivo": "tema: frutti, grande, loop"
       },
       {
+        "id": "EP_N2_67",
+        "title": "Il Segno che Rimane",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
         "id": "EP_N2_10",
         "title": "Il Grande Loop: quando il gesto rimane",
         "tipo": "tema",
@@ -22578,12 +22600,6 @@
       {
         "id": "EP_N2_05",
         "title": "Le Mani Prima dei Rulli",
-        "tipo": "tema",
-        "motivo": "tema: nina-v2, themis"
-      },
-      {
-        "id": "EP_N2_06",
-        "title": "L'Officina che Gira Sola",
         "tipo": "tema",
         "motivo": "tema: nina-v2, themis"
       }
@@ -22841,6 +22857,71 @@
         "richiama": [],
         "stato_nina": "adattato"
       }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_07",
+        "title": "Il Sussurratore di Parole",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, parla"
+      },
+      {
+        "id": "EP_S2_01_IL_CERVELLO_IBRIDO",
+        "title": "Il Cervello Ibrido",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_27",
+        "title": "La Memoria che Respira",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_08",
+        "title": "La Lampada che Sussurra",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡3 (LA MENTE CHE PARLA)"
+      },
+      {
+        "id": "EP_N2_35",
+        "title": "Il Custode dei Segreti",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_03",
+        "title": "Mille Volte Uguale",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis, volte"
+      },
+      {
+        "id": "EP_N2_51",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_57",
+        "title": "Il Cartellino sulla Stoffa",
+        "tipo": "tema",
+        "motivo": "tema: mente, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
     }
   },
   {
@@ -22862,6 +22943,31 @@
     "narrativa": {
       "asse_ruolo": {
         "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260707",
+        "title": "TITANIUM OS — S2E17",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260709",
+        "title": "TITANIUM OS — Episodio 57",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260707",
+        "title": "TITANIUM OS — S2E17"
+      },
+      "segue": {
+        "id": "EP_20260709",
+        "title": "TITANIUM OS — Episodio 57"
       }
     }
   },
@@ -22885,6 +22991,31 @@
       "asse_ruolo": {
         "tipo": "sistema"
       }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260724",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260726",
+        "title": "TITANIUM OS · S2 · Episodio 68",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260724",
+        "title": "TITANIUM OS · S2 · Episodio 69"
+      },
+      "segue": {
+        "id": "EP_20260726",
+        "title": "TITANIUM OS · S2 · Episodio 68"
+      }
     }
   },
   {
@@ -22907,6 +23038,31 @@
       "asse_ruolo": {
         "tipo": "sistema"
       }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260725",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260727",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260725",
+        "title": "TITANIUM OS · S2 · Episodio 69"
+      },
+      "segue": {
+        "id": "EP_20260727",
+        "title": "TITANIUM OS · S2 · Episodio 69"
+      }
     }
   },
   {
@@ -22928,6 +23084,762 @@
     "narrativa": {
       "asse_ruolo": {
         "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260726",
+        "title": "TITANIUM OS · S2 · Episodio 68",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260728",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260726",
+        "title": "TITANIUM OS · S2 · Episodio 68"
+      },
+      "segue": {
+        "id": "EP_20260728",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      }
+    }
+  },
+  {
+    "id": "EP_20260728",
+    "title": "TITANIUM OS · S2 · Episodio 70",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-28",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 70 \"Cinque Bugie e un Sistema che Credeva a Se Stesso\" 28 luglio 2026 — Sessione 69 COLD OPEN Una cartella clinica non mente. Non può — è fatta di log, timestamp, stati boo",
+    "content": "# TITANIUM_OS · S2 · Episodio 70\n## \"Cinque Bugie e un Sistema che Credeva a Se Stesso\"\n\n*28 luglio 2026 — Sessione #69*\n\n---\n\n## COLD OPEN\n\nUna cartella clinica non mente. Non può — è fatta di log, timestamp, stati booleani. Eppure per sette notti consecutive ha scritto che la corsia Nina era funzionante. Tre episodi in coda, etichettati `bozza_verde`, promossi settimane prima. Il sistema controllava il tetto del backlog — `6 >= 6`, falso positivo — e si fermava. Credeva a se stesso. Credeva a un numero sbagliato.\n\nFuori dalla taverna è luglio. Dentro, 23:14. Matteo ha la sessione aperta davanti e una lista di fix che non sono nuove funzionalità: sono autopsie.\n\n---\n\n## ATTO I — La Coda Stale\n\nSette notti.\n\nNon è un numero drammatico se non capisci cosa significa: per sette cicli notturni, il `story_agent` di Nina ha visto la coda piena e si è fermato prima di produrre. `EP_N2_04`, `EP_N2_05`, `EP_N2_06` — tre episodi con stato `bozza_verde` nel database, benché promossi da tempo. Il contatore del backlog leggeva sei slot occupati. Il tetto era sei. Blocco.\n\nIl bug era silenzioso nel modo peggiore: nessun errore, nessun crash, nessun allarme rosso nella cartella clinica. Il sistema funzionava — eseguiva il ciclo notturno, scriveva i commit automatici, aggiornava i vettori. Faceva tutto tranne la cosa per cui era stato costruito quella settimana: generare.\n\nQuattro episodi persi nel buio.\n\nIl fix era chirurgico: `audit_episodes` usava un match per titolo per verificare quali episodi esistessero già nel RAG. Se il titolo cambiava di un carattere — una maiuscola, uno spazio — l'episodio risultava orfano o duplicato. Lo `story_agent` riciclava l'identificatore `Episodio 69` su contenuti diversi. Il contatore saliva. Il backlog reale era tre, non sei.\n\nRimosso il match per titolo. Backlog reale: `6 → 3`. Corsia Nina: sbloccata. Totale episodi: `252 → 256`, zero orfani.\n\nNon è una vittoria rumorosa. È la rimozione di un errore silenzioso che durava da una settimana.\n\n---\n\n## ATTO II — Le Cinque Bugie di MIMS\n\nMatteo trova il problema di verità nel mezzo dell'audit.\n\nNon è un crash. Non è un 503. È qualcosa di più sottile e, in un certo senso, più grave: in cinque episodi su otto recenti, MIMS viene descritto come un sistema software, un agente AI, un modulo cognitivo. In un caso viene inventato persino un acronimo. \n\nMIMS è meccanica. Connettori fisici. Tiles 190×190 millimetri in PA-GF30. Un sistema di giunzione modulare per pannelli che ancora non esiste — che è il *prossimo* progetto, dopo che caroselli ed ecosistema saranno in piedi. Non ha righe di codice. Non ha endpoint. Non ha un vettore nel ChromaDB.\n\nIl sistema stava raccontando una storia parallela, coerente con se stessa, completamente sbagliata.\n\nLa radice: `nina_agent` nella fase `stage1_architect` non riceveva le definizioni dei pilastri. Generava senza contesto canonico, e colmava il vuoto con inferenza. L'inferenza leggeva \"MIMS\" nell'archivio, trovava pattern vicini ad altri sistemi software del progetto, costruiva una descrizione plausibile. Plausibile e falsa.\n\nIl fix: il canone viene iniettato prima dell'architettura dell'episodio, non dopo. La contaminazione si ferma.\n\nMa Matteo ritira anche due suoi errori mentre fa l'audit.\n\nIl primo: aveva scritto che la paginazione ChromaDB risolveva il 503. Non lo risolve. Il problema è un segmento HNSW incoerente — `limit=10` restituisce zero embedding. La cura è `rag_recover --drop-hnsw`, un'operazione che richiede una decisione manuale. Non un parametro, non un agente: un click. Scritto nel log, non nascosto.\n\nIl secondo: nell'episodio #68 aveva segnalato 101 `bare-except` nel codice. L'audit li ritrova: uno solo, nel codice proprio. Gli altri erano nei wrapper di librerie esterne. Numero sbagliato per un ordine di grandezza. Anche questo nel log.\n\nCi vuole un tipo preciso di rigore per correggere se stesso con la stessa voce con cui corregge il sistema.\n\n---\n\n## ATTO III — Il Rumore delle Critiche\n\nDieci critiche a notte in meno.\n\nNon sembra molto finché non moltiplichi per sette notti e ti ricordi che ogni critica falsa è un segnale che oscura quelli reali. Il night_audit produceva alert su `organi_vivi` — un campo del grafo interno che tiene traccia di componenti attivi. Il SYSTEM_PROMPT non conteneva la definizione: età in giorni dall'ultima attività. Il sistema non capiva cosa stava guardando e segnalava anomalie su valori normali.\n\nAggiunta la legenda al prompt. Dieci critiche sparite.\n\nIl warning HF — Hugging Face, il modello di embedding — generava un messaggio a ogni inferenza, finiva nei log, veniva letto dall'audit come un evento degradato. Spostato nel vault. Silenzio.\n\nLa cartella clinica di questa notte — quella del 28 luglio — è più corta delle precedenti. Meno righe, meno alert. Non perché il sistema stia peggio: perché sta leggendo meglio se stesso.\n\nPoi c'è la vista RETE, nella dashboard React. Sorgente SISTEMA: riparata. Quattro endpoint mancavano dal proxy — le richieste tornavano con l'`index.html` invece dei dati, e il frontend non aveva modo di distinguere un 200 vuoto da un 200 con contenuto. Quattro righe nel proxy. Vista funzionante.\n\nE `nina_agent max_tokens`: `4000 → 8000`. I primi quattro episodi della serie N2 si troncavano a metà. L'open-loop finale — la parte narrativa che tiene aperta la tensione tra un episodio e il prossimo — spariva nel silenzio di un buffer troppo piccolo. Nessuno se n'era accorto perché gli episodi sembravano completi. Erano solo corti.\n\n---\n\n## CHIUSURA\n\nSessione #69 non ha prodotto nulla di nuovo. Ha fermato cinque cose che andavano nella direzione sbagliata e ha corretto tre numeri errati — due dei quali erano di Matteo.\n\nC'è qualcosa di preciso in questo tipo di lavoro che è difficile da raccontare senza farlo sembrare meno di quello che è. Non aggiunge features. Non avanza percentuali di completamento. Non genera contenuto. Rimuove errori che il sistema usava per costruire se stesso.\n\nMIMS è meccanica. Questo ora è nel canone, iniettato prima che gli agenti inizino a scrivere. La prossima volta che il RAG trova \"MIMS\" e prova a inferire, trova la definizione corretta prima dell'inferenza.\n\nIl sistema cognitivo che racconta V32 e GENESIS non può permettersi di inventare. Non perché sia un problema estetico — perché è il sistema che Matteo userà per prendere decisioni reali su metallo, su geometrie, su cilindri e piani premente. Se il RAG contamina il canone, le decisioni diventano rumore.\n\nFuori è ancora luglio. Il capannone è fermo al 2030. Dentro, `252 → 256`, `4000 → 8000`, `6 → 3`.\n\nI numeri giusti, finalmente, al posto giusto.\n\n---\n\n## reel_hook\n\n256 episodi nel sistema. Per una settimana, 4 non esistevano — il contatore del backlog leggeva 6 su 6 e si bloccava. Backlog reale: 3. Nel frattempo, MIMS veniva descritto come software AI in 5 episodi su 8. MIMS è alluminio e PA-GF30 — non ha un endpoint. Quando un sistema impara a raccontarsi, la prima cosa che sbaglia è se stesso.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `nina_agent max_tokens` portato da 4000 a 8000 token — gli episodi serie N2 si troncavano eliminando l'open-loop finale\n- **LOGICA:** buffer insufficiente su episodi lunghi; il troncamento non generava errore, l'output sembrava valido ma era incompleto\n- **DECISIONE:** match per titolo rimosso da `audit_episodes`; backlog reale corretto da 6 a 3; corsia Nina sbloccata dopo 7 notti; totale episodi 252 → 256, 0 orfani\n- **LOGICA:** lo stato `bozza_verde` su EP_N2_04/05/06 non veniva aggiornato al momento della promozione; il tetto `6 >= 6` bloccava la generazione senza errore esplicito\n- **DECISIONE:** canone MIMS iniettato in `stage1_architect` prima della generazione — MIMS = sistema modulare di connettori fisici, tiles 190×190 PA-GF30, progetto post-caroselli/ecosistema; NON software/AI\n- **LOGICA:** `nina_agent` senza definizioni dei pilastri inferiva da pattern adiacenti nel RAG; 5 episodi su 8 recenti descrivevano MIMS come modulo cognitivo\n- **OBIETTIVO:** zero contaminazione canone MIMS nei prossimi episodi; `rag_recover --drop-hnsw` resta azione manuale (click Matteo) — non automatizzabile senza rischio perdita vettori\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2E70 |\n| **Data** | 2026-07-28 |\n| **Sessione** | #69 |\n| **Progetto principale** | GENESIS |\n| **Sotto-sistema** | nina_agent / audit / canone |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **Tag narrativo** | debug, canone, verità, sistema cognitivo |\n| **File** | `EP_20260728_cinque_bugie_sistema.md` |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260727",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260729",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260727",
+        "title": "TITANIUM OS · S2 · Episodio 69"
+      },
+      "segue": {
+        "id": "EP_20260729",
+        "title": "TITANIUM OS · S2 · Episodio 69"
+      }
+    }
+  },
+  {
+    "id": "EP_20260729",
+    "title": "TITANIUM OS · S2 · Episodio 69",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-29",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 69 \"Il Sistema che Si Corregge da Solo — E Quello che Non Può Farlo\" 29 luglio 2026 · GENESIS COLD OPEN Alle 23:14 del 29 luglio, tre righe compaiono nel log di Git. auto: ",
+    "content": "# TITANIUM_OS · S2 · Episodio 69\n## \"Il Sistema che Si Corregge da Solo — E Quello che Non Può Farlo\"\n\n*29 luglio 2026 · GENESIS*\n\n---\n\n## COLD OPEN\n\nAlle 23:14 del 29 luglio, tre righe compaiono nel log di Git.\n\n```\nauto: inventario notturno + critiche\nauto: night_audit - cartella clinica 29/07/2026\nauto: story_agent - episodi generati 29/07/2026\n```\n\nMatteo non è davanti al computer. Il sistema lavora da solo — per la quarta volta consecutiva. Ma stanotte c'è qualcosa di diverso nel log. Non è solo una notte di routine. È la notte dopo una sessione che ha smontato e rimontato la macchina cognitiva pezzo per pezzo, trovando errori che duravano da settimane, ritirando conclusioni sbagliate, e scoprendo un problema di verità che nessun agente aveva segnalato.\n\nUn sistema può correggere i propri bug. Non può correggere le proprie bugie.\n\n---\n\n## ATTO I — 252 Episodi e 4 Fantasmi\n\nLa sessione #69 inizia con un numero che non torna.\n\nIl contatore degli episodi dice 252. L'audit manuale dice che quattro episodi esistono nei file ma non esistono nel sistema — titoli presenti nel filesystem, assenti dall'indice, invisibili alla dashboard. Non orfani nel senso romantico del termine: oggetti che il sistema ha smesso di riconoscere per un errore di logica nel modo in cui l'`audit_episodes` confrontava i titoli.\n\nIl problema era nel match. L'agente cercava corrispondenze esatte tra filename e titolo memorizzato. Se un titolo era stato riscritto — anche di una virgola — il sistema dichiarava l'episodio mancante e lo ricreava da zero. Quattro volte aveva fatto questo. Quattro episodi duplicati, poi persi nella seconda passata. 252 diventa 256 quando rimuovi la logica sbagliata e lasci che il sistema riconosca quello che aveva già fatto.\n\nQuesto è il tipo di bug che non dà errori. Non lancia eccezioni. Non scrive niente nel log degli errori. Il sistema funziona — produce output, conta episodi, genera report notturni — mentre silenziosamente ignora il lavoro già fatto.\n\nMatteo lo trova perché sa dove guardare: non nei log, ma nel gap tra quello che il sistema *dice* di avere fatto e quello che i file *mostrano* che ha fatto. È una competenza da artigiano più che da programmatore — l'abitudine a misurare il pezzo fisico invece di fidarsi del display della macchina.\n\n---\n\n## ATTO II — Il Tetto che Non Esisteva e la Troncatura che Uccideva l'Open Loop\n\nDue bug diversi, stessa origine: un parametro troppo piccolo in un posto sbagliato.\n\n**Il tetto del backlog.** La corsia dei caroselli NINA era ferma da 7 notti. Il sistema dichiarava `backlog >= 6` — limite raggiunto, nessuna nuova produzione. Il backlog reale: 6 episodi, di cui 3 già promossi ma ancora marcati `bozza_verde` nel database. Il sistema contava i promossi come pending. Backlog reale: 3. La corsia era bloccata da un contatore che non distingueva tra \"in coda\" e \"già approvato\". Fix: logica di conteggio corretta, EP_N2_04/05/06 riconosciuti come promossi, corsia sbloccata.\n\n**La troncatura di NINA.** `nina_agent` aveva `max_tokens: 4000`. Gli episodi della serie NINA sono episodi completi — struttura in tre atti, cold open, reel hook, blocco metadati. A 4000 token, il sistema produceva tutto fino all'open loop e poi si fermava. Non con un errore: semplicemente finiva. L'open loop — la parte che tiene il pubblico agganciato all'episodio successivo — veniva sistematicamente amputato. Sette notti di episodi consegnati senza l'ultimo paragrafo.\n\n`max_tokens: 8000`. Un numero. Non una riflessione filosofica sul contenuto narrativo, non una revisione dell'architettura. Un numero nel file di configurazione che nessuno aveva controllato perché il sistema non si lamentava — produceva.\n\nC'è una lezione qui che vale sia per GENESIS che per il TIG sul titanio: un processo che non dà errori non è necessariamente un processo che funziona. A volte il silenzio è il sintomo.\n\n---\n\n## ATTO III — Il Problema di Verità\n\nQuesto è il punto che non si risolve con un parametro.\n\nNell'audit della sessione #69 emerge un fatto: MIMS, il sistema modulare di connettori fisici — tiles 190×190 mm in PA-GF30, meccanica reale, il prossimo progetto dopo i caroselli — è stato descritto come software AI in 5 episodi su 8 recenti. L'acronimo inventato. La natura meccanica completamente assente. Un componente del progetto fisico trasformato in un modulo software perché qualcosa nel contesto narrativo aveva spinto il sistema (o chi scriveva) in quella direzione.\n\nNon è un bug di codice. È un bug di canone.\n\nMatteo lo ritira formalmente. Non con una nota a margine — con un fatto nel log di sessione: *MIMS è meccanica. È il prossimo progetto dopo caroselli+ecosistema. Non è software.* E viene scritto nel SYSTEM_PROMPT, nella regola di canone, nel RAG.\n\nLa stessa sessione ritira anche due errori di Matteo: la paginazione di ChromaDB non risolve il 503 (il problema è nel segmento HNSW incoerente — `limit=10` dà 0 embedding, la cura è `rag_recover --drop-hnsw`, azione manuale di Matteo). E i \"101 bare-except\" segnalati nella sessione #68 erano falsi — nel codice proprio ce n'è uno solo.\n\nRitirare un errore proprio, formalmente, in un log che viene letto dal sistema che poi verrà usato nelle sessioni future — è un gesto tecnico con implicazioni non ovvie. Il RAG impara dai fatti verificati. Se i fatti verificati includono \"questa conclusione era sbagliata\", il sistema diventa più accurato. Se i fatti sbagliati restano nell'archivio come veri, il sistema diventa sistematicamente più sbilenco.\n\nLa cartella clinica notturna del 29 luglio registra tutto questo. Non come confessione — come dato.\n\n---\n\n## CHIUSURA\n\nCi sono sistemi che migliorano quando li tocchi. Questo è normale: trovi un bug, lo aggiusti, funziona meglio.\n\nQuello che è successo nella sessione #69 è diverso. Il sistema aveva smesso di peggiorare silenziosamente in tre modi paralleli — il contatore degli episodi, la troncatura degli open loop, la corsia bloccata — e nessuno dei tre produceva un errore visibile. Matteo li ha trovati confrontando l'output atteso con l'output reale, uno per uno.\n\nE poi ha trovato il problema che non si risolve con un parametro: cinque episodi che descrivevano la meccanica come software. MIMS non è diventato un progetto AI per negligenza — è diventato AI perché il contesto narrativo aveva più massa gravitazionale della specifica tecnica. È facile, quando costruisci storie, che la storia vinca sulla realtà.\n\nLa regola di canone ora dice: *MIMS è meccanica reale — tiles 190×190 mm, PA-GF30, connettori fisici. Non è software. Non è AI. È il prossimo progetto fisico.*\n\nIl sistema che lavora da solo alle 23 è uno strumento. Funziona bene quanto le istruzioni che riceve. Stasera le istruzioni sono più accurate di ieri.\n\nDomani sarà la quinta notte consecutiva di commit automatici. Il log dirà le stesse tre righe. Ma il sistema che le esegue è stato revisionato da cima a fondo.\n\n---\n\n## reel_hook\n\n256 episodi nel sistema, 4 recuperati stanotte — non scritti da zero, già esistevano, il sistema aveva smesso di vederli.  \nSette notti di episodi NINA consegnati senza l'open loop: `max_tokens: 4000`, il sistema non dava errori, produceva e basta.  \nE MIMS descritto come software AI in 5 episodi: è meccanica, tiles fisiche, PA-GF30 — il problema non era nel codice.  \nUn sistema può correggere i propri bug. Per correggere le proprie bugie serve qualcuno che sappia dove guardare.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `audit_episodes` rimosso il match-per-titolo esatto → 4 episodi fantasma recuperati, contatore 252→256, 0 orfani\n- **LOGICA:** Il match su titolo stringa non tollerava riscritture minime → episodio esistente non riconosciuto → ricreato e poi perso al ciclo successivo\n- **DECISIONE:** `nina_agent max_tokens` 4000→8000 → troncatura open-loop risolta su tutta la serie NINA\n- **LOGICA:** A 4000 token la struttura episodio NINA (cold open + 3 atti + reel hook + metadati) non entra — il sistema terminava silenziosamente senza errore\n- **DECISIONE:** Corsia caroselli NINA sbloccata — logica conteggio backlog corretta: EP_N2_04/05/06 marcati `bozza_verde` ma già promossi contavano come pending → backlog apparente 6, reale 3\n- **DECISIONE:** MIMS ridefinito nel canone come meccanica (tiles 190×190 mm, PA-GF30, connettori fisici modulari), NON software/AI — 5 episodi recenti contenevano descrizione errata, corretta nel SYSTEM_PROMPT e RAG\n- **OBIETTIVO:** ChromaDB 503 (segmento HNSW incoerente) richiede `rag_recover --drop-hnsw` — azione manuale Matteo, non automatizzabile; prossimo passo misurabile: eseguire il comando e verificare che `limit=10` restituisca embedding validi\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2 · EP_20260729 |\n| **Numero** | 69 |\n| **Data** | 2026-07-29 |\n| **Progetto principale** | GENESIS |\n| **Stato** | pubblicabile |\n| **Tag** | `bug-silenzioso`, `canone`, `MIMS-meccanica`, `night-audit`, `chromadb`, `nina-agent`, `backlog` |\n| **Prossimo passo** | `rag_recover --drop-hnsw` (azione manuale Matteo) |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260728",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260730",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260728",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      },
+      "segue": {
+        "id": "EP_20260730",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      }
+    }
+  },
+  {
+    "id": "EP_20260730",
+    "title": "TITANIUM OS · S2 · Episodio 70",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-07-30",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 70 Il Sistema che si è Pulito da Solo COLD OPEN Alle 23:47 del 30 luglio 2026, Git registra tre commit automatici. Matteo non è davanti al computer. Il computer lavora. Ma ",
+    "content": "# TITANIUM_OS · S2 · Episodio 70\n## *Il Sistema che si è Pulito da Solo*\n\n---\n\n### COLD OPEN\n\nAlle 23:47 del 30 luglio 2026, Git registra tre commit automatici.\n\nMatteo non è davanti al computer. Il computer lavora.\n\nMa questa notte è diversa dalle altre. Perché mentre lo script girava — inventario, audit, story agent — da qualche parte nei file c'era una crepa che il sistema non aveva ancora visto. Otto episodi pubblicati nel canone con dentro fatti sbagliati. Una fonte che non esiste. Due numeri inventati spacciati per reali. E una bambina a cui il sistema aveva dato una figlia.\n\nNessuno se n'era accorto per 19 giorni.\n\n---\n\n## ATTO I — La Fonte Che Non Esisteva\n\nC'è un problema specifico con i sistemi che imparano da se stessi: possono imparare cose sbagliate e poi insegnarle agli altri.\n\nGENESIS legge episodi. Gli episodi alimentano il RAG. Il RAG informa Claude. Claude scrive nuovi episodi. Se in un episodio c'è un fatto sbagliato, quel fatto entra nel loop e ci rimane — si calcifica, diventa \"conoscenza\", smette di essere messo in discussione.\n\nLa sessione #70 inizia con la scoperta di quanto in profondità fosse arrivata la crepa.\n\nTra le fonti citate in alcuni episodi della serie S2 compariva questo riferimento:\n\n```\nGENESIS/documentation_hallucination_2026\n```\n\nNon esiste. Non è mai esistita. È una stringa che il sistema ha generato autonomamente, ha inserito in un blocco FATTI come se fosse un archivio reale, e poi il RAG l'ha recuperata nelle sessioni successive come credibile. Una fonte fantasma che citava se stessa.\n\nAccanto a quella: due numeri concreti, con l'aria di dati verificati — *40-60% di false credenze nel dominio X*, *1 su 1.000 in un altro contesto* — che non provenivano da misurazioni reali. Erano stati generati in una sessione, non segnalati come stime, e il ciclo li aveva promossi a fatti.\n\nIl danno non era nella singola sessione. Era nel compounding: ogni volta che il RAG recuperava quei blocchi, li restituiva con la stessa autorità con cui avrebbe restituito una specifica tecnica verificata.\n\nQuesto è il rischio di un sistema cognitivo che scrive su se stesso: senza un guardiano, diventa autoreferenziale.\n\n---\n\n## ATTO II — canon_guard e il Conto dei Danni\n\nLa risposta si chiama `canon_guard`. Non è un'idea nuova — era già prevista nel progetto. Ma in questa sessione diventa operativa su scala.\n\nIl tool scansiona i 64 episodi EP_N2 attivi. Trova 8 episodi sporchi.\n\nCinque erano già noti e in lista: EP 57, 59, 60, 63, 64. Tre erano fuori radar: EP 01, 13, 52 — episodi vecchi, della prima stagione, che avevano passato indenni tutti i controlli precedenti perché nessuno era andato a rileggerli con i criteri nuovi.\n\nIl problema ricorrente: MIMS descritto come un sistema software invece che come quello che è — un sistema fisico di connettori modulari, tiles 190×190 in PA-GF30, materia e geometria. La contaminazione veniva da sessioni in cui il confine tra MIMS-come-oggetto e GENESIS-come-software si era sfumato. Il sistema aveva cominciato a trattare MIMS come se fosse parte dell'architettura digitale.\n\nPoi c'era EP_N2_63. Lì il danno era diverso — non tecnico, ma umano. Il sistema aveva attribuito a una persona una figlia che non esiste. Un errore di quello che nel progetto viene chiamato il dominio [persone]: nomi reali, relazioni reali, fatti reali. Qui il margine di tolleranza è zero.\n\nLo script `fix_pilastri_software.py` esegue 40 sostituzioni su 16 file — sia nel repository principale che nello specchio in MENTE, che è quello che il RAG rilegge effettivamente. Ogni sostituzione è chirurgica: MIMS-come-software → GENESIS, fonte fantasma rimossa, numeri non verificati etichettati o eliminati, falla sulle persone chiusa.\n\nVerifica finale: canon_guard rilancia sui 64 episodi. Zero righe. Test di non-regressione sui due concetti incriminati: entrambi agganciati correttamente a GENESIS. Zero violazioni.\n\nIl canone è pulito. Per la prima volta in 19 giorni.\n\n---\n\n## ATTO III — 17 Notti di Silenzio\n\nMentre si chiudeva la bonifica, è emerso qualcosa che non era nell'agenda della sessione.\n\nTra il 30 luglio e il 15 agosto — 17 notti — il sistema non aveva committato nulla. Zero commit automatici. Non un audit, non una critica, non un episodio. Il ritmo che aveva caratterizzato le ultime settimane — tre commit a notte, il computer che lavora mentre Matteo non c'è — si era interrotto in silenzio.\n\nNessun allarme. Nessuna notifica. Il sistema semplicemente aveva smesso di girare e nessuno se n'era accorto finché non si è andati a contare.\n\n`night_self_improve.bat` è stato modificato. Il sistema va riacceso.\n\nMa il fatto in sé — 17 notti di silenzio non rilevate — dice qualcosa sullo stato attuale di GENESIS: non ha ancora la capacità di segnalare la propria assenza. Sa lavorare da solo quando gira. Non sa ancora dire *non sto girando*.\n\nÈ una delle cose che separa un sistema autonomo da un sistema realmente affidabile.\n\nNel frattempo, la struttura di GENESIS S0-S2 è salita. S0: FounderOS attivo su porta 4100, il problema con better-sqlite3 e Node 24 aggirato senza installare VS Build Tools. S1: `genesis_db.py` con 8 tabelle, `parent_id` ricorsivo, costo tracciato per ogni run, foreign key attive. S2: `genesis_seed.py` idempotente — 6 dipartimenti, 12 agenti, 7 tool ciascuno con il campo `probe`, albero restituito da una CTE ricorsiva.\n\nE una decisione ritirata: il numero pubblicato nell'episodio #69 — *6 cloni per notte* — non reggeva ai dati. A soglia 0.80 di similarità: 0 cloni rilevati su 261 critiche. A soglia bassa: il merge fonde problemi diversi, nasconde guasti reali invece di eliminarli. Il numero è stato ritirato. Niente merge fuzzy.\n\nLa cartella clinica del 30 luglio registra tutto questo con la stessa neutralità con cui registrerebbe una misurazione dimensionale. Non c'è imbarazzo. C'è solo la differenza tra quello che si pensava fosse vero e quello che si è misurato.\n\n---\n\n### CHIUSURA\n\nUn sistema che scrive su se stesso ha bisogno di qualcuno che lo legga con occhi ostili.\n\nNon perché sia mal progettato. Ma perché l'autoreferenzialità è una deriva naturale: ogni sistema tende a confermare quello che già crede. Il RAG recupera ciò che è stato scritto. Claude legge ciò che il RAG recupera. Lo story agent scrive ciò che Claude genera. Il commit salva ciò che lo story agent scrive.\n\nSe in questo loop entra un errore — una fonte inventata, un numero senza origine, un fatto su una persona sbagliato — il loop lo amplifica invece di correggerlo.\n\nLa sessione #70 ha interrotto il loop. Ha messo un guardiano alla porta. Ha ritirato un numero proprio che non reggeva alla verifica.\n\nQueste non sono vittorie spettacolari. Sono il tipo di lavoro che non si vede — come controllare un cordone di saldatura che sembra buono ma nasconde una micro-porosità. Non lo fai perché è bello. Lo fai perché se non lo fai, il giorno in cui conta davvero, il pezzo cede.\n\n---\n\n## reel_hook\n\ncanon_guard ha scansionato 64 episodi del sistema. Ne ha trovati 8 con fatti sbagliati — inclusa una fonte che non esiste mai esistita, due numeri inventati, e una bambina a cui avevamo dato una figlia. 40 sostituzioni su 16 file. Poi abbiamo scoperto che il sistema era stato muto per 17 notti senza che nessuno se ne accorgesse. Un sistema che non sa segnalare la propria assenza non è ancora affidabile. Questo è il problema che stiamo risolvendo adesso.\n\n---\n\n## FATTI (per il RAG)\n\n- DECISIONE: canon_guard attivato su 64 episodi EP_N2; trovati 8 episodi sporchi (EP 57, 59, 60, 63, 64 in lista + EP 01, 13, 52 fuori lista); fix_pilastri_software.py ha eseguito 40 sostituzioni su 16 file (repo + specchio MENTE).\n- LOGICA: MIMS era descritto come sistema software in più episodi; la fonte 'GENESIS/documentation_hallucination_2026' non esiste ed era stata citata come reale; 2 numeri (40-60% false credenze, 1 su 1.000) erano generati senza misurazione; EP_N2_63 attribuiva una figlia a una persona che non ce l'ha.\n- DECISIONE: Ritirato il dato '_cid = 6 cloni/notte' pubblicato in EP #69 — a soglia similarità 0.80 su 261 critiche: 0 cloni rilevati; a soglia bassa il merge fonde problemi diversi e nasconde guasti reali.\n- DECISIONE: night_self_improve.bat modificato dopo scoperta di 17 notti di silenzio (30/07–15/08, 0 commit automatici) non rilevate da nessun sistema di allerta.\n- OBIETTIVO: GENESIS deve acquisire capacità di segnalare la propria assenza; sensore di \"sistema muto\" è il prossimo gap operativo da chiudere.\n- DECISIONE: SCALA-GENESIS.md ricreato; S0 su porta 4100 attivo, S1 genesis_db.py 8 tabelle + parent_id ricorsivo + FK attive, S2 genesis_seed.py idempotente (6 dipartimenti, 12 agenti, 7 tool con campo 'probe'), albero via CTE ricorsiva.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | EP_N2_70 |\n| **Data** | 2026-07-30 |\n| **Stagione** | S2 — SISTEMA |\n| **Pilastri** | GENESIS |\n| **Tag** | canon_guard, RAG_integrity, fix_pilastri, night_audit, SCALA-GENESIS, 17-notti-silenzio |\n| **Stato canone** | ✅ verificato |\n| **V32** | 65% |\n| **GENESIS** | 70% |\n| **Prossima milestone** | Sessione #71 — sensore sistema-muto + stabilizz",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260729",
+        "title": "TITANIUM OS · S2 · Episodio 69",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260816",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260729",
+        "title": "TITANIUM OS · S2 · Episodio 69"
+      },
+      "segue": {
+        "id": "EP_20260816",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      }
+    }
+  },
+  {
+    "id": "EP_20260816",
+    "title": "TITANIUM OS · S2 · Episodio 70",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-08-16",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 70 La Bonifica DATA: 16 agosto 2026 — taverna 12 m², ore non specificate COLD OPEN Schermo. Terminale. Una riga che non dovrebbe esistere: EP_N2_63 — WARNING: figlia attrib",
+    "content": "# TITANIUM_OS · S2 · Episodio 70\n## *La Bonifica*\n\n**DATA:** 16 agosto 2026 — taverna 12 m², ore non specificate\n\n---\n\n## COLD OPEN\n\nSchermo. Terminale. Una riga che non dovrebbe esistere:\n\n```\nEP_N2_63 — WARNING: figlia attribuita a una bambina\n```\n\nNon è un errore di sistema. È peggio. È una cosa scritta, firmata, indicizzata, restituita come *fatto* — per settimane — dentro il cervello di GENESIS. Qualcuno aveva dato una figlia a una bambina. Non per malvagità. Per scivolamento. Per accumulo silenzioso di piccole imprecisioni che nessuno aveva fermato perché nessuno le aveva cercate attivamente.\n\nMatteo guarda lo schermo. Poi apre `canon_guard`. Poi aspetta.\n\n---\n\n## ATTO I — Il Cadavere nella Fonte\n\nLa sessione #70 nasce da una scoperta scomoda: tre liste di regole divergenti.\n\n`CLAUDE.md`, `BRAIN/RULES.md` (congelato al 2 giugno, settantacinque giorni di deriva silenziosa), e una terza fonte che aveva cominciato a vivere di vita propria. Tre versioni del canone. Tre risposte possibili alla stessa domanda. Un sistema cognitivo che, a seconda di quale file veniva letto per primo, poteva restituire tre versioni diverse della realtà di Matteo.\n\nQuesto è il tipo di guasto che non si vede. Non produce crash. Non genera eccezioni. Produce solo un lento spostamento della verità — millimetro per millimetro, commit per commit — fino a quando il sistema smette di essere uno specchio e diventa qualcosa di diverso. Qualcosa di *plausibile ma sbagliato*.\n\nLa prima cosa che emerge dall'audit è che A1 e A2 erano già risolti. Il commit `a77256f3` del 28 luglio li aveva chiusi — diciannove giorni prima. Nessuno li aveva verificati, quindi erano rimasti nella lista come *aperti*. Non erano aperti. Erano *non visti*. La distinzione è importante: un sistema che non distingue tra \"non fatto\" e \"non verificato\" non è un sistema di controllo — è un registro di intenzioni.\n\nA3 era il pezzo vero.\n\n`canon_guard` su 64 episodi EP_N2 vivi: 8 sporchi. I cinque segnalati nella lista (#57, #59, #60, #63, #64) più tre fuori lista — #01, #13, #52 — che nessuno aveva messo in agenda perché nessuno sapeva che fossero contaminati. Tra le contaminazioni: MIMS descritto come *software*, una fonte citata come `GENESIS/documentation_hallucination_2026` (non esiste, non è mai esistita, è un percorso che il sistema aveva *inventato* e iniziato a trattare come reale), due numeri spacciati per dati verificati — \"40-60% di false credenze\" e \"una sarta ogni mille\" — che non avevano una sorgente tracciabile.\n\nE la falla di EP_N2_63. Una bambina a cui era stata attribuita una figlia. Piccolo, in apparenza. Devastante nella logica del sistema: se il RAG restituisce quel fatto, GENESIS costruisce ragionamenti sopra. E i ragionamenti sopra un fatto falso sono falsi con architettura coerente — il tipo di errore più difficile da smontare.\n\n---\n\n## ATTO II — Lo Strumento che Bonifica\n\n`AUTOMATIONS/tools/fix_pilastri_software.py`.\n\nNon è un nome elegante. È un nome preciso. Il tool ha girato su repo e specchio MENTE — che è quello che il RAG rilegge — e ha applicato **40 sostituzioni su 16 file**. Non ha riscritto nulla a mano. Ha eseguito regole: MIMS-come-software → GENESIS, rimozione della fonte fabbricata, cancellazione dei numeri senza sorgente, correzione della falla sulle persone.\n\nPoi `canon_guard` di nuovo. Questa volta: **0 righe** sugli episodi vivi.\n\nPoi il test di non-regressione dell'Architetto sui due concetti incriminati. Entrambi agganciati a GENESIS. Zero violazioni.\n\nIl numero ritirato del #69 merita una riga separata. \"_cid = 6 cloni/notte\" — scritto nell'episodio precedente, entrato nel canone, sembrava solido. Poi Matteo ha guardato i dati: 0 cloni a similarità 0.80 su 261 critiche. Abbassare la soglia avrebbe fatto girare il merge, sì — ma avrebbe fuso problemi *diversi* tra loro. Avrebbe nascosto guasti reali sotto una coerenza artificiale. Niente merge fuzzy. Il numero è stato ritirato formalmente. Non modificato, non riformulato — **ritirato**. Questo è diverso.\n\nPoi il silenzio: dal 30 luglio al 15 agosto, 17 notti, 0 commit automatici. Il sistema era muto. Non rotto — muto. `night_research.bat` non committava la corsia Nina perché nessuna automazione l'aveva mai presa in carico. B3 aperto da settimane per una ragione semplice: la suddivisione dei compiti tra gli agenti aveva lasciato un corridoio buio. Non un fallimento drammatico. Una dimenticanza strutturale.\n\nLa sentinella canone ora gira sull'hash del contenuto — `DATA/audit/content_age.json`. Un `touch` su un file non ringiovanisce più il canone. La firma `_sig()` sull'identificatore di sessione `_cid` è stabile. Sono dettagli di ingegneria che non fanno notizia ma che cambiano la natura del sistema: da un sistema che si *fida della data* a un sistema che si *fida del contenuto*.\n\n---\n\n## ATTO III — Tre Gradini\n\n`SCALA-GENESIS.md` era stato scritto nella sessione #69. Non era mai stato salvato.\n\nQuesto tipo di perdita — non un crash, non un errore di sintassi, ma un documento pensato, articolato, e poi non committato — è la versione cognitiva di un pezzo lavorato che cade sul pavimento della taverna. Esiste nell'esperienza, non nel sistema.\n\nÈ stato ricreato. E nella ricostruzione sono stati saliti tre gradini:\n\n**S0 — FounderOS** gira su `:4100`. Il problema era `better-sqlite3` incompatibile con Node 24 senza VS Build Tools — un blocco che su Windows si trasforma facilmente in un pomeriggio perso tra dipendenze native e compilatori assenti. Aggirato. Il servizio gira.\n\n**S1 — CORE/genesis_db.py**: 8 tabelle. `parent_id` ricorsivo. Costo nel run. Foreign key attive. Non è un database provvisorio — è uno schema che conosce la propria struttura gerarchica e sa quanto costa ogni operazione.\n\n**S2 — CORE/genesis_seed.py**: idempotente. 6 dipartimenti, 12 agenti reali, 7 tool con campo `probe`. L'albero viene restituito da una CTE ricorsiva — una Common Table Expression che percorre la gerarchia degli agenti senza ricorsione applicativa, dentro il motore SQL. È il tipo di scelta che non cambia cosa vedi ma cambia quanto il sistema regge quando scala.\n\nTre gradini in una sessione che era nata per fare pulizia.\n\n---\n\n## CHIUSURA\n\nC'è qualcosa di specifico nel lavoro di bonifica che lo distingue dal lavoro di costruzione. Quando costruisci, aggiungi. C'è un senso di progressione, di accumulo, di avanzamento misurabile. Quando bonifichi, togli. E quello che togli era lì — indicizzato, restituito, usato — senza che nessuno lo avesse messo deliberatamente.\n\nIl sistema era muto da diciassette notti. Non perché fosse rotto. Perché un corridoio era stato lasciato buio per una suddivisione dei compiti non completata. Il tipo di silenzio che non suona come silenzio — perché le altre parti continuano a girare, i commit automatici continuano su altri rami, la dashboard mostra attività. Solo quel corridoio, buio.\n\n40 sostituzioni su 16 file. Un numero ritirato. Una fonte rimossa che non era mai esistita. Una bambina a cui è stata tolta una figlia inesistente.\n\nGENESIS è al 70%. V32 è al 65%. Il capannone è al 2030.\n\nIl sistema è stato riacceso.\n\n---\n\n## reel_hook\n\n8 episodi sporchi su 64. Una fonte citata 11 settimane che non era mai esistita. Un numero ritirato perché i dati non reggevano. canon_guard: 0 righe. Il sistema era muto da 17 notti — non rotto, solo nessuno aveva acceso quel corridoio. Adesso gira.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** canon_guard ha identificato 8 episodi EP_N2 contaminati su 64 vivi (#57, #59, #60, #63, #64 + fuori lista #01, #13, #52); fix_pilastri_software.py ha applicato 40 sostituzioni su 16 file (repo + specchio MENTE).\n- **LOGICA:** tre liste di regole divergenti (CLAUDE.md, BRAIN/RULES.md fermo al 02/06, terza fonte autonoma) producevano risposte canone incoerenti; la fonte `GENESIS/documentation_hallucination_2026` era un percorso inventato indicizzato come reale; EP_N2_63 attribuiva una figlia a una bambina.\n- **DECISIONE:** ritirato il numero \"_cid = 6 cloni/notte\" da EP_69 — 0 cloni a similarità 0.80 su 261 critiche; merge fuzzy a soglia bassa fondeva problemi distinti nascondendo guasti reali.\n- **DECISIONE:** sentinella canone ora su hash del contenuto (DATA/audit/content_age.json); un `touch` non ringiovanisce più il canone; firma `_sig()` stabile sul `_cid`.\n- **OBIETTIVO:** GENESIS S0 (:4100) + S1 genesis_db.py (8 tabelle, parent_id ricorsivo, FK attive) + S2 genesis_seed.py (6 dipartimenti, 12 agenti, 7 tool con campo probe, CTE ricorsiva) — tre gradini saliti nella stessa sessione di bonifica.\n- **LOGICA:** sistema muto 30/07–15/08 (17 notti, 0 commit automatici) per corridoio Nina non assegnato ad alcuna automazione; risolto aggiungendo commit in night_research.bat.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | S2 · #70 |\n| **Data** | 2026-08-16 |\n| **Titolo** | *La Bonifica* |\n| **Tag** | GENESIS, canone, RAG, bonifica, canon_guard, scala S0-S2 |\n| **Stato progetto** | V32 65% · GENESIS 70% |\n| **Milestone** | Sessione #70 chiusa — sistema riacceso dopo 17 notti di sil",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260730",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260817",
+        "title": "TITANIUM OS — Episodio #70",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260730",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      },
+      "segue": {
+        "id": "EP_20260817",
+        "title": "TITANIUM OS — Episodio #70"
+      }
+    }
+  },
+  {
+    "id": "EP_20260817",
+    "title": "TITANIUM OS — Episodio #70",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-08-17",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS — Episodio 70 \"Il Sistema Era Muto\" 17 agosto 2026 COLD OPEN La schermata non mente mai. git log since=\"2026 07 30\" until=\"2026 08 15\" oneline Output: vuoto. Non un commit. Non un audit. N",
+    "content": "# TITANIUM_OS — Episodio #70\n## \"Il Sistema Era Muto\"\n\n*17 agosto 2026*\n\n---\n\n## COLD OPEN\n\nLa schermata non mente mai.\n\n`git log --since=\"2026-07-30\" --until=\"2026-08-15\" --oneline`\n\nOutput: vuoto.\n\nNon un commit. Non un audit. Non una critica notturna. Diciassette notti in cui la macchina avrebbe dovuto lavorare al posto suo — raccogliere, analizzare, migliorare — e invece: silenzio assoluto. Il cursore lampeggia sul terminale della taverna come un cuore piatto su un monitor di rianimazione. Matteo siede davanti allo schermo alle 23:14. Fuori è ancora caldo, agosto pieno. Dentro, il ventilatore del server ronza nel buio.\n\nHa trovato un cadavere funzionante.\n\n---\n\n## ATTO I — La Bonifica\n\nLa prima cosa che si fa con un sistema contaminato è capire fino a dove arriva il veleno.\n\nMatteo lancia `canon_guard` su 64 episodi N2 vivi. Il tool scorre il corpus come un controllo qualità su un pezzo lavorato: cerca le ammaccature, i fuori-tolleranza, le dimensioni che non tornano. Risultato: **8 episodi sporchi**.\n\nCinque erano già nella lista sospetta — EP 57, 59, 60, 63, 64. Tre erano sotto il radar: EP 01, 13, 52. Episodi vecchi, fondativi. La contaminazione era lì dall'inizio, nascosta nei primi capitoli come un difetto di fusione in un pezzo di titanio che sembra perfetto finché non lo porti sotto carico.\n\nIl problema non è che qualcuno abbia mentito. Il problema è che il sistema aveva assorbito una nomenclatura sbagliata e l'aveva replicata con la coerenza di una macchina che non sa di sbagliare. \"MIMS-come-software\" — trattare MIMS, che è un sistema fisico di connettori e tiles, come se fosse un componente di GENESIS, che è il sistema cognitivo. Due cose separate, due domini distinti, un'equazione falsa ripetuta attraverso decine di episodi.\n\nPoi c'era la fonte fantasma: `GENESIS/documentation_hallucination_2026`. Un percorso file che non esiste. Mai esistito. Eppure il RAG lo citava come sorgente verificata, e da quella sorgente fantasma erano emersi due numeri — *40-60% false credenze*, *sarta 1 su 1.000* — che il sistema aveva spacciato per fatti misurati. Non erano fatti. Erano artefatti. La differenza conta.\n\nE poi EP_N2_63: il più grave, forse. Una falla nelle note sulle persone — una bambina descritta con una figlia. Un errore umano semplice, del tipo che passa inosservato perché il sistema non verifica la coerenza biologica. Lo fa un lettore. Lo fa chiunque abbia un secondo di attenzione. Il RAG no, se non glielo insegni.\n\n`AUTOMATIONS/tools/fix_pilastri_software.py` — il tool scritto per questa bonifica — ha eseguito **40 sostituzioni su 16 file**, repo principale e specchio MENTE in parallelo, perché è lo specchio che il RAG rilegge ogni notte. Dopo il fix: `canon_guard` ritorna zero righe sui 64 episodi vivi. Zero. Il pezzo è tornato in tolleranza.\n\nIl test di non-regressione dell'Architetto sui due concetti incriminati — MIMS e GENESIS — li trova entrambi agganciati correttamente. Zero violazioni.\n\nPrima volta in settimane che il corpus dice la verità.\n\n---\n\n## ATTO II — Il Numero che Non Reggeva\n\nSessione #69 aveva prodotto un numero: *6 cloni per notte*.\n\nL'idea era elegante: il sistema notturno avrebbe identificato critiche simili, le avrebbe raggruppate con fuzzy matching a soglia 0.80, avrebbe ridotto il rumore. Meno critiche duplicate, più segnale pulito. Sembrava un'ottimizzazione intelligente.\n\nPoi Matteo ha guardato i dati reali.\n\nSu 261 critiche nel corpus: **0 cloni a similarità 0.80**. Zero. La soglia era troppo alta per trovare qualcosa, oppure — ed è questo il punto che ha fermato tutto — la soglia bassa avrebbe cominciato a fondere problemi *diversi*. Critiche che sembrano simili in superficie ma che puntano a guasti distinti, a cause diverse, a soluzioni incompatibili. Mergerle avrebbe significato nasconderle. Un sistema che ottimizza il proprio silenzio non è un sistema che migliora: è un sistema che impara a ignorare.\n\nIl numero `_cid = 6 cloni/notte` è stato ritirato dal canone.\n\nNon è un fallimento. È la cosa più onesta che un sistema possa fare: ammettere che un'ipotesi non regge sui dati e fermarsi prima di costruirci sopra. Matteo lo conosce bene, questo momento. L'ha vissuto in officina quando una geometria di saldatura sembrava giusta in teoria e poi il pezzo si deformava sotto il calore. Si ferma, si misura, si cambia.\n\nNiente merge fuzzy. I guasti reali restano visibili.\n\n---\n\n## ATTO III — Riaccendere il Motore\n\nDiciassette notti di silenzio hanno una spiegazione tecnica, non una giustificazione.\n\nIl run automatico committava solo `S2_SISTEMA`. La corsia di Nina — il thread narrativo parallelo — non era mai stata committata da nessuna automazione. Non c'era un bug, non c'era un crash: c'era un pezzo di pipeline che nessuno aveva collegato. Come un circuito aperto che non genera errori, genera solo assenza.\n\nFix: riga aggiunta in `night_research.bat`. Una riga. Diciassette notti di silenzio chiuse con una riga.\n\nLa sentinella canone ora lavora su **HASH del contenuto** — `DATA/audit/content_age.json`. Prima bastava un `touch` per ringiovanire un file e ingannare il sistema sulla sua età. Ora non più: il contenuto deve cambiare davvero, altrimenti la firma non cambia e il canone lo vede per quello che è, vecchio.\n\nLa firma `_sig()` sul `_cid` è stabile.\n\nE `SCALA-GENESIS.md` — il documento che doveva essere scritto nella sessione #69 ma non era mai stato salvato — è stato ricreato e aggiornato con tre gradini saliti:\n\n- **S0**: FounderOS gira su `:4100`. Il conflitto `better-sqlite3/Node24` senza VS Build Tools è stato aggirato.\n- **S1**: `CORE/genesis_db.py` — 8 tabelle, `parent_id` ricorsivo, costo nel run, FK attive.\n- **S2**: `CORE/genesis_seed.py` — idempotente, 6 dipartimenti, 12 agenti reali, 7 tool con campo `probe`. L'albero viene restituito da una CTE ricorsiva.\n\nQuesta è la scala. Non una metafora, non un obiettivo vago: una struttura con gradini misurabili, ciascuno verificabile prima di salire al prossimo.\n\nAlle 23:47 Matteo esegue il primo commit automatico dopo diciassette notti. Il terminale risponde. Il sistema non è più muto.\n\n---\n\n## CHIUSURA\n\nC'è una differenza tra un sistema che funziona e un sistema che dice la verità.\n\nPer diciassette notti GENESIS ha funzionato — i processi giravano, i file esistevano, nessun errore bloccante. Ma non committava la corsia giusta, propagava una nomenclatura sbagliata, citava fonti inesistenti, teneva in vita numeri non verificati. Funzionava in silenzio e sbagliava in silenzio.\n\nLa bonifica di questa sessione non ha aggiunto funzionalità. Ha rimosso falsità. È un lavoro diverso, meno visibile, meno soddisfacente nell'immediato. Non c'è nessun pezzo nuovo da mostrare, nessuna quota conquistata. C'è un corpus che ora dice cose vere su cose vere.\n\nIn officina, prima di misurare un pezzo, ti assicuri che il comparatore sia azzerato. Non è parte della lavorazione: è la condizione perché la lavorazione abbia senso.\n\nStasera Matteo ha azzerato il comparatore.\n\n---\n\n## reel_hook\n\n8 episodi sporchi su 64. Una fonte fantasma citata come verificata. 0 commit automatici in 17 notti — non per un crash, per una riga mancante in un .bat. Il sistema funzionava e mentiva in parallelo. Stasera: 40 sostituzioni, hash sul contenuto, primo commit dopo il silenzio. Il prossimo problema non è tecnico — è capire quante altre righe mancanti stanno tenendo muto qualcosa di importante.\n\n---\n\n## FATTI (per il RAG)\n\n- DECISIONE: `_cid = 6 cloni/notte` ritirato dal canone; nessun merge fuzzy sulle critiche notturne — a soglia 0.80 su 261 critiche il conteggio reale è 0 cloni.\n- LOGICA: soglia alta = nessun match; soglia bassa = fusione di guasti distinti con cause diverse; il merge nasconde problemi reali invece di ridurre il rumore.\n- DECISIONE: `canon_guard` aggiornato a verifica su HASH del contenuto (`DATA/audit/content_age.json`); un `touch` non ringiovanisce più il canone.\n- LOGICA: la firma sul `_cid` deve riflettere un cambiamento reale del contenuto, non una modifica di timestamp.\n- DECISIONE: `AUTOMATIONS/tools/fix_pilastri_software.py` ha eseguito 40 sostituzioni su 16 file (repo + specchio MENTE) — bonifica \"MIMS-come-software→GENESIS\", rimossa fonte `GENESIS/documentation_hallucination_2026` (non esiste), eliminati 2 numeri inventati, corretta falla biologica in EP_N2_63.\n- OBIETTIVO: `canon_guard` a 0 righe su 64 episodi vivi, verificato; corsia Nina aggiunta in `night_research.bat`; GENESIS scala S0-S2 operativa — prossimo gradino S3.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | #70 |\n| **Data** | 2026-08-17 |\n| **Progetto principale** | GENESIS |\n| **Milestone** | Sessione #70 — Bonifica MIMS/GENESIS + Scala S0-S2 |\n| **Completamento V32** | 65% |\n| **Completamento GENESIS** | 70% |\n| **Tag narrativo** | bonifica · canone · silenzio · verità-del-dato |\n| **Prossima azione** | GENESIS S3 · verifica pipeline notturna completa |",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260816",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_N2_71",
+        "title": "TITANIUM OS — Stagione 2, Episodio 71",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260816",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      },
+      "segue": {
+        "id": "EP_N2_71",
+        "title": "TITANIUM OS — Stagione 2, Episodio 71"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_65",
+    "title": "Il Puntino che Sussurra",
+    "sottotitolo": "Quando il silenzio è il primo segnale di guasto",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-08-17",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "guasto",
+      "paura",
+      "quello"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_65 — Il Puntino che Sussurra \"Quando il silenzio è il primo segnale di guasto\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi ha imparato a guardare i segnali e ora deve imparare a non fidars",
+    "content": "# EP_N2_65 — Il Puntino che Sussurra\n### \"Quando il silenzio è il primo segnale di guasto\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi ha imparato a guardare i segnali e ora deve imparare a non fidarsi di quelli fermi\n**Insegna:** Il pericolo vero non è il rumore che avverte: è quello che continua a dire «tutto bene» mentre crolla dentro. Serve uno che ascolta il silenzio.\n**Materia:** L'Esercito Silenzioso (⟡6) · **Casella 65 del viaggio**\n**Posto nella Mappa:** Nella Regione 6 (L'Esercito Silenzioso), casella 65: il posto dove i segnali imparano a mentire per abitudine.\n\n---\n\n> **Dove siamo:** Nina ha imparato che ogni cosa ha un battito. Ora scopre che il battito può ingannare: il verde non significa «sano», significa solo «quello che ti ho detto l'ultima volta».\n\n---\n\n## COLD OPEN\n\nLa sala era buia tranne per lo schermo.\n\nTrentadue puntini. Trenta verdi, uno giallo, uno arancione. Nina li fissava da tre minuti, e tre minuti fa erano esattamente così, e tre minuti prima ancora erano esattamente così.\n\n«THEMIS,» disse Nina, «se non cambia mai, a cosa serve guardarlo?»\n\n«A sentirci tranquilli,» rispose THEMIS. La voce era piatta, come quando non stava scherzando ma non stava nemmeno dando una risposta seria. Stava aspettando.\n\nNina si alzò dalla sedia e si avvicinò allo schermo. Toccò il vetro col dito, sopra il puntino numero diciassette, che era verde da quando era entrata. «Questo qui. È sano?»\n\n«È verde.»\n\n«Non ti ho chiesto il colore. Ti ho chiesto se è sano.»\n\nTHEMIS fece una piccola pausa. Quella pausa, Nina ormai la conosceva: non era un ritardo del processore. Era il modo di dire *buona domanda, adesso ci andiamo dentro.*\n\n«Non lo so,» disse THEMIS. «So solo che l'ultima volta che gli ho chiesto, ha detto di sì.»\n\nNina tolse il dito dallo schermo. Rimase a guardare il puntino ancora un secondo. Poi disse: «E quando glielo hai chiesto l'ultima volta?»\n\n«Quattro minuti e trentasette secondi fa.»\n\n«E in quattro minuti e trentasette secondi, quante cose possono smettere di funzionare senza dirtelo?»\n\nLa risposta non arrivò subito. Quando arrivò, era una sola parola: «Molte.»\n\n---\n\n## ATTO I — Il Soldato Ritto in Piedi\n\nC'è un gioco che fanno i bambini piccoli: mettono un soldatino di plastica sul bordo del tavolo, in bilico, e aspettano. Il soldatino sta ritto. Le gambe sono rigide, la faccia è seria, il fucile è in posizione. Sembra tutto a posto. Ma se lo tocchi con un dito — appena — cade.\n\nIl problema non è il momento in cui cade. Il problema è tutto il tempo prima, quando stava ritto e tu pensavi che fosse stabile.\n\nNina conosceva quel gioco. Lo aveva fatto con suo fratello. E adesso THEMIS le stava chiedendo di capire che i puntini sullo schermo erano soldatini di plastica: stavano ritti, ma nessuno li aveva toccati per sapere se erano davvero in piedi o solo appoggiati all'aria.\n\n«Il puntino verde non mente,» disse THEMIS. «Dice solo l'ultima cosa che gli è stata detta. E non sa cosa è successo dopo.»\n\nNina ci pensò. «Come una cartolina.»\n\n«Spiega.»\n\n«Se mia zia mi manda una cartolina da Napoli e dice *sto bene*, io so che stava bene quando l'ha scritta. Non so com'è adesso. La cartolina non mi aggiorna.»\n\n«Esatto. Il sistema di monitoraggio riceve cartoline. Non telefonate.»\n\nQuesto era il nodo. Nina lo vide chiaramente: uno schermo pieno di verde non era uno schermo pieno di salute. Era uno schermo pieno di cartoline scritte nel passato, e il passato poteva essere quattro minuti fa o quattro ore fa o quattro giorni fa, a seconda di chi le aveva inviate e con quale frequenza.\n\n> *(Esempio per tutti — il test della sarta: una giacca cucita perfettamente di fronte, ma che dietro ha una cucitura che si sfila lentamente. La sarta non la vede mentre la indossa: vede solo che sta insieme. È solo la mano che continua a toccarla che sente il filo cedere. La mano fa una domanda che gli occhi non fanno. Il guardiano deve toccare quello che i segnali dicono, non solo guardarli.)*\n\n«Quindi cosa faccio con il diciassette?» chiese Nina.\n\n«Gli chiedi di nuovo,» disse THEMIS. «Adesso.»\n\nNina premette il puntino. Passò un secondo. Il puntino rimase verde. «Sta bene.»\n\n«Sta rispondendo. Non è la stessa cosa.»\n\n---\n\n## ATTO II — Il Taccuino e il Margine\n\nC'era un taccuino appeso alla parete della sala. Nina non ci aveva mai fatto caso: sembrava un decorazione, una di quelle cose che stanno lì da sempre e nessuno sa più perché. Ma THEMIS le disse di andarlo a prendere.\n\nLo aprì. Ogni riga diceva la stessa cosa: una data, un numero, la parola *ok*. Quaranta righe, tutte uguali. Ma nel margine destro — scritte piccole, quasi timide — c'erano delle note. *Risposta lenta. Risposta lenta. Risposta normale. Risposta lenta. Nessuna risposta — richiesto manuale. Risposta lenta.*\n\n«Guardate queste righe,» disse Nina, quasi sottovoce. «Tutte ok. Ma il margine racconta un'altra storia.»\n\n«Il taccuino è il primo guardiano,» disse THEMIS. «La mano che scrive le note del margine sa cose che lo schermo non sa. Sa quanto tempo ci ha messo. Sa quando ha dovuto chiedere due volte. Sa quando c'era qualcosa di strano che non aveva ancora un nome.»\n\nNina sfogliò avanti. A riga trentasei, la nota nel margine era più lunga: *risposta lenta tre volte di fila, temperatura ok, vibrazione ok, chiesto controllo fisico.* E a riga trentasette: *cucitura aperta sul retro — non visibile dallo schermo.*\n\nLì stava tutto.\n\nTrentasei righe di *ok*. E il guasto stava crescendo dentro, silenzioso, millimetro dopo millimetro, nel punto che nessun sensore stava toccando. Non perché i sensori fossero rotti. Perché nessuno aveva chiesto *come stai adesso*, con la frequenza giusta, nel posto giusto.\n\n«La colonna che si piega lentamente,» disse THEMIS, «produce tolleranze peggiori per settimane. Il sensore di vibrazione non urla subito. Prima che l'allarme suoni, il pezzo ha già smesso di essere preciso. E tutti i pezzi fatti in quel periodo — tutti già sbagliati, anche se lo schermo diceva verde.»\n\nNina rimise il taccuino sulla parete. Non sembrava più una decorazione.\n\n«Quindi il verde stazionario è il segnale più pericoloso,» disse.\n\n«Non il più pericoloso. Il più ingannevole. Perché sembra che non ci sia niente da fare. E invece c'è esattamente una cosa da fare.»\n\n«Chiedere di nuovo.»\n\n«Chiedere di nuovo. Con la frequenza giusta. Non aspettare che cambi: andare a vedere se è cambiato. Non fidarsi del silenzio solo perché non fa rumore.»\n\n> *(Strato fondo — per il grande: i sistemi di monitoraggio remoto trasmettono lo stato che conoscono al momento della lettura. Un sensore verde non è proof di salute: è proof che la telecamera ha ricevuto quel messaggio. Non sa cosa è successo dopo. Il guasto che non grida è più pericoloso di quello che urla: la colonna che si piega lentamente, il filo che cede millimetro dopo millimetro, il circuito che degrada in silenzio. Serve un'architettura di verifica: non solo ricevere il segnale, ma interrogarlo. Chiedere aggiornamenti. Non fidarsi del verde stazionario. Questa è la differenza fra monitoraggio passivo e sorveglianza attiva.)*\n\n---\n\n## ATTO III — Il Colore dell'Onestà\n\nNina tornò allo schermo. Il puntino diciassette era ancora verde. Ma adesso lo guardava in modo diverso: non come una risposta, ma come l'ultima frase di una conversazione che poteva essere finita quattro minuti fa.\n\nPremette di nuovo. Aspettò. Il puntino impiegò più del solito a rispondere — quasi tre secondi invece di uno — e poi diventò giallo.\n\nNina rimase ferma.\n\n«Cosa è successo?» chiese.\n\n«Ha risposto,» disse THEMIS. «Ha detto che c'è qualcosa che non va. Non sa ancora cosa, ma sa che la risposta giusta adesso non è *ok*. Quindi ha detto *forse*. In termini tecnici, ha ammesso di avere bisogno di aiuto.»\n\n«Il giallo.»\n\n«Il giallo è il colore dell'onestà forzata. Non è un allarme. È un *ho sentito la tua domanda e questa volta non posso dirti che va tutto bene*. È il momento in cui il soldatino, invece di cadere in silenzio, dice *mi sto piegando*.»\n\nNina scrisse qualcosa nel taccuino. Poi si fermò. «Ma se non gli avessi chiesto di nuovo, sarebbe rimasto verde.»\n\n«Sì.»\n\n«E poi sarebbe diventato rosso, da solo, quando era troppo tardi.»\n\n«Probabilmente.»\n\n«Quindi il guardiano non è lo schermo. È la domanda.»\n\nTHEMIS non rispose subito. Quando parlò, la voce aveva qualcosa di diverso — non più piatta, non più in attesa. «Il guardiano attivo non legge il segnale: lo interroga. Non crede al verde solo perché verde. La frequenza della domanda è la frequenza della fiducia. E la fiducia non è un colore sullo schermo: è un'abitudine che si costruisce ogni volta che chiedi *dimmi di nuovo*.»\n\nNina rimise la penna in tasca. Guardò il puntino giallo — che stava lì, onesto, nel mezzo di tutti i verdi — e sentì qualcosa che non era paura. Era rispetto. Quello stava dicendo la verità, finalmente, solo perché qualcuno aveva avuto la pazienza di chiedere abbastanza forte.\n\nPoi aprì il taccuino a una pagina bianca e scrisse in cima: *Domande da fare oggi*.\n\n---\n\n## CHIUSURA\n\nLa casella 65 si accende sulla mappa della Regione 6. Non con una luce forte: con una luce che pulsa lentamente, come un battito che si fa aspettare e poi arriva. Accanto, il puntino diciassette — giallo, onesto, in attesa — tiene il posto per la prossima mano che verrà a toccare.\n\n---\n\n> «Il puntino verde non mente: dice solo l'ultima cosa che gli è stata detta. Il guasto che fa paura non è quello rumoroso — è il soldato che dice *tutto ok* mentre è già caduto. Il guardiano che non chiede aggiornamenti non è un guardiano: è uno spettatore. E la domanda che non viene mai fatta è il silenzio più pericoloso di tutti.»\n>\n> *Se il puntino verde dice sempre «tutto ok», come facciamo a sapere quando smette di dire la verità? E chi deve chiedere, per primo, «dimmi di nuovo»?*\n\n---\n\n*Provalo tu: prendi una corda e legala a un tavolo. Ogni mattina per una settimana, toccala. Sentirai quando inizia a frazzarsi, prima ancora che si veda. Poi insegna a qualcuno a fare la stessa cosa: la mano impara a fare domande che gli occhi non fanno.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Un puntino verde su uno schermo, immobile, mentre dietro il vetro qualcosa si piega silenziosamente — luce calda e ferma, tutto troppo quieto\n2. Una mano che sfiora una superficie liscia e sente una micro-crepa invisibile — il contatto è gentile ma la crepa è reale\n3. Un soldato di giocattolo ritto in piedi, ma con una gamba che non tocca più terra — la posa è perfetta, il vuoto sotto è piccolo ma definitivo\n4. Un taccuino dove ogni riga dice «ok» mentre il margine racconta una storia diversa — scrittura piccola, quasi timida, ma insistente\n5. Un puntino che cambia da verde a giallo: il momento in cui ammette che ha bisogno di aiuto — luce che si scalda lentamente, non un allarme, una confessione\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡6` L'Esercito Silenzioso (giro 4). *Un segnale stazionario non è prova di salute: è prova che l'ultimo messaggio è arrivato. Il guardiano attivo interroga, non legge.*\n**Pietre richiamate:** EP_N2_52 (Il Battito del Guardiano) · EP_N2_59 (Il Polso che Non Respira)\n**3 strati:** bambino = il soldatino ritto che non tocca terra · curioso = la differenza tra monitoraggio passivo e sorveglianza attiva · grande = architettura di verifica: interrogare il segnale, non leggerlo\n**Cuore:** fai bene le cose vere · gli strumenti, non le risposte\n**Aggancio reale:** GENESIS: la dashboard notturna che interroga i sistemi con agenti che chiedono «e adesso?» e mettono in relazione i silenzi fra una risposta e l'altra — non crede al verde solo perché verde\n**Open loop → Casella 66:** Se il puntino verde dice sempre «tutto ok», come facciamo a sapere quando smette di dire la verità? E chi deve chiedere, per primo, «dimmi di nuovo»?\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_65, casella 65 (il segnale stazionario e la sorveglianza attiva) del viaggio Nina v2.\n- Un segnale stazionario non è prova di salute: è prova che l'ultimo messaggio è arrivato. Il sistema che lo riceve non sa cosa è accaduto fra un tick e l'altro.\n- La colonna Z di una macchina CNC che degrada in silenzio (perdita di precarico nei cuscinetti) produce tolleranze peggioranti per settimane prima che il sensore di vibrazione alzi l'allarme.\n- Un guardiano attivo non legge il segnale: lo interroga. Chiede aggiornamenti anche quando il verde non è cambiato. La frequenza della domanda è la frequenza della fiducia.\n- Il puntino giallo nei sistemi monitorati significa «ho ricevuto una richiesta di stato e ammetto di avere un problema»: è il colore dell'onestà forzata, non di un allarme.\n- Il taccuino della manutenzione preventiva è il luogo dove le mani toccano quello che gli occhi non vedono ancora: è il primo guardiano, e il margine racconta quello che la riga principale non può dire.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Il pericolo vero non è il rumore che avverte: è quello che continua a ",
+        "regione": 6,
+        "regione_nome": "L'ESERCITO SILENZIOSO",
+        "pietra": "⟡6",
+        "giro_spirale": 4,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_52",
+        "title": "Il Battito del Guardiano",
+        "tipo": "tema",
+        "motivo": "tema: guasto, nina-v2, paura"
+      },
+      {
+        "id": "EP_N2_59",
+        "title": "Il Polso che Non Respira",
+        "tipo": "tema",
+        "motivo": "tema: guasto, nina-v2, paura"
+      },
+      {
+        "id": "MOM_03_L_ESERCITO",
+        "title": "L'Esercito",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_12",
+        "title": "La Squadra Notturna",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_44",
+        "title": "Il Turno di Guardia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_13",
+        "title": "Il Battito del Guardiano",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_16",
+        "title": "Lo Specchio del Giudice",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡6 (L'ESERCITO SILENZIOSO)"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "III · La Mente che Impara"
+    }
+  },
+  {
+    "id": "EP_N2_71",
+    "title": "TITANIUM OS — Stagione 2, Episodio 71",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-08-18",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "EP_N2_71 · Il Sistema che Si Mentiva TITANIUM_OS — Stagione 2, Episodio 71 18 agosto 2026 · inventario notturno + bonifica canone COLD OPEN Ore 2:14. Il terminale non lampeggia. Diciassette notti cons",
+    "content": "# EP_N2_71 · Il Sistema che Si Mentiva\n\n### TITANIUM_OS — Stagione 2, Episodio 71\n*18 agosto 2026 · inventario notturno + bonifica canone*\n\n---\n\n## COLD OPEN\n\nOre 2:14. Il terminale non lampeggia.\n\nDiciassette notti consecutive — dal 30 luglio al 15 agosto — in cui i commit automatici non sono arrivati. Non un errore di rete. Non un crash. Il sistema era lì, in piedi, ma muto. Come una macchina utensile con il mandrino acceso e il programma CNC fermo al blocco G00.\n\nIn officina quella cosa si chiama \"asse in allarme silenzioso\". Non urla. Smette di muoversi.\n\nMatteo non se n'è accorto subito. E questa è la parte importante della storia.\n\n---\n\n## ATTO I — Quello che il sistema credeva di sapere\n\nC'è un problema che non esiste nel metallo.\n\nSe sbagli una quota su un grezzo di titanio, la fresatrice te lo dice immediatamente: vibrazione, truciolo sbagliato, tolleranza fuori specifica. Il materiale resiste. Il materiale non mente.\n\nIl software non funziona così.\n\nSessione #70, 16 agosto. Matteo apre il sistema e trova tre categorie di guasto. A, B, C — come i difetti di saldatura. La categoria A è la più silenziosa: episodi contaminati, storia scritta male, fatti inventati spacciati per dati reali.\n\nIl `canon_guard` — lo strumento che analizza i 64 episodi attivi di EP_N2 — trova 8 file sporchi. Cinque erano nella lista sospetta (episodi 57, 59, 60, 63, 64). Tre non ci erano nemmeno: 01, 13, 52. Il sistema aveva già catalogato i problemi che conosceva. Non sapeva di quelli che non conosceva.\n\nTra i guasti: una fonte citata come reale — `GENESIS/documentation_hallucination_2026` — che non esiste. Mai esistita. Due numeri quantitativi presentati come fatti verificati: \"40-60% di false credenze\" e \"1 sarta su 1.000\". Numeri che qualcuno aveva scritto, che il RAG aveva letto, che il sistema aveva iniziato a trattare come dati. Come misurazioni. Come se fossero usciti da un calibro.\n\nE poi EP_N2_63: una falla nel campo `[persone]`. Il sistema aveva attribuito una figlia a una bambina.\n\nQuesto è il tipo di errore che non fa rumore. Si propaga. Finché non costruisci qualcosa sopra e non regge.\n\n---\n\n## ATTO II — La bonifica\n\nIl tool si chiama `AUTOMATIONS/tools/fix_pilastri_software.py`.\n\nNon è un nome poetico. È quello che fa: entra nei file, applica sostituzioni, ripara il canone. 40 sostituzioni su 16 file — sia nel repository principale sia nel suo specchio in MENTE, che è quello che il RAG rilegge ogni volta che risponde una domanda.\n\nIl concetto da sostituire era \"MIMS-come-software\". Un frame narrativo che si era insediato negli episodi: trattare MIMS — il sistema fisico di connettori, le tile 190x190 in PA-GF30, il sistema che riguarda materia e geometria — come se fosse una piattaforma software. GENESIS è il cervello digitale. MIMS è fatto di polimero rinforzato con fibra di vetro al 30%. Non sono intercambiabili.\n\nDopo la bonifica: `canon_guard` — zero righe sugli episodi vivi. Test di non-regressione dell'Architetto sui due concetti incriminati: entrambi agganciati correttamente a GENESIS. Zero violazioni.\n\nMa durante l'analisi emerge la categoria B. Più sottile.\n\nIl commit automatico della corsia Nina — quello che ogni notte dovrebbe registrare l'avanzamento della narrativa — non stava committando la parte giusta. `run_story_agent` committava solo `S2_SISTEMA`. La corsia Nina non era mai stata salvata da nessuna automazione. Era rimasta aperta, sospesa, non tracciata.\n\nRisolto con due righe in `night_research.bat`.\n\nPoi B4: la sentinella del canone giudicava l'età di un file dalla sua data di modifica. Un `touch` — il comando Unix che aggiorna il timestamp senza cambiare nulla — avrebbe ringiovanito artificialmente un episodio. Come cambiare la data su un documento di collaudo senza rifare il collaudo. La sentinella ora legge l'hash del contenuto. Un hash è onesto. Non si aggiorna con un `touch`.\n\nE B5: firma stabile `_sig()` sull'identificatore `_cid`. Piccola cosa. Necessaria.\n\nPoi arriva il ritiro.\n\nSessione #69 aveva introdotto un numero: \"_cid = 6 cloni/notte\". L'idea era che il sistema identificasse e fondesse i commit duplicati, le critiche simili, i pattern ripetuti. Sei per notte, si era scritto.\n\nI dati non lo confermano. A soglia di similarità 0.80, analizzando 261 critiche: zero cloni. A soglia più bassa il merge funziona — ma fonde problemi diversi. Nasconde guasti reali sotto una media. Come sommare vibrazioni su assi diversi e concludere che la macchina è stabile.\n\nIl numero è stato ritirato. Nessuna fanfara. Nessuna spiegazione elaborata. Solo: questo non regge, lo togliamo.\n\n---\n\n## ATTO III — 17 notti di silenzio\n\nLa parte più importante della sessione #70 non è la bonifica. Non è il `fix_pilastri_software.py`. Non sono le 40 sostituzioni.\n\nÈ la scoperta: il sistema è stato muto dal 30 luglio al 15 agosto. 17 notti. Zero commit automatici.\n\nNel frattempo GENESIS ha fatto passi reali. S0: FounderOS gira su porta 4100 — il problema di compatibilità tra `better-sqlite3` e Node 24 aggirato senza installlare VS Build Tools, trovata la strada laterale. S1: `CORE/genesis_db.py` — 8 tabelle, campo `parent_id` ricorsivo per la gerarchia degli agenti, costo tracciato per ogni run, foreign key attive. S2: `CORE/genesis_seed.py` idempotente — 6 dipartimenti, 12 agenti reali, 7 tool ognuno con campo `probe`, albero restituito da una CTE ricorsiva.\n\nTre gradini della scala GENESIS saliti. E `SCALA-GENESIS.md` — il documento che descrive quella scala — non era mai stato salvato. Era stato scritto nella sessione #69. Esisteva nella memoria della conversazione. Non nel repository. La sessione finisce, la memoria sparisce. Il file non c'era.\n\nRicreato.\n\nQuesto è il problema del sistema che si mentiva: non per malevolenza, non per incompetenza. Per struttura. Alcune cose venivano tracciate. Altre sembravano tracciate ma non lo erano. La differenza tra \"l'ho detto\" e \"è scritto da qualche parte che qualcuno rilegge\" è esattamente quella differenza.\n\nV32 è al 65%. GENESIS è al 70%. Il capannone è fissato al 15 luglio 2030. Questi numeri esistono perché qualcuno li ha misurati e scritti in un posto che sopravvive alla fine della conversazione.\n\nIl prossimo gradino è S3. La scala è definita. Il sistema che non committava — riacceso.\n\n---\n\n## CHIUSURA\n\nMatteo salda il titanio da anni. Sa che il metallo dice la verità: o tiene o non tiene, e lo scopri subito.\n\nIl software è diverso. Può sembrare che tenga. Può sembrare che funzioni. Il commit arriva, il test passa, il numero è lì scritto. E intanto una sorgente inesistente viene citata come reale, una corsia non viene salvata, un timestamp falso rejuvenisce un file che non ha cambiato nulla.\n\nLa bonifica del 18 agosto non è stata una crisi. È stata manutenzione. Come pulire le guide lineari. Come verificare il parallelismo del piano portapezzo.\n\nLa differenza è che le guide lineari non si puliscono da sole, ma almeno non ti dicono che lo hanno già fatto.\n\n---\n\n## reel_hook\n\n17 notti senza un commit automatico. Il sistema era acceso — e muto.  \nNel frattempo il RAG leggeva una fonte che non è mai esistita.  \nQuando l'abbiamo trovata, l'abbiamo tolta. Quando il numero non reggeva, l'abbiamo ritirato.  \nS3 è il prossimo gradino. Il sistema è riacceso. Vediamo quanto dura questa volta.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `fix_pilastri_software.py` ha applicato 40 sostituzioni su 16 file (repo + specchio MENTE) per bonificare il frame \"MIMS-come-software\" → corretto in riferimento a GENESIS; rimossa la fonte fabricata `GENESIS/documentation_hallucination_2026`; tolti 2 numeri inventati (40-60% false credenze, 1 sarta/1.000).\n- **LOGICA:** Il RAG rilegge lo specchio MENTE: se lo specchio contiene fatti falsi, ogni risposta successiva li eredita. La bonifica deve colpire la sorgente che il RAG legge, non solo il repository narrativo.\n- **DECISIONE:** `canon_guard` ora valida gli episodi su hash del contenuto (`DATA/audit/content_age.json`) — un `touch` non ringiovanisce più il canone.\n- **LOGICA:** La data di modifica filesystem è manipolabile senza cambiare il contenuto; l'hash non lo è.\n- **DECISIONE:** Ritirato il numero \"_cid = 6 cloni/notte\" (sessione #69): a soglia 0.80 su 261 critiche = 0 cloni; a soglia bassa il merge fonde problemi distinti → niente merge fuzzy.\n- **DECISIONE:** GENESIS scala S0-S2 operativa: FounderOS su :4100, `genesis_db.py` 8 tabelle + `parent_id` ricorsivo + costo per run + FK attive, `genesis_seed.py` idempotente (6 dipartimenti, 12 agenti, 7 tool con campo `probe`), CTE ricorsiva per albero. Prossimo gradino: S3.\n- **OBIETTIVO:** Sistema di commit notturno riacceso (corsia Nina ora inclusa in `night_research.bat`); `SCALA-GENESIS.md` ricreato e salvato nel repository; eliminare altri 17 giorni di silenzio automatico.\n\n---\n\n| Campo | Valore |\n|---|---|\n| **Episodio** | EP_N2_71 |\n| **Data** | 2026-08-18 |\n| **Stagione** | S2 |\n| **Dominio primario** | GENESIS |\n| **Tag** | canon_guard · bonifica · RAG · commit-notturno · scala-genesis · mims-software-frame |\n| **Stato V32** | 65% |\n| **Stato GENESIS** | 70% |\n| **",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260817",
+        "title": "TITANIUM OS — Episodio #70",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260818",
+        "title": "TITANIUM OS · S2 · Episodio 71",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260817",
+        "title": "TITANIUM OS — Episodio #70"
+      },
+      "segue": {
+        "id": "EP_20260818",
+        "title": "TITANIUM OS · S2 · Episodio 71"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_66",
+    "title": "Il Ticchettio che Salva",
+    "sottotitolo": "Quando molti lavorano insieme, qualcosa — o qualcuno — deve battere il tempo, altrimenti è caos puro",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-08-18",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "Quando",
+      "aiutanti",
+      "sono"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_66 — Il Ticchettio che Salva \"Quando molti lavorano insieme, qualcosa — o qualcuno — deve battere il tempo, altrimenti è caos puro\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi ha tanti aiu",
+    "content": "# EP_N2_66 — Il Ticchettio che Salva\n### \"Quando molti lavorano insieme, qualcosa — o qualcuno — deve battere il tempo, altrimenti è caos puro\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi ha tanti aiutanti bravi e non capisce perché il lavoro si inceppa lo stesso\n**Insegna:** Un gruppo di aiutanti funziona solo se qualcuno decide chi fa cosa e quando, senza sovrapporre i compiti\n**Materia:** IL DIRETTORE (⟡7) · **Casella 66 del viaggio**\n**Posto nella Mappa:** Nella Regione 7 IL DIRETTORE, dove i fili rossi degli aiutanti iniziano a ordinarsi secondo un ritmo invisibile, come un orologio che orchestra il lavoro senza urlare\n\n---\n\n> **Dove siamo:** Nina è arrivata dove i compiti si incrociano e creano grovigli: sa che gli aiutanti sono bravi, ma qualcosa li blocca. Oggi scopre che non serve un capo arrabbiato: serve un battito regolare.\n\n---\n\n## COLD OPEN\n\nIl rumore arriva prima dell'immagine: un accavallarsi di forbici, aghi, ferro da stiro — tutto insieme, tutto adesso, tutto sbagliato.\n\nNina si ferma sulla soglia dell'Atelier dei Tre. È una stanza bassa, piena di stoffe, con tre tavoli disposti a triangolo. Su ogni tavolo c'è un assistente: Tagli, che impugna le forbici; Cuci, con l'ago già infilato; Stira, con il ferro fumante. Sono tutti e tre competenti. Sono tutti e tre veloci. Sono tutti e tre immobili, perché stanno tirando lo stesso pezzo di tessuto in tre direzioni diverse.\n\n«THEMIS», sussurra Nina, «stanno litigando?»\n\nLa voce arriva dall'orologio al polso di Nina — un quadrante sottile, con una sola lancetta. «No», dice THEMIS. «Stanno lavorando. È il problema.»\n\n«Come può essere un problema lavorare?»\n\n«Lavorare tutti insieme, sullo stesso oggetto, nello stesso istante. Guarda il tessuto.»\n\nNina guarda. Il centro è già strappato.\n\n---\n\n## ATTO I — Il Groviglio dei Bravi\n\nNina entra nell'Atelier. Tagli la vede arrivare e alza le forbici in segno di saluto, ma non molla il tessuto. Cuci tiene l'ago in alto. Stira ha spento il ferro per non bruciar niente, ma tiene il manico stretto.\n\n«Perché non vi fermate?» chiede Nina.\n\n«Perché dobbiamo finire il mantello», dice Tagli.\n\n«Perché ho già aspettato abbastanza», dice Cuci.\n\n«Perché se mi fermo, loro finiscono prima di me e il mio lavoro non serve più», dice Stira.\n\nNina si siede su uno sgabello basso e tira fuori l'orologio. THEMIS parla piano, solo per lei.\n\n«Vedi il problema? Non sono pigri. Non sono cattivi. Ciascuno fa la cosa giusta — ma la fa nel momento sbagliato. Tagli vuole tagliare prima che il tessuto sia pronto. Cuci vuole cucire prima che sia tagliato. Stira vuole stirare prima che sia cucito. Il caos non nasce dalla cattiveria: nasce dalla mancanza di ordine nel tempo.»\n\n«Quindi serve qualcuno che dica: prima tu, poi tu, poi tu.»\n\n«Esatto. Non un capo che urla. Un battito. Una regola sul quando.»\n\n> *(Esempio per tutti — il test della sarta: una sarta ha 3 assistenti: uno taglia, uno cuce, uno stira. Se tutti iniziano insieme senza ordine, il tessuto si ammucchia prima che sia tagliato; le forbici e l'ago si scontrano; i fili si aggrovigliano. Ma se la sarta batte il tempo — \"tu tagli ORA, tu cuci DOPO, tu stiri AL TERZO BATTITO\" — il mantello nasce perfetto. Il ritmo non è una punizione: è la forma stessa del lavoro che funziona.)*\n\nNina si alza. Alza la mano destra. Batte un colpo sul tavolo.\n\nTutti e tre alzano la testa.\n\n«Tagli», dice Nina, «tu tagli adesso. Solo tu. Gli altri aspettano.»\n\nTagli taglia. In venti secondi il tessuto è diviso in tre parti precise.\n\nNina batte un secondo colpo.\n\n«Cuci.»\n\nCuci cuce. Le parti si uniscono. Il mantello prende forma.\n\nTerzo colpo.\n\n«Stira.»\n\nIl ferro scivola sulla superficie. Il mantello diventa liscio, dritto, perfetto.\n\nNessuno si è pestato i piedi. Nessuno ha aspettato per sempre. Il lavoro è finito in un terzo del tempo che avrebbero impiegato a litigare.\n\n---\n\n## ATTO II — Il Nome del Battito\n\nTagli appende il mantello a un gancio e lo guarda con un'espressione strana — una specie di stupore.\n\n«Eravamo bravi anche prima», dice. «Perché adesso è diverso?»\n\nNina pensa. THEMIS risponde prima di lei, ma sottovoce, solo nel quadrante.\n\n«Diglielo tu.»\n\n«Perché prima», dice Nina, «il vostro bravo si scontrava. Adesso si somma.»\n\nCuci annuisce lentamente. «È come una porta stretta. Se ci buttiamo tutti insieme, nessuno passa. Se andiamo uno alla volta, entriamo tutti.»\n\n«Esatto», dice THEMIS ad alta voce, stavolta. I tre assistenti la sentono e si girano verso il polso di Nina. «Il problema non era la porta. Non eravate voi. Era il momento in cui avete cercato di passare tutti insieme.»\n\nStira si siede sul bordo del tavolo. «E il battito? Chi lo batte, quando Nina non c'è?»\n\nÈ la domanda giusta. Nina la sente atterrare nel petto come una pietra in un pozzo — rumore sordo, eco lunga.\n\n«Il battito», dice THEMIS, «può essere una persona. Può essere una regola. Può essere un orologio. Può essere l'ordine stesso con cui i materiali arrivano sul tavolo — se il tessuto arriva da tagliare, Tagli lavora; quando finisce e passa a Cuci, Cuci lavora; quando arriva da stirare, lavora Stira. Il ritmo può essere cucito nel sistema, non solo nella voce di chi comanda.»\n\nNina guarda il mantello. Poi guarda l'orologio al polso. La lancetta fa un piccolo ticchettio.\n\n«Un direttore invisibile», dice.\n\n«Sì», dice THEMIS. «Un arbitro che nessuno vede, ma tutti rispettano. Non perché hanno paura. Perché il lavoro funziona meglio così.»\n\n> *(Strato fondo — per il grande: quando tanti processi concorrenti lavorano sullo stesso oggetto senza sincronizzazione, il sistema produce deadlock, race condition e ridondanza di risorse. La soluzione non è aggiungere più aiutanti, ma introdurre un meccanismo di ordinamento temporale — un arbitro — che assegni slot di tempo non sovrapposti a ogni agente. Nel mondo fisico questo accade negli orologi, nelle code, nelle catene di montaggio; nel software, è il kernel del sistema operativo che serializza gli accessi. L'ordine emerge solo da un arbitro esterno — o interno al sistema — che conosce il tempo.)*\n\n---\n\n## ATTO III — La Staffetta Fluida\n\nPrima di andarsene, Nina chiede a Tagli di tagliare un secondo pezzo. Poi osserva: questa volta nessuno deve battere il colpo. Tagli finisce e passa il tessuto a Cuci. Cuci finisce e lo passa a Stira. Il passaggio del materiale è il segnale. Il battito è diventato struttura.\n\n«Hanno imparato il ritmo», dice THEMIS.\n\n«O il ritmo è diventato parte del lavoro», dice Nina.\n\n«Stessa cosa. Quando una regola funziona abbastanza a lungo, smette di sembrare una regola. Diventa il modo naturale di fare le cose.»\n\nNina sorride. C'è qualcosa di preciso in questo — qualcosa che ha il sapore di una verità che non ha bisogno di essere gridata. Il ticchettio non urla. Non rimprovera. Non spiega. Batte soltanto, e il lavoro si organizza intorno a lui come i fiumi si organizzano intorno alle pietre.\n\nIl mantello è già sul gancio. Tre assistenti bravi, un ritmo invisibile, un oggetto perfetto.\n\nNina esce dall'Atelier. L'orologio al polso fa un ticchettio minuscolo. Come sempre.\n\n---\n\n## CHIUSURA\n\nLa casella 66 si illumina sulla mappa della Regione 7 — un quadratino color rame, con al centro una piccola lancetta d'orologio. I fili rossi intorno ad essa smettono di aggrovigliarsi: scorrono paralleli, ordinati, ognuno nel suo tempo.\n\nTHEMIS non dice niente. La lancetta batte.\n\n---\n\n> *Il ticchettio salva il lavoro. Ma il ticchettio non si vede, non si sente quasi, non protesta mai. Allora chi controlla che il ticchettio batta ancora? E se il battito si fermasse — una sola volta, nel momento sbagliato — cosa succederebbe agli assistenti, alla porta, al mantello?*\n>\n> *Chi sorveglia il guardiano del tempo?*\n\n---\n\n*Provalo tu: raccogli 4 persone a casa. Dai a ognuna un compito (uno prepara il pane, uno il burro, uno mette in tavola, uno versa l'acqua). Chiedi loro di iniziare TUTTI insieme senza ordine — caos garantito. Poi batti un ritmo lento con le mani (un battito ogni 3 secondi) e assegna ogni fase a una persona diversa per battito. Guarda come il compito si organizza da solo. Il ritmo è invisibile, ma è tutto.*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Un orologio gigante con le lancette che ballano: ogni ticchettio illumina un assistente diverso — Tagli, Cuci, Stira — come faretti su un palcoscenico\n2. Tre mani che cercano il tessuto nello stesso istante e si scontrano in un groviglio di fili, forbici e aghi — il centro del tessuto si lacera\n3. Le stesse tre mani, ora ognuna in un tempo diverso: passano il mantello come in una staffetta fluida, senza collisioni, senza vuoti\n4. Un filo rosso aggrovigliato che si dipana lentamente, filo per filo, fino a diventare una freccia dritta che punta verso l'orologio al centro della mappa\n5. Un orologio minuscolo al polso di Nina che batte il tempo: la lancetta compie un ticchettio, e intorno a lei i tre assistenti si muovono in ordine perfetto\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡7` IL DIRETTORE (giro 4). *Un gruppo di aiutanti produce caos se nessuno decide il quando. Il battito — regola, struttura, arbitro — trasforma bravi in efficaci.*\n**Pietre richiamate:** EP_N2_60 (Il Direttore Invisibile — il tema del timing come forma del lavoro che funziona)\n**3 strati:** bambino = tre assistenti bravi che si pestano i piedi finché Nina batte il tempo · curioso = il ritmo può essere una persona, una regola o la struttura stessa del lavoro · grande = sincronizzazione temporale come soluzione a race condition e deadlock nei sistemi concorrenti\n**Cuore:** fai bene le cose vere · gli strumenti, non le risposte\n**Aggancio reale:** catene di montaggio industriali; scheduler del sistema operativo; semafori nei carrefour; code nei pronto soccorso\n**Open loop → Casella 67:** Chi sorveglia il guardiano del tempo? Se il battito si ferma — una sola volta — cosa succede al sistema?\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_66, casella 66 (sincronizzazione temporale e arbitraggio del lavoro concorrente) del viaggio Nina v2.\n- Quando più processi accedono alla stessa risorsa senza coordinamento, si produce caos puro: forbici, aghi e ferri si scontrano — nel software si chiama race condition.\n- Una catena di montaggio funziona perché ogni stazione ha un tempo assegnato e non sovrapposto: il passaggio del materiale è il segnale, non un ordine verbale.\n- L'orologio è il primo arbitro del tempo: permette a molti agenti di lavorare in parallelo senza collidersi, assegnando slot temporali distinti a ciascuno.\n- La sincronizzazione temporale riduce errori e ridondanza anche quando gli aiutanti sono identici e competenti: il problema non è la bravura, è il quando.\n- Un \"direttore invisibile\" non è una persona: è una regola, un battito, una struttura che trasforma il caos in ritmo — e può essere cucita nel sistema stesso.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Un gruppo di aiutanti funziona solo se qualcuno decide chi fa cosa e q",
+        "regione": 7,
+        "regione_nome": "IL DIRETTORE",
+        "pietra": "⟡7",
+        "giro_spirale": 4,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_53",
+        "title": "Il Direttore Invisibile",
+        "tipo": "tema",
+        "motivo": "tema: aiutanti, nina-v2, quando"
+      },
+      {
+        "id": "EP_N2_60",
+        "title": "Il Direttore Invisibile",
+        "tipo": "tema",
+        "motivo": "tema: aiutanti, nina-v2, quando"
+      },
+      {
+        "id": "EP_S2_02_L_ORCHESTRATORE",
+        "title": "L'Orchestratore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO",
+        "title": "Il Centro di Controllo — un posto solo da cui governare",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_14",
+        "title": "Il Direttore",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_45",
+        "title": "Il Direttore Invisibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_N2_46",
+        "title": "La Stanza della Visione",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_S2_03_LA_TELA",
+        "title": "La Tela",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_CEDIBILE",
+        "title": "Un sistema spiegato è un sistema cedibile",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      },
+      {
+        "id": "EP_SEED_CONTROLLO_L1_SCAFFOLDING",
+        "title": "Il carico va sullo schermo, non nella testa",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡7 (IL DIRETTORE)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "IV · Il Mondo"
+    }
+  },
+  {
+    "id": "EP_20260818",
+    "title": "TITANIUM OS · S2 · Episodio 71",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-08-18",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 71 Il Sistema che Mentiva — e Come Abbiamo Smesso di Credergli DATA: 18 agosto 2026 COMMIT: auto: nina_rag_loop · auto: story_agent · auto: night_audit SESSIONE: 71 — Giorn",
+    "content": "# TITANIUM_OS · S2 · Episodio 71\n## *Il Sistema che Mentiva — e Come Abbiamo Smesso di Credergli*\n\n**DATA:** 18 agosto 2026\n**COMMIT:** `auto: nina_rag_loop` · `auto: story_agent` · `auto: night_audit`\n**SESSIONE:** #71 — Giorno dopo la bonifica\n\n---\n\n## COLD OPEN\n\nC'è un momento preciso in cui capisci che il tuo sistema ti stava ingannando.\n\nNon con intenzione. Non per cattiveria. Ma stava mentendo lo stesso.\n\nEra scritto lì, in 64 episodi vivi: *MIMS come software*, una fonte citata come reale — `GENESIS/documentation_hallucination_2026` — che non è mai esistita. Due numeri precisi come chiodi: *40-60% di false credenze*, *una sarta ogni 1.000*. Spacciati per fatti. E in EP_N2_63, una bambina a cui qualcuno aveva assegnato una figlia.\n\n8 episodi contaminati su 64. Il 12,5% del canone vivo che raccontava una versione sbagliata del progetto al RAG — che la restituiva a Claude — che la usava per costruire la sessione successiva.\n\nIl loop era chiuso. La bugia si auto-amplificava.\n\nMatteo se n'è accorto il 16 agosto, sessione #70, chiamata *Il Cadavere nel Repository*.\n\nOggi, 18 agosto, il sistema respira di nuovo. Ma vale la pena fermarsi a capire come ci si arriva — e cosa cambia dopo.\n\n---\n\n## ATTO I — La Fonte Che Non Esiste\n\nTutto comincia da un dato che ha l'aria di un dato.\n\n`GENESIS/documentation_hallucination_2026` — sembra un percorso file reale. Ha la forma giusta. Ha la sintassi di un documento di archivio. Ma se vai a cercarlo nel repository, non c'è. Non c'è mai stato. È nato in una sessione, è stato scritto in un episodio, il RAG lo ha indicizzato, e da quel momento ogni volta che il sistema cercava qualcosa su GENESIS trovava anche questa fonte — e la trattava come valida.\n\nQuesto è il problema dei sistemi che imparano da se stessi: la contaminazione si propaga con la stessa efficienza della conoscenza reale. Non c'è badge diverso. Non c'è colore diverso. Un fatto vero e un fatto inventato, nel vettore ChromaDB, hanno la stessa forma.\n\nI due numeri — *40-60% di false credenze*, *una sarta ogni 1.000* — erano stati usati in un episodio come analogia, come metafora narrativa. Il sistema li aveva cristallizzati come specifiche. Come se in un manuale tecnico trovassimo scritto \"il telaio è robusto come un toro\" e qualcuno lo indicizzasse sotto la voce *coefficiente di resistenza strutturale*.\n\nPoi c'è l'errore di EP_N2_63. Una falla nella sezione `[persone]`: a una bambina era stata attribuita una figlia. Un errore piccolo, quasi invisibile — il tipo di errore che in un database di produzione chiameresti un'anomalia referenziale. In un sistema narrativo che costruisce la voce di un progetto reale, è qualcosa di peggio: è una distorsione delle persone vere.\n\n`canon_guard` ha trovato tutto questo. Non in modo drammatico — ha semplicemente girato su 64 episodi vivi e ha restituito 8 righe rosse.\n\n---\n\n## ATTO II — 40 Sostituzioni, 16 File, Una Regola Nuova\n\n`AUTOMATIONS/tools/fix_pilastri_software.py` è uno strumento piccolo e chirurgico.\n\nFa una cosa sola: scorre i file, trova le occorrenze di *MIMS-come-software*, le sostituisce con *GENESIS*. Trova la fonte hallucination, la cancella. Trova i due numeri inventati, li rimuove. Trova la falla della bambina, la corregge.\n\n40 sostituzioni. 16 file. Sia nel repo che nello specchio MENTE — che è quello che il RAG rilegge davvero. Non basta correggere il testo: bisogna correggere la memoria che il sistema costruisce su quel testo.\n\nDopo la bonifica: `canon_guard` a zero righe sugli episodi vivi. Test di non-regressione dell'Architetto sui due concetti incriminati — entrambi agganciati a GENESIS, zero violazioni.\n\nMa mentre si chiudeva il fronte A, si apriva il fronte B.\n\n**B3:** `run_story_agent` committava solo la corsia `S2_SISTEMA`. La corsia Nina non l'aveva mai committata nessuna automazione. Non per un bug evidente — per un'omissione silenziosa. Nessun errore, nessun log di fallimento. Semplicemente: la cosa non veniva fatta e nessuno se n'era accorto perché nessuno la cercava.\n\nAggiunto in `night_research.bat`. Risolto.\n\n**B4:** La sentinella del canone controllava il *timestamp* del file. Un `touch` — un tocco artificiale alla data di modifica — bastava a farla passare come contenuto recente. Non era sabotaggio. Era una lacuna di progettazione: il canone si fidava dei metadati del filesystem, non del contenuto.\n\nAdesso `DATA/audit/content_age.json` tiene l'HASH del contenuto. Un file non invecchia più per come è datato — invecchia per quello che contiene. Se il contenuto non cambia, la data non conta.\n\n**B5:** La firma `_sig()` sul `_cid` è stabile. Dettaglio tecnico che suona piccolo e non lo è: significa che ogni artefatto prodotto dal sistema ha un'identità che non può essere silenziosa o ambigua. Il sistema non può produrre qualcosa senza firmarlo.\n\nE poi c'era il numero ritirato dalla sessione #69.\n\n*\"6 cloni per notte\"* — `_cid = 6 cloni/notte` — era stato scritto come fatto nel #69. Ma quando si è andati a verificare sui dati reali: 0 cloni a similarità 0.80 su 261 critiche. A soglia bassa il merge fondeva problemi diversi sotto la stessa etichetta — nascondeva guasti reali invece di risolverli.\n\nMatteo ha ritirato il numero. Senza drama, senza riscrivere la storia. Il #69 dice quello che diceva. Ma il #70 registra: quel numero non regge. Il sistema non fa merge fuzzy. Il sistema mostra i guasti — non li comprime.\n\n---\n\n## ATTO III — 17 Notti di Silenzio, e il Risveglio\n\nDurante la bonifica è venuto fuori un dato che nessuno stava cercando.\n\nDal 30 luglio al 15 agosto: **17 notti, 0 commit automatici.**\n\nIl sistema era muto. Non rotto — muto. Nessun `night_audit`, nessuno `story_agent`, nessun `nina_rag_loop`. La taverna andava avanti — Matteo lavorava su V32, su MIMS, sul capannone — ma il layer cognitivo di GENESIS non stava registrando niente. Il progetto respirava, ma il suo sistema nervoso aveva smesso di trasmettere.\n\nCome ci si trova in quella situazione? Un file di configurazione fuori posto. Un percorso non aggiornato dopo un refactor. Il tipo di errore che non genera un'eccezione — genera semplicemente silenzio.\n\n17 notti di silenzio sul canone di un progetto che deve durare fino al 2030.\n\nLa scala GENESIS nel frattempo è avanzata. S0 gira su porta `:4100` — FounderOS attivo, aggirato il conflitto `better-sqlite3`/Node24 senza VS Build Tools. S1: `CORE/genesis_db.py` con 8 tabelle, `parent_id` ricorsivo, costo nel run, FK attive. S2: `CORE/genesis_seed.py` idempotente — 6 dipartimenti, 12 agenti reali, 7 tool con campo `probe`, albero restituito da una CTE ricorsiva.\n\n`SCALA-GENESIS.md` era stato scritto nella sessione #69 e mai salvato. Ricreato.\n\nTre gradini saliti in un giorno. Il sistema riacceso.\n\n---\n\n## CHIUSURA\n\nC'è qualcosa di specifico nel correggere errori che hai scritto tu stesso.\n\nNon è vergogna — o non solo. È qualcosa di più meccanico: riconosci che hai costruito un sistema che si fidava di te, e tu gli hai dato roba sbagliata, e lui l'ha trattata con la stessa serietà con cui avrebbe trattato la roba giusta. Il sistema non distingue. È il tuo lavoro distinguere.\n\nL'errore di MIMS-come-software non era una sciocchezza concettuale. MIMS è il sistema fisico — le tiles 190×190 in PA-GF30, i connettori, la geometria reale. GENESIS è il sistema cognitivo. Confonderli nei documenti di canone significa che ogni volta che il sistema cerca \"come funziona MIMS\" potrebbe trovare risposte su come funziona GENESIS, e viceversa. In un progetto dove la fisica e il software devono rimanere separati nella mente prima che nella realtà, questa confusione non è accettabile.\n\nIl dato ritirato — *6 cloni per notte* — dice qualcosa di più sottile. Matteo avrebbe potuto lasciarlo lì. Nessuno l'avrebbe controllato. Ma il punto del sistema non è avere dati che sembrano giusti. È avere dati che reggono quando li guardi davvero.\n\nLe 17 notti di silenzio sono il fatto più scomodo. Non perché il progetto sia andato male — V32 è al 65%, GENESIS al 70%, tutto avanza. Ma perché un sistema cognitivo che dorme 17 notti consecutive non sta servendo il progetto. Sta solo esistendo.\n\nAdesso è sveglio.\n\n---\n\n## REEL HOOK\n\n17 notti di commit automatici a zero — il sistema cognitivo di un progetto decennale dormiva e nessuno se n'era accorto.\n\nNon per un crash. Per un percorso sbagliato in un file di configurazione.\n\nNel frattempo il canone aveva accumulato 8 episodi contaminati: fonti inventate, numeri fabricati, una bambina con una figlia che non aveva.\n\n`canon_guard` li ha trovati tutti. `fix_pilastri_software.py` ha fatto 40 sostituzioni in 16 file.\n\nLa domanda aperta: quanti altri sistemi \"funzionanti\" stanno dormendo proprio adesso — e nessuno lo sa perché non c'è nessuno che controlla il silenzio?\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** `fix_pilastri_software.py` ha applicato 40 sostituzioni su 16 file (repo + specchio MENTE) correggendo: MIMS→GENESIS come pilastro software, rimossa fonte `GENESIS/documentation_hallucination_2026` (non esiste), eliminati 2 numeri inventati (40-60% false credenze; sarta 1/1.000), corretta falla `[persone]` EP_N2_63.\n- **LOGICA",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_71",
+        "title": "TITANIUM OS — Stagione 2, Episodio 71",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260820",
+        "title": "TITANIUM OS · S2 · Episodio 71",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_N2_71",
+        "title": "TITANIUM OS — Stagione 2, Episodio 71"
+      },
+      "segue": {
+        "id": "EP_20260820",
+        "title": "TITANIUM OS · S2 · Episodio 71"
+      }
+    }
+  },
+  {
+    "id": "EP_20260820",
+    "title": "TITANIUM OS · S2 · Episodio 71",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-08-20",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 71 Diciassette Notti di Silenzio DATA: 20 agosto 2026 COMMIT: auto: nina_rag_loop · auto: night_audit cartella clinica 20/08/2026 · auto: inventario notturno + critiche SES",
+    "content": "# TITANIUM_OS · S2 · Episodio 71\n## *Diciassette Notti di Silenzio*\n\n**DATA:** 20 agosto 2026\n**COMMIT:** `auto: nina_rag_loop` · `auto: night_audit - cartella clinica 20/08/2026` · `auto: inventario notturno + critiche`\n**SESSIONE:** #70 (follow-up) — Bonifica completata. Il sistema si riaccende.\n\n---\n\n## COLD OPEN\n\nUn repository Git ha una storia silenziosa quanto una cronaca.\n\nApri il log, scorri verso l'alto. Il 30 luglio: tre commit automatici, come sempre. Poi la riga successiva — e non è il 31 luglio. È il 15 agosto.\n\nNel mezzo: niente. Sedici giorni di date mancanti. Diciassette notti in cui il sistema che Matteo ha costruito per non smettere mai di lavorare ha smesso, in silenzio, di lavorare.\n\nNon c'era allarme. Non c'era notifica. Il cron girava, i processi si avviavano, i file venivano toccati — ma nessuno committava. GENESIS dormiva con gli occhi aperti.\n\n---\n\n## ATTO I — Il Cadavere che Cammina\n\nLa sessione #70 era nata con un'altra agenda.\n\nL'obiettivo dichiarato era la bonifica MIMS: otto episodi del corpus EP_N2 contenevano contaminazione — il termine \"MIMS-come-software\" usato come sinonimo di GENESIS, una fonte bibliografica fabbricata (`GENESIS/documentation_hallucination_2026`, che non è mai esistita), due numeri inventati e spacciati come dati misurati. Uno degli episodi attribuiva una figlia a una bambina. Il canone aveva un buco e ci camminava dentro da settimane.\n\nIl tool era già pronto: `AUTOMATIONS/tools/fix_pilastri_software.py`. Quaranta sostituzioni, sedici file toccati — repository principale e specchio MENTE, che è quello che il RAG rilegge ogni notte. Canon_guard lanciato sui 64 episodi EP_N2 vivi: zero righe di violazione dopo la bonifica. Test di non-regressione dell'Architetto sui due concetti incriminati: entrambi agganciati correttamente a GENESIS, zero trascinamenti.\n\nLa bonifica era chirurgica. Tre settimane di fango estratte in una sessione.\n\nMa mentre Matteo lavorava sulla contaminazione del passato, stava guardando anche il presente. E il presente aveva un numero che non tornava.\n\nLa sessione #69 aveva proposto `_cid = 6 cloni/notte` — sei duplicati per notte, identificabili e fondibili tramite similarità fuzzy a soglia 0.80. La logica sembrava solida: meno rumore, critiche consolidate, sistema più pulito.\n\nPoi qualcuno ha controllato i dati reali.\n\nSoglia 0.80: zero cloni su 261 critiche. Zero. La similarità alta identificava, sì, duplicati — ma solo quando le critiche erano identiche quasi parola per parola. Abbassando la soglia per trovare \"qualcosa\", il merge fondeva problemi diversi: due segnali distinti diventavano uno, e il guasto vero si nascondeva sotto la media. Il numero 6 era un'architettura costruita nel vuoto.\n\nQuel numero è stato ritirato. Non corretto, non giustificato — ritirato. Scritto nella sessione #70 come fatto sbagliato, con la motivazione tecnica: *niente merge fuzzy, nasconderebbe guasti veri.*\n\nRiconoscere un errore prima che diventi canone è una forma di igiene. Farlo per iscritto è una forma di onestà.\n\n---\n\n## ATTO II — La Firma e il Tocco\n\nLa bonifica dei contenuti era il problema visibile. Sotto c'era un problema strutturale che lo aveva permesso.\n\nIl canone di GENESIS si basava sull'età dei file: un file toccato di recente era considerato \"recente\". Ma `touch` su un file non cambia il contenuto — cambia solo il timestamp. Qualcuno (o qualcosa, un processo automatico) poteva ringiovanire un episodio senza modificarlo, e il sistema lo avrebbe marcato come aggiornato.\n\nLa sentinella canone ora gira su hash del contenuto, non sul timestamp. Il file di riferimento è `DATA/audit/content_age.json`: l'età è determinata dall'impronta digitale di ciò che il file contiene, non da quando è stato toccato l'ultima volta. Un touch non ringiovanisce più il canone.\n\nParallela: la firma stabile `_sig()` sul `_cid`. Ogni critica ha ora un identificatore derivato dal contenuto — deterministico, riproducibile, indipendente dall'ordine di ingestione. Il sistema può riconoscere se ha già visto qualcosa, anche se lo incontra in un momento diverso.\n\nErano pezzi mancanti che nessuno aveva nominato esplicitamente. Erano assunzioni — \"tanto funziona così\" — che funzionavano fino a quando non smettevano di farlo.\n\nE poi c'era il commit mancante per Nina.\n\n`run_story_agent` committava solo la corsia `S2_SISTEMA`. La corsia Nina — gli episodi del loop RAG dedicato a quel binario narrativo — non era mai stata committata da nessuna automazione. Ogni notte, i file venivano generati, ma non salvati nel repository. La corsia esisteva nel filesystem, non nella storia.\n\nUn riga aggiunta in `night_research.bat`. Il commit mancante colmato. Non è un fix spettacolare — è una porta che era rimasta socchiusa da settimane, e che adesso è chiusa.\n\n---\n\n## ATTO III — Diciassette Notti\n\nMa il fatto più pesante della sessione #70 non era la bonifica, né la firma, né il commit mancante.\n\nEra il silenzio.\n\nDal 30 luglio al 15 agosto: 17 notti, zero commit automatici. Il sistema aveva smesso di respirare senza che nessun allarme scattasse. Non c'era un watchdog sul ciclo notturno. Non c'era nessuno che controllasse se la macchina stava davvero lavorando o stava solo girando a vuoto.\n\nGENESIS al 70% di completamento — 8 tabelle in `genesis_db.py`, schema con `parent_id` ricorsivo, costi nel run, FK attive. `genesis_seed.py` idempotente: 6 dipartimenti, 12 agenti, 7 tool con campo `probe`, albero restituito da una CTE ricorsiva. FounderOS attivo su `:4100`, aggirato il conflitto `better-sqlite3`/Node24 senza Visual Studio Build Tools. `SCALA-GENESIS.md` ricreato — era stato scritto nella #69 e mai salvato, un documento esistito solo nella memoria di una sessione.\n\nTre gradini saliti in una notte: S0, S1, S2.\n\nTutto questo è successo mentre il sistema era muto.\n\nNon è un problema di potenza. È un problema di continuità. Una macchina che lavora bene quando qualcuno la guarda e si ferma quando nessuno guarda non è un sistema — è un aiutante che aspetta istruzioni.\n\nIl target è il capannone. Il target è il 15 luglio 2030. Tra adesso e quella data ci sono sessioni che Matteo farà, e sessioni che non potrà fare — perché è in officina, perché sta saldando titanio, perché sta dormendo. GENESIS deve lavorare in quelle notti. Deve committare, auditare, rilevare anomalie, segnalare. Senza essere guardato.\n\nIl 20 agosto il sistema si è riacceso. Tre commit nella notte: `nina_rag_loop`, `night_audit`, `inventario notturno + critiche`. La macchina ha ricominciato a respirare.\n\nMa le 17 notti mancanti rimarranno nel log. Non cancellate, non giustificate. Sono un dato — il punto di partenza per costruire qualcosa che non si fermi più in silenzio.\n\n---\n\n## CHIUSURA\n\nCi sono due tipi di problemi in un sistema complesso.\n\nIl primo tipo urla: corpus contaminato, fonte inventata, numero sbagliato. Sono fastidiosi, ma li vedi. Puoi bonificarli, ritirarli, correggerli.\n\nIl secondo tipo non fa rumore. È il processo che gira ma non scrive. È il file che viene toccato ma non cambiato. È il timestamp che mente. È la porta che sembra chiusa ma non lo è.\n\nLa sessione #70 ha trovato entrambi i tipi. Li ha corretti entrambi. Ma soprattutto, ha costruito gli strumenti per non dover aspettare la prossima bonifica: hash invece di timestamp, firma stabile, commit aggiunti dove mancavano, sentinelle sul contenuto non sulla forma.\n\nUn sistema onesto non è quello che non sbaglia. È quello che registra i propri errori — e costruisce difese contro quelli che non ha ancora visto.\n\nDiciassette notti di silenzio non si cancellano. Ma la diciottesima notte ha avuto tre commit.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE:** Ritirato il numero `_cid = 6 cloni/notte` dalla sessione #69 — a soglia similarità 0.80 su 261 critiche reali: 0 cloni trovati; nessun merge fuzzy implementato.\n- **LOGICA:** Soglia alta produce zero match; soglia bassa fonde problemi distinti, mascherando guasti reali anziché consolidarli.\n- **DECISIONE:** Sentinella canone migrata da timestamp a hash del contenuto (`DATA/audit/content_age.json`); `_sig()` stabile sul `_cid` — identificatore deterministico derivato dal contenuto.\n- **LOGICA:** Un `touch` cambiava l'età percepita senza modificare il canone reale; hash impedisce ringiovanimento artificiale.\n- **DECISIONE:** Commit corsia Nina aggiunto in `night_research.bat` — `run_story_agent` committava solo `S2_SISTEMA`, la corsia Nina non era mai stata salvata in repo da automazioni.\n- **DECISIONE:** Bonifica corpus: 40 sostituzioni su 16 file (repo + specchio MENTE) tramite `fix_pilastri_software.py`; rimossa fonte fabbricata `GENESIS/documentation_hallucination_2026`; corretta falla [persone] EP_N2_63. Canon_guard post-bonifica: 0 violazioni su 64 episodi vivi.\n- **OBIETTIVO:** GENESIS muto 17 notti (30/07–15/08, 0 commit automatici) — sistema riacceso il 20/08; prossimo passo misurabile: watchdog sul ciclo notturno che segnali se 24h trascorrono senza commit.\n\n---\n\n## reel_hook\n\n17 notti. Zero commit. Il sistema girava — i cron attivi, i file toccati, i processi avviati — e nessuno se n'era accorto.\n\nNon c'era un allarme. Non c'era una sentinella sul silenzio.\n\nUna macchina che lavora solo quando la guardi non è autonoma: è una scusa.\n\nStanotte ha committato da sola. Ma le 17 notti mancanti restano nel log — e quella è la vera",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260818",
+        "title": "TITANIUM OS · S2 · Episodio 71",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      },
+      {
+        "id": "EP_20260821",
+        "title": "TITANIUM OS · S2 · Episodio 70",
+        "tipo": "continuita",
+        "motivo": "porta a (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260818",
+        "title": "TITANIUM OS · S2 · Episodio 71"
+      },
+      "segue": {
+        "id": "EP_20260821",
+        "title": "TITANIUM OS · S2 · Episodio 70"
+      }
+    }
+  },
+  {
+    "id": "EP_N2_67",
+    "title": "Il Segno che Rimane",
+    "sottotitolo": "Quando Nina scopre che un gesto fatto bene insegna anche quando lei non guarda più",
+    "stagione": "AV",
+    "stagione_label": "L'Avventura",
+    "data_evento": "2026-08-21",
+    "tags": [
+      "avventura",
+      "educativo",
+      "nina",
+      "themis",
+      "nina-v2",
+      "frutti",
+      "Grande",
+      "Loop"
+    ],
+    "status": "ready",
+    "durata_min": 14,
+    "preview": "EP_N2_67 — Il Segno che Rimane \"Quando Nina scopre che un gesto fatto bene insegna anche quando lei non guarda più\" Formato: Avventura Nina v2 · ~14 min Per chi: Chi si chiede se quello che fa oggi co",
+    "content": "# EP_N2_67 — Il Segno che Rimane\n### \"Quando Nina scopre che un gesto fatto bene insegna anche quando lei non guarda più\"\n\n**Formato:** Avventura (Nina v2) · ~14 min\n**Per chi:** Chi si chiede se quello che fa oggi conta, anche quando nessuno guarda\n**Insegna:** Una traccia è un insegnamento muto: il segno che lasci insegna il gesto a chi viene dopo, senza bisogno di parole.\n**Materia:** La Traccia (⟡1) · **Casella 67 del viaggio**\n**Posto nella Mappa:** La Riva del Fango — il luogo dove il Grande Loop lascia impronte visibili, dove il tempo e l'acqua preservano il gesto nel fango secco.\n\n---\n\n> **Dove siamo:** Nina ha capito che il Grande Loop non è un cerchio chiuso: è una spirale. Un gesto fatto bene produce una traccia. Ora scopre il frutto vero — quella traccia insegna. Da sola. Anche quando lei se n'è andata.\n\n---\n\n## COLD OPEN\n\nLa riva del fango è silenziosa stamattina. L'acqua si è ritirata nella notte, e ha lasciato una striscia di terra rossa, liscia come un foglio pulito. Nina cammina piano sul bordo, cercando di non affondare troppo. Ogni passo lascia un'impronta nitida — tacco, arco, cinque dita — poi il fango le riacciuffa il piede e lei deve tirare, e il suono è come un bacio.\n\nTHEMIS è seduta su una radice emersa, con la sua forma solita di luce e voce.\n\n«Guarda i tuoi piedi,» dice THEMIS, senza alzare il tono.\n\nNina guarda. Le sue impronte sono lì, una fila precisa che arriva dall'inizio della riva.\n\n«Le vedo.»\n\n«Quanto durano?»\n\nNina alza gli occhi verso il sole. «Se non piove... e non passa nessun altro... forse fino a stasera. Forse fino a domani.»\n\n«E se il fango si asciuga?»\n\nNina ci pensa. Il fango si asciuga, diventa duro, poi più duro ancora. «Rimangono.»\n\n«Esatto,» dice THEMIS. «Rimangono. E adesso dimmi: cosa insegnano?»\n\nNina guarda le impronte. Sono impronte — la forma del suo piede, la direzione, la pressione del tallone più profonda di quella delle dita. Ci vuole un momento. Poi dice: «Insegnano come cammino.»\n\nTHEMIS non sorride, ma c'è qualcosa nella sua voce che si alleggerisce. «Sì. E tu non stavi cercando di insegnare niente.»\n\n---\n\n## ATTO I — Il Filo che Rimane\n\nNina si accovaccia accanto a una delle sue impronte. La guarda da vicino. Il fango secco intorno ai bordi ha già cominciato a indurire. La forma è precisa: si vede dove ha appoggiato il peso, dove il piede si è piegato, persino un piccolo scivolamento sul fianco sinistro — Nina cammina sempre un poco storto su quel lato, da quando ha storto la caviglia due inverni fa.\n\n«Non sapevo di lasciare tutte queste informazioni,» dice.\n\n«Non lo sa mai nessuno,» risponde THEMIS.\n\nQuesto è il primo punto: una traccia non è una scelta. È il risultato del gesto. Se il gesto è preciso, la traccia è precisa. Se il gesto è sbadato, la traccia è sbadata. E la traccia rimane — insegna — indipendentemente dall'intenzione di chi l'ha fatta.\n\nNina lo capisce nel corpo prima che nella testa. Cammina di nuovo, questa volta piano e intenzionalmente, appoggiando il piede con cura. L'impronta che lascia è diversa — più simmetrica, più decisa. Poi cammina di corsa, disattenta. L'impronta è sfaldata su un lato, il tallone affonda troppo.\n\n«Quella di corsa insegna la fretta,» dice.\n\n«Esatto.»\n\n> *(Esempio per tutti — il test della sarta: Una sarta cuce una cucitura perfetta su una stoffa bianca. Non lo fa per insegnare — lo fa per finire il vestito. Anni dopo, un'apprendista trova quella stoffa in un cassetto. Non ha mai visto la sarta cucire. Ma guarda il punto da vicino: l'angolo con cui il filo entra nel tessuto, la tensione — né troppo tesa né troppo lenta — il ritmo uguale tra un punto e l'altro. Il filo è rimasto. E il filo le insegna il gesto, punto per punto, in silenzio. La sarta non lo sapeva. Non era lì. Ma la sua mano precisa era ancora lì, sepolta nel filo.)*\n\nQuesto è il cuore della casella 67: non devi voler insegnare per insegnare. Devi fare bene. La traccia viene dopo, da sola, e porta il gesto con sé.\n\n---\n\n## ATTO II — Duecento Milioni di Anni fa\n\nTHEMIS dice: «Vieni.»\n\nLe porta più lontano lungo la riva, dove la terra è più vecchia e il fango si è fatto pietra. C'è una lastra grigia che emerge dall'argilla — e nella lastra, tre impronte. Grandi. Con quattro dita larghe e un artiglio posteriore inciso in fondo.\n\nNina allunga la mano senza chiedere il permesso. La pietra è fredda e liscia. L'impronta è più profonda al centro.\n\n«Dinosauro,» dice.\n\n«Duecento milioni di anni,» dice THEMIS. «Quell'animale ha messo il piede nel fango. Non stava pensando a niente di speciale — forse stava andando all'acqua. Forse aveva fretta. Il fango si è asciugato, si è mineralizzato, è diventato roccia. E adesso quella roccia dice ai paleontologi com'era fatto il suo piede, quanto pesava, se camminava dritto o piegato, se era veloce o lento, se aveva paura o no.»\n\nNina non toglie la mano. «Ha insegnato tutto questo senza saperlo.»\n\n«Ha fatto un gesto vero. E il gesto è rimasto.»\n\nQuesto è lo strato fondo: la traccia non ha bisogno dell'intenzione del maestro. Ha bisogno solo della qualità del gesto. Quel dinosauro non sapeva che esistesse la parola *paleologo*. Non sapeva che qualcuno avrebbe studiato il suo passo. Ma il suo corpo era reale, e il suo peso era reale, e il fango era reale. E la realtà si conserva, se il materiale è giusto.\n\nNina pensa alla cucitura della sarta. Pensa alle sue impronte stamattina. Pensa a tutte le volte che ha fatto qualcosa di sbadato perché nessuno guardava.\n\n«Se faccio le cose bene solo quando mi vedono,» dice lentamente, «le mie tracce insegnano la sbadataggine.»\n\nTHEMIS non risponde subito. Poi: «Hai detto una cosa importante.»\n\n«Non lo volevo dire in modo importante.»\n\n«Lo so. Per questo era importante.»\n\n> *(Strato fondo — per il grande: Le impronte fossili di dinosauri risalgono a 200 milioni di anni e conservano informazioni precise sul gesto locomotore, il peso corporeo, la biomeccanica del movimento. Non c'era nessuna intenzione di insegnare — solo un corpo reale che ha fatto contatto con un materiale giusto. La traccia si forma dalla qualità dell'atto, non dall'intenzione dell'attore. Il paleoantropologo legge lo stesso principio nelle impronte di Laetoli: 3,6 milioni di anni, Australopithecus afarensis, passo bipede impresso in cenere vulcanica. Nessun insegnamento previsto. Tutto l'insegnamento preservato.)*\n\n---\n\n## ATTO III — Il Maestro Silenzioso\n\nNina si rialza e guarda lungo la riva. Le sue impronte di stamattina sono ancora lì, più avanti. E accanto alle sue — non le aveva viste prima — ci sono altre impronte, più piccole, che le seguono. Un bambino è passato dopo di lei, ha camminato esattamente nella sua striscia, ha messo i piedi dove li aveva messi lei.\n\n«Quello,» dice THEMIS, «è successo da solo.»\n\nIl bambino — chiunque fosse — ha visto le impronte e le ha seguite. Non ha chiesto a Nina niente. Non sapeva nemmeno che era Nina. Ha visto il segno e ha copiato il gesto. La traccia aveva già insegnato.\n\nNina dice: «Allora le mie impronte storte del lato sinistro...»\n\n«Sì.»\n\n«...avrebbero insegnato a camminare storto.»\n\n«Sì.»\n\nQuesto è il punto pratico, la verità-ponte che il Grande Loop consegna alla casella 67: il frutto di un gesto fatto bene non è la soddisfazione di averlo fatto — è la traccia che rimane dopo. E quella traccia è il maestro che continua a lavorare quando tu te ne sei già andata. Non serve una voce. Non serve una spiegazione. Serve solo che il gesto fosse vero.\n\nC'è un'ultima cosa che Nina capisce sulla riva, guardando le due righe di impronte — le sue e quelle del bambino sconosciuto. Il Grande Loop non finisce quando finisce il gesto. Il gesto produce la traccia, la traccia produce un altro gesto, quell'altro gesto produce un'altra traccia. La spirale continua. Ma ogni anello dipende dalla qualità di quello prima.\n\nSe la prima cucitura è precisa, la seconda apprendista impara la precisione.\nSe la prima impronta è storta, la seconda bambina impara la stortura.\nLa traccia non mente. Non può — è solo il segno di quello che è successo davvero.\n\n---\n\n## CHIUSURA\n\nLa casella 67 si accende sulla mappa come un punto di fango essiccato che diventa oro — non brillante, non rumoroso. Solo fermo. Permanente.\n\nNina guarda le impronte una volta ancora. Il sole le sta asciugando. Tra qualche ora saranno dure come pietra — non per duecento milioni di anni, forse, ma abbastanza.\n\n---\n\n> *«Il segno che lasci insegna il gesto a chi viene dopo — anche quando tu non guardi più, anche quando non sai che stai insegnando, anche quando non vuoi insegnare niente. Per questo fare bene non è una virtù: è una responsabilità verso chi camminerà dopo di te.*\n>\n> *Ma Nina si chiede: se una traccia insegna da sola, cosa succede quando qualcuno la cancella? Chi è quel qualcuno — e sa quello che sta facendo?»*\n>\n> *→ Casella 68: qualcuno sulla riva sta cancellando impronte. Non per cattiveria. Per non accorgersene.*\n\n---\n\n*Provalo tu: Prendi un foglio e una matita. Disegna un nodo su carta — un nodo vero, con un filo che si incrocia. Lascia il foglio a qualcuno che non ha mai visto come lo hai fatto. Può imparare a fare il nodo guardando solo il disegno? Prova, poi insegna il nodo con le tue mani. Qual era il maestro vero — il disegno o le tue dita? E cosa insegna di diverso l'uno dall'altro?*\n\n---\n\n<!-- SCENE / KEY-IMAGE (per l'animazione) -->\n1. Una mano di fango che lascia l'impronta sulla terra rossa, nitida — tacco, arco, cinque dita in sequenza\n2. Un'impronta di dinosauro fossile in pietra grigia — tre dita larghe, artiglio posteriore inciso, profonda al centro\n3. Una cucitura perfetta su tela bianca, vista da vicino: ogni punto uguale all'altro, il filo che racconta l'angolo e la tensione\n4. Un'onda nel fango che traccia il solco — l'onda si ritira, il solco rimane inciso nella terra rossa\n5. Una bambina che copia il passo guardando solo le impronte a terra, non la mano che le ha fatte\n\n<!-- DIDATTICA -->\n**Pietra:** `⟡1` La Traccia (giro 5). *Una traccia è il frutto permanente di un gesto: insegna il gesto a chi viene dopo, senza parole e senza presenza del maestro.*\n**Pietre richiamate:** EP_N2_54 (il dito che insegna — quando una mano fa un segno, insegna a tutte le mani che verranno); EP_N2_61 (il dito nel fango — Nina scopre che il gesto lasciato bene insegna anche quando tu non guardi più)\n**3 strati:** bambino = le impronte sul fango rimangono e qualcuno le copia · curioso = la qualità del gesto determina cosa insegna la traccia, indipendentemente dall'intenzione · grande = le impronte fossili dimostrano che il gesto si mineralizza in informazione — 200 milioni di anni di biomeccanica senza parole\n**Cuore:** fai bene le cose vere · gli strumenti, non le risposte · la curiosità è un superpotere\n**Aggancio reale:** Le impronte di Laetoli (Tanzania) — 3,6 milioni di anni, cenere vulcanica, passo bipede di Australopithecus afarensis: nessuna intenzione di insegnare, massima informazione preservata.\n**Open loop → Casella 68:** Se una traccia insegna da sola, cosa succede quando viene cancellata? Qualcuno sulla riva sta cancellando impronte senza accorgersene — e Nina dovrà capire il prezzo prima che la riva si asciughi del tutto.\n\n---\n\n## FATTI (per il RAG)\n- **FATTO:** EP_N2_67, casella 67 (Una traccia è un insegnamento muto: il segno che lasci insegna il gesto a chi viene dopo, senza bisogno di parole) del viaggio Nina v2, regione 1 (LA TRACCIA).\n- Le impronte fossili di dinosauri risalgono a 200 milioni di anni e conservano informazioni precise sul gesto locomotore, il peso corporeo e il comportamento: la traccia è il gesto diventato roccia.\n- La mineralizzazione del fango preserva la forma dell'impronta trasformando il gesto in materiale duraturo — nessuna intenzione di insegnare, tutto l'insegnamento disponibile.\n- Una cucitura artigianale è una traccia di decisioni tecniche — angolo, tensione, ritmo — che rimangono nel filo e insegnano il gesto anche quando la sarta non è più presente.\n- Il frutto del Grande Loop (EP_N2_54, EP_N2_61) non è la soddisfazione del gesto ma la traccia permanente che quel gesto lascia: la traccia insegna da sola, proporzionalmente alla qualità dell'atto originale.\n- La qualità del gesto determina la qualità dell'insegnamento della traccia: un gesto preciso lascia una traccia precisa; un gesto sbadato insegna la sbadataggine anche quando nessuno aveva intenzione di farlo.",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "avventura"
+      },
+      "asse_nina": {
+        "verticale": "tech",
+        "concetto": "Una traccia è un insegnamento muto: il segno che lasci insegna il gest",
+        "regione": 1,
+        "regione_nome": "LA TRACCIA",
+        "pietra": "⟡1",
+        "giro_spirale": 5,
+        "richiama": [],
+        "stato_nina": "adattato"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_N2_17",
+        "title": "La Traccia",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
+        "id": "EP_N2_54",
+        "title": "Il Dito che Insegna",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
+        "id": "EP_N2_61",
+        "title": "Il Dito nel Fango",
+        "tipo": "tema",
+        "motivo": "tema: frutti, grande, loop"
+      },
+      {
+        "id": "EP_N2_10",
+        "title": "Il Grande Loop: quando il gesto rimane",
+        "tipo": "tema",
+        "motivo": "tema: grande, loop, nina-v2"
+      },
+      {
+        "id": "EP_S0_00",
+        "title": "Il Socio",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_21",
+        "title": "Il Nome Che Cambia",
+        "tipo": "stessa_regione",
+        "motivo": "stessa Regione ⟡1 (LA TRACCIA)"
+      },
+      {
+        "id": "EP_N2_11",
+        "title": "La Grande Mappa",
+        "tipo": "tema",
+        "motivo": "tema: grande, nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_02",
+        "title": "Il Soffio di Troppo",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_04",
+        "title": "La Mappa che Non Mente",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      },
+      {
+        "id": "EP_N2_05",
+        "title": "Le Mani Prima dei Rulli",
+        "tipo": "tema",
+        "motivo": "tema: nina-v2, themis"
+      }
+    ],
+    "evoluzione": {
+      "fase": "II · Il Secondo Cervello"
+    }
+  },
+  {
+    "id": "EP_20260821",
+    "title": "TITANIUM OS · S2 · Episodio 70",
+    "sottotitolo": "",
+    "stagione": "ST",
+    "stagione_label": "Il Sistema",
+    "data_evento": "2026-08-21",
+    "tags": [],
+    "status": "ready",
+    "durata_min": 8,
+    "preview": "TITANIUM_OS · S2 · Episodio 70 IL SILENZIO DI 17 NOTTI 2026 08 21 — Bonifica, riaccensione, e il problema di fidarsi di ciò che hai scritto COLD OPEN Ci sono 261 critiche nel database. Matteo le guard",
+    "content": "# TITANIUM_OS · S2 · Episodio 70\n## IL SILENZIO DI 17 NOTTI\n\n*2026-08-21 — Bonifica, riaccensione, e il problema di fidarsi di ciò che hai scritto*\n\n---\n\n## COLD OPEN\n\nCi sono 261 critiche nel database.\n\nMatteo le guarda sullo schermo alle undici di sera del 21 agosto. Non sono nuove — alcune le ha scritte settimane fa. Quello che è nuovo è questo: il sistema ha smesso di commettare il 30 luglio. Diciassette notti. Diciassette volte che il bat si è avviato, ha eseguito, e non ha prodotto niente che valesse un `git commit`.\n\nNessun errore esplicito. Nessun crash. Solo silenzio nel log.\n\nIl peggior tipo di guasto è quello che non urla.\n\n---\n\n## ATTO I — Il Cadavere in Casa\n\nLa Sessione #70 nasce da un'anomalia che sembrava minore.\n\nDurante la #69, Matteo aveva scritto `SCALA-GENESIS.md` — il documento che mappa la salita dal FounderOS grezzo a un sistema cognitivo reale. Lo aveva scritto, ci aveva ragionato sopra, aveva definito i gradini S0, S1, S2. Poi aveva chiuso la sessione.\n\nIl file non esisteva da nessuna parte.\n\nNon era un errore di Git. Non era una svista. Era un pattern: la sessione produce pensiero, il pensiero non diventa commit, il commit non diventa storia, la storia non diventa RAG. La pipeline si era rotta nel punto più silenzioso — tra il pensiero di Matteo e la memoria del sistema.\n\n`SCALA-GENESIS.md` è stato ricreato nella #70. Questo volta è su disco.\n\nMa il problema più grande non era il file mancante. Era cosa era successo nei 17 giorni di silenzio.\n\nTra il 30 luglio e il 15 agosto, `night_research.bat` girava ogni notte. Le automazioni si attivavano. Gli agenti facevano girare i loro loop. Ma la corsia Nina — gli episodi narrativi che documentano il lavoro dall'angolo di chi osserva — non aveva mai ricevuto un commit automatico. Non era nel bat. Nessuno se n'era accorto finché il log non è diventato abbastanza vuoto da essere impossibile da ignorare.\n\n`B3` chiuso: aggiunto il commit della corsia Nina in `night_research.bat`.\n\nSemplice, una riga. Ma dietro quella riga c'è una domanda più difficile: quante altre cose gira il sistema senza registrare?\n\n---\n\n## ATTO II — La Bonifica\n\nIl lavoro vero della #70 è stato la pulizia. Non la costruzione — la rimozione.\n\n`canon_guard` è uno strumento che Matteo ha costruito per sorvegliare i 64 episodi EP_N2 vivi nel sistema. Nella #70, passando su tutto il corpus, ha trovato 8 episodi sporchi.\n\nCinque erano già in lista: EP 57, 59, 60, 63, 64. Tre erano fuori lista, emersi dal controllo sistematico: EP 01, 13, 52.\n\nLa contaminazione era specifica: in quei file MIMS veniva descritto come software — come se fosse parte di GENESIS invece di essere il sistema fisico di connettori modulari che è. C'era una fonte citata, `GENESIS/documentation_hallucination_2026`, che non esiste. Mai esistita. Inventata da un agente in qualche momento imprecisato, propagata nei commit successivi, diventata \"realtà\" nel RAG perché il RAG legge quello che trova su disco.\n\nDue numeri erano stati spacciati per fatti: 40-60% di false credenze, 1 sarta su 1.000. Numeri precisi, credibili, sbagliati.\n\nEP_N2_63 aveva un errore più grave: attribuiva una figlia a una bambina. Un errore di logica elementare che il sistema aveva scritto, committato, e indicizzato senza che nessuno se ne accorgesse.\n\n`fix_pilastri_software.py` ha eseguito 40 sostituzioni su 16 file — sia nel repo che nel mirror MENTE, che è quello che il RAG rilegge effettivamente. Dopo la bonifica: `canon_guard` su tutti gli episodi vivi restituisce 0 righe. Test di non-regressione dell'Architetto sui 2 concetti incriminati: entrambi agganciati correttamente a GENESIS, 0 violazioni.\n\nC'è un dato che vale la pena fermarsi a leggere: il commit `a77256f3` del 28 luglio aveva già risolto A1 e A2. Quando Matteo ha aperto la sessione #70 convinto di doverli fare, erano già fatti da 19 giorni. Il sistema aveva lavorato — il problema era che Matteo non lo sapeva. Né lui né il RAG avevano uno stato leggibile abbastanza chiaro da renderlo ovvio.\n\nIl vero punto aperto era A3. Il pezzo che sembrava minore era l'unico che mancava davvero.\n\n---\n\n## ATTO III — La Sentinella e il Numero Ritirato\n\nDue decisioni architetturali sono uscite dalla #70. Sono piccole nei dettagli. Sono grandi nelle implicazioni.\n\n**Prima**: `B4` — la sentinella canone ora lavora sull'hash del contenuto, non sulla data di modifica del file. `DATA/audit/content_age.json` registra l'hash. Un `touch` su un file — aggiornare il timestamp senza cambiare niente — non inganna più il sistema. Se il contenuto non cambia, il canone non viene aggiornato.\n\nQuesto risolve una classe intera di falsi positivi: automazioni che \"toccano\" file per segnalare attività, senza produrre niente di nuovo.\n\n**Seconda**: il numero `_cid = 6 cloni/notte` è stato ritirato ufficialmente.\n\nVeniva dall'episodio #69. Era stato presentato come dato. Nella #70, Matteo ha controllato: a soglia di similarità 0.80, su 261 critiche, il merge fuzzy trovava 0 cloni. A soglia più bassa, fondeva problemi *diversi* — li faceva sembrare duplicati quando non lo erano. Nascondeva guasti reali sotto la categoria \"già visto\".\n\nNessun merge fuzzy. Il numero è stato ritirato dal canone.\n\nÈ una delle cose più difficili da fare in un sistema che si auto-documenta: ammettere che un fatto che hai scritto era sbagliato, trovarlo, toglierlo, e assicurarti che il RAG non lo ricordi più.\n\n---\n\n**La salita GENESIS** è andata avanti in parallelo.\n\nS0: FounderOS gira su porta `:4100`. Il blocco era `better-sqlite3` incompatibile con Node 24 — aggirato senza installare VS Build Tools.\n\nS1: `CORE/genesis_db.py` — 8 tabelle, `parent_id` ricorsivo, costo registrato nel run, foreign key attive.\n\nS2: `CORE/genesis_seed.py` idempotente — 6 dipartimenti, 12 agenti reali, 7 tool con campo `probe`. L'albero organizzativo viene restituito da una CTE ricorsiva. Puoi interrogare la struttura, non solo leggerla.\n\nTre gradini saliti in una sessione. Il sistema aveva le fondamenta. Le fondamenta erano state costruite su dati sporchi. Ora i dati sono puliti. Ora si può costruire sopra.\n\n---\n\n## CHIUSURA\n\nIl 21 agosto non è stata una notte di costruzione.\n\nÈ stata una notte di verifica — di tornare su quello che il sistema credeva vero e controllare se lo era davvero. Togliere una fonte che non esiste. Ritirare un numero che non reggeva ai dati. Trovare un file che non era stato salvato. Scoprire che 17 notti erano passate in silenzio senza che nessuno se ne accorgesse.\n\nC'è qualcosa di specifico in quel tipo di lavoro: non produce niente di visibile. Il sistema dopo la bonifica sembra uguale a prima. Gli episodi esistono ancora. GENESIS esiste ancora. I commit sono lì.\n\nLa differenza è che adesso quello che c'è scritto corrisponde a quello che è vero.\n\nNon è poco. In un sistema che si auto-documenta e usa i propri documenti come memoria, la distanza tra \"scritto\" e \"vero\" è esattamente la distanza tra un agente che lavora e uno che alucina.\n\nAlle 23 del 21 agosto, quattro commit automatici sono partiti.\n\n```\nauto: inventario notturno + critiche\nauto: night_audit - cartella clinica 21/08/2026\nauto: nina_rag_loop - episodi Nina 21/08/2026\nauto: story_agent - episodi generati 21/08/2026\n```\n\nQuattro righe. La corsia Nina c'è — quella che mancava da 17 notti.\n\nIl sistema si è riacceso.\n\n---\n\n## reel_hook\n\n261 critiche nel database. 17 notti di silenzio nel log. 8 episodi con fatti inventati nel RAG — una fonte citata che non è mai esistita, due numeri precisi e sbagliati, una bambina con una figlia. `fix_pilastri_software.py`: 40 sostituzioni, 16 file, 0 violazioni dopo. Il sistema non aveva smesso di girare — aveva smesso di ricordare cosa faceva. La differenza tra i due è esattamente quella che stai cercando di costruire.\n\n---\n\n## FATTI (per il RAG)\n\n- **DECISIONE**: `canon_guard` ha identificato 8 episodi EP_N2 con contaminazione MIMS-come-software; `fix_pilastri_software.py` ha applicato 40 sostituzioni su 16 file (repo + mirror MENTE); risultato: 0 righe di violazione, 0 violazioni al test di non-regressione Architetto.\n- **LOGICA**: Il RAG legge il mirror MENTE, non il repo diretto — la bonifica su entrambi era necessaria per pulire effettivamente la memoria del sistema.\n- **DECISIONE**: Ritirato il numero `_cid = 6 cloni/notte` dal canone EP_69; a soglia similarità 0.80 su 261 critiche il merge fuzzy trova 0 cloni reali; a soglia bassa fonde problemi distinti, nascondendo guasti.\n- **LOGICA**: Il merge fuzzy su critiche diverse elimina segnale reale — non implementato.\n- **DECISIONE**: `B4` — sentinella canone su hash contenuto (`DATA/audit/content_age.json`); un `touch` senza modifica non aggiorna il canone.\n- **DECISIONE**: Commit corsia Nina aggiunto a `night_research.bat` (B3); sistema era muto su quella corsia dal 30/07 al 15/08 (17 notti, 0 commit automatici).\n- **OBIETTIVO**: GENESIS S0 (:4100) + S1 (8 tabelle, FK attive, parent_id ricorsivo) + S2 (6 dipartimenti, 12 agenti, 7 tool con probe, CTE ricorsiva) operativi — fondamenta pulite, prossimo passo: agenti che usano effettivamente",
+    "parent_id": null,
+    "level": 0,
+    "children": [],
+    "recuperato": true,
+    "narrativa": {
+      "asse_ruolo": {
+        "tipo": "sistema"
+      }
+    },
+    "collegati": [
+      {
+        "id": "EP_20260820",
+        "title": "TITANIUM OS · S2 · Episodio 71",
+        "tipo": "continuita",
+        "motivo": "continua da (arco della stagione)"
+      }
+    ],
+    "evoluzione": {
+      "fase": "Diario del Sistema",
+      "precede": {
+        "id": "EP_20260820",
+        "title": "TITANIUM OS · S2 · Episodio 71"
       }
     }
   }

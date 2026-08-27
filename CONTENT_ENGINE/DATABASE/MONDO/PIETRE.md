@@ -3,13 +3,13 @@
 - [PIETRE  lindice dei concetti (concetto  episodio)](#pietre-lindice-dei-concetti-concetto-episodio)
 - [Verticale: Tech  la Storia dellIA](#verticale-tech-la-storia-dellia)
   - [0  LA MATERIA  (8 episodi)](#0-la-materia-8-episodi)
-  - [1  LA TRACCIA  (6 episodi)](#1-la-traccia-6-episodi)
+  - [1  LA TRACCIA  (7 episodi)](#1-la-traccia-7-episodi)
   - [2  LOFFICINA CHE GIRA SOLA  (15 episodi)](#2-lofficina-che-gira-sola-15-episodi)
   - [3  LA MENTE CHE PARLA  (5 episodi)](#3-la-mente-che-parla-5-episodi)
   - [4  LA BIBLIOTECA DELLE FONTI  (7 episodi)](#4-la-biblioteca-delle-fonti-7-episodi)
   - [5  LA GRANDE MAPPA  (31 episodi)](#5-la-grande-mappa-31-episodi)
-  - [6  LESERCITO SILENZIOSO  (7 episodi)](#6-lesercito-silenzioso-7-episodi)
-  - [7  IL DIRETTORE  (15 episodi)](#7-il-direttore-15-episodi)
+  - [6  LESERCITO SILENZIOSO  (8 episodi)](#6-lesercito-silenzioso-8-episodi)
+  - [7  IL DIRETTORE  (16 episodi)](#7-il-direttore-16-episodi)
 - [Verticale: Finanza personale](#verticale-finanza-personale)
   - [1  IL VALORE  (1 episodi)](#1-il-valore-1-episodi)
   - [2  SPENDERE MENO DI QUANTO ENTRA  (0 episodi)](#2-spendere-meno-di-quanto-entra-0-episodi)
@@ -20,7 +20,7 @@
 
 # PIETRE — l'indice dei concetti (concetto → episodio)
 
-*Generato da `generate_pietre_index.py` il 2026-07-28 — VISTA dell'`asse_nina`*
+*Generato da `generate_pietre_index.py` il 2026-08-22 — VISTA dell'`asse_nina`*
 *in `episodes.json`. Non si edita a mano: si rigenera dopo `build_episodes_json.py`.*
 
 > Ogni **Pietra** è un concetto fondante. Due verticali: **Tech** (⟡, l'arco IA) e
@@ -44,7 +44,7 @@
 | 3 | `EP_N2_55` La Giuntura che Respira | Le giunture sono i punti dove il disordine ama attaccare, ma il movime | adattato | — |
 | 4 | `EP_N2_62` Il Nodo che Respira | Una giuntura trasferisce forza mantenendo flessibilità: due parti si c | adattato | — |
 
-## ⟡1 · LA TRACCIA  (6 episodi)
+## ⟡1 · LA TRACCIA  (7 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -54,6 +54,7 @@
 | 2 | `EP_N2_17` La Traccia | Un gesto documentato diventa un insegnamento che vive oltre il momento | adattato | — |
 | 3 | `EP_N2_54` Il Dito che Insegna | Una traccia è un gesto che rimane e continua a insegnare anche quando  | adattato | — |
 | 4 | `EP_N2_61` Il Dito nel Fango | Una traccia è un gesto che continua a insegnare nel tempo, dopo che la | adattato | — |
+| 5 | `EP_N2_67` Il Segno che Rimane | Una traccia è un insegnamento muto: il segno che lasci insegna il gest | adattato | — |
 
 ## ⟡2 · L'OFFICINA CHE GIRA SOLA  (15 episodi)
 
@@ -133,7 +134,7 @@
 | 4 | `EP_N2_43` Due fotografi, uno spazio | t-SNE e UMAP sono due macchine fotografiche diverse che guardano lo st | adattato | ⟡4 |
 | 4 | `EP_SEED_RETE_L2_UMAP` t-SNE contro UMAP — due modi di fare la foto | vedere il sistema come una mappa | fonte | ⟡4 |
 
-## ⟡6 · L'ESERCITO SILENZIOSO  (7 episodi)
+## ⟡6 · L'ESERCITO SILENZIOSO  (8 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -144,8 +145,9 @@
 | 2 | `EP_N2_52` Il Battito del Guardiano | Un guasto che non fa rumore è più pericoloso di uno che grida; i veri  | adattato | — |
 | 3 | `EP_N2_16` Lo Specchio del Giudice | Un sistema intelligente può guardarsi dentro, trovare i propri errori  | adattato | ⟡1 |
 | 3 | `EP_N2_59` Il Polso che Non Respira | Il guasto più pericoloso è quello che non grida: è il sistema che dice | adattato | — |
+| 4 | `EP_N2_65` Il Puntino che Sussurra | Il pericolo vero non è il rumore che avverte: è quello che continua a  | adattato | — |
 
-## ⟡7 · IL DIRETTORE  (15 episodi)
+## ⟡7 · IL DIRETTORE  (16 episodi)
 
 | giro | episodio | concetto | stato | richiama |
 |:--:|---|---|:--:|---|
@@ -164,6 +166,7 @@
 | 2 | `EP_SEED_CONTROLLO_L1_SCAFFOLDING` Il carico va sullo schermo, non nella testa | un posto solo per governare il disordine | fonte | — |
 | 2 | `EP_SEED_CONTROLLO_L1_STATOLIVE` Se è acceso, non se dovrebbe — lo stato live | un posto solo per governare il disordine | fonte | — |
 | 3 | `EP_N2_60` Il Direttore Invisibile | La coordinazione è il vero lavoro: senza qualcuno che orchestra il tim | adattato | — |
+| 4 | `EP_N2_66` Il Ticchettio che Salva | Un gruppo di aiutanti funziona solo se qualcuno decide chi fa cosa e q | adattato | — |
 
 ---
 

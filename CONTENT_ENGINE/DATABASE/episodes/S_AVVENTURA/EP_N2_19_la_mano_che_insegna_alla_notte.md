@@ -205,7 +205,7 @@ Nina la guardò. Era soddisfatta, ma non del tutto a posto: c'era ancora qualcos
 **Pietre richiamate:** ⟡2-EP05 (la mano deve sapere prima · la macchina non capisce, ripete)
 **3 strati:** bambino = la macchina è come un'apprendista che copia e non pensa · curioso = garbage in, garbage out: l'errore nel gesto iniziale si propaga moltiplicato su ogni esecuzione · grande = in ML/automazione, il training set è il momento della mano; non esiste autocorrezione nel ciclo di esecuzione, solo amplificazione del pattern appreso
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** In GENESIS/V32/MIMS, il training set è il gesto che insegni alla macchina. Bias o errori sistematici nel dataset si ripetono amplificati in ogni predizione. Il controllo umano pre-deployment è il momento della mano — dopo, la macchina amplifica senza intermediari.
+**Aggancio reale:** In GENESIS, il training set è il gesto che insegni alla macchina. Bias o errori sistematici nel dataset si ripetono amplificati in ogni predizione. Il controllo umano pre-deployment è il momento della mano — dopo, la macchina amplifica senza intermediari.
 **Open loop → Casella 20:** Nina guarda i cento pezzi sul vassoio e trova un dettaglio ripetuto che non aveva messo lei — o credeva di non averlo messo. *Quell'errore era nel suo gesto dall'inizio, invisibile fino alla moltiplicazione? E come si trova un errore che non sai di fare?*
 
 ---

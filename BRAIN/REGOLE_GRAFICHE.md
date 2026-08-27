@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [REGOLE GRAFICHE  dashboard TITANIUM_OS](#regole-grafiche-dashboard-titaniumos)
+  - [1  PALETTE  5 accent  neutro  allarme](#1-palette-5-accent-neutro-allarme)
+    - [Doppioni ritirati (e dove vanno)](#doppioni-ritirati-e-dove-vanno)
+    - [Come si applica](#come-si-applica)
+    - [Come si controlla](#come-si-controlla)
+  - [2  LINGUA ICONE  lucide nellinterfaccia, emoji nel contenuto](#2-lingua-icone-lucide-nellinterfaccia-emoji-nel-contenuto)
+    - [La regola](#la-regola)
+    - [Il confine, in una riga](#il-confine-in-una-riga)
+    - [Come si controlla](#come-si-controlla)
+  - [Cosa NON è deciso qui](#cosa-non-è-deciso-qui)
+
+<!-- /TOC -->
+
 # REGOLE GRAFICHE — dashboard TITANIUM_OS
 
 *Scritte il 16/08/2026 (#70). Erano segnate "da fare insieme" dalla #57 (8-9 luglio) e

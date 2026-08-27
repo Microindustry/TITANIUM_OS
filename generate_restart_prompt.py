@@ -67,18 +67,40 @@ def main():
     # handoff sarebbe cieco. In quel caso derivo dai commit git di oggi.
     ctx_date = (ctx.get("session_date") or ctx.get("last_updated", ""))[:10]
     today_commits = _git_today_subjects()
-    ctx_is_stale = ctx_date != today and bool(today_commits)
+    # v1.2 (#71, 27/08/2026) - BUG TROVATO SUL CAMPO: la riga era
+    #     ctx_is_stale = ctx_date != today and bool(today_commits)
+    # cioe' il rilevatore di staleness si SPEGNEVA proprio quando non c'era
+    # nulla su cui ripiegare, e allora stampava il contesto vecchio SENZA
+    # avvisare. Il 27/08 ha prodotto un handoff intestato 'sessione #21 -
+    # ultima #20 del 03/06' mentre eravamo alla #71: tre mesi di contesto
+    # spacciati per attuali, in silenzio. Un handoff che non sa e' innocuo;
+    # uno che mente no. Ora: stale = la data non e' oggi, punto. E se non c'e'
+    # da cosa derivare, LO DICHIARA invece di riempire il vuoto col vecchio.
+    ctx_is_stale = ctx_date != today
 
     if ctx_is_stale:
-        last_discussed = (
-            "[auto-derivato dai commit di oggi — session_context.json fermo a "
-            f"{ctx_date or 'N/A'}; ricorda il tool MCP update_session_context]\n  "
-            + "; ".join(today_commits[:4])
-        )
-        active_topics = today_commits
+        if today_commits:
+            last_discussed = (
+                '[auto-derivato dai commit di oggi - session_context.json fermo a '
+                f"{ctx_date or 'N/A'}; ricorda il tool MCP update_session_context]"
+                + chr(10) + '  ' + '; '.join(today_commits[:4])
+            )
+            active_topics = today_commits
+        else:
+            # niente contesto e niente commit: si dichiara il vuoto,
+            # non lo si riempie con roba di tre mesi fa
+            last_discussed = (
+                f"[NON LO SO: session_context.json e' fermo al {ctx_date or 'N/A'} e "
+                'oggi non ci sono ancora commit. Quello che segue viene da '
+                'STATE.json (milestone attivo), NON dal contesto della chat.]'
+                + chr(10) + '  ' + str(state.get('active_milestone', 'N/A'))
+            )
+            active_topics = []
         decisions_made = []           # non inventare decisioni: lascia ai commit
-        open_threads = ctx.get("open_threads", [])  # i thread restano validi
-        next_action = state.get("next_step", ctx.get("next_action", "N/A"))
+        # i thread restano (non si cancella mai) ma DATATI: a mesi di distanza
+        # non sono piu' 'aperti oggi', sono 'aperti allora'
+        open_threads = [f"(dal {ctx_date or 'N/A'}) {t}" for t in ctx.get('open_threads', [])]
+        next_action = state.get('next_step', ctx.get('next_action', 'N/A'))
     else:
         last_discussed = ctx.get("last_discussed", state.get("last_action", "N/A"))
         active_topics = ctx.get("active_topics", [])
@@ -86,12 +108,24 @@ def main():
         open_threads = ctx.get("open_threads", [])
         next_action = ctx.get("next_action", state.get("next_step", "N/A"))
 
-    header_warn = "  ⚠ contesto AUTO-DERIVATO da git (chiama update_session_context)\n" if ctx_is_stale else ""
+    # se il contesto e' stale il numero di sessione lo dava comunque ctx
+    # (fermo alla #20): la fonte viva e' STATE.session_count
+    if ctx_is_stale:
+        session_num = state.get('session_count', session_num)
+        next_session = int(session_num) + 1 if str(session_num).isdigit() else '?'
+        riga_sessione = f"Ultima sessione: #{session_num} - contesto di chat fermo al {ctx_date or 'N/A'}"
+        header_warn = ('  [!] session_context.json STALE (' + (ctx_date or 'N/A') + '): '
+                       + ('contesto derivato dai commit di oggi' if today_commits
+                          else "nessun commit oggi -> sotto c'e' STATE.json, non la chat")
+                       + ' - chiama update_session_context')
+    else:
+        riga_sessione = f"Ultima sessione: #{session_num} - {ctx.get('session_date', 'N/A')}"
+        header_warn = ''
 
     lines = [
         f"=== RIAVVIO SESSIONE #{next_session} — {now} ===",
-        f"Ultima sessione: #{session_num} — {ctx.get('session_date', 'N/A')}",
-        header_warn.rstrip("\n") if header_warn else "",
+        riga_sessione,
+        header_warn,
         "━━━ STAVAMO PARLANDO DI ━━━",
         last_discussed,
         "",

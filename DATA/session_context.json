@@ -1,33 +1,32 @@
 {
-  "session_number": 20,
-  "session_date": "2026-06-03",
-  "last_updated": "2026-06-03T21:30:00",
-  "last_discussed": "Automazioni notturne: da SPENTE/rotte a portabili e ATTIVE sul fisso. De-hardcodati gli script (path Getac->teo) via resolver centrale _ti_paths.bat, registrati i 6 task in Task Scheduler, finetune ottimizzato su GPU (llamafactory 0.9.5 installato). Poi rappresentate nella dashboard: sottocartella Notturne nel tab ATTIVE, voce sidebar blu sotto AUTOMAZ., e STATO LIVE letto da Task Scheduler (endpoint Flask /api/tasks/notturne via Get-ScheduledTask + proxy Vite).",
+  "session_number": 71,
+  "session_date": "2026-08-27",
+  "last_updated": "2026-08-27",
+  "last_discussed": "Sessione #71 — l'handoff mentiva e l'ho verificato riga per riga. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11. API :5001 non e' giu' (17 endpoint su 18 danno 200). Il RAG e' rientro, non perdita (21.630 -> 22.637, sale). Trovato e riparato il guasto vero: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era troncato a meta' scrittura — la radice era md_view_pipeline che riscriveva l'indice INTERO in modo non atomico a ogni singolo file. Applicato il batch 3 gruppo 1 (10 episodi, gate canone da 22 righe a 8) e chiuso S3 della scala GENESIS (CORE/repos.py, grep SELECT fuori = 0). Poi, su richiesta di Matteo, integrazione ecosistema + versioni + profilo GitHub.",
   "active_topics": [
-    "Automazioni notturne portabili: _ti_paths.bat resolver (TI_ROOT/PYTHON/GH no-hardcode)",
-    "6 task registrati e Pronta (StoryAgent 02:07, Research 03:37, Push 04:07, Brief 07:30, DeepFreeze dom 03:00, FineTune dom 01:00)",
-    "Finetune su GPU GTX 1070 (fp16) + guard llamafactory; llamafactory 0.9.5 installato",
-    "Dashboard: vista/sidebar Notturne + stato live da Task Scheduler (/api/tasks/notturne)",
-    "Flask api_server riavviato detached con il nuovo endpoint; Vite riavviato (proxy /api/tasks)",
-    "TI_Watchdog ri-registrato (AtLogon, RunLevel Highest) + watchdog.py reso pythonw-safe (guard sys.stdout None); ora supervisiona api_server + mente_watcher (status fresco, 0 restart)"
+    "view_index.json troncato: scrittura atomica tmp+fsync+os.replace con retry Windows, rebuild che scrive una volta sola (487 view)",
+    "canon_guard e genesis_seed --albero non erano eseguibili a mano: UnicodeEncodeError su console cp1252, stdout in utf-8",
+    "batch 3 gruppo 1: 10 episodi corretti (aggiunta la variante GENESIS/TITANIUM_OS che il tool non copriva), 7 SOSPESI con motivo scritto",
+    "S3 scala GENESIS chiuso: CORE/repos.py, connessione iniettata, TABELLE come whitelist contro l'iniezione sul nome tabella",
+    "profilo GitHub pubblicava v1.1.0 (versione dello SCHEMA di STATE) invece di v3.0.0: ora la versione viene dal tag git",
+    "generate_restart_prompt: lo staleness detector si spegneva quando non c'erano commit -> handoff di 3 mesi fa spacciato per attuale",
+    "_VAULT escluso dalla view pipeline: generava view di CREDENZIALI_BACKUP.md servite dall'API"
   ],
   "open_threads": [
-    "register_night_tasks.ps1 + register_watchdog.ps1 superano set_tasks_hl/fix_tasks_admin/SETUP_ADMIN_COMPLETE (ancora hardcoded benen): valutare se rimuovere i vecchi",
-    "CLAUDE_CODE.bat + doskey claude-ti puntano a claude.exe Roaming inesistente (icona desktop Store funziona)",
-    "Rifinire PITCH insieme + MIMS brevetto B2 (priorita) + EVA WhatsApp pilot",
-    "Refactoring storieData.ts (5772 righe) — elaborare con Matteo prima di agire"
+    "SOSPESI batch 3 (decide Matteo): 03/05/46/48/56 vogliono 5 riscritture mirate, NON il collasso generico su GENESIS (li' il pilastro giusto e' quello meccanico)",
+    "EP_N2_28 e 55 da RIGENERARE: troncati a meta' parola dal bug max_tokens pre-#69",
+    "EP_N2_16: due numeri inventati spacciati per FATTI (70% affidabilita', errori da 10% a 2-3%) che la regola generica non vede",
+    "S4 della scala GENESIS: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI)",
+    "GitHub Release di v3.0.0 mai creata: il tag c'e' ed e' pushato, la Release no. E da v3.0.0 sono passati 646 commit senza un tag nuovo",
+    "7o dipartimento: 9 agenti su 12 sono di contenuto/sistema parcheggiati sotto OFFICINA perche' GENESIS non e' fra i 6",
+    "Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili"
   ],
   "decisions_made": [
-    "Path portabili via resolver _ti_paths.bat (DRY), niente piu' C:\\Users\\benen negli script notturni",
-    "Risoluzione Python/gh senza sub-shell (PATH-search) per evitare il banner AutoRun catturato nel for /f",
-    ".bat sempre CRLF + ASCII (cmd non legge LF; log OEM puliti); .ps1 con accenti => UTF-8 con BOM",
-    "Finetune su GPU (fp16 true) con guard llamafactory (skip pulito se assente)",
-    "Stato live task via Get-ScheduledTask (State/LastTaskResult lingua-indipendenti), non schtasks CSV localizzato",
-    "Notturne in dashboard come sotto-sezione/sotto-voce (non nuovo livello/tab), colore indigo/blu"
+    "Matteo: applicare il gruppo 1 del batch 3 e VALUTARE gli altri invece di applicarli alla cieca",
+    "Il collasso generico GENESIS/X -> GENESIS non si applica dove il referente e' meccanico: sposterebbe il falso invece di toglierlo",
+    "La versione del progetto si deriva dal TAG git, non da un campo copiato a mano (coerente con RELEASES.md: una release = un tag)",
+    "Un handoff che non sa deve dirlo: meglio dichiarare il vuoto che riempirlo con contesto vecchio",
+    "Release nuova (v3.1.0 minor o v4.0.0 major): non la decide il sistema, la firma Matteo"
   ],
-  "next_action": "Sessione chiusa. Riprendere da: watchdog sul fisso (ri-registrare per resilienza api_server), poi PITCH + MIMS brevetto B2 + EVA WhatsApp pilot.",
-  "blockers": [
-    "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
-    "Silent blocks: decisione v.A (senza) vs v.B (18mm) — prerequisito V8"
-  ]
+  "next_action": "Decidere i 5 SOSPESI del batch 3 (proposta: 5 riscritture mirate) e i 2 episodi da rigenerare. Poi S4: organigramma GENESIS in dashboard. In parallelo: creare la GitHub Release di v3.0.0 e decidere il tag nuovo."
 }

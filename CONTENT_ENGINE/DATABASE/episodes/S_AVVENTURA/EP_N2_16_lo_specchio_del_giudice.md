@@ -203,7 +203,7 @@ THEMIS non risponde subito. Poi dice: «Questa è la casella 17.»
 <!-- DIDATTICA -->
 **Pietra:** `⟡6` L'Esercito Silenzioso (giro 3). *Un sistema intelligente non si affida a un solo occhio: passa ogni decisione attraverso filtri diversi — meccanico, normativo, storico — e blocca l'errore prima che diventi materia.*
 **Pietre richiamate:** ⟡1 (la misura giusta, EP_N2_01 — il bottone che regge) · ⟡5 (la decisione come azione, EP_N2_13-15)
-**3 strati:** bambino = lo specchio a tre ante, le tre sarte che misurano prima di tagliare · curioso = la validazione incrociata: ogni agente vede una classe di errori che gli altri non vedono · grande = sistema GENESIS/MIMS con agenti FORGE+LEX+THEMIS+decisore umano; la struttura di validazione vale il 70% dell'affidabilità; errori da 10% a 2-3%
+**3 strati:** bambino = lo specchio a tre ante, le tre sarte che misurano prima di tagliare · curioso = la validazione incrociata: ogni agente vede una classe di errori che gli altri non vedono · grande = sistema GENESIS con agenti FORGE+LEX+THEMIS+decisore umano; la struttura di validazione vale il 70% dell'affidabilità; errori da 10% a 2-3%
 **Cuore:** la curiosità è un superpotere (Nina trova il limite del controllore da sola) · fai bene le cose vere (controllare prima che diventi metallo
 
 ## FATTI (per il RAG)

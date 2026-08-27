@@ -29,6 +29,11 @@ import sqlite3
 import sys
 from pathlib import Path
 
+# S3: la SQL vive tutta in repos.py — qui non ce n'e' piu' nessuna.
+# (stesso preambolo di genesis_seed: lanciato come script, sys.path[0] e' CORE/)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from CORE.repos import TABELLE, conteggi, schema_version  # noqa: E402
+
 BASE = Path(__file__).resolve().parents[1]
 DB_PATH = Path(os.environ.get("GENESIS_DB", str(BASE / "DATA" / "genesis.db")))
 
@@ -139,8 +144,8 @@ CREATE TABLE IF NOT EXISTS tools (
 );
 """
 
-TABLES = ["departments", "agents", "agent_runs", "agent_tasks",
-          "agent_crons", "skills", "sop_tasks", "tools"]
+# Fonte unica dei nomi di tabella: repos.TABELLE (S3).
+TABLES = TABELLE
 
 
 def connect(db_path: Path | str | None = None) -> sqlite3.Connection:
@@ -172,11 +177,8 @@ def info(db_path: Path | str | None = None) -> dict:
     if not path.exists():
         return out
     with connect(path) as con:
-        out["schema_version"] = con.execute("PRAGMA user_version").fetchone()[0]
-        presenti = {r["name"] for r in con.execute(
-            "SELECT name FROM sqlite_master WHERE type='table'")}
-        out["tables"] = {t: (con.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
-                             if t in presenti else None) for t in TABLES}
+        out["schema_version"] = schema_version(con)
+        out["tables"] = conteggi(con, TABLES)
     return out
 
 

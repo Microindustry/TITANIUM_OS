@@ -1,21 +1,24 @@
 ====================================================
  STATO TITANIUM_OS — file fisico (auto-aggiornato)
- Tuesday 28 July 2026, 04:08
+ Wednesday 26 August 2026, 15:01
 ====================================================
 
->>> ✓  TUTTO OK — il sistema gira da solo  <<<
+>>> ⚠  C'È QUALCOSA DA GUARDARE  <<<
 
 — Task notturni —
-  ✓ TI_StoryAgent      OK   (ultima: 28/07 02:07)
-  ✓ TI_NightResearch   OK   (ultima: 28/07 03:37)
-  ✓ TI_NightAudit      OK   (ultima: 28/07 03:52)
-  ✓ TI_NightPush       OK   (ultima: 28/07 04:07)
-  ✓ TI_DailyBrief      OK   (ultima: 27/07 07:30)
-  ✓ TI_Watchdog        OK   (ultima: 28/07 03:37)
+  ✓ TI_StoryAgent      OK   (ultima: 26/08 14:58)
+  ✓ TI_NightResearch   OK   (ultima: 26/08 14:58)
+  ✓ TI_NightAudit      OK   (ultima: 26/08 14:58)
+  ✓ TI_NightPush       OK   (ultima: 26/08 14:58)
+  ✓ TI_DailyBrief      OK   (ultima: 26/08 14:58)
+  ✓ TI_Watchdog        OK   (ultima: 26/08 15:00)
 
 — Servizi —
   · API Server (5001): attivo
   · MENTE Watcher: attivo
+
+— ⚠ GUASTI dai log (ultime 36h) —
+  ⚠ night_audit_run.log: 2026-08-26 14:59:13 [night_audit         ] WARNING  LLM audit fallito (Error code: 400 - {
 
 Questo file si riscrive da solo (catena notturna + watchdog).
 Se vedi ⚠, apri DATA/logs/ del task indicato.

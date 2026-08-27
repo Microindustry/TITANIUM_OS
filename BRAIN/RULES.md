@@ -1,3 +1,27 @@
+<!-- TOC -->
+
+- [LE 12 REGOLE DELLECOSISTEMA](#le-12-regole-dellecosistema)
+  - [1. Niente è finito  ogni cosa è una versione.](#1-niente-è-finito-ogni-cosa-è-una-versione)
+  - [2. Identifica  Automatizza  Scala.](#2-identifica-automatizza-scala)
+  - [3. Cattura mentre costruisci  non ricordare, documenta.](#3-cattura-mentre-costruisci-non-ricordare-documenta)
+  - [4. Leva cognitiva: 1 input  N output.](#4-leva-cognitiva-1-input-n-output)
+  - [5. Costruisci ciò che usi  meta-ricorsività.](#5-costruisci-ciò-che-usi-meta-ricorsività)
+  - [6. Output misurabile prima di tutto.](#6-output-misurabile-prima-di-tutto)
+  - [7. Tutto si connette  nessun silo.](#7-tutto-si-connette-nessun-silo)
+  - [8. Proteggi il sapere.](#8-proteggi-il-sapere)
+  - [9. Reinvesti il margine  60 anno 1.](#9-reinvesti-il-margine-60-anno-1)
+  - [10. Libertà sopra profitto.](#10-libertà-sopra-profitto)
+  - [11. Il sistema PROPONE, lumano APPROVA.](#11-il-sistema-propone-lumano-approva)
+  - [12. Insegna ciò che impari.](#12-insegna-ciò-che-impari)
+  - [REGOLE SISTEMA  PDF_TO_MEMORY](#regole-sistema-pdftomemory)
+    - [Gerarchia output](#gerarchia-output)
+    - [Regole versioning](#regole-versioning)
+    - [Regole classificazione ATTO](#regole-classificazione-atto)
+    - [Flusso drag  drop](#flusso-drag-drop)
+    - [Come avviare](#come-avviare)
+
+<!-- /TOC -->
+
 <!-- REGOLE:start (derivato da CLAUDE.md — non editare a mano) -->
 
 # LE 12 REGOLE DELL'ECOSISTEMA

@@ -20,6 +20,14 @@
       "name": "mente-watcher",
       "runtimeExecutable": "python",
       "runtimeArgs": ["NODES/MENTE_WATCHER/mente_watcher.py"]
+    },
+    {
+      "name": "founderos-reference",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 4100,
+      "autoPort": false,
+      "cwd": "ARCHIVE/REFERENCE/founderos"
     }
   ]
 }

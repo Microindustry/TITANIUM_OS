@@ -191,7 +191,7 @@ Nina la guarda dalla sala rotonda. Le altre caselle accese formano un sentiero d
 **Pietre richiamate:** ⟡1 (la traccia / "non ricordare, documenta") · il calibro di FORGE (EP_N2_03: la mano deve sapere prima) · il Disordine come forza che consuma ciò che non è strutturato
 **3 strati:** bambino = il quaderno della nonna con i nodi che vivono ancora · curioso = la traccia del *come* è un insegnante che non dorme mai · grande = il Grande Loop come principio di preservazione della conoscenza: il sapere documentato entra nel patrimonio collettivo e si moltiplica geometricamente nel tempo
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte — e documenta il come: è lo strumento che duri
-**Aggancio reale:** Nel sistema GENESIS/TITANIUM_OS/MIMS, ogni episodio Nina è una traccia: il RAG la recupera, altri creatori la usano, la insegnano, la migliorano. Nina insegna ai bambini il meccanismo della loro stessa educazione — il potere della documentazione e del riutilizzo.
+**Aggancio reale:** Nel sistema GENESIS, ogni episodio Nina è una traccia: il RAG la recupera, altri creatori la usano, la insegnano, la migliorano. Nina insegna ai bambini il meccanismo della loro stessa educazione — il potere della documentazione e del riutilizzo.
 **Open loop → Casella 11:** Non tutte le tracce pesano uguale: quelle che mostrano solo il *cosa* contro quelle che mostrano il *come*. E se tutte le tracce della Biblioteca fossero collegate come stelle in una costellazione — cosa si vedrebbe guardandole insieme?
 
 ---
