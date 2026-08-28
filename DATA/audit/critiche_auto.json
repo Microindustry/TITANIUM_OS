@@ -21,7 +21,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-26"
+    "last_seen": "2026-08-28"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -33,7 +33,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-26"
+    "last_seen": "2026-08-28"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -45,7 +45,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-26"
+    "last_seen": "2026-08-28"
   },
   {
     "id": "AUD-42b270dc40",
@@ -57,7 +57,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-26"
+    "last_seen": "2026-08-28"
   },
   {
     "id": "AUD-ea9df13d6a",
@@ -68,8 +68,10 @@
     "finding": "API server :5001 giù: dal next_step '7 endpoint su 9 danno 500'. Il grounding di Nina ha retto solo grazie al fallback sul motore diretto, ma il fallback non è una soluzione stabile: qualsiasi componente che dipenda da :5001 senza fallback è cieco.",
     "azione": "Avviare il server, leggere lo stacktrace del primo endpoint 500, correggere la causa radice (probabilmente variabile d'ambiente mancante o dipendenza non installata post-rebuild). Verificare che tutti e 9 gli endpoint tornino 200 prima di riattivare le automazioni notturne.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-22"
+    "status": "resolved",
+    "last_seen": "2026-08-22",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-de9896966f",
@@ -80,8 +82,10 @@
     "finding": "RAG a 22.543 chunk contro ~32.800 del 24/06: delta di ~10.000 chunk (-30%) senza spiegazione confermata. Il next_step lo definisce 'da capire se rientro post-rebuild o perdita'. Fino a chiarimento, ogni retrieve di Nina lavora su un corpus incompleto e il grounding dei pilastri è degradato.",
     "azione": "Eseguire un conteggio puntuale delle sorgenti indicizzate (file per cartella MENTE) e confrontarlo con lo snapshot del 24/06 per isolare quali directory mancano. Se è un rebuild parziale, completare il reindex; se è perdita, ripristinare da backup prima della prossima notte automatica.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-22"
+    "status": "resolved",
+    "last_seen": "2026-08-22",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-a65c7f4587",
@@ -92,8 +96,10 @@
     "finding": "Batch 3 (18 episodi con GENESIS/V32 senza verbo software + 2 episodi ROTTI EP_N2_28 e 55 troncati a metà parola) è dry-run pronto da questa sessione ma attende decisione di Matteo. Il rischio non è il ritardo in sé: canon_guard è in stato ambra (26 violazioni dichiarate) e ogni nuova notte di story_agent aggiunge episodi sul corpus non ancora sanato. Più si aspetta, più il batch cresce e più la bonifica diventa costosa.",
     "azione": "Matteo deve dare il via al batch 3 nella prossima sessione diurna: separare i 3 gruppi (10 correzione sicura / 4 da giudicare / 2 da rigenerare) e procedere almeno con i 10 sicuri. I 2 ROTTI (EP_N2_28 e 55) vanno rigenerati, non rattoppati: pianificare la rigenerazione nella stessa sessione per non lasciarli in corpus con testo troncato.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-22"
+    "status": "resolved",
+    "last_seen": "2026-08-22",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-96dcf18224",
@@ -104,8 +110,10 @@
     "finding": "Semantic Scholar bloccato da rate-limit non autenticato. Log 2026-08-21: \"2026-08-21 03:38:38 [research_agent] WARNING [backoff] https://api.semanticscholar.org/graph/v1/paper/search HTTP 429 — attendo 1s\" e \"2026-08-21 03:39:01 WARNING [semantic_scholar] 429 Client Error: for url: ...query=machine+tool+frame+structural+rigidity+gu\". La chiave SEMANTIC_SCHOLAR_API_KEY è in .env ma i log indicano che i 429 si ripetono: la chiave non è caricata o non è attiva. Stesso ciclo: arxiv ha dato timeout \"2026-08-21 03:39:52 WARNING [arxiv] HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=15)\". La notte di ricerca è uscita a mani vuote.",
     "azione": "Verificare che SEMANTIC_SCHOLAR_API_KEY sia presente nelle variabili utente Windows (non in .env che nessuno legge) e che il loader _ti_paths.bat la esporti correttamente. Testare la chiave con una chiamata manuale prima della prossima notte. Per arxiv aumentare il timeout da 15s o aggiungere retry esponenziale.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-22"
+    "status": "resolved",
+    "last_seen": "2026-08-22",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-8beccb6275",
@@ -116,8 +124,10 @@
     "finding": "Il canone manuale critico è fermo da 44 giorni con 19 critiche attive non riverificate: log 2026-08-22 \"canone manuale fermo da 44 giorni (>30) — 19 attive da riverificare\". In parallelo, il canone dichiarato in _CANONE.md si ferma a EP_N2_64 mentre su disco esiste EP_N2_67: log 2026-08-22 \"su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md\". Tra le 19 critiche attive potrebbero esserci problemi già risolti (falsi allarmi fissi) o problemi nuovi non ancora registrati.",
     "azione": "Aprire critiche_manuali.json e riverificare le 19 attive: chiudere quelle risolte, aggiornare quelle cambiate. Contestualmente aggiornare riga 32 e footer di _CANONE.md da EP_N2_64 a EP_N2_67 (edit manuale, nessun generatore automatico esiste).",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-22"
+    "status": "resolved",
+    "last_seen": "2026-08-22",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-1e5ba9b904",
@@ -128,8 +138,10 @@
     "finding": "Lo slot aggancio_reale continua a essere riempito con invenzioni dentro GENESIS: dalla bussola_open \"il sistema notturno di consolidamento dei pattern motori non esiste\". La bonifica MIMS è chiusa (P0 risolto), ma il meccanismo generativo non è cambiato: _CANONE.md non è mai iniettato nel prompt di nina_agent.py e retrieve_context() interroga solo il RAG sul concetto. Il falso si autogenera a ogni notte e i file speculati finiscono in MENTE, rientrando nel RAG al ciclo successivo.",
     "azione": "Aggiungere in nina_agent.py l'iniezione del testo curato di _CANONE.md (sezione pilastri) nel prompt di sistema prima della chiamata LLM. Aggiungere una regola esplicita: se aggancio_reale non trova un fatto verificabile nel contesto iniettato, restituire stringa vuota invece di generare. Questo chiude il loop di autoalimentazione.",
     "fonte": "auto-audit (claude-sonnet-4-6)",
-    "status": "open",
-    "last_seen": "2026-08-22"
+    "status": "resolved",
+    "last_seen": "2026-08-22",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-f755a8f682",
@@ -3724,8 +3736,10 @@
     "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-08-23"
+    "status": "resolved",
+    "last_seen": "2026-08-23",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-c97403be34",
@@ -3736,8 +3750,10 @@
     "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-08-23"
+    "status": "resolved",
+    "last_seen": "2026-08-23",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-77abb05083",
@@ -3749,7 +3765,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-26"
+    "last_seen": "2026-08-28"
   },
   {
     "id": "AUD-6bb972e811",
@@ -3760,8 +3776,10 @@
     "finding": "research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-08-23"
+    "status": "resolved",
+    "last_seen": "2026-08-23",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -3786,8 +3804,10 @@
     "finding": "research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-08-23"
+    "status": "resolved",
+    "last_seen": "2026-08-23",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-28f6d2e10b",
@@ -3812,8 +3832,10 @@
     "finding": "night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-08-23"
+    "status": "resolved",
+    "last_seen": "2026-08-23",
+    "resolved_on": "2026-08-28",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-100c8670cd",
