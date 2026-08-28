@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-08-28  1 commit](#2026-08-28-1-commit)
   - [2026-08-27  2 commit](#2026-08-27-2-commit)
   - [2026-08-26  2 commit](#2026-08-26-2-commit)
   - [2026-08-25  1 commit](#2026-08-25-1-commit)
@@ -55,6 +56,13 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-08-28 · 1 commit
+- `6b6d3780` fix(#71): l'handoff mentiva — riparate le tre fonti che raccontavano il falso
+
+_episodi: 312 · critiche aperte: 17 (279 risolte) · RAG: 22637 chunk_
+
+
 
 ## 2026-08-27 · 2 commit
 - `d417f838` auto: nina_rag_loop - episodi Nina 26/08/2026
