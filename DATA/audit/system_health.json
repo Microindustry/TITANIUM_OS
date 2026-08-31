@@ -1,7 +1,7 @@
 {
-  "last_audit": "2026-08-29T15:10:21",
-  "date": "2026-08-29",
-  "git_head": "01f8fd8c",
+  "last_audit": "2026-08-31T13:27:46",
+  "date": "2026-08-31",
+  "git_head": "75d4ab22",
   "rag_chunks": 22688,
   "n_episodes": 312,
   "n_commits_7d": 15,
@@ -16,52 +16,52 @@
     {
       "log": "critiche_manuali.json",
       "tipo": "canone critiche stantio",
-      "riga": "canone manuale fermo da 52 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-08-29"
+      "riga": "canone manuale fermo da 53 giorni (>30) — 19 attive da riverificare",
+      "data": "2026-08-31"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-08-29"
+      "data": "2026-08-31"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "riflusso FATTI: ultimo output 7.1 giorni fa (soglia 7) — genesis_nodi_fatti.md",
-      "data": "2026-08-29"
+      "riga": "riflusso FATTI: ultimo output 9.1 giorni fa (soglia 7) — genesis_nodi_fatti.md",
+      "data": "2026-08-31"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
       "riga": "8 CVE fixabili in 4 pacchetti: aiohttp 3.14.1 (3), cryptography 48.0.1 (3), datasets 4.0.0 (1), pip 26.1.2 (1)",
-      "data": "2026-08-29"
+      "data": "2026-08-31"
     }
   ],
   "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 52,
+    "file_age_days": 53,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 8,
+    "canone_age_days": 10,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 1.0,
-    "snapshot RAG": 1.0,
+    "nina-loop": 1.9,
+    "snapshot RAG": 1.9,
     "inventario notturno": 0.0,
-    "retention disco": 1.0,
-    "AI news watcher": 2.0,
+    "retention disco": 1.9,
+    "AI news watcher": 4.0,
     "daily brief": 0.0,
-    "riflusso FATTI": 7.1
+    "riflusso FATTI": 9.1
   },
   "pip_audit": {
-    "vulns": 8,
+    "vulns": 11,
     "fixable": 8,
     "packages": [
       "aiohttp 3.14.1 (3)",
