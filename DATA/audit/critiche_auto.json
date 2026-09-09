@@ -1,5 +1,29 @@
 [
   {
+    "id": "AUD-6d6cc51989",
+    "date": "2026-09-09",
+    "git": "e7b76173",
+    "area": "SISTEMA",
+    "severity": "media",
+    "finding": "Nessun commit negli ultimi 7 giorni: il sistema non avanza.",
+    "azione": "Verificare che story_agent e la catena notturna producano output.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-09-09"
+  },
+  {
+    "id": "AUD-39053f2f2c",
+    "date": "2026-09-09",
+    "git": "e7b76173",
+    "area": "NOTTURNE",
+    "severity": "media",
+    "finding": "_CANONE.md: rilevato verita' unica stantia nelle ultime esecuzioni.",
+    "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
+    "fonte": "auto-audit (regole)",
+    "status": "open",
+    "last_seen": "2026-09-09"
+  },
+  {
     "id": "AUD-2326599473",
     "date": "2026-08-26",
     "git": "eac8338f",
@@ -9,7 +33,7 @@
     "azione": "Ispezionare DATA/logs/organi vivi e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-31"
+    "last_seen": "2026-09-09"
   },
   {
     "id": "AUD-f3b35dacc7",
@@ -21,7 +45,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-31"
+    "last_seen": "2026-09-09"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -33,7 +57,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-31"
+    "last_seen": "2026-09-09"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -45,7 +69,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-31"
+    "last_seen": "2026-09-09"
   },
   {
     "id": "AUD-42b270dc40",
@@ -57,7 +81,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-31"
+    "last_seen": "2026-09-09"
   },
   {
     "id": "AUD-ea9df13d6a",
@@ -3765,7 +3789,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-08-31"
+    "last_seen": "2026-09-09"
   },
   {
     "id": "AUD-6bb972e811",
