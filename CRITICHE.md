@@ -1,22 +1,3 @@
-<!-- TOC -->
-
-- [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
-  - [IL POLSO  31/08/2026 13:27](#il-polso-31082026-1327)
-  - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
-    - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
-    - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
-    - [GENESIS / Dashboard (2 da fare / 12)](#genesis-dashboard-2-da-fare-12)
-    - [Vita Natura (0 da fare / 3)](#vita-natura-0-da-fare-3)
-    - [Identity (0 da fare / 3)](#identity-0-da-fare-3)
-    - [Sistema (trasversale) (1 da fare / 5)](#sistema-trasversale-1-da-fare-5)
-    - [Audit Trimestrale  Cosa Rimuovere (1 da fare / 5)](#audit-trimestrale-cosa-rimuovere-1-da-fare-5)
-    - [Audit Opus  Dati live (1 da fare / 20)](#audit-opus-dati-live-1-da-fare-20)
-    - [Audit 15/06  Opus (0 da fare / 6)](#audit-1506-opus-0-da-fare-6)
-    - [Attacco Opus  17/06 (6 da fare / 9)](#attacco-opus-1706-6-da-fare-9)
-  - [AUTO-AUDIT  aperte (cartella clinica notturna)](#auto-audit-aperte-cartella-clinica-notturna)
-
-<!-- /TOC -->
-
 # CRITICHE — la cartella clinica di TITANIUM_OS
 
 *Vista FILE delle critiche (la vista dashboard è stata eliminata il 07/07/2026 su*
@@ -27,10 +8,10 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 31/08/2026 13:27
+## IL POLSO — 09/09/2026 09:48
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
-- **Auto-audit**: 6 aperte / 296 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
+- **Auto-audit**: 8 aperte / 298 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
 - **Bussola**: i to-do vivono in `DA_FARE_FATTO.md` (non duplicati qui)
 
 ---
@@ -186,6 +167,8 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
 
 - [ ] **[media · CANONE]** 26 formulazioni vietate 'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.
   - *azione: Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).*
+- [ ] **[media · NOTTURNE]** _CANONE.md: rilevato verita' unica stantia nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/_CANONE.md e correggere la causa.*
 - [ ] **[media · NOTTURNE]** organi vivi: rilevato organo silenzioso nelle ultime esecuzioni.
   - *azione: Ispezionare DATA/logs/organi vivi e correggere la causa.*
 - [ ] **[media · NOTTURNE]** _CANONE.md: rilevato serie oltre il canone dichiarato nelle ultime esecuzioni.
@@ -194,8 +177,10 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Ispezionare DATA/logs/pip_audit.json e correggere la causa.*
 - [ ] **[media · NOTTURNE]** critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni.
   - *azione: Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.*
+- [ ] **[media · SISTEMA]** Nessun commit negli ultimi 7 giorni: il sistema non avanza.
+  - *azione: Verificare che story_agent e la catena notturna producano output.*
 - [ ] **[bassa · MIMS]** Pilastro MIMS fermo al 30%.
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-08-31 13:27*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-09 09:48*
