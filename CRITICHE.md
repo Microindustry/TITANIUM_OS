@@ -8,10 +8,10 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 09/09/2026 09:48
+## IL POLSO — 10/09/2026 10:39
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
-- **Auto-audit**: 8 aperte / 298 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
+- **Auto-audit**: 18 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
 - **Bussola**: i to-do vivono in `DA_FARE_FATTO.md` (non duplicati qui)
 
 ---
@@ -165,6 +165,16 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
 
 ## AUTO-AUDIT — aperte (cartella clinica notturna)
 
+- [ ] **[alta · NOTTURNE]** story_agent_run.log: rilevato crash/eccezione nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/story_agent_run.log e correggere la causa.*
+- [ ] **[alta · NOTTURNE]** story_agent_run.log: rilevato errore esplicito nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/story_agent_run.log e correggere la causa.*
+- [ ] **[alta · NOTTURNE]** research_agent.log: rilevato errore esplicito nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/research_agent.log e correggere la causa.*
+- [ ] **[alta · NOTTURNE]** night_research.log: rilevato errore esplicito nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/night_research.log e correggere la causa.*
+- [ ] **[alta · NOTTURNE]** night_push.log: rilevato errore esplicito nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/night_push.log e correggere la causa.*
 - [ ] **[media · CANONE]** 26 formulazioni vietate 'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.
   - *azione: Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).*
 - [ ] **[media · NOTTURNE]** _CANONE.md: rilevato verita' unica stantia nelle ultime esecuzioni.
@@ -177,10 +187,20 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Ispezionare DATA/logs/pip_audit.json e correggere la causa.*
 - [ ] **[media · NOTTURNE]** critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni.
   - *azione: Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.*
+- [ ] **[media · NOTTURNE]** night_research.log: rilevato timeout di rete nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/night_research.log e correggere la causa.*
+- [ ] **[media · NOTTURNE]** research_agent.log: rilevato timeout di rete nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/research_agent.log e correggere la causa.*
+- [ ] **[media · NOTTURNE]** research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/research_agent.log e correggere la causa.*
+- [ ] **[media · NOTTURNE]** research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/research_agent.log e correggere la causa.*
+- [ ] **[media · NOTTURNE]** night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni.
+  - *azione: Ispezionare DATA/logs/night_research.log e correggere la causa.*
 - [ ] **[media · SISTEMA]** Nessun commit negli ultimi 7 giorni: il sistema non avanza.
   - *azione: Verificare che story_agent e la catena notturna producano output.*
 - [ ] **[bassa · MIMS]** Pilastro MIMS fermo al 30%.
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-09 09:48*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-10 10:39*

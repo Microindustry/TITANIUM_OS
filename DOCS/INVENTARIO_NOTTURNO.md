@@ -60,6 +60,14 @@
 
 <!-- INVENTARIO:INSERT -->
 
+## 2026-09-11 · 2 commit
+- `c763d4ec` auto: nina_rag_loop - episodi Nina 10/09/2026
+- `fb9b7560` auto: night_audit - cartella clinica 10/09/2026
+
+_episodi: 312 · critiche aperte: 18 (282 risolte) · RAG: 22688 chunk_
+
+
+
 ## 2026-09-10 · 2 commit
 - `f259cfb7` auto: nina_rag_loop - episodi Nina 09/09/2026
 - `5164050a` auto: night_audit - cartella clinica 09/09/2026
