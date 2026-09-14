@@ -8,7 +8,7 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 12/09/2026 10:15
+## IL POLSO — 13/09/2026 13:08
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
 - **Auto-audit**: 18 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
@@ -203,4 +203,4 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-12 10:15*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-13 13:08*
