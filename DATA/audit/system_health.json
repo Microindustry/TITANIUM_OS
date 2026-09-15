@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-09-14T09:25:50",
-  "date": "2026-09-14",
-  "git_head": "9f7a5d71",
+  "last_audit": "2026-09-15T22:07:12",
+  "date": "2026-09-15",
+  "git_head": "330a4d04",
   "rag_chunks": 22688,
   "n_episodes": 312,
-  "n_commits_7d": 13,
+  "n_commits_7d": 16,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -14,81 +14,63 @@
   },
   "log_issues": [
     {
-      "log": "story_agent_run.log",
-      "tipo": "crash/eccezione",
-      "riga": "Traceback (most recent call last):",
-      "data": "2026-09-13"
-    },
-    {
-      "log": "story_agent_run.log",
-      "tipo": "errore esplicito",
-      "riga": "anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & B",
-      "data": "2026-09-13"
-    },
-    {
-      "log": "night_push.log",
-      "tipo": "errore esplicito",
-      "riga": "⚠ night_audit_run.log: 2026-09-13 13:08:49 [night_audit         ] WARNING  LLM audit fallito (Error code: 400 - {",
-      "data": "2026-09-13"
-    },
-    {
       "log": "critiche_manuali.json",
       "tipo": "canone critiche stantio",
-      "riga": "canone manuale fermo da 67 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-09-14"
+      "riga": "canone manuale fermo da 69 giorni (>30) — 19 attive da riverificare",
+      "data": "2026-09-15"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 24 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-09-14"
+      "riga": "_CANONE.md fermo da 25 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-09-15"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-09-14"
+      "data": "2026-09-15"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "AI news watcher: ultimo output 17.8 giorni fa (soglia 4) — ai_news_watcher_state.json",
-      "data": "2026-09-14"
+      "riga": "AI news watcher: ultimo output 19.3 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-09-15"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "riflusso FATTI: ultimo output 22.9 giorni fa (soglia 7) — genesis_nodi_fatti.md",
-      "data": "2026-09-14"
+      "riga": "riflusso FATTI: ultimo output 24.4 giorni fa (soglia 7) — genesis_nodi_fatti.md",
+      "data": "2026-09-15"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
       "riga": "16 CVE fixabili in 5 pacchetti: aiohttp 3.14.1 (6), cryptography 48.0.1 (6), datasets 4.0.0 (1), pip 26.1.2 (2), transformers 5.6.0 (1)",
-      "data": "2026-09-14"
+      "data": "2026-09-15"
     }
   ],
   "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 67,
+    "file_age_days": 69,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 24,
+    "canone_age_days": 25,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 2.0,
-    "snapshot RAG": 2.0,
+    "nina-loop": 1.5,
+    "snapshot RAG": 1.5,
     "inventario notturno": 0.0,
-    "retention disco": 0.8,
-    "AI news watcher": 17.8,
+    "retention disco": 1.5,
+    "AI news watcher": 19.3,
     "daily brief": 0.0,
-    "riflusso FATTI": 22.9
+    "riflusso FATTI": 24.4
   },
   "pip_audit": {
     "vulns": 20,
@@ -108,9 +90,9 @@
   },
   "critiche": {
     "added": 0,
-    "auto_closed": 1,
+    "auto_closed": 2,
     "total": 300,
-    "open": 17
+    "open": 15
   },
   "verdict": "ATTENZIONE"
 }
