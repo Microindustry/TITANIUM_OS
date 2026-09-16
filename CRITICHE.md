@@ -1,7 +1,7 @@
 <!-- TOC -->
 
 - [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
-  - [IL POLSO  14/09/2026 09:25](#il-polso-14092026-0925)
+  - [IL POLSO  15/09/2026 22:07](#il-polso-15092026-2207)
   - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
     - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
     - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
@@ -27,10 +27,10 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 14/09/2026 09:25
+## IL POLSO — 15/09/2026 22:07
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
-- **Auto-audit**: 17 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
+- **Auto-audit**: 15 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
 - **Bussola**: i to-do vivono in `DA_FARE_FATTO.md` (non duplicati qui)
 
 ---
@@ -206,10 +206,6 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Ispezionare DATA/logs/pip_audit.json e correggere la causa.*
 - [ ] **[media · NOTTURNE]** critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni.
   - *azione: Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.*
-- [ ] **[media · NOTTURNE]** night_research.log: rilevato timeout di rete nelle ultime esecuzioni.
-  - *azione: Ispezionare DATA/logs/night_research.log e correggere la causa.*
-- [ ] **[media · NOTTURNE]** research_agent.log: rilevato timeout di rete nelle ultime esecuzioni.
-  - *azione: Ispezionare DATA/logs/research_agent.log e correggere la causa.*
 - [ ] **[media · NOTTURNE]** research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni.
   - *azione: Ispezionare DATA/logs/research_agent.log e correggere la causa.*
 - [ ] **[media · NOTTURNE]** research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni.
@@ -220,4 +216,4 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-14 09:25*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-15 22:07*
