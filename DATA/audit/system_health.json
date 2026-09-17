@@ -1,7 +1,7 @@
 {
-  "last_audit": "2026-09-16T17:29:06",
-  "date": "2026-09-16",
-  "git_head": "d035e8fb",
+  "last_audit": "2026-09-17T16:20:01",
+  "date": "2026-09-17",
+  "git_head": "d73e36e6",
   "rag_chunks": 22688,
   "n_episodes": 312,
   "n_commits_7d": 15,
@@ -16,61 +16,61 @@
     {
       "log": "critiche_manuali.json",
       "tipo": "canone critiche stantio",
-      "riga": "canone manuale fermo da 70 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-09-16"
+      "riga": "canone manuale fermo da 71 giorni (>30) — 19 attive da riverificare",
+      "data": "2026-09-17"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 26 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-09-16"
+      "riga": "_CANONE.md fermo da 27 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-09-17"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-09-16"
+      "data": "2026-09-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "AI news watcher: ultimo output 20.1 giorni fa (soglia 4) — ai_news_watcher_state.json",
-      "data": "2026-09-16"
+      "riga": "AI news watcher: ultimo output 21.1 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-09-17"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "riflusso FATTI: ultimo output 25.2 giorni fa (soglia 7) — genesis_nodi_fatti.md",
-      "data": "2026-09-16"
+      "riga": "riflusso FATTI: ultimo output 26.2 giorni fa (soglia 7) — genesis_nodi_fatti.md",
+      "data": "2026-09-17"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
       "riga": "16 CVE fixabili in 5 pacchetti: aiohttp 3.14.1 (6), cryptography 48.0.1 (6), datasets 4.0.0 (1), pip 26.1.2 (2), transformers 5.6.0 (1)",
-      "data": "2026-09-16"
+      "data": "2026-09-17"
     }
   ],
   "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 70,
+    "file_age_days": 71,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 26,
+    "canone_age_days": 27,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 2.3,
-    "snapshot RAG": 2.3,
+    "nina-loop": 0.9,
+    "snapshot RAG": 0.9,
     "inventario notturno": 0.0,
-    "retention disco": 2.3,
-    "AI news watcher": 20.1,
+    "retention disco": 1.0,
+    "AI news watcher": 21.1,
     "daily brief": 0.0,
-    "riflusso FATTI": 25.2
+    "riflusso FATTI": 26.2
   },
   "pip_audit": {
     "vulns": 20,
@@ -90,7 +90,7 @@
   },
   "critiche": {
     "added": 0,
-    "auto_closed": 5,
+    "auto_closed": 0,
     "total": 300,
     "open": 10
   },
