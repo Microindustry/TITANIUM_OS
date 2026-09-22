@@ -8,8 +8,10 @@
     "finding": "story_agent_run.log: rilevato crash/eccezione nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/story_agent_run.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-09-14"
+    "status": "resolved",
+    "last_seen": "2026-09-14",
+    "resolved_on": "2026-09-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-54465b5e44",
@@ -20,8 +22,10 @@
     "finding": "story_agent_run.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/story_agent_run.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-09-14"
+    "status": "resolved",
+    "last_seen": "2026-09-14",
+    "resolved_on": "2026-09-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-6d6cc51989",
@@ -47,7 +51,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-2326599473",
@@ -59,7 +63,7 @@
     "azione": "Ispezionare DATA/logs/organi vivi e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-f3b35dacc7",
@@ -71,7 +75,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -83,7 +87,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -95,7 +99,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-42b270dc40",
@@ -107,7 +111,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-ea9df13d6a",
@@ -3815,7 +3819,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-09-17"
+    "last_seen": "2026-09-22"
   },
   {
     "id": "AUD-6bb972e811",
@@ -3840,8 +3844,10 @@
     "finding": "night_push.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "open",
-    "last_seen": "2026-09-14"
+    "status": "resolved",
+    "last_seen": "2026-09-14",
+    "resolved_on": "2026-09-22",
+    "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
     "id": "AUD-2ed0757892",
