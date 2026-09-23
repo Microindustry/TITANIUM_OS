@@ -1,7 +1,7 @@
 <!-- TOC -->
 
 - [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
-  - [IL POLSO  17/09/2026 16:20](#il-polso-17092026-1620)
+  - [IL POLSO  22/09/2026 15:44](#il-polso-22092026-1544)
   - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
     - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
     - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
@@ -27,10 +27,10 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 17/09/2026 16:20
+## IL POLSO — 22/09/2026 15:44
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
-- **Auto-audit**: 10 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
+- **Auto-audit**: 7 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
 - **Bussola**: i to-do vivono in `DA_FARE_FATTO.md` (non duplicati qui)
 
 ---
@@ -184,12 +184,6 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
 
 ## AUTO-AUDIT — aperte (cartella clinica notturna)
 
-- [ ] **[alta · NOTTURNE]** story_agent_run.log: rilevato crash/eccezione nelle ultime esecuzioni.
-  - *azione: Ispezionare DATA/logs/story_agent_run.log e correggere la causa.*
-- [ ] **[alta · NOTTURNE]** story_agent_run.log: rilevato errore esplicito nelle ultime esecuzioni.
-  - *azione: Ispezionare DATA/logs/story_agent_run.log e correggere la causa.*
-- [ ] **[alta · NOTTURNE]** night_push.log: rilevato errore esplicito nelle ultime esecuzioni.
-  - *azione: Ispezionare DATA/logs/night_push.log e correggere la causa.*
 - [ ] **[media · CANONE]** 26 formulazioni vietate 'componente recuperato/usato/EUR 0' (V32/VULCAN) negli episodi.
   - *azione: Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).*
 - [ ] **[media · NOTTURNE]** _CANONE.md: rilevato verita' unica stantia nelle ultime esecuzioni.
@@ -206,4 +200,4 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-17 16:20*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-22 15:44*
