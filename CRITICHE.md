@@ -1,7 +1,7 @@
 <!-- TOC -->
 
 - [CRITICHE  la cartella clinica di TITANIUM_OS](#critiche-la-cartella-clinica-di-titaniumos)
-  - [IL POLSO  22/09/2026 15:44](#il-polso-22092026-1544)
+  - [IL POLSO  23/09/2026 15:15](#il-polso-23092026-1515)
   - [CANONE MANUALE  per progetto](#canone-manuale-per-progetto)
     - [V32 CNC (2 da fare / 7)](#v32-cnc-2-da-fare-7)
     - [MIMS (7 da fare / 10)](#mims-7-da-fare-10)
@@ -27,7 +27,7 @@
 
 Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]` risolta
 
-## IL POLSO — 22/09/2026 15:44
+## IL POLSO — 23/09/2026 15:15
 
 - **Canone manuale**: 19 attive · 1 bloccate · 23 future · 37 risolte
 - **Auto-audit**: 7 aperte / 300 totali (si auto-chiudono dopo 4 giorni senza ri-osservazione)
@@ -200,4 +200,4 @@ Stati: `[ ]` attiva · `[◐]` bloccata · `[💡]` futura (idea/dopo) · `[✓]
   - *azione: Definire il prossimo step misurabile per MIMS.*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-22 15:44*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-23 15:15*
