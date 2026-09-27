@@ -1,11 +1,13 @@
-=== RIAVVIO SESSIONE #74 — 27/09/2026 21:02 ===
+=== RIAVVIO SESSIONE #74 — 27/09/2026 21:14 ===
 Ultima sessione: #73 - contesto di chat fermo al 2026-08-27
   [!] session_context.json STALE (2026-08-27): contesto derivato dai commit di oggi - si riscrive al /salva
 ━━━ STAVAMO PARLANDO DI ━━━
 [auto-derivato dai commit di oggi - session_context.json fermo a 2026-08-27; si riscrive al /salva: il server MCP non e' collegato]
-  feat(#73): P0 della scaletta - gli strumenti che ci orientano; docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato; auto: inventario notturno + critiche
+  chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero; feat(#73): automazioni all'accensione - il PC e' quasi sempre spento; feat(#73): P0 della scaletta - gli strumenti che ci orientano; docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
 
 ━━━ TOPIC ATTIVI ━━━
+  • chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero
+  • feat(#73): automazioni all'accensione - il PC e' quasi sempre spento
   • feat(#73): P0 della scaletta - gli strumenti che ci orientano
   • docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
   • auto: inventario notturno + critiche
@@ -40,10 +42,10 @@ Ultima sessione: #73 - contesto di chat fermo al 2026-08-27
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
+16bb35b2 chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero
+e18cf14b feat(#73): automazioni all'accensione - il PC e' quasi sempre spento
 5f39f58a feat(#73): P0 della scaletta - gli strumenti che ci orientano
 62cf999f docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
 e23e1f54 auto: inventario notturno + critiche
-f7a3cdad auto: nina_rag_loop - episodi Nina 24/09/2026
-b1349097 auto: night_audit - cartella clinica 24/09/2026
 
-Generato: 27/09/2026 21:02
+Generato: 27/09/2026 21:14

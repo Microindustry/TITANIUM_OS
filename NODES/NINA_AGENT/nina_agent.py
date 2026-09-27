@@ -1,4 +1,4 @@
-# nina_agent.py | TITANIUM_OS / NODES / NINA_AGENT | v1.1 | 2026-06-25
+# nina_agent.py | TITANIUM_OS / NODES / NINA_AGENT | v1.2 | 2026-09-27 (I2: aggancio_guard)
 # Generatore Nina v2 GROUNDED a 2 stadi: 1 concetto reale -> 1 avventura.
 #   Stadio 1 — ARCHITETTO (haiku): interroga il RAG (MENTE) e progetta lo scheletro
 #              dell'episodio (analogia "test della sarta", strato-fondo reale, open
@@ -202,6 +202,8 @@ def stage1_architect(client, concept: str, rag_context: str, meta: dict) -> dict
     fonti = (f"FATTI DALL'ARCHIVIO (MENTE/RAG) — la verita' reale su cui ancorare:\n{rag_context}\n"
              if rag_context else "(Nessun fatto dall'archivio: resta generale, non inventare numeri.)\n")
     regione_nome = REGIONI_NINA.get(meta.get("regione"), "")
+    # I2 (#73): l'aggancio deve NOMINARE un nodo vero; aggancio_guard lo verifica dopo
+    from AUTOMATIONS.core.aggancio_guard import nodi_per_prompt
     user = f"""CONCETTO REALE DA INSEGNARE (1 concetto = 1 avventura):
 "{concept}"
 
@@ -209,6 +211,12 @@ POSTO NELLA MAPPA: regione {meta.get('regione','?')} {regione_nome} · giro {met
 
 {fonti}
 {PILASTRI_CANONE}
+
+NODI REALI DI GENESIS (per l'aggancio_reale citane UNO col suo nome esatto; qualunque altra
+cosa "di GENESIS" non esiste): {nodi_per_prompt()}
+CONTROLLO AUTOMATICO dopo di te: l'aggancio che non nomina un nodo reale (o un pezzo meccanico
+vero di V32/MIMS/VULCAN) viene SVUOTATO, e ogni FATTO con un numero che non sta nei FATTI
+DALL'ARCHIVIO viene TOLTO. Non inventare versioni, agenti o percentuali: verrebbero cancellati.
 
 TITOLI GIA' USATI nella serie — NON riproporli, nemmeno con piccole varianti; se il concetto
 e' una rigenerazione di un giro precedente devi trovare un ANGOLO e un titolo NUOVI:
@@ -479,9 +487,20 @@ def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool 
                      n_fonti, MIN_GROUNDING_LINES, ep_id)
         return None
 
+    # I2 (#73): "meglio VUOTO che inventato" deve mordere nel codice, non solo nel prompt.
+    # Senza la guardia non si genera: un episodio non controllato finisce nel RAG.
+    try:
+        from AUTOMATIONS.core.aggancio_guard import pulisci_scheletro, pulisci_episodio
+    except Exception as e:
+        logger.error("aggancio_guard non disponibile (%s) — NON genero senza controllo", e)
+        return None
+
     logger.info("Stadio 1 — Architetto (%s)...", MODEL_ARCH)
     skel = stage1_architect(client, concept, rag_context, meta)
     logger.info("  scheletro: %s", skel.get("title", "?"))
+    skel, rep = pulisci_scheletro(skel, rag_context)
+    for r in rep:
+        logger.warning("aggancio_guard: %s", r)
 
     logger.info("Stadio 2 — Scrittore (%s)...", MODEL_WRITER)
     canon = load_canon()
@@ -508,6 +527,13 @@ def generate(concept: str, meta: dict, rag_query: str | None = None, auto: bool 
             if mancanti:
                 body = body.rstrip() + "\n" + "\n".join(f"- {f}" for f in mancanti[:5]) + "\n"
                 logger.info("FATTI: blocco scarno (%d) -> aggiunti %d fatti grounded", n_bullet, len(mancanti[:5]))
+
+    # I2 (#73): lo Scrittore riempiva la riga "Aggancio reale" anche con lo slot vuoto,
+    # e aggiungeva FATTI con numeri suoi. Si rimette l'aggancio verificato e si tolgono
+    # i FATTI con numeri che nelle fonti RAG non ci sono.
+    body, rep = pulisci_episodio(body, skel.get("aggancio_reale", ""), rag_context)
+    for r in rep:
+        logger.warning("aggancio_guard: %s", r)
 
     # validazione minima del formato (non blocca: e' una proposta da rivedere)
     for sec in ("## COLD OPEN", "## ATTO I", "## CHIUSURA", "## FATTI"):

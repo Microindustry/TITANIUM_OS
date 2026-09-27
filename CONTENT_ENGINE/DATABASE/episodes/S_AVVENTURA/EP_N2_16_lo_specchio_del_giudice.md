@@ -119,7 +119,7 @@ Silenzio nella sala.
 
 Poi THEMIS dice, con voce precisa e senza fretta: «Hai trovato il confine del mio potere. Lo segni bene, quella domanda. La tieni per tutta la vita.»
 
-> *(Strato fondo — per il grande: Nel sistema GENESIS, quando Matteo prende una decisione su V32 — tolleranza, materiale, giunto — non è solo lui a valutarla. FORGE controlla se regge meccanicamente. LEX controlla se ci sono vincoli legali o costruttivi che Matteo non ha visto. THEMIS controlla se è coerente con le decisioni precedenti registrate nel sistema MIMS. Il sistema non accetta la decisione finché tutti e quattro — i tre agenti e il decisore umano — dicono di sì. Questo si chiama validazione incrociata. Non riduce gli errori da 100 a 90. Li riduce da 100 a 2 o 3. Perché ogni agente è addestrato a vedere una classe specifica di errori: il meccanico, il normativo, lo storico. Nessuno vede tutto; insieme coprono quasi tutto. La struttura di validazione incrociata vale il 70% dell'affidabilità del sistema. Il restante 30% dipende dalla qualità dei dati su cui gli agenti sono stati formati.)*
+> *(Strato fondo — per il grande: questo si chiama validazione incrociata. Un solo controllore vede una sola classe di errori; più controllori, ognuno addestrato su una classe diversa — il meccanico, il normativo, lo storico — insieme ne vedono molti di più, e fermano l'errore prima che diventi materia. Nessuno vede tutto; insieme coprono molto di più. In GENESIS oggi ce n'è un pezzo vero: la guardia del canone e il controllo automatico rileggono quello che il sistema scrive e segnalano quello che non torna. Un controllore per ogni classe di errore, prima di ogni decisione su V32, è ancora un progetto: non una macchina che gira.)*
 
 FORGE è salito in silenzio e si è seduto su un gradino. Tiene in mano un secondo giunto — uguale al primo, ma senza crepe. Lo passa a Nina.
 
@@ -203,13 +203,12 @@ THEMIS non risponde subito. Poi dice: «Questa è la casella 17.»
 <!-- DIDATTICA -->
 **Pietra:** `⟡6` L'Esercito Silenzioso (giro 3). *Un sistema intelligente non si affida a un solo occhio: passa ogni decisione attraverso filtri diversi — meccanico, normativo, storico — e blocca l'errore prima che diventi materia.*
 **Pietre richiamate:** ⟡1 (la misura giusta, EP_N2_01 — il bottone che regge) · ⟡5 (la decisione come azione, EP_N2_13-15)
-**3 strati:** bambino = lo specchio a tre ante, le tre sarte che misurano prima di tagliare · curioso = la validazione incrociata: ogni agente vede una classe di errori che gli altri non vedono · grande = sistema GENESIS con agenti FORGE+LEX+THEMIS+decisore umano; la struttura di validazione vale il 70% dell'affidabilità; errori da 10% a 2-3%
+**3 strati:** bambino = lo specchio a tre ante, le tre sarte che misurano prima di tagliare · curioso = la validazione incrociata: ogni agente vede una classe di errori che gli altri non vedono · grande = la validazione incrociata come principio; in GENESIS oggi ne esiste un pezzo (guardia del canone + controllo automatico), i validatori per le decisioni su V32 sono un progetto
 **Cuore:** la curiosità è un superpotere (Nina trova il limite del controllore da sola) · fai bene le cose vere (controllare prima che diventi metallo
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_16, casella 16 (Un sistema intelligente puo controllare se stesso, trovare i) del viaggio Nina v2, regione 6 (L'ESERCITO SILENZIOSO).
-- Un sistema ad agenti validatori significa che ogni decisione passa attraverso quattro filtri: FORGE (meccanica), LEX (vincoli), THEMIS (coerenza storica), e il decisore umano
-- La validazione incrociata riduce il tasso di errore da 10% a 2-3% perché ogni agente vede una classe di errori che gli altri non vedono
-- THEMIS controlla la coerenza tra la nuova decisione e tutte le decisioni precedenti registrate nel sistema MIMS
-- Quando un sistema può dire 'no' a se stesso prima che l'errore diventi reale (prima che il metallo sia lavorato), il costo del fallimento crolla da migliaia di euro a zero
-- La struttura di validazione incrociata rappresenta il 70% dell'affidabilità di un sistema intelligente; il restante 30% è training dei dati
+- La validazione incrociata fa passare una decisione da più controllori, ognuno su una classe di errori diversa (meccanica, vincoli, coerenza con le decisioni passate), più il decisore umano
+- La validazione incrociata riduce gli errori perché ogni controllore vede una classe di errori che gli altri non vedono
+- In GENESIS oggi la validazione è parziale: la guardia del canone (canon_guard) e l'audit automatico (night_audit) segnalano fatti inventati e incoerenze; i validatori per le decisioni su V32 sono ancora un progetto
+- Quando un sistema può dire 'no' a se stesso prima che l'errore diventi reale (prima che il metallo sia lavorato), l'errore costa un foglio invece di un pezzo

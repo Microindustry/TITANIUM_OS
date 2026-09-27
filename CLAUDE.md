@@ -150,7 +150,7 @@ Blocker attivo: Manca mandrino 2.2kW ER20 — da ordinare
 Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
 - Semantico: ChromaDB + `paraphrase-multilingual-MiniLM-L12-v2` (384-dim, IT/EN/DE/FR)
 - Keyword: TF-IDF BM25 (sklearn, ngram 1-2) — ricorda termini tecnici esatti
-- Reranker: `cross-encoder/ms-marco-MiniLM-L-6-v2` — riordina top-15 → top-5
+- Reranker: `BAAI/bge-reranker-v2-m3` (multilingue, dal 14/06; ms-marco era solo inglese) — riordina top-15 → top-5
 - Merge: Reciprocal Rank Fusion (k=60)
 - Chunk: 512 chars / stride 200 — ottimale per Q&A tecnico
 

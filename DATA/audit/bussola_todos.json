@@ -18,6 +18,12 @@
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
+    "id": "BUS-cb7a7e5c",
+    "stato": "da_fare",
+    "testo": "**Bonifica dei 33 agganci inventati** negli episodi gia' usciti (la guardia ferma solo quelli nuovi): svuotarli e basta, o riscriverli insieme ai FATTI come l'EP_N2_16?",
+    "sessione": "⏳ ASPETTA MATTEO"
+  },
+  {
     "id": "BUS-bd9a4ad0",
     "stato": "da_fare",
     "testo": "**UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)",
@@ -237,6 +243,30 @@
     "id": "BUS-1c30e01a",
     "stato": "fatto",
     "testo": "**Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-dfbeafac",
+    "stato": "fatto",
+    "testo": "**A3 · EP_N2_16 ripulito**: via i due numeri inventati, anche dallo strato fondo (\"da 100 a 2 o 3\"),",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-454b99a1",
+    "stato": "fatto",
+    "testo": "**I2 · la regola morde**: `AUTOMATIONS/core/aggancio_guard.py` dentro `nina_agent` (dopo Architetto e Scrittore):",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-38da94ff",
+    "stato": "da_fare",
+    "testo": "**Trovato: le correzioni agli episodi non arrivano in dashboard.** `build_episodes_json.py` e' solo additivo:",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-f3f19cd5",
+    "stato": "da_fare",
+    "testo": "**Trovato: 33 agganci su 42** esistenti non passano la guardia (versioni inventate, MIMS software, agenti",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
@@ -613,7 +643,7 @@
   },
   {
     "id": "BUS-edc47aae",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**A3 · EP_N2_16** — 2 numeri inventati spacciati per FATTI («la struttura di validazione",
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },
@@ -763,7 +793,7 @@
   },
   {
     "id": "BUS-af0a9970",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**I2** · Lo slot `aggancio_reale` **non resta mai vuoto**: l'LLM ora inventa *dentro*",
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },

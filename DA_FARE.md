@@ -59,6 +59,7 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [ ] **A1 · le 5 riscritture mirate** (EP_N2_03, 05, 46, 48, 56) e **A2 · rigenerare EP_N2_28 e 55**: serve il tuo ok (P1)
 - [ ] **F2 · il tag nuovo**: `v3.1.0` se conti i nodi, `v4.0.0` se conti il salto. La release la firma chi la fa
 - [ ] **Titoli tripli** (19/56/63 e 45/53/60): rititolare o archiviare?
+- [ ] **Bonifica dei 33 agganci inventati** negli episodi gia' usciti (la guardia ferma solo quelli nuovi): svuotarli e basta, o riscriverli insieme ai FATTI come l'EP_N2_16?
 
 **Hardware** *(sbloccano MIMS e la V32)*
 - [ ] **UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)
@@ -147,6 +148,20 @@ L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08
 - [✓] **Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.
   **Da rivedere 3**: EP_SG_03_03 (±0,019 mm dato come fatto), EP_N2_10 (l'episodio e' cambiato il 27/08, dopo la
   bozza), EP_N2_09 (slide 2 senza illustrazione: la scena `biblioteca` manca). Il collo resta la pubblicazione.
+
+**✅ P1 (prima parte): A3 + I2 (su ordine Matteo, "intanto fai A3 e I2")**
+- [✓] **A3 · EP_N2_16 ripulito**: via i due numeri inventati, anche dallo strato fondo ("da 100 a 2 o 3"),
+  e via i validatori FORGE+LEX+THEMIS che in GENESIS non esistono + il "sistema MIMS" software. Il falso era
+  gia' passato nel RAG: il riflusso l'aveva copiato in `MENTE/GENESIS/fatti_dalle_storie_2026Q3.md`.
+  Corretti episodio + specchio MENTE; rigenerati fatti e indice dashboard; RAG reindicizzato. canon_guard: 0 (non li vede).
+- [✓] **I2 · la regola morde**: `AUTOMATIONS/core/aggancio_guard.py` dentro `nina_agent` (dopo Architetto e Scrittore):
+  aggancio che non nomina un nodo reale (nomi derivati dal repo) o un pezzo meccanico -> VUOTO; niente versioni
+  di GENESIS, personaggi-nodo, V32/MIMS software; FATTI con numeri senza fonte RAG -> tolti. Senza guardia non genera.
+- [ ] **Trovato: le correzioni agli episodi non arrivano in dashboard.** `build_episodes_json.py` e' solo additivo:
+  EP_N2_16 in dashboard aveva ancora il testo di PRIMA del batch 3 (#71). Vale per ogni episodio corretto.
+  Serve un refresh del `content` quando il .md cambia (voce B, robustezza).
+- [ ] **Trovato: 33 agganci su 42** esistenti non passano la guardia (versioni inventate, MIMS software, agenti
+  che non esistono...). `python AUTOMATIONS/core/aggancio_guard.py` li elenca. Bonifica retroattiva: decide Matteo.
 
 ---
 
@@ -266,8 +281,8 @@ aveva barrato. Sotto c'e' cosa resta davvero, per tema e non per sessione.*
 **P1 - IL CANONE** *(e' l'unica cosa che finisce dentro il RAG e quindi si propaga)*
 7. `A1` le 5 riscritture mirate --- **serve l'ok di Matteo**
 8. `A2` rigenerare EP_N2_28 e 55 --- **serve l'ok di Matteo**
-9. `A3` togliere i 2 numeri inventati dell'EP_N2_16
-10. `I2` far mordere la regola "meglio vuoto che inventato" sullo slot `aggancio_reale`
+9. `A3` togliere i 2 numeri inventati dell'EP_N2_16 --- **FATTO 27/09 (#73)**
+10. `I2` far mordere la regola "meglio vuoto che inventato" sullo slot `aggancio_reale` --- **FATTO 27/09 (#73)**
 
 **P2 - LA MAPPA** *(un lavoro solo che serve due volte: dashboard + profilo)*
 11. `B1` allineare i nomi dei due alberi, `B2` GENESIS 7o dipartimento (copiare dal vault)
@@ -326,8 +341,9 @@ chiavi da ruotare, API key Semantic Scholar.
   il 48 si sgrammatica, il 46 e' misto (2 frasi software + «lo spazio fisico e' di 12 m²»).
 - [ ] **A2 · 2 episodi da RIGENERARE** — EP_N2_28 e 55. Non sporchi: **troncati a meta'
   parola** dal bug max_tokens pre-#69. Nel 55 anche il frammento superstite e' inventato.
-- [ ] **A3 · EP_N2_16** — 2 numeri inventati spacciati per FATTI («la struttura di validazione
+- [✓] **A3 · EP_N2_16** — 2 numeri inventati spacciati per FATTI («la struttura di validazione
   vale il 70% dell'affidabilita'», «errori da 10% a 2-3%»). Fuori batch: la regola non li vede.
+  → *#73: tolti, con i validatori FORGE+LEX+THEMIS che in GENESIS non esistono e il 'sistema MIMS'. Corretti episodio, specchio MENTE, fatti riversati e indice dashboard; RAG reindicizzato.*
 
 **🟡 B — ALLINEARE I DUE ALBERI (prerequisito di C e D)**
 - [ ] **B1 · Nomi**: `VITA-NATURA` (db GENESIS) vs `VITA_NATURA` (vault) · `FINANZE` vs `FINANZA`.
@@ -387,8 +403,9 @@ chiavi da ruotare, API key Semantic Scholar.
 **🩶 I — DEBITO VECCHIO, ancora lì**
 - [ ] **I1** · EP_N2_04 uscito il 16/08 alle ~09:00 invece che alle 21:00: se Business Suite
   pubblica quando gli pare, la coda programmata non e' affidabile.
-- [ ] **I2** · Lo slot `aggancio_reale` **non resta mai vuoto**: l'LLM ora inventa *dentro*
+- [✓] **I2** · Lo slot `aggancio_reale` **non resta mai vuoto**: l'LLM ora inventa *dentro*
   GENESIS. La regola «meglio vuoto che inventato» non morde ancora (aperta dal #70).
+  → *#73: `aggancio_guard.py` nel generatore, dopo Architetto e Scrittore: svuota l'aggancio che non nomina un nodo reale, toglie i FATTI con numeri senza fonte. Provato con un finto client (niente API).*
 
 **🧭 R — RIORGANIZZARE LA BUSSOLA (si fa PRIMA di tutto il resto, ordine Matteo 28/08)**
 
