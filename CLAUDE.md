@@ -135,14 +135,15 @@ Blocker attivo: Manca mandrino 2.2kW ER20 — da ordinare
 
 | Nodo | Comando | Stato |
 |------|---------|-------|
-| MCP Server | auto (`.claude/settings.json`) | ATTIVO — 5 tool |
+| MCP Server | `MCP/titanium_mcp_server.py` | **NON collegato** alle sessioni (verificato #73): il `session_context` lo scrive il /salva |
 | MENTE RAG | `rag "query"` / `rag-update` / `rag-rebuild` | ATTIVO v4.0 — hybrid BM25+semantico+CrossEncoder — incrementale |
 | Daily Brief | `brief` | ATTIVO → `DATA/daily_brief_last.md` |
 | MENTE Scanner | `python NODES/MENTE_SCANNER/scanner.py` | ATTIVO → `MICROINDUSTRY/MENTE/` |
 | MENTE Watcher | watch fs → `/api/scan` | ATTIVO |
 | API Server | `start-api` (porta 5001) | ATTIVO |
 | Dashboard | `start-dashboard` (porta 5173) | ATTIVO |
-| n8n | `npx n8n` (porta 5678) | ATTIVO |
+| n8n | `n8n start` (porta 5678) | a mano: tolto dall'avvio (#73), 0 workflow mai creati |
+| Catena d'avvio | `night_research.bat` (task TI_NightResearch) | ATTIVA all'accensione: manutenzione RAG + audit; `genera` per la generazione |
 | EVA WhatsApp | — | PENDING |
 
 **Dopo ogni modifica a MENTE/ → esegui `rag-update` (incrementale, <20 sec).**

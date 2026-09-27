@@ -7,6 +7,7 @@
 ::   - API server: la avvia e la tiene viva TI_Watchdog (SERVICES/watchdog.py);
 ::     il secondo avvio da qui era un doppione che moriva sulla porta 5001
 ::   - finestra PowerShell con Claude CLI: si lavora dall'app desktop
+::   (+ #73 sera: tolto anche n8n, mai usato)
 
 set PYTHON=%USERPROFILE%\AppData\Local\Programs\Python\Python311\python.exe
 set PYTHONW=%USERPROFILE%\AppData\Local\Programs\Python\Python311\pythonw.exe
@@ -34,12 +35,8 @@ start "" cmd /c "cd /d "%TI_ROOT%\DASHBOARD" && "%PNPM%" --silent dev"
 ::    night_research (rebuild_rag_clean health-gated) quando serve davvero.
 start "" "%PYTHONW%" "%TI_ROOT%\NODES\MENTE_RAG\rag_engine.py" --incremental
 
-:: 3. n8n — porta 5678 (binario globale installato 09/06; fallback npx se assente)
-if exist "%N8N%" (
-    start "" cmd /c ""%N8N%" start"
-) else (
-    start "" cmd /c ""%NODE%\npx.cmd" n8n"
-)
+:: 3. n8n TOLTO dall'avvio (#73, 27/09): 0 workflow e 0 esecuzioni in ~/.n8n da quando
+::    e' installato (09/06). A mano, se serve: "%N8N%" start  (porta 5678)
 
 :: 4. Watcher file (backup + changelog + state). NB: non e' il watchdog dei
 ::    servizi, quello e' il task TI_Watchdog
