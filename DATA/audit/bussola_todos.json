@@ -96,6 +96,24 @@
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
+    "id": "BUS-19a75bf1",
+    "stato": "da_fare",
+    "testo": "**Riaprire un canale di pubblicazione** (Postiz/Docker, LinkedIn, Meta): senza, ogni carosello nuovo si accumula",
+    "sessione": "⏳ ASPETTA MATTEO"
+  },
+  {
+    "id": "BUS-312efe7b",
+    "stato": "da_fare",
+    "testo": "**Routine cloud di Claude Code**: collegare GitHub a claude.ai/code, poi UNA routine settimanale (es. \"prepara i",
+    "sessione": "⏳ ASPETTA MATTEO"
+  },
+  {
+    "id": "BUS-11e46133",
+    "stato": "da_fare",
+    "testo": "**Dependabot** sul repo (gratis, GitHub): avvisi CVE per email a PC spento, al posto del pip-audit del sabato",
+    "sessione": "⏳ ASPETTA MATTEO"
+  },
+  {
     "id": "BUS-3380014d",
     "stato": "fatto",
     "testo": "**137 cloni orfani** del marketplace plugin (`~/.claude/plugins/marketplaces/temp_*`, **1,24 GB**) -> Cestino.",
@@ -133,7 +151,7 @@
   },
   {
     "id": "BUS-8f2c53d5",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "Task notturni col PC spento: all'accensione partono tutti insieme (StartWhenAvailable). Il 27/09 alle 11:09",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
@@ -186,9 +204,39 @@
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
-    "id": "BUS-2d1c4c3e",
+    "id": "BUS-e87683b4",
     "stato": "da_fare",
-    "testo": "**Da guardare domattina**: il primo taglio notturno (le 7 righe `[v]` della #72), la prima rotazione",
+    "testo": "**Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-a5d119ab",
+    "stato": "fatto",
+    "testo": "**I fatti**: PC acceso 25 giorni su 40, di giorno. Il **credito API e' finito dal 16/09** (\"credit balance too low\"):",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-e2833552",
+    "stato": "fatto",
+    "testo": "**Catena d'avvio** = `night_research.bat` v3.0 (task TI_NightResearch, elevato): self-heal RAG -> riflusso ->",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-ba2729d7",
+    "stato": "fatto",
+    "testo": "**Spenti** (Task Scheduler): TI_NightAudit (e' nella catena), TI_AiWatch, TI_SelfImprove (62 proposte mai lette),",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-b92827d7",
+    "stato": "fatto",
+    "testo": "**Ricerca \"a PC spento, senza credito\"**: le **routine di Claude Code** (cloud Anthropic, piano Pro, max 5 al",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-1c30e01a",
+    "stato": "fatto",
+    "testo": "**Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {

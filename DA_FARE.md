@@ -79,6 +79,13 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [ ] **Due servizi locali accettano connessioni dalla rete**, non solo dal PC: e' voluto? (dettaglio nella chat del #73, non qui: il repo e' pubblico)
 - [ ] **Svuotare il Cestino** quando vuoi: dentro ci sono i 1,24 GB di cloni orfani del #73
 
+**Generazione a PC spento** *(il credito API e' finito e non si ricarica: resta l'abbonamento Pro)*
+- [ ] **Riaprire un canale di pubblicazione** (Postiz/Docker, LinkedIn, Meta): senza, ogni carosello nuovo si accumula
+  sulle 12 bozze. E' il prerequisito di tutto il resto
+- [ ] **Routine cloud di Claude Code**: collegare GitHub a claude.ai/code, poi UNA routine settimanale (es. "prepara i
+  prossimi 2 caroselli come PR su un branch `claude/`"). Consuma l'abbonamento, non il credito. Solo quando si pubblica
+- [ ] **Dependabot** sul repo (gratis, GitHub): avvisi CVE per email a PC spento, al posto del pip-audit del sabato
+
 ---
 
 
@@ -97,8 +104,9 @@ L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08
   col banner dentro l'output). Variabili e PATH restano per tutti
 - [✓] commit `62cf999f`: il lavoro della #72, fermo da un mese. Esce col push notturno (repo PUBBLICO)
 - [✓] Le 4 voci per Matteo della pulizia (app di avvio, plugin/connettori, CLI, servizi in rete) -> spostate in ⏳ ASPETTA MATTEO
-- [ ] Task notturni col PC spento: all'accensione partono tutti insieme (StartWhenAvailable). Il 27/09 alle 11:09
+- [✓] Task notturni col PC spento: all'accensione partono tutti insieme (StartWhenAvailable). Il 27/09 alle 11:09
   **6 su 11 interrotti** (0xC000013A) -> e' la voce H "replica serale della catena se la notte salta"
+  → *#73: risolta col blocco AUTOMAZIONI qui sotto (una catena in fila invece di 11 task insieme).*
 
 **✅ P0 DELLA SCALETTA — GLI STRUMENTI CHE CI ORIENTANO (su ordine Matteo)**
 - [✓] **R7+R6 · la bussola si chiama `DA_FARE.md`** (`git mv`, storia intatta); `DA_FARE_FATTO.md` e' un cartello.
@@ -120,8 +128,25 @@ L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08
 - [✓] **R8 · il contorno**: AZIONI_MATTEO e PROSSIMA_SESSIONE in `DOCS/_archivio_*`; azioni vive in ⏳ ASPETTA MATTEO
   (i connettori MIMS erano gia' decisi, Via B 24/06). `active_milestone` da 1.459 a 107 caratteri e il profilo
   pubblico ne prende solo la prima frase. Specchio Desktop `da fare.txt` (il vecchio, fermo al 16/07, nel Cestino).
-- [ ] **Da guardare domattina**: il primo taglio notturno (le 7 righe `[v]` della #72), la prima rotazione
-  dell'archivio critiche, i commit nuovi del night_audit.
+- [ ] **Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima
+  rotazione dell'archivio critiche, i commit nuovi dell'audit (ora dentro la catena d'avvio).
+
+**✅ AUTOMAZIONI: DA "NOTTURNE" AD "ALL'ACCENSIONE" (Matteo: PC quasi sempre spento, non uso gli agenti, niente credito)**
+- [✓] **I fatti**: PC acceso 25 giorni su 40, di giorno. Il **credito API e' finito dal 16/09** ("credit balance too low"):
+  audit LLM, corsia Nina, storie, caroselli, self-improve fallivano gia' tutti. Utili davvero: audit, inventario, push, RAG.
+- [✓] **Catena d'avvio** = `night_research.bat` v3.0 (task TI_NightResearch, elevato): self-heal RAG -> riflusso ->
+  wiki -> RAG incrementale -> snapshot -> versione MENTE -> **audit a regole + taglio bussola**, in fila. Gratis.
+  La generazione (ricerca + episodio Nina) solo con `night_research.bat genera`. Provata con script finti.
+- [✓] **Spenti** (Task Scheduler): TI_NightAudit (e' nella catena), TI_AiWatch, TI_SelfImprove (62 proposte mai lette),
+  TI_NightCaroselli, TI_NightCaroselliNina. **Interruttore nello script** (elevati, senza admin non si disattivano):
+  `run_story_agent.bat`, `night_finetune.bat` escono subito se non gli passi `genera`. Restano: Watchdog, NightPush,
+  DeepFreeze (backup), DailyBrief (gratis). Tutto reversibile.
+- [✓] **Ricerca "a PC spento, senza credito"**: le **routine di Claude Code** (cloud Anthropic, piano Pro, max 5 al
+  giorno, consumano l'abbonamento, non l'API; clonano il repo e lavorano su branch `claude/`). GitHub Models: chiuso
+  il 30/07. GitHub Actions col token dell'abbonamento: possibile ma piu' rischioso. -> decisione in ⏳ ASPETTA MATTEO.
+- [✓] **Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.
+  **Da rivedere 3**: EP_SG_03_03 (±0,019 mm dato come fatto), EP_N2_10 (l'episodio e' cambiato il 27/08, dopo la
+  bozza), EP_N2_09 (slide 2 senza illustrazione: la scena `biblioteca` manca). Il collo resta la pubblicazione.
 
 ---
 

@@ -1,9 +1,17 @@
 @echo off
-:: night_research.bat | TITANIUM_OS | v2.1 | 2026-06-11
+:: night_research.bat | TITANIUM_OS | v3.0 | 2026-09-27 (catena d'avvio)
 :: Research Agent notturno - cerca paper su topic V32/MIMS/Epoxy Granite
 :: Eseguito da Task Scheduler ogni notte (ore diverse da StoryAgent)
 :: v2.0: path portabili via _ti_paths.bat (no hardcode benen)
 :: v2.1: + riflusso FATTI episodi -> MENTE prima del rag-update (chiude il loop regola 7)
+:: v3.0 (#73, 27/09/2026): e' la CATENA D'AVVIO. Il PC e' quasi sempre spento: i task
+::   'notturni' partivano tutti insieme all'accensione, si pestavano il lock di git e il
+::   27/09 6 su 11 sono morti. Il credito API e' finito (dal 16/09 'credit balance too low').
+::   Quindi qui gira in fila, gratis, solo la MANUTENZIONE: self-heal RAG -> riflusso ->
+::   wiki -> rag incrementale -> snapshot -> versione MENTE -> audit (regole).
+::   La GENERAZIONE (ricerca paper + episodio Nina via API) solo su richiesta:
+::       night_research.bat genera
+::   Il push resta al suo task (TI_NightPush). TI_NightAudit e' spento: l'audit e' qui.
 
 call "%~dp0_ti_paths.bat"
 cd /d "%TI_ROOT%"
@@ -30,6 +38,12 @@ echo [night_research] self-heal RAG a 2 livelli (dettaglio in rag_recover.log) >
 powershell -NoProfile -ExecutionPolicy Bypass -File "%TI_ROOT%\SERVICES\rag_recover.ps1" >> "%TI_ROOT%\DATA\logs\rag_recover.log" 2>&1
 echo [night_research] self-heal concluso (errorlevel %ERRORLEVEL%) >> "%LOG%"
 
+:: GENERAZIONE solo su richiesta (#73): senza credito API la ricerca e la corsia Nina
+:: fallivano ogni volta. Senza l'argomento 'genera' si salta alla manutenzione.
+if /i not "%~1"=="genera" (
+    echo [night_research] generazione spenta: solo su richiesta, argomento genera >> "%LOG%"
+    goto :manutenzione
+)
 :: topic GUIDATI da STATE + RAG (night_topics.py scrive DATA\night_topics.txt)
 "%PYTHON%" AUTOMATIONS\core\night_topics.py >> "%LOG%" 2>&1
 
@@ -65,6 +79,7 @@ if errorlevel 1 (
     echo [night_research] nessun episodio Nina nuovo - skip commit >> "%LOG%"
 )
 
+:manutenzione
 :: RIFLUSSO: i FATTI degli episodi (generati da story_agent alle 02:07) tornano in
 :: MENTE/<dominio>/ — la conoscenza INTERNA del progetto entra nel RAG. Chiude il loop
 :: (regola 7). Va PRIMA del rag-update, cosi episodi + paper si indicizzano in un colpo.
@@ -86,4 +101,8 @@ echo [night_research] riflusso FATTI episodi -> MENTE >> "%LOG%"
 :: Cosi i fatti vecchi non spariscono quando il riflusso li riscrive: restano nello storico.
 call "%~dp0mente_version.bat" >> "%LOG%" 2>&1
 
+:: AUDIT in fila (#73): prima era un task a parte che partiva insieme a questo e agli
+:: altri all'accensione. Qui gira DOPO il rag-update, cosi' legge i numeri freschi.
+echo [night_research] audit in coda >> "%LOG%"
+call "%TI_ROOT%\NODES\AUDIT_AGENT\run_night_audit.bat"
 echo [night_research] done %DATE% %TIME% >> "%LOG%"

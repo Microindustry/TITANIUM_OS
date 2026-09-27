@@ -45,13 +45,13 @@ const SEZIONI: Sezione[] = [
     ],
   },
   {
-    titolo: "4 · Automazioni notturne (mentre dormi)",
+    titolo: "4 · Automazioni all'accensione (il PC è quasi sempre spento)",
     icona: Moon, colore: "#38bdf8",
-    intro: "Task schedulati: il sistema lavora da solo di notte e committa.",
+    intro: "Dal #73: i task \"notturni\" partono quando accendi. Gira solo la manutenzione, in fila e gratis; la generazione (API finite) si fa in sessione, su richiesta.",
     passi: [
-      { cosa: "story_agent / night_research", come: "genera episodi + cerca materiale, aggiorna il RAG." },
-      { cosa: "night_audit @03:52", come: "cartella clinica (CRITICHE) + bussola_todos. night_push: commit/push." },
-      { cosa: "watcher", come: "indicizza i file che aggiungi in MENTE/, da solo." },
+      { cosa: "Catena d'avvio (TI_NightResearch)", come: "self-heal RAG → riflusso FATTI → wiki → RAG incrementale → snapshot → audit a regole + taglio bussola." },
+      { cosa: "TI_NightPush · TI_DeepFreeze", come: "commit/push + inventario + profilo GitHub · backup cifrato settimanale." },
+      { cosa: "Su richiesta", come: "night_research.bat genera (ricerca + episodio Nina) · caroselli, storie, fine-tuning: spenti, si fanno in sessione." },
     ],
   },
 ];

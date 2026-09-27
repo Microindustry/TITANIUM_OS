@@ -5,6 +5,12 @@
 :: v3.0: llamafactory VIVE NEL SUO VENV (%USERPROFILE%\.venvs\llamafactory, fuori dal
 ::       repo): il Python di sistema si libera dei pin gradio/pillow/starlette (23 CVE).
 ::       Il venv ha il SUO torch 2.6.0+cu124 (il vincolo NON-cpu vale anche qui).
+:: SPENTO di default, solo su richiesta (#73, 27/09/2026): il task gira elevato e non
+:: si puo' disattivare senza amministratore, quindi l'interruttore sta qui. Motivo:
+:: LoRA sulla GPU per ore all'accensione, mentre lavori: costo alto, uso zero.
+:: Per lanciarlo davvero:  night_finetune.bat genera
+if /i not "%~1"=="genera" exit /b 0
+
 
 call "%~dp0_ti_paths.bat"
 cd /d "%TI_ROOT%"

@@ -2,6 +2,12 @@
 :: story_agent nightly | TITANIUM_OS | v2.0 | 2026-06-03
 :: Eseguito da Windows Task Scheduler ogni notte - genera episodi da commit recenti
 :: v2.0: path portabili via _ti_paths.bat (no hardcode benen)
+:: SPENTO di default, solo su richiesta (#73, 27/09/2026): il task gira elevato e non
+:: si puo' disattivare senza amministratore, quindi l'interruttore sta qui. Motivo:
+:: genera episodi S2 dai commit via API Claude: senza credito falliva e basta.
+:: Per lanciarlo davvero:  run_story_agent.bat genera
+if /i not "%~1"=="genera" exit /b 0
+
 
 call "%~dp0..\..\AUTOMATIONS\core\_ti_paths.bat"
 cd /d "%TI_ROOT%"
