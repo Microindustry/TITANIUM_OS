@@ -36,6 +36,10 @@ LOG_PATH = ROOT / "DATA" / "logs" / "semantic_indexer.log"
 
 SKIP_DIRS = {"BACKUPS", "VERSIONS", "__pycache__", ".git", "node_modules", ".venv"}
 
+# archivi fuori dal percorso di lettura (R4, #73): fonte unica in fuori_lettura.py
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from fuori_lettura import fuori_lettura  # noqa: E402
+
 # Stop words italiane + inglesi per estrazione keyword
 STOP_WORDS = {
     "il", "la", "lo", "le", "gli", "i", "un", "una", "uno", "e", "o",
@@ -161,11 +165,30 @@ def _extract_keywords(content: str, n: int = TOP_KEYWORDS_N) -> list[str]:
 # INDICIZZAZIONE
 # ============================================================
 
+def _togli_dall_indice(rel_path: str) -> None:
+    """Cancella file + tag dall'indice (serve a far uscire gli archivi gia' indicizzati)."""
+    conn = _get_db()
+    try:
+        conn.execute("DELETE FROM tags WHERE file_id IN (SELECT id FROM files WHERE path=?)", (rel_path,))
+        if conn.execute("DELETE FROM files WHERE path=?", (rel_path,)).rowcount:
+            log.info(f"Fuori lettura, tolto dall'indice: {rel_path}")
+        conn.commit()
+    except sqlite3.Error as e:
+        log.error(f"DB error togliendo {rel_path}: {e}")
+    finally:
+        conn.close()
+
+
 def index_file(file_path: Path):
     """
     Legge il file .md ed aggiorna il record nel database.
     Se il record esiste, lo sovrascrive (upsert).
+    Gli archivi (fuori_lettura.py, R4 #73) non si indicizzano: se c'erano, escono.
     """
+    rel_path = str(file_path.relative_to(ROOT)).replace("\\", "/")
+    if fuori_lettura(rel_path):
+        _togli_dall_indice(rel_path)
+        return
     try:
         content = file_path.read_text(encoding="utf-8", errors="ignore")
     except IOError as e:
@@ -192,7 +215,6 @@ def index_file(file_path: Path):
     word_count = len(re.findall(r'\b\w+\b', content))
     char_count = len(content)
 
-    rel_path = str(file_path.relative_to(ROOT)).replace("\\", "/")
     now = datetime.now().isoformat()
     mod_time = datetime.fromtimestamp(file_path.stat().st_mtime).isoformat()
 
@@ -267,7 +289,7 @@ def reindex_all():
     for f in ROOT.rglob("*.md"):
         skip = any(part in SKIP_DIRS for part in f.relative_to(ROOT).parts)
         if not skip:
-            index_file(f)
+            index_file(f)   # gli archivi fuori lettura escono dall'indice qui dentro
             count += 1
     log.info(f"Reindex completato: {count} file.")
 

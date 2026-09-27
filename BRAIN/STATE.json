@@ -2,10 +2,10 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-08-27T17:17:08.839949",
-  "active_milestone": "Sessione #71 (27/08): SMENTITO l'handoff. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11 (night_audit, inventario, nina_rag_loop, story_agent). API :5001 non e' giu': 17 endpoint su 18 danno 200; md-files non e' rotto ma lento (4,0s); il RAG e' rientro non perdita (21.630 il 16/08 -> 22.637 il 26/08, sale). GUASTO VERO trovato: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era TRONCATO a meta' scrittura; la radice e' md_view_pipeline._update_index che riscriveva l'indice INTERO in modo non atomico a ogni singolo file (487 finestre di corruzione, O(n^2)) -> scrittura atomica tmp+fsync+os.replace con retry Windows, indice tollerante al file corrotto, rebuild che scrive UNA volta sola. Indice ricostruito: 487 view, endpoint 200. canon_guard non era nemmeno eseguibile a mano (UnicodeEncodeError su console cp1252): stdout in utf-8, stesso fix su genesis_seed --albero (mai arrivato in fondo). Igiene: _VAULT escluso dalla view pipeline (generava view di CREDENZIALI_BACKUP.md servite dall'API; nessun leak in git, entrambi gitignorati). BATCH 3 GRUPPO 1 applicato dopo aver letto le frasi in contesto: 10 episodi (16/19/35/38/41/53/54/62 + 10 e 44 che il tool non copriva, variante GENESIS/TITANIUM_OS), 25 sostituzioni, idempotente, 0 bloccati dalla guardia carosello. GATE canone: da 22 righe a 8, e le 8 sono esattamente i 7 episodi sospesi. S3 CHIUSO: CORE/repos.py, grep SELECT fuori = 0.",
-  "next_step": "1) SOSPESI del batch 3 (decide Matteo): per 03/05/46/48/56 il collasso generico su GENESIS e' SBAGLIATO - non ripulisce, sposta il falso dal pilastro meccanico a quello software (ripetibilita'/calibrazione = V32; golden template = MIMS/VULCAN; il 48 diventa sgrammaticato; il 46 e' misto). Proposta: 5 riscritture mirate, una frase l'una. 2) EP_N2_28 e 55 da RIGENERARE (troncati a meta' parola, confermato leggendoli). 3) EP_N2_16: due numeri inventati spacciati per FATTI ('70% dell'affidabilita'', 'errori da 10% a 2-3%') che la regola generica non vede. 4) S4 della scala: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI). 5) Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili. 6) Push: 2 commit automatici del 26/08 + i fix di questa sessione, non ancora committati.",
-  "session_count": 162,
+  "last_update": "2026-09-27T20:28:38.994051",
+  "active_milestone": "#73: P0 chiuso - bussola DA_FARE.md che si taglia da sola, CRITICHE solo aperte con scadenza, hook riparati",
+  "next_step": "P1 canone: A1 le 5 riscritture mirate e A2 rigenerare EP_N2_28/55 (serve l'ok di Matteo), poi A3",
+  "session_count": 169,
   "pillars": {
     "V32": {
       "status": "in_progress",
@@ -18,7 +18,7 @@
     "GENESIS": {
       "status": "building",
       "pct_complete": 70,
-      "last_activity": "2026-08-27T17:13:22.037321"
+      "last_activity": "2026-09-27T20:22:46.763380"
     },
     "VITA_NATURA": {
       "status": "active",
@@ -160,7 +160,7 @@
     "ip_lan": "192.168.0.112",
     "ip_tailscale": "100.125.152.124"
   },
-  "focus_today": "Ecosistema in ordine COMPLETO (#54 A-B-C) + verita' sparsa: il sistema ora si pulisce (retention), si sorveglia (4 sentinelle), si difende dai doppioni (single-instance) e non puo' piu' perdere STATE (atomico + snapshot 14gg). CRITICHE = file, gestito da Claude.",
+  "focus_today": "P0 della scaletta: gli strumenti che ci orientano (bussola, CRITICHE, handoff, contorno)",
   "blockers": [
     "UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20",
     "Chiavi .env da ruotare (red-team #38) — le ruota Matteo",
@@ -186,5 +186,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a .gitignore"
+  "last_action": "Modifica a RIAVVIO_SESSIONE.txt"
 }

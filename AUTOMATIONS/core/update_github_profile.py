@@ -104,14 +104,26 @@ def rag_chunks() -> str:
         return "chunk"
 
 
+def _una_riga(testo, n=160):
+    """R8 (#73): sul profilo PUBBLICO milestone e prossimo step escono in UNA riga.
+    active_milestone era diventato un muro di 1.459 caratteri pubblicato ogni notte:
+    il racconto lungo sta nella bussola, qui si prende la prima frase e basta."""
+    t = " ".join(str(testo or "—").split())
+    for sep in (". ", "; "):
+        if sep in t[:n]:
+            t = t[:t.index(sep, 0, n) + 1]
+            break
+    return t if len(t) <= n else t[:n - 1].rstrip() + "…"
+
+
 def build_readme(state):
     v = versione_reale()
     genesis_pct = state.get("pillars", {}).get("GENESIS", {}).get("pct_complete", 0)
     v32_pct     = state.get("pillars", {}).get("V32", {}).get("pct_complete", 0)
     mims_pct    = state.get("pillars", {}).get("MIMS", {}).get("pct_complete", 0)
     vn_pct      = state.get("pillars", {}).get("VITA_NATURA", {}).get("pct_complete", 0)
-    milestone   = state.get("active_milestone", "—")
-    next_step   = state.get("next_step", "—")
+    milestone   = _una_riga(state.get("active_milestone", "—"))
+    next_step   = _una_riga(state.get("next_step", "—"))
     session     = state.get("session_count", 0)
     milestones  = state.get("milestones", {}).get("verified", [])[-5:]
     blockers    = state.get("blockers", [])

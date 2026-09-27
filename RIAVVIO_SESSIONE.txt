@@ -1,36 +1,27 @@
-=== RIAVVIO SESSIONE #72 — 27/08/2026 17:16 ===
-Ultima sessione: #71 - 2026-08-27
-
+=== RIAVVIO SESSIONE #74 — 27/09/2026 20:28 ===
+Ultima sessione: #73 - contesto di chat fermo al 2026-08-27
+  [!] session_context.json STALE (2026-08-27): contesto derivato dai commit di oggi - si riscrive al /salva
 ━━━ STAVAMO PARLANDO DI ━━━
-Sessione #71 — l'handoff mentiva e l'ho verificato riga per riga. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11. API :5001 non e' giu' (17 endpoint su 18 danno 200). Il RAG e' rientro, non perdita (21.630 -> 22.637, sale). Trovato e riparato il guasto vero: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era troncato a meta' scrittura — la radice era md_view_pipeline che riscriveva l'indice INTERO in modo non atomico a ogni singolo file. Applicato il batch 3 gruppo 1 (10 episodi, gate canone da 22 righe a 8) e chiuso S3 della scala GENESIS (CORE/repos.py, grep SELECT fuori = 0). Poi, su richiesta di Matteo, integrazione ecosistema + versioni + profilo GitHub.
+[auto-derivato dai commit di oggi - session_context.json fermo a 2026-08-27; si riscrive al /salva: il server MCP non e' collegato]
+  docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato; auto: inventario notturno + critiche
 
 ━━━ TOPIC ATTIVI ━━━
-  • view_index.json troncato: scrittura atomica tmp+fsync+os.replace con retry Windows, rebuild che scrive una volta sola (487 view)
-  • canon_guard e genesis_seed --albero non erano eseguibili a mano: UnicodeEncodeError su console cp1252, stdout in utf-8
-  • batch 3 gruppo 1: 10 episodi corretti (aggiunta la variante GENESIS/TITANIUM_OS che il tool non copriva), 7 SOSPESI con motivo scritto
-  • S3 scala GENESIS chiuso: CORE/repos.py, connessione iniettata, TABELLE come whitelist contro l'iniezione sul nome tabella
-  • profilo GitHub pubblicava v1.1.0 (versione dello SCHEMA di STATE) invece di v3.0.0: ora la versione viene dal tag git
-  • generate_restart_prompt: lo staleness detector si spegneva quando non c'erano commit -> handoff di 3 mesi fa spacciato per attuale
-  • _VAULT escluso dalla view pipeline: generava view di CREDENZIALI_BACKUP.md servite dall'API
+  • docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
+  • auto: inventario notturno + critiche
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → SOSPESI batch 3 (decide Matteo): 03/05/46/48/56 vogliono 5 riscritture mirate, NON il collasso generico su GENESIS (li' il pilastro giusto e' quello meccanico)
-  → EP_N2_28 e 55 da RIGENERARE: troncati a meta' parola dal bug max_tokens pre-#69
-  → EP_N2_16: due numeri inventati spacciati per FATTI (70% affidabilita', errori da 10% a 2-3%) che la regola generica non vede
-  → S4 della scala GENESIS: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI)
-  → GitHub Release di v3.0.0 mai creata: il tag c'e' ed e' pushato, la Release no. E da v3.0.0 sono passati 646 commit senza un tag nuovo
-  → 7o dipartimento: 9 agenti su 12 sono di contenuto/sistema parcheggiati sotto OFFICINA perche' GENESIS non e' fra i 6
-  → Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili
+  → (dal 2026-08-27) SOSPESI batch 3 (decide Matteo): 03/05/46/48/56 vogliono 5 riscritture mirate, NON il collasso generico su GENESIS (li' il pilastro giusto e' quello meccanico)
+  → (dal 2026-08-27) EP_N2_28 e 55 da RIGENERARE: troncati a meta' parola dal bug max_tokens pre-#69
+  → (dal 2026-08-27) EP_N2_16: due numeri inventati spacciati per FATTI (70% affidabilita', errori da 10% a 2-3%) che la regola generica non vede
+  → (dal 2026-08-27) S4 della scala GENESIS: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI)
+  → (dal 2026-08-27) GitHub Release di v3.0.0 mai creata: il tag c'e' ed e' pushato, la Release no. E da v3.0.0 sono passati 646 commit senza un tag nuovo
+  → (dal 2026-08-27) 7o dipartimento: 9 agenti su 12 sono di contenuto/sistema parcheggiati sotto OFFICINA perche' GENESIS non e' fra i 6
+  → (dal 2026-08-27) Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
-  ✓ Matteo: applicare il gruppo 1 del batch 3 e VALUTARE gli altri invece di applicarli alla cieca
-  ✓ Il collasso generico GENESIS/X -> GENESIS non si applica dove il referente e' meccanico: sposterebbe il falso invece di toglierlo
-  ✓ La versione del progetto si deriva dal TAG git, non da un campo copiato a mano (coerente con RELEASES.md: una release = un tag)
-  ✓ Un handoff che non sa deve dirlo: meglio dichiarare il vuoto che riempirlo con contesto vecchio
-  ✓ Release nuova (v3.1.0 minor o v4.0.0 major): non la decide il sistema, la firma Matteo
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  Decidere i 5 SOSPESI del batch 3 (proposta: 5 riscritture mirate) e i 2 episodi da rigenerare. Poi S4: organigramma GENESIS in dashboard. In parallelo: creare la GitHub Release di v3.0.0 e decidere il tag nuovo.
+  P1 canone: A1 le 5 riscritture mirate e A2 rigenerare EP_N2_28/55 (serve l'ok di Matteo), poi A3
 
 ━━━ BLOCKERS ━━━
   ⚠ UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20
@@ -48,10 +39,10 @@ Sessione #71 — l'handoff mentiva e l'ho verificato riga per riga. Il sistema N
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
-d417f838 auto: nina_rag_loop - episodi Nina 26/08/2026
-98dd12c1 auto: night_audit - cartella clinica 26/08/2026
-eac8338f auto: inventario notturno + critiche
-39ff90c3 auto: nina_rag_loop - episodi Nina 25/08/2026
-6669ba83 auto: night_audit - cartella clinica 25/08/2026
+62cf999f docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
+e23e1f54 auto: inventario notturno + critiche
+f7a3cdad auto: nina_rag_loop - episodi Nina 24/09/2026
+b1349097 auto: night_audit - cartella clinica 24/09/2026
+1757a921 auto: inventario notturno + critiche
 
-Generato: 27/08/2026 17:16
+Generato: 27/09/2026 20:28

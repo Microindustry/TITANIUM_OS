@@ -9,6 +9,11 @@
 
 <!-- /TOC -->
 
+> **ARCHIVIATO il 27/09/2026 (sessione #73, R8).** Le azioni che aspettano Matteo ora vivono
+> nella bussola, sezione `## ⏳ ASPETTA MATTEO` in testa a `DA_FARE.md`: una lista sola, non due.
+> Questo file resta come storia (ferma al #45 del 24/06, con la correzione del #69 sulle chiavi).
+
+
 # AZIONI — SOLO MATTEO (non delegabili al sistema)
 
 *Generato sess.#45 · 2026-06-24 · dalle critiche aperte che un loop autonomo NON può chiudere

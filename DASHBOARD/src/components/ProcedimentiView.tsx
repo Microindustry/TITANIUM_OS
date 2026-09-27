@@ -20,7 +20,7 @@ const SEZIONI: Sezione[] = [
     intro: "Doppio click su un collegamento del Desktop. Niente comandi a mente.",
     passi: [
       { cosa: "Collegamento \"Claude Code [TI]\"", come: "→ CLAUDE_CODE.bat: trova claude.exe da solo e apre Claude dentro TITANIUM_OS." },
-      { cosa: "Sessione NUOVA che riprende dallo stato", come: "Claude legge DA_FARE_FATTO.md (bussola) + RIAVVIO_SESSIONE.txt + BRAIN/STATE.json e dice in <10s dove siamo. Contesto pulito ogni volta." },
+      { cosa: "Sessione NUOVA che riprende dallo stato", come: "Claude legge DA_FARE.md (bussola) + RIAVVIO_SESSIONE.txt + BRAIN/STATE.json e dice in <10s dove siamo. Contesto pulito ogni volta." },
       { cosa: "Collegamento \"TITANIUM_OS [PS]\"", come: "→ PowerShell dentro TITANIUM_OS, col profilo già caricato (sotto)." },
     ],
   },
@@ -37,10 +37,11 @@ const SEZIONI: Sezione[] = [
   {
     titolo: "3 · Aggiornamenti automatici (a fine sessione)",
     icona: RefreshCw, colore: "#f59e0b",
-    intro: "Un hook \"Stop\" gira da solo quando finisco di rispondere. Lavora SOLO se qualcosa è cambiato (near-istantaneo).",
+    intro: "Un hook \"Stop\" globale (~/.claude/hooks/stop_titanium.sh) gira da solo quando finisco di rispondere, da qualunque cartella. Lavora SOLO se qualcosa è cambiato.",
     passi: [
       { cosa: "RIAVVIO_SESSIONE.txt", come: "rigenerato (generate_restart_prompt.py) → la prossima apertura sa dove eravamo." },
-      { cosa: "STORIE + CRITICHE + mirror Desktop", come: "sync_dashboard.py: rebuild episodes.json se ci sono episodi nuovi · refresh bussola_todos (CRITICHE) se la bussola cambia · copia DA_FARE_FATTO.md → Desktop." },
+      { cosa: "STORIE + CRITICHE + mirror Desktop", come: "sync_dashboard.py: rebuild episodes.json se ci sono episodi nuovi · refresh bussola_todos (CRITICHE) se la bussola cambia · copia DA_FARE.md → Desktop \"da fare.txt\"." },
+      { cosa: "Taglio della bussola", come: "bussola_taglio.py: le righe chiuse delle sessioni prima dell'ultima chiusa vanno in ABBIAMO_FATTO.md col loro perché (di notte nel night_audit e al /salva)." },
     ],
   },
   {
@@ -59,7 +60,7 @@ const RISULTATI = [
   "La continuità non dipende dalla memoria: passa dai file (bussola/RIAVVIO/STATE).",
   "Lo stato è sempre fresco — STORIE, CRITICHE e il mirror Desktop si allineano da soli.",
   "Niente lavoro manuale ripetuto: apri, lavori, chiudi. Il resto si tiene in ordine.",
-  "Perdita zero: tutto committato e pushato; il PIANO vive in PROSSIMA_SESSIONE.md.",
+  "Perdita zero: tutto committato e pushato; il piano vivo è la SCALETTA dentro DA_FARE.md.",
   "Un solo punto di consultazione (questo) per capire come gira — senza tenerlo a mente.",
 ];
 

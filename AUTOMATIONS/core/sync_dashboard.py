@@ -1,8 +1,12 @@
-# sync_dashboard.py | TITANIUM_OS / AUTOMATIONS / core | v1.0 | 2026-06-09
-# Sync INCREMENTALE a fine sessione (hook Stop) + utile a mano.
-# Tiene la dashboard allineata senza intervento: rebuild STORIE (episodes.json) +
-# refresh CRITICHE (bussola_todos.json). Lavora SOLO se le sorgenti sono cambiate
-# (mtime), così l'hook resta quasi istantaneo. Non fallisce mai (exit 0).
+# sync_dashboard.py | TITANIUM_OS / AUTOMATIONS / core | v1.1 | 2026-09-27
+# Sync INCREMENTALE a fine turno (hook Stop globale, ~/.claude/hooks/stop_titanium.sh)
+# + utile a mano. Tiene la dashboard allineata senza intervento: rebuild STORIE
+# (episodes.json) + refresh CRITICHE (bussola_todos.json). Lavora SOLO se le sorgenti
+# sono cambiate (mtime/hash), così l'hook resta quasi istantaneo. Non fallisce mai (exit 0).
+# v1.1 (#73): bussola = DA_FARE.md, specchio Desktop "da fare.txt", .graphifyignore
+#   derivato da .gitignore. Lo specchio era fermo al 16/07 perche' l'hook Stop di
+#   progetto ("cmd /c ...") da Git Bash non partiva piu': ora l'hook e' globale.
+#   Ogni passo ha il suo try: un errore in uno non deve spegnere gli altri in silenzio.
 
 import sys
 import hashlib
@@ -49,36 +53,67 @@ def _run(rel_args: list[str]) -> None:
         pass
 
 
+def _graphifyignore() -> bool:
+    """R4 (#73): .graphifyignore = regole di .gitignore + archivi fuori lettura.
+    graphify, se trova .graphifyignore, NON legge piu' .gitignore: per questo il
+    file le ricopia (derivato, non scritto a mano) invece di elencare solo gli archivi."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from fuori_lettura import PATTERN
+    gi = BASE / ".gitignore"
+    out = BASE / ".graphifyignore"
+    body = gi.read_text(encoding="utf-8") if gi.exists() else ""
+    text = ("# .graphifyignore | GENERATO da AUTOMATIONS/core/sync_dashboard.py - non editare a mano\n"
+            "# graphify, se trova questo file, non legge piu' .gitignore: qui ci sono le sue regole\n"
+            "# + gli archivi che non devono pesare nel grafo (fonte: AUTOMATIONS/core/fuori_lettura.py).\n\n"
+            "# --- archivi: fuori dal percorso di lettura (R4, #73) ---\n"
+            + "\n".join(PATTERN) + "\n\n# --- da .gitignore ---\n" + body)
+    cur = out.read_text(encoding="utf-8") if out.exists() else None
+    if cur != text:
+        out.write_text(text, encoding="utf-8")
+        return True
+    return False
+
+
 def sync(verbose: bool = False) -> dict:
-    did = {"storie": False, "critiche": False, "desktop": False, "pct": False}
+    did = {"storie": False, "critiche": False, "desktop": False, "pct": False, "graphify": False}
+    bussola = BASE / "DA_FARE.md"
+
+    # 1) STORIE: rebuild episodes.json se un .md episodio è più recente
     try:
-        # 1) STORIE: rebuild episodes.json se un .md episodio è più recente
         ep_dir = BASE / "CONTENT_ENGINE" / "DATABASE" / "episodes"
         ep_json = BASE / "DASHBOARD" / "src" / "data" / "episodes.json"
         if ep_dir.exists() and _newer_than(ep_dir.rglob("*.md"), ep_json):
             _run(["CONTENT_ENGINE/scripts/build_episodes_json.py"])
             did["storie"] = True
+    except Exception:
+        pass
 
-        # 2) CRITICHE: refresh bussola_todos.json se il CONTENUTO della bussola è cambiato
-        bussola = BASE / "DA_FARE_FATTO.md"
+    # 2) CRITICHE: refresh bussola_todos.json se il CONTENUTO della bussola è cambiato
+    try:
         todos = BASE / "DATA" / "audit" / "bussola_todos.json"
         stamp = BASE / "DATA" / ".sync_bussola.hash"
         if bussola.exists() and (not todos.exists() or _changed_by_hash(bussola, stamp)):
             _run(["NODES/AUDIT_AGENT/night_audit.py", "--bussola-only"])
             did["critiche"] = True
+    except Exception:
+        pass
 
-        # 3) DESKTOP: mirror PURO di DA_FARE_FATTO.md (il PIANO vive in PROSSIMA_SESSIONE.md)
-        desk = Path.home() / "Desktop" / "da fare e cosa ho fatto.txt"
+    # 3) DESKTOP: specchio PURO di DA_FARE.md (il piano vivo e' la SCALETTA dentro la bussola)
+    try:
+        desk = Path.home() / "Desktop" / "da fare.txt"
         if bussola.exists():
             src = bussola.read_text(encoding="utf-8")
             cur = desk.read_text(encoding="utf-8") if desk.exists() else None
             if cur != src:
                 desk.write_text(src, encoding="utf-8")
                 did["desktop"] = True
+    except Exception:
+        pass
 
-        # 4) PERCENTUALI: riallinea i pilastri della dashboard (MappaView + PILLARS_DATA
-        # + ROOT) alla FONTE UNICA STATE.json. Solo se STATE e' cambiato. Agente
-        # NODES/PCT_SYNC/pct_sync.py: sostituisce solo cifre -> non rompe il TS.
+    # 4) PERCENTUALI: riallinea i pilastri della dashboard (MappaView + PILLARS_DATA
+    # + ROOT) alla FONTE UNICA STATE.json. Solo se STATE e' cambiato. Agente
+    # NODES/PCT_SYNC/pct_sync.py: sostituisce solo cifre -> non rompe il TS.
+    try:
         state = BASE / "BRAIN" / "STATE.json"
         pstamp = BASE / "DATA" / ".sync_pct.hash"
         if state.exists() and _changed_by_hash(state, pstamp):
@@ -86,11 +121,19 @@ def sync(verbose: bool = False) -> dict:
             did["pct"] = True
     except Exception:
         pass
+
+    # 5) GRAPHIFY: archivi fuori dal grafo (R4)
+    try:
+        did["graphify"] = _graphifyignore()
+    except Exception:
+        pass
+
     if verbose:
         print(f"sync: storie={'rebuilt' if did['storie'] else 'ok'} · "
               f"critiche={'refreshed' if did['critiche'] else 'ok'} · "
               f"desktop={'mirrored' if did['desktop'] else 'ok'} · "
-              f"pct={'synced' if did['pct'] else 'ok'}")
+              f"pct={'synced' if did['pct'] else 'ok'} · "
+              f"graphify={'rewritten' if did['graphify'] else 'ok'}")
     return did
 
 

@@ -1,4 +1,4 @@
-# generate_restart_prompt.py | TITANIUM_OS / SCRIPTS | v1.1 | 2026-05-31
+# generate_restart_prompt.py | TITANIUM_OS / SCRIPTS | v1.3 | 2026-09-27
 # Genera RIAVVIO_SESSIONE.txt da session_context.json + STATE.json + git log
 # Eseguito automaticamente dallo stop hook di Claude Code
 # v1.1 — SELF-HEALING: se session_context e' stale (non di oggi), deriva il
@@ -14,6 +14,20 @@ ROOT = Path(__file__).resolve().parent
 STATE_FILE   = ROOT / "BRAIN" / "STATE.json"
 CONTEXT_FILE = ROOT / "DATA" / "session_context.json"
 OUTPUT_FILE  = ROOT / "RIAVVIO_SESSIONE.txt"
+BUSSOLA_FILE = ROOT / "DA_FARE.md"
+
+
+def _sessione_bussola():
+    """Il numero vero di sessione e' quello della bussola (E3, #72): il blocco
+    '## Sessione #N' piu' recente. STATE.session_count NON conta sessioni, conta
+    scritture di STATE.json (E1): il 27/09 diceva 169 mentre eravamo alla #73."""
+    import re
+    try:
+        testo = BUSSOLA_FILE.read_text(encoding="utf-8")
+    except OSError:
+        return None
+    nums = [int(n) for n in re.findall(r"^##\s+Sessione\s+#(\d+)", testo, re.MULTILINE)]
+    return max(nums) if nums else None
 
 
 def _git_log(n=5):
@@ -62,7 +76,8 @@ def main():
     next_session = int(session_num) + 1 if str(session_num).isdigit() else "?"
 
     # ── SELF-HEALING: rileva contesto stale ────────────────────────────────
-    # session_context e' aggiornato solo dal tool MCP update_session_context.
+    # session_context lo scriveva il tool MCP update_session_context; dal #73 lo scrive
+    # il /salva (il server MCP titanium-os non e' collegato alle sessioni).
     # Se Claude non l'ha chiamato, e' fermo a una sessione precedente -> il
     # handoff sarebbe cieco. In quel caso derivo dai commit git di oggi.
     ctx_date = (ctx.get("session_date") or ctx.get("last_updated", ""))[:10]
@@ -82,7 +97,7 @@ def main():
         if today_commits:
             last_discussed = (
                 '[auto-derivato dai commit di oggi - session_context.json fermo a '
-                f"{ctx_date or 'N/A'}; ricorda il tool MCP update_session_context]"
+                f"{ctx_date or 'N/A'}; si riscrive al /salva: il server MCP non e' collegato]"
                 + chr(10) + '  ' + '; '.join(today_commits[:4])
             )
             active_topics = today_commits
@@ -109,15 +124,16 @@ def main():
         next_action = ctx.get("next_action", state.get("next_step", "N/A"))
 
     # se il contesto e' stale il numero di sessione lo dava comunque ctx
-    # (fermo alla #20): la fonte viva e' STATE.session_count
+    # (fermo alla #20). v1.3 (#73): la fonte viva e' la BUSSOLA, non
+    # STATE.session_count (contatore finto: conta le scritture di STATE)
     if ctx_is_stale:
-        session_num = state.get('session_count', session_num)
+        session_num = _sessione_bussola() or session_num
         next_session = int(session_num) + 1 if str(session_num).isdigit() else '?'
         riga_sessione = f"Ultima sessione: #{session_num} - contesto di chat fermo al {ctx_date or 'N/A'}"
         header_warn = ('  [!] session_context.json STALE (' + (ctx_date or 'N/A') + '): '
                        + ('contesto derivato dai commit di oggi' if today_commits
                           else "nessun commit oggi -> sotto c'e' STATE.json, non la chat")
-                       + ' - chiama update_session_context')
+                       + ' - si riscrive al /salva')
     else:
         riga_sessione = f"Ultima sessione: #{session_num} - {ctx.get('session_date', 'N/A')}"
         header_warn = ''

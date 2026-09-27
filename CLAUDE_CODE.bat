@@ -3,7 +3,7 @@
 :: Il collegamento Desktop usa TI_ROOT\claude.ico (icona stabile, non il path versionato
 :: di claude.exe che cambia a ogni update) + hotkey Ctrl+Alt+T.
 :: Doppio click: apre Claude nella cartella giusta e avvia una sessione NUOVA che riprende
-:: lo stato leggendo i file di handoff (DA_FARE_FATTO.md + RIAVVIO_SESSIONE.txt + STATE.json).
+:: lo stato leggendo i file di handoff (DA_FARE.md + RIAVVIO_SESSIONE.txt + STATE.json).
 :: Niente --continue: contesto pulito ogni volta, la continuita' passa dai file (by design).
 :: Risolve claude.exe in modo dinamico (robusto agli update di versione e al GUID del pacchetto Store).
 setlocal enabledelayedexpansion
@@ -19,5 +19,5 @@ if not defined CLAUDE (
 )
 
 cd /d "%TI_ROOT%"
-start "" "%CLAUDE%" --dangerously-skip-permissions "Leggi DA_FARE_FATTO.md (la bussola: cosa e' fatto / cosa resta), poi RIAVVIO_SESSIONE.txt e BRAIN/STATE.json, e riprendi: dimmi in meno di 10 secondi dove eravamo e il prossimo step (il primo punto della bussola), senza domande."
+start "" "%CLAUDE%" --dangerously-skip-permissions "Leggi DA_FARE.md (la bussola: cosa e' aperto / in corso / aspetta Matteo), poi RIAVVIO_SESSIONE.txt e BRAIN/STATE.json, e riprendi: dimmi in meno di 10 secondi dove eravamo e il prossimo step (il primo punto della bussola), senza domande."
 endlocal

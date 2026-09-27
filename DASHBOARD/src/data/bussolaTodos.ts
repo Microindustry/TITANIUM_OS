@@ -1,5 +1,5 @@
 // bussolaTodos.ts | TITANIUM_OS / DASHBOARD | v1.0 | 2026-06-07
-// La BUSSOLA (DA_FARE_FATTO.md) innestata nella vista CRITICHE come ramo.
+// La BUSSOLA (DA_FARE.md, era DA_FARE_FATTO.md fino al #73) innestata nella vista CRITICHE come ramo.
 // La scaletta condivisa io<->Matteo (da fare / fatto) vive accanto alla cartella
 // clinica di sistema: GET /api/bussola/todos (rigenerato dal night_audit).
 
@@ -80,7 +80,7 @@ export function buildBussolaBranch(todos: BussolaTodo[]): SkillNode | null {
     label: "Bussola — la scaletta",
     icon: "📋",
     status: open > 0 ? "active" : "done",
-    note: "DA FARE / FATTO condiviso io↔Matteo (DA_FARE_FATTO.md). Rigenerato ogni " +
+    note: "DA FARE condiviso io↔Matteo (DA_FARE.md; il fatto va in ABBIAMO_FATTO.md). Rigenerato ogni " +
           "notte dal night_audit: la nostra rotta accanto alla cartella clinica.",
     ...pink,
     children: groups,

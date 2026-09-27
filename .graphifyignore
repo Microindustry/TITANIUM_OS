@@ -1,0 +1,95 @@
+# .graphifyignore | GENERATO da AUTOMATIONS/core/sync_dashboard.py - non editare a mano
+# graphify, se trova questo file, non legge piu' .gitignore: qui ci sono le sue regole
+# + gli archivi che non devono pesare nel grafo (fonte: AUTOMATIONS/core/fuori_lettura.py).
+
+# --- archivi: fuori dal percorso di lettura (R4, #73) ---
+ABBIAMO_FATTO.md
+BACKLOG_EREDITATO.md
+CRITICHE_CHIUSE.md
+DA_FARE_FATTO.md
+DOCS/_archivio_*
+
+# --- da .gitignore ---
+# TITANIUM_OS — .gitignore
+_VAULT/
+BACKUPS/
+*.pyc
+__pycache__/
+.env
+*.log
+VERSIONS/snapshots/
+# Archivi changelog auto-generati (loop runaway del watcher) — ridondanti con git history
+VERSIONS/changelog_archive_*.md
+node_modules/
+dist/
+.vite/
+# ChromaDB + RAG internals — si rebuild da MENTE/, possono contenere dati sensibili
+NODES/MENTE_RAG/chroma_db/
+NODES/MENTE_RAG/chroma_db_*/
+NODES/MENTE_RAG/rag_corpus.jsonl
+NODES/MENTE_RAG/rag_manifest.json
+NODES/MENTE_RAG/rag_manifest_*.json
+NODES/MENTE_RAG/rag_tfidf.pkl
+NODES/MENTE_RAG/rag_linkgraph.json
+NODES/MENTE_RAG/mente_index.json
+NODES/MENTE_RAG/rag_index.lock
+# device override machine-local (cpu/cuda) — come .env, non versionare
+NODES/MENTE_RAG/rag_device.txt
+# Indice semantico (binario) — rigenerabile da MENTE/, riscritto di continuo dal watcher (churn)
+DATA/semantic_index.db
+DATA/daily_brief_last.md
+DATA/computer_use_shots/
+# EVA — config con dati reali del centro (orari/servizi/clienti): non versionare
+NODES/EVA/config.json
+# EVA runtime: inbox handoff (PII cliente) + stato sessioni — MAI in git
+DATA/eva/
+MODELS/
+CONTENT_ENGINE/DATABASE/training/dataset.jsonl
+
+DATA/dash_shot*.png
+DATA/mockup_*.png
+DATA/dash_*.png
+DATA/pitch*.png
+DATA/home*.png
+
+NODES/COMPUTER_USE/omniparser_weights/
+*.safetensors
+
+# Contiene token/segreti locali (GH_TOKEN, PATH macchina) — MAI in git
+ti_autorun.cmd
+# Graphify (knowledge graph): output rigenerabile, può contenere estratti di MENTE/ — resta locale
+graphify-out/
+**/graphify-out/
+# AI News Watcher: stato runtime (criticità a ogni passata) — roster in codice + BRAIN/brief
+DATA/ai_news_watcher_state.json
+# Sync incrementale: stamp hash per non rifare lavoro inutile
+DATA/.sync_bussola.hash
+DATA/.sync_pct.hash
+DATA/.inventario_last.txt
+# pct_sync: report rigenerato a ogni run (runtime, non sorgente)
+DATA/audit/pct_sync.json
+# Viste markdown: cache rigenerabile da AUTOMATIONS/core/md_view_pipeline.py
+# (340 file .md.json + indice riscritti a ogni sweep -> churn che sporca ogni diff).
+# Restano su disco (la dashboard li serve via /api/file); fuori da git. (critica AUD-28de0ccc64)
+DATA/views/
+DATA/view_index.json
+DATA/view_index.json.*   # .tmp della scrittura atomica e i .corrotto messi da parte (#71)
+
+# preferenze locali di macchina (modello, ecc.) — non pubblicare
+.claude/settings.local.json
+
+# Cartelle log runtime (decisione 23/06, eseguita 07/07): *.log era gia' ignorato,
+# ma dentro finiscono anche .txt di esito (recover/restore) rigenerati a ogni run
+/logs/
+/DATA/logs/
+
+# Riferimenti esterni in sola lettura (S0 scala GENESIS, #70): clone di repo altrui
+# tenuti per consultazione. Hanno il loro .git: fuori dal nostro repo, mai committati.
+/ARCHIVE/REFERENCE/
+
+# Database GENESIS (S1/S2, #70): e' DERIVATO — si rigenera con
+#   python CORE/genesis_db.py && python CORE/genesis_seed.py
+# In git sta lo schema (genesis_db.py) e i dati (genesis_seed.py), non il binario.
+/DATA/genesis.db
+/DATA/genesis.db-wal
+/DATA/genesis.db-shm

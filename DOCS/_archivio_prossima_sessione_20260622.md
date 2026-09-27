@@ -18,6 +18,11 @@
 
 <!-- /TOC -->
 
+> **ARCHIVIATO il 27/09/2026 (sessione #73, R8).** Era la "casa unica del PIANO", ferma al 22/06
+> (annunciava la sessione #42). Il piano vivo e' la **SCALETTA** dentro `DA_FARE.md` (scritta nella #72).
+> Questo file resta come storia: la visione 2026 e i punti 0-8 di giugno.
+
+
 # PROSSIMA SESSIONE — Piano (lista da seguire punto per punto)
 *Consolidato sessione #20-21 · 04/06/2026 · **casa UNICA del PIANO** (09/06: il Desktop è ora
 solo mirror della bussola; la vecchia copia Desktop è in `DOCS/_archivio_piano_desktop_20260609.txt`).*

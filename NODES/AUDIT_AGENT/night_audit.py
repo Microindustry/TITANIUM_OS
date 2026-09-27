@@ -56,14 +56,14 @@ AUDIT_DIR = TI_ROOT / "DATA" / "audit"
 CRITICHE  = AUDIT_DIR / "critiche_auto.json"
 HEALTH    = AUDIT_DIR / "system_health.json"
 VAULT_ORPHANS = AUDIT_DIR / "vault_orphans.json"      # note MENTE senza legami (da vault_intersect)
-BUSSOLA       = TI_ROOT / "DA_FARE_FATTO.md"           # la scaletta viva (da fare/fatto)
+BUSSOLA       = TI_ROOT / "DA_FARE.md"                 # la bussola viva (era DA_FARE_FATTO.md fino al #73)
 BUSSOLA_TODOS = AUDIT_DIR / "bussola_todos.json"       # estratto strutturato per la dashboard (CRITICHE)
 
 MODEL     = "claude-sonnet-4-6"   # economico, NO Opus (regola #4)
 TODAY     = datetime.now().strftime("%Y-%m-%d")
 AUTO_CLOSE_DAYS = 4   # una critica non ri-osservata da N giorni -> auto-resolved (riapre se ritorna)
 CANONE_MANUALE  = AUDIT_DIR / "critiche_manuali.json"  # canone manuale vivo (#54, ex criticheData.ts)
-CANONE_STALE_DAYS = 30  # file canone fermo da N giorni -> segnale (organo silenzioso)
+CANONE_STALE_DAYS = 30  # (fino al #72) soglia sul file intero; dal #73 decide critiche_md.SCADENZA_GG per critica
 
 # Canone del VAULT (#54, attacco 07 P1): la "verita' unica" MENTE/_CANONE.md va sorvegliata
 MENTE_DIR = Path(os.environ.get("MENTE_DIR", str(Path.home() / "MICROINDUSTRY" / "MENTE")))
@@ -142,16 +142,19 @@ def _git(*args: str) -> str:
         return ""
 
 
-# ── BUSSOLA (DA_FARE_FATTO.md) — collegamento alla cartella clinica ──────────────
+# ── BUSSOLA (DA_FARE.md) — collegamento alla cartella clinica ──────────────
 
-# glifo nel [ ] -> stato della riga
-_BUSSOLA_STATO = {"✓": "fatto", "◐": "in_corso", "": "da_fare", "✗": "non_fatto", "💡": "idea"}
+# glifo nel [ ] -> stato della riga. "v"/"x" = fatto anche loro: la #72 ha scritto
+# [v] al posto di [✓] e finivano contati come "da fare" (#73).
+_BUSSOLA_STATO = {"✓": "fatto", "v": "fatto", "x": "fatto", "X": "fatto",
+                  "◐": "in_corso", "": "da_fare", "✗": "non_fatto", "💡": "idea"}
 _BUSSOLA_LINE  = re.compile(r"^\s*[-*]?\s*\[([^\]]*)\]\s*(.+?)\s*$")
-_BUSSOLA_SESS  = re.compile(r"^##\s+(.*sessione.*)$", re.IGNORECASE)
+# ogni titolo "## " e' un gruppo: i blocchi sessione e (dal #73) "ASPETTA MATTEO" in testa
+_BUSSOLA_SESS  = re.compile(r"^##\s+(.+)$")
 
 
 def parse_bussola() -> list[dict]:
-    """Estrae le righe-todo da DA_FARE_FATTO.md con il loro stato e la sessione.
+    """Estrae le righe-todo da DA_FARE.md con il loro stato e la sessione.
     Deterministico (niente LLM): la bussola e' la fonte, qui la rendiamo struttura."""
     if not BUSSOLA.exists():
         return []
@@ -536,9 +539,32 @@ def append_critiche(new: list[dict], signals: dict) -> dict:
             c["resolved_by"] = f"auto: non più osservata da {AUTO_CLOSE_DAYS}+ giorni"
             auto_closed += 1
     merged = sorted(by_id.values(), key=lambda x: (x["date"], x["id"]), reverse=True)
+    merged, archiviate = _ruota_chiuse(merged)
     CRITICHE.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
-    return {"added": added, "auto_closed": auto_closed,
+    return {"added": added, "auto_closed": auto_closed, "archiviate": archiviate,
             "total": len(merged), "open": sum(1 for c in merged if c.get("status") == "open")}
+
+
+# K2 (#73): il file vivo delle critiche automatiche era arrivato a 300 voci, 293 chiuse:
+# stessa malattia della bussola (cresce e non si sfoltisce). Le chiuse da piu' di
+# ARCHIVIO_DOPO_GG giorni escono verso un archivio append-only. Se un guasto archiviato
+# torna, nasce una voce nuova: dopo un mese di silenzio e' un fatto nuovo.
+ARCHIVIO_DOPO_GG = 30
+CRITICHE_ARCH = AUDIT_DIR / "critiche_auto_archivio.jsonl"
+
+
+def _ruota_chiuse(voci: list[dict]) -> tuple[list[dict], int]:
+    soglia = (datetime.now() - timedelta(days=ARCHIVIO_DOPO_GG)).strftime("%Y-%m-%d")
+    vive, vecchie = [], []
+    for c in voci:
+        quando = c.get("resolved_on") or c.get("last_seen") or c.get("date", "")
+        (vecchie if c.get("status") != "open" and quando < soglia else vive).append(c)
+    if vecchie:
+        # prima l'archivio, poi il file vivo: se si rompe a meta' si duplica, non si perde
+        with CRITICHE_ARCH.open("a", encoding="utf-8") as fh:
+            for c in vecchie:
+                fh.write(json.dumps(c, ensure_ascii=False) + "\n")
+    return vive, len(vecchie)
 
 
 # QC strutturale episodi (#54 ondata C, attacco 03 F8): QUALITA_BATCH_44 era una
@@ -782,13 +808,19 @@ def check_doppioni_copia(signals: dict) -> None:
 
 def check_canone_manuale(signals: dict) -> None:
     """(#54) Riconciliazione canone manuale: conta le critiche attive in
-    critiche_manuali.json e misura la freschezza del file. Se il canone e'
-    fermo da CANONE_STALE_DAYS+ giorni lo segnala come organo silenzioso
-    (lezione guasto 7: cio' che tace non e' sano, va osservato)."""
-    out = {"active": 0, "done": 0, "file_age_days": None, "stale": False}
+    critiche_manuali.json. Dal #73 la freschezza e' per critica (K3): quelle
+    aperte non riverificate da SCADENZA_GG giorni sono SCADUTE e si segnalano
+    (lezione guasto 7: cio' che tace non e' sano, va osservato).
+    file_age_days resta come informazione, non decide piu' nulla."""
+    # K1/K3 (#73): la freschezza si misura CRITICA PER CRITICA (campo 'verificata'),
+    # non sull'mtime del file: una critica di giugno e una di ieri non sono uguali.
+    # Stessa regola di CRITICHE.md (critiche_md.stato_effettivo): deriva, non copia.
+    out = {"active": 0, "done": 0, "scadute": 0, "file_age_days": None, "stale": False}
     try:
         if CANONE_MANUALE.exists():
+            from AUTOMATIONS.core.critiche_md import stato_effettivo, SCADENZA_GG
             d = _read_json(CANONE_MANUALE, {})
+            file_updated = str(d.get("updated") or "")[:10]
             def _walk(n):
                 if n.get("isLeaf"):
                     st = n.get("status")
@@ -796,18 +828,21 @@ def check_canone_manuale(signals: dict) -> None:
                         out["active"] += 1
                     elif st == "done":
                         out["done"] += 1
+                    if stato_effettivo(n, file_updated) == "stale":
+                        out["scadute"] += 1
                 for c in n.get("children") or []:
                     _walk(c)
             if isinstance(d.get("root"), dict):
                 _walk(d["root"])
             age = (datetime.now() - datetime.fromtimestamp(CANONE_MANUALE.stat().st_mtime)).days
             out["file_age_days"] = age
-            if age >= CANONE_STALE_DAYS:
+            if out["scadute"]:
                 out["stale"] = True
                 signals["log_issues"].append({
-                    "log": "critiche_manuali.json", "tipo": "canone critiche stantio",
-                    "riga": f"canone manuale fermo da {age} giorni (>{CANONE_STALE_DAYS}) — "
-                            f"{out['active']} attive da riverificare", "data": TODAY,
+                    "log": "critiche_manuali.json", "tipo": "critiche scadute",
+                    "riga": f"{out['scadute']} critiche aperte SCADUTE (non riverificate da "
+                            f"{SCADENZA_GG}+ giorni): prima di eseguirle si riverificano (K4)",
+                    "data": TODAY,
                 })
     except Exception as e:
         logger.warning("check canone manuale fallito: %s", e)
@@ -845,10 +880,23 @@ def already_today() -> bool:
 
 def main():
     force = "--force" in sys.argv
+    bussola_only = "--bussola-only" in sys.argv
+    # R2 (#73): il TAGLIO della bussola lo fa il sistema, una volta per notte.
+    # Di notte la sessione piu' recente in bussola e' chiusa: dalle precedenti escono
+    # le righe chiuse verso ABBIAMO_FATTO.md (bussola_taglio.py). Mai col --bussola-only:
+    # quello gira a fine turno, a sessione aperta, e li' la sessione prima deve restare.
+    if not bussola_only and (force or not already_today()):
+        try:
+            from AUTOMATIONS.core.bussola_taglio import taglia
+            esito = taglia(applica=True)
+            logger.info("bussola_taglio: chiusa #%s, blocchi %s, righe spostate %d",
+                        esito.get("chiusa"), esito.get("blocchi"), esito.get("righe_spostate", 0))
+        except Exception as e:
+            logger.warning("bussola_taglio saltato: %s", e)
     # la bussola si rinfresca SEMPRE (anche se l'audit LLM e' gia' girato oggi):
     # e' deterministica e a costo zero, e la dashboard deve vedere i todo aggiornati.
     write_bussola_todos()
-    if "--bussola-only" in sys.argv:
+    if bussola_only:
         return
     if already_today() and not force:
         logger.info("audit gia' eseguito oggi (%s) - skip (--force per rifare)", TODAY)

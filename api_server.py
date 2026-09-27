@@ -782,7 +782,7 @@ def critiche_manuali():
 
 @app.get("/api/bussola/todos")
 def bussola_todos():
-    """Bussola viva (DA_FARE_FATTO.md) -> todo strutturati per la vista CRITICHE.
+    """Bussola viva (DA_FARE.md) -> todo strutturati per la vista CRITICHE.
     Il file e' rigenerato dal night_audit (deterministico): la scaletta da-fare/fatto
     di Matteo appare in dashboard accanto alle critiche di sistema."""
     f = ROOT / "DATA" / "audit" / "bussola_todos.json"

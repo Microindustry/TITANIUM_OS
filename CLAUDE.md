@@ -33,7 +33,7 @@ Matteo Benenati — artigiano industriale + system builder.
 ## INIZIO SESSIONE (protocollo fisso)
 
 ```
-1. Leggi DA_FARE_FATTO.md       → la BUSSOLA: cosa è fatto / cosa resta (scaletta viva)
+1. Leggi DA_FARE.md             → la BUSSOLA: cosa è aperto / in corso / aspetta Matteo
 2. Leggi RIAVVIO_SESSIONE.txt   → di cosa stavamo parlando l'ultima sessione
 3. Leggi BRAIN/STATE.json       → milestone attivo + pilastri + blockers
 3b. Triage notturno (5 sec)     → DATA/audit/system_health.json `log_issues`: se la notte
@@ -41,21 +41,32 @@ Matteo Benenati — artigiano industriale + system builder.
 4. Enunci in <10 sec: dove eravamo + prossimo step + SEMPRE 2 righe su cosa hanno
    fatto/prodotto gli AGENTI NOTTURNI (generazione EP/caroselli, bozze, audit, retention —
    da system_health.json + tasks_history.json + code caroselli) — zero domande
-5. Lavora — aggiorna DA_FARE_FATTO.md STRADA FACENDO (non solo a fine)
-6. Fine sessione → aggiorna DA_FARE_FATTO.md + STATE.json + RIAVVIO + commit + push
+5. Lavora — aggiorna DA_FARE.md STRADA FACENDO (non solo a fine)
+6. Fine sessione → /salva: DA_FARE.md + STATE.json + RIAVVIO + taglio + commit + push
 ```
 
-Non chiedere "da dove partiamo?". Leggi DA_FARE_FATTO.md e RIAVVIO_SESSIONE.txt prima di tutto.
+Non chiedere "da dove partiamo?". Leggi DA_FARE.md e RIAVVIO_SESSIONE.txt prima di tutto.
+**NON si leggono a inizio sessione** (R4, #73): `ABBIAMO_FATTO.md`, `BACKLOG_EREDITATO.md`,
+`CRITICHE_CHIUSE.md`, `DOCS/_archivio_*` — sono archivi, si aprono solo quando serve il *perché*.
+Elenco unico in `AUTOMATIONS/core/fuori_lettura.py` (li tiene fuori anche da graphify e dalla ricerca).
 
 **Vista CONTROLLO (dashboard):** il *Centro di Controllo* è il posto unico che elenca
 ogni strumento/nodo in italiano semplice (cosa fa · come si usa · se è acceso) — è lì che
 Matteo governa il sistema senza tenerlo a mente. Tienilo aggiornato quando aggiungi nodi.
 
-**BUSSOLA (DA_FARE_FATTO.md):** scaletta condivisa io↔Matteo. Regole: non si cancella
-mai (si cambia stato `[✓]/[◐]/[ ]/[✗]/[💡]`), append in cima, canonica nel repo. Il
-Desktop `da fare e cosa ho fatto.txt` è un **mirror puro auto-aggiornato** (lo scrive
-`AUTOMATIONS/core/sync_dashboard.py` a fine sessione, hook Stop — non editarlo a mano).
-Il PIANO completo (P0-P8) vive solo in `PROSSIMA_SESSIONE.md`.
+**BUSSOLA (DA_FARE.md, era DA_FARE_FATTO.md fino al #73):** scaletta condivisa io↔Matteo.
+Tiene tre cose sole: cosa è aperto · cosa è in corso · cosa aspetta Matteo (sezione in testa).
+Regole: non si cancella mai (si cambia stato `[✓]/[◐]/[ ]/[✗]/[💡]`), append in cima, canonica
+nel repo. **Il taglio lo fa il sistema** (`AUTOMATIONS/core/bussola_taglio.py`, di notte e al
+/salva): le righe chiuse delle sessioni prima dell'ultima chiusa vanno in `ABBIAMO_FATTO.md`
+con il loro perché. Il Desktop `da fare.txt` è uno **specchio puro** (lo scrive `sync_dashboard.py`
+dall'hook Stop globale — non editarlo a mano). Il piano vivo è la **SCALETTA** dentro la bussola;
+`PROSSIMA_SESSIONE.md` e `AZIONI_MATTEO.md` sono archiviati in `DOCS/_archivio_*` (#73).
+
+**CRITICHE.md:** solo le critiche **aperte**; le risolte sono in `CRITICHE_CHIUSE.md`. Una critica
+**⌛ SCADUTA** (non riverificata da 30+ giorni) non è un ordine: **prima di eseguirla si verifica**
+che sia ancora vera (sul backlog vecchio 4 voci su 7 erano già fatte). Se è vera, aggiorna la data
+`verificata` nel JSON; se non lo è, chiudila.
 
 ---
 
@@ -115,7 +126,7 @@ FINANCE\            ← fatture, BEP, ROI, fornitori
 
 ## MILESTONE ATTUALE
 Config G — Rinforzi colonne Z+U (gusset 200mm + diagonali + tiranti M10)
-Completamento: 65% | Sessione: #4
+Completamento V32: 65% (fonte viva: `BRAIN/STATE.json`, qui e' solo un promemoria)
 Blocker attivo: Manca mandrino 2.2kW ER20 — da ordinare
 
 ---

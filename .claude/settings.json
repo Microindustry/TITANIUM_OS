@@ -17,17 +17,5 @@
       "Bash(python CONTENT_ENGINE/scripts/generate_pietre_index.py:*)",
       "Bash(npx tsc:*)"
     ]
-  },
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "cmd /c %USERPROFILE%\\TITANIUM_OS\\generate_restart_prompt.bat"
-          }
-        ]
-      }
-    ]
   }
 }
