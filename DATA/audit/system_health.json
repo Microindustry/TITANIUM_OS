@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-09-24T14:55:07",
-  "date": "2026-09-24",
-  "git_head": "1757a921",
+  "last_audit": "2026-09-28T13:08:15",
+  "date": "2026-09-28",
+  "git_head": "80a82b6a",
   "rag_chunks": 22688,
   "n_episodes": 312,
-  "n_commits_7d": 8,
+  "n_commits_7d": 16,
   "pillars": {
     "V32": 65,
     "MIMS": 30,
@@ -15,62 +15,75 @@
   "log_issues": [
     {
       "log": "critiche_manuali.json",
-      "tipo": "canone critiche stantio",
-      "riga": "canone manuale fermo da 78 giorni (>30) — 19 attive da riverificare",
-      "data": "2026-09-24"
+      "tipo": "critiche scadute",
+      "riga": "20 critiche aperte SCADUTE (non riverificate da 30+ giorni): prima di eseguirle si riverificano (K4)",
+      "data": "2026-09-28"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 34 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-09-24"
+      "riga": "_CANONE.md fermo da 38 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-09-28"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-09-24"
+      "data": "2026-09-28"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "AI news watcher: ultimo output 28 giorni fa (soglia 4) — ai_news_watcher_state.json",
-      "data": "2026-09-24"
+      "riga": "nina-loop: ultimo output 3.9 giorni fa (soglia 3) — nina_state.json",
+      "data": "2026-09-28"
     },
     {
       "log": "organi vivi",
       "tipo": "organo silenzioso",
-      "riga": "riflusso FATTI: ultimo output 33.1 giorni fa (soglia 7) — genesis_nodi_fatti.md",
-      "data": "2026-09-24"
+      "riga": "retention disco: ultimo output 3.9 giorni fa (soglia 3) — retention_last.json",
+      "data": "2026-09-28"
+    },
+    {
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "AI news watcher: ultimo output 31.9 giorni fa (soglia 4) — ai_news_watcher_state.json",
+      "data": "2026-09-28"
+    },
+    {
+      "log": "organi vivi",
+      "tipo": "organo silenzioso",
+      "riga": "riflusso FATTI: ultimo output 37.1 giorni fa (soglia 7) — genesis_nodi_fatti.md",
+      "data": "2026-09-28"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
       "riga": "16 CVE fixabili in 5 pacchetti: aiohttp 3.14.1 (6), cryptography 48.0.1 (6), datasets 4.0.0 (1), pip 26.1.2 (2), transformers 5.6.0 (1)",
-      "data": "2026-09-24"
+      "data": "2026-09-28"
     }
   ],
   "vault_orphans": 0,
   "canone_manuale": {
     "active": 19,
     "done": 37,
-    "file_age_days": 78,
+    "scadute": 20,
+    "file_age_days": 81,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 34,
+    "canone_age_days": 38,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 1.0,
-    "snapshot RAG": 1.0,
+    "nina-loop": 3.9,
+    "snapshot RAG": 0.7,
     "inventario notturno": 0.0,
-    "retention disco": 1.0,
-    "AI news watcher": 28.0,
+    "retention disco": 3.9,
+    "AI news watcher": 31.9,
     "daily brief": 0.0,
-    "riflusso FATTI": 33.1
+    "riflusso FATTI": 37.1
   },
   "pip_audit": {
     "vulns": 20,
@@ -86,13 +99,14 @@
   "qc_episodi": {
     "checked": 67,
     "structure_fail": 0,
-    "open_loop_missing": 24
+    "open_loop_missing": 23
   },
   "critiche": {
-    "added": 0,
+    "added": 1,
     "auto_closed": 0,
-    "total": 300,
-    "open": 7
+    "archiviate": 282,
+    "total": 19,
+    "open": 8
   },
   "verdict": "ATTENZIONE"
 }
