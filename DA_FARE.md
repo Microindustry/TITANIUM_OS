@@ -56,7 +56,7 @@
 Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Quando ne fai una, dimmelo.*
 
 **Decisioni** *(sbloccano la scaletta)*
-- [ ] **A1 · le 5 riscritture mirate** (EP_N2_03, 05, 46, 48, 56) e **A2 · rigenerare EP_N2_28 e 55**: serve il tuo ok (P1)
+- [✓] **A1 · le 5 riscritture mirate** (EP_N2_03, 05, 46, 48, 56) e **A2 · rigenerare EP_N2_28 e 55**: serve il tuo ok (P1) → *ok dato e fatti il 27/09 (#73)*
 - [ ] **F2 · il tag nuovo**: `v3.1.0` se conti i nodi, `v4.0.0` se conti il salto. La release la firma chi la fa
 - [ ] **Titoli tripli** (19/56/63 e 45/53/60): rititolare o archiviare?
 - [ ] **Bonifica dei 33 agganci inventati** negli episodi gia' usciti (la guardia ferma solo quelli nuovi): svuotarli e basta, o riscriverli insieme ai FATTI come l'EP_N2_16?
@@ -159,9 +159,35 @@ L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08
   di GENESIS, personaggi-nodo, V32/MIMS software; FATTI con numeri senza fonte RAG -> tolti. Senza guardia non genera.
 - [ ] **Trovato: le correzioni agli episodi non arrivano in dashboard.** `build_episodes_json.py` e' solo additivo:
   EP_N2_16 in dashboard aveva ancora il testo di PRIMA del batch 3 (#71). Vale per ogni episodio corretto.
-  Serve un refresh del `content` quando il .md cambia (voce B, robustezza).
+  Serve un refresh del `content` quando il .md cambia (voce B, robustezza). *Nina riallineati a mano il 27/09; restano 86 voci EP_AUTO/SEED/S2 con testo diverso dal .md (non toccate: cambia la struttura).*
+- [✓] **A1 + A2 (su ok di Matteo)**: 7 episodi corretti in repo e in MENTE; canon_guard sugli episodi Nina vivi = **0 righe** (il gate della sezione A e' chiuso). Riallineati in dashboard anche i 17 episodi Nina corretti nella #70/#71 che li' mostravano ancora il testo vecchio (es. EP_N2_60 col "DAG Scheduler").
 - [ ] **Trovato: 33 agganci su 42** esistenti non passano la guardia (versioni inventate, MIMS software, agenti
   che non esistono...). `python AUTOMATIONS/core/aggancio_guard.py` li elenca. Bonifica retroattiva: decide Matteo.
+
+**➡ PROSSIMA SESSIONE (#74) — L'UNITÀ GRAFICA NUOVA** *(Matteo: "completamente tua, senza reference; dividi i progetti,
+un grafico a rami che si uniscono a livelli per legare i punti comuni")*
+- [ ] **PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: "e' complicato, prima analizzalo"). E il PERCHE' si riparte:
+  **MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'**. La nuova unita' grafica nasce per il ferro, non per il
+  sistema. Da capire prima di una riga di codice: (1) quali viste di oggi servono, quali sono teatro, quali mostrano dati
+  finti; (2) cosa serve per seguire la costruzione (distinta materiali, decisioni, prove, foto, blocchi hardware, tempi);
+  (3) da dove arrivano i dati (MENTE: V32 7 note, MIMS 36, VULCAN 5; db GENESIS; git); (4) i punti in comune fra i tre
+  (materiali, giunti, stampi, officina) = dove i rami della mappa si uniscono.
+- [ ] **Lo strumento giusto, gia' sul PC**: il plugin ufficiale Anthropic `frontend-design` e' nel marketplace clonato
+  (`~/.claude/plugins/marketplaces/claude-plugins-official/plugins/frontend-design`). Serve proprio a dare un'identita'
+  visiva distintiva senza reference ed evitare l'aspetto "generato". Installarlo: `/plugin install frontend-design@claude-plugins-official`.
+  Accanto, `playwright` (stesso marketplace) per verificare le schermate a vista.
+- [ ] **Brief prima del codice** (e' il metodo del plugin): soggetto = officina + sistema ("artigiano industriale"),
+  pubblico = Matteo ogni giorno + chi guarda da fuori; una direzione estetica decisa, tipografia non di default,
+  un colore dominante con un accento, UN solo momento di movimento. Si decide una volta, poi si costruisce.
+- [ ] **Token di design in Tailwind 4** (`@theme`): un nero solo, una scala tipografica, tema chiaro e scuro dagli
+  stessi token. Chiude insieme i debiti della voce C (4 neri, 239 `text-[7px]`, zero `aria-*`, tema light a meta').
+- [ ] **La mappa a rami che si uniscono a livelli** = un DAG, il "tangled tree": V32, MIMS, VULCAN, GENESIS, Nina,
+  Vita Natura, Identity come rami che si toccano nei punti comuni (materiali, MENTE, officina, GENESIS). Tecnica:
+  React Flow (`@xyflow/react`) + layout ELK "layered" (o d3 per il tangled tree). Dati DERIVATI, non scritti a mano:
+  db GENESIS (chi ci lavora) + vault (cosa sappiamo) + git (quanto si e' mosso) = C1-C3 della scaletta.
+- [ ] **Via il teatro**: `three`/`@react-three/*`, `tsparticles`, i force-graph che non servono piu', ~2,5k righe di
+  codice morto (voce C). Prima si misura cosa si usa davvero, poi si toglie.
+- [ ] **Stesso lavoro, due vetrine**: la mappa finita va anche sul profilo GitHub (voce D).
 
 ---
 
@@ -279,12 +305,13 @@ aveva barrato. Sotto c'e' cosa resta davvero, per tema e non per sessione.*
 6. `R8` il resto del contorno: AZIONI_MATTEO (24/06), PROSSIMA_SESSIONE (09/06), STATE, Desktop --- **FATTO 27/09 (#73)**
 
 **P1 - IL CANONE** *(e' l'unica cosa che finisce dentro il RAG e quindi si propaga)*
-7. `A1` le 5 riscritture mirate --- **serve l'ok di Matteo**
-8. `A2` rigenerare EP_N2_28 e 55 --- **serve l'ok di Matteo**
+7. `A1` le 5 riscritture mirate --- **FATTO 27/09 (#73)**
+8. `A2` rigenerare EP_N2_28 e 55 --- **FATTO 27/09 (#73)**, riparati invece che rigenerati
 9. `A3` togliere i 2 numeri inventati dell'EP_N2_16 --- **FATTO 27/09 (#73)**
 10. `I2` far mordere la regola "meglio vuoto che inventato" sullo slot `aggancio_reale` --- **FATTO 27/09 (#73)**
 
 **P2 - LA MAPPA** *(un lavoro solo che serve due volte: dashboard + profilo)*
+→ *#74 (ordine Matteo 27/09): diventa il RIFACIMENTO DELL'UNITÀ GRAFICA della dashboard, con la mappa a rami come cuore. Piano nel blocco #73, sezione PROSSIMA SESSIONE.*
 11. `B1` allineare i nomi dei due alberi, `B2` GENESIS 7o dipartimento (copiare dal vault)
 12. `C1-C3` S4: la mappa unica in dashboard
 13. `D1-D5` la stessa mappa sul profilo GitHub + crescita + badge + racconto
@@ -316,34 +343,10 @@ chiavi da ruotare, API key Semantic Scholar.
 
 *Stessa identica malattia della bussola: crescono, non si sfoltiscono, e nessuno le rilegge.*
 
-- [✓] **K1 · La diagnosi**: il canone manuale e' **fermo da 49 giorni** con **19 critiche attive**
-  che nessuno ha riverificato. Il night_audit intanto ne aggiunge di automatiche e ne chiude
-  in automatico (l'ultima notte: +1 aggiunta, 6 auto-chiuse). Risultato: due flussi che non si
-  parlano, e un file che cresce.
-  → *#73: curata con K2+K3. I due flussi ora parlano la stessa lingua: scadenza per critica, anche nel night_audit.*
-- [✓] **K2 · Lo stesso taglio della bussola**: `CRITICHE.md` tiene solo le **aperte**; le chiuse
-  vanno in un file storico fuori dal percorso di lettura. Stessa regola, stesso motivo.
-  → *#73: `CRITICHE.md` solo aperte, `CRITICHE_CHIUSE.md` fuori lettura; archivio `critiche_auto_archivio.jsonl` per le automatiche.*
-- [✓] **K3 · La staleness deve VEDERSI**, come nell'handoff riparato nella #71: una critica non
-  riverificata da 30+ giorni non e' "attiva", e' **scaduta**, e va marcata cosi'. Oggi una
-  critica di giugno e una di ieri hanno lo stesso aspetto.
-  → *#73: campo `verificata` per critica, soglia 30 giorni: `[⌛] scaduta · non riverificata da N giorni`.*
-- [✓] **K4 · Il campione lo dimostra**: sul backlog vecchio **4 voci su 7 erano gia' fatte**.
-  Non c'e' motivo di credere che le critiche stiano meglio. Prima di eseguirne una, si verifica.
-  → *#73: la regola sta in testa a `CRITICHE.md` e in CLAUDE.md.*
 
 ---
 
 **🔴 A — CANONE: chiude il gate a zero (restano 8 righe, tutte nei 7 sospesi)**
-- [ ] **A1 · 5 riscritture mirate** — EP_N2_03, 05, 46, 48, 56. La regola generica
-  `GENESIS/X → GENESIS` qui **sposta** il falso invece di toglierlo: il referente vero e'
-  meccanico (V32 per ripetibilita' e calibrazione, MIMS/VULCAN per la golden template),
-  il 48 si sgrammatica, il 46 e' misto (2 frasi software + «lo spazio fisico e' di 12 m²»).
-- [ ] **A2 · 2 episodi da RIGENERARE** — EP_N2_28 e 55. Non sporchi: **troncati a meta'
-  parola** dal bug max_tokens pre-#69. Nel 55 anche il frammento superstite e' inventato.
-- [✓] **A3 · EP_N2_16** — 2 numeri inventati spacciati per FATTI («la struttura di validazione
-  vale il 70% dell'affidabilita'», «errori da 10% a 2-3%»). Fuori batch: la regola non li vede.
-  → *#73: tolti, con i validatori FORGE+LEX+THEMIS che in GENESIS non esistono e il 'sistema MIMS'. Corretti episodio, specchio MENTE, fatti riversati e indice dashboard; RAG reindicizzato.*
 
 **🟡 B — ALLINEARE I DUE ALBERI (prerequisito di C e D)**
 - [ ] **B1 · Nomi**: `VITA-NATURA` (db GENESIS) vs `VITA_NATURA` (vault) · `FINANZE` vs `FINANZA`.
@@ -398,14 +401,10 @@ chiavi da ruotare, API key Semantic Scholar.
   controllata. Non vuol dire che sia scollegata — vuol dire che non lo sappiamo.
 
 **⚪ H — SOLO MATTEO (non delegabili, gia' in AZIONI_MATTEO.md)**
-- [✓] *#73: le 4 voci (UPS, mandrino+Vevor, chiavi+Semantic Scholar, foto del ferro) sono in ⏳ ASPETTA MATTEO, in testa.*
 
 **🩶 I — DEBITO VECCHIO, ancora lì**
 - [ ] **I1** · EP_N2_04 uscito il 16/08 alle ~09:00 invece che alle 21:00: se Business Suite
   pubblica quando gli pare, la coda programmata non e' affidabile.
-- [✓] **I2** · Lo slot `aggancio_reale` **non resta mai vuoto**: l'LLM ora inventa *dentro*
-  GENESIS. La regola «meglio vuoto che inventato» non morde ancora (aperta dal #70).
-  → *#73: `aggancio_guard.py` nel generatore, dopo Architetto e Scrittore: svuota l'aggancio che non nomina un nodo reale, toglie i FATTI con numeri senza fonte. Provato con un finto client (niente API).*
 
 **🧭 R — RIORGANIZZARE LA BUSSOLA (si fa PRIMA di tutto il resto, ordine Matteo 28/08)**
 
@@ -413,69 +412,8 @@ chiavi da ruotare, API key Semantic Scholar.
 archivio travestito. Per arrivare a oggi si scorrono 100 righe di indice e tre mesi di storia.
 Una cosa che devi scorrere non ti orienta.*
 
-- [v] **R1 · Lo split - FATTO 28/08.** 2.858 righe -> 300. `DA_FARE.md` tiene **tre cose sole**: cosa e' aperto · cosa e' in corso
-  adesso · cosa aspetta Matteo. Tutto il resto va in `ABBIAMO_FATTO.md`, in ordine di data.
-  **Metro di collaudo: se non sta in una schermata, ha fallito di nuovo.**
-- [✓] **R2 · Il taglio lo fa il sistema, non noi.** Se dipende dal fatto che qualcuno se lo
-  ricorda, muore: e' il pattern di questa casa (AZIONI_MATTEO fermo al 24/06,
-  PROSSIMA_SESSIONE al 09/06, critiche a 49 giorni). Va agganciato alla chiusura di sessione,
-  come lo specchio Desktop.
-  → *#73: `bussola_taglio.py`, nel night_audit e al /salva. E sotto c'era l'hook Stop morto dal 16/07: riparato, globale.*
-- [v] **R3 · FATTO (regola applicata subito): si taglia con UNA SESSIONE DI RITARDO, non appena e' `[v]`.** I blocchi fatti non
-  contengono solo il *cosa*: contengono il **perche'** (perche' GENESIS era il pilastro
-  sbagliato, perche' la scrittura non atomica ha rotto l'indice). Chiude la #73 -> si sposta la
-  #72. Una sessione di sovrapposizione, e la memoria corta resta in vista.
-- [✓] **R4 · LA TRAPPOLA - "non pesa" dipende da DOVE lo metti.** Il peso viene da due posti:
-  Claude che lo legge a inizio sessione, e **il RAG che lo indicizza**. Se `ABBIAMO_FATTO.md`
-  resta nel percorso di lettura del RAG, il peso non e' sparito: e' solo cambiato di file.
-  Va escluso **esplicitamente** da entrambi. *Precedente gia' in casa e funzionante: i
-  `changelog_archive_*.md` sono fuori da git per questo identico motivo.*
-  → *#73: il RAG non lo vedeva gia' (solo MENTE/); fuori da graphify e da `/api/search` via `fuori_lettura.py`.*
-- [v] **R5 · Struttura data (FATTO), resta da agganciarla a STORIE/profilo.** `ABBIAMO_FATTO.md` ha due usi veri e gia'
-  presenti nel sistema: e' la **materia prima delle STORIE** (i milestone verificati diventano
-  episodi) e la **crescita del profilo GitHub** (la barra dei mesi, le "10 notti su 11").
-  Quindi non testo libero: **data - cosa - perche'**, leggibile a macchina.
-- [✓] **R6 · IL NOME - valutato da Claude, come chiesto: SI RINOMINA.**
-  *La domanda era: nome giusto o minor rischio? Il nome giusto - e non per estetica.*
-  Se lo split si fa e il file continua a chiamarsi `DA_FARE_FATTO`, resta un nome che dice
-  "FATTO" su un file che il fatto non ce l'ha piu' dentro. **E' esattamente la malattia
-  diagnosticata al contatore `session_count`**: il nome dice una cosa, il codice ne fa
-  un'altra, e chi legge si fida del nome. Non si cura un sintomo e si semina l'identico altrove.
-  *Il rischio e' misurato, non stimato*: `DA_FARE_FATTO` compare in **27 file**, ma quelli
-  **vivi** (che si romperebbero) sono **9 + l'hook globale**:
-  `CLAUDE.md` - `NODES/AUDIT_AGENT/night_audit.py` - `api_server.py` - `CLAUDE_CODE.bat` -
-  `AUTOMATIONS/core/critiche_md.py` - `AUTOMATIONS/core/sync_dashboard.py` -
-  `.claude/skills/salva/SKILL.md` - `DASHBOARD/src/components/ProcedimentiView.tsx` -
-  `DASHBOARD/src/data/bussolaTodos.ts` - + `SessionStart` in `~/.claude`.
-  Gli altri 18 sono episodi e documenti che **raccontano** la bussola: restano come sono
-  (regola della casa: non si riscrive la storia).
-  → *#73: fatto, `git mv` a `DA_FARE.md`, i 9 punti vivi + l'hook aggiornati.*
-- [✓] **R7 · Rete di sicurezza: il vecchio nome resta come CARTELLO.** `DA_FARE_FATTO.md`
-  diventa un file di due righe che punta ai due nuovi. Cosi' se scappa un riferimento non si
-  rompe in silenzio: **atterra su un'indicazione**. E' il principio di tutta la #71 - meglio
-  un errore che si vede di un guasto muto.
-  → *#73: fatto, `DA_FARE_FATTO.md` e' il cartello.*
-- [✓] **R8 · Stessa cura al contorno**, che ha la stessa malattia (cresce e non si sfoltisce
-  mai): `CRITICHE.md` - `AZIONI_MATTEO.md` (fermo al #45, 24/06) - `PROSSIMA_SESSIONE.md`
-  (consolidato il 09/06) - lo specchio Desktop - `STATE.json`, il cui `active_milestone` e'
-  un muro di testo che **finisce pubblico** sul profilo GitHub.
-  → *#73: archiviati AZIONI_MATTEO e PROSSIMA_SESSIONE, STATE in una riga, specchio `da fare.txt`, CRITICHE = K.*
 
 **✅ FONTE DI CONCETTO — le due linee (28/08, da NotebookLM)**
-- [v] **I notebook erano fermi dal 16 giugno**: 11 su 12 mai piu' aperti, ma dentro c'e' il
-  materiale piu' denso del progetto - e' li' che le cose sono state dette la prima volta.
-- [v] **Estratto e scritto**: `MENTE/KNOWLEDGE/VISIONE/le_due_linee_fonte_di_concetto.md`.
-  Marcato **NON CANONE** in testa: e' una miniera per scrivere, non una fonte di FATTI.
-  `canon_guard` sul file: **0 righe**.
-- [v] **La scoperta**: la linea dell'azienda e quella delle storie **non sono due**. Sono la
-  stessa idea in due materiali - la **reversibilita'**. MIMS non salda perche' il saldato non
-  si disfa; Nina insegna che l'errore non e' definitivo. *Quello che non si puo' disfare non
-  si puo' migliorare.* E la prova che c'era gia': **MIMS JUNIOR, "un giunto, tre vite"** - il
-  kit che si trasforma mentre il bambino cresce. E' Nina in forma di oggetto.
-- [v] **Quarantena numeri** scritta dentro il file: margini 79%, ROI 322%, BEP 1.578 pezzi,
-  "si ripaga in 106 ore", "parita' industriale 15-18k", "costo zero". Sono calcoli di progetto
-  mai dimostrati - la pressa non ha fatto una mattonella e la V32 e' al telaio.
-  **La voce si prende tutta, i numeri no.**
 - [💡] **Avvertenza sulla voce, da decidere**: meta' di quei documenti e' scritta da un
   assistente AI che parla *a* Matteo ("Ricevuto, Matteo", "Socio, il Board dei 7 specialisti
   e' riunito nella War Room"). Quell'epica militare **e' il tono dell'AI, non il tuo**.
@@ -485,12 +423,6 @@ Una cosa che devi scorrere non ti orienta.*
   puo' venire da qui invece che essere inventata.
 
 **◐ IN CORSO ADESSO**
-- [✓] **Revisione della BUSSOLA e di tutto il suo contorno** (ordine Matteo, 28/08).
-  I file del protocollo — questo, `RIAVVIO_SESSIONE.txt`, `STATE.json`, `AZIONI_MATTEO.md`,
-  `PROSSIMA_SESSIONE.md`, lo specchio Desktop — vanno guardati insieme: la #71 ha dimostrato
-  che **due dei tre file letti a inizio sessione raccontavano il falso**. Prima si sistema
-  lo strumento che ci orienta (**sezione R qui sopra**), poi si esegue il piano.
-  → *#73: chiusa col P0 della scaletta.*
 
 ---
 

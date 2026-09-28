@@ -1,30 +1,22 @@
-=== RIAVVIO SESSIONE #74 — 27/09/2026 21:14 ===
-Ultima sessione: #73 - contesto di chat fermo al 2026-08-27
-  [!] session_context.json STALE (2026-08-27): contesto derivato dai commit di oggi - si riscrive al /salva
+=== RIAVVIO SESSIONE #74 — 28/09/2026 13:02 ===
+Ultima sessione: #73 - contesto di chat fermo al 2026-09-27
+  [!] session_context.json STALE (2026-09-27): nessun commit oggi -> sotto c'e' STATE.json, non la chat - si riscrive al /salva
 ━━━ STAVAMO PARLANDO DI ━━━
-[auto-derivato dai commit di oggi - session_context.json fermo a 2026-08-27; si riscrive al /salva: il server MCP non e' collegato]
-  chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero; feat(#73): automazioni all'accensione - il PC e' quasi sempre spento; feat(#73): P0 della scaletta - gli strumenti che ci orientano; docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
+[NON LO SO: session_context.json e' fermo al 2026-09-27 e oggi non ci sono ancora commit. Quello che segue viene da STATE.json (milestone attivo), NON dal contesto della chat.]
+  #73: P0 e P1 chiusi - strumenti che orientano veri, canone Nina a zero falsi, agganci controllati
 
 ━━━ TOPIC ATTIVI ━━━
-  • chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero
-  • feat(#73): automazioni all'accensione - il PC e' quasi sempre spento
-  • feat(#73): P0 della scaletta - gli strumenti che ci orientano
-  • docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
-  • auto: inventario notturno + critiche
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → (dal 2026-08-27) SOSPESI batch 3 (decide Matteo): 03/05/46/48/56 vogliono 5 riscritture mirate, NON il collasso generico su GENESIS (li' il pilastro giusto e' quello meccanico)
-  → (dal 2026-08-27) EP_N2_28 e 55 da RIGENERARE: troncati a meta' parola dal bug max_tokens pre-#69
-  → (dal 2026-08-27) EP_N2_16: due numeri inventati spacciati per FATTI (70% affidabilita', errori da 10% a 2-3%) che la regola generica non vede
-  → (dal 2026-08-27) S4 della scala GENESIS: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI)
-  → (dal 2026-08-27) GitHub Release di v3.0.0 mai creata: il tag c'e' ed e' pushato, la Release no. E da v3.0.0 sono passati 646 commit senza un tag nuovo
-  → (dal 2026-08-27) 7o dipartimento: 9 agenti su 12 sono di contenuto/sistema parcheggiati sotto OFFICINA perche' GENESIS non e' fra i 6
-  → (dal 2026-08-27) Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili
+  → (dal 2026-09-27) Bonifica dei 33 agganci inventati negli episodi gia' usciti: decide Matteo
+  → (dal 2026-09-27) 86 voci EP_AUTO/SEED/S2 della dashboard con testo diverso dal .md (serve refresh in build_episodes_json)
+  → (dal 2026-09-27) Canale di pubblicazione dei social fermo dal 30/07: 12 bozze caroselli (10 pulite, 3 da rivedere)
+  → (dal 2026-09-27) Da guardare alla prossima accensione: primo taglio automatico, prima rotazione archivio critiche, 5+ commit pubblicati
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  P1 canone: A1 le 5 riscritture mirate e A2 rigenerare EP_N2_28/55 (serve l'ok di Matteo), poi A3
+  #74: prima ANALIZZARE (viste, dati, bisogni di MIMS/fresa/VULCAN), poi unita' grafica + mappa a rami
 
 ━━━ BLOCKERS ━━━
   ⚠ UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20
@@ -42,10 +34,10 @@ Ultima sessione: #73 - contesto di chat fermo al 2026-08-27
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
+edd568dc fix(#73): A3 + I2 - via i fatti inventati dall'EP_N2_16, la regola "meglio vuoto" morde
 16bb35b2 chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero
 e18cf14b feat(#73): automazioni all'accensione - il PC e' quasi sempre spento
 5f39f58a feat(#73): P0 della scaletta - gli strumenti che ci orientano
 62cf999f docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
-e23e1f54 auto: inventario notturno + critiche
 
-Generato: 27/09/2026 21:14
+Generato: 28/09/2026 13:02

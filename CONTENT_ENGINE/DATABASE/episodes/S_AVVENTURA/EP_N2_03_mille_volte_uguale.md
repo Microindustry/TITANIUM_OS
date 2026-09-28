@@ -211,7 +211,7 @@ Nina la sente arrivare — il pizzicore dietro le orecchie.
 **Pietre richiamate:** ⟡0 casella 1 (fatto bene = regge quando lo tiri) · ⟡0 casella 2 (la precisione è una relazione; *quanto* è "il giusto" si misura)
 **3 strati:** bambino = il quaderno di musica che va storto da solo, senza che nessuno abbia sbagliato in grande · curioso = la deriva sistematica e il riferimento zero come metodo per tenerla a bada · grande = in metrologia ogni misura valida deve essere ripetibile (stesso metodo, stesso strumento, stesse condizioni); la deriva sistematica accumula deviazione totale = spostamento × N ripetizioni; la calibrazione è il confronto periodico con uno zero fisso esterno
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** nel sistema GENESIS/V32/MIMS la ripetibilità è il controllo di qualità
+**Aggancio reale:** V32, la fresatrice CNC che Matteo sta costruendo (oggi al telaio): il suo controllo di qualità sarà la ripetibilità, fare mille volte lo stesso pezzo tenendo a bada la deriva con un riferimento fermo.
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_03, casella 3 (la ripetibilita': mille volte uguale, battere la deriva) del viaggio Nina v2, regione 0 (LA MATERIA).

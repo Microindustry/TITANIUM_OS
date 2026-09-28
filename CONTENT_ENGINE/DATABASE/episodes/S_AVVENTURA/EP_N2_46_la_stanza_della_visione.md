@@ -127,7 +127,7 @@ Nina capisce la differenza. Prima il problema esisteva lo stesso — ma era invi
 
 Nina resta ferma un momento davanti alla Tavola. I dischi brillano ordinati. L'aria è ferma. Sente qualcosa che non è magia: è la sensazione di sapere dove guardare.
 
-> *(Strato fondo — per il grande: Un Centro di Controllo — in linguaggio tecnico, una dashboard unificata — recupera in tempo reale per ogni nodo del sistema tre dati atomici: (1) funzione/compito assegnato; (2) parametri d'uso e configurazione; (3) stato live — acceso, spento, errore. Questo riduce il carico cognitivo dell'operatore da "cercare in N posti diversi" a "leggere una sola vista". Nel Sistema reale GENESIS/V32, lo spazio fisico è di 12 m²: comprimere il ciclo di decisione su una superficie unica non è una preferenza estetica, è un requisito operativo. V32 è indicato al 65% di avanzamento, GENESIS al 70%. Le operazioni ripetitive e sicure — rese possibili proprio da una vista unificata — aumentano la velocità decisionale stimata del 65-70%. Un Centro di Controllo non è un gadget: è infrastruttura della Stagione Sistematica.)*
+> *(Strato fondo — per il grande: Un Centro di Controllo — in linguaggio tecnico, una dashboard unificata — recupera in tempo reale per ogni nodo del sistema tre dati atomici: (1) funzione/compito assegnato; (2) parametri d'uso e configurazione; (3) stato live — acceso, spento, errore. Questo riduce il carico cognitivo dell'operatore da "cercare in N posti diversi" a "leggere una sola vista". Nel progetto di Matteo il Centro di Controllo è una vista della dashboard di GENESIS: per ogni nodo dice cosa fa, come si usa e se è acceso. E lo spazio è poco anche fuori dallo schermo: V32 si costruisce in una taverna di 12 m², dove ogni passo risparmiato conta. Un Centro di Controllo non è un gadget: è infrastruttura della Stagione Sistematica.)*
 
 ---
 
@@ -193,16 +193,15 @@ Poi guarda avanti.
 <!-- DIDATTICA -->
 **Pietra:** `⟡7` Il Direttore (giro 1). *Un Centro di Controllo unificato dà di ogni nodo tre dati — cosa fa, come si usa, se è acceso — riducendo il carico cognitivo da "cercare in N posti" a "leggere una sola vista".*
 **Pietre richiamate:** ⟡ FORGE (la mano deve sapere prima) · ⟡ Entropia (arretra dove si costruisce)
-**3 strati:** bambino = la Tavola di Vetro coi dischi d'ottone che dicono verde o rosso · curioso = un Centro di Controllo unificato con tre dati atomici per nodo riduce il sovraccarico e rende le operazioni ripetibili · grande = dashboard telemetrica unificata (funzione/parametri/stato live) come infrastruttura operativa in spazio ristretto (12 m²), con impatto +65-70% su velocità decisionale
+**3 strati:** bambino = la Tavola di Vetro coi dischi d'ottone che dicono verde o rosso · curioso = un Centro di Controllo unificato con tre dati atomici per nodo riduce il sovraccarico e rende le operazioni ripetibili · grande = una vista unica per ogni nodo (funzione, parametri, stato live): il Centro di Controllo della dashboard di GENESIS
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** La Stanza della Visione rispecchia il cruscotto di stato (telemetria unificata) che il Sistema GENESIS/MIMS deve avere: un nodo centralizzato che per ogni sottosistema — V32, memoria, calcolo — riporta funzione, parametri e stato live. Riduce il cognitive load (anti-sovraccarico) e aumenta la velocità decisionale in spazio operativo di 12 m². Data evento: 2026-06-07, Stagione ST.
+**Aggancio reale:** La Stanza della Visione rispecchia il Centro di Controllo della dashboard di GENESIS (vista CONTROLLO): un posto solo che per ogni nodo dice cosa fa, come si usa e se è acceso. Data evento: 2026-06-07, Stagione ST.
 **Open loop → Casella 47:** Uno dei dischi sulla Tavola è rosso — spento, causa sconosciuta. Non è nella Tavola perché qualcuno l'ha tolto, o perché non è mai stato aggiunto. Come si riporta un nodo nella vista? Come si riaccende quello che il Sistema ha smesso di vedere?
 
 ## FATTI (per il RAG)
 - **FATTO:** EP_N2_46, casella 46 (Il Centro di Controllo — un posto solo da cui governare) del viaggio Nina v2. Regione 7 — IL DIRETTORE, giro 1.
-- **FATTO:** Vista
 - FATTO 1: Un Centro di Controllo vero ha esattamente tre informazioni per nodo — cosa fa, come si usa, se è acceso — niente di più, niente di meno. Questo è il pattern dal RAG EP_SEED_CONTROLLO
-- FATTO 2: Lo spazio di lavoro fisico è finito (12 m² confermato). Una vista centralizzata riduce il movimento dell'attenzione e aumenta la velocità operativa
-- FATTO 3: Operazioni ripetitive e sicure aumentano la velocità decisionale del 65%-70% (parallelo con V32 e GENESIS advancement). Un Centro di Controllo unificato rende le operazioni 'ripetitive e sicure'
+- FATTO 2: Lo spazio fisico è poco: V32 si costruisce in una taverna di 12 m². Una vista centralizzata riduce il movimento dell'attenzione
+- FATTO 3: Un Centro di Controllo unificato rende le operazioni ripetitive e sicure: si guarda un posto solo invece di cercare in N posti
 - FATTO 4: L'Entropia (disordine) vince quando le informazioni sono sparse. Un solo posto da cui vedere tutto è la barriera più forte
 - FATTO 5: Data evento 2026-06-07 — il Centro di Controllo è parte della Stagione ST (sistemica). Non è un gadget: è infrastruttura

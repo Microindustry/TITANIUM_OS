@@ -1,32 +1,27 @@
 {
-  "session_number": 71,
-  "session_date": "2026-08-27",
-  "last_updated": "2026-08-27",
-  "last_discussed": "Sessione #71 — l'handoff mentiva e l'ho verificato riga per riga. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11. API :5001 non e' giu' (17 endpoint su 18 danno 200). Il RAG e' rientro, non perdita (21.630 -> 22.637, sale). Trovato e riparato il guasto vero: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era troncato a meta' scrittura — la radice era md_view_pipeline che riscriveva l'indice INTERO in modo non atomico a ogni singolo file. Applicato il batch 3 gruppo 1 (10 episodi, gate canone da 22 righe a 8) e chiuso S3 della scala GENESIS (CORE/repos.py, grep SELECT fuori = 0). Poi, su richiesta di Matteo, integrazione ecosistema + versioni + profilo GitHub.",
+  "session_number": "73",
+  "session_date": "2026-09-27",
+  "last_updated": "2026-09-27",
+  "last_discussed": "Sessione #73 (27/09): pulizia dell'avvio (1,24 GB di cloni orfani, hook SessionStart che dichiara l'handoff stantio, START_LOGIN senza doppioni e senza n8n, AutoRun cmd solo interattivo); P0 della scaletta (bussola DA_FARE.md che si taglia da sola, archivi fuori lettura, CRITICHE solo aperte con scadenza; l'hook Stop era MORTO dal 16/07, ora globale); automazioni all'accensione (PC quasi sempre spento, credito API finito dal 16/09); P1 chiuso: A1-A3 e I2, canone Nina a zero falsi.",
   "active_topics": [
-    "view_index.json troncato: scrittura atomica tmp+fsync+os.replace con retry Windows, rebuild che scrive una volta sola (487 view)",
-    "canon_guard e genesis_seed --albero non erano eseguibili a mano: UnicodeEncodeError su console cp1252, stdout in utf-8",
-    "batch 3 gruppo 1: 10 episodi corretti (aggiunta la variante GENESIS/TITANIUM_OS che il tool non copriva), 7 SOSPESI con motivo scritto",
-    "S3 scala GENESIS chiuso: CORE/repos.py, connessione iniettata, TABELLE come whitelist contro l'iniezione sul nome tabella",
-    "profilo GitHub pubblicava v1.1.0 (versione dello SCHEMA di STATE) invece di v3.0.0: ora la versione viene dal tag git",
-    "generate_restart_prompt: lo staleness detector si spegneva quando non c'erano commit -> handoff di 3 mesi fa spacciato per attuale",
-    "_VAULT escluso dalla view pipeline: generava view di CREDENZIALI_BACKUP.md servite dall'API"
-  ],
-  "open_threads": [
-    "SOSPESI batch 3 (decide Matteo): 03/05/46/48/56 vogliono 5 riscritture mirate, NON il collasso generico su GENESIS (li' il pilastro giusto e' quello meccanico)",
-    "EP_N2_28 e 55 da RIGENERARE: troncati a meta' parola dal bug max_tokens pre-#69",
-    "EP_N2_16: due numeri inventati spacciati per FATTI (70% affidabilita', errori da 10% a 2-3%) che la regola generica non vede",
-    "S4 della scala GENESIS: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI)",
-    "GitHub Release di v3.0.0 mai creata: il tag c'e' ed e' pushato, la Release no. E da v3.0.0 sono passati 646 commit senza un tag nuovo",
-    "7o dipartimento: 9 agenti su 12 sono di contenuto/sistema parcheggiati sotto OFFICINA perche' GENESIS non e' fra i 6",
-    "Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili"
+    "Bussola = DA_FARE.md; taglio automatico (bussola_taglio.py) nel night_audit e al /salva",
+    "Hook globali in ~/.claude/hooks: SessionStart (avviso handoff stantio) + Stop (handoff + sync)",
+    "Catena d'avvio = night_research.bat v3.0: manutenzione RAG + audit a regole, gratis; generazione con 'genera'",
+    "aggancio_guard.py: la regola 'meglio vuoto che inventato' morde nel generatore Nina",
+    "Canone Nina: canon_guard 0 righe; 17 episodi riallineati in dashboard (build_episodes_json e' solo additivo)"
   ],
   "decisions_made": [
-    "Matteo: applicare il gruppo 1 del batch 3 e VALUTARE gli altri invece di applicarli alla cieca",
-    "Il collasso generico GENESIS/X -> GENESIS non si applica dove il referente e' meccanico: sposterebbe il falso invece di toglierlo",
-    "La versione del progetto si deriva dal TAG git, non da un campo copiato a mano (coerente con RELEASES.md: una release = un tag)",
-    "Un handoff che non sa deve dirlo: meglio dichiarare il vuoto che riempirlo con contesto vecchio",
-    "Release nuova (v3.1.0 minor o v4.0.0 major): non la decide il sistema, la firma Matteo"
+    "Matteo: il PC e' quasi sempre spento e NON si ricarica il credito API: generazione in sessione (Opus 5.5) o routine cloud Pro",
+    "Matteo: la #72 e il P0 committati su main (il repo e' pubblico: il push notturno li pubblica)",
+    "A2: EP_N2_28 e 55 RIPARATI invece che rigenerati (storie intere, taglio solo nelle ultime righe; 'integra, non rifare')",
+    "Prossima sessione: rifare l'unita' grafica della dashboard 'completamente tua, senza reference', mappa a rami a livelli",
+    "Matteo: si riparte perche' MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'; il redesign nasce per loro e prima si ANALIZZA"
   ],
-  "next_action": "Decidere i 5 SOSPESI del batch 3 (proposta: 5 riscritture mirate) e i 2 episodi da rigenerare. Poi S4: organigramma GENESIS in dashboard. In parallelo: creare la GitHub Release di v3.0.0 e decidere il tag nuovo."
+  "open_threads": [
+    "Bonifica dei 33 agganci inventati negli episodi gia' usciti: decide Matteo",
+    "86 voci EP_AUTO/SEED/S2 della dashboard con testo diverso dal .md (serve refresh in build_episodes_json)",
+    "Canale di pubblicazione dei social fermo dal 30/07: 12 bozze caroselli (10 pulite, 3 da rivedere)",
+    "Da guardare alla prossima accensione: primo taglio automatico, prima rotazione archivio critiche, 5+ commit pubblicati"
+  ],
+  "next_action": "Analizzare prima (viste attuali, dati, bisogni di MIMS/fresa/VULCAN, punti comuni), poi l'unita' grafica della dashboard con la mappa a rami a livelli (plugin frontend-design, token Tailwind 4, React Flow + ELK)"
 }

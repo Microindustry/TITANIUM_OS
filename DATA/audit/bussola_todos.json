@@ -1,8 +1,8 @@
 [
   {
-    "id": "BUS-8085450a",
-    "stato": "da_fare",
-    "testo": "**A1 · le 5 riscritture mirate** (EP_N2_03, 05, 46, 48, 56) e **A2 · rigenerare EP_N2_28 e 55**: serve il tuo ok (P1)",
+    "id": "BUS-3f85b6e1",
+    "stato": "fatto",
+    "testo": "**A1 · le 5 riscritture mirate** (EP_N2_03, 05, 46, 48, 56) e **A2 · rigenerare EP_N2_28 e 55**: serve il tuo ok (P1) → *ok dato e fatti il 27/09 (#73)*",
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
@@ -264,9 +264,57 @@
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
+    "id": "BUS-e0d3ad4c",
+    "stato": "fatto",
+    "testo": "**A1 + A2 (su ok di Matteo)**: 7 episodi corretti in repo e in MENTE; canon_guard sugli episodi Nina vivi = **0 righe** (il gate della sezione A e' chiuso). Riallineati in dashboard anche i 17 episodi Nina corretti nella #70/#71 che li' mostravano ancora il testo vecchio (es. EP_N2_60 col \"DAG Scheduler\").",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
     "id": "BUS-f3f19cd5",
     "stato": "da_fare",
     "testo": "**Trovato: 33 agganci su 42** esistenti non passano la guardia (versioni inventate, MIMS software, agenti",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-96e37fd8",
+    "stato": "da_fare",
+    "testo": "**PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: \"e' complicato, prima analizzalo\"). E il PERCHE' si riparte:",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-5b651267",
+    "stato": "da_fare",
+    "testo": "**Lo strumento giusto, gia' sul PC**: il plugin ufficiale Anthropic `frontend-design` e' nel marketplace clonato",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-c57f716f",
+    "stato": "da_fare",
+    "testo": "**Brief prima del codice** (e' il metodo del plugin): soggetto = officina + sistema (\"artigiano industriale\"),",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-2b85a1dc",
+    "stato": "da_fare",
+    "testo": "**Token di design in Tailwind 4** (`@theme`): un nero solo, una scala tipografica, tema chiaro e scuro dagli",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-1022de66",
+    "stato": "da_fare",
+    "testo": "**La mappa a rami che si uniscono a livelli** = un DAG, il \"tangled tree\": V32, MIMS, VULCAN, GENESIS, Nina,",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-e785372d",
+    "stato": "da_fare",
+    "testo": "**Via il teatro**: `three`/`@react-three/*`, `tsparticles`, i force-graph che non servono piu', ~2,5k righe di",
+    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
+  },
+  {
+    "id": "BUS-bbf854d3",
+    "stato": "da_fare",
+    "testo": "**Stesso lavoro, due vetrine**: la mappa finita va anche sul profilo GitHub (voce D).",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
@@ -606,48 +654,6 @@
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },
   {
-    "id": "BUS-1c5836f3",
-    "stato": "fatto",
-    "testo": "**K1 · La diagnosi**: il canone manuale e' **fermo da 49 giorni** con **19 critiche attive**",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-ad680b63",
-    "stato": "fatto",
-    "testo": "**K2 · Lo stesso taglio della bussola**: `CRITICHE.md` tiene solo le **aperte**; le chiuse",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-2b2a37b0",
-    "stato": "fatto",
-    "testo": "**K3 · La staleness deve VEDERSI**, come nell'handoff riparato nella #71: una critica non",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-c4757b95",
-    "stato": "fatto",
-    "testo": "**K4 · Il campione lo dimostra**: sul backlog vecchio **4 voci su 7 erano gia' fatte**.",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-7986f653",
-    "stato": "da_fare",
-    "testo": "**A1 · 5 riscritture mirate** — EP_N2_03, 05, 46, 48, 56. La regola generica",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-618abf80",
-    "stato": "da_fare",
-    "testo": "**A2 · 2 episodi da RIGENERARE** — EP_N2_28 e 55. Non sporchi: **troncati a meta'",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-edc47aae",
-    "stato": "fatto",
-    "testo": "**A3 · EP_N2_16** — 2 numeri inventati spacciati per FATTI («la struttura di validazione",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
     "id": "BUS-57826b43",
     "stato": "da_fare",
     "testo": "**B1 · Nomi**: `VITA-NATURA` (db GENESIS) vs `VITA_NATURA` (vault) · `FINANZE` vs `FINANZA`.",
@@ -780,93 +786,9 @@
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },
   {
-    "id": "BUS-ba37517d",
-    "stato": "fatto",
-    "testo": "*#73: le 4 voci (UPS, mandrino+Vevor, chiavi+Semantic Scholar, foto del ferro) sono in ⏳ ASPETTA MATTEO, in testa.*",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
     "id": "BUS-fb0dd267",
     "stato": "da_fare",
     "testo": "**I1** · EP_N2_04 uscito il 16/08 alle ~09:00 invece che alle 21:00: se Business Suite",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-af0a9970",
-    "stato": "fatto",
-    "testo": "**I2** · Lo slot `aggancio_reale` **non resta mai vuoto**: l'LLM ora inventa *dentro*",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-61796744",
-    "stato": "fatto",
-    "testo": "**R1 · Lo split - FATTO 28/08.** 2.858 righe -> 300. `DA_FARE.md` tiene **tre cose sole**: cosa e' aperto · cosa e' in corso",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-b841a960",
-    "stato": "fatto",
-    "testo": "**R2 · Il taglio lo fa il sistema, non noi.** Se dipende dal fatto che qualcuno se lo",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-7592dec6",
-    "stato": "fatto",
-    "testo": "**R3 · FATTO (regola applicata subito): si taglia con UNA SESSIONE DI RITARDO, non appena e' `[v]`.** I blocchi fatti non",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-f8ca87c2",
-    "stato": "fatto",
-    "testo": "**R4 · LA TRAPPOLA - \"non pesa\" dipende da DOVE lo metti.** Il peso viene da due posti:",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-7c7fd594",
-    "stato": "fatto",
-    "testo": "**R5 · Struttura data (FATTO), resta da agganciarla a STORIE/profilo.** `ABBIAMO_FATTO.md` ha due usi veri e gia'",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-f8b1526f",
-    "stato": "fatto",
-    "testo": "**R6 · IL NOME - valutato da Claude, come chiesto: SI RINOMINA.**",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-32015039",
-    "stato": "fatto",
-    "testo": "**R7 · Rete di sicurezza: il vecchio nome resta come CARTELLO.** `DA_FARE_FATTO.md`",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-2cb2a42e",
-    "stato": "fatto",
-    "testo": "**R8 · Stessa cura al contorno**, che ha la stessa malattia (cresce e non si sfoltisce",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-ed46cb60",
-    "stato": "fatto",
-    "testo": "**I notebook erano fermi dal 16 giugno**: 11 su 12 mai piu' aperti, ma dentro c'e' il",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-3f43d190",
-    "stato": "fatto",
-    "testo": "**Estratto e scritto**: `MENTE/KNOWLEDGE/VISIONE/le_due_linee_fonte_di_concetto.md`.",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-2cee8259",
-    "stato": "fatto",
-    "testo": "**La scoperta**: la linea dell'azienda e quella delle storie **non sono due**. Sono la",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-07b8b6e2",
-    "stato": "fatto",
-    "testo": "**Quarantena numeri** scritta dentro il file: margini 79%, ROI 322%, BEP 1.578 pezzi,",
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },
   {
@@ -879,12 +801,6 @@
     "id": "BUS-4e1bd1da",
     "stato": "da_fare",
     "testo": "**Da qui esce la riga della vetrina** (sezione D4): la frase che lega crescita e albero",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-aec79e61",
-    "stato": "fatto",
-    "testo": "**Revisione della BUSSOLA e di tutto il suo contorno** (ordine Matteo, 28/08).",
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   }
 ]

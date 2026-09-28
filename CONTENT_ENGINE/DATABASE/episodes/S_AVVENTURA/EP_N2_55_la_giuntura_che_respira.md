@@ -125,7 +125,7 @@ THEMIS sembrava aspettarselo. «Il disordine attacca qui. La cartilagine si cons
 
 ---
 
-> *(Strato fondo — per il grande: Un'articolazione sinoviale umana è composta da due estremità ossee ricoperte di cartilagine ialina — materiale elastico che assorbe shock grazie alla sua struttura idrata (70-80% acqua). La capsula articolare produce e contiene il fluido sinoviale, un lubrificante biologico con coefficiente di attrito inferiore a 0.01. I legamenti periarticolari stabilizzano il sistema entro un range di movimento specifico senza bloccarlo. L'entropia si manifesta come usura della cartilagine, degradazione del fluido, indebolimento dei legamenti — tutti processi accelerati dall'immobilità. Un'articolazione può compiere da uno a tre milioni di cicli di movimento prima di mostrare usura significativa; l'immobilità totale produce rigidità in due-tre settimane e accelera la degenerazione del tessuto cartilagineo perché riduce la circolazione del fluido sinoviale. Il movimento regolare è il principale meccanismo di rinnovamento articolare.)*
+> *(Strato fondo — per il grande: Un'articolazione sinoviale umana è composta da due estremità ossee ricoperte di cartilagine ialina — materiale elastico che assorbe shock grazie alla sua struttura idrata (70-80% acqua). La capsula articolare produce e contiene il fluido sinoviale, un lubrificante biologico con coefficiente di attrito inferiore a 0.01. I legamenti periarticolari stabilizzano il sistema entro un range di movimento specifico senza bloccarlo. L'entropia si manifesta come usura della cartilagine, degradazione del fluido, indebolimento dei legamenti — tutti processi accelerati dall'immobilità. Un'articolazione compie milioni di cicli in una vita; l'immobilità totale produce rigidità in due-tre settimane e accelera la degenerazione del tessuto cartilagineo perché riduce la circolazione del fluido sinoviale. Il movimento regolare è il principale meccanismo di rinnovamento articolare.)*
 
 ---
 
@@ -149,7 +149,7 @@ Nina posò la cerniera. Aprì e chiuse la mano destra ancora una volta. Poi la s
 
 «Le mie mani fanno milioni di movimenti,» disse.
 
-«Da uno a tre milioni di cicli per articolazione prima dell'usura significativa. Sì.»
+«Milioni, in una vita. E reggono, se si muovono.»
 
 «E se smetto di muoverle?»
 
@@ -197,12 +197,13 @@ Nina la toccò con un dito. La casella pulsò una volta, come un ginocchio che a
 **Pietre richiamate:** ⟡0 cambio di stato (la materia che cambia forma senza smettere di essere materia) · ⟡0 elasticità (ciò che cede e torna)
 **3 strati:** bambino = la cerniera, il ramo, le nocche che brillano · curioso = giuntura come punto intelligente dove due sistemi diversi si scambiano forza senza annullarsi · grande = articolazione sinoviale, cartilagine idrata, fluido sinoviale con attrito <0.01, entropia contrastata dal movimento ciclico
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/V32 (architettura di fluidità narrativa), la g
+**Aggancio reale:** MIMS, i moduli di Matteo: i pezzi non sono saldati ma tenuti da giunti a croce (D29.9, accoppiamento H7/g6, in PA-GF30). Una giuntura che si può aprire si può anche rifare: è la stessa logica della cerniera.
+**Open loop → Casella 56:** cosa succede a una giuntura che smette di muoversi per scelta?
 
 ## FATTI (per il RAG)
-- **FATTO:** EP_N2_55, casella ? (EP_AV_00_la_bambina_e_la_giuntura) del viaggio Nina v2, regione 0 (LA MATERIA).
+- **FATTO:** EP_N2_55, casella 55 (EP_AV_00_la_bambina_e_la_giuntura) del viaggio Nina v2, regione 0 (LA MATERIA).
 - La cartilagine articolare umana ha uno spessore di 2-4 mm ed è costituita al 70-80% di acqua; questa caratteristica la rende elastica e capace di assorbire colpi fino a 6 volte il peso corporeo
 - Il fluido sinoviale riduce l'attrito articolare a valori inferiori a 0.01 (coefficiente di attrito) — più basso dell'acciaio su acciaio lubrificato
-- Un'articolazione umana può compiere da 1 a 3 milioni di cicli di movimento prima di mostrare usura significativa; l'immobilità accelera la degradazione (rigidità in 2-3 settimane)
-- Le giunture 'fisse' (come le ossa del cranio, saldature) subiscono zero entropia da movimento ma accumulo di stress concentrato; le giunture 'mobili' distribuiscono lo stress su cicli ripetuti
+- Un'articolazione compie milioni di cicli di movimento in una vita; è l'immobilità ad accelerarne la degradazione (rigidità in 2-3 settimane)
+- Le giunture fisse (le ossa del cranio, una saldatura) non si consumano col movimento ma concentrano lo sforzo in un punto; quelle mobili lo distribuiscono su tanti cicli
 - La sinovia (fluido articolare) viene rigenerata continuamente dal movimento: ogni flessione pompa il lubrificante verso cartilagine, ogni immobilità lo riduce

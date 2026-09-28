@@ -189,7 +189,7 @@ Nina la guarda da lontano. Poi guarda le proprie mani — le stesse che hanno im
 **Pietre richiamate:** ⟡2-C1 (gli attrezzi hanno memoria) · ⟡2-C3 (la formula che si ripete) · il bottone di EP_N2_01 (il gesto che regge)
 **3 strati:** bambino = la macchina fa mille volte quello che le insegni — falle insegnare qualcosa di buono · curioso = la fase manuale è un gate di qualificazione: il gesto deve essere già corretto prima di essere trasferito · grande = principio di controllo di processo; l'automazione scala fedeltà, non intelligenza; la pratica manuale è ricerca applicata sul gesto
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** nel sistema GENESIS/V32 la "mano" è il protocollo di addestramento umano e di calibrazione manuale; la "macchina" è l'automazione e la replicazione di massa — non si scala senza aver prima qualificato il gesto a livello fisico e decisionale
+**Aggancio reale:** V32, la fresatrice CNC che Matteo costruisce a mano (oggi al telaio): guide, colonne e mandrino si allineano e si calibrano prima a mano, e solo dopo la macchina lavora da sola. Non si automatizza un gesto che non si sa ancora fare bene.
 **Open loop → Casella 6:** una macchina nuova aspetta nell'Officina, i rulli fermi, il piano vuoto — come fai a insegnare a qualcosa che non ha mani, e cosa succede se sbagli la lezione fin dall'inizio?
 
 ## FATTI (per il RAG)

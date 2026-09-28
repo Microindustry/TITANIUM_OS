@@ -169,7 +169,7 @@ Nina lo guarda accendersi. Una cosa piccola e ferma. Come una torta che esce ugu
 **Pietre richiamate:** ⟡3 L'Entropia (il Disordine che lavora lento) · ⟡6 La Traccia (non ricordare, documenta) · FORGE — *la mano deve sapere prima*
 **3 strati:** bambino = la torta di nonna che esiste ancora perché qualcuno ha scritto la ricetta giusta · curioso = la differenza fra conoscenza tacita (nella testa) e conoscenza esplicita (scritta semplice, usabile da chiunque) · grande = la cedibilità come metrica di sistema: ogni passaggio scritto? comprensibile a un bambino? ripetibile con lo stesso risultato? Se no, il sistema è ancora nella testa di qualcuno
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere · gli strumenti, non le risposte
-**Aggancio reale:** Nel sistema GENESIS/V32 di MIMS, la cedibilità è il fondamento dell'architettura di prodotto: ogni processo documentato in linguaggio non-specialistico sopravvive al creatore e diventa riproducibile. È l'opposto dell'Entropia — non l'ordine rigido, ma l'ordine trasmissibile.
+**Aggancio reale:** MENTE, l'archivio di Matteo (la cassaforte Obsidian che il RAG legge): ogni decisione scritta lì in parole semplici sopravvive a chi l'ha presa e si può rifare. È la regola 3 del sistema, «non ricordare, documenta»: l'opposto dell'Entropia, l'ordine che si può trasmettere.
 **Open loop → Casella 49:** Il quaderno più vecchio dello scaffale, tenuto chiuso da un nastro, con una data lontana e scritto *"da non aprire prima di capire perché"* — cosa contiene il foglio più antico, e perché è stato nascosto proprio lì?
 
 ## FATTI (per il RAG)

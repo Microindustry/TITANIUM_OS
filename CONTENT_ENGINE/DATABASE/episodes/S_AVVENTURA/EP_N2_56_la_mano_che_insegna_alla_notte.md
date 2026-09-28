@@ -201,7 +201,7 @@ Avanti. Gira. Stringe. Torna.
 **Pietre richiamate:** EP_N2_55 (auto-organizzazione dei pezzi — l'ordine senza insegnamento)
 **3 strati:** bambino = la macchina impara guardando la tua mano, poi fa lo stesso da sola tutta la notte · curioso = l'imitation learning cattura il "come" del gesto ma non il "perché", quindi non distingue il giusto dallo sbagliato · grande = errore sistematico nella traiettoria iniziale si accumula su migliaia di cicli; la golden template e la validazione a tre livelli sono l'unico presidio
 **Cuore:** fai bene le cose vere · gli strumenti non pensano al posto tuo, amplificano quello che dai loro
-**Aggancio reale:** Nei sistemi GENESIS/MIMS e nelle fabbriche smart reali, ogni ciclo produttivo viene confrontato a una golden template validata da sensori multipli. Se la template è errata, l'intera batch è errata — garbage in, garbage out a velocità industriale.
+**Aggancio reale:** VULCAN, la pressa delle mattonelle MIMS (oggi ancora da montare): è lì che servirà una forma madre, un pezzo campione fatto e misurato una volta sola con cura, contro cui confrontare tutti gli altri. Se il campione è sbagliato, lo saranno anche tutti i pezzi dopo.
 **Open loop → Cas
 
 ## FATTI (per il RAG)

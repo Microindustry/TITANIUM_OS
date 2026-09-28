@@ -6,7 +6,7 @@ stagione: AV
 data_evento: 2026-06-24
 status: ready
 durata_min: 14
-tags: avventura, educativo, nina, themis, nina-v2, Sistema, Pensa, CommandBar
+tags: avventura, educativo, nina, themis, nina-v2, Sistema, Pensa, traccia
 ---
 <!-- TOC -->
 
@@ -77,7 +77,7 @@ THEMIS si alza. Cammina verso uno dei ripiani bassi e tira fuori un volume — n
 
 «I suoi pensieri?»
 
-«Ogni decisione. Ogni passo. Ogni volta che il sistema fa qualcosa, prima lo scrive. Poi lo fa.»
+«Le decisioni importanti. Prima si scrivono, poi si fanno. E quello che il sistema fa, lo annota nei suoi registri.»
 
 Nina inclina la testa. «Perché prima?»
 
@@ -91,7 +91,7 @@ THEMIS sorride — quello vero, non il sorriso di cortesia. «Perché se scrivi 
 
 ## ATTO II — La Rottura
 
-Nina si siede sul pavimento con il volume sulle ginocchia. Comincia a leggere una pagina a caso. Trova una riga che dice: *MCP chiama CommandBar — richiesta ricevuta, parametri loggati, esecuzione autorizzata.*
+Nina si siede sul pavimento con il volume sulle ginocchia. Comincia a leggere una pagina a caso. Trova una riga che dice: *night_audit — bussola letta, voci aperte contate. Scritto in bussola_todos.json.*
 
 «Aspetta», dice. «Questo non è un diario. È un *registro* di quello che la macchina ha fatto.»
 
@@ -103,7 +103,7 @@ Nina si siede sul pavimento con il volume sulle ginocchia. Comincia a leggere un
 
 Nina chiude il libro. Lo riapre. «Quindi quando io do un'istruzione in linguaggio normale — tipo "trovami tutte le sessioni dove abbiamo parlato di calibri" — il sistema non la esegue e basta. La *scrive*. E poi la esegue. E poi scrive che l'ha eseguita.»
 
-«Esatto. Ogni recupero RAG è loggato. Ogni chiamata MCP è documentata. Non c'è uno stato nascosto da nessuna parte.»
+«Quasi. Non tutto viene scritto prima: molte cose il sistema le fa e poi le annota. Ma quello che conta — cosa si è deciso, cosa è stato fatto, cosa è andato storto — finisce scritto. Non in una testa: in un file che chiunque può aprire.»
 
 Nina resta ferma un momento. Poi dice: «Ma allora il sistema non *gira*. Il sistema si *scrive*.»
 
@@ -115,15 +115,15 @@ THEMIS non risponde subito. Aspetta tre secondi — Nina li conta senza volerlo.
 
 Nina annuisce.
 
-«TITANIUM_OS non ha quel buio. Il markdown è sia la memoria che l'interfaccia. Non c'è un "dentro" separato dal "fuori". Quello che il sistema pensa è quello che il sistema scrive, ed è quello che tu puoi leggere.»
+«TITANIUM_OS prova a lasciarne il meno possibile. Dentro girano programmi e archivi che non vedi, certo. Ma la sua memoria — cosa si è deciso, perché, cosa resta da fare — sta in file di testo semplice che chiunque può leggere. Se un giorno nessuno ricordasse niente, si ripartirebbe da lì.»
 
 «E MIMS?»
 
-«MIMS gestisce il ciclo di vita — quando fare le cose, in che ordine, come passarle da un pezzo all'altro. Ma non lo fa in silenzio. Lo fa *narrativamente*. Come un capomastro che non solo costruisce, ma tiene un giornale di cantiere che chiunque può riaprire il giorno dopo e capire cosa è stato fatto e perché.»
+«MIMS non vive qui dentro: MIMS è materia, i giunti che hai visto alla casella prima, pezzi veri che tengono insieme altri pezzi. Però anche lui ha il suo giornale di cantiere, come un capomastro. Ogni misura, ogni prova, ogni scelta di materiale: Matteo la scrive. Il giunto non ricorda da solo — ricorda il quaderno di chi lo fa.»
 
 «E VULCAN?»
 
-«VULCAN chiude le cose. Protegge la struttura. Ma non la nasconde — la *firma*. Ogni giuntura è riconoscibile. Il sistema pensa ad alta voce, e VULCAN fa in modo che quella voce non venga sovrascritta.»
+«VULCAN è la pressa, e le mattonelle che fa sono la pelle delle macchine. Stessa regola: una miscela provata e non scritta, alla colata dopo è persa. Una miscela scritta si può rifare, correggere, migliorare.»
 
 Nina rimette il libro sul ripiano. Cammina fino alla finestra più vicina — in questa biblioteca le finestre danno non verso fuori, ma verso altri corridoi di ripiani. Guarda in lontananza.
 
@@ -131,9 +131,9 @@ Nina rimette il libro sul ripiano. Cammina fino alla finestra più vicina — in
 
 «Sì.»
 
-«E qui invece il repo non è separato dall'esecuzione. Sono la stessa cosa. Il markdown è il codice è il pensiero.»
+«E qui invece la memoria non sta chiusa nell'app. Sta nei quaderni. L'app fa, i quaderni ricordano.»
 
-> *(Strato fondo — per il grande: un dev Flutter tradizionale pensa in repo, branch, PR, deploy pipeline — uno stack con un ciclo di vita chiaro e uno "schermo finale" dove l'utente clicca. TITANIUM_OS non ha quello schermo finale. Vive in markdown strutturato: ogni sessione salva il proprio stato in file .md, non in un database opaco. Le decisioni vengono loggate prima dell'esecuzione — il "pensiero" è separabile dal "risultato". Quando MCP chiama CommandBar, quella chiamata è scritta. Quando RAG recupera un fatto, il recupero è loggato. MIMS non è una pipeline invisibile: è una traccia narrativa leggibile. Questa è la rottura cognitiva: il sistema non "gira" — si "scrive". Il markdown è sia memoria che interfaccia. Non c'è stato nascosto.)*
+> *(Strato fondo — per il grande: uno sviluppatore tradizionale pensa in repo, branch, PR, deploy — uno stack con uno "schermo finale" dove l'utente clicca. TITANIUM_OS tiene la sua memoria operativa in file di testo leggibili: la bussola `DA_FARE.md` dice cosa è aperto, `RIAVVIO_SESSIONE.txt` dice dove si era rimasti, le note di MENTE (una cassaforte Obsidian) tengono le decisioni, e il RAG le ritrova. Ci sono anche archivi che non si leggono a occhio — l'indice del RAG, lo stato in JSON — ma la continuità non dipende dalla memoria di una persona: passa dai file. Questa è la rottura: il sistema non si ricorda, si scrive.)*
 
 ---
 
@@ -198,15 +198,16 @@ Poi guarda verso la parte della biblioteca che non ha ancora esplorato. Più in 
 
 <!-- DIDATTICA -->
 **Pietra:** `⟡4` La Biblioteca delle Fonti (giro 1). *Un sistema che documenta le proprie decisioni prima di eseguirle non ha stato nascosto: la traccia è sia memoria che interfaccia, leggibile e riparabile da chiunque.*
-**Pietre richiamate:** ⟡3 MIMS il connettore (EP_N2_27) · ⟡2 VULCAN la pelle (EP_N2_x) · il calibro di FORGE (EP_N2_01)
-**3 strati:** bambino = un diario che si riscrive da solo mentre cammini in una biblioteca senza soffitto · curioso = markdown strutturato come traccia viva: ogni decisione scritta prima dell'esecuzione, ogni recupero loggato, nessuno stato opaco · grande = TITANIUM_OS non separa repo da esecuzione; il markdown è codice è pensiero; MCP e RAG documentano ogni operazione; il Disordine arretra dove la traccia è chiara
+**Pietre richiamate:** ⟡3 MIMS il connettore (EP_N2_27) · ⟡2 VULCAN la pelle · il calibro di FORGE (EP_N2_01)
+**3 strati:** bambino = un diario che si riscrive da solo mentre cammini in una biblioteca senza soffitto · curioso = una traccia scritta in chiaro: le decisioni importanti prima di farle, quello che succede dopo, leggibile da chiunque · grande = la memoria di TITANIUM_OS sta in file leggibili (bussola, RIAVVIO, note di MENTE) che il RAG ritrova; la continuità passa dai file, non dalla testa; il Disordine arretra dove la traccia è chiara
 **Cuore:** la curiosità è un superpotere · fai bene le cose vere — e *scrivile prima di farle* · gli strumenti, non le risposte: il calibro registra, non inventa
-**Aggancio reale:** In GENESIS/V32, M
+**Aggancio reale:** la bussola `DA_FARE.md` e le note di MENTE (la cassaforte Obsidian che il RAG legge): la memoria del sistema sta lì, in testo semplice, e ogni sessione riparte da quei file.
+**Open loop → Casella 29:** e se il Disordine non brucia i libri, ma ne riscrive le parole un soffio alla volta?
 
 ## FATTI (per il RAG)
-- **FATTO:** EP_N2_28, casella ? (Il Sistema Pensa — MCP. RAG. CommandBar. Il momento in cui T) del viaggio Nina v2, regione 4 (LA BIBLIOTECA DELLE FONTI).
-- Ogni sessione TITANIUM_OS salva il suo stato in markdown strutturato (.md), non in un database opaco.
-- Le decisioni vengono logginate prima dell'esecuzione: il 'pensiero' è separabile dal 'risultato'.
-- MCP (Model Context Protocol) connette il linguaggio naturale a operazioni reali, ma la connessione stessa è documentata.
-- MIMS gestisce il ciclo di vita non come una pipeline invisibile, ma come una traccia narrativa che chiunque può leggere e verificare.
-- A differenza di un'app Flutter (repo → branch → PR → deploy → utente clicca), TITANIUM_OS non ha uno 'schermo finale': vive nel markdown, che è sia memoria che interfaccia.
+- **FATTO:** EP_N2_28, casella 28 (il sistema che si scrive: la traccia come memoria) del viaggio Nina v2, regione 4 (LA BIBLIOTECA DELLE FONTI).
+- A fine sessione TITANIUM_OS scrive dove si è rimasti in file di testo leggibili: la bussola `DA_FARE.md` e `RIAVVIO_SESSIONE.txt`.
+- Il piano si scrive prima di eseguirlo (la scaletta della bussola): così la differenza tra quello che si voleva e quello che è successo resta visibile.
+- Le note di MENTE sono la fonte del RAG: una decisione scritta lì si ritrova anche mesi dopo.
+- MIMS è materia (giunti in PA-GF30), non software: la sua traccia sono le note di progetto in MENTE/MIMS.
+- A differenza di un'app che tiene tutto dentro, la memoria di TITANIUM_OS sta in file che chiunque può aprire: la continuità non dipende dalla testa di una persona.
