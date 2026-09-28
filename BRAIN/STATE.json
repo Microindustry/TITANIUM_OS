@@ -2,14 +2,22 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-09-28T13:11:12.095264",
-  "active_milestone": "#74: analisi del rifacimento grafico scritta, il ferro al centro; prima accensione con la catena verificata",
-  "next_step": "Decisioni di Matteo (VULCAN pilastro, uso dashboard, foto, distinta), poi pulizia e dati del ferro",
-  "session_count": 172,
+  "last_update": "2026-09-28T13:44:03.143552",
+  "active_milestone": "#74: decisioni di Matteo applicate - VULCAN pilastro, FIT-PARK fuori, le tre distinte del ferro in MENTE",
+  "next_step": "Pulizia della dashboard (codice morto, 11 dipendenze), poi la fonte dati del ferro: l'API legge distinte, MENTE e FOTO",
+  "session_count": 173,
   "pillars": {
     "V32": {
       "status": "in_progress",
       "pct_complete": 65
+    },
+    "VULCAN": {
+      "status": "in_progress",
+      "pct_complete": 38,
+      "phase": "Fase 1 (costruzione e validazione): 3 voci su 8 fatte - telaio con i 2 cilindri-guida, stampo mattonella provvisorio, strumentazione vacuum",
+      "next": "Montare il martinetto Vevor 3 stadi, poi la prima colata di validazione con lo stampo provvisorio",
+      "pct_fonte": "MENTE/VULCAN/VULCAN_MANIFESTO.md, Stato Attuale del 22/06/2026: 3 voci spuntate su 8. E' la % della Fase 1, non del piano a 5 fasi fino al 2030",
+      "pilastro_dal": "2026-09-28"
     },
     "MIMS": {
       "status": "waiting_press",

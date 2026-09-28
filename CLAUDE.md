@@ -105,9 +105,10 @@ FINANCE\            ← fatture, BEP, ROI, fornitori
 | Codice Python/JS/TS | `C:\Users\teo\TITANIUM_OS\` (sottocartelle NODES/AUTOMATIONS/…) |
 | API keys / .env | `_VAULT/KEYS/` |
 | Note V32 / decisioni officina | `MENTE/V32/` |
+| **Distinte del ferro** (fonte unica, le tiene Claude dal 28/09) | `MENTE/V32/DISTINTA_V32.md` · `MENTE/VULCAN/DISTINTA_VULCAN.md` · `MENTE/MIMS/DISTINTA_MIMS.md` — mai nel repo |
 | Decisioni dalle chat | `MENTE/SESSIONI/YYYY-MM-DD_tema.md` |
 | File CAD (STL/STEP/DXF) | `CAD/[progetto]/` |
-| Foto build | `FOTO/V32_BUILD/` |
+| Foto build | `FOTO/V32_BUILD/` · `FOTO/VULCAN_BUILD/` · `FOTO/MIMS/`, sottocartella `<AAAAMMGG>/` |
 | Script episodi podcast | `CONTENT_ENGINE/produzione_contenuti/` |
 | Documenti personali | `PERSONALE/DOCUMENTI/[categoria]/` |
 

@@ -169,15 +169,16 @@
               },
               {
                 "id": "mc02",
-                "label": "Fit Park dati base mancanti",
-                "icon": "!",
-                "status": "active",
-                "note": "Dimensioni, attrezzi, costo kit non definiti. Rimuovere dalla roadmap o completare con dati reali.",
+                "label": "Fit Park dati base mancanti — CHIUSA 28/09",
+                "icon": "✓",
+                "status": "done",
+                "note": "CHIUSA 28/09 (#74), decisione di Matteo: FIT-PARK esce dalla roadmap ('era un'idea, non una cosa cosi' importante'). Tolto dal db GENESIS (CORE/genesis_seed.py, RIMOSSI); l'idea resta parcheggiata in DA_FARE.md.",
                 "isLeaf": true,
-                "color": "text-rose-400",
-                "border": "border-rose-500/40",
-                "bg": "bg-rose-950/20",
-                "dot": "bg-rose-400"
+                "color": "text-emerald-400",
+                "border": "border-emerald-500/40",
+                "bg": "bg-emerald-950/20",
+                "dot": "bg-emerald-400",
+                "verificata": "2026-09-28"
               },
               {
                 "id": "mc03",

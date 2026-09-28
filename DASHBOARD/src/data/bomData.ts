@@ -1,3 +1,6 @@
+// SUPERATO (#74, 28/09/2026): la fonte unica della distinta V32 e' MENTE/V32/DISTINTA_V32.md
+// (privata, la tiene Claude). Questo file e' fermo al 16/03 e resta solo finche' la vista non
+// legge la distinta dall'API locale (rifacimento grafico). Non aggiornarlo: aggiorna la distinta.
 export interface BOMItem {
   id: string;
   name: string;

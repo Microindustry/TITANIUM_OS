@@ -1,4 +1,4 @@
-# genesis_seed.py | TITANIUM_OS / CORE / GENESIS | v1.0 | 2026-08-16
+# genesis_seed.py | TITANIUM_OS / CORE / GENESIS | v1.1 | 2026-09-28
 # S2 della scala GENESIS: popola il db con i dipartimenti e gli agenti REALI.
 #
 # IDEMPOTENTE: ogni riga e' un UPSERT su chiave stabile. Rieseguibile quante volte
@@ -14,6 +14,11 @@
 # naturale tra i 6 — GENESIS non e' un dipartimento nella lista. Qui stanno sotto
 # OFFICINA come "la bottega che costruisce il sistema". Se e' sbagliato, la correzione
 # e' una riga in DEPARTMENTS + il campo department_id degli agenti: DECISIONE DI MATTEO.
+#
+# v1.1 (#74, decisione di Matteo del 28/09): VULCAN entra come dipartimento (e' meta'
+# della catena del ferro: V32 -> stampi -> VULCAN -> MIMS), FIT-PARK esce ("era
+# un'idea, non una cosa cosi' importante"). L'UPSERT non toglie righe: i dipartimenti
+# usciti stanno in RIMOSSI e il seed li cancella, cosi' anche un db vecchio si riallinea.
 #
 #   python CORE/genesis_seed.py           esegue il seed (idempotente)
 #   python CORE/genesis_seed.py --albero  stampa l'albero con una query ricorsiva
@@ -33,12 +38,15 @@ NOW = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 # (id, name, slug, tagline, color, ord)
 DEPARTMENTS = [
     ("dep_v32",     "V32",         "v32",        "la CNC in epoxy-granite",              "#7dd3fc", 1),
-    ("dep_mims",    "MIMS",        "mims",       "i connettori modulari (Via B VULCAN)", "#fbbf24", 2),
-    ("dep_vita",    "VITA-NATURA", "vita-natura", "il centro estetico",                  "#86efac", 3),
-    ("dep_fitpark", "FIT-PARK",    "fit-park",   "",                                     "#c4b5fd", 4),
+    ("dep_vulcan",  "VULCAN",      "vulcan",     "la pressa dei polimeri (pelle e connettori MIMS)", "#fdba74", 2),
+    ("dep_mims",    "MIMS",        "mims",       "i connettori modulari (Via B VULCAN)", "#fbbf24", 3),
+    ("dep_vita",    "VITA-NATURA", "vita-natura", "il centro estetico",                  "#86efac", 4),
     ("dep_finanze", "FINANZE",     "finanze",    "BEP, ROI, fornitori",                  "#f9a8d4", 5),
     ("dep_officina", "OFFICINA",   "officina",   "attrezzatura, banco, e il sistema che costruisce il sistema", "#fca5a5", 6),
 ]
+
+# usciti per decisione di Matteo: il seed li cancella (l'UPSERT da solo non toglie righe)
+RIMOSSI = ["dep_fitpark"]   # 28/09: "era un'idea, non una cosa cosi' importante"
 
 # (id, department_id, parent_id, name, role, tier, status, description, model, entrypoint)
 AGENTS = [
@@ -131,6 +139,7 @@ ON CONFLICT(id) DO UPDATE SET
 def seed(db_path: str | Path | None = None) -> dict:
     init(db_path)
     with connect(db_path) as con:
+        con.executemany("DELETE FROM departments WHERE id = ?", [(d,) for d in RIMOSSI])
         con.executemany(UPSERT_DEP, DEPARTMENTS)
         # i lead PRIMA dei worker: parent_id ha una FK, l'ordine conta
         con.executemany(UPSERT_AGENT, [a for a in AGENTS if a[2] is None])

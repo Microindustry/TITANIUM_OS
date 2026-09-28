@@ -7,6 +7,7 @@ import valore from "../data/valoreData.json";
 
 const ACCENT = {
   v32:     "#34d399",
+  vulcan:  "#fb923c",
   mims:    "#fbbf24",
   genesis: "#22d3ee",
   vita:    "#a78bfa",
@@ -69,7 +70,7 @@ export function PitchView() {
           </p>
           <div className="flex gap-8 pt-4">
             <Stat value="15+" label="anni industria" />
-            <Stat value="5" label="pilastri" color={ACCENT.genesis} />
+            <Stat value={String(Object.keys(p).length || 6)} label="pilastri" color={ACCENT.genesis} />
             <Stat value="1" label="persona" color={ACCENT.mims} />
           </div>
         </section>
@@ -101,13 +102,15 @@ export function PitchView() {
           </p>
         </section>
 
-        {/* ── ACT 2 — I 5 PILASTRI ─────────────────────────────────── */}
+        {/* ── ACT 2 — I 6 PILASTRI ─────────────────────────────────── */}
         <section className="space-y-4">
-          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">Il sistema · 5 pilastri connessi</div>
+          <div className="text-[10px] font-mono uppercase tracking-[0.4em] text-slate-500">Il sistema · 6 pilastri connessi</div>
           <h2 className="text-2xl font-black text-white">Tutto si tiene</h2>
           <div>
             <PillarRow color={ACCENT.v32} tag="il motore" name="V32 — CNC" pct={pc("V32", 65)}
               line="Una fresatrice di precisione costruita da zero. È la fonte: produce, paga, finanzia il resto." />
+            <PillarRow color={ACCENT.vulcan} tag="la materia" name="VULCAN" pct={pc("VULCAN", 38)}
+              line="La pressa dei polimeri, costruita in officina: stampa la pelle e i connettori di MIMS. Il vantaggio non è la macchina, è la formula." />
             <PillarRow color={ACCENT.mims} tag="il sogno" name="MIMS" pct={pc("MIMS", 30)}
               line="Materiali e connettori modulari brevettabili. Idea in sviluppo — il salto di scala." />
             <PillarRow color={ACCENT.genesis} tag="il cervello" name="GENESIS" pct={pc("GENESIS", 55)}
@@ -119,6 +122,7 @@ export function PitchView() {
           </div>
           <p className="text-[13px] text-slate-500 leading-relaxed pt-1">
             La catena è intenzionale: <span className="text-emerald-400/90">V32</span> produce gli stampi →
+            <span className="text-orange-400/90"> VULCAN</span> stampa pelle e connettori →
             <span className="text-amber-400/90"> MIMS</span> diventa prodotto · <span className="text-cyan-400/90">GENESIS</span> orchestra tutto ·
             <span className="text-violet-400/90"> EVA</span> finanzia il ponte.
           </p>

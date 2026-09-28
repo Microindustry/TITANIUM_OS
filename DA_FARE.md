@@ -61,15 +61,18 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [ ] **F2 · il tag nuovo**: `v3.1.0` se conti i nodi, `v4.0.0` se conti il salto. La release la firma chi la fa
 - [ ] **Titoli tripli** (19/56/63 e 45/53/60): rititolare o archiviare?
 - [ ] **Bonifica dei 33 agganci inventati** negli episodi gia' usciti (la guardia ferma solo quelli nuovi): svuotarli e basta, o riscriverli insieme ai FATTI come l'EP_N2_16?
-- [ ] **Per il rifacimento grafico** (analisi #74, `DOCS/ANALISI_74_UNITA_GRAFICA.md` sez. 6): VULCAN diventa un pilastro
-  a se' (STATE, db GENESIS, dashboard)? · FIT-PARK resta nel db? · la dashboard la guardi solo al PC, anche dal telefono
-  in officina, anche come vetrina? · dove sono le foto del ferro (FOTO/ e' quasi vuota)? · la distinta V32 del 16/03 e' ancora vera?
+- [✓] **Per il rifacimento grafico** (analisi #74, sez. 6) → *risposte del 28/09*: VULCAN **diventa un pilastro** ·
+  FIT-PARK **esce** ("era un'idea") · la dashboard **solo dal PC** per ora, un giorno anche da mostrare · le foto
+  del ferro **le organizzi tu** · le distinte **le gestisco io**
+- [ ] **Le domande delle distinte** (righe "da verificare", in fondo a ogni `MENTE/<PROGETTO>/DISTINTA_*.md`): la piu' urgente
+  e' **il martinetto Vevor: ce l'hai (da montare) o va ordinato?** Le note si contraddicono
 
 **Hardware** *(sbloccano MIMS e la V32)*
 - [ ] **UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)
 - [ ] **Mandrino 2.2kW ER20**: prerequisito della fresatura stampi MIMS (fornitore + budget + data)
 - [ ] **Martinetto Vevor 3 stadi 20t** da montare al centro della pressa VULCAN: prima colata, MIMS e' fermo al 30%
-- [ ] **Le foto del ferro** (telaio V32, pressa, mattonelle) per il profilo GitHub (D6)
+- [ ] **Le foto del ferro** (telaio V32, pressa, mattonelle) — *le organizzi tu (28/09)*: in
+  `MICROINDUSTRY/FOTO/V32_BUILD|VULCAN_BUILD|MIMS/<AAAAMMGG>/`, cosi' la dashboard nuova le trova da sola. Servono anche al profilo GitHub (D6)
 
 **Chiavi** *(~5 minuti l'una. NON in `TITANIUM_OS/.env`, nessuno lo legge: `setx NOME "valore"` oppure la riga in `_VAULT/KEYS/titanium_os.env`)*
 - [ ] **Ruotare le chiavi del red-team #38**: esposte allora, ancora attive
@@ -109,8 +112,19 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
   db GENESIS, ne' pilastro in STATE); la catena V32 -> stampi -> VULCAN -> connettori e pelle di MIMS e' gia' scritta nelle
   note (`MENTE/VULCAN/vulcan_e_mims.md`); ~2.500 righe morte e 11 dipendenze inutili; 395 testi da 6-9 px, 6 "neri",
   10 `aria-*`; i dati del ferro fermi (distinta V32 al 16/03). Le ricette VULCAN sono segrete: mai nel repo pubblico.
-- [ ] **Prossimo**: le 5 decisioni di Matteo (in ⏳ ASPETTA MATTEO), poi pulizia -> fonte dati del ferro -> brief e token
-  -> la mappa della catena -> le tre stanze del ferro (ordine nella sez. 8 dell'analisi).
+- [✓] **Le decisioni di Matteo applicate** (28/09): **VULCAN pilastro** in `STATE.json` (38% = 3 voci su 8 della Fase 1 del
+  manifesto, fonte scritta accanto), nel db GENESIS (`dep_vulcan`, ordine della catena V32 -> VULCAN -> MIMS), in `pct_sync`
+  e nella barra di stato della dashboard. **FIT-PARK fuori** dal db (`RIMOSSI` in `CORE/genesis_seed.py`) e critica mc02 chiusa.
+- [💡] **FIT-PARK** parcheggiato: era il primo caso d'uso pensato per MIMS (manifesto operativo VULCAN, 18/03; specifiche in
+  `MENTE/MIMS/MIMS_FIT_PARK_SPECS.md`). Se torna, riparte da una riga in `DEPARTMENTS`.
+- [✓] **Le tre distinte, fonte unica, in MENTE** (privato, mai nel repo): `MENTE/V32/DISTINTA_V32.md` (51 righe: le 45 del
+  16/03 riviste sulle note piu' nuove, molle fuori, telaio 60×60), `MENTE/VULCAN/DISTINTA_VULCAN.md` (la prima: 18 righe),
+  `MENTE/MIMS/DISTINTA_MIMS.md` (pezzi, prototipi, i 19 disegni dei PROTOTIPI V1). Ognuna: cosa blocca, legami con le altre
+  macchine, domande "da verificare". Puntatori nel `_CANONE.md` (che diceva ancora "Via A o B aperta": sistemato).
+- [ ] **Vincolo di disegno** (decisione 3): la dashboard nuova e' **da PC**; un giorno si fa vedere, quindi **mai dati
+  sensibili nel codice**: le distinte e le ricette si leggono in locale dall'API.
+- [ ] **Prossimo**: pulizia (codice morto, dipendenze) -> fonte dati del ferro (l'API legge le distinte, MENTE, FOTO) ->
+  brief e token -> la mappa della catena -> le tre stanze del ferro (ordine nella sez. 8 dell'analisi).
 
 ---
 

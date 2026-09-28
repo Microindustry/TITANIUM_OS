@@ -29,7 +29,9 @@ const PILLAR_CFG: Record<string, {
   glow: string; room: RoomId; gradient: string;
 }> = {
   V32:         { color: "#34d399", colorDim: "#34d39940", bar: "bg-emerald-400", bg: "bg-emerald-950/60",  border: "border-emerald-500/50", glow: "0 0 40px #34d39920", room: "v32",     gradient: "from-emerald-950/80 to-slate-900/90" },
-  MIMS:        { color: "#fbbf24", colorDim: "#fbbf2440", bar: "bg-amber-400",   bg: "bg-amber-950/60",    border: "border-amber-500/50",   glow: "0 0 40px #fbbf2420", room: "mims",    gradient: "from-amber-950/80 to-slate-900/90"   },
+  // VULCAN non ha ancora la sua stanza (arriva col rifacimento #74): apre la piu' vicina, MIMS (scheletro + pelle)
+  VULCAN:      { color: "#fb923c", colorDim: "#fb923c40", bar: "bg-orange-400",  bg: "bg-orange-950/60",   border: "border-orange-500/50",  glow: "0 0 40px #fb923c20", room: "mims",    gradient: "from-orange-950/80 to-slate-900/90"  },
+  MIMS:       { color: "#fbbf24", colorDim: "#fbbf2440", bar: "bg-amber-400",   bg: "bg-amber-950/60",    border: "border-amber-500/50",   glow: "0 0 40px #fbbf2420", room: "mims",    gradient: "from-amber-950/80 to-slate-900/90"   },
   GENESIS:     { color: "#22d3ee", colorDim: "#22d3ee40", bar: "bg-cyan-400",    bg: "bg-cyan-950/60",     border: "border-cyan-500/50",    glow: "0 0 40px #22d3ee20", room: "genesis", gradient: "from-cyan-950/80 to-slate-900/90"    },
   VITA_NATURA: { color: "#a78bfa", colorDim: "#a78bfa40", bar: "bg-violet-400",  bg: "bg-violet-950/60",   border: "border-violet-500/50",  glow: "0 0 40px #a78bfa20", room: "eva",     gradient: "from-violet-950/80 to-slate-900/90"  },
   IDENTITY:    { color: "#94a3b8", colorDim: "#94a3b840", bar: "bg-slate-400",   bg: "bg-slate-800/60",    border: "border-slate-500/50",   glow: "0 0 40px #94a3b815", room: "matteo",  gradient: "from-slate-800/80 to-slate-900/90"   },
@@ -40,7 +42,8 @@ function pct(p: any): number { return Number(p?.pct_complete ?? p?.pct ?? 0); }
 // Essenza di ogni pilastro — una riga che spiega a chi guarda (investitori/amici)
 const PILLAR_DESC: Record<string, string> = {
   V32:         "Fresatrice CNC di precisione, costruita da zero",
-  MIMS:        "Materiali modulari brevettabili — il sogno grande",
+  VULCAN:      "La pressa dei polimeri: stampa la pelle e i connettori di MIMS",
+  MIMS:       "Materiali modulari brevettabili — il sogno grande",
   GENESIS:     "Il cervello digitale: AI, automazione, memoria",
   VITA_NATURA: "EVA — assistente AI per il centro estetico",
   IDENTITY:    "Brand, contenuti e percorso personale",
@@ -79,7 +82,7 @@ function PillarGrid({ state, onEnter }: { state: any; onEnter: (id: RoomId, labe
   if (!entries.length) return null;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {entries.map(([key, p]) => {
         const cfg = PILLAR_CFG[key] ?? {
           color: "#94a3b8", colorDim: "#94a3b840", bar: "bg-slate-400",
@@ -595,7 +598,9 @@ export function CanvasLayout({ room: externalRoom }: { room?: string }) {
               </div>
 
               <div className="flex items-center gap-3 pt-1">
-                <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-slate-500">I 5 pilastri</span>
+                <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-slate-500">
+                  I {Object.keys(state?.pillars ?? {}).length || ""} pilastri
+                </span>
                 <div className="h-px flex-1 bg-gradient-to-r from-slate-700/40 to-transparent" />
               </div>
               <PillarGrid state={state} onEnter={pushRoom} />
@@ -645,6 +650,7 @@ export const CICLO_STEPS = [
 ];
 export const PILLARS_DATA = [
   { label: "V32",         pct: 65, bar: "bg-emerald-500", note: "CNC in costruzione", atto: "II" },
+  { label: "VULCAN",      pct: 38, bar: "bg-orange-500",  note: "Martinetto da montare", atto: "V" },
   { label: "MIMS",        pct: 30, bar: "bg-amber-500",   note: "Attende V32→VULCAN", atto: "III" },
   { label: "GENESIS",     pct: 70, bar: "bg-cyan-500",    note: "Stack operativo",    atto: "V" },
   { label: "VITA NATURA", pct: 40, bar: "bg-indigo-400",  note: "EVA pilot",          atto: "IV" },

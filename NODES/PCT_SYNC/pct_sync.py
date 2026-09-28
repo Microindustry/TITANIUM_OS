@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# pct_sync.py | TITANIUM_OS / NODES / PCT_SYNC | v1.1 | 2026-07-08
+# pct_sync.py | TITANIUM_OS / NODES / PCT_SYNC | v1.2 | 2026-09-28
 # Agente di COERENZA: allinea le percentuali dei pilastri in tutto l'ecosistema
 # alla FONTE UNICA = BRAIN/STATE.json (pillars[X].pct_complete).
 #
@@ -13,6 +13,9 @@
 # -- SYSTEM_TREE e' derivato a runtime da data/mappaData.ts (struttura dagli
 # alberi N-livelli, % pilastri live da /api/state, ROOT = media computata).
 # Resta da sincronizzare solo CanvasLayout PILLARS_DATA (const a mano).
+#
+# v1.2 (#74): VULCAN e' un pilastro (decisione di Matteo 28/09) -> entra qui e
+# nella media ROOT, con la sua riga in PILLARS_DATA.
 #
 # SICURO by-design: sostituisce SOLO cifre dentro pattern ancorati e gia'
 # esistenti (mai struttura) -> non puo' rompere il TypeScript. Idempotente.
@@ -35,7 +38,7 @@ REPORT = BASE / "DATA" / "audit" / "pct_sync.json"
 
 # chiave STATE -> label usata in PILLARS_DATA (CanvasLayout, "VITA NATURA" con lo spazio)
 PILLARS_LABEL = {
-    "V32": "V32", "MIMS": "MIMS", "GENESIS": "GENESIS",
+    "V32": "V32", "VULCAN": "VULCAN", "MIMS": "MIMS", "GENESIS": "GENESIS",
     "VITA_NATURA": "VITA NATURA", "IDENTITY": "IDENTITY",
 }
 
@@ -50,7 +53,7 @@ def truth():
 
 
 def sync_canvas(text, pil):
-    """Riallinea le 5 righe di PILLARS_DATA in CanvasLayout (pattern
+    """Riallinea le righe di PILLARS_DATA in CanvasLayout (pattern
     label:"X", pct:N, bar:...). Ritorna (nuovo_testo, lista_diff)."""
     diffs = []
     for key, target in ((k, pil[k]) for k in pil):

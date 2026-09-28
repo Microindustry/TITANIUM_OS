@@ -44,7 +44,7 @@ fermo al 16/03 · `mimsData.ts` al 31/05 · `layersData.ts` al 25/03 · `genesis
 | Nel db GENESIS | `dep_v32` | **assente** | `dep_mims` ("connettori, Via B VULCAN") |
 | Vista in dashboard | spiegazione + pitch + distinta (ferma) | **nessuna** | spiegazione + pitch + albero (fermo) |
 | Note in MENTE | 7 (specifiche, analisi tecnica, BOM 12/02) | 5 (manifesto, operativo, build reale 22/06) | 36 (disegni dei pezzi, protocollo, bozza brevetto B2) |
-| Foto in `FOTO/` | 1 (Config G, 28/05) | **17** (22/06) | 0 |
+| Foto in `FOTO/` | 7 (Config G, 28/05) | **17** (22/06) | 0 |
 | CAD | 0 nella sua cartella | — | 4 file `GANCIO_50` (08/2025) |
 | Blocco fisico | **mandrino 2,2 kW ER20** da ordinare | **martinetto Vevor 3 stadi** da montare | aspetta la pressa (prima colata del giunto) |
 
@@ -131,6 +131,20 @@ e la vista si aggiorna da sola. Se per aggiornarla serve toccare il codice, fra 
    *Cambia tutto: in officina servono testi grandi e poche cose.*
 4. **Le foto del ferro**: `FOTO/` è quasi vuota. Dove sono le altre (telefono)? Si possono portare lì?
 5. **La distinta di V32 del 16/03** è ancora vera (38 disponibili, 6 mancanti)?
+
+### Le risposte di Matteo (28/09)
+
+1. **Sì, VULCAN è un pilastro.** Fatto: `STATE.json` (38% = 3 voci su 8 della Fase 1 del manifesto, con la fonte),
+   db GENESIS (`dep_vulcan`), `pct_sync`, barra di stato. La sua stanza arriva col rifacimento.
+2. **FIT-PARK esce**: "era un'idea, non una cosa così importante". Tolto dal db, critica chiusa, idea parcheggiata.
+3. **Solo dal PC, per ora**; "mi piacerebbe farla vedere in futuro". Quindi: si disegna per lo schermo grande,
+   ma come se fosse già pubblica — **nessun dato sensibile nel codice**, le distinte e le ricette si leggono dall'API.
+4. **Le foto le organizza Matteo**, in `FOTO/<PROGETTO>_BUILD/<AAAAMMGG>/`.
+5. **Le distinte le gestisce Claude**: una per pilastro, fonte unica, in MENTE (privato):
+   `MENTE/V32/DISTINTA_V32.md`, `MENTE/VULCAN/DISTINTA_VULCAN.md`, `MENTE/MIMS/DISTINTA_MIMS.md`.
+   La V32 del 16/03 **non era più vera** in alcuni punti: le molle sono uscite (corpo unico, maggio), il telaio
+   è 60×60, la vite che la dashboard chiamava "1605" nell'inventario del 12/02 è una 2005. I dubbi sono righe
+   "da verificare", con le domande in fondo a ogni distinta.
 
 ---
 

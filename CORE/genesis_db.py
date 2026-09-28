@@ -41,7 +41,7 @@ SCHEMA_VERSION = 1
 
 # Le 8 tabelle. Niente social, niente funnel: quello di FounderOS non ci serve.
 DDL = """
--- 1. i 6 dipartimenti reali (V32, MIMS, VITA-NATURA, FIT-PARK, FINANZE, OFFICINA)
+-- 1. i 6 dipartimenti reali (V32, VULCAN, MIMS, VITA-NATURA, FINANZE, OFFICINA)
 CREATE TABLE IF NOT EXISTS departments (
   id       TEXT PRIMARY KEY,
   name     TEXT NOT NULL,

@@ -112,6 +112,7 @@ const NAV_ITEMS: NavItem[] = [
 
 const PILLAR_COLORS: Record<string, { bar: string; text: string }> = {
   V32:         { bar: "bg-emerald-500", text: "text-emerald-400" },
+  VULCAN:      { bar: "bg-orange-500",  text: "text-orange-400" },
   GENESIS:     { bar: "bg-cyan-500",    text: "text-cyan-400" },
   MIMS:        { bar: "bg-amber-500",   text: "text-amber-400" },
   VITA_NATURA: { bar: "bg-violet-500",  text: "text-violet-400" },
@@ -363,7 +364,7 @@ function Sidebar({ view, onNavigate, collapsed, onToggle, pillars, online }: {
 
 // ── BOTTOM STATUS BAR ─────────────────────────────────────────────────────────
 function StatusBar({ pillars, milestone }: { pillars: Record<string, any>; milestone: string }) {
-  const order = ["V32", "GENESIS", "MIMS", "VITA_NATURA", "IDENTITY"];
+  const order = ["V32", "VULCAN", "MIMS", "GENESIS", "VITA_NATURA", "IDENTITY"];
   return (
     <div className="flex-shrink-0 h-7 border-t border-slate-800/40 px-4 flex items-center gap-5
                     bg-slate-950/80 backdrop-blur-sm">

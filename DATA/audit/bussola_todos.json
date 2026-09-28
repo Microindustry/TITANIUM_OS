@@ -24,9 +24,15 @@
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
-    "id": "BUS-862c38bc",
+    "id": "BUS-e51c0d93",
+    "stato": "fatto",
+    "testo": "**Per il rifacimento grafico** (analisi #74, sez. 6) → *risposte del 28/09*: VULCAN **diventa un pilastro** ·",
+    "sessione": "⏳ ASPETTA MATTEO"
+  },
+  {
+    "id": "BUS-797cb81b",
     "stato": "da_fare",
-    "testo": "**Per il rifacimento grafico** (analisi #74, `DOCS/ANALISI_74_UNITA_GRAFICA.md` sez. 6): VULCAN diventa un pilastro",
+    "testo": "**Le domande delle distinte** (righe \"da verificare\", in fondo a ogni `MENTE/<PROGETTO>/DISTINTA_*.md`): la piu' urgente",
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
@@ -48,9 +54,9 @@
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
-    "id": "BUS-a82c3307",
+    "id": "BUS-89a1db44",
     "stato": "da_fare",
-    "testo": "**Le foto del ferro** (telaio V32, pressa, mattonelle) per il profilo GitHub (D6)",
+    "testo": "**Le foto del ferro** (telaio V32, pressa, mattonelle) — *le organizzi tu (28/09)*: in",
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
@@ -150,9 +156,33 @@
     "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
   },
   {
-    "id": "BUS-5c598b42",
+    "id": "BUS-4dd40291",
+    "stato": "fatto",
+    "testo": "**Le decisioni di Matteo applicate** (28/09): **VULCAN pilastro** in `STATE.json` (38% = 3 voci su 8 della Fase 1 del",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-662d140e",
+    "stato": "idea",
+    "testo": "**FIT-PARK** parcheggiato: era il primo caso d'uso pensato per MIMS (manifesto operativo VULCAN, 18/03; specifiche in",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-61b7ca62",
+    "stato": "fatto",
+    "testo": "**Le tre distinte, fonte unica, in MENTE** (privato, mai nel repo): `MENTE/V32/DISTINTA_V32.md` (51 righe: le 45 del",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-b6d2a6ab",
     "stato": "da_fare",
-    "testo": "**Prossimo**: le 5 decisioni di Matteo (in ⏳ ASPETTA MATTEO), poi pulizia -> fonte dati del ferro -> brief e token",
+    "testo": "**Vincolo di disegno** (decisione 3): la dashboard nuova e' **da PC**; un giorno si fa vedere, quindi **mai dati",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-c675a7fd",
+    "stato": "da_fare",
+    "testo": "**Prossimo**: pulizia (codice morto, dipendenze) -> fonte dati del ferro (l'API legge le distinte, MENTE, FOTO) ->",
     "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
   },
   {
