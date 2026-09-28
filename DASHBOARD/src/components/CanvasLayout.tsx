@@ -650,7 +650,7 @@ export const CICLO_STEPS = [
 ];
 export const PILLARS_DATA = [
   { label: "V32",         pct: 65, bar: "bg-emerald-500", note: "CNC in costruzione", atto: "II" },
-  { label: "VULCAN",      pct: 38, bar: "bg-orange-500",  note: "Martinetto da montare", atto: "V" },
+  { label: "VULCAN",      pct: 38, bar: "bg-orange-500",  note: "Martinetto da comprare", atto: "V" },
   { label: "MIMS",        pct: 30, bar: "bg-amber-500",   note: "Attende V32→VULCAN", atto: "III" },
   { label: "GENESIS",     pct: 70, bar: "bg-cyan-500",    note: "Stack operativo",    atto: "V" },
   { label: "VITA NATURA", pct: 40, bar: "bg-indigo-400",  note: "EVA pilot",          atto: "IV" },

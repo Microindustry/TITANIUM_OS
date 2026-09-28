@@ -46,7 +46,7 @@ fermo al 16/03 · `mimsData.ts` al 31/05 · `layersData.ts` al 25/03 · `genesis
 | Note in MENTE | 7 (specifiche, analisi tecnica, BOM 12/02) | 5 (manifesto, operativo, build reale 22/06) | 36 (disegni dei pezzi, protocollo, bozza brevetto B2) |
 | Foto in `FOTO/` | 7 (Config G, 28/05) | **17** (22/06) | 0 |
 | CAD | 0 nella sua cartella | — | 4 file `GANCIO_50` (08/2025) |
-| Blocco fisico | **mandrino 2,2 kW ER20** da ordinare | **martinetto Vevor 3 stadi** da montare | aspetta la pressa (prima colata del giunto) |
+| Blocco fisico | **mandrino 2,2 kW ER20** da ordinare | **martinetto Vevor 3 stadi** da comprare, non adesso (Matteo 28/09; le note dicevano "da montare") | aspetta la pressa (prima colata del giunto) |
 
 La cartella `FOTO/` ha già la struttura giusta (`V32_BUILD/{bom_seriali,componenti,Config_G,content_hero}`,
 `VULCAN_BUILD/`, `MIMS/`, `OFFICINA/`, `PRODOTTI/`) ma è **quasi vuota**: la documentazione del ferro non entra

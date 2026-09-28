@@ -2,7 +2,7 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-09-28T13:44:03.143552",
+  "last_update": "2026-09-28T13:51:28.525537",
   "active_milestone": "#74: decisioni di Matteo applicate - VULCAN pilastro, FIT-PARK fuori, le tre distinte del ferro in MENTE",
   "next_step": "Pulizia della dashboard (codice morto, 11 dipendenze), poi la fonte dati del ferro: l'API legge distinte, MENTE e FOTO",
   "session_count": 173,
@@ -12,10 +12,10 @@
       "pct_complete": 65
     },
     "VULCAN": {
-      "status": "in_progress",
+      "status": "waiting_jack",
       "pct_complete": 38,
       "phase": "Fase 1 (costruzione e validazione): 3 voci su 8 fatte - telaio con i 2 cilindri-guida, stampo mattonella provvisorio, strumentazione vacuum",
-      "next": "Montare il martinetto Vevor 3 stadi, poi la prima colata di validazione con lo stampo provvisorio",
+      "next": "Comprare il martinetto Vevor 3 stadi (Matteo 28/09: va comprato, non adesso), poi montarlo e fare la prima colata di validazione con lo stampo provvisorio",
       "pct_fonte": "MENTE/VULCAN/VULCAN_MANIFESTO.md, Stato Attuale del 22/06/2026: 3 voci spuntate su 8. E' la % della Fase 1, non del piano a 5 fasi fino al 2030",
       "pilastro_dal": "2026-09-28"
     },
@@ -174,8 +174,8 @@
     "Chiavi .env da ruotare (red-team #38) — le ruota Matteo",
     "API key Semantic Scholar gratuita in .env (SEMANTIC_SCHOLAR_API_KEY) — azzera i 429 della ricerca notturna",
     "Mandrino 2.2kW ER20 da ordinare — prerequisito fresatura stampi MIMS",
-    "[DECISO 24/06] Connettori MIMS = Via B (compressione VULCAN, processo proprietario per B2) — SCHEDA §5 a canone. A valle: ricalcolare economia/BEP sul tooling Via B + rivendicare il processo nella bozza B2. Prossimo step fisico MIMS: montare martinetto Vevor -> prima colata giunto",
-    "Martinetto Vevor 3 stadi da montare (prerequisito fisico VULCAN)"
+    "[DECISO 24/06] Connettori MIMS = Via B (compressione VULCAN, processo proprietario per B2) — SCHEDA §5 a canone. A valle: ricalcolare economia/BEP sul tooling Via B + rivendicare il processo nella bozza B2. Prossimo step fisico MIMS: comprare e montare il martinetto Vevor (non adesso, 28/09) -> prima colata giunto",
+    "Martinetto Vevor 3 stadi da COMPRARE, non adesso (Matteo 28/09), poi da montare: prerequisito fisico VULCAN"
   ],
   "self_improve": {
     "mode": "propose-only",

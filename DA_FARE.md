@@ -64,13 +64,14 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [✓] **Per il rifacimento grafico** (analisi #74, sez. 6) → *risposte del 28/09*: VULCAN **diventa un pilastro** ·
   FIT-PARK **esce** ("era un'idea") · la dashboard **solo dal PC** per ora, un giorno anche da mostrare · le foto
   del ferro **le organizzi tu** · le distinte **le gestisco io**
-- [ ] **Le domande delle distinte** (righe "da verificare", in fondo a ogni `MENTE/<PROGETTO>/DISTINTA_*.md`): la piu' urgente
-  e' **il martinetto Vevor: ce l'hai (da montare) o va ordinato?** Le note si contraddicono
+- [ ] **Le domande delle distinte** (righe "da verificare", in fondo a ogni `MENTE/<PROGETTO>/DISTINTA_*.md`), quando vuoi.
+  *Il martinetto e' risposto (28/09): va comprato, non adesso.*
 
 **Hardware** *(sbloccano MIMS e la V32)*
 - [ ] **UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)
 - [ ] **Mandrino 2.2kW ER20**: prerequisito della fresatura stampi MIMS (fornitore + budget + data)
-- [ ] **Martinetto Vevor 3 stadi 20t** da montare al centro della pressa VULCAN: prima colata, MIMS e' fermo al 30%
+- [ ] **Martinetto Vevor 3 stadi 20t** — **da comprare, non adesso** (28/09): poi si monta al centro della pressa VULCAN
+  e si fa la prima colata. Fino ad allora VULCAN e' in attesa e MIMS resta al 30%
 - [ ] **Le foto del ferro** (telaio V32, pressa, mattonelle) — *le organizzi tu (28/09)*: in
   `MICROINDUSTRY/FOTO/V32_BUILD|VULCAN_BUILD|MIMS/<AAAAMMGG>/`, cosi' la dashboard nuova le trova da sola. Servono anche al profilo GitHub (D6)
 
@@ -121,6 +122,9 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
   16/03 riviste sulle note piu' nuove, molle fuori, telaio 60×60), `MENTE/VULCAN/DISTINTA_VULCAN.md` (la prima: 18 righe),
   `MENTE/MIMS/DISTINTA_MIMS.md` (pezzi, prototipi, i 19 disegni dei PROTOTIPI V1). Ognuna: cosa blocca, legami con le altre
   macchine, domande "da verificare". Puntatori nel `_CANONE.md` (che diceva ancora "Via A o B aperta": sistemato).
+- [✓] **Il martinetto Vevor non c'e': va comprato, non adesso** (Matteo 28/09; le note dicevano "da montare"). Allineati
+  distinte, manifesto, build reale, scheda MIMS e STATE: VULCAN passa a **in attesa** (`waiting_jack`); la prima colata
+  prevista nel Q3 slitta.
 - [ ] **Vincolo di disegno** (decisione 3): la dashboard nuova e' **da PC**; un giorno si fa vedere, quindi **mai dati
   sensibili nel codice**: le distinte e le ricette si leggono in locale dall'API.
 - [ ] **Prossimo**: pulizia (codice morto, dipendenze) -> fonte dati del ferro (l'API legge le distinte, MENTE, FOTO) ->
