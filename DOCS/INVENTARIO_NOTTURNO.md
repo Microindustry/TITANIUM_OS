@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-09-28  6 commit](#2026-09-28-6-commit)
   - [2026-09-27  2 commit](#2026-09-27-2-commit)
   - [2026-09-24  2 commit](#2026-09-24-2-commit)
   - [2026-09-23  1 commit](#2026-09-23-1-commit)
@@ -71,6 +72,18 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-09-28 · 6 commit
+- `85c23d94` chore(salva): chiusura sessione #73 - A1+A2, taglio della #72, piano della #74
+- `edd568dc` fix(#73): A3 + I2 - via i fatti inventati dall'EP_N2_16, la regola "meglio vuoto" morde
+- `16bb35b2` chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero
+- `e18cf14b` feat(#73): automazioni all'accensione - il PC e' quasi sempre spento
+- `5f39f58a` feat(#73): P0 della scaletta - gli strumenti che ci orientano
+- `62cf999f` docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
+
+_episodi: 312 · critiche aperte: 7 (293 risolte) · RAG: 22688 chunk_
+
+
 
 ## 2026-09-27 · 2 commit
 - `f7a3cdad` auto: nina_rag_loop - episodi Nina 24/09/2026
