@@ -24,6 +24,12 @@
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
+    "id": "BUS-862c38bc",
+    "stato": "da_fare",
+    "testo": "**Per il rifacimento grafico** (analisi #74, `DOCS/ANALISI_74_UNITA_GRAFICA.md` sez. 6): VULCAN diventa un pilastro",
+    "sessione": "⏳ ASPETTA MATTEO"
+  },
+  {
     "id": "BUS-bd9a4ad0",
     "stato": "da_fare",
     "testo": "**UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)",
@@ -120,6 +126,36 @@
     "sessione": "⏳ ASPETTA MATTEO"
   },
   {
+    "id": "BUS-aaa399aa",
+    "stato": "fatto",
+    "testo": "**Prima accensione con la catena nuova, verificata** (28/09, 13:06-13:08): self-heal RAG, generazione saltata,",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-706e858f",
+    "stato": "da_fare",
+    "testo": "Il push parte insieme alla catena e finisce prima dell'audit: il commit dell'audit esce all'accensione dopo.",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-a7ec4aaf",
+    "stato": "fatto",
+    "testo": "**Controllo \"organi vivi\" reso onesto**: il riflusso aveva un falso allarme fisso da 37 giorni (guardava un file che",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-77f08b82",
+    "stato": "fatto",
+    "testo": "**Analisi scritta**: `DOCS/ANALISI_74_UNITA_GRAFICA.md`. In breve: **VULCAN non c'e' da nessuna parte** (ne' vista, ne'",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
+    "id": "BUS-5c598b42",
+    "stato": "da_fare",
+    "testo": "**Prossimo**: le 5 decisioni di Matteo (in ⏳ ASPETTA MATTEO), poi pulizia -> fonte dati del ferro -> brief e token",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
     "id": "BUS-3380014d",
     "stato": "fatto",
     "testo": "**137 cloni orfani** del marketplace plugin (`~/.claude/plugins/marketplaces/temp_*`, **1,24 GB**) -> Cestino.",
@@ -211,7 +247,7 @@
   },
   {
     "id": "BUS-e87683b4",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
@@ -775,7 +811,7 @@
   },
   {
     "id": "BUS-9a4304e7",
-    "stato": "da_fare",
+    "stato": "fatto",
     "testo": "**G4** · Riflusso FATTI **muto da 6 giorni**.",
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },

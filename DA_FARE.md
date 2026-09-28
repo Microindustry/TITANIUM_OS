@@ -2,6 +2,7 @@
 
 - [DA FARE - la bussola viva di TITANIUM_OS](#da-fare---la-bussola-viva-di-titaniumos)
   - [ASPETTA MATTEO](#aspetta-matteo)
+  - [Sessione 74  28/09/2026  ANALISI PER LUNITÀ GRAFICA (il ferro al centro)](#sessione-74-28092026-analisi-per-lunità-grafica-il-ferro-al-centro)
   - [Sessione 73  27/09/2026  PULIZIA DELLAVVIO (Claude  Windows)](#sessione-73-27092026-pulizia-dellavvio-claude-windows)
   - [Sessione 72  28/08/2026  IL PIANO COMPLETO (scritto prima di eseguirlo)](#sessione-72-28082026-il-piano-completo-scritto-prima-di-eseguirlo)
     - [BACKLOG EREDITATO - TRIATO IL 28/08 (193 voci - 47 vere)](#backlog-ereditato---triato-il-2808-193-voci---47-vere)
@@ -60,6 +61,9 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [ ] **F2 · il tag nuovo**: `v3.1.0` se conti i nodi, `v4.0.0` se conti il salto. La release la firma chi la fa
 - [ ] **Titoli tripli** (19/56/63 e 45/53/60): rititolare o archiviare?
 - [ ] **Bonifica dei 33 agganci inventati** negli episodi gia' usciti (la guardia ferma solo quelli nuovi): svuotarli e basta, o riscriverli insieme ai FATTI come l'EP_N2_16?
+- [ ] **Per il rifacimento grafico** (analisi #74, `DOCS/ANALISI_74_UNITA_GRAFICA.md` sez. 6): VULCAN diventa un pilastro
+  a se' (STATE, db GENESIS, dashboard)? · FIT-PARK resta nel db? · la dashboard la guardi solo al PC, anche dal telefono
+  in officina, anche come vetrina? · dove sono le foto del ferro (FOTO/ e' quasi vuota)? · la distinta V32 del 16/03 e' ancora vera?
 
 **Hardware** *(sbloccano MIMS e la V32)*
 - [ ] **UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)
@@ -86,6 +90,27 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [ ] **Routine cloud di Claude Code**: collegare GitHub a claude.ai/code, poi UNA routine settimanale (es. "prepara i
   prossimi 2 caroselli come PR su un branch `claude/`"). Consuma l'abbonamento, non il credito. Solo quando si pubblica
 - [ ] **Dependabot** sul repo (gratis, GitHub): avvisi CVE per email a PC spento, al posto del pip-audit del sabato
+
+---
+
+
+## Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)
+
+*Matteo: "e' complicato, prima analizzalo" — si riparte perche' MIMS, la fresa (V32) e VULCAN cresceranno molto.*
+
+- [✓] **Prima accensione con la catena nuova, verificata** (28/09, 13:06-13:08): self-heal RAG, generazione saltata,
+  audit a regole (LLM senza credito, come previsto), taglio della bussola (niente da spostare), **critiche 300 -> 19 voci**
+  (282 in `critiche_auto_archivio.jsonl`), push dei 6 commit della #73. Esito 0 per catena e push.
+- [ ] Il push parte insieme alla catena e finisce prima dell'audit: il commit dell'audit esce all'accensione dopo.
+  Da valutare un `git push` in coda alla catena.
+- [✓] **Controllo "organi vivi" reso onesto**: il riflusso aveva un falso allarme fisso da 37 giorni (guardava un file che
+  nessuno scrive: era la voce G4); Nina e il watcher AI, spenti di proposito, si misurano ma non sono piu' guasti.
+- [✓] **Analisi scritta**: `DOCS/ANALISI_74_UNITA_GRAFICA.md`. In breve: **VULCAN non c'e' da nessuna parte** (ne' vista, ne'
+  db GENESIS, ne' pilastro in STATE); la catena V32 -> stampi -> VULCAN -> connettori e pelle di MIMS e' gia' scritta nelle
+  note (`MENTE/VULCAN/vulcan_e_mims.md`); ~2.500 righe morte e 11 dipendenze inutili; 395 testi da 6-9 px, 6 "neri",
+  10 `aria-*`; i dati del ferro fermi (distinta V32 al 16/03). Le ricette VULCAN sono segrete: mai nel repo pubblico.
+- [ ] **Prossimo**: le 5 decisioni di Matteo (in ⏳ ASPETTA MATTEO), poi pulizia -> fonte dati del ferro -> brief e token
+  -> la mappa della catena -> le tre stanze del ferro (ordine nella sez. 8 dell'analisi).
 
 ---
 
@@ -129,8 +154,9 @@ L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08
 - [✓] **R8 · il contorno**: AZIONI_MATTEO e PROSSIMA_SESSIONE in `DOCS/_archivio_*`; azioni vive in ⏳ ASPETTA MATTEO
   (i connettori MIMS erano gia' decisi, Via B 24/06). `active_milestone` da 1.459 a 107 caratteri e il profilo
   pubblico ne prende solo la prima frase. Specchio Desktop `da fare.txt` (il vecchio, fermo al 16/07, nel Cestino).
-- [ ] **Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima
+- [✓] **Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima
   rotazione dell'archivio critiche, i commit nuovi dell'audit (ora dentro la catena d'avvio).
+  → *#74: fatto il 28/09, vedi il blocco #74.*
 
 **✅ AUTOMAZIONI: DA "NOTTURNE" AD "ALL'ACCENSIONE" (Matteo: PC quasi sempre spento, non uso gli agenti, niente credito)**
 - [✓] **I fatti**: PC acceso 25 giorni su 40, di giorno. Il **credito API e' finito dal 16/09** ("credit balance too low"):
@@ -396,7 +422,8 @@ chiavi da ruotare, API key Semantic Scholar.
 - [ ] **G1** · Critiche stantie da **49 giorni** — 19 attive da riverificare.
 - [ ] **G2** · `_CANONE.md` fermo a EP_N2_64 mentre su disco c'e' il **67**.
 - [ ] **G3** · **8 CVE fixabili** in 4 pacchetti: aiohttp, cryptography, datasets, pip.
-- [ ] **G4** · Riflusso FATTI **muto da 6 giorni**.
+- [✓] **G4** · Riflusso FATTI **muto da 6 giorni**.
+  → *#74: non era muto il riflusso, era cieco il controllo: guardava `genesis_nodi_fatti.md`, che nessuno scrive piu'. Ora guarda i `fatti_dalle_storie_*.md` veri: 0 giorni.*
 - [ ] **G5** · Il controllo orfani gira su **333 note su 667**: meta' vault non e' mai stata
   controllata. Non vuol dire che sia scollegata — vuol dire che non lo sappiamo.
 

@@ -80,8 +80,18 @@ ORGANI_VIVI = [
     ("retention disco",     TI_ROOT / "DATA" / "retention_last.json",         3),
     ("AI news watcher",     TI_ROOT / "DATA" / "ai_news_watcher_state.json",  4),  # tier 48h
     ("daily brief",         TI_ROOT / "DATA" / "daily_brief_last.md",         3),
-    ("riflusso FATTI",      MENTE_DIR / "KNOWLEDGE" / "genesis_nodi_fatti.md", 7),
+    # #74: prima guardava KNOWLEDGE/genesis_nodi_fatti.md, che nessuno scrive piu' -> "riflusso
+    # muto da 37 giorni" era un falso allarme fisso. Il riflusso vero (fatti_reflux.py) scrive
+    # MENTE/<dominio>/fatti_dalle_storie_<trimestre>.md: si guarda il piu' recente di quelli.
+    ("riflusso FATTI",      MENTE_DIR / "*" / "fatti_dalle_storie_*.md",       7),
 ]
+
+# Organi SPENTI DI PROPOSITO (#73: PC quasi sempre spento, credito API finito): il loro silenzio
+# e' voluto, non un guasto. Si continua a misurarne l'eta', ma non diventano critiche.
+ORGANI_SPENTI = {
+    "nina-loop": "generazione su richiesta dal #73 (night_research.bat genera)",
+    "AI news watcher": "TI_AiWatch disattivato dal #73",
+}
 
 # Pattern di guasto cercati nei log della catena notturna
 # NB: \bERROR\b e non ERROR — altrimenti matcha l'italiano "errore" nel testo normale
@@ -669,6 +679,11 @@ def check_organi_vivi(signals: dict) -> None:
     now = datetime.now().timestamp()
     for nome, path, max_days in ORGANI_VIVI:
         try:
+            if "*" in str(path):
+                # percorso con jolly: conta il file piu' recente che corrisponde
+                trovati = list(Path(path.anchor).glob(str(path.relative_to(path.anchor)).replace("\\", "/")))
+                if trovati:
+                    path = max(trovati, key=lambda f: f.stat().st_mtime)
             if not path.exists():
                 out[nome] = None
                 signals["log_issues"].append({
@@ -684,6 +699,8 @@ def check_organi_vivi(signals: dict) -> None:
                 mt = path.stat().st_mtime
             age_days = round((now - mt) / 86400, 1)
             out[nome] = age_days
+            if nome in ORGANI_SPENTI:
+                continue
             if age_days > max_days:
                 signals["log_issues"].append({
                     "log": "organi vivi", "tipo": "organo silenzioso",

@@ -1,27 +1,23 @@
 {
-  "session_number": "73",
-  "session_date": "2026-09-27",
-  "last_updated": "2026-09-27",
-  "last_discussed": "Sessione #73 (27/09): pulizia dell'avvio (1,24 GB di cloni orfani, hook SessionStart che dichiara l'handoff stantio, START_LOGIN senza doppioni e senza n8n, AutoRun cmd solo interattivo); P0 della scaletta (bussola DA_FARE.md che si taglia da sola, archivi fuori lettura, CRITICHE solo aperte con scadenza; l'hook Stop era MORTO dal 16/07, ora globale); automazioni all'accensione (PC quasi sempre spento, credito API finito dal 16/09); P1 chiuso: A1-A3 e I2, canone Nina a zero falsi.",
+  "session_number": "74",
+  "session_date": "2026-09-28",
+  "last_updated": "2026-09-28",
+  "last_discussed": "Sessione #74 (28/09): verificata la prima accensione con la catena nuova (2 minuti, esito 0, critiche 300->19, push dei 6 commit della #73); controllo 'organi vivi' reso onesto (il riflusso non era muto, era il controllo a guardare un file morto); ANALISI per il rifacimento grafico scritta in DOCS/ANALISI_74_UNITA_GRAFICA.md: il ferro al centro, VULCAN assente ovunque, la catena V32->stampi->VULCAN->MIMS gia' nelle note, ~2.500 righe morte e 11 dipendenze inutili.",
   "active_topics": [
-    "Bussola = DA_FARE.md; taglio automatico (bussola_taglio.py) nel night_audit e al /salva",
-    "Hook globali in ~/.claude/hooks: SessionStart (avviso handoff stantio) + Stop (handoff + sync)",
-    "Catena d'avvio = night_research.bat v3.0: manutenzione RAG + audit a regole, gratis; generazione con 'genera'",
-    "aggancio_guard.py: la regola 'meglio vuoto che inventato' morde nel generatore Nina",
-    "Canone Nina: canon_guard 0 righe; 17 episodi riallineati in dashboard (build_episodes_json e' solo additivo)"
+    "Rifacimento dell'unita' grafica della dashboard: prima l'analisi (fatta), poi il disegno",
+    "La catena del ferro: V32 (fresa) -> stampi -> VULCAN (pressa) -> connettori e pelle MIMS + inserti per V32",
+    "VULCAN manca da dashboard, db GENESIS e STATE: da decidere se diventa pilastro",
+    "Le ricette VULCAN sono segrete: la dashboard legge i dati sensibili solo in locale dall'API, mai nel repo pubblico"
   ],
   "decisions_made": [
-    "Matteo: il PC e' quasi sempre spento e NON si ricarica il credito API: generazione in sessione (Opus 5.5) o routine cloud Pro",
-    "Matteo: la #72 e il P0 committati su main (il repo e' pubblico: il push notturno li pubblica)",
-    "A2: EP_N2_28 e 55 RIPARATI invece che rigenerati (storie intere, taglio solo nelle ultime righe; 'integra, non rifare')",
-    "Prossima sessione: rifare l'unita' grafica della dashboard 'completamente tua, senza reference', mappa a rami a livelli",
-    "Matteo: si riparte perche' MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'; il redesign nasce per loro e prima si ANALIZZA"
+    "Matteo: si riparte perche' MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'; prima si analizza",
+    "La nuova dashboard si costruisce attorno al ferro, non al sistema"
   ],
   "open_threads": [
-    "Bonifica dei 33 agganci inventati negli episodi gia' usciti: decide Matteo",
-    "86 voci EP_AUTO/SEED/S2 della dashboard con testo diverso dal .md (serve refresh in build_episodes_json)",
-    "Canale di pubblicazione dei social fermo dal 30/07: 12 bozze caroselli (10 pulite, 3 da rivedere)",
-    "Da guardare alla prossima accensione: primo taglio automatico, prima rotazione archivio critiche, 5+ commit pubblicati"
+    "5 decisioni di Matteo per il rifacimento (VULCAN pilastro, FIT-PARK, uso della dashboard, foto del ferro, distinta V32)",
+    "Il commit dell'audit del 28/09 aspetta il prossimo push (il push parte prima dell'audit)",
+    "Bonifica dei 33 agganci inventati: decide Matteo",
+    "20 critiche scadute da riverificare (G1), _CANONE.md fermo (G2), 16 CVE (G3)"
   ],
-  "next_action": "Analizzare prima (viste attuali, dati, bisogni di MIMS/fresa/VULCAN, punti comuni), poi l'unita' grafica della dashboard con la mappa a rami a livelli (plugin frontend-design, token Tailwind 4, React Flow + ELK)"
+  "next_action": "Le 5 decisioni di Matteo (sez. 6 dell'analisi), poi: pulizia del codice morto -> fonte dati del ferro -> brief visivo e token (frontend-design) -> mappa della catena (React Flow + ELK) -> le tre stanze del ferro"
 }

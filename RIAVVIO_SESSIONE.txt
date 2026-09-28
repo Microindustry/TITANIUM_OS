@@ -1,22 +1,27 @@
-=== RIAVVIO SESSIONE #74 — 28/09/2026 13:02 ===
-Ultima sessione: #73 - contesto di chat fermo al 2026-09-27
-  [!] session_context.json STALE (2026-09-27): nessun commit oggi -> sotto c'e' STATE.json, non la chat - si riscrive al /salva
+=== RIAVVIO SESSIONE #75 — 28/09/2026 13:11 ===
+Ultima sessione: #74 - 2026-09-28
+
 ━━━ STAVAMO PARLANDO DI ━━━
-[NON LO SO: session_context.json e' fermo al 2026-09-27 e oggi non ci sono ancora commit. Quello che segue viene da STATE.json (milestone attivo), NON dal contesto della chat.]
-  #73: P0 e P1 chiusi - strumenti che orientano veri, canone Nina a zero falsi, agganci controllati
+Sessione #74 (28/09): verificata la prima accensione con la catena nuova (2 minuti, esito 0, critiche 300->19, push dei 6 commit della #73); controllo 'organi vivi' reso onesto (il riflusso non era muto, era il controllo a guardare un file morto); ANALISI per il rifacimento grafico scritta in DOCS/ANALISI_74_UNITA_GRAFICA.md: il ferro al centro, VULCAN assente ovunque, la catena V32->stampi->VULCAN->MIMS gia' nelle note, ~2.500 righe morte e 11 dipendenze inutili.
 
 ━━━ TOPIC ATTIVI ━━━
+  • Rifacimento dell'unita' grafica della dashboard: prima l'analisi (fatta), poi il disegno
+  • La catena del ferro: V32 (fresa) -> stampi -> VULCAN (pressa) -> connettori e pelle MIMS + inserti per V32
+  • VULCAN manca da dashboard, db GENESIS e STATE: da decidere se diventa pilastro
+  • Le ricette VULCAN sono segrete: la dashboard legge i dati sensibili solo in locale dall'API, mai nel repo pubblico
 
 ━━━ THREAD APERTI (da riprendere) ━━━
-  → (dal 2026-09-27) Bonifica dei 33 agganci inventati negli episodi gia' usciti: decide Matteo
-  → (dal 2026-09-27) 86 voci EP_AUTO/SEED/S2 della dashboard con testo diverso dal .md (serve refresh in build_episodes_json)
-  → (dal 2026-09-27) Canale di pubblicazione dei social fermo dal 30/07: 12 bozze caroselli (10 pulite, 3 da rivedere)
-  → (dal 2026-09-27) Da guardare alla prossima accensione: primo taglio automatico, prima rotazione archivio critiche, 5+ commit pubblicati
+  → 5 decisioni di Matteo per il rifacimento (VULCAN pilastro, FIT-PARK, uso della dashboard, foto del ferro, distinta V32)
+  → Il commit dell'audit del 28/09 aspetta il prossimo push (il push parte prima dell'audit)
+  → Bonifica dei 33 agganci inventati: decide Matteo
+  → 20 critiche scadute da riverificare (G1), _CANONE.md fermo (G2), 16 CVE (G3)
 
 ━━━ DECISIONI PRESE NELL'ULTIMA SESSIONE ━━━
+  ✓ Matteo: si riparte perche' MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'; prima si analizza
+  ✓ La nuova dashboard si costruisce attorno al ferro, non al sistema
 
 ━━━ PROSSIMA AZIONE SUGGERITA ━━━
-  #74: prima ANALIZZARE (viste, dati, bisogni di MIMS/fresa/VULCAN), poi unita' grafica + mappa a rami
+  Le 5 decisioni di Matteo (sez. 6 dell'analisi), poi: pulizia del codice morto -> fonte dati del ferro -> brief visivo e token (frontend-design) -> mappa della catena (React Flow + ELK) -> le tre stanze del ferro
 
 ━━━ BLOCKERS ━━━
   ⚠ UPS hardware (~50-80€) — la corruzione HNSW da power-loss e' ricorrente (3 volte in 2gg): e' la cura alla radice. Blocker hardware accanto a Vevor+ER20
@@ -34,10 +39,10 @@ Ultima sessione: #73 - contesto di chat fermo al 2026-09-27
   IDENTITY: 50% — 
 
 ━━━ ULTIMI COMMIT ━━━
+438c9f0f auto: night_audit - cartella clinica 28/09/2026
+80a82b6a auto: inventario notturno + critiche
+85c23d94 chore(salva): chiusura sessione #73 - A1+A2, taglio della #72, piano della #74
 edd568dc fix(#73): A3 + I2 - via i fatti inventati dall'EP_N2_16, la regola "meglio vuoto" morde
 16bb35b2 chore(#73): n8n fuori dall'avvio, CLAUDE.md allineato al vero
-e18cf14b feat(#73): automazioni all'accensione - il PC e' quasi sempre spento
-5f39f58a feat(#73): P0 della scaletta - gli strumenti che ci orientano
-62cf999f docs(bussola): sessione #72 (28/08) - taglio della bussola + backlog triato
 
-Generato: 28/09/2026 13:02
+Generato: 28/09/2026 13:11
