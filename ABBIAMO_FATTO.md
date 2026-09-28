@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [ABBIAMO FATTO - la storia di TITANIUM_OS](#abbiamo-fatto---la-storia-di-titaniumos)
+  - [Sessione 73  27/09/2026  PULIZIA DELL'AVVIO (Claude  Windows)](#sessione-73-27092026-pulizia-dellavvio-claude-windows)
   - [Sessione 72  28/08/2026  IL PIANO COMPLETO (scritto prima di eseguirlo)](#sessione-72-28082026-il-piano-completo-scritto-prima-di-eseguirlo)
   - [Sessione 71  27/08/2026  IL SISTEMA NON ERA SPENTO  view_index resuscitato](#sessione-71-27082026-il-sistema-non-era-spento-viewindex-resuscitato)
   - [Sessione 70  16/08/2026  BONIFICA CONTAMINAZIONE MIMS  scala GENESIS posata](#sessione-70-16082026-bonifica-contaminazione-mims-scala-genesis-posata)
@@ -105,6 +106,77 @@ episodi) e della curva di crescita del profilo GitHub.
   night_audit e al /salva), con una sessione di ritardo: arrivano qui le righe **chiuse** delle
   sessioni prima dell'ultima chiusa, col loro perche'; un blocco arriva **intero, com'era**,
   quando in bussola non ha piu' niente di aperto. Le righe aperte restano in `DA_FARE.md`.
+
+---
+
+## Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)
+
+*Righe chiuse tagliate dalla bussola il 28/09/2026 (il blocco resta in DA_FARE.md finche' ha voci aperte).*
+
+- [✓] **137 cloni orfani** del marketplace plugin (`~/.claude/plugins/marketplaces/temp_*`, **1,24 GB**) -> Cestino.
+  Causa: ogni avvio di Claude ri-clonava il marketplace e i processi concorrenti lasciavano i temp.
+  Cura: `autoUpdate:false` (nessun plugin installato da li') + `installLocation` che puntava a `C:\Users\benen`
+- [✓] Hook SessionStart -> `~/.claude/hooks/sessionstart_titanium.sh`: stampa **HANDOFF STANTIO** se ha >2 giorni
+  o se la bussola e' piu' recente (= sessione chiusa senza /salva)
+- [✓] `START_LOGIN.bat` v2.2: tolti Chrome 9222 (morto), API doppione (la tiene TI_Watchdog), finestra Claude CLI
+- [✓] `ti_autorun.cmd` v1.2: cd/doskey/banner solo nelle console interattive (ogni `cmd /c` finiva in TITANIUM_OS
+  col banner dentro l'output). Variabili e PATH restano per tutti
+- [✓] commit `62cf999f`: il lavoro della #72, fermo da un mese. Esce col push notturno (repo PUBBLICO)
+- [✓] Le 4 voci per Matteo della pulizia (app di avvio, plugin/connettori, CLI, servizi in rete) -> spostate in ⏳ ASPETTA MATTEO
+- [✓] Task notturni col PC spento: all'accensione partono tutti insieme (StartWhenAvailable). Il 27/09 alle 11:09
+  **6 su 11 interrotti** (0xC000013A) -> e' la voce H "replica serale della catena se la notte salta"
+  → *#73: risolta col blocco AUTOMAZIONI qui sotto (una catena in fila invece di 11 task insieme).*
+
+**✅ P0 DELLA SCALETTA — GLI STRUMENTI CHE CI ORIENTANO (su ordine Matteo)**
+- [✓] **R7+R6 · la bussola si chiama `DA_FARE.md`** (`git mv`, storia intatta); `DA_FARE_FATTO.md` e' un cartello.
+  Aggiornati i 9 punti vivi + l'hook globale. Le storie che la *raccontano* restano come sono.
+- [✓] **Trovato per strada**: il parser della bussola contava i `[v]` della #72 come DA FARE. Ora `v`/`x` = fatto.
+- [✓] **R4 · archivi fuori lettura.** Il RAG `search_mente` non li vedeva gia' (indicizza solo MENTE/): il peso stava
+  nel grafo graphify, dove ABBIAMO_FATTO faceva **78 nodi** e la bussola **6**. Fonte unica `fuori_lettura.py` ->
+  `.graphifyignore` (derivato da .gitignore, che graphify altrimenti smette di leggere) + ricerca `/api/search`.
+- [✓] **R2 · il taglio lo fa il sistema**: `bussola_taglio.py` (prova di default, idempotente, prima la storia poi la
+  bussola), agganciato al night_audit (commit a parte) e al /salva (`--chiusa N`). Primo taglio vero: la #71 e'
+  uscita intera (130 righe) dopo aver chiuso le sue 7 voci aperte col loro seguito nel piano (A1-A3, B2, C, F).
+- [✓] **Il guasto sotto R2: l'hook di fine sessione era MORTO dal 16/07.** Era `cmd /c ...` di progetto e Claude Code
+  lo lancia da Git Bash, che trasforma `/c` in `C:/`. Da due mesi e mezzo niente handoff, specchio, CRITICHE,
+  percentuali, e fuori da TITANIUM_OS non c'era proprio (per questo la #72 non ha lasciato traccia). Ora e' globale.
+- [✓] **L'handoff non si intitola piu' col contatore finto** (`session_count` = 169): il numero lo da' la bussola (E3).
+- [✓] **K1-K4 · CRITICHE**: `CRITICHE.md` solo aperte, le risolte in `CRITICHE_CHIUSE.md`; scadenza per critica
+  (campo `verificata`): oggi **20 aperte su 20 sono ⌛ scadute** (84 giorni); regola K4 in testa (prima si verifica).
+  Le automatiche chiuse da 30+ giorni vanno in archivio: il file vivo passa da 300 voci a ~24 (provato su copia).
+- [✓] **R8 · il contorno**: AZIONI_MATTEO e PROSSIMA_SESSIONE in `DOCS/_archivio_*`; azioni vive in ⏳ ASPETTA MATTEO
+  (i connettori MIMS erano gia' decisi, Via B 24/06). `active_milestone` da 1.459 a 107 caratteri e il profilo
+  pubblico ne prende solo la prima frase. Specchio Desktop `da fare.txt` (il vecchio, fermo al 16/07, nel Cestino).
+- [✓] **Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima
+  rotazione dell'archivio critiche, i commit nuovi dell'audit (ora dentro la catena d'avvio).
+  → *#74: fatto il 28/09, vedi il blocco #74.*
+
+**✅ AUTOMAZIONI: DA "NOTTURNE" AD "ALL'ACCENSIONE" (Matteo: PC quasi sempre spento, non uso gli agenti, niente credito)**
+- [✓] **I fatti**: PC acceso 25 giorni su 40, di giorno. Il **credito API e' finito dal 16/09** ("credit balance too low"):
+  audit LLM, corsia Nina, storie, caroselli, self-improve fallivano gia' tutti. Utili davvero: audit, inventario, push, RAG.
+- [✓] **Catena d'avvio** = `night_research.bat` v3.0 (task TI_NightResearch, elevato): self-heal RAG -> riflusso ->
+  wiki -> RAG incrementale -> snapshot -> versione MENTE -> **audit a regole + taglio bussola**, in fila. Gratis.
+  La generazione (ricerca + episodio Nina) solo con `night_research.bat genera`. Provata con script finti.
+- [✓] **Spenti** (Task Scheduler): TI_NightAudit (e' nella catena), TI_AiWatch, TI_SelfImprove (62 proposte mai lette),
+  TI_NightCaroselli, TI_NightCaroselliNina. **Interruttore nello script** (elevati, senza admin non si disattivano):
+  `run_story_agent.bat`, `night_finetune.bat` escono subito se non gli passi `genera`. Restano: Watchdog, NightPush,
+  DeepFreeze (backup), DailyBrief (gratis). Tutto reversibile.
+- [✓] **Ricerca "a PC spento, senza credito"**: le **routine di Claude Code** (cloud Anthropic, piano Pro, max 5 al
+  giorno, consumano l'abbonamento, non l'API; clonano il repo e lavorano su branch `claude/`). GitHub Models: chiuso
+  il 30/07. GitHub Actions col token dell'abbonamento: possibile ma piu' rischioso. -> decisione in ⏳ ASPETTA MATTEO.
+- [✓] **Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.
+  **Da rivedere 3**: EP_SG_03_03 (±0,019 mm dato come fatto), EP_N2_10 (l'episodio e' cambiato il 27/08, dopo la
+  bozza), EP_N2_09 (slide 2 senza illustrazione: la scena `biblioteca` manca). Il collo resta la pubblicazione.
+
+**✅ P1 (prima parte): A3 + I2 (su ordine Matteo, "intanto fai A3 e I2")**
+- [✓] **A3 · EP_N2_16 ripulito**: via i due numeri inventati, anche dallo strato fondo ("da 100 a 2 o 3"),
+  e via i validatori FORGE+LEX+THEMIS che in GENESIS non esistono + il "sistema MIMS" software. Il falso era
+  gia' passato nel RAG: il riflusso l'aveva copiato in `MENTE/GENESIS/fatti_dalle_storie_2026Q3.md`.
+  Corretti episodio + specchio MENTE; rigenerati fatti e indice dashboard; RAG reindicizzato. canon_guard: 0 (non li vede).
+- [✓] **I2 · la regola morde**: `AUTOMATIONS/core/aggancio_guard.py` dentro `nina_agent` (dopo Architetto e Scrittore):
+  aggancio che non nomina un nodo reale (nomi derivati dal repo) o un pezzo meccanico -> VUOTO; niente versioni
+  di GENESIS, personaggi-nodo, V32/MIMS software; FATTI con numeri senza fonte RAG -> tolti. Senza guardia non genera.
+- [✓] **A1 + A2 (su ok di Matteo)**: 7 episodi corretti in repo e in MENTE; canon_guard sugli episodi Nina vivi = **0 righe** (il gate della sezione A e' chiuso). Riallineati in dashboard anche i 17 episodi Nina corretti nella #70/#71 che li' mostravano ancora il testo vecchio (es. EP_N2_60 col "DAG Scheduler").
 
 ---
 
@@ -222,6 +294,12 @@ episodi) e della curva di crescita del profilo GitHub.
   che **due dei tre file letti a inizio sessione raccontavano il falso**. Prima si sistema
   lo strumento che ci orienta (**sezione R qui sopra**), poi si esegue il piano.
   → *#73: chiusa col P0 della scaletta.*
+
+*Righe chiuse tagliate dalla bussola il 28/09/2026 (il blocco resta in DA_FARE.md finche' ha voci aperte).*
+
+**🟤 G — IGIENE ARRETRATA (dal night_audit)**
+- [✓] **G4** · Riflusso FATTI **muto da 6 giorni**.
+  → *#74: non era muto il riflusso, era cieco il controllo: guardava `genesis_nodi_fatti.md`, che nessuno scrive piu'. Ora guarda i `fatti_dalle_storie_*.md` veri: 0 giorni.*
 
 ---
 

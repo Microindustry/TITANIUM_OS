@@ -2,22 +2,26 @@
   "session_number": "74",
   "session_date": "2026-09-28",
   "last_updated": "2026-09-28",
-  "last_discussed": "Sessione #74 (28/09): verificata la prima accensione con la catena nuova (2 minuti, esito 0, critiche 300->19, push dei 6 commit della #73); controllo 'organi vivi' reso onesto (il riflusso non era muto, era il controllo a guardare un file morto); ANALISI per il rifacimento grafico scritta in DOCS/ANALISI_74_UNITA_GRAFICA.md: il ferro al centro, VULCAN assente ovunque, la catena V32->stampi->VULCAN->MIMS gia' nelle note, ~2.500 righe morte e 11 dipendenze inutili.",
+  "last_discussed": "Sessione #74 (28/09): verificata la prima accensione con la catena nuova; scritta l'analisi per rifare la dashboard attorno al ferro (DOCS/ANALISI_74_UNITA_GRAFICA.md). Applicate le decisioni di Matteo: VULCAN pilastro (38%, in attesa: il martinetto va comprato, non adesso), FIT-PARK fuori dal db GENESIS, dashboard da PC senza dati sensibili nel codice. Create le tre distinte del ferro in MENTE: fonte unica, le tiene Claude.",
   "active_topics": [
-    "Rifacimento dell'unita' grafica della dashboard: prima l'analisi (fatta), poi il disegno",
-    "La catena del ferro: V32 (fresa) -> stampi -> VULCAN (pressa) -> connettori e pelle MIMS + inserti per V32",
-    "VULCAN manca da dashboard, db GENESIS e STATE: da decidere se diventa pilastro",
-    "Le ricette VULCAN sono segrete: la dashboard legge i dati sensibili solo in locale dall'API, mai nel repo pubblico"
+    "Rifacimento grafico della dashboard attorno al ferro (SCALETTA P2): si parte dalla pulizia",
+    "Distinte del ferro in MENTE/<V32|VULCAN|MIMS>/DISTINTA_*.md: fonte unica, le aggiorna Claude",
+    "VULCAN in attesa: il martinetto Vevor va comprato, non adesso",
+    "La dashboard un giorno si mostra: mai dati sensibili nel codice, li legge l'API in locale"
   ],
   "decisions_made": [
-    "Matteo: si riparte perche' MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'; prima si analizza",
-    "La nuova dashboard si costruisce attorno al ferro, non al sistema"
+    "Matteo: VULCAN diventa un pilastro",
+    "Matteo: FIT-PARK esce (era un'idea, non una cosa importante)",
+    "Matteo: dashboard solo dal PC per ora, un giorno da mostrare",
+    "Matteo: le foto del ferro le organizza lui, le distinte le gestisce Claude",
+    "Matteo: il martinetto Vevor va comprato, ma non adesso"
   ],
   "open_threads": [
-    "5 decisioni di Matteo per il rifacimento (VULCAN pilastro, FIT-PARK, uso della dashboard, foto del ferro, distinta V32)",
-    "Il commit dell'audit del 28/09 aspetta il prossimo push (il push parte prima dell'audit)",
+    "Pulizia della dashboard: 5 componenti e 3 file dati morti, 11 dipendenze inutili (primo passo del rifacimento)",
+    "Domande 'da verificare' in fondo alle distinte (vite 2005/1605, ROPEX, pezzi in comune V32-VULCAN, pellet, giunti MIMS)",
+    "Il commit dell'audit esce all'accensione dopo: valutare un git push in coda alla catena",
     "Bonifica dei 33 agganci inventati: decide Matteo",
-    "20 critiche scadute da riverificare (G1), _CANONE.md fermo (G2), 16 CVE (G3)"
+    "Errore React 'chiave duplicata home' nella home: c'era gia', da togliere con la pulizia"
   ],
-  "next_action": "Le 5 decisioni di Matteo (sez. 6 dell'analisi), poi: pulizia del codice morto -> fonte dati del ferro -> brief visivo e token (frontend-design) -> mappa della catena (React Flow + ELK) -> le tre stanze del ferro"
+  "next_action": "Pulizia della dashboard (codice morto, 11 dipendenze), poi la fonte dati del ferro: l'API legge distinte, MENTE e FOTO"
 }

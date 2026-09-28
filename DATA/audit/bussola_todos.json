@@ -186,159 +186,21 @@
     "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
   },
   {
+    "id": "BUS-2d4cfbb7",
+    "stato": "da_fare",
+    "testo": "**Errore React gia' presente**: in console \"due figli con la stessa chiave: `home`\" a ogni apertura della home.",
+    "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
+  },
+  {
     "id": "BUS-c675a7fd",
     "stato": "da_fare",
     "testo": "**Prossimo**: pulizia (codice morto, dipendenze) -> fonte dati del ferro (l'API legge le distinte, MENTE, FOTO) ->",
     "sessione": "Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)"
   },
   {
-    "id": "BUS-3380014d",
-    "stato": "fatto",
-    "testo": "**137 cloni orfani** del marketplace plugin (`~/.claude/plugins/marketplaces/temp_*`, **1,24 GB**) -> Cestino.",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-bee65578",
-    "stato": "fatto",
-    "testo": "Hook SessionStart -> `~/.claude/hooks/sessionstart_titanium.sh`: stampa **HANDOFF STANTIO** se ha >2 giorni",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-f66e60cf",
-    "stato": "fatto",
-    "testo": "`START_LOGIN.bat` v2.2: tolti Chrome 9222 (morto), API doppione (la tiene TI_Watchdog), finestra Claude CLI",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-3d2b4a98",
-    "stato": "fatto",
-    "testo": "`ti_autorun.cmd` v1.2: cd/doskey/banner solo nelle console interattive (ogni `cmd /c` finiva in TITANIUM_OS",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-9005d087",
-    "stato": "fatto",
-    "testo": "commit `62cf999f`: il lavoro della #72, fermo da un mese. Esce col push notturno (repo PUBBLICO)",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-ca35f5f9",
-    "stato": "fatto",
-    "testo": "Le 4 voci per Matteo della pulizia (app di avvio, plugin/connettori, CLI, servizi in rete) -> spostate in ⏳ ASPETTA MATTEO",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-8f2c53d5",
-    "stato": "fatto",
-    "testo": "Task notturni col PC spento: all'accensione partono tutti insieme (StartWhenAvailable). Il 27/09 alle 11:09",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-e2c5c9a5",
-    "stato": "fatto",
-    "testo": "**R7+R6 · la bussola si chiama `DA_FARE.md`** (`git mv`, storia intatta); `DA_FARE_FATTO.md` e' un cartello.",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-c4cd388d",
-    "stato": "fatto",
-    "testo": "**Trovato per strada**: il parser della bussola contava i `[v]` della #72 come DA FARE. Ora `v`/`x` = fatto.",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-27eaab4f",
-    "stato": "fatto",
-    "testo": "**R4 · archivi fuori lettura.** Il RAG `search_mente` non li vedeva gia' (indicizza solo MENTE/): il peso stava",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-8ea843fc",
-    "stato": "fatto",
-    "testo": "**R2 · il taglio lo fa il sistema**: `bussola_taglio.py` (prova di default, idempotente, prima la storia poi la",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-76b419af",
-    "stato": "fatto",
-    "testo": "**Il guasto sotto R2: l'hook di fine sessione era MORTO dal 16/07.** Era `cmd /c ...` di progetto e Claude Code",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-5cdf6ba6",
-    "stato": "fatto",
-    "testo": "**L'handoff non si intitola piu' col contatore finto** (`session_count` = 169): il numero lo da' la bussola (E3).",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-b0ec0898",
-    "stato": "fatto",
-    "testo": "**K1-K4 · CRITICHE**: `CRITICHE.md` solo aperte, le risolte in `CRITICHE_CHIUSE.md`; scadenza per critica",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-f91e0ff3",
-    "stato": "fatto",
-    "testo": "**R8 · il contorno**: AZIONI_MATTEO e PROSSIMA_SESSIONE in `DOCS/_archivio_*`; azioni vive in ⏳ ASPETTA MATTEO",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-e87683b4",
-    "stato": "fatto",
-    "testo": "**Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-a5d119ab",
-    "stato": "fatto",
-    "testo": "**I fatti**: PC acceso 25 giorni su 40, di giorno. Il **credito API e' finito dal 16/09** (\"credit balance too low\"):",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-e2833552",
-    "stato": "fatto",
-    "testo": "**Catena d'avvio** = `night_research.bat` v3.0 (task TI_NightResearch, elevato): self-heal RAG -> riflusso ->",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-ba2729d7",
-    "stato": "fatto",
-    "testo": "**Spenti** (Task Scheduler): TI_NightAudit (e' nella catena), TI_AiWatch, TI_SelfImprove (62 proposte mai lette),",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-b92827d7",
-    "stato": "fatto",
-    "testo": "**Ricerca \"a PC spento, senza credito\"**: le **routine di Claude Code** (cloud Anthropic, piano Pro, max 5 al",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-1c30e01a",
-    "stato": "fatto",
-    "testo": "**Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-dfbeafac",
-    "stato": "fatto",
-    "testo": "**A3 · EP_N2_16 ripulito**: via i due numeri inventati, anche dallo strato fondo (\"da 100 a 2 o 3\"),",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-454b99a1",
-    "stato": "fatto",
-    "testo": "**I2 · la regola morde**: `AUTOMATIONS/core/aggancio_guard.py` dentro `nina_agent` (dopo Architetto e Scrittore):",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
     "id": "BUS-38da94ff",
     "stato": "da_fare",
     "testo": "**Trovato: le correzioni agli episodi non arrivano in dashboard.** `build_episodes_json.py` e' solo additivo:",
-    "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
-  },
-  {
-    "id": "BUS-e0d3ad4c",
-    "stato": "fatto",
-    "testo": "**A1 + A2 (su ok di Matteo)**: 7 episodi corretti in repo e in MENTE; canon_guard sugli episodi Nina vivi = **0 righe** (il gate della sezione A e' chiuso). Riallineati in dashboard anche i 17 episodi Nina corretti nella #70/#71 che li' mostravano ancora il testo vecchio (es. EP_N2_60 col \"DAG Scheduler\").",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
@@ -348,9 +210,9 @@
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
-    "id": "BUS-96e37fd8",
-    "stato": "da_fare",
-    "testo": "**PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: \"e' complicato, prima analizzalo\"). E il PERCHE' si riparte:",
+    "id": "BUS-ab688a69",
+    "stato": "fatto",
+    "testo": "*(fatta al #74: `DOCS/ANALISI_74_UNITA_GRAFICA.md`, con le risposte di Matteo)* **PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: \"e' complicato, prima analizzalo\"). E il PERCHE' si riparte:",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
   {
@@ -379,7 +241,7 @@
   },
   {
     "id": "BUS-e785372d",
-    "stato": "da_fare",
+    "stato": "in_corso",
     "testo": "**Via il teatro**: `three`/`@react-three/*`, `tsparticles`, i force-graph che non servono piu', ~2,5k righe di",
     "sessione": "Sessione #73 · 27/09/2026 — PULIZIA DELL'AVVIO (Claude + Windows)"
   },
@@ -843,12 +705,6 @@
     "id": "BUS-8b83bfe8",
     "stato": "da_fare",
     "testo": "**G3** · **8 CVE fixabili** in 4 pacchetti: aiohttp, cryptography, datasets, pip.",
-    "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
-  },
-  {
-    "id": "BUS-9a4304e7",
-    "stato": "fatto",
-    "testo": "**G4** · Riflusso FATTI **muto da 6 giorni**.",
     "sessione": "Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)"
   },
   {

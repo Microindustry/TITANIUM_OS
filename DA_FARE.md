@@ -127,6 +127,8 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
   prevista nel Q3 slitta.
 - [ ] **Vincolo di disegno** (decisione 3): la dashboard nuova e' **da PC**; un giorno si fa vedere, quindi **mai dati
   sensibili nel codice**: le distinte e le ricette si leggono in locale dall'API.
+- [ ] **Errore React gia' presente**: in console "due figli con la stessa chiave: `home`" a ogni apertura della home.
+  C'era gia' prima (verificato il 28/09 togliendo le modifiche della #74): da togliere con la pulizia.
 - [ ] **Prossimo**: pulizia (codice morto, dipendenze) -> fonte dati del ferro (l'API legge le distinte, MENTE, FOTO) ->
   brief e token -> la mappa della catena -> le tre stanze del ferro (ordine nella sez. 8 dell'analisi).
 
@@ -138,79 +140,21 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 *Chiesta da Matteo: "controlla tutto cio' che c'e' all'avvio, pulisci, lascia cio' che serve".
 L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08) non era mai stata salvata.*
 
-- [✓] **137 cloni orfani** del marketplace plugin (`~/.claude/plugins/marketplaces/temp_*`, **1,24 GB**) -> Cestino.
-  Causa: ogni avvio di Claude ri-clonava il marketplace e i processi concorrenti lasciavano i temp.
-  Cura: `autoUpdate:false` (nessun plugin installato da li') + `installLocation` che puntava a `C:\Users\benen`
-- [✓] Hook SessionStart -> `~/.claude/hooks/sessionstart_titanium.sh`: stampa **HANDOFF STANTIO** se ha >2 giorni
-  o se la bussola e' piu' recente (= sessione chiusa senza /salva)
-- [✓] `START_LOGIN.bat` v2.2: tolti Chrome 9222 (morto), API doppione (la tiene TI_Watchdog), finestra Claude CLI
-- [✓] `ti_autorun.cmd` v1.2: cd/doskey/banner solo nelle console interattive (ogni `cmd /c` finiva in TITANIUM_OS
-  col banner dentro l'output). Variabili e PATH restano per tutti
-- [✓] commit `62cf999f`: il lavoro della #72, fermo da un mese. Esce col push notturno (repo PUBBLICO)
-- [✓] Le 4 voci per Matteo della pulizia (app di avvio, plugin/connettori, CLI, servizi in rete) -> spostate in ⏳ ASPETTA MATTEO
-- [✓] Task notturni col PC spento: all'accensione partono tutti insieme (StartWhenAvailable). Il 27/09 alle 11:09
-  **6 su 11 interrotti** (0xC000013A) -> e' la voce H "replica serale della catena se la notte salta"
-  → *#73: risolta col blocco AUTOMAZIONI qui sotto (una catena in fila invece di 11 task insieme).*
 
 **✅ P0 DELLA SCALETTA — GLI STRUMENTI CHE CI ORIENTANO (su ordine Matteo)**
-- [✓] **R7+R6 · la bussola si chiama `DA_FARE.md`** (`git mv`, storia intatta); `DA_FARE_FATTO.md` e' un cartello.
-  Aggiornati i 9 punti vivi + l'hook globale. Le storie che la *raccontano* restano come sono.
-- [✓] **Trovato per strada**: il parser della bussola contava i `[v]` della #72 come DA FARE. Ora `v`/`x` = fatto.
-- [✓] **R4 · archivi fuori lettura.** Il RAG `search_mente` non li vedeva gia' (indicizza solo MENTE/): il peso stava
-  nel grafo graphify, dove ABBIAMO_FATTO faceva **78 nodi** e la bussola **6**. Fonte unica `fuori_lettura.py` ->
-  `.graphifyignore` (derivato da .gitignore, che graphify altrimenti smette di leggere) + ricerca `/api/search`.
-- [✓] **R2 · il taglio lo fa il sistema**: `bussola_taglio.py` (prova di default, idempotente, prima la storia poi la
-  bussola), agganciato al night_audit (commit a parte) e al /salva (`--chiusa N`). Primo taglio vero: la #71 e'
-  uscita intera (130 righe) dopo aver chiuso le sue 7 voci aperte col loro seguito nel piano (A1-A3, B2, C, F).
-- [✓] **Il guasto sotto R2: l'hook di fine sessione era MORTO dal 16/07.** Era `cmd /c ...` di progetto e Claude Code
-  lo lancia da Git Bash, che trasforma `/c` in `C:/`. Da due mesi e mezzo niente handoff, specchio, CRITICHE,
-  percentuali, e fuori da TITANIUM_OS non c'era proprio (per questo la #72 non ha lasciato traccia). Ora e' globale.
-- [✓] **L'handoff non si intitola piu' col contatore finto** (`session_count` = 169): il numero lo da' la bussola (E3).
-- [✓] **K1-K4 · CRITICHE**: `CRITICHE.md` solo aperte, le risolte in `CRITICHE_CHIUSE.md`; scadenza per critica
-  (campo `verificata`): oggi **20 aperte su 20 sono ⌛ scadute** (84 giorni); regola K4 in testa (prima si verifica).
-  Le automatiche chiuse da 30+ giorni vanno in archivio: il file vivo passa da 300 voci a ~24 (provato su copia).
-- [✓] **R8 · il contorno**: AZIONI_MATTEO e PROSSIMA_SESSIONE in `DOCS/_archivio_*`; azioni vive in ⏳ ASPETTA MATTEO
-  (i connettori MIMS erano gia' decisi, Via B 24/06). `active_milestone` da 1.459 a 107 caratteri e il profilo
-  pubblico ne prende solo la prima frase. Specchio Desktop `da fare.txt` (il vecchio, fermo al 16/07, nel Cestino).
-- [✓] **Da guardare alla prossima accensione**: il primo taglio automatico (le 7 righe `[v]` della #72), la prima
-  rotazione dell'archivio critiche, i commit nuovi dell'audit (ora dentro la catena d'avvio).
-  → *#74: fatto il 28/09, vedi il blocco #74.*
 
 **✅ AUTOMAZIONI: DA "NOTTURNE" AD "ALL'ACCENSIONE" (Matteo: PC quasi sempre spento, non uso gli agenti, niente credito)**
-- [✓] **I fatti**: PC acceso 25 giorni su 40, di giorno. Il **credito API e' finito dal 16/09** ("credit balance too low"):
-  audit LLM, corsia Nina, storie, caroselli, self-improve fallivano gia' tutti. Utili davvero: audit, inventario, push, RAG.
-- [✓] **Catena d'avvio** = `night_research.bat` v3.0 (task TI_NightResearch, elevato): self-heal RAG -> riflusso ->
-  wiki -> RAG incrementale -> snapshot -> versione MENTE -> **audit a regole + taglio bussola**, in fila. Gratis.
-  La generazione (ricerca + episodio Nina) solo con `night_research.bat genera`. Provata con script finti.
-- [✓] **Spenti** (Task Scheduler): TI_NightAudit (e' nella catena), TI_AiWatch, TI_SelfImprove (62 proposte mai lette),
-  TI_NightCaroselli, TI_NightCaroselliNina. **Interruttore nello script** (elevati, senza admin non si disattivano):
-  `run_story_agent.bat`, `night_finetune.bat` escono subito se non gli passi `genera`. Restano: Watchdog, NightPush,
-  DeepFreeze (backup), DailyBrief (gratis). Tutto reversibile.
-- [✓] **Ricerca "a PC spento, senza credito"**: le **routine di Claude Code** (cloud Anthropic, piano Pro, max 5 al
-  giorno, consumano l'abbonamento, non l'API; clonano il repo e lavorano su branch `claude/`). GitHub Models: chiuso
-  il 30/07. GitHub Actions col token dell'abbonamento: possibile ma piu' rischioso. -> decisione in ⏳ ASPETTA MATTEO.
-- [✓] **Caroselli: controllo delle 12 bozze** (niente generato): 10 passano canon_guard e sono coerenti con l'episodio.
-  **Da rivedere 3**: EP_SG_03_03 (±0,019 mm dato come fatto), EP_N2_10 (l'episodio e' cambiato il 27/08, dopo la
-  bozza), EP_N2_09 (slide 2 senza illustrazione: la scena `biblioteca` manca). Il collo resta la pubblicazione.
 
 **✅ P1 (prima parte): A3 + I2 (su ordine Matteo, "intanto fai A3 e I2")**
-- [✓] **A3 · EP_N2_16 ripulito**: via i due numeri inventati, anche dallo strato fondo ("da 100 a 2 o 3"),
-  e via i validatori FORGE+LEX+THEMIS che in GENESIS non esistono + il "sistema MIMS" software. Il falso era
-  gia' passato nel RAG: il riflusso l'aveva copiato in `MENTE/GENESIS/fatti_dalle_storie_2026Q3.md`.
-  Corretti episodio + specchio MENTE; rigenerati fatti e indice dashboard; RAG reindicizzato. canon_guard: 0 (non li vede).
-- [✓] **I2 · la regola morde**: `AUTOMATIONS/core/aggancio_guard.py` dentro `nina_agent` (dopo Architetto e Scrittore):
-  aggancio che non nomina un nodo reale (nomi derivati dal repo) o un pezzo meccanico -> VUOTO; niente versioni
-  di GENESIS, personaggi-nodo, V32/MIMS software; FATTI con numeri senza fonte RAG -> tolti. Senza guardia non genera.
 - [ ] **Trovato: le correzioni agli episodi non arrivano in dashboard.** `build_episodes_json.py` e' solo additivo:
   EP_N2_16 in dashboard aveva ancora il testo di PRIMA del batch 3 (#71). Vale per ogni episodio corretto.
   Serve un refresh del `content` quando il .md cambia (voce B, robustezza). *Nina riallineati a mano il 27/09; restano 86 voci EP_AUTO/SEED/S2 con testo diverso dal .md (non toccate: cambia la struttura).*
-- [✓] **A1 + A2 (su ok di Matteo)**: 7 episodi corretti in repo e in MENTE; canon_guard sugli episodi Nina vivi = **0 righe** (il gate della sezione A e' chiuso). Riallineati in dashboard anche i 17 episodi Nina corretti nella #70/#71 che li' mostravano ancora il testo vecchio (es. EP_N2_60 col "DAG Scheduler").
 - [ ] **Trovato: 33 agganci su 42** esistenti non passano la guardia (versioni inventate, MIMS software, agenti
   che non esistono...). `python AUTOMATIONS/core/aggancio_guard.py` li elenca. Bonifica retroattiva: decide Matteo.
 
 **➡ PROSSIMA SESSIONE (#74) — L'UNITÀ GRAFICA NUOVA** *(Matteo: "completamente tua, senza reference; dividi i progetti,
 un grafico a rami che si uniscono a livelli per legare i punti comuni")*
-- [ ] **PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: "e' complicato, prima analizzalo"). E il PERCHE' si riparte:
+- [✓] *(fatta al #74: `DOCS/ANALISI_74_UNITA_GRAFICA.md`, con le risposte di Matteo)* **PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: "e' complicato, prima analizzalo"). E il PERCHE' si riparte:
   **MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'**. La nuova unita' grafica nasce per il ferro, non per il
   sistema. Da capire prima di una riga di codice: (1) quali viste di oggi servono, quali sono teatro, quali mostrano dati
   finti; (2) cosa serve per seguire la costruzione (distinta materiali, decisioni, prove, foto, blocchi hardware, tempi);
@@ -229,8 +173,9 @@ un grafico a rami che si uniscono a livelli per legare i punti comuni")*
   Vita Natura, Identity come rami che si toccano nei punti comuni (materiali, MENTE, officina, GENESIS). Tecnica:
   React Flow (`@xyflow/react`) + layout ELK "layered" (o d3 per il tangled tree). Dati DERIVATI, non scritti a mano:
   db GENESIS (chi ci lavora) + vault (cosa sappiamo) + git (quanto si e' mosso) = C1-C3 della scaletta.
-- [ ] **Via il teatro**: `three`/`@react-three/*`, `tsparticles`, i force-graph che non servono piu', ~2,5k righe di
-  codice morto (voce C). Prima si misura cosa si usa davvero, poi si toglie.
+- [◐] **Via il teatro**: `three`/`@react-three/*`, `tsparticles`, i force-graph che non servono piu', ~2,5k righe di
+  codice morto (voce C). Prima si misura cosa si usa davvero, poi si toglie. *Misurato al #74 (analisi sez. 2):
+  5 componenti + 3 file dati morti, 9 dipendenze mai usate + 2 usate solo dal codice morto. Togliere = il prossimo passo.*
 - [ ] **Stesso lavoro, due vetrine**: la mappa finita va anche sul profilo GitHub (voce D).
 
 ---
@@ -356,10 +301,11 @@ aveva barrato. Sotto c'e' cosa resta davvero, per tema e non per sessione.*
 
 **P2 - LA MAPPA** *(un lavoro solo che serve due volte: dashboard + profilo)*
 → *#74 (ordine Matteo 27/09): diventa il RIFACIMENTO DELL'UNITÀ GRAFICA della dashboard, con la mappa a rami come cuore. Piano nel blocco #73, sezione PROSSIMA SESSIONE.*
+→ *#74 (28/09): analisi fatta (`DOCS/ANALISI_74_UNITA_GRAFICA.md`), decisioni di Matteo prese e applicate (VULCAN pilastro, FIT-PARK fuori, distinte del ferro in MENTE). Si parte dalla pulizia (sez. 8 dell'analisi).*
 11. `B1` allineare i nomi dei due alberi, `B2` GENESIS 7o dipartimento (copiare dal vault)
 12. `C1-C3` S4: la mappa unica in dashboard
 13. `D1-D5` la stessa mappa sul profilo GitHub + crescita + badge + racconto
-14. `D6` le foto del ferro --- **le ha Matteo**
+14. `D6` le foto del ferro --- **le ha Matteo**: le organizza lui in `FOTO/<PROGETTO>/<AAAAMMGG>/` (28/09)
 15. `E1-E3` togliere il contatore finto (`D7` cade da solo)
 
 **P3 - IGIENE E RILASCIO** *(si fanno tra una cosa e l'altra)*
@@ -378,7 +324,7 @@ aveva barrato. Sotto c'e' cosa resta davvero, per tema e non per sessione.*
 26. `H` sistema: 3.1 GB di BACKUPS, doppio watchdog, la catena serale
 27. `G1` le 19 critiche manuali da riverificare
 
-**FUORI SCALETTA - solo Matteo:** `F2` il tag della release - `H` hardware (UPS, ER20, Vevor),
+**FUORI SCALETTA - solo Matteo:** `F2` il tag della release - `H` hardware (UPS, ER20, Vevor: "non adesso", 28/09),
 chiavi da ruotare, API key Semantic Scholar.
 
 ---
@@ -440,8 +386,6 @@ chiavi da ruotare, API key Semantic Scholar.
 - [ ] **G1** · Critiche stantie da **49 giorni** — 19 attive da riverificare.
 - [ ] **G2** · `_CANONE.md` fermo a EP_N2_64 mentre su disco c'e' il **67**.
 - [ ] **G3** · **8 CVE fixabili** in 4 pacchetti: aiohttp, cryptography, datasets, pip.
-- [✓] **G4** · Riflusso FATTI **muto da 6 giorni**.
-  → *#74: non era muto il riflusso, era cieco il controllo: guardava `genesis_nodi_fatti.md`, che nessuno scrive piu'. Ora guarda i `fatti_dalle_storie_*.md` veri: 0 giorni.*
 - [ ] **G5** · Il controllo orfani gira su **333 note su 667**: meta' vault non e' mai stata
   controllata. Non vuol dire che sia scollegata — vuol dire che non lo sappiamo.
 

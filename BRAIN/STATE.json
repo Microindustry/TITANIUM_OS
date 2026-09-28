@@ -2,8 +2,8 @@
   "meta": {
     "version": "1.1.0"
   },
-  "last_update": "2026-09-28T13:51:28.525537",
-  "active_milestone": "#74: decisioni di Matteo applicate - VULCAN pilastro, FIT-PARK fuori, le tre distinte del ferro in MENTE",
+  "last_update": "2026-09-28T13:55:16.855607",
+  "active_milestone": "#74: analisi del rifacimento grafico; VULCAN diventa pilastro, FIT-PARK esce, distinte del ferro rifatte",
   "next_step": "Pulizia della dashboard (codice morto, 11 dipendenze), poi la fonte dati del ferro: l'API legge distinte, MENTE e FOTO",
   "session_count": 173,
   "pillars": {
@@ -154,7 +154,10 @@
       "Sessione #69 (28/07): RECUPERO ARRETRATO multi-agente - corsia Nina sbloccata (7 notti), 4 episodi persi recuperati (252->256, 0 orfani), vista RETE/SISTEMA riparata (proxy vite), troncatura Nina risolta (max_tokens 8000), -10 critiche/notte di rumore; verificato tsc 0 errori + storie_lint 0 violazioni; ritirati 2 miei errori (paginazione chromadb, 101 bare-except); trovato MIMS inventato come software in 5/8 episodi recenti (contamina il RAG sul prossimo progetto).",
       "Sessione #70 (16/08): contaminazione MIMS bonificata alla radice E nello storico - 8 episodi/16 file puliti (repo + MENTE), fonte fabbricata e numeri inventati rimossi, canon_guard 0 su tutti gli EP_N2 vivi, test di non-regressione VERDE; B3/B4/B5 chiusi (commit corsia Nina, sentinella su hash del contenuto, firma stabile delle critiche); ritirato il numero '6 cloni/notte' del #69 perche' non reggeva sui dati; SCALA-GENESIS.md ricreato e saliti S0-S1-S2 (FounderOS gira, genesis_db 8 tabelle, seed idempotente con albero da CTE ricorsiva). Verifiche: tsc -b 0 errori, py_compile 6/6, storie_lint 0 violazioni, 258 episodi 258 id unici.",
       "Sessione #70 (16/08): REGOLE unificate - erano 3 liste DIVERGENTI (CLAUDE.md, BRAIN/RULES.md fermo al 02/06 e servito alla dashboard, RIPASSO_S32-56) con numerazione sfasata: 'regola 6' voleva dire due cose diverse. Ora CLAUDE.md e' fonte unica a 12 regole (1-10 INVARIATE perche' mezzo repo le cita; +11 'il sistema propone, l'umano approva' rimessa nel testo dopo essere stata tolta il 20/06 pur restando legge nel codice e persino pubblicata in un episodio; +12 'insegna cio' che impari' recuperata da RULES.md dov'era l'unica regola viva). RULES.md ora DERIVATO via AUTOMATIONS/tools/sync_regole.py (marcatori, la sezione PDF_TO_MEMORY resta intatta, --check per il gate). Tappata la RADICE: setup.py:539 riscriveva RULES.md con la lista vecchia a ogni esecuzione. + BRAIN/REGOLE_GRAFICHE.md: le 2 regole rimandate a 'da fare insieme' dalla #57 finalmente scritte, decise contando l'uso reale su 68 file - palette slate + emerald/cyan/amber/indigo/rose + red, doppioni ritirati (zinc/green/sky/yellow/violet/pink), applicazione ADDITIVA senza repaint; lingua icone lucide=interfaccia (41 file su 68 gia' cosi'), emoji=solo contenuto, le frecce -> sono tipografia (261 delle 523 occorrenze). Servito anche alla dashboard. tsc -b verde.",
-      "Sessione #70 (16/08) VERIFICA FINALE: ritirata la mia dichiarazione che A3 fosse chiuso - il gate era verde perche' canon_guard era CIECO, non perche' la contaminazione fosse finita (EP_N2_03/19/41/54 dicevano la stessa falsita' con parole fuori lista). Curato alla radice con una regola STRUTTURALE [pilastri-fusi]: la barra in GENESIS/V32 salda i pilastri in un soggetto solo ed e' sempre sbagliata, qualunque verbo segua; 0 falsi positivi su MENTE verificati. Trovato che la falsita' era gia' colata nel riflusso FATTI (fatti_dalle_storie_2026Q3.md, il file che alimenta il RAG): il tool ora lo copre. Batch 3 analizzato riga per riga e scomposto in 3 gruppi (10 sicuri, 4 da giudicare, 2 TRONCATI da rigenerare). Aggiunta la guardia anti-divergenza che non si fida delle scalette social (stantie: davano EP_SG_02_02 e EP_N2_04 non pubblicati mentre erano gia' pubblici) ma dell'artefatto carosello."
+      "Sessione #70 (16/08) VERIFICA FINALE: ritirata la mia dichiarazione che A3 fosse chiuso - il gate era verde perche' canon_guard era CIECO, non perche' la contaminazione fosse finita (EP_N2_03/19/41/54 dicevano la stessa falsita' con parole fuori lista). Curato alla radice con una regola STRUTTURALE [pilastri-fusi]: la barra in GENESIS/V32 salda i pilastri in un soggetto solo ed e' sempre sbagliata, qualunque verbo segua; 0 falsi positivi su MENTE verificati. Trovato che la falsita' era gia' colata nel riflusso FATTI (fatti_dalle_storie_2026Q3.md, il file che alimenta il RAG): il tool ora lo copre. Batch 3 analizzato riga per riga e scomposto in 3 gruppi (10 sicuri, 4 da giudicare, 2 TRONCATI da rigenerare). Aggiunta la guardia anti-divergenza che non si fida delle scalette social (stantie: davano EP_SG_02_02 e EP_N2_04 non pubblicati mentre erano gia' pubblici) ma dell'artefatto carosello.",
+      "Sessione #74 (28/09): prima accensione con la catena d'avvio verificata - esito 0 per catena e push, critiche 300 -> 19",
+      "Sessione #74 (28/09): VULCAN pilastro in STATE, db GENESIS e dashboard (home, barra di stato, pitch verificati a schermo, tsc -b verde); FIT-PARK fuori dal db",
+      "Sessione #74 (28/09): tre distinte del ferro (V32, VULCAN, MIMS) in MENTE come fonte unica, trovabili dal RAG; martinetto Vevor da comprare, non adesso"
     ],
     "next": "RIPRESA #66: LinkedIn concede Community Management API -> docker compose start -> connetti Pagina microindustry -> test EP_SG_02_01.",
     "target_capannone": "2030-07-15"
@@ -194,5 +197,5 @@
     "EVA": "pilot v0.3 REALE — NODES/EVA (eva_brain/eva_session/eva_inbox/eva_server.py), gira offline in dry-run; non 'pending'",
     "DASHBOARD": "pronto — pnpm dev (localhost:5173)"
   },
-  "last_action": "Modifica a RIAVVIO_SESSIONE.txt"
+  "last_action": "Modifica a PIETRE.md"
 }
