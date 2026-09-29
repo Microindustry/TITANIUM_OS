@@ -154,12 +154,6 @@ L'handoff iniettato era quello del 27/08 spacciato per "#72": la #72 vera (28/08
 
 **➡ PROSSIMA SESSIONE (#74) — L'UNITÀ GRAFICA NUOVA** *(Matteo: "completamente tua, senza reference; dividi i progetti,
 un grafico a rami che si uniscono a livelli per legare i punti comuni")*
-- [✓] *(fatta al #74: `DOCS/ANALISI_74_UNITA_GRAFICA.md`, con le risposte di Matteo)* **PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: "e' complicato, prima analizzalo"). E il PERCHE' si riparte:
-  **MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'**. La nuova unita' grafica nasce per il ferro, non per il
-  sistema. Da capire prima di una riga di codice: (1) quali viste di oggi servono, quali sono teatro, quali mostrano dati
-  finti; (2) cosa serve per seguire la costruzione (distinta materiali, decisioni, prove, foto, blocchi hardware, tempi);
-  (3) da dove arrivano i dati (MENTE: V32 7 note, MIMS 36, VULCAN 5; db GENESIS; git); (4) i punti in comune fra i tre
-  (materiali, giunti, stampi, officina) = dove i rami della mappa si uniscono.
 - [ ] **Lo strumento giusto, gia' sul PC**: il plugin ufficiale Anthropic `frontend-design` e' nel marketplace clonato
   (`~/.claude/plugins/marketplaces/claude-plugins-official/plugins/frontend-design`). Serve proprio a dare un'identita'
   visiva distintiva senza reference ed evitare l'aspetto "generato". Installarlo: `/plugin install frontend-design@claude-plugins-official`.

@@ -178,6 +178,16 @@ episodi) e della curva di crescita del profilo GitHub.
   di GENESIS, personaggi-nodo, V32/MIMS software; FATTI con numeri senza fonte RAG -> tolti. Senza guardia non genera.
 - [✓] **A1 + A2 (su ok di Matteo)**: 7 episodi corretti in repo e in MENTE; canon_guard sugli episodi Nina vivi = **0 righe** (il gate della sezione A e' chiuso). Riallineati in dashboard anche i 17 episodi Nina corretti nella #70/#71 che li' mostravano ancora il testo vecchio (es. EP_N2_60 col "DAG Scheduler").
 
+*Righe chiuse tagliate dalla bussola il 29/09/2026 (il blocco resta in DA_FARE.md finche' ha voci aperte).*
+
+**✅ P1 (prima parte): A3 + I2 (su ordine Matteo, "intanto fai A3 e I2")**
+- [✓] *(fatta al #74: `DOCS/ANALISI_74_UNITA_GRAFICA.md`, con le risposte di Matteo)* **PRIMA L'ANALISI, POI IL DISEGNO** (Matteo, 27/09 sera: "e' complicato, prima analizzalo"). E il PERCHE' si riparte:
+  **MIMS, la fresa (V32) e VULCAN si svilupperanno molto di piu'**. La nuova unita' grafica nasce per il ferro, non per il
+  sistema. Da capire prima di una riga di codice: (1) quali viste di oggi servono, quali sono teatro, quali mostrano dati
+  finti; (2) cosa serve per seguire la costruzione (distinta materiali, decisioni, prove, foto, blocchi hardware, tempi);
+  (3) da dove arrivano i dati (MENTE: V32 7 note, MIMS 36, VULCAN 5; db GENESIS; git); (4) i punti in comune fra i tre
+  (materiali, giunti, stampi, officina) = dove i rami della mappa si uniscono.
+
 ---
 
 ## Sessione #72 · 28/08/2026 — IL PIANO COMPLETO (scritto prima di eseguirlo)
