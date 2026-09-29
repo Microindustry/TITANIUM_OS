@@ -2,6 +2,8 @@
 
 - [DA FARE - la bussola viva di TITANIUM_OS](#da-fare---la-bussola-viva-di-titaniumos)
   - [ASPETTA MATTEO](#aspetta-matteo)
+  - [Sessione 76  29/09/2026  LARCHIVIO PERSONALE (e lo smistamento di Telegram, Download, Desktop)](#sessione-76-29092026-larchivio-personale-e-lo-smistamento-di-telegram-download-desktop)
+  - [Sessione 75  29/09/2026  LA STORIA DEL PROGETTO, DALLA A ALLA Z](#sessione-75-29092026-la-storia-del-progetto-dalla-a-alla-z)
   - [Sessione 74  28/09/2026  ANALISI PER LUNITÀ GRAFICA (il ferro al centro)](#sessione-74-28092026-analisi-per-lunità-grafica-il-ferro-al-centro)
   - [Sessione 73  27/09/2026  PULIZIA DELLAVVIO (Claude  Windows)](#sessione-73-27092026-pulizia-dellavvio-claude-windows)
   - [Sessione 72  28/08/2026  IL PIANO COMPLETO (scritto prima di eseguirlo)](#sessione-72-28082026-il-piano-completo-scritto-prima-di-eseguirlo)
@@ -66,6 +68,9 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
   del ferro **le organizzi tu** · le distinte **le gestisco io**
 - [ ] **Le domande delle distinte** (righe "da verificare", in fondo a ogni `MENTE/<PROGETTO>/DISTINTA_*.md`), quando vuoi.
   *Il martinetto e' risposto (28/09): va comprato, non adesso.*
+- [ ] **Inventario componenti** (#76, riunito in `MICROINDUSTRY/WORKSPACE/INVENTARIO_COMPONENTI`): lo script scrive in
+  `DATA/` e `BRAIN/KNOWLEDGE/` del repo **pubblico**. Prima di lanciarlo, spostarne l'uscita su MENTE come le distinte?
+- [ ] **Le domande del riordino personale** (#76): in `PERSONALE\0 - IN CORSO\DA VERIFICARE.md`, private, non qui
 
 **Hardware** *(sbloccano MIMS e la V32)*
 - [ ] **UPS 50-80€**: la cura alla radice della corruzione HNSW da power-loss (3 volte in 2 giorni)
@@ -94,6 +99,81 @@ Una lista sola: dal #73 assorbe `AZIONI_MATTEO.md` e la sezione H del piano. Qua
 - [ ] **Routine cloud di Claude Code**: collegare GitHub a claude.ai/code, poi UNA routine settimanale (es. "prepara i
   prossimi 2 caroselli come PR su un branch `claude/`"). Consuma l'abbonamento, non il credito. Solo quando si pubblica
 - [ ] **Dependabot** sul repo (gratis, GitHub): avvisi CVE per email a PC spento, al posto del pip-audit del sabato
+
+---
+
+
+## Sessione #76 · 29/09/2026 — L'ARCHIVIO PERSONALE (e lo smistamento di Telegram, Download, Desktop)
+
+*Matteo: "anni di file collezionati... non voglio che tu cancelli ma che tu organizzi... un intero albero di priorita'
+con cartelle divise e note". Poi: "comprendi tutte le cartelle" e "tutto cio' non rientra nei progetti se non file inerenti".*
+
+- [✓] **Nata `C:\Users\teo\PERSONALE`**: la radice che CLAUDE.md e il comando `pers` prevedevano ma che non esisteva.
+  Albero a priorita' (0 in corso · 1 documenti in 9 categorie · 2 foto · 3 biblioteca · 4 hobby · 5 PC · 8 da smistare ·
+  9 doppioni), una nota per cartella, `00_LEGGIMI.md` + `INDICE.md` generato. Privata: fuori da repo, RAG e agenti.
+- [✓] **Primo giro**: Telegram (238 file), Download, Desktop, Documenti, Screenshot, Captures -> 309 spostati,
+  37 doppioni esatti (md5) messi da parte, 5 cartelle intere, **0 cancellati**. Registro riga per riga + annulla in `PERSONALE\_SISTEMA`.
+- [✓] **Nei progetti solo i file di progetto**: CAD (MIMS, GANCIO_50, V32, _EXPORT), preventivi HEX in FINANCE, cataloghi
+  in `MENTE/OFFICINA/FORNITORI`, materiale Vita Natura in `MARI_DOC/DA_TELEGRAM_20260929`, 30 documenti storici in
+  `MICROINDUSTRY/_ARCHIVIO/TELEGRAM_20260929` (fuori RAG), i PDF di ASSOLUTO V9 e LA STORIA del #75 (erano sul Desktop)
+  accanto ai loro .md, un file di credenziali trovato sul Desktop in `_VAULT/ACCOUNTS`.
+- [✓] **Smistatore riutilizzabile** `PERSONALE\_SISTEMA\smista.py` (prova a secco di default, `--esegui`, `--annulla`)
+  + comandi `pers` e `smista` nel profilo PowerShell (backup `.bak_20260929`). Sul Desktop restano i collegamenti,
+  i 2 specchi automatici e `PERSONALE.lnk`. CLAUDE.md, tabella "dove va ogni file": riga aggiornata.
+- [ ] Due decisioni per Matteo, in ASPETTA MATTEO: l'uscita dello script d'inventario (repo pubblico) e le domande del riordino.
+- [✓] **PERSONALE nel backup cifrato** (Matteo: "aggiungi PERSONALE al backup cifrato"). `deep_freeze.py` v1.1: radice extra
+  `~/PERSONALE` -> `PERSONALE/` nello zip, senza installer e doppioni. E il backup **non si completava dal 09/09**: 4 giri
+  interrotti (23/08 e 31/08 un file sparito a meta' giro fa fallire tutto; 13/09, 22/09, 27/09 la finestra aperta al boot
+  chiusa = 0xC000013A, nessuno spegnimento nel registro di Windows) e ognuno perdeva la password. Ora: file sparito = saltato,
+  zip scritto come `.partial` e rinominato solo a fine giro, rotazione solo sui freeze completi (zip + .key), la console del
+  Task Scheduler si stacca da sola. Verificato: `freeze_20260929_173544` completo in 2'17", 5.880 file (350 di PERSONALE),
+  AES, decifrati identici, password sbagliata rifiutata. I 4 zip rotti (senza .key, illeggibili, ~2,8 GB) rinominati
+  `.INCOMPLETO`, non cancellati: si cestinano quando vuoi.
+- [ ] **Copia fuori dal disco**: i freeze stanno sullo stesso disco del PC (niente protezione da disco rotto). Serve una chiavetta
+  o un disco esterno per l'ultimo zip, e la `.key` tenuta altrove (decide Matteo).
+- [✓] **Trovato nei file di Telegram, per la V32**: l'appendice F di un vecchio manuale mette le guide al contrario della distinta
+  (X = HIWIN, Y = "SQC" 15 mm): e' la domanda 5 di `DISTINTA_V32.md` (RAG aggiornato).
+- [✓] **Le origini in MENTE** (Matteo: "porta le origini MIMS in MENTE... MIMS e TITANIUM in modo maniacale e funzionale
+  all'ecosistema e all'utilizzo con coding"). Dai file del telefono: MIMS nasce nel **2023** (giunti GS/GP, laser e piega),
+  kit nel 2024 (mappa MindSpace decodificata nodo per nodo con le date), sistema 50 il 22-23/08/2025, **fusione** il 30/11/2025,
+  PA-GF30 dal 2026 -> `MENTE/MIMS/ORIGINI/` (5 note). TITANIUM prima del repo: protocollo **THEMIS v8** (11/02/2026, il
+  Socio lavorava su Claude.ai), **ecosistema v1-v2 con le prime 10 regole** (11/02/2026), piano simulato del 30/11/2025,
+  Ares 1 -> `MENTE/GENESIS/ORIGINI/` + `ASSOLUTO/VERSIONI/`. Catena ASSOLUTO datata dai file: V3 13/02, V4-V5 14/02, V6 21/02-01/03.
+  La mappa officina di lug 2025 stava per errore in MIMS/PROTOCOLLO: ora `OFFICINA/2025-07_piano_officina.md`.
+- [✓] **Schema delle note** (`MENTE/_SCHEMA_NOTE.md`): 4 chiavi fisse (pilastro, tipo, stato, data_contenuto) su 64 note di
+  MIMS, GENESIS, ASSOLUTO; `AUTOMATIONS/tools/mappa_pilastro.py` scrive `_MAPPA_MIMS/GENESIS/ASSOLUTO`, da' il registro in
+  `--json` (per l'API e la dashboard #74) e `--controlla` (0 note fuori schema). RAG 23.570 = 23.570.
+- [✓] **LA_STORIA_DALLA_A_ALLA_Z rivista** con tutto questo (+ PDF 22 pagine): MIMS dal 2023, regole da febbraio, ASSOLUTO
+  datato, V32 gia' in taverna a luglio 2025, backup, errori nuovi. Matteo la legge stanotte per renderla definitiva.
+- [✗] `29x29.dxf` messo in CAD/MIMS pensando alla croce 29,9: e' un quadrato di 290 -> `CAD/_DA_ASSEGNARE` (domanda a Matteo).
+- [✓] **Schema esteso a V32 e VULCAN** (Matteo): 14 note, `_MAPPA_V32` e `_MAPPA_VULCAN`, 0 fuori schema, RAG 23.589 = 23.589.
+  **Vita Natura resta separata** (Matteo: "lasciala separata"): fuori da schema, mappe e fascicoli.
+- [✓] **Fascicoli per fattore** (Matteo: "sì vai, parti da MIMS"): 9, uno per ogni fattore che scala -
+  V32, VULCAN, MIMS, Formula e brevetti, TITANIUM/GENESIS, Nina, Pubblicazioni, Identity/HR, Capannone 2030. Parte fissa
+  rigenerata all'accensione (stato, canone, domande aperte), parte scritta in sessione (decisioni, prossimo passo).
+- [ ] **Proposte (decide Matteo):** `mappa_pilastro.py` nella catena d'avvio; il fine-tuning della domenica ha lo stesso
+  difetto del backup (chiuso con la finestra il 27/09, 0xC000013A); unire `ASSOLUTO/` e `KNOWLEDGE/ASSOLUTO/`.
+
+---
+
+
+## Sessione #75 · 29/09/2026 — LA STORIA DEL PROGETTO, DALLA A ALLA Z
+
+*Matteo: "una storia che spiega esattamente il nostro progetto dalla a alla z in modo dettagliato".*
+
+- [✓] **Scritta sui file veri**: `MENTE/LA_STORIA_DALLA_A_ALLA_Z.md` (~7.800 parole, privata, fuori dal repo).
+  In una pagina · chi e perche' · prima del codice · il ferro (V32, VULCAN, MIMS, la catena, la tesi V9) ·
+  il sistema · Nina e le storie · gli altri pilastri · cronologia · errori · oggi · dopo · regole ·
+  glossario dalla A alla Z · fonti. Indicizzata nel RAG (23.021 chunk, semantico == bm25).
+- [✗] Lettura con 3 agenti in parallelo — fermati dal limite di spesa dell'account (28/09): fatta a mano.
+- [✓] **ASSOLUTO V9 corretto e riallineato** (Matteo: "correggi l'ASSOLUTO V9 sul telaio VULCAN e riallinea"):
+  ATTO III = telaio a 2 cilindri-guida (il 60×60 e' la V32), martinetto da comprare non adesso; ATTO IV e V
+  allineati alla SCHEDA §5 (Via B decisa il 24/06, Via A di riserva "se", non "quando"). Stesso errore tolto da
+  `vulcan_e_mims.md` ("4 colonne"), dai FATTI di `EP_S0_06` (repo + MENTE) e del riflusso MIMS Q2, e
+  dall'angolo di `EP_SG_02_03` in `DATA/caroselli_queue.json`. RAG 23.026 == 23.026.
+  Lasciati come storia: ASSOLUTO V6/V7 (progetto a 4 colonne) e il carosello `EP_SG_02_03` gia' pubblicato.
+- [ ] `EP_N2_51` ha ancora l'aggancio inventato "MIMS (Memory Integrity & Model Source tracking)": e' uno
+  dei 33 della bonifica in attesa (decide Matteo).
 
 ---
 

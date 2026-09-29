@@ -1,7 +1,7 @@
 <!-- TOC -->
 
 - [ABBIAMO FATTO - la storia di TITANIUM_OS](#abbiamo-fatto---la-storia-di-titaniumos)
-  - [Sessione 73  27/09/2026  PULIZIA DELL'AVVIO (Claude  Windows)](#sessione-73-27092026-pulizia-dellavvio-claude-windows)
+  - [Sessione 73  27/09/2026  PULIZIA DELLAVVIO (Claude  Windows)](#sessione-73-27092026-pulizia-dellavvio-claude-windows)
   - [Sessione 72  28/08/2026  IL PIANO COMPLETO (scritto prima di eseguirlo)](#sessione-72-28082026-il-piano-completo-scritto-prima-di-eseguirlo)
   - [Sessione 71  27/08/2026  IL SISTEMA NON ERA SPENTO  view_index resuscitato](#sessione-71-27082026-il-sistema-non-era-spento-viewindex-resuscitato)
   - [Sessione 70  16/08/2026  BONIFICA CONTAMINAZIONE MIMS  scala GENESIS posata](#sessione-70-16082026-bonifica-contaminazione-mims-scala-genesis-posata)
