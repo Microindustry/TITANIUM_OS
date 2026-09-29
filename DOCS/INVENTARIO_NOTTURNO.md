@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-09-29  5 commit](#2026-09-29-5-commit)
   - [2026-09-28  6 commit](#2026-09-28-6-commit)
   - [2026-09-27  2 commit](#2026-09-27-2-commit)
   - [2026-09-24  2 commit](#2026-09-24-2-commit)
@@ -72,6 +73,17 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-09-29 · 5 commit
+- `39ffd6ee` chore(salva): chiusura sessione #74 - VULCAN pilastro, distinte del ferro, taglio della #73
+- `e84248ea` fix(#74): il martinetto Vevor va comprato, non adesso - VULCAN in attesa
+- `5bebdfc2` feat(#74): VULCAN pilastro, FIT-PARK fuori, le distinte del ferro
+- `44976ed9` docs(#74): analisi per il rifacimento grafico - il ferro al centro
+- `438c9f0f` auto: night_audit - cartella clinica 28/09/2026
+
+_episodi: 312 · critiche aperte: 8 (11 risolte) · RAG: 22688 chunk_
+
+
 
 ## 2026-09-28 · 6 commit
 - `85c23d94` chore(salva): chiusura sessione #73 - A1+A2, taglio della #72, piano della #74
