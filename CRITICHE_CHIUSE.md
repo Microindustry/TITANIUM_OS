@@ -11,7 +11,7 @@
     - [Audit Opus  Dati live (18)](#audit-opus-dati-live-18)
     - [Audit 15/06  Opus (5)](#audit-1506-opus-5)
     - [Attacco Opus  17/06 (3)](#attacco-opus-1706-3)
-  - [AUTO-AUDIT  chiuse ancora nel file vivo (11)](#auto-audit-chiuse-ancora-nel-file-vivo-11)
+  - [AUTO-AUDIT  chiuse ancora nel file vivo (12)](#auto-audit-chiuse-ancora-nel-file-vivo-12)
 
 <!-- /TOC -->
 
@@ -119,8 +119,9 @@
 
 ---
 
-## AUTO-AUDIT — chiuse ancora nel file vivo (11)
+## AUTO-AUDIT — chiuse ancora nel file vivo (12)
 
+- [✓] **[media · NOTTURNE]** critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni. — *chiusa il 29/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[alta · NOTTURNE]** story_agent_run.log: rilevato crash/eccezione nelle ultime esecuzioni. — *chiusa il 22/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[alta · NOTTURNE]** story_agent_run.log: rilevato errore esplicito nelle ultime esecuzioni. — *chiusa il 22/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[alta · NOTTURNE]** night_push.log: rilevato errore esplicito nelle ultime esecuzioni. — *chiusa il 22/09/2026: auto: non più osservata da 4+ giorni*
@@ -136,4 +137,4 @@
 *Le chiuse da più di 30 giorni: `DATA/audit/critiche_auto_archivio.jsonl` (282 righe).*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-28 13:29*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-29 13:09*

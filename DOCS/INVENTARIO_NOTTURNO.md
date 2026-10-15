@@ -1,6 +1,7 @@
 <!-- TOC -->
 
 - [Inventario  cosa abbiamo costruito (notte per notte)](#inventario-cosa-abbiamo-costruito-notte-per-notte)
+  - [2026-10-15  3 commit](#2026-10-15-3-commit)
   - [2026-09-29  5 commit](#2026-09-29-5-commit)
   - [2026-09-28  6 commit](#2026-09-28-6-commit)
   - [2026-09-27  2 commit](#2026-09-27-2-commit)
@@ -73,6 +74,15 @@
 > Ogni blocco = i commit di quel giro (il più recente in alto). I commit sono il fatto reale.
 
 <!-- INVENTARIO:INSERT -->
+
+## 2026-10-15 · 3 commit
+- `94bcf0dc` auto: bussola - taglio notturno 29/09/2026
+- `2b875667` auto: bussola - taglio notturno 29/09/2026
+- `58ecbded` auto: night_audit - cartella clinica 29/09/2026
+
+_episodi: 312 · critiche aperte: 7 (12 risolte) · RAG: 22777 chunk_
+
+
 
 ## 2026-09-29 · 5 commit
 - `39ffd6ee` chore(salva): chiusura sessione #74 - VULCAN pilastro, distinte del ferro, taglio della #73
