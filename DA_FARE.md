@@ -148,6 +148,22 @@ con cartelle divise e note". Poi: "comprendi tutte le cartelle" e "tutto cio' no
 - [✗] `29x29.dxf` messo in CAD/MIMS pensando alla croce 29,9: e' un quadrato di 290 -> `CAD/_DA_ASSEGNARE` (domanda a Matteo).
 - [✓] **Schema esteso a V32 e VULCAN** (Matteo): 14 note, `_MAPPA_V32` e `_MAPPA_VULCAN`, 0 fuori schema, RAG 23.589 = 23.589.
   **Vita Natura resta separata** (Matteo: "lasciala separata"): fuori da schema, mappe e fascicoli.
+- [✓] **Fascicoli fatti** (`MENTE/FASCICOLI/01-09` + cruscotto `00_INDICE_FASCICOLI`): `AUTOMATIONS/tools/fascicoli.py` riscrive
+  le parti AUTO (stato da STATE.json, cosa vale dallo schema, domande aperte raccolte da distinte, origini e da questa bussola);
+  e' nella catena d'avvio (`night_research.bat`, prima del RAG), provata alle 18:22: 0 fuori schema, 9 fascicoli, 48 voci aperte (alcune compaiono in piu' fascicoli).
+- [✓] **Prime risposte su MIMS** (Matteo 29/09): pochi pezzi stampati in 3D; prototipi V1 e giunti **si progettano insieme**
+  (Matteo da' la base); *"Componibile e' la base di MIMS"*; configuratore/community: "non so"; piastra dorata e 29x29 si rivedono
+  leggendo. Scritte nelle fonti (DISTINTA_MIMS, ORIGINI_MIMS, nota_componibile): MIMS da 8 a 6 domande aperte.
+- [✓] **Ogni fascicolo ha "L'idea" e "Il concetto"** (Matteo: "dividendo l'idea dal concetto, anzi aggiungendo").
+- [✓] **Edizione completa della storia** (Matteo: "non possiamo espandere queste 22 pagine"): 81 pagine, montata dalle note
+  vere da `AUTOMATIONS/tools/storia_completa.py` (`uv run --with markdown`): storia + 9 fattori + origini + fonti parola per
+  parola + tutte le domande aperte -> `MENTE/LA_STORIA_EDIZIONE_COMPLETA.pdf`. Niente copie in MENTE, niente doppioni nel RAG.
+- [ ] **Prossimo passo MIMS:** progettare insieme i giunti, poi i prototipi V1, partendo dalla base che da' Matteo.
+  Pronta la base (Matteo: "aggiungi le ipotesi, le ricette ed esempi"): `MENTE/MIMS/PROGETTO_GIUNTI.md` (tutte le fonti 2023-2026,
+  il vincolo Via B, 7 ipotesi tecniche di Claude da verificare, 7 parametri da decidere, esempi, 4 domande); il protocollo
+  MIMS di febbraio ricostruito pulito dal PDF (`MIMS_PROTOCOLLO_COMPLETO.md`, Matteo: "fa parte completa di MIMS"); il
+  laboratorio con le ricette (`VULCAN/LABORATORIO_E_RICETTE_V6.md`, **riservato**). Edizione completa: 112 pagine, Parte V riservata;
+  `storia_completa.py --condivisibile` la fa senza.
 - [✓] **Fascicoli per fattore** (Matteo: "sì vai, parti da MIMS"): 9, uno per ogni fattore che scala -
   V32, VULCAN, MIMS, Formula e brevetti, TITANIUM/GENESIS, Nina, Pubblicazioni, Identity/HR, Capannone 2030. Parte fissa
   rigenerata all'accensione (stato, canone, domande aperte), parte scritta in sessione (decisioni, prossimo passo).
@@ -161,17 +177,6 @@ con cartelle divise e note". Poi: "comprendi tutte le cartelle" e "tutto cio' no
 
 *Matteo: "una storia che spiega esattamente il nostro progetto dalla a alla z in modo dettagliato".*
 
-- [✓] **Scritta sui file veri**: `MENTE/LA_STORIA_DALLA_A_ALLA_Z.md` (~7.800 parole, privata, fuori dal repo).
-  In una pagina · chi e perche' · prima del codice · il ferro (V32, VULCAN, MIMS, la catena, la tesi V9) ·
-  il sistema · Nina e le storie · gli altri pilastri · cronologia · errori · oggi · dopo · regole ·
-  glossario dalla A alla Z · fonti. Indicizzata nel RAG (23.021 chunk, semantico == bm25).
-- [✗] Lettura con 3 agenti in parallelo — fermati dal limite di spesa dell'account (28/09): fatta a mano.
-- [✓] **ASSOLUTO V9 corretto e riallineato** (Matteo: "correggi l'ASSOLUTO V9 sul telaio VULCAN e riallinea"):
-  ATTO III = telaio a 2 cilindri-guida (il 60×60 e' la V32), martinetto da comprare non adesso; ATTO IV e V
-  allineati alla SCHEDA §5 (Via B decisa il 24/06, Via A di riserva "se", non "quando"). Stesso errore tolto da
-  `vulcan_e_mims.md` ("4 colonne"), dai FATTI di `EP_S0_06` (repo + MENTE) e del riflusso MIMS Q2, e
-  dall'angolo di `EP_SG_02_03` in `DATA/caroselli_queue.json`. RAG 23.026 == 23.026.
-  Lasciati come storia: ASSOLUTO V6/V7 (progetto a 4 colonne) e il carosello `EP_SG_02_03` gia' pubblicato.
 - [ ] `EP_N2_51` ha ancora l'aggancio inventato "MIMS (Memory Integrity & Model Source tracking)": e' uno
   dei 33 della bonifica in attesa (decide Matteo).
 
@@ -182,29 +187,10 @@ con cartelle divise e note". Poi: "comprendi tutte le cartelle" e "tutto cio' no
 
 *Matteo: "e' complicato, prima analizzalo" — si riparte perche' MIMS, la fresa (V32) e VULCAN cresceranno molto.*
 
-- [✓] **Prima accensione con la catena nuova, verificata** (28/09, 13:06-13:08): self-heal RAG, generazione saltata,
-  audit a regole (LLM senza credito, come previsto), taglio della bussola (niente da spostare), **critiche 300 -> 19 voci**
-  (282 in `critiche_auto_archivio.jsonl`), push dei 6 commit della #73. Esito 0 per catena e push.
 - [ ] Il push parte insieme alla catena e finisce prima dell'audit: il commit dell'audit esce all'accensione dopo.
   Da valutare un `git push` in coda alla catena.
-- [✓] **Controllo "organi vivi" reso onesto**: il riflusso aveva un falso allarme fisso da 37 giorni (guardava un file che
-  nessuno scrive: era la voce G4); Nina e il watcher AI, spenti di proposito, si misurano ma non sono piu' guasti.
-- [✓] **Analisi scritta**: `DOCS/ANALISI_74_UNITA_GRAFICA.md`. In breve: **VULCAN non c'e' da nessuna parte** (ne' vista, ne'
-  db GENESIS, ne' pilastro in STATE); la catena V32 -> stampi -> VULCAN -> connettori e pelle di MIMS e' gia' scritta nelle
-  note (`MENTE/VULCAN/vulcan_e_mims.md`); ~2.500 righe morte e 11 dipendenze inutili; 395 testi da 6-9 px, 6 "neri",
-  10 `aria-*`; i dati del ferro fermi (distinta V32 al 16/03). Le ricette VULCAN sono segrete: mai nel repo pubblico.
-- [✓] **Le decisioni di Matteo applicate** (28/09): **VULCAN pilastro** in `STATE.json` (38% = 3 voci su 8 della Fase 1 del
-  manifesto, fonte scritta accanto), nel db GENESIS (`dep_vulcan`, ordine della catena V32 -> VULCAN -> MIMS), in `pct_sync`
-  e nella barra di stato della dashboard. **FIT-PARK fuori** dal db (`RIMOSSI` in `CORE/genesis_seed.py`) e critica mc02 chiusa.
 - [💡] **FIT-PARK** parcheggiato: era il primo caso d'uso pensato per MIMS (manifesto operativo VULCAN, 18/03; specifiche in
   `MENTE/MIMS/MIMS_FIT_PARK_SPECS.md`). Se torna, riparte da una riga in `DEPARTMENTS`.
-- [✓] **Le tre distinte, fonte unica, in MENTE** (privato, mai nel repo): `MENTE/V32/DISTINTA_V32.md` (51 righe: le 45 del
-  16/03 riviste sulle note piu' nuove, molle fuori, telaio 60×60), `MENTE/VULCAN/DISTINTA_VULCAN.md` (la prima: 18 righe),
-  `MENTE/MIMS/DISTINTA_MIMS.md` (pezzi, prototipi, i 19 disegni dei PROTOTIPI V1). Ognuna: cosa blocca, legami con le altre
-  macchine, domande "da verificare". Puntatori nel `_CANONE.md` (che diceva ancora "Via A o B aperta": sistemato).
-- [✓] **Il martinetto Vevor non c'e': va comprato, non adesso** (Matteo 28/09; le note dicevano "da montare"). Allineati
-  distinte, manifesto, build reale, scheda MIMS e STATE: VULCAN passa a **in attesa** (`waiting_jack`); la prima colata
-  prevista nel Q3 slitta.
 - [ ] **Vincolo di disegno** (decisione 3): la dashboard nuova e' **da PC**; un giorno si fa vedere, quindi **mai dati
   sensibili nel codice**: le distinte e le ricette si leggono in locale dall'API.
 - [ ] **Errore React gia' presente**: in console "due figli con la stessa chiave: `home`" a ogni apertura della home.

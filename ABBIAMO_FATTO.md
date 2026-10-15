@@ -1,6 +1,8 @@
 <!-- TOC -->
 
 - [ABBIAMO FATTO - la storia di TITANIUM_OS](#abbiamo-fatto---la-storia-di-titaniumos)
+  - [Sessione 75  29/09/2026  LA STORIA DEL PROGETTO, DALLA A ALLA Z](#sessione-75-29092026-la-storia-del-progetto-dalla-a-alla-z)
+  - [Sessione 74  28/09/2026  ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)](#sessione-74-28092026-analisi-per-lunità-grafica-il-ferro-al-centro)
   - [Sessione 73  27/09/2026  PULIZIA DELLAVVIO (Claude  Windows)](#sessione-73-27092026-pulizia-dellavvio-claude-windows)
   - [Sessione 72  28/08/2026  IL PIANO COMPLETO (scritto prima di eseguirlo)](#sessione-72-28082026-il-piano-completo-scritto-prima-di-eseguirlo)
   - [Sessione 71  27/08/2026  IL SISTEMA NON ERA SPENTO  view_index resuscitato](#sessione-71-27082026-il-sistema-non-era-spento-viewindex-resuscitato)
@@ -106,6 +108,50 @@ episodi) e della curva di crescita del profilo GitHub.
   night_audit e al /salva), con una sessione di ritardo: arrivano qui le righe **chiuse** delle
   sessioni prima dell'ultima chiusa, col loro perche'; un blocco arriva **intero, com'era**,
   quando in bussola non ha piu' niente di aperto. Le righe aperte restano in `DA_FARE.md`.
+
+---
+
+## Sessione #75 · 29/09/2026 — LA STORIA DEL PROGETTO, DALLA A ALLA Z
+
+*Righe chiuse tagliate dalla bussola il 15/10/2026 (il blocco resta in DA_FARE.md finche' ha voci aperte).*
+
+- [✓] **Scritta sui file veri**: `MENTE/LA_STORIA_DALLA_A_ALLA_Z.md` (~7.800 parole, privata, fuori dal repo).
+  In una pagina · chi e perche' · prima del codice · il ferro (V32, VULCAN, MIMS, la catena, la tesi V9) ·
+  il sistema · Nina e le storie · gli altri pilastri · cronologia · errori · oggi · dopo · regole ·
+  glossario dalla A alla Z · fonti. Indicizzata nel RAG (23.021 chunk, semantico == bm25).
+- [✗] Lettura con 3 agenti in parallelo — fermati dal limite di spesa dell'account (28/09): fatta a mano.
+- [✓] **ASSOLUTO V9 corretto e riallineato** (Matteo: "correggi l'ASSOLUTO V9 sul telaio VULCAN e riallinea"):
+  ATTO III = telaio a 2 cilindri-guida (il 60×60 e' la V32), martinetto da comprare non adesso; ATTO IV e V
+  allineati alla SCHEDA §5 (Via B decisa il 24/06, Via A di riserva "se", non "quando"). Stesso errore tolto da
+  `vulcan_e_mims.md` ("4 colonne"), dai FATTI di `EP_S0_06` (repo + MENTE) e del riflusso MIMS Q2, e
+  dall'angolo di `EP_SG_02_03` in `DATA/caroselli_queue.json`. RAG 23.026 == 23.026.
+  Lasciati come storia: ASSOLUTO V6/V7 (progetto a 4 colonne) e il carosello `EP_SG_02_03` gia' pubblicato.
+
+---
+
+## Sessione #74 · 28/09/2026 — ANALISI PER L'UNITÀ GRAFICA (il ferro al centro)
+
+*Righe chiuse tagliate dalla bussola il 15/10/2026 (il blocco resta in DA_FARE.md finche' ha voci aperte).*
+
+- [✓] **Prima accensione con la catena nuova, verificata** (28/09, 13:06-13:08): self-heal RAG, generazione saltata,
+  audit a regole (LLM senza credito, come previsto), taglio della bussola (niente da spostare), **critiche 300 -> 19 voci**
+  (282 in `critiche_auto_archivio.jsonl`), push dei 6 commit della #73. Esito 0 per catena e push.
+- [✓] **Controllo "organi vivi" reso onesto**: il riflusso aveva un falso allarme fisso da 37 giorni (guardava un file che
+  nessuno scrive: era la voce G4); Nina e il watcher AI, spenti di proposito, si misurano ma non sono piu' guasti.
+- [✓] **Analisi scritta**: `DOCS/ANALISI_74_UNITA_GRAFICA.md`. In breve: **VULCAN non c'e' da nessuna parte** (ne' vista, ne'
+  db GENESIS, ne' pilastro in STATE); la catena V32 -> stampi -> VULCAN -> connettori e pelle di MIMS e' gia' scritta nelle
+  note (`MENTE/VULCAN/vulcan_e_mims.md`); ~2.500 righe morte e 11 dipendenze inutili; 395 testi da 6-9 px, 6 "neri",
+  10 `aria-*`; i dati del ferro fermi (distinta V32 al 16/03). Le ricette VULCAN sono segrete: mai nel repo pubblico.
+- [✓] **Le decisioni di Matteo applicate** (28/09): **VULCAN pilastro** in `STATE.json` (38% = 3 voci su 8 della Fase 1 del
+  manifesto, fonte scritta accanto), nel db GENESIS (`dep_vulcan`, ordine della catena V32 -> VULCAN -> MIMS), in `pct_sync`
+  e nella barra di stato della dashboard. **FIT-PARK fuori** dal db (`RIMOSSI` in `CORE/genesis_seed.py`) e critica mc02 chiusa.
+- [✓] **Le tre distinte, fonte unica, in MENTE** (privato, mai nel repo): `MENTE/V32/DISTINTA_V32.md` (51 righe: le 45 del
+  16/03 riviste sulle note piu' nuove, molle fuori, telaio 60×60), `MENTE/VULCAN/DISTINTA_VULCAN.md` (la prima: 18 righe),
+  `MENTE/MIMS/DISTINTA_MIMS.md` (pezzi, prototipi, i 19 disegni dei PROTOTIPI V1). Ognuna: cosa blocca, legami con le altre
+  macchine, domande "da verificare". Puntatori nel `_CANONE.md` (che diceva ancora "Via A o B aperta": sistemato).
+- [✓] **Il martinetto Vevor non c'e': va comprato, non adesso** (Matteo 28/09; le note dicevano "da montare"). Allineati
+  distinte, manifesto, build reale, scheda MIMS e STATE: VULCAN passa a **in attesa** (`waiting_jack`); la prima colata
+  prevista nel Q3 slitta.
 
 ---
 
