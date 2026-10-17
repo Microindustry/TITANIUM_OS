@@ -9,7 +9,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-15"
+    "last_seen": "2026-10-17"
   },
   {
     "id": "AUD-a39ca90229",
@@ -49,7 +49,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-15"
+    "last_seen": "2026-10-17"
   },
   {
     "id": "AUD-2326599473",
@@ -75,7 +75,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-15"
+    "last_seen": "2026-10-17"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -87,7 +87,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-15"
+    "last_seen": "2026-10-17"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -99,7 +99,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-15"
+    "last_seen": "2026-10-17"
   },
   {
     "id": "AUD-42b270dc40",
@@ -116,62 +116,6 @@
     "resolved_by": "auto: non più osservata da 4+ giorni"
   },
   {
-    "id": "AUD-ef3fdc440e",
-    "date": "2026-06-16",
-    "git": "a3d33de8",
-    "area": "NOTTURNE",
-    "severity": "media",
-    "finding": "night_research.log: rilevato timeout di rete nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-10",
-    "resolved_on": "2026-09-15",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
-  },
-  {
-    "id": "AUD-28ded3b794",
-    "date": "2026-06-16",
-    "git": "a3d33de8",
-    "area": "NOTTURNE",
-    "severity": "media",
-    "finding": "research_agent.log: rilevato timeout di rete nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-10",
-    "resolved_on": "2026-09-15",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
-  },
-  {
-    "id": "AUD-edd491cd60",
-    "date": "2026-06-08",
-    "git": "959ba65",
-    "area": "NOTTURNE",
-    "severity": "alta",
-    "finding": "research_agent.log: rilevato errore esplicito nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-11",
-    "resolved_on": "2026-09-16",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
-  },
-  {
-    "id": "AUD-c97403be34",
-    "date": "2026-06-08",
-    "git": "959ba65",
-    "area": "NOTTURNE",
-    "severity": "alta",
-    "finding": "night_research.log: rilevato errore esplicito nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-11",
-    "resolved_on": "2026-09-16",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
-  },
-  {
     "id": "AUD-77abb05083",
     "date": "2026-06-08",
     "git": "959ba65",
@@ -181,21 +125,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-15"
-  },
-  {
-    "id": "AUD-6bb972e811",
-    "date": "2026-06-08",
-    "git": "959ba65",
-    "area": "NOTTURNE",
-    "severity": "media",
-    "finding": "research_agent.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-11",
-    "resolved_on": "2026-09-16",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "last_seen": "2026-10-17"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -206,37 +136,7 @@
     "finding": "night_push.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-14",
-    "resolved_on": "2026-09-22",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
-  },
-  {
-    "id": "AUD-2ed0757892",
-    "date": "2026-06-08",
-    "git": "959ba65",
-    "area": "NOTTURNE",
-    "severity": "media",
-    "finding": "research_agent.log: rilevato ricerca a vuoto nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/research_agent.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-11",
-    "resolved_on": "2026-09-16",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
-  },
-  {
-    "id": "AUD-14717de2a5",
-    "date": "2026-06-08",
-    "git": "959ba65",
-    "area": "NOTTURNE",
-    "severity": "media",
-    "finding": "night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/night_research.log e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-11",
-    "resolved_on": "2026-09-16",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-10-17"
   }
 ]
