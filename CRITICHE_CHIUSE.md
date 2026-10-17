@@ -121,6 +121,7 @@
 
 ## AUTO-AUDIT — chiuse ancora nel file vivo (12)
 
+- [✓] **[media · NOTTURNE]** organi vivi: rilevato organo silenzioso nelle ultime esecuzioni. — *chiusa il 15/10/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[media · NOTTURNE]** critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni. — *chiusa il 29/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[alta · NOTTURNE]** story_agent_run.log: rilevato crash/eccezione nelle ultime esecuzioni. — *chiusa il 22/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[alta · NOTTURNE]** story_agent_run.log: rilevato errore esplicito nelle ultime esecuzioni. — *chiusa il 22/09/2026: auto: non più osservata da 4+ giorni*
@@ -132,9 +133,8 @@
 - [✓] **[media · NOTTURNE]** night_research.log: rilevato rate-limit sorgente nelle ultime esecuzioni. — *chiusa il 16/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[media · NOTTURNE]** night_research.log: rilevato timeout di rete nelle ultime esecuzioni. — *chiusa il 15/09/2026: auto: non più osservata da 4+ giorni*
 - [✓] **[media · NOTTURNE]** research_agent.log: rilevato timeout di rete nelle ultime esecuzioni. — *chiusa il 15/09/2026: auto: non più osservata da 4+ giorni*
-- [✓] **[media · SISTEMA]** Nessun commit negli ultimi 7 giorni: il sistema non avanza. — *chiusa il 14/09/2026: auto: non più osservata da 4+ giorni*
 
-*Le chiuse da più di 30 giorni: `DATA/audit/critiche_auto_archivio.jsonl` (282 righe).*
+*Le chiuse da più di 30 giorni: `DATA/audit/critiche_auto_archivio.jsonl` (283 righe).*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-09-29 13:09*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-10-15 16:41*
