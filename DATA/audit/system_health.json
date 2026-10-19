@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-10-17T11:16:52",
-  "date": "2026-10-17",
-  "git_head": "231e4e8e",
+  "last_audit": "2026-10-19T17:04:12",
+  "date": "2026-10-19",
+  "git_head": "2bebd699",
   "rag_chunks": 24260,
   "n_episodes": 312,
-  "n_commits_7d": 4,
+  "n_commits_7d": 6,
   "pillars": {
     "V32": 65,
     "VULCAN": 38,
@@ -15,34 +15,28 @@
   },
   "log_issues": [
     {
-      "log": "night_push.log",
-      "tipo": "errore esplicito",
-      "riga": "2026-10-17 11:16:15 [episodes_to_dataset ] WARNING  QA error per EP_AUTO_13_assoluto_v7_documento_master_unico_10_at: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'me",
-      "data": "2026-10-17"
-    },
-    {
       "log": "critiche_manuali.json",
       "tipo": "critiche scadute",
       "riga": "19 critiche aperte SCADUTE (non riverificate da 30+ giorni): prima di eseguirle si riverificano (K4)",
-      "data": "2026-10-17"
+      "data": "2026-10-19"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 18 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-10-17"
+      "riga": "_CANONE.md fermo da 20 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-10-19"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-10-17"
+      "data": "2026-10-19"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
       "riga": "29 CVE fixabili in 13 pacchetti: aiohttp 3.14.1 (6), anyio 4.13.0 (2), cryptography 48.0.1 (6), datasets 4.0.0 (1), fsspec 2025.3.0 (1), multidict 6.7.1 (1)",
-      "data": "2026-10-17"
+      "data": "2026-10-19"
     }
   ],
   "vault_orphans": 0,
@@ -50,21 +44,21 @@
     "active": 18,
     "done": 38,
     "scadute": 19,
-    "file_age_days": 18,
+    "file_age_days": 21,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 18,
+    "canone_age_days": 20,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 22.8,
+    "nina-loop": 25.1,
     "snapshot RAG": 0.0,
-    "inventario notturno": 0.6,
-    "retention disco": 1.8,
-    "AI news watcher": 50.9,
+    "inventario notturno": 0.0,
+    "retention disco": 0.0,
+    "AI news watcher": 53.1,
     "daily brief": 0.0,
     "riflusso FATTI": 0.0
   },
@@ -95,7 +89,7 @@
   "critiche": {
     "added": 0,
     "auto_closed": 0,
-    "archiviate": 7,
+    "archiviate": 0,
     "total": 11,
     "open": 7
   },
