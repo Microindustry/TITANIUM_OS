@@ -1,7 +1,7 @@
 {
-  "last_audit": "2026-10-23T12:24:39",
-  "date": "2026-10-23",
-  "git_head": "f8c23999",
+  "last_audit": "2026-10-24T14:59:07",
+  "date": "2026-10-24",
+  "git_head": "229770a0",
   "rag_chunks": 24260,
   "n_episodes": 312,
   "n_commits_7d": 5,
@@ -15,28 +15,34 @@
   },
   "log_issues": [
     {
+      "log": "night_push.log",
+      "tipo": "errore esplicito",
+      "riga": "2026-10-24 14:58:02 [episodes_to_dataset ] WARNING  QA error per EP_AUTO_13_assoluto_v7_documento_master_unico_10_at: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'me",
+      "data": "2026-10-24"
+    },
+    {
       "log": "critiche_manuali.json",
       "tipo": "critiche scadute",
       "riga": "19 critiche aperte SCADUTE (non riverificate da 30+ giorni): prima di eseguirle si riverificano (K4)",
-      "data": "2026-10-23"
+      "data": "2026-10-24"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 24 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-10-23"
+      "riga": "_CANONE.md fermo da 25 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-10-24"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-10-23"
+      "data": "2026-10-24"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
-      "riga": "29 CVE fixabili in 13 pacchetti: aiohttp 3.14.1 (6), anyio 4.13.0 (2), cryptography 48.0.1 (6), datasets 4.0.0 (1), fsspec 2025.3.0 (1), multidict 6.7.1 (1)",
-      "data": "2026-10-23"
+      "riga": "83 CVE fixabili in 20 pacchetti: aiohttp 3.14.1 (14), anyio 4.13.0 (2), brotli 1.2.0 (2), certifi 2026.5.20 (1), cryptography 48.0.1 (6), datasets 4.0.0 (1)",
+      "data": "2026-10-24"
     }
   ],
   "vault_orphans": 0,
@@ -44,40 +50,47 @@
     "active": 18,
     "done": 38,
     "scadute": 19,
-    "file_age_days": 24,
+    "file_age_days": 26,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 24,
+    "canone_age_days": 25,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 28.9,
+    "nina-loop": 30.0,
     "snapshot RAG": 0.0,
-    "inventario notturno": 1.8,
-    "retention disco": 0.0,
-    "AI news watcher": 56.9,
+    "inventario notturno": 0.0,
+    "retention disco": 1.1,
+    "AI news watcher": 58.0,
     "daily brief": 0.0,
     "riflusso FATTI": 0.0
   },
   "pip_audit": {
-    "vulns": 34,
-    "fixable": 29,
+    "vulns": 88,
+    "fixable": 83,
     "packages": [
-      "aiohttp 3.14.1 (6)",
+      "aiohttp 3.14.1 (14)",
       "anyio 4.13.0 (2)",
+      "brotli 1.2.0 (2)",
+      "certifi 2026.5.20 (1)",
       "cryptography 48.0.1 (6)",
       "datasets 4.0.0 (1)",
+      "filelock 3.29.0 (3)",
       "fsspec 2025.3.0 (1)",
       "multidict 6.7.1 (1)",
       "oauthlib 3.3.1 (2)",
+      "opentelemetry-api 1.42.1 (1)",
+      "pillow 12.3.0 (37)",
       "pip 26.1.2 (2)",
       "sentence-transformers 5.5.1 (1)",
+      "setuptools 83.0.0 (1)",
       "soupsieve 2.8.4 (2)",
       "transformers 5.6.0 (1)",
       "urllib3 2.7.0 (3)",
+      "uv 0.11.19 (1)",
       "werkzeug 3.1.8 (1)"
     ]
   },
@@ -88,10 +101,10 @@
   },
   "critiche": {
     "added": 0,
-    "auto_closed": 1,
-    "archiviate": 2,
+    "auto_closed": 0,
+    "archiviate": 0,
     "total": 9,
-    "open": 6
+    "open": 7
   },
   "verdict": "ATTENZIONE"
 }
