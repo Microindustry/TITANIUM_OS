@@ -9,7 +9,7 @@
     "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-29"
+    "last_seen": "2026-10-30"
   },
   {
     "id": "AUD-39053f2f2c",
@@ -21,7 +21,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-29"
+    "last_seen": "2026-10-30"
   },
   {
     "id": "AUD-2326599473",
@@ -47,7 +47,7 @@
     "azione": "Lanciare AUTOMATIONS/tools/fix_recuperato_canon.py --apply (o estendere AUTOMATIONS/core/canon_guard.py se è una frase nuova).",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-29"
+    "last_seen": "2026-10-30"
   },
   {
     "id": "AUD-cca0d6031f",
@@ -59,7 +59,7 @@
     "azione": "Ispezionare DATA/logs/_CANONE.md e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-29"
+    "last_seen": "2026-10-30"
   },
   {
     "id": "AUD-7ad2aa2ef9",
@@ -71,21 +71,7 @@
     "azione": "Ispezionare DATA/logs/pip_audit.json e correggere la causa.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-29"
-  },
-  {
-    "id": "AUD-42b270dc40",
-    "date": "2026-08-23",
-    "git": "fbe9210c",
-    "area": "NOTTURNE",
-    "severity": "media",
-    "finding": "critiche_manuali.json: rilevato canone critiche stantio nelle ultime esecuzioni.",
-    "azione": "Ispezionare DATA/logs/critiche_manuali.json e correggere la causa.",
-    "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-09-24",
-    "resolved_on": "2026-09-29",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "last_seen": "2026-10-30"
   },
   {
     "id": "AUD-77abb05083",
@@ -97,7 +83,7 @@
     "azione": "Definire il prossimo step misurabile per MIMS.",
     "fonte": "auto-audit (regole)",
     "status": "open",
-    "last_seen": "2026-10-29"
+    "last_seen": "2026-10-30"
   },
   {
     "id": "AUD-42ce3eeed1",
@@ -108,9 +94,7 @@
     "finding": "night_push.log: rilevato errore esplicito nelle ultime esecuzioni.",
     "azione": "Ispezionare DATA/logs/night_push.log e correggere la causa.",
     "fonte": "auto-audit (regole)",
-    "status": "resolved",
-    "last_seen": "2026-10-24",
-    "resolved_on": "2026-10-29",
-    "resolved_by": "auto: non più osservata da 4+ giorni"
+    "status": "open",
+    "last_seen": "2026-10-30"
   }
 ]
