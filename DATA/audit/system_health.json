@@ -1,10 +1,10 @@
 {
-  "last_audit": "2026-10-30T06:45:02",
-  "date": "2026-10-30",
-  "git_head": "cd5b44c6",
+  "last_audit": "2026-10-31T06:33:26",
+  "date": "2026-10-31",
+  "git_head": "1a1ebb3f",
   "rag_chunks": 24345,
   "n_episodes": 312,
-  "n_commits_7d": 12,
+  "n_commits_7d": 13,
   "pillars": {
     "V32": 65,
     "VULCAN": 38,
@@ -17,32 +17,32 @@
     {
       "log": "night_push.log",
       "tipo": "errore esplicito",
-      "riga": "[tasks_history] API non raggiungibile (<urlopen error [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione>) � nessuna tacca stanotte",
-      "data": "sconosciuta"
+      "riga": "2026-10-31 06:32:46 [episodes_to_dataset ] WARNING  QA error per EP_AUTO_13_assoluto_v7_documento_master_unico_10_at: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'me",
+      "data": "2026-10-31"
     },
     {
       "log": "critiche_manuali.json",
       "tipo": "critiche scadute",
       "riga": "19 critiche aperte SCADUTE (non riverificate da 30+ giorni): prima di eseguirle si riverificano (K4)",
-      "data": "2026-10-30"
+      "data": "2026-10-31"
     },
     {
       "log": "_CANONE.md",
       "tipo": "verita' unica stantia",
-      "riga": "_CANONE.md fermo da 31 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
-      "data": "2026-10-30"
+      "riga": "_CANONE.md fermo da 32 giorni (soglia 14) mentre la serie si auto-genera ogni notte",
+      "data": "2026-10-31"
     },
     {
       "log": "_CANONE.md",
       "tipo": "serie oltre il canone dichiarato",
       "riga": "su disco EP_N2_67, il canone dichiara EP_N2_64: aggiornare _CANONE.md",
-      "data": "2026-10-30"
+      "data": "2026-10-31"
     },
     {
       "log": "pip_audit.json",
       "tipo": "CVE dipendenze con fix disponibile",
-      "riga": "83 CVE fixabili in 20 pacchetti: aiohttp 3.14.1 (14), anyio 4.13.0 (2), brotli 1.2.0 (2), certifi 2026.5.20 (1), cryptography 48.0.1 (6), datasets 4.0.0 (1)",
-      "data": "2026-10-30"
+      "riga": "94 CVE fixabili in 21 pacchetti: aiohttp 3.14.1 (14), anyio 4.13.0 (2), brotli 1.2.0 (2), certifi 2026.5.20 (2), cryptography 48.0.1 (6), datasets 4.0.0 (1)",
+      "data": "2026-10-31"
     }
   ],
   "vault_orphans": 0,
@@ -50,40 +50,41 @@
     "active": 18,
     "done": 38,
     "scadute": 19,
-    "file_age_days": 31,
+    "file_age_days": 32,
     "stale": true
   },
   "canone_vault": {
     "id_collisions": 0,
-    "canone_age_days": 31,
+    "canone_age_days": 32,
     "max_ep_disco": 67,
     "max_ep_canone": 64
   },
   "organi_vivi": {
-    "nina-loop": 35.7,
-    "snapshot RAG": 0.7,
+    "nina-loop": 36.7,
+    "snapshot RAG": 0.0,
     "inventario notturno": 0.0,
-    "retention disco": 0.0,
-    "AI news watcher": 63.7,
+    "retention disco": 1.0,
+    "AI news watcher": 64.7,
     "daily brief": 0.0,
     "riflusso FATTI": 0.0
   },
   "pip_audit": {
-    "vulns": 88,
-    "fixable": 83,
+    "vulns": 99,
+    "fixable": 94,
     "packages": [
       "aiohttp 3.14.1 (14)",
       "anyio 4.13.0 (2)",
       "brotli 1.2.0 (2)",
-      "certifi 2026.5.20 (1)",
+      "certifi 2026.5.20 (2)",
       "cryptography 48.0.1 (6)",
       "datasets 4.0.0 (1)",
-      "filelock 3.29.0 (3)",
+      "filelock 3.29.0 (9)",
       "fsspec 2025.3.0 (1)",
+      "msgpack 1.2.1 (1)",
       "multidict 6.7.1 (1)",
-      "oauthlib 3.3.1 (2)",
+      "oauthlib 3.3.1 (3)",
       "opentelemetry-api 1.42.1 (1)",
-      "pillow 12.3.0 (37)",
+      "pillow 12.3.0 (39)",
       "pip 26.1.2 (2)",
       "sentence-transformers 5.5.1 (1)",
       "setuptools 83.0.0 (1)",
@@ -102,7 +103,7 @@
   "critiche": {
     "added": 0,
     "auto_closed": 0,
-    "archiviate": 1,
+    "archiviate": 0,
     "total": 8,
     "open": 7
   },
