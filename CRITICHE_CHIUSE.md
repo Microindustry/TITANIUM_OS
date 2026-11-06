@@ -126,4 +126,4 @@
 *Le chiuse da più di 30 giorni: `DATA/audit/critiche_auto_archivio.jsonl` (293 righe).*
 
 ---
-*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-11-05 02:38*
+*Rigenerato da `AUTOMATIONS/core/critiche_md.py` — 2026-11-06 02:39*
